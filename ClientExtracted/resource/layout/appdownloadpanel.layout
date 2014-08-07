@@ -46,7 +46,7 @@
 	{
 		panelStyle
 		{
-			bgcolor=clientbg
+			bgcolor=none
 			
 		}
 		
@@ -55,6 +55,7 @@
 			render_bg
 			{
 				0="gradient( x0, y0, x1, y1, dark_blue_grad, light_blue_grad )"
+				2="image( x0, y0 - 55, x1, y1+8, graphics/clienttexture2b)"
 			}			
 		}
 
@@ -176,7 +177,7 @@
 			bgcolor=none
 			render_bg	
 			{
-			0="image( x0 - 4, y0 - 3, x1 + 4, y1 + 0, graphics/downloads_bg )"
+				0="image( x0 - 8, y0 - 3, x1 + 8, y1 + 0, graphics/downloads_bg )"
 			}		
 			padding "4"
 		}					
@@ -198,25 +199,9 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, none )"
 
-				// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+
 		
 			}	
 		}
@@ -238,24 +223,9 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, inbox_active2 )"
 
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+
 			}	
 		}
 		
@@ -278,23 +248,6 @@
 				// background fill
 				0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacedisabled )"
 
-				// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
 			}
 		}
 
@@ -379,7 +332,7 @@
 		
 		// left-mid column
 		place { control="namelabel" region="column2" margin-top=16 margin-left=0 }
-		place { control="launchbutton" region=column2 start=namelabel dir=down margin-top=10 width=150 }
+		place { control="launchbutton" region=column2 start=namelabel dir=down margin-top=10 }
 		place { control="downloadprogressbar" region=column2 start=launchbutton margin-top=5 dir=down spacing=10 height=3 width=150 }
 		place { control="settingslink" region=column2 start=downloadprogressbar dir=down margin-top=5 margin-left=0 }
 

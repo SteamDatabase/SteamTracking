@@ -216,6 +216,25 @@
 			inset="0 9 0 0"
 		}
 		
+		Menu
+    {
+		bgcolor="dialogbg"
+		padding-right=4
+		inset="2 2 2 2"
+      
+				render_bg
+				{
+					0="gradient( x0 + 1, y0 + 1, x1 - 1, y0+140, MenuBG1, MenuBG2  )"
+					1="fill( x0 + 1 , y0 + 140, x1 - 1, y1 - 1, MenuBG2  )"
+		
+					// lines around
+				2="fill( x0 + 1, y0, x1 - 1, y0 + 1, clientbg )"  // top
+				3="fill( x0 + 1, y1 - 1, x1 - 1, y1, clientbg )"  // bottom
+				4="fill( x0, y0 + 1, x0 + 1, y1 - 1, clientbg )"  // left
+				5="fill( x1 - 1, y0 + 1, x1, y1 - 1, clientbg )"  // right
+				}
+		}
+		
 		"MenuBar MenuButton"
 		{
 			padding-right=14

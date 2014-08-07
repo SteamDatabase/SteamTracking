@@ -194,7 +194,7 @@ JoinItem:focus .JoinItemImageFrame
 JoinItem:focus .JoinItemImageBezel
 {
 	pre-transform-scale2d: 1.0;
-	border-radius: 18px;
+	border-radius: 0px;
 }
 
 JoinItem .JoinItemImageBezelOn
@@ -246,14 +246,14 @@ JoinItem:disabled
 
 JoinItem .BezelOutside
 {
-	border-radius: 18px;
+	border-radius: 0px;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
 }
 
 JoinItem .BezelInside
 {
 	background-color: #000000;
-	border-radius: 14px;
+	border-radius: 0px;
 }
 
 JoinItem:focus .JoinItemImage

@@ -17,6 +17,7 @@
 				<Label id="FilterController" text="#Library_ControllerSupport" />
 				<Label id="FilterPlatform" text="#Library_Platform" />
 				<Label id="FilterInstalledLocally" text="#Library_InstalledLocally" />
+				<Label id="FilterHidden" text="#Library_Hidden" />
 			</DropDown>
 		</Panel>
 		<Panel hittest="false" id="FastScrollWrapper">

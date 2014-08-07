@@ -6,27 +6,29 @@ steam.styles
     // it can also include just general settings controls can pull from for extra customization
   
     black="0 0 0 255"
-    almostBlack="23 22 20 255"
+    dark="35 35 35 255"
+    almostBlack="22 22 22 255"
+    almostBlackTrans="22 22 22 204"
     white="255 255 255 255"
-    grey="158 153 149 255"
+    grey="153 153 153 255"
     none="0 0 0 0"
     yellow="255 255 0 255"
-    offwhite="166 164 159 255"
+    offwhite="164 164 164 255"
     dullgreen="216 222 211 255"
     maize="203 191 87 255"
     red="255 51 51 255"
-    darkblue="59 84 129 255"
-    blue="54 106 179 255"
+    darkblue="39 100 130 255"
+    blue="54 137 179 255"
     darkred="128 0 0 255"
     darkpurple="64 0 64 255"
     
-    dark_blue "2 11 23 255"
-		med_blue "15 50 77 255"
-		bg_blue "10 34 55 255"
+    dark_blue "2 15 23 255"
+		med_blue "13 52 82 255"
+		bg_blue "10 36 56 255"
     
     // control colors
-    bordercolor="133 130 113 255"
-    darkcorner="77 73 71 255"
+    bordercolor="102 102 102 255"
+    darkcorner="73 73 73 255"
     buttontext=Text
     buttontextactive=Text
     
@@ -35,113 +37,137 @@ steam.styles
     basefont="Helvetica" [$OSX]
     
     // new control colors
-    ButtonFace="105 102 99 200"
-    ButtonFace2="92 89 86 255" // for use in main client list panel column header, some button states
-    ButtonFace3="95 92 90 255" // button cornering pixels
-    ButtonFaceDisabled="none"
-    ButtonFaceHover="105 102 99  240"   /// hover!
-    ButtonFaceActive="105 102 99  240"  // not sure what this state is...
-    ButtonFaceFocus="105 102 99  240"  //  keyboard focus
-    ButtonFaceActiveFocus="105 102 99  255"  // this is the default choice
+    ButtonFace="102 102 102 200"
+    ButtonFace2="80 80 80 255" // for use in main client list panel column header, some button states
+    ButtonFace3="92 92 92 255" // button cornering pixels
+    ButtonFaceDisabled="102 102 102 15"
+    ButtonFaceHover="99 99 99  240"   /// hover!
+    ButtonFaceActive="102 102 102  240"  // not sure what this state is...
+    ButtonFaceFocus="105 105 105  240"  //  keyboard focus
+    ButtonFaceActiveFocus="105 105 105  255"  // this is the default choice
+    BlueBorder="33 33 33 255"
+    ButtonBorder="89 89 89 255"
+    ButtonBorderSubtle="79 79 79 255"
+    ButtonBorderPage="124 124 124 255"
+    ButtonBorderDisabled="75 75 75 255"
+    ButtonBorderDisabled2="65 65 65 255"  //cornering pixels
+    ButtonBorderActive="125 125 125 255"
+    ButtonBorderFocus="137 137 137 255"
+    ButtonBorderFocusSubtle="122 122 122 255"
     
-    ButtonBorder="112 109 105 255"
-    ButtonBorderSubtle="82 79 77 255"
-    ButtonBorderPage="128 124 120 255"
-    ButtonBorderDisabled="77 75 72 255"
-    ButtonBorderDisabled2="67 65 63 255"  //cornering pixels
-    ButtonBorderActive="140 135 129 255"
-    ButtonBorderFocus="153 147 141 255"
-    ButtonBorderFocusSubtle="128 122 117 255"
+    Text="207 207 207 255"
+    Text2="180 180 180 255"
+    TextDisabled="99 99 99 255"
+    TextHover="226 226 226 255"
+    TextSelected="239 239 239 255"
+    TextentrySelected="237 237 237 235" // color of any selected text
+    TextSelectedBG="37 89 148 255" // background color of any selected text 
+    TextGlowHover="124 124 124 255"
+    TextGlowSelected="169 169 169 255"
+    TextGlowHoverSm="123 123 123 255"
+    TextGlowSelectedSm="142 142 142 255"
     
-    Text="209 207 205 255"
-    Text2="184 180 176 255"
-    TextDisabled="102 99 96 255"
-    TextHover="229 226 223 255"
-    TextSelected="242 239 235 255"
-    TextentrySelected="240 237 235 235" // color of any selected text
-    TextSelectedBG="64 90 128 255" // background color of any selected text 
-    TextGlowHover="128 124 120 255"
-    TextGlowSelected="171 169 166 255"
-    TextGlowHoverSm="128 123 120 255"
-    TextGlowSelectedSm="145 142 140 255"
-    
-    NavLabel="158 153 149 255"
-    Label="166 164 161 255"
-    Label2="115 111 108 255"
-    LabelDisabled="138 135 132 255"
-    LabelFocus="199 196 194 255"
-    
-    ScrollGlyph="204 198 192 255"  // the color of the scroll bar arrows
-    ScrollGlyphDisabled="77 74 72 255"
+    NavLabel="153 153 153 255"
+    Label="168 168 168 255"
+    Label2="111 111 111 255"
+    LabelDisabled="115 115 115 255"
+    LabelFocus="196 196 196 255"
+
+    SuperNav="white"
+    SuperNavHover="white"
+   
+    ScrollGlyph="198 198 198 255"  // the color of the scroll bar arrows
+    ScrollGlyphDisabled="74 74 74 255"
     ScrollGlyphFocus="242 242 242 255"
     
-    ScrollBG="77 74 72 255" // the color of the scroll bar gutter
+    ScrollBG="54 54 54 255" // the color of the scroll bar gutter
     
-    HeaderClient="57 53 49 255" // the color of the List box header in the main client window
-    HeaderDialog="95 92 90 255" // the color of the list box header in other windows
+    HeaderClient="53 53 53 255" // the color of the List box header in the main client window
+    HeaderDialog="92 92 92 255" // the color of the list box header in other windows
     
-    TitleBar="86 81 78 50"
-    TitleBarFocus="176 169 162 50"
+    TitleBar="41 41 41 80"
+    TitleBarFocus="34 65 96 100"
+    MenuBG="68 68 68 255"
     
-    Focus="49 66 89 255"  		// background color of any selected menu or list item
-    Focus2="85 121 171 255"		// background color of view buttons and anything else in focus that needs more 'punch'
-    Focus3="62 92 133 255"		// background color of highlighted friends 
+    Focus="16 53 82 255" // background color of any selected menu or list item
+    Focus2="21 70 107 255" 	// background color of view buttons and anything else in focus that needs more 'punch'
+    Focus3="82 82 82 255" 	// background color of highlighted friends 
+    Focus4="80 154 191 255"   // bright cyan used in progress bars
     FocusGrid="85 117 161 240"  	// background color of any grid item
-    Highlight="82 119 171 120" 	// same as focus
-    Highlight1="204 185 88 255"    // installing hover color
-    Highlight2="181 164 78 255" 	// installing color 
+    Highlight="16 53 82 120" 	// same as focus
+    Highlight1="95 183 227 255"    // installing hover color
+    Highlight2="80 154 191 255" 	// installing color 
     Highlight3="173 69 71 255"    	// red for errors, blocked, etc.
-    Highlight5="77 103 140 255" 	// blue 
-    Highlight5a="83 117 166 255" 	// lighter version of highlight5
-    Highlight5b="59 75 97 255" 	// as highlight5 but darker, for non-focused window borders
+    Highlight5="20 64 102 255" 	// blue 
+    Highlight5a="28 69 140 255" 	// lighter version of highlight5
+    Highlight5b="17 42 86 255" 	// as highlight5 but darker, for non-focused window borders
 
     BackgroundStartSubtle="20 20 20 155" 
     BackgroundStartSubtle="31 31 31 45" [$OSX]
-    BackgroundStartSubtlest="23 22 20 100"
-    BackgroundStart="23 22 20 180"
-    BackgroundStartOpaque="36 35 34 255"
+    BackgroundStartSubtlest="22 22 22 100"
+    BackgroundStart="22 22 22 180"
+    BackgroundStartOpaque="35 35 35 255"
     
-    ClientBG="0 0 0 255"
-    DialogBG="56 54 53 255"
-    DialogBGFade1="58 56 55 255"
-    DialogBGFade2="58 56 55 0"  
+    ClientBG="30 30 30 255"
+    DialogBG="41 41 41 255"
+    DialogBGFade1="56 56 56 255"
+    DialogBGFade2="56 56 56  0"  
     
-    DarkClientBG="36 35 34 255"
-    DarkDialogBG="56 54 53 255"
-    DarkClientBGTransparent="36 35 34 19"
-    DarkDialogBGTransparent="56 55 53 170"
+    DarkClientBG="35 35 35 255"
+    DarkDialogBG="38 38 38 255"
+    DarkClientBGTransparent="35 35 35 19"
+    DarkDialogBGTransparent="55 55 55 170"
 
-    GameDetailsBlueTransparent="89 126 179 160"
-    GameDetailsGreenTransparent="126 166 75 160"
-    GameDetailsRedTransparent="173 69 71 160"
+    GameDetailsBlueTransparent="80 154 191 60"
+    GameDetailsGreenTransparent="80 154 191 160"
+    GameDetailsRedTransparent="80 154 191 160"
 
-    GameDetailsBlue="89 126 179 255"
-    GameDetailsGreen="126 166 75 255"
-    GameDetailsRed="173 69 71 255"
+    GameDetailsBlue="80 154 191 255"
+    GameDetailsGreen="80 154 191 255"
+    GameDetailsRed="80 154 191 255"
 
-    PropertySheetBG="74 72 70 255"
-    InteriorColor="64 62 60 255"
+    PropertySheetBG="58 58 58 255"
+    InteriorColor="52 52 52 255"
     
-    DialogBorder="119 117 115 255" // border color around any dialog
+    DialogBorder="117 117 117 255" // border color around any dialog
     
-    FillBG1="64 62 60 255" //gradient colors
-    FillBG2="71 69 67 255"
+    FillBG1="62 62 62 255" //gradient colors
+    FillBG2="69 69 69 255"
     
-    MenuBG1="92 89 86 255" //gradient colors
-    MenuBG2="61 59 58 255"
+    MenuBG1="75 75 75 255" //gradient colors
+    MenuBG2="54 54 54 255"
     
-    Divider="107 104 101 255"
-    SuperDivider="61 61 61 255"
-    DarkImageBorder="47 48 43 255"
+    Divider="86 86 86 255"
+    SuperDivider="71 71 71 255"
+    DarkImageBorder="48 48 48 255"
     DarkImageOverlay="0 0 0 80"
+    
+    inbox_active "158 194 29 255"
+		inbox_active2 "121 166 21 255"
+		inbox_active4 "122 145 71 255"
+		inbox_active5 "85 102 47 255"	
+		
+		inbox_inactive "38 38 37 255"
+		inbox_inactive2 "142 194 12 255"	
+		inbox_inactive4 "122 145 71 255"
+		inbox_inactive5 "74 102 29"
+		
+		parental_lock_active1 "92 126 16 255"
+		parental_lock_active2 "51 49 48 255"	
+		parental_lock_active4 "122 145 71 255"
+		parental_lock_active5 "85 102 47 255"	
 
+		parental_lock_inactive1 "154 49 48 255"
+		parental_lock_inactive2 "189 79 79 255"	
+		parental_lock_inactive4 "146 72 71 255"
+		parental_lock_inactive5 "103 48 47 255"	
     // colors pulled from steamscheme.res
     "ClayBG"      "70 70 70 255"
-    "ClayButtonBG"      "87 88 88 255"        
-    "ClayEnabled"     "85 88 82 255"
-    "ClayKeyFocus"      "89 92 77 255"
+    "ClayButtonBG"      "85 85 85 255"        
+    "ClayEnabled"     "88 88 88 255"
+    "ClayKeyFocus"      "92 92 92 255"
     "ClayMouseDown"     "85 85 85 255"
-    "ClayDisabledText"    "128 134 126 255"
+    "ClayDisabledText"    "134 134 134 255"
     "ClayLightGreen"    "173 181 168 255" // frame button (close X) etc
     "ClayDimLightGreen"   "166 172 162 255" // frame button and title without focus etc
     "LightClayBG"     "104 106 101 255" // property sheet interior, active tab
@@ -154,9 +180,9 @@ steam.styles
     "LightGreenBG"      "90 106 80 255"   // darker background color
     "DarkGreenBG"     "62 70 55 255"    // background color of text edit panes (chat, text Entries, etc.)
     "LightGrayBG"     "121 126 121 255"
-    "GrayBG"      "77 73 71 255"
-    "GrayBG2"     "39 37 35 255"
-    "TempGradientTop" "53 52 51 255"
+    "GrayBG"      "73 73 73 255"
+    "GrayBG2"     "37 37 37 255"
+    "TempGradientTop" "52 52 52 255"
     
     
     DragDrop.DragFrame        "255 255 255 192"
@@ -192,12 +218,12 @@ steam.styles
     ListPanel.PerPixelScrolling     1
     ListPanel.PostSectionLeading	10
 
-	// Default tooltip delay pops fast, but lets the mouse pass through without popping
-	// Anchor=Cursor makes it stick to initial pop location like windows implementation.
-	// Anchor can also be 'Float' to move with the mouse, or 'Parent' to stick just outside
-	// the parent panel (useful for icon sized items)
-	Tooltip.Delay=75
-	Tooltip.Anchor=Cursor
+		// Default tooltip delay pops fast, but lets the mouse pass through without popping
+		// Anchor=Cursor makes it stick to initial pop location like windows implementation.
+		// Anchor can also be 'Float' to move with the mouse, or 'Parent' to stick just outside
+		// the parent panel (useful for icon sized items)
+		Tooltip.Delay=75
+		Tooltip.Anchor=Cursor
 
 	
     WizardPanel.HeaderBGColor     HeaderDialog
@@ -206,7 +232,7 @@ steam.styles
     
     PropertySheet.TransitionEffectTime    "0"     // time to change from one tab to another
     PropertySheet.TabGap        1
-    PropertySheet.FlashTabColor	"255 114 76 255"
+    PropertySheet.FlashTabColor	"120 120 120 255"
 
     RichText.InsetX         8
     RichText.InsetY         7
@@ -237,162 +263,99 @@ steam.styles
     
 
     // Friends List colors
-    Friends.InGameColor       "140 179 89 255"
-    Friends.OnlineColor       "134 181 217 255"
-    Friends.OfflineColor      "Label"
+    Friends.InGameColor       "146 179 27 255"
+    Friends.OnlineColor				"80 154 191 255"
+    //Friends.OnlineColor       "84 168 204 255"
+    Friends.OfflineColor      "127 127 127 255"
     Friends.PanelDefault      "Label"
     Friends.PanelOver       "Text"
     Friends.PanelSelected     "ClientBG"
     Friends.SectionHeader     "Label"
     Friends.NoAvatarOver      "Text"
-    Friends.IgnoredColor      "Highlight3"
-    Friends.ListHeaderFadeOut	"56 54 53 0"
+    Friends.IgnoredColor      "White"
+    Friends.ListHeaderFadeOut	"54 54 54 0"
   
     ChatDialog.URLColor       "text"
     ChatOwnTextColor        "Label"
-	ChatDialog.HistoryColor	"124 124 124 255"
+		ChatDialog.HistoryColor	"124 124 124 255"
     ChatGradientTop         "39 39 39 255"
-    ChatGradientBottom        "102 104 99 255"
+    ChatGradientBottom        "104 104 104 255"
     
     AchievementPopup.TitleColor   "Text"
     AchievementPopup.DescriptionColor "180 180 180 255"
     
     GiftOnlyInfo.ImagePanelColor  "GrayBG"    
 
-	dd_texture_bottom "16 16 16 255"
+		dd_texture_bottom "16 16 16 255"
  }
   
   styles
-  {
-	downarrow
-	{
-      image="graphics/icon_down_default"    
-	}
-
-	downarrow:hover
-	{
-      image="graphics/icon_down_hover"
-
+	  {
+		downarrow
+		{
+	      image="graphics/icon_down_default"    
+		}
 	
-			render_bg {
-			
-			//background
-			0="fill( x0 + 5, y0 + 4, x1 - 2, y1 - 4, buttonfaceactive )"
-			//lines around
-			1="fill(x0 + 4, y0 + 5, x0 + 5, y1 - 5, buttonfaceactive )"  //left
-			2="fill(x1 - 2, y0 + 5, x1 - 1, y1 - 5, buttonfaceactive )"  //right
-			}
-	}
-
-	uparrow
-	{
-      image="graphics/icon_up_default"    
-	}
+		downarrow:hover
+		{
+	      image="graphics/icon_down_hover"
+		
+				render_bg {
+				
+				//background
+				0="fill( x0 + 5, y0 + 4, x1 - 2, y1 - 4, buttonfaceactive )"
+				//lines around
+				1="fill(x0 + 4, y0 + 5, x0 + 5, y1 - 5, buttonfaceactive )"  //left
+				2="fill(x1 - 2, y0 + 5, x1 - 1, y1 - 5, buttonfaceactive )"  //right
+				}
+		}
 	
-	rightarrow
-	{
-      image="graphics/icon_right_default"   
-	}
-	
-	
-	rightarrow:hover
-	{
-      image="graphics/icon_right_hover"    
-	}
-	
-    Button
-    {     
+		uparrow
+		{
+	      image="graphics/icon_up_default"    
+		}
+		
+		rightarrow
+		{
+	      image="graphics/icon_right_default"   
+		}
+		
+		rightarrow:hover
+		{
+	      image="graphics/icon_right_hover"    
+		}
+		
+	  Button
+	  {     
 		font-family=basefont
 		font-size=13
 		font-weight=400
 		textcolor="Text"
 		font-style=uppercase
 		bgcolor=none
-		render_bg
-		{
-			// background fill
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-                
-			// lines around
-			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-	
-			// single pixel fills in the corners
-			5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-			6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-			7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-			8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-		}
-    }
- 
+			render_bg
+			{
+				// background fill
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+			}
+	  }
+	 
     "Page Button"
     {     
 		render_bg
 		{
 			// background fill
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-					
-			// lines around
-			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderPage )"  // top
-			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderPage )"  // bottom
-			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderPage )"  // left
-			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderPage )"  // right
-	
-			// single pixel fills in the corners
-			5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderPage )"
-			6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderPage )"
-			7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderPage )"
-			8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderPage )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"	
 		}
     }
     
 	Button:hover
     {   
-      		textcolor="TextHover"
-      		render_bg
+  		textcolor="TextHover"
+  		render_bg
       {     
         // background fill
-        // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-                
-        // lines around
-			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-
-			   // single pixel fills in the corners
-			   5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-			   6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-			   7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-			   8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-        		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-
+        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"             
       }
     }
 
@@ -401,51 +364,18 @@ steam.styles
       textcolor="TextHover"
       render_bg
       {     
-               // background fill
+        // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-
-        // single pixel fills in the corners
-        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
       }
     }
     
     Button:focus
     {
-        
-	textcolor="TextHover"
-	render_bg
-        {
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacefocus, propertysheetbg )"			
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-
-		        // single pixel fills in the corners
-		        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-		        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-		        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-		        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-        		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-      }
+			textcolor="TextHover"
+			render_bg
+	      {
+	        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacefocus, propertysheetbg )"			    
+	      }
     }
     
     "Page Button:focus"
@@ -454,48 +384,16 @@ steam.styles
       render_bg
       {     
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacefocus, propertysheetbg )"
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-
-        // single pixel fills in the corners
-        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus  )"
-        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus  )"
-        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus  )"
       }
     }
     
-    	Button:active // this is the left-mouse-currently-pressed state
-	{
+    Button:active // this is the left-mouse-currently-pressed state
+		{
        textcolor="TextHover"
        render_bg
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, propertysheetbg )"
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-
-        // single pixel fills in the corners
-        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder  )"
-        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder  )"
-        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder  )"
-        			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -506,58 +404,16 @@ steam.styles
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, propertysheetbg )"
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-
-        // single pixel fills in the corners
-        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder  )"
-        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder  )"
-        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder  )"
-        			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
-    
-
     
     Button:selected
     {
       textcolor="TextHover"
       render_bg
       {     
-                // background fill
+        // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactivefocus, propertysheetbg )"
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-
-        // single pixel fills in the corners
-        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus  )"
-        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus  )"
-        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus  )"
-        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus  )"
-        			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
 
@@ -566,28 +422,8 @@ steam.styles
       textcolor="TextHover"
       render_bg
       {     
-                // background fill
+        // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactivefocus, propertysheetbg )"
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-		
-        // single pixel fills in the corners
-        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus  )"
-        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus  )"
-        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus  )"
-        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus  )"
-        			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -597,63 +433,20 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, none )"
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-
-        // single pixel fills in the corners
-        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-        			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-        
+        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacedisabled, buttonfacedisabled )"             
       }
     }   
     
     "Page Button:disabled"
     {     
-	textcolor="LabelDisabled"
+			textcolor="LabelDisabled"
       render_bg
       {
 				// background fill
-        0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, none )"
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-
-        // single pixel fills in the corners
-        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled  )"
-        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled  )"
-        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled  )"
-        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled  )"
-        			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-      }
-      
+        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacedisabled, buttonfacedisabled )"             
+      }   
     }
-    
-         
+       
     CFriendsListSectionAffordance
     {     
       inset="0 0 0 0"
@@ -672,9 +465,9 @@ steam.styles
       textcolor="texthover"
       inset="0 2 0 0"
       render_bg
-		{
-			0="gradient_horizontal( x0-21, y0+1, x0+230, y1+1, buttonface2, Friends.ListHeaderFadeOut )"
-		}
+			{
+				0="gradient_horizontal( x0-21, y0+1, x0+230, y1+1, buttonface2, Friends.ListHeaderFadeOut )"
+			}
     }
             
     CFriendPanel
@@ -688,7 +481,6 @@ steam.styles
       textcolor="label"
     }
 
-    
     CheckButton
     {
       font-family=basefont
@@ -712,7 +504,7 @@ steam.styles
 
     CheckButton:selected:focus
     {
-      textcolor="Text"
+      textcolor="Texthover"
       render_bg {}
       bgcolor=none
       image="graphics/chkSelFocus"
@@ -748,34 +540,14 @@ steam.styles
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-        render_bg
-        {     
-				// background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
-        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
-          
-        // lines around
-		3="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		4="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		5="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		6="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-
-        
-        // single pixel fills in the corners
-		7="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		9="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		10="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-      }
-  
+        render	{      
+			//gradient to obscure content at bottom of scrolling region 
+			1="gradient( x0, y1 - 9, x1-16, y1-1, none, almostblacktrans )"
+		}  
+	render_bg {				
+					// background gradient        
+					0="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
+				}
     } 
     
     CheckButtonList:scrollbar
@@ -783,40 +555,14 @@ steam.styles
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-				render
-							{								
-								//gradient to obscure content at bottom of scrolling region 
-								1="gradient( x0, y1 - 9, x1+1, y1-1, none, almostblack )"
-							}        
-        render_bg
-        {     
-				// background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
-        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
-        2="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 30, backgroundstartsubtle, none )"
-          
-        // lines around
-		3="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		4="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		5="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		6="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-
-        
-        // single pixel fills in the corners
-		7="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		9="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		10="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-      }
-  
+	render	{      
+			//gradient to obscure content at bottom of scrolling region 
+			1="gradient( x0, y1 - 9, x1-16, y1-1, none, almostblacktrans )"
+		}  
+       	render_bg {				
+			// background gradient        
+			0="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
+		}
     } 
     
     "Page CheckButtonList"
@@ -824,80 +570,41 @@ steam.styles
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-        render_bg
+        render	{      
+			//gradient to obscure content at bottom of scrolling region 
+			1="gradient( x0, y1 - 9, x1-16, y1-1, none, almostblacktrans )"
+		}  
+	
+	render_bg
         {     
-				// background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
-        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
-          
-        // lines around
-		3="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		4="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		5="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		6="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-
-        
-        // single pixel fills in the corners
-		7="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		9="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		10="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-      }
-  
+					// background fill
+	        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
+	        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
+      	}
     }
     
-        "Page CheckButtonList:scrollbar"
+    "Page CheckButtonList:scrollbar"
     {
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-        render
-							{
-								//gradient to obscure content at bottom of scrolling region 
-								1="gradient( x0, y1 - 9, x1+1, y1-1, none, almostblack )"
-							}   
+        render {
+        		//gradient to obscure content at bottom of scrolling region 
+						1="gradient( x0, y1 - 9, x1-16, y1-1, none, almostblacktrans )"
+			 }   
         render_bg
         {     
-				// background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
-        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
-        2="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 30, backgroundstartsubtle, none )"
-          
-        // lines around
-		3="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		4="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		5="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		6="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-
-        
-        // single pixel fills in the corners
-		7="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		9="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		10="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-      }
-  
-    }
+					// background fill
+	        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
+	        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
+    	  }
+   	 }
     
     "CheckbuttonList Checkbutton"
-    {textcolor="text2"}
+    {textcolor="label"} 
     
+    "CheckbuttonList Checkbutton:focus"
+    {textcolor="texthover"} 
     
     ComboBox
     {
@@ -911,26 +618,6 @@ steam.styles
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-  
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-        
-        // single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -942,26 +629,6 @@ steam.styles
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-  
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -973,18 +640,6 @@ steam.styles
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-  
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
       }
     }
     
@@ -996,26 +651,6 @@ steam.styles
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-  
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -1025,26 +660,6 @@ steam.styles
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-  
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderPage )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderPage )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderPage )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderPage )"  // right
-        
-        // single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderPage )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderPage )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderPage )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderPage )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -1054,26 +669,6 @@ steam.styles
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-  
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -1083,26 +678,6 @@ steam.styles
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacehover, propertysheetbg )"
-  
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -1112,26 +687,6 @@ steam.styles
       {     
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-  
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -1152,7 +707,7 @@ steam.styles
     ComboBoxButton:hover
     {
       image="graphics/icon_down_hover"
-            // just draw a single line to divide it from the text
+      // just draw a single line to divide it from the text
       render_bg 
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, label )"
@@ -1215,11 +770,10 @@ steam.styles
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive  )"
       }
-    }
+   	}
     
     "Page ComboBoxButton:focus:hover"
     {
-
       bgcolor=none
       image="graphics/icon_down_focus"
       // just draw a single line to divide it from the text
@@ -1234,9 +788,8 @@ steam.styles
       bgcolor="none"
       render
       {
-       0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, divider, propertysheetbg )"     
+       0="gradient_horizontal( x0, y1 - 1, x1, y1, divider, propertysheetbg )"     
       }
-
     }
     
     Frame
@@ -1244,8 +797,8 @@ steam.styles
     bgcolor="DialogBG"
       render
       {
-        0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, Highlight5 )"     
-        1="gradient( x1 - 1, y0, x1, y1, ClientBG, Highlight5 )" 
+        0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, focus )"     
+        1="gradient( x1 - 1, y0, x1, y1, ClientBG, focus )" 
         2="fill( x0, y0, x1, y0 + 1, ClientBG )"
         3="fill( x0, y0, x0 + 1, y1, ClientBG )"
       }
@@ -1256,24 +809,21 @@ steam.styles
     bgcolor="DialogBG"
       render
       {
-        0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, Highlight5 )"     
-        1="gradient( x1 - 1, y0, x1, y1, ClientBG, Highlight5 )" 
+        0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, focus2 )"     
+        1="gradient( x1 - 1, y0, x1, y1, ClientBG, focus2 )" 
         2="fill( x0, y0, x1, y0 + 1, ClientBG )"
         3="fill( x0, y0, x0 + 1, y1, ClientBG )"
       }
     } 
     
-    
     FrameBRGripPanel
     {
       image=graphics/resizer
-
     }
     
     FrameBRGripPanel:hover
     {
       image=graphics/resizer_over
-
     }
     
     FrameMinimizeButton
@@ -1313,7 +863,7 @@ steam.styles
     }
 
 	// need the maximize button to have different styles for OSX & win32
-   	   	FrameMaximizeButton
+  FrameMaximizeButton
     {
 		render_bg {}
 		image="graphics/win32_win_max"
@@ -1353,7 +903,7 @@ steam.styles
     }
 
 	// these are for when the maximize button becomes the restore button
-   	FrameRestoreButton
+  FrameRestoreButton
     {
 		render_bg {}
 		image="graphics/win32_win_restore"
@@ -1435,7 +985,6 @@ steam.styles
 		image="graphics/osx_win_dis" [$OSX]
     }
 
-
     FrameTitle
     {
 		font-family=basefont
@@ -1449,9 +998,10 @@ steam.styles
 		textcolor="buttonborderfocus"
 		bgcolor="none"
 		render_bg
-		{
-			1="gradient( x0, y0, x1, y1 + 18, TitleBar, none )"
-		}
+			{
+				1="gradient( x0, y0, x1, y0 + 48, titlebar, none )"
+				
+			}
     }
 
     
@@ -1464,16 +1014,17 @@ steam.styles
 		bgcolor="none"
 		textcolor="texthover"
 		textcolor="texthover" [$OSX]
-	    render_bg
-	      {
-	        1="gradient( x0, y0, x1, y1 + 18, titlebarfocus, none )"
-	      }
+	  render_bg
+	    {
+		     2="gradient( x0, y0, x1, y0 + 48, TitleBarfocus, none )"
+	    }
     }
     
    
 	"CFriendsDialog SectionedListPanelInterior"
 	{
 		bgcolor=none
+		inset="-6 -1 -1 -1"
 		font-family=basefont
 		font-size=14
 		font-weight=400
@@ -1482,21 +1033,11 @@ steam.styles
 		selectedbgcolor="Focus"
 		shadowtextcolor="TextDisabled"	// the color of disabled line items		
 		render
-		{
-			//gradient to obscure content at top of scrolling region 
-			0="fill( x0+2, y0, x1, y0 + 2, dialogbgFade1 )"
-			1="gradient( x0+2, y0+2, x1, y0 + 12, dialogbgFade1, dialogbgFade2 )"
-			
-			//gradient to obscure content at bottom of scrolling region 
-			2="gradient( x0+1, y1 - 18, x1, y1-3, none, almostblack )"
-			3="fill( x0+1, y1 - 4, x1, y1-1, almostblack )"
-		}
-		render_bg 
-		{	
-			// background gradient
-			0="gradient( x0, y0, x1, y0 + 149, dialogbg, AlmostBlack )"
-			1="fill( x0, y0 + 149, x1, y1 + 1, AlmostBlack )" 
-		}
+			{				
+        	//gradient to obscure content at bottom of scrolling region 
+		2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
+			}
+		render_bg { }
 	}
 	
         		
@@ -1505,69 +1046,29 @@ steam.styles
 		textcolor=Highlight5
 		bgcolor=none
 		inset="0 -3 0 0"
-		render_bg 
-		{
-			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-        
-			// single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-        }
+		render_bg { }
     }
     
     HTML
     {
 		bgcolor="none"
 		render_bg 
-		{
-		0="fill( x0, y0, x1 - 1, y1- 1, almostblack )" // bg
-			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-        
-			// single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-        }
-        inset="2 2 2 2" 
+			{
+			0="fill( x0, y0, x1 - 1, y1- 1, almostblack )" // bg
+	    }
+    inset="2 2 2 2" 
     }
     
     
     Label
-	{
+		{
 		textcolor="Label"
 		selectedtextcolor="Text"
 		bgcolor="none"
 		font-family=basefont
 		font-size=14
 		font-weight=400
-    }
+ 		}
    
     ListPanel
     {
@@ -1588,27 +1089,11 @@ steam.styles
 			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, dialogbg, almostblack )"
 			1="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 31, backgroundstartsubtle, none )"
 
-			// lines around
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-
-			// single pixel fills in the corners
-
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
 		}
 	}
       
     "Page ListPanel"
 	{
-		
 		font-family=basefont
 		font-size=14
 		font-weight=400
@@ -1617,31 +1102,19 @@ steam.styles
 		selectedbgcolor="Focus"
 		inset="0 -1 1 1"
 		bgcolor=none
-	        render_bg
-	        {     
-		   // background fill
-	        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 80, Propertysheetbg, BackgroundStartOpaque )"
-	        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
-	        2="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 30, backgroundstartsubtle, none )"
-	          
-	        // lines around
-		3="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		4="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		5="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		6="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-	        
-	        // single pixel fills in the corners
-		7="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		9="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		10="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-	      }
+    render_bg
+    {     
+ 		// background fill
+    0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 80, Propertysheetbg, BackgroundStartOpaque )"
+    1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
+    2="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 30, backgroundstartsubtle, none )"
+		}
 	}
     
     "CGamesListPanel"
 	{
       font-family=basefont
-	  bgcolor="none"
+	  	bgcolor="none"
       font-size=15
       font-weight=400
       textcolor="Text"
@@ -1650,33 +1123,11 @@ steam.styles
       shadowtextcolor="TextDisabled"
       inset="0 -1 1 1"
       render_bg {
-
         // background gradient        
         0="gradient( x0+1, y0+1, x1-1, y0 + 432, dialogbg, almostblack )"
         1="fill( x0+1, y0+ 432, x1-1, y1 - 1, almostblack )"
         2="gradient( x0+1, y0+1, x1-1, y0 + 31, dialogbgFade1, dialogbgFade2 )"
-        
-        
-        // lines around
-        3="fill( x0, y0, x0 + 1, y1 - 2, ButtonBorderDisabled )"  //left
-        4="fill( x1 - 1, y0, x1, y1 - 2, ButtonBorderDisabled)"  //right
-        5="fill( x0 + 2, y0 - 1, x1 - 2, y0, ButtonBorderDisabled )"  //top
-        6="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  //btm
-        
-        // single pixel fills in the corners
-		7="fill( x0 + 2, y0 + 1, x0 + 3, y0 + 2, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		9="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		10="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-      
+
         }
     }
   
@@ -1687,8 +1138,8 @@ steam.styles
     }
     "GameItem_Uninstalled:hover"
     {
-        textcolor="label"
-        selectedtextcolor="label"
+      textcolor="label"
+      selectedtextcolor="label"
     }
  
     "GameItem_Installed"
@@ -1699,15 +1150,15 @@ steam.styles
       
     "GameItem_Installed:hover"
     {
-        textcolor="white"
-        selectedtextcolor="white"
+      textcolor="white"
+      selectedtextcolor="white"
     }
     
-        "GameItem_Shortcut"
+    "GameItem_Shortcut"
     {
       textcolor="text"
       selectedtextcolor="white"
-      }
+    }
       
     "GameItem_Shortcut:hover"
     {
@@ -1719,14 +1170,13 @@ steam.styles
     {
       textcolor="text"
       selectedtextcolor="white"
-      }
+    }
       
     "GameItem_Mod:hover"
     {
         textcolor="white"
         selectedtextcolor="white"
     }
-
 
     "GameItem_Updating"
     {
@@ -1764,7 +1214,7 @@ steam.styles
     	selectedtextcolor="highlight1"
     }
     
-        "GameItem_Syncing"
+    "GameItem_Syncing"
     {
     	textcolor="highlight2"
     	selectedtextcolor="highlight1"
@@ -1782,9 +1232,8 @@ steam.styles
     	selectedtextcolor="highlight1"
     }
     
-   
     "GameColumn_BigText"
-	{
+		{
 		font-family=basefont
 		font-size=17
 		font-weight=700
@@ -1801,22 +1250,21 @@ steam.styles
 		inset="0 5 0 0"
     }   
 
-    
     ListPanelCheckBox:selected
     {
 		image="graphics/chkSelStd_Sm"    
     }
 
-	ListPanelCheckBox:focus
+		ListPanelCheckBox:focus
     {
-		textcolor="Text"
+		textcolor="TextSelected"
 		bgcolor=none
 		image="graphics/chkUnselFocus_Sm"  
     }
 
     ListPanelCheckBox:selected:focus
     {
-		textcolor="Text"
+		textcolor="TextSelected"
 		render_bg {}
 		bgcolor=none
 		image="graphics/chkSelFocus_Sm"
@@ -1845,16 +1293,15 @@ steam.styles
 		textcolor="Label"
 		image="graphics/chkUnSelFocus_Sm"
 		inset="4 0 0 0"  
-	}
-
+		}
      
-	"ListPanelColumnHeader ListPanelCheckBox:selected"
+		"ListPanelColumnHeader ListPanelCheckBox:selected"
     {
 		inset="4 0 0 0"
 		image="graphics/chkUnSelStd_Sm"    
     }
 	
-	"ListPanelColumnheader ListPanelCheckBox:focus"
+		"ListPanelColumnheader ListPanelCheckBox:focus"
     {
       font-family=basefont
       font-size=14
@@ -1862,7 +1309,7 @@ steam.styles
       textcolor="TextHover"
       image="graphics/chkUnSelFocus_Sm"
       inset="4 0 0 0"  
-	}
+		}
 
 	"ListPanelColumnheader ListPanelCheckBox:selected:focus"
     {
@@ -1872,7 +1319,6 @@ steam.styles
       image="graphics/chkSelFocus_Sm"
       inset="4 0 0 0"  
     }
-    
     
     ListPanelColumnheader
     {
@@ -1884,14 +1330,13 @@ steam.styles
 		font-style="uppercase"
 		bgcolor="none"
 		inset="1 3 0 0"
-
 		render_bg    
-		{
-			// fill
-			0="fill (x0, y0 + 3, x1, y1 + 1, buttonborderdisabled )" // bg fill
-			1="fill (x0 + 1, y0 + 2, x1, y0 + 3, buttonborderdisabled)" // bg fill2
-		}   
-	}
+			{
+				// fill
+				0="fill (x0, y0 + 1, x1, y1 + 1, buttonborderdisabled )" // bg fill
+				1="fill (x0 + 1, y0 + 1, x1, y0 + 3, buttonborderdisabled)" // bg fill2
+			}   
+		}
     
     ListPanelColumnHeader:hover
     {
@@ -1910,14 +1355,10 @@ steam.styles
 		inset="0 0 0 0"
 		inset="0 1 0 0" [$OSX]
 		padding-top=1
-
 		render_bg    
 		{
 			// fill
 			0="fill (x0, y0 + 1, x1, y1, buttonborderdisabled )" // bg fill
-
-			// lines around
-			2="fill ( x1 - 1, y0 + 3, x1, y1-1, buttonborderdisabled )" // right
 		}   
 	}
 
@@ -1955,13 +1396,7 @@ steam.styles
         render
         {
           // background fill
-          1="fill( x0, y0 + 1, x1 - 1, y1, buttonborderdisabled )"  
-          
-          // lines around
-          2="fill( x0 - 4, y0 - 1, x1 + 1, y0 + 1, buttonborderdisabled )"  //top
-          3="fill( x0, y1 - 1, x1, y1, buttonborderdisabled )"       //btm
-          4="fill( x1-1, y0 + 1, x1, y1, buttonborderdisabled )" //right
-          5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
+          1="fill( x0, y0, x1 - 1, y1, buttonborderdisabled )"  
         }   
         render_bg {}
 	}
@@ -1969,35 +1404,17 @@ steam.styles
     ListPanelColumnSelectButton:hover
      {
         inset="-3 3 0 0"
-        render
-        {
-          // lines around
-          1="fill( x0, y0 + 1, x1 - 1, y1, buttonborderdisabled)"
-          2="fill( x0 - 4, y0 - 1, x1 + 1, y0 + 1, buttonborderdisabled )"  //top
-          3="fill( x0, y1 - 1, x1, y1, buttonborderdisabled )"       //btm
-          4="fill( x1-1, y0 + 1, x1, y1, buttonborderdisabled )" //right
-          5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-        }   
+        render {}   
         render_bg {}
 	}
       
     ListPanelColumnSelectButton:selected
     {
         inset="-3 3 0 0"
-        render
-        {
-          // lines around
-          1="fill( x0, y0 + 1, x1 - 1, y1, buttonborderdisabled)"
-          2="fill( x0 - 4, y0 - 1, x1 + 1, y0 + 1, buttonborderdisabled )"  //top
-          3="fill( x0, y1 - 1, x1, y1, buttonborderdisabled )"       //btm
-          4="fill( x1-1, y0 + 1, x1, y1, buttonborderdisabled )" //right
-          5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-        }   
+        render {}    
         render_bg {}
 	}
 
-
-	
 	"CGamesListPanel ListPanelColumnSelectButton"   
 	{
         inset="-3 3 0 0"
@@ -2025,7 +1442,6 @@ steam.styles
         {
           5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
         }   
-
 	}
    
     ListPanelDragger
@@ -2045,13 +1461,15 @@ steam.styles
 		font-size=15
 		textcolor="text2"
 		bgcolor="none" 
-      	render
+    render
 			{				
-				//gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0, y1 - 12, x1, y1-0, none, almostblack )"
+        			//gradient to obscure content at bottom of scrolling region 
+				2="gradient( x0+1, y1 - 16, x1-1, y1, none, almostblacktrans )"
 			}
-		
-		render_bg {}
+		render_bg 
+			{				
+
+			}
     } 
     
     ListPanelInterior:scrollbar
@@ -2061,10 +1479,13 @@ steam.styles
 		textcolor="text2"
 		render
 			{				
-				//gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0+1, y1 - 9, x1+1, y1-1, none, almostblack )"
+        			//gradient to obscure content at bottom of scrolling region 
+				2="gradient( x0+1, y1 - 16, x1-1, y1-1, none, almostblacktrans )"
 			}
-		render_bg {}
+		render_bg 
+			{				
+
+			}
     } 
 
 	"CSteamRootDialog ListPanel"
@@ -2075,22 +1496,24 @@ steam.styles
     
      "Csteamrootdialog ListPanelInterior"
     {     
-       	inset="3 0 3 0"
-		bgcolor=none
-		render_bg {}
-	}
+      inset="3 0 3 0"
+			bgcolor=none
+
+			render_bg {}
+		}
 	
 	"Csteamrootdialog ListPanelInterior:scrollbar"
     {     
-       	inset="3 0 -1 0"
-		bgcolor=none
-		render
-							{
-								
-								//gradient to obscure content at bottom of scrolling region 
-								1="gradient( x0+1, y1 - 9, x1+1, y1-1, none, almostblack )"
-							}   
-		render_bg {}
+      inset="3 0 -1 0"
+			bgcolor=none
+			render
+				{
+
+					//gradient to obscure content at bottom of scrolling region 
+					1="gradient( x0+2, y1 - 16, x1-1, y1-1, none, almostblacktrans )"
+				}
+			render_bg {}
+
 	}
 	
 	"Page ListPanelInterior"
@@ -2098,19 +1521,27 @@ steam.styles
 		inset="3 1 -1 0"
 		font-size=15
 		bgcolor=none
-		render_bg {}
+		render
+		{		
+			//gradient to obscure content at bottom of scrolling region 
+			2="gradient( x0+2, y1 - 16, x1-1, y1-1, none, almostblacktrans )"
+		}
+		render_bg 
+		{				
+			// background gradient        
+			0="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
+		}
 	}
 	
 	"Page ListPanelInterior:scrollbar"
 	{
 		inset="3 1 -1 0"
 		bgcolor=none
-		render
-			{
-				//gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0+2, y1 - 9, x1+2, y1-1, none, almostblack )"
-			}
-		render_bg {}
+		render_bg 
+		{				
+			// background gradient        
+			0="gradient( x0+1, y0, x1+16, y1-2, dialogbg, almostblack )"
+		}
 	}
       
     ListPanelSectionHeader
@@ -2129,8 +1560,6 @@ steam.styles
         textcolor=texthover
     } 
     
-    
-    
 	"ListPanel RichText"
 	{
 		textcolor="Text"
@@ -2139,7 +1568,6 @@ steam.styles
 		bgcolor=none
 		render_bg {} 
 	}
-
 
 	"ListPanel RichText url" 
 	{
@@ -2168,7 +1596,6 @@ steam.styles
     
     ListPanelSectionCollapser [$OSX]
     {
-      
       bgcolor=none
       render_bg {}   
       image="graphics/icon_collapse_osx" 
@@ -2220,7 +1647,7 @@ steam.styles
 
 	Menu
     {
-		bgcolor="dialogbg"
+		bgcolor="MenuBG2"
 		padding-right=4
 		inset="2 2 2 2"
       
@@ -2228,33 +1655,14 @@ steam.styles
 		{
 			0="gradient( x0 + 1, y0 + 1, x1 - 1, y0+140, MenuBG1, MenuBG2  )"
 			1="fill( x0 + 1 , y0 + 140, x1 - 1, y1 - 1, MenuBG2  )"
-		
-			// lines around
-		2="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		3="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		4="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		5="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-        
-			// single pixel fills in the corners
-		6="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		7="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		8="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		9="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
+
+
 		}
       
 		render {}
 		corner_rounding=1
     }
-    
-    
+      
     MenuBar
     {
 		bgcolor=dialogbg
@@ -2268,7 +1676,6 @@ steam.styles
     {
 		bgcolor=none
     }
-    
     
 	"MenuBar MenuButton" 
 	{
@@ -2286,17 +1693,8 @@ steam.styles
 	{
 		textcolor="texthover"
 		bgcolor=none
-		
-        render_bg
+		render_bg
    		{    
-			// background 
-		    0="gradient( x0 + 1, y0 + 3, x1 - 5, y1 - 3, textdisabled, focus )"
-		        	
-		    // lines around
-		    1="fill( x0 + 2, y0 + 2, x1 - 6, y0 + 3, textdisabled )"  // top
-		    2="fill( x0 + 2, y1 - 3, x1 - 6, y1 - 2, focus )"  // bottom
-		    3="gradient( x0, y0 + 4, x0 + 1, y1 - 4, textdisabled, focus )"  // left
-		    4="gradient( x1 - 5, y0 + 4, x1 - 4, y1 - 4, textdisabled, focus )"  // right
    		}
 	}
 	
@@ -2304,17 +1702,8 @@ steam.styles
 	{
 		textcolor="texthover"
 		bgcolor=none
-		
-        render_bg
+		render_bg
    		{    
-		    // background 
-		    0="gradient( x0 + 1, y0 + 3, x1 - 5, y1 - 3, textdisabled, focus )"
-		        	
-		    // lines around
-		    1="fill( x0 + 2, y0 + 2, x1 - 6, y0 + 3, textdisabled )"  // top
-		    2="fill( x0 + 2, y1 - 3, x1 - 6, y1 - 2, focus )"  // bottom
-		    3="gradient( x0, y0 + 4, x0 + 1, y1 - 4, textdisabled, focus )"  // left
-		    4="gradient( x1 - 5, y0 + 4, x1 - 4, y1 - 4, textdisabled, focus )"  // right
    		}
 	}
 	
@@ -2326,16 +1715,14 @@ steam.styles
       textcolor="scrollglyph"
       bgcolor="none"
       render_bg {}
-       
     }  
    
-    MenuButton:hover
+  MenuButton:hover
     {
       textcolor="white"
     }
     
-   
-    MenuButton:selected
+  MenuButton:selected
     {
 		textcolor="white"
     }
@@ -2343,25 +1730,25 @@ steam.styles
 	MenuItem
     {
 		font-family=basefont
-		textcolor="Text"
+		textcolor="label"
 		font-size=14
-		font-weight=700
+		font-weight=400
 		inset="0 0 0 0"
 		padding-right=6
 		bgcolor="none"
 		render_bg {}
     }
    
-    MenuItem:selected
+  MenuItem:selected
     {
 		textcolor="TextHover"
-		bgcolor="Focus"
+		bgcolor="none"
     }
 	
-    MenuItem:hover
+  MenuItem:hover
     {
-		textcolor="TextHover"
-		bgcolor="Focus"
+		textcolor="white"
+		bgcolor="none"
     }
     
     MenuItem:disabled
@@ -2376,11 +1763,10 @@ steam.styles
 		shadowtextcolor=none
     }
    
-   
     MenuSeparator
     {
-		inset="2 0 6 0"
-		textcolor="Divider"
+		inset="-4 0 0 0"	
+		textcolor="divider"
 		bgcolor=none
     }
 
@@ -2394,21 +1780,14 @@ steam.styles
 		{
 			0="gradient( x0+1, y0, x1-1, y0+80, DialogBG, ClientBG )"
         
-			0="gradient_horizontal( x0 + 1, y1 - 1, x1 -1, y1, ClientBG, Highlight5 )"    // bottom
-			1="gradient( x1 - 1, y0 + 1, x1, y1 - 1, ClientBG, Highlight5 )" // right
-			2="fill( x0 + 1, y0, x1 - 1, y0 + 1, ClientBG )"  // top
-			3="fill( x0, y0 + 1, x0 + 1, y1 - 1, ClientBG )" // left
-     
-			// single pixel fills in the corners
-			4="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ClientBG )"
-			5="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ClientBG )"
-			6="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ClientBG )"
-			7="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, Highlight5a )"
+			1="gradient_horizontal( x0, y1, x1, y1, ClientBG, Highlight5 )"    // bottom
+			2="gradient( x1, y0, x1, y1 , ClientBG, Highlight5 )" // right
+			3="fill( x0, y0, x1, y0, ClientBG )"  // top
+			4="fill( x0, y0, x0, y1, ClientBG )" // left
 		}
-      
 		render {}
-		corner_rounding=1
     }
+
     
     Page
     {
@@ -2431,7 +1810,7 @@ steam.styles
 		bgcolor="DialogBG"
     }
       
-	PageTab
+		PageTab
     {
 		textcolor="Label"
 		font-family=basefont
@@ -2439,12 +1818,11 @@ steam.styles
 		font-style=Uppercase
 		font-weight=400
 		inset="0 -2 0 0"
-        render_bg
+    render_bg
 		{
 			// background gradient
 			0="fill( x0, y0 , x1, y1 - 4, PropertySheetBG )"
-			1="fill(x0, y1-2, x1+3000, y1 -1, divider )"
-			
+			1="fill(x0, y1-2, x1+3000, y1 -1, divider )"		
 		}
     }
 
@@ -2458,7 +1836,7 @@ steam.styles
 		font-weight=400
 		inset="0 -2 0 0"
 		bgcolor="none"
-	    render_bg
+	  render_bg
 			{
 				// background gradient
 				0="gradient( x0, y0 , x1, y1, divider, dialogbg )"
@@ -2492,7 +1870,7 @@ steam.styles
 		font-weight=400
 		inset="0 -2 0 0"
 		bgcolor="none"
-	    render_bg
+	  render_bg
 			{
 				// background gradient
 				0="gradient( x0, y0 , x1, y1, divider, dialogbg )"
@@ -2529,61 +1907,33 @@ steam.styles
 		font-weight=400
 		textcolor="Text"
 		bgcolor="none"
-    }
+  }
          	
     ProgressBar
     {
-		textcolor="Highlight5"
+		textcolor="focus4"
 		bgcolor="none"
 		render
 		{
 			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-        
-			// single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
 		}   
 	}
     
 	"Page ProgressBar"
     {
-		textcolor="Highlight5"
+		textcolor="buttonface"
 		bgcolor="none"
 		render
 		{
 			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderPage )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderPage )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderPage )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderPage )"  // right
-        
-			// single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderPage )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderPage )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderPage )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderPage )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right  
 		}   
     }
 	
@@ -2630,32 +1980,12 @@ steam.styles
     
     RadioButtonList
     {
-		bgcolor="DialogBG"
+		bgcolor="none"
 		inset="-2 0 0 0"
-
 		render_bg
-		{
-		0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, ClientBG  )"
-			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-        
-			// single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-		}     
+			{
+			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, ClientBG  )"
+			}     
     }
         
     RichText
@@ -2668,32 +1998,18 @@ steam.styles
 		inset="0 -1 0 0"
 		render_bg
 		{
-			-1="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG )"
+		-1="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG )"
         
-			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-        
-			// single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
+		// lines around
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
+		2="fill( x0 + 1, y1 - 1, x1 - 1, y1, ButtonBorder )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
 		}     
     }
          
     RichTextInterior 
-	{
+		{
 		bgcolor=none
     }
     
@@ -2711,7 +2027,6 @@ steam.styles
 	{
 		textcolor="Texthover"
 	}
-	
 	
 	"CFriendPanel RichText URL" 
 		{
@@ -2747,10 +2062,6 @@ steam.styles
 		{
 			// background fill
 			0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonface )"
-					
-			// lines around
-			1="fill( x0 + 3, y0 + 2, x1 - 5, y0 + 3, ButtonFace )"  // top
-			2="fill( x0 + 3, y1 + 2, x1 - 5, y1 + 3, ButtonFace )"  // bottom
 		}
 		
     }
@@ -2764,10 +2075,6 @@ steam.styles
 		{
 			// background fill
 			0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonfaceActive )"
-					
-			// lines around
-			1="fill( x0 + 3, y0 + 2, x1 - 5, y0 + 3, ButtonFaceActive )"  // top
-			2="fill( x0 + 3, y1 + 2, x1 - 5, y1 + 3, ButtonFaceActive )"  // bottom
 		}
     }
     
@@ -2779,10 +2086,6 @@ steam.styles
 		{
 			// background fill
 			0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonfaceActive )"
-					
-			// lines around
-			1="fill( x0 + 3, y0 + 2, x1 - 5, y0 + 3, ButtonFaceActive )"  // top
-			2="fill( x0 + 3, y1 + 2, x1 - 5, y1 + 3, ButtonFaceActive )"  // bottom
 		}
     }
 
@@ -2794,10 +2097,6 @@ steam.styles
 		{
 			// background fill
 			0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonfaceDisabled )"
-					
-			// lines around
-			1="fill( x0 + 3, y0 + 2, x1 - 5, y0 + 3, ButtonFaceDisabled )"  // top
-			2="fill( x0 + 3, y1 + 2, x1 - 5, y1 + 3, ButtonFaceDisabled )"  // bottom
 		}
     }
 	
@@ -2810,56 +2109,40 @@ steam.styles
 		{
 			// background fill
 			0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonface )"
-					
-			// lines around
-			1="fill( x0 + 3, y0 - 2, x1 - 5, y0 - 1, buttonface )"  // top
-			2="fill( x0 + 3, y1 - 3, x1 - 5, y1 - 2, buttonface )"  // bottom
 		}
     }
     
     ScrollBarButton.down:hover
-	{
+		{
 		inset="-2 0 0 0"
 		image="graphics/icon_down_hover"
 		render_bg
 		{
 			// background fill
 			0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonfaceActive )"
-					
-			// lines around
-			1="fill( x0 + 3, y0 - 2, x1 - 5, y0 - 1, buttonfaceActive )"  // top
-			2="fill( x0 + 3, y1 - 3, x1 - 5, y1 - 2, buttonfaceActive )"  // bottom
 		}
     }
     
-        ScrollBarButton.down:active
-	{
+    ScrollBarButton.down:active
+		{
 		inset="-2 0 0 0"
 		image="graphics/icon_down_hover"
 		render_bg
 		{
 			// background fill
 			0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonfaceActive )"
-					
-			// lines around
-			1="fill( x0 + 3, y0 - 2, x1 - 5, y0 - 1, buttonfaceActive )"  // top
-			2="fill( x0 + 3, y1 - 3, x1 - 5, y1 - 2, buttonfaceActive )"  // bottom
 		}
     }
     
     
-        ScrollBarButton.down:disabled
-	{
+     ScrollBarButton.down:disabled
+		{
 		inset="-2 0 0 0"
 		image="graphics/icon_down_hover"
 		render_bg
 		{
 			// background fill
 			0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonfaceDisabled )"
-					
-			// lines around
-			1="fill( x0 + 3, y0 - 2, x1 - 5, y0 - 1, buttonfaceDisabled )"  // top
-			2="fill( x0 + 3, y1 - 3, x1 - 5, y1 - 2, buttonfaceDisabled )"  // bottom
 		}
     }
     
@@ -2869,14 +2152,10 @@ steam.styles
 		inset="1 3 0 0"
 		image="graphics/icon_left_default"
 		render_bg 
-		{
-			// center fill
-			0="fill( x0 + 2, y0 + 5, x1, y1 - 3, ButtonFace )"
-			
-			// lines around
-			1="fill( x0 + 3, y0 + 4, x1 - 1, y0 + 5, buttonface )"  // top
-			2="fill( x0 + 3, y1 - 3, x1 - 1, y1 - 2, buttonface )"  // bottom
-        	}
+			{
+				// center fill
+				0="fill( x0 + 2, y0 + 5, x1, y1 - 3, ButtonFace )"
+			}
     }
     
     ScrollBarButton.left:hover
@@ -2885,14 +2164,10 @@ steam.styles
 		image="graphics/icon_left_hover"
 		inset="1 3 0 0"
 		render_bg 
-		{
-			// center fill
-			0="fill( x0 + 2, y0 + 5, x1, y1 - 3, ButtonFaceActive )"
-			
-			// lines around
-			1="fill( x0 + 3, y0 + 4, x1 - 1, y0 + 5, ButtonFaceActive )"  // top
-			2="fill( x0 + 3, y1 - 3, x1 - 1, y1 - 2, ButtonFaceActive )"  // bottom
-        	}
+			{
+				// center fill
+				0="fill( x0 + 2, y0 + 5, x1, y1 - 3, ButtonFaceActive )"
+	    }
     }
         
     ScrollBarButton.right
@@ -2901,14 +2176,10 @@ steam.styles
 		image="graphics/icon_right_default"
 		inset="0 2 0 0"
 		render_bg 
-		{
-			// center fill
-			0="fill( x0, y0 + 5, x1, y1 - 3, ButtonFace )"
-			
-			// lines around
-			1="fill( x0 + 1, y0 + 4, x1 - 2, y0 + 5, ButtonFace )"  // top
-			2="fill( x0 + 1, y1 - 3, x1 - 2, y1 - 2, ButtonFace )"  // bottom
-        }
+			{
+				// center fill
+				0="fill( x0, y0 + 5, x1, y1 - 3, ButtonFace )"
+	    }
     }
         
     ScrollBarButton.right:hover
@@ -2916,14 +2187,10 @@ steam.styles
 		image="graphics/icon_right_hover"
 		inset="0 2 0 0"
 		render_bg 
-		{
+			{
 			// center fill
 			0="fill( x0, y0 + 5, x1, y1 - 3, ButtonFaceActive )"
-			
-			// lines around
-			1="fill( x0 + 1, y0 + 4, x1 - 2, y0 + 5, ButtonFaceActive )"  // top
-			2="fill( x0 + 1, y1 - 3, x1 - 2, y1 - 2, ButtonFaceActive )"  // bottom
-        }
+      }
     }
     
     ScrollBarHandle  //vertical scrollbar thumb
@@ -2934,10 +2201,6 @@ steam.styles
 		{
 			// center fill
 			0="fill( x0 + 2, y0 + 6, x1 - 4, y1 - 5, ButtonFace )"
-			
-			// lines around
-			1="fill( x0 + 3, y0 + 5, x1 - 5, y0 + 6, buttonface )"  // top
-			2="fill( x0 + 3, y1 - 5, x1 - 5, y1 - 4, buttonface )"  // bottom
 		}
     }
        
@@ -2948,10 +2211,6 @@ steam.styles
 		{
 			// center fill
 			0="fill( x0 + 2, y0 + 6, x1 - 4, y1 - 5, ButtonFaceActive )"
-			
-			// lines around
-			1="fill( x0 + 3, y0 + 5, x1 - 5, y0 + 6, buttonfaceActive )"  // top
-			2="fill( x0 + 3, y1 - 5, x1 - 5, y1 - 4, buttonfaceActive )"  // bottom
 		}
     }
     
@@ -2962,10 +2221,6 @@ steam.styles
 		{
 			// center fill
 			0="fill( x0 + 2, y0 + 6, x1 - 4, y1 - 5, ButtonFaceActive )"
-			
-			// lines around
-			1="fill( x0 + 3, y0 + 5, x1 - 5, y0 + 6, buttonfaceActive )"  // top
-			2="fill( x0 + 3, y1 - 5, x1 - 5, y1 - 4, buttonfaceActive )"  // bottom
 		}
     }
     
@@ -2973,65 +2228,51 @@ steam.styles
  
     "SliderHoriz"  //horizontal scrollbar thumb
     {
-	 
-	 image="graphics/icon_scroll_handle_horiz"
-      render {
+	 	image="graphics/icon_scroll_handle_horiz"
+      render 
+      {
       	// center fill
-        	1="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFace )"	
-        		
-		// lines around
-		1="fill( x0 + 3, y0 + 5, x1 - 2, y0 + 6, buttonface )"  // top
-		2="fill( x0 + 3, y1 - 3, x1 - 2, y1 - 2, buttonface )"  // bottom
-		}
-
+        1="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFace )"		
+			}
     }
     
     "SliderHoriz:hover"
     {
 	
-	 image="graphics/icon_scroll_handle_over_horiz"
-      render {
+			image="graphics/icon_scroll_handle_over_horiz"
+      render 
+      	{
       	// center fill
         	0="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFaceActive )"	
-        		
-		// lines around
-		1="fill( x0 + 3, y0 + 5, x1 - 2, y0 + 6, buttonfaceActive )"  // top
-		2="fill( x0 + 3, y1 - 3, x1 - 2, y1 - 2, buttonfaceActive )"  // bottom
-		}
-
+				}
     }
     
     "SliderHoriz:active"
     {
 	 
-	 image="graphics/icon_scroll_handle_over_horiz"
-      render {
+    	image="graphics/icon_scroll_handle_over_horiz"
+      	render {
       	// center fill
         	0="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFaceActive )"	
-        		
-		// lines around
-		1="fill( x0 + 3, y0 + 5, x1 - 2, y0 + 6, buttonfaceActive )"  // top
-		2="fill( x0 + 3, y1 - 3, x1 - 2, y1 - 2, buttonfaceActive )"  // bottom
 		}
     }
     
     ScrollBarSlider // gutter
     {
 		bgcolor="none"
+		render{ }
 		render_bg
 		{
 
-			//lines around
-			1="fill( x0 + 3, y0 + 5, x1 - 5, y0 + 6, buttonborderdisabled )"  // top
-			
 			//background fill
-			2="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, buttonborderdisabled, none)"
+			2="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, scrollbg, none)"
 		}
     }
     
     ScrollBarSliderHoriz // gutter
     {
 		bgcolor="none"
+		render{ }
 		render_bg { }
     }
     
@@ -3039,12 +2280,11 @@ steam.styles
     "GamesPage_Details ListPanel ScrollBarSlider" // gutter in games list detail view 
     {
 		bgcolor="none"
+		render{ }
 		render_bg
 		{
 			//background fill
-			0="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, buttonborderdisabled, none)"
-			//lines around
-			1="fill( x0 + 3, y0 + 5, x1 - 5, y0 + 6, buttonborderdisabled )"  // top
+			0="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, scrollbg, none)"
 		}
     }
     
@@ -3063,7 +2303,7 @@ steam.styles
 	{
 		bgcolor="none"
 		render_bg { 
-			0="fill(x0,y0,x1 - 1,y1 - 1, almostblack)"
+			0="fill(x0,y0,x1, y1 - 1, almostblack)"
 		}
 	}
 	"HTML ScrollBar.Horizontal"
@@ -3079,9 +2319,7 @@ steam.styles
 		bgcolor=none
 		render_bg {
 			//background fill
-			0="gradient_horizontal( x0 + 6, y0 + 5, x0 + 200, y1 - 2, buttonborderdisabled, none)"
-			//lines around
-			1="fill( x0 + 5, y0 + 6, x0 + 6, y1 - 3, buttonborderdisabled )"  // top
+			0="gradient_horizontal( x0 + 6, y0 + 5, x0 + 200, y1 - 2, dark, none)"
 		}
 
 	}
@@ -3096,40 +2334,27 @@ steam.styles
  
     SectionedListPanel
     {
-		bgcolor="propertysheetbg"
-		font-family=basefont
-		font-size=14
-		font-weight=400
-		textcolor="Text"
-		selectedtextcolor="TextSelected"
-		selectedbgcolor="Focus"
-		bgcolor="none"
-		render_bg 
-		{
-			// lines around
-			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-        
-			// single pixel fills in the corners
-			5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-			6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-			7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-			8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-			// background gradient
-			0="gradient( x0 + 1, y0 + 1, x1, y0 + 1, Propertysheetbg, BackgroundStartOpaque)"
-		}
-        inset="1 -1 1 1"  
-    }
+			bgcolor="propertysheetbg"
+			font-family=basefont
+			font-size=14
+			font-weight=400
+			textcolor="Text"
+			selectedtextcolor="TextSelected"
+			selectedbgcolor="Focus"
+			bgcolor="none"
+		render
+			{				
+       //gradient to obscure content at bottom of scrolling region 
+			2="gradient( x0, y1 - 16, x1-16, y1, none, almostblacktrans )"
+			}
+		      render_bg 
+      {
+       	// background fill
+	   		0="gradient( x0, y0, x1, y0 + 140, dialogbg, almostblack )"
+	   		1="fill( x0, y0 + 140, x1, y1, almostblack )"   		
+      }    
+      inset="1 -1 1 1"  
+    }  
     
     "CFriendsDialog SectionedListPanel"
     {
@@ -3140,20 +2365,12 @@ steam.styles
       textcolor="Text"
       selectedtextcolor="TextSelected"
       selectedbgcolor="Focus"
+      render { }
       render_bg 
       {
        	// background fill
-	   		0="gradient( x0 + 1, y0, x1 - 1, y0 + 140, dialogbg, almostblack )"
-	   		1="fill( x0 + 1, y0 + 140, x1 - 1, y1-1, almostblack )"
-	   		
-	   		//lines around, special due to tabs at top
-	   		2="gradient( x1 - 1, y0 -1, x1, y1 -1, dialogbg, ButtonBorderDisabled )"  // right
-	   		3="gradient( x0, y0, x0 + 1, y1 - 2, dialogbg, ButtonBorderDisabled )"  // left
-	   		//single pixel fills
-	   		4="fill( x0, y1-1, x0 + 1, y1, dialogbg )"
-				5="fill( x1-1, y1-1, x1, y1, dialogbg )"
-
-	   		
+	   		0="gradient( x0, y0, x1, y0 + 140, dialogbg, almostblack )"
+	   		1="fill( x0, y0 + 140, x1, y1, almostblack )"   		
       }    
     }
     
@@ -3179,8 +2396,6 @@ steam.styles
     {
       image="graphics/icon_expand_over"
     }
-    
-
   
     Slider
     {
@@ -3204,7 +2419,6 @@ steam.styles
       textcolor="labelfocus"
       font-style=uppercase   
     }
-
     
     StatusLabelDim
     {
@@ -3222,8 +2436,7 @@ steam.styles
       font-weight=400
       textcolor="white"
       font-style=uppercase
-    }   
-    
+    }    
 
     TextEntry
     {
@@ -3234,31 +2447,19 @@ steam.styles
       bgcolor="none"
       selectedtextcolor="white"
       selectedbgcolor="TextSelectedBG"
-      shadowtextcolor="Text"  // this is the cursor color
+      shadowtextcolor="text"  // this is the cursor color
 
       inset-left=4
       inset-top=0
       render
       {
-        // lines around
-          1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-        
-        // single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+
+			// lines around
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
+       
       }     
     }
     
@@ -3266,25 +2467,12 @@ steam.styles
     {
       render
       {
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderPage )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderPage )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderPage )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderPage )"  // right
-        
-        // single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderPage )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderPage )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderPage )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderPage )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+
+			// lines around
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
       }     
     }
     
@@ -3295,24 +2483,10 @@ steam.styles
 		render
 		{
 			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-			// single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus )"  // right
 		}     
     }
        
@@ -3321,26 +2495,11 @@ steam.styles
       textcolor="TextHover"
       render
       {
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-
+			// lines around
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus )"  // right
       }     
     }
     
@@ -3351,25 +2510,11 @@ steam.styles
       bgcolor="ButtonFaceDisabled"
       render
       {
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-        
-        // single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
+			// lines around
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderDisabled )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // right
       }     
     }
     
@@ -3386,38 +2531,22 @@ steam.styles
     TextEntryLarge
     {
       font-family=basefont
-      font-size=24
+      font-size=18
       textcolor="Text"
       font-weight=400
       bgcolor="none"
       selectedtextcolor="TextEntrySelected"
       selectedbgcolor="TextSelectedBG"
-      shadowtextcolor="Text"  // this is the cursor color
+      shadowtextcolor="text"  // this is the cursor color
 
       inset-left=4
-      inset-top=5
-      inset-bottom=5
       render
       {
         // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-        
-        // single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
       }     
     }
 
@@ -3427,24 +2556,10 @@ steam.styles
       render
       {
         // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus  )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus  )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus  )"  // right
       }     
     }
     
@@ -3455,24 +2570,10 @@ steam.styles
       render
       {
         // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-        
-        // single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderDisabled )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // right
       }     
     }
     
@@ -3497,24 +2598,10 @@ steam.styles
 		render
 		{
 			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonFaceDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonFaceDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonFaceDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonFaceDisabled )"  // right
-			
-			// single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonFaceDisabled )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonFaceDisabled )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonFaceDisabled )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonFaceDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
+		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonFaceDisabled )"  // top
+		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonFaceDisabled )"  // bottom
+		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonFaceDisabled )"  // left
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonFaceDisabled )"  // right
 		}			
 	}
 	
@@ -3532,90 +2619,29 @@ steam.styles
       
         // background fill
 	   0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-			
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-        
-        // single pixel fills in the corners
-  		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
-
   
     ToggleButton:focus
     {     
             textcolor="TextHover"
-            bgcolor="ButtonFaceFocus"
+            bgcolor="none"
 	 		render_bg
 		{
 			// background fill
 			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-                
-			// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-			// single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
 		}
     }
     
     ToggleButton:hover
     {
       textcolor="TextHover"
-      bgcolor="ButtonFaceHover"
+      bgcolor="none"
       render_bg
       {     
         
         // background fill
         0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
-                
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
-
       }
     }
     
@@ -3628,26 +2654,6 @@ steam.styles
       {
         	// background fill
 		0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, backgroundstartopaque, propertysheetbg )"
-        
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-        
-        // single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
   
@@ -3661,29 +2667,8 @@ steam.styles
       bgcolor=none
       render_bg
       {
-      
-      			// background fill
+      // background fill
 			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
-			
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderPage )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderPage )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderPage )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderPage )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderPage )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderPage )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderPage )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderPage )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
     
@@ -3693,89 +2678,27 @@ steam.styles
       bgcolor="none"
       render_bg
       {
-      
       	0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacehover, propertysheetbg )"
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
       }
     }
   
     "Page ToggleButton:focus"
     {
-      
       textcolor="TextHover"
       bgcolor="none"
       render_bg
       {
-		0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacefocus, propertysheetbg )"
-        
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacefocus, propertysheetbg )"
       }
     }
-    
-        "Page ToggleButton:selected"
+   
+    "Page ToggleButton:selected"
     {
-      
       textcolor="TextHover"
       bgcolor="none"
       render_bg
       {
-		0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacefocus, propertysheetbg )"
-        
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderFocus )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderFocus )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"  // right
-        
-        // single pixel fills in the corners
-	   	5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderFocus )"
-	   	6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderFocus )"
-	   	7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderFocus )"
-	   	8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"
-	   		9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, backgroundstartopaque, propertysheetbg )"
       }
     }
     
@@ -3816,7 +2739,6 @@ steam.styles
     TreeViewSubPanel
     {
       bgcolor=none
-
     }
   
     TreeNodeText
@@ -3837,17 +2759,17 @@ steam.styles
       {
         -1="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, none )"
 
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
+      // lines around
+			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
+			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
+			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
+			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
         
-        // single pixel fills in the corners
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
+      // single pixel fills in the corners
+			5="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
+			6="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
+			7="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
+			8="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
 			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
 			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
 			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
@@ -3856,7 +2778,6 @@ steam.styles
 			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
 			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
 			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-
       }     
     }
     
@@ -3896,9 +2817,34 @@ steam.styles
       font-style=regular
     }
     
-    URLLabelSimple:Hover
+  URLLabelSimple:Hover
     {
       font-style=underline
+      textcolor="WHITE"
+    }  
+    
+	URLLabelSimple2
+    {
+      textcolor="labelfocus"
+      bgcolor="none"
+      font-family=basefont
+      font-size=14
+      font-weight=400
+      font-style=regular
+    }
+
+	URLLabelSimple2 [$OSX]
+    {
+      textcolor="labelfocus"
+      bgcolor="none"
+      font-family=basefont
+      font-size=13
+      font-weight=400
+      font-style=regular
+    }
+    
+  URLLabelSimple2:Hover
+    {
       textcolor="WHITE"
     }  
 
@@ -3912,6 +2858,17 @@ steam.styles
       font-size=14 [$OSX]
       textcolor="label"
       selectedtextcolor="TextSelected"
+      
+          render
+			{				
+        //gradient to obscure content at bottom of scrolling region 
+				2="gradient( x0+1, y1 - 16, x1-1, y1, none, almostblacktrans )"
+			}
+		render_bg 
+			{				
+				// background gradient        
+				1="gradient( x0+1, y0, x1-1, y1, dialogbg, almostblack )"
+			}
     }
     
     GameColumnHeaderFavorites
@@ -3951,30 +2908,9 @@ steam.styles
       selectedbgcolor="Focus"
       bgcolor=none
       render_bg {
-
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-        
-        // single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-        
         // background gradient
-        8="gradient( x0 + 1, y0 + 1, x1, y0 + 240, propertysheetbg, DarkDialogBG )"
-        9="fill( x0, y0 + 240, x1, y1, DarkDialogBG )"
+        1="gradient( x0 + 1, y0 + 1, x1, y0 + 240, propertysheetbg, DarkDialogBG )"
+        2="fill( x0, y0 + 240, x1, y1, DarkDialogBG )"
             }
         inset="1 -1 1 1"  
     }
@@ -3991,7 +2927,7 @@ steam.styles
     {
       bgcolor=none
       render_bg={}
-      image="graphics/icon_button_back_over"
+      image="graphics/icon_button_back_down"
     }
 	
     BackButton:active
@@ -4356,6 +3292,34 @@ steam.styles
 		selectedbgcolor="Focus"
 	}
 	
+		CChatRoomDlg
+		{			
+			bgcolor="none"
+
+			render
+			{
+		
+				//gradient to obscure content at bottom of scrolling region 
+				2="gradient( x0+9, y1 -88, x1-24, y1-74, none, almostblacktrans )"
+			}
+			render_bg
+			{
+
+			}
+
+		}
+		
+		ChatListPanel
+		{	
+		render {}
+
+		render_bg
+			{
+						 0="gradient( x0 +1, y0, x1 -16, y1, darkdialogbg, almostblack )"
+			}
+		}
+			
+	
 	Chat_MenuButton_withChrome
 	{
 		font-family=basefont
@@ -4367,63 +3331,22 @@ steam.styles
 		render_bg 
 		{     
 			// background fill
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface, propertysheetbg )"
-                
-			// lines around
-			1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-
-			// single pixel fills in the corners
-			5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-			6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-			7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-			8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+			0="gradient( x0, y0, x1, y1, buttonface, propertysheetbg )"             
 		}
 		minimum-width=120
 	}
 	
-	Chat_MenuButton_withChrome::disabled
+	Chat_MenuButton_withChrome:disabled
   {
       textcolor="LabelDisabled"
       render_bg
       {     
         // background fill
-        0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, none )"
+        0="fill( x0, y0, x1, y1, none )"
                 
-        // lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, buttonborderdisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-
-        // single pixel fills in the corners
-        5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-        6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-        8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-        			11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-			12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-        
       }
     }    
     
-	
    	// used in friends tooltip and friends list for overriding regular styles with custom colors
    	friends_offline
    	{
@@ -4457,37 +3380,41 @@ steam.styles
 		render_bg
 		{
 			// top area and graphic
-			0="gradient( x0, y0, x1, y1, dd_texture_bottom, black )"
-			0="image_tiled( x0, y0, x1, y0+275, graphics/dd_texture)"
-			1="fill( x0, y0+0, x0+1, y1, black )"
-			2="fill( x1-1, y0+0, x1, y1, black )"
-			2="fill( x0, y1-1, x1, y1, black )"
+			0="fill( x0, y0, x1, y1, MenuBg )"
+			1="image( x0, y0, x1, y1, graphics/clienttexture8)"
+			
+								// lines around
+				2="fill( x0 + 1, y0, x1 - 1, y0 + 1, blueborder )"  // top
+				3="fill( x0 + 1, y1 - 1, x1 - 1, y1, blueborder )"  // bottom
+				4="fill( x0, y0 + 1, x0 + 1, y1 - 1, blueborder )"  // left
+				5="fill( x1 - 1, y0 + 1, x1, y1 - 1, blueborder )"  // right
 		}
 	}
 
 	SuperNavMenuItem
 	{
-		padding=4
+		padding=1
 		font-size=14
+		font-weight=regular
+		textcolor="label"
 		bgcolor=none
 		font-style="uppercase"
 	}
 
 	SuperNavMenuItem:selected
 	{
-		textcolor="84 146 205 255"
+		textcolor="SuperNav"
 	}
 
 	SuperNavMenuItem:hover
 	{
-		textcolor="84 146 205 255"
+		textcolor="SuperNavHover"
 	}
 
 	"SuperNavMenuDivider"
 	{
 		textcolor="none"
 		render {
-			0="fill( x0+6, y0, x1-6, y0+1, black )"
 			1="fill( x0+6, y0+1, x1-6, y0+2, SuperDivider )"
 		}
 	}
@@ -4501,6 +3428,6 @@ steam.styles
 	{
 		textcolor="176 172 165 255"
 	}
-
+	
   }
 }

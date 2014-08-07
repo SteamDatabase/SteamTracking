@@ -99,7 +99,7 @@
 			"fieldName"		"account_balance"
 			"labelText"		""
 			"URLText"		"steam://url/StoreAccount/"
-			style="URLLabelSimple"
+			style="URLLabelSimple2"
 		}
 		
 		
@@ -490,27 +490,6 @@
 			render {}
 			render_bg
 			{
-				// background fill
-				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
-				
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, buttonface )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, buttonface )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, buttonface )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, buttonface  )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, buttonface )"
-				
 				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
@@ -521,28 +500,8 @@
 			render {}
 			render_bg
 			{
-				// background fill
-				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
 
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, buttonface )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, buttonface )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, buttonface )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, buttonface  )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, buttonface )"
-				
-				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
+				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
 
@@ -554,25 +513,7 @@
 				// background fill
 				
 				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, buttonface )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, buttonface )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, buttonface )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, buttonface  )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, buttonface )"
-				
-				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
+				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
 
@@ -588,27 +529,7 @@
 					render_bg
 			{
 				// background fill
-				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, disabledborder )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, disabledborder )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, disabledborder )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, disabledborder )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, disabledborder )"
-				
-				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive_disabled )"
+				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive_disabled )"
 			}	
 		}	
 
@@ -623,26 +544,8 @@
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_active, parental_lock_active2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, inbox_active )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, inbox_active )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, inbox_active )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, inbox_active )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, inbox_inactive5 )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, inbox_inactive5 )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, inbox_inactive5 )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, inbox_inactive4 )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, inbox_inactive5 )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, inbox_inactive4 )"
-				
-				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, none )"			
+				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
 		
@@ -659,26 +562,8 @@
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_active, inbox_active2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, inbox_active )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, inbox_active )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, inbox_active )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, inbox_active )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, inbox_inactive5 )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, inbox_inactive5 )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, inbox_inactive5 )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, inbox_inactive4 )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, inbox_inactive5 )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, inbox_inactive4 )"
-				
-				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, inbox_active2 )"
+				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
 		inbox_button_active:selected
@@ -692,26 +577,8 @@
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_active, parental_lock_active2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, inbox_active )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, inbox_active )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, inbox_active )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, inbox_active )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, inbox_inactive5 )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, inbox_inactive5 )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, inbox_inactive5 )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, inbox_inactive4 )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, inbox_inactive5 )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, inbox_inactive4 )"
-				
-				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, none )"
+				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
 
@@ -725,30 +592,28 @@
 						render_bg
 			{
 				// background fill
-				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, disabledborder )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, disabledborder )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, disabledborder )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, disabledborder )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, disabledborder )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, disabledborder )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, disabledborder )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, disabledborder )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, disabledborder )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, disabledborder )"
-				
-				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_disabled )"
+				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_disabled )"
 			}	
 		}	
 		
+		Menu
+    {
+		bgcolor="dialogbg"
+		padding-right=4
+		inset="2 2 2 2"
+      
+				render_bg
+				{
+					0="gradient( x0 + 1, y0 + 1, x1 - 1, y0+140, MenuBG1, MenuBG2  )"
+					1="fill( x0 + 1 , y0 + 140, x1 - 1, y1 - 1, MenuBG2  )"
+		
+					// lines around
+				2="fill( x0 + 1, y0, x1 - 1, y0 + 1, clientbg )"  // top
+				3="fill( x0 + 1, y1 - 1, x1 - 1, y1, clientbg )"  // bottom
+				4="fill( x0, y0 + 1, x0 + 1, y1 - 1, clientbg )"  // left
+				5="fill( x1 - 1, y0 + 1, x1, y1 - 1, clientbg )"  // right
+				}
+		}
 		parental_lock_button
 		{
 			padding-left=3
@@ -758,24 +623,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, parental_lock_active2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_inactive1 )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_inactive1 )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, parental_lock_inactive1 )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, parental_lock_inactive1 )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, parental_lock_inactive5 )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, parental_lock_inactive5 )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, parental_lock_inactive5 )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, parental_lock_inactive4 )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, parental_lock_inactive5 )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, parental_lock_inactive4 )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, none )"
 			}	
 		}
 
@@ -788,24 +636,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, parental_lock_inactive2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_inactive1 )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_inactive1 )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, parental_lock_inactive1 )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, parental_lock_inactive1 )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, parental_lock_inactive5 )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, parental_lock_inactive5 )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, parental_lock_inactive5 )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, parental_lock_inactive4 )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, parental_lock_inactive5 )"
-				12="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 2, parental_lock_inactive4 )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, parental_lock_inactive2 )"				
 			}	
 			
 		}
@@ -819,24 +650,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, parental_lock_active2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_active1 )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_active1 )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, parental_lock_active1 )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, parental_lock_active1 )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, parental_lock_active5 )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, parental_lock_active5 )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, parental_lock_active4 )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, parental_lock_active4 )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, parental_lock_active5 )"
-				12="fill( x0 + 1, y1 + 2, x0 + 2, y1 + 3, parental_lock_active5 )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, none )"
 			}	
 			
 		}
@@ -852,32 +666,9 @@
 			{
 				// background fill
 				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, inbox_active2 )"
-
-				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, parental_lock_active1 )"  // top
-				2="fill( x0 + 2, y1 + 2, x1 - 2, y1 + 3, parental_lock_active1 )"  // bottom
-				3="fill( x0, y0, x0 + 1, y1 + 1, parental_lock_active1 )"  // left
-				4="fill( x1 - 1, y0, x1, y1 + 1, parental_lock_active1 )"  // right		
-
-				5="fill( x0, y1 + 1, x0 + 1, y1 + 2, parental_lock_active5 )"
-				6="fill( x1 - 1, y1 + 1, x1, y1 + 2, parental_lock_active5 )"
-
-				7="fill( x0 + 1, y1 + 1, x0 + 2, y1 + 3, parental_lock_active4 )"
-				8="fill( x1 - 2, y1 + 1, x1 - 1, y1 + 2, parental_lock_active4 )"
-				
-				9="fill( x0, y1 + 2, x0 + 1, y1 + 3, backdrop )"
-				10="fill( x1 - 1, y1 + 2, x1, y1 + 3, backdrop )"
-				
-				11="fill( x1 - 2, y1 + 2, x1 - 1, y1 + 3, parental_lock_active5 )"
-				12="fill( x0 + 1, y1 + 2, x0 + 2, y1 + 3, parental_lock_active5 )"
 			}	
 			
 		}
-
-
-
-
-
-
 
 		
 		inboxmenuitem
@@ -918,32 +709,12 @@
 		support_hover_red1 "193 94 93 255"
 		support_hover_red2 "156 64 63 255"
 		
-		inbox_active_text "140 179 36 255"
-		inbox_inactive_text "191 191 191 255"
+		inbox_active_text "text"
+		inbox_inactive_text "labeldisabled"
 
-		inbox_active "92 126 16 255"
-		inbox_active2 "121 166 21 255"
-		inbox_active4 "122 145 71 255"
-		inbox_active5 "85 102 47 255"	
+		backdrop "20 20 20 255"
 		
-		inbox_inactive "38 38 37 255"
-		inbox_inactive2 "142 194 12 255"	
-		inbox_inactive4 "122 145 71 255"
-		inbox_inactive5 "74 102 29"
-
-		parental_lock_active1 "92 126 16 255"
-		parental_lock_active2 "51 49 48 255"	
-		parental_lock_active4 "122 145 71 255"
-		parental_lock_active5 "85 102 47 255"	
-
-		parental_lock_inactive1 "154 49 48 255"
-		parental_lock_inactive2 "189 79 79 255"	
-		parental_lock_inactive4 "146 72 71 255"
-		parental_lock_inactive5 "103 48 47 255"	
-
-		backdrop "21 20 18 255"
-		
-		disabledborder "65 63 61 255"
+		disabledborder "63 63 63 255"
 	}
 	
 	layout
@@ -957,7 +728,7 @@
 		
 		place [!$OSX] { control="MenuBar" align=top margin-top=2 margin-left=2 }
 			
-		place [!$OSX] { control="account_balance, account_balance_seperator, account_URL, universe_label" align=right margin-top=9 margin-right=83 spacing=7 }	
+		place [!$OSX] { control="account_balance, account_balance_seperator, account_URL, universe_label" align=right margin-top=9 margin-right=90 spacing=7 }	
 		place [$OSX]  { control="account_balance, account_balance_seperator, account_URL, universe_label" align=right margin-top=9 margin-right=15 spacing=7 }
 		
 		place { control="InboxButton" align=right end-right="account_balance" margin-top=1 margin-right=20 height=26 }

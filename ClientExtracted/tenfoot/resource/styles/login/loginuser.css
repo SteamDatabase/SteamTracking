@@ -91,7 +91,7 @@ LoginUser:descendantfocus .LoginHidden
 .Bezel
 {
 	border-width: 0px;
-	border-radius: 24px;
+	border-radius: 0px;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f1f1f1 ), to( #6c6c6c ) );
 
 	height: 371px;
@@ -111,7 +111,7 @@ LoginUser:descendantfocus .LoginHidden
 	box-shadow: inset #00000044 0px 0px 18px 0px;
 	background-color: #000000;
 	border-width: 0px;
-	border-radius: 16px;
+	border-radius: 0px;
 }
 
 #TestPanelTextEntry
@@ -184,7 +184,7 @@ LoginUser:descendantfocus .LoginHidden
 {
 	height: 105px;
 	width: 105px;
-	border-radius: 6px;
+	border-radius: 0px;
 	box-shadow: #00000044 0px 0px 04px 0px;
 }
 
@@ -192,7 +192,7 @@ LoginUser:descendantfocus .LoginHidden
 {
 	height: 115px;
 	width: 115px;
-	border-radius: 10px;
+	border-radius: 0px;
 	horizontal-align: left;
 	vertical-align: center;
 }

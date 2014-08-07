@@ -15,7 +15,20 @@
 			render_bg
 			{
 				0="gradient( x0, y0 -1, x1, y1, ClientBG, DialogBG )"
-				1="image( x0, y0, x1, y1, graphics/clienttexture2)"
+				// 1="image( x0, y0, x1, y1, graphics/clienttexture2)"
+				1="gradient( x0, y0, x1, y1 + 38, TitleBar, none )"
+				2="gradient( x0 + 8, y0 + 34, x1 - 8, y1, dialogbg, DialogBG )"
+			  	2="gradient( x0 + 8, y0 + 50, x1 - 8, y1, dialogbg, DialogBG )" [$OSX]
+			}
+		}
+		
+		ToolWindow:framefocus
+		{			
+			bgcolor="none"
+			render_bg
+			{
+				0="gradient( x0, y0 -1, x1, y1, ClientBG, DialogBG )"
+			   1="gradient( x0, y0, x1, y1 + 38, TitleBarfocus, none )"
 				2="gradient( x0 + 8, y0 + 34, x1 - 8, y1, dialogbg, DialogBG )"
 			  	2="gradient( x0 + 8, y0 + 50, x1 - 8, y1, dialogbg, DialogBG )" [$OSX]
 			}
