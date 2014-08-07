@@ -726,6 +726,7 @@ h3 {
 	border-color: #42522d;
 	border-style: solid;
 	border-width: 2px;
+	margin-top: 8px;
 	margin-bottom: 8px;
 	margin-right: 17px;
 }
@@ -743,6 +744,7 @@ h3 {
 	border-color: #42522d;
 	border-style: solid;
 	border-width: 2px;
+	margin-top: 8px;
 	margin-bottom: 8px;
 	margin-right: 17px;
 }
@@ -757,6 +759,10 @@ h3 {
 {
 	font-size: 14px;
 	font-weight: normal;
+}
+.needsFinalizeNotification .text a
+{
+	text-decoration: underline;
 }
 
 #workshopNotificationArrow {
@@ -1320,6 +1326,19 @@ a.instructionsBtn:hover {
 	padding: 16px 16px 0px 0px;
 }
 
+.workshop_paymentinfo_workshop_notice
+{
+	font-size: 14px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.workshop_paymentinfo_third_party_notice
+{
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
 .paymentinfo_background input[type=text]
 {
 	font-size: 14px;
@@ -1406,6 +1425,12 @@ a.instructionsBtn:hover {
 .formRowTitle.payment_info_notice.unapproved
 {
 	color: #FF0000;
+}
+.formRowTitle.payment_info_notice.name_change_notice
+{
+	color: #68932f;
+	width: 100%;
+	text-align: center;
 }
 
 .formRowFields .darkGrey
