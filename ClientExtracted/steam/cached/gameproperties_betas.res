@@ -79,7 +79,7 @@
 		"fieldName"		"PasswordEntry"
 		"xpos"		"24"
 		"ypos"		"112"
-		"wide"		"296"
+		"wide"		"275"
 		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"

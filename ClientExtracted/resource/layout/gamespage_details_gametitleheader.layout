@@ -22,11 +22,12 @@
 		{
 			padding-bottom=5
 			padding-top=5
-			font-size=32
+			font-size=24
 			textcolor=Text
 			font-family=basefont
 			font-weight=400 
 			bgcolor=none
+			minimum-width=250
 		}
 	}
 

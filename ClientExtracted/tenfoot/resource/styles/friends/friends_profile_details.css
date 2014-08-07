@@ -231,9 +231,9 @@ ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetai
 	width: 182px;
 	pre-transform-scale2d: 1.54;
 	horizontal-align: center;
-	border-width: 6px;
+	border-width: 5px;
 	border-style: solid;
-	border-radius: 10px;
+	border-radius: 0px;
 	transform: translatez( 50px );
 	box-shadow: fill #00000060 0px 0px 12px 0px;
 }
@@ -256,8 +256,8 @@ ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetai
 
 #FriendsProfileDetailsCompositeHeader Label
 {
-	margin-left: 36px;
-	margin-right: 25px;
+	margin-left: 40px;
+	margin-right: 28px;
 	margin-top: 0px;
 	margin-bottom: 4px;
 	width: 100%;
@@ -311,8 +311,8 @@ FriendsProfileDetailsActionButton,
 .FriendsProfileDetailsActionButton
 {
 	flow-children: right;
-	margin-left: 16px;
-	margin-right: 16px;
+	margin-left: 20px;
+	margin-right: 20px;
 	padding-right: 12px;
 	width: 100%;
 	white-space: nowrap;
@@ -372,8 +372,8 @@ FriendsProfileDetailsActionButton:focus,
 	color: #161718f5;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
 	border-color: #fdfefef0;
-	margin-left: 16px;
-	margin-right: 16px;
+	margin-left: 20px;
+	margin-right: 20px;
 	padding-right: 12px;
 
 	animation-name: friends-profile-details-button-focus;

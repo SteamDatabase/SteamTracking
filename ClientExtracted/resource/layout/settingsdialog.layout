@@ -16,40 +16,65 @@
 		{
 			minimum-width="740"
 			minimum-height="585"
+			bgcolor=dialogbg
 			render_bg
 			{     
-      				 0="gradient_horizontal( x0 + 10, y0 + 32, x1 - 10, y0 + 33, ButtonBorderDisabled, propertysheetbg )"     
-     			 }
+      	 0="gradient_horizontal( x0 + 10, y0 + 32, x1 - 10, y0 + 33, ButtonBorderDisabled, propertysheetbg )"     
+			}
 
 		}
 		
 		PropertySheet
 		{
-			minimum-width="525"
+			minimum-width="535"
 			minimum-height="505"
+			inset="0 32 0 0"
+			bgcolor=none
+			render_bg
+			{
+
+			}
+
 		}
 		"SettingsList"
 		{
-			inset="-3 -2 0 0"
-			minimum-width="180"
+			inset="6 -14 4 0"
+			minimum-width="200"
+			minimum-height="525"
 			font-size=18
-			padding=7
-			padding-top=10
-
+			padding=6
 		}
 		
-			SettingsList:hover
-		{
-			textcolor=White
-		}
+		ListPanelInterior
+    {     
+		inset="3 0 0 0"
+		font-size=15
+		textcolor="text2"
+		bgcolor="none" 
+   		 render
+			{				
+     			//line to hide a bug here
+     			1="fill(x0, y0-1, x1, y0, almostblack )"
+      		 	//gradient to obscure content at bottom of scrolling region 
+			2="gradient( x0+1, y1 - 16, x1-1, y1, none, almostblack )"
+			}
+		render_bg 
+			{				
+
+			}
+    } 
+		
+		
 	}
 	layout
 	{
 		region { name="buttons" width=max height=36 align="bottom" }
-		region { name="body" margin-left=10 margin-right=10 margin-bottom=46 margin-top=32 }		
+		region { name="body" margin-left=10 margin-right=10 margin-bottom=46 margin-top=-20 }		
+		
 
-
-		place { control="settingslist,sheet" region=body width=max height=max spacing=0  }
+		place { control="settingslist,sheet" region=body width=max height=max spacing=-4  }
+		place { control="settingslist" margin-top=32  }
+		place { control="sheet" margin-left=194 margin-top=-18 }
 		place { control="okbutton,cancelbutton" region="buttons"
 		        width=92 height=25 align=right
 						margin-right=10 margin-top=0

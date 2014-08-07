@@ -5,6 +5,7 @@
 		Description {controlname=Label labelText="#steam_client_edit_categories" wrap=1 } 
 		TextEntry { controlname=TextEntry tabposition=1 maxchars=32 unicode=1 }
 		AddTagButton { controlname=Button style="button" tabposition=2 default=1 }
+		HideButton { controlname=CheckButton labelText="#steam_edittags_hide" tabposition=3 }
 	}
 	
 	layout
@@ -17,5 +18,7 @@
 			
 		place { control="TextEntry" width=240 y=100 }
 		place { control="TextEntry,AddTagButton" y=228 region=main height=24 spacing=10 margin=2 width=max margin-right=16 }
+
+		place { control="HideButton" region=main y=300 }
 	}
 }

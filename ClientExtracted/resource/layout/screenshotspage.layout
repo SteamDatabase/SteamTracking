@@ -35,12 +35,14 @@
 		{
 			bgcolor=dialogbg
 			render
-			{
-				// lines around
-				0="fill( x0 + 1, y0, x1 - 1, y0+1, ButtonBorderDisabled )"  // top
-				0="fill( x0, y0 + 1, x0+1, y1 - 1, ButtonBorderDisabled )"  // left
-				0="fill( x1 - 1, y0 + 1, x1, y1 - 1, ButtonBorderDisabled )"  // right
-				0="fill( x0 + 1, y1-1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
+			{				
+        			//gradient to obscure content at bottom of scrolling region 
+				2="gradient( x0+1, y1 - 16, x1-1, y1-2, none, almostblack )"
+			}
+			render_bg 
+			{				
+				// background gradient        
+				0="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
 			}			
 		}
 	}
@@ -56,3 +58,4 @@
 		place	{ control=ScreenshotListPanel region=main align=left y=48 width=max height=max }
 	}
 }
+

@@ -1312,6 +1312,7 @@
 	
 	"Library_AllGames_Header"		"GAMES"
 	"Library_AllGames"			"All Games ({d:games})"
+	"Library_Hidden"			"Hidden ({d:hidden})"
 	"Library_Installed"			"Installed ({d:installed})"
 	"Library_InstalledLocally"	"Local ({d:local})"
 	"Library_Favorites"			"Favorites ({d:favorites})"
@@ -1620,6 +1621,11 @@
 	"Steam_AppUpdateError_30"		"unsupported filesystem"
 	"Steam_AppUpdateError_31"		"corrupt update files"
 	"Steam_AppUpdateError_32"		"downloads disabled"
+	"Steam_AppUpdateError_33"		"shared library locked"
+	"Steam_AppUpdateError_34"		"pending license"
+	"Steam_AppUpdateError_35"		"other session playing"
+	"Steam_AppUpdateError_36"		"corrupt download"
+	
 
 	"Friends_Tab_Friends"		"FRIENDS"
 	"Friends_Tab_Groups"		"GROUPS"

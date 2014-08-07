@@ -21,7 +21,7 @@
 			"ControlName"		"RichText"
 			"maxchars"		"-1"
 			"ScrollBar"		"1"
-			style="listpanel"
+			style="chatlistpanel"
 		}
 		"SendButton"
 		{
@@ -73,39 +73,37 @@
 	{
 		CChatRoomDlg
 		{			
-			bgcolor="DialogBG"
+			bgcolor="none"
+
 			render_bg
 			{
-				0="fill( x0, y0, x1, y0+21, DialogBG )"	
+
 			}
-
-		}	
+			render
+			{
 		
-
+				//gradient to obscure content at bottom of scrolling region 
+				2="gradient( x0+9, y1 -88, x1-230, y1-74, none, almostblack )"
+			}
+		}
+		
+		ChatListPanel
+		{	
+		render_bg
+			{
+						 0="gradient( x0 +1, y0, x1 -1, y1, darkdialogbg, almostblack )"
+			}
+		}
 		
 		"Textentryfocus_chat"
 		{
 			render
 			{
 				// lines around
-				0="fill( x0, y0 + 1, x0 + 1, y1 - 1, ButtonBorderDisabled )"
-				1="fill(  x1 - 1, y0 + 1, x1, y1 - 1, ButtonBorderDisabled )"
+				0="fill( x0, y0, x0 + 1, y1, ButtonBorderDisabled )"
+				1="fill(  x1 - 1, y0, x1, y1, ButtonBorderDisabled )"
 				2="fill( x0 + 1, y0, x1 - 1, y0 + 1, ButtonBorderDisabled )"
 				3="fill( x0 + 1, y1 - 1, x1 - 1, y1, ButtonBorderDisabled )"
-
-				// single pixel fills in the corners
-				4="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-				5="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-				6="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-				7="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-				11="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonBorderDisabled2 )"
-				12="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonBorderDisabled2 )"
-				13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-				14="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonBorderDisabled2 )"
-				15="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonBorderDisabled2 )"
-				16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
-				17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-				18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
 				
 			}
 			font-size=16
@@ -133,24 +131,12 @@
 			render_bg
 			{
 				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"  // top
-				2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
-				3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
+				1="fill( x0, y0, x1, y0 + 1, ButtonBorder )"  // top
+				2="fill( x0, y1 - 1, x1, y1, ButtonBorder )"  // bottom
+				3="fill( x0, y0, x0 + 1, y1, ButtonBorder )"  // left
+				4="fill( x1 - 1, y0, x1, y1, ButtonBorder )"  // right
 	
-				// single pixel fills in the corners
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorder )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorder )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"
-				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0 + 1, x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1 - 2, x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonFace2 )"
+
 			}
 		}
 

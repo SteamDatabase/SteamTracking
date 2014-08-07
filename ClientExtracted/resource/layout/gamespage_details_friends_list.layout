@@ -30,28 +30,7 @@
 		     	render_bg
 		     	{
 			        // background fill
-			        0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, buttonface2, propertysheetbg )"
-		                
-			        // lines around
-			        1="fill( x0 + 2, y0 + 1, x1 - 5, y0 + 2, buttonface2 )"  // top
-			        2="fill( x0 + 2, y1 - 1, x1 - 5, y1, buttonface2 )"  // bottom
-			        3="fill( x0 + 0, y0 + 3, x0 + 1, y1 - 2, buttonface2 )"  // left
-			        4="fill( x1 - 4, y0 + 3, x1 - 3, y1 - 2, buttonface2 )"  // right
-		
-			        // single pixel fills in the corners
-			        5="fill( x0 + 1, y0 + 2, x0 + 4, y0 + 3, buttonface2 )"
-			        6="fill( x1 - 5, y0 + 2, x1 - 4, y0 + 3, buttonface2 )"
-			        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, buttonface2 )"
-			        8="fill( x1 - 5, y1 - 2, x1 - 4, y1 - 1, ButtonFace2 )"
-			11="fill( x0, y0 + 2, x0 + 1, y0 + 3, ButtonBorderDisabled2 )"
-			12="fill( x1 - 4, y0 + 2, x1 - 3, y0 + 3, ButtonBorderDisabled2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonBorderDisabled2 )"
-			14="fill( x1 - 4, y1 - 2, x1 - 3, y1 - 1, ButtonBorderDisabled2 )"
-			15="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled2 )"
-			16="fill( x1 - 5, y0 + 1, x1 - 4, y0 + 2, ButtonBorderDisabled2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
-			18="fill( x1 - 5, y1 - 1, x1 - 4, y1, ButtonBorderDisabled2 )"
-			        
+			        0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, buttonface2, propertysheetbg )"        
     				}
     		}   
     		   
@@ -63,28 +42,9 @@
 			font-family=basefont
 		    	 render_bg
 		    	 {
-		      	  	// background fill
+		      	  // background fill
 		       		0="gradient( x0 + 1, y0 + 2, x1 - 4, y1 - 1, buttonfaceactive, propertysheetbg )"
-		                
-			        // lines around
-			        1="fill( x0 + 2, y0 + 1, x1 - 5, y0 + 2, buttonborderactive )"  // top
-			        2="fill( x0 + 2, y1 - 1, x1 - 5, y1, buttonborderactive )"  // bottom
-			        3="fill( x0 + 0, y0 + 3, x0 + 1, y1 - 2, buttonborderactive )"  // left
-			        4="fill( x1 - 4, y0 + 3, x1 - 3, y1 - 2, buttonborderactive )"  // right
-		
-			        // single pixel fills in the corners
-			        5="fill( x0 + 1, y0 + 2, x0 + 2, y0 + 3, buttonborderactive )"
-			        6="fill( x1 - 5, y0 + 2, x1 - 4, y0 + 3, buttonborderactive )"
-			        7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, buttonborderactive )"
-			        8="fill( x1 - 5, y1 - 2, x1 - 4, y1 - 1, buttonborderactive )"
-			11="fill( x0, y0 + 2, x0 + 1, y0 + 3, ButtonFace2 )"
-			12="fill( x1 - 4, y0 + 2, x1 - 3, y0 + 3, ButtonFace2 )"
-			13="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-			14="fill( x1 - 4, y1 - 2, x1 - 3, y1 - 1, ButtonFace2 )"
-			15="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonFace2 )"
-			16="fill( x1 - 5, y0 + 1, x1 - 4, y0 + 2, ButtonFace2 )"
-			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonFace2 )"
-			18="fill( x1 - 5, y1 - 1, x1 - 4, y1, ButtonFace2 )"
+
     			}
     		}     
 	     

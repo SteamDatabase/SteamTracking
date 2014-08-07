@@ -4072,6 +4072,18 @@ DropDown
 	visibility: visible;
 }
 
+#FilterHidden,
+#GamesFilterDropDownMenu  #FilterHidden
+{
+	visibility: collapse;
+}
+
+#FilterHidden,
+#GamesFilterDropDownMenu  #FilterHidden.ShowHidden
+{
+	visibility: visible;
+}
+
 #FilterController DropDown Label,
 #GamesFilterDropDownMenu #FilterController 
 {

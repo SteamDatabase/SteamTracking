@@ -35,7 +35,7 @@
 			controlname="Label"
 			labeltext="am"
 			style=clocksuffix
-		}
+		}		
 		GameName
 		{
 			controlname="Label"
@@ -67,7 +67,8 @@
 	{
 	
 	backgroundOverlayTop="38 37 35 140"
-
+  	Highlight2="80 154 191 255" 
+  
 	}
 	
 	styles
@@ -110,6 +111,10 @@
 			font-size=36
 			
 			textcolor=text
+		}
+		detailsboxtitle
+		{
+				textcolor=Highlight2
 		}
 				
 		OverlayURLLabel

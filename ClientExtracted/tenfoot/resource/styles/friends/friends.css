@@ -538,7 +538,7 @@ FriendsSelfHeader.InGame Label
 	width: 90px;
 	border-width: 4px;
 	border-style: solid;
-	border-radius: 6px;
+	border-radius: 0px;
 	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;
 
 	transition-property: box-shadow;
@@ -568,7 +568,7 @@ FriendsSelfHeader.InGame Label
 	width: 90px;
 	border-width: 4px;
 	border-style: solid;
-	border-radius: 6px;
+	border-radius: 0px;
 	box-shadow: inset #00000099 0px 0px 12px 0px;
 }
 
@@ -581,7 +581,7 @@ FriendsSelfHeader.InGame Label
 	width: 90px;
 	border-width: 4px;
 	border-style: solid;
-	border-radius: 6px;
+	border-radius: 0px;
 	box-shadow: inset #00000099 0px 0px 12px 0px;
 }
 

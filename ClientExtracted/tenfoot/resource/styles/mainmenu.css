@@ -770,7 +770,7 @@ Button:hover .ShortDesc
 {
 	border-style: solid;
 	border-width: 4px;
-	border-radius: 4px;
+	border-radius: 0px;
 	height: 91px;
 	width: 91px;
 	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;

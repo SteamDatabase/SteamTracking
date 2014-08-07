@@ -292,7 +292,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 
 #FriendRecommendAvatar
 {
-	border-radius: 8px;
+	border-radius: 0px;
 	box-shadow: fill #00000044 0px 0px 18px 0px;
 
 
@@ -1466,7 +1466,7 @@ h1, h2
 {
 	border-style: solid;
 	border-width: 3px;
-	border-radius: 4px;
+	border-radius: 0px;
 	border-color: #333333;
 
 	width: 60px;
@@ -1483,7 +1483,7 @@ h1, h2
 {
 	border-style: solid;
 	border-width: 4px;
-	border-radius: 6px;
+	border-radius: 0px;
 	box-shadow: fill #00000040 0px 0px 18px 0px;
 
 	width: 86px;
@@ -1500,7 +1500,7 @@ h1, h2
 {
 	border-style: solid;
 	border-width: 2.5px;
-	border-radius: 4px;
+	border-radius: 0px;
 
 	width: 42px;
 	height: 42px;
@@ -1547,6 +1547,8 @@ h1, h2
 #AchievementFeatured
 {
 	width: 86px;
+	border-width: 4px;
+	border-color: #666666ff;
 	height: 86px;
 	box-shadow: inset #00000040 2px 2px 18px 4px;
 }
@@ -1556,6 +1558,8 @@ h1, h2
 	width: 42px;
 	height: 42px;
 	margin-right: 6px;
+	border-width: 3px;
+	border-color: #333333ff;
 	box-shadow: inset #00000040 2px 2px 18px 4px;
 }
 

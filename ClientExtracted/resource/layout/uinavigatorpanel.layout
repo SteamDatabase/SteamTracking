@@ -216,22 +216,10 @@
 			render_bg
 			{
 				// background fill
-				0="fill( x0 + 1, y0 + 1, x0 + 276, y1 - 1, dialogbg )"
+				0="fill( x0 + 2, y0 + 1, x0 + 273, y1 - 1, dialogbg )"
 	      1="fill( x0 + 279, y0 + 1, x1 - 10, y1 - 1, dialogbg )"
 
-				// single pixel fills in the corners
-				5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ClientBG )"
-				6="fill( x1 - 11, y0 + 1, x1 - 10, y0 + 2, ClientBG )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ClientBG )"
-				8="fill( x1 - 11, y1 - 2, x1 - 10, y1 - 1, ClientBG )"
-				9="fill( x0, y0 + 1, x0 + 1, y0 + 2, ClientBG )"
-				10="fill( x1 - 11, y0 + 1, x1 - 10, y0 + 2, ClientBG )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ClientBG )"
-				12="fill( x1 - 11, y1 - 2, x1 - 10, y1 - 1, ClientBG )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ClientBG )" 
-				14="fill( x1 - 11, y0, x1 - 10, y0 + 1, ClientBG )"
-				15="fill( x0 + 1, y1 - 1, x0 + 2, y1, ClientBG )"
-				16="fill( x1 - 11, y1 - 1, x1 - 10, y1, ClientBG )"
+
 			}
 			
 		}
@@ -540,18 +528,7 @@
 			bgcolor="none"
 			render_bg={}
 			image="graphics/icon_button_detail_down"
-			render_bg
-       		{    
-     			// background 
-		        	0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, focus2, focus )"
-		        	
-		        	// lines around
-		        	1="fill( x0 + 1, y0, x1 - 1, y0 + 1, focus2 )"  // top
-		        	2="fill( x0 + 1, y1 - 1, x1 - 1, y1, focus )"  // bottom
-		        	3="gradient( x0, y0 + 1, x0 + 1, y1 - 1, focus2, focus )"  // left
-		        	4="gradient( x1 - 1, y0 + 1, x1, y1 - 1, focus2, focus )"  // right
-		
-     		}		
+
 		}
 
 		ViewDetailButton:disabled
@@ -590,18 +567,7 @@
 			bgcolor="none"
 			render_bg={}
 			image="graphics/icon_button_grid_down"
-			render_bg
-       		{    
-     			// background 
-		        	0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, focus2, focus )"
-		        	
-		        	// lines around
-		        	1="fill( x0 + 1, y0, x1 - 1, y0 + 1, focus2 )"  // top
-		        	2="fill( x0 + 1, y1 - 1, x1 - 1, y1, focus )"  // bottom
-		        	3="gradient( x0, y0 + 1, x0 + 1, y1 - 1, focus2, focus )"  // left
-		        	4="gradient( x1 - 1, y0 + 1, x1, y1 - 1, focus2, focus )"  // right
-		
-     		}	
+
 		}
 		
 		ViewGridButton:disabled
@@ -640,18 +606,7 @@
 			bgcolor="none"
 			render_bg={}
 			image="graphics/icon_button_list_down"
-			render_bg
-       		{    
-     			// background 
-		        	0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, focus2, focus )"
-		        	
-		        	// lines around
-		        	1="fill( x0 + 1, y0, x1 - 1, y0 + 1, focus2 )"  // top
-		        	2="fill( x0 + 1, y1 - 1, x1 - 1, y1, focus )"  // bottom
-		        	3="gradient( x0, y0 + 1, x0 + 1, y1 - 1, focus2, focus )"  // left
-		        	4="gradient( x1 - 1, y0 + 1, x1, y1 - 1, focus2, focus )"  // right
-		
-     		}	
+
 		}
 		
 		ViewListButton:disabled
@@ -665,23 +620,11 @@
 		WebPanelStyle
 		{
 			bgcolor="none"
-			render_bg 
+			textcolor="label"
+		render_bg 
 			{
-			
-				// bg fill
-				0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, almostBlack )"
-				// lines around
-		1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
-		2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
-		3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorderDisabled )"  // left
-		4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderDisabled )"  // right
-
-				// single pixel fills in the corners
-		5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, ButtonBorderDisabled )"
-		6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorderDisabled )"
-		7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, ButtonBorderDisabled )"
-		8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"
-			}
+			0="fill( x0, y0, x1 - 1, y1- 1, almostblack )" // bg
+	    }
 		}
 		
 		TextEntryURL [!$OSX]
@@ -714,7 +657,7 @@
 		
 		"CSteamRootDialog TextEntryURL"
 		{
-			textcolor="buttonborder"		
+			textcolor="101 101 101 255"		
 		}
 		
 		"CSteamRootDialog TextEntryURL:hover"
@@ -733,7 +676,7 @@
 			textcolor="Labelfocus"
 			bgcolor="none"
 			font-family=basefont
-			font-size=26
+			font-size=24
 			font-weight=400 
 			font-style="uppercase"
 			padding-left=5
@@ -897,19 +840,19 @@
 	
 	colors
 	{
-	    DialogBG="56 54 53 140"
-	    ClientBG="26 25 24 200"
+    ClientBG="30 30 30 255"
+    DialogBG="41 41 41 255"
 	}
 	
 	layout
 	{
-		place { control="label_store,label_library,label_community,label_me,label_news,label_console" x=80 y=3 spacing=8 margin=2 height=40 } 
+		place { control="label_store,label_library,label_community,label_me,label_news,label_console" x=78 y=2 spacing=9 margin=2 height=40 } 
 
 		place { control="label_community_friends,label_community_profile,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_marketplace" x="84" y="40" x="10" }
 
 		place { control="label_community_new" start="label_community" y="-40" x="15" width=0 height=0 }
 
-		place [!$OSX] { control="back,forward" x=6 y=10 height=30 width=30 spacing=8 margin-right=5 margin-top=0 }
+		place [!$OSX] { control="back,forward" x=4 y=10 height=30 width=30 spacing=8 margin-right=5 margin-top=0 }
 		place [$OSX] { control="back,forward" x=4 y=10 height=30 width=30 spacing=8 margin-right=5 margin-top=0 }
 
 		region { name="bigpicture" width=100 align=right margin-right=-6 margin-left=6 margin-top=-22 height=104 }

@@ -852,7 +852,7 @@ FriendsFriendListItemCommunity.InGame:descendantfocus  Label
 	horizontal-align: center;
 	border-width: 6px;
 	border-style: solid;
-	border-radius: 6px;
+	border-radius: 0px;
 	opacity: 0.85;
 	box-shadow: fill #00000000 0px 0px 0px 0px;
 

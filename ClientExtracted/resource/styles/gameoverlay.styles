@@ -4,9 +4,9 @@ gameoverlay.styles
 	
 	colors 
 	{
-		mostly_black "0 0 0 240"
-		semi_black "0 0 0 128"
-		semi_gray "32 32 32 220"
+		mostly_black "41 41 41 240"
+		semi_black "20 20 20 128"
+		semi_gray "20 20 20 220"
 		Notifications.PanelPosition     "BottomRight"  // osx has toast in the upper right, but in-overlay should not.
 	}
 	
@@ -24,7 +24,7 @@ gameoverlay.styles
 		{
 			font-size=28
 			font-style=uppercase
-			textcolor="99 159 233 255"
+			textcolor="80 154 191 255"
 		}
 	}
 }

@@ -198,25 +198,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonface2, propertysheetbg	)"
-		   
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"	 // top
-				2="fill( x0 + 2, y1 - 1, x1	- 2,	y1, ButtonBorder )"	 // bottom
-				3="fill( x0,	y0 +	2, x0 + 1, y1 - 2, ButtonBorder )"	 // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"	 // right
-				5="fill( x0 + 1, y0 + 1, x0	+ 2,	y0 +	2, ButtonBorder )"
-				6="fill( x1 - 2, y0 + 1, x1	- 1,	y0 +	2, ButtonBorder )"
-				7="fill( x0 + 1, y1 - 2, x0	+ 2,	y1 -	1, ButtonBorder )"
-				8="fill( x1 - 2, y1 - 2, x1	- 1,	y1 -	1, ButtonBorder )"
-				9="fill( x0, y0	+ 1,	x0 +	1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0	+ 1,	x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1	- 2,	x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1	- 1,	x0 +	2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1	- 1,	x1 -	1, y1, ButtonFace2 )"
+				0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonface2, propertysheetbg	)"   		
 			}
 		}
 	   
@@ -237,25 +219,7 @@
 			render_bg
 			{
 				// background fill
-		 		0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonfaceactive, propertysheetbg	)"
-		  
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"	 // top
-				2="fill( x0 + 2, y1 - 1, x1	- 2,	y1, ButtonBorderFocus )"	 // bottom
-				3="fill( x0,	y0 +	2, x0 + 1, y1 - 2, ButtonBorderFocus )"	 // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"	 // right
-				5="fill( x0 + 1, y0 + 1, x0	+ 2,	y0 +	2, ButtonBorderFocus )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0	+ 2,	ButtonBorderFocus )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1	- 1,	ButtonBorderFocus )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1	- 1,	ButtonBorderFocus )"
-				9="fill(	x0, y0 + 1, x0	+ 1,	y0 +	2, ButtonFace2	)"
-				10="fill( x1 - 1, y0	+ 1,	x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1	- 2,	x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1	- 1,	x0 +	2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1	- 1,	x1 -	1, y1, ButtonFace2 )"
+		 		0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonfaceactive, propertysheetbg	)"  
 			}	   
 		}
 			
@@ -278,24 +242,6 @@
 			{
 				// background fill
 	 			0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonface2, propertysheetbg	)"
-	 
-				// lines around
-  				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorder )"	 // top
-				2="fill( x0 + 2, y1 - 1, x1	- 2,	y1, ButtonBorder )"	 // bottom
-				3="fill( x0,	y0 +	2, x0 + 1, y1 - 2, ButtonBorder )"	 // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"	 // right
-				5="fill( x0 + 1, y0 + 1, x0	+ 2,	y0 +	2, ButtonBorder )"
-				6="fill( x1 - 2, y0 + 1, x1	- 1,	y0 +	2, ButtonBorder )"
-				7="fill( x0 + 1, y1 - 2, x0	+ 2,	y1 -	1, ButtonBorder )"
-				8="fill( x1 - 2, y1 - 2, x1	- 1,	y1 -	1, ButtonBorder )"
-				9="fill( x0, y0	+ 1,	x0 +	1, y0 + 2, ButtonFace2 )"
-				10="fill( x1 - 1, y0	+ 1,	x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1	- 2,	x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1	- 1,	x0 +	2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1	- 1,	x1 -	1, y1, ButtonFace2 )"
 			}
 		}
 	   
@@ -317,30 +263,13 @@
 			{
 				// background fill
 		 		0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonfaceactive, propertysheetbg	)"
-		   
-				// lines around
-				1="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderFocus )"	 // top
-				2="fill( x0 + 2, y1 - 1, x1	- 2,	y1, ButtonBorderFocus )"	 // bottom
-				3="fill( x0,	y0 +	2, x0 + 1, y1 - 2, ButtonBorderFocus )"	 // left
-				4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorderFocus )"	 // right
-				5="fill( x0 + 1, y0 + 1, x0	+ 2,	y0 +	2, ButtonBorderFocus )"
-				6="fill( x1 - 2, y0 + 1, x1 - 1, y0	+ 2,	ButtonBorderFocus )"
-				7="fill( x0 + 1, y1 - 2, x0 + 2, y1	- 1,	ButtonBorderFocus )"
-				8="fill( x1 - 2, y1 - 2, x1 - 1, y1	- 1,	ButtonBorderFocus )"
-				9="fill(	x0, y0 + 1, x0	+ 1,	y0 +	2, ButtonFace2	)"
-				10="fill( x1 - 1, y0	+ 1,	x1, y0 + 2, ButtonFace2 )"
-				11="fill( x0, y1 - 2, x0 + 1, y1 - 1, ButtonFace2 )"
-				12="fill( x1 - 1, y1	- 2,	x1, y1 - 1, ButtonFace2 )"
-				13="fill( x0 + 1, y0, x0 + 2, y0 + 1, ButtonFace2 )"
-				14="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonFace2 )"
-				15="fill( x0 + 1, y1	- 1,	x0 +	2, y1, ButtonFace2 )"
-				16="fill( x1 - 2, y1	- 1,	x1 -	1, y1, ButtonFace2 )"
+
 			   }	   
 		   }
 		  
 		infoGraphic
 		{
-			bgcolor   "none"
+			bgcolor   "none"	
 			textcolor "highlight5"
 			inset="0 3 3 3"
 			render_bg
@@ -351,6 +280,7 @@
 			{
 				0="fill( x0, y0, x0+170,	y1, panelBackground	)"
 				1="gradient_horizontal( x0+170, y0, x0+375, y1, panelBackground,	panelBackgroundTransparent )"
+				
 			}
 		}
 	}
@@ -370,7 +300,7 @@
 		place { control="header"	region=head dir=down x=0	y=0	}
 		
 		// top right
-		place { control="pauseresumeallbutton" region=head align=right x=490 margin-right=16	margin-top=0 }
+		place { control="pauseresumeallbutton" region=head align=right x=490 margin-right=10	margin-top=0 }
 		
 		// three rows of network	usage underneath the header
 		place { region=left_column  control="download_rate_value,download_rate" spacing=4 }
