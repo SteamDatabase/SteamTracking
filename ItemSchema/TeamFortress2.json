@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.f63e10d331d1fb91fc81fee238c7a2226e76158b.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.8436e201bf6293485a6d7af917a6378f6464b3c5.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -54093,11 +54093,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 7511618
@@ -54142,11 +54137,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -54193,11 +54183,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 5322826
@@ -54242,11 +54227,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -54293,11 +54273,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 8208497
@@ -54342,11 +54317,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -54393,11 +54363,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 10843461
@@ -54442,11 +54407,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -54493,11 +54453,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 6901050
@@ -54542,11 +54497,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -54593,11 +54543,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 15185211
@@ -54642,11 +54587,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -54693,11 +54633,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 15132390
@@ -54742,11 +54677,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -54838,14 +54768,6 @@
 				},
 				"used_by_classes": [
 
-				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
 				]
 				
 			},
@@ -55009,11 +54931,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 12073019
@@ -55105,14 +55022,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
-				]
 				
 			},
 			{
@@ -55187,11 +55096,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 16738740
@@ -55236,11 +55140,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -55287,11 +55186,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 8421376
@@ -55336,11 +55230,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -55387,11 +55276,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 15787660
@@ -55436,11 +55320,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -55531,11 +55410,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 4732984
@@ -55584,11 +55458,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -55639,11 +55508,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 3874595
@@ -55692,11 +55556,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -55747,11 +55606,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 8400928
@@ -55800,11 +55654,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -55896,14 +55745,6 @@
 				},
 				"used_by_classes": [
 
-				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
 				]
 				
 			},
@@ -56077,14 +55918,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
-				]
 				
 			},
 			{
@@ -56120,14 +55953,6 @@
 				},
 				"used_by_classes": [
 
-				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
 				]
 				
 			},
@@ -56251,11 +56076,6 @@
 				,
 				"attributes": [
 					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 12377523
@@ -56300,11 +56120,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -56392,14 +56207,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
-				]
 				
 			},
 			{
@@ -56480,14 +56287,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
-				]
 				
 			},
 			{
@@ -56522,14 +56321,6 @@
 				},
 				"used_by_classes": [
 
-				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
 				]
 				
 			},
@@ -56690,14 +56481,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-					{
-						"name": "is marketable",
-						"class": "is_marketable",
-						"value": 1
-					}
-				]
 				
 			},
 			{
@@ -56732,14 +56515,6 @@
 				},
 				"used_by_classes": [
 
-				]
-				,
-				"attributes": [
-					{
-						"name": "is marketable",
-						"class": "is_marketable",
-						"value": 1
-					}
 				]
 				
 			},
@@ -57938,14 +57713,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
-				]
 				
 			},
 			{
@@ -58070,14 +57837,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
-				]
 				
 			},
 			{
@@ -58113,14 +57872,6 @@
 				},
 				"used_by_classes": [
 
-				]
-				,
-				"attributes": [
-					{
-						"name": "always tradable",
-						"class": "always_tradable",
-						"value": 1
-					}
 				]
 				
 			},
@@ -58242,10 +57993,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -58425,10 +58172,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-
-				]
 				
 			},
 			{
@@ -58513,10 +58256,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -58605,10 +58344,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-
-				]
 				
 			},
 			{
@@ -58693,10 +58428,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -58785,10 +58516,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-
-				]
 				
 			},
 			{
@@ -58873,10 +58600,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -58965,10 +58688,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-
-				]
 				
 			},
 			{
@@ -59055,10 +58774,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-
-				]
 				
 			},
 			{
@@ -59143,10 +58858,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -59668,10 +59379,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-
-				]
 				
 			},
 			{
@@ -59707,10 +59414,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -59792,10 +59495,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -59922,10 +59621,6 @@
 				"used_by_classes": [
 
 				]
-				,
-				"attributes": [
-
-				]
 				
 			},
 			{
@@ -59960,10 +59655,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -60089,10 +59780,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -61001,10 +60688,6 @@
 					}
 				},
 				"used_by_classes": [
-
-				]
-				,
-				"attributes": [
 
 				]
 				
@@ -119540,6 +119223,14 @@
 			{
 				"name": "random drop line item footer desc",
 				"defindex": 2045,
+				"attribute_class": null,
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "is commodity",
+				"defindex": 2046,
 				"attribute_class": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,

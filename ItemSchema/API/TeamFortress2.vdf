@@ -470,6 +470,10 @@
 			"max_ilevel"	"1"
 			"mouse_pressed_sound"	"ui/item_metal_scrap_pickup.wav"
 			"drop_sound"		"ui/item_metal_scrap_drop.wav"
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 		}
 		"paint_can"
 		{
@@ -495,13 +499,10 @@
 			"item_quality"		"unique"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"mouse_pressed_sound"	"ui/item_paint_can_pickup.wav"
 			"drop_sound"		"ui/item_paint_can_pickup.wav"
@@ -531,13 +532,10 @@
 			"item_quality"		"unique"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"mouse_pressed_sound"	"ui/item_paint_can_pickup.wav"
 			"drop_sound"		"ui/item_paint_can_pickup.wav"		
@@ -1072,6 +1070,10 @@
 					"strange_parts"	"1"
 				}
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"show_in_armory"	"0"
 			"armory_remap"		"Strange Part (Armory)"
 			"item_type_name"	"#TF_StrangePart"
@@ -1094,6 +1096,10 @@
 				{
 					"strange_parts"	"1"
 				}
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 			"show_in_armory"	"0"
 			"item_type_name"	"#TF_StrangePartRestriction"
@@ -1370,6 +1376,10 @@
 				{
 					"can_strangify" "1"
 				}
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 			"show_in_armory"	"0"
 			"item_type_name"	"#TF_StrangifierTool"
@@ -2701,7 +2711,7 @@
 		"robokey_rules"
 		{
 		}
-		"eventcrate" 
+		"eventcratebase" 
 		{
 			"item_class"	"supply_crate"
 			"craft_class"	"supply_crate"
@@ -2727,6 +2737,14 @@
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
 		}
+		"eventcrate"
+		{
+			"prefab"		"eventcratebase"
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
+		}
 		"eventkey"		
 		{
 			"item_class"	"tool"
@@ -2739,8 +2757,9 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"show_in_armory"	"1"
@@ -43818,7 +43837,9 @@
 				{
 					"0"
 					{
-						"name"	"#TF_robo_scout_bolt_boy_style0"
+						"name"		"#TF_robo_scout_bolt_boy_style0"
+						"skin_red"	"0"
+						"skin_blu"	"1"
 						"additional_hidden_bodygroups"
 						{
 							"hat"			"1"
@@ -43827,7 +43848,9 @@
 					}
 					"1"
 					{
-						"name"	"#TF_robo_scout_bolt_boy_style1"
+						"name"		"#TF_robo_scout_bolt_boy_style1"
+						"skin_red"	"0"
+						"skin_blu"	"1"
 					}
 				}
 			}
@@ -51619,7 +51642,7 @@
 			"item_type_name"		"#TF_Wearable_FacialHair"
 			"item_name"		"#TF_sbox2014_mustachioed_mann"
 			"item_description"		"#TF_sbox2014_mustachioed_mann_Desc"
-			"equip_region"		"face"
+			"equip_region"		"beard"
 			"image_inventory"		"backpack/workshop/player/items/medic/sbox2014_mustachioed_mann/sbox2014_mustachioed_mann"
 			"capabilities"
 			{
@@ -52812,7 +52835,7 @@
 			"item_name"		"#TF_short2014_medic_nietzsche"
 			"item_description"		"#TF_short2014_medic_nietzsche_Desc"
 			"item_type_name"		"#TF_Wearable_FacialHair"
-			"equip_region"		"face"
+			"equip_region"		"beard"
 			"image_inventory"		"backpack/workshop/player/items/medic/short2014_medic_nietzsche/short2014_medic_nietzsche"
 			"capabilities"
 			{
@@ -53122,7 +53145,11 @@
 			"first_sale_date"		"2014/06/16"
 			"item_name"		"#TF_short2014_vintage_director"
 			"item_description"		"#TF_short2014_vintage_director_Desc"
-			"equip_region"		"hat"
+			"equip_regions"
+			{
+					"hat"	"1"
+					"glasses"	"1"
+			}
 			"visuals"
 			{
 				"player_bodygroups"
@@ -64878,6 +64905,10 @@
 					"value"				"1"
 				}
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"armory_desc" "key"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_T"
@@ -64910,6 +64941,10 @@
 					"attribute_class"	"decoded_by_itemdefindex"
 					"value" "5021"	
 				}
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 		}
 		"5023"
@@ -64948,6 +64983,10 @@
 					"value"				"1"
 				}
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"mouse_pressed_sound"	"ui/item_paint_can_pickup.wav"
 			"drop_sound"		"ui/item_paint_can_pickup.wav"
 		}
@@ -64969,6 +65008,10 @@
 				{
 					"can_customize_texture" "1"
 				}
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 			"item_type_name"	"#TF_T"
 			"item_name"		"#TF_Tool_CustomTextureItem"
@@ -65214,6 +65257,10 @@
 					"value" "5021"	
 				}
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 		}
 		"5042"
 		{
@@ -65236,13 +65283,10 @@
 					"can_gift_wrap" "1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc"		"gift_wrap"
 			"show_in_armory"	"1"
@@ -65303,6 +65347,10 @@
 					"nameable" "1"
 				}
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"armory_desc" "desctag"
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_T"
@@ -65338,6 +65386,10 @@
 					"attribute_class"	"decoded_by_itemdefindex"
 					"value" "5021"	
 				}
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 		}
 		"5046"
@@ -65392,6 +65444,10 @@
 			"attributes"
 			{
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
 		}
@@ -65410,13 +65466,10 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"armory_remap"		"Decoder Ring"
@@ -65451,6 +65504,10 @@
 			{
 				"usable_gc"		"1"
 				"usable_out_of_game"	"1"
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 			"armory_desc" "backpack_expander"
 			"show_in_armory"	"1"
@@ -65750,6 +65807,10 @@
 			"attributes"
 			{
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
 		}
@@ -65768,13 +65829,10 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"armory_remap"		"Decoder Ring"
@@ -65808,6 +65866,10 @@
 					"attribute_class"	"decoded_by_itemdefindex"
 					"value" "5021"	
 				}
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 		}
 
@@ -65849,6 +65911,10 @@
 					"value" "35"
 				}
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
 		}
@@ -65889,6 +65955,10 @@
 					"value" "36"
 				}
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
 		}
@@ -65906,13 +65976,10 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"show_in_armory"	"1"
@@ -65941,13 +66008,10 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"show_in_armory"	"1"
@@ -66128,6 +66192,10 @@
 			"attributes"
 			{
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
 		}
@@ -66146,13 +66214,10 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"show_in_armory"	"0"
@@ -66200,6 +66265,10 @@
 			"attributes"
 			{
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
 		}
@@ -66216,13 +66285,10 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"show_in_armory"	"1"
@@ -66252,13 +66318,10 @@
 			{
 				"type"	"account_upgrade_to_premium"
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"capabilities"
 			{
@@ -66410,13 +66473,10 @@
 				"usable_gc"				"1"
 				"usable_out_of_game"	"1"
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"is marketable"
-				{
-					"attribute_class"	"is_marketable"
-					"value"	"1"
-				}
+				"is marketable"			"1"
+				"is commodity"			"1"
 			}
 			"show_in_armory"	"1"
 			"item_name"	"#TF_Summer2014_Level0"
@@ -66448,13 +66508,10 @@
 				"usable_gc"				"1"
 				"usable_out_of_game"	"1"
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"is marketable"
-				{
-					"attribute_class"	"is_marketable"
-					"value"	"1"
-				}
+				"is marketable"			"1"
+				"is commodity"			"1"
 			}
 			"show_in_armory"	"1"
 			"item_name"	"#TF_Summer2014_Level1"
@@ -66923,6 +66980,10 @@
 			{
 				"decodable"		"1"
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"show_in_armory" "1"
 			"item_type_name"	"#TF_LockedCrate"
 			"item_name"		"#TF_HalloweenCrate2012"
@@ -66955,13 +67016,10 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"show_in_armory"	"1"
@@ -67010,6 +67068,10 @@
 			"attributes"
 			{
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
 		}
@@ -67045,6 +67107,10 @@
 			"attributes"
 			{
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
 		}
@@ -67063,13 +67129,10 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"show_in_armory"	"1"
@@ -67099,13 +67162,10 @@
 					"decodable"	"1"
 				}
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"always tradable"
-				{
-					"attribute_class"	"always_tradable"
-					"value"				"1"
-				}
+				"always tradable"		"1"
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"show_in_armory"	"1"
@@ -67166,6 +67226,10 @@
 					"value" "5636"	
 				}
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 		}
 		
 		"5636"
@@ -67184,8 +67248,9 @@
 				}
 				"restriction"	"robo2013"
 			}
-			"attributes"
+			"static_attrs"
 			{
+				"is commodity"			"1"
 			}
 			"armory_desc" "key"
 			"show_in_armory"	"1"
@@ -67220,6 +67285,10 @@
 			"capabilities"
 			{
 				"usable_gc"		"1"
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 			"show_in_armory"	"1"
 			"armory_desc" "action gift_24"
@@ -67269,6 +67338,10 @@
 			{
 				"usable_gc"		"1"
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"show_in_armory"	"1"
 			"armory_desc" "action gift_1"
 			"item_type_name"	"#TF_Gift"
@@ -67317,6 +67390,10 @@
 			{
 				"usable_gc"		"1"
 				"usable_out_of_game"	"1"
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 			"item_type_name" "#TF_LockedCrate"
 			"item_name"	"#TF_ClaimCheck_July2013"
@@ -67642,6 +67719,10 @@
 			{
 				"usable_gc"		"1"
 			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
 			"item_name"	"#TF_Gift_Jul2013_EntireServer"
 			"item_description"	"#TF_Gift_Jul2013_EntireServer_Desc"
 			"image_inventory"	"backpack/player/items/crafting/pile_of_summer_keys"
@@ -67660,6 +67741,10 @@
 					"loot_list"	   	"jul_2013_gift_key_loot_list"
 					"max_recipients"	"1"
 				}
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
 			}
 			"item_name"	"#TF_Gift_Jul2013_RandomPerson"
 			"item_description"	"#TF_Gift_Jul2013_RandomPerson_Desc"
@@ -68215,7 +68300,7 @@
 		"5737"
 		{
 			"name"	"Short 2014 Community Crate A"
-			"prefab" "eventcrate"
+			"prefab" "eventcratebase"
 			"tool"
 			{
 				"restriction"	"short2014"
@@ -68241,7 +68326,7 @@
 		"5738"
 		{
 			"name"	"Short 2014 Community Crate B"
-			"prefab" "eventcrate"
+			"prefab" "eventcratebase"
 			"tool"
 			{
 				"restriction"	"short2014"
@@ -77208,6 +77293,11 @@
 		{
 			"name"				"random drop line item footer desc"
 			"attribute_type"	"string"
+			"hidden"			"1"
+		}
+		"2046"
+		{
+			"name"				"is commodity"
 			"hidden"			"1"
 		}
 
