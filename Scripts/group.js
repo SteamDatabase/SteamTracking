@@ -396,7 +396,7 @@ function Curator_CreateOrEditRecommendation( groupid, create_only )
 			if ( data.success == 1 )
 			{
 				// great, go back to the front page
-				window.location = 'https://steamcommunity.com/groups/' + groupid + '/#curation';
+				window.location = 'https://steamcommunity.com/groups/' + groupid + '/curation';
 			}
 			else if ( data.error )
 			{
@@ -487,7 +487,7 @@ function Curator_DeleteRecommendation( groupid, appid, appname )
 
 				// reload
 				dialog.done( function( reason ) {
-					window.location = 'https://steamcommunity.com/groups/' + groupid + '/#curation';
+					window.location = 'https://steamcommunity.com/groups/' + groupid + '/curation';
 				});
 			},
 			error: function( jqXHR, textStatus, errorThrown ) {
@@ -511,7 +511,7 @@ function Curator_SetTagline( groupid, tagline )
 			if ( data.success == 1 )
 			{
 				// just reload, this page shows the result
-				window.location = 'https://steamcommunity.com/groups/' + groupid + '/#curation';
+				window.location = 'https://steamcommunity.com/groups/' + groupid + '/curation';
 			}
 			else if ( data.error )
 			{
