@@ -43,7 +43,7 @@
 								"description": "An optional filter for maximum timestamp"
 							},
 							{
-								"name": "MatchID",
+								"name": "matchid",
 								"type": "uint32",
 								"optional": true,
 								"description": "An optional filter for a specific match"
@@ -59,6 +59,20 @@
 								"type": "uint32",
 								"optional": true,
 								"description": "An optional filter for a specific player"
+							}
+						]
+						
+					},
+					{
+						"name": "GetPlayerOfficialInfo",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "accountid",
+								"type": "uint32",
+								"optional": false,
+								"description": "The account ID to look up"
 							}
 						]
 						
@@ -147,7 +161,18 @@
 						"version": 1,
 						"httpmethod": "GET",
 						"parameters": [
-
+							{
+								"name": "league_id",
+								"type": "uint32",
+								"optional": true,
+								"description": "Only show matches of the specified league id"
+							},
+							{
+								"name": "match_id",
+								"type": "uint64",
+								"optional": true,
+								"description": "Only show matches of the specified match id"
+							}
 						]
 						
 					},
@@ -187,18 +212,6 @@
 								"type": "uint32",
 								"optional": true,
 								"description": "The average skill range of the match, these can be [1-3] with lower numbers being lower skill. Ignored if an account ID is specified"
-							},
-							{
-								"name": "date_min",
-								"type": "uint32",
-								"optional": true,
-								"description": "The UTC value of the first date to query (rounded to the nearest day)"
-							},
-							{
-								"name": "date_max",
-								"type": "uint32",
-								"optional": true,
-								"description": "The UTC value of the last date to query (rounded to the nearest day)"
 							},
 							{
 								"name": "min_players",
@@ -268,13 +281,13 @@
 								"name": "date_min",
 								"type": "uint32",
 								"optional": true,
-								"description": ""
+								"description": "The starting time stamp to collect scheduled games from. If ignored, it will use the current time"
 							},
 							{
 								"name": "date_max",
 								"type": "uint32",
 								"optional": true,
-								"description": ""
+								"description": "The ending time stamp. If this is more than 7 days past the starting time stamp, it will be clamped to 7 days."
 							}
 						]
 						
@@ -552,6 +565,46 @@
 			{
 				"name": "IEconDOTA2_205790",
 				"methods": [
+					{
+						"name": "GetEventStatsForAccount",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "eventid",
+								"type": "uint32",
+								"optional": false,
+								"description": "The League ID of the compendium you're looking for."
+							},
+							{
+								"name": "accountid",
+								"type": "uint32",
+								"optional": false,
+								"description": "The account ID to look up."
+							},
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide hero names in."
+							}
+						]
+						
+					},
+					{
+						"name": "GetGameItems",
+						"version": 1,
+						"httpmethod": "GET",
+						"parameters": [
+							{
+								"name": "language",
+								"type": "string",
+								"optional": true,
+								"description": "The language to provide item names in."
+							}
+						]
+						
+					},
 					{
 						"name": "GetHeroes",
 						"version": 1,
