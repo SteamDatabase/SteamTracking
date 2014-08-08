@@ -264,9 +264,11 @@ steam.styles
 
     // Friends List colors
     Friends.InGameColor       "146 179 27 255"
+    Friends.InGameHoverColor       "183 224 34 255"
     Friends.OnlineColor				"80 154 191 255"
-    //Friends.OnlineColor       "84 168 204 255"
+    Friends.OnlineHoverColor	"106 196 235 255"
     Friends.OfflineColor      "127 127 127 255"
+    Friends.OfflineHoverColor "159 159 159 255"
     Friends.PanelDefault      "Label"
     Friends.PanelOver       "Text"
     Friends.PanelSelected     "ClientBG"
@@ -3352,18 +3354,37 @@ steam.styles
    	{
    		textcolor="Friends.OfflineColor"
    	}
+   	
+    friends_offline:hover
+   	{
+   		textcolor="Friends.OfflineHoverColor"
+   	}
+   	
    	friends_online
    	{
    		textcolor="Friends.OnlineColor"
    	}
+   	
+   	friends_online:hover
+   	{
+   		textcolor="Friends.OnlineHoverColor"
+   	}
+   	
    	friends_ingame
    	{
    		textcolor="Friends.InGameColor"
    	}
+   	   	
+   	friends_ingame:hover
+   	{
+   		textcolor="Friends.InGameHoverColor"
+   	}
+   	
    	friends_ignored
    	{
    		textcolor="Friends.IgnoredColor"
    	}
+
    	
    	TabPageCloseButton
    	{

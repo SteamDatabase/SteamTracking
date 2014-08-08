@@ -159,6 +159,11 @@
 			font-size=14
 		}
 		
+		statusStyle:hover
+		{
+			textcolor=text2
+		}
+		
 		inviteLinkStyle
 		{
 			font-style=""
