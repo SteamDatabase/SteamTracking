@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.6a4ce391b620346dedd20d9d09f92b14488f061d.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.09defd2220dbd672eac77f8b4ae0a06f40a602cf.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1580,8 +1580,8 @@
 				"defindex": 883,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "CSGO_CollectibleCoin_Cologne2014_Champion",
-				"item_description": "",
+				"item_name": "Champion at ESL One Cologne 2014",
+				"item_description": "This championship trophy was awarded to the Champion at The ESL One Cologne 2014 CS:GO Championship.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/cologne_trophy_champion",
@@ -1605,8 +1605,8 @@
 				"defindex": 884,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "CSGO_CollectibleCoin_Cologne2014_Finalist",
-				"item_description": "",
+				"item_name": "Finalist at ESL One Cologne 2014",
+				"item_description": "This championship trophy was awarded to the Finalist at The ESL One Cologne 2014 CS:GO Championship.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/cologne_trophy_finalist",
@@ -1630,8 +1630,8 @@
 				"defindex": 885,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "CSGO_CollectibleCoin_Cologne2014_SemiFinalist",
-				"item_description": "",
+				"item_name": "Semifinalist at ESL One Cologne 2014",
+				"item_description": "This championship trophy was awarded to the Semifinalist at The ESL One Cologne 2014 CS:GO Championship.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/cologne_trophy_semifinalist",
@@ -1655,8 +1655,8 @@
 				"defindex": 886,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "CSGO_CollectibleCoin_Cologne2014_QuarterFinalist",
-				"item_description": "",
+				"item_name": "Quarterfinalist at ESL One Cologne 2014",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at The ESL One Cologne 2014 CS:GO Championship.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/cologne_trophy_quarterfinalist",
@@ -1680,8 +1680,8 @@
 				"defindex": 887,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "CSGO_CollectibleCoin_Cologne2014_PickEmBronze",
-				"item_description": "",
+				"item_name": "Bronze ESL One Cologne 2014 Pick'Em Challenge Trophy",
+				"item_description": "This bronze trophy was awarded during the ESL One Cologne 2014 Pick'Em Challenge.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/cologne_prediction_bronze",
@@ -1705,8 +1705,8 @@
 				"defindex": 888,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "CSGO_CollectibleCoin_Cologne2014_PickEmSilver",
-				"item_description": "",
+				"item_name": "Silver ESL One Cologne 2014 Pick'Em Challenge Trophy",
+				"item_description": "This silver trophy was awarded during the ESL One Cologne 2014 Pick'Em Challenge.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/cologne_prediction_silver",
@@ -1730,8 +1730,8 @@
 				"defindex": 889,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
-				"item_name": "CSGO_CollectibleCoin_Cologne2014_PickEmGold",
-				"item_description": "",
+				"item_name": "Gold ESL One Cologne 2014 Pick'Em Challenge Trophy",
+				"item_description": "This gold trophy was awarded during the ESL One Cologne 2014 Pick'Em Challenge.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/cologne_prediction_gold",
@@ -4235,6 +4235,258 @@
 				
 			},
 			{
+				"name": "crate_esl14_promo_de_dust2",
+				"defindex": 4022,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2014 Dust II Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_esl14_promo_de_dust2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_esl14_promo_de_dust2.df8e342f4a1dcae65825ee67238c8c7319d35316.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 22
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 4
+					}
+				]
+				
+			},
+			{
+				"name": "crate_esl14_promo_de_inferno",
+				"defindex": 4023,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2014 Inferno Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_esl14_promo_de_inferno",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_esl14_promo_de_inferno.625d3ec90aeead39c10cba620cd40e971beb84b1.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 23
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 4
+					}
+				]
+				
+			},
+			{
+				"name": "crate_esl14_promo_de_mirage",
+				"defindex": 4024,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2014 Mirage Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_esl14_promo_de_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_esl14_promo_de_mirage.9b14fdeb121fc012013496c6e78ff1f7212135bb.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 24
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 4
+					}
+				]
+				
+			},
+			{
+				"name": "crate_esl14_promo_de_nuke",
+				"defindex": 4025,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2014 Nuke Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_esl14_promo_de_nuke",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_esl14_promo_de_nuke.0f12d84b7859a10f2d54353bb93bad94a17a97ce.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 25
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 4
+					}
+				]
+				
+			},
+			{
+				"name": "crate_esl14_promo_de_cache",
+				"defindex": 4026,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2014 Cache Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_esl14_promo_de_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_esl14_promo_de_cache.374ca6f8841a65c1890fc6f24f2a084c523ea9f8.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 26
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 4
+					}
+				]
+				
+			},
+			{
+				"name": "crate_esl14_promo_de_cbble",
+				"defindex": 4027,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2014 Cobblestone Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_esl14_promo_de_cbble",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_esl14_promo_de_cbble.5db3a4b745facff2db79a3ee6819f007bee736c0.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 27
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 4
+					}
+				]
+				
+			},
+			{
+				"name": "crate_esl14_promo_de_overpass",
+				"defindex": 4028,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2014 Overpass Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_esl14_promo_de_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_esl14_promo_de_overpass.8e84964930bb3bcd01328e9ec9d18246b701d815.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 28
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 4
+					}
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
@@ -5832,6 +6084,26 @@
 					"weapon_bizon",
 					"weapon_famas",
 					"weapon_scar20"
+				]
+				
+			},
+			{
+				"item_set": "set_cache",
+				"name": "The Cache Collection",
+				"items": [
+					"weapon_negev",
+					"weapon_p250",
+					"weapon_aug",
+					"weapon_bizon",
+					"weapon_fiveseven",
+					"weapon_sg556",
+					"weapon_glock",
+					"weapon_mp9",
+					"weapon_xm1014",
+					"weapon_mac10",
+					"weapon_tec9",
+					"weapon_famas",
+					"weapon_galilar"
 				]
 				
 			},
