@@ -27,15 +27,13 @@
 			font-family=basefont
 			font-weight=400 
 			bgcolor=none
-			minimum-width=250
 		}
 	}
 
 	layout
 	{
 		region { name="header" y=0 x=0 width=max height=max }
-
-		place { 
+		place {
 			control=iconimage,gametitlelabel
 			region=header
 			dir=right
