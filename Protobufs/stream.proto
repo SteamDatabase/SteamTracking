@@ -58,6 +58,7 @@ enum EStreamControlMessage {
 	k_EStreamControlSetQoS = 87;
 	k_EStreamControlInputControllerWirelessPresence = 88;
 	k_EStreamControlSetGammaRamp = 89;
+	k_EStreamControlVideoEncoderInfo = 90;
 }
 
 enum EStreamVersion {
@@ -402,6 +403,10 @@ message CSystemInfoMsg {
 }
 
 message CVideoDecoderInfoMsg {
+	optional string info = 1;
+}
+
+message CVideoEncoderInfoMsg {
 	optional string info = 1;
 }
 
