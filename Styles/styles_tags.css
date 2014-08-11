@@ -16,6 +16,10 @@ body.tag_page.in_client {
 	background-position: center top;
 }
 
+body.blue.tag_announce_page {
+	background: url( 'https://steamstore-a.akamaihd.net/public/images/v5/tag_announce_body_repeat.png' ) center top repeat-y #000000;
+}
+
 body.tag_page > div#global_header {
 	/*border-bottom-color: #4d6d8c*/
 }
