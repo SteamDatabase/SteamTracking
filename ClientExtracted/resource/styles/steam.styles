@@ -18,7 +18,7 @@ steam.styles
     maize="203 191 87 255"
     red="255 51 51 255"
     darkblue="39 100 130 255"
-    blue="54 137 179 255"
+    blue="54 143 179 255"
     darkred="128 0 0 255"
     darkpurple="64 0 64 255"
     
@@ -85,21 +85,23 @@ steam.styles
     HeaderClient="53 53 53 255" // the color of the List box header in the main client window
     HeaderDialog="92 92 92 255" // the color of the list box header in other windows
     
-    TitleBar="41 41 41 80"
-    TitleBarFocus="34 65 96 100"
+    TitleBar="26 26 26 80"
+    TitleBarFocus="14 31 56 80"
     MenuBG="68 68 68 255"
     
-    Focus="16 53 82 255" // background color of any selected menu or list item
+    Focus="25 55 84 255" // background color of any selected menu or list item
     Focus2="21 70 107 255" 	// background color of view buttons and anything else in focus that needs more 'punch'
     Focus3="82 82 82 255" 	// background color of highlighted friends 
-    Focus4="80 154 191 255"   // bright cyan used in progress bars
+    Focus4="67 158 191 255"   // bright cyan used in progress bars   
+    
     FocusGrid="85 117 161 240"  	// background color of any grid item
     Highlight="16 53 82 120" 	// same as focus
-    Highlight1="95 183 227 255"    // installing hover color
-    Highlight2="80 154 191 255" 	// installing color 
+    
+    Highlight1="92 193 229 255"    // installing hover color
+    Highlight2="76 159 191 255" 	// installing color 
     Highlight3="173 69 71 255"    	// red for errors, blocked, etc.
-    Highlight5="20 64 102 255" 	// blue 
-    Highlight5a="28 69 140 255" 	// lighter version of highlight5
+    Highlight5="24 53 82 255" 	// blue 
+    Highlight5a="30 66 102 255" 	// lighter version of highlight5
     Highlight5b="17 42 86 255" 	// as highlight5 but darker, for non-focused window borders
 
     BackgroundStartSubtle="20 20 20 155" 
@@ -109,7 +111,7 @@ steam.styles
     BackgroundStartOpaque="35 35 35 255"
     
     ClientBG="30 30 30 255"
-    DialogBG="41 41 41 255"
+    DialogBG="38 38 38 255"
     DialogBGFade1="56 56 56 255"
     DialogBGFade2="56 56 56  0"  
     
@@ -118,13 +120,13 @@ steam.styles
     DarkClientBGTransparent="35 35 35 19"
     DarkDialogBGTransparent="55 55 55 170"
 
-    GameDetailsBlueTransparent="80 154 191 60"
-    GameDetailsGreenTransparent="80 154 191 160"
-    GameDetailsRedTransparent="80 154 191 160"
+    GameDetailsBlueTransparent="71 148 179 60"
+    GameDetailsGreenTransparent="71 148 179 160"
+    GameDetailsRedTransparent="71 148 179 160"
 
-    GameDetailsBlue="80 154 191 255"
-    GameDetailsGreen="80 154 191 255"
-    GameDetailsRed="80 154 191 255"
+    GameDetailsBlue="71 148 179 255"
+    GameDetailsGreen="71 148 179 255"
+    GameDetailsRed="71 148 179 255"
 
     PropertySheetBG="58 58 58 255"
     InteriorColor="52 52 52 255"
@@ -143,24 +145,30 @@ steam.styles
     DarkImageOverlay="0 0 0 80"
     
     inbox_active "158 194 29 255"
-		inbox_active2 "121 166 21 255"
+		inbox_active2 "155 199 9 255"
 		inbox_active4 "122 145 71 255"
 		inbox_active5 "85 102 47 255"	
+
 		
 		inbox_inactive "38 38 37 255"
 		inbox_inactive2 "142 194 12 255"	
 		inbox_inactive4 "122 145 71 255"
 		inbox_inactive5 "74 102 29"
 		
-		parental_lock_active1 "92 126 16 255"
-		parental_lock_active2 "51 49 48 255"	
+		parental_lock_active1 "138 175 6 255"
+		parental_lock_active2 "49 49 49 255"	
 		parental_lock_active4 "122 145 71 255"
 		parental_lock_active5 "85 102 47 255"	
+		green6 "26 38 1 255"
+		green7 "182 217 54 255"
+
 
 		parental_lock_inactive1 "154 49 48 255"
 		parental_lock_inactive2 "189 79 79 255"	
 		parental_lock_inactive4 "146 72 71 255"
 		parental_lock_inactive5 "103 48 47 255"	
+		red6="38 1 1 255"
+		
     // colors pulled from steamscheme.res
     "ClayBG"      "70 70 70 255"
     "ClayButtonBG"      "85 85 85 255"        
@@ -263,12 +271,12 @@ steam.styles
     
 
     // Friends List colors
-    Friends.InGameColor       "146 179 27 255"
-    Friends.InGameHoverColor       "183 224 34 255"
-    Friends.OnlineColor				"80 154 191 255"
-    Friends.OnlineHoverColor	"106 196 235 255"
+    Friends.InGameColor       "144 186 60 255"
+    Friends.InGameHoverColor  "182 235 76 255"
+    Friends.OnlineColor		   "84 165 196 255"
+    Friends.OnlineHoverColor	"104 203 242 255"
     Friends.OfflineColor      "127 127 127 255"
-    Friends.OfflineHoverColor "159 159 159 255"
+    Friends.OfflineHoverColor "185 185 185 255"
     Friends.PanelDefault      "Label"
     Friends.PanelOver       "Text"
     Friends.PanelSelected     "ClientBG"
@@ -338,7 +346,7 @@ steam.styles
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+				0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
 			}
 	  }
 	 
@@ -347,7 +355,7 @@ steam.styles
 		render_bg
 		{
 			// background fill
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"	
+			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"	
 		}
     }
     
@@ -357,7 +365,7 @@ steam.styles
   		render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"             
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"             
       }
     }
 
@@ -367,7 +375,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
     
@@ -376,7 +384,7 @@ steam.styles
 			textcolor="TextHover"
 			render_bg
 	      {
-	        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacefocus, propertysheetbg )"			    
+	        0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"			    
 	      }
     }
     
@@ -385,7 +393,7 @@ steam.styles
       textcolor="TextHover"
       render_bg
       {     
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacefocus, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1,  buttonfacefocus, propertysheetbg )"
       }
     }
     
@@ -395,7 +403,7 @@ steam.styles
        render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
       }
     }
     
@@ -405,7 +413,7 @@ steam.styles
        render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
       }
     }
     
@@ -415,7 +423,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactivefocus, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
       }
     }
 
@@ -425,7 +433,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactivefocus, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
       }
     }
     
@@ -435,7 +443,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacedisabled, buttonfacedisabled )"             
+        0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"             
       }
     }   
     
@@ -445,7 +453,7 @@ steam.styles
       render_bg
       {
 				// background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacedisabled, buttonfacedisabled )"             
+        0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"             
       }   
     }
        
@@ -543,12 +551,12 @@ steam.styles
         textcolor="text2"
         bgcolor=none
         render	{      
-			//gradient to obscure content at bottom of scrolling region 
-			1="gradient( x0, y1 - 9, x1-16, y1-1, none, almostblacktrans )"
+				//gradient to obscure content at bottom of scrolling region 
+				0="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
 		}  
-	render_bg {				
+			render_bg {				
 					// background gradient        
-					0="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
+					1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 				}
     } 
     
@@ -557,14 +565,14 @@ steam.styles
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-	render	{      
-			//gradient to obscure content at bottom of scrolling region 
-			1="gradient( x0, y1 - 9, x1-16, y1-1, none, almostblacktrans )"
-		}  
-       	render_bg {				
-			// background gradient        
-			0="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
-		}
+				render	{      
+				//gradient to obscure content at bottom of scrolling region 
+				0="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
+				}
+    		render_bg {				
+				// background gradient        
+				1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
+				}
     } 
     
     "Page CheckButtonList"
@@ -574,14 +582,13 @@ steam.styles
         bgcolor=none
         render	{      
 			//gradient to obscure content at bottom of scrolling region 
-			1="gradient( x0, y1 - 9, x1-16, y1-1, none, almostblacktrans )"
-		}  
+				0="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
+				}  
 	
 	render_bg
         {     
 					// background fill
-	        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
-	        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
+					1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
       	}
     }
     
@@ -592,13 +599,12 @@ steam.styles
         bgcolor=none
         render {
         		//gradient to obscure content at bottom of scrolling region 
-						1="gradient( x0, y1 - 9, x1-16, y1-1, none, almostblacktrans )"
+						0="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
 			 }   
         render_bg
         {     
 					// background fill
-	        0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 +80, dialogbg, BackgroundStartOpaque )"
-	        1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
+					1="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
     	  }
    	 }
     
@@ -619,7 +625,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
       }
     }
     
@@ -630,7 +636,7 @@ steam.styles
     render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
     
@@ -641,7 +647,7 @@ steam.styles
     render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
     
@@ -652,7 +658,7 @@ steam.styles
     render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
     
@@ -661,7 +667,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
       }
     }
     
@@ -670,7 +676,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
     
@@ -679,7 +685,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacehover, propertysheetbg )"
+        0="gradient(x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
       }
     }
     
@@ -688,7 +694,7 @@ steam.styles
       render_bg
       {     
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
     
@@ -1040,8 +1046,7 @@ steam.styles
 		2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
 			}
 		render_bg { }
-	}
-	
+	}	
         		
     GraphPanel
     {
@@ -1056,11 +1061,10 @@ steam.styles
 		bgcolor="none"
 		render_bg 
 			{
-			0="fill( x0, y0, x1 - 1, y1- 1, almostblack )" // bg
+			0="fill( x0, y0, x1, y1, almostblack )" // bg
 	    }
     inset="2 2 2 2" 
     }
-    
     
     Label
 		{
@@ -1088,8 +1092,8 @@ steam.styles
 		render_bg 
 		{
 			// background gradient        
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, dialogbg, almostblack )"
-			1="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 31, backgroundstartsubtle, none )"
+			0="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
+			1="gradient( x0, y0, x1, y0 + 31, backgroundstartsubtle, none )"
 
 		}
 	}
@@ -1107,9 +1111,9 @@ steam.styles
     render_bg
     {     
  		// background fill
-    0="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 80, Propertysheetbg, BackgroundStartOpaque )"
-    1="fill( x0 + 1, y0 + 80, x1 - 1, y1 - 1, BackgroundStartOpaque )"
-    2="gradient( x0 + 1, y0 + 1, x1 - 1, y0 + 30, backgroundstartsubtle, none )"
+    0="gradient( x0, y0, x1, y0 + 80, Propertysheetbg, BackgroundStartOpaque )"
+    1="fill( x0, y0 + 80, x1, y1, BackgroundStartOpaque )"
+    2="gradient( x0, y0, x1, y0 + 30, backgroundstartsubtle, none )"
 		}
 	}
     
@@ -1126,9 +1130,9 @@ steam.styles
       inset="0 -1 1 1"
       render_bg {
         // background gradient        
-        0="gradient( x0+1, y0+1, x1-1, y0 + 432, dialogbg, almostblack )"
-        1="fill( x0+1, y0+ 432, x1-1, y1 - 1, almostblack )"
-        2="gradient( x0+1, y0+1, x1-1, y0 + 31, dialogbgFade1, dialogbgFade2 )"
+        0="gradient( x0, y0, x1, y0 + 432, dialogbg, almostblack )"
+        1="fill( x0, y0 + 432, x1, y1, almostblack )"
+        2="gradient( x0, y0, x1, y0 + 31, dialogbgFade1, dialogbgFade2 )"
 
         }
     }
@@ -1465,8 +1469,8 @@ steam.styles
 		bgcolor="none" 
     render
 			{				
-        			//gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0+1, y1 - 16, x1-1, y1, none, almostblacktrans )"
+        //gradient to obscure content at bottom of scrolling region 
+				2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
 			}
 		render_bg 
 			{				
@@ -1482,7 +1486,7 @@ steam.styles
 		render
 			{				
         			//gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0+1, y1 - 16, x1-1, y1-1, none, almostblacktrans )"
+				2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
 			}
 		render_bg 
 			{				
@@ -1512,7 +1516,7 @@ steam.styles
 				{
 
 					//gradient to obscure content at bottom of scrolling region 
-					1="gradient( x0+2, y1 - 16, x1-1, y1-1, none, almostblacktrans )"
+					1="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
 				}
 			render_bg {}
 
@@ -1526,12 +1530,12 @@ steam.styles
 		render
 		{		
 			//gradient to obscure content at bottom of scrolling region 
-			2="gradient( x0+2, y1 - 16, x1-1, y1-1, none, almostblacktrans )"
+			2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
 		}
 		render_bg 
 		{				
 			// background gradient        
-			0="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
+			0="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 		}
 	}
 	
@@ -1542,7 +1546,7 @@ steam.styles
 		render_bg 
 		{				
 			// background gradient        
-			0="gradient( x0+1, y0, x1+16, y1-2, dialogbg, almostblack )"
+			0="gradient( x0, y0, x1+16, y1, dialogbg, almostblack )"
 		}
 	}
       
@@ -1655,8 +1659,8 @@ steam.styles
       
 		render_bg
 		{
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y0+140, MenuBG1, MenuBG2  )"
-			1="fill( x0 + 1 , y0 + 140, x1 - 1, y1 - 1, MenuBG2  )"
+			0="gradient( x0, y0, x1, y0 + 140, MenuBG1, MenuBG2 )"
+			1="fill( x0, y0 + 140, x1, y1, MenuBG2 )"
 
 
 		}
@@ -1913,7 +1917,7 @@ steam.styles
          	
     ProgressBar
     {
-		textcolor="focus4"
+		textcolor="highlight5a"
 		bgcolor="none"
 		render
 		{
@@ -1927,7 +1931,7 @@ steam.styles
     
 	"Page ProgressBar"
     {
-		textcolor="buttonface"
+		textcolor="highlight5a"
 		bgcolor="none"
 		render
 		{
@@ -1986,7 +1990,7 @@ steam.styles
 		inset="-2 0 0 0"
 		render_bg
 			{
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, ClientBG  )"
+			0="gradient( x0, y0, x1, y1, DialogBG, ClientBG  )"
 			}     
     }
         
@@ -1997,7 +2001,7 @@ steam.styles
 		font-family=basefont
 		font-size=14
 		font-weight=400
-		inset="0 -1 0 0"
+		inset="-1 -1 0 0"
 		render_bg
 		{
 		-1="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG )"
@@ -2620,7 +2624,7 @@ steam.styles
       {
       
         // background fill
-	   0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+	   0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
       }
     }
   
@@ -2631,7 +2635,7 @@ steam.styles
 	 		render_bg
 		{
 			// background fill
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
 		}
     }
     
@@ -2643,7 +2647,7 @@ steam.styles
       {     
         
         // background fill
-        0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfaceactive, propertysheetbg )"
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
     
@@ -2655,7 +2659,7 @@ steam.styles
       render_bg
       {
         	// background fill
-		0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, backgroundstartopaque, propertysheetbg )"
+		0="gradient( x0, y0, x1, y1, backgroundstartopaque, propertysheetbg )"
       }
     }
   
@@ -2670,7 +2674,7 @@ steam.styles
       render_bg
       {
       // background fill
-			0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, propertysheetbg )"
+			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
       }
     }
     
@@ -2680,7 +2684,7 @@ steam.styles
       bgcolor="none"
       render_bg
       {
-      	0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacehover, propertysheetbg )"
+      	0="gradient( x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
       }
     }
   
@@ -2690,7 +2694,7 @@ steam.styles
       bgcolor="none"
       render_bg
       {
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacefocus, propertysheetbg )"
+				0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"
       }
     }
    
@@ -2700,7 +2704,7 @@ steam.styles
       bgcolor="none"
       render_bg
       {
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, backgroundstartopaque, propertysheetbg )"
+				0="gradient( x0, y0, x1, y1, backgroundstartopaque, propertysheetbg )"
       }
     }
     
@@ -2864,12 +2868,12 @@ steam.styles
           render
 			{				
         //gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0+1, y1 - 16, x1-1, y1, none, almostblacktrans )"
+				2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
 			}
 		render_bg 
 			{				
 				// background gradient        
-				1="gradient( x0+1, y0, x1-1, y1, dialogbg, almostblack )"
+				1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 			}
     }
     
@@ -2911,7 +2915,7 @@ steam.styles
       bgcolor=none
       render_bg {
         // background gradient
-        1="gradient( x0 + 1, y0 + 1, x1, y0 + 240, propertysheetbg, DarkDialogBG )"
+        1="gradient( x0, y0, x1, y0 + 240, propertysheetbg, DarkDialogBG )"
         2="fill( x0, y0 + 240, x1, y1, DarkDialogBG )"
             }
         inset="1 -1 1 1"  
@@ -3128,9 +3132,9 @@ steam.styles
 			render
 		      {
 		        // lines around
-		        0="fill( x0 + 1, y0 + 2, x0 + 2, y1 + 1, ButtonBorder )"
-		        1="gradient_horizontal( x0 + 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder, none )" 
-		        2="gradient_horizontal( x0 + 2, y1 + 1, x1 - 1, y1 +2, ButtonBorder, none )"
+		        0="fill( x0, y0, x0 + 1, y1, ButtonBorder )"
+		        1="gradient_horizontal( x0, y0, x1, y0 + 1, ButtonBorder, none )" 
+		        2="gradient_horizontal( x0, y1 - 1, x1, y1, ButtonBorder, none )"
 		      }     	
 	}
 		
@@ -3150,9 +3154,9 @@ steam.styles
 			render
 		      {
 		        // lines around
-		        0="fill( x0 + 1, y0 + 2, x0 + 2, y1 + 1, ButtonBorder )"
-		        1="gradient_horizontal( x0 + 2, y0 + 1, x1 - 1, y0 + 2, ButtonBorder, none )" 
-		        2="gradient_horizontal( x0 + 2, y1 + 1, x1 - 1, y1 +2, ButtonBorder, none )"
+		        0="fill( x0, y0, x0 + 1, y1, ButtonBorder )"
+		        1="gradient_horizontal( x0, y0, x1, y0 + 1, ButtonBorder, none )" 
+		        2="gradient_horizontal( x0, y1 - 1, x1, y1, ButtonBorder, none )"
 		      }     	
 	}
 		
@@ -3317,7 +3321,7 @@ steam.styles
 
 		render_bg
 			{
-						 0="gradient( x0 +1, y0, x1 -16, y1, darkdialogbg, almostblack )"
+						 0="gradient( x0, y0, x1 -16, y1, darkdialogbg, almostblack )"
 			}
 		}
 			

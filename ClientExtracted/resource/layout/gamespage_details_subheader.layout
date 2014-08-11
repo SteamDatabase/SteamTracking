@@ -62,7 +62,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, none )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, none )"
 
 
 			}	
@@ -81,7 +81,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, inbox_active2, almostblack )"
+				0="gradient( x0, y0, x1, y1, inbox_active2, almostblack )"
 
 			}	
 		}
@@ -99,9 +99,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG, propertysheetbg )"
-
-
+				0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
 			}	
 		}
 		
@@ -117,12 +115,12 @@
 
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, none )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, green6 )"
 
 
 			}	
@@ -140,12 +138,12 @@
 
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, inbox_active2 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
 
 
 			}	
@@ -162,12 +160,12 @@
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_down )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play_down )"
 			}
 			render_bg
 			{
         // background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, parental_lock_active1 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
                 
 
 			}
@@ -185,13 +183,13 @@
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_down )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play_down )"
 			}
 			
 			render_bg
 			{
         // background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, parental_lock_active1 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
                 
 
 			}	
@@ -209,12 +207,12 @@
 			bgcolor=none   
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_install)"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install)"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, none )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, green6 )"
 
 
 			}	
@@ -232,12 +230,12 @@
 
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_install )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, inbox_active2 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
 
 
 			}	
@@ -255,12 +253,12 @@
 			
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_install_down )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_down )"
 			}
 			render_bg
 			{
                 // background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, parental_lock_active1 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
                 
 
 			}
@@ -278,13 +276,13 @@
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_install_down )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_down )"
 			}
 			
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, parental_lock_active1 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
 
 
 			}	
@@ -303,12 +301,12 @@
 
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_buy )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_buy )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, none )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, green6 )"
 
 			}	
 		}
@@ -325,12 +323,12 @@
 
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_buy )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_buy )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, inbox_active2 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
 
 
 			}	
@@ -347,13 +345,13 @@
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_buy_down )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_buy_down )"
 			}
 			
 			render_bg
 			{
          // background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, parental_lock_active1 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
                 
 
 			}	
@@ -371,12 +369,12 @@
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_buy_down )"
+				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_buy_down )"
 			}
 			render_bg
 			{     
         // background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, parental_lock_active1 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
                 
 
 			}
