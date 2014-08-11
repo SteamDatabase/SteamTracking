@@ -1005,3 +1005,240 @@ function InitBannedTagModal( appid, $BanModal )
 	};
 }
 
+var g_rgPagingControls = {};
+function InitPagingControls( rgPagingData, cc, rgInitialParams )
+{
+	var g_bInHashChange = false;
+	var g_rgTabs = {};
+	var g_rgTabBaseParams = {
+		cc: cc,
+		l: 'english',
+		v: "4"
+	};
+	var g_rgTabParams = {};
+	var g_strActiveTab = null;
+
+	var rgTabNames = [];
+
+	for ( var i = 0; i < rgPagingData.length; ++i )
+	{
+		var oPagingData = rgPagingData[i];
+		var oPagingControls = new CAjaxPagingControls( oPagingData, oPagingData['url'] );
+		oPagingControls.m_rgStaticParams = g_rgTabBaseParams;
+
+		oPagingControls.SetResponseHandler( function( response ) {
+			fnOnRendered();
+		});
+		oPagingControls.SetPageChangingHandler( function( nPage ) {
+			if ( !g_bInHashChange )
+			{
+				// not ready yet
+				// window.location.hash = 'p' + ( nPage + 1 );
+			}
+			$J('#' + this.m_strElementPrefix + 'Rows').fadeTo( 0.1, 0.5 );
+		} );
+		oPagingControls.SetPageChangedHandler( function ( nPage ) {
+			$J('#' + this.m_strElementPrefix + 'Rows').fadeTo( 0.1, 1 );
+		} );
+
+		g_rgPagingControls[oPagingData['prefix']] = oPagingControls;
+		rgTabNames.push( oPagingData['prefix'] );
+	}
+
+	function fnOnRendered()
+	{
+		var bHaveUser = ( g_AccountID != 0 );
+		if ( !bHaveUser )
+		{
+			return;
+		}
+
+		GDynamicStore.DecorateDynamicItems();
+	}
+
+	var fnOnTabFilterChange = function()
+	{
+		for ( var strTab in g_rgTabs )
+		{
+			var Tab = g_rgTabs[strTab];
+			Tab.m_iStart = 0;
+			Tab.m_nLoaded = 0;
+		}
+		UpdateTabDisplay();
+	};
+
+	var fnAddFilter = function( strParam, value, $Checkbox )
+	{
+		if ( !$Checkbox )
+			$Checkbox = $J('.tab_filter_control[data-param=' + strParam + '][data-value=' + value + ']');
+
+		$Checkbox.addClass( 'checked' );
+
+		if ( !g_rgTabParams[strParam] )
+			g_rgTabParams[strParam] = [];
+		g_rgTabParams[strParam].push( value );
+
+		var $Filter = $J('<div/>', {'class': 'tab_filter' } );
+		$Filter.attr( 'data-param', strParam );
+		$Filter.attr( 'data-value', value );
+		$Filter.text( $Checkbox.text() );
+		$Filter.append( $J('<div/>', {'class': 'tab_filter_remove' }).html('&nbsp;').click( function() { fnRemoveFilter( strParam, value, $Checkbox, $Filter ); } ) );
+		$J('.tab_filters').append( $Filter );
+		$J('.tab_filter_ctn').show( 'fast' );
+
+		fnOnTabFilterChange();
+	};
+
+	var fnRemoveFilter = function( strParam, value, $Checkbox, $Filter )
+	{
+		if ( !$Checkbox )
+			$Checkbox = $J('.tab_filter_control[data-param=' + strParam + '][data-value=' + value + ']');
+		if ( !$Filter )
+			$Filter = $J('.tab_filter[data-param=' + strParam + '][data-value=' + value + ']');
+
+		$Checkbox.removeClass('checked');
+
+		if ( g_rgTabParams[strParam] )
+			g_rgTabParams[strParam] = g_rgTabParams[strParam].filter( function( val ) { return val != value; } );
+
+		$Filter.remove();
+		if ( !$J('.tab_filters').children().length )
+			$J('.tab_filter_ctn').hide( 'fast' );
+
+		fnOnTabFilterChange();
+	};
+
+
+	var InitTabEvents = function( Tab )
+	{
+		Tab.m_$Select.click( function() {
+			UpdateTabDisplay( Tab.m_strName );
+		} );
+	}
+
+	var UpdateTabDisplay = function( strActiveTab )
+	{
+		if ( !strActiveTab )
+			strActiveTab = g_strActiveTab;
+		else
+			g_strActiveTab = strActiveTab;
+
+		for ( var strTabName in g_rgTabs )
+		{
+			var Tab = g_rgTabs[strTabName];
+			if ( strTabName == strActiveTab )
+			{
+				Tab.m_$Select.addClass( 'active' );
+				Tab.m_$Content.show();
+				if ( Tab.m_nLoaded == 0 )
+				{
+					LoadTab( Tab );
+				}
+			}
+			else
+			{
+				Tab.m_$Select.removeClass( 'active' );
+				Tab.m_$Content.hide();
+			}
+		}
+	}
+
+	var LoadTab = function( Tab )
+	{
+		var rgParams = $J.extend( {
+		}, g_rgTabBaseParams );
+
+		for ( var filter in g_rgTabParams )
+		{
+			var rgParamValues = g_rgTabParams[filter];
+			if ( rgParamValues && rgParamValues.length )
+			{
+				rgParamValues.sort();
+				for ( var i = 0; i < rgParamValues.length; i++ )
+				{
+					rgParams[ filter + '[' + i + ']' ] = rgParamValues[i].toString();
+				}
+			}
+		}
+
+		var oPagingControls = g_rgPagingControls[Tab.m_strName];
+		oPagingControls.m_rgStaticParams = rgParams;
+		oPagingControls.GoToPage( 0, true );
+	}
+
+	// perform initialization
+
+	for ( var i = 0 ; i < rgTabNames.length; i++ )
+	{
+		var strName = rgTabNames[i];
+		var Tab = {
+			m_strName: strName,
+			m_$Select: $J('#tab_select_' + strName ),
+			m_$Content: $J('#tab_' + strName + '_content' ),
+		};
+
+		InitTabEvents( Tab );
+
+		g_rgTabs[ strName ] = Tab;
+	}
+
+	UpdateTabDisplay( rgTabNames[0] );
+
+	$J('.tab_filter_control').each( function() {
+		var $Control = $J(this);
+		var strParam = $Control.data('param');
+		var value = $Control.data('value');
+		$Control.click( function() {
+			if ( !$Control.hasClass( 'checked' ) )
+			{
+				fnAddFilter( strParam, value, $Control );
+			}
+			else
+			{
+				fnRemoveFilter( strParam, value, $Control );
+			}
+		});
+	});
+
+	$J('#related_tags_more_toggle').click( function() {
+		$J('#related_tags_more_toggle').hide();
+		$J('#related_tags_more').show('fast');
+	});
+
+	// due to php, this might be an empty array, or an object.  on an object, length will be undefined
+	if ( rgInitialParams.length !== 0 )
+	{
+		for ( var param in rgInitialParams )
+		{
+			var rgValues = rgInitialParams[param];
+			for ( var i = 0; i < rgValues.length; i++ )
+			{
+				$J('.tab_filter_ctn').show();	// when showing initially, skip the animation that fnAddFilter would run
+				fnAddFilter( param, rgValues[i] );
+			}
+		}
+	}
+
+	var fnHandleHashChange = function ( bClearResults )
+	{
+		if ( window.location.hash.length > 2 && window.location.hash.substr(0,2) == "#p" )
+		{
+			var nPage = parseInt( window.location.hash.substr(2) );
+
+			var oPagingControsl = g_rgPagingControls[g_strActiveTab];
+			if ( nPage - 1 != oPagingControsl.m_iCurrentPage )
+			{
+				if ( bClearResults )
+				{
+					$J('.tab_item').remove()
+				}
+
+				oPagingControsl.GoToPage( nPage - 1, false );
+			}
+		}
+	}
+
+	// not ready yet
+	// fnHandleHashChange( true );
+}
+
