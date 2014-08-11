@@ -169,7 +169,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, almostblack )"
+				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, dialogbg )"
 				}	
 			}
 			

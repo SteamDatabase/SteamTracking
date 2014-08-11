@@ -490,7 +490,7 @@
 			render {}
 			render_bg
 			{
-				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
+				13="image( x1-22, y0+5, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
 
@@ -512,7 +512,7 @@
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
+				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
@@ -529,7 +529,7 @@
 					render_bg
 			{
 				// background fill
-				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive_disabled )"
+				1="image( x1-22, y0+5, x1 -2, y1, graphics/inbox_notification_inactive_disabled )"
 			}	
 		}	
 
@@ -544,7 +544,7 @@
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, none )"			
+				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green6 )"			
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
@@ -562,7 +562,7 @@
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, inbox_active2 )"
+				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green7 )"
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
@@ -577,7 +577,7 @@
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, none )"
+				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green6 )"
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
@@ -623,7 +623,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, none )"
+				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_inactive1, red6 )"
 			}	
 		}
 
@@ -636,7 +636,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_inactive1, parental_lock_inactive2 )"				
+				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_inactive1, parental_lock_inactive2 )"				
 			}	
 			
 		}
@@ -650,7 +650,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, none )"
+				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green6 )"
 			}	
 			
 		}
@@ -665,7 +665,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 + 2, parental_lock_active1, inbox_active2 )"
+				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green7 )"
 			}	
 			
 		}
@@ -678,9 +678,13 @@
 		
 		inboxmenuitem_active
 		{
-			textcolor=inbox_active_text
+			textcolor=label
 		}
-		
+	
+		inboxmenuitem_active:hover
+		{
+			textcolor=white
+		}
 		AccountURLStyle
 		{
 		  padding-top=-4

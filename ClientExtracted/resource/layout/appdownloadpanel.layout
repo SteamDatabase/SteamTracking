@@ -199,7 +199,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, none )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, green6 )"
 
 
 		
@@ -223,7 +223,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, inbox_active2 )"
+				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
 
 
 			}	
@@ -241,12 +241,12 @@
 
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
 			}
 			render_bg
 			{
 				// background fill
-				0="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonfacedisabled )"
+				0="fill( x0, y0, x1, y1, buttonfacedisabled )"
 
 			}
 		}
