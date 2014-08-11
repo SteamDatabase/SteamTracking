@@ -387,23 +387,6 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 	var fnRemoveYourTagsFromGlobalTags = function()
 	{
-					if ( rgYourPopularTags && rgYourPopularTags.length && rgGlobalPopularTags && rgGlobalPopularTags.length )
-			{
-				var rgYourTagHash = {};
-				for ( var i = 0; i < rgYourPopularTags.length; i++ )
-				{
-					rgYourTagHash[ rgYourPopularTags[i].tagid ] = true;
-				}
-
-				var i = 0;
-				while ( i < rgGlobalPopularTags.length )
-				{
-					if ( rgYourTagHash[ rgGlobalPopularTags[i].tagid ] )
-						rgGlobalPopularTags.splice( i, 1 );
-					else
-						i++;
-				}
-			}
 			};
 
 	var fnMatchTags = function( rgRegex, rgTags, rgSuggestions )
@@ -451,8 +434,6 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				rgRegex.push( new RegExp( term ) );
 			}
 
-						fnMatchTags( rgRegex, rgYourPopularTags, rgSuggestions );
-			if ( rgSuggestions.length < 10 )
 							fnMatchTags( rgRegex, rgGlobalPopularTags, rgSuggestions );
 
 			rgSuggestions.sort();
