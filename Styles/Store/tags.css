@@ -1,0 +1,471 @@
+
+html {
+	height: 100%;
+}
+
+body.tag_page > .perf_timing_area .perf_timing_link {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+}
+
+.perf_timing_data {
+	position: relative;
+	background-color: #000000;
+	margin: 0px auto 48px auto;
+	padding: 8px;
+	text-align: left;
+	width: 936px;
+	font-size: 14px;
+}
+
+body.tag_page h2.pageheader {
+	color: #ffffff;
+	font-size: 34px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+	text-shadow: 1px 1px 0 #000000;
+}
+
+body.tag_page h3 {
+	color: #ffffff;
+	font-size: 22px;
+	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+}
+
+.tag_browse_header_desc {
+	color: #8f98a0;
+	font-size: 15px;
+	text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.25 );
+}
+
+.tag_browse_header_desc a {
+	color: #ffffff;
+}
+
+.tag_browse_header_area {
+	padding-top: 12px;
+	margin-bottom: 20px;
+}
+
+.tag_browse_options {
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+	color: #8f98a0;
+	font-size: 15px;
+	margin-bottom: 2px;
+}
+
+.tag_browse_option {
+	display: inline-block;
+	margin-right: 24px;
+	cursor: pointer;
+}
+
+.tag_browse_option a {
+	color: #898a8c;
+}
+
+.tag_browse_option.active, .tag_browse_option.active a {
+	color: #ffffff;
+}
+
+.tag_browse_option a:hover {
+	color: #dddddd;
+	text-decoration: none;
+}
+
+.tag_browse_description {
+	font-size: 13px;
+	color: #8f98a0;
+	padding: 8px 0 16px 0;
+}
+
+.tag_browse_ctn {
+	position: relative;
+	min-height: 600px;
+}
+
+.tag_browse_tags {
+	font-family: Arial, tahoma, sans-serif;
+	float: left;
+	width: 200px;
+}
+
+.tag_browse_tag {
+	line-height: 26px;
+	color: #9FBBCB;
+	font-size: 13px;
+	background-color: rgba( 0, 0, 0, 0.20 );
+
+	cursor: pointer;
+
+	padding: 0 6px;
+	margin-bottom: 2px;
+	width: 188px;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.tag_browse_tag:hover {
+	color: #ffffff;
+}
+
+.tag_browse_tag.active {
+	color: #ffffff;
+    background: #67c1f5; /* Old browsers */
+    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.tag_browse_right_ctn {
+	position: absolute;
+	right: 0;
+	top: -5px;
+	width: 725px;
+}
+
+.tag_browse_games_ctn {
+	position: absolute;
+	top: 5px;
+}
+
+.browse_tag_loading {
+	text-align: center;
+	padding: 200px 120px;
+	font-size: 22px;
+}
+
+.browse_tag_games {
+	padding-top: 12px;
+	min-height: 518px;
+}
+
+.browse_tag_games h3 {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.browse_tag_games, .browse_tag_game_total {
+	background-color: rgba( 0, 0, 0, 0.20 );
+	padding-left: 16px;
+	padding-right: 0px;
+	width: 709px;
+	margin-bottom: 2px;
+}
+
+.browse_tag_game_total {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	height: 22px;
+}
+
+.browse_tag_game {
+	width: 231px;
+	height: 132px;
+
+	margin-right: 5px;
+	float: left;
+
+	color: #898a8c;
+	font-size: 13px;
+	line-height: 18px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+
+	padding-top: 12px;
+	padding-bottom: 20px;
+}
+
+.browse_tag_game > div {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.browse_tag_game_cap {
+	width: 222px;
+	height: 83px;
+	margin-bottom: 2px;
+}
+
+.browse_tag_game_cap img {
+	width: 222px;
+	height: 83px;
+}
+
+.browse_tag_game_name {
+	color: #B0AEAC;
+}
+
+.browse_tag_game_price {
+	font-size: 11px;
+	font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+}
+
+.tag_notenough_ctn {
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 100px 140px;
+	text-align: center;
+	color: #b0aeac;
+	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
+
+	margin-bottom: 36px;
+    margin-top: 30px;
+
+	word-wrap: break-word;
+}
+
+.tag_notenough_ctn h2 {
+	color: #d6d7d8;
+	margin-bottom: 15px;
+}
+
+.tag_notenough_desc {
+	font-size: 15px;
+	margin-bottom: 36px;
+}
+
+.tag_notenough_learnmore {
+	font-size: 13px;
+}
+
+.tag_notenough_learnmore a {
+	color: #d6d7d8;
+	text-decoration: underline;
+}
+.tag_notenough_learnmore a:hover {
+	color: #ffffff;
+}
+
+.tag_beta_bug_ctn {
+	width: 940px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.tag_beta_bug {
+	position: absolute;
+	left: -79px;
+	top: 0;
+	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_betabug.png' );
+}
+
+.tag_beta_bug, .tag_beta_bug img {
+	width: 63px;
+	height: 132px;
+}
+
+.tag_announce_cloud_bg {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/tagging/tag_cloud.jpg') center top no-repeat;
+	min-height: 487px;
+}
+
+.tag_announce_page .new_page_content {
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+}
+
+.tag_announce_page h1, .tag_announce_page h2 {
+	color: #ffffff;
+	text-shadow: 1px 1px 0 #000000;
+}
+
+.tag_announce_page h1 {
+	font-size: 32px;
+	text-align: center;
+}
+
+.tag_announce_header h1 {
+	padding: 0 124px;
+	line-height: 35px;
+}
+
+.tag_announce_page h2 {
+	font-size: 30px;
+	line-height: 29px;
+	font-family: "Motiva Sans Thin", "Motiva Sans", arial, tahoma, sans-serif;
+	margin-bottom: 12px;
+}
+
+body.tag_page.tag_announce_page h3 {
+	font-size: 21px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	margin-bottom: 24px;
+}
+
+.tag_announce_header {
+	margin-bottom: 80px;
+}
+
+.tag_announce_header .title_image {
+	min-height: 108px;
+}
+
+.tag_announce_intro {
+	font-size: 18px;
+	line-height: 24px;
+	color: #8bb9e0;
+	text-shadow: 1px 1px 0 #000000;
+	margin-bottom: 90px;
+}
+
+.tag_announce_howdoesthiswork {
+	color: #b0aeac;
+	font-size: 15px;
+	font-family: "Motiva Sans Thin", "Motiva Sans", arial, tahoma, sans-serif;
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+.tag_announce_box {
+	background: rgba( 0, 0, 0, 0.2 );
+	min-height: 325px;
+	margin-bottom: 20px;
+}
+
+.tag_announce_img {
+	float: right;
+	width: 478px;
+	height: 325px;
+	margin-left: 48px;
+}
+
+.tag_announce_box_content {
+	padding: 48px 0 0 24px;
+
+	font-size: 16px;
+	line-height: 23px;
+	color: #d6d7d8;
+	text-shadow: 1px 1px 0 #000000;
+}
+
+.tag_announce_section {
+	margin-bottom: 96px;
+}
+
+.tag_announce_sectionheader {
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: 8px;
+	margin-bottom: 14px;
+}
+
+.tag_announce_faq_col {
+	width: 464px;
+	font-size: 15px;
+	color: #557dab;
+	line-height: 20px;
+}
+
+.tag_announce_faq_col.left {
+	float: left;
+}
+
+.tag_announce_faq_col.right {
+	float: right;
+}
+
+.tag_announce_faq_entry {
+	margin-bottom: 24px;
+}
+
+.tag_announce_faq_q {
+	color: #ffffff;
+}
+
+.tag_announce_faq_a a {
+	text-decoration: underline;
+	color: #557dab;
+}
+
+.tag_announce_faq_a a:hover {
+	color: #ffffff;
+}
+
+.tag_announce_box.tag_announce_feedback {
+	min-height: 0;
+	padding: 30px 54px;
+
+}
+.tag_announce_feedback p {
+
+	font-size: 16px;
+	color: #d6d7d8;
+	text-shadow: 1px 1px 0 #000000;
+	width: 464px;
+}
+
+.forum_link_ctn {
+	float: right;
+	text-align: right;
+	padding: 12px 0 12px;
+}
+
+.tag_announce_button {
+	margin-top: 40px;
+}
+
+.btn_blue {
+	color: #557DAB;
+	font-size: 14px;
+	background: rgba( 0, 0, 0, 0.2 );
+	border: 1px solid #4D6D8C;
+	border-radius: 3px;
+
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none !important;
+}
+
+.btn_blue > span {
+	display: block;
+}
+
+.btn_blue:hover {
+	background: rgba( 85, 125, 171, 0.2 );
+}
+.tab_filter_ctn {
+    color: #779abd;
+    margin-bottom: 11px;
+    font-size: 12px;
+}
+.tab_filter_header {
+    margin-bottom: 4px;
+}
+.tab_filter {
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 2px;
+    padding: 0 9px;
+    line-height: 24px;
+    margin: 0 4px 4px 0;
+    background: #67c1f5; /* Old browsers */
+    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #ffffff;
+}
+.tab_filter_remove {
+    display: inline-block;
+    cursor: pointer;
+    background: no-repeat center center url('https://steamstore-a.akamaihd.net/public/images/v6/delete_search_term.png');
+    width: 12px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+#discovery_queue {
+	height: 250px;
+}
