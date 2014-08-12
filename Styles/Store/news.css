@@ -1,0 +1,463 @@
+/* CSS Document */
+
+#main {
+	min-height: 300px;
+}
+
+.newsrightcol {
+	float: right;
+	margin-left: 30px;
+	width: 238px;
+	margin-top: 10px;
+}
+
+.newsmaincol {
+	float: left;
+	width: 670px;
+}
+
+.newsrightcol .block {
+	margin-bottom: 16px;
+}
+
+.newsrightcol .block .block_header {
+    background: #2a3f5a;
+    padding: 4px;
+    color: #8f98a0;
+    font-size: 12px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+
+a.linkbar {
+	padding-left: 12px;
+    display: block;
+    color: #9fbbcb;
+    font-size: 13px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    line-height: 28px;
+}
+
+a.linkbar:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.linkbar_active {
+    background: #67c1f5; /* Old browsers */
+    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #ffffff;
+    border-radius: 1px;
+}
+
+a.linkbar_active:hover, a.linkbar_active:active, a.linkbar_active:visited {
+    text-decoration: none;
+	margin-left: 0px;
+}
+
+.page_title_area
+{
+	margin-bottom:0px;
+}
+
+div#main_content {
+	padding-top: 6px;
+}
+
+#main_header {
+	float: left;
+	margin-bottom: 12px;
+	margin-top: 6px;
+}
+#main_header h1 {
+    font-size: 24px;
+    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+#main_header_expanded {
+	float: left;
+	margin-bottom: 12px;
+}
+
+#main_pre_header {
+	color: #D4D4D4;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+#main_post_header {
+	margin-top: 5px;
+}
+
+
+#main_post_header a {
+	color: #D4D4D4;
+}
+
+#viewmodelinks {
+	float: right;
+	margin-left: 50px;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+
+.view_inactive {
+    background-color: rgba( 103, 193, 245, 0.2 );
+    border-radius: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+a.view_inactive {
+    color: #67c1f5;
+}
+
+a.view_inactive:hover {
+	color: #ffffff;
+    text-decoration: none;
+}
+
+a.view_active:hover {
+    text-decoration: none;
+}
+
+.view_active {
+    background: #67c1f5; /* Old browsers */
+    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #ffffff;
+    border-radius: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.block_content {
+    border: 1px solid #28394d;
+    border-radius: 2px;
+
+}
+
+.block_content_inner
+{
+	padding: 4px 2px 4px 4px;
+}
+
+.block_sub_region {
+	margin-bottom: 12px;
+}
+
+.block_sub_region a {
+	color: #B0AEAC;
+}
+
+.block_sub_region a:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+.block_sub_header {
+	font-size: 11px;
+	color: #666465;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+}
+
+.block_sub_header_channels {
+	font-size: 11px;
+	color: #666465;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+	margin-top: 14px;
+}
+
+div#news_search {
+}
+
+.searchbox_news {
+	border: 1px solid #386685;
+	background-color: #5398c3;
+    border-radius: 3px;
+	color: #000000;
+	height: 23px;
+	padding-left: 4px;
+	margin-right: 8px;
+	z-index: 250;
+}
+
+.searchbox_news input {
+	border: none;
+    background: transparent;
+	color: #000000;
+	margin-top: 2px;
+	white-space: nowrap;
+	outline: none;
+	width: 193px;
+}
+
+.searchbox_news input.default {
+	font-style: italic;
+    color: #305d8a;
+}
+
+
+.searchbox_news img {
+	vertical-align: middle;
+}
+
+#main_content {
+	height: 500px;
+}
+
+.newshr {
+	height: 1px;
+	width: 100%;
+	clear: left;
+
+    background-image: url( https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png );
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.newsHeadlineBlock {
+	margin-top: 6px;
+}
+
+.newsHeadlineBlock .feed {
+	text-align: right;
+	float: right;
+	color: #666465;
+	width: 140px;
+	overflow: hidden;
+}
+
+.newsHeadlineBlock .title a, .newsHeadlineBlock .title a:active, .newsHeadlineBlock .title a:visited {
+	color: #d4d4d4;
+	text-decoration: none;
+	outline: none;
+}
+
+.newsHeadlineBlock .title {
+	float: left;
+	clear: left;
+	margin-left: 0px;
+	width: 440px;
+	overflow: hidden;
+	margin-bottom: 6px;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.newsHeadlineBlock .title:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.newsHeadlineBlock .date {
+	float: left;
+	margin-left: 15px;
+	color: #666465;
+}
+
+.newsPostBlock {
+	margin-top: 2px;
+	margin-bottom: 24px;
+	clear: left;
+	vertical-align: top;
+}
+
+.newsPostBlock .feed {
+	margin-top: 2px;
+	clear: left;
+	float: left;
+	color: #61686d;
+	height: 14px;
+}
+
+.newsPostBlock .headline {
+	margin-bottom: 1px;
+}
+
+.newsPostBlock .headline .date {
+	margin-left: 15px;
+	float: right;
+	clear: right;
+	color: #61686d;
+}
+
+.newsPostBlock .headline .posttitle {
+	float: left;
+	font-weight: normal;
+	font-size: 24px;
+	width: 562px;
+    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+}
+
+.newsPostBlock .headline .posttitle a, .newsPostBlock .headline .posttitle a:active, .newsPostBlock .headline .posttitle a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.newsPostBlock .headline .posttitle a:hover {
+	text-decoration: none;
+}
+
+
+.newsPostBlock .body {
+	color: #acb2b8;
+	margin-top: 10px;
+	line-height: 19px;
+	clear: left;
+	margin-bottom: 10px;
+    font-size: 14px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+.newsPostBlock .body a {
+    color: #9fbbcb;
+    text-decoration: underline;
+}
+.newsPostBlock .body a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.newsPostBlock .body i {
+    font-style: normal;
+    font-family: "Motiva Sans Regular Italic", Arial, Helvetica, sans-serif;
+}
+.newsPostBlock .body b, .newsPostBlock .body .strong {
+    font-weight: normal;
+    font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
+}
+
+.body img {
+	float: left;
+	clear: both;
+	margin-right: 12px;
+    margin-top: 8px;
+	border-style: none;
+	width: 224px;
+}
+
+.share {
+	color: #c6d4df;
+	margin-top: 5px;
+	margin-bottom: 18px;
+	float: left;
+	font-size: 12px;
+	clear: both;
+	line-height: 14px;
+    background: rgba( 0, 0, 0, 0.2 );
+    width: 100%;
+    padding: 6px 8px 2px 8px;
+}
+
+.share img {
+	vertical-align: baseline;
+}
+
+.share a{
+	color: #666465;
+}
+
+.newsPostBlock .body li {
+	margin-left: 32px;
+	margin-top:8px;
+	list-style-image: url('https://steamstore-a.akamaihd.net/public/images/v5/dash1.gif');
+	color: #acb2b8;
+}
+
+div.autocomplete {
+    margin: 0px;
+    padding: 0px;
+
+    background: rgb(227,234,239); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(227,234,239,1) 0%, rgba(199,213,224,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(227,234,239,1)), color-stop(100%,rgba(199,213,224,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(227,234,239,1) 0%,rgba(199,213,224,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(227,234,239,1) 0%,rgba(199,213,224,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(227,234,239,1) 0%,rgba(199,213,224,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(227,234,239,1) 0%,rgba(199,213,224,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3eaef', endColorstr='#c7d5e0',GradientType=0 ); /* IE6-9 */
+
+    color: #000;
+    z-index: 500;
+    margin-top: 6px;
+    margin-left: -5px;
+    width: 202px;
+}
+
+div.autocomplete ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+div.autocomplete ul li {
+    margin: 0px;
+    padding: 3px 2px;
+    display: block;
+    list-style-type: none;
+    cursor: pointer;
+}
+div.autocomplete ul li.selected {
+    background: #67c1f5; /* Old browsers */
+    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #ffffff;
+}
+
+.shacknews div.focalbox {
+	background-color:none;
+	border:1px solid #BBBBBB;
+	margin:12px;
+	margin-left:64px;
+	margin-right:64px;
+	padding:8px;
+	text-align:center;
+}
+
+.shacknews .body p {
+	margin-top: 17px;
+}
+
+.shacknews div.focalbox img {
+	background-color:red;
+	border:none;
+	float:none;
+	line-height:0;
+	margin:0 12px 0;
+	padding:0;
+}
+
+.shacknews div.focalbox a {
+	float:none;
+	margin:0;
+	padding:0;
+}
+
+.pcgamer .body img {
+	float: none;
+	width: auto;
+	clear: both;
+}
