@@ -176,24 +176,6 @@ GetItemSchema/Dota2Test.json|https://api.steampowered.com/IEconItems_205790/GetS
 GetItemSchema/Portal2.json|https://api.steampowered.com/IEconItems_620/GetSchema/v1/?key=*APIKEY*&language=english
 GetItemSchema/TeamFortress2.json|https://api.steampowered.com/IEconItems_440/GetSchema/v1/?key=*APIKEY*&language=english
 
-# Game Schemas
-GameSchema/AlienSwarm.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=630
-GameSchema/CounterStrikeGlobalOffensive.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=730
-GameSchema/CounterStrikeSource.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=240
-GameSchema/DayofDefeatSource.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=300
-GameSchema/Dota2.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=570
-GameSchema/HalfLife2.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=220
-GameSchema/HalfLife2Deathmatch.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=320
-GameSchema/HalfLife2EpisodeOne.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=380
-GameSchema/HalfLife2EpisodeTwo.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=420
-GameSchema/HalfLife2LostCoast.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=340
-GameSchema/Left4Dead.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=500
-GameSchema/Left4Dead2.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=550
-GameSchema/Portal.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=400
-GameSchema/Portal2.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=620
-GameSchema/Spacewar.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=480
-GameSchema/TeamFortress2.json|https://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=*APIKEY*&l=english&appid=440
-
 # Other
 Random/ControllerFirmware.vdf|https://steamcdn-a.akamaihd.net/controller_config/firmware/firmware.vdf
 Random/Alchemist.txt|http://repo.steampowered.com/steamos/lists/default_alchemist_main_amd64_Packages
