@@ -1,0 +1,306 @@
+
+.pageheader.full {
+}
+
+.pagesubheader {
+	font-size: 18px;
+	color: #9099a1;
+	font-family: "Motiva Sans Light", Arial, Tahoma, "Times New Roman", Times, serif;
+}
+
+.searchtag {
+	color: #67c1f5;
+	background: #000000;
+	background: rgba( 0, 0, 0, 0.2 );
+	font-size: 12px;
+
+	padding: 8px 10px;
+	margin: 4px 5px 0 0;
+	display: inline-block;
+	border-radius: 2px;
+	line-height: 14px;
+}
+
+.searchtag a.btn {
+	margin-left: 10px;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-image: url(https://steamstore-a.akamaihd.net/public/images/v6/deleteSearchTerm.png);
+	vertical-align: top;
+	margin-top: 1px;
+}
+
+.page_header_ctn.search {
+	padding-bottom: 70px;
+}
+
+.searchbar {
+	height: 30px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.searchbar .sortbox {
+	position: absolute;
+	right: 0;
+	top: 7px;
+}
+
+.searchbar .label {
+	font-size: 12px;
+	color: #4c6c8c;
+	display: inline-block;
+	margin-right: 4px;
+}
+
+#term {
+	background-color: #2a3f5a;
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0px #45556c;
+	width: 500px;
+	padding: 5px;
+}
+
+/* DSelect */
+.dselect_container {
+	color: #b0aeac;
+	text-shadow: 1px 1px 0px #000;
+	font-size: 12px;
+
+	display: inline-block;
+	position: relative;
+}
+.dselect_container a.trigger, a.activetrigger {
+	background: url('https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_arrow_dn_for_select.png') no-repeat right transparent;
+	color: #ebebeb;
+	padding: 4px 30px 4px 8px;
+	font-size: 12px;
+	line-height: 13px;
+	border: 1px transparent;
+	border-radius: 0;
+	height: 22px;
+	-webkit-appearance: none;
+	border-radius: 3px;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	text-decoration: none;
+	height:19px;
+	width:105px;
+	background-color: #000;
+	background-color:rgba(0,0,0,0.2);
+}
+
+.dselect_container a.trigger:hover,
+.dselect_container a.activetrigger,
+.dselect_container a.activetrigger:hover
+{
+	color: #ffffff;
+	border-radius: 1px;
+	background-color: #67c1f5; /* Old browsers */
+}
+
+.activetrigger{
+	background:#B3B0AA url(https://steamstore-a.akamaihd.net/public/images/select_arrow.gif) no-repeat scroll right top;
+	border:1px solid #6B6A44;
+	color: #4A4945;
+	overflow: hidden;
+}
+
+
+.dropcontainer ul {
+	list-style-type:none;
+	line-height: 22px;
+	background-color:#262626;
+	border:1px solid #82807C;
+	margin:0;
+	width:300px;
+	position:absolute;
+	left: 0px;
+	z-index: 999999;
+
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+
+.dropdownhidden{
+	display: none;
+}
+.dropdownvisible{
+	top:5px;
+	display: block;
+}
+.dropcontainer ul li {
+	padding: 0px;
+	margin: 0px;
+}
+.dropcontainer ul li.emptyvalue {
+	font-style: italic;
+}
+.dropcontainer ul a {
+	padding-left:2px;
+	padding-right:2px;
+	display:block;
+	text-decoration:none;
+	color:#B0AEAC;
+	line-height: 22px;
+	height: 22px;
+}
+.dropcontainer a.highlighted_selection {
+	color: #ffffff;
+	border-radius: 1px;
+	background: #67c1f5; /* Old browsers */
+	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	text-decoration: none;
+}
+.dropcontainer{
+	position:relative;
+}
+
+/* Search results */
+.search_result_row, .search_result_row:hover {
+	position: relative;
+	color: #67c1f5;
+	background: #000000;
+	background: rgba( 0, 0, 0, 0.2 );
+
+	margin: 5px 0;
+	display: block;
+	text-decoration: none;
+	color: #c6d4df;
+	font-family: "Motiva Sans Light", arial narrow, arial, tahoma;
+}
+
+.search_result_row .ds_owned_flag {
+	top: 12px;
+}
+
+.search_result_row .col {
+	height: 45px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.search_result_row .col.search_capsule {
+	width: 120px;
+}
+
+.search_result_row.ds_owned .col.search_capsule, .search_result_row.ds_owned .platform_img {
+	opacity: 0.3;
+}
+
+.search_result_row .col.search_released {
+	width: 85px;
+	color: #4c6c8c;
+	font-size: 11px;
+	line-height: 45px;
+}
+
+.search_result_row .col.search_metascore {
+	width: 30px;
+	font-size: 16px;
+	color: #8bc53f;
+	line-height: 45px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.search_result_row .col.search_price {
+	width: 100px;
+	text-align: right;
+}
+.search_result_row .col.search_name {
+	width: 275px;
+	margin-left: 5px;
+}
+.search_result_row.ds_owned .col.search_name {
+	color: #62696e;
+}
+
+.search_result_row .title {
+	margin-top: 5px;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.col.search_price.discounted {
+	padding-top: 9px;
+	height: 36px;
+}
+
+.col.search_discount {
+	width: 40px;
+}
+
+.col.search_discount span {
+	color: #8bc53f;
+	font-size: 12px;
+	padding: 5px;
+	background-color: #4c6b22;
+	display: block;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.page_content {
+	padding-top: 20px;
+}
+
+/* autocomplete */
+
+div.autocomplete {
+	margin: 0px;
+	padding: 0px;
+	width: 250px;
+	background: #BBBBBB;
+	border: 1px solid #ACACAC;
+	position: absolute;
+	color: #000000;
+	z-index: 500;
+}
+
+div.autocomplete ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+div.autocomplete ul li.selected {
+	color: white;
+	background-color: #3D3D3D;
+}
+
+div.autocomplete ul li {
+	margin: 0;
+	padding: 2px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: block;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+.block_content_inner {
+	overflow: hidden;
+}
+
+.col.search_price:not(.discounted){
+	line-height: 45px;
+}
+
+.search_pagination_left {
+    float: left;
+}
+.search_pagination_right {
+    float: right;
+}
