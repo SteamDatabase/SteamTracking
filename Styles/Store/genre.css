@@ -1,0 +1,26 @@
+
+/* spotlight */
+.rightcol.small .spotlight_block
+{
+	margin-bottom: 16px;
+}
+
+.rightcol.small .spotlight_img img
+{
+	max-width: 237px;
+}
+.rightcol.small .spotlight_img
+{
+	width: 237px;
+	height: auto;
+}
+.rightcol.small .spotlight_scroll_ctn.home_block
+{
+	height: auto;
+	overflow: hidden;
+	position: relative;
+}
+.rightcol.small .slider_ctn.spotlight_block
+{
+	width: 238px;
+}

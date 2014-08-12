@@ -84,9 +84,15 @@ Styles/workshop_managecollection.css|https://steamcommunity-a.akamaihd.net/publi
 Styles/workshop_userfiles.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_userfiles.css?_=*TIMENOW*
 
 # v6 hotness
-Styles/Store/store.css|https://steamstore-a.akamaihd.net/public/css/v6/store.css?_=*TIMENOW*
+Styles/Store/cart.css|https://steamstore-a.akamaihd.net/public/css/v6/cart.css?_=*TIMENOW*
 Styles/Store/game.css|https://steamstore-a.akamaihd.net/public/css/v6/game.css?_=*TIMENOW*
+Styles/Store/genre.css|https://steamstore-a.akamaihd.net/public/css/v6/genre.css?_=*TIMENOW*
+Styles/Store/home.css|https://steamstore-a.akamaihd.net/public/css/v6/home.css?_=*TIMENOW*
+Styles/Store/login.css|https://steamstore-a.akamaihd.net/public/css/v6/login.css?_=*TIMENOW*
 Styles/Store/recommended.css|https://steamstore-a.akamaihd.net/public/css/v6/recommended.css?_=*TIMENOW*
+Styles/Store/sale.css|https://steamstore-a.akamaihd.net/public/css/v6/sale.css?_=*TIMENOW*
+Styles/Store/search.css|https://steamstore-a.akamaihd.net/public/css/v6/search.css?_=*TIMENOW*
+Styles/Store/store.css|https://steamstore-a.akamaihd.net/public/css/v6/store.css?_=*TIMENOW*
 Styles/Store/tags.css|https://steamstore-a.akamaihd.net/public/css/v6/tags.css?_=*TIMENOW*
 
 # JS
