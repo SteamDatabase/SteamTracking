@@ -83,8 +83,11 @@ Styles/workshop_itemdetails.css|https://steamcommunity-a.akamaihd.net/public/css
 Styles/workshop_managecollection.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_managecollection.css?_=*TIMENOW*
 Styles/workshop_userfiles.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_userfiles.css?_=*TIMENOW*
 
-# Spy
-Styles/styles_storev6.css|https://steamstore-a.akamaihd.net/public/css/styles_storev6.css?_=*TIMENOW*
+# v6 hotness
+Styles/Store/store.css|https://steamstore-a.akamaihd.net/public/css/v6/store.css?_=*TIMENOW*
+Styles/Store/game.css|https://steamstore-a.akamaihd.net/public/css/v6/game.css?_=*TIMENOW*
+Styles/Store/recommended.css|https://steamstore-a.akamaihd.net/public/css/v6/recommended.css?_=*TIMENOW*
+Styles/Store/tags.css|https://steamstore-a.akamaihd.net/public/css/v6/tags.css?_=*TIMENOW*
 
 # JS
 Scripts/app_tagging.js|https://steamstore-a.akamaihd.net/public/javascript/app_tagging.js?_=*TIMENOW*&l=english
