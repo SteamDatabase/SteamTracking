@@ -31,7 +31,7 @@
 						</Panel>
 					</ParentalButton>
 					<ParentalButton id="Inbox" tabindex="2" selectionpos="2,0" onactivate="DisplayInboxDropdown();" onfocus="InboxButtonFocused();" >
-						<Image src="file://{images}/inbox.png" />
+						<Panel class="InboxButtonImage" />
 						<Panel class="ButtonLabelWrapper" >
 							<Label class="ShortDesc" text="#MainMenu_InboxShort" />
 							<Label class="LongDescSm" text="#MainMenu_InboxLong" />

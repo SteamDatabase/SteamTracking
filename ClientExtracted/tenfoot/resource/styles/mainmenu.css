@@ -435,6 +435,53 @@ Button:hover .ShortDesc
 	font-size: 28px;
 }
 
+.InboxButtonImage
+{
+	background-image: url( "file://{images}/inbox.png" );
+	width: 44px;
+	height: 44px;
+	wash-color: messagecolorwash;
+}
+
+#Inbox:focus .InboxButtonImage
+{
+	wash-color: #1c2c5cff;
+
+	animation-name: image-wash-pulse;
+	animation-duration: 1.7s;
+	animation-delay: 0.08s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.SteamUpdated .InboxButtonImage
+{
+	background-image: url( "file://{images}/icon_steam_update.png" );
+	wash-color: #1c2c5cff;
+
+	animation-name: image-wash-pulse;
+	animation-duration: 3.4s;
+	animation-delay: 0.08s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.SteamUpdated #Inbox:focus .InboxButtonImage
+{
+	background-image: url( "file://{images}/icon_steam_update.png" );
+	wash-color: #1c2c5cff;
+
+	animation-name: image-wash-pulse;
+	animation-duration: 3.4s;
+	animation-delay: 0.08s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
 .TopRowBase Button, InboxMenu Button, ParentalButton
 {
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 10px;
@@ -699,11 +746,6 @@ Button:hover .ShortDesc
 .SupportMessage #Inbox
 {
 	wash-color: accountwarning;
-}
-
-.SteamUpdated #Inbox
-{
-    background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 }
 
 #NewSupportMessagesButton

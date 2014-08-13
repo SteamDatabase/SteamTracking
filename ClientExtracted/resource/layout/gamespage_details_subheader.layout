@@ -23,28 +23,64 @@
 		
 		ClientListButton
 		{
-			inset="-6 0 0 0"
+			inset="20 0 0 0"
 			// minimum-width=20
 			// minimum-height set by code to match actual height of Launch button
 			// Do not set either minimum-width or -height here or it will override the code and the layout will break
 			bgcolor=none
-
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, none )"
+				0="gradient( x0+2, y0+1, x1, y1-1, launch1, launch2 )"
+			}
+			render
+			{
+				1="image( x0 + 6, y0 + 11, x1, y1, graphics/icon_down_hover )"
 			}
 		}
 		
 		ClientListButton:hover
 		{
-			inset="-6 0 0 0"
+		  inset="20 0 0 0"
 			bgcolor=none
-
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0 + 1, x1 - 1, y1 - 1, parental_lock_active1, inbox_active2 )"
+				0="gradient( x0+2, y0+1, x1, y1-1, launch0, launch2 )"
+			}
+			render
+			{
+				1="image( x0 + 6, y0 + 11, x1, y1, graphics/icon_down_hover )"
+			}
+		}	
+		
+		ClientListButton:active
+		{
+			inset="20 0 0 0"
+			bgcolor=none
+			render_bg
+			{
+				// background fill
+				0="gradient( x0+2, y0+1, x1, y1-1, focus, launch2 )"
+			}
+			render
+			{
+				1="image( x0 + 6, y0 + 11, x1, y1, graphics/icon_down_hover )"
+			}
+		}	
+				
+		ClientListButton:selected
+		{
+			inset="20 0 0 0"
+			bgcolor=none
+			render_bg
+			{
+				// background fill
+				0="gradient( x0+2, y0+1, x1, y1-1, focus, launch2 )"
+			}
+			render
+			{
+				1="image( x0 + 6, y0 + 11, x1, y1, graphics/icon_down_hover )"
 			}
 		}	
 		
@@ -55,14 +91,14 @@
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="Texthover"
+			textcolor="white"
 			font-style=uppercase
 			bgcolor=none
 
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, none )"
+				0="gradient( x0, y0+1, x1, y1-1, parental_lock_active1, none )"
 
 
 			}	
@@ -81,7 +117,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, inbox_active2, almostblack )"
+				0="gradient( x0, y0+1, x1, y1-1, parental_lock_active1, almostblack )"
 
 			}	
 		}
@@ -99,28 +135,28 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
+				0="gradient( x0, y0+1, x1, y1-1, DialogBG, propertysheetbg )"
 			}	
 		}
 		
 		DetailsLaunchButton
 		{   
-			inset="23 0 0 0"
+			inset="23 2 0 1"
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="Texthover"
+			textcolor="white"
 			font-style=uppercase
 			bgcolor=none
 
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
+				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, green6 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
 
 
 			}	
@@ -128,22 +164,22 @@
 	
 		DetailsLaunchButton:Hover
 		{   
-			inset="23 0 0 0"
+			inset="23 2 0 1"
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="white"
+			textcolor="White"
 			font-style=uppercase
 			bgcolor=none   
 
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
+				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
 
 
 			}	
@@ -151,30 +187,7 @@
 		
 		DetailsLaunchButton:Selected
 		{
-			inset="23 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="TextHover"
-			font-style=uppercase
-			bgcolor=none  
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play_down )"
-			}
-			render_bg
-			{
-        // background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
-                
-
-			}
-		}
-		
-		
-		DetailsLaunchButton:Active
-		{
-			inset="23 0 0 0"
+			inset="23 2 0 1"
 			font-family=basefont
 			font-size=16
 			font-weight=400
@@ -183,36 +196,55 @@
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play_down )"
+				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
+			}
+			render_bg
+			{
+        // background fill
+				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
+			}
+		}
+		
+		
+		DetailsLaunchButton:Active
+		{
+			inset="23 2 0 1"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="White"
+			font-style=uppercase
+			bgcolor=none  
+			render
+			{
+				1="image( x0 + 6, y0 + 6, x1, y1, graphics/icon_play )"
 			}
 			
 			render_bg
 			{
-        // background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
-                
-
+       				 // background fill
+				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
 			}	
 		}
 				
 		DetailsInstallButton
 		{  
 			
-			inset="23 0 0 0"
+			inset="23 2 0 1"
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="texthover"
+			textcolor="White"
 			font-style=uppercase
 			bgcolor=none   
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install)"
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install)"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, green6 )"
+				0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
 
 
 			}	
@@ -220,123 +252,50 @@
 		
 		DetailsInstallButton:Hover
 		{  
-			inset="23 0 0 0"
+			inset="23 2 0 1"
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="white"
+			textcolor="White"
 			font-style=uppercase
 			bgcolor=none   
 
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install )"
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
-
-
+				0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
 			}	
 		}
 		
 		DetailsInstallButton:Selected
 		{
-			inset="23 0 0 0"
+			inset="23 2 0 1"
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="TextHover"
+			textcolor="White"
 			font-style=uppercase
 			bgcolor=none   
 			
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_down )"
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
 			}
 			render_bg
 			{
-                // background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
-                
-
+       				// background fill
+				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"           
 			}
 		}
 		
 		
 		DetailsInstallButton:Active
 		{
-			inset="23 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="white"
-			font-style=uppercase
-			bgcolor=none  
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_install_down )"
-			}
-			
-			render_bg
-			{
-				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
-
-
-			}	
-		}
-		
-		
-		DetailsBuyButton
-		{   
-			inset="23 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="Texthover"
-			font-style=uppercase
-			bgcolor=none
-
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_buy )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, green6 )"
-
-			}	
-		}
-		
-		DetailsBuyButton:hover
-		{   
-			inset="23 0 0 0"
-			font-family=basefont
-			font-size=16
-			font-weight=400
-			textcolor="white"
-			font-style=uppercase
-			bgcolor=none   
-
-			render
-			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_buy )"
-			}
-			render_bg
-			{
-				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
-
-
-			}	
-		}
-		
-		DetailsBuyButton:active
-		{
-			inset="23 0 0 0"
+			inset="23 2 0 1"
 			font-family=basefont
 			font-size=16
 			font-weight=400
@@ -345,38 +304,101 @@
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_buy_down )"
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_install )"
 			}
 			
 			render_bg
 			{
-         // background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
-                
+				// background fill
+				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
+			}	
+		}
+		
+		
+		DetailsBuyButton
+		{   
+			inset="23 2 0 1"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="White"
+			font-style=uppercase
+			bgcolor=none
 
+			render
+			{
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_buy )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0, y0+1, x1, y1-1, launch1, launch2 )"
+
+			}	
+		}
+		
+		DetailsBuyButton:hover
+		{   
+			inset="23 2 0 1"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="White"
+			font-style=uppercase
+			bgcolor=none   
+
+			render
+			{
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_buy )"
+			}
+			render_bg
+			{
+				// background fill
+				0="gradient( x0, y0+1, x1, y1-1, launch0, launch2 )"
+
+
+			}	
+		}
+		
+		DetailsBuyButton:active
+		{
+			inset="23 2 0 1"
+			font-family=basefont
+			font-size=16
+			font-weight=400
+			textcolor="White"
+			font-style=uppercase
+			bgcolor=none  
+			render
+			{
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_buy )"
+			}
+			
+			render_bg
+			{
+        			// background fill
+				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
 			}	
 		}
 		
 		
 		DetailsBuyButton:Selected
 		{
-			inset="23 0 0 0"
+			inset="23 2 0 1"
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="TextHover"
+			textcolor="White"
 			font-style=uppercase
 			bgcolor=none  
 			render
 			{
-				1="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_buy_down )"
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_buy )"
 			}
 			render_bg
 			{     
-        // background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
-                
-
+        			// background fill
+				0="gradient( x0, y0+1, x1, y1-1, focus, launch2 )"
 			}
 		}
 	}

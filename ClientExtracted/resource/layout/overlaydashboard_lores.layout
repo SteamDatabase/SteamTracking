@@ -106,7 +106,6 @@
 		topbar
 		{
 			font-size=36
-			font-style=uppercase;
 			textcolor=Label
 		}
 		timeStrings

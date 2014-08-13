@@ -188,7 +188,7 @@
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="Text"
+			textcolor="white"
 			font-style="uppercase"
 			bgcolor=none
 
@@ -199,7 +199,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, green6 )"
+				0="gradient( x0, y0-1, x1, y1, launch1, launch2 )"
 
 
 		
@@ -212,18 +212,18 @@
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="TextHover"
+			textcolor="white"
 			font-style=uppercase
 			bgcolor=none   
 
 			render
 			{
-				0="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play_hover )"
+				0="image( x0 + 6, y0 + 4, x1, y1, graphics/icon_play )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, parental_lock_active1, parental_lock_active1 )"
+				0="gradient( x0, y0-1, x1, y1, launch0, launch2 )"
 
 
 			}	
@@ -246,7 +246,7 @@
 			render_bg
 			{
 				// background fill
-				0="fill( x0, y0, x1, y1, buttonfacedisabled )"
+				0="fill( x0, y0-1, x1, y1, buttonfacedisabled )"
 
 			}
 		}

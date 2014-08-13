@@ -2168,9 +2168,9 @@
 	"SettingsInterface_SteamOSCheckForUpdates"	"Check for SteamOS updates"
 	"SettingsInterface_SteamOSCheckForUpdatesTitle" "SteamOS version"
 
-	"MainMenu_NewSteamOSUpdate"	"{s:osname} reboot required"
-	"MainMenu_RestartForSteamOSUpdate_Title"	"{s:osname} reboot"
-	"MainMenu_RestartForSteamOSUpdate"	"Please reboot to apply {s:osname} updates. Would you like to restart now?"
+	"MainMenu_NewSteamOSUpdate"	"Restart to Update {s:osname}"
+	"MainMenu_RestartForSteamOSUpdate_Title"	"Restart {s:osname}"
+	"MainMenu_RestartForSteamOSUpdate"	"{s:osname} updates are available. Would you like to restart to update now?"
 	
 	"Overlay_AsyncNotificatoinsRequestedDialog_Title" "Allow notifications?"
 	"Overlay_AsyncNotificatoinsRequestedDialog_Allow" "Allow notifications"
