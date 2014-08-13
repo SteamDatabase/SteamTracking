@@ -1,12 +1,15 @@
 
 .game_page_background.game {
-    background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/app/game_page_background_shadow.png' ) center 402px no-repeat,
-    url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/SampleBackground_game_game.jpg' ) center top no-repeat;
+	background-position: center top;
+	background-repeat: no-repeat;
 }
 Body.v6.sub .game_page_background.game {
     background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/SampleBackground_game_game.jpg' ) center top no-repeat;
 }
 
+.game_page_top_background {
+	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/app/game_page_background_shadow.png' ) center 402px no-repeat;
+}
 
 .game_icon {
 	position: relative;
@@ -3140,4 +3143,28 @@ select.gray_bevel {
     background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/group_border_32.png' );
     height: 34px;
     width: 34px;
+}
+
+.release_notice {
+	background-color: #3d4136;
+	border: 1px solid #ff9900;
+	font-size: 15px;
+	color: #ff7b00;
+	padding: 13px;
+
+}
+.release_notice a {
+	font-size: 15px;
+	color: #ff7b00;
+	text-decoration: underline;
+}
+
+.release_notice a:hover {
+	text-decoration: none;
+}
+
+.release_notice .title {
+	color: #b3977c;
+	font-size: 12px;
+	margin-bottom: 5px;
 }
