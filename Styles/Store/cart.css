@@ -16,9 +16,10 @@
 
 .checkout_content_box h3.tab_header
 {
-	color: #8BC53F;
-	font-size: 12px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-weight: normal;
+	font-size: 18px;
+	color: #67c1f5;
 }
 
 .checkout_content_box a
@@ -34,9 +35,13 @@
 
 .checkout_content_box input[type="text"], .checkout_content_box input[type="password"], .checkout_content_box select, .checkout_content_box textarea
 {
-	background-color: #4d4b49;
-	border: 1px solid #82807c;
-	color: #ffffff;
+	background-color: #2a3f5a;
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0px #45556c;
+	width: 500px;
+	padding: 5px;
 	margin-top: 3px;
 }
 
@@ -241,19 +246,13 @@
 
 
 .checkout_review_cart_item {
-	border-bottom: 1px solid #000000;
+	margin: 3px 0;
 	position: relative;
 	min-height: 77px;
 	line-height: 16px;
+	background: rgba(0,0,0,0.2);
 }
 
-.checkout_review_cart_item.even {
-	background-color: #1a1a1a;
-}
-
-.checkout_review_cart_item.odd {
-	background-color: #1f1f1f;
-}
 
 .checkout_review_item_img {
 	position: absolute;
@@ -265,7 +264,7 @@
 	margin-left: 151px;
 	margin-right: 90px;
 	padding-top: 23px;
-	color: #ffffff;
+	color: #c6d4df;
 }
 
 .checkout_review_item_desc .checkout_review_item_platform {
@@ -284,7 +283,7 @@
 }
 
 .checkout_review_hit_min_provider_amount {
-	color: #626366;
+	color: #c6d4df;
 }
 
 .checkout_review_hit_min_provider_amount_div {
@@ -306,7 +305,7 @@
 }
 
 .checkout_review_item_price.price {
-	color: #ffffff;
+	color: #c6d4df;
 	font-size: 14px;
 }
 
@@ -396,7 +395,7 @@
 .cart_tab,
 .cart_tab_spacer {
 	float: left;
-	color: #b0aeac;
+	color: #c6d4df;
 	font-size: 14px;
 	cursor: default;
 	position: relative;
@@ -404,7 +403,7 @@
 
 .cart_tab_left_on {
 	position: absolute;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/v5/checkout_pipeline_undershadow.png );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/v6/cart/checkout_pipeline_undershadow.png );
 	height: 9px;
 	top: 30px;
 	left: 1px;
@@ -430,9 +429,9 @@
 }
 
 .cart_tab_on {
-	background-color: #8bc53f;
+	background-color: #66c0f4;
 	color: #ffffff;
-	text-shadow: 1px 1px 1px #006000;
+	text-shadow: 1px 1px 1px #000060;
 }
 
 .cart_tab_inactive {
@@ -793,7 +792,7 @@
 	position: absolute;
 	right: 0px;
 	text-align: right;
-	color: #ffffff;
+	color: #c6d4df;
 	font-size: 14px;
 }
 
@@ -833,7 +832,7 @@
 
 
 .checkout_content.cart_send_choice {
-	background-color: #1a1a1a;
+	background-color: rgba(0,0,0,0.2);
 	padding-right: 0px;
 }
 
@@ -1212,58 +1211,74 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 	margin-right: 16px;
 }
 
-/* dselect */
-
-
+/* DSelect */
 .dselect_container {
-	padding: 0px;
-	display: inline;
-}
+	color: #b0aeac;
 
-.dselect_container a, .dselect_container a:hover, .dselect_container a:active, .dselect_container a:visited
-{
 	font-size: 12px;
-	line-height: 22px;
-	text-decoration: none;
-	font-weight: normal;
+
+	display: inline-block;
+	position: relative;
 }
-
-a.trigger, a.activetrigger {
-	background: url(https://steamstore-a.akamaihd.net/public/images/v5/ico_search_dropdown.gif) no-repeat scroll right center;
-
-	display:block;
-	float:left;
-	color: #B0AEAC;
+.dselect_container a.trigger, a.activetrigger {
+	background: url('https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_arrow_dn_for_select.png') no-repeat right transparent;
+	color: #ebebeb;
+	padding: 4px 30px 4px 8px;
+	font-size: 12px;
+	line-height: 13px;
+	border: 1px transparent;
+	border-radius: 0;
 	height: 22px;
-	padding-left:8px;
-	padding-right: 30px;
-	overflow: hidden;
-
-
-	background-color: #4d4b49;
-	border: 1px solid #82807c;
-	color: #ffffff;
+	-webkit-appearance: none;
+	border-radius: 3px;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	text-decoration: none;
+	height:19px;
+	width:105px;
+	background-color: #000;
+	background-color:#2a3f5a;
 }
+
+.dselect_container a.trigger:hover,
+.dselect_container a.activetrigger,
+.dselect_container a.activetrigger:hover
+{
+	color: #ffffff;
+	border-radius: 1px;
+	background-color: #67c1f5; /* Old browsers */
+}
+
+.activetrigger{
+	background:#B3B0AA url(https://steamstore-a.akamaihd.net/public/images/select_arrow.gif) no-repeat scroll right top;
+	border:1px solid #6B6A44;
+	color: #4A4945;
+	overflow: hidden;
+}
+
 
 .dropcontainer ul {
-	background-color: #4d4b49;
-	border:1px solid #82807C;
 	list-style-type:none;
+	line-height: 22px;
+	background-color:#417A9B;
+	box-shadow: 0 0 12px #000000;
 	margin:0;
 	width:300px;
 	position:absolute;
-	line-height: 22px;
+	left: 0px;
 	z-index: 999999;
 
 	overflow: auto;
 	overflow-x: hidden;
 }
 
+
 .dropdownhidden{
 	display: none;
 }
 .dropdownvisible{
-	top:23px;
+	top:28px;
 	display: block;
 }
 .dropcontainer ul li {
@@ -1274,17 +1289,24 @@ a.trigger, a.activetrigger {
 	font-style: italic;
 }
 .dropcontainer ul a {
-	padding-left:2px;
-	padding-right:2px;
+	padding: 1px 0 1px 10px;
 	display:block;
 	text-decoration:none;
-	color:#FFFFFF;
+	color:#e5e4dc;
 	line-height: 22px;
 	height: 22px;
 }
 .dropcontainer a.highlighted_selection {
-	background:#3196FF;
-	color: #FFFFFF;
+	color: #ffffff;
+	border-radius: 1px;
+	background: #67c1f5; /* Old browsers */
+	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	text-decoration: none;
 }
 .dropcontainer{
@@ -1346,48 +1368,7 @@ a.trigger, a.activetrigger {
 	width: 254px;
 }
 
-.checkout_main .dropdownhidden{
-	top:0;
-	left:-999em;
-}
-.checkout_main .dropdownvisible{
-	top:20px;
-	left:0px;
-}
-.checkout_main .dropcontainer ul li {
-	padding: 0px;
-	margin: 0px;
-}
-.checkout_main .dropcontainer ul a {
-	padding-left:2px;
-	padding-right:2px;
-	display:block;
-	text-decoration:none;
-	line-height: 19px;
-	height: 19px;
-}
 
-.checkout_main .dropcontainer ul li.cachedPaymentMethodOption a {
-	font-weight: bold;
-	color: #ffffff;
-}
-
-.checkout_main .dropcontainer ul li.uncachedPaymentMethodOption a {
-	font-weight: bold;
-	color:#b0aeac;
-}
-
-
-.checkout_main .dropcontainer a.highlighted_selection {
-	text-decoration: none;
-}
-.checkout_main .dropcontainer{
-	position:relative;
-}
-
-#gift_sentiment_dselect_container
-{
-	#margin-top: 5px; }
 
 #gift_sentiment_droplist
 {
@@ -1618,7 +1599,7 @@ a.trigger, a.activetrigger {
 .block {
 	margin: 16px 0;
 	background: rgba(0,0,0,0.2);
-	padding: 3px;
+
 }
 
 .block_content {
@@ -1670,14 +1651,38 @@ a.trigger, a.activetrigger {
 	white-space: nowrap;
 }
 
-.recommended_grid .special .special_img_ctn .ds_owned_flag {
+.recommended_grid .special .special_img_ctn .ds_flag {
 	top: 18px;
 }
 
-.recommended_grid .special .special_img_ctn.ds_owned img {
+.recommended_grid .special .special_img_ctn.ds_flagged img {
 	opacity: 0.3;
 }
 
 .recommended_spacer {
 	height: 32px;
+}
+
+.block {
+	margin-bottom: 16px;
+}
+
+.block .block_header {
+	background: #2a3f5a;
+	padding: 4px 4px 4px 6px;
+	color: #8f98a0;
+	font-size: 12px;
+	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+
+.block_content {
+	border: 1px solid #28394d;
+	border-radius: 2px;
+
+}
+
+.block_content_inner
+{
+	padding: 4px 2px 4px 4px;
+	overflow: hidden;
 }

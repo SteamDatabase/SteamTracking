@@ -6,7 +6,8 @@
 .recommendation_bodytext
 {
 	font-size: 14px;
-	color: #82807c;
+	color: #8f98a0;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	margin-bottom: 8px;
 }
 
@@ -134,13 +135,12 @@
 	position: relative;
 	height: 173px;
 	padding: 0px 54px;
-	background-color: #262626;
+	background: rgba(0,0,0,0.2);
 }
 
 .recommendation_carousel_view {
 	overflow: hidden;
 	position: relative;
-	background-color: #262626;
 	margin-left: 12px;
 	margin-right: 12px;
 	width: 808px;
@@ -151,7 +151,8 @@
 	height: 18px;
 	padding-top: 10px;
 	padding-left: 6px;
-	color: #b0aeac;
+	color: #8f98a0;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-size: 14px;
 }
 
@@ -195,7 +196,6 @@
 
 .recommendation_carousel_item .carousel_cap {
 	display: block;
-	border: 1px solid #262626;
 	padding: 8px 8px 6px 8px;
 	margin-bottom: 2px;
 }
@@ -222,14 +222,13 @@
 	width: 52px;
 	height: 173px;
 	line-height: 173px;
-	background-color: #262626;
 	background-position: center center;
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
 
 .recommendation_carousel .scroll_btn:hover {
-	background-color: #3C3D3E;
+	background-color: rgba(128,128,128,0.2);
 }
 
 .recommendation_carousel .scroll_btn.disabled {
@@ -237,20 +236,20 @@
 }
 
 .recommendation_carousel .scroll_btn.disabled:hover {
-	background-color: #262626;
+	background-color: transparent;
 }
 
 
 
 .recommendation_carousel .scroll_btn.left {
 	left: 0px;
-	border-right: 2px solid #000000;
+	border-right: 1px solid #66c0f4;
 	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/carousel_scroll_left.png );
 }
 
 .recommendation_carousel .scroll_btn.right {
 	right: 0px;
-	border-left: 2px solid #000000;
+	border-left: 1px solid #66c0f4;
 	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/carousel_scroll_right.png );
 }
 
@@ -320,7 +319,8 @@
 	margin: 16px 16px 8px 0px;
 }
 .recommendation_area .underlined_links {
-	color: #898A8C;
+	color: #8f98a0;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-size: 14px;
 }
 .recommendation_area .commentCount {
@@ -637,10 +637,10 @@ textarea.comment_input
 }
 
 .recently_viewed_row {
-	background-color: #262626;
+	background-color: rgba(0,0,0,0.2);
 	height: 102px;
 	position: relative;
-	border-bottom: 1px solid #000000;
+	margin: 3px 0;
 }
 
 .recommendation_row {
@@ -750,7 +750,8 @@ textarea.comment_input
 	left: 640px;
 	top: 42px;
 	font-size: 11px;
-	color: #9e9995;
+	color: #8f98a0;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
 .recently_viewed_row .recently_viewed_price {
@@ -1099,12 +1100,11 @@ a.view_active:hover {
 
 
 .recommended_login_message {
-	padding-top: 34px;
+	padding-top: 16px;
 	padding-left: 16px;
 	padding-right: 16px;
 	height: 108px;
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/recommended/loginmessage_bg.png );
-
+	background: rgba(0,0,0,0.2);
 	margin-bottom: 30px;
 }
 
@@ -1113,7 +1113,8 @@ a.view_active:hover {
 }
 
 .recommended_login_message ul {
-	color: #82807c;
+	color: #8f98a0;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	list-style: square;
 	list-style-position: inside;
 }
@@ -1128,7 +1129,8 @@ a.view_active:hover {
 }
 
 .recommended_login_message_signup, .recommended_login_message_signup a {
-	color: #82807c;
+	color: #8f98a0;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-size: 11px;
 }
 
@@ -1812,4 +1814,12 @@ background: -moz-linear-gradient(top, #b8f750 5%, #87c643 95%);background: -webk
 .review_developer_response_container.multiple_listing.store
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
+}
+
+.recommendation_highlight.morelikethis_border {
+	margin-bottom: 0px;
+	background-image: url(http://chrisk.valvesoftware.com/store/public/images/v6/recommended/morelikethis_borderbottom.png );
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	padding-bottom: 22px;
 }

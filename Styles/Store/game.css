@@ -3,6 +3,9 @@
     background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/app/game_page_background_shadow.png' ) center 402px no-repeat,
     url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/SampleBackground_game_game.jpg' ) center top no-repeat;
 }
+Body.v6.sub .game_page_background.game {
+    background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/SampleBackground_game_game.jpg' ) center top no-repeat;
+}
 
 
 .game_icon {
@@ -1711,7 +1714,7 @@ img.package_header {
 
 .package_totals_area {
 	margin-left: auto;
-	color: #b0aeac;
+	color: #9099a1;
 	font-size: 12px;
 	line-height: 18px;
 	padding-top: 15px;
@@ -1730,8 +1733,9 @@ img.package_header {
 	position: absolute;
 	right: 0px;
 	text-align: right;
-	color: #898a8c;
-	font-size: 11px;
+	color: #9099a1;
+	font-size: 13px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
 }
 
 .package_totals_rule {
@@ -1749,6 +1753,28 @@ img.package_header {
 
 .package_totals_row.savings .price {
 	font-size: 12px;
+}
+
+#package_savings_bar {
+    background-color: #000000;
+    border-radius: 3px;
+    color: #A3CF06;
+    margin: 20px 0 5px 0;
+    height: 34px;
+}
+
+#package_savings_bar > .savings {
+    text-align: right;
+    width: 140px;
+    position: relative;
+    float: right;
+    font-size: 14px;
+    padding: 8px;
+    background: url('https://steamstore-a.akamaihd.net/public/images/v6/package_arrow.png') top left no-repeat;
+}
+#package_savings_bar > .message {
+    padding: 8px;
+    font-size: 12px;
 }
 
 .queue_ctn {
@@ -1795,7 +1821,7 @@ img.package_header {
 	color: #a3cf06;
     margin-bottom: 1px;
 }
-.game_area_already_owned .ds_owned_flag {
+.game_area_already_owned .ds_flag {
     top: 11px;
     left: -8px;
     box-shadow: 1px 1px 2px #000000;
