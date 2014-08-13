@@ -255,7 +255,7 @@ function BuildGameRow( gameInfo )
 		if( gameInfo['availStatLinks']['global_leaderboards'] )
 			statsLinks += gameStatsGlobalLeaderboardsTemplate.evaluate( gameInfo );
 
-		if( tab == 'recent' || tab == 'all')
+		if( tab == 'recent' || tab == 'all' || tab == 'followed' )
 		{
 			if( tab == 'recent' && gameInfo['hours'] && gameInfo['hours_forever'] && gameInfo['hours'] != '0.0' )
 			{
