@@ -159,12 +159,19 @@ steam.styles
 		parental_lock_active2 "49 49 49 255"	
 		parental_lock_active4 "122 145 71 255"
 		parental_lock_active5 "85 102 47 255"	
-		green6 "26 38 1 255"
-		green7 "182 217 54 255"
+		green5 "171 212 21 255"
+		green6 "150 184 28 255"
+		green7 "103 128 13 255"
+
+
+		launch0 "119 215 250 255"
+		launch1 "83 172 204 255"
+		launch2 "54 125 153 255"
 
 
 		parental_lock_inactive1 "154 49 48 255"
 		parental_lock_inactive2 "189 79 79 255"	
+		parental_lock_inactive3 "215 90 90 255"	
 		parental_lock_inactive4 "146 72 71 255"
 		parental_lock_inactive5 "103 48 47 255"	
 		red6="38 1 1 255"
@@ -240,7 +247,7 @@ steam.styles
     
     PropertySheet.TransitionEffectTime    "0"     // time to change from one tab to another
     PropertySheet.TabGap        1
-    PropertySheet.FlashTabColor	"120 120 120 255"
+    PropertySheet.FlashTabColor	"76 159 191 255"
 
     RichText.InsetX         8
     RichText.InsetY         7
@@ -1786,10 +1793,10 @@ steam.styles
 		{
 			0="gradient( x0, y0, x1, y0+80, DialogBG, ClientBG )"
         
-			1="gradient_horizontal( x0, y1, x1, y1, ClientBG, Highlight5 )"    // bottom
-			2="gradient( x1, y0, x1, y1 , ClientBG, Highlight5 )" // right
-			3="fill( x0, y0, x1, y0, ClientBG )"  // top
-			4="fill( x0, y0, x0, y1, ClientBG )" // left
+			1="gradient_horizontal( x0, y1-1, x1, y1, ClientBG, Highlight5 )"    // bottom
+			2="gradient( x1-1, y0, x1, y1 , ClientBG, Highlight5 )" // right
+			3="fill( x0, y0, x1, y0+1, ClientBG )"  // top
+			4="fill( x0, y0, x0+1, y1, ClientBG )" // left
 		}
 		render {}
     }

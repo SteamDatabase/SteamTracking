@@ -169,18 +169,37 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0 + 1, x1 - 1, y1 - 1, buttonface2, dialogbg )"
+				0="gradient( x0, y0-1, x1, y1, buttonface2, dialogbg )"
 				}	
 			}
 			
-			ActionButtonStyle:hover
+		ActionButtonStyle:hover
+		{
+			textcolor="TextHover"
+			render
 			{
-				textcolor="TextHover"
-				render
-				{
-					0="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"
-				}			
-			}
+				0="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"
+			}	
+			render_bg
+			{
+			// background fill
+				 0="gradient( x0, y0-1, x1, y1, buttonfaceactive, propertysheetbg )"  
+			}			
+		}
+		
+		ActionButtonStyle:active
+		{
+			textcolor="TextHover"
+			render
+			{
+				0="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"
+			}	
+			render_bg
+			{
+			// background fill
+				 0="gradient( x0, y0-1, x1, y1, DialogBG, propertysheetbg )"  
+			}			
+		}
 	}
 
 	layout

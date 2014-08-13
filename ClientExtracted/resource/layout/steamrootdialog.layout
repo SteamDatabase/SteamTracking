@@ -444,11 +444,8 @@
 			inset="-8 -3 8 0"
 			render {}
 			render_bg {
-				0="fill( x0, y0, x1, y1+1, support_flag_red )"
-				1="image( x0, y0, x0, y1, graphics/support_flag_left )"
-				2="image( x1, y0, x1, y1, graphics/support_flag_right )"
-				3="image_scale( x0+3, y0, x1, y0+3, graphics/support_flag_top )"
-				4="image_scale( x0+3, y1, x1, y1+3, graphics/support_flag_bottom )"
+				0="gradient( x0, y0, x1-1, y1, parental_lock_inactive2, parental_lock_inactive1 )"
+
 			}
 		}
 		
@@ -465,11 +462,7 @@
 			inset="-8 -3 8 0"
 			render {}
 			render_bg {
-				0="gradient( x0, y0, x1, y1+1, support_hover_red1, support_hover_red2 )"
-				1="image( x0, y0, x0, y1, graphics/support_flag_left_hover )"
-				2="image( x1, y0, x1, y1, graphics/support_flag_right_hover )"
-				3="image_scale( x0+3, y0, x1, y0+3, graphics/support_flag_top_hover )"
-				4="image_scale( x0+3, y1, x1, y1+3, graphics/support_flag_bottom_hover )"
+				0="gradient( x0, y0, x1-1, y1, parental_lock_inactive3, parental_lock_inactive1 )"
 			}
 		}
 
@@ -486,11 +479,11 @@
 			padding-right=0
 			padding-top=6
 
-			inset="8 -3 8 0"
+			inset="4 -3 8 0"
 			render {}
 			render_bg
 			{
-				13="image( x1-22, y0+5, x1 -2, y1, graphics/inbox_notification_inactive )"
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
 
@@ -500,7 +493,7 @@
 			render {}
 			render_bg
 			{
-
+				0="gradient(  x0 -3, y0, x1, y1, propertysheetbg, none )"
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
@@ -512,7 +505,7 @@
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, inbox_inactive, parental_lock_active2 )"
+				0="gradient(  x0 -3, y0, x1, y1, almostblack, none )"
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
@@ -524,7 +517,7 @@
 			padding-right=0
 			padding-top=6
 
-			inset="8 -3 8 0"
+			inset="4 -3 8 0"
 			render {}
 					render_bg
 			{
@@ -538,13 +531,13 @@
 			padding-left=3
 			padding-right=10
 			padding-top=6
-			inset="2 -3 8 0"
+			inset="4 -3 8 0"
 			render {}
 			render_bg
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green6 )"			
+				0="gradient(  x0 + 1, y0, x1, y1, green6, green7 )"			
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
@@ -556,13 +549,13 @@
 			padding-left=3
 			padding-right=10
 			padding-top=6
-			inset="2 -3 8 0"
+			inset="4 -3 8 0"
 			render {}
 						render_bg
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green7 )"
+				0="gradient(  x0 + 1, y0, x1, y1, green5, green7 )"			
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
@@ -571,13 +564,13 @@
 			padding-left=3
 			padding-right=10
 			padding-top=6
-			inset="2 -3 8 0"
+			inset="4 -3 8 0"
 			render {}
 						render_bg
 			{
 				// background fill
 				
-				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green6 )"
+				0="gradient(  x0 + 1, y0, x1, y1, green6, green7 )"		
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
@@ -618,12 +611,13 @@
 		{
 			padding-left=3
 			padding-right=7
+			padding-top=-1
 			image="resource/notfamilyview"
 			render {}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_inactive1, red6 )"
+				0="gradient( x0 + 1, y0, x1 - 1, y1, parental_lock_inactive2, parental_lock_inactive1 )"
 			}	
 		}
 
@@ -631,12 +625,13 @@
 		{
 			padding-left=3
 			padding-right=7
+		  padding-top=-1
 			image="resource/notfamilyview"
 			render {}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_inactive1, parental_lock_inactive2 )"				
+				0="gradient( x0 + 1, y0, x1 - 1, y1, parental_lock_inactive3, parental_lock_inactive1 )"				
 			}	
 			
 		}
@@ -645,12 +640,13 @@
 		{
 			padding-left=3
 			padding-right=7
+			padding-top=-1
 			image="resource/familyview"
 			render {}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green6 )"
+				0="gradient( x0 + 1, y0, x1 - 1, y1, green6, green7 )"
 			}	
 			
 		}
@@ -660,12 +656,13 @@
 		{
 			padding-left=3
 			padding-right=7
+			padding-top=-1
 			image="resource/familyview"
 			render {}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0, x1 - 1, y1 + 2, parental_lock_active1, green7 )"
+				0="gradient( x0 + 1, y0, x1 - 1, y1, green5, green7 )"
 			}	
 			
 		}

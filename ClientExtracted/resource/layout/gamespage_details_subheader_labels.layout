@@ -20,9 +20,9 @@
 		headertext
 		{
 			padding-left=0
-			padding-bottom=1
-			padding-top=0
-			font-size=15
+			padding-bottom=0
+			padding-top=-1
+			font-size=14
 			textcolor=label2
 			font-style=uppercase
 			font-weight=700
@@ -31,9 +31,9 @@
 		headertext-red
 		{
 			padding-left=0
-			padding-bottom=1
-			padding-top=0
-			font-size=15
+			padding-bottom=0
+			padding-top=-1
+			font-size=14
 			textcolor=GameDetailsRed
 			font-style=uppercase
 			font-weight=700
@@ -42,9 +42,9 @@
 		headertext-green
 		{
 			padding-left=0
-			padding-bottom=1
-			padding-top=0
-			font-size=15
+			padding-bottom=0
+			padding-top=-1
+			font-size=14
 			textcolor=GameDetailsGreen
 			font-style=uppercase
 			font-weight=700
@@ -53,9 +53,9 @@
 		headertext-blue
 		{
 			padding-left=0
-			padding-bottom=1
-			padding-top=0
-			font-size=15
+			padding-bottom=0
+			padding-top=-1
+			font-size=14
 			textcolor=GameDetailsBlue
 			font-style=uppercase
 			font-weight=700
@@ -64,9 +64,9 @@
 		valuetext
 		{
 			padding-left=0
-			padding-bottom=1
-			padding-top=0
-			font-size=15
+			padding-bottom=0
+			padding-top=-1
+			font-size=14
 			textcolor=Text
 		}
 	}
