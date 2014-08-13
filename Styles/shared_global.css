@@ -1428,15 +1428,17 @@ table.bb_table td img.sharedFilePreviewImage
 
 /* V6 */
 
-body.v6 .popup_block_new .popup_body {
+body.v6 .store_nav .popup_block_new .popup_body, body.v6 #footer_nav .popup_block_new .popup_body {
     border: none;
     position: relative;
     background: #417A9B;
 }
 
-body.v6 .popup_menu_subheader {
+body.v6 .store_nav .popup_menu_subheader,
+body.v6 #footer_nav .popup_menu_subheader{
     color: #13242e;
 }
-body.v6 .popup_menu .hr {
+body.v6 .store_nav .popup_menu .hr,
+body.v6 #footer_nav .popup_menu .hr{
     background-color: #13242e;
 }

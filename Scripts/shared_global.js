@@ -37,6 +37,19 @@ Steam = {
 		return Steam.sm_bUserInClient || Steam.sm_bUserInGameOverlay;
 	},
 
+	GetClientPackageVersion: function()
+	{
+		if ( !Steam.BIsUserInClientOrOverlay() )
+			return 0;
+
+		if ( typeof navigator != 'undefined' && navigator.userAgent )
+		{
+			var matches = navigator.userAgent.match( /Valve Steam [^\/]*\/([0-9]*)/ );
+			if ( matches && matches.length == 2 )
+				return matches[1];
+		}
+	},
+
 	Init: function()
 	{
 		var fnCheckAgent = function( strUAMatch, strURLParam )

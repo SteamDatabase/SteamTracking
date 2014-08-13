@@ -1632,6 +1632,11 @@ body.flat_page .pagecontent.bluebg {
 	margin: 5px 0px;
 }
 
+.blotter_recommendation_content {
+	font-style: italic;
+	padding-top: 4px;
+}
+
 .blotter_block .UserReviewCardContent_Footer .content {
 	background-color: #1b1b1b;
 }
