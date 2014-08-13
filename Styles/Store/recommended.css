@@ -1619,6 +1619,7 @@ background: -moz-linear-gradient(top, #b8f750 5%, #87c643 95%);background: -webk
 	font-size: 13px;
 	line-height: 17px;
 	color: #b0aeac;
+	overflow-wrap: break-word;
 }
 
 .review_box .content .gradient, .review_box .view_more {
@@ -1822,4 +1823,13 @@ background: -moz-linear-gradient(top, #b8f750 5%, #87c643 95%);background: -webk
 	background-position: bottom left;
 	background-repeat: no-repeat;
 	padding-bottom: 22px;
+}
+
+body.recommendgame #review_create {
+	padding-top: 0;
+}
+
+body.recommendgame #review_create h1  {
+	border-top: none;
+	padding-top: 0;
 }
