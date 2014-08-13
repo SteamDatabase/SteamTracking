@@ -786,7 +786,7 @@ function InitTagTabs( strURL, cc, rgTabNames, rgInitialParams )
 }
 
 
-function InitTagBrowsePage( strTagLanguage, strCC )
+function InitTagBrowsePage( strTagLanguage, rgDefaultGetParams )
 {
 	var rgTagResults = {};
 
@@ -804,14 +804,13 @@ function InitTagBrowsePage( strTagLanguage, strCC )
 
 			$Element.append( $GamesElement );
 			$Element.append( $J('<div/>', {'class':'browse_tag_game_total'}).html( '&nbsp;' ) );
+			var rgParams = $J.extend( { name: strTagName }, rgDefaultGetParams );
 
-			$J.get( 'http://store.steampowered.com/tagdata/gettaggames/' + strTagLanguage + '/' + unTagID + '/', {
-				cc: strCC,
-				l: 'english',
-				name: strTagName
-			}).done( function ( html ) {
+			$J.get( 'http://store.steampowered.com/tagdata/gettaggames/' + strTagLanguage + '/' + unTagID + '/', rgParams ).done( function ( html ) {
 				$Element.html( html );
 				$Element.InstrumentLinks();
+				if ( typeof GDynamicStore != 'undefined' )
+					GDynamicStore.DecorateDynamicItems( $Element );
 			}).fail( function () {
 				$GamesElement.find( '.browse_tag_loading').text( 'Sorry, there was a problem loading items.  Please try again later.' );
 			});

@@ -195,6 +195,11 @@ body.tag_page h3 {
 	width: 222px;
 	height: 83px;
 	margin-bottom: 2px;
+	position: relative;
+}
+
+.browse_tag_game_cap.ds_flagged img {
+	opacity: 0.3;
 }
 
 .browse_tag_game_cap img {

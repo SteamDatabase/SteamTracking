@@ -336,11 +336,11 @@ a.home_block_footer_btn:hover {
 	white-space: nowrap;
 }
 
-.home_specials_grid .special .special_img_ctn .ds_owned_flag {
+.home_specials_grid .special .special_img_ctn .ds_flag {
 	top: 18px;
 }
 
-.home_specials_grid .special .special_img_ctn.ds_owned img {
+.home_specials_grid .special .special_img_ctn.ds_flagged img {
 	opacity: 0.3;
 }
 
@@ -405,11 +405,11 @@ a.home_smallcap:hover {
 	text-decoration: underline;
 }
 
-.home_smallcap .ds_owned_flag {
+.home_smallcap .ds_flag {
 	left: 14px;
 }
 
-.home_smallcap.ds_owned img {
+.home_smallcap.ds_flagged img {
 	opacity: 0.3;
 }
 
@@ -2278,10 +2278,10 @@ a.home_headerv5cap img {
 	font-size: 13px;
 	padding-top: 30px;
 }
-.home_headerv5cap .ds_owned_flag {
+.home_headerv5cap .ds_flag {
 	left: 14px;
 }
-.home_headerv5cap.ds_owned img {
+.home_headerv5cap.ds_flagged img {
 	opacity: 0.3;
 }
 .curated_app_curators

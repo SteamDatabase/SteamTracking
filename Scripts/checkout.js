@@ -300,7 +300,7 @@ function PopupCVV2Explanation()
 
 function SetButtonInnerHtml( objName, value )
 {
-	$(objName).innerHTML = value;
+	$J( '*:not(:has("*"))' ,objName).text( value );
 }
 
 var g_nSubmitPaymentInfoButtonState = 1;
@@ -311,15 +311,15 @@ function AnimateSubmitPaymentInfoButton()
 	{
 						if ( !g_bInitTransactionCallRunning && !g_bGetFinalPriceRunning && !g_bFinalizeTransactionInProgress && !g_bPollingForTransactionStatus )
 		{
-			$('submit_payment_info_btn').style.display = 'block';
-			$('submit_payment_info_btn_in_progress').style.display = 'none';
+			$J('#submit_payment_info_btn').show();
+			$J('#submit_payment_info_btn_in_progress').hide();
 			g_bAnimatingSubmitButtonCurrently = false;
 			return;
 		}
 		
 		g_bAnimatingSubmitButtonCurrently = true;
-		$('submit_payment_info_btn').style.display = 'none';
-		$('submit_payment_info_btn_in_progress').style.display = 'block';
+		$J('#submit_payment_info_btn').hide();
+		$J('#submit_payment_info_btn_in_progress').show();
 			
 		g_nSubmitPaymentInfoButtonState++;
 		if ( g_nSubmitPaymentInfoButtonState > 3 )
@@ -594,6 +594,8 @@ function InitializeTransaction()
 				
 				'BankAccount' : $('bank_account').value,
 				'BankCode' : $('bank_code').value,
+				'BankIBAN' : $('bank_iban').value,
+				'BankBIC' : $('bank_bic').value,
 				
 								'bSaveBillingAddress' : bSaveBillingAddress ? 1 : 0,
 				'gidPaymentID' : paymentGID,
@@ -646,21 +648,21 @@ function OnInitializeTransactionSuccess( result )
 				if ( result.paymentmethod == 4 && result.transactionprovider != 5 && method.value != 'storedpaypal' )
 		{
 									
-						$('payment_row_one').style.display = 'none';
-			$('payment_row_two').style.display = 'none';
-			$('payment_row_three').style.display = 'none';
-			$('payment_row_four').style.display = 'none';
-			$('payment_row_five').style.display = 'none';
-			$('payment_row_six').style.display = 'none';
-			$('payment_header_title').style.display = 'none';
-			$('payment_row_save_my_address').style.display = 'none';
-			$('payment_row_country_verification').style.display = 'none';
+						$J('#payment_row_one').hide();
+			$J('#payment_row_two').hide();
+			$J('#payment_row_three').hide();
+			$J('#payment_row_four').hide();
+			$J('#payment_row_five').hide();
+			$J('#payment_row_six').hide();
+			$J('#payment_header_title').hide();
+			$J('#payment_row_save_my_address').hide();
+			$J('#payment_row_country_verification').hide();
 
-			$('payment_row_eight').style.display = 'block';
+			$J('#payment_row_eight').show();
 			
-						$('credit_card_row').style.display = 'none';
-			$('card_number_label').style.display = 'none';
-			$('card_number').style.display = 'none';
+						$J('#credit_card_row').hide();
+			$J('#card_number_label').hide();
+			$J('#card_number').hide();
 					
 			$('paypaltoken').value = result.paypaltoken;
 			$('external_payment_processor_notice').innerHTML = 'PayPal transactions are authorized through the PayPal web site. Click the button below to open a new web browser window to initiate the transaction.';
@@ -668,7 +670,7 @@ function OnInitializeTransactionSuccess( result )
 			$( 'payment_info_form' ).onsubmit = function() { PerformPayPalAuthorization(); return false; };
 			SetButtonInnerHtml('submit_payment_info_btn', 'Begin PayPal Purchase' );
 			
-			$('payment_method_previous_button').style.display = 'none';
+			$J('#payment_method_previous_button').hide();
 			
 			return;
 		}
@@ -761,7 +763,7 @@ function OnInitializeTransactionFailure( detail, result )
 					break;
 				case 45:
 					error_text = 'Warning: Your recent transaction with us is still pending! Did you complete payment with your payment service provider? We\'re not sure yet, and we\'re waiting to receive an answer from them.<br/><br/>If you continue, and are purchasing any items a second time, you risk being charged twice.';
-					$('cancel_pending_verification').style.display = 'block';
+					$J('#cancel_pending_verification').show();
 					ValidationMarkFieldBad( $('cancel_pending_label' ) );
 					break;
 				case 46:
@@ -960,16 +962,17 @@ function OnGetFinalPriceSuccess( result )
 					SetTabEnabled( 'payment_info' );
 					return;
 				}
-			}	
-			
-			$('checkout_review_cart_message').style.display = result.priceOfASubChanged ? 'block' : 'none';		
+			}
+
+			result.priceOfASubChanged ? $J('#checkout_review_cart_message').show() : $('checkout_review_cart_message').hide();
+
 		}
 		
 				if ( $('is_external_finalize_transaction').value == 1 )
 		{
 			if ( $('col_right_review_payment_tips') )
 			{
-				$('col_right_review_payment_tips').style.display = 'block';
+				$J('#col_right_review_payment_tips').show();
 			}
 		
 			var method = $('payment_method');
@@ -977,7 +980,7 @@ function OnGetFinalPriceSuccess( result )
 			{
 								var url = result.externalurl.replace( /%/g, '%25' );
 				$('purchase_button_bottom').href = "javascript:PerformExternalFinalizeTransaction( '"+url.replace( /\'/g, "\\'" )+"', " + ( result.useexternalredirect ? "true" : "false" ) + " );";
-				$('purchase_bottom_note_paypalgc').style.display = 'block';
+				$J('#purchase_bottom_note_paypalgc').show();
 
 				$('purchase_top').show();
 				
@@ -1405,20 +1408,20 @@ function OnGetFinalPriceSuccess( result )
 		{
 			if ( $('col_right_review_payment_tips') )
 			{
-				$('col_right_review_payment_tips').style.display = 'none';
+				$J('#col_right_review_payment_tips').hide();
 			}
 
 			$('purchase_button_bottom').href = "javascript:FinalizeTransaction();";
-			$('purchase_bottom_note_paypalgc').style.display = 'none';
+			$J('#purchase_bottom_note_paypalgc').hide();
 			$('purchase_top').hide();
 			$('purchase_button_bottom_text').innerHTML = 'Purchase';
 		}
 		
-				$('purchase_button_bottom').style.display = 'block';
-		$('purchase_button_disabled_bottom').style.display = 'none';
-		$('purchase_button_inprogress_bottom').style.display = 'none';
-		$('change_payment_method_button_bottom').style.display = 'none';
-		$('cancel_button_bottom').style.display = 'none';
+				$J('#purchase_button_bottom').show();
+		$J('#purchase_button_disabled_bottom').hide();
+		$J('#purchase_button_inprogress_bottom').hide();
+		$J('#change_payment_method_button_bottom').hide();
+		$J('#cancel_button_bottom').hide();
 
 				if ( BIsStoredCreditCard() )
 			SetTabEnabled( 'payment_info', false );
@@ -1567,7 +1570,7 @@ function CheckFriendDisplay()
 
 		if ( IsRadioButtonChecked('send_via_friends') )
 		{
-			$( 'send_via_friends_box' ).style.display = 'block';
+			$J( '#send_via_friends_box' ).show();
 			
 			for ( var accountid in g_MapFriendsAvatars )
 			{
@@ -1578,7 +1581,7 @@ function CheckFriendDisplay()
 		}
 		else
 		{
-			$('send_via_friends_box').style.display = 'none';
+			$J('#send_via_friends_box').hide();
 		}
 	} 
 	catch(e)
@@ -1687,7 +1690,7 @@ function SubmitGiftDeliveryForm()
 		else
 		{
 						$('error_display').innerHTML = '';
-			$('error_display').style.display = 'none';
+			$J('#error_display').hide();
 
 			if ( g_bIsSendGiftForm )
 			{
@@ -1775,7 +1778,7 @@ function SubmitGiftNoteForm()
 		else
 		{
 						$('error_display').innerHTML = '';
-			$('error_display').style.display = 'none';
+			$J('#error_display').hide();
 	
 						if ( g_bIsSendGiftForm )
 			{
@@ -1813,28 +1816,28 @@ function UpdateStateSelectState()
 	{
 		if ( $('billing_country').value == 'US' )
 		{
-			$('billing_state_label').style.display = '';
-			$('billing_state_input').style.display = '';
-			$('billing_state_text').style.display = 'none';
-			$('billing_state_select_dselect_container').style.display = 'block';
+			$J('#billing_state_label').show();
+			$J('#billing_state_input').show();
+			$J('#billing_state_text').hide();
+			$J('#billing_state_select_dselect_container').show();
 		}
 		else
 		{
-			$('billing_state_label').style.display = 'none';
-			$('billing_state_input').style.display = 'none';
-			$('billing_state_text').style.display = 'block';
-			$('billing_state_select_dselect_container').style.display = 'none';
+			$J('#billing_state_label').hide();
+			$J('#billing_state_input').hide();
+			$J('#billing_state_text').show();
+			$J('#billing_state_select_dselect_container').hide();
 		}
 
 		if ( $('shipping_country').value == 'US' )
 		{
-			$('shipping_state_text').style.display = 'none';
-			$('shipping_state_select_dselect_container').style.display = 'block';
+			$J('#shipping_state_text').hide();
+			$J('#shipping_state_select_dselect_container').show();
 		}
 		else
 		{
-			$('shipping_state_text').style.display = 'block';
-			$('shipping_state_select_dselect_container').style.display = 'none';
+			$J('shipping_state_text').show();
+			$J('shipping_state_select_dselect_container').hide();
 		}
 	} 
 	catch( e ) 
@@ -1986,7 +1989,7 @@ function UpdatePaymentMethodList( bIsSplitTransaction )
 		
 		if ( pm )
 		{
-			pm.style.display = bIsSplitTransaction ? 'none' : 'block';
+			bIsSplitTransaction ? $J(pm).hide() : $J(pm).show();
 		}
 	}
 }
@@ -1996,21 +1999,21 @@ function UpdatePaymentInfoForm()
 	try 
 	{
 		$('error_display').innerHTML = '';
-		$('error_display').style.display = 'none';
+		$J('#error_display').hide();
 	
 		UpdatePaymentMethodList( g_nPaymentMethodStep == 2 );
 				if ( g_nPaymentMethodStep == 2 )
 		{
 						$('payment_header').innerHTML = 'Payment method, Step 2';
-			$('payment_row_step2').style.display = 'block';
-			$('payment_method_previous_button').style.display = 'block';
+			$J('#payment_row_step2').show();
+			$J('#payment_method_previous_button').show();
 			$('payment_info_method_label').innerHTML = 'Please select a payment method for the remaining' + ' ' + g_strProviderRemaining;
 		}
 		else
 		{
 			$('payment_header').innerHTML = 'Payment method';
-			$('payment_row_step2').style.display = 'none';
-			$('payment_method_previous_button').style.display = 'none';			
+			$J('#payment_row_step2').hide();
+			$J('#payment_method_previous_button').hide();
 			$('payment_info_method_label').innerHTML = 'Please select a payment method';
 		}
 		
@@ -2037,8 +2040,8 @@ function UpdatePaymentInfoForm()
 		var bShowPaymentSpecificNote = false;
 		var bShowSaveMyAddress = false;
 		var bShowStoredPayPalDetails = false;
-		$('payment_row_one').style.display = 'block';
-		$('payment_row_eight').style.display = 'none';
+		$J('#payment_row_one').show();
+		$J('#payment_row_eight').hide();
 		
 		if ( g_bIsUpdateBillingInfoForm )
 		{
@@ -2143,7 +2146,7 @@ function UpdatePaymentInfoForm()
 		else if ( method.value == 'steamaccount' )
 		{
 						bShowAddressForm = false;
-			$('payment_row_eight').style.display = 'block';
+			$J('#payment_row_eight').show();;
 			
 						
 			$('external_payment_processor_notice').innerHTML = 'In the event your Steam Wallet balance doesn’t cover the full cost of this transaction, you’ll be asked to cover the remaining balance due with a secondary payment method.';
@@ -2155,24 +2158,24 @@ function UpdatePaymentInfoForm()
 	
 				if ( g_bIsInOverlay && method.value == 'alipay' )
 		{
-			$('submit_payment_info_btn').style.display = 'none';
+			$J('#submit_payment_info_btn').hide();
 			$('cant_use_payment_method_in_overlay').innerHTML = 'The selected payment method cannot be used from within the game to fund your Steam Wallet.<br><br>\n								To complete any item purchases with the selected payment method, you will need to add funds to your Steam Wallet through an internet browser first.<br><br>\n								You can fund your Wallet using this link in your web browser: <a href="http://store.steampowered.com/steamaccount/addfunds">http://store.steampowered.com/steamaccount/addfunds</a><br><br>\n								After adding funds to your Steam Wallet, you will then be able to complete your item transaction through the in game store using your Steam Wallet balance.';
-			$('cant_use_payment_method_in_overlay').style.display = 'block';
+			$J('#cant_use_payment_method_in_overlay').show();
 
 			bShowCountryVerification = false;
 		}
 		else if ( g_bIsInClientOrOverlay && method.value == 'itauonline' )
 		{
-			$('submit_payment_info_btn').style.display = 'none';
+			$J('#submit_payment_info_btn').hide();
 			$('cant_use_payment_method_in_overlay').innerHTML = 'Your purchase cannot be completed because the selected payment method is not compatible with the Steam client.<br><br>\n								To complete your purchase, please select a different payment method or visit <a href="steam://openurl_external/http://store.steampowered.com">http://store.steampowered.com</a> in an external web browser.';
-			$('cant_use_payment_method_in_overlay').style.display = 'block';
+			$J('#cant_use_payment_method_in_overlay').show();
 
 			bShowCountryVerification = false;
 		}
 		else
 		{
-			$('submit_payment_info_btn').style.display = 'block';
-			$('cant_use_payment_method_in_overlay').style.display = 'none';
+			$J('#submit_payment_info_btn').show();
+			$J('#cant_use_payment_method_in_overlay').hide();
 		}	
 		
 		var strCCDisplay = bShowCreditCardNumberExp ? 'block' : 'none';
@@ -2213,10 +2216,10 @@ function UpdatePaymentInfoForm()
 		var strShowStoredPayPalDetails = bShowStoredPayPalDetails ? 'block' : 'none';
 		$('payment_row_stored_paypal_details').style.display = strShowStoredPayPalDetails;
 		
-		var strBankAccountDisplay = bShowBankAccountForm ? 'block' : 'none';
-		$('bank_account_label').style.display = strBankAccountDisplay;
-		$('bank_account').style.display = strBankAccountDisplay;
+		var strBankAccountDisplay = !g_bEnableIBANForGiroPay && bShowBankAccountForm ? 'block' : 'none';
+		var strBankAccountDisplayIBAN = g_bEnableIBANForGiroPay && bShowBankAccountForm ? 'block' : 'none';
 		$('bank_code_row').style.display = strBankAccountDisplay;
+		$('bank_iban_row').style.display = strBankAccountDisplayIBAN;
 		
 		var strCountryVerificationDisplay = bShowCountryVerification ? 'block' : 'none';
 		$('payment_row_country_verification').style.display = strCountryVerificationDisplay;
@@ -2470,6 +2473,8 @@ function SubmitPaymentInfoForm()
 		billing_state_select_trigger : false,
 		bank_account : false,
 		bank_code : false,
+		bank_iban : false,
+		bank_bic : false,
 		verify_country_only_label: false,
 		mobile_number_label: false
 	}
@@ -2658,15 +2663,31 @@ function SubmitPaymentInfoForm()
 		
 		if ( method.value == 'giropay' )
 		{
-			if ( isNaN( $('bank_account').value ) || $('bank_account').value.length < 1 || $('bank_account').value.length > 10 )
+			if ( !g_bEnableIBANForGiroPay )
 			{
-				errorString += 'Please enter your account number.<br/>';
-				rgBadFields.bank_account = true;
+				if ( isNaN( $('bank_account').value ) || $('bank_account').value.length < 1 || $('bank_account').value.length > 10 )
+				{
+					errorString += 'Please enter your account number.<br/>';
+					rgBadFields.bank_account = true;
+				}
+				if ( isNaN( $('bank_code').value ) || $('bank_code').value.length < 1 || $('bank_code').value.length > 8 )
+				{
+					errorString += 'Please enter your bank code.<br/>';
+					rgBadFields.bank_code = true;
+				}
 			}
-			if ( isNaN( $('bank_code').value ) || $('bank_code').value.length < 1 || $('bank_code').value.length > 8 )
+			else
 			{
-				errorString += 'Please enter your bank code.<br/>';
-				rgBadFields.bank_code = true;
+				if ( $('bank_iban').value.length < 1 || $('bank_iban').value.length > 50 )
+				{
+					errorString += 'Please enter your IBAN (International Bank Account Number).<br/>';
+					rgBadFields.bank_iban = true;
+				}
+				if ( $('bank_bic').value.length < 1 || $('bank_bic').value.length > 11 )
+				{
+					errorString += 'Please enter your SWIFT code.<br/>';
+					rgBadFields.bank_bic = true;
+				}
 			}
 		}
 	} 
