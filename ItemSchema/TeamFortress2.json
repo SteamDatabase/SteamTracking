@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.8436e201bf6293485a6d7af917a6378f6464b3c5.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.fb904715b8f414bcd36ed09c994070f2e4f43916.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -47375,6 +47375,8 @@
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
 				"capabilities": {
+					"nameable": true,
+					"can_gift_wrap": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -53356,6 +53358,43 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				}
+			},
+			{
+				"name": "Spycrab Promo",
+				"defindex": 2132,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Spycrab Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1
+					}
+				]
+				
 			},
 			{
 				"name": "Craft Bar Level 1",
@@ -60724,6 +60763,795 @@
 				}
 			},
 			{
+				"name": "Supply Crate Ration 3",
+				"defindex": 5742,
+				"item_class": "supply_crate",
+				"item_type_name": "Supply Crate",
+				"item_name": "Mann Co. Supply Munition",
+				"item_description": "You need a Mann Co. Supply Crate Key to open this.\nYou can pick one up at the Mann Co. Store.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_variation",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_variation.ea16782c97a72a05b97ff71188248a4d013423ec.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_variation_large.6382ba0c3f4247664164c3ef6b1d175ae4252f8c.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": ""
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 84
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5021
+					}
+				]
+				
+			},
+			{
+				"name": "StickyLauncher Killstreakifier Basic",
+				"defindex": 5743,
+				"item_class": "tool",
+				"item_type_name": "Killstreak Kit",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Minigun Killstreakifier Basic",
+				"defindex": 5744,
+				"item_class": "tool",
+				"item_type_name": "Killstreak Kit",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "DirectHit Killstreakifier Basic",
+				"defindex": 5745,
+				"item_class": "tool",
+				"item_type_name": "Killstreak Kit",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Huntsman Killstreakifier Basic",
+				"defindex": 5746,
+				"item_class": "tool",
+				"item_type_name": "Killstreak Kit",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Backburner Killstreakifier Basic",
+				"defindex": 5747,
+				"item_class": "tool",
+				"item_type_name": "Killstreak Kit",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Backscatter Killstreakifier Basic",
+				"defindex": 5748,
+				"item_class": "tool",
+				"item_type_name": "Killstreak Kit",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Kritzkrieg Killstreakifier Basic",
+				"defindex": 5749,
+				"item_class": "tool",
+				"item_type_name": "Killstreak Kit",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Ambassador Killstreakifier Basic",
+				"defindex": 5750,
+				"item_class": "tool",
+				"item_type_name": "Killstreak Kit",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Frontier Justice Killstreakifier Basic",
+				"defindex": 5751,
+				"item_class": "tool",
+				"item_type_name": "Killstreak Kit",
+				"item_name": "Kit",
+				"item_description": "Used to add killstreak properties to an item.\n\nKillstreak effects must be removed from an item via Restore button before a new kit can be applied.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/professional_grease_basic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/professional_grease_basic.3d5b2cc3b839bafe0de68d7a988fa34b4ff67817.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/professional_grease_basic_large.a31c9546bb6c64ca9e85e4a8ef24a9fd0606773c.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "killstreakifier",
+					"usage_capabilities": {
+						"can_killstreakify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "never craftable",
+						"class": "never_craftable",
+						"value": 1
+					},
+					{
+						"name": "killstreak tier",
+						"class": "killstreak_tier",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Supply Crate Ration 4",
+				"defindex": 5752,
+				"item_class": "supply_crate",
+				"item_type_name": "Supply Crate",
+				"item_name": "Mann Co. Supply Munition",
+				"item_description": "You need a Mann Co. Supply Crate Key to open this.\nYou can pick one up at the Mann Co. Store.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_variation",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_variation.ea16782c97a72a05b97ff71188248a4d013423ec.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_variation_large.6382ba0c3f4247664164c3ef6b1d175ae4252f8c.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": ""
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 85
+					},
+					{
+						"name": "decoded by itemdefindex",
+						"class": "decoded_by_itemdefindex",
+						"value": 5021
+					}
+				]
+				
+			},
+			{
+				"name": "Air Strike Strangifier",
+				"defindex": 5753,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Classic Strangifier",
+				"defindex": 5754,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Manmelter Strangifier",
+				"defindex": 5755,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Vaccinator Strangifier",
+				"defindex": 5756,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Widowmaker Strangifier",
+				"defindex": 5757,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Anger Strangifier",
+				"defindex": 5758,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
+				"name": "Apparition's Aspect Strangifier",
+				"defindex": 5759,
+				"item_class": "tool",
+				"item_type_name": "Strangifier",
+				"item_name": "Strangifier",
+				"item_description": "Used to add strange qualities to specific items.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/strange_generic",
+				"min_ilevel": 5,
+				"max_ilevel": 5,
+				"image_url": "http://media.steampowered.com/apps/440/icons/strange_generic.80b92eafc95cdad2dabedeb3f031d7d7498ab94b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/strange_generic_large.beb3735124d851fe9a3e628abbd07adb3810782a.png",
+				"capabilities": {
+					"can_gift_wrap": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strangifier",
+					"usage_capabilities": {
+						"can_strangify": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				
+			},
+			{
 				"name": "Strange Part (Armory)",
 				"defindex": 5999,
 				"item_class": "tool",
@@ -62264,6 +63092,49 @@
 				
 			},
 			{
+				"name": "Strange Part: Robot Scout Kills",
+				"defindex": 6042,
+				"item_class": "tool",
+				"item_type_name": "Strange Part",
+				"item_name": "Strange Part: Robot Scouts Destroyed",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon of your choice will enable it to track the number of invading Robot Scouts you destroy with it in Mann vs. Machine games.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/strange_part_robot_scouts_killed",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/strange_part_robot_scouts_killed.d557d277ba8dbfc05a2195d0b6dd9babdb3c531d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/strange_part_robot_scouts_killed_large.497831260b860ab78943537bb2eabd81056ea6a4.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 68
+					}
+				]
+				
+			},
+			{
 				"name": "Strange Part: Robot Spy Kills",
 				"defindex": 6048,
 				"item_class": "tool",
@@ -62775,6 +63646,49 @@
 						"name": "strange part new counter ID",
 						"class": "strange_part_new_counter_id",
 						"value": 88
+					}
+				]
+				
+			},
+			{
+				"name": "Strange Part: Taunting Player Kills",
+				"defindex": 6062,
+				"item_class": "tool",
+				"item_type_name": "Strange Part",
+				"item_name": "Strange Part: Taunting Player Kills",
+				"item_description": "Adding this Strange Part to a Strange-quality weapon will enable it to track the number of taunting players you kill with that weapon.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/strange_part_conga_killer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/strange_part_conga_killer.5e941b86adef4d5c4e230226ec2d8e3f444e007f.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/strange_part_conga_killer_large.0616373938013dc88b8fa95487e3715228313060.png",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "strange_part",
+					"usage_capabilities": {
+						"strange_parts": true
+					}
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "strange part new counter ID",
+						"class": "strange_part_new_counter_id",
+						"value": 89
 					}
 				]
 				
@@ -113297,6 +114211,66 @@
 					}
 				]
 				
+			},
+			{
+				"name": "The Spycrab",
+				"defindex": 30467,
+				"item_class": "tf_wearable",
+				"item_type_name": "Mascot",
+				"item_name": "Spycrab",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/spy/spycrab/spycrab.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/spy/spycrab/spycrab",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/spycrab.be8aa9bac0afbf3668081317d3a6e40d3140e320.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/spycrab_large.b1ecc91c4fd258fb6301ff61e79b68f57597ed96.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					},
+					{
+						"name": "counts as assister is some kind of pet this update is going to be awesome",
+						"class": "counts_as_assister",
+						"value": 1
+					}
+				]
+				
 			}
 		]
 		,
@@ -121907,6 +122881,11 @@
 				"level_data": "KillEaterRank"
 			},
 			{
+				"type": 68,
+				"type_name": "Robot Scouts Destroyed",
+				"level_data": "KillEater_RobotsKilledRank"
+			},
+			{
 				"type": 74,
 				"type_name": "Robot Spies Destroyed",
 				"level_data": "KillEater_RobotsKilledRank"
@@ -121969,6 +122948,11 @@
 			{
 				"type": 88,
 				"type_name": "Full Health Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 89,
+				"type_name": "Taunting Player Kills",
 				"level_data": "KillEaterRank"
 			}
 		]

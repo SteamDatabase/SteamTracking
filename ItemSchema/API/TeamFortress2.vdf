@@ -41448,6 +41448,18 @@
 			"item_class"	"tf_weapon_sniperrifle_classic"
 			"craft_class"	"weapon"
 			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_gift_wrap" 	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_headshot"			"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
 			"item_logname"	"the_classic"
 			"item_iconname"	"the_classic"
 			"show_in_armory"	"1"
@@ -43838,19 +43850,19 @@
 					"0"
 					{
 						"name"		"#TF_robo_scout_bolt_boy_style0"
-						"skin_red"	"0"
-						"skin_blu"	"1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 						"additional_hidden_bodygroups"
 						{
-							"hat"			"1"
-							"headphones"	"1"
+							"hat"		"1"
+							"headphones"		"1"
 						}
 					}
 					"1"
 					{
 						"name"		"#TF_robo_scout_bolt_boy_style1"
-						"skin_red"	"0"
-						"skin_blu"	"1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 					}
 				}
 			}
@@ -53147,8 +53159,8 @@
 			"item_description"		"#TF_short2014_vintage_director_Desc"
 			"equip_regions"
 			{
-					"hat"	"1"
-					"glasses"	"1"
+				"hat"		"1"
+				"glasses"		"1"
 			}
 			"visuals"
 			{
@@ -53392,6 +53404,35 @@
 			"used_by_classes"
 			{
 				"demoman"		"1"
+			}
+		}
+		"30467"
+		{
+			"name"		"The Spycrab"
+			"prefab"		"promo misc"
+			"item_type_name"		"#TF_Wearable_Mascot"
+			"item_name"		"#TF_spycrab"
+			"item_description"		"#TF_spycrab_Desc"
+			"equip_region"		"left_shoulder"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/spy/spycrab/spycrab"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/spycrab/spycrab.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"	"counts_as_assister"
+					"value"				"1"
+				}
 			}
 		}
 
@@ -64453,6 +64494,38 @@
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
 		}
+		"2132"
+		{
+			"name" "Spycrab Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"The Spycrab"		"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_Spycrab_Promo"
+			"item_description"	"#TF_Spycrab_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
 
 
 
@@ -68410,6 +68483,192 @@
 			"min_ilevel"	"14"
 			"max_ilevel"	"14"
 		}
+		"5742"
+		{
+			"name"	"Supply Crate Ration 3"		
+			"prefab" "eventcrate"
+			"armory_desc" "supply_crate"
+			"item_name"		"#TF_SupplyCrateRation"
+			"item_description"	"#TF_SupplyCrate_Desc"
+			"image_inventory"	"backpack/player/items/crafting/crate_variation"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"attributes"
+			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5021"	
+				}
+			}
+		}
+		
+		"5743"
+		{
+			"name"	"StickyLauncher Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"static_attrs"
+			{
+				"tool target item"		"207" 
+			}
+		}
+		"5744"
+		{
+			"name"	"Minigun Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"static_attrs"
+			{
+				"tool target item"		"202" 
+			}
+		}
+		"5745"
+		{
+			"name"	"DirectHit Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"static_attrs"
+			{
+				"tool target item"		"127" 
+			}
+		}
+		"5746"
+		{
+			"name"	"Huntsman Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"static_attrs"
+			{
+				"tool target item"		"56" 
+			}
+		}
+		"5747"
+		{
+			"name"	"Backburner Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"static_attrs"
+			{
+				"tool target item"		"40" 
+			}
+		}
+		"5748"
+		{
+			"name"	"Backscatter Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"static_attrs"
+			{
+				"tool target item"		"1103" 
+			}
+		}
+		"5749"
+		{
+			"name"	"Kritzkrieg Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"static_attrs"
+			{
+				"tool target item"		"35" 
+			}
+		}
+		"5750"
+		{
+			"name"	"Ambassador Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"static_attrs"
+			{
+				"tool target item"		"61" 
+			}
+		}
+		"5751"
+		{
+			"name"	"Frontier Justice Killstreakifier Basic"
+			"prefab" "killstreakifier_kit_basic"
+			"static_attrs"
+			{
+				"tool target item"		"141" 
+			}
+		}
+		
+		"5752"
+		{
+			"name"	"Supply Crate Ration 4"		
+			"prefab" "eventcrate"
+			"armory_desc" "supply_crate"
+			"item_name"		"#TF_SupplyCrateRation"
+			"item_description"	"#TF_SupplyCrate_Desc"
+			"image_inventory"	"backpack/player/items/crafting/crate_variation"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"attributes"
+			{
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5021"	
+				}
+			}
+		}
+		
+		"5753"
+		{
+			"name"	"Air Strike Strangifier"
+			"prefab" "strangifier_base"
+			"static_attrs"
+			{
+				"tool target item"		"1104" 
+			}
+		}
+		"5754"
+		{
+			"name"	"Classic Strangifier"
+			"prefab" "strangifier_base"
+			"static_attrs"
+			{
+				"tool target item"		"1098" 
+			}
+		}
+		"5755"
+		{
+			"name"	"Manmelter Strangifier"
+			"prefab" "strangifier_base"
+			"static_attrs"
+			{
+				"tool target item"		"595" 
+			}
+		}
+		"5756"
+		{
+			"name"	"Vaccinator Strangifier"
+			"prefab" "strangifier_base"
+			"static_attrs"
+			{
+				"tool target item"		"998" 
+			}
+		}
+		"5757"
+		{
+			"name"	"Widowmaker Strangifier"
+			"prefab" "strangifier_base"
+			"static_attrs"
+			{
+				"tool target item"		"527" 
+			}
+		}
+		"5758"
+		{
+			"name"	"Anger Strangifier"
+			"prefab" "strangifier_base"
+			"static_attrs"
+			{
+				"tool target item"		"518" 
+			}
+		}
+		"5759"
+		{
+			"name"	"Apparition's Aspect Strangifier"
+			"prefab" "strangifier_base"
+			"static_attrs"
+			{
+				"tool target item"		"571" 
+			}
+		}
+		
 		"5999"				
 		{
 			"name"	"Strange Part (Armory)"
@@ -69345,6 +69604,32 @@
 			"item_description"	"#TF_StrangePart_VictoryTimeKills_Desc"
 		}
 		
+		"6042"
+		{
+			"name"	"Strange Part: Robot Scout Kills"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"68"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_robot_scouts_killed"
+			"item_name"	"#TF_StrangePart_RobotScoutKills"
+			"item_description"	"#TF_StrangePart_RobotScoutKills_Desc"
+		}
 		"6048"
 		{
 			"name"	"Strange Part: Robot Spy Kills"
@@ -69658,7 +69943,32 @@
 			"item_name"	"#TF_StrangePart_FullHealthKills"
 			"item_description"	"#TF_StrangePart_FullHealthKills_Desc"
 		}
-		
+		"6062"
+		{
+			"name"	"Strange Part: Taunting Player Kills"
+			"prefab"	"strange_part"
+			"tool"
+			{
+				"usage"
+				{
+					"required_tags"
+					{
+						"can_deal_damage"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"strange part new counter ID"
+				{
+					"attribute_class"	"strange_part_new_counter_id"
+					"value"				"89"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_part_conga_killer"
+			"item_name"			"#TF_StrangePart_TauntingPlayerKills"
+			"item_description"	"#TF_StrangePart_TauntingPlayerKills_Desc"
+		}
 		"6500"
 		{
 			"name"	"Strange Filter: Coldfront (Community)"
@@ -79014,6 +79324,35 @@
 			"loot_list_footer_desc"		"#Econ_Breadbox_Lootlist_Footer"
 			"breadbox_items"		"1"
 		}
+		"supply_crate_loot_list_84"
+		{
+			"loot_list_header_desc"		"#Econ_Revolving_Loot_List_Killstreak_Kits"
+			"loot_list_footer_desc"		"#Econ_Revolving_Loot_List_Rare_Series_3"
+			"StickyLauncher Killstreakifier Basic"		"1"
+			"Minigun Killstreakifier Basic"		"1"
+			"DirectHit Killstreakifier Basic"		"1"
+			"Huntsman Killstreakifier Basic"		"1"
+			"Backburner Killstreakifier Basic"		"1"
+			"Backscatter Killstreakifier Basic"		"1"
+			"Kritzkrieg Killstreakifier Basic"		"1"
+			"Ambassador Killstreakifier Basic"		"1"
+			"Frontier Justice Killstreakifier Basic"		"1"
+		}
+		"supply_crate_loot_list_85"
+		{
+			"loot_list_header_desc"		"#Econ_Revolving_Loot_List"
+			"loot_list_footer_desc"		"#Econ_Revolving_Loot_List_Rare_Series_3"
+			"Air Strike Strangifier"		"1"
+			"Classic Strangifier"		"1"
+			"Manmelter Strangifier"		"1"
+			"Vaccinator Strangifier"		"1"
+			"Strange Part: Robot Scout Kills"		"1"
+			"Strange Part: Taunting Player Kills"		"1"
+			"Strange Part: Buildings Destroyed"		"1"
+			"Anger Strangifier"		"1"
+			"Apparition's Aspect Strangifier"		"1"
+			"Widowmaker Strangifier"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -79098,6 +79437,8 @@
 		"strongbox_crate_loot_list_2014"	"81"	
 		"supply_crate_loot_list_82"	"82"	
 		"supply_crate_loot_list_83"	"83"	
+		"supply_crate_loot_list_84"	"84"	
+		"supply_crate_loot_list_85"	"85"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
@@ -89205,6 +89546,12 @@
 		{
 			"type_name"			"KillEaterEvent_VictoryTimeKill"
 		}
+		"68"
+		{
+			"type_name"			"KillEaterEvent_RobotScoutKill"
+			"level_data"		"KillEater_RobotsKilledRank"
+			"allow_bot_victims"	"1"
+		}
 		"74"
 		{
 			"type_name"			"KillEaterEvent_RobotSpyKill"
@@ -89258,6 +89605,10 @@
 		"88"
 		{
 			"type_name"			"KillEaterEvent_FullHealthKills"
+		}
+		"89"
+		{
+			"type_name"			"KillEaterEvent_TauntingPlayerKills"
 		}
 
 
