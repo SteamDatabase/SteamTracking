@@ -553,7 +553,7 @@ a.home_smallcap:hover {
  * DISCOVERY QUEUE
  */
 
-#discovery_queue {
+#discovery_queue, #discovery_queue1, #discovery_queue2, #discovery_queue3 {
 	height: 306px;
 	position: relative;
 }

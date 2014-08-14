@@ -55,23 +55,8 @@ body.v6 {
 	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_top.jpg?v=1' ) center top no-repeat,
     url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_repeat.jpg?v=1' ) center top repeat-y #000000;
 }
-body.v6.tag_page {
-    background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/SampleBackground_game_3.jpg?v=1' ) center top no-repeat,
-    url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_repeat.jpg?v=1' ) center top repeat-y #000000;
-}
-body.v6.demo_page {
-    background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/SampleBackground_game_2.jpg?v=1' ) center top no-repeat,
-    url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_repeat.jpg?v=1' ) center top repeat-y #000000;
-}
-body.v6.by_friends {
-    background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/SampleBackground_game_4.jpg?v=1' ) center top no-repeat,
-    url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_repeat.jpg?v=1' ) center top repeat-y #000000;
-}
-body.v6.friend_activity {
-    background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/SampleBackground_game_1.jpg?v=1' ) center top no-repeat,
-    url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_repeat.jpg?v=1' ) center top repeat-y #000000;
-}
-body.v6.app, body.v6.sub, body.v6.updated_apps {
+
+body.v6.game_bg {
     background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_darker_repeat.jpg' ) center top repeat-y #000000;
 }
 
@@ -96,7 +81,10 @@ body.v6 div#store_header, body.v6 div#store_header_dlc {
 	background-color: transparent;
 }
 
-
+.page_background {
+	background-position: center top;
+	background-repeat: no-repeat;
+}
 
 body.v6 #footer {
 	position: absolute;
@@ -177,6 +165,7 @@ body.v6 > .perf_timing_area .perf_timing_link {
 	text-align: left;
 	width: 936px;
 	font-size: 14px;
+	z-index: 5;
 }
 
 body.v6 h2 {
@@ -1548,4 +1537,18 @@ img.large_cap {
 	right: 16px;
 	line-height: 14px;
 }
+
+/* Dark page cut */
+
+body.v6 .page_content_ctn.dark {
+	background-color: #000;
+	padding: 25px 0;
+}
+
+.page_content_ctn.dark .pageheader:after {
+	content: ' ';
+	display: block;
+	height: 1px;
+	margin-top: 5px;
+	background: -moz-linear-gradient(left, #3b6e8c 5%, #000000 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#3b6e8c), color-stop(95%,#000000));background: -webkit-linear-gradient(left, #3b6e8c 5%,#000000 95%);background: -o-linear-gradient(left, #3b6e8c 5%,#000000 95%);background: -ms-linear-gradient(left, #3b6e8c 5%,#000000 95%);background: linear-gradient(to right, #3b6e8c 5%,#000000 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b6e8c', endColorstr='#000000',GradientType=1 );}
 

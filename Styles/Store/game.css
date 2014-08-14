@@ -3,9 +3,6 @@
 	background-position: center top;
 	background-repeat: no-repeat;
 }
-Body.v6.sub .game_page_background.game {
-    background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/temp/SampleBackground_game_game.jpg' ) center top no-repeat;
-}
 
 .game_page_top_background {
 	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/app/game_page_background_shadow.png' ) center 402px no-repeat;
