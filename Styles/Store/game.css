@@ -3165,3 +3165,11 @@ select.gray_bevel {
 	font-size: 12px;
 	margin-bottom: 5px;
 }
+
+.small_cap
+{
+	position: relative;
+}
+.small_cap.ds_flagged img {
+	opacity: 0.3;
+}

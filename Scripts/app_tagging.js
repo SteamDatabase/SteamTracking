@@ -145,8 +145,12 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			$PopularTags.append( $AppTag );
 		}
 
+		Modal.AdjustSizing();
+
 		if ( !$YourTags.length )
+		{
 			return;	//not logged in case
+		}
 
 		if ( rgYourPopularTags === null )
 		{
@@ -162,11 +166,11 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 				$J.get( url ).done( function( data ) {
 					rgYourPopularTags = data || [];
-					fnBuildTagDisplay();
+					fnBuildTagDisplay( Modal );
 					Modal.AdjustSizing();
 				}).fail( function() {
 					rgYourPopularTags = [];
-					fnBuildTagDisplay();
+					fnBuildTagDisplay( Modal );
 					Modal.AdjustSizing();
 				}).always( function() {
 					fnRemoveYourTagsFromGlobalTags();

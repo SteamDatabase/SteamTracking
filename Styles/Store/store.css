@@ -244,6 +244,11 @@ body.v6 .page_content {
 .page_header_ctn.tabs.capsules {
     padding-bottom: 100px;
     margin-bottom: -78px;
+	overflow: hidden;
+}
+
+.discovery_queue_content_ctn {
+	overflow: hidden;
 }
 
 .breadcrumbs {
