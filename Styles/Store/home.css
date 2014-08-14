@@ -2299,26 +2299,27 @@ a.home_smallcap:hover {
 {
 	border-color: rgba( 139, 185, 224, 0.2 );
 }
-.home_headerv5cap
+a.curated_app_link
 {
+	display: block;
 	position: relative;
 }
-a.home_headerv5cap:hover {
+a.curated_app_link:hover {
 	text-decoration: none;
 }
-a.home_headerv5cap img {
+a.curated_app_link img {
 	width: 204px;
 	height: 95px;
 }
-.home_headerv5cap .home_headerv5_title {
+.curated_app_link .home_headerv5_title {
 	color: #c7d5e0;
 	font-size: 13px;
 	padding-top: 30px;
 }
-.home_headerv5cap .ds_flag {
+.curated_app_link .ds_flag {
 	left: 14px;
 }
-.home_headerv5cap.ds_flagged img {
+.curated_app_link.ds_flagged img {
 	opacity: 0.3;
 }
 .curated_app_curators
