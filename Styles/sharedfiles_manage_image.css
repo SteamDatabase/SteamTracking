@@ -1,0 +1,140 @@
+
+#mainContents
+{
+	width: 930px;
+	padding-left: 20px;
+}
+
+.pageTitle
+{
+	padding-top: 20px;
+	font-size: 30px;
+	color: #ffffff;
+}
+
+.pageDesc
+{
+	font-size: 14px;
+	color: #b8b6b4;
+	padding-bottom: 10px;
+}
+
+.createCollectionArrow
+{
+	float: left;
+	width: 23px;
+	height: 13px;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_collection_creationBullet.png');
+	background-repeat: no-repeat;
+	padding-right: 10px;
+}
+
+.title
+{
+	line-height: 13px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	padding-bottom: 10px;
+}
+
+.description
+{
+	font-size: 14px;
+}
+
+.titleField
+{
+	font-size: 14px;
+	line-height: 27px;
+	height: 27px;
+	width: 400px;
+	top: 0px;
+	background-color:#565658;
+	border: solid 1px #262627;
+	box-shadow: 1px 1px 0px #39393A;
+	border-radius: 3px;
+	padding: 4px 5px 4px 8px;
+	color: #BFBFBF;
+}
+
+.descField
+{
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 25px;
+	width: 860px;
+	height: 255px;
+	background-color:#565658;
+	border: solid 1px #262627;
+	box-shadow: 1px 1px 0px #39393A;
+	border-radius: 3px;
+	padding: 4px 5px 4px 8px;
+	color: #BFBFBF;
+}
+
+#PreviewImage
+{
+	width: 195px;
+}
+
+.imagesizepreview
+{
+	width: auto;
+	height: auto;
+	min-height: 100px;
+}
+
+.page_controls
+{
+	float: right;
+	margin-bottom: 20px;
+}
+
+.cancelButton
+{
+	margin-right: 10px;
+}
+
+.workshopDescContainer {
+	display: inline-block;
+}
+
+.workshopFormattingHelpContainer {
+	text-align: right;
+}
+
+/* visibility */
+.visibilityOption
+{
+	float: left;
+	padding-right: 30px;
+	font-size: 14px;
+}
+
+.visiblityOptionsDesc
+{
+	display: inline-block;
+	font-size: 14px;
+	padding-top: 3px;
+}
+
+.inputTagsFilter
+{
+	margin-top: 10px;
+}
+
+.non_game_related_desc
+{
+	font-size: 14px;
+	margin-bottom: 40px;
+}
+
+.page_control_or
+{
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #ffffff;
+	font-size: 15px;
+}

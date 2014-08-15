@@ -1,0 +1,233 @@
+  
+
+#BG_top {
+	position:relative;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+}
+#BG_bottom {
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom2.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:21px;
+	font-size: 26px;
+	color: #898989;
+	padding-left:12px;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+	padding-left:12px;
+}
+#mainContents {
+	width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:12px;
+	padding-top:8px;
+}
+#logo {
+	position:absolute;
+	width:192px;
+	left:748px;
+	top:7px;
+}
+
+#personalAchieve {
+	padding-left:16px;
+}
+
+.achieveHeader {
+	font-weight:normal;
+	font-size: 22px;
+	color: #e1e1e1;
+	margin-bottom:8px;
+}
+
+.topAvatarsLeft {
+	float:left;
+	margin-left:-4px;
+	width:72px;
+	height:72px;
+}
+
+.topAvatarsRight {
+	float:right;
+	padding-right:23px;
+}
+
+.achieveImgHolder {
+	float:left;
+	width:64px;
+	height:64px;
+	padding:1px 9px 1px 0px;
+}
+
+.CachieveImgHolder {
+	float:left;
+	width:64px;
+	height:64px;
+	padding:1px 0px 1px 9px;
+}
+
+.achieveTxtHolder {
+	float:left;
+	position:relative;
+	width:768px;
+	height:66px;
+	padding:0px;
+}
+
+.achieveFill {
+	position:absolute;
+	top:2px;
+	left:2px;
+	width:764px;
+	height:62px;
+	z-index:10;
+}
+
+.achieveFillCover {
+	position:absolute;
+	top:2px;
+	left:2px;
+	width:764px;
+	height:62px;
+	z-index:20;
+}
+
+.achieveSurround {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:768px;
+	height:66px;
+	z-index:30;
+}
+
+.achieveTxt {
+	position:absolute;
+	top:17px;
+	left:6px;
+	z-index:40;
+}
+
+.achievePercent {
+	position:absolute;
+	top:27px;
+	left:720px;
+	color:#e1e1e1;
+	font-size:11px;
+	z-index:40;
+}
+
+.achieveTxt h3 {
+	font-weight:bold;
+	font-size:15px;
+	color:#e1e1e1;
+}
+
+.achieveTxt h5 {
+	font-weight:normal;
+	font-size:12px;
+	color:#898989;
+}
+
+#headerTop,#headerBottom {
+	width:838px;
+	height:4px;
+	margin:0;
+	margin-left:3px;
+	padding:0;
+}
+#headerBottom {
+	margin-bottom:15px;
+}
+#headerContent {
+	margin-left:3px;
+	background-color:#2c2c2c;
+	padding:5px 13px 5px 10px;
+	width:815px;
+	color:#898989;
+}
+
+#headerContentLeft {
+	padding-top:0px;
+}
+
+#headerContentRight {
+	float:right;
+}
+
+.wt {
+	color:#e1e1e1;
+}
+
+#compareAvatar {
+	float:right;
+	padding:5px 26px 0px 0px;
+}
+
+.compareImg {
+	float:left;
+	padding:1px 0px 0px 17px;
+}
+#tabs {
+	margin:0;
+	padding-left:16px;
+	width:728px;
+}
+#subtabs {
+	width:918px;
+	height:43px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/statsSubtabsBG.gif');
+	padding-left:14px;
+	clear:left;
+}
+
+.tab {
+	float:left;
+}
+.tab a,.tab a:hover,.tab a:visited,.tab a:active {
+	font-size:12px;
+	color: #ffffff;
+	text-decoration:none;
+}
+.tabOff,.tabOn {
+	float:left;
+	padding:8px 8px 6px 8px;
+	height:15px;
+	font-size:12px;
+	color: #ffffff;
+	background-color:#4f4f4e;
+}
+.tabOff {
+	background-color:#3a3a3a;
+}
+.tabOnL,.tabOnR,.tabOffL,.tabOffR {
+	float:left;
+	width:2px;
+	background-color:#4f4f4e;
+	height:29px;
+}
+.tabOffL,.tabOffR {
+	background-color:#3a3a3a;
+}
+.tabOnR,.tabOffR {
+	margin-right:6px;
+}

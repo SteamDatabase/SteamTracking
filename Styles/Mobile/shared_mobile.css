@@ -1,0 +1,682 @@
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+	text-decoration: none;
+}
+
+body, textarea {
+	color: #ffffff;
+	background-color: #000000;
+}
+
+/*
+<body>'s 'min-height' must be set to 100% or else it won't fill the HTML document if content is smaller than 1 page.
+  However, setting 'height' to 100% will cause it to not grow if the content is longer than 1 page.
+
+<html>'s 'height' must be set or else it won't fill the window.
+  However, setting 'min-height' will not suffice because <body> won't grow to fill the space unless an explicit 'height' is set on the parent.
+*/
+body {
+	min-height: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+a {
+	color: #c0c0c0;
+	text-decoration: none;
+}
+
+body.mobileBody {
+	background-color: #101010;
+	position: relative;
+}
+
+.perf_timing_area {
+	display: none;
+}
+
+/*
+------------------------- STYLE FOR HEADER AND FOOTER ---------------------------
+*/
+
+#global_header {
+	height: 40px;
+	width: 100%;
+	background-image: -webkit-radial-gradient(50% 100%, 300px 80px, #283951 0%, #101010 100%);
+	background-image: radial-gradient(ellipse 300px 80px at 50% 100%, #283951 0%, #101010 100%);
+	border-bottom: 1px solid #55617B;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#secondary_header, #secondary_header_title {
+	height: 50px;
+	width: 100%;
+	background-image: -webkit-radial-gradient(50% 0%, 300px 80px, #283951 0%, #101010 100%);
+	background-image: radial-gradient(ellipse 300px 80px at 50% 0%, #283951 0%, #101010 100%);
+	border-bottom: 1px solid #2F353D;
+	overflow-x: hidden;
+	white-space: nowrap;
+	position: relative;
+}
+
+div#secondary_header .content, div#secondary_header_title .content {
+	position: absolute;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+#secondary_header_leftfade, #secondary_header_rightfade {
+	position: absolute;
+	z-index: 1;
+	height: 49px;
+	width: 50px;
+	top: 1px;
+}
+
+#secondary_header_leftfade {
+	left: 0px;
+}
+
+#secondary_header_rightfade {
+	right: 0px;
+}
+
+#headerLogoImage {
+	position: absolute;
+	z-index: 0;
+	top: 0px;
+	right: 28px;
+	width: 124px;
+	height: 40px;
+}
+
+#headerUserAvatarIcon {
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+}
+
+#global_actions_avatar {
+	position: absolute;
+	right: 6px;
+	top: 3px;
+	height: 21px;
+	line-height: 21px;
+	color: #b8b6b4;
+	font-size: 11px;
+	z-index: 3;
+}
+#global_actions_headerExpandIndicator {
+	position: absolute;
+	right: 42px;
+	top: 15px;
+	height: 10px;
+	width: 10px;
+	z-index: 3;
+}
+
+#secondary_actions_scndnav_search_btn {
+	position: absolute;
+	right: 6px;
+	top: 10px;
+	height: 30px;
+	width: 40px;
+	z-index: 5;
+}
+#secondary_actions_scndnav_cart_btn {
+	position: absolute;
+	left: 6px;
+	top: 10px;
+	height: 30px;
+	width: 40px;
+	z-index: 5;
+}
+#secondary_actions_scndnav_wishlist_btn {
+	position: absolute;
+	left: 49px;
+	top: 10px;
+	height: 30px;
+	width: 40px;
+	z-index: 5;
+}
+
+/* main nav */
+
+div#global_header .menuitemdiv {
+	font-size: 13px;
+	display: inline;
+	background-color: transparent;
+	position: relative;
+}
+
+div#global_header .menuitemdiv.menuitemdiv_login {
+	float: right;
+	margin-right: 10px;
+}
+
+div#global_header .menuitema {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: normal;
+	color: #A6A6A6;
+
+	position: relative;
+	left: 0px;
+	top: 13px;
+	padding-left: 3px;
+	padding-right: 3px;
+	width: 100%;
+	height: 100%;
+}
+
+div#global_header .menuitema.active {
+	color: #FFFFFF;
+}
+
+div#global_header #background {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 0;
+}
+
+div#global_header #fullstretch {
+	width: 100%;
+	height: 40px;
+}
+
+/* secondary nav */
+
+div#secondary_header .menuitemdiv, div#secondary_header_title .menuitemdiv {
+	font-size: 27px;
+	vertical-align: top;
+	display: inline;
+	background-color: transparent;
+	position: relative;
+}
+
+div#secondary_header_title .menuitemdiv.pageTitleHeader {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 0;
+}
+
+div#secondary_header .menuitema, div#secondary_header_title .menuitema {
+	padding-left: 6px;
+	padding-right: 6px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 27px;
+	font-weight: bold;
+	color: #979797;
+
+	position: relative;
+	left: 0px;
+	top: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+div#secondary_header .menuitema.active, div#secondary_header_title .menuitema.active {
+	color: #FFFFFF;
+}
+
+div#secondary_header #background, div#secondary_header_title #background {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 0;
+}
+
+div#secondary_header #fullstretch, div#secondary_header_title #fullstretch {
+	width: 100%;
+	height: 50px;
+}
+
+/* user account information */
+
+#global_actions_pageoverlay {
+	background-color: transparent;
+	position:absolute;
+	z-index: 900;
+	overflow: hidden;
+
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+div#global_actions_pageoverlay #dimmedbackground {
+	background-color:rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+div#global_actions_pageoverlay #roundedboxpadtop {
+	height: 10px;
+}
+
+div#global_actions_pageoverlay #roundedbox {
+	background-color:rgba(0, 0, 0, 0.0);
+
+	margin-left: 10px;
+	margin-right: 10px;
+	position: relative;
+	z-index: 901;
+}
+
+div#global_actions_pageoverlay #leftcol, div#global_actions_pageoverlay #rightcol {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+div#global_actions_pageoverlay #leftcol {
+	margin-left: 2%;
+	margin-right: 1%;
+	width: 68%;
+}
+
+div#global_actions_pageoverlay #rightcol {
+	margin-left: 1%;
+	margin-right: 2%;
+	width: 24%;
+}
+
+div#global_actions_pageoverlay .globaloverlayactionlink {
+	color: #FFFFFF;
+	float: left;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+div#global_actions_pageoverlay .globaloverlayactionhint {
+	color: #AAAAAA;
+	text-transform: uppercase;
+	margin-top: 5px;
+	float: right;
+	font-size: 9px;
+	font-weight: bold;
+}
+
+div#global_actions_pageoverlay .globaloverlayactionval {
+	color: #FFFFFF;
+	float: left;
+	font-size: 9px;
+	font-weight: bold;
+}
+
+
+
+/*
+------------------------- "TABLE VIEW" CONTROL ---------------------------
+*/
+
+.activatableControl {
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.tableView {
+	/* used as the anchor for top shadows */
+}
+
+.tableViewTopShadow {
+	height: 15px;
+	background: -moz-linear-gradient(top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 0, 0, 0, 0.55)), color-stop(95%,rgba( 0, 0, 0, 0 )));background: -webkit-linear-gradient(top, rgba( 0, 0, 0, 0.55) 5%,rgba( 0, 0, 0, 0 ) 95%);background: -o-linear-gradient(top, rgba( 0, 0, 0, 0.55) 5%,rgba( 0, 0, 0, 0 ) 95%);background: -ms-linear-gradient(top, rgba( 0, 0, 0, 0.55) 5%,rgba( 0, 0, 0, 0 ) 95%);background: linear-gradient(to bottom, rgba( 0, 0, 0, 0.55) 5%,rgba( 0, 0, 0, 0 ) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba( 0, 0, 0, 0.55)', endColorstr='rgba( 0, 0, 0, 0 )',GradientType=0 );}
+
+.tableViewCell {
+	display: block;
+	background-image:  url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/grid-pattern.png );
+	background-color: #151515;
+	transition: background-color .15s;
+	-webkit-transition: background-color .15s;
+	background-size: 30px 30px;
+	background-repeat: repeat;
+
+	height: 71px;
+	color: #D0D0D0;
+
+	border-bottom: 1px solid #28282B;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+	.tableViewCell {
+		background-size: 15px 15px;
+	}
+}
+
+.tableViewCell.active {
+	background-color: #284060;
+	transition: background-color .15s;
+	-webkit-transition: background-color .15s;
+}
+
+.tableViewCellHidden {
+	display: none;
+}
+
+.tableViewCellTextBlock {
+	padding-top: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.tableViewCellMainText {
+	text-decoration: none;
+	font-size: 17px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.tableViewCellMainTextCentered {
+	text-align: center;
+	line-height: 72px;
+	text-decoration: none;
+	font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.tableViewCellSecondaryText {
+	text-decoration: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+/*
+---------------------- Icon Holders for Avatars -----------------------
+*/
+
+.smallCapItemBlockIcon {
+	display: block;
+	float: left;
+	margin-top: 16px;
+	margin-bottom: 5px;
+	margin-right: 7px;
+	margin-left: 12px;
+	width: 106px;
+	height: 40px;
+}
+
+.smallCapIconHolder {
+	width: 106px;
+	height: 40px;
+	position: relative;
+}
+
+div.smallCapIcon {
+	width: 104px;
+	height: 36px;
+	top: 2px;
+	left: 2px;
+	position: absolute;
+}
+
+div.smallCapIcon img {
+	border-radius: 3px;
+	width: 102px;
+	height: 36px;
+}
+
+.itemBlockIcon {
+	display: block;
+	float: left;
+	margin-top: 9px;
+	margin-bottom: 10px;
+	margin-right: 8px;
+	margin-left: 10px;
+	width: 52px;
+	height: 52px;
+}
+
+.iconHolder {
+	width: 52px;
+	height: 52px;
+	position: relative;
+}
+
+.mobileHeaderIconHolder {
+	width: 32px;
+	height: 32px;
+	position: relative;
+}
+
+.iconHolder_in-game {
+	background-color: #AFD14F;
+	border-radius: 4px;
+}
+
+.iconHolder_online {
+	background-color: #9CC7FF;
+	border-radius: 4px;
+}
+
+.iconHolder_offline {
+	background-color: #606060;
+	border-radius: 4px;
+}
+
+.iconHolder_default {
+	background-color: #CFD2D4;
+	border-radius: 4px;
+}
+
+.iconHolder_game {
+	background-color: #CFD2D4;
+	border-radius: 4px;
+}
+
+div.avatarIcon {
+	width: 48px;
+	height: 48px;
+	top: 2px;
+	left: 2px;
+	position: absolute;
+}
+
+div.mobileHeaderAvatarIcon {
+	width: 30px;
+	height: 30px;
+	top: 1px;
+	left: 1px;
+	position: absolute;
+}
+
+div.avatarIcon img {
+	border-radius: 3px;
+	width: 48px;
+	height: 48px;
+}
+
+
+/*
+------------------------- SEGMENTED CONTROL ---------------------------
+*/
+
+
+.segmentedControlInactive, .segmentedControlActive {
+	display: block;
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/segmented-control-background.png );
+	background-repeat: repeat-x;
+	background-size: 30px 30px;
+	height: 30px;
+	color: #E0E0E0;
+}
+
+.segmentedControlActive {
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/segmented-control-background-active.png );
+	color: #FFFFFF;
+}
+
+.segmentedControlText {
+	text-align: center;
+	line-height: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*
+------------------------- SECTION HEADINGS ---------------------------
+*/
+
+.sectionHeader {
+	height: 50px;
+	border-top: 1px solid #364250;
+	background-image: -webkit-radial-gradient(60px -20px, 160px 64px, #27334B 0%, #101010 100%);
+	background-image: radial-gradient(ellipse 160px 64px at 60px -20px, #27334B 0%, #101010 100%);
+	position: relative;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.sectionHeaderText {
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #3B5D9E;
+
+	position: absolute;
+	bottom: 5px;
+	left: 12px;
+}
+
+/*
+------------------------- BACKGROUNDS ---------------------------
+*/
+
+.bodyGridPattern {
+	position: absolute;
+	z-index: -1;
+}
+
+.bodyGridPattern, .gridPattern {
+	background-image:  url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/grid-pattern.png );
+	background-size: 30px 30px;
+	width: 100%;
+	height: 100%;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+	.bodyGridPattern, .gridPattern {
+		background-size: 15px 15px;
+	}
+}
+
+
+/*
+------------------------- SEARCH BOX ---------------------------
+*/
+
+.searchLineContainer {
+	margin: 5px;
+	overflow: hidden;
+}
+
+input.searchBox {
+	height: 32px;
+	font-size: 14px;
+	color: #FFFFFF;
+	border-radius: 1px;
+	border: 1px solid #4D4B49;
+	background-color: #363636;
+	padding: 5px;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+input.searchBox.default {
+	font-style: italic;
+	color: #D0D0D0;
+}
+
+.searchBoxWithCloseButton {
+	position: relative;
+}
+
+.searchBoxCloseButton {
+	position: absolute;
+	right: 2px;
+	top: -2px;
+	width: 36px;
+	height: 36px;
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/close_icon.png );
+	background-size: 36px 36px;
+}
+
+.searchBoxCloseButton.active {
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/close_icon_gray.png );
+}
+
+
+/*
+------------------------- COMBO BOX ---------------------------
+*/
+
+.steamComboBox {
+	-webkit-appearance: none;
+
+	color: #FFFFFF;
+	background-color: #1F1F1F;
+	transition: background-color .15s;
+	-webkit-transition: background-color .15s;
+	height: 35px;
+	line-height: 27px;
+	font-size: 20px;
+	padding: 3px 5px;
+	border-radius: 1px;
+	border: 1px solid #3C3C3C;
+
+	background-image:  url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/dropdown_arrow.png );
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-origin: content-box;
+	background-size: 20px 10px;
+}
+
+.steamComboBox.active {
+	background-color: #404040;
+	transition: background-color .15s;
+	-webkit-transition: background-color .15s;
+}
+
+/*
+------------------------- PREVENT BODY SCROLL FOR MODALS ---------------------------
+*/
+
+body.mobileBody.stopScrolling {
+	overflow: hidden;
+}

@@ -1,0 +1,375 @@
+  
+
+#BG_top {
+	position:relative;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+	margin: 0 auto;
+}
+#BG_bottom {
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom2.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+	margin: 0 auto;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:21px;
+	font-size: 26px;
+	color: #898989;
+	padding-left:12px;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+	padding-left:12px;
+}
+#mainContents {
+	width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:12px;
+	padding-top:8px;
+}
+#logo {
+	position:absolute;
+	width:192px;
+	left:748px;
+	top:7px;
+}
+
+#headerAvatar {
+	float:left;
+	width:72px;
+	height:72px;
+	padding:10px 8px 0px 12px;
+}
+
+#topSummaryBox {
+	width:921px;
+}
+
+#topSummaryBoxContent {
+	background-color:#000000;
+	padding:6px 0px 6px 10px;
+	width:911px;
+	color:#747474;
+	border-radius: 3px;
+}
+
+#tsblTitle {
+	float:left;
+	width:150px;
+	color:#747474;
+	line-height:18px;
+}
+
+#topSummaryLeft a,#topSummaryLeft a:hover,#topSummaryLeft a:visited,#topSummaryLeft a:active {
+	font-size:12px;
+}
+
+.pkBoxItemValue,#tsblVal {
+	float:left;
+	line-height:16px;
+	color:#aaaaaa;
+}
+
+#topSummaryLeft {
+	float:left;
+	width:585px;
+}
+
+#topSummaryVBreak {
+	float:left;
+	width:1px;
+	height:69px;
+}
+
+#topSummaryAchievements {
+	float:left;
+	width:309px;
+	padding:5px 0px 0px 6px;
+	line-height:18px;
+}
+
+.compareVal {
+	color:#aa5555;
+}
+
+#tabs {
+	margin:0;
+	padding-left:16px;
+	width:728px;
+}
+#subtabs {
+	width:918px;
+	height:43px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/statsSubtabsBG.gif');
+	padding-left:14px;
+	clear:left;
+}
+
+.tab {
+	float:left;
+}
+.tab a,.tab a:hover,.tab a:visited,.tab a:active {
+	font-size:12px;
+	color: #ffffff;
+	text-decoration:none;
+}
+.tabOff,.tabOn {
+	float:left;
+	padding:8px 8px 6px 8px;
+	height:15px;
+	font-size:12px;
+	color: #ffffff;
+	background-color:#4f4f4e;
+}
+.tabOff {
+	background-color:#3a3a3a;
+}
+.tabOnL,.tabOnR,.tabOffL,.tabOffR {
+	float:left;
+	width:2px;
+	background-color:#4f4f4e;
+	height:29px;
+}
+.tabOffL,.tabOffR {
+	background-color:#3a3a3a;
+}
+.tabOnR,.tabOffR {
+	margin-right:6px;
+}
+#stats {
+	padding-left:16px;
+}
+#headerTimePlayed {
+	float:left;
+	width:292px;
+	margin:0;
+	padding:0;
+	padding-left:92px;
+}
+#personalAchieve {
+	padding-left:16px;
+}
+.achieveHeader {
+	font-weight:normal;
+	font-size: 22px;
+	color: #e1e1e1;
+	margin-bottom:8px;
+}
+
+.topAvatarsLeft {
+	float:left;
+	margin-left:-4px;
+	width:72px;
+	height:72px;
+}
+
+.topAvatarsRight {
+	float:right;
+	padding-right:23px;
+}
+
+.achieveImgHolder {
+	float:left;
+	width:64px;
+	height:64px;
+	padding:1px 9px 1px 0px;
+}
+
+.CachieveImgHolder {
+	float:left;
+	width:64px;
+	height:64px;
+	padding:1px 0px 1px 9px;
+}
+
+.achieveTxtHolder {
+	float:left;
+	position:relative;
+	width:747px;
+	height:66px;
+	padding:0px;
+}
+
+.achieveTxt {
+	position:absolute;
+	top:17px;
+	left:6px;
+	width:730px;
+}
+
+.achieveTxt h3 {
+	font-weight:bold;
+	font-size:15px;
+	color:#e1e1e1;
+}
+
+.achieveTxt h5 {
+	font-weight:normal;
+	font-size:12px;
+	color:#898989;
+}
+.whiteText {
+	color:#e0e0e0;
+}
+
+.returnLink {
+	margin:0px;
+	padding-bottom:10px;
+	font-size:11px;
+}
+.returnLink_bottom {
+	margin:0px;
+	padding-bottom:16px;
+	font-size:11px;
+}
+.lbentry, .lbentrySelf {
+	width:900px;
+	margin-bottom:4px;
+}
+
+.lbentrySelf {
+}
+
+.globalRank, .globalRankh {
+	float:left;
+	width:180px;
+	padding-top:18px;
+	padding-right:20px;
+	text-align:right;
+	background-color:#3a3a3a;
+	height:30px;
+	font-size:11px;
+}
+
+.globalRankh {
+	background-color:#505050;
+}
+
+.score, .scoreh {
+	float:left;
+	text-align:right;
+	width:250px;
+	padding-top:12px;
+	font-size:22px;
+	background-color:#3a3a3a;
+	height:36px;
+}
+
+.scoreh {
+	background-color:#505050;
+}
+
+.player,.playerh {
+	float:left;
+	width:350px;
+	padding:4px 0px 4px 4px;
+	height:40px;
+	background-color:#3a3a3a;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/sgb_left.gif');
+	background-position:top left;
+	background-repeat:no-repeat;
+}
+
+.playerh {
+	background-color:#505050;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/sgbh_left.gif');
+}
+
+.playerName,.playerName:hover,.playerName:active,.playerName:visited {
+	font-size:22px;
+	color:#e1e1e1;
+}
+
+.playerLink {
+	padding:8px 0px 0px 0px;
+}
+
+.relativeRank {
+	float:left;
+	margin-right:10px;
+}
+
+.rRLeft,.rRRight,.rightEnd {
+	float:left;
+	width:3px;
+	height:48px;
+	margin:0;
+	padding:0;
+}
+
+.rR, .rRh {
+	float:left;
+	height:37px;
+	font-size:22px;
+	font-weight:bold;
+	margin:0;
+	padding:11px 7px 0px 7px;
+	background-color:#3a3a3a;
+	text-align:center;
+	width:60px;
+}
+
+.rRh {
+	background-color:#505050;
+}
+	
+.friendBlockIcon {
+	padding-right:20px;
+}
+
+#leaderHeader {
+	width:894px;
+	font-size:22px;
+	margin:0px 0px 10px 0px;
+}
+
+#friendBoardLink {
+	float:right;
+	padding-top:6px;
+	font-size:12px;
+	color:#959595;
+}
+
+select {
+	color:#ffffff;
+}
+
+#showButton {
+	border:solid #8ECAFC 1px;
+	color:#8ECAFC;
+}
+
+.smallForm {
+	margin:0;
+	padding:0;
+}
+.achievementProgressBar {
+	width:500px;
+	height:14px;
+	margin:0;
+	padding:0;
+	background-color:#3a3a3a;
+}
+.progressFloatRight {
+	float:right;
+	width:220px;
+}
+.withProgress {
+	top:8px;
+}
