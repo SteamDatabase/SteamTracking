@@ -27,6 +27,14 @@ Styles/Store/store.css|https://steamstore-a.akamaihd.net/public/css/v6/store.css
 Styles/Store/tags.css|https://steamstore-a.akamaihd.net/public/css/v6/tags.css?_=*TIMENOW*
 Styles/Store/updated_apps.css|https://steamstore-a.akamaihd.net/public/css/v6/updated_apps.css?_=*TIMENOW*
 
+Styles/Store/about.css|https://steamstore-a.akamaihd.net/public/css/v6/about.css?_=*TIMENOW*
+Styles/Store/hwsurvey.css|https://steamstore-a.akamaihd.net/public/css/v6/hwsurvey.css?_=*TIMENOW*
+Styles/Store/parental.css|https://steamstore-a.akamaihd.net/public/css/v6/parental.css?_=*TIMENOW*
+Styles/Store/steamaccount.css|https://steamstore-a.akamaihd.net/public/css/v6/steamaccount.css?_=*TIMENOW*
+Styles/Store/video.css|https://steamstore-a.akamaihd.net/public/css/v6/video.css?_=*TIMENOW*
+Styles/Store/widget.css|https://steamstore-a.akamaihd.net/public/css/v6/widget.css?_=*TIMENOW*
+Styles/Store/youraccount.css|https://steamstore-a.akamaihd.net/public/css/v6/youraccount.css?_=*TIMENOW*
+
 # Store CSS (v5, current)
 Styles/styles_aboutv5.css|https://steamstore-a.akamaihd.net/public/css/styles_aboutv5.css?_=*TIMENOW*
 Styles/styles_cartv5.css|https://steamstore-a.akamaihd.net/public/css/styles_cartv5.css?_=*TIMENOW*
