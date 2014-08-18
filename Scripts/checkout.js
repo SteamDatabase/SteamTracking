@@ -2141,7 +2141,7 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '* Note: Your bank or payment processor may charge an additional service fee and local taxes for using this payment method';
+			$('payment_method_specific_note').innerHTML = '* Note: Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
 		else if ( method.value == 'steamaccount' )
 		{
