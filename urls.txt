@@ -109,6 +109,7 @@ Styles/workshop_home.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1
 Styles/workshop_itemdetails.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_itemdetails.css?_=*TIMENOW*
 Styles/workshop_managecollection.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_managecollection.css?_=*TIMENOW*
 Styles/workshop_userfiles.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_userfiles.css?_=*TIMENOW*
+Styles/reportphishing.css|https://steamcommunity-a.akamaihd.net/public/css/skin_1/reportphishing.css?_=*TIMENOW*
 
 # Store JS
 Scripts/app_tagging.js|https://steamstore-a.akamaihd.net/public/javascript/app_tagging.js?_=*TIMENOW*&l=english
