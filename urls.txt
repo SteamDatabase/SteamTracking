@@ -27,6 +27,8 @@ Styles/Store/store.css|https://steamstore-a.akamaihd.net/public/css/v6/store.css
 Styles/Store/tags.css|https://steamstore-a.akamaihd.net/public/css/v6/tags.css?_=*TIMENOW*
 Styles/Store/updated_apps.css|https://steamstore-a.akamaihd.net/public/css/v6/updated_apps.css?_=*TIMENOW*
 
+Styles/Store/curators.css|https://steamstore-a.akamaihd.net/public/css/v6/curators.css?_=*TIMENOW*
+Styles/Store/explore.css|https://steamstore-a.akamaihd.net/public/css/v6/explore.css?_=*TIMENOW*
 Styles/Store/about.css|https://steamstore-a.akamaihd.net/public/css/v6/about.css?_=*TIMENOW*
 Styles/Store/hwsurvey.css|https://steamstore-a.akamaihd.net/public/css/v6/hwsurvey.css?_=*TIMENOW*
 Styles/Store/parental.css|https://steamstore-a.akamaihd.net/public/css/v6/parental.css?_=*TIMENOW*
