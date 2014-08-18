@@ -1,0 +1,258 @@
+
+
+
+.detailBox {
+	padding: 10px 0px 0 0;
+
+	position: relative;
+	padding-bottom: 20px;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) 0px 0px no-repeat;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/footer_blend.png' ) bottom repeat-x,
+				url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
+				url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
+}
+
+/* left column */
+.leftcol
+{
+	float: left;
+	width: 640px;
+	padding-bottom: 50px;
+	padding-top: 20px;
+}
+
+.leftcol a {
+	color: #8BB9E0;
+}
+
+/* right column */
+
+.rightcol {
+	position: relative;
+	float: right;
+	width: 295px;
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-top: 107px;
+	z-index: 90;
+	font-size: 14px;
+}
+
+.rightcol div a {
+	line-height: 30px;
+}
+
+.rightcol .panel
+{
+	background: #1b1b1b;
+	background: rgba(27,27,27,.36);
+	border-radius: 4px;
+	padding: 10px 10px 10px 11px;
+	margin: 0 0 10px 0;
+	border: 1px solid #1f1f20;
+	box-shadow: 1px 1px 0 0 #39393a;
+}
+
+.panel .title {
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 3px 0 10px 0;
+	color: #494947;
+}
+
+.rightcol .panel.admin {
+	border-color: #a55b13;
+}
+
+.panel.admin .title {
+	color: #a55b13;
+}
+
+
+/* ReportPhishing BEGIN */
+h1 {
+	color: #FFFFFF;
+	font-size: 20px;
+}
+
+h2 {
+	color: #FFFFFF;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+h3 {
+	color: #FFFFFF;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+ul {
+	padding:  0px;
+}
+
+li {
+	list-style: none;
+}
+
+#locationInfoBox {
+	border-top: 5px solid #8BB9E0;
+}
+
+#notice_box {
+	padding-left: 40px;
+	position: relative;
+	font-size: 12px;
+}
+
+#rp_nomatch_error {
+	padding:  5px 25px 5px 65px;
+	margin-top: -15px;
+	margin-bottom: 15px;
+	position: relative;
+	font-size: 12px;
+	background: url("https://steamcommunity-a.akamaihd.net/public/images/steamguard/red_caution.png") no-repeat 30px center;
+	background-color: #500813;
+	color: #FFFFFF;
+}
+
+.rp_location_section {
+	margin-right: 85px;
+	float: left;
+}
+
+.rp_location_section h1 {
+	color: #FFFFFF;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+
+.infoBox {
+	padding: 25px;
+	margin-bottom: 15px;
+	background-color: #1b1b1b;
+}
+
+.infoBox p {
+	margin-top: 10px;
+	margin-bottom: 25px;
+	line-height: 135%;
+}
+#helpfulLinksBox li {
+	margin-bottom: 	8px;
+}
+
+#contactSupportBox {
+	border-top: 2px solid #8BB9E0;
+	margin-top: -15px;
+	position: relative;
+	height: 20px;
+}
+
+.location_value {
+	font-size: 20px;
+}
+
+.location_default {
+	color: #8BB9E0;
+
+}
+
+.location_match {
+	color: #10a43d;
+}
+
+.location_nomatch {
+	color: #d70e2f;
+	background: url("https://steamcommunity-a.akamaihd.net/public/images/steamguard/red_caution.png") no-repeat right center;
+	padding-right: 20px;
+}
+
+#contact_support_button {
+	background: url("https://steamcommunity-a.akamaihd.net/public/images/steamguard/contact_support_button_v2.png") no-repeat scroll 0 0 transparent;
+    display: table;
+    height: 49px;
+	right: 10px;
+    position: absolute;
+    top: 12px;
+    width: 232px;
+}
+
+#contact_support_button:hover {
+	background: url("https://steamcommunity-a.akamaihd.net/public/images/steamguard/contact_support_button_v2.png") repeat scroll 0 -49px transparent;
+}
+
+#contact_support_button span {
+	display: table-cell;
+    vertical-align: middle;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+/* ReportPhishing END */
+
+
+/* icons & images*/
+.notice_icon {
+	background-position: 0 0;
+	background-image: url("https://steamcommunity-a.akamaihd.net/public/images/skin_1/discussions_links_icons.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+	position: absolute;
+	top: 8px;
+	left: 5px;
+}
+
+#ssl_img, #valve_cert_img {
+	margin-bottom: 20px;
+}
+
+#rp_sgc_display {
+	display: none;
+}
+
+#rp_sgc_display h2, #rp_sgc_prompt{
+	text-align: center;
+}
+
+.auth_icon {
+	position: absolute;
+	top: 4px;
+	left: -19px;
+	width: 67px;
+	height: 23px;
+
+	background-image: url( "https://steamcommunity-a.akamaihd.net/public/images/login/emailauth_icons.png" );
+	background-repeat: no-repeat;
+	background-size: 50%;
+}
+
+.auth_icon.auth_icon_key {
+	background-position: center -24px;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+@media only screen and (max-width: 600px){
+	#rp_sgc_prompt, #faqBox {
+		display: none;
+	}
+	#rp_sgc_display {
+		display: block;
+	}
+
+}
