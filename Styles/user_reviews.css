@@ -131,6 +131,7 @@ select {
 	line-height: 17px;
 	color: #CDCAC1;
 	font-family: 'Motiva Sans', arial, tahoma;
+	overflow-wrap: break-word;
 }
 
 .review_edit_text_area

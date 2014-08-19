@@ -48,6 +48,8 @@ Steam = {
 			if ( matches && matches.length == 2 )
 				return matches[1];
 		}
+
+		return 0;
 	},
 
 	Init: function()
@@ -252,7 +254,7 @@ function ShowBlockingWaitDialog( strTitle, strDescription )
 	container.append( throbber );
 	container.append( strDescription );
 
-	var Modal = _BuildDialog( strTitle, container, [], fnOK );
+	var Modal = _BuildDialog( strTitle, container, [], fnOK, { bExplicitDismissalOnly: true } );
 	deferred.always( function() { Modal.Dismiss(); } );
 	Modal.Show();
 

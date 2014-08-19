@@ -327,6 +327,8 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 				return GetCurrencySymbol( currencyCode ) + currencyFormat;
 		case 'RUB':
 			return currencyFormat.replace( '.', ',' ).replace( ',00', '' ) + ' ' + GetCurrencySymbol( currencyCode );
+		case 'JPY':
+			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.00', '' );
 		case 'BRL':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.', ',' );
 		default:
@@ -336,7 +338,7 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 
 function IsCurrencySymbolBeforeValue( currencyCode )
 {
-	if ( currencyCode == 'GBP' || currencyCode == 'USD' || currencyCode == 'BRL' )
+	if ( currencyCode == 'GBP' || currencyCode == 'USD' || currencyCode == 'BRL' || currencyCode == 'JPY' )
 		return true;
 
 	return false;
@@ -357,6 +359,8 @@ function GetCurrencySymbol( currencyCode )
 			return 'pуб.';
 		case 'BRL':
 			return 'R$';
+		case 'JPY':
+			return '¥';
 		default:
 			return currencyCode + ' ';
 	}
@@ -376,6 +380,8 @@ function GetCurrencyCode( currencyId )
 			return 'RUB';
 		case 7:
 			return 'BRL';
+		case 8:
+			return 'JPY';
 		default:
 			return 'Unknown';
 	}

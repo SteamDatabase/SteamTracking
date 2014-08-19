@@ -1012,6 +1012,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 
 		oPagingControls.SetResponseHandler( function( response ) {
 			fnOnRendered();
+			$J('#' + this.m_strElementPrefix + 'Rows').InstrumentLinks();
 		});
 		oPagingControls.SetPageChangingHandler( function( nPage ) {
 			if ( !g_bInHashChange )

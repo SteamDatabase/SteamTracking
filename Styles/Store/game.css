@@ -4,10 +4,6 @@
 	background-repeat: no-repeat;
 }
 
-.game_page_top_background {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/app/game_page_background_shadow.png' ) center 402px no-repeat;
-}
-
 .game_icon {
 	position: relative;
 	float: left;
@@ -58,6 +54,15 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
 
 	height: 451px;
+}
+
+.game_background_glow {
+	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/app/game_page_background_shadow.png?v=1' );
+	background-position: bottom;
+	padding-bottom: 1px;
+	background-repeat: no-repeat;
+	margin: 0px auto;
+
 }
 
 #game_highlights a {
@@ -216,6 +221,11 @@
 }
 
 img.game_header_image {
+	width: 292px;
+	height: 136px;
+}
+
+img.game_header_image_full {
 	width: 324px;
 	height: 151px;
 }
@@ -226,6 +236,14 @@ img.game_header_image {
     font-size: 13px;
     line-height: 18px;
     padding-right: 16px;
+}
+
+.game_review_summary {
+	color: #A34C25;
+}
+
+.game_review_summary.positive {
+	color: #66C0F4;
 }
 
 .glance_details {
@@ -537,7 +555,7 @@ img.game_header_image {
 }
 
 .game_purchase_action {
-	height: 40px;
+	/* height: 40px; */
 }
 
 .game_area_purchase_game .game_purchase_action {
@@ -548,12 +566,12 @@ img.game_header_image {
 }
 
 .game_purchase_action_bg {
-	height: 34px;
+	/* height: 34px; */
 
 	background-color: rgba(0,0,0,0.5);
-	padding: 3px 3px 3px 0px;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
+	padding: 2px 2px 2px 0px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
 }
 
 .game_purchase_action .game_purchase_price,
@@ -563,7 +581,7 @@ img.game_header_image {
 .game_purchase_action .game_purchase_action_bg
 {
 	float: left;
-	margin-left: 3px;
+	margin-left: 2px;
 }
 
 .game_purchase_action .game_purchase_price {
@@ -572,7 +590,7 @@ img.game_header_image {
 	padding-top: 8px;
 	padding-left: 12px;
 	padding-right: 12px;
-	height: 26px;
+	height: 24px;
 }
 
 .game_purchase_discount_countdown {
@@ -581,7 +599,6 @@ img.game_header_image {
 
 .btn_addtocart {
 	position: relative;
-	height: 34px;
 }
 
 .btn_addtocart .btn_addtocart_left, .btn_addtocart .btn_addtocart_right {
@@ -655,15 +672,15 @@ img.game_header_image {
 }
 
 .game_purchase_discount {
-	height: 34px;
+	height: 32px;
 }
 
 .game_purchase_discount .discount_pct {
 	position: absolute;
 	left: 0px;
 	width: 69px;
-	height: 34px;
-	line-height: 34px;
+	height: 32px;
+	line-height: 32px;
 	font-size: 25px;
 	text-align: center;
 }
@@ -986,6 +1003,27 @@ img.game_header_image {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d616465', endColorstr='#4de2f4ff',GradientType=1 );
 }
 
+.game_area_dlc_row.ds_flagged .ds_flag {
+	top: 0;
+	left: 0;
+
+	height: 22px;
+	line-height: 22px;
+	background-position: -14px 6px;
+}
+
+.game_area_dlc_row.ds_flagged:hover .ds_flag {
+	background-position: 4px 6px;
+}
+
+.game_area_dlc_row.ds_flagged:hover .ds_flag {
+	box-shadow: 0 0 2px 0 #000000;
+
+}
+
+.game_area_dlc_row.ds_flagged {
+}
+
 .game_area_dlc_price {
 	position: absolute;
 	right: 14px;
@@ -1078,9 +1116,16 @@ img.game_header_image {
 	padding: 8px;
 }
 
+table.game_language_options {
+	border-collapse: collapse;
+}
+
 .game_language_options tr{
-	display: table;
 	border-bottom: 1px solid #626366;
+}
+
+.game_language_options tr.unsupported td {
+	color: #61686d;
 }
 
 .game_language_options th{
@@ -1094,6 +1139,10 @@ img.game_header_image {
     padding: 3px 0px 3px 0px;
     text-align: center;
     font-size: 12px;
+}
+
+.game_language_options td.checkcol, .game_language_options th.checkcol {
+	width: 62px;
 }
 
 .all_languages {
@@ -1116,30 +1165,16 @@ img.game_header_image {
 }
 
 .game_area_play_stats .details_block a {
-    background-color: rgba( 103, 193, 245, 0.2 );
-    border-radius: 1px;
-    color: #67c1f5;
-    font-size: 11px;
-    padding: 2px 4px;
-    margin-right: 4px;
+    margin-right: 8px;
+	font-size: 11px;
 }
-.game_area_play_stats .details_block a:hover {
-    text-decoration: none;
-    color: #ffffff;
-    background: #67c1f5; /* Old browsers */
-    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
-    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
+
 
 .hours_played {
     color: #8f98a0;
     font-size: 12px;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
+	margin-top: 3px;
 }
 
 .game_area_details_specs {
@@ -1311,8 +1346,8 @@ a.friend_block_holder:hover {
 }
 
 #agegate_box,#macbeta_box {
-	background-color:#262626;
-	border: 1px solid #4d4b49;
+	background-color:rgba(0,0,0,0.2);
+
 	text-align:center;
 	padding:35px 0px 35px 0px;
 }
@@ -1346,10 +1381,13 @@ a.friend_block_holder:hover {
 }
 
 #agegate_box select {
-	background-color:#4d4b49;
-	border:solid #82807c 1px;
-	padding:2px;
-	color:#ffffff;
+	padding: 2px 3px;
+	height: 22px;
+	color: #67c1f5;
+	background-color: rgba( 103, 193, 245, 0.2 );
+	border-radius: 2px;
+	border: none;
+	vertical-align: top;
 }
 
 #agegate_box input[type=submit] {
@@ -1378,45 +1416,72 @@ a.friend_block_holder:hover {
 	margin-top:7px;
 }
 
+.got_steam_ctn {
+	background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(102,192,244,1)', endColorstr='rgba(47,137,188,1)',GradientType=0 );	padding: 3px;
+	width:650px;
+}
 #got_steam_box {
-	border-color:#4d4b49;
-	border-style:solid;
-	border-width:2px 1px;
-	width:506px;
-	background-color:#262626;
-	padding-top:30px;
+	width:650px;
+	background-color:#1a2635;
+	padding-top:20px;
 }
 
 #low_block {
-	background-color:#171717;
-	padding:20px 20px 0px 20px;
-	height:54px;
-	padding-top:24px;
-	color:#b0aeac;
+	border-top: 1px solid rgba( 0, 0, 0, 0.5 );
+	padding:18px 20px 0px 20px;
+	height:49px;
+	color:#8F98A0;
+	font-size: 13px;
 }
 
 #got_steam_box h1 {
 	padding-left:20px;
+	font-weight: normal;
+	font-size: 36px;
+	color: #ffffff;
 }
 
 #got_steam_box p {
 	padding-left:20px;
+	color: #8F98A0;
+	font-size: 15px;
+	font-weight: normal;
 }
 
-
-
-#gotsteam_buttons a.btn_white {
-	float: left;
-}
-
-#gotsteam_buttons a.btn_white.leftbtn {
-	margin-right: 16px;
-
-}
 
 #gotsteam_buttons {
-	padding:32px 20px 32px 20px;
+	padding:26px 20px 26px 20px;
 }
+	#gotsteam_buttons a.btn_blue h3, #gotsteam_buttons a.btn_blue h5 {
+		color: #66C0F4;
+	}
+	#gotsteam_buttons a.btn_blue:hover h3, #gotsteam_buttons a.btn_blue:hover h5 {
+		color: #ffffff;
+	}
+
+	#gotsteam_buttons a.btn_blue {
+		float: left;
+		background: -moz-linear-gradient(top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -webkit-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -o-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: linear-gradient(to bottom, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(102,192,244,0.2)', endColorstr='rgba(47,137,188,0.2)',GradientType=0 );		width: 271px;
+		padding: 12px 12px 15px 12px;
+		border-radius: 2px;
+	}
+
+	#gotsteam_buttons a.btn_blue:hover {
+		background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(102,192,244,1)', endColorstr='rgba(47,137,188,1)',GradientType=0 );	}
+
+	#gotsteam_buttons a.btn_blue.leftbtn {
+		margin-right: 16px;
+	}
+
+	#gotsteam_buttons h3 {
+		font-size: 23px;
+		font-weight: normal;
+	}
+
+	#gotsteam_buttons h5 {
+		font-size: 13px;
+		font-weight: normal;
+	}
 
 #btn_no {
 	float:right;
@@ -1437,11 +1502,12 @@ a.friend_block_holder:hover {
 }
 
 #gotSteamModal {
-	width:508px;
+	width:650px;
 	height:301px;
 	position:absolute;
 	z-index:1000;
 	background-color:#000000;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
 .rightcol.game_meta_data {
@@ -1653,6 +1719,14 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	height: 136px;
 }
 
+.dlc_page_purchase_dlc.ds_flagged .ds_flag {
+	left: 15px;
+}
+
+.dlc_page_purchase_dlc.ds_flagged img.game_header_image {
+	opacity: 0.3;
+}
+
 
 
 .dlc_page_purchase_header {
@@ -1781,7 +1855,9 @@ img.package_header {
     width: 908px;
     padding: 16px;
     background: rgba( 0, 0, 0, 0.2 );
-    margin-bottom: 16px;
+
+	margin: 0px auto;
+	margin-bottom: 16px;
 }
 
 .queue_ctn .queue_controls_description {
@@ -1801,7 +1877,7 @@ img.package_header {
 	display: inline-block;
 }
 
-.game_area_already_owned {
+body.v6 .game_area_already_owned.page_content {
 	height: 40px;
 	padding: 0px 15px 0px 80px;
 	position: relative;
@@ -1820,11 +1896,13 @@ img.package_header {
     line-height: 40px;
 	color: #a3cf06;
     margin-bottom: 1px;
+	width: 845px;
 }
 .game_area_already_owned .ds_flag {
     top: 11px;
     left: -8px;
     box-shadow: 1px 1px 2px #000000;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC') no-repeat 4px 4px #a3cf06;
 }
 
 .already_owned_actions {
@@ -1841,7 +1919,10 @@ img.package_header {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d616465', endColorstr='#4de2f4ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
     padding: 0px 16px 16px 16px;
+	margin: 0px auto;
     margin-bottom: 40px;
+	width: 908px;
+
 }
 
 .game_area_already_owned_btn {
@@ -2529,8 +2610,7 @@ h2.bb_tag + br {
 .dropcontainer ul {
 	list-style-type:none;
 	line-height: 22px;
-	background-color:#262626;
-	border:1px solid #82807C;
+	background-color:#67c1f5;
 	margin:0;
 	width:300px;
 	position:absolute;
@@ -2541,6 +2621,10 @@ h2.bb_tag + br {
 	overflow-x: hidden;
 }
 
+.dropcontainer ul#ReviewLanguage_droplist {
+	right: 0px;
+	left: auto;
+}
 
 .dropdownhidden{
 	display: none;
@@ -2561,21 +2645,14 @@ h2.bb_tag + br {
 	padding-right:2px;
 	display:block;
 	text-decoration:none;
-	color:#B0AEAC;
+	color:#ffffff;
 	line-height: 22px;
 	height: 22px;
 }
 .dropcontainer a.highlighted_selection {
     color: #ffffff;
     border-radius: 1px;
-    background: #67c1f5; /* Old browsers */
-    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
-    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: #212d3d;
 	text-decoration: none;
 }
 .dropcontainer{
@@ -3173,3 +3250,4 @@ select.gray_bevel {
 .small_cap.ds_flagged img {
 	opacity: 0.3;
 }
+

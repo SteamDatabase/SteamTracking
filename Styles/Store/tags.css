@@ -25,6 +25,7 @@ body.tag_page h2.pageheader {
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-weight: normal;
 	text-shadow: 1px 1px 0 #000000;
+	margin-top: -4px;
 }
 
 body.tag_page h3 {
