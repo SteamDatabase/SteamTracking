@@ -2678,14 +2678,53 @@ function SubmitPaymentInfoForm()
 			}
 			else
 			{
-				if ( $('bank_iban').value.length < 1 || $('bank_iban').value.length > 50 )
+				if ( $('bank_iban').value.length < 15 || $('bank_iban').value.length > 50 )
 				{
-					errorString += 'Please enter your IBAN (International Bank Account Number).<br/>';
+					errorString += 'Please verify and enter your IBAN (International Bank Account Number).<br/>';
 					rgBadFields.bank_iban = true;
 				}
-				if ( $('bank_bic').value.length < 1 || $('bank_bic').value.length > 11 )
+				else
 				{
-					errorString += 'Please enter your SWIFT code.<br/>';
+										
+										var sIBAN = $('bank_iban').value.substring(4).toUpperCase() + $('bank_iban').value.substring(0, 4).toUpperCase();
+					
+										var sCalculatedIBAN = '';
+					var nACode = 'A'.charCodeAt( 0 );
+					
+					for ( var i = 0; i < sIBAN.length; i++ )
+					{
+						var c = sIBAN.substring( i, i + 1 );
+
+						if ( isNaN( c ) )
+						{
+							var nCharCode = c.charCodeAt( 0 );
+							
+							sCalculatedIBAN += ( nCharCode - nACode + 10 );
+						}
+						else
+						{
+							sCalculatedIBAN += c;
+						}
+					}
+					
+										
+					while ( sCalculatedIBAN.length > 10 )
+					{
+						var sLHS = sCalculatedIBAN.slice( 0, 9 );
+						sCalculatedIBAN = ( parseInt( sLHS ) % 97 ) + sCalculatedIBAN.slice( sLHS.length );
+					}
+				
+					
+					if ( ( parseInt( sCalculatedIBAN ) % 97 ) != 1 )
+					{
+						errorString += 'Please verify and enter your IBAN (International Bank Account Number).<br/>';
+						rgBadFields.bank_iban = true;
+					}
+				}
+				
+				if ( $('bank_bic').value.length != 8 && $('bank_bic').value.length != 11 && $('bank_bic').value.length != 12 )
+				{
+					errorString += 'Please verify and enter your SWIFT code.<br/>';
 					rgBadFields.bank_bic = true;
 				}
 			}

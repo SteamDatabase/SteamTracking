@@ -1093,6 +1093,21 @@ a.view_active:hover {
     margin-right: 5px;
 }
 
+a.friendactivity_game_link .ds_flag {
+	top: 18px;
+}
+
+.friendactivity_tab_row .game_capsule_area a.friendactivity_game_link  {
+	display: block;
+	position: relative;
+	height: 45px;
+	width: 120px;
+}
+
+a.friendactivity_game_link.ds_flagged img {
+	opacity: 0.3;
+}
+
 .tab_page_link_holder {
     background: rgba( 0, 0, 0, 0.2 );
     margin-top: 1px;
@@ -1271,6 +1286,10 @@ a.view_active:hover {
 .similar_grid_item .similar_grid_capsule img {
 	width: 292px;
 	height: 136px;
+}
+
+.similar_grid_item .similar_grid_capsule.ds_flagged img {
+	opacity: 0.3;
 }
 
 .similar_grid_item .similar_grid_price {
@@ -1782,6 +1801,10 @@ background: -moz-linear-gradient(top, #b8f750 5%, #87c643 95%);background: -webk
 {
 	margin-top: -15px;
 	padding-bottom: 25px;
+}
+
+.user_reviews_count {
+	color: #61686d;
 }
 
 #LoadMoreReviewsall, #LoadMoreReviewspositive, #LoadMoreReviewsnegative {

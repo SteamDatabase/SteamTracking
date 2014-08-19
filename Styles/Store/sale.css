@@ -14,6 +14,14 @@
 	background-color: #1a1a1a;
 }
 
+.sale_page_purchase_item .ds_flag {
+	left: 15px;
+}
+
+.sale_page_purchase_item.ds_flagged img.game_header_image {
+	opacity: 0.3;
+}
+
 .sale_page_purchase_header {
 	position: absolute;
 	left: 15px;

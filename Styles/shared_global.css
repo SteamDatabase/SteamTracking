@@ -297,7 +297,9 @@ background: -moz-linear-gradient(top, #525151 5%, #292827 95%);background: -webk
 
 	cursor: pointer;
 }
-
+body.v6 .pulldown {
+	margin-right: 5px;
+}
 span.popup_menu_pulldown_indicator {
 	display: inline-block;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/popups/btn_arrow_down.png' );

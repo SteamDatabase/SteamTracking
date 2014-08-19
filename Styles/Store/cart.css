@@ -1686,3 +1686,8 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 	padding: 4px 2px 4px 4px;
 	overflow: hidden;
 }
+
+#wallet_code {
+	width: 450px;
+	margin-right: 10px;
+}

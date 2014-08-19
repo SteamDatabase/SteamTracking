@@ -210,6 +210,7 @@ body.v6 h2.pageheader {
 	color: #ffffff;
 	font-size: 34px;
 	text-shadow: 1px 1px 0 #000000;
+	margin-top: -4px;
 }
 
 body.v6 h3 {
@@ -255,6 +256,7 @@ body.v6 .page_content {
     color: #61686d;
     font-size: 12px;
     font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+	padding-top: 10px;
 }
 .breadcrumbs a {
     color: #8f98a0;
@@ -639,10 +641,16 @@ a#store_search_link img {
 	-webkit-transition: all 0.5s;
 }
 
+.ds_collapse_flag.ds_collapse_flag_tiny.ds_flagged .ds_flag {
+	padding-left: 4px;
+}
+
 .ds_collapse_flag.ds_flagged:hover .ds_flag {
 	max-width: 120px;
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
+}
+
+.ds_collapse_flag_tiny.ds_flagged:hover .ds_flag {
+	padding-left: 18px;
 }
 
 
@@ -917,6 +925,7 @@ a#store_search_link img {
 }
 .home_area_spotlight {
 	position: relative;
+	height: 395px;
 }
 
 .spotlight_scroll_ctn {
@@ -925,15 +934,27 @@ a#store_search_link img {
 }
 
 .spotlight_content {
-	padding: 5px 16px 12px 16px;
+	padding: 8px 16px 12px 16px;
 	color: #9099a1;
 	font-size: 12px;
+	position: absolute;
+	bottom: 0;
+	width: 274px;
+	min-height: 104px;
+	margin: 1px;
+
+	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/spotlight_background.jpg?v=1' ) bottom center no-repeat;
+}
+.login .spotlight_content {
+	background: #15212e;
+}
+.spotlight_body {
+	margin-bottom: 10px;
 }
 
 .spotlight_block .spotlight_content>h2 {
 	color: #c7d5e0;
 	font-size: 21px;
-	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	margin: 0;
 }
@@ -950,7 +971,7 @@ a#store_search_link img {
 
 	height: 69px;
 
-	margin-bottom: 4px;
+	margin-bottom: 5px;
 	padding-left: 198px;
 }
 
@@ -1094,7 +1115,7 @@ a#store_search_link img {
 
 .dailydeal_cap {
 	position: relative;
-	margin-bottom: 8px;
+	margin-bottom: 3px;
 }
 
 .dailydeal_cap, .dailydeal_cap img {
@@ -1121,6 +1142,7 @@ a#store_search_link img {
 	background: #ff7b00;
 	line-height: 13px;
 	padding: 0 4px;
+	margin-top: 4px;
 }
 
 /*
@@ -1161,7 +1183,22 @@ a#store_search_link img {
 
 .home_friend_game_block .game_capsule {
     right: auto;
-    left: 0px;
+    left: 0;
+}
+
+.home_friend_game_block .game_capsule a {
+	position: relative;
+	display: block;
+	width: 120px;
+	height: 45px;
+}
+
+.home_friend_game_block .game_capsule a.ds_flagged .ds_flag {
+	top: 18px;
+}
+
+.home_friend_game_block .game_capsule a.ds_flagged img {
+	opacity: 0.3;
 }
 
 .friend_activity .friend_block_text {
@@ -1293,7 +1330,7 @@ div.game_hover {
 .game_hover .hover_arrow_left, .game_hover .hover_arrow_right {
 	width: 7px;
 	height: 15px;
-	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAPCAYAAADUFP50AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkVBRTUwNkRFMkMyMTFFM0I4OTk4MzlGNDRCNUZGNjQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkVBRTUwNkVFMkMyMTFFM0I4OTk4MzlGNDRCNUZGNjQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRUFFNTA2QkUyQzIxMUUzQjg5OTgzOUY0NEI1RkY2NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRUFFNTA2Q0UyQzIxMUUzQjg5OTgzOUY0NEI1RkY2NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlcIKcgAAACdSURBVHjalNI7DoAgDABQ6R3cTRz1Am7GO3hBD2Kc9AI6Gh3cPAS2BgyE8rFJAwQeHVohpcy4WLazprWpipW7hwAaKfUHUWigXCWLIYB0sBgiyIshAbFYzOuRgsy4MTuqOPxAuvJAsMe8fkB62wM2eMdNm4jpTUsG1HSk4A9Z7YhgCzkD4MEOetvBDTn2qsRlUkcHeaGBMw5RPAIMAIw6VWODjyk9AAAAAElFTkSuQmCC' ) no-repeat top;
+	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAPCAYAAADUFP50AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJlJREFUeNqc0k0KgCAQBlCdI0SLlkEtu4DLTt6yC7SN2hX0cwWbCQvDMa0PBhN9EsxIrbXgMs57RWueJR13Di+ooboeCEILpaZYDC/oCoshgLwYIhCL5TBtMcjOilUT1OJH6FdLrOWDobslYIN7/FCRmO4oMmCmIwbf6NGOAH4gZwA82EFnO7ghx14VuLRm6yAvtLDgEOUQYADt6VgCZRDsZgAAAABJRU5ErkJggg==' ) no-repeat top;
 	position: absolute;
 	top: 48px;
 }
@@ -1314,7 +1351,7 @@ div.game_hover {
 	margin-bottom: 6px;
 }
 
-.hover_details_block {
+.hover_details_block, .hover_details_block_full {
 	display: block;
 	border-radius: 2px;
 	margin-right: 3px;
@@ -1323,6 +1360,9 @@ div.game_hover {
 
 	line-height: 20px;
 	height: 20px;
+}
+
+.hover_details_block {
 	float: left;
 }
 
@@ -1331,9 +1371,13 @@ div.game_hover {
 	line-height: 20px;
 }
 
+.hover_friends_blocks {
+	margin-bottom: 8px;
+}
+
 .hover_tag_row {
 	overflow: hidden;
-	height: 25px;
+	height: 19px;
     margin-top: 2px;
 }
 
@@ -1548,6 +1592,7 @@ img.large_cap {
 body.v6 .page_content_ctn.dark {
 	background-color: #000;
 	padding: 25px 0;
+	margin-bottom: -52px;
 }
 
 .page_content_ctn.dark .pageheader:after {

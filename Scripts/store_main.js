@@ -127,6 +127,11 @@ function TabSelect( elem, target )
 	var tab_content = $(target);
 	tab_content.siblings().invoke( 'hide' );
 	tab_content.show();
+
+	if ( typeof GDynamicStore != 'undefined' )
+	{
+		$J.force_appear();
+	}
 }
 
 function TabSelectStealth( target )
@@ -1469,6 +1474,10 @@ CTextInputSuggest.prototype.Destroy = function()
 // tags in the menu
 function EnsureStoreMenuTagsLoaded( strId )
 {
+	// dynamic store can handle this in v6
+	if ( typeof GDynamicStore != 'undefined' )
+		return;
+
 	var $Element = $J(strId);
 	if ( !$Element.data('tags-loaded') )
 	{

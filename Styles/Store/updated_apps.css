@@ -31,8 +31,8 @@ a:hover {
 
 .updated_app
 {
+	position: relative;
 	padding-bottom: 30px;
-
     background-image: url( https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png );
     background-repeat: no-repeat;
     background-position: top left;
@@ -50,6 +50,11 @@ a:hover {
 .updated_app a:hover
 {
 	color: #ffffff;
+}
+
+.updated_app .ds_flag
+{
+	top: 50px;
 }
 
 .updated_app_logo
