@@ -193,6 +193,14 @@ input.disabled {
 	color: #808080;
 }
 
+.PastDiscount .MultiDiscount_DiscountName, .PastDiscount .PriceAmount, .PastDiscount .PricePercent {
+	text-decoration: line-through;
+}
+
+.FutureDiscount .MultiDiscount_DiscountName, .FutureDiscount .PriceAmount, .FutureDiscount .PricePercent {
+	font-style: italic;
+}
+
 .MultiDiscount_DiscountPercent {
 	float: left;
 	width: 40px;
