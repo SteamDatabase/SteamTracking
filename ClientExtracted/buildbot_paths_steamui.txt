@@ -1,4 +1,3 @@
-B/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/proto/stream.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/amount.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../common/linuxhelpers.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../common/parentalinterpreter.cpp
@@ -50,7 +49,7 @@ B/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steam
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/workthreadpool.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/zip_helpers.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/mathlib/mathlib_base.cpp
-@/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/mathlib/vmatrix.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/mathlib/vmatrix.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./../common/clientdirectories.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/../common/uifontfile.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./controls/button.cpp
@@ -102,7 +101,7 @@ B/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steam
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./text/uifontfileloaderlinux.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./text/uitextlayoutlinux.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./uiengine.cpp
-?/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./uiengine.h
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./uiengine.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./uienginesdl.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./uievent.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./uifileresource.cpp
@@ -224,6 +223,7 @@ B/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steam
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/common/streamframe.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/common/streamsocket.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/common/streamsocket.h
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/proto/stream.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/server/../common/streamframe.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/server/../common/streamsocket.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/server/streamserver.cpp
