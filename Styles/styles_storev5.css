@@ -3461,10 +3461,10 @@ a.item_action {
 
 .microtxn_game_purchase_subscription {
 	color: #ff9900;
-	font-size: 11px;
+	font-size: 12px;
 	padding-top: 0px;
 	padding-left: 65px;
-
+	line-height: 16px;
 }
 
 .store_error_dialog {

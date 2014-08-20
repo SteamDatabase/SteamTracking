@@ -415,6 +415,7 @@
 .recommendation_makeyourown {
     background: rgba( 0, 0, 0, 0.2 );
     padding: 12px;
+	position: relative;
 }
 
 .recommendation_makeyourown_your_avatar {
@@ -787,6 +788,7 @@ textarea.comment_input
 	width: 292px;
 	height: 136px;
 	margin-bottom: 5px;
+	position: relative;
 }
 
 .friendplaytime_appheader:hover {
@@ -1246,6 +1248,11 @@ a.friendactivity_game_link.ds_flagged img {
 	margin-top: 9px;
 	margin-left: 9px;
 	padding: 12px;
+}
+
+.recommendation_carousel_item .ds_flag
+{
+	top: 55px;
 }
 
 .recommendation_highlight_carousel .recommendation_carousel_item .recommendation_ignored {
