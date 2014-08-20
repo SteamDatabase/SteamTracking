@@ -905,6 +905,12 @@ function AddSummaryDiscounts( target, id, reqCurrencies )
 			continue;
 		}
 
+		if( oneDiscount.end_date > 0 && oneDiscount.end_date < Date.now() / 1000 )
+		{
+			console.log(oneDiscount);
+			continue;
+		}
+
 		// Sum base discounts
 		var baseDiscounts = oneDiscount.discount.base;
 		if ( baseDiscounts )
