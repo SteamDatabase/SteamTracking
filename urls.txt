@@ -47,6 +47,7 @@ Styles/styles_loginv5.css|https://steamstore-a.akamaihd.net/public/css/styles_lo
 Styles/styles_parental.css|https://steamstore-a.akamaihd.net/public/css/styles_parental.css?_=*TIMENOW*
 Styles/styles_recommended.css|https://steamstore-a.akamaihd.net/public/css/styles_recommended.css?_=*TIMENOW*
 Styles/styles_sale.css|https://steamstore-a.akamaihd.net/public/css/styles_sale.css?_=*TIMENOW*
+Styles/styles_ssav5.css|https://steamstore-a.akamaihd.net/public/css/styles_ssav5.css?_=*TIMENOW*
 Styles/styles_steamaccount.css|https://steamstore-a.akamaihd.net/public/css/styles_steamaccount.css?_=*TIMENOW*
 Styles/styles_storev5.css|https://steamstore-a.akamaihd.net/public/css/styles_storev5.css?_=*TIMENOW*
 Styles/styles_supportmessages.css|https://steamstore-a.akamaihd.net/public/css/styles_supportmessages.css?_=*TIMENOW*
