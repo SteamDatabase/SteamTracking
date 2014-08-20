@@ -102,6 +102,11 @@
 	border-bottom-style: solid;
 }
 
+.subscription_header_info
+{
+	padding-left: 20px;
+}
+
 .updateSubscriptionTitle
 {
 	color: #ffffff;	

@@ -29,7 +29,7 @@ function AbortUpdateSubscription(agreementid)
 
 
 var g_bUpdateSubscriptionRunning = false;
-function UpdateSubscription(agreementid, cancelTerms)
+function UpdateSubscription(agreementid, cancelTerms, bBillingAgreement)
 {
 	var selection = $$('input:checked[type="radio"][name="update_subscription_'+agreementid+'_option"]');
 	
@@ -68,7 +68,7 @@ function UpdateSubscription(agreementid, cancelTerms)
 		      	   	// Success...
 		      	   	if ( result.success == 1 )
 		      	   	{
-		      	   		OnUpdateSubscriptionSuccess( agreementid, cancelTerms, result );
+		      	   		OnUpdateSubscriptionSuccess( agreementid, cancelTerms, bBillingAgreement, result );
 		      	   		return;
 		      	   	}
 		      	   	else
@@ -93,17 +93,25 @@ function UpdateSubscription(agreementid, cancelTerms)
 }
 
 
-function OnUpdateSubscriptionSuccess( agreementid, cancelTerms, results )
+function OnUpdateSubscriptionSuccess( agreementid, cancelTerms, bBillingAgreement, results )
 {
 	try 
 	{
-		$('transaction_price_'+agreementid).innerHTML = results.price;
+		if ( $('transaction_price_'+agreementid) )
+			$('transaction_price_'+agreementid).innerHTML = results.price;
 
 		if ( results.bCancel )
 		{
 			$('transaction_due_date_'+agreementid).innerHTML = 'Cancelled';
 			$('subtext_subscription_'+agreementid).innerHTML = cancelTerms;
-			$('update_subscription_'+agreementid).innerHTML = 'This subscription is now cancelled.';
+			if ( bBillingAgreement )
+			{
+				$('update_subscription_'+agreementid).innerHTML = 'Your pre-authorization of charges from %1$s has successfully been revoked.  You will no longer receive automatic charges from this game.'.replace( '%1$s', $('transaction_name_'+agreementid).innerText );
+			}
+			else
+			{
+				$('update_subscription_'+agreementid).innerHTML = 'This subscription is now cancelled.';
+			}
 		}
 		else
 		{
@@ -146,7 +154,7 @@ function ShowRenewSubscriptionDialog(agreementid)
 	$('link_subscription_'+agreementid).style.visibility = 'hidden';
 	$('renew_subscription_'+agreementid).style.display = 'block';
 	
-	new Effect.Highlight( 'cancel_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
+	new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
 }
 
 
@@ -158,7 +166,7 @@ function AbortRenewSubscription(agreementid)
 
 
 var g_bRenewSubscriptionRunning = false;
-function RenewSubscription(agreementid, duedate, terms, total)
+function RenewSubscription(agreementid, duedate, terms, total, bBillingAgreement)
 {
 		if( g_bRenewSubscriptionRunning )
 		return;
@@ -185,7 +193,7 @@ function RenewSubscription(agreementid, duedate, terms, total)
 		      	   	// Success...
 		      	   	if ( result.success == 1 )
 		      	   	{
-		      	   		OnRenewSubscriptionSuccess( agreementid, duedate, terms, total );
+		      	   		OnRenewSubscriptionSuccess( agreementid, duedate, terms, total, bBillingAgreement );
 		      	   		return;
 		      	   	}
 		      	   	else
@@ -210,14 +218,22 @@ function RenewSubscription(agreementid, duedate, terms, total)
 }
 
 
-function OnRenewSubscriptionSuccess( agreementid, duedate, terms, total )
+function OnRenewSubscriptionSuccess( agreementid, duedate, terms, total, bBillingAgreement )
 {
 	try 
 	{
 		$('transaction_due_date_'+agreementid).innerHTML = duedate;
-		$('transaction_price_'+agreementid).innerHTML = total;
+		if ( $('transaction_price_'+agreementid) )
+			$('transaction_price_'+agreementid).innerHTML = total;
 		$('subtext_subscription_'+agreementid).innerHTML = terms;
-		$('renew_subscription_'+agreementid).innerHTML = 'This subscription has been renewed.';
+		if ( bBillingAgreement )
+		{
+				$('renew_subscription_'+agreementid).innerHTML = 'Your pre-authorization of charges from %1$s has successfully been renewed.'.replace( '%1$s', $('transaction_name_'+agreementid).innerText );
+		}
+		else
+		{
+			$('renew_subscription_'+agreementid).innerHTML = 'This subscription has been renewed.';
+		}
 		new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
 	} 
 	catch( e ) 

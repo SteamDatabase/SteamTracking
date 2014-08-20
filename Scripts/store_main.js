@@ -246,8 +246,18 @@ function ScrollCarouselSmallCaps( targetid, delta, pageSize, totalCount )
 	else
 		$(prevLink).removeClassName('disabled');
 				
-	
-	elem.effect = new Effect.Move( elem, {x: -808 * delta, afterFinish: function() { elem.effect = false; }, duration: 0.4 } );
+
+	var cb = function( targetid ) {
+		var elem = $( targetid );
+		elem.effect = false;
+		if ( typeof GDynamicStore != 'undefined' )
+		{
+			$J.force_appear();
+			GDynamicStore.HandleCarouselChange( targetid, elem.curPos, pageSize );
+		}
+	}
+
+	elem.effect = new Effect.Move( elem, {x: -808 * delta, afterFinish: cb.bind( this, targetid ), duration: 0.4 } );
 
 }
 
