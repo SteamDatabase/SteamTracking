@@ -1,0 +1,166 @@
+/* CSS Document */
+
+body {
+	background-color: #000000;
+}
+
+.support_message_page {
+	width: 628px;
+	margin: 0px auto;
+}
+
+.support_message_ctn {
+	margin: 32px auto 16px auto;
+	background-color: #a94847;
+	padding: 6px;
+}
+
+.support_message {
+	box-shadow: inset 0 0 16px #151515;
+	-webkit-box-shadow: inset 0 0 16px #1A1A1A;
+	background-color: #333230;
+	color: #a3a3a3;
+	border-radius: 3px;
+	padding: 24px 36px;
+	background-image: url( data:image/gif;base64,R0lGODlhAgABAIAAAEJBQTw7OyH5BAAAAAAALAAAAAACAAEAAAICDAoAOw== );
+}
+
+.support_message_header {
+	padding-bottom: 2px;
+	border-bottom: 1px solid black;
+	color: #7e7e7e;
+	margin-bottom: 26px;
+}
+
+.support_message_header .accountname {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.support_message h1 {
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.support_message p {
+	margin: 10px;
+}
+
+.support_message p strong {
+	font-weight: normal;
+	color: #ffffff;
+}
+
+.support_message a {
+	text-decoration: underline;
+}
+
+.support_message_controls {
+	padding-left: 28px;
+}
+
+#supportmessages_closebtn {
+	float: left;
+	text-transform: none;
+	margin-right: 14px;
+}
+
+.support_message_check_ctn {
+	float: left;
+}
+
+.support_message_check_note {
+	color: #7e7e7e;
+	padding-left: 16px;
+}
+
+.support_message_paging_ctn {
+	float: right;
+	color: #8a8a8a;
+}
+
+.support_message_paging_display {
+	padding: 0px 15px;
+}
+
+div#footer {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 300px;
+}
+
+#footer .footer_content {
+	width: auto;
+}
+
+#footer .valve_links {
+	padding-left: 100px;
+	display: none;
+}
+
+
+
+/* -------------- paging controls -------------*/
+.pagebtn, a.pagebtn {
+	display: inline-block;
+	line-height: 24px;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0px 16px;
+	margin: 1px;
+	color: #939393;
+	border: 1px solid #403f3f;
+
+	background-color: #353434;
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAATCAIAAADeafBOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpiCA4KYvr//z/T/3//mP4h0f9ANBL+D2Ojyf2H8oE0QIABANj0NsKJBlEKAAAAAElFTkSuQmCC );
+	background-position: top;
+	background-repeat: repeat-x;
+}
+
+.pagebtn:hover, a.pagebtn:hover {
+	background-color: #97C0E3;
+	color: #3C3D3E;
+	text-decoration: none;
+	background-image: none;
+}
+
+.pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
+	border: 1px solid #333333;
+	margin: 0px;
+	background-color: #1d1d1d;
+	color: #333333;
+	cursor: default;
+	background-image: none;
+}
+
+.transaction_details {
+	background-color: #252525;
+	margin-left: 16px;
+	margin-bottom: 24px;
+	padding: 14px 14px 12px 14px;
+	position: relative;
+}
+
+.transaction_details .transaction_date {
+	position: absolute;
+	left: 14px;
+	top: 14px;
+}
+
+.transaction_details .transaction_price {
+	position: absolute;
+	right: 14px;
+	top: 14px;
+	text-align: right;
+}
+
+.transaction_details .transaction_contents {
+	padding-right: 64px;
+	padding-left: 96px;
+}
+
+.transaction_item {
+	margin-bottom: 4px;
+}
