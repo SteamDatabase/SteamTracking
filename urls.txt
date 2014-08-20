@@ -49,6 +49,7 @@ Styles/styles_recommended.css|https://steamstore-a.akamaihd.net/public/css/style
 Styles/styles_sale.css|https://steamstore-a.akamaihd.net/public/css/styles_sale.css?_=*TIMENOW*
 Styles/styles_steamaccount.css|https://steamstore-a.akamaihd.net/public/css/styles_steamaccount.css?_=*TIMENOW*
 Styles/styles_storev5.css|https://steamstore-a.akamaihd.net/public/css/styles_storev5.css?_=*TIMENOW*
+Styles/styles_supportmessages.css|https://steamstore-a.akamaihd.net/public/css/styles_supportmessages.css?_=*TIMENOW*
 Styles/styles_tags.css|https://steamstore-a.akamaihd.net/public/css/styles_tags.css?_=*TIMENOW*
 Styles/styles_updated_apps.css|https://steamstore-a.akamaihd.net/public/css/styles_updated_apps.css?_=*TIMENOW*
 Styles/styles_video.css|https://steamstore-a.akamaihd.net/public/css/styles_video.css?_=*TIMENOW*
@@ -126,6 +127,7 @@ Scripts/refundpurchase.js|https://steamstore-a.akamaihd.net/public/javascript/re
 Scripts/store_javascript.js|https://steamstore-a.akamaihd.net/public/javascript/javascript.js?_=*TIMENOW*&l=english
 Scripts/store_main.js|https://steamstore-a.akamaihd.net/public/javascript/main.js?_=*TIMENOW*&l=english
 Scripts/store_search.js|https://steamstore-a.akamaihd.net/public/javascript/search.js?_=*TIMENOW*&l=english
+Scripts/supportmessages.js|https://steamstore-a.akamaihd.net/public/javascript/supportmessages.js?_=*TIMENOW*&l=english
 Scripts/user_reviews_store.js|https://steamstore-a.akamaihd.net/public/javascript/user_reviews_store.js?_=*TIMENOW*&l=english
 Scripts/youraccount.js|https://steamstore-a.akamaihd.net/public/javascript/youraccount.js?_=*TIMENOW*&l=english
 
