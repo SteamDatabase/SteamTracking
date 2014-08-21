@@ -160,7 +160,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../common/pipes.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../common/processpipe_posix.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../common/scheduledfunction.h
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../common/singleprocesspipe_linux.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../common/singleprocesspipe_any.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../common/steam/client_api.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../common/steamservice.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../common/steamui/FriendsImageManager.cpp
@@ -200,6 +200,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/modmanager.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../overlay/common/shmemstream.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../overlay/common/videomemstream.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../overlay/gameoverlayui/screenshotthread.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../panorama/webm/vorbisencoder.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/PlatformMainPanel.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/remotesteamapp.cpp
@@ -275,6 +276,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/store/store_checkoutcontroller.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/store/storecheckout_giftrecipient.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/store/storecheckout_paymentmethod_fields.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/store/store_filterselector.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/store/storepackagepanel.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/store/storepanel.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/store/store_slideshowpreviewbase.cpp

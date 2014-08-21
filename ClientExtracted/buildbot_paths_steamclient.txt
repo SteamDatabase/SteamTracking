@@ -42,7 +42,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/processpipe_posix.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/resourcecache.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/scheduledfunction.h
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/singleprocesspipe_linux.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/singleprocesspipe_any.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_cloud.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_credentials.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_depotbuilder.steamclient.pb.cc
@@ -68,11 +68,11 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/csinterface.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/csinterface.cpp:306
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuild.cpp
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuild.cpp:316
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuild.cpp:321
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuilder.cpp
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuilder.cpp:1452
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuilder.cpp:1449
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuilder.cpp:275
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuilder.cpp:2839
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuilder.cpp:2838
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotreconstruct.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotreconstruct.cpp:2004
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotreconstruct.h
