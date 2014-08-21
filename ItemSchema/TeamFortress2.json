@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.fb904715b8f414bcd36ed09c994070f2e4f43916.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.8672cfda91a02619f27f757811cef7e51e2d4ad2.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -2188,7 +2188,7 @@
 				"name": "Soldier's Stash",
 				"defindex": 54,
 				"item_class": "tf_wearable",
-				"item_type_name": "Hat",
+				"item_type_name": "Cosmetic Item",
 				"item_name": "Soldier's Stash",
 				"item_description": "This hat does not in any way, shape, or form, promote smoking or gambling.",
 				"proper_name": false,
@@ -5585,8 +5585,8 @@
 				"image_inventory": "backpack/weapons/c_models/c_chocolate/c_chocolate",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/440/icons/c_chocolate.f07b8a90c7b79ee60d137f5dca011d61a030867f.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/c_chocolate_large.e737c290b16907b685572d588ddb1ab48ca5addc.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/c_chocolate.bba220aeb0eaa2baa446b4d3d72e52195cd9fe95.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/c_chocolate_large.7cd4c5957bf284278c07eeb92031a78eb8ac36b1.png",
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
 				"capabilities": {
@@ -24872,7 +24872,7 @@
 				"name": "The Pencil Pusher",
 				"defindex": 605,
 				"item_class": "tf_wearable",
-				"item_type_name": "Hat",
+				"item_type_name": "Cosmetic Item",
 				"item_name": "Pencil Pusher",
 				"item_description": "Measure twice, cut once, shoot first.",
 				"proper_name": true,
@@ -42653,7 +42653,7 @@
 				"name": "Antlers",
 				"defindex": 993,
 				"item_class": "tf_wearable",
-				"item_type_name": "Hat",
+				"item_type_name": "Cosmetic Item",
 				"item_name": "Antlers",
 				"item_description": "Give your opponents the gift of hesitation this holiday season when they pause to think, \"Is that a cute little deer, or-\" KA-BLAM! Dead.",
 				"proper_name": false,

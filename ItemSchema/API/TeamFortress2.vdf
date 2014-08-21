@@ -121,7 +121,6 @@
 	"equip_regions_list"
 	{
 		"whole_head"		"1"
-		
 		"hat"				"1"
 		"face"				"1"			
 		"glasses"			"1"
@@ -136,22 +135,14 @@
 		"necklace"			"1"
 		"grenades"			"1"
 		"arm_tatoos"		"1"
-		
 		"flair"				"1"
 		"head_skin"			"1"			
-		
 		"earbuds_special"	"1"
-	
 		"medic_hip"			"1"			
-		
 		"left_shoulder"		"1"			
-
 		"belt_misc"	"1"					
-
 		"disconnected_floating_item"	"1"
 		"zombie_body"		"1"
-
-		"hat_misc"			"1"			
 
 		"shared"
 		{
@@ -413,6 +404,8 @@
 			"item_type_name"		"#TF_Wearable_Hat"
 			"item_slot"				"head"
 			"equip_region"			"hat"
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
 		"mask"
 		{
@@ -5178,7 +5171,7 @@
 		"54"
 		{
 			"name"	"Soldier's Stash"
-			"prefab"	"valve base_hat"
+			"prefab"	"valve misc"
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_wearable"
 			"loadondemand" "1"
@@ -5192,11 +5185,9 @@
 				"can_craft_if_purchased"	"1"
 			}
 			"show_in_armory"	"1"
-			"item_type_name"	"#TF_Wearable_Hat"
 			"item_name"	"#TF_Soldier_Hat_1"
 			"item_description"	"#TF_Soldier_Hat_1_Desc"
 			"item_slot"	"head"
-			"equip_region"	"hat_misc"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/soldier/soldier_hat"
 			"image_inventory_size_w"		"128"
@@ -16508,14 +16499,12 @@
 		{
 			"name"	"Exquisite Rack"
 			"first_sale_date"	"2010/12/20"
-			"prefab"	"hat_decoration"
+			"prefab"	"misc"
 			"capabilities"
 			{
 				"paintable"		"1"
 			}
-			"item_type_name" "#TF_Wearable_CosmeticItem"
 			"item_name"	"#TF_ExquisiteRack"
-			"equip_region"	"hat_misc"
 			"image_inventory"	"backpack/player/items/soldier/soldier_holiday_antlers"
 			"model_player"	"models/player/items/soldier/soldier_holiday_antlers.mdl"
 			"used_by_classes"
@@ -26473,6 +26462,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 				"can_deal_taunt_damage"		"1"
+				"can_extinguish"			"1"
 			}
 			"item_logname"	"manmelter"
 			"item_iconname"	"manmelter"
@@ -26811,14 +26801,13 @@
 		{
 			"name"	"The Pencil Pusher"
 			"first_sale_date"	"2011/09/07"
-			"prefab"	"hat"
+			"prefab"	"misc"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
 			}
 			"item_name"	"#TF_EngineerHat1"
 			"item_description"	"#TF_EngineerHat1_Desc"
-			"equip_region"	"hat_misc"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
 			"propername"	"1"
@@ -26828,6 +26817,13 @@
 			"used_by_classes"
 			{
 				"engineer"	"1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+				}
 			}
 		}
 		"606"
@@ -38406,7 +38402,7 @@
 		{
 			"name"	"Antlers"
 			"first_sale_date"	"2012/12/20"
-			"prefab"	"valve hat"
+			"prefab"	"valve misc"
 			"capabilities"
 			{
 				"can_craft_count"	"1"
@@ -40727,7 +40723,7 @@
 							"scout"		"models/player/items/all_class/chess_scout_red.mdl"
 							"sniper"	"models/player/items/all_class/chess_sniper_red.mdl"
 							"soldier"	"models/player/items/all_class/chess_soldier_red.mdl"
-							"demoman"	"models/player/items/all_class/chess_demoman_red.mdl"
+							"demoman"	"models/player/items/all_class/chess_demo_red.mdl"
 							"medic"		"models/player/items/all_class/chess_medic_red.mdl"
 							"heavy"		"models/player/items/all_class/chess_heavy_red.mdl"
 							"spy"		"models/player/items/all_class/chess_spy_red.mdl"
@@ -40739,7 +40735,7 @@
 							"scout"		"models/player/items/all_class/chess_scout_blue.mdl"
 							"sniper"	"models/player/items/all_class/chess_sniper_blue.mdl"
 							"soldier"	"models/player/items/all_class/chess_soldier_blue.mdl"
-							"demoman"	"models/player/items/all_class/chess_demoman_blue.mdl"
+							"demoman"	"models/player/items/all_class/chess_demo_blue.mdl"
 							"medic"		"models/player/items/all_class/chess_medic_blue.mdl"
 							"heavy"		"models/player/items/all_class/chess_heavy_blue.mdl"
 							"spy"		"models/player/items/all_class/chess_spy_blue.mdl"
@@ -41459,6 +41455,7 @@
 				"can_headshot"			"1"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
+				"can_deal_gib_damage"	"1"
 			}
 			"item_logname"	"the_classic"
 			"item_iconname"	"the_classic"
