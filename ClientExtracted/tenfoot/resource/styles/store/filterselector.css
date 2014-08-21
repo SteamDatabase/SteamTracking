@@ -1,0 +1,201 @@
+@define iconcolorfocused: #3c3d3d;
+@define iconcolor: #8aa5b6;
+
+#Filter
+{
+	height: 48px;
+	font-size: 24px;
+	width: 400px;
+	
+}
+
+#StoreFilter
+{
+	opacity: 0.0;
+	transform: translateY( 80px );
+	transition-property: opacity, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-delay: 0.2s;
+}
+
+
+#Store.FilterVisible:descendantfocus #FrontPage #StoreFilter
+{
+	opacity: 0.0;
+	transform: translateY( 80px );
+	transition-property: opacity, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-delay: 0.1s;
+}
+
+#Store.FilterVisible:descendantfocus #FilteredStoreWrapper #StoreFilter
+{
+	opacity: 0.65;
+	transform: translateY( -20px );
+	visibility: visible;
+	height: 48px;
+	font-size: 24px;
+	width: 400px;
+
+	vertical-align: top;
+	horizontal-align: center;
+	margin-top: 176px;
+
+	transition-property: opacity, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+
+}
+
+#Store.FilterVisible:descendantfocus #FrontPage:descendantfocus #FilteredStoreWrapper:descendantfocus #StoreFilter
+{
+	height: 48px;
+	font-size: 24px;
+	width: 400px;
+	transform: translateY( 0px );
+	opacity: 1.0;
+	visibility: visible;
+	vertical-align: top;
+	horizontal-align: center;
+	margin-top: 176px;
+
+	transition-property: opacity, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s;
+	transition-delay: 0.0s;
+}
+
+#Store.FilterVisible:descendantfocus #FilteredStoreWrapper #StoreFilter
+
+{
+	opacity: 0.0;
+	transform: translateY( -80px );
+	transition-property: opacity, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+
+}
+
+#FilterDropDownMenu Label
+{
+	font-size: 24px;
+	height: 48px;
+}
+
+#IconWrapper
+{
+	visibility: collapse;
+	margin-right: 4px;
+}
+
+#FilterDropDownMenu #IconWrapper
+{
+	visibility: visible;
+	flow-children: right;
+	horizontal-align: right;
+}
+
+#FilterDropDownMenu #IconWrapper Panel
+{
+	horizontal-align: center;
+	vertical-align: center;
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 42px;
+	margin-top: -6px;
+	margin-right: -4px;
+}
+
+.ItemIcon
+{
+	visibility: collapse;
+}
+
+.ItemIcon
+{
+	wash-color: iconcolor;
+	
+	transition-property: wash-color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s;
+}
+
+#FilterDropDownMenu Label:descendantfocus .ItemIcon, 
+#FilterDropDownMenu Label:hover .ItemIcon,
+FilterSelectorItem:focus .ItemIcon
+{
+	wash-color: iconcolorfocused;
+}
+
+#FilterDropDownMenu .WindowsIcon #WindowsIcon
+{
+	background-image: url( "file://{images}/store/icon_platform_win.png" );
+	visibility: visible;
+}
+
+#FilterDropDownMenu .OSXIcon #OSXIcon
+{
+	background-image: url( "file://{images}/store/icon_platform_mac.png" );
+	visibility: visible;
+}
+
+#FilterDropDownMenu .LinuxIcon #LinuxIcon
+{
+	background-image: url( "file://{images}/store/icon_platform_linux.png" );
+	visibility: visible;
+}
+
+#FilterDropDownMenu .GamepadControllerIcon #GamepadControllerIcon
+{
+	background-image: url( "file://{images}/store/icon_fullcontroller.png" );
+	margin-left: 4px;
+	visibility: visible;
+}
+
+#FilterDropDownMenu .GamepadControllerIcon.SteamControllerIcon #GamepadControllerIcon
+{
+	visibility: collapse;
+}
+
+#FilterDropDownMenu .SteamControllerIcon #SteamControllerIcon
+{
+	background-image: url( "file://{images}/store/icon_steamcontroller.png" );
+	margin-left: 8px;
+	margin-top: -4px;
+	visibility: visible;
+}
+
+FilterSelectorItem
+{
+	padding: 4px 4px;
+}
+
+#Filter FilterSelectorItem 
+{
+	padding: 0px 0px;
+	}
+
+
+FilterSelectorItem:descendantfocus DropDownMenu:focus,
+FilterSelectorItem:descendantfocus Label,
+DropDownMenu Label:focus
+{
+	color: applabelselected;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+	transform: translatex(0px);
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+

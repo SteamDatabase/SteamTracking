@@ -3,7 +3,7 @@
 	controls
 	{
 		PlaylistTitleLabel { controlname="Label" style="PlaylistTitleStyle" }
-		PlaylistLabel { controlname="Label" style="PlaylistLabelStyle" }
+		TracksInfoLabel { controlname="Label" style="TracksInfoLabelStyle" }
 		CoverImage { controlname="ImagePanel" style="CoverStyle" scaling=fit}
 		
 		PlayPlaylistButton { 
@@ -11,14 +11,6 @@
 			labeltext="#Music_Playlist_Details_Play" 
 			style="ActionButtonStyle"
 			command="PlaylistPlayAction"
-		}
-		
-		PlayPlaylistNextButton
-		{
-			controlname="Button" 
-			labelText="#Music_Playlist_Details_PlayNext" 
-			style="AdditionalActionButtonStyle"
-			command="PlaylistPlayNextAction"
 		}
 		
 		AddPlaylistToQueueButton
@@ -60,14 +52,14 @@
 			bgcolor=BackgroundStart
 		}
 
-		PlaylistLabelStyle
+		TracksInfoLabelStyle
 		{
 			padding-bottom=10
 			padding-top=10
 			padding-left=10
 			padding-right=10
-			font-size=20
-			textcolor=Text
+			font-size=15
+			textcolor=labeldisabled
 			font-family=basefont
 			font-weight=400 
 			bgcolor=none
@@ -102,8 +94,8 @@
 			textcolor="label"
 			padding-right=0
 			padding-left=-6
-			padding-top=4
-			padding-bottom=-4
+			padding-top=6
+			padding-bottom=-6
 			render_bg	{}
 		}
 		
@@ -113,57 +105,55 @@
 		}
 		
 		
-		ActionButtonStyle
+			ActionButtonStyle
 		{   
-			inset="23 0 0 0"
+			inset="23 1 0 0"
 
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="Text"
+			textcolor="white"
 			font-style=uppercase
 			bgcolor=none
 
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play )"
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
 			}
 			render_bg
-				{
+			{
 				// background fill
-				0="gradient( x0, y0, x1, y1, buttonface2, dialogbg )"
+				0="gradient( x0, y0, x1, y1+1, launch1, launch2 )"
 				}	
 			}
 			
-			ActionButtonStyle:hover
+		ActionButtonStyle:hover
+		{
+			textcolor="white"
+			render
 			{
-				textcolor="TextHover"
-				render
-				{
-					0="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"			
-				}		
-				render_bg
-				{
-				// background fill
-					 0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"  
-				}	
-				           	
-			}
-			
-			ActionButtonStyle:active
+				0="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
+			}	
+			render_bg
 			{
-				textcolor="TextHover"
-				render
-				{
-					0="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"			
-				}		
-				render_bg
-				{
-				// background fill
-					 0="gradient( x0, y0, x1, y1, dialogbg, propertysheetbg )"  
-				}	
-				           	
-			}
+			// background fill
+				0="gradient( x0, y0, x1, y1+1, launch0, launch2  )"
+			}			
+		}
+		
+		ActionButtonStyle:active
+		{
+			textcolor="white"
+			render
+			{
+				0="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
+			}	
+			render_bg
+			{
+			// background fill
+				0="gradient( x0, y0, x1, y1+1, focus, launch2 )"
+			}			
+		}
 }
 	layout
 	{
@@ -174,11 +164,11 @@
 		
 		place { control="CoverImage" align=top width=200 height=200 }
 		
-		place { region=headerregion control=PlaylistTitleLabel,PlaylistLabel,leftcolumn dir=down }
-		place { region=leftcolumn  dir=down start=PlaylistLabel spacing=10
+		place { region=headerregion control=PlaylistTitleLabel,TracksInfoLabel,leftcolumn dir=down }
+		place { region=leftcolumn  dir=down start=TracksInfoLabel spacing=10
 			control=CoverImage,PlayPlaylistButton }
 		place { region=leftcolumn	dir=down start=PlayPlaylistButton 
-			control=PlayPlaylistNextButton,AddPlaylistToQueueButton,AddRandomTracksToPlaylistButton}
-		place { region=trackcolumn control=*MusicPageDetailsPlaylistTrack dir=down start=PlaylistLabel x=230 width=max }
+			control=AddPlaylistToQueueButton,AddRandomTracksToPlaylistButton}
+		place { region=trackcolumn control=*MusicPageDetailsPlaylistTrack dir=down start=TracksInfoLabel x=230 width=max }
 	}
 }

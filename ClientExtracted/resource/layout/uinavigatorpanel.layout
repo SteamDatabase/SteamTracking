@@ -191,6 +191,7 @@
 		library_filters_details	    { ControlName=Label style="ViewDetailButton" tooltiptext="#tooltip_view_details"	group=views }
 		
 		library_music_menu { ControlName=MenuButton labelText="#Music_Nav_Menu_Artists" style="NavLabel2" showDownArrow=0 align=left group=music }
+		library_music_add_button {	ControlName=Button labelText=""	tooltiptext="#Music_Playlist_Details_Menu_Add" style="MusicAddButton" group=music_add_button visible=false }
 		library_music_player_icon { ControlName=URLLabel style="MusicPlayerIcon" tooltiptext="#music_tooltip_view_player" URLtext="steam://open/musicplayer" align=right group=music }
 		
 		emailreminderbar { zpos=1 }
@@ -350,6 +351,28 @@
 			padding-right=-1
 		
 		}
+
+		MusicAddButton
+		{
+			font-size=14
+			font-size=13 [$OSX]
+			font-family=basefont
+			textcolor="labelfocus"
+			font-style=uppercase
+			render_bg
+			{
+				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse )"
+			}
+		}
+		
+		MusicAddButton:hover
+		{
+			textcolor="white"
+			render_bg
+			{
+				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse_over )"
+			}
+		}			
 		
 		MusicPlayerIcon
 		{
@@ -879,8 +902,10 @@
 		place [!$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view" align=right y=55 height=20 spacing=3 margin-right=180 }
 		place [$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view" align=right y=55 height=20 spacing=3 margin-right=179 }
 		
-		place [!$OSX] { control="library_music_menu" align=left x=290 y=55 height=20 spacing=3 margin-right=180 }
-		place [$OSX] { control="library_music_menu" align=left x=290 y=55 height=20 spacing=3 margin-right=179 }
+		place [!$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=180 }
+		place [$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=179 }
+		
+
 			
 		place { control="library_filters_details,library_filters_list,library_filters_grid," align=right y=54 height=20 spacing=4 margin-right=100 width=20 }
 

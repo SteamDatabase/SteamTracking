@@ -23,7 +23,21 @@
 OverlayBasePanel #CommunityFriendsStrip
 {
 	height: 800px;
-	margin-top: -158px;
+	margin-top: -175px;
+}
+
+#OverlayDashboard:descendantfocus #CommunityFriendsStrip
+{
+	transform: translateY( -5px );
+	
+	transition-property: transform;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
+#OverlayDashboard:descendantfocus #CommunityFriendsStrip:descendantfocus
+{
+	transform: translateY( 40px );
 }
 
 #CommunityFeedStrip

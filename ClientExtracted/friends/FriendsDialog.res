@@ -345,15 +345,16 @@
 		place 	[!$OSX] { control="frame_title" visible=0 x=0 y=0 width=max height=0 }
 
  		// the title bar is missing, so increase the size of the grip
-		place { control="frame_captiongrip" margin=2 width=max height=38 }
+		place { control="frame_captiongrip" margin=2 width=max height=100 }
 		place [!$OSX] { control="MenuBar" margin-left=0 height=24 margin-top=2 }
 		
 	
 		
-		place { control="friends_search"  width=112 }	
-		place { control="FriendPanelSelf,friends_search,FriendsDialogSheet" y=24 align=left margin-left=7 margin-right=7 margin-top=2 margin-bottom=38 width=max height=max dir=down spacing=3 }	
+
+		place { control="FriendPanelSelf" y=24 align=left margin-left=7 margin-right=7 margin-top=2 margin-bottom=38 dir=right spacing=3 }	
 		place { control="friends_search_icon" margin-left=-2 start=FriendPanelSelf dir=down margin-top=5 }
 		place { control="friends_search" start=friends_search_icon dir=right margin-right=9 y=-2 margin-bottom=38 width=max }
+		place { control="FriendsDialogSheet" y=102 x=0 margin-left=7 dir=down width=max height=max spacing=3 margin-bottom=38 margin-right=7 }	
 		place { control="addFriendsButton" align=bottom margin-left=16 margin-right=9 margin-bottom=7 height=24 }
  	}
  	

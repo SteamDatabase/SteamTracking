@@ -1194,7 +1194,7 @@ LibraryAchievements .AchievementDetailImage
 	margin: 0px 16px 0px 0px;
 	border-style: solid;
 	border-width: 4px;
-	border-radius: 6px;
+	border-radius: 0px;
 	border-color: #404040e0;
 	box-shadow: fill #00000060 0px 0px 6px 0px;
 }
@@ -1343,7 +1343,7 @@ LibraryAchievements .AchievementIcon
 	margin: 0px 24px 0px 0px;
 	border-style: solid;
 	border-width: 4px;
-	border-radius: 6px;
+	border-radius: 0px;
 	border-color: #636363e0;
 }
 
@@ -1485,7 +1485,7 @@ LibraryGuides .GuideDetailImage
 	margin: 0px 16px 0px 0px;
 	border-style: solid;
 	border-width: 4px;
-	border-radius: 6px;
+	border-radius: 0px;
 	border-color: #404040e0;
 	box-shadow: fill #00000060 0px 0px 6px 0px;
 }
@@ -1578,7 +1578,7 @@ LibraryGuides .GuideIcon
 	margin: 0px 24px 0px 0px;
 	border-style: solid;
 	border-width: 4px;
-	border-radius: 6px;
+	border-radius: 0px;
 	border-color: #636363e0;
 }
 
@@ -1719,8 +1719,8 @@ LibraryController .ControllerDetailImage, LibraryController .AddControllerDetail
 	height: 75px;
 	margin: 0px 16px 0px 0px;
 	border-style: solid;
-	border-width: 3px;
-	border-radius: 4px;
+	border-width: 4px;
+	border-radius: 0px;
 	border-color: #404040e0;
 	box-shadow: fill #202020ff 0px 0px 6px 0px;
 
@@ -1850,7 +1850,7 @@ LibraryController .ControllerIcon, LibraryController .AddControllerIcon,
 	margin: 0px 24px 0px 0px;
 	border-style: solid;
 	border-width: 3px;
-	border-radius: 4px;
+	border-radius: 0px;
 	border-color: #636363e0;
 }
 
@@ -1983,7 +1983,7 @@ LibraryFriendsWhoPlay:focus .FriendsWhoPlayLargeBody, LibraryFriendsWhoPlay:desc
 	margin: 0px 16px 0px 3px;
 	border-style: solid;
 	border-width: 4px;
-	border-radius: 6px;
+	border-radius: 0px;
 	box-shadow: inset #000000aa 0px 0px 8px 0px;
 }
 
@@ -2127,7 +2127,7 @@ LibraryFriendsWhoPlay AvatarImage
 	height: 80px;
 	border-style: solid;
 	border-width: 4px;
-	border-radius: 6px;
+	border-radius: 0px;
 	box-shadow: #00000033 -3px -3px 4px 6px;
 }
 
@@ -2153,8 +2153,8 @@ LibraryFriendsWhoPlay .FriendWhoPlaysWrapper
 LibraryFriendsWhoPlay #FriendWhoPlaysWrapper8
 {
 	border-style: solid;
-	border-width: 3px;
-	border-radius: 4px;
+	border-width: 4px;
+	border-radius: 0px;
 	border-color: #404040e0;
 }
 
@@ -2973,46 +2973,54 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	width: 157px;
 	height: 162px;
 	horizontal-align: right;
+	visibility: visible;
 }
 
 #ControllerSupportPlayAction
 {
 	width: 60px;
-	height: 50px;
+	height: 60px;
 	margin: 14px 14px 0px 0px;
 	background-repeat: no-repeat no-repeat;
 	background-size: 100% 100%;
 
 	horizontal-align: right;
 
-	opacity: 0.0;
+	visibility: collapse;
 
-	transition-property: opacity; 
-	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
 }
 
 .FullController:descendantfocus #ControllerSupportPlayAction
 {
 	background-image: url( "file://{images}/controller_support_full.png" );
-	wash-color: white;
-	opacity: 1.0;
-}
-
-.PartialController:descendantfocus #ControllerSupportPlayAction
-{
-	background-image: url( "file://{images}/controller_support_partial.png" );
 	background-repeat: no-repeat no-repeat;
 	background-size: 100% 100%;
 	wash-color: white;
-	opacity: 1.0;
+	visibility: visible;
+}
+
+.SteamPad .PartialController:descendantfocus #ControllerSupportPlayAction,
+{
+	background-image: url( "file://{images}/controller_support_legacy.png" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+	wash-color: white;
+	visibility: visible;
+}
+
+.SteamPad .FullController:descendantfocus #ControllerSupportPlayAction,
+{
+	background-image: url( "file://{images}/controller_support_native.png" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+	wash-color: white;
 }
 
 .SteamPad #ControllerSupportPlayAction,
 .SteamPad .FullController:descendantfocus #ControllerSupportPlayAction,
 .SteamPad .PartialController:descendantfocus #ControllerSupportPlayAction
 {
-	opacity: 1.0;
+	visibility: visible;
 }
 
 .PlayTimeBody
@@ -3320,21 +3328,45 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 {
 	flow-children: right;
 }
-
+.SteamPad #ControllerSupport,
 .FullController #ControllerSupport,
-.PartialController #ControllerSupport
 {
-	width: 46px;
-	height: 39px;
+	width: 50px;
+	height: 50px;
 	margin-right: -8px;
 	vertical-align: center;
 
 	visibility: visible;
-	opacity: 0.0;
 
 	transition-property: opacity;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
+}
+
+.PartialController #ControllerSupport
+{
+	visibility: collapse;
+}
+
+.SteamPad AppGridItem #ControllerSupport
+.SteamPad LibraryRecentApp #ControllerSupport
+{
+	background-image: url( "file://{images}/controller_support_legacy.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: applabelsolid;
+	visibility: collapse;
+}
+
+
+.SteamPad LibraryRecentApp:descendantfocus #ControllerSupport,
+.SteamPad AppGridItem:descendantfocus #ControllerSupport
+{
+	background-image: url( "file://{images}/controller_support_legacy.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: applabelsolid;
+	visibility: visible;
 }
 
 .FullController:focus #ControllerSupport
@@ -3345,7 +3377,18 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	wash-color: applabelsolid;
 	visibility: visible;
 
-	opacity: 1.0;
+
+}
+
+.SteamPad .FullController:focus #ControllerSupport
+{
+	background-image: url( "file://{images}/controller_support_native.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: applabelsolid;
+	visibility: visible;
+
+
 }
 
 .PartialController:focus #ControllerSupport
@@ -3354,8 +3397,18 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	background-size: contain;
 	background-repeat: no-repeat;
 	wash-color: applabelsolid;
+	visibility: collapse;
+
+}
+
+.SteamPad .PartialController:focus #ControllerSupport
+{
+	background-image: url( "file://{images}/controller_support_legacy.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: applabelsolid;
 	visibility: visible;
-	opacity: 1.0;
+
 }
 
 .LibraryMostRecent:descendantfocus .RecentApp:focus
@@ -3824,27 +3877,14 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 .FullController #GridControllerSupport,
 .PartialController #GridControllerSupport
 {
-	width: 46px;
-	height: 39px;
+	width: 50px;
+	height: 50px;
 	margin-top: 4px;
 	margin-right: 6px;
 
-	opacity: 0.0;
 	visibility: collapse;
 
-	transition-property: opacity;
-	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
-}
 
-.FullController:focus #GridControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_full.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	opacity: 1.0;
-	visibility: visible;
 }
 
 .PartialController:focus #GridControllerSupport
@@ -3853,9 +3893,36 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	background-size: contain;
 	background-repeat: no-repeat;
 	wash-color: applabelsolid;
-	opacity: 1.0;
+	visibility: collapse;
+}
+
+.SteamPad .PartialController:focus #GridControllerSupport
+{
+	background-image: url( "file://{images}/controller_support_legacy.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: applabelsolid;
 	visibility: visible;
 }
+
+.FullController:focus #GridControllerSupport
+{
+	background-image: url( "file://{images}/controller_support_full.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: applabelsolid;
+	visibility: visible;
+}
+
+.SteamPad .FullController:focus #GridControllerSupport
+{
+	background-image: url( "file://{images}/controller_support_native.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: applabelsolid;
+	visibility: visible;
+}
+
 
 .AppGridItem:hover
 {
@@ -4025,7 +4092,7 @@ DropDown
 {
 	width: 480px;
 	overflow: clip scroll;
-	max-height: 780px;
+	max-height: 690px;
 }
 
 #GamesFilterDropDownMenu Label
@@ -4764,16 +4831,22 @@ KeyboardShortcut Image
 #CategoryStack
 {
 	margin-top: 10px;
+	margin-left: -10px;
 	flow-children: down;
 	overflow: clip scroll;
 	max-height: 500px;
 	width: 100%;
+	
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 }
 
 #CategoryStack .CategoryToggle
 {
-	 width: 100%;
-	 margin-right: 20px;
+	width: 100%;
+	margin-right: 20px;
+	margin-left: 10px;
 }
 
 .CategoryToggleText
@@ -4786,7 +4859,7 @@ KeyboardShortcut Image
 #NewCategory
 {
 	margin-top: 20px;
-	padding-top: -2px;
+	padding-top: 4px;
 	font-size: 28px;
 	width: 760px;
 }
@@ -4828,10 +4901,10 @@ KeyboardShortcut Image
 {
 	animation-name: main-button-glow-movement, quick-blur;
 	animation-duration: longduration, 0.45s;
-	animation-delay: mediumduration, 0.0s;
+	animation-delay: 0.0s;
 	animation-timing-function: ease-in-out, ease-out;
 	animation-iteration-count: infinite, 1;
-	animation-direction: normal;		
+	animation-direction: normal;
 }
 
 .CheckBox:descendantfocus
@@ -4846,7 +4919,7 @@ KeyboardShortcut Image
 	height: 50px;
 	margin-left: 0px;
 	vertical-align: center;
-	background-color: ui_common_control;
+	background-color: blue;
 
 	transition-property: transform, background-color, border, box-shadow, color;
 	transition-timing-function: ease-out;
@@ -4858,8 +4931,8 @@ KeyboardShortcut Image
 	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	background-color: ui_common_control;
-	
+	background-color: blue;
+
 }
 
 .CheckBox:Focus .TickBox
@@ -4905,7 +4978,7 @@ KeyboardShortcut Image
 
 .CheckBox:focus Label
 {
-	color: #000000ff;
+	color: applabel;
 	transform: translatex(0px);
 }
 

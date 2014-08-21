@@ -97,6 +97,16 @@
 	visibility: visible;
 }
 
+#ZeroTracker
+{
+	visibility: collapse;
+}
+
+.VRModeActive #ZeroTracker
+{
+	visibility: visible;
+}
+
 #MusicControllerPanel:descendantfocus .SystemButton:hover
 {
 	transition-duration: 0.25s !immediate;

@@ -30,6 +30,10 @@
 			<Button id="EmptyQueueButton" onactivate="EmptyQueue();">
 				<Label text="#Music_Control_Clear_Queue" />
 			</Button>
+			<Panel class="HorizontalRule"/>
+			<Button onactivate="CreatePlaylistFromQueue();">
+				<Label text="#Music_Control_Create_Playlist_From_Queue" />
+			</Button>
 
 		</Panel>
 	</MusicControlMoreDialog>

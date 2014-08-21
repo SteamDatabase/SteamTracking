@@ -11,7 +11,10 @@
 		<Image id="GridBackground" class="GridBackground" />
 		<Panel id="UpperRow" class="UpperRow">
 			<Label id="AlbumLabel" class="AlbumLabel" text="#MusicAlbum_Album" />
-			<Label id="ArtistLabel" class="ArtistLabel" text="#MusicAlbum_Artist" />
+			<Panel class="ArtistRow">
+				<Label id="ArtistLabel" class="ArtistLabel" text="#MusicAlbum_Artist" />
+
+			</Panel>
 		</Panel>
 		
 		<Panel id="Body" class="Body">	
@@ -27,10 +30,11 @@
 		
 			<Panel id="RightColumn" class="RightColumn" tabindex="auto" selectionpos="auto" selectionposboundary="vertical">
 				<Panel class="TopSpacer" />				
-				<Panel childfocusonhover="false" id="TrackButtonContainer" class="TrackButtonContainer" >
+				<Panel childfocusonhover="true" id="TrackButtonContainer" class="TrackButtonContainer" >
 					<Button id="AlbumActionButton" class="AlbumActionButton" 
 						onfocus="AlbumActionButtonGotFocus();" onactivate="AlbumDetailPlay();">
 						<Label id="AlbumActionLabel" text="#MusicAlbum_Play_Album" />
+						<Label id="TracksInfoLabel" class="TracksInfoLabel" text="#Music_TracksInfo_NoTracks" />
 					</Button>				
 					<Panel id="Separator" class="Separator" />	
 				</Panel>	

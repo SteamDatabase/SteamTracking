@@ -300,6 +300,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 	transition-property: opacity, transform, desaturation, wash-color, pre-transform-scale2d, opacity;
 	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
 	overflow: noclip noclip;
 
 	animation-name: store-perspective;
@@ -325,7 +326,7 @@ StorePanel:descendantfocus #FeaturedCapsules
 
 #FrontPage:descendantfocus #FeaturedCapsules
 {
-	transform: translate3d(-340px, -260px, -440px);
+	transform: translate3d(-340px, -190px, -440px);
 	desaturation: 0.5;
 	wash-color: bgcolorwashlight;
 	opacity: 0.9;
@@ -339,16 +340,45 @@ StorePanel:descendantfocus #FeaturedCapsules
 	pre-transform-scale2d: 1.02;
 }
 
-#FrontPage:descendantfocus #FeaturedCapsules:descendantfocus
+#StoreFilter
+{
+	visibility: collapse;
+}
+
+.FilterVisible #FilteredStoreWrapper:descendantfocus #StoreFilter
+{
+	vertical-align: top;
+	horizontal-align: center;
+	margin-top: 170px;
+	visibility: visible;
+}
+
+.FrontPageLoading #StoreFilter
+{
+	visibility: collapse;
+}
+
+#FilteredStoreWrapper:descendantfocus #FeaturedCapsules
 {
 	animation-name: none;
-	transform: translate3d(-440px, 80px, 0px);
+	transform: translate3d(-440px, 120px, 0px);
 	desaturation: 0;
 	wash-color: #61e2ff00;
 	opacity: 1.0;
 	blur: none;
+}
+
+.FilterVisible #FilteredStoreWrapper:descendantfocus #FeaturedCapsules
+{
+	transform: translate3d(-440px, 100px, -50px);
+}
+
+.FilterVisible #FilteredStoreWrapper:descendantfocus #FeaturedCapsules:descendantfocus
+{
+	transform: translate3d(-440px, 80px, -20px);
 
 }
+
 
 #FrontPage:descendantfocus #FeaturedCapsules:descendantfocus:hover
 {
@@ -382,7 +412,7 @@ StorePanel:descendantfocus #FeaturedCapsules
 	height: 353px;
 	border-color: transparent;
 	box-shadow: fill #00000033 -3px -3px 6px 6px;
-	wash-color: store_main_wash;
+	wash-color: store_dark_wash;
 
 	transition-property: wash-color, opacity-mask, box-shadow;
 	transition-delay: 0.0s;
@@ -548,33 +578,70 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.WindowsAvailable .Wi
 	background-repeat: no-repeat;
 }
 
-StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport
+.SteamPad .CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport
+{
+	width: 50px;
+	height: 50px;
+
+
+	vertical-align: center;
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_steamcontroller_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport,
+.SteamPad StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport,
 {
 	margin: 0px;
 	width: 45px;
 	height: 45px;
-	margin-top: 0px;
+	margin-top: -2px;
+	margin-left: 4px;
 }
+
+
 
 .CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
 {
 	width: 50px;
 	height: 50px;
 
-	visibility: visible;
+	visibility: collapse;
 
 	background-image: url( "file://{images}/store/icon_partialcontroller_storefront.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
+.SteamPad .CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
+{
+	width: 50px;
+	height: 50px;
+
+	visibility: visible;
+
+	background-image: url( "file://{images}/store/icon_legacycontroller_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
 {
+	visibility: collapse;
+}
+
+.SteamPad StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
+{
+	visibility: visible;
 	margin: 0px;
 	width: 45px;
-	margin-top: 0px;
+	margin-top: -2px;
+	margin-left: 4px;
 	height: 45px;
 }
+
 
 .SteamPad .CapsuleControllerSupportContainer.PartialController:descendantfocus .CapsuleControllerSupport, 
 .SteamPad .CapsuleControllerSupportContainer.FullController:descendantfocus .CapsuleControllerSupport,
@@ -584,7 +651,14 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .C
 
 .SteamPad .CapsuleControllerSupportContainer .CapsuleControllerSupport
 {
-	visibility: collapse;
+	width: 50px;
+	height: 50px;
+	visibility: visible;
+	margin-left: 4px;
+
+	background-image: url( "file://{images}/store/icon_legacycontroller_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 #FeaturedCapsules #StoreImageDiscount
@@ -619,16 +693,31 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .C
 #FrontPage:descendantfocus #FeaturedCapsules .ActualStoreImage
 {
 	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 1.0;
+	blur: none;
+	desaturation: 0.0;
 }
 
 #FrontPage:descendantfocus #FeaturedCapsules:descendantfocus .ActualStoreImage
 {
 	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
+	blur: none;
+	desaturation: 0.0;
 }
 
-#FrontPage:descendantfocus #FeaturedCapsules .ActualStoreImage
+
+.FilterVisible #FilteredStoreWrapper:descendantfocus #FeaturedCapsules .ActualStoreImage
 {
-	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 1.0;
+	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
+	blur: gaussian (0.7);
+	desaturation: 0.5;
+}
+
+
+.FilterVisible #FilteredStoreWrapper:descendantfocus #FeaturedCapsules:descendantfocus .ActualStoreImage
+{
+	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
+	blur: none;
+	desaturation: 0.0;
 }
 
 StorePanel:descendantfocus .StoreImage

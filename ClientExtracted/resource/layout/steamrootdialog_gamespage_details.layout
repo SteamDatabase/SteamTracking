@@ -73,11 +73,6 @@
 			inset="0 0 0 1"
 			render
 						{
-							
-							//gradient to obscure content at bottom of scrolling region 
-							2="gradient( x0+2, y1 - 16, x1-1, y1-1, none, almostblacktrans )"
-							
-
 						}
 			render_bg
 			{

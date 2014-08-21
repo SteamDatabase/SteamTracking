@@ -592,17 +592,11 @@ RefreshLogin #LoginMessageContainer
 	opacity: 0.6;
 }
 
-.LoginThrobber
+LoadingThrobber
 {
 	opacity: 1.0;
-	width: 54px;
-	height: 54px;
 	margin-bottom: 10px;
 	horizontal-align: center;
-	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
-	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
 }
 
 #Exit

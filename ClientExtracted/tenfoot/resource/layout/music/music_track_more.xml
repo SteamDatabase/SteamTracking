@@ -12,11 +12,11 @@
 			<Button onactivate="PlaySubsequentTracks( true, false);" >
 				<Label text="#MusicAlbum_Play" />
 			</Button>
-			<Button id="TrackPlayNextButton" onactivate="PlayCurrentTrack( false, true);" >
-				<Label text="#MusicAlbum_Play_Next" />
-			</Button>
 			<Button onactivate="PlayCurrentTrack( false, false);" >
 				<Label text="#MusicAlbum_Add_To_Queue" />
+			</Button>
+			<Button id="TrackAddToPlaylistButton" onactivate="AddTrackToPlaylist();" >
+				<Label id="AddToPlaylistLabel" text="#MusicAlbum_Add_To_Playlist" />
 			</Button>
 			<Panel class="HorizontalRule" id="AlbumSeparator"/>
 			<Button id="ViewEntireAlbum" onactivate="ViewEntireAlbum();">

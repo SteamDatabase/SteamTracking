@@ -36,27 +36,11 @@
 		      {      
 
 						// lines around
-			1="fill( x0 + 2, y0, x1 - 2, y0 + 3, DialogBG )"  // top
-			2="fill( x0 + 2, y1 - 3, x1 - 2, y1, DialogBG )"  // bottom
-			3="fill( x0, y0 + 2, x0 + 3, y1 - 2, DialogBG )"  // left
-			4="fill( x1 - 3, y0 + 2, x1, y1 - 2, DialogBG )"  // right
-	
-			// single pixel fills in the corners
-			5="fill( x0 + 1, y0 + 1, x0 + 2, y0 + 2, DialogBG )"
-			6="fill( x1 - 2, y0 + 1, x1 - 1, y0 + 2, DialogBG )"
-			7="fill( x0 + 1, y1 - 2, x0 + 2, y1 - 1, DialogBG )"
-			8="fill( x1 - 2, y1 - 2, x1 - 1, y1 - 1, DialogBG )"
-			9="fill( x0, y0 + 1, x0 + 1, y0 + 2, DarkClientBG )"
-			10="fill( x1 - 1, y0 + 1, x1, y0 + 2, DarkClientBG )"
-			11="fill( x0, y1 - 2, x0 + 1, y1 - 1, DarkClientBG )"
-			12="fill( x1 - 1, y1 - 2, x1, y1 - 1, DarkClientBG )"
-			13="fill( x0 + 1, y0, x0 + 2, y0 + 1, DarkClientBG )"
-			14="fill( x1 - 2, y0, x1 - 1, y0 + 1, DarkClientBG )"
-			15="fill( x0 + 1, y1 - 1, x0 + 2, y1, DarkClientBG )"
-			16="fill( x1 - 2, y1 - 1, x1 - 1, y1, DarkClientBG )"
-	
-			
-			
+			1="fill( x0, y0, x1, y0 + 3, DialogBG )"  // top
+			2="fill( x0, y1 - 3, x1, y1, DialogBG )"  // bottom
+			3="fill( x0, y0, x0 + 3, y1, DialogBG )"  // left
+			4="fill( x1 - 3, y0, x1, y1, DialogBG )"  // right
+		
 		      }	
 		}	
     

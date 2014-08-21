@@ -154,20 +154,18 @@ SearchDialog.Destructing
 	width: 100%;
 }
 
-.SearchThrobber
+LoadingThrobber
 {
+	opacity: 0.0;
 	width: 40px;
 	height: 40px;
 	align: right center;
 	margin-right: 30px;
 }
 
-.Searching .SearchThrobber
+.Searching LoadingThrobber
 {
-	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
-	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
+	opacity: 1.0;
 }
 
 #Input
@@ -255,6 +253,20 @@ SearchDialog.Destructing
 	visibility: collapse;
 }
 
+.SteamPad #IconController,
+.SteamPad .PartialController #IconController
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_legacycontroller.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	width: 45px;
+	height: 45px;
+	vertical-align: center;
+}
+
+
 .FullController #IconController
 {
 	visibility: visible;
@@ -262,23 +274,22 @@ SearchDialog.Destructing
 	background-image: url( "file://{images}/controller_support_full.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
-//	wash-color: storeoverviewcolor;
+
 	width: 40px;
 	height: 40px;
 }
 
-.PartialController #IconController
+.SteamPad .FullController #IconController
 {
 	visibility: visible;
-	background-image: url( "file://{images}/controller_support_partial.png" );
+
+	background-image: url( "file://{images}/controller_support_native.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
-//	wash-color: white;
-	width: 40px;
-	height: 33px;
-	vertical-align: center;
-}
 
+	width: 40px;
+	height: 40px;
+}
 
 
 //

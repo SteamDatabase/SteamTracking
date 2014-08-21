@@ -159,9 +159,10 @@ steam.styles
 		parental_lock_active2 "49 49 49 255"	
 		parental_lock_active4 "122 145 71 255"
 		parental_lock_active5 "85 102 47 255"	
-		green5 "171 212 21 255"
-		green6 "150 184 28 255"
-		green7 "103 128 13 255"
+		green5 "131 162 15 255"
+		green6 "106 131 12 255"
+		green7 "58 70 13 255"
+		green8 "38 48 2 255"
 
 
 		launch0 "119 215 250 255"
@@ -557,10 +558,7 @@ steam.styles
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-        render	{      
-				//gradient to obscure content at bottom of scrolling region 
-				0="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
-		}  
+        render	{      	}  
 			render_bg {				
 					// background gradient        
 					1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
@@ -572,10 +570,7 @@ steam.styles
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-				render	{      
-				//gradient to obscure content at bottom of scrolling region 
-				0="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
-				}
+				render	{     		}
     		render_bg {				
 				// background gradient        
 				1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
@@ -587,12 +582,8 @@ steam.styles
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-        render	{      
-			//gradient to obscure content at bottom of scrolling region 
-				0="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
-				}  
-	
-	render_bg
+        render	{      	}  
+				render_bg
         {     
 					// background fill
 					1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
@@ -604,10 +595,7 @@ steam.styles
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-        render {
-        		//gradient to obscure content at bottom of scrolling region 
-						0="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
-			 }   
+        render { }   
         render_bg
         {     
 					// background fill
@@ -1048,10 +1036,7 @@ steam.styles
 		selectedbgcolor="Focus"
 		shadowtextcolor="TextDisabled"	// the color of disabled line items		
 		render
-			{				
-        	//gradient to obscure content at bottom of scrolling region 
-		2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
-			}
+			{	}
 		render_bg { }
 	}	
         		
@@ -1476,8 +1461,7 @@ steam.styles
 		bgcolor="none" 
     render
 			{				
-        //gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
+
 			}
 		render_bg 
 			{				
@@ -1492,8 +1476,7 @@ steam.styles
 		textcolor="text2"
 		render
 			{				
-        			//gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
+
 			}
 		render_bg 
 			{				
@@ -1522,8 +1505,6 @@ steam.styles
 			render
 				{
 
-					//gradient to obscure content at bottom of scrolling region 
-					1="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
 				}
 			render_bg {}
 
@@ -1536,8 +1517,7 @@ steam.styles
 		bgcolor=none
 		render
 		{		
-			//gradient to obscure content at bottom of scrolling region 
-			2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
+
 		}
 		render_bg 
 		{				
@@ -2357,8 +2337,7 @@ steam.styles
 			bgcolor="none"
 		render
 			{				
-       //gradient to obscure content at bottom of scrolling region 
-			2="gradient( x0, y1 - 16, x1-16, y1, none, almostblacktrans )"
+
 			}
 		      render_bg 
       {
@@ -2872,12 +2851,11 @@ steam.styles
       textcolor="label"
       selectedtextcolor="TextSelected"
       
-          render
+      render
 			{				
-        //gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0, y1 - 16, x1, y1, none, almostblacktrans )"
+
 			}
-		render_bg 
+			render_bg 
 			{				
 				// background gradient        
 				1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
@@ -3311,9 +3289,7 @@ steam.styles
 
 			render
 			{
-		
-				//gradient to obscure content at bottom of scrolling region 
-				2="gradient( x0+9, y1 -88, x1-24, y1-74, none, almostblacktrans )"
+
 			}
 			render_bg
 			{

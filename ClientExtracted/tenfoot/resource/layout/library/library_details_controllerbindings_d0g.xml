@@ -59,26 +59,60 @@
 								</Panel>
 							</Button>
 
-							<Button id="Touch0ButtonOuter" class="BindingButton" selectionpos="0,4" onactivate="EditButtonBinding( touch_button_0 );">
+							<Button id="S1Button" class="BindingButton" selectionpos="0,4" onactivate="EditButtonBinding( s1 );">
+								<Label id="S1ActionName" class="ActionLabel" />
+								<Label id="S1ActionMapping" class="ActionMapping" />
+							</Button>
+
+							<Button id="SelectButtonOuter" class="BindingButton" selectionpos="0,5" onactivate="EditButtonBinding( select_button );">
+								<Label id="SelectActionName" class="ActionLabel" />
+								<Label id="SelectActionMapping" class="ActionMapping" />
+							</Button>
+
+							<Button id="StartButtonOuter" class="BindingButton" selectionpos="0,6" onactivate="EditButtonBinding( start_button );">
+								<Label id="StartActionName" class="ActionLabel" />
+								<Label id="StartActionMapping" class="ActionMapping" />
+							</Button>
+
+							<Button id="SteamButtonOuter" class="BindingButton" selectionpos="0,7" onactivate="EditButtonBinding( steam_button );">
+								<Label id="SteamActionName" class="ActionLabel" />
+								<Label id="SteamActionMapping" class="ActionMapping" />
+							</Button>
+
+							<Button id="Touch0ButtonOuter" class="BindingButton BindingButtonRight TouchButtonOuter" selectionpos="1,9" onmoveleft="SetInputFocus( L3Button )" onactivate="EditButtonBinding( touch_button_0 );">
 								<Label id="Touch0ActionName" class="ActionLabel" />
 								<Label id="Touch0ActionMapping" class="ActionMapping" />
+								<Panel id="Touch0Button" class="TouchButton">
+									<Label id="Touch0Image" class="TouchImage" text="1" />
+								</Panel>
 							</Button>
 
-							<Button id="Touch2ButtonOuter" class="BindingButton" selectionpos="0,5" onactivate="EditButtonBinding( touch_button_2 );">
-								<Label id="Touch2ActionName" class="ActionLabel" />
-								<Label id="Touch2ActionMapping" class="ActionMapping" />
-							</Button>
-
-							<Button id="Touch1ButtonOuter" class="BindingButton" selectionpos="0,6" onactivate="EditButtonBinding( touch_button_1 );">
+							<Button id="Touch1ButtonOuter" class="BindingButton TouchButtonOuter" selectionpos="1,10" onmoveright="SetInputFocus( R3Button )" onactivate="EditButtonBinding( touch_button_1 );">
 								<Label id="Touch1ActionName" class="ActionLabel" />
 								<Label id="Touch1ActionMapping" class="ActionMapping" />
+								<Panel id="Touch1Button" class="TouchButton">
+									<Label id="Touch1Image" class="TouchImage" text="2" />
+								</Panel>
 							</Button>
 
-							<Button id="Touch3ButtonOuter" class="BindingButton" selectionpos="0,7" onactivate="EditButtonBinding( touch_button_3 );">
+							<Button id="Touch2ButtonOuter" class="BindingButton BindingButtonRight TouchButtonOuter" selectionpos="1,11" onmoveleft="SetInputFocus( L3Button )" onactivate="EditButtonBinding( touch_button_2 );">
+								<Label id="Touch2ActionName" class="ActionLabel" />
+								<Label id="Touch2ActionMapping" class="ActionMapping" />
+								<Panel id="Touch2Button" class="TouchButton">
+									<Label id="Touch2Image" class="TouchImage" text="3" />
+								</Panel>
+							</Button>
+
+							<Button id="Touch3ButtonOuter" class="BindingButton TouchButtonOuter" selectionpos="1,12" onmoveright="SetInputFocus( R3Button )" onactivate="EditButtonBinding( touch_button_3 );">
 								<Label id="Touch3ActionName" class="ActionLabel" />
 								<Label id="Touch3ActionMapping" class="ActionMapping" />
+								<Panel id="Touch3Button" class="TouchButton">
+									<Label id="Touch3Image" class="TouchImage" text="4" />
+								</Panel>
 							</Button>
-
+							
+							
+							
 							<Button id="R2Button" class="BindingButton BindingButtonRight" selectionpos="1,1" onactivate="EditButtonBinding( right_trigger );">
 								<Label id="R2ActionName" class="ActionLabel" />
 								<Label id="R2ActionMapping" class="ActionMapping" />

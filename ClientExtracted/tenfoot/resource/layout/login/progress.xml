@@ -5,7 +5,7 @@
 	</styles>
 
 	<LoginProgress defaultfocus="Cancel" tabindex="auto" selectionpos="auto">
-		<Panel class="LoginThrobber" />
+		<LoadingThrobber class="Small" />
 		<Label class="ProgressLabel" id="ProgressLabel" />
 		<ProgressBar id="ProgressBar" />
 	</LoginProgress>

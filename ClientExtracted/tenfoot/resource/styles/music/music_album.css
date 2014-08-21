@@ -54,10 +54,15 @@ MusicAlbumPanel
 	vertical-align: center;
 }
 
+.ArtistRow
+{
+	flow-children: right;
+}
+
 .ArtistLabel
 {
 	font-family: platformfont;
-	font-weight: normal;
+	font-weight: bold;
 	color: carousel_title;
 	font-size: 24px;
 	height: 50px;
@@ -66,6 +71,26 @@ MusicAlbumPanel
 
 	margin-left: 100px;
 	vertical-align: center;
+}
+
+#TracksInfoLabel
+{
+	font-family: platformfont;
+	font-weight: bold;
+	color: #888888ff;
+	font-size: 18px;
+	margin-top: 4px;
+	white-space: nowrap;
+	text-align: right;
+	horizontal-align: right;
+	margin-right: 5px;
+	width: fit-children;
+	transform: translateX( -14px );
+}
+
+.AlbumActionButton:focus #TracksInfoLabel
+{
+	transform: translateX( -14px );
 }
 
 #AlbumCoverUpperLabel
@@ -157,12 +182,11 @@ MusicAlbumPanel
 
 .LeftColumn
 {
-	width: 50%;
+	width: 980px;
 }
 
 .RightColumn
 {
-	width: 50%;
 	flow-children: down;
 }
 
@@ -171,11 +195,11 @@ MusicAlbumPanel
 	width: 600px;
 	height: 600px;
 	margin-top: 48px;
-	margin-left: 300px;
+	margin-left: 330px;
 	margin-right: 10px;
 	margin-bottom: 10px;
 	box-shadow: fill #00000033 -5px -5px 18px 10px;
-	
+
 	opacity: 0.0;
 }
 
@@ -196,10 +220,15 @@ MusicAlbumPanel
 	width: 700px;
 	background-color: transparent;
 	font-weight: bold;
-	transform: translateX(-7px);
+	transform: translateX(-14px);
 	transition-property: transform;
 	transition-duration: 0.23s;
 	color: applabel;
+}
+
+.AlbumActionButton
+{
+	transform: translateX(0px);
 }
 
 .AlbumActionButton:focus Label
@@ -252,7 +281,7 @@ MusicAlbumPanel
 
 
 
-.TrackButton Label
+.TrackButton #TrackLabel
 {
 
 	color: applabel;
@@ -267,16 +296,12 @@ MusicAlbumPanel
 
 .TrackButton:hover
 {
-	background-color: simplebutton;
+	//background-color: simplebutton;
 	box-shadow: none;
 	transition-property: background-color;
 	transition-duration: 0.23s;
 }
 
-.TrackButton:hover Label
-{
-	transform: translateX(0px);
-}
 
 .TrackButton:focus:hover
 {
@@ -308,10 +333,10 @@ MusicAlbumPanel
 }
 
 
-
 .TimeLabel
 {
 	transform: translateX(500px);
+	font-weight: bold;
 	visibility: collapse;
 	horizontal-align: right;
 	transition-property: opacity;
@@ -320,7 +345,7 @@ MusicAlbumPanel
 
 .TrackCurrentlyPlaying
 {
-	background-color: simplebutton;
+	//background-color: simplebutton;
 }
 
 .TrackCurrentlyPlaying #ElapsedLabel
@@ -342,28 +367,65 @@ MusicAlbumPanel
 	visibility: collapse;
 }
 
-.TrackCurrentlyPlaying Label
+.TrackCurrentlyPlaying Label,
+.TrackButton:focus .TrackCurrentlyPlaying Label
 {
 	color: messagecolorwashfade;
 	transform: translateX( 0px );
 	width: 100%;
 }
 
-.TrackCurrentlyPlaying #TrackLabel
-{
-	color: messagecolorwashfade;
-}
-
-.TrackButton:focus .TrackCurrentlyPlaying #TrackLabel
-{
-	color: gradient( linear, 0% 0%, 85% 85%, from( #3c3c3cff ), color-stop( 0.82, #3c3c3cff ), to( #3c3c3c00 ) );
-}
-
-.TrackButton:focus Label
+.TrackButton:focus #TrackLabel
 {
 	color: musicapplabelselected;
 	transform: translateX(0px);
+	
+
 }
+
+.TrackCurrentlyPlaying #TrackLabel,
+.TrackButton:focus .TrackCurrentlyPlaying #TrackLabel
+{
+	color: messagecolorwashfade;
+  width: 85%;
+}
+
+.TrackButton #TrackPosition
+{
+	transform: translateX( -14px );
+	max-width: 45px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: left;
+	padding-right: 4px;
+	padding-top: 4px;
+	color: #999999ff;
+	width: fit-children;
+	transition-property: transform, color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s;
+}
+
+
+
+
+.TrackButton:focus #TrackPosition
+{
+	color: #666666ff;
+	transform: translateX( 0px );
+}
+
+
+.TrackButton #TrackLabel
+{
+	transform: translateX( 50px );
+}
+
+.TrackButton:focus #TrackLabel
+{
+	transform: translateX( 50px );
+}
+
 
 #OverlayBasePanel #MusicAlbumPanel
 {

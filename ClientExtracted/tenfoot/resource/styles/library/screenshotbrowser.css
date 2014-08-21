@@ -128,6 +128,11 @@ ScreenshotBrowserItem:descendantfocus
 	background-image: url( "file://{images}/library/screenshot_grid_shadow.png");
 }
 
+ScreenshotBrowserItem.LastFocused
+{
+	z-index: 50;
+}
+
 ScreenshotBrowserItem #Screenshot
 {
 	width: 547px;

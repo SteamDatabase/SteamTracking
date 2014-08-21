@@ -4,6 +4,12 @@ CommunityFrontPage
 	method		"internal"
 	filter		"community"
 }
+CommunityMenu
+{
+	url			"%community%/menu"
+	method		"internal"
+	filter		"community"
+}
 CommunityHome
 {
 	url			"%community%/home"
@@ -564,7 +570,7 @@ SteamGreenlight
 	method		"internal"
 	filter		"community"
 }
-SteamMarketplace
+CommunityMarket
 {
 	url		"%community%/market/"
 	method		"internal"
