@@ -29,7 +29,7 @@ function OnGroupHashChange( hash, bInitialLoad )
 		if ( rgMatches && rgMatches[0] )
 		{
 			url = rgMatches[0];
-			url = url.replace( /\.+\//g, '' );	//clean out any ./ or ../ in the URL
+			url = url.replace( /\.+[\/\\]/g, '' );	//clean out any ./ or ../ in the URL
 			strTab = url.match( /^[a-zA-Z]*/ )[0];
 		}
 	}
@@ -103,14 +103,17 @@ function OnGroupContentLoadComplete( strTab, url, transport )
 	ScrollToIfNotInView( 'group_tab_overview', 20, 150 );
 
 
-	var elContent = new Element( 'div' );
-	$('group_page_dynamic_content').appendChild( elContent );
-	elContent.update( transport.responseText );
+		if ( transport.responseJSON == null )
+	{
+		var elContent = new Element( 'div' );
+		$('group_page_dynamic_content').appendChild( elContent );
+		elContent.update( transport.responseText );
 
-	g_rgPageContentCache[ url ] = {
-		timestamp: new Date().getTime(),
-		html: elContent
-	};
+		g_rgPageContentCache[ url ] = {
+			timestamp: new Date().getTime(),
+			html: elContent
+		};
+	}
 
 	g_strActiveURL = url;
 
