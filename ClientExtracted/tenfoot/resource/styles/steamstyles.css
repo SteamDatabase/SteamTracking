@@ -284,7 +284,7 @@ DropDown Label
 
 DropDownMenu
 {
-	width: 500px;
+	width: 400px;
 	flow-children: down;
 	background-color: simplebuttonsolid_vertical;
 	padding: 4px 8px;
@@ -292,7 +292,6 @@ DropDownMenu
 	font-size: 28px;
 	overflow: squish scroll;
 
-	border-radius: 2px;
 	box-shadow: #00000080 2px 2px 8px 2px;
 
 	opacity: 0.0;
@@ -525,7 +524,7 @@ HorizontalScrollBar
 	margin: 3px;
 	width: 100%;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c290 ), to( #f2f2f290 ) );
-	border-radius: 4px;
+	border-radius: 0px;
 	horizontal-align: left;
 	vertical-align: bottom;
 
@@ -1083,7 +1082,7 @@ FriendsChatDialog .VoiceBarContainer
 
 	opacity: 1.0;
 
-	position: 42% 42% 0px;
+	position: 42% 38% 0px;
 
 
 
@@ -1132,7 +1131,7 @@ FriendsChatDialog .VoiceBarContainer
 	color: tcexitrow;
 	margin-left: 10px;
 	margin-right: 10px;
-
+	height: 53px;
 	min-width: 200px;
 
 	transition-property: border, blur, background-color, color, transform, box-shadow;
@@ -1154,6 +1153,7 @@ FriendsChatDialog .VoiceBarContainer
 	text-overflow: ellipsis;
 	max-height: 40px;
 	width: 100%;
+	font-weight: bold;
 
 	padding-right: 14px;
 }
@@ -1421,6 +1421,11 @@ Slider
 		opacity: 0.0;
 	}
 
+	50%
+	{
+		opacity: 0.0;
+	}
+
 	to
 	{
 		opacity: 1.0;
@@ -1432,34 +1437,30 @@ Slider
 	0%
 	{
 		pre-transform-scale2d: 1.0, 0.6;
-//		background-color: #5492b8;
-		background-color: #5899c1;
+
+		background-color: ui_primary_color;
 	}
 	30%
 	{
 		pre-transform-scale2d: 1.0, 1.0;
 //		background-color: #529cde;
-		background-color: #67b3e2;
+		background-color: #4cd3fcff;
 	}
 	55%
 	{
 		pre-transform-scale2d: 1.0, 0.6;
-		background-color: #5899c1;
+		background-color: ui_primary_color;
 	}
 	100%
 	{
 		pre-transform-scale2d: 1.0, 0.6;
-		background-color: #5899c1;
+		background-color: ui_primary_color;
 	}
 }
 
 LoadingThrobber
 {
 	flow-children: right;
-
-	animation-name: loading-throbber-appear;
-	animation-duration: 1s;
-	animation-timing-function: ease-in-out;
 }
 
 LoadingThrobber .Bar
@@ -1487,4 +1488,11 @@ LoadingThrobber .Bar2
 LoadingThrobber .Bar3
 {
 	animation-delay: 0.32s;
+}
+
+LoadingThrobber.Small .Bar
+{
+	width: 6px;
+	height: 45px;
+	margin-right: 3px;
 }

@@ -18,7 +18,12 @@
 					<Panel id="ClockWrapper">
 						<Label id="Clock" class="Clock" text="" />
 						<Label id="ClockSuffix" class="ClockSuffix" text="" />
+						<Panel id="OverlayClose" >
+							<Label id="HowToClose" class="HowToClose" text="#Overlay_HowToClose" />
+							<Image id="GuideIcon" />
+						</Panel>
 					</Panel>
+
 				</Panel>
 			</Panel>
 			<Panel id="DesktopPanels">

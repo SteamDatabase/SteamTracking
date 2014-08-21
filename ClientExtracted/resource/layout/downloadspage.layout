@@ -67,8 +67,7 @@
 			shadowtextcolor="TextDisabled"	// the color of disabled line items		
 			render
 			{
-				//gradient to obscure content at bottom of scrolling region 
-				0="gradient( x0+1, y1 - 18, x1, y1, none, almostblack )"
+
 			}
 			render_bg 
 			{	

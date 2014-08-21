@@ -94,7 +94,7 @@ StoreBrowseByCategory #Contents
 {
 	width: 100%;
 	margin: 114px 106px 10px;
-	flow-children: right;
+	flow-children: down;
 
 	opacity: 0.0;
 
@@ -103,9 +103,26 @@ StoreBrowseByCategory #Contents
 	transition-timing-function: ease-in-out;
 }
 
+.FilterVisible .TitleRow
+{
+	margin: 44px 106px 10px;
+}
+
 .LoadedTabData .TitleRow
 {
 	opacity: 1.0;
+}
+
+#Filter
+{
+	visibility: collapse;
+}
+
+.FilterVisible .TitleRow #Filter
+{
+	horizontal-align: center;
+	margin-bottom: 49px;
+	visibility: visible;
 }
 
 #CategoryTitle
@@ -148,8 +165,7 @@ StoreBrowseByCategory #Contents
 	height: 60px;
 	padding: 0px;
 
-	transform: translatey( -1px );
-	pre-transform-scale2d: 0.85;
+
 	color: #ffffff77;
 	box-shadow: fill #ffffff00 3px 16px 40px -32px;
 	margin-left: 0px;
@@ -165,8 +181,8 @@ StoreBrowseByCategory #Contents
 #Tabs Button.Focused
 {
 
-	pre-transform-scale2d: 0.85;
-	transform: translatey( -2px );
+
+
 	transition-duration: 0.23s !immediate;
 	color: #f2f2f2ff;
 
@@ -175,8 +191,8 @@ StoreBrowseByCategory #Contents
 //focus
 #Tabs Button:focus
 {
-	pre-transform-scale2d: 1.0;
-	transform: translatey( -3px );
+
+
 	transition-duration: 0.23s !immediate;
 	color: #ffffff77;
 	
@@ -188,8 +204,8 @@ StoreBrowseByCategory #Contents
 
 #Tabs Button:hover
 {
-	pre-transform-scale2d: 0.9;
-	transform: translatey( -2px );
+
+
 	transition-duration: 0.23s !immediate;
 	color: #ffffff55;
 
@@ -198,8 +214,8 @@ StoreBrowseByCategory #Contents
 
 #Tabs Button.Focused
 {
-	pre-transform-scale2d: 0.85;
-	transform: translatey( -1px );
+
+
 	transition-duration: 0.23s !immediate;
 	color: #ffffff77;
 
@@ -208,8 +224,8 @@ StoreBrowseByCategory #Contents
 
 #Tabs Button.Focused:hover
 {
-	pre-transform-scale2d: 0.9;
-	transform: translatey( -2px );
+
+
 	transition-duration: 0.23s !immediate;
 	color: #ffffff77;
 
@@ -225,8 +241,8 @@ StoreBrowseByCategory #Contents
 
 #Tabs Button.Focused:active
 {
-	pre-transform-scale2d: 1.00;
-	transform: translatey( -2px );
+
+
 	transition-duration: 0.23s !immediate;
 	color: #f2f2f2ff;
 	
@@ -243,7 +259,7 @@ StoreBrowseByCategory #Contents
 #Tabs Button Label
 {
 	color: #ffffff66;
-	font-size: 36px;
+	font-size: 30px;
 	font-weight: light;
 	align: center center;
 	transition-property: color, opacity;
@@ -281,7 +297,6 @@ StoreBrowseByCategory #Contents
 	desaturation: 0.4;
 	blur: gaussian( 0.5 );
 	opacity: 0.0;
-	transform: translatex( 0px );
 
 	transition-property: pre-transform-scale2d, transform, desaturation, blur, opacity;
 	transition-duration: 0.4s;

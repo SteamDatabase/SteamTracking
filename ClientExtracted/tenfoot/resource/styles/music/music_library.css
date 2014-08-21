@@ -83,6 +83,25 @@ MusicLibraryArtistPanel.Active
 }
 
 
+MusicLibraryPlaylistPanel
+{
+	width: 100%;
+	height: 100%;
+	
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: linear;
+}
+
+
+MusicLibraryPlaylistPanel.Active
+{
+	opacity: 1.0;
+}
+
+
 MusicLibraryCrawlingPanel
 {
 	width: 100%;
@@ -350,8 +369,8 @@ MusicLibraryCrawlingPanel
 
 	padding-top: 10px;
 	padding-left: 60px;
-	padding-right: 80px;
-	padding-bottom: 84px;
+	padding-right: 140px;
+	padding-bottom: 70px;
 	transform: translateX( -220px );
 	transition-property: transform;
 	transition-duration: 0.23s;
@@ -1137,7 +1156,7 @@ MusicArtistPanel AlbumGridItem Label
 	width: 600px;
 	font-size: 26px;
 	font-family: basefont;
-	font-weight: normal;
+	font-weight: bold;
 	color: applabel;
 	opacity: 0.0;
 	vertical-align: bottom;
@@ -1180,3 +1199,235 @@ MusicArtistPanel #MusicAlbumGrid
 	transform: translateX( 0px );
 }
 
+
+MusicLibraryPlaylistPanel .AddLibraryItem
+{
+	background-color: none;
+}
+
+MusicLibraryPlaylistPanel .AddLibraryItem:hover
+{
+	background-color: none;
+}
+
+///////////////////////////////////////////////////////
+
+.MusicPlaylistGrid
+{
+	margin-top: 0px;
+
+	padding-top: 30px;
+	padding-left: 90px;
+	padding-right: 90px;
+	padding-bottom: 84px;
+	
+	transform: translateX( 220px );
+	transition-property: transform;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-out;
+
+	width: 100%;
+	height: 100%;
+
+	visibility: visible;
+}
+
+
+.Active .MusicPlaylistGrid
+{
+	opacity: 1.0;
+	transform: translateX( 0px );
+}
+
+
+PlaylistGridItem
+{
+	width: 356px;
+	height: 90px;
+	vertical-align: top;
+	pre-transform-scale2d: .94;
+
+	transition-property: pre-transform-scale2d, position, transform;
+	transition-duration: 0.3s;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;
+
+	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
+}
+
+PlaylistGridItem:focus
+{
+	pre-transform-scale2d: 1.0;
+	z-index: 5;
+	transform: translateX( -7px );
+}
+
+PlaylistGridItem:hover
+{
+	pre-transform-scale2d: 1.0;
+	z-index: 5;
+	transform: translateX( 0px );
+}
+
+PlaylistGridItem:focus:hover
+{
+	pre-transform-scale2d: 1.04;
+	z-index: 5;
+	transform: translateX( -7px );
+}
+
+
+PlaylistGridItem:focus #FocusBorderPanel
+{
+	width: 326px;
+	height: 90px;
+	border-width: 8px;
+	border-style: solid;
+	border-color: #f2f2f2ff;
+	z-index: 6;
+
+	background-image: url( "file://{images}/music/shadow.png" );
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 414px 414px;
+}
+
+#MusicLibraryPlaylistPanel PlaylistGridItem:focus #FocusBorderPanel
+{
+	width: 326px;
+	height: 60px;
+
+	background-image: none;
+	margin: 8px;
+
+	z-index: 6;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	box-shadow: none;
+
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #ffffffff ), to( #bdbfbfff ) );
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+#MusicLibraryPlaylistPanel .MusicPlaylistGrid #PlaylistUpperLabel
+{
+	color: applabel;
+}
+
+#MusicLibraryPlaylistPanel PlaylistGridItem:focus #ArtistUpperLabel
+{
+	color: applabelselected;
+}
+
+PlaylistGridItem Label
+{
+	height: 32px;
+	width: 300px;
+	font-size: 26px;
+	font-family: basefont;
+	font-weight: normal;
+	color: applabel;
+	opacity: 0.8;
+	vertical-align: bottom;
+	text-overflow: clip;
+	white-space: nowrap;
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-delay: 0.0s;
+	transition-timing-function: ease-in-out;
+	font-family: platformfont;
+	z-index: 5;
+}
+
+#PlaylistUpperLabel
+{
+	transform: translateY( -48px ) translateX( 16px );
+	font-weight: bold;
+}
+
+.MusicPlaylistGrid #PlaylistUpperLabel
+{
+	height: 40px;
+	transform: translateY( -27px ) translateX( 0px );
+}
+
+#MusicLibraryPlaylistPanel PlaylistGridItem:focus #PlaylistUpperLabel
+{
+	height: 40px;
+	transform: translateY( -27px ) translateX( 22px );
+	color: applabelselected;
+}
+
+PlaylistGridItem:focus Label
+{
+	opacity: 1.0;
+	z-index: 6;
+	color: applabelselected;	
+}
+
+
+
+.Moving PlaylistGridItem
+{
+	blur: gaussian( 5, 1 );
+	opacity: 0.15;
+	desaturation: 0.7;
+}
+
+
+.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+{
+	width: 80px;
+	height: 100%;
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 200;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	background-color: mouse_hover_bg_left;
+}
+
+
+.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+{
+	width: 80px;
+	height: 100%;
+	align: right center;
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+	z-index: 200;
+	opacity: 1.0;
+	transition-delay: 0.2s;
+	transition-duration: 0.2s;
+	background-color: mouse_hover_bg_right;
+}
+
+.MusicPlaylistGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion:hover,
+{
+		background-color: mouse_active_bg_right;
+}
+
+.MusicPlaylistGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, .MusicPlaylistGrid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_left;
+}
+
+
+.MusicPlaylistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, .MusicPlaylistGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_right;
+
+}

@@ -48,7 +48,9 @@
 							</Panel>
 							<Panel id="CategoryController" class="CategoryExpanded">
 								<Panel id="CategoryControllerImage" />
-								<Label id="CategoryControllerText" text="#Store_Category_Controller" />
+								<Label id="CategoryControllerTextFull" text="#Store_Category_FullController" />
+								<Label id="CategoryControllerTextSteam" text="#Store_Category_SteamController" />
+								<Label id="CategoryControllerTextLegacy" text="#Store_Category_LegacyController" />								
 							</Panel>
 							<Panel id="CategorySingleplayer" class="CategoryExpanded">
 								<Image src="file://{images}/store/icon_singleplayer.png" />

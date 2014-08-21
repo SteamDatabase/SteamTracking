@@ -12,11 +12,11 @@
 			<Button onactivate="PlayCurrentArtist(true, false);" >
 				<Label id="PlayArtistLabel" text="#MusicArtist_Play" />
 			</Button>
-			<Button id="ArtistPlayNextButton" onactivate="PlayCurrentArtist(false, true);" >
-				<Label id="PlayArtistNextLabel" text="#MusicArtist_Play_Next" />
-			</Button>
 			<Button onactivate="PlayCurrentArtist(false, false);">
 				<Label id="AddArtistToQueueLabel" text="#MusicArtist_Add_To_Queue" />
+			</Button>
+			<Button id="ArtistAddToPlaylistButton" onactivate="AddArtistToPlaylist();" >
+				<Label id="AddToPlaylistLabel" text="#MusicArtist_Add_To_Playlist" />
 			</Button>
 		</Panel>
 	</MusicArtistMoreDialog>

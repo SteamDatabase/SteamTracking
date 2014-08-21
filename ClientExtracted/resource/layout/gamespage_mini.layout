@@ -47,8 +47,6 @@
 			bgcolor=none
 			render
 						{
-							//gradient to obscure content at bottom of scrolling region 
-							2="gradient( x0+1, y1 - 16, x1-1, y1, none, almostblack )"
 						}
 			render_bg {}
 			}

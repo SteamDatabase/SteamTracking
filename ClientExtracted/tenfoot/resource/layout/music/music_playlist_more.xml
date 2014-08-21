@@ -1,0 +1,47 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/music/music.css" />
+	</styles>
+	
+	<MusicPlaylistMoreDialog class="TenfootMsgBox" 
+			oncancel="ButtonCancel()"
+			onmouseactivate="CloseModalDialog();" >
+		<Panel class="ContextMenuBodyCentered" tabindex="auto" selectionpos="auto">
+			<Button onactivate="PlayCurrentPlaylist(true, false);" >
+				<Label id="PlayPlaylistLabel" text="#MusicPlaylist_Play" />
+			</Button>
+			<Button onactivate="PlayCurrentPlaylist(false, false);">
+				<Label id="AddPlaylistToQueueLabel" text="#MusicPlaylist_Add_To_Queue" />
+			</Button>
+			<Panel class="HorizontalRule" id="MoveHorizontalRule"/>
+			<Button id="PlaylistMoveBeginButton" onactivate="MovePlaylistBegin();" >
+				<Label id="PlaylistMoveBeginLabel" text="#MusicPlaylist_Move_Begin" />
+			</Button>
+			<Button id="PlaylistMoveUpButton" onactivate="MovePlaylistTrackUp();" >
+				<Label id="PlaylistMoveUpLabel" text="#MusicPlaylist_Move_Up" />
+			</Button>
+			<Button id="PlaylistMoveDownButton" onactivate="MovePlaylistTrackDown();" >
+				<Label id="PlaylistMoveDownLabel" text="#MusicPlaylist_Move_Down" />
+			</Button>
+			<Button id="PlaylistMoveEndButton" onactivate="MovePlaylistEnd();" >
+				<Label id="PlaylistMoveEndLabel" text="#MusicPlaylist_Move_End" />
+			</Button>
+			<Panel class="HorizontalRule" id="RenameHorizontalRule"/>
+			<Button id="PlaylistRenameButton" >
+				<Label id="PlaylistRenameLabel" text="#MusicPlaylist_Rename" />
+			</Button>
+			<Button id="PlaylistDeleteButton" onactivate="DeletePlaylist();" >
+				<Label id="PlaylistDeleteLabel" text="#MusicPlaylist_Delete" />
+			</Button>
+			<Panel class="HorizontalRule" id="AddHorizontalRule"/>
+			<Button id="PlaylistAddButton" >
+				<Label id="PlaylistAddLabel" text="#MusicPlaylist_Add" />
+			</Button>
+			<Button id="PlaylistRemoveTracksButton" onactivate="RemoveTracksOfPlaylist();">
+				<Label id="PlaylistRemoveTracksLabel" text="#MusicPlaylist_RemoveTracks" />
+			</Button>
+		</Panel>
+	</MusicPlaylistMoreDialog>
+</root>

@@ -202,7 +202,6 @@ Carousel:hover .RightMouseScrollRegion:hover
 
 #CommunityFeedStrip:descendantfocus FriendsFeedListItemCommunity:hover AvatarImage
 {
-	
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
 }
 
@@ -647,7 +646,7 @@ OverlayBasePanel .CommunityFriendsCarousel:descendantfocus #CarouselTitleContain
 
 .CommunityFriendsCarousel #CarouselTitleContainer
 {
-	margin-top: 220px;
+	margin-top: 200px;
 }
 
 OverlayBasePanel #CarouselTitleContainer
@@ -749,13 +748,8 @@ FriendsFriendListItemCommunity .FriendsFriendListItemCommunityContainer
 
 .CommunityVisible:descendantfocus FriendsFriendListItemCommunity .FriendsFriendListItemCommunityStripTileBkgnd
 {
-	width: 100%;
-	height: 300px;
 	margin: 14px;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefe00;
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 
 	transform: translatey( 20px );
@@ -769,10 +763,7 @@ FriendsFriendListItemCommunity .FriendsFriendListItemCommunityContainer
 
 .CommunityVisible:descendantfocus FriendsFriendListItemCommunity:descendantfocus .FriendsFriendListItemCommunityStripTileBkgnd
 {
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-  pre-transform-scale2d: 1.0;
-	border-color: #fdfefef0;
-	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+	pre-transform-scale2d: 1.0;
 
 	transition-property: pre-transform-scale2d;
 	//transition-duration: transition_duration_FriendsFriendListItemCommunity !immediate;
@@ -892,8 +883,8 @@ FriendsFriendListItemCommunity.InGame:descendantfocus  Label
 	opacity: 1.0;
 	z-index: 90;
 	transition-duration: 0.25s !immediate;
-	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
-	//pre-transform-scale2d: 1.2;
+	//box-shadow: box_shadow_on_color -3px -3px 6px 6px;
+	pre-transform-scale2d: 1.15;
 }
 
 .CommunityVisible:descendantfocus .CommunityFriendsCarousel:descendantfocus .FriendsFriendListItemCommunityAvatar
@@ -912,15 +903,24 @@ FriendsFriendListItemCommunity.InGame:descendantfocus  Label
 {
 	z-index: 90;
 	transition-duration: 0.25s !immediate;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-	box-shadow: inset #000000aa 0px 0px 4px 0px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite; 
+
 	pre-transform-scale2d: 1.1;
 }
 
+.CommunityFriendsCarousel:descendantfocus FriendsFriendListItemCommunity:focus #FriendPanel:descendantfocus .FriendsFriendListItemCommunityAvatar 
+{
+	pre-transform-scale2d: 1.5;
+}
 
 .CommunityFriendsCarousel:descendantfocus FriendsFriendListItemCommunity:focus .FriendsFriendListItemCommunityContainer
 {
-	pre-transform-scale2d: 1.07;
+	pre-transform-scale2d: 1.15;
 	transform: translateY( 0px );
 }
 
@@ -993,7 +993,7 @@ FriendsFeedListItemCommunity.SteamidGroupIsOGG #FriendsFeedItemIcon
 .CommunityVisible:descendantfocus FriendsFriendListItemCommunity:focus .FriendsFriendListItemCommunityLabels
 {
 	opacity: 1.0;
-	transform: translatex( -4px ) translatey( 32px );
+	transform: translatex( 26px ) translatey( 12px );
 }
 
 FriendsFeedListItemCommunity:descendantfocus #FriendsFeedItemIcon
@@ -1007,7 +1007,7 @@ FriendsFeedListItemCommunity:descendantfocus #FriendsFeedItemIcon
 
 .FriendsFriendListItemCommunityLabels
 {
-	width: 340px;
+	width: 300px;
 	height: 200px;
 	opacity-mask: url( "file://{images}/friends/friends_list_item_panel_labels_mask.tga" );
 	vertical-align: top;
@@ -1022,7 +1022,8 @@ FriendsFeedListItemCommunity:descendantfocus #FriendsFeedItemIcon
 	transform: translatex( -24px ) translatey( 3px );
 
 	transition-property: opacity, transform, position, box-shadow, pre-transform-scale2d;
-	transition-duration: 0.2s; //transition_duration_FriendsFriendListItemCommunity;
+	transition-duration: 0.2s;
+	//transition_duration_FriendsFriendListItemCommunity;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 }
@@ -1525,12 +1526,12 @@ FriendsFeedItemMenuActionButton:focus
 
 #OverlayBasePanel:descendantfocus .CommunityFriendsCarousel:descendantfocus
 {
-	transform: translateY( 340px );
+	transform: translateY( 400px );
 }
 
 #OverlayBasePanel:descendantfocus .CommunityFriendsCarousel
 {
-	transform: translateY( 380px );
+	transform: translateY( 400px );
 }
 
 #CommunityFriendsStrip.Locked

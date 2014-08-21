@@ -1,0 +1,11 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/music/music_library.css" />
+	</styles>
+	
+	<PlaylistGridItem>
+		<Panel id="FocusBorderPanel" class="FocusBorderPanel" />
+		<Label id="PlaylistUpperLabel" text="" />		
+	</PlaylistGridItem>
+</root>

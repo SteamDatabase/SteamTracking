@@ -13,11 +13,6 @@
 			<Label class="SectionHeader" text="#Music_Library_Header" />
 		</Panel>
 
-		<Panel id="PanelDuringCrawling">
-			<Label id="CrawlingHeader" class="CrawlingHeader" text="#Music_Library_Crawling_Header" />
-			<MusicLibraryCrawlingPanel id="MusicLibraryCrawlingPanel"/>
-		</Panel>
-		
 		<Panel id="ContentPanel">		
 			<Carousel id="GridTabs" 
 					tabindex="0" selectionpos="0,0" focus="edge" focus-offset="105px" wrap="false" selectionposboundary="vertical" >
@@ -39,12 +34,27 @@
 						>
 					<Label text="#Music_Library_Artists_Sort" />
 				</Button>
+				<Button id="PlaylistButton" 
+						onmoveup="ShowLibraryMostRecent();"	
+						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryPlaylistPanel );"
+						onfocus="MusicLibraryActivatePlaylistView();"
+						onmouseactivate="MusicLibraryActivateFirstPlaylist();"
+						onactivate="MusicLibraryActivateFirstPlaylist();" 
+						>
+					<Label text="#Music_Library_Playlist_Sort" />
+				</Button>
 			</Carousel>	
 		
 			<Panel id="LibraryContent" class="LibraryContent" selectionposboundary="vertical">
 				<MusicLibraryAlbumPanel id="MusicLibraryAlbumPanel"/>
-				<MusicLibraryArtistPanel id="MusicLibraryArtistPanel"/>	
+				<MusicLibraryArtistPanel id="MusicLibraryArtistPanel"/>
+				<MusicLibraryPlaylistPanel id="MusicLibraryPlaylistPanel"/>
 			</Panel>		
+		</Panel>
+		
+		<Panel id="PanelDuringCrawling">
+			<Label id="CrawlingHeader" class="CrawlingHeader" text="#Music_Library_Crawling_Header" />
+			<MusicLibraryCrawlingPanel id="MusicLibraryCrawlingPanel"/>
 		</Panel>
 		
 	</MusicLibraryContainerPanel>

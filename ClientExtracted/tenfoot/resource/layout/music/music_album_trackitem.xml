@@ -7,6 +7,7 @@
 	
 	<TrackListItem class="TrackButton Button" 
 		onfocus="TrackListItemGotFocus();" onactivate="TrackDetailPlay();">
+		<Label id="TrackPosition" class="TrackPosition" text="XXX"/>
 		<Label id="TrackLabel" class="TrackLabel"/>
 		<Panel >
 			<Label id="TimeLabel" class="TimeLabel" text="0:00"/>

@@ -66,7 +66,7 @@
 		render_bg 
 			{				
 				// background gradient        
-				0="gradient( x0, y0 - 1, x1, y1, dialogbg, almostblack )"
+				0="gradient( x0, y0 - 1, x1, y1-3, dialogbg, almostblack )"
 			}
     	} 
     
@@ -147,7 +147,7 @@
 		place { control="PlayPauseButton" region=transport x=100 y=0 width=56 height=50 }
 		place { control="NextButton,VolumeButton,BrowseButton" region=transport x=164 y=16 spacing=8 margin=0 height=18 }
 
-		place { control="TrackList" x=10 y=94 width=max height=max margin-right=10 margin-bottom=45 }
+		place { control="TrackList" x=10 y=94 width=max height=max margin-right=10 margin-bottom=40 }
 		place { control="NoTracksLabel" x=10 y=94 margin-right=10 margin-bottom=33 align="top-center" }
 		place { control="InfoLabel" align=bottom x=10 y=94 width=max margin-right=10 margin-bottom=8 }
 	}

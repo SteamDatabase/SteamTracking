@@ -197,6 +197,29 @@ StoreApp.Loaded #Loading, StorePackage.Loaded #Loading
 	}
 }
 
+LoadingThrobber
+{
+	opacity: 0.0;
+	horizontal-align: center;
+	margin-top: 350px;
+}
+
+.Loading LoadingThrobber
+{
+	opacity: 1.0;
+
+	animation-name: loading-throbber-appear;
+	animation-duration: 1.0s;
+	animation-timing-function: ease-in-out;
+}
+
+LoadingThrobber .Bar
+{
+	height: 120px;
+	width: 14px;
+	margin-right: 8px;
+}
+
 .Loading .Throbber
 {
 	width: 120px;
@@ -269,6 +292,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 	font-size: 24px;
 	color: tcstatictext;
 	opacity: 1.0;
+	vertical-align: center;
 }
 
 //
@@ -1294,15 +1318,16 @@ h1, h2
 #CategoryController, #IconController
 {
 	visibility: collapse;
-	
 
 	transition-duration: AppSectionTransitionDuration;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 }
 
+
+
 .FullController #CategoryController,
-.PartialController #CategoryController
+.SteamPad .PartialController #CategoryController
 {
 	visibility: visible;
 }
@@ -1319,31 +1344,131 @@ h1, h2
 	height: 40px;
 }
 
-.PartialController #IconController
+.SteamPad .FullController #IconController
 {
 	visibility: visible;
-	background-image: url( "file://{images}/controller_support_partial.png" );
+
+	background-image: url( "file://{images}/store/icon_steamcontroller.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: storeoverviewcolor;
+	width: 40px;
+	height: 40px;
+}
+
+.SteamPad .PartialController #IconController
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_legacycontroller.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
 	wash-color: white;
 	width: 40px;
-	height: 33px;
+	height: 40px;
+	vertical-align: center;
+}
+
+.SteamPad .PartialController #IconController,
+.SteamPad #IconController,
+.SteamPad #CategoryControllerImage
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_legacycontroller.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: white;
+	width: 40px;
+	height: 40px;
+	margin-left: 4px;
 	vertical-align: center;
 }
 
 .FullController #CategoryControllerImage
 {
 	background-image: url( "file://{images}/controller_support_full.png" );
+	vertical-align: bottom;
 	background-size: contain;
 	background-repeat: no-repeat;
 	wash-color: white;
 	width: 40px;
 	height: 40px;
 }
+
+.SteamPad .FullController #CategoryControllerImage
+{
+	background-image: url( "file://{images}/store/icon_steamcontroller.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: white;
+	width: 40px;
+	height: 40px;
+}
+
+#CategoryControllerText
+{
+	visibility: collapse;
+}
+
+
+.FullController #CategoryControllerTextFull
+{
+	visibility: visible;
+}
+
+.FullController #CategoryControllerTextSteam,
+.FullController #CategoryControllerTextLegacy,
+{
+	visibility: collapse;
+}
+
+
+
+.SteamPad .FullController #CategoryControllerTextSteam
+{
+	visibility: visible;
+}
+
+.SteamPad #CategoryControllerTextSteam,
+.SteamPad .PartialSupport #CategoryControllerTextLegacy
+{
+	visibility: collapse;
+}
+
+
+.SteamPad .FullController #CategoryControllerTextFull,
+.SteamPad .FullController #CategoryControllerTextLegacy,
+{
+	visibility: collapse;
+}
+
+
+.PartialController #CategoryControllerTextSteam,
+.PartialController #CategoryControllerTextFull,
+.PartialController #CategoryControllerTextLegacy,
+.SteamPad .PartialController #CategoryControllerTextSteam,
+.SteamPad  #CategoryControllerTextFull
+{
+	visibility: collapse;
+}
+
+
+
+.SteamPad .PartialController #CategoryControllerTextLegacy
+{
+	visibility: visible;
+}
+
+
 
 .PartialController #CategoryControllerImage
 {
-	background-image: url( "file://{images}/controller_support_partial.png" );
+	visibility: collapse;
+}
+
+.SteamPad .PartialController #CategoryControllerImage
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_legacycontroller.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
 	wash-color: white;
@@ -1351,6 +1476,7 @@ h1, h2
 	height: 40px;
 }
 
+.SteamPad #CategoryController,
 .SteamPad .FullController #CategoryController,
 .SteamPad .PartialController #CategoryController,
 .SteamPad .FullController #IconController,
@@ -1687,7 +1813,7 @@ StoreAppPurchaseOptions #Loaded
 //
 // Purchase Options Package
 //
-StoreAppPackage, StoreAppPackageGroup
+StoreAppPackage, StoreAppPackageGroup, .StoreAppPackage
 {
 	width: 494px;
 	height: 692px;
@@ -1707,7 +1833,7 @@ StoreAppPackage, StoreAppPackageGroup
 	transition-delay: 0s;
 }
 
-StoreAppPackage:descendantfocus, StoreAppPackageGroup:descendantfocus
+StoreAppPackage:descendantfocus, StoreAppPackageGroup:descendantfocus, .StoreAppPackage:descendantfocus
 {
 	wash-color: #429aae00;
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
@@ -1725,17 +1851,17 @@ StoreAppPackage:descendantfocus, StoreAppPackageGroup:descendantfocus
 	animation-direction: normal;
 }
 
-StoreAppPackage:hover, StoreAppPackageGroup:hover
+StoreAppPackage:hover, StoreAppPackageGroup:hover, .StoreAppPackage:hover
 {
 	pre-transform-scale2d: 0.94;
 }
 
-StoreAppPackage:descendantfocus:hover, StoreAppPackageGroup:descendantfocus:hover
+StoreAppPackage:descendantfocus:hover, StoreAppPackageGroup:descendantfocus:hover, .StoreAppPackage:descendantfocus:hover
 {	
 	pre-transform-scale2d: 1.03;
 }
 
-StoreAppPackage #HeaderImage, StoreAppPackageGroup #HeaderImage
+StoreAppPackage #HeaderImage, StoreAppPackageGroup #HeaderImage, .StoreAppPackage #HeaderImage
 {
 	width: 460px;
 	height: 215px;
@@ -1747,14 +1873,14 @@ StoreAppPackage #HeaderImage, StoreAppPackageGroup #HeaderImage
 	transition-property: opacity;
 }
 
-StoreAppPackage:descendantfocus #HeaderImage, StoreAppPackageGroup:descendantfocus #HeaderImage
+StoreAppPackage:descendantfocus #HeaderImage, StoreAppPackageGroup:descendantfocus #HeaderImage, .StoreAppPackage:descendantfocus #HeaderImage
 {
 	wash-color: none;
 	opacity: 1.0;
 	desaturation: 0.0;
 }
 
-StoreAppPackage #PackageName, StoreAppPackageGroup #PackageName
+StoreAppPackage #PackageName, StoreAppPackageGroup #PackageName, .StoreAppPackage #PackageName
 {
 	color: applabelsolid;
 	width: 100%;
@@ -1767,7 +1893,7 @@ StoreAppPackage #PackageName, StoreAppPackageGroup #PackageName
 	margin: 0px 12px;
 }
 
-StoreAppPackageGroup #SavingsText
+StoreAppPackageGroup #SavingsText, .StoreAppPackage #SavingsText
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #537e3c ), to( #689b46 ) );
 	color: white;
@@ -1780,7 +1906,7 @@ StoreAppPackageGroup #SavingsText
 	padding: 0px 4px;
 }
 
-StoreAppPackageGroup #ViewPackageSection
+StoreAppPackageGroup #ViewPackageSection, .StoreAppPackage #ViewPackageSection
 {
 	margin-top: 4px;
 }
@@ -1802,7 +1928,7 @@ StoreAppPackageGroup #ViewPackageSection
 	horizontal-align: right;
 }
 
-StoreAppPackage Button, StoreAppPackageGroup Button
+StoreAppPackage Button, StoreAppPackageGroup Button, .StoreAppPackage Button
 {
 	margin: 6px 12px;
 }
@@ -2509,4 +2635,69 @@ DropDown.DropDownMenuVisible:focus Label
 {
 	opacity: 1.0;
 	background-color: mouse_hover_bg_left;
+}
+
+.FlowDownContainer
+{
+	flow-children: down;
+}
+
+#AppAvailabilityWrapper
+{
+	flow-children: right;
+}
+
+.AppAvailabilityIcon
+{
+	horizontal-align: center;
+	vertical-align: center;
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 42px;
+	wash-color: #36b3d9ff;
+	visibility: collapse;
+}
+
+.WindowsIcon #WindowsIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_platform_win.png" );
+	margin-left: -4px;
+	margin-right: -4px;
+}
+
+.OSXIcon #OSXIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_platform_mac.png" );
+	margin-left: -4px;
+	margin-right: -4px;
+}
+
+.LinuxIcon #LinuxIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_platform_linux.png" );
+	margin-right: 4px;
+}
+
+.SteamControllerIcon #SteamControllerIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_steamcontroller.png" );
+	margin-right: 4px;
+}
+
+.LegacyControllerIcon #LegacyControllerIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_legacycontroller.png" );
+	margin-right: 4px;
+}
+
+.KeyboardMouseIcon #KeyboardMouseIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_keyboard.png" );
+	margin-right: 4px;
 }

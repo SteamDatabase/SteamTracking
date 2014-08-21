@@ -15,7 +15,7 @@
 					textinputdoneactionstring="#Store_Search_ViewResults"
 					textmode="normal"
 				 />
-				<Panel class="SearchThrobber" />
+				<LoadingThrobber class="Small" />
 			</Panel>
 			<Panel class="SearchDivider" />
 			<Panel class="SearchResultsArea">

@@ -1,0 +1,44 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu_librarybackground.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/music/music.css" />
+		<include src="file://{resources}/styles/music/music_playlist.css" />
+	</styles>
+	
+	<MusicPlaylistPanel onmoveup="PlaylistClose();" hittest="false" >
+		<Image id="GridBackground" class="GridBackground" />
+		<Panel id="UpperRow" class="UpperRow">
+			<Label id="PlaylistTitleLabel" class="PlaylistTitleLabel" text="#MusicPlaylist_Title" />
+			<Panel class="ArtistRow">
+				<Label id="ArtistLabel" class="ArtistLabel" text="#MusicAlbum_Artist" />
+
+			</Panel>
+		</Panel>
+		
+		<Panel id="Body" class="Body">	
+		
+			<Panel id="LeftColumn" class="LeftColumn">
+				<Image id="AlbumImageA" class="AlbumImage" scaling="stretch-to-cover-preserve-aspect" />
+				<Image id="AlbumImageB" class="AlbumImage" scaling="stretch-to-cover-preserve-aspect" />
+				<Panel id="BigLabels">
+					<Label id="AlbumCoverLowerLabel" text="" />
+					<Label id="AlbumCoverUpperLabel" text="" />
+				</Panel>			
+			</Panel>
+		
+			<Panel id="RightColumn" class="RightColumn" tabindex="auto" selectionpos="auto" selectionposboundary="vertical">
+				<Panel class="TopSpacer" />				
+				<Panel childfocusonhover="true" id="TrackButtonContainer" class="TrackButtonContainer" >
+					<Button id="PlaylistActionButton" class="PlaylistActionButton" 
+						onfocus="PlaylistActionButtonGotFocus();" onactivate="PlaylistDetailPlay();">
+						<Label id="PlaylistActionLabel" text="#MusicPlaylist_Play_Playlist" />
+						<Label id="TracksInfoLabel" class="TracksInfoLabel" text="#Music_TracksInfo_NoTracks" />
+					</Button>				
+					<Panel id="Separator" class="Separator" />	
+				</Panel>	
+			</Panel>
+		</Panel>
+	</MusicPlaylistPanel>
+</root>

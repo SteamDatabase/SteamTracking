@@ -82,6 +82,12 @@
 	opacity: 0.0;
 }
 
+#ProfileWrapper ProfilePanel#Inventory
+{
+	transform: translatey( 1080px );
+	opacity: 0.0;
+}
+
 .StackDepth2 #ProfileWrapper.ActivityFocused ProfilePanel#FriendActivity,
 .StackDepth3 #ProfileWrapper.ActivityFocused ProfilePanel#FriendActivity
 {
@@ -89,7 +95,15 @@
 	opacity: 1.0;
 }
 
-#ProfileWrapper.ActivityFocused ProfilePanel#Profile
+.StackDepth2 #ProfileWrapper.InventoryFocused ProfilePanel#Inventory,
+.StackDepth3 #ProfileWrapper.InventoryFocused ProfilePanel#Inventory
+{
+	transform: translatey( 202px );
+	opacity: 1.0;
+}
+
+#ProfileWrapper.ActivityFocused ProfilePanel#Profile,
+#ProfileWrapper.InventoryFocused ProfilePanel#Profile
 {
 	transform: translatey( 1080px );
 	opacity: 0.0;

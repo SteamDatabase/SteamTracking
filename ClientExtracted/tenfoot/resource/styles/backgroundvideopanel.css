@@ -20,10 +20,11 @@ BackgroundVideoPanel.IngameOverlayBackground
 {
 	width: 1920px;
 	height: 1080px;
-	background-color: overlay_bg_color;
+	background-color: #00000066;
 	background-repeat: no-repeat;
 	background-position: right 0px 50%;
 	z-index: -1000;
+	background-image: none;
 }
 
 BackgroundVideoPanel.ScreenSaverMode, BackgroundVideoPanel.GamesRunning

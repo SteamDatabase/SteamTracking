@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/music/music_playlist.css" />
+	</styles>
+	
+	<PlaylistListItem class="TrackButton Button" 
+		onfocus="PlaylistListItemGotFocus();" onactivate="PlaylistItemDetailPlay();">
+		<Label id="TrackPosition" class="TrackPosition"/>
+		<Label id="TrackLabel" class="TrackLabel"/>
+		<Panel >
+			<Label id="TimeLabel" class="TimeLabel" text="0:00"/>
+			<Label id="ElapsedLabel" class="TimeLabel" text="0:00"/>
+		</Panel>
+	</PlaylistListItem>
+	
+</root>

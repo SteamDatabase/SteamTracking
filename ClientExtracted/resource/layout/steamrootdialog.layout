@@ -570,7 +570,7 @@
 			{
 				// background fill
 				
-				0="gradient(  x0 + 1, y0, x1, y1, green6, green7 )"		
+				0="gradient(  x0 + 1, y0, x1, y1, green8, green7 )"		
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}

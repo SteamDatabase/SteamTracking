@@ -4,6 +4,7 @@
 	{
 		AlbumTitleLabel { controlname="Label" style="AlbumTitleStyle" }
 		ArtistLabel { controlname="Label" style="ArtistStyle" }
+		TracksInfoLabel { controlname="Label" style="TracksInfoStyle" }
 		CoverImage { controlname="ImagePanel" style="CoverStyle" scaling=fit}
 		
 		PlayTracksButton { 
@@ -13,14 +14,7 @@
 			command="AlbumPlayTracksAction"
 		}
 		
-		PlayTracksNextButton
-		{
-			controlname="Button" 
-			labelText="#Music_Album_Details_PlayTracksNext" 
-			style="AdditionalActionButtonStyle"
-			command="AlbumPlayTracksNextAction"
-		}
-		
+
 		AddTracksToQueueButton
 		{
 			controlname="Button" 
@@ -29,6 +23,14 @@
 			command="AlbumAddTracksToQueueAction"
 		}	
 
+		AddTracksToPlaylistButton
+		{
+			controlname="Button" 
+			labelText="#Music_Album_Details_AddTracksToPlaylist" 
+			style="AdditionalActionButtonStyle"
+			command="AlbumAddTracksToPlaylistAction"
+		}
+		
 		ShowAlbumButton { 
 			controlname="Button" 
 			labeltext="#Music_Album_Details_ShowAlbum" 
@@ -43,21 +45,21 @@
 			command="AlbumPlayAction"
 		}
 		
-		PlayAlbumNextButton
-		{
-			controlname="Button" 
-			labelText="#Music_Album_Details_PlayNext" 
-			style="AdditionalActionButtonStyle"
-			command="AlbumPlayNextAction"
-		}
-		
 		AddAlbumToQueueButton
 		{
 			controlname="Button" 
 			labelText="#Music_Album_Details_AddToQueue" 
 			style="AdditionalActionButtonStyle"
 			command="AlbumAddToQueueAction"
-		}	
+		}
+		
+		AddAlbumToPlaylistButton
+		{
+			controlname="Button" 
+			labelText="#Music_Album_Details_AddToPlaylist" 
+			style="AdditionalActionButtonStyle"
+			command="AlbumAddToPlaylistAction"
+		}
 		
 		ShowAlbumInSystemButton
 		{
@@ -100,12 +102,25 @@
 
 		ArtistStyle
 		{
-			padding-bottom=10
+			padding-bottom=5
 			padding-top=10
 			padding-left=10
 			padding-right=10
 			font-size=20
 			textcolor=Text
+			font-family=basefont
+			font-weight=400 
+			bgcolor=none
+		}
+		
+		TracksInfoStyle
+		{
+			padding-bottom=0
+			padding-top=0
+			padding-left=0
+			padding-right=10
+			font-size=15
+			textcolor=labeldisabled
 			font-family=basefont
 			font-weight=400 
 			bgcolor=none
@@ -140,8 +155,8 @@
 			textcolor="label"
 			padding-right=0
 			padding-left=-6
-			padding-top=4
-			padding-bottom=-4
+			padding-top=6
+			padding-bottom=-6
 			render_bg	{}
 		}
 		
@@ -153,51 +168,51 @@
 		
 		ActionButtonStyle
 		{   
-			inset="23 0 0 0"
+			inset="23 1 0 0"
 
 			font-family=basefont
 			font-size=16
 			font-weight=400
-			textcolor="Text"
+			textcolor="white"
 			font-style=uppercase
 			bgcolor=none
 
 			render
 			{
-				1="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play )"
+				1="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
 			}
 			render_bg
 			{
 				// background fill
-				0="gradient( x0, y0-1, x1, y1, buttonface2, dialogbg )"
+				0="gradient( x0, y0, x1, y1+1, launch1, launch2 )"
 				}	
 			}
 			
 		ActionButtonStyle:hover
 		{
-			textcolor="TextHover"
+			textcolor="white"
 			render
 			{
-				0="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"
+				0="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
 			}	
 			render_bg
 			{
 			// background fill
-				 0="gradient( x0, y0-1, x1, y1, buttonfaceactive, propertysheetbg )"  
+				0="gradient( x0, y0, x1, y1+1, launch0, launch2  )"
 			}			
 		}
 		
 		ActionButtonStyle:active
 		{
-			textcolor="TextHover"
+			textcolor="white"
 			render
 			{
-				0="image( x0 + 6, y0 + 3, x1, y1, graphics/icon_play_hover )"
+				0="image( x0 + 6, y0 + 5, x1, y1, graphics/icon_play )"
 			}	
 			render_bg
 			{
 			// background fill
-				 0="gradient( x0, y0-1, x1, y1, DialogBG, propertysheetbg )"  
+				0="gradient( x0, y0, x1, y1+1, focus, launch2 )"
 			}			
 		}
 	}
@@ -213,9 +228,9 @@
 		
 		place { region=headerregion control=AlbumTitleLabel,ArtistLabel,leftcolumn dir=down }
 		place { region=leftcolumn  dir=down start=ArtistLabel spacing=10
-			control=CoverImage,PlayTracksButton }
+			control=CoverImage,TracksInfoLabel,PlayTracksButton }
 		place { region=leftcolumn	dir=down start=PlayTracksButton 
-			control=PlayTracksNextButton,AddTracksToQueueButton,PlayAlbumButton,PlayAlbumNextButton,AddAlbumToQueueButton,ShowAlbumButton,ShowAlbumInSystemButton}
-		place { region=trackcolumn control=*MusicPageDetailsTrack dir=down start=ArtistLabel x=230 }
+			control=AddTracksToQueueButton,AddTracksToPlaylistButton,PlayAlbumButton,AddAlbumToQueueButton,AddAlbumToPlaylistButton,ShowAlbumButton,ShowAlbumInSystemButton}
+		place { region=trackcolumn control=*MusicPageDetailsTrack dir=down start=ArtistLabel x=230 width=max }
 	}
 }

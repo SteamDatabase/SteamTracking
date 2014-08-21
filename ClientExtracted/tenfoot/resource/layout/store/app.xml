@@ -11,14 +11,22 @@
 			</Panel>
 			<Panel id="Loading">
 				<Label id="LoadingStatus" />
-				<Panel class="Throbber" />
+				<LoadingThrobber />
 				<StoreAgeGate id="AgeGate" />
 			</Panel>
 			<Panel id="Loaded" tabindex="auto" selectionpos="auto">
 				<Panel id="TitleRow">
 					<Panel class="TitleSection">
 						<Label class="AppTitle" text="#Store_AppName" />
-						<Label id="AppAvailability" text="#Store_AvailableNow" />
+						<Panel id="AppAvailabilityWrapper">
+							<Panel class="AppAvailabilityIcon" id="WindowsIcon" />
+							<Panel class="AppAvailabilityIcon" id="OSXIcon" />
+							<Panel class="AppAvailabilityIcon" id="LinuxIcon" />
+							<Panel class="AppAvailabilityIcon" id="SteamControllerIcon" />
+							<Panel class="AppAvailabilityIcon" id="LegacyControllerIcon" />
+							<Panel class="AppAvailabilityIcon" id="KeyboardMouseIcon" />
+							<Label id="AppAvailability" text="#Store_AvailableNow" />
+						</Panel>
 					</Panel>
 					<Panel id="HighlightedRecommendationSection">
 						<AvatarImage id="FriendRecommendAvatar" />

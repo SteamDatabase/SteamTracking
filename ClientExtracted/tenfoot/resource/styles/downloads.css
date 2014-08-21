@@ -1036,6 +1036,22 @@ DownloadsGridItem:descendantfocus:hover
 	width: 480px;
 }
 
+DownloadsGridItem.Downloading.Ready #TimeRemainHeader
+{
+	opacity: 0.6;
+	
+	transition-property: opacity, position;
+	transition-duration: 0.15s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+DownloadsGridItem.Downloading.Ready.Queued #TimeRemainHeader
+{
+	opacity: 0.0;
+}
+
+
+
 
 @keyframes 'downloads-perspective'
 {

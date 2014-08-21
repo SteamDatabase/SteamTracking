@@ -9,6 +9,7 @@
 
 		<!-- Shown in minimal control ui -->
 		<Panel id="PlayIndicator" />
+		<LoadingThrobber id="LoadingThrobber" />
 		<Label id="ErrorMessage" text="#Panorama_MoviePlaybackError" />
 
 		<Panel id="PlaybackTitleAndControls">
@@ -40,6 +41,9 @@
 								</ToggleButton>
 								<Button id="FastForward" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerFastForward();">
 									<Image src="file://{images}/transport_controls/icon_ffwd.png" />
+								</Button>
+								<Button id="VideoQualityBtn" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerSelectVideoQuality();">
+									<Image src="file://{images}/transport_controls/icon_quality.png" />
 								</Button>
 								<Button id="VolumeControl" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerVolumeControl();">
 									<Panel class="VolumeImage" />
