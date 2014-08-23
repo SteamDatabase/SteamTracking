@@ -172,7 +172,7 @@
 							}
 							
 							$this->URLsToFetch[ ] = Array(
-								'URL'  => 'http://media.steampowered.com/client/' . $Archive . '.' . $Test,
+								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Test,
 								'File' => $Path . $Archive
 							);
 						}
