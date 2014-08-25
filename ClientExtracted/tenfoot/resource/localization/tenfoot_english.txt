@@ -2122,6 +2122,10 @@
 	"Parental_Enter_PIN"			"Create your PIN"
 	"Parental_Reenter_PIN"			"Re-enter your PIN"
 
+	"Parental_Set_EnableCode"		"To enable Family View for your account, please enter the secret code that has been sent to this account's email address"
+	"Parental_Enter_EnableCode"		"Secret Code"
+	"Parental_Wrong_EnableCode"		"Sorry, your secret code did not match. Please recheck your email and try again."
+
 	"Parental_Set_Fail_Unknown"		"An unknown error occurred while trying to set up Family View.  Please try again. ({i:eresult})"
 	"Parental_Set_Fail_Timeout"		"Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later."
 	"Parental_Set_Fail_TryAgain"	"Try Again"
