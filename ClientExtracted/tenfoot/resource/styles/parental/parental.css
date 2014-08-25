@@ -540,16 +540,19 @@ AppGridItem.Unlocked .AppImageOverlay
 }
 
 
-ParentalSetPINChild .SettingsBottomPanel
+ParentalSetPINChild .SettingsBottomPanel,
+ParentalSetEnableCodeChild .SettingsBottomPanel
 {
 	flow-children: down;
 	horizontal-align: center;
 	vertical-align: center;
 	margin-left: 0px;
+	height: 700px;
 	width: 100%;
 }
 
-#SetPIN
+#SetPIN,
+#SetEnableCode
 {
 	horizontal-align: left;
 	margin-left: 295px;
@@ -558,7 +561,8 @@ ParentalSetPINChild .SettingsBottomPanel
 	text-align: left;
 }
 
-.ParentalSetPINDialog
+.ParentalSetPINDialog,
+.ParentalSetEnableCodeDialog
 {
 	margin-top: .0px;
 	padding: 50px 300px 20px 300px;
@@ -580,13 +584,15 @@ ParentalSetPINChild .SettingsBottomPanel
 	transition-timing-function: ease-in-out;
 }
 
-.ParentalPINEntry
+.ParentalPINEntry,
+.ParentalEnableCodeEntry
 {
 	flow-children: right;
 	text-align: left;
 }
 
-.ParentalPINEntry Label
+.ParentalPINEntry Label,
+.ParentalEnableCodeEntry Label
 {
 	vertical-align: center;
 	text-align: right;
@@ -595,12 +601,14 @@ ParentalSetPINChild .SettingsBottomPanel
 	width: 50%;
 }
 
-.DaisyWheelVisible .ParentalSetPINDialog
+.DaisyWheelVisible .ParentalSetPINDialog,
+.DaisyWheelVisible .ParentalSetEnableCodeDialog,
 {
 	transform: translatex( 400px );
 }
 
-ParentalSetPINChild TextEntry
+ParentalSetPINChild TextEntry,
+ParentalSetEnableCodeChild TextEntry
 {
 	horizontal-align: left;
 	height: 40px;
@@ -612,6 +620,25 @@ ParentalSetPINChild TextEntry
 	padding: -2px 4px;
 }
 
+.ParentalSetEnableCodeError
+{
+	font-size: 36px;
+	color: red;
+	font-weight: light;
+	opacity: 0.0;
+	padding-top: 20px;
+}
+
+.ParentalSetEnableCodeError.Visible
+{
+	opacity: 1.0;
+}
+
+
+ParentalSetEnableCodeChild TextEntry
+{
+	width: 120px;
+}
 
 ParentalSetInProgressChild .SettingsBottomPanel
 {
@@ -705,6 +732,10 @@ ParentalSetInProgressChild .SettingsBottomPanel
 	width: 450px;
 }
 
+ParentalSetFailChild .SettingsBottomPanel
+{
+	height: 700px;
+}
 
 ParentalSetSuccessChild .SettingsBottomPanel
 {
@@ -712,6 +743,7 @@ ParentalSetSuccessChild .SettingsBottomPanel
 	margin-left: 295px;
 	margin-right: 150px;
 	width: 900px;
+	height: 700px;
 }
 
 ParentalSetSuccessChild #ParentalLockImageUnlocked

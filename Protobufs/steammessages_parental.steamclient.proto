@@ -23,6 +23,7 @@ message CParental_EnableParentalSettings_Request {
 	optional string password = 1;
 	optional .ParentalSettings settings = 2;
 	optional string sessionid = 3;
+	optional uint32 enablecode = 4;
 	optional fixed64 steamid = 10;
 }
 
