@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOCKFILE=update.lock
+LOCKFILE=.support/update.lock
 
 if [ -f "$LOCKFILE" ] && kill -0 "$(cat $LOCKFILE)" 2>/dev/null; then
 	echo Still running

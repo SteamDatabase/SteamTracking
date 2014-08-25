@@ -1,14 +1,8 @@
-etags.txt
-apikey.txt
-update.lock
-extract_client.sh
-
-ProtobufDumper/
+.support/
 
 *.wav
 *.tmp
 *.webm
-*.zip
 
 ClientExtracted/tenfoot/resource/keyboards/
 ClientExtracted/tenfoot/resource/wordlists/
