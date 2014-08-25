@@ -7,7 +7,7 @@
 		private $AppStart;
 		private $CurrentTime;
 		private $UseCache = true;
-		private $ExtractAndFix = false;
+		private $ExtractClientArchives = false;
 		private $ETags = Array( );
 		private $Requests = Array( );
 		private $URLsToFetch = Array( );
@@ -41,35 +41,37 @@
 		{
 			$this->AppStart = MicroTime( true );
 			
-			$File = 'urls.txt';
-			
 			if( $Option === 'force' )
 			{
 				$this->UseCache = false;
 			}
 			
-			if( !File_Exists( 'apikey.txt' ) )
+			$UrlsPath   = __DIR__ . '/urls.txt';
+			$ApiKeyPath = __DIR__ . '/.support/apikey.txt';
+			$ETagsPath  = __DIR__ . '/.support/etags.txt';
+			
+			if( !File_Exists( $ApiKeyPath ) )
 			{
-				$this->Log( '{lightred}Missing apikey.txt' );
+				$this->Log( '{lightred}Missing ' . $ApiKeyPath );
 				
 				Exit;
 			}
-			else if( !File_Exists( $File ) )
+			else if( !File_Exists( $UrlsPath ) )
 			{
-				$this->Log( '{lightred}Missing ' . $File );
+				$this->Log( '{lightred}Missing ' . $UrlsPath );
 				
 				Exit;
 			}
 			
-			if( $this->UseCache && File_Exists( 'etags.txt' ) )
+			if( $this->UseCache && File_Exists( $ETagsPath ) )
 			{
-				$this->ETags = JSON_Decode( File_Get_Contents( 'etags.txt' ), true );
+				$this->ETags = JSON_Decode( File_Get_Contents( $ETagsPath ), true );
 			}
 			
-			$this->APIKey = Trim( File_Get_Contents( 'apikey.txt' ) );
+			$this->APIKey = Trim( File_Get_Contents( $ApiKeyPath ) );
 			$this->CurrentTime = Time( );
 			
-			$Data = File( $File );
+			$Data = File( $UrlsPath );
 			
 			foreach( $Data as $Line )
 			{
@@ -104,19 +106,17 @@
 			}
 			while( !Empty( $this->URLsToFetch ) && $Tries-- > 0 );
 			
-			File_Put_Contents( 'etags.txt', JSON_Encode( $this->ETags, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );
+			File_Put_Contents( $ETagsPath, JSON_Encode( $this->ETags, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );
 			
-			if( $this->ExtractAndFix )
+			if( $this->ExtractClientArchives )
 			{
-				$this->Log( '{lightcyan}Extracting archives and fixing encodings' );
+				$this->Log( '{lightblue}Extracting client archives and doing voodoo magic' );
 				
 				// Let's break all kinds of things! :(
-				System( 'sh ' . __DIR__ . '/extract_client.sh' );
-				
-				$this->Log( '{lightcyan}Dumping protobufs' );
-				
-				System( 'sh ' . __DIR__ . '/ProtobufDumper/dump.sh' );
+				System( 'sh ' . __DIR__ . '/.support/extract_client.sh' );
 			}
+			
+			$this->Log( '{lightblue}Done' );
 		}
 		
 		private function GenerateURL( $URL )
@@ -162,28 +162,19 @@
 							
 							$this->ETags[ $Archive ] = $Test;
 							
-							if( $Archive === 'bins_ubuntu12.zip' )
-							{
-								$Path = 'ProtobufDumper/';
-							}
-							else
-							{
-								$Path = 'ClientExtracted/';
-							}
-							
 							$this->URLsToFetch[ ] = Array(
 								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Test,
-								'File' => $Path . $Archive
+								'File' => '.support/' . $Archive
 							);
 						}
 					}
 					else
 					{
-						$this->Log( '{red}Failed to find {lightblue}' . $Archive );
+						$this->Log( '{yellow}Failed to find {lightblue}' . $Archive );
 					}
 				}
 				
-				unset( $Test, $Path );
+				unset( $Test );
 			}
 			// Convert group members to JSON
 			else if( $File === 'Random/ValveGroup.json' )
@@ -219,7 +210,7 @@
 					return false;
 				}
 				
-				$this->ExtractAndFix = true;
+				$this->ExtractClientArchives = true;
 				
 				return true;
 			}
@@ -291,7 +282,7 @@
 					
 					if( isset( $Done[ 'error' ] ) )
 					{
-						$this->Log( '{lightcyan}cURL Error: {yellow}' . $Done[ 'error' ] . '{normal} - ' . $URL );
+						$this->Log( '{yellow}cURL Error: {yellow}' . $Done[ 'error' ] . '{normal} - ' . $URL );
 						
 						$this->URLsToFetch[ ] = Array(
 							'URL'  => $URL,
@@ -304,7 +295,7 @@
 					}
 					else if( $Code !== 200 )
 					{
-						$this->Log( '{lightcyan}HTTP Error ' . $Code . '{normal} - ' . $URL );
+						$this->Log( '{yellow}HTTP Error ' . $Code . '{normal} - ' . $URL );
 						
 						if( $Code !== 404 )
 						{
@@ -439,16 +430,14 @@
 					'{green}',
 					'{yellow}',
 					'{lightred}',
-					'{lightblue}',
-					'{lightcyan}'
+					'{lightblue}'
 				),
 				Array(
 					"\033[0m",
 					"\033[0;32m",
 					"\033[1;33m",
 					"\033[1;31m",
-					"\033[1;34m",
-					"\033[1;36m"
+					"\033[1;34m"
 				),
 			$Log );
 			
