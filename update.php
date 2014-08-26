@@ -15,11 +15,12 @@
 		private $ClientArchives = Array(
 			'resources_all.zip',
 			'remoteui_all.zip',
-			'tenfoot_all.zip',
 			'public_all.zip',
 			'strings_all.zip',
+			'tenfoot_all.zip',
 			'tenfoot_images_all.zip',
 			'tenfoot_misc_all.zip',
+			'steam_ubuntu12.zip',
 			'bins_ubuntu12.zip'
 		);
 		
@@ -46,7 +47,7 @@
 				$this->UseCache = false;
 			}
 			
-			$UrlsPath   = __DIR__ . '/urls.txt';
+			$UrlsPath   = __DIR__ . '/urls.json';
 			$ApiKeyPath = __DIR__ . '/.support/apikey.txt';
 			$ETagsPath  = __DIR__ . '/.support/etags.txt';
 			
@@ -71,26 +72,22 @@
 			$this->APIKey = Trim( File_Get_Contents( $ApiKeyPath ) );
 			$this->CurrentTime = Time( );
 			
-			$Data = File( $UrlsPath );
+			$Data = File_Get_Contents( $UrlsPath );
 			
-			foreach( $Data as $Line )
+			// Strip comments
+			$Data = Preg_Replace( '#([\s]//.*)#', '', $Data );
+			
+			$Data = JSON_Decode( $Data, true );
+			
+			foreach( $Data as $File => $URL )
 			{
-				$Line = Trim( $Line );
-				
-				if( Empty( $Line ) || $Line[ 0 ] == '#' )
-				{
-					continue;
-				}
-				
-				$Line = Explode( '|', $Line, 2 );
-				
 				$this->URLsToFetch[ ] = Array(
-					'URL'  => $Line[ 1 ],
-					'File' => $Line[ 0 ]
+					'URL'  => $URL,
+					'File' => $File
 				);
 			}
 			
-			unset( $Data, $Line );
+			unset( $Data, $URL, $File );
 			
 			$Tries = 5;
 			
@@ -122,8 +119,8 @@
 		private function GenerateURL( $URL )
 		{
 			return Str_Replace(
-				Array( '*APIKEY*', '*TIMENOW*' ),
-				Array( $this->APIKey, $this->CurrentTime ),
+				Array( '__KEY__', '__TIME__' ),
+				Array( 'key=' . $this->APIKey, '_=' . $this->CurrentTime ),
 				$URL
 			);
 		}
@@ -156,7 +153,7 @@
 					{
 						$Test = $Test[ 1 ];
 						
-						if( !Array_Key_Exists( $Archive, $this->ETags ) || $this->ETags[ $Archive ] !== $Test )
+						if( !isset( $this->ETags[ $Archive ] ) || $this->ETags[ $Archive ] !== $Test )
 						{
 							$this->Log( 'Downloading {lightblue}' . $Archive . '{normal} - checksum: ' . $Test );
 							
@@ -166,6 +163,10 @@
 								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Test,
 								'File' => '.support/' . $Archive
 							);
+						}
+						else
+						{
+							$this->Log( 'Matched {lightblue}' . $Archive . '{normal}, but we already have it cached' );
 						}
 					}
 					else
