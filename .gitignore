@@ -4,8 +4,8 @@
 *.tmp
 *.webm
 
-ClientExtracted/tenfoot/resource/keyboards/
-ClientExtracted/tenfoot/resource/wordlists/
+ClientExtracted/ubuntu12_32/steam
+ClientExtracted/ubuntu12_64/steam
 ClientExtracted/steam/drivercheck/
 ClientExtracted/ThirdPartyLegalNotices.doc
 

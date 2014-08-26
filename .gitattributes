@@ -1,7 +1,6 @@
 * text eol=lf
 
 *.dat binary
-*.dic binary
 *.doc binary
 *.gif binary
 *.ico binary
@@ -10,5 +9,4 @@
 *.tga binary
 *.ttf binary
 *.wav binary
-*.zip binary
 

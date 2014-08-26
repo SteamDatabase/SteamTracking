@@ -1,0 +1,31 @@
+# This is a package dependency manifest used by steamdeps
+
+# This should be set to the version of the Steam runtime that this program
+# is built with.
+# 
+# Available values are:
+#	1	- Ubuntu 12.04 LTS
+#
+STEAM_RUNTIME=1
+ 
+# This should be set to the version of the dependency file format
+#
+# The file can contain lines starting with #, blank lines and dependencies
+# A dependency line consists of a package name for the current runtime,
+# along with optional architecture or version requirements using the 
+# Debian package syntax:
+#   http://www.debian.org/doc/debian-policy/ch-relationships.html
+#
+STEAM_DEPENDENCY_VERSION=1
+
+# These are non-arch specific dependencies
+curl
+python-apt
+xterm | gnome-terminal
+xz-utils
+zenity
+
+# These are i386 dependencies for Steam itself
+libgl1-mesa-dri:i386
+libgl1-mesa-glx:i386
+libc6:i386
