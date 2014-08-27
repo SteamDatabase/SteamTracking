@@ -82,6 +82,7 @@ var HighlightPlayer = Class.create( {
 
 	m_timerInterval: false,
 	m_bDisableSlider: false,
+	m_bScreenshotModalActive: false,
 
 	initialize: function( args )
 	{
@@ -143,6 +144,16 @@ var HighlightPlayer = Class.create( {
 		RegisterSteamOnWebPanelShownHandler( this.OnWebPanelShown.bind( this ) );
 		RegisterSteamOnWebPanelHiddenHandler( this.OnWebPanelHidden.bind( this ) );
 
+		if ( $J(document.body).hasClass( 'v6' ) )
+		{
+			var $ScreenshotsLinks = $J(this.m_elemPlayerArea).find('.highlight_player_item.highlight_screenshot a.highlight_screenshot_link');
+
+			var _this = this;
+			$ScreenshotsLinks.click( function( event ) {
+				_this.OnScreenshotClick( event, this );
+			} );
+		}
+
 		g_player = this;
 	},
 
@@ -174,12 +185,12 @@ var HighlightPlayer = Class.create( {
 		this.HighlightStripItem( 'thumb_movie_' + id );
 	},
 
-	HighlightScreenshot: function( id )
+	HighlightScreenshot: function( id, bSkipAnimation )
 	{
 		this.LoadScreenshot( id );
 
-		this.TransitionTo( $('highlight_screenshot_' + id) );
-		this.HighlightStripItem( 'thumb_screenshot_' + id );
+		this.TransitionTo( $('highlight_screenshot_' + id), bSkipAnimation );
+		this.HighlightStripItem( 'thumb_screenshot_' + id, bSkipAnimation );
 
 		//after showing at least one screenshot, show only screenshots from that point onward
 		this.bScreenshotsOnly = true;
@@ -230,7 +241,7 @@ var HighlightPlayer = Class.create( {
 		var target = $( 'highlight_screenshot_' + id );
 		if ( target )
 		{
-			var url = this.m_rgScreenshotURLs[ id ];
+			var url = this.GetScreenshotURL( id, '600x338' );
 			var img = target.down('img');
 			if ( img.src != url )
 				img.src = url;
@@ -238,7 +249,12 @@ var HighlightPlayer = Class.create( {
 		}
 	},
 
-	TransitionTo: function( elem )
+	GetScreenshotURL: function( id, size )
+	{
+		return this.m_rgScreenshotURLs[ id ].replace( /_SIZE_/, size ? '.' + size : '' );
+	},
+
+	TransitionTo: function( elem, bSkipAnimation )
 	{
 		if ( this.m_activeItem )
 		{
@@ -265,7 +281,11 @@ var HighlightPlayer = Class.create( {
 			{
 				//(cross) fade screenshots
 				if ( $(this.m_activeItem).effect ) $(this.m_activeItem).effect.cancel();
-				$(this.m_activeItem).effect = Effect.Fade( this.m_activeItem, {duration: 0.4 } );
+
+				if ( bSkipAnimation )
+					$(this.m_activeItem).hide();
+				else
+					$(this.m_activeItem).effect = Effect.Fade( this.m_activeItem, {duration: 0.4 } );
 			}
 		}
 
@@ -276,13 +296,17 @@ var HighlightPlayer = Class.create( {
 		else
 		{
 			if ( elem.effect ) elem.effect.cancel();
-			elem.effect = new Effect.Appear( elem, {duration: 0.4 } );
+
+			if ( bSkipAnimation )
+				elem.show();
+			else
+				elem.effect = new Effect.Appear( elem, {duration: 0.4 } );
 		}
 
 		this.m_activeItem = elem;
 	},
 
-	HighlightStripItem: function( elem )
+	HighlightStripItem: function( elem, bSkipAnimation )
 	{
 		var elem = $(elem);
 		elem.siblings().invoke( 'removeClassName', 'focus' );
@@ -321,8 +345,10 @@ var HighlightPlayer = Class.create( {
 		if ( bNeedScroll && this.slider )
 		{
 			if ( this.m_elemStripScroll.effect ) this.m_elemStripScroll.effect.cancel();
-			this.m_elemStripScroll.effect = new Effect.Tween( null, this.slider.value, nTargetScrollOffset, this.slider.setValue.bind( this.slider ) );
-
+			if ( bSkipAnimation )
+				this.slider.setValue( nTargetScrollOffset );
+			else
+				this.m_elemStripScroll.effect = new Effect.Tween( null, this.slider.value, nTargetScrollOffset, this.slider.setValue.bind( this.slider ) );
 		}
 	},
 
@@ -452,7 +478,167 @@ var HighlightPlayer = Class.create( {
 		{
 			new Ajax.Request( 'http://store.steampowered.com/videoview/' + movieid + '/' );
 		}
+	},
+
+	OnScreenshotClick: function( event, element )
+	{
+		if ( !this.m_bScreenshotModalActive )
+		{
+			var $Link = $J(element);
+			var screenshotid = $Link.data('screenshotid');
+			this.ShowScreenshotPopup( screenshotid );
+		}
+
+		event.preventDefault();
+	},
+
+	ShowScreenshotPopup: function( screenshotid )
+	{
+		var rgScreenshotIDs = [];
+		for( var id in this.m_rgScreenshotURLs )
+		{
+			rgScreenshotIDs.push( id );
+		}
+		var iCurIndex = -1;
+		for ( var i=0; i < rgScreenshotIDs.length; i++ )
+		{
+			if ( rgScreenshotIDs[i] == screenshotid )
+			{
+				iCurIndex = i;
+				break;
+			}
+		}
+
+		if ( iCurIndex == -1 )
+			return;
+
+		this.m_bScreenshotModalActive = true;
+
+		var $Modal = $J('<div/>', {'class': 'screenshot_popup_modal' } );
+
+		var $Title = $J('<div/>', {'class': 'screenshot_popup_modal_title'} );
+
+		var $Img = $J('<img/>', {'src': this.GetScreenshotURL( screenshotid, '600x338' ) } );
+		var $Link = $J('<a/>');
+		var $ImgCtn = $J('<div/>', {'class': 'screenshot_img_ctn'}).append( $Link.append( $Img ) );
+
+		var $Footer =  $J('<div/>', {'class': 'screenshot_popup_modal_footer' } );
+		var $ScreenshotCount = $J('<div/>');
+		$Footer.append( $ScreenshotCount );
+
+		var $BtnPrev = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium previous'}).append( $J('<span/>').text( 'Prev' ) );
+		var $BtnNext = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium next'}).append( $J('<span/>').text( 'Next' ) );
+
+		$Footer.append( $ScreenshotCount, $BtnPrev, $BtnNext );
+
+
+		$Modal.append( $J('<div/>', {'class': 'screenshot_popup_modal_content'} ).append(
+			$Title,
+			$ImgCtn,
+			$Footer
+		));
+
+		var Modal = new CModal( $Modal );
+		Modal.SetRemoveContentOnDismissal( true );
+		var bModalShown = false;
+
+		// if loading the 1920x1080 screenshot takes a while, show the popup earlier with a smaller screenshot
+		//	so that the user knows we've responded to their input
+		window.setTimeout( function() {
+			if ( !bModalShown )
+			{
+				Modal.Show();
+				bModalShown = true;
+			}
+		}, 75 );
+
+		$Img.load( function() {
+			$ImgCtn.css( 'min-width', '' );
+			$ImgCtn.css( 'min-height', '' );
+			$Img.stop();
+			$Img.fadeTo( 'fast', 1.0 );
+			if ( !bModalShown )
+			{
+				Modal.Show();
+				bModalShown = true;
+			}
+			Modal.AdjustSizing();
+		} );
+
+		var GameHighlightPlayer = this;
+		var fnUpdateFooter = function()
+		{
+			if ( iCurIndex > 0 )
+				$BtnPrev.show();
+			else
+				$BtnPrev.hide();
+
+			if ( iCurIndex < rgScreenshotIDs.length - 1 )
+				$BtnNext.show();
+			else
+				$BtnNext.hide();
+
+			$ScreenshotCount.text( '%1$s of %2$s screenshots'.replace( /%1\$s/, iCurIndex + 1 ).replace( /%2\$s/, rgScreenshotIDs.length ) );
+		};
+		var fnShowScreenshot = function( screenshotid )
+		{
+			$Title.text( GameHighlightPlayer.GetScreenshotURL( screenshotid ) );
+			$Link.attr( 'href', GameHighlightPlayer.GetScreenshotURL( screenshotid ) );
+			Steam.LinkInNewWindow( $Link );
+
+			$ImgCtn.css( 'min-width', $ImgCtn.width() );
+			$ImgCtn.css( 'min-height', $ImgCtn.height() );
+			$Img.stop();
+			$Img.fadeTo( 'fast', 0.3 );
+			$Img.attr( 'src', GameHighlightPlayer.GetScreenshotURL( screenshotid, '1920x1080' ) );
+		};
+		var fnNextScreenshot = function() {
+			if ( iCurIndex < rgScreenshotIDs.length - 1 )
+			{
+				iCurIndex++;
+				fnShowScreenshot( rgScreenshotIDs[iCurIndex] );
+				fnUpdateFooter();
+			}
+		};
+		var fnPrevScreenshot = function() {
+			if ( iCurIndex > 0 )
+			{
+				iCurIndex--;
+				fnShowScreenshot( rgScreenshotIDs[iCurIndex] );
+				fnUpdateFooter();
+			}
+		};
+		$BtnNext.click( fnNextScreenshot );
+		$BtnPrev.click( fnPrevScreenshot );
+
+		$J(document).on('keydown.GameHighlightScreenshots', function( event ) {
+			if ( event.which == 37 /* left */ || event.which == 38 /* up */ )
+			{
+				fnPrevScreenshot();
+				event.preventDefault();
+			}
+			else if ( event.which == 39 /* right */ || event.which == 40 /* down */ || event.which == 32 /* spacebar */ )
+			{
+				fnNextScreenshot();
+				event.preventDefault();
+			}
+		});
+
+		Modal.OnResize( function( nMaxWidth, nMaxHeight ) {
+			$Img.css( 'max-width', nMaxWidth );
+			$Img.css( 'max-height', nMaxHeight - 74 );
+		} );
+
+		Modal.OnDismiss( function() {
+			GameHighlightPlayer.HighlightScreenshot( rgScreenshotIDs[iCurIndex], true );
+			GameHighlightPlayer.m_bScreenshotModalActive = false;
+			$J(document).off('keydown.GameHighlightScreenshots');
+		} );
+
+		fnShowScreenshot( screenshotid );
+		fnUpdateFooter();
 	}
+
 } );
 
 

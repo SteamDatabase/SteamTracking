@@ -2441,3 +2441,182 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 .home_page_sign_in_ctn p {
     margin-top: 30px;
 }
+
+.home_content {
+	padding: 25px 0;
+}
+
+.home_content h2 {
+	margin-bottom: 10px;
+}
+
+.home_content.fourwide a {
+	width: 222px;
+	display: inline-block;
+	padding-right: 10px;
+	position: relative;
+}
+
+.home_content.fourwide a:last-child, .home_content.twowide  a:last-child  {
+	padding-right: 0;
+}
+
+.home_content.fourwide a img {
+	width: 222px;
+	height: 104px;
+}
+
+.home_content.fourwide .ds_flag {
+	top: 50px;
+}
+
+.home_content .ds_flagged img {
+	opacity: 0.3;
+}
+
+/* Two wide main cap */
+.home_content.twowide a {
+	width: 460px;
+	display: inline-block;
+	padding-right: 10px;
+	position: relative;
+}
+
+
+.home_content.twowide a img {
+	width: 460px;
+	height: 215px;
+}
+
+.home_content.twowide .ds_flag {
+	top: 50px;
+}
+
+/* friend recommendations */
+.home_content.friendsrecommend .item {
+	width: 448px;
+	height: 166px;
+	padding: 10px;
+	background: rgba(0,0,0,0.2);
+	display: inline-block;
+	padding-right: 4px;
+	position: relative;
+	display: inline-block;
+}
+
+.home_content.friendsrecommend .item a {
+	display: inline-block;
+	position: relative;
+}
+
+
+.home_content.friendsrecommend .item img {
+	width: 244px;
+	height: 114px;
+}
+
+.home_content.friendsrecommend .ds_flag {
+	top: 50px;
+}
+
+.home_content.friendsrecommend .friends {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+}
+.home_content.friendsrecommend .friends .friend_block_avatar img {
+	width: 32px;
+	height: 32px;
+}
+
+.home_content.friendsrecommend .friends .btn {
+	margin-top: 5px;
+}
+
+/* Single game */
+.home_content.single {
+	background: rgba(0,0,0,0.2);
+	padding: 10px 16px 16px 16px;
+	color: #9099a0;
+	margin-top: 30px;
+}
+
+.home_content.single h1 {
+	font-size: 24px;
+	font-family: "Motiva Sans Light", "Motiva Sans", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #fff;
+}
+
+.home_content.single a.gamelink {
+	position: relative;
+	z-index: 10;
+	display: inline-block;
+}
+
+
+.home_content.single .screenshots {
+	z-index: -10;
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+
+
+.home_content.single_buttonbar {
+	background: rgba(0,0,0,0.2);
+	padding: 7px 7px;
+	color: #9099a0;
+	margin: 2px 0 25px 0;
+}
+
+
+.home_content.single .capsule {
+	display: inline-block;
+	box-shadow: 0 0 5px 0px #000;
+	width: 292px;
+	height: 136px;
+	z-index: 10;
+	position: relative;
+}
+
+.home_content.single img.screenshot {
+	display: inline-block;
+	width: 213px;
+	height: 120px;
+	margin: 10px 21px 0 -22px;
+	margin-top: 8px;
+}
+
+
+.home_content.single img.screenshot:last-child {
+	margin-right: 0;
+}
+
+.home_content .buttonbar_spacer {
+	width: 75px;
+	display: inline-block;
+}
+
+.home_content a.right {
+	float: right;
+}
+
+.home_content_reason {
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+.home_page_content.more_content {
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	color: #67c1f5;
+	text-align: center;
+
+}
+.endless {
+	margin-top: 50px;
+}

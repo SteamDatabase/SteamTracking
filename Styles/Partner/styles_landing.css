@@ -300,7 +300,7 @@ body{
 		margin-bottom: 10px;
 		border-radius: 3px;
 		background-color: #000;
-		padding: 8px;
+		padding: 12px;
 	}
 
 		.landingRightCol .panel .attribute {
@@ -332,8 +332,9 @@ body{
 
 		.landingRightCol .panel h1 {
 			color: #808285;
-			font-size: 18px;
+			font-size: 17px;
 			margin-bottom: 5px;
+			font-weight: normal;
 		}
 
 		.landingRightCol .panel h2 {

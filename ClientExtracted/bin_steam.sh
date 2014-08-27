@@ -12,7 +12,7 @@ export STEAMSCRIPT="$(cd "${0%/*}" && echo "$PWD")/${0##*/}"
 #	steamrepo@list.valvesoftware.com
 # You can subscribe to this list at:
 # 	https://list.valvesoftware.com/mailman/listinfo/steamrepo
-export STEAMSCRIPT_VERSION=100048
+export STEAMSCRIPT_VERSION=100049
 
 # Set up domain for script localization
 export TEXTDOMAIN=steam

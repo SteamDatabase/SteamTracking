@@ -1592,6 +1592,9 @@ img.large_cap {
 body.v6 .page_content_ctn.dark {
 	background-color: #000;
 	padding: 25px 0;
+}
+
+body.v6 .page_content_ctn.dark:last-child {
 	margin-bottom: -52px;
 }
 

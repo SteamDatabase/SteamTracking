@@ -318,6 +318,38 @@
 	background-color:#4d4b49;
 }
 
+#parental_setenablecode_box
+{
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/keybg.png' );
+	background-repeat: no-repeat;
+	background-position: 300px 50%;
+	height: 400px;
+	position: relative;
+}
+
+#set_formenablecode
+{
+	position: absolute;
+	top: 150px;
+	width: 90%;
+}
+
+#set_formenablecode button
+{
+	margin-top: 100px;
+}
+
+#parental_setenablecode_entries
+{
+	margin-left: 30px;
+	margin-top: 6px;
+}
+
+#parental_setenablecode_entries input
+{
+	background-color:#4d4b49;
+}
+
 #parental_setcomplete_box
 {
 	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/familybg.png' );

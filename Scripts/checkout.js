@@ -3562,7 +3562,10 @@ function OnPurchaseSuccess( result )
 			
 			Effect.ScrollTo( 'receipt_error_display' );
 			new Effect.Highlight( 'receipt_error_display', { endcolor : '#000000', startcolor : '#ff9900' } );				
-		}		
+		}
+
+		if ( typeof GDynamicStore != 'undefined' )
+			GDynamicStore.InvalidateCache();
 	}
 	catch( e )
 	{

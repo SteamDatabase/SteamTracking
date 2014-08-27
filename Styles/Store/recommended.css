@@ -1404,43 +1404,43 @@ a.friendactivity_game_link.ds_flagged img {
     box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
 }
 
-#review_create .content .controls {
+.review_create_vote_controls {
 	color: #acb2b8;
     font-size: 13px;
     font-family: "Motiva Sans", Arial, tahoma, sans-serif;
 }
 
-#review_create .content .controls .btn_active {
+.review_create_vote_controls .btn_active {
 	text-shadow: none;
 }
 
-    #review_create .content .controls .btn_darkblue_white_innerfade.btn_active {
-        background: none !important;
-    }
-    #review_create .content .controls .btn_darkblue_white_innerfade.btn_active > span {
-        background: rgba( 103, 193, 245, 0.6 );
-        color: #ffffff;
-    }
-    #review_create .content .controls .btn_darkblue_white_innerfade {
-        background: none !important;
-        text-shadow: none;
-    }
-    #review_create .content .controls .btn_darkblue_white_innerfade > span {
-        background: rgba( 103, 193, 245, 0.2 );
-        color: #67c1f5;
-    }
-    #review_create .content .controls .btn_darkblue_white_innerfade > span:hover {
-        color: #ffffff;
-        border-radius: 1px;
-        background: #67c1f5; /* Old browsers */
-        background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
-        background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    }
+.review_create_vote_controls .btn_darkblue_white_innerfade.btn_active {
+	background: none !important;
+}
+.review_create_vote_controls .btn_darkblue_white_innerfade.btn_active > span {
+	background: rgba( 103, 193, 245, 0.6 );
+	color: #ffffff;
+}
+.review_create_vote_controls .btn_darkblue_white_innerfade {
+	background: none !important;
+	text-shadow: none;
+}
+.review_create_vote_controls .btn_darkblue_white_innerfade > span {
+	background: rgba( 103, 193, 245, 0.2 );
+	color: #67c1f5;
+}
+.review_create_vote_controls .btn_darkblue_white_innerfade > span:hover {
+	color: #ffffff;
+	border-radius: 1px;
+	background: #67c1f5; /* Old browsers */
+	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
 #review_create .content .controls .dselect_container {
 	color: #acb2b8;
