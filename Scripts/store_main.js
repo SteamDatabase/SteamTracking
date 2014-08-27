@@ -691,6 +691,9 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 				$(divToShowSuccess).show();
 			else
 				$(divToShowError).show();
+
+			if ( typeof GDynamicStore != 'undefined' )
+				GDynamicStore.InvalidateCache();
 		}
 	});
 }
@@ -1493,7 +1496,7 @@ function EnsureStoreMenuTagsLoaded( strId )
 	{
 		$Element.data('tags-loaded', true );
 
-		var url = 'http://store.steampowered.com/tagdata/recommendedtags';
+		var url = 'https://store.steampowered.com/tagdata/recommendedtags';
 
 		$J.get( url, {ll: 'english'} ).done( function( data ) {
 			rgYourPopularTags = data || [];
@@ -1531,6 +1534,8 @@ function AddFreeLicense( subid, strDisplayName )
 		).done( function() {
 			window.location.reload();
 		});
+		if ( typeof GDynamicStore != 'undefined' )
+			GDynamicStore.InvalidateCache();
 	}).fail( function( jqXHR ) {
 		var data = V_ParseJSON( jqXHR.responseText );
 		if ( data && data.purchaseresultdetail == 9 )

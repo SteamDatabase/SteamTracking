@@ -217,7 +217,7 @@
 }
 
 .game_header_image_ctn {
-	margin-bottom: 10px;
+	margin-bottom: 7px;
 }
 
 img.game_header_image {
@@ -231,7 +231,7 @@ img.game_header_image_full {
 }
 
 .game_description_snippet {
-	max-height: 105px;
+	max-height: 108px;
 	overflow: hidden;
     font-size: 13px;
     line-height: 18px;
@@ -244,6 +244,10 @@ img.game_header_image_full {
 
 .game_review_summary.positive {
 	color: #66C0F4;
+}
+
+.game_review_summary.none {
+	color: #626366;
 }
 
 .glance_details {
@@ -406,7 +410,7 @@ img.game_header_image_full {
 {
 	float: left;
 	position: relative;
-	height: 34px;
+	height: 32px;
 	min-width: 69px;
 	text-align: center;
 	line-height: 34px;
@@ -566,7 +570,7 @@ img.game_header_image_full {
 }
 
 .game_purchase_action_bg {
-	/* height: 34px; */
+	height: 32px;
 
 	background-color: rgba(0,0,0,0.5);
 	padding: 2px 2px 2px 0px;
@@ -3251,3 +3255,47 @@ select.gray_bevel {
 	opacity: 0.3;
 }
 
+.screenshot_popup_modal {
+	position: absolute;
+}
+
+.screenshot_popup_modal_content {
+	position: relative;
+	padding: 10px;
+	border-radius: 3px;
+
+background: -moz-linear-gradient(135deg, #356480 5%, #1a303d 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480), color-stop(95%,#1a303d));background: -webkit-linear-gradient(135deg, #356480 5%,#1a303d 95%);background: -o-linear-gradient(135deg, #356480 5%,#1a303d 95%);background: -ms-linear-gradient(135deg, #356480 5%,#1a303d 95%);background: linear-gradient(135deg, #356480 5%,#1a303d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#356480', endColorstr='#1a303d',GradientType=1 );}
+
+.screenshot_popup_modal_title {
+	line-height: 20px;
+	height: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	color: #222d3d;
+}
+
+.screenshot_popup_modal_footer {
+	position: relative;
+	height: 28px;
+	line-height: 28px;
+	margin-top: 10px;
+	text-align: center;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.screenshot_popup_modal_footer .previous {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.screenshot_popup_modal_footer .next {
+	position: absolute;
+	right: 0;
+	top: 0;
+}

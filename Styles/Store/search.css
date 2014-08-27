@@ -231,6 +231,10 @@
 	color: #66C0F4;
 }
 
+.search_result_row .col.search_reviewscore .game_review_summary.none {
+	color: #626366;
+}
+
 .search_result_row .col.search_price {
 	width: 100px;
 	text-align: right;

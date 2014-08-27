@@ -245,6 +245,9 @@ a.trigger, a.activetrigger {
 
 	overflow: auto;
 	overflow-x: hidden;
+
+	white-space: nowrap;
+	max-height: 306px;
 }
 
 .dropdownhidden{
