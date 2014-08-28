@@ -10078,6 +10078,7 @@
 			"baseitem"		"1"
 			"default_slot_item"		"1"
 			"item_sub_position"		"rifle1"
+			"item_shares_equip_slot"		"1"
 		}
 		"17"
 		{
@@ -10225,6 +10226,7 @@
 			"baseitem"		"1"
 			"default_slot_item"		"1"
 			"item_sub_position"		"secondary2"
+			"item_shares_equip_slot"		"1"
 		}
 		"38"
 		{
@@ -10396,6 +10398,7 @@
 			"item_quality"		"normal"
 			"baseitem"		"1"
 			"item_sub_position"		"rifle1"
+			"item_shares_equip_slot"		"1"
 		}
 		"61"
 		{
@@ -10425,6 +10428,7 @@
 			"item_quality"		"normal"
 			"baseitem"		"1"
 			"item_sub_position"		"secondary2"
+			"item_shares_equip_slot"		"1"
 		}
 		"500"
 		{
