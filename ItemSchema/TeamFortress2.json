@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.8672cfda91a02619f27f757811cef7e51e2d4ad2.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.9a98e8ee647026cc50f0008db5b584195e34458b.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -27,7 +27,7 @@
 			"rarity3": "rarity3",
 			"rarity4": "Unusual",
 			"Unique": "Unique",
-			"community": "Community",
+			"community": "map",
 			"developer": "Valve",
 			"selfmade": "Self-Made",
 			"customized": "Customized",
@@ -53387,6 +53387,39 @@
 					"Spy"
 				]
 				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RPS Promo",
+				"defindex": 2133,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "RPS Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
 				"attributes": [
 					{
 						"name": "elevate quality",
@@ -114268,6 +114301,53 @@
 						"name": "counts as assister is some kind of pet this update is going to be awesome",
 						"class": "counts_as_assister",
 						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Horace",
+				"defindex": 30469,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Horace",
+				"item_description": "\t\t\t\t\t",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/horace/horace_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/horace/horace",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/horace.8838f4efe1905507ba54c4bf63de3618b1334687.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/horace_large.a719e926af684858cf52ca25626785ff99ef1ddb.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
 					}
 				]
 				
