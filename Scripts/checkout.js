@@ -3543,7 +3543,10 @@ function OnPurchaseSuccess( result )
 	{
 		if ( g_bIsUpdateBillingInfoForm )
 		{
-						window.location = 'http://store.steampowered.com/account';
+						if ( $('cache_return_url') )
+				window.location = $('cache_return_url').value;
+			else
+				window.location = 'http://store.steampowered.com/account';
 			return true;
 		}
 	
