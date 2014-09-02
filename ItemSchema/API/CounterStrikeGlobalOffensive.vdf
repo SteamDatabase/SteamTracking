@@ -7853,6 +7853,7 @@
 			"attributes"
 			{
 				"is full auto"		"1"
+				"in game price"		"500"
 				"cycletime"		"0.100000"
 				"recoil angle"		"0"
 				"recoil angle variance"		"180"
@@ -9997,6 +9998,7 @@
 			"baseitem"		"1"
 			"default_slot_item"		"1"
 			"item_sub_position"		"secondary3"
+			"item_shares_equip_slot"		"1"
 		}
 		"4"
 		{
@@ -10160,6 +10162,7 @@
 			"baseitem"		"1"
 			"default_slot_item"		"1"
 			"item_sub_position"		"secondary3"
+			"item_shares_equip_slot"		"1"
 		}
 		"31"
 		{
@@ -10226,7 +10229,6 @@
 			"baseitem"		"1"
 			"default_slot_item"		"1"
 			"item_sub_position"		"secondary2"
-			"item_shares_equip_slot"		"1"
 		}
 		"38"
 		{
@@ -10427,7 +10429,7 @@
 			"prefab"		"weapon_cz75a_prefab"
 			"item_quality"		"normal"
 			"baseitem"		"1"
-			"item_sub_position"		"secondary2"
+			"item_sub_position"		"secondary3"
 			"item_shares_equip_slot"		"1"
 		}
 		"500"
@@ -11773,6 +11775,19 @@
 			}
 		}
 		"1310"
+		{
+			"name"		"Community Case Key 4 August 2014"
+			"item_name"		"#CSGO_community_crate_key_4"
+			"item_description"		"#CSGO_community_crate_key_4_desc"
+			"first_sale_date"		"2014/06/23"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_community_4"
+			"tool"
+			{
+				"restriction"		"community_case_4"
+			}
+		}
+		"1311"
 		{
 			"name"		"Community Case Key 4"
 			"item_name"		"#CSGO_community_crate_key_4"
