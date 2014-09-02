@@ -1553,6 +1553,13 @@ background: -moz-linear-gradient(top, #b8f750 5%, #87c643 95%);background: -webk
 	height: 50px;
 }
 
+.no_more_reviews_explanation {
+	text-align: center;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	color: #b0aeac;
+	font-size: 12px;
+}
+
 .review_box {
     background-color: rgba( 0, 0, 0, 0.2 );
 	margin-bottom: 26px;

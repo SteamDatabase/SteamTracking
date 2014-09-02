@@ -73,6 +73,13 @@
 	margin-top: 10px;
 }
 
+#parental_recovery
+ {
+	 position: absolute;
+	 bottom: 20px;
+	 width: 656px;
+ }
+
 .parental_settings_form #parental_error
 {
 	float: right;
@@ -316,6 +323,22 @@
 #parental_setpin_entries input
 {
 	background-color:#4d4b49;
+}
+
+#parental_setrecoveryemail_entries
+{
+	margin-left: 30px;
+	margin-top: 6px;
+}
+
+#parental_setrecoveryemail_entries input
+{
+	background-color:#4d4b49;
+}
+
+#parental_setrecoveryemail_entries label
+{
+	width: 40%;
 }
 
 #parental_setenablecode_box

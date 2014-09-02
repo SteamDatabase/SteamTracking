@@ -1329,6 +1329,10 @@ textarea.comment_input
 	height: 50px;
 }
 
+.no_more_reviews_explanation {
+	display: none;
+}
+
 .review_box {
 	border-top: 1px solid #425a76;
 	background: -moz-linear-gradient(left, #20201f 5%, #252626 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#20201f), color-stop(95%,#252626));background: -webkit-linear-gradient(left, #20201f 5%,#252626 95%);background: -o-linear-gradient(left, #20201f 5%,#252626 95%);background: -ms-linear-gradient(left, #20201f 5%,#252626 95%);background: linear-gradient(to right, #20201f 5%,#252626 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20201f', endColorstr='#252626',GradientType=1 );	margin-bottom: 26px;
