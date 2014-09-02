@@ -2,21 +2,6 @@
 	"apilist": {
 		"interfaces": [
 			{
-				"name": "ICSGOServers_730",
-				"methods": [
-					{
-						"name": "GetGameServersStatus",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
-					}
-				]
-				
-			},
-			{
 				"name": "IDOTA2Fantasy_205790",
 				"methods": [
 					{
@@ -828,46 +813,6 @@
 				
 			},
 			{
-				"name": "IEconItems_221540",
-				"methods": [
-					{
-						"name": "GetPlayerItems",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "IEconItems_238460",
-				"methods": [
-					{
-						"name": "GetPlayerItems",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
 				"name": "IEconItems_440",
 				"methods": [
 					{
@@ -991,97 +936,6 @@
 				
 			},
 			{
-				"name": "IEconItems_620",
-				"methods": [
-					{
-						"name": "GetPlayerItems",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							}
-						]
-						
-					},
-					{
-						"name": "GetSchema",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "language",
-								"type": "string",
-								"optional": true,
-								"description": "The language to return the names in. Defaults to returning string keys."
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "IEconItems_730",
-				"methods": [
-					{
-						"name": "GetPlayerItems",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							}
-						]
-						
-					},
-					{
-						"name": "GetSchema",
-						"version": 2,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "language",
-								"type": "string",
-								"optional": true,
-								"description": "The language to return the names in. Defaults to returning string keys."
-							}
-						]
-						
-					},
-					{
-						"name": "GetSchemaURL",
-						"version": 2,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
-					},
-					{
-						"name": "GetStoreMetaData",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "language",
-								"type": "string",
-								"optional": true,
-								"description": "The language to results in."
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
 				"name": "IEconItems_841",
 				"methods": [
 					{
@@ -1163,41 +1017,6 @@
 						"httpmethod": "GET",
 						"parameters": [
 
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "IGCVersion_730",
-				"methods": [
-					{
-						"name": "GetServerVersion",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "IPortal2Leaderboards_620",
-				"methods": [
-					{
-						"name": "GetBucketizedData",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "leaderboardName",
-								"type": "string",
-								"optional": false,
-								"description": "The leaderboard name to fetch data for."
-							}
 						]
 						
 					}
@@ -2275,98 +2094,6 @@
 							},
 							{
 								"name": "promoid",
-								"type": "uint32",
-								"optional": false,
-								"description": "The promo ID to grant an item for"
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "ITFPromos_620",
-				"methods": [
-					{
-						"name": "GetItemID",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							},
-							{
-								"name": "PromoID",
-								"type": "uint32",
-								"optional": false,
-								"description": "The promo ID to grant an item for"
-							}
-						]
-						
-					},
-					{
-						"name": "GrantItem",
-						"version": 1,
-						"httpmethod": "POST",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							},
-							{
-								"name": "PromoID",
-								"type": "uint32",
-								"optional": false,
-								"description": "The promo ID to grant an item for"
-							}
-						]
-						
-					}
-				]
-				
-			},
-			{
-				"name": "ITFPromos_730",
-				"methods": [
-					{
-						"name": "GetItemID",
-						"version": 1,
-						"httpmethod": "GET",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							},
-							{
-								"name": "PromoID",
-								"type": "uint32",
-								"optional": false,
-								"description": "The promo ID to grant an item for"
-							}
-						]
-						
-					},
-					{
-						"name": "GrantItem",
-						"version": 1,
-						"httpmethod": "POST",
-						"parameters": [
-							{
-								"name": "steamid",
-								"type": "uint64",
-								"optional": false,
-								"description": "The Steam ID to fetch items for"
-							},
-							{
-								"name": "PromoID",
 								"type": "uint32",
 								"optional": false,
 								"description": "The promo ID to grant an item for"
