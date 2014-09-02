@@ -331,6 +331,22 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.00', '' );
 		case 'BRL':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.', ',' );
+		case 'NOK':
+			return currencyFormat.replace( '.', ',' ) + ' ' + GetCurrencySymbol( currencyCode );
+		case 'IDR':
+			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat;
+		case 'MYR':
+		case 'PHP':
+		case 'SGD':
+		case 'THB':
+			return GetCurrencySymbol( currencyCode ) + currencyFormat;
+		case 'KRW':
+			return GetCurrencySymbol( currencyCode ) + currencyFormat.replace( '.00', '' );
+		case 'MXN':
+		case 'CAD':
+		case 'AUD':
+		case 'NZD':
+			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat;
 		default:
 			return currencyFormat + ' ' + currencyCode;
 	}
@@ -338,10 +354,31 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 
 function IsCurrencySymbolBeforeValue( currencyCode )
 {
-	if ( currencyCode == 'GBP' || currencyCode == 'USD' || currencyCode == 'BRL' || currencyCode == 'JPY' )
+	if ( currencyCode == 'GBP' || currencyCode == 'USD' || currencyCode == 'BRL' || currencyCode == 'JPY'
+		|| currencyCode == 'IDR' || currencyCode == 'MYR' || currencyCode == 'PHP' || currencyCode == 'SGD'
+		|| currencyCode == 'THB' || currencyCode == 'KRW' || currencyCode == 'MXN' || currencyCode == 'CAD' 
+		|| currencyCode == 'AUD' || currencyCode == 'NZD' )
 		return true;
 
 	return false;
+}
+
+function IsCurrencyWholeUnits( currencyCode )
+{
+	switch ( currencyCode )
+	{
+				case 'JPY':
+		case 'IDR':
+		case 'VND':
+		case 'KRW':
+		case 'UAH':
+		case 'RMB':
+		case 'NXP':
+			return true;
+		
+		default:
+			return false;
+	}
 }
 
 // Return the symbol to use for a currency
@@ -361,6 +398,34 @@ function GetCurrencySymbol( currencyCode )
 			return 'R$';
 		case 'JPY':
 			return '¥';
+		case 'NOK':
+			return 'kr';
+		case 'IDR':
+			return 'Rp';
+		case 'MYR':
+			return 'RM';
+		case 'PHP':
+			return '₱';
+		case 'SGD':
+			return 'S$';
+		case 'THB':
+			return '฿';
+		case 'VND':
+			return '₫';
+		case 'KRW':
+			return '₩';
+		case 'TRY':
+			return 'TL';
+		case 'UAH':
+			return '₴';
+		case 'MXN':
+			return 'Mex$';
+		case 'CAD':
+			return 'C$';
+		case 'AUD':
+			return 'A$';
+		case 'NZD':			
+			return 'NZ$';
 		default:
 			return currencyCode + ' ';
 	}
@@ -382,6 +447,34 @@ function GetCurrencyCode( currencyId )
 			return 'BRL';
 		case 8:
 			return 'JPY';
+		case 9:
+			return 'NOK';
+		case 10:
+			return 'IDR';
+		case 11:
+			return 'MYR';
+		case 12:
+			return 'PHP';
+		case 13:
+			return 'SGD';
+		case 14:
+			return 'THB';
+		case 15:
+			return 'VND';
+		case 16:
+			return 'KRW';
+		case 17:
+			return 'TRY';
+		case 18:
+			return 'UAH';
+		case 19:
+			return 'MXN';
+		case 20:
+			return 'CAD';
+		case 21:
+			return 'AUD';
+		case 22:
+			return 'NZD';
 		default:
 			return 'Unknown';
 	}

@@ -203,6 +203,7 @@
 	color: #4c6c8c;
 	font-size: 11px;
 	line-height: 45px;
+	white-space: nowrap;
 }
 
 .search_result_row .col.search_metascore {

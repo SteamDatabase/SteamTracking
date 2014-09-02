@@ -1259,7 +1259,11 @@ WebStorage = {
 			return WebStorage.GetCookie( key );
 
 		var value = storage.getItem(key);
-		value = V_ParseJSON( value );
+		try {
+			value = V_ParseJSON( value );
+		} catch(err){
+			return null;
+		}
 
 		if( value == null )
 		{

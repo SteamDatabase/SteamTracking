@@ -516,11 +516,12 @@ var HighlightPlayer = Class.create( {
 
 		var $Modal = $J('<div/>', {'class': 'screenshot_popup_modal' } );
 
-		var $Title = $J('<div/>', {'class': 'screenshot_popup_modal_title'} );
+		var $Title = $J('<a/>' );
+		var $TitleCtn = $J('<div/>', {'class': 'screenshot_popup_modal_title'} ).append( $Title );
+		var $ExternalLinkImg = $J('<img/>', {src: 'https://steamstore-a.akamaihd.net/public/images/v5/ico_external_link.gif' } );
 
 		var $Img = $J('<img/>', {'src': this.GetScreenshotURL( screenshotid, '600x338' ) } );
-		var $Link = $J('<a/>');
-		var $ImgCtn = $J('<div/>', {'class': 'screenshot_img_ctn'}).append( $Link.append( $Img ) );
+		var $ImgCtn = $J('<div/>', {'class': 'screenshot_img_ctn'}).append( $Img );
 
 		var $Footer =  $J('<div/>', {'class': 'screenshot_popup_modal_footer' } );
 		var $ScreenshotCount = $J('<div/>');
@@ -533,7 +534,7 @@ var HighlightPlayer = Class.create( {
 
 
 		$Modal.append( $J('<div/>', {'class': 'screenshot_popup_modal_content'} ).append(
-			$Title,
+			$TitleCtn,
 			$ImgCtn,
 			$Footer
 		));
@@ -582,9 +583,12 @@ var HighlightPlayer = Class.create( {
 		};
 		var fnShowScreenshot = function( screenshotid )
 		{
-			$Title.text( GameHighlightPlayer.GetScreenshotURL( screenshotid ) );
-			$Link.attr( 'href', GameHighlightPlayer.GetScreenshotURL( screenshotid ) );
-			Steam.LinkInNewWindow( $Link );
+			var strFullURL = GameHighlightPlayer.GetScreenshotURL( screenshotid );
+			$Title.text( strFullURL + ' ' );
+			$Title.attr('href', strFullURL );
+			$Title.append( $ExternalLinkImg );
+			console.log( $ExternalLinkImg );
+			Steam.LinkInNewWindow( $Title );
 
 			$ImgCtn.css( 'min-width', $ImgCtn.width() );
 			$ImgCtn.css( 'min-height', $ImgCtn.height() );
@@ -610,6 +614,7 @@ var HighlightPlayer = Class.create( {
 		};
 		$BtnNext.click( fnNextScreenshot );
 		$BtnPrev.click( fnPrevScreenshot );
+		$Img.click( fnNextScreenshot );
 
 		$J(document).on('keydown.GameHighlightScreenshots', function( event ) {
 			if ( event.which == 37 /* left */ || event.which == 38 /* up */ )
