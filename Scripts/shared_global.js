@@ -1322,7 +1322,7 @@ function v_numberformat( n, decimals )
 		if ( i < len - 1 && (len - i - 1) % 3 == 0 && c != '-' )
 			out += ',';
 	}
-	if ( len < str.length || decimals )
+	if ( ( len < str.length || decimals ) && typeof decimals != 'undefined' && decimals !== 0 )
 	{
 		len++;
 		out += '.';
