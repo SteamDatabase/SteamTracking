@@ -698,44 +698,6 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 	});
 }
 
-function AddToWishlistButton( button, appid, navref )
-{
-	var url = 'http://store.steampowered.com/api/addtowishlist';
-	if ( navref )
-		MakeNavCookie( navref, url );
-	new Ajax.Request( url, {
-		method: 'post',
-		parameters: {appid: appid},
-		onSuccess: function( transport ) {
-			if ( transport.responseJSON && transport.responseJSON.success )
-			{
-				$J(button).addClass('btn_disabled');
-				$J('span',button).text("On Wishlist");
-			}
-			else
-			{
-				$J('span',button).text( "Oops, sorry!" );
-			}
-
-			if ( typeof GDynamicStore != 'undefined' )
-				GDynamicStore.InvalidateCache();
-		}
-	});
-}
-
-function IgnoreButton( button, appid )
-{
-	$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
-		sessionid: g_sessionID,
-		appid: appid
-	}).done( function() {
-		$J(button).addClass('btn_disabled');
-		GDynamicStore.InvalidateCache();
-	}).fail( function() {
-		ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
-	});
-}
-
 // unlike wishlists, the "divToHide" is only hidden on success
 function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, language, divBtn, onSuccessFunc, divToShowError, navref )
 {
