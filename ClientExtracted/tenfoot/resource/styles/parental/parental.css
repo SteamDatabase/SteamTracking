@@ -87,6 +87,16 @@ ParentalUnlockPopup
 	color: detailsdatalabel;
 }
 
+ParentalUnlockPopup #MsgBoxButtons
+{
+	width: 100%;
+}
+
+#RecoveryButton
+{
+	horizontal-align: right;
+}
+
 TextEntry:disabled,.Button:disabled
 {
 	desaturation: 0.0;
@@ -540,6 +550,7 @@ AppGridItem.Unlocked .AppImageOverlay
 }
 
 
+ParentalSetRecoveryChild .SettingsBottomPanel,
 ParentalSetPINChild .SettingsBottomPanel,
 ParentalSetEnableCodeChild .SettingsBottomPanel
 {
@@ -551,6 +562,8 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 	width: 100%;
 }
 
+#SetRecoveryLine1,
+#SetRecoveryLine2,
 #SetPIN,
 #SetEnableCode
 {
@@ -561,6 +574,12 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 	text-align: left;
 }
 
+#SetRecoveryLine2
+{
+	margin-top: 10px;
+}
+
+.ParentalSetRecoveryDialog,
 .ParentalSetPINDialog,
 .ParentalSetEnableCodeDialog
 {
@@ -584,6 +603,7 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 	transition-timing-function: ease-in-out;
 }
 
+.ParentalRecoveryEmailEntry,
 .ParentalPINEntry,
 .ParentalEnableCodeEntry
 {
@@ -591,6 +611,7 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 	text-align: left;
 }
 
+.ParentalRecoveryEmailEntry Label,
 .ParentalPINEntry Label,
 .ParentalEnableCodeEntry Label
 {
@@ -601,12 +622,18 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 	width: 50%;
 }
 
+.ParentalRecoveryEmailEntry Label
+{
+	width: 40%;
+}
+
 .DaisyWheelVisible .ParentalSetPINDialog,
 .DaisyWheelVisible .ParentalSetEnableCodeDialog,
 {
 	transform: translatex( 400px );
 }
 
+ParentalSetRecoveryChild TextEntry,
 ParentalSetPINChild TextEntry,
 ParentalSetEnableCodeChild TextEntry
 {
@@ -618,6 +645,11 @@ ParentalSetEnableCodeChild TextEntry
 	background-color: ui_common_control;
 	margin-top: 10px;
 	padding: -2px 4px;
+}
+
+ParentalSetRecoveryChild TextEntry
+{
+	width: 450px;
 }
 
 .ParentalSetEnableCodeError

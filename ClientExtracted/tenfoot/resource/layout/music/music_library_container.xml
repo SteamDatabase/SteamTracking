@@ -14,8 +14,7 @@
 		</Panel>
 
 		<Panel id="ContentPanel">		
-			<Carousel id="GridTabs" 
-					tabindex="0" selectionpos="0,0" focus="edge" focus-offset="105px" wrap="false" selectionposboundary="vertical" >
+			<Carousel id="GridTabs" tabindex="0" selectionpos="0,0" focus="edge" focus-offset="100px" wrap="false" selectionposboundary="vertical" >
 				<Button id="AlbumButton" 
 						onmoveup="ShowLibraryMostRecent();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryAlbumPanel );"

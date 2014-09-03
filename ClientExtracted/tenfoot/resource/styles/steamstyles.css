@@ -73,6 +73,10 @@
 @define friendsingame_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #729100ff ), color-stop( 0.85, #729100ff ), to( #729100e0 ) );
 @define friendsingame_solid: #9cbd26ff;
 
+@define friendsgolden_darkbg: gradient( linear, 0% 0%, 100% 95%, from( #ffff99ff ), color-stop( 0.85, #ffff99ff ), to( #ffff99ff ) );
+@define friendsgolden_lightbg: gradient( linear, 0% 0%, 100% 95%, from( #ffff99ff ), color-stop( 0.85, #ffff99ff ), to( #ffff99ff ) );
+@define friendsgolden_solid: #ffff99ff;
+
 /* color used for account warnings - tint of A94847 value from 2' UI */
 @define accountwarning: #bf4343FF;
 
@@ -207,7 +211,7 @@
 @define webtabcurrentselection: gradient( linear, 0% 0%, 0% 100%, from( #0e86abff ), to( #0b6480ff ) );
 @define webtabcurrenthover: #1f5369ff;
 @define button_wash: #52b8ccff;
-@define web_bg_color: gradient( radial, 50% 0%, 120px 0px, 200% 50%, from( friendstabdivider ), to( #45658a00 ) );
+@define web_bg_color: gradient( linear, 0% 0%, 0% 100%, from( #1a5e80ff ), to( #45658a00 ) );
 @define web_bg_color2:  gradient( linear, 0% 0%, 0% 20%, from( friendstabdivider ), to( #45658a00 ) );
 @define reticule_color: #52b8ccff;
 @define reticule_color_dim: #aaaaaaff;
@@ -720,6 +724,11 @@ AvatarImage.AvatarFriendOnline
 AvatarImage.AvatarFriendInGame
 {
 	border-color: friendsingame_solid;
+}
+
+AvatarImage.AvatarFriendGolden
+{
+	border-color: friendsgolden_solid;
 }
 
 
@@ -1312,6 +1321,7 @@ FriendsChatDialog .VoiceBarContainer
 	transition-timing-function: ease-in-out;
 	font-size: deffontsize;
 	font-family: platformfont;
+	font-weight: bold;
 	text-overflow: ellipsis;
 	max-height: 40px;
 	width: 100%;

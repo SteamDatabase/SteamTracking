@@ -37,6 +37,17 @@
 				</TextEntry>
 			</Panel>
 		
+			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto" id="TwoFactorCodeContainer" visible="0">
+				<Label visible="0" class="LoginPrompt" text="#Login_TwoFactorCode" />
+				<TextEntry class="LoginRightItem" id="TwoFactorCode"
+					capslockwarn="1"
+					tabindex="auto"
+				   	textinputid="TwoFactorTextEntry"
+					textinputdoneactionstring="#Login_NextField"
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter">
+				</TextEntry>
+			</Panel>
+
 			<Panel class="LoginPromptContainer" tabindex="auto" selectionpos="auto">
 				<Label class="LoginPrompt" />
 				<Button class="Button" id="Login" tabindex="auto" selectionpos="auto"

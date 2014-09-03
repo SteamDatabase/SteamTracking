@@ -840,14 +840,14 @@ Button:hover .ShortDesc
 	padding: 10px;
 }
 
-.ExitRowCursorButton
+.MusicGuideButton
 {
 	flow-children: right;
 	vertical-align: center;
 	visibility: collapse;
 }
 
-.ExitRowCursorVisible .ExitRowCursorButton
+.MusicGuideVisible .MusicGuideButton
 {
 	visibility: visible;
 }
@@ -865,13 +865,13 @@ Button:hover .ShortDesc
 	vertical-align: center;
 }
 
-#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image, #GoOnlineButton Image, .ExitRowCursorButton Image
+#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image, #GoOnlineButton Image, .MusicGuideButton Image
 {
 	vertical-align: center;
 	horizontal-align: center;
 }
 
-#BetaButton Label, #SettingsButton Label, #Exit Label, #Settings Label, #ParentalLockButton Label, #ParentalLockButton, #GoOnlineButton Label, .ExitRowCursorButton Label
+#BetaButton Label, #SettingsButton Label, #Exit Label, #Settings Label, #ParentalLockButton Label, #ParentalLockButton, #GoOnlineButton Label, .MusicGuideButton Label
 {
 	vertical-align: center;
 	padding-left: 4px;

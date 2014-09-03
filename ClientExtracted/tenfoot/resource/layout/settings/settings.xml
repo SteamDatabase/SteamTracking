@@ -59,6 +59,9 @@
 				<Button id="AudioSettingsButton" class="Button" onactivate="ShowSettings( Audio );">
 					<Label class="LongDesc" text="#Settings_Audio" />
 				</Button>
+				<Button id="MusicSettingsButton" class="Button" onactivate="ShowSettings( Music );">
+					<Label class="LongDesc" text="#Settings_Music" />
+				</Button>
 				<Button id="VoiceSettingsButton" class="Button" onactivate="ShowSettings( Voice );">
 					<Label class="LongDesc" text="#Settings_Voice" />
 				</Button>

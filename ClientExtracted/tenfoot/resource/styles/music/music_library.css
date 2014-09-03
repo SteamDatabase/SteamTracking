@@ -8,7 +8,7 @@ MusicLibraryContainerPanel
 {
 	width: 100%;
 	height: 955px;
-	background-color: #00000000;
+	background-color: none;
 
 	opacity: 0.0;
 	desaturation: 1.0;
@@ -163,7 +163,7 @@ MusicLibraryCrawlingPanel
 
 	width: 100%;
 	flow-children: right;
-	margin-left: -15px;
+	margin-left: -25px;
 
 	opacity: 1.0;
 
@@ -210,10 +210,10 @@ MusicLibraryCrawlingPanel
 	transform: translatey( -3px );
 	transition-duration: 0.23s !immediate;
 	color: #ffffff77;
-	
+
 	background-image: url( "file://{images}/store/filterbg.png" );
-	background-size: 100% 100%;
-	background-position: left -12px top 2px;
+	background-size: 110% 110%;
+	background-position: left -10px top -4px;
 	background-repeat: no-repeat;
 }
 
@@ -274,7 +274,8 @@ MusicLibraryCrawlingPanel
 #GridTabs Button Label
 {
 	color: #ffffff66;
-	font-size: 36px;
+	font-size: 32px;
+	text-transform: uppercase;
 	font-weight: light;
 	align: center center;
 	transition-property: color, opacity;
@@ -368,7 +369,7 @@ MusicLibraryCrawlingPanel
 	margin-top: .0px;
 
 	padding-top: 10px;
-	padding-left: 60px;
+	padding-left: 65px;
 	padding-right: 140px;
 	padding-bottom: 70px;
 	transform: translateX( -220px );
@@ -454,6 +455,7 @@ AlbumGridItem:focus:hover
 .AddLibraryItem Label
 {
 	color: gradient( linear, 0% 96%, 96% 100%, from( #f2f2f299 ), color-stop( 0.90, #f2f2f299 ), to( #97989800 ) );
+	font-weight: bold;
 }
 
 .AddLibraryItem #AlbumImage
@@ -864,10 +866,10 @@ AlbumGridItem:focus Label
 	margin-top: 0px;
 
 	padding-top: 30px;
-	padding-left: 90px;
+	padding-left: 95px;
 	padding-right: 90px;
 	padding-bottom: 84px;
-	
+
 	transform: translateX( 220px );
 	transition-property: transform;
 	transition-duration: 0.23s;
@@ -1089,7 +1091,9 @@ MusicArtistPanel AlbumGridItem
 	vertical-align: top;
 	pre-transform-scale2d: 0.78528;
 
-	transition-property: pre-transform-scale2d, position;
+	desaturation: 0.2;
+	wash-color: #00000033;
+	transition-property: pre-transform-scale2d, wash-color, desaturation, position;
 	transition-duration: 0.23s;
 	transition-delay: 0.0s;
 	transition-timing-function: ease-out;
@@ -1101,6 +1105,8 @@ MusicArtistPanel AlbumGridItem:focus
 {
 	pre-transform-scale2d: 1.0;
 	z-index: 5;
+	desaturation: 0.0;
+	wash-color: none;
 }
 
 MusicArtistPanel AlbumGridItem:hover
@@ -1217,10 +1223,10 @@ MusicLibraryPlaylistPanel .AddLibraryItem:hover
 	margin-top: 0px;
 
 	padding-top: 30px;
-	padding-left: 90px;
+	padding-left: 95px;
 	padding-right: 90px;
 	padding-bottom: 84px;
-	
+
 	transform: translateX( 220px );
 	transition-property: transform;
 	transition-duration: 0.23s;

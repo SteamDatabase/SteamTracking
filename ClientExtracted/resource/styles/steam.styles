@@ -292,6 +292,11 @@ steam.styles
     Friends.NoAvatarOver      "Text"
     Friends.IgnoredColor      "White"
     Friends.ListHeaderFadeOut	"54 54 54 0"
+	Friends.GoldenColor       "255 255 99 255"
+//	Friends.GoldenColor       "228 202 99 255"
+	Friends.GoldenHoverColor       "255 255 180 255"
+//	Friends.GoldenHoverColor       "248 218 109 255"
+
   
     ChatDialog.URLColor       "text"
     ChatOwnTextColor        "Label"
@@ -484,7 +489,7 @@ steam.styles
       inset="0 2 0 0"
       render_bg
 			{
-				0="gradient_horizontal( x0-21, y0+1, x0+230, y1+1, buttonface2, Friends.ListHeaderFadeOut )"
+				0="gradient_horizontal( x0-21, y0+1, x0+230, y1+1, propertysheetbg, Friends.ListHeaderFadeOut )"
 			}
     }
             
@@ -1331,8 +1336,8 @@ steam.styles
 		render_bg    
 			{
 				// fill
-				0="fill (x0, y0 + 1, x1, y1 + 1, buttonborderdisabled )" // bg fill
-				1="fill (x0 + 1, y0 + 1, x1, y0 + 3, buttonborderdisabled)" // bg fill2
+				0="fill (x0, y0 + 1, x1, y1 + 1, propertysheetbg)" // bg fill
+				1="fill (x0 + 1, y0 + 1, x1, y0 + 3, propertysheetbg)" // bg fill2
 			}   
 		}
     
@@ -1356,7 +1361,7 @@ steam.styles
 		render_bg    
 		{
 			// fill
-			0="fill (x0, y0 + 1, x1, y1, buttonborderdisabled )" // bg fill
+			0="fill (x0, y0 + 1, x1, y1, propertysheetbg )" // bg fill
 		}   
 	}
 
@@ -1372,7 +1377,7 @@ steam.styles
 		bgcolor=none
 		render_bg
 		{
-			1="fill( x0 , y0, x1, y1 - 1, buttonface2  )"
+			1="fill( x0 , y0, x1, y1 - 1, propertysheetbg  )"
 		}    
 	}
 	
@@ -1382,46 +1387,56 @@ steam.styles
 		bgcolor=none
 		render_bg
 		{
-			1="fill( x0 , y0, x1, y1 - 1, buttonface2  )"
+			1="fill( x0 , y0, x1, y1 - 1, propertysheetbg  )"
 		}    
 	}
     
 
  
 	ListPanelColumnSelectButton // the games list column chooser  
-    {
+	{
         inset="-3 3 0 0"
         render
         {
-          // background fill
-          1="fill( x0, y0, x1 - 1, y1, buttonborderdisabled )"  
+          0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
         }   
-        render_bg {}
+        render_bg {
+        1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
+        }
 	}
     
-    ListPanelColumnSelectButton:hover
-     {
+  ListPanelColumnSelectButton:hover
+	{
         inset="-3 3 0 0"
-        render {}   
-        render_bg {}
-	}
-      
-    ListPanelColumnSelectButton:selected
-    {
+        render
+        {
+          0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
+        }   
+        render_bg {
+        1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
+		  }
+  }
+  ListPanelColumnSelectButton:selected
+	{
         inset="-3 3 0 0"
-        render {}    
-        render_bg {}
-	}
+        render
+        {
+          0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
+        }   
+        render_bg {
+        1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
+		  }
+  }
 
 	"CGamesListPanel ListPanelColumnSelectButton"   
 	{
         inset="-3 3 0 0"
         render
         {
-          5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
+          0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
         }   
         render_bg {
-        1="fill( x0 + 1, y0, x1 - 1, y1, buttonborderdisabled )"
+        1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
         }
 	}
 	"CGamesListPanel ListPanelColumnSelectButton:hover"   
@@ -1429,17 +1444,22 @@ steam.styles
         inset="-3 3 0 0"
         render
         {
-          5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
+          0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
         }   
-
+        render_bg {
+        1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
+        }
 	}
 	"CGamesListPanel ListPanelColumnSelectButton:selected"   
 	{
         inset="-3 3 0 0"
         render
         {
-          5="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-        }   
+          0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
+        }  
+        render_bg {
+        1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
+        } 
 	}
    
     ListPanelDragger
@@ -1449,7 +1469,7 @@ steam.styles
 		{
 			//fill makes dragger visible
 			0="fill( x0, y0 + 2, x0 + 1, y1 - 3, dialogbg )" // left
-			1="fill (x0, y0, x0+1, y0+3, buttonborderdisabled )" //dot
+			1="fill (x0, y0, x0+1, y0+3, propertysheetbg )" //dot
 		}
     }
     
@@ -1544,7 +1564,7 @@ steam.styles
 		font-style="uppercase"
 		render_bg
 		{
-			0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, buttonface2, none  )"
+			0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, propertysheetbg, Friends.ListHeaderFadeOut  )"
 		}    
     } 
     
@@ -3244,8 +3264,16 @@ steam.styles
 		selectedtextcolor="TextentrySelected"	
 		selectedbgcolor="focus"
 		font-size=16
-
 	}
+
+	friends_chat_name_golden
+	{
+		textcolor="Friends.GoldenColor"
+		selectedtextcolor="TextentrySelected"	
+		selectedbgcolor="focus"
+		font-size=16
+	}
+
 	
 	friends_chat_self
 	{
@@ -3365,6 +3393,16 @@ steam.styles
    	friends_ingame:hover
    	{
    		textcolor="Friends.InGameHoverColor"
+   	}
+
+   	friends_golden
+   	{
+   		textcolor="Friends.GoldenColor"
+   	}
+   	   	
+   	friends_golden:hover
+   	{
+   		textcolor="Friends.GoldenHoverColor"
    	}
    	
    	friends_ignored

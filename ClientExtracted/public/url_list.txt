@@ -503,6 +503,12 @@ CommunityInventory
 	method		"internal"
 	filter		"profile"
 }
+CommunityFriendInventory
+{
+	url			"%community%/profiles/%p1%/inventory/"
+	method		"internal"
+	filter		"profile"
+}
 FacebookProfilePage
 {
 	url			"http://www.facebook.com/profile.php?id=%p1%"
@@ -667,6 +673,11 @@ ParentalSetup
 ParentalSetupComplete
 {
 	url		"%store%/parental/setcomplete"
+	method	"internal"
+}
+ParentalRecovery
+{
+	url		"%store%/parental/requestrecovery"
 	method	"internal"
 }
 AsyncGames

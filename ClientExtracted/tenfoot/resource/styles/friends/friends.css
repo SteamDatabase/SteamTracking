@@ -529,6 +529,11 @@ FriendsSelfHeader.InGame Label
 	color: friendsingame_darkbg;
 }
 
+FriendsSelfHeader.Golden Label
+{
+	color: friendsgolden_darkbg;
+}
+
 .FriendsMyAvatar
 {
 	margin-left: 20px;
@@ -880,6 +885,11 @@ GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
 	color: friendsingame_darkbg;
 }
 
+.LeftMainListItem.Golden Label
+{
+	color: friendsgolden_darkbg;
+}
+
 .LeftMainListItem.CurrentSelection.Online Label
 {
 	color: friendsonline_darkbg;
@@ -903,6 +913,11 @@ GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
 .LeftMainListItem.CurrentSelection.InGame Label
 {
 	color: friendsingame_darkbg;
+}
+
+.LeftMainListItem.CurrentSelection.Golden Label
+{
+	color: friendsgolden_darkbg;
 }
 
 .LeftMainListItem.CurrentSelection.Offline Label
@@ -1116,6 +1131,12 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 {
 	font-weight: bold;
 	color: friendsingame_darkbg;
+}
+
+.ChatMsgGolden
+{
+	font-weight: bold;
+	color: friendsgolden_darkbg;
 }
 
 .ChatMsgHistorical
