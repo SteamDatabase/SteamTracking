@@ -727,7 +727,7 @@ LibraryAppDetails .ContentsRow
 .DetailsDataPanel .HeaderLabel
 {
 	font-family: platformfont;
-	margin: 20px 20px 6px 18px;
+	margin: 30px 20px 6px 18px;
 	font-size: 38px;
 	color: detailsdatalabel;
 	opacity: 1.0;
@@ -748,7 +748,7 @@ LibraryAppDetails .ContentsRow
 .DetailsDataPanel:descendantfocus .HeaderLabel
 {
 	color: detailsdatalabelfocus;
-	transform: translatex( 10px );
+	transform: translatex( 4px );
 }
 
 .DetailsDataPanel:descendantfocus, .DetailsDataPanel:focus
@@ -1802,7 +1802,7 @@ LibraryController .ControllerLabels .ControllerLabelDescription
 
 LibraryController .ControllerDetail
 {
-	margin: 8px 20px;
+	margin: 8px 24px;
 	margin-top: 0px;
 	flow-children: right;
 }
@@ -2069,6 +2069,11 @@ LibraryFriend.InGame Label
 	color: friendsingame_darkbg;
 }
 
+LibraryFriend.Golden Label
+{
+	color: friendsgolden_darkbg;
+}
+
 LibraryFriend.Online:focus Label
 {
 	color: friendsonline_lightbg;
@@ -2082,6 +2087,11 @@ LibraryFriend.Offline:focus Label
 LibraryFriend.InGame:focus Label
 {
 	color: friendsingame_lightbg;
+}
+
+LibraryFriend.Golden:focus Label
+{
+	color: friendsgolden_lightbg;
 }
 
 .FriendPanel .FriendStatusDetail
@@ -4186,6 +4196,7 @@ DropDown Label
 
 	background-color: bgcolor;
 	background-image: url( "file://{images}/store/store_app_bg.png" );
+	opacity-mask: url( "file://{images}/bg_gradient_mask.tga" ) 1.0;
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	background-size: 1920px 1080px;

@@ -98,14 +98,14 @@
 		"GamesPage_Details ListPanelInterior"
 		{
 			bgcolor="none"
-			inset="1 1 0 0"
+			inset="0 1 0 0"
 			render {}
 			render_bg {} 
 		}
 		
 		"GamesPage_Details ListPanelInterior:scrollbar"
 			{     
-			inset="1 1 -2 0"
+			inset="0 1 -2 0"
 			bgcolor=none
 			
 			render_bg {}
@@ -118,7 +118,7 @@
 			font-style="uppercase"
 			render_bg
 			{
-				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, buttonface2, Friends.ListHeaderFadeOut  )"
+				0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, propertysheetbg, Friends.ListHeaderFadeOut  )"
 			}    
 		} 
 

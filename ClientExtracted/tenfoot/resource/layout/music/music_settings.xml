@@ -16,6 +16,9 @@
 				<Label class="SettingsStatic" text="#Music_Settings_Database_Header" />
 
 				<ToggleButton class="CheckBox" id="CrawlAtStartupCheckbox" onactivate="ToggleCrawlAtStartup();" text="#Music_Settings_Crawl_At_Startup"/>				
+				<ToggleButton class="CheckBox" id="CrawlSteamInstallFoldersCheckbox" onactivate="ToggleCrawlSteamInstallFolders();" text="#Music_Settings_CrawlSteamInstallFolders"/>				
+				
+								
 				<Label id="DatabaseInfoLabel" class="SettingsStatic" text="#Music_Settings_X_Albums_With_Y_Tracks" />
 				<Button id="ResetDatabaseButton" onactivate="ResetLocalLibraryDatabase()" class="Button">
 					<Label id="DatabaseResetLabel" class="LongDesc" text="#Music_Settings_Reset_Database" />

@@ -4,11 +4,11 @@
 		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/library/library.css" />
-		<include src="file://{resources}/styles/library/controllerbindings.css" />
+		<include src="file://{resources}/styles/library/controllerbindings_d0g.css" />
 	</styles>
 
 	<ControllerBindings tabindex="auto" oncancel="CloseControllerBindings();" onactivate="BindingActivate();">
-		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
+		<Panel class="MsgBoxBodyRegion">
 			<Panel id="LeftColumn" tabindex="auto" selectionpos="auto">
 				<Label id="RecentBindingsHeader" text="#Library_Details_ControllerRecentBindings" class="BindingHeader" />
 				<Panel id="RecentBindingButtons" childfocusonhover="true">
@@ -64,17 +64,17 @@
 								<Label id="S1ActionMapping" class="ActionMapping" />
 							</Button>
 
-							<Button id="SelectButtonOuter" class="BindingButton" selectionpos="0,5" onactivate="EditButtonBinding( select_button );">
+							<Button id="SelectButtonOuter" class="BindingButton" selectionpos="0,5" onactivate="EditButtonBinding( button_escape );">
 								<Label id="SelectActionName" class="ActionLabel" />
 								<Label id="SelectActionMapping" class="ActionMapping" />
 							</Button>
 
-							<Button id="StartButtonOuter" class="BindingButton" selectionpos="0,6" onactivate="EditButtonBinding( start_button );">
+							<Button id="StartButtonOuter" class="BindingButton" selectionpos="0,6" onactivate="EditButtonBinding( button_menu );">
 								<Label id="StartActionName" class="ActionLabel" />
 								<Label id="StartActionMapping" class="ActionMapping" />
 							</Button>
 
-							<Button id="SteamButtonOuter" class="BindingButton" selectionpos="0,7" onactivate="EditButtonBinding( steam_button );">
+							<Button id="SteamButtonOuter" class="BindingButton" selectionpos="0,7" onactivate="EditButtonBinding( button_steam );">
 								<Label id="SteamActionName" class="ActionLabel" />
 								<Label id="SteamActionMapping" class="ActionMapping" />
 							</Button>
@@ -177,81 +177,155 @@
 				<Label id="DescriptionBodyCopy" text="#Library_Details_ControllerBindingDescriptionBody" />
 			</Panel>
 
-			<Panel id="EditPadBindings">
-				<Label id="EditPadHeader" class="EditPadHeader" />
-				<Panel id="EditPadBindingsBody">
-					<Panel id="PadLeftCollumn" selectionpos="0,0" tabindex="0">
-						<Panel id="PadStyle" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
-							<Label id="PadStyleLabel" text="#Library_Details_ControllerPadStyle" class="PadSettingLabel" />
-							<DropDown id="PadStyleDropDown">
-								<Label id="4way" text="#Library_Details_ControllerPad_4way" />
-								<Label id="8way" text="#Library_Details_ControllerPad_8way" />
-								<Label id="mouse" text="#Library_Details_ControllerPad_mouse" />
-								<Label id="none" text="#Library_Details_ControllerPad_none" />
-							</DropDown>	
-						</Panel>
-						<Panel id="PadDeadZone" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
-							<Label id="PadDeadZoneLabel" text="#Library_Details_ControllerPadDeadZone" class="PadSettingLabel" />
-							<DropDown id="PadDeadZoneDropDown">
-								<Label id="dead10" text="#Library_Details_ControllerPad_10pct" />
-								<Label id="dead20" text="#Library_Details_ControllerPad_20pct" />
-								<Label id="dead30" text="#Library_Details_ControllerPad_30pct" />
-							</DropDown>	
-						</Panel>
-						<Panel id="PadBlending" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
-							<Label id="PadBlendingLabel" text="#Library_Details_ControllerPadBlending" class="PadSettingLabel" />
-							<DropDown id="PadBlendingDropDown">
-								<Label id="blendingon" text="#Library_Details_ControllerPad_BlendingOn" />
-								<Label id="blendingoff" text="#Library_Details_ControllerPad_BlendingOff" />
-							</DropDown>	
+			<Panel id="EditPadBindingsWrapper" >
+				<Panel id="EditPagePadHeader" selectionpos="auto" tabindex="auto" onfocus="ControllerSelectActiveTab();" >
+							<Button id="EditAdvancedButton"  onactivate="ActivateBindingTab( EditPadAdvanced );">
+								<Label class="EditPageHeaderLabel" text="#Library_Details_ControllerBindingAdvanced" />
+							</Button>
+							<Button id="EditMainButton" class="ActiveTabButton" onactivate=" RemoveStyle( EditPadBindingsWrapper, ModeShift ); ActivateBindingTab( EditPadMain );">
+								<Label class="EditPageHeaderLabel" text="#Library_Details_ControllerBindingMain" />
+							</Button>
+							<Button id="EditModeShiftButton" onactivate="AddStyle( EditPadBindingsWrapper, ModeShift ); ActivateBindingTab( EditPadMain );">
+								<Label class="EditPageHeaderLabel" text="#Library_Details_ControllerBindingModeShift" />
+							</Button>
+				</Panel>
+				<Panel id="EditPadBindings" onmoveup="SetInputFocus( EditPagePadHeader )" selectionpos="auto" tabindex="auto" selectionposboundary="vertical" >
+					<Panel id="EditPadAdvanced"  >
+						<Label id="EditPadHeaderAdvanced" class="EditPadHeader" text="#Library_Details_ControllerBinding_AdvancedTitle"  />	
+						<Panel id="EditPadAdvancedBody">
+							<Panel id="PadRotation" class="PadRotationDropDown" >
+								<Label id="PadRotationLabel" text="#Library_Details_ControllerPadRotation" class="PadSettingLabel" />
+								<DropDown id="PadRotationDropDown">
+									<Label id="0deg" text="#Library_Details_ControllerPad_Rotation_0deg" />
+									<Label id="-5deg" text="#Library_Details_ControllerPad_Rotation_5ndeg" />
+									<Label id="5deg" text="#Library_Details_ControllerPad_Rotation_5deg" />
+									<Label id="10deg" text="#Library_Details_ControllerPad_Rotation_10deg" />
+									<Label id="15deg" text="#Library_Details_ControllerPad_Rotation_15deg" />
+									<Label id="20deg" text="#Library_Details_ControllerPad_Rotation_20deg" />
+									<Label id="25deg" text="#Library_Details_ControllerPad_Rotation_25deg" />
+									<Label id="30deg" text="#Library_Details_ControllerPad_Rotation_30deg" />
+									<Label id="35deg" text="#Library_Details_ControllerPad_Rotation_35deg" />
+									<Label id="40deg" text="#Library_Details_ControllerPad_Rotation_40deg" />
+								</DropDown>	
+							</Panel>
+							<Panel id="PadOuterEdge" class="PadOuterEdgeDropDown" >
+								<Label id="PadOuterEdgeLabel" text="#Library_Details_ControllerPad_OuterEdge" class="PadSettingLabel" />
+								<DropDown id="PadOuterEdgeDropDown">
+									<Label id="31128" text="#Library_Details_ControllerPad_OuterEdge_5pct" />
+									<Label id="27500" text="#Library_Details_ControllerPad_OuterEdge_20pct" />
+									<Label id="19660" text="#Library_Details_ControllerPad_OuterEdge_40pct" />
+								</DropDown>	
+							</Panel>
 						</Panel>
 					</Panel>
-					<Panel id="PadCenterCollumn" selectionpos="1,0" tabindex="1">
-						<Panel id="PadRotateWrapper" class="fourwayoverlap">
-							<Panel id="PadOuterCircle" class="tenpctdead">
-								<Panel id="PadInnerCircle" />
-								<Panel id="PadDeadZoneCircle10" />
-								<Panel id="PadDeadZoneCircle20" />
-								<Panel id="PadDeadZoneCircle30" />
+					<Panel id="EditPadMain" selectionpos="auto" class="ActiveTab" >
+						<Label id="EditPadHeader" class="EditPadHeader" />
+						<Label id="EditPadModeShiftHeader" text="#Library_Details_ControllerPad_ModeShift_Style_Title" class="EditPadHeader" />
+						<Panel id="EditPadBindingsBody" class="EditPadBindingsBody" >
+							<Panel class="PadLeftCollumn" selectionpos="0,0" tabindex="0">
+								<Panel class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
+									<Label text="#Library_Details_ControllerPadStyle" class="PadSettingLabel" />
+									<DropDown id="PadStyleDropDown">
+										<Label id="4way" text="#Library_Details_ControllerPad_4way" />
+										<Label id="8way" text="#Library_Details_ControllerPad_8way" />
+										<Label id="mouse" text="#Library_Details_ControllerPad_mouse" />
+										<Label id="stick" text="#Library_Details_ControllerPad_stick" />
+										<Label id="none" text="#Library_Details_ControllerPad_none" />
+									</DropDown>	
+								</Panel>
+								<Panel id="PadDeadZone" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
+									<Label id="PadDeadZoneLabel" text="#Library_Details_ControllerPadDeadZone" class="PadSettingLabel" />
+									<DropDown id="PadDeadZoneDropDown">
+										<Label id="dead10" text="#Library_Details_ControllerPad_10pct" />
+										<Label id="dead20" text="#Library_Details_ControllerPad_20pct" />
+										<Label id="dead30" text="#Library_Details_ControllerPad_30pct" />
+									</DropDown>	
+								</Panel>
+		
+								<Panel id="PadLibrary_Details_ControllerPadMouseMomemntum" class="PadSettingMouseControl" selectionpos="auto" tabindex="auto">
+									<Label id="PadMouseMomemntumLabel" text="#Library_Details_ControllerPadMouseMomentum" class="PadSettingLabel" />
+									<DropDown id="PadMouseMomemntumDown" >
+										<Label id="mousemomentum_on" text="#Library_Details_ControllerPad_MouseMomentumOn" />
+										<Label id="mousemomentum_off" text="#Library_Details_ControllerPad_MouseMomentumOff" />
+									</DropDown>	
+								</Panel>
+		
+								<Panel id="PadLibrary_Details_ControllerMouseSensitivity" class="PadSettingMouseControl" selectionpos="auto" tabindex="auto">
+									<Label id="PadMouseSensitivityLabel" text="#Library_Details_ControllerPadMouseSensitivity" class="PadSettingLabel" />
+									<DropDown id="PadMouseSensitivityDown" >
+										<Label id="mousesenslow" text="#Library_Details_ControllerPad_MouseLow" />
+										<Label id="mousesensmedium" text="#Library_Details_ControllerPad_MouseMedium" />
+										<Label id="mousesenshigh" text="#Library_Details_ControllerPad_MouseHigh" />
+									</DropDown>	
+								</Panel>
+		
+								<Panel id="PadBlending" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
+									<Label id="PadBlendingLabel" text="#Library_Details_ControllerPadBlending" class="PadSettingLabel" />
+									<DropDown id="PadBlendingDropDown">
+										<Label id="blendingon" text="#Library_Details_ControllerPad_BlendingOn" />
+										<Label id="blendingoff" text="#Library_Details_ControllerPad_BlendingOff" />
+									</DropDown>	
+								</Panel>
 							</Panel>
-							<Button id="PadNorth" selectionpos="1,0" tabindex="0" onactivate="EditPadDirectionBinding( north );" ><Label id="PadNorthLabel" text="" /></Button>
-							<Button id="PadNorthEast" selectionpos="1.5,0.5" tabindex="1" onactivate="EditPadDirectionBinding( northeast );"><Label id="PadNorthEastLabel" text="" /></Button>
-							<Button id="PadEast" selectionpos="2,1" tabindex="2" onactivate="EditPadDirectionBinding( east );" ><Label id="PadEastLabel" text="" /></Button>
-							<Button id="PadSouthEast" selectionpos="1.5,1.5" tabindex="3" onactivate="EditPadDirectionBinding( southeast );" ><Label id="PadSouthEastLabel" text="" /></Button>
-							<Button id="PadSouth" selectionpos="1,2" tabindex="4" onactivate="EditPadDirectionBinding( south );"><Label id="PadSouthLabel" text="" /></Button>
-							<Button id="PadSouthWest" selectionpos="0.5,1.5" tabindex="5" onactivate="EditPadDirectionBinding( southwest );"><Label id="PadSouthWestLabel" text="" /></Button>
-							<Button id="PadWest" selectionpos="0,1" tabindex="6" onactivate="EditPadDirectionBinding( west );"><Label id="PadWestLabel" text="" /></Button>
-							<Button id="PadNorthWest" selectionpos="0.5,0.5" tabindex="7" onactivate="EditPadDirectionBinding( northwest );" ><Label id="PadNorthWestLabel" text="" /></Button>
-						</Panel>	
-					</Panel>
-					<Panel id="PadRightCollumn" selectionpos="2,0" tabindex="2">
-						<Panel id="OuterRingModifier" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
-							<Panel id="OuterRingModifierLabelWrapper" class="LabelWrapper">
-								<Label id="PadStyleLabel" text="#Library_Details_OuterRingModifier" class="PadSettingLabel" />
-								<Image src="file://{images}/library/outer.png" />
+							<Panel class="PadCenterCollumn" selectionpos="1,0" tabindex="1">
+								<Panel class="PadRotateWrapper">
+									<Panel id="PadOuterCircle" class="tenpctdead">
+										<Panel id="PadInnerCircle" />
+										<Panel id="PadDeadZoneCircle10" />
+										<Panel id="PadDeadZoneCircle20" />
+										<Panel id="PadDeadZoneCircle30" />
+									</Panel>
+									<Button id="PadNorth" selectionpos="1,0" tabindex="0" onactivate="EditPadDirectionBinding( north );" ><Label id="PadNorthLabel" text="" /></Button>
+									<Button id="PadNorthEast" selectionpos="1.5,0.5" tabindex="1" onactivate="EditPadDirectionBinding( northeast );"><Label id="PadNorthEastLabel" text="" /></Button>
+									<Button id="PadEast" selectionpos="2,1" tabindex="2" onactivate="EditPadDirectionBinding( east );" ><Label id="PadEastLabel" text="" /></Button>
+									<Button id="PadSouthEast" selectionpos="1.5,1.5" tabindex="3" onactivate="EditPadDirectionBinding( southeast );" ><Label id="PadSouthEastLabel" text="" /></Button>
+									<Button id="PadSouth" selectionpos="1,2" tabindex="4" onactivate="EditPadDirectionBinding( south );"><Label id="PadSouthLabel" text="" /></Button>
+									<Button id="PadSouthWest" selectionpos="0.5,1.5" tabindex="5" onactivate="EditPadDirectionBinding( southwest );"><Label id="PadSouthWestLabel" text="" /></Button>
+									<Button id="PadWest" selectionpos="0,1" tabindex="6" onactivate="EditPadDirectionBinding( west );"><Label id="PadWestLabel" text="" /></Button>
+									<Button id="PadNorthWest" selectionpos="0.5,0.5" tabindex="7" onactivate="EditPadDirectionBinding( northwest );" ><Label id="PadNorthWestLabel" text="" /></Button>
+								</Panel>	
 							</Panel>
-							<DropDown id="OuterRingModifierDropDown">
-								<Label id="none" text="#Library_Details_ControllerModifierNone" />
-								<Label id="lshift" text="Shift" />
-								<Label id="lctrl" text="Control" />
-								<Label id="lalt" text="Alt" />
-							</DropDown>	
+							<Panel class="PadRightCollumn" selectionpos="2,0" tabindex="2">
+								<Panel id="PadModeShift" class="PadModeShift" selectionpos="auto" tabindex="auto" >
+									<Label id="PadModeShiftLabel" text="#Library_Details_ControllerPad_ModeShift_Title" class="PadSettingLabel" />
+									<DropDown id="PadModeShiftDropDown">
+										<Label id="none" class="Entry" text="#Library_Details_ControllerPad_ModeShift_None" />
+										<Label id="backside_left" class="Entry" text="#Library_Details_ControllerPad_ModeShift_LeftGrip" />
+										<Label id="backside_right" class="Entry" text="#Library_Details_ControllerPad_ModeShift_RightGrip" />
+										<Label id="left_trigger" class="Entry" text="#Library_Details_ControllerPad_ModeShift_LeftTrigger" />
+										<Label id="right_trigger" class="Entry" text="#Library_Details_ControllerPad_ModeShift_RightTrigger" />
+										<Label id="left_bumper" class="Entry" text="#Library_Details_ControllerPad_ModeShift_LeftShoulder" />
+										<Label id="right_bumper" class="Entry" text="#Library_Details_ControllerPad_ModeShift_RightShoulder" />
+									</DropDown>	
+								</Panel>
+								<Panel id="OuterRingModifier" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
+									<Panel id="OuterRingModifierLabelWrapper" class="LabelWrapper">
+										<Label id="PadStyleLabel" text="#Library_Details_OuterRingModifier" class="PadSettingLabel" />
+										<Image src="file://{images}/library/outer.png" />
+									</Panel>
+									<DropDown id="OuterRingModifierDropDown">
+										<Label id="none" text="#Library_Details_ControllerModifierNone" />
+										<Label id="lshift" text="Shift" />
+										<Label id="lctrl" text="Control" />
+										<Label id="lalt" text="Alt" />
+									</DropDown>	
+								</Panel>
+								<Panel id="PadClick" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
+									<Panel id="PadClickLabelWrapper" class="LabelWrapper">
+										<Label id="PadClickLabel" text="#Library_Details_PadClick" class="PadSettingLabel" />
+										<Image src="file://{images}/library/click.png" />
+									</Panel>
+									<Button id="PadClickBindingButton" onactivate="EditPadDirectionBinding( click );"><Label id="PadClickBindingLabel" /></Button>
+								</Panel>
+								<Panel id="PadDoubleClick" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
+									<Panel id="PadDoubleClickLabelWrapper" class="LabelWrapper">
+										<Label id="PadDoubleClickLabel" text="#Library_Details_PadDoubleClick" class="PadSettingLabel" />
+										<Image src="file://{images}/library/double.png" />
+									</Panel>
+									<Button id="PadDoubleClickBindingButton" onactivate="EditPadDirectionBinding( double_tap );" ><Label id="PadDoubleClickBindingLabel" /></Button>
+								</Panel>
+							</Panel>
 						</Panel>
-						<Panel id="PadClick" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
-							<Panel id="PadClickLabelWrapper" class="LabelWrapper">
-								<Label id="PadClickLabel" text="#Library_Details_PadClick" class="PadSettingLabel" />
-								<Image src="file://{images}/library/click.png" />
-							</Panel>
-							<Button id="PadClickBindingButton" onactivate="EditPadDirectionBinding( click );"><Label id="PadClickBindingLabel" /></Button>
-						</Panel>
-						<Panel id="PadDoubleClick" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
-							<Panel id="PadDoubleClickLabelWrapper" class="LabelWrapper">
-								<Label id="PadDoubleClickLabel" text="#Library_Details_PadDoubleClick" class="PadSettingLabel" />
-								<Image src="file://{images}/library/double.png" />
-							</Panel>
-							<Button id="PadDoubleClickBindingButton" onactivate="EditPadDirectionBinding( double_tap );" ><Label id="PadDoubleClickBindingLabel" /></Button>
-						</Panel>
-
 					</Panel>
 				</Panel>
 			</Panel>

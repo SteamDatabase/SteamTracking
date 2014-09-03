@@ -42,6 +42,13 @@
 				<Panel id="SettingsExitRow" tabindex="1" selectionpos="10,0">
 					<Label id="Clock" />
 					<Label id="ClockSuffix" />
+					<Button id="MusicGuideButton" class="MusicGuideButton" tabindex="0" selectionpos="10.2,0"
+						onfocus="MusicGuideButtonFocused();" onactivate="ToggleMusicControlPanel( true );"		
+						>
+						<Image id="MusicGuideImage" src="file://{images}/music/musicguide_icon.png"/>
+						<Label id="MusicGuideLabel" class="LongDesc" text="#MainMenu_MusicGuideLabel"/>
+					</Button>
+					
 					<ParentalButton id="SettingsButton" tabindex="0" selectionpos="10.3,0" onfocus="SettingsButtonFocused();" onactivate="ShowSettings( Main );" >
 						<Image src="file://{images}/settings.png" />
 						<Label class="LongDesc" text="#MainMenu_Settings" />

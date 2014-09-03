@@ -820,6 +820,11 @@ FriendsFriendListItemCommunity.InGame Label
 	color: friendsingame_darkbg;
 }
 
+FriendsFriendListItemCommunity.Golden Label
+{
+	color: friendsgolden_darkbg;
+}
+
 FriendsFriendListItemCommunity.Offline:descendantfocus Label
 {
 	color: friendsoffline_darkbg;
@@ -833,6 +838,11 @@ FriendsFriendListItemCommunity.Online:descendantfocus  Label
 FriendsFriendListItemCommunity.InGame:descendantfocus  Label
 {
 	color: friendsingame_darkbg;
+}
+
+FriendsFriendListItemCommunity.Golden:descendantfocus  Label
+{
+	color: friendsgolden_darkbg;
 }
 
 .FriendsFriendListItemCommunityAvatar

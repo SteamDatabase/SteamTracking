@@ -11,6 +11,8 @@
 		Password { controlname="TextEntry" style="Password" command="DoParentalUnlock" tabposition=1 }
 		
 		KeyImage { controlname="Label" style="Key" zpos=-4 }
+
+		Recovery { controlname="URLLabel" labeltext="#steam_parental_norecoveryemail" command="ShowRecoveryDialog" }
 		
 		OK { controlname="Button" tabposition=2 command="DoParentalUnlock" labeltext="#PropertyDialog_OK" default=1 }
 		Cancel { controlname="Button" tabposition=3 command="Close" labeltext="#PropertyDialog_Cancel" }
@@ -68,6 +70,8 @@
 
 
 		place { control="Password" margin-top="75" region="top" margin-left=155 width=70 }
+
+		place { control="Recovery" region="bottom" margin-left=10 margin-top=5 }
 		
 		// bottom: OK/cancel
 		place { control="OK,Cancel" region="bottom"

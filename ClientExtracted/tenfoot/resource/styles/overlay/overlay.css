@@ -242,7 +242,7 @@
 #ContentsRow:descendantfocus
 {
 	width: 100%;
-	height: 600px;
+	height: 100%;
 
 	opacity: 1.0;
 	desaturation: 0.0;
@@ -250,6 +250,31 @@
 	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;
 
 	flow-children: right;
-	transform: translateY( 320px ) translateZ( 40px );
+	transform: translateY( 0px ) translateZ( 0px );
 }
+
+
+#ContentsRow:descendantfocus #LinksAndMore,
+#ContentsRow:descendantfocus #Controller,
+#ContentsRow:descendantfocus #Achievements,
+#ContentsRow:descendantfocus #MusicControlOverlay,
+#ContentsRow:descendantfocus #FriendsWhoPlay,
+#ContentsRow:descendantfocus #Screenshots,
+#ContentsRow:descendantfocus #RecentNews,
+#ContentsRow:descendantfocus #Guides
+{
+	transform: translateY( 320px ) translateZ( 40px );	
+}
+
+#ContentsRow:descendantfocus #MusicControlOverlay
+{
+	transform: translateY( 471px ) translateZ( 40px );	
+
+}
+
+#ContentsRow:descendantfocus #MusicControlOverlay:descendantfocus
+{
+	transform: translateY( 320px ) translateZ( 40px );	
+}
+
 

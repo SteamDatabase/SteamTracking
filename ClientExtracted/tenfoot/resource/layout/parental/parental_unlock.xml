@@ -21,6 +21,9 @@
 				<Button id="CancelButton" onactivate="ButtonCancel()">
 					<Label text="#UI_Cancel" />
 				</Button>
+				<Button id="RecoveryButton" onactivate="ParentalRecovery()">
+					<Label id="RecoveryButtonLabel" text="#Parental_Recovery" />
+				</Button>
 			</Panel>
 
 	</Panel>

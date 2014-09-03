@@ -123,10 +123,10 @@ MusicAlbumPanel
 	text-transform: uppercase;
 	text-overflow: clip;
 	white-space: normal;
-	transform: translateX( 320px ) translateY( 18px );
+	transform: translateX( 350px ) translateY( 12px );
 	height: fit-children;
 	vertical-align: top;
-	
+
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
@@ -156,7 +156,7 @@ MusicAlbumPanel
 	white-space: normal;
 	text-overflow: clip;
 	height: fit-children;
-	transform: translateX( 320px ) translateY( 35px );
+	transform: translateX( 350px ) translateY( 29px );
 
 	transition-property: opacity;
 	transition-duration: 0.1s;

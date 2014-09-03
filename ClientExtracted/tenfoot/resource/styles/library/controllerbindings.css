@@ -219,12 +219,12 @@
 	opacity: 1.0;
 	width: 100%;
 	margin-left: 0px;
-	height: 532px;
+	height: 632px;
 	vertical-align: bottom;
 
 	flow-children: down;
 
-	transform: translatey( 532px );
+	transform: translatey( 632px );
 
 	border-top-style: solid;
 	border-top-color: #2a3d4cff;
@@ -247,9 +247,15 @@
 
 #ControllerBindings #EditPadBindings #KeyboardAndMouse
 {
-	transform: translatey( 420px );
+	transform: translatey( 520px );
 	margin-top: 116px;
 }
+
+#ControllerBindings.D0g #EditPadBindings #KeyboardAndMouse
+{
+	margin-top: 40px;
+}
+
 
 #ControllerBindings.EditSingleBinding #BindingSelection
 {
@@ -290,8 +296,8 @@
 {
 	padding: 20px 25px;
 	margin-bottom: 0px;
-	height: 420px; 
-	flow-children: right;
+	height: 520px; 
+	flow-children: down;
 	opacity-mask: url( "file://{images}/library/keyboardfade.png" ) 0.0;
 
 	transition-property: opacity, opacity-mask;
@@ -349,7 +355,7 @@
 }
 
 
-#ControllerBindings #KeyboardAndMouse Button Label
+#ControllerBindings #KeyboardAndMouse Button Label, #ControllerBindings #KeyboardAndMouse Label
 {
 	margin: 0px;
 	padding: 0px;
@@ -2385,4 +2391,16 @@ Button:focus .PActionMappingWrapper Image
 #ControllerBindings .mousemove #PadWest
 {
 	opacity: 0.0;
+}
+
+
+#VirtualGamePad
+{
+	horizontal-align: center;
+	flow-children: right;
+}
+
+#KeyBoardAndMouseWrapper
+{
+	flow-children: right;
 }

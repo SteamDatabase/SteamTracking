@@ -5,13 +5,29 @@
 		AlbumList { tabposition=1 }
 		ArtistList { tabposition=1 }
 		PlaylistList { tabposition=1 }
-		DetailsBorder { controlname=EditablePanel style="DetailsBorderPanel" zpos="-1" }
+		DetailsBorder { controlname=EditablePanel style="DetailsBorderPanel" zpos="-5" }
 		EmptyDatabaseText { controlname="RichText" text="#Music_NoLibrary" style="EmptyDatabaseText" }
 		CrawlingText { controlname="RichText" style="CrawlingText" }
+		
+		// Background image, plus overlays 
+		BackgroundImageA { controlname="ImagePanel" style="HeaderImage" zpos="-4" visible=1 scaling="none" horizontal-align=left vertical-align=top }
+		BackgroundImageB { controlname="ImagePanel" style="HeaderImage" zpos="-4" visible=1 scaling="none" horizontal-align=left vertical-align=top }
+		BackgroundImageMask { controlname="ImagePanel" style="HeaderImage" zpos="-3" visible=1 scaling="none" horizontal-align=left vertical-align=top }
+
 	}
 
 	styles
 	{
+	DetailsBorderPanel
+	{ 
+		font-family=basefont
+		font-size=14
+		font-weight=400
+		textcolor="Text"
+		bgcolor="none"
+		render_bg{}
+  }
+		
 		AlbumOrArtistListStyle
 		{
 			render_bg { }
@@ -115,17 +131,19 @@
 		DetailsBorderPanel
 		{
 			
-			bgcolor = none
+			bgcolor = "0 0 0 255"
 			render 
 			{
 
 			}
 		}	
 
+		BackgroundImage { bgcolor="0 0 0 0" border=0}
 	}
 
 	layout
 	{
+		region { name="background" x=0 y=0 width=1024 height=1024 }
 		region	{ name="list" y=2 x=1 width=275 height=max margin-bottom=0 }
 		region	{ name="details"
 			y=1 x=275 width=max height=max overflow=scroll-vertical 
@@ -142,6 +160,9 @@
 		place { control=*MusicPageDetailsAlbum region=details width=max dir=down spacing=10 }
 		place { control=*MusicPageDetailsPlaylist region=details width=max dir=down spacing=10 }
 		
+		place 	{ control=BackgroundImageA region=background width=1024 height=1024 x=2 y=2 }
+		place 	{ control=BackgroundImageB region=background width=1024 height=1024 x=2 y=2 }
+		place 	{ control=BackgroundImageMask region=background width=1024 height=1024 x=2 y=2 }
 	}
 
 }

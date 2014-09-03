@@ -221,6 +221,11 @@ ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetai
 	color: friendsingame_darkbg;
 }
 
+#FriendsProfileDetailsCompositeHeader.Golden Label
+{
+	color: friendsgolden_darkbg;
+}
+
 .FriendsProfileDetailsCompositeHeaderAvatar
 {
 	margin-top: 94px;
@@ -251,6 +256,11 @@ ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetai
 .InGame .FriendsProfileDetailsCompositeHeaderAvatar
 {
 	border-color: friendsingame_solid;
+}
+
+.Golden .FriendsProfileDetailsCompositeHeaderAvatar
+{
+	border-color: friendsgolden_solid;
 }
 
 

@@ -1,0 +1,47 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+		<include src="file://{resources}/styles/parental/parental.css" />		
+	</styles>
+
+	<ParentalSetRecoveryChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
+		</Panel>
+
+		<Panel class="SettingsBottomPanel">
+			<!-- main panel -->
+			<Label id="SetRecoveryLine1" text="#Parental_Set_Recovery1" class="SettingsBody" />
+			<Label id="SetRecoveryLine2" text="#Parental_Set_Recovery2" class="SettingsBody" />
+
+			<Panel class="ParentalSetRecoveryDialog">
+				<Panel class="ParentalRecoveryEmailEntry" >
+					<Label text="#Parental_Enter_RecoveryEmail" />
+					<TextEntry class="ParentalRecoveryEmailEntry" id="Email"
+							   textinputid="ParentalRecoveryEmailEntry"
+							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+							   undohistory="enabled" />
+				</Panel>
+			</Panel>
+					
+
+		</Panel>
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button selectionpos="1.0,2.0" class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#WizardButton_Next" />
+			</Button>
+			<Button selectionpos="2.0,2.0" class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+				<Label id="Label" text="#WizardButton_Back" />
+			</Button>			
+			<Button selectionpos="3.0,2.0" class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
+				<Label id="Label" text="#WizardButton_Cancel" />
+			</Button>
+		</Panel>
+
+	</ParentalSetRecoveryChild>
+
+</root>

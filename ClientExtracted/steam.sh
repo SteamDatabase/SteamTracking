@@ -694,7 +694,6 @@ fi
 
 # disable SDL1.2 DGA mouse because we can't easily support it in the overlay
 export SDL_VIDEO_X11_DGAMOUSE=0
-ulimit -n 2048 2>/dev/null
 
 # Touch our startup file so we can detect bootstrap launch failure
 if [ "$UNAME" = "Linux" ]; then
