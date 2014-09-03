@@ -1389,12 +1389,12 @@ function OnGetFinalPriceSuccess( result )
 				}				
 				else if ( method.value == 'eclubpoints' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'eClub Points transactions are authorized through the eClub website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to eClub';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'eClub Points transactions are authorized through the eClub Store website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to eClub Store';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for eClub Points customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the eClub website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the eClub Store website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 			}
@@ -3668,7 +3668,7 @@ function DisplayPendingReceiptPage()
 			
 		case 'eclubpoints':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://www.eclubstore.com">eClub</a>.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://www.eclubstore.com">eClub Store</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 						
