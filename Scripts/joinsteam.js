@@ -238,43 +238,43 @@ function ReallyCreateAccount()
 	    			  i_agree : $('i_agree_check').checked ? '1' : '0',
 	    			  ticket : $('ticket').value,
 	    			  count : iAjaxCalls }, 
-	    onSuccess: function(transport) {
-	      var bSuccess = false;
-	      if ( transport.responseText ){
-	        try {
-	      	  var result = transport.responseText.evalJSON(true);
-	      	} catch ( e ) {
-	      	  	      	}
-	      	
-	      	if ( result && result.bSuccess )
-	      		bSuccess = true;
-		  }
-		  if ( !bSuccess )
-	      {
-	        $('cart_area').style.display = 'block';
-      	  	$('email_used_area').style.display = 'none';
-	      	$('error_display').innerHTML = 'Your account creation request failed, please try again later.<br/>';
-	      	$('error_display').style.display = 'block';
-	      	Effect.ScrollTo( 'error_display' );
-	      	new Effect.Highlight( 'error_display', { endcolor : '#CEC7BD', startcolor : '#CCC983' } );
-			
-	      		      	if ( result && result.ticket )
-	      		$('ticket').value = result.ticket;
-			
-	      		      	if ( result && result.redirect )
-	      		window.location = result.redirect;
-	      }
-	      else if ( bPSNAccountSetup )
-	      {
-		      	window.location = 'http://store.steampowered.com/psn/setupcomplete?accountname=' + encodeURIComponent(result.accountname);
-	      }
-	      else
-	      {	
-	      	
-							      	window.location = document.forms['logon_form'].action;
-	      } 
-		  
-	    },
+		onSuccess: function(transport) {
+			var bSuccess = false;
+			if (transport.responseText) {
+				try {
+					var result = transport.responseText.evalJSON(true);
+				} catch (e) {
+									}
+
+				if (result && result.bSuccess)
+					bSuccess = true;
+			}
+			if (!bSuccess) {
+				$('cart_area').style.display = 'block';
+				$('email_used_area').style.display = 'none';
+				$('error_display').innerHTML = 'Your account creation request failed, please try again later.<br/>';
+				$('error_display').style.display = 'block';
+				Effect.ScrollTo('error_display');
+				new Effect.Highlight('error_display', { endcolor: '#CEC7BD', startcolor: '#CCC983' });
+
+								if (result && result.ticket)
+					$('ticket').value = result.ticket;
+
+								if (result && result.redirect)
+					window.location = result.redirect;
+			}
+			else if (bPSNAccountSetup) {
+				window.location = 'http://store.steampowered.com/psn/setupcomplete?accountname=' + encodeURIComponent(result.accountname);
+			}
+			else {
+				
+												if ( typeof g_strRedirectURL != 'undefined' )
+					window.location = g_strRedirectURL;
+				else
+					window.location = 'http://store.steampowered.com/';
+			}
+
+		},
 	    onFailure: function()
 	    {
 	    	$('cart_area').style.display = 'block';

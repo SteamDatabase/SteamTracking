@@ -1373,12 +1373,12 @@ a.friendactivity_game_link.ds_flagged img {
 }
 
 #review_create .avatar {
-	width: 92px;
-	height: 92px;
+	width: 94px;
+	height: 94px;
 	background-repeat: no-repeat;
-	padding: 4px;
+	padding: 1px;
 	margin-right: 16px;
-	border-radius: 2px;
+	border-radius: 0px;
 	float: left;
 }
 
@@ -1481,19 +1481,9 @@ a.friendactivity_game_link.ds_flagged img {
 #review_create .avatar > img {
 	width: 92px;
 	height: 92px;
+	padding: 1px;
 }
 
-.avatar_block_status_online {
-	background: #6FBDFF;
-background: -moz-linear-gradient(top, #8ecafc 5%, #6ba1cf 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#8ecafc), color-stop(95%,#6ba1cf));background: -webkit-linear-gradient(top, #8ecafc 5%,#6ba1cf 95%);background: -o-linear-gradient(top, #8ecafc 5%,#6ba1cf 95%);background: -ms-linear-gradient(top, #8ecafc 5%,#6ba1cf 95%);background: linear-gradient(to bottom, #8ecafc 5%,#6ba1cf 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ecafc', endColorstr='#6ba1cf',GradientType=0 );}
-
-.avatar_block_status_in-game {
-	background-color: #B1FB50;
-background: -moz-linear-gradient(top, #b8f750 5%, #87c643 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#b8f750), color-stop(95%,#87c643));background: -webkit-linear-gradient(top, #b8f750 5%,#87c643 95%);background: -o-linear-gradient(top, #b8f750 5%,#87c643 95%);background: -ms-linear-gradient(top, #b8f750 5%,#87c643 95%);background: linear-gradient(to bottom, #b8f750 5%,#87c643 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8f750', endColorstr='#87c643',GradientType=0 );}
-
-.avatar_block_status_offline {
-	background-color: #545454;
-}
 
 .user_reviews_header {
     font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;

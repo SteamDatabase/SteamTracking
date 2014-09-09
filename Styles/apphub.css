@@ -1,4 +1,13 @@
 
+body
+{
+   /* font-family: Motiva Sans, Arial, Helvetica, sans-serif;*/
+}
+
+center
+{
+
+}
 /* admin */
 .apphub_NormallyHiddenBanner
 {
@@ -306,7 +315,7 @@
 	border: none;
 
 	background: #57749e; /* Old browsers */
-	background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );}
+background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );}
 
 .apphub_sectionTab.active > span
 {
@@ -318,7 +327,7 @@
 
 	display: block;
 	background: #445b7c; /* Old browsers */
-	background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%);background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );}
+background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%);background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );}
 
 .apphub_sectionTab.admin
 {
@@ -329,7 +338,7 @@
 .apphub_sectionTab:hover
 {
 	background: #57749e; /* Old browsers */
-	background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );}
+background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );}
 
 /* friends who played recently */
 
@@ -359,71 +368,40 @@
 .appHubIconHolder
 {
 	position: absolute;
-	padding: 2px;
-	width: 22px;
-	height: 22px;
+	padding: 1px;
+	width: 24px;
+	height: 24px;
 	border:0;
 	margin:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_default_26.jpg');
 }
-.appHubIconHolder.offline
-{
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_offline_26.jpg');
-}
-.appHubIconHolder.ignored
-{
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_offline_26.jpg');
-}
-.appHubIconHolder.online
-{
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_online_26.jpg');
-}
-.appHubIconHolder.in-game
-{
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_ingame_26.jpg');
-}
+
 
 .appHubIconHolder.greyOverlay
 {
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_inactive.png');
-	width: 22px;
-	height: 22px;
+	width: 24px;
+	height: 24px;
 	overflow: hidden;
+	padding: 1px;
 	background-repeat: repeat;
 }
 
 .appHubIconHolder.large
 {
 	position: absolute;
-	padding: 4px;
-	width: 32px;
-	height: 32px;
+	padding: 1px;
+	width: 34px;
+	height: 34px;
 	border:0;
 	margin:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_default.jpg');
 }
-.appHubIconHolder.large.offline
-{
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_offline.jpg');
-}
-.appHubIconHolder.large.ignored
-{
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_offline.jpg');
-}
-.appHubIconHolder.large.online
-{
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_online.jpg');
-}
-.appHubIconHolder.large.in-game
-{
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_ingame.jpg');
-}
+
 
 .appHubIconHolder.large.greyOverlay
 {
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_inactive.png');
-	width: 32px;
-	height: 32px;
+	width: 34px;
+	height: 34px;
 	overflow: hidden;
 	background-repeat: repeat;
 }
@@ -442,12 +420,14 @@
 {
 	width: 22px;
 	height: 22px;
+	padding: 1px;
 }
 
 .appHubIconHolder.large img
 {
 	width: 32px;
 	height: 32px;
+	padding: 1px;
 }
 
 .appHubNewsIconHolder
@@ -555,14 +535,14 @@
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_portal2.jpg');
 }
 
-.appHubNewsIconHolder.greyOverlay
+/*.appHubNewsIconHolder.greyOverlay
 {
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/iconholder_inactive.png');
 	width: 70px;
 	height: 26px;
 	overflow: hidden;
 	background-repeat: repeat;
-}
+}*/
 
 .apphub_Card.interactable:hover .appHubNewsIconHolder.greyOverlay
 {
@@ -651,14 +631,14 @@ a.apphub_more_friends_who_play:hover
 	position: relative;
 	float: left;
 	background-color: #1b1b1b;
-	border: 1px solid #343434;
+	border: 1px solid transparent;
 	margin-left: 5px;
 	margin-right: 5px;
 	margin-bottom: 10px;
 	padding: 0px;
-	-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	/*-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
-	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);*/
 }
 
 .apphub_Card.interactable
@@ -668,7 +648,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_Card.interactable:hover
 {
-	border: 1px solid #97c0e3;
+	border: 1px solid #2f89bc;
 }
 
 .apphub_Card.pinned
@@ -700,6 +680,7 @@ a.apphub_more_friends_who_play:hover
 	color: white;
 	font-size: 18px;
 	font-weight: bold;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	padding: 10px;
 	margin: 5px;
 	z-index: 2;
@@ -726,13 +707,14 @@ a.apphub_more_friends_who_play:hover
 	right: 0px;
 	height: 40px;
 	padding-top: 5px;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 }
 
 .apphub_CardRating
 {
 	margin-left: 5px;
-    min-width: 79px;
-    height: 13px;
+	min-width: 79px;
+	height: 13px;
 	padding-left: 85px;
 	background-repeat: no-repeat;
 	color: #424242;
@@ -740,37 +722,37 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardRating.notRated
 {
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/not-yet.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/not-yet.png' );
 }
 
 .apphub_CardRating.zeroStar
 {
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/0-star.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/0-star.png' );
 }
 
 .apphub_CardRating.oneStar
 {
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/1-star.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/1-star.png' );
 }
 
 .apphub_CardRating.twoStar
 {
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/2-star.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/2-star.png' );
 }
 
 .apphub_CardRating.threeStar
 {
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/3-star.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/3-star.png' );
 }
 
 .apphub_CardRating.fourStar
 {
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/4-star.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/4-star.png' );
 }
 
 .apphub_CardRating.fiveStar
 {
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/5-star.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/5-star.png' );
 }
 
 .apphub_CardRating.rateUp
@@ -820,27 +802,28 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardTitle
 {
-	color: white;
+	color: #636363;
 	font-size: 18px;
 	padding-top: 9px;
 	padding-left: 13px;
 }
 
 .apphub_CardContentClickable
- {
-	 overflow: hidden;
- }
+{
+	overflow: hidden;
+}
 
 .apphub_CardContentMain
 {
 	position: relative;
 	overflow: hidden;
 	word-wrap: break-word;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 }
 
 .apphub_CardContentTitle
 {
-	color: white;
+	color: #636363;
 	font-size: 12px;
 	padding: 5px;
 }
@@ -899,28 +882,29 @@ a.apphub_more_friends_who_play:hover
 {
 	height: 19px;
 	padding: 4px;
-	background-color: #3e3d3d;
+	/*background-color: #3e3d3d;*/
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
+    border-top: 1px solid #272f38;
 }
 
 .apphub_Card.interactable:hover .apphub_CardContentAuthorBlock
 {
-	background-color: #494949;
+	background-color: #1b1b1b;
 }
 
 .apphub_Card.pinned .apphub_CardContentAuthorBlock
 {
-	background-color: #494949;
+	background-color: #1b1b1b;
 }
 
 .apphub_CardContentAuthorBlock.tall
 {
 	height: 32px;
 	padding-top: 6px;
-	padding-left: 7px;
+	padding-left: 5px;
 }
 
 .apphub_CardContentAuthorBlock .appHubIconHolder
@@ -940,14 +924,14 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardContentAppName, .apphub_CardContentAppName a
 {
 	padding-top: 7px;
-	font-size: 12px;
-	font-weight: bold;
-	color: #555454;
+	font-size: 13px;
+	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+	color: #636363;
 }
 
 .apphub_Card.interactable:hover .apphub_CardContentAppName
 {
-	color:#898989;
+	color:#1b1b1b;
 }
 
 .apphub_Card.interactable:hover .apphub_CardContentAppName a
@@ -957,10 +941,10 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardContentAuthorName
 {
-	font-size: 12px;
-	font-weight: bold;
+	font-size: 13px;
+	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	padding-left: 32px;
-	color: #555454;
+	color: #636363;
 }
 
 .apphub_Card.pinned .apphub_CardContentAuthorName
@@ -976,7 +960,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardContentAuthorName a
 {
-	color: #555454;
+	color: #636363;
 }
 
 .apphub_Card.interactable:hover .apphub_CardContentAuthorName
@@ -1046,7 +1030,7 @@ a.apphub_more_friends_who_play:hover
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-left: 24px;
-	padding-right: 14px;
+	padding-right: 5px;
 	float: right;
 }
 
@@ -1180,7 +1164,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_Card.interactable:hover .apphub_CardContentDiscussionType
 {
-	background-color: #494949;
+	background-color: #1b1b1b;
 	color: #898989;
 }
 
@@ -1278,20 +1262,24 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardContentGuideTitle
 {
-	border: 1px solid #3b3c3d;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
+	background-color: #272f38;
+    border: 1px solid transparent;
+	/*border-radius: 3px;
+	-moz-border-radius: 3px;*/
 	padding: 12px 9px 12px 9px;
 	margin: 0px 9px;
 	overflow: hidden;
 	color: white;
 	font-size: 14px;
-	font-weight: bold;
 }
 
 .apphub_CardContentGuideDesc
 {
 	padding: 12px 9px;
+    overflow: hidden;
+    height: 61px;
+    font-size: 12px;
+    line-height: 18px;
 }
 
 .apphub_CardContentGuideForApp
@@ -1367,7 +1355,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_UserReviewCardContent .found_helpful {
 	font-size: 12px;
-	color: #898a8c;
+	color: #636363;
 	margin: 0 0 14px 0;
 }
 
@@ -1375,23 +1363,23 @@ a.apphub_more_friends_who_play:hover
 	margin-bottom: 13px;
 }
 
-	.apphub_UserReviewCardContent .vote_header .title {
-		font-size: 16px;
-		color: #d6d7d8;
-		font-family: 'Motiva Sans', arial, tahoma;
-		padding: 5px 0 0 0;
-	}
+.apphub_UserReviewCardContent .vote_header .title {
+	font-size: 16px;
+	color: #d6d7d8;
+	font-family: 'Motiva Sans', arial, tahoma;
+	padding: 5px 0 0 0;
+}
 
-	.apphub_UserReviewCardContent .vote_header .hours {
-		font-size: 12px;
-		color: #d6d7d8;
+.apphub_UserReviewCardContent .vote_header .hours {
+	font-size: 12px;
+	color: #d6d7d8;
 
-	}
+}
 
-	.apphub_UserReviewCardContent .vote_header .thumb {
-		float: left;
-		margin-right: 10px;
-	}
+.apphub_UserReviewCardContent .vote_header .thumb {
+	float: left;
+	margin-right: 10px;
+}
 
 .apphub_UserReviewCardContent .apphub_CardTextContent {
 	line-height: 20px;
@@ -1403,7 +1391,7 @@ a.apphub_more_friends_who_play:hover
 .UserReviewCardContent_Footer .control_block .text {
 	display: inline-block;
 	margin-right: 9px;
-	color: #898a8c;
+	color: #636363;
 	font-size: 12px;
 }
 

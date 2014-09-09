@@ -226,11 +226,13 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	var fnUpdateUserTagsOnPage = function()
 	{
 		var $YourTagsOnPage = $J('.your_tags[data-appid=' + appid + ']');
-		$YourTagsOnPage.children( '.app_tag:not(.add_button)').remove();
+		var $AddYourOwn = $YourTagsOnPage.children( '.app_tag.add_your_own');
+		var $AddMore = $YourTagsOnPage.children( '.app_tag.add_more');
 		if ( rgUserTags.length )
 		{
-			$YourTagsOnPage.children( '.app_tag.add_your_own').hide();
-			$YourTagsOnPage.children( '.app_tag.add_more').show();
+			$AddYourOwn.hide();
+			$AddMore.show();
+			$YourTagsOnPage.empty();
 			for ( var i = 0; i < rgUserTags.length; i++ )
 			{
 				if ( rgUserTags[i].is_reported )
@@ -238,15 +240,17 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 				var $AppTag = $J('<a/>', {'class': 'app_tag', 'href': TagLink( rgUserTags[i].name ) + '?snr=' + strYourTagSNR }).text( rgUserTags[i].name );
 				$AppTag.InstrumentLinks();
-				$YourTagsOnPage.prepend( $AppTag, ' ' );
+				$YourTagsOnPage.append( $AppTag );
 			}
-			AdjustVisibleAppTags( $YourTagsOnPage );
 		}
 		else
 		{
-			$YourTagsOnPage.children( '.app_tag.add_your_own').show();
-			$YourTagsOnPage.children( '.app_tag.add_more').hide();
+			$AddYourOwn.show();
+			$AddMore.hide();
+			$YourTagsOnPage.empty();
 		}
+		$YourTagsOnPage.append( $AddYourOwn, $AddMore );
+		AdjustVisibleAppTags( $YourTagsOnPage );
 	}
 
 	var fnApplyTag = function( tag, withdraw, bPopularClick, eReportType, unTagID )
@@ -453,6 +457,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		var Modal = ShowAlertDialog( 'View and edit tags for this product', $AppTagModal, 'Close' );
 		Modal.GetContent().addClass( 'app_tag_modal_frame');
 		fnBuildTagDisplay( Modal );
+		Modal.AdjustSizing();
 
 		Modal.always( function() {
 			if ( TextSuggest )
@@ -491,7 +496,10 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 function AdjustVisibleAppTags( $TagCtn )
 {
+	var bPopularTags = $TagCtn.hasClass( 'popular_tags' );
 	var $AddButton = $TagCtn.children('.app_tag.add_button');
+	if ( !bPopularTags )
+		$AddButton.filter(':visible');
 
 	var k_nSpacing = 5;
 	var nSpaceRemaining = $TagCtn.width() - $AddButton.outerWidth();
@@ -513,7 +521,7 @@ function AdjustVisibleAppTags( $TagCtn )
 	});
 
 	// we will hide the "+" on popular tags if we've displayed all the tags (there will always be a "+" under your own tags)
-	if ( $TagCtn.hasClass( 'popular_tags' ) )
+	if ( bPopularTags )
 	{
 		$AddButton.toggle( bAnyHidden );
 	}

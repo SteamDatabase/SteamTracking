@@ -113,9 +113,10 @@
 .highlight_overflow {
 	overflow: hidden;
 	width: 600px;
-	height: 428px;
+	height: 434px;
 	position: relative;
 }
+
 
 #highlight_strip {
 	margin-top: 4px;
@@ -213,7 +214,10 @@
 .glance_ctn .release_date {
     font-size: 12px;
     color: #61686d;
-    margin-top: 12px;
+    margin-top: 10px;
+}
+.glance_ctn .release_date .date {
+	color: #8f98a0;
 }
 
 .game_header_image_ctn {
@@ -250,8 +254,9 @@ img.game_header_image_full {
 	color: #626366;
 }
 
-.glance_details {
+.glance_details p {
 	line-height: 20px;
+	padding-right: 12px;
 }
 
 .glance_details img {
@@ -935,30 +940,30 @@ img.game_header_image_full {
 	margin-bottom: 8px;
 }
 
-#game_area_sys_req {
+.game_area_sys_req {
 	font-size: 12px;
 }
 
-#game_area_sys_req strong {
+.game_area_sys_req strong {
 	color: #626366;
 	font-weight: normal;
 }
 
-#game_area_sys_req ul {
+.game_area_sys_req ul {
 	list-style-type: none;
 	margin-left: 0px;
 }
 
-#game_area_sys_req ul li {
+.game_area_sys_req ul li {
 	margin: 2px 0px;
 }
 
-#game_area_sys_req_leftCol, #game_area_sys_req_rightCol {
+.game_area_sys_req_leftCol, .game_area_sys_req_rightCol {
 	float: left;
 	width: 300px;
 }
 
-#game_area_sys_req_rightCol {
+.game_area_sys_req_rightCol {
 	margin-left: 8px;
 }
 
@@ -2664,7 +2669,7 @@ h2.bb_tag + br {
 }
 
 .glance_tags_ctn {
-	margin: 12px 0;
+	margin: 10px 0;
 	font-size: 11px;
 }
 
@@ -3310,4 +3315,93 @@ background: -moz-linear-gradient(135deg, #356480 5%, #1a303d 95%);background: -w
 	position: absolute;
 	right: 0;
 	top: 0;
+}
+
+
+.sysreq_tabs {
+	font-size: 12px;
+	padding-top: 8px;
+	padding-left: 5px;
+	margin-bottom: 15px;
+	background: -moz-linear-gradient(left, rgba(58,110,139,0.2) 0%, rgba(58,110,139,0) 100%);background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(58,110,139,0.2)), color-stop(100%,rgba(58,110,139,0)));background: -webkit-linear-gradient(left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: -o-linear-gradient(left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: -ms-linear-gradient(left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: linear-gradient(to right, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(58,110,139,0.2)', endColorstr='rgba(58,110,139,0)',GradientType=1 );}
+
+
+.sysreq_tab {
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 20px;
+	margin-right: 10px;
+	color: #3b6e8c;
+	float: left;
+	cursor: pointer;
+}
+
+.sysreq_tab:hover {
+	color: #ffffff;
+}
+
+.sysreq_tab.active {
+	background-color: #18222e;
+	color: #67c1f5;
+	cusor: default;
+}
+
+.sysreq_contents .sysreq_content {
+	display: none;
+}
+
+.sysreq_contents .sysreq_content.active {
+	display: block;
+}
+
+.game_page_autocollapse_ctn {
+	position: relative;
+	padding-bottom: 20px;
+	margin-bottom: 18px;
+}
+
+.game_page_autocollapse {
+	overflow: hidden;
+}
+
+.game_page_autocollapse_ctn.collapsed {
+}
+
+.game_page_autocollapse_ctn.expanded {
+	padding-bottom: 0;
+}
+
+.game_page_autocollapse_fade {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 73px;
+
+	z-index: 1;
+	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAA1CAYAAACJFSFIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACdJREFUeNpiFFXQZWVAAyxQjCHISrQghdpHiJNGQ37Um8PUSQABBgCb6gIuG4IJ2wAAAABJRU5ErkJggg==' ) top repeat-x;
+}
+
+.game_page_autocollapse_readmore {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 20px;
+	line-height: 20px;
+	cursor: pointer;
+
+	color: #537ca6;
+	font-size: 10px;
+
+	padding-right: 12px;
+	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpiDK5Z5sjAwFAJxAFrmiO/MUBBSO3yDCBlwAQkjgLxdyDeDBTkQpKsAuJuxv///4ME2ICc1UDMA1IIxEVA7Ag08S4j0ApmIEcOiJ9CFRkBsQMQPwZicRYgYQmVcAXiUCAWA+JXULEXTEBjjgAZxUC8G4jVkCRBIBfsBqjDooBULxBfhjo6FKj5F1wBkqIQII4ASYLEAAIMAPrDNy1EYNLFAAAAAElFTkSuQmCC' ) right center no-repeat;
+}
+
+.game_page_autocollapse_readmore:hover {
+	color: #ffffff;
+}
+
+.game_page_autocollapse_ctn.collapsed .game_page_autocollapse_fade {
+	display: block;
 }

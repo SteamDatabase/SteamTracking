@@ -1,10 +1,6 @@
 
 /* override the background for now */
-body
-{
-	background: #262627 url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png') top repeat-x;
-	background-position: 0 105px;
-}
+
 
 .chromeless
 {
@@ -114,7 +110,7 @@ body
 .appHubLoadingPageModal
 {
 	font-size: 14px;
-	font-weight: bold;
+	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	text-align: center;
 	line-height: 35px;
 	height: 75px;
@@ -134,12 +130,12 @@ body
 
 .apphub_BackToTop
 {
-    position: fixed;
-	margin-left: -480px;
-    left: 50%;
-    bottom: 0px;
-	height: 53px;
-	width: 960px;
+	position: fixed;
+	margin-right: -616px;
+	right: 50%;
+	bottom: 0px;
+	height: 33px;
+	width: 131px;
 	z-index: 800;
 	text-align: center;
 }
@@ -170,7 +166,7 @@ body
 .apphub_BackToTopButton.middle
 {
 	left: 3px;
-	width: 954px;
+	width: 125px;
 	background-position: 0px -33px;
 	background-repeat: repeat-x;
 }
@@ -189,7 +185,7 @@ body
 
 .appHub_BackToTopBody a
 {
-    color: #b7b7b7;
+	color: #b7b7b7;
 }
 
 /* section filter */

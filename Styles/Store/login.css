@@ -163,6 +163,7 @@ ul#why_list li {
 	float: left;
 	margin-left: 21px;
 	width: 346px;
+	padding-top: 6px;
 }
 
 .form_notes p {
@@ -176,11 +177,6 @@ ul#why_list li {
 
 .join_form input[type="text"], .join_form input[type="password"] {
 	height: 18px;
-}
-
-.join_form .dselect_container, .join_form .trigger, .join_form .activetrigger  {
-
-	width: 180px;
 }
 
 .join_form .dselect_container a {
@@ -531,7 +527,7 @@ ul#why_list {
 /* DSelect */
 .dselect_container {
 	color: #b0aeac;
-	text-shadow: 1px 1px 0px #000;
+	text-shadow: 1px 1px 0 0 #000;
 	font-size: 12px;
 
 	display: inline-block;
@@ -542,18 +538,14 @@ ul#why_list {
 	color: #ebebeb;
 	padding: 4px 30px 4px 8px;
 	font-size: 12px;
-	line-height: 13px;
+	line-height: 19px;
 	border: 1px transparent;
-	border-radius: 0;
-	height: 22px;
-	-webkit-appearance: none;
 	border-radius: 3px;
-	-moz-appearance: none;
-	text-indent: 0.01px;
-	text-overflow: '';
+	text-overflow: ellipsis;
 	text-decoration: none;
-	height:19px;
-	width:105px;
+	white-space: nowrap;
+	height: 19px;
+	width: 105px;
 	background-color: #000;
 	background-color:rgba(0,0,0,0.2);
 }
@@ -564,7 +556,7 @@ ul#why_list {
 {
 	color: #ffffff;
 	border-radius: 1px;
-	background-color: #67c1f5; /* Old browsers */
+	background-color: #67c1f5;
 }
 
 .activetrigger{
@@ -633,4 +625,22 @@ ul#why_list {
 
 #challenge_question_dselect_container {
 	margin-top: 5px;
+}
+
+#challenge_question_trigger {
+	width: 264px;
+	display: block;
+	line-height: 19px;
+}
+.dropdownvisible#challenge_question_droplist {
+	top: 0;
+}
+
+#privacy_link {
+	padding-top: 12px;
+}
+
+.email_used_actions {
+	margin-top: 12px;
+	line-height: 24px;
 }

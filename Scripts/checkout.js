@@ -246,6 +246,22 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				case 'konbini':
 				case 'bank_transfer_japan':
 				case 'payeasy':
+				case 'oxxo':
+				case 'toditocash':
+				case 'carnet':
+				case 'spei':
+				case '3pay':
+				case 'isbank':
+				case 'garanti':
+				case 'akbank':
+				case 'yapikredi':
+				case 'halkbank':
+				case 'bankasya':
+				case 'finansbank':
+				case 'denizbank':
+				case 'ptt':
+				case 'cashu':
+				case 'onecard':
 					displayPendingReceipt = true;
 					break;
 						
@@ -681,7 +697,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35 )
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 63					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35 )
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -834,6 +850,22 @@ function OnPayPalSuccess( gidTransID )
 					case 'multibanco':
 					case 'payshop':
 					case 'maestroboacompra':
+					case 'oxxo':
+					case 'toditocash':
+					case 'carnet':
+					case 'spei':
+					case '3pay':
+					case 'isbank':
+					case 'garanti':
+					case 'akbank':
+					case 'yapikredi':
+					case 'halkbank':
+					case 'bankasya':
+					case 'finansbank':
+					case 'denizbank':
+					case 'ptt':
+					case 'cashu':
+					case 'onecard':
 					case 'molpoints':
 					case 'konbini':
 					case 'bank_transfer_japan':
@@ -1274,6 +1306,166 @@ function OnGetFinalPriceSuccess( result )
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Maestro customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'oxxo' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'OXXO transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for OXXO customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'toditocash' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Todito Cash transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Todito Cash customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'carnet' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Carnet transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Carnet customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'spei' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'SPEI transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for SPEI customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == '3pay' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = '3pay transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for 3pay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'isbank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Is Bank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Is Bank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'garanti' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Garanti transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Garanti customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'akbank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Akbank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Akbank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'yapikredi' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Yapi Kredi transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Yapi Kredi customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'halkbank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Halkbank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Halkbank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'bankasya' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Bank Asya transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Bank Asya customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'finansbank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Finansbank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Finansbank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'denizbank' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'DenizBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for DenizBank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'ptt' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PTT transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PTT customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'cashu' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'CashU transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for CashU customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
+				else if ( method.value == 'onecard' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'OneCard transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for OneCard customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
@@ -1980,6 +2172,22 @@ g_rgPaymentMethodsToToggle[15] = 'maestroboacompra';
 g_rgPaymentMethodsToToggle[16] = 'konbini';
 g_rgPaymentMethodsToToggle[17] = 'bank_transfer_japan';
 g_rgPaymentMethodsToToggle[18] = 'payeasy';
+g_rgPaymentMethodsToToggle[19] = 'oxxo';
+g_rgPaymentMethodsToToggle[20] = 'toditocash';
+g_rgPaymentMethodsToToggle[21] = 'carnet';
+g_rgPaymentMethodsToToggle[22] = 'spei';
+g_rgPaymentMethodsToToggle[23] = '3pay';
+g_rgPaymentMethodsToToggle[24] = 'isbank';
+g_rgPaymentMethodsToToggle[25] = 'garanti';
+g_rgPaymentMethodsToToggle[26] = 'akbank';
+g_rgPaymentMethodsToToggle[27] = 'yapikredi';
+g_rgPaymentMethodsToToggle[28] = 'halkbank';
+g_rgPaymentMethodsToToggle[29] = 'bankasya';
+g_rgPaymentMethodsToToggle[30] = 'finansbank';
+g_rgPaymentMethodsToToggle[31] = 'denizbank';
+g_rgPaymentMethodsToToggle[32] = 'ptt';
+g_rgPaymentMethodsToToggle[33] = 'cashu';
+g_rgPaymentMethodsToToggle[34] = 'onecard';
 
 function UpdatePaymentMethodList( bIsSplitTransaction )
 {
@@ -2102,12 +2310,18 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil'
 			|| method.value == 'multibanco' || method.value == 'payshop' || method.value == 'maestroboacompra'
+			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'carnet'
+			|| method.value == 'spei' || method.value == '3pay' || method.value == 'isbank'
+			|| method.value == 'garanti' || method.value == 'akbank' || method.value == 'yapikredi'
+			|| method.value == 'halkbank' || method.value == 'bankasya' || method.value == 'finansbank'
+			|| method.value == 'denizbank' || method.value == 'ptt' || method.value == 'cashu'
+			|| method.value == 'onecard'
 			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'eclubpoints' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 		}
-		else if ( method.value == 'boleto' || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' )
+		else if ( method.value == 'boleto' || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'oxxo' || method.value == 'toditocash' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2529,6 +2743,12 @@ function SubmitPaymentInfoForm()
  		  || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' 
 			|| method.value == 'multibanco' || method.value == 'payshop' || method.value == 'maestroboacompra'
+			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'carnet'
+			|| method.value == 'spei' || method.value == '3pay' || method.value == 'isbank'
+			|| method.value == 'garanti' || method.value == 'akbank' || method.value == 'yapikredi'
+			|| method.value == 'halkbank' || method.value == 'bankasya' || method.value == 'finansbank'
+			|| method.value == 'denizbank' || method.value == 'ptt' || method.value == 'cashu'
+			|| method.value == 'onecard'
 			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' || method.value == 'credit_card_japan' 
 			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal'
 			|| method.value == 'zong' || method.value == 'culturevoucher' || method.value == 'bookvoucher' || method.value == 'happymoneyvoucher' || method.value == 'convenientstorevoucher'
@@ -3020,6 +3240,86 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'Maestro (Domestic)';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
+			else if ( method.value == 'oxxo' && providerPaymentMethod == 48 )
+			{
+				$('payment_method_review_text').innerHTML = 'OXXO';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'toditocash' && providerPaymentMethod == 49 )
+			{
+				$('payment_method_review_text').innerHTML = 'Todito Cash';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'carnet' && providerPaymentMethod == 50 )
+			{
+				$('payment_method_review_text').innerHTML = 'Carnet';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'spei' && providerPaymentMethod == 51 )
+			{
+				$('payment_method_review_text').innerHTML = 'SPEI';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == '3pay' && providerPaymentMethod == 52 )
+			{
+				$('payment_method_review_text').innerHTML = '3pay';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'isbank' && providerPaymentMethod == 53 )
+			{
+				$('payment_method_review_text').innerHTML = 'Is Bank';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'garanti' && providerPaymentMethod == 54 )
+			{
+				$('payment_method_review_text').innerHTML = 'Garanti';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'akbank' && providerPaymentMethod == 55 )
+			{
+				$('payment_method_review_text').innerHTML = 'Akbank';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'yapikredi' && providerPaymentMethod == 56 )
+			{
+				$('payment_method_review_text').innerHTML = 'Yapi Kredi';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'halkbank' && providerPaymentMethod == 57 )
+			{
+				$('payment_method_review_text').innerHTML = 'Halkbank';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'bankasya' && providerPaymentMethod == 58 )
+			{
+				$('payment_method_review_text').innerHTML = 'Bank Asya';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'finansbank' && providerPaymentMethod == 59 )
+			{
+				$('payment_method_review_text').innerHTML = 'Finansbank';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'denizbank' && providerPaymentMethod == 60 )
+			{
+				$('payment_method_review_text').innerHTML = 'DenizBank';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'ptt' && providerPaymentMethod == 61 )
+			{
+				$('payment_method_review_text').innerHTML = 'PTT';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'cashu' && providerPaymentMethod == 62 )
+			{
+				$('payment_method_review_text').innerHTML = 'CashU';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'onecard' && providerPaymentMethod == 63 )
+			{
+				$('payment_method_review_text').innerHTML = 'OneCard';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
 			else if ( method.value == 'molpoints' && providerPaymentMethod == 31 )
 			{
 				$('payment_method_review_text').innerHTML = 'MOL Points';
@@ -3429,6 +3729,22 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 			case 45:
 			case 46:
 			case 47:
+			case 48:
+			case 49:
+			case 50:
+			case 51:
+			case 52:
+			case 53:
+			case 54:
+			case 55:
+			case 56:
+			case 57:
+			case 58:
+			case 59:
+			case 60:
+			case 61:
+			case 62:
+			case 63:
 			case 31:
 			case 34:
 			case 36:
@@ -3647,6 +3963,22 @@ function DisplayPendingReceiptPage()
 		case 'multibanco':
 		case 'payshop':
 		case 'maestroboacompra':
+		case 'oxxo':
+		case 'toditocash':
+		case 'carnet':
+		case 'spei':
+		case '3pay':
+		case 'isbank':
+		case 'garanti':
+		case 'akbank':
+		case 'yapikredi':
+		case 'halkbank':
+		case 'bankasya':
+		case 'finansbank':
+		case 'denizbank':
+		case 'ptt':
+		case 'cashu':
+		case 'onecard':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="http://www.boacompra.com/shop/info.php?contact">BoaCompra</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';

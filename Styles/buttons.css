@@ -480,7 +480,7 @@ btnv6_border_2px > span {
 	width: 18px;
 	height: 18px;
 	margin: 0 0px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_18.png);
+	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_18.png?v=2);
 	vertical-align: text-top;
 }
 
@@ -488,6 +488,8 @@ btnv6_border_2px > span {
 	.ico18.thumb_down {
 		background-position: -18px 0px;	}
 
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico18.thumb_down {
+			background-position: -90px 0px;		}
 	
 			.btn_active .ico18.thumb_down, .active .ico18.thumb_down {
 			background-position: -54px 0px;		}
@@ -495,6 +497,8 @@ btnv6_border_2px > span {
 	.ico18.thumb_up {
 		background-position: 0px 0px;	}
 
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico18.thumb_up {
+			background-position: -72px 0px;		}
 	
 			.btn_active .ico18.thumb_up, .active .ico18.thumb_up {
 			background-position: -36px 0px;		}
