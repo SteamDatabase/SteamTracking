@@ -52,7 +52,7 @@
 			</Panel>
 			<Panel id="ThrobberRow">
 				<Panel id="ThrobberRowWrapper">
-					<Panel id="Throbber" />
+					<LoadingThrobber id="Throbber" />
 					<Label id="WorkingText" text="#Library_UploadScreenshotWorking" />
 				</Panel>
 			</Panel>

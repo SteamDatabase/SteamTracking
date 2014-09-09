@@ -55,17 +55,16 @@ StoreBrowseByCategory #Contents
 	}
 }
 
-.Loading .Throbber
+.Throbber
 {
-	width: 120px;
-	height: 120px;
 	horizontal-align: center;
 	margin-top: 160px;
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
 
+	opacity: 0.0;
+}
+
+.Loading .Throbber
+{
 	opacity: 1.0;
 
 	animation-name: throbber-appear-delay;

@@ -7,18 +7,20 @@
 		"LocalCostForCrossingAtlantic"				5
 		"LocalCostForCrossingPacific"				5
 		"LocalCostBetweenEuropeAndAfrica"			4
-		"LocalCostBetweenNorthAndSouthAmerica"		10
+		"LocalCostBetweenNorthAndSouthAmerica"		4
 		"LocalCostBetweenAustraliaAndAsia"			9
 		"LocalCostJapanToKorea"			14
 		"LocalCostBetweenAustraliaAndNewZealand"	4
 		"LocalCostBetweenIsraelAndEurope"			8
-		"LocalCostIndiaToSingapore"			4
+		"LocalCostIndiaToSingapore"			2
 		"LocalCostOneWayCellEdge"					25
 		"LocalCostAUSBetweenRegions"				1
 		"LocalCostAUSFromRegionToISP"				1
 		"LocalCostAUSFromISPToRegion"				2
 		"LocalCostToLeaveChina"							2
 		"LocalCostCanadaToUS"								2
+		"LocalCostIndiaToDubai"					2
+		"InwardCost"	0.2
 	}
 	"cells"
 	{
@@ -30,7 +32,7 @@
 			"region"	"global"
 			"edges"
 			{
-				0 { "dest"	31 }
+				0 { "dest"	31	"cost"	InwardCost }
 			}
 		}
 
@@ -187,6 +189,7 @@
 					"dest"	47 
 					"cost"	LocalCostOneWayCellEdge
 				}
+				2 { "dest"	17 }
 			}
 		}
 
@@ -199,9 +202,9 @@
 			"longitude"	"120.992002"
 			"edges"
 			{
-				0 { "dest"	32 }
+				0 { "dest"	32 	"cost"	InwardCost}
 				1 { "dest"	33 }
-				2 { "dest"	35 }
+				2 { "dest"	35 	"cost"	InwardCost}
 			}
 		}
 
@@ -219,6 +222,11 @@
 				2 { "dest"	31 }
 				3 { "dest"	18 }
 				4 { "dest"	49 }
+				5
+				{ 
+					"dest"	146 
+					"cost"	LocalCostOneWayCellEdge
+				}				
 			}
 		}
 
@@ -231,8 +239,8 @@
 			"longitude"	"-112.063508"
 			"edges"
 			{
-				0 { "dest"	64 }
-				1 { "dest"	65 }
+				0 { "dest"	64 	"cost"	InwardCost}
+				1 { "dest"	65 	"cost"	InwardCost}
 			}
 		}
 
@@ -326,7 +334,7 @@
 			"longitude"	"26.097164"
 			"edges"
 			{
-				0 { "dest"	93  }
+				0 { "dest"	93  	"cost"	InwardCost}
 				1 { "dest"	43  }
 			}
 		}
@@ -569,7 +577,7 @@
 			"longitude"	"-21.897469"
 			"edges"
 			{
-				0 { "dest"	41  }
+				0 { "dest"	41  	"cost"	InwardCost }
 			}
 		}
 
@@ -582,7 +590,7 @@
 			"longitude"	"35.210323"
 			"edges"
 			{
-				0 { "dest"	 123  }
+				0 { "dest"	 123	"cost"	InwardCost  }
 				1 { "dest"	 126  }
 			}
 		}
@@ -596,7 +604,7 @@
 			"longitude"	"-122.336395"
 			"edges"
 			{
-				0 { "dest"	10  }
+				0 { "dest"	10 	"cost"	InwardCost }
 				1 { "dest"	106  }				
 				2
 				{ 
@@ -619,7 +627,12 @@
 				{ 
 					"dest"	104
 					"cost"	LocalCostOneWayCellEdge
-				}							
+				}	
+				6
+				{ 
+					"dest"	147 
+					"cost"	LocalCostOneWayCellEdge
+				}										
 			}
 		}
 
@@ -684,7 +697,7 @@
 			"longitude"	"100.538206"
 			"edges"
 			{
-				0 { "dest"	35  }
+				0 { "dest"	35 	"cost"	InwardCost }
 			}
 		}
 
@@ -765,13 +778,17 @@
 					"dest"	35  
 					"cost"	LocalCostIndiaToSingapore
 				}
-				1 { "dest"	141  }
-				2 { "dest"	142  }
-				3 { "dest"	143  }
-				4 { "dest"	144  }
-				5 { "dest"	145  }
+				1 { "dest"	141 	"cost"	InwardCost }
+				2 { "dest"	142 	"cost"	InwardCost }
+				3 { "dest"	143 	"cost"	InwardCost }
+				4 { "dest"	144 	"cost"	InwardCost }
+				5 { "dest"	145 	"cost"	InwardCost }
 				6 { "dest"	128  }
-				7 { "dest"	127  }
+				7 
+				{
+					 "dest"	127  
+					"cost"	LocalCostIndiaToDubai
+				}
 			}
 		}
 
@@ -784,9 +801,9 @@
 			"longitude"	"12.478752"
 			"edges"
 			{
-				0 { "dest"	88  }
-				1 { "dest"	14  }			
-				2 { "dest"	96  }
+				0 { "dest"	88 	"cost"	InwardCost }
+				1 { "dest"	14 	"cost"	InwardCost }			
+				2 { "dest"	96 	"cost"	InwardCost }
 			}
 		}
 
@@ -799,7 +816,7 @@
 			"longitude"	"21.005001"
 			"edges"
 			{
-				0 { "dest"	90  }
+				0 { "dest"	90 	"cost"	InwardCost }
 				1
 				{ 
 					"dest"	73
@@ -817,7 +834,7 @@
 			"longitude"	"60.609856"
 			"edges"
 			{
-				0 { "dest"	7  }
+				0 { "dest"	7 	"cost"	InwardCost }
 				1 { "dest"	62  }
 			}
 		}
@@ -831,8 +848,8 @@
 			"longitude"	"-3.715096"
 			"edges"
 			{
-				0 { "dest"	14  }
-				1 { "dest"	96  }
+				0 { "dest"	14 	"cost"	InwardCost }
+				1 { "dest"	96 	"cost"	InwardCost }
 			}
 		}
 
@@ -845,9 +862,9 @@
 			"longitude"	"12.562008"
 			"edges"
 			{
-				0 { "dest"	89  }
-				1 { "dest"	66  }
-				2 { "dest"	67  }
+				0 { "dest"	89 	"cost"	InwardCost }
+				1 { "dest"	66 	"cost"	InwardCost }
+				2 { "dest"	67 	"cost"	InwardCost }
 				3
 				{ 
 					"dest"	29
@@ -865,8 +882,8 @@
 			"longitude"	"14.434319"
 			"edges"
 			{
-				0 { "dest"	90 }
-				1 { "dest"	91  }
+				0 { "dest"	90 	"cost"	InwardCost }
+				1 { "dest"	91 	"cost"	InwardCost }
 				2 { "dest"	93  }
 			}
 		}
@@ -880,8 +897,8 @@
 			"longitude"	"23.717766"
 			"edges"
 			{
-				0 { "dest"	16  }
-				1 { "dest"	37  }
+				0 { "dest"	16 	"cost"	InwardCost }
+				1 { "dest"	37 	"cost"	InwardCost }
 			}
 		}
 
@@ -894,7 +911,7 @@
 			"longitude"	"106.827621"
 			"edges"
 			{
-				0 { "dest"	35  }
+				0 { "dest"	35 	"cost"	InwardCost }
 			}
 		}
 
@@ -907,7 +924,7 @@
 			"longitude"	"120.979729"
 			"edges"
 			{
-				0 { "dest"	35  }
+				0 { "dest"	35 	"cost"	InwardCost }
 				1 { "dest"	33 }
 			}
 		}
@@ -921,8 +938,8 @@
 			"longitude"	"116.385727"
 			"edges"
 			{
-				0 { "dest"	47  }
-				1 { "dest"	48  }
+				0 { "dest"	47 	"cost"	InwardCost }
+				1 { "dest"	48 	"cost"	InwardCost }
 			}
 		}
 
@@ -938,15 +955,16 @@
 				0
 				{ 
 					"dest"	33
+					"cost"	InwardCost
 				}
-				1 { "dest"	46  }
-				2 { "dest"	48  }
-				7 
+				1 { "dest"	46 	"cost"	InwardCost }
+				2 { "dest"	48 	"cost"	InwardCost }
+				3 
 				{ 
 					"dest"	137  
 					"cost"	LocalCostOneWayCellEdge
 				}
-				7 
+				4 
 				{ 
 					"dest"	138  
 					"cost"	LocalCostOneWayCellEdge
@@ -963,8 +981,8 @@
 			"longitude"	"104.049797"
 			"edges"
 			{
-				0 { "dest"	46  }
-				1 { "dest"	47  }	
+				0 { "dest"	46 	"cost"	InwardCost }
+				1 { "dest"	47 	"cost"	InwardCost }	
 			}
 		}
 
@@ -977,8 +995,8 @@
 			"longitude"	"-104.983034"
 			"edges"
 			{
-				0 { "dest"	1 }
-				1 { "dest"	10  }
+				0 { "dest"	1 	"cost"	InwardCost }
+				1 { "dest"	10 	"cost"	InwardCost }
 			}
 		}
 
@@ -991,7 +1009,7 @@
 			"longitude"	"-84.376717"
 			"edges"
 			{
-				0 { "dest"	63 }
+				0 { "dest"	63 	"cost"	InwardCost }
 				1 { "dest"	84 }
 				2 { "dest"	65  }
 				3 { "dest"	78  }
@@ -1010,7 +1028,7 @@
 				0 
 				{ 
 					"dest"	52  
-					"cost"	LocalCostAUSBetweenRegions
+					"cost"	InwardCost
 				}
 				1
 				{ 
@@ -1083,7 +1101,7 @@
 				0 
 				{ 
 					"dest"	52  
-					"cost"	LocalCostAUSBetweenRegions
+					"cost"	InwardCost
 				}
 				1 
 				{ 
@@ -1114,7 +1132,7 @@
 				0 
 				{ 
 					"dest"	52  
-					"cost"	LocalCostAUSBetweenRegions
+					"cost"	InwardCost
 				}
 				1 
 				{ 
@@ -1155,7 +1173,7 @@
 				1 
 				{ 
 					"dest"	54  
-					"cost"	LocalCostAUSBetweenRegions
+						"cost"	InwardCost
 				}
 				2 
 				{ 
@@ -1270,7 +1288,7 @@
 			"longitude"	"82.923088"
 			"edges"
 			{
-				0 { "dest"	39 }
+				0 { "dest"	39 	"cost"	InwardCost }
 			}
 		}
 		// #63 US - Washington, DC
@@ -1282,12 +1300,12 @@
 			"longitude"	"-77.036531"
 			"edges"
 			{
-				0 { "dest"	2 }
+				0 { "dest"	2	"cost"	InwardCost }
 				1 { "dest"	83 }
 				2 { "dest"	80 }
 				3 { "dest"	84 }
 				4 { "dest"	50 }
-				4 { "dest"	105 }
+				5 { "dest"	105 }
 			}
 		}
 		// #64 US - Los Angeles
@@ -1299,7 +1317,7 @@
 			"longitude"	"-118.240786"
 			"edges"
 			{
-				0 { "dest"	10 }
+				0 { "dest"	10	"cost"	InwardCost }
 				1 { "dest"	74 }
 				2 { "dest"	65 }
 				3 { "dest"	11 }
@@ -1320,8 +1338,8 @@
 			"edges"
 			{
 				0 { "dest"	78 }
-				1 { "dest"	50 }
-				2 { "dest"	64 }
+				1 { "dest"	50	"cost"	InwardCost }
+				2 { "dest"	64	"cost"	InwardCost }
 				3 { "dest"	11 }
 			}
 		}
@@ -1356,7 +1374,7 @@
 			"longitude"	"10.749264"
 			"edges"
 			{
-				0 { "dest"	41 }
+				0 { "dest"	41	"cost"	InwardCost }
 			}
 		}
 		// #68 Finland
@@ -1368,7 +1386,7 @@
 			"longitude"	"24.937248"
 			"edges"
 			{
-				0 { "dest"	66 }
+				0 { "dest"	66	"cost"	InwardCost }
 			}
 		}
 		// #69 Ireland
@@ -1380,7 +1398,7 @@
 			"longitude"	"-6.27491"
 			"edges"
 			{
-				0 { "dest"	4 }
+				0 { "dest"	4	"cost"	InwardCost }
 			}
 		}
 		// #70 Cambodia
@@ -1392,7 +1410,7 @@
 			"longitude"	"104.937973"
 			"edges"
 			{
-				0 { "dest"	35 }
+				0 { "dest"	35	"cost"	InwardCost }
 			}
 		}
 		// #71 Vietnam
@@ -1404,7 +1422,7 @@
 			"longitude"	"106.631584"
 			"edges"
 			{
-				0 { "dest"	35 }
+				0 { "dest"	35	"cost"	InwardCost }
 			}
 		}
 		// #72 Malaysia
@@ -1416,7 +1434,7 @@
 			"longitude"	"101.688595"
 			"edges"
 			{
-				0 { "dest"	35 }
+				0 { "dest"	35	"cost"	InwardCost }
 			}
 		}		
 		// #73 Ukraine
@@ -1442,7 +1460,7 @@
 			"longitude"	"-117.117219"
 			"edges"
 			{
-				0 { "dest"	64 }
+				0 { "dest"	64	"cost"	InwardCost }
 				1 { "dest"	23 }
 			}
 		}			
@@ -1455,7 +1473,7 @@
 			"longitude"	"-121.510506"
 			"edges"
 			{
-				0 { "dest"	10 }
+				0 { "dest"	10	"cost"	InwardCost }
 			}
 		}			
 		// #76 Minneapolis
@@ -1467,7 +1485,7 @@
 			"longitude"	"-93.267274"
 			"edges"
 			{
-				0 { "dest"	1 }
+				0 { "dest"	1	"cost"	InwardCost }
 			}
 		}			
 		// #77 US - St. Lous
@@ -1479,7 +1497,7 @@
 			"longitude"	"-90.181704"
 			"edges"
 			{
-				0 { "dest"	1 }
+				0 { "dest"	1	"cost"	InwardCost }
 			}
 		}			
 		// #78 Houston
@@ -1491,8 +1509,8 @@
 			"longitude"	"-95.367036"
 			"edges"
 			{
-				0 { "dest"	65 }
-				1 { "dest"	50 }
+				0 { "dest"	65	"cost"	InwardCost }
+				1 { "dest"	50	"cost"	InwardCost }
 				2 
 				{ 
 					"dest"	23
@@ -1509,7 +1527,7 @@
 			"longitude"	"-83.04883"
 			"edges"
 			{
-				0 { "dest"	1 }
+				0 { "dest"	1	"cost"	InwardCost }
 			}
 		}			
 		// #80 Pittsburgh
@@ -1521,8 +1539,8 @@
 			"longitude"	"-80.005617"
 			"edges"
 			{
-				1 { "dest"	63 }
-				2 { "dest"	1 }
+				1 { "dest"	63	"cost"	InwardCost }
+				2 { "dest"	1	"cost"	InwardCost }
 			}
 		}			
 		// #81 Montreal
@@ -1551,7 +1569,7 @@
 			"longitude"	"-71.039314"
 			"edges"
 			{
-				0 { "dest"	2 }
+				0 { "dest"	2	"cost"	InwardCost }
 			}
 		}			
 		// #83 Philly
@@ -1563,8 +1581,8 @@
 			"longitude"	"-75.1579"
 			"edges"
 			{
-				0 { "dest"	2 }
-				1 { "dest"	63 }
+				0 { "dest"	2	"cost"	InwardCost }
+				1 { "dest"	63	"cost"	InwardCost }
 			}
 		}			
 		// #84 Charlotte, VA
@@ -1576,8 +1594,8 @@
 			"longitude"	"-80.848818"
 			"edges"
 			{
-				0 { "dest"	63 }
-				1 { "dest"	50 }
+				0 { "dest"	63	"cost"	InwardCost }
+				1 { "dest"	50	"cost"	InwardCost }
 			}
 		}			
 		// #85 Manchester
@@ -1589,7 +1607,7 @@
 			"longitude"	"-2.247562"
 			"edges"
 			{
-				0 { "dest"	4 }
+				0 { "dest"	4	"cost"	InwardCost }
 			}
 		}			
 		// #86 Brussels
@@ -1601,8 +1619,8 @@
 			"longitude"	"4.348869"
 			"edges"
 			{
-				0 { "dest"	15 }
-				1 { "dest"	14 }
+				0 { "dest"	15	"cost"	InwardCost }
+				1 { "dest"	14	"cost"	InwardCost }
 			}
 		}			
 		// #87 Dusseldorf
@@ -1614,10 +1632,10 @@
 			"longitude"	"6.754875"
 			"edges"
 			{
-				0 { "dest"	89 }
-				1 { "dest"	5 }
-				2 { "dest"	15 }
-				3 { "dest"	90 }
+				0 { "dest"	89	"cost"	InwardCost }
+				1 { "dest"	5	"cost"	InwardCost }
+				2 { "dest"	15	"cost"	InwardCost }
+				3 { "dest"	90	"cost"	InwardCost }
 			}
 		}			
 		// #88 Zurich
@@ -1629,9 +1647,9 @@
 			"longitude"	"8.546505"
 			"edges"
 			{
-				0 { "dest"	5 }
+				0 { "dest"	5	"cost"	InwardCost }
 				1 { "dest"	37 }
-				2 { "dest"	14 }
+				2 { "dest"	14	"cost"	InwardCost }
 			}
 		}			
 		// #89 Hamburg
@@ -1643,7 +1661,7 @@
 			"longitude"	"9.991207"
 			"edges"
 			{
-				0 { "dest"	87 }
+				0 { "dest"	87	"cost"	InwardCost }
 				1 { "dest"	90 }
 				2 { "dest"	41 }
 			}
@@ -1661,7 +1679,7 @@
 				1 { "dest"	91 }
 				2 { "dest"	42 }
 				3 { "dest"	92 }
-				4 { "dest"	5 }
+				4 { "dest"	5	"cost"	InwardCost }
 				5 
 				{ 
 					"dest"	38 
@@ -1678,8 +1696,8 @@
 			"longitude"	"11.577873"
 			"edges"
 			{
-				0 { "dest"	90 }
-				1 { "dest"	5 }
+				0 { "dest"	90	"cost"	InwardCost }
+				1 { "dest"	5	"cost"	InwardCost }
 				2 { "dest"	42 }
 				3 { "dest"	92}
 			}
@@ -1693,8 +1711,8 @@
 			"longitude"	"16.388168"
 			"edges"
 			{
-				0 { "dest"	90 }
-				1 { "dest"	91 }
+				0 { "dest"	90	"cost"	InwardCost }
+				1 { "dest"	91	"cost"	InwardCost }
 				2 { "dest"	93 }
 			}
 		}			
@@ -1707,8 +1725,8 @@
 			"longitude"	"19.015617"
 			"edges"
 			{
-				0 { "dest"	42 }
-				1 { "dest"	92 }
+				0 { "dest"	42	"cost"	InwardCost }
+				1 { "dest"	92	"cost"	InwardCost }
 				2 { "dest"	16 }
 				3 
 				{ 
@@ -1729,10 +1747,10 @@
 				0 
 				{ 
 					"dest"	31 
-					"cost"	LocalCostCanadaToUS
+					"cost"	1
 				}
 				1 { "dest"	133 }
-				1 { "dest"	134 }
+				2 { "dest"	134 }
 			}
 		}
 		// #95 Columbus
@@ -1744,7 +1762,7 @@
 			"longitude"	"-83.018618"
 			"edges"
 			{
-				0 { "dest"	1 }
+				0 { "dest"	1	"cost"	InwardCost }
 			}
 		}
 		// #96 Marseille
@@ -1757,9 +1775,9 @@
 			"edges"
 			{
 				0 { "dest"	40 }
-				1 { "dest"	14 }
+				1 { "dest"	14	"cost"	InwardCost }
 				2 { "dest"	37 }
-				4 
+				3 
 				{ 
 					"dest"	123 
 					"cost"	LocalCostOneWayCellEdge
@@ -1887,6 +1905,7 @@
 				0 
 				{ 
 					"dest"	63
+						"cost"	InwardCost
 				}
 			}
 		}	
@@ -1900,6 +1919,7 @@
 				0 
 				{ 
 					"dest"	31
+						"cost"	InwardCost
 				}
 			}
 		}	
@@ -2057,7 +2077,7 @@
 			"edges"
 			{
 				0 { "dest"	116 }
-				0 { "dest"	118 }
+				1 { "dest"	118 }
 			}
 		}
 		// #118 Peru
@@ -2070,7 +2090,7 @@
 			"edges"
 			{
 				0 { "dest"	117 }
-				0 { "dest"	23 }
+				1 { "dest"	23 }
 			}
 		}
 		// #119 Venezuela
@@ -2138,12 +2158,12 @@
 					"dest"	125
 					"cost"	LocalCostOneWayCellEdge
 				}
-				3 
+				4 
 				{ 
 					"dest"	130
 					"cost"	LocalCostOneWayCellEdge
 				}
-				3 
+				5 
 				{ 
 					"dest"	26
 					"cost"	LocalCostOneWayCellEdge
@@ -2170,7 +2190,7 @@
 			"longitude"	"31.221428"
 			"edges"
 			{
-				0 { "dest"	123 }
+				0 { "dest"	123	"cost"	InwardCost }
 				1 { "dest"	126 }
 			}
 		}
@@ -2184,7 +2204,7 @@
 			{
 				0 { "dest"	127 }
 				1 { "dest"	125 }
-				2 { "dest"	30 }
+				2 { "dest"	30	"cost"	InwardCost }
 			}
 		}
 		127
@@ -2196,7 +2216,7 @@
 			"edges"
 			{
 				0 { "dest"	36 }
-				1 { "dest"	126 }
+				1 { "dest"	126	"cost"	InwardCost }
 			}
 		}
 		128
@@ -2218,8 +2238,8 @@
 			"longitude"	"6.135006"
 			"edges"
 			{
-				0 { "dest"	15 }
-				1 { "dest"	5 }
+				0 { "dest"	15	"cost"	InwardCost }
+				1 { "dest"	5	"cost"	InwardCost }
 			}
 		}
 		130
@@ -2230,7 +2250,7 @@
 			"longitude"	"3.420868"
 			"edges"
 			{
-				0 { "dest"	24 }
+				0 { "dest"	24	"cost"	InwardCost }
 			}
 		}	
 		131
@@ -2241,7 +2261,7 @@
 			"longitude"	"36.835442"
 			"edges"
 			{
-				0 { "dest"	123 }
+				0 { "dest"	123	"cost"	InwardCost }
 			}
 		}			
 		132
@@ -2252,8 +2272,8 @@
 			"longitude"	"-7.584"
 			"edges"
 			{
-				0 { "dest"	24 }
-				1 { "dest"	123 }
+				0 { "dest"	24	"cost"	InwardCost }
+				1 { "dest"	123	"cost"	InwardCost }
 			}
 		}		
 		133
@@ -2264,8 +2284,8 @@
 			"longitude"	"-113.489628"
 			"edges"
 			{
-				0 { "dest"	94 }
-				1 { "dest"	134 }
+				0 { "dest"	94	"cost"	InwardCost }
+				1 { "dest"	134	"cost"	InwardCost }
 				2 { "dest"	135 }
 			}
 		}
@@ -2277,7 +2297,7 @@
 			"longitude"	"-114.055424"
 			"edges"
 			{
-				0 { "dest"	94 }
+				0 { "dest"	94	"cost"	InwardCost }
 				1 { "dest"	133 }
 				2 { "dest"	135 }
 			}
@@ -2292,7 +2312,7 @@
 			{
 				0 { "dest"	133 }
 				1 { "dest"	134 }
-				2 { "dest"	20 }
+				2 { "dest"	20	"cost"	InwardCost }
 			}
 		}	
 		136
@@ -2303,7 +2323,7 @@
 			"longitude"	"-75.696659"
 			"edges"
 			{
-				0 { "dest"	20 }
+				0 { "dest"	20	"cost"	InwardCost }
 				1 { "dest"	81 }
 			}
 		}									
@@ -2315,7 +2335,7 @@
 			"longitude"	"121.474113"
 			"edges"
 			{
-				0 { "dest"	47 }
+				0 { "dest"	47	"cost"	InwardCost }
 			}
 		}
 		138
@@ -2326,7 +2346,7 @@
 			"longitude"	"121.474113"
 			"edges"
 			{
-				0 { "dest"	47 }
+				0 { "dest"	47	"cost"	InwardCost }
 			}
 		}
 		139
@@ -2359,11 +2379,11 @@
 			"longitude"	"80.240707"
 			"edges"
 			{
-				0 { "dest"	36 }
-				1 { "dest"	142 }
-				2 { "dest"	143 }
-				3 { "dest"	144 }
-				4 { "dest"	145 }
+				0 { "dest"	36	"cost"	InwardCost }
+				1 { "dest"	142	"cost"	InwardCost }
+				2 { "dest"	143	"cost"	InwardCost }
+				3 { "dest"	144	"cost"	InwardCost }
+				4 { "dest"	145	"cost"	InwardCost }
 				5 
 				{ 
 					"dest"	35  
@@ -2379,8 +2399,8 @@
 			"longitude"	"77.186508"
 			"edges"
 			{
-				0 { "dest"	36 }
-				1 { "dest"	141 }
+				0 { "dest"	36	"cost"	InwardCost }
+				1 { "dest"	141	"cost"	InwardCost }
 			}		
 		}
 		143
@@ -2391,8 +2411,8 @@
 			"longitude"	"77.625961"
 			"edges"
 			{
-				0 { "dest"	36 }
-				1 { "dest"	141 }
+				0 { "dest"	36	"cost"	InwardCost }
+				1 { "dest"	141	"cost"	InwardCost }
 			}		
 		}
 		144
@@ -2403,8 +2423,8 @@
 			"longitude"	"78.460922"
 			"edges"
 			{
-				0 { "dest"	36 }
-				1 { "dest"	141 }
+				0 { "dest"	36	"cost"	InwardCost }
+				1 { "dest"	141	"cost"	InwardCost }
 			}		
 		}		
 		145
@@ -2415,10 +2435,32 @@
 			"longitude"	"88.37059"
 			"edges"
 			{
-				0 { "dest"	36 }
-				1 { "dest"	141 }
+				0 { "dest"	36	"cost"	InwardCost }
+				1 { "dest"	141	"cost"	InwardCost }
 			}		
-		}									
+		}		
+		146
+		{
+			"name" "US - Honolulu"
+			"region"	"usa"
+			"latitude"	"21.307033"
+			"longitude"	"-157.858567"
+			"edges"
+			{
+				0 { "dest"	10	"cost"	InwardCost }
+			}		
+		}			
+		147
+		{
+			"name" "US - Anchorage"
+			"region"	"usa"
+			"latitude"	"61.219020"
+			"longitude"	"-149.901452"
+			"edges"
+			{
+				0 { "dest"	31	"cost"	InwardCost }
+			}		
+		}										
 	}
 	"countries"
 	{
@@ -3157,7 +3199,7 @@
 		"AL"	50
 
 		// ALASKA
-		"AK"	31
+		"AK"	147
 
 		// ARIZONA
 		"AZ"	11
@@ -3187,7 +3229,7 @@
 		"GA"	50
 
 		// HAWAII
-		"HI"	10
+		"HI"	146
 
 		// IDAHO
 		"ID"	31

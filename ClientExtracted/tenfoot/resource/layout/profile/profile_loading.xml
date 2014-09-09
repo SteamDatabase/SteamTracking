@@ -14,7 +14,7 @@
 			</Panel>
 			<Panel id="Loading">
 				<Label id="LoadingStatus" text="#Profile_Loading" />
-				<Panel class="Throbber" />
+				<LoadingThrobber  />
 			</Panel>
 		</Panel>
 	</ProfilePanel>

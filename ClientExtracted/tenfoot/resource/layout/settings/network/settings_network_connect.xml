@@ -10,7 +10,7 @@
 		<Label class="WizardChildTitle" text="#Settings_Network" />
 
 		<Panel class="CenteredContainer">
-			<Label id="ConnectToNetworkThrobber" class="NetworkThrobber NetworkThrobberHide" />
+			<LoadingThrobber id="ConnectToNetworkThrobber" class="NetworkThrobber NetworkThrobberHide" />
 			<Label id="ConnectionStatus" class="LongDesc" />
 		</Panel>
 

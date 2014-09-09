@@ -10,7 +10,7 @@
 		</Panel>
 		<Panel id="Loading">
 			<Label id="LoadingStatus" text="#Store_AppPurchaseOptions_LoadingError" />
-			<Panel class="Throbber" />
+			<LoadingThrobber class="Throbber" />
 		</Panel>
 		<Panel id="Loaded">
 			<Panel id="TitleRow">

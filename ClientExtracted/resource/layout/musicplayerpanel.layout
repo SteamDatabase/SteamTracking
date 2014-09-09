@@ -100,6 +100,10 @@
 		RepeatButtonStyle:hover	{	bgcolor=none render_bg={} image=graphics/music_repeat_hover	inset="0" padding="0" }
 		RepeatButtonStyle:selected	{	bgcolor=none render_bg={} image=graphics/music_repeat_enabled }
 		RepeatButtonStyle:selected:hover	{	bgcolor=none render_bg={} image=graphics/music_repeat_enabled_hover }
+		RepeatOnceButtonStyle	{	bgcolor=none render_bg={} image=graphics/music_repeat_default	inset="0" padding="0" }
+		RepeatOnceButtonStyle:hover	{	bgcolor=none render_bg={} image=graphics/music_repeat_hover	inset="0" padding="0" }
+		RepeatOnceButtonStyle:selected	{	bgcolor=none render_bg={} image=graphics/music_repeat1_enabled }
+		RepeatOnceButtonStyle:selected:hover	{	bgcolor=none render_bg={} image=graphics/music_repeat1_enabled_hover }
 		ShuffleButtonStyle	{	bgcolor=none render_bg={} image=graphics/music_shuffle_default	}
 		ShuffleButtonStyle:hover	{	bgcolor=none render_bg={} image=graphics/music_shuffle_hover	}
 		ShuffleButtonStyle:selected	{	bgcolor=none render_bg={} image=graphics/music_shuffle_enabled }

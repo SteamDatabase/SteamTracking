@@ -342,34 +342,35 @@ BackgroundVideoPanel.IngameOverlayBackground #BackgroundMovie
 	opacity: 0.95;
 }
 
+BackgroundVideoPanel #BackgroundThrobber
+{
+	align: center center;
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+}
+
 BackgroundVideoPanel.SteamOS.GamesRunning #BackgroundThrobber
 {
-	width: 120px;
-	height: 120px;
-	align: center center;
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
-
 	opacity: 1.0;
 	animation-name: gamesrunning-throbber-anim;
 	animation-duration: 5.0s;
 	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
-	
+		
 }
 
 BackgroundVideoPanel.SteamOS.GamesRunning.HideThrobber #BackgroundThrobber
 {
-	background-image: url( "file://{images}/overlay/overlay_bg_wash.png" );
+	opacity: 0.0;
 }
 
 BackgroundVideoPanel.SteamOS.Windows.GamesRunning #BackgroundThrobber,
 BackgroundVideoPanel.SteamOS.OSX.GamesRunning #BackgroundThrobber
 {
-	// we might run -steamos on other actual platforms, don't show the throbber since it uses lots of cpu time
-	background-image: url( "file://{images}/overlay/overlay_bg_wash.png" );
+	// we might run -steamos on other actual platforms, don't show the throbber since doesn't make sense as focus 
+	// restores interactivity
 	opacity: 0.0;
 }
 

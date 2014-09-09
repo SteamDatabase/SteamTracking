@@ -7,7 +7,7 @@
 	<StoreStackable class="Stackable">
 		<Panel id="Background" />
 		<Panel id="Loading">
-			<Panel class="Throbber" />
+			<LoadingThrobber class="Throbber" />
 			<Label id="LoadingStatus" />
 		</Panel>
 		<Panel id="Loaded">

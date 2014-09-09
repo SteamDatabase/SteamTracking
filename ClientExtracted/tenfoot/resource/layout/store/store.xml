@@ -375,7 +375,7 @@
 			<Carousel id="Categories" hittest="false" tabindex="1" selectionpos="0,1" focus="center" wrap="false" x-offset="70px" focus-x-offset="0px" focus-z-offset="-90px, -190px" selectionposboundary="vertical" />
 
 			<Label id="LoadingFrontPageError" text="#Store_Unavailable" />
-			<Panel class="Throbber" />
+			<LoadingThrobber class="Throbber" />
 
 			<!-- End of Front Page -->
 		</Panel>

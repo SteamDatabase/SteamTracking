@@ -61,18 +61,16 @@
 	}
 }
 
+.Throbber
+{
+	horizontal-align: center;
+	margin-top: 350px;
+	opacity: 0.0;
+}
+
 .Loading .Throbber,
 .FrontPageLoading:descendantfocus .Throbber
 {
-	width: 120px;
-	height: 120px;
-	horizontal-align: center;
-	margin-top: 350px;
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
-
 	opacity: 1.0;
 
 	animation-name: throbber-appear-delay;
@@ -344,19 +342,6 @@ StorePanel:descendantfocus #FeaturedCapsules
 	visibility: collapse;
 }
 
-#StoreBackgroundWrapper
-{
-	transform: translateY( -80px );
-	
-	transition-property: transform;
-	transition-duration: 0.23s;
-}
-
-.FilterVisible #StoreBackgroundWrapper
-{
-	transform: translateY( 0px );
-}
-
 .FilterVisible #FilteredStoreWrapper:descendantfocus #StoreFilter
 {
 	vertical-align: top;
@@ -373,7 +358,7 @@ StorePanel:descendantfocus #FeaturedCapsules
 #FilteredStoreWrapper:descendantfocus #FeaturedCapsules
 {
 	animation-name: none;
-	transform: translate3d(-440px, 120px, 0px);
+	transform: translate3d(-440px, 80px, 0px);
 	desaturation: 0;
 	wash-color: #61e2ff00;
 	opacity: 1.0;
@@ -389,7 +374,6 @@ StorePanel:descendantfocus #FeaturedCapsules
 {
 	transform: translate3d(-440px, 80px, -20px);
 }
-
 
 #FrontPage:descendantfocus #FeaturedCapsules:descendantfocus:hover
 {

@@ -1478,7 +1478,7 @@ LoadingThrobber .Bar
 	margin-right: 6px;
 	width: 12px;
 	height: 90px;
-	background-color: white;
+	background-color: ui_primary_color;
 
 	animation-name: loading-throbber-bar;
 	animation-duration: 1s;
@@ -1506,3 +1506,20 @@ LoadingThrobber.Small .Bar
 	height: 45px;
 	margin-right: 3px;
 }
+
+LoadingThrobber.Large .Bar
+{
+	width: 24px;
+	height: 180px;
+	margin-right: 12px;
+}
+
+LoadingThrobber .Bar3,
+LoadingThrobber.Small .Bar3,
+LoadingThrobber.Large .Bar3
+{
+	margin-right: 0px;
+}
+
+
+

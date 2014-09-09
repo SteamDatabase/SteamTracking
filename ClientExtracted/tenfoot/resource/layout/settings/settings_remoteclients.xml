@@ -22,7 +22,8 @@
 				<Panel class="SettingsRemoteClientSection" selectionposboundary="vertical">
 					<Panel id="SettingsRemoteClientList">
 						<!-- code will add buttons for each device here  -->
-					</Panel>	
+					</Panel>
+					<LoadingThrobber id="RemoteClientThrobber" />	
 				</Panel>
 			</Panel>
 			
