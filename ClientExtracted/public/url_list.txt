@@ -227,12 +227,25 @@ DownloadsSupportInfo
 	method		"external"
 }
 
-// store pages not moved in yet
 StoreFrontPage
 {
 	url			"%store%"
 	method		"internal"
 	filter		"store"
+}
+
+StoreCurators
+{
+	url			"%store%/curators/"
+	method		"internal"
+	filter	"store"
+}
+
+StoreExplore
+{
+	url			"%store%/explore/"
+	method		"internal"
+	filter	"store"
 }
 
 StoreChildPage
