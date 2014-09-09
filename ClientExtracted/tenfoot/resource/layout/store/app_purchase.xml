@@ -39,7 +39,7 @@
 							</Button>
 							<Button id="PurchaseWishlistBtn">
 								<Label id="WishListText" text="#Store_AppPurchaseSection_AddToWishlist" />
-								<Panel class="WishListThrobber" />
+								<LoadingThrobber class="WishListThrobber Small" />
 							</Button>
 						</Panel>
 						<Label id="RecurringSubscriptionDescription" text="" />

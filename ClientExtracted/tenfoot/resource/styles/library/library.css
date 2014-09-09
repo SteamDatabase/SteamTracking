@@ -3263,18 +3263,18 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 .PlayAction #Working
 {
 	opacity: 0.0;
-	margin-left: 1px;
 	margin-top: 1px;
-	width: 108px;
-	height: 108px;
+
+	pre-transform-scale2d: 0.85;
+
+	vertical-align: center;
+	horizontal-align: center;
 	
 	transition-property: opacity;	
 	transition-duration: shortmedduration;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
 }
 
 .PlayAction .ButtonBody:hover .ButtonImage
@@ -4571,16 +4571,12 @@ KeyboardShortcut Image
 {
 	opacity: 1.0;
 
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
 }
 
 .Validating #Working
 {
 	opacity: 1.0;
 
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
 }
 
 .PlayActionModal .ButtonBody, .PlayActionModal .ButtonBody:hover

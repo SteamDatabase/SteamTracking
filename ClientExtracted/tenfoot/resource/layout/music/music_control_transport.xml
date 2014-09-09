@@ -16,7 +16,7 @@
 					oncontextmenu="MusicControlMore();"
 					onfocus="ControlButtonGotFocus();"
 					onactivate="MusicToggleRepeat();">
-				<Image src="file://{images}/music/icon_queue_repeat.png" />
+				<Image id="QueueRepeatImage" src="file://{images}/music/icon_queue_repeat.png" />
 			</Button>
 			<Button id="QueueShuffle" class="ControlBarButton" tabindex="auto" selectionpos="auto" 
 					onmoveup="ControlButtonMoveUp();"	

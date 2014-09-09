@@ -16,7 +16,7 @@
 			<Carousel id="Tabs" tabindex="1" selectionpos="0,1" focus="edge" focus-offset="105px" wrap="false" selectionposboundary="vertical" onmoveup="BrowseByCategoryTabMoveUp();"/>
 			<Panel id="TabContents" tabindex="2" selectionpos="0,2" >
 				<Label id="LoadingError" text="#Store_BrowseByCategory_LoadingError" />
-				<Panel class="Throbber" />
+				<LoadingThrobber class="Throbber" />
 				<Carousel id="Items" tabindex="0" selectionpos="0,0" focus="left" 
 						focus-offset="90px" 
 						x-offset="100px" y-offset="0px" z-offset="0px"

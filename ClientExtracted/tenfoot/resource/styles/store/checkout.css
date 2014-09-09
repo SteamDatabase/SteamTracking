@@ -398,14 +398,18 @@ CheckoutController.Visible
 	opacity: 0.6;
 }
 
+.CartThrobber
+{
+	horizontal-align: center;
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
 #Status.Waiting .CartThrobber
 {
-	width: 120px;
-	height: 120px;
-	horizontal-align: center;
-	background-image: url( "file://{images}/browser/reticle.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
+	opacity: 1.0;
 }
 
 #StatusText

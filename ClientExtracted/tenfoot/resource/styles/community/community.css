@@ -189,23 +189,11 @@ CommunityPanel #Loading
 	font-size: 32px;
 }
 
-CommunityPanel .Throbber
+CommunityPanel LoadingThrobber
 {
-	width: 120px;
-	height: 120px;
 	horizontal-align: center;
 	margin-top: 350px;
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
-
-	animation-name: background-visible;
-	animation-duration: mediumduration;
-	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: 1;
-	animation-direction: normal;
 
 	opacity: 1.0;
+	pre-transform-scale2d: 0.85;
 }

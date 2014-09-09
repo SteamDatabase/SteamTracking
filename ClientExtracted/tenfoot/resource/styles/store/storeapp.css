@@ -180,24 +180,6 @@ StoreApp.Loaded #Loading, StorePackage.Loaded #Loading
 	transition-duration: 0.0s;
 }
 
-@keyframes 'throbber-appear-delay'
-{
-	from
-	{
-		opacity: 0.0;
-	}
-
-	50%
-	{
-		opacity: 0.0;
-	}
-
-	to
-	{
-		opacity: 1.0;
-	}
-}
-
 LoadingThrobber
 {
 	opacity: 0.0;
@@ -220,25 +202,6 @@ LoadingThrobber .Bar
 	width: 14px;
 	margin-right: 8px;
 }
-
-.Loading .Throbber
-{
-	width: 120px;
-	height: 120px;
-	horizontal-align: center;
-	margin-top: 350px;
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
-
-	opacity: 1.0;
-
-	animation-name: throbber-appear-delay;
-	animation-duration: 1.0s;
-	animation-timing-function: ease-in-out;
-}
-
 
 //
 // Loaded Section
@@ -954,15 +917,23 @@ StorePackagePurchaseSection:descendantfocus #PriceOverview
 	width: fill-parent-flow( 1.0 );
 }
 
-.AddingToWishlist .WishListThrobber
+.WishListThrobber
 {
 	width: 32px;
 	height: 32px;
+	margin-top: 0px;
 	horizontal-align: center;
-	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
-	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.AddingToWishlist .WishListThrobber
+{
+	opacity: 1.0;
 }
 
 

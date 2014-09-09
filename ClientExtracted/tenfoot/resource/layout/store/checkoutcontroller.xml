@@ -8,7 +8,7 @@
 		<Panel id="Steps" hittest="false" />
 		<Panel id="Status">
 			<Panel class="CenteringPanel">
-				<Panel class="CartThrobber" />
+				<LoadingThrobber class="CartThrobber" />
 				<Label id="StatusText" />
 			</Panel>
 		</Panel>

@@ -100,10 +100,6 @@
 	wash-color: bgcolorwash;
 
 	visibility: visible;
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
-	background-position: center;
-	background-repeat: no-repeat;
 }
 
 

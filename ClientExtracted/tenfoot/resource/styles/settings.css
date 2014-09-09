@@ -1054,16 +1054,16 @@ NetworkSettings_AvailableSSID:hover .NetworkName
 	width: 30px;
 	height: 30px;
 	horizontal-align: right;
-	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
-	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
 }
 
 .NetworkThrobberHide,
 .NetworkCustomIPSettings_disabled
 {
 	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
 }
 
 #NetworkDeviceStatus
@@ -2439,7 +2439,6 @@ color: black;
 
 .SettingsRemoteClientSection
 {
-	flow-children: down;
 	width: 1025px;
 	height: 250px;
 	background-color: simplebutton;
@@ -2483,15 +2482,29 @@ color: black;
 	background-color: ui_common_control;
 }
 
-SettingsPanel_RemoteClients.Loading #SettingsRemoteClientList
+#RemoteClientThrobber
 {
 	width: 120px;
 	height: 120px;
 	align: center center;
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+}
+
+SettingsPanel_RemoteClients.Loading #RemoteClientThrobber
+{
+	opacity: 1.0;
+	
+	animation-name: loading-throbber-appear;
+	animation-duration: 0.23s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
 }
 
 
@@ -2711,10 +2724,7 @@ SettingsPanel_Display.Underscan
 	width: 34px;
 	height: 34px;
 	horizontal-align: center;
-	opacity-mask: url( "file://{images}/browser/reticle_mask_80_80.png" );
-	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
+
 	margin-left: 100px;
 	margin-top: 2px;
 }

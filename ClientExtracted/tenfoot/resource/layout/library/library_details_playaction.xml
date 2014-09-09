@@ -40,7 +40,7 @@
 							<Panel class="ButtonEdge">
 								<Panel id="ButtonGlow" class="ButtonGlow" />
 								<Image id="ButtonImage" class="ButtonImage" src="file://{images}/library/library_play_button.tga" />
-								<Panel id="Working" />
+								<LoadingThrobber id="Working" />
 							</Panel>
 						</Panel>
 					</Panel>

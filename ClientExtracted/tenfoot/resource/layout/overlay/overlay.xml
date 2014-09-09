@@ -40,6 +40,6 @@
 			</Panel>
 			<Panel id="MinimalPanels" />
 		</Panel>
-		<Panel id="KillSpinner" />
+		<LoadingThrobber id="KillSpinner" class="Large"/>
 	</OverlayBasePanel>
 </root>

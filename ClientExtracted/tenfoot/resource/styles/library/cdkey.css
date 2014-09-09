@@ -85,15 +85,15 @@
 {
 	width: 80px;
 	height: 80px;
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
 }
 
 .Working #Throbber
 {
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
-	
-	opacity-mask: url( "file://{images}/browser/reticle_mask.png" );
-	background-image: url( "file://{images}/browser/reticle.webm" );
 	opacity: 1.0;
 }
 
