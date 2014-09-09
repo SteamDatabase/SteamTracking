@@ -592,7 +592,7 @@ function HideGameHover( elem, event, divHover )
 
 function ShowGameHover( elem, divHover, targetContent, params )
 {
-	if ( !$( targetContent ) || !elem.bWantsHover || !elem.bReadyForHover )
+	if ( !$( targetContent ) || !elem.bWantsHover || !elem.bReadyForHover || !$J.contains(document, elem) )
 		return;
 
 	$( targetContent ).siblings().invoke('hide');
@@ -1206,7 +1206,12 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVers
 	elemSuggestionCtn = elemSuggestionCtn ? $(elemSuggestionCtn) : $( 'searchterm_options');
 	elemSuggestions = elemSuggestions ? $(elemSuggestions) : $('search_suggestion_contents');
 
-	new Form.Element.DelayedObserver( elemTerm, 0.4, function( elem, value ) { SearchTimeout(elem, value, elemSuggestionCtn, elemSuggestions ); } );
+	$J(elemTerm).parents('div.searchbox').click( function( event ) {
+		if ( event.target && event.target.tagName != 'INPUT' )
+			$J(elemTerm).focus();
+	});
+
+	new Form.Element.DelayedObserver( elemTerm, 0.25, function( elem, value ) { SearchTimeout(elem, value, elemSuggestionCtn, elemSuggestions ); } );
 	elemTerm.observe( 'keydown', SearchSuggestOnKeyDown.bindAsEventListener( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
 	elemTerm.observe( 'click', SearchSuggestClearDefaultSearchText.bind( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
 	elemTerm.observe( 'focus', SearchSuggestClearDefaultSearchText.bind( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
@@ -1582,6 +1587,26 @@ function AddFreeLicense( subid, strDisplayName )
 			ShowAlertDialog( strDisplayName, 'There was a problem adding this product to your account.  Please try again later.' );
 	}).always( function () {
 		delete window.g_bAddFreeLicenseInFlight;
+	});
+}
+
+function ChangeLanguage( strTargetLanguage, bStayOnPage )
+{
+	var Modal = ShowBlockingWaitDialog( 'Change language', '' );
+	$J.post( 'https://store.steampowered.com/account/setlanguage/', {language: strTargetLanguage, sessionid: g_sessionID })
+	.done( function() {
+		if ( bStayOnPage )
+			Modal.Dismiss();
+		else
+		{
+			if ( window.location.href.match( /[?&]l=/ ) )
+				window.location = window.location.href.replace( /([?&])l=[^&]*&?/, '$1' );
+			else
+				window.location.reload();
+		}
+	}).fail( function() {
+		Modal.Dismiss();
+		ShowAlertDialog( 'Change language', 'There was a problem saving your changes.  Please try again later.' );
 	});
 }
 

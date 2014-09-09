@@ -87,6 +87,7 @@ body.v6 div#store_header, body.v6 div#store_header_dlc {
 }
 
 body.v6 #footer {
+	font-family: Arial, Helvetica, sans-serif;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -260,6 +261,11 @@ body.v6 .page_content {
 
 .discovery_queue_content_ctn {
 	overflow: hidden;
+	margin-top: 26px;
+}
+body.v6.explore .page_header_ctn {
+	padding-bottom: 30px;
+	margin-bottom: -20px;
 }
 
 .breadcrumbs {
@@ -380,25 +386,25 @@ a.store_header_btn_content:hover {
 }
 
 .store_header_btn_gray {
-	background-color: rgba( 103, 193, 245, 0.2 );
+	background-color: rgba( 189, 152, 79, 0.6 );
     border-radius: 1px;
 }
 
 .store_header_btn_gray a {
-	color: #67c1f5;
+	color: #ffcd6b;
 }
 
 .store_header_btn_gray a:hover {
-    color: #ffffff;
+    color: #111111;
     border-radius: 1px;
-    background: #67c1f5; /* Old browsers */
-    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
-    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: #ffcd6b; /* Old browsers */
+    background: -moz-linear-gradient(-60deg,  #ffcd6b 0%, #bd984f 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffcd6b), color-stop(100%,#bd984f)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  #ffcd6b 0%,#bd984f 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  #ffcd6b 0%,#bd984f 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  #ffcd6b 0%,#bd984f 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #ffcd6b 0%,#bd984f 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcd6b', endColorstr='#bd984f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
 
@@ -411,6 +417,7 @@ a.store_header_btn_content:hover {
 }
 
 .store_header_btn_green a:hover {
+	color: #111111;
 	background-color: rgba( 164, 208, 7, 0.50 );
 }
 
@@ -443,6 +450,7 @@ a#store_search_link img {
 
 	position: relative;
 	z-index: 150;
+	cursor: text;
 }
 .searchbox:hover {
     background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/store_header_search_hover.png' );
@@ -729,7 +737,6 @@ a#store_search_link img {
 .slider_ctn {
 	position: relative;
 	height: 18px;
-    width: 616px;
 }
 .slider_ctn.spotlight {
     width: 308px;
@@ -739,6 +746,7 @@ a#store_search_link img {
 	position: absolute;
 	left: 39px;
 	right: 39px;
+	top: 0;
 	bottom: 0;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
@@ -753,6 +761,8 @@ a#store_search_link img {
 }
 
 .slider .handle {
+	position: absolute;
+	top: 0;
     background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
 	height: 18px;
@@ -768,6 +778,9 @@ a#store_search_link img {
 	background-color: rgba( 0, 0, 0, 0.4 );
 	border-radius: 3px;
 	cursor: pointer;
+}
+.highlight_ctn .slider_ctn .slider_left, .highlight_ctn .slider_ctn .slider_right, .highlight_ctn .slider .handle {
+	background-color: rgba( 35, 60, 81, 0.4 );
 }
 
 .slider_ctn .slider_left:hover, .slider_ctn .slider_right:hover, .slider .handle:hover {
@@ -849,6 +862,16 @@ a#store_search_link img {
 	display: inline-block;
 	vertical-align: bottom;
 	text-align: right;
+
+}
+.home_tabs_content .discount_block .discount_prices, .tab_content_ctn .discount_block .discount_prices  {
+	background: transparent;
+}
+.home_tabs_content .tab_item_discount.no_discount {
+	margin-top: 24px;
+}
+.home_tabs_content .tab_item_discount {
+	margin-top: 17px;
 }
 
 .discount_original_price {
@@ -950,7 +973,6 @@ a#store_search_link img {
 	position: absolute;
 	bottom: 0;
 	width: 274px;
-	min-height: 94px;
 	margin: 1px;
 
 	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/spotlight_background.jpg?v=1' ) bottom center no-repeat;
@@ -959,10 +981,10 @@ a#store_search_link img {
 	background: #15212e;
 }
 .spotlight_body {
-	margin-bottom: 10px;
+
 }
 .spotlight_body.spotlight_price {
-	margin-bottom: 0px;
+	margin-top: 10px;
 }
 
 .spotlight_block .spotlight_content>h2 {
@@ -1045,6 +1067,10 @@ a#store_search_link img {
 	z-index: 3;
 }
 
+.sub .tab_item_cap {
+	width: 184px;
+}
+
 .large .tab_item_cap {
     width: 231px;
     height: 87px;
@@ -1089,11 +1115,19 @@ a#store_search_link img {
 
 	padding-top: 16px;
 }
+.home_tabs_content .tab_item_content {
+
+	padding-top: 7px;
+}
 
 .tab_item_name {
 	color: #c7d5e0;
 	font-size: 15px;
 	line-height: 18px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: block;
+	overflow: hidden;
 }
 
 .tab_item_details {
@@ -1444,22 +1478,9 @@ div.game_hover {
 }
 
 
-
 /*
  * FRIENDS TODO: LEGACY
  */
-
-.friend_status_offline, .friend_status_offline div, .friend_status_offline a {
-	color: #898989;
-}
-
-.friend_status_online, .friend_status_online div, .friend_status_online a  {
-	color: #6FBDFF;
-}
-
-.friend_status_in-game, .friend_status_in-game div, .friend_status_in-game a  {
-	color: #B1FB50;
-}
 
 .friend_block_avatar {
 	width: 32px;
@@ -1642,6 +1663,11 @@ body.v6 .page_content_ctn.dark:last-child {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 10;	/* keep it on top of ds_flag (z-index 5 ) */
+}
+
+.dq_item .ds_flag {
+	box-shadow: 0 0 4px 0 #000000;
 }
 
 .dq_item_price {
@@ -1671,7 +1697,7 @@ body.v6 .page_content_ctn.dark:last-child {
 	width: 100%;
 	left: 0px;
 	overflow: hidden;
-	z-index: 1;
+	z-index: -1;
 	min-width: 972px;
 }
 
@@ -1681,3 +1707,89 @@ body.v6 .page_content_ctn.dark:last-child {
 	background-repeat: no-repeat;
 	height: 1024px;
 	min-width: 972px;
+}
+
+/* TEMPORARY */
+
+#v6takeover .flag {
+	margin: 0 0 -15px 0;
+	z-index: 10;
+	position: relative;
+	height: 36px;
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+#v6takeover.closed .flag {
+	margin: 0 0 -15px -17px;
+}
+#v6takeover.closed {
+	border-bottom: 1px solid rgba( 0, 0, 0, 0 );
+}
+
+#v6takeover .avatar {
+	border: 5px solid #67c1f5;
+	width: 92px;
+	height: 92px;
+	box-shadow: 0 0 5px #67c1f5;
+	z-index: 5;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 0 2px;
+}
+
+#v6takeover .avatar > img {
+	width: 92px;
+	height: 92px;
+}
+
+#v6takeover .title {
+
+	font-family: "Motiva Sans Bold", "Motiva Sans", Arial, Helvetica, sans-serif;
+	font-size: 44px;
+	color: #fff;
+
+	text-transform: uppercase;
+	line-height: 46px;
+	display: inline-block;
+	width: 770px;
+	margin: 15px 0 0 9px;
+	vertical-align: top;
+}
+
+#v6takeover .title > div {
+	color: #66c0f4;
+}
+
+#v6takeover .desc {
+
+	font-size: 16px;
+	margin: 10px 0 10px 0;
+}
+
+#v6takeover .close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 25;
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/close_btn.png' );
+	background-repeat: no-repeat;
+	height: 18px;
+	width: 18px;
+}
+#v6takeover.closed .close {
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/expand_btn.png?v=1' );
+}
+
+#v6takeover.closed .avatar, #v6takeover.closed .title, #v6takeover.closed .desc, #v6takeover.closed .btn_medium {
+	display: none;
+}
+
+#v6takeover {
+	padding: 0 15px 15px 15px;
+	border-bottom: 1px solid #305d7d;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 5%, rgba(0,0,0,0.2) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(0,0,0,0)), color-stop(95%,rgba(0,0,0,0.2)));background: -webkit-linear-gradient(top, rgba(0,0,0,0) 5%,rgba(0,0,0,0.2) 95%);background: -o-linear-gradient(top, rgba(0,0,0,0) 5%,rgba(0,0,0,0.2) 95%);background: -ms-linear-gradient(top, rgba(0,0,0,0) 5%,rgba(0,0,0,0.2) 95%);background: linear-gradient(to bottom, rgba(0,0,0,0) 5%,rgba(0,0,0,0.2) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0,0,0,0)', endColorstr='rgba(0,0,0,0.2)',GradientType=0 );	margin-bottom: 15px;
+	position: relative;
+}
+
+/* END TEMPORARY */

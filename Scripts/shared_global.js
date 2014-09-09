@@ -428,9 +428,15 @@ CModal.prototype.AdjustSizing = function( duration )
 		this.m_fnOnResize( nMaxWidth - 40, nMaxHeight );
 	}
 
+	if ( !duration )
+	{
+		// set sizes right away so we can calculate a good left and top
+		this.m_$Content.css( 'max-width',  nMaxWidth + 'px' );
+		this.m_$StandardContent.css( 'max-height',  nMaxHeight + 'px' );
+	}
+
 	var nContentWidth = this.m_$Content.width();
 	var nContentHeight = this.m_$Content.height();
-
 	var nLeft = Math.floor( ( nViewportWidth - nContentWidth ) / 2 );
 	var nTop = Math.floor( ( nViewportHeight - nContentHeight ) / 2 );
 
@@ -441,9 +447,6 @@ CModal.prototype.AdjustSizing = function( duration )
 	}
 	else
 	{
-		this.m_$Content.css( 'max-width',  nMaxWidth + 'px' );
-		this.m_$StandardContent.css( 'max-height',  nMaxHeight + 'px' );
-
 		this.m_$Content.css( 'left', nLeft );
 		this.m_$Content.css( 'top', nTop );
 	}

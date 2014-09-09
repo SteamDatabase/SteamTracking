@@ -326,3 +326,18 @@ div.autocomplete ul li {
 .search_pagination_right {
     float: right;
 }
+
+#TagSuggest {
+	background-color: #2a3f5a;
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0px #45556c;
+	width: 200px;
+	padding: 5px;
+	margin: 5px;
+}
+
+#TagSuggest.blur {
+	color:#62696e;
+}

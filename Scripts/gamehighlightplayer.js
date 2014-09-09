@@ -292,6 +292,7 @@ var HighlightPlayer = Class.create( {
 		if ( this.BIsMovie( elem ) )
 		{
 			elem.show();
+			this.bScreenshotsOnly = false;
 		}
 		else
 		{
@@ -387,6 +388,24 @@ var HighlightPlayer = Class.create( {
 		if ( !nextItem )
 		{
 			nextItem = this.m_elemPlayerArea.down( className );
+		}
+		if ( nextItem )
+		{
+			this.HighlightItem( nextItem );
+		}
+	},
+
+	TransitionBack: function()
+	{
+		var className = '.highlight_player_item';
+		if ( this.bScreenshotsOnly )
+			className = '.highlight_screenshot';
+
+		var nextItem = this.m_activeItem.previous( className );
+		if ( !nextItem )
+		{
+			var rgItems = $J(this.m_elemPlayerArea).find( className );
+			nextItem = rgItems[rgItems.length - 1];
 		}
 		if ( nextItem )
 		{

@@ -857,14 +857,18 @@ function ShowEnlargedImagePreview( imageURL )
 }
 
 var bRetrievedFriendsPicker = false;
+var gFriendsPicker = null;
 function ShowContributorDialog( publishedfileid )
 {
-	if ( !bRetrievedFriendsPicker )
-	{
-		bRetrievedFriendsPicker = true;
-		new Ajax.Updater( "friendsPicker", "https://steamcommunity.com/sharedfiles/contributorpicker/" + publishedfileid );
-	}
-	showModal( 'friendsPickerModal', true );
+	var waitDialog = ShowBlockingWaitDialog( 'Manage Contributors', 'Loading Friends List' );
+
+	$J.get( "https://steamcommunity.com/sharedfiles/contributorpicker/" + publishedfileid,
+		{},
+		function( data, textStatus, jqXHR ) {
+			waitDialog.Dismiss();
+			gFriendsPicker = ShowAlertDialog( 'Manage Contributors', '<div class="friendsPicker" id="friendsPicker">' + data + '</div>', 'Cancel' );
+		}
+	);
 }
 
 function AddContributor( steamid, profileName, avatarLink )
@@ -876,7 +880,7 @@ function AddContributor( steamid, profileName, avatarLink )
 			return function(transport)
 			{
 				// Grey out modal or show spinner?
-				hideModal( 'friendsPickerModal' );
+				gFriendsPicker.Dismiss();
 				location.reload();
 			}
 		}(publishedfileid))
@@ -899,7 +903,7 @@ function RemoveContributor( steamid, profileName, avatarLink )
 				var json = transport.responseText.evalJSON();
 
 				// Grey out modal or show spinner?
-				hideModal( 'friendsPickerModal' );
+				gFriendsPicker.Dismiss();
 				location.reload();
 			}
 		}(publishedfileid))

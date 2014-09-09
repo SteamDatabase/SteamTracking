@@ -2,49 +2,79 @@
 
 	/* Avatars */
 
-.playerAvatar {
-	padding: 3px;
-	border-radius: 3px;
-	background-color: #545454;
-}
-.playerAvatar.offline {
-
-	background: -moz-linear-gradient(top, #706c6b 5%, #4e4d4d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#706c6b), color-stop(95%,#4e4d4d));background: -webkit-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -o-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: -ms-linear-gradient(top, #706c6b 5%,#4e4d4d 95%);background: linear-gradient(to bottom, #706c6b 5%,#4e4d4d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#706c6b', endColorstr='#4e4d4d',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
-	filter: none;
-}
-.playerAvatar.ignored {
-}
-	/* #8dccff to 6da1d0 */
-.playerAvatar.online {
-	background-color: #7bafd6;
-
-	background: -moz-linear-gradient(top, #7bafd6 5%, #506d92 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7bafd6), color-stop(95%,#506d92));background: -webkit-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: -o-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: -ms-linear-gradient(top, #7bafd6 5%,#506d92 95%);background: linear-gradient(to bottom, #7bafd6 5%,#506d92 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bafd6', endColorstr='#506d92',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
-	filter: none;
-}
-.playerAvatar.online img {
-	border-color: #4d5761;
-}
-	/* gradient from #b3fc55 to #8cc82c */
-.playerAvatar.in-game {
-	background-color: #9bc861;
-
-	background: -moz-linear-gradient(top, #9bc861 5%, #789e4c 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#9bc861), color-stop(95%,#789e4c));background: -webkit-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: -o-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: -ms-linear-gradient(top, #9bc861 5%,#789e4c 95%);background: linear-gradient(to bottom, #9bc861 5%,#789e4c 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc861', endColorstr='#789e4c',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
-	filter: none;
-
-}
-.playerAvatar.in-game img {
-	border-color: #525a4f;
-}
-.playerAvatar {
+.playerAvatar,
+.friend_block_holder .friend_block_avatar,
+.friend_activity .friend_block_avatar {
 	width: 34px;
 	height: 34px;
 	position: relative;
+	border-radius: 0;
+	padding: 1px;
+
 }
-.playerAvatar img {
+
+/* Offline State */
+.playerAvatar.offline,
+.friend_block_holder.friend_status_offline .friend_block_avatar,
+.friend_activity.friend_status_offline .friend_block_avatar,
+.appHubIconHolder.offline,
+.avatar_block_status_offline,
+.appHubIconHolder.ignored {
+
+	background: -moz-linear-gradient(top, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(106,106,106,1)), color-stop(95%,rgba(85,85,85,1)));background: -webkit-linear-gradient(top, rgba(106,106,106,1) 5%,rgba(85,85,85,1) 95%);background: -o-linear-gradient(top, rgba(106,106,106,1) 5%,rgba(85,85,85,1) 95%);background: -ms-linear-gradient(top, rgba(106,106,106,1) 5%,rgba(85,85,85,1) 95%);background: linear-gradient(to bottom, rgba(106,106,106,1) 5%,rgba(85,85,85,1) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(106,106,106,1)', endColorstr='rgba(85,85,85,1)',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	filter: none;
+}
+.playerAvatar.offline img,
+.friend_status_offline .friend_block_avatar img,
+.appHubIconHolder.offline img,
+.avatar_block_status_offline img {
+	background: -moz-linear-gradient(top, #515151 5%, #474747 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#515151), color-stop(95%,#474747));background: -webkit-linear-gradient(top, #515151 5%,#474747 95%);background: -o-linear-gradient(top, #515151 5%,#474747 95%);background: -ms-linear-gradient(top, #515151 5%,#474747 95%);background: linear-gradient(to bottom, #515151 5%,#474747 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#474747',GradientType=0 );}
+
+/* Online State */
+.playerAvatar.online,
+.friend_block_holder.friend_status_online .friend_block_avatar,
+.friend_activity.friend_status_online .friend_block_avatar,
+.appHubIconHolder.online,
+.avatar_block_status_online {
+	background-color: #57cbde;
+
+	background: -moz-linear-gradient(top, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(83,164,196,1)), color-stop(95%,rgba(69,128,151,1)));background: -webkit-linear-gradient(top, rgba(83,164,196,1) 5%,rgba(69,128,151,1) 95%);background: -o-linear-gradient(top, rgba(83,164,196,1) 5%,rgba(69,128,151,1) 95%);background: -ms-linear-gradient(top, rgba(83,164,196,1) 5%,rgba(69,128,151,1) 95%);background: linear-gradient(to bottom, rgba(83,164,196,1) 5%,rgba(69,128,151,1) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(83,164,196,1)', endColorstr='rgba(69,128,151,1)',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	filter: none;
+}
+.playerAvatar.online img,
+.friend_status_online .friend_block_avatar img,
+.appHubIconHolder.online img,
+.avatar_block_status_online img {
+	background: -moz-linear-gradient(top, #41778f 5%, #3d697b 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#41778f), color-stop(95%,#3d697b));background: -webkit-linear-gradient(top, #41778f 5%,#3d697b 95%);background: -o-linear-gradient(top, #41778f 5%,#3d697b 95%);background: -ms-linear-gradient(top, #41778f 5%,#3d697b 95%);background: linear-gradient(to bottom, #41778f 5%,#3d697b 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41778f', endColorstr='#3d697b',GradientType=0 );}
+
+/* In-Game State */
+.playerAvatar.in-game,
+.friend_block_holder.friend_status_in-game .friend_block_avatar,
+.friend_activity.friend_status_in-game .friend_block_avatar,
+.appHubIconHolder.in-game,
+.avatar_block_status_in-game {
+	background-color: #90ba3c;
+
+	background: -moz-linear-gradient(top, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(143,185,59,1)), color-stop(95%,rgba(110,140,49,1)));background: -webkit-linear-gradient(top, rgba(143,185,59,1) 5%,rgba(110,140,49,1) 95%);background: -o-linear-gradient(top, rgba(143,185,59,1) 5%,rgba(110,140,49,1) 95%);background: -ms-linear-gradient(top, rgba(143,185,59,1) 5%,rgba(110,140,49,1) 95%);background: linear-gradient(to bottom, rgba(143,185,59,1) 5%,rgba(110,140,49,1) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(143,185,59,1)', endColorstr='rgba(110,140,49,1)',GradientType=0 );	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	filter: none;
+}
+.playerAvatar.in-game img,
+.friend_status_in-game .friend_block_avatar img,
+.appHubIconHolder.in-game img,
+.avatar_block_status_in-game img {
+	background: -moz-linear-gradient(top, #66812e 5%, #59702b 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66812e), color-stop(95%,#59702b));background: -webkit-linear-gradient(top, #66812e 5%,#59702b 95%);background: -o-linear-gradient(top, #66812e 5%,#59702b 95%);background: -ms-linear-gradient(top, #66812e 5%,#59702b 95%);background: linear-gradient(to bottom, #66812e 5%,#59702b 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66812e', endColorstr='#59702b',GradientType=0 );}
+
+.playerAvatar.ignored {
+}
+
+.playerAvatar img,
+.friend_block_holder .friend_block_avatar img,
+.friend_activity .friend_block_avatar img {
 	width: 32px;
 	height: 32px;
-	border: 1px solid #545454;
-	border-radius: 3px;
+	border-radius: 0px;
+	padding: 1px;
+	border: none;
 }
 
 .playerAvatar.medium {
@@ -88,16 +118,19 @@
 	cursor: pointer;
 }
 
-.persona, a.persona, .persona a {
+.persona, a.persona, .persona a,
+.friend_status_offline, .friend_status_offline div, .friend_status_offline a {
 	color:#898989;
 }
 
-.persona.online, a.persona.online, .persona.online a {
-	color:#86b5d9;
+.persona.online, a.persona.online, .persona.online a,
+.friend_status_online, .friend_status_online div, .friend_status_online a {
+	color:#57cbde;
 }
 
-.persona.in-game, a.persona.in-game, .persona.in-game a {
-	color:#8bc53f;
+.persona.in-game, a.persona.in-game, .persona.in-game a,
+.friend_status_in-game, .friend_status_in-game div, .friend_status_in-game a {
+	color:#90ba3c;
 }
 
 

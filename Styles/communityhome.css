@@ -1,4 +1,12 @@
 
+body
+{
+    /*	background: #262627 url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png') top repeat-x;
+        background-position: 0 105px; */
+    background:  url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center top repeat-y #000000;
+    color: #636363;
+}
+
 .community_home_header
 {
 	position: relative;
@@ -6,6 +14,7 @@
 	margin: 0px auto;
 	padding-top: 20px;
 	text-align: left;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 }
 
 .community_home_header_bg
@@ -15,16 +24,28 @@
 	top: 205px;
 	height: 300px;
 	width: 948px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/home/bg_home.png');
-	background-repeat: no-repeat;
+	/*background-image:url('https://steamcommunity-a.akamaihd.net/public/images/home/bg_home.png');
+	background-repeat: no-repeat; */
 }
 
 .community_home_title
 {
 	font-weight: normal;
-	font-size: 24px;
-	color: #529cde;
+	font-size: 26px;
+	color: #FFFFFF;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	text-align: left;
+    padding-top: 20px;
+}
+
+.community_home_subtitle
+{
+    font-weight: normal;
+    font-size: 17px;
+    color: #9099a1;
+    font-family: Arial, Sans-Serif;
+    text-align: left;
+    padding-top: 5px;
 }
 
 .community_home_stats
@@ -71,6 +92,7 @@
 	margin: 0px auto;
 	padding-top: 5px;
 	padding-bottom: 10px;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 }
 
 .community_home_tabs_shadow
@@ -78,7 +100,7 @@
 	position: absolute;
 	height: 18px;
 	width: 948px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/home/divider_shadow.png');
+	/*background-image:url('https://steamcommunity-a.akamaihd.net/public/images/home/divider_shadow.png'); */
 	background-repeat: no-repeat;
 }
 
@@ -89,7 +111,7 @@
 
 .community_home_header .appHubShortcut, .community_home_header .appHubShortcut a, .community_home_header .appHubShortcut a:visited
 {
-	color: #8c8b8a;
+	color: #767676;
 }
 
 .community_home_header .appHubShortcut a:hover
@@ -102,29 +124,29 @@
 {
 	line-height: 15px;
 	max-width: 260px;
+    font-size: 13px;
 }
 
 .new_items_num
 {
 	font-size: 12px;
-	color: #529cde;
+    line-height: 15px;
+	color: #2f89bc;
 }
 
 .new_items_text
 {
-	color: #355c93;
+	color: #2f89bc;
 }
 
 .community_home_app_shortcuts
 {
-	margin-top: 20px;
+	margin-top: 15px;
 	padding: 10px;
 	width: 608px;
-	height: 186px;
-	background: #1b1b1b;
-	border-radius: 4px;
-	border: 1px solid #1f1f20;
-	box-shadow: 1px 1px 0 0 #39393a;
+	height: 200px;
+	background: rgba(0, 0, 0, 0.2);
+	border: 1px solid transparent;
 	float: left;
 }
 
@@ -166,15 +188,13 @@
 
 .community_home_search_box
 {
-	margin-top: 20px;
+	margin-top: 15px;
 	padding: 10px;
 	width: 286px;
-	height: 186px;
+	height: 200px;
 	margin-left: 10px;
-	background: #1b1b1b;
-	border-radius: 4px;
-	border: 1px solid #1f1f20;
-	box-shadow: 1px 1px 0 0 #39393a;
+    background: rgba(0, 0, 0, 0.2);
+	border: 1px solid transparent;
 	float: left;
 }
 
@@ -184,7 +204,7 @@
 	height: 1px;
 	border-top: 1px solid #000000;
 	background-color: #333333;
-	margin: 15px 0px;
+	margin: 35px 0px;
 }
 
 .community_home_search_title
@@ -197,10 +217,14 @@
 .community_home_search_apps
 {
 	position: relative;
-	height: 27px;
-	background-color: #2f3e55;
+	height: 20px;
 	margin-top: 5px;
-	border: 1px solid #6283b2;
+	background-color: #2a3f5a;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0 #45556c;
+    color: #fff;
+    padding: 5px;
 }
 
 input.community_home_search_app_input
@@ -214,7 +238,7 @@ input.community_home_search_app_input
 	left: 6px;
 	width: 250px;
 	font-style: italic;
-	background-color: #2f3e55;
+	background-color: #2a3f5a;
 }
 
 .community_home_search_apps_image
@@ -232,11 +256,15 @@ input.community_home_search_app_input
 
 .community_home_search_players
 {
-	position: relative;
-	height: 27px;
-	background-color: #3a3a3a;
-	margin-top: 5px;
-	border: 1px solid #939393;
+    position: relative;
+    height: 20px;
+    margin-top: 5px;
+    background-color: #2a3f5a;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0 #45556c;
+    color: #fff;
+    padding: 5px;
 }
 
 input.community_home_search_players_input
@@ -249,13 +277,14 @@ input.community_home_search_players_input
 	top: 6px;
 	left: 6px;
 	width: 250px;
-	background-color: #3a3a3a;
+	background-color: #2a3f5a;
 	font-style: italic;
 }
 
 .community_home_search_players_image
 {
 	position: absolute;
+    background-color: #2a3f5a;
 	top: 5px;
 	right: 4px;
 	width: 23px;
@@ -268,9 +297,11 @@ input.community_home_search_players_input
 .community_home_sort_options
 {
 	width: 948px;
+    height: 15px;
 	margin: 0px auto;
 	text-align: left;
 	padding-bottom: 20px;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 }
 
 .community_home_sort_buttons
