@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.9a98e8ee647026cc50f0008db5b584195e34458b.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.26209aab08f7221b03a2be674e7e34f7e86ef934.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -1904,7 +1904,7 @@
 				"name": "Mining Light",
 				"defindex": 48,
 				"item_class": "tf_wearable",
-				"item_type_name": "Hat",
+				"item_type_name": "Cosmetic Item",
 				"item_name": "Mining Light",
 				"item_description": "For Engineers with bright ideas.",
 				"proper_name": false,
@@ -13060,7 +13060,7 @@
 				"name": "Le Party Phantom",
 				"defindex": 337,
 				"item_class": "tf_wearable",
-				"item_type_name": "Hat",
+				"item_type_name": "Mask",
 				"item_name": "Le Party Phantom",
 				"proper_name": false,
 				"item_slot": "misc",
@@ -23154,17 +23154,18 @@
 				"item_name": "Apparition's Aspect",
 				"proper_name": false,
 				"item_slot": "misc",
-				"model_player": "models/player/items/pyro/ghost_aspect.mdl",
+				"model_player": "models/workshop/player/items/pyro/ghost_aspect/ghost_aspect.mdl",
 				"item_quality": 6,
-				"image_inventory": "backpack/player/items/pyro/ghost_aspect",
+				"image_inventory": "backpack/workshop/player/items/pyro/ghost_aspect/ghost_aspect",
 				"min_ilevel": 13,
 				"max_ilevel": 13,
-				"image_url": "http://media.steampowered.com/apps/440/icons/ghost_aspect.74a63072ba6e3f115ff9dd278e877d8e1d7f6e75.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/ghost_aspect_large.a2ff4b52854b86d443f99ff232b993579956db84.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/ghost_aspect.1a9e6971aa1c798b8115ba2a808bd86166197c3a.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/ghost_aspect_large.fa51230ac86b0a80aa7d3de98525bca1d0ca1e7c.png",
 				"drop_type": "none",
 				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
+					"paintable": true,
 					"nameable": true,
 					"can_craft_if_purchased": true,
 					"can_gift_wrap": true,
@@ -23810,7 +23811,7 @@
 				"name": "Cold War Luchador",
 				"defindex": 585,
 				"item_class": "tf_wearable",
-				"item_type_name": "Hat",
+				"item_type_name": "Mask",
 				"item_name": "Cold War Luchador",
 				"item_description": "The most terrifying Soviet/Latino partnership since the Cuban Missile Crisis.",
 				"proper_name": true,
@@ -31852,7 +31853,7 @@
 				"name": "The Doublecross-Comm",
 				"defindex": 766,
 				"item_class": "tf_wearable",
-				"item_type_name": "Hat",
+				"item_type_name": "Facial Hair",
 				"item_name": "Doublecross-Comm",
 				"item_description": "This battlefield awareness bandanna is stitched with nanofibers that can download battlefields from Wikipedia straight to your face, so you will never not be aware of them.",
 				"proper_name": true,
@@ -39971,7 +39972,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Backpack",
 				"item_name": "Coffin Kit",
-				"item_description": "Unlike other survival packs, this handy last-aid kit rightly assumes that the moment you're in a survival situation, you are going to die. Just pull the ripcord to inflate the minature coffin into a standard corpse-sized one that you can die right into.",
+				"item_description": "Unlike other survival packs, this handy last-aid kit rightly assumes that the moment you're in a survival situation, you are going to die. Just pull the ripcord to inflate the miniature coffin into a standard corpse-sized one that you can die right into.",
 				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models/player/items/pyro/hwn_pyro_coffinpack.mdl",
@@ -91629,6 +91630,3625 @@
 				
 			},
 			{
+				"name": "ETF2L 6v6 Premier Division Gold Medal Season 18",
+				"defindex": 8502,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Gold Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_1st_place.58d4a6cdb02bb9a3c9ae2bf94aea228e0ff1ec79.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_1st_place_large.987036954879c5d6036b03723c2ab6cdecee15d4.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Silver Medal Season 18",
+				"defindex": 8503,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Silver Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_2nd_place.91994e557ded6ad57702c1afdbcb0fd58fbcaec0.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_2nd_place_large.bdd7acad9429f51feecc92da9a457132c681b4a3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Bronze Medal Season 18",
+				"defindex": 8504,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Bronze Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_3rd_place.3e43fc0502d2fff4f6dba6b246423169addae0a1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_3rd_place_large.d09eacf1f44858a66c8a6050c99563042d312c0f.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Group Winner Season 18",
+				"defindex": 8505,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Group Winner",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Group Winner Season 18",
+				"defindex": 8506,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Group Winner",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Group Winner Season 18",
+				"defindex": 8507,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Group Winner",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Group Winner Season 18",
+				"defindex": 8508,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Group Winner",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Group Winner Season 18",
+				"defindex": 8509,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Group Winner",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Group Winner Season 18",
+				"defindex": 8510,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Group Winner",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Participation Medal Season 18",
+				"defindex": 8511,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Participation Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Participation Medal Season 18",
+				"defindex": 8512,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Participation Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Participation Medal Season 18",
+				"defindex": 8513,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Participation Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Participation Medal Season 18",
+				"defindex": 8514,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Participation Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Participation Medal Season 18",
+				"defindex": 8515,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Participation Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Participation Medal Season 18",
+				"defindex": 8516,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Participation Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Participation Medal Season 18",
+				"defindex": 8517,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Participation Medal",
+				"item_description": "Season 18",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Gold Medal Season 6",
+				"defindex": 8518,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Gold Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_1st_place.09105e058ffc418cd60559c65c0d2699c26e6c84.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_1st_place_large.c3da4d5031ee42bd434a23e9f2f39f7de066fdfb.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Silver Medal Season 6",
+				"defindex": 8519,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Silver Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_2nd_place.eb16808b28ee56b3de35708d74796d4ce9489587.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_2nd_place_large.3e7d649499a238c314886b564871f801995a4a46.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Bronze Medal Season 6",
+				"defindex": 8520,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Bronze Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_3rd_place.9ccc7a35f497130c9f11ed476bcabce5be8aebec.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_3rd_place_large.32cd1e68f86326e962ab7630e247665a0ed2b47d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 1 Group Winner Season 6",
+				"defindex": 8521,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 1 Group Winner",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 2 Group Winner Season 6",
+				"defindex": 8522,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 2 Group Winner",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 3 Group Winner Season 6",
+				"defindex": 8523,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 3 Group Winner",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 4 Group Winner Season 6",
+				"defindex": 8524,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 4 Group Winner",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 5 Group Winner Season 6",
+				"defindex": 8525,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 5 Group Winner",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 6 Group Winner Season 6",
+				"defindex": 8526,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 6 Group Winner",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Participation Medal Season 6",
+				"defindex": 8527,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Participation Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 1 Participation Medal Season 6",
+				"defindex": 8528,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 1 Participation Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 2 Participation Medal Season 6",
+				"defindex": 8529,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 2 Participation Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 3 Participation Medal Season 6",
+				"defindex": 8530,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 3 Participation Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 4 Participation Medal Season 6",
+				"defindex": 8531,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 4 Participation Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 5 Participation Medal Season 6",
+				"defindex": 8532,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 5 Participation Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 6 Participation Medal Season 6",
+				"defindex": 8533,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 6 Participation Medal",
+				"item_description": "Season 6",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Gold Medal Season 19",
+				"defindex": 8534,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Gold Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_1st_place.58d4a6cdb02bb9a3c9ae2bf94aea228e0ff1ec79.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_1st_place_large.987036954879c5d6036b03723c2ab6cdecee15d4.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Silver Medal Season 19",
+				"defindex": 8535,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Silver Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_2nd_place.91994e557ded6ad57702c1afdbcb0fd58fbcaec0.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_2nd_place_large.bdd7acad9429f51feecc92da9a457132c681b4a3.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Bronze Medal Season 19",
+				"defindex": 8536,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Bronze Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_3rd_place.3e43fc0502d2fff4f6dba6b246423169addae0a1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_3rd_place_large.d09eacf1f44858a66c8a6050c99563042d312c0f.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Group Winner Season 19",
+				"defindex": 8537,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Group Winner",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Group Winner Season 19",
+				"defindex": 8538,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Group Winner",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Group Winner Season 19",
+				"defindex": 8539,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Group Winner",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Group Winner Season 19",
+				"defindex": 8540,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Group Winner",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Group Winner Season 19",
+				"defindex": 8541,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Group Winner",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Group Winner Season 19",
+				"defindex": 8542,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Group Winner",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner.cf51b8e76152a408e78b85519f4fea831b203a9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_group_winner_large.c436e1216e1d5ec4855f1f33ab15f889b10f9587.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Premier Division Participation Medal Season 19",
+				"defindex": 8543,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Premier Division Participation Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 1 Participation Medal Season 19",
+				"defindex": 8544,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 1 Participation Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 2 Participation Medal Season 19",
+				"defindex": 8545,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 2 Participation Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 3 Participation Medal Season 19",
+				"defindex": 8546,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 3 Participation Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 4 Participation Medal Season 19",
+				"defindex": 8547,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 4 Participation Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 5 Participation Medal Season 19",
+				"defindex": 8548,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 5 Participation Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L 6v6 Division 6 Participation Medal Season 19",
+				"defindex": 8549,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L 6v6 Division 6 Participation Medal",
+				"item_description": "Season 19",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant.3afbf89204201e5058f3424c3774990f83905ac6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_6v6_participant_large.a4abf07235a75c108ab5e828bbed251dff5f3780.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Gold Medal Season 7",
+				"defindex": 8550,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Gold Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_1st_place.09105e058ffc418cd60559c65c0d2699c26e6c84.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_1st_place_large.c3da4d5031ee42bd434a23e9f2f39f7de066fdfb.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Silver Medal Season 7",
+				"defindex": 8551,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Silver Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_2nd_place.eb16808b28ee56b3de35708d74796d4ce9489587.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_2nd_place_large.3e7d649499a238c314886b564871f801995a4a46.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Bronze Medal Season 7",
+				"defindex": 8552,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Bronze Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_3rd_place.9ccc7a35f497130c9f11ed476bcabce5be8aebec.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_3rd_place_large.32cd1e68f86326e962ab7630e247665a0ed2b47d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 1 Group Winner Season 7",
+				"defindex": 8553,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 1 Group Winner",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 2 Group Winner Season 7",
+				"defindex": 8554,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 2 Group Winner",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 3 Group Winner Season 7",
+				"defindex": 8555,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 3 Group Winner",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 4 Group Winner Season 7",
+				"defindex": 8556,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 4 Group Winner",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 5 Group Winner Season 7",
+				"defindex": 8557,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 5 Group Winner",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 6 Group Winner Season 7",
+				"defindex": 8558,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 6 Group Winner",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner.61bde6a1e82ae0fa2a87f3348df43f492666f5f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_group_winner_large.60495c2d64d9376e82bf2cf50e8e59b77b85b0ee.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Premier Division Participation Medal Season 7",
+				"defindex": 8559,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Premier Division Participation Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 1 Participation Medal Season 7",
+				"defindex": 8560,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 1 Participation Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 2 Participation Medal Season 7",
+				"defindex": 8561,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 2 Participation Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 3 Participation Medal Season 7",
+				"defindex": 8562,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 3 Participation Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 4 Participation Medal Season 7",
+				"defindex": 8563,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 4 Participation Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 5 Participation Medal Season 7",
+				"defindex": 8564,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 5 Participation Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Division 6 Participation Medal Season 7",
+				"defindex": 8565,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Division 6 Participation Medal",
+				"item_description": "Season 7",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant.f46dbc0f6bdcc73da1311f17265d2342677881b7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_2014_highlander_participant_large.422f44d2042a3c1992e2e24d1321c6b02e9eb324.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RETF2 EE22 6v6 Winner Medal Season 1",
+				"defindex": 8566,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "RETF2 EE22 6v6 Winner",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/euskal_encounter_xxii_winner/euskal_encounter_xxii_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/euskal_encounter_xxii_winner/euskal_encounter_xxii_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_winner.2734d20827fee3e29d1378b6902260c0e08da6fb.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_winner_large.2c830e0331d6d4dd94bedb262b1ffe9882d82e11.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RETF2 EE22 6v6 Participant Medal Season 1",
+				"defindex": 8567,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "RETF2 EE22 6v6 Participant",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation.14ebb44ebd7e368720a57c35223f3dc46061d90c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation_large.3c0ea42e296cb3bb294405b094fd866a73e94a94.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RETF2 EE22 4v4 Winner Medal Season 1",
+				"defindex": 8568,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "RETF2 EE22 4v4 Winner",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/euskal_encounter_xxii_winner/euskal_encounter_xxii_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/euskal_encounter_xxii_winner/euskal_encounter_xxii_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_winner.2734d20827fee3e29d1378b6902260c0e08da6fb.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_winner_large.2c830e0331d6d4dd94bedb262b1ffe9882d82e11.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RETF2 EE22 4v4 Participant Medal Season 1",
+				"defindex": 8569,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "RETF2 EE22 4v4 Participant",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation.14ebb44ebd7e368720a57c35223f3dc46061d90c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation_large.3c0ea42e296cb3bb294405b094fd866a73e94a94.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RETF2 EE22 Dodgeball Winner Medal Season 1",
+				"defindex": 8570,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "RETF2 EE22 Dodgeball Winner",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/euskal_encounter_xxii_winner/euskal_encounter_xxii_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/euskal_encounter_xxii_winner/euskal_encounter_xxii_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_winner.2734d20827fee3e29d1378b6902260c0e08da6fb.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_winner_large.2c830e0331d6d4dd94bedb262b1ffe9882d82e11.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RETF2 EE22 Dodgeball Participant Medal Season 1",
+				"defindex": 8571,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "RETF2 EE22 Dodgeball Participant",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation.14ebb44ebd7e368720a57c35223f3dc46061d90c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation_large.3c0ea42e296cb3bb294405b094fd866a73e94a94.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RETF2 EE22 Pan Tournament Winner Medal Season 1",
+				"defindex": 8572,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "RETF2 EE22 Pan Tournament Winner",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/euskal_encounter_xxii_winner/euskal_encounter_xxii_winner_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/euskal_encounter_xxii_winner/euskal_encounter_xxii_winner",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_winner.2734d20827fee3e29d1378b6902260c0e08da6fb.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_winner_large.2c830e0331d6d4dd94bedb262b1ffe9882d82e11.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RETF2 EE22 Pan Tournament Participant Medal Season 1",
+				"defindex": 8573,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "RETF2 EE22 Pan Tournament Participant",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation.14ebb44ebd7e368720a57c35223f3dc46061d90c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation_large.3c0ea42e296cb3bb294405b094fd866a73e94a94.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "RETF2 EE22 Contributor Medal Season 1",
+				"defindex": 8574,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "RETF2 EE22 Contributor",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/euskal_encounter_xxii_participation/euskal_encounter_xxii_participation",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation.14ebb44ebd7e368720a57c35223f3dc46061d90c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/euskal_encounter_xxii_participation_large.3c0ea42e296cb3bb294405b094fd866a73e94a94.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Open 1st Place Medal Season 1",
+				"defindex": 8575,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Open 1st Place",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_highlander_open_1st_place/etf2l_highlander_open_1st_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_highlander_open_1st_place/etf2l_highlander_open_1st_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_highlander_open_1st_place.5a2ab38fcd60436f8d5a071f46a31ced5fcb43a2.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_highlander_open_1st_place_large.7e20d7fda97b1ac2f9f68b7bb263dd24cf69d45a.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Open 2nd Place Medal Season 1",
+				"defindex": 8576,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Open 2nd Place",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_highlander_open_2nd_place/etf2l_highlander_open_2nd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_highlander_open_2nd_place/etf2l_highlander_open_2nd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_highlander_open_2nd_place.16d975d2b0630d833db87780ff861f17c8ba59c8.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_highlander_open_2nd_place_large.d734181be65c73fe32dce0ed886ce1875b394cfe.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Open 3rd Place Medal Season 1",
+				"defindex": 8577,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Open 3rd Place",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_highlander_open_3rd_place/etf2l_highlander_open_3rd_place_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_highlander_open_3rd_place/etf2l_highlander_open_3rd_place",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_highlander_open_3rd_place.5b4ffff50f0ca3e46e2e21654e21950107fba0f3.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_highlander_open_3rd_place_large.dc1681d114ef8e67fca1b6a8ae1c1f21e2e98336.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "ETF2L Highlander Open Participant Medal Season 1",
+				"defindex": 8578,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "ETF2L Highlander Open Participant",
+				"item_description": "Season 1",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/etf2l_highlander_open_participant/etf2l_highlander_open_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/etf2l_highlander_open_participant/etf2l_highlander_open_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/etf2l_highlander_open_participant.24806ec12686d1b7496a2da042539f93d067328d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/etf2l_highlander_open_participant_large.f0e44659203919cc1414a77d0989102fa45c121d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Halloween Spell: Paint 1",
 				"defindex": 8900,
 				"item_class": "tool",
@@ -119892,7 +123512,7 @@
 				"name": "recipe component defined item 1",
 				"defindex": 2000,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -119901,7 +123521,7 @@
 				"name": "recipe component defined item 2",
 				"defindex": 2001,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -119910,7 +123530,7 @@
 				"name": "recipe component defined item 3",
 				"defindex": 2002,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -119919,7 +123539,7 @@
 				"name": "recipe component defined item 4",
 				"defindex": 2003,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -119928,7 +123548,7 @@
 				"name": "recipe component defined item 5",
 				"defindex": 2004,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -119937,7 +123557,7 @@
 				"name": "recipe component defined item 6",
 				"defindex": 2005,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -119946,7 +123566,7 @@
 				"name": "recipe component defined item 7",
 				"defindex": 2006,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -119955,7 +123575,7 @@
 				"name": "recipe component defined item 8",
 				"defindex": 2007,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -119964,7 +123584,7 @@
 				"name": "recipe component defined item 9",
 				"defindex": 2008,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -119973,7 +123593,7 @@
 				"name": "recipe component defined item 10",
 				"defindex": 2009,
 				"attribute_class": "dynamic_recipe_component_defined_item",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120294,7 +123914,7 @@
 				"name": "item slot criteria 1",
 				"defindex": 3000,
 				"attribute_class": "item_slot_criteria",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120303,7 +123923,7 @@
 				"name": "item in slot 1",
 				"defindex": 3001,
 				"attribute_class": "item_in_slot",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120312,7 +123932,7 @@
 				"name": "item slot criteria 2",
 				"defindex": 3002,
 				"attribute_class": "item_slot_criteria",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120321,7 +123941,7 @@
 				"name": "item in slot 2",
 				"defindex": 3003,
 				"attribute_class": "item_in_slot",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120330,7 +123950,7 @@
 				"name": "item slot criteria 3",
 				"defindex": 3004,
 				"attribute_class": "item_slot_criteria",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120339,7 +123959,7 @@
 				"name": "item in slot 3",
 				"defindex": 3005,
 				"attribute_class": "item_in_slot",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120348,7 +123968,7 @@
 				"name": "item slot criteria 4",
 				"defindex": 3006,
 				"attribute_class": "item_slot_criteria",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120357,7 +123977,7 @@
 				"name": "item in slot 4",
 				"defindex": 3007,
 				"attribute_class": "item_in_slot",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120366,7 +123986,7 @@
 				"name": "item slot criteria 5",
 				"defindex": 3008,
 				"attribute_class": "item_slot_criteria",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120375,7 +123995,7 @@
 				"name": "item in slot 5",
 				"defindex": 3009,
 				"attribute_class": "item_in_slot",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120384,7 +124004,7 @@
 				"name": "item slot criteria 6",
 				"defindex": 3010,
 				"attribute_class": "item_slot_criteria",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120393,7 +124013,7 @@
 				"name": "item in slot 6",
 				"defindex": 3011,
 				"attribute_class": "item_in_slot",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120402,7 +124022,7 @@
 				"name": "item slot criteria 7",
 				"defindex": 3012,
 				"attribute_class": "item_slot_criteria",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120411,7 +124031,7 @@
 				"name": "item in slot 7",
 				"defindex": 3013,
 				"attribute_class": "item_in_slot",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120420,7 +124040,7 @@
 				"name": "item slot criteria 8",
 				"defindex": 3014,
 				"attribute_class": "item_slot_criteria",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
@@ -120429,7 +124049,7 @@
 				"name": "item in slot 8",
 				"defindex": 3015,
 				"attribute_class": "item_in_slot",
-				"description_format": null,
+				"description_format": "visuals_mvm_boss",
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": false,
 				"stored_as_integer": false
