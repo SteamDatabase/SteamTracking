@@ -14,7 +14,7 @@
 .home_page_gutter {
 	position: absolute;
 	left: 0;
-	top: 34px;
+	top: 31px;
 	width: 187px;
 	height: 200px;
 	display: none;
@@ -23,7 +23,7 @@
 
 .home_page_gutter_block {
 	width: 176px;
-	border: 2px solid rgba( 46, 62, 76, 0.5 );
+	border: 1px solid rgba( 46, 62, 76, 0.5 );
 	border-top-left-radius: 3px;
 	border-bottom-left-radius: 3px;
 	border-right: none;
@@ -67,6 +67,9 @@ a.gutter_item:hover {
 .home_leftcol {
 	width: 618px;
 	float: left;
+}
+.home_cluster_ctn .home_leftcol {
+	width: 616px;
 }
 
 .home_rightcol {
@@ -145,6 +148,20 @@ a.cluster_capsule:hover {
 	top: 69px;
 	z-index: 2;
 	box-shadow: 0 0 16px 6px #000000;
+}
+
+.cluster_maincap_fill.package .cluster_maincap_fill_header {
+	width: 530px;
+	height: 174px;
+
+	left: 43px;
+	top: 89px;
+}
+
+.cluster_maincap_fill.package .cluster_maincap_fill_bg.cluster_capsule_image  {
+	width: 1076px;
+	height: 353px;
+	left: -230px;
 }
 
 .main_cap_discount, .main_cap_price {
@@ -496,6 +513,7 @@ a.home_smallcap:hover {
 .home_btn.home_customize_btn {
 	position: relative;
 	z-index: 11;
+	margin-right: 2px;
 }
 
 .home_viewsettings_popup {
@@ -596,7 +614,7 @@ a.home_smallcap:hover {
 	position: absolute;
 	right: 0;
 	top: 59px;
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/discovery_queue_arrow.png' ) no-repeat top;
+	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/discovery_queue_arrow.png?v=1' ) no-repeat top;
 	width: 810px;
 	height: 92px;
 }
@@ -611,7 +629,7 @@ a.home_smallcap:hover {
 	height: 30px;
 	text-align: left;
 	font-size: 18px;
-	color: #67c1f5;
+	color: #ffcc6a;
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
@@ -638,7 +656,7 @@ a.home_smallcap:hover {
 		height: 162px;
 	}
 	.dq_static_pos_3 .dq_item_overlay {
-		background: rgba( 42, 63, 90, 0.2 );
+		background: rgba( 20, 26, 36, 0.4 );
 	}
 	.dq_static_pos_3 {
 		top: 11px;
@@ -651,7 +669,7 @@ a.home_smallcap:hover {
 		height: 144px;
 	}
 	.dq_static_pos_4 .dq_item_overlay {
-		background: rgba( 42, 63, 90, 0.3 );
+		background: rgba( 20, 26, 36, 0.6 );
 	}
 	.dq_static_pos_4 {
 		top: 20px;
@@ -664,7 +682,7 @@ a.home_smallcap:hover {
 		height: 125px;
 	}
 	.dq_static_pos_5 .dq_item_overlay {
-		background: rgba( 32, 48, 69, 0.4 );
+		background: rgba( 20, 26, 36, 0.8 );
 	}
 	.dq_static_pos_5 {
 		top: 28px;
@@ -873,7 +891,7 @@ a.curated_app_link img {
 	height: 341px;/*380px;*/
 	margin-bottom: 2px;
 	background-color: rgba( 0, 0, 0, 0.2 );
-	background: -moz-linear-gradient(left, rgba(0,0,0,0.2) 5%, rgba(0,0,0,0.4) 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -webkit-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient(to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0,0,0,0.2)', endColorstr='rgba(0,0,0,0.4)',GradientType=1 );	padding: 16px;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.2) 5%, rgba(0,0,0,0.4) 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -webkit-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient(to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);	padding: 16px;
 
 	color: #8f98a0;
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
@@ -958,7 +976,6 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 }
 
 .home_page_sign_in_ctn.small {
-	padding: 0;
 	height: 130px;
 }
 
@@ -1187,21 +1204,42 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	margin-bottom: 5px;
 }
 
-.home_page_content.more_content {
+.home_page_content .more_content {
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 	color: #67c1f5;
 	text-align: center;
-
+}
+.home_page_content .more_content_title {
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	color: #67c1f5;
+	text-align: center;
+	background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/more_content_bg.png');
+	background-repeat: repeat-x;
+}
+.home_page_content .more_content_title span {
+	background: #000000;
+	padding: 0px 10px;
+}
+.home_page_content .more_content_desc {
+	font-size: 13px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	color: #9099a1;
+	text-align: center;
 }
 
-.home_page_content.more_content a {
+.home_page_content .more_content a {
 	color: #67c1f5;
 	text-decoration: underline;
 }
+.home_page_content .more_content a:hover {
+	color: #ffffff;
+}
 
-.home_page_content.more_content .LoadingWrapper {
+.home_page_content .more_content .LoadingWrapper {
 	padding-bottom: 300px;
 }
 
