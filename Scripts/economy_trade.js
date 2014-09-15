@@ -621,7 +621,7 @@ CTradeStateManager = {
 			parameters: {
 				sessionid: g_sessionID,
 				ready: bReady,
-				version: g_rgCurrentTradeStatus.version
+				version: g_rgLastFullTradeStatus.version
 			},
 			onSuccess: OnTradeStatusUpdate,
 			onFailure: RequestTradeStatusUpdate
@@ -913,7 +913,7 @@ function GetTradeStatus()
 	g_bPollInFlight = true;
 	new Ajax.Request( 'https://steamcommunity.com/trade/' + g_ulTradePartnerSteamID + '/tradestatus/', {
 			method: 'post',
-			parameters: { sessionid: g_sessionID, logpos: g_iNextLogPos, version: g_rgCurrentTradeStatus.version },
+			parameters: { sessionid: g_sessionID, logpos: g_iNextLogPos, version: g_rgLastFullTradeStatus.version },
 			onSuccess: OnPeriodicTradeStatusUpdate,
 			onFailure: OnTradeStatusFailure
 		}
@@ -1661,7 +1661,7 @@ function ConfirmTrade()
 			method: 'post',
 			parameters: {
 				sessionid: g_sessionID,
-				version: g_rgCurrentTradeStatus.version
+				version: g_rgLastFullTradeStatus.version
 			},
 			onSuccess: OnTradeStatusUpdate,
 			onFailure: RequestTradeStatusUpdate,
@@ -2613,7 +2613,7 @@ function SendChatMsg( strMessage )
 			sessionid: g_sessionID,
 			message: strMessage,
 			logpos: g_iNextLogPos,
-			version: g_rgCurrentTradeStatus.version
+			version: g_rgLastFullTradeStatus.version
 		},
 		onSuccess: OnTradeStatusUpdate,
 		onFailure: OnTradeStatusFailure
