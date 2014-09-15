@@ -2,9 +2,16 @@
 
 /* login page */
 
+.block {
+	margin: 0px;
+	background: none;
+}
 .checkout_content_box, .block_content_inner {
 	background-color: #000;
 	background-color: rgba(0,0,0,0.2)
+}
+.checkout_content_box {
+	line-height:
 }
 .block_content {
     border: none;

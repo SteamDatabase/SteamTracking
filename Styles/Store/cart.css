@@ -24,8 +24,6 @@ body.v6.login .rightcol .spotlight_block {
 .checkout_content_box
 {
 	position: relative;
-	
-	line-height: 18px;
 }
 
 .checkout_content_box h2
@@ -85,7 +83,7 @@ body.v6.login .rightcol .spotlight_block {
 }
 
 .checkout_error {
-	background: -moz-linear-gradient(left, rgba(162,77,0,1) 5%, rgba(255,123,0,1) 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(162,77,0,1)), color-stop(95%,rgba(255,123,0,1)));background: -webkit-linear-gradient(left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -o-linear-gradient(left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -ms-linear-gradient(left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: linear-gradient(to right, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(162,77,0,1)', endColorstr='rgba(255,123,0,1)',GradientType=1 );	color: #D5D6D8;
+	background: -moz-linear-gradient(left, rgba(162,77,0,1) 5%, rgba(255,123,0,1) 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(162,77,0,1)), color-stop(95%,rgba(255,123,0,1)));background: -webkit-linear-gradient(left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -o-linear-gradient(left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -ms-linear-gradient(left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: linear-gradient(to right, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);	color: #D5D6D8;
 	margin: 15px 0px 15px 0px;
 	padding: 11px 15px;
 	padding-left: 19px;
@@ -200,6 +198,9 @@ body.v6.login .rightcol .spotlight_block {
 	padding: 16px;
 	min-height: 57px;
 	margin-bottom: 20px;
+}
+.cart_digital_notice_ctn h2 {
+	margin-bottom: 5px;
 }
 
 .cart_digital_notice_content {

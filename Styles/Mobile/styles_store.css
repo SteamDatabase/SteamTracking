@@ -1923,7 +1923,7 @@ a.trigger, a.activetrigger {
 }
 
 .gameAreaDescription, .appFeatureBlocks {
-	background: -moz-linear-gradient(top, rgba(0,0,0,0.55) 0px, rgba(0,0,0,0) 15px);background: -webkit-gradient(linear, left top, left bottom, color-stop(0px,rgba(0,0,0,0.55)), color-stop(15px,rgba(0,0,0,0)));background: -webkit-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -o-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -ms-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0,0,0,0.55)', endColorstr='rgba(0,0,0,0)',GradientType=0 );	padding: 10px 12px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.55) 0px, rgba(0,0,0,0) 15px);background: -webkit-gradient(linear, left top, left bottom, color-stop(0px,rgba(0,0,0,0.55)), color-stop(15px,rgba(0,0,0,0)));background: -webkit-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -o-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -ms-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);	padding: 10px 12px;
 }
 
 .gameAreaDescription p {
@@ -1973,7 +1973,7 @@ a.trigger, a.activetrigger {
 }
 
 .gameDetailsContainer {
-	background: -moz-linear-gradient(top, rgba(0,0,0,0.55) 0px, rgba(0,0,0,0) 15px);background: -webkit-gradient(linear, left top, left bottom, color-stop(0px,rgba(0,0,0,0.55)), color-stop(15px,rgba(0,0,0,0)));background: -webkit-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -o-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -ms-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0,0,0,0.55)', endColorstr='rgba(0,0,0,0)',GradientType=0 );}
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.55) 0px, rgba(0,0,0,0) 15px);background: -webkit-gradient(linear, left top, left bottom, color-stop(0px,rgba(0,0,0,0.55)), color-stop(15px,rgba(0,0,0,0)));background: -webkit-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -o-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: -ms-linear-gradient(top, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0px,rgba(0,0,0,0) 15px);}
 
 .gameDetailsArea {
 	/* margin: 10px; */
