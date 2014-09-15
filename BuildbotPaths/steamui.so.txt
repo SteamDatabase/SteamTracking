@@ -234,6 +234,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/server/streamserver.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/subpaneloptionsfamily.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/SubPanelWelcomeCreatingAccount.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/account/confirmpassworddialog.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/avatarimage.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/controls/keyboardshortcut.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/friends/communityfeedstrip.cpp

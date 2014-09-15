@@ -15,8 +15,9 @@
 		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
 
 				<Panel class="VertContainer">
-					<ToggleButton class="CheckBox SteamOSButton" id="SettingsSteamOS_EnableDesktop" text="#SettingsSteamOS_EnableDesktop" onactivate="ToggleSteamOSDesktop()"/>
-					<ToggleButton class="CheckBox NonSteamOSButton" id="SettingsAccount_BPM" text="#SettingsAccount_StartBPM"  onactivate="ToggleSteamOSDesktop()" />
+					<ToggleButton class="CheckBox SteamOSButton" id="SettingsSteamOS_EnableDesktop" text="#SettingsSteamOS_EnableDesktop" onactivate="ToggleInterfaceSetting()"/>
+					<ToggleButton class="CheckBox NonSteamOSButton" id="SettingsAccount_BPM" text="#SettingsAccount_StartBPM"  onactivate="ToggleInterfaceSetting()" />
+					<ToggleButton class="CheckBox" id="SettingsInterface_EnableScreenSaver" text="#SettingsInterface_EnableScreenSaver"  onactivate="ToggleInterfaceSetting()" />
 				</Panel>
 				
 				

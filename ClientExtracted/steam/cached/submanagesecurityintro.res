@@ -115,6 +115,25 @@
 		"Default"		"0"
 		"SubTabPosition"		"3"
 	}
+	"UnlockWarning"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"UnlockWarning"
+		"xpos"		"24"
+		"ypos"		"300"
+		"wide"		"320"
+		"tall"		"72"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"labelText"		"#SteamUI_ManageSecurity_UnlockWarning"
+		"textAlignment"		"north-west"
+		"dulltext"		"1"
+		"brighttext"		"0"
+		"wrap"		"1"
+	}
 	"ControlEnableOTPRadio"
 	{
 		"ControlName"		"RadioButton"
