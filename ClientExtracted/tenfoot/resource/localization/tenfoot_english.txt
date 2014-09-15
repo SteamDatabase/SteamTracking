@@ -2230,6 +2230,7 @@
 	"SettingsInterface_SteamClientUpdatePending"	"Restart to update"
 	"SettingsInterface_SteamClientUpdateDownloading"	"Downloading"
 	"SettingsInterface_SteamClientUpdateDesc"	"Steam client updates"
+	"SettingsInterface_EnableScreenSaver"	"Enable Screen Saver"
 	
 	"Overlay_EnterGameText"	"Enter text to send to the game"
 	"Overlay_HowToClose" "Return to Game"
@@ -2607,4 +2608,11 @@
 	"SteamUI_UpdateControllerFirmware_WiredUpdate"	"A firmware update is available for your Steam Controller.  Your controller requires a one-time wired update.\nWhen you are ready, connect the controller via USB and the update process will start automatically."
 	"SteamUI_UpdateControllerFirmware_UpdateTitle" "Controller Firmware Update"
 	"SteamUI_UpdateControllerFirmware_HardFailure" "Warning: One of your Steam controllers has been disabled and will not be reconfigured or programmed for games because its firmware is out of date and Steam was unable to fetch updated firmware information."
+
+	"SteamUI_ConfirmPassword_Select" "SELECT"
+	"SteamUI_ConfirmPassword_EnterPassword" "Enter your password to continue"
+	"SteamUI_ConfirmPassword_Password"	"SUBMIT"
+	"SteamUI_ConfirmPassword_FailureTitle" "INCORRECT PASSWORD"
+	"SteamUI_ConfirmPassword_Failure" "That password is incorrect, please try again."
+	
 }
