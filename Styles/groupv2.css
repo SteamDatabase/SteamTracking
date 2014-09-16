@@ -257,8 +257,8 @@ a.group_tab:hover {
 	width: 645px;
 }
 
-.leftcol.hasContentBoxes img {
-	max-width: 645px;
+.leftcol img {
+	max-width: 100%;
 }
 
 .group_content {

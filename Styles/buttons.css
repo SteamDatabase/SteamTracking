@@ -371,6 +371,33 @@
 	.btnv6_green_white_innerfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
 		background: transparent;			}
 
+.btnv6_grey_black {
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #66c0f4 !important;
+
+	background: #212c3d;	}
+
+	.btnv6_grey_black > span {
+		border-radius: 2px;
+		display: block;
+
+
+		background: transparent;			}
+
+.btnv6_grey_black:not(.btn_disabled):not(.btn_active):hover:not(.active):hover {
+	text-decoration: none !important;
+	color: #fff !important;
+
+	background: #66c0f4;	}
+
+	.btnv6_grey_black:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
+		background: transparent;			}
+
 
 /* This class must be applied to anything you want to use buttons in to enable hover states. */
 .btn_hover {}
@@ -508,7 +535,7 @@ btnv6_border_2px > span {
 	display: inline-block;
 	width: 16px;
 	height: 16px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_16.png?v=1);
+	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_16.png?v=3);
 	vertical-align: text-top;
 }
 
@@ -529,15 +556,6 @@ btnv6_border_2px > span {
 			.btn_active .ico16.thumb_down, .active .ico16.thumb_down {
 			background-position: -64px 0px;		}
 		
-	.ico16.thumb_down {
-		background-position: -32px 0px;	}
-
-			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.thumb_down {
-			background-position: -48px 0px;		}
-	
-			.btn_active .ico16.thumb_down, .active .ico16.thumb_down {
-			background-position: -64px 0px;		}
-		
 	.ico16.thumb_up {
 		background-position: -80px 0px;	}
 
@@ -546,6 +564,24 @@ btnv6_border_2px > span {
 	
 			.btn_active .ico16.thumb_up, .active .ico16.thumb_up {
 			background-position: -96px 0px;		}
+		
+	.ico16.thumb_downv6 {
+		background-position: -64px -16px;	}
+
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.thumb_downv6 {
+			background-position: -80px -16px;		}
+	
+			.btn_active .ico16.thumb_downv6, .active .ico16.thumb_downv6 {
+			background-position: -96px -16px;		}
+		
+	.ico16.thumb_upv6 {
+		background-position: -112px -16px;	}
+
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.thumb_upv6 {
+			background-position: -144px -16px;		}
+	
+			.btn_active .ico16.thumb_upv6, .active .ico16.thumb_upv6 {
+			background-position: -128px -16px;		}
 		
 	.ico16.arrow_down {
 		background-position: -48px -16px;	}

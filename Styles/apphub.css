@@ -32,10 +32,17 @@ center
 	margin: 0px auto;
 	text-align: left;
 	padding-top: 12px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_hub_header.png');
-	background-repeat: no-repeat;
-	margin-top: 10px;
 }
+
+
+
+.apphub_background
+{
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
 
 .apphub_HeaderTop.workshop
 {

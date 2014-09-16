@@ -358,7 +358,8 @@ span.popup_menu_pulldown_indicator {
 	background-position: top;
 }
 
-.popup_block_new .popup_body.popup_menu {
+body.v6 .popup_block_new .popup_body.popup_menu {
+	padding: 6px 0px;
 }
 
 .popup_menu .popup_menu_item {
@@ -425,6 +426,7 @@ span.popup_menu_pulldown_indicator {
 	background-color: #82807c;
 	margin: 10px 12px 0 12px;
 }
+
 
 
 .friendPlayerLevel {
@@ -696,7 +698,7 @@ select.gray_bevel {
 {
 	width: 32px;
 	height: 32px;
-	background: url( 'http://cdn.steamcommunity.com/public/images/login/throbber.gif' ) center center no-repeat;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif' ) center center no-repeat;
 	margin-right: 5px;
 	float: left;
 }
@@ -1475,5 +1477,6 @@ body.v6 #footer_nav .popup_menu_subheader{
 }
 body.v6 .store_nav .popup_menu .hr,
 body.v6 #footer_nav .popup_menu .hr{
-    background-color: #13242e;
+    background-color: #33627d;
+	margin: 5px 0px 5px 0px;
 }
