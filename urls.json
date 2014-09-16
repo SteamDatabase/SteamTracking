@@ -1,3 +1,5 @@
+// No, JSON doesn't support comments. We strip them out.
+
 {
 //
 // Client Manifests
