@@ -75,7 +75,7 @@
 			$Data = File_Get_Contents( $UrlsPath );
 			
 			// Strip comments
-			$Data = Preg_Replace( '#([\s]//.*)#', '', $Data );
+			$Data = Preg_Replace( '#^([\s]?//.*)#m', '', $Data );
 			
 			$Data = JSON_Decode( $Data, true );
 			
