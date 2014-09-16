@@ -377,7 +377,7 @@ var HighlightPlayer = Class.create( {
 	{
 		var isFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen;
 
-		if( isFullscreen )
+		if( isFullscreen || this.m_bScreenshotModalActive )
 			return;
 
 		var className = '.highlight_player_item';
@@ -536,11 +536,17 @@ var HighlightPlayer = Class.create( {
 		var $Modal = $J('<div/>', {'class': 'screenshot_popup_modal' } );
 
 		var $Title = $J('<a/>' );
+		if ( Steam.BIsUserInSteamClient() )
+			$Title.text( 'View full-size version in browser' );
+		else
+			$Title.text( 'Download full-size version' );
+		$Title.append( ' ', $J('<img/>', {src: 'https://steamstore-a.akamaihd.net/public/images/v5/ico_external_link.gif' } ) );
+
 		var $TitleCtn = $J('<div/>', {'class': 'screenshot_popup_modal_title'} ).append( $Title );
-		var $ExternalLinkImg = $J('<img/>', {src: 'https://steamstore-a.akamaihd.net/public/images/v5/ico_external_link.gif' } );
 
 		var $Img = $J('<img/>', {'src': this.GetScreenshotURL( screenshotid, '600x338' ) } );
-		var $ImgCtn = $J('<div/>', {'class': 'screenshot_img_ctn'}).append( $Img );
+		var $ImgPreload = $J('<img/>', {'src': 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'style': 'display: none;' } );
+		var $ImgCtn = $J('<div/>', {'class': 'screenshot_img_ctn'}).append( $Img, $ImgPreload );
 
 		var $Footer =  $J('<div/>', {'class': 'screenshot_popup_modal_footer' } );
 		var $ScreenshotCount = $J('<div/>');
@@ -583,6 +589,9 @@ var HighlightPlayer = Class.create( {
 				bModalShown = true;
 			}
 			Modal.AdjustSizing();
+
+			if ( iCurIndex + 1 < rgScreenshotIDs.length )
+				$ImgPreload.attr( 'src', GameHighlightPlayer.GetScreenshotURL( rgScreenshotIDs[iCurIndex+1], '1920x1080' ) );
 		} );
 
 		var GameHighlightPlayer = this;
@@ -603,10 +612,7 @@ var HighlightPlayer = Class.create( {
 		var fnShowScreenshot = function( screenshotid )
 		{
 			var strFullURL = GameHighlightPlayer.GetScreenshotURL( screenshotid );
-			$Title.text( strFullURL + ' ' );
 			$Title.attr('href', strFullURL );
-			$Title.append( $ExternalLinkImg );
-			console.log( $ExternalLinkImg );
 			Steam.LinkInNewWindow( $Title );
 
 			$ImgCtn.css( 'min-width', $ImgCtn.width() );

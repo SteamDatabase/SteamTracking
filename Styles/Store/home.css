@@ -1094,7 +1094,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	color: #fff;
 }
 
-.home_content.single a.gamelink {
+.home_content.single .gamelink {
 	position: relative;
 	z-index: 10;
 	display: inline-block;
@@ -1127,7 +1127,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	position: relative;
 }
 
-.home_content.single img.screenshot {
+.home_content.single a.screenshot {
 	display: inline-block;
 	width: 213px;
 	height: 120px;
@@ -1135,8 +1135,14 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	margin-top: 8px;
 }
 
+.home_content.single a.screenshot img {
+	display: block;
+	width: 213px;
+	height: 120px;
+}
 
-.home_content.single img.screenshot:last-child {
+
+.home_content.single a.screenshot:last-child {
 	margin-right: 0;
 }
 

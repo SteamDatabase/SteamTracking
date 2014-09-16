@@ -1040,6 +1040,16 @@ div.communitylink_achievement.communitylink_achivement_plusmore {
 	height: 50px;
 	cursor: default;
 }
+.friend_blocks_grid .friend_block_holder {
+	float: left;
+	display: block;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	margin-bottom: 2px;
+	margin-right: 4px;
+}
 
 .friend_blocks_twoxtwo .friend_block_holder {
 	float: left;
