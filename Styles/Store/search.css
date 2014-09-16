@@ -60,7 +60,7 @@
 	border: 1px solid #000;
 	border-radius: 3px;
 	box-shadow: 1px 1px 0px #45556c;
-	width: 500px;
+	width: 400px;
 	padding: 5px;
 }
 
@@ -248,11 +248,16 @@
 	color: #62696e;
 }
 
+.col.search_name .platform_img {
+	opacity: 0.3;
+}
+
 .search_result_row .title {
 	margin-top: 5px;
 	display: block;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	color: #c7d5e0;
 }
 
 .col.search_price.discounted {
