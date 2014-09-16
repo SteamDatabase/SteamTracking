@@ -1009,6 +1009,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 	};
 	var g_rgTabParams = {};
 	var g_strActiveTab = null;
+	var g_nPage = 0;
 
 	var rgTabNames = [];
 
@@ -1023,11 +1024,8 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 			$J('#' + this.m_strElementPrefix + 'Rows').InstrumentLinks();
 		});
 		oPagingControls.SetPageChangingHandler( function( nPage ) {
-			if ( !g_bInHashChange )
-			{
-				// not ready yet
-				// window.location.hash = 'p' + ( nPage + 1 );
-			}
+			g_nPage = nPage;
+			UpdateQueryString();
 			$J('#' + this.m_strElementPrefix + 'Rows').fadeTo( 0.1, 0.5 );
 		} );
 		oPagingControls.SetPageChangedHandler( function ( nPage ) {
@@ -1106,6 +1104,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 	{
 		Tab.m_$Select.click( function() {
 			UpdateTabDisplay( Tab.m_strName );
+			UpdateQueryString();
 		} );
 	}
 
@@ -1136,6 +1135,86 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 		}
 	}
 
+	var UpdateQueryString = function() {
+		var rgQuery = {};
+		$J('.tab_filter_control.checked').each(function(i,ele) {
+
+			var key = $J(ele).data('param');
+			var val = $J(ele).data('value');
+
+
+			if( rgQuery[ key ])
+				rgQuery[key].push(val);
+			else
+				rgQuery[key] = [val];
+
+		});
+		rgQuery['p'] = g_nPage;
+		rgQuery['tab'] = g_strActiveTab;
+		window.location.hash = $J.param( rgQuery );
+	}
+
+	var LoadFromQueryString = function() {
+
+		var strQuery = window.location.hash.substr(1);
+		var rgQuery = strQuery.toQueryParams();
+		var nLocalPage = 0;
+
+		$J.each(rgQuery, function(param)
+		{
+			if( param == 'p')
+			{
+				g_nPage = parseInt(rgQuery[param]);
+				return true; // continue;
+			}
+
+			if( param == 'tab')
+			{
+				g_strActiveTab = rgQuery[param];
+				return true;
+			}
+
+			rgValues = rgQuery[param];
+
+			var strParam = param.substr(0, param.length-2);
+
+			if( !$J.isArray( rgValues ) )
+				rgValues = [rgValues];
+
+			for( var i=0; i<rgValues.length; i++ )
+			{
+				var value = rgValues[i];
+				var $Checkbox = $J('.tab_filter_control[data-param=' + strParam + '][data-value=' + value + ']');
+
+				$Checkbox.addClass( 'checked' );
+
+				if ( !g_rgTabParams[strParam] )
+					g_rgTabParams[strParam] = [];
+				g_rgTabParams[strParam].push( value );
+
+				var $Filter = $J('<div/>', {'class': 'tab_filter' } );
+				$Filter.attr( 'data-param', strParam );
+				$Filter.attr( 'data-value', value );
+				$Filter.text( $Checkbox.text() );
+				$Filter.append( $J('<div/>', {'class': 'tab_filter_remove' }).html('&nbsp;').click( function() { fnRemoveFilter( strParam, value, $Checkbox, $Filter ); } ) );
+				$J('.tab_filters').append( $Filter );
+				$J('.tab_filter_ctn').show( 'fast' );
+			}
+
+		});
+
+		for ( var strTab in g_rgTabs )
+		{
+			var Tab = g_rgTabs[strTab];
+			if( strTab == g_strActiveTab )
+				Tab.m_iStart = g_nPage * 10;
+			else
+				Tab.m_iStart = 0;
+			Tab.m_nLoaded = 0;
+		}
+		UpdateTabDisplay();
+	}
+
 	var LoadTab = function( Tab )
 	{
 		var rgParams = $J.extend( {
@@ -1154,9 +1233,12 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 			}
 		}
 
+		var nPage = Tab.m_iStart / 10;
+
 		var oPagingControls = g_rgPagingControls[Tab.m_strName];
 		oPagingControls.m_rgStaticParams = rgParams;
-		oPagingControls.GoToPage( 0, true );
+		UpdateQueryString();
+		oPagingControls.GoToPage( nPage, true );
 	}
 
 	// perform initialization
@@ -1212,24 +1294,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 		}
 	}
 
-	var fnHandleHashChange = function ( bClearResults )
-	{
-		if ( window.location.hash.length > 2 && window.location.hash.substr(0,2) == "#p" )
-		{
-			var nPage = parseInt( window.location.hash.substr(2) );
-
-			var oPagingControsl = g_rgPagingControls[g_strActiveTab];
-			if ( nPage - 1 != oPagingControsl.m_iCurrentPage )
-			{
-				if ( bClearResults )
-				{
-					$J('.tab_item').remove()
-				}
-
-				oPagingControsl.GoToPage( nPage - 1, false );
-			}
-		}
-	}
+	LoadFromQueryString();
 
 	// not ready yet
 	// fnHandleHashChange( true );

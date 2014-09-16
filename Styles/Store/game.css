@@ -3362,7 +3362,6 @@ select.gray_bevel {
 background: -moz-linear-gradient(135deg, #356480 5%, #1a303d 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480), color-stop(95%,#1a303d));background: -webkit-linear-gradient(135deg, #356480 5%,#1a303d 95%);background: -o-linear-gradient(135deg, #356480 5%,#1a303d 95%);background: -ms-linear-gradient(135deg, #356480 5%,#1a303d 95%);background: linear-gradient(135deg, #356480 5%,#1a303d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#356480', endColorstr='#1a303d',GradientType=1 );}
 
 .screenshot_popup_modal_title {
-	line-height: 20px;
 	height: 20px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -3385,6 +3384,10 @@ background: -moz-linear-gradient(135deg, #356480 5%, #1a303d 95%);background: -w
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.screenshot_popup_modal_footer .btnv6_blue_hoverfade span {
+	line-height: 26px;
 }
 
 .screenshot_popup_modal_footer .previous {
