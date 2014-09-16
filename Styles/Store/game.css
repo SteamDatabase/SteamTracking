@@ -787,6 +787,9 @@ img.game_header_image_full {
     margin-top: 40px;
     margin-bottom: 16px;
 }
+.game_description_column .block .right {
+	margin-right: 3px;
+}
 .game_description_column .block .block_header h4 {
     font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
     font-weight: normal;
@@ -826,7 +829,7 @@ img.game_header_image_full {
 .game_description_column .block .block_content a {
     background-color: rgba( 0, 0, 0, 0.2 );
     float: left;
-    padding: 14px;
+    padding: 15px;
     height: 100px;
     margin-right: 2px;
     border: 1px solid rgba( 0, 0, 0, 0 );
@@ -1193,7 +1196,7 @@ table.game_language_options {
 
 .details_block {
 
-    margin-right: 9px;
+
 }
 
 .game_area_play_stats .details_block a {

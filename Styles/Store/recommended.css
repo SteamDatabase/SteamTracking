@@ -1596,13 +1596,11 @@ a.friendactivity_game_link.ds_flagged img {
 	font-size: 16px;
 	color: #d6d7d8;
 	font-family: 'Motiva Sans', arial, tahoma;
-	padding: 5px 0 0 0;
+	padding: 3px 0 0 0;
 }
 
 .review_box .vote_header .hours {
 	font-size: 12px;
-	color: #d6d7d8;
-
 }
 
 .review_box .vote_header .thumb {
@@ -1620,7 +1618,7 @@ a.friendactivity_game_link.ds_flagged img {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	margin-top: 3px;
+	margin-top: 0px;
 	display: block;
 }
 
@@ -1628,6 +1626,7 @@ a.friendactivity_game_link.ds_flagged img {
 	font-size: 11px;
 	color: #626366;
 	display: block;
+	line-height: 17px;
 }
 
 .review_box .num_reviews {
@@ -1635,13 +1634,21 @@ a.friendactivity_game_link.ds_flagged img {
 	color: #626366;
 	display: block;
 }
+.review_box .num_reviews a,
+.review_box .num_owned_games a {
+	color: #8f98a0;
+}
+.review_box .num_reviews a:hover,
+.review_box .num_owned_games a:hover {
+	color: #67c1f5;
+}
 
 .review_box .content {
 	margin-right: 8px;
 	font-family: 'Motiva Sans', arial, tahoma;
 	font-size: 13px;
 	line-height: 17px;
-	color: #b0aeac;
+	color: #acb2b8;
 	overflow-wrap: break-word;
 }
 
