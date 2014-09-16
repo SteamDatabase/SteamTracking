@@ -22,6 +22,11 @@ body.flat_page {
 	background-color: #262627;
 }
 
+body.flat_page.blue {
+	background:  url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/blue_body_darker_repeat.jpg?v=2' ) center top repeat-y #000000;
+	color: #636363;
+}
+
 body.standard_page {
 	min-width: 958px;
 }
@@ -44,6 +49,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .pagecontent.in_client, .pagecontent.no_header {
 	background-position: center top;
+}
+body.flat_page.blue .pagecontent {
+	background: none;
 }
 
 .pagecontent.no_footerpad {
@@ -120,7 +128,9 @@ body.flat_page #footer, body.headerless_page #footer {
 }
 body.flat_page #footer {
 	background-color: #262627;
-
+}
+body.flat_page.blue #footer {
+	background: none;
 }
 
 body.flat_page #footer_spacer, body.headerless_page #footer_spacer {

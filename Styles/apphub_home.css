@@ -6,10 +6,20 @@
 {
 	background-position: 0 0;
 }
-
 .apphub_HomeHeader
 {
-	margin-bottom: 8px;
+	margin: 0 auto 8px auto;
+	width: 948px;
+}
+.apphub_HomeHeaderContent
+{
+	width: 948px;
+	padding-top: 10px;
+}
+body.apphub_blue
+{
+	background:  url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/blue_body_darker_repeat.jpg?v=2' ) center top repeat-y #000000;
+	color: #636363;
 }
 
 .apphub_HomeHeaderContent
@@ -47,6 +57,7 @@
 	padding-bottom: 10px;
 	margin-bottom: 10px;
 	font-size: 20px;
+	text-align: center;
 }
 
 .apphub_GetMoreContentWait img
