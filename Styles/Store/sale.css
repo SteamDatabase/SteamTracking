@@ -14,7 +14,7 @@
 	left: 15px;
 }
 
-.sale_page_purchase_item.ds_flagged img.game_header_image {
+.sale_page_purchase_item.ds_flagged:not(.ds_wishlist) img.game_header_image {
 	opacity: 0.3;
 }
 

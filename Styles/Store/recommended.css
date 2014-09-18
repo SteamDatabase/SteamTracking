@@ -1106,7 +1106,7 @@ a.friendactivity_game_link .ds_flag {
 	width: 120px;
 }
 
-a.friendactivity_game_link.ds_flagged img {
+a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	opacity: 0.3;
 }
 
@@ -1295,7 +1295,7 @@ a.friendactivity_game_link.ds_flagged img {
 	height: 136px;
 }
 
-.similar_grid_item .similar_grid_capsule.ds_flagged img {
+.similar_grid_item .similar_grid_capsule.ds_flagged:not(.ds_wishlist) img {
 	opacity: 0.3;
 }
 

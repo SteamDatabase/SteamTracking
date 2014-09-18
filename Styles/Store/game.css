@@ -1772,7 +1772,7 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	left: 15px;
 }
 
-.dlc_page_purchase_dlc.ds_flagged img.game_header_image {
+.dlc_page_purchase_dlc.ds_flagged:not(.ds_wishlist) img.game_header_image {
 	opacity: 0.3;
 }
 
@@ -3346,7 +3346,7 @@ select.gray_bevel {
 {
 	position: relative;
 }
-.small_cap.ds_flagged img {
+.small_cap.ds_flagged:not(.ds_wishlist) img {
 	opacity: 0.3;
 }
 

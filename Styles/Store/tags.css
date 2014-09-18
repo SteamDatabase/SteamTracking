@@ -199,7 +199,7 @@ body.tag_page h3 {
 	position: relative;
 }
 
-.browse_tag_game_cap.ds_flagged img {
+.browse_tag_game_cap.ds_flagged:not(.ds_wishlist) img {
 	opacity: 0.3;
 }
 
