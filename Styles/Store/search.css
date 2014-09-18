@@ -194,7 +194,7 @@
 	width: 120px;
 }
 
-.search_result_row.ds_flagged .col.search_capsule, .search_result_row.ds_flagged .platform_img {
+.search_result_row.ds_flagged:not(.ds_wishlist) .col.search_capsule, .search_result_row.ds_flagged:not(.ds_wishlist) .platform_img {
 	opacity: 0.3;
 }
 
@@ -244,7 +244,7 @@
 	width: 275px;
 	margin-left: 5px;
 }
-.search_result_row.ds_flagged .col.search_name {
+.search_result_row.ds_flagged:not(.ds_wishlist) .col.search_name {
 	color: #62696e;
 }
 

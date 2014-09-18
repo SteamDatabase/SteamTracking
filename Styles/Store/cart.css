@@ -1735,7 +1735,7 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 	top: 18px;
 }
 
-.recommended_grid .special .special_img_ctn.ds_flagged img {
+.recommended_grid .special .special_img_ctn.ds_flagged:not(.ds_wishlist) img {
 	opacity: 0.3;
 }
 

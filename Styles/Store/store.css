@@ -1223,11 +1223,11 @@ a#store_search_link img {
 }
 
 
-.tab_item.ds_flagged .tab_item_cap {
+.tab_item.ds_flagged:not(.ds_wishlist) .tab_item_cap {
 	opacity: 0.3;
 }
 
-.tab_item.ds_flagged .tab_item_content .tab_item_name {
+.tab_item.ds_flagged:not(.ds_wishlist) .tab_item_content .tab_item_name {
 	color: #62696e;
 }
 
@@ -1325,7 +1325,7 @@ a#store_search_link img {
 	top: 18px;
 }
 
-.home_friend_game_block .game_capsule a.ds_flagged img {
+.home_friend_game_block .game_capsule a.ds_flagged:not(.ds_wishlist) img {
 	opacity: 0.3;
 }
 
@@ -1338,7 +1338,9 @@ a#store_search_link img {
     font-size: 10px;
 }
 
-
+.ds_flag.ds_wishlist_flag {
+	box-shadow: 0 0 6px 0 #000000;
+}
 
 
 /*
