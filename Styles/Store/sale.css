@@ -1,17 +1,13 @@
 
+.page_content_ctn {
+	padding-top: 16px;
+}
+
 .sale_page_purchase_item {
-	border-bottom: 1px solid #000000;
 	padding: 15px;
 	position: relative;
 	height: 136px;
-}
-
-.sale_page_purchase_item.even {
-	background-color: #1f1f1f;
-}
-
-.sale_page_purchase_item.odd {
-	background-color: #1a1a1a;
+	background-color: rgba(0,0,0,0.2);
 }
 
 .sale_page_purchase_item .ds_flag {
