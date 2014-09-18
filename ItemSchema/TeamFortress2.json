@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.26209aab08f7221b03a2be674e7e34f7e86ef934.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.2cf4a022ec3bf6360e12cfdec6d1159aaf6c0a3d.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -27,7 +27,7 @@
 			"rarity3": "rarity3",
 			"rarity4": "Unusual",
 			"Unique": "Unique",
-			"community": "map",
+			"community": "Community",
 			"developer": "Valve",
 			"selfmade": "Self-Made",
 			"customized": "Customized",
@@ -61586,6 +61586,93 @@
 				
 			},
 			{
+				"name": "Taunt Shuffle Crate",
+				"defindex": 5760,
+				"item_class": "supply_crate",
+				"item_type_name": "Supply Crate",
+				"item_name": "Mann Co. Director's Cut Reel",
+				"item_description": "This crate contains four items randomly selected from a small set. You can adjust which four items are selected from your backpack.\n\nYou need a standard Mann Co. Supply Crate Key to open this. You can pick one up at the Mann Co. Store.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/shuffle_crate_taunts",
+				"min_ilevel": 20,
+				"max_ilevel": 20,
+				"image_url": "http://media.steampowered.com/apps/440/icons/shuffle_crate_taunts.26dc9cc41af75b1f49034aa10772308717ada488.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/shuffle_crate_taunts_large.7b8d5eb7a40b2430cfc578393d05dcf6a244d900.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": ""
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "crate generation code",
+						"class": "crate_generation_code",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Summer Crate 2014",
+				"defindex": 5761,
+				"item_class": "supply_crate",
+				"item_type_name": "Supply Crate",
+				"item_name": "Limited Late Summer Crate",
+				"item_description": "This crate is special and cannot be opened yet.\nIt's contents will be limited and will only come from this crate.\nSome, but not all, of the items in this crate are Strange...",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/wading_crate_2",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http://media.steampowered.com/apps/440/icons/wading_crate_2.dea09767ade382b0151eb6251d1e5b6deaf8ab75.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/wading_crate_2_large.4f81c58358338117b70decd23ae1fc38ab717e33.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "summer2014"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 86
+					}
+				]
+				
+			},
+			{
 				"name": "Strange Part (Armory)",
 				"defindex": 5999,
 				"item_class": "tool",
@@ -113539,7 +113626,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_trenchers_topper.65f252318cdf8d1a10c0c804dc4b46a2ca546b5b.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_trenchers_topper_large.d65d93e128c3935e89c90bd4dc9963dc09488640.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -113589,7 +113676,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_trenchers_tunic.e4fa46c83b4c744a2bc16c1f0530b54b360dfbf0.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_trenchers_tunic_large.2eb05805ab72e0ea9a82e7cfafbadb9969c89339.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -113638,7 +113725,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_soldier_major.ffe323206ef2c10bb1d9859bbfd8c7c1e0b51468.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_soldier_major_large.e10f89132f907652be604631665d4264810228c5.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -113688,7 +113775,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_killers_kit.e49163c5b85108648b506d41a8db77e8e3093b05.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_killers_kit_large.44f1fe6ee3de48d435cc7f45d4f8da8ab3a455be.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -113737,7 +113824,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_stylish_degroot.c3cbe1fcf5945bf68acd6a86b751e55c494f1b3a.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_stylish_degroot_large.8c1f9c93b2ec744a84c30ac30b66042f447b96b2.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -113787,7 +113874,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_einstein.bad87843db84583609c099c6ebdc55af6b25cce0.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_einstein_large.a64fada2414ec2f77272c30b50fc4975ee04bb78.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -113841,7 +113928,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_heavy_gunshow.04286c12460a8638965cc62b6b6a3d9138c7032d.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_heavy_gunshow_large.de7ab06dba151e68a798e08b17f0c40ed5b64a7c.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -113890,7 +113977,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_heavy_camopants.99e89f4c7a9ff5d5c54021daf6e4030b351fb058.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_heavy_camopants_large.74a2a469698a2c56bf8c760143928006047dbba5.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -113939,7 +114026,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_heavy_buzzcut.e8576b0afc833bcf187289e2e771276e1dbf81dc.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_heavy_buzzcut_large.e1103c064fed8fd16669902a3ed53521470a9ba4.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -113989,7 +114076,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_leftover_trap.2597a721255f713aa9d101bb7a9a5806d02f73a2.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_leftover_trap_large.ad5c009e012b0da2b266e42a5a81e3a1c91d1229.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114039,7 +114126,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_trash_man.a828657ac4c491d2099d2eb4b9f86d1433736136.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_trash_man_large.ee8bd8ce17d0df2619ca14f073e9318408dbcfa8.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114089,7 +114176,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_scotch_saver.2b3ce660a2b41ca5dad36b0ba5b9a2cd23de388b.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_scotch_saver_large.57d4cfbbc0696675227d9b5f0d3dc66e4035106a.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114139,7 +114226,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_demo_samurai_armour.b1ac760a13df29b074144444669dbaa20638bba6.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_demo_samurai_armour_large.d5090c55b8a745f7dc21ba1eb7e5813e13399a33.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -114188,7 +114275,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_fashionable_megalomaniac.6c2d4d5563daa1fc9c5b7325bcf22283d698acf8.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_fashionable_megalomaniac_large.fac37344191db8f934244fd7324636f0c5075c44.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114238,7 +114325,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_chefs_coat.239206b7c45d9b3f138c45c56b084e7198cb5d79.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_chefs_coat_large.0508ceea5b75e229161c7517b3d7f0331618394a.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114288,7 +114375,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_teutonic_toque.323822268fb1905791ed41d26151b8f16c878260.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_teutonic_toque_large.f6f249ae0da7ed3393d58c5c02edcbea6ae9de99.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114338,7 +114425,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_mustachioed_mann.f3f42962184bf79508e2a0f25fc007383d5cc2b0.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_mustachioed_mann_large.c5a30d56c9583d7c28ddac19354ed2537a37f861.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114388,7 +114475,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_spy_snake.72d5e81ae78661af8a65d600b0e1c12ca3c0ff85.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_spy_snake_large.f1711b1953fc4d5960c0f9f472e1cadbe7979ccd.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114443,7 +114530,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_rat_stompers.72b258ca37a7d591efb261ce101e71b896b83427.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_rat_stompers_large.64f150b201ab45eb3d24d68c5227d18d59cad9e0.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -114492,7 +114579,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_sole_mate.5d6f417c9807caca552b2d523c0523bf98471af1.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_sole_mate_large.a515c2e1f2f9ab28659d3d137a2951f84270e4cc.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114542,7 +114629,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbxo2014_medic_wintergarb_coat.776b2b99dbdf39ad3c451b4502ae9b379c8e6c76.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbxo2014_medic_wintergarb_coat_large.437858dd8e38c99f0ab9632d87a29a873e1d9a7d.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114592,7 +114679,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_demo_knight_helmet.0bd6268d0a701d334d04ac745bc9af9fd3e86121.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_demo_knight_helmet_large.5fed043d0797d6ae35e74912e4cce9bab0600488.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114642,7 +114729,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_demo_armor_shoes.cfeb8e1bc94a986254a9e9c5a57e8538953831ed.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_demo_armor_shoes_large.59b0e0146d4d23dec34a6e5d57b49d8b0e80fc0a.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -114691,7 +114778,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_sniper_quiver.4eaf1d1ed5d105fd2a4a956c4a8b193d43539119.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_sniper_quiver_large.bde95c86b48a2264de2c42c3c94e9ee41c1874cc.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114741,7 +114828,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_napolean_complex.0feba0bf1ac65bdc580172c8fe0ec1b4c42d0c53.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_napolean_complex_large.d577ecfec8649cc9e0dd135b3b39e558b8fce16b.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114791,7 +114878,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_medic_colonel_coat.d0fc18474063d1577d5c0ea1180d499179d8653c.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_medic_colonel_coat_large.78dd502206aed1a607df7d01df1085aa612d6d2d.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114841,7 +114928,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_law.ab6acbc2a1c832512951ef0432d04f459828354b.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_law_large.81b5392a020aacaa9fffcc6815758a8b0f30b678.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114887,7 +114974,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_juggernaut_jacket.15badb00803a120d3aeef55b62fc8a7e12e11262.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_juggernaut_jacket_large.8fd4c2bd39273bcfa06eecd26a3857bd90b37884.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -114937,7 +115024,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_warmth_preserver.6503372ab5479fccb00e79cf01ef3305be74372a.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_warmth_preserver_large.cbed730e0b64e3e92fe10ccf985e4eda1520419e.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -114986,7 +115073,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_medic_apron.72e1b665aa1a209c857501335c4c11b8719fb369.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_medic_apron_large.fe8da31b09d5391e9703e8c346b01ae7fa13ea89.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115036,7 +115123,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_demo_samurai_sleeves.6128900378fa1993a21c31749d7e36477732d0dc.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_demo_samurai_sleeves_large.561e79cc2f01dd1ddd693a40f0d53e97c63ebfb8.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115086,7 +115173,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_pyro_zipper_suit.06e086ad193914b4ef6e07bbccdd64d3ebff53ac.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_pyro_zipper_suit_large.1c2f42f6ea0f2d140c52d4b0e465c709f16bdc92.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115136,7 +115223,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_war_goggles.53c0ed105535c6e35f64fea7767286da807e19c1.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_war_goggles_large.13afc6e4d111f35fc001831ec5d7fd37ceb0c359.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115186,7 +115273,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_war_helmet.568b097bb7db410bc3842e331f6fb87ab5e65004.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_war_helmet_large.5a35a4529b0c41f59bd91295ae8e7395b14ac76c.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115236,7 +115323,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_archers_groundings.35bb952ab43b0f4b7df68be3ca7f067147ce2a91.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_archers_groundings_large.bbfe130000574bfa5c6233771c1e8e831bf93b2b.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115286,7 +115373,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_war_pants.eed460a6b02af20db7597f71c4b5353d914ad555.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_war_pants_large.d14a4eedacf7b9c110f8d39ab634c4aee552940a.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115336,7 +115423,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_toowoomba_tunic.e7c2d1cc82a7471569ccb191a13f39856ca90942.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_toowoomba_tunic_large.4a438554787a7ef1e7a274edb0340c65ac5ed5de.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115386,7 +115473,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_sammy_cap.30642cbe56f6cb853f414ea436fa2836d250c94f.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_sammy_cap_large.0f739798c117c20a955bc864e74396947446b292.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115436,7 +115523,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_camo_headband.5c92c91390b05977b2d1f40ebef943776b470d9b.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_camo_headband_large.053aa789eab4e25ae0ed356aca6e267c010f2830.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115487,7 +115574,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_ticket_boy.fc2adb99e3a09e754d3c30c4a3ef8fd463976883.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_ticket_boy_large.9154d88d761712935a0be3971655375173835f7a.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115537,7 +115624,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_antarctic_researcher.d543c55de30eb89c495644937f44b8e49f909a86.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_antarctic_researcher_large.75eb6679a9e875e8ffe48dfe8ded06702a3c94b6.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
@@ -115586,7 +115673,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_medic_wintergarb_helmet.916428df0ab6d31efe181632c3dc1e60252b449b.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_medic_wintergarb_helmet_large.44cc9b5d6db9d240ba8b8cb9ce3a896d53e05f9d.png",
 				"drop_type": "drop",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -115636,7 +115723,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sbox2014_medic_wintergarb_gaiter.026a1a179e23079604bb25adecc6ccf61f133840.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sbox2014_medic_wintergarb_gaiter_large.ed7607878496071a379ea651d1eca2398f86afd5.png",
 				"drop_type": "none",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"paintable": true,
@@ -117931,7 +118018,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "Horace",
-				"item_description": "\t\t\t\t\t",
+				"item_description": "",
 				"proper_name": false,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/all_class/horace/horace_scout.mdl",
@@ -117968,6 +118055,268 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "The Biomech Backpack",
+				"defindex": 30470,
+				"item_class": "tf_wearable",
+				"item_type_name": "Costume Piece",
+				"item_name": "Biomech Backpack",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/scout/ai_body/ai_body.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/ai_body/ai_body",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/ai_body.73ebde0154c74b02e8e5263d4c9b833e251ce2b0.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/ai_body_large.7c0dc07eea01feaeccb2eba8277c9754744d0754.png",
+				"drop_type": "none",
+				"item_set": "ai_pack",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Alien Cranium",
+				"defindex": 30471,
+				"item_class": "tf_wearable",
+				"item_type_name": "Costume Piece",
+				"item_name": "Alien Cranium",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/scout/ai_head/ai_head.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/ai_head/ai_head",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/ai_head.382c621bdabf82042c6c7b6d6794d6913475fb44.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/ai_head_large.59d2ea6545eaccce0e02c9e3f200416ddd86e401.png",
+				"drop_type": "none",
+				"item_set": "ai_pack",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Xeno Suit",
+				"defindex": 30472,
+				"item_class": "tf_wearable",
+				"item_type_name": "Costume Piece",
+				"item_name": "Xeno Suit",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/scout/ai_legs/ai_legs.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/ai_legs/ai_legs",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/ai_legs.2160e2e55b8af7df6e97aaa570be1d6bbde0cdba.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/ai_legs_large.a198be13babc376fc5e1b884f9f78ad624ec1c9f.png",
+				"drop_type": "none",
+				"item_set": "ai_pack",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The MK 50",
+				"defindex": 30473,
+				"item_class": "tf_wearable",
+				"item_type_name": "Helmet",
+				"item_name": "MK 50",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/ai_spacehelmet/ai_spacehelmet_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/ai_spacehelmet/ai_spacehelmet",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/ai_spacehelmet.19c0074fb7557f01ee0a446b85f9cda145fd529b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/ai_spacehelmet_large.e5b10b3c85c37ecd420cc06b3a98eb7b2d2ccd0c.png",
+				"drop_type": "none",
+				"item_set": "alien_isolation_merc_set",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "The Nostromo Napalmer",
+				"defindex": 30474,
+				"item_class": "tf_weapon_flamethrower",
+				"item_type_name": "Flame Thrower",
+				"item_name": "Nostromo Napalmer",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "primary",
+				"model_player": "models/workshop/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/weapons/c_models/c_ai_flamethrower/c_ai_flamethrower",
+				"min_ilevel": 10,
+				"max_ilevel": 10,
+				"image_url": "http://media.steampowered.com/apps/440/icons/c_ai_flamethrower.2c57cf2fa2548c04baeb0611ff0e6c448a679a69.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/c_ai_flamethrower_large.5fe879464fd1bdb8afcead663045aa1622dae8f2.png",
+				"item_set": "alien_isolation_merc_set",
+				"craft_class": "",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
 					}
 				]
 				
@@ -123401,6 +123750,70 @@
 				"stored_as_integer": false
 			},
 			{
+				"name": "shuffle crate item def min",
+				"defindex": 690,
+				"attribute_class": "shuffle_crate_item_def_min",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "shuffle crate item def max",
+				"defindex": 691,
+				"attribute_class": "shuffle_crate_item_def_max",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "limited quantity item",
+				"defindex": 692,
+				"attribute_class": "limited_quantity_item",
+				"effect_type": "value_is_from_lookup_table",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "SET BONUS: alien isolation xeno bonus pos",
+				"defindex": 693,
+				"attribute_class": "alien_isolation_xeno_bonus_pos",
+				"description_string": "Increased Melee damage against Isolated Merc Set",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "SET BONUS: alien isolation xeno bonus neg",
+				"defindex": 694,
+				"attribute_class": "alien_isolation_xeno_bonus_neg",
+				"description_string": "Increased Nostromo Napalmer damage taken from Isolated Merc Set",
+				"description_format": "value_is_additive",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "SET BONUS: alien isolation merc bonus pos",
+				"defindex": 695,
+				"attribute_class": "alien_isolation_merc_bonus_pos",
+				"description_string": "Increased Nostromo Napalmer damage against Isolationist Pack Set",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "SET BONUS: alien isolation merc bonus neg",
+				"defindex": 696,
+				"attribute_class": "alien_isolation_merc_bonus_neg",
+				"description_string": "Increased Melee damage taken from Isolationist Pack Set",
+				"description_format": "value_is_additive",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
 				"name": "CARD: damage bonus",
 				"defindex": 1000,
 				"attribute_class": "mult_dmg__mvm",
@@ -124058,6 +124471,29 @@
 		,
 		"item_sets": [
 			{
+				"item_set": "ai_pack",
+				"name": "The Isolationist Pack",
+				"items": [
+					"The Alien Cranium",
+					"The Biomech Backpack",
+					"The Xeno Suit"
+				]
+				,
+				"attributes": [
+					{
+						"name": "SET BONUS: alien isolation xeno bonus pos",
+						"class": "alien_isolation_xeno_bonus_pos",
+						"value": 1
+					},
+					{
+						"name": "SET BONUS: alien isolation xeno bonus neg",
+						"class": "alien_isolation_xeno_bonus_neg",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"item_set": "airborne_armaments",
 				"name": "The Airborne Armaments",
 				"items": [
@@ -124065,6 +124501,28 @@
 					"The Reserve Shooter",
 					"The Market Gardener",
 					"Jumper's Jeepcap"
+				]
+				
+			},
+			{
+				"item_set": "alien_isolation_merc_set",
+				"name": "The Isolated Merc",
+				"items": [
+					"The MK 50",
+					"The Nostromo Napalmer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "SET BONUS: alien isolation merc bonus pos",
+						"class": "alien_isolation_merc_bonus_pos",
+						"value": 1
+					},
+					{
+						"name": "SET BONUS: alien isolation merc bonus neg",
+						"class": "alien_isolation_merc_bonus_neg",
+						"value": 1
+					}
 				]
 				
 			},
