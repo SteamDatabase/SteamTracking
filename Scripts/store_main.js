@@ -118,6 +118,7 @@ function RowHeightForTab( tab )
 
 function TabSelect( elem, target )
 {
+	$J('#last_tab').val(target);
 	$(elem).siblings().invoke( 'removeClassName', 'active')
 	$(elem).addClassName( 'active' );
 

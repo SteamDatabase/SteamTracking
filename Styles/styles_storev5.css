@@ -3256,8 +3256,7 @@ ul.squares li {
 
 
 .perf_timing_area {
-	width: 936px;
-	margin: 0px auto 48px auto;
+	margin: 0 auto 48px auto;
 	text-align: center;
 	color: #B0AEAC;
 }
@@ -3269,6 +3268,7 @@ ul.squares li {
 	text-align: left;
 	background-color: #000000;
 	padding: 8px;
+	width: 936px;
 }
 
 a.item_action {

@@ -542,6 +542,10 @@ function InitializeTransaction()
 		{
 			sPaymentMethod = 'paypal';
 		}
+		else if ( method.value == 'updatepaypal' )
+		{
+			sPaymentMethod = 'paypal';
+		}
 	 
 	 	var paymentGID = '';
 	 	
@@ -557,7 +561,7 @@ function InitializeTransaction()
 		var bSaveBillingAddress = false;
 		if ( $('save_my_address').checked && !BIsStoredCreditCard() && method.value != 'storedpaypal' )
 		{
-			if ( method.value == 'paypal' )
+			if ( method.value == 'paypal' || method.value == 'updatepaypal' )
 				bSaveBillingAddress = g_bEnableCachedPayPalCredentials;
 			else
 				bSaveBillingAddress = true;
@@ -673,7 +677,7 @@ function OnInitializeTransactionSuccess( result )
 			$J('#payment_header_title').hide();
 			$J('#payment_row_save_my_address').hide();
 			$J('#payment_row_country_verification').hide();
-
+			$J('#payment_method_specific_note').hide();
 			$J('#payment_row_eight').show();
 			
 						$J('#credit_card_row').hide();
@@ -1047,7 +1051,7 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the PaySafeCard website.  After filling in your code you will be automatically re-routed back to the Steam client which will confirm your purchase.  To avoid purchasing failures, please do not hit your back button or close the PaySafe window before the process is complete.';
 					}
 				}
-				else if ( method.value == 'paypal' || method.value == 'storedpaypal' )
+				else if ( method.value == 'paypal' || method.value == 'storedpaypal' || method.value == 'updatepaypal' )
 				{
 					$('purchase_bottom_note_paypalgc').innerHTML = 'PayPal transactions are authorized through the PayPal web site. Click the button below to open a new web browser window to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Begin PayPal Purchase';
@@ -2294,6 +2298,15 @@ function UpdatePaymentInfoForm()
 			
 			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
 		}
+		else if ( method.value == 'updatepaypal' )
+		{
+						bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
+			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
+			
+			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
+			bShowPaymentSpecificNote = true;
+			$('payment_method_specific_note').innerHTML = 'For your security, you will be required to re-authorize your purchase with PayPal.';
+		}
 		else if ( method.value == 'storedpaypal' )
 		{
 			bShowAddressForm = false;
@@ -2360,7 +2373,7 @@ function UpdatePaymentInfoForm()
 		else if ( method.value == 'steamaccount' )
 		{
 						bShowAddressForm = false;
-			$J('#payment_row_eight').show();;
+			$J('#payment_row_eight').show();
 			
 						
 			$('external_payment_processor_notice').innerHTML = 'In the event your Steam Wallet balance doesn’t cover the full cost of this transaction, you’ll be asked to cover the remaining balance due with a secondary payment method.';
@@ -2750,7 +2763,7 @@ function SubmitPaymentInfoForm()
 			|| method.value == 'denizbank' || method.value == 'ptt' || method.value == 'cashu'
 			|| method.value == 'onecard'
 			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' || method.value == 'credit_card_japan' 
-			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal'
+			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || ( method.value == 'updatepaypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal'
 			|| method.value == 'zong' || method.value == 'culturevoucher' || method.value == 'bookvoucher' || method.value == 'happymoneyvoucher' || method.value == 'convenientstorevoucher'
 			|| method.value == 'gamevoucher' )
 		{
@@ -2799,7 +2812,7 @@ function SubmitPaymentInfoForm()
 				rgBadFields.verify_country_only_label = true;
 			}
 		}
-		else if ( ( !g_bSkipAddressRequirementForPayPal && method.value == 'paypal' ) || BIsCreditCardMethod( method.value ) )
+		else if ( ( !g_bSkipAddressRequirementForPayPal && ( method.value == 'paypal' || method.value == 'updatepaypal' ) ) || BIsCreditCardMethod( method.value ) )
 		{
 			
 			if ( $( 'first_name' ).value.length < 1 )
@@ -3098,6 +3111,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'paypal' && providerPaymentMethod == 4 )
+			{
+				$('payment_method_review_text').innerHTML = 'PayPal';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'updatepaypal' && providerPaymentMethod == 4 )
 			{
 				$('payment_method_review_text').innerHTML = 'PayPal';
 				$('checkout_review_payment_info_area').style.display = 'none';

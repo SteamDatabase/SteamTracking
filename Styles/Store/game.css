@@ -745,7 +745,7 @@ img.game_header_image_full {
 }
 
 .game_description_column h2, .recommendation_bodytext h2 {
-	height: 26px;
+	line-height: 26px;
 
 	font-weight: bold;
 	font-size: 14px;
