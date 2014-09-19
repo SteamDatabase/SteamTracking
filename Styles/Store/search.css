@@ -327,9 +327,23 @@ div.autocomplete ul li {
 
 .search_pagination_left {
     float: left;
+	color: #3b6e8c;
 }
 .search_pagination_right {
     float: right;
+}
+.search_pagination_right .pagebtn {
+	color: #67c1f5;
+}
+.search_pagination_right .pagebtn:hover {
+	color: #ffffff;
+}
+.search_pagination_right a {
+	color: #3b6e8c;
+
+}
+.search_pagination_right a:hover {
+	color: #67c1f5;
 }
 
 #TagSuggest {
