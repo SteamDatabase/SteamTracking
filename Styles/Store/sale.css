@@ -10,6 +10,10 @@
 	background-color: rgba(0,0,0,0.2);
 }
 
+.sale_page_block {
+	margin-bottom: 28px;
+}
+
 .sale_page_purchase_item .ds_flag {
 	left: 15px;
 }
@@ -64,8 +68,21 @@
 	color: #626366;
 }
 
-.sale_page_package_contents .tab_row {
-	width: auto;
+.sale_page_package_contents {
+	margin-top: 2px;
+}
+
+.sale_page_package_contents .tab_item .tab_item_overlay img {
+	width: 940px;
+}
+
+.sale_page_package_contents .tab_item {
+	margin-bottom: 2px;
+	padding-left: 213px;
+}
+
+.sale_page_package_contents .tab_item .tab_item_cap, .sale_page_package_contents .tab_item.ds_flagged .ds_flag {
+	left: 15px;
 }
 
 #sale_page_purchase_all_area {
