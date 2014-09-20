@@ -752,7 +752,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'This payment method is currently unavailable for use.  We are working to resolve the issue.  Please select another payment method for your purchase and try again.';
 					break;
 				case 33:
-					error_text = 'Your purchase could not be completed because your credit card has expired.  Please update your credit card information and try again.';
+					error_text = 'Your purchase could not be completed because your credit card has expired. Please enter a new credit card and try again.';
 					break;
 				case 24:
 					error_text = 'Your transaction failed because you are trying to buy a game that requires ownership of another game you do not currently own.  Please correct the error and try again.';
