@@ -159,12 +159,10 @@
 					
 					$Interface = JSON_Encode( $Interface, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES ) . PHP_EOL;
 					
-					if( File_Exists( $File ) && StrCmp( File_Get_Contents( $File ), $Interface ) === 0 )
+					if( !File_Exists( $File ) || StrCmp( File_Get_Contents( $File ), $Interface ) !== 0 )
 					{
-						return false;
+						File_Put_Contents( $File, $Interface );
 					}
-					
-					File_Put_Contents( $File, $Interface );
 				}
 				
 				return true;
