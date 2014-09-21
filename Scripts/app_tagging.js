@@ -52,9 +52,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	var fnSetReportTooltip = function( $ReportFlag )
 	{
 		if ( $ReportFlag.hasClass('reported') )
-			$ReportFlag.data('store-tooltip', 'You have reported this tag.' );
+			$ReportFlag.data('store-tooltip', 'You have reported this tag as being incorrectly applied to this product.  Click again to remove the report.' );
 		else
-			$ReportFlag.data('store-tooltip', 'Click to enter a report for this tag.' );
+			$ReportFlag.data('store-tooltip', 'Click to report for this tag as being incorrectly applied to this product.' );
 	};
 
 	var fnCheckboxClick = function( checkbox, tag, bPopular, tagid )
