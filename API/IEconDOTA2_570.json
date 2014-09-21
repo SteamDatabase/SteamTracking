@@ -1,0 +1,88 @@
+{
+    "name": "IEconDOTA2_570",
+    "methods": [
+        {
+            "name": "GetEventStatsForAccount",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "eventid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The League ID of the compendium you're looking for."
+                },
+                {
+                    "name": "accountid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The account ID to look up."
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The language to provide hero names in."
+                }
+            ]
+        },
+        {
+            "name": "GetGameItems",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The language to provide item names in."
+                }
+            ]
+        },
+        {
+            "name": "GetHeroes",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The language to provide hero names in."
+                },
+                {
+                    "name": "itemizedonly",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Return a list of itemized heroes only."
+                }
+            ]
+        },
+        {
+            "name": "GetRarities",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The language to provide rarity names in."
+                }
+            ]
+        },
+        {
+            "name": "GetTournamentPrizePool",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "leagueid",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "The ID of the league to get the prize pool of"
+                }
+            ]
+        }
+    ]
+}

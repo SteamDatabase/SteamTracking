@@ -1,0 +1,11 @@
+{
+    "name": "ITFItems_440",
+    "methods": [
+        {
+            "name": "GetGoldenWrenches",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": []
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "ICSGOServers_730",
+    "methods": [
+        {
+            "name": "GetGameServersStatus",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        }
+    ]
+}

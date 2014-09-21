@@ -1,0 +1,11 @@
+{
+    "name": "ISteamPayPalPaymentsHub",
+    "methods": [
+        {
+            "name": "PayPalPaymentsHubPaymentNotification",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": []
+        }
+    ]
+}

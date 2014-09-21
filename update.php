@@ -144,6 +144,31 @@
 				
 				unset( $DataJSON );
 			}
+			else if( $File === 'API/SupportedAPIList.json' )
+			{
+				$Data = JSON_Decode( $Data, true );
+				
+				if( !isset( $Data[ 'apilist' ][ 'interfaces' ] ) )
+				{
+					return false;
+				}
+				
+				foreach( $Data[ 'apilist' ][ 'interfaces' ] as $Interface )
+				{
+					$File = __DIR__ . '/API/' . $Interface[ 'name' ] . '.json';
+					
+					$Interface = JSON_Encode( $Interface, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES ) . PHP_EOL;
+					
+					if( File_Exists( $File ) && StrCmp( File_Get_Contents( $File ), $Interface ) === 0 )
+					{
+						return false;
+					}
+					
+					File_Put_Contents( $File, $Interface );
+				}
+				
+				return true;
+			}
 			// Get archives from beta manifest
 			else if( $File === 'ClientManifest/steam_client_publicbeta_ubuntu12' )
 			{

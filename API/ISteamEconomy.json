@@ -1,0 +1,67 @@
+{
+    "name": "ISteamEconomy",
+    "methods": [
+        {
+            "name": "GetAssetClassInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Must be a steam economy app."
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The user's local language"
+                },
+                {
+                    "name": "class_count",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of classes requested. Must be at least one."
+                },
+                {
+                    "name": "classid0",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Class ID of the nth class."
+                },
+                {
+                    "name": "instanceid0",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "Instance ID of the nth class."
+                }
+            ]
+        },
+        {
+            "name": "GetAssetPrices",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Must be a steam economy app."
+                },
+                {
+                    "name": "currency",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The currency to filter for"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The user's local language"
+                }
+            ]
+        }
+    ]
+}

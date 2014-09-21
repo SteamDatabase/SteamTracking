@@ -1,0 +1,149 @@
+{
+    "name": "IGameServersService",
+    "methods": [
+        {
+            "name": "GetAccountList",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Gets a list of game server accounts with their logon tokens",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                }
+            ]
+        },
+        {
+            "name": "CreateAccount",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Creates a persistent game server account",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The app to use the account for"
+                },
+                {
+                    "name": "memo",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The memo to set on the new account"
+                }
+            ]
+        },
+        {
+            "name": "SetMemo",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "This method changes the memo associated with the game server account. Memos do not affect the account in any way. The memo shows up in the GetAccountList response and serves only as a reminder of what the account is used for.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the game server to set the memo on"
+                },
+                {
+                    "name": "memo",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The memo to set on the new account"
+                }
+            ]
+        },
+        {
+            "name": "ResetLoginToken",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Generates a new login token for the specified game server",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the game server to reset the login token of"
+                }
+            ]
+        },
+        {
+            "name": "GetAccountPublicInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Gets public information about a given game server account",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the game server to get info on"
+                }
+            ]
+        },
+        {
+            "name": "GetServerSteamIDsByIP",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Gets a list of server SteamIDs given a list of IPs",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "server_ips",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "GetServerIPsBySteamID",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Gets a list of server IP addresses given a list of SteamIDs",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "server_steamids",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "name": "IDOTA2Fantasy_205790",
+    "methods": [
+        {
+            "name": "GetFantasyPlayerStats",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "FantasyLeagueID",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The fantasy league ID"
+                },
+                {
+                    "name": "StartTime",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "An optional filter for minimum timestamp"
+                },
+                {
+                    "name": "EndTime",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "An optional filter for maximum timestamp"
+                },
+                {
+                    "name": "matchid",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "An optional filter for a specific match"
+                },
+                {
+                    "name": "SeriesID",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "An optional filter for a specific series"
+                },
+                {
+                    "name": "PlayerAccountID",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "An optional filter for a specific player"
+                }
+            ]
+        },
+        {
+            "name": "GetPlayerOfficialInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "accountid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The account ID to look up"
+                }
+            ]
+        }
+    ]
+}

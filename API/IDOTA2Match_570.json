@@ -1,0 +1,198 @@
+{
+    "name": "IDOTA2Match_570",
+    "methods": [
+        {
+            "name": "GetLeagueListing",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        },
+        {
+            "name": "GetLiveLeagueGames",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "league_id",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Only show matches of the specified league id"
+                },
+                {
+                    "name": "match_id",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "Only show matches of the specified match id"
+                }
+            ]
+        },
+        {
+            "name": "GetMatchDetails",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "match_id",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Match id"
+                }
+            ]
+        },
+        {
+            "name": "GetMatchHistory",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "hero_id",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "The ID of the hero that must be in the matches being queried"
+                },
+                {
+                    "name": "game_mode",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Which game mode to return matches for"
+                },
+                {
+                    "name": "skill",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "The average skill range of the match, these can be [1-3] with lower numbers being lower skill. Ignored if an account ID is specified"
+                },
+                {
+                    "name": "min_players",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Minimum number of human players that must be in a match for it to be returned"
+                },
+                {
+                    "name": "account_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": "An account ID to get matches from. This will fail if the user has their match history hidden"
+                },
+                {
+                    "name": "league_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The league ID to return games from"
+                },
+                {
+                    "name": "start_at_match_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The minimum match ID to start from"
+                },
+                {
+                    "name": "matches_requested",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The number of requested matches to return"
+                },
+                {
+                    "name": "tournament_games_only",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Whether or not tournament games should only be returned"
+                }
+            ]
+        },
+        {
+            "name": "GetMatchHistoryBySequenceNum",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "start_at_match_seq_num",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "matches_requested",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "GetScheduledLeagueGames",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "date_min",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "The starting time stamp to collect scheduled games from. If ignored, it will use the current time"
+                },
+                {
+                    "name": "date_max",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "The ending time stamp. If this is more than 7 days past the starting time stamp, it will be clamped to 7 days."
+                }
+            ]
+        },
+        {
+            "name": "GetTeamInfoByTeamID",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "start_at_team_id",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "teams_requested",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "GetTournamentPlayerStats",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "account_id",
+                    "type": "string",
+                    "optional": false,
+                    "description": ""
+                },
+                {
+                    "name": "league_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "hero_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "time_frame",
+                    "type": "string",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "match_id",
+                    "type": "string",
+                    "optional": true,
+                    "description": ""
+                }
+            ]
+        }
+    ]
+}
