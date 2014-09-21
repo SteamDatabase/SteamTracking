@@ -1,0 +1,50 @@
+{
+    "name": "IEconItems_205790",
+    "methods": [
+        {
+            "name": "GetPlayerItems",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The Steam ID to fetch items for"
+                }
+            ]
+        },
+        {
+            "name": "GetSchema",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The language to return the names in. Defaults to returning string keys."
+                }
+            ]
+        },
+        {
+            "name": "GetSchemaURL",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        },
+        {
+            "name": "GetStoreMetaData",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The language to results in."
+                }
+            ]
+        }
+    ]
+}

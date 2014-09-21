@@ -1,0 +1,46 @@
+{
+    "name": "IAccountRecoveryService",
+    "methods": [
+        {
+            "name": "ReportAccountRecoveryData",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Send account recovery data",
+            "parameters": [
+                {
+                    "name": "loginuser_list",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "install_config",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "shasentryfile",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "machineid",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "RetrieveAccountRecoveryData",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Send account recovery data",
+            "parameters": [
+                {
+                    "name": "requesthandle",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

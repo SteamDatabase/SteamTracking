@@ -1,0 +1,131 @@
+{
+    "name": "ISteamUser",
+    "methods": [
+        {
+            "name": "GetFriendList",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "relationship",
+                    "type": "string",
+                    "optional": true,
+                    "description": "relationship type (ex: friend)"
+                }
+            ]
+        },
+        {
+            "name": "GetPlayerBans",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamids",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Comma-delimited list of SteamIDs"
+                }
+            ]
+        },
+        {
+            "name": "GetPlayerSummaries",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamids",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Comma-delimited list of SteamIDs"
+                }
+            ]
+        },
+        {
+            "name": "GetPlayerSummaries",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamids",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Comma-delimited list of SteamIDs (max: 100)"
+                }
+            ]
+        },
+        {
+            "name": "GetUserGroupList",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                }
+            ]
+        },
+        {
+            "name": "ResolveVanityURL",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "vanityurl",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The vanity URL to get a SteamID for"
+                },
+                {
+                    "name": "url_type",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "The type of vanity URL. 1 (default): Individual profile, 2: Group, 3: Official game group"
+                }
+            ]
+        }
+    ]
+}

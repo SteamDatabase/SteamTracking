@@ -1,0 +1,24 @@
+{
+    "name": "ISteamWebAPIUtil",
+    "methods": [
+        {
+            "name": "GetServerInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        },
+        {
+            "name": "GetSupportedAPIList",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": true,
+                    "description": "access key"
+                }
+            ]
+        }
+    ]
+}

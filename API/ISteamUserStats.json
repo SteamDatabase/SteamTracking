@@ -1,0 +1,212 @@
+{
+    "name": "ISteamUserStats",
+    "methods": [
+        {
+            "name": "GetGlobalAchievementPercentagesForApp",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "gameid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "GameID to retrieve the achievement percentages for"
+                }
+            ]
+        },
+        {
+            "name": "GetGlobalAchievementPercentagesForApp",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "gameid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "GameID to retrieve the achievement percentages for"
+                }
+            ]
+        },
+        {
+            "name": "GetGlobalStatsForGame",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID that we're getting global stats for"
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of stats get data for"
+                },
+                {
+                    "name": "name[0]",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Names of stat to get data for"
+                },
+                {
+                    "name": "startdate",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Start date for daily totals (unix epoch timestamp)"
+                },
+                {
+                    "name": "enddate",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "End date for daily totals (unix epoch timestamp)"
+                }
+            ]
+        },
+        {
+            "name": "GetNumberOfCurrentPlayers",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID that we're getting user count for"
+                }
+            ]
+        },
+        {
+            "name": "GetPlayerAchievements",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID to get achievements for"
+                },
+                {
+                    "name": "l",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Language to return strings for"
+                }
+            ]
+        },
+        {
+            "name": "GetSchemaForGame",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "l",
+                    "type": "string",
+                    "optional": true,
+                    "description": "localized langauge to return (english, french, etc.)"
+                }
+            ]
+        },
+        {
+            "name": "GetSchemaForGame",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "l",
+                    "type": "string",
+                    "optional": true,
+                    "description": "localized language to return (english, french, etc.)"
+                }
+            ]
+        },
+        {
+            "name": "GetUserStatsForGame",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                }
+            ]
+        },
+        {
+            "name": "GetUserStatsForGame",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                }
+            ]
+        }
+    ]
+}

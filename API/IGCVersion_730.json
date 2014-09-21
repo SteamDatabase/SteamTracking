@@ -1,0 +1,11 @@
+{
+    "name": "IGCVersion_730",
+    "methods": [
+        {
+            "name": "GetServerVersion",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        }
+    ]
+}
