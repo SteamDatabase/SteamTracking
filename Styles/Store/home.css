@@ -908,6 +908,9 @@ a.recommended_spotlight {
 	height: 129px;
 }
 
+#home_recommended_more {
+	background: background: -moz-linear-gradient(left, rgba(0,0,0,0.2) 5%, rgba(0,0,0,0.4) 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -webkit-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient(to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);}
+
 .recommended_spotlight_cap img {
 	width: 276px;
 	height: 129px;
@@ -1223,7 +1226,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	font-size: 24px;
 	color: #67c1f5;
 	text-align: center;
-	background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/more_content_bg.png');
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAeCAYAAAARgF8NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQoz2NkYGD4z4AHMDEQAKMKhpACFvuyaXgVMI6mh2GkAACV3gOGBNW82QAAAABJRU5ErkJggg==);
 	background-repeat: repeat-x;
 }
 .home_page_content .more_content_title span {

@@ -101,7 +101,7 @@ body.v6.login .rightcol .spotlight_block {
 
 .checkout_install_area
 {
-	min-height: 112px;
+
 }
 
 .btn_checkout_working {
@@ -669,6 +669,7 @@ body.v6.login .rightcol .spotlight_block {
 	position: relative;
 	padding-right: 124px;
 	text-align: right;
+	margin-top: 3px;
 }
 
 
@@ -1076,6 +1077,9 @@ label.send_choice_txt {
 	clear: none;
 	margin-top: 0px;
 }
+.checkout_tab.checkout_content {
+	margin-top: 30px;
+}
 
 .checkout_tab input.two_line_check {
 	margin-top:3px;
@@ -1255,6 +1259,8 @@ label.send_choice_txt {
 
 #receipt_area p, #ackgift_area p {
 	margin: 9px 0px;
+	font-size: 13px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
 .btn_checkout_print {
@@ -1771,3 +1777,66 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 	width: 450px;
 	margin-right: 10px;
 }
+
+.purchase_summary_area {
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 16px;
+}
+#btn_remote_install {
+	float: left;
+	background: -moz-linear-gradient(top, rgba(121,153,5,0.8) 5%, rgba(83,105,4,0.8) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(121,153,5,0.8)), color-stop(95%,rgba(83,105,4,0.8)));background: -webkit-linear-gradient(top, rgba(121,153,5,0.8) 5%,rgba(83,105,4,0.8) 95%);background: -o-linear-gradient(top, rgba(121,153,5,0.8) 5%,rgba(83,105,4,0.8) 95%);background: -ms-linear-gradient(top, rgba(121,153,5,0.8) 5%,rgba(83,105,4,0.8) 95%);background: linear-gradient(to bottom, rgba(121,153,5,0.8) 5%,rgba(83,105,4,0.8) 95%);	width: 271px;
+	padding: 12px 12px 15px 12px;
+	border-radius: 2px;
+	text-decoration: none;
+}
+#btn_remote_install:hover {
+	background: -moz-linear-gradient(top, rgba(164,208,7,1) 5%, rgba(107,135,5,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(164,208,7,1)), color-stop(95%,rgba(107,135,5,1)));background: -webkit-linear-gradient(top, rgba(164,208,7,1) 5%,rgba(107,135,5,1) 95%);background: -o-linear-gradient(top, rgba(164,208,7,1) 5%,rgba(107,135,5,1) 95%);background: -ms-linear-gradient(top, rgba(164,208,7,1) 5%,rgba(107,135,5,1) 95%);background: linear-gradient(to bottom, rgba(164,208,7,1) 5%,rgba(107,135,5,1) 95%);	color: #ffffff;
+}
+.checkout_gotsteam_area,
+.receipt_body,
+.checkout_receipt_gift_detail {
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 16px;
+}
+.checkout_gotsteam_area h1 {
+	font-weight: normal;
+	font-size: 36px;
+	color: #ffffff;
+}
+.checkout_gotsteam_area p {
+	color: #8F98A0;
+	font-size: 15px;
+	font-weight: normal;
+}
+.checkout_gotsteam_area #gotsteam_buttons {
+	padding: 10px 0px 0px 0px;
+}
+.checkout_gotsteam_area a.btn_blue h3 {
+	font-size: 23px;
+	font-weight: normal;
+}
+.checkout_gotsteam_area a.btn_blue h5 {
+	font-size: 13px;
+	font-weight: normal;
+	text-transform: none;
+}
+.checkout_gotsteam_area a.btn_blue h3, .checkout_gotsteam_area a.btn_blue h5 {
+	color: #66C0F4;
+
+}
+.checkout_gotsteam_area a.btn_blue:hover h3, .checkout_gotsteam_area a.btn_blue:hover h5 {
+	color: #ffffff;
+}
+.checkout_gotsteam_area a.btn_blue {
+	float: left;
+	background: -moz-linear-gradient(top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -webkit-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -o-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: linear-gradient(to bottom, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);	width: 260px;
+	padding: 12px 12px 15px 12px;
+	border-radius: 2px;
+	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
+	text-decoration: none;
+}
+.checkout_gotsteam_area a.btn_blue.leftbtn {
+	margin-right: 16px;
+}
+.checkout_gotsteam_area a.btn_blue:hover {
+	background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);}
