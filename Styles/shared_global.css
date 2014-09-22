@@ -790,17 +790,14 @@ div.page_content {
 
 
 div#global_header {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg' );
-	background-color: #000000;
-	border-bottom: 1px solid #4D4B48;
+	background: #171a21;
 	background-position: center top;
 	min-width: 940px;
 }
 
 /**/
 div#global_header .content {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg' );
-	background-position: center top;
+	background: #171a21;
 	position: relative;
 	width: 940px;
 	height: 104px;
@@ -1362,6 +1359,7 @@ img.dynamiclink_preview {
 	padding: 1px 4px 0px 4px;
 	margin-bottom: 10px;
 	display: inline-block;
+	cursor: default;
 }
 
 /* shared bbcode styles */

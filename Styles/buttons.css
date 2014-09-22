@@ -493,6 +493,11 @@ btnv6_border_2px > span {
 	font-size: 12px;
 	line-height: 20px;
 }
+.btn_tiny > span, input.btn_tiny {
+	padding: 0 7px;
+	font-size: 11px;
+	line-height: 17px;
+}
 
 /* Misc effects */
 .btn_uppercase > span {

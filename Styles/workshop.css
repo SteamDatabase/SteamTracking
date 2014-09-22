@@ -584,8 +584,8 @@ a.general_btn:hover {
 .rightSectionBrowseBarContent
 {
 	position: relative;
-	background-color: #111111;
-	color: #494947;
+	background-color: #272f38;
+	color: #898989;
 	font-size: 10px;
 	height: 27px;
 	line-height: 27px;
@@ -612,8 +612,8 @@ a.general_btn:hover {
 
 .rightSectionBrowseBarContent:hover
 {
-	color: #000000;
-	background-color: #595959;
+	color: #ffffff;
+	background-color: #272f38;
 }
 
 .rightDetailsBlockHidden
@@ -1884,6 +1884,7 @@ textarea {
 {
 	padding-top: 10px;
 	word-wrap: break-word;
+    color: #959595;
 }
 
 .workshopItemCollection .workshopItemAuthorName
@@ -3730,7 +3731,7 @@ body{
 }
 
 #ig_bottom {
-	background: #262627 url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/greenlight_content_background.png') top center no-repeat;
+	/*background: #262627 url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/greenlight_content_background.png') top center no-repeat;*/
 	width: 950px;
 	margin: 0 auto 0 auto;
 }
@@ -3783,13 +3784,9 @@ body{
 
 #ig_bottom .sidebar .panel
 {
-	background: #1b1b1b;
-	background: rgba(27,27,27,.36);
-	border-radius: 4px;
-	padding: 10px 10px 10px 11px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 10px 10px 10px 11px;
 	margin: 0 0 10px 0;
-	border: 1px solid #1f1f20;
-	box-shadow: 1px 1px 0 0 #39393a;
 }
 
 #ig_bottom .sidebar .panel.owner {

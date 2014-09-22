@@ -111,13 +111,13 @@ body
 
 .community_home_header .appHubShortcut, .community_home_header .appHubShortcut a, .community_home_header .appHubShortcut a:visited
 {
-	color: #767676;
+	color: #dadada;
 }
 
 .community_home_header .appHubShortcut a:hover
 {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .appHubShortcut_Title
@@ -145,7 +145,7 @@ body
 	padding: 10px;
 	width: 608px;
 	height: 200px;
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.4);
 	border: 1px solid transparent;
 	float: left;
 }
@@ -193,7 +193,7 @@ body
 	width: 286px;
 	height: 200px;
 	margin-left: 10px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
 	border: 1px solid transparent;
 	float: left;
 }

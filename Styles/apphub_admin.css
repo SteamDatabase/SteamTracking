@@ -2,12 +2,14 @@
 	/* override the background for now */
 body
 {
-	background: #262627 url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png') top repeat-x;
+	/*background: #262627 url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png') top repeat-x;*/
+    background: #262627
 	background-position: 0 105px;
 }
 
 P {
-	font-size: 14px;
+	font-size: 16px;
+    color: #888888;
 }
 
 .maincontent
@@ -49,13 +51,13 @@ P {
 
 .rightcol .panel
 {
-	background: #1b1b1b;
-	background: rgba(27,27,27,.36);
-	border-radius: 4px;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 	padding: 10px 10px 10px 11px;
 	margin: 0 0 10px 0;
-	border: 1px solid #1f1f20;
+	/*border: 1px solid #1f1f20;
+	background: rgba(27,27,27,.36);
 	box-shadow: 1px 1px 0 0 #39393a;
+    border-radius: 4px;*/
 }
 
 .panel .title
@@ -82,7 +84,7 @@ P {
 .welcome_admin
 {
 	color: white;
-	font-size: 1.25em;
+	font-size: 16px;
 	background-color: #222222;
 	line-height: 64px;
 }
@@ -109,17 +111,19 @@ P {
 	padding: 15px;
 	padding-bottom: 20px;
 	margin-top: 20px;
-	background-color: #333333
+	background-color: #222222;
 }
 
 .faq_title
 {
 	padding-bottom: 10px;
 	font-size: 17px;
+    font-color: #636363;
 }
 
 .faq_sub_title
 {
 	color: #529CDE;
 	padding-bottom: 5px;
+    font-size: 14px;
 }
