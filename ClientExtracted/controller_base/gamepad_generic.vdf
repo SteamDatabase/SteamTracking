@@ -1,0 +1,27 @@
+"controller_mappings"
+{
+	"buttons"
+	{	
+	}
+
+	"pads"
+	{
+	}
+
+	"settings"
+	{
+		"host_gamepad_enabled"	"1"
+		
+		"left_trackpad_mode"	"none"
+		"right_trackpad_mode"	"none"
+	}
+
+	"metadata"
+	{
+		"title"	"Gamepad Mode"
+		"description" "Steam Controller acts as a gamepad.  You may still rebind the extra buttons."
+	}
+}
+
+	
+

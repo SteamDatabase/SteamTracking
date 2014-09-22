@@ -1070,6 +1070,7 @@
 	"Checkout_PaymentMethod_SecurityCode"		"Security code"
 	"Checkout_PaymentMethod_SaveInfo"			"Save my payment information"
 	"Checkout_PaymentMethod_MustSaveInfo"			"Your payment information will be saved because your cart contains a renewing subscription"
+	"Checkout_PaymentMethod_UpdatePayPal"	"For your security, you will be required to re-authorize your purchase with PayPal."
 	"Checkout_PaymentMethod_PayPalInstructions"	"PayPal transactions are authorized through the PayPal web site."
 	"Checkout_PaymentMethod_ClickAndBuyInstructions" "ClickandBuy transactions are authorized through the ClickandBuy web site. Press continue to open a new web browser window to initiate the transaction."
 	"Checkout_PaymentMethod_ClickAndBuySaved"	"Your ClickandBuy account information was previously saved and will be used again for this purchase."
