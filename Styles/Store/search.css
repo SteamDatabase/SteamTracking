@@ -216,12 +216,44 @@
 }
 
 .search_result_row .col.search_reviewscore {
-	width: 115px;
+	width: 30px;
 	font-size: 11px;
 	line-height: 16px;
-	padding-top: 6px;
-	height: 32px;
+	height: 16px;
+	padding: 14px 0 15px 0;
 	text-align: center;
+}
+
+.search_reviewscore .search_review_summary {
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	vertical-align: middle;
+	background: no-repeat center center;
+}
+
+.search_review_summary.positive {
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/user_reviews_positive.png' );
+}
+
+.search_review_summary.mixed {
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/user_reviews_mixed.png' );
+}
+
+.search_review_summary.negative {
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/user_reviews_negative.png' );
+}
+
+.game_review_summary {
+	color: #A34C25;
+}
+
+.game_review_summary.positive {
+	color: #66C0F4;
+}
+
+.game_review_summary.none {
+	color: #626366;
 }
 
 .search_result_row .col.search_reviewscore .game_review_summary {
