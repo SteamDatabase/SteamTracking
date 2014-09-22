@@ -38,7 +38,7 @@ body.apphub_blue
 	height: 300px;
 	line-height: 300px;
 	margin: 0px auto;
-	border:  1px solid black;
+	border:  1px solid transparent;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
@@ -52,7 +52,7 @@ body.apphub_blue
 	height: 300px;
 	line-height: 300px;
 	margin: 0px auto;
-	border:  1px solid black;
+	border:  1px solid transparent;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
@@ -256,7 +256,7 @@ body.apphub_blue
 
 .apphub_HubDividerShadow
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/hub_divider_shadow.png' );
+	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/hub_divider_shadow.png' );*/
 	height: 20px;
 	width: 948px;
 }
@@ -489,7 +489,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 {
 	float: left;
 	padding-left: 8px;
-	padding-top: 6px;
+	margin-top: 9px;
 }
 
 .appHubSearchTextInput
@@ -507,7 +507,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .appHubSearchTextImage
 {
 	position: absolute;
-	top: 8px;
+	top: 5px;
 	right: 3px;
 	width: 23px;
 	height: 18px;
@@ -521,7 +521,9 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 
 .apphub_StoreInfoHeader
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_gameinfo.png' );
+	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_gameinfo.png' );*/
+    border-top: 1px solid #272f38;
+    background-color: #1B1B1B;
 	width: 948px;
 	height: 212px;
 	text-align: left;
@@ -534,14 +536,15 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	float: left;
 	padding-top: 15px;
 	padding-left: 22px;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 
 .apphub_StoreAppText
 {
-	color: white;
+	color: #8c8b8a;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	font-size: 14px;
-	padding-top: 20px;
+	padding-top: 22px;
 	padding-right: 25px;
 	text-align: left;
 }
@@ -655,7 +658,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 }
 
 .rightbox_header, .rightbox_footer {
-	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );
+	/*background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );*/
 	width: 295px;
 	height: 4px;
 }

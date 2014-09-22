@@ -1389,7 +1389,7 @@ select.subforum_select_control {
 }
 
 .rightbox_header, .rightbox_footer {
-	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );
+	/*background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );*/
 	width: 295px;
 	height: 4px;
 }
@@ -1403,7 +1403,8 @@ select.subforum_select_control {
 	margin-bottom: 18px;
 }
 .rightbox {
-	background: repeat-y url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_repeat.png' );
+	/*background: repeat-y url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_repeat.png' );*/
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 .rightbox .content {
 	padding: 16px 14px;

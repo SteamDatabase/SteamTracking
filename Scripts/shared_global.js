@@ -1782,3 +1782,77 @@ function IsValidEmailAddress( email )
   };
 })(jQuery);
 
+/**
+ * Generic search field that handles:
+ * 1.) Showing default text if the input field is empty
+ * 2.) When the input field gets focus, the text field clears
+ * 3.) Adding CSS class to the input field when it is default text
+ * 4.) When the user presses return/enter in  the field
+ *
+ * Call ClearIfDefaultValue() before submitting the form
+ */
+SearchFieldWithText = Class.create({
+	initialize: function initialize( elemID, defaultSearchText, onEnterFunc, defaultTextCSSClass )
+	{
+		var elem = $( elemID );
+
+		this.elem = elem;
+		this.defaultSearchText = defaultSearchText;
+		this.defaultTextCSSClass = defaultTextCSSClass;
+		this.onEnterFunc = onEnterFunc;
+
+		Event.observe( elem, 'click', this.handleClickOrFocus.bind(this));
+		Event.observe( elem, 'focus', this.handleClickOrFocus.bind(this));
+		Event.observe( elem, 'blur', this.handleBlur.bind(this));
+		Event.observe( elem, 'keypress', this.handleKeypress.bind(this));
+		Event.observe( elem.form, 'submit', this.ClearIfDefaultValue.bind(this));
+
+		this.handleBlur();
+	},
+	handleClickOrFocus: function handleClick()
+	{
+		if ( this.elem.value == this.defaultSearchText )
+		{
+			this.elem.value = '';
+			if ( this.defaultTextCSSClass )
+				this.elem.removeClassName( this.defaultTextCSSClass );
+		}
+	},
+	handleBlur: function handleBlur()
+	{
+		if ( this.elem.value == '')
+		{
+			this.elem.value = this.defaultSearchText;
+			if ( this.defaultTextCSSClass )
+				this.elem.addClassName( this.defaultTextCSSClass );
+		}
+	},
+	handleKeypress: function handleKeypress()
+	{
+		if ( !this.onEnterFunc )
+			return;
+
+		var keyCode = null;
+		if( event.which )
+		{
+			keyCode = event.which;
+		}
+		else if( event.keyCode )
+		{
+			keyCode = evt.keyCode;
+		}
+		if ( 13 == keyCode )
+		{
+			this.onEnterFunc();
+		}
+	},
+	ClearIfDefaultValue: function ClearIfDefaultValue()
+	{
+		if ( this.elem.value == this.defaultSearchText )
+		{
+			this.elem.value = '';
+		}
+	}
+});
+
+

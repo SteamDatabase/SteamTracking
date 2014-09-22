@@ -1,7 +1,9 @@
 
 body
 {
-   /* font-family: Motiva Sans, Arial, Helvetica, sans-serif;*/
+    background:  url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center top repeat-y #000000;
+    color: #636363;
+    background-color: #000000;
 }
 
 center
@@ -32,6 +34,8 @@ center
 	margin: 0px auto;
 	text-align: left;
 	padding-top: 12px;
+/*	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_hub_header.png');
+	background-repeat: no-repeat;*/
 }
 
 
@@ -39,14 +43,15 @@ center
 .apphub_background
 {
 	background-position: center top;
-	background-repeat: no-repeat;
 	background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 
 .apphub_HeaderTop.workshop
 {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_workshop_header.png');
+
+	/*background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_workshop_header.png');*/
 }
 
 .apphub_HeaderStandardTop
@@ -62,29 +67,33 @@ center
 
 .apphub_AppIcon
 {
-	position: relative;
+    display: none;
+
+	/*position: relative;
 	margin-left: 12px;
 	height: 32px;
 	width: 32px;
-	float: left;
+	float: left;*/
 }
 
 .apphub_AppIcon .overlay
 {
-	position: absolute;
+    display: none;
+
+    /*position: absolute;
 	left: 0px;
 	top: 0px;
 	width: 32px;
 	height: 32px;
 	background: url( https://steamcommunity-a.akamaihd.net/public/shared/images/game_ico_overlay.png );
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 }
 
 .apphub_AppName
 {
 	color: white;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	font-size: 26px;
-	padding-left: 12px;
 	float: left;
 	max-width: 700px;
 }
@@ -184,6 +193,10 @@ center
 {
 }
 
+.apphub_HomeHeaderContent
+{
+    padding-top: 10px;
+}
 .apphub_HeaderBottomBG_ctn
 {
 	position: relative;
@@ -379,7 +392,7 @@ background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webk
 	width: 24px;
 	height: 24px;
 	border:0;
-	margin:0;
+	margin:2px 0px 0px 0px;
 }
 
 
@@ -631,6 +644,7 @@ a.apphub_more_friends_who_play:hover
 .apphub_Content.modal
 {
 	padding-top: 20px;
+    background-color: #1B1B1B;
 }
 
 .apphub_Card
@@ -660,7 +674,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_Card.pinned
 {
-	border: 1px solid #494949;
+	/*border: 1px solid #272f38;*/
 }
 
 .apphub_CardPinnedIcon
@@ -888,7 +902,7 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardContentAuthorBlock
 {
 	height: 19px;
-	padding: 4px;
+	padding: 5px;
 	/*background-color: #3e3d3d;*/
 	position: absolute;
 	bottom: 0px;
@@ -961,8 +975,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardContentAuthorName.discussion
 {
-	padding-top: 5px;
-	padding-left: 47px;
+	padding-left: 45px;
 }
 
 .apphub_CardContentAuthorName a
@@ -1053,7 +1066,7 @@ a.apphub_more_friends_who_play:hover
 	position: relative;
 	float: right;
 	clear: right;
-	margin-top: 30px;
+	margin-top: 28px;
 }
 
 .apphub_CardCommentCount.alignNews
@@ -1116,9 +1129,9 @@ a.apphub_more_friends_who_play:hover
 	border: 1px solid #3b3c3d;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
-	padding: 12px 9px 12px 9px;
+	padding: 8px;
 	min-height: 100px;
-	max-height: 150px;
+	max-height: 128px;
 	overflow: hidden;
 }
 
@@ -1157,16 +1170,17 @@ a.apphub_more_friends_who_play:hover
 	padding: 4px;
 	height: 32px;
 	line-height: 32px;
-	padding-top: 6px;
+	padding-top: 7px;
 	padding-left: 7px;
-	background-color: #3e3d3d;
+	background-color: #1b1b1b;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	font-size: 12px;
-	font-weight: bold;
-	color: #555454;
+	font-size: 13px;
+	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+	color: #636363;
+    border-top: 1px solid #272f38;
 }
 
 .apphub_Card.interactable:hover .apphub_CardContentDiscussionType
@@ -1214,7 +1228,7 @@ a.apphub_more_friends_who_play:hover
 {
 	color: #8c8b8a;
 	font-size: 14px;
-	line-height: 18px;
+	line-height: 22px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -1284,9 +1298,10 @@ a.apphub_more_friends_who_play:hover
 {
 	padding: 12px 9px;
     overflow: hidden;
-    height: 61px;
-    font-size: 12px;
-    line-height: 18px;
+    height: 69px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #8c8b8a;
 }
 
 .apphub_CardContentGuideForApp
@@ -1389,9 +1404,9 @@ a.apphub_more_friends_who_play:hover
 }
 
 .apphub_UserReviewCardContent .apphub_CardTextContent {
-	line-height: 20px;
-	font-size: 13px;
-	color: #cdcac1;
+	line-height: 22px;
+	font-size: 14px;
+	color: #8c8b8a;
 	font-family: 'Motiva Sans', arial, tahoma;
 }
 
