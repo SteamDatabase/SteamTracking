@@ -49,6 +49,9 @@
 			/>
 		</Panel>	
 			
+		<Panel id="UpdatePayPalFields">
+			<Label text="#Checkout_PaymentMethod_UpdatePayPal" />
+		</Panel>
 		<Panel id="PayPalFields">
 			<Label text="#Checkout_PaymentMethod_PayPalInstructions" />
 		</Panel>
