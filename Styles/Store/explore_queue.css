@@ -1,0 +1,142 @@
+
+/* top section */
+.header_area {
+	padding-top: 14px;
+}
+
+.block
+{
+	background-color: rgba( 0, 0, 0, 0.4 );
+	padding: 10px;
+}
+.block p
+{
+	margin-bottom: 10px;
+}
+
+/* filters */
+.tab_filter_ctn {
+	color: #779abd;
+	margin-bottom: 11px;
+	font-size: 12px;
+}
+.tab_filter_header {
+	margin-bottom: 4px;
+}
+.tab_filter {
+	display: inline-block;
+	white-space: nowrap;
+	border-radius: 2px;
+	padding: 0 9px;
+	line-height: 24px;
+	margin: 0 4px 4px 0;
+	background: #67c1f5; /* Old browsers */
+	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color: #ffffff;
+}
+.tab_filter_remove {
+	display: inline-block;
+	cursor: pointer;
+	background: no-repeat center center url('https://steamstore-a.akamaihd.net/public/images/v6/delete_search_term.png');
+	width: 12px;
+	height: 24px;
+	margin-left: 8px;
+}
+
+
+
+/* queue */
+.discovery_queue_desc
+{
+	padding: 2px 0;
+    color: #8F98A0;
+    font-size: 13px;
+    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+}
+
+.discovery_queue_apps
+{
+	padding-bottom: 48px;
+}
+
+.discovery_queue_apps .discovery_queue_app:nth-child(2n+1)
+{
+	margin-right: 15px;
+}
+
+.discovery_queue_app
+{
+	float: left;
+	margin-bottom: 15px;
+}
+.discover_queue_app_img
+{
+	width: 292px;
+	height: 136px;
+}
+.queue_page_desc {
+    font-size: 16px;
+    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+}
+
+.faq_ctn {
+	width: 640px;
+}
+
+.faq_question {
+	font-family: "Motiva Sans Thin", "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	color: #67c1f5;
+	padding: 10px 0px 3px 0px;
+}
+
+.faq_answer {
+	font-family: "Motiva Sans Light", "Motiva Sans Light", arial, tahoma, sans-serif;
+	font-size: 15px;
+	margin-bottom: 20px;
+	line-height: 21px;
+}
+
+.explore_rightcol_box {
+	width: 280px;
+	background-color: #17212f;
+	margin-top: 6px;
+	padding: 12px;
+}
+
+.explore_rightcol_header {
+	color: #61686d;
+}
+
+.explore_rightcol_count_box {
+
+}
+
+.explore_rightcol_count_box .btnv6_blue_hoverfade {
+
+}
+
+.explore_rightcol_count {
+	font-size: 48px;
+	font-weight: normal;
+	font-family: "Motiva Sans Bold", arial, tahoma, sans-serif;
+	color: white;
+	float: left;
+	padding: 0px 10px 0px 0px;
+}
+
+.explore_rightcol_text {
+	color: #8e979f;
+	padding: 10px 0px 3px 10px;
+}
+
+.explore_rightcol_explain {
+	color: #636a6f;
+}

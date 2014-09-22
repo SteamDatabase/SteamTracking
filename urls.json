@@ -25,7 +25,10 @@
 //
 // Store CSS (v6)
 //
+"Styles/Store/browse.css"                        : "https://steamstore-a.akamaihd.net/public/css/v6/browse.css?__TIME__",
 "Styles/Store/cart.css"                          : "https://steamstore-a.akamaihd.net/public/css/v6/cart.css?__TIME__",
+"Styles/Store/curators_browse.css"               : "https://steamstore-a.akamaihd.net/public/css/v6/curators_browse.css?__TIME__",
+"Styles/Store/explore_queue.css"                 : "https://steamstore-a.akamaihd.net/public/css/v6/explore_queue.css?__TIME__",
 "Styles/Store/game.css"                          : "https://steamstore-a.akamaihd.net/public/css/v6/game.css?__TIME__",
 "Styles/Store/genre.css"                         : "https://steamstore-a.akamaihd.net/public/css/v6/genre.css?__TIME__",
 "Styles/Store/home.css"                          : "https://steamstore-a.akamaihd.net/public/css/v6/home.css?__TIME__",
@@ -38,8 +41,7 @@
 "Styles/Store/tags.css"                          : "https://steamstore-a.akamaihd.net/public/css/v6/tags.css?__TIME__",
 "Styles/Store/updated_apps.css"                  : "https://steamstore-a.akamaihd.net/public/css/v6/updated_apps.css?__TIME__",
 
-"Styles/Store/curators.css"                      : "https://steamstore-a.akamaihd.net/public/css/v6/curators.css?__TIME__",
-"Styles/Store/explore.css"                       : "https://steamstore-a.akamaihd.net/public/css/v6/explore.css?__TIME__",
+// These don't exist (yet?)
 "Styles/Store/about.css"                         : "https://steamstore-a.akamaihd.net/public/css/v6/about.css?__TIME__",
 "Styles/Store/hwsurvey.css"                      : "https://steamstore-a.akamaihd.net/public/css/v6/hwsurvey.css?__TIME__",
 "Styles/Store/parental.css"                      : "https://steamstore-a.akamaihd.net/public/css/v6/parental.css?__TIME__",
@@ -133,21 +135,33 @@
 //
 // Store JS
 //
-"Scripts/app_tagging.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/app_tagging.js?__TIME__&l=english",
-"Scripts/cart.js"                                : "https://steamstore-a.akamaihd.net/public/javascript/cart.js?__TIME__&l=english",
-"Scripts/checkout.js"                            : "https://steamstore-a.akamaihd.net/public/javascript/checkout.js?__TIME__&l=english",
-"Scripts/comments.js"                            : "https://steamstore-a.akamaihd.net/public/javascript/comments.js?__TIME__&l=english",
-"Scripts/gamehighlightplayer.js"                 : "https://steamstore-a.akamaihd.net/public/javascript/gamehighlightplayer.js?__TIME__&l=english",
-"Scripts/joinsteam.js"                           : "https://steamstore-a.akamaihd.net/public/javascript/joinsteam.js?__TIME__&l=english",
-"Scripts/login.js"                               : "https://steamstore-a.akamaihd.net/public/javascript/login.js?__TIME__&l=english",
-"Scripts/redeemwalletcode.js"                    : "https://steamstore-a.akamaihd.net/public/javascript/redeemwalletcode.js?__TIME__&l=english",
-"Scripts/refundpurchase.js"                      : "https://steamstore-a.akamaihd.net/public/javascript/refundpurchase.js?__TIME__&l=english",
-"Scripts/store_javascript.js"                    : "https://steamstore-a.akamaihd.net/public/javascript/javascript.js?__TIME__&l=english",
-"Scripts/store_main.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/main.js?__TIME__&l=english",
-"Scripts/store_search.js"                        : "https://steamstore-a.akamaihd.net/public/javascript/search.js?__TIME__&l=english",
-"Scripts/supportmessages.js"                     : "https://steamstore-a.akamaihd.net/public/javascript/supportmessages.js?__TIME__&l=english",
-"Scripts/user_reviews_store.js"                  : "https://steamstore-a.akamaihd.net/public/javascript/user_reviews_store.js?__TIME__&l=english",
-"Scripts/youraccount.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/youraccount.js?__TIME__&l=english",
+"Scripts/Store/app_reporting.js"                 : "https://steamstore-a.akamaihd.net/public/javascript/app_reporting.js?__TIME__&l=english",
+"Scripts/Store/app_tagging.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/app_tagging.js?__TIME__&l=english",
+"Scripts/Store/cart.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/cart.js?__TIME__&l=english",
+"Scripts/Store/checkout.js"                      : "https://steamstore-a.akamaihd.net/public/javascript/checkout.js?__TIME__&l=english",
+"Scripts/Store/cluster.js"                       : "https://steamstore-a.akamaihd.net/public/javascript/cluster.js?__TIME__&l=english",
+"Scripts/Store/comments.js"                      : "https://steamstore-a.akamaihd.net/public/javascript/comments.js?__TIME__&l=english",
+"Scripts/Store/communitylink.js"                 : "https://steamstore-a.akamaihd.net/public/javascript/communitylink.js?__TIME__&l=english",
+"Scripts/Store/curators_browse.js"               : "https://steamstore-a.akamaihd.net/public/javascript/curators_browse.js?__TIME__&l=english",
+"Scripts/Store/demos.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/demos.js?__TIME__&l=english",
+"Scripts/Store/discoveryqueue.js"                : "https://steamstore-a.akamaihd.net/public/javascript/discoveryqueue.js?__TIME__&l=english",
+"Scripts/Store/dynamicstore.js"                  : "https://steamstore-a.akamaihd.net/public/javascript/dynamicstore.js?__TIME__&l=english",
+"Scripts/Store/game.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/game.js?__TIME__&l=english",
+"Scripts/Store/gamehighlightplayer.js"           : "https://steamstore-a.akamaihd.net/public/javascript/gamehighlightplayer.js?__TIME__&l=english",
+"Scripts/Store/home.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/home.js?__TIME__&l=english",
+"Scripts/Store/joinsteam.js"                     : "https://steamstore-a.akamaihd.net/public/javascript/joinsteam.js?__TIME__&l=english",
+"Scripts/Store/login.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/login.js?__TIME__&l=english",
+"Scripts/Store/modal.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/modal.js?__TIME__&l=english",
+"Scripts/Store/news.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/news.js?__TIME__&l=english",
+"Scripts/Store/redeemwalletcode.js"              : "https://steamstore-a.akamaihd.net/public/javascript/redeemwalletcode.js?__TIME__&l=english",
+"Scripts/Store/refundpurchase.js"                : "https://steamstore-a.akamaihd.net/public/javascript/refundpurchase.js?__TIME__&l=english",
+"Scripts/Store/searchpage.js"                    : "https://steamstore-a.akamaihd.net/public/javascript/searchpage.js?__TIME__&l=english",
+"Scripts/Store/store_javascript.js"              : "https://steamstore-a.akamaihd.net/public/javascript/javascript.js?__TIME__&l=english",
+"Scripts/Store/store_main.js"                    : "https://steamstore-a.akamaihd.net/public/javascript/main.js?__TIME__&l=english",
+"Scripts/Store/store_search.js"                  : "https://steamstore-a.akamaihd.net/public/javascript/search.js?__TIME__&l=english",
+"Scripts/Store/supportmessages.js"               : "https://steamstore-a.akamaihd.net/public/javascript/supportmessages.js?__TIME__&l=english",
+"Scripts/Store/user_reviews_store.js"            : "https://steamstore-a.akamaihd.net/public/javascript/user_reviews_store.js?__TIME__&l=english",
+"Scripts/Store/youraccount.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/youraccount.js?__TIME__&l=english",
 
 //
 // JS (mixed)
