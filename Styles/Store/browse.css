@@ -1,0 +1,349 @@
+/* CSS Document */
+
+.browse_header .page_title .blockbg {
+	background-color: #ff9900;
+	color: #000000;
+}
+
+.browse_floating_link {
+	float: right;
+	width: 288px;
+}
+
+.browse_links a {
+	color: #b0aeac;
+}
+
+.browse_links a.linkbar .rightblock {
+	color: #626366;
+}
+
+.tabbar {
+    margin-bottom: 10px;
+}
+.tabarea_filler {
+    height: 40px;
+}
+.tabarea .tab {
+    display: inline-block;
+    margin-right: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-top: 3px;
+    padding: 1px;
+}
+.tabarea .tab .tab_content {
+    background: rgba( 0, 0, 0, 0.2 );
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-size: 13px;
+    color: #4f94bc;
+    line-height: 24px;
+    padding: 0 10px;
+    cursor: pointer;
+    vertical-align: top;
+    box-shadow: inset 0 -2px 3px 0 rgba( 0, 0, 0, 0.25 );
+}
+.tabarea .tab .tab_content:hover {
+    color: #ffffff;
+    background: #67c1f5; /* Old browsers */
+    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.tabarea .tab.active {
+    background: -moz-linear-gradient(top,  rgba(103,193,245,1) 0%, rgba(103,193,245,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(103,193,245,1)), color-stop(100%,rgba(103,193,245,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(103,193,245,1) 0%,rgba(103,193,245,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(103,193,245,1) 0%,rgba(103,193,245,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(103,193,245,1) 0%,rgba(103,193,245,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(103,193,245,1) 0%,rgba(103,193,245,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#0067c1f5',GradientType=0 ); /* IE6-9 */
+    margin-top: 0;
+    box-shadow: none;
+    padding: 1px;
+}
+.tabarea .tab.active .tab_content {
+    line-height: 29px;
+    font-size: 14px;
+    color: #ffffff;
+    background: #1c2b40;
+    text-shadow: -1px -1px rgba( 0, 0, 0, 0.25 );
+    cursor: default;
+    box-shadow: none;
+}
+
+#browse_large_cluster {
+	margin-bottom: 18px;
+}
+
+/* videos page */
+.block .block_header .most_watched_note {
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.top_video_capsule {
+	color: #626366;
+	width: 300px;
+	height: 240px;
+	float: left;
+	margin-bottom: 12px;
+}
+
+.top_video_capsule .viewcount {
+	font-size: 10px;
+}
+
+.tab_row_video, .tab_row_video .tab_overlay img {
+	height: 152px;
+}
+
+.tab_video_capsule {
+	position: absolute;
+	top: 15px;
+	left: 13px;
+}
+
+.tab_video_desc {
+	padding-left: 213px;
+	padding-top: 47px;
+	color: #626366;
+}
+
+.tab_video_desc .viewcount {
+	font-size: 10px;
+}
+
+.block {
+    margin-bottom: 16px;
+}
+
+.block .block_header {
+    background: #2a3f5a;
+    padding: 4px 4px 4px 6px;
+    color: #8f98a0;
+    font-size: 12px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+
+.block_content {
+    border: 1px solid #28394d;
+    border-radius: 2px;
+
+}
+
+.block_content_inner
+{
+    padding: 4px 2px 4px 4px;
+	overflow: hidden;
+}
+
+a.linkbar {
+    padding-left: 12px;
+    margin-right: 8px;
+    display: block;
+    color: #9fbbcb;
+    font-size: 13px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    line-height: 28px;
+}
+
+a.linkbar:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.linkbar_active, a.linkbar_active:hover, a.linkbar_active:active, a.linkbar_active:visited {
+    color: #000000;
+    background-color: #66c0f4;
+    background-image: none;
+    margin-left: 0px;
+}
+
+a.linkbar .rightblock {
+    display: inline;
+
+}
+
+.tabbar_top_spacer {
+    height: 42px;
+}
+
+.tab_filter_control {
+    margin-bottom: 2px;
+    line-height: 28px;
+    padding: 0 8px;
+    font-size: 13px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    color: #9fbbcb;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.tab_filter_control:hover {
+    color: #ffffff;
+    background: rgba( 42, 63, 90, 0.5);
+}
+
+.tab_filter_control.checked {
+    background: #67c1f5; /* Old browsers */
+    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #ffffff;
+}
+
+.tab_filter_control_checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-position: top center;
+    margin-right: 8px;
+    background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/store_checkbox_blue.png');
+    vertical-align: text-bottom;
+}
+
+.tab_filter_control.checked .tab_filter_control_checkbox {
+    background-position: bottom center;
+}
+
+.tab_filter_control_label {
+    display: inline-block;
+}
+
+.discovery_queue_ctn {
+    margin-top: 25px;
+}
+
+.upcoming_queue_ctn {
+    margin-top: 25px;
+}
+
+.see_all_expander {
+	color: #66c0f4;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: right;
+	display: block;
+
+	background: url(https://steamstore-a.akamaihd.net/public/images/v6/icon_expand.png) right center no-repeat;
+	padding: 0 15px 0 0;
+	margin: 3px 3px 0 0;
+}
+
+/* paging controls */
+.paged_items_no_results
+{
+	padding-top: 50px;
+	text-align: center;
+	font-size: 24px;
+}
+.paged_items_paging
+{
+	position: relative;
+	line-height: 25px;
+	height: 25px;
+}
+
+.paged_items_paging_summary
+{
+	color: #3b6e8c;
+	float: left;
+}
+
+.paged_items_paging_controls
+{
+	float: right;
+}
+
+.paged_items_paging_controls .pagebtn,
+.search_pagination_right .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.paged_items_paging_pagelink, .paged_items_paging_controls .commentthread_pagelink {
+	color: #3b6e8c;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.paged_items_paging_pagelink:hover, .paged_items_paging_controls .commentthread_pagelink:hover {
+	color: #67c1f5;
+}
+
+.paged_items_paging_pagelink.active, .paged_items_paging_controls .commentthread_pagelink.active {
+	color: #ffffff;
+	cursor: default;
+}
+
+.paged_items_paging_pagelink.active:hover {
+	text-decoration: none;
+}
+
+/* paging buttons */
+.pagebtn, a.pagebtn {
+	display: inline-block;
+	line-height: 24px;
+	background-color: rgba( 103, 193, 245, 0.2 );
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0px 16px;
+	color: #67c1f5;
+}
+
+.pagebtn:hover, a.pagebtn:hover {
+	background-color: #97C0E3;
+	background: -moz-linear-gradient(left, #417a9b 5%, #67c1f5 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b), color-stop(95%,#67c1f5));background: -webkit-linear-gradient(left, #417a9b 5%,#67c1f5 95%);background: -o-linear-gradient(left, #417a9b 5%,#67c1f5 95%);background: -ms-linear-gradient(left, #417a9b 5%,#67c1f5 95%);background: linear-gradient(to right, #417a9b 5%,#67c1f5 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#417a9b', endColorstr='#67c1f5',GradientType=1 );	color: #ffffff;
+	text-decoration: none;
+}
+
+.pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
+	background: rgba( 0, 0, 0, 0.1 );
+	color: #28394D;
+	cursor: default;
+}
+
+a.pagelink:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+.header_early_access {
+    background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/browse/header_early_access.png' );
+    height: 104px;
+    width: 940px;
+}
+.header_early_access h1 {
+    font-family: "Motiva Sans Thin", "Motiva Sans", arial, tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 45px;
+    color: #ffffff;
+    padding-left: 16px;
+    padding-top: 10px;
+}
+body.v6 .header_early_access h2 {
+    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 17px;
+    color: #C6D4DF;
+    padding-left: 16px;
+    margin-top: -2px;
+}
+body.v6 .header_early_access h2 a {
+    color: #67c1f5;
+}
+body.v6 .header_early_access h2 a:hover {
+    color: #ffffff;
+}
