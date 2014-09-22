@@ -993,62 +993,33 @@ a#store_search_link img {
 	text-align: center;
 	margin: 1px;
 	border: 1px solid rgba(0, 0, 0, 0);
+	position: relative;
+	z-index: 1;
 }
 .spotlight_weeklong_ctn:hover {
 	border: 1px solid rgba(171, 218, 244, 0.6);
 }
 
-.spotlight_weeklong_header1 {
-	font-size: 37px;
-	text-transform: uppercase;
-	font-family: "Motiva Sans Bold", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
-	color: #abdaf4;
-	padding-top: 30px;
-}
-.spotlight_weeklong_header2 {
-	font-size: 70px;
-	text-transform: uppercase;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-	font-weight: normal;
-	color: #abdaf4;
-	line-height: 50px;
-}
-.spotlight_count_ctn {
-	background: -moz-linear-gradient(left, #3f7696 5%, #264659 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#3f7696), color-stop(95%,#264659));background: -webkit-linear-gradient(left, #3f7696 5%,#264659 95%);background: -o-linear-gradient(left, #3f7696 5%,#264659 95%);background: -ms-linear-gradient(left, #3f7696 5%,#264659 95%);background: linear-gradient(to right, #3f7696 5%,#264659 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f7696', endColorstr='#264659',GradientType=1 );	margin: 40px 20px 0px 20px;
-	padding: 8px;
-}
-.spotlight_weeklong_ctn:hover .spotlight_count_ctn {
-	background: -moz-linear-gradient(left, #66c0f4 5%, #3f7696 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#66c0f4), color-stop(95%,#3f7696));background: -webkit-linear-gradient(left, #66c0f4 5%,#3f7696 95%);background: -o-linear-gradient(left, #66c0f4 5%,#3f7696 95%);background: -ms-linear-gradient(left, #66c0f4 5%,#3f7696 95%);background: linear-gradient(to right, #66c0f4 5%,#3f7696 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66c0f4', endColorstr='#3f7696',GradientType=1 );}
-.spotlight_weeklong_ctn:hover .spotlight_weeklong_header1,
-.spotlight_weeklong_ctn:hover .spotlight_weeklong_header2,
-.spotlight_weeklong_ctn:hover .spotlight_count_title,
-.spotlight_weeklong_ctn:hover .spotlight_count,
-.spotlight_weeklong_ctn:hover .spotlight_count_products {
-	color: #ffffff;
+.spotlight_weeklong_ctn .spotlight_text_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 304px;
+	height: 350px;
+	z-index: 2;
 }
 
-.spotlight_count_title {
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #83a7ba;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-
-	display: block;
-}
 .spotlight_count {
 	font-family: "Motiva Sans Bold", "Motiva Sans", arial, tahoma, sans-serif;
 	color: #ffffff;
 	font-size: 40px;
 
 	display: block;
+	position: relative;
+	z-index: 3;
+	margin-top: 230px;
 }
-.spotlight_count_products {
-	font-size: 16px;
-	color: #abdaf4;
 
-	display: block;
-}
 .spotlight_weeklong_subtitle {
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-size: 13px;
@@ -1498,6 +1469,7 @@ div.game_hover {
 .hover_category_icon {
 	display: inline-block;
 	line-height: 20px;
+	vertical-align: middle;
 }
 
 .hover_friends_blocks {

@@ -39,10 +39,18 @@ function SetGameHighlightAutoplayEnabled( bEnabled )
 	document.cookie = 'bGameHighlightAutoplayDisabled=' + (!bEnabled ? 'true' : 'false') + '; expires=' + dateExpires.toGMTString() + ';path=/';
 }
 
+var g_bUserSelectedTrailer = false;
 function BIsUserGameHighlightAudioEnabled()
 {
-	var rgMatches = document.cookie.match( /(^|; )bGameHighlightAudioEnabled=([^;]*)/ );
-	return ( rgMatches && rgMatches[2] == "true" );
+	if ( g_bUserSelectedTrailer )
+	{
+		return true;
+	}
+	else
+	{
+		var rgMatches = document.cookie.match(/(^|; )bGameHighlightAudioEnabled=([^;]*)/);
+		return ( rgMatches && rgMatches[2] == "true" );
+	}
 }
 
 function SetGameHighlightAudioEnabled( bEnabled )
@@ -99,7 +107,7 @@ var HighlightPlayer = Class.create( {
 		var thisClosure = this;
 		this.m_elemStrip.select( '.highlight_strip_item' ).each(
 				function(elemThumb) {
-					Event.observe( elemThumb, 'click', thisClosure.HighlightItem.bind( thisClosure, elemThumb ) );
+					Event.observe( elemThumb, 'click', thisClosure.HighlightItem.bind( thisClosure, elemThumb, true ) );
 				}
 		);
 
@@ -157,10 +165,10 @@ var HighlightPlayer = Class.create( {
 		g_player = this;
 	},
 
-	HighlightItem: function( elem )
+	HighlightItem: function( elem, bUserAction )
 	{
 		if ( this.BIsMovie( elem ) )
-			this.HighlightMovie( this.GetMovieId( elem ) );
+			this.HighlightMovie( this.GetMovieId( elem ), bUserAction );
 		else
 			this.HighlightScreenshot( this.GetScreenshotId( elem ) );
 
@@ -170,15 +178,16 @@ var HighlightPlayer = Class.create( {
 			this.LoadScreenshot( this.GetScreenshotId( nextItem ) );
 	},
 
-	HighlightMovie: function( id )
+	HighlightMovie: function( id, bUserAction )
 	{
 		if ( this.m_activeItem && this.BIsMovie( this.m_activeItem )
 				&& this.GetMovieId( this.m_activeItem ) == id )
 			return;
+
 		if( this.m_bUseHTMLPlayer )
-			this.LoadHTML5Movie( id );
+			this.LoadHTML5Movie( id, bUserAction );
 		else
-			this.LoadMovie( id );
+			this.LoadMovie( id, bUserAction );
 
 
 		this.TransitionTo( $('highlight_movie_' + id ) );
@@ -196,18 +205,21 @@ var HighlightPlayer = Class.create( {
 		this.bScreenshotsOnly = true;
 		this.StartTimer();
 	},
-	LoadHTML5Movie: function( id )
+	LoadHTML5Movie: function( id, bUserAction )
 	{
 		var strTarget = 'movie_' + id;
+
+		// use the global to tell the player that it should unmute this video
+		g_bUserSelectedTrailer = bUserAction;
+
 		if( $(strTarget).play )
 		{
 			$(strTarget).play();
 
-			if ( BIsUserGameHighlightAutoplayEnabled() )
-				$(strTarget).addEventListener("ended",jQuery.proxy(this.Transition, this));
+			$(strTarget).addEventListener("ended",jQuery.proxy(this.Transition, this));
 		}
 	},
-	LoadMovie: function( id )
+	LoadMovie: function( id, bUserAction )
 	{
 		var strTarget = 'movie_' + id;
 		var rgFlashVars = this.m_rgDefaultMovieFlashvars.merge( this.m_rgMovieFlashvars[ 'movie_' + id ] ).toObject();
@@ -216,7 +228,7 @@ var HighlightPlayer = Class.create( {
 		{
 			if ( BIsUserGameHighlightAutoplayEnabled() )
 				rgFlashVars.CHECKBOX_AUTOPLAY_CHECKED = 'true';
-			if ( !BIsUserGameHighlightAudioEnabled() )
+			if ( !BIsUserGameHighlightAudioEnabled() && !bUserAction )
 				rgFlashVars.START_MUTE = 'true';
 			var flVolume = GetGameHighlightPlayerVolume();
 			if ( flVolume != -1 )
@@ -806,11 +818,17 @@ var HighlightPlayer = Class.create( {
 				else
 				{
 					setVolume( GetGameHighlightPlayerVolume() / 100);
+
 					if( !BIsUserGameHighlightAudioEnabled() )
 					{
 						videoControl.muted = true;
 						$('.volume_icon',overlay).addClass('muted');
-						$('.volume_handle', overlay).css({'left': "0px"});
+						$('.volume_handle', overlay).css({'left': "0"});
+					}
+					else
+					{
+						videoControl.muted = false;
+						$('.volume_icon',overlay).removeClass('muted');
 					}
 
 					if( BIsUserGameHighlightAutoplayEnabled() )

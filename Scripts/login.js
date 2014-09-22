@@ -325,18 +325,16 @@ function SubmitAuthCode( defaultFriendlyNameText )
 {
 	var friendlyname =  $('friendlyname').value;
 	$('auth_details_computer_name').style.color='#85847f';
-	if ( friendlyname != defaultFriendlyNameText && friendlyname.length >= 6 )
+	if ( friendlyname == defaultFriendlyNameText )
 	{
-		$('auth_buttonsets').childElements().invoke('hide');
-		if ( $('auth_buttonset_waiting') )
-			$('auth_buttonset_waiting').show();
-		document.forms['logon'].elements['loginfriendlyname'].value = friendlyname;
-		document.forms['logon'].elements['emailauth'].value = $('authcode').value;
-		DoLogin();
+	    friendlyname = '';
 	}
-	else{
-		$('auth_details_computer_name').style.color='#ff0000';
-	}
+	$('auth_buttonsets').childElements().invoke('hide');
+	if ( $('auth_buttonset_waiting') )
+	    $('auth_buttonset_waiting').show();
+	document.forms['logon'].elements['loginfriendlyname'].value = friendlyname;
+	document.forms['logon'].elements['emailauth'].value = $('authcode').value;
+	DoLogin();
 }
 
 function SetEmailAuthModalState( step )

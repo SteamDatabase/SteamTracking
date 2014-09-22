@@ -11,7 +11,7 @@ function TagLink( tag, language )
 	return url;
 }
 
-function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTagSNR, rgAddtlReportOptions )
+function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTagSNR, bShowBanOption )
 {
 	var $AppTagModal = $J('#app_tagging_modal');
 	var $AppTagForm = $J('#app_tag_form');
@@ -33,6 +33,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	var rgYourPopularTags = null;
 	var rgGlobalPopularTags = null;
 	var bYourPopularTagsRequested = false;
+	var bBannedTag = false;
 
 	var fnUpdateTagButtonState = function() {
 		if ( $AppTagInput.val().length > 0 )
@@ -80,12 +81,33 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			// only if logged in
 			if ( $YourTags.length )
 			{
-				var $Report = $J('<div/>', {'class': 'app_tag_report' + ( bReported ? ' reported' : '' ) } );
-				BindStoreTooltip( $Report );
-				fnSetReportTooltip( $Report );
-				$Tag.append( $Report );
 
-				$Report.click( function() { if ( !$Report.hasClass('reported') ) { fnReportTag( tag ); } } );
+				if ( bShowBanOption )
+				{
+					var $Ban = $J('<div/>', {'class': 'app_tag_ban'} );
+					$Ban.data('store-tooltip', 'Click here to remove this tag from this product.  This option is limited to developers and Steam staff.' );
+					BindStoreTooltip( $Ban );
+					$Tag.append( $Ban );
+
+					$Ban.click( function() {
+						ShowConfirmDialog( 'Ban Tag', 'Are you sure you want to remove the "%s" tag from this product?'.replace( /%s/, tag )).done( function()
+						{
+							$Ban.trigger('mouseleave');	// to clear the tooltip
+							fnApplyTag( tag, false, true, -1 );
+						});
+					});
+				}
+				else
+				{
+					var $Report = $J('<div/>', {'class': 'app_tag_report' + ( bReported ? ' reported' : '' )});
+					BindStoreTooltip($Report);
+					fnSetReportTooltip($Report);
+					$Tag.append($Report);
+
+					$Report.click(function () {
+						fnApplyTag(tag, $Report.hasClass('reported'), true, 2);
+					});
+				}
 			}
 		}
 
@@ -336,6 +358,16 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			// roll "mytag_version" variable which will force a reload of user's frequent tags
 			WebStorage.SetLocal( 'mytag_version', parseInt( WebStorage.GetLocal( 'mytag_version', true ) || 0 ) + 1, true );
 
+			if ( eReportType > 0 && !withdraw )
+			{
+				ShowAlertDialog( 'Report a Tag', 'Thank you for your report.  Tags that reach a certain threshold of reports will be removed from the product.');
+			}
+			else if ( eReportType == -1 )
+			{
+				$AppTag.hide( 'fast' );
+				bBannedTag = true;
+			}
+
 		}).fail( function() {
 			ShowAlertDialog( 'View and edit tags for this product', 'There was a problem adding your tag.' );
 		});
@@ -350,47 +382,6 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		fnApplyTag( $AppTagInput.val(), false );
 		$AppTagInput.val('');
 		$AppTagInput.change();
-	};
-
-	var fnReportTag = function( tag ) {
-		var $Dialog = $J('<div/>', {'class': 'app_tag_report_dialog' } );
-		$Dialog.append( $J('<div/>', {'class': 'app_tag_report_dialog_intro' } ).text('Please pick a reason that you are reporting this tag on this product.') );
-
-		var rgReportOptions = {
-			1: 'Offensive/abusive tag<br><span class="sub">You find this tag offensive or abusive</span>',
-			2: 'Not appropriate for this product<br><span class="sub">This tag is generally helpful, but not applicable to this product</span>',
-			3: 'Not a helpful tag<br><span class="sub">This tag is generally not helpful as a way to browse for similar products</span>',
-			4: 'Spoiler<br><span class="sub">This tag gives away an important plot element in this product</span>'
-		};
-
-		if ( rgAddtlReportOptions )
-		{
-			$J.extend( rgReportOptions, rgAddtlReportOptions );
-		}
-
-		var fnDoReport= function( eReportTypeSelected ) { fnApplyTag( tag, false, true, eReportTypeSelected ); };
-
-		var Modal = null;
-		for ( var eReportType in rgReportOptions )
-		{
-			var $ReportOption = $J('<div/>', {'class': 'app_tag_report_dialog_option' } );
-			$ReportOption.append( $J('<input/>', {'type': 'radio', 'name':'report_type', 'value': eReportType, 'id': 'report_type_' + eReportType } ) );
-			$ReportOption.append( $J('<label/>', {'for': 'report_type_' + eReportType }).html( rgReportOptions[eReportType] ) );
-			$ReportOption.dblclick( (function( eReportType ) { return function() { Modal.Dismiss(); fnDoReport( eReportType ); }; })(eReportType) );
-			$Dialog.append( $ReportOption );
-		}
-
-		Modal = ShowConfirmDialog( 'Report a Tag', $Dialog, 'Report').done( function() {
-			var eReportTypeSelected = $Dialog.find( 'input[type=radio]:checked' ).val();
-			if ( eReportTypeSelected )
-			{
-				fnDoReport( eReportTypeSelected )
-			}
-			else
-			{
-				ShowAlertDialog( 'Report a Tag', 'You must select a report reason.').done( function() { fnReportTag( tag ); } );
-			}
-		});
 	};
 
 	var fnRemoveYourTagsFromGlobalTags = function()
@@ -467,6 +458,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			}
 
 			fnUpdateUserTagsOnPage();
+
+			if ( bBannedTag )
+				window.location.reload();
 		} );
 
 		// in the "you need to log in" case, we don't have a form to display

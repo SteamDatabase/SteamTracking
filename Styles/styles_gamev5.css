@@ -2164,7 +2164,8 @@ h2.bb_tag + br {
 	padding-left: 8px;
 }
 
-.app_tag_checkbox, .app_tag_report {
+
+.app_tag_checkbox, .app_tag_report, .app_tag_ban {
 	float: right;
 	width: 13px;
 	height: 19px;
@@ -2188,26 +2189,8 @@ h2.bb_tag + br {
 	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_report.png' ) top center no-repeat;
 }
 
-.app_tag_report_dialog {
-	font-size: 14px;
-}
-
-.app_tag_report_dialog_intro {
-	margin-bottom: 20px;
-}
-
-.app_tag_report_dialog_option {
-	margin-bottom: 16px;
-	line-height: 20px;
-}
-.app_tag_report_dialog_option input {
-	vertical-align: middle;
-	margin-right: 6px;
-}
-.app_tag_report_dialog_option .sub {
-	font-size: 12px;
-	color: #555555;
-	margin-left: 20px;
+.app_tag_control:hover .app_tag_ban {
+	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_report.png' ) bottom center no-repeat;
 }
 
 .app_report_dialog
