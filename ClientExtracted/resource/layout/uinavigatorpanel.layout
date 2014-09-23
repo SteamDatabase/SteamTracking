@@ -1,6 +1,5 @@
 "resource/layout/uinavigatorpanel.layout"
 {
-
 	controls
 	{
 		"subnavgroup_library"
@@ -29,38 +28,8 @@
 			"ControlName"		"Button"
 			style="ForwardButton"
 			command="Forward"
-
-		}
-		"fullscreen"
-		{
-			"ControlName"		"Button"
-			style="FullscreenButton"
-			command="fullscreen"
 		}
 
-
-		"refresh"
-		{
-			"ControlName"		"Button"
-			command="Refresh"
-			style="ReloadButton"
-			group="Refresh"
-		}
-		"Stop"
-		{
-			"ControlName"		"Button"
-			command="Stop"
-			style="StopButton"
-			group="stop"
-		}
-		
-		"Home"
-		{
-			"ControlName"		"Button"
-			command="Home"
-			style="HomeButton"
-			group="home"
-		}
 
 		"label_store"
 		{
@@ -202,23 +171,14 @@
 	
 	styles
 	{
-		FullscreenButton
-		{
-			padding-left=0
-			padding-top=0
-			padding-right=0
-			padding-bottom=0
-		}
-		
-		
 		grouper
 		{
 			bgcolor=none
 			render_bg
 			{
 				// background fill
-				0="fill( x0 + 2, y0 + 1, x0 + 273, y1 - 1, dialogbg )"
-	      1="fill( x0 + 279, y0 + 1, x1 - 10, y1 - 1, dialogbg )"
+				0="fill( x0 + 2, y0 + 1, x0 + 273, y1 - 1, clientgrouper )"
+	      1="fill( x0 + 279, y0 + 1, x1 - 10, y1 - 1, clientgrouper )"
 
 
 			}
@@ -644,9 +604,10 @@
 		{
 			bgcolor="none"
 			textcolor="label"
+			inset="1 1 1 1"
 		render_bg 
 			{
-			0="fill( x0, y0, x1 - 1, y1- 1, almostblack )" // bg
+			0="fill( x0, y0, x1, y1, almostblack )" // bg
 	    }
 		}
 		
@@ -654,7 +615,7 @@
 		{
 			font-family=basefont
 			inset-top=1
-			inset-left=-1
+			inset-left=2
 			font-size=14
 			textcolor="label"
 			font-weight=400
@@ -668,7 +629,7 @@
 		{
 			font-family=basefont
 			inset-top=1
-			inset-left=-3
+			inset-left=2
 			font-size=14
 			textcolor="label"
 			font-weight=400
@@ -869,24 +830,20 @@
 	
 	layout
 	{
-		place { control="label_store,label_library,label_community,label_me,label_news,label_console" x=78 y=2 spacing=9 margin=2 height=40 } 
+		place { control="label_store,label_library,label_community,label_me,label_news,label_console" x=72 y=9 spacing=9 margin=2 height=40 } 
 
 		place { control="label_community_friends,label_community_profile,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_marketplace" x="84" y="40" x="10" }
 
 		place { control="label_community_new" start="label_community" y="-40" x="15" width=0 height=0 }
 
-		place [!$OSX] { control="back,forward" x=4 y=10 height=30 width=30 spacing=8 margin-right=5 margin-top=0 }
-		place [$OSX] { control="back,forward" x=4 y=10 height=30 width=30 spacing=8 margin-right=5 margin-top=0 }
+		place [!$OSX] { control="back,forward" x=3 y=17 height=30 width=30 spacing=2 margin-right=5 margin-top=0 }
+		place [$OSX] { control="back,forward" x=3 y=17 height=30 width=30 spacing=2 margin-right=5 margin-top=0 }
+			
+		place { control="PageLoadThrobber" align=right y=54 height=20 width=20  margin-right=9 margin-top=1 }
 
-		region { name="bigpicture" width=100 align=right margin-right=-6 margin-left=6 margin-top=-22 height=104 }
+		place { control="subnavgroup_library" align=top-center y=50 height=28 width=max margin-right=-2 margin-left=8 }
 		
-		place { control="fullscreen" tooltiptext="#tooltip_view_list" align=right y=40 height=64 spacing=4 margin-right=4 margin-top=0 width=92 region="bigpicture"}
-	
-		place { control="PageLoadThrobber" align=right y=54 height=20 width=20  margin-right=88 margin-top=1 }
-
-		place { control="subnavgroup_library" align=top-center y=50 height=28 width=max margin-right=84 margin-left=8 }
-		
-		place { control="refresh,stop,home,URLStatusImage,EVCert,URLBar" align=left y=54 height=20 width=max spacing=5 margin-left=7 }
+		place { control="URLStatusImage,EVCert,URLBar" align=left y=54 height=20 width=max spacing=5 margin-left=7 }
  	
 		place { control="library_search"  width=112 }	
 
@@ -899,15 +856,15 @@
  
 		place { control="library_zoom" width=82 height=20 }
 	     
-		place [!$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view" align=right y=55 height=20 spacing=3 margin-right=180 }
-		place [$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view" align=right y=55 height=20 spacing=3 margin-right=179 }
+		place [!$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view" align=right y=55 height=20 spacing=3 margin-right=85 }
+		place [$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view" align=right y=55 height=20 spacing=3 margin-right=84 }
 		
 		place [!$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=180 }
 		place [$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=179 }
 		
 
 			
-		place { control="library_filters_details,library_filters_list,library_filters_grid," align=right y=54 height=20 spacing=4 margin-right=100 width=20 }
+		place { control="library_filters_details,library_filters_list,library_filters_grid," align=right y=54 height=20 spacing=4 margin-right=9 width=20 }
 
  	  	place { control=emailreminderbar margin-top=81 margin-left=8 margin-right=8 width=max height=48 }
 
@@ -924,7 +881,7 @@
 		place { control=ToolsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=emailreminderbar dir=down }
 		
 		place { control=MusicPage_Details width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=emailreminderbar dir=down }
-		place { control="library_music_player_icon" align=right y=57 height=16 width=16 margin-right=100 }
+		place { control="library_music_player_icon" align=right y=57 height=16 width=16 margin-right=10 }
 	}
 
 }
