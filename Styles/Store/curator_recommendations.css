@@ -1,0 +1,326 @@
+
+/* top section */
+.header_area {
+    padding-top: 14px;
+}
+.curator_avatar
+{
+	width: 90px;
+	float: left;
+	margin-right: 20px;
+}
+
+body.v6 h2.curator_name
+{
+	padding-top: 10px;
+    font-family: "Motiva Sans", "Motiva Sans", arial, tahoma, sans-serif;
+}
+
+.page_desc {
+    font-size: 16px;
+    color: #8f98a0;
+    font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+}
+.curator_desc
+{
+	color: #c6d4df;
+    font-family: "Motiva Sans Light Italic", "Motiva Sans", arial, tahoma, sans-serif;
+}
+
+.follow_controls
+{
+	padding-top: 10px;
+	float: right;
+	text-align: right;
+	width: 250px;
+}
+
+.follow_btn
+{
+	float: right;
+	padding-left: 10px;
+}
+.following_img
+{
+	vertical-align: middle;
+	margin-left: -6px;
+	margin-top: -2px;
+	margin-right: 3px;
+	border: 0px;
+}
+.num_followers
+{
+	font-size: 11px;
+	color: #407899;
+}
+.num_followers_text
+{
+	font-size: 11px;
+	color: #407899;
+	text-transform: uppercase;
+}
+
+/* highlighted recommendation */
+.highlighted_recommendation
+{
+	margin-top: 40px;
+}
+.highlighted_recommendation_header
+{
+	position: relative;
+	float: left;
+	height: 215px;
+}
+.highlighted_recommendation_header .ds_flag
+{
+	top: 108px;
+}
+.highlighted_recommendation_stats
+{
+	background-color: #1d2a3a;
+	padding: 5px;
+	padding-left: 10px;
+	color: #62696e;
+    font-size: 11px;
+}
+.highlighted_recommendation_stat
+{
+	padding-left: 10px;
+	float: right;
+}
+.highlighted_recommendation_details_ctn
+{
+	padding-left: 460px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	height: 215px;
+}
+.highlighted_recommendation_details
+{
+	position: relative;
+	padding: 20px;
+	height: 175px;
+}
+.highlighted_recommendation_app_price
+{
+	float: right;
+}
+.highlighted_recommendation_name
+{
+	color: white;
+	font-size: 18px;
+	font-family: "Motiva Sans Bold", "Motiva Sans", arial, tahoma, sans-serif;
+}
+.highlighted_recommendation_desc
+{
+	padding-top: 10px;
+	color: #c6d4df;
+	font-size: 13px;
+	font-family: "Motiva Sans Light Italic", "Motiva Sans", arial, tahoma, sans-serif;
+}
+.highlighted_recommendation_link
+{
+	position: absolute;
+	bottom: 40px;
+}
+
+/* recommendations list */
+.recommendation
+{
+	background-color: rgba( 0, 0, 0, 0.2 );
+	margin-bottom: 5px;
+	position: relative;
+}
+.recommendation .ds_flag
+{
+	top: 92px;
+	left: 16px;
+}
+.recommendation.no_stats .ds_flag
+{
+	top: 68px;
+	left: 16px;
+}
+.recommendation.ds_flagged:not(.ds_wishlist) .recommendation_app_small_cap
+{
+	opacity: 0.3;
+}
+.recommendation.ds_flagged:not(.ds_wishlist) .recommendation_name a
+{
+	color: #62696e;
+}
+
+
+.recommendation_stats
+{
+	background-color: rgba( 0, 0, 0, 0.5 );
+	padding: 5px;
+	padding-left: 10px;
+	color: #62696e;
+    font-size: 11px;
+}
+.recommendation_stat
+{
+	padding-left: 10px;
+	float: right;
+}
+.recommendation_details
+{
+	position: relative;
+	padding: 16px;
+	overflow: hidden;
+}
+.recommendation_leftcol
+{
+	float: left;
+	height: 87px;
+	padding-right: 10px;
+}
+.recommendation_rightcol
+{
+	position: relative;
+	margin-left: 241px;
+}
+.recommmendation_app_small_cap_ctn
+{
+}
+.recommendation_app_small_cap
+{
+	width: 231px;
+}
+.recommendation_app_price
+{
+	float: right;
+}
+.recommendation_name
+{
+	font-size: 15px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	padding-bottom: 2px;
+}
+.recommendation_desc
+{
+	font-size: 13px;
+    color: #8f98a0;
+    font-family: "Motiva Sans Light Italic", "Motiva Sans", arial, tahoma, sans-serif;
+	font-style: normal;
+}
+.recommendation_readmore
+{
+	padding-top: 20px;
+	bottom: 20px;
+}
+
+/* filters */
+.tab_filter_ctn {
+	color: #779abd;
+	margin-bottom: 11px;
+	font-size: 12px;
+}
+.tab_filter_header {
+	margin-bottom: 4px;
+}
+.tab_filter {
+	display: inline-block;
+	white-space: nowrap;
+	border-radius: 2px;
+	padding: 0 9px;
+	line-height: 24px;
+	margin: 0 4px 4px 0;
+	background: #67c1f5; /* Old browsers */
+	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color: #ffffff;
+}
+.tab_filter_remove {
+	display: inline-block;
+	cursor: pointer;
+	background: no-repeat center center url('https://steamstore-a.akamaihd.net/public/images/v6/delete_search_term.png');
+	width: 12px;
+	height: 24px;
+	margin-left: 8px;
+}
+
+/* paging controls */
+.Recommendations_no_results
+{
+	padding-top: 50px;
+	text-align: center;
+	font-size: 24px;
+}
+.Recommendations_paging
+{
+	position: relative;
+	line-height: 25px;
+	height: 25px;
+}
+
+.Recommendations_paging_summary
+{
+	color: #3b6e8c;
+	float: left;
+}
+
+.Recommendations_paging_controls
+{
+	float: right;
+}
+
+.Recommendations_paging_controls .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.Recommendations_paging_pagelink, .Recommendations_paging_controls .commentthread_pagelink {
+	color: #3b6e8c;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.Recommendations_paging_pagelink:hover, .Recommendations_paging_controls .commentthread_pagelink:hover {
+	text-decoration: underline;
+}
+
+.Recommendations_paging_pagelink.active, .Recommendations_paging_controls .commentthread_pagelink.active {
+	color: #ffffff;
+	cursor: default;
+}
+
+.Recommendations_paging_pagelink.active:hover {
+	text-decoration: none;
+}
+
+/* paging buttons */
+.pagebtn, a.pagebtn {
+	display: inline-block;
+	line-height: 24px;
+	background-color: #000000;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0px 16px;
+	color: #939393;
+}
+
+.pagebtn:hover, a.pagebtn:hover {
+	background-color: #97C0E3;
+	border-color: #97C0E3;
+	color: #3C3D3E;
+	text-decoration: none;
+}
+
+.pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
+	border: 1px solid #28394D;
+	background-color: transparent;
+	color: #28394D;
+	cursor: default;
+}
+
+a.pagelink:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}
