@@ -49,9 +49,11 @@
 		}
 		DownloadsPageStyle
 		{
-			bgcolor=dialogbg
+
+			bgcolor=none
 			render
 			{
+
 			}			
 		}
 		ListPanelStyle

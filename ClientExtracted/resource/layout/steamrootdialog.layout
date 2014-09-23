@@ -2,13 +2,14 @@
 {
 	controls
 	{
-		"ImageLogo"
+
+			
+		"fullscreen"
 		{
-		"ControlName" 	"Label"
-		style="ClientLogo"
-		zpos=-5
+			"ControlName"		"Button"
+			style="FullscreenButton"
+			command="fullscreen"
 		}
-	
 		
 		"New"
 		{
@@ -85,13 +86,6 @@
 			style="AccountURLStyle"
 		}
 		
-		account_balance_seperator
-		{
-			"ControlName"	"Label"
-			"fieldName"		"account_balance_seperator"
-			"labelText"		"|"
-			style="online_friends"
-		}
 		
 		account_balance
 		{
@@ -99,9 +93,16 @@
 			"fieldName"		"account_balance"
 			"labelText"		""
 			"URLText"		"steam://url/StoreAccount/"
-			style="URLLabelSimple2"
+			style="AccountBalanceStyle"
 		}
 		
+		account_balance_seperator
+		{
+			"ControlName"	"Label"
+			"fieldName"		"account_balance_seperator"
+			"labelText"		"|"
+			style="AccountBalanceSeparatorStyle"
+		}
 		
 		universe_label
 		{
@@ -129,14 +130,43 @@
 	
 	styles
 	{    		
-		
-		ClientLogo
+			
+		AccountBalanceStyle
 		{
-			bgcolor=none
-			render_bg={}
-			image="graphics/piston"
-			inset="0 -20 0 0"
+		      textcolor="labeldisabled"
+		      bgcolor="none"
+		      font-family=basefont
+		      font-size=14
+		      font-weight=400
+		      font-style=regular
 		}
+
+		AccountBalanceStyle [$OSX]
+		{
+		      textcolor="labeldisabled"
+		      bgcolor="none"
+		      font-family=basefont
+		      font-size=13
+		      font-weight=400
+		      font-style=regular
+		      inset="0 1 0 0"
+		}
+    
+    AccountBalanceStyle:Hover
+		{
+		      textcolor="texthover"
+		}  
+		
+		AccountBalanceSeparatorStyle
+		{
+					textcolor="ScrollGlyphDisabled"
+					font-family=basefont
+					font-size=13
+					font-weight=400
+		      font-style=regular
+					inset="0 0 0 0"
+		}
+		
 		
 		new_label	
 		{			
@@ -304,7 +334,8 @@
 			render_bg
 			{
 				// top area and graphic
-				0="gradient( x0, y0, x1, y0+175, ClientBG, DialogBG )"
+
+				0="gradient( x0, y0, x1, y0+175, ClientBGTop, DialogBG )"
 				2="image( x0, y0, x1, y0+175, graphics/clienttexture2)"
 
 				3="fill( x0, y0+175, x0+20, y1-76, DialogBG )"			
@@ -316,30 +347,7 @@
 		}		
 
 	
-		ClientTitle [!$OSX]
-		{
-			textcolor=none		
-		}
 
-		ClientTitle [$OSX]
-		{
-			font-family=basefont
-			font-size=15
-      		font-weight=400
-      		textcolor="textdisabled"
-      		bgcolor="none"
-      		inset="0 6 0 0"
-		}
-
-		ClientTitle:FrameFocus [$OSX]
-		{
-			font-family=basefont
-   			font-size=15
-   			font-weight=400
-   			textcolor="texthover"
-   			bgcolor="none"
-   			inset="0 6 0 0"
-		}
 
 		FrameTitle
 		{
@@ -371,6 +379,31 @@
 			}
 		}
 		
+		ClientTitle [!$OSX]
+		{
+			textcolor=none		
+		}
+
+		ClientTitle [$OSX]
+		{
+			font-family=basefont
+			font-size=15
+      		font-weight=400
+      		textcolor="textdisabled"
+      		bgcolor="none"
+      		inset="0 12 0 0"
+		}
+
+		ClientTitle:FrameFocus [$OSX]
+		{
+			font-family=basefont
+   			font-size=15
+   			font-weight=400
+   			textcolor="texthover"
+   			bgcolor="none"
+   			inset="0 12 0 0"
+		}
+
 		view_friends [!$OSX]
 		{
 			textcolor="LabelFocus"
@@ -444,7 +477,7 @@
 			inset="-8 -3 8 0"
 			render {}
 			render_bg {
-				0="gradient( x0, y0, x1-1, y1, parental_lock_inactive2, parental_lock_inactive1 )"
+				0="fill( x0, y0 + 3, x1-1, y1, parental_lock_inactive1 )"
 
 			}
 		}
@@ -462,24 +495,42 @@
 			inset="-8 -3 8 0"
 			render {}
 			render_bg {
-				0="gradient( x0, y0, x1-1, y1, parental_lock_inactive3, parental_lock_inactive1 )"
+				0="fill( x0, y0 + 3, x1-1, y1, parental_lock_inactive3 )"
 			}
 		}
 
 
 
-		inbox_button
+		inbox_button [!$OSX]
 		{
 			font-family=basefont
-			font-size=14
-			font-weight=1000
+			font-size=14 
+			font-weight=800
+			font-style=none
+			textcolor=white
+			padding-left=0
+			padding-right=0
+			padding-top=6
+			inset="0 -3 8 0"
+			render {}
+			render_bg
+			{
+				13="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
+			}	
+		}
+		
+		inbox_button [$OSX]
+		{
+			font-family=basefont
+			font-size=13 
+			font-weight=800
 			font-style=none
 			textcolor=white
 			padding-left=0
 			padding-right=0
 			padding-top=6
 
-			inset="4 -3 8 0"
+			inset="0 -2 8 0"
 			render {}
 			render_bg
 			{
@@ -493,19 +544,20 @@
 			render {}
 			render_bg
 			{
-				0="gradient(  x0 -3, y0, x1, y1, propertysheetbg, none )"
+
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
 
 		inbox_button:selected
 		{
+
 			render {}
 			render_bg
 			{
 				// background fill
 				
-				0="gradient(  x0 -3, y0, x1, y1, almostblack, none )"
+				0="gradient(  x0 -3, y0 + 3, x1+1, y1, almostblack, none )"
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification_inactive )"
 			}	
 		}
@@ -516,8 +568,8 @@
 			padding-left=0
 			padding-right=0
 			padding-top=6
-
-			inset="4 -3 8 0"
+			inset="0 -3 8 0" [!$OSX]
+			inset="0 -2 8 0" [$OSX]	
 			render {}
 					render_bg
 			{
@@ -531,31 +583,31 @@
 			padding-left=3
 			padding-right=10
 			padding-top=6
-			inset="4 -3 8 0"
+			inset="0 -3 8 0" [!$OSX]
+			inset="0 -2 8 0" [$OSX]		
 			render {}
 			render_bg
 			{
 				// background fill
 				
-				0="gradient(  x0 + 1, y0, x1, y1, green6, green7 )"			
+				0="fill(  x0 + 1, y0 + 3, x1+1, y1, green6 )"			
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
 		
-
-
 		inbox_button_active:hover
 		{
 			padding-left=3
 			padding-right=10
 			padding-top=6
-			inset="4 -3 8 0"
+			inset="0 -3 8 0" [!$OSX]
+			inset="0 -2 8 0" [$OSX]	
 			render {}
 						render_bg
 			{
 				// background fill
 				
-				0="gradient(  x0 + 1, y0, x1, y1, green5, green7 )"			
+				0="fill(  x0 + 1, y0 + 3, x1+1, y1, green5 )"			
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
@@ -564,13 +616,14 @@
 			padding-left=3
 			padding-right=10
 			padding-top=6
-			inset="4 -3 8 0"
+			inset="0 -3 8 0" [!$OSX]
+			inset="0 -2 8 0" [$OSX]	
 			render {}
 						render_bg
 			{
 				// background fill
 				
-				0="gradient(  x0 + 1, y0, x1, y1, green8, green7 )"		
+				0="gradient(  x0 + 1, y0 + 3, x1+1, y1, green8, green7 )"		
 				1="image( x1-22, y0+6, x1 -2, y1, graphics/inbox_notification )"
 			}	
 		}
@@ -580,7 +633,8 @@
 			padding-left=3
 			padding-right=10
 			padding-top=6
-			inset="2 -3 8 0"
+			inset="0 -3 8 0" [!$OSX]
+			inset="0 -2 8 0" [$OSX]	
 			render {}
 						render_bg
 			{
@@ -617,7 +671,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0, x1 - 1, y1, parental_lock_inactive2, parental_lock_inactive1 )"
+				0="fill( x0 + 1, y0, x1 - 1, y1, parental_lock_inactive1 )"
 			}	
 		}
 
@@ -631,7 +685,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0, x1 - 1, y1, parental_lock_inactive3, parental_lock_inactive1 )"				
+				0="fill( x0 + 1, y0, x1 - 1, y1, parental_lock_inactive3 )"				
 			}	
 			
 		}
@@ -646,7 +700,7 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0, x1 - 1, y1, green6, green7 )"
+				0="fill( x0 + 1, y0, x1 - 1, y1, green6 )"
 			}	
 			
 		}
@@ -662,12 +716,27 @@
 			render_bg
 			{
 				// background fill
-				0="gradient( x0 + 1, y0, x1 - 1, y1, green5, green7 )"
+				0="fill( x0 + 1, y0, x1 - 1, y1, green5 )"
 			}	
 			
 		}
 
-		
+		FullscreenButton [!$OSX]
+		{
+			padding-left=0
+			padding-top=0 
+			padding-right=0
+			padding-bottom=0
+		}
+
+		FullscreenButton [$OSX]
+		{
+			padding-left=0
+			padding-top=3
+			padding-right=0
+			padding-bottom=0
+		}
+
 		inboxmenuitem
 		{
 			textcolor=inbox_inactive_text
@@ -684,12 +753,14 @@
 		}
 		AccountURLStyle
 		{
+		  textcolor=labeldisabled
 		  padding-top=-4
+		  padding-right=-14
 		}
 		
 		AccountURLStyle:hover
 		{
-			textcolor=white
+			textcolor=texthover
 		}
 		
 		AccountURLStyle:selected
@@ -701,6 +772,179 @@
 		{
 			textcolor="TextDisabled"
 		}
+		
+		
+		//unique styles for the client main window
+		FrameMinimizeButton
+		{
+			render_bg {}
+			image="graphics/win32_win_min"
+			inset="0 0 4 0"
+			image="graphics/osx_win_dis"[$OSX]
+		}
+    
+    FrameMinimizeButton:hover
+		{  
+			render_bg {}
+			bgcolor="none"
+			inset="0 0 4 0"
+			image="graphics/win32_win_min_hover"
+			image="graphics/osx_min_hov" [$OSX]
+		}
+		
+		FrameMinimizeButton:framefocus [$OSX]
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			image="graphics/osx_min_def"
+		}
+				
+		FrameMinimizeButton:framefocus:hover [$OSX]
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			image="graphics/osx_min_hov"
+		}
+
+
+		// need the maximize button to have different styles for OSX & win32
+		FrameMaximizeButton
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			image="graphics/win32_win_max"
+			image="graphics/osx_win_dis" [$OSX]
+		}
+
+		FrameMaximizeButton:hover
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/win32_win_max_hover"
+			image="graphics/osx_max_hov" [$OSX]
+		}
+
+		FrameMaximizeButton:framefocus
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/win32_win_max"
+			image="graphics/osx_max_def" [$OSX]
+		}
+
+		FrameMaximizeButton:framefocus:hover
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/win32_win_max_hover"
+			image="graphics/osx_max_hov" [$OSX]
+		}
+
+		FrameMaximizeButton:active
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/win32_win_max_hover"
+			image="graphics/osx_max_down" [$OSX]
+		}
+
+		// these are for when the maximize button becomes the restore button
+		FrameRestoreButton
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			image="graphics/win32_win_restore"
+			image="graphics/osx_win_dis" [$OSX]
+		}
+
+		FrameRestoreButton:hover
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/win32_win_restore_hover"
+			image="graphics/osx_max_hov" [$OSX]
+		}
+
+		FrameRestoreButton:framefocus
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/win32_win_restore"
+	    		image="graphics/osx_max_def" [$OSX]
+		}
+
+		FrameRestoreButton:framefocus:hover
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/win32_win_restore_hover"
+			image="graphics/osx_max_hov" [$OSX]
+		}
+
+		FrameRestoreButton:active
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/win32_win_restore_hover"
+			image="graphics/osx_max_down" [$OSX]
+		}
+
+		FrameCloseButton
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			image="graphics/win32_win_close"
+			image="graphics/osx_win_dis" [$OSX]
+		}
+
+		FrameCloseButton:hover
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			image="graphics/win32_win_close_hover"
+			image="graphics/osx_close_hov" [$OSX]
+		}
+    
+    		FrameCloseButton:framefocus [$OSX]
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/osx_close_def"
+		}
+
+		FrameCloseButton:framefocus:hover [$OSX]
+		{
+			render_bg {}
+			bgcolor="none"
+			image="graphics/osx_close_hov"
+		}
+
+		FrameCloseButton:active [$OSX]
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/osx_close_down"
+		}
+    
+    FrameCloseButton:disabled
+		{
+			render_bg {}
+			inset="0 0 4 0"
+			bgcolor="none"
+			image="graphics/win32_win_close_disabled" 
+			image="graphics/osx_win_dis" [$OSX]
+		}
+				
 	}
 	
 	colors
@@ -727,21 +971,24 @@
 		
 		place { control="UIStatusPanel" width=max height=40 align=bottom  margin-bottom=18 }
 		
-		place [!$OSX] { control="MenuBar" align=top margin-top=2 margin-left=2 }
-			
-		place [!$OSX] { control="account_balance, account_balance_seperator, account_URL, universe_label" align=right margin-top=9 margin-right=90 spacing=7 }	
-		place [$OSX]  { control="account_balance, account_balance_seperator, account_URL, universe_label" align=right margin-top=9 margin-right=15 spacing=7 }
+		place [!$OSX] { control="MenuBar" align=top margin-top=5 margin-left=2 }
 		
-		place { control="InboxButton" align=right end-right="account_balance" margin-top=1 margin-right=20 height=26 }
-		place { control="ParentalLockButton" align=right end-right="InboxButton" margin-top=1 margin-right=10 height=26 }
-		place { control="SupportAlert" align=right end-right="ParentalLockButton" margin-top=1 margin-right=10 height=26 }
 
-		place [!$OSX]  { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=7 margin-right=6 spacing=-5 }
+			
+		place [!$OSX] { control="account_balance, account_balance_seperator, account_URL, universe_label, fullscreen" align=right margin-top=12 margin-right=78 spacing=7 }	
+		place [$OSX]  { control="account_balance, account_balance_seperator, account_URL, universe_label, fullscreen" align=right margin-top=12 margin-right=15 spacing=7 }
+	
+		place [!$OSX] { control="fullscreen" tooltiptext="#tooltip_view_fullscreen" align=right y=7 height=20 spacing=0 margin-right=78 margin-top=1 width=30 region="bigpicture"}
+		place [$OSX] { control="fullscreen" tooltiptext="#tooltip_view_fullscreen" align=right y=7 height=20 spacing=0 margin-right=8 margin-top=1 width=30 region="bigpicture"}
+	
+		place { control="InboxButton" align=right end-right="account_balance" margin-top=4 margin-right=16 height=26 }
+		place { control="ParentalLockButton" align=right end-right="InboxButton" margin-top=7 margin-right=10 height=23 }
+		place { control="SupportAlert" align=right end-right="ParentalLockButton" margin-top=4 margin-right=10 height=26 }
+
+		place [!$OSX]  { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=10 margin-right=9 spacing=-5 }
+		place [$OSX] { control="frame_close,frame_minimize,frame_maximize" align=left margin-top=10 margin-left=4 spacing=-7 }
 
 		region { name=bottom align=bottom width=max height=75 }
-		
-		place [!$OSX] { control="ImageLogo" align=right x=650 y=0 width=340 height=133 margin-top=0 margin-right=0}
-		place [$OSX] { control="ImageLogo" align=right x=650 y=0 width=340 height=133 margin-top=0 margin-right=0}	
 		
 		place { control="add_game" x=14 y=16 region=bottom height=30}
 
