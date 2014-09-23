@@ -256,5 +256,4 @@
 "Random/ValvePeople.html"                        : "https://valvesoftware.com/company/people.html",
 "Random/Security.html"                           : "https://valvesoftware.com/security/",
 "Random/ValveGroup.json"                         : "https://steamcommunity.com/groups/valve/memberslistxml",
-"Random/ChristenGroups.json"                     : "https://api.steampowered.com/ISteamUser/GetUserGroupList/v1/?__KEY__&steamid=76561198024402255"
 }
