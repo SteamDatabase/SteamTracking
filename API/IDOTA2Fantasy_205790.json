@@ -26,7 +26,7 @@
                 },
                 {
                     "name": "matchid",
-                    "type": "uint32",
+                    "type": "uint64",
                     "optional": true,
                     "description": "An optional filter for a specific match"
                 },

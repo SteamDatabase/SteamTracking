@@ -1953,34 +1953,17 @@ function SetOfficialGameServers( appid, serverIPs )
 		);
 }
 
-
 //
-// set the official server IPs for this app
 //
-function SetDedicatedGameServers( appid, gamedir, versions, message )
+function SetDedicatedGameServers( appid, gamedir, versions, message, serverbrowsername )
 {
 	AppsAjaxRequest(
 		g_szBaseURL + '/apps/setdedicatedgs/' + appid,
 		{ 
 			'gamedir' : gamedir,
 			'versions' : versions,
-		    'message' : message 
-		},
-		CommonSetHandler
-		);
-}
-
-
-//
-//
-function SetDedicatedGameServers( appid, gamedir, versions, message )
-{
-	AppsAjaxRequest(
-		g_szBaseURL + '/apps/setdedicatedgs/' + appid,
-		{ 
-			'gamedir' : gamedir,
-			'versions' : versions,
-		    'message' : message 
+			'message' : message,
+			'serverbrowsername' : serverbrowsername
 		},
 		CommonSetHandler
 		);
@@ -3583,7 +3566,7 @@ function CreateNewApp( pubId, appName, appType, reservedRange, bAddPartnerAppRep
 
 function CreateNewAppHelper( pubId, parentId, appName, appType, reservedRange, bAddPartnerAppReporting )
 {
-	var progressDialog = ShowCreateNewAppProgress( 'Create New App', 'Creating new app' );
+	var progressDialog = ShowProgressDialog( 'Create New App', 'Creating new app' );
 	progressDialog.done( function() { top.location.reload(); } );
 
 	var progressMessages = $J( '#ProgressMessagesContainer' );
@@ -3645,7 +3628,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, reservedRange, b
 	);
 }
 
-function ShowCreateNewAppProgress( strTitle, strDescription )
+function ShowProgressDialog( strTitle, strDescription )
 {
 	var deferred = new jQuery.Deferred();
 	var fnOK = function() { deferred.resolve(); };

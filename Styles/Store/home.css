@@ -994,18 +994,48 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	margin-bottom: 10px;
 }
 
-.home_content.fourwide > a {
+/* afarnsworthTODO: kill these styles after a day or two after old html expires from browser caches */
+
+	.home_content.fourwide > a {
+		width: 222px;
+		display: inline-block;
+		padding-right: 10px;
+		position: relative;
+	}
+
+	.home_content.fourwide > a:last-child, .home_content.twowide > a:last-child  {
+		padding-right: 0;
+	}
+
+	.home_content.fourwide > a img {
+		width: 222px;
+		height: 104px;
+
+	}
+	/* Two wide main cap */
+	.home_content.twowide > a {
+		width: 460px;
+		display: inline-block;
+		padding-right: 10px;
+		position: relative;
+	}
+
+
+	.home_content.twowide > a img {
+		width: 460px;
+		height: 215px;
+	}
+
+/* end styles to remove */
+
+.home_content.fourwide a.home_content_item {
 	width: 222px;
-	display: inline-block;
-	padding-right: 10px;
+	float: left;
+	padding-right: 17px;
 	position: relative;
 }
 
-.home_content.fourwide > a:last-child, .home_content.twowide > a:last-child  {
-	padding-right: 0;
-}
-
-.home_content.fourwide > a img {
+.home_content.fourwide a.home_content_item img {
 	width: 222px;
 	height: 104px;
 
@@ -1023,17 +1053,21 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 }
 
 /* Two wide main cap */
-.home_content.twowide > a {
+.home_content.twowide a.home_content_item {
 	width: 460px;
-	display: inline-block;
-	padding-right: 10px;
+	float: left;
+	padding-right: 20px;
 	position: relative;
 }
 
 
-.home_content.twowide > a img {
+.home_content.twowide a.home_content_item img {
 	width: 460px;
 	height: 215px;
+}
+
+.home_content_items a.home_content_item:last-child  {
+	padding-right: 0;
 }
 
 

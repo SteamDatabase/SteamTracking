@@ -255,5 +255,5 @@
 "Random/JobPostings.html"                        : "https://valvesoftware.com/jobs/job_postings.html",
 "Random/ValvePeople.html"                        : "https://valvesoftware.com/company/people.html",
 "Random/Security.html"                           : "https://valvesoftware.com/security/",
-"Random/ValveGroup.json"                         : "https://steamcommunity.com/groups/valve/memberslistxml",
+"Random/ValveGroup.json"                         : "https://steamcommunity.com/groups/valve/memberslistxml"
 }

@@ -33,7 +33,7 @@
             "parameters": [
                 {
                     "name": "match_id",
-                    "type": "string",
+                    "type": "uint64",
                     "optional": false,
                     "description": "Match id"
                 }
@@ -82,7 +82,7 @@
                 },
                 {
                     "name": "start_at_match_id",
-                    "type": "string",
+                    "type": "uint64",
                     "optional": true,
                     "description": "The minimum match ID to start from"
                 },
@@ -188,7 +188,7 @@
                 },
                 {
                     "name": "match_id",
-                    "type": "string",
+                    "type": "uint64",
                     "optional": true,
                     "description": ""
                 }
