@@ -4037,8 +4037,8 @@ function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strForm
 			tooltipLocation: 'n',
 			tooltipOffset: 20,
 			fadeTooltip: true,
-			yvalues: 2,
-			formatString: "<strong>%s</strong><br>%s<br>%s"
+            yvalues: 2,
+            formatString: '<strong>%s</strong><br>%s<br>%d sold'
 		},
 		series:[{lineWidth:3, markerOptions:{show: false, style:'circle'}}],
 		seriesColors: [ "#688F3E" ]
