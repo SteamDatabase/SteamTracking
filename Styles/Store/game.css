@@ -712,7 +712,6 @@ img.game_header_image_full {
 .game_purchase_discount.suppress_discount_pct .discount_original_price,
 .game_purchase_discount.suppress_discount_pct .discount_final_price {
 	margin-left: 4px;
-	left: 4px;
 }
 
 .game_purchase_discount.small {
@@ -957,19 +956,23 @@ img.game_header_image_full {
 	font-size: 12px;
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
+.game_area_sys_req_full p {
+	margin-bottom: 10px;
+}
 
 .game_area_sys_req strong {
 	font-weight: normal;
 	font-size: 11px;
 	color: #4582A5;
 	text-transform: uppercase;
-	margin-bottom: 7px;
 	display: inline-block;
+	margin-right: 4px;
 }
 
 .game_area_sys_req ul {
 	list-style-type: none;
 	margin-left: 0px;
+	line-height: 18px;
 }
 
 .game_area_sys_req ul li {
@@ -997,6 +1000,7 @@ img.game_header_image_full {
 	color: #61686d;
 	font-size: 11px;
 	margin-bottom: 10px;
+	margin-top: 20px;
 }
 
 .game_area_dlc_section {
@@ -1970,7 +1974,7 @@ img.package_header {
 
 body.v6 .game_area_already_owned.page_content {
 	height: 40px;
-	padding: 0px 15px 0px 80px;
+	padding: 0px 15px 0px 0px;
 	position: relative;
 
     background: -moz-linear-gradient(left,  rgba(163,207,6,0.6) 0%, rgba(75,106,33,0.6) 100%); /* FF3.6+ */
@@ -1987,13 +1991,18 @@ body.v6 .game_area_already_owned.page_content {
     line-height: 40px;
 	color: #a3cf06;
     margin-bottom: 1px;
-	width: 845px;
+	width: 925px;
 }
 .game_area_already_owned .ds_flag {
-    top: 11px;
-    left: -8px;
+	position: relative;
+	display: inline-block;
+	top: -2px;
+	left: -8px;
     box-shadow: 1px 1px 2px #000000;
 	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC') no-repeat 4px 4px #a3cf06;
+}
+.game_area_already_owned .already_in_library {
+	display: inline-block;
 }
 
 .already_owned_actions {
