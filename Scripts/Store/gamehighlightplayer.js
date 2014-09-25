@@ -549,9 +549,9 @@ var HighlightPlayer = Class.create( {
 
 		var $Title = $J('<a/>' );
 		if ( Steam.BIsUserInSteamClient() )
-			$Title.text( '#text_view_screenshot_in_web_browser' );
+			$Title.text( 'View full-size version in browser' );
 		else
-			$Title.text( '#text_download_screenshot' );
+			$Title.text( 'Download full-size version' );
 		$Title.append( ' ', $J('<img/>', {src: 'https://steamstore-a.akamaihd.net/public/images/v5/ico_external_link.gif' } ) );
 
 		var $TitleCtn = $J('<div/>', {'class': 'screenshot_popup_modal_title'} ).append( $Title );
@@ -564,8 +564,8 @@ var HighlightPlayer = Class.create( {
 		var $ScreenshotCount = $J('<div/>');
 		$Footer.append( $ScreenshotCount );
 
-		var $BtnPrev = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium previous'}).append( $J('<span/>').text( '#btn_previous' ) );
-		var $BtnNext = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium next'}).append( $J('<span/>').text( '#btn_next' ) );
+		var $BtnPrev = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium previous'}).append( $J('<span/>').text( 'Prev' ) );
+		var $BtnNext = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium next'}).append( $J('<span/>').text( 'Next' ) );
 
 		$Footer.append( $ScreenshotCount, $BtnPrev, $BtnNext );
 
@@ -619,7 +619,7 @@ var HighlightPlayer = Class.create( {
 			else
 				$BtnNext.hide();
 
-			$ScreenshotCount.text( '#text_x_of_y_screenshots'.replace( /%1\$s/, iCurIndex + 1 ).replace( /%2\$s/, rgScreenshotIDs.length ) );
+			$ScreenshotCount.text( '%1$s of %2$s screenshots'.replace( /%1\$s/, iCurIndex + 1 ).replace( /%2\$s/, rgScreenshotIDs.length ) );
 		};
 		var fnShowScreenshot = function( screenshotid )
 		{
@@ -704,7 +704,7 @@ var HighlightPlayer = Class.create( {
 						'<div class="volume_handle"></div>' +
 					'</div>' +
 					'<div class="autoplay_checkbox"></div>' +
-					'<div class="autoplay_label">#text_video_autoplay</div>' +
+					'<div class="autoplay_label">Autoplay videos</div>' +
 				'</div>' +
 				'<div class="progress_bar_wrapper">' +
 					'<div class="progress_bar_container">' +
