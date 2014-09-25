@@ -135,6 +135,20 @@ a.games_list_tab:hover {
 	left: 0px;
 }
 
+.gameListRowLogo.ds_flagged .ds_flag {
+	left: 4px;
+}
+.gameListRowLogo.ds_flagged .gameLogo a {
+	display: block;
+	background: #141f2c;
+	width: 184px;
+	height: 69px;
+}
+
+.gameListRowLogo.ds_flagged .gameLogo img {
+	opacity: 0.3;
+}
+
 .gameListRowItem {
 	height: 60px;
 	border: 1px solid #454545;	
@@ -1047,4 +1061,12 @@ body.migrated_profile_page #wishlist_comic {
 .games_list {
 	clear: both;
 	padding-top: 10px !important;
+}
+
+.gameListRow.followed .follow_game_btn, .gameListRow.notfollowed .unfollow_game_btn {
+	display: none;
+}
+
+.followed_game_actions {
+	padding-top: 18px;
 }
