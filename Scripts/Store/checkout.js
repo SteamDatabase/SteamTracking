@@ -1355,11 +1355,11 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == '3pay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '3pay transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Mobile transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for 3pay customers';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for mobile customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
@@ -3280,7 +3280,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == '3pay' && providerPaymentMethod == 52 )
 			{
-				$('payment_method_review_text').innerHTML = '3pay';
+				$('payment_method_review_text').innerHTML = 'Mobile Payments';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'isbank' && providerPaymentMethod == 53 )
