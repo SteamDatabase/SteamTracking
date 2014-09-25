@@ -1235,6 +1235,7 @@ function SearchTimeout( elem, value, elemSuggestionCtn, elemSuggestions )
 				method: 'GET',
 				onComplete: function() {
 					$J(elemSuggestions).InstrumentLinks();
+					GDynamicStore.DecorateDynamicItems( $J(elemSuggestions) );
 					elemSuggestions.select('a.match').each( function (e) { e.observe( 'mouseover', SearchSuggestOnMouseOver.bindAsEventListener( null, e ) ); } );
 					ShowSuggestionsAsNecessary( false, elemSuggestionCtn, elemSuggestions );
 				}
