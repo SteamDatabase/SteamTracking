@@ -390,6 +390,10 @@ a.home_block_footer_btn:hover {
 	white-space: nowrap;
 }
 
+.special_discount .discount_block_inline {
+	display: inline-block;
+}
+
 .home_specials_grid .special .special_img_ctn .ds_flag {
 	top: 18px;
 }
@@ -409,7 +413,7 @@ a.home_block_footer_btn:hover {
 	min-height: 131px;
 }
 
-home_smallcap_area.recently_updated .home_smallcaps {
+.home_smallcap_area.recently_updated .home_smallcaps {
 	min-height: 201px;
 }
 
