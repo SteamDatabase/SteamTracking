@@ -912,6 +912,17 @@ a#store_search_link img {
 	top: 0;
 }
 
+.discount_block.suppress_discount_pct .discount_pct {
+	display: none;
+}
+
+.discount_block.game_purchase_discount.suppress_discount_pct .discount_final_price {
+	padding-left: 6px;
+}
+.discount_block.game_purchase_discount.suppress_discount_pct .discount_original_price {
+	left: 6px;
+}
+
 /* spotlight styles */
 .spotlight_img {
     width: 306px;
