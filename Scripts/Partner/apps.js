@@ -3668,7 +3668,40 @@ function UpgradeGreenlightItem( publishedfileid, name )
 
 	prompt.done( function( appName ) {
 		var appType = appTypeElem.val();
-		var waitingDialog = ShowBlockingWaitDialog( 'Converting', 'Please wait...' );
+		var waitingDialog = ShowBlockingWaitDialog( '
+Warning: fopen(/valve/www/builds/bld2420028/appmgmt/config/../../shared/localization/cached/shared_english.txt.php.78918): failed to open stream: Permission denied in /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php on line 1097
+
+Call Stack:
+    0.0012     231656   1. {main}() /valve/www/builds/bld2420028/appmgmt/public/javascript/apps.js:0
+    0.0080     863480   2. LocalizeAndEscapeSingleQuotes() /valve/www/builds/bld2420028/appmgmt/public/javascript/apps.js:3675
+    0.0080     864280   3. Localize() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:1312
+    0.0080     865080   4. CLocalizationManager::LocalizeString() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:1286
+    0.0085     909144   5. CLocalizationManager::LoadStringsFile() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:864
+    0.0425    1040488   6. CLocalizationManager::WriteCacheFile() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:1031
+    0.0425    1040760   7. fopen() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:1097
+
+
+Notice: ----------------- FAILURE -----------------
+AssertMsg() failed: Failed writing /valve/www/builds/bld2420028/appmgmt/config/../../shared/localization/cached/shared_english.txt.php
+Callstack follows:
+
+0: AssertMsg( b:0;, s:114:"Failed writing /valve/www/builds/bld2420028/appmgmt/c ...  ) called at /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php : 1100
+1: WriteCacheFile( a:504:{s:14:"AppHub_Nav_All";s:3:"All";s:22:"AppHub_Nav_Disc ... , s:99:"/valve/www/builds/bld2420028/appmgmt/config/../../shar ...  ) called at /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php : 1031
+2: LoadStringsFile( s:18:"shared_english.txt";, i:1;, s:70:"/valve/www/builds/bld2420028/appmgmt/config/../../shar ...  ) called at /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php : 864
+3: LocalizeString( s:52:"#SteamworksAccess_UpgradeGreenlightEntries_Upgrading"; ) called at /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php : 1286
+4: Localize( s:5 in /valve/www/builds/bld2420028/common/commonutils.php on line 1165
+
+Call Stack:
+    0.0012     231656   1. {main}() /valve/www/builds/bld2420028/appmgmt/public/javascript/apps.js:0
+    0.0080     863480   2. LocalizeAndEscapeSingleQuotes() /valve/www/builds/bld2420028/appmgmt/public/javascript/apps.js:3675
+    0.0080     864280   3. Localize() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:1312
+    0.0080     865080   4. CLocalizationManager::LocalizeString() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:1286
+    0.0085     909144   5. CLocalizationManager::LoadStringsFile() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:864
+    0.0425    1040488   6. CLocalizationManager::WriteCacheFile() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:1031
+    0.0429    1041224   7. AssertMsg() /valve/www/builds/bld2420028/common/localization/clocalizationmanager.php:1100
+    0.0448    1118568   8. trigger_error() /valve/www/builds/bld2420028/common/commonutils.php:1165
+
+Converting', 'Please wait...' );
 			$J.ajax(
 				{
 					type: "POST",
