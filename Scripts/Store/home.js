@@ -197,22 +197,19 @@ GHomepage = {
 			GHomepage.oDisplayLists.top_sellers[i].top_seller = true;
 		}
 
+		var rgTopSellers = [];
+		if ( oSettings && oSettings.top_sellers )
+			rgTopSellers = GHomepage.oDisplayLists.top_sellers;
+
 		var rgDisplayListCombined = GHomepage.MergeLists(
 			GHomepage.oDisplayLists.main_cluster_legacy, false,
-			GHomepage.oDisplayLists.main_cluster, false,
+			GHomepage.oDisplayLists.main_cluster, true,
+			rgTopSellers, false,
 			GHomepage.oDisplayLists.popular_new.slice( 0, 20 ), true
 		);
 		var oSettings = GHomepage.oSettings.main_cluster;
 
 		GHomepage.oFeaturedMainCapItems = {};
-
-		if ( oSettings && oSettings.top_sellers )
-		{
-			rgDisplayListCombined = GHomepage.ZipLists(
-				rgDisplayListCombined, false,
-				GHomepage.oDisplayLists.top_sellers, false
-			);
-		}
 
 		if ( oSettings && oSettings.recommended_for_you )
 		{
@@ -1030,6 +1027,7 @@ srand.prototype.choice = function(rgOptions)
 };
 
 var bAutoLoaderReady = false;
+var g_bDisableAutoloader = false;
 
 (function ( $ ) {
 
@@ -1059,7 +1057,7 @@ var bAutoLoaderReady = false;
 			var loadFunc = function() {
 				ele = this;
 
-				if( this.bTriggerActive )
+				if( this.bTriggerActive || g_bDisableAutoloader )
 				{
 					return;
 				}
@@ -1315,6 +1313,9 @@ var bAutoLoaderReady = false;
 			}
 
 			var scrollFunc = function( event ){
+				if ( g_bDisableAutoloader )
+					return;
+
 				if( bAutoLoaderReady )
 					WebStorage.SetLocal('home_scroll',$(window).scrollTop(), true);
 
