@@ -178,6 +178,15 @@ body.v6.login .rightcol .spotlight_block {
 	padding-top: 20px;
 }
 
+.checkout_gift_region_warning {
+	margin-top: 30px !important;
+}
+
+.checkout_gift_region_warning_link {
+	display: block;
+	margin-top: 10px;
+}
+
 .checkout_notes {
 	color: #8F98A0;
 	line-height: 20px;
