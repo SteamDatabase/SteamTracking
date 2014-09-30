@@ -110,7 +110,7 @@ function SelectAssocFillMenu( item )
 			var filename = asset.english;
 			if ( !filename )
 				continue;
-			var url = g_szStoreGfxUrl + 'gfx/apps/' + item.legacy_appid + '/' + filename;
+			var url = g_szStoreGfxUrl + 'apps/' + item.legacy_appid + '/' + filename;
 			li.observe( 'mouseover', ImageHoverPreview.bindAsEventListener( null, 'asset_preview', url ) );
 			li.observe( 'mouseout', HideImageHover.bindAsEventListener( null, 'asset_preview', li ) );
 		}
@@ -138,7 +138,7 @@ function DisplayAssetOptions( link, assetType, asset, appid )
 		for ( var i = 0; i < asset.length; i++ )
 		{
 			var screenshot = asset[i];
-			var url = g_szStoreGfxUrl + 'gfx/apps/' + appid + '/' + GetSizedScreenshotFilename( screenshot.filename, '.116x65' );
+			var url = g_szStoreGfxUrl + 'apps/' + appid + '/' + GetSizedScreenshotFilename( screenshot.filename, '.116x65' );
 			var imgElem = new Element( 'img', {src: url, 'class': 'screenshot_preview', id: screenshot.filename } );
 			imgElem.observe( 'click', DisplayScreenshotHTML.bind( null, screenshot.filename ) );
 
