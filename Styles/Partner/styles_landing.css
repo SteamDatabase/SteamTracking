@@ -1865,3 +1865,82 @@ a.pagelink:hover {
 {
 	border: 1px dashed red;
 }
+
+
+/* paging controls */
+.paged_items_no_results
+{
+	padding-top: 50px;
+	text-align: center;
+	font-size: 24px;
+}
+.paged_items_paging
+{
+	position: relative;
+	line-height: 25px;
+	height: 25px;
+}
+
+.paged_items_paging_summary
+{
+	color: #3b6e8c;
+	float: left;
+}
+
+.paged_items_paging_controls
+{
+	float: right;
+}
+
+.paged_items_paging_controls .pagebtn,
+.search_pagination_right .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.paged_items_paging_pagelink, .paged_items_paging_controls .commentthread_pagelink {
+	color: #3b6e8c;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.paged_items_paging_pagelink:hover, .paged_items_paging_controls .commentthread_pagelink:hover {
+	color: #67c1f5;
+}
+
+.paged_items_paging_pagelink.active, .paged_items_paging_controls .commentthread_pagelink.active {
+	color: #ffffff;
+	cursor: default;
+}
+
+.paged_items_paging_pagelink.active:hover {
+	text-decoration: none;
+}
+
+/* paging buttons */
+.pagebtn, a.pagebtn {
+	display: inline-block;
+	line-height: 24px;
+	background-color: rgba( 103, 193, 245, 0.2 );
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0px 16px;
+	color: #67c1f5;
+}
+
+.pagebtn:hover, a.pagebtn:hover {
+	background-color: #97C0E3;
+background: -moz-linear-gradient(left, #417a9b 5%, #67c1f5 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b), color-stop(95%,#67c1f5));background: -webkit-linear-gradient(left, #417a9b 5%,#67c1f5 95%);background: -o-linear-gradient(left, #417a9b 5%,#67c1f5 95%);background: -ms-linear-gradient(left, #417a9b 5%,#67c1f5 95%);background: linear-gradient(to right, #417a9b 5%,#67c1f5 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#417a9b', endColorstr='#67c1f5',GradientType=1 );	color: #ffffff;
+	text-decoration: none;
+}
+
+.pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
+	background: rgba( 0, 0, 0, 0.1 );
+	color: #28394D;
+	cursor: default;
+}
+
+a.pagelink:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}

@@ -374,6 +374,19 @@ select.hourselect,  select.minuteselect {
 	border: none;
 }
 
+.radioBtnDescText {
+    color: #888;
+    font-size: 11px;
+    line-height: 17px;
+    padding-left: 24px;
+    font-style: italic;
+}
+
+.controllerLeft {
+    float: left;
+    min-width: 417px;
+}
+
 .gameimagepreview {
 	float: left;
 	width: 467px;
