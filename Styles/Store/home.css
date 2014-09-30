@@ -7,13 +7,35 @@
 	margin: 0 auto;
 }
 
+.home_page_body_ctn {
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-width: 972px;
+}
+
+.home_page_takeover_link {
+	position: relative;
+}
+
+.home_page_takeover_link a {
+	display: block;
+}
+
+.home_page_takeover_link img {
+	width: 940px;
+}
+
+.home_page_body_ctn.has_takeover #store_nav_area .store_nav_bg {
+	background: rgba( 48, 95, 128, 0.9 );
+}
+
 .home_ctn {
 	overflow: hidden;
 }
 
 .home_page_gutter {
 	position: absolute;
-	left: 0;
+	left: -187px;
 	top: 31px;
 	width: 187px;
 	height: 200px;
@@ -56,8 +78,11 @@ a.gutter_item:hover {
 }
 
 @media all and (min-width: 1208px) {
-	.home_page_content, .footer_content {
+	/*.home_page_content,*/ .footer_content {
 		padding-left: 204px;
+	}
+	.home_page_body_ctn {
+		margin-left: 204px;
 	}
 	.home_page_gutter {
 		display: block;
