@@ -308,7 +308,7 @@ ul#why_list li {
 	background-color:#000000;
 }
 
-.auth_message_area, .twofactorauth_message_area {
+.auth_message_area {
 	position: relative;
 	padding-left: 70px;
 	min-height: 92px;
@@ -360,13 +360,13 @@ ul#why_list li {
 	height: 38px;
 }
 
-.authcode_entry_area, .twofactorauthcode_entry_area {
+.authcode_entry_area {
 	height: 32px;
 	margin-top: 4px;
 	margin-bottom: 6px;
 }
 
-.authcode_entry_box, .twofactorauthcode_entry_box {
+.authcode_entry_box {
 	background-image: url( https://steamstore-a.akamaihd.net/public/images/login/code_box.png );
 	background-repeat: no-repeat;
 	width: 220px;
@@ -381,7 +381,7 @@ ul#why_list li {
 	height: 27px;
 }
 
-input.authcode_entry_input, input.twofactorauthcode_entry_input {
+input.authcode_entry_input {
 	border: none;
 	background-color: transparent;
 	margin-left: 8px;
@@ -391,15 +391,15 @@ input.authcode_entry_input, input.twofactorauthcode_entry_input {
 	width: 220px;
 }
 
-input.authcode_entry_input.defaulttext, input.twofactorauthcode_entry_input.defaulttext {
+input.authcode_entry_input.defaulttext {
 	font-style: italic;
 }
 
-#auth_buttonsets, #twofactorauth_buttonsets {
+#auth_buttonsets {
 	height: 66px;
 }
 
-#auth_buttonset_waiting, #login_twofactorauth_buttonset_waiting {
+#auth_buttonset_waiting {
 	height: 66px;
 
 	background-image: url( https://steamstore-a.akamaihd.net/public/images/login/throbber.gif );
@@ -407,30 +407,30 @@ input.authcode_entry_input.defaulttext, input.twofactorauthcode_entry_input.defa
 	background-position: center center;
 }
 
-.auth_button, .twofactorauth_button {
+.auth_button {
 	background-image: url( https://steamstore-a.akamaihd.net/public/images/login/emailauth_button.png );
 	background-repeat: no-repeat;
 	width: 219px;
 	height: 66px;
 }
 
-.auth_button.auth_button_spacer, .twofactorauth_button.auth_button_spacer {
+.auth_button.auth_button_spacer {
 	background-image: none;
 }
 
-a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_button:hover {
+a.auth_button, a.auth_button:hover {
 	display: block;
 	text-decoration: none;
 }
 
-.auth_button h3, .twofactorauth_button h3 {
+.auth_button h3 {
 	font-weight: normal;
 	font-size: 18px;
 	color: #ffffff;
 	padding: 6px 12px 0px 12px;
 }
 
-.auth_button h5, .twofactorauth_button h5 {
+.auth_button h5 {
 	font-size: 12px;
 	color: #adaca6;
 	padding: 0px 12px 0px 12px;
@@ -439,7 +439,7 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 
 
 
-.modal_buttons .auth_button, .modal_buttons .twofactorauth_button, .modal_buttons a.twofactorauth_button.leftbtn, .modal_buttons a.twofactorauth_button.leftbtn {
+.modal_buttons .auth_button {
 	float: left;
 }
 
