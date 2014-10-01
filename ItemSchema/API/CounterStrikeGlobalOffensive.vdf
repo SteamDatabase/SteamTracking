@@ -1004,6 +1004,78 @@
 			{
 				"icon_path"		"econ/stickers/cologne2014/esl_c"
 			}
+			"173"
+			{
+				"icon_path"		"econ/stickers/community02/bossyburger"
+			}
+			"174"
+			{
+				"icon_path"		"econ/stickers/community02/catcall"
+			}
+			"175"
+			{
+				"icon_path"		"econ/stickers/community02/chickenstrike"
+			}
+			"176"
+			{
+				"icon_path"		"econ/stickers/community02/ctbanana"
+			}
+			"177"
+			{
+				"icon_path"		"econ/stickers/community02/dontworryimpro"
+			}
+			"178"
+			{
+				"icon_path"		"econ/stickers/community02/fightlikeagirl"
+			}
+			"179"
+			{
+				"icon_path"		"econ/stickers/community02/handmadeflash"
+			}
+			"180"
+			{
+				"icon_path"		"econ/stickers/community02/kawaiikiller"
+			}
+			"181"
+			{
+				"icon_path"		"econ/stickers/community02/neluthebear"
+			}
+			"182"
+			{
+				"icon_path"		"econ/stickers/community02/oneshotonekill"
+			}
+			"183"
+			{
+				"icon_path"		"econ/stickers/community02/shootingstar"
+			}
+			"185"
+			{
+				"icon_path"		"econ/stickers/community02/warpenguin"
+			}
+			"186"
+			{
+				"icon_path"		"econ/stickers/community02/windywalking"
+			}
+			"187"
+			{
+				"icon_path"		"econ/stickers/community02/blitzkrieg"
+			}
+			"188"
+			{
+				"icon_path"		"econ/stickers/community02/pigeonmaster"
+			}
+			"189"
+			{
+				"icon_path"		"econ/stickers/community02/terrorized"
+			}
+			"190"
+			{
+				"icon_path"		"econ/stickers/community02/tilldeathdouspart"
+			}
+			"191"
+			{
+				"icon_path"		"econ/stickers/community02/stayfrosty"
+			}
 		}
 		"weapon_icons"
 		{
@@ -9958,6 +10030,38 @@
 				"primary_ammo"		"BULLET_PLAYER_357SIG_SMALL"
 			}
 		}
+		"coupon_crate_prefab"
+		{
+			"prefab"		"weapon_case_base"
+			"is_coupon_crate"		"1"
+			"attributes"
+			{
+				"expiration date"
+				{
+					"attribute_class"		"expiration_date"
+					"force_gc_to_generate"		"1"
+					"use_custom_logic"		"expiration_period_days_from_now"
+					"value"		"7"
+				}
+				"cannot trade"		"1"
+			}
+			"capabilities"
+			{
+				"can_delete"		"0"
+			}
+		}
+		"coupon_key_prefab"
+		{
+			"prefab"		"weapon_case_key"
+			"item_name"		"#CSGO_Tool_Coupon_Key"
+			"item_description"		"#CSGO_Tool_Coupon_Key"
+			"image_inventory"		"econ/tools/coupon_key"
+			"is_coupon_key"		"1"
+			"attributes"
+			{
+				"cannot trade"		"1"
+			}
+		}
 	}
 	"items"
 	{
@@ -11503,7 +11607,7 @@
 		{
 			"name"		"Name Tag"
 			"first_sale_date"		"2013/08/28"
-			"prefab"		"csgo_tool"
+			"prefab"		"valve csgo_tool"
 			"item_name"		"#CSGO_Tool_Name_Tag"
 			"item_type_name"		"#CSGO_Tool_Name_TagTag"
 			"item_description"		"#CSGO_Tool_Name_Tag_Desc"
@@ -11521,7 +11625,7 @@
 		{
 			"name"		"Weapon Case Key"
 			"first_sale_date"		"2013/09/20"
-			"prefab"		"weapon_case_key"
+			"prefab"		"valve weapon_case_key"
 			"image_inventory"		"econ/tools/weapon_case_key"
 			"tool"
 			{
@@ -11534,7 +11638,7 @@
 			"item_name"		"#CSGO_esports_crate_key_1"
 			"item_description"		"#CSGO_esports_crate_key_1_desc"
 			"first_sale_date"		"2014/07/09"
-			"prefab"		"weapon_case_key"
+			"prefab"		"valve weapon_case_key"
 			"image_inventory"		"econ/tools/weapon_case_key_special_1"
 			"tool"
 			{
@@ -11563,7 +11667,7 @@
 		{
 			"name"		"Gift - 1 Player"
 			"first_sale_date"		"2013/12/17"
-			"prefab"		"csgo_tool"
+			"prefab"		"valve csgo_tool"
 			"item_name"		"#CSGO_Tool_Gift1Player"
 			"item_type_name"		"#CSGO_Tool_GiftTag"
 			"item_description"		"#CSGO_Tool_Gift1Player_Desc"
@@ -11596,7 +11700,7 @@
 		{
 			"name"		"Gift - 9 Players"
 			"first_sale_date"		"2013/12/16"
-			"prefab"		"csgo_tool"
+			"prefab"		"valve csgo_tool"
 			"item_name"		"#CSGO_Tool_Gift9Players"
 			"item_type_name"		"#CSGO_Tool_GiftTag"
 			"item_description"		"#CSGO_Tool_Gift9Players_Desc"
@@ -11631,7 +11735,7 @@
 			"item_name"		"#CSGO_sticker_crate_key_1"
 			"item_description"		"#CSGO_sticker_crate_key_1_desc"
 			"first_sale_date"		"2014/01/29"
-			"prefab"		"weapon_case_key"
+			"prefab"		"valve weapon_case_key"
 			"image_inventory"		"econ/tools/sticker_crate_key"
 			"tool"
 			{
@@ -11655,7 +11759,7 @@
 		{
 			"name"		"Gift - 25 Spectators"
 			"first_sale_date"		"2013/12/16"
-			"prefab"		"csgo_tool"
+			"prefab"		"valve csgo_tool"
 			"item_name"		"#CSGO_Tool_Gift25Spectators"
 			"item_type_name"		"#CSGO_Tool_GiftTag"
 			"item_description"		"#CSGO_Tool_Gift25Spectators_Desc"
@@ -11789,10 +11893,23 @@
 		}
 		"1311"
 		{
-			"name"		"Community Case Key 4"
+			"name"		"Community Case Key September 4"
 			"item_name"		"#CSGO_community_crate_key_4"
 			"item_description"		"#CSGO_community_crate_key_4_desc"
 			"first_sale_date"		"2014/07/01"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_community_4"
+			"tool"
+			{
+				"restriction"		"community_case_4"
+			}
+		}
+		"1313"
+		{
+			"name"		"Community Case Key 4"
+			"item_name"		"#CSGO_community_crate_key_4"
+			"item_description"		"#CSGO_community_crate_key_4_desc"
+			"first_sale_date"		"2014/06/23"
 			"prefab"		"weapon_case_key"
 			"image_inventory"		"econ/tools/crate_key_community_4"
 			"tool"
@@ -12264,7 +12381,7 @@
 			"prefab"		"weapon_case"
 			"associated_items"
 			{
-				"1311"		"1"
+				"1313"		"1"
 			}
 			"tool"
 			{
@@ -12722,6 +12839,475 @@
 			{
 				"pedestal display model"		"models/inventory_items/collectible_pin_tactics.mdl"
 			}
+		}
+		"10000"
+		{
+			"name"		"coupon - bossyburger"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/bossyburger"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - bossyburger"
+			"tool"
+			{
+				"restriction"		"coupon_bossyburger"
+			}
+			"associated_item"		"20000"
+		}
+		"20000"
+		{
+			"name"		"coupon key - bossyburger"
+			"item_name"		"#coupon_key_bossyburger"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_bossyburger"
+			}
+			"associated_item"		"10000"
+		}
+		"10001"
+		{
+			"name"		"coupon - catcall"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/catcall"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - catcall"
+			"tool"
+			{
+				"restriction"		"coupon_catcall"
+			}
+			"associated_item"		"20001"
+		}
+		"20001"
+		{
+			"name"		"coupon key - catcall"
+			"item_name"		"#coupon_key_catcall"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_catcall"
+			}
+			"associated_item"		"10001"
+		}
+		"10002"
+		{
+			"name"		"coupon - chickenstrike"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/chickenstrike"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - chickenstrike"
+			"tool"
+			{
+				"restriction"		"coupon_chickenstrike"
+			}
+			"associated_item"		"20002"
+		}
+		"20002"
+		{
+			"name"		"coupon key - chickenstrike"
+			"item_name"		"#coupon_key_chickenstrike"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_chickenstrike"
+			}
+			"associated_item"		"10002"
+		}
+		"10003"
+		{
+			"name"		"coupon - ctbanana"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/ctbanana"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - ctbanana"
+			"tool"
+			{
+				"restriction"		"coupon_ctbanana"
+			}
+			"associated_item"		"20003"
+		}
+		"20003"
+		{
+			"name"		"coupon key - ctbanana"
+			"item_name"		"#coupon_key_ctbanana"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_ctbanana"
+			}
+			"associated_item"		"10003"
+		}
+		"10004"
+		{
+			"name"		"coupon - dontworryimpro"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/dontworryimpro"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - dontworryimpro"
+			"tool"
+			{
+				"restriction"		"coupon_dontworryimpro"
+			}
+			"associated_item"		"20004"
+		}
+		"20004"
+		{
+			"name"		"coupon key - dontworryimpro"
+			"item_name"		"#coupon_key_dontworryimpro"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_dontworryimpro"
+			}
+			"associated_item"		"10004"
+		}
+		"10005"
+		{
+			"name"		"coupon - fightlikeagirl"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/fightlikeagirl"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - fightlikeagirl"
+			"tool"
+			{
+				"restriction"		"coupon_fightlikeagirl"
+			}
+			"associated_item"		"20005"
+		}
+		"20005"
+		{
+			"name"		"coupon key - fightlikeagirl"
+			"item_name"		"#coupon_key_fightlikeagirl"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_fightlikeagirl"
+			}
+			"associated_item"		"10005"
+		}
+		"10006"
+		{
+			"name"		"coupon - handmadeflash"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/handmadeflash"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - handmadeflash"
+			"tool"
+			{
+				"restriction"		"coupon_handmadeflash"
+			}
+			"associated_item"		"20006"
+		}
+		"20006"
+		{
+			"name"		"coupon key - handmadeflash"
+			"item_name"		"#coupon_key_handmadeflash"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_handmadeflash"
+			}
+			"associated_item"		"10006"
+		}
+		"10007"
+		{
+			"name"		"coupon - kawaiikiller"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/kawaiikiller"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - kawaiikiller"
+			"tool"
+			{
+				"restriction"		"coupon_kawaiikiller"
+			}
+			"associated_item"		"20007"
+		}
+		"20007"
+		{
+			"name"		"coupon key - kawaiikiller"
+			"item_name"		"#coupon_key_kawaiikiller"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_kawaiikiller"
+			}
+			"associated_item"		"10007"
+		}
+		"10008"
+		{
+			"name"		"coupon - neluthebear"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/neluthebear"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - neluthebear"
+			"tool"
+			{
+				"restriction"		"coupon_neluthebear"
+			}
+			"associated_item"		"20008"
+		}
+		"20008"
+		{
+			"name"		"coupon key - neluthebear"
+			"item_name"		"#coupon_key_neluthebear"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_neluthebear"
+			}
+			"associated_item"		"10008"
+		}
+		"10009"
+		{
+			"name"		"coupon - oneshotonekill"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/oneshotonekill"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - oneshotonekill"
+			"tool"
+			{
+				"restriction"		"coupon_oneshotonekill"
+			}
+			"associated_item"		"20009"
+		}
+		"20009"
+		{
+			"name"		"coupon key - oneshotonekill"
+			"item_name"		"#coupon_key_oneshotonekill"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_oneshotonekill"
+			}
+			"associated_item"		"10009"
+		}
+		"http://steamcommunity.com/sharedfiles/filedetails/?id"		"258207854"
+		"10010"
+		{
+			"name"		"coupon - shootingstar"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/shootingstar"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - shootingstar"
+			"tool"
+			{
+				"restriction"		"coupon_shootingstar"
+			}
+			"associated_item"		"20010"
+		}
+		"20010"
+		{
+			"name"		"coupon key - shootingstar"
+			"item_name"		"#coupon_key_shootingstar"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_shootingstar"
+			}
+			"associated_item"		"10010"
+		}
+		"10012"
+		{
+			"name"		"coupon - warpenguin"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/warpenguin"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - warpenguin"
+			"tool"
+			{
+				"restriction"		"coupon_warpenguin"
+			}
+			"associated_item"		"20012"
+		}
+		"20012"
+		{
+			"name"		"coupon key - warpenguin"
+			"item_name"		"#coupon_key_warpenguin"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_warpenguin"
+			}
+			"associated_item"		"10012"
+		}
+		"10013"
+		{
+			"name"		"coupon - windywalking"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/windywalking"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - windywalking"
+			"tool"
+			{
+				"restriction"		"coupon_windywalking"
+			}
+			"associated_item"		"20013"
+		}
+		"20013"
+		{
+			"name"		"coupon key - windywalking"
+			"item_name"		"#coupon_key_windywalking"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_windywalking"
+			}
+			"associated_item"		"10013"
+		}
+		"10014"
+		{
+			"name"		"coupon - blitzkrieg"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/blitzkrieg"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - blitzkrieg"
+			"tool"
+			{
+				"restriction"		"coupon_blitzkrieg"
+			}
+			"associated_item"		"20014"
+		}
+		"20014"
+		{
+			"name"		"coupon key - blitzkrieg"
+			"item_name"		"#coupon_key_blitzkrieg"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_blitzkrieg"
+			}
+			"associated_item"		"10014"
+		}
+		"10015"
+		{
+			"name"		"coupon - pigeonmaster"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/pigeonmaster"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - pigeonmaster"
+			"tool"
+			{
+				"restriction"		"coupon_pigeonmaster"
+			}
+			"associated_item"		"20015"
+		}
+		"20015"
+		{
+			"name"		"coupon key - pigeonmaster"
+			"item_name"		"#coupon_key_pigeonmaster"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_pigeonmaster"
+			}
+			"associated_item"		"10015"
+		}
+		"10016"
+		{
+			"name"		"coupon - terrorized"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/terrorized"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - terrorized"
+			"tool"
+			{
+				"restriction"		"coupon_terrorized"
+			}
+			"associated_item"		"20016"
+		}
+		"20016"
+		{
+			"name"		"coupon key - terrorized"
+			"item_name"		"#coupon_key_terrorized"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_terrorized"
+			}
+			"associated_item"		"10016"
+		}
+		"10017"
+		{
+			"name"		"coupon - tilldeathdouspart"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/tilldeathdouspart"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - tilldeathdouspart"
+			"tool"
+			{
+				"restriction"		"coupon_tilldeathdouspart"
+			}
+			"associated_item"		"20017"
+		}
+		"20017"
+		{
+			"name"		"coupon key - tilldeathdouspart"
+			"item_name"		"#coupon_key_tilldeathdouspart"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_tilldeathdouspart"
+			}
+			"associated_item"		"10017"
+		}
+		"10018"
+		{
+			"name"		"coupon - stayfrosty"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/stayfrosty"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - stayfrosty"
+			"tool"
+			{
+				"restriction"		"coupon_stayfrosty"
+			}
+			"associated_item"		"20018"
+		}
+		"20018"
+		{
+			"name"		"coupon key - stayfrosty"
+			"item_name"		"#coupon_key_stayfrosty"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_stayfrosty"
+			}
+			"associated_item"		"10018"
 		}
 	}
 	"attributes"
@@ -14217,6 +14803,16 @@
 			"description_string"		"#Attrib_UseAfterDate"
 			"hidden"		"1"
 			"effect_type"		"negative"
+			"stored_as_integer"		"1"
+		}
+		"183"
+		{
+			"name"		"expiration date"
+			"attribute_class"		"expiration_date"
+			"description_string"		"#Attrib_ExpirationDate"
+			"description_format"		"value_is_date"
+			"hidden"		"1"
+			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
 		}
 	}
@@ -15805,6 +16401,150 @@
 			"sticker_material"		"cologne2014/esl_c"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"4"
+		}
+		"173"
+		{
+			"name"		"bossyburger"
+			"item_name"		"#StickerKit_comm02_bossyburger"
+			"description_string"		"#StickerKit_desc_comm02_bossyburger"
+			"sticker_material"		"community02/bossyburger"
+			"item_rarity"		"rare"
+		}
+		"174"
+		{
+			"name"		"catcall"
+			"item_name"		"#StickerKit_comm02_catcall"
+			"description_string"		"#StickerKit_desc_comm02_catcall"
+			"sticker_material"		"community02/catcall"
+			"item_rarity"		"rare"
+		}
+		"175"
+		{
+			"name"		"chickenstrike"
+			"item_name"		"#StickerKit_comm02_chickenstrike"
+			"description_string"		"#StickerKit_desc_comm02_chickenstrike"
+			"sticker_material"		"community02/chickenstrike"
+			"item_rarity"		"rare"
+		}
+		"176"
+		{
+			"name"		"ctbanana"
+			"item_name"		"#StickerKit_comm02_ctbanana"
+			"description_string"		"#StickerKit_desc_comm02_ctbanana"
+			"sticker_material"		"community02/ctbanana"
+			"item_rarity"		"rare"
+		}
+		"177"
+		{
+			"name"		"dontworryimpro"
+			"item_name"		"#StickerKit_comm02_dontworryimpro"
+			"description_string"		"#StickerKit_desc_comm02_dontworryimpro"
+			"sticker_material"		"community02/dontworryimpro"
+			"item_rarity"		"rare"
+		}
+		"178"
+		{
+			"name"		"fightlikeagirl"
+			"item_name"		"#StickerKit_comm02_fightlikeagirl"
+			"description_string"		"#StickerKit_desc_comm02_fightlikeagirl"
+			"sticker_material"		"community02/fightlikeagirl"
+			"item_rarity"		"rare"
+		}
+		"179"
+		{
+			"name"		"handmadeflash"
+			"item_name"		"#StickerKit_comm02_handmadeflash"
+			"description_string"		"#StickerKit_desc_comm02_handmadeflash"
+			"sticker_material"		"community02/handmadeflash"
+			"item_rarity"		"rare"
+		}
+		"180"
+		{
+			"name"		"kawaiikiller"
+			"item_name"		"#StickerKit_comm02_kawaiikiller"
+			"description_string"		"#StickerKit_desc_comm02_kawaiikiller"
+			"sticker_material"		"community02/kawaiikiller"
+			"item_rarity"		"rare"
+		}
+		"181"
+		{
+			"name"		"neluthebear"
+			"item_name"		"#StickerKit_comm02_neluthebear"
+			"description_string"		"#StickerKit_desc_comm02_neluthebear"
+			"sticker_material"		"community02/neluthebear"
+			"item_rarity"		"rare"
+		}
+		"182"
+		{
+			"name"		"oneshotonekill"
+			"item_name"		"#StickerKit_comm02_oneshotonekill"
+			"description_string"		"#StickerKit_desc_comm02_oneshotonekill"
+			"sticker_material"		"community02/oneshotonekill"
+			"item_rarity"		"rare"
+		}
+		"183"
+		{
+			"name"		"shootingstar"
+			"item_name"		"#StickerKit_comm02_shootingstar"
+			"description_string"		"#StickerKit_desc_comm02_shootingstar"
+			"sticker_material"		"community02/shootingstar"
+			"item_rarity"		"rare"
+		}
+		"185"
+		{
+			"name"		"warpenguin"
+			"item_name"		"#StickerKit_comm02_warpenguin"
+			"description_string"		"#StickerKit_desc_comm02_warpenguin"
+			"sticker_material"		"community02/warpenguin"
+			"item_rarity"		"rare"
+		}
+		"186"
+		{
+			"name"		"windywalking"
+			"item_name"		"#StickerKit_comm02_windywalking"
+			"description_string"		"#StickerKit_desc_comm02_windywalking"
+			"sticker_material"		"community02/windywalking"
+			"item_rarity"		"rare"
+		}
+		"187"
+		{
+			"name"		"blitzkrieg"
+			"item_name"		"#StickerKit_comm02_blitzkrieg"
+			"description_string"		"#StickerKit_desc_comm02_blitzkrieg"
+			"sticker_material"		"community02/blitzkrieg"
+			"item_rarity"		"rare"
+		}
+		"188"
+		{
+			"name"		"pigeonmaster"
+			"item_name"		"#StickerKit_comm02_pigeonmaster"
+			"description_string"		"#StickerKit_desc_comm02_pigeonmaster"
+			"sticker_material"		"community02/pigeonmaster"
+			"item_rarity"		"rare"
+		}
+		"189"
+		{
+			"name"		"terrorized"
+			"item_name"		"#StickerKit_comm02_terrorized"
+			"description_string"		"#StickerKit_desc_comm02_terrorized"
+			"sticker_material"		"community02/terrorized"
+			"item_rarity"		"rare"
+		}
+		"190"
+		{
+			"name"		"tilldeathdouspart"
+			"item_name"		"#StickerKit_comm02_tilldeathdouspart"
+			"description_string"		"#StickerKit_desc_comm02_tilldeathdouspart"
+			"sticker_material"		"community02/tilldeathdouspart"
+			"item_rarity"		"rare"
+		}
+		"191"
+		{
+			"name"		"stayfrosty"
+			"item_name"		"#StickerKit_comm02_stayfrosty"
+			"description_string"		"#StickerKit_desc_comm02_stayfrosty"
+			"sticker_material"		"community02/stayfrosty"
+			"item_rarity"		"rare"
 		}
 	}
 	"paint_kits"
@@ -24420,6 +25160,97 @@
 		"crate_esl14_promo_de_overpass"
 		{
 			"set_overpass"		"1"
+		}
+		"coupon loot list - bossyburger"
+		{
+			"public_list_contents"		"1"
+			"[bossyburger]sticker"		"1"
+		}
+		"coupon loot list - catcall"
+		{
+			"public_list_contents"		"1"
+			"[catcall]sticker"		"1"
+		}
+		"coupon loot list - chickenstrike"
+		{
+			"public_list_contents"		"1"
+			"[chickenstrike]sticker"		"1"
+		}
+		"coupon loot list - ctbanana"
+		{
+			"public_list_contents"		"1"
+			"[ctbanana]sticker"		"1"
+		}
+		"coupon loot list - dontworryimpro"
+		{
+			"public_list_contents"		"1"
+			"[dontworryimpro]sticker"		"1"
+		}
+		"coupon loot list - fightlikeagirl"
+		{
+			"public_list_contents"		"1"
+			"[fightlikeagirl]sticker"		"1"
+		}
+		"coupon loot list - handmadeflash"
+		{
+			"public_list_contents"		"1"
+			"[handmadeflash]sticker"		"1"
+		}
+		"coupon loot list - kawaiikiller"
+		{
+			"public_list_contents"		"1"
+			"[kawaiikiller]sticker"		"1"
+		}
+		"coupon loot list - neluthebear"
+		{
+			"public_list_contents"		"1"
+			"[neluthebear]sticker"		"1"
+		}
+		"coupon loot list - oneshotonekill"
+		{
+			"public_list_contents"		"1"
+			"[oneshotonekill]sticker"		"1"
+		}
+		"http://steamcommunity.com/sharedfiles/filedetails/?id"		"258207854"
+		"coupon loot list - shootingstar"
+		{
+			"public_list_contents"		"1"
+			"[shootingstar]sticker"		"1"
+		}
+		"coupon loot list - warpenguin"
+		{
+			"public_list_contents"		"1"
+			"[warpenguin]sticker"		"1"
+		}
+		"coupon loot list - windywalking"
+		{
+			"public_list_contents"		"1"
+			"[windywalking]sticker"		"1"
+		}
+		"coupon loot list - blitzkrieg"
+		{
+			"public_list_contents"		"1"
+			"[blitzkrieg]sticker"		"1"
+		}
+		"coupon loot list - pigeonmaster"
+		{
+			"public_list_contents"		"1"
+			"[pigeonmaster]sticker"		"1"
+		}
+		"coupon loot list - terrorized"
+		{
+			"public_list_contents"		"1"
+			"[terrorized]sticker"		"1"
+		}
+		"coupon loot list - tilldeathdouspart"
+		{
+			"public_list_contents"		"1"
+			"[tilldeathdouspart]sticker"		"1"
+		}
+		"coupon loot list - stayfrosty"
+		{
+			"public_list_contents"		"1"
+			"[stayfrosty]sticker"		"1"
 		}
 	}
 	"revolving_loot_lists"
