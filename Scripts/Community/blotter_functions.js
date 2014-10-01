@@ -54,7 +54,7 @@ function Blotter_InfiniteScrollingCheckForMoreContent()
 
 	// number of pixels from the bottom before checking for more content
 	// this should be about two rows of content
-	var buffer = 200;
+	var buffer = 600;
 	if ( scrollTop + buffer > bodyHeight - windowHeight )
 	{
 		StartLoadingBlotter( g_BlotterNextLoadURL );
