@@ -116,6 +116,7 @@ function RemoveFriend()
 	} );
 }
 
+// also used for accepting friend invites
 function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 {
 	var steamid = steamid_friend ? steamid_friend : g_rgProfileData['steamid'];
@@ -144,6 +145,27 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 	} );
 }
 
+// ignore an invite; do not block the inviter
+function IgnoreFriendInvite( steamid_friend, strPersonaName_friend )
+{
+	var steamid = steamid_friend ? steamid_friend : g_rgProfileData['steamid'];
+	var strPersonaName = strPersonaName_friend ? strPersonaName_friend : g_rgProfileData['personaname'];
+
+	$J.post(
+		'https://steamcommunity.com/actions/IgnoreFriendInviteAjax',
+		{sessionID: g_sessionID, steamid: steamid }
+	).done( function() {
+		ShowAlertDialog( 'Ignore Friend Request',
+			'Friend request ignored'
+		).done( function() { window.location.reload(); } );
+	} ).fail( function() {
+		ShowAlertDialog( 'Ignore Friend Request',
+			'Error ignoring friend request. Please try again.'
+		);
+	} );
+}
+
+// block a user, with confirmation
 function ConfirmBlock()
 {
 	var steamid = g_rgProfileData['steamid'];

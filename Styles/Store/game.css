@@ -3246,6 +3246,11 @@ select.gray_bevel {
 	border-left: 1px solid #2F4459;
 	padding-left: 6px;
 }
+.steam_curator_icon.medium.no_grid
+{
+	border-left: none;
+	padding-left: 0px;
+}
 
 .steam_curator_icon.medium img
 {
