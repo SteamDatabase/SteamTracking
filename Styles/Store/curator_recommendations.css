@@ -50,7 +50,7 @@ body.v6 h2.curator_name
 }
 .num_followers
 {
-	font-size: 11px;
+	font-size: 15px;
 	color: #407899;
 }
 .num_followers_text
@@ -252,6 +252,12 @@ body.v6 h2.curator_name
 	text-align: center;
 	font-size: 24px;
 }
+.Recommendations_loading
+{
+	padding-top: 50px;
+	text-align: center;
+	font-size: 24px;
+}
 .Recommendations_paging
 {
 	position: relative;
@@ -293,6 +299,8 @@ body.v6 h2.curator_name
 .Recommendations_paging_pagelink.active:hover {
 	text-decoration: none;
 }
+
+
 
 /* paging buttons */
 .pagebtn, a.pagebtn {

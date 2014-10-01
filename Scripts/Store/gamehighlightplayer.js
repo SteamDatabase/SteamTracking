@@ -385,7 +385,7 @@ var HighlightPlayer = Class.create( {
 		return elem.id.replace( /(highlight|thumb)_screenshot_/, '' );
 	},
 
-	Transition: function()
+	Transition: function( bUserAction )
 	{
 		var isFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen;
 
@@ -393,7 +393,7 @@ var HighlightPlayer = Class.create( {
 			return;
 
 		var className = '.highlight_player_item';
-		if ( this.bScreenshotsOnly )
+		if ( this.bScreenshotsOnly && !bUserAction )
 			className = '.highlight_screenshot';
 
 		var nextItem = this.m_activeItem.next( className );
@@ -407,10 +407,10 @@ var HighlightPlayer = Class.create( {
 		}
 	},
 
-	TransitionBack: function()
+	TransitionBack: function( bUserAction )
 	{
 		var className = '.highlight_player_item';
-		if ( this.bScreenshotsOnly )
+		if ( this.bScreenshotsOnly && !bUserAction )
 			className = '.highlight_screenshot';
 
 		var nextItem = this.m_activeItem.previous( className );

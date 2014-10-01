@@ -1462,6 +1462,266 @@ function ScrollToIfNotInView( elem, nRequiredPixelsToShow, nSpacingBefore )
 	}
 }
 
+function CAjaxInfiniteScrollingControls( rgSearchData, url )
+{
+	this.m_strActionURL = null;
+	this.m_cPageSize = null;
+	this.m_strElementPrefix = "";
+	this.m_strClassPrefix = "";
+	this.m_rgStaticParams = null;
+
+	this.m_strQuery = null;
+	this.m_cTotalCount = 0;
+	this.m_iCurrentPage = 0;
+	this.m_cMaxPages = 0;
+	this.m_bLoading = false;
+
+	this.m_fnPreRequestHandler = null;
+	this.m_fnResponseHandler = null;
+	this.m_fnPageChangingHandler = null;
+	this.m_fnPageChangedHandler = null;
+
+	this.m_LoadingDialog = null;
+	this.m_bRestoringScrollTop = false;
+
+	this.m_strActionURL = url;
+
+	this.m_strQuery = rgSearchData['query'];
+	this.m_cTotalCount = rgSearchData['total_count'];
+	this.m_iCurrentPage = 0;
+	this.m_cPageSize = rgSearchData['pagesize'];
+	this.m_cMaxPages = Math.ceil( this.m_cTotalCount / this.m_cPageSize );
+
+	if ( rgSearchData['prefix'] )
+		this.m_strElementPrefix = rgSearchData['prefix'];
+
+	if ( rgSearchData['class_prefix'] )
+		this.m_strClassPrefix = rgSearchData['class_prefix'];
+
+	var thisControl = this;
+	var scrollFunc = function( event ) {
+		this.OnScroll( event );
+	};
+	$J(document).scroll( function() { return scrollFunc.apply( thisControl ) } );
+
+	window.addEventListener('beforeunload', function( event ) { thisControl.OnUnload( event ); } );
+
+	this.RestoreScrollTop( true );
+}
+
+CAjaxInfiniteScrollingControls.prototype.DoneRestoreScrollTop = function()
+{
+	if ( this.m_LoadingDialog )
+	{
+		this.m_LoadingDialog.Dismiss();
+		this.m_LoadingDialog = null;
+	}
+	this.m_bRestoringScrollTop = false;
+}
+
+CAjaxInfiniteScrollingControls.prototype.RestoreScrollTop = function( bForce )
+{
+	this.m_bRestoringScrollTop |= bForce;
+	if ( !this.m_bRestoringScrollTop )
+	{
+		return;
+	}
+	var scrollTopPrevious = parseInt( GetValueLocalStorage( this.GetActionURL( "scroll_top" ), 0 ) );
+	if ( scrollTopPrevious != 0 )
+	{
+		var viewport = document.viewport.getDimensions(); // Gets the viewport as an object literal
+		var windowHeight = viewport.height; // Usable window height
+		var bodyHeight = $(document.body).getHeight();
+
+		// done?
+		if ( scrollTopPrevious < bodyHeight - windowHeight )
+		{
+			this.DoneRestoreScrollTop();
+			window.scrollTo( 0, scrollTopPrevious );
+		}
+		else
+		{
+			if ( this.m_LoadingDialog == null )
+			{
+				this.m_LoadingDialog = ShowBlockingWaitDialog( 'Please Wait', 'Returning to where you were last on this page...' );
+			}
+			window.scrollTo( 0, scrollTopPrevious );
+		}
+	}
+}
+
+CAjaxInfiniteScrollingControls.prototype.OnUnload = function( event )
+{
+	var scrollOffset = document.viewport.getScrollOffsets();
+	var scrollTop = scrollOffset.top;
+	SetValueLocalStorage( this.GetActionURL( "scroll_top" ), scrollTop );
+}
+
+CAjaxInfiniteScrollingControls.prototype.OnScroll = function( event )
+{
+	if ( this.m_bLoading )
+		return;
+
+	var nCurrentScroll = $J(window).scrollTop() + $J(window).height();
+
+	var rows = $J('#' + this.m_strElementPrefix + 'Rows');
+	var offset = rows.offset();
+	var nTriggerPoint = rows.height() + offset.top - 750;
+
+	if ( nCurrentScroll >  nTriggerPoint )
+	{
+		this.NextPage();
+	}
+}
+
+CAjaxInfiniteScrollingControls.prototype.GetActionURL = function( action )
+{
+	var url = this.m_strActionURL + action + '/';
+	return url;
+}
+
+CAjaxInfiniteScrollingControls.prototype.SetPreRequestHandler = function( fnHandler )
+{
+	this.m_fnPreRequestHandler = fnHandler;
+}
+
+CAjaxInfiniteScrollingControls.prototype.SetResponseHandler = function( fnHandler )
+{
+	this.m_fnResponseHandler = fnHandler;
+}
+
+CAjaxInfiniteScrollingControls.prototype.SetPageChangingHandler = function ( fnHandler )
+{
+	this.m_fnPageChangingHandler = fnHandler;
+}
+
+CAjaxInfiniteScrollingControls.prototype.SetPageChangedHandler = function ( fnHandler )
+{
+	this.m_fnPageChangedHandler = fnHandler;
+}
+
+CAjaxInfiniteScrollingControls.prototype.SetStaticParameters = function ( rgParams )
+{
+	this.m_rgStaticParams = rgParams;
+}
+
+CAjaxInfiniteScrollingControls.prototype.OnAJAXComplete = function()
+{
+	this.m_bLoading = false;
+}
+
+CAjaxInfiniteScrollingControls.prototype.NextPage = function()
+{
+	if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
+		this.LoadPage( this.m_iCurrentPage + 1 );
+}
+
+CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
+{
+	if ( typeof( bForce )== 'undefined' || !bForce )
+	{
+		if ( this.m_bLoading || iPage >= this.m_cMaxPages || iPage < 0 )
+		{
+			return false;
+		}
+		else if ( iPage == this.m_iCurrentPage )
+		{
+			this.RestoreScrollTop( false );
+		}
+	}
+
+	var params = {
+		query: this.m_strQuery,
+		start: this.m_cPageSize * iPage,
+		count: this.m_cPageSize
+	};
+
+	if ( this.m_rgStaticParams != null )
+	{
+		for ( var sParamName in this.m_rgStaticParams )
+		{
+			if ( typeof sParamName != "string" )
+				continue;
+
+			if ( typeof this.m_rgStaticParams[sParamName] != "string" )
+				continue;
+
+			params[sParamName] = this.m_rgStaticParams[sParamName];
+		}
+	}
+
+	if ( this.m_fnPageChangingHandler != null )
+		this.m_fnPageChangingHandler( iPage );
+
+	if ( this.m_fnPreRequestHandler != null )
+		this.m_fnPreRequestHandler( params );
+
+	var elLoading = $(this.m_strElementPrefix + '_loading');
+	elLoading.show();
+
+	this.m_bLoading = true;
+	new Ajax.Request( this.GetActionURL( '' ), {
+		method: 'get',
+		parameters: params,
+		onSuccess: this.OnResponseRenderResults.bind( this ),
+		onComplete: this.OnAJAXComplete.bind( this )
+	});
+
+	return true;
+}
+
+CAjaxInfiniteScrollingControls.prototype.OnResponseRenderResults = function( transport )
+{
+	if ( transport.responseJSON && transport.responseJSON.success )
+	{
+		var elLoading = $(this.m_strElementPrefix + '_loading');
+		elLoading.hide();
+
+		if ( typeof RecordAJAXPageView !== "undefined" )
+		{
+			RecordAJAXPageView( transport.request.url );
+		}
+
+		var response = transport.responseJSON;
+		this.m_cTotalCount = response.total_count;
+		this.m_cMaxPages = Math.ceil( response.total_count / this.m_cPageSize );
+		this.m_iCurrentPage = Math.floor( response.start / this.m_cPageSize );
+
+		if ( this.m_iCurrentPage != 0 && this.m_cTotalCount <= response.start )
+		{
+			// this page is no longer valid, flip back a page (deferred so that the AJAX handler exits and reset m_bLoading)
+			this.DoneRestoreScrollTop();
+			return;
+		}
+
+		var elResults = $(this.m_strElementPrefix + 'Rows');
+
+		elResults.insert( response.results_html );
+
+		if ( this.m_fnResponseHandler != null )
+		{
+			this.m_fnResponseHandler( response );
+		}
+
+		if ( this.m_fnPageChangedHandler != null )
+			this.m_fnPageChangedHandler( this.m_iCurrentPage );
+
+		this.m_bLoading = false;
+		if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
+		{
+			this.RestoreScrollTop( false );
+		}
+		else
+		{
+			this.DoneRestoreScrollTop();
+		}
+	}
+	else
+	{
+		this.DoneRestoreScrollTop();
+	}
+}
+
 function CAjaxPagingControls( rgSearchData, url )
 {
 	this.m_strActionURL = null;

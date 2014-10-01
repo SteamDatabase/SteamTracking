@@ -42,29 +42,6 @@ function FollowCurator( clanID, bFollow )
 	return false;
 }
 
-function ClearHash()
-{
-	window.location.hash = '';
-}
-
-function HandleHashChange( bClearResults )
-{
-	if ( window.location.hash.length > 2 && window.location.hash.substr(0,2) == "#p" )
-	{
-		var nPage = parseInt( window.location.hash.substr(2) );
-
-		if ( nPage - 1 != g_oRecommendations.m_iCurrentPage )
-		{
-			if ( bClearResults )
-			{
-				$J('.steam_curator_row_ctn').remove()
-			}
-
-			g_oRecommendations.GoToPage( nPage - 1, false );
-		}
-	}
-}
-
 function InitSearchFilters()
 {
 	var g_rgTabs = {};
@@ -153,20 +130,12 @@ function InitSearchFilters()
 
 function InitPagingControls( oPagingData )
 {
-	g_oRecommendations = new CAjaxPagingControls( oPagingData, 'https://store.steampowered.com/curators/ajaxgetcuratorrecommendations/' + oPagingData['clanid'] + '/' );
+	g_oRecommendations = new CAjaxInfiniteScrollingControls( oPagingData, 'https://store.steampowered.com/curators/ajaxgetcuratorrecommendations/' + oPagingData['clanid'] + '/' );
 	g_oRecommendations.SetResponseHandler( function( response ) {
 		OnRecommendationsRendered();
 		$J( "#" + this.m_strElementPrefix + "Rows").InstrumentLinks();
 	});
-	g_oRecommendations.SetPageChangingHandler( function( nPage ) {
-		if ( !g_bInHashChange )
-		{
-			window.location.hash = 'p' + ( nPage + 1 );
-		}
-	} );
 
 	InitSearchFilters();
-
-	HandleHashChange( true );
 }
 

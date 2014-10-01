@@ -821,15 +821,26 @@ div#global_actions {
 }
 
 div#global_actions a.global_action_link {
-	padding: 0px 4px;
+	padding: 0 4px;
+}
+
+div#global_actions a.global_action_link, div.admin_actions a.global_action_link {
 	color: #b8b6b4;
 }
 
-div#global_actions .global_action_link:hover {
+div#global_actions .global_action_link:hover, div.admin_actions .global_action_link:hover {
 	text-decoration: none;
 	color: #ffffff;
 }
 
+div.admin_actions {
+	position: absolute;
+	right: 0;
+	bottom: 4px;
+	text-align: right;
+	color: #b8b6b4;
+	font-size: 11px
+}
 
 div#global_actions #global_action_menu {
 	float: right;
