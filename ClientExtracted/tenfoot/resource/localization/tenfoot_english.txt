@@ -2232,6 +2232,11 @@
 	"SettingsInterface_SteamClientUpdateDownloading"	"Downloading"
 	"SettingsInterface_SteamClientUpdateDesc"	"Steam client updates"
 	"SettingsInterface_EnableScreenSaver"	"Enable Screen Saver"
+	"SettingsInterface_Search_Google"	"Google"
+	"SettingsInterface_Search_Bing"	"Bing"
+	"SettingsInterface_Search_Custom"	"Custom (Advanced)"
+	"SettingsInterface_SearchProvider" "Select the search engine to be used when searching from the browser's address bar"
+	"SettingsInterface_SearchProvider_Custom" "Enter the URL to which the search string will be appended"
 	
 	"Overlay_EnterGameText"	"Enter text to send to the game"
 	"Overlay_HowToClose" "Return to Game"
@@ -2463,6 +2468,7 @@
 	"Music_Settings_Pause_On_Incoming_Voice_Chat"	"When a voice chat call comes in"
 	"Music_Settings_Pause_On_Initiating_Voice_Chat"	"When starting a voice chat"
 	"Music_Settings_Pause_On_Voice_Chat"	"When voice chatting"
+	"Music_Settings_MediaKeysEnabled" "Media Keys"
 	
 	"Music_Notification_Now_Playing"	"Now playing"
 	"Music_Notification_Now_Paused"	"Now paused"

@@ -1462,7 +1462,7 @@ DropDownMenu
 // apply effects to 'test microphone' subitems when not testing mic,
 // to indicate they are not alive
 
-.CheckBox:parentdisabled,VUMeter:parentdisabled,Label:parentdisabled,Image:parentdisabled,KeyboardShortcut:parentdisabled,.KeyboardShortcut:parentdisabled
+.CheckBox:parentdisabled,VUMeter:parentdisabled,Label:parentdisabled,Image:parentdisabled,KeyboardShortcut:parentdisabled,.KeyboardShortcut:parentdisabled,#SettingsInterface_CustomSearchProviderURL:parentdisabled
 {
 	opacity: 0.6;
 	desaturation: 1.0;
@@ -3281,3 +3281,39 @@ SettingsPanel_AlienFX .SettingsCenterContent
 {
 	visibility: collapse;
 }
+
+.NotLoggedIn #SearchProviderContainer
+{
+	visibility: collapse;
+}
+
+
+#SearchProviderContainer
+{
+	visibility: visible;
+	margin-left: 0px;
+}
+
+#SettingsInterface_CustomSearchProviderURL
+{
+	width: 423px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.SettingsSearchProviderHint
+{
+	margin-left: 44px;
+	margin-top: 0px;
+}
+
+#SearchProviderContainer, #SearchProvidersCustom
+{
+	flow-children: down;
+}
+
+#SearchProvidersCustom
+{
+	height: 140px;
+}
+
