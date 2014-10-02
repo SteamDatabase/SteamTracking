@@ -18,6 +18,10 @@
 				<Panel class="HorizontalRule" />
 
 				<Panel id="CheckoutReviewLineItems" />
+				<Panel class="CheckoutGiftRegionWarningPanel" id="GiftRegionWarningPanel" visible="true">
+					<Panel class="CheckoutGiftRegionWarningIcon" />
+					<Label class="CheckoutGiftRegionWarningText CheckoutReviewGiftRegionWarningText" id="GiftRegionWarningText" />
+				</Panel>
 
 				<Panel id="ReviewTotalSection" class="ReviewTotalSection">
 					<Panel class="ReviewTotalRow">

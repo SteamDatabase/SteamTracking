@@ -6,6 +6,7 @@
 	
 	<CheckoutReviewLineItem tabindex="auto" selectionpos="auto">
 		<Panel class="CartItemNamePriceRow">
+			<Panel id="CartItemGiftRegionWarningIcon" visible="false" class="CheckoutGiftRegionWarningIcon" />
 			<Label id="ItemName" text="" />
 			<StorePrice id="ItemPrice" ShowDiscount="false" />
 		</Panel>

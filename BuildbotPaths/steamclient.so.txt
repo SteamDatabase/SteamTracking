@@ -16,9 +16,9 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/clientjob.cpp:309
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/clientjob.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/ClientJobRemoteStorageSync.cpp
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/ClientJobRemoteStorageSync.cpp:1008
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/ClientJobRemoteStorageSync.cpp:646
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/ClientJobRemoteStorageSync.cpp:849
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/ClientJobRemoteStorageSync.cpp:1025
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/ClientJobRemoteStorageSync.cpp:654
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/ClientJobRemoteStorageSync.cpp:866
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/clientjobrequestcustombinary.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/clientjobupdatedepots.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/clientnetworkingapi.cpp
@@ -47,6 +47,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_credentials.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_depotbuilder.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_deviceauth.steamclient.pb.cc
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_econ.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_gamenotifications.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_gameservers.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_offline.steamclient.pb.cc
@@ -147,6 +148,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/content_manifest.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/cookiecontainer.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/crypto.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/crypto_helpers.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/encrypted_app_ticket.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/enum_names.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/filetransfer.cpp

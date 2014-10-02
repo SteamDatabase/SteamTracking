@@ -38,9 +38,8 @@
 					</Panel>
 				</Panel>
 				
-				<Label class="SettingsStatic" text="#Music_Settings_Notification_Header" />
-				<ToggleButton class="CheckBox" id="PlaylistNowPlayingNotificationCheckbox" 
-					text="#Music_Settings_Playlist_Now_Playing" onactivate="TogglePlaylistNowPlayingNotification();"/>	
+				<ToggleButton class="CheckBox" id="MediaKeysEnabledCheckbox" 
+					text="#Music_Settings_MediaKeysEnabled" onactivate="ToggleMediaKeysEnabled();"/>	
 				
 			</Panel>
 	
@@ -53,6 +52,10 @@
 					text="#Music_Settings_Pause_On_Voice_Chat" 
 					onactivate="TogglePauseOnVoiceChat();"/>
 
+				<Label class="SettingsStatic" text="#Music_Settings_Notification_Header" />
+				<ToggleButton class="CheckBox" id="PlaylistNowPlayingNotificationCheckbox" 
+					text="#Music_Settings_Playlist_Now_Playing" onactivate="TogglePlaylistNowPlayingNotification();"/>	
+					
 				<Label class="SettingsStatic" text="#Music_Settings_Logging_Header" />
 				<ToggleButton class="CheckBox" id="LogCrawlingCheckbox" 
 					text="#Music_Settings_Logging_Crawling" onactivate="ToggleLogCrawling();"/>

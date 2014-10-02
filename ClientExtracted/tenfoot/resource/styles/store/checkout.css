@@ -917,6 +917,44 @@ CheckoutGiftRecipient .CheckoutBodyRightColumn
 	flow-children: none;
 }
 
+.CheckoutGiftRegionWarningPanel
+{
+	margin-bottom: 18px;
+	background-color: gradient( linear, 100% 0%, 0% 0%, color-stop( 0.0, #b5901eff ), color-stop( 1.0, #a76819ff ) );
+	padding: 8px 7px 8px 7px;
+	flow-children: right;
+}
+
+.CheckoutReviewGiftRegionWarningText
+{
+	font-size: 16px;
+}
+
+.CartItemNamePriceRow .CheckoutGiftRegionWarningIcon
+{
+	background-size: 28px;
+	width: 28px;
+	height: 28px;
+}
+
+.CheckoutGiftRegionWarningIcon
+{
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-image: url( "file://{images}/store/icon_notice.png" );
+	wash-color: #f1f1f1ff;
+	width: 55px;
+	height: 55px;
+	vertical-align: center;
+	margin-right: 10px;
+	visibility: visible;	
+}
+
+.CheckoutGiftRegionWarningText
+{
+	color: #f1f1f1ff;
+}
+
 .CheckoutGiftReceiptOptionWrapper
 {
 	flow-children: down;

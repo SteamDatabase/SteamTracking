@@ -19,6 +19,10 @@
 		</Panel>
 		<Panel class="CheckoutBody">
 			<Panel class="CheckoutBodyLeftColumn" tabindex="0" selectionpos="0,0" onfocus="FocusCurrentRecipientOption()">
+				<Panel class="CheckoutGiftRegionWarningPanel" id="GiftRegionWarningPanel" visible="false">
+					<Panel class="CheckoutGiftRegionWarningIcon" />
+					<Label class="CheckoutGiftRegionWarningText" id="GiftRegionWarningText" />
+				</Panel>
 				<Panel class="CheckoutGiftReceiptOptionWrapper" selectionpos="none">
 					<Label class="HowToSendTitle" text="#Checkout_GiftRecipient_HowToSend" />
 					<Panel class="HorizontalRule" />
