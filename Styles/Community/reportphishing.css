@@ -246,6 +246,28 @@ li {
 	margin-right: auto;
 }
 
+.text_center{
+	text-align: center;
+}
+
+#verifyLock{
+	background: #565658;
+	border-radius: 3px;
+	color: #bfbfbf;
+	border: 1px solid #262627;
+	padding: 10px;
+	display: block;
+	margin: 10px auto 15px auto;
+}
+
+#verifyLock:focus{
+	border: 1px solid #828282;
+}
+
+#lockAccountBox{
+	border: 1px solid #a40d36;
+}
+
 
 @media only screen and (max-width: 600px){
 	#rp_sgc_prompt, #faqBox {
