@@ -412,7 +412,7 @@
 					<label for="intro">Tell us a little about yourself. (You can also attach a cover letter below.)</label>
 					<textarea id="intro" name="intro" rows="10" cols="30"></textarea>
 
-					<label for="resume">Attach Documents - please make sure to include a resume. (We like .pdf and .doc files)</label>
+					<label for="resume">Attach Documents - please make sure to include a resume. (We like .pdf, .doc, and .docx files)</label>
 					<input type="file" name="resume[]" multiple id="resume" class="" />
 
 					<input type="submit" name="submit" id="submit" value="Submit" style="margin-top: 12px;" />
@@ -428,7 +428,7 @@
 				</div>
 			</div>
 					
-			<iframe id="form_iframe" name="form_iframe"  style="display:none; height: 600px; width: 400px; background: green; position: absolute; top: 200px; left: -420px;"></iframe>
+			<iframe id="form_iframe" sandbox="allow-same-origin allow-scripts" name="form_iframe"  style="display:none; height: 600px; width: 400px; background: green; position: absolute; top: 200px; left: -420px;"></iframe>
 
 			<script>
 				// js for form submission
