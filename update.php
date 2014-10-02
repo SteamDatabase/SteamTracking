@@ -333,9 +333,10 @@
 					{
 						$LengthExpected = cURL_GetInfo( $Slave, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
 						$LengthDownload = cURL_GetInfo( $Slave, CURLINFO_SIZE_DOWNLOAD );
+						$TimeTaken      = cURL_GetInfo( $Slave, CURLINFO_TOTAL_TIME );
 						
-						// TODO: Workarounds... It's not sending Content-Length
-						if( $LengthExpected == -1 && $Tries < 2 )
+						// TODO: Workarounds... It's not sending Content-Length; only skip length check if it's actually fast enough
+						if( $LengthExpected == -1 && $Tries < 2 && $TimeTaken < 3.0 )
 						{
 							if( SubStr( $Request, 0, 16 ) === 'Scripts/Partner/'
 							||  SubStr( $Request, 0, 15 ) === 'Styles/Partner/'
