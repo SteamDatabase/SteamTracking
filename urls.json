@@ -25,6 +25,7 @@
 //
 // Store CSS (v6)
 //
+"Styles/Store/account.css"                       : "https://steamstore-a.akamaihd.net/public/css/v6/account.css?__TIME__",
 "Styles/Store/browse.css"                        : "https://steamstore-a.akamaihd.net/public/css/v6/browse.css?__TIME__",
 "Styles/Store/cart.css"                          : "https://steamstore-a.akamaihd.net/public/css/v6/cart.css?__TIME__",
 "Styles/Store/curator_recommendations.css"       : "https://steamstore-a.akamaihd.net/public/css/v6/curator_recommendations.css?__TIME__",
@@ -53,7 +54,6 @@
 "Styles/styles_supportmessages.css"              : "https://steamstore-a.akamaihd.net/public/css/styles_supportmessages.css?__TIME__",
 "Styles/styles_video.css"                        : "https://steamstore-a.akamaihd.net/public/css/styles_video.css?__TIME__",
 "Styles/styles_widget.css"                       : "https://steamstore-a.akamaihd.net/public/css/styles_widget.css?__TIME__",
-"Styles/styles_youraccountv5.css"                : "https://steamstore-a.akamaihd.net/public/css/styles_youraccountv5.css?__TIME__",
 
 //
 // Community CSS
