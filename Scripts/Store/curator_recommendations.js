@@ -66,8 +66,10 @@ function InitSearchFilters()
 			}
 		}
 
+		$J('#' + g_oRecommendations.m_strElementPrefix + 'Rows').empty();
+
 		g_oRecommendations.m_rgStaticParams = rgParams;
-		g_oRecommendations.GoToPage( 0, true );
+		g_oRecommendations.LoadPage( 0, true );
 	};
 
 	var fnAddFilter = function( strParam, value, $Checkbox )
