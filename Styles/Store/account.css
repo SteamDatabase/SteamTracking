@@ -1,0 +1,816 @@
+
+.licenseRow, .transactionRow {
+	position: relative;
+	padding: 5px 14px;
+	border-bottom: 1px solid #000000;
+	line-height: 18px;
+}
+
+.licenseRow.even, .transactionRow.even {
+	background-color: rgba(0,0,0,0.2)
+}
+
+.licenseRow.odd, .transactionRow.odd {
+	background-color: rgba(0,0,0,0.1)
+}
+
+.licenseLegend, .transactionLegend {
+	background: #2a3f5a;
+	color: #8f98a0;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 2px 14px;
+}
+
+.licenseRowRight {
+	position: absolute;
+	right: 14px;
+}
+
+.transactionRowDate {
+	position: absolute;
+	left: 14px;
+}
+
+.transactionRowEvent {
+	position: absolute;
+	left: 451px;
+}
+
+.transactionRowPrice {
+	position: absolute;
+	right: 14px;
+}
+
+.transactionRowItems {
+	padding-left: 121px;
+}
+
+.transactionRowTitle {
+	padding-right: 162px;
+}
+
+.transactionRowItems .itemSubtext {
+	color: #626366;
+}
+
+.transactionRowName {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 14px;
+	width: 45%;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.transactionRowName .itemSubtext {
+	color: #ff9900;
+	font-size: 10px;
+}
+
+.transactionRowDueDate {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 14px;
+	text-align: center;
+	width: 20%;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.transactionRowAmountDue {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 14px;
+	text-align: center;
+	width: 20%;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.transactionRowUpdateStatus {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 14px;
+	text-align: center;
+	width: 15%;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.updateSubscriptionTitle
+{
+	color: #ffffff;
+}
+
+.updateSubscriptionOption
+{
+	color: #ffffff;
+}
+
+.updateSubscriptionOptionPrice
+{
+	color: #8bc53f;
+}
+
+.updateSubscriptionOption input
+{
+	margin-right: 8px;
+	margin-top: 5px;
+}
+
+.transactions .transactionRow .transactionRowAmountDue {
+	color: #ff9900;
+}
+
+.transactionTable {
+	width: 100%;
+	border: none;
+	border-spacing: 0px;
+}
+
+.accountInfoBlock .block_content{
+	color: #8f98a0;
+	line-height: 17px;
+}
+.accountRow {
+	position: relative;
+}
+
+.accountRow .accountData {
+	position: absolute;
+	right: 0px;
+}
+
+.accountData a {
+	color: #b0aeac;
+}
+
+.accountRow.accountBalance {
+	height: 22px;
+	line-height: 22px;
+	margin-bottom: 7px;
+}
+
+
+.accountBalance .price {
+	color: #ffffff;
+	font-size: 18px;
+}
+
+
+
+.account_row .account_data, .account_row a.item_action {
+	float: right;
+}
+
+.account_row .account_label
+{
+	float: left;
+}
+
+.account_row.account_balance {
+	height: 30px;
+	line-height: 22px;
+	margin-bottom: 7px;
+}
+
+.account_balance .price {
+	color: #ffffff;
+	font-size: 18px;
+}
+
+.payment_method_box {
+	background-color: rgba(0,0,0,0.2);
+	padding: 5px;
+}
+
+.payment_method_box a {
+	color: #B0AEAC;
+}
+
+.youraccount_tabs {
+	margin-bottom: 16px;
+}
+
+.youraccount_tab {
+	float: left;
+	padding: 0px 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #B0AEAC;
+}
+
+.youraccount_tab:hover {
+	color: #D6D7D8;
+}
+
+.youraccount_tab.active {
+	color: #FFFFFF;
+	cursor: default;
+}
+
+.transaction_footer {
+	margin-top: 1px;
+	color: #626366;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.transaction_footer div.transaction_footer_element {
+	float: right;
+	padding: 5px 8px;
+}
+
+.transaction_footer div.transaction_footer_element.show_all_link {
+	color: #898a8c;
+	background-color: rgba(0,0,0,0.2);
+	margin-left: 1px;
+	cursor: pointer;
+}
+
+.redeem_wallet_code_form
+{
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.redeem_wallet_code_login
+{
+	padding: 20px 14px 20px 14px;
+}
+
+.redeem_wallet_form_description
+{
+	padding-top: 8px;
+	padding-bottom: 5px;
+}
+
+.redeem_form_row
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.redeem_form_row .dselect_container
+{
+	float: left;
+	width: 212px;
+	margin-top: 10px;
+	padding: 0px;
+	display: inline;
+}
+
+.redeem_form_row .dselect_container a.trigger, .dselect_container a.activetrigger
+{
+	padding-right: 30px;
+}
+
+.redeem_wallet_code_upsell
+{
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 40px;
+	padding-bottom: 380px;
+	line-height: 18px;
+}
+
+.redeem_wallet_code_upsell_header
+{
+	font-size: 15px;
+	color: #FFFFFF !important;
+}
+
+.redeem_wallet_code_upsell div
+{
+	padding-top: 15px;
+	width: 450px;
+	color: #b0aeac;
+}
+
+.redeem_wallet_code_upsell div b
+{
+	color: #ffffff;
+}
+
+body.redeemwalletcode .page_content_ctn .page_content {
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+
+.redeem_wallet_conversion_box
+{
+	width: 100%;
+	border: 1px solid #28394d;
+	background: rgba(0,0,0,0.2);
+	margin-top: 20px;
+	margin-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.redeem_wallet_conversion_box_row
+{
+	width: 284px;
+	margin: 0px auto;
+}
+
+.redeem_wallet_conversion_text
+{
+	float: left;
+	color: #ffffff;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.redeem_wallet_conversion_text_equal
+{
+	width: 20px;
+}
+
+.redeem_wallet_conversion_text_box
+{
+	width: 130px;
+	border: 1px solid #28394d;
+	background: rgba(0,0,0,0.2);
+}
+
+.redeem_wallet_code_form h3#receipt_confirmation_amount_message
+{
+	padding-top: 15px;
+}
+
+.redeem_wallet_receipt_form_text
+{
+	padding-top: 15px;
+}
+
+.redeem_input_box_text
+{
+	width: 200px;
+}
+
+.redeem_wallet_background
+{
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background.jpg');
+	background-repeat:no-repeat;
+	background-position: center 220px;
+	background-origin: content-box;
+}
+
+.redeem_wallet_background_DE
+{
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_de.jpg');
+}
+
+.redeem_wallet_background_ES
+{
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_es.jpg');
+}
+
+.redeem_wallet_background_FR
+{
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_fr.jpg');
+}
+
+.redeem_wallet_background_IE
+{
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_ie.jpg');
+}
+
+.redeem_wallet_background_PT
+{
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_pt.jpg');
+}
+
+.redeem_wallet_background_eur
+{
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_eur.jpg');
+}
+
+.redeem_wallet_background_gbp
+{
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_background_gbp.jpg');
+}
+
+.redeem_wallet_receipt
+{
+	background-image:url('https://steamstore-a.akamaihd.net/public/images/account/redeem_code_complete.jpg');
+	background-repeat:no-repeat;
+	background-position: 0px 0px;
+	min-height:350px;
+}
+
+.redeem_shop_now_button
+{
+	position: absolute;
+	top: 240px;
+	left: 475px;
+}
+
+.redeem_purchase_store_image
+{
+	padding: 4px;
+}
+
+.modal_top_band {
+	background-image:url( 'https://steamstore-a.akamaihd.net/public/images/got_steam_top.jpg' );
+	background-repeat:no-repeat;
+	width:508px;
+	height:25px;
+	margin-bottom:1px;
+}
+
+.modal_close {
+	float:right;
+	width:9px;
+	height:9px;
+	margin-right:9px;
+	margin-top:7px;
+}
+
+.modal_box {
+	border-color:#4d4b49;
+	border-style:solid;
+	border-width:2px 1px;
+	width: 466px;
+	background-color:#262626;
+	padding: 20px;
+}
+
+#modalBG {
+	position:absolute;
+	z-index:900;
+	background-color:#000000;
+	filter:alpha(opacity=60);
+	opacity:0.8;
+}
+
+.modal_frame {
+	width:508px;
+	position:absolute;
+	z-index:1000;
+	background-color:#000000;
+}
+
+.redeem_modal_header
+{
+	height: 50px;
+}
+
+.redeem_modal_header_title
+{
+	padding-left: 20px;
+	padding-top: 5px;
+}
+
+#redeem_wallet_success_description
+{
+	font-size: 14px;
+}
+
+.redeem_modal_header_title_text
+{
+	font-size: 22px;
+}
+
+.redeem_wallet_success_image
+{
+	padding-top: 10px;
+}
+
+#redeem_wallet_success_upsell_text
+{
+	padding-top: 4px;
+}
+
+.redeem_wallet_upsell_button
+{
+	padding-left: 10px;
+}
+
+.redeem_wallet_link_bar
+{
+	margin-top: 20px;
+	height: 25px;
+}
+div.tx_record_row_holder
+{
+	width: 100%;
+	overflow: hidden;
+
+}
+
+div.transactions>div.tx_record_row_holder {
+	border: 1px solid #1a1a1a;
+	border-top: 1px solid #565656;
+	padding: 1em 0;
+	background: #2f2f30;
+
+
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#49494b), to(#3d3d3e));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#49494b',EndColorStr='#3d3d3e');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#49494b',EndColorStr='#3d3d3e')";
+}
+
+
+
+
+div.tx_record_row_activity
+{
+	/* No styling now, just acts like a normal div */
+}
+
+div.tx_record_row_blurb
+{
+	padding-left: 5em;
+	padding-top: 1em;
+}
+
+div.tx_record_row_cost
+{
+	width: 75px;
+	float: right;
+}
+
+div.tx_record_row_event
+{
+	width: 115px;
+	float: right;
+}
+
+div.tx_record_row_date
+{
+	width: 100px;
+	float: right;
+}
+
+div.transactions div.tx_record_row_activity
+{
+	padding-left: 1em;
+	font-weight: bold;
+	color: #cdcac1;
+	font-size: 1.2em;
+
+}
+
+div.youraccount_history_home
+{
+	width: 100%;
+	overflow: hidden;
+}
+
+div.youraccount_history_home>div.breadcrumbs_nav
+{
+	float: left;
+}
+
+div.youraccount_history_home>div.account_wallet {
+	float: right;
+	width: 400px;
+}
+
+.cancel_purchase_dialog {
+	border: 1px solid #ff9900;
+	background-color: #000000;
+	color: #cdcac1;
+	margin: 15px;
+	padding: 11px 15px 11px 19px;
+}
+
+.cancel_purchase_button {
+	display: inline-block;
+	border: none;
+	border-radius: 3px;
+	color: #e1e1e1;
+	text-decoration: none;
+
+	padding: 3px 8px 3px 8px;
+
+	font-size: 11px;
+
+	background-repeat: repeat-x;
+
+	background-color: #e5e2df;
+	background-image: url('https://steamstore-a.akamaihd.net/public/images/v5/client_btn.png');
+	background-position: top;
+}
+
+.cancel_purchase_button:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.email_pref_ctn {
+	padding-top: 8px;
+}
+
+.email_footer_notes {
+	padding-top: 8px;
+}
+
+.accountTable {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #4d4b49;
+
+}
+.accountTable > thead > tr {
+	background-color: #2a3f5a;
+	border-left: 1px solid #4d4b49;
+	border-right: 1px solid #4d4b49;
+}
+
+.accountTable th {
+	color: #82807c;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-align: left;
+	padding: 4px 14px;
+}
+
+.accountTable > tbody > tr {
+	border-top: 1px solid #000;
+	border-left: 1px solid #4d4b49;
+	border-right: 1px solid #4d4b49;
+}
+
+.accountTable > tbody > tr:last-child {
+	border-bottom: 1px solid #4d4b49;
+}
+
+
+.accountTable td {
+	padding: 5px 14px;
+}
+
+.grey_overlay {
+	background-color:#000000;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+
+.errormsg {
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #a81a28;
+	background-color: #4a0b12;
+}
+
+.account_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.account_table th {
+	text-align: left;
+	text-transform: uppercase;
+	background-color: #2a3f5a;
+	color: #8f98a0;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 2px 14px;
+	font-weight: normal;
+}
+
+.account_table tr {
+	border-bottom: 1px solid #000000;
+	line-height: 18px;
+}
+
+.account_table td {
+	padding: 5px 14px;
+}
+
+.account_table tr > *:last-child {
+	text-align: right;
+}
+
+.account_table a:hover {
+	color: #fff;
+}
+
+.account_table tr:nth-child(even) {
+	background-color: rgba(0,0,0,0.2);
+}
+.account_table tr:nth-child(odd) {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.cached_payment_method_name
+{
+	width: 100%;
+}
+
+.cached_payment_method_exists
+{
+	color: #d6d7d8;
+}
+
+.cached_payment_method_description
+{
+	color: #626366;
+	font-size: 9px;
+}
+
+
+/* Self Refunds */
+.refund_desc p{
+	padding-bottom: 10px;
+}
+
+.refund_item_list {
+	width: 700px;
+}
+
+.refund_row {
+	border-bottom: 1px solid #000000;
+}
+
+.refund_row.even {
+	background-color: #1a1a1a;
+}
+
+.refund_row.odd {
+	background-color: #1f1f1f;
+}
+
+.refund_row.activeborder {
+	border: 1px solid #84ba3c;
+	border-bottom: none;
+}
+
+.refund_item {
+	position: relative;
+	min-height: 77px;
+	line-height: 16px;
+}
+.refund_item_img {
+	position: absolute;
+	top: 16px;
+	left: 43px;
+	padding-left: 10px;
+}
+
+.refund_item_radio {
+	position: absolute;
+	top:	31px;
+	left:	14px;
+}
+
+.refund_item_desc {
+	margin-left: 195px;
+	/* margin-right: 90px; */
+	padding-top: 23px;
+	color: #626366;
+}
+
+.refund_item_desc_ext {
+	color: #ff9900;
+}
+
+.refund_notes {
+	color: #82807c;
+	line-height: 20px;
+}
+
+.refund_notes b {
+	font-weight: normal;
+	/* color: #ff9900; */
+}
+
+.refund_notes a {
+	color: #82807c;
+	text-decoration: underline;
+}
+
+.refund_notes a:hover {
+	color: #FFFFFF
+}
+
+a.linkbar {
+	height: 22px;
+
+	padding-top: 4px;
+	padding-left: 8px;
+	line-height: 17px;
+	background: rgba( 103, 193, 245, 0.1 );
+	color: #67c1f5;
+	border-radius: 1px;
+	display: block;
+	margin: 8px 0;
+}
