@@ -1048,6 +1048,10 @@
 			{
 				"icon_path"		"econ/stickers/community02/shootingstar"
 			}
+			"184"
+			{
+				"icon_path"		"econ/stickers/community02/toncat"
+			}
 			"185"
 			{
 				"icon_path"		"econ/stickers/community02/warpenguin"
@@ -7343,7 +7347,11 @@
 			"visuals"
 			{
 				"weapon_type"		"Knife"
-				"taunt_sequence"		"taunt_knife01"
+			}
+			"attributes"
+			{
+				"flinch velocity modifier large"		"0.300000"
+				"flinch velocity modifier small"		"0.300000"
 			}
 		}
 		"melee_unusual"
@@ -7376,6 +7384,11 @@
 			{
 				"weapon_type"		"Pistol"
 			}
+			"attributes"
+			{
+				"flinch velocity modifier large"		"0.550000"
+				"flinch velocity modifier small"		"0.100000"
+			}
 		}
 		"primary"
 		{
@@ -7402,6 +7415,11 @@
 			{
 				"weapon_type"		"SubMachinegun"
 			}
+			"attributes"
+			{
+				"flinch velocity modifier large"		"0.550000"
+				"flinch velocity modifier small"		"0.250000"
+			}
 		}
 		"rifle"
 		{
@@ -7413,6 +7431,11 @@
 			"visuals"
 			{
 				"weapon_type"		"Rifle"
+			}
+			"attributes"
+			{
+				"flinch velocity modifier large"		"0.450000"
+				"flinch velocity modifier small"		"0.100000"
 			}
 		}
 		"sniper_rifle"
@@ -7426,6 +7449,11 @@
 			{
 				"weapon_type"		"SniperRifle"
 			}
+			"attributes"
+			{
+				"flinch velocity modifier large"		"0.450000"
+				"flinch velocity modifier small"		"0.500000"
+			}
 		}
 		"shotgun"
 		{
@@ -7438,6 +7466,11 @@
 			{
 				"weapon_type"		"Shotgun"
 			}
+			"attributes"
+			{
+				"flinch velocity modifier large"		"0.350000"
+				"flinch velocity modifier small"		"0.100000"
+			}
 		}
 		"machinegun"
 		{
@@ -7449,6 +7482,11 @@
 			"visuals"
 			{
 				"weapon_type"		"Machinegun"
+			}
+			"attributes"
+			{
+				"flinch velocity modifier large"		"0.400000"
+				"flinch velocity modifier small"		"0.200000"
 			}
 		}
 		"weapon_deagle_prefab"
@@ -9893,7 +9931,7 @@
 				"time to idle"		"1.500000"
 				"idle interval"		"60"
 				"flinch velocity modifier large"		"0.400000"
-				"flinch velocity modifier small"		"0.550000"
+				"flinch velocity modifier small"		"0.400000"
 				"spread"		"0.600000"
 				"inaccuracy crouch"		"3.680000"
 				"inaccuracy stand"		"4.900000"
@@ -13100,7 +13138,6 @@
 			}
 			"associated_item"		"10009"
 		}
-		"http://steamcommunity.com/sharedfiles/filedetails/?id"		"258207854"
 		"10010"
 		{
 			"name"		"coupon - shootingstar"
@@ -13308,6 +13345,32 @@
 				"restriction"		"coupon_stayfrosty"
 			}
 			"associated_item"		"10018"
+		}
+		"10019"
+		{
+			"name"		"coupon - toncat"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/toncat"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - toncat"
+			"tool"
+			{
+				"restriction"		"coupon_toncat"
+			}
+			"associated_item"		"20019"
+		}
+		"20019"
+		{
+			"name"		"coupon key - toncat"
+			"item_name"		"#coupon_key_toncat"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_toncat"
+			}
+			"associated_item"		"10019"
 		}
 	}
 	"attributes"
@@ -16488,6 +16551,14 @@
 			"item_name"		"#StickerKit_comm02_shootingstar"
 			"description_string"		"#StickerKit_desc_comm02_shootingstar"
 			"sticker_material"		"community02/shootingstar"
+			"item_rarity"		"rare"
+		}
+		"184"
+		{
+			"name"		"toncat"
+			"item_name"		"#StickerKit_comm02_toncat"
+			"description_string"		"#StickerKit_desc_comm02_toncat"
+			"sticker_material"		"community02/toncat"
 			"item_rarity"		"rare"
 		}
 		"185"
@@ -25211,7 +25282,6 @@
 			"public_list_contents"		"1"
 			"[oneshotonekill]sticker"		"1"
 		}
-		"http://steamcommunity.com/sharedfiles/filedetails/?id"		"258207854"
 		"coupon loot list - shootingstar"
 		{
 			"public_list_contents"		"1"
@@ -25251,6 +25321,11 @@
 		{
 			"public_list_contents"		"1"
 			"[stayfrosty]sticker"		"1"
+		}
+		"coupon loot list - toncat"
+		{
+			"public_list_contents"		"1"
+			"[toncat]sticker"		"1"
 		}
 	}
 	"revolving_loot_lists"
