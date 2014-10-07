@@ -93,7 +93,7 @@
 
 .detailsStatLeft
 {
-	color: #787875;
+	color: #61686D;
 	padding-top: 4px;
 }
 
@@ -105,7 +105,7 @@
 
 .detailsStatRight
 {
-	color: #494947;
+	color: #61686D;
 	padding-top: 4px;
 }
 
@@ -133,7 +133,7 @@
 #highlight_strip_bg {
 	position: relative;
 	z-index: 4;
-	background:	#000000;
+	background:	rgba( 0, 0, 0, 0.5 );
 	margin-top: 2px;
 }
 
@@ -217,7 +217,8 @@
 div.slider {
 	height: 13px;
 	position: relative;
-	background-color:#1a1a1a;
+	background-color:#000;
+	margin-top: 2px;
 }
 
 div.slider div.handle {
@@ -394,7 +395,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding: 0px;
 	padding-left: 32px;
 	padding-right: 12px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_up_tiled.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_up_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -410,8 +411,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	background-position: 8px -30px;
 	text-decoration: none;
-	background-color: #97C0E3;
-	color: #3C3D3E;
+	background-color: rgba( 102, 192, 244, 0.4 );
+	color: #ffffff;
 }
 
 .general_btn.voteDown
@@ -419,7 +420,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 30px;
 	width: 32px;
 	padding: 0px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_dn_tiled.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_dn_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -435,8 +436,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	background-position: 8px -30px;
 	text-decoration: none;
-	background-color: #97C0E3;
-	color: #3C3D3E;
+	background-color: rgba( 102, 192, 244, 0.4 );
+	color: #ffffff;
 }
 
 .general_btn.report
@@ -444,7 +445,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 30px;
 	padding: 0px;
 	padding-left: 32px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/report_ico_tiled.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/report_ico_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -461,8 +462,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	background-position: 8px -30px;
 	text-decoration: none;
-	background-color: #97C0E3;
-	color: #3C3D3E;
+	background-color: rgba( 102, 192, 244, 0.4 );
+	color: #ffffff;
 }
 
 .general_btn.favorite
@@ -471,7 +472,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding: 0px;
 	padding-left: 32px;
 	padding-right: 12px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_fav_tiled.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_fav_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -487,8 +488,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	background-position: 8px -30px;
 	text-decoration: none;
-	background-color: #97C0E3;
-	color: #3C3D3E;
+	background-color: rgba( 102, 192, 244, 0.4 );
+	color: #ffffff;
 }
 
 .general_btn.favorite.toggled:hover
@@ -535,8 +536,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .general_btn.share:hover
 {
 	text-decoration: none;
-	background-color: #97C0E3;
-	color: #3C3D3E;
+	background-color: rgba( 102, 192, 244, 0.4 );
+	color: #ffffff;
 	background-position: 90% -10px;
 }
 
@@ -1078,15 +1079,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .parentCollection
 {
 	padding: 5px;
-	border: 1px solid #3b3b3b;
-	background-color: #323233;
+	background-color: rgba( 84, 133, 183, 0.2);
 	cursor: pointer;
 	margin-bottom: 1px;
 }
 
 .parentCollection:hover
 {
-	background-color: #4D4D4D;
+	background-color: rgba( 117, 186, 255, 0.3);
 }
 
 .parentCollectionTitle
@@ -1200,7 +1200,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .collectionItem
 {
 	position: relative;
-	background-color: #323233;
+	background-color: rgba( 84, 133, 183, 0.2);
 	margin-top: 2px;
 }
 
@@ -1222,7 +1222,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	padding-top: 20px;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 .collectionItem .workshopItemPreviewImage
@@ -1629,9 +1629,12 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .nonScreenshotDescription
 {
-	font-size: 13px;
-	color: #939393;
+	font-size: 14px;
+	line-height: 20px;
+	color: #acb2b8;
 	font-style: normal;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .screenshotModalDescription
@@ -2405,14 +2408,15 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 }
 
 .trendingdiscussions .forum_topic:hover {
-	background-color: #3c3c3d;
+	background-color: rgba( 117, 186, 255, 0.3);
+	color: #ffffff;
 }
 
 .trendingdiscussions .forum_topic.unread .forum_topic_name  {
-	color: #529cde;
+	color: #67c1f5;
 }
 .trendingdiscussions .forum_topic .forum_topic_name {
-	color: #427eb3;
+	color: #67c1f5;
 }
 
 .game_area_purchase_game
@@ -2664,7 +2668,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding-top: 10px;
 	padding-bottom: 0px;
 	margin-bottom: 10px;
-	color: #529cde;
+	color: #66C0F4;
 	font-size: 18px;
 	/* border-bottom: 1px #444444 dotted; */
 }
@@ -2785,15 +2789,7 @@ iframe.sharedFilePreviewYouTubeVideo.floatLeft, iframe.sharedFilePreviewYouTubeV
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE3MTcxNyIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMjAyMCIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-	background: -moz-linear-gradient(top,  rgba(23,23,23,0.8) 0%, rgba(32,32,32,0.8) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(23,23,23,0.8)), color-stop(100%,rgba(32,32,32,0.8))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171717', endColorstr='#252525',GradientType=0 ); /* IE6-8 */
+	background: rgba( 0, 0, 0, 0.2 );
 
 	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 }
@@ -2981,9 +2977,6 @@ h2.stats {
 		font-size: 11px;
 	}
 
-#ig_bottom .breadcrumbs a {
-	color: #ffffff;
-}
 
 /* official content */
 .official_content_text_area .app_730
@@ -3282,6 +3275,9 @@ h2.stats {
 	font-size: 14px;
 	padding: 1px 6px;
 }
+.sectionTab:hover .tabCount {
+	background: #ffffff;
+}
 
 
 /* Workshop Service Providers */
@@ -3299,9 +3295,8 @@ h2.stats {
 
 .service_provider_split
 {
-	background-color: #262627;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 10px;
-	border: 1px solid #000000;
 	margin-bottom: 1px;
 }
 

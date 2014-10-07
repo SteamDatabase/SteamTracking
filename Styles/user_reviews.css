@@ -58,7 +58,7 @@ select {
 	}
 	
 	.friendBlock {
-		background-color: #252525;
+		background-color: rgba( 84, 133, 183, 0.2);
 	}
 
 .gameLogoHolder_default img {
@@ -129,9 +129,13 @@ select {
 .review_area_content {
 	font-size: 13px;
 	line-height: 17px;
-	color: #CDCAC1;
+	color: #acb2b8;
 	font-family: 'Motiva Sans', arial, tahoma;
 	overflow-wrap: break-word;
+}
+.review_area_content b {
+	font-family: 'Motiva Sans Bold', arial, tahoma;
+	font-weight: normal;
 }
 
 .review_edit_text_area

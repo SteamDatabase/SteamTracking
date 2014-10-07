@@ -1526,7 +1526,7 @@ CAjaxInfiniteScrollingControls.prototype.RestoreScrollTop = function( bForce )
 	{
 		return;
 	}
-	var scrollTopPrevious = parseInt( GetValueLocalStorage( this.GetActionURL( "scroll_top" ), 0 ) );
+	var scrollTopPrevious = parseInt( $J( "#" + this.m_strElementPrefix + '_scroll_top').val() );
 	if ( scrollTopPrevious != 0 )
 	{
 		var viewport = document.viewport.getDimensions(); // Gets the viewport as an object literal
@@ -1554,7 +1554,7 @@ CAjaxInfiniteScrollingControls.prototype.OnUnload = function( event )
 {
 	var scrollOffset = document.viewport.getScrollOffsets();
 	var scrollTop = scrollOffset.top;
-	SetValueLocalStorage( this.GetActionURL( "scroll_top" ), scrollTop );
+	$J( "#" + this.m_strElementPrefix + '_scroll_top').val( scrollTop );
 }
 
 CAjaxInfiniteScrollingControls.prototype.OnScroll = function( event )

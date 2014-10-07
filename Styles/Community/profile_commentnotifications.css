@@ -57,7 +57,7 @@
 
 .commentnotifications_header_commentcount {
 	float: left;
-	color: #9ada46;
+	color: #66C0F4;
 	height: 51px;
 	line-height: 51px;
 	font-size: 48px;
@@ -75,7 +75,7 @@
 
 .commentnotifications_header_content b {
 	font-weight: normal;
-	color: #9ada46;
+	color: #66C0F4;
 }
 
 .commentnotifications_header_rule {
@@ -114,11 +114,11 @@
 .commentnotification_title {
 	padding-top: 6px;
 	line-height: 19px;
-	color: #b4b4b4;
+	color: #8F98A0;
 	font-size: 14px;
 }
 .commentnotification.unread .commentnotification_title {
-	color: #9ada46;
+	color: #66C0F4;
 	font-weight: bold;
 	text-shadow: 1px 1px #434345;
 }
@@ -202,7 +202,7 @@
 	position: relative;
 	line-height: 25px;
 	height: 25px;
-	background-color: #1c1c1d;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
 	color: #747474;
 

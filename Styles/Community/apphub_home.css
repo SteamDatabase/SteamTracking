@@ -205,10 +205,8 @@ body.apphub_blue
 {
 	position: relative;
 	margin: 0px auto;
-	margin-top: 8px;
 	background-color: #2a2d33;
-	background-color: rgba( 0, 0, 0, 0.2 );
-	border: 1px solid #364050;
+	background-color: rgba( 0, 0, 0, 0.4 );
 	height: 46px;
 	width: 946px;
 }
@@ -249,7 +247,7 @@ body.apphub_blue
 
 .apphub_HubDivider
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/hub_divider.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/hub_divider.png?v=1' );
 	height: 4px;
 	width: 948px;
 }
@@ -329,15 +327,19 @@ div.filterselect
 	width: 215px;
 	height: 26px;
 	line-height: 26px;
-	color: white;
+	color: #66C0F4;
 	font-size: 12px;
-	background-color: #7095ca;
-	border: 1px solid #79a1db;
+	background: rgba( 103, 193, 245, 0.2 );
+	border-radius: 2px;
 	float: left;
 	margin-top: 9px;
 	margin-left: 10px;
 	text-align: left;
 	text-transform: uppercase;
+}
+div.filterselect:hover {
+	color: white;
+	background: rgba( 103, 193, 245, 1 );
 }
 
 div.filterselect_options {
@@ -346,8 +348,7 @@ div.filterselect_options {
 	line-height: 26px;
 	color: white;
 	font-size: 12px;
-	background-color: #7095ca;
-	border: 1px solid #79a1db;
+	background-color: #417A9B;
 	z-index: 3;
 	text-transform: uppercase;
 }
@@ -542,7 +543,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .apphub_StoreAppText
 {
 	color: #8c8b8a;
-    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	padding-top: 22px;
 	padding-right: 25px;

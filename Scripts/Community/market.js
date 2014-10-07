@@ -259,7 +259,7 @@ CreateBuyOrderDialog = {
 		$J('#market_buynow_dialog_addfunds').click( function() { CreateBuyOrderDialog.OnAddFunds(); } );
 		$J('#market_buy_commodity_input_price').blur( function() {
 			var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
-			var currency = CreateBuyOrderDialog.GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
+			var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 			$('market_buy_commodity_input_price').setValue( v_currencyformat( currency, sWalletCurrencyCode ) );
 		});
 
@@ -281,7 +281,7 @@ CreateBuyOrderDialog = {
 	},
 
 	UpdateTotal: function() {
-		var currency = this.GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
+		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
 		var price = Math.round( currency * quantity );
 
@@ -323,7 +323,7 @@ CreateBuyOrderDialog = {
 
 		$J('#market_buy_commodity_status').html( 'Placing buy order...' );
 
-		var currency = this.GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
+		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
 		var price_total = Math.round( currency * quantity );
 
@@ -459,23 +459,6 @@ CreateBuyOrderDialog = {
 		// this doesn't work, need jquery-color plugin or a different solution
 		$J('#market_buynow_dialog_error_text').animate( {'color':'#ff0000'}, 250 );
 		$J('#market_buynow_dialog_placing_order').hide();
-	},
-
-	GetPriceValueAsInt: function( strAmount ) {
-		var nAmount;
-		if ( !strAmount )
-		{
-			return 0;
-		}
-
-		// strip the currency symbol, set commas to periods, set .-- to .00
-		strAmount = strAmount.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ), '' ).replace( ',', '.' ).replace( '.--', '.00');
-
-		var flAmount = parseFloat( strAmount ) * 100;
-		nAmount = Math.floor( isNaN(flAmount) ? 0 : flAmount + 0.000001 ); // round down
-
-		nAmount = Math.max( nAmount, 0 );
-		return nAmount;
 	},
 
 	OnUserClosedDialog: function() {

@@ -293,7 +293,7 @@ a.general_btn:hover {
 	font-size: 14px;
 	position: relative;
 	padding: 16px 8px 16px 13px;
-	background: repeat-y url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_repeat.png' );
+	background: rgba( 0, 0, 0, 0.2 );
 }
 
 .rightSectionPadding

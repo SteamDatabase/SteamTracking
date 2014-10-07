@@ -108,13 +108,13 @@
 	top: 0px;
 
 	font-size: 14px;
-	color: #6d6d6b;
+	color: #8F98A0;
 
 	overflow: hidden;
 }
 
 .formRow .formRowHint {
-	color: #529cde;
+	color: #66C0F4;
 	cursor: default;
 }
 
@@ -133,6 +133,7 @@
 
 .formRowFields .gray_bevel {
 	vertical-align: middle;
+	max-width: 475px;
 }
 
 .formRowFields .avatar_edit_block {
@@ -167,7 +168,7 @@
 	padding-top:7px;
 }
 .historyItem {
-	background-color:#2a2a2a;
+	background-color: rgba( 0, 0, 0, 0.1 );
 }
 .historyShort {
 	font-size:11px;
@@ -294,8 +295,7 @@
 
 .groupadmin_subarea, .modify_forumlist {
 	padding: 8px;
-	background-color: #222223;
-	border: 1px solid #38383a;
+	background-color: rgba( 0, 0, 0, 0.2 );
 }
 
 .groupadmin_forumlist_body {
@@ -439,15 +439,15 @@
 
 .permissionRow.permissionHeaderRow .permissionText {
 	font-size: 16px;
-	font-weight: bold;
-	color: #969696;
+	color: #C6D4DF;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 }
 
 .sectionHeader {
-	border-bottom: 1px solid #313431;
-	color: #525252;
+	border-bottom: 1px solid #61686D;
+	color: #C6D4DF;
 	font-size: 15px;
-	font-weight: bold;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 }
 
 #memberManageList .member_block_content, #memberManageList .member_block_content a {

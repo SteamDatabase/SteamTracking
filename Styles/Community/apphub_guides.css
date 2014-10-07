@@ -58,21 +58,18 @@
 
 .apphub_ContentGuides .workshopItemCollectionContainer
 {
-	border: 1px solid #222222;
 	margin-bottom: 4px;
 }
 
 .apphub_ContentGuides .workshopItemCollection
 {
-	background: #464646; /* Old browsers */
-	background: -moz-linear-gradient(top, #363636 5%, #464646 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#363636), color-stop(95%,#464646));background: -webkit-linear-gradient(top, #363636 5%,#464646 95%);background: -o-linear-gradient(top, #363636 5%,#464646 95%);background: -ms-linear-gradient(top, #363636 5%,#464646 95%);background: linear-gradient(to bottom, #363636 5%,#464646 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#464646',GradientType=0 );	border: 1px solid #454545;
+	background-color: rgba( 84, 133, 183, 0.2);
 	margin-bottom: 0px;
 }
 
 .apphub_ContentGuides .workshopItemCollection:hover
 {
-	background: #464646; /* Old browsers */
-	background: -moz-linear-gradient(top, #484848 5%, #5a5a5a 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#5a5a5a));background: -webkit-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: -o-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: -ms-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: linear-gradient(to bottom, #484848 5%,#5a5a5a 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#5a5a5a',GradientType=0 );	border: 1px solid #5a5a5a;
+	background-color: rgba( 117, 204, 255, 0.3);
 }
 
 .apphub_ContentGuides .workshopItemCollection .workshopItem
@@ -91,14 +88,14 @@
 .apphub_ContentGuides .workshopItemCollection .workshopItemDetails
 {
 	margin-left: 84px;
-	margin-top: 3px;
 }
 
 .apphub_ContentGuides .workshopItemCollection .workshopItemTitle
 {
 	font-size: 17px;
-	font-weight: bold;
-	border-bottom: 1px #666666 dotted;
+	font-weight: normal;
+	border-bottom: 1px #8F98A0 dotted;
+	padding-bottom: 2px;
 }
 
 .apphub_ContentGuides .workshopBrowsePagingWithBG
@@ -119,13 +116,13 @@
 .guides_browse_box .title
 {
 	font-size: 17px;
-	color: #529CDE;
+	color: #66C0F4;
 	margin: 0px 0px 12px 0px;
 }
 
 .guides_home_section_title
 {
-	color: #529CDE;
+	color: #66C0F4;
 	font-size: 17px;
 	padding-bottom: 7px;
 	padding-top: 4px;
