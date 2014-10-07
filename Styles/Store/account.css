@@ -137,6 +137,7 @@
 	color: #8f98a0;
 	line-height: 17px;
 }
+
 .accountRow {
 	position: relative;
 }
@@ -159,7 +160,8 @@
 
 .accountBalance .price {
 	color: #ffffff;
-	font-size: 18px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-size: 24px;
 }
 
 
@@ -802,7 +804,7 @@ div.youraccount_history_home>div.account_wallet {
 	color: #FFFFFF
 }
 
-a.linkbar {
+.block a.linkbar {
 	height: 22px;
 
 	padding-top: 4px;
@@ -813,4 +815,16 @@ a.linkbar {
 	border-radius: 1px;
 	display: block;
 	margin: 8px 0;
+}
+.block a.linkbar:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background: #67c1f5; /* Old browsers */
+	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
