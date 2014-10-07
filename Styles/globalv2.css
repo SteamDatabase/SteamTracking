@@ -4,12 +4,12 @@ html {
 }
 
 body {
-	background-image: none;
+	background:  url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center top repeat-y #000000;
 	background-color: #000000;
 
 	text-align: left;
 
-	color: #828282;
+	color: #8F98A0;
 	font-size: 14px;
 
 	margin:0;
@@ -19,7 +19,6 @@ body {
 body.flat_page {
 	position: relative;
 	min-height: 100%;
-	background-color: #262627;
 }
 
 body.flat_page.blue {
@@ -40,10 +39,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pagecontent {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_page_background.png' );
-	background-repeat: repeat-x;
-	background-position: center 105px;
-	background-color: #262627;
 
 	padding-bottom: 128px;
 }
@@ -75,6 +70,7 @@ a, .whiteLink {
 	cursor: pointer;
 }
 
+
 a.hoverunderline:hover {
 	text-decoration: underline;
 }
@@ -85,8 +81,9 @@ a.underlinedLink {
 }
 
 a.whiteLink:hover, .whiteLink:hover, a.linkStandard:hover, a.linkTitle:hover, a.underlinedLink:hover {
-	color: #ffffff;
-	text-decoration: underline;
+	color: #66C0F4;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 form {
@@ -127,7 +124,7 @@ body.flat_page #footer, body.headerless_page #footer {
 	background: transparent;
 }
 body.flat_page #footer {
-	background-color: #262627;
+	background-color: #000000;
 }
 body.flat_page.blue #footer {
 	background: none;
@@ -166,7 +163,7 @@ body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
 
 
 .friendBlock {
-	height:40px;
+	height:36px;
 	padding: 4px 0 4px 4px;
 	margin-bottom:4px;
 	font-size:11px;
@@ -175,12 +172,9 @@ body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 
-	border-radius: 3px;
-
 	position: relative;
 
-	height:40px;
-	background-color: #3a3a3a;
+	background-color: rgba( 84, 133, 183, 0.2);
 }
 a.friendBlock {
 	display: block;
@@ -204,7 +198,7 @@ a.friendBlock {
 
 .friendBlock:hover {
 	cursor:pointer;
-	background-color: #313131;
+	background-color: rgba( 117, 204, 255, 0.3);
 }
 
 .friendBlock .playerAvatar {
@@ -380,7 +374,7 @@ a.pagelink:hover {
 
 .commentthread_entry {
 	min-height: 44px;
-	background-color: #323233;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	position: relative;
 
 	padding: 6px 6px 6px 66px;
@@ -418,7 +412,7 @@ a.commentthread_allcommentslink:hover {
 .commentthread_textarea {
 	resize: none;
 	outline: none;
-	background-color: #323232;
+	background-color: transparent;
 	border: none;
 	width: 100%;
 	overflow: hidden;
@@ -512,8 +506,8 @@ a.commentthread_allcommentslink:hover {
 }
 
 .commentthread_comment_text {
-	font-size: 14px;
-	color: #898989;
+	font-size: 13px;
+	color: #acb2b8;
 	word-wrap: break-word;
 	overflow-y: auto;
 	max-height: 400px;
@@ -521,12 +515,13 @@ a.commentthread_allcommentslink:hover {
 }
 
 .commentthread_comment_text a {
-	color: #898989;
+	color: #c6d4df;
 	text-decoration: underline;
 }
 
 .commentthread_comment_text a:hover {
 	color: #EBEBEB;
+	text-decoration: underline;
 }
 
 .commentthread_comment_friendindicator {
@@ -759,11 +754,11 @@ input.gray_bevel::-webkit-input-placeholder, textarea.gray_bevel::-webkit-input-
 }
 
 input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_textarea_ctn {
-	background-color: #565658;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
-	border: 1px solid #262627;
-	box-shadow: 1px 1px 0px #39393a;
-	color: #BFBFBF;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	color: #C6D4DF;
 
 	margin-bottom: 6px;
 	outline: none;
@@ -774,9 +769,8 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_
 
 .gray_bevel.for_text_input {
 	display: inline-block;
-	padding-top: 1px;
 	padding-bottom: 1px;
-	height: 23px;
+	height: 25px;
 }
 
 .gray_bevel input {
@@ -798,9 +792,9 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_
 .gray_bevel input, .gray_bevel textarea {
 	border: none;
 	outline: none;
-	background-color: #565658;
+	background-color: transparent;
 	font-size: 13px;
-	color: #BFBFBF;
+	color: #C6D4DF;
 }
 
 .gray_bevel.fullwidth {
@@ -820,10 +814,10 @@ textarea.gray_bevel, .gray_bevel textarea {
 }
 
 select.gray_bevel {
-	background-color: #565658;
+	background-color: #212f43;
 	border-radius: 3px;
-	border: 1px solid #262627;
-	box-shadow: 1px 1px 0px #39393a;
+	border: 1px solid rgba( 91, 132, 181, 0.2 );
+	box-shadow: 1px 1px 0px #000000;
 	color: #BFBFBF;
 
 	margin-bottom: 6px;

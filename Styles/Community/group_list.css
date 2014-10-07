@@ -88,7 +88,7 @@
 	margin-bottom:8px;
 }
 
-.resultItem,.resultItemOGG {
+.resultItem, .resultItemOGG {
 	position:relative;
 	margin-left:100px;
 	width:606px;
@@ -117,9 +117,8 @@
 	float:left;
 	width:72px;
 	height:72px;
-	margin:0;
+	margin: 2px 7px;
 	padding:0;
-	margin-right:11px;
 }
 
 .groupBlockOGG {
@@ -142,7 +141,7 @@
 	font-weight:bold;
 }
 
-.darkBG {
+.groupBlock.darkBG {
 	background-color:#2c2c2c;
 }
 
@@ -180,13 +179,11 @@
 
 .infoBar {
 	position:relative;
-	width:732px;
+	width:900px;
 	height:32px;
 	line-height: 28px;
 	background-color:#000000;
-	margin: 4px 0 4px 100px;
-	padding:0;
-	padding-left:4px;
+	margin-bottom: 4px;
 }
 
 .infoBar p {
@@ -227,14 +224,15 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 	margin-left:25px;
 }
 
-.groupBlock,.groupBlockHi {
-	width:769px;
+.groupBlock, .groupBlockHi {
+	width:900px;
 	height:72px;
 	margin:0;
 	padding:0;
 	margin-bottom:4px;
 	padding-top:4px;
 	padding-bottom:4px;
+	background-color: #2E2E2E;
 }
 
 .groupBlockHi {
@@ -253,8 +251,8 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 	padding:0;
 	width:136px;
 	height:36px;
-	float:left;
-	padding-top:12px;
+	float:right;
+	padding-top: 18px;
 	padding-left:16px;
 	font-size: 11px;
 }
@@ -264,8 +262,8 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 	padding:0;
 	width:136px;
 	height:36px;
-	float:left;
-	padding-top:6px;
+	float:right;
+	padding-top: 18px;
 	padding-left:16px;
 	font-size: 11px;
 	line-height:20px;
@@ -292,7 +290,20 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 
 
 
-a.linkTitle {
-	font-weight:bold;
-	font-size: 15px;
+.groupBlock a.linkTitle {
+	font-size: 17px;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	margin-top: 11px;
+	display: inline-block;
+}
+
+.membersInGame {
+	color: #90BA3C;
+}
+.membersOnline {
+	color: #57CBDE;
+}
+.memberRow {
+	margin-top: 5px;
+	font-size: 11px;
 }

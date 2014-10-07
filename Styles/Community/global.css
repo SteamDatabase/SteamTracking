@@ -3,9 +3,7 @@
 body {
 	font-size:0.75em;
 	background-color:#2d2d2b;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg.gif');
-	background-position:0px 0px;
-	background-repeat: repeat-x;
+	background:  url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center top repeat-y #000000;
 	color:#939393;
 	text-align:center;
 	margin:0;
@@ -19,20 +17,13 @@ body, textarea {
 }
 
 body.flat_page {
-	background-image: none;
 
 	text-align: left;
 
-	color: #828282;
 	font-size: 14px;
 }
 
 body.flat_page .pagecontent {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_page_background.png' );
-	background-repeat: repeat-x;
-	background-position: top center;
-	background-color: #262627;
-
 	padding-bottom: 128px;
 }
 
@@ -50,13 +41,13 @@ body.flat_page .maincontent {
 /* --[ same as a.linkStandard ]------------------- */
 a,a:hover,a:active,a:visited {
 	/*font-size: 11px;*/
-	color: #ebebeb;
-	text-decoration:none;
+	color: #ffffff;
+	text-decoration: none;
 }
 
 a:hover {
-	text-decoration:underline;
-	color:#FFFFFF;
+	text-decoration: none;
+	color:#66C0F4;
 }
 
 
@@ -417,22 +408,22 @@ a.whiteLink:hover {
 	text-decoration: underline;
 }
 
-a.linkTitle,a.linkTitle:hover,a.linkTitle:active,a.linkTitle:visited {
-	font-weight:bold;
+a.linkTitle, a.linkTitle:hover, a.linkTitle:active, a.linkTitle:visited {
+	font-weight:normal;
 	font-size: 15px;
 	color: #ebebeb;
 	text-decoration:none;
 }
 
 a.linkTitle:hover {
-	text-decoration:underline;
-	color:#FFFFFF;
+	text-decoration: none;
+	color: #66C0F4;
 }
 
-a.linkAction,a.linkAction:hover,a.linkAction:active,a.linkAction:visited {
-	font-weight:bold;
+a.linkAction, a.linkAction:hover, a.linkAction:active, a.linkAction:visited {
+	font-weight:normal;
 	font-size: 11px;
-	color: #62a7e3;
+	color: #66C0F4;
 	text-decoration:none;
 }
 
@@ -441,7 +432,7 @@ a.linkAction:hover {
 	color:#FFFFFF;
 }
 
-a.linkActionInGame,a.linkActionInGame:hover,a.linkActionInGame:active,a.linkActionInGame:visited {
+a.linkActionInGame, a.linkActionInGame:hover, a.linkActionInGame:active, a.linkActionInGame:visited {
 	font-weight:bold;
 	font-size: 11px;
 	color: #8bc53f;
@@ -453,7 +444,7 @@ a.linkActionInGame:hover {
 	color:#FFFFFF;
 }
 
-a.linkInGame,a.linkInGame:hover,a.linkInGame:active,a.linkInGame:visited {
+a.linkInGame, a.linkInGame:hover, a.linkInGame:active, a.linkInGame:visited {
 	font-size: 11px;
 	color: #8bc53f;
 	text-decoration:none;

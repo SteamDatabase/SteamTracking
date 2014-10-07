@@ -2,7 +2,7 @@
 body
 {
     background:  url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center top repeat-y #000000;
-    color: #636363;
+    color: #acb2b8;
     background-color: #000000;
 }
 
@@ -51,7 +51,7 @@ center
 .apphub_HeaderTop.workshop
 {
 
-	/*background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_workshop_header.png');*/
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_workshop_header.png?v=3');
 }
 
 .apphub_HeaderStandardTop
@@ -223,8 +223,7 @@ center
 {
 	position: relative;
 	height: 68px;
-	background-color: #1b1b1b;
-	margin-top: 1px;
+	background-color: rgba( 0, 0, 0, 0.4 );
 }
 
 .apphub_HeaderBottomText
@@ -303,7 +302,7 @@ center
 
 .apphub_sectionTabsHR
 {
-	background-color:#364963;
+	background-color: #0d121a;
 	height: 5px;
 	width: 948px;
 	margin: 0px auto;
@@ -317,8 +316,8 @@ center
 	/*background-color: #3A3A3A;*/
 	height: 30px;
 	line-height: 31px;
-	padding: 0px 12px;
-	margin-right: 5px;
+	padding: 0px 10px;
+	margin-right: 2px;
 	text-decoration: none;
 	border-radius: 2px;
 	border-bottom-left-radius: 0px;
@@ -328,26 +327,28 @@ center
 	-moz-border-radius-bottomright: 0px;
 }
 
-.apphub_sectionTab.active
+.apphub_sectionTab.active, .apphub_sectionTab.active:hover
 {
 	padding: 1px;
 	text-decoration: none;
 	border: none;
 
 	background: #57749e; /* Old browsers */
-background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );}
+background: -moz-linear-gradient(top, rgba(103,193,245,1) 5%, rgba(103,193,245,0) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(103,193,245,1)), color-stop(95%,rgba(103,193,245,0)));background: -webkit-linear-gradient(top, rgba(103,193,245,1) 5%,rgba(103,193,245,0) 95%);background: -o-linear-gradient(top, rgba(103,193,245,1) 5%,rgba(103,193,245,0) 95%);background: -ms-linear-gradient(top, rgba(103,193,245,1) 5%,rgba(103,193,245,0) 95%);background: linear-gradient(to bottom, rgba(103,193,245,1) 5%,rgba(103,193,245,0) 95%);
+}
 
 .apphub_sectionTab.active > span
 {
 
-	padding: 0 19px;
+	padding: 0 17px;
 	border-radius: 2px;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 
 	display: block;
-	background: #445b7c; /* Old browsers */
-background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%);background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );}
+	background: #0d121a;
+
+}
 
 .apphub_sectionTab.admin
 {
@@ -357,8 +358,9 @@ background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);background: -webk
 
 .apphub_sectionTab:hover
 {
+	color: #ffffff;
 	background: #57749e; /* Old browsers */
-background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );}
+background: -moz-linear-gradient(top, #67c1f5 5%, #417a9b 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#67c1f5), color-stop(95%,#417a9b));background: -webkit-linear-gradient(top, #67c1f5 5%,#417a9b 95%);background: -o-linear-gradient(top, #67c1f5 5%,#417a9b 95%);background: -ms-linear-gradient(top, #67c1f5 5%,#417a9b 95%);background: linear-gradient(to bottom, #67c1f5 5%,#417a9b 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=0 );}
 
 /* friends who played recently */
 
@@ -367,22 +369,11 @@ background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webk
 	text-align: center;
 	float: left;
 	display: block;
-	color: white;
-	background-color: #363636;
+	color: #8F98A0;
 	line-height: 22px;
 	min-width: 22px;
-	height: 22px;
-	padding: 2px 10px;
-	border-radius: 2px;
-	-moz-border-radius: 2px;
 	margin-left: 14px;
-	margin-top: 18px;
-}
-
-.apphub_friends_who_played_recently_title:hover
-{
-	text-decoration: none;
-	background-color: #545454;
+	margin-top: 22px;
 }
 
 .appHubIconHolder
@@ -566,7 +557,7 @@ a.apphub_more_friends_who_play:hover
 {
 	position: relative;
 	float: left;
-	background-color: #1b1b1b;
+	background-color: #0d131b;
 	border: 1px solid transparent;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -615,12 +606,12 @@ a.apphub_more_friends_who_play:hover
 	width: auto;
 	color: white;
 	font-size: 18px;
-	font-weight: bold;
-    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+    font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 	padding: 10px;
 	margin: 5px;
 	z-index: 2;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/item_type_hover.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/item_type_hover.png?v=1');
 }
 
 .apphub_Card.interactable:hover .apphub_CardContentType
@@ -720,7 +711,7 @@ a.apphub_more_friends_who_play:hover
 	position: relative;
 	overflow: hidden;
 	word-wrap: break-word;
-    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
 
 .apphub_CardContentTitle
@@ -794,7 +785,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_Card.interactable:hover .apphub_CardContentAuthorBlock
 {
-	background-color: #1b1b1b;
+	background-color: #212f43;
 }
 
 .apphub_Card.pinned .apphub_CardContentAuthorBlock
@@ -977,7 +968,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardBG.workshop
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_workshopitem.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_workshopitem.png?v=1' );
 }
 
 .apphub_CardBG.guide
@@ -996,7 +987,8 @@ a.apphub_more_friends_who_play:hover
 {
 	color: white;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: normal;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 	max-width: 450px;
 	padding-top: 20px;
 	padding-bottom: 14px;
@@ -1034,7 +1026,7 @@ a.apphub_more_friends_who_play:hover
 	top: -1px;
 	margin-left: 42px;
 	z-index: 2;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/speech_corner.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/speech_corner.png?v=1');
 	background-repeat: no-repeat;
 }
 
@@ -1053,7 +1045,6 @@ a.apphub_more_friends_who_play:hover
 	line-height: 32px;
 	padding-top: 7px;
 	padding-left: 7px;
-	background-color: #1b1b1b;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -1066,7 +1057,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_Card.interactable:hover .apphub_CardContentDiscussionType
 {
-	background-color: #1b1b1b;
+	background-color: #212f43;
 	color: #898989;
 }
 
@@ -1086,8 +1077,8 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardContentNewsTitle
 {
 	color: white;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-size: 18px;
-	font-weight: bold;
 	max-width: 450px;
 	padding-top: 20px;
 	padding-bottom: 14px;
@@ -1130,13 +1121,14 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardContentNewsDesc p
 {
 	margin: 0px;
+	padding-bottom: 10px;
 }
 
 .apphub_CardContentNewsFade
 {
 	position: relative;
 	top: -18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/text_fade.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/text_fade.png?v=1' );
 	height: 18px;
 	width: 100%;
 }
@@ -1227,14 +1219,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardContentMain .UserReviewCardContent_Footer .gradient {
 
-	background: -moz-linear-gradient(top,  rgba(27,27,27,0) 0%, rgba(27,27,27,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,27,27,0)), color-stop(100%,rgba(27,27,27,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001b1b1b', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
-	height: 50px;
+	background: -moz-linear-gradient(top, rgba(13,19,27,0) 5%, rgba(13,19,27,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(13,19,27,0)), color-stop(95%,rgba(13,19,27,1)));background: -webkit-linear-gradient(top, rgba(13,19,27,0) 5%,rgba(13,19,27,1) 95%);background: -o-linear-gradient(top, rgba(13,19,27,0) 5%,rgba(13,19,27,1) 95%);background: -ms-linear-gradient(top, rgba(13,19,27,0) 5%,rgba(13,19,27,1) 95%);background: linear-gradient(to bottom, rgba(13,19,27,0) 5%,rgba(13,19,27,1) 95%);	height: 50px;
 }
 
 .apphub_CardContentMain .UserReviewCardContent_Footer .date_posted
@@ -1252,7 +1237,7 @@ a.apphub_more_friends_who_play:hover
 }
 
 .apphub_CardContentMain .UserReviewCardContent_Footer .content {
-	background-color: #1b1b1b;
+	background-color: #0d131b;
 	padding: 0 10px;
 }
 

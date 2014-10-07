@@ -127,12 +127,17 @@ a.games_list_tab:hover {
 .gameListRow {
 	padding-left: 208px;
 	height: 77px;
-	margin-bottom: 15px;
+	margin-bottom: 4px;
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 5px;
 }
 
 .gameListRowLogo {
 	position: absolute;
-	left: 0px;
+	left: 5px;
+}
+.gameListRowLogo .gameLogo, .gameLogoHolder_default .gameLogo {
+	background: transparent;
 }
 
 .gameListRowLogo.ds_flagged .ds_flag {
@@ -151,78 +156,79 @@ a.games_list_tab:hover {
 
 .gameListRowItem {
 	height: 60px;
-	border: 1px solid #454545;	
 	padding:8px;
 	font-size: 11px;
 	color: #939393;
 	position: relative;
+	margin-left: 192px;
 }
 
 .gameListItemActive {
-    background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/Desk_ActiveBG.png );
+    /* background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/Desk_ActiveBG.png ); */
 }
 
 .gameListItemInstalled {
-    background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/Desk_InstalledBG.png );
+	/* background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/Desk_InstalledBG.png ); */
 }
 
 .recentAchievements
 {
-	float:right;
+float:right;
 }
 
 .recentAchievementsImg {
-	padding-left:3px;
-	padding-top:3px;
+padding-left:3px;
+padding-top:3px;
 }
 
 .gameListRowItemName {
-	color: #ffffff;
-	font-size: 14px;
-	font-weight: bold;
-	padding: 0px;
-    margin: 0;
+color: #ffffff;
+font-size: 14px;
+font-weight: normal;
+font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+padding: 0px;
+margin: 0;
 }
 
 .games_list_tab.active {
-	background-color: #4e4e4d;
+background-color: #4e4e4d;
 }
 
 #gameslist_controls {
-	line-height: 24px;
+line-height: 24px;
 }
 
 #gameslist_sort_options {
-	float: right;
+float: right;
 }
 
 #wishlist_sort_options {
-	text-align: right;
+text-align: right;
 
 }
 
 .sort_options {
-	color: #939393;
-	margin-bottom: 8px;
+color: #939393;
+margin-bottom: 8px;
 }
 
 .sort_options .selected_sort {
-	color: #B0AEAC;
+color: #B0AEAC;
 }
 
 .sort_options a {
-	text-decoration: underline;
-	color: #B0AEAC;
+text-decoration: underline;
+color: #B0AEAC;
 }
 
 .sort_options a:hover {
-	color: #EBEBEB;
+color: #EBEBEB;
 }
 
 
 /*
- * DISCOUNTS & PRICES
- */
+* DISCOUNTS & PRICES
+*/
 
 
 .price, .match_price {
@@ -467,20 +473,19 @@ a.popup_menu_item2:hover h5 {
 .pullup_item {
 	float:left;
 	display: block;
-	background-color:#1a1a1a;
+	background-color: rgba( 0, 0, 0, 0.4 );
 	padding:3px 8px 3px 0px;
+	border-radius: 2px;
 	margin-right:6px;
 	cursor: pointer;
+}
+.pullup_item:hover, a.pullup_item:hover {
+	background-color: rgba( 102, 192, 244, 0.4 );
+	color: #ffffff;
 }
 
 a.pullup_item {
 	color: #939393;
-}
-
-a.pullup_item:hover {
-	text-decoration: none;
-	color: #939393;
-	
 }
 
 .menu_ico {
@@ -590,10 +595,13 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	padding-left: 248px;
 	height: 85px;
 	margin-bottom: 15px;
-	border: 1px solid #454545;	
+
 	font-size: 11px;
 	color: #939393;
-	background-color: #262627;
+	background-color: rgba( 84, 133, 183, 0.2);
+}
+.wishlistRow:hover {
+	background-color: rgba( 117, 204, 255, 0.3);
 }
 
 .wishlistRow .bottom_controls {
@@ -640,9 +648,10 @@ input.wishlist_rank {
 .wishlistRow h4 {
 	font-size: 16px;
 	line-height: 20px;
-	font-weight: bold;
+	font-weight: normal;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	color: #ffffff;
-	padding-top: 16px;
+	padding-top: 14px;
 }
 
 .wishlist_rank.userEdited {
@@ -746,7 +755,7 @@ body.migrated_profile_page #wishlist_comic {
 	height: 26px;
 	line-height: 26px;
 	text-align: center;
-	background-color: #313131;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	text-transform: uppercase;
 	font-size: 10px;
 	margin-bottom: 3px;
@@ -952,8 +961,8 @@ body.migrated_profile_page #wishlist_comic {
     position: absolute;
     top: 14px;
     right: 8px;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 32px;
 }
 
 #uninstallConfirm {

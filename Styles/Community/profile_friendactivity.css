@@ -46,7 +46,7 @@ div#headerSearch.friend_activity_header_search {
 .friend_activity_header h1 {
 	font-weight: normal;
 	font-size: 24px;
-	color:#529cde;
+	color:#66C0F4;
 }
 
 .friend_activity_header span {
@@ -648,7 +648,7 @@ a.nohover, a.nohover:hover
 .blotter_group_announcement_headline, .blotter_group_announcement_headline a, .blotter_group_announcement_headline a:visited, .blotter_group_announcement_headline a:active
 {
 	font-size: 24px;
-	color: #529CDE;
+	color: #66C0F4;
 	margin-bottom: 10px;
 	line-height: 26px;
 }
@@ -1423,9 +1423,6 @@ div.slider div.handle:hover {
 
 }
 
-body.flat_page .pagecontent.bluebg {
-	background: #262627 url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/bg_highlight_blue_transparent_darker.png' ) top center no-repeat;
-}
 
 .blotter_block .hr {
 	height: 1px;

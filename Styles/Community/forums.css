@@ -20,10 +20,10 @@ input {
 }
 
 .forum_newtopic_box, .forum_formarea_box {
-	background-color: #2e2e2f;
-	border: 1px solid #373738;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 14px 11px 14px 11px;
 	margin-bottom: 8px;
+	margin-top: 25px;
 }
 
 .forum_newtopic_textcontrols {
@@ -88,7 +88,7 @@ textarea.forumtopic_reply_textarea {
 	outline: none;
 	color: #BFBFBF;
 	border: none;
-	background-color: #565658;
+	background-color: transparent;
 }
 
 .forum_newtopic_action {
@@ -107,7 +107,7 @@ textarea.forumtopic_reply_textarea {
 .forum_topic {
 	position: relative;
 	height: 48px;
-	background-color: #2f2f30;
+	background-color: rgba( 84, 133, 183, 0.2);
 	margin-bottom: 2px;
 	padding-right: 15px;
 	padding-left: 5px;
@@ -137,7 +137,7 @@ textarea.forumtopic_reply_textarea {
 
 .forum_topic.deleted {
 	background-image: none;
-	background-color: #242425;
+	background-color: rgba( 0, 0, 0, 0.2);
 }
 
 .forum_topic .forum_topic_label {
@@ -149,7 +149,7 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forum_topic.moved {
-	background-color: #29292a;
+	background-color: rgba( 0, 0, 0, 0.2);
 }
 
 .forum_topic.moved .forum_topic_name.op_hidden {
@@ -158,7 +158,7 @@ textarea.forumtopic_reply_textarea {
 
 
 .forum_topic:hover {
-	background-color: #3c3c3d;
+	background-color: rgba( 117, 204, 255, 0.3);
 }
 
 .forum_topic:hover .forum_topic_name {
@@ -182,7 +182,7 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forum_topic_details {
-	color: #969696;
+	color: #8F98A0;
 	line-height: 48px;
 }
 
@@ -223,9 +223,6 @@ textarea.forumtopic_reply_textarea {
 
 .forum_topic_mini {
 	height: auto;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_notification.png' );
-	background-repeat: repeat-x;
-	background-position: bottom center;
 	min-height: 30px;
 }
 
@@ -240,7 +237,7 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forum_topic_op {
-	color: #717171;
+	color: #61686D;
 	font-size: 11px;
 }
 
@@ -249,7 +246,7 @@ textarea.forumtopic_reply_textarea {
 	position: relative;
 	line-height: 25px;
 	height: 25px;
-	background-color: #1c1c1d;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
 	color: #747474;
 	padding: 0px 6px;
@@ -303,19 +300,22 @@ textarea.forumtopic_reply_textarea {
 	margin-bottom: 16px;
 }
 .breadcrumbs, .breadcrumbs a {
-	color: #838383;
-	font-size: 14px;
+	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+	color: #8f98a0;
+	font-size: 12px;
+}
+.breadcrumbs a:hover {
+	color: #ffffff;
+	text-decoration: none;
 }
 
 .forum_op {
 	position: relative;
 	padding: 7px 12px 21px 63px;
-	border: 1px solid #45484c;
-	border-radius: 3px;
 	margin-bottom: 8px;
 
-	background-color: #262627;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//skin_1/forum_op_gradient.png?v=2' );
+	background-color: #212f43;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//skin_1/forum_op_gradient.png?v=3' );
 	background-repeat: no-repeat;
 	background-position: top left;
 }
@@ -323,7 +323,7 @@ textarea.forumtopic_reply_textarea {
 .forum_op_avatar {
 	position: absolute;
 	left: 12px;
-	top: 7px;
+	top: 12px;
 }
 
 .forum_op .commentthread_comment_friendindicator {
@@ -395,10 +395,12 @@ textarea.forumtopic_reply_textarea {
 
 .forum_op .topic {
 	font-size: 30px;
+	font-family: "Motiva Sans Medium", Arial, Helvetica, sans-serif;
 	line-height: 36px;
 	color: #ffffff;
 
 	margin-bottom: 12px;
+	margin-top: 7px;
 
 	word-wrap: break-word;
 
@@ -436,9 +438,9 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forumtopic_comments .commentthread_comment {
-	background-color: #343435;
+	background-color: rgba( 80, 121, 173, 0.1);
 	color: #898989;
-	border: 1px solid #3d3d3e;
+	border: 1px solid rgba( 0, 0, 0, 0.4);
 	margin-bottom: 2px;
 	padding: 12px 8px 20px 60px;
 
@@ -452,7 +454,7 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forumtopic_comments .commentthread_comment.commentthread_deleted_comment, .forumtopic_comments .commentthread_comment.commentthread_deleted_expanded {
-	background-color: #2E2E2F;
+	background-color: rgba( 0, 0, 0, 0.1 );
 }
 
 .commentthread_deleted_comment_audit {
@@ -466,7 +468,7 @@ textarea.forumtopic_reply_textarea {
 
 .forumtopic_comments .commentthread_comment_text {
 	max-height: none;
-	color: #cccccc;
+	color: #acb2b8;
 
 	overflow: visible;
 	overflow-y: visible;
@@ -559,7 +561,7 @@ a.forum_comment_action {
 	width: 34px;
 	height: 28px;
 
-	background-color: #2b2b2c;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
 
 	margin-left: 2px;
@@ -577,7 +579,7 @@ a.forum_comment_action img {
 
 a.forum_comment_action:hover {
 	text-decoration: none;
-	background-color: #97c0e3;
+	background-color: rgba( 102, 192, 244, 0.4 );
 }
 
 .forum_comment_permlink {
@@ -820,7 +822,7 @@ a.forum_comment_action:hover {
 }
 
 .forum_audit a {
-	color: #747474;
+	color: #61686D;
 }
 
 .moderatorToolLink
@@ -837,13 +839,16 @@ a.forum_comment_action:hover {
 
 
 .forum_breadcrumbs, .forum_breadcrumbs a {
-	color: #9b9b9b;
+	color: #8f98a0;
+	font-size: 12px;
 	text-decoration: none;
+	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 	margin-bottom: 12px;
 }
 
 .forum_breadcrumbs a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	color: #ffffff;
 }
 
 
@@ -1027,7 +1032,7 @@ table.forum_auditlog tr.audit_row_secondary {
 }
 
 .rightcol_minor_text {
-	color: #676765;
+	color: #61686D;
 	font-size: 12px;
 }
 
@@ -1120,10 +1125,10 @@ table.forum_auditlog tr.audit_row_secondary {
 .forum_topic_tooltip {
 	padding: 8px 12px;
 	width: 281px;
-	border: 1px solid #82807c;
+	border: 1px solid #2D566B;
 
-	background-color: #3b3938;
-	color: #b0aeac;
+	background-color: #417A9B;
+	color: #C6D4DF;
 
 
 	margin: 12px;
@@ -1138,7 +1143,7 @@ table.forum_auditlog tr.audit_row_secondary {
 .topic_hover_row {
 	font-size: 12px;
 	margin-top: 4px;
-	color: #969696;
+	color: #8F98A0;
 }
 
 .topic_hover_row span.topic_hover_data {
@@ -1416,7 +1421,7 @@ select.subforum_select_control {
 }
 
 .rightbox_list_header, .rightbox_content_header {
-	color: #676765;
+	color: #61686D;
 	font-size: 12px;
 	margin-bottom: 12px;
 }
@@ -1436,8 +1441,8 @@ select.subforum_select_control {
 }
 
 .weblink a:hover {
-	text-decoration: underline;
-	color: #ffffff;
+	text-decoration: none;
+	color: #66C0F4;
 }
 
 .weblink img {

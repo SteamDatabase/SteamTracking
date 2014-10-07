@@ -1,10 +1,4 @@
 
-.discussions_page {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_background.png');
-	background-position: center 105px;
-	background-color: #262627;
-	background-repeat: no-repeat;
-}
 
 .discussions_page.in_client {
 	background-position: center top;
@@ -52,13 +46,13 @@
 .discussions_forum_row {
 	position: relative;
 	height: 67px;
-	background-color: #2f2f30;
+	background-color: rgba( 84, 133, 183, 0.2);
 	margin-bottom: 2px;
 	color: #858381;
 }
 
 .discussions_forum_row:hover {
-	background-color: #3c3c3d;
+	background-color: rgba( 117, 186, 255, 0.3);
 }
 
 .discussions_forum_row .discussions_forumlist_topiccount, .discussions_forum_row .discussions_forumlist_lastpost {
@@ -112,6 +106,7 @@
 
 .discussions_frame_header h1 {
 	color: #fffffa;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 26px;
 	margin: 0;
@@ -164,7 +159,7 @@
 	height: 45px;
 	line-height: 45px;
 	padding: 11px 9px;
-	background-color: #2f2f30;
+	background-color: rgba( 0, 0, 0, 0.4 );
 	margin-bottom: 2px;
 }
 
@@ -196,7 +191,7 @@
 .discussions_game_footer {
 	height: 28px;
 	line-height: 28px;
-	background-color: #2f2f30;
+	background-color: rgba( 0, 0, 0, 0.4 );
 	padding: 0px 10px;
 	font-size: 11px;
 	color: #e1e1e1;
@@ -231,8 +226,7 @@
 }
 
 .discussions_game_browseoption {
-	background-color: #303031;
-	border-radius: 3px;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	line-height: 32px;
 	padding-left: 12px;
 	float: left;
@@ -471,20 +465,19 @@ a.recent_game_discussion {
 	display: inline-block;
 	position: relative;
 	width: 296px;
-	height: 40px;
-	border-radius: 3px;
-	border-top: 1px solid #424242;
+	height: 36px;
 
 	padding: 3px;
 
 	margin-right: 16px;
 	margin-bottom: 16px;
 
-	background-color: #3f3f40;
-	background: -moz-linear-gradient(top, #39393a 5%, #454546 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#39393a), color-stop(95%,#454546));background: -webkit-linear-gradient(top, #39393a 5%,#454546 95%);background: -o-linear-gradient(top, #39393a 5%,#454546 95%);background: -ms-linear-gradient(top, #39393a 5%,#454546 95%);background: linear-gradient(to bottom, #39393a 5%,#454546 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39393a', endColorstr='#454546',GradientType=0 );}
+	background-color: rgba( 84, 133, 183, 0.2);
+}
 
 a.recent_game_discussion:hover {
-	background: -moz-linear-gradient(top, #454546 5%, #545454 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#454546), color-stop(95%,#545454));background: -webkit-linear-gradient(top, #454546 5%,#545454 95%);background: -o-linear-gradient(top, #454546 5%,#545454 95%);background: -ms-linear-gradient(top, #454546 5%,#545454 95%);background: linear-gradient(to bottom, #454546 5%,#545454 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#454546', endColorstr='#545454',GradientType=0 );}
+	background-color: rgba( 117, 186, 255, 0.3);
+}
 
 a.recent_game_discussion.last
 {
