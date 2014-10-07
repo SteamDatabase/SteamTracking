@@ -3,11 +3,20 @@
 .header_area {
     padding-top: 14px;
 }
+.curator_avatar_image
+{
+	width: 90px;
+	margin-right: 20px;
+	float: left;
+}
 .curator_avatar
 {
 	width: 90px;
+}
+.curator_details
+{
 	float: left;
-	margin-right: 20px;
+	width: 830px;
 }
 
 body.v6 h2.curator_name
@@ -58,6 +67,11 @@ body.v6 h2.curator_name
 	font-size: 11px;
 	color: #407899;
 	text-transform: uppercase;
+}
+.curator_external_link
+{
+	font-size: 12px;
+	padding-top: 10px;
 }
 
 /* highlighted recommendation */
@@ -124,6 +138,16 @@ body.v6 h2.curator_name
 }
 
 /* recommendations list */
+
+.recommendation_page
+{
+	padding: 5px;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 .recommendation
 {
 	background-color: rgba( 0, 0, 0, 0.2 );
@@ -257,6 +281,7 @@ body.v6 h2.curator_name
 	padding-top: 50px;
 	text-align: center;
 	font-size: 24px;
+	min-height: 1000px;
 }
 .Recommendations_paging
 {

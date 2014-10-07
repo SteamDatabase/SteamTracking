@@ -460,4 +460,11 @@ div.autocomplete ul li.selected {
 	float: none;
 	width: auto;
 	clear: both;
+	max-width: 100%;
+}
+.pcgamer .body p {
+	margin-bottom: 17px;
+}
+.pcgamer .body h3 {
+	padding-top: 17px;
 }

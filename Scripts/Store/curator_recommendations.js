@@ -91,6 +91,8 @@ function InitSearchFilters()
 		$J('.tab_filters').append( $Filter );
 		$J('.tab_filter_ctn').show( 'fast' );
 
+		$J( "#CuratorTotalRecommendations" ).hide();
+
 		fnOnFilterChange();
 	};
 
@@ -108,7 +110,10 @@ function InitSearchFilters()
 
 		$Filter.remove();
 		if ( !$J('.tab_filters').children().length )
+		{
 			$J('.tab_filter_ctn').hide( 'fast' );
+			$J( "#CuratorTotalRecommendations" ).show();
+		}
 
 		fnOnFilterChange();
 	};

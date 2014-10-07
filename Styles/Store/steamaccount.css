@@ -26,12 +26,17 @@
 	right: 0;
 }
 
+
 .block .block_header {
-	background: #2a3f5a;
-	padding: 4px 4px 4px 6px;
-	color: #8f98a0;
-	font-size: 12px;
-	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	color: #67c1f5;
+	background: transparent;
+	padding: 0px 0px 4px 0px;
+}
+.block.subscriptions {
+	margin-bottom: 20px;
 }
 
 .block_content {
@@ -46,8 +51,19 @@
 	overflow: hidden;
 }
 
+.block.accountInfoBlock {
+	margin-bottom: 20px;
+}
+
 .accountInfoBlock .addfunds_accountBalance {
 	margin-bottom: 0px;
+}
+
+.accountInfoBlock .block_content {
+	border: none;
+	border-radius: 0px;
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 16px;
 }
 
 .addfunds_about {
@@ -73,7 +89,7 @@
 	margin-top: 8px;
 }
 
-.rule {
+.rule, .inner_rule {
 	border-top: 1px solid #3C3D3E;
 	margin: 5px 0px 10px;
 }
