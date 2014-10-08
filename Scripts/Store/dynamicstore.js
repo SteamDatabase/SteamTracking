@@ -1,4 +1,30 @@
 
+function GetElemSNR( $Elem )
+{
+	var snr = $Elem.data( 'snr' );
+	if ( typeof snr != 'undefined' )
+	{
+		return snr;
+	}
+
+	// look for links with snr parameter
+	var links = $Elem.is( 'a' ) ? $Elem : $Elem.find( 'a' );
+	snr = null;
+	for ( var i = 0; i < links.length; ++i )
+	{
+		var link = links[i];
+		var navinfo = link.href.match( /[\?&]snr=([^&#]*)(&|$|#)/ );
+		if ( navinfo )
+		{
+			snr = navinfo[1];
+			break;
+		}
+	}
+	
+	$Elem.data( 'snr', snr );
+	return snr;
+}
+
 GDynamicStore = {
 
 	m_bLoadComplete: false,
@@ -103,24 +129,11 @@ GDynamicStore = {
 				return;
 			}
 
-			// look for links with snr parameter
-			var links = $Elem.is( 'a' ) ? $Elem : $Elem.find( 'a' );
-			var snr = null;
-			for ( var i = 0; i < links.length; ++i )
-			{
-				var link = links[i];
-				var navinfo = link.href.match( /[\?&]snr=([^&#]*)(&|$|#)/ );
-				if ( navinfo )
-				{
-					snr = navinfo[1];
-					break;
-				}
-			}
+			var snr = GetElemSNR( $Elem );
 			if ( !snr )
 			{
 				return;
 			}
-			$Elem.data( 'snr', snr );
 
 			// these are handled manually, so don't add the impression here
 			if ( $Elem.hasClass( 'cluster_capsule' ) || $Elem.hasClass( 'carousel_cap') )
@@ -156,8 +169,13 @@ GDynamicStore = {
 		{
 			strAppIDs.replace(/,/g , ":");
 		}
+		var snr = GetElemSNR( $Elem );
+		if ( !snr )
+		{
+			return;
+		}
 
-		var strImpressionData = strAppIDs + '@' + $Elem.data( 'snr' );
+		var strImpressionData = strAppIDs + '@' + snr;
 		rgImpressions.push( strImpressionData );
 
 		V_SetCookie( "app_impressions", rgImpressions.join( '|' ) );
