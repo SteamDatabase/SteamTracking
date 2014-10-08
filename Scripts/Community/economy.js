@@ -2390,6 +2390,10 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 			var elImage = new Element( 'img', {src: description.value } );
 			elDescription.appendChild( elImage );
 		}
+		else if ( description.type == 'html' )
+		{
+			elDescription.update( description.value );
+		}
 		else
 		{
 			description.value = description.value.replace(/\[date\](\d*)\[\/date\]/g, function( match, p1 ) {
@@ -2397,7 +2401,7 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 				return date.toLocaleString();
 			});
 
-			elDescription.update( description.value.replace( /\n/g, '<br>' ) );
+			elDescription.update( description.value.escapeHTML().replace( /\n/g, '<br>' ) );
 		}
 
 		if ( description.label )
