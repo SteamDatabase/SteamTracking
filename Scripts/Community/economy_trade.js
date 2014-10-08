@@ -1307,13 +1307,13 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 				if ( nNumBadItems == 1 )
 				{
 					strEvent = 'You are not allowed to receive the item "%1$s."'
-							.replace( '%1$s', item.name );
+							.replace( '%1$s', item.name.escapeHTML() );
 				}
 				else
 				{
 					strEvent = 'You are not allowed to receive %1$s of the items being offered including "%2$s."'
 							.replace( '%1$s', nNumBadItems )
-							.replace( '%2$s', item.name );
+							.replace( '%2$s', item.name.escapeHTML() );
 				}
 			}
 			else
@@ -1408,7 +1408,7 @@ function UpdateEventLog( events )
 				break;
 			}
 
-			var itemname = ( item ) ? item.name : 'Unknown Item';
+			var itemname = ( item ) ? item.name.escapeHTML() : 'Unknown Item';
 			var itemstyle = ( item && item.name_color ) ? 'color: #' + item.name_color + ';' : '';
 
 			strEvent = template.evaluate( { theirname: g_strTradePartnerPersonaName, itemname: itemname, itemstyle: itemstyle } );
@@ -1458,7 +1458,7 @@ function UpdateEventLog( events )
 				break;
 			}
 
-			var currencyname = ( currency ) ? currency.name : 'Unknown Item';
+			var currencyname = ( currency ) ? currency.name.escapeHTML() : 'Unknown Item';
 
 			var formatFunc;
 			if ( CurrencyIsWalletFunds( currency ) )
@@ -1506,15 +1506,15 @@ function UpdateEventLog( events )
 						// return "OurCurrency / TheirCurrency";
 						if ( g_rgWalletInfo['wallet_other_currency'] == ( currency.id % 1000 ) )
 						{
-							return v_currencyformat( ConvertToOurCurrencyForDisplay( nPostFeeAmount ), GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) + ' / ' + v_currencyformat( nPostFeeAmount, currency.name );
+							return v_currencyformat( ConvertToOurCurrencyForDisplay( nPostFeeAmount ), GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) + ' / ' + v_currencyformat( nPostFeeAmount, currency.name.escapeHTML() );
 						}
 						else if ( g_rgWalletInfo['wallet_currency'] == ( currency.id % 1000 ) )
 						{
-							return v_currencyformat( nPostFeeAmount, currency.name ) + ' / ' + v_currencyformat( ConvertToTheirCurrency( nPostFeeAmount ), GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) );
+							return v_currencyformat( nPostFeeAmount, currency.name.escapeHTML() ) + ' / ' + v_currencyformat( ConvertToTheirCurrency( nPostFeeAmount ), GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) );
 						}
 					}
 
-					return v_currencyformat( nPostFeeAmount, currency.name );
+					return v_currencyformat( nPostFeeAmount, currency.name.escapeHTML() );
 				};
 			}
 			else
@@ -1629,7 +1629,7 @@ function ToggleReady( bReady )
 				var rgItem = UserThem.findAsset( rgAssets[i].appid, rgAssets[i].contextid, rgAssets[i].assetid );
 				strWarning += '<li' + ( rgItem && rgItem.name_color ? ' style="color: #' + rgItem.name_color + ';"' : '' ) + '>';
 				if ( rgItem )
-					strWarning += rgItem.name + ' <span class="trade_warning_item_type">(' + rgItem.type + ')</span>';
+					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type + ')</span>';
 				else
 					strWarning += 'Unknown Item';
 				// afarnsworthTODO: fraud warnings!
@@ -1808,12 +1808,12 @@ function UpdateCurrencyDisplay( currency )
 			
 			var strAmount = ( currency.owner != UserYou && bShouldConvert ?
 					v_currencyformat( ConvertToOurCurrencyForDisplay( currency.amount ), GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) :
-					v_currencyformat( currency.amount, currency.name ) );
+					v_currencyformat( currency.amount, currency.name.escapeHTML() ) );
 
 			// Display the fee in small text underneath if applicable
 			if ( currency.fee > 0 && currency.owner == UserYou )
 			{
-				strAmount += "<div style=\"font-size: xx-small\">" + v_currencyformat( currency.fee, currency.name ) + "</div>";
+				strAmount += "<div style=\"font-size: xx-small\">" + v_currencyformat( currency.fee, currency.name.escapeHTML() ) + "</div>";
 			}
 			elAmount.update( strAmount );
 		}
@@ -1878,12 +1878,12 @@ CurrencyDialog = {
 
 		if ( !this.m_bIsWallet )
 		{
-			$('trade_currency_dialog_currencyname1').update( currency.name );
-			$('trade_currency_dialog_currencyname2').update( currency.name );
+			$('trade_currency_dialog_currencyname1').update( currency.name.escapeHTML() );
+			$('trade_currency_dialog_currencyname2').update( currency.name.escapeHTML() );
 		}
 
 		var rgContext = UserYou.GetContext( currency.appid, currency.contextid );
-		$('trade_currency_dialog_contextname').update( rgContext ? rgContext.name : '' );
+		$('trade_currency_dialog_contextname').update( rgContext ? rgContext.name.escapeHTML() : '' );
 
 		var amount = stack && stack.amount > 0 ? stack.amount : 1;
 
@@ -1929,14 +1929,14 @@ CurrencyDialog = {
 			if ( inputValue > 0 )
 			{
 				var feeInfo = CalculateAmountToSendForDesiredReceivedAmount( nAmount );
-				$('trade_currency_fee_amount_dollars').update( v_currencyformat( feeInfo.fees, this.m_currency.name ) );
+				$('trade_currency_fee_amount_dollars').update( v_currencyformat( feeInfo.fees, this.m_currency.name.escapeHTML() ) );
 			}
 			else
 			{
-				$('trade_currency_fee_amount_dollars').update( v_currencyformat( 0, this.m_currency.name ) );
+				$('trade_currency_fee_amount_dollars').update( v_currencyformat( 0, this.m_currency.name.escapeHTML() ) );
 			}
 			
-			$('trade_currency_fee_total_dollars').update( v_currencyformat( nAmount, this.m_currency.name ) );
+			$('trade_currency_fee_total_dollars').update( v_currencyformat( nAmount, this.m_currency.name.escapeHTML() ) );
 		}
 
 		var nDisplayAmount = this.m_currency.original_amount;
@@ -1945,7 +1945,7 @@ CurrencyDialog = {
 
 		if ( this.m_bIsWallet )
 		{
-			$('trade_currency_dialog_remaining_display').update( v_currencyformat( nDisplayAmount, this.m_currency.name ) );
+			$('trade_currency_dialog_remaining_display').update( v_currencyformat( nDisplayAmount, this.m_currency.name.escapeHTML() ) );
 		}
 		else
 		{
@@ -1954,7 +1954,7 @@ CurrencyDialog = {
 	},
 
 	DisplayError: function( error ) {
-		$('trade_currency_dialog_error').update( error );
+		$('trade_currency_dialog_error').update( error.escapeHTML() );
 		$('trade_currency_dialog_error').style.color = '#ffffff';
 		new Effect.Morph( $('trade_currency_dialog_error'), { style: {color: '#ff0000'}, duration: 0.25 } );
 	},
@@ -1976,7 +1976,7 @@ CurrencyDialog = {
 		if ( this.m_bIsWallet )
 		{
 			// strip the currency symbol, set commas to periods, set .-- to .00
-			strAmount = strAmount.replace( GetCurrencySymbol( this.m_currency.name ), '' ).replace( ',', '.' ).replace( '.--', '.00');
+			strAmount = strAmount.replace( GetCurrencySymbol( this.m_currency.name.escapeHTML() ), '' ).replace( ',', '.' ).replace( '.--', '.00');
 
 			var flAmount = parseFloat( strAmount ) * 100;
 			nAmount = Math.round( isNaN(flAmount) ? 0 : flAmount );
@@ -1992,7 +1992,7 @@ CurrencyDialog = {
 
 	OnAccept: function( event ) {
 
-		var inputValue = (this.m_bIsWallet ? $('trade_currency_input').value.replace( GetCurrencySymbol( this.m_currency.name ), '' ).replace( ',', '.' ).replace( '.--', '.00') : $('trade_currency_input').value );
+		var inputValue = (this.m_bIsWallet ? $('trade_currency_input').value.replace( GetCurrencySymbol( this.m_currency.name.escapeHTML() ), '' ).replace( ',', '.' ).replace( '.--', '.00') : $('trade_currency_input').value );
 		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
 		{
 			this.DisplayError( 'Please enter a valid amount above.' );
@@ -2059,14 +2059,14 @@ CurrencyDialog = {
 		this.m_elSliderProgress.style.width = this.m_slider.handles[0].style.left;
 
 		this.m_elSliderCount.style.left = ( parseInt( this.m_slider.handles[0].style.left ) - 40 ) + 'px';
-		this.m_elSliderCount.update( strValue );
+		this.m_elSliderCount.update( strValue.escapeHTML() );
 	},
 
 	SetInputValuesFromSlider: function( value )
 	{
 		var flooredValue = Math.floor( value );
 		var strValue = ( this.m_bIsWallet ? v_currencyformat( flooredValue, this.m_currency.name ) : v_numberformat( flooredValue ) );
-		$('trade_currency_input').value = strValue;
+		$('trade_currency_input').value = strValue.escapeHTML();
 		this.UpdateRemainingCurrencyDisplay();
 	},
 
@@ -2204,7 +2204,7 @@ CurrencyConversionDialog = {
 		$('trade_currency_dialog_conversion_currencyname1').style.color = currency.name_color ? '#' + currency.name_color : '';
 		$('trade_currency_dialog_conversion_currencyname2').style.color = currency.name_color ? '#' + currency.name_color : '';
 		
-		$('trade_currency_dialog_conversion_currencyname1').update( currency.name );
+		$('trade_currency_dialog_conversion_currencyname1').update( currency.name.escapeHTML() );
 		$('trade_currency_dialog_conversion_username1').update( g_strTradePartnerPersonaName );
 		$('trade_currency_dialog_conversion_currencyname2').update( GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) );
 		$('trade_currency_dialog_conversion_username2').update( g_strTradePartnerPersonaName );
@@ -2242,21 +2242,21 @@ CurrencyConversionDialog = {
 			if ( inputValue > 0 )
 			{
 				var feeInfo = CalculateAmountToSendForDesiredReceivedAmount( nAmount );
-				$('trade_currency_conversion_fee_amount_dollars').update( v_currencyformat( feeInfo.fees, this.m_currency.name ) );
+				$('trade_currency_conversion_fee_amount_dollars').update( v_currencyformat( feeInfo.fees, this.m_currency.name.escapeHTML() ) );
 			}
 			else
 			{
-				$('trade_currency_conversion_fee_amount_dollars').update( v_currencyformat( 0, this.m_currency.name ) );
+				$('trade_currency_conversion_fee_amount_dollars').update( v_currencyformat( 0, this.m_currency.name.escapeHTML() ) );
 			}
 
-			$('trade_currency_conversion_fee_total_dollars').update( v_currencyformat( nAmount, this.m_currency.name ) );
+			$('trade_currency_conversion_fee_total_dollars').update( v_currencyformat( nAmount, this.m_currency.name.escapeHTML() ) );
 		}
 
 		var nDisplayAmount = this.m_currency.original_amount;
 		if ( nAmount <= this.m_currency.original_amount )
 			nDisplayAmount = this.m_currency.original_amount - nAmount;
 
-		$('trade_currency_dialog_conversion_remaining_display').update( v_currencyformat( nDisplayAmount, this.m_currency.name ) );
+		$('trade_currency_dialog_conversion_remaining_display').update( v_currencyformat( nDisplayAmount, this.m_currency.name.escapeHTML() ) );
 	},
 
 	DisplayError: function( error ) {
@@ -2309,7 +2309,7 @@ CurrencyConversionDialog = {
 			strWarning = 'Due to currency conversion, you cannot send %1$s to %2$s. The amount being sent has been changed to %3$s and %4$s will receive %5$s.'
 					.replace( '%1$s', v_currencyformat( theirInputValueAsInt, GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ) )
 					.replace( '%2$s', g_strTradePartnerPersonaName )
-					.replace( '%3$s', v_currencyformat( xferAmount, this.m_currency.name ) )
+					.replace( '%3$s', v_currencyformat( xferAmount, this.m_currency.name.escapeHTML() ) )
 					.replace( '%4$s', g_strTradePartnerPersonaName )
 					.replace( '%5$s', v_currencyformat( ConvertToTheirCurrency( xferAmount ), GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ) );
 		}
@@ -2321,7 +2321,7 @@ CurrencyConversionDialog = {
 		if ( bHadWarning && g_rgWalletInfo['wallet_fee'] )
 		{
 			strWarning += ' After the transaction fee, you will be charged %1$s.'
-					.replace( '%1$s', v_currencyformat( xferAmount, this.m_currency.name ) );
+					.replace( '%1$s', v_currencyformat( xferAmount, this.m_currency.name.escapeHTML() ) );
 		}
 
 		if ( xferAmount > this.m_currency.original_amount )
@@ -2380,7 +2380,7 @@ CurrencyConversionDialog = {
 		strAmount = strAmount.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ), '' ).replace( ',', '.' ).replace( '.--', '.00');
 
 		var nAmount = ConvertToOurCurrency( Math.floor( parseFloat( strAmount ) * 100 ) );
-		$('trade_currency_conversion_input_you').value = v_currencyformat( nAmount, this.m_currency.name );
+		$('trade_currency_conversion_input_you').value = v_currencyformat( nAmount, this.m_currency.name.escapeHTML() );
 
 		this.m_bIgnoreConversion = true;
 		this.OnInputKeyUp( event );
@@ -2395,7 +2395,7 @@ CurrencyConversionDialog = {
 		this.m_elSliderProgress.style.width = this.m_slider.handles[0].style.left;
 
 		this.m_elSliderCount.style.left = ( parseInt( this.m_slider.handles[0].style.left ) - 40 ) + 'px';
-		this.m_elSliderCount.update( strValue );
+		this.m_elSliderCount.update( strValue.escapeHTML() );
 
 		if ( !this.m_bIgnoreConversion )
 		{
@@ -2408,7 +2408,7 @@ CurrencyConversionDialog = {
 	{
 		var flooredValue = Math.floor( value );
 		var strValue = v_currencyformat( flooredValue, this.m_currency.name );
-		$('trade_currency_conversion_input_you').value = strValue;
+		$('trade_currency_conversion_input_you').value = strValue.escapeHTML();
 		this.UpdateRemainingCurrencyDisplay();
 	},
 
@@ -2525,13 +2525,13 @@ function UpdateTradeItemStackDisplay( item, stack, amount )
 				stack.descriptions = [
 					{
 						value: '+%1$s Steam transaction fee (%2$s%%)'
-							.replace( '%1$s', v_currencyformat( stack.fee, stack.name ) )
+							.replace( '%1$s', v_currencyformat( stack.fee, stack.name.escapeHTML() ) )
 							.replace( '%2$s', (g_rgWalletInfo['wallet_fee_percent'] * 100).toFixed(1) )
 							.replace( '%%', '%' )
 					},
 					{
 						value: '%1$s Total cost to you'
-							.replace( '%1$s', v_currencyformat( stack.amount, stack.name ) )
+							.replace( '%1$s', v_currencyformat( stack.amount, stack.name.escapeHTML() ) )
 					}
 				];
 

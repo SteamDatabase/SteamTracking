@@ -728,7 +728,7 @@ function PositionEmoticonHover( $Hover, $Target )
 }
 
 
-function InitEconomyHovers( strEconomyCSSURL, strEconomyJSURL )
+function InitEconomyHovers( strEconomyCSSURL, strEconomyCommonJSURL, strEconomyJSURL )
 {
 	var $Hover = $J('<div/>', {'class': 'economyitem_hover'} );
 	var $HoverContent = $J('<div/>', {'class': 'economyitem_hover_content'} );
@@ -744,12 +744,16 @@ function InitEconomyHovers( strEconomyCSSURL, strEconomyJSURL )
 			css.setAttribute( "rel", "stylesheet" );
 			css.setAttribute( "type", "text/css" );
 			css.setAttribute( "href", strEconomyCSSURL );
-			var js = document.createElement( "script" );
-			js.setAttribute( "type", "text/javascript" );
-			js.setAttribute( "src", strEconomyJSURL );
+			var js1 = document.createElement( "script" );
+			js1.setAttribute( "type", "text/javascript" );
+			js1.setAttribute( "src", strEconomyCommonJSURL );
+			var js2 = document.createElement( "script" );
+			js2.setAttribute( "type", "text/javascript" );
+			js2.setAttribute( "src", strEconomyJSURL );
 			var head = $J('head')[0];
 			head.appendChild( css );
-			head.appendChild( js );
+			head.appendChild( js1 );
+			head.appendChild( js2 );
 		}
 	};
 
