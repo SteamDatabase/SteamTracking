@@ -78,7 +78,7 @@ Steam = {
 			$A.attr( 'href', 'steam://openurl_external/' + $A.attr('href') );
 		else
 			$A.attr( 'target', '_blank' );
-	},
+	}
 }
 
 function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButton, strSecondaryActionButton )
