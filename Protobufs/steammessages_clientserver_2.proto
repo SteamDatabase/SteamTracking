@@ -609,6 +609,7 @@ message CMsgClientEmailChange {
 	optional string code = 3;
 	optional bool final = 4;
 	optional bool newmethod = 5;
+	optional string twofactor_code = 6;
 }
 
 message CMsgClientEmailChangeResponse {

@@ -21,6 +21,16 @@
 			</TextEntry>
 		</Panel>
 
+		<Panel id="TwoFactorCodeContainer" class="InputContainerDown GapDown" visible="0">
+			<Label class="WizardLabel" text="#ChangeEmail_ConfCode_EnterTwoFactorCode" />
+			<TextEntry class="WizardTextEntry" id="ConfCodeTwoFactorCodeTextEntry"
+					textinputid="InnerConfCodeTwoFactorCodeTextEntry"
+					textinputdoneactionstring="#ButtonNext"
+					textinputhidesuggestions="1"
+					textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+			</TextEntry>
+		</Panel>
+
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="Label" text="#WizardButton_Next" />

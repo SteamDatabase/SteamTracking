@@ -30,6 +30,20 @@
 			command="Forward"
 		}
 
+		"refresh"
+		{
+			"ControlName"		"Button"
+			command="Refresh"
+			style="ReloadButton"
+			group="Refresh"
+		}
+		"Stop"
+		{
+			"ControlName"		"Button"
+			command="Stop"
+			style="StopButton"
+			group="stop"
+		}
 
 		"label_store"
 		{
@@ -843,12 +857,12 @@
 
 		place { control="subnavgroup_library" align=top-center y=50 height=28 width=max margin-right=-2 margin-left=8 }
 		
-		place { control="URLStatusImage,EVCert,URLBar" align=left y=54 height=20 width=max spacing=5 margin-left=7 }
+		place { control="refresh,stop,URLStatusImage,EVCert,URLBar" align=left y=54 height=20 width=max spacing=1 margin-left=9 }
  	
 		place { control="library_search"  width=112 }	
 
-		place [!$OSX] { control="label_search_icon,library_search" align=left y=56 height=17 spacing=1 x=13 }
-		place  [$OSX] { control="label_search_icon,library_search" align=left y=56 height=17 spacing=1 x=12 }
+		place [!$OSX] { control="label_search_icon,library_search" align=left y=56 height=17 spacing=1 x=12 }
+		place  [$OSX] { control="label_search_icon,library_search" align=left y=56 height=17 spacing=1 x=11 }
 		
 		region { name="dropdown" width=200 x=82 y=55 height=20 }
 		
