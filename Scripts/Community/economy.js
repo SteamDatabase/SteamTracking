@@ -2238,7 +2238,7 @@ function BuildHover( prefix, item, owner )
 	$(prefix+'_item_icon').alt = item.name;
 
 	var strName = GetNameForItem( item );
-	$(prefix+'_item_name').update( strName );
+	$(prefix+'_item_name').update( strName.escapeHTML() );
 
 	var elArrowLeft = $(prefix+'_arrow_left');
 	var elArrowRight = $(prefix+'_arrow_right');
@@ -2643,7 +2643,7 @@ SellItemDialog = {
 	m_nConfirmedPrice: 0,
 	m_nConfirmedQuantity: 0,
 	m_item: null,
-	m_strName: '',
+	m_strEscapedName: '',
 	m_fnDocumentKeyHandler: null,
 
 	m_plotPriceHistory: null,
@@ -2725,8 +2725,8 @@ SellItemDialog = {
 		else
 			elItemImage.src = ImageURL( item.icon_url, '96f', '96f' );
 
-		this.m_strName = GetNameForItem( item );
-		$('market_sell_dialog_item_name').update( this.m_strName );
+		this.m_strEscapedName = GetNameForItem( item ).escapeHTML();
+		$('market_sell_dialog_item_name').update( this.m_strEscapedName );
 		$('market_sell_quantity_available_amt').update( item.amount );
 
 		if ( item.name_color )
@@ -3052,7 +3052,7 @@ SellItemDialog = {
 		if ( transport.responseJSON )
 		{
 			this.Dismiss();
-			$('market_headertip_itemsold_itemname').update( this.m_strName );
+			$('market_headertip_itemsold_itemname').update( this.m_strEscapedName );
 			if ( this.m_item.name_color )
 			{
 				$('market_headertip_itemsold_itemname').style.color = '#' + this.m_item.name_color;
