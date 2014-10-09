@@ -1620,3 +1620,9 @@ function Logout()
 	$Form.submit();
 }
 
+function AgeGateClear()
+{
+	WebStorage.SetCookie('birthtime', 0, -1);
+	window.location.reload();
+}
+
