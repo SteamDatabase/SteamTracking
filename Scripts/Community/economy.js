@@ -118,7 +118,7 @@ function ReadInventoryCookie( cookie )
 		{
 			var oCookieParams = {};
 			oCookieParams.appid = parseInt( rgCookieElements[0] );
-			oCookieParams.contextid = parseInt( rgCookieElements[1] );
+			oCookieParams.contextid = rgCookieElements[1];
 			if ( BValidateHashParams( oCookieParams ) )
 				return oCookieParams;
 			else if ( g_rgAppContextData[ oCookieParams.appid ] )
@@ -144,6 +144,12 @@ function ReadInventoryCookie( cookie )
 
 function BValidateHashParams( oHashParams )
 {
+	// Context ID is a 64-bit value that can contain only digits
+	if ( oHashParams && !/^\d+$/.test( oHashParams.contextid ) )
+	{
+		return false;
+	}
+
 	if ( oHashParams && oHashParams.appid && g_rgAppContextData[oHashParams.appid] )
 	{
 		if ( oHashParams.contextid && !g_rgAppContextData[oHashParams.appid].rgContexts[oHashParams.contextid] )
