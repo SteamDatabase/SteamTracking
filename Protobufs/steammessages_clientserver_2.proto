@@ -1337,3 +1337,17 @@ message CMsgClientCreateAccountResponse {
 	optional fixed64 steamid = 2;
 }
 
+message CMsgClientVoiceCallPreAuthorize {
+	optional fixed64 caller_steamid = 1;
+	optional fixed64 receiver_steamid = 2;
+	optional int32 caller_id = 3;
+	optional bool hangup = 4;
+}
+
+message CMsgClientVoiceCallPreAuthorizeResponse {
+	optional fixed64 caller_steamid = 1;
+	optional fixed64 receiver_steamid = 2;
+	optional int32 eresult = 3 [default = 2];
+	optional int32 caller_id = 4;
+}
+
