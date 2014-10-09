@@ -421,7 +421,7 @@ function GetCurrencySymbol( currencyCode )
 		case 'MXN':
 			return 'Mex$';
 		case 'CAD':
-			return 'C$';
+			return 'CDN$';
 		case 'AUD':
 			return 'A$';
 		case 'NZD':			
