@@ -642,7 +642,7 @@ BuyItemDialog = {
 			oItemActionMenuButton.id = oItemActionMenuButton.id + 'Copy';
 			$(oItemActionMenuButton).observe( 'click', function() {
 				var rgAsset = g_rgListingInfo[listingid].asset;
-				HandleMarketActionMenu( oItemActionMenuButton, g_rgAssets[rgAsset.appid][rgAsset.contextid][rgAsset.id] );
+				HandleMarketActionMenu( oItemActionMenuButton, g_rgAssets[rgAsset.appid][rgAsset.contextid][rgAsset.id], listingid );
 
 				return false;
 			} );
