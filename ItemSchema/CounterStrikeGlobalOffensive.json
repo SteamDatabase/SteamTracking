@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.c7f258b7fe5ddb5c079e18b148b9b8262d7bd520.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.427ae2da0ca486d62508b1492b5292ec1f206390.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1048,6 +1048,25 @@
 				"capabilities": {
 					"nameable": true
 				}
+			},
+			{
+				"name": "musickit_default",
+				"defindex": 58,
+				"item_class": "collectible_item",
+				"item_type_name": "Music Kit",
+				"item_name": "Music Kit",
+				"item_description": "This Music Kit will replace all of the music in the game and is shareable with anyone you are playing with. It also includes an MVP Anthem that plays for everyone in the match when you are MVP.\n\nThe Music Kit replaces the following music:\n- Main Menu\n- Round Start and End\n- Map Objective\n- Ten Second Warning\n- Death Camera",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "weapon_knife_t",
@@ -3599,6 +3618,21 @@
 				}
 			},
 			{
+				"name": "musickit",
+				"defindex": 1314,
+				"item_class": "collectible_item",
+				"item_type_name": "Music Kit",
+				"item_name": "Music Kit",
+				"item_description": "This Music Kit will replace all of the music in the game and is shareable with anyone you are playing with. It also includes an MVP Anthem that plays for everyone in the match when you are MVP.\n\nThe Music Kit replaces the following music:\n- Main Menu\n- Round Start and End\n- Map Objective\n- Ten Second Warning\n- Death Camera",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": ""
+			},
+			{
 				"name": "crate_valve_1",
 				"defindex": 4001,
 				"item_class": "supply_crate",
@@ -4776,10 +4810,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/bossyburger",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/bossyburger.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -4809,10 +4843,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/catcall",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/catcall.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -4842,10 +4876,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/chickenstrike",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/chickenstrike.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -4875,10 +4909,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/ctbanana",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/ctbanana.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -4908,10 +4942,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/dontworryimpro",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/dontworryimpro.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -4941,10 +4975,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/fightlikeagirl",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/fightlikeagirl.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -4974,10 +5008,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/handmadeflash",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/handmadeflash.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5007,10 +5041,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/kawaiikiller",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/kawaiikiller.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5040,10 +5074,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/neluthebear",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/neluthebear.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5073,10 +5107,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/oneshotonekill",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/oneshotonekill.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5106,10 +5140,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/shootingstar",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/shootingstar.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5139,10 +5173,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/warpenguin",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/warpenguin.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5172,10 +5206,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/windywalking",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/windywalking.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5205,10 +5239,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/blitzkrieg",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/blitzkrieg.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5238,10 +5272,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/pigeonmaster",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/pigeonmaster.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5271,10 +5305,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/terrorized",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/terrorized.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5304,10 +5338,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/tilldeathdouspart",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/tilldeathdouspart.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5337,10 +5371,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/stayfrosty",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/stayfrosty.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5370,10 +5404,10 @@
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
-				"image_inventory": "econ/coupon/toncat",
+				"image_inventory": "econ/coupon/offer",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/toncat.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -5381,6 +5415,303 @@
 				"tool": {
 					"type": "supply_crate",
 					"restriction": "coupon_toncat",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - danielsadowski_01",
+				"defindex": 10020,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_danielsadowski_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - noisia_01",
+				"defindex": 10021,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_noisia_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - robertallaire_01",
+				"defindex": 10022,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_robertallaire_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - seanmurray_01",
+				"defindex": 10023,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_seanmurray_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - feedme_01",
+				"defindex": 10024,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_feedme_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - dren_01",
+				"defindex": 10025,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_dren_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - austinwintory_01",
+				"defindex": 10026,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_austinwintory_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - sasha_01",
+				"defindex": 10027,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_sasha_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - skog_01",
+				"defindex": 10028,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_skog_01",
 					"usage_capabilities": {
 						"usable_out_of_game": true
 					}
@@ -5935,6 +6266,267 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "coupon_toncat",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - danielsadowski_01",
+				"defindex": 20020,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Daniel Sadowski, Crimson Assault",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_danielsadowski_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - noisia_01",
+				"defindex": 20021,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Noisia, Sharpened",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_noisia_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - robertallaire_01",
+				"defindex": 20022,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Robert Allaire, Insurgency",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_robertallaire_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - seanmurray_01",
+				"defindex": 20023,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Sean Murray, A*D*8",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_seanmurray_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - feedme_01",
+				"defindex": 20024,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Feed Me, High Noon",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_feedme_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - dren_01",
+				"defindex": 20025,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Dren, Death's Head Demolition",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_dren_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - austinwintory_01",
+				"defindex": 20026,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Austin Wintory, Desert Fire",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_austinwintory_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - sasha_01",
+				"defindex": 20027,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Sasha, LNOE",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_sasha_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - skog_01",
+				"defindex": 20028,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Skog, Metal",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_skog_01",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -7087,6 +7679,14 @@
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
+			},
+			{
+				"name": "music id",
+				"defindex": 166,
+				"attribute_class": "music_id",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
 			},
 			{
 				"name": "quests complete",

@@ -6797,6 +6797,27 @@
 				"can_delete"		"1"
 			}
 		}
+		"musickit_prefab"
+		{
+			"item_class"		"collectible_item"
+			"item_type_name"		"#CSGO_Type_MusicKit"
+			"item_name"		"#CSGO_Type_MusicKit"
+			"item_description"		"#CSGO_MusicKit_Desc"
+			"item_slot"		"musickit"
+			"item_sub_position"		"musickit"
+			"item_rarity"		"rare"
+			"item_quality"		"unique"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"mouse_pressed_sound"		"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+			"used_by_classes"
+			{
+				"noteam"		"1"
+			}
+		}
 		"bundle_base"
 		{
 			"item_class"		"bundle"
@@ -10506,6 +10527,20 @@
 				}
 			}
 		}
+		"58"
+		{
+			"name"		"musickit_default"
+			"prefab"		"musickit_prefab"
+			"item_name"		"#CSGO_Type_MusicKit"
+			"item_description"		"#CSGO_MusicKit_Desc"
+			"item_quality"		"normal"
+			"baseitem"		"1"
+			"default_slot_item"		"1"
+			"attributes"
+			{
+				"music id"		"1"
+			}
+		}
 		"59"
 		{
 			"name"		"weapon_knife_t"
@@ -11955,6 +11990,11 @@
 				"restriction"		"community_case_4"
 			}
 		}
+		"1314"
+		{
+			"name"		"musickit"
+			"prefab"		"musickit_prefab"
+		}
 		"4001"
 		{
 			"item_name"		"#CSGO_crate_valve_1"
@@ -12883,7 +12923,7 @@
 			"name"		"coupon - bossyburger"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/bossyburger"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - bossyburger"
 			"tool"
@@ -12909,7 +12949,7 @@
 			"name"		"coupon - catcall"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/catcall"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - catcall"
 			"tool"
@@ -12935,7 +12975,7 @@
 			"name"		"coupon - chickenstrike"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/chickenstrike"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - chickenstrike"
 			"tool"
@@ -12961,7 +13001,7 @@
 			"name"		"coupon - ctbanana"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/ctbanana"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - ctbanana"
 			"tool"
@@ -12987,7 +13027,7 @@
 			"name"		"coupon - dontworryimpro"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/dontworryimpro"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - dontworryimpro"
 			"tool"
@@ -13013,7 +13053,7 @@
 			"name"		"coupon - fightlikeagirl"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/fightlikeagirl"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - fightlikeagirl"
 			"tool"
@@ -13039,7 +13079,7 @@
 			"name"		"coupon - handmadeflash"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/handmadeflash"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - handmadeflash"
 			"tool"
@@ -13065,7 +13105,7 @@
 			"name"		"coupon - kawaiikiller"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/kawaiikiller"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - kawaiikiller"
 			"tool"
@@ -13091,7 +13131,7 @@
 			"name"		"coupon - neluthebear"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/neluthebear"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - neluthebear"
 			"tool"
@@ -13117,7 +13157,7 @@
 			"name"		"coupon - oneshotonekill"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/oneshotonekill"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - oneshotonekill"
 			"tool"
@@ -13143,7 +13183,7 @@
 			"name"		"coupon - shootingstar"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/shootingstar"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - shootingstar"
 			"tool"
@@ -13169,7 +13209,7 @@
 			"name"		"coupon - warpenguin"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/warpenguin"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - warpenguin"
 			"tool"
@@ -13195,7 +13235,7 @@
 			"name"		"coupon - windywalking"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/windywalking"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - windywalking"
 			"tool"
@@ -13221,7 +13261,7 @@
 			"name"		"coupon - blitzkrieg"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/blitzkrieg"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - blitzkrieg"
 			"tool"
@@ -13247,7 +13287,7 @@
 			"name"		"coupon - pigeonmaster"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/pigeonmaster"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - pigeonmaster"
 			"tool"
@@ -13273,7 +13313,7 @@
 			"name"		"coupon - terrorized"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/terrorized"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - terrorized"
 			"tool"
@@ -13299,7 +13339,7 @@
 			"name"		"coupon - tilldeathdouspart"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/tilldeathdouspart"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - tilldeathdouspart"
 			"tool"
@@ -13325,7 +13365,7 @@
 			"name"		"coupon - stayfrosty"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/stayfrosty"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - stayfrosty"
 			"tool"
@@ -13351,7 +13391,7 @@
 			"name"		"coupon - toncat"
 			"item_name"		"#coupon"
 			"item_description"		"#coupon_desc"
-			"image_inventory"		"econ/coupon/toncat"
+			"image_inventory"		"econ/coupon/offer"
 			"prefab"		"coupon_crate_prefab"
 			"loot_list_name"		"coupon loot list - toncat"
 			"tool"
@@ -13371,6 +13411,240 @@
 				"restriction"		"coupon_toncat"
 			}
 			"associated_item"		"10019"
+		}
+		"10020"
+		{
+			"name"		"coupon - danielsadowski_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - danielsadowski_01"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_01"
+			}
+			"associated_item"		"20020"
+		}
+		"20020"
+		{
+			"name"		"coupon key - danielsadowski_01"
+			"item_name"		"#coupon_key_danielsadowski_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_01"
+			}
+			"associated_item"		"10020"
+		}
+		"10021"
+		{
+			"name"		"coupon - noisia_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - noisia_01"
+			"tool"
+			{
+				"restriction"		"coupon_noisia_01"
+			}
+			"associated_item"		"20021"
+		}
+		"20021"
+		{
+			"name"		"coupon key - noisia_01"
+			"item_name"		"#coupon_key_noisia_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_noisia_01"
+			}
+			"associated_item"		"10021"
+		}
+		"10022"
+		{
+			"name"		"coupon - robertallaire_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - robertallaire_01"
+			"tool"
+			{
+				"restriction"		"coupon_robertallaire_01"
+			}
+			"associated_item"		"20022"
+		}
+		"20022"
+		{
+			"name"		"coupon key - robertallaire_01"
+			"item_name"		"#coupon_key_robertallaire_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_robertallaire_01"
+			}
+			"associated_item"		"10022"
+		}
+		"10023"
+		{
+			"name"		"coupon - seanmurray_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - seanmurray_01"
+			"tool"
+			{
+				"restriction"		"coupon_seanmurray_01"
+			}
+			"associated_item"		"20023"
+		}
+		"20023"
+		{
+			"name"		"coupon key - seanmurray_01"
+			"item_name"		"#coupon_key_seanmurray_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_seanmurray_01"
+			}
+			"associated_item"		"10023"
+		}
+		"10024"
+		{
+			"name"		"coupon - feedme_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - feedme_01"
+			"tool"
+			{
+				"restriction"		"coupon_feedme_01"
+			}
+			"associated_item"		"20024"
+		}
+		"20024"
+		{
+			"name"		"coupon key - feedme_01"
+			"item_name"		"#coupon_key_feedme_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_feedme_01"
+			}
+			"associated_item"		"10024"
+		}
+		"10025"
+		{
+			"name"		"coupon - dren_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - dren_01"
+			"tool"
+			{
+				"restriction"		"coupon_dren_01"
+			}
+			"associated_item"		"20025"
+		}
+		"20025"
+		{
+			"name"		"coupon key - dren_01"
+			"item_name"		"#coupon_key_dren_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_dren_01"
+			}
+			"associated_item"		"10025"
+		}
+		"10026"
+		{
+			"name"		"coupon - austinwintory_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - austinwintory_01"
+			"tool"
+			{
+				"restriction"		"coupon_austinwintory_01"
+			}
+			"associated_item"		"20026"
+		}
+		"20026"
+		{
+			"name"		"coupon key - austinwintory_01"
+			"item_name"		"#coupon_key_austinwintory_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_austinwintory_01"
+			}
+			"associated_item"		"10026"
+		}
+		"10027"
+		{
+			"name"		"coupon - sasha_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - sasha_01"
+			"tool"
+			{
+				"restriction"		"coupon_sasha_01"
+			}
+			"associated_item"		"20027"
+		}
+		"20027"
+		{
+			"name"		"coupon key - sasha_01"
+			"item_name"		"#coupon_key_sasha_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_sasha_01"
+			}
+			"associated_item"		"10027"
+		}
+		"10028"
+		{
+			"name"		"coupon - skog_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - skog_01"
+			"tool"
+			{
+				"restriction"		"coupon_skog_01"
+			}
+			"associated_item"		"20028"
+		}
+		"20028"
+		{
+			"name"		"coupon key - skog_01"
+			"item_name"		"#coupon_key_skog_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_skog_01"
+			}
+			"associated_item"		"10028"
 		}
 	}
 	"attributes"
@@ -14721,6 +14995,15 @@
 			"hidden"		"1"
 			"effect_type"		"positive"
 			"attribute_type"		"string"
+		}
+		"166"
+		{
+			"name"		"music id"
+			"attribute_class"		"music_id"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
 		}
 		"168"
 		{
@@ -25327,6 +25610,51 @@
 			"public_list_contents"		"1"
 			"[toncat]sticker"		"1"
 		}
+		"coupon loot list - danielsadowski_01"
+		{
+			"public_list_contents"		"1"
+			"[danielsadowski_01]musickit"		"1"
+		}
+		"coupon loot list - noisia_01"
+		{
+			"public_list_contents"		"1"
+			"[noisia_01]musickit"		"1"
+		}
+		"coupon loot list - robertallaire_01"
+		{
+			"public_list_contents"		"1"
+			"[robertallaire_01]musickit"		"1"
+		}
+		"coupon loot list - seanmurray_01"
+		{
+			"public_list_contents"		"1"
+			"[seanmurray_01]musickit"		"1"
+		}
+		"coupon loot list - feedme_01"
+		{
+			"public_list_contents"		"1"
+			"[feedme_01]musickit"		"1"
+		}
+		"coupon loot list - dren_01"
+		{
+			"public_list_contents"		"1"
+			"[dren_01]musickit"		"1"
+		}
+		"coupon loot list - austinwintory_01"
+		{
+			"public_list_contents"		"1"
+			"[austinwintory_01]musickit"		"1"
+		}
+		"coupon loot list - sasha_01"
+		{
+			"public_list_contents"		"1"
+			"[sasha_01]musickit"		"1"
+		}
+		"coupon loot list - skog_01"
+		{
+			"public_list_contents"		"1"
+			"[skog_01]musickit"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -25446,6 +25774,98 @@
 		{
 			"type_name"		"KillEaterEventType_Kills"
 			"model_attribute"		"stattrak model"
+		}
+	}
+	"music_definitions"
+	{
+		"1"
+		{
+			"name"		"valve_csgo_01"
+			"loc_name"		"#musickit_valve_csgo_01"
+			"loc_description"		"#musickit_valve_csgo_01_desc"
+			"image_inventory"		"econ/music_kits/valve_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_valve_01.mdl"
+		}
+		"2"
+		{
+			"name"		"valve_csgo_02"
+			"loc_name"		"#musickit_valve_csgo_02"
+			"loc_description"		"#musickit_valve_csgo_02_desc"
+			"image_tooltip"		"tooltip_image_01"
+			"image_inventory"		"econ/music_kits/valve_02"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_valve_02.mdl"
+		}
+		"3"
+		{
+			"name"		"danielsadowski_01"
+			"loc_name"		"#musickit_danielsadowski_01"
+			"loc_description"		"#musickit_danielsadowski_01_desc"
+			"image_inventory"		"econ/music_kits/danielsadowski_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_danielsadowski_01.mdl"
+		}
+		"4"
+		{
+			"name"		"noisia_01"
+			"loc_name"		"#musickit_noisia_01"
+			"loc_description"		"#musickit_noisia_01_desc"
+			"image_inventory"		"econ/music_kits/noisia_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_noisia_01.mdl"
+		}
+		"5"
+		{
+			"name"		"robertallaire_01"
+			"loc_name"		"#musickit_robertallaire_01"
+			"loc_description"		"#musickit_robertallaire_01_desc"
+			"image_inventory"		"econ/music_kits/robertallaire_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_robertallaire_01.mdl"
+		}
+		"6"
+		{
+			"name"		"seanmurray_01"
+			"loc_name"		"#musickit_seanmurray_01"
+			"loc_description"		"#musickit_seanmurray_01_desc"
+			"image_inventory"		"econ/music_kits/seanmurray_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_seanmurray_01.mdl"
+		}
+		"7"
+		{
+			"name"		"feedme_01"
+			"loc_name"		"#musickit_feedme_01"
+			"loc_description"		"#musickit_feedme_01_desc"
+			"image_inventory"		"econ/music_kits/feedme_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_feedme_01.mdl"
+		}
+		"8"
+		{
+			"name"		"dren_01"
+			"loc_name"		"#musickit_dren_01"
+			"loc_description"		"#musickit_dren_01_desc"
+			"image_inventory"		"econ/music_kits/dren_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_dren_01.mdl"
+		}
+		"9"
+		{
+			"name"		"austinwintory_01"
+			"loc_name"		"#musickit_austinwintory_01"
+			"loc_description"		"#musickit_austinwintory_01_desc"
+			"image_inventory"		"econ/music_kits/austinwintory_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_austinwintory_01.mdl"
+		}
+		"10"
+		{
+			"name"		"sasha_01"
+			"loc_name"		"#musickit_sasha_01"
+			"loc_description"		"#musickit_sasha_01_desc"
+			"image_inventory"		"econ/music_kits/sasha_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_sasha_01.mdl"
+		}
+		"11"
+		{
+			"name"		"skog_01"
+			"loc_name"		"#musickit_skog_01"
+			"loc_description"		"#musickit_skog_01_desc"
+			"image_inventory"		"econ/music_kits/skog_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_skog_01.mdl"
 		}
 	}
 	"quest_definitions"
