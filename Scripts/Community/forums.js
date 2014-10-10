@@ -1207,8 +1207,7 @@ function Forum_RecordPotentialMergeTarget( rgForumData, gidTopic, strTitle )
 
 function _Forum_GetPotentialMergeTargets()
 {
-	var strForumMergeTargets = GetValueLocalStorage( 'rgForumMergeTargets', '[]' );
-	var rgForumMergeTargets = V_ParseJSON( strForumMergeTargets );
+	var rgForumMergeTargets = WebStorage.GetLocal( 'rgForumMergeTargets' ) || [];
 	if ( !rgForumMergeTargets || !rgForumMergeTargets.length )
 		rgForumMergeTargets = [];
 
@@ -1218,7 +1217,7 @@ function _Forum_GetPotentialMergeTargets()
 function _Forum_UpdatePotentialMergeTargets( rgTargets )
 {
 	rgTargets.splice( 10 );	//max we will track
-	SetValueLocalStorage( 'rgForumMergeTargets', V_ToJSON( rgTargets ) );
+	WebStorage.SetLocal( 'rgForumMergeTargets', rgTargets );
 }
 
 var g_rgRedirectTimeOptions = [
@@ -1301,9 +1300,9 @@ function Forum_MergeTopicDialog( strActionURL, rgForumData, rgForumTopics, bReso
 	}
 	fnPopulateMergeOptions();
 
-	var strInitialMergeTargetsJSON = GetValueLocalStorage( 'rgForumMergeTargets', '[]' );
+	var strInitialMergeTargetsJSON = WebStorage.GetLocal( 'rgForumMergeTargets' ) || [];
 	var nTimeoutCheckMergeTargets = window.setInterval( function() {
-		var strMergeTargetsJSON = GetValueLocalStorage( 'rgForumMergeTargets', '[]' );
+		var strMergeTargetsJSON = WebStorage.GetLocal( 'rgForumMergeTargets' ) || [];
 		if ( strMergeTargetsJSON != strInitialMergeTargetsJSON )
 		{
 			var strSelectedOption = $List.find( 'input:checked').val();
@@ -1894,23 +1893,23 @@ function StartTradeOfferForTradingTopic( unAccountID, unClanIDOwner, gidTopic )
 
 function Forum_InitExpiryOptions( $Select )
 {
-	var nLastExpiryChoice = GetValueLocalStorage( 'nForumLastExpiryChoice', 0 );
+	var nLastExpiryChoice = WebStorage.GetLocal( 'nForumLastExpiryChoice', false ) || 0;
 	$Select.val( nLastExpiryChoice );
 
 	$Select.off( 'change.ForumRememberChoice' );
 	$Select.on( 'change.ForumRememberChoice', function() {
-		SetValueLocalStorage( 'nForumLastExpiryChoice', $Select.val() );
+		WebStorage.SetLocal( 'nForumLastExpiryChoice', $Select.val() );
 	});
 }
 
 function Forum_InitBanLengthOptions( $Select )
 {
-	var nLastBanLengthChoice = GetValueLocalStorage( 'nForumLastBanLengthChoice', 0 );
+	var nLastBanLengthChoice = WebStorage.GetLocal( 'nForumLastBanLengthChoice', false ) || 0;
 	$Select.val( nLastBanLengthChoice );
 
 	$Select.off( 'change.ForumRememberChoice' );
 	$Select.on( 'change.ForumRememberChoice', function() {
-		SetValueLocalStorage( 'nForumLastBanLengthChoice', $Select.val() );
+		WebStorage.SetLocal( 'nForumLastBanLengthChoice', $Select.val() );
 	});
 }
 

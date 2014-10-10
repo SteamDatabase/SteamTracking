@@ -1084,6 +1084,24 @@ function V_SetCookie( strCookieName, strValue, expiryInDays, path )
 	document.cookie = strCookieName + '=' + strValue + strDate + ';path=' + path;
 }
 
+function _GetStorageFromCookie()
+{
+	var oStorage = {};
+
+	var strStorageJSON = V_GetCookie( 'storage' );
+	if ( strStorageJSON )
+	{
+		try {
+			oStorage = V_ParseJSON(decodeURIComponent(strStorageJSON));
+		}
+		catch (e) {
+			oStorage = {};
+		}
+	}
+
+	return oStorage;
+}
+
 function SetValueLocalStorage( strPreferenceName, value )
 {
 	if ( window.localStorage )
@@ -1092,13 +1110,11 @@ function SetValueLocalStorage( strPreferenceName, value )
 	}
 	else
 	{
-		var strStorageJSON = V_GetCookie( 'storage' ) || '{}';
-
-		var oStorage = V_ParseJSON( strStorageJSON );
+		var oStorage = _GetStorageFromCookie();
 
 		oStorage[strPreferenceName] = value;
 
-		V_SetCookie( 'storage', V_ToJSON( oStorage ), 365 )
+		V_SetCookie( 'storage', encodeURIComponent( V_ToJSON( oStorage ) ), 365 )
 	}
 }
 
@@ -1110,13 +1126,11 @@ function UnsetValueLocalStorage( strPreferenceName )
 	}
 	else
 	{
-		var strStorageJSON = V_GetCookie( 'storage' ) || '{}';
-
-		var oStorage = V_ParseJSON( strStorageJSON );
+		var oStorage = _GetStorageFromCookie();
 
 		delete oStorage[strPreferenceName];
 
-		V_SetCookie( 'storage', V_ToJSON( oStorage ), 365 )
+		V_SetCookie( 'storage', encodeURIComponent( V_ToJSON( oStorage ) ), 365 )
 	}
 }
 
@@ -1128,8 +1142,8 @@ function GetValueLocalStorage( strPreferenceName, defaultValue )
 	}
 	else
 	{
-		var strStorageJSON = V_GetCookie( 'storage' ) || '{}';
-		var oStorage = V_ParseJSON( strStorageJSON );
+		var oStorage = _GetStorageFromCookie();
+
 		return oStorage[strPreferenceName] || defaultValue;
 	}
 }
@@ -1296,12 +1310,14 @@ WebStorage = {
 	GetCookie: function( key )
 	{
 		var keyValue = V_GetCookie( key );
+		if ( keyValue )
+			keyValue = decodeURIComponent( keyValue );
 
 		return V_IsJSON( keyValue ) ? V_ParseJSON( keyValue ) : keyValue;
 	},
 	SetCookie: function( key, value, duration )
 	{
-		value = V_ToJSON( value );
+		value = encodeURIComponent( V_ToJSON( value ) );
 		V_SetCookie( key, value, duration );
 	},
 	ClearCookie: function( key )
