@@ -2,6 +2,12 @@
     "name": "IGCVersion_570",
     "methods": [
         {
+            "name": "GetClientVersion",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        },
+        {
             "name": "GetServerVersion",
             "version": 1,
             "httpmethod": "GET",
