@@ -124,7 +124,7 @@
 
 .highlight_overflow {
 	overflow: hidden;
-	width: 638px;
+	width: 644px;
 	position: relative;
 	margin-top: 5px;
 
@@ -2239,7 +2239,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 }
 
 .general_btn.settings {
-	background: #1A1A1A url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_settings_tiled.png') 7px 2px no-repeat;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_settings_tiled.png?v=1');
+	background-position: 7px 2px;
 	background-repeat: no-repeat;
 	width: 15px;
 	height: 20px;
@@ -2247,7 +2248,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .general_btn.settings:hover, .general_btn.settings.toggled
 {
-	background-color: #97C0E3;
+	background-color: rgba( 102, 192, 244, 0.4 );
 	background-position: 7px -28px;
 }
 

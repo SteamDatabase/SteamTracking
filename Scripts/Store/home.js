@@ -253,7 +253,15 @@ GHomepage = {
 			else
 				strStatus = 'Now Available'
 
-			var $CapCtn = GHomepage.BuildHomePageMainCap( oItem.appid, oItem.packageid, strStatus, i );
+			var strFeature = 'main_cluster';
+			if ( oItem.recommended )
+				strFeature = 'main_cluster_recommended';
+			else if ( oItem.top_seller )
+				strFeature = 'main_cluster_topseller';
+			else if ( oItem.new_on_steam )
+				strFeature = 'main_cluster_newonsteam';
+
+			var $CapCtn = GHomepage.BuildHomePageMainCap( oItem.appid, oItem.packageid, strStatus, strFeature, i );
 			if ( $CapCtn )
 			{
 				$MainCluster.append( $CapCtn );
@@ -274,10 +282,10 @@ GHomepage = {
 			GHomepage.MainCapCluster = new Cluster( {
 				cCapCount: cMainCaps,
 				nCapWidth: 616 + 4,
-				elClusterArea: $('home_main_cluster'),
-				elSlider: $('main_cluster_control'),
-				elScrollLeftBtn: $('main_cluster_control_previous'),
-				elScrollRightBtn: $('main_cluster_control_next'),
+				elClusterArea: $J('#home_main_cluster'),
+				elSlider: $J('#main_cluster_control'),
+				elScrollLeftBtn: $J('#main_cluster_control_previous'),
+				elScrollRightBtn: $J('#main_cluster_control_next'),
 				bUseActiveClass: true,
 				rgImageURLs: {},
 				onChangeCB: GDynamicStore.HandleClusterChange
@@ -482,10 +490,10 @@ GHomepage = {
 		return $CapCtn;
 	},
 
-	BuildHomePageMainCap: function( unAppID, unPackageID, strStatus, nDepth )
+	BuildHomePageMainCap: function( unAppID, unPackageID, strStatus, strFeature, nDepth )
 	{
 		var params = { 'class': 'cluster_capsule' };
-		var rgItemData = GHomepage.GetCapParams( 'main_cluster', unAppID, unPackageID, params, nDepth );
+		var rgItemData = GHomepage.GetCapParams( strFeature, unAppID, unPackageID, params, nDepth );
 		if ( !rgItemData )
 			return null;
 

@@ -5,6 +5,18 @@ function GotFlashPopup()
 	win.focus();
 }
 
+// proto functions used to accept an id or an element.
+// This can be used to migrate them to returning jquery instead of proto-wrapped element
+function $JFromIDOrElement( elem )
+{
+	if ( elem instanceof jQuery )
+		return elem;
+	else if ( typeof elem == 'string' )
+		return $J('#' + elem);
+	else
+		return $J( elem );
+}
+
 //
 // Page-able tabs
 //
@@ -295,140 +307,136 @@ function UpdateSmallCapControl( targetid, delta, pageSize, totalCount )
 
 function ShowWithFade( elem )
 {
-	var elem = $(elem);
+	var $Elem = $JFromIDOrElement(elem);
 
-	if ( !elem.visible() || elem.hiding )
-	{
-		elem.hiding = false;
-		if ( elem.effect )
-			elem.effect.cancel();
-
-		elem.effect = new Effect.Appear( elem, { duration: 0.2 } );
-	}
+	$Elem.stop();
+	$Elem.fadeTo( 200, 1.0 );	//fadeTo rather than fadeIn in case it was already in a fade
 }
 
 function HideWithFade( elem )
 {
-	var elem = $(elem);
-	
-	if ( elem.visible() && !elem.hiding )
-	{
-		if ( elem.effect && !elem.hiding )
-			elem.effect.cancel();
-		elem.hiding = true;
+	var $Elem = $JFromIDOrElement(elem);
 
-		elem.effect = new Effect.Fade( elem, { duration: 0.2 } );
-	}
+	$Elem.stop();
+	$Elem.fadeOut( 200 );
 }
 
 // register some events to dismiss popup (ie, user clicking elsewhere on the window, escape)
 //   cleans up event binds afterwards.  clicks to children of "elemIgnore" will not dismiss popup 
-function RegisterPopupDismissal( dismissFunc, elemIgnore, bNoGuard )
+function RegisterPopupDismissal( dismissFunc, elemIgnore )
 {
-	var dismissHandler = {
-		guard: bNoGuard ? 0 : 1,
-		dismiss: function( event ) {
-			if ( this.elemIgnore )
-			{
-				var elem = Event.element( event );
-				if ( elem.up( '#' + elemIgnore.id ) )
-					return;
-			}
-			// ignore the first click- assume it's the one starting the popup
-			if ( this.guard-- > 0 )
+	var $Ignore = $JFromIDOrElement( elemIgnore );
+	// delay registration by one frame so that we don't catch the event that triggered this popup.
+	window.setTimeout( function() {
+		$J(document).on('click.RegisterPopupDismissal keydown.RegisterPopupDismissal', function (event) {
+
+			if (event.keyCode && event.keyCode != 27 /* KEY_ESC */) {
 				return;
-			this.regFunc();
-			this.unregister();
-		},
-		unregister: function() {
-			Event.stopObserving( document, 'click', this.boundHandler );
-			Event.stopObserving( document, 'keydown', this.boundHandler );
-		}
-	};
-	dismissHandler.regFunc = dismissFunc;
-	dismissHandler.elemIgnore = elemIgnore || null;
-	dismissHandler.boundHandler = dismissHandler.dismiss.bindAsEventListener( dismissHandler );
-	Event.observe( document, 'click', dismissHandler.boundHandler );
-	Event.observe( document, 'keydown', dismissHandler.boundHandler );
-	
-	return dismissHandler;
-	
+			}
+			var elem = $J(event.target);
+
+			if ( $Ignore.length && $J.contains( $Ignore[0], elem[0] ) )
+				return;
+
+			dismissFunc();
+			$J(document).off('.RegisterPopupDismissal');
+		});
+	}, 1 );
 }
 
 function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 {
-	var elemLink = $(elemLink);
-	var elemPopup = $(elemPopup);
+	var $Link = $JFromIDOrElement(elemLink);
+	var $Popup = $JFromIDOrElement(elemPopup);
 	
-	AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder );
+	AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder );
 	
-	ShowWithFade( elemPopup );
-	elemLink.addClassName('focus');
-	RegisterPopupDismissal( function() { HideWithFade( elemPopup ); elemLink.removeClassName('focus'); }, elemPopup );
+	ShowWithFade( $Popup );
+	$Link.addClass('focus');
+	RegisterPopupDismissal( function() { HideWithFade( $Popup ); $Link.removeClass('focus'); }, $Popup );
 }
 
 function HideMenu( elemLink, elemPopup )
 {
-	var elemLink = $(elemLink);
-	var elemPopup = $(elemPopup);
+	var $Link = $JFromIDOrElement(elemLink);
+	var $Popup = $JFromIDOrElement(elemPopup);
 
-	HideWithFade( elemPopup );
-	elemLink.removeClassName( 'focus' );
-	if ( elemLink.dismissHandler )
-		elemLink.dismissHandler.unregister();
+	HideWithFade( $Popup );
+	$Link.removeClass( 'focus' );
+	$J(document).off('.RegisterPopupDismissal');
 }
 
 function RegisterFlyout( elemLink, elemPopup, align, valign, bLinkHasBorder )
 {
-	Event.observe( elemLink, 'mouseover', function(event) { FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder ); } );
-	
-	Event.observe( elemLink, 'mouseout', HideFlyoutMenu.bindAsEventListener( null, elemLink, elemPopup ) );
-	Event.observe( elemPopup, 'mouseout', HideFlyoutMenu.bindAsEventListener( null, elemLink, elemPopup ) );
+	var $Link = $JFromIDOrElement( elemLink );
+	var $Popup = $JFromIDOrElement( elemPopup );
 
+	$Link.on( 'mouseenter', function( event ) {
+		FlyoutMenu( $Link, $Popup, align, valign, bLinkHasBorder );
+	});
+
+	$Link.add( $Popup ).on( 'mouseleave', function( event ) {
+		HideFlyoutMenu( event, $Link, $Popup );
+	});
 }
 
 function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 {
-	var elemLink = $(elemLink);
-	var elemPopup = $(elemPopup);
-	
-	if ( !elemPopup.visible() || elemPopup.hiding )
+	var $Link = $JFromIDOrElement(elemLink);
+	var $Popup = $JFromIDOrElement(elemPopup);
+
+	if ( !$Popup.is(':visible') || $Popup.css('opacity') < 1.0 )
 	{
-		AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder );
-		ShowWithFade( elemPopup );
-		elemLink.addClassName('focus');
+		AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder );
+		ShowWithFade( $Popup );
+		$Link.addClass('focus');
 	}
 	
 }
 
 function HideFlyoutMenu( event, elemLink, elemPopup )
 {
-	var elemLink = $(elemLink);
-	var elemPopup = $(elemPopup);
-	var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
-	if ( !reltarget || ( $(reltarget).up( '#' + elemLink.id ) || $(reltarget).up( '#' + elemPopup.id )  ) || elemLink.id == reltarget.id )
+	var reltarget = $J( event.relatedTarget );
+	var $Link = $JFromIDOrElement(elemLink);
+	var $Popup = $JFromIDOrElement(elemPopup);
+
+	if ( !reltarget.length ||
+		( $Link.length && $J.contains( $Link[0], reltarget[0] ) ) ||
+		( $Popup.length && $J.contains( $Popup[0], reltarget[0] ) ) ||
+		$Link.is( reltarget ) )
 		return;
 
 	// start hiding in a little bit, have to let the fade in animation start before we can cancel it
-	window.setTimeout( HideWithFade.bind( null, elemPopup ), 33 );
-	elemLink.removeClassName('focus');
+	window.setTimeout( function() { HideWithFade( $Popup ); }, 33 );
+	$Link.removeClass('focus');
 }
 
 function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 {
 	var align = align ? align : 'left';
-	
+	var $Link = $JFromIDOrElement(elemLink);
+	var $Popup = $JFromIDOrElement(elemPopup);
+
+	var offsetLink = $Link.offset();
+	var nWindowScrollTop = $J(window).scrollTop();
+	var nViewportHeight = $J(window).height();
+
+	var nLinkViewportTop = offsetLink.top - nWindowScrollTop;
+
+	// add a little bit of padding so we don't position it flush to an edge if possible
+	var nPopupHeight = $Popup.height() + 8;
+
 	if ( !valign )
 	{
 		//if there's not enough room between our spot and the top of the document, we definitely want to drop down
-		if ( document.viewport.getScrollOffsets().top + elemLink.viewportOffset().top < nPopupHeight )
-			valign = 'bottom'; 
+		if ( nWindowScrollTop + offsetLink.top < nPopupHeight )
+		{
+			valign = 'bottom';
+		}
 		else
-		{			
-			// add a little bit of padding so we don't position it flush to an edge if possible
-			var nPopupHeight = elemPopup.getHeight() + 8;
-			var nSpaceAbove = elemLink.viewportOffset().top;
-			var nSpaceBelow = document.viewport.getHeight() - elemLink.viewportOffset().top;
+		{
+			var nSpaceAbove = nLinkViewportTop;
+			var nSpaceBelow = nViewportHeight - ( nLinkViewportTop + $Link.height() );
 			//otherwise we only want to drop down if we've got enough space below us (measured based on view area)
 			// or if there's not enough space above to pop in either direction and there's more space below
 			if ( nSpaceBelow > nPopupHeight || ( nSpaceAbove < nPopupHeight && nSpaceBelow > nSpaceAbove ) )
@@ -440,7 +448,7 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	}
 
 	var borderpx = bLinkHasBorder ? 1 : 0;
-	var shadowpx = elemPopup.hasClassName( 'popup_block_new' ) ? 0 : 12;
+	var shadowpx = $Popup.hasClass( 'popup_block_new' ) ? 0 : 12;
 	var offsetLeft = 0;
 	if ( align == 'left' )
 	{
@@ -450,29 +458,29 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	else if ( align == 'right' )
 	{
 		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - elemPopup.getWidth() + 13 ) + 'px';
-		offsetLeft = elemLink.getWidth() - elemPopup.getWidth() + shadowpx + borderpx;
+		offsetLeft = $Link.outerWidth() - $Popup.outerWidth() + shadowpx + borderpx;
 	}
 	else if ( align == 'leftsubmenu' )
 	{
 		//elemPopup.style.left = ( elemLink.positionedOffset()[0] - elemPopup.getWidth() + 12 ) + 'px';
-		offsetLeft = -elemPopup.getWidth() + shadowpx - borderpx;
+		offsetLeft = -$Popup.outerWidth() + shadowpx - borderpx;
 	}
 	else if ( align == 'rightsubmenu' )
 	{
 		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - 12 ) + 'px';
-		offsetLeft = elemLink.getWidth()  - shadowpx + 2 * borderpx;
+		offsetLeft = $Link.outerWidth()  - shadowpx + 2 * borderpx;
 	}
 
 	var offsetTop = 0;
 	if ( valign == 'bottom' )
 	{
 		//elemPopup.style.top = ( elemLink.positionedOffset()[1] + elemLink.getHeight() - 12 ) + 'px';
-		offsetTop = elemLink.getHeight() - shadowpx;
+		offsetTop = $Link.outerHeight() - shadowpx;
 	}
 	else if ( valign == 'top' )
 	{
 		//elemPopup.style.top = ( elemLink.positionedOffset()[1] - elemPopup.getHeight() + 12 ) + 'px';
-		offsetTop = -elemPopup.getHeight() + shadowpx;
+		offsetTop = -$Popup.outerHeight() + shadowpx;
 	}
 	else if ( valign == 'bottomsubmenu' )
 	{
@@ -481,48 +489,65 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	}
 
 
-	var bPopupHidden = !elemPopup.visible();
+	var bPopupHidden = !$Popup.is(':visible');
 
 	if ( bPopupHidden )
 	{
 		// IE can't do this with display: none elements
-		elemPopup.style.visibility = 'hidden';
-		elemPopup.show();
+		$Popup.css( 'visibility', 'hidden' );
+		$Popup.show();
 	}
 
-	elemPopup.clonePosition( elemLink, { setWidth: false, setHeight: false, offsetLeft: offsetLeft, offsetTop: offsetTop } );
+	$Popup.css( {
+		'left': ( $Link.position().left + offsetLeft ) + 'px',
+		'top': ( $Link.position().top + offsetTop ) + 'px'
+	});
 
 	if ( bPopupHidden )
 	{
 		// restore visibility
-		elemPopup.hide();
-		elemPopup.style.visibility = 'visible';
+		$Popup.hide();
+		$Popup.css( 'visibility', 'visible' );
 	}
+}
+
+var g_HoverState = {
+	target: null,
+	hiding: false,
+}
+
+function GetHoverState( $Elem )
+{
+	var oElemState = $Elem.data( 'oHoverState' );
+	if ( !oElemState )
+	{
+		oElemState = {};
+		$Elem.data( 'oHoverState', oElemState );
+	}
+	return oElemState;
 }
 
 function GameHover( elem, event, divHover, rgHoverData )
 {
 	if (!event) var event = window.event;
-	elem = $(elem);
-	
-	var hover = $(divHover);
-	
-	if ( !hover )
-	{
-				$(document.body).insert( {bottom: "\t\t<div class=\"hover game_hover\" id=\"global_hover\" style=\"display: none; left: 0; top: 0;\">\r\n\t\t\t<div class=\"game_hover_box hover_box\">\r\n\t\t\t\t<div class=\"content\" id=\"global_hover_content\">\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"hover_arrow_left\"><\/div>\r\n\t\t\t<div class=\"hover_arrow_right\"><\/div>\r\n\t\t<\/div>" });
-		hover = $('global_hover');
-	}
+	var $Elem = $JFromIDOrElement(elem);
+	var $Hover = $JFromIDOrElement(divHover);
 
-	if ( !hover )
-		return;
+	var oElemState = GetHoverState( $Elem );
 	
-	if ( hover.hiding && hover.visible() && hover.target == elem )
+	if ( !$Hover.length )
 	{
-		ShowWithFade( hover );
+				$Hover = $J("\t\t<div class=\"hover game_hover\" id=\"global_hover\" style=\"display: none; left: 0; top: 0;\">\r\n\t\t\t<div class=\"game_hover_box hover_box\">\r\n\t\t\t\t<div class=\"content\" id=\"global_hover_content\">\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"hover_arrow_left\"><\/div>\r\n\t\t\t<div class=\"hover_arrow_right\"><\/div>\r\n\t\t<\/div>");
+		$J(document.body).append( $Hover );
 	}
-	else if ( ( !hover.visible() || hover.target != elem ) && !elem.timer )
+	
+	if ( g_HoverState.hiding && $Hover.is(':visible') && g_HoverState.target == $Elem[0] )
 	{
-		elem.bWantsHover = true;
+		ShowWithFade( $Hover );
+	}
+	else if ( ( !$Hover.is(':visible') || g_HoverState.target != $Elem[0] ) && !oElemState.timer )
+	{
+		oElemState.bWantsHover = true;
 		var bPublic = rgHoverData['public'];
 		var strTargetPrefix = '';
 		var strUrlTarget = '';
@@ -542,11 +567,11 @@ function GameHover( elem, event, divHover, rgHoverData )
 		}
 			
 		var targetId = strTargetPrefix + rgHoverData['id'];
-		var elemData = $( targetId );
+		var $HoverData = $JFromIDOrElement( targetId );
 		var accountId = g_AccountID ? g_AccountID : 0;
 		var params = rgHoverData['params'] || {};
 
-		if ( !elemData && !elem.ajaxRequest )
+		if ( !$HoverData.length && !oElemState.bAjaxRequestMade )
 		{
 			var rgAjaxParams = { u: accountId };
 			if ( bPublic )
@@ -558,124 +583,144 @@ function GameHover( elem, event, divHover, rgHoverData )
 			{
 				rgAjaxParams['pagev6'] = true;
 			}
+
 			window.setTimeout( function() { 
-				if ( elem.bWantsHover && !elem.ajaxRequest ) {
-					elem.ajaxRequest = new Ajax.Updater( hover.down('.content'),
-								'http://store.steampowered.com/' + strUrlTarget + rgHoverData['id'],
-								{ method: 'get', parameters: rgAjaxParams, insertion: 'bottom', onComplete: function() { ShowGameHover( elem, hover, targetId, params ); elem.ajaxRequest = null; } } );
+				if ( oElemState.bWantsHover && !oElemState.bAjaxRequestMade ) {
+					oElemState.bAjaxRequestMade = true;
+					$J.get( 'http://store.steampowered.com/' + strUrlTarget + rgHoverData['id'], rgAjaxParams ).done( function( html )
+					{
+						var $Content = $J(html);
+						$Content.hide();
+						$Hover.find( '.content' ).append( $Content );
+						ShowGameHover( $Elem, $Hover, targetId, params );
+					} );
 				}
-			}, 250 );
+			}, 150 );
 		}
-		elem.timer = window.setTimeout( function() { elem.timer = false; elem.bReadyForHover = true; ShowGameHover( elem, hover, targetId, params ); }, 500 );
+		if ( !oElemState.timer )
+		{
+			oElemState.timer = window.setTimeout(function () {
+				oElemState.timer = false;
+				oElemState.bReadyForHover = true;
+				ShowGameHover( $Elem, $Hover, targetId, params);
+			}, 300 );
+		}
 	}
 }
 
 function HideGameHover( elem, event, divHover )
 {
-	
-	if ( !divHover )
+	var $Elem = $JFromIDOrElement( elem );
+	var $Hover = $JFromIDOrElement( divHover );
+
+	var oElemState = GetHoverState( $Elem );
+
+	if ( !$Hover.length )
 		return;
+
 	if (!event) var event = window.event;
-	var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
-	if ( reltarget && ( $(reltarget).up( '#' + elem.identify() ) /* || $(reltarget).up( '#' + divHover.id ) */ ) )
+	var reltarget = $J( (event.relatedTarget) ? event.relatedTarget : event.toElement );
+	if ( reltarget.length && $J.contains( $Elem[0], reltarget[0] ) )
 		return;
 	
-	if ( elem.timer )
+	if ( oElemState.timer )
 	{
-		window.clearTimeout( elem.timer );
-		elem.timer = false;
+		window.clearTimeout( oElemState.timer );
+		oElemState.timer = false;
 	}
-	elem.bWantsHover = false;
-	elem.bReadyForHover = false;
+	oElemState.bWantsHover = false;
+	oElemState.bReadyForHover = false;
 
 	HideWithFade( divHover );
 }
 
 function ShowGameHover( elem, divHover, targetContent, params )
 {
-	if ( !$( targetContent ) || !elem.bWantsHover || !elem.bReadyForHover || !$J.contains(document, elem) )
+	var $Elem = $JFromIDOrElement( elem );
+	var $Hover = $JFromIDOrElement( divHover );
+	var $Target = $JFromIDOrElement( targetContent );
+
+	var oElemState = GetHoverState( $Elem );
+
+	if ( !$Target.length || !oElemState.bWantsHover || !oElemState.bReadyForHover || !$J.contains( document, $Elem[0] ) )
 		return;
 
-	$( targetContent ).siblings().invoke('hide');
-	$( targetContent ).show();
+	$Target.siblings().hide();
+	$Target.show();
 	
-	var hover_toparea = $( targetContent ).down( '.hover_top_area' );
+	var $Toparea = $Target.find( '.hover_top_area' );
 	if ( params && params.top_area_content )
 	{
-		hover_toparea.update( params.top_area_content );
-		hover_toparea.show();
+		$Toparea.html( params.top_area_content );
+		$Toparea.show();
 	}
-	else if ( hover_toparea )
+	else if ( $Toparea.length )
 	{
-		hover_toparea.hide();
-	}
-
-	var hover = $(divHover);
-	
-	//if ( true || !hover.target || hover.target != elem )
-	{
-		// "show" the hover, but not "visible", letting us do some positioning
-		hover.style.visibility = 'hidden';
-		hover.show();
-		
-		hover.clonePosition( elem, {setWidth: false, setHeight: false} );
-		var hover_box = hover.down( '.hover_box' );
-		var hover_arrow_left = hover.down( '.hover_arrow_left' );
-		var hover_arrow_right = hover.down( '.hover_arrow_right' );
-		
-		if ( Prototype.Browser.IE )
-		{
-						hover.style.paddingTop = '12px';
-			hover_box.style.marginTop = '0px';
-		}
-
-
-				
-		var hover_arrow = hover_arrow_left;
-		var boxRightViewport = elem.viewportOffset().left + parseInt( elem.getDimensions().width ) + hover_box.getWidth() + 14;
-		var nSpaceRight = document.viewport.getWidth() - boxRightViewport;
-		var nSpaceLeft = parseInt( hover.style.left ) - hover.getWidth();
-		if ( boxRightViewport > document.viewport.getWidth() && nSpaceLeft > nSpaceRight)
-		{
-						hover.style.left = ( parseInt( hover.style.left ) - hover.getWidth() + 8 ) + 'px';
-			hover_arrow = hover_arrow_right;
-			hover_arrow_left.hide();
-			hover_arrow_right.show();
-		}
-		else
-		{
-						hover.style.left = ( parseInt( hover.style.left ) + parseInt( elem.getDimensions().width ) - 8 ) + 'px';
-			hover_arrow_left.show();
-			hover_arrow_right.hide();
-		}
-		
-		var nTopAdjustment = 0;
-		
-						if ( elem.getDimensions().height < 98 )
-			nTopAdjustment =  elem.getDimensions().height / 2 - 49;
-		hover.style.top = ( ( parseInt( hover.style.top ) - 13 ) + nTopAdjustment ) + 'px';
-
-		var boxTopViewport = elem.viewportOffset().top + nTopAdjustment;
-		if ( boxTopViewport + hover_box.getHeight() + 8 > document.viewport.getHeight() )
-		{
-			var nViewportAdjustment = ( hover_box.getHeight() + 8 ) - ( document.viewport.getHeight() - boxTopViewport );
-						nViewportAdjustment = Math.min( hover_box.getHeight() - 74, nViewportAdjustment );
-			hover.style.top = ( parseInt( hover.style.top ) - nViewportAdjustment ) + 'px';
-			
-			hover_arrow.style.top = ( 48 + nViewportAdjustment ) + 'px';
-		}
-		else
-		{
-			hover_arrow.style.top = '';
-		}
-		
-		hover.hide();
-		hover.style.visibility = '';
-		
-		hover.target = elem;
+		$Toparea.hide();
 	}
 	
-	ShowWithFade( hover );
+
+	// "show" the hover, but not "visible", letting us do some positioning
+	$Hover.css( 'visibility', 'hidden' );
+	$Hover.show();
+
+	var $HoverBox = $Hover.find( '.hover_box' );
+	var $HoverArrowLeft = $Hover.find( '.hover_arrow_left' );
+	var $HoverArrowRight = $Hover.find( '.hover_arrow_right' );
+
+	var offset = $Elem.offset();
+	var nWindowScrollTop = $J(window).scrollTop();
+	var nWindowScrollLeft = $J(window).scrollLeft();
+	var nViewportWidth = $J(window).width();
+	var nViewportHeight = $J(window).height();
+
+		var $HoverArrow = $HoverArrowLeft;
+	var boxRightViewport = ( offset.left - nWindowScrollLeft ) + $Elem.outerWidth() + $HoverBox.width() + 14;
+	var nSpaceRight = nViewportWidth - boxRightViewport;
+	var nSpaceLeft = offset.left - $Hover.width();
+	if ( nSpaceRight < 14 && nSpaceLeft > nSpaceRight )
+	{
+				$Hover.css( 'left', ( offset.left - $Hover.outerWidth() + 8 ) + 'px' );
+		$HoverArrow = $HoverArrowRight;
+		$HoverArrowLeft.hide();
+		$HoverArrowRight.show();
+	}
+	else
+	{
+				$Hover.css( 'left', ( offset.left + $Elem.outerWidth() - 8 ) + 'px' );
+		$HoverArrowLeft.show();
+		$HoverArrowRight.hide();
+	}
+
+	var nTopAdjustment = 0;
+
+			if ( $Elem.height() < 98 )
+		nTopAdjustment =  Math.floor( $Elem.height() ) / 2 - 49;
+	var nDesiredHoverTop = offset.top - 13 + nTopAdjustment;
+	$Hover.css( 'top', nDesiredHoverTop + 'px' );
+
+	var nTargetTopViewport = ( offset.top - nWindowScrollTop ) + nTopAdjustment;
+	if ( nTargetTopViewport + $HoverBox.height() + 8 > nViewportHeight )
+	{
+		var nViewportAdjustment = ( $HoverBox.height() + 8 ) - ( nViewportHeight - nTargetTopViewport );
+
+				nViewportAdjustment = Math.min( $HoverBox.height() - 74, nViewportAdjustment );
+		var nViewportAdjustedHoverTop = offset.top - nViewportAdjustment;
+		$Hover.css( 'top', nViewportAdjustedHoverTop + 'px' );
+
+		$HoverArrow.css( 'top', ( 48 + nDesiredHoverTop - nViewportAdjustedHoverTop ) + 'px' );
+	}
+	else
+	{
+		$HoverArrow.css( 'top', '' );
+	}
+
+	$Hover.hide();
+	$Hover.css( 'visibility', '' );
+
+	g_HoverState.target = $Elem[0];
+	
+	ShowWithFade( $Hover );
 }
 
 function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref )
@@ -833,7 +878,7 @@ function RegisterSteamOnWebPanelHiddenHandler( f )
 }
 
 
-Event.observe( document, 'dom:loaded', function() {
+$J( function() {
 	InstrumentLinks();
 
 	// add a jquery extension to handle our SNR stuff (we do this on load because jquery is included after this file)
@@ -850,7 +895,7 @@ Event.observe( document, 'dom:loaded', function() {
 
 function InstrumentLinks()
 {
-	$$('A').each( InstrumentLink );
+	$J('A').each( function() { InstrumentLink( this ); } );
 }
 
 function InstrumentLink( link )
@@ -866,13 +911,16 @@ function InstrumentLink( link )
 		if ( navinfo  )
 		{
 			bIsInstrumented = true;
-			Event.observe( link, 'click', InstrumentedLinkOnClick.bindAsEventListener( null, link ) );
+			$J(link).click( function( event ) { InstrumentedLinkOnClick( event, link ); } );
 		}
-		var outcinfo = link.href.match( /[\?&]outc=([^&]*)(&|$)/ );
-		if ( outcinfo && !bIsInstrumented )
+		else
 		{
-			bIsInstrumented = true;
-			Event.observe( link, 'click', InstrumentedLinkOnClick.bindAsEventListener( null, link ) );
+			var outcinfo = link.href.match(/[\?&]outc=([^&]*)(&|$)/);
+			if ( outcinfo )
+			{
+				bIsInstrumented = true;
+				$J(link).click( function (event) { InstrumentedLinkOnClick(event, link); } );
+			}
 		}
 		if ( bIsInstrumented )
 		{
@@ -937,39 +985,27 @@ var g_iActiveSpotlight = 0;
 
 function AnimateSpotlightTransition( iCurSpotlight, iNextSpotlight )
 {
-	var curSpotlight = $('spotlight_' + iCurSpotlight );
-	var nextSpotlight = $('spotlight_' + iNextSpotlight );
+	var $Spotlight = $JFromIDOrElement('spotlight_' + iCurSpotlight );
+	var $NextSpotlight = $JFromIDOrElement('spotlight_' + iNextSpotlight );
 	
-	var elemScroll = $('spotlight_scroll');
-	if ( elemScroll.effect )
-		elemScroll.effect.cancel();
-	var curHeight = elemScroll.getHeight();
-	
-	if ( !elemScroll.style.height )
-		elemScroll.style.height = curHeight + 'px';
-	
-	curSpotlight.style.position = 'absolute';
-	nextSpotlight.style.position = 'absolute';
-	
-	var targetHeight = nextSpotlight.getHeight();
-	if ( targetHeight != curHeight )
-		elemScroll.effect = new Effect.Morph( elemScroll, { style: 'height: ' + targetHeight + 'px;', duration: 0.25 } );
-	
-	if ( Prototype.Browser.IE )
-	{
-		curSpotlight.hide();
-		nextSpotlight.show();
-	}
-	else
-	{
+	var $Scroll = $JFromIDOrElement('spotlight_scroll');
+	$Scroll.stop();
+	var curHeight = $Scroll.height();
 
-		if ( curSpotlight.effect ) curSpotlight.effect.cancel();
-		curSpotlight.effect = Effect.Fade( curSpotlight, {duration: 0.25 } );
-		
-	
-		if ( nextSpotlight.effect ) nextSpotlight.effect.cancel();
-		nextSpotlight.effect = new Effect.Appear( nextSpotlight, {duration: 0.25 } );
-	}
+	$Scroll.css( 'height', curHeight + 'px' );
+
+	$Spotlight.css( 'position', 'absolute' );
+	$NextSpotlight.css( 'position', 'absolute' );
+
+	var targetHeight = $NextSpotlight.height();
+	if ( targetHeight != curHeight )
+		$Scroll.animate( {height: targetHeight }, 250 );
+
+	$Spotlight.stop();
+	$Spotlight.fadeOut( 250 );
+
+	$NextSpotlight.stop();
+	$NextSpotlight.fadeTo( 200, 1.0 );	//fadeTo rather than fadeIn in case it was already in a fade
 }
 
 function NextSpotlight( cMaxSpotlights )
@@ -1004,18 +1040,98 @@ function PrevSpotlight( cMaxSpotlights )
 function UpdateSpotlightControls( cMaxSpotlights )
 {
 	if ( g_iActiveSpotlight < cMaxSpotlights - 1 )
-		$('spotlight_scroll_next').removeClassName( 'disabled' );
+		$JFromIDOrElement('spotlight_scroll_next').removeClass( 'disabled' );
 	else
-		$('spotlight_scroll_next').addClassName( 'disabled' );
+		$JFromIDOrElement('spotlight_scroll_next').addClass( 'disabled' );
 	
 	if ( g_iActiveSpotlight > 0 )
-		$('spotlight_scroll_prev').removeClassName( 'disabled' );
+		$JFromIDOrElement('spotlight_scroll_prev').removeClass( 'disabled' );
 	else
-		$('spotlight_scroll_prev').addClassName( 'disabled' );
+		$JFromIDOrElement('spotlight_scroll_prev').addClass( 'disabled' );
 
 	if ( $('spotlight_scroll_count_cur') )
-		$('spotlight_scroll_count_cur').update( g_iActiveSpotlight + 1 );
+		$JFromIDOrElement('spotlight_scroll_count_cur').text( g_iActiveSpotlight + 1 );
 }
+
+function CSlider( $Container, $Grabber, args )
+{
+	this.m_$Container = $Container;
+	this.m_$Grabber = $Grabber;
+	this.m_nMinVal = args.min || 0;
+	this.m_nMaxVal = args.max || 100;
+	this.m_nValue = args.value || 0;
+	this.m_fnOnChange = args.fnOnChange || function( value, bInDrag ) {};
+
+	this.m_$Grabber.css( 'position', 'absolute' );
+	this.SetValue( this.m_nValue );
+
+	var _this = this;
+	this.m_$Container.on( 'mousedown', function( event ) {
+		_this.CalcRatios();
+
+		if ( !_this.m_$Grabber.is( event.target ) )
+		{
+			// jump the grabber to this position and start the drag
+			var nPosition = event.pageX - _this.m_$Container.offset().left;
+			// we want the grabber centered under the mosue if possible
+			nPosition -= Math.floor( _this.m_$Grabber.width() / 2 );
+			var nNewPosition = Math.min( Math.max( nPosition, 0 ), _this.m_nWidth );
+
+			_this.m_$Grabber.css('left', nNewPosition + 'px' );
+			_this.m_nValue = nNewPosition / _this.m_flRatio;
+			_this.m_fnOnChange( _this.m_nValue, true );
+		}
+		var nInitialPosition = parseInt( _this.m_$Grabber.css('left') );
+		var nStartDragX = event.pageX;
+
+		$J(document).on( 'mousemove.CSlider', function( event ) {
+			var nDelta = event.pageX - nStartDragX;
+
+			var nNewPosition = Math.min( Math.max( nInitialPosition + nDelta, 0 ), _this.m_nWidth );
+
+			_this.m_$Grabber.css('left', nNewPosition + 'px' );
+			_this.m_nValue = nNewPosition / _this.m_flRatio;
+			_this.m_fnOnChange( _this.m_nValue, true );
+		});
+		$J(document).on( 'mouseup.CSlider', function( event ) {
+			$J(document).off('.CSlider');
+			_this.m_fnOnChange( _this.m_nValue, false );
+		})
+	});
+}
+
+CSlider.prototype.CalcRatios = function()
+{
+	var nGrabberWidth = this.m_$Grabber.width();
+	this.m_nWidth = this.m_$Container.width() - nGrabberWidth;
+
+	this.m_flRatio = this.m_nWidth / ( this.m_nMaxVal - this.m_nMinVal );
+}
+
+CSlider.prototype.SetValue = function( nValue, nAnimationSpeed )
+{
+	this.CalcRatios();
+
+	this.m_nValue = Math.min( Math.max( nValue, this.m_nMinVal ), this.m_nMaxVal );
+
+	var nNewPosition = Math.floor( ( this.m_nValue - this.m_nMinVal ) * this.m_flRatio );
+
+	this.m_$Grabber.stop();
+	if ( nAnimationSpeed )
+		this.m_$Grabber.animate( {left: nNewPosition }, nAnimationSpeed );
+	else
+		this.m_$Grabber.css( 'left',  nNewPosition + 'px' );
+}
+
+CSlider.prototype.SetRange = function( nMinVal, nMaxVal, nValue )
+{
+	this.m_nMinVal = nMinVal;
+	this.m_nMaxVal = nMaxVal;
+	if ( typeof nValue != 'undefined' )
+		this.m_nValue = nValue;
+	this.SetValue( this.m_nValue );
+}
+
 
 function InitDailyDealTimer( elTimer, nServerEndTime )
 {
@@ -1065,8 +1181,8 @@ var CCountdownManager = {
 		// if a few seconds have passed, we'll refresh
 		if ( !this.bReadyForRefresh && Math.round( new Date().getTime() / 1000 ) - this.tsInit >= 5 )
 		{
-			Event.observe( document, 'focus', this.doRefresh.bind(this) );
-			Event.observe( document, 'mousemove', this.doRefresh.bind(this) );
+			var _this = this;
+			$J(document).on( 'focus mousemove', function() { _this.doRefresh(); } );
 			this.bReadyForRefresh = true;
 		}
 	},
@@ -1081,119 +1197,111 @@ var CCountdownManager = {
 	}
 };
 
-var Countdown = Class.create( {
-	elClock: null,
-	nEndTime: null,
-	bEnded: false,
-	cbkExpired: null,
+function Countdown( elClock, nEndTimeLocalTime )
+{
+	this.$Clock = $JFromIDOrElement( elClock );
+	this.nEndTime = nEndTimeLocalTime;
+	this.bEnded = false;
+	this.cbkExpired = null;
 
-	initialize: function( elClock, nEndTimeLocalTime )
+	if ( this.$Clock.length && nEndTimeLocalTime )
 	{
-		this.elClock = elClock;
-		this.nEndTime = nEndTimeLocalTime;
-		this.bEnded = false;
-		this.cbkExpired = null;
-
 		this.refreshClock();
-		CCountdownManager.registerCountdown( this );
-	},
-
-	setCallback: function( cbkExpired )
-	{
-		this.cbkExpired = cbkExpired;
-	},
-	
-	refreshClock: function()
-	{
-		if ( this.bEnded )
-			return;
-		
-		var timeCur = Math.round( new Date().getTime() / 1000 );
-		var secsRemaining = this.nEndTime - timeCur;
-	
-		if ( secsRemaining < 0 )
-		{
-			this.bEnded = true;
-			secsRemaining = 0;
-		}
-
-		var remainDays = Math.floor( secsRemaining / 86400 );
-		var remainHours = Math.floor( ( secsRemaining % 86400 ) / 3600 );
-		var remainMinutes = Math.floor( ( secsRemaining % 3600 ) / 60 );
-		var remainSeconds = secsRemaining % 60;
-
-		if ( this.cbkExpired && secsRemaining < 1 )
-		{
-			this.cbkExpired();
-			this.cbkExpired = null;
-		}
-
-		this.render( remainDays, remainHours, remainMinutes, remainSeconds );
-	},
-
-	render: function( remainDays, remainHours, remainMinutes, remainSeconds )
-	{
-		var str = '';
-		if ( remainDays < 3 )
-		{
-			remainHours += remainDays * 24;
-		}
-		else
-		{
-			str += remainDays + ' days ';
-		}
-		str += (remainHours < 10 ? '0' : '') + remainHours + ':';
-		str += (remainMinutes < 10 ? '0' : '') + remainMinutes + ':';
-		str += (remainSeconds < 10 ? '0' : '') + remainSeconds;
-		this.elClock.update( str );
+		CCountdownManager.registerCountdown(this);
 	}
-});
+}
 
-var GraphicalCountdown = Class.create( Countdown, {
-	strImagePath: null,
-	strElPrefix: null,
-	strExtension: '.png',
-	rgLastVals: null,
+Countdown.prototype.setCallback = function( cbkExpired )
+{
+	this.cbkExpired = cbkExpired;
+}
 
-	initialize: function( $super, nEndTimeLocalTime, strImagePath, strElPrefix )
+Countdown.prototype.refreshClock = function()
+{
+	if ( this.bEnded )
+		return;
+
+	var timeCur = Math.round( new Date().getTime() / 1000 );
+	var secsRemaining = this.nEndTime - timeCur;
+
+	if ( secsRemaining < 0 )
 	{
-		this.strImagePath = strImagePath;
-		this.strElPrefix = strElPrefix;
-		this.rgLastVals = {};
-		$super( null, nEndTimeLocalTime );
-	},
+		this.bEnded = true;
+		secsRemaining = 0;
+	}
 
-	render: function( remainDays, remainHours, remainMinutes, remainSeconds )
+	var remainDays = Math.floor( secsRemaining / 86400 );
+	var remainHours = Math.floor( ( secsRemaining % 86400 ) / 3600 );
+	var remainMinutes = Math.floor( ( secsRemaining % 3600 ) / 60 );
+	var remainSeconds = secsRemaining % 60;
+
+	if ( this.cbkExpired && secsRemaining < 1 )
+	{
+		this.cbkExpired();
+		this.cbkExpired = null;
+	}
+
+	this.render( remainDays, remainHours, remainMinutes, remainSeconds );
+}
+
+Countdown.prototype.render = function( remainDays, remainHours, remainMinutes, remainSeconds )
+{
+	var str = '';
+	if ( remainDays < 3 )
 	{
 		remainHours += remainDays * 24;
-		this.setImage( 'hours_tens', Math.floor( remainHours / 10 ) );
-		this.setImage( 'hours_units', remainHours % 10 );
-		this.setImage( 'minutes_tens', Math.floor( remainMinutes / 10 ) );
-		this.setImage( 'minutes_units', remainMinutes % 10 );
-		this.setImage( 'seconds_tens', Math.floor( remainSeconds / 10 ) );
-		this.setImage( 'seconds_units', remainSeconds % 10 );
-	},
-
-	setImage: function( idSuffix, val )
-	{
-		if ( this.rgLastVals[idSuffix] != val )
-		{
-			$(this.strElPrefix + idSuffix).src = this.strImagePath + val + this.strExtension;
-			this.rgLastVals[idSuffix] = val;
-		}
 	}
-});
+	else
+	{
+		str += remainDays + ' days ';
+	}
+	str += (remainHours < 10 ? '0' : '') + remainHours + ':';
+	str += (remainMinutes < 10 ? '0' : '') + remainMinutes + ':';
+	str += (remainSeconds < 10 ? '0' : '') + remainSeconds;
+	this.$Clock.text( str );
+}
+
+function GraphicalCountdown( nEndTimeLocalTime, strImagePath, strElPrefix )
+{
+	this.strImagePath = strImagePath;
+	this.strElPrefix = strElPrefix;
+	this.strExtension = '.png';
+	this.rgLastVals = {};
+	Countdown.apply( this, [ null, nEndtimeLocalTime ] );
+}
+GraphicalCountdown.prototype = new Countdown;
+GraphicalCountdown.prototype.constructor = GraphicalCountdown;
+
+GraphicalCountdown.prototype.render = function( remainDays, remainHours, remainMinutes, remainSeconds )
+{
+	remainHours += remainDays * 24;
+	this.setImage( 'hours_tens', Math.floor( remainHours / 10 ) );
+	this.setImage( 'hours_units', remainHours % 10 );
+	this.setImage( 'minutes_tens', Math.floor( remainMinutes / 10 ) );
+	this.setImage( 'minutes_units', remainMinutes % 10 );
+	this.setImage( 'seconds_tens', Math.floor( remainSeconds / 10 ) );
+	this.setImage( 'seconds_units', remainSeconds % 10 );
+}
+
+GraphicalCountdown.prototype.setImage = function( idSuffix, val )
+{
+	if ( this.rgLastVals[idSuffix] != val )
+	{
+		$(this.strElPrefix + idSuffix).src = this.strImagePath + val + this.strExtension;
+		this.rgLastVals[idSuffix] = val;
+	}
+}
 
 
 function LaunchWebChat()
 {
-	if ( $('webchat_launch_iframe') )
-		$('webchat_launch_iframe').remove();
+	if ( $JFromIDOrElement('webchat_launch_iframe').length )
+		$JFromIDOrElement('webchat_launch_iframe').remove();
 
-	var iframe = new Element( 'iframe', {id: 'webchat_launch_iframe' } );
+	var iframe = $J( '<iframe/>', {id: 'webchat_launch_iframe' } );
 	iframe.hide();
-	iframe.src='http://steamcommunity.com/chat/launch/'
-	$(document.body).appendChild( iframe );
+	iframe.attr( src, 'http://steamcommunity.com/chat/launch/' );
+	$J(document.body).append( iframe );
 }
 
 
@@ -1203,141 +1311,153 @@ var g_oSuggestParams;
 
 function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVersion, elemSuggestionCtn, elemSuggestions )
 {
-	elemTerm = $(elemTerm);
-	elemSuggestionCtn = elemSuggestionCtn ? $(elemSuggestionCtn) : $( 'searchterm_options');
-	elemSuggestions = elemSuggestions ? $(elemSuggestions) : $('search_suggestion_contents');
+	var $Term = $JFromIDOrElement(elemTerm);
+	var $SuggestionsCtn = elemSuggestionCtn ? $JFromIDOrElement(elemSuggestionCtn) : $J('#searchterm_options');
+	var $Suggestions = elemSuggestions ? $JFromIDOrElement(elemSuggestions) : $J('#search_suggestion_contents');
 
-	$J(elemTerm).parents('div.searchbox').click( function( event ) {
+	$Term.parents('div.searchbox').click( function( event ) {
 		if ( event.target && event.target.tagName != 'INPUT' )
 			$J(elemTerm).focus();
 	});
 
-	new Form.Element.DelayedObserver( elemTerm, 0.25, function( elem, value ) { SearchTimeout(elem, value, elemSuggestionCtn, elemSuggestions ); } );
-	elemTerm.observe( 'keydown', SearchSuggestOnKeyDown.bindAsEventListener( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
-	elemTerm.observe( 'click', SearchSuggestClearDefaultSearchText.bind( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
-	elemTerm.observe( 'focus', SearchSuggestClearDefaultSearchText.bind( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
-	elemTerm.observe( 'blur', SearchSuggestSetDefaultSearchText.bind( null, elemTerm, elemSuggestionCtn, elemSuggestions ) );
+	// handle make our delayed request
+	var sLastVal = $Term.val();
+	var nTermTimer = 0;
+	$Term.on( 'keyup paste', function( event ) {
+		var sNewVal = $Term.val();
+		if ( sNewVal != sLastVal )
+		{
+			sLastVal = sNewVal;
+			if ( nTermTimer )
+				window.clearTimeout( nTermTimer );
+
+			nTermTimer = window.setTimeout( function() {
+				SearchTimeout( $Term, $Term.val(), $SuggestionsCtn, $Suggestions );
+			}, 200);
+		}
+	});
+
+	$Term.on( 'keydown', function( event ) { SearchSuggestOnKeyDown( event, $Term, $SuggestionsCtn, $Suggestions ); } );
+	$Term.on( 'click focus', function( event ) { SearchSuggestClearDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions ); } );
+	$Term.on( 'blur', function( event ) { SearchSuggestSetDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions ); } );
 	g_oSuggestParams = {
 		cc: cc,
 		l:l,
 		v: strPackageXMLVersion
 	}
 }
-function SearchTimeout( elem, value, elemSuggestionCtn, elemSuggestions )
+function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions )
 {
 	if ( value )
 	{
 		var parameters = {term: value, f: 'games' };
-		Object.extend( parameters, g_oSuggestParams );
-		new Ajax.Updater( elemSuggestions, 'http://store.steampowered.com/search/suggest',
-			{
-				parameters: parameters,
-				method: 'GET',
-				onComplete: function() {
-					$J(elemSuggestions).InstrumentLinks();
-					GDynamicStore.DecorateDynamicItems( $J(elemSuggestions) );
-					elemSuggestions.select('a.match').each( function (e) { e.observe( 'mouseover', SearchSuggestOnMouseOver.bindAsEventListener( null, e ) ); } );
-					ShowSuggestionsAsNecessary( false, elemSuggestionCtn, elemSuggestions );
-				}
+		$J.extend( parameters, g_oSuggestParams );
+		$J.get( 'http://store.steampowered.com/search/suggest', parameters).done( function( html ) {
+			$Suggestions.html( html );
+			$Suggestions.InstrumentLinks();
+			GDynamicStore.DecorateDynamicItems( $Suggestions );
+			$Suggestions.find('a.match').each( function () {
+				var el = this;
+				$J(el).on( 'mouseover', function( event ) { SearchSuggestOnMouseOver.bindAsEventListener( event, el ); } );
 			} );
+			ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions );
+		} );
 	}
 	else
 	{
-		elemSuggestions.update( '' );
-		ShowSuggestionsAsNecessary( false, elemSuggestionCtn, elemSuggestions );
+		$Suggestions.empty();
+		ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions );
 	}
 }
 
-function ShowSuggestionsAsNecessary( bForceHide, elemSuggestionCtn, elemSuggestions )
+function ShowSuggestionsAsNecessary( bForceHide, $SuggestionsCtn, $Suggestions )
 {
-	var elem = elemSuggestionCtn;
-	if ( elemSuggestions.childElements().length > 0 && !bForceHide )
+	if ( $Suggestions.children().length > 0 && !bForceHide )
 	{
-		ShowWithFade( elem );
+		ShowWithFade( $SuggestionsCtn );
 	}
 	else
 	{
-		HideWithFade( elem );
+		HideWithFade( $SuggestionsCtn );
 	}
 }
-function SearchSuggestOnKeyDown( event, elem, elemSuggestionCtn, elemSuggestions )
+function SearchSuggestOnKeyDown( event, $Term, $SuggestionsCtn, $Suggestions )
 {
-	if ( event.keyCode == Event.KEY_ESC )
+	if ( event.keyCode == 27 /* Event.KEY_ESC */ )
 	{
-		ShowSuggestionsAsNecessary( true );
+		ShowSuggestionsAsNecessary( true, $SuggestionsCtn, $Suggestions );
 	}
-	else if ( event.keyCode == Event.KEY_RETURN
-		|| event.keyCode == Event.KEY_UP
-		|| event.keyCode == Event.KEY_DOWN )
+	else if ( event.keyCode == 13 /* Event.KEY_RETURN */
+		|| event.keyCode == 38 /* Event.KEY_UP */
+		|| event.keyCode == 40 /* Event.KEY_DOWN */ )
 	{
-		if ( !elemSuggestionCtn.visible() || elemSuggestionCtn.hiding )
+		if ( !$SuggestionsCtn.is( ':visible' ) )
 			return;
 
-		var elemCurSuggestion = elemSuggestions.down('.focus');
-		var elemNewSuggestion = null;
+		var $CurSuggestion = $Suggestions.children('.focus');
+		var $NewSuggestion = $J();
 
-		if ( event.keyCode == Event.KEY_RETURN )
+		if ( event.keyCode == 13 /* Event.KEY_RETURN */ )
 		{
-			if ( elemCurSuggestion )
+			if ( $CurSuggestion.length )
 			{
-				window.location = elemCurSuggestion.href;
-				event.stop();
+				window.location = $CurSuggestion.attr( 'href' );
+				event.preventDefault();
 			}
 		}
 		else
 		{
-			if ( event.keyCode == Event.KEY_UP )
+			if ( event.keyCode == 38 /* Event.KEY_UP */ )
 			{
-				if ( elemCurSuggestion )
-					elemNewSuggestion = elemCurSuggestion.previous();
-				if ( !elemNewSuggestion )
-					elemNewSuggestion = elemSuggestions.down('a.match:last-child');
+				if ( $CurSuggestion.length )
+					$NewSuggestion = $CurSuggestion.prev();
+				if ( !$NewSuggestion.length )
+					$NewSuggestion = $Suggestions.children('a.match:last-child');
 			}
-			else if ( event.keyCode == Event.KEY_DOWN )
+			else if ( event.keyCode == 40 /* Event.KEY_DOWN */ )
 			{
-				if ( elemCurSuggestion )
-					elemNewSuggestion = elemCurSuggestion.next();
-				if ( !elemNewSuggestion )
-					elemNewSuggestion = elemSuggestions.down('a.match');
+				if ( $CurSuggestion.length )
+					$NewSuggestion = $CurSuggestion.next();
+				if ( !$NewSuggestion.length )
+					$NewSuggestion = $Suggestions.children('a.match:first-child');
 			}
 
-			if ( elemNewSuggestion  )
+			if ( $NewSuggestion.length  )
 			{
-				if ( elemCurSuggestion )
-					elemCurSuggestion.removeClassName( 'focus' );
-				elemNewSuggestion.addClassName( 'focus' );
+				$CurSuggestion.removeClass( 'focus' );
+				$NewSuggestion.addClass('focus');
 			}
 
 			//client webkit will move cursor on up/down
-			event.stop();
+			event.preventDefault();
 		}
 
 	}
 }
-function SearchSuggestOnMouseOver( event, elem )
+function SearchSuggestOnMouseOver( event, $Suggestion )
 {
-	elem.siblings().invoke( 'removeClassName', 'focus');
-	elem.addClassName( 'focus' );
+	$Suggestion.siblings().removeClass( 'focus');
+	$Suggestion.addClass( 'focus' );
 }
 
-function SearchSuggestClearDefaultSearchText( elem, elemSuggestionCtn, elemSuggestions )
+function SearchSuggestClearDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions )
 {
-	ShowSuggestionsAsNecessary( false, elemSuggestionCtn, elemSuggestions );
-	var text = elem.value;
+	ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions );
+	var text = $Term.val();
 	if ( text == 'search the store' )
 	{
-		elem.value = '';
-		$(elem).removeClassName( 'default' );
+		$Term.val( '' );
+		$Term.removeClass( 'default' );
 	}
 }
-function SearchSuggestSetDefaultSearchText( elem, elemSuggestionCtn, elemSuggestions )
+function SearchSuggestSetDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions )
 {
-	ShowSuggestionsAsNecessary( true, elemSuggestionCtn, elemSuggestions );
-	var text = elem.value;
+	ShowSuggestionsAsNecessary( true, $SuggestionsCtn, $Suggestions );
+	var text = $Term.val();
 	if ( text == '' )
 	{
-		elem.value = 'search the store';
-		$(elem).addClassName( 'default' );
+		$Term.val( 'search the store' );
+		$Term.addClass( 'default' );
 	}
 }
 function SearchSuggestCheckTerm( theform )
@@ -1619,6 +1739,400 @@ function Logout()
 	$Form.appendTo( 'body' );
 	$Form.submit();
 }
+
+function getBestAvailNavData()
+{
+	var navData = jQuery.data( document, 'x_oldnav' );
+	if ( navData == undefined )
+	{
+		navData = jQuery.data( document, 'x_oldref' );
+	}
+	if ( navData === undefined )
+	{
+		// try to get what we need from the URL !
+		var rg = window.location.href.match( /[\?&]snr=([^\?&]*)($|&)/ );
+		if ( rg )
+		{
+			navData = rg[1];
+		}
+	}
+	return  navData;
+}
+
+// Function to add a package to a cart, assumes form setup on the page
+function addToCart( subid, dedupe )
+{
+	try
+	{
+		// Find all of the add to cart buttons displayed on the page
+		var filterAllButtons='a.btn_addtocart_content';
+		// the filterString can be used to find the element that invoked us, since the subid appears within it
+		// note that href*= specifies that href contains the string
+		var filterString = 'a[href*=' + subid + ']';
+		// within the set of all buttons, get the index of the one that we are dealing with!
+		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
+		var allButtons = jQuery( filterAllButtons );
+		// do we have anything to examine?
+		if ( allButtons.length > 0 )
+		{
+
+			var navData = getBestAvailNavData();
+			var button;
+			var buttonOffset = { top : 0, left : 0 };
+			var buttonIndex = allButtons.index( jQuery( filterString ) );
+			//
+			//  Subscription pages have ambiguous add to cart buttons - we will try to 'dedupe' it !
+			//
+			if ( buttonIndex === -1 )
+			{
+				if ( dedupe !== undefined )
+				{
+					buttonIndex = dedupe;
+				}
+				else
+				{
+					//  There is a chance this we're mistaken if the .php generation of the page
+					//  didn't generate the addToCart() calls as we expect !
+					buttonIndex = 0;
+				}
+			}
+						button = allButtons.eq(buttonIndex);
+
+			//
+			//  If we are certain we know what button was clicked, then we'll provide info on the form!
+			//
+			if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
+			{
+				buttonOffset = button.offset();
+				var height = jQuery(window).height();
+				var width = jQuery(window).width();
+				//
+				//  We have all the components we want the standard button to submit to the server!
+				//  we will now add input fields to the form we intend to submit.
+				//
+				var filterStringForm = 'form[name=add_to_cart_'+subid+']';
+				var formSelector = jQuery( filterStringForm );
+				var begintime = jQuery.data(document, 'x_readytime');
+				var selecttime = 0.0;
+				if ( begintime !== undefined )
+				{
+					selecttime = new Date().getTime() - begintime;
+				}
+				if ( formSelector.length === 1 )
+				{
+					//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
+					if ( navData )
+					{
+						var pipeSplit = new RegExp( /\|/ );
+						var resultString = navData.split( pipeSplit )[0];
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
+					}
+				}
+			}
+		}
+	}
+	catch( e )
+	{
+		//console.log( e );
+			}
+	// Regardless of instrumentation failures, try to submit the form for the user.
+	try
+	{
+		document.forms['add_to_cart_'+subid].submit();
+	}
+	catch( e )
+	{
+		// swallow exceptions !
+	}
+
+}
+
+// Function to add a bundle to a cart, assumes form setup on the page
+function addBundleToCart( bundleid, dedupe )
+{
+	try
+	{
+		// Find all of the add to cart buttons displayed on the page
+		var filterAllButtons='a.btn_addtocart_content';
+		// the filterString can be used to find the element that invoked us, since the subid appears within it
+		// note that href*= specifies that href contains the string
+		var filterString = 'a[href*=' + bundleid + ']';
+		// within the set of all buttons, get the index of the one that we are dealing with!
+		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
+		var allButtons = jQuery( filterAllButtons );
+		// do we have anything to examine?
+		if ( allButtons.length > 0 )
+		{
+
+			var navData = getBestAvailNavData();
+			var button;
+			var buttonOffset = { top : 0, left : 0 };
+			var buttonIndex = allButtons.index( jQuery( filterString ) );
+			//
+			//  Subscription pages have ambiguous add to cart buttons - we will try to 'dedupe' it !
+			//
+			if ( buttonIndex === -1 )
+			{
+				if ( dedupe !== undefined )
+				{
+					buttonIndex = dedupe;
+				}
+				else
+				{
+					//  There is a chance this we're mistaken if the .php generation of the page
+					//  didn't generate the addToCart() calls as we expect !
+					buttonIndex = 0;
+				}
+			}
+						button = allButtons.eq(buttonIndex);
+
+			//
+			//  If we are certain we know what button was clicked, then we'll provide info on the form!
+			//
+			if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
+			{
+				buttonOffset = button.offset();
+				var height = jQuery(window).height();
+				var width = jQuery(window).width();
+				//
+				//  We have all the components we want the standard button to submit to the server!
+				//  we will now add input fields to the form we intend to submit.
+				//
+				var filterStringForm = 'form[name=add_to_cart_'+bundleid+']';
+				var formSelector = jQuery( filterStringForm );
+				var begintime = jQuery.data(document, 'x_readytime');
+				var selecttime = 0.0;
+				if ( begintime !== undefined )
+				{
+					selecttime = new Date().getTime() - begintime;
+				}
+				if ( formSelector.length === 1 )
+				{
+					//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
+					if ( navData )
+					{
+						var pipeSplit = new RegExp( /\|/ );
+						var resultString = navData.split( pipeSplit )[0];
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
+					}
+				}
+			}
+		}
+	}
+	catch( e )
+	{
+		//console.log( e );
+			}
+	// Regardless of instrumentation failures, try to submit the form for the user.
+	try
+	{
+		document.forms['add_bundle_to_cart_'+bundleid].submit();
+	}
+	catch( e )
+	{
+		// swallow exceptions !
+	}
+
+}
+
+function addAllDlcToCart()
+{
+	try
+	{
+		// Find all of the add to cart buttons displayed on the page
+		var filterAllButtons='a.btn_addtocart_content';
+		// the filterString can be used to find the element that invoked us, since the subid appears within it
+		// note that href*= specifies that href contains the string
+		var filterString = 'a[href*=addAllDlcToCart]';
+		// within the set of all buttons, get the index of the one that we are dealing with!
+		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
+		var allButtons = jQuery( filterAllButtons );
+		// do we have anything to examine?
+		if ( allButtons.length > 0 )
+		{
+
+			var navData = getBestAvailNavData();
+			var button = null;
+			var buttonOffset = { top : 0, left : 0 };
+			var buttonIndex = allButtons.index( jQuery( filterString ) );
+			if ( buttonIndex !== -1 )
+			{
+				button = allButtons.eq(buttonIndex);
+			}
+			//
+			//  If we are certain we know what button was clicked, then we'll provide info on the form!
+			//
+			if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
+			{
+				buttonOffset = button.offset();
+				var height = jQuery(window).height();
+				var width = jQuery(window).width();
+				//
+				//  We have all the components we want the standard button to submit to the server!
+				//  we will now add input fields to the form we intend to submit.
+				//
+				var filterStringForm = 'form[name=add_all_dlc_to_cart]';
+				var formSelector = jQuery( filterStringForm );
+				var begintime = jQuery.data(document, 'x_readytime');
+				var selecttime = 0.0;
+				if ( begintime !== undefined )
+				{
+					selecttime = new Date().getTime() - begintime;
+				}
+				if ( formSelector.length === 1 )
+				{
+					//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
+					if ( navData )
+					{
+						var pipeSplit = new RegExp( /\|/ );
+						var resultString = navData.split( pipeSplit )[0];
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
+					}
+				}
+			}
+		}
+	}
+	catch( e )
+	{
+		//console.log( e );
+			}
+
+	try
+	{
+		document.forms['add_all_dlc_to_cart'].submit();
+	}
+	catch( e )
+	{
+	}
+}
+
+function removeFromCart( gid )
+{
+	try
+	{
+		// Find all of the add to cart buttons displayed on the page
+		var filterAllButtons='a.remove_link';
+		// the filterString can be used to find the element that invoked us, since the subid appears within it
+		// note that href*= specifies that href contains the string
+		var filterString = 'a[href*=' + gid + ']';
+		// within the set of all buttons, get the index of the one that we are dealing with!
+		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
+		var allButtons = jQuery( filterAllButtons );
+		// do we have anything to examine?
+
+		// do we have anything to examine?
+		if ( allButtons.length > 0 )
+		{
+			var navData = getBestAvailNavData();
+			var buttonIndex = allButtons.index( jQuery( filterString ) );
+			//
+			var button = allButtons.filter( jQuery( filterString ) );
+			var buttonOffset = { top : 0, left : 0 };
+			if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
+			{
+				buttonOffset = button.offset();
+				var height = jQuery(window).height();
+				var width = jQuery(window).width();
+				//
+				//  We have all the components we want the standard button to submit to the server!
+				//  we will now add input fields to the form we intend to submit.
+				//
+				var filterStringForm = 'form[name=remove_line_item]';
+				var formSelector = jQuery( filterStringForm );
+				var begintime = jQuery.data(document, 'x_readytime');
+				var selecttime = 0.0;
+				if ( begintime !== undefined )
+				{
+					selecttime = new Date().getTime() - begintime;
+				}
+				if ( formSelector.length === 1 )
+				{
+					//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( formSelector  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
+					if ( navData )
+					{
+						var pipeSplit = new RegExp( /\|/ );
+						var resultString = navData.split( pipeSplit )[0];
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
+					}
+				}
+			}
+		}
+	}
+	catch( e )
+	{
+			}
+	try
+	{
+		document.getElementById('line_item_to_remove_gid').value = gid;
+		document.forms['remove_line_item'].submit();
+	}
+	catch( e )
+	{
+			}
+}
+
+function dropdownSelectOption( dropdownName, subId, inCart )
+{
+	try
+	{
+				$('add_to_cart_' + dropdownName + '_value').value = subId;
+		$('add_to_cart_' + dropdownName + '_selected_text').innerHTML = $('add_to_cart_' + dropdownName + '_menu_option_' + subId).innerHTML;
+		$('add_to_cart_' + dropdownName + '_description_text').innerHTML = $('add_to_cart_' + dropdownName + '_menu_option_description_' + subId).innerHTML;
+		$('add_to_cart_' + dropdownName + '_add_button').style.display = inCart ? 'none' : 'block';
+		$('add_to_cart_' + dropdownName + '_in_cart_button').style.display = inCart ? 'block' : 'none';
+		HideMenu('add_to_cart_' + dropdownName + '_pulldown', 'add_to_cart_' + dropdownName + '_menu');
+	}
+	catch( e)
+	{
+			}
+}
+
+function dropdownAddToCart( dropdownName )
+{
+	try
+	{
+				if ($('add_to_cart_' + dropdownName + '_value').value == '')
+		{
+			ShowMenu( $('add_to_cart_' + dropdownName + '_pulldown'), 'add_to_cart_' + dropdownName + '_menu' );
+		}
+		else
+		{
+			addToCart( dropdownName );
+		}
+	}
+	catch( e)
+	{
+			}
+}
+
 
 function AgeGateClear()
 {
