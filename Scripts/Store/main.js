@@ -131,15 +131,16 @@ function RowHeightForTab( tab )
 function TabSelect( elem, target )
 {
 	$J('#last_tab').val(target);
-	$(elem).siblings().invoke( 'removeClassName', 'active')
-	$(elem).addClassName( 'active' );
+	$Elem = $JFromIDOrElement( elem );
+	$Elem.siblings().removeClass( 'active' );
+	$Elem.addClass( 'active' );
 
 	if( target == "tab_1_content" )
 		target = GetDefaultTabSelection();
 
-	var tab_content = $(target);
-	tab_content.siblings().invoke( 'hide' );
-	tab_content.show();
+	var $Content = $JFromIDOrElement(target);
+	$Content.siblings().hide();
+	$Content.show();
 
 	if ( typeof GDynamicStore != 'undefined' )
 	{
