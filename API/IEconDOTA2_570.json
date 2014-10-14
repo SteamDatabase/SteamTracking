@@ -59,6 +59,19 @@
             ]
         },
         {
+            "name": "GetItemIconPath",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "iconname",
+                    "type": "string",
+                    "optional": false,
+                    "description": "The item icon name to get the CDN path of"
+                }
+            ]
+        },
+        {
             "name": "GetRarities",
             "version": 1,
             "httpmethod": "GET",
