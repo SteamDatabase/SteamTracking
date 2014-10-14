@@ -387,6 +387,7 @@ function Curator_CreateOrEditRecommendation( groupid, create_only )
 	// create the recommendation
 	$J.ajax({
 		url: 'https://steamcommunity.com/groups/' + groupid + '/createrecommendation/',
+		type: 'POST',
 		data: {
 			sessionID: g_sessionID,
 			appid: $J('#curationAppIDInput').val(),
@@ -428,6 +429,7 @@ function Curator_Follow( groupid, bFollow )
 {
 	$J.ajax({
 		url: 'https://steamcommunity.com/groups/' + groupid + '/followcurator/',
+		type: 'POST',
 		data: {
 			sessionID: g_sessionID,
 			follow: bFollow
@@ -475,6 +477,7 @@ function Curator_DeleteRecommendation( groupid, appid, appname )
 	dialog.done( function( reason ) {
 		$J.ajax({
 			url: 'https://steamcommunity.com/groups/' + groupid + '/deleterecommendation/',
+			type: 'POST',
 			data: {
 				sessionID: g_sessionID,
 				appid: appid
@@ -506,6 +509,7 @@ function Curator_SetTagline( groupid, tagline )
 {
 	$J.ajax({
 		url: 'https://steamcommunity.com/groups/' + groupid + '/settagline/',
+		type: 'POST',
 		data: {
 			sessionID: g_sessionID,
 			tagline: tagline

@@ -87,11 +87,26 @@ function ScrollToLast()
 	}
 }
 
+function DisplayWaitingForContent()
+{
+	waitingForContent = true;
+	$( 'GetMoreContentBtn' ).hide();
+	$( 'action_wait' ).show();
+}
+
 function DoneWaitingForContent()
 {
 	waitingForContent = false;
 	ScrollToLast();
-	$( 'GetMoreContentBtn' ).show();
+	if ( !$( 'MoreContentForm' + currentPage ) )
+	{
+		HideWithFade( $( 'GetMoreContentBtn' ) );
+		ShowWithFade( $( 'NoMoreContent' ) );
+	}
+	else
+	{
+		$('GetMoreContentBtn').show();
+	}
 	$( 'action_wait' ).hide();
 }
 
@@ -101,14 +116,10 @@ function CheckForMoreContent()
 		return;
 
 	if ( !$( 'MoreContentForm' + currentPage ) )
-	{
-		HideWithFade( $( 'GetMoreContentBtn' ) );
-		ShowWithFade( $( 'NoMoreContent' ) );
 		return;
-	}
-	waitingForContent = true;
-	$( 'GetMoreContentBtn' ).hide();
-	$( 'action_wait' ).show();
+
+	DisplayWaitingForContent();
+
 	$( 'MoreContentForm' + currentPage ).request( {
 		onComplete: function( transport )
 		{
@@ -124,21 +135,17 @@ function CheckForMoreContent()
 		},
 		onSuccess: function( transport )
 		{
-
-			currentPage++;
-			var newDiv = new Element ( 'div' );
-			newDiv.update( transport.responseText );
-			$( 'AppHubCards' ).appendChild( newDiv );
-			WaitForContentToLoad( currentPage );
-
-			// no more content?
-			if ( !$( 'MoreContentForm' + currentPage ) )
-			{
-				HideWithFade( $( 'GetMoreContentBtn' ) );
-				ShowWithFade( $( 'NoMoreContent' ) );
-			}
+			AddContentToPage( $J(transport.responseText) );
 		}
 	} );
+}
+
+function AddContentToPage( $Content )
+{
+	currentPage++;
+
+	$J( '#AppHubCards' ).append( $Content );
+	WaitForContentToLoad( currentPage );
 }
 
 function InfiniteScrollingCheckForMoreContent()
@@ -228,7 +235,10 @@ function ShowContent( page )
 		$J('#page' + page + ' [id^="ban_btn_"]').show();
 	}
 
-	DoneWaitingForContent();
+	if ( ogCards.length )
+		window.setTimeout( DoneWaitingForContent, 10 );
+	else
+		DoneWaitingForContent();
 	ScrollToLast();
 }
 

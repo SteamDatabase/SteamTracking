@@ -52,6 +52,38 @@
 	word-wrap: break-word;
 }
 
+#main_bg {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width:958px;
+    background-repeat:repeat-y;
+}
+
+#main_blue {
+    margin:0;
+    padding:0;
+    padding-top:50px;
+    padding-bottom:5px;
+    overflow: hidden;
+    word-wrap: break-word;
+    width:936px;
+    min-width:936px;
+    text-align:left;
+    padding-left:17px;
+    padding-right:5px;
+}
+
+.headerblue {
+    color: #67c1f5;
+    font-size: 26px;
+    font-family: "Motiva Sans Light";
+}
+
+.headerwhite {
+    color: #FFFFFF;
+    font-size: 26px;
+    font-family: "Motiva Sans Light";
+}
+
 .greyHR {
 	background-color:#4d4d4e;
 	width:669px;

@@ -1,17 +1,6 @@
 "use strict";
 
 
-function screenshot_popup( url, width, height )
-{
-	var append = '?';
-	if ( url.indexOf( '?' ) >= 0 )
-		append = '&';
-	if ( screen.width >= 1280 && screen.height >= 1024 )
-		popup( url+append+'size=1024', 1044, 803, 1, 1 );
-	else
-		popup( url+append+'size=800', 820, 635, 1, 1 );
-}
-
 function ShowEmbedWidget( )
 {
 	$J('#widget_create').show();
@@ -273,4 +262,262 @@ function ShowEULA( elLink )
 	var win = window.open( elLink.href,'eula','height=584,width=475,resize=yes,scrollbars=yes');
 	win.focus();
 }
+
+
+// formerly user_reviews_store.js
+
+var g_recommendationContents = [ 'friend', 'all', 'positive', 'negative' ];
+
+
+function OnRecommendationVotedUp( recommendationid )
+{
+	for ( var i = 0; i < g_recommendationContents.length; ++i )
+	{
+		$J( '#RecommendationVoteUpBtn' + g_recommendationContents[i] + recommendationid ).addClass( 'btn_active' );
+		$J( "#RecommendationVoteDownBtn" + g_recommendationContents[i] + recommendationid ).removeClass( "btn_active" );
+	}
+}
+
+function OnRecommendationVotedDown( recommendationid )
+{
+	for ( var i = 0; i < g_recommendationContents.length; ++i )
+	{
+		$J( '#RecommendationVoteUpBtn' + g_recommendationContents[i] + recommendationid ).removeClass( 'btn_active' );
+		$J( "#RecommendationVoteDownBtn" + g_recommendationContents[i] + recommendationid ).addClass( "btn_active" );
+	}
+}
+
+function RequestCurrentUserRecommendationVotes( recommendationIDs )
+{
+	if ( recommendationIDs.length == 0 )
+	{
+		return;
+	}
+
+	$J.post( 'http://store.steampowered.com//userreviews/ajaxgetvotes/', {
+			'recommendationids' : recommendationIDs
+		}
+	).done( function( response ) {
+			if ( response.success == 1 )
+			{
+				var votes = response.votes;
+				for ( var i = 0; i < votes.length; ++i )
+				{
+					var vote = votes[i];
+					if ( vote.voted_up )
+					{
+						OnRecommendationVotedUp( vote.recommendationid );
+					}
+					else if ( vote.voted_down )
+					{
+						OnRecommendationVotedDown( vote.recommendationid );
+					}
+				}
+			}
+		} );
+}
+
+function UserReviewVoteUp( id )
+{
+	UserReview_Rate( id, true, 'http://store.steampowered.com/',
+		function( rgResults ) {
+			OnRecommendationVotedUp( id );
+		}
+	);
+}
+
+function UserReviewVoteDown( id )
+{
+	UserReview_Rate( id, false, 'http://store.steampowered.com/',
+		function( rgResults ) {
+			OnRecommendationVotedDown( id );
+		}
+	);
+}
+
+function UserReviewShowMore( id, context )
+{
+	$J('#ReviewContent'+context+id).parent().removeClass('partial');
+	$J('#ReviewContent'+context+id).parent().addClass('expanded');
+}
+
+function LoadMoreReviews( appid, startOffset, dayRange, context, language )
+{
+	$J( "#ViewAllReviews" + context ).remove();
+	$J( "#LoadMoreReviews" + context ).remove();
+	$J( "#LoadingMoreReviews" + context ).show();
+
+	var container = $J( "#Reviews_" + context );
+
+	new Ajax.Request( 'http://store.steampowered.com//appreviews/' + appid,
+		{
+			method: 'GET',
+			parameters: {
+				'start_offset' : startOffset,
+				'day_range' : dayRange,
+				'filter' : context,
+				'language' : language
+			},
+			onSuccess: function( transport )
+			{
+				if ( transport.responseJSON.success == 1 )
+				{
+					$J( "#LoadingMoreReviews" + context ).remove();
+
+					// remove duplicates
+					var recommendationIDs = [];
+					var temp = $J('<div></div>');
+					temp.append( transport.responseJSON.html );
+					for ( var i = 0; i < transport.responseJSON.recommendationids.length; ++i )
+					{
+						var recommendationid = transport.responseJSON.recommendationids[i];
+						var elemID = "#ReviewContent" + context + recommendationid;
+						if ( $J( elemID ).length != 0 )
+						{
+							temp.find( elemID ).parent().remove();
+						}
+						else
+						{
+							recommendationIDs.push( recommendationid );
+						}
+					}
+
+					container.append( temp.children() );
+
+					// all dupes, request more
+					if ( transport.responseJSON.recommendationids.length != 0 && recommendationIDs.length == 0 )
+					{
+						LoadMoreReviews(appid, startOffset + transport.responseJSON.recommendationids.length, transport.responseJSON.dayrange, context, language );
+					}
+					else
+					{
+						CollapseLongReviews();
+						RequestCurrentUserRecommendationVotes( recommendationIDs );
+					}
+				}
+			}
+		} );
+}
+
+function SelectReviews( appid, context, reviewDayRange, language )
+{
+	$J( "#ReviewsTab_all" ).removeClass( "active" );
+	$J( "#ReviewsTab_positive" ).removeClass( "active" );
+	$J( "#ReviewsTab_negative" ).removeClass( "active" );
+	$J( "#ReviewsTab_" + context ).addClass( "active" );
+
+	$J( "#Reviews_all" ).hide();
+	$J( "#Reviews_positive" ).hide();
+	$J( "#Reviews_negative" ).hide();
+	$J( "#Reviews_" + context ).show();
+
+	var container = $J( "#Reviews_" + context );
+	if ( container.children().length == 0 )
+	{
+		LoadMoreReviews( appid, 0, reviewDayRange, context, language );
+	}
+}
+
+function CollapseLongReviews()
+{
+	$J('.review_box').each( function(j, i){
+		if( $J(i).outerHeight() > 400 )
+		{
+			if ( !$J(i).hasClass('expanded') )
+			{
+				$J(i).addClass('partial')
+			}
+		}
+	});
+}
+
+//formerly app_reporting.js
+
+var gReportedApp = false;
+function ShowReportDialog( nAppId )
+{
+	if ( gReportedApp )
+	{
+		return;
+	}
+
+	var content = $J('<div/>', {'class': 'app_report_dialog' } );
+
+	content.append( $J('<div/>', {'class': 'app_report_dialog_intro' } ).text('Please choose a reason why you are reporting this product.') );
+
+		var rgReportOptions = {"1":"Fraud - <span class=\"sub\">This software fraudulently attempts to gather sensitive information, such as your Steam credentials or financial data (e.g. credit card information).<\/span>","2":"Harmful - <span class=\"sub\">This software modifies a customer's computer in unexpected or harmful ways (e.g. is malware or a virus)<\/span>","3":"Hate Speech - <span class=\"sub\">Contains hate speech, i.e. speech that promotes hatred, violence or discrimination against groups or people based on ethnicity, religion, gender, age, disability or sexual orientation<\/span>","4":"Pornography - <span class=\"sub\">Contains pornography<\/span>","5":"Adult Content - <span class=\"sub\">Contains adult content that isn't appropriately labeled and age-gated<\/span>","6":"Defamatory - <span class=\"sub\">Contains Libelous or defamatory statements<\/span>","7":"Offensive - <span class=\"sub\">Contains content that is patently offensive or intended to shock or disgust viewers<\/span>","8":"Child Exploitation - <span class=\"sub\">Contains content that exploits children in any way<\/span>","11":"Legal Violation - <span class=\"sub\">Contains content that violates the laws in your jurisdiction<\/span>"};
+	var rgReportOptionElements = [];
+	for ( var eReportType in rgReportOptions )
+	{
+		var $ReportOption = $J('<div/>', {'class': 'app_report_dialog_option' } );
+		$ReportOption.append( $J('<div/>', {'class': 'app_report_dialog_option_input' }).append( $J('<input/>', {'type': 'radio', 'name':'report_type', 'value': eReportType, 'id': 'report_type_' + eReportType } ) ) );
+		$ReportOption.append( $J('<div/>', {'class': 'app_report_dialog_option_text' }).append( $J('<label/>', {'for': 'report_type_' + eReportType }).html( rgReportOptions[eReportType] ) ) );
+		rgReportOptionElements.push( $ReportOption );
+	}
+
+	for ( var j, x, i = rgReportOptionElements.length; i; j = parseInt(Math.random() * i), x = rgReportOptionElements[--i], rgReportOptionElements[i] = rgReportOptionElements[j], rgReportOptionElements[j] = x );
+	for ( var i = 0; i < rgReportOptionElements.length; ++i )
+	{
+		content.append( rgReportOptionElements[i] );
+	}
+
+	var textArea = $J('<textarea/>', { 'class': 'app_report_dialog_reason', 'id' : 'ReportReason',  'name' : 'report_reason' } );
+	var maxReasonLength = 512;
+	textArea.attr( 'maxlength', maxReasonLength );
+	textArea.bind( "keyup change",
+		function()
+		{
+			var str = $J(this).val()
+			var mx = parseInt($J(this).attr('maxlength'))
+			if (str.length > mx)
+			{
+				$J(this).val(str.substr(0, mx))
+				return false;
+			}
+		}
+	);
+	content.append( $J('<div/>', {'class': 'app_report_dialog_intro' } ).text('You may enter additional information that you feel is relevant here:') );
+	content.append( textArea );
+
+	content.append( $J('<div/>', {'class': 'app_report_dialog_dmca' } ).html('If you\'d like to report Copyright Infringement and are the copyright holder, please proceed to our DMCA compliant notice of copyright infringement form <a href="http://steamcommunity.com/dmca/create/">here</a>.') );
+
+	var dialog = ShowConfirmDialog( 'Report this Product', content, 'Report');
+
+	dialog.done( function() {
+		var eReportTypeSelected = content.find( 'input[type=radio]:checked' ).val();
+		if ( eReportTypeSelected )
+		{
+			$J.post(
+				'http://store.steampowered.com/appreport/' + nAppId + '/report/',
+				{
+					'report_type' : eReportTypeSelected,
+					'report_reason' : content.find( 'textarea' ).val(),
+					'sessionid': g_sessionID
+				}
+			).done( function( json ) {
+					gReportedApp = true;
+					$J( "#ReportAppBtn").addClass( 'btn_active' );
+				}
+			).fail( function( jqXHR ) {
+					var json = jqXHR.responseText.evalJSON();
+					if ( json.success == 29 )
+					{
+						ShowAlertDialog( 'Error', 'You have already reported this product!' );
+						gReportedApp = true;
+						$J( "#ReportAppBtn").addClass( 'btn_active' );
+					}
+					else
+					{
+						ShowAlertDialog( 'Error', 'There was a problem saving your report.  Please try again later.' );
+					}
+
+				} );
+		}
+		else
+		{
+			ShowAlertDialog( 'Error', 'You must select a reason you are reporting this product!' );
+		}
+	});
+}
+
 

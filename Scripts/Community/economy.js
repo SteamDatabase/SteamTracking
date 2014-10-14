@@ -2521,7 +2521,7 @@ function PopulateMarketActions( elActions, item )
 
 	if ( typeof(g_bViewingOwnProfile) != 'undefined' && g_bViewingOwnProfile )
 	{
-		var strMarketName = typeof item.market_hash_name != 'undefined' ? item.market_hash_name : item.market_name;
+		var strMarketName = GetMarketHashName( item );
 
 		var elPriceInfo = new Element( 'div' );
 		var elPriceInfoHeader = new Element ( 'div', { 'style': 'height: 24px;' } );
@@ -2816,7 +2816,7 @@ SellItemDialog = {
 				method: 'get',
 				parameters: {
 					appid: this.m_item.appid,
-					market_hash_name: typeof this.m_item.market_hash_name != 'undefined' ? this.m_item.market_hash_name : this.m_item.market_name
+					market_hash_name: GetMarketHashName( this.m_item )
 				},
 				onSuccess: function( transport ) { SellItemDialog.OnPriceHistorySuccess( transport ); },
 				onFailure: function( transport ) { SellItemDialog.OnPriceHistoryFailure( transport ); }
@@ -3825,7 +3825,7 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 
 	if ( item.marketable )
 	{
-		var sMarketHashName = typeof item.market_hash_name != 'undefined' ? item.market_hash_name : item.market_name;
+		var sMarketHashName = GetMarketHashName( item );
 		$J('#trade_action_viewinmarket').attr( 'href', strLinkPrefix + 'https://steamcommunity.com/market/listings/' + item.appid + '/' + sMarketHashName );
 		$J('#trade_action_viewinmarket').show();
 	}

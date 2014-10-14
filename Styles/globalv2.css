@@ -565,9 +565,8 @@ a.commentthread_allcommentslink:hover {
 /** Styles for modal popup */
 
 .modal_top_band {
-	background-image:url( 'https://steamcommunity-a.akamaihd.net/public/images/got_steam_top.jpg' );
-	background-repeat:no-repeat;
-	width:508px;
+	background-color:#37516d;
+	width:548px;
 	height:25px;
 	margin-bottom:1px;
 }
@@ -583,16 +582,24 @@ a.commentthread_allcommentslink:hover {
 }
 
 .modal_box {
-	border-color:#4d4b49;
-	border-style:solid;
-	border-width:2px 1px;
-	width: 466px;
-	background-color:#262626;
-	padding: 20px;
+	background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);	padding: 3px;
+	width:542px;
 
 	font-size: 12px;
 	color: #ffffff;
 	text-align: left;
+}
+.modal_box #forum_success_modal_content,
+.modal_box #forum_movetopic_modal_content,
+.modal_box #forum_banuser_modal_content,
+.modal_box #forum_confirm_modal_content,
+.modal_box #report_modal_content,
+.modal_box #forum_movetopic_form,
+.modal_box #forum_movetopic_results
+{
+	width:502px;
+	background-color:#1a2635;
+	padding:20px;
 }
 
 .modal_box h1, .modal_box h5 {
@@ -600,7 +607,8 @@ a.commentthread_allcommentslink:hover {
 }
 
 .modal_box h2 {
-	color: #C6C6C6;
+	color: #c6d4df;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-size: 22px;
 	font-weight: normal;
 	margin-bottom: 10px;
