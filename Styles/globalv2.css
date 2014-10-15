@@ -103,13 +103,11 @@ input[type=text], input[type=password], select {
 	position:relative;
 	text-align:left;
 	width: auto;
-	height: 78px;
 	font-size: 11px;
 	color:#777777;
 	border:0;
 	margin: 0;
-	padding:0;
-	padding-top: 32px;
+	padding: 32px 0;
 	background-color: #000000;
 }
 
@@ -139,7 +137,6 @@ body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
 	position: relative;
 	width: 958px;
 	margin: 0px auto;
-	height: 78px;
 }
 
 #footer a {
@@ -152,12 +149,14 @@ body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
 }
 
 #footerText {
-	padding: 8px 0 0;
+	padding: 2px 0 0 0;
+	line-height: 14px;
+	display: block;
 }
 
 #footerLogo {
 	float: left;
-	margin: 4px 5px 0 16px;
+	margin: 4px 11px 0 16px;
 	padding: 0;
 }
 
@@ -456,6 +455,11 @@ a.commentthread_allcommentslink:hover {
 	padding-bottom: 19px;
 	min-height: 40px;
 	padding-left: 58px;
+}
+
+.valve_links {
+	margin: 15px 0 0 123px;
+	display: block;
 }
 
 .commentthread_comment.commentthread_newcomment {
