@@ -800,16 +800,12 @@ function ManageBans_ReceiveUnban()
 
 function ShowForumBanDetails( accountid )
 {
-	var elModalText = $('forum_bandetails_text');
-	var elDetails = $('forum_bandetails_' + accountid );
+	var $Details = $J('#forum_bandetails_' + accountid );
+	$Details.show();
 
-	if ( elDetails.parentNode != elModalText )
-		elModalText.appendChild( elDetails.remove() );
-
-	elDetails.siblings().invoke( 'hide' );
-	elDetails.show();
-
-	showModal( $('forum_bandetails_modal') );
+	ShowAlertDialog( 'Ban details', $Details ).always( function() {
+		$J(document.body).append( $Details.hide() );
+	});
 }
 
 var Template_AssociatedGame = new Template (

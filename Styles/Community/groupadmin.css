@@ -462,13 +462,14 @@
 	cursor: pointer;
 }
 
-#memberChatBanList .member_block {
-	margin-left: 2px;
-	margin-right: 2px;
+.member_block.chat_banned_member {
+	margin-left: 0;
+	margin-right: 0;
+	color:#898989;
 }
 
-.member_block.chat_banned_member {
-	color:#898989;
+.member_block.chat_banned_member:nth-child(even) {
+	margin-left: 4px;
 }
 
 a.chat_ban_admin {
