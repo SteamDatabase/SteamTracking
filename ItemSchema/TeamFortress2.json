@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.21b6b8ff16e9c63563eabfa93067656d5d1da666.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.99164194fbd414ed8af806214f0f210b1b22b429.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -53431,6 +53431,39 @@
 				
 			},
 			{
+				"name": "Alien: Isolation Promo Bundle",
+				"defindex": 2134,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Alien: Isolation Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Craft Bar Level 1",
 				"defindex": 5000,
 				"item_class": "craft_item",
@@ -61634,7 +61667,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
 				"item_name": "Limited Late Summer Crate",
-				"item_description": "This crate is special and requires a Limited Summer Key.\nIts contents will be limited and only come from this crate.\nSome, but not all, of the items in this crate are Strange...\n\nAfter 10/13/2014 this crate can no longer be opened.",
+				"item_description": "A memento from an age long past, this crate is purely decorative and can no longer be opened.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -61646,7 +61679,6 @@
 				"craft_class": "supply_crate",
 				"craft_material_type": "supply_crate",
 				"capabilities": {
-					"decodable": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
@@ -61677,16 +61709,16 @@
 				"defindex": 5762,
 				"item_class": "tool",
 				"item_type_name": "Tool",
-				"item_name": "Limited Late Summer Crate Key",
-				"item_description": "Used to open Limited Late Summer Crates.\nLate Summer Crates contain limited items that only come from it.\n\nAfter 10/13/2014 this will turn into a normal key.",
+				"item_name": "Mann Co. Supply Crate Key",
+				"item_description": "Used to open locked supply crates.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
-				"image_inventory": "backpack/crafting/wading_key",
+				"image_inventory": "backpack/player/items/crafting/key",
 				"min_ilevel": 5,
 				"max_ilevel": 5,
-				"image_url": "http://media.steampowered.com/apps/440/icons/wading_key.04abdc8dda00d86e747b1a2e66f7c702e7c2ab65.png",
-				"image_url_large": "http://media.steampowered.com/apps/440/icons/wading_key_large.34ef244f2d9ebc40d2fea3978e378465d5eb45d3.png",
+				"image_url": "http://media.steampowered.com/apps/440/icons/key.067945a6cae528464e4fa00126f0ef17ee2dc8b5.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/key_large.443e254bfd7c6f54de0842a14df3c2aa72e8b6f0.png",
 				"craft_class": "tool",
 				"capabilities": {
 					"can_craft_mark": true,
@@ -61699,7 +61731,6 @@
 				},
 				"tool": {
 					"type": "decoder_ring",
-					"restriction": "summer2014",
 					"usage_capabilities": {
 						"decodable": true
 					}
@@ -95537,6 +95568,53 @@
 				"craft_material_type": "",
 				"capabilities": {
 					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Florida LAN Medal 2014",
+				"defindex": 8583,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Florida LAN",
+				"item_description": "2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/florida_lan_medal/florida_lan_medal_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/florida_lan_medal/florida_lan_medal",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/florida_lan_medal.4815f7cb42559caabdbc08c79df3db770fe79d8b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/florida_lan_medal_large.e5750979ddcbbb247c9a488292c62390a0b78a4d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
 					"can_craft_mark": true,
 					"can_be_restored": true,
 					"strange_parts": true,
