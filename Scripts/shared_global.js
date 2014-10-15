@@ -1150,25 +1150,24 @@ function GetValueLocalStorage( strPreferenceName, defaultValue )
 
 function DynamicLink_PlayYouTubeVideoInline( elem, videoid )
 {
-	var el = $(elem);
+	var el = $J(elem);
 	var youtubeurl = 'http://www.youtube.com/embed/' + videoid + '?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct&autoplay=1';
-	var wrapper = new Element( 'div', { 'class' : 'dynamiclink_youtubeviewvideoembedded', 'frameborder' : '0' } );
-	var iframeContent = new Element( 'iframe', { 'frameborder' : '0' } );
-	iframeContent.src = youtubeurl;
-	if ( el )
+	var wrapper = $J( '<div/>', { 'class' : 'dynamiclink_youtubeviewvideoembedded', 'frameborder' : '0' } );
+	var iframeContent = $J( '<iframe/>', { 'frameborder' : '0', src: youtubeurl } );
+	if ( el.length )
 	{
-		wrapper.insert( iframeContent );
-		el.insert( {after: wrapper } );
+		wrapper.append( iframeContent );
+		el.after( wrapper );
 		el.remove();
 	}
 }
 
 function ReplaceDynamicLink( id, strHTML )
 {
-	var el = $(id);
-	if ( el && strHTML.length > 0 )
+	var el = $J('#'+id);
+	if ( el.length && strHTML.length > 0 )
 	{
-		el.insert( {after: strHTML } );
+		el.after( strHTML );
 		el.remove();
 	}
 }

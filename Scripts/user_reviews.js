@@ -1,38 +1,31 @@
 
 function UserReview_Rate( recommendationID, bRateUp, baseURL, callback )
 {
-	new Ajax.Request( baseURL + '/userreviews/rate/' + recommendationID,
-		{
-			method: 'POST',
-			parameters: {
+	$J.post( baseURL + '/userreviews/rate/' + recommendationID,{
 				'rateup' : bRateUp,
 				'sessionid' : g_sessionID
-			},
-			onSuccess: function( transport )
-			{
-				var results = transport.responseJSON;
-				if ( results.success == 1 )
-				{
-					callback( results );
-				}
-				else if ( results.success == 21 )
-				{
-					ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
-				}
-				else if ( results.success == 15 )
-				{
-					ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action.' );
-				}
-				else if ( results.success == 24 )
-				{
-					ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
-				}
-				else
-				{
-					ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
-				}
-			}
-		} );
+	}).done( function( results ) {
+		if ( results.success == 1 )
+		{
+			callback( results );
+		}
+		else if ( results.success == 21 )
+		{
+			ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+		}
+		else if ( results.success == 15 )
+		{
+			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action.' );
+		}
+		else if ( results.success == 24 )
+		{
+			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+		}
+		else
+		{
+			ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+		}
+	} );
 }
 
 function UserReview_Report( recommendationID, baseURL, callback )
@@ -55,30 +48,23 @@ function UserReview_Report( recommendationID, baseURL, callback )
 		{
 			return;
 		}
-		new Ajax.Request( baseURL + '/userreviews/report/' + recommendationID,
-			{
-				method: 'POST',
-				parameters: {
+		$J.post( baseURL + '/userreviews/report/' + recommendationID, {
 					'reportnote' : note,
 					'sessionid' : g_sessionID
-				},
-				onSuccess: function( transport )
-				{
-					var results = transport.responseJSON;
-					if ( results.success == 1 )
-					{
-						callback( results );
-					}
-					else if ( results.success == 21 )
-					{
-						ShowAlertDialog( 'Error', '##UserReviews_Error_NotLoggedIn_Text' );
-					}
-					else
-					{
-						ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
-					}
-				}
-			} );
+		}).done( function( results ) {
+			if ( results.success == 1 )
+			{
+				callback( results );
+			}
+			else if ( results.success == 21 )
+			{
+				ShowAlertDialog( 'Error', '##UserReviews_Error_NotLoggedIn_Text' );
+			}
+			else
+			{
+				ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+			}
+		} );
 	} );
 }
 
@@ -103,26 +89,20 @@ function UserReview_ShowUpdateReviewDialog( recommendationID, existingText, base
 function UserReview_Update( recommendationID, params, baseURL, callback )
 {
 	params['sessionid'] = g_sessionID;
-	new Ajax.Request( baseURL + '/userreviews/update/' + recommendationID,
+	$J.post( baseURL + '/userreviews/update/' + recommendationID, params )
+	.done( function( results ) {
+		if ( results.success == 1 )
 		{
-			method: 'POST',
-			parameters: params,
-			onSuccess: function( transport )
+			if ( callback )
 			{
-				var results = transport.responseJSON;
-				if ( results.success == 1 )
-				{
-					if ( callback )
-					{
-						callback( results );
-					}
-				}
-				else
-				{
-					ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
-				}
+				callback( results );
 			}
-		} );
+		}
+		else
+		{
+			ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+		}
+	} );
 }
 
 function UserReview_Update_Visibility( recommendationID, is_public, baseURL, callback )
@@ -138,24 +118,18 @@ function UserReview_Update_Language( recommendationID, language, baseURL, callba
 function UserReview_Moderate( recommendationID, params, baseURL, callback )
 {
 	params['sessionid'] = g_sessionID;
-	new Ajax.Request( baseURL + '/userreviews/moderate/' + recommendationID,
-		{
-			method: 'POST',
-			parameters: params,
-			onSuccess: function( transport )
+	$J.post( baseURL + '/userreviews/moderate/' + recommendationID, params )
+		.done( function( results ) {
+			if ( results.success == 1 )
 			{
-				var results = transport.responseJSON;
-				if ( results.success == 1 )
+				if ( callback )
 				{
-					if ( callback )
-					{
-						callback( results );
-					}
+					callback( results );
 				}
-				else
-				{
-					ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
-				}
+			}
+			else
+			{
+				ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
 			}
 		} );
 }
@@ -164,30 +138,21 @@ function UserReview_ClearDeveloperFlag( recommendationID, baseURL, callback )
 {
 	var dialog = ShowConfirmDialog( 'Clear Developer Flag Reason', 'This review was flagged by the developer. Are you sure you want to clear this status?' );
 	dialog.done( function() {
-		new Ajax.Request( baseURL + '/userreviews/cleardeveloperflag/' + recommendationID,
+		$J.post( baseURL + '/userreviews/cleardeveloperflag/' + recommendationID, {'sessionid' : g_sessionID} )
+		.done( function( results ) {
+			if ( results.success == 1 )
 			{
-				method: 'POST',
-				parameters: {
-					'sessionid' : g_sessionID
-				},
-				onSuccess: function( transport )
+				if ( callback )
 				{
-					var results = transport.responseJSON;
-					if ( results.success == 1 )
-					{
-						if ( callback )
-						{
-							callback( results );
-						}
-					}
-					else
-					{
-						ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
-					}
+					callback( results );
 				}
-			} );
+			}
+			else
+			{
+				ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+			}
+		} );
 	});
-
 }
 
 function UserReview_SetDeveloperResponse( recommendationID, recommendation, baseURL, callback )
@@ -201,85 +166,70 @@ function UserReview_SetDeveloperResponse( recommendationID, recommendation, base
 	textArea.parent().before( explanation );
 
 	dialog.done( function( note ) {
-		new Ajax.Request( baseURL + '/userreviews/setdeveloperresponse/' + recommendationID,
-			{
-				method: 'POST',
-				parameters: {
+		$J.post( baseURL + '/userreviews/setdeveloperresponse/' + recommendationID,{
 					'developer_response' : note,
 					'sessionid' : g_sessionID
-				},
-				onSuccess: function( transport )
-				{
-					var results = transport.responseJSON;
-					if ( results.success == 1 )
-					{
-						callback( results );
-					}
-					else
-					{
-						ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
-					}
-				}
-			} );
+		}).done( function( results ) {
+			if ( results.success == 1 )
+			{
+				callback( results );
+			}
+			else
+			{
+				ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+			}
+		} );
 	} );
 }
 
 function UserReview_ShowReportsDialog( recommendationID, baseURL )
 {
-	new Ajax.Request( baseURL + '/userreviews/ajaxgetreports/' + recommendationID,
+	$J.post( baseURL + '/userreviews/ajaxgetreports/' + recommendationID,{ 'sessionid' : g_sessionID } )
+	.done( function( results ) {
+		if ( results.success == 1 )
 		{
-			method: 'POST',
-			parameters: {
-				'sessionid' : g_sessionID
-			},
-			onSuccess: function( transport )
+			var container = $J('<div/>', {'class': 'review_reports' } );
+			var reports = results.reports;
+
 			{
-				var results = transport.responseJSON;
-				if ( results.success == 1 )
-				{
-					var container = $J('<div/>', {'class': 'review_reports' } );
-					var reports = results.reports;
-
-					{
-						var reportDiv = $J('<div/>', {'class': 'review_report header' } );
-						var divReporter = $J('<div/>', {'class': 'review_report_data' } ).append( 'Reporter' );
-						reportDiv.append( divReporter );
-						var divDescription = $J('<div/>', {'class': 'review_report_data description' } ).append( 'Report Description' );
-						reportDiv.append( divDescription );
-						var divWeight = $J('<div/>', {'class': 'review_report_data' } ).append( 'Weight' );
-						reportDiv.append( divWeight );
-						var divWasReset = $J('<div/>', {'class': 'review_report_data' } ).append( 'Cleared?' );
-						reportDiv.append( divWasReset );
-						var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( 'Date' );
-						reportDiv.append( divTime );
-						var divClear = $J('<div/>', {'style': 'clear: left' } );
-						reportDiv.append( divClear );
-						container.append( reportDiv );
-					}
-
-					for ( var i = 0; i < reports.length; ++i )
-					{
-						var report = reports[i];
-
-						var reportDiv = $J('<div/>', {'class': 'review_report' } );
-							var divReporter = $J('<div/>', {'class': 'review_report_data' } ).append( $J('<a/>', {'href': report.reporter_url, 'text': report.reporter, 'target': '_blank' } ) );
-							reportDiv.append( divReporter );
-							var divDescription = $J('<div/>', {'class': 'review_report_data description' } ).append( report.description );
-							reportDiv.append( divDescription );
-							var divWeight = $J('<div/>', {'class': 'review_report_data' } ).append( report.weight );
-							reportDiv.append( divWeight );
-							var divWasReset = $J('<div/>', {'class': 'review_report_data' } ).append( report.was_reset ? 'Yes' : 'No' );
-							reportDiv.append( divWasReset );
-							var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( report.time_string );
-							reportDiv.append( divTime );
-							var divClear = $J('<div/>', {'style': 'clear: left' } );
-							reportDiv.append( divClear );
-						container.append( reportDiv );
-					}
-					var dialog = ShowAlertDialog( 'Clear Reports', container );
-				}
+				var reportDiv = $J('<div/>', {'class': 'review_report header' } );
+				var divReporter = $J('<div/>', {'class': 'review_report_data' } ).append( 'Reporter' );
+				reportDiv.append( divReporter );
+				var divDescription = $J('<div/>', {'class': 'review_report_data description' } ).append( 'Report Description' );
+				reportDiv.append( divDescription );
+				var divWeight = $J('<div/>', {'class': 'review_report_data' } ).append( 'Weight' );
+				reportDiv.append( divWeight );
+				var divWasReset = $J('<div/>', {'class': 'review_report_data' } ).append( 'Cleared?' );
+				reportDiv.append( divWasReset );
+				var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( 'Date' );
+				reportDiv.append( divTime );
+				var divClear = $J('<div/>', {'style': 'clear: left' } );
+				reportDiv.append( divClear );
+				container.append( reportDiv );
 			}
-		} );
+
+			for ( var i = 0; i < reports.length; ++i )
+			{
+				var report = reports[i];
+
+				var reportDiv = $J('<div/>', {'class': 'review_report' } );
+					var divReporter = $J('<div/>', {'class': 'review_report_data' } ).append( $J('<a/>', {'href': report.reporter_url, 'text': report.reporter, 'target': '_blank' } ) );
+					reportDiv.append( divReporter );
+					var divDescription = $J('<div/>', {'class': 'review_report_data description' } ).append( report.description );
+					reportDiv.append( divDescription );
+					var divWeight = $J('<div/>', {'class': 'review_report_data' } ).append( report.weight );
+					reportDiv.append( divWeight );
+					var divWasReset = $J('<div/>', {'class': 'review_report_data' } ).append( report.was_reset ? 'Yes' : 'No' );
+					reportDiv.append( divWasReset );
+					var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( report.time_string );
+					reportDiv.append( divTime );
+					var divClear = $J('<div/>', {'style': 'clear: left' } );
+					reportDiv.append( divClear );
+				container.append( reportDiv );
+			}
+			var dialog = ShowAlertDialog( 'Clear Reports', container );
+		}
+	} );
 }
 
 function UserReview_ShowClearReportsDialog( recommendationID, baseURL, callback )
