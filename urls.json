@@ -122,7 +122,6 @@
 //
 // Store JS
 //
-"Scripts/Store/app_reporting.js"                 : "https://steamstore-a.akamaihd.net/public/javascript/app_reporting.js?__TIME__&l=english",
 "Scripts/Store/app_tagging.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/app_tagging.js?__TIME__&l=english",
 "Scripts/Store/cart.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/cart.js?__TIME__&l=english",
 "Scripts/Store/checkout.js"                      : "https://steamstore-a.akamaihd.net/public/javascript/checkout.js?__TIME__&l=english",
@@ -144,11 +143,9 @@
 "Scripts/Store/redeemwalletcode.js"              : "https://steamstore-a.akamaihd.net/public/javascript/redeemwalletcode.js?__TIME__&l=english",
 "Scripts/Store/refundpurchase.js"                : "https://steamstore-a.akamaihd.net/public/javascript/refundpurchase.js?__TIME__&l=english",
 "Scripts/Store/searchpage.js"                    : "https://steamstore-a.akamaihd.net/public/javascript/searchpage.js?__TIME__&l=english",
-"Scripts/Store/javascript.js"                    : "https://steamstore-a.akamaihd.net/public/javascript/javascript.js?__TIME__&l=english",
 "Scripts/Store/main.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/main.js?__TIME__&l=english",
 "Scripts/Store/search.js"                        : "https://steamstore-a.akamaihd.net/public/javascript/search.js?__TIME__&l=english",
 "Scripts/Store/supportmessages.js"               : "https://steamstore-a.akamaihd.net/public/javascript/supportmessages.js?__TIME__&l=english",
-"Scripts/Store/user_reviews_store.js"            : "https://steamstore-a.akamaihd.net/public/javascript/user_reviews_store.js?__TIME__&l=english",
 "Scripts/Store/youraccount.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/youraccount.js?__TIME__&l=english",
 
 //
