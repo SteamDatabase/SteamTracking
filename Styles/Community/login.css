@@ -182,7 +182,7 @@ input.textField {
 	height: 58px;
 }
 
-.auth_button, .twofactorauth_button.auth_button_spacer {
+.twofactorauth_button.auth_button_spacer {
 	background-image: none;
 	width: 0px;
 }
