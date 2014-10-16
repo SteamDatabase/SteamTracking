@@ -41,8 +41,10 @@ body.flat_page .maincontent {
 /* --[ same as a.linkStandard ]------------------- */
 a,a:hover,a:active,a:visited {
 	/*font-size: 11px;*/
-	color: #ffffff;
 	text-decoration: none;
+}
+a{
+	color: #ffffff;
 }
 
 a:hover {
