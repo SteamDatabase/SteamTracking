@@ -733,6 +733,10 @@ a.forum_comment_action:hover {
 	display: block;
 }
 
+.forum_searchresult_seemore {
+	padding: 0 20px 8px 46px;
+}
+
 .forum_button, .forum_button .caps {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_button.png');
 }
@@ -927,7 +931,7 @@ input.discussionSearchText:-moz-placeholder {
 	margin-bottom: 10px;
 }
 
-.discussions_searchedForTerm
+.discussions_searchedForTerm, a.discussions_searchedForTerm
 {
 	position: relative;
 	float: left;
@@ -1177,7 +1181,9 @@ table.forum_auditlog tr.audit_row_secondary {
 	padding: 2px;
 }
 
-.post_searchresult_simplereply {
+.post_searchresult_simplereply , a.post_searchresult_simplereply {
+	display: block;
+	color: #8F98A0;
 	margin-top: 4px;
 	padding: 6px 6px 6px 20px;
 	cursor: pointer;

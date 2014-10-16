@@ -334,753 +334,6 @@
 	}
 	"alternate_icons2"
 	{
-		"sticker_icons"
-		{
-			"1"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_gologo1"
-			}
-			"2"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_gologo1_holo"
-			}
-			"3"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_gologo2"
-			}
-			"4"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_gologo2_holo"
-			}
-			"5"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_snowflake2"
-			}
-			"6"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_snowflake3"
-			}
-			"7"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_bears"
-			}
-			"8"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_bears_holo"
-			}
-			"9"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_mountain"
-			}
-			"10"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_mountain_holo"
-			}
-			"11"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_snowman"
-			}
-			"12"
-			{
-				"icon_path"		"econ/stickers/dreamhack/dh_snowman_holo"
-			}
-			"13"
-			{
-				"icon_path"		"econ/stickers/standard/thirteen"
-			}
-			"14"
-			{
-				"icon_path"		"econ/stickers/standard/aces_high"
-			}
-			"15"
-			{
-				"icon_path"		"econ/stickers/standard/aces_high_holo"
-			}
-			"16"
-			{
-				"icon_path"		"econ/stickers/standard/conquered"
-			}
-			"17"
-			{
-				"icon_path"		"econ/stickers/standard/destroy"
-			}
-			"18"
-			{
-				"icon_path"		"econ/stickers/standard/dispatch"
-			}
-			"19"
-			{
-				"icon_path"		"econ/stickers/standard/fearsome"
-			}
-			"20"
-			{
-				"icon_path"		"econ/stickers/standard/fearsome_holo"
-			}
-			"21"
-			{
-				"icon_path"		"econ/stickers/standard/guarding_hell"
-			}
-			"22"
-			{
-				"icon_path"		"econ/stickers/standard/lemon"
-			}
-			"23"
-			{
-				"icon_path"		"econ/stickers/standard/luck"
-			}
-			"24"
-			{
-				"icon_path"		"econ/stickers/standard/vigilance"
-			}
-			"25"
-			{
-				"icon_path"		"econ/stickers/standard/vigilance_holo"
-			}
-			"26"
-			{
-				"icon_path"		"econ/stickers/standard/thirteen_foil"
-			}
-			"27"
-			{
-				"icon_path"		"econ/stickers/standard/luck_foil"
-			}
-			"31"
-			{
-				"icon_path"		"econ/stickers/stickers2/bish_holo"
-			}
-			"32"
-			{
-				"icon_path"		"econ/stickers/stickers2/bash_holo"
-			}
-			"33"
-			{
-				"icon_path"		"econ/stickers/stickers2/bosh_holo"
-			}
-			"34"
-			{
-				"icon_path"		"econ/stickers/stickers2/banana"
-			}
-			"35"
-			{
-				"icon_path"		"econ/stickers/stickers2/bomb_code"
-			}
-			"36"
-			{
-				"icon_path"		"econ/stickers/stickers2/chicken_lover"
-			}
-			"37"
-			{
-				"icon_path"		"econ/stickers/stickers2/crown"
-			}
-			"38"
-			{
-				"icon_path"		"econ/stickers/stickers2/goodgame"
-			}
-			"39"
-			{
-				"icon_path"		"econ/stickers/stickers2/goodluck"
-			}
-			"40"
-			{
-				"icon_path"		"econ/stickers/stickers2/havefun"
-			}
-			"41"
-			{
-				"icon_path"		"econ/stickers/stickers2/lets_roll_oll"
-			}
-			"42"
-			{
-				"icon_path"		"econ/stickers/stickers2/lets_roll_oll_holo"
-			}
-			"43"
-			{
-				"icon_path"		"econ/stickers/stickers2/metal"
-			}
-			"44"
-			{
-				"icon_path"		"econ/stickers/stickers2/nice_shot"
-			}
-			"46"
-			{
-				"icon_path"		"econ/stickers/stickers2/stupid_banana_foil"
-			}
-			"47"
-			{
-				"icon_path"		"econ/stickers/stickers2/welcome_clutch"
-			}
-			"48"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/3dmax"
-			}
-			"49"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/3dmax_holo"
-			}
-			"50"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/complexity"
-			}
-			"51"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/complexity_holo"
-			}
-			"52"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/dignitas"
-			}
-			"53"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/dignitas_holo"
-			}
-			"55"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/fnatic"
-			}
-			"56"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/fnatic_holo"
-			}
-			"57"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/hellraisers"
-			}
-			"58"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/hellraisers_holo"
-			}
-			"59"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/ibuypower"
-			}
-			"60"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/ibuypower_holo"
-			}
-			"61"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/ldlc"
-			}
-			"62"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/ldlc_holo"
-			}
-			"63"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/lgb"
-			}
-			"64"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/lgb_holo"
-			}
-			"65"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/mousesports"
-			}
-			"66"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/mousesports_holo"
-			}
-			"67"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/mystik"
-			}
-			"68"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/mystik_holo"
-			}
-			"69"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/navi"
-			}
-			"70"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/navi_holo"
-			}
-			"71"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/ninjasinpyjamas"
-			}
-			"72"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/ninjasinpyjamas_holo"
-			}
-			"73"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/reason"
-			}
-			"74"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/reason_holo"
-			}
-			"75"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/titan"
-			}
-			"76"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/titan_holo"
-			}
-			"77"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/virtuspro"
-			}
-			"78"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/virtuspro_holo"
-			}
-			"79"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/voxeminor"
-			}
-			"80"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/voxeminor_holo"
-			}
-			"81"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/esl1_foil"
-			}
-			"82"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/esl2_foil"
-			}
-			"83"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/3dmax_foil"
-			}
-			"84"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/complexity_foil"
-			}
-			"85"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/dignitas_foil"
-			}
-			"86"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/fnatic_foil"
-			}
-			"87"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/hellraisers_foil"
-			}
-			"88"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/ibuypower_foil"
-			}
-			"89"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/ldlc_foil"
-			}
-			"90"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/lgb_foil"
-			}
-			"91"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/mousesports_foil"
-			}
-			"92"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/mystik_foil"
-			}
-			"93"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/navi_foil"
-			}
-			"94"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/ninjasinpyjamas_foil"
-			}
-			"95"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/reason_foil"
-			}
-			"96"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/titan_foil"
-			}
-			"97"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/virtuspro_foil"
-			}
-			"98"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/voxeminor_foil"
-			}
-			"99"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/wolf_esl_gold_foil"
-			}
-			"100"
-			{
-				"icon_path"		"econ/stickers/emskatowice2014/wolf_skull_esl_gold_foil"
-			}
-			"101"
-			{
-				"icon_path"		"econ/stickers/community01/backstab"
-			}
-			"102"
-			{
-				"icon_path"		"econ/stickers/community01/black_king"
-			}
-			"103"
-			{
-				"icon_path"		"econ/stickers/community01/howling_dawn"
-			}
-			"104"
-			{
-				"icon_path"		"econ/stickers/community01/bomb_doge"
-			}
-			"105"
-			{
-				"icon_path"		"econ/stickers/community01/burn_them_all"
-			}
-			"106"
-			{
-				"icon_path"		"econ/stickers/community01/harp_of_war"
-			}
-			"107"
-			{
-				"icon_path"		"econ/stickers/community01/flammable_foil"
-			}
-			"108"
-			{
-				"icon_path"		"econ/stickers/community01/headhunter_foil"
-			}
-			"109"
-			{
-				"icon_path"		"econ/stickers/community01/llama_cannon"
-			}
-			"110"
-			{
-				"icon_path"		"econ/stickers/community01/new_sheriff_foil"
-			}
-			"111"
-			{
-				"icon_path"		"econ/stickers/community01/other_awp"
-			}
-			"112"
-			{
-				"icon_path"		"econ/stickers/community01/shavemaster"
-			}
-			"113"
-			{
-				"icon_path"		"econ/stickers/community01/skull"
-			}
-			"114"
-			{
-				"icon_path"		"econ/stickers/community01/sneaky_beaky"
-			}
-			"115"
-			{
-				"icon_path"		"econ/stickers/community01/swag_foil"
-			}
-			"116"
-			{
-				"icon_path"		"econ/stickers/community01/teamwork_holo"
-			}
-			"117"
-			{
-				"icon_path"		"econ/stickers/community01/to_b_or_not_to_b"
-			}
-			"118"
-			{
-				"icon_path"		"econ/stickers/community01/winged_defuser"
-			}
-			"119"
-			{
-				"icon_path"		"econ/stickers/community01/pocket_bbq"
-			}
-			"120"
-			{
-				"icon_path"		"econ/stickers/community01/death_comes"
-			}
-			"121"
-			{
-				"icon_path"		"econ/stickers/community01/rekt"
-			}
-			"122"
-			{
-				"icon_path"		"econ/stickers/cologne2014/cloud9"
-			}
-			"123"
-			{
-				"icon_path"		"econ/stickers/cologne2014/cloud9_holo"
-			}
-			"124"
-			{
-				"icon_path"		"econ/stickers/cologne2014/fnatic"
-			}
-			"125"
-			{
-				"icon_path"		"econ/stickers/cologne2014/fnatic_holo"
-			}
-			"126"
-			{
-				"icon_path"		"econ/stickers/cologne2014/hellraisers"
-			}
-			"127"
-			{
-				"icon_path"		"econ/stickers/cologne2014/hellraisers_holo"
-			}
-			"128"
-			{
-				"icon_path"		"econ/stickers/cologne2014/ninjasinpyjamas"
-			}
-			"129"
-			{
-				"icon_path"		"econ/stickers/cologne2014/ninjasinpyjamas_holo"
-			}
-			"130"
-			{
-				"icon_path"		"econ/stickers/cologne2014/teamdignitas"
-			}
-			"131"
-			{
-				"icon_path"		"econ/stickers/cologne2014/teamdignitas_holo"
-			}
-			"132"
-			{
-				"icon_path"		"econ/stickers/cologne2014/teamldlc"
-			}
-			"133"
-			{
-				"icon_path"		"econ/stickers/cologne2014/teamldlc_holo"
-			}
-			"134"
-			{
-				"icon_path"		"econ/stickers/cologne2014/virtuspro"
-			}
-			"135"
-			{
-				"icon_path"		"econ/stickers/cologne2014/virtuspro_holo"
-			}
-			"136"
-			{
-				"icon_path"		"econ/stickers/cologne2014/copenhagenwolves"
-			}
-			"137"
-			{
-				"icon_path"		"econ/stickers/cologne2014/copenhagenwolves_holo"
-			}
-			"138"
-			{
-				"icon_path"		"econ/stickers/cologne2014/datteam"
-			}
-			"139"
-			{
-				"icon_path"		"econ/stickers/cologne2014/datteam_holo"
-			}
-			"140"
-			{
-				"icon_path"		"econ/stickers/cologne2014/epsilonesports"
-			}
-			"141"
-			{
-				"icon_path"		"econ/stickers/cologne2014/epsilonesports_holo"
-			}
-			"142"
-			{
-				"icon_path"		"econ/stickers/cologne2014/ibuypower"
-			}
-			"143"
-			{
-				"icon_path"		"econ/stickers/cologne2014/ibuypower_holo"
-			}
-			"144"
-			{
-				"icon_path"		"econ/stickers/cologne2014/londonconspiracy"
-			}
-			"145"
-			{
-				"icon_path"		"econ/stickers/cologne2014/londonconspiracy_holo"
-			}
-			"146"
-			{
-				"icon_path"		"econ/stickers/cologne2014/navi"
-			}
-			"147"
-			{
-				"icon_path"		"econ/stickers/cologne2014/navi_holo"
-			}
-			"148"
-			{
-				"icon_path"		"econ/stickers/cologne2014/titan"
-			}
-			"149"
-			{
-				"icon_path"		"econ/stickers/cologne2014/titan_holo"
-			}
-			"150"
-			{
-				"icon_path"		"econ/stickers/cologne2014/voxeminor"
-			}
-			"151"
-			{
-				"icon_path"		"econ/stickers/cologne2014/voxeminor_holo"
-			}
-			"152"
-			{
-				"icon_path"		"econ/stickers/cologne2014/wolf"
-			}
-			"153"
-			{
-				"icon_path"		"econ/stickers/cologne2014/wolf_holo"
-			}
-			"154"
-			{
-				"icon_path"		"econ/stickers/cologne2014/esl_a"
-			}
-			"155"
-			{
-				"icon_path"		"econ/stickers/cologne2014/esl_b"
-			}
-			"156"
-			{
-				"icon_path"		"econ/stickers/cologne2014/cloud9_foil"
-			}
-			"157"
-			{
-				"icon_path"		"econ/stickers/cologne2014/fnatic_foil"
-			}
-			"158"
-			{
-				"icon_path"		"econ/stickers/cologne2014/hellraisers_foil"
-			}
-			"159"
-			{
-				"icon_path"		"econ/stickers/cologne2014/ninjasinpyjamas_foil"
-			}
-			"160"
-			{
-				"icon_path"		"econ/stickers/cologne2014/teamdignitas_foil"
-			}
-			"161"
-			{
-				"icon_path"		"econ/stickers/cologne2014/teamldlc_foil"
-			}
-			"162"
-			{
-				"icon_path"		"econ/stickers/cologne2014/virtuspro_foil"
-			}
-			"163"
-			{
-				"icon_path"		"econ/stickers/cologne2014/copenhagenwolves_foil"
-			}
-			"164"
-			{
-				"icon_path"		"econ/stickers/cologne2014/datteam_foil"
-			}
-			"165"
-			{
-				"icon_path"		"econ/stickers/cologne2014/epsilonesports_foil"
-			}
-			"166"
-			{
-				"icon_path"		"econ/stickers/cologne2014/ibuypower_foil"
-			}
-			"167"
-			{
-				"icon_path"		"econ/stickers/cologne2014/londonconspiracy_foil"
-			}
-			"168"
-			{
-				"icon_path"		"econ/stickers/cologne2014/navi_foil"
-			}
-			"169"
-			{
-				"icon_path"		"econ/stickers/cologne2014/titan_foil"
-			}
-			"170"
-			{
-				"icon_path"		"econ/stickers/cologne2014/voxeminor_foil"
-			}
-			"171"
-			{
-				"icon_path"		"econ/stickers/cologne2014/wolf_foil"
-			}
-			"172"
-			{
-				"icon_path"		"econ/stickers/cologne2014/esl_c"
-			}
-			"173"
-			{
-				"icon_path"		"econ/stickers/community02/bossyburger"
-			}
-			"174"
-			{
-				"icon_path"		"econ/stickers/community02/catcall"
-			}
-			"175"
-			{
-				"icon_path"		"econ/stickers/community02/chickenstrike"
-			}
-			"176"
-			{
-				"icon_path"		"econ/stickers/community02/ctbanana"
-			}
-			"177"
-			{
-				"icon_path"		"econ/stickers/community02/dontworryimpro"
-			}
-			"178"
-			{
-				"icon_path"		"econ/stickers/community02/fightlikeagirl"
-			}
-			"179"
-			{
-				"icon_path"		"econ/stickers/community02/handmadeflash"
-			}
-			"180"
-			{
-				"icon_path"		"econ/stickers/community02/kawaiikiller"
-			}
-			"181"
-			{
-				"icon_path"		"econ/stickers/community02/neluthebear"
-			}
-			"182"
-			{
-				"icon_path"		"econ/stickers/community02/oneshotonekill"
-			}
-			"183"
-			{
-				"icon_path"		"econ/stickers/community02/shootingstar"
-			}
-			"184"
-			{
-				"icon_path"		"econ/stickers/community02/toncat"
-			}
-			"185"
-			{
-				"icon_path"		"econ/stickers/community02/warpenguin"
-			}
-			"186"
-			{
-				"icon_path"		"econ/stickers/community02/windywalking"
-			}
-			"187"
-			{
-				"icon_path"		"econ/stickers/community02/blitzkrieg"
-			}
-			"188"
-			{
-				"icon_path"		"econ/stickers/community02/pigeonmaster"
-			}
-			"189"
-			{
-				"icon_path"		"econ/stickers/community02/terrorized"
-			}
-			"190"
-			{
-				"icon_path"		"econ/stickers/community02/tilldeathdouspart"
-			}
-			"191"
-			{
-				"icon_path"		"econ/stickers/community02/stayfrosty"
-			}
-		}
 		"weapon_icons"
 		{
 			"65604"
@@ -6783,7 +6036,7 @@
 			"item_name"		"#CSGO_Type_Quest"
 			"item_description"		"#CSGO_Quest_Desc"
 			"icon_default_image"		"materials/icons/inventory_icon_quest.vtf"
-			"image_inventory"		"backpack/crafting/quest"
+			"image_inventory"		"econ/tools/mission"
 			"item_quality"		"unique"
 			"item_rarity"		"common"
 			"min_ilevel"		"1"
@@ -11906,7 +11159,6 @@
 			"item_name"		"#quest"
 			"item_description"		"#quest_desc"
 			"prefab"		"quest_prefab"
-			"image_inventory"		"econ/tools/mission"
 			"attributes"
 			{
 				"cannot trade"		"1"
@@ -15169,7 +14421,6 @@
 			"name"		"default"
 			"item_name"		"#StickerKit_Default"
 			"description_string"		"#StickerKit_Desc_Default"
-			"sticker_material"		"none"
 		}
 		"1"
 		{
@@ -15441,7 +14692,6 @@
 			"item_name"		"#StickerKit_std_crown_foil"
 			"description_string"		"#StickerKit_desc_std_crown_foil"
 			"sticker_material"		"stickers2/crown_foil"
-			"sticker_icon"		"stickers2/crown"
 			"item_rarity"		"legendary"
 		}
 		"38"
@@ -15842,7 +15092,6 @@
 			"item_name"		"#StickerKit_kat2014_esl1_foil"
 			"description_string"		"#StickerKit_desc_kat2014_esl1_foil"
 			"sticker_material"		"emskatowice2014/wolf_esl_foil"
-			"sticker_icon"		"emskatowice2014/esl1_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 		}
@@ -15852,7 +15101,6 @@
 			"item_name"		"#StickerKit_kat2014_esl2_foil"
 			"description_string"		"#StickerKit_desc_kat2014_esl2_foil"
 			"sticker_material"		"emskatowice2014/wolf_skull_esl_foil"
-			"sticker_icon"		"emskatowice2014/esl2_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 		}
@@ -15862,7 +15110,6 @@
 			"item_name"		"#StickerKit_kat2014_3dmax_foil"
 			"description_string"		"#StickerKit_desc_kat2014_3dmax_foil"
 			"sticker_material"		"emskatowice2014/3dmax_foil"
-			"sticker_icon"		"emskatowice2014/3dmax_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"28"
@@ -15873,7 +15120,6 @@
 			"item_name"		"#StickerKit_kat2014_complexity_foil"
 			"description_string"		"#StickerKit_desc_kat2014_complexity_foil"
 			"sticker_material"		"emskatowice2014/complexity_foil"
-			"sticker_icon"		"emskatowice2014/complexity_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"3"
@@ -15884,7 +15130,6 @@
 			"item_name"		"#StickerKit_kat2014_dignitas_foil"
 			"description_string"		"#StickerKit_desc_kat2014_dignitas_foil"
 			"sticker_material"		"emskatowice2014/dignitas_foil"
-			"sticker_icon"		"emskatowice2014/dignitas_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"24"
@@ -15895,7 +15140,6 @@
 			"item_name"		"#StickerKit_kat2014_fnatic_foil"
 			"description_string"		"#StickerKit_desc_kat2014_fnatic_foil"
 			"sticker_material"		"emskatowice2014/fnatic_foil"
-			"sticker_icon"		"emskatowice2014/fnatic_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"6"
@@ -15906,7 +15150,6 @@
 			"item_name"		"#StickerKit_kat2014_hellraisers_foil"
 			"description_string"		"#StickerKit_desc_kat2014_hellraisers_foil"
 			"sticker_material"		"emskatowice2014/hellraisers_foil"
-			"sticker_icon"		"emskatowice2014/hellraisers_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"25"
@@ -15917,7 +15160,6 @@
 			"item_name"		"#StickerKit_kat2014_ibuypower_foil"
 			"description_string"		"#StickerKit_desc_kat2014_ibuypower_foil"
 			"sticker_material"		"emskatowice2014/ibuypower_foil"
-			"sticker_icon"		"emskatowice2014/ibuypower_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"5"
@@ -15928,7 +15170,6 @@
 			"item_name"		"#StickerKit_kat2014_ldlc_foil"
 			"description_string"		"#StickerKit_desc_kat2014_ldlc_foil"
 			"sticker_material"		"emskatowice2014/ldlc_foil"
-			"sticker_icon"		"emskatowice2014/ldlc_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"26"
@@ -15939,7 +15180,6 @@
 			"item_name"		"#StickerKit_kat2014_lgb_foil"
 			"description_string"		"#StickerKit_desc_kat2014_lgb_foil"
 			"sticker_material"		"emskatowice2014/lgb_foil"
-			"sticker_icon"		"emskatowice2014/lgb_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"9"
@@ -15950,7 +15190,6 @@
 			"item_name"		"#StickerKit_kat2014_mousesports_foil"
 			"description_string"		"#StickerKit_desc_kat2014_mousesports_foil"
 			"sticker_material"		"emskatowice2014/mousesports_foil"
-			"sticker_icon"		"emskatowice2014/mousesports_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"29"
@@ -15961,7 +15200,6 @@
 			"item_name"		"#StickerKit_kat2014_mystik_foil"
 			"description_string"		"#StickerKit_desc_kat2014_mystik_foil"
 			"sticker_material"		"emskatowice2014/mystik_foil"
-			"sticker_icon"		"emskatowice2014/mystik_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"7"
@@ -15972,7 +15210,6 @@
 			"item_name"		"#StickerKit_kat2014_navi_foil"
 			"description_string"		"#StickerKit_desc_kat2014_navi_foil"
 			"sticker_material"		"emskatowice2014/navi_foil"
-			"sticker_icon"		"emskatowice2014/navi_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"12"
@@ -15983,7 +15220,6 @@
 			"item_name"		"#StickerKit_kat2014_ninjasinpyjamas_foil"
 			"description_string"		"#StickerKit_desc_kat2014_ninjasinpyjamas_foil"
 			"sticker_material"		"emskatowice2014/ninjasinpyjamas_foil"
-			"sticker_icon"		"emskatowice2014/ninjasinpyjamas_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"1"
@@ -15994,7 +15230,6 @@
 			"item_name"		"#StickerKit_kat2014_reason_foil"
 			"description_string"		"#StickerKit_desc_kat2014_reason_foil"
 			"sticker_material"		"emskatowice2014/reason_foil"
-			"sticker_icon"		"emskatowice2014/reason_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"30"
@@ -16005,7 +15240,6 @@
 			"item_name"		"#StickerKit_kat2014_titan_foil"
 			"description_string"		"#StickerKit_desc_kat2014_titan_foil"
 			"sticker_material"		"emskatowice2014/titan_foil"
-			"sticker_icon"		"emskatowice2014/titan_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"27"
@@ -16016,7 +15250,6 @@
 			"item_name"		"#StickerKit_kat2014_virtuspro_foil"
 			"description_string"		"#StickerKit_desc_kat2014_virtuspro_foil"
 			"sticker_material"		"emskatowice2014/virtuspro_foil"
-			"sticker_icon"		"emskatowice2014/virtuspro_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"31"
@@ -16027,7 +15260,6 @@
 			"item_name"		"#StickerKit_kat2014_voxeminor_foil"
 			"description_string"		"#StickerKit_desc_kat2014_voxeminor_foil"
 			"sticker_material"		"emskatowice2014/voxeminor_foil"
-			"sticker_icon"		"emskatowice2014/voxeminor_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 			"tournament_team_id"		"32"
@@ -16038,7 +15270,6 @@
 			"item_name"		"#StickerKit_kat2014_wolf_esl_gold_foil"
 			"description_string"		"#StickerKit_desc_kat2014_wolf_esl_gold_foil"
 			"sticker_material"		"emskatowice2014/wolf_esl_gold_foil"
-			"sticker_icon"		"emskatowice2014/wolf_esl_gold_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 		}
@@ -16048,7 +15279,6 @@
 			"item_name"		"#StickerKit_kat2014_wolf_skull_esl_gold_foil"
 			"description_string"		"#StickerKit_desc_kat2014_wolf_skull_esl_gold_foil"
 			"sticker_material"		"emskatowice2014/wolf_skull_esl_gold_foil"
-			"sticker_icon"		"emskatowice2014/wolf_skull_esl_gold_foil"
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"3"
 		}
@@ -16058,7 +15288,6 @@
 			"item_name"		"#StickerKit_comm01_backstab"
 			"description_string"		"#StickerKit_desc_comm01_backstab"
 			"sticker_material"		"community01/backstab"
-			"sticker_icon"		"community01/backstab"
 			"item_rarity"		"rare"
 		}
 		"102"
@@ -16067,7 +15296,6 @@
 			"item_name"		"#StickerKit_comm01_black_king"
 			"description_string"		"#StickerKit_desc_comm01_black_king"
 			"sticker_material"		"community01/black_king"
-			"sticker_icon"		"community01/black_king"
 			"item_rarity"		"rare"
 		}
 		"103"
@@ -16076,7 +15304,6 @@
 			"item_name"		"#StickerKit_comm01_howling_dawn"
 			"description_string"		"#StickerKit_desc_comm01_howling_dawn"
 			"sticker_material"		"community01/howling_dawn"
-			"sticker_icon"		"community01/howling_dawn"
 			"item_rarity"		"rare"
 		}
 		"104"
@@ -16085,7 +15312,6 @@
 			"item_name"		"#StickerKit_comm01_bomb_doge"
 			"description_string"		"#StickerKit_desc_comm01_bomb_doge"
 			"sticker_material"		"community01/bomb_doge"
-			"sticker_icon"		"community01/bomb_doge"
 			"item_rarity"		"rare"
 		}
 		"105"
@@ -16094,7 +15320,6 @@
 			"item_name"		"#StickerKit_comm01_burn_them_all"
 			"description_string"		"#StickerKit_desc_comm01_burn_them_all"
 			"sticker_material"		"community01/burn_them_all"
-			"sticker_icon"		"community01/burn_them_all"
 			"item_rarity"		"rare"
 		}
 		"106"
@@ -16103,7 +15328,6 @@
 			"item_name"		"#StickerKit_comm01_harp_of_war"
 			"description_string"		"#StickerKit_desc_comm01_harp_of_war"
 			"sticker_material"		"community01/harp_of_war"
-			"sticker_icon"		"community01/harp_of_war"
 			"item_rarity"		"mythical"
 		}
 		"107"
@@ -16112,7 +15336,6 @@
 			"item_name"		"#StickerKit_comm01_flammable_foil"
 			"description_string"		"#StickerKit_desc_comm01_flammable_foil"
 			"sticker_material"		"community01/flammable_foil"
-			"sticker_icon"		"community01/flammable_foil"
 			"item_rarity"		"legendary"
 		}
 		"108"
@@ -16121,7 +15344,6 @@
 			"item_name"		"#StickerKit_comm01_headhunter_foil"
 			"description_string"		"#StickerKit_desc_comm01_headhunter_foil"
 			"sticker_material"		"community01/headhunter_foil"
-			"sticker_icon"		"community01/headhunter_foil"
 			"item_rarity"		"legendary"
 		}
 		"109"
@@ -16130,7 +15352,6 @@
 			"item_name"		"#StickerKit_comm01_llama_cannon"
 			"description_string"		"#StickerKit_desc_comm01_llama_cannon"
 			"sticker_material"		"community01/llama_cannon"
-			"sticker_icon"		"community01/llama_cannon"
 			"item_rarity"		"rare"
 		}
 		"110"
@@ -16139,7 +15360,6 @@
 			"item_name"		"#StickerKit_comm01_new_sheriff_foil"
 			"description_string"		"#StickerKit_desc_comm01_new_sheriff_foil"
 			"sticker_material"		"community01/new_sheriff_foil"
-			"sticker_icon"		"community01/new_sheriff_foil"
 			"item_rarity"		"legendary"
 		}
 		"111"
@@ -16148,7 +15368,6 @@
 			"item_name"		"#StickerKit_comm01_other_awp"
 			"description_string"		"#StickerKit_desc_comm01_other_awp"
 			"sticker_material"		"community01/other_awp"
-			"sticker_icon"		"community01/other_awp"
 			"item_rarity"		"rare"
 		}
 		"112"
@@ -16157,7 +15376,6 @@
 			"item_name"		"#StickerKit_comm01_shavemaster"
 			"description_string"		"#StickerKit_desc_comm01_shavemaster"
 			"sticker_material"		"community01/shavemaster"
-			"sticker_icon"		"community01/shavemaster"
 			"item_rarity"		"rare"
 		}
 		"113"
@@ -16166,7 +15384,6 @@
 			"item_name"		"#StickerKit_comm01_skull"
 			"description_string"		"#StickerKit_desc_comm01_skull"
 			"sticker_material"		"community01/skull"
-			"sticker_icon"		"community01/skull"
 			"item_rarity"		"rare"
 		}
 		"114"
@@ -16175,7 +15392,6 @@
 			"item_name"		"#StickerKit_comm01_sneaky_beaky"
 			"description_string"		"#StickerKit_desc_comm01_sneaky_beaky"
 			"sticker_material"		"community01/sneaky_beaky"
-			"sticker_icon"		"community01/sneaky_beaky"
 			"item_rarity"		"rare"
 		}
 		"115"
@@ -16184,7 +15400,6 @@
 			"item_name"		"#StickerKit_comm01_swag_foil"
 			"description_string"		"#StickerKit_desc_comm01_swag_foil"
 			"sticker_material"		"community01/swag_foil"
-			"sticker_icon"		"community01/swag_foil"
 			"item_rarity"		"legendary"
 		}
 		"116"
@@ -16193,7 +15408,6 @@
 			"item_name"		"#StickerKit_comm01_teamwork_holo"
 			"description_string"		"#StickerKit_desc_comm01_teamwork_holo"
 			"sticker_material"		"community01/teamwork_holo"
-			"sticker_icon"		"community01/teamwork_holo"
 			"item_rarity"		"mythical"
 		}
 		"117"
@@ -16202,7 +15416,6 @@
 			"item_name"		"#StickerKit_comm01_to_b_or_not_to_b"
 			"description_string"		"#StickerKit_desc_comm01_to_b_or_not_to_b"
 			"sticker_material"		"community01/to_b_or_not_to_b"
-			"sticker_icon"		"community01/to_b_or_not_to_b"
 			"item_rarity"		"rare"
 		}
 		"118"
@@ -16211,7 +15424,6 @@
 			"item_name"		"#StickerKit_comm01_winged_defuser"
 			"description_string"		"#StickerKit_desc_comm01_winged_defuser"
 			"sticker_material"		"community01/winged_defuser"
-			"sticker_icon"		"community01/winged_defuser"
 			"item_rarity"		"rare"
 		}
 		"119"
@@ -16220,7 +15432,6 @@
 			"item_name"		"#StickerKit_comm01_pocket_bbq"
 			"description_string"		"#StickerKit_desc_comm01_pocket_bbq"
 			"sticker_material"		"community01/pocket_bbq"
-			"sticker_icon"		"community01/pocket_bbq"
 			"item_rarity"		"rare"
 		}
 		"120"
@@ -16229,7 +15440,6 @@
 			"item_name"		"#StickerKit_comm01_death_comes"
 			"description_string"		"#StickerKit_desc_comm01_death_comes"
 			"sticker_material"		"community01/death_comes"
-			"sticker_icon"		"community01/death_comes"
 			"item_rarity"		"rare"
 		}
 		"121"
@@ -16238,7 +15448,6 @@
 			"item_name"		"#StickerKit_comm01_rekt_holo"
 			"description_string"		"#StickerKit_desc_comm01_rekt_holo"
 			"sticker_material"		"community01/rekt"
-			"sticker_icon"		"community01/rekt"
 			"item_rarity"		"mythical"
 		}
 		"122"
