@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.99164194fbd414ed8af806214f0f210b1b22b429.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.54736442c54b7c8ceb146df44bcf855b111ffe02.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -48570,6 +48570,47 @@
 						"name": "is marketable",
 						"class": "is_marketable",
 						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "TF_WEAPON_SPELLBOOK",
+				"defindex": 1132,
+				"item_class": "tf_weapon_spellbook",
+				"item_type_name": "Spellbook\n",
+				"item_name": "Spellbook Magazine",
+				"item_description": "\nA vintage edition of Casters Quarterly.\nFound in the back of a closet, it contains just enough magic to get the job done.\n\nEquip to enabled picking up and casting spells.",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": "",
+				"item_quality": 0,
+				"image_inventory": "backpack/props_halloween/hwn_spellbook_magazine",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/hwn_spellbook_magazine.3527be41918413569094879536304de8c9c44186.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/hwn_spellbook_magazine_large.e9099cdce302ce467b4930d6dfb4d0f22dd4b3e0.png",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"styles": [
+					{
+						"name": "TF_UnknownStyle"
+					}
+				]
+				,
+				"attributes": [
+					{
+						"name": "single wep deploy time decreased",
+						"class": "mult_single_wep_deploy_time",
+						"value": 0.5
 					}
 				]
 				
