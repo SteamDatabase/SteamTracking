@@ -1189,7 +1189,7 @@
 		{
 			"item_class"	"craft_item"
 			"craft_material_type"	"craft_material_voodoocursed"
-			"expiration_date"	"2013-11-11 06:00:00"
+			"expiration_date"	"!end_of_halloween"
 			"item_type_name"	"#TF_VoodooCursed_Type"
 			"show_in_armory"	"1"
 			"armory_remap"		"Voodoo-Cursed Item (Armory)"
@@ -1238,7 +1238,7 @@
 		{
 			"item_class"	"tool"
 			"craft_class"	"tool"
-			"expiration_date"	"2013-11-11 06:00:00"
+			"expiration_date"	"!end_of_halloween"
 			"tool"
 			{
 				"type"	"apply_custom_attrib"
@@ -1313,7 +1313,7 @@
 		{
 			"item_class"	"tool"
 			"craft_class"	"tool"
-			"expiration_date"	"2013-11-11 06:00:00"
+			"expiration_date"	"!end_of_halloween"
 			"capabilities"
 			{
 				"can_card_upgrade"		"0"		
@@ -4367,6 +4367,19 @@
 					"ACT_VM_DRAW"	"ACT_ENGINEER_PDA2_VM_DRAW"
 				}
 			}
+		}
+		"1132"
+		{
+			"name"	"TF_WEAPON_SPELLBOOK"
+			"prefab"	"halloween2013_spellbook"
+			"item_type_name"	"#TF_Spellbook_Type"
+			"item_name"			"#TF_Spellbook_Basic"
+			"item_description"	"#TF_SpellBook_Basic_Desc"
+			"item_quality"		"normal"
+			"baseitem" 			"1"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"image_inventory"	"backpack/props_halloween/hwn_spellbook_magazine"
 		}
 
 
