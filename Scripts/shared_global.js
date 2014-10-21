@@ -81,6 +81,19 @@ Steam = {
 	}
 }
 
+
+// proto functions used to accept an id or an element.
+// This can be used to migrate them to returning jquery instead of proto-wrapped element
+function $JFromIDOrElement( elem )
+{
+	if ( elem instanceof jQuery )
+		return elem;
+	else if ( typeof elem == 'string' )
+		return $J('#' + elem.replace( /\./, '\\.' ) );
+	else
+		return $J( elem );
+}
+
 function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButton, strSecondaryActionButton )
 {
 	if ( !strOKButton )
@@ -1151,7 +1164,7 @@ function GetValueLocalStorage( strPreferenceName, defaultValue )
 function DynamicLink_PlayYouTubeVideoInline( elem, videoid )
 {
 	var el = $J(elem);
-	var youtubeurl = 'http://www.youtube.com/embed/' + videoid + '?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct&autoplay=1';
+	var youtubeurl = location.protocol + '//www.youtube.com/embed/' + videoid + '?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct&autoplay=1';
 	var wrapper = $J( '<div/>', { 'class' : 'dynamiclink_youtubeviewvideoembedded', 'frameborder' : '0' } );
 	var iframeContent = $J( '<iframe/>', { 'frameborder' : '0', src: youtubeurl } );
 	if ( el.length )
@@ -1449,31 +1462,32 @@ function RateAnnouncement( rateURL, gid, bVoteUp )
  */
 function ScrollToIfNotInView( elem, nRequiredPixelsToShow, nSpacingBefore )
 {
-	elem = $(elem);
+	var $Elem = $JFromIDOrElement(elem);
 
-	var elemTop = elem.viewportOffset().top;
+	var elemTop = $Elem.offset().top;
+	var nViewportOffsetTop = elemTop - $J(window).scrollTop();
 	var bNeedToScroll = false;
-	if ( elemTop < 0 )
+	if ( nViewportOffsetTop < 0 )
 	{
 		bNeedToScroll = true;
 	}
 	else
 	{
 		if ( !nRequiredPixelsToShow )
-			nRequiredPixelsToShow = elem.getHeight();
+			nRequiredPixelsToShow = $Elem.outerHeight();
 
-		var elemBottom = elemTop + nRequiredPixelsToShow;
+		var nViewportOffsetBottom = nViewportOffsetTop + nRequiredPixelsToShow;
 
-		if ( elemBottom > $(document).viewport.getHeight() )
+		if ( nViewportOffsetBottom > $J(window).height() )
 			bNeedToScroll = true;
 	}
 
 	if ( bNeedToScroll )
 	{
 		if ( nSpacingBefore )
-			window.scrollBy( 0, elemTop - nSpacingBefore );
+			window.scrollBy( 0, nViewportOffsetTop - nSpacingBefore );
 		else
-			elem.scrollTo();
+			window.scrollBy( 0, nViewportOffsetTop );
 	}
 }
 

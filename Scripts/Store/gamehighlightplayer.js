@@ -6,7 +6,8 @@ function OnMovieComplete()
 {
 	if ( g_player )
 	{
-		setTimeout( g_player.OnMovieComplete.bind( g_player, g_player.m_activeItem ), 2000 );
+		var activeItem = gPlayer.m_activeItem;
+		setTimeout( function() { g_player.OnMovieComplete( activeItem ) }, 2000 );
 	}
 }
 
@@ -74,615 +75,602 @@ function SetGameHighlightPlayerVolume( flVolume )
 	document.cookie = 'flGameHighlightPlayerVolume=' + flVolume + '; path=/';
 }
 
-var HighlightPlayer = Class.create( {
-	m_elemContainer: null,
-	m_elemPlayerArea: null,
-	m_elemStrip: null,
-	m_elemStripScroll: null,
-	m_elemSelector: null,
-	m_slider: null,
-	m_activeItem: null,
-	m_rgMovieFlashvars: null,
-	m_rgDefaultMovieFlashvars: null,
-	m_rgScreenshotURLs: null,
-	m_bVideoOnlyMode: false,
-	m_bUseHTMLPlayer: false,
+function HighlightPlayer( args )
+{
+	this.m_elemPlayerArea = $JFromIDOrElement(args.elemPlayerArea);
+	this.m_elemStrip = $JFromIDOrElement(args.elemStrip);
+	this.m_elemStripScroll = $JFromIDOrElement(args.elemStripScroll);
+	this.m_rgMovieFlashvars = args.rgMovieFlashvars || new Array();
+	this.m_rgScreenshotURLs = args.rgScreenshotURLs || new Array();
+	this.m_rgDefaultMovieFlashvars = args.rgDefaultMovieFlashvars || {};
+	this.m_bVideoOnlyMode = args.bVideoOnlyMode;
+	this.m_bUseHTMLPlayer = args.bUseHTMLPlayer;
 
-	m_timerInterval: false,
-	m_bDisableSlider: false,
-	m_bScreenshotModalActive: false,
-
-	initialize: function( args )
-	{
-		this.m_elemPlayerArea = $(args.elemPlayerArea);
-		this.m_elemStrip = $(args.elemStrip);
-		this.m_elemStripScroll = $(args.elemStripScroll);
-		this.m_rgMovieFlashvars = args.rgMovieFlashvars || new Array();
-		this.m_rgScreenshotURLs = args.rgScreenshotURLs || new Array();
-		this.m_rgDefaultMovieFlashvars = $H( args.rgDefaultMovieFlashvars || {} );
-		this.m_bVideoOnlyMode = args.bVideoOnlyMode;
-		this.m_bUseHTMLPlayer = args.bUseHTMLPlayer;
-
-		//make all the strip items clickable
-		var thisClosure = this;
-		this.m_elemStrip.select( '.highlight_strip_item' ).each(
-				function(elemThumb) {
-					Event.observe( elemThumb, 'click', thisClosure.HighlightItem.bind( thisClosure, elemThumb, true ) );
-				}
-		);
-
-		this.m_elemSelector = this.m_elemStrip.down('.highlight_selector');
-
-		var elemSlider = $(args.elemSlider);
-		var nSliderWidth = this.m_elemStripScroll.getWidth() - this.m_elemStrip.getWidth();
-		if ( nSliderWidth > 0 )
-		{
-			this.slider = new Control.Slider( elemSlider.down('.handle'), elemSlider, {
-		        range: $R( 0, nSliderWidth ),
-		        sliderValue: 0,
-		        onSlide: this.SliderOnChange.bind( this ),
-		        onChange: this.SliderOnChange.bind( this )
-	     	});
+	//make all the strip items clickable
+	var thisClosure = this;
+	this.m_elemStrip.find( '.highlight_strip_item' ).each(
+		function() {
+			var $Thumbnail = $J(this);
+			$Thumbnail.click( function() { thisClosure.HighlightItem( $Thumbnail, true ); } );
 		}
-		else
-		{
-			elemSlider.hide();
-		}
+	);
 
-		var cItems = this.m_elemPlayerArea.select( '.highlight_player_item' ).length;
-		if ( cItems == 1 )
-		{
-						this.m_elemStrip.hide();
-		}
+	this.m_elemSelector = this.m_elemStrip.find('.highlight_selector');
 
-		this.m_elemContainer = $(args.elemContainer) || this.m_elemPlayerArea.up('.highlight_ctn');
-		this.m_elemContainer.observe( 'mouseover', this.mouseOver.bindAsEventListener( this ) );
-		this.m_elemContainer.observe( 'mouseout', this.mouseOut.bindAsEventListener( this ) );
-
-		var firstItem = $(args.firstItem) || this.m_elemPlayerArea.down( '.highlight_player_item' );
-
-
-		if ( !this.m_bVideoOnlyMode && !BIsUserGameHighlightAutoplayEnabled() )
-		{
-			firstItem = this.m_elemPlayerArea.down( '.highlight_screenshot' );
-		}
-
-		this.HighlightItem( firstItem );
-
-		RegisterSteamOnWebPanelShownHandler( this.OnWebPanelShown.bind( this ) );
-		RegisterSteamOnWebPanelHiddenHandler( this.OnWebPanelHidden.bind( this ) );
-
-		if ( $J(document.body).hasClass( 'v6' ) )
-		{
-			var $ScreenshotsLinks = $J(this.m_elemPlayerArea).find('.highlight_player_item.highlight_screenshot a.highlight_screenshot_link');
-
-			var _this = this;
-			$ScreenshotsLinks.click( function( event ) {
-				_this.OnScreenshotClick( event, this );
-			} );
-		}
-
-		g_player = this;
-	},
-
-	HighlightItem: function( elem, bUserAction )
+	var elemSlider = $JFromIDOrElement(args.elemSlider);
+	var nSliderWidth = this.m_elemStripScroll.width() - this.m_elemStrip.width();
+	if ( nSliderWidth > 0 )
 	{
-		if ( this.BIsMovie( elem ) )
-			this.HighlightMovie( this.GetMovieId( elem ), bUserAction );
-		else
-			this.HighlightScreenshot( this.GetScreenshotId( elem ) );
-
-		// preload the next screenshot in-order
-		var nextItem = this.m_activeItem.next( '.highlight_player_item' );
-		if ( nextItem && this.BIsScreenshot( nextItem ) )
-			this.LoadScreenshot( this.GetScreenshotId( nextItem ) );
-	},
-
-	HighlightMovie: function( id, bUserAction )
-	{
-		if ( this.m_activeItem && this.BIsMovie( this.m_activeItem )
-				&& this.GetMovieId( this.m_activeItem ) == id )
-			return;
-
-		if( this.m_bUseHTMLPlayer )
-			this.LoadHTML5Movie( id, bUserAction );
-		else
-			this.LoadMovie( id, bUserAction );
-
-
-		this.TransitionTo( $('highlight_movie_' + id ) );
-		this.HighlightStripItem( 'thumb_movie_' + id );
-	},
-
-	HighlightScreenshot: function( id, bSkipAnimation )
-	{
-		this.LoadScreenshot( id );
-
-		this.TransitionTo( $('highlight_screenshot_' + id), bSkipAnimation );
-		this.HighlightStripItem( 'thumb_screenshot_' + id, bSkipAnimation );
-
-		//after showing at least one screenshot, show only screenshots from that point onward
-		this.bScreenshotsOnly = true;
-		this.StartTimer();
-	},
-	LoadHTML5Movie: function( id, bUserAction )
-	{
-		var strTarget = 'movie_' + id;
-
-		// use the global to tell the player that it should unmute this video
-		g_bUserSelectedTrailer = bUserAction;
-
-		if( $(strTarget).play )
-		{
-			$(strTarget).play();
-
-			$(strTarget).addEventListener("ended",jQuery.proxy(this.Transition, this));
-		}
-	},
-	LoadMovie: function( id, bUserAction )
-	{
-		var strTarget = 'movie_' + id;
-		var rgFlashVars = this.m_rgDefaultMovieFlashvars.merge( this.m_rgMovieFlashvars[ 'movie_' + id ] ).toObject();
-
-		if ( !this.m_bVideoOnlyMode )
-		{
-			if ( BIsUserGameHighlightAutoplayEnabled() )
-				rgFlashVars.CHECKBOX_AUTOPLAY_CHECKED = 'true';
-			if ( !BIsUserGameHighlightAudioEnabled() && !bUserAction )
-				rgFlashVars.START_MUTE = 'true';
-			var flVolume = GetGameHighlightPlayerVolume();
-			if ( flVolume != -1 )
-				rgFlashVars.SAVED_VOLUME = flVolume;
-		}
-
-		if ( $(strTarget) && $(strTarget).tagName == 'DIV' )
-		{
-			var strRequiredVersion = "9";
-			if ( typeof( g_bIsOnMac ) != 'undefined' && g_bIsOnMac ) strRequiredVersion = "10.1.0";
-			swfobject.embedSWF( "https://steamstore-a.akamaihd.net/public/swf/videoPlayer.swf?v=10", strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, false, rgFlashVars, {wmode: "opaque", allowScriptAccess: "always", allowFullScreen: "true" } );
-			if ( $(strTarget) && $(strTarget).tagName == 'DIV' )
-			{
-				//looks like the user doesn't have flash, show this message
-				$(strTarget).show();
-			}
-		}
-	},
-
-	LoadScreenshot: function( id )
-	{
-		var target = $( 'highlight_screenshot_' + id );
-		if ( target )
-		{
-			var url = this.GetScreenshotURL( id, '600x338' );
-			var img = target.down('img');
-			if ( img.src != url )
-				img.src = url;
-
-		}
-	},
-
-	GetScreenshotURL: function( id, size )
-	{
-		return this.m_rgScreenshotURLs[ id ].replace( /_SIZE_/, size ? '.' + size : '' );
-	},
-
-	TransitionTo: function( elem, bSkipAnimation )
-	{
-		if ( this.m_activeItem )
-		{
-			if ( this.BIsMovie( this.m_activeItem ) )
-			{
-				//stop movies
-				var movieid = this.GetMovieId( this.m_activeItem );
-				var elemContainer = $('highlight_movie_' + movieid);
-
-				if( this.m_bUseHTMLPlayer)
-				{
-					var elemVideo = $('movie_' + movieid);
-					elemVideo.pause();
-				} else {
-					if ( elemContainer.down('.flash_ctn') )
-						elemContainer = elemContainer.down('.flash_ctn');
-					var strTarget = 'movie_' + movieid;
-					elemContainer.innerHTML = '<div id="' + strTarget + '"></div>';
-				}
-				this.m_activeItem.hide();
-
-			}
-			else
-			{
-				//(cross) fade screenshots
-				if ( $(this.m_activeItem).effect ) $(this.m_activeItem).effect.cancel();
-
-				if ( bSkipAnimation )
-					$(this.m_activeItem).hide();
-				else
-					$(this.m_activeItem).effect = Effect.Fade( this.m_activeItem, {duration: 0.4 } );
-			}
-		}
-
-		if ( this.BIsMovie( elem ) )
-		{
-			elem.show();
-			this.bScreenshotsOnly = false;
-		}
-		else
-		{
-			if ( elem.effect ) elem.effect.cancel();
-
-			if ( bSkipAnimation )
-				elem.show();
-			else
-				elem.effect = new Effect.Appear( elem, {duration: 0.4 } );
-		}
-
-		this.m_activeItem = elem;
-	},
-
-	HighlightStripItem: function( elem, bSkipAnimation )
-	{
-		var elem = $(elem);
-		elem.siblings().invoke( 'removeClassName', 'focus' );
-		elem.addClassName( 'focus' );
-
-		//
-		var nStripWidth = this.m_elemStrip.getWidth();
-		var nTotalStripWidth = this.m_elemStripScroll.getWidth();
-		var nScrollOffset = this.m_elemStripScroll.offsetLeft;
-
-		var nThumbRightEdge = elem.offsetLeft + elem.getWidth()  + 2;
-		var nThumbLeftEdge = elem.offsetLeft;
-
-		var nTargetScrollOffset = null;
-		var bNeedScroll = false;
-
-		if ( nThumbRightEdge + nScrollOffset > nStripWidth )
-		{
-			bNeedScroll = true;
-			nTargetScrollOffset = nThumbLeftEdge;
-		}
-		else if ( nThumbLeftEdge < -nScrollOffset )
-		{
-			bNeedScroll = true;
-			// if we're scrolling to the left, try to scroll all the way
-			//   back to the start if that will work, otherwise scroll such
-			//   that the left edge is in view
-			if ( nThumbRightEdge < nStripWidth )
-				nTargetScrollOffset = 0;
-			else
-				nTargetScrollOffset = Math.max( 0, nThumbLeftEdge );
-		}
-
-		this.m_elemSelector.style.left = elem.offsetLeft + 'px';
-
-		if ( bNeedScroll && this.slider )
-		{
-			if ( this.m_elemStripScroll.effect ) this.m_elemStripScroll.effect.cancel();
-			if ( bSkipAnimation )
-				this.slider.setValue( nTargetScrollOffset );
-			else
-				this.m_elemStripScroll.effect = new Effect.Tween( null, this.slider.value, nTargetScrollOffset, this.slider.setValue.bind( this.slider ) );
-		}
-	},
-
-	BIsMovie: function (elem )
-	{
-		return elem && elem.hasClassName( 'highlight_movie' ) || elem.hasClassName( 'highlight_strip_movie' );
-	},
-
-	BIsScreenshot: function ( elem )
-	{
-		return elem && elem.hasClassName( 'highlight_screenshot' ) || elem.hasClassName( 'highlight_strip_screenshot' );
-	},
-
-	GetMovieId: function( elem )
-	{
-		return elem.id.replace( /(highlight|thumb)_movie_/, '' );
-	},
-
-	GetScreenshotId: function( elem )
-	{
-		return elem.id.replace( /(highlight|thumb)_screenshot_/, '' );
-	},
-
-	Transition: function( bUserAction )
-	{
-		var isFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen;
-
-		if( isFullscreen || this.m_bScreenshotModalActive )
-			return;
-
-		var className = '.highlight_player_item';
-		if ( this.bScreenshotsOnly && !bUserAction )
-			className = '.highlight_screenshot';
-
-		var nextItem = this.m_activeItem.next( className );
-		if ( !nextItem )
-		{
-			nextItem = this.m_elemPlayerArea.down( className );
-		}
-		if ( nextItem )
-		{
-			this.HighlightItem( nextItem );
-		}
-	},
-
-	TransitionBack: function( bUserAction )
-	{
-		var className = '.highlight_player_item';
-		if ( this.bScreenshotsOnly && !bUserAction )
-			className = '.highlight_screenshot';
-
-		var nextItem = this.m_activeItem.previous( className );
-		if ( !nextItem )
-		{
-			var rgItems = $J(this.m_elemPlayerArea).find( className );
-			nextItem = rgItems[rgItems.length - 1];
-		}
-		if ( nextItem )
-		{
-			this.HighlightItem( nextItem );
-		}
-	},
-
-	StartTimer: function()
-	{
-		this.ClearInterval();
-		this.interval = window.setTimeout( this.Transition.bind( this ), 5000 );
-	},
-
-	ClearInterval: function()
-	{
-		if ( this.interval )
-		{
-			window.clearInterval( this.interval );
-			this.interval = false;
-		}
-	},
-
-	SliderOnChange: function( value )
-	{
-		this.m_elemStripScroll.style.left = - value + 'px';
-	},
-
-	StopCycle: function()
-	{
-		this.ClearInterval();
-	},
-
-	StartCycle: function()
-	{
-		if ( !this.BIsMovie( this.m_activeItem ) )
-    		this.StartTimer();
-	},
-
-	OnMovieComplete: function( movieItem )
-	{
-		if ( this.m_activeItem == movieItem )
-		{
-			var movieid = this.GetMovieId( movieItem );
-			this.Transition();
-
-			if ( this.m_bVideoOnlyMode || BIsUserGameHighlightAudioEnabled() )
-			{
-				this.RecordView( movieid );
-			}
-		}
-	},
-
-	OnWebPanelHidden: function()
-	{
-		this.StopCycle();
-		if ( this.m_activeItem && this.BIsMovie( this.m_activeItem ) )
-		{
-			var id = this.GetMovieId( this.m_activeItem );
-			var movie = $('movie_' + id);
-			if(this.m_bUseHTMLPlayer)
-				movie.pause();
-			else
-				movie.callPauseVideo();
-		}
-	},
-
-	OnWebPanelShown: function()
-	{
-		this.StartCycle();
-	},
-
-	mouseOver: function( event )
-	{
-		this.StopCycle();
-	},
-
-	mouseOut: function( event )
-	{
-    	var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
-    	if ( reltarget && ( $(reltarget).up( 'highlight_ctn' ) == this.m_elemContainer ) )
-    		return;
-
-		this.StartCycle();
-	},
-
-	RecordView: function( movieid )
-	{
-		if ( typeof g_AccountID != 'undefined' && g_AccountID )
-		{
-			new Ajax.Request( 'http://store.steampowered.com/videoview/' + movieid + '/' );
-		}
-	},
-
-	OnScreenshotClick: function( event, element )
-	{
-		if ( !this.m_bScreenshotModalActive )
-		{
-			var $Link = $J(element);
-			var screenshotid = $Link.data('screenshotid');
-			this.ShowScreenshotPopup( screenshotid );
-		}
-
-		event.preventDefault();
-	},
-
-	ShowScreenshotPopup: function( screenshotid )
-	{
-		var rgScreenshotIDs = [];
-		for( var id in this.m_rgScreenshotURLs )
-		{
-			rgScreenshotIDs.push( id );
-		}
-		var iCurIndex = -1;
-		for ( var i=0; i < rgScreenshotIDs.length; i++ )
-		{
-			if ( rgScreenshotIDs[i] == screenshotid )
-			{
-				iCurIndex = i;
-				break;
-			}
-		}
-
-		if ( iCurIndex == -1 )
-			return;
-
-		this.m_bScreenshotModalActive = true;
-
-		var $Modal = $J('<div/>', {'class': 'screenshot_popup_modal' } );
-
-		var $Title = $J('<a/>' );
-		if ( Steam.BIsUserInSteamClient() )
-			$Title.text( 'View full-size version in browser' );
-		else
-			$Title.text( 'Download full-size version' );
-		$Title.append( ' ', $J('<img/>', {src: 'https://steamstore-a.akamaihd.net/public/images/v5/ico_external_link.gif' } ) );
-
-		var $TitleCtn = $J('<div/>', {'class': 'screenshot_popup_modal_title'} ).append( $Title );
-
-		var $Img = $J('<img/>', {'src': this.GetScreenshotURL( screenshotid, '600x338' ) } );
-		var $ImgPreload = $J('<img/>', {'src': 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'style': 'display: none;' } );
-		var $ImgCtn = $J('<div/>', {'class': 'screenshot_img_ctn'}).append( $Img, $ImgPreload );
-
-		var $Footer =  $J('<div/>', {'class': 'screenshot_popup_modal_footer' } );
-		var $ScreenshotCount = $J('<div/>');
-		$Footer.append( $ScreenshotCount );
-
-		var $BtnPrev = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium previous'}).append( $J('<span/>').text( 'Prev' ) );
-		var $BtnNext = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium next'}).append( $J('<span/>').text( 'Next' ) );
-
-		$Footer.append( $ScreenshotCount, $BtnPrev, $BtnNext );
-
-
-		$Modal.append( $J('<div/>', {'class': 'screenshot_popup_modal_content'} ).append(
-			$TitleCtn,
-			$ImgCtn,
-			$Footer
-		));
-
-		var Modal = new CModal( $Modal );
-		Modal.SetRemoveContentOnDismissal( true );
-		var bModalShown = false;
-
-		// if loading the 1920x1080 screenshot takes a while, show the popup earlier with a smaller screenshot
-		//	so that the user knows we've responded to their input
-		window.setTimeout( function() {
-			if ( !bModalShown )
-			{
-				Modal.Show();
-				bModalShown = true;
-			}
-		}, 75 );
-
-		$Img.load( function() {
-			$ImgCtn.css( 'min-width', '' );
-			$ImgCtn.css( 'min-height', '' );
-			$Img.stop();
-			$Img.fadeTo( 'fast', 1.0 );
-			if ( !bModalShown )
-			{
-				Modal.Show();
-				bModalShown = true;
-			}
-			Modal.AdjustSizing();
-
-			if ( iCurIndex + 1 < rgScreenshotIDs.length )
-				$ImgPreload.attr( 'src', GameHighlightPlayer.GetScreenshotURL( rgScreenshotIDs[iCurIndex+1], '1920x1080' ) );
-		} );
-
-		var GameHighlightPlayer = this;
-		var fnUpdateFooter = function()
-		{
-			if ( iCurIndex > 0 )
-				$BtnPrev.show();
-			else
-				$BtnPrev.hide();
-
-			if ( iCurIndex < rgScreenshotIDs.length - 1 )
-				$BtnNext.show();
-			else
-				$BtnNext.hide();
-
-			$ScreenshotCount.text( '%1$s of %2$s screenshots'.replace( /%1\$s/, iCurIndex + 1 ).replace( /%2\$s/, rgScreenshotIDs.length ) );
-		};
-		var fnShowScreenshot = function( screenshotid )
-		{
-			var strFullURL = GameHighlightPlayer.GetScreenshotURL( screenshotid );
-			$Title.attr('href', strFullURL );
-			Steam.LinkInNewWindow( $Title );
-
-			$ImgCtn.css( 'min-width', $ImgCtn.width() );
-			$ImgCtn.css( 'min-height', $ImgCtn.height() );
-			$Img.stop();
-			$Img.fadeTo( 'fast', 0.3 );
-			$Img.attr( 'src', GameHighlightPlayer.GetScreenshotURL( screenshotid, '1920x1080' ) );
-		};
-		var fnNextScreenshot = function() {
-			if ( iCurIndex < rgScreenshotIDs.length - 1 )
-			{
-				iCurIndex++;
-				fnShowScreenshot( rgScreenshotIDs[iCurIndex] );
-				fnUpdateFooter();
-			}
-		};
-		var fnPrevScreenshot = function() {
-			if ( iCurIndex > 0 )
-			{
-				iCurIndex--;
-				fnShowScreenshot( rgScreenshotIDs[iCurIndex] );
-				fnUpdateFooter();
-			}
-		};
-		$BtnNext.click( fnNextScreenshot );
-		$BtnPrev.click( fnPrevScreenshot );
-		$Img.click( fnNextScreenshot );
-
-		$J(document).on('keydown.GameHighlightScreenshots', function( event ) {
-			if ( event.which == 37 /* left */ || event.which == 38 /* up */ )
-			{
-				fnPrevScreenshot();
-				event.preventDefault();
-			}
-			else if ( event.which == 39 /* right */ || event.which == 40 /* down */ || event.which == 32 /* spacebar */ )
-			{
-				fnNextScreenshot();
-				event.preventDefault();
-			}
+		this.slider = new CSlider( elemSlider, elemSlider.find('.handle'), {
+			min: 0,
+			max: nSliderWidth,
+			fnOnChange: $J.proxy( this.SliderOnChange, this )
 		});
-
-		Modal.OnResize( function( nMaxWidth, nMaxHeight ) {
-			$Img.css( 'max-width', nMaxWidth );
-			$Img.css( 'max-height', nMaxHeight - 74 );
-		} );
-
-		Modal.OnDismiss( function() {
-			GameHighlightPlayer.HighlightScreenshot( rgScreenshotIDs[iCurIndex], true );
-			GameHighlightPlayer.m_bScreenshotModalActive = false;
-			$J(document).off('keydown.GameHighlightScreenshots');
-		} );
-
-		fnShowScreenshot( screenshotid );
-		fnUpdateFooter();
+	}
+	else
+	{
+		elemSlider.hide();
 	}
 
-} );
+	var cItems = this.m_elemPlayerArea.find( '.highlight_player_item' ).length;
+	if ( cItems == 1 )
+	{
+				this.m_elemStrip.hide();
+	}
 
+	this.m_elemContainer = args.elemContainer ? $JFromIDOrElement(args.elemContainer) : this.m_elemPlayerArea.parents('.highlight_ctn');
+	this.m_elemContainer.on( 'mouseover', $J.proxy( this.mouseOver, this ) );
+	this.m_elemContainer.on( 'mouseout', $J.proxy( this.mouseOut, this ) );
+
+	var firstItem = args.firstItem ? $JFromIDOrElement(args.firstItem) : this.m_elemPlayerArea.find( '.highlight_player_item' ).first();
+
+	if ( !this.m_bVideoOnlyMode && !BIsUserGameHighlightAutoplayEnabled() )
+	{
+		firstItem = this.m_elemPlayerArea.find( '.highlight_screenshot').first();
+	}
+
+	this.HighlightItem( firstItem );
+
+	RegisterSteamOnWebPanelShownHandler( $J.proxy( this.OnWebPanelShown, this ) );
+	RegisterSteamOnWebPanelHiddenHandler( $J.proxy( this.OnWebPanelHidden, this ) );
+
+	if ( $J(document.body).hasClass( 'v6' ) )
+	{
+		var $ScreenshotsLinks = $J(this.m_elemPlayerArea).find('.highlight_player_item.highlight_screenshot a.highlight_screenshot_link');
+
+		var _this = this;
+		$ScreenshotsLinks.click( function( event ) {
+			_this.OnScreenshotClick( event, this );
+		} );
+	}
+
+	g_player = this;
+}
+
+HighlightPlayer.prototype.HighlightItem = function( elem, bUserAction )
+{
+	$Elem = $JFromIDOrElement( elem );
+	if ( this.BIsMovie( $Elem ) )
+		this.HighlightMovie( this.GetMovieId( $Elem ), bUserAction );
+	else
+		this.HighlightScreenshot( this.GetScreenshotId( $Elem ) );
+
+	// preload the next screenshot in-order
+	var nextItem = this.m_activeItem.next( '.highlight_player_item' );
+	if ( nextItem && this.BIsScreenshot( nextItem ) )
+		this.LoadScreenshot( this.GetScreenshotId( nextItem ) );
+ }
+
+HighlightPlayer.prototype.HighlightMovie = function( id, bUserAction )
+{
+	if ( this.m_activeItem && this.BIsMovie( this.m_activeItem )
+			&& this.GetMovieId( this.m_activeItem ) == id )
+		return;
+
+	if( this.m_bUseHTMLPlayer )
+		this.LoadHTML5Movie( id, bUserAction );
+	else
+		this.LoadMovie( id, bUserAction );
+
+
+	this.TransitionTo( $JFromIDOrElement('highlight_movie_' + id ) );
+	this.HighlightStripItem( 'thumb_movie_' + id );
+ }
+
+HighlightPlayer.prototype.HighlightScreenshot = function( id, bSkipAnimation )
+{
+	this.LoadScreenshot( id );
+
+	this.TransitionTo( $JFromIDOrElement('highlight_screenshot_' + id), bSkipAnimation );
+	this.HighlightStripItem( 'thumb_screenshot_' + id, bSkipAnimation );
+
+	//after showing at least one screenshot, show only screenshots from that point onward
+	this.bScreenshotsOnly = true;
+	this.StartTimer();
+}
+
+HighlightPlayer.prototype.LoadHTML5Movie = function( id, bUserAction )
+{
+	var strTarget = 'movie_' + id;
+	var $Target = $JFromIDOrElement( strTarget );
+
+	// use the global to tell the player that it should unmute this video
+	g_bUserSelectedTrailer = bUserAction;
+
+	if( $Target.length > 0 && $Target[0].play )
+	{
+		$Target[0].play();
+
+		$Target.on( 'ended', $J.proxy( this.Transition, this) );
+	}
+}
+
+HighlightPlayer.prototype.LoadMovie = function( id, bUserAction )
+{
+	var strTarget = 'movie_' + id;
+	var $Target = $JFromIDOrElement(strTarget);
+	var rgFlashVars = $J.extend( {}, this.m_rgDefaultMovieFlashvars, this.m_rgMovieFlashvars[ 'movie_' + id ] );
+
+	if ( !this.m_bVideoOnlyMode )
+	{
+		if ( BIsUserGameHighlightAutoplayEnabled() )
+			rgFlashVars.CHECKBOX_AUTOPLAY_CHECKED = 'true';
+		if ( !BIsUserGameHighlightAudioEnabled() && !bUserAction )
+			rgFlashVars.START_MUTE = 'true';
+		var flVolume = GetGameHighlightPlayerVolume();
+		if ( flVolume != -1 )
+			rgFlashVars.SAVED_VOLUME = flVolume;
+	}
+
+	if ( $Target.length && $Target[0].tagName == 'DIV' )
+	{
+		var strRequiredVersion = "9";
+		if ( typeof( g_bIsOnMac ) != 'undefined' && g_bIsOnMac ) strRequiredVersion = "10.1.0";
+		swfobject.embedSWF( "https://steamstore-a.akamaihd.net/public/swf/videoPlayer.swf?v=10", strTarget, rgFlashVars['STAGE_WIDTH'], rgFlashVars['STAGE_HEIGHT'], strRequiredVersion, false, rgFlashVars, {wmode: "opaque", allowScriptAccess: "always", allowFullScreen: "true" } );
+
+		// is the element still around?
+		$Target = $JFromIDOrElement(strTarget);
+		if ( $Target.length && $Target[0].tagName == 'DIV' )
+		{
+			//looks like the user doesn't have flash, show this message
+			$Target.show();
+		}
+	}
+ }
+
+HighlightPlayer.prototype.LoadScreenshot = function( id )
+{
+	var $Target = $JFromIDOrElement( 'highlight_screenshot_' + id );
+	if ( $Target.length )
+	{
+		var url = this.GetScreenshotURL( id, '600x338' );
+		var $Img = $Target.find('img');
+		if ( $Img.attr( 'src' ) != url )
+			$Img.attr( 'src', url );
+
+	}
+ }
+
+HighlightPlayer.prototype.GetScreenshotURL = function( id, size )
+{
+	return this.m_rgScreenshotURLs[ id ].replace( /_SIZE_/, size ? '.' + size : '' );
+ }
+
+HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation )
+{
+	var $Elem = $JFromIDOrElement( elem );
+	if ( this.m_activeItem )
+	{
+		if ( this.BIsMovie( this.m_activeItem ) )
+		{
+			//stop movies
+			var movieid = this.GetMovieId( this.m_activeItem );
+			var $Container = $JFromIDOrElement('highlight_movie_' + movieid);
+
+			if( this.m_bUseHTMLPlayer)
+			{
+				var $Video = $JFromIDOrElement('movie_' + movieid);
+				$Video.trigger( 'pause' );
+			}
+			else
+			{
+				if ( $Container.find('.flash_ctn').length )
+					$Container = $Container.find('.flash_ctn');
+				var strTarget = 'movie_' + movieid;
+				$Container.html( '<div id="' + strTarget + '"></div>' );
+			}
+			this.m_activeItem.hide();
+
+		}
+		else
+		{
+			//(cross) fade screenshots
+			this.m_activeItem.stop();
+
+			if ( bSkipAnimation )
+				this.m_activeItem.hide();
+			else
+				this.m_activeItem.fadeOut( 400 );
+		}
+	}
+
+	if ( this.BIsMovie( $Elem ) )
+	{
+		$Elem.show();
+		this.bScreenshotsOnly = false;
+	}
+	else
+	{
+		$Elem.stop();
+
+		if ( bSkipAnimation )
+			$Elem.show();
+		else
+			$Elem.fadeTo( 400, 1.0 );
+	}
+
+	this.m_activeItem = $Elem;
+ }
+
+HighlightPlayer.prototype.HighlightStripItem = function( elem, bSkipAnimation )
+{
+	var $Elem = $JFromIDOrElement(elem);
+	$Elem.siblings().removeClass( 'focus' );
+	$Elem.addClass( 'focus' );
+
+	//
+	var nStripWidth = this.m_elemStrip.width();
+	var nTotalStripWidth = this.m_elemStripScroll.width();
+	var nScrollOffset = this.m_elemStripScroll.position().left;
+
+	var nThumbRightEdge = $Elem.position().left + $Elem.width()  + 2;
+	var nThumbLeftEdge = $Elem.position().left;
+
+	var nTargetScrollOffset = null;
+	var bNeedScroll = false;
+
+	if ( nThumbRightEdge + nScrollOffset > nStripWidth )
+	{
+		bNeedScroll = true;
+		nTargetScrollOffset = nThumbLeftEdge;
+	}
+	else if ( nThumbLeftEdge < -nScrollOffset )
+	{
+		bNeedScroll = true;
+		// if we're scrolling to the left, try to scroll all the way
+		//   back to the start if that will work, otherwise scroll such
+		//   that the left edge is in view
+		if ( nThumbRightEdge < nStripWidth )
+			nTargetScrollOffset = 0;
+		else
+			nTargetScrollOffset = Math.max( 0, nThumbLeftEdge );
+	}
+
+	this.m_elemSelector.css( 'left', nThumbLeftEdge + 'px' );
+	nTargetScrollOffset = Math.min( nTargetScrollOffset, nTotalStripWidth - nStripWidth );
+
+	if ( bNeedScroll && this.slider )
+	{
+		this.m_elemStripScroll.stop();
+		this.m_elemStripScroll.animate( {left: (-nTargetScrollOffset) + 'px'}, bSkipAnimation ? 0 : 500 );
+		this.slider.SetValue( nTargetScrollOffset, bSkipAnimation ? 0 : 500 );
+	}
+ }
+
+HighlightPlayer.prototype.BIsMovie = function ( $Elem )
+{
+	return $Elem.hasClass( 'highlight_movie' ) || $Elem.hasClass( 'highlight_strip_movie' );
+ }
+
+HighlightPlayer.prototype.BIsScreenshot = function ( $Elem )
+{
+	return $Elem.hasClass( 'highlight_screenshot' ) || $Elem.hasClass( 'highlight_strip_screenshot' );
+ }
+
+HighlightPlayer.prototype.GetMovieId = function( $Elem )
+{
+	return $Elem.attr( 'id' ).replace( /(highlight|thumb)_movie_/, '' );
+ }
+
+HighlightPlayer.prototype.GetScreenshotId = function( $Elem )
+{
+	return $Elem.attr( 'id' ).replace( /(highlight|thumb)_screenshot_/, '' );
+ }
+
+HighlightPlayer.prototype.Transition = function( bUserAction )
+{
+	var isFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen;
+
+	if( isFullscreen || this.m_bScreenshotModalActive )
+		return;
+
+	var className = '.highlight_player_item';
+	if ( this.bScreenshotsOnly && !bUserAction )
+		className = '.highlight_screenshot';
+
+	var $NextItem = this.m_activeItem.next( className );
+	if ( !$NextItem.length )
+	{
+		$NextItem = this.m_elemPlayerArea.find( className ).first();
+	}
+	if ( $NextItem.length )
+	{
+		this.HighlightItem( $NextItem );
+	}
+ }
+
+HighlightPlayer.prototype.TransitionBack = function( bUserAction )
+{
+	var className = '.highlight_player_item';
+	if ( this.bScreenshotsOnly && !bUserAction )
+		className = '.highlight_screenshot';
+
+	var $NextItem = this.m_activeItem.prev( className );
+	if ( !$NextItem.length )
+	{
+		$NextItem = this.m_elemPlayerArea.find( className).last();
+	}
+	if ( $NextItem.length )
+	{
+		this.HighlightItem( $NextItem );
+	}
+ }
+
+HighlightPlayer.prototype.StartTimer = function()
+{
+	this.ClearInterval();
+	this.interval = window.setTimeout( $J.proxy( this.Transition, this ), 5000 );
+ }
+
+HighlightPlayer.prototype.ClearInterval = function()
+{
+	if ( this.interval )
+	{
+		window.clearInterval( this.interval );
+		this.interval = false;
+	}
+ }
+
+HighlightPlayer.prototype.SliderOnChange = function( value, bInDrag )
+{
+	this.m_elemStripScroll.css( 'left', -value + 'px' );
+ }
+
+HighlightPlayer.prototype.StopCycle = function()
+{
+	this.ClearInterval();
+ }
+
+HighlightPlayer.prototype.StartCycle = function()
+{
+	if ( !this.BIsMovie( this.m_activeItem ) )
+		this.StartTimer();
+ }
+
+HighlightPlayer.prototype.OnMovieComplete = function( movieItem )
+{
+	if ( this.m_activeItem.is( movieItem ) )
+	{
+		var movieid = this.GetMovieId( this.m_activeItem );
+		this.Transition();
+
+		if ( this.m_bVideoOnlyMode || BIsUserGameHighlightAudioEnabled() )
+		{
+			this.RecordView( movieid );
+		}
+	}
+ }
+
+HighlightPlayer.prototype.OnWebPanelHidden = function()
+{
+	this.StopCycle();
+	if ( this.m_activeItem && this.BIsMovie( this.m_activeItem ) )
+	{
+		var id = this.GetMovieId( this.m_activeItem );
+		var $Movie = $JFromIDOrElement('movie_' + id);
+		if(this.m_bUseHTMLPlayer)
+			$Movie.trigger( 'pause' );
+		else
+			$Movie.trigger( 'callPauseVideo' );
+	}
+ }
+
+HighlightPlayer.prototype.OnWebPanelShown = function()
+{
+	this.StartCycle();
+ }
+
+HighlightPlayer.prototype.mouseOver = function( event )
+{
+	this.StopCycle();
+ }
+
+HighlightPlayer.prototype.mouseOut = function( event )
+{
+	var reltarget = $J( event.relatedTarget );
+	if ( reltarget.length && $J.contains( this.m_elemContainer[0], reltarget[0] ) )
+		return;
+
+	this.StartCycle();
+};
+
+HighlightPlayer.prototype.RecordView = function( movieid )
+{
+	if ( typeof g_AccountID != 'undefined' && g_AccountID )
+	{
+		$J.get( 'https://store.steampowered.com/videoview/' + movieid + '/' );
+	}
+};
+
+HighlightPlayer.prototype.OnScreenshotClick = function( event, element )
+{
+	if ( !this.m_bScreenshotModalActive )
+	{
+		var $Link = $J(element);
+		var screenshotid = $Link.data('screenshotid');
+		this.ShowScreenshotPopup( screenshotid );
+	}
+
+	event.preventDefault();
+};
+
+HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
+{
+	var rgScreenshotIDs = [];
+	for( var id in this.m_rgScreenshotURLs )
+	{
+		rgScreenshotIDs.push( id );
+	}
+	var iCurIndex = -1;
+	for ( var i=0; i < rgScreenshotIDs.length; i++ )
+	{
+		if ( rgScreenshotIDs[i] == screenshotid )
+		{
+			iCurIndex = i;
+			break;
+		}
+	}
+
+	if ( iCurIndex == -1 )
+		return;
+
+	this.m_bScreenshotModalActive = true;
+
+	var $Modal = $J('<div/>', {'class': 'screenshot_popup_modal' } );
+
+	var $Title = $J('<a/>' );
+	if ( Steam.BIsUserInSteamClient() )
+		$Title.text( 'View full-size version in browser' );
+	else
+		$Title.text( 'Download full-size version' );
+	$Title.append( ' ', $J('<img/>', {src: 'https://steamstore-a.akamaihd.net/public/images/v5/ico_external_link.gif' } ) );
+
+	var $TitleCtn = $J('<div/>', {'class': 'screenshot_popup_modal_title'} ).append( $Title );
+
+	var $Img = $J('<img/>', {'src': this.GetScreenshotURL( screenshotid, '600x338' ) } );
+	var $ImgPreload = $J('<img/>', {'src': 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'style': 'display: none;' } );
+	var $ImgCtn = $J('<div/>', {'class': 'screenshot_img_ctn'}).append( $Img, $ImgPreload );
+
+	var $Footer =  $J('<div/>', {'class': 'screenshot_popup_modal_footer' } );
+	var $ScreenshotCount = $J('<div/>');
+	$Footer.append( $ScreenshotCount );
+
+	var $BtnPrev = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium previous'}).append( $J('<span/>').text( 'Prev' ) );
+	var $BtnNext = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium next'}).append( $J('<span/>').text( 'Next' ) );
+
+	$Footer.append( $ScreenshotCount, $BtnPrev, $BtnNext );
+
+
+	$Modal.append( $J('<div/>', {'class': 'screenshot_popup_modal_content'} ).append(
+		$TitleCtn,
+		$ImgCtn,
+		$Footer
+	));
+
+	var Modal = new CModal( $Modal );
+	Modal.SetRemoveContentOnDismissal( true );
+	var bModalShown = false;
+
+	// if loading the 1920x1080 screenshot takes a while, show the popup earlier with a smaller screenshot
+	//	so that the user knows we've responded to their input
+	window.setTimeout( function() {
+		if ( !bModalShown )
+		{
+			Modal.Show();
+			bModalShown = true;
+		}
+	}, 75 );
+
+	$Img.load( function() {
+		$ImgCtn.css( 'min-width', '' );
+		$ImgCtn.css( 'min-height', '' );
+		$Img.stop();
+		$Img.fadeTo( 'fast', 1.0 );
+		if ( !bModalShown )
+		{
+			Modal.Show();
+			bModalShown = true;
+		}
+		Modal.AdjustSizing();
+
+		if ( iCurIndex + 1 < rgScreenshotIDs.length )
+			$ImgPreload.attr( 'src', GameHighlightPlayer.GetScreenshotURL( rgScreenshotIDs[iCurIndex+1], '1920x1080' ) );
+	} );
+
+	var GameHighlightPlayer = this;
+	var fnUpdateFooter = function()
+	{
+		if ( iCurIndex > 0 )
+			$BtnPrev.show();
+		else
+			$BtnPrev.hide();
+
+		if ( iCurIndex < rgScreenshotIDs.length - 1 )
+			$BtnNext.show();
+		else
+			$BtnNext.hide();
+
+		$ScreenshotCount.text( '%1$s of %2$s screenshots'.replace( /%1\$s/, iCurIndex + 1 ).replace( /%2\$s/, rgScreenshotIDs.length ) );
+	};
+	var fnShowScreenshot = function( screenshotid )
+	{
+		var strFullURL = GameHighlightPlayer.GetScreenshotURL( screenshotid );
+		$Title.attr('href', strFullURL );
+		Steam.LinkInNewWindow( $Title );
+
+		$ImgCtn.css( 'min-width', $ImgCtn.width() );
+		$ImgCtn.css( 'min-height', $ImgCtn.height() );
+		$Img.stop();
+		$Img.fadeTo( 'fast', 0.3 );
+		$Img.attr( 'src', GameHighlightPlayer.GetScreenshotURL( screenshotid, '1920x1080' ) );
+	};
+	var fnNextScreenshot = function() {
+		if ( iCurIndex < rgScreenshotIDs.length - 1 )
+		{
+			iCurIndex++;
+			fnShowScreenshot( rgScreenshotIDs[iCurIndex] );
+			fnUpdateFooter();
+		}
+	};
+	var fnPrevScreenshot = function() {
+		if ( iCurIndex > 0 )
+		{
+			iCurIndex--;
+			fnShowScreenshot( rgScreenshotIDs[iCurIndex] );
+			fnUpdateFooter();
+		}
+	};
+	$BtnNext.click( fnNextScreenshot );
+	$BtnPrev.click( fnPrevScreenshot );
+	$Img.click( fnNextScreenshot );
+
+	$J(document).on('keydown.GameHighlightScreenshots', function( event ) {
+		if ( event.which == 37 /* left */ || event.which == 38 /* up */ )
+		{
+			fnPrevScreenshot();
+			event.preventDefault();
+		}
+		else if ( event.which == 39 /* right */ || event.which == 40 /* down */ || event.which == 32 /* spacebar */ )
+		{
+			fnNextScreenshot();
+			event.preventDefault();
+		}
+	});
+
+	Modal.OnResize( function( nMaxWidth, nMaxHeight ) {
+		$Img.css( 'max-width', nMaxWidth );
+		$Img.css( 'max-height', nMaxHeight - 74 );
+	} );
+
+	Modal.OnDismiss( function() {
+		GameHighlightPlayer.HighlightScreenshot( rgScreenshotIDs[iCurIndex], true );
+		GameHighlightPlayer.m_bScreenshotModalActive = false;
+		$J(document).off('keydown.GameHighlightScreenshots');
+	} );
+
+	fnShowScreenshot( screenshotid );
+	fnUpdateFooter();
+};
 
 (function( $ ){
 	var settings = {};

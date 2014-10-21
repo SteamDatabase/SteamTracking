@@ -245,8 +245,8 @@ var CForum = Class.create( {
 		$('forum_' + this.m_strName + '_newtopic_error' ).update( 'There was an error creating a new topic: ' + ( rgJSON.error ? rgJSON.error : rgJSON.success ) );
 		new Effect.Appear( $('forum_' + this.m_strName + '_newtopic_error' ), { duration: 0.5 } );
 
-		$('forum_' + strName + '_submit_container').show();
-		$('forum_' + strName + '_submit_throbber_container').hide();
+		$('forum_' + this.m_strName + '_submit_container').show();
+		$('forum_' + this.m_strName + '_submit_throbber_container').hide();
 	},
 
 	GetActionURL: function( action )

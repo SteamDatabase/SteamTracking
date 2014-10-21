@@ -5,18 +5,6 @@ function GotFlashPopup()
 	win.focus();
 }
 
-// proto functions used to accept an id or an element.
-// This can be used to migrate them to returning jquery instead of proto-wrapped element
-function $JFromIDOrElement( elem )
-{
-	if ( elem instanceof jQuery )
-		return elem;
-	else if ( typeof elem == 'string' )
-		return $J('#' + elem);
-	else
-		return $J( elem );
-}
-
 //
 // Page-able tabs
 //
@@ -1050,8 +1038,7 @@ function UpdateSpotlightControls( cMaxSpotlights )
 	else
 		$JFromIDOrElement('spotlight_scroll_prev').addClass( 'disabled' );
 
-	if ( $('spotlight_scroll_count_cur') )
-		$JFromIDOrElement('spotlight_scroll_count_cur').text( g_iActiveSpotlight + 1 );
+	$J('#spotlight_scroll_count_cur').text( g_iActiveSpotlight + 1 );
 }
 
 function CSlider( $Container, $Grabber, args )
@@ -1359,7 +1346,7 @@ function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions )
 			GDynamicStore.DecorateDynamicItems( $Suggestions );
 			$Suggestions.find('a.match').each( function () {
 				var el = this;
-				$J(el).on( 'mouseover', function( event ) { SearchSuggestOnMouseOver.bindAsEventListener( event, el ); } );
+				$J(el).on( 'mouseover', function( event ) { SearchSuggestOnMouseOver( event, $J(el) ); } );
 			} );
 			ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions );
 		} );
@@ -2102,36 +2089,32 @@ function removeFromCart( gid )
 
 function dropdownSelectOption( dropdownName, subId, inCart )
 {
-	try
+		$J('#add_to_cart_' + dropdownName + '_value').val( subId );
+	$J('#add_to_cart_' + dropdownName + '_selected_text').html( $J('#add_to_cart_' + dropdownName + '_menu_option_' + subId).html() );
+	$J('#add_to_cart_' + dropdownName + '_description_text').html( $J('#add_to_cart_' + dropdownName + '_menu_option_description_' + subId).html() );
+	if ( inCart )
 	{
-				$('add_to_cart_' + dropdownName + '_value').value = subId;
-		$('add_to_cart_' + dropdownName + '_selected_text').innerHTML = $('add_to_cart_' + dropdownName + '_menu_option_' + subId).innerHTML;
-		$('add_to_cart_' + dropdownName + '_description_text').innerHTML = $('add_to_cart_' + dropdownName + '_menu_option_description_' + subId).innerHTML;
-		$('add_to_cart_' + dropdownName + '_add_button').style.display = inCart ? 'none' : 'block';
-		$('add_to_cart_' + dropdownName + '_in_cart_button').style.display = inCart ? 'block' : 'none';
-		HideMenu('add_to_cart_' + dropdownName + '_pulldown', 'add_to_cart_' + dropdownName + '_menu');
+		$J('#add_to_cart_' + dropdownName + '_add_button').hide()
+		$J('#add_to_cart_' + dropdownName + '_in_cart_button').show();
 	}
-	catch( e)
+	else
 	{
-			}
+		$J('#add_to_cart_' + dropdownName + '_add_button').show()
+		$J('#add_to_cart_' + dropdownName + '_in_cart_button').hide();
+	}
+	HideMenu('add_to_cart_' + dropdownName + '_pulldown', 'add_to_cart_' + dropdownName + '_menu');
 }
 
 function dropdownAddToCart( dropdownName )
 {
-	try
+		if ( $J('#add_to_cart_' + dropdownName + '_value').val() == '')
 	{
-				if ($('add_to_cart_' + dropdownName + '_value').value == '')
-		{
-			ShowMenu( $('add_to_cart_' + dropdownName + '_pulldown'), 'add_to_cart_' + dropdownName + '_menu' );
-		}
-		else
-		{
-			addToCart( dropdownName );
-		}
+		ShowMenu( 'add_to_cart_' + dropdownName + '_pulldown', 'add_to_cart_' + dropdownName + '_menu' );
 	}
-	catch( e)
+	else
 	{
-			}
+		addToCart( dropdownName );
+	}
 }
 
 

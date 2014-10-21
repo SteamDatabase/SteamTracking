@@ -319,6 +319,7 @@ div.rightcol.small {
 	max-width: 225px;
 	white-space: normal;
 	box-shadow: 0 0 3px #000000;
+	word-wrap: break-word;
 }
 
 
@@ -1338,6 +1339,11 @@ span.platform_img.linux {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.app_tag.not_browseable {
+	opacity: 0.6;
+	cursor: default;
 }
 
 /* HOVER */
