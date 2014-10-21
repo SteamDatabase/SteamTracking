@@ -231,9 +231,8 @@ ul#why_list li {
 }
 
 .modal_top_band {
-	background-image:url( 'https://steamstore-a.akamaihd.net/public/images/got_steam_top.jpg' );
-	background-repeat:no-repeat;
-	width:508px;
+	background-color:#37516d;
+	width:548px;
 	height:25px;
 	margin-bottom:1px;
 }
@@ -247,12 +246,18 @@ ul#why_list li {
 }
 
 .modal_box {
-	border-color:#4d4b49;
-	border-style:solid;
-	border-width:2px 1px;
-	width: 466px;
-	background-color:#262626;
-	padding: 20px;
+	background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);	padding: 3px;
+	width:542px;
+
+	font-size: 12px;
+	color: #ffffff;
+	text-align: left;
+}
+.modal_box .modal_box_ctn
+{
+	width:502px;
+	background-color:#1a2635;
+	padding:20px;
 }
 
 .modal_low_block {
@@ -264,7 +269,10 @@ ul#why_list li {
 }
 
 .modal_box h1 {
-	padding-left:20px;
+	padding-left: 20px;
+	font-size: 36px;
+	font-weight: normal;
+	font-family: "Motiva Sans Light","Motiva Sans",arial,tahoma,sans-serif;
 }
 
 .modal_box p {
@@ -355,9 +363,12 @@ ul#why_list li {
 }
 
 .auth_details_messages {
-	color: #85847f;
+	color: #8F98A0;
 	font-size: 12px;
 	height: 38px;
+}
+.notice {
+	color: #ff7b00;
 }
 
 .authcode_entry_area, .twofactorauthcode_entry_area {
@@ -367,16 +378,26 @@ ul#why_list li {
 }
 
 .authcode_entry_box, .twofactorauthcode_entry_box {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/login/code_box.png );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/login/code_box.png?v=1 );
 	background-repeat: no-repeat;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	color: #C6D4DF;
 	width: 220px;
 	height: 27px;
 }
 
 .friendly_name_box
 {
-	background-image: url( https://steamstore-a.akamaihd.net/public/images/login/friendlyname_box.png );
+	background-image: url( https://steamstore-a.akamaihd.net/public/images/login/friendlyname_box.png?v=1 );
 	background-repeat: no-repeat;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	color: #C6D4DF;
 	width: 220px;
 	height: 27px;
 }
@@ -395,10 +416,6 @@ input.authcode_entry_input.defaulttext, input.twofactorauthcode_entry_input.defa
 	font-style: italic;
 }
 
-#auth_buttonsets, #twofactorauth_buttonsets {
-	height: 66px;
-}
-
 #auth_buttonset_waiting, #login_twofactorauth_buttonset_waiting {
 	height: 66px;
 
@@ -411,11 +428,12 @@ input.authcode_entry_input.defaulttext, input.twofactorauthcode_entry_input.defa
 	background-image: url( https://steamstore-a.akamaihd.net/public/images/login/emailauth_button.png );
 	background-repeat: no-repeat;
 	width: 219px;
-	height: 66px;
+	height: 58px;
 }
 
 .auth_button.auth_button_spacer, .twofactorauth_button.auth_button_spacer {
 	background-image: none;
+	width: 0px;
 }
 
 a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_button:hover {
@@ -423,21 +441,25 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 	text-decoration: none;
 }
 
-.auth_button h3, .twofactorauth_button h3 {
+body.v6 .auth_button h3, body.v6 .twofactorauth_button h3 {
 	font-weight: normal;
-	font-size: 18px;
-	color: #ffffff;
-	padding: 6px 12px 0px 12px;
+	font-size: 22px;
+	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
+	color: #66C0F4;
 }
 
 .auth_button h5, .twofactorauth_button h5 {
-	font-size: 12px;
-	color: #adaca6;
-	padding: 0px 12px 0px 12px;
+	font-size: 13px;
+	color: #66C0F4;
 	text-transform: none;
 }
-
-
+body.v6 .auth_button:hover h3,
+body.v6 .twofactorauth_button:hover h3,
+body.v6 .auth_button:hover h5,
+.twofactorauth_button:hover h5
+{
+	color: #ffffff;
+}
 
 .modal_buttons .auth_button, .modal_buttons .twofactorauth_button, .modal_buttons a.twofactorauth_button.leftbtn, .modal_buttons a.twofactorauth_button.leftbtn {
 	float: left;
@@ -446,6 +468,13 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 .modal_buttons a.auth_button.leftbtn {
 	margin-right: 16px;
 }
+
+.modal_box_ctn a.auth_button {
+	background: -moz-linear-gradient(top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -webkit-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -o-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: linear-gradient(to bottom, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);padding: 12px 12px 15px 12px;
+	border-radius: 2px;
+}
+.modal_box_ctn a.auth_button:hover {
+	background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);}
 
 #loginIPTModal .modal_box {
 	background-image: url( https://steamstore-a.akamaihd.net/public/images/login/ipt_lockout_bg.png );
@@ -493,7 +522,7 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 
 
 #auth_details_computer_name{
-	margin: 30px 0 40px 0;
+	margin: 52px 0 28px 0;
 }
 
 #friendly_name_box{

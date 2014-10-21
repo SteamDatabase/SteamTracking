@@ -1453,33 +1453,17 @@ a.friend_block_holder:hover {
 	color:#ffffff;
 }
 
-#top_band {
-	background-image:url( 'https://steamstore-a.akamaihd.net/public/images/got_steam_top.jpg' );
-	background-repeat:no-repeat;
-	width:508px;
-	height:25px;
-	margin-bottom:1px;
-}
-
-#modal_close {
-	float:right;
-	width:9px;
-	height:9px;
-	margin-right:9px;
-	margin-top:7px;
-}
-
 .got_steam_ctn {
 	background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);	padding: 3px;
 	width:650px;
 }
-#got_steam_box {
+.got_steam_box {
 	width:650px;
 	background-color:#1a2635;
 	padding-top:20px;
 }
 
-#low_block {
+.got_steam_low_block {
 	border-top: 1px solid rgba( 0, 0, 0, 0.5 );
 	padding:18px 20px 0px 20px;
 	height:49px;
@@ -1487,14 +1471,14 @@ a.friend_block_holder:hover {
 	font-size: 13px;
 }
 
-#got_steam_box h1 {
+.got_steam_box h1 {
 	padding-left:20px;
 	font-weight: normal;
 	font-size: 36px;
 	color: #ffffff;
 }
 
-#got_steam_box p {
+.got_steam_box p {
 	padding-left:20px;
 	color: #8F98A0;
 	font-size: 15px;
@@ -1502,59 +1486,51 @@ a.friend_block_holder:hover {
 }
 
 
-#gotsteam_buttons {
+.gotsteam_buttons {
 	padding:26px 20px 26px 20px;
 }
-	#gotsteam_buttons a.btn_blue h3, #gotsteam_buttons a.btn_blue h5 {
+	.gotsteam_buttons a.btn_blue h3, .gotsteam_buttons a.btn_blue h5 {
 		color: #66C0F4;
 	}
-	#gotsteam_buttons a.btn_blue:hover h3, #gotsteam_buttons a.btn_blue:hover h5 {
+	.gotsteam_buttons a.btn_blue:hover h3, .gotsteam_buttons a.btn_blue:hover h5 {
 		color: #ffffff;
 	}
 
-	#gotsteam_buttons a.btn_blue {
+	.gotsteam_buttons a.btn_blue {
 		float: left;
 		background: -moz-linear-gradient(top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -webkit-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -o-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: linear-gradient(to bottom, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);		width: 271px;
 		padding: 12px 12px 15px 12px;
 		border-radius: 2px;
 	}
 
-	#gotsteam_buttons a.btn_blue:hover {
+	.gotsteam_buttons a.btn_blue:hover {
 		background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);	}
 
-	#gotsteam_buttons a.btn_blue.leftbtn {
+	.gotsteam_buttons a.btn_blue.leftbtn {
 		margin-right: 16px;
 	}
 
-	#gotsteam_buttons h3 {
+	.gotsteam_buttons h3 {
 		font-size: 23px;
 		font-weight: normal;
 	}
 
-	#gotsteam_buttons h5 {
+	.gotsteam_buttons h5 {
 		font-size: 13px;
 		font-weight: normal;
 	}
 
-#btn_no {
+.gotsteam_buttons .btn_no {
 	float:right;
 }
 
-#steam_ico {
+.gotsteam_steam_ico {
 	float:left;
 	padding-right:18px;
 	margin-top:-4px;
 }
 
-#modalBG {
-	position:absolute;
-	z-index:900;
-	background-color:#000000;
-	filter:alpha(opacity=60);
-	opacity:0.8;
-}
-
-#gotSteamModal {
+.gotsteamModal {
 	width:650px;
 	height:301px;
 	position:absolute;

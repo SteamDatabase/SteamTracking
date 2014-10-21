@@ -31,7 +31,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	}
 
 	var rgYourPopularTags = null;
-	var rgGlobalPopularTags = null;
+	var rgGlobalPopularTags = [];
 	var bYourPopularTagsRequested = false;
 	var bBannedTag = false;
 
@@ -64,7 +64,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		fnApplyTag( tag, bWithdraw, bPopular, 0, tagid );
 	};
 
-	var fnMakeTag = function( tagid, tag, checked, bPopular, bReported )
+	var fnMakeTag = function( tagid, tag, checked, bPopular, bReported, bBrowsable )
 	{
 		var $Tag = $J('<div/>', {'class': 'app_tag_control', 'data-tagid': tagid } );
 
@@ -111,9 +111,19 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			}
 		}
 
-		var $Link = $J('<a/>', {'class': 'app_tag', 'href': TagLink( tag ) + '?snr=' + strTagLinkSNR } ).text( tag );
-		$Link.InstrumentLinks();
-		$Tag.append( $Link );
+		if ( bBrowsable )
+		{
+			var $Link = $J('<a/>', {'class': 'app_tag', 'href': TagLink(tag) + '?snr=' + strTagLinkSNR}).text(tag);
+			$Link.InstrumentLinks();
+			$Tag.append($Link);
+		}
+		else
+		{
+			var $Link = $J('<div/>', {'class': 'app_tag not_browseable' }).text(tag);
+			$Link.data('store-tooltip', 'Not enough items tagged with "%s" yet'.replace( /%s/, $Link.html() ) );
+			BindStoreTooltip( $Link );
+			$Tag.append( $Link );
+		}
 
 		return $Tag;
 	};
@@ -162,7 +172,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		for ( var i = 0; i < rgAppTags.length; i++ )
 		{
 			var tagid = rgAppTags[i].tagid;
-			var $AppTag = fnMakeTag( tagid, rgAppTags[i].name, rgUserTagsByTagID[tagid], true, rgUserTagsByTagID[tagid] && rgUserTagsByTagID[tagid].is_reported );
+			var $AppTag = fnMakeTag( tagid, rgAppTags[i].name, rgUserTagsByTagID[tagid], true, rgUserTagsByTagID[tagid] && rgUserTagsByTagID[tagid].is_reported, true );
 
 			$PopularTags.append( $AppTag );
 		}
@@ -216,7 +226,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				if ( rgUserTagsByTagID[tagid] && rgUserTagsByTagID[tagid].is_reported )
 					continue;
 
-				var $AppTag = fnMakeTag( tagid, rgUserTags[i].name, rgUserTagsByTagID[tagid] );
+				var $AppTag = fnMakeTag( tagid, rgUserTags[i].name, rgUserTagsByTagID[tagid], false, false, rgUserTags[i].browseable );
 
 				$YourTags.append( $AppTag );
 			}
@@ -257,12 +267,24 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			$YourTagsOnPage.empty();
 			for ( var i = 0; i < rgUserTags.length; i++ )
 			{
-				if ( rgUserTags[i].is_reported )
-					continue;
+				if ( !rgUserTags[i].is_reported && rgUserTags[i].browseable )
+				{
+					var $AppTag = $J('<a/>', { 'class': 'app_tag', 'href': TagLink(rgUserTags[i].name) + '?snr=' + strYourTagSNR }).text(rgUserTags[i].name);
+					$AppTag.InstrumentLinks();
+					$YourTagsOnPage.append($AppTag);
+				}
+			}
 
-				var $AppTag = $J('<a/>', {'class': 'app_tag', 'href': TagLink( rgUserTags[i].name ) + '?snr=' + strYourTagSNR }).text( rgUserTags[i].name );
-				$AppTag.InstrumentLinks();
-				$YourTagsOnPage.append( $AppTag );
+			// always put non-browseable after all browseable tags, so they are less likely to display
+			for( var i = 0; i < rgUserTags.length; i++ )
+			{
+				if ( !rgUserTags[i].is_reported &&  !rgUserTags[i].browseable )
+				{
+					var $AppTag = $J('<div/>', {'class': 'app_tag not_browseable' }).text( rgUserTags[i].name );
+					$AppTag.data('store-tooltip', 'Not enough items tagged with "%s" yet'.replace( /%s/, $AppTag.html() ) );
+					BindStoreTooltip( $AppTag );
+					$YourTagsOnPage.append( $AppTag );
+				}
 			}
 		}
 		else
@@ -273,7 +295,17 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		}
 		$YourTagsOnPage.append( $AddYourOwn, $AddMore );
 		AdjustVisibleAppTags( $YourTagsOnPage );
-	}
+	};
+
+		var fnIsTagBrowseable = function( tagid, name )
+	{
+		for ( var i = 0; i < rgGlobalPopularTags.length; i++ )
+		{
+							if ( rgGlobalPopularTags[i].tagid == tagid )
+					return true;
+					}
+		return false;
+	};
 
 	var fnApplyTag = function( tag, withdraw, bPopularClick, eReportType, unTagID )
 	{
@@ -296,9 +328,14 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			var $AppTag = $PopularTags.find( strControlSelector );
 			var $YourTag = $YourTags.find( strControlSelector );
 
+			if ( typeof data.browseable == 'undefined' )
+			{
+				data.browseable = fnIsTagBrowseable( data.tagid, data.name );
+			}
+
 			if ( !$YourTag.length && !data.withdraw && !data.reported )
 			{
-				$YourTag = fnMakeTag( data.tagid, data.name );
+				$YourTag = fnMakeTag( data.tagid, data.name, false, false, false, data.browseable );
 				$YourTags.append( $YourTag );
 				$YourTags.children('.no_tags_yet').hide();
 			}
@@ -388,23 +425,23 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	{
 			};
 
-	var fnMatchTags = function( rgRegex, rgTags, rgSuggestions )
+	var fnMatchTags = function( rgTerms, rgTags, rgSuggestions )
 	{
 		var regexNormalize = new RegExp( /\W/g );
 		if ( rgTags && rgTags.length )
 		{
 			for ( var i = 0; i < rgTags.length; i++ )
 			{
-				var strNameNormalized = rgTags[i].name_normalized
+				var strNameNormalized = rgTags[i].name_normalized;
 				if ( !strNameNormalized )
 				{
 					strNameNormalized = rgTags[i].name_normalized = rgTags[i].name.replace( regexNormalize, '').toLowerCase();
 				}
 
 				var bMatch = true;
-				for ( var iRegex = 0; iRegex < rgRegex.length; iRegex++ )
+				for ( var iTerm = 0; iTerm < rgTerms.length; iTerm++ )
 				{
-					if ( !rgRegex[iRegex].match( strNameNormalized ) )
+					if ( strNameNormalized.indexOf( rgTerms[iTerm] ) == -1 )
 					{
 						bMatch = false;
 						break;
@@ -426,14 +463,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		if ( value )
 		{
 			var rgTerms = value.toLowerCase().split( ' ' );
-			var rgRegex = [];
-			for ( var iTerm = 0; iTerm < rgTerms.length; iTerm++ )
-			{
-				var term = RegExp.escape( rgTerms[iTerm] );	// prototype-specific function
-				rgRegex.push( new RegExp( term ) );
-			}
-
-							fnMatchTags( rgRegex, rgGlobalPopularTags, rgSuggestions );
+			fnMatchTags( rgTerms, rgGlobalPopularTags, rgSuggestions );
 
 			rgSuggestions.sort();
 		}
@@ -493,7 +523,8 @@ function AdjustVisibleAppTags( $TagCtn )
 	var bPopularTags = $TagCtn.hasClass( 'popular_tags' );
 	var $AddButton = $TagCtn.children('.app_tag.add_button');
 	if ( !bPopularTags )
-		$AddButton.filter(':visible');
+		$AddButton = $AddButton.filter(':visible');
+
 
 	var k_nSpacing = 5;
 	var nSpaceRemaining = $TagCtn.width() - $AddButton.outerWidth();
@@ -610,7 +641,7 @@ function InitTagTabs( strURL, cc, rgTabNames, rgInitialParams )
 			if ( !Tab.m_bRequestInFlight && !Tab.m_bAnimating )
 				DoTabScroll( Tab, -10 );
 		});
-	}
+	};
 
 	var UpdateTabDisplay = function( strActiveTab )
 	{
@@ -638,7 +669,7 @@ function InitTagTabs( strURL, cc, rgTabNames, rgInitialParams )
 				Tab.m_$Content.hide();
 			}
 		}
-	}
+	};
 
 	var DoTabScroll = function( Tab, delta )
 	{
@@ -646,7 +677,7 @@ function InitTagTabs( strURL, cc, rgTabNames, rgInitialParams )
 			LoadTab( Tab, delta );
 		else
 			TagScrollTabTo( Tab, Tab.m_iStart + delta );
-	}
+	};
 
 	var LoadTab = function( Tab, delta )
 	{
@@ -684,7 +715,7 @@ function InitTagTabs( strURL, cc, rgTabNames, rgInitialParams )
 
 			TagScrollTabTo( Tab, data.start );
 		});
-	}
+	};
 
 	var UpdateTabPagingDisplay = function( Tab )
 	{
@@ -701,7 +732,7 @@ function InitTagTabs( strURL, cc, rgTabNames, rgInitialParams )
 		Tab.m_$CountStart.text( Tab.m_iStart + 1 );
 		Tab.m_$CountEnd.text( Math.min( Tab.m_iStart + 10, Tab.m_nTotal ) );
 		Tab.m_$CountTotal.text( Tab.m_nTotal );
-	}
+	};
 
 	var TagScrollTabTo = function( Tab, iStart )
 	{
@@ -720,7 +751,7 @@ function InitTagTabs( strURL, cc, rgTabNames, rgInitialParams )
 				Tab.m_bAnimating = false;
 			} );
 		}
-	}
+	};
 
 	// perform initialization
 
@@ -806,7 +837,7 @@ function InitTagBrowsePage( strTagLanguage, rgDefaultGetParams )
 			// some pending info
 			var $GamesElement = $J('<div/>', {'class':'browse_tag_games'});
 			$GamesElement.append($J('<h3/>').text( strTagName ) );
-			$GamesElement.append( $J('<div/>', {'class': 'browse_tag_loading' }).html( '<img src="https://steamstore-a.akamaihd.net/public/images/login/throbber.gif">' ) )
+			$GamesElement.append( $J('<div/>', {'class': 'browse_tag_loading' }).html( '<img src="https://steamstore-a.akamaihd.net/public/images/login/throbber.gif">' ) );
 
 			$Element.append( $GamesElement );
 			$Element.append( $J('<div/>', {'class':'browse_tag_game_total'}).html( '&nbsp;' ) );
@@ -994,7 +1025,6 @@ function InitBannedTagModal( appid, $BanModal )
 var g_rgPagingControls = {};
 function InitPagingControls( rgPagingData, cc, rgInitialParams )
 {
-	var g_bInHashChange = false;
 	var g_rgTabs = {};
 	var g_rgTabBaseParams = {
 		cc: cc,
@@ -1100,7 +1130,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 			UpdateTabDisplay( Tab.m_strName );
 			UpdateQueryString();
 		} );
-	}
+	};
 
 	var UpdateTabDisplay = function( strActiveTab )
 	{
@@ -1127,7 +1157,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 				Tab.m_$Content.hide();
 			}
 		}
-	}
+	};
 
 	var UpdateQueryString = function() {
 		var rgQuery = {};
@@ -1146,13 +1176,12 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 		rgQuery['p'] = g_nPage;
 		rgQuery['tab'] = g_strActiveTab;
 		window.location.hash = $J.param( rgQuery );
-	}
+	};
 
 	var LoadFromQueryString = function() {
 
 		var strQuery = window.location.hash.substr(1);
 		var rgQuery = strQuery.toQueryParams();
-		var nLocalPage = 0;
 
 		$J.each(rgQuery, function(param)
 		{
@@ -1168,7 +1197,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 				return true;
 			}
 
-			rgValues = rgQuery[param];
+			var rgValues = rgQuery[param];
 
 			var strParam = param.substr(0, param.length-2);
 
@@ -1190,7 +1219,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 				$Filter.attr( 'data-param', strParam );
 				$Filter.attr( 'data-value', value );
 				$Filter.text( $Checkbox.text() );
-				$Filter.append( $J('<div/>', {'class': 'tab_filter_remove' }).html('&nbsp;').click( function() { fnRemoveFilter( strParam, value, $Checkbox, $Filter ); } ) );
+				$Filter.append( $J('<div/>', {'class': 'tab_filter_remove' }).html('&nbsp;').click( $J.proxy( fnRemoveFilter, null, strParam, value, $Checkbox, $Filter ) ) );
 				$J('.tab_filters').append( $Filter );
 				$J('.tab_filter_ctn').show( 'fast' );
 			}
@@ -1207,7 +1236,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 			Tab.m_nLoaded = 0;
 		}
 		UpdateTabDisplay();
-	}
+	};
 
 	var LoadTab = function( Tab )
 	{
@@ -1233,7 +1262,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 		oPagingControls.m_rgStaticParams = rgParams;
 		UpdateQueryString();
 		oPagingControls.GoToPage( nPage, true );
-	}
+	};
 
 	// perform initialization
 
@@ -1243,7 +1272,7 @@ function InitPagingControls( rgPagingData, cc, rgInitialParams )
 		var Tab = {
 			m_strName: strName,
 			m_$Select: $J('#tab_select_' + strName ),
-			m_$Content: $J('#tab_' + strName + '_content' ),
+			m_$Content: $J('#tab_' + strName + '_content' )
 		};
 
 		InitTabEvents( Tab );

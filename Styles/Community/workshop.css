@@ -303,16 +303,16 @@ a:hover {
 
 
 .detailBox.altFooter {
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png' ) bottom right no-repeat,
-	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
-	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png?v=1' ) bottom right no-repeat,
+	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
+	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
 	padding-bottom: 8px;
 	margin-bottom: 16px;
 }
 
 .detailBox.noFooter {
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
-	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
+	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
 	padding-bottom: 6px;
 }
 
@@ -2087,29 +2087,34 @@ textarea {
 {
 	border-color: #6b9730;
 	border-style: solid;
+	border-width: 1px;
 }
 
 .workshopItem .accepted:hover
 {
 	border-color: #97c0e3;
+	border-width: 1px;
 }
 
 .workshopItem .incompatible
 {
 	border-color: #534436;
 	border-style: solid;
+	border-width: 1px;
 }
 
 .workshopItem .hidden
 {
 	border-color: #E58723;
 	border-style: solid;
+	border-width: 1px;
 }
 
 .workshopItem .banned
 {
 	border-color: #ff0000;
 	border-style: solid;
+	border-width: 1px;
 }
 
 .workshopItem .incompatible:hover
@@ -2857,17 +2862,10 @@ input.searchText
 /* -----[ /item stuff ] ----------- */
 
 .modal_top_band {
-	background: #7d7c77; /* Old browsers */
-	background: -moz-linear-gradient(-45deg,  #7d7c77 0%, #32312f 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#7d7c77), color-stop(100%,#32312f)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-45deg,  #7d7c77 0%,#32312f 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg,  #7d7c77 0%,#32312f 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-45deg,  #7d7c77 0%,#32312f 100%); /* IE10+ */
-	background: linear-gradient(135deg,  #7d7c77 0%,#32312f 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7c77', endColorstr='#32312f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	width:533px;
-	height:25px;
-	margin-bottom:1px;
+	background-color: #37516d;
+	width: 548px;
+	height: 25px;
+	margin-bottom: 1px;
 }
 
 .modal_close {
@@ -2887,18 +2885,15 @@ input.searchText
 	margin-bottom: 10px;
 }
 
-.modal_box {
-	border-color:#4d4b49;
-	border-style:solid;
-	border-width:2px 1px;
-	width: 521px;
-	background-color:#262626;
-	padding: 45px;
-
-	font-size: 12px;
-	color: #ffffff;
-	text-align: left;
+.modal_box .updateKVTagsForm,
+.modal_box .updateTagsForm,
+.modal_box .reportsTable
+{
+	width: 502px;
+	background-color: #1a2635;
+	padding: 20px;
 }
+
 
 .modal_box_preview_image {
 	border-color:#4d4b49;
@@ -2972,6 +2967,11 @@ input.searchText
 {
 	height: 500px;
 	overflow: auto;
+
+}
+.reportsTable table {
+	border-spacing: 0px;
+	border: solid 1px #000000;
 }
 
 .updateTagsForm {

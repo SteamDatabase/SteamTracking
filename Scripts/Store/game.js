@@ -349,54 +349,48 @@ function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 
 	var container = $J( "#Reviews_" + context );
 
-	new Ajax.Request( 'http://store.steampowered.com//appreviews/' + appid,
+	$J.get( 'http://store.steampowered.com//appreviews/' + appid,{
+		'start_offset' : startOffset,
+		'day_range' : dayRange,
+		'filter' : context,
+		'language' : language
+	}).done( function( data ) {
+		if ( data.success == 1 )
 		{
-			method: 'GET',
-			parameters: {
-				'start_offset' : startOffset,
-				'day_range' : dayRange,
-				'filter' : context,
-				'language' : language
-			},
-			onSuccess: function( transport )
+			$J( "#LoadingMoreReviews" + context ).remove();
+
+			// remove duplicates
+			var recommendationIDs = [];
+			var temp = $J('<div></div>');
+			temp.append( data.html );
+			for ( var i = 0; i < data.recommendationids.length; ++i )
 			{
-				if ( transport.responseJSON.success == 1 )
+				var recommendationid = data.recommendationids[i];
+				var elemID = "#ReviewContent" + context + recommendationid;
+				if ( $J( elemID ).length != 0 )
 				{
-					$J( "#LoadingMoreReviews" + context ).remove();
-
-					// remove duplicates
-					var recommendationIDs = [];
-					var temp = $J('<div></div>');
-					temp.append( transport.responseJSON.html );
-					for ( var i = 0; i < transport.responseJSON.recommendationids.length; ++i )
-					{
-						var recommendationid = transport.responseJSON.recommendationids[i];
-						var elemID = "#ReviewContent" + context + recommendationid;
-						if ( $J( elemID ).length != 0 )
-						{
-							temp.find( elemID ).parent().remove();
-						}
-						else
-						{
-							recommendationIDs.push( recommendationid );
-						}
-					}
-
-					container.append( temp.children() );
-
-					// all dupes, request more
-					if ( transport.responseJSON.recommendationids.length != 0 && recommendationIDs.length == 0 )
-					{
-						LoadMoreReviews(appid, startOffset + transport.responseJSON.recommendationids.length, transport.responseJSON.dayrange, context, language );
-					}
-					else
-					{
-						CollapseLongReviews();
-						RequestCurrentUserRecommendationVotes( recommendationIDs );
-					}
+					temp.find( elemID ).parent().remove();
+				}
+				else
+				{
+					recommendationIDs.push( recommendationid );
 				}
 			}
-		} );
+
+			container.append( temp.children() );
+
+			// all dupes, request more
+			if ( data.recommendationids.length != 0 && recommendationIDs.length == 0 )
+			{
+				LoadMoreReviews(appid, startOffset + data.recommendationids.length, data.dayrange, context, language );
+			}
+			else
+			{
+				CollapseLongReviews();
+				RequestCurrentUserRecommendationVotes( recommendationIDs );
+			}
+		}
+	} );
 }
 
 function SelectReviews( appid, context, reviewDayRange, language )
@@ -518,6 +512,17 @@ function ShowReportDialog( nAppId )
 			ShowAlertDialog( 'Error', 'You must select a reason you are reporting this product!' );
 		}
 	});
+}
+
+function ShowGotSteamModal( strSteamURL, strAppName, strPlayLaunchVerb )
+{
+		var $ModalContent = $J("<div class=\"gotsteamModal\">\r\n\t<div class=\"got_steam_ctn\">\r\n\t<div class=\"got_steam_box\">\r\n\t\t<h1>Got Steam?<\/h1>\r\n\t\t<p>You need to have the <a href=\"http:\/\/store.steampowered.com\/about\/\">Steam desktop application<\/a> installed before you can install and launch <strong class=\"gotSteam_AppName\"><\/strong>. Do you have Steam installed on this computer?<\/p>\r\n\t\t<div class=\"gotsteam_buttons\">\r\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\r\n\t\t\t\t<h3>Yes, Steam is installed<\/h3>\r\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<a href=\"http:\/\/store.steampowered.com\/about\/\" class=\"btn_blue\">\r\n\t\t\t\t<h3>No, I need Steam<\/h3>\r\n\t\t\t\t<h5>Read about and download Steam<\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<div style=\"clear: left;\"><\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"got_steam_low_block\">\r\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\r\n\t\t\tSteam is the premiere desktop gaming platform. It's free to join and easy to use. <a href=\"http:\/\/store.steampowered.com\/about\/\">Learn more about Steam.<\/a>\r\n\t\t<\/div><\/div>\r\n\t<\/div>\r\n<\/div>");
+	$ModalContent.find('.gotSteam_AppName').text( strAppName );
+	$ModalContent.find('.gotsteam_action').text( strPlayLaunchVerb );
+	$ModalContent.find( '.gotSteam_SteamURL').attr( 'href', strSteamURL );
+	var Modal = new CModal( $ModalContent );
+	Modal.Show();
+	//ShowDialog( 'Got Steam?', $ModalContent );
 }
 
 

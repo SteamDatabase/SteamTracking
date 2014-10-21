@@ -111,10 +111,10 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 
 			var unAppID = $Item.data('appid');
 			if ( unAppID )
-				GameHover( this, event, $('global_hover'), GStoreItemData.GetHoverParams( unAppID ) );
+				GameHover( this, event, $J('#global_hover'), GStoreItemData.GetHoverParams( unAppID ) );
 		});
 		this.m_$ActiveLink.mouseleave( function( event ) {
-			HideGameHover( this, event, $('global_hover') );
+			HideGameHover( this, event, $J('#global_hover') );
 		});
 		this.m_$ActiveLink.click( function( event ) { InstrumentedLinkOnClick( event, this ); } );
 

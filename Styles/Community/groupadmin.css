@@ -286,7 +286,7 @@
 }
 
 .groupadmin_forumlist_header {
-	color: #8c8c8c;
+	color: #8F98A0;
 	font-size: 11px;
 
 	padding: 14px 9px 0px 9px;
@@ -367,12 +367,15 @@
 }
 
 .forum_dragdrop {
-	border: 1px solid #38383a;
+	border: 1px solid transparent;
 	margin-bottom: 6px;
+}
+.forum_dragdrop:hover {
+	border: 1px solid rgba( 65, 123, 156, 0.5 );
 }
 
 .forum_dragdrop_titlebar {
-	background-color: #38383a;
+	background-color: #417b9c;
 	height: 27px;
 	line-height: 27px;
 	border-bottom: 1px solid #2f2f31;
@@ -385,7 +388,7 @@
 	height: 27px;
 	line-height: 27px;
 	padding: 0px 10px;
-	background-color: #38383a;
+	background-color: #417b9c;
 
 	font-size: 11px;
 }
@@ -395,7 +398,7 @@
 }
 
 .forum_dragdrop_titlebar .forum_grabber {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/forum_manage_grabber.png');
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/forum_manage_grabber.png?v=1');
 	background-repeat: repeat-x;
 	background-position: center;
 	height: 27px;
@@ -406,8 +409,9 @@
 
 .forum_dragdrop_body {
 	padding: 16px 8px;
-	background-color: #222223;
+	background-color: rgba( 0, 0, 0, 0.2);
 }
+
 
 /* group permissions page */
 

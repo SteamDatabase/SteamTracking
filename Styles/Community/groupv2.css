@@ -311,7 +311,7 @@ a.group_tab:hover {
 }
 
 .group_content_header {
-	color: #6d6d6b;
+	color: #61686d;
 	font-size: 11px;
 	padding-top: 4px;
 	margin-bottom: 16px;
@@ -349,12 +349,12 @@ a.readmore_link {
 
 .group_overview_announcement.first {
 	border-right: 1px solid #000000;
-	padding-right: 12px;
-	margin-right: 14px;
+	padding-right: 10px;
+	margin-right: 10px;
 }
 
 .group_overview_announcement_footer {
-	color: #57595b;
+	color: #61686d;
 	font-size: 12px;
 }
 
@@ -386,7 +386,7 @@ a.readmore_link {
 }
 
 .grouppage_content_area h1 {
-	color: #b0b0b0;
+	color: #ffffff;
 	font-size: 24px;
 	font-weight: normal;
 	padding: 0;
@@ -563,7 +563,7 @@ a.large_title:hover {
 	margin: 8px 0;
 	padding-left: 70px;
 
-	color: #686865;
+	color: #61686d;
 	font-size: 12px;
 }
 .groupstat.wide_label {
@@ -651,12 +651,12 @@ a.subtle:hover {
 }
 
 .group_body_links a {
-	color: #828282;
+	color: #c6d4df;
 	text-decoration: underline;
 }
 
 .group_body_links a:hover {
-	color: #ffffff;
+	color: #66c0f4;
 }
 
 .group_overview_discussions .forum_topic {
@@ -988,7 +988,7 @@ a.headlineLink:hover {
 	height: 48px;
 
 	margin-bottom: 4px;
-	margin-right: 9px;
+	margin-right: 4px;
 
 	float: left;
 
@@ -1384,8 +1384,18 @@ a.headlineLink:hover {
 }
 
 #curationTaglineInput {
-	width: 100%;
-	background-color: #545456;
+	width: 626px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	color: #C6D4DF;
+
+	margin-bottom: 6px;
+	outline: none;
+
+
+	padding: 4px 6px;
 }
 
 .curation_tagline_edit_description {
@@ -1393,7 +1403,7 @@ a.headlineLink:hover {
 }
 
 .curation_tagline_edit_title{
-	color: #787875;
+	color: #66C0F4;
 	margin-bottom: 8px;
 }
 

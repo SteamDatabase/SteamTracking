@@ -990,7 +990,7 @@ input.filter_search_box:focus {
 }
 
 .market_buy_commodity_input_block {
-	width: 400px;
+	width: 430px;
 	float: right;
 }
 
@@ -1027,8 +1027,15 @@ input.filter_search_box:focus {
 }
 
 .market_buy_commodity_popup_right_block {
-    float: left;
-    line-height: 30px;
+	float: left;
+	max-width: 160px;
+	line-height: 30px;
+}
+
+.market_buy_commodity_popup_right_block > div {
+	max-height: 30px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 #market_buy_commodity_input_price {
@@ -1184,10 +1191,6 @@ input.filter_search_box:focus {
 	color: white;
 }
 
-#market_buynow_dialog_accept_ssa_container, #market_buynow_dialog_eu_ssa {
-	max-width: 540px;
-}
-
 #market_buynow_dialog_accept_ssa {
 	margin-left: 0;
 }
@@ -1198,7 +1201,8 @@ input.filter_search_box:focus {
 }
 
 #market_buynow_dialog_purchase, #market_buynow_dialog_addfunds, #market_buynow_dialog_purchase_throbber {
-	position: absolute;
+	float: right;
+	margin-left: 15px;
 	bottom: 18px;
 	right: 18px;
 }

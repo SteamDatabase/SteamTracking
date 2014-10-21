@@ -182,6 +182,7 @@ input.textField {
 	height: 58px;
 }
 
+.auth_button.auth_button_spacer,
 .twofactorauth_button.auth_button_spacer {
 	background-image: none;
 	width: 0px;
@@ -252,6 +253,13 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 	box-shadow: 1px 1px 0px rgba(53,67,67,1), 0px 0px 15px rgba(0,0,0,0.4) inset;
 	
 }
+
+.mainLoginPanel_china {
+	width: 100%;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	margin-top: 17px;
+	background: -moz-linear-gradient(top, #000 5%, #111 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#000), color-stop(95%,#111));background: -webkit-linear-gradient(top, #000 5%,#111 95%);background: -o-linear-gradient(top, #000 5%,#111 95%);background: -ms-linear-gradient(top, #000 5%,#111 95%);background: linear-gradient(to bottom, #000 5%,#111 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#111',GradientType=0 );}
 
 	.mainLoginPanelDivider {
 		width: 2px;
@@ -392,6 +400,12 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 		padding-top: 0px;
 		text-align: center;
 	}
+
+.whyJoin_china {
+	width: 100%;
+	padding-top: 65px;
+	margin-left: -340px;
+}
 
 .oauthLoginButton {
 	margin-top: 12px;

@@ -3319,7 +3319,7 @@ function ReleaseGame(appid, data)
 
 			if( data['success'] != 1 )
 			{
-				$J('#publish_status_log').append( $J('<p><b>ERROR '+data['success']+'</b><br>Please refresh and try again. If problems persist, post on the <a href="http://steamcommunity.com/groups/steamworks">Steamworks Developer Discussions</a></p>') );
+				$J('#publish_status_log').append( $J('<p><b>ERROR '+data['success']+'</b><br>Please refresh and try again. If problems persist, <a href="https://partner.steamgames.com/home/contact_steam">contact Steam Publishing</a></p>') );
 				$J('#publish_status_log').show();
 				$J('#publish_status').hide();
 				$J('#publish_button').show();
@@ -3331,7 +3331,7 @@ function ReleaseGame(appid, data)
 		},
 		error: function( response )
 		{
-			$J('#publish_status_log').append( $J('<p><b>Request failed with an unknown error.</b></p><p>Please refresh and try again. If problems persist, post on the <a href="http://steamcommunity.com/groups/steamworks">Steamworks Developer Discussions</a></p>') );
+			$J('#publish_status_log').append( $J('<p><b>Request failed with an unknown error.</b></p><p>Please refresh and try again. If problems persist, <a href="https://partner.steamgames.com/home/contact_steam">contact Steam Publishing</a></p>') );
 			$J('#publish_status_log').show();
 			$J('#publish_status').hide();
 			$J('#publish_button').show();

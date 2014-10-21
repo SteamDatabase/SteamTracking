@@ -744,6 +744,7 @@ button.gray_square_button::-moz-focus-inner
 	font-size: 20px;
 	padding-bottom: 20px;
 	padding-top: 0;
+	text-align: center;
 }
 
 .notLoggedInButtons {
