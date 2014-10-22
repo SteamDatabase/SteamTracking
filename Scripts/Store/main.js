@@ -714,23 +714,22 @@ function ShowGameHover( elem, divHover, targetContent, params )
 
 function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref )
 {
-	var url = 'http://store.steampowered.com/api/addtowishlist';
+	var url = 'https://store.steampowered.com/api/addtowishlist';
 	if ( navref )
 		MakeNavCookie( navref, url );
-	new Ajax.Request( url, {
-		method: 'post',
-		parameters: {appid: appid},
-		onSuccess: function( transport ) {
-			$(divToHide).hide();
-			if ( transport.responseJSON && transport.responseJSON.success )
-				$(divToShowSuccess).show();
+	$J.post( url, {appid: appid} )
+		.done( function( data ) {
+			$JFromIDOrElement(divToHide).hide();
+			if ( data && data.success )
+				$JFromIDOrElement(divToShowSuccess).show();
 			else
-				$(divToShowError).show();
+				$JFromIDOrElement(divToShowError).show();
 
 			if ( typeof GDynamicStore != 'undefined' )
 				GDynamicStore.InvalidateCache();
-		}
-	});
+		}).fail( function() {
+			$JFromIDOrElement(divToShowError).show();
+		});
 }
 
 function AddToWishlistButton( button, appid, navref )
