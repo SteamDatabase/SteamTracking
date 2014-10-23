@@ -69572,7 +69572,7 @@
 		{
 			"name"		"Pile Of Curses"
 			"item_class"	"tf_wearable"
-			"expiration_date"	"2013-11-12 06:00:00"
+			"expiration_date"	"!end_of_halloween"
 			"tool"
 			{
 				"type"	"gift"
