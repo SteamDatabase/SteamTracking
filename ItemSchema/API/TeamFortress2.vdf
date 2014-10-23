@@ -1258,14 +1258,6 @@
 			"max_ilevel"		"5"
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
-			"attributes"
-			{
-				"cannot trade"
-				{
-					"attribute_class"	"cannot_trade"
-					"value"				"1"
-				}
-			}
 		}
 		"voice_spell_base"
 		{
@@ -1276,7 +1268,7 @@
 				{
 					"required_tags"
 					{
-						"auto__slot_head"		"1"
+						"auto__slot_misc"		"1"
 					}
 					"attributes"
 					{
@@ -1296,7 +1288,7 @@
 				{
 					"required_tags"
 					{
-						"auto__slot_head"	"1"
+						"auto__slot_misc"	"1"
 					}
 				}
 			}
@@ -89796,7 +89788,7 @@
 			"do_B"	"#TF_PileOfCurses"
 			"always_known"	"1"
 			"premium_only"	"0"
-			"disabled"	"1"
+			"disabled"	"0"
 			"input_items"
 			{
 				"1"
