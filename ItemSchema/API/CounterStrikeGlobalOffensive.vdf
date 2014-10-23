@@ -12898,6 +12898,162 @@
 			}
 			"associated_item"		"10028"
 		}
+		"10029"
+		{
+			"name"		"coupon - doomed"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - doomed"
+			"tool"
+			{
+				"restriction"		"coupon_doomed"
+			}
+			"associated_item"		"20029"
+		}
+		"20029"
+		{
+			"name"		"coupon key - doomed"
+			"item_name"		"#coupon_key_doomed"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_doomed"
+			}
+			"associated_item"		"10029"
+		}
+		"10030"
+		{
+			"name"		"coupon - queenofpain"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - queenofpain"
+			"tool"
+			{
+				"restriction"		"coupon_queenofpain"
+			}
+			"associated_item"		"20030"
+		}
+		"20030"
+		{
+			"name"		"coupon key - queenofpain"
+			"item_name"		"#coupon_key_queenofpain"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_queenofpain"
+			}
+			"associated_item"		"10030"
+		}
+		"10031"
+		{
+			"name"		"coupon - trickorthreat"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - trickorthreat"
+			"tool"
+			{
+				"restriction"		"coupon_trickorthreat"
+			}
+			"associated_item"		"20031"
+		}
+		"20031"
+		{
+			"name"		"coupon key - trickorthreat"
+			"item_name"		"#coupon_key_trickorthreat"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_trickorthreat"
+			}
+			"associated_item"		"10031"
+		}
+		"10032"
+		{
+			"name"		"coupon - trickortreat"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - trickortreat"
+			"tool"
+			{
+				"restriction"		"coupon_trickortreat"
+			}
+			"associated_item"		"20032"
+		}
+		"20032"
+		{
+			"name"		"coupon key - trickortreat"
+			"item_name"		"#coupon_key_trickortreat"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_trickortreat"
+			}
+			"associated_item"		"10032"
+		}
+		"10033"
+		{
+			"name"		"coupon - witch"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - witch"
+			"tool"
+			{
+				"restriction"		"coupon_witch"
+			}
+			"associated_item"		"20033"
+		}
+		"20033"
+		{
+			"name"		"coupon key - witch"
+			"item_name"		"#coupon_key_witch"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_witch"
+			}
+			"associated_item"		"10033"
+		}
+		"10034"
+		{
+			"name"		"coupon - zombielover"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - zombielover"
+			"tool"
+			{
+				"restriction"		"coupon_zombielover"
+			}
+			"associated_item"		"20034"
+		}
+		"20034"
+		{
+			"name"		"coupon key - zombielover"
+			"item_name"		"#coupon_key_zombielover"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_zombielover"
+			}
+			"associated_item"		"10034"
+		}
 	}
 	"attributes"
 	{
@@ -16107,6 +16263,54 @@
 			"item_name"		"#StickerKit_comm02_stayfrosty"
 			"description_string"		"#StickerKit_desc_comm02_stayfrosty"
 			"sticker_material"		"community02/stayfrosty"
+			"item_rarity"		"rare"
+		}
+		"192"
+		{
+			"name"		"doomed"
+			"item_name"		"#StickerKit_comm02_doomed"
+			"description_string"		"#StickerKit_desc_comm02_doomed"
+			"sticker_material"		"community02/doomed"
+			"item_rarity"		"rare"
+		}
+		"193"
+		{
+			"name"		"queenofpain"
+			"item_name"		"#StickerKit_comm02_queenofpain"
+			"description_string"		"#StickerKit_desc_comm02_queenofpain"
+			"sticker_material"		"community02/queenofpain"
+			"item_rarity"		"rare"
+		}
+		"194"
+		{
+			"name"		"trickorthreat"
+			"item_name"		"#StickerKit_comm02_trickorthreat"
+			"description_string"		"#StickerKit_desc_comm02_trickorthreat"
+			"sticker_material"		"community02/trickorthreat"
+			"item_rarity"		"rare"
+		}
+		"195"
+		{
+			"name"		"trickortreat"
+			"item_name"		"#StickerKit_comm02_trickortreat"
+			"description_string"		"#StickerKit_desc_comm02_trickortreat"
+			"sticker_material"		"community02/trickortreat"
+			"item_rarity"		"rare"
+		}
+		"196"
+		{
+			"name"		"witch"
+			"item_name"		"#StickerKit_comm02_witch"
+			"description_string"		"#StickerKit_desc_comm02_witch"
+			"sticker_material"		"community02/witch"
+			"item_rarity"		"rare"
+		}
+		"197"
+		{
+			"name"		"zombielover"
+			"item_name"		"#StickerKit_comm02_zombielover"
+			"description_string"		"#StickerKit_desc_comm02_zombielover"
+			"sticker_material"		"community02/zombielover"
 			"item_rarity"		"rare"
 		}
 	}
@@ -24863,6 +25067,36 @@
 		{
 			"public_list_contents"		"1"
 			"[skog_01]musickit"		"1"
+		}
+		"coupon loot list - doomed"
+		{
+			"public_list_contents"		"1"
+			"[doomed]sticker"		"1"
+		}
+		"coupon loot list - queenofpain"
+		{
+			"public_list_contents"		"1"
+			"[queenofpain]sticker"		"1"
+		}
+		"coupon loot list - trickorthreat"
+		{
+			"public_list_contents"		"1"
+			"[trickorthreat]sticker"		"1"
+		}
+		"coupon loot list - trickortreat"
+		{
+			"public_list_contents"		"1"
+			"[trickortreat]sticker"		"1"
+		}
+		"coupon loot list - witch"
+		{
+			"public_list_contents"		"1"
+			"[witch]sticker"		"1"
+		}
+		"coupon loot list - zombielover"
+		{
+			"public_list_contents"		"1"
+			"[zombielover]sticker"		"1"
 		}
 	}
 	"revolving_loot_lists"

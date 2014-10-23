@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.f9dec1ec5eda2f22ddf487fea81258a21e22aa1b.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.69c95d016d04845a92e16408b0e8c96b33157aae.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -5726,6 +5726,204 @@
 				
 			},
 			{
+				"name": "coupon - doomed",
+				"defindex": 10029,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_doomed",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - queenofpain",
+				"defindex": 10030,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_queenofpain",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - trickorthreat",
+				"defindex": 10031,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_trickorthreat",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - trickortreat",
+				"defindex": 10032,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_trickortreat",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - witch",
+				"defindex": 10033,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_witch",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - zombielover",
+				"defindex": 10034,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_zombielover",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 7
+					}
+				]
+				
+			},
+			{
 				"name": "coupon key - bossyburger",
 				"defindex": 20000,
 				"item_class": "tool",
@@ -6527,6 +6725,180 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "coupon_skog_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - doomed",
+				"defindex": 20029,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Doomed",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_doomed",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - queenofpain",
+				"defindex": 20030,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Queen Of Pain",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_queenofpain",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - trickorthreat",
+				"defindex": 20031,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Trick Or Threat",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_trickorthreat",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - trickortreat",
+				"defindex": 20032,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Trick Or Treat",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_trickortreat",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - witch",
+				"defindex": 20033,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Witch",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_witch",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - zombielover",
+				"defindex": 20034,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Zombie Lover",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_zombielover",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
