@@ -396,11 +396,13 @@ function LoadMoreReviews( appid, startOffset, dayRange, context, language )
 function SelectReviews( appid, context, reviewDayRange, language )
 {
 	$J( "#ReviewsTab_all" ).removeClass( "active" );
+	$J( "#ReviewsTab_recent" ).removeClass( "active" );
 	$J( "#ReviewsTab_positive" ).removeClass( "active" );
 	$J( "#ReviewsTab_negative" ).removeClass( "active" );
 	$J( "#ReviewsTab_" + context ).addClass( "active" );
 
 	$J( "#Reviews_all" ).hide();
+	$J( "#Reviews_recent" ).hide();
 	$J( "#Reviews_positive" ).hide();
 	$J( "#Reviews_negative" ).hide();
 	$J( "#Reviews_" + context ).show();
