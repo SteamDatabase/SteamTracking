@@ -737,11 +737,9 @@ function AddToWishlistButton( button, appid, navref )
 	var url = 'http://store.steampowered.com/api/addtowishlist';
 	if ( navref )
 		MakeNavCookie( navref, url );
-	new Ajax.Request( url, {
-		method: 'post',
-		parameters: {appid: appid},
-		onSuccess: function( transport ) {
-			if ( transport.responseJSON && transport.responseJSON.success )
+	$J.post( url, {appid: appid} )
+		.done( function( data ) {
+			if ( data && data.success )
 			{
 				$J(button).addClass('btn_disabled');
 				$J('span',button).text("On Wishlist");
@@ -753,8 +751,7 @@ function AddToWishlistButton( button, appid, navref )
 
 			if ( typeof GDynamicStore != 'undefined' )
 				GDynamicStore.InvalidateCache();
-		}
-	});
+		} );
 }
 
 function IgnoreButton( button, appid )
@@ -773,36 +770,33 @@ function IgnoreButton( button, appid )
 // unlike wishlists, the "divToHide" is only hidden on success
 function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, language, divBtn, onSuccessFunc, divToShowError, navref )
 {
-	$(divBtn).hide();
+	$JFromIDOrElement(divBtn).hide();
 	var url = 'http://store.steampowered.com/friends/recommendgame';
 	if ( navref )
 		MakeNavCookie( navref, url );
 	
-	new Ajax.Request( url, {
-		method: 'post',
-		parameters: {appid: appid, steamworksappid: steamworksappid, comment: comment, rated_up: rated_up, is_public: is_public, language: language, sessionid: g_sessionID},
-		onSuccess: function( transport ) {
-			if ( transport.responseJSON.success )
+	$J.post( url, {appid: appid, steamworksappid: steamworksappid, comment: comment, rated_up: rated_up, is_public: is_public, language: language, sessionid: g_sessionID} )
+		.done( function( data ) {
+			if ( data && data.success )
 			{
-				$(divToShowError).hide();
+				$JFromIDOrElement(divToShowError).hide();
 				onSuccessFunc();
 			}
 			else
 			{
-				$(divBtn).show();
-				var elError = $(divToShowError);
-				if ( transport.responseJSON.strError )
+				$JFromIDOrElement(divBtn).show();
+				var $Error = $JFromIDOrElement(divToShowError);
+				if ( data && data.strError )
 				{
-					if ( !elError.strOrigMessage )
-						elError.strOrigMessage = elError.innerHTML;
-					elError.update( transport.responseJSON.strError );
+					if ( !$Error.data( 'strOrigMessage' ) )
+						$Error.data( 'strOrigMessage', $Error.html() );
+					$Error.html( data.strError );
 				}
-				else if ( elError.strOrigMessage )
-					elError.update( elError.strOrigMessage )
-				elError.show();
+				else if ( $Error.data( 'strOrigMessage' ) )
+					$Error.html( $Error.data( 'strOrigMessage' ) )
+				$Error.show();
 			}
-		}
-	});
+		} );
 }
 
 //hide a game from being recommended
