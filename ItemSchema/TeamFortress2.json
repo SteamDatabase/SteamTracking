@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.54736442c54b7c8ceb146df44bcf855b111ffe02.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.2f009921f880e3b94426eef88f44ee43832c3b06.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -57755,7 +57755,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "",
 				"item_name": "Pile Of Curses",
-				"item_description": "It looks like there's something in there... IF YOU DARE!\n\nAfter 11/11/2013 this pile will disappear.",
+				"item_description": "It looks like there's something in there... IF YOU DARE!\n\nAfter 11/12/2014 this pile will disappear.",
 				"proper_name": false,
 				"item_slot": "action",
 				"model_player": null,
@@ -95720,11 +95720,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 65280
@@ -95768,11 +95763,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -95818,11 +95808,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 16711680
@@ -95866,11 +95851,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -95916,11 +95896,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 16776960
@@ -95964,11 +95939,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96014,11 +95984,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 65280
@@ -96062,11 +96027,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96112,11 +96072,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 16776960
@@ -96160,11 +96115,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96210,11 +96160,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 65535
@@ -96258,11 +96203,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96308,11 +96248,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 13421772
@@ -96356,11 +96291,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96406,11 +96336,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 14540032
@@ -96454,11 +96379,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96504,11 +96424,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 3100495
@@ -96552,11 +96467,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96602,11 +96512,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 16737280
@@ -96650,11 +96555,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96700,11 +96600,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 9109759
@@ -96748,11 +96643,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96798,11 +96688,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 12517631
@@ -96846,11 +96731,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
@@ -96896,11 +96776,6 @@
 				,
 				"attributes": [
 					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
-					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
 						"value": 205
@@ -96944,11 +96819,6 @@
 				]
 				,
 				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					},
 					{
 						"name": "set item tint RGB",
 						"class": "set_item_tint_rgb",
