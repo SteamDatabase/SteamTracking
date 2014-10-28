@@ -73,7 +73,7 @@
 // and make room for the tickbox
 .CheckBox Label
 {
-	padding-left: 60px;
+	padding-left: 10px;
 	padding-top: 10px;
 	color: detailsdatalabel;
 	width: 100%;

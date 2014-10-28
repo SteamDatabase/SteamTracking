@@ -216,7 +216,7 @@
 
 		place { control="null_placer" region="details" width=1 align=bottom margin-bottom=2 }
 		place { control="delete_button,details_button,publish_button" start="null_placer" region="details" align=right x=5 margin-bottom=5 margin-right=7 spacing=5 }
-		place { control="spoiler_checkbox" start="null_placer" region="details" align=left x=5 margin-bottom=5 margin-right=7 spacing=5 }
+		place { control="spoiler_checkbox" start="null_placer" region="details" align=bottom x=3 margin-bottom=30 margin-right=7 spacing=5 }
 
 
 		place { control="details_caption" region="details" x=5 align=bottom margin-bottom=35 height=60 width=max margin-right=7 }

@@ -63,6 +63,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_twofactor.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_unified_base.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_unified_test.steamclient.pb.cc
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steammessages_video.steamclient.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/steamservice.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/configstore.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/contentupdatecontext.cpp
@@ -124,6 +125,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/ugcmanager.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/unified_messages_client.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/user.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/user.cpp:5643
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/userfriends.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/userinterface.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/usermatchmaking.cpp

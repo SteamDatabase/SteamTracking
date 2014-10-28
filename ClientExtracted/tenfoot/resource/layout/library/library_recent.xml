@@ -17,23 +17,24 @@
 		<Panel id="LibraryMenuRowWrapper" tabindex="1" selectionpos="0,1" onmoveup="FocusRecent()">
 			
 			<Panel id="LibraryMenuRow" class="LibraryMenuRow" tabindex="auto" selectionpos="501,0" defaultfocus="AllGamesButton">
-				
-			 	<Button id="MusicLibraryButton" class="LibraryButton" onactivate="ShowMusicLibrary();" tabindex="auto" selectionpos="501,0">
-					<Label class="ButtonLabel" text="#Library_Music" />
-				</Button>
-	
-				<Button id="AllGamesButton" class="LibraryButton" onactivate="ShowLibraryAllGames();" tabindex="auto" selectionpos="502,0">
-					<Label id="ViewAllGamesLabel" class="ButtonLabel" text="#Library_Games" />
-				</Button>
-			
-			 	<Button id="AllScreenshotsButton" class="LibraryButton" onactivate="ShowScreenshotBrowser( 0 );" tabindex="auto" selectionpos="503,0">
-					<Label class="ButtonLabel" text="#Library_Screenshots" />
-				</Button>
+				<Label id="ViewAllHeader" text="#Library_ViewAll" class="LibraryTitle"/>
 
-				<Button id="AddContent" class="LibraryButton" onactivate="AddLibraryContent();" tabindex="auto" selectionpos="1000,0">
-					<Label id="AddContentLabelSmall" class="ButtonLabelSmall" text="#Library_AddContent" />
-				</Button>
-	
+					 	<Button id="MusicLibraryButton" class="LibraryButton" onactivate="ShowMusicLibrary();" tabindex="auto" selectionpos="501,0">
+							<Label class="ButtonLabel" text="#Library_Music" />
+						</Button>
+			
+						<Button id="AllGamesButton" class="LibraryButton" onactivate="ShowLibraryAllGames();" tabindex="auto" selectionpos="502,0">
+							<Label id="ViewAllGamesLabel" class="ButtonLabel" text="#Library_Games" />
+						</Button>
+					
+					 	<Button id="AllScreenshotsButton" class="LibraryButton" onactivate="ShowScreenshotBrowser( 0 );" tabindex="auto" selectionpos="503,0">
+							<Label class="ButtonLabel" text="#Library_Screenshots" />
+						</Button>
+		
+						<Button id="AddContent" class="LibraryButton" onactivate="AddLibraryContent();" tabindex="auto" selectionpos="1000,0">
+							<Label id="AddContentLabelSmall" class="ButtonLabelSmall" text="#Library_AddContent" />
+						</Button>
+
 			</Panel>
 			<Image id="LibraryHomeGlow" class="LibraryHomeGlow" src="file://{images}/homeglow.png" />
 		</Panel>

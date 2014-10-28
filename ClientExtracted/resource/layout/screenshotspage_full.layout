@@ -26,6 +26,7 @@
 		UploadQuotaLabel { controlname="Label" labeltext="#Steam_Screenshots_UploadQuota" }
 		
 		UploadProgressBar { controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 } 
+		UploadProgressLabel { controlname="Label" labeltext="#Steam_Screenshots_UploadProgress" }
 	}
 	
 	styles
@@ -65,10 +66,11 @@
 		
 		place { control=UploadQuotaLabel region=bottom y=36 align=left  }
 		place { control=VisibilityLabel region=bottom start=UploadQuotaLabel x=24  }
-		place { control=VisibilityComboBox region=bottom start=VisibilityLabel x=8 y=-4 }
+		place { control=VisibilityComboBox region=bottom start=VisibilityLabel x=8 y=-4 width=128 }
 		place { control=SpoilerCheckButton region=bottom start=VisibilityComboBox x=24 y=-4}
 		
-		place { control="UploadProgressBar" region=bottom y=42 width=max margin-left=0 margin-right=360 height=2 }
+		place { control="UploadProgressLabel" region=bottom y=24 width=max margin-left=0 margin-right=360 }
+		place { control="UploadProgressBar" region=bottom y=42 width=max margin-left=0 margin-right=360 height=4 }
 		
 		
 		

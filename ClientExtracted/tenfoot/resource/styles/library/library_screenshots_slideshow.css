@@ -414,9 +414,6 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 
 #SpoilerTag:Selected .TickBox
 {
-	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 	background-color: ui_common_control;
 }
 
@@ -428,17 +425,13 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 
 #SpoilerTag:DescendantFocus:Selected .TickBox
 {
-	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
 }
 
 // and make room for the tickbox
 #SpoilerTag Label
 {
-	padding-left: 46px;
-	padding-top: 4px;
+	margin-top: 5px;
 	color: applabel;
 	width: 100%;
 	text-overflow: clip;

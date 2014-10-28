@@ -629,6 +629,7 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 
 .DaisyWheelVisible .ParentalSetPINDialog,
 .DaisyWheelVisible .ParentalSetEnableCodeDialog,
+.DaisyWheelVisible .ParentalSetRecoveryDialog
 {
 	transform: translatex( 400px );
 }

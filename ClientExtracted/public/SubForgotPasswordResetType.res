@@ -57,6 +57,26 @@
 		"Default"		"0"
 		"SubTabPosition"		"2"
 	}
+	"AuthenticatorRadioButton"
+	{
+		"ControlName"		"RadioButton"
+		"fieldName"		"AuthenticatorRadioButton"
+		"xpos"		"36"
+		"ypos"		"152"
+		"wide"		"300"
+		"tall"		"22"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"1"
+		"paintbackground"		"1"
+		"labelText"		"#SteamUI_ForgottenPasswordLostAuthenticator"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+		"SubTabPosition"		"2"
+	}
 	"Label1"
 	{
 		"ControlName"		"Label"

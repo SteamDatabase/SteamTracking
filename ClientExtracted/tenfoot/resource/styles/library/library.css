@@ -72,6 +72,25 @@
 	background-color: action_module;
 }
 
+.LibraryTitle
+{
+	color: carousel_title;
+	font-size: 48px;
+	opacity: 1.0;
+	font-weight: light;
+	text-align: right;
+	vertical-align: center;
+	width: 300px;
+	margin-bottom: 3px;
+}
+
+
+.LibraryMenuRow:descendantfocus .LibraryTitle
+{
+
+	//pre-transform-scale2d: 1.0;
+}
+	
 .LibraryPanel:descendantfocus .RecentApp:hover .AppImage
 {
 	box-shadow: inset #000000aa 0px 0px 4px 0px
@@ -679,11 +698,78 @@ LibraryAppDetails .GameName
 LibraryAppDetails .GameStatus
 {
 	font-family: platformfont;
-	color: tcstatictext;
+	color: messagecolorwash;
 	opacity: 1.0;
-	width: 40%;
+	width: fit-children;
 	font-size: 24px;
+	margin-top: 4px;
 	font-weight: normal;
+}
+
+#DescriptionArea
+{
+	flow-children: right;
+	vertical-align: top;
+	width: 100%;
+	height: 50px;
+}
+
+#GameRequires
+{
+	//background-color: #3486b0;
+	padding: 7px 12px;
+	flow-children: right;
+	width: 60%;
+	transform: translateY( -52px );
+	horizontal-align: center;
+	text-align: center;
+	visibility: collapse;
+}
+
+#GameRequires.ShowGameRequires
+{
+	visibility: visible;
+}
+
+#GameRequiresIcons
+{
+	flow-children: right;
+	width: fit-children;
+}
+
+LibraryAppDetails #GameRequiresLabel
+{
+	font-family: platformfont;
+	font-style: italic;
+	font-size: 24px;
+	text-align: center;
+	font-weight: normal;
+	color: messagecolorwash;
+	opacity: 1.0;
+	width: 100%;
+}
+
+#GameRequires Image
+{
+	width: 60px;
+	height: 60px;
+	margin-right: 8px;
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+	wash-color: white;
+	flow-children: right;
+}
+
+#GameRequiresController
+{
+	//Don't show steam controller icon for now
+	//background-image: url( "file://{images}/store/icon_legacycontroller_storefront.png" );
+	visibility: collapse;
+}
+
+#GameRequiresKeyboard
+{
+	background-image: url( "file://{images}/store/icon_keyboard_60px.png" );
 }
 
 LibraryAppDetails .ContentsRow
@@ -2980,56 +3066,49 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 
 #ControllerSupportCorner
 {
-	width: 157px;
+	width: fit-children;
 	height: 162px;
 	horizontal-align: right;
 	visibility: visible;
+	flow-children: right;
+	margin: 24px 30px 0px 0px;
 }
 
 #ControllerSupportPlayAction
 {
 	width: 60px;
 	height: 60px;
-	margin: 14px 14px 0px 0px;
+	margin-left: 12px;
 	background-repeat: no-repeat no-repeat;
 	background-size: 100% 100%;
-
+	wash-color: white;
 	horizontal-align: right;
 
 	visibility: collapse;
 
 }
 
-.FullController:descendantfocus #ControllerSupportPlayAction
+LibraryPlayAction:descendantfocus #ControllerSupportPlayAction,
 {
-	background-image: url( "file://{images}/controller_support_full.png" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
-	wash-color: white;
+	background-image: url( "file://{images}/store/icon_keyboard_60px.png" );
 	visibility: visible;
 }
 
-.SteamPad .PartialController:descendantfocus #ControllerSupportPlayAction,
+.SteamPad LibraryPlayAction:descendantfocus #ControllerSupportPlayAction,
 {
-	background-image: url( "file://{images}/controller_support_legacy.png" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
-	wash-color: white;
+	background-image: url( "file://{images}/store/icon_legacycontroller_storefront.png" );
 	visibility: visible;
 }
 
-.SteamPad .FullController:descendantfocus #ControllerSupportPlayAction,
+LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 {
-	background-image: url( "file://{images}/controller_support_native.png" );
-	background-repeat: no-repeat no-repeat;
-	background-size: 100% 100%;
-	wash-color: white;
+	background-image: url( "file://{images}/store/icon_fullcontroller_storefront.png" );
+	visibility: visible;
 }
 
-.SteamPad #ControllerSupportPlayAction,
-.SteamPad .FullController:descendantfocus #ControllerSupportPlayAction,
-.SteamPad .PartialController:descendantfocus #ControllerSupportPlayAction
+.SteamPad LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction,
 {
+	background-image: url( "file://{images}/store/icon_steamcontroller_storefront.png" );
 	visibility: visible;
 }
 
@@ -3338,13 +3417,22 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 {
 	flow-children: right;
 }
-.SteamPad #ControllerSupport,
-.FullController #ControllerSupport,
+
+LibraryRecentApp #ControllerSupport
+{
+	visibility: collapse;
+}
+
+LibraryRecentApp:focus #ControllerSupport
 {
 	width: 50px;
 	height: 50px;
 	margin-right: -8px;
 	vertical-align: center;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: applabelsolid;
 
 	visibility: visible;
 
@@ -3353,72 +3441,25 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	transition-timing-function: ease-in-out;
 }
 
-.PartialController #ControllerSupport
+LibraryRecentApp:focus #ControllerSupport
 {
-	visibility: collapse;
+	margin-top: 0px;
+	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
 }
 
-.SteamPad AppGridItem #ControllerSupport
-.SteamPad LibraryRecentApp #ControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_legacy.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	visibility: collapse;
-}
-
-
-.SteamPad LibraryRecentApp:descendantfocus #ControllerSupport,
-.SteamPad AppGridItem:descendantfocus #ControllerSupport
+.SteamPad LibraryRecentApp:focus #ControllerSupport
 {
 	background-image: url( "file://{images}/controller_support_legacy.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	visibility: visible;
 }
 
-.FullController:focus #ControllerSupport
+LibraryRecentApp.FullController:focus #ControllerSupport
 {
 	background-image: url( "file://{images}/controller_support_full.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	visibility: visible;
-
-
 }
 
-.SteamPad .FullController:focus #ControllerSupport
+.SteamPad LibraryRecentApp.FullController:focus #ControllerSupport
 {
 	background-image: url( "file://{images}/controller_support_native.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	visibility: visible;
-
-
-}
-
-.PartialController:focus #ControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_partial.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	visibility: collapse;
-
-}
-
-.SteamPad .PartialController:focus #ControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_legacy.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	visibility: visible;
-
 }
 
 .LibraryMostRecent:descendantfocus .RecentApp:focus
@@ -3450,27 +3491,27 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 
 #LibraryMenuRowWrapper
 {
-	transition-property: transform, blur, position, opacity !immediate;
+	transition-property: transform, blur, position, opacity-mask, opacity !immediate;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 	transform: translate3d( 50px, -150px, -200px );
 	pre-transform-scale2d: 1.0;
-
+	opacity-mask: url( "file://{images}/lower_row_sharp_mask.tga" ) 0.75;
 	position: 0px 620px 0px;
 	z-index: 10;
 	width: 100%;
-	height: 380px;
+	height: 350px;
 
 }
 
 .LibraryMenuRow
 {
-	height: 420px;
-	width: fit-children;
+	height: 350px;
+	width: 100%;
 	padding: 0px 40px;
 	flow-children: right;
-	margin-left: 100px;
+	margin-right: 0px;
 	font-size: 36;
 	horizontal-align: center;
 	transform: translate3d( 0px, 400px, -100px );
@@ -3486,19 +3527,19 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 .LibraryMostRecent:descendantfocus .LibraryMenuRow
 {
 	opacity: 1.0;
-	transform: translate3d( 0px, 0px, -100px );
+	transform: translate3d( 3px, 0px, -100px );
 	blur: none;
 }
 
 .LibraryMostRecent:descendantfocus .LibraryMenuRow:descendantfocus
 {
-	transform: translateX( 5px );
+	transform: translateX( 8px );
 }
 
 .LibraryMostRecent:descendantfocus #LibraryMenuRowWrapper:descendantfocus
 {
 	transform: translate3d( 0px, -200px, 0px );
-
+	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;
 	transition-property: transform, blur, position, opacity !immediate;
 	animation-duration: 2.0s;
 	animation-timing-function: ease-in-out;
@@ -3530,7 +3571,7 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	border-width: 5px;
 	border-color: #3d414230;
 
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #111414ff ), to( #070708ff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #1f2124ff ), to( #0f0f11ff ) );
 
 	pre-transform-scale2d: 0.91;
 	transition-duration: 0.23s;
@@ -3545,10 +3586,9 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 
 #AddContent
 {
-	margin-left: 16px;
+	horizontal-align: left;
 	width: 90px;
 	height: 90px;
-
 	transition-duration: 0.2s;
 	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow, opacity;
 	transition-timing-function: ease-in-out;
@@ -3884,53 +3924,46 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	color: applabel;
 }
 
-.FullController #GridControllerSupport,
-.PartialController #GridControllerSupport
+AppGridItem #GridControllerSupport
+{
+	visibility: collapse;
+}
+
+AppGridItem:focus #GridControllerSupport
 {
 	width: 50px;
 	height: 50px;
 	margin-top: 4px;
 	margin-right: 6px;
 
-	visibility: collapse;
+	vertical-align: center;
 
-
-}
-
-.PartialController:focus #GridControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_partial.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
 	wash-color: applabelsolid;
-	visibility: collapse;
+
+	visibility: visible;
 }
 
-.SteamPad .PartialController:focus #GridControllerSupport
+AppGridItem:focus #GridControllerSupport
+{
+	margin-top: 0px;
+	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
+}
+
+.SteamPad AppGridItem:focus #GridControllerSupport
 {
 	background-image: url( "file://{images}/controller_support_legacy.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	visibility: visible;
 }
 
-.FullController:focus #GridControllerSupport
+AppGridItem.FullController:focus #GridControllerSupport
 {
 	background-image: url( "file://{images}/controller_support_full.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	visibility: visible;
 }
 
-.SteamPad .FullController:focus #GridControllerSupport
+.SteamPad AppGridItem.FullController:focus #GridControllerSupport
 {
 	background-image: url( "file://{images}/controller_support_native.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-	visibility: visible;
 }
 
 
@@ -4111,18 +4144,49 @@ DropDown
 	visibility: visible;
 }
 
+#GamesFilterDropDownMenu #FilterPlatform
+{
+	visibility: collapse;
+}
 
-
-#FilterPlatform.ShowPlatform,
 #GamesFilterDropDownMenu #FilterPlatform.ShowPlatform
 {
 	visibility: visible;	
 }
 
-#FilterPlatform,
-#GamesFilterDropDownMenu #FilterPlatform
+DropDown #FilterPlatform
+{
+	visibility: visible;	
+}
+
+#GamesFilterDropDownMenu #FilterController
 {
 	visibility: collapse;
+}
+
+#GamesFilterDropDownMenu #FilterController.ShowController
+{
+	visibility: visible;	
+}
+
+DropDown #FilterController
+{
+	visibility: visible;	
+}
+
+#GamesFilterDropDownMenu #FilterGamesICanPlay
+{
+	visibility: collapse;
+}
+
+#GamesFilterDropDownMenu #FilterGamesICanPlay.ShowGamesICanPlay
+{
+	visibility: visible;	
+}
+
+DropDown #FilterGamesICanPlay
+{
+	visibility: visible;
 }
 
 #FilterUnblocked.ShowUnblocked,
@@ -4157,12 +4221,6 @@ DropDown
 
 #FilterHidden,
 #GamesFilterDropDownMenu  #FilterHidden.ShowHidden
-{
-	visibility: visible;
-}
-
-#FilterController DropDown Label,
-#GamesFilterDropDownMenu #FilterController 
 {
 	visibility: visible;
 }
@@ -5055,11 +5113,11 @@ KeyboardShortcut Image
 
 #LibraryMostRecent:descendantfocus .LibraryHomeGlow
 {
-	opacity: 0.5;
-	width: 100%;
-	height: 100%;
+	opacity: 0.75;
+	width: 1750px;
+	height: 350px;
 	z-index: -500;
-	transform: translateZ(-105px );
+	transform: translateY( 20px ) translateZ(-105px );
 
 	margin-bottom: 0px;
 	horizontal-align: center;

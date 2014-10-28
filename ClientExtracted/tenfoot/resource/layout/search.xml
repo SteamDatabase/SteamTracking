@@ -10,7 +10,7 @@
 			<Panel class="InputRow">
 				<TextEntry id="Input"
 				   	textinputid="CheckoutFormTextEntry"
-					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+					textinputclass="HalfWidth DockLeft AppearFromBottomCenter WebEntry"
 					textinputhidesuggestions="1"
 					textinputdoneactionstring="#Store_Search_ViewResults"
 					textmode="normal"
@@ -20,9 +20,25 @@
 			<Panel class="SearchDivider" />
 			<Panel class="SearchResultsArea">
 				<Panel id="SearchResults" />
-				<Label class="NoSearchResults" text="#Search_NoResultsFound" />
-				<Label class="NoInputEntered" text="#Search_NoInputEntered" />
-				<Label class="SearchError" text="#Search_SearchError" />
+
+				<Panel id="SearchResultsMessageWrapper">
+					<Label class="SearchResultsLabel" id="SearchResultsMessage" />
+					<Panel class="SearchResultsIconWrapper" id="SearchResultsIconWrapper">
+						<Panel class="SearchResultsIcon" id="OSIcon" />
+						<Panel class="SearchResultsIcon" id="ControllerIcon" />
+					</Panel>
+				</Panel>
+
+				<Panel id="UnfilterSearchWrapper">
+					<Label class="SearchResultsLabel" id="UnfilterSearchMessage" />
+					<Panel class="SearchResultsIconWrapper" id="UnfilterSearchIconWrapper">
+						<Panel class="SearchResultsIcon" id="OSIconWindows" />
+						<Panel class="SearchResultsIcon" id="OSIconLinux" />
+						<Panel class="SearchResultsIcon" id="OSIconOSX" />
+						<Panel class="SearchResultsIcon" id="ControllerIcon" />
+					</Panel>
+				</Panel>
+
 			</Panel>
 		</Panel>
 	</SearchDialog>

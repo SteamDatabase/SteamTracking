@@ -21,7 +21,9 @@
 				</Panel>
 			</Panel>
 			<Panel id="RightColumn">
+				<Label id="EditPadHeaderHint" class="EditPadHeaderHint" text="CUSTOMIZE THE LEFT PAD"  />
 				<Panel id="BindingRegion" class="BindingRegion">
+				
 					<Panel id="MsgBoxHeader" class="MsgBoxHeader">
 						<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_ControllerBindingsTitle" />
 						<Label id="MsgBoxSubTitle" class="MsgBoxSubTitle" text="#Library_ControllerBindingsSubTitle" />
@@ -178,8 +180,9 @@
 			</Panel>
 
 			<Panel id="EditPadBindingsWrapper" >
+
 				<Panel id="EditPagePadHeader" selectionpos="auto" tabindex="auto" onfocus="ControllerSelectActiveTab();" >
-							<Button id="EditAdvancedButton"  onactivate="ActivateBindingTab( EditPadAdvanced );">
+							<Button id="EditAdvancedButton"   onactivate="ActivateBindingTab( EditPadAdvanced );">
 								<Label class="EditPageHeaderLabel" text="#Library_Details_ControllerBindingAdvanced" />
 							</Button>
 							<Button id="EditMainButton" class="ActiveTabButton" onactivate=" RemoveStyle( EditPadBindingsWrapper, ModeShift ); ActivateBindingTab( EditPadMain );">
@@ -191,7 +194,7 @@
 				</Panel>
 				<Panel id="EditPadBindings" onmoveup="SetInputFocus( EditPagePadHeader )" selectionpos="auto" tabindex="auto" selectionposboundary="vertical" >
 					<Panel id="EditPadAdvanced"  >
-						<Label id="EditPadHeaderAdvanced" class="EditPadHeader" text="#Library_Details_ControllerBinding_AdvancedTitle"  />	
+
 						<Panel id="EditPadAdvancedBody">
 							<Panel id="PadRotation" class="PadRotationDropDown" >
 								<Label id="PadRotationLabel" text="#Library_Details_ControllerPadRotation" class="PadSettingLabel" />
@@ -219,8 +222,7 @@
 						</Panel>
 					</Panel>
 					<Panel id="EditPadMain" selectionpos="auto" class="ActiveTab" >
-						<Label id="EditPadHeader" class="EditPadHeader" />
-						<Label id="EditPadModeShiftHeader" text="#Library_Details_ControllerPad_ModeShift_Style_Title" class="EditPadHeader" />
+
 						<Panel id="EditPadBindingsBody" class="EditPadBindingsBody" >
 							<Panel class="PadLeftCollumn" selectionpos="0,0" tabindex="0">
 								<Panel class="PadSettingDropDown" selectionpos="auto" tabindex="auto">

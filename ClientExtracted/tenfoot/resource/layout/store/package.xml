@@ -23,6 +23,7 @@
 				<Carousel id="AppCarousel" hittest="false" tabindex="0" selectionpos="0,0" focus="left" focus-offset="105px" wrap="false" 
 					x-offset="150px" focus-x-offset="80px,150px" z-offset="0px" focus-z-offset="0px" onmoveup="StoreRemoveFromStack();" />
 				<Carousel id="AppSections" hittest="false" tabindex="1" selectionpos="0,1" focus="edge" focus-offset="105px" wrap="false" selectionposboundary="vertical" >
+					<StoreAppNoteSection id="NoteSection" class="AppSection StoreAppNoteSection" tabindex="auto" selectionpos="auto" mousecanactivate="iffocused" />
 					<StorePackagePurchaseSection id="PurchaseSection" tabindex="auto" selectionpos="auto" mousecanactivate="iffocused" />
 					<StoreAppDetailsSection id="DetailsSection" class="AppSection StoreAppDetailsSection" tabindex="auto" selectionpos="auto" mousecanactivate="iffocused" />
 				</Carousel>

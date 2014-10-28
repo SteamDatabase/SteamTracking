@@ -358,7 +358,7 @@ StorePanel:descendantfocus #FeaturedCapsules
 #FilteredStoreWrapper:descendantfocus #FeaturedCapsules
 {
 	animation-name: none;
-	transform: translate3d(-440px, 80px, 0px);
+	transform: translate3d(-440px, 60px, 0px);
 	desaturation: 0;
 	wash-color: #61e2ff00;
 	opacity: 1.0;
@@ -372,7 +372,7 @@ StorePanel:descendantfocus #FeaturedCapsules
 
 .FilterVisible #FrontPage:descendantfocus #FilteredStoreWrapper:descendantfocus #FeaturedCapsules:descendantfocus
 {
-	transform: translate3d(-440px, 80px, -20px);
+	transform: translate3d(-440px, 90px, 0px);
 }
 
 #FrontPage:descendantfocus #FeaturedCapsules:descendantfocus:hover
@@ -555,9 +555,29 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.SteamOSAvailable .St
 	horizontal-align: right;
 	vertical-align: center;
 }
+
 StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.WindowsAvailable .WindowsSupport
 {
 	margin: 0px;
+}
+
+.CapsuleControllerSupportContainer .CapsuleControllerSupport
+{
+	width: 50px;
+	height: 50px;
+	margin-left: 8px;
+	margin-right: 4px;
+	
+	vertical-align: center;
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
+	//background-size: 50px 50px;
+	background-repeat: no-repeat;
+}
+
+.DetailsIconRow .CapsuleControllerSupport
+{
+	margin-top: -3px;
 }
 
 .CapsuleControllerSupportContainer.FullController .CapsuleControllerSupport
@@ -578,7 +598,8 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.WindowsAvailable .Wi
 	width: 45px;
 	height: 45px;
 
-
+	margin-left: 3px;
+	margin-top: 2px;
 	vertical-align: center;
 	visibility: visible;
 	background-image: url( "file://{images}/store/icon_steamcontroller_storefront.png" );
@@ -593,22 +614,22 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 	width: 45px;
 	height: 45px;
 	margin-top: -2px;
-	margin-left: 2px;
+	margin-left: 4px;
 }
 
 
 
-.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
-{
-	width: 50px;
-	height: 50px;
+//.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
+//{
+//	width: 50px;
+//	height: 50px;
 
-	visibility: collapse;
+//	visibility: collapse;
 
-	background-image: url( "file://{images}/store/icon_partialcontroller_storefront.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-}
+//	background-image: url( "file://{images}/store/icon_partialcontroller_storefront.png" );
+//	background-size: contain;
+//	background-repeat: no-repeat;
+//}
 
 .SteamPad .CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
 {
@@ -622,10 +643,10 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 	background-repeat: no-repeat;
 }
 
-StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
-{
-	visibility: collapse;
-}
+//StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
+//{
+//	visibility: collapse;
+//}
 
 .SteamPad StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.PartialController .CapsuleControllerSupport
 {
@@ -1160,6 +1181,8 @@ StorePrice #BasePrice
 	color: #666464;
 	text-decoration: line-through;
 	margin-right: 4px;
+	margin-top: 1px;
+	font-size: 18px;
 }
 
 StorePrice #FinalPrice

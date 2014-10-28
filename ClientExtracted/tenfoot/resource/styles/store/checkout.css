@@ -2,7 +2,8 @@
 
 @define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
 @define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #cbcbcbde ) );
-
+@define warningnotecolor: #d0a11c;
+ 
 //
 // Animations
 //
@@ -190,47 +191,6 @@ CartLineItem:descendantfocus #FinalPrice
 .ProminentButton:selected Label
 {
 	color: #648e2e;
-}
-
-
-ToggleButton
-{
-	flow-children: right;
-}
-
-ToggleButton .TickBox
-{
-	width: 50px;
-	height: 49px;
-	vertical-align: center;
-	margin-right: 8px;
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 0px;
-	background-color: blue;
-	border-color: none;
-}
-
-ToggleButton:selected .TickBox
-{
-	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-}
-
-ToggleButton:descendantfocus:selected .TickBox
-{
-	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-color: white;
-}
-
-ToggleButton Label
-{
-	vertical-align: center;
-	margin-top: 10px;
-	margin-bottom: 10px;
 }
 
 #AgreeTerms
@@ -787,6 +747,11 @@ CartLineItem:descendantfocus .CartLineItemContents
 	white-space: nowrap;
 }
 
+#Notes Label.WarningNote
+{
+	color: warningnotecolor;
+}
+
 #PurchaseNotes
 {
 	flow-children: down;
@@ -812,20 +777,65 @@ CartLineItem:descendantfocus .CartLineItemContents
 	font-size: 26px;
 }
 
-.ShoppingCartNote, .ShoppingCartNote:hover
+CartNoteItem, CartNoteItem:hover
 
 {
 	margin-left: 12px;
 	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
 }
 
-.ShoppingCartNote Label, .ShoppingCartNote:hover Label
+CartNoteItem Label, CartNoteItem:hover Label
 {
 	color: secondary_label;
 	font-size: 21px;
 	line-height: 26px;
 	font-style: italic;
 	transform: translatex(0px);
+}
+
+CartNoteItem.WarningNote #CartNoteItemButton
+{
+	background-color: gradient( linear, 100% 0%, 0% 0%, color-stop( 0.0, #b5901eff ), color-stop( 1.0, #a76819ff ) );
+}
+
+CartNoteItem #CartNoteItemButton
+{
+	flow-children: right;
+	margin: 0px 0px 16px 0px;
+	height: fit-children;
+}
+
+CartNoteItem.WarningNote Label
+{
+	color: #f1f1f1ff;
+}
+
+CartNoteItem.WarningNote:descendantfocus Label
+{
+	color: warningnotecolor;
+}
+
+CartNoteItem #CartNoteItemIcon
+{
+	visibility: collapse;
+}
+
+CartNoteItem.WarningNote #CartNoteItemIcon
+{
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-image: url( "file://{images}/store/icon_notice.png" );
+	wash-color: #f1f1f1ff;
+	width: 55px;
+	height: 55px;
+	vertical-align: center;
+	margin-right: 10px;
+	visibility: visible;
+}
+
+CartNoteItem.WarningNote:descendantfocus #CartNoteItemIcon
+{
+	wash-color: warningnotecolor;
 }
 
 #CouponTotalRow, #SubtotalRow

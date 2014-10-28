@@ -1,5 +1,6 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/amount.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/amount.h
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/cellmap.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../common/linuxhelpers.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../common/parentalinterpreter.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/completionportmanager.cpp
@@ -191,6 +192,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamsystem.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamsystemlinux.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamvideoencoder.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamvideostagecomposite.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamvideostage.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamvideostagex264.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamvideostageyv12.cpp
@@ -234,7 +236,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../streaming/server/streamserver.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/subpaneloptionsfamily.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/SubPanelWelcomeCreatingAccount.cpp
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/account/confirmpassworddialog.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/account/tenfootconfirmpassworddialog.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/avatarimage.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/controls/keyboardshortcut.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/friends/communityfeedstrip.cpp

@@ -6,6 +6,9 @@
 @define storeoverviewcolor: #ffffff66;
 @define AppSectionTransitionDuration: 0.25s;
 @define SlideshowFocusTransitionDuration: 0.3s;
+@define notelabel: #bbbbbbff;
+@define noteiconwash: #bbbbbbff;
+@define noteiconwashheader: #f2f2f2ef;
 
 // values below should cancel eachother
 @define PreviewImageBorder: 5px;
@@ -624,6 +627,13 @@ Button:focus
 {
 	color: storeoverviewcolor;
 	font-size: 28px;
+	margin-top: 4px;
+}
+
+#NoteSection .AppSectionOverviewLabel
+{
+	color: applabelsolid;
+	font-size: 21px;
 	margin-top: 8px;
 }
 
@@ -680,7 +690,7 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 #AppSections:descendantfocus StoreAppPurchaseSection,
 #AppSections:descendantfocus StorePackagePurchaseSection
 {
-	transform: translatey( 52px );
+	transform: translatey( 51px );
 }
 #AppSections:descendantfocus .StoreAppPurchaseSection:hover
 {
@@ -1053,6 +1063,281 @@ h1, h2
 
 
 //
+// Note Section
+//
+.StoreAppNoteSection
+{
+	width: 514px;
+	height: 524px;
+	padding: 10px;
+	// Scale to 320x148.
+	// scale2dx = 320 / width
+	// margin-right = (width - 320) / 2
+	// translatey = (height - 148) / 2
+	pre-transform-scale2d: 0.599250936329588, 0.2824427480916;
+	margin-left: -101px;
+	margin-right: -81px;
+	transform: translatey( -188px );
+}
+
+.AppSection:descendantfocus #HeaderIconWrapper
+{
+	opacity: 0.0;
+}
+
+#AppSections:descendantfocus .StoreAppNoteSection
+{
+	transform: translatey( 62px );
+}
+
+#AppSections:descendantfocus .StoreAppNoteSection:descendantfocus
+{
+	//height: fit-children;
+	transform: translateX( 20px ) translateY( 62px );
+}
+
+#AppSections:descendantfocus .StoreAppNoteSection:hover
+{
+	pre-transform-scale2d: 0.6365, 0.3;
+}
+
+#AppSections:descendantfocus .StoreAppNoteSection:descendantfocus:hover
+{
+	pre-transform-scale2d: 1.0;
+}
+
+.StoreAppNoteSection .AppSectionWrapper
+{
+	width: 100%;
+	//height: 100%;
+	overflow: clip clip;
+	flow-children: down;
+	pre-transform-scale2d: 1.668750001, 2.744402049;
+	transform: translate3d( 170px, 442px, 0px );
+
+	transition-property: transform, pre-transform-scale2d;
+	transition-duration: AppSectionTransitionDuration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.StoreAppNoteSection .HeaderLabel
+{
+	pre-transform-scale2d: 0.95, 1.161085887;
+	transform: translate3d( -20px, -4px, 0px );
+	width: 305px;
+	flow-children: right;
+}
+
+.StoreAppNoteSection .AppSectionBody
+{
+	width: 100%;
+	margin-top: 0px;
+
+	pre-transform-scale2d: 1.0, 1.29009543;
+	transform: translate3d( -40px, 74px, 0px );
+
+	transition-property: transform, pre-transform-scale2d;
+	transition-duration: AppSectionTransitionDuration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.StoreAppNoteSection .AppSectionSmallBody
+{
+	flow-children: down;
+	transform: translatex( 48px );
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: AppSectionTransitionDuration;
+	transition-timing-function: ease-in-out;
+}
+
+.StoreAppNoteSection .AppSectionLargeBody
+{
+	width: 100%;
+	height: 420px;
+	flow-children: down;
+	margin: 12px 22px 20px 22px;
+
+	transform: translatex( 40px );
+
+	opacity: 0.0;
+	transition-property: opacity, transform;
+	transition-duration: AppSectionTransitionDuration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.StoreAppNoteSection:descendantfocus .AppSectionLargeBody
+{
+	opacity-mask-scroll-down: none;
+	opacity-mask-scroll-up: none;
+	opacity-mask-scroll-up-down: none;
+}
+
+StoreAppNoteSection #LearnMoreButton
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 490px;
+	vertical-align: bottom;
+
+	// Hide until the button does something
+	visibility: collapse;
+}
+
+StoreAppNoteSection.AppSection
+{
+	background-color: #3486b0;
+}
+
+StoreAppNoteSection .AppSectionOverviewLabel
+{
+	color: detailsdatalabel;
+}
+
+#RequiresStreaming, #RequiresOverviewStreaming
+{
+	visibility: collapse;
+}
+
+.ShowRequiresStreaming #RequiresStreaming
+{
+	visibility: visible;
+}
+
+.ShowRequiresStreaming #RequiresOverviewStreaming
+{
+	visibility: visible;
+	width: 297px;
+}
+
+#RequiresController, #RequiresOverviewController
+{
+	visibility: collapse;
+}
+
+.ShowRequiresController #RequiresController
+{
+	visibility: visible;
+}
+
+.ShowRequiresController #RequiresOverviewController
+{
+	visibility: visible;
+	width: 297px;
+}
+
+.ShowRequiresController.ShowRequiresStreaming #RequiresOverviewStreaming,
+.ShowRequiresController.ShowRequiresStreaming #RequiresOverviewController
+{
+	visibility: collapse;
+}
+
+#RequiresOverviewStreamingAndController
+{
+	visibility: collapse;
+}
+
+.ShowRequiresController.ShowRequiresStreaming #RequiresOverviewStreamingAndController
+{
+	visibility: visible;
+	width: 297px;
+}
+
+.Note
+{
+	flow-children: down;
+	margin-bottom: 20px;
+}
+
+Label.NoteLabel
+{
+	width: 100%;
+	margin-bottom: 4px;
+
+	font-size: 28px;
+	font-family: platformfont;
+	font-weight: normal;
+	color: notelabel;
+}
+
+.NoteIconWrapper
+{
+	flow-children: right;
+	vertical-align: center;
+}
+
+#HeaderIconWrapper.NoteIconWrapper
+{
+	horizontal-align: right;
+	margin-right: 10px;
+}
+
+.NoteIcon
+{
+	horizontal-align: center;
+	vertical-align: center;
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 50px;
+	wash-color: noteiconwash;
+	visibility: collapse;
+}
+
+#HeaderIconWrapper .NoteIcon
+{
+	wash-color: noteiconwashheader;
+}
+
+.WindowsIcon #WindowsIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_windows_storefront.png" );
+	margin-left: -4px;
+	margin-right: -4px;
+}
+
+.OSXIcon #OSXIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_mac_storefront.png" );
+	margin-left: -4px;
+	margin-right: -4px;
+}
+
+.LinuxIcon #LinuxIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_steamos_storefront.png" );
+	margin-right: 4px;
+}
+
+.SteamControllerIcon #SteamControllerIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_steamcontroller_storefront.png" );
+	margin-right: 4px;
+}
+
+.LegacyControllerIcon #LegacyControllerIcon
+{
+	// Hide this for now
+	//visibility: visible;
+	//background-image: url( "file://{images}/store/icon_legacycontroller_storefront.png" );
+	//margin-right: 4px;
+}
+
+.KeyboardMouseIcon #KeyboardMouseIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
+	margin-right: 4px;
+}
+
+//
 // Details Section
 //
 .StoreAppDetailsSection
@@ -1354,6 +1639,19 @@ h1, h2
 	vertical-align: center;
 }
 
+#CategoryControllerImage,
+.PartialController #CategoryControllerImage
+{
+	background-image: url( "file://{images}/store/icon_keyboard.png" );
+	vertical-align: bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: white;
+	margin-left: 4px;
+	width: 40px;
+	height: 40px;
+}
+
 .FullController #CategoryControllerImage
 {
 	background-image: url( "file://{images}/controller_support_full.png" );
@@ -1373,6 +1671,24 @@ h1, h2
 	wash-color: white;
 	width: 40px;
 	height: 40px;
+}
+
+#CategoryKeyboardImage
+{
+	visibility: visible;
+	color: applabelsolid;
+	background-image: url( "file://{images}/store/icon_keyboard.png" );
+	vertical-align: bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: white;
+	width: 40px;
+	height: 40px;
+}
+.FullController #CategoryKeyboardImage,
+.SteamPad #CategoryKeyboardImage
+{
+	visibility: collapse;
 }
 
 #CategoryControllerText
@@ -1433,7 +1749,7 @@ h1, h2
 
 .PartialController #CategoryControllerImage
 {
-	visibility: collapse;
+	visibility: visible;
 }
 
 .SteamPad .PartialController #CategoryControllerImage
@@ -1479,6 +1795,11 @@ h1, h2
 #AppSections:descendantfocus .StoreAppFriendsSection:hover
 {
 	pre-transform-scale2d: 0.6365, 0.3;
+}
+
+#AppSections:descendantfocus .StoreAppFriendsSection:descendantfocus
+{
+	transform: translateX( -20px ) translateY( 62px );
 }
 
 #AppSections:descendantfocus .StoreAppFriendsSection:descendantfocus:hover
@@ -2213,6 +2534,18 @@ StorePackageAppOverview.Focused:descendantfocus #ItemName
 	visibility: visible;
 }
 
+StorePackageAppOverview #CategoryControllerImage
+{
+	margin-left: 4px;
+}
+
+StorePackageAppOverview #CategoryKeyboardImage
+{
+	margin-left: 8px;
+	margin-top: 2px;
+}
+
+
 .HeaderImageWrapper
 {
 	width: 460px;
@@ -2499,8 +2832,14 @@ DropDownMenu
 .PackagePlatforms
 {
 	flow-children: right;
-	}
-	
+}
+
+.PackagePlatforms #Controller
+{
+	margin-top: -4px;
+	margin-left: 6px;
+}
+
 #ContinueBtn
 {
 	background-color: transparent_module2;
@@ -2613,62 +2952,4 @@ DropDown.DropDownMenuVisible:focus Label
 	flow-children: down;
 }
 
-#AppAvailabilityWrapper
-{
-	flow-children: right;
-}
 
-.AppAvailabilityIcon
-{
-	horizontal-align: center;
-	vertical-align: center;
-	background-repeat: no-repeat;
-	width: 42px;
-	height: 42px;
-	wash-color: #36b3d9ff;
-	visibility: collapse;
-}
-
-.WindowsIcon #WindowsIcon
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_platform_win.png" );
-	margin-left: -4px;
-	margin-right: -4px;
-}
-
-.OSXIcon #OSXIcon
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_platform_mac.png" );
-	margin-left: -4px;
-	margin-right: -4px;
-}
-
-.LinuxIcon #LinuxIcon
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_platform_linux.png" );
-	margin-right: 4px;
-}
-
-.SteamControllerIcon #SteamControllerIcon
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_steamcontroller.png" );
-	margin-right: 4px;
-}
-
-.LegacyControllerIcon #LegacyControllerIcon
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_legacycontroller.png" );
-	margin-right: 4px;
-}
-
-.KeyboardMouseIcon #KeyboardMouseIcon
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_keyboard.png" );
-	margin-right: 4px;
-}
