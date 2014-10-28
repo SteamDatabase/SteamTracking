@@ -31,7 +31,7 @@
 
 #CommunityWrapper CommunityPanel
 {
-	opacity: 1.0;
+	opacity: 0.0;
 }
 
 .StackDepth1 CommunityPanel #CommunityContent.CommunityLoading,
@@ -64,10 +64,9 @@ CommunityPanel
 	transition-timing-function: linear;
 }
 
-.CommunityVisible, #CommunityWrapper CommunityPanel.CommunityVisible
+#CommunityWrapper:descendantfocus .CommunityVisible
 {
 	opacity: 1.0;
-	
 }
 
 .CommunityInvisible, #CommunityWrapper CommunityPanel.CommunityInvisible
@@ -82,7 +81,7 @@ CommunityPanel #ContentRow
 	height: 100%;
 
 	opacity: 0.0;
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
+	/*opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;*/
 
 	transform-origin: 0% 0% parent-relative;
 	transition-property: transform, position, opacity, opacity-mask;
@@ -100,7 +99,7 @@ CommunityPanel #ContentRow
 	animation-name: none;
 	animation-duration: 0s;
 
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
+	/*opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;*/
 
 	transform: translateX( 0px );
 }
@@ -121,7 +120,7 @@ CommunityPanel #ContentRow
 .StackDepth2 CommunityPanel #CommunityContent,
 .StackDepth3 CommunityPanel #CommunityContent
 {
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
+	/*opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;*/
 	transform: translatex( 0px );
 	animation-name: none;
 }
@@ -196,4 +195,43 @@ CommunityPanel LoadingThrobber
 
 	opacity: 1.0;
 	pre-transform-scale2d: 0.85;
+}
+
+CommunityPanel#CommunityMarketItemPicker
+{
+	width: 100%;
+	height: 100%;
+
+	background-image: url( "file://{images}/profile/activity_bg_wash.png" );
+	background-size: 100% 100%;
+	box-shadow: #000000aa -4px -4px 8px 8px;
+
+	transform: translatey( 157px );
+
+	transition-property: transform, position, opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: linear;
+}
+
+#CommunityMarket, #CommunityMarketItemPicker
+{
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: 0.23s;
+}
+
+.MarketStack1
+{
+	transform: translatey( -50px );
+}
+
+#CommunityMarketItemPicker.MarketStack1
+{
+	transform: translatey( 107px ); /* 157 - 50*/
+}
+
+.MarketStack2
+{
+	transform: translatey( -55px );
 }

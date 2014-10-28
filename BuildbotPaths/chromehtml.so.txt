@@ -3,6 +3,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/html/../../overlay/common/shmemstream.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/html/../../public/html/htmlmessages.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/html/../../public/html/htmlprotobuf.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/public/tier0/tslist.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/public/tier0/vprof.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/public/tier1/utlrbtree.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/public/tier1/utlstring.h

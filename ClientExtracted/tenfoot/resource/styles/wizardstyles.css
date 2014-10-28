@@ -257,7 +257,12 @@
 	font-size: 24px;
 	font-family: platformfont;
 	color: tcstatictext;
-	margin-bottom: 2px;
+	margin-bottom: 4px;
+}
+
+ToggleButton .WizardLabel
+{
+	margin-bottom: 10px; /* restore default */
 }
 
 .Radiobutton Label

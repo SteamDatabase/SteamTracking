@@ -1,0 +1,13 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/store/checkout.css" />
+	</styles>
+	
+	<CartNoteItem tabindex="auto" selectionpos="auto" defaultfocus="CartNoteButton">
+		<Button id="CartNoteItemButton">
+			<Panel id="CartNoteItemIcon" />
+			<Label id="CartNoteItemLabel" />
+		</Button>
+	</CartNoteItem>
+</root>

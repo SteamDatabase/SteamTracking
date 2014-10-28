@@ -34,8 +34,8 @@
 					<Button id="CDKeyButton" class="CDKeyButton LinksAndMoreButton">
 						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
 					</Button>
-					<Button id="SupportButton" class="SupportButton LinksAndMoreButton">
-						<Label id="SupportLabel" text="#Library_Details_Support" />
+					<Button id="AppKillButton" class="AppKillButton LinksAndMoreButton">
+						<Label id="AppKillLabel" text="#Library_Details_KillApp" />
 					</Button>
 					<ParentalButton id="ManageAccountButton" class="ManageAccountButton LinksAndMoreButton">
 						<Label id="ManageAccountLabel" text="#Library_Details_ManageAccount" />
@@ -77,8 +77,8 @@
 					<Button id="SetLanguageButton" class="SetLanguageButton LinksAndMoreButton">
 						<Label id="SetLanguageLabel" text="#Library_Details_SetLanguage" />
 					</Button>
-					<Button id="AppKillButton" class="AppKillButton LinksAndMoreButton">
-						<Label id="AppKillLabel" text="#Library_Details_KillApp" />
+					<Button id="SupportButton" class="SupportButton LinksAndMoreButton">
+						<Label id="SupportLabel" text="#Library_Details_Support" />
 					</Button>
                     <Button id="ChooseIconButton" class="ChooseIconButton LinksAndMoreButton">
                         <Label id="ChooseIconLabel" text="#Library_Details_ChooseIcon"/>

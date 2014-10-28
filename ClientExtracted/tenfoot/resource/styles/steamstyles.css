@@ -471,6 +471,46 @@ ToggleButton:descendantfocus .TickBox
 	white-space: nowrap;
 }
 
+ToggleButton
+{
+	flow-children: right;
+}
+
+ToggleButton .TickBox
+{
+	width: 50px;
+	height: 49px;
+	vertical-align: center;
+	margin-right: 8px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 0px;
+	background-color: blue;
+	border-color: none;
+}
+
+ToggleButton:selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+ToggleButton:descendantfocus:selected .TickBox
+{
+	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: white;
+}
+
+ToggleButton Label
+{
+	vertical-align: center;
+	margin-top: 10px;
+	padding-bottom: 0px;
+}
+
 ToggleButton:descendantfocus .TickBox
 {
 	transition-property: border;
@@ -793,6 +833,7 @@ h2
 	padding-bottom: 5px;
 	padding-top: 5px;
 	margin: 14px;
+	margin-left: 0px;
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: 0.20s;
 	border-color: none;
@@ -814,6 +855,7 @@ h2
 	padding-bottom: 5px;
 	padding-top: 5px;
 	margin: 14px;
+	margin-left: 0px;
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: 0.20s;
 	border-color: none;

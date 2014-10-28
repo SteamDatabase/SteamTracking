@@ -56,8 +56,8 @@
 .EditSingleBinding #BindingRegion,
 .EditPadBinding #BindingRegion
 {
-	pre-transform-scale2d: 0.65;
-	transform: translatex( 0px ) translatey( -240px );
+	pre-transform-scale2d: 0.50;
+	transform: translatex( 0px ) translatey( -300px );
 }
 
 .EditPadBinding.EditPadBindingValue #BindingRegion
@@ -198,6 +198,7 @@
 	transition-timing-function: ease-in-out;
 }
 
+
 #BindingSelection,
 #EditPadBindingsWrapper
 {
@@ -242,7 +243,7 @@
 
 .EditSingleBinding #BindingSelection
 {
-	transform: translatey( 0px );
+	transform: translatey( 100px );
 	opacity: 1.0;
 }
 
@@ -553,16 +554,19 @@
 	position: 160px 191px 0px;
 }
 
- .SelectBindingHeader,
-.EditPadHeader
+ .SelectBindingHeader,.EditPadHeader,.EditPadHeaderHint
 {
 	horizontal-align: center;
-	margin: 8px;
+	margin: -32px;
 
 	color: #7fcfffff;
 	font-weight: thin;
 	font-size: 32px;
+	
+
 }
+
+
 
  #BindingDescriptionTextEntry
 {
@@ -574,7 +578,7 @@
 	box-shadow: none;
 	border-width: 3px;
 	color: #fefefeff;
-	
+	margin-top: 0px;
 	horizontal-align: center;
 	background-color: none;
 	animation-name: none;
@@ -955,7 +959,7 @@
 	text-transform: uppercase;
 	color: #fefefeff;
 	white-space: nowrap;
-
+	margin-top: -2px;
 	transition-property: transform, color;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in;
@@ -969,19 +973,19 @@ Button:focus .ActionLabel
 Button.BindingButton:focus .ActionLabel,
 Button.BindingButton:focus .ActionMapping
 {
-	transform: translatex( 3px );
+	/*transform: translatex( 3px );*/
 }
 
 Button.BindingButton:focus .PActionMappingWrapper
 {
-	transform: translatex( 7px );
+	/*transform: translatex( 7px );*/
 }
 
 Button.BindingButtonRight:focus .ActionLabel,
 Button.BindingButtonRight:focus .ActionMapping,
 Button.BindingButtonRight:focus .PActionMappingWrapper
 {
-	transform: translatex( -7px );
+	/*transform: translatex( -7px );*/
 }
 
 .ActionMapping
@@ -2320,6 +2324,8 @@ DropDownMenu Label:disabled
 {
 	flow-children: right;
 	height: 50px;
+	margin-top: 0px;
+	z-index: 100;
 	horizontal-align: center;
 }
 
@@ -2336,47 +2342,124 @@ DropDownMenu Label:disabled
 }
 
 
-#EditPagePadHeader Button
-{
+
+
+#EditAdvancedButton
+{ 
 	width: 400px;
 	border-style: solid;
-	border-width: 2px;
-	border-color: #487395ff;
-
+	border-width: 4px;
+	border-color: #4e6c84ff;
+	border-right-style: none;
+	border-bottom-width: 1px;
+	border-bottom-color: #86badbff;
 	height: 58px;
-
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #25313bff ), to( #2f4a5fff ) );
 	padding: 0px;
-	margin: 1px;
-	margin-right: 20px;
+	margin: -1px;
+	margin-right: 0px;
 
 	transition-property: background-color;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in;
 }
 
-Button.ActiveTabButton
+#EditMainButton
 {
-	animation-name: main-button-glow-movement-small;
+	width: 400px;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #4e6c84ff;
+	
+	border-bottom-width: 1px;
+	border-bottom-color: #86badbff;
+
+	height: 58px;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #2f4a5fff ), to( #2f4a5fff ) );
+	padding: 0px;
+	margin: -1px;
+	margin-left: 0px;
+
+	transition-property: background-color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
+}
+
+#EditModeShiftButton
+{
+	width: 400px;
+	border-style: solid;
+	border-width: 4px;
+	border-left-style: none;
+	border-color: #4e6c84ff;
+	border-bottom-width: 1px;
+	border-bottom-color: #86badbff;
+	
+
+	height: 58px;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #2f4a5fff ), to( #25313bff ) );
+	padding: 0px;
+	margin: -1px;
+	margin-left: 1px;
+
+	transition-property: background-color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
+}
+
+
+#EditPagePadHeader .ActiveTabButton
+{
+	
+	animation-iteration-count: 0;
+	background-color: gradient( linear, 0% 0%, 0% 80%, from( #5a7e99 ), to( #4f6f87ff ) );
+	border-style: solid;
+	border-bottom-style: none;
+	border-color: #86badbff;
+	border-width: 4px;	
+
+
+}
+
+#EditPagePadHeader Button.ActiveTabButton:focus
+{
+	transition-duration: shortduration !immediate;
+	transition-property: background-color, border;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
+
+
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	
+	animation-name: links-and-more-button-focus; 
 	animation-duration: longduration;
 	animation-delay: shortduration;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
-
-	background-color: ui_common_control; 
-
-	border-color: #fefefeff;
-	border-width: 2px;	
 }
+
 
 
 #EditPagePadHeader Button Label
 {
 	padding: 0px;
-	margin: 1px;
+	margin-top: 2px;
 	horizontal-align: center;
 	transform: translatey( 0px );
 }
+
+#EditPagePadHeader Button:focus Label
+{
+	color: #353535ff;
+}
+
+
+
 
 .EditPageHeaderLabel
 {
@@ -2394,6 +2477,7 @@ Button.ActiveTabButton
 #EditPadAdvanced
 {
 	height: 532px;
+	width: 100%;
 }
 
 #EditPadMain, #EditPadAdvanced, #EditPadModeShift
@@ -2404,7 +2488,22 @@ Button.ActiveTabButton
 
 #EditPadAdvanced.ActiveTab, #EditPadMain.ActiveTab, #EditPadModeShift.ActiveTab
 {
+	z-index: -1;
 	visibility: visible;
+	border-style: solid;
+	border-right-style: none;
+	border-width: 1px;
+	border-color: #86badbff;
+	background-color: gradient( linear, 0% 0%, 0% 80%, from( #4f6f87ff ), to( #14171aff ) );
+	padding: 0px;
+	margin: -1px;
+	margin-top: -1px;
+
+	transition-property: background-color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
+	
+	
 }
 
 .PadRotationDropDown, .PadModeShift, .PadModeShiftType, #EditPadAdvanced, .PadOuterEdgeDropDown,
@@ -2419,7 +2518,22 @@ Button.ActiveTabButton
 	text-align: center;
 }
 
+#EditPadHeaderHint
+{
+	opacity: 0;
+	width: 100%;
+	text-align: center;
+	transform: translatex( 0px ) translatey( -600px );
+	Vertical-align: bottom;
+	transition-property: opacity;
+	transition-duration: 0.7s;
+	transition-timing-function: ease-in;
+}
 
+.EditPadBinding #EditPadHeaderHint
+{
+opacity: 1.0;
+}
 #EditPadAdvancedBody
 {
 	flow-children: down;

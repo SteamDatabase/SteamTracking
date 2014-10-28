@@ -13,7 +13,7 @@
 		<!-- main panel -->
 		<Panel class="SettingsContent SettingsCenterContentWide" >
 			<Panel class="FlowDown" >
-				<Label class="Settings" text="#SettingsRemoteControl_Text"/>
+				<Label class="SettingsCallout" text="#SettingsRemoteControl_Text"/>
 
 				<ToggleButton class="CheckBox" id="SettingsRemoteControl_Enable" text="#SettingsRemoteControl_Enable" onactivate="ToggleRemoteControl()" />
 

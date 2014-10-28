@@ -160,9 +160,9 @@
 		place { control="VoiceChat,ChatActionsButton" y=6 width=36 margin-right=8 align=right spacing=8 dir=right }
 		place { control="TitlePanel" margin-left=6 y=2 height=50 width=max margin-right=6 end-right=VoiceChat }
 		place { control="VoiceBar" y=34 height=24 width=max margin-left=8 margin-right=52 }
-		place { control="GameInviteBar,TradeInviteBar,ChatInfoBar" height=54 }
+		place { control="GameInviteBar,TradeInviteBar,ChatInfoBar,BIBar,BABar" height=54 }
 		
-		place { control="TradeInviteBar,GameInviteBar,ChatInfoBar,ChatHistory" y=60 margin-left=8 margin-right=8 width=max height=max align=right dir=down margin-bottom=74 spacing=3 }
+		place { control="TradeInviteBar,GameInviteBar,ChatInfoBar,BIBar,BABar,ChatHistory" y=60 margin-left=8 margin-right=8 width=max height=max align=right dir=down margin-bottom=74 spacing=3 }
 
 		region { name="chathistorybottom" y=60 margin-left=8 margin-right=8 width=max height=234 align=bottom margin-bottom=74 }
 		

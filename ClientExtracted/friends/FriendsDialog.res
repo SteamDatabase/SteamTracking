@@ -238,9 +238,10 @@
 		"MenuBar MenuButton"
 		{
 			padding-right=14
+			padding-top=4
 			render
 			{
-				0="image( x1-18, y0 + 8, x1-0, y1, graphics/icon_down_default )"
+				0="image( x1-18, y0 + 11, x1-0, y1, graphics/icon_down_default )"
 			}
 		}
 
@@ -248,7 +249,7 @@
 		{
 			render
 			{
-				0="image( x1-18, y0 + 8, x1-0, y1, graphics/icon_down_hover )"
+				0="image( x1-18, y0 + 11, x1-0, y1, graphics/icon_down_hover )"
 			}
 		}
 
@@ -256,7 +257,7 @@
 		{
 			render
 			{
-				0="image( x1-18, y0 + 8, x1-0, y1, graphics/icon_down_hover )"
+				0="image( x1-18, y0 + 11, x1-0, y1, graphics/icon_down_hover )"
 			}
 		}
 		
@@ -273,7 +274,7 @@
 			render_bg
 			{
 				// background fill
-				0="fill( x0 + 1, y0 + 1, x1+1, y1, dialogbg )"
+				0="fill( x0 + 1, y0 + 1, x1+1, y1, clientgrouper )"
 	     
 
 				// single pixel fills in the corners

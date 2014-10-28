@@ -1,0 +1,17 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+	</styles>
+
+	<ChangingPasswordWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
+		<Label class="WizardChildTitle" text="#LostAuthenticator_Title" />
+		<Label class="WizardChildDescription" text="#LostAuthenticator_Working" />
+
+		<Panel id="ThrobberContainer">
+			<Panel class="Throbber" />
+		</Panel>
+
+	</ChangingPasswordWizardChild>
+
+</root>

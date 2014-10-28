@@ -498,22 +498,14 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 	transition-timing-function: ease-out;
 }
 
-.CheckBox:Selected .TickBox
-{
-	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-}
-
 .CheckBox Label
 {
-	padding-left: 78px;
+	padding-left: 15px;
 	width: 100%;
 	color: detailsdatalabel;
 	font-size: 27px;
 	font-family: platformfont;
 	border-width: 0px;
-	vertical-align: center;
 
 	transform: translatex(-7px);
 	transition-property: color, transform;
@@ -571,11 +563,6 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 {
 	color: black;
 	transform: translatex(0px);
-}
-
-.CheckBox:Selected:focus .TickBox
-{
-	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
 }
 
 #PasswordTextEntry:disabled, #LoginButton Label:disabled

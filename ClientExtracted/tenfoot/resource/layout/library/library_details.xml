@@ -13,7 +13,12 @@
 		</Panel>
 		<Panel id="UpperRow" class="UpperRow" >
 			<Label id="GameName" class="GameName" text="" />
-			<Label id="GameStatus" class="GameStatus" text="" />
+			<Panel id="DescriptionArea">
+				<Label id="GameStatus" class="GameStatus" text="" />
+			</Panel>	
+			<Panel id="GameRequires">
+				<Label id="GameRequiresLabel" text="#Library_Details_GameRequiresController" />
+			</Panel>
 		</Panel>
 		<Carousel id="ContentsRow" class="ContentsRow" tabindex="0" selectionpos="0,0" focus="center" wrap="false" onmoveup="CloseAppDetails( true );">
 			<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore DetailsDataPanel" tabindex="0" selectionpos="0,0" mousecanactivate="iffocused" />

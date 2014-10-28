@@ -1,0 +1,266 @@
+{
+    "0": {
+        "bindings": {
+            "0": {
+                "with_gamepad": false,
+                "button": "backside_left",
+                "score": 1,
+                "binding": "mouse:middle_button",
+                "used_in_official": false
+            },
+            "1": {
+                "with_gamepad": false,
+                "button": "backside_right",
+                "score": 1,
+                "binding": "kb:key_lcontrol",
+                "used_in_official": false
+            },
+            "2": {
+                "with_gamepad": false,
+                "button": "button_a",
+                "score": 1,
+                "binding": "kb:key_space",
+                "used_in_official": false
+            },
+            "3": {
+                "with_gamepad": true,
+                "button": "button_a",
+                "score": 1,
+                "binding": "gamepad:a",
+                "used_in_official": false
+            },
+            "4": {
+                "with_gamepad": true,
+                "button": "button_b",
+                "score": 1,
+                "binding": "gamepad:b",
+                "used_in_official": false
+            },
+            "5": {
+                "with_gamepad": false,
+                "button": "button_b",
+                "score": 1,
+                "binding": "kb:key_c",
+                "used_in_official": false
+            },
+            "6": {
+                "with_gamepad": true,
+                "button": "button_escape",
+                "score": 1,
+                "binding": "gamepad:select",
+                "used_in_official": false
+            },
+            "7": {
+                "with_gamepad": false,
+                "button": "button_escape",
+                "score": 1,
+                "binding": "kb:key_esc",
+                "used_in_official": false
+            },
+            "8": {
+                "with_gamepad": false,
+                "button": "button_menu",
+                "score": 1,
+                "binding": "kb:key_tab",
+                "used_in_official": false
+            },
+            "9": {
+                "with_gamepad": true,
+                "button": "button_menu",
+                "score": 1,
+                "binding": "gamepad:menu",
+                "used_in_official": false
+            },
+            "10": {
+                "with_gamepad": false,
+                "button": "button_x",
+                "score": 1,
+                "binding": "kb:key_r",
+                "used_in_official": false
+            },
+            "11": {
+                "with_gamepad": true,
+                "button": "button_x",
+                "score": 1,
+                "binding": "gamepad:x",
+                "used_in_official": false
+            },
+            "12": {
+                "with_gamepad": false,
+                "button": "button_y",
+                "score": 1,
+                "binding": "kb:key_y",
+                "used_in_official": false
+            },
+            "13": {
+                "with_gamepad": true,
+                "button": "button_y",
+                "score": 1,
+                "binding": "gamepad:y",
+                "used_in_official": false
+            },
+            "14": {
+                "with_gamepad": true,
+                "button": "left_bumper",
+                "score": 1,
+                "binding": "gamepad:left_bumper",
+                "used_in_official": false
+            },
+            "15": {
+                "with_gamepad": false,
+                "button": "left_bumper",
+                "score": 1,
+                "binding": "mouse:scroll_down",
+                "used_in_official": false
+            },
+            "16": {
+                "with_gamepad": false,
+                "button": "left_east",
+                "score": 1,
+                "binding": "kb:key_d",
+                "used_in_official": false
+            },
+            "17": {
+                "with_gamepad": false,
+                "button": "left_north",
+                "score": 1,
+                "binding": "kb:key_w",
+                "used_in_official": false
+            },
+            "18": {
+                "with_gamepad": false,
+                "button": "left_south",
+                "score": 1,
+                "binding": "kb:key_s",
+                "used_in_official": false
+            },
+            "19": {
+                "with_gamepad": true,
+                "button": "left_trackpad_mode",
+                "score": 1,
+                "binding": "thumbstick",
+                "used_in_official": false
+            },
+            "20": {
+                "with_gamepad": false,
+                "button": "left_trackpad_mode",
+                "score": 1,
+                "binding": "dpad_4way_overlap",
+                "used_in_official": false
+            },
+            "21": {
+                "with_gamepad": true,
+                "button": "left_trigger",
+                "score": 1,
+                "binding": "gamepad:left_trigger",
+                "used_in_official": false
+            },
+            "22": {
+                "with_gamepad": false,
+                "button": "left_trigger",
+                "score": 1,
+                "binding": "mouse:right_button",
+                "used_in_official": false
+            },
+            "23": {
+                "with_gamepad": false,
+                "button": "left_west",
+                "score": 1,
+                "binding": "kb:key_a",
+                "used_in_official": false
+            },
+            "24": {
+                "with_gamepad": false,
+                "button": "right_bumper",
+                "score": 1,
+                "binding": "mouse:scroll_up",
+                "used_in_official": false
+            },
+            "25": {
+                "with_gamepad": true,
+                "button": "right_bumper",
+                "score": 1,
+                "binding": "gamepad:right_bumper",
+                "used_in_official": false
+            },
+            "26": {
+                "with_gamepad": false,
+                "button": "right_trackpad_mode",
+                "score": 1,
+                "binding": "absolute_mouse",
+                "used_in_official": false
+            },
+            "27": {
+                "with_gamepad": true,
+                "button": "right_trackpad_mode",
+                "score": 1,
+                "binding": "thumbstick",
+                "used_in_official": false
+            },
+            "28": {
+                "with_gamepad": true,
+                "button": "right_trigger",
+                "score": 1,
+                "binding": "gamepad:right_trigger",
+                "used_in_official": false
+            },
+            "29": {
+                "with_gamepad": false,
+                "button": "right_trigger",
+                "score": 1,
+                "binding": "mouse:left_button",
+                "used_in_official": false
+            },
+            "30": {
+                "with_gamepad": false,
+                "button": "stick_east",
+                "score": 1,
+                "binding": "kb:key_right",
+                "used_in_official": false
+            },
+            "31": {
+                "with_gamepad": false,
+                "button": "stick_north",
+                "score": 1,
+                "binding": "kb:key_up",
+                "used_in_official": false
+            },
+            "32": {
+                "with_gamepad": false,
+                "button": "stick_south",
+                "score": 1,
+                "binding": "kb:key_down",
+                "used_in_official": false
+            },
+            "33": {
+                "with_gamepad": false,
+                "button": "stick_west",
+                "score": 1,
+                "binding": "kb:key_left",
+                "used_in_official": false
+            }
+        },
+        "names": {
+            "mouse:scroll_up": "Next",
+            "kb:key_space": "Jump",
+            "kb:key_right": "Right",
+            "kb:key_lcontrol": "Crouch",
+            "kb:key_tab": "Status",
+            "mouse:right_button": "Alt Fire",
+            "kb:key_r": "Reload",
+            "mouse:middle_button": "Melee",
+            "kb:key_y": "Quick Switch",
+            "kb:key_w": "Forward",
+            "kb:key_down": "Down",
+            "kb:key_d": "Strafe Right",
+            "kb:key_up": "Up",
+            "kb:key_left": "Left",
+            "kb:key_a": "Strafe Left",
+            "kb:key_c": "Crouch",
+            "mouse:scroll_down": "Prev",
+            "kb:key_esc": "Menu",
+            "mouse:left_button": "Fire",
+            "kb:key_s": "Backward"
+        }
+    }
+}

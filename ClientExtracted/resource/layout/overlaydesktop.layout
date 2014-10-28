@@ -23,10 +23,7 @@
 		GuidesDetailPanel { controlname="COverlay_Details_Guides_Panel" style="detailsbox" }
 		CommunityHubDetailPanel { controlname="COverlay_Details_CommunityHub_Panel" style="detailsbox" }
 		CommunityDiscussionsDetailPanel { controlname="COverlay_Details_CommunityDiscussions_Panel" style="detailsbox" }
-	}
-	
-	colors
-	{
+		BroadcastDetailPanel { controlname="COverlay_Details_Broadcast_Panel" style="detailsbox" }
 	}
 	
 	styles
@@ -48,11 +45,7 @@
 	{
 		region { name=overlay width=1010 align=top-center margin-top=10 margin-bottom=10 }
 	
-		region	 { name="left" region=overlay width=400 height=max margin-top=10 align=left }
-		region	 { name="mid" region=overlay width=400 height=max margin-top=2 align=top-center }
-		region	 { name="right" region=overlay width=400 height=max margin-top=10 align=right }
-		
-		region	{ name="detailpanels" region=overlay align=bottom width=max height=466 margin-bottom=206 }
+		region	{ name="detailpanels"  region=overlay align=bottom width=max height=466 margin-bottom=206 }
 		region	{ name="detailpanels2" region=overlay align=bottom width=max height=210 margin-bottom=100 }
 		region	{ name="taskbar" region=overlay width="max" height=75 align=bottom }
 
@@ -60,6 +53,7 @@
 		
 		place { controls="FriendsDetailPanel,NewsDetailPanel,AchievementsDetailPanel,GuidesDetailPanel" region=detailpanels width=330 height=240 spacing=10 }
 		place { controls="ScreenshotsDetailPanel,CommunityHubDetailPanel,CommunityDiscussionsDetailPanel" region=detailpanels2 width=330 height=240 spacing=10 }
+		place { controls="BroadcastDetailPanel" region=overlay align=top-center margin-top=100 width=330 height=110 }
 	}
 	
 }

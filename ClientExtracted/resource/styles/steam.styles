@@ -111,8 +111,8 @@ steam.styles
     BackgroundStartOpaque="35 35 35 255"
     
     ClientBG="30 30 30 255"
-    ClientBGTop="27 35 47 255"
-    ClientGrouper="34 38 46 255"
+    ClientBGTop="25 32 46 255"
+    ClientGrouper="41 42 46 255"
     DialogBG="38 38 38 255"
     DialogBGFade1="56 56 56 255"
     DialogBGFade2="56 56 56  0"  

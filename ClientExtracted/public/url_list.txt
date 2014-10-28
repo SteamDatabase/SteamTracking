@@ -522,6 +522,12 @@ CommunityFriendInventory
 	method		"internal"
 	filter		"profile"
 }
+CommunityMarketItemPicker
+{
+	url			"%community%/profiles/%p1%/inventory/?market=1"
+	method		"internal"
+	filter		"profile"
+}
 FacebookProfilePage
 {
 	url			"http://www.facebook.com/profile.php?id=%p1%"
@@ -592,6 +598,18 @@ SteamGreenlight
 CommunityMarket
 {
 	url		"%community%/market/"
+	method		"internal"
+	filter		"community"
+}
+CommunityMarketListings
+{
+	url		"%community%/market/listings/%p1%/%p2%"
+	method		"internal"
+	filter		"community"
+}
+CommunityMarketSellDialog
+{
+	url		"%community%/market/selldialog/%p1%/%p2%/%p3%/"
 	method		"internal"
 	filter		"community"
 }

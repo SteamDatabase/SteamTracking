@@ -51,6 +51,8 @@ SettingsPanel
 	background-color: settingsbackgroundgradient;
 	z-index: settingszindex;
 	color: tcstatictext;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
 	background-color: settingsbackgroundgradient;
 
 	transition-property: opacity, pre-transform-scale2d, transform;
@@ -72,6 +74,12 @@ SettingsPanel
 .SettingsLabel
 {
 	margin: 14px 16px 7px 0px;
+	color: tcstatictext;
+}
+
+.PaddedLabel
+{
+	margin: 0px 35px 20px 0px;
 	color: tcstatictext;
 }
 
@@ -202,7 +210,7 @@ SettingsPanel.SectionVisible #SettingsContent
 {
 	// add a little padding so the Z-transform does not take a hovered/focused button out of bounds
 	position: 0px 150px 0px;
-	padding-top: 40px;
+	padding-top: 30px;
 	width: 100%;
 	height: 80%;
 	horizontal-align: left;
@@ -213,7 +221,7 @@ SettingsPanel.SectionVisible #SettingsContent
 .SettingsContent
 {
 	// add a little padding so the Z-transform does not take a hovered/focused button out of bounds
-	padding: 30px 0px 0px 0px;
+	padding: 20px 0px 0px 0px;
 	height: 80%;
 	flow-children: down;
 	padding-left: 0px;
@@ -265,7 +273,8 @@ ToggleButton .TickBox
 .SettingsLegend
 {
 	color: tcstatictext;
-	margin-top: 6px;
+	margin-top: 4px;
+	margin-bottom: 2px;
 	font-family: platformfont;
 
 }
@@ -397,7 +406,7 @@ Label.SettingsStatic
 	vertical-align: top;
 	width: 500px;
 	margin-right: 50px;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 .SettingsMainRightContent
@@ -420,7 +429,7 @@ Label.SettingsStatic
 
 #Settings_Voice .SettingsRightContent
 {
-	margin-top: 40px;
+	margin-top: 0px;
 }
 
 
@@ -452,7 +461,7 @@ Label.SettingsStatic
 .Button,.CheckBox
 {
 	height: 50px;
-	margin-bottom: 16px;
+	margin-bottom: 15px;
 	margin-top: 0px;
 }
 
@@ -470,33 +479,27 @@ Label.SettingsStatic
 
 .CheckBox:Selected .TickBox
 {
-	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 	background-color: blue;
 }
 
 .CheckBox:Focus .TickBox
 {
-	background-color: #bbbbbbff;
-	border-color: #ffffff;
+	background-color: #cccccc;
+	border-color: #cccccc;
 }
 
 .CheckBox:Selected:Focus .TickBox
 {
-	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 	background-color: #ccccccff;
-	border-color: #ffffff;
+	border-color: #cccccc;
+	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
 }
 
 // and make room for the tickbox
 .CheckBox Label, RadioButton Label
 {
-	padding-left: 52px;
-	margin-right: 12px;
-	padding-top: 6px;
+	padding-left: 5px;
+	margin: 0px 14px 0px 0px;
 	color: detailsdatalabel;
 	width: fit-children;
 	text-overflow: clip;
@@ -508,6 +511,12 @@ Label.SettingsStatic
 	transition-duration: 0.23s;
 	transition-timing-function: ease-in;
 }
+
+RadioButton Label
+{
+	padding-left: 50px;
+	padding-top: 5px;
+	}
 
 .CheckBox:hover Label, RadioButton:hover Label
 {
@@ -1442,6 +1451,8 @@ DropDownMenu
 	flow-children: down;
 	horizontal-align: left;
 	margin: 0px 0px 16px 0px;
+	padding-top: 10px;
+	padding-right: 0px;
 }
 
 .SettingsGroup .Button,.CheckBox,VUMeter
@@ -1449,6 +1460,7 @@ DropDownMenu
 	horizontal-align: left;
 	margin-left: 0px;
 	margin-right: 0px;
+	margin-top: 0px;
 }
 
 .SettingsGroup .CheckBox,VUMeter
@@ -1488,7 +1500,7 @@ DropDownMenu
 
 #TestMicrophone Label.AltLabel
 {
-	opacity: 0.0;
+	visibility: collapse;
 }
 
 
@@ -1500,24 +1512,24 @@ DropDownMenu
 
 #TestMicrophone:selected Label
 {
-	opacity: 0.0;
+	visibility: collapse;
 }
 
 #TestMicrophone:selected Label.AltLabel
 {
-	opacity: 1.0;
+	visibility: visible;
 }
 
 #TestMicrophone .TickBox
 {
-	opacity: 0.0;
+	visibility: collapse;
 }
 
 // radio button settings - these can be made global if we grab the focus/hover styles too
 .RadioButton
 {
 	height: 48px;
-	margin-bottom: 8px;
+	margin-bottom: 4px;
 	margin-top: 0px;
 }
 
@@ -1610,7 +1622,7 @@ KeyboardShortcut:focus
 
 KeyboardShortcut:selected
 {
-	pre-transform-scale2d: 1.1;
+	pre-transform-scale2d: 1.04;
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 	color: black;
 }
@@ -1648,8 +1660,8 @@ KeyboardShortcut .Graphic
 
 .SettingsCalloutSnug
 {
-	margin-bottom: 2px;
-	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-top: 8px;
 }
 
 .SettingsCalloutSnugRight
@@ -1676,7 +1688,7 @@ KeyboardShortcut .Graphic
 	height: 128px;
 	margin: 80px 0px 0px 0px;
 	background-repeat: space;
-	wash-color: messagecolorwash;
+	wash-color: #999999;
 	background-image: url("file://{images}/settings/controller_icon.png");
 	horizontal-align: left;
 	vertical-align: center;
@@ -2253,7 +2265,8 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
-	background-color: white;
+	background-color: #cccccc;
+	border-color: #ffffff;
 }
 
 
@@ -3172,7 +3185,7 @@ SettingsPanel_AlienFX .SettingsCenterContent
 .SettingsContentStreaming
 {
 	flow-children: right;
-	height: 80px;
+	height: 70px;
 	width: 1050px;
 	padding-top: 10px;
 }
@@ -3217,7 +3230,7 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	box-shadow: none;
 	transition-property: background-color;
 	animation-name: none;
-	height: 40px;
+	height: 50px;
 }
 
 #LanguageList Button:focus,
@@ -3315,5 +3328,175 @@ SettingsPanel_AlienFX .SettingsCenterContent
 #SearchProvidersCustom
 {
 	height: 140px;
+}
+
+#SettingsStore_FilterToggle
+{
+	width: fit-children;
+}
+
+.SettingsStore_Config
+{
+	flow-children: right;	
+	vertical-align: center;
+	margin-bottom: 10px;
+}
+
+#LocalWindows
+{
+	visibility: collapse;
+}
+
+.ShowLocalWindows #LocalWindows
+{
+	visibility: visible;
+}
+
+#LocalOSX
+{
+	visibility: collapse;
+}
+
+.ShowLocalOSX #LocalOSX
+{
+	visibility: visible;
+}
+
+#LocalSteamOS
+{
+	visibility: collapse;
+}
+
+.ShowLocalSteamOS #LocalSteamOS
+{
+	visibility: visible;
+}
+
+#LocalLinux
+{
+	visibility: collapse;
+}
+
+.ShowLocalLinux #LocalLinux
+{
+	visibility: visible;
+}
+
+#InputXInput
+{
+	visibility: collapse;
+}
+
+.ShowInputXInput #InputXInput
+{
+	visibility: visible;
+}
+
+#InputKeyboard
+{
+	visibility: collapse;
+}
+
+.ShowInputKeyboard #InputKeyboard
+{
+	visibility: visible;
+}
+
+#InputSteampad
+{
+	visibility: collapse;
+}
+
+.ShowInputSteampad #InputSteampad
+{
+	visibility: visible;
+}
+
+#StreamingWindows
+{
+	visibility: collapse;
+}
+
+.ShowStreamingWindows #StreamingWindows
+{
+	visibility: visible;
+}
+
+#StreamingOSX
+{
+	visibility: collapse;
+}
+
+.ShowStreamingOSX #StreamingOSX
+{
+	visibility: visible;
+}
+
+#StreamingLinux
+{
+	visibility: collapse;
+}
+
+.ShowStreamingLinux #StreamingLinux
+{
+	visibility: visible;
+}
+
+.ConfigLabel
+{
+	vertical-align: center;
+	color: applabelsolid;
+	margin-left: 4px;
+}
+
+.SettingsIcon
+{
+	visibility: visible;
+	width: 50px;
+	height: 50px;
+	color: applabelsolid;
+	background-size: contain;
+	background-repeat: no-repeat;
+	horizontal-align: left;
+	vertical-align: center;
+}
+
+#SettingsIcon_OSConfig_Win
+{
+	background-image: url( "file://{images}/store/icon_windows_storefront.png" );
+}
+
+#SettingsIcon_OSConfig_OSX
+{
+	background-image: url( "file://{images}/store/icon_mac_storefront.png" );
+}
+
+#SettingsIcon_OSConfig_Linux,
+#SettingsIcon_OSConfig_SteamOS
+{
+	background-image: url( "file://{images}/store/icon_steamos_storefront.png" );
+}
+
+#SettingsIcon_InputConfig_XInput
+{
+	background-image: url( "file://{images}/store/icon_fullcontroller.png" );
+	width: 40px;
+	height: 40px;
+	margin: 0px 5px 0px 5px;
+}
+
+#SettingsIcon_InputConfig_Steampad
+{
+	background-image: url( "file://{images}/store/icon_steamcontroller.png" );
+	width: 40px;
+	height: 40px;
+	margin: 0px 5px 0px 5px;
+}
+#SettingsIcon_InputConfig_Keyboard
+{
+	background-image: url( "file://{images}/store/icon_keyboard.png" );
+	width: 40px;
+	height: 40px;
+	margin: 0px 5px 0px 5px;
 }
 

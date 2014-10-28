@@ -571,7 +571,7 @@ StoreBrowseByCategoryItem:descendantfocus .OnlyVisibleOnCarouselFocus
 .ItemDetails
 {
 	flow-children: down;
-	margin-top: 30px;
+	margin-top: 15px;
 	margin-left: 10px;
 }
 

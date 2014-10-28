@@ -2,6 +2,7 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/store/filterselector.css" />
 	</styles>
 	
 	<LibraryAllGames onmoveup="CloseAllGames();" defaultfocus="GamesGrid" selectionposboundary="vertical">
@@ -9,6 +10,7 @@
 		<Panel id="GridUpperRow" class="GridUpperRow" tabindex="auto" selectionpos="0,0">
 			<Label id="SectionLabel" class="SectionLabel" text="#Library_AllGames_Header" />
 			<DropDown id="GamesFilter" class="GamesFilter">
+				<FilterSelectorItem id="FilterGamesICanPlay" />
 				<Label id="FilterAllGames" text="#Library_AllGames" />
 				<Label id="FilterRecentlyPlayed" text="#Library_RecentlyPlayedFilter" />
 				<Label id="FilterInstalled" text="#Library_Installed" />

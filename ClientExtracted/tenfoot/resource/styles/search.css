@@ -193,16 +193,21 @@ LoadingThrobber
 
 .SearchDivider
 {
+	visibility: collapse;
+}
+
+.ShowSearchDivider .SearchDivider
+{
 	background-color: rule_color;
 	width: 100%;
 	height: 6px;
+	visibility: visible;
 }
 
 #SearchResults
 {
 	flow-children: down;
 	overflow: squish scroll;
-	padding: 8px 0px;
 	opacity: 1.0;
 
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
@@ -214,38 +219,144 @@ LoadingThrobber
 	transition-timing-function: ease-in-out;
 }
 
-.NoSearchResults #SearchResults,
-.EmptyInput #SearchResults
+.ShowSearchDivider #SearchResults
 {
-	opacity: 0.0;
+	padding: 8px 0px;
 }
 
 .SearchResultsArea
 {
 	width: 100%;
+	height: 100%;
 }
 
-.NoSearchResults,
-.NoInputEntered,
-.SearchError
+#SearchResultsMessageWrapper
 {
+	opacity: 0.0;
 	align: center top;
 	margin: 40px 12px 0px 12px;
-	opacity: 0.0;
-	font-size: 28px;
-	font-family: platformfont;
-	color: white;
+	flow-children: down;
+	height: fit-children;
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-in-out;
 }
 
-.EmptySearchResults .NoSearchResults,
-.EmptyInput .NoInputEntered,
-.SearchFailed .SearchError
+#UnfilterSearchWrapper
+{
+	opacity: 0.0;
+	vertical-align: center;
+	horizontal-align: center;
+	flow-children: down;
+	height: fit-children;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+.ShowSearchResultsMessage #SearchResultsMessageWrapper
 {
 	opacity: 1.0;
+}
+
+.ShowUnfilterSearchMessage #UnfilterSearchWrapper
+{
+	opacity: 1.0;
+}
+
+.SearchResultsLabel
+{
+	font-size: 24px;
+	font-family: platformfont;
+	text-align: center;
+	color: white;
+	margin: 0px 30px;
+}
+
+#UnfilterSearchWrapper .SearchResultsLabel
+{
+	font-style: italics;
+	color: #707c8b;
+}
+
+.SearchResultsIconWrapper
+{
+	flow-children: right;
+	horizontal-align: center;
+}
+
+.SearchResultsIcon
+{
+	visibility: collapse;
+	width: 50px;
+	height: 50px;
+	color: applabelsolid;
+	horizontal-align: left;
+	vertical-align: center;
+}
+
+#UnfilterSearchWrapper .SearchResultsIcon
+{
+	wash-color: #707c8b;
+}
+
+.ShowWindowsIcon #OSIcon
+{
+	background-image: url( "file://{images}/store/icon_windows_storefront.png" );
+	visibility: visible;
+}
+
+.ShowOSXIcon #OSIcon
+{
+	background-image: url( "file://{images}/store/icon_mac_storefront.png" );
+	visibility: visible;
+}
+
+.ShowLinuxIcon #OSIcon
+{
+	background-image: url( "file://{images}/store/icon_steamos_storefront.png" );
+	visibility: visible;
+}
+
+.ShowWindowsIcon #OSIconWindows
+{
+	background-image: url( "file://{images}/store/icon_windows_storefront.png" );
+	visibility: visible;
+}
+
+.ShowOSXIcon #OSIconOSX
+{
+	background-image: url( "file://{images}/store/icon_mac_storefront.png" );
+	visibility: visible;
+}
+
+.ShowLinuxIcon #OSIconLinux
+{
+	background-image: url( "file://{images}/store/icon_steamos_storefront.png" );
+	visibility: visible;
+}
+
+.ShowKeyboardIcon #ControllerIcon
+{
+	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
+	visibility: visible;
+	margin: 0px 5px 0px 5px;
+}
+
+.ShowGamepadIcon #ControllerIcon
+{
+	background-image: url( "file://{images}/store/icon_fullcontroller_storefront.png" );
+	visibility: visible;
+	margin: 0px 5px 0px 5px;
+}
+
+.ShowSteampadIcon #ControllerIcon
+{
+	background-image: url( "file://{images}/store/icon_steamcontroller_storefront.png" );
+	visibility: visible;
+	margin: 0px 5px 0px 5px;
 }
 
 .CapsuleControllerSupport
@@ -253,8 +364,20 @@ LoadingThrobber
 	visibility: collapse;
 }
 
-.SteamPad #IconController,
-.SteamPad .PartialController #IconController
+#IconController
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_keyboard.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	width: 45px;
+	height: 45px;
+	vertical-align: center;
+	margin-left: 6px;
+}
+
+.SteamPad #IconController
 {
 	visibility: visible;
 	background-image: url( "file://{images}/store/icon_legacycontroller.png" );
@@ -264,6 +387,7 @@ LoadingThrobber
 	width: 45px;
 	height: 45px;
 	vertical-align: center;
+	margin-left: 4px;
 }
 
 
@@ -277,9 +401,10 @@ LoadingThrobber
 
 	width: 40px;
 	height: 40px;
+	margin-left: 0px;
 }
 
-.SteamPad .FullController #IconController
+.SteamPad.FullController #IconController
 {
 	visibility: visible;
 
@@ -289,6 +414,8 @@ LoadingThrobber
 
 	width: 40px;
 	height: 40px;
+	margin-left: 4px;
+	margin-top: 2px;
 }
 
 
@@ -337,7 +464,6 @@ SearchStoreResult
 SearchStoreResult:focus .DetailsIconRow
 {
 	opacity: 1.0;
-
 }
 
 TextEntry:focus
@@ -349,4 +475,94 @@ TextEntry:focus
 	border-style: solid;
 	border-color: #ffffffff;
 	animation-name: none;
+}
+
+SearchStoreSection
+{
+	width: 100%;
+	height: 52px;
+	padding: 0px 18px;
+	margin: 5px 0px;
+	background-color: rule_color;
+}
+
+SearchStoreSection Label
+{
+	font-family: platformfont;
+	font-size: 26px;
+	color: applabelsolid;
+	vertical-align: center;
+}
+
+
+SearchStoreSection #IconWrapper
+{
+	visibility: collapse;
+}
+
+SearchStoreSection #IconWrapper
+{
+	visibility: visible;
+	flow-children: right;
+	horizontal-align: right;
+	vertical-align: center;
+	margin-right: 14px;
+}
+
+SearchStoreSection #IconWrapper .ItemIcon
+{
+	horizontal-align: center;
+	vertical-align: center;
+	background-repeat: no-repeat;
+	width: 42px;
+	height: 42px;
+	//margin-top: -6px;
+	margin-right: -4px;
+}
+
+SearchStoreSection .ItemIcon
+{
+	visibility: collapse;
+}
+
+SearchStoreSection .ItemIcon
+{
+	wash-color: #a6afb9;
+	
+	transition-property: wash-color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.15s;
+}
+
+SearchStoreSection.WindowsIcon #WindowsIcon
+{
+	background-image: url( "file://{images}/store/icon_platform_win.png" );
+	visibility: visible;
+}
+
+SearchStoreSection.OSXIcon #OSXIcon
+{
+	background-image: url( "file://{images}/store/icon_platform_mac.png" );
+	visibility: visible;
+}
+
+SearchStoreSection.LinuxIcon #LinuxIcon
+{
+	background-image: url( "file://{images}/store/icon_platform_linux.png" );
+	visibility: visible;
+}
+
+SearchStoreSection.FullController #ControllerIcon
+{
+	background-image: url( "file://{images}/store/icon_fullcontroller.png" );
+	margin-left: 4px;
+	visibility: visible;
+}
+
+SearchStoreSection.SteamPad #ControllerIcon
+{
+	background-image: url( "file://{images}/store/icon_steamcontroller.png" );
+	margin-left: 4px;
+	margin-top: -4px;
+	visibility: visible;
 }
