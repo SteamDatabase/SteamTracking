@@ -2147,3 +2147,59 @@ SearchFieldWithText.prototype.ClearIfDefaultValue = function()
 }
 
 
+function CWebAPI( strWebAPIHost, strSecureWebAPIHost, strOAuth2Token )
+{
+	this.m_strHost = strWebAPIHost;
+	this.m_strSecureWebAPIHost = strSecureWebAPIHost;
+	this.m_strOAuth2Token = strOAuth2Token;
+}
+
+CWebAPI.prototype.BuildURL = function( strInterface, strMethod, bSecure, strVersion )
+{
+	if ( !strVersion )
+		strVersion = 'v0001';
+
+	var strURL = ( bSecure ? this.m_strSecureWebAPIHost : this.m_strHost );
+	strURL += strInterface + '/' + strMethod + '/' + strVersion + '/';
+
+	return strURL;
+}
+
+CWebAPI.prototype.ExecJSONP = function( strInterface, strMethod, rgParams, bSecure, strVersion, cTimeoutSecs )
+{
+	rgParams.access_token = this.m_strOAuth2Token;
+
+	var rgJQueryParams = {
+		url: this.BuildURL( strInterface, strMethod, bSecure, strVersion ),
+		dataType: 'jsonp',
+		jsonp: 'jsonp',				data: rgParams
+	};
+
+	if ( cTimeoutSecs )
+		rgJQueryParams['timeout'] = cTimeoutSecs * 1000;
+
+	return $J.ajax( rgJQueryParams );
+
+	/*
+	// using jsonp plugin instead of built-in jquery jsonp handling.  this library supposedly
+	//	works around the firefox "waiting for host..." issue, but it doesn't work.
+	return $J.jsonp({
+		url: this.BuildURL( strInterface, strMethod, bSecure, strVersion ),
+		callbackParameter: 'jsonp',				data: rgParams
+	});
+	*/
+};
+
+CWebAPI.prototype.ExecPOST = function( strInterface, strMethod, rgParams, bSecure, strVersion )
+{
+	rgParams.access_token = this.m_strOAuth2Token;
+	rgParams.format = 'json';
+
+	return $J.ajax( {
+		url: this.BuildURL( strInterface, strMethod, bSecure, strVersion ),
+		type: 'POST',
+		data: rgParams
+	});
+};
+
+

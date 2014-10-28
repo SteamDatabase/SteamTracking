@@ -1371,6 +1371,7 @@ img.dynamiclink_preview {
 	margin-bottom: 10px;
 	display: inline-block;
 	cursor: default;
+	line-height: 13px;
 }
 
 /* shared bbcode styles */

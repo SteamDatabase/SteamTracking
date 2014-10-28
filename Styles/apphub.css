@@ -1222,12 +1222,10 @@ a.apphub_more_friends_who_play:hover
 	background: -moz-linear-gradient(top, rgba(13,19,27,0) 5%, rgba(13,19,27,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(13,19,27,0)), color-stop(95%,rgba(13,19,27,1)));background: -webkit-linear-gradient(top, rgba(13,19,27,0) 5%,rgba(13,19,27,1) 95%);background: -o-linear-gradient(top, rgba(13,19,27,0) 5%,rgba(13,19,27,1) 95%);background: -ms-linear-gradient(top, rgba(13,19,27,0) 5%,rgba(13,19,27,1) 95%);background: linear-gradient(to bottom, rgba(13,19,27,0) 5%,rgba(13,19,27,1) 95%);	height: 50px;
 }
 
-.apphub_CardContentMain .UserReviewCardContent_Footer .date_posted
+.apphub_CardContentMain .apphub_CardTextContent .date_posted
 {
 	font-size: 11px;
-	color: #555555;
-	padding-top: 10px;
-	padding-bottom: 5px;
+	color: #a0a08b;
 }
 
 .apphub_CardContentMain .hr {

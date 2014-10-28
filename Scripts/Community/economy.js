@@ -3884,7 +3884,7 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 
 function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strFormatSuffix )
 {
-	return $J.jqplot('pricehistory', [line1], {
+	var plot = $J.jqplot('pricehistory', [line1], {
 		title:{text: 'Median Sale Prices', textAlign: 'left' },
 		gridPadding:{left: 45, right:45, top:25},
 		axesDefaults:{ showTickMarks:false },
@@ -3924,6 +3924,33 @@ function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strForm
 		series:[{lineWidth:3, markerOptions:{show: false, style:'circle'}}],
 		seriesColors: [ "#688F3E" ]
 	});
+
+	plot.defaultNumberTicks = numYAxisTicks;
+	return plot;
+}
+
+function GetYAXisForPriceHistoryGraph( plotPriceHistory, timeMin, timeMax )
+{
+	var min = -1;
+	var max = 0.06;
+	for ( var index in plotPriceHistory.series[0].data )
+	{
+		var rgData = plotPriceHistory.series[0].data[index];
+		if ( rgData[0] >= timeMin.getTime() && rgData[0] <= timeMax.getTime() )
+		{
+			if ( rgData[1] > max )
+			{
+				max = rgData[1];
+			}
+
+			if ( rgData[1] < min || min == -1 )
+			{
+				min = rgData[1];
+			}
+		}
+	}
+
+	return $J.jqplot.LinearTickGenerator( min, max, null, plotPriceHistory.defaultNumberTicks, false, false );
 }
 
 function pricehistory_zoomDays( plotPriceHistory, timePriceHistoryEarliest, timePriceHistoryLatest, days )
@@ -3931,15 +3958,22 @@ function pricehistory_zoomDays( plotPriceHistory, timePriceHistoryEarliest, time
 	var timeSelected = new Date( timePriceHistoryLatest.getTime() - ( days * 24 * 60 * 60 * 1000 ) );
 
 	plotPriceHistory.axes.xaxis.ticks = [];
-	plotPriceHistory.resetZoom();
+	//plotPriceHistory.resetZoom();
 	plotPriceHistory.axes.xaxis.reset();
 	plotPriceHistory.axes.y2axis.reset();
 
+	var rgYAxis = GetYAXisForPriceHistoryGraph( plotPriceHistory, timeSelected, timePriceHistoryLatest );
+
 	var ticks = ( days == 7 ) ? 7 : 6;
 	plotPriceHistory.axes.xaxis.tickInterval = days / ticks + " days";
-
 	plotPriceHistory.axes.xaxis.min = timeSelected;
 	plotPriceHistory.axes.xaxis.max = timePriceHistoryLatest;
+
+	plotPriceHistory.axes.yaxis.min = rgYAxis[0];
+	plotPriceHistory.axes.yaxis.max = rgYAxis[1];
+	plotPriceHistory.axes.yaxis.numberTicks = rgYAxis[2];
+	plotPriceHistory.axes.yaxis.tickInterval = rgYAxis[4]
+
 	plotPriceHistory.replot();
 
 	$J('#pricehistory .jqplot-yaxis').children().first().remove();
@@ -3968,6 +4002,13 @@ function pricehistory_zoomMonthOrLifetime( plotPriceHistory, timePriceHistoryEar
 	else
 		plotPriceHistory.axes.xaxis.min = timeMonthAgo;
 	plotPriceHistory.axes.xaxis.max = timePriceHistoryLatest;
+
+	var rgYAxis = GetYAXisForPriceHistoryGraph( plotPriceHistory, plotPriceHistory.axes.xaxis.min, timePriceHistoryLatest );
+	plotPriceHistory.axes.yaxis.min = rgYAxis[0];
+	plotPriceHistory.axes.yaxis.max = rgYAxis[1];
+	plotPriceHistory.axes.yaxis.numberTicks = rgYAxis[2];
+	plotPriceHistory.axes.yaxis.tickInterval = rgYAxis[4];
+
 	plotPriceHistory.replot();
 
 	$J('#pricehistory .jqplot-yaxis').children().first().remove();
@@ -3996,6 +4037,13 @@ function pricehistory_zoomLifetime( plotPriceHistory, timePriceHistoryEarliest, 
 	}
 	plotPriceHistory.axes.xaxis.min = timePriceHistoryEarliest;
 	plotPriceHistory.axes.xaxis.max = timePriceHistoryLatest;
+
+	var rgYAxis = GetYAXisForPriceHistoryGraph( plotPriceHistory, timePriceHistoryEarliest, timePriceHistoryLatest );
+	plotPriceHistory.axes.yaxis.min = rgYAxis[0];
+	plotPriceHistory.axes.yaxis.max = rgYAxis[1];
+	plotPriceHistory.axes.yaxis.numberTicks = rgYAxis[2];
+	plotPriceHistory.axes.yaxis.tickInterval = rgYAxis[4];
+
 	plotPriceHistory.replot();
 
 	$J('#pricehistory .jqplot-yaxis').children().first().remove();
