@@ -202,7 +202,7 @@
 				unset( $Test );
 			}
 			// Convert group members to JSON
-			else if( $File === 'Random/ValveGroup.json' )
+			else if( $File === 'Random/ValveGroup.json' || $File === 'Random/SteamModerators.json' )
 			{
 				LibXML_Use_Internal_Errors( true );
 				
