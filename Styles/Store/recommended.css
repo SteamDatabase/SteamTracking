@@ -1596,7 +1596,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	font-size: 16px;
 	color: #d6d7d8;
 	font-family: 'Motiva Sans', arial, tahoma;
-	padding: 3px 0 0 0;
+	padding: 3px 0;
 }
 
 .review_box .vote_header .hours {
@@ -1698,6 +1698,12 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	font-style: italic;
 	color: #626366;
 	margin: 10px 0 8px;
+}
+.review_box .postedDate {
+	margin: 0px 0px 8px;
+	font-size: 11px;
+	font-style: normal;
+	color: #a0a08b;
 }
 
 .review_box .hr {

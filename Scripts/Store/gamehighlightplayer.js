@@ -315,6 +315,10 @@ HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation )
 HighlightPlayer.prototype.HighlightStripItem = function( elem, bSkipAnimation )
 {
 	var $Elem = $JFromIDOrElement(elem);
+	if ( $Elem.length == 0 )
+	{
+		return;
+	}
 	$Elem.siblings().removeClass( 'focus' );
 	$Elem.addClass( 'focus' );
 
