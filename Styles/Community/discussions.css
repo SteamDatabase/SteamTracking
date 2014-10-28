@@ -43,6 +43,18 @@
 .discussions_forumlist_lastpost {
 }
 
+.forum_list_ctn .forum_list_left {
+	width: 608px;
+	float: left;
+}
+
+.forum_list_ctn .forum_list_right {
+	float: right;
+	width: 289px;
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 16px;
+}
+
 .discussions_forum_row {
 	position: relative;
 	height: 67px;
@@ -481,7 +493,15 @@ a.recent_game_discussion:hover {
 
 a.recent_game_discussion.last
 {
-	margin-right: 0px;
+	margin-right: 0;
+}
+
+a.recent_game_discussion.quasi_official_group
+{
+	display: block;
+	margin-right: 0;
+	margin-bottom: 10px;
+	width: 280px;
 }
 
 .recent_game_discussion .playerAvatar {

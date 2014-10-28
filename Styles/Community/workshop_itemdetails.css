@@ -1394,6 +1394,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 	.mediaTop .mediaSidebar {
 		position: absolute;
+		overflow: hidden;
 		right: -324px;
 		top: 0px;
 		width: 324px;
@@ -3069,16 +3070,107 @@ h2.stats {
 	height: 100px;
 }
 
-.tinyscroll {}
-.tinyscroll .viewport { width: 305px; height: 100%; overflow: hidden; position: relative; }
-.tinyscroll .overview { width: 300px; padding: 0px 0 0px 5px; list-style: none; position: absolute; left: 0; top: 0; min-height: 100% }
-.tinyscroll .thumb .end,
-.tinyscroll .thumb { background-color: #3c3c3c; width: 6px; }
-.tinyscroll .scrollbar { position: relative; float: right; width: 15px; }
-.tinyscroll .track { background-color: #262627; height: 100%; width:6px; position: relative; padding: 0 5px; }
-.tinyscroll .thumb { border-radius: 3px; height: 20px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
-.tinyscroll .thumb .end { overflow: hidden; height: 5px; width: 13px; }
-.tinyscroll .disable{ display: none; }
+/* Scrollbar */
+.ps-container>.ps-scrollbar-x-rail {
+	position: absolute; /* please don't change 'position' */
+	bottom: 3px; /* there must be 'bottom' for ps-scrollbar-x-rail */
+	height: 8px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-o-transition: background-color .2s linear, opacity .2s linear;
+	-webkit-transition: background-color .2s linear, opacity .2s linear;
+	-moz-transition: background-color .2s linear, opacity .2s linear;
+	transition: background-color .2s linear, opacity .2s linear;
+}
+
+.ps-container:hover>.ps-scrollbar-x-rail {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+.ps-container>.ps-scrollbar-x-rail:hover {
+	background-color: #eee;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+.ps-container>.ps-scrollbar-x-rail.in-scrolling {
+	background-color: #eee;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+.ps-container>.ps-scrollbar-y-rail {
+	position: absolute; /* please don't change 'position' */
+	right: 3px; /* there must be 'right' for ps-scrollbar-y-rail */
+	width: 5px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	-o-transition: background-color .2s linear, opacity .2s linear;
+	-webkit-transition: background-color .2s linear, opacity .2s linear;
+	-moz-transition: background-color .2s linear, opacity .2s linear;
+	transition: background-color .2s linear, opacity .2s linear;
+}
+
+.ps-container:hover>.ps-scrollbar-y-rail {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+.ps-container>.ps-scrollbar-y-rail:hover {
+	background-color: #eee;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+.ps-container>.ps-scrollbar-y-rail.in-scrolling {
+	background-color: #eee;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x {
+	position: absolute; /* please don't change 'position' */
+	bottom: 0; /* there must be 'bottom' for ps-scrollbar-x */
+	height: 8px;
+	background-color: #aaa;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-o-transition: background-color .2s linear;
+	-webkit-transition: background-color.2s linear;
+	-moz-transition: background-color .2s linear;
+	transition: background-color .2s linear;
+}
+
+.ps-container>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x {
+	background-color: #999;
+}
+
+.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+	position: absolute; /* please don't change 'position' */
+	right: 0; /* there must be 'right' for ps-scrollbar-y */
+	width: 5px;
+	background-color: #aaa;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-o-transition: background-color .2s linear;
+	-webkit-transition: background-color.2s linear;
+	-moz-transition: background-color .2s linear;
+	transition: background-color .2s linear;
+}
+
+.ps-container>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y {
+	background-color: #999;
+}
+
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 
 
@@ -3196,8 +3288,7 @@ h2.stats {
 
 
 .modalTags {
-	position: absolute;
-	bottom: 0px;
+
 }
 
 	.modalTags > p {
