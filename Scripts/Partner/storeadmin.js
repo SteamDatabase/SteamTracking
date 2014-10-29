@@ -634,3 +634,32 @@ function ReenableSubmitInput( matchingValue, newValue )
 	}
 }
 
+function AddTagToApp( nAppId, strTag, nTagId)
+{
+	if( !nTagId || !nAppId || !strTag )
+		return;
+
+	$J('#TagAddBtn').prop("disabled",true);
+	$J.ajax({
+		type: "POST",
+		url: "https://partner.steamgames.com/apps/ajaxaddtag/" + nAppId,
+		data: { tagid: nTagId, tag:strTag, appid: nAppId },
+		dataType: "json"
+	})
+	.done(function( msg ) {
+
+			$J('#TagList').append( $J('<li>').text(strTag) );
+			$J('#tag_completer_target').val('');
+			$J('#tag_completer_compl').val('');
+			$J('#TagAddBtn').prop("disabled",false);
+	});
+}
+
+function UpdateButtonGroup(key)
+{
+	var radioValue = $J('input:radio[name='+key+'_radio]:checked').val();
+	$J('.'+key+'_input').val('');
+	$J('#'+key+'_input_' + radioValue).val(true);
+}
+
+
