@@ -2,11 +2,14 @@
 {
 	"game_info"
 	{
-		"first_valid_class"			"1"
-		"last_valid_class"			"9"
-		"first_valid_item_slot"		"0"
+		"first_valid_class"				"1"
+		"last_valid_class"				"9"
+		"account_class_index"			"16" 
+		"account_first_valid_item_slot" "0"
+		"account_last_valid_item_slot"	"3"		
+		"first_valid_item_slot"			"0"	
 		"last_valid_item_slot"		"18"
-		"num_item_presets"			"4"
+		"num_item_presets"				"4"
 	}
 	"qualities"
 	{
@@ -362,7 +365,6 @@
 			{
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
-				"usable"		"1"
 				"can_craft_count"	"1"
 				"can_craft_if_purchased"	"1"
 			}
@@ -1466,6 +1468,7 @@
 			"recipe_partial_complete_sound"	"ui/chem_set_add_element.wav"
 			"recipe_complete_sound"			"ui/chem_set_creation.wav"
 		}
+
 
 		"mvm_killstreak_recipe_base"
 		{
@@ -2725,6 +2728,51 @@
 			"max_ilevel"	"13"
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
+			"event_desc_footer"	"#Halloween_Unusuals"	
+		}
+		"halloween2014keylesscrate"
+		{
+			"item_class"	"tf_wearable"
+			"first_sale_date"	"2014/10/30"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"num_items"		"1"
+					"max_recipients"	"1"
+					"target_rule"	"only_self"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"				"1"
+				"usable_out_of_game"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_UnlockedCrate_Type"
+			"item_description"	"#TF_Halloween2014Crate_Desc"
+			"item_slot"	"action"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
+			"drop_sound"		"ui/item_cardboard_drop.wav"
 		}
 		"eventcrate"
 		{
@@ -2884,6 +2932,30 @@
 			"max_ilevel"	"1"
 			"mouse_pressed_sound"	"ui/item_metal_scrap_pickup.wav"
 			"drop_sound"		"ui/item_metal_scrap_drop.wav"
+		}
+		"halloween2014"
+		{
+			"public_prefab"			"1"
+			"first_sale_date"		"2014/10/28"
+			"holiday_restriction"	"halloween_or_fullmoon"
+			"attributes"
+			{
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"90"			
+				}
+				"kill eater score type 2"
+				{
+					"attribute_class"	"kill_eater_score_type_2"
+					"value" 	"91"			
+				}
+				"kill eater score type 3"
+				{
+					"attribute_class"	"kill_eater_score_type_3"
+					"value" 	"92"			
+				}
+			}
 		}
 		
 		"force_a_nature"
@@ -14264,6 +14336,10 @@
 					"value"				"2010"
 				}
 			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
 			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
 			"drop_sound" 		"ui/item_paper_pickup.wav"
 		}
@@ -14390,6 +14466,10 @@
 					"attribute_class"	"halloween_item"
 					"value"				"2010"
 				}
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
 			}
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 		"ui/item_hat_drop.wav"
@@ -25423,6 +25503,10 @@
 					"value"				"2011"
 				}
 			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
 			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
 			"drop_sound" 		"ui/item_paper_pickup.wav"
 		}
@@ -25554,6 +25638,10 @@
 					"value"				"2011"
 				}
 			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
 			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
 			"drop_sound" 		"ui/item_paper_pickup.wav"
 		}
@@ -25631,6 +25719,10 @@
 					"value"				"2011"
 				}
 			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
 			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
 			"drop_sound" 		"ui/item_paper_pickup.wav"
 		}
@@ -25707,6 +25799,10 @@
 					"attribute_class"	"halloween_item"
 					"value"				"2011"
 				}
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
 			}
 			"mouse_pressed_sound" 	"ui/item_paper_pickup.wav"
 			"drop_sound" 		"ui/item_paper_pickup.wav"
@@ -43134,14 +43230,19 @@
 					"attribute_class"	"enable_misc2_holdtaunt"
 					"value"				"1"
 				}
-				"allow move during taunt"
+				"taunt force move forward"
 				{
-					"attribute_class"	"allow_move_during_taunt"
+					"attribute_class"	"taunt_force_move_forward"
 					"value"				"1"
 				}
-				"taunt force move forward speed"
+				"taunt move speed"
 				{
-					"attribute_class"	"taunt_force_move_forward_speed"
+					"attribute_class"	"taunt_move_speed"
+					"value"				"50"
+				}
+				"taunt turn speed"
+				{
+					"attribute_class"	"taunt_turn_speed"
 					"value"				"50"
 				}
 				"taunt mimic"
@@ -43334,7 +43435,49 @@
 				"limited quantity item"		"1"
 			}
 		}
-			
+		"1123"
+		{
+			"name"	"Necro Smasher"
+			"item_class"	"saxxy"
+			"craft_class"			"" 
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"item_logname"	"necro_smasher"
+			"item_iconname"	"necro_smasher"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Hammer"
+			"item_name"	"#TF_Weapon_Necro_Smasher"
+			"item_description"	"#TF_Weapon_Necro_Smasher_Desc"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/c_models/c_carnival_mallet/c_carnival_mallet"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_carnival_mallet/c_carnival_mallet.mdl"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+				"engineer"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		
+
 
 
 
@@ -54253,7 +54396,7 @@
 			"item_type_name"		"#TF_Wearable_PocketBuddy"
 			"item_name"		"#TF_sept2014_pocket_heavy"
 			"item_description"		"#TF_sept2014_pocket_heavy_Desc"
-			"equip_region"	"medal"	   
+			"equip_region"		"medal"
 			"image_inventory"		"backpack/workshop/player/items/medic/sept2014_pocket_heavy/sept2014_pocket_heavy"
 			"capabilities"
 			{
@@ -54270,7 +54413,1221 @@
 				"limited quantity item"		"1"
 			}
 		}
-
+		"30484"
+		{
+			"name"		"The Deadliest Catch"
+			"prefab"		"promo hat"
+			"item_name"		"#TF_DeadliestCatch"
+			"item_description"		"#TF_DeadliestCatch_Desc"
+			"holiday_restriction"		"halloween_or_fullmoon"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30486"
+		{
+			"name"		"Herzensbrecher"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_medic_herzensbrecher"
+			"item_description"		"#TF_sf14_medic_herzensbrecher_Desc"
+			"equip_regions"
+			{
+				"medic_hip"		"1"
+				"shirt"			"1"
+			}
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/sf14_medic_herzensbrecher/sf14_medic_herzensbrecher"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sf14_medic_herzensbrecher/sf14_medic_herzensbrecher.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30487"
+		{
+			"name"		"Hundekopf"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_medic_hundkopf"
+			"item_description"		"#TF_sf14_medic_hundkopf_Desc"
+			"equip_region"		"whole_head"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/sf14_medic_hundkopf/sf14_medic_hundkopf"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sf14_medic_hundkopf/sf14_medic_hundkopf.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30488"
+		{
+			"name"		"Kriegsmaschine-9000"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_medic_kriegsmaschine_9000"
+			"item_description"		"#TF_sf14_medic_kriegsmaschine_9000_Desc"
+			"equip_region"		"arms"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/sf14_medic_kriegsmaschine_9000/sf14_medic_kriegsmaschine_9000"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sf14_medic_kriegsmaschine_9000/sf14_medic_kriegsmaschine_9000.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30489"
+		{
+			"name"		"Transylvanian Toupe"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_vampire_makeover"
+			"item_description"		"#TF_sf14_vampire_makeover_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/sf14_vampire_makeover/sf14_vampire_makeover"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sf14_vampire_makeover/sf14_vampire_makeover.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30490"
+		{
+			"name"		"Vampiric Vesture"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_vampiric_vesture"
+			"item_description"		"#TF_sf14_vampiric_vesture_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/sf14_vampiric_vesture/sf14_vampiric_vesture"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sf14_vampiric_vesture/sf14_vampiric_vesture.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30491"
+		{
+			"name"		"Nugget Noggin"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_nugget_noggin"
+			"item_description"		"#TF_sf14_nugget_noggin_Desc"
+			"equip_regions"
+			{
+				"whole_head"	"1"
+				"necklace"		"1"
+			}
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/sf14_nugget_noggin/sf14_nugget_noggin"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sf14_nugget_noggin/sf14_nugget_noggin.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30492"
+		{
+			"name"		"Fowl Fists"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_fowl_fists"
+			"item_description"		"#TF_sf14_fowl_fists_Desc"
+			"equip_region"		"arms"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/scout/sf14_fowl_fists/sf14_fowl_fists"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sf14_fowl_fists/sf14_fowl_fists.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30493"
+		{
+			"name"		"Talon Trotters"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_talon_trotters"
+			"item_description"		"#TF_sf14_talon_trotters_Desc"
+			"equip_region"		"feet"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"shoes_socks"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/sf14_talon_trotters/sf14_talon_trotters"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sf14_talon_trotters/sf14_talon_trotters.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30494"
+		{
+			"name"		"Head Hunter"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_scout_hunter_head"
+			"item_description"		"#TF_sf14_scout_hunter_head_Desc"
+			"equip_regions"
+			{
+				"hat"			"1"
+				"necklace"		"1"
+			}
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/sf14_scout_hunter_head/sf14_scout_hunter_head"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sf14_scout_hunter_head/sf14_scout_hunter_head.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30495"
+		{
+			"name"		"Claws And Infect"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_scout_hunter_arm"
+			"item_description"		"#TF_sf14_scout_hunter_arm_Desc"
+			"equip_region"		"scout_hands"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/scout/sf14_scout_hunter_arm/sf14_scout_hunter_arm"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sf14_scout_hunter_arm/sf14_scout_hunter_arm.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30496"
+		{
+			"name"		"Crazy Legs"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_scout_hunter_legs"
+			"item_description"		"#TF_sf14_scout_hunter_legs_Desc"
+			"equip_regions"
+			{
+				"scout_pants"		"1"
+				"feet"		"1"
+			}
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"shoes_socks"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/sf14_scout_hunter_legs/sf14_scout_hunter_legs"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/sf14_scout_hunter_legs/sf14_scout_hunter_legs.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30497"
+		{
+			"name"		"Ghost of Spies Checked Past"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_ghost_of_spies_checked_past"
+			"item_description"		"#TF_sf14_ghost_of_spies_checked_past_Desc"
+			"equip_region"		"disconnected_floating_item"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30498"
+		{
+			"name"		"The Hooded Haunter"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_hooded_haunter_classes"
+			"item_description"		"#TF_sf14_hooded_haunter_classes_Desc"
+			"equip_region"		"disconnected_floating_item"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30499"
+		{
+			"name"		"Conspiratorial Cut"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_conspiratorial_cut"
+			"item_description"		"#TF_sf14_conspiratorial_cut_Desc"
+			"equip_region"		"head_skin"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/sniper/sf14_conspiratorial_cut/sf14_conspiratorial_cut"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sf14_conspiratorial_cut/sf14_conspiratorial_cut.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30500"
+		{
+			"name"		"Skinless Slashers"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_skinless_slashers"
+			"item_description"		"#TF_sf14_skinless_slashers_Desc"
+			"equip_region"		"arms"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/sniper/sf14_skinless_slashers/sf14_skinless_slashers"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sf14_skinless_slashers/sf14_skinless_slashers.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30501"
+		{
+			"name"		"Marsupial Man"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_marsupial_man"
+			"item_description"		"#TF_sf14_marsupial_man_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/sniper/sf14_marsupial_man/sf14_marsupial_man"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sf14_marsupial_man/sf14_marsupial_man.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30502"
+		{
+			"name"		"Kanga Kickers"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_kanga_kickers"
+			"item_description"		"#TF_sf14_kanga_kickers_Desc"
+			"equip_region"		"feet"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/sniper/sf14_kanga_kickers/sf14_kanga_kickers"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sf14_kanga_kickers/sf14_kanga_kickers.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30503"
+		{
+			"name"		"Roo Rippers"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_roo_rippers"
+			"item_description"		"#TF_sf14_roo_rippers_Desc"
+			"equip_region"		"arms"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/sniper/sf14_roo_rippers/sf14_roo_rippers"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sf14_roo_rippers/sf14_roo_rippers.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30504"
+		{
+			"name"		"Marsupial Muzzle"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_marsupial_muzzle"
+			"item_description"		"#TF_sf14_marsupial_muzzle_Desc"
+			"equip_region"		"whole_head"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/sniper/sf14_marsupial_muzzle/sf14_marsupial_muzzle"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sf14_marsupial_muzzle/sf14_marsupial_muzzle.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30505"
+		{
+			"name"		"Shadowman's Shade"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_hw2014_spy_voodoo_hat"
+			"item_description"		"#TF_sf14_hw2014_spy_voodoo_hat_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/spy/sf14_hw2014_spy_voodoo_hat/sf14_hw2014_spy_voodoo_hat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/sf14_hw2014_spy_voodoo_hat/sf14_hw2014_spy_voodoo_hat.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30506"
+		{
+			"name"		"Nightmare Hunter"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_nightmare_fedora"
+			"item_description"		"#TF_sf14_nightmare_fedora_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/spy/sf14_nightmare_fedora/sf14_nightmare_fedora"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/sf14_nightmare_fedora/sf14_nightmare_fedora.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30507"
+		{
+			"name"		"Rogue's Rabbit"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_the_rogues_rabbit"
+			"item_description"		"#TF_sf14_the_rogues_rabbit_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/spy/sf14_the_rogues_rabbit/sf14_the_rogues_rabbit"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/sf14_the_rogues_rabbit/sf14_the_rogues_rabbit.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30508"
+		{
+			"name"		"Iron Fist"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_iron_fist"
+			"item_description"		"#TF_sf14_iron_fist_Desc"
+			"equip_region"		"arms"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/sf14_iron_fist/sf14_iron_fist"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sf14_iron_fist/sf14_iron_fist.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30509"
+		{
+			"name"		"Beep Man"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_beep_man"
+			"item_description"		"#TF_sf14_beep_man_Desc"
+			"equip_region"
+			{
+				"whole_head"		"1"
+				"shirt"				"1"
+			}
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/engineer/sf14_beep_man/sf14_beep_man"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sf14_beep_man/sf14_beep_man.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30510"
+		{
+			"name"		"Soul of 'Spenser's Past"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14__soul_of_spensers_past"
+			"item_description"		"#TF_sf14__soul_of_spensers_past_Desc"
+			"equip_region"		"disconnected_floating_item"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/sf14__soul_of_spensers_past/sf14__soul_of_spensers_past"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sf14__soul_of_spensers_past/sf14__soul_of_spensers_past.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30511"
+		{
+			"name"		"Tiny Texan"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_tiny_texan"
+			"item_description"		"#TF_sf14_tiny_texan_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/engineer/sf14_tiny_texan/sf14_tiny_texan"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sf14_tiny_texan/sf14_tiny_texan.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30512"
+		{
+			"name"		"Facepeeler"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_spy_facepeeler"
+			"item_description"		"#TF_sf14_spy_facepeeler_Desc"
+			"equip_region"		"face"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/spy/sf14_spy_facepeeler/sf14_spy_facepeeler"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/sf14_spy_facepeeler/sf14_spy_facepeeler.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30513"
+		{
+			"name"		"Mr. Mundee's Wild Ride"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_sniper_ostrich_legs"
+			"item_description"		"#TF_sf14_sniper_ostrich_legs_Desc"
+			"equip_region"		"sniper_legs"
+			"image_inventory"		"backpack/workshop/player/items/sniper/sf14_sniper_ostrich_legs/sf14_sniper_ostrich_legs"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/sniper/sf14_sniper_ostrich_legs/sf14_sniper_ostrich_legs.mdl"
+			"used_by_classes"
+			{
+				"sniper"		"1"
+			}
+		}
+		"30514"
+		{
+			"name"		"Templar's Spirit"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_templar_hood"
+			"item_description"		"#TF_sf14_templar_hood_Desc"
+			"equip_region"		"whole_head"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/sf14_templar_hood/sf14_templar_hood"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sf14_templar_hood/sf14_templar_hood.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30515"
+		{
+			"name"		"Wings of Purity"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_purity_wings"
+			"item_description"		"#TF_sf14_purity_wings_Desc"
+			"equip_region"		"back"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/sf14_purity_wings/sf14_purity_wings"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/sf14_purity_wings/sf14_purity_wings.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30516"
+		{
+			"name"		"Forgotten King's Restless Head"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_deadking_head"
+			"item_description"		"#TF_sf14_deadking_head_Desc"
+			"equip_region"		"whole_head"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/sf14_deadking_head/sf14_deadking_head"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sf14_deadking_head/sf14_deadking_head.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30517"
+		{
+			"name"		"Forgotten King's Pauldrons"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_deadking_pauldrons"
+			"item_description"		"#TF_sf14_deadking_pauldrons_Desc"
+			"equip_region"		"demoman_collar"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/sf14_deadking_pauldrons/sf14_deadking_pauldrons"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sf14_deadking_pauldrons/sf14_deadking_pauldrons.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30518"
+		{
+			"name"		"Eyeborg"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_demo_cyborg"
+			"item_description"		"#TF_sf14_demo_cyborg_Desc"
+			"equip_region"		"glasses"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/sf14_demo_cyborg/sf14_demo_cyborg"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sf14_demo_cyborg/sf14_demo_cyborg.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30519"
+		{
+			"name"		"Explosive Mind"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_explosive_mind"
+			"item_description"		"#TF_sf14_explosive_mind_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/sf14_explosive_mind/sf14_explosive_mind"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/sf14_explosive_mind/sf14_explosive_mind.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30520"
+		{
+			"name"		"Ghoul Gibbin' Gear"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_ghoul_gibbing_gear"
+			"item_description"		"#TF_sf14_ghoul_gibbing_gear_Desc"
+			"equip_region"		"grenades"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/soldier/sf14_ghoul_gibbing_gear/sf14_ghoul_gibbing_gear"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/sf14_ghoul_gibbing_gear/sf14_ghoul_gibbing_gear.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30521"
+		{
+			"name"		"Hellhunter's Headpiece"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_hellhunters_headpiece"
+			"item_description"		"#TF_sf14_hellhunters_headpiece_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/sf14_hellhunters_headpiece/sf14_hellhunters_headpiece"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/sf14_hellhunters_headpiece/sf14_hellhunters_headpiece.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30522"
+		{
+			"name"		"Supernatural Stalker"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_the_supernatural_stalker"
+			"item_description"		"#TF_sf14_the_supernatural_stalker_Desc"
+			"equip_region"		"face"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/sf14_the_supernatural_stalker/sf14_the_supernatural_stalker"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/sf14_the_supernatural_stalker/sf14_the_supernatural_stalker.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30523"
+		{
+			"name"		"Garden Bristles"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_hw2014_engi_gnome_beard"
+			"item_description"		"#TF_sf14_hw2014_engi_gnome_beard_Desc"
+			"equip_region"		"beard"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/engineer/sf14_hw2014_engi_gnome_beard/sf14_hw2014_engi_gnome_beard"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/sf14_hw2014_engi_gnome_beard/sf14_hw2014_engi_gnome_beard.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30524"
+		{
+			"name"		"Battle Bird"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_the_battle_bird"
+			"item_description"		"#TF_sf14_the_battle_bird_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/soldier/sf14_the_battle_bird/sf14_the_battle_bird"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/sf14_the_battle_bird/sf14_the_battle_bird.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30525"
+		{
+			"name"		"Creature's Grin"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_the_creatures_grin"
+			"item_description"		"#TF_sf14_the_creatures_grin_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/sf14_the_creatures_grin/sf14_the_creatures_grin"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/sf14_the_creatures_grin/sf14_the_creatures_grin.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30526"
+		{
+			"name"		"Arsonist Apparatus"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_hw2014_robot_arm"
+			"item_description"		"#TF_sf14_hw2014_robot_arm_Desc"
+			"equip_region"		"arms"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/pyro/sf14_hw2014_robot_arm/sf14_hw2014_robot_arm"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/sf14_hw2014_robot_arm/sf14_hw2014_robot_arm.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30527"
+		{
+			"name"		"Moccasin Machinery"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_hw2014_robot_legg"
+			"item_description"		"#TF_sf14_hw2014_robot_legg_Desc"
+			"equip_region"		"feet"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/pyro/sf14_hw2014_robot_legg/sf14_hw2014_robot_legg"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/sf14_hw2014_robot_legg/sf14_hw2014_robot_legg.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30528"
+		{
+			"name"		"Lollichop Licker"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_lollichop_licker"
+			"item_description"		"#TF_sf14_lollichop_licker_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/sf14_lollichop_licker/sf14_lollichop_licker"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/sf14_lollichop_licker/sf14_lollichop_licker.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30529"
+		{
+			"name"		"Mr. Juice"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_mr_juice"
+			"item_description"		"#TF_sf14_mr_juice_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/sf14_mr_juice/sf14_mr_juice"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/sf14_mr_juice/sf14_mr_juice.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30530"
+		{
+			"name"		"Vampyro"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_vampyro"
+			"item_description"		"#TF_sf14_vampyro_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/sf14_vampyro/sf14_vampyro"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/sf14_vampyro/sf14_vampyro.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30531"
+		{
+			"name"		"Bone-Cut Belt"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_halloween_bone_cut_belt"
+			"item_description"		"#TF_sf14_halloween_bone_cut_belt_Desc"
+			"equip_region"
+			{
+				"left_shoulder"			"1"
+				"shirt"					"1"
+			}
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sf14_halloween_bone_cut_belt/sf14_halloween_bone_cut_belt"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sf14_halloween_bone_cut_belt/sf14_halloween_bone_cut_belt.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30532"
+		{
+			"name"		"Bull Locks"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_halloween_bull_locks"
+			"item_description"		"#TF_sf14_halloween_bull_locks_Desc"
+			"equip_region"		"beard"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sf14_halloween_bull_locks/sf14_halloween_bull_locks"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sf14_halloween_bull_locks/sf14_halloween_bull_locks.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30533"
+		{
+			"name"		"Minsk Beef"
+			"prefab"		"halloween2014 no_craft hat"
+			"item_name"		"#TF_sf14_halloween_minsk_beef"
+			"item_description"		"#TF_sf14_halloween_minsk_beef_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sf14_halloween_minsk_beef/sf14_halloween_minsk_beef"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sf14_halloween_minsk_beef/sf14_halloween_minsk_beef.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30534"
+		{
+			"name"		"Immobile Suit"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_heavy_robo_chest"
+			"item_description"		"#TF_sf14_heavy_robo_chest_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/heavy/sf14_heavy_robo_chest/sf14_heavy_robo_chest"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/sf14_heavy_robo_chest/sf14_heavy_robo_chest.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30535"
+		{
+			"name"		"Kritz Or Treat Canteen"
+			"prefab"		"halloween2014 no_craft powerup_bottle"
+			"propername"		"1"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"item_name"		"#TF_kritz_or_treat_canteen"
+			"item_description"		"#TF_kritz_or_treat_canteen_Desc"
+			"image_inventory"		"backpack/workshop/player/items/scout/kritz_or_treat_canteen/kritz_or_treat_canteen"
+			"model_player"		"models/workshop/player/items/scout/kritz_or_treat_canteen/kritz_or_treat_canteen.mdl"
+		}
+		"30536"
+		{
+			"name"		"Cursed Cruise"
+			"prefab"		"halloween2014 no_craft misc"
+			"item_name"		"#TF_sf14_cursed_cruise"
+			"item_description"		"#TF_sf14_cursed_cruise_Desc"
+			"equip_region"		"disconnected_floating_item"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		
 
 
 
@@ -67103,6 +68460,90 @@
 				}
 			}
 		}
+		"2135"
+		{
+			"name" "Halloween 2014 Everything Bundle"
+			"prefab"	"default_bundle_payment"
+			"first_sale_date"	"2014/10/29"
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Herzensbrecher"					"1"
+				"Hundekopf"                         "1"
+				"Kriegsmaschine-9000"               "1"
+				"Transylvanian Toupe"               "1"
+				"Vampiric Vesture"                  "1"
+				"Nugget Noggin"                     "1"
+				"Fowl Fists"                        "1"
+				"Talon Trotters"                    "1"
+				"Head Hunter"                       "1"
+				"Claws And Infect"                  "1"
+				"Crazy Legs"                        "1"
+				"Ghost of Spies Checked Past"       "1"
+				"The Hooded Haunter"                "1"
+				"Conspiratorial Cut"                "1"
+				"Skinless Slashers"                 "1"
+				"Marsupial Man"                     "1"
+				"Kanga Kickers"                     "1"
+				"Roo Rippers"                       "1"
+				"Marsupial Muzzle"                  "1"
+				"Shadowman's Shade"                 "1"
+				"Nightmare Hunter"                  "1"
+				"Rogue's Rabbit"                    "1"
+				"Iron Fist"                         "1"
+				"Beep Man"                          "1"
+				"Soul of 'Spenser's Past"           "1"
+				"Tiny Texan"                        "1"
+				"Facepeeler"                        "1"
+				"Mr. Mundee's Wild Ride"            "1"
+				"Templar's Spirit"                  "1"
+				"Wings of Purity"                   "1"
+				"Forgotten King's Restless Head"    "1"
+				"Forgotten King's Pauldrons"        "1"
+				"Eyeborg"                           "1"
+				"Explosive Mind"                    "1"
+				"Ghoul Gibbin' Gear"                "1"
+				"Hellhunter's Headpiece"            "1"
+				"Supernatural Stalker"              "1"
+				"Garden Bristles"                   "1"
+				"Battle Bird"                       "1"
+				"Creature's Grin"                   "1"
+				"Arsonist Apparatus"                "1"
+				"Moccasin Machinery"                "1"
+				"Lollichop Licker"                  "1"
+				"Mr. Juice"                         "1"
+				"Vampyro"                           "1"
+				"Bone-Cut Belt"                     "1"
+				"Bull Locks"                        "1"
+				"Minsk Beef"                        "1"
+				"Immobile Suit"                     "1"
+				"Cursed Cruise"                     "1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_Bundle_Halloween2014Everything"
+			"item_description"	"#TF_Bundle_Halloween2014Everything_Desc"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_2014_bundle"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"51"
+			"max_ilevel"	"51"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"holiday_restriction"	"halloween_or_fullmoon"
+		}
 
 
 
@@ -69265,6 +70706,10 @@
 			"extra_wearable" "models/player/items/all_class/hwn_spellbook_diary.mdl"
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
 		}
 		"5606"
 		{
@@ -69289,6 +70734,10 @@
 				"spy" 		"1"
 				"engineer" 	"1"
 				"pyro" 		"1"
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
 			}
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
@@ -70630,6 +72079,7 @@
 			"attributes"
 			{
 			}
+			"event_desc_footer"	""
 		}
 		"5715" 
 		{
@@ -70647,6 +72097,7 @@
 			"attributes"
 			{
 			}
+			"event_desc_footer"	""
 		}
 		
 		"5716"
@@ -71290,6 +72741,7 @@
 			"attributes"
 			{
 			}
+			"event_desc_footer"	""
 		}
 		
 		"5762"
@@ -71300,6 +72752,286 @@
 			"item_name"		"#TF_Tool_DecoderRing"
 			"item_description"	"#TF_Tool_DecoderRing_Desc"
 			"image_inventory"	"backpack/player/items/crafting/key"
+		}
+
+		"5763"
+		{
+			"name"	"Halloween 2014 Scout Crate"
+			"prefab" "halloween2014keylesscrate"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_crate__scout"
+				}
+			}
+			"item_name"		"#TF_SupplyCrate_Halloween2014_Scout"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_03_scout"
+			"static_attrs"
+			{
+				"loot list name"					"halloween_loot_list_2014_crate__scout"
+			}
+		}
+		"5764"
+		{
+			"name"	"Halloween 2014 Pyro Crate"
+			"prefab" "halloween2014keylesscrate"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_crate__pyro"
+				}
+			}
+			"item_name"		"#TF_SupplyCrate_Halloween2014_Pyro"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_03_pyro"
+			"static_attrs"
+			{
+				"loot list name"					"halloween_loot_list_2014_crate__pyro"
+			}
+		}
+		"5765"
+		{
+			"name"	"Halloween 2014 Heavy Crate"
+			"prefab" "halloween2014keylesscrate"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_crate__heavy"
+				}
+			}
+			"item_name"		"#TF_SupplyCrate_Halloween2014_Heavy"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_03_heavy"
+			"static_attrs"
+			{
+				"loot list name"					"halloween_loot_list_2014_crate__heavy"
+			}
+		}
+		"5766"
+		{
+			"name"	"Halloween 2014 Engineer Crate"
+			"prefab" "halloween2014keylesscrate"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_crate__engineer"
+				}
+			}
+			"item_name"		"#TF_SupplyCrate_Halloween2014_Engineer"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_03_engineer"
+			"static_attrs"
+			{
+				"loot list name"					"halloween_loot_list_2014_crate__engineer"
+			}
+		}
+		"5767"
+		{
+			"name"	"Halloween 2014 Spy Crate"
+			"prefab" "halloween2014keylesscrate"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_crate__spy"
+				}
+			}
+			"item_name"		"#TF_SupplyCrate_Halloween2014_Spy"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_03_spy"
+			"static_attrs"
+			{
+				"loot list name"					"halloween_loot_list_2014_crate__spy"
+			}
+		}
+		"5768"
+		{
+			"name"	"Halloween 2014 Sniper Crate"
+			"prefab" "halloween2014keylesscrate"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_crate__sniper"
+				}
+			}
+			"item_name"		"#TF_SupplyCrate_Halloween2014_Sniper"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_03_sniper"
+			"static_attrs"
+			{
+				"loot list name"					"halloween_loot_list_2014_crate__sniper"
+			}
+		}
+		"5769"
+		{
+			"name"	"Halloween 2014 Soldier Crate"
+			"prefab" "halloween2014keylesscrate"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_crate__soldier"
+				}
+			}
+			"item_name"		"#TF_SupplyCrate_Halloween2014_Soldier"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_03_soldier"
+			"static_attrs"
+			{
+				"loot list name"					"halloween_loot_list_2014_crate__soldier"
+			}
+		}
+		"5770"
+		{
+			"name"	"Halloween 2014 Medic Crate"
+			"prefab" "halloween2014keylesscrate"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_crate__medic"
+				}
+			}
+			"item_name"		"#TF_SupplyCrate_Halloween2014_Medic"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_03_medic"
+			"static_attrs"
+			{
+				"loot list name"					"halloween_loot_list_2014_crate__medic"
+			}
+		}
+		"5771"
+		{
+			"name"	"Halloween 2014 Demo Crate"
+			"prefab" "halloween2014keylesscrate"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_crate__demoman"
+				}
+			}
+			"item_name"		"#TF_SupplyCrate_Halloween2014_Demo"
+			"image_inventory"	"backpack/player/items/crafting/crate_halloween_03_demoman"
+			"static_attrs"
+			{
+				"loot list name"					"halloween_loot_list_2014_crate__demoman"
+			}
+		}
+		"5772"
+		{
+			"name"	"Halloween Giveaway Cauldron 2014 (Base)"
+			"item_class"	"tf_wearable"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_gift_cauldron"
+					"num_items"		"1"
+					"max_recipients"	"1"
+					"target_rule"	"only_self"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"				"1"
+				"usable_out_of_game"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Package_Type"
+			"item_name"	"#TF_HalloweenCauldron2014"
+			"item_description"	"#TF_HalloweenCauldron2014_Desc"
+			"item_slot"	"action"
+			"image_inventory"	"backpack/crafting/gift_halloween_02"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"5773"
+		{
+			"name"	"Halloween Giveaway Cauldron 2014 (Achievement)"
+			"item_class"	"tf_wearable"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"		"halloween_loot_list_2014_gift_cauldron_2"
+					"num_items"		"1"
+					"max_recipients"	"1"
+					"target_rule"	"only_self"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"				"1"
+				"usable_out_of_game"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Package_Type"
+			"item_name"	"#TF_HalloweenCauldron2014"
+			"item_description"	"#TF_HalloweenCauldron2014_Desc"
+			"item_slot"	"action"
+			"image_inventory"	"backpack/crafting/gift_halloween_02"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		
 		"5999"				
@@ -79486,19 +81218,10 @@
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
-		"559"
-		{
-			"name" "allow move during taunt"
-			"attribute_class"	"allow_move_during_taunt"
-			"description_format"	"value_is_additive"
-			"hidden"	"1"
-			"effect_type"	"positive"
-			"stored_as_integer"	"1"
-		}
 		"600"
 		{
-			"name" "taunt force move forward speed"
-			"attribute_class"	"taunt_force_move_forward_speed"
+			"name" "taunt force move forward"
+			"attribute_class"	"taunt_force_move_forward"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
@@ -79635,6 +81358,16 @@
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"positive"
+		}
+		"620"
+		{
+			"name"	"torso scale"
+			"attribute_class"	"torso_scale"
+			"description_format"	"value_is_percentage"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
 		}
 		"621"
 		{
@@ -79777,6 +81510,14 @@
 			"hidden"	"1"
 			"effect_type"	"positive"
 		}
+		"646"
+		{
+			"name"	"taunt turn speed"
+			"attribute_class"	"taunt_turn_speed"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
 		"647"
 		{
 			"name"	"sniper fires tracer HIDDEN"
@@ -79802,6 +81543,30 @@
 			"name"	"crate generation code"
 			"attribute_class"	"crate_generation_code"
 			"attribute_type"	"string"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
+		"687"
+		{
+			"name" 		"taunt turn acceleration time"
+			"attribute_class"	"taunt_turn_acceleration_time"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
+		"688"
+		{
+			"name" 		"taunt move acceleration time"
+			"attribute_class"	"taunt_move_acceleration"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
+		"689"
+		{
+			"name" 		"taunt move speed"
+			"attribute_class"	"taunt_move_speed"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
@@ -79876,6 +81641,26 @@
 			"effect_type"	"negative"
 			"stored_as_integer"	"1"
 		}
+		"698"
+		{
+			"name" "disable weapon switch"
+			"attribute_class"	"disable_weapon_switch"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"negative"
+			"stored_as_integer"	"1"
+		}
+		"699"
+		{
+			"name"	"hand scale"
+			"attribute_class"	"hand_scale"
+			"description_format"	"value_is_percentage"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+
 		"1000"
 		{
 			"name"	"CARD: damage bonus"
@@ -80258,21 +82043,25 @@
 		"2037"
 		{
 			"name"				"random drop line item 0"
+			"stored_as_integer"	"1"
 			"hidden"			"1"
 		}
 		"2038"
 		{
 			"name"				"random drop line item 1"
+			"stored_as_integer"	"1"
 			"hidden"			"1"
 		}
 		"2039"
 		{
 			"name"				"random drop line item 2"
+			"stored_as_integer"	"1"
 			"hidden"			"1"
 		}
 		"2040"
 		{
 			"name"				"random drop line item 3"
+			"stored_as_integer"	"1"
 			"hidden"			"1"
 		}
 		"2041"
@@ -80315,6 +82104,17 @@
 		{
 			"name"				"is commodity"
 			"hidden"			"1"
+		}
+		"2048"
+		{
+			"name"	"voice pitch scale"
+			"attribute_class"	"voice_pitch_scale"
+			"description_format"	"value_is_percentage"
+			"description_string"	"#Attrib_NoDoubleJump"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
 		}
 
 		"3000"
@@ -81121,7 +82921,111 @@
 				}
 			}
 		}
-
+		"sf14_medic_dog"
+		{
+			"name"	"#TF_Set_SF14_Medic_Dog"
+			"items"
+			{
+				"Hundekopf"					"1"
+				"Herzensbrecher"			"1"
+				"Kriegsmaschine-9000"		"1"
+			}
+		}
+		"sf14_medic_templar"
+		{
+			"name"	"#TF_Set_SF14_Medic_Templar"
+			"items"
+			{
+				"Templar's Spirit"			"1"
+				"Wings of Purity"			"1"
+			}
+		}
+		"sf14_scout_hunter"
+		{
+			"name"	"#TF_Set_SF14_Scout_Hunter"
+			"items"
+			{
+				"Head Hunter"				"1"
+				"Claws And Infect"			"1"
+				"Crazy Legs"				"1"
+			}
+		}
+		"sf14_scout_chicken"
+		{
+			"name"	"#TF_Set_SF14_Scout_Chicken"
+			"items"
+			{
+				"Nugget Noggin"				"1"
+				"Talon Trotters"			"1"
+				"Fowl Fists"				"1"
+			}
+		}
+		"sf14_soldier_supernatural_hunter"
+		{
+			"name"	"#TF_Set_SF14_Soldier_SupernaturalHunter"
+			"items"
+			{
+				"Hellhunter's Headpiece"	"1"
+				"Supernatural Stalker"		"1"
+				"Ghoul Gibbin' Gear"		"1"
+			}
+		}
+		"sf14_heavy_minotaur"
+		{
+			"name"	"#TF_Set_SF14_Heavy_Minotaur"
+			"items"
+			{
+				"Minsk Beef"			"1"
+				"Bull Locks"			"1"
+				"Bone-Cut Belt"			"1"
+			}
+		}
+		"sf14_sniper_kangaroo"
+		{
+			"name"	"#TF_Set_SF14_Sniper_Kangaroo"
+			"items"
+			{
+				"Marsupial Man"			"1"
+				"Kanga Kickers"			"1"
+				"Roo Rippers"			"1"
+			}
+		}
+		"sf14_sniper_lizard"
+		{
+			"name"	"#TF_Set_SF14_Sniper_Lizard"
+			"items"
+			{
+				"Skinless Slashers"		"1"
+				"Conspiratorial Cut"	"1"
+			}
+		}
+		"sf14_pyro_robot"
+		{
+			"name"	"#TF_Set_SF14_Pyro_Robo"
+			"items"
+			{
+				"Moccasin Machinery"		"1"
+				"Arsonist Apparatus"		"1"
+			}
+		}
+		"sf14_demo_skeleton"
+		{
+			"name"	"#TF_Set_SF14_Demo_Skeleton"
+			"items"
+			{
+				"Forgotten King's Restless Head"	"1"
+				"Forgotten King's Pauldrons"	"1"
+			}
+		}
+		"sf14_medic_vampire"
+		{
+			"name"	"#TF_Set_SF14_Medic_Vampire"
+			"items"
+			{
+				"Transylvanian Toupe"	"1"
+				"Vampiric Vesture"	"1"
+			}
+		}
 
 
 	}
@@ -82122,6 +84026,129 @@
 			"loot_list_header_desc"		"#TF_LimitedSummer_Loot_List_Header"
 			"loot_list_footer_desc"		"#TF_LimitedSummer_Loot_List_Footer"
 			"summer_2014_limited_86_base"		"1"
+		}
+		"halloween_loot_list_2014_soldier_community_cosmetics"
+		{
+			"Battle Bird"		"1"
+			"Ghoul Gibbin' Gear"		"1"
+			"Hellhunter's Headpiece"		"1"
+			"Supernatural Stalker"		"1"
+			"Kritz Or Treat Canteen"		"1"
+		}
+		"halloween_loot_list_2014_medic_community_cosmetics"
+		{
+			"Herzensbrecher"		"1"
+			"Hundekopf"		"1"
+			"Kriegsmaschine-9000"		"1"
+			"Transylvanian Toupe"		"1"
+			"Vampiric Vesture"		"1"
+			"Templar's Spirit"		"1"
+			"Wings of Purity"		"1"
+		}
+		"halloween_loot_list_2014_scout_community_cosmetics"
+		{
+			"Nugget Noggin"		"1"
+			"Fowl Fists"		"1"
+			"Talon Trotters"		"1"
+			"Head Hunter"		"1"
+			"Claws And Infect"		"1"
+			"Crazy Legs"		"1"
+		}
+		"halloween_loot_list_2014_engineer_community_cosmetics"
+		{
+			"Iron Fist"		"1"
+			"Beep Man"		"1"
+			"Soul of 'Spenser's Past"		"1"
+			"Garden Bristles"		"1"
+			"Tiny Texan"		"1"
+		}
+		"halloween_loot_list_2014_spy_community_cosmetics"
+		{
+			"Shadowman's Shade"		"1"
+			"Nightmare Hunter"		"1"
+			"Rogue's Rabbit"		"1"
+			"Facepeeler"		"1"
+			"Ghost of Spies Checked Past"		"1"
+		}
+		"halloween_loot_list_2014_demoman_community_cosmetics"
+		{
+			"Forgotten King's Restless Head"		"1"
+			"Forgotten King's Pauldrons"		"1"
+			"Eyeborg"		"1"
+			"Explosive Mind"		"1"
+			"Cursed Cruise"		"1"
+		}
+		"halloween_loot_list_2014_heavy_community_cosmetics"
+		{
+			"Bone-Cut Belt"		"1"
+			"Bull Locks"		"1"
+			"Minsk Beef"		"1"
+			"Immobile Suit"		"1"
+			"The Hooded Haunter"		"1"
+		}
+		"halloween_loot_list_2014_sniper_community_cosmetics"
+		{
+			"Conspiratorial Cut"		"1"
+			"Skinless Slashers"		"1"
+			"Mr. Mundee's Wild Ride"		"1"
+			"Marsupial Man"		"1"
+			"Kanga Kickers"		"1"
+			"Roo Rippers"		"1"
+			"Marsupial Muzzle"		"1"
+		}
+		"halloween_loot_list_2014_pyro_community_cosmetics"
+		{
+			"Creature's Grin"		"1"
+			"Arsonist Apparatus"		"1"
+			"Moccasin Machinery"		"1"
+			"Lollichop Licker"		"1"
+			"Mr. Juice"		"1"
+			"Vampyro"		"1"
+		}
+		"halloween_loot_list_2014_crate__soldier"
+		{
+			"loot_list_footer_desc"		"#TF_Halloween_Rare_Loot_List_Footer"
+			"halloween_loot_list_2014_soldier_community_cosmetics"		"1"
+		}
+		"halloween_loot_list_2014_crate__medic"
+		{
+			"loot_list_footer_desc"		"#TF_Halloween_Rare_Loot_List_Footer"
+			"halloween_loot_list_2014_medic_community_cosmetics"		"1"
+		}
+		"halloween_loot_list_2014_crate__engineer"
+		{
+			"loot_list_footer_desc"		"#TF_Halloween_Rare_Loot_List_Footer"
+			"halloween_loot_list_2014_engineer_community_cosmetics"		"1"
+		}
+		"halloween_loot_list_2014_crate__pyro"
+		{
+			"loot_list_footer_desc"		"#TF_Halloween_Rare_Loot_List_Footer"
+			"halloween_loot_list_2014_pyro_community_cosmetics"		"1"
+		}
+		"halloween_loot_list_2014_crate__sniper"
+		{
+			"loot_list_footer_desc"		"#TF_Halloween_Rare_Loot_List_Footer"
+			"halloween_loot_list_2014_sniper_community_cosmetics"		"1"
+		}
+		"halloween_loot_list_2014_crate__demoman"
+		{
+			"loot_list_footer_desc"		"#TF_Halloween_Rare_Loot_List_Footer"
+			"halloween_loot_list_2014_demoman_community_cosmetics"		"1"
+		}
+		"halloween_loot_list_2014_crate__heavy"
+		{
+			"loot_list_footer_desc"		"#TF_Halloween_Rare_Loot_List_Footer"
+			"halloween_loot_list_2014_heavy_community_cosmetics"		"1"
+		}
+		"halloween_loot_list_2014_crate__spy"
+		{
+			"loot_list_footer_desc"		"#TF_Halloween_Rare_Loot_List_Footer"
+			"halloween_loot_list_2014_spy_community_cosmetics"		"1"
+		}
+		"halloween_loot_list_2014_crate__scout"
+		{
+			"loot_list_footer_desc"		"#TF_Halloween_Rare_Loot_List_Footer"
+			"halloween_loot_list_2014_scout_community_cosmetics"		"1"
 		}
 	}
 	"revolving_loot_lists"
@@ -90748,6 +92775,8 @@
 
 		"TF_HALLOWEEN_HELLTOWER_MILESTONE"						"8936"			
 		"TF_HALLOWEEN_HELLTOWER_SKULL_ISLAND_REWARD"			"1068"			
+		"TF_HALLOWEEN_DOOMSDAY_MILESTONE"						"1123"			
+		"TF_HALLOWEEN_DOOMSDAY_WIN_MINIGAMES"					"5773"			
 	}
 	"attribute_controlled_attached_particles"
 	{
@@ -91118,6 +93147,44 @@
 			"attach_to_rootbone"	"1"
 			"attachment"		"unusual"
 		}
+
+		"81"
+		{
+			"system"			"unusual_tentmonster_purple_parent"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"82"
+		{
+			"system"			"unusual_eyes_purple_parent"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"83"
+		{
+			"system"			"unusual_eyes_orange_parent"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"84"
+		{
+			"system"			"unusual_eyes_green_parent"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"85"
+		{
+			"system"			"unusual_souls_purple_parent"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"86"
+		{
+			"system"			"unusual_souls_green_parent"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		
 		
 		
 		"2001"
@@ -91227,7 +93294,15 @@
 		{
 			"system"			"utaunt_lightning_parent"
 			"refire_time"		"0.9"
-		}		
+		}	
+		"3011"
+		{
+			"system"			"utaunt_souls_green_parent"
+		}				
+		"3012"
+		{
+			"system"			"utaunt_souls_purple_parent"
+		}				
 	}
 	"armory_data"
 	{
@@ -92379,6 +94454,18 @@
 		{
 			"type_name"			"KillEaterEvent_TauntingPlayerKills"
 		}
+		"90"
+		{
+			"type_name"			"KillEaterEvent_HalloweenOverworldKills"
+		}
+		"91"
+		{
+			"type_name"			"KillEaterEvent_HalloweenUnderworldKills"
+		}
+		"92"
+		{
+			"type_name"			"KillEaterEvent_HalloweenMinigamesWon"
+		}
 
 
 	}
@@ -93157,8 +95244,8 @@
 		{
 			"0"
 			{
-				"name"					"plr_hightower_event"
-				"localizedname"			"#TF_Map_plr_hightower_event"
+				"name"					"sd_doomsday_event"
+				"localizedname"			"#TF_Map_sd_doomsday_event"
 				"quickplay_type"		"all_users"
 			}
 		}
@@ -93189,6 +95276,12 @@
 			{
 				"name"					"koth_lakeside_event"
 				"localizedname"			"#TF_Map_koth_lakeside_event"
+				"quickplay_type"		"all_users"
+			}
+			"4"
+			{
+				"name"					"plr_hightower_event"
+				"localizedname"			"#TF_Map_plr_hightower_event"
 				"quickplay_type"		"all_users"
 			}
 		}

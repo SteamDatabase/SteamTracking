@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.dc453282cfe5e3675eb9b0f1bc42e0c047fb01f3.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.c29832cdf92bf2185afa6450b4b9ff278ed08f7f.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -5958,7 +5958,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -17118,7 +17117,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -18295,7 +18293,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -18735,7 +18732,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -23425,7 +23421,7 @@
 				"defindex": 577,
 				"item_class": "tf_wearable",
 				"item_type_name": "Package",
-				"item_name": "Halloween Goodie Cauldron",
+				"item_name": "Antique Halloween Goodie Cauldron",
 				"item_description": "You can pry open the lid of this cauldron to see what strangeness lies within... from your backpack... IF YOU DARE.",
 				"proper_name": false,
 				"item_slot": "action",
@@ -43905,7 +43901,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -47868,7 +47863,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -47917,7 +47911,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -47966,7 +47959,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48001,7 +47993,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48036,7 +48027,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48085,7 +48075,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48124,7 +48113,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48159,7 +48147,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48194,7 +48181,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48235,7 +48221,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48278,7 +48263,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48313,7 +48297,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48356,7 +48339,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48374,13 +48356,18 @@
 						"value": 1
 					},
 					{
-						"name": "allow move during taunt",
-						"class": "allow_move_during_taunt",
+						"name": "taunt force move forward",
+						"class": "taunt_force_move_forward",
 						"value": 1
 					},
 					{
-						"name": "taunt force move forward speed",
-						"class": "taunt_force_move_forward_speed",
+						"name": "taunt move speed",
+						"class": "taunt_move_speed",
+						"value": 50
+					},
+					{
+						"name": "taunt turn speed",
+						"class": "taunt_turn_speed",
 						"value": 50
 					},
 					{
@@ -48415,7 +48402,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48450,7 +48436,6 @@
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
-					"usable": true,
 					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
@@ -48571,6 +48556,46 @@
 						"class": "is_marketable",
 						"value": 1
 					}
+				]
+				
+			},
+			{
+				"name": "Necro Smasher",
+				"defindex": 1123,
+				"item_class": "saxxy",
+				"item_type_name": "Hammer",
+				"item_name": "Necro Smasher",
+				"item_description": "",
+				"proper_name": true,
+				"item_slot": "melee",
+				"model_player": "models/weapons/c_models/c_carnival_mallet/c_carnival_mallet.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/weapons/c_models/c_carnival_mallet/c_carnival_mallet",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "http://media.steampowered.com/apps/440/icons/c_carnival_mallet.6c28a88909cc8bdb7591824072943831c0068d3e.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/c_carnival_mallet_large.405a6705d3268b676a054e4175fdf59c922442ab.png",
+				"craft_class": "",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout",
+					"Sniper",
+					"Soldier",
+					"Demoman",
+					"Medic",
+					"Heavy",
+					"Pyro",
+					"Engineer"
 				]
 				
 			},
@@ -53503,6 +53528,32 @@
 					}
 				]
 				
+			},
+			{
+				"name": "Halloween 2014 Everything Bundle",
+				"defindex": 2135,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Halloween 2014 Community Bundle",
+				"item_description": "This creepy bundle contains FIFTY exquisite items created by members of the TF2 community to celebrate the Sixth Annual Scream Fortress event. There's no way to fit it all on one screen but we'll try:",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_2014_bundle",
+				"min_ilevel": 51,
+				"max_ilevel": 51,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_2014_bundle.fbd14ab25cdac2aec32f110a1af3690ae1c6e2bc.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_2014_bundle_large.a2e84620b13726191885481e538d3571186e134a.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				}
 			},
 			{
 				"name": "Craft Bar Level 1",
@@ -61778,6 +61829,372 @@
 				},
 				"used_by_classes": [
 
+				]
+				
+			},
+			{
+				"name": "Halloween 2014 Scout Crate",
+				"defindex": 5763,
+				"item_class": "tf_wearable",
+				"item_type_name": "Unlocked Crate",
+				"item_name": "Unlocked Creepy Scout Crate",
+				"item_description": "This creepy crate is only available for a\nlimited time. Some of the items inside are\nHaunted and Strange...\n\nIt's already unlocked and ready to open!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_03_scout",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_scout.9e4fd957f6155b6974ceebce52b5f32388ce1d6b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_scout_large.2a98ff901c8a4e4a69e4c2e6c369860cb6b01397.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Halloween 2014 Pyro Crate",
+				"defindex": 5764,
+				"item_class": "tf_wearable",
+				"item_type_name": "Unlocked Crate",
+				"item_name": "Unlocked Creepy Pyro Crate",
+				"item_description": "This creepy crate is only available for a\nlimited time. Some of the items inside are\nHaunted and Strange...\n\nIt's already unlocked and ready to open!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_03_pyro",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_pyro.e5dae963546c142fc66f6a46b0673b41e9345c90.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_pyro_large.4f39b2cccfdd2a17593eb7387b2bdb7b514ec11a.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Halloween 2014 Heavy Crate",
+				"defindex": 5765,
+				"item_class": "tf_wearable",
+				"item_type_name": "Unlocked Crate",
+				"item_name": "Unlocked Creepy Heavy Crate",
+				"item_description": "This creepy crate is only available for a\nlimited time. Some of the items inside are\nHaunted and Strange...\n\nIt's already unlocked and ready to open!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_03_heavy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_heavy.fd4bc9af158e7644a3e1273062625c43c7a24eb6.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_heavy_large.4ffebf85256069a9fce4a664bb02b92914678157.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Halloween 2014 Engineer Crate",
+				"defindex": 5766,
+				"item_class": "tf_wearable",
+				"item_type_name": "Unlocked Crate",
+				"item_name": "Unlocked Creepy Engineer Crate",
+				"item_description": "This creepy crate is only available for a\nlimited time. Some of the items inside are\nHaunted and Strange...\n\nIt's already unlocked and ready to open!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_03_engineer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_engineer.a061618114124c319c3363c3a4b08227b3afe7ff.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_engineer_large.76336d9b8857a8cf9413f4c361ab8f4bc7b8c385.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Halloween 2014 Spy Crate",
+				"defindex": 5767,
+				"item_class": "tf_wearable",
+				"item_type_name": "Unlocked Crate",
+				"item_name": "Unlocked Creepy Spy Crate",
+				"item_description": "This creepy crate is only available for a\nlimited time. Some of the items inside are\nHaunted and Strange...\n\nIt's already unlocked and ready to open!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_03_spy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_spy.2bdae76d4a66723cf273d4363ec42755adef7e3f.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_spy_large.ea023ff3c8310b8d4317e0f4b45e6e749b0f09f0.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Halloween 2014 Sniper Crate",
+				"defindex": 5768,
+				"item_class": "tf_wearable",
+				"item_type_name": "Unlocked Crate",
+				"item_name": "Unlocked Creepy Sniper Crate",
+				"item_description": "This creepy crate is only available for a\nlimited time. Some of the items inside are\nHaunted and Strange...\n\nIt's already unlocked and ready to open!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_03_sniper",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_sniper.27b6799a3493db442a542adc9cdf2ea44db71934.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_sniper_large.35576a5c3b309f813b9ffe7c9e81212659a94a7e.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Halloween 2014 Soldier Crate",
+				"defindex": 5769,
+				"item_class": "tf_wearable",
+				"item_type_name": "Unlocked Crate",
+				"item_name": "Unlocked Creepy Soldier Crate",
+				"item_description": "This creepy crate is only available for a\nlimited time. Some of the items inside are\nHaunted and Strange...\n\nIt's already unlocked and ready to open!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_03_soldier",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_soldier.0429c777b64ac2d4d1c1a1e98019d70dda81910f.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_soldier_large.507f3c59fde53f2a8eacefdaccc4b8b278879edd.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Halloween 2014 Medic Crate",
+				"defindex": 5770,
+				"item_class": "tf_wearable",
+				"item_type_name": "Unlocked Crate",
+				"item_name": "Unlocked Creepy Medic Crate",
+				"item_description": "This creepy crate is only available for a\nlimited time. Some of the items inside are\nHaunted and Strange...\n\nIt's already unlocked and ready to open!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_03_medic",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_medic.1117d128c8cbf9b981c49532828e0bf7424d967f.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_medic_large.74f26b956e2c1713394bfd93e55571f6a38c8926.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Halloween 2014 Demo Crate",
+				"defindex": 5771,
+				"item_class": "tf_wearable",
+				"item_type_name": "Unlocked Crate",
+				"item_name": "Unlocked Creepy Demo Crate",
+				"item_description": "This creepy crate is only available for a\nlimited time. Some of the items inside are\nHaunted and Strange...\n\nIt's already unlocked and ready to open!",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/crate_halloween_03_demoman",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_demoman.f5d97a4909f9883b989362f285a6f546886efdab.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/crate_halloween_03_demoman_large.cb29783dd07825686b3aa6f4710d4ac3c954ae3d.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				}
+			},
+			{
+				"name": "Halloween Giveaway Cauldron 2014 (Base)",
+				"defindex": 5772,
+				"item_class": "tf_wearable",
+				"item_type_name": "Package",
+				"item_name": "Halloween Gift Cauldron",
+				"item_description": "You can pry open the lid of this cauldron to see what strangeness lies within... from your backpack... IF YOU DARE.",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/gift_halloween_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gift_halloween_02.a6ed3bd94ff392449b8db38b3956846194f18430.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gift_halloween_02_large.7c06fa7c242e3a0a25eb3806e638206ec05f06c8.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Halloween Giveaway Cauldron 2014 (Achievement)",
+				"defindex": 5773,
+				"item_class": "tf_wearable",
+				"item_type_name": "Package",
+				"item_name": "Halloween Gift Cauldron",
+				"item_description": "You can pry open the lid of this cauldron to see what strangeness lies within... from your backpack... IF YOU DARE.",
+				"proper_name": false,
+				"item_slot": "action",
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/crafting/gift_halloween_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gift_halloween_02.a6ed3bd94ff392449b8db38b3956846194f18430.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gift_halloween_02_large.7c06fa7c242e3a0a25eb3806e638206ec05f06c8.png",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "gift"
+				},
+				"attributes": [
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
 				]
 				
 			},
@@ -98459,7 +98876,7 @@
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
 				"item_name": "FR-0",
-				"item_description": "Own this one-of-a-kind piece of memorabilia from the classic ‘70s film \"Blaxton Hale vs. Black HAL 9000\".",
+				"item_description": "Own this one-of-a-kind piece of memorabilia from the classic '70s film \"Blaxton Hale vs. Black HAL 9000\".",
 				"proper_name": true,
 				"item_slot": "misc",
 				"model_player": "models/workshop/player/items/demo/robo_demo_fro/robo_demo_fro.mdl",
@@ -118990,6 +119407,3171 @@
 					}
 				]
 				
+			},
+			{
+				"name": "The Deadliest Catch",
+				"defindex": 30484,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Deadliest Catch",
+				"item_description": "It's cephaloposh! It's cephalopractical! This state-of-the-art octopus disguise kit will have everyone thinking you squirt ink out of your orifices.",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/nobody_suspects_a_thing/nobody_suspects_a_thing",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/nobody_suspects_a_thing.daeefa777747b15b727437e13de27ec88dbfa58c.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/nobody_suspects_a_thing_large.f002b6dd818448dd9d2061ec3caf678044c69127.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Herzensbrecher",
+				"defindex": 30486,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Herzensbrecher",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/medic/sf14_medic_herzensbrecher/sf14_medic_herzensbrecher.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/medic/sf14_medic_herzensbrecher/sf14_medic_herzensbrecher",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_medic_herzensbrecher.629754a9872a76182bec6235df5a8a51b13c535a.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_medic_herzensbrecher_large.412963fd656f72328642597cda1862dde440e40d.png",
+				"drop_type": "none",
+				"item_set": "sf14_medic_dog",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Hundekopf",
+				"defindex": 30487,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Hundkopf",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/medic/sf14_medic_hundkopf/sf14_medic_hundkopf.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/medic/sf14_medic_hundkopf/sf14_medic_hundkopf",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_medic_hundkopf.526fdee3955a28fbf3ccdf71c28667bf7c7a3078.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_medic_hundkopf_large.022d2936b53565645ad9c2d19d57b9c3f8c246ac.png",
+				"drop_type": "none",
+				"item_set": "sf14_medic_dog",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Kriegsmaschine-9000",
+				"defindex": 30488,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Kriegsmaschine-9000",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/medic/sf14_medic_kriegsmaschine_9000/sf14_medic_kriegsmaschine_9000.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/medic/sf14_medic_kriegsmaschine_9000/sf14_medic_kriegsmaschine_9000",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_medic_kriegsmaschine_9000.1c9733c91a3577b515b1303e727d8093732a960f.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_medic_kriegsmaschine_9000_large.5b1c80bb3a36d1b35d79fe554df1ce06c892ca32.png",
+				"drop_type": "none",
+				"item_set": "sf14_medic_dog",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Transylvanian Toupe",
+				"defindex": 30489,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Vampire Makeover",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/medic/sf14_vampire_makeover/sf14_vampire_makeover.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/medic/sf14_vampire_makeover/sf14_vampire_makeover",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_vampire_makeover.57cfdade4dea85b064d596a2768547bcf0d1354e.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_vampire_makeover_large.e74fb814c485cf326510f854ca6b95f887334c95.png",
+				"drop_type": "none",
+				"item_set": "sf14_medic_vampire",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Vampiric Vesture",
+				"defindex": 30490,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Vampiric Vesture",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/medic/sf14_vampiric_vesture/sf14_vampiric_vesture.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/medic/sf14_vampiric_vesture/sf14_vampiric_vesture",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_vampiric_vesture.2b54a4bcbb477777d92ed1c8e376c21a979009cd.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_vampiric_vesture_large.f8ae9efda94975721a000d8c95dd3299e0659ab7.png",
+				"drop_type": "none",
+				"item_set": "sf14_medic_vampire",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Nugget Noggin",
+				"defindex": 30491,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Nugget Noggin",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/scout/sf14_nugget_noggin/sf14_nugget_noggin.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/sf14_nugget_noggin/sf14_nugget_noggin",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_nugget_noggin.dceb9a335871cc960ea8d2a987d991ab35a8ad7f.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_nugget_noggin_large.8dc553f04d9b206ef56277e30a514c1402e4d5d1.png",
+				"drop_type": "none",
+				"item_set": "sf14_scout_chicken",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Fowl Fists",
+				"defindex": 30492,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Fowl Fists",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/scout/sf14_fowl_fists/sf14_fowl_fists.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/sf14_fowl_fists/sf14_fowl_fists",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_fowl_fists.693c6dcbe40910a819bc012eae20d79045d62493.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_fowl_fists_large.6ba910d95f7059b279686cbe34f81292c8ec82d9.png",
+				"drop_type": "none",
+				"item_set": "sf14_scout_chicken",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Talon Trotters",
+				"defindex": 30493,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Talon Trotters",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/scout/sf14_talon_trotters/sf14_talon_trotters.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/sf14_talon_trotters/sf14_talon_trotters",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_talon_trotters.5b0f01dc8372f301081eb29520ba7cae1acb9d86.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_talon_trotters_large.da92feb59c4a18fb46b56677daa517056e213523.png",
+				"drop_type": "none",
+				"item_set": "sf14_scout_chicken",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Head Hunter",
+				"defindex": 30494,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Head Hunter",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/scout/sf14_scout_hunter_head/sf14_scout_hunter_head.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/sf14_scout_hunter_head/sf14_scout_hunter_head",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_scout_hunter_head.701676b5b5167abdd6f9c5829fe8100d17365350.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_scout_hunter_head_large.ff2a204693417ec27011eb9d087d00c6b1021b8f.png",
+				"drop_type": "none",
+				"item_set": "sf14_scout_hunter",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Claws And Infect",
+				"defindex": 30495,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Claws And Infect",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/scout/sf14_scout_hunter_arm/sf14_scout_hunter_arm.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/sf14_scout_hunter_arm/sf14_scout_hunter_arm",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_scout_hunter_arm.31651b578c6247820a01eb501e19ad385d770702.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_scout_hunter_arm_large.11d8eb6351e3ecdf1f7bffa4fb3d1aa28e821908.png",
+				"drop_type": "none",
+				"item_set": "sf14_scout_hunter",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Crazy Legs",
+				"defindex": 30496,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Crazy Legs",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/scout/sf14_scout_hunter_legs/sf14_scout_hunter_legs.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/sf14_scout_hunter_legs/sf14_scout_hunter_legs",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_scout_hunter_legs.6cca8c9ef98ae197497edab83ec4e92e0f64cee1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_scout_hunter_legs_large.5eab975fb0468c5638da2c10158b95bc50a530bf.png",
+				"drop_type": "none",
+				"item_set": "sf14_scout_hunter",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Scout"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Ghost of Spies Checked Past",
+				"defindex": 30497,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Ghost of Spies Checked Past",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/sf14_ghost_of_spies_checked_past/sf14_ghost_of_spies_checked_past",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_ghost_of_spies_checked_past.d6ebee917b8d4f703df7301c66e1081bdbc7bb22.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_ghost_of_spies_checked_past_large.87bab4c611845601290177106a3c9b7fa360953e.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "The Hooded Haunter",
+				"defindex": 30498,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Hooded Haunter",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/sf14_hooded_haunter_classes/sf14_hooded_haunter_classes",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_hooded_haunter_classes.25851a07f2ddd496210f050f2df7376bbd2671b0.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_hooded_haunter_classes_large.8ef140099573ee2d16c569fb126c9eb22738111b.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Conspiratorial Cut",
+				"defindex": 30499,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Cranial Conspiracy",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/sniper/sf14_conspiratorial_cut/sf14_conspiratorial_cut.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/sniper/sf14_conspiratorial_cut/sf14_conspiratorial_cut",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_conspiratorial_cut.a6ac5c3c68c37ccd9544143b21ddd294f41bd057.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_conspiratorial_cut_large.81145176b7fd1532cf44c68dc433e2f625055f41.png",
+				"drop_type": "none",
+				"item_set": "sf14_sniper_lizard",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Skinless Slashers",
+				"defindex": 30500,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Scaly Scrapers",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/sniper/sf14_skinless_slashers/sf14_skinless_slashers.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/sniper/sf14_skinless_slashers/sf14_skinless_slashers",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_skinless_slashers.e4cc1f1b52a22332559387d4e828d3fdfdd2747a.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_skinless_slashers_large.33be2da8fd619f9f9b059d6641db26e3a5229f70.png",
+				"drop_type": "none",
+				"item_set": "sf14_sniper_lizard",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Marsupial Man",
+				"defindex": 30501,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Marsupial Man",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/sniper/sf14_marsupial_man/sf14_marsupial_man.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/sniper/sf14_marsupial_man/sf14_marsupial_man",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_marsupial_man.71f8420eff43bb28773d7cbc3e664543c6870ad8.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_marsupial_man_large.a32b4a86d813ccf9136a90264718312e7a225521.png",
+				"drop_type": "none",
+				"item_set": "sf14_sniper_kangaroo",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Kanga Kickers",
+				"defindex": 30502,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Kanga Kickers",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/sniper/sf14_kanga_kickers/sf14_kanga_kickers.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/sniper/sf14_kanga_kickers/sf14_kanga_kickers",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_kanga_kickers.b720fe12d2b61e8ce08714b3d6c38fede9986c39.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_kanga_kickers_large.36f21e01b1069fb916ee4ecbde91f2b95d7c0bfa.png",
+				"drop_type": "none",
+				"item_set": "sf14_sniper_kangaroo",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Roo Rippers",
+				"defindex": 30503,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Roo Rippers",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/sniper/sf14_roo_rippers/sf14_roo_rippers.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/sniper/sf14_roo_rippers/sf14_roo_rippers",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_roo_rippers.be33be145a325954e0fa94a89cdea17b0a78b2b1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_roo_rippers_large.20d33744d9624795d22aee78592a81404401f2b1.png",
+				"drop_type": "none",
+				"item_set": "sf14_sniper_kangaroo",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Marsupial Muzzle",
+				"defindex": 30504,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Marsupial Muzzle",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/sniper/sf14_marsupial_muzzle/sf14_marsupial_muzzle.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/sniper/sf14_marsupial_muzzle/sf14_marsupial_muzzle",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_marsupial_muzzle.fc3178a684c9c977981fd3af9f74d54a2046dab9.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_marsupial_muzzle_large.ec61962a42bfd504570b297505a0479955106e26.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Shadowman's Shade",
+				"defindex": 30505,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Shadowman's Shade",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/spy/sf14_hw2014_spy_voodoo_hat/sf14_hw2014_spy_voodoo_hat.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/spy/sf14_hw2014_spy_voodoo_hat/sf14_hw2014_spy_voodoo_hat",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_hw2014_spy_voodoo_hat.c1a29f167e10905f88d95876a425ed0ab33fe4b1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_hw2014_spy_voodoo_hat_large.caaf7d9c8e6248edf0d9fa8b21b431558a66ba8a.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Nightmare Hunter",
+				"defindex": 30506,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Nightmare Hunter",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/spy/sf14_nightmare_fedora/sf14_nightmare_fedora.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/spy/sf14_nightmare_fedora/sf14_nightmare_fedora",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_nightmare_fedora.fa2c67a406cabb3540e349d6f02e295df871f826.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_nightmare_fedora_large.c921cb870f8e64ebd22c15367b652e920a266538.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Rogue's Rabbit",
+				"defindex": 30507,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Rogue's Rabbit",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/spy/sf14_the_rogues_rabbit/sf14_the_rogues_rabbit.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/spy/sf14_the_rogues_rabbit/sf14_the_rogues_rabbit",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_the_rogues_rabbit.25317761354e6aac8837de8a6c669a4092970939.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_the_rogues_rabbit_large.2ce942ddad3f38a58ab72db3a1029cffa26702c1.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Iron Fist",
+				"defindex": 30508,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Iron Fist",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/engineer/sf14_iron_fist/sf14_iron_fist.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/engineer/sf14_iron_fist/sf14_iron_fist",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_iron_fist.ffe2516168df1a5f8eac7699ac70f5bd45264be2.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_iron_fist_large.e05bf7568c3eaa5f3fbaf1626030ac6f0f0a36cd.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Beep Man",
+				"defindex": 30509,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Beep Man",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/engineer/sf14_beep_man/sf14_beep_man.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/engineer/sf14_beep_man/sf14_beep_man",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_beep_man.a6a6661fcd824e10d747de5bcf9dd9cf3ddd2812.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_beep_man_large.7ecbdaa979495243ae1d3374d5086ed464780225.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Soul of 'Spenser's Past",
+				"defindex": 30510,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Soul of 'Spensers Past",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/engineer/sf14__soul_of_spensers_past/sf14__soul_of_spensers_past.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/engineer/sf14__soul_of_spensers_past/sf14__soul_of_spensers_past",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14__soul_of_spensers_past.ba2fec45a75f55ca7625318cbcc08f359e6735c1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14__soul_of_spensers_past_large.843e9d744898671c34aa937ebaf0e42295bbd32c.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Tiny Texan",
+				"defindex": 30511,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Tiny Texan",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/engineer/sf14_tiny_texan/sf14_tiny_texan.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/engineer/sf14_tiny_texan/sf14_tiny_texan",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_tiny_texan.7ae1b44b2041982c20d92b526befad6eec20484d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_tiny_texan_large.80778f759d37e197ffb9373f0449dca19b824104.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Facepeeler",
+				"defindex": 30512,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Facepeeler",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/spy/sf14_spy_facepeeler/sf14_spy_facepeeler.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/spy/sf14_spy_facepeeler/sf14_spy_facepeeler",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_spy_facepeeler.a0573e9874af57d4a01d41ee3f95c4056c8b6cec.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_spy_facepeeler_large.82dc337e8202296a203685082359c972cfdf2bf8.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Spy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Mr. Mundee's Wild Ride",
+				"defindex": 30513,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Mr. Mundee's Wild Ride",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/sniper/sf14_sniper_ostrich_legs/sf14_sniper_ostrich_legs.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/sniper/sf14_sniper_ostrich_legs/sf14_sniper_ostrich_legs",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_sniper_ostrich_legs.c879e2f5ea6233f2168b8a8627896979e6d6bbb2.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_sniper_ostrich_legs_large.63e05de601a675e9dad429abdce08fa2433d8202.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Sniper"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Templar's Spirit",
+				"defindex": 30514,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Templar's Spirit",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/medic/sf14_templar_hood/sf14_templar_hood.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/medic/sf14_templar_hood/sf14_templar_hood",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_templar_hood.c3d63e818b9dbccff08f8ea62fb4b69f0c12fb10.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_templar_hood_large.2f64f0fe496268a26c72a170b42eecdbf22f290f.png",
+				"drop_type": "none",
+				"item_set": "sf14_medic_templar",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Wings of Purity",
+				"defindex": 30515,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Wings of Purity",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/medic/sf14_purity_wings/sf14_purity_wings.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/medic/sf14_purity_wings/sf14_purity_wings",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_purity_wings.5b9c8f28f68fafe3c9a236a456669f45974a1756.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_purity_wings_large.404e13a08f06491040e3a879252876b8e813f493.png",
+				"drop_type": "none",
+				"item_set": "sf14_medic_templar",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Medic"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Forgotten King's Restless Head",
+				"defindex": 30516,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Forgotten King's Restless Head",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/demo/sf14_deadking_head/sf14_deadking_head.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/demo/sf14_deadking_head/sf14_deadking_head",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_deadking_head.cc966f571ecb60acdf79933527e06fd1f92d1f40.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_deadking_head_large.06d7670909e4a4a353401ce44e3e487522475ffa.png",
+				"drop_type": "none",
+				"item_set": "sf14_demo_skeleton",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Forgotten King's Pauldrons",
+				"defindex": 30517,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Forgotten King's Pauldrons",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/demo/sf14_deadking_pauldrons/sf14_deadking_pauldrons.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/demo/sf14_deadking_pauldrons/sf14_deadking_pauldrons",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_deadking_pauldrons.fdb25861729b2643eefc4f37168077cafed7e040.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_deadking_pauldrons_large.389cf42d71801df41e667bbc00764b2ad209a564.png",
+				"drop_type": "none",
+				"item_set": "sf14_demo_skeleton",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Eyeborg",
+				"defindex": 30518,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Eyeborg",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/demo/sf14_demo_cyborg/sf14_demo_cyborg.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/demo/sf14_demo_cyborg/sf14_demo_cyborg",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_demo_cyborg.acf48ac8e596c09056bdd834cd58840d4bb434a3.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_demo_cyborg_large.2444b6707c3fe321f058ee630abd030f2928673b.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Explosive Mind",
+				"defindex": 30519,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Mannhattan Project",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/demo/sf14_explosive_mind/sf14_explosive_mind.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/demo/sf14_explosive_mind/sf14_explosive_mind",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_explosive_mind.cdb804793f872c368af5e12b3b31be239066e1cb.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_explosive_mind_large.9b8e1b07a874cfa4eac7044a8b88e3f0f53c60bb.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Demoman"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Ghoul Gibbin' Gear",
+				"defindex": 30520,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Ghoul Gibbin' Gear",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/soldier/sf14_ghoul_gibbing_gear/sf14_ghoul_gibbing_gear.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/soldier/sf14_ghoul_gibbing_gear/sf14_ghoul_gibbing_gear",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_ghoul_gibbing_gear.db0e06a45654937c8929cc13c20a6175b9835f0b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_ghoul_gibbing_gear_large.20735f5ad3a18331f6de1fad4327cbd20bc719ea.png",
+				"drop_type": "none",
+				"item_set": "sf14_soldier_supernatural_hunter",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Hellhunter's Headpiece",
+				"defindex": 30521,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Hellhunter's Headpiece",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/soldier/sf14_hellhunters_headpiece/sf14_hellhunters_headpiece.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/soldier/sf14_hellhunters_headpiece/sf14_hellhunters_headpiece",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_hellhunters_headpiece.4b2c69ac5ca9d98aa2e67d0a22dc3c526b6577fb.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_hellhunters_headpiece_large.3093bffe2c52ccac221c6f2f4142d478d448528e.png",
+				"drop_type": "none",
+				"item_set": "sf14_soldier_supernatural_hunter",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Supernatural Stalker",
+				"defindex": 30522,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Supernatural Stalker",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/soldier/sf14_the_supernatural_stalker/sf14_the_supernatural_stalker.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/soldier/sf14_the_supernatural_stalker/sf14_the_supernatural_stalker",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_the_supernatural_stalker.138ff3d9ff7d1e83c4c996b33fc79d6ea676fca4.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_the_supernatural_stalker_large.bf85ce2737ab0e04a9f6c375e8fab914dc2aa808.png",
+				"drop_type": "none",
+				"item_set": "sf14_soldier_supernatural_hunter",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Garden Bristles",
+				"defindex": 30523,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Garden Bristles",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/engineer/sf14_hw2014_engi_gnome_beard/sf14_hw2014_engi_gnome_beard.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/engineer/sf14_hw2014_engi_gnome_beard/sf14_hw2014_engi_gnome_beard",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_hw2014_engi_gnome_beard.45e89310d22541a9b221dbab925fa6bc2b54379d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_hw2014_engi_gnome_beard_large.320d5230838459bbfe3005b95aab9d5006f8e88d.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Engineer"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Battle Bird",
+				"defindex": 30524,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Battle Bird",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/soldier/sf14_the_battle_bird/sf14_the_battle_bird.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/soldier/sf14_the_battle_bird/sf14_the_battle_bird",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_the_battle_bird.9032b0b8955af4cb42a2563fbddd5ac79117ffaf.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_the_battle_bird_large.8c2b9b8026e806bd35a8c7ee92ba76cb173b92a7.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Soldier"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Creature's Grin",
+				"defindex": 30525,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Creature’s Grin",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/pyro/sf14_the_creatures_grin/sf14_the_creatures_grin.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/pyro/sf14_the_creatures_grin/sf14_the_creatures_grin",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_the_creatures_grin.a1ec2209b260dc6b868b8e73fd5345edc9fb7129.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_the_creatures_grin_large.d7546cf9c9fd24f4bb8f735da7b48ab481c579aa.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Arsonist Apparatus",
+				"defindex": 30526,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Arsonist Apparatus",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/pyro/sf14_hw2014_robot_arm/sf14_hw2014_robot_arm.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/pyro/sf14_hw2014_robot_arm/sf14_hw2014_robot_arm",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_hw2014_robot_arm.6ec299214b787c85ddc70c3d27a814b9df99ad13.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_hw2014_robot_arm_large.3f8cbfe5d1f145450f3757cb9803c65285698a2f.png",
+				"drop_type": "none",
+				"item_set": "sf14_pyro_robot",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Moccasin Machinery",
+				"defindex": 30527,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Moccasin Machinery",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/pyro/sf14_hw2014_robot_legg/sf14_hw2014_robot_legg.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/pyro/sf14_hw2014_robot_legg/sf14_hw2014_robot_legg",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_hw2014_robot_legg.2c85ba64958e30627e4ab57dc77bf93bd4c9b961.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_hw2014_robot_legg_large.e63fd0568e100282a791948a07f42dfcb4e73d3f.png",
+				"drop_type": "none",
+				"item_set": "sf14_pyro_robot",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Lollichop Licker",
+				"defindex": 30528,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Lollichop Licker",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/pyro/sf14_lollichop_licker/sf14_lollichop_licker.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/pyro/sf14_lollichop_licker/sf14_lollichop_licker",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_lollichop_licker.63f89ee860a2b60a41299f37f259ecf44cea018e.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_lollichop_licker_large.7a8d77b816c6cf4407b572e332a8342c73319945.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Mr. Juice",
+				"defindex": 30529,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Mr. Juice",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/pyro/sf14_mr_juice/sf14_mr_juice.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/pyro/sf14_mr_juice/sf14_mr_juice",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_mr_juice.6491f5391ce6c7842da871e3509eaed09c17b138.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_mr_juice_large.f9d7ca014ea47caab6d8cbe9c3e48f7ed8a34899.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Vampyro",
+				"defindex": 30530,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Vampyro",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/pyro/sf14_vampyro/sf14_vampyro.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/pyro/sf14_vampyro/sf14_vampyro",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_vampyro.c481c2d0285407b0fddb19348368f3453f500c9d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_vampyro_large.492fd3787f431c05ed9d20c5623d8ef076ad2403.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Bone-Cut Belt",
+				"defindex": 30531,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Bone-Cut Belt",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/heavy/sf14_halloween_bone_cut_belt/sf14_halloween_bone_cut_belt.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/heavy/sf14_halloween_bone_cut_belt/sf14_halloween_bone_cut_belt",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_halloween_bone_cut_belt.736e3dcd26e085f85ec6286d5104047a7bd665ff.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_halloween_bone_cut_belt_large.b67e690b50d9ddd6380c214ecd5edc4db2c932d5.png",
+				"drop_type": "none",
+				"item_set": "sf14_heavy_minotaur",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Bull Locks",
+				"defindex": 30532,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Bull Locks",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/heavy/sf14_halloween_bull_locks/sf14_halloween_bull_locks.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/heavy/sf14_halloween_bull_locks/sf14_halloween_bull_locks",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_halloween_bull_locks.184415abf6cc72e53dbca7004d8dbd3027a01e5b.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_halloween_bull_locks_large.e5000bc1e76f0cb9a2be6016ec215f2b382a55ce.png",
+				"drop_type": "none",
+				"item_set": "sf14_heavy_minotaur",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Minsk Beef",
+				"defindex": 30533,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Minsk Beef",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/heavy/sf14_halloween_minsk_beef/sf14_halloween_minsk_beef.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/heavy/sf14_halloween_minsk_beef/sf14_halloween_minsk_beef",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_halloween_minsk_beef.1e75d66dc95916b794a84f57517734c5ea3e9c76.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_halloween_minsk_beef_large.4c75438467a893375d39d670e62de65bce08a193.png",
+				"drop_type": "none",
+				"item_set": "sf14_heavy_minotaur",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Immobile Suit",
+				"defindex": 30534,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Immobile Suit",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/heavy/sf14_heavy_robo_chest/sf14_heavy_robo_chest.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/heavy/sf14_heavy_robo_chest/sf14_heavy_robo_chest",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_heavy_robo_chest.fed298ae9b3b636fffe448428797cb788b5cd80f.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_heavy_robo_chest_large.df00755830514cbd27a71de9c0621e29426ea5be.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Heavy"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Kritz Or Treat Canteen",
+				"defindex": 30535,
+				"item_class": "tf_powerup_bottle",
+				"item_type_name": "Usable Item",
+				"item_name": "Kritz or Treat Canteen",
+				"proper_name": true,
+				"item_slot": "action",
+				"model_player": "models/workshop/player/items/scout/kritz_or_treat_canteen/kritz_or_treat_canteen.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/scout/kritz_or_treat_canteen/kritz_or_treat_canteen",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/kritz_or_treat_canteen.802b6c0b8cb4176a37506f10dd5d5228b562fb75.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/kritz_or_treat_canteen_large.655175f5aff95b8214b1bb880ac38968680340a4.png",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"capabilities": {
+					"nameable": true,
+					"usable": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "powerup_bottle"
+				},
+				"attributes": [
+					{
+						"name": "powerup charges",
+						"class": "powerup_charges",
+						"value": 0
+					},
+					{
+						"name": "powerup max charges",
+						"class": "powerup_max_charges",
+						"value": 3
+					},
+					{
+						"name": "powerup duration",
+						"class": "powerup_duration",
+						"value": 5
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
+			},
+			{
+				"name": "Cursed Cruise",
+				"defindex": 30536,
+				"item_class": "tf_wearable",
+				"item_type_name": "Cosmetic Item",
+				"item_name": "Li'l Dutchman",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_cursed_cruise.91e90bf9e5b853bf9d17be151e934d923416eb07.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_cursed_cruise_large.6bb2afe46e2df62f9c41b5acb70fe92a3b4404ad.png",
+				"drop_type": "none",
+				"holiday_restriction": "halloween_or_fullmoon",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 90
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater score type 2",
+						"class": "kill_eater_score_type_2",
+						"value": 91
+					},
+					{
+						"name": "kill eater score type 3",
+						"class": "kill_eater_score_type_3",
+						"value": 92
+					}
+				]
+				
 			}
 		]
 		,
@@ -124108,17 +127690,9 @@
 				"stored_as_integer": false
 			},
 			{
-				"name": "allow move during taunt",
-				"defindex": 559,
-				"attribute_class": "allow_move_during_taunt",
-				"effect_type": "positive",
-				"hidden": true,
-				"stored_as_integer": true
-			},
-			{
-				"name": "taunt force move forward speed",
+				"name": "taunt force move forward",
 				"defindex": 600,
-				"attribute_class": "taunt_force_move_forward_speed",
+				"attribute_class": "taunt_force_move_forward",
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -124245,6 +127819,15 @@
 				"description_string": "Mini-crits targets when fired at their back from close range",
 				"description_format": "value_is_additive",
 				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "torso scale",
+				"defindex": 620,
+				"attribute_class": "torso_scale",
+				"description_format": "value_is_percentage",
+				"effect_type": "negative",
 				"hidden": false,
 				"stored_as_integer": false
 			},
@@ -124394,6 +127977,14 @@
 				"stored_as_integer": false
 			},
 			{
+				"name": "taunt turn speed",
+				"defindex": 646,
+				"attribute_class": "taunt_turn_speed",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
 				"name": "sniper fires tracer HIDDEN",
 				"defindex": 647,
 				"attribute_class": "sniper_fires_tracer_HIDDEN",
@@ -124415,6 +128006,30 @@
 				"name": "crate generation code",
 				"defindex": 662,
 				"attribute_class": "crate_generation_code",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "taunt turn acceleration time",
+				"defindex": 687,
+				"attribute_class": "taunt_turn_acceleration_time",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "taunt move acceleration time",
+				"defindex": 688,
+				"attribute_class": "taunt_move_acceleration",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "taunt move speed",
+				"defindex": 689,
+				"attribute_class": "taunt_move_speed",
 				"effect_type": "positive",
 				"hidden": true,
 				"stored_as_integer": false
@@ -124482,6 +128097,23 @@
 				"effect_type": "negative",
 				"hidden": false,
 				"stored_as_integer": true
+			},
+			{
+				"name": "disable weapon switch",
+				"defindex": 698,
+				"attribute_class": "disable_weapon_switch",
+				"effect_type": "negative",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "hand scale",
+				"defindex": 699,
+				"attribute_class": "hand_scale",
+				"description_format": "value_is_percentage",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
 			},
 			{
 				"name": "CARD: damage bonus",
@@ -124915,7 +128547,7 @@
 				"attribute_class": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "random drop line item 1",
@@ -124923,7 +128555,7 @@
 				"attribute_class": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "random drop line item 2",
@@ -124931,7 +128563,7 @@
 				"attribute_class": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "random drop line item 3",
@@ -124939,7 +128571,7 @@
 				"attribute_class": null,
 				"effect_type": "value_is_from_lookup_table",
 				"hidden": true,
-				"stored_as_integer": false
+				"stored_as_integer": true
 			},
 			{
 				"name": "on taunt attach particle index",
@@ -124990,6 +128622,14 @@
 				"defindex": 2046,
 				"attribute_class": null,
 				"effect_type": "value_is_from_lookup_table",
+				"hidden": true,
+				"stored_as_integer": false
+			},
+			{
+				"name": "voice pitch scale",
+				"defindex": 2048,
+				"attribute_class": "voice_pitch_scale",
+				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": false
 			},
@@ -125663,6 +129303,111 @@
 				
 			},
 			{
+				"item_set": "sf14_demo_skeleton",
+				"name": "The Forgotten King",
+				"items": [
+					"Forgotten King's Restless Head",
+					"Forgotten King's Pauldrons"
+				]
+				
+			},
+			{
+				"item_set": "sf14_heavy_minotaur",
+				"name": "The Minsk Beast",
+				"items": [
+					"Minsk Beef",
+					"Bull Locks",
+					"Bone-Cut Belt"
+				]
+				
+			},
+			{
+				"item_set": "sf14_medic_dog",
+				"name": "Canis Ex Machina",
+				"items": [
+					"Hundekopf",
+					"Herzensbrecher",
+					"Kriegsmaschine-9000"
+				]
+				
+			},
+			{
+				"item_set": "sf14_medic_templar",
+				"name": "The Templar",
+				"items": [
+					"Templar's Spirit",
+					"Wings of Purity"
+				]
+				
+			},
+			{
+				"item_set": "sf14_medic_vampire",
+				"name": "Dr. Acula",
+				"items": [
+					"Transylvanian Toupe",
+					"Vampiric Vesture"
+				]
+				
+			},
+			{
+				"item_set": "sf14_pyro_robot",
+				"name": "The Automated Abnormality",
+				"items": [
+					"Moccasin Machinery",
+					"Arsonist Apparatus"
+				]
+				
+			},
+			{
+				"item_set": "sf14_scout_chicken",
+				"name": "The Deep-Fried Dummy",
+				"items": [
+					"Nugget Noggin",
+					"Talon Trotters",
+					"Fowl Fists"
+				]
+				
+			},
+			{
+				"item_set": "sf14_scout_hunter",
+				"name": "The Rooftop Rebel",
+				"items": [
+					"Head Hunter",
+					"Claws And Infect",
+					"Crazy Legs"
+				]
+				
+			},
+			{
+				"item_set": "sf14_sniper_kangaroo",
+				"name": "The Manngaroo",
+				"items": [
+					"Marsupial Man",
+					"Kanga Kickers",
+					"Roo Rippers"
+				]
+				
+			},
+			{
+				"item_set": "sf14_sniper_lizard",
+				"name": "The Reptiloid",
+				"items": [
+					"Skinless Slashers",
+					"Conspiratorial Cut"
+				]
+				
+			},
+			{
+				"item_set": "sf14_soldier_supernatural_hunter",
+				"name": "The Sgt. Helsing",
+				"items": [
+					"Hellhunter's Headpiece",
+					"Supernatural Stalker",
+					"Ghoul Gibbin' Gear"
+				]
+				
+			},
+			{
 				"item_set": "short2014_demo_drinking",
 				"name": "The South of the Border Pack",
 				"items": [
@@ -126268,6 +130013,48 @@
 				"name": "Demonflame"
 			},
 			{
+				"system": "unusual_tentmonster_purple_parent",
+				"id": 81,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Bonzo The All-Gnawing"
+			},
+			{
+				"system": "unusual_eyes_purple_parent",
+				"id": 82,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Amaranthine"
+			},
+			{
+				"system": "unusual_eyes_orange_parent",
+				"id": 83,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Stare From Beyond"
+			},
+			{
+				"system": "unusual_eyes_green_parent",
+				"id": 84,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "The Ooze"
+			},
+			{
+				"system": "unusual_souls_purple_parent",
+				"id": 85,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Haunted Phantasm Jr"
+			},
+			{
+				"system": "unusual_souls_green_parent",
+				"id": 86,
+				"attach_to_rootbone": true,
+				"attachment": "unusual",
+				"name": "Attrib_Particle86"
+			},
+			{
 				"system": "killstreak_eyeglow_1_teamcolor_red",
 				"id": 2001,
 				"attach_to_rootbone": false,
@@ -126374,6 +130161,18 @@
 				"id": 3010,
 				"attach_to_rootbone": false,
 				"name": "Mega Strike"
+			},
+			{
+				"system": "utaunt_souls_green_parent",
+				"id": 3011,
+				"attach_to_rootbone": false,
+				"name": "Haunted Phantasm"
+			},
+			{
+				"system": "utaunt_souls_purple_parent",
+				"id": 3012,
+				"attach_to_rootbone": false,
+				"name": "Ghastly Ghosts"
 			},
 			{
 				"system": "killstreak_eyeglow_4_teamcolor_red",
@@ -127781,6 +131580,21 @@
 			{
 				"type": 89,
 				"type_name": "Taunting Player Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 90,
+				"type_name": "Carnival Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 91,
+				"type_name": "Carnival Underworld Kills",
+				"level_data": "KillEaterRank"
+			},
+			{
+				"type": 92,
+				"type_name": "Carnival Games Won",
 				"level_data": "KillEaterRank"
 			}
 		]
