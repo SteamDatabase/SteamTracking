@@ -34,6 +34,10 @@
 .page_header_ctn.search {
 	padding-bottom: 70px;
 }
+.page_header_ctn.search.salebg {
+	padding-bottom: 30px;
+	background: transparent;
+}
 
 .searchbar {
 	height: 30px;
