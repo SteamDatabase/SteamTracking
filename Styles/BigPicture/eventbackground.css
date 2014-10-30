@@ -1,0 +1,24 @@
+
+EventBackground
+{
+	width: 1920px;
+	height: 1080px;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	transition-delay: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+.BackgroundImage
+{
+	width: 100%;
+	height: 100%;
+}
+
+.InStore EventBackground
+{
+	opacity: 1.0;
+	transition-delay: 0.0s;
+}

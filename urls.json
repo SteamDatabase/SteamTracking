@@ -253,7 +253,7 @@
 //
 // Other
 //
-"Random/BPEventBackground.html"                  : "https://store.steampowered.com/api/bpeventbackground/",
+"Random/BPEventBackground.xml"                   : "https://store.steampowered.com/api/bpeventbackground/",
 "Random/ControllerFirmware.vdf"                  : "https://steamcdn-a.akamaihd.net/controller_config/firmware/firmware.vdf",
 "Random/Alchemist.txt"                           : "http://repo.steampowered.com/steamos/lists/default_alchemist_main_amd64_Packages",
 "Random/JobPostings.html"                        : "https://valvesoftware.com/jobs/job_postings.html",
