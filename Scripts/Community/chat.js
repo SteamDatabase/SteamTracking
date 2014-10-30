@@ -381,7 +381,7 @@ function CFriendsList( strName, rgFriends, eFriendsListType, bStartHidden )
 	var elGroupHandle = $J('<div/>', { 'class': 'friendslist_group_handle' } );
 	this.m_elGroupToggleControl = $J('<span/>', {'class': 'friendslist_group_handle_toggle' }).text( this.m_bVisisble ? '–' : '+' );
 	this.m_elGroupOnlineSummary = $J( '<span/>', {'class': 'friendlist_group_onlinesummary' } );
-	elGroupHandle.append( this.m_elGroupToggleControl, this.m_strName, this.m_elGroupOnlineSummary );
+	elGroupHandle.append( this.m_elGroupToggleControl, $J('<span/>').text(this.m_strName), this.m_elGroupOnlineSummary );
 
 	this.m_elFriendsList = $J('<div/>', {'class': 'friendslist_group_friends' } );
 
