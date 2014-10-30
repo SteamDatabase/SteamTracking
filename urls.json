@@ -194,6 +194,12 @@
 "Scripts/user_reviews.js"                        : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/user_reviews.js?__TIME__&l=english",
 
 //
+// Big Picture CSS
+//
+"Styles/BigPicture/eventbackground.css"          : "https://store.akamai.steamstatic.com/public/css/bigpicture/eventbackground.css?__TIME__",
+"Styles/BigPicture/eventbackground_empty.css"    : "https://store.akamai.steamstatic.com/public/css/bigpicture/eventbackground_empty.css?__TIME__",
+
+//
 // Mobile CSS (mixed)
 //
 "Styles/Mobile/shared_mobile.css"                : "https://steamcommunity-a.akamaihd.net/public/shared/css/shared_mobile.css?__TIME__",
