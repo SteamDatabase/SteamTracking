@@ -194,6 +194,12 @@
 "Scripts/user_reviews.js"                        : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/user_reviews.js?__TIME__&l=english",
 
 //
+// Big Picture CSS
+//
+"Styles/BigPicture/eventbackground.css"          : "https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground.css?__TIME__",
+"Styles/BigPicture/eventbackground_empty.css"    : "https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground_empty.css?__TIME__",
+
+//
 // Mobile CSS (mixed)
 //
 "Styles/Mobile/shared_mobile.css"                : "https://steamcommunity-a.akamaihd.net/public/shared/css/shared_mobile.css?__TIME__",
@@ -247,6 +253,7 @@
 //
 // Other
 //
+"Random/BPEventBackground.html"                  : "https://store.steampowered.com/api/bpeventbackground/",
 "Random/ControllerFirmware.vdf"                  : "https://steamcdn-a.akamaihd.net/controller_config/firmware/firmware.vdf",
 "Random/Alchemist.txt"                           : "http://repo.steampowered.com/steamos/lists/default_alchemist_main_amd64_Packages",
 "Random/JobPostings.html"                        : "https://valvesoftware.com/jobs/job_postings.html",
