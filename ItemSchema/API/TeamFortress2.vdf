@@ -2733,7 +2733,7 @@
 		"halloween2014keylesscrate"
 		{
 			"item_class"	"tf_wearable"
-			"first_sale_date"	"2014/10/30"
+			"first_sale_date"	"2014/10/31"
 			"holiday_restriction"	"halloween_or_fullmoon"
 			"tool"
 			{
