@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.c29832cdf92bf2185afa6450b4b9ff278ed08f7f.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.0e134c0c118e32f9c51a8802f4cef69b7f2af192.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -118714,11 +118714,12 @@
 				"drop_type": "none",
 				"item_set": "ai_pack",
 				"holiday_restriction": "halloween_or_fullmoon",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -118742,11 +118743,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
 					}
 				]
 				
@@ -118770,11 +118766,12 @@
 				"drop_type": "none",
 				"item_set": "ai_pack",
 				"holiday_restriction": "halloween_or_fullmoon",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -118798,11 +118795,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
 					}
 				]
 				
@@ -118826,11 +118818,12 @@
 				"drop_type": "none",
 				"item_set": "ai_pack",
 				"holiday_restriction": "halloween_or_fullmoon",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -118854,11 +118847,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
 					}
 				]
 				
@@ -118881,11 +118869,12 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/ai_spacehelmet_large.e5b10b3c85c37ecd420cc06b3a98eb7b2d2ccd0c.png",
 				"drop_type": "none",
 				"item_set": "alien_isolation_merc_set",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -118905,11 +118894,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
 					}
 				]
 				
@@ -118931,10 +118915,11 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/c_ai_flamethrower.2c57cf2fa2548c04baeb0611ff0e6c448a679a69.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/c_ai_flamethrower_large.5fe879464fd1bdb8afcead663045aa1622dae8f2.png",
 				"item_set": "alien_isolation_merc_set",
-				"craft_class": "",
+				"craft_class": "weapon",
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"nameable": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -118946,14 +118931,6 @@
 				},
 				"used_by_classes": [
 					"Pyro"
-				]
-				,
-				"attributes": [
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
-					}
 				]
 				
 			},
@@ -119409,11 +119386,11 @@
 				
 			},
 			{
-				"name": "The Deadliest Catch",
+				"name": "The Dadliest Catch",
 				"defindex": 30484,
 				"item_class": "tf_wearable",
 				"item_type_name": "Hat",
-				"item_name": "Deadliest Catch",
+				"item_name": "Dadliest Catch",
 				"item_description": "It's cephaloposh! It's cephalopractical! This state-of-the-art octopus disguise kit will have everyone thinking you squirt ink out of your orifices.",
 				"proper_name": true,
 				"item_slot": "misc",
@@ -119426,11 +119403,12 @@
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/nobody_suspects_a_thing_large.f002b6dd818448dd9d2061ec3caf678044c69127.png",
 				"drop_type": "none",
 				"holiday_restriction": "halloween_or_fullmoon",
-				"craft_class": "",
+				"craft_class": "hat",
 				"craft_material_type": "hat",
 				"capabilities": {
 					"nameable": true,
 					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
 					"can_craft_count": true,
 					"can_craft_mark": true,
 					"can_be_restored": true,
@@ -119450,11 +119428,6 @@
 						"name": "kill eater kill type",
 						"class": "kill_eater_kill_type",
 						"value": 64
-					},
-					{
-						"name": "cannot trade",
-						"class": "cannot_trade",
-						"value": 1
 					}
 				]
 				
@@ -120390,7 +120363,6 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_marsupial_man.71f8420eff43bb28773d7cbc3e664543c6870ad8.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_marsupial_man_large.a32b4a86d813ccf9136a90264718312e7a225521.png",
 				"drop_type": "none",
-				"item_set": "sf14_sniper_kangaroo",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"craft_class": "",
 				"craft_material_type": "hat",
@@ -120574,6 +120546,7 @@
 				"image_url": "http://media.steampowered.com/apps/440/icons/sf14_marsupial_muzzle.fc3178a684c9c977981fd3af9f74d54a2046dab9.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/sf14_marsupial_muzzle_large.ec61962a42bfd504570b297505a0479955106e26.png",
 				"drop_type": "none",
+				"item_set": "sf14_sniper_kangaroo",
 				"holiday_restriction": "halloween_or_fullmoon",
 				"craft_class": "",
 				"craft_material_type": "hat",
@@ -129382,7 +129355,7 @@
 				"item_set": "sf14_sniper_kangaroo",
 				"name": "The Manngaroo",
 				"items": [
-					"Marsupial Man",
+					"Marsupial Muzzle",
 					"Kanga Kickers",
 					"Roo Rippers"
 				]

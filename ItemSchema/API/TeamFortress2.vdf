@@ -4020,6 +4020,7 @@
 			"name"	"TF_WEAPON_ROCKETLAUNCHER"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_rocketlauncher"
+			"xifier_class_remap"	"rocket_launcher"
 		}
 		"19"
 		{
@@ -19439,7 +19440,7 @@
 			"item_description"	"#TF_Unique_MediGun_QuickFix_Desc"
 			"propername"		"1"
 			"item_slot"		"secondary"
-			"equip_region"	"back"
+			"equip_region"	"medigun_backpack"
 			"image_inventory"	"backpack/weapons/c_models/c_proto_medigun/c_proto_medigun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -39050,7 +39051,7 @@
 			"item_description"	"#TF_Unique_MediGun_Resist_Desc"
 			"propername"		"1"
 			"item_slot"		"secondary"
-			"equip_region"	"back"
+			"equip_region"	"medigun_backpack"
 			"image_inventory"	"backpack/weapons/c_models/c_medigun_defense/c_medigun_defense"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -53992,7 +53993,7 @@
 		"30470"
 		{
 			"name"		"The Biomech Backpack"
-			"prefab"		"promo misc"
+			"prefab"		"misc"
 			"first_sale_date"		"2014/09/16"
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_BiomechBackpack"
@@ -54014,7 +54015,7 @@
 		"30471"
 		{
 			"name"		"The Alien Cranium"
-			"prefab"		"promo hat"
+			"prefab"		"hat"
 			"first_sale_date"		"2014/09/16"
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_AlienCranium"
@@ -54043,7 +54044,7 @@
 		"30472"
 		{
 			"name"		"The Xeno Suit"
-			"prefab"		"promo misc"
+			"prefab"		"misc"
 			"first_sale_date"		"2014/09/16"
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_XenoSuit"
@@ -54072,7 +54073,7 @@
 		"30473"
 		{
 			"name"		"The MK 50"
-			"prefab"		"promo hat"
+			"prefab"		"hat"
 			"first_sale_date"		"2014/09/16"
 			"item_type_name"		"#TF_Wearable_Helmet"
 			"item_name"		"#TF_MK50"
@@ -54122,12 +54123,12 @@
 			"name"		"The Nostromo Napalmer"
 			"first_sale_date"		"2014/09/16"
 			"item_class"		"tf_weapon_flamethrower"
-			"craft_class"		""
+			"craft_class"		"weapon"
 			"craft_material_type"		"weapon"
 			"capabilities"
 			{
 				"nameable"		"1"
-				"can_gift_wrap"		"0"
+				"can_gift_wrap"		"1"
 				"can_craft_count"		"1"
 			}
 			"tags"
@@ -54158,14 +54159,6 @@
 			"used_by_classes"
 			{
 				"pyro"		"1"
-			}
-			"attributes"
-			{
-				"cannot trade"
-				{
-					"attribute_class"		"cannot_trade"
-					"value"		"1"
-				}
 			}
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -54415,10 +54408,11 @@
 		}
 		"30484"
 		{
-			"name"		"The Deadliest Catch"
-			"prefab"		"promo hat"
-			"item_name"		"#TF_DeadliestCatch"
-			"item_description"		"#TF_DeadliestCatch_Desc"
+			"name"		"The Dadliest Catch"
+			"prefab"		"hat"
+			"first_sale_date"		"2014/10/30"
+			"item_name"		"#TF_DadliestCatch"
+			"item_description"		"#TF_DadliestCatch_Desc"
 			"holiday_restriction"		"halloween_or_fullmoon"
 			"propername"		"1"
 			"visuals"
@@ -82985,7 +82979,7 @@
 			"name"	"#TF_Set_SF14_Sniper_Kangaroo"
 			"items"
 			{
-				"Marsupial Man"			"1"
+				"Marsupial Muzzle"		"1"
 				"Kanga Kickers"			"1"
 				"Roo Rippers"			"1"
 			}
