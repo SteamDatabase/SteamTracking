@@ -880,6 +880,7 @@
 	"Store_RequiresOverview_StreamingAndController" "Requires additional Streaming setup and devices"
 	"Store_RequiresOverview_Streaming" "Requires Streaming setup"
 	"Store_RequiresOverview_Controller" "Requires a keyboard/mouse"
+	"Store_RequiresOverview_EarlyAccess" "This is an Early Access Title"
 	"Store_Requires_Streaming" "This game requires an In-Home Streaming connection to a computer running another operating system in order to play it here"
 	"Store_Requires_Controller" "This game requires a keyboard & mouse in order to play"
 	"Store_LearnMore"			"Learn more"
@@ -910,6 +911,7 @@
 	"Store_AgeRestricted"			"Sorry, but you're not permitted to view these materials at this time."
 	"Store_Unavailable"				"The Steam store is currently unavailable. Please try again later."
 	"Store_FeaturedDiscount"		"{i:featured_discount_pct}%"
+	"Store_EarlyAccess"				"This is an Early Access title, meaning it is still in development"
 
 	"Store_Filter_AllGames"			"All Games"
 	"Store_Filter_GamesICanPlay"	"Games I Can Play"

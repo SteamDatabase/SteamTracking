@@ -1,14 +1,25 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/store/store.css" />
 		<include src="file://{resources}/styles/store/storeapp.css" />
 	</styles>
 	
-	<StoreAppDLCItem defaultfocus="DlcList">
-		<Panel id="DlcImageWrapper">
-			<Image id="DlcHeaderImage" />
+	<StoreAppDLCItem defaultfocus="DlcList" class="CapsuleControllerSupportContainer">
+		<Panel>
+			<Panel id="DlcImageWrapper">
+				<Image id="DlcHeaderImage" />
+				<Panel id="PlatformSupport">
+					<Panel class="WindowsSupport" />
+					<Panel class="MacSupport" />
+					<Panel class="SteamOSSupport" />
+					<Panel class="CapsuleControllerSupport" />
+				</Panel>
+			</Panel>
+		</Panel>
+		<Panel class="DLCImageInfo">
+			<Label id="DlcTitle" />
 			<StorePrice id="DlcPrice" />
 		</Panel>
-		<Label id="DlcTitle" />
 	</StoreAppDLCItem>
 </root>

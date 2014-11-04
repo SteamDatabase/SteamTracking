@@ -1247,6 +1247,21 @@ StoreAppNoteSection .AppSectionOverviewLabel
 	width: 297px;
 }
 
+#EarlyAccess, #RequiresOverviewEarlyAccess
+{
+    visibility: collapse;
+}
+
+.ShowEarlyAccess #EarlyAccess
+{
+    visibility: visible;
+}
+
+.ShowEarlyAccess #RequiresOverviewEarlyAccess
+{
+    visibility: visible;
+}
+
 .Note
 {
 	flow-children: down;
@@ -1258,7 +1273,7 @@ Label.NoteLabel
 	width: 100%;
 	margin-bottom: 4px;
 
-	font-size: 28px;
+	font-size: 22px;
 	font-family: platformfont;
 	font-weight: normal;
 	color: notelabel;
@@ -1336,6 +1351,14 @@ Label.NoteLabel
 	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
 	margin-right: 4px;
 }
+
+.ShowEarlyAccess #EarlyAccessIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_early_access.png" );
+	margin-right: 4px;
+}
+
 
 //
 // Details Section
@@ -2348,14 +2371,13 @@ StoreAppDLCItem:descendantfocus:hover
 
 #DlcTitle
 {
-	font-size: 26px;
+	font-size: 28px;
+	color: applabel;
 	font-weight: bold;
-	width: 460px;
-	height: 70px;
-	color: applabelsolid;
-	text-overflow: ellipsis;
-	margin-top: 6px;
-	margin-left: 6px;
+	width: fill-parent-flow( 1.0 );
+    white-space: nowrap;
+    margin-right: 8px;
+    text-overflow: clip;
 }
 
 StoreAppDLCItem #DlcHeaderImage
@@ -2384,9 +2406,7 @@ StoreAppDLCItem:descendantfocus #DlcHeaderImage
 
 #DlcPrice
 {
-	background-color: #00000090;
-	align: right bottom;
-	padding: 0px 10px 5px 5px;
+    margin-right: 6px;
 }
 
 #DlcImageWrapper
@@ -2405,6 +2425,31 @@ StoreAppDLCItem:descendantfocus #DlcImageWrapper
 	animation-direction: normal;
 }
 
+// Price related
+.DLCImageInfo
+{
+	opacity: 0.0;
+	flow-children: right;
+	width: 546px;
+	height: 40px;
+	margin: 0px 10px;
+	margin-right: 0px;
+
+	transition-property: opacity, transform;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+StoreAppDLCItem:descendantfocus .DLCImageInfo
+{
+	opacity: 1.0;
+}
+
+StoreAppDLCItem:descendantfocus #PlatformSupport
+{
+	opacity: 1.0;
+}
 
 
 //
