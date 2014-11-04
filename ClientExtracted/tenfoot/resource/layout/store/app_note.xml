@@ -14,6 +14,7 @@
 					<Panel class="NoteIcon" id="SteamControllerIcon" />
 					<Panel class="NoteIcon" id="LegacyControllerIcon" />
 					<Panel class="NoteIcon" id="KeyboardMouseIcon" />
+					<Panel class="NoteIcon" id="EarlyAccessIcon" />
 				</Panel>
 			</Label>
 			<Panel class="AppSectionBody">
@@ -21,6 +22,7 @@
 					<Label class="AppSectionOverviewLabel" id="RequiresOverviewStreamingAndController" text="#Store_RequiresOverview_StreamingAndController" />
 					<Label class="AppSectionOverviewLabel" id="RequiresOverviewStreaming" text="#Store_RequiresOverview_Streaming" />
 					<Label class="AppSectionOverviewLabel" id="RequiresOverviewController" text="#Store_RequiresOverview_Controller" />
+					<Label class="AppSectionOverviewLabel" id="RequiresOverviewEarlyAccess" text="#Store_RequiresOverview_EarlyAccess" />
 				</Panel>
 				<Panel class="AppSectionLargeBody" childfocusonhover="true">
 					<Panel class="Note" id="RequiresStreaming">
@@ -38,6 +40,13 @@
 							<Panel class="NoteIcon" id="SteamControllerIcon" />
 							<Panel class="NoteIcon" id="LegacyControllerIcon" />
 							<Panel class="NoteIcon" id="KeyboardMouseIcon" />
+						</Panel>
+					</Panel>
+
+					<Panel class="Note" id="EarlyAccess">
+						<Label class="NoteLabel" text="#Store_EarlyAccess" />
+						<Panel class="NoteIconWrapper" id="NoteIconWrapper">
+							<Panel class="NoteIcon" id="EarlyAccessIcon" />
 						</Panel>
 					</Panel>
 					<Button id="LearnMoreButton" tabindex="0" selectionpos="0.0,0.0">
