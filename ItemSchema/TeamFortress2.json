@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.bf5619b1f7002716b7c4ea678ce7bf6dd17a9b1e.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.26c04d8501179da0b0fa73005c2d3a6468c70a90.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -53554,6 +53554,35 @@
 					"can_killstreakify": true,
 					"can_consume": true
 				}
+			},
+			{
+				"name": "Robot Pyro Collectible Figure Promo",
+				"defindex": 2136,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "Robot Pyro Collectible Figure Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				
 			},
 			{
 				"name": "Craft Bar Level 1",
@@ -130018,14 +130047,14 @@
 				"id": 85,
 				"attach_to_rootbone": true,
 				"attachment": "unusual",
-				"name": "Haunted Phantasm Jr"
+				"name": "Ghastly Ghosts Jr"
 			},
 			{
 				"system": "unusual_souls_green_parent",
 				"id": 86,
 				"attach_to_rootbone": true,
 				"attachment": "unusual",
-				"name": "Attrib_Particle86"
+				"name": "Haunted Phantasm Jr"
 			},
 			{
 				"system": "killstreak_eyeglow_1_teamcolor_red",

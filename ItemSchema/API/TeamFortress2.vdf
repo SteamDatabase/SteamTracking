@@ -43446,6 +43446,12 @@
 				"nameable"		"1"
 				"can_craft_count"	"1"
 			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
 			"item_logname"	"necro_smasher"
 			"item_iconname"	"necro_smasher"
 			"show_in_armory"	"1"
@@ -54989,7 +54995,7 @@
 			"prefab"		"halloween2014 no_craft misc"
 			"item_name"		"#TF_sf14_iron_fist"
 			"item_description"		"#TF_sf14_iron_fist_Desc"
-			"equip_region"		"arms"
+			"equip_region"		"engineer_left_arm"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/engineer/sf14_iron_fist/sf14_iron_fist"
 			"capabilities"
@@ -68512,6 +68518,7 @@
 				"Minsk Beef"                        "1"
 				"Immobile Suit"                     "1"
 				"Cursed Cruise"                     "1"
+				"Kritz Or Treat Canteen"            "1"
 			}
 			"item_type_name"	"#TF_StoreBundle"
 			"item_name"		"#TF_Bundle_Halloween2014Everything"
@@ -68537,6 +68544,30 @@
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
 			"holiday_restriction"	"halloween_or_fullmoon"
+		}
+		"2136"
+		{
+			"name" "Robot Pyro Collectible Figure Promo" 
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"The Flare Gun"			"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_RobotPyro_Promo"
+			"item_description"	"#TF_RobotPyro_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
 		}
 
 
