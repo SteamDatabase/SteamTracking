@@ -85,7 +85,7 @@ P {
 {
 	color: white;
 	font-size: 16px;
-	background-color: #222222;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	line-height: 64px;
 }
 
@@ -111,7 +111,7 @@ P {
 	padding: 15px;
 	padding-bottom: 20px;
 	margin-top: 20px;
-	background-color: #222222;
+	background-color: rgba( 0, 0, 0, 0.2 );
 }
 
 .faq_title
