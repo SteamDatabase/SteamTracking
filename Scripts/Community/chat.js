@@ -616,7 +616,7 @@ function CWebChatDialog( Chat, elDialog, elContent )
 }
 
 CWebChatDialog.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)', 'gi' );
-CWebChatDialog.s_regexDomain = new RegExp( 'https?://[^/?]*?((?:[^/?]+\.)?([^/?]+\.[^/?]+))(?:[/?]|$)', 'i' );
+CWebChatDialog.s_regexDomain = new RegExp( '^(?:https?://)?([^/?#]+\.)?(([^/?#.]+)\.([^/?#]+))(?:[/?#]|$)', 'i' );
 CWebChatDialog.s_regexEmoticons = new RegExp( '\u02D0([^\u02D0]*)\u02D0', 'g' );
 CWebChatDialog.s_regexMyEmoticons = null;
 
@@ -699,15 +699,11 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 				return false;
 			}
 
-			// nested for-loops instead of indexOf or filter for compatibility with IE <9
-			for ( var i = rgTLDCandidates.length - 1; i >= 1; --i )
+			for ( var j = CWebChatDialog.m_rgWhitelistedDomains.length - 1; j >= 0; --j )
 			{
-				for ( var j = CWebChatDialog.m_rgWhitelistedDomains.length - 1; j >= 0; --j )
+				if ( CWebChatDialog.m_rgWhitelistedDomains[j] == rgTLDCandidates[2].toLowerCase() )
 				{
-					if ( CWebChatDialog.m_rgWhitelistedDomains[j] == rgTLDCandidates[i].toLowerCase() )
-					{
-						return true;
-					}
+					return true;
 				}
 			}
 			return false;
@@ -719,7 +715,7 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 		}
 		else
 		{
-			return ( s1 + '<a href="https://steamcommunity.com/linkfilter/' + s2 + '" class="whiteLink" target="_blank">' + s2 + '</a>' );
+			return ( s1 + '<a href="https://steamcommunity.com/linkfilter/?url=' + s2 + '" class="whiteLink" target="_blank">' + s2 + '</a>' );
 		}
 	} );
 
