@@ -1839,3 +1839,26 @@ body.profile_page #footer {
 	text-decoration: underline;
 }
 
+
+.profile_paging {
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	color: #747474;
+	font-size: 12px;
+
+	height: 25px;
+	line-height: 25px;
+
+	padding: 0px 5px;
+
+	margin: 9px 0px;
+}
+
+.profile_paging .pageLinks {
+	float: right;
+}
+
+.profile_paging .pagebtn {
+	height: 15px;
+	line-height: 15px;
+}

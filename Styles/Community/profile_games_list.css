@@ -165,6 +165,7 @@ a.games_list_tab:hover {
 
 .gameListItemActive {
     /* background-image: url( https://steamcommunity-a.akamaihd.net/public/images/remote/Desk_ActiveBG.png ); */
+	background: #1f3748;
 }
 
 .gameListItemInstalled {
