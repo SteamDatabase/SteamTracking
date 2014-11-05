@@ -2083,41 +2083,41 @@ textarea {
 	border-color: #97c0e3;
 }
 
-.workshopItem .workshopItemPreviewImage.accepted
+.workshopItem .accepted
 {
 	border-color: #6b9730;
 	border-style: solid;
 	border-width: 1px;
 }
 
-.workshopItem .workshopItemPreviewImage.accepted:hover
+.workshopItem .accepted:hover
 {
 	border-color: #97c0e3;
 	border-width: 1px;
 }
 
-.workshopItem .workshopItemPreviewImage.incompatible
+.workshopItem .incompatible
 {
 	border-color: #534436;
 	border-style: solid;
 	border-width: 1px;
 }
 
-.workshopItem .workshopItemPreviewImage.hidden
+.workshopItem .hidden
 {
 	border-color: #E58723;
 	border-style: solid;
 	border-width: 1px;
 }
 
-.workshopItem .workshopItemPreviewImage.banned
+.workshopItem .banned
 {
 	border-color: #ff0000;
 	border-style: solid;
 	border-width: 1px;
 }
 
-.workshopItem .workshopItemPreviewImage.incompatible:hover
+.workshopItem .incompatible:hover
 {
 	border-color: #97c0e3;
 }
