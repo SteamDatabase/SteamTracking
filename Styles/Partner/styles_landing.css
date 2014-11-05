@@ -1946,3 +1946,20 @@ a.pagelink:hover {
 	text-decoration: underline;
 	color: #ffffff;
 }
+
+.percent_input {
+	width: 25px;
+}
+.percent_input:disabled {
+	color: #8E8E8E;
+	background-color: #333333;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
