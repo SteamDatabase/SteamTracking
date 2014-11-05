@@ -161,6 +161,18 @@ function addToCart( subid )
 	}
 }
 
+function addBundleToCart( bundleid )
+{
+	try
+	{
+		document.forms['add_bundle_to_cart_'+bundleid].submit();
+	}
+	catch( e )
+	{
+	}
+}
+
+
 function addAllDlcToCart()
 {
 	try
