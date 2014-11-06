@@ -114,6 +114,8 @@
 				System( 'sh ' . __DIR__ . '/.support/extract_client.sh' );
 			}
 			
+			$this->CheckCDN( );
+			
 			$this->Log( '{lightblue}Done' );
 		}
 		
@@ -124,6 +126,31 @@
 				Array( 'key=' . $this->APIKey, '_=' . $this->CurrentTime ),
 				$URL
 			);
+		}
+		
+		private function CheckCDN( )
+		{
+			$this->Log( '{lightblue}Checking CDN subdomains' );
+			
+			$Questions = [];
+			$Response = [];
+			
+			for( $i = 1; $i < 11; $i++ )
+			{
+				$Questions[ ] = 'content' . $i . '.steampowered.com';
+			}
+			
+			foreach( $Questions as $Question )
+			{
+				Exec( 'dig +short ' . EscapeShellArg( $Question ), $Answer );
+				
+				$Answer = Array_Shift( $Answer );
+				$Answer = RTrim( $Answer, '.' );
+				
+				$Response[ $Question ] = $Answer;
+			}
+			
+			File_Put_Contents( __DIR__ . '/Random/CDNs.json', JSON_Encode( $Response, JSON_PRETTY_PRINT ) );
 		}
 		
 		private function HandleResponse( $File, $Data )
