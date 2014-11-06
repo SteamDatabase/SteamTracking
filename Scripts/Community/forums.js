@@ -1192,22 +1192,37 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 
 function Forum_RecordPotentialMergeTarget( rgForumData, gidTopic, strTitle )
 {
-	var rgTargets = _Forum_GetPotentialMergeTargets();
-	for ( var i=0; i < rgTargets.length; i++ )
+	var rgTargetEntry = { unClanIDOwner: rgForumData.owner, gidForum: rgForumData.gidforum, gidTopic: gidTopic, strTitle: strTitle };
+	try
 	{
-		if ( rgTargets[i].gidTopic == gidTopic )
+		var rgTargets = _Forum_GetPotentialMergeTargets();
+		for ( var i=0; i < rgTargets.length; i++ )
 		{
-			rgTargets.splice( i, 1 );
-			break;
+			if ( rgTargets[i].gidTopic == gidTopic )
+			{
+				rgTargets.splice( i, 1 );
+				break;
+			}
 		}
+		rgTargets.unshift( rgTargetEntry );
+		_Forum_UpdatePotentialMergeTargets( rgTargets );
 	}
-	rgTargets.unshift( { unClanIDOwner: rgForumData.owner, gidForum: rgForumData.gidforum, gidTopic: gidTopic, strTitle: strTitle } );
-	_Forum_UpdatePotentialMergeTargets( rgTargets );
+	catch ( e )
+	{
+		var rgTargetsNew = [ rgTargetEntry ];
+		WebStorage.SetLocal( 'rgForumMergeTargets', rgTargetsNew );
+	}
 }
 
 function _Forum_GetPotentialMergeTargets()
 {
-	var rgForumMergeTargets = WebStorage.GetLocal( 'rgForumMergeTargets' ) || [];
+	var rgForumMergeTargets = [];
+	try
+	{
+		rgForumMergeTargets = WebStorage.GetLocal( 'rgForumMergeTargets' );
+	}
+	catch ( e ) {}
+
 	if ( !rgForumMergeTargets || !rgForumMergeTargets.length )
 		rgForumMergeTargets = [];
 
