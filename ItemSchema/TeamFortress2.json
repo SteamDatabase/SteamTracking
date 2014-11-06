@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.26c04d8501179da0b0fa73005c2d3a6468c70a90.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.930171503dda582ea724047d9e3b167a7612b94d.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -10042,6 +10042,16 @@
 						"name": "decapitate type",
 						"class": "decapitate_type",
 						"value": 1
+					},
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 6
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 6
 					},
 					{
 						"name": "special taunt",
