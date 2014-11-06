@@ -144,8 +144,8 @@ function ReadInventoryCookie( cookie )
 
 function BValidateHashParams( oHashParams )
 {
-	// Context ID is a 64-bit value that can contain only digits
-	if ( oHashParams && !/^\d+$/.test( oHashParams.contextid ) )
+	// Context ID, if present, is a 64-bit value that can contain only digits
+	if ( oHashParams && oHashParams.contextid && !/^\d+$/.test( oHashParams.contextid ) )
 	{
 		return false;
 	}
