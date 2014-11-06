@@ -13095,6 +13095,16 @@
 					"attribute_class"	"decapitate_type"
 					"value"	"1"
 				}
+				"kill eater score type"
+				{
+					"attribute_class"	"kill_eater_score_type"
+					"value" 	"6"									
+				}
+				"kill eater kill type"
+				{
+					"attribute_class"	"kill_eater_kill_type"
+					"value"	"6"			
+				}
 				"special taunt"
 				{
 					"attribute_class"	"special_taunt"
