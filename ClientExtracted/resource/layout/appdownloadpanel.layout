@@ -6,10 +6,12 @@
 		appdownloadpanel	{	tall="110"	style=panelStyle }
 
 		// image
-		gameimage		{ controlname="ImagePanel"	 style="gameImagePanel" }		// set the initial size on on the gameimage; it's loaded async, so it may not know the image size immediately
+		spacer			{ controlname="Panel" }
+		gameimage		{ controlname="ImagePanel" zpos="1" style="gameImagePanel" }		// set the initial size on on the gameimage; it's loaded async, so it may not know the image size immediately
+		workshopbanner		{ controlname="ImagePanel" zpos="2" image="resource/workshop_minibanner" }  
 		
 		// left-mid column
-		namelabel	{ controlname="Label"	labelText="%name%" style="ModuleHeading" }
+		namelabel	{ controlname="Label"	labelText="#steam_downloads_gamename" style="ModuleHeading" }
 		dashlabel	{ controlname="Label"	labelText=""	}
 		launchbutton		{ controlname="Button"	style="DetailsLaunchButton"	labelText="#Steam_LaunchGame" zpos="1" }
 		downloadprogressbar	{ controlname="ProgressBar" style="SlimProgressBar" barinset=0 continuous=1 group="ShowWhileDownloading" style="SlimProgressBar" }
@@ -34,7 +36,7 @@
 
 	
 		
-	}
+	} 
 	
 	colors
 	{
@@ -315,20 +317,22 @@
 			{
 			}    
 		}
-	}
+	} 
 
 
 	layout
 	{
 		region	{ name="bottom" width="1262" y=75 height=60 width=400 }
-		
+		  
 		region { name="column1" x=0 width=200 }
 		region { name="column2" x=210 width=max }
 		region { name="column3" x=500 width=max }
 		region { name="column4" x=700 width=max overflow=allow-horizontal }
 		
 		// left column
-		place { control="gameimage" region="column1" margin-left=8 margin-top=16 width=200 height=85 }
+		place { control="spacer" }
+		place { control="gameimage" start=spacer dir=down margin-left=8 width=192 height=85 }
+		place { control="workshopbanner" margin-left=8 margin-top=82 width=192 height=26 } 
 		
 		// left-mid column
 		place { control="namelabel" region="column2" margin-top=16 margin-left=0 }
