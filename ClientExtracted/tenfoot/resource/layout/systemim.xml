@@ -1,0 +1,14 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/mainmenu_systemmessages.css" />
+	</styles>
+	
+	<SystemIM class="SystemIMImage">
+		<Image id="SystemIMImage" />
+		<Label id="SystemIMButtonLabel" />
+		<Label id="SystemIMDisclaimer" />
+	</SystemIM >
+	
+</root>

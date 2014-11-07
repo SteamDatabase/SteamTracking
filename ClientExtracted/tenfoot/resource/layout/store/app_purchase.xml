@@ -21,6 +21,9 @@
 							<Button id="ViewInLibraryBtn">
 								<Label text="#Store_AppPurchaseSection_ViewInLibrary" />
 							</Button>
+							<Button id="PurchaseFreeContentBtn">
+								<Label text="#Store_AppPurchaseSection_AddToAccount" />
+							</Button>							
 							<Button id="PurchaseOptionsBtn">
 								<Label id="PurchaseOptionsLabel" text="#Store_AppPurchaseSection_Options" />
 								<StorePrice id="PriceButton" />
@@ -30,9 +33,6 @@
 							</Button>
 							<Button id="PurchaseViewBaseBtn">
 								<Label text="#Store_AppPurchaseSection_ViewBaseGame" />
-							</Button>
-							<Button id="PurchaseFreeContentBtn">
-								<Label text="#Store_AppPurchaseSection_AddToAccount" />
 							</Button>
 							<Button id="PurchaseDemoBtn" onactivate="InstallDemo()">
 								<Label text="#Store_AppPurchaseSection_Demo" />

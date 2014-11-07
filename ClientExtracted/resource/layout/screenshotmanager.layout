@@ -15,7 +15,7 @@
 		view_local_library_button { controlname="Button" labeltext="#Overlay_View_Local" command="viewlocallibrary" visible=0 }
 		selectorlabel { controlname="Label" labeltext="#Overlay_Screenshots_Show" }
 
-		spoiler_checkbox { controlname="CheckButton" labeltext="#Overlay_Tag_As_Potential_Spoiler" visible=0  }
+		spoiler_checkbox { controlname="CheckButton" labeltext="#Overlay_Tag_As_Potential_Spoiler" visible=0 }
 		publish_button { controlname="Button" labeltext="#Overlay_Publish" command="askpublishscreenshot" visible=0 }
 		publish_caption { controlname="CScreenshotCaptionEntry" unicode=1 }
 		delete_button { controlname="Button" labeltext="#Overlay_Delete" command="askdeletescreenshot" visible=1 }
@@ -212,7 +212,7 @@
 		place { control="SSSize,SSSizeOriginal" start="SSDate" margin-right=15 align=right dir=left }
 
 		place { control="publish_caption" region="details" x=5 align=bottom margin-bottom=55 height=40 margin-right=3 width=max  }
-		place { control="publish_charsleft" region="details" x=5 align=bottom margin-bottom=35 height=20 margin-right=5 }
+		place { control="publish_charsleft" region="details" x=5 align="bottom-right" margin-bottom=35 height=20 margin-right=5 }
 
 		place { control="null_placer" region="details" width=1 align=bottom margin-bottom=2 }
 		place { control="delete_button,details_button,publish_button" start="null_placer" region="details" align=right x=5 margin-bottom=5 margin-right=7 spacing=5 }

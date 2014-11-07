@@ -957,14 +957,15 @@
 	"Store_AppPurchaseSection_RequiresBase"		"Requires the base game {s:base_game} on Steam in order to play."
 	"Store_AppPurchaseSection_ViewBaseGame"		"View Base Game"
 	"Store_AppPurchaseSection_ViewInLibrary"	"View in library"
-	"Store_AppPurchaseSection_AddToAccount"		"Add to account"
+	"Store_AppPurchaseSection_AddToAccount"		"Add to library"
 
 	"Steam_Error"					"Error"
 	"Steam_AddToAccount_Error"			"Sorry, there was an error adding the product to your account."
 
 	"Steam_Success"					"Success"
-	"Steam_AddToAccount_Success"			"The package has been added to your account, you should be able to find the games in your library now."
-	"Steam_AddToAccount_ViewAllGames"		"VIEW ALL GAMES"
+	"Steam_AddToAccount_Success"				"The package has been added to your account."
+	"Steam_AddToAccount_ViewGame"				"VIEW GAME"
+	"Steam_AddToAccount_ViewAllGames"			"VIEW ALL GAMES"
 
 	"Store_AppPurchaseOptions_Title"			"{i:purchase_option_count} Purchase Options"
 	"Store_AppPurchaseOptions_TitleNoCount"			"Purchase Options"
