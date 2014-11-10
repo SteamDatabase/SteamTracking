@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.930171503dda582ea724047d9e3b167a7612b94d.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.1dc99b18aeb89716e68647e0b55b3fc51c79d44e.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -48610,6 +48610,55 @@
 				
 			},
 			{
+				"name": "The Nabler",
+				"defindex": 1124,
+				"item_class": "tf_wearable",
+				"item_type_name": "Hat",
+				"item_name": "Nabler",
+				"proper_name": true,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/pyro/threea_nabler/threea_nabler.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/pyro/threea_nabler/threea_nabler",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/threea_nabler.98e28568e1ce73df6ba2063e46c1d9210b48dab7.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/threea_nabler_large.ff0cae4d0fc28b339a0cb82b46734e17d382fb8c.png",
+				"drop_type": "none",
+				"craft_class": "hat",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"used_by_classes": [
+					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
 				"name": "TF_WEAPON_SPELLBOOK",
 				"defindex": 1132,
 				"item_class": "tf_weapon_spellbook",
@@ -53591,6 +53640,14 @@
 				},
 				"used_by_classes": [
 					"Pyro"
+				]
+				,
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1
+					}
 				]
 				
 			},

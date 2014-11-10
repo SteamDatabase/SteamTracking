@@ -132,7 +132,7 @@
 		"face"				"1"			
 		"glasses"			"1"
 		"lenses"			"1"
-		"ears"				"1"
+		"pants"				"1"
 		"beard"				"1"
 		"shirt"				"1"			
 		"medal"				"1"			
@@ -178,8 +178,6 @@
 			"soldier_coat"		"1"
 			"heavy_hip"			"1"
 			"scout_hands"		"1"			
-			"demoman_pants"		"1"			
-			"engineer_pants"	"1"			
 		}
 		"shared"
 		{
@@ -227,7 +225,6 @@
 			"hat"			"1"
 			"face"			"1"
 			"glasses"		"1"
-			"ears"			"1"
 		}
 	}
 	"prefabs"
@@ -9292,11 +9289,7 @@
 			"item_name"	"#TF_EngineerEarmuffs"
 			"item_description"	"#TF_EngineerEarmuffs_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"		"1"
-				"ears"		"1"
-			}
+			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/engineer/engy_earphones"
 			"image_inventory_size_w"		"128"
@@ -23545,11 +23538,7 @@
 			"item_name"	"#TF_DEX_Helmet"
 			"item_description"	"#TF_DEX_Helmet_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"		"1"
-				"ears"		"1"
-			}
+			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/heavy/dex_belltower_heavy"
 			"image_inventory_size_w"		"128"
@@ -28108,11 +28097,7 @@
 			"item_name"	"#TF_TrnHelmet"
 			"item_description"	"#TF_TrnHelmet_Desc"
 			"item_slot"	"head"
-			"equip_regions"
-			{
-				"hat"		"1"
-				"ears"		"1"
-			}
+			"equip_region"	"hat"
 			"item_quality"	"unique"
 			"image_inventory"	"backpack/player/items/heavy/trn_heavy_knight"
 			"image_inventory_size_w"		"128"
@@ -31467,7 +31452,7 @@
 			{
 				"paintable"		"1"
 			}
-			"equip_region"	"engineer_pants"
+			"equip_region"	"pants"
 			"item_type_name"	"TF_Wearable_Apparel"
 			"item_name"	"#TF_EngineerChaps"
 			"item_description"	"#TF_EngineerChaps_Desc"
@@ -34980,6 +34965,12 @@
 				"can_gift_wrap" 	"1"
 				"can_craft_count"	"1"
 			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Staff"
 			"item_name"	"#TF_TW_Staff"
@@ -38228,7 +38219,7 @@
 			"name"	"The Cool Breeze"
 			"first_sale_date"	"2013/01/24"
 			"prefab"	"misc"
-			"equip_region"	"demoman_pants"
+			"equip_region"	"pants"
 			"item_type_name"	"#TF_Wearable_Kilt"
 			"item_name"	"#TF_TheCoolBreeze"
 			"item_description"	"#TF_TheCoolBreeze_Desc"
@@ -43493,8 +43484,48 @@
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-		
-
+		"1124"
+		{
+			"name"	"The Nabler"
+			"prefab"		"base_misc"
+			"first_sale_date"	"2014/10/30"
+			"item_class"	"tf_wearable"
+			"craft_material_type"	"hat"
+			"craft_class"			"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_gift_wrap" 	"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Wearable_Hat"
+			"item_name"	"#TF_Nabler"
+			"item_slot"	"misc"
+			"propername"	"1"
+			"equip_region"	"pyro_head_replacement"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/workshop/player/items/pyro/threea_nabler/threea_nabler"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/player/items/pyro/threea_nabler/threea_nabler.mdl"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"head"			"1"
+				}
+			}
+			"drop_type"	"none"
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
 
 
 
@@ -45222,7 +45253,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_tw2_demo_pants"
 			"item_description"		"#TF_tw2_demo_pants_Desc"
-			"equip_region"		"demoman_pants"
+			"equip_region"		"pants"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/demo/tw2_demo_pants/tw2_demo_pants"
 			"model_player"		"models/workshop/player/items/demo/tw2_demo_pants/tw2_demo_pants.mdl"
@@ -46474,7 +46505,7 @@
 			"item_name"		"#TF_jul13_king_pants"
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_description"		"#TF_jul13_king_pants_Desc"
-			"equip_region"		"engineer_pants"
+			"equip_region"		"pants"
 			"image_inventory"		"backpack/workshop/player/items/engineer/jul13_king_pants/jul13_king_pants"
 			"propername"		"1"
 			"capabilities"
@@ -51386,7 +51417,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_xms2013_heavy_pants"
 			"item_description"		"#TF_xms2013_heavy_pants_Desc"
-			"equip_region"		"belt_misc"
+			"equip_region"		"pants"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/heavy/xms2013_heavy_pants/xms2013_heavy_pants"
 			"model_player"		"models/workshop/player/items/heavy/xms2013_heavy_pants/xms2013_heavy_pants.mdl"
@@ -51962,7 +51993,7 @@
 			"item_type_name"		"#TF_Wearable_Apparel"
 			"item_name"		"#TF_sbox2014_heavy_camopants"
 			"item_description"		"#TF_sbox2014_heavy_camopants_Desc"
-			"equip_region"		"heavy_hip"
+			"equip_region"		"pants"
 			"image_inventory"		"backpack/workshop/player/items/heavy/sbox2014_heavy_camopants/sbox2014_heavy_camopants"
 			"capabilities"
 			{
@@ -68561,7 +68592,8 @@
 			"item_class"	"bundle"
 			"bundle"
 			{
-				"The Flare Gun"			"1"
+				"The Nabler"			"1"
+				"The Triple A Badge"	"1"
 			}
 			"item_type_name"	"#TF_StoreBundle"
 			"item_name"		"#TF_RobotPyro_Promo"
@@ -68578,6 +68610,14 @@
 			}
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
 		}
 
 
