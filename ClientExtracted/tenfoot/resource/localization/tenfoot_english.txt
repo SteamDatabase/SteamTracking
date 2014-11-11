@@ -22,6 +22,7 @@
 	"UI_Yes"	"YES"
 	"UI_No"		"NO"
 	"UI_Unknown"	"UNKNOWN"
+	"UI_Always"	"ALWAYS"
 	"UI_Select_Footer"	"SELECT"
 	"UI_Cancel_Footer"	"CANCEL"
 	"UI_Back_Footer" "BACK"
