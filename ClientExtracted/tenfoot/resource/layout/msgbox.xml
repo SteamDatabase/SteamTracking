@@ -25,6 +25,10 @@
 					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton" onactivate="ButtonCancel();">
 						<Label id="CancelButtonText" />
 					</Button>
+
+					<Button id="ButtonGeneric" class="ButtonGeneric MsgBoxButton" onactivate="ButtonGeneric();">
+						<Label id="GenericButtonText" />
+					</Button>
 				</Panel>
 			</Panel>
 		</Panel>

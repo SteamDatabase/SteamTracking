@@ -423,6 +423,7 @@
 10CUtlVectorIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIy10CUtlString10CDefEqualsIyE11HashFunctorIyEE12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIyN20CRemoteDeviceManager14RemoteDevice_tE10CDefEqualsIyE11HashFunctorIyEE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN12ClGlobalStat6Data_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN12CUserFriends20ClFriendSourceItem_tE10CUtlMemoryIS1_EE
@@ -534,6 +535,7 @@
 11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEE
 11CUtlHashMapIy10CUtlString10CDefEqualsIyE11HashFunctorIyEE
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEE
+11CUtlHashMapIyN20CRemoteDeviceManager14RemoteDevice_tE10CDefEqualsIyE11HashFunctorIyEE
 11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEE
 11CWorkThread
 11IClientApps
@@ -1045,6 +1047,7 @@
 17CInternalCallbackI5CUser33RemoteStorageAppSyncStatusCheck_tE
 17CInternalCallbackI5CUser33RemoteStorageConflictResolution_tE
 17CInternalCallbackI9CBaseUser23SteamServersConnected_tE
+17CKeyEscrow_Ticket
 17CMsgBrowserCreate
 17CMsgBrowserRemove
 17CMsgCloseDevTools
@@ -1093,6 +1096,7 @@
 18CHTTPClientRequest
 18CHTTPRequestHandle
 18CHTTPServerRequest
+18CKeyEscrow_Request
 18CManifestChunkData
 18CMsgClientAuthList
 18CMsgClientSentLogs
@@ -1168,6 +1172,7 @@
 19CHTTPClientResponse
 19CHTTPServerResponse
 19CInventory_Response
+19CKeyEscrow_Response
 19CLocalMusicDatabase
 19CMsgClientAddFriend
 19CMsgClientClanState
@@ -1801,6 +1806,7 @@
 28CMsgGetCookiesForURLResponse
 28CMsgRemoteClientAuthResponse
 28CMsgRemoteClientPingResponse
+28CMsgRemoteDeviceProofRequest
 28CMsgScalePageToValueResponse
 28CParental_LockClient_Request
 28CParentalSettingsInterpreter
@@ -1858,6 +1864,7 @@
 29.CMsgClientStoreUserStatsResponse.Stats_Failed_Validation
 29CMsgClientUCMDeleteScreenshot
 29CMsgClientUFSDownloadResponse
+29CMsgRemoteDeviceProofResponse
 29CMsgRequestFullScreenResponse
 29CNetConnectionDestroyWorkItem
 29CParental_LockClient_Response
@@ -2016,6 +2023,7 @@
 30CRemoteControlHTTPReqMusicInfo
 30CRemoteControlHTTPReqMusicMode
 30CRemoteControlHTTPReqUITenfoot
+30CRemoteDeviceJobStartStreaming
 30CSaveMusicCurrentEntryAsyncJob
 30CWorkItemNetFilterOnDisconnect
 30HTTPRequestRouteRegistration_t
@@ -2072,6 +2080,7 @@
 31CRemoteControlHTTPReqAuthorized
 31CRemoteControlHTTPReqGameAction
 31CRemoteControlTenfootRequestJob
+31CRemoteDeviceJobAuthorizeDevice
 32CAPIJobGetNumberOfCurrentPlayers
 32CAPIJobRequestPersonaNameHistory
 32CAPIJobSendSpecialSurveyResponse
@@ -2095,6 +2104,7 @@
 32CMsgClientUCMUpdatePublishedFile
 32CMsgGMSClientServerQueryResponse
 32CMsgRemoteClientStreamingEnabled
+32CMsgRemoteDeviceStreamingRequest
 32CMsgTest_MessageToClient_Request
 32CMsgTest_MessageToServer_Request
 32CMsgTrading_InitiateTradeRequest
@@ -2149,6 +2159,7 @@
 33CMsgClientUCMPublishedFileDeleted
 33CMsgClientUCMPublishedFileUpdated
 33CMsgClientUFSUploadCommitResponse
+33CMsgRemoteDeviceStreamingResponse
 33CMsgTest_MessageToClient_Response
 33CMsgTest_MessageToServer_Response
 33CMsgTrading_InitiateTradeResponse
@@ -2290,6 +2301,7 @@
 36CMsgDownloadRateStatistics_StatsInfo
 36CMsgFSEnumerateFollowingListResponse
 36CMsgRemoteClientBroadcastStatus_User
+36CMsgRemoteDeviceAuthorizationRequest
 36CPartnerApps_FindDRMUploads_Response
 36CPlayer_LastPlayedTimes_Notification
 36CPublishedFile_CanSubscribe_Response
@@ -2320,6 +2332,7 @@
 37CMsgClientUCMDeleteScreenshotResponse
 37CMsgClientUCMGetPublishedFilesForUser
 37CMsgClientUCMUnsubscribePublishedFile
+37CMsgRemoteDeviceAuthorizationResponse
 37CNetConnectionAsyncDisconnectWorkItem
 37CParental_GetParentalSettings_Request
 37CParental_ParentalUnlock_Notification
@@ -2639,6 +2652,7 @@
 54CGameNotifications_UpdateNotificationSettings_Response
 54CMsgCREEnumeratePublishedFilesResponse_PublishedFileId
 54CMsgCREGetUserPublishedItemVoteDetails_PublishedFileId
+54CMsgRemoteDeviceAuthorizationRequest_CKeyEscrow_Ticket
 55CMsgClientGetAuthorizedDevicesResponse_AuthorizedDevice
 56CGameNotifications_OnNotificationsRequested_Notification
 56CMsgClientStoreUserStatsResponse_Stats_Failed_Validation
@@ -3634,7 +3648,6 @@ authorization_given
 authorization_malformed_token
 authorization_missing_token
 authorization_needs_prompt
-Authorized
 authorized_device
 AuthorizedDevice
 AuthorizeDeviceResult_t
@@ -4732,6 +4745,10 @@ cityname_loginattempt
 CJobFuncsDispatchJob
 CJobMgr
 CJobTestConnectivity
+.CKeyEscrow_Request
+CKeyEscrow_Request
+CKeyEscrow_Response
+CKeyEscrow_Ticket
 \CKK1Kbz
 CL9CP
 clan_account_flags
@@ -5226,6 +5243,8 @@ CMsgRemoteClientAuthResponse
 CMsgRemoteClientBroadcastHeader
 CMsgRemoteClientBroadcastStatus
 CMsgRemoteClientStartStream
+CMsgRemoteDeviceProofRequest
+CMsgRemoteDeviceProofResponse
 CMsgRequestFullScreen
 CMsgRequestFullScreenResponse
 CMsgSavePageToJPEG
@@ -5696,6 +5715,8 @@ CRemoteControlHTTPReqSpace
 CRemoteControlHTTPReqState
 CRemoteControlHTTPReqStatic
 CRemoteControlHTTPReqUITenfoot
+CRemoteDeviceJobAuthorizeDevice
+CRemoteDeviceJobStartStreaming
 cripf
 critical
 crlBag
@@ -6336,6 +6357,7 @@ device_identifier
 device_name
 device-removed
 devices
+device_token
 DeviceToken
 device_tokens
 DevSetNextDrop
@@ -7160,6 +7182,7 @@ EH0y5
 EHTTPMethod
 EHTTPStatusCode
 EInputType
+EKeyEscrowUsage
 EKeyType
 ELanguage_ISO639
 ELauncherType
@@ -7242,6 +7265,7 @@ encrypted_gid
 encryptedKey
 encrypted_loginkey
 encryptedmanifests
+encrypted_request
 encrypted_session_key
 encrypted_ticket
 encrypt_file
@@ -7471,6 +7495,8 @@ ERemoteClientBroadcastMsg
 ERemoteClientLaunchResult
 ERemoteClientService
 ERemoteClientStreamEnv
+ERemoteDeviceStreamingResult
+.ERemoteDeviceStreamingResult
 ERemoteStorageFileRoot
 ERemoteStorageOSCompare
 ERemoteStoragePlatform
@@ -9456,6 +9482,7 @@ idea-ofb
 IDEA-OFB
 id-ecPublicKey
 identified-organization
+identifier
 identifier_value
 identity_secret
 id-Gost28147-89-cc
@@ -10493,6 +10520,12 @@ k_EP2PSessionErrorNotRunningApp
 k_EP2PSessionErrorTimeout
 k_EProtoExecutionSiteUnknown
 k_ERemoteClientServiceNone
+k_ERemoteDeviceProofRequest
+k_ERemoteDeviceProofResponse
+k_ERemoteDeviceStreamingBusy
+k_ERemoteDeviceStreamingFailed
+k_ERemoteDeviceStreamingRequest
+k_ERemoteDeviceStreamingSuccess
 key_0
 key_1
 key_2
@@ -11179,6 +11212,7 @@ m_gidLaunchID
 Mh9Ux
 m_hashKeys
 m_hashMap
+m_hashRemoteDevices
 m_hashSessionData
 m_hashValues
 m_hConfigHandle
@@ -14446,6 +14480,8 @@ RemoteControlDeviceList
 remote_control_port
 RemoteControlRemoved_t
 remotedeletescheduled
+RemoteDeviceAuthorizationCancelled_t
+RemoteDeviceAuthorizationRequested_t
 RemotePlayerActivationFailed_t
 RemotePlayerDisplayNameChanged_t
 RemotePlayerRegistered_t
@@ -14720,6 +14756,7 @@ RSA_NULL_PUBLIC_DECRYPT
 RSA_NULL_PUBLIC_ENCRYPT
 rsa_oaep.c
 rsaOAEPEncryptionSET
+rsa_oaep_sha_ticket
 RSA_padding_add_none
 RSA_padding_add_PKCS1_OAEP
 RSA_padding_add_PKCS1_PSS
@@ -14907,6 +14944,7 @@ secret
 secret_1
 secretary
 secretBag
+Secrets
 sect113r1
 sect113r2
 sect131r1
@@ -15321,6 +15359,7 @@ SetQueueEntry
 SetRankedByTrendDays
 set_read_state
 SetRegion
+SetRemoteDeviceAuthorized
 SetRepeatedBool
 SetRepeatedDouble
 SetRepeatedEnum
@@ -16790,6 +16829,7 @@ steammessages_player.steamclient.proto
 steammessages_publishedfile.steamclient.proto
 steammessages_remoteclient_discovery.proto
 steammessages_remoteclient.proto
+steammessages_secrets.steamclient.proto
 steammessages_twofactor.steamclient.proto
 steammessages_unified_base.steamclient.proto
 steammessages_unified_test.steamclient.proto
@@ -17663,6 +17703,7 @@ upper
 Uppercase
 url_host
 url_path
+usage
 US-ASCII
 usb_debug_mode
 use_http

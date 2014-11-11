@@ -465,7 +465,6 @@ _0Uep0_
 10CUtlVectorIN8panorama9CUILengthE10CUtlMemoryIS1_EE
 10CUtlVectorIN9ConParams7Entry_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN9CSteamDoc10BetaInfo_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN9CSteamDoc19BetaContentDetail_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN9CUtlGraphIjfE6Edge_tE10CUtlMemoryIS2_EE
 10CUtlVectorIP10CUtlString10CUtlMemoryIS1_EE
 10CUtlVectorIP11CWorkThread10CUtlMemoryIS1_EE
@@ -1792,6 +1791,7 @@ _222_2
 32CMsgBoxShadow_AnimationFrameData
 32CMsgDrawYUV420DoubleBufferedRect
 32COOBETimeZoneSettingsWizardChild
+32CRemoteDeviceAuthorizationDialog
 32CRequestAsyncNotificationsMsgBox
 32CRequestDeviceAuthorizationPanel
 32CSettingsPanelNetwork_IPSettings
@@ -2204,6 +2204,7 @@ _5_k_
 9CCallbackI16CSteamRootDialog26UserRequestingFriendship_tLb0EE
 9CCallbackI16CSteamRootDialog27UpdateCommentNotification_tLb0EE
 9CCallbackI16CSteamRootDialog34UpdateOfflineMessageNotification_tLb0EE
+9CCallbackI16CSteamRootDialog36RemoteDeviceAuthorizationRequested_tLb0EE
 9CCallbackI16CSteamRootDialog37PromptForRemoteControlAuthorization_tLb0EE
 9CCallbackI16CSteamRootDialog37RemoteClientStreamingEnabledChanged_tLb0EE
 9CCallbackI17CAppDownloadPanel21ParentalLockChanged_tLb0EE
@@ -2976,6 +2977,7 @@ always
 always_compact
 always_full_compiler
 always_inline_smi_code
+AlwaysLaunchGame
 AlwaysNewChatCheck
 AlwaysNewChatWindow
 --always-opt
@@ -5962,6 +5964,7 @@ CRegisterSubReceipt
 CReloadStyleFileJob
 CRemoteClientConnectionNotification
 CRemoteControlAuthorizationDialog
+CRemoteDeviceAuthorizationDialog
 crypto
 CRYPTO_cleanup_all_ex_data
 CRYPTO_free
@@ -15110,6 +15113,7 @@ m_sFilterTag
 m_sfm
 MsgBoxButton
 MsgBoxButtonsVertical
+MsgBoxContents
 MsgBoxHTML
 MsgBoxHTMLContainer
 msgpool_hard_limit
@@ -15814,6 +15818,7 @@ N16CSteamRootDialog34CCallbackUpdateOfflineMessageCountE
 N16CSteamRootDialog35CCallbackOnSteamServersDisconnectedE
 N16CSteamRootDialog35CCallbackOnUserRequestingFriendshipE
 N16CSteamRootDialog36CCallbackUpdateUserNotificationCountE
+N16CSteamRootDialog45CCallbackOnPromptForRemoteDeviceAuthorizationE
 N16CSteamRootDialog46CCallbackOnPromptForRemoteControlAuthorizationE
 N16CSteamRootDialog46CCallbackOnRemoteClientStreamingEnabledChangedE
 N16SteamThreadTools18CValidatableThreadE
@@ -17530,6 +17535,7 @@ O0W0D0
 O1yeP2y
 o2m-N
 o2mqg
+o5pPl
 o6oso
 o6s7s
 O7kCQk
@@ -19575,6 +19581,7 @@ RemoteClients_AdvancedHost
 remotecontrol
 RemoteControlAuthorizeDevice
 remotecontroldevices
+RemoteDeviceAuthorization
 remotemodified
 RemotePlayerAvailable
 RemotePlayerDropDown
@@ -25110,7 +25117,6 @@ ValveKeyEntry1
 ValveKeyEntry2
 ValveKeyEntry3
 ValveKeyEntry4
-valvesoftware.com
 ValveSpecialSurveyWizard
 Valve_SteamIPC_Class
 ValveSurveyInternetConnection
