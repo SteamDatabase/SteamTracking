@@ -1270,6 +1270,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	margin-right: 10px;
 }
 
+.collectionItem .votingControls
+{
+	float: right;
+	margin-top: 22px;
+	margin-right: 10px;
+}
+
+
 .collectionItem .general_btn.subscribe
 {
 	position: relative;
@@ -2096,6 +2104,35 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		color: #494947;
 		font-size: 10px;
 		display: block;
+	}
+
+.stat_total_ctn {
+	margin-top: 30px;
+	float: right;
+}
+	.stat_total_ctn .stat_totals tr td {
+		color: #ac966a;
+		text-align: right;
+		font-size: 14px;
+		border-bottom: 1px solid #373737;
+		padding: 3px 8px;
+	}
+	.stat_total_ctn .stat_totals {
+		border-spacing: 0px;
+	}
+	.stat_total_ctn tr.table_header {
+		background: #373737;
+		text-transform: uppercase;
+		color: #ac966a;
+		text-align: right;
+	}
+	.stat_total_ctn tr.table_header td {
+		font-size: 11px;
+		line-height: 20px;
+	}
+	.stat_total_ctn .money_column {
+		width: 108px;
+		text-align: right;
 	}
 
 /* workshop specific buttons (Greenlight) */

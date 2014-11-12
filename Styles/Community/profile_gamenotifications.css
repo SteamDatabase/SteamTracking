@@ -1,6 +1,5 @@
 
 .profile_subpage_column .maincontent, body.migrated_profile_page .profile_subpage_column #BG_bottom.maincontent  {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/profile/profile_gamenotifications_background.jpg');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	min-height: 441px;
@@ -10,7 +9,6 @@
 #gamenotifications_top {
 	position:relative;
 	z-index:10;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;

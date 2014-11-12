@@ -511,7 +511,7 @@ btnv6_border_2px > span {
 	width: 18px;
 	height: 18px;
 	margin: 0 0px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_18.png?v=2);
+	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_18.png?v=3);
 	vertical-align: text-top;
 }
 
@@ -534,12 +534,17 @@ btnv6_border_2px > span {
 			.btn_active .ico18.thumb_up, .active .ico18.thumb_up {
 			background-position: -36px 0px;		}
 		
+	.ico18.accepted_and_voted {
+		background-position: 0px -18px;	}
+
+	
+		
 /* 16x16 */
 .ico16{
 	display: inline-block;
 	width: 16px;
 	height: 16px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_16.png?v=3);
+	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_16.png?v=4);
 	vertical-align: text-top;
 }
 
@@ -634,6 +639,16 @@ btnv6_border_2px > span {
 		
 	.ico16.bucketrefresh {
 		background-position: -240px 0px;	}
+
+	
+		
+	.ico16.bucketfollow {
+		background-position: -176px -16px;	}
+
+	
+		
+	.ico16.bucketfavorite {
+		background-position: -192px -16px;	}
 
 	
 		

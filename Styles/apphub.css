@@ -116,7 +116,6 @@ center
 {
 	position: relative;
 	float: right;
-	right: 11px;
 }
 
 .apphub_WorkshopPistonHolder
@@ -196,6 +195,9 @@ center
 .apphub_HomeHeaderContent
 {
     padding-top: 10px;
+}
+.page_title_area.game_title_area.page_content .apphub_HomeHeaderContent {
+	padding-top: 0px;
 }
 .apphub_HeaderBottomBG_ctn
 {

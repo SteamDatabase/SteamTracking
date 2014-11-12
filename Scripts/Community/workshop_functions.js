@@ -244,7 +244,7 @@ function OnIsCompanyChange()
 	{
 		$('lastnameblock').style.display = 'block';
 		$J('uscitizenblock').show();
-		$('firstnamelabel').innerHTML = 'First Name';
+		$('firstnamelabel').innerHTML = 'First Name (as written on bank records)';
 	}
 }
 
@@ -635,7 +635,7 @@ function SharedFileHover( elem, event, id, loggedIn, itemData )
 	}
 	else if ( ( !hover.visible() || hover.target != elem ) )
 	{
-		hover.down('.content').update( '<div class="hoverWorkshopItemTitle">' + itemData['title'] + '</div>' + '<div class="hoverWorkshopItemDesc">' + itemData['description'] + '</div>' );
+		hover.down('.content').update( '<div class="hoverWorkshopItemTitle">' + itemData['title'] + '</div>' + '<div class="hoverWorkshopItemDesc">' + ( itemData['description'] ? itemData['description'] : '' ) + '</div>' );
 		if ( itemData['user_subscribed'] )
 		{
 			$( 'hover_subscribed' ).show();

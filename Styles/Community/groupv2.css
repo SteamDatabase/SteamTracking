@@ -260,7 +260,7 @@ a.group_tab:hover {
 
 	padding-left: 5px;
 
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png') bottom left no-repeat, url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) top left no-repeat;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png?v=1') bottom left no-repeat, url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) top left no-repeat;
 
 	padding-bottom: 24px;
 	padding-right: 9px;
@@ -270,7 +270,7 @@ a.group_tab:hover {
 
 /* group summary does not have the top background */
 .group_content.group_summary {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png');
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png?v=1');
 	background-position: bottom left;
 	background-repeat: no-repeat;
 }

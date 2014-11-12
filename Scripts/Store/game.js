@@ -75,7 +75,7 @@ function CreateWidget( nAppId )
 	$J('#widget_finished').show();
 }
 
-function InitQueueControls( appid )
+function InitQueueControls( store_appid, steamworks_appid )
 {
 	var $FollowBtn = $J('.queue_control_button.queue_btn_follow .queue_btn_inactive');
 	var $UnFollowBtn = $J('.queue_control_button.queue_btn_follow .queue_btn_active');
@@ -85,7 +85,7 @@ function InitQueueControls( appid )
 	$IgnoreBtn.click( function() {
 		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
-			appid: appid
+			appid: store_appid
 		}).done( function() {
 			$IgnoreBtn.hide();
 			$UnIgnoreBtn.show();
@@ -98,7 +98,7 @@ function InitQueueControls( appid )
 	$UnIgnoreBtn.click( function() {
 		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
-			appid: appid,
+			appid: store_appid,
 			remove: 1
 		}).done( function() {
 			$IgnoreBtn.show();
@@ -112,7 +112,7 @@ function InitQueueControls( appid )
 	$FollowBtn.click( function() {
 		$J.post( 'https://store.steampowered.com/explore/followgame/', {
 			sessionid: g_sessionID,
-			appid: appid
+			appid: steamworks_appid
 		}).done( function() {
 			$FollowBtn.hide();
 			$UnFollowBtn.show();
@@ -124,7 +124,7 @@ function InitQueueControls( appid )
 	$UnFollowBtn.click( function() {
 		$J.post( 'https://store.steampowered.com/explore/followgame/', {
 			sessionid: g_sessionID,
-			appid: appid,
+			appid: steamworks_appid,
 			unfollow: 1
 		}).done( function() {
 			$FollowBtn.show();
