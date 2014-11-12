@@ -15346,7 +15346,6 @@ Multiseat
 MultiSelect
 multiselect_button
 m_UndoTextStream
-m_Uninstall.m_vecAppIDs
 munmap
 m_unused
 m_URLCurrent.m_sURL
@@ -15510,6 +15509,7 @@ m_vecAmbientSounds
 m_vecAmounts
 m_vecAnimationProperties
 m_vecAppIDRefreshStack
+m_vecAppIDs
 m_vecAppsFilteredTo
 m_vecAppsInPackage
 m_vecAppsInSubscription
@@ -15914,6 +15914,7 @@ N20CParentalUINavButton30CCallbackOnParentalLockChangedE
 N21CAccountNameValidator37CCallbackOnAccountNameAvailableResultE
 N21CDialogParentalUnlock44CCallbackOnParentalLockChangeAttemptCompleteE
 N21CExternalSignupMsgBox32CCallbackOnLegacyCDKeyRegisteredE
+N21CGameActionController15UninstallData_tE
 N21CGameStreamVideoStage12CAsyncThreadE
 N21CInstallBuilderSteam326CCallbackOnAppBackupStatusE
 N21CLinuxSupportLauncher23CCallbackOnLogonSuccessE
@@ -17535,7 +17536,7 @@ O0W0D0
 O1yeP2y
 o2m-N
 o2mqg
-o5pPl
+o5PWl
 o6oso
 o6s7s
 O7kCQk

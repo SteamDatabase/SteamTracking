@@ -4826,9 +4826,11 @@ KeyboardShortcut Image
 
 #ShowPrivateBetas Label
 {
-	font-size: 24px;
+	font-size: 26px;
 	margin-top: 5px;
-	margin-left: 5px;
+	padding-left: 0px;	
+	margin-left: 0px;
+	margin-top: 2px;
 	font-family: platformfont;
 	white-space: normal;
 	height: 100px;
@@ -4914,6 +4916,15 @@ KeyboardShortcut Image
 	margin-left: 10px;
 }
 
+#CategoryStack .CheckBox Label
+{
+	padding-left: 0px;	
+	margin-left: 6px;
+	margin-top: -8px;
+	color: applabel;
+	font-size: 26px;
+}
+
 .CategoryToggleText
 {
 	font-size: 24px;
@@ -4932,6 +4943,7 @@ KeyboardShortcut Image
 #LanguageDropDownMenu
 {
 	z-index: msgbox_contextmenu_zindex;
+	width: 480px;
 }
 
 .CheckBox
