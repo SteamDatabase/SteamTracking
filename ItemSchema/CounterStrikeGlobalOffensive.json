@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.69c95d016d04845a92e16408b0e8c96b33157aae.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.b753e07b551cc97b7b5e53b22c7bcb0881ac084a.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -3131,6 +3131,132 @@
 				
 			},
 			{
+				"name": "Map Token Marquis",
+				"defindex": 1037,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "CSGO_Collectible_MapTokenMarquis",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_marquis",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_marquis.850391449c5ca0a4a57446ff13cddf3da3f1ae4b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_marquis_large.0079c2a285f2823dd8fe4290cef8a4df15664bc2.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Workout",
+				"defindex": 1038,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "CSGO_Collectible_MapTokenWorkout",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_workout",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_workout.1baad38595395e94cc427a0870388137798f6ca8.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_workout_large.69b880650f39f6283b00cb8c978d91dfb21b09d9.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Backalley",
+				"defindex": 1039,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "CSGO_Collectible_MapTokenBackalley",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_backalley",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_backalley.9315d58c9d5c0814c4c06f40ce8af564d0e453c0.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_backalley_large.05438fa39d1bbf8b4a537751e800d7f2ca79eb9a.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Season",
+				"defindex": 1040,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "CSGO_Collectible_MapTokenSeason",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_season",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_season.7ce3f52deca958a608173bd002711b6b445fb5a9.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_season_large.d73c4bb72f17c4d7b701757fa4da779c32c16336.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Bazaar",
+				"defindex": 1041,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "CSGO_Collectible_MapTokenBazaar",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_bazaar",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_bazaar.16090a83570edca5686f66bb8842ff8ca70933a3.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_bazaar_large.926018c940e122b66fa4eb6942e3dba6930d402d.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Facade",
+				"defindex": 1042,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "CSGO_Collectible_MapTokenFacade",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_facade",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_facade.25d89f10111708ec822d65d1dd6588ac1c0428c2.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_facade_large.d441abb9cef81a359cf993af3642f58adda68419.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "Name Tag",
 				"defindex": 1200,
 				"item_class": "tool",
@@ -3593,6 +3719,32 @@
 				}
 			},
 			{
+				"name": "campaign weapons expert",
+				"defindex": 1312,
+				"item_class": "collectible_item",
+				"item_type_name": "Campaign",
+				"item_name": "Campaign Weapons Specialist",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/campaign",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
+				"image_url_large": "",
+				"capabilities": {
+					"can_delete": true
+				},
+				"attributes": [
+					{
+						"name": "campaign completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					}
+				]
+				
+			},
+			{
 				"name": "Community Case Key 4",
 				"defindex": 1313,
 				"item_class": "tool",
@@ -3631,6 +3783,483 @@
 				"max_ilevel": 1,
 				"image_url": "",
 				"image_url_large": ""
+			},
+			{
+				"name": "Community Season Five Summer 2014",
+				"defindex": 1315,
+				"item_class": "tool",
+				"item_type_name": "Pass",
+				"item_name": "Operation Vanguard Access Pass",
+				"item_description": "Grants access to Operation Vanguard, which consists of an upgradeable Challenge Coin, two campaigns that contain missions that reward weapon finishes, Operation Vanguard Case drops, and a journal that contains Campaign Overviews, an Active Duty Scorecard, an Operation Scorecard, and Friends leaderboard.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_vanguard_pass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_vanguard_pass.4dbf27f27c32be69ae74f13f6aaa20da52ae8126.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true
+				},
+				"tool": {
+					"type": "season_pass",
+					"use_string": "USE"
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Community Season Five Summer 2014 Coin 1",
+				"defindex": 1316,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Operation Vanguard Challenge Coin",
+				"item_description": "Participated in Operation Vanguard.\nComplete Campaigns and upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_vanguard_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_vanguard_bronze.12f462e7d160bc820324d016efe1e160f2919327.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_vanguard_bronze_large.49c23321be1477a5b2a20e96fceb539b95d55c0e.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Five Summer 2014 Coin 2",
+				"defindex": 1317,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Operation Vanguard Coin",
+				"item_description": "Participated in Operation Vanguard.\nComplete Campaigns and upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_vanguard_silver",
+				"min_ilevel": 2,
+				"max_ilevel": 2,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_vanguard_silver.dc8013afcd7ccf823d820d623478611a3ab0752d.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_vanguard_silver_large.3eeb504060cfc460a866435070f9a83772bd66f5.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Five Summer 2014 Coin 3",
+				"defindex": 1318,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Operation Vanguard Coin",
+				"item_description": "Participated in Operation Vanguard.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_vanguard_gold",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_vanguard_gold.1c0be8869324090c4edd0ca402b6cfd4185079ac.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_vanguard_gold_large.9fdda1c72855253c40d838658828b75b27a4dfaa.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "campaign vanguard",
+				"defindex": 1319,
+				"item_class": "collectible_item",
+				"item_type_name": "Campaign",
+				"item_name": "Campaign Vanguard",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/campaign",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
+				"image_url_large": "",
+				"capabilities": {
+					"can_delete": true
+				},
+				"attributes": [
+					{
+						"name": "campaign completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "campaign magrheb",
+				"defindex": 1320,
+				"item_class": "collectible_item",
+				"item_type_name": "Campaign",
+				"item_name": "Campaign Maghreb",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack/crafting/campaign",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/backpack/crafting/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
+				"image_url_large": "",
+				"capabilities": {
+					"can_delete": true
+				},
+				"attributes": [
+					{
+						"name": "campaign completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "campaign eurasia",
+				"defindex": 1321,
+				"item_class": "collectible_item",
+				"item_type_name": "Campaign",
+				"item_name": "Campaign Eurasia",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "backpack/crafting/campaign",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/backpack/crafting/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
+				"image_url_large": "",
+				"capabilities": {
+					"can_delete": true
+				},
+				"attributes": [
+					{
+						"name": "campaign completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Community Case Key 5",
+				"defindex": 1322,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Operation Vanguard Case Key",
+				"item_description": "This key only opens Operation Vanguard Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_5",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/crate_key_community_5.af5e2695975f07d5efbf02de9274e9b1041ff1fc.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_5",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
 			},
 			{
 				"name": "crate_valve_1",
@@ -4571,6 +5200,40 @@
 				
 			},
 			{
+				"name": "crate_operation_vanguard",
+				"defindex": 4029,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Operation Vanguard Weapon Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_5",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_community_5.49a38d2d3afff918ae3b5c5bc2ba2f99b02888f3.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_case_5",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 29
+					}
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
@@ -4829,7 +5492,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -4862,7 +5525,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -4895,7 +5558,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -4928,7 +5591,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -4961,7 +5624,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -4994,7 +5657,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5027,7 +5690,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5060,7 +5723,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5093,7 +5756,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5126,7 +5789,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5159,7 +5822,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5192,7 +5855,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5225,7 +5888,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5258,7 +5921,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5291,7 +5954,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5324,7 +5987,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5357,7 +6020,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5390,7 +6053,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5423,7 +6086,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5456,7 +6119,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5489,7 +6152,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5522,7 +6185,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5555,7 +6218,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5588,7 +6251,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5621,7 +6284,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5654,7 +6317,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5687,7 +6350,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5720,7 +6383,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5753,7 +6416,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5786,7 +6449,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5819,7 +6482,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5852,7 +6515,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5885,7 +6548,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -5918,7 +6581,7 @@
 					{
 						"name": "expiration date",
 						"class": "expiration_date",
-						"value": 7
+						"value": 2
 					}
 				]
 				
@@ -7463,6 +8126,14 @@
 				"stored_as_integer": true
 			},
 			{
+				"name": "upgrade threshold",
+				"defindex": 73,
+				"attribute_class": "upgrade_threshold",
+				"effect_type": "positive",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
 				"name": "tradable after date",
 				"defindex": 75,
 				"attribute_class": "tradable_after_date",
@@ -8382,6 +9053,27 @@
 					"weapon_glock",
 					"weapon_p90",
 					"weapon_m4a1_silencer"
+				]
+				
+			},
+			{
+				"item_set": "set_community_5",
+				"name": "The Vanguard Collection",
+				"items": [
+					"weapon_g3sg1",
+					"weapon_mag7",
+					"weapon_mp9",
+					"weapon_fiveseven",
+					"weapon_ump45",
+					"weapon_glock",
+					"weapon_m4a1_silencer",
+					"weapon_m4a1",
+					"weapon_sawedoff",
+					"weapon_p250",
+					"weapon_scar20",
+					"weapon_xm1014",
+					"weapon_ak47",
+					"weapon_hkp2000"
 				]
 				
 			},
