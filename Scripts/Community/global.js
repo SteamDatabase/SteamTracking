@@ -587,6 +587,8 @@ CEmoticonPopup.prototype.OnButtonClick = function()
 	{
 		if ( !this.m_$Popup )
 			this.BuildPopup();
+		else
+			PositionEmoticonHover( this.m_$Popup, this.m_$EmoticonButton );
 
 		// make sure we aren't listening to this
 		$J(document).off( 'click', this.m_fnOnDocumentclick );

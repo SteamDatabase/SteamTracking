@@ -701,7 +701,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 63					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35 )
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 63					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35 )
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -1521,6 +1521,16 @@ function OnGetFinalPriceSuccess( result )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Pay Easy customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
+					}
+				}				
+				else if ( method.value == 'webmoney_japan' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'WebMoney transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for WebMoney customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'zong' )
@@ -2363,7 +2373,7 @@ function UpdatePaymentInfoForm()
 			bShowCountryVerification = true;
 			bShowMobileForm = true;
 		}
-		else if ( method.value == 'konbini' || method.value == 'credit_card_japan' || method.value == 'bank_transfer_japan' || method.value == 'payeasy')
+		else if ( method.value == 'konbini' || method.value == 'credit_card_japan' || method.value == 'bank_transfer_japan' || method.value == 'payeasy' || method.value == 'webmoney_japan' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -2763,7 +2773,8 @@ function SubmitPaymentInfoForm()
 			|| method.value == 'denizbank' || method.value == 'ptt' || method.value == 'cashu'
 			|| method.value == 'onecard'
 			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'konbini' || method.value == 'eclubpoints' || method.value == 'credit_card_japan' 
-			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || ( method.value == 'updatepaypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal'
+			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || method.value == 'webmoney_japan'
+			|| ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || ( method.value == 'updatepaypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal'
 			|| method.value == 'zong' || method.value == 'culturevoucher' || method.value == 'bookvoucher' || method.value == 'happymoneyvoucher' || method.value == 'convenientstorevoucher'
 			|| method.value == 'gamevoucher' )
 		{
@@ -3363,6 +3374,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'Pay Easy';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
+			else if ( method.value == 'webmoney_japan' && providerPaymentMethod == 65 )
+			{
+				$('payment_method_review_text').innerHTML = 'WebMoney';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
 			else if ( method.value == 'zong' && providerPaymentMethod == 39 )
 			{
 				$('payment_method_review_text').innerHTML = 'Zong';
@@ -3768,6 +3784,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 			case 36:
 			case 37:
 			case 38:
+			case 65:
 			case 39:
 			case 40:
 			case 41:

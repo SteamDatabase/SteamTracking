@@ -268,8 +268,8 @@ a:hover {
 }
 
 .modalDetails .detailBox {
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
-	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
+	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
 }
 
 .detailBox.collection {
@@ -278,8 +278,8 @@ a:hover {
 	margin: 0 0 20px 0;
 
 
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_footer_fade_wide.png' ) bottom right no-repeat,
-	url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_topbackground_wide.png' ) 0px -1px no-repeat,
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_footer_fade_wide.png?v=1' ) bottom right no-repeat,
+	url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_topbackground_wide.png?v=1' ) 0px -1px no-repeat,
 	url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/linesep_long.png' ) 0px 0px no-repeat;
 }
 
@@ -288,8 +288,8 @@ a:hover {
 	margin: 0 0 20px 0;
 
 
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_footer_fade_wide.png' ) bottom right no-repeat,
-	url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_topbackground_wide.png' ) 0px -1px no-repeat,
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_footer_fade_wide.png?v=1' ) bottom right no-repeat,
+	url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_topbackground_wide.png?v=1' ) 0px -1px no-repeat,
 	url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/linesep_long.png' ) 0px 0px no-repeat;
 }
 
@@ -298,7 +298,7 @@ a:hover {
 	margin: 0 0 20px 0;
 
 
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_footer_fade_wide.png' ) bottom right no-repeat;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/content_footer_fade_wide.png?v=1' ) bottom right no-repeat;
 }
 
 
@@ -1358,6 +1358,10 @@ a.instructionsBtn:hover {
 	padding-top: 16px;
 	padding-bottom: 16px;
 }
+.workshop_paymentinfo_third_party_notice .alert
+{
+	color: #CA7900;
+}
 
 .paymentinfo_background input[type=text]
 {
@@ -1404,25 +1408,26 @@ a.instructionsBtn:hover {
 }
 
 .formRowTitle {
-	width:300px;
-	text-align:right;
 	padding-right:4px;
 	font-size:14px;
 	color:#707070;
-	padding: 9px 5px 4px 8px;
+	padding: 9px 5px 4px 0px;
+}
+.formSectionTitle {
+	font-size: 17px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	color: #dddddd;
 }
 
 .formRowFields
 {
-	float:right;
-	width:630px;
 	text-align:left;
 	font-size: 14px;
 }
 
 .formRowFields.text
 {
-	padding: 9px 5px 4px 8px;
+	padding: 9px 5px 4px 0px;
 }
 
 .formRowFields.completed
@@ -1433,10 +1438,15 @@ a.instructionsBtn:hover {
 .formRowFields.incomplete
 {
 	color: #CA7900;
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 8px;
+	margin-top: 12px;
 }
 
-.formRow.payment_info_notice
+.formRowTitle.payment_info_notice
 {
+	width: 100%;
+	color: #CA7900;
 }
 .formRowTitle.payment_info_notice.approved
 {
@@ -1450,7 +1460,6 @@ a.instructionsBtn:hover {
 {
 	color: #68932f;
 	width: 100%;
-	text-align: center;
 }
 
 .formRowFields .darkGrey

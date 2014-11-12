@@ -272,6 +272,8 @@ var HighlightPlayer = Class.create( {
 	HighlightStripItem: function( elem )
 	{
 		var elem = $(elem);
+		if ( !elem )
+			return;
 		elem.siblings().invoke( 'removeClassName', 'focus' );
 		elem.addClassName( 'focus' );
 

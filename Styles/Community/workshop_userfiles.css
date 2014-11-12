@@ -1424,16 +1424,16 @@ textarea {
 .workshopItemCollection
 {
 	position: relative;
-	background-color: #1b1b1b;
+	background-color: rgba( 84, 133, 183, 0.2);
 	margin-bottom: 4px;
-	border: 1px solid #4d4d4d;
 	padding: 5px;
 	cursor: pointer;
+	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 }
 
 .workshopItemCollection:hover
 {
-	background-color: #323233;
+	background-color: rgba( 117, 204, 255, 0.3);
 }
 
 .workshopItemCollection .workshopItem
@@ -1601,7 +1601,6 @@ textarea {
 	width:200px;
 	height: 200px;
 	background-color: #000000;
-	border: 1px solid #3a3a3a;
 }
 
 .workshopItemPreviewHolder.landscape

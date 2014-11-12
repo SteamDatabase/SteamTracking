@@ -597,7 +597,7 @@ a.showcase_stat:hover .label {
 }
 
 .showcase_stats_row.favoritegroup_stats .showcase_stat .value {
-	font-size: 24px;
+	font-size: 22px;
 }
 
 .showcase_stat.favoritegroup_ingame .value {
@@ -1662,7 +1662,7 @@ a.graytab:hover {
 
 .friends_limit_details strong {
 	font-weight: normal;
-	color: #529cde;
+	color: #67c1f5;
 }
 
 .friends_limit_details_maxed_out {

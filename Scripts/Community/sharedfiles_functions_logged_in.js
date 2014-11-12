@@ -72,6 +72,33 @@ function CheckVoteResultsJSON( json )
 	}
 }
 
+function ToggleChildItemVoteBtns( transport, bVotedUp )
+{
+	var json = transport.responseText.evalJSON();
+	if ( json['items'] )
+	{
+		for ( var i = 0; i < json['items'].length; ++i )
+		{
+			var id = json['items'][i];
+			var childVoteUpBtn = $('vote_up_' + id);
+			var childVoteDownBtn = $('vote_down_' + id);
+			if ( childVoteUpBtn &&childVoteDownBtn  )
+			{
+				if ( bVotedUp )
+				{
+					childVoteUpBtn.addClassName('btn_active');
+					childVoteDownBtn.removeClassName('btn_active');
+				}
+				else
+				{
+					childVoteUpBtn.removeClassName('btn_active');
+					childVoteDownBtn.addClassName('btn_active');
+				}
+			}
+		}
+	}
+}
+
 function VoteUp(item_id)
 {
 	if ( !$('VoteUpBtn').hasClassName( 'toggled' ) )
@@ -87,6 +114,8 @@ function VoteUp(item_id)
 
 					if ( !CheckVoteResults( transport ) )
 						return;
+
+					ToggleChildItemVoteBtns( transport, true );
 
 					var votesUpCount = $('VotesUpCount');
 					if ( votesUpCount )
@@ -141,6 +170,8 @@ function VoteDown(item_id)
 
 					if ( !CheckVoteResults( transport ) )
 						return;
+
+					ToggleChildItemVoteBtns( transport, false );
 
 					var votesUpCount = $('VotesUpCount');
 					if ( votesUpCount && $('VoteUpBtn').hasClassName( 'toggled' ) )
@@ -210,6 +241,82 @@ function VoteLater(item_id)
 	}
 
 	return false;
+}
+
+/* used for collection votes for now */
+function ValidateVoteSuccess( transport )
+{
+	if ( !transport.responseJSON )
+	{
+		ShowAlertDialog( 'Error', 'An error was encountered while processing your request: unknown' );
+	}
+	else if ( transport.responseJSON.success == 21 )
+	{
+		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+	}
+	else if ( transport.responseJSON.success == 24 )
+	{
+		ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+	}
+	else if ( transport.responseJSON.success == 16 )
+	{
+		ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
+	}
+	else if ( transport.responseJSON.success != 1 )
+	{
+		ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + transport.responseJSON.success );
+	}
+	return transport.responseJSON && transport.responseJSON.success == 1;
+}
+
+function PublishedFileVoteUp( id )
+{
+	if ( !$('vote_up_' + id).hasClassName( 'btn_active' ) )
+	{
+		var options = {
+			method: 'post',
+			postBody: 'id=' + id + '&sessionid=' + g_sessionID,
+			onComplete: (function(id){
+				return function(transport)
+				{
+					if ( ValidateVoteSuccess( transport ) )
+					{
+						$('vote_up_' + id).addClassName('btn_active');
+						$('vote_down_' + id).removeClassName('btn_active');
+					}
+				}
+			}(id))
+		};
+		new Ajax.Request(
+			'https://steamcommunity.com/sharedfiles/voteup',
+			options
+		);
+	}
+}
+
+function PublishedFileVoteDown( id )
+{
+	if ( !$('vote_down_' + id).hasClassName( 'btn_active' ) )
+	{
+		var options = {
+			method: 'post',
+			postBody: 'id=' + id + '&sessionid=' + g_sessionID,
+			onComplete: (function(id){
+				return function(transport)
+				{
+					if ( ValidateVoteSuccess( transport ) )
+					{
+						$('vote_up_' + id).removeClassName('btn_active');
+						$('vote_down_' + id).addClassName('btn_active');
+					}
+				}
+			}(id))
+		};
+		new Ajax.Request(
+			'https://steamcommunity.com/sharedfiles/votedown',
+			options
+		);
+	}
 }
 
 function ReportItem()

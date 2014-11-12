@@ -3,12 +3,11 @@
 
 .guideTop
 {
-	background-color: #1b1b1b;
+	background-color: rgba( 84, 133, 183, 0.2);
 	margin-top: 10px;
 	padding-top: 16px;
 	margin-bottom: 20px;
-	border-top: 1px solid #121212;
-	border-left: 1px solid #121212;
+
 }
 
 .guideTopContent
@@ -21,14 +20,14 @@
 .guideTopContent .dotHR 
 {
 	height: 1px;
-	border-bottom: 1px #444444 dotted;
+	border-bottom: 1px #61696d dotted;
 	margin: 10px 0px 10px 84px;
 }
 
 .guideTopDescription
 {
 	font-size: 17px;
-	color: #a2a2a2;
+	color: #c6d4df;
 	word-wrap: break-word;
 	margin-top: 10px;
 	line-height: 22px;
@@ -38,13 +37,14 @@
 
 .guideAuthors
 {
-	color: #7f7f7f;
+	color: #61696d;
 }
 
 .guideTop .workshopItemControls
 {
-	background-color: #343434;
-	background: -moz-linear-gradient(top, #343434 5%, #3d3d3d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#343434), color-stop(95%,#3d3d3d));background: -webkit-linear-gradient(top, #343434 5%,#3d3d3d 95%);background: -o-linear-gradient(top, #343434 5%,#3d3d3d 95%);background: -ms-linear-gradient(top, #343434 5%,#3d3d3d 95%);background: linear-gradient(to bottom, #343434 5%,#3d3d3d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343434', endColorstr='#3d3d3d',GradientType=0 );	width: 930px;
+	background-color: #223349;
+
+	width: 930px;
 	z-index: 21;
 	-moz-box-shadow: 0px 0px 7px #000000;
 	-webkit-box-shadow: 0px 0px 7px #000000;
@@ -148,7 +148,7 @@
 .editGuideHeader
 {
 	position: relative;
-	background-color: #1b1b1b;
+	background-color: #000;
 	font-size: 12px;
 	color: white;
 	margin: 0px auto;
@@ -293,7 +293,7 @@
 
 .editGuideEmptyDetailBox
 {
-	background-color: #1f1f1f;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	min-height: 150px;
 	text-align: center;
 }
@@ -315,9 +315,10 @@
 {
 	padding: 3px;
 	padding-right: 15px;
-	background-color: #333334;
+	background-color: rgba( 84, 133, 183, 0.2);
 	margin-top: 2px;
 	line-height: 35px;
+	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 }
 
 .editGuideTOCSection.empty
@@ -358,18 +359,14 @@
 {
 	float: left;
 	min-width: 300px;
-	font-weight: bold;
 	color: white;
+	font-size: 14px;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 }
 
 .editGuideTOCSectionControls
 {
 	float: right;
-}
-
-.editGuideTOCSectionControls a, .editGuideTOCSectionControls a:visited
-{
-	color: #828282;
 }
 
 .editGuideTOCSectionControls .btn_grey_black
@@ -380,7 +377,9 @@
 .editGuideTOCSectionControls img
 {
 	vertical-align: middle;
-	padding-left: 5px;
+	margin-left: -6px;
+	margin-top: -2px;
+	margin-right: 3px;
 }
 
 .editGuideTOCSectionControls .btn_small_thin
@@ -545,7 +544,7 @@
 
 .editGuideSubSectionPageControlsContainer
 {
-	background-color: #1c1c1c;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 10px;
 	width: 926px;
 	margin: 0px auto;
