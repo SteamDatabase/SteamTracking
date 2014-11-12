@@ -215,6 +215,17 @@ body{
 	margin-top: 28px;
 	padding-bottom: 5px;
 }
+.valve_only {
+	background: #50362e;
+}
+.appdepot .valve_only {
+	padding: 8px;
+	padding-right: 3px;
+}
+.adding_depots .valve_only {
+	padding: 8px;
+	margin-top: 6px;
+}
 
 #appFrame #landingWelcome {
 	margin-bottom: 20px;
