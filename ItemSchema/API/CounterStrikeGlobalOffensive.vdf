@@ -792,6 +792,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_fiveseven_so_grey_nuclear_orange_five_seven_heavy"
 			}
+			"198156"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_urban_hazard_light"
+			}
+			"198157"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_urban_hazard_medium"
+			}
+			"198158"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_urban_hazard_heavy"
+			}
 			"262152"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_so_olive_light"
@@ -935,6 +947,18 @@
 			"263614"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_am_nuclear_pattern1_glock_heavy"
+			}
+			"263668"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_aq_glock_coiled_light"
+			}
+			"263669"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_aq_glock_coiled_medium"
+			}
+			"263670"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_aq_glock_coiled_heavy"
 			}
 			"458808"
 			{
@@ -1103,6 +1127,18 @@
 			"460118"
 			{
 				"icon_path"		"econ/default_generated/weapon_ak47_cu_green_leather_ak47_heavy"
+			}
+			"460272"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_tribute_ak47_light"
+			}
+			"460273"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_tribute_ak47_medium"
+			}
+			"460274"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_tribute_ak47_heavy"
 			}
 			"524324"
 			{
@@ -1644,6 +1680,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_g3sg1_so_green_heavy"
 			}
+			"722424"
+			{
+				"icon_path"		"econ/default_generated/weapon_g3sg1_am_g3sg1_murky_light"
+			}
+			"722425"
+			{
+				"icon_path"		"econ/default_generated/weapon_g3sg1_am_g3sg1_murky_medium"
+			}
+			"722426"
+			{
+				"icon_path"		"econ/default_generated/weapon_g3sg1_am_g3sg1_murky_heavy"
+			}
 			"852272"
 			{
 				"icon_path"		"econ/default_generated/weapon_galilar_hy_forest_winter_light"
@@ -1991,6 +2039,18 @@
 			"1049922"
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_cu_titanstorm_heavy"
+			}
+			"1050112"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_griffin_light"
+			}
+			"1050113"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_griffin_medium"
+			}
+			"1050114"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_griffin_heavy"
 			}
 			"1114124"
 			{
@@ -2496,6 +2556,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_ump45_hy_lines_orange_heavy"
 			}
+			"1574432"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_sp_ump45_d-visions_light"
+			}
+			"1574433"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_sp_ump45_d-visions_medium"
+			}
+			"1574434"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_sp_ump45_d-visions_heavy"
+			}
 			"1638568"
 			{
 				"icon_path"		"econ/default_generated/weapon_xm1014_aq_blued_light"
@@ -2651,6 +2723,18 @@
 			"1639882"
 			{
 				"icon_path"		"econ/default_generated/weapon_xm1014_am_nuclear_skulls1_xm1014_heavy"
+			}
+			"1639972"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_cu_xm1014_caritas_light"
+			}
+			"1639973"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_cu_xm1014_caritas_medium"
+			}
+			"1639974"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_cu_xm1014_caritas_heavy"
 			}
 			"1703988"
 			{
@@ -2940,6 +3024,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_heaven_heavy"
 			}
+			"1771012"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_sp_mag7_firebitten_light"
+			}
+			"1771013"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_sp_mag7_firebitten_medium"
+			}
+			"1771014"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_sp_mag7_firebitten_heavy"
+			}
 			"1835120"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_an_navy_light"
@@ -2951,18 +3047,6 @@
 			"1835122"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_an_navy_heavy"
-			}
-			"1835128"
-			{
-				"icon_path"		"econ/default_generated/weapon_negev_sp_snake_light"
-			}
-			"1835129"
-			{
-				"icon_path"		"econ/default_generated/weapon_negev_sp_snake_medium"
-			}
-			"1835130"
-			{
-				"icon_path"		"econ/default_generated/weapon_negev_sp_snake_heavy"
 			}
 			"1835812"
 			{
@@ -3192,6 +3276,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_sawedoff_cu_green_leather_sawedoff_heavy"
 			}
+			"1902104"
+			{
+				"icon_path"		"econ/default_generated/weapon_sawedoff_aq_sawedoff_blackgold_light"
+			}
+			"1902105"
+			{
+				"icon_path"		"econ/default_generated/weapon_sawedoff_aq_sawedoff_blackgold_medium"
+			}
+			"1902106"
+			{
+				"icon_path"		"econ/default_generated/weapon_sawedoff_aq_sawedoff_blackgold_heavy"
+			}
 			"1966088"
 			{
 				"icon_path"		"econ/default_generated/weapon_tec9_so_olive_light"
@@ -3396,18 +3492,6 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_am_scorpion_p2000_heavy"
 			}
-			"2097476"
-			{
-				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_ddpat_desert_light"
-			}
-			"2097477"
-			{
-				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_ddpat_desert_medium"
-			}
-			"2097478"
-			{
-				"icon_path"		"econ/default_generated/weapon_hkp2000_hy_ddpat_desert_heavy"
-			}
 			"2097532"
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_so_grassland_light"
@@ -3527,6 +3611,18 @@
 			"2098582"
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_ivory_heavy"
+			}
+			"2098708"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_fire_elemental_light"
+			}
+			"2098709"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_fire_elemental_medium"
+			}
+			"2098710"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_fire_elemental_heavy"
 			}
 			"2162708"
 			{
@@ -3792,6 +3888,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mp9_hy_nuclear_pattern2_mp9_heavy"
 			}
+			"2229768"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_chevron_light"
+			}
+			"2229769"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_chevron_medium"
+			}
+			"2229770"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_chevron_heavy"
+			}
 			"2293772"
 			{
 				"icon_path"		"econ/default_generated/weapon_nova_so_red_light"
@@ -4020,18 +4128,6 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_sp_tape_heavy"
 			}
-			"2359420"
-			{
-				"icon_path"		"econ/default_generated/weapon_p250_an_gold_light"
-			}
-			"2359421"
-			{
-				"icon_path"		"econ/default_generated/weapon_p250_an_gold_medium"
-			}
-			"2359422"
-			{
-				"icon_path"		"econ/default_generated/weapon_p250_an_gold_heavy"
-			}
 			"2359432"
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_am_urban_light"
@@ -4200,6 +4296,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_hy_nuclear_skulls4_p250_heavy"
 			}
+			"2360848"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_aq_p250_cartel_light"
+			}
+			"2360849"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_aq_p250_cartel_medium"
+			}
+			"2360850"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_aq_p250_cartel_heavy"
+			}
 			"2490552"
 			{
 				"icon_path"		"econ/default_generated/weapon_scar20_so_pmc_light"
@@ -4308,6 +4416,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_scar20_cu_scar_cyrex_heavy"
 			}
+			"2491932"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_cu_scar20_intervention_light"
+			}
+			"2491933"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_cu_scar20_intervention_medium"
+			}
+			"2491934"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_cu_scar20_intervention_heavy"
+			}
 			"2556016"
 			{
 				"icon_path"		"econ/default_generated/weapon_sg556_an_navy_light"
@@ -4355,18 +4475,6 @@
 			"2556450"
 			{
 				"icon_path"		"econ/default_generated/weapon_sg556_sp_tape_dots_waves_heavy"
-			}
-			"2556472"
-			{
-				"icon_path"		"econ/default_generated/weapon_sg556_sp_tape_sand_light"
-			}
-			"2556473"
-			{
-				"icon_path"		"econ/default_generated/weapon_sg556_sp_tape_sand_medium"
-			}
-			"2556474"
-			{
-				"icon_path"		"econ/default_generated/weapon_sg556_sp_tape_sand_heavy"
 			}
 			"2556648"
 			{
@@ -4715,6 +4823,18 @@
 			"3933602"
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_cyrex_heavy"
+			}
+			"3933692"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_aq_m4a1s_basilisk_light"
+			}
+			"3933693"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_aq_m4a1s_basilisk_medium"
+			}
+			"3933694"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_aq_m4a1s_basilisk_heavy"
 			}
 			"3997796"
 			{
@@ -6032,6 +6152,7 @@
 		{
 			"name"		"quest_item"
 			"item_class"		"collectible_item"
+			"item_type"		"quest"
 			"item_type_name"		"#CSGO_Type_Quest"
 			"item_name"		"#CSGO_Type_Quest"
 			"item_description"		"#CSGO_Quest_Desc"
@@ -6466,6 +6587,127 @@
 				"quests complete"
 				{
 					"attribute_class"		"quests_complete"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+			}
+		}
+		"season5_coin"
+		{
+			"prefab"		"collectible_untradable"
+			"attributes"
+			{
+				"season access"		"4"
+				"minutes played"
+				{
+					"attribute_class"		"minutes_played"
+					"value"		"1"
+				}
+				"operation minutes played"
+				{
+					"attribute_class"		"operation_minutes_played"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation wins"
+				{
+					"attribute_class"		"operation_wins"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation kills"
+				{
+					"attribute_class"		"operation_kills"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation 3k"
+				{
+					"attribute_class"		"operation_3k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation 4k"
+				{
+					"attribute_class"		"operation_4k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation 5k"
+				{
+					"attribute_class"		"operation_5k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation hsp"
+				{
+					"attribute_class"		"operation_hsp"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation mvps"
+				{
+					"attribute_class"		"operation_mvps"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive minutes played"
+				{
+					"attribute_class"		"competitive_minutes_played"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive wins"
+				{
+					"attribute_class"		"competitive_wins"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive kills"
+				{
+					"attribute_class"		"competitive_kills"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 3k"
+				{
+					"attribute_class"		"competitive_3k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 4k"
+				{
+					"attribute_class"		"competitive_4k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive 5k"
+				{
+					"attribute_class"		"competitive_5k"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive hsp"
+				{
+					"attribute_class"		"competitive_hsp"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"competitive mvps"
+				{
+					"attribute_class"		"competitive_mvps"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"quests complete"
+				{
+					"attribute_class"		"quests_complete"
+					"value"		"0"
+					"force_gc_to_generate"		"1"
+				}
+				"operation points"
+				{
+					"attribute_class"		"operation_points"
 					"value"		"0"
 					"force_gc_to_generate"		"1"
 				}
@@ -9345,7 +9587,15 @@
 		"coupon_crate_prefab"
 		{
 			"prefab"		"weapon_case_base"
-			"is_coupon_crate"		"1"
+			"item_type"		"coupon_crate"
+			"attributes"
+			{
+				"cannot trade"		"1"
+			}
+			"capabilities"
+			{
+				"can_delete"		"0"
+			}
 			"attributes"
 			{
 				"expiration date"
@@ -9353,13 +9603,8 @@
 					"attribute_class"		"expiration_date"
 					"force_gc_to_generate"		"1"
 					"use_custom_logic"		"expiration_period_days_from_now"
-					"value"		"7"
+					"value"		"2"
 				}
-				"cannot trade"		"1"
-			}
-			"capabilities"
-			{
-				"can_delete"		"0"
 			}
 		}
 		"coupon_key_prefab"
@@ -9368,11 +9613,42 @@
 			"item_name"		"#CSGO_Tool_Coupon_Key"
 			"item_description"		"#CSGO_Tool_Coupon_Key"
 			"image_inventory"		"econ/tools/coupon_key"
-			"is_coupon_key"		"1"
+			"item_type"		"coupon_key"
 			"attributes"
 			{
 				"cannot trade"		"1"
 			}
+		}
+		"campaign_prefab"
+		{
+			"image_inventory"		"econ/tools/campaign"
+			"attributes"
+			{
+				"cannot trade"		"1"
+				"campaign completion bitfield"
+				{
+					"attribute_class"		"campaign_completion_bitfield"
+					"force_gc_to_generate"		"1"
+					"value"		"0"
+				}
+			}
+			"capabilities"
+			{
+				"can_delete"		"1"
+			}
+			"item_class"		"collectible_item"
+			"item_type"		"campaign"
+			"item_type_name"		"#campaign"
+			"icon_default_image"		"materials/icons/inventory_icon_campaign.vtf"
+			"image_inventory"		"backpack/crafting/campaign"
+			"item_quality"		"unique"
+			"item_rarity"		"common"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"mouse_pressed_sound"		"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
 		}
 	}
 	"items"
@@ -10929,6 +11205,84 @@
 				"pedestal display model"		"models/inventory_items/maptoken_overgrown.mdl"
 			}
 		}
+		"1037"
+		{
+			"name"		"Map Token Marquis"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenMarquis"
+			"item_description"		"#CSGO_Collectible_MapTokenMarquis_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_marquis"
+			"map_name"		"#SFUI_Map_de_marquis"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_marquis.mdl"
+			}
+		}
+		"1038"
+		{
+			"name"		"Map Token Workout"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenWorkout"
+			"item_description"		"#CSGO_Collectible_MapTokenWorkout_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_workout"
+			"map_name"		"#SFUI_Map_cs_workout"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_workout.mdl"
+			}
+		}
+		"1039"
+		{
+			"name"		"Map Token Backalley"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenBackalley"
+			"item_description"		"#CSGO_Collectible_MapTokenBackalley_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_backalley"
+			"map_name"		"#SFUI_Map_cs_backalley"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_backalley.mdl"
+			}
+		}
+		"1040"
+		{
+			"name"		"Map Token Season"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenSeason"
+			"item_description"		"#CSGO_Collectible_MapTokenSeason_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_season"
+			"map_name"		"#SFUI_Map_de_season"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_season.mdl"
+			}
+		}
+		"1041"
+		{
+			"name"		"Map Token Bazaar"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenBazaar"
+			"item_description"		"#CSGO_Collectible_MapTokenBazaar_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_bazaar"
+			"map_name"		"#SFUI_Map_de_bazaar"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_bazaar.mdl"
+			}
+		}
+		"1042"
+		{
+			"name"		"Map Token Facade"
+			"prefab"		"map_token"
+			"item_name"		"#CSGO_Collectible_MapTokenFacade"
+			"item_description"		"#CSGO_Collectible_MapTokenFacade_Desc"
+			"image_inventory"		"econ/status_icons/maptoken_facade"
+			"map_name"		"#SFUI_Map_de_facade"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/maptoken_facade.mdl"
+			}
+		}
 		"1200"
 		{
 			"name"		"Name Tag"
@@ -11229,6 +11583,17 @@
 				"restriction"		"community_case_4"
 			}
 		}
+		"1312"
+		{
+			"name"		"campaign weapons expert"
+			"item_name"		"#csgo_campaign_weapons"
+			"item_description"		"#csgo_campaign_weapons_desc"
+			"prefab"		"campaign_prefab"
+			"attributes"
+			{
+				"campaign id"		"4"
+			}
+		}
 		"1313"
 		{
 			"name"		"Community Case Key 4"
@@ -11246,6 +11611,128 @@
 		{
 			"name"		"musickit"
 			"prefab"		"musickit_prefab"
+		}
+		"1315"
+		{
+			"name"		"Community Season Five Summer 2014"
+			"first_sale_date"		"2014/10/29"
+			"prefab"		"csgo_tool"
+			"item_type_name"		"#CSGO_Type_Ticket"
+			"item_name"		"#CSGO_Ticket_CommunitySeasonFiveSummer2014"
+			"item_description"		"#CSGO_Ticket_CommunitySeasonFiveSummer2014_Desc"
+			"image_inventory"		"econ/status_icons/operation_vanguard_pass"
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"		"1"
+			}
+			"tool"
+			{
+				"type"		"season_pass"
+				"use_string"		"#ConsumeItem"
+				"usage"
+				{
+					"bonus_itemdefs"
+					{
+						"1312"		"1"
+						"1319"		"1"
+					}
+				}
+			}
+			"attributes"
+			{
+				"season access"		"4"
+			}
+		}
+		"1316"
+		{
+			"name"		"Community Season Five Summer 2014 Coin 1"
+			"prefab"		"season5_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonFiveSummer2014_Coin1"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonFiveSummer2014_Coin1_Desc"
+			"image_inventory"		"econ/status_icons/operation_vanguard_bronze"
+			"min_ilevel"		"1"
+			"max_ilevel"		"1"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/vanguard_bronze.mdl"
+				"upgrade threshold"		"3"
+			}
+		}
+		"1317"
+		{
+			"name"		"Community Season Five Summer 2014 Coin 2"
+			"prefab"		"season5_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonFiveSummer2014_Coin2"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonFiveSummer2014_Coin2_Desc"
+			"image_inventory"		"econ/status_icons/operation_vanguard_silver"
+			"min_ilevel"		"2"
+			"max_ilevel"		"2"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/vanguard_silver.mdl"
+				"upgrade threshold"		"4"
+			}
+		}
+		"1318"
+		{
+			"name"		"Community Season Five Summer 2014 Coin 3"
+			"prefab"		"season5_coin"
+			"item_name"		"#CSGO_Collectible_CommunitySeasonFiveSummer2014_Coin3"
+			"item_description"		"#CSGO_Collectible_CommunitySeasonFiveSummer2014_Coin3_Desc"
+			"image_inventory"		"econ/status_icons/operation_vanguard_gold"
+			"min_ilevel"		"3"
+			"max_ilevel"		"3"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/vanguard_gold.mdl"
+			}
+		}
+		"1319"
+		{
+			"name"		"campaign vanguard"
+			"item_name"		"#csgo_campaign_vanguard"
+			"item_description"		"#csgo_campaign_vanguard_desc"
+			"prefab"		"campaign_prefab"
+			"attributes"
+			{
+				"campaign id"		"2"
+			}
+		}
+		"1320"
+		{
+			"name"		"campaign magrheb"
+			"item_name"		"#csgo_campaign_maghreb"
+			"item_description"		"#csgo_campaign_maghreb_desc"
+			"prefab"		"valve campaign_prefab"
+			"attributes"
+			{
+				"campaign id"		"3"
+			}
+		}
+		"1321"
+		{
+			"name"		"campaign eurasia"
+			"item_name"		"#csgo_campaign_eurasia"
+			"item_description"		"#csgo_campaign_eurasia_desc"
+			"prefab"		"valve campaign_prefab"
+			"attributes"
+			{
+				"campaign id"		"1"
+			}
+		}
+		"1322"
+		{
+			"name"		"Community Case Key 5"
+			"item_name"		"#CSGO_community_crate_key_5"
+			"item_description"		"#CSGO_community_crate_key_5_desc"
+			"first_sale_date"		"2014/11/5"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_community_5"
+			"tool"
+			{
+				"restriction"		"community_case_5"
+			}
 		}
 		"4001"
 		{
@@ -12022,6 +12509,40 @@
 				{
 					"tag_value"		"set_overpass"
 					"tag_text"		"#CSGO_set_overpass"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4029"
+		{
+			"item_name"		"#CSGO_crate_operation_vanguard"
+			"item_description"		"#CSGO_crate_operation_vanguard_desc"
+			"name"		"crate_operation_vanguard"
+			"image_inventory"		"econ/weapon_cases/crate_community_5"
+			"prefab"		"weapon_case"
+			"associated_items"
+			{
+				"1322"		"1"
+			}
+			"tool"
+			{
+				"restriction"		"community_case_5"
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"29"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_5"
+					"tag_text"		"#CSGO_set_community_5"
 					"tag_group"		"ItemSet"
 					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
 				}
@@ -13678,6 +14199,15 @@
 			"effect_type"		"positive"
 			"stored_as_integer"		"1"
 		}
+		"73"
+		{
+			"name"		"upgrade threshold"
+			"attribute_class"		"upgrade_threshold"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
 		"75"
 		{
 			"name"		"tradable after date"
@@ -14565,6 +15095,42 @@
 			"attribute_class"		"expiration_date"
 			"description_string"		"#Attrib_ExpirationDate"
 			"description_format"		"value_is_date"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"184"
+		{
+			"name"		"campaign id"
+			"attribute_class"		"campaign_id"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"185"
+		{
+			"name"		"campaign completion bitfield"
+			"attribute_class"		"campaign_completion_bitfield"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"187"
+		{
+			"name"		"last campaign completion"
+			"attribute_class"		"last_campaign_completion"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"188"
+		{
+			"name"		"operation points"
+			"attribute_class"		"operation_points"
+			"description_format"		"value_is_additive"
 			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
@@ -22723,6 +23289,323 @@
 			"wear_remap_max"		"0.900000"
 			"dialog_config"		"8,0,0,0"
 		}
+		"380"
+		{
+			"name"		"cu_tribute_ak47"
+			"description_string"		"#PaintKit_cu_tribute_ak47"
+			"description_tag"		"#PaintKit_cu_tribute_ak47_Tag"
+			"style"		"7"
+			"pattern"		"workshop/tribute_ak47"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.050000"
+			"wear_remap_max"		"0.700000"
+		}
+		"381"
+		{
+			"name"		"aq_glock_coiled"
+			"description_string"		"#PaintKit_aq_glock_coiled"
+			"description_tag"		"#PaintKit_aq_glock_coiled_Tag"
+			"style"		"8"
+			"pattern"		"workshop/167-miracle"
+			"pattern_scale"		"2.000000"
+			"phongexponent"		"50"
+			"phongalbedoboost"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.020000"
+			"wear_remap_max"		"0.250000"
+		}
+		"382"
+		{
+			"name"		"am_g3sg1_murky"
+			"description_string"		"#PaintKit_am_g3sg1_murky"
+			"description_tag"		"#PaintKit_am_g3sg1_murky_Tag"
+			"style"		"5"
+			"pattern"		"workshop/lepo"
+			"color0"		"128 128 128 255"
+			"color1"		"150 150 150 255"
+			"color2"		"15 15 15"
+			"color3"		"24 27 28"
+			"pattern_scale"		"6.000000"
+			"phongexponent"		"100"
+			"phongalbedoboost"		"19"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.250000"
+		}
+		"383"
+		{
+			"name"		"aq_m4a1s_basilisk"
+			"description_string"		"#PaintKit_aq_m4a1s_basilisk"
+			"description_tag"		"#PaintKit_aq_m4a1s_basilisk_Tag"
+			"style"		"8"
+			"pattern"		"workshop/basilisk"
+			"color0"		"174 174 174"
+			"color1"		"219 219 219"
+			"color2"		"160 160 145"
+			"color3"		"89 82 72"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"64"
+			"phongalbedoboost"		"18"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.680000"
+		}
+		"384"
+		{
+			"name"		"cu_m4a4_griffin"
+			"description_string"		"#PaintKit_cu_m4a4_griffin"
+			"description_tag"		"#PaintKit_cu_m4a4_griffin_Tag"
+			"style"		"7"
+			"pattern"		"workshop/M4A4_Griffin"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"182"
+			"phongintensity"		"30"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"385"
+		{
+			"name"		"sp_mag7_firebitten"
+			"description_string"		"#PaintKit_sp_mag7_firebitten"
+			"description_tag"		"#PaintKit_sp_mag7_firebitten_Tag"
+			"style"		"3"
+			"pattern"		"workshop/firebitten"
+			"color0"		"152 45 45"
+			"color1"		"48 134 34"
+			"color2"		"96 96 96 255"
+			"color3"		"108 108 108 255"
+			"pattern_scale"		"0.300000"
+			"phongexponent"		"32"
+			"phongintensity"		"255"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.060000"
+			"wear_remap_max"		"0.490000"
+		}
+		"386"
+		{
+			"name"		"cu_mp9_chevron"
+			"description_string"		"#PaintKit_cu_mp9_chevron"
+			"description_tag"		"#PaintKit_cu_mp9_chevron_Tag"
+			"style"		"7"
+			"pattern"		"workshop/mp9_chevron"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"5"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.460000"
+		}
+		"387"
+		{
+			"name"		"cu_fiveseven_urban_hazard"
+			"description_string"		"#PaintKit_cu_fiveseven_urban_hazard"
+			"description_tag"		"#PaintKit_cu_mp7-commander_tag"
+			"style"		"7"
+			"pattern"		"workshop/fiveseven_urban_hazard"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"180"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.250000"
+		}
+		"388"
+		{
+			"name"		"aq_p250_cartel"
+			"description_string"		"#PaintKit_aq_p250_cartel"
+			"description_tag"		"#PaintKit_aq_p250_cartel_Tag"
+			"style"		"8"
+			"pattern"		"workshop/P250_CARTEL"
+			"color0"		"128 128 128 255"
+			"color1"		"150 150 150 255"
+			"color2"		"96 96 96 255"
+			"color3"		"108 108 108 255"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"150"
+			"phongalbedoboost"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.750000"
+		}
+		"389"
+		{
+			"name"		"cu_p2000_fire_elemental"
+			"description_string"		"#PaintKit_cu_p2000_fire_elemental"
+			"description_tag"		"#PaintKit_cu_p2000_fire_elemental_Tag"
+			"style"		"7"
+			"pattern"		"workshop/P2000_Fire"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"150"
+			"phongintensity"		"70"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.600000"
+		}
+		"390"
+		{
+			"name"		"aq_sawedoff_blackgold"
+			"description_string"		"#PaintKit_aq_sawedoff_blackgold"
+			"description_tag"		"#PaintKit_aq_sawedoff_blackgold_Tag"
+			"style"		"8"
+			"pattern"		"workshop/sawedoff_blackgold"
+			"color0"		"88 79 72"
+			"color1"		"255 255 255"
+			"color2"		"255 255 255"
+			"color3"		"211 49 44"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"200"
+			"phongalbedoboost"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"391"
+		{
+			"name"		"cu_scar20_intervention"
+			"description_string"		"#PaintKit_cu_scar20_intervention"
+			"description_tag"		"#PaintKit_cu_scar20_intervention_Tag"
+			"style"		"7"
+			"pattern"		"workshop/scar20_intervention"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"10"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"392"
+		{
+			"name"		"sp_ump45_d-visions"
+			"description_string"		"#PaintKit_sp_ump45_d-visions"
+			"description_tag"		"#PaintKit_sp_ump45_d-visions_Tag"
+			"style"		"3"
+			"pattern"		"workshop/ump45_dvisions"
+			"color0"		"80 0 115"
+			"color1"		"0 0 0"
+			"color2"		"0 0 0"
+			"color3"		"209 240 0"
+			"pattern_scale"		"1.250000"
+			"phongexponent"		"10"
+			"phongintensity"		"50"
+			"ignore_weapon_size_scale"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"360.000000"
+			"wear_remap_min"		"0.060000"
+			"wear_remap_max"		"0.350000"
+		}
+		"393"
+		{
+			"name"		"cu_xm1014_caritas"
+			"description_string"		"#PaintKit_cu_xm1014_caritas"
+			"description_tag"		"#PaintKit_cu_xm1014_caritas_Tag"
+			"style"		"7"
+			"pattern"		"workshop/xm1014_caritas"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"110"
+			"phongintensity"		"60"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.500000"
+		}
 	}
 	"paint_kits_rarity"
 	{
@@ -23025,6 +23908,20 @@
 		"so_grey_nuclear_orange_five_seven"		"uncommon"
 		"sp_nukestripe_maroon_sg553"		"uncommon"
 		"cu_cerbrus_galil"		"mythical"
+		"cu_tribute_ak47"		"legendary"
+		"aq_glock_coiled"		"rare"
+		"am_g3sg1_murky"		"rare"
+		"aq_m4a1s_basilisk"		"rare"
+		"cu_m4a4_griffin"		"rare"
+		"sp_mag7_firebitten"		"rare"
+		"cu_mp9_chevron"		"rare"
+		"cu_fiveseven_urban_hazard"		"rare"
+		"aq_p250_cartel"		"legendary"
+		"cu_p2000_fire_elemental"		"legendary"
+		"aq_sawedoff_blackgold"		"mythical"
+		"cu_scar20_intervention"		"legendary"
+		"sp_ump45_d-visions"		"rare"
+		"cu_xm1014_caritas"		"legendary"
 	}
 	"item_sets"
 	{
@@ -23692,6 +24589,29 @@
 				"[cu_cerbrus_galil]weapon_galilar"		"1"
 			}
 		}
+		"set_community_5"
+		{
+			"name"		"#CSGO_set_community_5"
+			"set_description"		"#CSGO_set_community_5_desc"
+			"is_collection"		"1"
+			"items"
+			{
+				"[am_g3sg1_murky]weapon_g3sg1"		"1"
+				"[sp_mag7_firebitten]weapon_mag7"		"1"
+				"[cu_mp9_chevron]weapon_mp9"		"1"
+				"[cu_fiveseven_urban_hazard]weapon_fiveseven"		"1"
+				"[sp_ump45_d-visions]weapon_ump45"		"1"
+				"[aq_glock_coiled]weapon_glock"		"1"
+				"[aq_m4a1s_basilisk]weapon_m4a1_silencer"		"1"
+				"[cu_m4a4_griffin]weapon_m4a1"		"1"
+				"[aq_sawedoff_blackgold]weapon_sawedoff"		"1"
+				"[aq_p250_cartel]weapon_p250"		"1"
+				"[cu_scar20_intervention]weapon_scar20"		"1"
+				"[cu_xm1014_caritas]weapon_xm1014"		"1"
+				"[cu_tribute_ak47]weapon_ak47"		"1"
+				"[cu_p2000_fire_elemental]weapon_hkp2000"		"1"
+			}
+		}
 	}
 	"client_loot_lists"
 	{
@@ -23967,6 +24887,32 @@
 		{
 			"[cu_bullet_rain_m4a1]weapon_m4a1"		"1"
 			"[cu_panther_ak47]weapon_ak47"		"1"
+		}
+		"crate_community_5_rare"
+		{
+			"[am_g3sg1_murky]weapon_g3sg1"		"1"
+			"[sp_mag7_firebitten]weapon_mag7"		"1"
+			"[cu_mp9_chevron]weapon_mp9"		"1"
+			"[cu_fiveseven_urban_hazard]weapon_fiveseven"		"1"
+			"[sp_ump45_d-visions]weapon_ump45"		"1"
+		}
+		"crate_community_5_mythical"
+		{
+			"[aq_glock_coiled]weapon_glock"		"1"
+			"[aq_m4a1s_basilisk]weapon_m4a1_silencer"		"1"
+			"[cu_m4a4_griffin]weapon_m4a1"		"1"
+			"[aq_sawedoff_blackgold]weapon_sawedoff"		"1"
+		}
+		"crate_community_5_legendary"
+		{
+			"[aq_p250_cartel]weapon_p250"		"1"
+			"[cu_scar20_intervention]weapon_scar20"		"1"
+			"[cu_xm1014_caritas]weapon_xm1014"		"1"
+		}
+		"crate_community_5_ancient"
+		{
+			"[cu_tribute_ak47]weapon_ak47"		"1"
+			"[cu_p2000_fire_elemental]weapon_hkp2000"		"1"
 		}
 		"crate_valve_1"
 		{
@@ -24276,6 +25222,14 @@
 			"crate_sticker_pack_cologne2014_02_rare"		"1"
 			"crate_sticker_pack_cologne2014_02_mythical"		"1"
 			"crate_sticker_pack_cologne2014_02_legendary"		"1"
+		}
+		"crate_community_5"
+		{
+			"crate_community_5_rare"		"1"
+			"crate_community_5_mythical"		"1"
+			"crate_community_5_legendary"		"1"
+			"crate_community_5_ancient"		"1"
+			"unusual_revolving_list"		"1"
 		}
 		"set_dust_uncommon"
 		{
@@ -24928,6 +25882,10 @@
 		{
 			"set_overpass"		"1"
 		}
+		"quest_reward_crate_vanguard"
+		{
+			"crate_operation_vanguard"		"1"
+		}
 		"coupon loot list - bossyburger"
 		{
 			"public_list_contents"		"1"
@@ -25129,6 +26087,7 @@
 		"26"		"crate_esl14_promo_de_cache"
 		"27"		"crate_esl14_promo_de_cbble"
 		"28"		"crate_esl14_promo_de_overpass"
+		"29"		"crate_community_5"
 	}
 	"quest_reward_loot_lists"
 	{
@@ -25381,8 +26340,8 @@
 		"16"
 		{
 			"name"		"Win Competitive Dust"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25394,8 +26353,8 @@
 		"17"
 		{
 			"name"		"Win Competitive Dust2"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25407,8 +26366,8 @@
 		"18"
 		{
 			"name"		"Win Competitive Train"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25420,8 +26379,8 @@
 		"19"
 		{
 			"name"		"Win Competitive Inferno"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25433,8 +26392,8 @@
 		"20"
 		{
 			"name"		"Win Competitive Nuke"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25446,8 +26405,8 @@
 		"21"
 		{
 			"name"		"Win Competitive Italy"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25459,8 +26418,8 @@
 		"22"
 		{
 			"name"		"Win Competitive Office"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25472,8 +26431,8 @@
 		"23"
 		{
 			"name"		"Win Competitive Aztec"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25485,8 +26444,8 @@
 		"24"
 		{
 			"name"		"Win Competitive Vertigo"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25498,8 +26457,8 @@
 		"25"
 		{
 			"name"		"Win Competitive Militia"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25511,8 +26470,8 @@
 		"26"
 		{
 			"name"		"Win Competitive Mirage"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25524,8 +26483,8 @@
 		"27"
 		{
 			"name"		"Win Competitive Overpass"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -25537,8 +26496,8 @@
 		"28"
 		{
 			"name"		"Win Competitive Cobblestone"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -26067,8 +27026,8 @@
 		"73"
 		{
 			"name"		"Win Competitive Assault"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -26080,8 +27039,8 @@
 		"74"
 		{
 			"name"		"Win Competitive Cache"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -26093,8 +27052,8 @@
 		"75"
 		{
 			"name"		"Win Competitive Castle"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -26106,8 +27065,8 @@
 		"76"
 		{
 			"name"		"Win Competitive Overgrown"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -26119,8 +27078,8 @@
 		"77"
 		{
 			"name"		"Win Competitive Black Gold"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -26132,8 +27091,8 @@
 		"78"
 		{
 			"name"		"Win Competitive Rush"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -26145,8 +27104,8 @@
 		"79"
 		{
 			"name"		"Win Competitive Mist"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -26158,8 +27117,8 @@
 		"80"
 		{
 			"name"		"Win Competitive Insertion"
-			"loc_name"		"#Quest_Win_Map"
-			"loc_description"		"#Quest_Win_Map_desc"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -26440,6 +27399,1903 @@
 			"gamemode"		"competitive"
 			"mapgroup"		"mg_cs_insertion"
 			"expression"		" %roundwins% "
+		}
+		"102"
+		{
+			"name"		"Deathmatch Active Duty Chicken Kills"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_active"
+			"expression"		" %chicken kills% "
+			"points"		"20"
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Chicken_Kills_Mapgroup"
+			"loc_description"		"#Quest_Chicken_Kills_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_chicken_kill"
+			}
+			"quest_icon"		"chicken"
+		}
+		"104"
+		{
+			"name"		"Casual Overpass Mag7 Kills"
+			"gamemode"		"casual"
+			"map"		"de_overpass"
+			"mapgroup"		"mg_de_overpass"
+			"expression"		" %weapon_mag7 kills% "
+			"points"		"10"
+			"difficulty"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_MAG7"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"mag7"
+		}
+		"105"
+		{
+			"name"		"AR_Baggage Kills"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+			"points"		"10"
+			"gamemode"		"gungameprogressive"
+			"map"		"ar_baggage"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"difficulty"		"1"
+			"quest_reward"		"set_baggage"
+		}
+		"106"
+		{
+			"name"		"Casual Italy Tec9 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+				"weapon"		"#SFUI_WPNHUD_TEC9"
+			}
+			"quest_icon"		"tec9"
+			"points"		"10"
+			"gamemode"		"casual"
+			"map"		"cs_italy"
+			"mapgroup"		"mg_reserves"
+			"expression"		" %weapon_tec9 kills% "
+			"difficulty"		"1"
+			"quest_reward"		"set_italy"
+		}
+		"107"
+		{
+			"name"		"Deathmatch Inferno Deagle Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_DesertEagle"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"deagle"
+			"points"		"20"
+			"gamemode"		"deathmatch"
+			"map"		"de_inferno"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_deagle kills% "
+			"difficulty"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"108"
+		{
+			"name"		"Casual Nuke Kills"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+			"points"		"30"
+			"gamemode"		"casual"
+			"map"		"de_nuke"
+			"mapgroup"		"mg_active"
+			"expression"		" %kills% "
+			"difficulty"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"109"
+		{
+			"name"		"Casual Inferno Kills"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+			"points"		"30"
+			"gamemode"		"casual"
+			"map"		"de_inferno"
+			"mapgroup"		"mg_active"
+			"expression"		" %kills% "
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"difficulty"		"1"
+			"operational_points"		"1"
+		}
+		"110"
+		{
+			"name"		"ArmsRace 20 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Kills_Mapgroup"
+			"loc_description"		"#Quest_Kills_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"111"
+		{
+			"name"		"Win 8 Rounds Competitive Cobblestone"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"8"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_cbble"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"set_cobblestone"
+		}
+		"112"
+		{
+			"name"		"Win 8 Rounds Competitive Cache"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"8"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_cache"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"set_cache"
+		}
+		"113"
+		{
+			"name"		"Win 8 Rounds Competitive Nuke"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"8"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_nuke"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"set_nuke"
+		}
+		"114"
+		{
+			"name"		"Win 16 Rounds Competitive Inferno"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_inferno"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"115"
+		{
+			"name"		"Win 16 Rounds Competitive Overpass"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_overpass"
+			"expression"		" %roundwins% "
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"difficulty"		"2"
+			"operational_points"		"2"
+		}
+		"116"
+		{
+			"name"		"Win 16 Rounds Competitive Cobblestone"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_cbble"
+			"expression"		" %roundwins% "
+			"difficulty"		"3"
+			"quest_reward"		"set_cobblestone"
+		}
+		"117"
+		{
+			"name"		"Win 16 Rounds Competitive Overpass"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_overpass"
+			"expression"		" %roundwins% "
+			"difficulty"		"3"
+			"quest_reward"		"set_overpass"
+		}
+		"118"
+		{
+			"name"		"Win 16 Rounds Competitive Cache"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_cache"
+			"expression"		" %roundwins% "
+			"difficulty"		"3"
+			"quest_reward"		"set_cache"
+		}
+		"119"
+		{
+			"name"		"Win Competitive Inferno Twice"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_win"
+			}
+			"points"		"2"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_inferno"
+			"expression"		" %wins% "
+			"difficulty"		"3"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"120"
+		{
+			"name"		"Win Competitive Nuke Twice"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_win"
+			}
+			"points"		"2"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_nuke"
+			"expression"		" %wins% "
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"difficulty"		"3"
+			"operational_points"		"3"
+		}
+		"121"
+		{
+			"name"		"ArmsRace 10 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"10"
+			"quest_reward"		"set_overpass"
+			"loc_name"		"#Quest_Kills_Mapgroup"
+			"loc_description"		"#Quest_Kills_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+			"difficulty"		"1"
+		}
+		"122"
+		{
+			"name"		"ArmsRace 20 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"2"
+			"quest_reward"		"set_baggage"
+			"loc_name"		"#Quest_Kills_Mapgroup"
+			"loc_description"		"#Quest_Kills_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"123"
+		{
+			"name"		"ArmsRace 40 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"40"
+			"difficulty"		"3"
+			"quest_reward"		"set_lake"
+			"loc_name"		"#Quest_Kills_Mapgroup"
+			"loc_description"		"#Quest_Kills_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"201"
+		{
+			"name"		"Deathmatch Vanguard Bonus Points 100"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op05"
+			"expression"		" %dmbonuspoints% "
+			"points"		"100"
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_DMBonusPoints_Mapgroup"
+			"loc_description"		"#Quest_DMBonusPoints_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_dmbonuspoints"
+			}
+		}
+		"203"
+		{
+			"name"		"Deathmatch Vanguard Chicken Kills"
+			"loc_name"		"#Quest_Chicken_Kills_Mapgroup"
+			"loc_description"		"#Quest_Chicken_Kills_Mapgroup_desc"
+			"quest_icon"		"chicken"
+			"string_tokens"
+			{
+				"action"		"#quest_action_chicken_kill"
+			}
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op05"
+			"expression"		" %chicken kills% "
+			"points"		"20"
+			"difficulty"		"1"
+			"quest_reward"		"set_vertigo"
+		}
+		"204"
+		{
+			"name"		"Deathmatch Vanguard Sawedoff Kills"
+			"loc_name"		"#Quest_Weapon_Mapgroup"
+			"loc_description"		"#Quest_Weapon_Mapgroup_desc"
+			"quest_icon"		"sawedoff"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_SAWEDOFF"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"sawedoff"
+			"points"		"20"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op05"
+			"expression"		" %weapon_sawedoff kills% "
+			"difficulty"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"205"
+		{
+			"name"		"Casual Vanguard 10 M4A4 Kills"
+			"loc_name"		"#Quest_Weapon_Mapgroup"
+			"loc_description"		"#Quest_Weapon_Mapgroup_desc"
+			"quest_icon"		"m4a1"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_M4A1"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"m4a1"
+			"points"		"10"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_op_op05"
+			"expression"		" %weapon_m4a1 kills% "
+			"difficulty"		"1"
+			"quest_reward"		"set_aztec"
+		}
+		"206"
+		{
+			"name"		"Deathmatch Vanguard 20 P90 Kills"
+			"loc_name"		"#Quest_Weapon_Mapgroup"
+			"loc_description"		"#Quest_Weapon_Mapgroup_desc"
+			"quest_icon"		"p90"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_P90"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"p90"
+			"points"		"20"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_op_op05"
+			"expression"		" %weapon_p90 kills% "
+			"difficulty"		"1"
+			"quest_reward"		"set_italy"
+		}
+		"207"
+		{
+			"name"		"Casual Facade 30 Kills"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+			"points"		"30"
+			"gamemode"		"casual"
+			"map"		"de_facade"
+			"mapgroup"		"mg_op_op05"
+			"expression"		" %kills% "
+			"difficulty"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"208"
+		{
+			"name"		"Casual Season 30 Kills"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+			"points"		"30"
+			"gamemode"		"casual"
+			"map"		"de_season"
+			"mapgroup"		"mg_op_op05"
+			"expression"		" %kills% "
+			"difficulty"		"1"
+			"operational_points"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"209"
+		{
+			"name"		"Win 8 Rounds Competitive Workout"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"8"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_workout"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"set_nuke"
+		}
+		"210"
+		{
+			"name"		"Win 8 Rounds Competitive Marquis"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"8"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_marquis"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"211"
+		{
+			"name"		"Win 8 Rounds Competitive Season"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"8"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_season"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"set_nuke"
+		}
+		"212"
+		{
+			"name"		"Win 8 Rounds Competitive Facade"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"8"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_facade"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"set_militia"
+		}
+		"213"
+		{
+			"name"		"Win 16 Rounds Competitive Backalley"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_backalley"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"214"
+		{
+			"name"		"Win 16 Rounds Competitive Bazaar"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_bazaar"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"operational_points"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"215"
+		{
+			"name"		"Win 16 Rounds Competitive Season"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_season"
+			"expression"		" %roundwins% "
+			"difficulty"		"3"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"216"
+		{
+			"name"		"Win 16 Rounds Competitive Backalley"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_cs_backalley"
+			"expression"		" %roundwins% "
+			"difficulty"		"3"
+			"quest_reward"		"set_train"
+		}
+		"217"
+		{
+			"name"		"Win 16 Rounds Competitive Marquis"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_marquis"
+			"expression"		" %roundwins% "
+			"difficulty"		"3"
+			"quest_reward"		"set_dust"
+		}
+		"218"
+		{
+			"name"		"Win Competitive Facade Twice"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_win"
+			}
+			"points"		"2"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_facade"
+			"expression"		" %wins% "
+			"difficulty"		"3"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"219"
+		{
+			"name"		"Win Competitive Bazaar Twice"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_win"
+			}
+			"points"		"2"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_bazaar"
+			"expression"		" %wins% "
+			"operational_points"		"3"
+			"difficulty"		"3"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"220"
+		{
+			"name"		"ArmsRace Safehouse 10 Kills"
+			"gamemode"		"gungameprogressive"
+			"map"		"de_safehouse"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"10"
+			"quest_reward"		"set_militia"
+			"difficulty"		"1"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"221"
+		{
+			"name"		"ArmsRace StMarc 20 Kills"
+			"gamemode"		"gungameprogressive"
+			"map"		"de_stmarc"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"2"
+			"quest_reward"		"set_nuke"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"222"
+		{
+			"name"		"ArmsRace Lake 40 Kills"
+			"gamemode"		"gungameprogressive"
+			"map"		"de_lake"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"40"
+			"difficulty"		"3"
+			"quest_reward"		"set_bank"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"301"
+		{
+			"name"		"Deathmatch Dust2 Bonus Points 100"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_active"
+			"map"		"de_dust2"
+			"expression"		" %dmbonuspoints% "
+			"points"		"100"
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_DMBonusPoints_Map"
+			"loc_description"		"#Quest_DMBonusPoints_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_dmbonuspoints"
+			}
+		}
+		"302"
+		{
+			"name"		"Demolition ShortDust 20 Kills"
+			"gamemode"		"gungametrbomb"
+			"mapgroup"		"mg_demolition"
+			"map"		"de_shortdust"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"2"
+			"quest_reward"		"set_dust"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"303"
+		{
+			"name"		"Casual Mirage 10 P90 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_P90"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"p90"
+			"points"		"10"
+			"gamemode"		"casual"
+			"map"		"de_mirage"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_p90 kills% "
+			"difficulty"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"304"
+		{
+			"name"		"Deathmatch Mirage 20 fiveseven Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_FIVESEVEN"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"fiveseven"
+			"points"		"20"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_active"
+			"map"		"de_mirage"
+			"expression"		" %weapon_fiveseven kills% "
+			"difficulty"		"1"
+			"quest_reward"		"set_mirage"
+		}
+		"305"
+		{
+			"name"		"Casual Dust2 10 UMP Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_UMP45"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"ump45"
+			"points"		"10"
+			"gamemode"		"casual"
+			"map"		"de_dust2"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_ump45 kills% "
+			"difficulty"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"306"
+		{
+			"name"		"Casual Dust2 10 Nova Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_NOVA"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"nova"
+			"points"		"10"
+			"gamemode"		"casual"
+			"map"		"de_dust2"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_nova kills% "
+			"difficulty"		"1"
+			"quest_reward"		"set_dust"
+		}
+		"307"
+		{
+			"name"		"Casual Mirage 30 Kills"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+			"points"		"30"
+			"gamemode"		"casual"
+			"map"		"de_mirage"
+			"mapgroup"		"mg_active"
+			"expression"		" %kills% "
+			"difficulty"		"1"
+			"quest_reward"		"set_mirage"
+		}
+		"308"
+		{
+			"name"		"Casual Dust2 30 Kills"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+			"points"		"30"
+			"gamemode"		"casual"
+			"mapgroup"		"mg_active"
+			"map"		"de_dust2"
+			"expression"		" %kills% "
+			"difficulty"		"1"
+			"operational_points"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"309"
+		{
+			"name"		"Deathmatch Mirage 30 tec9 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_TEC9"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"tec9"
+			"points"		"30"
+			"gamemode"		"deathmatch"
+			"map"		"de_mirage"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_tec9 kills% "
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"310"
+		{
+			"name"		"Deathmatch Mirage 30 AWP Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_AWP"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"awp"
+			"points"		"30"
+			"gamemode"		"deathmatch"
+			"map"		"de_mirage"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_awp kills% "
+			"difficulty"		"2"
+			"quest_reward"		"set_mirage"
+		}
+		"311"
+		{
+			"name"		"Win 16 Rounds Competitive Mirage"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_mirage"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"312"
+		{
+			"name"		"Deathmatch Dust2 SSG08 20 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_SSG08"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"ssg08"
+			"points"		"20"
+			"gamemode"		"deathmatch"
+			"map"		"de_dust2"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_ssg08 kills% "
+			"difficulty"		"2"
+			"quest_reward"		"set_dust_2"
+		}
+		"313"
+		{
+			"name"		"Deathmatch Dust2 AK47 30 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_AK47"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"ak47"
+			"points"		"30"
+			"gamemode"		"deathmatch"
+			"map"		"de_dust2"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_ak47 kills% "
+			"difficulty"		"2"
+			"quest_reward"		"set_dust_2"
+		}
+		"314"
+		{
+			"name"		"Win 16 Rounds Competitive Dust2"
+			"loc_name"		"#Quest_Win_Rounds_Map"
+			"loc_description"		"#Quest_Win_Rounds_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_round_win"
+			}
+			"points"		"16"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_dust2"
+			"expression"		" %roundwins% "
+			"difficulty"		"2"
+			"operational_points"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"315"
+		{
+			"name"		"Deathmatch Mirage SSG08 75 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"quest_icon"		"ssg08"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_SSG08"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"ssg08"
+			"points"		"75"
+			"gamemode"		"deathmatch"
+			"map"		"de_mirage"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_ssg08 kills% "
+			"difficulty"		"3"
+			"quest_reward"		"set_mirage"
+		}
+		"316"
+		{
+			"name"		"Deathmatch Mirage Famas 100 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"quest_icon"		"famas"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_FAMAS"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"famas"
+			"points"		"100"
+			"gamemode"		"deathmatch"
+			"map"		"de_mirage"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_famas kills% "
+			"difficulty"		"3"
+			"quest_reward"		"set_mirage"
+		}
+		"317"
+		{
+			"name"		"Win Competitive Mirage Twice"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_win"
+			}
+			"points"		"2"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_mirage"
+			"expression"		" %wins% "
+			"difficulty"		"3"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"318"
+		{
+			"name"		"Deathmatch Dust2 Galil 100 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_GALILAR"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"galilar"
+			"points"		"100"
+			"gamemode"		"deathmatch"
+			"map"		"de_dust2"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_galil kills% "
+			"difficulty"		"3"
+			"quest_reward"		"set_dust_2"
+		}
+		"319"
+		{
+			"name"		"Deathmatch Dust2 Deagle 75 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"quest_icon"		"deagle"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_DESERTEAGLE"
+				"action"		"#quest_action_kill"
+			}
+			"points"		"75"
+			"gamemode"		"deathmatch"
+			"map"		"de_dust2"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_deagle kills% "
+			"difficulty"		"3"
+			"quest_reward"		"set_dust_2"
+		}
+		"320"
+		{
+			"name"		"Deathmatch Dust2 AK47 100 Kills"
+			"loc_name"		"#Quest_Weapon_Map"
+			"loc_description"		"#Quest_Weapon_Map_desc"
+			"string_tokens"
+			{
+				"weapon"		"#SFUI_WPNHUD_AK47"
+				"action"		"#quest_action_kill"
+			}
+			"quest_icon"		"ak47"
+			"points"		"100"
+			"gamemode"		"deathmatch"
+			"map"		"de_dust2"
+			"mapgroup"		"mg_active"
+			"expression"		" %weapon_ak47 kills% "
+			"difficulty"		"3"
+			"quest_reward"		"set_dust"
+		}
+		"321"
+		{
+			"name"		"Win Competitive Dust2 Twice"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_win"
+			}
+			"points"		"2"
+			"gamemode"		"competitive"
+			"mapgroup"		"mg_de_dust2"
+			"expression"		" %wins% "
+			"difficulty"		"3"
+			"operational_points"		"3"
+			"quest_reward"		"quest_reward_crate_vanguard"
+		}
+		"401"
+		{
+			"name"		"ArmsRace Shoots 20 Kills"
+			"gamemode"		"gungameprogressive"
+			"map"		"ar_shoots"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"402"
+		{
+			"name"		"ArmsRace Safehouse 10 Kills"
+			"gamemode"		"gungameprogressive"
+			"map"		"de_safehouse"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"10"
+			"difficulty"		"1"
+			"quest_reward"		"set_safehouse"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"403"
+		{
+			"name"		"Demolition 10 Kills"
+			"gamemode"		"gungametrbomb"
+			"mapgroup"		"mg_demolition"
+			"expression"		" %kills% "
+			"points"		"10"
+			"difficulty"		"1"
+			"quest_reward"		"set_aztec"
+			"loc_name"		"#Quest_Kills_Mode"
+			"loc_description"		"#Quest_Kills_Mode_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"404"
+		{
+			"name"		"ArmsRace Monastery 10 Kills"
+			"gamemode"		"gungameprogressive"
+			"map"		"ar_monastery"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"10"
+			"difficulty"		"1"
+			"quest_reward"		"set_lake"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"405"
+		{
+			"name"		"Deathmatch Nuke Bonus Points 50"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_active"
+			"map"		"de_nuke"
+			"expression"		" %dmbonuspoints% "
+			"points"		"50"
+			"difficulty"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_DMBonusPoints_Map"
+			"loc_description"		"#Quest_DMBonusPoints_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_dmbonuspoints"
+			}
+		}
+		"406"
+		{
+			"name"		"ArmsRace StMarc 10 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"de_stmarc"
+			"expression"		" %kills% "
+			"points"		"10"
+			"difficulty"		"1"
+			"quest_reward"		"set_train"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"407"
+		{
+			"name"		"ArmsRace Safehouse 20 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"de_safehouse"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"408"
+		{
+			"name"		"ArmsRace Lake 20 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"de_lake"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"1"
+			"operational_points"		"1"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"409"
+		{
+			"name"		"Demolition ShortDust 20 Kills"
+			"gamemode"		"gungametrbomb"
+			"mapgroup"		"mg_demolition"
+			"map"		"de_shortdust"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"410"
+		{
+			"name"		"Deathmatch Inferno Bonus Points 100"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_active"
+			"map"		"de_inferno"
+			"expression"		" %dmbonuspoints% "
+			"points"		"100"
+			"difficulty"		"2"
+			"quest_reward"		"set_inferno"
+			"loc_name"		"#Quest_DMBonusPoints_Map"
+			"loc_description"		"#Quest_DMBonusPoints_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_dmbonuspoints"
+			}
+		}
+		"411"
+		{
+			"name"		"Demolition 20 Kills"
+			"gamemode"		"gungametrbomb"
+			"mapgroup"		"mg_demolition"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"2"
+			"quest_reward"		"set_vertigo"
+			"loc_name"		"#Quest_Kills_Mode"
+			"loc_description"		"#Quest_Kills_Mode_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"412"
+		{
+			"name"		"Deathmatch Nuke Bonus Points 100"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_active"
+			"map"		"de_nuke"
+			"expression"		" %dmbonuspoints% "
+			"points"		"100"
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_DMBonusPoints_Map"
+			"loc_description"		"#Quest_DMBonusPoints_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_dmbonuspoints"
+			}
+		}
+		"413"
+		{
+			"name"		"ArmsRace St Marc 20 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"de_stmarc"
+			"expression"		" %kills% "
+			"points"		"20"
+			"difficulty"		"2"
+			"quest_reward"		"set_italy"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"414"
+		{
+			"name"		"ArmsRace Safehouse 40 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"de_safehouse"
+			"expression"		" %kills% "
+			"points"		"40"
+			"difficulty"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"415"
+		{
+			"name"		"ArmsRace Lake 40 Kills"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"de_lake"
+			"expression"		" %kills% "
+			"points"		"40"
+			"difficulty"		"2"
+			"operational_points"		"2"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"416"
+		{
+			"name"		"Deathmatch Inferno Bonus Points 200"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_active"
+			"map"		"de_inferno"
+			"expression"		" %dmbonuspoints% "
+			"points"		"200"
+			"difficulty"		"3"
+			"quest_reward"		"set_inferno"
+			"loc_name"		"#Quest_DMBonusPoints_Map"
+			"loc_description"		"#Quest_DMBonusPoints_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_dmbonuspoints"
+			}
+		}
+		"417"
+		{
+			"name"		"Demolition 40 Kills"
+			"gamemode"		"gungametrbomb"
+			"mapgroup"		"mg_demolition"
+			"expression"		" %kills% "
+			"points"		"40"
+			"difficulty"		"3"
+			"quest_reward"		"set_overpass"
+			"loc_name"		"#Quest_Kills_Mode"
+			"loc_description"		"#Quest_Kills_Mode_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"418"
+		{
+			"name"		"Deathmatch Nuke Bonus Points 200"
+			"gamemode"		"deathmatch"
+			"mapgroup"		"mg_active"
+			"map"		"de_nuke"
+			"expression"		" %dmbonuspoints% "
+			"points"		"200"
+			"difficulty"		"3"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_DMBonusPoints_Map"
+			"loc_description"		"#Quest_DMBonusPoints_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_dmbonuspoints"
+			}
+		}
+		"419"
+		{
+			"name"		"ArmsRace St Marc 40 Kills"
+			"gamemode"		"gungameprogressive"
+			"map"		"de_stmarc"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %kills% "
+			"points"		"40"
+			"difficulty"		"3"
+			"quest_reward"		"set_italy"
+			"loc_name"		"#Quest_Kills_Map"
+			"loc_description"		"#Quest_Kills_Map_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_kill"
+			}
+		}
+		"420"
+		{
+			"name"		"Win ArmsRace Safehouse"
+			"gamemode"		"gungameprogressive"
+			"mapgroup"		"mg_armsrace"
+			"map"		"de_safehouse"
+			"expression"		" %wins% "
+			"points"		"1"
+			"difficulty"		"3"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_win"
+			}
+		}
+		"421"
+		{
+			"name"		"Win ArmsRace Lake"
+			"gamemode"		"gungameprogressive"
+			"map"		"de_lake"
+			"mapgroup"		"mg_armsrace"
+			"expression"		" %wins% "
+			"points"		"1"
+			"difficulty"		"3"
+			"operational_points"		"3"
+			"quest_reward"		"quest_reward_crate_vanguard"
+			"loc_name"		"#Quest_Win_a_Mapgroup"
+			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"string_tokens"
+			{
+				"action"		"#quest_action_win"
+			}
+		}
+	}
+	"campaign_definitions"
+	{
+		"1"
+		{
+			"loc_name"		"#csgo_campaign_eurasia"
+			"loc_description"		"#csgo_campaign_eurasia_desc"
+			"2"
+			{
+				"quest_index"		"102"
+				"->"		"4"
+				"->"		"10"
+			}
+			"4"
+			{
+				"quest_index"		"104"
+				"->"		"5"
+			}
+			"5"
+			{
+				"quest_index"		"105"
+				"->"		"6"
+			}
+			"6"
+			{
+				"quest_index"		"106"
+				"->"		"7"
+			}
+			"7"
+			{
+				"quest_index"		"107"
+				"->"		"21"
+			}
+			"8"
+			{
+				"quest_index"		"108"
+				"->"		"9"
+			}
+			"9"
+			{
+				"quest_index"		"109"
+			}
+			"10"
+			{
+				"quest_index"		"110"
+				"->"		"11"
+				"->"		"16"
+			}
+			"11"
+			{
+				"quest_index"		"111"
+				"->"		"12"
+			}
+			"12"
+			{
+				"quest_index"		"112"
+				"->"		"13"
+			}
+			"13"
+			{
+				"quest_index"		"113"
+				"->"		"22"
+			}
+			"14"
+			{
+				"quest_index"		"114"
+				"->"		"15"
+			}
+			"15"
+			{
+				"quest_index"		"115"
+			}
+			"16"
+			{
+				"quest_index"		"116"
+				"->"		"17"
+			}
+			"17"
+			{
+				"quest_index"		"117"
+				"->"		"18"
+			}
+			"18"
+			{
+				"quest_index"		"118"
+				"->"		"23"
+			}
+			"19"
+			{
+				"quest_index"		"119"
+				"->"		"20"
+			}
+			"20"
+			{
+				"quest_index"		"120"
+			}
+			"21"
+			{
+				"quest_index"		"121"
+				"->"		"8"
+			}
+			"22"
+			{
+				"quest_index"		"122"
+				"->"		"21"
+				"->"		"14"
+			}
+			"23"
+			{
+				"quest_index"		"123"
+				"->"		"22"
+				"->"		"19"
+			}
+		}
+		"2"
+		{
+			"loc_name"		"#csgo_campaign_vanguard"
+			"loc_description"		"#csgo_campaign_vanguard_desc"
+			"1"
+			{
+				"quest_index"		"201"
+				"->"		"3"
+				"->"		"9"
+			}
+			"3"
+			{
+				"quest_index"		"203"
+				"->"		"4"
+			}
+			"4"
+			{
+				"quest_index"		"204"
+				"->"		"5"
+			}
+			"5"
+			{
+				"quest_index"		"205"
+				"->"		"6"
+			}
+			"6"
+			{
+				"quest_index"		"206"
+				"->"		"20"
+			}
+			"7"
+			{
+				"quest_index"		"207"
+				"->"		"8"
+			}
+			"8"
+			{
+				"quest_index"		"208"
+			}
+			"9"
+			{
+				"quest_index"		"209"
+				"->"		"10"
+				"->"		"15"
+			}
+			"10"
+			{
+				"quest_index"		"210"
+				"->"		"11"
+			}
+			"11"
+			{
+				"quest_index"		"211"
+				"->"		"12"
+			}
+			"12"
+			{
+				"quest_index"		"212"
+				"->"		"21"
+			}
+			"13"
+			{
+				"quest_index"		"213"
+				"->"		"14"
+			}
+			"14"
+			{
+				"quest_index"		"214"
+			}
+			"15"
+			{
+				"quest_index"		"215"
+				"->"		"16"
+			}
+			"16"
+			{
+				"quest_index"		"216"
+				"->"		"17"
+			}
+			"17"
+			{
+				"quest_index"		"217"
+				"->"		"22"
+				"->"		"12"
+			}
+			"18"
+			{
+				"quest_index"		"218"
+				"->"		"19"
+			}
+			"19"
+			{
+				"quest_index"		"219"
+			}
+			"20"
+			{
+				"quest_index"		"220"
+				"->"		"7"
+			}
+			"21"
+			{
+				"quest_index"		"221"
+				"->"		"7"
+				"->"		"13"
+			}
+			"22"
+			{
+				"quest_index"		"222"
+				"->"		"18"
+			}
+		}
+		"3"
+		{
+			"loc_name"		"#csgo_campaign_maghreb"
+			"loc_description"		"#csgo_campaign_maghreb_desc"
+			"1"
+			{
+				"quest_index"		"301"
+				"->"		"2"
+			}
+			"2"
+			{
+				"quest_index"		"302"
+				"->"		"3"
+				"->"		"9"
+			}
+			"3"
+			{
+				"quest_index"		"303"
+				"->"		"4"
+			}
+			"4"
+			{
+				"quest_index"		"304"
+				"->"		"5"
+			}
+			"5"
+			{
+				"quest_index"		"305"
+				"->"		"6"
+			}
+			"6"
+			{
+				"quest_index"		"306"
+				"->"		"7"
+			}
+			"7"
+			{
+				"quest_index"		"307"
+				"->"		"8"
+			}
+			"8"
+			{
+				"quest_index"		"308"
+			}
+			"9"
+			{
+				"quest_index"		"309"
+				"->"		"10"
+				"->"		"15"
+				"->"		"16"
+			}
+			"10"
+			{
+				"quest_index"		"310"
+				"->"		"11"
+			}
+			"11"
+			{
+				"quest_index"		"311"
+				"->"		"12"
+			}
+			"12"
+			{
+				"quest_index"		"312"
+				"->"		"13"
+				"->"		"6"
+			}
+			"13"
+			{
+				"quest_index"		"313"
+				"->"		"14"
+			}
+			"14"
+			{
+				"quest_index"		"314"
+			}
+			"15"
+			{
+				"quest_index"		"315"
+				"->"		"17"
+			}
+			"16"
+			{
+				"quest_index"		"316"
+				"->"		"17"
+			}
+			"17"
+			{
+				"quest_index"		"317"
+				"->"		"18"
+				"->"		"19"
+				"->"		"12"
+			}
+			"18"
+			{
+				"quest_index"		"318"
+				"->"		"20"
+			}
+			"19"
+			{
+				"quest_index"		"319"
+				"->"		"20"
+			}
+			"20"
+			{
+				"quest_index"		"320"
+				"->"		"21"
+			}
+			"21"
+			{
+				"quest_index"		"321"
+			}
+		}
+		"4"
+		{
+			"loc_name"		"#csgo_campaign_weapons"
+			"loc_description"		"#csgo_campaign_weapons_desc"
+			"1"
+			{
+				"quest_index"		"401"
+				"->"		"2"
+				"->"		"9"
+			}
+			"2"
+			{
+				"quest_index"		"402"
+				"->"		"3"
+			}
+			"3"
+			{
+				"quest_index"		"403"
+				"->"		"4"
+			}
+			"4"
+			{
+				"quest_index"		"404"
+				"->"		"5"
+			}
+			"5"
+			{
+				"quest_index"		"405"
+				"->"		"6"
+			}
+			"6"
+			{
+				"quest_index"		"406"
+				"->"		"7"
+			}
+			"7"
+			{
+				"quest_index"		"407"
+				"->"		"8"
+			}
+			"8"
+			{
+				"quest_index"		"408"
+			}
+			"9"
+			{
+				"quest_index"		"409"
+				"->"		"10"
+				"->"		"16"
+			}
+			"10"
+			{
+				"quest_index"		"410"
+				"->"		"4"
+				"->"		"11"
+			}
+			"11"
+			{
+				"quest_index"		"411"
+				"->"		"12"
+			}
+			"12"
+			{
+				"quest_index"		"412"
+				"->"		"13"
+				"->"		"6"
+			}
+			"13"
+			{
+				"quest_index"		"413"
+				"->"		"14"
+			}
+			"14"
+			{
+				"quest_index"		"414"
+				"->"		"15"
+			}
+			"15"
+			{
+				"quest_index"		"415"
+			}
+			"16"
+			{
+				"quest_index"		"416"
+				"->"		"17"
+			}
+			"17"
+			{
+				"quest_index"		"417"
+				"->"		"18"
+			}
+			"18"
+			{
+				"quest_index"		"418"
+				"->"		"19"
+			}
+			"19"
+			{
+				"quest_index"		"419"
+				"->"		"20"
+				"->"		"14"
+			}
+			"20"
+			{
+				"quest_index"		"420"
+				"->"		"21"
+			}
+			"21"
+			{
+				"quest_index"		"421"
+			}
 		}
 	}
 	"recipes"
