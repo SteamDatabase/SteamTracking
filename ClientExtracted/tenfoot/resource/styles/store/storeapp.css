@@ -2449,9 +2449,20 @@ StoreAppDLCItem:descendantfocus .DLCImageInfo
 StoreAppDLCItem:descendantfocus #PlatformSupport
 {
 	opacity: 1.0;
+	margin: 0px;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
 }
 
+StoreAppDLCItem #PlatformSupport
+{
+	opacity: 0.0;
+	margin: 0px;
 
+}
 //
 // Movie/Image Slideshow
 //

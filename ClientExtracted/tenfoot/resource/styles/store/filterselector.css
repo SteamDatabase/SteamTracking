@@ -1,6 +1,16 @@
 @define iconcolorfocused: #3c3d3d;
 @define iconcolor: #8aa5b6;
 
+DropDownMenu Label
+{
+	margin-right: 0px;
+}
+
+DropDown.DropDownMenuVisible Label
+{
+	text-overflow: clip;
+}
+
 #Filter
 {
 	height: 48px;
@@ -17,7 +27,6 @@
 	transition-duration: 0.2s;
 	transition-delay: 0.2s;
 }
-
 
 #Store.FilterVisible:descendantfocus #FrontPage #StoreFilter
 {
@@ -61,27 +70,47 @@
 
 	transition-property: opacity, transform;
 	transition-timing-function: ease-in-out;
-	transition-duration: 0.15s;
-	transition-delay: 0.0s;
-}
+	transition-duration: 0.23s;
 
-DropDown FilterSelectorItem #IconWrapper
-{
-	visibility: collapse;
 }
 
 FilterSelectorItem Label
 {
 	font-size: 24px;
 	height: 48px;
+	text-overflow: clip;
+	white-space: nowrap;
+	color: applabel;
 }
 
 FilterSelectorItem #IconWrapper
 {
-	visibility: visible;
+	visibility: collapse;
 	flow-children: right;
 	horizontal-align: right;
-	margin-right: 4px;
+	margin-right: 5px;
+	padding-right: 13px;
+	margin-top: 7px;
+	padding-top: 4px;
+	padding-left: 30px;
+	padding-bottom: -2px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, color-stop( 0.0, #1d4c6f11 ), color-stop( 0.25, #1b4a6dff ), color-stop( 1.0, #164368ff ) );
+
+	transition-property: background-color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.20s;
+}
+
+#GamesFilterDropDownMenu FilterSelectorItem #IconWrapper
+{
+	background-color:	gradient( linear, 0% 0%, 100% 0%, color-stop( 0.0, #23557511 ), color-stop( 0.25, #225374ff ), color-stop( 1.0, #1f4f71ff ) );
+}
+
+
+FilterSelectorItem:descendantfocus #IconWrapper,
+#GamesFilterDropDownMenu FilterSelectorItem:descendantfocus #IconWrapper
+{	
+	background-color: gradient( linear, 0% 0%, 20% 0%, from( #b2bcbe00 ), to( #aab3b5ff ) );
 }
 
 FilterSelectorItem #IconWrapper Panel
@@ -89,6 +118,7 @@ FilterSelectorItem #IconWrapper Panel
 	horizontal-align: center;
 	vertical-align: center;
 	background-repeat: no-repeat;
+	background-color: none;
 	width: 42px;
 	height: 42px;
 	margin-top: -6px;
@@ -114,6 +144,24 @@ FilterSelectorItem Label:hover .ItemIcon,
 FilterSelectorItem:focus .ItemIcon
 {
 	wash-color: iconcolorfocused;
+}
+
+FilterSelectorItem.WindowsIcon #IconWrapper,
+FilterSelectorItem.OSXIcon #IconWrapper,
+FilterSelectorItem.LinuxIcon #IconWrapper,
+FilterSelectorItem.GamepadControllerIcon #IconWrapper,
+FilterSelectorItem.SteamControllerIcon #IconWrapper
+{
+	visibility: visible;
+}
+
+DropDown FilterSelectorItem.WindowsIcon #IconWrapper,
+DropDown FilterSelectorItem.OSXIcon #IconWrapper,
+DropDown FilterSelectorItem.LinuxIcon #IconWrapper,
+DropDown FilterSelectorItem.GamepadControllerIcon #IconWrapper,
+DropDown FilterSelectorItem.SteamControllerIcon #IconWrapper
+{
+	visibility: collapse;
 }
 
 FilterSelectorItem.WindowsIcon #WindowsIcon
