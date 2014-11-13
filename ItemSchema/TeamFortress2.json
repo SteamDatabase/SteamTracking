@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.1dc99b18aeb89716e68647e0b55b3fc51c79d44e.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.62537f7070238327fb6d84b8b8156d8f037c54fc.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -58210,8 +58210,8 @@
 				"defindex": 5635,
 				"item_class": "supply_crate",
 				"item_type_name": "Supply Crate",
-				"item_name": "RoboCrate",
-				"item_description": "This crate is special.\nIts contents are unknown and requires a\nRoboCrate Key to unlock.\n\nThe RoboCrate contains Unusual effects that will only come from this crate.",
+				"item_name": "Robo Community Crate",
+				"item_description": "This crate is special.\nIts contents are unknown and requires a\nRobo Community Crate Key to unlock.\n\nThe Robo Community Crate contains Unusual effects that will only come from this crate.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -58259,8 +58259,8 @@
 				"defindex": 5636,
 				"item_class": "tool",
 				"item_type_name": "Tool",
-				"item_name": "RoboCrate Key",
-				"item_description": "Used to open locked RoboCrates.",
+				"item_name": "Robo Community Crate Key",
+				"item_description": "Used to open locked Robo Community Crates.",
 				"proper_name": false,
 				"model_player": null,
 				"item_quality": 6,
@@ -58296,8 +58296,8 @@
 				"defindex": 5637,
 				"item_class": "tf_wearable",
 				"item_type_name": "Gift",
-				"item_name": "Pile of RoboKey Gifts",
-				"item_description": "When used, this Action Item gives\none RoboCrate Key\nto up to 23 other people on the server!",
+				"item_name": "Pile of Robo Community Crate Key Gifts",
+				"item_description": "When used, this Action Item gives\none Robo Community Crate Key\nto up to 23 other people on the server!",
 				"proper_name": false,
 				"item_slot": "action",
 				"model_player": "",
@@ -58326,8 +58326,8 @@
 				"defindex": 5638,
 				"item_class": "tf_wearable",
 				"item_type_name": "Gift",
-				"item_name": "A Random RoboKey Gift",
-				"item_description": "When used, this Action Item gives one RoboCrate Key\nto a random person on the server!",
+				"item_name": "A Random Robo Community Crate Key Gift",
+				"item_description": "When used, this Action Item gives one Robo Community Crate Key\nto a random person on the server!",
 				"proper_name": false,
 				"item_slot": "action",
 				"model_player": "",
@@ -62290,6 +62290,50 @@
 						"name": "cannot trade",
 						"class": "cannot_trade",
 						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "EOTL Community Crate",
+				"defindex": 5774,
+				"item_class": "supply_crate",
+				"item_type_name": "Supply Crate",
+				"item_name": "End of the Line Community Crate",
+				"item_description": "This crate's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/eotl_crate",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http://media.steampowered.com/apps/440/icons/eotl_crate.1fe0669cae3b2852eebd1d07c52bb70654f10ef2.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/eotl_crate_large.2a8b5e1f03718dc7d97e74ebb7300d96a315296b.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "eotl_2014"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 87
 					}
 				]
 				
