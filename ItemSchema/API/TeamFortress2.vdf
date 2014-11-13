@@ -2725,7 +2725,6 @@
 			"max_ilevel"	"13"
 			"mouse_pressed_sound"	"ui/item_crate_pickup.wav"
 			"drop_sound"		"ui/item_crate_drop.wav"
-			"event_desc_footer"	"#Halloween_Unusuals"	
 		}
 		"halloween2014keylesscrate"
 		{
@@ -54041,7 +54040,7 @@
 		{
 			"name"		"The Biomech Backpack"
 			"prefab"		"misc"
-			"first_sale_date"		"2014/09/16"
+			"first_sale_date"		"2014/11/13"
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_BiomechBackpack"
 			"item_description"		"#TF_BiomechBackpack_Desc"
@@ -54063,7 +54062,7 @@
 		{
 			"name"		"The Alien Cranium"
 			"prefab"		"hat"
-			"first_sale_date"		"2014/09/16"
+			"first_sale_date"		"2014/11/13"
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_AlienCranium"
 			"item_description"		"#TF_AlienCranium_Desc"
@@ -54092,7 +54091,7 @@
 		{
 			"name"		"The Xeno Suit"
 			"prefab"		"misc"
-			"first_sale_date"		"2014/09/16"
+			"first_sale_date"		"2014/11/13"
 			"item_type_name"		"#TF_Wearable_Costume"
 			"item_name"		"#TF_XenoSuit"
 			"item_description"		"#TF_XenoSuit_Desc"
@@ -54121,7 +54120,7 @@
 		{
 			"name"		"The MK 50"
 			"prefab"		"hat"
-			"first_sale_date"		"2014/09/16"
+			"first_sale_date"		"2014/11/13"
 			"item_type_name"		"#TF_Wearable_Helmet"
 			"item_name"		"#TF_MK50"
 			"item_description"		"#TF_MK50_Desc"
@@ -54168,7 +54167,7 @@
 		"30474"
 		{
 			"name"		"The Nostromo Napalmer"
-			"first_sale_date"		"2014/09/16"
+			"first_sale_date"		"2014/11/13"
 			"item_class"		"tf_weapon_flamethrower"
 			"craft_class"		"weapon"
 			"craft_material_type"		"weapon"
@@ -73107,6 +73106,22 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"5774" 
+		{
+			"name"	"EOTL Community Crate"
+			"prefab" "eventcrate"
+			"first_sale_date"	"2014/11/13"
+			"tool"
+			{
+				"restriction"	"eotl_2014"
+			}
+			"item_name"		"#TF_EOTL_Crate"
+			"item_description"	"#TF_EOTL_Crate_Desc"
+			"image_inventory"	"backpack/player/items/crafting/eotl_crate"
+			"attributes"
+			{
+			}
 		}
 		
 		"5999"				
