@@ -9634,7 +9634,7 @@
 			}
 			"capabilities"
 			{
-				"can_delete"		"1"
+				"can_delete"		"0"
 			}
 			"item_class"		"collectible_item"
 			"item_type"		"campaign"
@@ -27422,7 +27422,7 @@
 			"name"		"Casual Overpass Mag7 Kills"
 			"gamemode"		"casual"
 			"map"		"de_overpass"
-			"mapgroup"		"mg_de_overpass"
+			"mapgroup"		"mg_active"
 			"expression"		" %weapon_mag7 kills% "
 			"points"		"10"
 			"difficulty"		"1"
@@ -28635,7 +28635,7 @@
 			"expression"		" %kills% "
 			"points"		"20"
 			"difficulty"		"2"
-			"quest_reward"		"quest_reward_crate_vanguard"
+			"quest_reward"		"set_dust"
 			"loc_name"		"#Quest_Kills_Map"
 			"loc_description"		"#Quest_Kills_Map_desc"
 			"string_tokens"

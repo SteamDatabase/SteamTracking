@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.b753e07b551cc97b7b5e53b22c7bcb0881ac084a.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.18603b4dee303d18dffdf7067403af4740945ee2.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -3732,9 +3732,6 @@
 				"max_ilevel": 1,
 				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
 				"image_url_large": "",
-				"capabilities": {
-					"can_delete": true
-				},
 				"attributes": [
 					{
 						"name": "campaign completion bitfield",
@@ -4172,9 +4169,6 @@
 				"max_ilevel": 1,
 				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
 				"image_url_large": "",
-				"capabilities": {
-					"can_delete": true
-				},
 				"attributes": [
 					{
 						"name": "campaign completion bitfield",
@@ -4198,9 +4192,6 @@
 				"max_ilevel": 1,
 				"image_url": "http://media.steampowered.com/apps/730/icons/backpack/crafting/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
 				"image_url_large": "",
-				"capabilities": {
-					"can_delete": true
-				},
 				"attributes": [
 					{
 						"name": "campaign completion bitfield",
@@ -4224,9 +4215,6 @@
 				"max_ilevel": 1,
 				"image_url": "http://media.steampowered.com/apps/730/icons/backpack/crafting/campaign.0066b84dc0d2136aae1518b9194d96d70b5b30fa.png",
 				"image_url_large": "",
-				"capabilities": {
-					"can_delete": true
-				},
 				"attributes": [
 					{
 						"name": "campaign completion bitfield",
