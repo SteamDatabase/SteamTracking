@@ -536,5 +536,13 @@ function Curator_SetTagline( groupid, tagline )
 	});
 }
 
+function ConfirmDeleteAnnouncement( deleteURL )
+{
+	var dialog = ShowConfirmDialog( 'Delete Announcement?', 'Are you sure you want to delete this announcement?' );
+	dialog.done( function() {
+		top.location.href = deleteURL;
+	});
+}
+
 
 

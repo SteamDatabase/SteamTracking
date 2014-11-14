@@ -1947,7 +1947,7 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 				{
 					var rgContext = g_ActiveUser.GetContext( appid, rgContextIds[i] );
 					var elContext = new Element( 'div', {'class': 'popup_item context_name', 'id': 'context_option_' + appid + '_' + rgContext.id } );
-					elContext.update( rgContext.name );
+					$J( elContext ).text( rgContext.name );
 					var strHash = '#' + appid + '_' + rgContext.id;
 					elContext.observe( 'click', fnContextClick.bind( null, appid, rgContext.id ) );
 
@@ -1987,7 +1987,7 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 		{
 			$('empty_inventory_page').show();
 
-			$('empty_inventory_page').down('.gamename').update( g_rgAppContextData[appid].name );
+			$J( $('empty_inventory_page').down('.gamename') ).text( g_rgAppContextData[appid].name );
 			var strHowToGet = '';
 			if( oEconomyDisplay && oEconomyDisplay.howtoget )
 				strHowToGet = oEconomyDisplay.howtoget;
@@ -2302,7 +2302,7 @@ function BuildHover( prefix, item, owner )
 		var rgAppData = g_rgAppContextData[item.appid];
 		$(prefix+'_game_icon').src = rgAppData.icon;
 		$(prefix+'_game_icon').alt = rgAppData.name;
-		$(prefix+'_game_name').update( rgAppData.name );
+		$JFromIDOrElement(prefix+'_game_name').text( rgAppData.name );
 		$(prefix+'_item_type').update( item.type );
 		$(prefix+'_game_info').show();
 	}
@@ -2749,7 +2749,7 @@ SellItemDialog = {
 			var rgAppData = g_rgAppContextData[item.appid];
 			$('market_sell_dialog_game_icon').src = rgAppData.icon;
 			$('market_sell_dialog_game_icon').alt = rgAppData.name;
-			$('market_sell_dialog_game_name').update( rgAppData.name );
+			$JFromIDOrElement('market_sell_dialog_game_name').text( rgAppData.name );
 			$('market_sell_dialog_item_type').update( item.type );
 			$('market_sell_dialog_game_info').show();
 		}
