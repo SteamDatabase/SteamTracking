@@ -116,98 +116,6 @@ a:hover {
 	padding-left:17px;
 }
 
-.browseAppDetails
-{
-	display: table;
-	width: 958px;
-	height: 206px;
-	position: relative;
-}
-
-.customBrowseDescContainer
-{
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-}
-
-.customBrowseDesc
-{
-	text-align: left;
-	width: 411px;
-	float: right;
-	margin-right: 20px;
-	margin-bottom: 10px;
-}
-
-.customBrowseTitle
-{
-	font-size: 22px;
-	color: #ffffff;
-}
-
-.customBrowseText
-{
-	font-size: 13px;
-	line-height: 17px;
-	color: #ffffff;
-}
-
-.Portal2CustomTextTitle
-{
-    position: relative;
-    color: black;
-}
-
-.Portal2CustomTextDesc
-{
-    position: relative;
-    color: black;
-}
-
-.CustomTextTitleDark
-{
-	position: relative;
-	color: black;
-}
-
-.CustomTextDescDark
-{
-	position: relative;
-	color: black;
-}
-
-.CustomTextDescDark a
-{
-	color: black;
-}
-
-.CustomTextDescLight
-{
-	position: relative;
-	color: #dddddd;
-}
-
-.CustomTextDescLight a
-{
-	color: #e5e5e5;
-}
-
-.customBrowseText a
-{
-	text-decoration: underline;
-}
-
-.customBrowseBG
-{
-	width: 948px;
-	height: 203px;
-	left: 50%;
-	margin-left: -474px;
-	position: absolute;
-	background-repeat:no-repeat;
-}
-
 .customBrowseBG.appCustomBGSaxxyAwards
 {
 	height: 342px;
@@ -495,6 +403,9 @@ a.general_btn:hover {
 	z-index: 20;
 }
 
+#rightContents.browsePage {
+	margin-top: 43px;
+}
 
 #leftContents {
 	width: 650px;
@@ -558,6 +469,26 @@ a.general_btn:hover {
 {
 	font-size: 14px;
 }
+.rightDetailsBlock .adminArea,
+#ig_bottom #rightContents .sidebar .panel.adminArea
+{
+	background: #50362e;
+	padding: 8px 8px 8px 8px;
+	margin-top: 10px;
+}
+.rightDetailsBlock .panel.adminArea .rightSectionTitle,
+#rightContents .panel.adminArea .rightSectionTitle {
+	padding-top: 0px;
+	color: #ca5029;
+}
+.rightDetailsBlock hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #1f2c41;
+	color: transparent;
+	height: 1px;
+	border-style: none;
+}
 
 .rightSectionTopTitle {
 	text-transform: uppercase;
@@ -566,6 +497,8 @@ a.general_btn:hover {
 	padding-top: 5px;
 	margin-bottom: 10px;
 }
+
+
 
 .rightSectionTitle {
 	color: #494947;
@@ -829,6 +762,9 @@ h3 {
 .inventory_msg_content {
 	padding-top: 200px;
 }
+.inventory_msg_content.empty_voting_queue {
+	padding-top: 160px;
+}
 
 .returnLink {
 	margin:0;
@@ -1007,6 +943,9 @@ h3 {
 {
 	font-size: 11px;
 	margin-top: 4px;
+}
+.browseOption.reported a {
+	color: #ca5029;
 }
 
 /** app select **/
@@ -1615,7 +1554,7 @@ textarea {
 
 .paymentinfofaq
 {
-
+	width: 640px;
 }
 
 .paymentinfofaq .sectiontitle
@@ -1628,24 +1567,25 @@ textarea {
 
 .paymentinfofaq .question
 {
-	font-weight: bold;
 	margin-top: 30px;
 	margin-bottom: 10px;
 	font-size: 14px;
-	color: #ababab;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
+	color: #67c1f5;
 }
 
 .paymentinfofaq .answer
 {
 	margin-bottom: 10px;
 	font-size: 14px;
-	line-height: 18px;
+	line-height: 19px;
 	padding-left: 22px;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
 }
 
 .paymentinfofaq .answerTitle
 {
-	font-weight: bold;
+	font-family: 'Motiva Sans Bold', Arial, Tahoma;
 }
 
 #ItemEditText
@@ -2173,9 +2113,11 @@ textarea {
 
 .workshopBrowsePagingWithBG
 {
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 24px;
 	margin: 4px 0 20px 0;
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 2px 10px;
 }
 
 .workshopBrowsePaging
@@ -2192,9 +2134,38 @@ textarea {
 	font-size: 14px;
 }
 
+.workshopBrowseSortingControls
+{
+	padding-left: 10px;
+	float: right;
+}
+
+.workshopBrowseSortingControls a.dropdown {
+	padding-right: 20px;
+	background-image: url(  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAMCAYAAACA0IaCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUFBQkYyMTI2QjhGMTFFNDlDQkJDQkEwNzc3NkZDQ0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUFBQkYyMTM2QjhGMTFFNDlDQkJDQkEwNzc3NkZDQ0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxQUFCRjIxMDZCOEYxMUU0OUNCQkNCQTA3Nzc2RkNDQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxQUFCRjIxMTZCOEYxMUU0OUNCQkNCQTA3Nzc2RkNDQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmBJsMgAAABKSURBVHjaYvz//z8DtQATAxXBqGGkAxZ0gWNHDuONXisbW0aiXWZta4dTMT45nN7EpomQQXjDDFkzMQZhDTO0HMGIRYw+sQkQYABhFRFejI1rLQAAAABJRU5ErkJggg==' );
+	background-position: right center;
+	background-repeat: no-repeat;
+	margin-right: 0px;
+	padding-top: 5px;
+	padding-left: 10px;
+	margin-right: 4px;
+}
+.workshopBrowseSortingControls a.dropdown.hover {
+	color: #67c1f5;
+	margin-top: auto;
+	vertical-align: baseline;
+	border-right: none;
+	line-height: 20px;
+	height: auto;
+	background-color: #334256;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	margin-right: 4px;
+}
+
 .workshopBrowsePagingInfo
 {
-	color: #646464;
+	color: #61686d;
 	font-size: 12px;
 }
 
@@ -2730,7 +2701,6 @@ input, select {
 
 .inputTagsFilter
 {
-	width: 25px;
 	border-style: none;
 }
 
@@ -2846,7 +2816,7 @@ input.searchText
 
 .tagSearch
 {
-	color: #939393;
+	color: #8f98a0;
 }
 
 .tag_category_desc
@@ -2861,7 +2831,7 @@ input.searchText
 
 .flags_incompatible_desc
 {
-	color: #494947;
+	color: #61686d;
 	margin-top: 10px;
 	margin-bottom: 5px;
 	margin-left: 10px;

@@ -899,3 +899,60 @@ function GroupAdmin_DeleteForum( strForumType, gidFeature )
 	}
 }
 
+
+function GroupAnnouncement_ShowHTMLImportDialog( btn, selector )
+{
+	var $Btn = $J(btn);
+	if ( $Btn.hasClass( 'btn_disabled' ) )
+		return;
+
+	var strDialogTitle = 'Import from HTML';
+
+	$Btn.addClass( 'btn_disabled' );
+
+	var $Textarea = $J(selector);
+
+	var $Dialog = $J('<div/>');
+	$Dialog.append( $J('<div/>').text( 'Type or paste HTML below.' ) );
+	var $HTMLTextarea = $J('<textarea/>', {cols: 40, rows: 14} );
+	$HTMLTextarea.css( 'width', '462px').css( 'margin', '4px 0');
+	$Dialog.append( $HTMLTextarea );
+
+	var $HTMLNewlineCheck = $J('<input/>', {type: 'checkbox', id: 'html_newline_check'} );
+	var $Label = $J('<label/>', {'for': 'html_newline_check'}).text( 'Preserve newlines' );
+	$Label.data('community-tooltip', 'In HTML, newlines usually have no effect, but in BBCode they will show as blank lines.  If you used &lt;p&gt; or &lt;br&gt; tags, leave this unchecked.  If you usually use blog software that automatically adds &lt;br&gt; tags for newlines, you will probably want to check this box.' );
+	BindCommunityTooltip( $Label );
+	$Dialog.append( $J('<div/>').append( $HTMLNewlineCheck, $Label )) ;
+
+	ShowConfirmDialog( strDialogTitle, $Dialog, 'Convert to BBCode' )
+		.done( function () {
+			if ( !$HTMLTextarea.val() )
+				return;
+
+			$J.post( 'https://steamcommunity.com/actions/ConvertHTMLToBBCode', {
+				content: $HTMLTextarea.val(),
+				preserve_newlines: $HTMLNewlineCheck.is( ':checked' ) ? 1 : 0
+			}).done( function( data ) {
+				if ( $Textarea.val() )
+				{
+					ShowConfirmDialog( strDialogTitle, 'You\'ve already entered text in the body.  Would you like to replace it with the converted text or append the new text?', 'Replace', null, 'Append' )
+						.done( function( button ) {
+							if ( button == 'OK' )
+								$Textarea.val( data.content );
+							else if ( button == 'SECONDARY' )
+								$Textarea.val( $Textarea.val() + '\n' + data.content );
+							PreviewAnnouncement();
+						});
+				}
+				else
+				{
+					$Textarea.val( data.content );
+					PreviewAnnouncement();
+				}
+			}).fail( function() {
+				ShowAlertDialog( strDialogTitle, 'There was a problem converting your text.  Please try again later.' );
+			});
+		}).always( $Btn.removeClass( 'btn_disabled' ) );
+	$HTMLTextarea.focus();
+}
+

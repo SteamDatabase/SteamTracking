@@ -221,7 +221,7 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 			displayName = displayName + ' ' + user.GetContext( appid, contextid ).name;
 		}
 
-		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'https://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: displayName } ) );
+		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'https://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: displayName.escapeHTML() /* prototype! */ } ) );
 
 		$('trade_inventory_unavailable').hide();
 		$('trade_inventory_failed').hide();
@@ -249,14 +249,14 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 					$('trade_inventory_message_not_allowed_none').hide();
 					$('trade_inventory_message_not_allowed_receiveonly').show();
 
-					$('trade_inventory_message_not_allowed_receiveonly').down('.gamename').update(appname);
+					$J( $('trade_inventory_message_not_allowed_receiveonly').down('.gamename') ).text(appname);
 				}
 				else
 				{
 					$('trade_inventory_message_not_allowed_none').show();
 					$('trade_inventory_message_not_allowed_receiveonly').hide();
 
-					$('trade_inventory_message_not_allowed_none').down('.gamename').update(appname);
+					$J( $('trade_inventory_message_not_allowed_none').down('.gamename') ).text(appname);
 				}
 				var elAlerts = $('trade_inventory_message_not_allowed_alerts');
 				elAlerts.update('');
@@ -276,7 +276,7 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 			else
 			{
 				$('trade_inventory_message_no_inventory').show();
-				$('trade_inventory_message_no_inventory').down('.gamename').update(appname);
+				$J( $('trade_inventory_message_no_inventory').down('.gamename') ).text(appname);
 				var strHowToGet = '';
 				if( oAppDisplay && oAppDisplay.howtoget )
 					strHowToGet = oAppDisplay.howtoget;
@@ -1333,7 +1333,7 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 			{
 				var rgAppData = g_rgAppContextData[nFullInventoryAppId];
 				var strEventAppend = 'Your inventory for %1$s is full.'
-						.replace( '%1$s', rgAppData.name );
+						.replace( '%1$s', rgAppData.name.escapeHTML() );
 
 				strEvent = strEvent + ' ' + strEventAppend;
 			}
@@ -2009,7 +2009,7 @@ CurrencyDialog = {
 
 		if ( xferAmount > this.m_currency.original_amount )
 		{
-			this.DisplayError( 'You do not have enough ' + this.m_currency.name + '.' );
+			this.DisplayError( 'You do not have enough ' + this.m_currency.name.escapeHTML() + '.' );
 			return;
 		}
 
@@ -2326,7 +2326,7 @@ CurrencyConversionDialog = {
 
 		if ( xferAmount > this.m_currency.original_amount )
 		{
-			this.DisplayError( 'You do not have enough ' + this.m_currency.name + '.' );
+			this.DisplayError( 'You do not have enough ' + this.m_currency.name.escapeHTML() + '.' );
 			return;
 		}
 

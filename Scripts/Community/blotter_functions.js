@@ -354,7 +354,7 @@ function Blotter_GameSelector_Update()
 								for ( var i=0; i < json.length; i++ )
 								{
 									var elSuggestion = new Element( 'div', {'class': 'game_suggestion popup_menu_item' } );
-									var el = new Element('div', { id: 'blotter_appselect_app_option_' + json[i].appid, 'class': 'option ellipsis' }).update( json[i].name );
+									var el = new Element('div', { id: 'blotter_appselect_app_option_' + json[i].appid, 'class': 'option ellipsis' }).update( json[i].name.escapeHTML() );
 									el.observe( 'click', Blotter_SelectGame.bind( null, json[i].appid, json[i].name ) );
 									$('blotter_appselect_suggestions').appendChild( el );
 								}
