@@ -1,0 +1,124 @@
+
+
+
+.appHubNewsIconHolder.eurogamer
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_eurogamer.gif');
+}
+
+.appHubNewsIconHolder.kotaku
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_kotaku.gif');
+}
+
+.appHubNewsIconHolder.pcgamer
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_pcgamer.gif');
+}
+
+.appHubNewsIconHolder.kotaku
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_kotaku.gif');
+}
+
+.appHubNewsIconHolder.rps
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_rockpapershotgun.gif');
+}
+
+.appHubNewsIconHolder.shacknews
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_shacknews.gif');
+}
+
+.appHubNewsIconHolder.steam_release
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_updates
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_announce
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_blog
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_client
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.steam_press
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_steam.gif');
+}
+
+.appHubNewsIconHolder.tf2_blog
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_tf2.jpg');
+}
+
+.appHubNewsIconHolder.l4d_blog
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_l4d2.jpg');
+}
+
+.appHubNewsIconHolder.dota_blog
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_dota2.jpg');
+}
+
+.appHubNewsIconHolder.dota_beta_blog
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_dota2.jpg');
+}
+
+.appHubNewsIconHolder.portal2_blog
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/news/img_portal2.jpg');
+}
+
+
+
+.apphub_CardRating.notRated
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/not-yet.png' );
+}
+
+.apphub_CardRating.zeroStar
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/0-star.png' );
+}
+
+.apphub_CardRating.oneStar
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/1-star.png' );
+}
+
+.apphub_CardRating.twoStar
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/2-star.png' );
+}
+
+.apphub_CardRating.threeStar
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/3-star.png' );
+}
+
+.apphub_CardRating.fourStar
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/4-star.png' );
+}
+
+.apphub_CardRating.fiveStar
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/5-star.png' );
+}

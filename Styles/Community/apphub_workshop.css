@@ -1,0 +1,1108 @@
+
+/* menus */
+
+.current_player_workshop_link a.dropdown {
+	line-height: 27px;
+	padding-right: 18px;
+	background-image: url(  'data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==' );
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+/* body */
+
+.workshop_home_content
+{
+	margin: 0 auto 8px auto;
+	width: 948px;
+	text-align: left;
+}
+
+/* right column */
+.right_column
+{
+	position: relative;
+	float: right;
+	width: 295px;
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+	padding-top: 0px;
+}
+
+.right_column .panel
+{
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	padding: 12px;
+	margin-bottom: 12px;
+}
+.right_column .panel.adminArea {
+	background: #50362e;
+}
+	.right_column .panel.adminArea .title {
+		padding-top: 0px;
+		margin-top: 0px;
+		color: #ca5029;
+	}
+.primary_panel_border
+{
+	background: linear-gradient(to bottom, rgba(34, 50, 73, 1) 0%, rgba(11, 16, 23, 1) 100%);
+	padding: 1px;
+	box-shadow: 0 0 6px 0 #000000;
+	margin-top: 27px;
+}
+.primary_panel
+{
+	background: url('https://steamcommunity-a.akamaihd.net/public/images/workshop/primary_panel_background.jpg') no-repeat 0px 0px #040508;
+}
+.primary_panel .playerAvatar img,
+.primary_panel .playerAvatar
+{
+	padding: 0px;
+}
+.playerAvatar.workshop img {
+	height: 84px;
+	width: 84px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.avatar_ctn {
+	position: relative;
+	height: 84px;
+	float: left;
+}
+.avatar_workshop_overlay {
+	background: url('https://steamcommunity-a.akamaihd.net/public/images/workshop/avatar_overlay.png') no-repeat 0px 0px;
+	height: 84px;
+	width: 84px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.menu_panel {
+	padding: 12px;
+}
+
+.right_column .panel .title
+{
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 16px 0 3px 0;
+	color: #67c1f5;
+}
+
+.browse_option
+{
+	font-size: 14px;
+	color: white;
+	line-height: 30px;
+}
+.browse_option.admin a
+{
+	color: #ca5029;
+}
+.browse_option.admin a:hover
+{
+	color: #67c1f5;
+}
+
+.playerAvatar.float_left
+{
+	float: left;
+	margin-bottom: 20px;
+}
+.current_player_workshop_title a {
+	padding-top: 10px;
+	padding-left: 50px;
+	float: left;
+	color: #67c1f5;
+	font-size: 16px;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
+}
+.current_player_workshop_title a:hover {
+	color: #67c1f5;
+}
+.current_player_workshop_link
+{
+	padding-left: 50px;
+	float: left;
+}
+.current_player_workshop_link a
+{
+	font-size: 14px;
+	color: #ffffff;
+}
+
+/* left column */
+
+.left_column
+{
+	width: 638px;
+	margin: 0;
+	float: left;
+	padding-bottom: 7px;
+	text-align: left
+}
+
+/* voting queue */
+.section_contents.with_background.voting_queue
+{
+	padding: 10px;
+	background: -moz-linear-gradient(top, #0e141e 0%, #030407 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0e141e), color-stop(100%,#030407));background: -webkit-linear-gradient(top, #0e141e 0%,#030407 100%);background: -o-linear-gradient(top, #0e141e 0%,#030407 100%);background: -ms-linear-gradient(top, #0e141e 0%,#030407 100%);background: linear-gradient(to bottom, #0e141e 0%,#030407 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e141e', endColorstr='#030407',GradientType=0 );}
+.voting_queue_item
+{
+	float: left;
+	padding-right: 10px;
+}
+.voting_queue_done_title
+{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	font-size: 16px;
+	color: #c6d4df;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+}
+.voting_queue_done_desc
+{
+	text-align: center;
+	padding-bottom: 10px;
+}
+.voting_queue_done_btn
+{
+	text-align: center;
+}
+
+/* detail box */
+.detailBox {
+	padding: 10px 0px 0 0;
+
+	position: relative;
+	padding-bottom: 20px;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1' ) 0px 0px no-repeat;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
+	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
+}
+
+.detailBox.altFooter {
+	padding: 10px 0px 0 0;
+
+	position: relative;
+	padding-bottom: 7px;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png?v=1' ) bottom right no-repeat,
+	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
+	url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
+	margin-bottom: 16px;
+}
+
+/*  */
+.section
+{
+	position: relative;
+	padding-bottom: 10px;
+}
+.section.accepted_items_row,
+.section.friends_favorites_row,
+.section.followed_authors_row,
+.section.popular_items_row,
+.section.special_event_row,
+.section.merch_row,
+.section.announcements_row,
+.section.queue_row
+{
+	margin-top: 20px;
+}
+
+.section.accepted_items_row .section_title_ctn,
+.section.friends_favorites_row .section_title_ctn,
+.section.followed_authors_row .section_title_ctn,
+.section.popular_items_row .section_title_ctn,
+.section.special_event_row .section_title_ctn,
+.section.merch_row .section_title_ctn,
+.section.queue_row .section_title_ctn
+{
+	margin-bottom: 7px;
+}
+.section_title_ctn .ico16 {
+	margin-top: -4px;
+	margin-right: 4px;
+}
+.special_event_row {
+	padding-top: 16px;
+}
+.special_event_row .section_title_ctn {
+	padding-top: 8px;
+}
+.special_event_row .section_title, .special_event_row .section_title a {
+	color: #bc974e;
+}
+.section_title, .section_title a
+{
+	font-size: 18px;
+	color: #67c1f5;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+	margin-right: 4px;
+}
+.section_title a:hover
+{
+	color: white;
+}
+
+.section_subtitle
+{
+	color: #9099a1;
+	font-size: 15px;
+}
+.section_contents
+{
+	position: relative;
+}
+
+.voting_queue_border {
+	background: -moz-linear-gradient(top, #223249 0%, #000000 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#223249), color-stop(100%,#000000));background: -webkit-linear-gradient(top, #223249 0%,#000000 100%);background: -o-linear-gradient(top, #223249 0%,#000000 100%);background: -ms-linear-gradient(top, #223249 0%,#000000 100%);background: linear-gradient(to bottom, #223249 0%,#000000 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223249', endColorstr='#000000',GradientType=0 );	padding: 1px;
+	box-shadow: 0 0 5px 0 #000000;
+}
+.section_contents.with_background
+{
+	padding: 15px;
+	background: rgba( 0, 0, 0, 0.2 );
+}
+
+.section_bottom_bar
+{
+	margin-top: 2px;
+	padding: 10px 15px 10px 15px;
+	background: rgba( 0, 0, 0, 0.2 );
+}
+.special_event_row .section_bottom_bar {
+	background: transparent;
+}
+.section_bottom_bar a
+{
+	float: right;
+}
+
+.workshop_item_link
+{
+	position: relative;
+	display: block;
+}
+.workshop_item_link.landscape.with_rating
+{
+	min-height: 151px;
+}
+.workshop_item_link.with_rating
+{
+	min-height: 231px;
+}
+
+.workshop_item
+{
+	float: left;
+	position: relative;
+}
+.workshop_item .preview_image
+{
+	width: 181px;
+	height: 181px;
+}
+.workshop_item .preview_image.landscape
+{
+	height: auto;
+	min-height: 101px;
+}
+.workshop_item a .preview_image
+{
+	border: 1px solid rgba(0,0,0,0);
+	box-shadow: 0 0 6px #000000;
+}
+.workshop_item a:hover .preview_image
+{
+	border: 1px solid #66c0f4;
+}
+.workshop_item .workshop_item_title
+{
+	padding-top: 4px;
+	color: #c6d4df;
+	font-size: 14px;
+	max-width: 160px;
+}
+.workshop_item .workshop_item_author
+{
+	color: #8F98A0;
+	max-width: 175px;
+}
+
+/* voting queue */
+.section_contents.voting_queue
+{
+	height: 202px;
+}
+.workshop_item.voting_queue_item
+{
+	position: absolute;
+	box-shadow: 0 0 8px 0 #000000;
+	padding: 0px;
+	border: 1px solid #16202f;
+}
+.voting_queue_item_position_0, .voting_queue_item_position_0 .preview_image
+{
+	width: 200px;
+	height: 200px;
+}
+.voting_queue_item_position_0.landscape, .voting_queue_item_position_0.landscape .preview_image
+{
+	width: auto;
+	height: 200px;
+	max-width: 358px;
+	min-width: 357px;
+}
+.voting_queue_item_position_0 .voting_queue_item_overlay
+{
+	background: rgba( 0, 0, 0, 0.0 );
+}
+.voting_queue_item_position_0{
+	top: 15px;
+	left: 15px;
+	z-index: 6;
+	opacity: 1;
+}
+.voting_queue_item_position_0.landscape
+{
+	left: 15px;
+}
+.voting_queue_item_position_1, .voting_queue_item_position_1 .preview_image
+{
+	width: 183px;
+	height: 183px;
+}
+.voting_queue_item_position_1.landscape, .voting_queue_item_position_1.landscape .preview_image
+{
+	width: auto;
+	height: 183px;
+	max-width: 327px;
+	min-width: 326px;
+}
+.voting_queue_item_position_1 .voting_queue_item_overlay
+{
+	background: rgba( 20, 26, 36, 0.2 );
+}
+.voting_queue_item_position_1{
+	top: 23px;
+	left: 205px;
+	z-index: 5;
+	opacity: 1;
+}
+.voting_queue_item_position_1.landscape
+{
+	left: 263px;
+}
+.voting_queue_item_position_2, .voting_queue_item_position_2 .preview_image
+{
+	width: 166px;
+	height: 166px;
+}
+.voting_queue_item_position_2.landscape, .voting_queue_item_position_2.landscape .preview_image
+{
+	width: auto;
+	height: 166px;
+	max-width: 297px;
+	min-width: 296px;
+}
+.voting_queue_item_position_2 .voting_queue_item_overlay
+{
+	background: rgba( 20, 26, 36, 0.3 );
+}
+.voting_queue_item_position_2{
+	top: 32px;
+	left: 378px;
+	z-index: 4;
+	opacity: 1;
+}
+.voting_queue_item_position_2.landscape
+{
+	left: 513px;
+}
+.voting_queue_item_position_3, .voting_queue_item_position_3 .preview_image
+{
+	width: 150px;
+	height: 150px;
+}
+.voting_queue_item_position_3.landscape, .voting_queue_item_position_3.landscape .preview_image
+{
+	width: auto;
+	height: 150px;
+	max-width: 268px;
+	min-width: 267px;
+}
+.voting_queue_item_position_3 .voting_queue_item_overlay
+{
+	background: rgba( 20, 26, 36, 0.5 );
+}
+.voting_queue_item_position_3{
+	top: 40px;
+	left: 535px;
+	z-index: 3;
+	opacity: 1;
+}
+.voting_queue_item_position_3.landscape
+{
+	left: 673px;
+}
+.voting_queue_item_position_4, .voting_queue_item_position_4 .preview_image
+{
+	width: 136px;
+	height: 136px;
+}
+.voting_queue_item_position_4.landscape, .voting_queue_item_position_4.landscape .preview_image
+{
+	width: auto;
+	height: 136px;
+	max-width: 243px;
+	min-width: 242px;
+}
+.voting_queue_item_position_4 .voting_queue_item_overlay
+{
+	background: rgba( 20, 26, 36, 0.7 );
+}
+.voting_queue_item_position_4{
+	top: 47px;
+	left: 675px;
+	z-index: 2;
+	opacity: 1;
+}
+.voting_queue_item_position_4.landscape
+{
+	left: 15px;
+}
+.voting_queue_item_position_5, .voting_queue_item_position_5 .preview_image
+{
+	width: 127px;
+	height: 127px;
+}
+.voting_queue_item_position_5.landscape, .voting_queue_item_position_5.landscape .preview_image
+{
+	width: auto;
+	height: 127px;
+	max-width: 227px;
+	min-width: 226px;
+}
+.voting_queue_item_position_5 .voting_queue_item_overlay
+{
+	background: rgba( 20, 26, 36, 0.8 );
+}
+.voting_queue_item_position_5{
+	top: 51px;
+	left: 803px;
+	z-index: 1;
+	opacity: 1;
+}
+.voting_queue_item_position_5.landscape
+{
+	left: 15px;
+}
+
+.voting_queue_item_overlay
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.voting_queue_link
+{
+	position: absolute;
+	color: #93d7ff;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-size: 18px;
+	top: 80px;
+	left: 120px;
+	width: 825px;
+	height: 67px;
+	padding: 0px;
+	z-index: 20;
+	font-size: 20px;
+	background: url( https://steamcommunity-a.akamaihd.net/public/images/workshop/vote_queue_arrow.png );
+	background-repeat: no-repeat;
+}
+.voting_queue_link div {
+	padding: 20px;
+}
+a.queue_area:hover .voting_queue_border {
+	background: #66c0f4;
+}
+a.queue_area:hover .voting_queue_link {
+	background: url( https://steamcommunity-a.akamaihd.net/public/images/workshop/vote_queue_arrow.png );
+	background-position: 0px 67px;
+	color: #ffffff;
+}
+.section_contents.voting_queue.landscape .voting_queue_link
+{
+	top: 38px;
+}
+
+/* large promotion area for square items */
+.workshop_item.square
+{
+	float: left;
+	background-color: black;
+}
+.workshop_item.square.large
+{
+	width: 437px;
+	height: 487px;
+	margin-right: 8px;
+}
+.workshop_item.square.large .preview_image
+{
+	width: 435px;
+	height: 435px;
+}
+.workshop_item.square.small
+{
+	height: 240px;
+}
+.workshop_item.square.small .preview_image
+{
+	width: 190px;
+	height: 190px;
+}
+.workshop_item.square.small:nth-child(2n)
+{
+	margin-bottom: 7px;
+}
+.workshop_item.square .workshop_item_info
+{
+	padding: 8px;
+}
+
+/* standard grid items */
+.workshop_item.grid
+{
+	padding: 14px;
+	margin-right: 2px;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.popular_items_row .workshop_item.grid,
+.followed_authors_row .workshop_item.grid,
+.merch_row .workshop_item.grid,
+.friends_favorites_row .workshop_item.grid
+{
+	background: rgba( 0, 0, 0, 0.2 );
+}
+.special_event_row .workshop_item.grid {
+	background: transparent;
+}
+
+.workshop_item.grid:nth-child(3n)
+{
+	margin-right: 0px;
+}
+
+/* favorites */
+.workshop_item_friends_who_favorited
+{
+	padding-top: 10px;
+}
+.friend_who_favorited
+{
+	float: left;
+	margin-right: 5px;
+}
+.friend_who_favorited.more, .friend_who_favorited.more a
+{
+	line-height: 34px;
+	font-size: 16px;
+	text-align: center;
+	color: #67c1f5;
+}
+
+/* accepted */
+.workshop_item.accepted .preview_image
+{
+	width: 144px;
+	height: 144px;
+}
+.workshop_item.accepted .preview_image.landscape
+{
+	height: auto;
+	min-height: 80px;
+}
+.workshop_item.accepted
+{
+	padding-right: 8px;
+	padding-bottom: 10px;
+}
+.workshop_item.accepted:nth-child(4n)
+{
+	padding-right: 0px;
+}
+.workshop_item.accepted:nth-child(n+8)
+{
+	padding-bottom: 0px;
+}
+.accepted_checkmark
+ {
+	 position: absolute;
+	 top: 6px;
+	 left: -1px;
+	 padding: 3px;
+	 pointer-events: none;
+	background: -moz-linear-gradient(top, #769605 0%, #566c04 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#769605), color-stop(100%,#566c04));background: -webkit-linear-gradient(top, #769605 0%,#566c04 100%);background: -o-linear-gradient(top, #769605 0%,#566c04 100%);background: -ms-linear-gradient(top, #769605 0%,#566c04 100%);background: linear-gradient(to bottom, #769605 0%,#566c04 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#769605', endColorstr='#566c04',GradientType=0 ); }
+.accepted_voted
+{
+	position: absolute;
+	top: 6px;
+	left: -1px;
+	padding: 3px;
+	pointer-events: none;
+	background-color: #799905;
+	box-shadow: 0 0 4px 0 #000000;
+}
+
+/* tabs */
+
+.home_tab_bg {
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/workshop/tab_bg.png') no-repeat;
+	position: absolute;
+	width: 664px;
+	height: 127px;
+
+	top: -99px;
+	left: -66px;
+	pointer-events: none;
+}
+
+.home_tabs_row
+{
+	position: relative;
+	margin-bottom: 8px;
+	margin-top: 20px;
+}
+
+.home_tab
+{
+	display: inline-block;
+	margin-right: 0px;
+	background: rgba( 42, 63, 90, 0.6 );
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+	font-size: 13px;
+	color: #2f89bc;
+	line-height: 24px;
+
+	cursor: pointer;
+
+	vertical-align: top;
+	margin-top: 3px;
+
+	box-shadow: inset 0 -2px 3px 0 rgba( 0, 0, 0, 0.25 );
+}
+
+.home_tab:hover
+{
+	color: #ffffff;
+}
+.home_tab .tab_content
+{
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	font-size: 13px;
+	color: #4f94bc;
+	line-height: 24px;
+	padding: 0 10px;
+	cursor: pointer;
+	vertical-align: top;
+	box-shadow: inset 0 -2px 3px 0 rgba( 0, 0, 0, 0.25 );
+}
+.home_tab .tab_content:hover
+{
+	color: #ffffff;
+	background: #67c1f5; /* Old browsers */
+	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.home_tab.active
+{
+	background: -moz-linear-gradient(top,  rgba(103,193,245,1) 0%, rgba(103,193,245,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(103,193,245,1)), color-stop(100%,rgba(103,193,245,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(103,193,245,1) 0%,rgba(103,193,245,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(103,193,245,1) 0%,rgba(103,193,245,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(103,193,245,1) 0%,rgba(103,193,245,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(103,193,245,1) 0%,rgba(103,193,245,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#0067c1f5',GradientType=0 ); /* IE6-9 */
+	margin-top: 0;
+	box-shadow: none;
+	padding: 1px;
+}
+.home_tab.active .tab_content
+{
+	line-height: 29px;
+	font-size: 14px;
+	color: #ffffff;
+	background: #1a2737;
+	text-shadow: -1px -1px rgba( 0, 0, 0, 0.25 );
+
+	cursor: default;
+
+	margin-top: 0;
+	box-shadow: none;
+}
+
+/* rows */
+.workshop_item_row
+{
+	padding: 3px;
+	margin-bottom: 2px;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: 1px solid rgba(0,0,0,0);
+}
+.workshop_item_row:hover
+{
+	border: 1px solid #66c0f4;
+}
+.workshop_item_row .preview_image
+{
+	width: 77px;
+	height: 77px;
+	float: left;
+	margin-right: 14px;
+}
+.workshop_item_row .preview_image.landscape
+{
+	width: auto;
+	min-width: 138px;
+}
+.workshop_item_row .workshop_item_title
+{
+	padding-top: 10px;
+	font-size: 14px;
+	color: #c6d4df;
+}
+.workshop_item_row .workshop_item_rating
+{
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+.workshop_item_row .workshop_item_tags
+{
+	color: #8f98a0;
+}
+
+/* played/subscribed/favorited icons */
+.user_actions
+{
+	position: absolute;
+	right: 0px;
+}
+.workshop_item_row .user_actions
+{
+	right: 12px;
+}
+.user_action_history_icon
+{
+	height: 20px;
+	width: 20px;
+	overflow: hidden;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin-right: 2px;
+}
+.user_action_history_icon.subscribed
+{
+	background-position: 0px 0px;
+}
+.user_action_history_icon.favorited
+{
+	background-position: 0px -20px;
+}
+.user_action_history_icon.played
+{
+	background-position: 0px -40px;
+}
+
+/* announcements */
+.section_title.group_announcement
+{
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #61686d;
+	margin: 3px 0 16px 0;
+}
+.section_title.group_announcement a
+{
+	color: #66C0F4;
+	font-size: 11px;
+}
+.group_overview_announcement {
+	float: left;
+	width: 302px;
+	margin: 0 0 15px 0;
+}
+
+.group_overview_announcement.first {
+	border-right: 1px solid #000000;
+	padding-right: 12px;
+	margin-right: 14px;
+}
+
+.group_overview_announcement_footer {
+	color: #61686d;
+	font-size: 12px;
+}
+
+.group_overview_announcement_content {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	color: #acb2b8;
+	margin-bottom: 8px;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.group_overview_announcement_content img {
+	max-width: 300px;
+}
+.group_overview_announcement_content p {
+	margin-top: 4px;
+}
+
+.group_overview_announcement_readmore {
+
+	border-top: 1px solid #35465e;
+}
+
+.group_overview_announcement_fade {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 36px;
+	/*background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_overview_announcement_fade.png' ) bottom left repeat-x;*/
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/overview_announcement_fade_wide.png' ) bottom right repeat-x;
+}
+
+.group_overview_announcement.first .group_overview_announcement_fade {
+	background-position: bottom left;
+}
+
+.group_overview_announcement .large_title {
+	color: #66C0F4;
+	font-size: 24px;
+	font-weight:normal;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	line-height: 24px;
+}
+.group_overview_announcement .large_title:hover {
+	color: #ffffff;
+}
+
+a.readmore_link
+{
+	text-transform: uppercase;
+	color: #66C0F4;
+	font-size: 11px;
+}
+
+/* slideshow */
+
+.slideshow_container
+{
+	position: relative;
+}
+
+.slideshow_content
+{
+	position: relative;
+	width: 638px;
+	overflow: hidden;
+	box-shadow: 0 0 6px 0 #000000;
+}
+
+.slideshow_items_container
+{
+	position: relative;
+}
+
+.slideshow_item
+{
+	position: relative;
+	float: left;
+	width: 638px;
+	padding-bottom: 10px;
+	background-color: black;
+}
+
+.slideshow_item_link
+{
+	display: block;
+}
+
+.slideshow_item_image
+{
+	width: 638px;
+	height: 638px;
+}
+.slideshow_item_image.landscape
+{
+	height: 358px;
+}
+
+.slideshow_item_title
+{
+	font-size: 24px;
+	padding-top: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #dedede;
+	font-family: 'Motiva Sans Bold', Arial, Tahoma;
+	border-top: 1px dotted #223249;
+}
+.slideshow_item_desc
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 600px;
+	color: #bfbfbf;
+}
+.slideshow_item .workshop_item_rating
+{
+	margin-left: 10px;
+	padding-top: 4px;
+}
+
+/* scrollbar */
+.slider_container
+{
+	position: relative;
+	height: 18px;
+	margin-top: 8px;
+}
+.slider
+{
+	position: absolute;
+	left: 39px;
+	right: 39px;
+	top: 0px;
+	bottom: 0px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+}
+.slider .handle
+{
+	position: absolute;
+	top: 0;
+	background-color: rgba( 35, 60, 81, 0.4 );
+	border-radius: 3px;
+	height: 18px;
+	width: 60px;
+	cursor: pointer;
+}
+.slider_container .slider_left:hover, .slider_container .slider_right:hover, .slider_container .handle:hover {
+	opacity: 1;
+	background: #3d6c8d; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #3d6c8d 0%, #2e5470 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3d6c8d), color-stop(100%,#2e5470)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #3d6c8d 0%,#2e5470 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d6c8d', endColorstr='#2e5470',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.slider_container .slider_left, .slider_container .slider_right {
+	position: absolute;
+	width: 38px;
+	top: 0;
+	bottom: 0;
+	background-color: rgba( 35, 60, 81, 0.4 );
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.slider_left {
+	left: 0;
+}
+
+.slider_right {
+	right: 0;
+}
+.slider_right span {
+	display: inline-block;
+	background-position: -9px 0px;
+	background-repeat: no-repeat;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images//workshop/icon_cluster_controls.png');
+	width: 9px;
+	height: 7px;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+.slider_left span {
+	display: inline-block;
+	background-position: -18px 0px;
+	background-repeat: no-repeat;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images//workshop/icon_cluster_controls.png');
+	width: 9px;
+	height: 7px;
+	margin-left: 13px;
+	margin-top: 5px;
+}
+.slider_right:hover span {
+	background-position: -9px -7px;
+}
+.slider_left:hover span {
+	background-position: -18px -7px;
+}
+
+.slider_left.disabled, .slider_right.disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+
+/* tags */
+.tag_label
+{
+	cursor: pointer;
+	color: white;
+	font-size: 14px;
+	line-height: 24px;
+}
+.tag_label .tag_count
+{
+	color: #718a98;
+}
+.selectTagsFilter
+{
+	color: white;
+	font-size: 14px;
+	width: 100%;
+}
+.external_tags_selector
+{
+	position:absolute;
+	max-width: 90%;
+	min-width: 900px;
+	z-index:1000;
+	background-color:#000000;
+}
+.tooltip.small {
+	font-size: 11px;
+	cursor: help;
+	color: #9099a1;
+}

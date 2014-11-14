@@ -1,0 +1,208 @@
+
+/** HOVER stuff */
+div.hover {
+	position: absolute;
+	z-index: 400;
+	top: 40px;
+	left: 400px;
+	text-align:left;
+}
+
+.hover_box {
+	background-color: #417A9B;
+	width: 300px;
+
+	color: #C6D4DF;
+	font-size: 12px;
+}
+
+.hover_box .content {
+	padding: 10px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	word-wrap:break-word;
+}
+
+.hover_box .contentNoTopPadding {
+	padding: 10px;
+	padding-top: 0px;
+	padding-bottom: 14px;
+	word-wrap:break-word;
+}
+
+.hover_box h4 {
+	color: #FFFFFF;
+	font-weight: normal;
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+.hover_box p, .hover_box .hover_body_block {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.hover_box .rule {
+	border-bottom: 1px solid #82807c;
+}
+
+.hover_arrow_left, .hover_arrow_right {
+	position: absolute;
+	top: 39px;
+
+	width: 0px;
+	height: 0px;
+}
+
+.hover_arrow_left {
+	border-right: 14px solid #3A3A3A;
+	left: 0px;
+}
+
+.hover_arrow_right {
+	border-left: 14px solid #3A3A3A;
+	right: 0px;
+}
+
+.hover_arrow_inner {
+	position: absolute;
+	top: -13px;
+	background-repeat: no-repeat;
+	width: 13px;
+	height: 26px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/hover_arrow_both.gif?v=1' );
+}
+
+.hover_arrow_left .hover_arrow_inner {
+	left: 0px;
+	background-position: left top;
+}
+
+.hover_arrow_right .hover_arrow_inner {
+	right: 3px;
+	background-position: right top;
+}
+
+.hoverWorkshopItemTitle
+{
+	font-size: 15px;
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
+.hoverWorkshopItemDesc
+{
+	font-size:12px;
+	word-wrap:break-word;
+}
+
+.hover_user_action_history
+{
+	display: block;
+	background-color: #1A1A1A;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #494947;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.hover_user_action
+{
+	height: 20px;
+	overflow: hidden;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state_blue.png');
+	background-repeat: no-repeat;
+	padding-left: 30px;
+}
+
+.hover_user_action.subscribed
+{
+	background-position: 0px 0px;
+}
+
+.hover_user_action.favorited
+{
+	background-position: 0px -20px;
+}
+
+.hover_user_action.played
+{
+	background-position: 0px -40px;
+}
+
+.hover_friend_block_row
+{
+}
+
+.hover_friend_block_container
+{
+	float: left;
+	margin-right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.hover_friend_block
+{
+	position: relative;
+	height: 50px;
+}
+
+.hover_friend_block_row .iconHolder_default
+{
+	position: absolute;
+	left: 4px;
+	padding: 4px;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+
+.friends_favorited_text
+{
+	margin-bottom: 8px;
+}
+
+.friend_favorited_blocks_row
+{
+}
+
+.friend_favorited_block_container
+{
+	float: left;
+	margin-right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.friend_favorited_block
+{
+	position: relative;
+	height: 50px;
+}
+
+.friend_favorited_block_row .iconHolder_default
+{
+	position: absolute;
+	left: 4px;
+	padding: 4px;
+	width: 32px;
+	height: 32px;
+}
+
+
+#global_hover_content h1 {
+	color:#cccccc;
+	font-weight:bold;
+	font-size:13px;
+	margin:0;
+	padding:0;
+	margin-bottom:5px;
+}
