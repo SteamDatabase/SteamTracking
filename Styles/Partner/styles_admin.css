@@ -2340,3 +2340,13 @@ html, body { height:100%; }
 {
 	color: #8BB006;
 }
+
+.eula_edit_controls {
+	padding: 4px 0;
+}
+
+.eula_edit_controls .BBCodeTemplateBlock {
+	float: left;
+	margin-right: 12px;
+	line-height: 18px;
+}
