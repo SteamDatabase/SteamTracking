@@ -1779,6 +1779,13 @@ a.pagelink:hover {
 	border: 1px dashed #e24044 !important;
 }
 
+.pricingerror {
+	color: #e24044 !important;
+	font-weight: bold;
+	border: 1px solid #e24044 !important;
+	background-color: #550000 !important;
+}
+
 .outofmatrixlower {
 	border: 1px dashed #8bb006 !important;
 }
