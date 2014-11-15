@@ -722,7 +722,7 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 	var fnPositionHover = oParams.fnPositionHover || PositionMiniprofileHover;
 	var strDataName = oParams.strDataName;
 	var strURLMatch = oParams.strURLMatch;
-	var fnReadKey = function( $Element ) { return $Element.attr( 'data-' + strDataName ); };
+	var fnReadKey = function( $Element ) { return $Element.data( strDataName ); };
 	if ( oParams.fnReadKey )
 		fnReadKey = oParams.fnReadKey;
 	var strSelector = oParams.strSelector || '[data-' + strDataName + ']';
@@ -2394,9 +2394,9 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 		$Popup.show();
 	}
 
-	$Popup.css( {
-		'left': ( $Link.position().left + offsetLeft ) + 'px',
-		'top': ( $Link.position().top + offsetTop ) + 'px'
+	$Popup.offset( {
+		top: offsetLink.top + offsetTop,
+		left: offsetLink.left + offsetLeft
 	});
 
 	if ( bPopupHidden )
