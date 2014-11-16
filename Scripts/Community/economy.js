@@ -3221,13 +3221,8 @@ function ShowHover( elem, item )
 
 	hover.hide();
 	hover.style.visibility = '';
-	
-	if ( BShouldSuppressFades() )
-	{
-		hover.show();
-	}
-	else
-		ShowWithFade( hover );
+
+	ShowWithFade( hover );
 }
 
 function HideHover()
@@ -3238,11 +3233,8 @@ function HideHover()
 		return;
 	
 	hover.target.removeClassName('hover');
-	
-	if ( BShouldSuppressFades() )
-		hover.hide();
-	else
-		HideWithFade( hover );
+
+	HideWithFade( hover );
 }
 
 function InventoryDismissPurchaseMessage()
