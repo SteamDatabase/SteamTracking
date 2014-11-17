@@ -285,6 +285,13 @@ select.hourselect,  select.minuteselect {
 .newformrow.widelabel .formlabel, .newformrow.widelabel .formlabelwide {
 	width: 256px;
 }
+.newformrow.widelabel.EarlyAccess {
+	border-top: 1px solid #444;
+	padding-top: 12px;
+}
+.newformrow.widelabel.EarlyAccess .formlabel {
+	margin-top: 42px;
+}
 
 .newformrow .formdata {
 	float: none;
@@ -293,6 +300,9 @@ select.hourselect,  select.minuteselect {
 
 .newformrow.widelabel .formdata {
 	margin-left: 256px;
+}
+.newformrow.widelabel.EarlyAccess .formdata {
+	margin-left: 270px;
 }
 
 	.specialannouncementarea {
@@ -1419,7 +1429,7 @@ html, body { height:100%; }
 }
 
 .EarlyAccess .LocTextAreaBar {
-    width: 500px;
+    width: 600px;
 }
 
 
@@ -1445,7 +1455,7 @@ html, body { height:100%; }
 }
 
 .EarlyAccess .LocTextArea textarea {
-    height: 73px;
+    height: 130px;
 }
 
 #app_content_about__area textarea
