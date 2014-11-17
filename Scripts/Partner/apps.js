@@ -16,6 +16,14 @@ var g_bLocalized = false;
 function AppsAjaxRequest( requestUrl, hashParms, successClosure, requestMethod )
 {
 	if ( requestMethod == null ) requestMethod = 'post';
+
+	// ensure session ID is present if we're posting
+	if ( requestMethod == 'post' ) {
+		if ( !( 'sessionid' in hashParms ) ) {
+			hashParms[ 'sessionid' ] = g_sessionID
+		}
+	}
+
 	new Ajax.Request( requestUrl,
 		{
 			requestHeaders: { 'Accept': 'application/json' },
@@ -755,36 +763,55 @@ function AchievementSpan( achievement, field, fallback, language )
 	data = LocalizedAchievementField( achievement, field, fallback, language );
 	
 	var text = "";
-	var newSpan = document.createElement( "span" );
+	var newSpan = $J( '<span>' );
 
 	if ( data[ 'bPresent' ] )
 	{
-		$J(newSpan).text( data[ 'string' ] );
+		newSpan.text( data[ 'string' ] );
 	}
 	else
 	{
 		// don't display "fallback" english text for the loc token
 		if ( language != "token" )
 		{
-			var firstSpan = document.createElement( "span" );
-			$J(firstSpan).text( data['string'] );
-			newSpan.appendChild( firstSpan );
+			var firstSpan = $J( '<span>' );
+			firstSpan.text( data['string'] );
+			newSpan.append( firstSpan );
 		}
 		
-		var secondSpan = document.createElement( "span" );
+		var secondSpan = $J( '<span>' );
 
 		if ( language == "english" )
-			secondSpan.innerHTML = " [no English string]";
+			secondSpan.text( " [no English string]" );
 		else if ( language == "token" )
-			secondSpan.innerHTML = "[no localization token]";
+			secondSpan.text( "[no localization token]" );
 		else
-			secondSpan.innerHTML = " [fallback English string]";
-		secondSpan.className = 'outputNeutral';
-		newSpan.appendChild( secondSpan );
+			secondSpan.text( " [fallback English string]" );
+		secondSpan.addClass( 'outputNeutral' );
+		newSpan.append( secondSpan );
 	}
 		
 	return newSpan;
 }
+
+
+//
+// helper for jamming new cells into stat/achievement rows safely
+//
+function addCell( tr, txt )
+{
+	var theCell = $J( '<td>' );
+
+	if ( typeof( txt ) == "string" ) {
+		theCell.text( txt );
+	} else {
+		theCell.append( txt );
+	}
+
+	tr.append( theCell );
+	return theCell;
+}
+
 
 
 //
@@ -794,26 +821,29 @@ function AchievementSpan( achievement, field, fallback, language )
 // 
 function SetAchievement( appid, destRow, achievement )
 {
-	destRow.insertCell( -1 ).innerHTML = achievement[ "stat_id" ] + "/" + achievement[ "bit_id" ];
-	var nameCell = destRow.insertCell( -1 );
-	nameCell.innerHTML = achievement[ "api_name" ];
-	nameCell.appendChild( document.createElement( "br" ) );
+	var row = $J( destRow );
+	addCell( row, achievement[ "stat_id" ] + "/" + achievement[ "bit_id" ] );
+
+	var nameCell = $J( '<td>' );
+	nameCell.text( achievement[ "api_name" ] );
+	nameCell.append( $J( '<br>' ) );
 	
 	// Add the achievement progress stat line
 	if ( typeof achievement[ 'progress' ] === 'object' )
 	{
 		// currently only support direct stat value mapping
-		progressSpan = document.createElement( 'span' );
-		progressSpan.innerHTML = achievement.progress.value.operand1 + ' (' + achievement.progress.min_val + '-' + achievement.progress.max_val + ')';
+		var progressSpan = $J( '<span>' );
+		progressSpan.text( achievement.progress.value.operand1 + ' (' + achievement.progress.min_val + '-' + achievement.progress.max_val + ')' );
 		
-		nameCell.appendChild( progressSpan );
-		nameCell.appendChild( document.createElement( "br" ) );
+		nameCell.append( progressSpan );
+		nameCell.append( $J( '<br>' ) );
 	}
+	row.append( nameCell );
 
-	// TODO MRHOTEN need to do the below shenanigans for the display name as well.
+	// TODO need to do the below shenanigans for the display name as well.
 	// obviously some kind of helper would be handy here. maybe it could just
 	// return the span DOM object instead of going through the parser.
-	var descCell = destRow.insertCell( -1 );
+	var descCell = $J( '<td>' );
 	
 	var rgLanguageDisplay = g_rgLanguages;
 	
@@ -834,50 +864,51 @@ function SetAchievement( appid, destRow, achievement )
 	{
 		if ( bPrefix )
 		{
-			var prefixSpan = document.createElement( "span" );
-			prefixSpan.innerHTML = "[" + rgLanguageDisplay[ language ] + "] ";
-			descCell.appendChild( prefixSpan );
+			var prefixSpan = $J( '<span>' );
+			prefixSpan.text( "[" + rgLanguageDisplay[ language ] + "] " );
+			descCell.append( prefixSpan );
 		}
-		descCell.appendChild( AchievementSpan( achievement, "display_name", achievement.api_name + '_NAME', language ) );
-		descCell.appendChild( document.createElement( "br" ) );
+		descCell.append( AchievementSpan( achievement, "display_name", achievement.api_name + '_NAME', language ) );
+		descCell.append( $J( '<br>' ) );
 	}
 	
-	// TODO mrhoten Commonify description and display name
+	// TODO Commonify description and display name
 	for ( language in languages )
 	{
 		if ( bPrefix )
 		{
-			var prefixSpan = document.createElement( "span" );
-			prefixSpan.innerHTML = "[" + rgLanguageDisplay[ language ] + "] ";
-			descCell.appendChild( prefixSpan );
+			var prefixSpan = $J( '<span>' ).text( "[" + rgLanguageDisplay[ language ] + "] " );
+			descCell.append( prefixSpan );
 		}
-		descCell.appendChild( AchievementSpan( achievement, "description", achievement.api_name + '_DESC', language ) );
-		descCell.appendChild( document.createElement( "br" ) );
+		descCell.append( AchievementSpan( achievement, "description", achievement.api_name + '_DESC', language ) );
+		descCell.append( $J( '<br>' ) );
 	}
+	row.append( descCell );
 	
 	switch ( achievement[ "permission" ] )
 	{
-	case "1": destRow.insertCell( -1 ).innerHTML = "GS"; break;
-	case "2": destRow.insertCell( -1 ).innerHTML = "Official GS"; break;
+	case "1": addCell( row, "GS" ); break;
+	case "2": addCell( row, "Official GS" ); break;
 
 	case "0": 
 	default: 
-		destRow.insertCell( -1 ).innerHTML = "Client";
+		addCell( row, "Client" );
 	}
 	
-	destRow.insertCell( -1 ).innerHTML = ( achievement[ "hidden" ] != 0 ) ? "<b>Yes</b>" : "";
+	addCell( row, ( achievement[ "hidden" ] != 0 ) ? "<b>Yes</b>" : "" );
 
+	// TODO jqueryize the rest here
 	var newImg = document.createElement( "img" );
 	newImg.src = achievement[ "icon" ];
 	newImg.height = 64;
 	newImg.width = 64;
-	destRow.insertCell( -1 ).appendChild( newImg );
+	addCell( row, "" ).append( newImg );
 
 	newImg = document.createElement( "img" );
 	newImg.src = achievement[ "icon_gray" ];
 	newImg.height = 64;
 	newImg.width = 64;
-	destRow.insertCell( -1 ).appendChild( newImg );
+	addCell( row, "" ).append( newImg );
 
 	var btnCell = destRow.insertCell( -1 );
 
@@ -894,13 +925,6 @@ function SetAchievement( appid, destRow, achievement )
  	btn2.onclick = DeleteAchievementClosure( appid, achievement[ "stat_id" ], achievement[ "bit_id" ], achievement[ "api_name" ] );
 	btn2.value = "Delete";
 	btnCell.appendChild( btn2 );
-
-	delete btn;
-	delete btn2;
-	delete btnCell;
-	delete destRow;
-	delete newImg;
-	delete achievement;
 }
 
 
@@ -947,18 +971,9 @@ function NewAchievement( appid, achievement )
 // utility/compatibility routine
 function ClearRow( theRow )
 {
-	if ( theRow.style.backgroundColor )
-	{
-		theRow.style.backgroundColor = "";
-		gDirtyRows--;
-	}		
-		
-	var count = theRow.cells.length;
-
-	for ( var i = 0; i < count; i++ )
-	{
-		theRow.deleteCell( 0 );
-	}
+	theRow = $J( theRow );
+	theRow.removeClass( 'dirty' );
+	theRow.empty();
 }
 
 
@@ -979,37 +994,37 @@ function AchievementEditLocalizeHelper( container, form, achievement, field, fal
 
 	for ( language in languages )
 	{
-		var subItem = document.createElement( "input" );
+		var subItem = $J( '<input>' );
 		
 		if ( ( g_language == "all" && language in g_rgEditingLanguages ) )
 		{
 			// viewing all languages and this is a lang we're editing; add a prefix
-			var subPrefix = document.createElement( "span" );
+			var subPrefix = $J( '<span>' );
 			subPrefix.innerHTML = "[" + languages[ language ] + "] ";
-			form.appendChild( subPrefix );
-			subItem.style.width = "100%";
-			subItem.size = 30;
+			$J( form ).append( subPrefix );
+			subItem.css( "width", "100%" );
+			subItem.attr( 'size', '30' );
 		}
 		else if ( language == g_language )
 		{
 			// this is the selected language; it's already an edit control, so we're done
-			subItem.style.width = "100%";
-			subItem.size = 30;
+			subItem.css( "width", "100%" );
+			subItem.attr( 'size', '30' );
 		}
 		else
 		{
 			// not our language -> hidden form control
-			subItem.type = "hidden"; 
+			subItem.attr( 'type', 'hidden' );
 		}
 
-		subItem.name = language;
+		subItem.attr( 'name', language );
 		data = LocalizedAchievementField( achievement, field, achievement.api_name + fallbackSuffix, language );
 		if ( data.bPresent || language == "token" )
 		{
-			subItem.value = data.string;
+			subItem.val( data.string );
 		}
 		
-		form.appendChild( subItem ); 
+		$J( form ).append( subItem ); 
 	}
 }
 
@@ -1053,23 +1068,17 @@ function CreateStatPermissionSelect( id )
 }
 
 
-var gDirtyRows = 0;
-
 function DirtyRowClosure( row )
 {
-	return function()
+	return function DirtyRow()
 	{
-		if ( !row.style.backgroundColor )
-		{
-			row.style.backgroundColor = '#464646';
-			gDirtyRows++;
-		}
+		$J( row ).addClass( 'dirty' );
 	};
 }
 
 function StatsNavigateWarning()
 {
-	if ( gDirtyRows )
+	if ( $J( 'tr.dirty' ).size() )
 		return "There are unsaved changes on this page."
 }
 
@@ -1079,7 +1088,7 @@ function StatsNavigateWarning()
 //
 function EditAchievement( appid, achievement )
 {
-	// TODO MRHOTEN clone a <tr> from the static area of the template to ease the transition here;
+	// TODO clone a <tr> from the static area of the template to ease the transition here;
 	// could set it up templatized (like we do the upload forms) or we could templatize the IDs
 	// then access it via $().
 	//
@@ -1424,7 +1433,7 @@ function SetAchievementsDiv( appid, achievements )
 			elt.insert( eltSub );
 		}
 		
-		// TODO mrhoten Commonify description and display name
+		// TODO Commonify description and display name
 		for ( language in languages )
 		{
 			eltSub = AchievementSpan( achievement, "description", achievement.api_name + '_DESC', language );
@@ -1558,18 +1567,20 @@ function FetchAlternate( item, field, alternate )
 // 
 function SetStat( appid, destRow, stat )
 {
-	destRow.insertCell( -1 ).innerHTML = stat[ "stat_id" ];
-	destRow.insertCell( -1 ).innerHTML = FetchAlternate( stat, "type", "" );
-	destRow.insertCell( -1 ).innerHTML = FetchAlternate( stat, "name", "" );
+	var row = $J( destRow );
+
+	addCell( row, stat.stat_id );
+	addCell( row, FetchAlternate( stat, "type", "" ) );
+	addCell( row, FetchAlternate( stat, "name", "" ) );
 
 	switch ( stat[ "permission" ] )
 	{
-	case "1": destRow.insertCell( -1 ).innerHTML = "GS"; break;
-	case "2": destRow.insertCell( -1 ).innerHTML = "Official GS"; break;
+	case "1": addCell( row, "GS" ); break;
+	case "2": addCell( row, "Official GS" ); break;
 
 	case "0": 
 	default: 
-		destRow.insertCell( -1 ).innerHTML = "Client";
+		addCell( row, "Client" ); break;
 	}
 
 	var incrementVal = "";
@@ -1577,18 +1588,18 @@ function SetStat( appid, destRow, stat )
 	{
 		incrementVal = "Yes";
 	}
-	destRow.insertCell( -1 ).innerHTML = incrementVal;
-	destRow.insertCell( -1 ).innerHTML = FetchAlternate( stat, "maxchange", "" );
-	destRow.insertCell( -1 ).innerHTML = FetchAlternate( stat, "min", "" );
-	destRow.insertCell( -1 ).innerHTML = FetchAlternate( stat, "max", "" );
-	destRow.insertCell( -1 ).innerHTML = FetchAlternate( stat, "windowsize", "" );
-	destRow.insertCell( -1 ).innerHTML = FetchAlternate( stat, "default", "" );
+	addCell( row, incrementVal );
+	addCell( row, FetchAlternate( stat, "maxchange", "" ) );
+	addCell( row, FetchAlternate( stat, "min", "" ) );
+	addCell( row, FetchAlternate( stat, "max", "" ) );
+	addCell( row, FetchAlternate( stat, "windowsize", "" ) );
+	addCell( row, FetchAlternate( stat, "default", "" ) );
 	var aggregateVal = "";
 	if ( "aggregated" in stat && stat[ "aggregated" ] != 0 )
 	{
 		aggregateVal = "Yes";
 	}
-	destRow.insertCell( -1 ).innerHTML = aggregateVal;
+	addCell( row, aggregateVal );
 
 	var displayName = "";
 	if ( "display" in stat )
@@ -1598,78 +1609,61 @@ function SetStat( appid, destRow, stat )
 			displayName = stat["display"]["name"];
 		}
 	}
-	destRow.insertCell( -1 ).innerHTML = displayName;
+	addCell( row, displayName );
 
-	var btnCell = destRow.insertCell( -1 );
+	var btnCell = $J( destRow.insertCell( -1 ) );
 
 	var btn = document.createElement( "input" );
 	btn.type= "submit";
  	btn.onclick = EditStatClosure( appid, stat[ "stat_id" ] );
 	btn.value = "Edit";
-	btnCell.appendChild( btn );
+	btnCell.append( btn );
 
 	var theSpan = document.createElement( "span" );
 	theSpan.innerHTML = "&nbsp;";
-	btnCell.appendChild( theSpan );
+	btnCell.append( theSpan );
 
 	var btn2 = document.createElement( "input" );
 	btn2.type = "submit";
  	btn2.onclick = DeleteStatClosure( appid, stat[ "stat_id" ], stat[ "bit_id" ] );
 	btn2.value = "Delete";
-	btnCell.appendChild( btn2 );
+	btnCell.append( btn2 );
 }
 
 
 function EditStat( appid, stat )
 {
+	// TODO XSS
 	var statRow = document.getElementById( "s" + stat[ "stat_id" ] );
 	if ( typeof( statRow ) == "object" )
 	{
 		var id = "stat" + stat[ 'stat_id' ];
-		var row = statRow; // less typing
+		var row = $J( statRow ); // less typing
 		var item;
 
 		ClearRow( row );
 		row.className = "selected";
 
-		var doubleCell = row.insertCell( -1 );
+		var doubleCell = $J( '<td>' );
 		doubleCell.innerHTML = stat[ "stat_id" ];
 
-		item = document.createElement( "a" );
+		item = $J( '<a>' );
 		var newHash = id + "_edit";
-		item.name = newHash;
-		doubleCell.appendChild( item );
+		item.attr( 'name', newHash );
+		doubleCell.append( item );
+		addCell( row, item );
 
-		item = document.createElement( "select" );
-		item.style.width = "6em";
-		item.id = id + "_stattype";
-		
-		var item2 = document.createElement( "option" );
-		item.options.add( item2 );
-		item2.innerHTML = "INT";
-		item2.value = "INT";
-		if ( stat[ 'type' ] == 'INT' )
-		{
-			item2.selected = true;
-		}
+		item = $J( '<select>' );
+		item.css( "width", "6em" );
+		item.attr( 'id', id + "_stattype" );
 
-		item2 = document.createElement( "option" );
-		item.options.add( item2 );
-		item2.innerHTML = "FLOAT";
-		item2.value = "FLOAT";
-		if ( stat[ 'type' ] == 'FLOAT' )
-		{
-			item2.selected = true;
-		}
+		$J.each( { "INT": "INT", "FLOAT": "FLOAT", "AVGRATE": "AVGRATE" },
+			function addOption( statType, unused ) {
+				item.append( $J('<option>', { value: statType } )
+							 .text( statType ) )
+				} );
 
-		item2 = document.createElement( "option" );
-		item.options.add( item2 );
-		item2.innerHTML = "AVGRATE";
-		item2.value = "AVGRATE";
-		if ( stat[ 'type' ] == 'AVGRATE' )
-		{
-			item2.selected = true;
-		}
+		item.val( stat[ 'type' ] );
 
 		// onchange closure for item type; hides/shows the windowsize edit control
 		// and fills in a value if necessary.
@@ -1714,81 +1708,81 @@ function EditStat( appid, stat )
 				}
 			}
 		};
-		
-		row.insertCell( -1 ).appendChild( item );
 
-		item = document.createElement( "input" );
-		item.style.width = "100%";
-		item.id = id + "_statapiname";
-		item.value = FetchAlternate( stat, "name", "stat_" + stat[ 'stat_id' ] );
-		item.onchange = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		addCell( row, item );
 
-		item = CreateStatPermissionSelect( id );
-		item.selectedIndex = stat[ "permission" ];
-		item.onchange = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		item = $J( "<input>" );
+		item.css( "width", "100%" );
+		item.attr( 'id', id + "_statapiname" );
+		item.val( FetchAlternate( stat, "name", "stat_" + stat[ 'stat_id' ] ) );
+		item.change( DirtyRowClosure( row ) );
+		addCell( row, item );
 
-		item = document.createElement( "input" );
-		item.type = "checkbox";
-		item.id = id + "_incrementonly";
+		item = $J( CreateStatPermissionSelect( id ) );
+		item.val( stat[ "permission" ] );
+		item.change( DirtyRowClosure( row ) );
+		addCell( row, item );
+
+		item = $J( "<input>" );
+		item.attr( 'type', "checkbox" );
+		item.attr( 'id', id + "_incrementonly" );
 		if ( "incrementonly" in stat && stat[ "incrementonly" ] != 0 )
 		{
 			item.checked = true;
 		}
-		item.onclick = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		item.click( DirtyRowClosure( row ) );
+		addCell( row, item );
 
-		item = document.createElement( "input" );
-		item.style.width = "4em";
-		item.id = id + "_maxchange";
-		item.value = FetchAlternate( stat, "maxchange", "" );
-		item.onchange = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		item = $J( "<input>" );
+		item.css( "width", "4em" );
+		item.attr( 'id', id + "_maxchange" );
+		item.val( FetchAlternate( stat, "maxchange", "" ) );
+		item.change( DirtyRowClosure( row ) );
+		addCell( row, item );
 
-		item = document.createElement( "input" );
-		item.style.width = "4em";
-		item.id = id + "_min";
-		item.value = FetchAlternate( stat, "min", "" );
-		item.onchange = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		item = $J( "<input>" );
+		item.css( "width", "4em" );
+		item.attr( 'id', id + "_min" );
+		item.val( FetchAlternate( stat, "min", "" ) );
+		item.change( DirtyRowClosure( row ) );
+		addCell( row, item );
 
-		item = document.createElement( "input" );
-		item.style.width = "4em";
-		item.id = id + "_max";
-		item.value = FetchAlternate( stat, "max", "" );
-		item.onchange = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		item = $J( "<input>" );
+		item.css( "width", "4em" );
+		item.attr( 'id', id + "_max" );
+		item.val( FetchAlternate( stat, "max", "" ) );
+		item.change( DirtyRowClosure( row ) );
+		addCell( row, item );
 
 		// stats of type 'avgrate' get a window size parameter; others do not. we
 		// show the UI all the time, and enable/disable it on the fly.
-		item = document.createElement( "input" );
-		item.style.width = "4em";
-		item.id = id + "_windowsize";
-		item.value = FetchAlternate( stat, "windowsize", "" );
-		item.onchange = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		item = $J( "<input>" );
+		item.css( "width", "4em" );
+		item.attr( 'id', id + "_windowsize" );
+		item.val( FetchAlternate( stat, "windowsize", "" ) );
+		item.change( DirtyRowClosure( row ) );
+		addCell( row, item );
 
-		item = document.createElement( "input" );
-		item.style.width = "4em";
-		item.id = id + "_default";
-		item.value = FetchAlternate( stat, "default", "" );
-		item.onchange = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		item = $J( "<input>" );
+		item.css( "width", "4em" );
+		item.attr( 'id', id + "_default" );
+		item.val( FetchAlternate( stat, "default", "" ) );
+		item.change( DirtyRowClosure( row ) );
+		addCell( row, item );
 
-		item = document.createElement( "input" );
-		item.type = "checkbox";
-		item.id = id + "_aggregated";
+		item = $J( "<input>" );
+		item.attr( 'type', "checkbox" );
+		item.attr( 'id', id + "_aggregated" );
 		if ( "aggregated" in stat && stat[ "aggregated" ] != 0 )
 		{
 			item.checked = true;
 		}
-		item.onclick = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		item.click( DirtyRowClosure( row ) );
+		addCell( row, item );
 		
-		item = document.createElement( "input" );
-		item.style.width = "100%";
-		item.id = id + "_displayname";
+		item = $J( "<input>" );
+		item.css( "width", "100%" );
+		item.attr( 'id', id + "_displayname" );
 		var displayName = "";
 		if ( "display" in stat )
 		{	
@@ -1797,28 +1791,27 @@ function EditStat( appid, stat )
 				displayName = stat["display"]["name"];
 			}
 		}
-		item.value = displayName;
-		item.onchange = DirtyRowClosure( row );
-		row.insertCell( -1 ).appendChild( item );
+		item.val( displayName );
+		item.change( DirtyRowClosure( row ) );
+		addCell( row, item );
 
-		var btnCell = row.insertCell( -1 );
+		var btnCell = addCell( row, "" );
 
-		var btn = document.createElement( "input" );
-		btn.type= "submit";
-		btn.onclick = RevertStatClosure( appid, stat[ "stat_id" ] );
-		btn.value = "Cancel";
-		btnCell.appendChild( btn );
+		var btn = $J( "<input>" );
+		btn.attr( 'type', 'submit' );
+		btn.click( RevertStatClosure( appid, stat[ "stat_id" ] ) );
+		btn.val( "Cancel" );
+		btnCell.append( btn );
 
-		var theSpan = document.createElement( "span" );
+		var theSpan = $J( "<span>" );
 		theSpan.innerHTML = "&nbsp;";
-		btnCell.appendChild( theSpan );
+		btnCell.append( btn );
 
-		btn = document.createElement( "input" );
-		btn.type= "submit";
-		btn.onclick = SaveStatClosure( appid,
-									   stat[ "stat_id" ] );
-		btn.value = "Save";
-		btnCell.appendChild( btn );
+		btn = $J( "<input>" );
+		btn.attr( 'type', 'submit' );
+		btn.click( SaveStatClosure( appid, stat[ "stat_id" ] ) );
+		btn.val( "Save" );
+		btnCell.append( btn );
 
 		// Apply initial visibility
 		itemType.onchange();
@@ -3580,7 +3573,8 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, reservedRange, b
 			'range' : reservedRange,
 			'add_partner_app_reporting' : bAddPartnerAppReporting,
 			'publisherid' : pubId,
-			'parentid' : parentId
+			'parentid' : parentId,
+			'sessionid' : g_sessionID
 		}
 	).done(
 		function( response ) {
@@ -3673,7 +3667,7 @@ function UpgradeGreenlightItem( publishedfileid, name )
 				{
 					type: "POST",
 					url: 'https://partner.steamgames.com/apps/ajaxupgradegreenlightentry/',
-					data: { 'publishedfileid' : publishedfileid, 'name' : appName, 'type' : appType },
+					data: { 'publishedfileid' : publishedfileid, 'name' : appName, 'type' : appType, 'sessionid' : g_sessionID },
 					success: function ( response ) {
 						if ( response.success == 1 )
 						{

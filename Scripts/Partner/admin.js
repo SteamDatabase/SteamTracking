@@ -176,7 +176,7 @@ function CommitAddPartnerBox()
 	// The PHP size (and WG) calls this a publisher. There is way too many things to change, do the translation at this level.
 	new Ajax.Request( g_szBaseURL + '/admin/addpublisherajax',
 			{
-				parameters: { 'publishername':  partnerName },
+				parameters: { 'publishername':  partnerName, 'sessionid' : g_sessionID },
 				method: 'post',
 				requestHeaders: { 'Accept': 'application/json' },
 				onSuccess: function ( transport )
@@ -823,6 +823,7 @@ function OnSavePackageAjax( bDupe, appitems )
 	ScanElements( formElement, 'select', parameters );
 	ScanElements( formElement, 'textarea', parameters );
 	parameters.appitems = Object.toJSON( appitems );
+	parameters.sessionid = g_sessionID;
 
 	// if we are creating a new package based on existing package
 	if ( bDupe )
@@ -1004,6 +1005,7 @@ function ActionOnPackages( parentElement, appIds, action )
 	parameters.packageidstoupdate = allPackagesToUpdate;
 	parameters.appids = appIds;
 	parameters.action = action;
+	parameters.sessionid = g_sessionID;
 
 	new Ajax.Request( g_szBaseURL + '/admin/actiononpackagesajax',
 		{
@@ -1161,230 +1163,6 @@ function RevertInferedHtml( id, value )
 		jQuery("#app_content_about_default_preview").html();
 		area.value = window.originalHtmlAreaValue;
 		OnLocTextChanged( id );
-	}
-}
-
-
-/* store flyout/menu code */
-
-
-function ShowWithFade( elem )
-{
-	var elem = $(elem);
-
-	if ( !elem.visible() || elem.hiding )
-	{
-		elem.hiding = false;
-		if ( elem.effect )
-			elem.effect.cancel();
-
-		if ( Prototype.Browser.IE )
-		{
-			elem.addClassName( 'suppress_shadow' );
-			elem.effect = new Effect.Appear( elem, { duration: 0.2, afterFinish: function() { elem.removeClassName( 'suppress_shadow' ); } } );
-		}
-		else
-		{
-			elem.effect = new Effect.Appear( elem, { duration: 0.2 } );
-		}
-	}
-}
-
-function HideWithFade( elem )
-{
-	var elem = $(elem);
-
-	if ( elem.visible() && !elem.hiding )
-	{
-		if ( elem.effect && !elem.hiding )
-			elem.effect.cancel();
-		elem.hiding = true;
-
-		if ( Prototype.Browser.IE )
-		{
-			elem.addClassName( 'suppress_shadow' );
-		}
-		elem.effect = new Effect.Fade( elem, { duration: 0.2 } );
-	}
-}
-
-
-// register some events to dismiss popup (ie, user clicking elsewhere on the window, escape)
-//   cleans up event binds afterwards.  clicks to children of "elemIgnore" will not dismiss popup
-function RegisterPopupDismissal( dismissFunc, elemIgnore, bNoGuard )
-{
-	var dismissHandler = {
-		guard: bNoGuard ? 0 : 1,
-		dismiss: function( event ) {
-			if ( this.elemIgnore )
-			{
-				var elem = Event.element( event );
-				if ( elem.up( '#' + elemIgnore.id ) )
-					return;
-			}
-			// ignore the first click- assume it's the one starting the popup
-			if ( this.guard-- > 0 )
-				return;
-			this.regFunc();
-			this.unregister();
-		},
-		unregister: function() {
-			Event.stopObserving( document, 'click', this.boundHandler );
-			Event.stopObserving( document, 'keydown', this.boundHandler );
-		}
-	};
-	dismissHandler.regFunc = dismissFunc;
-	dismissHandler.elemIgnore = elemIgnore || null;
-	dismissHandler.boundHandler = dismissHandler.dismiss.bindAsEventListener( dismissHandler );
-	Event.observe( document, 'click', dismissHandler.boundHandler );
-	Event.observe( document, 'keydown', dismissHandler.boundHandler );
-
-	return dismissHandler;
-
-}
-
-function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
-{
-	var elemLink = $(elemLink);
-	var elemPopup = $(elemPopup);
-
-	AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder );
-
-	ShowWithFade( elemPopup );
-	elemLink.addClassName('focus');
-	RegisterPopupDismissal( function() { HideWithFade( elemPopup ); elemLink.removeClassName('focus'); }, elemPopup );
-}
-
-function HideMenu( elemLink, elemPopup )
-{
-	var elemLink = $(elemLink);
-	var elemPopup = $(elemPopup);
-
-	HideWithFade( elemPopup );
-	elemLink.removeClassName( 'focus' );
-	if ( elemLink.dismissHandler )
-		elemLink.dismissHandler.unregister();
-}
-
-function RegisterFlyout( elemLink, elemPopup, align, valign, bLinkHasBorder )
-{
-	Event.observe( elemLink, 'mouseover', function(event) { FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder ); } );
-
-	Event.observe( elemLink, 'mouseout', HideFlyoutMenu.bindAsEventListener( null, elemLink, elemPopup ) );
-	Event.observe( elemPopup, 'mouseout', HideFlyoutMenu.bindAsEventListener( null, elemLink, elemPopup ) );
-
-}
-
-function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
-{
-	var elemLink = $(elemLink);
-	var elemPopup = $(elemPopup);
-
-	if ( !elemPopup.visible() || elemPopup.hiding )
-	{
-		AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder );
-		ShowWithFade( elemPopup );
-		elemLink.addClassName('focus');
-	}
-
-}
-
-function HideFlyoutMenu( event, elemLink, elemPopup )
-{
-	var elemLink = $(elemLink);
-	var elemPopup = $(elemPopup);
-	var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
-	if ( !reltarget || ( $(reltarget).up( '#' + elemLink.id ) || $(reltarget).up( '#' + elemPopup.id )  ) || elemLink.id == reltarget.id )
-		return;
-
-	// start hiding in a little bit, have to let the fade in animation start before we can cancel it
-	window.setTimeout( HideWithFade.bind( null, elemPopup ), 33 );
-	elemLink.removeClassName('focus');
-}
-
-function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
-{
-	var align = align ? align : 'left';
-
-	if ( !valign )
-	{
-		//if there's not enough room between our spot and the top of the document, we definitely want to drop down
-		if ( document.viewport.getScrollOffsets().top + elemLink.viewportOffset().top < nPopupHeight )
-			valign = 'bottom';
-		else
-		{
-			// add a little bit of padding so we don't position it flush to an edge if possible
-			var nPopupHeight = elemPopup.getHeight() + 8;
-			var nSpaceAbove = elemLink.viewportOffset().top;
-			var nSpaceBelow = document.viewport.getHeight() - elemLink.viewportOffset().top;
-			//otherwise we only want to drop down if we've got enough space below us (measured based on view area)
-			// or if there's not enough space above to pop in either direction and there's more space below
-			if ( nSpaceBelow > nPopupHeight || ( nSpaceAbove < nPopupHeight && nSpaceBelow > nSpaceAbove ) )
-				valign = 'bottom';
-			else
-				valign = 'top';
-
-		}
-	}
-
-	var borderpx = bLinkHasBorder ? 1 : 0;
-	var shadowpx = elemPopup.hasClassName( 'popup_block_new' ) ? 0 : 12;
-	var offsetLeft = 0;
-	if ( align == 'left' )
-	{
-		//elemPopup.style.left = ( elemLink.positionedOffset()[0] - 12 ) + 'px';
-		offsetLeft = -shadowpx - borderpx;
-	}
-	else if ( align == 'right' )
-	{
-		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - elemPopup.getWidth() + 13 ) + 'px';
-		offsetLeft = elemLink.getWidth() - elemPopup.getWidth() + shadowpx + borderpx;
-	}
-	else if ( align == 'leftsubmenu' )
-	{
-		//elemPopup.style.left = ( elemLink.positionedOffset()[0] - elemPopup.getWidth() + 12 ) + 'px';
-		offsetLeft = -elemPopup.getWidth() + shadowpx - borderpx;
-	}
-	else if ( align == 'rightsubmenu' )
-	{
-		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - 12 ) + 'px';
-		offsetLeft = elemLink.getWidth()  - shadowpx + 2 * borderpx;
-	}
-
-	var offsetTop = 0;
-	if ( valign == 'bottom' )
-	{
-		//elemPopup.style.top = ( elemLink.positionedOffset()[1] + elemLink.getHeight() - 12 ) + 'px';
-		offsetTop = elemLink.getHeight() - shadowpx;
-	}
-	else if ( valign == 'top' )
-	{
-		//elemPopup.style.top = ( elemLink.positionedOffset()[1] - elemPopup.getHeight() + 12 ) + 'px';
-		offsetTop = -elemPopup.getHeight() + shadowpx;
-	}
-	else if ( valign == 'bottomsubmenu' )
-	{
-		//elemPopup.style.top = ( elemLink.positionedOffset()[1] - 12 ) + 'px';
-		offsetTop = -shadowpx;
-	}
-
-
-	var bPopupHidden = !elemPopup.visible();
-
-	if ( bPopupHidden )
-	{
-		// IE can't do this with display: none elements
-		elemPopup.style.visibility = 'hidden';
-		elemPopup.show();
-	}
-
-	elemPopup.clonePosition( elemLink, { setWidth: false, setHeight: false, offsetLeft: offsetLeft, offsetTop: offsetTop } );
-
-	if ( bPopupHidden )
-	{
-		// restore visibility
-		elemPopup.hide();
-		elemPopup.style.visibility = 'visible';
 	}
 }
 

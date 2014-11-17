@@ -49,7 +49,8 @@ function OnAssociationAdded()
 	if ( itemid )
 	{
 		var params = {
-			itemid : itemid
+			itemid : itemid,
+			sessionid: g_sessionID
 		};
 		new Ajax.Request( 'https://partner.steamgames.com/admin/store/getitemdisplaydetailsjson/', {
 			method: 'post',
@@ -248,7 +249,8 @@ function ReloadNewsPostImages( nId )
 {
 	new Ajax.Updater(
 		'uploaded_images',
-		g_szBaseUrl + '/admin/news/postimages/' + nId
+		g_szBaseUrl + '/admin/news/postimages/' + nId,
+		{ parameters: { imageid: imageId, sessionid: g_sessionID } }
 	);
 }
 
@@ -257,7 +259,7 @@ function DeleteNewsPostImage( nId, imageId )
 	new Ajax.Updater(
 		'uploaded_images',
 		g_szBaseUrl + '/admin/news/postimagedelete/' + nId,
-		{ parameters: { imageid: imageId } }
+		{ parameters: { imageid: imageId, sessionid: g_sessionID } }
 	);
 }
 
