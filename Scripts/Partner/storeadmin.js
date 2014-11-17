@@ -91,7 +91,8 @@ function PopulatePackageListsAJAX( elemAutoCompleteName, elemListName, packageCo
 		}
 
 		var params = {
-			term : matchText
+			term : matchText,
+			sessionid: g_sessionID
 		};
 		new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestpackagejson/', {
 			method: 'post',
@@ -125,7 +126,8 @@ function PopulateItemListAJAX( elemAutoCompleteName, elemListName, packageCollec
 		return;
 
 	var params = {
-		term : matchText
+		term : matchText,
+		sessionid: g_sessionID
 	};
 	new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestitemjson/', {
 		method: 'post',
@@ -155,7 +157,8 @@ function AjaxChangeClusterFilter( strMatchTag, elemListID, clusterName, clusterT
 	var params = {
 		tag : strMatchTag,
 		showdlc : bShowDLC,
-		type : clusterType
+		type : clusterType,
+		sessionid: g_sessionID
 	}
 	new Ajax.Request( 'https://partner.steamgames.com/admin/store/gettaggedpackages/', {
 		method: 'post',
@@ -192,7 +195,8 @@ function AjaxPopulateClusterList( elemValue, elemListID, clusterName, clusterTyp
 
 	var params = {
 		term : matchText,
-		type : clusterType
+		type : clusterType,
+		sessionid: g_sessionID
 	}
 	new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestclusteritemsjson/', {
 		method: 'post',
@@ -544,7 +548,7 @@ function FlushStoreHome( elemStatus )
 	new Ajax.Updater( 
 			elemStatus, 
 			g_szBaseUrl + '/admin/store/flushstorehome', 
-			{ } );
+			{ parameters: { sessionid: g_sessionID } } );
 }
 
 function OnGenreSelect( checkbox, id, name )
@@ -643,7 +647,7 @@ function AddTagToApp( nAppId, strTag, nTagId)
 	$J.ajax({
 		type: "POST",
 		url: "https://partner.steamgames.com/apps/ajaxaddtag/" + nAppId,
-		data: { tagid: nTagId, tag:strTag, appid: nAppId },
+		data: { tagid: nTagId, tag:strTag, appid: nAppId, sessionid: g_sessionID },
 		dataType: "json"
 	})
 	.done(function( msg ) {

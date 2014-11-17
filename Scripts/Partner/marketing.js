@@ -293,7 +293,12 @@ function SubmitQuickMessageUpdateAjax( url, params, completeCallback )
 // Submits an ajax array swap
 function ArraySwapAjax( url, path, src, target, completeCallback )
 {
-	SubmitQuickMessageUpdateAjax( url, {'ArraySwap[Array]': path, 'ArraySwap[src]': src, 'ArraySwap[target]': target }, completeCallback );
+	SubmitQuickMessageUpdateAjax( url, {
+		'ArraySwap[Array]': path,
+		'ArraySwap[src]': src,
+		'ArraySwap[target]': target,
+		'sessionid': g_sessionID },
+			completeCallback );
 }
 
 // Adds the passed Array of values to a comma seperated list in input target

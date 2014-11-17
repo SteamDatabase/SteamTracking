@@ -139,6 +139,10 @@ th {
 	background: #303030;
 }
 
+tr.dirty {
+	background-color: #464646;
+}
+
 tr.checkerboard1 {
 	background: #202020;
 }
