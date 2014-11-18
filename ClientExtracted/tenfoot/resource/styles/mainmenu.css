@@ -789,7 +789,7 @@ Button:hover .ShortDesc
 	visibility: collapse;
 }
 
-.SteamOS #BetaButton
+.SteamOS.Linux #BetaButton
 {
 	flow-children: right;
 	opacity: 1.0;
