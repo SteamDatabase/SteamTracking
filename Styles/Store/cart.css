@@ -1507,6 +1507,8 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 #expiration_year_droplist
 {
 	width: 64px;
+	height: 340px;
+	overflow-y: scroll;
 }
 
 /*
