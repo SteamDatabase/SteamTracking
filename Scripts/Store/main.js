@@ -294,211 +294,6 @@ function UpdateSmallCapControl( targetid, delta, pageSize, totalCount )
 
 }
 
-function ShowWithFade( elem )
-{
-	var $Elem = $JFromIDOrElement(elem);
-
-	$Elem.stop();
-	$Elem.fadeTo( 200, 1.0 );	//fadeTo rather than fadeIn in case it was already in a fade
-}
-
-function HideWithFade( elem )
-{
-	var $Elem = $JFromIDOrElement(elem);
-
-	$Elem.stop();
-	$Elem.fadeOut( 200 );
-}
-
-// register some events to dismiss popup (ie, user clicking elsewhere on the window, escape)
-//   cleans up event binds afterwards.  clicks to children of "elemIgnore" will not dismiss popup 
-function RegisterPopupDismissal( dismissFunc, elemIgnore )
-{
-	var $Ignore = $JFromIDOrElement( elemIgnore );
-	// delay registration by one frame so that we don't catch the event that triggered this popup.
-	window.setTimeout( function() {
-		$J(document).on('click.RegisterPopupDismissal keydown.RegisterPopupDismissal', function (event) {
-
-			if (event.keyCode && event.keyCode != 27 /* KEY_ESC */) {
-				return;
-			}
-			var elem = $J(event.target);
-
-			if ( $Ignore.length && $J.contains( $Ignore[0], elem[0] ) )
-				return;
-
-			dismissFunc();
-			$J(document).off('.RegisterPopupDismissal');
-		});
-	}, 1 );
-}
-
-function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
-{
-	var $Link = $JFromIDOrElement(elemLink);
-	var $Popup = $JFromIDOrElement(elemPopup);
-	
-	AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder );
-	
-	ShowWithFade( $Popup );
-	$Link.addClass('focus');
-	RegisterPopupDismissal( function() { HideWithFade( $Popup ); $Link.removeClass('focus'); }, $Popup );
-}
-
-function HideMenu( elemLink, elemPopup )
-{
-	var $Link = $JFromIDOrElement(elemLink);
-	var $Popup = $JFromIDOrElement(elemPopup);
-
-	HideWithFade( $Popup );
-	$Link.removeClass( 'focus' );
-	$J(document).off('.RegisterPopupDismissal');
-}
-
-function RegisterFlyout( elemLink, elemPopup, align, valign, bLinkHasBorder )
-{
-	var $Link = $JFromIDOrElement( elemLink );
-	var $Popup = $JFromIDOrElement( elemPopup );
-
-	$Link.on( 'mouseenter', function( event ) {
-		FlyoutMenu( $Link, $Popup, align, valign, bLinkHasBorder );
-	});
-
-	$Link.add( $Popup ).on( 'mouseleave', function( event ) {
-		HideFlyoutMenu( event, $Link, $Popup );
-	});
-}
-
-function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
-{
-	var $Link = $JFromIDOrElement(elemLink);
-	var $Popup = $JFromIDOrElement(elemPopup);
-
-	if ( !$Popup.is(':visible') || $Popup.css('opacity') < 1.0 )
-	{
-		AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder );
-		ShowWithFade( $Popup );
-		$Link.addClass('focus');
-	}
-	
-}
-
-function HideFlyoutMenu( event, elemLink, elemPopup )
-{
-	var reltarget = $J( event.relatedTarget );
-	var $Link = $JFromIDOrElement(elemLink);
-	var $Popup = $JFromIDOrElement(elemPopup);
-
-	if ( !reltarget.length ||
-		( $Link.length && $J.contains( $Link[0], reltarget[0] ) ) ||
-		( $Popup.length && $J.contains( $Popup[0], reltarget[0] ) ) ||
-		$Link.is( reltarget ) )
-		return;
-
-	// start hiding in a little bit, have to let the fade in animation start before we can cancel it
-	window.setTimeout( function() { HideWithFade( $Popup ); }, 33 );
-	$Link.removeClass('focus');
-}
-
-function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
-{
-	var align = align ? align : 'left';
-	var $Link = $JFromIDOrElement(elemLink);
-	var $Popup = $JFromIDOrElement(elemPopup);
-
-	var offsetLink = $Link.offset();
-	var nWindowScrollTop = $J(window).scrollTop();
-	var nViewportHeight = $J(window).height();
-
-	var nLinkViewportTop = offsetLink.top - nWindowScrollTop;
-
-	// add a little bit of padding so we don't position it flush to an edge if possible
-	var nPopupHeight = $Popup.height() + 8;
-
-	if ( !valign )
-	{
-		//if there's not enough room between our spot and the top of the document, we definitely want to drop down
-		if ( nWindowScrollTop + offsetLink.top < nPopupHeight )
-		{
-			valign = 'bottom';
-		}
-		else
-		{
-			var nSpaceAbove = nLinkViewportTop;
-			var nSpaceBelow = nViewportHeight - ( nLinkViewportTop + $Link.height() );
-			//otherwise we only want to drop down if we've got enough space below us (measured based on view area)
-			// or if there's not enough space above to pop in either direction and there's more space below
-			if ( nSpaceBelow > nPopupHeight || ( nSpaceAbove < nPopupHeight && nSpaceBelow > nSpaceAbove ) )
-				valign = 'bottom'; 
-			else
-				valign = 'top';
-			
-		}
-	}
-
-	var borderpx = bLinkHasBorder ? 1 : 0;
-	var shadowpx = $Popup.hasClass( 'popup_block_new' ) ? 0 : 12;
-	var offsetLeft = 0;
-	if ( align == 'left' )
-	{
-		//elemPopup.style.left = ( elemLink.positionedOffset()[0] - 12 ) + 'px';
-		offsetLeft = -shadowpx - borderpx;
-	}
-	else if ( align == 'right' )
-	{
-		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - elemPopup.getWidth() + 13 ) + 'px';
-		offsetLeft = $Link.outerWidth() - $Popup.outerWidth() + shadowpx + borderpx;
-	}
-	else if ( align == 'leftsubmenu' )
-	{
-		//elemPopup.style.left = ( elemLink.positionedOffset()[0] - elemPopup.getWidth() + 12 ) + 'px';
-		offsetLeft = -$Popup.outerWidth() + shadowpx - borderpx;
-	}
-	else if ( align == 'rightsubmenu' )
-	{
-		//elemPopup.style.left = ( elemLink.positionedOffset()[0] + elemLink.getWidth() - 12 ) + 'px';
-		offsetLeft = $Link.outerWidth()  - shadowpx + 2 * borderpx;
-	}
-
-	var offsetTop = 0;
-	if ( valign == 'bottom' )
-	{
-		//elemPopup.style.top = ( elemLink.positionedOffset()[1] + elemLink.getHeight() - 12 ) + 'px';
-		offsetTop = $Link.outerHeight() - shadowpx;
-	}
-	else if ( valign == 'top' )
-	{
-		//elemPopup.style.top = ( elemLink.positionedOffset()[1] - elemPopup.getHeight() + 12 ) + 'px';
-		offsetTop = -$Popup.outerHeight() + shadowpx;
-	}
-	else if ( valign == 'bottomsubmenu' )
-	{
-		//elemPopup.style.top = ( elemLink.positionedOffset()[1] - 12 ) + 'px';
-		offsetTop = -shadowpx;
-	}
-
-
-	var bPopupHidden = !$Popup.is(':visible');
-
-	if ( bPopupHidden )
-	{
-		// IE can't do this with display: none elements
-		$Popup.css( 'visibility', 'hidden' );
-		$Popup.show();
-	}
-
-	$Popup.css( {
-		'left': ( $Link.position().left + offsetLeft ) + 'px',
-		'top': ( $Link.position().top + offsetTop ) + 'px'
-	});
-
-	if ( bPopupHidden )
-	{
-		// restore visibility
-		$Popup.hide();
-		$Popup.css( 'visibility', 'visible' );
-	}
-}
 
 var g_HoverState = {
 	target: null,
@@ -663,20 +458,22 @@ function ShowGameHover( elem, divHover, targetContent, params )
 	var nViewportWidth = $J(window).width();
 	var nViewportHeight = $J(window).height();
 
+	var nHoverPositionLeft, nHoverPositionTop;
+
 		var $HoverArrow = $HoverArrowLeft;
 	var boxRightViewport = ( offset.left - nWindowScrollLeft ) + $Elem.outerWidth() + $HoverBox.width() + 14;
 	var nSpaceRight = nViewportWidth - boxRightViewport;
 	var nSpaceLeft = offset.left - $Hover.width();
 	if ( nSpaceRight < 14 && nSpaceLeft > nSpaceRight )
 	{
-				$Hover.css( 'left', ( offset.left - $Hover.outerWidth() + 8 ) + 'px' );
+				nHoverPositionLeft = offset.left - $Hover.outerWidth() + 8;
 		$HoverArrow = $HoverArrowRight;
 		$HoverArrowLeft.hide();
 		$HoverArrowRight.show();
 	}
 	else
 	{
-				$Hover.css( 'left', ( offset.left + $Elem.outerWidth() - 8 ) + 'px' );
+				nHoverPositionLeft = offset.left + $Elem.outerWidth() - 8;
 		$HoverArrowLeft.show();
 		$HoverArrowRight.hide();
 	}
@@ -685,8 +482,8 @@ function ShowGameHover( elem, divHover, targetContent, params )
 
 			if ( $Elem.height() < 98 )
 		nTopAdjustment =  Math.floor( $Elem.height() ) / 2 - 49;
-	var nDesiredHoverTop = offset.top - 13 + nTopAdjustment;
-	$Hover.css( 'top', nDesiredHoverTop + 'px' );
+	nHoverPositionTop = offset.top - 13 + nTopAdjustment;
+	$Hover.offset( {top: nHoverPositionTop, left: nHoverPositionLeft} );
 
 	var nTargetTopViewport = ( offset.top - nWindowScrollTop ) + nTopAdjustment;
 	if ( nTargetTopViewport + $HoverBox.height() + 8 > nViewportHeight )
@@ -697,7 +494,7 @@ function ShowGameHover( elem, divHover, targetContent, params )
 		var nViewportAdjustedHoverTop = offset.top - nViewportAdjustment;
 		$Hover.css( 'top', nViewportAdjustedHoverTop + 'px' );
 
-		$HoverArrow.css( 'top', ( 48 + nDesiredHoverTop - nViewportAdjustedHoverTop ) + 'px' );
+		$HoverArrow.css( 'top', ( 48 + nHoverPositionTop - nViewportAdjustedHoverTop ) + 'px' );
 	}
 	else
 	{

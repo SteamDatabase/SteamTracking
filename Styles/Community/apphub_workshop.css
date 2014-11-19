@@ -51,6 +51,15 @@
 	box-shadow: 0 0 6px 0 #000000;
 	margin-top: 27px;
 }
+.primary_panel_border.panel_margin_small {
+	margin-top: 47px;
+}
+.primary_panel_border.panel_margin_none {
+	margin-top: 27px;
+}
+.primary_panel_border.panel_margin_large {
+	margin-top: 65px;
+}
 .primary_panel
 {
 	background: url('https://steamcommunity-a.akamaihd.net/public/images/workshop/primary_panel_background.jpg') no-repeat 0px 0px #040508;
