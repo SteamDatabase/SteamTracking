@@ -437,7 +437,7 @@ CTradeOfferStateManager = {
 
 			var rgParams = {
 				sessionid: g_sessionID,
-				partner: g_ulTradePartnerSteamID,
+				serverid: 1,				partner: g_ulTradePartnerSteamID,
 				tradeoffermessage: $('trade_offer_note') ? $('trade_offer_note').value : '',
 				json_tradeoffer: V_ToJSON( g_rgCurrentTradeStatus )
 			};
@@ -482,7 +482,7 @@ CTradeOfferStateManager = {
 			var nTradeOfferID = this.m_nTradeOfferID;
 			var rgParams = {
 				sessionid: g_sessionID,
-				tradeofferid: nTradeOfferID,
+				serverid: 1,				tradeofferid: nTradeOfferID,
 				partner: g_ulTradePartnerSteamID
 			};
 
