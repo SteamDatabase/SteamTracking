@@ -723,7 +723,7 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 	if ( eMessageType == CWebChat.CHATMESSAGE_TYPE_LOCALECHO && CWebChatDialog.s_regexMyEmoticons )
 		regexEmoticons = CWebChatDialog.s_regexMyEmoticons;
 
-	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' )
+	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://steamcommunity.com/economy/emoticon/$1">' )
 
 	elText.html( strHTML );
 	elText.find( 'img.emoticon' ).each( function() { BindEmoticonHover( this ) } );
@@ -1183,7 +1183,7 @@ CWebChat.prototype.ShowFriendChat = function( unAccountID, bForce )
 		var elContentWrapper = $J('<div/>', {'class': 'chat_dialog_content'} );
 		var elScrollWrapper = $J('<div/>', {'class': 'chat_dialog_scroll' } );
 		var elContent = $J('<div/>', {'class': 'chat_dialog_content_inner'} );
-		elContent.html('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">');
+		elContent.html('<img src="https://steamcommunity.com/public/images/login/throbber.gif">');
 
 		elDialog.append( elHeader, elContentWrapper.append( elScrollWrapper.append( elContent ) ) );
 		this.m_rgChatDialogs[ Friend.m_unAccountID ] = new CWebChatDialog( this, elDialog, elContent );
