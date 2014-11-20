@@ -148,7 +148,7 @@ function LoadTrendingTopics()
 	var elTrendingTopics = $('group_trending_topics');
 	if ( elTrendingTopics.children.length == 0 )
 	{
-		elTrendingTopics.update('<div id="group_trending_topics_pending"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>')
+		elTrendingTopics.update('<div id="group_trending_topics_pending"><img src="https://steamcommunity.com/public/images/login/throbber.gif"></div>')
 		g_bTrendingTopicsLoading = true;
 		new Ajax.Updater( elTrendingTopics, g_strGroupURL + '/trendingtopics', {method: 'get', onSuccess: function() { Forum_InitTooltips.defer(); } } );
 	}
