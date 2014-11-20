@@ -6,10 +6,10 @@
 
 	position: relative;
 	padding-bottom: 20px;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) 0px 0px no-repeat;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/footer_blend.png' ) bottom repeat-x,
-				url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
-				url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
+	background: url( 'https://steamcommunity.com/public/images/groups/content_header_rule.png' ) 0px 0px no-repeat;
+	background: url( 'https://steamcommunity.com/public/images/sharedfiles/ig/footer_blend.png' ) bottom repeat-x,
+				url( 'https://steamcommunity.com/public/images/groups/group_content_topbackground.png' ) 0px 8px no-repeat,
+				url( 'https://steamcommunity.com/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
 }
 
 /* left column */
@@ -115,7 +115,7 @@ li {
 	margin-bottom: 15px;
 	position: relative;
 	font-size: 12px;
-	background: url("https://steamcommunity-a.akamaihd.net/public/images/steamguard/red_caution.png") no-repeat 30px center;
+	background: url("https://steamcommunity.com/public/images/steamguard/red_caution.png") no-repeat 30px center;
 	background-color: #500813;
 	color: #FFFFFF;
 }
@@ -170,12 +170,12 @@ li {
 
 .location_nomatch {
 	color: #d70e2f;
-	background: url("https://steamcommunity-a.akamaihd.net/public/images/steamguard/red_caution.png") no-repeat right center;
+	background: url("https://steamcommunity.com/public/images/steamguard/red_caution.png") no-repeat right center;
 	padding-right: 20px;
 }
 
 #contact_support_button {
-	background: url("https://steamcommunity-a.akamaihd.net/public/images/steamguard/contact_support_button_v2.png") no-repeat scroll 0 0 transparent;
+	background: url("https://steamcommunity.com/public/images/steamguard/contact_support_button_v2.png") no-repeat scroll 0 0 transparent;
     display: table;
     height: 49px;
 	right: 10px;
@@ -185,7 +185,7 @@ li {
 }
 
 #contact_support_button:hover {
-	background: url("https://steamcommunity-a.akamaihd.net/public/images/steamguard/contact_support_button_v2.png") repeat scroll 0 -49px transparent;
+	background: url("https://steamcommunity.com/public/images/steamguard/contact_support_button_v2.png") repeat scroll 0 -49px transparent;
 }
 
 #contact_support_button span {
@@ -202,7 +202,7 @@ li {
 /* icons & images*/
 .notice_icon {
 	background-position: 0 0;
-	background-image: url("https://steamcommunity-a.akamaihd.net/public/images/skin_1/discussions_links_icons.png");
+	background-image: url("https://steamcommunity.com/public/images/skin_1/discussions_links_icons.png");
     background-repeat: no-repeat;
     display: block;
     height: 16px;
@@ -232,7 +232,7 @@ li {
 	width: 67px;
 	height: 23px;
 
-	background-image: url( "https://steamcommunity-a.akamaihd.net/public/images/login/emailauth_icons.png" );
+	background-image: url( "https://steamcommunity.com/public/images/login/emailauth_icons.png" );
 	background-repeat: no-repeat;
 	background-size: 50%;
 }

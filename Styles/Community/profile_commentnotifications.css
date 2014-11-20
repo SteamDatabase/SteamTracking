@@ -4,7 +4,7 @@
 #invites_top {
 	position:relative;
 	z-index:10;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-image:url('https://steamcommunity.com/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
@@ -47,7 +47,7 @@
 
 .commentnotifications_header {
 	/* 907 x 51 */
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_header.png' );
+	background-image: url( 'https://steamcommunity.com/public/images/skin_1/commentnotifications_header.png' );
 	width: 871px;
 	height: 51px;
 	padding-left: 36px;
@@ -88,7 +88,7 @@
 
 
 .commentnotification {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_notification.png' );
+	background-image: url( 'https://steamcommunity.com/public/images/skin_1/commentnotifications_notification.png' );
 	background-repeat: repeat-x;
 	background-position: bottom center;
 	height: 48px;
