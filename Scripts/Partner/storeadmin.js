@@ -656,6 +656,10 @@ function AddTagToApp( nAppId, strTag, nTagId)
 			$J('#tag_completer_target').val('');
 			$J('#tag_completer_compl').val('');
 			$J('#TagAddBtn').prop("disabled",false);
+
+			if( $J('#TagList li').length >= 5 ) {
+				$J('#AddTagDiv').hide();
+			}
 	});
 }
 
