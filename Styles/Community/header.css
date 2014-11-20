@@ -70,7 +70,7 @@ a.headerLink,a.headerLink:active,a.headerLink:visited,a.headerLink:hover {
 	margin:0;
 	padding:0;
 	height:36px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/header/lowerBarBG.gif');
+	background-image:url('https://steamcommunity.com/public/images/header/lowerBarBG.gif');
 	background-repeat:repeat-x;
 	padding-left:111px;
 	color:#344c5f;
@@ -157,7 +157,7 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 	display:block;
 	visibility:visible;
 	background-color:#3f3f3f;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/header/reportAbuseBG.gif');
+	background-image:url('https://steamcommunity.com/public/images/header/reportAbuseBG.gif');
 	background-repeat:repeat-x;
 	width:auto;
 	margin:0;
@@ -182,11 +182,11 @@ a.subHeaderLink,a.subHeaderLink:hover,a.subHeaderLink:visited,a.subHeaderLink:ac
 }
 
 #rALeft {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/header/reportAbuseLeft.gif');
+	background-image:url('https://steamcommunity.com/public/images/header/reportAbuseLeft.gif');
 }
 
 #rARight {
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/header/reportAbuseRight.gif');
+	background-image:url('https://steamcommunity.com/public/images/header/reportAbuseRight.gif');
 }
 
 #reporter {
@@ -288,7 +288,7 @@ img {
 	font-weight: bold;
 	color: #d6d7d8;
 
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/header/maincol_bg_gray.png);
+	background-image: url(https://steamcommunity.com/public/images/header/maincol_bg_gray.png);
 	background-repeat: no-repeat;
 	background-color: #303030;
 }
@@ -371,7 +371,7 @@ div#headerSearch {
 	position:relative;
 	width:280px;
 	height:27px;
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/community/searchbox_friendactivity_bg.gif);
+	background-image: url(https://steamcommunity.com/public/images/community/searchbox_friendactivity_bg.gif);
 	background-repeat:no-repeat;
 	padding:0;
 	margin:0;
@@ -418,7 +418,7 @@ div#headerSearch {
 	position: absolute;
 	height: 12px;
 	width: 12px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/header/shadow_corners.png );
+	background-image: url( https://steamcommunity.com/public/images/header/shadow_corners.png );
 	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVRJREFUeNq0VlGyAiEMo8Dq/a+rCzj66E7IS/FLZjqgQtq0oWjpb1hah4k17xk08/rz2TbgOPs6z7kD4Ng4TFWAMzCb/zbIFLvFQQSYaXaATvNQ6aoBOIKyeYrcjJwtTAocQkBflxmE2zG/Y0ZcP2diRUTuVsHBAVYEuIk6hDXIAHIQA99/TvMzz3nGozesgWJQKC0HOEuCxSDZuhNZZOXgBvN7PAh8QJE7YI1K2s6ChUd/Bwcs17c1OOtqsgo3lBkgi9u0O+ncgdvc3win5fTjoe6BumyYljZr8JjqeYKqGl3CD32UVaecnoFaGJyBL1XVQAlNNDhsBecm+qUvlaA9q6vv1gQ4s7j2F9GGo+s/KHVoXTBIzCCJlCTRnhtEjNbVG1EEMDNR9WFgfhuWdm0bGXOPYZX1IPKLgW1StHsyQ8BvNYgYMJseAP979O3Xf1teAgwAvqvFROfF+RQAAAAASUVORK5CYII= );
 }
 
@@ -452,7 +452,7 @@ div#headerSearch {
 	height: 12px;
 	left: 0;
 	right: 0;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/header/shadow_topbottom.png );
+	background-image: url( https://steamcommunity.com/public/images/header/shadow_topbottom.png );
 	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAaCAYAAAB2BDbRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD9JREFUeNo0zFEKQFAQAMB9u0hSEvc/IUk5gEb5mc+JiGj5kyh0GDBiwowFKzbsCBw4ceHGUwL0KCQa4uMVYAAMZQVwOy2LWAAAAABJRU5ErkJggg== );
 	background-repeat: repeat-x; 
 }
@@ -470,7 +470,7 @@ div#headerSearch {
 	bottom: 0;
 	margin: 12px 0;
 	width: 12px;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/header/shadow_leftright.png );
+	background-image: url( https://steamcommunity.com/public/images/header/shadow_leftright.png );
 	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAABCAYAAADAW76WAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNosyssKQFAUAMBzkSQl8f9fKFIsyGuUxewmRUT6ZeQUlFTUNLR09Aw8jEzMLKxs7BycXNzffwUYAFWiDQPUjcVGAAAAAElFTkSuQmCC );
 	background-repeat: repeat-y;
 }
@@ -597,7 +597,7 @@ div#headerSearch {
 {
 	position: absolute;
 	left: -108px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/community_banner.png' );
+	background-image: url( 'https://steamcommunity.com/public/images/updates/communitycontent/community_banner.png' );
 	width: 1200px;
 	height: 177px;
 }

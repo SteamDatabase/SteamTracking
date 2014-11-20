@@ -319,7 +319,7 @@ function OpenBooster( appid, itemid )
 
 	$BtnClose.click( function() { Modal.Dismiss(); } );
 
-	//var $ImgBooster = $J('<img/>', {'class': 'booster_unpack_booster', src: 'https://steamcommunity.com/economy/boosterpack/' + appid + '?l=' + g_strLanguage } );
+	//var $ImgBooster = $J('<img/>', {'class': 'booster_unpack_booster', src: 'https://steamcommunity-a.akamaihd.net/economy/boosterpack/' + appid + '?l=' + g_strLanguage } );
 	//$CardArea.append( $ImgBooster );
 
 	var $Booster = $J('<div/>', {'class': 'booster_unpack_booster' } );
@@ -328,13 +328,13 @@ function OpenBooster( appid, itemid )
 	{
 		var $CardBack = $J('<div/>', {'class': 'booster_unpack_card card_back card' + (i+1) } );
 		var $ImgFlipGradient = $J('<div/>', {'class': 'booster_unpack_card_image_flip_gradient'});
-		var $Img = $J('<img/>', {'class': 'booster_unpack_card_image', src: 'https://steamcommunity.com/economy/boosterpack/' + appid + '?l=english&single=1' } );
+		var $Img = $J('<img/>', {'class': 'booster_unpack_card_image', src: 'https://steamcommunity-a.akamaihd.net/economy/boosterpack/' + appid + '?l=english&single=1' } );
 		$CardBack.append( $Img, $ImgFlipGradient );
 		$Booster.append( $CardBack );
 		$rgCardBacks.push( $CardBack );
 	}
 
-	var $ImgRibbon = $J('<img/>', {'class': 'booster_unpack_ribbon', 'src': 'https://steamcommunity.com/economy/boosterpackribbon/?l=english' });
+	var $ImgRibbon = $J('<img/>', {'class': 'booster_unpack_ribbon', 'src': 'https://steamcommunity-a.akamaihd.net/economy/boosterpackribbon/?l=english' });
 	$Booster.append( $ImgRibbon );
 	$CardArea.append( $Booster );
 
@@ -441,7 +441,7 @@ function OpenBooster( appid, itemid )
 
 function ShowBoosterEligibility()
 {
-	var $Content = $J('<div class="group_invite_throbber"><img src="https://steamcommunity.com/public/images/login/throbber.gif"></div>');
+	var $Content = $J('<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
 
 	var Modal = ShowAlertDialog( 'Booster Pack Eligibility', $Content );
 
@@ -459,80 +459,4 @@ function ShowBoosterEligibility()
 
 
 
-
-	function GrindIntoGoo( appid, contextid, itemid )
-	{
-		var rgAJAXParams = {
-			sessionid: g_sessionID,
-			appid: appid,
-			assetid: itemid,
-			contextid: contextid
-		};
-		var strActionURL = g_strProfileURL + "/ajaxgetgoovalue/";
-
-		$J.get( strActionURL, rgAJAXParams ).done( function( data ) {
-			var $Content = $J(data.strHTML);
-			var strDialogTitle = data.strTitle;
-			ShowConfirmDialog( strDialogTitle, $Content ).done( function() {
-				strActionURL = g_strProfileURL + "/ajaxgrindintogoo/";
-				rgAJAXParams.goo_value_expected = data.goo_value;
-
-				$J.post( strActionURL, rgAJAXParams).done( function( data ) {
-					ShowAlertDialog( strDialogTitle, data.strHTML );
-					ReloadCommunityInventory();
-				}).fail( function() {
-					ShowAlertDialog( strDialogTitle, 'There was an error communicating with the network. Please try again later.' );
-				});
-			});
-		});
-	}
-
-	function PackGameGooIntoBarrel( appid, itemid )
-	{
-		var rgAJAXParams = {
-			sessionid: g_sessionID,
-			appid: appid,
-			assetid: itemid,
-			goo_denomination_in: 1,
-			goo_amount_in: 1000,
-			goo_denomination_out: 1000,
-			goo_amount_out_expected: 1
-		};
-		var strActionURL = g_strProfileURL + "/ajaxexchangegoo/";
-
-		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
-				if ( data.success == 78 )
-				{
-					ShowAlertDialog( 'Action Failed', 'You need at least 1000 Goo to make a Goo Barrel' );
-				}
-				else
-				{
-					ShowAlertDialog( 'Success', 'New Barrel Acquired' );		// localize
-					ReloadCommunityInventory();
-				}
-			}).fail( function() {
-				ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
-			});
-	}
-
-	function UnpackGameGooFromBarrel( appid, itemid )
-	{
-		var rgAJAXParams = {
-			sessionid: g_sessionID,
-			appid: appid,
-			assetid: itemid,
-			goo_denomination_in: 1000,
-			goo_amount_in: 1,
-			goo_denomination_out: 1,
-			goo_amount_out_expected: 1000
-		};
-		var strActionURL = g_strProfileURL + "/ajaxexchangegoo/";
-
-		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
-				ShowAlertDialog( 'Success', '1000 Goo acquired from barrel' );		// localize
-				ReloadCommunityInventory();
-			}).fail( function() {
-				ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
-			});
-	}
 
