@@ -87,7 +87,7 @@ function RenderGameForumList( listType, page, bLoggedIn )
 
 	$( 'quicklistselect_active' ).innerHTML = text;
 
-	$('game_results_area').update( '<div class="discussiontab_loading"><img src="https://steamcommunity.com/public/images/login/throbber.gif"></div>');
+	$('game_results_area').update( '<div class="discussiontab_loading"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
 
 	var params = { results: 1, type: listType };
 	new Ajax.Updater( $('game_results_area'), 'https://steamcommunity.com/discussions/games/', {method: 'GET', evalScripts: true, parameters: params } );
@@ -98,7 +98,7 @@ g_strSearchInFlight = '';
 function GameForumSearch()
 {
 
-	$('game_results_area').update( '<div class="discussiontab_loading"><img src="https://steamcommunity.com/public/images/login/throbber.gif"></div>');
+	$('game_results_area').update( '<div class="discussiontab_loading"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
 
 	var params = { results: 1, type: 'searchallapps', searchquery: $('associate_game').value };
 	new Ajax.Updater( $('game_results_area'), 'https://steamcommunity.com/discussions/games/', {method: 'GET', evalScripts: true, parameters: params } );

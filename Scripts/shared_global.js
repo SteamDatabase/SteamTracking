@@ -584,12 +584,12 @@ CModal.PopActiveModal = function( Modal )
 // this will set the right headers for a cross-domain request to community
 function GetDefaultCommunityAJAXParams( path, method )
 {
-	var rgParams = { url: 'https://steamcommunity.com/' + path };
+	var rgParams = { url: 'https://beta.steamcommunity.com/' + path };
 	if ( method )
 		rgParams.type = method;
 
 	// if this js file was hosted off the store, add CORS request headers
-	if ( window.location.href.indexOf( 'http://steamcommunity.com/' ) != 0 && window.location.href.indexOf( 'https://steamcommunity.com/' ) != 0 )
+	if ( window.location.href.indexOf( 'http://beta.steamcommunity.com/' ) != 0 && window.location.href.indexOf( 'https://beta.steamcommunity.com/' ) != 0 )
 	{
 		rgParams.crossDomain = true;
 		rgParams.xhrFields = { withCredentials: true };
@@ -950,7 +950,7 @@ CEmoticonDelayedAJAXData.prototype.constructor = CEmoticonDelayedAJAXData;
 CEmoticonDelayedAJAXData.prototype.GetAJAXParams = function()
 {
 	return {
-		url: 'https://steamcommunity-a.akamaihd.net/' + this.m_strURL,
+		url: 'https://steamcommunity.com/' + this.m_strURL,
 		dataType: 'jsonp',
 		jsonpCallback: 'OnLoadEmoticon_' + this.m_strEmoticonName,	//consistent name for cachability
 		cache: true,
