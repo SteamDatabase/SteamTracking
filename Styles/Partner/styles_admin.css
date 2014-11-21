@@ -2350,6 +2350,24 @@ html, body { height:100%; }
 {
 	color: #8BB006;
 }
+.option_header {
+	font-weight: bold;
+	font-size: 14px;
+	color: #b2b2b2;
+	margin-top: 10px;
+}
+.option_title {
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #ab9569;
+}
+.option_title span {
+	color: #7f8184;
+	text-transform: none;
+}
+.options_indent {
+	padding-left: 20px;
+}
 
 .eula_edit_controls {
 	padding: 4px 0;
@@ -2359,4 +2377,35 @@ html, body { height:100%; }
 	float: left;
 	margin-right: 12px;
 	line-height: 18px;
+}
+
+.auction_package_row {
+	background-color: #343434;
+}
+
+.auction_package_row.alt {
+	background-color: #444444;
+}
+
+.landingTable.auctionTable {
+	border-spacing: 0 0;
+}
+
+.landingTable.auctionTable td {
+	background-color: transparent;
+}
+
+.auction_package_line span {
+	visibility: hidden;
+}
+
+.auction_package_line:hover span {
+	visibility: visible;
+	cursor: pointer;
+	color: red;
+}
+
+.landingTable .auction_app_highlight_link, .landingTable .auction_app_highlight_link a {
+	background-color: white;
+	color: black;
 }
