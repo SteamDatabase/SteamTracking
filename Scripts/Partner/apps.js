@@ -20,7 +20,7 @@ function AppsAjaxRequest( requestUrl, hashParms, successClosure, requestMethod )
 	// ensure session ID is present if we're posting
 	if ( requestMethod == 'post' ) {
 		if ( !( 'sessionid' in hashParms ) ) {
-			hashParms[ 'sessionid' ] = g_sessionID
+			hashParms[ 'sessionid' ] = g_sessionID;
 		}
 	}
 
