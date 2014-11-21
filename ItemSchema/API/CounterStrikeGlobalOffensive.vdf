@@ -9619,6 +9619,20 @@
 				"cannot trade"		"1"
 			}
 		}
+		"dhw14_sticker_capsule_prefab"
+		{
+			"first_sale_date"		"2014/11/20"
+			"prefab"		"weapon_case_base"
+			"item_type"		"self_opening_purchase"
+			"attributes"
+			{
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+		}
 		"campaign_prefab"
 		{
 			"image_inventory"		"econ/tools/campaign"
@@ -12547,6 +12561,418 @@
 					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
 				}
 			}
+		}
+		"4030"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_dhw2014_01"
+			"name"		"crate_sticker_pack_dhw2014_01"
+			"item_description"		"#CSGO_crate_sticker_pack_dhw2014_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_dhw2014_01"
+			"first_sale_date"		"2014/11/20"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"30"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+		}
+		"4031"
+		{
+			"item_name"		"#CSGO_crate_dhw14_promo_de_dust2"
+			"name"		"crate_dhw14_promo_de_dust2"
+			"image_inventory"		"econ/weapon_cases/crate_dhw14_promo_de_dust2"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"31"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_dust_2"
+					"tag_text"		"#CSGO_set_dust_2"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4032"
+		{
+			"item_name"		"#CSGO_crate_dhw14_promo_de_inferno"
+			"name"		"crate_dhw14_promo_de_inferno"
+			"image_inventory"		"econ/weapon_cases/crate_dhw14_promo_de_inferno"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"32"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_inferno"
+					"tag_text"		"#CSGO_set_inferno"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4033"
+		{
+			"item_name"		"#CSGO_crate_dhw14_promo_de_mirage"
+			"name"		"crate_dhw14_promo_de_mirage"
+			"image_inventory"		"econ/weapon_cases/crate_dhw14_promo_de_mirage"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"33"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_mirage"
+					"tag_text"		"#CSGO_set_mirage"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4034"
+		{
+			"item_name"		"#CSGO_crate_dhw14_promo_de_nuke"
+			"name"		"crate_dhw14_promo_de_nuke"
+			"image_inventory"		"econ/weapon_cases/crate_dhw14_promo_de_nuke"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"34"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_nuke"
+					"tag_text"		"#CSGO_set_nuke"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4035"
+		{
+			"item_name"		"#CSGO_crate_dhw14_promo_de_cache"
+			"name"		"crate_dhw14_promo_de_cache"
+			"image_inventory"		"econ/weapon_cases/crate_dhw14_promo_de_cache"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"35"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_cache"
+					"tag_text"		"#CSGO_set_cache"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4036"
+		{
+			"item_name"		"#CSGO_crate_dhw14_promo_de_cbble"
+			"name"		"crate_dhw14_promo_de_cbble"
+			"image_inventory"		"econ/weapon_cases/crate_dhw14_promo_de_cbble"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"36"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_cobblestone"
+					"tag_text"		"#CSGO_set_cobblestone"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4037"
+		{
+			"item_name"		"#CSGO_crate_dhw14_promo_de_overpass"
+			"name"		"crate_dhw14_promo_de_overpass"
+			"image_inventory"		"econ/weapon_cases/crate_dhw14_promo_de_overpass"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"37"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_overpass"
+					"tag_text"		"#CSGO_set_overpass"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4038"
+		{
+			"item_name"		"#StickerKit_dhw2014_fnatic"
+			"name"		"crate_sticker_pack_dhw2014_fnatic"
+			"item_description"		"#StickerKit_desc_dhw2014_fnatic"
+			"image_inventory"		"econ/stickers/dhw2014/fnatic"
+			"loot_list_name"		"dhw2014_fnatic_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4039"
+		{
+			"item_name"		"#StickerKit_dhw2014_cloud9"
+			"name"		"crate_sticker_pack_dhw2014_cloud9"
+			"item_description"		"#StickerKit_desc_dhw2014_cloud9"
+			"image_inventory"		"econ/stickers/dhw2014/cloud9"
+			"loot_list_name"		"dhw2014_cloud9_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4041"
+		{
+			"item_name"		"#StickerKit_dhw2014_ninjasinpyjamas"
+			"name"		"crate_sticker_pack_dhw2014_ninjasinpyjamas"
+			"item_description"		"#StickerKit_desc_dhw2014_ninjasinpyjamas"
+			"image_inventory"		"econ/stickers/dhw2014/ninjasinpyjamas"
+			"loot_list_name"		"dhw2014_ninjasinpyjamas_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4042"
+		{
+			"item_name"		"#StickerKit_dhw2014_virtuspro"
+			"name"		"crate_sticker_pack_dhw2014_virtuspro"
+			"item_description"		"#StickerKit_desc_dhw2014_virtuspro"
+			"image_inventory"		"econ/stickers/dhw2014/virtuspro"
+			"loot_list_name"		"dhw2014_virtuspro_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4043"
+		{
+			"item_name"		"#StickerKit_dhw2014_navi"
+			"name"		"crate_sticker_pack_dhw2014_navi"
+			"item_description"		"#StickerKit_desc_dhw2014_navi"
+			"image_inventory"		"econ/stickers/dhw2014/navi"
+			"loot_list_name"		"dhw2014_navi_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4045"
+		{
+			"item_name"		"#StickerKit_dhw2014_teamdignitas"
+			"name"		"crate_sticker_pack_dhw2014_dignitas"
+			"item_description"		"#StickerKit_desc_dhw2014_dignitas"
+			"image_inventory"		"econ/stickers/dhw2014/dignitas"
+			"loot_list_name"		"dhw2014_dignitas_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4046"
+		{
+			"item_name"		"#StickerKit_dhw2014_bravadogaming"
+			"name"		"crate_sticker_pack_dhw2014_bravadogaming"
+			"item_description"		"#StickerKit_desc_dhw2014_bravadogaming"
+			"image_inventory"		"econ/stickers/dhw2014/bravadogaming"
+			"loot_list_name"		"dhw2014_bravadogaming_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4047"
+		{
+			"item_name"		"#StickerKit_dhw2014_escgaming"
+			"name"		"crate_sticker_pack_dhw2014_escgaming"
+			"item_description"		"#StickerKit_desc_dhw2014_escgaming"
+			"image_inventory"		"econ/stickers/dhw2014/escgaming"
+			"loot_list_name"		"dhw2014_escgaming_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4048"
+		{
+			"item_name"		"#StickerKit_dhw2014_hellraisers"
+			"name"		"crate_sticker_pack_dhw2014_hellraisers"
+			"item_description"		"#StickerKit_desc_dhw2014_hellraisers"
+			"image_inventory"		"econ/stickers/dhw2014/hellraisers"
+			"loot_list_name"		"dhw2014_hellraisers_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4049"
+		{
+			"item_name"		"#StickerKit_dhw2014_myxmg"
+			"name"		"crate_sticker_pack_dhw2014_myxmg"
+			"item_description"		"#StickerKit_desc_dhw2014_myxmg"
+			"image_inventory"		"econ/stickers/dhw2014/myxmg"
+			"loot_list_name"		"dhw2014_myxmg_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4050"
+		{
+			"item_name"		"#StickerKit_dhw2014_ibuypower"
+			"name"		"crate_sticker_pack_dhw2014_ibuypower"
+			"item_description"		"#StickerKit_desc_dhw2014_ibuypower"
+			"image_inventory"		"econ/stickers/dhw2014/ibuypower"
+			"loot_list_name"		"dhw2014_ibuypower_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4051"
+		{
+			"item_name"		"#StickerKit_dhw2014_teamldlc"
+			"name"		"crate_sticker_pack_dhw2014_teamldlc"
+			"item_description"		"#StickerKit_desc_dhw2014_teamldlc"
+			"image_inventory"		"econ/stickers/dhw2014/teamldlc"
+			"loot_list_name"		"dhw2014_teamldlc_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4052"
+		{
+			"item_name"		"#StickerKit_dhw2014_pentasports"
+			"name"		"crate_sticker_pack_dhw2014_pentasports"
+			"item_description"		"#StickerKit_desc_dhw2014_pentasports"
+			"image_inventory"		"econ/stickers/dhw2014/pentasports"
+			"loot_list_name"		"dhw2014_pentasports_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4053"
+		{
+			"item_name"		"#StickerKit_dhw2014_planetkeydynamics"
+			"name"		"crate_sticker_pack_dhw2014_planetkeydynamics"
+			"item_description"		"#StickerKit_desc_dhw2014_planetkeydynamics"
+			"image_inventory"		"econ/stickers/dhw2014/planetkeydynamics"
+			"loot_list_name"		"dhw2014_planetkeydynamics_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4054"
+		{
+			"item_name"		"#StickerKit_dhw2014_dhw"
+			"name"		"crate_sticker_pack_dhw2014_dhw"
+			"item_description"		"#StickerKit_desc_dhw2014_dhw"
+			"image_inventory"		"econ/stickers/dhw2014/dreamhackwinter2014"
+			"loot_list_name"		"dhw2014_dhw_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4055"
+		{
+			"item_name"		"#StickerKit_dhw2014_3dmax"
+			"name"		"crate_sticker_pack_dhw2014_3dmax"
+			"item_description"		"#StickerKit_desc_dhw2014_3dmax"
+			"image_inventory"		"econ/stickers/dhw2014/3dmax"
+			"loot_list_name"		"dhw2014_3dmax_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4056"
+		{
+			"item_name"		"#StickerKit_dhw2014_copenhagenwolves"
+			"name"		"crate_sticker_pack_dhw2014_copenhagenwolves"
+			"item_description"		"#StickerKit_desc_dhw2014_copenhagenwolves"
+			"image_inventory"		"econ/stickers/dhw2014/copenhagenwolves"
+			"loot_list_name"		"dhw2014_copenhagenwolves_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4057"
+		{
+			"item_name"		"#StickerKit_dhw2014_datteam"
+			"name"		"crate_sticker_pack_dhw2014_datteam"
+			"item_description"		"#StickerKit_desc_dhw2014_datteam"
+			"image_inventory"		"econ/stickers/dhw2014/datteam"
+			"loot_list_name"		"dhw2014_datteam_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4058"
+		{
+			"item_name"		"#StickerKit_dhw2014_londonconspiracy"
+			"name"		"crate_sticker_pack_dhw2014_londonconspiracy"
+			"item_description"		"#StickerKit_desc_dhw2014_londonconspiracy"
+			"image_inventory"		"econ/stickers/dhw2014/londonconspiracy"
+			"loot_list_name"		"dhw2014_londonconspiracy_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
+		"4059"
+		{
+			"item_name"		"#StickerKit_dhw2014_mousesports"
+			"name"		"crate_sticker_pack_dhw2014_mousesports"
+			"item_description"		"#StickerKit_desc_dhw2014_mousesports"
+			"image_inventory"		"econ/stickers/dhw2014/mousesports"
+			"loot_list_name"		"dhw2014_mousesports_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
 		}
 		"6001"
 		{
@@ -16878,6 +17304,334 @@
 			"description_string"		"#StickerKit_desc_comm02_zombielover"
 			"sticker_material"		"community02/zombielover"
 			"item_rarity"		"rare"
+		}
+		"198"
+		{
+			"name"		"dhw2014_fnatic"
+			"item_name"		"#StickerKit_dhw2014_fnatic"
+			"description_string"		"#StickerKit_desc_dhw2014_fnatic"
+			"sticker_material"		"dhw2014/fnatic"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"6"
+		}
+		"199"
+		{
+			"name"		"dhw2014_fnatic_holo"
+			"item_name"		"#StickerKit_dhw2014_fnatic_holo"
+			"description_string"		"#StickerKit_desc_dhw2014_fnatic_holo"
+			"sticker_material"		"dhw2014/fnatic_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"6"
+		}
+		"200"
+		{
+			"name"		"dhw2014_fnatic_foil"
+			"item_name"		"#StickerKit_dhw2014_fnatic_foil"
+			"description_string"		"#StickerKit_desc_dhw2014_fnatic_foil"
+			"sticker_material"		"dhw2014/fnatic_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"6"
+		}
+		"201"
+		{
+			"name"		"dhw2014_cloud9"
+			"item_name"		"#StickerKit_dhw2014_cloud9"
+			"description_string"		"#StickerKit_desc_dhw2014_cloud9"
+			"sticker_material"		"dhw2014/cloud9"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"33"
+		}
+		"202"
+		{
+			"name"		"dhw2014_cloud9_holo"
+			"item_name"		"#StickerKit_dhw2014_cloud9_holo"
+			"description_string"		"#StickerKit_desc_dhw2014_cloud9_holo"
+			"sticker_material"		"dhw2014/cloud9_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"33"
+		}
+		"203"
+		{
+			"name"		"dhw2014_cloud9_foil"
+			"item_name"		"#StickerKit_dhw2014_cloud9_foil"
+			"description_string"		"#StickerKit_desc_dhw2014_cloud9_foil"
+			"sticker_material"		"dhw2014/cloud9_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"33"
+		}
+		"207"
+		{
+			"name"		"dhw2014_virtuspro"
+			"item_name"		"#StickerKit_dhw2014_virtuspro"
+			"description_string"		"#StickerKit_desc_dhw2014_virtuspro"
+			"sticker_material"		"dhw2014/virtuspro"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"31"
+		}
+		"208"
+		{
+			"name"		"dhw2014_virtuspro_holo"
+			"item_name"		"#StickerKit_dhw2014_virtuspro_holo"
+			"description_string"		"#StickerKit_desc_dhw2014_virtuspro_holo"
+			"sticker_material"		"dhw2014/virtuspro_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"31"
+		}
+		"209"
+		{
+			"name"		"dhw2014_virtuspro_foil"
+			"item_name"		"#StickerKit_dhw2014_virtuspro_foil"
+			"description_string"		"#StickerKit_desc_dhw2014_virtuspro_foil"
+			"sticker_material"		"dhw2014/virtuspro_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"31"
+		}
+		"210"
+		{
+			"name"		"dhw2014_ninjasinpyjamas"
+			"item_name"		"#StickerKit_dhw2014_ninjasinpyjamas"
+			"description_string"		"#StickerKit_desc_dhw2014_ninjasinpyjamas"
+			"sticker_material"		"dhw2014/ninjasinpyjamas"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"1"
+		}
+		"211"
+		{
+			"name"		"dhw2014_ninjasinpyjamas_holo"
+			"item_name"		"#StickerKit_dhw2014_ninjasinpyjamas_holo"
+			"description_string"		"#StickerKit_desc_dhw2014_ninjasinpyjamas_holo"
+			"sticker_material"		"dhw2014/ninjasinpyjamas_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"1"
+		}
+		"212"
+		{
+			"name"		"dhw2014_ninjasinpyjamas_foil"
+			"item_name"		"#StickerKit_dhw2014_ninjasinpyjamas_foil"
+			"description_string"		"#StickerKit_desc_dhw2014_ninjasinpyjamas_foil"
+			"sticker_material"		"dhw2014/ninjasinpyjamas_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"1"
+		}
+		"213"
+		{
+			"name"		"dhw2014_navi"
+			"item_name"		"#StickerKit_dhw2014_navi"
+			"description_string"		"#StickerKit_desc_dhw2014_navi"
+			"sticker_material"		"dhw2014/navi"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"12"
+		}
+		"214"
+		{
+			"name"		"dhw2014_navi_holo"
+			"item_name"		"#StickerKit_dhw2014_navi_holo"
+			"description_string"		"#StickerKit_desc_dhw2014_navi_holo"
+			"sticker_material"		"dhw2014/navi_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"12"
+		}
+		"215"
+		{
+			"name"		"dhw2014_navi_foil"
+			"item_name"		"#StickerKit_dhw2014_navi_foil"
+			"description_string"		"#StickerKit_desc_dhw2014_navi_foil"
+			"sticker_material"		"dhw2014/navi_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"12"
+		}
+		"219"
+		{
+			"name"		"dhw2014_dignitas"
+			"item_name"		"#StickerKit_dhw2014_teamdignitas"
+			"description_string"		"#StickerKit_desc_dhw2014_teamdignitas"
+			"sticker_material"		"dhw2014/dignitas"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"24"
+		}
+		"220"
+		{
+			"name"		"dhw2014_dignitas_holo"
+			"item_name"		"#StickerKit_dhw2014_teamdignitas_holo"
+			"description_string"		"#StickerKit_desc_dhw2014_teamdignitas_holo"
+			"sticker_material"		"dhw2014/dignitas_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"24"
+		}
+		"221"
+		{
+			"name"		"dhw2014_dignitas_foil"
+			"item_name"		"#StickerKit_dhw2014_teamdignitas_foil"
+			"description_string"		"#StickerKit_desc_dhw2014_teamdignitas_foil"
+			"sticker_material"		"dhw2014/dignitas_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"24"
+		}
+		"222"
+		{
+			"name"		"dhw2014_bravadogaming"
+			"item_name"		"#StickerKit_dhw2014_bravadogaming"
+			"description_string"		"#StickerKit_desc_dhw2014_bravadogaming"
+			"sticker_material"		"dhw2014/bravadogaming"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"40"
+		}
+		"223"
+		{
+			"name"		"dhw2014_escgaming"
+			"item_name"		"#StickerKit_dhw2014_escgaming"
+			"description_string"		"#StickerKit_desc_dhw2014_escgaming"
+			"sticker_material"		"dhw2014/escgaming"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"42"
+		}
+		"224"
+		{
+			"name"		"dhw2014_hellraisers"
+			"item_name"		"#StickerKit_dhw2014_hellraisers"
+			"description_string"		"#StickerKit_desc_dhw2014_hellraisers"
+			"sticker_material"		"dhw2014/hellraisers"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"25"
+		}
+		"225"
+		{
+			"name"		"dhw2014_ibuypower"
+			"item_name"		"#StickerKit_dhw2014_ibuypower"
+			"description_string"		"#StickerKit_desc_dhw2014_ibuypower"
+			"sticker_material"		"dhw2014/ibuypower"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"5"
+		}
+		"226"
+		{
+			"name"		"dhw2014_pentasports"
+			"item_name"		"#StickerKit_dhw2014_pentasports"
+			"description_string"		"#StickerKit_desc_dhw2014_pentasports"
+			"sticker_material"		"dhw2014/pentasports"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"39"
+		}
+		"227"
+		{
+			"name"		"dhw2014_planetkeydynamics"
+			"item_name"		"#StickerKit_dhw2014_planetkeydynamics"
+			"description_string"		"#StickerKit_desc_dhw2014_planetkeydynamics"
+			"sticker_material"		"dhw2014/planetkeydynamics"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"41"
+		}
+		"228"
+		{
+			"name"		"dhw2014_teamldlc"
+			"item_name"		"#StickerKit_dhw2014_teamldlc"
+			"description_string"		"#StickerKit_desc_dhw2014_teamldlc"
+			"sticker_material"		"dhw2014/teamldlc"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"26"
+		}
+		"229"
+		{
+			"name"		"dhw2014_myxmg"
+			"item_name"		"#StickerKit_dhw2014_myxmg"
+			"description_string"		"#StickerKit_desc_dhw2014_myxmg"
+			"sticker_material"		"dhw2014/myxmg"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"38"
+		}
+		"230"
+		{
+			"name"		"dhw2014_dhw"
+			"item_name"		"#StickerKit_dhw2014_dhw"
+			"description_string"		"#StickerKit_desc_dhw2014_dhw"
+			"sticker_material"		"dhw2014/dreamhackwinter2014"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+		}
+		"231"
+		{
+			"name"		"dhw2014_dhw_foil"
+			"item_name"		"#StickerKit_dhw2014_dhw_foil"
+			"description_string"		"#StickerKit_desc_dhw2014_dhw_foil"
+			"sticker_material"		"dhw2014/dreamhackwinter2014_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+		}
+		"232"
+		{
+			"name"		"dhw2014_3dmax"
+			"item_name"		"#StickerKit_dhw2014_3dmax"
+			"description_string"		"#StickerKit_desc_dhw2014_3dmax"
+			"sticker_material"		"dhw2014/3dmax"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"28"
+		}
+		"233"
+		{
+			"name"		"dhw2014_copenhagenwolves"
+			"item_name"		"#StickerKit_dhw2014_copenhagenwolves"
+			"description_string"		"#StickerKit_desc_dhw2014_copenhagenwolves"
+			"sticker_material"		"dhw2014/copenhagenwolves"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"10"
+		}
+		"234"
+		{
+			"name"		"dhw2014_datteam"
+			"item_name"		"#StickerKit_dhw2014_datteam"
+			"description_string"		"#StickerKit_desc_dhw2014_datteam"
+			"sticker_material"		"dhw2014/datteam"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"34"
+		}
+		"235"
+		{
+			"name"		"dhw2014_londonconspiracy"
+			"item_name"		"#StickerKit_dhw2014_londonconspiracy"
+			"description_string"		"#StickerKit_desc_dhw2014_londonconspiracy"
+			"sticker_material"		"dhw2014/londonconspiracy"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"36"
+		}
+		"236"
+		{
+			"name"		"dhw2014_mousesports"
+			"item_name"		"#StickerKit_dhw2014_mousesports"
+			"description_string"		"#StickerKit_desc_dhw2014_mousesports"
+			"sticker_material"		"dhw2014/mousesports"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"29"
 		}
 	}
 	"paint_kits"
@@ -25103,6 +25857,30 @@
 			"crate_sticker_pack_kat2014_02_mythical"		"1"
 			"crate_sticker_pack_kat2014_02_legendary"		"1"
 		}
+		"crate_sticker_pack_dhw2014_01_mythical"
+		{
+			"[dhw2014_fnatic_holo]sticker"		"1"
+			"[dhw2014_cloud9_holo]sticker"		"1"
+			"[dhw2014_virtuspro_holo]sticker"		"1"
+			"[dhw2014_ninjasinpyjamas_holo]sticker"		"1"
+			"[dhw2014_navi_holo]sticker"		"1"
+			"[dhw2014_dignitas_holo]sticker"		"1"
+		}
+		"crate_sticker_pack_dhw2014_01_legendary"
+		{
+			"[dhw2014_fnatic_foil]sticker"		"1"
+			"[dhw2014_cloud9_foil]sticker"		"1"
+			"[dhw2014_virtuspro_foil]sticker"		"1"
+			"[dhw2014_ninjasinpyjamas_foil]sticker"		"1"
+			"[dhw2014_navi_foil]sticker"		"1"
+			"[dhw2014_dignitas_foil]sticker"		"1"
+			"[dhw2014_dhw_foil]sticker"		"1"
+		}
+		"crate_sticker_pack_dhw2014_01"
+		{
+			"crate_sticker_pack_dhw2014_01_mythical"		"1"
+			"crate_sticker_pack_dhw2014_01_legendary"		"1"
+		}
 		"crate_sticker_pack_community01_rare"
 		{
 			"[comm01_backstab]sticker"		"1"
@@ -25882,9 +26660,117 @@
 		{
 			"set_overpass"		"1"
 		}
+		"crate_dhw14_promo_de_dust2"
+		{
+			"set_dust_2"		"1"
+		}
+		"crate_dhw14_promo_de_inferno"
+		{
+			"set_inferno"		"1"
+		}
+		"crate_dhw14_promo_de_mirage"
+		{
+			"set_mirage"		"1"
+		}
+		"crate_dhw14_promo_de_nuke"
+		{
+			"set_nuke"		"1"
+		}
+		"crate_dhw14_promo_de_cache"
+		{
+			"set_cache"		"1"
+		}
+		"crate_dhw14_promo_de_cbble"
+		{
+			"set_cobblestone"		"1"
+		}
+		"crate_dhw14_promo_de_overpass"
+		{
+			"set_overpass"		"1"
+		}
 		"quest_reward_crate_vanguard"
 		{
 			"crate_operation_vanguard"		"1"
+		}
+		"dhw2014_fnatic_rare"
+		{
+			"[dhw2014_fnatic]sticker"		"1"
+		}
+		"dhw2014_cloud9_rare"
+		{
+			"[dhw2014_cloud9]sticker"		"1"
+		}
+		"dhw2014_virtuspro_rare"
+		{
+			"[dhw2014_virtuspro]sticker"		"1"
+		}
+		"dhw2014_ninjasinpyjamas_rare"
+		{
+			"[dhw2014_ninjasinpyjamas]sticker"		"1"
+		}
+		"dhw2014_navi_rare"
+		{
+			"[dhw2014_navi]sticker"		"1"
+		}
+		"dhw2014_dignitas_rare"
+		{
+			"[dhw2014_dignitas]sticker"		"1"
+		}
+		"dhw2014_bravadogaming_rare"
+		{
+			"[dhw2014_bravadogaming]sticker"		"1"
+		}
+		"dhw2014_escgaming_rare"
+		{
+			"[dhw2014_escgaming]sticker"		"1"
+		}
+		"dhw2014_hellraisers_rare"
+		{
+			"[dhw2014_hellraisers]sticker"		"1"
+		}
+		"dhw2014_ibuypower_rare"
+		{
+			"[dhw2014_ibuypower]sticker"		"1"
+		}
+		"dhw2014_pentasports_rare"
+		{
+			"[dhw2014_pentasports]sticker"		"1"
+		}
+		"dhw2014_planetkeydynamics_rare"
+		{
+			"[dhw2014_planetkeydynamics]sticker"		"1"
+		}
+		"dhw2014_teamldlc_rare"
+		{
+			"[dhw2014_teamldlc]sticker"		"1"
+		}
+		"dhw2014_myxmg_rare"
+		{
+			"[dhw2014_myxmg]sticker"		"1"
+		}
+		"dhw2014_dhw_rare"
+		{
+			"[dhw2014_dhw]sticker"		"1"
+		}
+		"dhw2014_3dmax_rare"
+		{
+			"[dhw2014_3dmax]sticker"		"1"
+		}
+		"dhw2014_copenhagenwolves_rare"
+		{
+			"[dhw2014_copenhagenwolves]sticker"		"1"
+		}
+		"dhw2014_datteam_rare"
+		{
+			"[dhw2014_datteam]sticker"		"1"
+		}
+		"dhw2014_londonconspiracy_rare"
+		{
+			"[dhw2014_londonconspiracy]sticker"		"1"
+		}
+		"dhw2014_mousesports_rare"
+		{
+			"[dhw2014_mousesports]sticker"		"1"
 		}
 		"coupon loot list - bossyburger"
 		{
@@ -26088,6 +26974,14 @@
 		"27"		"crate_esl14_promo_de_cbble"
 		"28"		"crate_esl14_promo_de_overpass"
 		"29"		"crate_community_5"
+		"30"		"crate_sticker_pack_dhw2014_01"
+		"31"		"crate_dhw14_promo_de_dust2"
+		"32"		"crate_dhw14_promo_de_inferno"
+		"33"		"crate_dhw14_promo_de_mirage"
+		"34"		"crate_dhw14_promo_de_nuke"
+		"35"		"crate_dhw14_promo_de_cache"
+		"36"		"crate_dhw14_promo_de_cbble"
+		"37"		"crate_dhw14_promo_de_overpass"
 	}
 	"quest_reward_loot_lists"
 	{
@@ -28431,7 +29325,7 @@
 			"gamemode"		"deathmatch"
 			"map"		"de_dust2"
 			"mapgroup"		"mg_active"
-			"expression"		" %weapon_galil kills% "
+			"expression"		" %weapon_galilar kills% "
 			"difficulty"		"3"
 			"quest_reward"		"set_dust_2"
 		}

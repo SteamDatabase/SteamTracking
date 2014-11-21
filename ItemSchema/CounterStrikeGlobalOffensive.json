@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.18603b4dee303d18dffdf7067403af4740945ee2.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.dd822d0039211b8bd1fd747caaf62f10bffdc195.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -3551,7 +3551,7 @@
 				"defindex": 1305,
 				"item_class": "tool",
 				"item_type_name": "Key",
-				"item_name": "Huntsman Case Key ",
+				"item_name": "Huntsman Case Key",
 				"item_description": "This key only opens Huntsman Cases",
 				"proper_name": false,
 				"item_quality": 4,
@@ -3598,7 +3598,7 @@
 				"defindex": 1307,
 				"item_class": "tool",
 				"item_type_name": "Key",
-				"item_name": "Huntsman Case Key ",
+				"item_name": "Huntsman Case Key",
 				"item_description": "This key only opens Huntsman Cases",
 				"proper_name": false,
 				"item_quality": 4,
@@ -5217,6 +5217,935 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 29
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_01",
+				"defindex": 4030,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "DreamHack 2014 Legends (Holo/Foil)",
+				"item_description": "This capsule contains a single DreamHack 2014 participant Holo or Foil sticker. A portion of the proceeds is shared equally among the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_dhw2014_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_sticker_pack_dhw2014_01.610021432846e2e95053b2efe732e02f84cb824d.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_sticker_pack_dhw2014_01_large.d239e0adad463ff845b55fd4864543db5c058ef6.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 30
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_dhw14_promo_de_dust2",
+				"defindex": 4031,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "DreamHack 2014 Dust II Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_dhw14_promo_de_dust2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_dhw14_promo_de_dust2.1c381563a79ad42c2e10da7313f6b97242e97d2c.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 31
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_dhw14_promo_de_inferno",
+				"defindex": 4032,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "DreamHack 2014 Inferno Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_dhw14_promo_de_inferno",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_dhw14_promo_de_inferno.0c362d928c221f4f464238720874a6b1dfcb2616.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 32
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_dhw14_promo_de_mirage",
+				"defindex": 4033,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "DreamHack 2014 Mirage Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_dhw14_promo_de_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_dhw14_promo_de_mirage.f7fd41fa75f398759589c4a42981c67693738f30.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 33
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_dhw14_promo_de_nuke",
+				"defindex": 4034,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "DreamHack 2014 Nuke Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_dhw14_promo_de_nuke",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_dhw14_promo_de_nuke.5385c040bab29517b9cbaefb0f63af525f2fb04e.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 34
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_dhw14_promo_de_cache",
+				"defindex": 4035,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "DreamHack 2014 Cache Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_dhw14_promo_de_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_dhw14_promo_de_cache.191893690c5fd8c410daf933071e9ffe22b655e4.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 35
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_dhw14_promo_de_cbble",
+				"defindex": 4036,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "DreamHack 2014 Cobblestone Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_dhw14_promo_de_cbble",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_dhw14_promo_de_cbble.37d5c8d671c3e181ea9844cd8147e454ae28e2f9.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 36
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_dhw14_promo_de_overpass",
+				"defindex": 4037,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "DreamHack 2014 Overpass Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_dhw14_promo_de_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_dhw14_promo_de_overpass.e20120d2211c054e3341ec973e420b2536acdc9e.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 37
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_fnatic",
+				"defindex": 4038,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Fnatic | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/fnatic",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/fnatic.7e8d11de54a5550a98b9825ca2f00a83f9f87813.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/fnatic_large.341e4130694509f10480111791ff42cdef73b585.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_cloud9",
+				"defindex": 4039,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cloud9 | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/cloud9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/cloud9.02151ad05148bf8c8e0648cae0e5cf4ae21cfcce.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/cloud9_large.09729c21f58cf48dc8cbd2ea25cb9c938211d587.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_ninjasinpyjamas",
+				"defindex": 4041,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Ninjas in Pyjamas | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/ninjasinpyjamas",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ninjasinpyjamas.76de545bc289c1310b7304c3fac8d4131af77335.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ninjasinpyjamas_large.aaa876adaee626de2c090d2eaefd7a102ea3e21d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_virtuspro",
+				"defindex": 4042,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Virtus.Pro | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/virtuspro",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/virtuspro.8cd77904ae746bea43f1f674d6ed3765abf7923d.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/virtuspro_large.3f54f2b45ab69b3830f2941855b37362a7c756c7.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_navi",
+				"defindex": 4043,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Natus Vincere | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/navi.674115e80481a7f8d3359f592a9e53ab068b70b1.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/navi_large.3f406c283c73c0e394f859a7c9fe82b125b0b0e6.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_dignitas",
+				"defindex": 4045,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team Dignitas | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/dignitas",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dignitas.bb6186bd405fef34582cf5ee02a29539cb20140c.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dignitas_large.bc7c4602e33c314a2c5336d197a393edf250e8e7.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_bravadogaming",
+				"defindex": 4046,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Bravado Gaming | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/bravadogaming",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/bravadogaming.64fea1fe37f39d1f765054bce58af90e9c31ba02.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/bravadogaming_large.502768f3a37eabc8e227f35300ebe4f50e30acd1.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_escgaming",
+				"defindex": 4047,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESC Gaming | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/escgaming",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/escgaming.4ae9141ed3300338868bf8ec22cb974fb08caab6.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/escgaming_large.ce8418ad193e27b867b5ebcad15b131e37db4491.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_hellraisers",
+				"defindex": 4048,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "HellRaisers | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/hellraisers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/hellraisers.18835af3e8534ed803ca04f18c8fd947017ca017.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/hellraisers_large.909a85109977d63ffc2c46a05409026657fdde6e.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_myxmg",
+				"defindex": 4049,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "myXMG | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/myxmg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/myxmg.8ff4dc7d245dac125673833d1681a0ccfb5f344a.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/myxmg_large.64006519d172306cf1bbb404b446351241fdaec6.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_ibuypower",
+				"defindex": 4050,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "iBUYPOWER | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/ibuypower",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ibuypower.fa9e27a77a2d7326d5044fa9eee49dc71aa3835a.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ibuypower_large.436eab1f9a65109c260b2b718e57d3028a00ba83.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_teamldlc",
+				"defindex": 4051,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team LDLC.com | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/teamldlc",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/teamldlc.6ad4ae21a1aa3fdf4b1fd486dd09fa7da90878b2.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/teamldlc_large.e07013d978d6f91f8e20b2401085dfdd73032ff8.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_pentasports",
+				"defindex": 4052,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "PENTA Sports | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/pentasports",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/pentasports.8c83564c1e38165b4d36b63ff369f828f0207514.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/pentasports_large.e1056a880b5071e5ef6ac74b307edf93041065ed.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_planetkeydynamics",
+				"defindex": 4053,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Planetkey Dynamics | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/planetkeydynamics",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/planetkeydynamics.a6b832ec62544fb396007e66204bdac0fb23ea1e.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/planetkeydynamics_large.33f51a8cb0edd49ee5d8411191037685b4832320.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_dhw",
+				"defindex": 4054,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "DreamHack Winter 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/dreamhackwinter2014",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dreamhackwinter2014.f91c86216b5efdf5d6215690713095f9113811ff.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dreamhackwinter2014_large.44a3ae4ec611d0cc81bba7a6368cd26257cc5288.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_3dmax",
+				"defindex": 4055,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "3DMAX | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/3dmax",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/3dmax.ae5f6e6524fbae4d9baa5a9856edc8388905178d.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/3dmax_large.fa11e39140200f3c441fc7e0fb0b9ce893918169.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_copenhagenwolves",
+				"defindex": 4056,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Copenhagen Wolves | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/copenhagenwolves",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/copenhagenwolves.4400372be242ab0638b24274a038963e84434043.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/copenhagenwolves_large.32935def21beead765167a528d65137bc4fabc82.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_datteam",
+				"defindex": 4057,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "dAT team | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/datteam",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/datteam.8c9d6c2c3b1ac45e8106f90c9452ca6bbae77385.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/datteam_large.d2a656a7d09c14a4a6e67e524aed0c3d194c20fb.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_londonconspiracy",
+				"defindex": 4058,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "London Conspiracy | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/londonconspiracy",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/londonconspiracy.fd057f3e626fc096a8c6146e0c585b16493b85c6.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/londonconspiracy_large.39b6be0a1f1605efc103975636b064290715fff5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_mousesports",
+				"defindex": 4059,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "mousesports | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/mousesports",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/mousesports.2f88ba6f79996fa37f9a6816a4d9cd1cca8442f0.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/mousesports_large.c344d7ad5338f077af1923efce5f78fd8de3013b.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
 					}
 				]
 				
