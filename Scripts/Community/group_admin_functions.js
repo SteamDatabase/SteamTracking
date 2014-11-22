@@ -108,7 +108,7 @@ function saveField(e, fId)
 		{
 			if(!fId)
 			{
-				el.value = 'Saving..';
+				el.value = '';
 				el.className = el.className.replace( /dynSave/, 'dynSaveDisabled' );
 			}
 			g_rgCurrentDisabled[dataField.id] = true;
@@ -194,7 +194,7 @@ function receiveFieldSave()
 			}
 			else
 			{
-				alert( "There was an error saving your changes.\n\nError:\n"+results+"\n\nPlease address the error and try again." );
+				alert( "" );
 				removeClass( fieldId, 'disabled' );
 			}
 			updateInProgress = false;
@@ -451,24 +451,24 @@ function validateFields()
 	var bOk = true;
 	if ( document.getElementById( 'headline' ).value.length > 255 )
 	{
-		alert( "There is a maximum length of 255 characters for headlines. Please shorten it and try again." );
+		alert( "" );
 		bOk = false;
 	}
 	if ( document.getElementById( 'summary' ).value.length > 3000 )
 	{
-		alert( "There is a maximum length of 3000 characters for summaries. Please shorten it and try again." );
+		alert( "" );
 		bOk = false;
 	}
 	for( x=1; x <= 3; x++ )
 	{
 		if ( document.getElementById( 'weblink_' + x + '_title' ).value.length > 128 )
 		{
-			alert( "Website link titles can only be 128 characters in length" );
+			alert( "" );
 			bOk = false;
 		}
 		if ( document.getElementById( 'weblink_' + x + '_url' ).value.length > 128 )
 		{
-			alert( "Website URLs can only be 128 characters in length" );
+			alert( "" );
 			bOk = false;
 		}
 	}
@@ -562,19 +562,19 @@ function saveEvent()
 {
 	if ( document.getElementById( 'name' ).value.length > 256 )
 	{
-		alert( "Event names can only be 256 characters in length" );
+		alert( "" );
 	}
 	else if( document.getElementById( 'serverPassword' ).value.length > 256 )
 	{
-		alert( "Server passwords can only be 256 characters in length" );
+		alert( "" );
 	}
 	else if( document.getElementById( 'notes' ).value.length > 1000 )
 	{
-		alert( "Event description can only be 1000 characters in length" );
+		alert( "" );
 	}
 	else if ( document.getElementById( 'startDate' ).value == 'MM/DD/YY' && !document.getElementById( 'timeChoiceQuick' ).checked )
 	{
-		alert( "You must choose a date for the event to occur on." );
+		alert( "" );
 	}
 	else
 	{
@@ -582,7 +582,7 @@ function saveEvent()
 		aID = document.getElementById( 'appID' );
 		if ( eType.options[eType.selectedIndex].value == 'GameEvent' && aID.options[aID.selectedIndex].value == '' )
 		{
-			alert( "Please select a game for your Game Event." );
+			alert( "" );
 		}
 		else
 		{
@@ -613,7 +613,7 @@ function ShowAdminArea( element )
 
 function ManageMembers_Kick( steamId, memberName )
 {
-	var bAnswer = confirm( 'You are about to kick ' + memberName + ' from the group.\n\nAre you sure?' );
+	var bAnswer = confirm( '' );
 	if ( bAnswer )
 	{
 		var form = document.forms['kick_form'];
@@ -632,19 +632,19 @@ function ManageMembers_ToggleRank( steamId, memberName )
 	if ( rankIcon.src.indexOf( 'rankIconMember' ) != -1 )
 	{
 		if ( g_bCanPromoteToModerator )
-			pText = 'promote ' + memberName + ' to a Moderator.';
+			pText = '';
 		else
-			pText = 'promote ' + memberName + ' to an Officer.';
+			pText = '';
 	}
 	else if ( rankIcon.src.indexOf( 'rankIconModerator' ) != -1 )
 	{
-		pText = 'promote ' + memberName + ' to an Officer.';
+		pText = '';
 	}
 	else
 	{
-		pText = 'demote ' + memberName + ' to a Member.';
+		pText = '';
 	}
-	var bAnswer = confirm( 'You are about to ' + pText + '\n\nAre you sure?' );
+	var bAnswer = confirm( '' );
 	if ( bAnswer )
 	{
 		var postData = {
@@ -691,7 +691,7 @@ function ManageMembers_OnRankToggleResponse()
 			}
 			else
 			{
-				alert( 'There was an error promoting/demoting that player. \n' + results + '\nPlease address the error and try again.' );
+				alert( '' );
 			}
 		}
 	}
@@ -711,13 +711,13 @@ function togglePOTW( steamId, memberName )
 	var pText;
 	if ( POTWIcon.src.indexOf( 'iconPOTW' ) != -1 )
 	{
-		pText = 'remove ' + memberName + ' as group Player of the Week.';
+		pText = '';
 	}
 	else
 	{
-		pText = 'make ' + memberName + ' your new group Player of the Week.';
+		pText = '';
 	}
-	var bAnswer = confirm( 'You are about to ' + pText + '\n\nAre you sure?' );
+	var bAnswer = confirm( '' );
 	if ( bAnswer )
 	{
 		createQuery2( g_strProcessURL, receivePOTWToggle, { "xml": 1, "action": "potw", "memberId": steamId, sessionid: g_sessionID } );
@@ -750,7 +750,7 @@ function receivePOTWToggle()
 			}
 			else
 			{
-				alert( 'There was an error changing group Player of the Week. \n' + results + '\nPlease address the error and try again.' );
+				alert( '' );
 			}
 		}
 	}
@@ -760,7 +760,7 @@ function receivePOTWToggle()
 
 function ManageBans_Unban( steamId, name )
 {
-	if ( confirm( 'You are about to remove the ban on \n' + name + '\nAre you sure?' ) )
+	if ( confirm( '' ) )
 	{
 		var postData = {
 			"xml": 1,
@@ -792,7 +792,7 @@ function ManageBans_ReceiveUnban()
 			}
 			else
 			{
-				alert( 'There was a problem processing your unban request:' + "\n" + results );
+				alert( '' + "\n" + results );
 			}
 		}
 	}
@@ -803,7 +803,7 @@ function ShowForumBanDetails( accountid )
 	var $Details = $J('#forum_bandetails_' + accountid );
 	$Details.show();
 
-	ShowAlertDialog( 'Ban details', $Details ).always( function() {
+	ShowAlertDialog( '', $Details ).always( function() {
 		$J(document.body).append( $Details.hide() );
 	});
 }
@@ -890,7 +890,7 @@ function OnForumReorder( elContainer )
 
 function GroupAdmin_DeleteForum( strForumType, gidFeature )
 {
-	if ( confirm( 'Are you sure you want to delete this forum?  This action cannot be undone.' ) )
+	if ( confirm( '' ) )
 	{
 		var elForm = document.forms['delete_forum_form'];
 		elForm.elements['forumtype'].value = strForumType;
@@ -906,25 +906,25 @@ function GroupAnnouncement_ShowHTMLImportDialog( btn, selector )
 	if ( $Btn.hasClass( 'btn_disabled' ) )
 		return;
 
-	var strDialogTitle = 'Import from HTML';
+	var strDialogTitle = '';
 
 	$Btn.addClass( 'btn_disabled' );
 
 	var $Textarea = $J(selector);
 
 	var $Dialog = $J('<div/>');
-	$Dialog.append( $J('<div/>').text( 'Type or paste HTML below.' ) );
+	$Dialog.append( $J('<div/>').text( '' ) );
 	var $HTMLTextarea = $J('<textarea/>', {cols: 40, rows: 14} );
 	$HTMLTextarea.css( 'width', '462px').css( 'margin', '4px 0');
 	$Dialog.append( $HTMLTextarea );
 
 	var $HTMLNewlineCheck = $J('<input/>', {type: 'checkbox', id: 'html_newline_check'} );
-	var $Label = $J('<label/>', {'for': 'html_newline_check'}).text( 'Preserve newlines' );
-	$Label.data('community-tooltip', 'In HTML, newlines usually have no effect, but in BBCode they will show as blank lines.  If you used &lt;p&gt; or &lt;br&gt; tags, leave this unchecked.  If you usually use blog software that automatically adds &lt;br&gt; tags for newlines, you will probably want to check this box.' );
+	var $Label = $J('<label/>', {'for': 'html_newline_check'}).text( '' );
+	$Label.data('community-tooltip', '' );
 	BindCommunityTooltip( $Label );
 	$Dialog.append( $J('<div/>').append( $HTMLNewlineCheck, $Label )) ;
 
-	ShowConfirmDialog( strDialogTitle, $Dialog, 'Convert to BBCode' )
+	ShowConfirmDialog( strDialogTitle, $Dialog, '' )
 		.done( function () {
 			if ( !$HTMLTextarea.val() )
 				return;
@@ -935,7 +935,7 @@ function GroupAnnouncement_ShowHTMLImportDialog( btn, selector )
 			}).done( function( data ) {
 				if ( $Textarea.val() )
 				{
-					ShowConfirmDialog( strDialogTitle, 'You\'ve already entered text in the body.  Would you like to replace it with the converted text or append the new text?', 'Replace', null, 'Append' )
+					ShowConfirmDialog( strDialogTitle, '', '', null, '' )
 						.done( function( button ) {
 							if ( button == 'OK' )
 								$Textarea.val( data.content );

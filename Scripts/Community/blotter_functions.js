@@ -269,19 +269,19 @@ function Blotter_PostStatus( textboxid, appboxid, posturl )
 			if ( response && response.message )
 				$('blotter_statuspost_entry_error').update( response.message );
 			else
-				$('blotter_statuspost_entry_error').update( 'Posting status updates is unavailable right now' );
+				$('blotter_statuspost_entry_error').update( '' );
 		}
 	});
 
 	// clear the input box
 	$(textboxid).value = '';
 	$(appboxid).value = 0;
-	$('blotter_appselect_app_activeoption').update( 'TAG WITH GAME' );
+	$('blotter_appselect_app_activeoption').update( '' );
 }
 
 function Blotter_DeletePostedStatus( postid, statusid, posturl )
 {
-	if ( !confirm( 'Delete this status update?' ) )
+	if ( !confirm( '' ) )
 		return;
 
 	new Ajax.Request( posturl, {

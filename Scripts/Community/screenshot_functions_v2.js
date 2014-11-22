@@ -113,7 +113,7 @@ function ScreenshotUpdateBatchCount() {
 	{
 		if ( $('ScreenshotManagementButtonSelectAll') )
 		{
-			$('ScreenshotManagementButtonSelectAll').innerHTML = "Deselect all";
+			$('ScreenshotManagementButtonSelectAll').innerHTML = "";
 			$('ScreenshotManagementButtonSelectAll').onclick = DeselectAllScreenshots;
 		}
 	}
@@ -121,7 +121,7 @@ function ScreenshotUpdateBatchCount() {
 	{
 		if ( $('ScreenshotManagementButtonSelectAll') )
 		{
-			$('ScreenshotManagementButtonSelectAll').innerHTML = "Select all";
+			$('ScreenshotManagementButtonSelectAll').innerHTML = "";
 			$('ScreenshotManagementButtonSelectAll').onclick = SelectAllScreenshots;
 		}
 	}
@@ -135,11 +135,11 @@ function ConfirmBatchAction( action ) {
 		$('BatchScreenshotManagementAction').value = action;
 		if ( batchCount == 1 )
 		{
-			countText = '1 ' + 'item';
+			countText = '1 ' + '';
 		}
 		else
 		{
-			countText = batchCount + ' ' + 'items';
+			countText = batchCount + ' ' + '';
 		}
 		$$('.ss_batch_count').each( function(c) { c.innerHTML = countText; } );
 		if ( action == 'delete' )
@@ -153,15 +153,15 @@ function ConfirmBatchAction( action ) {
 		{
 			if ( action == 'public' )
 			{
-				$('batchModalPrivacyType').innerHTML = 'Public';
+				$('batchModalPrivacyType').innerHTML = '';
 			}
 			else if ( action == 'friendsonly' )
 			{
-				$('batchModalPrivacyType').innerHTML = 'Friends Only';
+				$('batchModalPrivacyType').innerHTML = '';
 			}
 			else if ( action == 'private' )
 			{
-				$('batchModalPrivacyType').innerHTML = 'Private';
+				$('batchModalPrivacyType').innerHTML = '';
 			}
 			$('batchModal_h1_delete').hide();
 			$('modalWarningText_delete').hide();
