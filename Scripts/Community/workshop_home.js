@@ -18,6 +18,6 @@ function OnSelectGame( GameSelector, rgAppData )
 
 function OnLoad()
 {
-	gSearchField_Apps = new SearchFieldWithText( 'workshopSearchText', "Search for a Workshop", ShowAppSuggestions, null );
+	gSearchField_Apps = new SearchFieldWithText( 'workshopSearchText', "", ShowAppSuggestions, null );
 	InitWorkshopAppSearch();
 }

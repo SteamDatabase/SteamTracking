@@ -148,7 +148,7 @@ var CommunitySearch = {
 			}
 		} ).fail( function( jqxhr ) {
 			$J('#search_results').stop( true, false );
-			$J('#search_results').html( 'Could not retrieve any results from the Steam search servers. The servers may be experiencing heavy load or other difficulty. Please try again later.' );
+			$J('#search_results').html( '' );
 			$J('#search_results').fadeTo( 500, 1.0 );
 		} ).done( function( data ) {
 			if ( data.success == 1 )

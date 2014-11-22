@@ -51,7 +51,7 @@ function MarkAllRead()
 					RefreshNotificationArea();
 				},
 				onFailure: function() {
-					alert( 'There was an error communicating with the network. Please try again later.' );
+					alert( '' );
 				},
 				onComplete: function() { g_bMarkAllReadInFlight = false; }
 	} );
@@ -304,7 +304,7 @@ function RemoveCommentNotification( elLink, strCommentThreadType, steamidOwner, 
 		g_rgCommentNotifications[index].is_removed = true;
 		ApplyCommentNotificationFilters();
 	}).fail( function() {
-		ShowAlertDialog( 'Error', 'There was an error communicating with the network. Please try again later.' );
+		ShowAlertDialog( '', '' );
 	});
 }
 
