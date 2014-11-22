@@ -6,7 +6,7 @@ function PresentGroupInviteOptions( rgFriendsToInvite )
 	// this deferred will succeed if an invite is succesfully sent, fail if the user dismisses the modal or the invite AJAX fails
 	var deferred = new jQuery.Deferred();
 
-	var Modal = ShowDialog( 'Invite to join your group', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( '', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	var bBulkFriendInvite = false;
@@ -76,16 +76,16 @@ function InviteUserToGroup( Modal, groupID, steamIDInvitee )
 		type: 'POST'
 	} ).done( function( data ) {
 		Modal && Modal.Dismiss();
-		var strMessage = 'Invitation Sent!';
+		var strMessage = '';
 		if ( data.duplicate )
 		{
-			strMessage += '<br>Some invites were not sent because the recipients are already in the group or have already received invites.';
+			strMessage += '<br>';
 		}
-		ShowAlertDialog( 'Invite to join your group', strMessage );
+		ShowAlertDialog( '', strMessage );
 
 	}).fail( function( data ) {
 		Modal && Modal.Dismiss();
-		ShowAlertDialog( '', data.results ? data.results : 'Error processing your request. Please try again.' );
+		ShowAlertDialog( '', data.results ? data.results : '' );
 	});
 }
 
@@ -94,23 +94,23 @@ function RemoveFriend()
 	var steamid = g_rgProfileData['steamid'];
 	var strPersonaName = g_rgProfileData['personaname'];
 
-	ShowConfirmDialog( 'Remove friend',
-		'Are you sure you want to remove %s from your friend list?'.replace( /%s/, strPersonaName ),
-		'Remove friend'
+	ShowConfirmDialog( '',
+		''.replace( /%s/, strPersonaName ),
+		''
 	).done( function() {
 		$J.post(
 			'https://steamcommunity.com/actions/RemoveFriendAjax',
 			{sessionID: g_sessionID, steamid: steamid }
 		).done( function() {
-			ShowAlertDialog( 'Remove friend',
-				'%s has been removed from your friends list.'.replace( /%s/, strPersonaName )
+			ShowAlertDialog( '',
+				''.replace( /%s/, strPersonaName )
 			).done( function() {
 				// reload the page when they click OK, so we update friend state
 				window.location.reload();
 			} );
 		} ).fail( function() {
-			ShowAlertDialog( 'Remove friend',
-				'Error processing your request. Please try again.'
+			ShowAlertDialog( '',
+				''
 			);
 		} );
 	} );
@@ -128,19 +128,19 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 	).done( function() {
 		if ( !bRespondingToInvite )
 		{
-			ShowAlertDialog( 'Add Friend' + ' - ' + strPersonaName,
-				'Friend invite sent. They will appear as a friend once they have accepted your invite.'
+			ShowAlertDialog( '' + ' - ' + strPersonaName,
+				''
 			);
 		}
 		else
 		{
-			ShowAlertDialog( 'Accept Friend Request',
-				'Friend request accepted'
+			ShowAlertDialog( '',
+				''
 			).done( function() { window.location.reload(); } );
 		}
 	} ).fail( function() {
-		ShowAlertDialog( 'Add Friend',
-			'Error adding friend. Please try again.'
+		ShowAlertDialog( '',
+			''
 		);
 	} );
 }
@@ -155,12 +155,12 @@ function IgnoreFriendInvite( steamid_friend, strPersonaName_friend )
 		'https://steamcommunity.com/actions/IgnoreFriendInviteAjax',
 		{sessionID: g_sessionID, steamid: steamid }
 	).done( function() {
-		ShowAlertDialog( 'Ignore Friend Request',
-			'Friend request ignored'
+		ShowAlertDialog( '',
+			''
 		).done( function() { window.location.reload(); } );
 	} ).fail( function() {
-		ShowAlertDialog( 'Ignore Friend Request',
-			'Error ignoring friend request. Please try again.'
+		ShowAlertDialog( '',
+			''
 		);
 	} );
 }
@@ -171,20 +171,20 @@ function ConfirmBlock()
 	var steamid = g_rgProfileData['steamid'];
 	var strPersonaName = g_rgProfileData['personaname'];
 
-	ShowConfirmDialog( 'Block all communication',
-		'You are about to block all communication with %s.'.replace( /%s/, strPersonaName ),
-		'Yes, block them'
+	ShowConfirmDialog( '',
+		''.replace( /%s/, strPersonaName ),
+		''
 	).done( function() {
 			$J.post(
 				'https://steamcommunity.com/actions/BlockUserAjax',
 				{sessionID: g_sessionID, steamid: steamid }
 			).done( function() {
-				ShowAlertDialog( 'Block all communication',
-					'You have blocked all communications with this player.'
+				ShowAlertDialog( '',
+					''
 				);
 			} ).fail( function() {
-				ShowAlertDialog( 'Block all communication',
-					'Error processing your request. Please try again.'
+				ShowAlertDialog( '',
+					''
 				);
 			} );
 		} );
@@ -206,7 +206,7 @@ function InitProfileSummary( strSummary )
 		if ( window.BindAllEmoticonHovers )
 			BindAllEmoticonHovers( $ModalSummary );
 		$SummaryFooter.find( 'span' ).click( function() {
-			var Modal = ShowDialog( 'Info', $ModalSummary );
+			var Modal = ShowDialog( '', $ModalSummary );
 			window.setTimeout( function() { Modal.AdjustSizing(); }, 1 );
 		} );
 	}
@@ -215,12 +215,12 @@ function InitProfileSummary( strSummary )
 
 function ShowFriendsInCommon( unAccountIDTarget )
 {
-	ShowPlayerList( 'Friends in Common', 'friendsincommon', unAccountIDTarget );
+	ShowPlayerList( '', 'friendsincommon', unAccountIDTarget );
 }
 
 function ShowFriendsInGroup( unClanIDTarget )
 {
-	ShowPlayerList( 'Friends in Group', 'friendsingroup', unClanIDTarget );
+	ShowPlayerList( '', 'friendsingroup', unClanIDTarget );
 }
 
 function ShowPlayerList( title, type, unAccountIDTarget, rgAccountIDs )
@@ -296,7 +296,7 @@ function ManageFriendsInviteToGroup( $Form, groupid )
 	}
 	else
 	{
-		ShowAlertDialog( 'Invite to join your group', 'You have not selected any friends.' );
+		ShowAlertDialog( '', '' );
 	}
 }
 
@@ -304,7 +304,7 @@ function ManageFriendsExecuteBulkAction( $Form, strActionName )
 {
 	if ( $Form.find('input[type=checkbox]:checked').length == 0 )
 	{
-		ShowAlertDialog( '', 'You have not selected any friends.' );
+		ShowAlertDialog( '', '' );
 		return;
 	}
 
@@ -317,7 +317,7 @@ function ManageFriendsConfirmBulkAction( $Form, strActionName, strTitle, strSing
 	var cFriendsSelected = $Form.find('input[type=checkbox]:checked').length;
 	if ( cFriendsSelected == 0 )
 	{
-		ShowAlertDialog( strTitle, 'You have not selected any friends.' );
+		ShowAlertDialog( strTitle, '' );
 		return;
 	}
 
@@ -332,16 +332,16 @@ function ManageFriendsConfirmBulkAction( $Form, strActionName, strTitle, strSing
 
 function ManageFriendsBlock( $Form )
 {
-	ManageFriendsConfirmBulkAction( $Form, 'ignore', 'Block',
-		'Are you sure you want to block this friend?' + ' ' + 'You will no longer be able to send or receive messages or invites with this player.',
-		'Are you sure you want to block these %s friends?' + ' ' + 'You will no longer be able to send or receive messages or invites with these players.');
+	ManageFriendsConfirmBulkAction( $Form, 'ignore', '',
+		'' + ' ' + '',
+		'' + ' ' + '');
 }
 
 function ManageFriendsRemove( $Form )
 {
-	ManageFriendsConfirmBulkAction( $Form, 'remove', 'Remove Friend',
-		'Are you sure you want to remove this friend?' + ' ' + 'This player will no longer appear in your friends list and you will not be able to communicate with them.',
-		'Are you sure you want to remove these %s friends?' + ' ' + 'These players will no longer appear in your friends list and you will not be able to communicate with them.');
+	ManageFriendsConfirmBulkAction( $Form, 'remove', '',
+		'' + ' ' + '',
+		'' + ' ' + '');
 }
 
 
@@ -374,7 +374,7 @@ function ShowAliasPopup(e)
 			aliasContainer.update('');
 
 			if( !Aliases || Aliases.length == 0 )
-				Aliases.push( {newname: "This user has no known aliases"} );
+				Aliases.push( {newname: ""} );
 
 			for( var x=0; x<Aliases.length; x++ )
 			{
@@ -395,7 +395,7 @@ function ShowAliasPopup(e)
 
 function ShowFriendSelect( title, fnOnSelect )
 {
-	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>', 'Cancel' );
+	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>', '' );
 	var $ListElement = $J('<div/>', {'class': 'player_list_ctn'} );
 	var $Buttons = Modal.GetContent().find('.newmodal_buttons').detach();
 
@@ -432,26 +432,26 @@ function StartTradeOffer( unAccountID, rgParams )
 function CancelTradeOffer( tradeOfferID )
 {
 	ShowConfirmDialog(
-		'Cancel Trade Offer',
-		'Are you sure you want to cancel this trade offer?',
-		'Yes',
-		'No'
+		'',
+		'',
+		'',
+		''
 	).done( function() {
-		ActOnTradeOffer( tradeOfferID, 'cancel', 'Trade Offer Canceled', 'Cancel Trade Offer' );
+		ActOnTradeOffer( tradeOfferID, 'cancel', '', '' );
 	} );
 }
 
 function DeclineTradeOffer( tradeOfferID )
 {
 	ShowConfirmDialog(
-		'Decline Trade',
-		'Are you sure you want to decline this trade offer?  You can also modify the items and send a counter offer.',
-		'Decline Trade',
+		'',
+		'',
+		'',
 		null,
-		'Make a Counter Offer'
+		''
 	).done( function( strButton ) {
 		if ( strButton == 'OK' )
-			ActOnTradeOffer( tradeOfferID, 'decline', 'Trade Declined', 'Decline Trade' );
+			ActOnTradeOffer( tradeOfferID, 'decline', '', '' );
 		else
 			ShowTradeOffer( tradeOfferID, {counteroffer: 1} );
 	} );
@@ -473,7 +473,7 @@ function ActOnTradeOffer( tradeOfferID, strAction, strCompletedBanner, strAction
 
 		RefreshNotificationArea();
 	}).fail( function() {
-		ShowAlertDialog( strActionDisplayName, 'There was an error modifying this trade offer.  Please try again later.' );
+		ShowAlertDialog( strActionDisplayName, '' );
 		$TradeOffer.find( '.tradeoffer_footer_actions').show();
 	});
 }
