@@ -238,13 +238,13 @@ function OnIsCompanyChange()
 		$('lastnameblock').style.display = 'none';
 		$J('#uscitizenblock').hide();
 		$J('#uscitizen').prop( 'checked', false );
-		$('firstnamelabel').innerHTML = '';
+		$('firstnamelabel').innerHTML = 'Company Name';
 	}
 	else
 	{
 		$('lastnameblock').style.display = 'block';
 		$J('uscitizenblock').show();
-		$('firstnamelabel').innerHTML = '';
+		$('firstnamelabel').innerHTML = 'First Name (as written on bank records)';
 	}
 }
 
@@ -304,7 +304,7 @@ function UpdateBankInfo()
 		{
 			$('bankstate_select').style.display = 'block';
 			$('bankroutingnumberrow').style.display = 'block';
-			$('bankroutingnumberlabel').innerHTML = '';
+			$('bankroutingnumberlabel').innerHTML = 'Routing Number';
 		}
 		else
 		{
@@ -313,7 +313,7 @@ function UpdateBankInfo()
 			if ( $('bankcountry').value == 'CA' )
 			{
 				$('bankroutingnumberrow').style.display = 'block';
-				$('bankroutingnumberlabel').innerHTML = '';
+				$('bankroutingnumberlabel').innerHTML = 'Canadian Transit Number';
 			}
 			else if ( IsIBANCountry( $('bankcountry').value ) )
 			{
@@ -375,7 +375,7 @@ function ValidateUserPaymentInfo()
 			{
 				if ( !IsValidRequiredField( "#firstname", gValidFieldAlphaNumericRegex ) )
 				{
-					errorString += '<br/>';
+					errorString += 'Please enter a company name.<br/>';
 				}
 				$( 'lastname' ).value = '';
 			}
@@ -383,33 +383,33 @@ function ValidateUserPaymentInfo()
 			{
 				if ( !IsValidRequiredField( "#firstname", gValidFieldAlphaNumericRegex ) )
 				{
-					errorString += '<br/>';
+					errorString += 'Please enter a valid first name.<br/>';
 				}
 				if ( !IsValidRequiredField( "#lastname", gValidFieldAlphaNumericRegex ) )
 				{
-					errorString += '<br/>';
+					errorString += 'Please enter a valid last name.<br/>';
 				}
 			}
 		}
 
 				if ( !IsValidRequiredField( "#address1", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter a valid address.<br/>';
 		}
 		if ( !IsValidRequiredField( "#city", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter a valid city.<br/>';
 		}
 		if ( $('country').value == 'US' )
 		{
 			if ( !IsValidRequiredField( "#zip", gValidFieldAlphaNumericRegex ) )
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter a valid zip or postal code.<br/>';
 			}
 		}
 		if ( $( 'phone' ).value.length < 1 )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter your phone number, including area code.<br/>';
 		}
 	}
 	catch(e)
@@ -432,7 +432,7 @@ function ValidateUserPaymentInfo()
 				type: "GET",
 				data: $J( "#WorkshopPaymentInfoForm" ).serialize(),
 				success : function( response ) {
-					var dialog = ShowAlertDialog( '', '');
+					var dialog = ShowAlertDialog( 'Saved!', 'Your contact and address information have been saved. If you haven\'t already, please fill in your bank account and tax information.');
 					dialog.done( function() { top.location.reload(); } );
 				},
 				error: function( jqXHR ) {
@@ -482,7 +482,7 @@ function validateFields()
 		{
 			if ( !IsValidRequiredField( "#firstname", gValidFieldAlphaNumericRegex ) )
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter a company name.<br/>';
 			}
 		 	$( 'lastname' ).value = '';
 		}
@@ -490,68 +490,68 @@ function validateFields()
 		{
 			if ( !IsValidRequiredField( "#firstname", gValidFieldAlphaNumericRegex ) )
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter a valid first name.<br/>';
 			}
 			if ( !IsValidRequiredField( "#lastname", gValidFieldAlphaNumericRegex ) )
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter a valid last name.<br/>';
 			}
 		}
 		if ( !IsValidEmailAddress( $( 'email' ).value ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter a valid email address.<br/>';
 		}
 
 				if ( !IsValidRequiredField( "#address1", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter a valid address.<br/>';
 		}
 		if ( !IsValidRequiredField( "#city", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter a valid city.<br/>';
 		}
 
 		if ( $('country').value == 'US' )
 		{
 			if ( $( 'zip' ).value.length < 1 )
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter a valid zip or postal code.<br/>';
 			}
 		}
 
 		if ( $( 'phone' ).value.length < 1 )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter your phone number, including area code.<br/>';
 		}
 
 				if ( !IsValidRequiredField( "#bankname", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter a valid bank name.<br/>';
 		}
 		if ( !IsValidRequiredField( "#bankaccountholdername", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter a valid bank account holder name (must match bank records).<br/>';
 		}
 
 				if ( !IsValidRequiredField( "#bankaddress1", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter a valid address for your bank.<br/>';
 		}
 		if ( !IsValidRequiredField( "#bankcity", gValidFieldAlphaNumericRegex ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter a valid city for your bank.<br/>';
 		}
 		if ( $('bankcountry').value == 'US' )
 		{
 			if ( $( 'bankzip' ).value.length < 1 )
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter a valid zip or postal code for your bank.<br/>';
 			}
 		}
 
 				if ( $( 'bankaccountnumber' ).value.length < 1 && !IsIBANCountry( $('bankcountry').value ) )
 		{
-			errorString += '<br/>';
+			errorString += 'Please enter your bank account number.<br/>';
 		}
 		if ( $( 'bankcountry' ).value == 'US' )
 		{
@@ -559,7 +559,7 @@ function validateFields()
 			$('swiftcode').value = '';
 			if ( $( 'bankaccountroutingnumber' ).value.length != 9 && $( 'bankaccountroutingnumber' ).value != $( 'storedroutingnumber' ).value)
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter your bank\'s routing number (9 digits).<br/>';
 			}
 		}
 		else if ( $( 'bankcountry' ).value == 'CA' )
@@ -568,18 +568,18 @@ function validateFields()
 			$('swiftcode').value = '';
 			if ( $( 'bankaccountroutingnumber' ).value.length != 9 && $( 'bankaccountroutingnumber' ).value != $( 'storedroutingnumber' ).value)
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter the Canadian Transit Number (9 digits with a leading 0).<br/>';
 			}
 		}
 		else if ( IsIBANCountry( $('bankcountry').value ) )
 		{
 			if ( $( 'bankiban' ).value.length < 1 )
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter your bank\'s IBAN.<br/>';
 			}
 			if ( $( 'swiftcode' ).value.length < 1 )
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter your bank\'s SWIFT code.<br/>';
 			}
 		}
 		else
@@ -587,7 +587,7 @@ function validateFields()
 			$('bankiban').value = '';
 			if ( $( 'swiftcode' ).value.length < 1 )
 			{
-				errorString += '<br/>';
+				errorString += 'Please enter your bank\'s SWIFT code.<br/>';
 			}
 		}
 	}
@@ -860,13 +860,13 @@ var bRetrievedFriendsPicker = false;
 var gFriendsPicker = null;
 function ShowContributorDialog( publishedfileid )
 {
-	var waitDialog = ShowBlockingWaitDialog( '', '' );
+	var waitDialog = ShowBlockingWaitDialog( 'Manage Contributors', 'Loading Friends List' );
 
 	$J.get( "https://steamcommunity.com/sharedfiles/contributorpicker/" + publishedfileid,
 		{},
 		function( data, textStatus, jqXHR ) {
 			waitDialog.Dismiss();
-			gFriendsPicker = ShowAlertDialog( '', '<div class="friendsPicker" id="friendsPicker">' + data + '</div>', '' );
+			gFriendsPicker = ShowAlertDialog( 'Manage Contributors', '<div class="friendsPicker" id="friendsPicker">' + data + '</div>', 'Cancel' );
 		}
 	);
 }
@@ -936,7 +936,7 @@ function AcceptSplit( publishedfileid )
 
 function FinalizeContributors( publishedfileid )
 {
-	if ( confirm( '' ) != true )
+	if ( confirm( 'Are you sure you want to finalize the contributors? You will be unable to add or remove them after this step.' ) != true )
 	{
 		return;
 	}
@@ -1067,7 +1067,7 @@ function ShowExternalTagSelectorDialog( url, formID, submitFuncCB )
 
 function EditPublishedFileChangeLog( publishedFileID, changeLog )
 {
-	var dialog = ShowPromptWithTextAreaDialog( '', changeLog['change_description' ], null, null, 8000 );
+	var dialog = ShowPromptWithTextAreaDialog( 'Edit Change Note', changeLog['change_description' ], null, null, 8000 );
 
 	dialog.done( function( data ) {
 		changeLog['change_description'] = data;
@@ -1107,8 +1107,8 @@ function PickWorkshopServiceProviders( publishedFileID, appID )
 			'sessionid' : g_sessionID
 		}
 	).done( function( response ) {
-		var strTitle = '';
-		var strSaveChanges = '';
+		var strTitle = 'Select service providers';
+		var strSaveChanges = 'Continue';
 		var strDescription = response;
 		var dialog = ShowConfirmDialog( strTitle, strDescription, strSaveChanges );
 
@@ -1194,7 +1194,7 @@ function SaveWorkshopServiceProviders( publishedFileID )
 	}
 	if ( total != 0 && total != 100 )
 	{
-		ShowAlertDialog( '', '' );
+		ShowAlertDialog( 'Error', 'The service provider revenue percentages must total up to 100.' );
 		return;
 	}
 
@@ -1214,10 +1214,10 @@ function SaveWorkshopServiceProviders( publishedFileID )
 		switch ( rgResults['success'] )
 		{
 			case 14:
-				ShowAlertDialog( '', '' );
+				ShowAlertDialog( 'Error', 'You cannot choose a third party organization that is also a normal contributor on your item.' );
 				break;
 			default:
-				ShowAlertDialog( '', '' + ' ' + rgResults['success'] );
+				ShowAlertDialog( 'Error', 'An error was encountered while processing your request:' + ' ' + rgResults['success'] );
 				break;
 		}
 		$J( "#SavingServiceProviderRevenueShares" ).hide();
