@@ -12974,6 +12974,15 @@
 			"loot_list_name"		"dhw2014_mousesports_rare"
 			"prefab"		"dhw14_sticker_capsule_prefab"
 		}
+		"4060"
+		{
+			"item_name"		"#StickerKit_dhw2014_flipsid3"
+			"name"		"crate_sticker_pack_dhw2014_flipsid3"
+			"item_description"		"#StickerKit_desc_dhw2014_flipsid3"
+			"image_inventory"		"econ/stickers/dhw2014/flipsid3"
+			"loot_list_name"		"dhw2014_flipsid3_rare"
+			"prefab"		"dhw14_sticker_capsule_prefab"
+		}
 		"6001"
 		{
 			"name"		"Collectible Pin - Dust II"
@@ -17632,6 +17641,216 @@
 			"item_rarity"		"rare"
 			"tournament_event_id"		"5"
 			"tournament_team_id"		"29"
+		}
+		"237"
+		{
+			"name"		"dhw2014_3dmax_gold"
+			"item_name"		"#StickerKit_dhw2014_3dmax_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_3dmax_gold"
+			"sticker_material"		"dhw2014/3dmax_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"28"
+		}
+		"238"
+		{
+			"name"		"dhw2014_bravadogaming_gold"
+			"item_name"		"#StickerKit_dhw2014_bravadogaming_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_bravadogaming_gold"
+			"sticker_material"		"dhw2014/bravadogaming_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"40"
+		}
+		"239"
+		{
+			"name"		"dhw2014_cloud9_gold"
+			"item_name"		"#StickerKit_dhw2014_cloud9_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_cloud9_gold"
+			"sticker_material"		"dhw2014/cloud9_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"33"
+		}
+		"240"
+		{
+			"name"		"dhw2014_copenhagenwolves_gold"
+			"item_name"		"#StickerKit_dhw2014_copenhagenwolves_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_copenhagenwolves_gold"
+			"sticker_material"		"dhw2014/copenhagenwolves_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"10"
+		}
+		"241"
+		{
+			"name"		"dhw2014_datteam_gold"
+			"item_name"		"#StickerKit_dhw2014_datteam_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_datteam_gold"
+			"sticker_material"		"dhw2014/datteam_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"34"
+		}
+		"242"
+		{
+			"name"		"dhw2014_dignitas_gold"
+			"item_name"		"#StickerKit_dhw2014_dignitas_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_dignitas_gold"
+			"sticker_material"		"dhw2014/dignitas_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"24"
+		}
+		"243"
+		{
+			"name"		"dhw2014_escgaming_gold"
+			"item_name"		"#StickerKit_dhw2014_escgaming_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_escgaming_gold"
+			"sticker_material"		"dhw2014/escgaming_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"42"
+		}
+		"244"
+		{
+			"name"		"dhw2014_fnatic_gold"
+			"item_name"		"#StickerKit_dhw2014_fnatic_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_fnatic_gold"
+			"sticker_material"		"dhw2014/fnatic_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"6"
+		}
+		"245"
+		{
+			"name"		"dhw2014_hellraisers_gold"
+			"item_name"		"#StickerKit_dhw2014_hellraisers_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_hellraisers_gold"
+			"sticker_material"		"dhw2014/hellraisers_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"25"
+		}
+		"246"
+		{
+			"name"		"dhw2014_ibuypower_gold"
+			"item_name"		"#StickerKit_dhw2014_ibuypower_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_ibuypower_gold"
+			"sticker_material"		"dhw2014/ibuypower_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"5"
+		}
+		"247"
+		{
+			"name"		"dhw2014_londonconspiracy_gold"
+			"item_name"		"#StickerKit_dhw2014_londonconspiracy_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_londonconspiracy_gold"
+			"sticker_material"		"dhw2014/londonconspiracy_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"36"
+		}
+		"248"
+		{
+			"name"		"dhw2014_mousesports_gold"
+			"item_name"		"#StickerKit_dhw2014_mousesports_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_mousesports_gold"
+			"sticker_material"		"dhw2014/mousesports_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"29"
+		}
+		"249"
+		{
+			"name"		"dhw2014_myxmg_gold"
+			"item_name"		"#StickerKit_dhw2014_myxmg_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_myxmg_gold"
+			"sticker_material"		"dhw2014/myxmg_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"38"
+		}
+		"250"
+		{
+			"name"		"dhw2014_navi_gold"
+			"item_name"		"#StickerKit_dhw2014_navi_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_navi_gold"
+			"sticker_material"		"dhw2014/navi_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"12"
+		}
+		"251"
+		{
+			"name"		"dhw2014_ninjasinpyjamas_gold"
+			"item_name"		"#StickerKit_dhw2014_ninjasinpyjamas_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_ninjasinpyjamas_gold"
+			"sticker_material"		"dhw2014/ninjasinpyjamas_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"1"
+		}
+		"252"
+		{
+			"name"		"dhw2014_pentasports_gold"
+			"item_name"		"#StickerKit_dhw2014_pentasports_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_pentasports_gold"
+			"sticker_material"		"dhw2014/pentasports_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"39"
+		}
+		"253"
+		{
+			"name"		"dhw2014_planetkeydynamics_gold"
+			"item_name"		"#StickerKit_dhw2014_planetkeydynamics_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_planetkeydynamics_gold"
+			"sticker_material"		"dhw2014/planetkeydynamics_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"41"
+		}
+		"254"
+		{
+			"name"		"dhw2014_teamldlc_gold"
+			"item_name"		"#StickerKit_dhw2014_teamldlc_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_teamldlc_gold"
+			"sticker_material"		"dhw2014/teamldlc_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"26"
+		}
+		"255"
+		{
+			"name"		"dhw2014_virtuspro_gold"
+			"item_name"		"#StickerKit_dhw2014_virtuspro_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_virtuspro_gold"
+			"sticker_material"		"dhw2014/virtuspro_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"31"
+		}
+		"256"
+		{
+			"name"		"dhw2014_flipsid3"
+			"item_name"		"#StickerKit_dhw2014_flipsid3"
+			"description_string"		"#StickerKit_desc_dhw2014_flipsid3"
+			"sticker_material"		"dhw2014/flipsid3"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"43"
+		}
+		"257"
+		{
+			"name"		"dhw2014_flipsid3_gold"
+			"item_name"		"#StickerKit_dhw2014_flipsid3_gold"
+			"description_string"		"#StickerKit_desc_dhw2014_flipsid3_gold"
+			"sticker_material"		"dhw2014/flipsid3_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"5"
+			"tournament_team_id"		"43"
 		}
 	}
 	"paint_kits"
@@ -26771,6 +26990,10 @@
 		"dhw2014_mousesports_rare"
 		{
 			"[dhw2014_mousesports]sticker"		"1"
+		}
+		"dhw2014_flipsid3_rare"
+		{
+			"[dhw2014_flipsid3]sticker"		"1"
 		}
 		"coupon loot list - bossyburger"
 		{
