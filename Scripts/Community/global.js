@@ -61,7 +61,7 @@ function checkAbuseSub( elForm )
 {
 	if ( !$J(elForm).find('input[name=abuseType]:checked').length )
 	{
-		alert( 'Please select a reason for reporting abuse' );
+		alert( '' );
 		return false;
 	}
 
@@ -71,9 +71,9 @@ function checkAbuseSub( elForm )
 	params.push( {name: 'json', value: 1} );
 
 	$J.post( 'https://steamcommunity.com/actions/ReportAbuse/', params).done( function() {
-		ShowAlertDialog( 'Thank You!', 'Thank you for reporting offensive content and helping to keep the Steam Community clean and friendly.' );
+		ShowAlertDialog( '', '' );
 	}).fail( function() {
-		ShowAlertDialog( 'Report Violation', 'There was a problem saving your report.  Please try again later.' );
+		ShowAlertDialog( '', '' );
 	});
 	return false;
 }
@@ -181,13 +181,13 @@ function AlertNonSteamSite( elem )
 				return true;
 			}
 		}
-		return confirm( 'Note: the URL you have clicked on is not an official Steam web site.\n\n'
+		return confirm( '\n\n'
 						+ url.replace( new RegExp( '^steam://openurl(_external)?/' ), '' ) + '\n\n'
-						+ 'If this web site asks for your user name or password, do not enter that information. You could lose your Steam account and all your games!\n'
-						+ 'Are you sure you want to visit this page? Click OK to continue at your own risk.\n' );
+						+ '\n'
+						+ '\n' );
 	}
 
-	ShowAlertDialog( '', 'The URL is badly formed.');
+	ShowAlertDialog( '', '');
 	return false;
 }
 
@@ -534,7 +534,7 @@ function ShowAbuseDialog()
 
 	if ( g_AbuseModalContents )
 	{
-		var Modal = ShowDialog( 'Report Violation', g_AbuseModalContents );
+		var Modal = ShowDialog( '', g_AbuseModalContents );
 	}
 }
 
@@ -1431,11 +1431,11 @@ var CCommentThread = Class.create( {
 
 	DisplayError: function( elError, transport )
 	{
-		var strMessage = 'Sorry, some kind of error has occurred: ';
+		var strMessage = ' ';
 		if ( transport.responseJSON && transport.responseJSON.error )
 			strMessage += transport.responseJSON.error;
 		else
-			strMessage += 'There was an error communicating with the network. Please try again later.';
+			strMessage += '';
 
 		elError.update( strMessage );
 		elError.show();
@@ -1644,17 +1644,17 @@ var CCommentThread = Class.create( {
 
 		$J(elBtnSubscribe).click( function() {
 			_this.Subscribe( function() {
-				ShowAlertDialog('Subscribe to thread', 'You\'ll receive a comment notification whenever someone replies to this thread.');
+				ShowAlertDialog('', '');
 			}, function() {
-				ShowAlertDialog('Subscribe to thread', 'There was a problem updating your subscription.  Please try again later.');
+				ShowAlertDialog('', '');
 			});
 		});
 
 		$J(elBtnUnsubscribe).click( function() {
 			_this.Unsubscribe( function() {
-				ShowAlertDialog('Unsubscribe from thread', 'You\'ll no longer receive comment notifications from this thread.');
+				ShowAlertDialog('', '');
 			}, function() {
-				ShowAlertDialog('Unsubscribe from thread', 'There was a problem updating your subscription.  Please try again later.');
+				ShowAlertDialog('', '');
 			});
 		});
 
@@ -2472,7 +2472,7 @@ function ShowSharePopup( url, baseSocialShareURL )
 
 	$( "SharePopupInput" ).value = url;
 
-	gSharePopup = ShowDialog( 'Share', $( 'SharePopup' ) );
+	gSharePopup = ShowDialog( '', $( 'SharePopup' ) );
 	gSharePopup.SetRemoveContentOnDismissal( false );
 	$( 'SharePopup' ).show();
 }
@@ -2486,7 +2486,7 @@ function ShareOnSteam()
 	$( 'ShareOnSteamDialogContents' ).hide();
 	new Ajax.Updater( "ShareOnSteamDialogContents", gShareRequestURL, { evalScripts: true, onLoaded: function() { ShowWithFade( $( 'ShareOnSteamDialogContents') ); } } );
 	$( 'ShareOnSteamDialog' ).show();
-	gShareOnSteamDialog = ShowDialog( 'Share', $( 'ShareOnSteamDialog' ) );
+	gShareOnSteamDialog = ShowDialog( '', $( 'ShareOnSteamDialog' ) );
 	gShareOnSteamDialog.SetRemoveContentOnDismissal( false );
 }
 
@@ -2504,10 +2504,10 @@ function ShareContentToUserStatus( text, urlToShare, appID, posturl )
 		parameters: { sessionid: g_sessionID, status_text: text, appid: appID },
 		onSuccess: function(transport) {
 			gShareOnSteamDialog.Dismiss();
-			ShowAlertDialog( 'Share', 'The status update has been posted to your Friends Activity.' );
+			ShowAlertDialog( '', '' );
 		},
 		onFailure: function(transport) {
-			ShowAlertDialog( 'Share', 'There was a problem sharing the status update.  Please try again later.' );
+			ShowAlertDialog( '', '' );
 		}
 	});
 }
