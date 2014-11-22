@@ -49,39 +49,39 @@ function friendAction( action )
 	count = getSelectedFriendsCount();
 	if ( count < 1 )
 	{
-		alert( "" );
+		alert( "You have not selected any friends." );
 		return;
 	}
-	msg = " " + count + "\n\n";
+	msg = "Friends selected: " + count + "\n\n";
 	if ( action == 'ignore' || action == 'remove' || action == 'addfriend' )
 	{
 		if ( action == 'ignore' )
 		{
 			if ( count == 1 )
 			{
-				msg += "";
+				msg += "You will no longer be able to send or receive messages or invites with this player.";
 			}
 			else
 			{
-				msg += "";
+				msg += "You will no longer be able to send or receive messages or invites with these players.";
 			}
 		}
 		else if ( action == 'remove' )
 		{
 			if ( count == 1 )
 			{
-				msg += "";
+				msg += "This player will no longer appear in your friends list and you will not be able to communicate with them.";
 			}
 			else
 			{
-				msg += "";
+				msg += "These players will no longer appear in your friends list and you will not be able to communicate with them.";
 			}
 		}
 		else if ( action == 'addfriend' )
 		{
-				msg += "";
+				msg += "Add to your friends list";
 		}	
-		msg += "\n\n" + "";
+		msg += "\n\n" + "Press OK to complete this action or Cancel to go back";
 		if ( !window.confirm( msg ) )
 		{
 			return;
@@ -184,16 +184,16 @@ function filterCoplay( appid )
 	actionInput.value = appid;
 	if ( appid < 1 )
 	{
-		alert( "" );
+		alert( "You have not selected any friends." );
 		return;
 	}
-	msg = " " + appid + "\n\n";
+	msg = "#BulkActions_FilterCoplayByAppID " + appid + "\n\n";
 	if ( appid > 0 )
 	{
 
-		msg += "";
+		msg += "You will no longer be able to send or receive messages or invites with this player.";
 
-		msg += "\n\n" + "";
+		msg += "\n\n" + "Press OK to complete this action or Cancel to go back";
 		if ( !window.confirm( msg ) )
 		{
 			return;
