@@ -11,28 +11,28 @@ function UserReview_Rate( recommendationID, bRateUp, baseURL, callback )
 		}
 		else if ( results.success == 21 )
 		{
-			ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+			ShowAlertDialog( '', '' );
 		}
 		else if ( results.success == 15 )
 		{
-			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action.' );
+			ShowAlertDialog( '', '' );
 		}
 		else if ( results.success == 24 )
 		{
-			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+			ShowAlertDialog( '', '' );
 		}
 		else
 		{
-			ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+			ShowAlertDialog( '', '' + results.success );
 		}
 	} );
 }
 
 function UserReview_Report( recommendationID, baseURL, callback )
 {
-	var dialog = ShowPromptWithTextAreaDialog( 'Report Review', '', null, null, 1000 );
+	var dialog = ShowPromptWithTextAreaDialog( '', '', null, null, 1000 );
 	var explanation = $J('<div/>', { 'class': 'user_review_report_dialog_explanation' } );
-	explanation.html( 'Please enter the reason why you are reporting this review for violating the Steam Terms of Service or Online Conduct Rules. This cannot be undone.' );
+	explanation.html( '' );
 
 	var textArea = dialog.m_$Content.find( 'textarea' );
 	textArea.addClass( "user_review_report_dialog_text_area" );
@@ -58,11 +58,11 @@ function UserReview_Report( recommendationID, baseURL, callback )
 			}
 			else if ( results.success == 21 )
 			{
-				ShowAlertDialog( 'Error', '##UserReviews_Error_NotLoggedIn_Text' );
+				ShowAlertDialog( '', '' );
 			}
 			else
 			{
-				ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+				ShowAlertDialog( '', '' + results.success );
 			}
 		} );
 	} );
@@ -70,7 +70,7 @@ function UserReview_Report( recommendationID, baseURL, callback )
 
 function UserReview_ShowUpdateReviewDialog( recommendationID, existingText, baseURL )
 {
-	var dialog = ShowPromptWithTextAreaDialog( 'Update Your Review', existingText, null, null, 4096 );
+	var dialog = ShowPromptWithTextAreaDialog( '', existingText, null, null, 4096 );
 
 	dialog.done( function( note ) {
 		if ( !note )
@@ -100,7 +100,7 @@ function UserReview_Update( recommendationID, params, baseURL, callback )
 		}
 		else
 		{
-			ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+			ShowAlertDialog( '', '' + results.success );
 		}
 	} );
 }
@@ -129,14 +129,14 @@ function UserReview_Moderate( recommendationID, params, baseURL, callback )
 			}
 			else
 			{
-				ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+				ShowAlertDialog( '', '' + results.success );
 			}
 		} );
 }
 
 function UserReview_ClearDeveloperFlag( recommendationID, baseURL, callback )
 {
-	var dialog = ShowConfirmDialog( 'Clear Developer Flag Reason', 'This review was flagged by the developer. Are you sure you want to clear this status?' );
+	var dialog = ShowConfirmDialog( '', '' );
 	dialog.done( function() {
 		$J.post( baseURL + '/userreviews/cleardeveloperflag/' + recommendationID, {'sessionid' : g_sessionID} )
 		.done( function( results ) {
@@ -149,7 +149,7 @@ function UserReview_ClearDeveloperFlag( recommendationID, baseURL, callback )
 			}
 			else
 			{
-				ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+				ShowAlertDialog( '', '' + results.success );
 			}
 		} );
 	});
@@ -157,9 +157,9 @@ function UserReview_ClearDeveloperFlag( recommendationID, baseURL, callback )
 
 function UserReview_SetDeveloperResponse( recommendationID, recommendation, baseURL, callback )
 {
-	var dialog = ShowPromptWithTextAreaDialog( 'Write a response', recommendation.developer_response, null, null, 8000 );
+	var dialog = ShowPromptWithTextAreaDialog( '', recommendation.developer_response, null, null, 8000 );
 	var explanation = $J('<div/>', { 'class': 'user_review_report_dialog_explanation' } );
-	explanation.html( 'You can choose to respond to this review in an official capacity. This response will be visible to anyone who can see this review and will be marked as from the developer.' );
+	explanation.html( '' );
 
 	var textArea = dialog.m_$Content.find( 'textarea' );
 	textArea.addClass( "user_review_report_dialog_text_area" );
@@ -176,7 +176,7 @@ function UserReview_SetDeveloperResponse( recommendationID, recommendation, base
 			}
 			else
 			{
-				ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+				ShowAlertDialog( '', '' + results.success );
 			}
 		} );
 	} );
@@ -227,14 +227,14 @@ function UserReview_ShowReportsDialog( recommendationID, baseURL )
 					reportDiv.append( divClear );
 				container.append( reportDiv );
 			}
-			var dialog = ShowAlertDialog( 'Clear Reports', container );
+			var dialog = ShowAlertDialog( '', container );
 		}
 	} );
 }
 
 function UserReview_ShowClearReportsDialog( recommendationID, baseURL, callback )
 {
-	var dialog = ShowConfirmDialog( 'Clear Reports', 'Are you sure you want to clear all reports? This cannot be undone!' );
+	var dialog = ShowConfirmDialog( '', '' );
 	dialog.done( function() {
 		UserReview_Moderate( recommendationID, { 'clear_reports' : 1 }, baseURL, callback);
 	});
