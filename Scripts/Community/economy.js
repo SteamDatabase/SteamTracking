@@ -248,34 +248,34 @@ function HideTagFilters()
 
 var kStandardTag_Tradable =
 {
-	name: '',
+	name: 'Tradable',
 	internal_name: "tradable",
 	category: "misc",
-	category_name: ''
+	category_name: 'Misc'
 };
 
 var kStandardTag_Untradable =
 {
-	name: '',
+	name: 'Not Tradable',
 	internal_name: "untradable",
 	category: "misc",
-	category_name: ''
+	category_name: 'Misc'
 };
 
 var kStandardTag_Marketable =
 {
-	name: '',
+	name: 'Marketable',
 	internal_name: "marketable",
 	category: "misc",
-	category_name: ''
+	category_name: 'Misc'
 };
 
 var kStandardTag_Unmarketable =
 {
-	name: '',
+	name: 'Not Marketable',
 	internal_name: "unmarketable",
 	category: "misc",
-	category_name: ''
+	category_name: 'Misc'
 };
 
 function CreateItemContextMenuButton( elItemHolder, strCompositeId, owner )
@@ -621,7 +621,7 @@ var CInventory = Class.create( {
 				{
 					var elExpandTags = new Element( 'div',{'class': 'econ_tag_filter_collapsable_tags_showlink whiteLink' } );
 					var elCollapsedTagCtn = new Element( 'div', {'class': 'econ_tag_filter_collapsable_tags', style: 'display: none;' } );
-					elExpandTags.update( '' );
+					elExpandTags.update( '+ Show more' );
 					Event.observe( elExpandTags, 'click', (function( elExpandLink, elDivToExpand ) { elExpandLink.hide(); new Effect.BlindDown( elDivToExpand, {duration: 0.25} ); } ).bind( null, elExpandTags, elCollapsedTagCtn ) );
 
 					elTagCtn.appendChild( elExpandTags );
@@ -863,7 +863,7 @@ var CInventory = Class.create( {
 		var elItem = new Element( 'div', {'class': 'item unknownItem' } );
 		elItem.identify();
 		elItem.update( '<img src="https://steamcommunity-a.akamaihd.net/public/images/' + ( g_bIsTrading ? 'login/throbber.gif' : 'trans.gif' ) + '">' );
-		elItem.rgItem = { unknown: true, id: itemid, appid: this.appid, contextid: this.contextid, name: ' ' + itemid, descriptions: [], fraudwarnings: [ '' ] };
+		elItem.rgItem = { unknown: true, id: itemid, appid: this.appid, contextid: this.contextid, name: 'Unknown Item ' + itemid, descriptions: [], fraudwarnings: [ 'Could not retrieve information about this item.' ] };
 
 		if ( g_bIsTrading )
 		{
@@ -1549,7 +1549,7 @@ var CUser = Class.create( {
 				elInventory.hide();
 				$('inventories').insert( elInventory );
 
-				var templAllContextName = new Template( '');
+				var templAllContextName = new Template( 'All #{appname} Items');
 
 				var rgContext = {
 					id: APPWIDE_CONTEXT,
@@ -1688,7 +1688,7 @@ var CUser = Class.create( {
 			if ( !elFailedInventory )
 			{
 				// if we don't have the "Failed" div, then just do a an alert
-				alert( '' );
+				alert( 'This inventory is not available at this time.  Please try again later.' );
 			}
 		}
 
@@ -2098,7 +2098,7 @@ function SelectInventory( appid, contextid, bForceSelect )
 }
 
 /* special display rules for economy apps, logos, special messages, etc */
-var g_rgEconomyDisplay = {"440":{"howtoget":null},"620":{"howtoget":null},"753":{"1":{"howtoget":null}},"99900":{"logo":"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"},"99920":{"logo":"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"}};
+var g_rgEconomyDisplay = {"440":{"howtoget":"You can get them from free in-game item drops, the in-game Mann Co. Store, or trade for them with friends."},"620":{"howtoget":"You can get them from the Portal 2 in-game store or trade for them with friends."},"753":{"1":{"howtoget":"You can get extra copies of games during special promotions, or by purchasing a game from the Steam Store and selecting \"Purchase as a Gift\" at checkout time."}},"99900":{"logo":"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"},"99920":{"logo":"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/applogos\/99900.png"}};
 function GetEconomyDisplay( appid, contextid )
 {
 	var oDisplay = {};
@@ -2187,7 +2187,7 @@ function CancelItemHover( elItem )
 var iActiveSelectView = 0;
 
 
-var HoverCurrencyFromTemplate = new Template( '');
+var HoverCurrencyFromTemplate = new Template( '<span style="#{currencystyle}">#{amount}</span> from #{contextname}');
 
 function GetNameForItem( item )
 {
@@ -2286,7 +2286,7 @@ function BuildHover( prefix, item, owner )
 			if ( g_bIsInventoryPage && item.is_currency )
 			{
 				var warning = new Element( 'div' );
-				warning.update( '' );
+				warning.update( 'This amount is private and shown only to you.' );
 				elFraudWarnings.appendChild( warning );
 			}
 			elFraudWarnings.show();
@@ -2528,12 +2528,12 @@ function PopulateMarketActions( elActions, item )
 		var elMarketLink = new Element( 'a', {
 			'href': 'https://steamcommunity.com/market/listings/' + item.appid + '/' + encodeURIComponent( strMarketName )
 		} );
-		elMarketLink.update( '' );
+		elMarketLink.update( 'View in Community Market' );
 		elPriceInfoHeader.appendChild( elMarketLink );
 		elPriceInfo.appendChild( elPriceInfoHeader );
 
 		var elPriceInfoContent = new Element( 'div', { 'style': 'min-height: 3em; margin-left: 1em;' } );
-		elPriceInfoContent.update( '<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="">' );
+		elPriceInfoContent.update( '<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="Working...">' );
 		elPriceInfo.appendChild( elPriceInfoContent );
 
 		new Ajax.Request( 'https://steamcommunity.com/market/priceoverview/', {
@@ -2550,19 +2550,19 @@ function PopulateMarketActions( elActions, item )
 						var strInfo = '';
 						if ( transport.responseJSON.lowest_price )
 						{
-							strInfo += ' ' + transport.responseJSON.lowest_price + '<br>'
+							strInfo += 'Starting at: ' + transport.responseJSON.lowest_price + '<br>'
 						}
 						else
 						{
-							strInfo += '' + '<br>';
+							strInfo += 'There are no listings currently available for this item.' + '<br>';
 						}
 
 						if ( transport.responseJSON.volume )
 						{
-							var strVolume = '';
+							var strVolume = '%1$s sold in the last 24 hours';
 							strVolume = strVolume.replace( '%1$s', transport.responseJSON.volume );
-							//strInfo += ' ' + transport.responseJSON.median_price + '<br>';
-							strInfo += ' ' + strVolume + '<br>';
+							//strInfo += 'Median price: ' + transport.responseJSON.median_price + '<br>';
+							strInfo += 'Volume: ' + strVolume + '<br>';
 						}
 
 						elPriceInfoContent.update( strInfo );
@@ -2573,7 +2573,7 @@ function PopulateMarketActions( elActions, item )
 
 		elActions.appendChild( elPriceInfo );
 
-		var elSellButton = CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', '' );
+		var elSellButton = CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', 'Sell' );
 		elActions.appendChild( elSellButton );
 
 		if ( !g_bMarketAllowed )
@@ -2601,8 +2601,8 @@ function SellCurrentSelection()
 	if ( g_rgWalletInfo['wallet_currency'] == 0 )
 	{
 		MessageDialog.Show(
-			'',
-			''
+			'You cannot sell items in the Community Market until you <a href="http://store.steampowered.com/steamaccount/addfunds" target="_top">add funds to your Steam Wallet</a> or make a purchase in the Steam store and provide your billing address.',
+			'Cannot sell item'
 		);
 	}
 	else
@@ -2689,7 +2689,7 @@ SellItemDialog = {
 		$('market_sell_buyercurrency_input').style.borderColor = '';
 		$('market_sell_dialog_error').hide();
 
-		$('market_sell_dialog_title').update( '' );
+		$('market_sell_dialog_title').update( 'Put an item up for sale' );
 		$('market_sell_dialog_background').show();
 		$('market_sell_dialog_item_availability_hint').hide();
 		$('market_sell_dialog_confirm_buttons').hide();
@@ -2901,7 +2901,7 @@ SellItemDialog = {
 
 				if ( !$('market_sell_dialog_accept_ssa') || !$('market_sell_dialog_accept_ssa').checked )
 		{
-			this.DisplayError( '' );
+			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to sell this item.' );
 			return;
 		}
 
@@ -2924,7 +2924,7 @@ SellItemDialog = {
 				$('market_sell_currency_input').style.borderColor = 'red';
 			}
 
-			var strError = ' '
+			var strError = ' The price entered exceeds the maximum price of %1$s.'
 					.replace( '%1$s', v_currencyformat( g_rgWalletInfo['wallet_trade_max_balance'], GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
 			this.DisplayError( strError );
 			return;
@@ -2933,7 +2933,7 @@ SellItemDialog = {
 		if ( price <= 0 || buyerPrice <= 0 )
 		{
 			$('market_sell_currency_input').style.borderColor = 'red';
-			this.DisplayError( '' );
+			this.DisplayError( 'You must enter a valid price.' );
 			return;
 		}
 
@@ -2948,7 +2948,7 @@ SellItemDialog = {
 		$('market_sell_buyercurrency_input').style.borderColor = '';
 		$('market_sell_dialog_error').hide();
 
-		$('market_sell_dialog_title').update( '' );
+		$('market_sell_dialog_title').update( 'Confirm sell price' );
 		$('market_sell_dialog_background').fade({ duration: 0.25 });
 		new Effect.BlindDown( 'market_sell_dialog_item_availability_hint', { duration: 0.25 } );
 		new Effect.BlindDown( 'market_sell_dialog_confirm_buttons', { duration: 0.25 } );
@@ -3025,7 +3025,7 @@ SellItemDialog = {
 		this.m_bWaitingForUserToConfirm = false;
 
 		// reverse the effects
-		$('market_sell_dialog_title').update( '' );
+		$('market_sell_dialog_title').update( 'Put an item up for sale' );
 
 		var item = this.m_item;
 
@@ -3073,7 +3073,7 @@ SellItemDialog = {
 		}
 		else
 		{
-			this.DisplayError( '' );
+			this.DisplayError( 'There was a problem listing your item. Refresh the page and try again.' );
 		}
 	},
 
@@ -3097,7 +3097,7 @@ SellItemDialog = {
 		}
 		else
 		{
-			this.DisplayError( '' );
+			this.DisplayError( 'There was a problem listing your item. Refresh the page and try again.' );
 		}
 	},
 
@@ -3727,7 +3727,7 @@ function SelectItemDialogOnSelect()
 	}
 	else
 	{
-		alert( '' );
+		alert( 'There was a problem saving your selection, please try again later.' );
 	}
 }
 
@@ -3877,7 +3877,7 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strFormatSuffix )
 {
 	var plot = $J.jqplot('pricehistory', [line1], {
-		title:{text: '', textAlign: 'left' },
+		title:{text: 'Median Sale Prices', textAlign: 'left' },
 		gridPadding:{left: 45, right:45, top:25},
 		axesDefaults:{ showTickMarks:false },
 		axes:{
@@ -3911,7 +3911,7 @@ function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strForm
 			tooltipOffset: 20,
 			fadeTooltip: true,
             yvalues: 2,
-            formatString: '<strong>%s</strong><br>%s<br>'
+            formatString: '<strong>%s</strong><br>%s<br>%d sold'
 		},
 		series:[{lineWidth:3, markerOptions:{show: false, style:'circle'}}],
 		seriesColors: [ "#688F3E" ]
@@ -4047,13 +4047,13 @@ function pricehistory_zoomLifetime( plotPriceHistory, timePriceHistoryEarliest, 
 function ReportTradeScam( steamIDTarget, strPersonaName )
 {
 	var $Dialog = $J('<div/>');
-	$Dialog.append( $J('<div/>', {'class': 'trade_scam_report_label' }).html( ''.replace( /%s/, strPersonaName ) ) );
+	$Dialog.append( $J('<div/>', {'class': 'trade_scam_report_label' }).html( 'Use this to report %s to Steam Support for an attempted scam.<br><br>Please provide a brief description:'.replace( /%s/, strPersonaName ) ) );
 	var $TextArea = $J('<textarea/>', {'rows': 3, 'cols': 26 })
 	$Dialog.append( $J('<div/>', {'class': 'gray_bevel fullwidth' }).append( $TextArea ) );
-	var Modal = ShowConfirmDialog( '', $Dialog, '').done( function() {
+	var Modal = ShowConfirmDialog( 'Report Scam', $Dialog, 'Report Scam').done( function() {
 		if ( !$TextArea.val() )
 		{
-			ShowAlertDialog( '', '' );
+			ShowAlertDialog( 'Report Scam', 'A description is required.' );
 			return;
 		}
 
@@ -4066,9 +4066,9 @@ function ReportTradeScam( steamIDTarget, strPersonaName )
 		};
 
 		$J.post( 'https://steamcommunity.com/actions/ReportAbuse/', rgParams).done( function() {
-			ShowAlertDialog( '', '' );
+			ShowAlertDialog( 'Thank You!', 'Your report has been submitted and will be reviewed by Steam Support.' );
 		}).fail( function() {
-			ShowAlertDialog( '', '' );
+			ShowAlertDialog( 'Report Scam', 'There was a problem saving your report.  Please try again later.' );
 		});
 	} );
 
