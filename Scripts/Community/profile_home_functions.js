@@ -1,7 +1,7 @@
 
 function leaveGroupPrompt( groupId, groupName )
 {
-	if ( window.confirm( 'You are about to leave the group: \n' + groupName + '\nAre you sure?' ) )
+	if ( window.confirm( '' ) )
 	{
 		leaveURL = processURL + '?action=leaveGroup&groupId=' + groupId + '&sessionID=' + escape( $('sessionID').value );
 		location.href = leaveURL;

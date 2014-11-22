@@ -33,7 +33,7 @@ function BeginTrading( bShowTutorial )
 	{
 		var elEvent = new Element( 'div', {'class': 'logevent' } );
 		elEvent.update(
-				'<%1$s>Warning:<%2$s> %3$s was recently trade banned and is currently on probation. %4$s may not be trustworthy.'
+				''
 					.replace( '%1$s', 'span class="warning"' )
 					.replace( '%2$s', '/span' )
 					.replace( '%3$s', g_strTradePartnerPersonaName )
@@ -177,7 +177,7 @@ CUserThem = Class.create( CUser, {
 var UserThem = new CUserThem();
 
 var templActiveApp = new Template( '<img src="#{icon}"> #{name}' );
-var templAllContextName = new Template( 'All #{appname} Items');
+var templAllContextName = new Template( '');
 
 function TradePageSelectNoInventory( user )
 {
@@ -186,7 +186,7 @@ function TradePageSelectNoInventory( user )
 	$('filter_tag_show').hide();
 	$('filter_tag_hide').hide();
 	$('inventories').childElements().invoke( 'hide' );
-	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'https://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: 'Select an inventory to view items you can trade.' } ) );
+	$('appselect_activeapp').update( templActiveApp.evaluate( {icon:'https://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: '' } ) );
 }
 
 function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
@@ -632,7 +632,7 @@ CTradeStateManager = {
 	{
 		if ( g_bConfirmPending )
 		{
-			$('trade_confirm_message').update( 'Waiting for the other party to confirm...' );
+			$('trade_confirm_message').update( '' );
 			$('trade_confirmbtn').hide();
 			$('trade_confirm_throbber').show();
 		}
@@ -643,12 +643,12 @@ CTradeStateManager = {
 			if ( UserYou.bReady && UserThem.bReady )
 			{
 				$('trade_confirmbtn').addClassName( 'active' );
-				$('trade_confirm_message').update( 'Both parties are ready.' );
+				$('trade_confirm_message').update( '' );
 			}
 			else
 			{
 				$('trade_confirmbtn').removeClassName( 'active' );
-				$('trade_confirm_message').update( 'Waiting for both parties to check the ready box.' );
+				$('trade_confirm_message').update( '' );
 			}
 		}
 	}
@@ -1306,12 +1306,12 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 			{
 				if ( nNumBadItems == 1 )
 				{
-					strEvent = 'You are not allowed to receive the item "%1$s."'
+					strEvent = ''
 							.replace( '%1$s', item.name.escapeHTML() );
 				}
 				else
 				{
-					strEvent = 'You are not allowed to receive %1$s of the items being offered including "%2$s."'
+					strEvent = ''
 							.replace( '%1$s', nNumBadItems )
 							.replace( '%2$s', item.name.escapeHTML() );
 				}
@@ -1320,11 +1320,11 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 			{
 				if ( nNumBadItems == 1 )
 				{
-					strEvent = 'You are not allowed to receive one of the items being offered.';
+					strEvent = '';
 				}
 				else
 				{
-					strEvent = 'You are not allowed to receive %1$s of the items being offered.'
+					strEvent = ''
 							.replace( '%1$s', nNumBadItems );
 				}
 			}
@@ -1332,7 +1332,7 @@ function UpdateSlots( rgSlotItems, rgCurrency, bYourSlots, user, version )
 			if ( nFullInventoryAppId )
 			{
 				var rgAppData = g_rgAppContextData[nFullInventoryAppId];
-				var strEventAppend = 'Your inventory for %1$s is full.'
+				var strEventAppend = ''
 						.replace( '%1$s', rgAppData.name.escapeHTML() );
 
 				strEvent = strEvent + ' ' + strEventAppend;
@@ -1362,18 +1362,18 @@ function HighlightNewlyAddedItem( elItem )
  *		Trade events log
  */
 
-var EventLogAddYouTemplate = new Template( 'You added <span class="item" style="#{itemstyle}">#{itemname}</span>');
-var EventLogAddThemTemplate = new Template( '#{theirname} added <span class="item" style="#{itemstyle}">#{itemname}</span>');
-var EventLogRemoveYouTemplate = new Template( 'You removed <span class="item" style="#{itemstyle}">#{itemname}</span>');
-var EventLogRemoveThemTemplate = new Template( '#{theirname} removed <span class="item" style="#{itemstyle}">#{itemname}</span>');
-var EventLogReadyYouTemplate = new Template( 'You are ready' );
-var EventLogReadyThemTemplate = new Template( '#{theirname} is ready');
-var EventLogUnReadyYouTemplate = new Template( 'You are not ready' );
-var EventLogUnReadyThemTemplate = new Template( '#{theirname} is not ready');
-var EventLogIncreaseCurrencyYouTemplate = new Template( 'You increased the amount of <span class="item" style="#{itemstyle}">#{currencyname}</span> to <span style="#{itemstyle}">#{amount}</span>');
-var EventLogDecreaseCurrencyYouTemplate = new Template( 'You decreased the amount of <span class="item" style="#{itemstyle}">#{currencyname}</span> to <span style="#{itemstyle}">#{amount}</span>');
-var EventLogIncreaseCurrencyThemTemplate = new Template( '#{theirname} increased the amount of <span class="item" style="#{itemstyle}">#{currencyname}</span> to <span style="#{itemstyle}">#{amount}</span>');
-var EventLogDecreaseCurrencyThemTemplate = new Template( '#{theirname} decreased the amount of <span class="item" style="#{itemstyle}">#{currencyname}</span> to <span style="#{itemstyle}">#{amount}</span>');
+var EventLogAddYouTemplate = new Template( '');
+var EventLogAddThemTemplate = new Template( '');
+var EventLogRemoveYouTemplate = new Template( '');
+var EventLogRemoveThemTemplate = new Template( '');
+var EventLogReadyYouTemplate = new Template( '' );
+var EventLogReadyThemTemplate = new Template( '');
+var EventLogUnReadyYouTemplate = new Template( '' );
+var EventLogUnReadyThemTemplate = new Template( '');
+var EventLogIncreaseCurrencyYouTemplate = new Template( '');
+var EventLogDecreaseCurrencyYouTemplate = new Template( '');
+var EventLogIncreaseCurrencyThemTemplate = new Template( '');
+var EventLogDecreaseCurrencyThemTemplate = new Template( '');
 
 function UpdateEventLog( events )
 {
@@ -1408,7 +1408,7 @@ function UpdateEventLog( events )
 				break;
 			}
 
-			var itemname = ( item ) ? item.name.escapeHTML() : 'Unknown Item';
+			var itemname = ( item ) ? item.name.escapeHTML() : '';
 			var itemstyle = ( item && item.name_color ) ? 'color: #' + item.name_color + ';' : '';
 
 			strEvent = template.evaluate( { theirname: g_strTradePartnerPersonaName, itemname: itemname, itemstyle: itemstyle } );
@@ -1458,7 +1458,7 @@ function UpdateEventLog( events )
 				break;
 			}
 
-			var currencyname = ( currency ) ? currency.name.escapeHTML() : 'Unknown Item';
+			var currencyname = ( currency ) ? currency.name.escapeHTML() : '';
 
 			var formatFunc;
 			if ( CurrencyIsWalletFunds( currency ) )
@@ -1480,7 +1480,7 @@ function UpdateEventLog( events )
 					if ( g_bWalletBalanceWouldBeOverMax )
 					{
 						strAfterEvent =
-							'<%1$s>Error:<%2$s> You can\'t accept %3$s\'s offer of %4$s. You currently have %5$s in your Steam Wallet, but this offer would put you over the maximum of %6$s.'
+							''
 								.replace( '%1$s', 'span class="warning"' )
 								.replace( '%2$s', '/span' )
 								.replace( '%3$s', g_strTradePartnerPersonaName )
@@ -1496,7 +1496,7 @@ function UpdateEventLog( events )
 				}
 
 				// Don't show a currency name unless we're changing value ( ex: "increased the amount of Wallet Funds to $1.23" )
-				currencyname = bAmountChanged ? 'Wallet Funds' : '';
+				currencyname = bAmountChanged ? '' : '';
 
 				formatFunc = function( x ) {
 					var feeInfo = CalculateFeeAmount( x );
@@ -1603,25 +1603,25 @@ function ToggleReady( bReady )
 	{
 		var strWarning = '';
 		var strButton = '';
-		var strTitle = 'This trade appears suspicious';
+		var strTitle = '';
 		if ( g_cTheirItemsInTrade == 0 )
 		{
 			if ( g_bTradeOffer && GTradeStateManager.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_NEW )
 			{
-				strTitle =  'Warning';
-				strWarning = 'You have not selected any items for %s to offer in exchange for yours.  If %s accepts this trade, you will lose the items you\'ve offered but will not receive any items.';
+				strTitle =  '';
+				strWarning = '';
 			}
 			else
 			{
-				strWarning = '%s has not offered any items in the trade.  When this trade is completed, you will not receive anything.  If %s has promised you Steam Wallet funds, CD-Keys, or other items outside the trade window, they may be attempting to scam you.';
+				strWarning = '';
 			}
 
-			strWarning += '<br><br>' + 'Please confirm that you are giving your items away, and expect nothing in return.';
-			strButton = 'Yes, this is a gift';
+			strWarning += '<br><br>' + '';
+			strButton = '';
 		}
 		else
 		{
-			strWarning = 'Upon completion of this trade, you will only receive the following items:';
+			strWarning = '';
 			strWarning += '<ul class="trade_warning_item_list">';
 			var rgAssets = g_bTradeOffer ? g_rgCurrentTradeStatus.them.assets : g_rgLastFullTradeStatus.them.assets;
 			for ( var i = 0; i < rgAssets.length; i++ )
@@ -1631,13 +1631,13 @@ function ToggleReady( bReady )
 				if ( rgItem )
 					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type + ')</span>';
 				else
-					strWarning += 'Unknown Item';
+					strWarning += '';
 				// afarnsworthTODO: fraud warnings!
 				strWarning += '</li>';
 			}
 			strWarning += '</ul>';
-			strWarning += '<span class="trade_warning_bold">You will not receive any other items or money.  If %s has promised you any other items, Steam Wallet funds, or CD-Keys outside the trade window, they may be attempting to scam you.</span>';
-			strButton = 'Yes, I trust %s'.replace( /%s/, g_strTradePartnerPersonaName );
+			strWarning += '<span class="trade_warning_bold"></span>';
+			strButton = ''.replace( /%s/, g_strTradePartnerPersonaName );
 		}
 		var elWarning = $J('<div/>', {'class': 'trade_warn_dialog_content' }).html( strWarning.replace( /%s/g, g_strTradePartnerPersonaName ) );
 		ShowConfirmDialog( strTitle, elWarning, strButton ).done( fnReady );
@@ -1695,14 +1695,14 @@ function UpdateReadyButtons()
 			var strMessage;
 			if ( badOffer )
 			{
-				strMessage = 'You can\'t accept the offer. See chat.';
+				strMessage = '';
 			}
 			else
 			{
 				if ( g_bTradeOffer )
-					strMessage = 'Waiting for you to offer one or more items.';
+					strMessage = '';
 				else
-					strMessage = 'Waiting for someone to make an offer.';
+					strMessage = '';
 			}
 
 			$$('#you_cantready .content').each( function( elContent ) {
@@ -1995,7 +1995,7 @@ CurrencyDialog = {
 		var inputValue = (this.m_bIsWallet ? $('trade_currency_input').value.replace( GetCurrencySymbol( this.m_currency.name.escapeHTML() ), '' ).replace( ',', '.' ).replace( '.--', '.00') : $('trade_currency_input').value );
 		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
 		{
-			this.DisplayError( 'Please enter a valid amount above.' );
+			this.DisplayError( '' );
 			return;
 		}
 
@@ -2009,7 +2009,7 @@ CurrencyDialog = {
 
 		if ( xferAmount > this.m_currency.original_amount )
 		{
-			this.DisplayError( 'You do not have enough ' + this.m_currency.name.escapeHTML() + '.' );
+			this.DisplayError( '' );
 			return;
 		}
 
@@ -2297,7 +2297,7 @@ CurrencyConversionDialog = {
 		var theirInputValueAsInt = Math.max( Math.round( isNaN(theirInputValueAsFloat) ? 0 : theirInputValueAsFloat ), 0 );
 		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
 		{
-			this.DisplayError( 'Please enter a valid amount above.' );
+			this.DisplayError( '' );
 			return;
 		}
 
@@ -2306,7 +2306,7 @@ CurrencyConversionDialog = {
 		if ( theirInputValue.match( /^[0-9,.]*$/ ) && ConvertToTheirCurrency( xferAmount ) != theirInputValueAsInt )
 		{
 			bHadWarning = true;
-			strWarning = 'Due to currency conversion, you cannot send %1$s to %2$s. The amount being sent has been changed to %3$s and %4$s will receive %5$s.'
+			strWarning = ''
 					.replace( '%1$s', v_currencyformat( theirInputValueAsInt, GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ) )
 					.replace( '%2$s', g_strTradePartnerPersonaName )
 					.replace( '%3$s', v_currencyformat( xferAmount, this.m_currency.name.escapeHTML() ) )
@@ -2320,13 +2320,13 @@ CurrencyConversionDialog = {
 
 		if ( bHadWarning && g_rgWalletInfo['wallet_fee'] )
 		{
-			strWarning += ' After the transaction fee, you will be charged %1$s.'
+			strWarning += ' '
 					.replace( '%1$s', v_currencyformat( xferAmount, this.m_currency.name.escapeHTML() ) );
 		}
 
 		if ( xferAmount > this.m_currency.original_amount )
 		{
-			this.DisplayError( 'You do not have enough ' + this.m_currency.name.escapeHTML() + '.' );
+			this.DisplayError( '' );
 			return;
 		}
 
@@ -2524,13 +2524,13 @@ function UpdateTradeItemStackDisplay( item, stack, amount )
 				// Fake some descriptions so that we can display fee information.
 				stack.descriptions = [
 					{
-						value: '+%1$s Steam transaction fee (%2$s%%)'
+						value: ''
 							.replace( '%1$s', v_currencyformat( stack.fee, stack.name.escapeHTML() ) )
 							.replace( '%2$s', (g_rgWalletInfo['wallet_fee_percent'] * 100).toFixed(1) )
 							.replace( '%%', '%' )
 					},
 					{
-						value: '%1$s Total cost to you'
+						value: ''
 							.replace( '%1$s', v_currencyformat( stack.amount, stack.name.escapeHTML() ) )
 					}
 				];
