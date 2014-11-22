@@ -60,22 +60,22 @@ function RenderGameForumList( listType, page, bLoggedIn )
 	switch ( listType )
 	{
 		case 'popular':
-			text = "";
+			text = "Most Popular (this week)";
 			break;
 		case 'recent':
-			text = "";
+			text = "Your Recently Played Games";
 			break;
 		case 'allowned':
-			text = "";
+			text = "My Games";
 			break;
 		case 'wishlist':
-			text = "";
+			text = "Wishlist";
 			break;
 		case 'recommended':
-			text = "";
+			text = "Recommended";
 			break;
 		case 'visited':
-			text = "";
+			text = "Your Recently Viewed Hubs";
 			break;
 	}
 

@@ -32,7 +32,7 @@ function UnpackGift( gidGift )
 		method: 'post',
 		parameters: { sessionid: g_sessionID },
 		onSuccess: function( transport ) { OnValidateUnpackResults( gidGift, transport ); },
-		onFailure: function( transport ) { ShowGiftModalError( '' ); }
+		onFailure: function( transport ) { ShowGiftModalError( 'Unable to add the gift to your game library.  The gift may have already been redeemed.  Please try again later.' ); }
 	} );
 }
 
@@ -48,15 +48,15 @@ function UnpackGiftItemReward( gidGift )
 			var response = transport.responseJSON;
 			if ( response.owned )
 			{
-				ShowAlertDialog( '', '' );
+				ShowAlertDialog( 'Unpack Item', 'You already have this item on your account.' );
 			}
 			else
 			{
 				var item_name = response.gift_name;
-				var strDialogTitle = ''.replace( /%s/, item_name );
+				var strDialogTitle = 'Unpack Item: %s'.replace( /%s/, item_name );
 				var Modal = ShowConfirmDialog( strDialogTitle,
-					'',
-					''
+					'This will permanently bind the item to your account.  Once unpacked, the item can no longer be traded or sold.',
+					'Unpack Item'
 				).done( function() {
 
 					var action = 'unpack';
@@ -67,11 +67,11 @@ function UnpackGiftItemReward( gidGift )
 						onComplete: function( transport ) {
 							if ( transport.responseJSON && transport.responseJSON.success == 1 )
 							{
-								ShowAlertDialog( strDialogTitle, '')
+								ShowAlertDialog( strDialogTitle, 'This item has been added to your account.')
 							}
 							else
 							{
-								ShowAlertDialog( strDialogTitle, '' );
+								ShowAlertDialog( strDialogTitle, 'There was a problem adding this item to your account.  Please try again later.' );
 							}
 							UserYou.ReloadInventory( 753, 7 );
 						}
@@ -83,7 +83,7 @@ function UnpackGiftItemReward( gidGift )
 				Modal.AdjustSizing();
 			}
 		},
-		onFailure: function( transport ) { ShowGiftModalError( '' ); }
+		onFailure: function( transport ) { ShowGiftModalError( 'Unable to add the gift to your game library.  The gift may have already been redeemed.  Please try again later.' ); }
 	} );
 }
 
@@ -118,16 +118,16 @@ function DoUnpackGift( gidGift, packageid, packagename )
 function DeleteGift( gidGift )
 {
 	ShowConfirmDialog(
-			'',
-			'',
-			'',
-			''
+			'Delete gift',
+			'Are you sure you want to permanently delete this gift?',
+			'Delete gift',
+			'Cancel'
 	).done( function() {
 		new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + 'delete', {
 			method: 'post',
 			parameters: { sessionid: g_sessionID },
 			onSuccess: function( transport ) { OnDeleteGiftResults( gidGift, transport ); },
-			onFailure: function( transport ) { ShowGiftModalError( '' ); }
+			onFailure: function( transport ) { ShowGiftModalError( 'Unable to delete the gift from your game library.  The gift may have already been deleted or redeemed.  Please try again later.' ); }
 		} );
 	} );
 }
@@ -140,7 +140,7 @@ function OnDeleteGiftResults( gidGift, transport )
 	}
 	else
 	{
-		ShowGiftModalError( '' );
+		ShowGiftModalError( 'Unable to delete the gift from your game library.  The gift may have already been deleted or redeemed.  Please try again later.' );
 	}
 }
 
@@ -204,7 +204,7 @@ function OnAcceptGiftResults( gidGift, bUnpack, transport )
 function ShowUnpackError( gidGift, bUnpack, transport )
 {
 	var response = transport.responseJSON;
-	var strError = bUnpack ? '' : '';
+	var strError = bUnpack ? 'Unable to add the gift to your game library.  The gift may have already been redeemed.  Please try again later.' : 'Unable to accept gift.  The gift may have already been redeemed.  Please try again later.';
 	var strDetails = false;
 	if ( response && response.error )
 	{
@@ -212,7 +212,7 @@ function ShowUnpackError( gidGift, bUnpack, transport )
 	}
 	if ( response && response.accepted )
 	{
-		strDetails = '';
+		strDetails = 'This game has not been added to your game library.  It will be stored in your inventory, to be traded or added to library later.';
 		if ( response.gidgiftnew )
 			ShowAcceptedGiftMessage( gidGift, response.gidgiftnew );
 	}
@@ -270,7 +270,7 @@ function OnDeclineGiftResults( gidGift, transport )
 	else
 	{
 		ShowDefaultGiftOptions( gidGift );
-		ShowGiftModalError( '' );
+		ShowGiftModalError( 'Unable to decline gift.  The gift may have already been declined or redeemed.' );
 	}
 
 	// reset the buttons in the decline gift popup
