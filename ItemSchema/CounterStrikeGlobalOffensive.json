@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.dd822d0039211b8bd1fd747caaf62f10bffdc195.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.ee5821cf24a4285c203417569c3324228fb9ea9e.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -6132,6 +6132,38 @@
 				"max_ilevel": 1,
 				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/mousesports.2f88ba6f79996fa37f9a6816a4d9cd1cca8442f0.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/mousesports_large.c344d7ad5338f077af1923efce5f78fd8de3013b.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_dhw2014_flipsid3",
+				"defindex": 4060,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Flipsid3 Tactics | DreamHack 2014",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/dhw2014/flipsid3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/flipsid3.c27b5b46903eeaf1cbf41c10f904a5e179bf0a4c.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/flipsid3_large.c221f04f9e5019b0d604d103438ec7002b5d8d43.png",
 				"capabilities": {
 					"decodable": true
 				},
