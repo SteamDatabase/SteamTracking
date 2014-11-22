@@ -177,7 +177,7 @@ Event.observe( window, 'load', function() {
 
 function deleteEvent( deleteURL )
 {
-	if ( confirm( '' ) )
+	if ( confirm( 'You are about to delete this event. Are you sure?' ) )
 	{
 		var $Form = $J('<form/>', {action: deleteURL, method: 'POST'});
 		$Form.append( $J('<input/>', {type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
@@ -375,7 +375,7 @@ function validateSearchSubmit()
 
 function ConfirmLeaveGroup( groupName )
 {
-	if ( window.confirm( '' ) )
+	if ( window.confirm( 'You are about to leave the group: \n' + groupName + '\nAre you sure?' ) )
 	{
 		$('leave_group_form').submit();
 	}
@@ -404,16 +404,16 @@ function Curator_CreateOrEditRecommendation( groupid, create_only )
 			}
 			else if ( data.error )
 			{
-				ShowAlertDialog( '', data.error );
+				ShowAlertDialog( 'Could not create recommendation', data.error );
 			}
 			else
 			{
-				ShowAlertDialog( '', '' );
+				ShowAlertDialog( 'Could not create recommendation', 'The Steam Servers are currently too busy to create your recommendation. Please try again later.' );
 			}
 		},
 		error: function( jqXHR, textStatus, errorThrown ) {
 			// uh oh
-			ShowAlertDialog( '', '' );
+			ShowAlertDialog( 'Could not create recommendation', 'The Steam Servers are currently too busy to create your recommendation. Please try again later.' );
 		}
 	});
 }
@@ -421,7 +421,7 @@ function Curator_CreateOrEditRecommendation( groupid, create_only )
 function Curator_UpdateCharacterCount( textareaid, counterid, maxchars )
 {
 	var len = $J(textareaid).val().length;
-	var text = '';
+	var text = '%s characters remaining';
 	$J( counterid ).html( text.replace( '%s', maxchars-len ) );
 }
 
@@ -439,11 +439,11 @@ function Curator_Follow( groupid, bFollow )
 			{
 				if ( data.following )
 				{
-					$J('#group_curation_follow_button').html( '' );
+					$J('#group_curation_follow_button').html( 'Stop following' );
 				}
 				else
 				{
-					$J('#group_curation_follow_button').html( '' );
+					$J('#group_curation_follow_button').html( 'Follow this curator' );
 				}
 
 				$J('#group_curation_follow_link').attr( 'onclick', "Curator_Follow('" + groupid + "', " + (data.following?'0':'1') + "); return false;" );
@@ -455,25 +455,25 @@ function Curator_Follow( groupid, bFollow )
 			}
 			else if ( data.error )
 			{
-				ShowAlertDialog( '', data.error );
+				ShowAlertDialog( 'Could not change follow state', data.error );
 			}
 			else
 			{
-				ShowAlertDialog( '', '' );
+				ShowAlertDialog( 'Could not change follow state', 'Sorry! There was an error with the servers and you\'ll have to try to do this again later.' );
 			}
 		},
 		error: function( jqXHR, textStatus, errorThrown ) {
 			// uh oh
-			ShowAlertDialog( '', '' );
+			ShowAlertDialog( 'Could not change follow state', 'Sorry! There was an error with the servers and you\'ll have to try to do this again later.' );
 		}
 	});
 }
 
 function Curator_DeleteRecommendation( groupid, appid, appname )
 {
-	var prompt_text = '';
+	var prompt_text = 'Do you want to delete your recommendation of %s?';
 	prompt_text = prompt_text.replace( '%s', appname );
-	var dialog = ShowConfirmDialog( '', prompt_text, '' );
+	var dialog = ShowConfirmDialog( 'Delete recommendation', prompt_text, 'Delete recommendation' );
 	dialog.done( function( reason ) {
 		$J.ajax({
 			url: 'https://steamcommunity.com/groups/' + groupid + '/deleterecommendation/',
@@ -485,11 +485,11 @@ function Curator_DeleteRecommendation( groupid, appid, appname )
 			success: function( data, textStatus, jqXHR ) {
 				dialog = null;
 				if ( data.success == 1 )
-					dialog = ShowAlertDialog( '', data.message );
+					dialog = ShowAlertDialog( 'Recommendation deleted', data.message );
 				else if ( data.error )
-					dialog = ShowAlertDialog( '', data.error );
+					dialog = ShowAlertDialog( 'Could not deleted recommendation', data.error );
 				else
-					dialog = ShowAlertDialog( '', '' );
+					dialog = ShowAlertDialog( 'Could not deleted recommendation', 'Sorry! There was an issue with the Steam servers and the recommendation could not be deleted. Please try again later.' );
 
 				// reload
 				dialog.done( function( reason ) {
@@ -498,7 +498,7 @@ function Curator_DeleteRecommendation( groupid, appid, appname )
 			},
 			error: function( jqXHR, textStatus, errorThrown ) {
 				// uh oh
-				ShowAlertDialog( '', '' );
+				ShowAlertDialog( 'Could not deleted recommendation', 'Sorry! There was an issue with the Steam servers and the recommendation could not be deleted. Please try again later.' );
 			}
 		});
 	});
@@ -522,23 +522,23 @@ function Curator_SetTagline( groupid, tagline )
 			}
 			else if ( data.error )
 			{
-				ShowAlertDialog( '', data.error );
+				ShowAlertDialog( 'Could not set tagline', data.error );
 			}
 			else
 			{
-				ShowAlertDialog( '', '' );
+				ShowAlertDialog( 'Could not set tagline', 'Sorry! We failed to talked to the Steam Servers to set your tagline. Please try again later.' );
 			}
 		},
 		error: function( jqXHR, textStatus, errorThrown ) {
 			// uh oh
-			ShowAlertDialog( '', '' );
+			ShowAlertDialog( 'Could not set tagline', 'Sorry! We failed to talked to the Steam Servers to set your tagline. Please try again later.' );
 		}
 	});
 }
 
 function ConfirmDeleteAnnouncement( deleteURL )
 {
-	var dialog = ShowConfirmDialog( '', '' );
+	var dialog = ShowConfirmDialog( 'Delete Announcement?', 'Are you sure you want to delete this announcement?' );
 	dialog.done( function() {
 		top.location.href = deleteURL;
 	});

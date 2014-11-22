@@ -108,7 +108,7 @@ RemoveListingDialog = {
 		else
 		{
 			this.OnFailureEffects();
-			this.DisplayError( '' );
+			this.DisplayError( 'There was a problem removing your listing. Refresh the page and try again.' );
 		}
 	},
 
@@ -126,7 +126,7 @@ RemoveListingDialog = {
 	
 	OnFailure: function( transport ) {
 		this.OnFailureEffects();
-		this.DisplayError( '' );
+		this.DisplayError( 'There was a problem removing your listing. Refresh the page and try again.' );
 	},
 
 	OnDocumentKeyPress: function( event ) {
@@ -193,7 +193,7 @@ CancelMarketBuyOrderDialog = {
 		}
 		else
 		{
-			// this.DisplayError( '' );
+			// this.DisplayError( 'There was a problem removing your listing. Refresh the page and try again.' );
 		}
 	},
 
@@ -239,7 +239,7 @@ CreateBuyOrderDialog = {
 		this.m_bActive = true;
 
 		// show the frame in the dialog
-		var modal = ShowDialog( ''.replace( '%1$s', strMarketItemName ), this.m_divContents.show() );
+		var modal = ShowDialog( 'Buy - %1$s'.replace( '%1$s', strMarketItemName ), this.m_divContents.show() );
 		modal.always( function() { CreateBuyOrderDialog.OnUserClosedDialog() } );
 
 		$J('#market_buynow_dialog_error').hide();
@@ -310,7 +310,7 @@ CreateBuyOrderDialog = {
 	StartPurchase: function() {
 				if ( !$J('#market_buynow_dialog_accept_ssa').prop('checked') )
 		{
-			this.DisplayError( '' );
+			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.' );
 			return;
 		}
 
@@ -321,7 +321,7 @@ CreateBuyOrderDialog = {
 		$J('#market_buy_commodity_input_quantity').prop('disabled', true);
 		$J('#market_buynow_dialog_error').hide();
 
-		$J('#market_buy_commodity_status').html( '' );
+		$J('#market_buy_commodity_status').html( 'Placing buy order...' );
 
 		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
@@ -357,7 +357,7 @@ CreateBuyOrderDialog = {
 		if ( transport.responseJSON && transport.responseJSON.success == 1 )
 		{
 			$J('#market_buynow_dialog_purchase_throbber').show();
-			$J('#market_buy_commodity_status').html( '' );
+			$J('#market_buy_commodity_status').html( 'Finding matching item listings at your desired price...' );
 
 			var buy_orderid = transport.responseJSON.buy_orderid;
 
@@ -371,11 +371,11 @@ CreateBuyOrderDialog = {
 		}
 		else if ( transport.responseJSON && transport.responseJSON.success )
 		{
-			this.DisplayError( '' + ' (' + transport.responseJSON.success + ')' );
+			this.DisplayError( 'Sorry! Your buy order could not be placed at this time. Please try again later.' + ' (' + transport.responseJSON.success + ')' );
 		}
 		else
 		{
-			this.DisplayError( '' );
+			this.DisplayError( 'Sorry! Your buy order could not be placed at this time. Please try again later.' );
 		}
 	},
 
@@ -415,7 +415,7 @@ CreateBuyOrderDialog = {
 		else if ( response.responseJSON.purchased )
 		{
 			this.BuyOrderPlaced();
-			$J('#market_buy_commodity_status').html( '' );
+			$J('#market_buy_commodity_status').html( 'Purchase succeeded! Your item is now in your inventory, and your receipt has been emailed to you.' );
 
 			if ( response.responseJSON.purchase_amount_text )
 			{
@@ -443,7 +443,7 @@ CreateBuyOrderDialog = {
 
 	BuyOrderPlaced: function() {
 		// too long has passed, give up
-		$J('#market_buy_commodity_status').html( '' );
+		$J('#market_buy_commodity_status').html( 'Success! Your buy order has been placed.<br><br>You will be automatically notified by email when the purchase is completed. You can cancel this buy order from the bottom of this page, or from the market home page.' );
 		$J('#market_buy_commodity_throbber').hide();
 	},
 
@@ -475,10 +475,10 @@ function Market_ShowBuyOrderPopup( unAppId, sMarketHashName, strMarketItemName )
 	if ( typeof g_rgWalletInfo != 'undefined' && g_rgWalletInfo['wallet_currency'] == 0 )
 	{
 		ShowConfirmDialog(
-				'',
-				'',
-				'',
-				''
+				'Cannot place order',
+				'You cannot buy items in the Community Market until you <a href="http://store.steampowered.com/steamaccount/addfunds" target="_top">add funds to your Steam Wallet</a> or make a purchase in the Steam store and provide your billing address.',
+				'Add wallet funds',
+				'Cancel'
 		).done( function() {
 			location.href = 'http://store.steampowered.com/steamaccount/addfunds';
 		} );
@@ -531,7 +531,7 @@ BuyItemDialog = {
 
 		$('market_buynow_dialog_error').hide();
 
-		$('market_buynow_dialog_title').update( '' );
+		$('market_buynow_dialog_title').update( 'Buy an item' );
 		$('market_buynow_dialog_purchasecomplete_message').hide();
 		$('market_buynow_dialog_purchase').show();
 		$('market_buynow_dialog_purchase_throbber').hide();
@@ -574,7 +574,7 @@ BuyItemDialog = {
 			{
 				// No app data for some reason
 				// Say "Game fee"
-				$J('#market_buynow_dialog_totals_publisherfee_gamename').text( '' );
+				$J('#market_buynow_dialog_totals_publisherfee_gamename').text( 'Game' );
 			}
 			$('market_buynow_dialog_totals_transactionfee').update( v_currencyformat( nFeeSteam, sWalletCurrencyCode ) );
 			$('market_buynow_dialog_totals_transactionfee_percent').update( ( g_rgWalletInfo['wallet_fee_percent'] * 100 ).toFixed(1) );
@@ -703,7 +703,7 @@ BuyItemDialog = {
 
 				if ( !$('market_buynow_dialog_accept_ssa') || !$('market_buynow_dialog_accept_ssa').checked )
 		{
-			this.DisplayError( '' );
+			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.' );
 			return;
 		}
 
@@ -759,7 +759,7 @@ BuyItemDialog = {
 		var elMessage = new Element( 'div', {'class': 'market_listing_purchase_message' } );
 		var sItemNameSpanId = this.m_sElementPrefix + '_purchased_' + this.m_ulListingId;
 		elMessage.update(
-				''
+				'You purchased this <%1$s></%2$s>. View it in your <%3$s>inventory</%4$s>.'
 					.replace( '%1$s', 'span id="' + sItemNameSpanId + '"' )
 					.replace( '%2$s', 'span' )
 					.replace( '%3$s', 'a href="https://steamcommunity.com/my/inventory/"' )
@@ -788,7 +788,7 @@ BuyItemDialog = {
 		else
 		{
 			this.OnFailureEffects();
-			this.DisplayError( '' );
+			this.DisplayError( 'There was a problem purchasing your item. The listing may have been removed. Refresh the page and try again.' );
 		}
 	},
 
@@ -812,7 +812,7 @@ BuyItemDialog = {
 		}
 		else
 		{
-			this.DisplayError( '' );
+			this.DisplayError( 'There was a problem purchasing your item. The listing may have been removed. Refresh the page and try again.' );
 		}
 	},
 
@@ -1110,7 +1110,7 @@ function MarketCheckHash()
 	else if ( window.location.hash.length > 5 && window.location.hash.substr(0,5) == "#sell" )
 	{
 		var strAsset = window.location.hash.substr(5);
-		ShowModalContent('https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, '', 'https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, true);
+		ShowModalContent('https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, 'Choose an item from your inventory', 'https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, true);
 	}
 }
 
@@ -1382,7 +1382,7 @@ function ProcessFilterData( data )
 				var elCategory = $J('<div class="econ_tag_filter_category"><div class="econ_tag_filter_category_label">' + oCategory.localized_name + '</div></div>');
 				var elDropdown = $J('<select name="' + "category_" + sCategory + '[]" class=""></select>' );
 				var elOption = $J('<option value="any"></option>');
-				elOption.text( '' );
+				elOption.text( 'Any' );
 				elDropdown.append( elOption );
 
 				// sort the tags by name
@@ -1475,7 +1475,7 @@ function ProcessFilterData( data )
 	}
 	else
 	{
-		elFilters.text( '' );
+		elFilters.text( 'There are no filters available for this game. Click the search button to view all listings for this game.' );
 	}
 }
 
@@ -1490,7 +1490,7 @@ $J(function() {
 		{
 			elFilters.empty();
 
-			var elThrobber = $J('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="" style="margin-top: 139px">');
+			var elThrobber = $J('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif" alt="Loading" style="margin-top: 139px">');
 			elFilters.append( elThrobber );
 			elFilters.css( 'text-align', 'center' );
 
@@ -1501,7 +1501,7 @@ $J(function() {
 			} ).error( function ( ) {
 				elFilters.empty();
 				elFilters.css( 'text-align', 'inherit' );
-				elFilters.text( '' );
+				elFilters.text( 'There was a problem loading filters for this game. Refresh the page and try again.' );
 			} ).success( function( data ) {
 				if ( data.success )
 				{
@@ -1511,7 +1511,7 @@ $J(function() {
 				{
 					elFilters.empty();
 					elFilters.css( 'text-align', 'inherit' );
-					elFilters.text( '' );
+					elFilters.text( 'There was a problem loading filters for this game. Refresh the page and try again.' );
 				}
 			} );
 		}
@@ -1519,7 +1519,7 @@ $J(function() {
 		{
 			elFilters.empty();
 			elFilters.css( 'text-align', 'inherit' );
-			elFilters.text( '' );
+			elFilters.text( 'Pick a game from the drop-down list above to see the available filters.' );
 			$J('#market_advanced_search_app').remove();
 		}
 	});
@@ -1793,7 +1793,7 @@ function Market_LoadOrderSpread( item_nameid )
 				Market_OrderSpreadPlot = $J.jqplot('orders_histogram', lines, {
 					renderer: $J.jqplot.BarRenderer,
 					rendererOptions: {fillToZero: true},
-					title:{text: '', textAlign: 'left' },
+					title:{text: 'Buy and Sell Orders (cumulative)', textAlign: 'left' },
 					gridPadding:{left: 45, right:45, top:30},
 					axesDefaults:{ showTickMarks:false },
 					axes:{
