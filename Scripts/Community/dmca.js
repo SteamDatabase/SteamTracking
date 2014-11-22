@@ -56,22 +56,22 @@ function SaveTakeDownNotice()
 
 	if ( !$J( "#check_is_ownera").prop('checked') && !$J( "#check_is_ownerb").prop('checked') )
 	{
-		ShowAlertDialog( 'Error', 'You must certify that you are the owner or authorized to act on the copyright owner\'s behalf' );
+		ShowAlertDialog( '', '' );
 		return false;
 	}
 	if ( !$J( "#check_use_not_authorized").prop('checked') )
 	{
-		ShowAlertDialog( 'Error', 'You must certify that the content is not authorized to be used' );
+		ShowAlertDialog( '', '' );
 		return false;
 	}
 	if ( !$J( "#check_acknowledge_liability").prop('checked') )
 	{
-		ShowAlertDialog( 'Error', 'You acknowledge the terms of Section 512(f) of the DMCA' );
+		ShowAlertDialog( '', '' );
 		return false;
 	}
 	if ( !$J( "#check_is_accurate").prop('checked') )
 	{
-		ShowAlertDialog( 'Error', 'You must certify that the above information is accurate UNDER PENALTY OF PERJURY' );
+		ShowAlertDialog( '', '' );
 		return false;
 	}
 
@@ -100,7 +100,7 @@ function SaveTakeDownNotice()
 
 	if ( !bHasRequiredFields )
 	{
-		ShowAlertDialog( 'Error', 'Please fill in the required fields highlighted in red.' );
+		ShowAlertDialog( '', '' );
 		return false;
 	}
 
@@ -108,7 +108,7 @@ function SaveTakeDownNotice()
 	var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
 	if ( email == '' || !email_regex.test(email) )
 	{
-		ShowAlertDialog( 'Error', 'The email address you entered is invalid.' )
+		ShowAlertDialog( '', '' )
 			.done( function() {
 				$J( '#email' ).focus();
 			} );
@@ -117,14 +117,14 @@ function SaveTakeDownNotice()
 
 	var jqxhr = $J.post( frm.attr('action'), frm.serialize() )
 		.done(function(data) {
-			ShowAlertDialog( 'DMCA Takedown Notice Filed', 'Your DMCA takedown notice has been filed.  We will review it as soon as we can.' )
+			ShowAlertDialog( '', '' )
 				.done( function() { top.location.href = 'https://steamcommunity.com' } );
 		} )
 		.fail(function() {
 			var data = V_ParseJSON( jqxhr.responseText );
 			if ( data['captchagid'] )
 			{
-				ShowAlertDialog( 'Error', 'Error verifying humanity' );
+				ShowAlertDialog( '', '' );
 				UpdateCaptcha( data['captchagid'] );
 				return;
 			}
