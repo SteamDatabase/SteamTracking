@@ -36,7 +36,7 @@ function respondToInvite( type, steamID, action, onComplete )
 
 function removeFromWishlist( url )
 {
-	var answer = confirm( "Are you sure?" );
+	var answer = confirm( "" );
 	if ( answer )
 		top.location.href = url;
 }
