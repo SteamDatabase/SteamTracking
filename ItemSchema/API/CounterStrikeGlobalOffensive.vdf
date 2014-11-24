@@ -29939,8 +29939,8 @@
 			"points"		"1"
 			"difficulty"		"3"
 			"quest_reward"		"quest_reward_crate_vanguard"
-			"loc_name"		"#Quest_Win_a_Mapgroup"
-			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"loc_name"		"#Quest_Win_a_Map"
+			"loc_description"		"#Quest_Win_a_Map_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
@@ -29957,8 +29957,8 @@
 			"difficulty"		"3"
 			"operational_points"		"3"
 			"quest_reward"		"quest_reward_crate_vanguard"
-			"loc_name"		"#Quest_Win_a_Mapgroup"
-			"loc_description"		"#Quest_Win_a_Mapgroup_desc"
+			"loc_name"		"#Quest_Win_a_Map"
+			"loc_description"		"#Quest_Win_a_Map_desc"
 			"string_tokens"
 			{
 				"action"		"#quest_action_win"
