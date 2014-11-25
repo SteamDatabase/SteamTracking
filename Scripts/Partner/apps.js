@@ -18,7 +18,7 @@ function AppsAjaxRequest( requestUrl, hashParms, successClosure, requestMethod )
 	if ( requestMethod == null ) requestMethod = 'post';
 
 	// ensure session ID is present if we're posting
-	if ( requestMethod == 'post' ) {
+	if ( requestMethod.toLowerCase() == 'post' ) {
 		if ( !( 'sessionid' in hashParms ) ) {
 			hashParms[ 'sessionid' ] = g_sessionID;
 		}
@@ -214,7 +214,7 @@ function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, privateMode, ha
 //
 function EconomyFlushAssetAppearanceCache( appid )
 {
-	$J.post( g_szBaseURL + '/apps/economyflushappearance/' + appid).done( function( data ) {
+	$J.post( g_szBaseURL + '/apps/economyflushappearance/' + appid, { 'sessionid' : g_sessionID } ).done( function( data ) {
 		$J('#asset_class_version').text( data );
 		ShowAlertDialog( 'Flush Asset Appearance Cache', 'Asset appearance cache flushed.  The Steam servers will start generating GetAssetClassInfo calls the next time each item is displayed.' );
 	}).fail( function() {
@@ -242,7 +242,8 @@ function SetRequestKeys( appid, requests )
 {
 	AppsAjaxRequest( g_szBaseURL + '/apps/requestkeys/' + appid,
 		{
-			'keys': Object.toJSON( requests )
+			'keys': Object.toJSON( requests ),
+			'sessionid': g_sessionID
 		},
 		function( results )
 		{
@@ -3264,6 +3265,11 @@ function OnChangeTagCategoryType( htmlID )
 
 function UpdateReleaseRequest( nAppId, rgChanges )
 {
+	// ensure session ID is present
+	if ( !( 'sessionid' in rgChanges ) ) {
+		rgChanges[ 'sessionid' ] = g_sessionID;
+	}
+
 	$J.ajax({
 		url: 'https://partner.steamgames.com/apps/ajaxupdatereleaserequest/' + nAppId,
 		cache: false,

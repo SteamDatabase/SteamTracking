@@ -1188,6 +1188,7 @@ function RejectAppReleaseRequest( appid )
 			return;
 		}
 		$J.post( 'https://partner.steamgames.com/admin/ajaxrejectappreleaserequest', {
+				'sessionid' : g_sessionID,
 				'appid' : appid,
 				'notes_for_partner' : data
 			}
