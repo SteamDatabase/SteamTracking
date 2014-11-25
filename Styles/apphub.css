@@ -432,6 +432,7 @@ background: -moz-linear-gradient(top, #67c1f5 5%, #417a9b 95%);background: -webk
 	color: #8F98A0;
 	line-height: 22px;
 	min-width: 22px;
+	max-width: 500px;
 	margin-left: 14px;
 	margin-top: 22px;
 }
