@@ -296,7 +296,7 @@ center
 .apphub_sectionTabs
 {
 	position: relative;
-	padding-top: 16px;
+	padding-top: 18px;
 	margin-left: 10px;
 	font-size: 13px;
 	z-index: 10;
@@ -308,6 +308,13 @@ center
 	height: 5px;
 	width: 948px;
 	margin: 0px auto;
+}
+
+.apphub_sectionTabNewWrapper
+{
+	position: relative;
+	display: block;
+	float: left;
 }
 
 .apphub_sectionTab, a.apphub_sectionTab
@@ -339,9 +346,19 @@ center
 background: -moz-linear-gradient(top, rgba(103,193,245,1) 5%, rgba(103,193,245,0) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(103,193,245,1)), color-stop(95%,rgba(103,193,245,0)));background: -webkit-linear-gradient(top, rgba(103,193,245,1) 5%,rgba(103,193,245,0) 95%);background: -o-linear-gradient(top, rgba(103,193,245,1) 5%,rgba(103,193,245,0) 95%);background: -ms-linear-gradient(top, rgba(103,193,245,1) 5%,rgba(103,193,245,0) 95%);background: linear-gradient(to bottom, rgba(103,193,245,1) 5%,rgba(103,193,245,0) 95%);
 }
 
+
+.apphub_sectionTab.new > span
+{
+	border-bottom: 1px solid #65c0f9;
+}
+
 .apphub_sectionTab.active > span
 {
+	border-bottom: none;
+}
 
+.apphub_sectionTab.active > span
+{
 	padding: 0 17px;
 	border-radius: 2px;
 	border-bottom-left-radius: 0px;
@@ -349,7 +366,48 @@ background: -moz-linear-gradient(top, rgba(103,193,245,1) 5%, rgba(103,193,245,0
 
 	display: block;
 	background: #0d121a;
+}
 
+.NoSelect
+{
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.apphub_sectionTabNew
+{
+	color: #65c0f9;
+	position: absolute;
+	left: 10px;
+	top: -10px;
+	background-color: transparent;
+	border-bottom: none;
+	font-size: 12px;
+
+	transition-property: top;
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
+}
+
+.apphub_sectionTabNewWrapper:hover .apphub_sectionTabNew
+{
+	top: -16px;
+}
+
+.apphub_sectionTabNewWrapper:hover .apphub_sectionTabNew:hover
+{
+	top: -10px;
+}
+
+.apphub_sectionTabNewWrapper.active .apphub_sectionTabNew, .apphub_sectionTabNewWrapper.active .apphub_sectionTabNew:hover
+{
+	left: 17px;
+	top: -16px;
 }
 
 .apphub_sectionTab.admin

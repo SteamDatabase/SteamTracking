@@ -635,7 +635,12 @@ function SharedFileHover( elem, event, id, loggedIn, itemData )
 	}
 	else if ( ( !hover.visible() || hover.target != elem ) )
 	{
-		hover.down('.content').update( '<div class="hoverWorkshopItemTitle">' + itemData['title'] + '</div>' + '<div class="hoverWorkshopItemDesc">' + ( itemData['description'] ? itemData['description'] : '' ) + '</div>' );
+		var description = itemData['description'] ? itemData['description'] : '';
+		if ( description.length == 0 )
+		{
+			description = itemData['short_description'] ? itemData['short_description'] : '';
+		}
+		hover.down('.content').update( '<div class="hoverWorkshopItemTitle">' + itemData['title'] + '</div>' + '<div class="hoverWorkshopItemDesc">' + description + '</div>' );
 		if ( itemData['user_subscribed'] )
 		{
 			$( 'hover_subscribed' ).show();
