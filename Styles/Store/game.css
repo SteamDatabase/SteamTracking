@@ -2288,6 +2288,13 @@ div.early_access_header .devnotes > div i, div.early_access_header .devnotes > d
     font-style: normal;
 
 }
+div.early_access_header .devnotes > div b,
+div.early_access_header .devnotes > div p b,
+div.early_access_header .devnotes > div strong,
+div.early_access_header .devnotes > div p strong {
+	font-weight: normal;
+	font-family: "Motiva Sans Bold Italic", "Motiva Sans", arial, tahoma, sans-serif;
+}
 
 div.early_access_header .devnotes > div h2.bb_tag {
     margin-top: 18px;

@@ -808,6 +808,10 @@ div[data-role='page'] {
 	line-height: 16px;
 }
 
+.cart_item_desc_ext {
+	color: #ff9900;
+}
+
 .accountPaymentsBlock {
 	margin: 0px 12px;
 }

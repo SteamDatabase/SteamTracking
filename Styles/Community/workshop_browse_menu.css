@@ -128,7 +128,7 @@
 }
 
 .workshop_browse_tab.active,
-.workshop_browse_tab.active a.dropdown {
+.workshop_browse_tab.active a {
 	color: #fff;
 }
 
@@ -219,7 +219,6 @@ input.search_text.default_text {
 a.dropdown.hover, a.dropdown:hover
 {
 	color: #e5e5e5;
-	vertical-align: top;
 	border-right: none;
 	height: 38px;
 	border-top-left-radius: 3px;

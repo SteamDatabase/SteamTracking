@@ -2111,7 +2111,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	float: right;
 }
 	.stat_total_ctn .stat_totals tr td {
-		color: #ac966a;
+		color: #c6d4df;
 		text-align: right;
 		font-size: 14px;
 		border-bottom: 1px solid #373737;
@@ -2121,9 +2121,9 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		border-spacing: 0px;
 	}
 	.stat_total_ctn tr.table_header {
-		background: #373737;
+		background: rgba( 0, 0, 0, 0.2 );
 		text-transform: uppercase;
-		color: #ac966a;
+		color: #c6d4df;
 		text-align: right;
 	}
 	.stat_total_ctn tr.table_header td {
@@ -2873,7 +2873,7 @@ iframe.sharedFilePreviewYouTubeVideo.floatLeft, iframe.sharedFilePreviewYouTubeV
 }
 
 h2.stats {
-	color: #AC966A;
+	color: #66c0f4;
 }
 
 	h2.stats:before {
@@ -2896,6 +2896,7 @@ h2.stats {
 	background: #1B1B1B;
 	background: rgba(27, 27, 27, .36);
 	position: relative;
+	margin-bottom: 30px;
 }
 
 	.statsBox.dualInline {
