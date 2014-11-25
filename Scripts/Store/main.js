@@ -368,7 +368,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 				rgAjaxParams['pagev6'] = true;
 			}
 
-			window.setTimeout( function() { 
+			window.setTimeout( function() {
 				if ( oElemState.bWantsHover && !oElemState.bAjaxRequestMade ) {
 					oElemState.bAjaxRequestMade = true;
 					$J.get( 'http://store.steampowered.com/' + strUrlTarget + rgHoverData['id'], rgAjaxParams ).done( function( html )
