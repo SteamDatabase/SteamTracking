@@ -269,6 +269,11 @@ function ArraySwap( path, src, target )
 // Posts small change for store app data to server
 function SubmitQuickMessageUpdateAjax( url, params, completeCallback )
 {
+	// ensure session ID is present
+	if ( !( 'sessionid' in params ) ) {
+		params[ 'sessionid' ] = g_sessionID;
+	}
+
 	new Ajax.Request( url, {
 		method: 'post',
 		requestHeaders: { 'Accept': 'application/json' },
