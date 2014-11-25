@@ -1335,6 +1335,105 @@ var g_bDisableAutoloader = false;
 			};
 
 			$(document).scroll( function() { return scrollFunc.apply(ele) } );
+			$(document).ready( function() { return scrollFunc.apply(ele) } );
+		});
+
+	};
+
+}( jQuery ));
+
+
+(function ( $ ) {
+
+	$.fn.pagedautoloader = function( options ) {
+		var settings = $.extend({
+			triggerStart: 0,
+			template_url: false,
+		}, options );
+
+
+
+		return this.each(function( i, ele ) {
+
+			ele.indices = {chunks: 0};
+
+			var offset = $(ele).offset();
+			this.nNextTrigger = $(ele).height() + offset.top - 750;
+
+			ele.bTriggerActive = false;
+			ele.tagIndex = 0
+			ele.nRecommendedDataIndex = 0;
+			ele.rgSeenApps = [];
+			ele.nPage = 0;
+			ele.bMoreContent = true;
+
+
+			var loadFunc = function() {
+				ele = this;
+
+				if( this.bTriggerActive || g_bDisableAutoloader )
+				{
+					return;
+				}
+
+				this.bTriggerActive = true;
+
+				if( this.bMoreContent )
+				{
+					$(this).show();
+					ele.nPage = ele.nPage + 1;
+
+					this.bTriggerActive = true;
+
+					$('#content_loading').show();
+
+					var jqxhr = $.ajax( {
+						url: settings.template_url,
+						data: {
+							page: this.nPage
+						},
+						type: 'GET'
+					}).done(function( data ) {
+						ele.index++;
+						var newElement = $(data);
+
+						GDynamicStore.DecorateDynamicItems(newElement);
+
+						$(ele).append(newElement);
+						ele.bTriggerActive = false;
+
+						var nCurrentScroll = $(window).scrollTop() + $(window).height();
+						ele.nNextTrigger = $(ele).height() + offset.top - 750;
+						if(nCurrentScroll > ele.nNextTrigger)
+						{
+							loadFunc.apply(ele);
+						}
+
+					}).fail(function(){
+						ele.bMoreContent = false;
+					}).always(function() {
+						$('#content_loading').hide();
+					});
+				}
+
+				bAutoLoaderReady = true;
+			}
+
+			var scrollFunc = function( event ){
+				if ( g_bDisableAutoloader )
+					return;
+
+				if( bAutoLoaderReady )
+					WebStorage.SetLocal('home_scroll',$(window).scrollTop(), true);
+
+				var nCurrentScroll = $(window).scrollTop() + $(window).height();
+				if(nCurrentScroll > this.nNextTrigger)
+				{
+					loadFunc.apply(this);
+				}
+			};
+
+			$(document).scroll( function() { return scrollFunc.apply(ele) } );
 		});
 
 	};
