@@ -22,3 +22,12 @@ EventBackground
 	opacity: 1.0;
 	transition-delay: 0.0s;
 }
+
+.ScreenSaverMode EventBackground
+{
+    transition-property: opacity;
+    transition-duration: 1.4s, 0.3s !immediate;
+    transition-timing-function: linear;
+
+    opacity: 0.0;
+}
