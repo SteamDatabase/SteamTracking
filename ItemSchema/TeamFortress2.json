@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.62537f7070238327fb6d84b8b8156d8f037c54fc.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.d3cf799a7f5125f0ae83b87e56173f8ece4707ff.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -53652,6 +53652,39 @@
 				
 			},
 			{
+				"name": "TF2mixup Community Event 2014 Promo",
+				"defindex": 2137,
+				"item_class": "bundle",
+				"item_type_name": "Item Bundle",
+				"item_name": "TF2mixup Community Event 2014 Promo",
+				"item_description": "",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/mysterious_promo",
+				"min_ilevel": 50,
+				"max_ilevel": 50,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "elevate quality",
+						"class": "set_elevated_quality",
+						"value": 1
+					}
+				]
+				
+			},
+			{
 				"name": "Craft Bar Level 1",
 				"defindex": 5000,
 				"item_class": "craft_item",
@@ -96209,6 +96242,819 @@
 				"max_ilevel": 25,
 				"image_url": "http://media.steampowered.com/apps/440/icons/florida_lan_medal.4815f7cb42559caabdbc08c79df3db770fe79d8b.png",
 				"image_url_large": "http://media.steampowered.com/apps/440/icons/florida_lan_medal_large.e5750979ddcbbb247c9a488292c62390a0b78a4d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Thought that Counts",
+				"defindex": 8584,
+				"item_class": "tf_wearable",
+				"item_type_name": "Community Medal",
+				"item_name": "Thought that Counts",
+				"item_description": "TF2mixup Community Event 2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/brain_of_gold/brain_of_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/brain_of_gold.1522014861c4e813becaf6541fe4522fd5a161ba.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/brain_of_gold_large.cac121cc6e01ee4338e1e85271836fb50fad74c5.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Gamers Assembly Gold Medal 2013",
+				"defindex": 8585,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Gamers Assembly Gold Medal",
+				"item_description": "2013",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_gold.dc142346851e71f5098e9d292a267ab7382ae4e2.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_gold_large.63d0ab8f488e93a43c2d5ce502465fccad675d4d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Gamers Assembly Silver Medal 2013",
+				"defindex": 8586,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Gamers Assembly Silver Medal",
+				"item_description": "2013",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_silver.b18cd69108fd819df9dc610c95d17f453b6c8cff.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_silver_large.ab83ec9847f3bc5d6d6d15d289071aa8d9d2da86.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Gamers Assembly Bronze Medal 2013",
+				"defindex": 8587,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Gamers Assembly Bronze Medal",
+				"item_description": "2013",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_bronze.9759860111c47069b2b7ff87301b8c1ef19d4dde.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_bronze_large.859613d73591f64607571e9a2b7aa45ac64bb4d2.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Gamers Assembly Participant Badge 2013",
+				"defindex": 8588,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Gamers Assembly Participant Badge",
+				"item_description": "2013",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_participant.c1e24de71dd28e3c118aa1e84d9be06db71698f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_participant_large.ceda2a0c6dac9a027193bcd0feff50ac6d0815a1.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GAlloween Gold Medal 2013",
+				"defindex": 8589,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "GA'lloween Gold Medal",
+				"item_description": "2013",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_gold.dc142346851e71f5098e9d292a267ab7382ae4e2.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_gold_large.63d0ab8f488e93a43c2d5ce502465fccad675d4d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GAlloween Silver Medal 2013",
+				"defindex": 8590,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "GA'lloween Silver Medal",
+				"item_description": "2013",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_silver.b18cd69108fd819df9dc610c95d17f453b6c8cff.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_silver_large.ab83ec9847f3bc5d6d6d15d289071aa8d9d2da86.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GAlloween Bronze Medal 2013",
+				"defindex": 8591,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "GA'lloween Bronze Medal",
+				"item_description": "2013",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_bronze.9759860111c47069b2b7ff87301b8c1ef19d4dde.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_bronze_large.859613d73591f64607571e9a2b7aa45ac64bb4d2.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GAlloween Participant Badge 2013",
+				"defindex": 8592,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "GA'lloween Participant Badge",
+				"item_description": "2013",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_participant.c1e24de71dd28e3c118aa1e84d9be06db71698f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_participant_large.ceda2a0c6dac9a027193bcd0feff50ac6d0815a1.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Gamers Assembly Gold Medal 2014",
+				"defindex": 8593,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Gamers Assembly Gold Medal",
+				"item_description": "2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_gold.dc142346851e71f5098e9d292a267ab7382ae4e2.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_gold_large.63d0ab8f488e93a43c2d5ce502465fccad675d4d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Gamers Assembly Silver Medal 2014",
+				"defindex": 8594,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Gamers Assembly Silver Medal",
+				"item_description": "2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_silver.b18cd69108fd819df9dc610c95d17f453b6c8cff.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_silver_large.ab83ec9847f3bc5d6d6d15d289071aa8d9d2da86.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Gamers Assembly Bronze Medal 2014",
+				"defindex": 8595,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Gamers Assembly Bronze Medal",
+				"item_description": "2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_bronze.9759860111c47069b2b7ff87301b8c1ef19d4dde.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_bronze_large.859613d73591f64607571e9a2b7aa45ac64bb4d2.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "Gamers Assembly Participant Badge 2014",
+				"defindex": 8596,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "Gamers Assembly Participant Badge",
+				"item_description": "2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_participant.c1e24de71dd28e3c118aa1e84d9be06db71698f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_participant_large.ceda2a0c6dac9a027193bcd0feff50ac6d0815a1.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GAlloween Gold Medal 2014",
+				"defindex": 8597,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "GA'lloween Gold Medal",
+				"item_description": "2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_gold.dc142346851e71f5098e9d292a267ab7382ae4e2.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_gold_large.63d0ab8f488e93a43c2d5ce502465fccad675d4d.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GAlloween Silver Medal 2014",
+				"defindex": 8598,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "GA'lloween Silver Medal",
+				"item_description": "2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_silver.b18cd69108fd819df9dc610c95d17f453b6c8cff.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_silver_large.ab83ec9847f3bc5d6d6d15d289071aa8d9d2da86.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GAlloween Bronze Medal 2014",
+				"defindex": 8599,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "GA'lloween Bronze Medal",
+				"item_description": "2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_bronze.9759860111c47069b2b7ff87301b8c1ef19d4dde.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_bronze_large.859613d73591f64607571e9a2b7aa45ac64bb4d2.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "",
+				"capabilities": {
+					"paintable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					},
+					{
+						"name": "cannot trade",
+						"class": "cannot_trade",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "GAlloween Participant Badge 2014",
+				"defindex": 8600,
+				"item_class": "tf_wearable",
+				"item_type_name": "Tournament Medal",
+				"item_name": "GA'lloween Participant Badge",
+				"item_description": "2014",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant",
+				"min_ilevel": 25,
+				"max_ilevel": 25,
+				"image_url": "http://media.steampowered.com/apps/440/icons/gamers_assembly_participant.c1e24de71dd28e3c118aa1e84d9be06db71698f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/gamers_assembly_participant_large.ceda2a0c6dac9a027193bcd0feff50ac6d0815a1.png",
 				"drop_type": "none",
 				"craft_class": "",
 				"craft_material_type": "",
