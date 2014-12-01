@@ -421,10 +421,10 @@ td.wordfilter_word {
 	color: #ffffff;
 }
 
-td.wordfilter_action {
+td.wordfilter_action > a {
 	visibility: hidden;
 }
-tr.wordfilter_row:hover td.wordfilter_action {
+tr.wordfilter_row:hover td.wordfilter_action > a {
 	visibility: visible;
 }
 
