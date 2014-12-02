@@ -19,6 +19,7 @@
 		</Panel>
 		<Panel class ="DownloadSpacer" />
 		<Label id="DownloadFinishedLabel" text="#Downloads_Finished" />
+		<Label id="DownloadDeferredLabel" text="#Downloads_Deferred" />
 		<Panel class ="DownloadLabels" >
 			<Panel class="DownloadLabelRow" >
 				<Label text="#Downloads_Amount" />

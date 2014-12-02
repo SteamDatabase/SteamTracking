@@ -1,0 +1,198 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/textinput/text_input.css" />
+		<include src="file://{resources}/styles/textinput/text_input_dualtouch.css" />
+	</styles>
+	
+	<TextInputDualTouch>
+		<Panel id="BodyContainer">
+			
+			<Panel id="Legends" class="DaisyInputTypeABXY ColdLS D0gPad XInputPad">
+				
+				<Label id="ConfigName"/>
+				
+				<Panel id="LBLegend" class="LegendButton">
+					<Label id="LB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_LeftBumper_Short" />
+					<Label id="LB_txt_ABXY" class="LegendText TriggerButtonText LB_txt" text="#UI_Backspace" />
+					<Label id="LB_txt_RS" class="LegendText TriggerButtonText LB_txt" text="#UI_MoveCaretLeft" />
+				</Panel>
+				<Panel id="RBLegend" class="LegendButton">
+					<Label id="RB_txt_ABXY" class="LegendText TriggerButtonText RB_txt" text="#UI_Spacebar" />
+					<Label id="RB_txt_RS" class="LegendText TriggerButtonText RB_txt" text="#UI_MoveCaretRight" />
+					<Label id="RB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightBumper_Short" />
+				</Panel>
+				<Panel id="LeftLegend" class="LegendButton">
+					<Label id="LT_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_LeftTrigger_Short" />
+					<Label id="LT_txt" class="LegendText TriggerButtonText" />
+				</Panel>
+				<Panel id="RightLegend" class="LegendButton">
+					<Label id="RT_txt" class="LegendText TriggerButtonText" />
+					<Label id="RT_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightTrigger_Short" />
+				</Panel>
+				<Panel id="DPadLegend" class="LegendButton">
+					<Image class="XInputPad" src="file://{images}/textinput/gamepad_digital_blank.tga" />
+					<Image class="SteamPad" src="file://{images}/textinput/textinput_paddles.png" />
+					<Label id="DPad_txt" class="LegendText TriggerButtonText" text="#UI_MoveCaret" />
+				</Panel>
+				<Panel id="LangLegend" class="LegendButton">
+					<Panel class="LangImage"/>
+					<Label id="Lang_txt" class="LegendText TriggerButtonText" text="#UI_Languages" />
+				</Panel>
+				<Panel id="StartLegend" class="LegendButton">
+					<Image src="file://{images}/textinput/textinput_footer_start.tga" />
+					<Label id="Start_txt" class="LegendText TriggerButtonText" text="#UI_InputDone" />
+				</Panel>
+				
+				<Panel id="MiddleLegendRS" class="LegendButton">
+					<Panel id="ABXY_Footer_Wrapper">
+						<Label id="A_btn" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
+						<Label id="A_txt" class="LegendText AButtonText" text="#UI_InputDone" />
+						<Label id="B_btn" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
+						<Label id="B_txt" class="LegendText BButtonText" text="#UI_Dismiss" />
+						<Label id="X_btn" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
+						<Label id="X_txt" class="LegendText XButtonText" text="" />
+						<Label id="Y_btn" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
+						<Label id="Y_txt" class="LegendText YButtonText" text="" />
+					</Panel>
+					<Panel id="SteamPad_ABXY_Footer_Wrapper">
+						<Panel id="SteamPadFlowRight">
+							<Panel id="SteamPadFlowXY">
+								<Panel id="X_Wrapper" class="X_Wrapper">
+									<Label id="X_txt_s" class="LegendText XButtonText" padevent="pad_x" />
+									<Label id="X_btn_s" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
+								</Panel>
+								<Panel id="Y_Wrapper" class="Y_Wrapper">
+									<Label id="Y_txt_s" class="LegendText YButtonText" padevent="pad_y" />
+									<Label id="Y_btn_s" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
+								</Panel>
+							</Panel>
+							<Panel id="SteamPadFlowCenter" />
+							<Panel id="SteamPadFlowAB">
+								<Panel id="B_Wrapper" class="B_Wrapper">
+									<Label id="B_btn_s" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
+									<Label id="B_txt" class="LegendText BButtonText" text="#UI_Dismiss" />
+								</Panel>
+								<Panel id="A_Wrapper" class="A_Wrapper">
+									<Label id="A_btn_s" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
+									<Label id="A_txt" class="LegendText AButtonText" text="#UI_InputDone" />
+								</Panel>
+							</Panel>
+						</Panel>
+					</Panel>
+					
+				</Panel>
+				
+			</Panel>
+			
+			<Panel id="BackDrop">
+				<Panel id="KeyboardBackground" />
+				<Panel id="TouchPadLeft" class="TouchPad Left">
+					<Panel id="RowContainer">
+						<Panel id="TopRow" class="TouchRow">
+							<Panel id="TouchKey_LeftSuggest" class="TouchKey" />
+						</Panel>
+						<Panel id="Row0" class="TouchRow">
+							<Panel id="TouchKey_0_0" class="TouchKey" />
+							<Panel id="TouchKey_1_0" class="TouchKey" />
+							<Panel id="TouchKey_2_0" class="TouchKey" />
+							<Panel id="TouchKey_3_0" class="TouchKey" />
+							<Panel id="TouchKey_4_0" class="TouchKey" />
+							<Panel id="TouchKey_5_0" class="TouchKey RightQuadrant" />
+						</Panel>
+						<Panel id="Row1" class="TouchRow">
+							<Panel id="TouchKey_LeftArrow" class="TouchKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/back.tga" />
+							</Panel>
+							<Panel id="TouchKey_0_1" class="TouchKey" />
+							<Panel id="TouchKey_1_1" class="TouchKey" />
+							<Panel id="TouchKey_2_1" class="TouchKey" />
+							<Panel id="TouchKey_3_1" class="TouchKey" />
+							<Panel id="TouchKey_4_1" class="TouchKey RightQuadrant" />
+						</Panel>
+						<Panel id="Row2" class="TouchRow">
+							<Panel id="TouchKey_Alt" class="TouchKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/alt.tga" />
+							</Panel>
+							<Panel id="TouchKey_0_2" class="TouchKey" />
+							<Panel id="TouchKey_1_2" class="TouchKey" />
+							<Panel id="TouchKey_2_2" class="TouchKey" />
+							<Panel id="TouchKey_3_2" class="TouchKey" />
+							<Panel id="TouchKey_4_2" class="TouchKey RightQuadrant" />
+						</Panel>
+						<Panel id="Row3" class="TouchRow">
+							<Panel id="TouchKey_Shift" class="TouchKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
+							</Panel>
+							<Panel id="TouchKey_0_3" class="TouchKey" />
+							<Panel id="TouchKey_1_3" class="TouchKey" />
+							<Panel id="TouchKey_2_3" class="TouchKey" />
+							<Panel id="TouchKey_3_3" class="TouchKey" />
+							<Panel id="TouchKey_4_3" class="TouchKey RightQuadrant" />
+						</Panel>
+						<Panel id="LastRow" class="TouchRow">
+							<Panel id="TouchKey_Space" class="TouchKey BottomQuadrant" />
+						</Panel>
+					</Panel>
+					<Panel id="LeftPointer" class="TouchPointer DualTouchHidden">
+						<Image src="file://{images}/textinput/textinput_touchpointer.tga" />
+					</Panel>
+					<Panel id="TouchKey_LeftArrow" class="TouchKey LeftArrowFill LeftQuadrant"/>
+				</Panel>
+				<Panel id="TouchPadRight" class="TouchPad Right">
+					<Panel id="RowContainer">
+						<Panel id="TopRow" class="TouchRow">
+							<Panel id="TouchKey_RightSuggest" class="TouchKey" />
+						</Panel>
+						<Panel id="Row0" class="TouchRow">
+							<Panel id="TouchKey_6_0" class="TouchKey LeftQuadrant" />
+							<Panel id="TouchKey_7_0" class="TouchKey" />
+							<Panel id="TouchKey_8_0" class="TouchKey" />
+							<Panel id="TouchKey_9_0" class="TouchKey" />
+							<Panel id="TouchKey_10_0" class="TouchKey" />
+							<Panel id="TouchKey_Backspace" class="TouchKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/del.tga" />
+							</Panel>
+						</Panel>
+						<Panel id="Row1" class="TouchRow">
+							<Panel id="TouchKey_5_1" class="TouchKey LeftQuadrant" />
+							<Panel id="TouchKey_6_1" class="TouchKey" />
+							<Panel id="TouchKey_7_1" class="TouchKey" />
+							<Panel id="TouchKey_8_1" class="TouchKey" />
+							<Panel id="TouchKey_9_1" class="TouchKey" />
+							<Panel id="TouchKey_RightArrow" class="TouchKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/forward.tga" />
+							</Panel>
+						</Panel>
+						<Panel id="Row2" class="TouchRow">
+							<Panel id="TouchKey_5_2" class="TouchKey LeftQuadrant" />
+							<Panel id="TouchKey_6_2" class="TouchKey" />
+							<Panel id="TouchKey_7_2" class="TouchKey" />
+							<Panel id="TouchKey_8_2" class="TouchKey" />
+							<Panel id="TouchKey_Enter" class="TouchKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/return.tga" />
+							</Panel>
+						</Panel>
+						<Panel id="Row3" class="TouchRow">
+							<Panel id="TouchKey_5_3" class="TouchKey LeftQuadrant" />
+							<Panel id="TouchKey_6_3" class="TouchKey" />
+							<Panel id="TouchKey_7_3" class="TouchKey" />
+							<Panel id="TouchKey_8_3" class="TouchKey" />
+							<Panel id="TouchKey_9_3" class="TouchKey" />
+							<Panel id="TouchKey_Shift" class="TouchKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
+							</Panel>
+						</Panel>
+						<Panel id="LastRow" class="TouchRow">
+							<Panel id="TouchKey_Space" class="TouchKey BottomQuadrant" />
+						</Panel>
+					</Panel>
+					<Panel id="RightPointer" class="TouchPointer DualTouchHidden">
+						<Image src="file://{images}/textinput/textinput_touchpointer.tga" />
+					</Panel>
+					<Panel id="TouchKey_RightArrow" class="TouchKey RightArrowFill RightQuadrant" />
+				</Panel>
+			</Panel>
+		</Panel>
+	</TextInputDualTouch>
+</root>

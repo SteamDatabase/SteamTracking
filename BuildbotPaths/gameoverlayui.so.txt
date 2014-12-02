@@ -25,6 +25,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/overlay/gameoverlayui/./overlaynews.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/overlay/gameoverlayui/./OverlayWebBrowser.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/overlay/gameoverlayui/./screenshotthread.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/overlay/gameoverlayui/../../steamUI/broadcast_firsttime.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/overlay/gameoverlayui/../../steamUI/musicpage_details_content.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/overlay/gameoverlayui/../../steamUI/screenshotmanager.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/public/steam/steamclientpublic.h

@@ -22,7 +22,10 @@
 	transition-timing-function: ease-in-out;
 }
 
-
+.StoreBlocked #SystemIMBackground
+{
+	visibility: collapse;
+}
 
 #SystemIMBackground.SystemIMBackgroundBaseInvisible
 {

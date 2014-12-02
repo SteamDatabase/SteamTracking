@@ -991,7 +991,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 {
 	horizontal-align: center;
 	vertical-align: center;
-	width: 468px;
+	width: 445px;
 	height: 106px;
 	margin: 10px 8px;
 	border-style: solid;
@@ -999,7 +999,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	border-color: #3d414230;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #111414ff ), to( #070708ff ) );
 
-	transform: translatez( -150px );
+	transform: translatez( -120px );
 	transition-property: border, blur, background-color, color, transform, box-shadow;
 	transition-timing-function: ease-out;
 	transition-duration: 0.23s;
@@ -1021,12 +1021,12 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 
 .ButtonLeft:hover
 {
-	transform: translatex( 5px ) translatez( -125px );
+	transform: translatex( 5px ) translatez( -100px );
 }
 
 .ButtonRight:hover
 {
-	transform: translatex( -5px ) translatez( -125px );
+	transform: translatex( -5px ) translatez( -100px );
 }
 
 .Button:parentdisabled:hover
@@ -1060,7 +1060,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 
 .Button:descendantfocus:hover
 {
-	transform: translateZ( 30px );
+	transform: translateZ( 25px );
 }
 
 #ProfileLabel
@@ -1089,7 +1089,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 
 .ButtonLeft:focus:hover
 {
-	transform: translateX( 48px ) translateZ( 30px );
+	transform: translateX( 48px ) translateZ( 25px );
 }
 
 .ButtonRight:focus
@@ -1099,7 +1099,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 
 .ButtonRight:focus:hover
 {
-	transform: translateX( -48px ) translateZ( 30px );
+	transform: translateX( -48px ) translateZ( 25px );
 }
 
 .ButtonLabel

@@ -178,6 +178,7 @@ TenfootFooterPanel
 	margin-left: 20px;
 	margin-right: 0px;
 	margin-bottom: 2px;
+	padding-top: 3px;
 	padding-bottom: 2px;
 	color: tclegendlabel;
 }
@@ -201,7 +202,7 @@ TenfootFooterPanel
 	z-index: 10;
 }
 
-#LegendRow .LegendButtonBox Label
+#LegendRow Label.LegendButtonBox
 {
 	horizontal-align: center;
 	vertical-align: center;

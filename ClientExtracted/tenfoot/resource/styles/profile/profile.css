@@ -48,12 +48,14 @@
 
 #ProfileWrapper
 {
+	height: 100%;
+	width: 100%;
+	
+	opacity: 0.0;
 	transition-property: transform, position, opacity;
 	transition-duration: mediumduration;
 	transition-delay: 0s;
 	transition-timing-function: linear;
-	
-	opacity: 0.0;
 }
 
 #ProfileWrapper.ProfileVisible
@@ -62,6 +64,11 @@
 	opacity: 1.0;
 }
 
+#ProfileWrapper .ProfileInvisible
+{
+	opacity: 0.0;
+	transform: translate3d( 0px, 1280px, 1000px );
+}
 
 .StackDepth2 #ProfileWrapper.ProfileInvisible,
 .StackDepth3 #ProfileWrapper.ProfileInvisible
@@ -72,40 +79,26 @@
 
 #ProfileWrapper ProfilePanel
 {
-	transform: translatey( 202px );
 	opacity: 1.0;
 }
 
-#ProfileWrapper ProfilePanel#FriendActivity
-{
-	transform: translatey( 1080px );
-	opacity: 0.0;
-}
-
-#ProfileWrapper ProfilePanel#Inventory
-{
-	transform: translatey( 1080px );
-	opacity: 0.0;
-}
 
 .StackDepth2 #ProfileWrapper.ActivityFocused ProfilePanel#FriendActivity,
 .StackDepth3 #ProfileWrapper.ActivityFocused ProfilePanel#FriendActivity
 {
-	transform: translatey( 202px );
 	opacity: 1.0;
 }
 
 .StackDepth2 #ProfileWrapper.InventoryFocused ProfilePanel#Inventory,
 .StackDepth3 #ProfileWrapper.InventoryFocused ProfilePanel#Inventory
 {
-	transform: translatey( 202px );
 	opacity: 1.0;
 }
 
 #ProfileWrapper.ActivityFocused ProfilePanel#Profile,
 #ProfileWrapper.InventoryFocused ProfilePanel#Profile
 {
-	transform: translatey( 1080px );
+	transform: translate3d( 0px, 1280px, 1000px );
 	opacity: 0.0;
 }
 
@@ -241,29 +234,36 @@
 	animation-direction: normal;
 }
 
+#OverlayBasePanel ProfilePanel #ProfileContent.ProfileLoading,
 .StackDepth1 ProfilePanel #ProfileContent.ProfileLoading,
 .StackDepth2 ProfilePanel #ProfileContent.ProfileLoading,
 .StackDepth3 ProfilePanel #ProfileContent.ProfileLoading
 {
 	transition-duration: 0.3s;
 	opacity: 0.0;
+	transform: translate3d( 0px, 1280px, 1000px );
 }
 
+#OverlayBasePanel ProfilePanel #ProfileContent.ProfileLoading.LoadingVisible,
 .StackDepth2 ProfilePanel #ProfileContent.ProfileLoading.LoadingVisible,
 .StackDepth3 ProfilePanel #ProfileContent.ProfileLoading.LoadingVisible
 {
 	opacity: 1.0;
+	transform: translate3d( 0px, 0px, 0px );
 }
+
+
 
 ProfilePanel
 {
 	width: 100%;
-	height: 100%;
+	height: 948px;
+	vertical-align: bottom;
 
 	opacity: 0.0;
 
 	perspective-origin: 62% 5% invert;
-	
+
 	transition-property: transform, position, opacity;
 	transition-duration: mediumduration;
 	transition-delay: 0s;
@@ -273,7 +273,7 @@ ProfilePanel
 .ProfileVisible ProfilePanel
 {
 	opacity: 1.0;
-	
+
 }
 
 .ProfileInvisible ProfilePanel
@@ -298,15 +298,15 @@ ProfilePanel #ContentRow
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
 	transform-origin: 0% 0% parent-relative;
-	//transform: translatey(1080px);
+	transform: translate3d( 0px, 1280px, 1000px );
 
-	transition-property: transform, position, opacity, opacity-mask;
+	transition-property: transform, position;
 	transition-duration: mediumduration;
-	transition-delay: 0.2s;
 	transition-timing-function: ease-in-out;
 
 }
 
+#OverlayBasePanel ProfilePanel #ProfileContent,
 .StackDepth2 ProfilePanel #ProfileContent,
 .StackDepth3 ProfilePanel #ProfileContent,
 .StackDepth2 ProfilePanel #ContentRow,
@@ -315,6 +315,8 @@ ProfilePanel #ContentRow
 	opacity: 1.0;
 	animation-name: none;
 	animation-duration: 0s;
+	box-shadow: #000000aa -2px -2px 4px 4px;
+	margin-top: 4px;
 
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;
 
@@ -343,12 +345,6 @@ ProfilePanel #ContentRow
 }
 
 
-.StackDepth2 ProfileWrapper.ProfileVisible ProfilePanel,
-.StackDepth3 ProfileWrapper.ProfileVisible ProfilePanel
-{
-	transform: translate3d( 0px, 202px, 0px );
-}
-
 ProfilePanel .ProfileBackground
 {
 	width: 75%;
@@ -366,10 +362,10 @@ ProfilePanel .ProfileBackground
 	transition-timing-function: linear;
 }
 
+#OverlayBasePanel .ProfileVisible .ProfilePanel .ProfileBackground,
 .StackDepth2 .ProfileVisible .ProfilePanel .ProfileBackground,
 .StackDepth3 .ProfileVisible .ProfilePanel .ProfileBackground
 {
-	animation-name: background-visible;
 	animation-duration: mediumduration;
 	animation-delay: 0.0s;
 	animation-timing-function: ease-in-out;
@@ -393,6 +389,9 @@ ProfilePanel #Loading
 {
 	width: 100%;
 	height: 100%;
+
+	background-image: url( "file://{images}/profile/activity_bg_wash.png" );
+	background-size: 100% 100%;
 }
 
 #Loading #LoadingStatus
@@ -415,4 +414,74 @@ ProfilePanel LoadingThrobber
 	opacity: 1.0;
 	pre-transform-scale2d: 0.85;
 
+}
+
+#Offline
+{
+	opacity: 0.0;
+	width: 100%;
+	height: 100%;
+	transition-property: opacity;
+	transition-duration: 0.23s;
+	transition-delay: 0.23s;
+
+	padding-bottom: 50px;
+}
+
+#OfflineMessage
+{
+	flow-children: down;
+	width: 100%;
+	vertical-align: center;
+}
+
+.StackDepth1 #Loading,
+#OverlayBasePanel.Offline #Loading,
+.Offline.StackDepth2 #Loading,
+.Offline.StackDepth3 #Loading
+{
+	opacity: 0.0;
+}
+
+#OverlayBasePanel.Offline #Offline,
+.Offline.StackDepth2 #Offline,
+.Offline.StackDepth3 #Offline
+{
+	opacity: 1.0;
+	transition-delay: 0.0s;
+}
+
+#OfflineStatus1,
+#OfflineStatus2
+{
+	color: tcstatictext;
+	horizontal-align: center;
+
+	max-width: 75%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#OfflineStatus1
+{
+	font-size: largefontsize;
+}
+
+#OfflineStatus2
+{
+	font-size: medfontsize;
+	height: 200px;
+}
+
+.Offline.StackDepth2 #ProfileNavBar
+{
+	visibility: collapse;
+	opacity: 0.0;
+	height: 0px;
+}
+
+.Offline.StackDepth2 #ProfileWrapper.ActivityFocused #FriendActivity
+{
+	transform: translatey( 122px );
+	height: 958px;
 }

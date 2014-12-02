@@ -1,0 +1,42 @@
+"resource/layout/settingssubbroadcast.layout"
+{
+	controls
+	{
+		"BroadcastDisabledLabel" { ControlName="Label" fieldName="BroadcastDisabledLabel" labelText="#Steam_Settings_Broadcast_Disabled_System" }
+		
+		"PermissionsHeader" { ControlName="Label" fieldName="PermissionsHeader" labelText="#Steam_Settings_Broadcast_PermissionsHeader" group="HideWhenDisabled" }
+		"Permissions" { ControlName="ComboBox" fieldName="Permissions" group="HideWhenDisabled" }			
+		
+		"DimensionsHeader" { ControlName="Label" fieldName="DimensionsHeader" labelText="#Steam_Settings_Broadcast_DimensionsHeader" group="HideWhenDisabled" }
+		"Dimensions" { ControlName="ComboBox" fieldName="Dimensions" group="HideWhenDisabled" }
+		
+		"BitrateLimitHeader" { ControlName="Label" fieldName="BitrateLimitHeader" labelText="#Steam_Settings_Broadcast_BitrateHeader" group="HideWhenDisabled" }
+		"BitrateLimit" { ControlName="ComboBox" fieldName="BitrateLimit" group="HideWhenDisabled" }
+		
+		"ShowChatHeader" { ControlName="Label" fieldName="ShowChatHeader" labelText="#Steam_Settings_Broadcast_ShowChat" group="HideWhenDisabled" }
+		"ShowChatCombo" { ControlName="ComboBox" fieldName="ShowChatCombo" group="HideWhenDisabled" }
+		
+		"IncludeDesktop" { ControlName="CheckButton" fieldName="IncludeDesktop" group="HideWhenDisabled" }
+		"RecordMic" { ControlName="CheckButton" fieldName="RecordMic" group="HideWhenDisabled" }
+		"ShowDebugInfo" { ControlName="CheckButton" fieldName="ShowDebugInfo" group="HideWhenDisabled" }
+	}
+	
+	layout
+	{
+		place { control="BroadcastDisabledLabel" margin-left=20 margin-right=20 margin-top=32 width=max }
+		
+		place { control="PermissionsHeader" margin-left=20 margin-right=20 margin-top=20 width=max }
+		place { start="PermissionsHeader" control="Permissions" dir=down margin-top=4 width=250 }			
+		
+		place { start="Permissions" control="DimensionsHeader" dir=down margin-top=10 width=max }
+		place { start="DimensionsHeader" control="Dimensions" dir=down margin-top=4 width=250 }
+		
+		place { start="Dimensions" control="BitrateLimitHeader" dir=down margin-top=10 width=max }
+		place { start="BitrateLimitHeader" control="BitrateLimit" dir=down margin-top=4 width=250 }
+		
+		place { start="BitrateLimit" control="ShowChatHeader" dir=down margin-top=10 width=max }
+		place { start="ShowChatHeader" control="ShowChatCombo" dir=down margin-top=4 width=250 }
+				
+		place { start="ShowChatCombo" control="IncludeDesktop,RecordMic,ShowDebugInfo" dir=down margin-top=10 width=400 }	
+	}
+}

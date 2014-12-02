@@ -1,0 +1,229 @@
+TextInputDualTouch
+{
+	width: 100%;
+	height: 100%;
+	flow-children: none;
+}
+
+#Backdrop
+{
+	width: 100%;
+	height: 512px;
+	flow-children: none;
+	margin-bottom: 210px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 120px;
+	horizontal-align: center;
+	
+	background-color: daisy_bg_color;
+	background-position: left 167px top 167px;
+	background-repeat: no-repeat;
+	background-size: 55%;
+	
+	box-shadow: fill #00000022 -4px -4px 8px 12px;
+	border-radius: 10px;
+}
+
+#KeyboardBackground
+{
+	x: 2%;
+	y: 100px;
+	width: 96%;
+	height: 75%;
+	//background-color:  daisy_petal_color;
+}
+
+.TouchPad
+{
+	y: 6px;
+	width: 500px;
+	height: 500px;
+/* 	margin-top: 15px; */
+	background-repeat: no-repeat;
+	margin-left: -35px;
+	margin-right: -35px;
+}
+
+#RowContainer
+{
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+}
+
+#TouchPadLeft
+{
+	horizontal-align: left;
+}
+
+#TouchPadRight
+{
+	horizontal-align: right;
+}
+
+.Left .TouchRow
+{
+	x: -2.25%;
+	horizontal-align: right;
+}
+
+.Right .TouchRow
+{
+	x: 2.25%;
+	horizontal-align: left;
+}
+
+.HidePointers .TouchPointer
+{
+	visibility: collapse;
+}
+
+.TouchPointer
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+#TopRow,
+#LastRow
+{
+	height: 14%;
+}
+
+.TouchRow
+{
+	flow-children: right;
+	height: 18%;
+}
+
+.Left #LastRow
+{
+	x: 0%;
+	horizontal-align: right;
+}
+
+.Right #LastRow
+{
+	x: 0%;
+	horizontal-align: left;
+}
+
+.TouchKey
+{
+	width: 13.8%;
+	height: 100%;
+	background-color: daisy_petal_color;
+	border-style: solid;
+	border-width: 4px;
+	border-color: daisy_bg_color;
+}
+
+// 6, 7, B, N
+#TouchKey_5_0,
+#TouchKey_6_0,
+#TouchKey_4_3,
+#TouchKey_5_3
+{
+	width: 17.1%;
+}
+
+// T, Y
+#TouchKey_4_1,
+#TouchKey_5_1
+{
+	width: 22.3%;
+}
+
+// H, G
+#TouchKey_5_2,
+#TouchKey_4_2
+{
+	width: 19.8%;
+}
+
+.Left #TouchKey_Space
+{
+	border-right-width: 0px;
+}
+
+.Right #TouchKey_Space
+{
+	border-left-width: 0px;
+}
+
+#TouchKey_Space
+{
+	width: 91.7%;
+}
+
+#TouchKey_LeftSuggest,
+#TouchKey_RightSuggest
+{
+	width: 89.5%;
+}
+
+#TouchKey_LeftArrow,
+#TouchKey_RightArrow
+{
+	width: 11.5%;
+}
+
+#TouchKey_LeftArrow.LeftArrowFill
+{
+	x: 9%;
+	y: 14.8%;
+	width: 1.8%;
+	height: 70.4%;
+	border-style: none;
+}
+
+#TouchKey_RightArrow.RightArrowFill
+{
+	x: 89.2%;
+	y: 14.8%;
+	width: 1.64%;
+	height: 70.4%;
+	border-style: none;
+}
+
+#TouchKey_Alt
+{
+	width: 11%;
+}
+
+#TouchKey_Enter
+{
+	width: 25%;
+}
+
+.TouchKeyHover
+{
+	background-color: daisy_petal_selection_color;
+}
+
+.TouchKeyClicked
+{
+	background-color: #ffffffff;
+}
+
+.DualTouchHidden
+{
+	visibility: collapse;
+}
+
+.TouchKeyHover #TouchKeyLabel
+{
+	color: #000000ff;
+	wash-color: #000000ff;
+}
+
+#TouchKeyLabel,
+.TouchKeyLabel
+{
+	vertical-align: center;
+	horizontal-align: center;
+	font-size: 30px;
+	color: #ccccccff;
+	wash-color: #ccccccff;
+}

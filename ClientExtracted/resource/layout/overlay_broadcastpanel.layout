@@ -1,0 +1,40 @@
+"resource/layout/overlay_broadcastpanel.layout"
+{
+	controls
+	{
+		TitleText { controlname="label" labeltext="#Overlay_Broadcast_Panel_Title" style=detailsboxtitle }
+		InstructionText { controlname="label" labeltext="#Overlay_Broadcast_Panel_Text"  style=highlight }
+
+		ShowBroadcast { controlname="Button" labeltext="#Overlay_Broadcast_ShowBroadcast" command="ShowBroadcast" }
+		ShowChat { controlname="Button" labeltext="#Overlay_Broadcast_ShowChat" command="ShowChat" }
+		StopBroadcast { controlname="Button" labeltext="#Overlay_Broadcast_Stop" command="StopBroadcast" }
+		ShowSettings { controlname="Button" labeltext="#Overlay_Broadcast_ShowSettings" command="ShowSettings" }
+	}
+	
+	styles
+	{
+
+		Button
+		{
+			font-size=13
+			font-family=basefont
+			font-weight=400
+			inset=2
+		}
+
+		highlight
+		{
+			textcolor=text
+		}
+	}
+	
+	layout
+	{
+		region { name=title margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 width=max height=100 }
+		region { name=actions y=65  margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 width=max height=124 }
+		place { control="TitleText" region=title }
+		place { control="InstructionText" region=title y=40 }
+
+		place { control="ShowBroadcast,ShowChat,ShowSettings,StopBroadcast" region="actions" spacing=10 align=bottom  margin-bottom=4 }
+	}
+}

@@ -29,7 +29,7 @@
 		
 
 		// right column
-		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_suspended" style=ModuleHeading2 }
+		updatetypelabel	{ controlname="Label"	labelText="#steam_downloads_suspended" style=ModuleHeading2 tooltiptext="" }
 		removefromqueuebutton	{ controlname="Button" style="SmRemoveButton" tooltiptext="#steam_downloads_remove" }
 		topofqueuebutton	{ controlname="Button" style="topOfQueueButton" tooltiptext="#steam_downloads_topofqueue" group="HideOnCompletion" }
 		newslink			{ controlname="URLlabel"	style="links"		labelText="#steam_downloads_updatenews" }
@@ -322,7 +322,7 @@
 
 	layout
 	{
-		region	{ name="bottom" width="1262" y=75 height=60 width=400 }
+		region { name="bottom" y=75 height=60 width=400 }
 		  
 		region { name="column1" x=0 width=200 }
 		region { name="column2" x=210 width=max }

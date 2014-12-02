@@ -503,9 +503,7 @@ Button
 
 Button Label
 {
-	width: 100%;
 	vertical-align: center;
-
 	font-family: platformfont;
 	font-size: 28px;
 	font-weight: normal;
@@ -837,7 +835,16 @@ StorePackagePurchaseSection #PurchasePriceOverview
 
 #PurchaseOptionsBtn
 {
-	flow-children: down;
+	flow-children: right;
+	
+}
+
+#PurchaseOptionsBtn Label,
+#AddToCartBtn Label
+{
+	width: fill-parent-flow( 1.0 );
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .PurchaseSectionButtons
@@ -894,12 +901,12 @@ StorePackagePurchaseSection #PurchasePriceOverview
 // Price related
 StorePrice
 {
-	color: red;
+	color: applabelsolid;
 }
 
 #PriceOverview
 {
-	transform: translate3d( -91px, 340px, 0px );
+	transform: translate3d( 87px, 340px, 0px );
 
 	opacity: 1.0;
 	transition-property: opacity, transform;
@@ -2251,6 +2258,12 @@ StoreAppPackage Button, StoreAppPackageGroup Button, .StoreAppPackage Button
 #AddToCartBtn
 {
 	flow-children: right;
+}
+
+#AddToCartBtn #PackagePrice
+{
+	padding-bottom: 0px;
+	padding-top: 2px;
 }
 
 #AddToCartBtn #FinalPrice

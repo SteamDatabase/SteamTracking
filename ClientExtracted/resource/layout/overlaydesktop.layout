@@ -44,16 +44,18 @@
 	layout
 	{
 		region { name=overlay width=1010 align=top-center margin-top=10 margin-bottom=10 }
-	
-		region	{ name="detailpanels"  region=overlay align=bottom width=max height=466 margin-bottom=206 }
-		region	{ name="detailpanels2" region=overlay align=bottom width=max height=210 margin-bottom=100 }
+
+		region	{ name="detailpanelsTop"    region=overlay align=bottom width=max height=594 margin-bottom=480 }	
+		region	{ name="detailpanelsMiddle" region=overlay align=bottom width=max height=466 margin-bottom=206 }
+		region	{ name="detailpanelsBottom" region=overlay align=bottom width=max height=210 margin-bottom=100 }
 		region	{ name="taskbar" region=overlay width="max" height=75 align=bottom }
 
 		place { controls="GameGroupsButton,ChatRoomButton,DLCButton,GuideButton,LegacyCDKeyButton,WebSiteButton,RecommendButton,WorkshopButton" y=50 align=right region=overlay dir=down spacing=10 }
 		
-		place { controls="FriendsDetailPanel,NewsDetailPanel,AchievementsDetailPanel,GuidesDetailPanel" region=detailpanels width=330 height=240 spacing=10 }
-		place { controls="ScreenshotsDetailPanel,CommunityHubDetailPanel,CommunityDiscussionsDetailPanel" region=detailpanels2 width=330 height=240 spacing=10 }
-		place { controls="BroadcastDetailPanel" region=overlay align=top-center margin-top=100 width=330 height=110 }
+		place { controls="BroadcastDetailPanel" region=detailpanelsTop width=330 height=240 spacing=10 }
+		place { controls="FriendsDetailPanel,NewsDetailPanel,AchievementsDetailPanel,GuidesDetailPanel" region=detailpanelsMiddle width=330 height=240 spacing=10 }
+		place { controls="ScreenshotsDetailPanel,CommunityHubDetailPanel,CommunityDiscussionsDetailPanel" region=detailpanelsBottom width=330 height=240 spacing=10 }
+		
 	}
 	
 }

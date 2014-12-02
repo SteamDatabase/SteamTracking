@@ -5,19 +5,20 @@
 
 #CommunityWrapper
 {
-	transition-property: transform, position, opacity;
+	transition-property: transform, desaturation, opacity, position, blur, opacity-mask;
 	transition-duration: mediumduration;
 	transition-delay: 0s;
 	transition-timing-function: linear;
 
 	height: 100%;
+
+	vertical-align: bottom;
 	
 	opacity: 0.0;
 }
 
 #CommunityWrapper.CommunityVisible
 {
-	transform: translatey( 0px );
 	opacity: 1.0;
 }
 
@@ -42,6 +43,7 @@
 	opacity: 0.0;
 }
 
+.StackDepth1 CommunityPanel #CommunityContent.CommunityLoading.LoadingVisible,
 .StackDepth2 CommunityPanel #CommunityContent.CommunityLoading.LoadingVisible,
 .StackDepth3 CommunityPanel #CommunityContent.CommunityLoading.LoadingVisible
 {
@@ -61,7 +63,7 @@ CommunityPanel
 	transition-property: transform, position, opacity;
 	transition-duration: mediumduration;
 	transition-delay: 0s;
-	transition-timing-function: linear;
+	transition-timing-function: ease-in-out;
 }
 
 #CommunityWrapper:descendantfocus .CommunityVisible
@@ -84,7 +86,7 @@ CommunityPanel #ContentRow
 	/*opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;*/
 
 	transform-origin: 0% 0% parent-relative;
-	transition-property: transform, position, opacity, opacity-mask;
+	transition-property: transform, position, opacity, pre-transform-scale2d, opacity-mask;
 	transition-duration: mediumduration;
 	transition-delay: 0.2s;
 	transition-timing-function: ease-in-out;
@@ -96,10 +98,7 @@ CommunityPanel #ContentRow
 .StackDepth3 CommunityPanel #ContentRow
 {
 	opacity: 1.0;
-	animation-name: none;
-	animation-duration: 0s;
 
-	/*opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;*/
 
 	transform: translateX( 0px );
 }
@@ -120,9 +119,7 @@ CommunityPanel #ContentRow
 .StackDepth2 CommunityPanel #CommunityContent,
 .StackDepth3 CommunityPanel #CommunityContent
 {
-	/*opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 0.0;*/
 	transform: translatex( 0px );
-	animation-name: none;
 }
 
 
@@ -148,6 +145,7 @@ CommunityPanel .CommunityBackground
 	transition-timing-function: linear;
 }
 
+#OverlayBasePanel .CommunityVisible .CommunityPanel .CommunityBackground,
 .StackDepth2 .CommunityVisible .CommunityPanel .CommunityBackground,
 .StackDepth3 .CommunityVisible .CommunityPanel .CommunityBackground
 {
@@ -175,6 +173,11 @@ CommunityPanel #Loading
 {
 	width: 100%;
 	height: 100%;
+}
+
+.StackDepth1 CommunityPanel #Loading
+{
+	opacity: 0.0;
 }
 
 #Loading #LoadingStatus
@@ -214,7 +217,7 @@ CommunityPanel#CommunityMarketItemPicker
 	transition-timing-function: linear;
 }
 
-#CommunityMarket, #CommunityMarketItemPicker
+#CommunityMarketItemPicker
 {
 	transition-property: transform;
 	transition-timing-function: ease-out;
@@ -234,4 +237,89 @@ CommunityPanel#CommunityMarketItemPicker
 .MarketStack2
 {
 	transform: translatey( -55px );
+}
+
+
+#Offline
+{
+	opacity: 0.0;
+	width: 100%;
+	height: 100%;
+	transition-property: opacity;
+	transition-duration: 0.23s;
+	transition-delay: 0.23s;
+
+	padding-bottom: 50px;
+}
+
+#OfflineMessage
+{
+	flow-children: down;
+	width: 100%;
+	vertical-align: center;
+}
+
+#OverlayBasePanel.Offline #Loading,
+.Offline.StackDepth2 #Loading,
+.Offline.StackDepth3 #Loading
+{
+	opacity: 0.0;
+}
+
+#OverlayBasePanel.Offline #Offline,
+.Offline.StackDepth2 #Offline,
+.Offline.StackDepth3 #Offline
+{
+	opacity: 1.0;
+	transition-delay: 0.0s;
+}
+
+#OfflineStatus1,
+#OfflineStatus2
+{
+	color: tcstatictext;
+	horizontal-align: center;
+
+	max-width: 75%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#OfflineStatus1
+{
+	font-size: largefontsize;
+}
+
+#OfflineStatus2
+{
+	font-size: medfontsize;
+	height: 200px;
+}
+	
+
+
+#CommunityWrapper CommunityPanel
+{
+	transform: translate3d( 0px, 1280px, 1000px );
+}
+
+.StackDepth1 #CommunityWrapper #CommunityMenu,
+.StackDepth2 #CommunityWrapper #CommunityMenu
+{
+	transform: none;
+}
+
+#CommunityWrapper CommunityPanel.CommunityVisible
+{
+	transform: none;
+}
+
+#OverlayBasePanel #CommunityGameHub #CommunityContent
+{
+	opacity: 1.0;
+}
+
+#OverlayBasePanel #CommunityGameHub.CommunityVisible
+{
+	opacity: 1.0;
 }

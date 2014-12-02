@@ -47,7 +47,7 @@ StoreTextDialog.Destructing
 {
 	font-size: 24px;
 	width: 95%;
-	font-family: platform font;
+	font-family: platformfont;
 	color: #d6d7d9;
 	overflow: squish scroll;
 	padding-right: 30px;

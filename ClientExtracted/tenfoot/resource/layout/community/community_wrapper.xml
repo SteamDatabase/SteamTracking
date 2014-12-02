@@ -13,6 +13,6 @@
 		<CommunityPanel id="CommunityMarketItemPicker" class="CommunityPanel" onmoveup="OpenCommunityMarket( false );" />
 		<CommunityPanel id="CommunityMarketSellDialog" class="CommunityPanel" onmoveup="ShowMarketCreateListingDialog( false );" />
 		<CommunityPanel id="CommunityHome" class="CommunityPanel" onmoveup="OpenCommunityMenu( false );" />
-		<CommunityPanel id="CommunityGameHub" class="CommunityPanel" onmoveup="OpenCommunityMenu( false );" />
+		<CommunityPanel id="CommunityGameHub" class="CommunityPanel" onactivate="" onmoveup="OpenCommunityMenu( false );" />
 	</CommunityWrapper>
 </root>

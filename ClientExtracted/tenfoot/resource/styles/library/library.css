@@ -1051,6 +1051,11 @@ ParentalButton.Locked
 	transform: translatey( 92px );
 }
 
+.Offline .FriendsWhoPlay
+{
+	visibility: collapse;
+}
+
 .LinksAndMore:hover,
 .Achievements:hover,
 .FriendsWhoPlay:hover,

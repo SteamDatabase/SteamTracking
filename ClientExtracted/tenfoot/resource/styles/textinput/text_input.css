@@ -979,6 +979,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	padding-left: 4px;
 	padding-right: 4px;
 	height: itemsize;
+	box-shadow: #00000000 0px 0px 8px 0px;
 }
 
 .Group.SelectionGroup .Item

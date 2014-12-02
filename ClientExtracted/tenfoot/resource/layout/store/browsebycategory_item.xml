@@ -12,10 +12,7 @@
 			<Label id="DiscountDescription" />
 			<Panel class="ImageBorder" />
 		</Panel>
-		<Panel class="PriceRow OnlyVisibleOnCarouselFocus">
-			<Label id="DiscountCountdown" />
-			<StorePrice id="ItemPrice" />
-		</Panel>
+
 		<Panel class="ItemDetails OnlyVisibleOnCarouselFocus">
 			<Label id="ItemName" text="#Store_BrowseByCategory_ItemName" />
 			<Panel class="DetailsIconRow">
@@ -34,6 +31,11 @@
 		<Panel id="GenreRow" class="GenreRow OnlyVisibleOnCarouselFocus">
 			<Label class="SecondaryLabel" id="GenreLabel" text="#Store_BrowseByCategory_Genre" />
 			<Label class="Metadata" id="Genres" />
+		</Panel>
+		
+		<Panel class="PriceRow OnlyVisibleOnCarouselFocus">
+			<Label id="DiscountCountdown" />
+			<StorePrice id="ItemPrice" />
 		</Panel>
 	</StoreBrowseByCategoryItem>
 </root>

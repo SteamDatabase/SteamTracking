@@ -15,7 +15,7 @@
 
 #Stats
 {
-	visibility: collapse;
+//	visibility: collapse;
 	font-size: 22px;
 	color: white;
 	margin-left: 20px;
@@ -50,7 +50,7 @@
 
 #ItemsCarousel .Offscreen
 {
-	/*visibility: collapse;*/
+	visibility: collapse;
 }
 
 #ItemsCarousel .DetailPanel
@@ -115,7 +115,7 @@
 
 .ItemDetailInner .ListingID
 {
-	visibility: collapse;
+//	visibility: collapse;
 	color: red;
 }
 

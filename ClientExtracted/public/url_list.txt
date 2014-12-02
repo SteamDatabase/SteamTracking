@@ -22,6 +22,12 @@ GameHub
 	method		"internal"
 	filter		"community"
 }
+GameHubOverlay
+{
+	url			"%community%/app/%p1%?overlay=1"
+	method		"internal"
+	filter		"community"
+}
 GameHubGuides
 {
 	url			"%community%/app/%p1%/guides/"
@@ -37,6 +43,12 @@ GameHubDiscussions
 SteamIDPage
 {
 	url			"%community%/profiles/%p1%/"
+	method		"internal"
+	filter		"friends"
+}
+SteamIDPageOverlay
+{
+	url			"%community%/profiles/%p1%/?overlay=1"
 	method		"internal"
 	filter		"friends"
 }
@@ -747,3 +759,31 @@ GrantGuestPass
 	method	"internal"
 }
 
+ProfileMenu
+{
+	url			"%community%/%mystuff%/menu"
+	method		"internal"
+	// No parental protection on the menu, the individual controls on it
+	// will have protections.
+}
+
+SteamIDBroadcastPage
+{
+	url			"%community%/broadcast/watch/%p1%/"
+	method		"internal"
+	filter		"community"
+}
+
+GameHubBroadcast
+{
+	url			"%community%/app/%p1%/broadcasts"
+	method		"internal"
+	filter		"community"
+}
+
+GameHubBroadcasts
+{
+	url			"%community%/?subsection=broadcasts"
+	method		"internal"
+	filter		"community"
+}

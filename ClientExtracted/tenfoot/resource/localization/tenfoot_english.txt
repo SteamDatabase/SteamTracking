@@ -940,7 +940,7 @@
 	"Store_FriendWantsGame"			"{i:friend_want_count} Friend wants this game"
 	"Store_FriendRecommended"		"Recommended by Friends ({i:friend_recommend_count})"
 	"Store_FriendCommunityGroups"	"Find Community Groups"
-	"Store_FriendVisitForums"		"Visit User Forums"
+	"Store_FriendVisitForums"		"View Community Discussions"
 	"Store_FriendsOfficialWebsite"	"Visit Official Website"
 
 	"Store_PackagePurchaseSection_IndividualPrice"	"Price of individual games"
@@ -1247,7 +1247,7 @@
 	"Library_Details_DownloadableContent"	"Downloadable Content"
 	"Library_Details_GameStorePage"		"Game Store Page"
 	"Library_Details_GameHubPage"		"Game Hub Page"
-	"Library_Details_GameForums"		"Game Forums"
+	"Library_Details_GameForums"		"Community Discussions"
 	"Library_Details_RelatedGroups"		"Related Groups"
 	"Library_Details_LegacyCDKey"		"View CD Key"
 	"Library_Details_Support"		"Support"
@@ -1993,9 +1993,10 @@
 	"Downloads_ResumeAll"		"RESUME"
 	"Downloads_ViewInLibrary"	"VIEW IN LIBRARY"
 	"Downloads_Remove"	"REMOVE"
-	"Downloads_MoveToTop" "MOVE TO FRONT"
+	"Downloads_MoveToTop" "DOWNLOAD NOW"
 	"Downloads_Finished"	"Download finished at {t:t:downloadfinished}"
 	"Downloads_QueuedAmount"	"Download queued"
+	"Downloads_Deferred"	"Will Auto-Update at {s:updatetime}"
 
 	"Downloads_AmountValue"				"{s:downloadamount}"
 	"Downloads_TimeRemainValue"		"{t:r:s:downloadtime}"
@@ -2675,5 +2676,9 @@
 	"LostAuthenticator_Title"					"Recover Authenticator"
 	"LostAuthenticator_ValidationCode"			"Email code"
 	"LostAuthenticator_Working"					"Working"
+
+	"You_Are_Offline"						"You are in offline mode"
+	"Community_Offline2"					"Community content is not available in offline mode.  To exit offline mode and view community content, return to the main menu and select the Offline button in the top row."
+	"Profile_Offline2"						"Your profile content is not available in offline mode.  To exit offline mode and view your profile, return to the main menu and select the Offline button in the top row."	
 
 }
