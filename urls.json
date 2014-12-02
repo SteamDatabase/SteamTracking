@@ -59,11 +59,13 @@
 // Community CSS
 //
 "Styles/Community/apphub_admin.css"              : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/apphub_admin.css?__TIME__",
+"Styles/Community/apphub_broadcast.css"          : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/apphub_broadcast.css?__TIME__",
 "Styles/Community/apphub_guides.css"             : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/apphub_guides.css?__TIME__",
 "Styles/Community/apphub_home.css"               : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/apphub_home.css?__TIME__",
 "Styles/Community/apphub_images.css"             : "https://steamcommunity-a.akamaihd.net/public/shared/css/apphub_images.css?__TIME__",
 "Styles/Community/apphub_workshop.css"           : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/apphub_workshop.css?__TIME__",
 "Styles/Community/badges.css"                    : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/badges.css?__TIME__",
+"Styles/Community/broadcast_watch.css"           : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/broadcast_watch.css?__TIME__",
 "Styles/Community/chat.css"                      : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/chat.css?__TIME__",
 "Styles/Community/communityhome.css"             : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/communityhome.css?__TIME__",
 "Styles/Community/discussions.css"               : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/discussions.css?__TIME__",
@@ -159,6 +161,9 @@
 "Scripts/Community/apphub_workshop.js"           : "https://steamcommunity-a.akamaihd.net/public/javascript/apphub_workshop.js?__TIME__&l=english",
 "Scripts/Community/badges.js"                    : "https://steamcommunity-a.akamaihd.net/public/javascript/badges.js?__TIME__&l=english",
 "Scripts/Community/blotter_functions.js"         : "https://steamcommunity-a.akamaihd.net/public/javascript/blotter_functions.js?__TIME__&l=english",
+"Scripts/Community/broadcast_chat.js"            : "https://steamcommunity-a.akamaihd.net/public/javascript/broadcast_chat.js?__TIME__&l=english",
+"Scripts/Community/broadcast_player.js"          : "https://steamcommunity-a.akamaihd.net/public/javascript/broadcast_player.js?__TIME__&l=english",
+"Scripts/Community/broadcast_watch.js"           : "https://steamcommunity-a.akamaihd.net/public/javascript/broadcast_watch.js?__TIME__&l=english",
 "Scripts/Community/chat.js"                      : "https://steamcommunity-a.akamaihd.net/public/javascript/chat.js?__TIME__&l=english",
 "Scripts/Community/commentnotifications.js"      : "https://steamcommunity-a.akamaihd.net/public/javascript/commentnotifications.js?__TIME__&l=english",
 "Scripts/Community/communityhome.js"             : "https://steamcommunity-a.akamaihd.net/public/javascript/communityhome.js?__TIME__&l=english",
