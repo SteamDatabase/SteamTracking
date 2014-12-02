@@ -3,6 +3,7 @@
 10BlankImage
 10CBasePanel
 10CHintLabel
+10CHTTPImage
 10CMsgGoBack
 10CMsgReload
 10CUtlRBTreeIN4vgui9ListPanel11IndexItem_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiEE
@@ -12,6 +13,7 @@
 10CUtlRBTreeIN7CUtlMapIjbs8CDefLessIjEE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEE
 10CUtlRBTreeIN7CUtlMapIjii8CDefLessIjEE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEE
 10CUtlRBTreeIN7CUtlMapIPKcbiPFbRKS2_S4_EE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiEE
+10CUtlRBTreeIN7CUtlMapIPKciiPFbRKS2_S4_EE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiEE
 10CUtlRBTreeIN7CUtlMapIPKcN11CURLManager5URL_tEiPFbRKS2_S6_EE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiEE
 10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEiPFbRKS2_S6_EE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiEE
 10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEiPFbRKS2_S6_EE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiEE
@@ -19,6 +21,7 @@
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13StyleHandle_tEiPFbRKS2_S6_EE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiEE
 10CUtlRBTreeIyiPFbRKyS1_E25CDefRBTreeBalanceListenerIiEE
 10CUtlString
+10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
 10CUtlVectorI5Color10CUtlMemoryIS0_EE
 10CUtlVectorIf10CUtlMemoryIfEE
@@ -27,6 +30,7 @@
 10CUtlVectorIm10CUtlMemoryImEE
 10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_EE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
+10CUtlVectorIN17CItemImageManager18ImagesToDownload_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN26CMusicPage_Details_Content14PlaylistData_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui13PropertySheet6Page_tE10CUtlMemoryIS2_EE
@@ -60,7 +64,9 @@
 10CUtlVectorIw10CUtlMemoryIwEE
 10IAppSystem
 10IMemStream
+11CCallResultI10CHTTPImage22HTTPRequestCompleted_tE
 11CCallResultI15CGuideItemPanel32RemoteStorageDownloadUGCResult_tE
+11CCallResultI17CItemImageManager22HTTPRequestCompleted_tE
 11CCallResultI19CSettingsSubFriends24SetPersonaNameResponse_tE
 11CCallResultI21COverlay_Details_News22HTTPRequestCompleted_tE
 11CCallResultI23CScreenshotDeleteDialog25ScreenshotBatchComplete_tE
@@ -81,6 +87,7 @@
 11CURLManager
 11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS2_E28HashFunctorUnpaddedStructureIS2_EE
 1.2.5
+1280x720
 12CIntProperty
 12CMainOverlay
 12CMsgSetFocus
@@ -132,6 +139,7 @@
 14IRunGameEngine
 1.5.2
 15CConVarAccessor
+15CEmoticonButton
 15CGuideItemPanel
 15CMsgBrowserSize
 15CMsgFullRepaint
@@ -159,6 +167,7 @@
 16HTMLComboBoxHost
 16ListPanelDragger
 17CBaseDesktopPanel
+17CItemImageManager
 17CMsgBrowserCreate
 17CMsgBrowserRemove
 17CMsgCloseDevTools
@@ -171,6 +180,7 @@
 17CPanelHideWrapperI21COverlay_Details_NewsE
 17CPanelHideWrapperI24COverlay_Details_FriendsE
 17CPanelHideWrapperI29COverlay_Details_AchievementsE
+17CPanelHideWrapperI29COverlayDetailsBroadcastPanelE
 17CPanelHideWrapperI29COverlay_Details_Guides_PanelE
 17CPanelHideWrapperI34COverlay_Details_Screenshots_PanelE
 17CPanelHideWrapperI35COverlay_Details_CommunityHub_PanelE
@@ -197,6 +207,7 @@
 18CTextureIdProperty
 18CUtlCharConversion
 18ScreenshotToLoad_t
+1920x1080
 19CBaseDashboardPanel
 19CMsgComboNeedsPaint
 19CMsgFinishedRequest
@@ -210,6 +221,8 @@
 19CUtlNoEscConversion
 1A26b
 1wsHp
+20CBroadcastChatBanner
+20CBroadcastLiveBanner
 20CFriendsImageManager
 20CMsgGetCookiesForURL
 20CMsgJSDialogResponse
@@ -226,6 +239,7 @@
 21CMsgSetVerticalScroll
 21COverlay_Details_News
 21CreateDirectoryDialog
+21CSettingsSubBroadcast
 21CUtlCStringConversion
 21ICommonOverlayHelpers
 22CAchievementImagePanel
@@ -253,6 +267,7 @@
 24COverlay_Details_Friends
 24CProportionalIntProperty
 24CScreenshotLoadingThread
+25CBroadcastFirstTimeDialog
 25CMsgBrowserCreateResponse
 25CMsgVerticalScrollBarSize
 25COverlayCDKeyNotification
@@ -269,11 +284,13 @@
 27CMsgPopupHTMLWindowResponse
 27CMsgZoomToElementAtPosition
 27CMusicPage_Details_Playlist
+27COverlayBroadcastChatDialog
 27ListPanelColumnSelectButton
 28CMsgGetCookiesForURLResponse
 28CMsgScalePageToValueResponse
 29CMsgRequestFullScreenResponse
 29COverlay_Details_Achievements
+29COverlayDetailsBroadcastPanel
 29COverlay_Details_Guides_Panel
 30CMsgCloseFullScreenFlashIfOpen
 333333
@@ -293,6 +310,7 @@
 50COverlayNeedWorkshopLegalAgreementAcceptanceDialog
 51DEF1815DB5ED74FCC34C85D709
 6127C24C05F38A0AAAF65C0EF02C
+640x360
 659EF8BA043916EEDE8911702B22
 6ConVar
 7CCookie
@@ -302,19 +320,25 @@
 7CUtlMapIjbs8CDefLessIjEE
 7CUtlMapIjii8CDefLessIjEE
 7CUtlMapIPKcbiPFbRKS1_S3_EE
+7CUtlMapIPKciiPFbRKS1_S3_EE
 7CUtlMapIPKcN11CURLManager5URL_tEiPFbRKS1_S5_EE
 7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEiPFbRKS1_S5_EE
 7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEiPFbRKS1_S5_EE
 7CUtlMapIPKcN4vgui13CLayoutRegionEiPFbRKS1_S5_EE
 7CUtlMapIPKcN4vgui13StyleHandle_tEiPFbRKS1_S5_EE
+854x480
 8CMsgCopy
 8CMsgFind
+8GridMenu
+9CCallbackI10CBasePanel17BroadcastStatus_tLb0EE
 9CCallbackI10CBasePanel17LowBatteryPower_tLb0EE
 9CCallbackI10CBasePanel19ScreenshotWritten_tLb0EE
 9CCallbackI10CBasePanel20PersonaStateChange_tLb0EE
 9CCallbackI10CBasePanel21ParentalLockChanged_tLb0EE
 9CCallbackI10CBasePanel23LegacyCDKeyRegistered_tLb0EE
+9CCallbackI10CBasePanel25BroadcastSettingsLoaded_tLb0EE
 9CCallbackI10CBasePanel26SteamServersDisconnected_tLb0EE
+9CCallbackI10CBasePanel27BroadcastShowFirstTimeDlg_tLb0EE
 9CCallbackI10CBasePanel29MicroTxnAuthRequestCallback_tLb0EE
 9CCallbackI10CBasePanel30GameOverlayActivateRequested_tLb0EE
 9CCallbackI10CBasePanel32RemoteStoragePublishFileResult_tLb0EE
@@ -338,6 +362,7 @@
 9CCallbackI17CPanelHideWrapperI21COverlay_Details_NewsE21ParentalLockChanged_tLb0EE
 9CCallbackI17CPanelHideWrapperI24COverlay_Details_FriendsE21ParentalLockChanged_tLb0EE
 9CCallbackI17CPanelHideWrapperI29COverlay_Details_AchievementsE21ParentalLockChanged_tLb0EE
+9CCallbackI17CPanelHideWrapperI29COverlayDetailsBroadcastPanelE21ParentalLockChanged_tLb0EE
 9CCallbackI17CPanelHideWrapperI29COverlay_Details_Guides_PanelE21ParentalLockChanged_tLb0EE
 9CCallbackI17CPanelHideWrapperI34COverlay_Details_Screenshots_PanelE21ParentalLockChanged_tLb0EE
 9CCallbackI17CPanelHideWrapperI35COverlay_Details_CommunityHub_PanelE21ParentalLockChanged_tLb0EE
@@ -353,6 +378,9 @@
 9CCallbackI19CRefreshLoginDialog23SteamServersConnected_tLb0EE
 9CCallbackI19CRefreshLoginDialog27SteamServerConnectFailure_tLb0EE
 9CCallbackI19CSettingsSubFriends20PersonaStateChange_tLb0EE
+9CCallbackI20CBroadcastChatBanner22BroadcastChatMessage_tLb0EE
+9CCallbackI20CBroadcastLiveBanner23BroadcastUploadStatus_tLb0EE
+9CCallbackI20CBroadcastLiveBanner25BroadcastSettingsLoaded_tLb0EE
 9CCallbackI22CAchievementImagePanel28UserAchievementIconFetched_tLb0EE
 9CCallbackI22SerializedOverlayPumps21ScreenshotTriggered_tLb0EE
 9CCallbackI23CScreenshotUploadDialog26ScreenshotUploadProgress_tLb0EE
@@ -378,8 +406,11 @@
 9CCallbackI27CMusicPage_Details_Playlist27PlaylistAllEntriesDeleted_tLb0EE
 9CCallbackI27CMusicPage_Details_Playlist28PlaylistEntriesHaveChanged_tLb0EE
 9CCallbackI27CMusicPage_Details_Playlist33TrackListDataEntryForPlaylistID_tLb0EE
+9CCallbackI27COverlayBroadcastChatDialog17BroadcastStatus_tLb0EE
+9CCallbackI27COverlayBroadcastChatDialog22BroadcastChatMessage_tLb0EE
 9CCallbackI29COverlay_Details_Achievements19UserStatsReceived_tLb0EE
 9CCallbackI29COverlay_Details_Achievements23UserAchievementStored_tLb0EE
+9CCallbackI29COverlayDetailsBroadcastPanel17BroadcastStatus_tLb0EE
 9CCallbackI38COverlayFriendChangeConfirmationDialog20PersonaStateChange_tLb0EE
 9CMsgClose
 9CMsgKeyUp
@@ -388,7 +419,6 @@
 9wttj
 9ZooDialog
 a2d_ASN1_OBJECT
-A890t
 aaControls
 ac-auditEntity
 Accel
@@ -407,6 +437,7 @@ _actionSignalTargetDar
 Activate
 ActivateItem
 ActivateModule
+activating
 activeMatch
 AddAlbumToPlaylist
 AddAlbumToPlaylistButton
@@ -717,6 +748,7 @@ BIO_vsnprintf
 BIO_write
 bIsRedirect
 BitBucket
+BitrateLimit
 blank
 _blank
 blGrip
@@ -792,7 +824,8 @@ Break
 bReplace
 BResizeImageRGBA
 brighttext
-broadcast
+BroadcastDetailPanel
+BroadcastDisabledLabel
 BrowseButton
 BrowseMusic
 BrowserExitFullScreen
@@ -904,6 +937,9 @@ CBaseDashboardPanel
 CBaseDesktopPanel
 CBasePanel
 CBitmapImagePanel
+CBroadcastChatBanner
+CBroadcastFirstTimeDialog
+CBroadcastLiveBanner
 cc_generic_services
 CCookie
 cdkeyrestrictions
@@ -912,6 +948,7 @@ cdninfo
 ceilf
 cellcolor
 cellmap
+CEmoticonButton
 center
 certBag
 certerror
@@ -923,6 +960,7 @@ certificateRevocationList
 certname
 certName
 CFileOpenListPanel
+CFileWriterThread
 CGuideItemPanel
 Chakma
 challengePassword
@@ -931,8 +969,10 @@ changesharetofacebook
 characteristic-two-field
 Chargedback
 ChatFlashMode
+ChatHistory
 ChatMsgNotification
 ChatRoomButton
+ChatUserContext
 Cheating
 checkable
 CheckAllItems
@@ -1137,10 +1177,12 @@ CommunityFrontPage
 CommunityHubDetailPanel
 CommunitySingleScreenshot
 CompatibleLobby
+complete
 CompleteName
 completetxn
 Complimentary
 CONFIG
+ConfigurationLink
 ConfirmButton
 connect
 connecting
@@ -1155,6 +1197,7 @@ ContextLabel
 contextmenu
 ContextValues
 Continue
+ContinuePressed
 continuous
 ControlFactory
 ControlName
@@ -1177,9 +1220,11 @@ countrycodes
 countryName
 CoverImage
 COverlayAsyncNotificationsRequestedDialog
+COverlayBroadcastChatDialog
 COverlayCDKeyDialog
 COverlayCDKeyNotification
 COverlay_Details_Achievements
+COverlayDetailsBroadcastPanel
 COverlay_Details_CommunityDiscussions_Panel
 COverlay_Details_CommunityHub_Panel
 COverlay_Details_Friends
@@ -1228,7 +1273,6 @@ CreatePlaylistBasedOnArtistTracks
 CreatePlaylistBasedOnPlaylist
 CreatePlaylistBasedOnTrack
 CreateVProfile
-CRefreshLoginDialog
 crlBag
 crlDistributionPoints
 CrlID
@@ -1319,6 +1363,7 @@ CScreenshotManager
 CScreenshotNotification
 CScreenshotUploadDialog
 cs_CZ
+CSettingsSubBroadcast
 CSettingsSubFriends
 CSettingsSubInGame
 CSettingsSubVoice
@@ -1393,8 +1438,13 @@ dcobject
 dcObject
 Deaccel
 Debug
+DebugLine
+DebugLineStyleGreen
+DebugLineStyleRed
+DebugLineStyleYellow
 debug_malloc
 debug_malloc2
+DebugText
 DecodingLookupArray
 de_DE
 Default
@@ -1481,6 +1531,7 @@ DeviceName
 dhKeyAgreement
 digg.com
 digit
+Dimensions
 direction
 DirectorySelectDialog
 DirectorySelected
@@ -1647,6 +1698,7 @@ ELogonState
 emailAddress
 emailProtection
 EMicroTxnAuthResponse
+EmoticonMenuItemStyle
 emphasis
 empty
 Empty
@@ -1825,6 +1877,7 @@ _fini
 finnish
 fips2
 FireButton
+FirstTimeComplete
 FlashModeAlways
 FlashModeMinimized
 FlashModeNever
@@ -1885,6 +1938,7 @@ freopen
 freshestCRL
 frexp
 fr_FR
+friend
 friendadd
 FriendAdded
 friendlyCountry
@@ -1896,6 +1950,11 @@ Friend-only
 friendremove
 friendrequestaccept
 friendrequestignore
+friends_chat_name
+friends_chat_name_ingame
+friends_chat_text
+friends_chat_text_self
+friends_chat_url
 FriendsCommand
 FriendsDetailPanel
 Friends.GoldenColor
@@ -1929,7 +1988,6 @@ gameoverlayrenderer.so
 GameOverlayScreenshotKeyChanged
 GameOverlayShortcutKeyChanged
 gameoverlayui
-GameOverlayUI
 game_selector
 GameServer
 gamesforwindows.com
@@ -2079,6 +2137,7 @@ headers
 Hebrew
 height
 hi5.com
+HideWhenDisabled
 highwinds
 hintText
 Hipercard
@@ -2104,7 +2163,6 @@ HotkeyEntryClearButton
 hours_forever
 hours_twoweeks
 houseIdentifier
-hover
 HTMLBackRequested
 HTMLCanGoBackAndForward
 HTMLComboBoxHost
@@ -2407,6 +2465,7 @@ IMELanguageList
 IMESentenceModes
 Imperial_Aramaic
 Inappropriate
+IncludeDesktop
 Incompatible
 IncompatibleCheat
 Independent
@@ -2447,6 +2506,7 @@ InputDialog
 input_type
 Inscriptional_Pahlavi
 Inscriptional_Parthian
+InsertString
 InsertTabImage
 install
 instr_no_selection
@@ -2456,6 +2516,7 @@ interiorspacing
 internationaliSDNNumber
 international-organizations
 internode
+intro
 Invalid
 INVALID
 Invalidate
@@ -2488,6 +2549,7 @@ iswcntrl
 iswspace
 italian
 ItemDeselected
+itemhover
 itemid
 itemID
 itemIndex
@@ -2761,6 +2823,7 @@ ListViewItemSelected
 ListViewPanel
 LITE_RUNTIME
 live.com
+LiveImage
 LoadDefaultControlSettings
 loading_img_throbber
 LoadPlaylistIntoQueue
@@ -2812,6 +2875,7 @@ m_AnimationMaps
 -manuallyclearframes
 maxchars
 maximizebuttonvisible
+MaxKbps
 maxlength
 MaxResults
 m_bitsMigratedBuckets
@@ -2835,6 +2899,7 @@ md_gost94
 m_dictRegions
 m_dictStyles
 m_dictURLs
+m_dictURLToImageID
 m_DragData
 m_DragPanels
 media
@@ -3036,12 +3101,14 @@ m_strAlbum
 m_strArtist
 m_strArtistFilter
 m_strArtistname
+m_strBaseURL
 m_strCaption
 m_strCurrentlySelectedArtist
 m_strDirectory
 m_strFilter
 m_strFullFilename
 m_StringPools
+m_strLanguage
 m_strParentalPasswordPlaintext
 m_strParentalWebToken
 m_strRecoveryEmail
@@ -3110,11 +3177,15 @@ Music_Track_Menu_ShowAlbumInUI
 mustownapp
 MutableMessage
 MutableRepeatedMessage
+MuteChatUser
 MuteVolumeButtonActiveStyle
 MuteVolumeButtonStyle
 m_vecAlbumPanels
+m_vecChatImages
+m_vecChatImagesToInsert
 m_vecHashBuckets
 m_vecHCursor
+m_vecImageDownloadQueue
 m_vecJumpWChars
 m_vecLastSizes
 m_vecLayoutCmds
@@ -3134,12 +3205,15 @@ myspace.com
 N10CBasePanel20CCallbackOnLoggedOffE
 N10CBasePanel21CCallbackOnLowBatteryE
 N10CBasePanel24CCallbackOnFilePublishedE
+N10CBasePanel26CCallbackOnBroadcastStatusE
 N10CBasePanel28CCallbackOnScreenshotWrittenE
 N10CBasePanel29CCallbackOnPersonaStateChangeE
 N10CBasePanel30CCallbackOnMicroTxnAuthRequestE
 N10CBasePanel30CCallbackOnParentalLockChangedE
 N10CBasePanel31CCallbackOnPublishedFileUpdatedE
 N10CBasePanel32CCallbackOnLegacyCDKeyRegisteredE
+N10CBasePanel34CCallbackOnBroadcastSettingsLoadedE
+N10CBasePanel36CCallbackOnBroadcastShowFirstTimeDlgE
 N10CBasePanel38CCallbackOnAsyncNotificationsRequestedE
 N10CBasePanel39CCallbackOnGameOverlayActivateRequestedE
 N14CParentalCache34CCallbackOnParentalLockChangeBeginE
@@ -3158,6 +3232,7 @@ N17CMusicPlayerPanel49CCallbackOnCurrentQueueEntrySecondsElapsedChangedE
 N17CPanelHideWrapperI21COverlay_Details_NewsE30CCallbackOnParentalLockChangedE
 N17CPanelHideWrapperI24COverlay_Details_FriendsE30CCallbackOnParentalLockChangedE
 N17CPanelHideWrapperI29COverlay_Details_AchievementsE30CCallbackOnParentalLockChangedE
+N17CPanelHideWrapperI29COverlayDetailsBroadcastPanelE30CCallbackOnParentalLockChangedE
 N17CPanelHideWrapperI29COverlay_Details_Guides_PanelE30CCallbackOnParentalLockChangedE
 N17CPanelHideWrapperI34COverlay_Details_Screenshots_PanelE30CCallbackOnParentalLockChangedE
 N17CPanelHideWrapperI35COverlay_Details_CommunityHub_PanelE30CCallbackOnParentalLockChangedE
@@ -3170,6 +3245,9 @@ N18COverlayWebBrowser30CCallbackOnParentalLockChangedE
 N19CRefreshLoginDialog23CCallbackOnLogonFailureE
 N19CRefreshLoginDialog23CCallbackOnLogonSuccessE
 N19CSettingsSubFriends29CCallbackOnPersonaStateChangeE
+N20CBroadcastChatBanner31CCallbackOnBroadcastChatMessageE
+N20CBroadcastLiveBanner32CCallbackOnBroadcastUploadStatusE
+N20CBroadcastLiveBanner34CCallbackOnBroadcastSettingsLoadedE
 N22CAchievementImagePanel31CCallbackOnAchievementIconReadyE
 N24CMusicPage_Details_Album27CCallbackOnAlbumCoverLoadedE
 N24CMusicPage_Details_Album39CCallbackOnTrackListDataEntryForAlbumIDE
@@ -3192,8 +3270,11 @@ N27CMusicPage_Details_Playlist35CCallbackOnPlaylistEntriesHaveMovedE
 N27CMusicPage_Details_Playlist36CCallbackOnPlaylistAllEntriesDeletedE
 N27CMusicPage_Details_Playlist37CCallbackOnPlaylistEntriesHaveChangedE
 N27CMusicPage_Details_Playlist42CCallbackOnTrackListDataEntryForPlaylistIDE
+N27COverlayBroadcastChatDialog26CCallbackOnBroadcastStatusE
+N27COverlayBroadcastChatDialog31CCallbackOnBroadcastChatMessageE
 N29COverlay_Details_Achievements26CCallbackOnUserAchievementE
 N29COverlay_Details_Achievements28CCallbackOnUserStatsReceivedE
+N29COverlayDetailsBroadcastPanel26CCallbackOnBroadcastStatusE
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -3426,6 +3507,8 @@ NumericalCompare
 NumericInputOnly
 numfriends
 num_guides
+numrequests
+numviewers
 nytimes.com
 OAEP-
 Oakley-EC2N-3
@@ -3486,6 +3569,7 @@ OnSetStatusText
 OnStartRequest
 OnTaskBarChanged
 OnURLChanged
+OpenBroadcastChatDialog
 OpenButton
 OpenColumnChoiceMenu
 OpenContextMenu
@@ -3536,8 +3620,10 @@ orkut.com
 Osmanya
 otherMailbox
 OutputBuffer
+OutputHeight
 OutputStringPointer
 output_type
+OutputWidth
 OverlayHidden
 OverlayShown
 OverlaySplashScreen
@@ -3635,6 +3721,10 @@ pcre_stack_malloc
 percent
 perfectworld
 Permanent
+PermissionAccept
+PermissionFriends
+PermissionInvite
+PermissionPublic
 persona
 personalSignature
 personalTitle
@@ -3745,6 +3835,7 @@ postalCode
 postdata
 postData
 PostedAnnouncement
+PostMessage
 postOfficeBox
 PowerMeterBright
 PowerMeterDim
@@ -3813,7 +3904,6 @@ pthread_mutex_unlock
 pthread_once
 pthread_self
 pt_PT
-Public
 PublicElement
 publish
 publish_button
@@ -3830,6 +3920,7 @@ PutMessage
 pwrite64
 py_generic_services
 Q2XXR
+Q_AggressiveStripPrecedingAndTrailingWhitespace
 Q_AppendSlash
 Q_atof
 Q_atoi
@@ -3946,6 +4037,7 @@ ReceiveMessagePlaySoundCheck
 ReceivesGroupComment
 RecommendButton
 Reconfiguring
+RecordMic
 Recurring
 reddit.com
 RedirectionBehavior
@@ -3972,6 +4064,8 @@ RequestAroundUser
 RequestFriends
 RequestGlobal
 request_id
+RequestsImage
+RequestsText
 ResetData
 ResizeColumnToContents
 Resource\warning.wav
@@ -4170,7 +4264,6 @@ SerialNumber
 serverandwgonly
 serverAuth
 ServerBrowser003
-ServerMain
 serveronly
 service
 ServiceDescriptorProto
@@ -4402,12 +4495,17 @@ ShowAlbumButton
 ShowAlbumInSystem
 ShowAlbumInUI
 showbar
+ShowBroadcast
+ShowChat
+ShowChatCombo
 ShowContextMenu
 ShowCurrentAlbum
+ShowDebugInfo
 ShowEntryInSystem
 ShowFriendsPanelInOverlay
 ShowLegacyCDKey
 ShowMusicPlayerIfWanted
+ShowSettings
 showticks
 ShowTimeInChatLogCheck
 ShuffleButton
@@ -4443,7 +4541,6 @@ sk_sort
 sk_unshift
 sk_value
 sk_zero
-Sleeping
 SliderHoriz
 SlimProgressBarError
 SlotsAvailable
@@ -4538,6 +4635,7 @@ Steam_FreeLastCallback
 steamgames.com
 Steam_GetAPICallResult
 steamid
+SteamIDBroadcastPage
 steamIDControlPage
 Steam_Language
 steamLogin
@@ -4548,12 +4646,12 @@ steampipe
 SteamRealPath
 Steam_ServerBrowserPingRateDefault
 steamtranslation.ru
-SteamUI
 steamui.so
 SteamUniverse
 stNaf
 StolenIV
 stopanimation
+StopBroadcast
 StopButton
 stopevent
 StopPanelAnimations
@@ -4672,7 +4770,6 @@ teletexTerminalIdentifier
 telexNumber
 teliasonera
 Telugu
-TenFoot
 Terminator
 Test_IsActive
 Test_SetFailed
@@ -4706,8 +4803,10 @@ ThreadInMainThread
 ThreadInterlockedAssignIf
 ThreadInterlockedAssignIf64
 ThreadInterlockedCompareExchange
+ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
+ThreadInterlockedExchangeAdd
 ThreadInterlockedIncrement
 ThreadIsProcessActive
 ThreadIsThreadRunning
@@ -4801,7 +4900,6 @@ uint32
 uint64
 ukrainian
 uk_UA
-Unaccounted
 Unauthorized
 unavailable
 Unbannable
@@ -4860,6 +4958,7 @@ utime
 UtlQueue
 UtlThreadSafeQueue
 Valid
+ValidateFileIOStatics
 Validating
 value
 ValueNames
@@ -4890,10 +4989,15 @@ VGUI_Surface039
 VGUI_System010
 Video
 VideoPublished
+videosendfps
+videosendkbps
 ViewAchievements
 ViewAchievementsButton
 ViewCommunityDiscussions
 ViewCommunityHub
+ViewerAvatar
+ViewersImage
+ViewersText
 view_friends
 viewfriendsgame
 ViewGuide
@@ -4940,6 +5044,7 @@ wcscpy
 wcslen
 wcsncasecmp
 wcstol
+wcstoll
 WeakRandomFloat
 WeakRandomInt
 WebAuthCompleted
@@ -5035,23 +5140,25 @@ _ZN10CValidator3PopEv
 _ZN10CValidator4PushEPKcPvS1_
 _ZN10CValidator9IsClaimedEPv
 _ZN10SteamVProf10CVProfNode10EnterScopeEPv
-_ZN10SteamVProf10CVProfNode10GetSubNodeEPKciS2_i
+_ZN10SteamVProf10CVProfNode10GetSubNodeEPKci17EVProfBugdetGroupi
 _ZN10SteamVProf10CVProfNode5ResetEv
 _ZN10SteamVProf10CVProfNode9ExitScopeEv
 _ZN10SteamVProf10CVProfNode9MarkFrameEv
 _ZN10SteamVProf9CVProfile12OutputReportEiPKci
-_ZN10SteamVProf9CVProfile30BudgetGroupNameToBudgetGroupIDEPKc
-_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
 _ZN10SteamVProf9CVProfileD1Ev
 _ZN11SteamStdLib11CommandLineEv
 _ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
 _ZN11SteamStdLib17CCommandLineParamD1Ev
 _ZN16SteamThreadTools12CThreadEvent3SetEv
+_ZN16SteamThreadTools12CThreadEventC1Eb
 _ZN16SteamThreadTools12CThreadMutexC1Ev
 _ZN16SteamThreadTools12CThreadMutexD1Ev
 _ZN16SteamThreadTools16CThreadLocalBase3SetEPv
 _ZN16SteamThreadTools16CThreadLocalBaseC2Ev
 _ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
 _ZN16SteamThreadTools7CThread13GetThreadProcEv
 _ZN16SteamThreadTools7CThread15IsThreadRunningEv
 _ZN16SteamThreadTools7CThread4InitEv

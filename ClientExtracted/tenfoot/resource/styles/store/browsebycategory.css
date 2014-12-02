@@ -565,13 +565,18 @@ StoreBrowseByCategoryItem:descendantfocus .OnlyVisibleOnCarouselFocus
 
 #ItemPrice
 {
-	horizontal-align: right;
+	horizontal-align: left;
+}
+
+StorePrice #BasePrice
+{
+	width: fit-children;
 }
 
 .ItemDetails
 {
 	flow-children: down;
-	margin-top: 15px;
+	margin-top: 4px;
 	margin-left: 10px;
 }
 
@@ -581,6 +586,7 @@ StoreBrowseByCategoryItem:descendantfocus .OnlyVisibleOnCarouselFocus
 	max-height: 140px;
 	color: applabelsolid;
 	font-size: 36px;
+	padding-bottom: 2px;
 	white-space: normal;
 	font-family: platformfont;
 	font-weight: bold;
@@ -647,5 +653,5 @@ StoreBrowseByCategoryItem:descendantfocus .OnlyVisibleOnCarouselFocus
 #Genres.Metadata
 {
 	height: 100%;
-	max-height: 60px;
+	max-height: 30px;
 }

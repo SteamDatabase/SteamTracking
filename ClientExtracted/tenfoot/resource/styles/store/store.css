@@ -824,6 +824,11 @@ StorePanel:descendantfocus #FeaturedPlatform
 	transition-delay: 0s;
 }
 
+.FeaturedImageInfo #FeaturedPrice
+{
+	padding-top: 3px;
+}
+
 .StoreImage:descendantfocus .FeaturedImageInfo
 {
 	opacity: 1.0;
@@ -1157,10 +1162,26 @@ StoreStackable.Loaded #Loaded
 StorePrice
 {
 	flow-children: right;
-	horizontal-align: right;
+	horizontal-align: left;
 	font-size: 24px;
-	line-height: 34px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	margin-bottom: 2px;
+	height: 32px;
+}
 
+#PurchaseBtn StorePrice,
+#PurchaseOptionsBtn StorePrice
+{
+	horizontal-align: right;
+	padding-top: 2px;
+	padding-bottom: 0px;
+}
+
+#PurchaseOptionsBtn StorePrice
+{
+	padding-bottom: 0px;
+	padding-top: 2px;
 }
 
 Button:focus StorePrice
@@ -1172,17 +1193,48 @@ StorePrice #DiscountPercent
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #537e3c ), to( #689b46 ) );
 	color: white;
-	padding: 0px 2px;
+	padding: 1px 6px;
 	margin-right: 4px;
 }
 
 StorePrice #BasePrice
 {
-	color: #666464;
+	color: #666666FF;
 	text-decoration: line-through;
+	width: 0px;
 	margin-right: 4px;
-	margin-top: 1px;
+	margin-top: 7px;
 	font-size: 18px;
+	visibility: collapse;
+}
+
+#PurchaseBtn StorePrice #BasePrice,
+#PurchaseOptionsBtn StorePrice #BasePrice,
+#PackagePrice #BasePrice
+{
+	visibility: collapse;
+	width: 0px;
+
+}
+
+CartLineItem #BasePrice,
+{
+	margin-top: 0px;
+	width: fit-children;
+}
+
+StoreBrowseByCategoryItem StorePrice #BasePrice,
+StoreAppPurchaseSection StorePrice #BasePrice,
+StorePackage StorePrice #BasePrice
+{
+	margin-top: 4px;
+	font-size: 21px;
+	width: fit-children;
+}
+
+CartLineItem:descendantfocus #FinalPrice
+{
+	color: applabelselectedsolid;
 }
 
 StorePrice #FinalPrice

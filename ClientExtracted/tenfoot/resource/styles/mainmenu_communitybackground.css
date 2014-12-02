@@ -81,6 +81,8 @@ OverlayBasePanel #CommunityFriendsStrip
 	height: 480px;
 }
 
+
+
 .CommunityFriendsCarousel
 {
 	animation-name: communityfriends-perspective;
@@ -156,22 +158,22 @@ OverlayBasePanel #CommunityFriendsStrip
 
 .ProfileVisible #CommunityFriendsStripWrapper
 {
+	transition-property: transform, opacity;
 	transition-duration: 0.4s;
 }
 
-ProfileWrapper #CommunityFriendsStrip
+ProfileWrapper #CommunityFriendsStripWrapper
 {
-	transition-property: opacity;
+	transition-property: opacity, transform;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 }
 
 .StackDepth2 .ProfileVisible #CommunityFriendsStripWrapper,
-.StackDepth2 .ProfileVisible #CommunityFriendsStrip
+.StackDepth3 .ProfileVisible #CommunityFriendsStripWrapper
 {
 	transform: rotateZ( 0deg );
-	opacity: 0.0;
 }
 
 .CommunityVisible:descendantfocus .CommunityFriendsStripWrapperBackgroundBaseVisible
@@ -289,146 +291,6 @@ CommunityMainPanel.CommunityFriendsTransitionRightAndOff,
 }
 
 
-
-.CommunityFriendStripItem0
-{
-	transform: translate3d( 766px, -45px, 120px );
-	blur: none;
-	opacity: 1.0;
-}
-
-.CommunityFriendStripItem6
-{
-	transform: translate3d( 1010px, 142px, 30px );
-	desaturation: 0.2;
-	blur: none;
-	opacity: 1.0;
-
-}
-
-.CommunityFriendStripItem3
-{
-	transform: translate3d( 1258px, 55px, -350px );
-	blur: gaussian( 1.25 );
-	opacity: 0.7;
-	desaturation: 0.1;
-}
-
-.CommunityFriendStripItem10
-{
-	transform: translate3d( 908px, -246px, -350px );
-	blur: gaussian( 1.8 );
-	opacity: 0.7;
-	desaturation: 0.3;
-}
-
-.CommunityFriendStripItem4
-{
-	transform: translate3d( 380px, -25px, 100px );
-	blur: none;
-	opacity: 1.0;
-	desaturation: 0.2;
-}
-
-.CommunityFriendStripItem1
-{
-	transform: translate3d( 506px, 120px, -80px );
-	desaturation: 0.2;
-	blur: gaussian( 0.7 );
-	opacity: 1.0;
-}
-.CommunityFriendStripItem8
-{
-	transform: translate3d( 440px, -185px, -375px );
-	blur: gaussian( 1.3 );
-	opacity: 0.8;
-	desaturation: 0.4;
-}
-
-.CommunityFriendStripItem7
-{
-	transform: translate3d( 626px, -380px, -380px );
-	desaturation: 0.6;
-	blur: gaussian( 1.6 );
-	opacity: 0.4;
-}
-.CommunityFriendStripItem2
-{
-	pre-transform-scale2d: 0.9;
-	background-color: #00000000;
-	blur: gaussian( 8, 8, 2 );
-
-	desaturation: 0.3;
-	border-radius: 2px;
-}
-
-
-
-.CommunityFriendStripItem5
-{
-	transform: translate3d(626px, 246px, -600px );
-	blur: gaussian( 2.2 );
-	opacity: 0.3;
-	desaturation: 0.4;
-}
-
-.CommunityFriendStripItem15
-{
-	transform: translate3d( -28px, -20px, -186px );
-	blur: gaussian( 4 );
-	opacity: 0.5;
-	desaturation: 0.7;
-}
-
-.CommunityFriendStripItem9
-{
-	transform: translate3d( 324px, 250px, -200px );
-	desaturation: 0.5;
-	blur: gaussian( 1.5 );
-	opacity: 0.9;
-}
-
-.CommunityFriendStripItem11
-{
-	transform: translate3d( 270px, -200px, -270px );
-	desaturation: 0.7;
-	blur: gaussian( 1.2 );
-	opacity: 0.7;
-}
-
-.CommunityFriendStripItem12
-{
-	transform: translate3d( 122px, 100px, -50px );
-	desaturation: 0.5;
-	blur: gaussian( 3.2 );
-	opacity: 0.8;
-}
-
-.CommunityFriendStripItem13
-{
-	transform: translate3d( 300px, 105px, -120px );
-	blur: gaussian( 1.1 );
-	opacity: 0.8;
-	desaturation: 0.4;
-}
-
-.CommunityFriendStripItem14
-{
-	transform: translate3d( 938px, 25px, -550px );
-	blur: gaussian( 1.8 );
-	opacity: 0.3;
-	desaturation: 0.4;
-
-}
-
-.CommunityFriendStripItemOverCount
-{
-	transform: translate3d( 908px, 68px, 20px );
-	desaturation: 0.1;
-	blur: none;
-	opacity: 0.0;
-}
-
 .CommunityVisible:descendantfocus .CommunityFriendStripItem
 {
 	transform: translatez(-500px);
@@ -449,4 +311,3 @@ CommunityMainPanel.CommunityFriendsTransitionRightAndOff,
 {
 	transform: translatez(0px);
 }
-

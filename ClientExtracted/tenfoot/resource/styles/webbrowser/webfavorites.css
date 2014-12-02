@@ -75,12 +75,12 @@ WebFavorites.Hidden
 
 .FavoritesGrid FavoriteGridItem
 {
-	margin: -34px;
-	padding: 34px;
+	margin: -10px;
+	padding: 24px;
 	transition-property: position;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in-out;
-	
+
 }
 
 #HistoryWrapper, #FrequentWrapper 
@@ -145,7 +145,7 @@ WebFavorites.Hidden
 
 FavoriteGridItem:hover #AltTitle
 {
-	pre-transform-scale2d: 1.06; 
+	pre-transform-scale2d: 1.025; 
 	color: #f2f2f2ff;
 }
 
@@ -153,21 +153,21 @@ FavoriteGridItem:hover #AltTitle
 .FavoriteRow Button:hover .WebImage, FavoriteGridItem:hover .GridItemImage
 {
 	box-shadow: box_shadow_off_color -2.5px -2.5px 10px 5px;
-	pre-transform-scale2d : 1.04;
+	pre-transform-scale2d : 1.025;
 	opacity: 0.9;
 }
 
 
 FavoriteGridItem:descendantfocus #AltTitle
 {
-	pre-transform-scale2d: 1.1;  
+	pre-transform-scale2d: 1.08;  
 }
 
 
 .FavoriteRow Button:focus .WebImage, FavoriteGridItem:descendantfocus .GridItemImage
 {
 	box-shadow: box_shadow_on_color -3.5px -3.5px 13px 7px;
-	pre-transform-scale2d: 1.1;
+	pre-transform-scale2d: 1.08;
 	opacity: 1.0;
 
 	animation-name: main-button-glow-movement-no-fill;
@@ -180,7 +180,7 @@ FavoriteGridItem:descendantfocus #AltTitle
 
 FavoriteGridItem:descendantfocus:hover #AltTitle
 {
-	pre-transform-scale2d: 1.14; 
+	pre-transform-scale2d: 1.105; 
 	z-index: 11;
 }
 
@@ -188,7 +188,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 {
 	box-shadow: box_shadow_off_color -3.5px -3.5px 13px 7px;
 	border-style: solid;
-	pre-transform-scale2d : 1.14;
+	pre-transform-scale2d : 1.105;
 	border-color: #bdbfbfff;
 	opacity: 1.0;
 	z-index: 10;

@@ -12,6 +12,7 @@
 9N\vx
 access
 alphasort64
+aminf
 asctime
 asctime_r
 __assert_fail
@@ -24,10 +25,10 @@ breakpad_verbose
 __bss_start
 buf_used_
 BuildID
+CFileWriterThread
 chdir
 chmod
 chromehtml.so
-ClientDLL
 clock_gettime
 closedir
 _CPathString
@@ -77,8 +78,8 @@ dlsym
 DONT_BREAK_ON_ASSERT
 _edata
 elf_mapped_base
-Encryption
 environ
+erMaf
 __errno_location
 execv
 _ExitOnFatalAssert
@@ -87,7 +88,6 @@ fclose
 fdatasync
 fflush
 fgets
-FileSystem
 filesystem_stdio.so
 filesystem_steam.so
 _fini
@@ -103,7 +103,6 @@ ftruncate64
 futimes
 fwrite
 __fxstat64
-GameOverlayUI
 getcontext
 getcwd
 getenv
@@ -139,6 +138,7 @@ IsSpewActive
 iswspace
 IVALIDATE001
 _Jv_RegisterClasses
+layUf
 lchown
 ld-linux.so.2
 libc.so.6
@@ -155,7 +155,7 @@ localeconv
 localtime
 localtime_r
 location
-Logger
+Loggf
 lseek
 lseek64
 __lxstat
@@ -190,14 +190,12 @@ N15google_breakpad17LinuxPtraceDumperE
 N15google_breakpad21CrashGenerationClientE
 nanosleep
 nattypeprobe.so
-Network
 -noassert
 -nocrashdialog
 .note.gnu.build-id
+ntDLf
 opendir
 output
-OverlayInput
-OverlayRendering
 p2pcore.so
 p2prelayserver.so
 p2pstunserver.so
@@ -244,8 +242,8 @@ realloc
 realpath
 rename
 rewind
+rkItf
 rmdir
-RunCallbacks
 scandir
 scandir64
 sched_yield
@@ -261,12 +259,10 @@ semget
 semop
 sendfile64
 serverbrowser.so
-ServerMain
 sigaction
 sigaddset
 sigemptyset
 sigprocmask
-Sleeping
 sscanf
 __stack_chk_fail
 StartupTime
@@ -274,14 +270,12 @@ statvfs
 statvfs64
 stderr
 Steam
-Steam2WorkItem
 steamclient.so
 -steamconsole
 .steam_exec_test.sh
 -steamos
 SteamRealPath
 steamservice.so
-SteamUI
 steamui.so
 SteamUniverse
 stepping
@@ -310,10 +304,9 @@ swscanf
 symlink
 syscall
 system
-TenFoot
+Systf
 tenfoot.so
 .text
-ThreadWorkItem
 timegm
 __timezone
 TMPDIR
@@ -321,7 +314,6 @@ toupper
 towlower
 towupper
 u4PPW
-Unaccounted
 uname
 unlink
 upload_file_minidump
@@ -329,6 +321,7 @@ uptime
 UserID
 usleep
 utime
+ValidateFileIOStatics
 value_
 Valve
 vasprintf
@@ -356,6 +349,7 @@ xmemory
 __xmknod
 __xstat
 __xstat64
+yptif
 _ZdaPv
 zDcrashhandler001
 _ZdlPv

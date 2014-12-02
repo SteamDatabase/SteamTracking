@@ -92,6 +92,7 @@
 16CStructNetPacket
 16CVideoFileStream
 17CDummyCnxCallback
+17CFileWriterThread
 17CHTTPRequestCache
 17CHTTPRequestParam
 17CUtlPriorityQueueIP12CVideoPlayerE
@@ -264,7 +265,6 @@
 6127C24C05F38A0AAAF65C0EF02C
 659EF8BA043916EEDE8911702B22
 666666666666666666666666666666666666666666666666
-66BI8
 6ConVar
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CTHashIjjE
@@ -1309,6 +1309,7 @@ certs-only
 certStatus
 cessationOfOperation
 CFileReader
+CFileWriterThread
 challenge
 challengePassword
 characteristic-two-field
@@ -1332,7 +1333,6 @@ CJobFuncsDispatchJob
 clearance
 ClearField
 clientAuth
-ClientDLL
 client_sessionid
 clock
 clock_gettime
@@ -4371,6 +4371,7 @@ k_EMsgClientBroadcastDisconnect
 k_EMsgClientBroadcastFrames
 k_EMsgClientBroadcastInit
 k_EMsgClientBroadcastScreenshot
+k_EMsgClientBroadcastUploadConfig
 k_EMsgClientChangeStatus
 k_EMsgClientChangeSteamGuardOptions
 k_EMsgClientChangeSteamGuardOptionsResponse
@@ -5188,6 +5189,7 @@ m_vecUserProxyExcludedHosts
 m_WorkThreads
 mXRecord
 N16CCookieContainer11CCookieInfoE
+N17CFileWriterThread16FileWriterItem_tE
 N19CVideoPlayerManager12CVideoThreadE
 N8CryptoPP10ASN1ObjectE
 N8CryptoPP10BufferlessINS_22BufferedTransformationEEE
@@ -5364,7 +5366,6 @@ NETSCAPE_SPKI_new
 NETSCAPE_SPKI_sign
 NETSCAPE_SPKI_verify
 network
-Network
 networkmgr
 nexon
 nextUpdate
@@ -6642,7 +6643,6 @@ serialNumber
 serverandwgonly
 serverAuth
 SERVER_FINISH
-ServerMain
 serveronly
 service
 ServiceDescriptorProto
@@ -7585,7 +7585,6 @@ steamid
 steammessages_base.proto
 steampipe
 SteamRealPath
-SteamUI
 StolenIV
 Stopping
 strcasecmp
@@ -7722,7 +7721,6 @@ ThreadInterlockedIncrement64
 ThreadIsThreadRunning
 ThreadSetDebugName
 ThreadSleep
-ThreadWorkItem
 ticket
 ticket_crc
 timescale
@@ -8037,6 +8035,7 @@ v3_sxnet
 v3_sxnet.c
 v3_utl.c
 Valid
+ValidateFileIOStatics
 Validating
 value
 value.bag
@@ -8701,13 +8700,12 @@ _ZN10CValidator3PopEv
 _ZN10CValidator4PushEPKcPvS1_
 _ZN10CValidator9IsClaimedEPv
 _ZN10SteamVProf10CVProfNode10EnterScopeEPv
-_ZN10SteamVProf10CVProfNode10GetSubNodeEPKciS2_i
+_ZN10SteamVProf10CVProfNode10GetSubNodeEPKci17EVProfBugdetGroupi
 _ZN10SteamVProf10CVProfNode5ResetEv
 _ZN10SteamVProf10CVProfNode9ExitScopeEv
 _ZN10SteamVProf10CVProfNode9MarkFrameEv
 _ZN10SteamVProf9CVProfile12OutputReportEiPKci
-_ZN10SteamVProf9CVProfile30BudgetGroupNameToBudgetGroupIDEPKc
-_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
 _ZN10SteamVProf9CVProfileD1Ev
 _ZN16SteamThreadTools12CThreadEvent3SetEv
 _ZN16SteamThreadTools12CThreadEvent5ResetEv
@@ -8732,6 +8730,7 @@ _ZN16SteamThreadTools7CThread5StartEj
 _ZN16SteamThreadTools7CThread6OnExitEv
 _ZN16SteamThreadTools7CThread6ResumeEv
 _ZN16SteamThreadTools7CThread7GetNameEv
+_ZN16SteamThreadTools7CThread7IsAliveEv
 _ZN16SteamThreadTools7CThread7SetNameEPKc
 _ZN16SteamThreadTools7CThread7SuspendEv
 _ZN16SteamThreadTools7CThreadC2Ev

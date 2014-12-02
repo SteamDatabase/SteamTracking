@@ -574,7 +574,6 @@ shm_open
 shm_unlink
 sint32
 sint64
-Sleeping
 socket
 SPEED
 __stack_chk_fail
@@ -585,7 +584,6 @@ stderr
 SteamChrome_MasterStream
 SteamChrome_MasterStream_Event
 SteamRealPath
-SteamUI
 steamwebhelper
 strcasecmp
 strcasestr
@@ -612,7 +610,6 @@ symlink
 syscall
 t190u
 target
-TenFoot
 ThreadFindProcessByName
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
@@ -679,13 +676,12 @@ _ZN10CValidator3PopEv
 _ZN10CValidator4PushEPKcPvS1_
 _ZN10CValidator9IsClaimedEPv
 _ZN10SteamVProf10CVProfNode10EnterScopeEPv
-_ZN10SteamVProf10CVProfNode10GetSubNodeEPKciS2_i
+_ZN10SteamVProf10CVProfNode10GetSubNodeEPKci17EVProfBugdetGroupi
 _ZN10SteamVProf10CVProfNode5ResetEv
 _ZN10SteamVProf10CVProfNode9ExitScopeEv
 _ZN10SteamVProf10CVProfNode9MarkFrameEv
 _ZN10SteamVProf9CVProfile12OutputReportEiPKci
-_ZN10SteamVProf9CVProfile30BudgetGroupNameToBudgetGroupIDEPKc
-_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
 _ZN10SteamVProf9CVProfileD1Ev
 _ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
 _ZN11SteamStdLib17CCommandLineParamD1Ev

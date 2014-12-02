@@ -1,0 +1,11 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+
+	<BroadcastOverlay class="BroadcastOverlayPanel" >
+				<Label text="Broadcast" class="HeaderLabel" /> 
+	</BroadcastOverlay>
+
+</root>

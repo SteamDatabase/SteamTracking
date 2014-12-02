@@ -28,6 +28,7 @@
 10CUtlRBTreeIP19CFriendListItemBaseiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiEE
 10CUtlRBTreeIyiPFbRKyS1_E25CDefRBTreeBalanceListenerIiEE
 10CUtlString
+10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
 10CUtlVectorI5Color10CUtlMemoryIS0_EE
@@ -37,6 +38,7 @@
 10CUtlVectorIm10CUtlMemoryImEE
 10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_EE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
+10CUtlVectorIN17CItemImageManager18ImagesToDownload_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui10BoundKey_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui13PropertySheet6Page_tE10CUtlMemoryIS2_EE
@@ -76,8 +78,8 @@
 10CUtlVectorIw10CUtlMemoryIwEE
 10IFriendsUI
 11CCallResultI10CHTTPImage22HTTPRequestCompleted_tE
-11CCallResultI12CChatRoomDlg22HTTPRequestCompleted_tE
 11CCallResultI15CTradeInviteBar21TradeInviteResponse_tE
+11CCallResultI17CItemImageManager22HTTPRequestCompleted_tE
 11CCallResultI20CFriendAliasesDialog21NameHistoryResponse_tE
 11CHTMLHeader
 11CMsgBuildID
@@ -177,6 +179,7 @@
 17CChatRoomDlgState
 17CFriendPanelLabel
 17CFriendsClansPage
+17CItemImageManager
 17CMsgBrowserCreate
 17CMsgBrowserRemove
 17CMsgCloseDevTools
@@ -196,6 +199,7 @@
 18CUtlCharConversion
 18IFriendsTestHelper
 19CAvatarOverlayImage
+19CBroadcastInviteBar
 19CEmptySectionHeader
 19CFriendListItemBase
 19CFriendsFriendsPage
@@ -208,6 +212,7 @@
 19CUtlNoEscConversion
 1A26b
 1wsHp
+20CBroadcastApproveBar
 20CChatMsgNotification
 20CFriendAliasesDialog
 20CFriendsImageManager
@@ -218,6 +223,7 @@
 20CMsgScalePageToValue
 20CMultipleCallResultsI12CChatRoomDlg22HTTPRequestCompleted_tE
 20CMultipleCallResultsI31CAppDownloadNotificationManager22HTTPRequestCompleted_tE
+21CBroadcastPublicState
 21CHTMLPageSecurityInfo
 21CMsgExecuteJavaScript
 21CMsgRequestFullScreen
@@ -240,6 +246,7 @@
 23CNotificationClickPanel
 23IClientParentalSettings
 24CAchievementNotification
+24CBroadcastViewerWatching
 24CEditFriendsGroupsDialog
 24CMsgStartRequestResponse
 24CMsgZoomToFocusedElement
@@ -271,9 +278,11 @@
 27CSharedLibraryNotifications
 27CSteamTableChallengeOptions
 27ListPanelColumnSelectButton
+28CBroadcastInviteNotification
 28CMsgGetCookiesForURLResponse
 28CMsgScalePageToValueResponse
 28CVoiceChatInviteNotification
+29CBroadcastApproveNotification
 29CFriendInvitationNotification
 29CFriendsListSectionAffordance
 29CMsgRequestFullScreenResponse
@@ -389,9 +398,13 @@
 9CCallbackI14CFriendsDialog20VoiceCallInitiated_tLb0EE
 9CCallbackI14CFriendsDialog21ParentalLockChanged_tLb0EE
 9CCallbackI14CFriendsDialog21TradeInviteReceived_tLb0EE
+9CCallbackI14CFriendsDialog21ViewerNeedsApproval_tLb0EE
+9CCallbackI14CFriendsDialog22BroadcastViewerState_tLb0EE
+9CCallbackI14CFriendsDialog22ViewerApprovalResult_tLb0EE
 9CCallbackI14CFriendsDialog23ChatRoomDlgSerialized_tLb0EE
 9CCallbackI14CFriendsDialog23SteamServersConnected_tLb0EE
 9CCallbackI14CFriendsDialog23UserAchievementStored_tLb0EE
+9CCallbackI14CFriendsDialog24BroadcastInvitedToView_tLb0EE
 9CCallbackI14CFriendsDialog26SteamServersDisconnected_tLb0EE
 9CCallbackI14CFriendsDialog26UserRequestingFriendship_tLb0EE
 9CCallbackI14CFriendsDialog27PrimaryChatDestinationSet_tLb0EE
@@ -463,6 +476,7 @@ AddBool
 AddDouble
 AddEnum
 AddFloat
+AddFriends
 AddFriendsButton
 AddInt32
 AddInt64
@@ -566,6 +580,7 @@ Application
 ApplyButton
 ApplyButtonEnable
 ApplyChanges
+ApproveLabel
 apptype
 apptypelower
 archiveCutoff
@@ -616,6 +631,7 @@ authorityRevocationList
 AutoRejoin
 AutoResize
 AvatarImage
+BABar
 BackButton
 Backspace
 bad_url
@@ -645,6 +661,7 @@ bgoback
 bgoforward
 bHasCertError
 bHasMultipleInputs
+BIBar
 BigPictureStatusImage
 BigPictureStatusImageInGame
 binput
@@ -770,7 +787,13 @@ BPageHide
 b_print.c
 Break
 brighttext
+BroacdastImageStart
 broadcast
+BroadcasterApproved
+BroadcasterIgnore
+BroadcastImageEnd
+BroadcastPublicStateNotification
+BroadcastViewerNotification
 BrowserExitFullScreen
 browser_handle
 bss_file.c
@@ -866,6 +889,12 @@ CAST5-ECB
 cast5-ofb
 CAST5-OFB
 CAvatarOverlayImage
+CBroadcastApproveBar
+CBroadcastApproveNotification
+CBroadcastInviteBar
+CBroadcastInviteNotification
+CBroadcastPublicState
+CBroadcastViewerWatching
 cc_generic_services
 CChatActionsButton
 CChatInfoBar
@@ -897,6 +926,7 @@ certificateRevocationList
 certname
 certName
 CFileOpenListPanel
+CFileWriterThread
 CFriendAliasesDialog
 CFriendGameInviteDialog
 CFriendInGameNotification
@@ -913,6 +943,7 @@ CFriendsFriendsPage
 CFriendsGroupsPage
 CFriendsListSectionAffordance
 CFriendsListSectionHeader
+CFriendsListSubPanel
 CFriendsNotification
 CFriendStatusUpdateNotification
 CGameInviteBar
@@ -2127,6 +2158,7 @@ IgnoreButton
 IgnoreChat
 IgnoreFriendPrompt
 IgnoreGroupInvite
+IgnoreLabel
 IgnoreLink
 IgnoreScheme
 imageAlignment
@@ -2181,6 +2213,7 @@ Invalidate
 INVALID_CPPTYPE
 invalidityDate
 InviteAllSuggestedFriends
+InvitedFriends
 inviteLinkStyle
 InviteToCurrentGame
 InviteToGameButton
@@ -2541,6 +2574,7 @@ mime-mhs-bodies
 mime-mhs-headings
 MinimizeToSysTray
 minutes
+m_ItemImageManager
 m_Items
 m_jumpHandler
 mkdir
@@ -2663,8 +2697,10 @@ msSGC
 msSmartcardLogin
 m_sText
 m_sTextSetting
+m_strBaseURL
 m_strDirectory
 m_StringPools
+m_strLanguage
 m_strParentalPasswordPlaintext
 m_strParentalWebToken
 m_strRecoveryEmail
@@ -2684,9 +2720,11 @@ m_unused
 MutableMessage
 MutableRepeatedMessage
 m_vecChatImages
+m_vecChatImagesToInsert
 m_vecChatInviteDialogs
 m_vecHashBuckets
 m_vecHCursor
+m_vecImageDownloadQueue
 m_vecJumpWChars
 m_vecLastSizes
 m_vecLayoutCmds
@@ -2742,7 +2780,11 @@ N14CFriendsDialog29CCallbackOnPersonaStateChangeE
 N14CFriendsDialog29CCallbackOnRichInviteReceivedE
 N14CFriendsDialog29CCallbackOnVoiceCallInitiatedE
 N14CFriendsDialog30CCallbackOnParentalLockChangedE
+N14CFriendsDialog30CCallbackOnViewerNeedsApprovalE
+N14CFriendsDialog31CCallbackOnBroadcastViewerStateE
+N14CFriendsDialog31CCallbackOnViewerApprovalResultE
 N14CFriendsDialog32CCallbackOnChatRoomDlgSerializedE
+N14CFriendsDialog33CCallbackOnBroadcastInvitedToViewE
 N14CFriendsDialog35CCallbackOnUserRequestingFriendshipE
 N14CFriendsDialog36CCallbackOnPrimaryChatDestinationSetE
 N14CFriendsDialog38CCallbackOnFriendPublishedStatusUpdateE
@@ -3103,6 +3145,7 @@ OnStartRequest
 OnTaskBarChanged
 OnURLChanged
 OpenAddFriendDialog
+OpenAddFriendMenu
 OpenButton
 OpenColumnChoiceMenu
 OpenContextMenu
@@ -3158,7 +3201,6 @@ OutputBuffer
 OutputStringPointer
 output_type
 owner
-owneroptions
 p88Hp88H
 package
 packed
@@ -3181,7 +3223,6 @@ parse
 parsing
 paste
 patron
-pBCFriendsListSubPanel
 PBE-MD2-DES
 PBE-MD2-RC2-64
 PBE-MD5-DES
@@ -3940,9 +3981,7 @@ SteamIDPage_url
 steamIDPatron
 SteamRealPath
 SteamTableChallenge
-steamtableoptions
 steamtranslation.ru
-SteamUI
 SteamUIGames001
 steamui.so
 SteamUIUIInterfaceV001
@@ -4025,7 +4064,6 @@ teamfortress.com
 telephoneNumber
 teletexTerminalIdentifier
 telexNumber
-TenFoot
 Terminator
 TestClientMgrUnversioned
 TestThread_Yield
@@ -4054,7 +4092,11 @@ ThreadGetCurrentId
 ThreadGetCurrentRunningRef
 ThreadInMainThread
 ThreadInterlockedAssignIf64
+ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
+ThreadInterlockedExchange
+ThreadInterlockedExchangeAdd
+ThreadInterlockedIncrement
 ThreadIsThreadRunning
 ThreadSleep
 ThrobberImagePanel
@@ -4166,6 +4208,7 @@ USVW1
 utime
 UtlQueue
 valid
+ValidateFileIOStatics
 value
 ValueNames
 values
@@ -4183,6 +4226,7 @@ VGUI_Input005
 VGUIInviteToChatRoom
 VGUIInviteToGroup
 VGUIInviteToTrade
+VGUIInviteToWatch
 VGUI_ivgui007
 VGUI_Localize003
 -vguimessages
@@ -4193,7 +4237,6 @@ VGUI_Panel010
 VGUI_Scheme010
 VGUI_Surface039
 VGUI_System010
-vieweroptions
 ViewEventButton
 ViewGameStorePage
 ViewGroupAnnouncementPage
@@ -4218,6 +4261,7 @@ wap-wsg-idm-ecid-wtls8
 wap-wsg-idm-ecid-wtls9
 Warning
 WARNING
+WatchGame
 wcscasecmp
 wcschr
 wcscmp
@@ -4280,21 +4324,26 @@ _ZN10CValidator3PopEv
 _ZN10CValidator4PushEPKcPvS1_
 _ZN10CValidator9IsClaimedEPv
 _ZN10SteamVProf10CVProfNode10EnterScopeEPv
-_ZN10SteamVProf10CVProfNode10GetSubNodeEPKciS2_i
+_ZN10SteamVProf10CVProfNode10GetSubNodeEPKci17EVProfBugdetGroupi
 _ZN10SteamVProf10CVProfNode9ExitScopeEv
 _ZN10SteamVProf9CVProfileD1Ev
 _ZN11SteamStdLib11CommandLineEv
 _ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
 _ZN11SteamStdLib17CCommandLineParamD1Ev
+_ZN16SteamThreadTools12CThreadEvent3SetEv
+_ZN16SteamThreadTools12CThreadEventC1Eb
 _ZN16SteamThreadTools12CThreadMutexC1Ev
 _ZN16SteamThreadTools12CThreadMutexD1Ev
 _ZN16SteamThreadTools16CThreadLocalBase3SetEPv
+_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
 _ZN16SteamThreadTools7CThread13GetThreadProcEv
 _ZN16SteamThreadTools7CThread15IsThreadRunningEv
 _ZN16SteamThreadTools7CThread4InitEv
 _ZN16SteamThreadTools7CThread4JoinEj
 _ZN16SteamThreadTools7CThread5StartEj
 _ZN16SteamThreadTools7CThread6OnExitEv
+_ZN16SteamThreadTools7CThread7IsAliveEv
 _ZN16SteamThreadTools7CThread7SetNameEPKc
 _ZN16SteamThreadTools7CThreadC2Ev
 _ZN16SteamThreadTools7CThreadD2Ev

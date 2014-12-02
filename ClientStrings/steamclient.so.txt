@@ -132,12 +132,14 @@
 10CClientMsgI23MsgClientVACBanStatus_tE
 10CClientMsgI23MsgClientVACChallenge_tE
 10CClientMsgI24MsgClientAppUsageEvent_tE
+10CClientMsgI24MsgClientBroadcastInit_tE
 10CClientMsgI24MsgClientDFSEndSession_tE
 10CClientMsgI24MsgClientDRMTestResult_tE
 10CClientMsgI24MsgClientOGSEndSession_tE
 10CClientMsgI25MsgClientChatMemberInfo_tE
 10CClientMsgI25MsgClientFileToDownload_tE
 10CClientMsgI25MsgGSGetUserGroupStatus_tE
+10CClientMsgI26MsgClientBroadcastFrames_tE
 10CClientMsgI26MsgClientGameConnectDeny_tE
 10CClientMsgI26MsgClientGenericResponse_tE
 10CClientMsgI26MsgClientGetMicroTxnInfo_tE
@@ -162,6 +164,8 @@
 10CClientMsgI29MsgClientCreateAcctResponse_tE
 10CClientMsgI29MsgClientCreateChatResponse_tE
 10CClientMsgI29MsgClientDisableTestLicense_tE
+10CClientMsgI30MsgClientBroadcastDisconnect_tE
+10CClientMsgI30MsgClientBroadcastScreenshot_tE
 10CClientMsgI30MsgClientMicroTxnAuthRequest_tE
 10CClientMsgI31MsgClientAckGuestPassResponse_tE
 10CClientMsgI31MsgClientInviteFriendResponse_tE
@@ -404,7 +408,6 @@
 10CUtlVectorIN11CUtlHashMapI27ECommunityLinkFilterHitTypeP9CListHash10CDefEqualsIS1_E11HashFunctorIS1_EE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapI4EMsgi10CDefEqualsIS1_E11HashFunctorIS1_EE12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapI7CGameIDP21CStreamingSessionData10CDefEqualsIS1_E28HashFunctorUnpaddedStructureIS1_EE12HashBucket_tE10CUtlMemoryIS9_EE
-10CUtlVectorIN11CUtlHashMapI8CSteamIDb10CDefEqualsIS1_E11HashFunctorIS1_EE12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapI8CSteamIDPN21CP2PNetworkingSession15P2PConnection_tE10CDefEqualsIS1_E11HashFunctorIS1_EE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI8netadr_tN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSession17CRefCountAccessorE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES8_SA_E12HashBucket_tE10CUtlMemoryISE_EE
 10CUtlVectorIN11CUtlHashMapI8netadr_tN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_E12HashBucket_tE10CUtlMemoryISC_EE
@@ -516,7 +519,6 @@
 11CUtlHashMapI27ECommunityLinkFilterHitTypeP9CListHash10CDefEqualsIS0_E11HashFunctorIS0_EE
 11CUtlHashMapI4EMsgi10CDefEqualsIS0_E11HashFunctorIS0_EE
 11CUtlHashMapI7CGameIDP21CStreamingSessionData10CDefEqualsIS0_E28HashFunctorUnpaddedStructureIS0_EE
-11CUtlHashMapI8CSteamIDb10CDefEqualsIS0_E11HashFunctorIS0_EE
 11CUtlHashMapI8CSteamIDPN21CP2PNetworkingSession15P2PConnection_tE10CDefEqualsIS0_E11HashFunctorIS0_EE
 11CUtlHashMapI8netadr_tN14CUtlHashMapLRUIS0_9CSmartPtrI21COpenSSLCachedSession17CRefCountAccessorE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES7_S9_E
 11CUtlHashMapI8netadr_tN14CUtlHashMapLRUIS0_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES5_S7_E
@@ -1007,6 +1009,7 @@
 17CDummyCnxCallback
 17CFileReaderThread
 17CFileVerifyThread
+17CFileWriterThread
 17CFrameFunctionMgr
 17CHTTPRequestCache
 17CHTTPRequestParam
@@ -1022,6 +1025,10 @@
 17CInternalCallbackI12CClientMusic20NotifyIncomingCall_tE
 17CInternalCallbackI12CClientMusic20VoiceCallInitiated_tE
 17CInternalCallbackI12CClientMusic21AppEventStateChange_tE
+17CInternalCallbackI12CClientMusic26StreamingClientConnected_tE
+17CInternalCallbackI12CClientMusic29StreamingClientDisconnected_tE
+17CInternalCallbackI12CClientVideo19AppLifetimeNotice_tE
+17CInternalCallbackI12CClientVideo23SteamServersConnected_tE
 17CInternalCallbackI12CUserFriends21ParentalLockChanged_tE
 17CInternalCallbackI15CUserAppManager16AppInfoChanged_tE
 17CInternalCallbackI15CUserAppManager17LicensesUpdated_tE
@@ -1112,6 +1119,7 @@
 18CScheduledFunctionI10CIPCServerE
 18CScheduledFunctionI11CGameServerE
 18CScheduledFunctionI11CSNetSocketE
+18CScheduledFunctionI12CClientVideoE
 18CScheduledFunctionI12CCMInterfaceE
 18CScheduledFunctionI12CConfigStoreE
 18CScheduledFunctionI12CSteamEngineE
@@ -1206,6 +1214,7 @@
 1A26b
 1authentication_exists_from_same_ip_before_mintime
 1C97BEFC54BD7A8B65ACF89F81D4D4ADC565FA45
+1CBroadcast_NotifyBroadcastUploadStop_Notification
 1CCloud_ExternalStorageTransferReport_Notification
 1CCredentials_NewMachineNotificationDialog_Request
 1.CCredentials_SteamGuardLoginAttempt_Notification
@@ -1221,6 +1230,7 @@
 20CAdapterSteamApps004
 20CAdapterSteamApps005
 20CAdapterSteamApps006
+20CAdapterSteamApps007
 20CAdapterSteamHTTP001
 20CAdapterSteamHTTP002
 20CAPIJobCreateUGCItem
@@ -1232,6 +1242,7 @@
 20CClientJobChatCreate
 20CClientJobChatInvite
 20CClientJobDepotBuild
+20CClientJobUnlockH264
 20CClientNetworkingAPI
 20CDepotReconstructCtx
 20CJobTestConnectivity
@@ -1356,11 +1367,13 @@
 22CAdapterSteamClient016
 22CAdapterSteamClient017
 22CBaseScheduledFunction
+22.CBroadcast_WatchBroadcast_Response.EWatchResponse
 22CClientGameCoordinator
 22CClientJobAckGuestPass
 22CClientJobChatRoomInfo
 22CClientJobEmoticonList
 22CClientJobInviteToGame
+22CClientJobMuteChatUser
 22CClientJobPersonaState
 22CClientJobStatsUpdated
 22CClientStructNetPacket
@@ -1422,6 +1435,7 @@
 23CAdapterSteamFriends012
 23CAdapterSteamFriends013
 23CAdapterSteamFriends014
+23CAdapterSteamFriends015
 23CAPIJobGetFollowerCount
 23CAPIJobListHashLoadSave
 23CAPIJobQueryGlobalFiles
@@ -1494,6 +1508,7 @@
 24CClientJobGetWGAuthToken
 24CClientJobSignatureCheck
 24CClientJobVerifyPassword
+24CClientJobWatchBroadcast
 24CClientServiceMethodList
 24.CDeviceAuth_GetOwnAuthorizedDevices_Response.Device
 24CInternalCallbackManager
@@ -1544,10 +1559,12 @@
 25CClientJobDownloadFromDFS
 25CClientJobFindScreenshots
 25CClientJobGCMessageFailed
+25CClientJobPostChatMessage
 25CClientJobReadMachineAuth
 25CClientJobRedeemGuestPass
 25CClientJobRequestAuthList
 25CClientJobSetIgnoreFriend
+25CClientJobUploadBroadcast
 25CClientJobWriteScreenshot
 25.CDeviceAuth_GetAuthorizedBorrowers_Response.Borrower
 25.CDeviceAuth_GetUsedAuthorizedDevices_Response.Device
@@ -1706,6 +1723,7 @@
 27CClientJobFriendMsgIncoming
 27CClientJobFriendsGroupsList
 27CClientJobGCMessageReceived
+27CClientJobInviteToBroadcast
 27CClientJobNewsItemUpdateMsg
 27CClientJobP2PConnectionInfo
 27CClientJobRemoteStorageSync
@@ -1831,6 +1849,7 @@
 29CAPIJobRequestClanOfficerList
 29CAPIJobSubscribePublishedFile
 29CAPIJobUploadLeaderboardScore
+29CClientJobEndBroadcastSession
 29CClientJobGetTwoFactorDetails
 29CClientJobInitiateTradeResult
 29CClientJobInviteFriendByEmail
@@ -1882,6 +1901,7 @@
 2A.CMsgClientUCMEnumerateUserPublishedFilesResponse.PublishedFileId
 2B.CMsgClientUCMEnumerateUserSubscribedFilesResponse.PublishedFileId
 2B.CMsgCREGetUserPublishedItemVoteDetailsResponse.UserItemVoteDetail
+2.CBroadcast_NotifyBroadcastUploadStop_Notification
 2.CCloud_ExternalStorageTransferReport_Notification
 2..CContentBuilder_CommitAppBuild_Request.Depots
 2.CCredentials_NewMachineNotificationDialog_Request
@@ -1891,7 +1911,6 @@
 2-.CMsgClientPICSChangesSinceResponse.AppChange
 2-.CMsgClientPICSProductInfoRequest.PackageInfo
 2..CMsgClientPICSProductInfoResponse.PackageInfo
-2-.CMsgClientSubscribeToPersonaFeed.PersonaFeed
 2-.CMsgClientUGSGetGlobalStatsResponse.Day.Stat
 2-.ContentManifestPayload.FileMapping.ChunkData
 2CSENC
@@ -1983,6 +2002,7 @@
 30CClientJobPublishedFileDeleted
 30CClientJobPublishedFileUpdated
 30CClientJobRecoverAuthenticator
+30CClientJobStartBroadcastUpload
 30CClientUnifiedServiceTransport
 30CCloud_BeginHTTPUpload_Request
 30CCloud_GetFileDetails_Response
@@ -2037,9 +2057,11 @@
 31CAPIJobUnsubscribePublishedFile
 31CAppInfoCacheReadFromDiskThread
 31CBufferedServiceMethodClientJob
+31CClientJobBeginBroadcastSession
 31CClientJobDepotReconstructBuild
 31CClientJobFriendMsgEchoToSender
 31CClientJobGetOfflineLogonTicket
+31CClientJobListenToBroadcastChat
 31CClientJobP2PConnectionFailInfo
 31CClientJobRemoveFriendFromGroup
 31CClientJobTestAvailablePassword
@@ -2098,7 +2120,6 @@
 32CMsgClientPICSAccessTokenRequest
 32CMsgClientPICSProductInfoRequest
 32CMsgClientStoreUserStatsResponse
-32CMsgClientSubscribeToPersonaFeed
 32CMsgClientUCMDeletePublishedFile
 32CMsgClientUCMPublishFileResponse
 32CMsgClientUCMUpdatePublishedFile
@@ -2119,12 +2140,14 @@
 32CVideo_ClientGetVideoURL_Request
 32CWorkItemThreadedDeleteCacheFile
 32CWorkItemThreadedWriteScreenshot
+32f5h290g53047gv5034nbvt923b
 33331
 333333
 33CAPIJobDownloadLeaderboardEntries
 33CAPIJobInGameChatJoinClanChatRoom
 33CAPIJobSetUserPublishedFileAction
 33CApplicationManagerPopulateThread
+33CBroadcast_WatchBroadcast_Request
 33CClientJobDeauthorizeRemoteDevice
 33CClientJobDisableParentalSettings
 33CClientJobFriendRemovedFromSource
@@ -2178,6 +2201,9 @@
 34CAPIJobEnumerateUserPublishedFiles
 34CAPIJobMatchmakingRequestLobbyList
 34CAPIJobUpdateUserPublishedItemVote
+34CBroadcastClient_SessionClosed_Job
+34CBroadcast_PostChatMessage_Request
+34CBroadcast_WatchBroadcast_Response
 34CClientJobMatchmakingUserLeftLobby
 34CClientJobPrecacheAchievementIcons
 34CClientJobSharedLibraryStopPlaying
@@ -2221,6 +2247,7 @@
 34CWorkItemThreadedGetCachedResponse
 35CAdapterSteamMasterServerUpdater001
 35CAPIJobEnumerateUserSubscribedFiles
+35CBroadcast_PostChatMessage_Response
 35CClientHTTPStreamingResponseHandler
 35CClientJobFriendUserStatusPublished
 35CClientJobGetSignedParentalSettings
@@ -2269,6 +2296,8 @@
 35CTwoFactor_AddAuthenticator_Request
 35CUserOnParentalLockNotification_Job
 35ISteamMatchmakingServerListResponse
+36CBroadcastClient_BroadcastStatus_Job
+36CBroadcast_InviteToBroadcast_Request
 36CClientGetFriendsSteamLevelsResponse
 36CClientJobDownloadClanActivityCounts
 36CClientJobMarketingMessageUpdate2Msg
@@ -2309,6 +2338,9 @@
 36CTwoFactor_AddAuthenticator_Response
 36CWorkItemThreadedWriteResponseToDisk
 36DF0AAFD8B8D7597CA10520D04B
+37CBroadcast_GetBroadcastStatus_Request
+37CBroadcast_InviteToBroadcast_Response
+37CBroadcast_SessionClosed_Notification
 37CClientJobAuthorizeLocalDeviceRequest
 37CClientJobReceiveFriendMessageHistory
 37CClientJobRequestParentalRecoveryCode
@@ -2346,6 +2378,8 @@
 38CAPIJobEnumeratePublishedWorkshopFiles
 38CAPIJobGetUserPublishedItemVoteDetails
 38CAPIJobGSComputeNewPlayerCompatibility
+38CBroadcast_EndBroadcastSession_Request
+38CBroadcast_GetBroadcastStatus_Response
 38CClientJobVanityURLChangedNotification
 38CCloud_ClientCommitFileUpload_Response
 38CCloud_GetClientEncryptionKey_Response
@@ -2378,6 +2412,10 @@
 38CWorkItemNetEncryptionHandshakeEncrypt
 39CAPIJobEnumerateUserSharedWorkshopFiles
 39CAPIJobMatchmakingRequestFriendsLobbies
+39CBroadcast_BroadcastStatus_Notification
+39CBroadcast_EndBroadcastSession_Response
+39CBroadcast_GetBroadcastChatInfo_Request
+39CBroadcast_StartBroadcastUpload_Request
 39CClientJobGetAppOwnershipTicketResponse
 39CClientJobMatchmakingLobbyGameServerSet
 39CClientJobRequestForgottenPasswordEmail
@@ -2469,6 +2507,11 @@
 3WSKEA
 3WSKEB
 3z03z
+40CBroadcast_BeginBroadcastSession_Request
+40CBroadcastClient_StopBroadcastUpload_Job
+40CBroadcast_GetBroadcastChatInfo_Response
+40CBroadcast_MuteBroadcastChatUser_Request
+40CBroadcast_StartBroadcastUpload_Response
 40CClientJobWriteHighQualityScreenshotCopy
 40CContentBuilder_StartDepotUpload_Request
 40CCredentials_AccountLockRequest_Response
@@ -2488,6 +2531,9 @@
 40CPublishedFile_GetUserFiles_Response_App
 40CTwoFactor_CreateEmergencyCodes_Response
 40CTwoFactor_DestroyEmergencyCodes_Request
+41CBroadcast_BeginBroadcastSession_Response
+41CBroadcastClient_BroadcastViewerState_Job
+41CBroadcast_MuteBroadcastChatUser_Response
 41CClientJobMatchmakingSetLobbyDataResponse
 41CContentBuilder_FinishDepotUpload_Request
 41CContentBuilder_SignInstallScript_Request
@@ -2517,6 +2563,8 @@
 4294967295
 42CAPIJobEnumeratePublishedFilesByUserAction
 42CAPIJobRequestGlobalAchievementPercentages
+42CBroadcastClient_ViewerBroadcastInvite_Job
+42CClientJobSendBroadcastPermissionsToServer
 42CContentBuilder_FinishDepotUpload_Response
 42CContentBuilder_SignInstallScript_Response
 42CCredentials_GetAccountAuthSecret_Response
@@ -2539,6 +2587,8 @@
 42CParental_DisableWithRecoveryCode_Response
 42CPartnerApps_FinishUploadLegacyDRM_Request
 42CPublishedFile_RefreshVotingQueue_Response
+43CBroadcastClient_WaitingBroadcastViewer_Job
+43CBroadcast_StopBroadcastUpload_Notification
 43CCloud_BeginHTTPUpload_Response_HTTPHeaders
 43CCommunity_GetLinkFilterListVersion_Request
 43CCredentials_TestAvailablePassword_Response
@@ -2557,6 +2607,8 @@
 43CParental_GetSignedParentalSettings_Request
 43CPartnerApps_FinishUploadLegacyDRM_Response
 43CTwoFactor_FinalizeAddAuthenticator_Request
+44CBroadcast_BroadcastViewerState_Notification
+44CBroadcast_GetBroadcastChatUserNames_Request
 44CCommunity_GetLinkFilterHashPrefixes_Request
 44CCommunity_GetLinkFilterListVersion_Response
 44CDeviceAuth_DeauthorizeRemoteDevice_Response
@@ -2569,11 +2621,13 @@
 44CMsgClientPICSChangesSinceResponse_AppChange
 44CMsgClientPICSProductInfoRequest_PackageInfo
 44CMsgClientRequestWebAPIAuthenticateUserNonce
-44CMsgClientSubscribeToPersonaFeed_PersonaFeed
 44CMsgClientUGSGetGlobalStatsResponse_Day_Stat
 44ContentManifestPayload_FileMapping_ChunkData
 44CParental_GetSignedParentalSettings_Response
 44CTwoFactor_FinalizeAddAuthenticator_Response
+45CBroadcast_GetBroadcastChatUserNames_Response
+45CBroadcast_SendBroadcastStateToServer_Request
+45CBroadcast_ViewerBroadcastInvite_Notification
 45CCommunity_GetLinkFilterHashPrefixes_Response
 45CContentBuilder_CommitAppBuild_Request_Depots
 45CContentBuilder_GetMissingDepotChunks_Request
@@ -2590,6 +2644,8 @@
 45CParental_ParentalSettingsChange_Notification
 469A28EF7C28CCA3DC721D044F4496BCCA7EF4146FBF25C9
 46CAPIJobEnumerateUserSubscribedFilesWithUpdates
+46CBroadcast_SendBroadcastStateToServer_Response
+46CBroadcast_WaitingBroadcastViewer_Notification
 46CCloud_ClientFileDownload_Response_HTTPHeaders
 46CContentBuilder_GetMissingDepotChunks_Response
 46CCredentials_LastCredentialChangeTime_Response
@@ -2615,6 +2671,7 @@
 48CMsgClientPICSChangesSinceResponse_PackageChange
 48CMsgClientUCMEnumeratePublishedFilesByUserAction
 48CMsgClientUCMEnumerateUserPublishedFilesResponse
+49CBroadcast_NotifyBroadcastUploadStop_Notification
 49CCloud_ExternalStorageTransferReport_Notification
 49CCredentials_NewMachineNotificationDialog_Request
 49CMsgClientGetUserStatsResponse_Achievement_Blocks
@@ -2653,10 +2710,12 @@
 54CMsgCREEnumeratePublishedFilesResponse_PublishedFileId
 54CMsgCREGetUserPublishedItemVoteDetails_PublishedFileId
 54CMsgRemoteDeviceAuthorizationRequest_CKeyEscrow_Ticket
+55CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 55CMsgClientGetAuthorizedDevicesResponse_AuthorizedDevice
 56CGameNotifications_OnNotificationsRequested_Notification
 56CMsgClientStoreUserStatsResponse_Stats_Failed_Validation
 56CMsgClientUCMEnumeratePublishedFilesByUserActionResponse
+57CBroadcast_GetBroadcastChatUserNames_Response_PersonaName
 57CMsgClientFSGetFriendMessageHistoryResponse_FriendMessage
 59CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance
 5AC635D8AA3A93E7B3EBBD55769886BC651D06B0CC53B0F63BCE3C3E27D2604B
@@ -2693,6 +2752,7 @@
 7830A3318B603B89E2327145AC234CC594CBDD8D3DF91610A83441CAEA9863BC2DED5D5AA8253AA10A2EF1C98B9AC8B57F1117A72BF2C7B9E7C1AC4D77FC94CA
 7BC382C63D8C150C3C72080ACE05AFA0C2BEA28E4FB22787139165EFBA91F90F8AA5814A503AD4EB04A8C7DD22CE2826
 7CAPIJob
+7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 7CCookie
 7CJobMgr
 7CSocket
@@ -2830,6 +2890,7 @@
 8CAppData
 8CB91E82A3386D280F5D6F7E50E641DF152F7109ED5456B31F166E6CAC0425A7CF3AB6AF6B7FC3103B883202E9046565
 8CB91E82A3386D280F5D6F7E50E641DF152F7109ED5456B412B1DA197FB71123ACD3A729901D1A71874700133107EC53
+8.CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 8CFunctor
 8CGameNotifications_OnNotificationsRequested_Notification
 8ClClan_t
@@ -2919,7 +2980,6 @@ ACCEPT
 acceptableResponses
 AcceptAuthorizationRequest
 Accept-Charset
-Accepted
 Accept-Encoding
 AcceptEULA
 AcceptP2PSessionWithUser
@@ -3225,6 +3285,7 @@ amtrecurring
 Anime
 announcements
 anon_user_target_account_name
+anonymous
 anonymoususer
 ansi-X9-62
 answer
@@ -3286,6 +3347,7 @@ AppMinutesPlayedData
 app_name
 app_pkey_methods
 app_played
+approval_response
 app_set_update_flag
 apps_installed
 apps_pending
@@ -3758,6 +3820,8 @@ Beeline
 BEFORE
 BEGIN
 BeginAuthSession
+BeginBroadcastSession
+BeginBroadcastSessionResult_t
 BeginGMSQuery
 BeginHTTPUpload
 BeginLaunchQueryParams
@@ -3803,6 +3867,7 @@ BFUa.X
 BF_version
 BGameConnectTokensAvailable
 BGetAppMinutesPlayed
+BGetBroadcastDimensions
 BGetChatRoomMemberDetails
 BGetDepotBuildStatus
 BGetDLCDataByIndex
@@ -3817,6 +3882,7 @@ BGetSerializedParentalSettings
 BGetSubKeys
 BGetSubscribedFileDownloadInfo
 _BGetUserAchievementStatus
+BGetUserVideoFolder
 BGetValueBin
 BGetValues
 BGetValueStr
@@ -4236,6 +4302,31 @@ BRequestBetaPasswords
 BResizeImageRGBA
 BritPop
 broadcast
+BroadcastChatMessage_t
+BroadcastClient
+broadcaster_steamid
+BroadcastFirstTimeComplete
+Broadcast\FirstTimeComplete
+broadcast_id
+Broadcast\IncludeDesktop
+BroadcastInvitedToView_t
+broadcast_log
+Broadcast\MaxKbps
+Broadcast\OutputHeight
+Broadcast\OutputWidth
+Broadcast\Permissions
+Broadcast\RecordMic
+broadcast_relay_id
+BroadcastSessionID_t
+BroadcastSettingsLoaded_t
+Broadcast\ShowChat
+Broadcast\ShowDebugInfo
+BroadcastShowFirstTimeDlg_t
+BroadcastStatus_t
+BroadcastUploadStart_t
+BroadcastUploadStatus_t
+BroadcastUploadStop_t
+BroadcastViewerState_t
 Browser
 browser_handle
 BSecure
@@ -4302,6 +4393,7 @@ BWritingMiniDump
 by_dir.c
 by_file.c
 BY_FILE_CTRL
+BYieldingRunClientJob
 BYieldingRunJob
 bytes
 bytes_actual
@@ -4507,6 +4599,14 @@ cb_encrypted_appownershipticket
 cb_encrypteduserdata
 CBIGNUM_it
 cb_original
+-.CBroadcast_BroadcastViewerState_Notification
+-.CBroadcast_GetBroadcastChatUserNames_Request
+-CBroadcast_GetBroadcastChatUserNames_Response
+-CBroadcast_SendBroadcastStateToServer_Request
+..CBroadcast_SendBroadcastStateToServer_Request
+-CBroadcast_ViewerBroadcastInvite_Notification
+..CBroadcast_ViewerBroadcastInvite_Notification
+.CBroadcast_WaitingBroadcastViewer_Notification
 CCDDBAppDetailCommon
 cc_generic_services
 CClientInventory_AddPromoItemsJob
@@ -4645,6 +4745,7 @@ CFileTransferMgr
 cFileValidationMaxLog
 cFileValidationThreads
 CFileVerifyThread
+CFileWriterThread
 CFindBestCellIDJob
 CGameID
 -.CGameNotifications_EnumerateSessions_Request
@@ -4680,6 +4781,7 @@ Chargedback
 charset
 ChatCreate
 chat_entry_type
+chat_id
 chat_room_enter_response
 chatroom_type
 ChatRoomVoiceRetryConnections
@@ -4783,7 +4885,6 @@ CLIENTBILLING_INTERFACE_VERSION001
 client_cellid
 ClientCommitFileUpload
 ClientDeleteFile
-ClientDLL
 CLIENTENGINE_INTERFACE_VERSION003
 ClientFileDownload
 CLIENTFRIENDS_INTERFACE_VERSION001
@@ -4826,6 +4927,7 @@ CLIENTUSERSTATS_INTERFACE_VERSION002
 CLIENTUTILS_INTERFACE_VERSION001
 clientversion
 CLIENTVIDEO_INTERFACE_VERSION001
+CLIENTVR_INTERFACE_VERSION001
 CLoadAlbumCoverAsyncJob
 CLoadCoverCompletedJob
 CLocalLibraryCrawlerThread
@@ -5509,7 +5611,6 @@ ConnectChannels_w
 ConnectDefaultTransportChannels
 ConnectEndClientTime
 connect_failures
-connecting
 connection-assumed
 connection_log
 connectionport
@@ -5675,18 +5776,15 @@ CreateListenSocket
 CreateMilesMusicAudioDevice
 CreateMilesSoundAudioDevice
 CreateMilesVoiceAudioDevice
-CreateMusicAudioDevice
 CreateP2PConnectionSocket
 CreatePublishedFileUpdateRequest
 CreateQueryAllUGCRequest
 CreateQueryUserUGCRequest
 CreateSession
 CreateSimpleProcess
-CreateSoundAudioDevice
 CreateTable
 CreateTransports
 CreateUnauthenticatedUserConnection
-CreateVoiceAudioDevice
 CreateVProfile
 creation
 creationtime
@@ -6789,6 +6887,8 @@ EAsyncGameSessionUserState
 eauth_session_response
 ebay.com
 Ebn_mont.c
+EBroadcastChatMsg
+EBroadcastUploadResult
 ec2_mult.c
 ec2_oct.c
 ec2_smpl.c
@@ -7176,6 +7276,7 @@ efriendrelationship
 EFriendRelationship
 EGCAction
 EGCStatus
+EGetBroadcastReady
 EGetFileSyncState
 Egyptian_Hieroglyphs
 EH0y5
@@ -7271,6 +7372,8 @@ encrypted_ticket
 encrypt_file
 encryption_key
 EndAuthSession
+EndBroadcastSession
+EndBroadcastSessionResult_t
 EndChatRoomVoiceSpeaking
 enddate
 EndTalking
@@ -7637,6 +7740,7 @@ event_time
 EventTime
 EVideoFileFormat
 EVideoPermissions
+EViewerState
 EVP_add_cipher
 EVP_add_digest
 EVP_aes_128_cbc
@@ -7967,6 +8071,8 @@ EVP_VerifyFinal
 EVP_version
 EVP_whirlpool
 EWalletSource
+EWatchBroadcastResult
+EWatchResponse
 EWindowType
 EXCEPT
 exception_record
@@ -7983,6 +8089,7 @@ ex_data.c
 ExecuteStatement
 execvp
 exfgls
+existing_broadcast_id
 EXP-ADH-DES-CBC-SHA
 EXP-ADH-RC4-MD5
 expat_2.0.0
@@ -8003,6 +8110,7 @@ expired_link
 expires
 Expires
 Explain
+explanation
 EXPLICIT
 explicit_body_data
 explicit_reset
@@ -8094,7 +8202,6 @@ fflush
 fgetc
 fgets
 FGHIJKLMNOP
-Fh9F4t0
 Fh9nx
 field
 FieldDescriptorProto
@@ -8195,6 +8302,7 @@ first_day_cached
 FIXED
 FkCounter
 FkIfZero
+Fl9F8t0
 FL9FP
 FL9FPr
 flags
@@ -8432,6 +8540,7 @@ GetAPICallFailureReason
 GetAPICallResult
 GetAppAllowDownloadsWhileRunningBehavior
 GetAppAutoUpdateBehavior
+GetAppAutoUpdateDelayedUntilTime
 GetAppBuildID
 GetAppConfigValue
 GetAppData
@@ -8465,6 +8574,15 @@ GetBinaryWatermarked
 GetBool
 GetBootstrapperVersion
 GetBorrowerInfo
+GetBroadcastChatInfo
+GetBroadcastChatUserNames
+GetBroadcastIncludeDesktop
+GetBroadcastMaxKbps
+GetBroadcastPermissions
+GetBroadcastRecordMic
+GetBroadcastShowChatCorner
+GetBroadcastShowDebugInfo
+GetBroadcastStatus
 GetBuildID
 GetCachedUGCCount
 GetCachedUGCHandle
@@ -8616,6 +8734,7 @@ GetFriendsGroupIDByIndex
 GetFriendsGroupMembershipCount
 GetFriendsGroupName
 GetFriendsSteamLevel
+GetFriendSteamLevel
 GetFriendWhoPlaysGame
 GetFriendWithOfflineMessage
 GetGameBadgeLevel
@@ -8932,6 +9051,8 @@ GetVoiceMicrophoneVolume
 GetVoiceOptimalSampleRate
 GetVoiceSpeakerVolume
 GetVolume
+GetVRRuntimePaths
+GetWatchBroadcastMPD
 GetWirelessEndpointSSID
 GetWirelessEndpointStrength
 GetWirelessSecurityCapabilities
@@ -9683,6 +9804,7 @@ If-Range
 If-Unmodified-Since
 ign.com
 IGNORE
+IgnoreApprovalRequest
 ignore_check_constraints
 Ignored
 IgnoredFriend
@@ -9765,8 +9887,11 @@ Inherited
 inhibitAnyPolicy
 inhibitPolicyMapping
 _inif
+InitBroadcastAudio
+InitBroadcastVideo
 InitDepotBuild
 InitGameServer
+initial_delay
 initialFile
 initial_height
 INITIALKEY
@@ -9832,13 +9957,14 @@ invalidityDate
 invalid-mechanism
 invalid-namespace
 invalid_origin
-INVALID_PATH
 invalid-xml
 inventory
 Invited
 InviteFriendByEmail
 InviteFriendResponse
 InviteFriendToClan
+InviteToBroadcast
+InviteToBroadcastResult_t
 InviteUserToChatRoom
 InviteUserToGame
 InviteUserToLobby
@@ -9874,7 +10000,6 @@ is_auto_generated_name
 is_canceled
 IsClanChatAdmin
 IsClanChatWindowOpenInSteam
-IsClanLarge
 is_clan_member
 IsClanPublic
 IsCloudEnabledForAccount
@@ -9980,6 +10105,7 @@ jobid_target
 JobIOCPWork
 JoinChatRoom
 JoinClanChatRoom
+joined
 JoinedGroup
 joint-iso-itu-t
 JOINT-ISO-ITU-T
@@ -10054,6 +10180,7 @@ k_EMsgClientBroadcastDisconnect
 k_EMsgClientBroadcastFrames
 k_EMsgClientBroadcastInit
 k_EMsgClientBroadcastScreenshot
+k_EMsgClientBroadcastUploadConfig
 k_EMsgClientChangeStatus
 k_EMsgClientChangeSteamGuardOptions
 k_EMsgClientChangeSteamGuardOptionsResponse
@@ -10526,6 +10653,15 @@ k_ERemoteDeviceStreamingBusy
 k_ERemoteDeviceStreamingFailed
 k_ERemoteDeviceStreamingRequest
 k_ERemoteDeviceStreamingSuccess
+k_EViewerLeft
+k_EViewerNeedsApproval
+k_EViewerWatching
+k_EWatchResponseClientOutOfDate
+k_EWatchResponseInvalidSession
+k_EWatchResponseNotAvailable
+k_EWatchResponseReady
+k_EWatchResponseUserRestricted
+k_EWatchResponseWaitingForStart
 key_0
 key_1
 key_2
@@ -10775,6 +10911,7 @@ lh_retrieve
 lh_strhash
 lh_version
 libaudio.so
+libav.conf
 libav_h264.so.56
 libc.so.6
 libdbus-glib-1.so.2
@@ -10871,6 +11008,7 @@ LL-LZa
 ll_value
 load_address
 LoadAnalysis
+LoadBroadcastSettings
 load_extension
 LoadItemDefinitions
 LOAD_IV
@@ -11048,6 +11186,7 @@ max_tokens_to_keep
 MaxUseCount
 max_val
 may_parallelize
+m_bAccepted
 m_bActive
 m_bAddedAtEnd
 m_bCanShareSurfaces
@@ -11055,6 +11194,8 @@ m_bCoverFound
 m_bDownloadEnabled
 m_bEnabled
 m_bIsActive
+m_bIsBroadcasting
+m_bIsWatching
 m_bitsMigratedBuckets
 m_bMultipleArtist
 m_bPlayingRepeatStatus
@@ -11162,6 +11303,7 @@ MEMORY_LOCK
 mem_pool_msg_in_use
 MEM_READ
 memset
+m_eMsgType
 mem_stats
 MEM_WRITE
 m_EncryptionKey
@@ -11332,6 +11474,7 @@ m_mapAppSyncCommands
 m_mapAppToInGameChat
 m_mapAuthTokens
 m_MapBindingInstances
+m_mapBroadcastMPDs
 m_mapCachedPathRoots
 m_mapCacheFiles
 m_mapCDNFileLoadedCallbackLists
@@ -11390,6 +11533,7 @@ m_MapKeyboardCodesToKeynames
 m_MapKeyboardCodesToPrettyNames
 m_MapKeyboardKeynamesToCodes
 m_mapLastDownloadError
+m_mapLastViewerNotification
 m_mapLeaderboards
 m_mapLobbyData
 m_mapLocalScreenshots
@@ -11451,7 +11595,6 @@ m_mapStats
 m_mapStatsBucket
 m_mapStatsNames
 m_mapStatsSchema
-m_mapSteamIDsWatched
 m_mapSubscribedItems
 m_mapSubscriptionInfo
 m_mapUGCDownloadJobsInProgress
@@ -11567,6 +11710,7 @@ m_pDataWritten
 m_pDecoderSILK
 m_pDictSessionAttributes
 m_pDownloadInterface
+mpd_url
 m_Peeked.first
 m_pEncodeCodecHighestQuality
 m_PersistThread
@@ -11710,6 +11854,8 @@ m_StatExecutionTime
 m_statPacketsPosted
 m_statPacketsSent
 m_StatWaitTime
+m_steamID
+m_steamIDViewer
 m_strActualHostName
 m_strActualUrl
 m_strAppInstallDir
@@ -11779,8 +11925,10 @@ m_szAlbumSortName
 m_szArtistName
 m_szArtistSortName
 m_szKey
+m_szMessage
 m_szNewPlaylistName
 m_szOwnerName
+m_szPersona
 m_szPlaylistName
 m_szTag
 m_szTrackAlbumArtistName
@@ -11801,6 +11949,7 @@ m_TotalFilesFailed
 m_TotalFilesFailedCEGFiles
 m_TotalFilesValidated
 m_Tree
+m_treeInviteAfterBeginSession
 m_treeIPCLogCounts
 m_treeLicensesChanged
 m_treePausedUpdates
@@ -11808,8 +11957,10 @@ m_treePostParamNameHashes
 m_treeQueuedUpdates
 m_treeSteamIDInvitesPosted
 m_treeTimedOutConnections
+m_treeWaitingApproval
 m_tslCompletedWorkItems
 m_ugcManager
+m_ulBroadcastID
 m_ulClientID
 Multibanco
 multipleartist
@@ -11819,6 +11970,8 @@ Multiseat
 m_unAppID
 m_unAppPlayedByOtherUserSession
 m_unAppState
+m_unAudioBytesDrop
+m_unAudioBytesSend
 m_unBytesDownloaded
 m_unBytesFailed
 m_unBytesProcessed
@@ -11828,10 +11981,16 @@ m_unControllerIndex
 m_unLibraryLockedBy
 m_unLibraryOwner
 munmap
+m_unNumRequests
+m_unNumViewers
+m_unProcessingMSec
 m_unRemoteIP
 m_unStatusFlags
 m_unTotalBytesWritten
 m_unUpdateState
+m_unVideoBytesDrop
+m_unVideoBytesSend
+m_unVideoSendFPS
 m_UpdateContext
 m_UpdateScheduler
 m_UpdateState
@@ -11842,7 +12001,6 @@ m_UserRemoteStorage
 m_UserScreenshots
 m_UserShortcuts
 m_UserStats
-music
 MUSIC
 Musical
 MUSICBRAINZ_ALBUMARTISTID
@@ -11879,6 +12037,8 @@ mustownapp
 must_own_appid
 MutableMessage
 MutableRepeatedMessage
+MuteBroadcastChatUser
+muted
 m_VAC
 m_vecAchievements
 m_vecAchievementsByGlobalPercentage
@@ -12022,6 +12182,7 @@ N16CCookieContainer11CCookieInfoE
 N16CSteamController12CHIDIOThreadE
 N16CSteamController16IControllerStateE
 N16CSteamController22CSharedControllerStateE
+N17CFileWriterThread16FileWriterItem_tE
 N17CSteamMatchMaking11CServerPingE
 N17CSteamMatchMaking49_CSteamMatchmakingServerListResponse_v001_AdapterE
 N25CRemoteStorageSyncHelpers18CThreadFuncWrapperE
@@ -12641,6 +12802,7 @@ nAmount
 nattype
 NATTYPEPROBE_INTERFACE_VERSION001
 naturaleftouterightfullinnercross
+nBroadcastSessionHearbeatMS
 nClientBackgroundAutoUpdateTimeSpreadMinutes
 nClientCMUDPPingTimeGoodEnoughThresholdMS
 nClientCMUDPPingTimeoutUseGoodEnoughMS
@@ -12699,7 +12861,6 @@ NETSCAPE_SPKI_new
 NETSCAPE_SPKI_sign
 NETSCAPE_SPKI_verify
 network
-Network
 network.cc
 networkmgr
 newauthentication
@@ -12712,6 +12873,7 @@ NewRowid
 NewsItemUpdate
 New_Tai_Lue
 nexon
+next_request
 nextUpdate
 nGroupID
 nickname
@@ -12843,6 +13005,10 @@ NOTICEREF_new
 NOTICE_SECTION
 Notification
 notifications
+NotifyBroadcastSessionHeartbeat
+NotifyBroadcastStatus
+NotifyBroadcastUploadStop
+NotifyBroadcastViewerState
 NotifyChatRoomDlgsOfUIChange
 notify_client
 NotifyClient
@@ -12855,10 +13021,14 @@ NotifyLock
 NotifyPacket
 NotifyRichPresenceJoinRequested
 NotifyServer
+NotifySessionClosed
 NotifySettingsChange
 NotifySteamGuardLoginAttempt
+NotifyStopBroadcastUpload
 NotifyUIOfMenuChange
 NotifyUnlock
+NotifyViewerBroadcastInvite
+NotifyWaitingBroadcastViewer
 notnull
 NotNull
 NoUpdatesAfterInstall
@@ -12907,6 +13077,7 @@ numperpage
 num_prev_failed
 num_reports
 num_skip_depots
+num_viewers
 NX9n\u
 nytimes.com
 o2i_ECPublicKey
@@ -13109,6 +13280,8 @@ OnReadPacket
 OnRouteChange
 OnSignalingReady
 OnSteamPipeClosed
+OnStreamingClientConnected
+OnStreamingClientDisconnected
 OnTransportAcceptMessage
 OnTransportAnswer
 OnTransportChannelGone
@@ -13595,13 +13768,14 @@ permittedSubtrees
 Permutation
 persist
 persiststate
-PersonaFeed
-persona_feeds
+persona
 personalSignature
 personalTitle
 persona_name
+PersonaName
 persona_name_added
 persona_name_owner
+persona_names
 persona_set_by_user
 persona_state
 PersonaStateDesired
@@ -13973,6 +14147,8 @@ positive_int_value
 POSIX
 postalAddress
 postalCode
+PostBroadcastChat
+PostChatMessage
 PostCode
 PostControllerConfig
 postData
@@ -14382,6 +14558,7 @@ RealPrintCallStack
 Rebuild
 receiptsFrom
 receiptsTo
+ReceiveBroadcastChat
 received
 received_bytes
 ReceivedNewGame
@@ -14998,6 +15175,7 @@ SelectedNewPOTW
 selectid
 sem_unlink
 send_app_info_changes
+SendBroadcastStateToServer
 send_changelist
 SendChatMsg
 SendClanChatMessage
@@ -15064,7 +15242,6 @@ SERVER_FINISH
 ServerIP
 server_ips
 serverlist
-ServerMain
 serveronly
 ServerPassword
 server_port
@@ -15079,7 +15256,6 @@ server_types_available
 Server_Types_Available
 server_url
 service
-ServiceAudio
 service_description
 ServiceDescriptorProto
 service_execution_site
@@ -15131,7 +15307,6 @@ setAttr-Token-B0Prime
 setAttr-Token-EMV
 setAttr-TokenType
 setAttr-TokICCsig
-SetAudioMixFragmentMilliseconds
 SetAutoAnswer
 SetAutoReflectVoice
 SetAutoUpdateTimeRestriction
@@ -15148,6 +15323,7 @@ set-brand-JCB
 set-brand-MasterCard
 set-brand-Novus
 set-brand-Visa
+SetBroadcastPermissions
 SetCellID
 set-certExt
 setCext-cCertRequired
@@ -15264,6 +15440,7 @@ set-ctype
 SetCurrentPlaylistEntry
 SetCurrentQueueEntry
 SetCurrentUIMode
+SetCurrentVideoEncodingRate
 SetCustomIPSettings
 SetDedicatedServer
 SetDisplayName
@@ -16573,6 +16750,7 @@ standalone
 start
 start_app_state
 StartBatch
+StartBroadcastUpload
 StartChatRoomVoiceSpeaking
 startdate
 StartDepotBuild
@@ -16649,6 +16827,7 @@ STEAMAPPS_INTERFACE_VERSION003
 STEAMAPPS_INTERFACE_VERSION004
 STEAMAPPS_INTERFACE_VERSION005
 STEAMAPPS_INTERFACE_VERSION006
+STEAMAPPS_INTERFACE_VERSION007
 STEAMAPPTICKET_INTERFACE_VERSION001
 SteamAppUninstalled_t
 SteamAppUser
@@ -16707,6 +16886,7 @@ SteamFriends011
 SteamFriends012
 SteamFriends013
 SteamFriends014
+SteamFriends015
 SteamGameCoordinator001
 SteamGameId
 STEAM_GAME_PIDS
@@ -16756,7 +16936,6 @@ STEAMHTTP_INTERFACE_VERSION001
 STEAMHTTP_INTERFACE_VERSION002
 steamid
 steam_id
-steamID
 \SteamID
 steam_id_added
 steamid_borrower
@@ -16811,6 +16990,7 @@ SteamMatchMaking009
 SteamMatchMakingServers001
 SteamMatchMakingServers002
 steammessages_base.proto
+steammessages_broadcast.steamclient.proto
 steammessages_clientserver_2.proto
 steammessages_clientserver.proto
 steammessages_cloud.steamclient.proto
@@ -16877,7 +17057,6 @@ steamtranslation.ru
 STEAMUGC_INTERFACE_VERSION001
 STEAMUGC_INTERFACE_VERSION002
 STEAMUGC_INTERFACE_VERSION003
-SteamUI
 steamui.so
 STEAMUNIFIEDMESSAGES_INTERFACE_VERSION001
 SteamUniverse
@@ -16997,7 +17176,6 @@ subscribedfiles
 subscribed_files
 SubscribeItem
 SubscribePublishedFile
-SubscribeToPersonaStateFeed
 subscriptiondate
 subscription-required
 subscriptions
@@ -17135,7 +17313,6 @@ Telugu
 temporary-auth-failure
 temp_store
 temp_store_directory
-TenFoot
 terminate
 Terminate
 TerminateAllAppsMultiStep
@@ -17207,7 +17384,6 @@ ThreadShellExecute
 ThreadSleep
 ThreadTerminateProcessCode
 ThreadWaitForProcessExit
-ThreadWorkItem
 thstndrd
 thumbnail
 Tibetan
@@ -17307,6 +17483,7 @@ total
 total_changes
 TotalDiscount
 total_files
+total_missing_bytes
 total_missing_chunks
 TotalRAM
 total_results
@@ -17562,7 +17739,6 @@ UI_set_method
 UI_set_result
 Ukrainian
 ulfriendid
-Unaccounted
 uname
 unauth_attr
 unauthAttrs
@@ -17610,6 +17786,8 @@ unlink
 UnloadModule
 UnlockedGroupAchievement
 UnlockedH264Feature
+UnlockH264
+UnlockH264Result_t
 unlock_parental_lock
 UnlockParentalLock
 unlock_time
@@ -17692,10 +17870,15 @@ updatey
 upgrade
 Upgrade
 upload
+upload_address
 UploadBatch
+UploadBroadcastFrame
+UploadBroadcastScreenshot
 upload_cdkeys
 UploadLeaderboardScore
 UploadLocalClientLogs
+upload_relay_id
+upload_result
 uploads
 upload_score_method
 upload_token
@@ -17741,6 +17924,7 @@ users
 UserStatsLock
 user_status
 UserStatus
+user_steamid
 UserUpdateSession
 user_version
 use_secret_question
@@ -17844,6 +18028,7 @@ VACBanStatus2
 vacmodulefilename
 valid
 ValidateEmailAddress
+ValidateFileIOStatics
 ValidateIPCSpewStatics
 ValidateOfflineLogonTicket
 ValidatePassword
@@ -17918,9 +18103,12 @@ VideoRAM
 VIDEOTEXSTRING
 VideoVendorID
 Vietnamese
+ViewerApprovalResult_t
+ViewerNeedsApproval_t
 view_error_data
 view_financials
 views
+view_url
 visibility
 visible
 VISIBLE
@@ -17966,10 +18154,15 @@ VR\BuildIDAttempted
 VR\BuildIDCompleted
 VRename
 -vrforce
+VR_GetGenericInterfaceInternal
+VR_GetStringForHmdErrorInternal
+VR_InitInternal
+VR_IsHmdPresentInternal
 vrmode
 VRModeChanged_t
 VR_OVERRIDE
 VRRuntimeUpdated_t
+VR_ShutdownInternal
 -vrskip
 vr_windowheight
 vr_windowwidth
@@ -18003,6 +18196,8 @@ was_converted
 was_converted_deprecated_msg
 WasRestartRequested
 was_validated
+WatchBroadcast
+WatchBroadcastResult_t
 WatchGame
 wcscasecmp
 wcscmp
@@ -18014,6 +18209,7 @@ wcstombs
 WeakRandomFillMemory
 WeakRandomFloat
 WeakRandomInt
+WeakRandomUint32
 webapi_authenticate_user_nonce
 WebGuidePublished
 WebMoney
@@ -18696,13 +18892,12 @@ _ZN10CValidator3PopEv
 _ZN10CValidator4PushEPKcPvS1_
 _ZN10CValidator9IsClaimedEPv
 _ZN10SteamVProf10CVProfNode10EnterScopeEPv
-_ZN10SteamVProf10CVProfNode10GetSubNodeEPKciS2_i
+_ZN10SteamVProf10CVProfNode10GetSubNodeEPKci17EVProfBugdetGroupi
 _ZN10SteamVProf10CVProfNode5ResetEv
 _ZN10SteamVProf10CVProfNode9ExitScopeEv
 _ZN10SteamVProf10CVProfNode9MarkFrameEv
 _ZN10SteamVProf9CVProfile12OutputReportEiPKci
-_ZN10SteamVProf9CVProfile30BudgetGroupNameToBudgetGroupIDEPKc
-_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
 _ZN10SteamVProf9CVProfileD1Ev
 _ZN11SteamStdLib11CommandLineEv
 _ZN11SteamStdLib17CCommandLineParamC1EPKcS2_

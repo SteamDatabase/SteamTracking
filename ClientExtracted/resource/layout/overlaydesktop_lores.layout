@@ -25,10 +25,6 @@
 		ScreenshotsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Screenshots" style=sidemenu }
 	}
 	
-	colors
-	{
-	}
-	
 	styles
 	{
 		sidemenu
@@ -48,13 +44,10 @@
 	{
 		region { name=overlay width=1000 align=top-center margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 }
 	
-		region { name="left" region=overlay width=400 height=max margin-top=10 align=left }
-		region { name="mid" region=overlay width=400 height=max margin-top=10 align=top-center }
-		region { name="right" region=overlay width=400 height=max margin-top=10 align=right }
-		
-		region { name="detailpanels" region=overlay align=bottom width=max height=400 margin-bottom=100 }
+		region { name="detailpanels" region=overlay align=bottom width=max height=210 margin-bottom=100 }
 		region { name="taskbar" region=overlay width="max" height=75 align=bottom }
 		
+		place { controls="BroadcastDetailPanel" region=detailpanels width=330 height=240 spacing=10 }
 		place { controls="GameHubButton,GameGroupsButton,ChatRoomButton,DLCButton,GuideButton,GuidesButton,LegacyCDKeyButton,WebSiteButton,ForumsButton,RecommendButton,WorkshopButton,FriendsButton,PlayersButton,AchievementsButton,ScreenshotsButton" y=50 align=right region=overlay dir=down spacing=10 }
 	}	
 }

@@ -7,21 +7,7 @@
 	</styles>
 	
 	<ProfileWrapper defaultfocus="FriendActivityButton">
-		<Panel id="ProfileNavBar" tabindex="auto" selectionpos="auto" onmoveup="CloseProfile();" 
-			onmovedown="IfHasClassEvent( ProfileWrapper, ProfileFocused, SetInputFocus( Profile ) );
-						IfHasClassEvent( ProfileWrapper, ActivityFocused, SetInputFocus( FriendActivity ) );
-						IfHasClassEvent( ProfileWrapper, InventoryFocused, SetInputFocus( Inventory ) );" >
-			<Button id="FriendActivityButton" class="Selected" onactivate="OpenFriendActivity( true );" tabindex="auto" selectionpos="auto">
-				<Label text="#Profile_OpenFriendActivity" />
-			</Button>
-			<Button id="ShowProfileButton" onactivate="OpenMyProfile();" tabindex="auto" selectionpos="auto">
-				<Label text="#Profile_OpenMyProfile" />
-			</Button>
-			<Button id="ShowInventoryButton" onactivate="OpenMyInventory();" tabindex="auto" selectionpos="auto">
-				<Label text="#Profile_OpenMyInventory" />
-			</Button>
-		</Panel>
-		<CommunityFriendsStrip class="CommunityFriendsStrip" id="CommunityFriendsStrip"/>
+		<ProfilePanel id="ProfileMenu" class="ProfilePanel" onmoveup="CloseProfile();" />
 		<Label id="SpoofNotice" text="#Community_SpoofNotice" />
 		<ProfilePanel id="Profile" class="ProfilePanel" />
 		<ProfilePanel id="FriendActivity" class="ProfilePanel" />

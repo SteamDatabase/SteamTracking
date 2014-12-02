@@ -3,6 +3,7 @@
 @define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
 @define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #cbcbcbde ) );
 @define warningnotecolor: #d0a11c;
+@define warningnotecolor2: #a77d05;
  
 //
 // Animations
@@ -40,7 +41,7 @@ CartLineItem, CheckoutGiftRecipientFriend, CheckoutAddFundsButton, Button
 	border-style: solid;
 	border-width: 5px;
 	border-color: none;
-
+	transition-duration: 0.23s;
 	transition-property: border, background-color, color, box-shadow, transform;
 	transition-timing-function: ease-in-out;
 }
@@ -55,7 +56,7 @@ CheckoutAddFundsButton Label, Button Label
 	font-weight: bold;
 	transform: translatex(-5px);
 	color: detailsdatalabelfocus;
-	transition-property: transform;
+	transition-property: transform, color;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in;
 }
@@ -84,17 +85,17 @@ CheckoutAddFundsButton:hover Label, Button:hover Label
 
 CartLineItem:focus, CheckoutGiftRecipientFriend:focus, CheckoutAddFundsButton:focus, Button:focus
 {
-	transition-duration: 0.23s ;
+	transition-duration: 0.23s;
 
 	color: #161718f5;
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
-	
-	animation-name: links-and-more-button-focus; 
+
+	animation-name: links-and-more-button-focus;
 	animation-duration: 1.7s;
-	animation-delay: 0.4s;
+	animation-delay: 0.0s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
@@ -752,6 +753,12 @@ CartLineItem:descendantfocus .CartLineItemContents
 	color: warningnotecolor;
 }
 
+CartLineItem:descendantfocus #Notes Label.WarningNote
+{
+	color: warningnotecolor2;
+}
+
+
 #PurchaseNotes
 {
 	flow-children: down;
@@ -778,10 +785,12 @@ CartLineItem:descendantfocus .CartLineItemContents
 }
 
 CartNoteItem, CartNoteItem:hover
-
 {
 	margin-left: 12px;
 	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
+	transition-property: box-shadow;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
 }
 
 CartNoteItem Label, CartNoteItem:hover Label
@@ -812,7 +821,7 @@ CartNoteItem.WarningNote Label
 
 CartNoteItem.WarningNote:descendantfocus Label
 {
-	color: warningnotecolor;
+	color: warningnotecolor2;	
 }
 
 CartNoteItem #CartNoteItemIcon
@@ -826,8 +835,8 @@ CartNoteItem.WarningNote #CartNoteItemIcon
 	background-position: 50% 50%;
 	background-image: url( "file://{images}/store/icon_notice.png" );
 	wash-color: #f1f1f1ff;
-	width: 55px;
-	height: 55px;
+	width: 50px;
+	height: 50px;
 	vertical-align: center;
 	margin-right: 10px;
 	visibility: visible;
@@ -835,7 +844,7 @@ CartNoteItem.WarningNote #CartNoteItemIcon
 
 CartNoteItem.WarningNote:descendantfocus #CartNoteItemIcon
 {
-	wash-color: warningnotecolor;
+	wash-color: warningnotecolor2;
 }
 
 #CouponTotalRow, #SubtotalRow
