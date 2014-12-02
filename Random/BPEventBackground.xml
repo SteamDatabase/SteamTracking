@@ -1,9 +1,8 @@
 <root>
 <styles>
 	<include src="file://{resources}/styles/steamstyles.css" />
-			<include src="https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground.css?v=60YPXrRc8jHH" />
+			<include src="https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground_empty.css?v=KvtD7dCW09Zq" />
 	</styles>
 <EventBackground>
-			<Image class="BackgroundImage" src="https://steamcdn-a.akamaihd.net/steam/clusters/sale_autumn2014_daily/7a5538054133b618181045fb/tenfoot_english.jpg?t=1417460411" />
 	</EventBackground>
 </root>
