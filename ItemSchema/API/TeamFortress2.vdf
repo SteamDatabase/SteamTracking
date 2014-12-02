@@ -63197,6 +63197,403 @@
 				"engineer"	"models/workshop/player/items/all_class/florida_lan_medal/florida_lan_medal_engineer.mdl"
 			}
 		}
+		"8584"
+		{		
+			"name"				"Thought that Counts"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"armory_remap"		""
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_Medal_ThoughtThatCounts"
+			"item_description"	"#TF_Medal_ThoughtThatCounts_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/brain_of_gold/brain_of_gold"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_scout.mdl"
+				"sniper"	"models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_sniper.mdl"
+				"soldier"	"models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_soldier.mdl"
+				"demoman"	"models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_spy.mdl"
+				"engineer"	"models/workshop/player/items/all_class/brain_of_gold/brain_of_gold_engineer.mdl"
+			}
+		}
+		"8585"
+		{
+			"name"	"Gamers Assembly Gold Medal 2013"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Gold"
+			"item_description"	"#TF_TournamentMedal_2013"
+			"capabilities"																																					
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_engineer.mdl"
+			}
+		}
+ 		"8586"
+		{
+			"name"	"Gamers Assembly Silver Medal 2013"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Silver"
+			"item_description"	"#TF_TournamentMedal_2013"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_engineer.mdl"
+			}
+		}
+		"8587"
+		{
+			"name"	"Gamers Assembly Bronze Medal 2013"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Bronze"
+			"item_description"	"#TF_TournamentMedal_2013"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_engineer.mdl"
+			}
+		}
+ 		"8588"
+		{
+			"name"	"Gamers Assembly Participant Badge 2013"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Participant"
+			"item_description"	"#TF_TournamentMedal_2013"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_engineer.mdl"
+			}
+		}
+		"8589"
+		{
+			"name"	"GAlloween Gold Medal 2013"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Gold"
+			"item_description"	"#TF_TournamentMedal_2013"
+			"capabilities"																																					
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_engineer.mdl"
+			}
+		}
+ 		"8590"
+		{
+			"name"	"GAlloween Silver Medal 2013"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Silver"
+			"item_description"	"#TF_TournamentMedal_2013"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_engineer.mdl"
+			}
+		}
+		"8591"
+		{
+			"name"	"GAlloween Bronze Medal 2013"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Bronze"
+			"item_description"	"#TF_TournamentMedal_2013"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_engineer.mdl"
+			}
+		}
+ 		"8592"
+		{
+			"name"	"GAlloween Participant Badge 2013"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Participant"
+			"item_description"	"#TF_TournamentMedal_2013"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_engineer.mdl"
+			}
+		}
+		"8593"
+		{
+			"name"	"Gamers Assembly Gold Medal 2014"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Gold"
+			"item_description"	"#TF_TournamentMedal_2014"
+			"capabilities"																																					
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_engineer.mdl"
+			}
+		}
+ 		"8594"
+		{
+			"name"	"Gamers Assembly Silver Medal 2014"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Silver"
+			"item_description"	"#TF_TournamentMedal_2014"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_engineer.mdl"
+			}
+		}
+		"8595"
+		{
+			"name"	"Gamers Assembly Bronze Medal 2014"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Bronze"
+			"item_description"	"#TF_TournamentMedal_2014"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_engineer.mdl"
+			}
+		}
+ 		"8596"
+		{
+			"name"	"Gamers Assembly Participant Badge 2014"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GamersAssembly_Participant"
+			"item_description"	"#TF_TournamentMedal_2014"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_engineer.mdl"
+			}
+		}
+		"8597"
+		{
+			"name"	"GAlloween Gold Medal 2014"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Gold"
+			"item_description"	"#TF_TournamentMedal_2014"
+			"capabilities"																																					
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_gold/gamers_assembly_gold_engineer.mdl"
+			}
+		}
+ 		"8598"
+		{
+			"name"	"GAlloween Silver Medal 2014"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Silver"
+			"item_description"	"#TF_TournamentMedal_2014"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_silver/gamers_assembly_silver_engineer.mdl"
+			}
+		}
+		"8599"
+		{
+			"name"	"GAlloween Bronze Medal 2014"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Bronze"
+			"item_description"	"#TF_TournamentMedal_2014"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_bronze/gamers_assembly_bronze_engineer.mdl"
+			}
+		}
+ 		"8600"
+		{
+			"name"	"GAlloween Participant Badge 2014"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_GAlloween_Participant"
+			"item_description"	"#TF_TournamentMedal_2014"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/gamers_assembly_participant/gamers_assembly_participant_engineer.mdl"
+			}
+		}
+
 
 
 
@@ -68606,6 +69003,46 @@
 			"used_by_classes"
 			{
 				"pyro"		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+			"attributes"
+			{
+				"elevate quality"
+				{
+					"attribute_class"	"set_elevated_quality"
+					"value"	"1"
+				}
+			}
+		}
+		"2137"
+		{
+			"name" "TF2mixup Community Event 2014 Promo"
+			"item_class"	"bundle"
+			"bundle"
+			{
+				"Thought that Counts"	"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_TF2mixup_Community_Event_2014_Promo"
+			"item_description"	"#TF_TF2mixup_Community_Event_2014_Promo_Desc"
+			"image_inventory"	"backpack/player/items/crafting/mysterious_promo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
 			}
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"drop_sound"		"ui/item_bag_drop.wav"
