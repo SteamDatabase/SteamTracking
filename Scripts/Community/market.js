@@ -1936,3 +1936,52 @@ ItemActivityTicker = {
 		setTimeout( function() { ItemActivityTicker.AdvanceTicker(); }, this.m_nTickerAdvanceRate );
 	}
 }
+
+$J(function() {
+	$$('a.tooltip').each( function( elem ) {
+		if ( elem.hasClassName( "locked" ) )
+		{
+			InstallHoverTooltip( elem, $('locked_tooltip') );
+		}
+		else if ( elem.hasClassName( "banned" ))
+		{
+			InstallHoverTooltip( elem, $('banned_tooltip') );
+		}
+		else if ( elem.hasClassName( "trusted" ))
+		{
+			InstallHoverTooltip( elem, $('trusted_tooltip') );
+		}
+		else if ( elem.hasClassName( "pwreset" ))
+		{
+			InstallHoverTooltip( elem, $('pwreset_tooltip') );
+		}
+		else if ( elem.hasClassName( "cookie" ))
+		{
+			InstallHoverTooltip( elem, $('cookie_tooltip') );
+		}
+		else if ( elem.hasClassName( "newdevice" ))
+		{
+			InstallHoverTooltip( elem, $('newdevice_tooltip') );
+		}
+		else if ( elem.hasClassName( "limiteduser" ))
+		{
+			InstallHoverTooltip( elem, $('limiteduser_tooltip') );
+		}
+		else if ( elem.hasClassName( "selfrefund" ))
+		{
+			InstallHoverTooltip( elem, $('selfrefund_tooltip') );
+		}
+		else if ( elem.hasClassName( "sgdisabled" ))
+		{
+			InstallHoverTooltip( elem, $('sgdisabled_tooltip') );
+		}
+		else if ( elem.hasClassName( "sgrecent" ))
+		{
+			InstallHoverTooltip( elem, $('sgrecent_tooltip') );
+		}
+		else if ( elem.hasClassName( "trustedwaiting" ))
+		{
+			InstallHoverTooltip( elem, $('trustedwaiting_tooltip') );
+		}
+	} );
+} );

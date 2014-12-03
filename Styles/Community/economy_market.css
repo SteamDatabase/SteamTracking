@@ -91,6 +91,62 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
 }
 
+#market_warning_header {
+	color: #ffffff;
+	float: left;
+	margin: 0 0 15px 10px;
+	font-size: 17px;
+}
+
+#market_warning_icon {
+	margin-top: -12px;
+	float: left;
+	width: 38px;
+	height: 38px;
+}
+
+div.market_restrictions {
+	clear: both;
+	line-height: 20px;
+}
+
+div.market_restrictions a:hover{
+	text-decoration: underline;
+}
+
+.market_hover_tip_header {
+	background-color: #3F3F3F;
+	color: #D6D6D6;
+	position: fixed;
+	z-index: 100;
+	border: 1px solid #747474;
+
+	width: 288px;
+	padding: 12px;
+
+	box-shadow: 4px 4px 3px black;
+	-moz-box-shadow: 4px 4px 3px black;
+	-webkit-box-shadow: 4px 4px 5px black;
+}
+
+#market_timecanuse_header {
+	color: #84BD3A;
+}
+
+#market_headertip_saleslimit {
+	border:1px solid #AEAEAE;
+	background-color:#333333;
+	padding:5px;
+}
+
+ul.market_restrictions li {
+	margin: 10px 0 0 0;
+}
+
+#market_restriction_expire {
+	margin-top: 20px;
+}
+
 #mainContents {
 	padding: 0;
 	text-align:left;

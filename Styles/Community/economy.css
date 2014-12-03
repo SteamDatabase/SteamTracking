@@ -520,7 +520,7 @@ input.filter_search_box:-moz-placeholder {
 	color: #ffffff;
 	line-height: 1em;
 
-	background: -moz-linear-gradient(top, #484848 5%, #262626 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#262626));background: -webkit-linear-gradient(top, #484848 5%,#262626 95%);background: -o-linear-gradient(top, #484848 5%,#262626 95%);background: -ms-linear-gradient(top, #484848 5%,#262626 95%);background: linear-gradient(to bottom, #484848 5%,#262626 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#262626',GradientType=0 );	border: 1px solid #797272;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#262626));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#262626',GradientType=0 );background: -moz-linear-gradient( top, #484848 5%, #262626 95%);background: -webkit-linear-gradient( top, #484848 5%, #262626 95%);background: -o-linear-gradient( top, #484848 5%, #262626 95%);background: -ms-linear-gradient( top, #484848 5%, #262626 95%);background: linear-gradient( to bottom, #484848 5%, #262626 95%);	border: 1px solid #797272;
 	border-bottom: none;
 
 	border-top-left-radius: 3px;
@@ -846,7 +846,13 @@ a.game_button {
 }
 
 .market_headertip_container {
-	padding: 10px 0;
+	padding: 20px 20px;
+    background: #292929;
+    color: #828282;
+}
+
+.market_headertip_container:nth-child(3) {
+    padding-top: 0px;
 }
 
 .market_headertip {
@@ -855,7 +861,7 @@ a.game_button {
 	color: white;
 }
 
-.market_headertip > img {
+.market_restrictions img {
 	float:left;
 	margin-right: 5px;
 
@@ -884,6 +890,10 @@ a.game_button {
 	box-shadow: 4px 4px 3px black;
 	-moz-box-shadow: 4px 4px 3px black;
 	-webkit-box-shadow: 4px 4px 5px black;
+}
+
+#market_timecanuse {
+    color: #84BD3A;
 }
 
 .jqplot-highlighter-tooltip {

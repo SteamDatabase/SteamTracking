@@ -294,6 +294,7 @@ a.general_btn:hover {
 	position: relative;
 	padding: 16px 8px 16px 13px;
 	background: rgba( 0, 0, 0, 0.2 );
+	margin-bottom: 12px;
 }
 
 .rightSectionPadding
@@ -323,7 +324,7 @@ a.general_btn:hover {
 
 .rightSectionTopTitle {
 	font-size: 14px;
-	color: #494947;
+	color: #8f98a0;
 	padding-top: 5px;
 	margin-bottom: 10px;
 }
@@ -933,17 +934,15 @@ div.sortselect {
 	line-height: 20px;
 	color: #8a8a8a;
 	font-size: 12px;
-	background-color: #000000;
 	border: 1px solid #364963;
 }
 
 div.sortselect_options {
 	width: 130px;
 	line-height: 20px;
-	color: #8a8a8a;
+	color: #ffffff;
 	font-size: 12px;
-	background-color: #000000;
-	border: 1px solid #707070;
+	background-color: #417A9B;
 	z-index: 3;
 }
 
@@ -972,9 +971,7 @@ div.sortselect div.option, div.sortselect_options div.option {
 
 div.sortselect #sortselect_activesort
 {
-	background-color: #3C516E;
 	color: #ffffff;
-	border-bottom: 1px solid #707070;
 }
 
 div.sortselect_options div.option{
@@ -982,7 +979,7 @@ div.sortselect_options div.option{
 }
 
 div.sortselect_options div.option:hover {
-	background-color: #333333;
+	background-color: #212d3d;
 }
 
 div.sortselect div.option img, div.sortselect_options div.option img {
@@ -1689,7 +1686,7 @@ textarea {
 {
 	font-size: 14px;
 	line-height: 24px;
-	background-color: #1e1e1e;
+	background-color: rgba( 0, 0, 0, 0.4 );
 	padding:  4px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -2824,8 +2821,10 @@ div.hover {
 	line-height: 30px;
 }
 
-.followStatsBlock
+.authorSection .followStatsBlock
 {
+	font-size: 13px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
 .followStatValue
@@ -2841,8 +2840,9 @@ div.hover {
 
 .followStat
 {
-	color: #787875;
-	padding-top: 8px;
+	color: #67c1f5;
+	font-size: 42px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
 .followStatsTitleContainer
@@ -2853,8 +2853,10 @@ div.hover {
 
 .followStatName
 {
-	color: #494947;
+	color: #8f98a0;
 	padding-top: 8px;
+	font-size: 18px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
 .workshopAuthorHeader

@@ -164,6 +164,11 @@ a {
 	left: 5px;
 }
 
+.profileAvatarImgHolder img, .groupAvatarImgHolder img {
+	width: 92px;
+	height: 92px;
+}
+
 .profileAvatarImg, .groupAvatarImg {
 	width: 92px;
 	height: 92px;
@@ -773,14 +778,6 @@ span.statsItem {
 	color: #AFD14F;
 }
 
-.color_online {
-	color: #9CC7FF;
-}
-
-.color_offline {
-	color: #CFD2D4;
-}
-
 .color_error {
 	color: #FF0000;
 }
@@ -793,35 +790,10 @@ span.statsItem {
 	color: #606060;
 }
 
-.playerAvatar {
-	width: 32px;
-	height: 32px;
-	padding: 2px;
-	background-color: #CFD2D4;
-	border-radius: 4px;
-}
-.playerAvatar.offline {
-	background-color: #606060;
-}
-.playerAvatar.ignored {
-	background-color: #606060;
-}
-.playerAvatar.online {
-	background-color: #9CC7FF;
-}
-.playerAvatar.in-game {
-	background-color: #AFD14F;
-}
-
 .commentthread_comment_avatar.playerAvatar img {
 	width: 32px;
 	height: 32px;
 	border-radius: 3px;
-}
-
-.playerAvatar img {
-	width: 52px;
-	height: 52px;
 }
 
 .rightFloatLinkIcon {
@@ -1254,7 +1226,7 @@ a#postLink, a#blotterLink {
 	vertical-align: top;
 
 	border-radius: 2px;
-	background: -moz-linear-gradient(top, #313131 5%, #202020 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#313131), color-stop(95%,#202020));background: -webkit-linear-gradient(top, #313131 5%,#202020 95%);background: -o-linear-gradient(top, #313131 5%,#202020 95%);background: -ms-linear-gradient(top, #313131 5%,#202020 95%);background: linear-gradient(to bottom, #313131 5%,#202020 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313131', endColorstr='#202020',GradientType=0 );	box-shadow: none;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#313131), color-stop(95%,#202020));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313131', endColorstr='#202020',GradientType=0 );background: -moz-linear-gradient( top, #313131 5%, #202020 95%);background: -webkit-linear-gradient( top, #313131 5%, #202020 95%);background: -o-linear-gradient( top, #313131 5%, #202020 95%);background: -ms-linear-gradient( top, #313131 5%, #202020 95%);background: linear-gradient( to bottom, #313131 5%, #202020 95%);	box-shadow: none;
 	border: 1px solid #2C2C2C;
 
 	user-select: none;

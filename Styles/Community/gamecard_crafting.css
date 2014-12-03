@@ -184,7 +184,7 @@
 	text-align: left;
 
 	background-color: #3d3d3b;
-	background: -moz-linear-gradient(top, #474745 5%, #2b2b2a 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#474745), color-stop(95%,#2b2b2a));background: -webkit-linear-gradient(top, #474745 5%,#2b2b2a 95%);background: -o-linear-gradient(top, #474745 5%,#2b2b2a 95%);background: -ms-linear-gradient(top, #474745 5%,#2b2b2a 95%);background: linear-gradient(to bottom, #474745 5%,#2b2b2a 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474745', endColorstr='#2b2b2a',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#474745), color-stop(95%,#2b2b2a));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474745', endColorstr='#2b2b2a',GradientType=0 );background: -moz-linear-gradient( top, #474745 5%, #2b2b2a 95%);background: -webkit-linear-gradient( top, #474745 5%, #2b2b2a 95%);background: -o-linear-gradient( top, #474745 5%, #2b2b2a 95%);background: -ms-linear-gradient( top, #474745 5%, #2b2b2a 95%);background: linear-gradient( to bottom, #474745 5%, #2b2b2a 95%);}
 
 .completed_badge_inner {
 	position: relative;
@@ -316,7 +316,7 @@
 /* booster pack unpacking */
 .booster_unpack_dialog {
 	width: 700px;
-	height: 380px;
+	min-height: 380px;
 	overflow: hidden;
 }
 
@@ -538,17 +538,17 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	height: 265px;
+	height: 261px;
 	z-index: 1;
 
 }
 
 .booster_unpack_card .booster_unpack_card_image_flip_gradient {
-	background: -moz-linear-gradient(left, #666666 5%, #000000 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#666666), color-stop(95%,#000000));background: -webkit-linear-gradient(left, #666666 5%,#000000 95%);background: -o-linear-gradient(left, #666666 5%,#000000 95%);background: -ms-linear-gradient(left, #666666 5%,#000000 95%);background: linear-gradient(to right, #666666 5%,#000000 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#000000',GradientType=1 );	z-index: 2;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#666666), color-stop(95%,#000000));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#000000',GradientType=1 );background: -moz-linear-gradient( left, #666666 5%,#000000 95%);background: -webkit-linear-gradient( left, #666666 5%,#000000 95%);background: -o-linear-gradient( left, #666666 5%,#000000 95%);background: -ms-linear-gradient( left, #666666 5%,#000000 95%);background: linear-gradient( to right, #666666 5%,#000000 95%);	z-index: 2;
 }
 
 .booster_unpack_card.card_back .booster_unpack_card_image_flip_gradient {
-	background: -moz-linear-gradient(left, #000000 5%, #666666 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#000000), color-stop(95%,#666666));background: -webkit-linear-gradient(left, #000000 5%,#666666 95%);background: -o-linear-gradient(left, #000000 5%,#666666 95%);background: -ms-linear-gradient(left, #000000 5%,#666666 95%);background: linear-gradient(to right, #000000 5%,#666666 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#666666',GradientType=1 );	z-index: 2;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#000000), color-stop(95%,#666666));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#666666',GradientType=1 );background: -moz-linear-gradient( left, #000000 5%,#666666 95%);background: -webkit-linear-gradient( left, #000000 5%,#666666 95%);background: -o-linear-gradient( left, #000000 5%,#666666 95%);background: -ms-linear-gradient( left, #000000 5%,#666666 95%);background: linear-gradient( to right, #000000 5%,#666666 95%);	z-index: 2;
 }
 
 
@@ -573,7 +573,7 @@
 
 @keyframes anim_flip_card_back {
 	from {
-		width: 230px;
+		width: 225px;
 	}
 	50% {
 		left: 115px;
@@ -588,7 +588,7 @@
 @-webkit-keyframes anim_flip_card_back {
 	from {
 		left: 0;
-		width: 230px;
+		width: 225px;
 	}
 	50% {
 		left: 115px;
@@ -652,7 +652,7 @@
 	}
 	to {
 		left: 0;
-		width: 230px;
+		width: 226px;
 	}
 }
 
@@ -667,7 +667,7 @@
 	}
 	to {
 		left: 0;
-		width: 230px;
+		width: 226px;
 	}
 }
 

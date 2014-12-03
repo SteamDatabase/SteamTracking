@@ -1,6 +1,6 @@
 //
 // Functions used to dynamically create the layout for editing cost
-//
+// <script>
 
 var packages = { };
 
@@ -435,9 +435,12 @@ function CreateDateControl( target, id, initValue )
 var templ_DiscountDiv = new Template( ''
 		+ '	<div class="boxlist_item" id="#{DiscountId}_discountDiv">'
 		+ '		<input type="hidden" id="#{DiscountId}_group" name="#{DiscountId}[group]" value="#{Group}">'
-		+ '		<div class="boxlist_title">'
-		+ '			<div class="boxlist_controls">'
+		+ '		<div class="boxlist_title"><span>#{Name}</span>'
+		+ '			<div class="boxlist_controls visible">'
 		+ '				<input style="float: right;" value="Delete Discount" type="submit" onclick="OnClickDeleteDiscount( \'#{DiscountId}\' ); return false;">'
+		+ '			</div>'
+		+ '			<div class="boxlist_controls hidden">'
+		+ '				<input style="float: right;" value="Show details" type="submit" onclick="OnClickShowDiscount( \'#{DiscountId}\' ); return false;">'
 		+ '			</div>'
 		+ '			<div style="clear: both;"></div>'
 		+ '		</div>'
@@ -656,16 +659,35 @@ function CreateDiscount( target, id, discount )
 	// set default text on explode
 	SetDefaultText( id + '_explodeCountryOverrideCountries', strDefaultExplodeCountryCodeText );
 	SetDefaultText( id + '_explodeCountryOverrideCost', strDefaultExplodeCountryDiscountText );
+
+	if( discount['end_date'] < Date.now() / 1000 )
+	{
+		var escapedID = id.replace(/[[\]]/g, "\\$&");
+		$J('#' + escapedID + '_discountDiv').addClass('hidden');
+	}
 }
 
 function OnClickDeleteDiscount( id )
 {
+	var escapedID = id.replace(/[[\]]/g, "\\$&");
+
+	if( $J('#' + escapedID + '_group').val() )
+	{
+		alert('You cannot delete discounts which have discount groups using this tool. Please use the new discount tool instead (Not the multi-discount tool).');
+		return ;
+	}
 	if( confirm("Please don't delete historical discount data. Set the end date to \"now\" if you just want to end a discount early. If you have questions ask Kadar\r\n\r\nDelete this discount?") )
 	{
  		$( id + '_discountDiv' ).remove();
 		g_AllDiscounts[ id ] = undefined;
 		UpdateSummaryDiscounts();
 	}
+}
+
+function OnClickShowDiscount( id )
+{
+	var escapedID = id.replace(/[[\]]/g, "\\$&");
+	$J('#' + escapedID + '_discountDiv').removeClass('hidden');
 }
 
 // 
@@ -907,7 +929,6 @@ function AddSummaryDiscounts( target, id, reqCurrencies )
 
 		if( oneDiscount.end_date > 0 && oneDiscount.end_date < Date.now() / 1000 )
 		{
-			console.log(oneDiscount);
 			continue;
 		}
 

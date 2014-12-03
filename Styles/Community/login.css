@@ -200,6 +200,10 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 	color: #66C0F4;
 }
 
+.twofactorauth_button h3, .twofactorauth_button h5 {
+	margin-left: 16px;
+}
+
 .auth_button h5, .twofactorauth_button h5 {
 	font-size: 13px;
 	color: #66C0F4;
@@ -220,11 +224,11 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 }
 
 .modal_box_ctn a.auth_button {
-	background: -moz-linear-gradient(top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -webkit-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -o-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: linear-gradient(to bottom, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);	padding: 12px 12px 15px 12px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -moz-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -o-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: linear-gradient( to bottom, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);	padding: 12px 12px 15px 12px;
 	border-radius: 2px;
 }
 .modal_box_ctn a.auth_button:hover {
-	background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -moz-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -o-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);}
 
 #loginIPTModal .modal_box {
 	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/login/ipt_lockout_bg.png );
@@ -248,7 +252,7 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 	border: 1px solid #000000;
 	border-radius: 3px;
 	margin-top: 17px;
-	background: -moz-linear-gradient(top, #3f4e63 5%, #0d0e10 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3f4e63), color-stop(95%,#0d0e10));background: -webkit-linear-gradient(top, #3f4e63 5%,#0d0e10 95%);background: -o-linear-gradient(top, #3f4e63 5%,#0d0e10 95%);background: -ms-linear-gradient(top, #3f4e63 5%,#0d0e10 95%);background: linear-gradient(to bottom, #3f4e63 5%,#0d0e10 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4e63', endColorstr='#0d0e10',GradientType=0 );	-moz-box-shadow: 1px 1px 0px rgba(53,67,67,1), 0px 0px 10px rgba(0,0,0,0.4) inset;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3f4e63), color-stop(95%,#0d0e10));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4e63', endColorstr='#0d0e10',GradientType=0 );background: -moz-linear-gradient( top, #3f4e63 5%, #0d0e10 95%);background: -webkit-linear-gradient( top, #3f4e63 5%, #0d0e10 95%);background: -o-linear-gradient( top, #3f4e63 5%, #0d0e10 95%);background: -ms-linear-gradient( top, #3f4e63 5%, #0d0e10 95%);background: linear-gradient( to bottom, #3f4e63 5%, #0d0e10 95%);	-moz-box-shadow: 1px 1px 0px rgba(53,67,67,1), 0px 0px 10px rgba(0,0,0,0.4) inset;
 	-webkit-box-shadow: 1px 1px 0px rgba(53,67,67,1), 0px 0px 15px rgba(0,0,0,0.4) inset;
 	box-shadow: 1px 1px 0px rgba(53,67,67,1), 0px 0px 15px rgba(0,0,0,0.4) inset;
 	
@@ -259,7 +263,7 @@ a.auth_button, a.auth_button:hover, a.twofactorauth_button, a.twofactorauth_butt
 	border: 1px solid #000000;
 	border-radius: 3px;
 	margin-top: 17px;
-	background: -moz-linear-gradient(top, #000 5%, #111 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#000), color-stop(95%,#111));background: -webkit-linear-gradient(top, #000 5%,#111 95%);background: -o-linear-gradient(top, #000 5%,#111 95%);background: -ms-linear-gradient(top, #000 5%,#111 95%);background: linear-gradient(to bottom, #000 5%,#111 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#111',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#000), color-stop(95%,#111));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#111',GradientType=0 );background: -moz-linear-gradient( top, #000 5%, #111 95%);background: -webkit-linear-gradient( top, #000 5%, #111 95%);background: -o-linear-gradient( top, #000 5%, #111 95%);background: -ms-linear-gradient( top, #000 5%, #111 95%);background: linear-gradient( to bottom, #000 5%, #111 95%);}
 
 	.mainLoginPanelDivider {
 		width: 2px;

@@ -21,14 +21,14 @@
 .avatar_block_status_offline,
 .appHubIconHolder.ignored {
 
-	background: -moz-linear-gradient(top, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(106,106,106,1)), color-stop(95%,rgba(85,85,85,1)));background: -webkit-linear-gradient(top, rgba(106,106,106,1) 5%,rgba(85,85,85,1) 95%);background: -o-linear-gradient(top, rgba(106,106,106,1) 5%,rgba(85,85,85,1) 95%);background: -ms-linear-gradient(top, rgba(106,106,106,1) 5%,rgba(85,85,85,1) 95%);background: linear-gradient(to bottom, rgba(106,106,106,1) 5%,rgba(85,85,85,1) 95%);	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(106,106,106,1)), color-stop(95%,rgba(85,85,85,1)));background: -moz-linear-gradient( top, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);background: -webkit-linear-gradient( top, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);background: -o-linear-gradient( top, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);background: -ms-linear-gradient( top, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);background: linear-gradient( to bottom, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
 	filter: none;
 }
 .playerAvatar.offline img,
 .friend_status_offline .friend_block_avatar img,
 .appHubIconHolder.offline img,
 .avatar_block_status_offline img {
-	background: -moz-linear-gradient(top, #515151 5%, #474747 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#515151), color-stop(95%,#474747));background: -webkit-linear-gradient(top, #515151 5%,#474747 95%);background: -o-linear-gradient(top, #515151 5%,#474747 95%);background: -ms-linear-gradient(top, #515151 5%,#474747 95%);background: linear-gradient(to bottom, #515151 5%,#474747 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#474747',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#515151), color-stop(95%,#474747));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#474747',GradientType=0 );background: -moz-linear-gradient( top, #515151 5%, #474747 95%);background: -webkit-linear-gradient( top, #515151 5%, #474747 95%);background: -o-linear-gradient( top, #515151 5%, #474747 95%);background: -ms-linear-gradient( top, #515151 5%, #474747 95%);background: linear-gradient( to bottom, #515151 5%, #474747 95%);}
 
 /* Online State */
 .playerAvatar.online,
@@ -38,14 +38,14 @@
 .avatar_block_status_online {
 	background-color: #57cbde;
 
-	background: -moz-linear-gradient(top, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(83,164,196,1)), color-stop(95%,rgba(69,128,151,1)));background: -webkit-linear-gradient(top, rgba(83,164,196,1) 5%,rgba(69,128,151,1) 95%);background: -o-linear-gradient(top, rgba(83,164,196,1) 5%,rgba(69,128,151,1) 95%);background: -ms-linear-gradient(top, rgba(83,164,196,1) 5%,rgba(69,128,151,1) 95%);background: linear-gradient(to bottom, rgba(83,164,196,1) 5%,rgba(69,128,151,1) 95%);	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(83,164,196,1)), color-stop(95%,rgba(69,128,151,1)));background: -moz-linear-gradient( top, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);background: -webkit-linear-gradient( top, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);background: -o-linear-gradient( top, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);background: -ms-linear-gradient( top, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);background: linear-gradient( to bottom, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
 	filter: none;
 }
 .playerAvatar.online img,
 .friend_status_online .friend_block_avatar img,
 .appHubIconHolder.online img,
 .avatar_block_status_online img {
-	background: -moz-linear-gradient(top, #41778f 5%, #3d697b 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#41778f), color-stop(95%,#3d697b));background: -webkit-linear-gradient(top, #41778f 5%,#3d697b 95%);background: -o-linear-gradient(top, #41778f 5%,#3d697b 95%);background: -ms-linear-gradient(top, #41778f 5%,#3d697b 95%);background: linear-gradient(to bottom, #41778f 5%,#3d697b 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41778f', endColorstr='#3d697b',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#41778f), color-stop(95%,#3d697b));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41778f', endColorstr='#3d697b',GradientType=0 );background: -moz-linear-gradient( top, #41778f 5%, #3d697b 95%);background: -webkit-linear-gradient( top, #41778f 5%, #3d697b 95%);background: -o-linear-gradient( top, #41778f 5%, #3d697b 95%);background: -ms-linear-gradient( top, #41778f 5%, #3d697b 95%);background: linear-gradient( to bottom, #41778f 5%, #3d697b 95%);}
 
 /* In-Game State */
 .playerAvatar.in-game,
@@ -55,14 +55,33 @@
 .avatar_block_status_in-game {
 	background-color: #90ba3c;
 
-	background: -moz-linear-gradient(top, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(143,185,59,1)), color-stop(95%,rgba(110,140,49,1)));background: -webkit-linear-gradient(top, rgba(143,185,59,1) 5%,rgba(110,140,49,1) 95%);background: -o-linear-gradient(top, rgba(143,185,59,1) 5%,rgba(110,140,49,1) 95%);background: -ms-linear-gradient(top, rgba(143,185,59,1) 5%,rgba(110,140,49,1) 95%);background: linear-gradient(to bottom, rgba(143,185,59,1) 5%,rgba(110,140,49,1) 95%);	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(143,185,59,1)), color-stop(95%,rgba(110,140,49,1)));background: -moz-linear-gradient( top, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);background: -webkit-linear-gradient( top, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);background: -o-linear-gradient( top, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);background: -ms-linear-gradient( top, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);background: linear-gradient( to bottom, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
 	filter: none;
 }
 .playerAvatar.in-game img,
 .friend_status_in-game .friend_block_avatar img,
 .appHubIconHolder.in-game img,
 .avatar_block_status_in-game img {
-	background: -moz-linear-gradient(top, #66812e 5%, #59702b 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66812e), color-stop(95%,#59702b));background: -webkit-linear-gradient(top, #66812e 5%,#59702b 95%);background: -o-linear-gradient(top, #66812e 5%,#59702b 95%);background: -ms-linear-gradient(top, #66812e 5%,#59702b 95%);background: linear-gradient(to bottom, #66812e 5%,#59702b 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66812e', endColorstr='#59702b',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66812e), color-stop(95%,#59702b));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66812e', endColorstr='#59702b',GradientType=0 );background: -moz-linear-gradient( top, #66812e 5%, #59702b 95%);background: -webkit-linear-gradient( top, #66812e 5%, #59702b 95%);background: -o-linear-gradient( top, #66812e 5%, #59702b 95%);background: -ms-linear-gradient( top, #66812e 5%, #59702b 95%);background: linear-gradient( to bottom, #66812e 5%, #59702b 95%);}
+
+
+/* Golden State */
+.playerAvatar.golden,
+.friend_block_holder.friend_status_golden .friend_block_avatar,
+.friend_activity.friend_status_golden .friend_block_avatar,
+.appHubIconHolder.golden,
+.avatar_block_status_golden {
+	background-color: #e4ca63;
+
+	background: -moz-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -webkit-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -o-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -ms-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);}
+/*
+.playerAvatar.golden img,
+.friend_status_golden .friend_block_avatar img,
+.appHubIconHolder.golden img,
+.avatar_block_status_golden img {
+	background-color: #e4ca63
+	background: -moz-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -webkit-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -o-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -ms-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);}
+*/
 
 .playerAvatar.ignored {
 }
@@ -133,7 +152,10 @@
 	color:#90ba3c;
 }
 
-
+.persona.golden, a.persona.golden, .persona.golden a,
+.friend_status_golden, .friend_status_golden div, .friend_status_golden a {
+	color:#e4ca63;
+}
 
 .miniprofile_hover {
 	position: absolute;
@@ -157,7 +179,7 @@
 .miniprofile_top {
 	border: 1px solid #333538;
 	padding: 7px 8px;
-background: -moz-linear-gradient(top, #33425a 5%, #282f3d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#33425a), color-stop(95%,#282f3d));background: -webkit-linear-gradient(top, #33425a 5%,#282f3d 95%);background: -o-linear-gradient(top, #33425a 5%,#282f3d 95%);background: -ms-linear-gradient(top, #33425a 5%,#282f3d 95%);background: linear-gradient(to bottom, #33425a 5%,#282f3d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33425a', endColorstr='#282f3d',GradientType=0 );;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#33425a), color-stop(95%,#282f3d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33425a', endColorstr='#282f3d',GradientType=0 );background: -moz-linear-gradient( top, #33425a 5%, #282f3d 95%);background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);background: -o-linear-gradient( top, #33425a 5%, #282f3d 95%);background: -ms-linear-gradient( top, #33425a 5%, #282f3d 95%);background: linear-gradient( to bottom, #33425a 5%, #282f3d 95%);;
 }
 
 .miniprofile_player {
@@ -222,7 +244,7 @@ background: -moz-linear-gradient(top, #33425a 5%, #282f3d 95%);background: -webk
 	height: 45px;
 	position: relative;
 
-background: -moz-linear-gradient(top, #525151 5%, #292827 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#525151), color-stop(95%,#292827));background: -webkit-linear-gradient(top, #525151 5%,#292827 95%);background: -o-linear-gradient(top, #525151 5%,#292827 95%);background: -ms-linear-gradient(top, #525151 5%,#292827 95%);background: linear-gradient(to bottom, #525151 5%,#292827 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525151', endColorstr='#292827',GradientType=0 );}
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#525151), color-stop(95%,#292827));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525151', endColorstr='#292827',GradientType=0 );background: -moz-linear-gradient( top, #525151 5%, #292827 95%);background: -webkit-linear-gradient( top, #525151 5%, #292827 95%);background: -o-linear-gradient( top, #525151 5%, #292827 95%);background: -ms-linear-gradient( top, #525151 5%, #292827 95%);background: linear-gradient( to bottom, #525151 5%, #292827 95%);}
 
 .miniprofile_ingame .game_logo {
 	position: absolute;
@@ -555,7 +577,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 .newmodal_header_border {
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
-	background: -moz-linear-gradient(top, #797272 5%, #2e2e2e 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#797272), color-stop(95%,#2e2e2e));background: -webkit-linear-gradient(top, #797272 5%,#2e2e2e 95%);background: -o-linear-gradient(top, #797272 5%,#2e2e2e 95%);background: -ms-linear-gradient(top, #797272 5%,#2e2e2e 95%);background: linear-gradient(to bottom, #797272 5%,#2e2e2e 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#797272', endColorstr='#2e2e2e',GradientType=0 );	padding: 1px 1px 0 1px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#797272), color-stop(95%,#2e2e2e));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#797272', endColorstr='#2e2e2e',GradientType=0 );background: -moz-linear-gradient( top, #797272 5%, #2e2e2e 95%);background: -webkit-linear-gradient( top, #797272 5%, #2e2e2e 95%);background: -o-linear-gradient( top, #797272 5%, #2e2e2e 95%);background: -ms-linear-gradient( top, #797272 5%, #2e2e2e 95%);background: linear-gradient( to bottom, #797272 5%, #2e2e2e 95%);	padding: 1px 1px 0 1px;
 	border-bottom: 1px solid #4a4943;
 }
 
@@ -571,7 +593,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	background-color: #393937;
-	background: -moz-linear-gradient(top, #484846 5%, #272626 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484846), color-stop(95%,#272626));background: -webkit-linear-gradient(top, #484846 5%,#272626 95%);background: -o-linear-gradient(top, #484846 5%,#272626 95%);background: -ms-linear-gradient(top, #484846 5%,#272626 95%);background: linear-gradient(to bottom, #484846 5%,#272626 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484846', endColorstr='#272626',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484846), color-stop(95%,#272626));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484846', endColorstr='#272626',GradientType=0 );background: -moz-linear-gradient( top, #484846 5%, #272626 95%);background: -webkit-linear-gradient( top, #484846 5%, #272626 95%);background: -o-linear-gradient( top, #484846 5%, #272626 95%);background: -ms-linear-gradient( top, #484846 5%, #272626 95%);background: linear-gradient( to bottom, #484846 5%, #272626 95%);}
 
 .newmodal_close {
 	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVBREZBRDlBNzdCNzExRTI5ODAzRUE3MDU0Mzk5MjM5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVBREZBRDlCNzdCNzExRTI5ODAzRUE3MDU0Mzk5MjM5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUFERkFEOTg3N0I3MTFFMjk4MDNFQTcwNTQzOTkyMzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NUFERkFEOTk3N0I3MTFFMjk4MDNFQTcwNTQzOTkyMzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4iulRzAAABPElEQVR42mI8cuQIAyWABUqbAXEylH0fiDtwqI8FYhsoewEQH4cZcBaI64DYG8p/AVWADDyAeD4QMwPxJiA+BRJkgkr+BeJoIL4D5U8DYi0kzepAvAKq+TJU7V9kA0DgIxD7Q2lOIF4NpfmBeAuUfg3EPkD8BaaJCc2Z14A4EcoGuWAC1NkqQPwLqvkRsgYmLAG1HoiboOw0IA6EshNh/iZkAAjUA/FBJP5KIF6GTSEuAwygUQsDflAxogwQAuJ10AAExcpNKHsjEIsSMoAZGl2K0EALBeIIKFsOKSpxGtACxK5Qdi4QX4DiAqiYExB34TIgBIgrkAJtFpLcdKgYCBQBcRRMghGamUBxfhKIeaB+NkFOLFAAkjsDTZXfgdgK5DpYXvBGiqYpWDQzQMVAYZKDlDcuMFKanQECDAAqw0LA+GRiqAAAAABJRU5ErkJggg== );
@@ -591,12 +613,12 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 }
 
 .newmodal_content_border {
-	background: -moz-linear-gradient(top, #4c4c4c 5%, #4a6279 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#4c4c4c), color-stop(95%,#4a6279));background: -webkit-linear-gradient(top, #4c4c4c 5%,#4a6279 95%);background: -o-linear-gradient(top, #4c4c4c 5%,#4a6279 95%);background: -ms-linear-gradient(top, #4c4c4c 5%,#4a6279 95%);background: linear-gradient(to bottom, #4c4c4c 5%,#4a6279 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#4a6279',GradientType=0 );	background-color: #4c4c4c;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#4c4c4c), color-stop(95%,#4a6279));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#4a6279',GradientType=0 );background: -moz-linear-gradient( top, #4c4c4c 5%, #4a6279 95%);background: -webkit-linear-gradient( top, #4c4c4c 5%, #4a6279 95%);background: -o-linear-gradient( top, #4c4c4c 5%, #4a6279 95%);background: -ms-linear-gradient( top, #4c4c4c 5%, #4a6279 95%);background: linear-gradient( to bottom, #4c4c4c 5%, #4a6279 95%);	background-color: #4c4c4c;
 	padding: 0 1px 1px 1px;
 }
 
 .newmodal_content {
-	background: -moz-linear-gradient(top, #252b33 5%, #1d1d1d 25%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#252b33), color-stop(25%,#1d1d1d));background: -webkit-linear-gradient(top, #252b33 5%,#1d1d1d 25%);background: -o-linear-gradient(top, #252b33 5%,#1d1d1d 25%);background: -ms-linear-gradient(top, #252b33 5%,#1d1d1d 25%);background: linear-gradient(to bottom, #252b33 5%,#1d1d1d 25%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252b33', endColorstr='#1d1d1d',GradientType=0 );	background-color: #1d1d1d;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#252b33), color-stop(25%,#1d1d1d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252b33', endColorstr='#1d1d1d',GradientType=0 );background: -moz-linear-gradient( top, #252b33 5%, #1d1d1d 25%);background: -webkit-linear-gradient( top, #252b33 5%, #1d1d1d 25%);background: -o-linear-gradient( top, #252b33 5%, #1d1d1d 25%);background: -ms-linear-gradient( top, #252b33 5%, #1d1d1d 25%);background: linear-gradient( to bottom, #252b33 5%, #1d1d1d 25%);	background-color: #1d1d1d;
 
 	overflow: auto;
 	word-wrap: break-word;

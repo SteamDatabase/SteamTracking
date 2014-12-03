@@ -45,7 +45,7 @@
 {
 	padding: 10px;
 	background-color: #353535;
-	background: -moz-linear-gradient(top, #363636 91%, #303030 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(91%,#363636), color-stop(95%,#303030));background: -webkit-linear-gradient(top, #363636 91%,#303030 95%);background: -o-linear-gradient(top, #363636 91%,#303030 95%);background: -ms-linear-gradient(top, #363636 91%,#303030 95%);background: linear-gradient(to bottom, #363636 91%,#303030 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#303030',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(91%,#363636), color-stop(95%,#303030));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#303030',GradientType=0 );background: -moz-linear-gradient( top, #363636 91%, #303030 95%);background: -webkit-linear-gradient( top, #363636 91%, #303030 95%);background: -o-linear-gradient( top, #363636 91%, #303030 95%);background: -ms-linear-gradient( top, #363636 91%, #303030 95%);background: linear-gradient( to bottom, #363636 91%, #303030 95%);}
 
 .browseAppsTitle
 {
@@ -181,7 +181,7 @@ input.searchAppsInput
 .workshopAppsRow {
 	margin: 10px 0px;
 	border-bottom: 1px solid #828282;
-	background: -moz-linear-gradient(top, rgba(102,102,102,0) 5%, rgba(38,38,39,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,102,102,0)), color-stop(95%,rgba(38,38,39,1)));background: -webkit-linear-gradient(top, rgba(102,102,102,0) 5%,rgba(38,38,39,1) 95%);background: -o-linear-gradient(top, rgba(102,102,102,0) 5%,rgba(38,38,39,1) 95%);background: -ms-linear-gradient(top, rgba(102,102,102,0) 5%,rgba(38,38,39,1) 95%);background: linear-gradient(to bottom, rgba(102,102,102,0) 5%,rgba(38,38,39,1) 95%);}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,102,102,0)), color-stop(95%,rgba(38,38,39,1)));background: -moz-linear-gradient( top, rgba(102,102,102,0) 5%, rgba(38,38,39,1) 95%);background: -webkit-linear-gradient( top, rgba(102,102,102,0) 5%, rgba(38,38,39,1) 95%);background: -o-linear-gradient( top, rgba(102,102,102,0) 5%, rgba(38,38,39,1) 95%);background: -ms-linear-gradient( top, rgba(102,102,102,0) 5%, rgba(38,38,39,1) 95%);background: linear-gradient( to bottom, rgba(102,102,102,0) 5%, rgba(38,38,39,1) 95%);}
 
 
 
