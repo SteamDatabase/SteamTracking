@@ -453,6 +453,9 @@ body.v6 .auth_button h3, body.v6 .twofactorauth_button h3 {
 	color: #66C0F4;
 	text-transform: none;
 }
+.twofactorauth_button h5, .twofactorauth_button h3 {
+	margin-left: 16px;
+}
 body.v6 .auth_button:hover h3,
 body.v6 .twofactorauth_button:hover h3,
 body.v6 .auth_button:hover h5,
