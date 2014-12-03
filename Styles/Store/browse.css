@@ -305,7 +305,7 @@ a.linkbar .rightblock {
 
 .pagebtn:hover, a.pagebtn:hover {
 	background-color: #97C0E3;
-	background: -moz-linear-gradient(left, #417a9b 5%, #67c1f5 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b), color-stop(95%,#67c1f5));background: -webkit-linear-gradient(left, #417a9b 5%,#67c1f5 95%);background: -o-linear-gradient(left, #417a9b 5%,#67c1f5 95%);background: -ms-linear-gradient(left, #417a9b 5%,#67c1f5 95%);background: linear-gradient(to right, #417a9b 5%,#67c1f5 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#417a9b', endColorstr='#67c1f5',GradientType=1 );	color: #ffffff;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b), color-stop(95%,#67c1f5));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#417a9b', endColorstr='#67c1f5',GradientType=1 );background: -moz-linear-gradient( left, #417a9b 5%,#67c1f5 95%);background: -webkit-linear-gradient( left, #417a9b 5%,#67c1f5 95%);background: -o-linear-gradient( left, #417a9b 5%,#67c1f5 95%);background: -ms-linear-gradient( left, #417a9b 5%,#67c1f5 95%);background: linear-gradient( to right, #417a9b 5%,#67c1f5 95%);	color: #ffffff;
 	text-decoration: none;
 }
 

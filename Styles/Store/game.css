@@ -1454,7 +1454,7 @@ a.friend_block_holder:hover {
 }
 
 .got_steam_ctn {
-	background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);	padding: 3px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -moz-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -o-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);	padding: 3px;
 	width:650px;
 }
 .got_steam_box {
@@ -1498,13 +1498,13 @@ a.friend_block_holder:hover {
 
 	.gotsteam_buttons a.btn_blue {
 		float: left;
-		background: -moz-linear-gradient(top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -webkit-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -o-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: linear-gradient(to bottom, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);		width: 271px;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -moz-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -o-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: linear-gradient( to bottom, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);		width: 271px;
 		padding: 12px 12px 15px 12px;
 		border-radius: 2px;
 	}
 
 	.gotsteam_buttons a.btn_blue:hover {
-		background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);	}
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -moz-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -o-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);	}
 
 	.gotsteam_buttons a.btn_blue.leftbtn {
 		margin-right: 16px;
@@ -3339,7 +3339,7 @@ select.gray_bevel {
 	padding: 10px;
 	border-radius: 3px;
 
-background: -moz-linear-gradient(135deg, #356480 5%, #1a303d 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480), color-stop(95%,#1a303d));background: -webkit-linear-gradient(135deg, #356480 5%,#1a303d 95%);background: -o-linear-gradient(135deg, #356480 5%,#1a303d 95%);background: -ms-linear-gradient(135deg, #356480 5%,#1a303d 95%);background: linear-gradient(135deg, #356480 5%,#1a303d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#356480', endColorstr='#1a303d',GradientType=1 );}
+background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480), color-stop(95%,#1a303d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#356480', endColorstr='#1a303d',GradientType=1 );background: -moz-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: -webkit-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: -o-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: -ms-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: linear-gradient( 135deg, #356480 5%,#1a303d 95%););}
 
 .screenshot_popup_modal_title {
 	height: 20px;
@@ -3388,7 +3388,7 @@ background: -moz-linear-gradient(135deg, #356480 5%, #1a303d 95%);background: -w
 	padding-top: 8px;
 	padding-left: 5px;
 	margin-bottom: 15px;
-	background: -moz-linear-gradient(left, rgba(58,110,139,0.2) 0%, rgba(58,110,139,0) 100%);background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(58,110,139,0.2)), color-stop(100%,rgba(58,110,139,0)));background: -webkit-linear-gradient(left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: -o-linear-gradient(left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: -ms-linear-gradient(left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: linear-gradient(to right, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);}
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(58,110,139,0.2)), color-stop(100%,rgba(58,110,139,0)));background: -moz-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: -o-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: -ms-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: linear-gradient( to right, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);}
 
 
 .sysreq_tab {

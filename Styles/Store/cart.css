@@ -83,7 +83,7 @@ body.v6.login .rightcol .spotlight_block {
 }
 
 .checkout_error {
-	background: -moz-linear-gradient(left, rgba(162,77,0,1) 5%, rgba(255,123,0,1) 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(162,77,0,1)), color-stop(95%,rgba(255,123,0,1)));background: -webkit-linear-gradient(left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -o-linear-gradient(left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -ms-linear-gradient(left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: linear-gradient(to right, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);	color: #D5D6D8;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(162,77,0,1)), color-stop(95%,rgba(255,123,0,1)));background: -moz-linear-gradient( left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -webkit-linear-gradient( left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -o-linear-gradient( left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -ms-linear-gradient( left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: linear-gradient( to right, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);	color: #D5D6D8;
 	margin: 15px 0px 15px 0px;
 	padding: 11px 15px;
 	padding-left: 19px;
@@ -325,12 +325,11 @@ body.v6.login .rightcol .spotlight_block {
 	color: #626366;
 }
 
-.checkout_review_item_desc_ext b, .review_notice b {
-	color: #ff7b00;
-	font-size: 22px;
+.checkout_review_item_desc_ext b, .review_notice b, .review_notice {
+	color: #ffcc6a;
 	font-weight: normal;
-	vertical-align: middle;
 }
+
 
 .checkout_review_hit_min_provider_amount {
 	color: #c6d4df;
@@ -345,6 +344,8 @@ body.v6.login .rightcol .spotlight_block {
 .duplicate_app_list {
 	list-style-position: inside;
 	list-style-type: square;
+	margin-top: 4px;
+	margin-left: 8px;
 }
 
 .checkout_review_item_price {
@@ -388,9 +389,6 @@ body.v6.login .rightcol .spotlight_block {
 	color: #C6D4DF;
 }
 
-.review_notice {
-	color: #cdcac1;
-}
 
 #purchase_bottom_note_paypalgc {
 	margin-top: 9px;
@@ -610,6 +608,9 @@ body.v6.login .rightcol .spotlight_block {
 	min-height: 77px;
 	line-height: 16px;
 }
+.cart_item .package_contents {
+	padding-left: 12px;
+}
 .cart_item_img {
 	position: absolute;
 	top: 16px;
@@ -624,13 +625,19 @@ body.v6.login .rightcol .spotlight_block {
 }
 
 .cart_item_desc_ext {
-	color: #ff9900;
+	color: #ffcc6a;
 }
 
 .cart_bodycopy_highlight {
-	color: #ff9900;
+	color: #ffcc6a;
 	padding-right: 5px;
 	font-size: 16px;
+	float:left;
+	width: 20px;
+}
+.cart_bodycopy_highlight_desc {
+	float:left;
+	width: 547px;
 }
 
 .cart_item_desc .cart_item_platform {
@@ -911,8 +918,15 @@ body.v6.login .rightcol .spotlight_block {
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 .checkout_content .cart_bodycopy.highlight {
-	color: #E0B11D;
+	color: #ffcc6a;
 }
+.checkout_content .cart_bodycopy.highlight a {
+	color: #ffd797;
+}
+.checkout_content .cart_bodycopy.highlight a:hover {
+	color: #ffffff;
+}
+
 
 label.send_choice_txt {
 	font-size: 18px;
@@ -1101,6 +1115,15 @@ label.send_choice_txt {
 	margin-top:5px;
 	margin-bottom: 12px;
 	clear: both;
+}
+
+.checkout_tab .form_row_sizable, .checkout_tab .form_row#payment_row_save_my_address {
+	margin-top: 50px;
+}
+
+.checkout_tab .form_row_sizable, .checkout_tab #youll_get_to_review {
+	padding: 8px;
+	background: rgba( 0, 0, 0, 0.2 );
 }
 
 .checkout_tab .form_row
@@ -1789,19 +1812,20 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 	margin-right: 10px;
 }
 
-.purchase_summary_area {
+.purchase_summary_area,
+.add_free_content_success_area {
 	background: rgba( 0, 0, 0, 0.2 );
 	padding: 16px;
 }
 #btn_remote_install {
 	float: left;
-	background: -moz-linear-gradient(top, rgba(121,153,5,0.8) 5%, rgba(83,105,4,0.8) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(121,153,5,0.8)), color-stop(95%,rgba(83,105,4,0.8)));background: -webkit-linear-gradient(top, rgba(121,153,5,0.8) 5%,rgba(83,105,4,0.8) 95%);background: -o-linear-gradient(top, rgba(121,153,5,0.8) 5%,rgba(83,105,4,0.8) 95%);background: -ms-linear-gradient(top, rgba(121,153,5,0.8) 5%,rgba(83,105,4,0.8) 95%);background: linear-gradient(to bottom, rgba(121,153,5,0.8) 5%,rgba(83,105,4,0.8) 95%);	width: 271px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(121,153,5,0.8)), color-stop(95%,rgba(83,105,4,0.8)));background: -moz-linear-gradient( top, rgba(121,153,5,0.8) 5%, rgba(83,105,4,0.8) 95%);background: -webkit-linear-gradient( top, rgba(121,153,5,0.8) 5%, rgba(83,105,4,0.8) 95%);background: -o-linear-gradient( top, rgba(121,153,5,0.8) 5%, rgba(83,105,4,0.8) 95%);background: -ms-linear-gradient( top, rgba(121,153,5,0.8) 5%, rgba(83,105,4,0.8) 95%);background: linear-gradient( to bottom, rgba(121,153,5,0.8) 5%, rgba(83,105,4,0.8) 95%);	width: 271px;
 	padding: 12px 12px 15px 12px;
 	border-radius: 2px;
 	text-decoration: none;
 }
 #btn_remote_install:hover {
-	background: -moz-linear-gradient(top, rgba(164,208,7,1) 5%, rgba(107,135,5,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(164,208,7,1)), color-stop(95%,rgba(107,135,5,1)));background: -webkit-linear-gradient(top, rgba(164,208,7,1) 5%,rgba(107,135,5,1) 95%);background: -o-linear-gradient(top, rgba(164,208,7,1) 5%,rgba(107,135,5,1) 95%);background: -ms-linear-gradient(top, rgba(164,208,7,1) 5%,rgba(107,135,5,1) 95%);background: linear-gradient(to bottom, rgba(164,208,7,1) 5%,rgba(107,135,5,1) 95%);	color: #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(164,208,7,1)), color-stop(95%,rgba(107,135,5,1)));background: -moz-linear-gradient( top, rgba(164,208,7,1) 5%, rgba(107,135,5,1) 95%);background: -webkit-linear-gradient( top, rgba(164,208,7,1) 5%, rgba(107,135,5,1) 95%);background: -o-linear-gradient( top, rgba(164,208,7,1) 5%, rgba(107,135,5,1) 95%);background: -ms-linear-gradient( top, rgba(164,208,7,1) 5%, rgba(107,135,5,1) 95%);background: linear-gradient( to bottom, rgba(164,208,7,1) 5%, rgba(107,135,5,1) 95%);	color: #ffffff;
 }
 .checkout_gotsteam_area,
 .receipt_body,
@@ -1840,7 +1864,7 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 }
 .checkout_gotsteam_area a.btn_blue {
 	float: left;
-	background: -moz-linear-gradient(top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -webkit-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -o-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);background: linear-gradient(to bottom, rgba(102,192,244,0.2) 5%,rgba(47,137,188,0.2) 95%);	width: 260px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,0.2)), color-stop(95%,rgba(47,137,188,0.2)));background: -moz-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -o-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: linear-gradient( to bottom, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);	width: 260px;
 	padding: 12px 12px 15px 12px;
 	border-radius: 2px;
 	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
@@ -1850,4 +1874,4 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 	margin-right: 16px;
 }
 .checkout_gotsteam_area a.btn_blue:hover {
-	background: -moz-linear-gradient(top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -webkit-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -o-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: -ms-linear-gradient(top, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);background: linear-gradient(to bottom, rgba(102,192,244,1) 5%,rgba(47,137,188,1) 95%);}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -moz-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -o-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);}

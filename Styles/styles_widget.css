@@ -95,7 +95,7 @@ a, a:hover {
 	padding: 5px 10px;
 	color: #8bc53f;
 	border: 1px solid #576922;
-background: -moz-linear-gradient(top, #384416 5%, #272f0f 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#384416), color-stop(95%,#272f0f));background: -webkit-linear-gradient(top, #384416 5%,#272f0f 95%);background: -o-linear-gradient(top, #384416 5%,#272f0f 95%);background: -ms-linear-gradient(top, #384416 5%,#272f0f 95%);background: linear-gradient(to bottom, #384416 5%,#272f0f 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#384416', endColorstr='#272f0f',GradientType=0 );	height: auto;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#384416), color-stop(95%,#272f0f));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#384416', endColorstr='#272f0f',GradientType=0 );background: -moz-linear-gradient( top, #384416 5%, #272f0f 95%);background: -webkit-linear-gradient( top, #384416 5%, #272f0f 95%);background: -o-linear-gradient( top, #384416 5%, #272f0f 95%);background: -ms-linear-gradient( top, #384416 5%, #272f0f 95%);background: linear-gradient( to bottom, #384416 5%, #272f0f 95%);	height: auto;
 }
 
 #widget .game_purchase_action_bg.coming_soon  h1 {
