@@ -101,7 +101,7 @@
 	padding-bottom: 10px;
 	height: 25px;
 	padding-left: 20px;
-	background: -moz-linear-gradient(left, rgba( 43, 60, 85, 0.8 ) 5%, rgba( 42, 63, 95, 0.2 ) 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba( 43, 60, 85, 0.8 )), color-stop(95%,rgba( 42, 63, 95, 0.2 )));background: -webkit-linear-gradient(left, rgba( 43, 60, 85, 0.8 ) 5%,rgba( 42, 63, 95, 0.2 ) 95%);background: -o-linear-gradient(left, rgba( 43, 60, 85, 0.8 ) 5%,rgba( 42, 63, 95, 0.2 ) 95%);background: -ms-linear-gradient(left, rgba( 43, 60, 85, 0.8 ) 5%,rgba( 42, 63, 95, 0.2 ) 95%);background: linear-gradient(to right, rgba( 43, 60, 85, 0.8 ) 5%,rgba( 42, 63, 95, 0.2 ) 95%);	text-align: left;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba( 43, 60, 85, 0.8 )), color-stop(95%,rgba( 42, 63, 95, 0.2 )));background: -moz-linear-gradient( left, rgba( 43, 60, 85, 0.8 ) 5%,rgba( 42, 63, 95, 0.2 ) 95%);background: -webkit-linear-gradient( left, rgba( 43, 60, 85, 0.8 ) 5%,rgba( 42, 63, 95, 0.2 ) 95%);background: -o-linear-gradient( left, rgba( 43, 60, 85, 0.8 ) 5%,rgba( 42, 63, 95, 0.2 ) 95%);background: -ms-linear-gradient( left, rgba( 43, 60, 85, 0.8 ) 5%,rgba( 42, 63, 95, 0.2 ) 95%);background: linear-gradient( to right, rgba( 43, 60, 85, 0.8 ) 5%,rgba( 42, 63, 95, 0.2 ) 95%);	text-align: left;
 }
 .workshop_browse_tab
 {

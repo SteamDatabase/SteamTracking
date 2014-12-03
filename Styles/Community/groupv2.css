@@ -238,7 +238,7 @@ a.group_tab:hover {
 	text-align: center;
 	padding: 20px 0px 20px 0px;
 	color: #5089bd;;
-	background: -moz-linear-gradient(top, #474745 5%, #39393a 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#474745), color-stop(95%,#39393a));background: -webkit-linear-gradient(top, #474745 5%,#39393a 95%);background: -o-linear-gradient(top, #474745 5%,#39393a 95%);background: -ms-linear-gradient(top, #474745 5%,#39393a 95%);background: linear-gradient(to bottom, #474745 5%,#39393a 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474745', endColorstr='#39393a',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#474745), color-stop(95%,#39393a));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474745', endColorstr='#39393a',GradientType=0 );background: -moz-linear-gradient( top, #474745 5%, #39393a 95%);background: -webkit-linear-gradient( top, #474745 5%, #39393a 95%);background: -o-linear-gradient( top, #474745 5%, #39393a 95%);background: -ms-linear-gradient( top, #474745 5%, #39393a 95%);background: linear-gradient( to bottom, #474745 5%, #39393a 95%);}
 
 .leftcol {
 	float: left;

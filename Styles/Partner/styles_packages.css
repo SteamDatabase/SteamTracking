@@ -216,3 +216,11 @@ span.CurrencyNotRequired {
 	color: #00adee;
 	padding-left: 3px;
 }
+
+.boxlist_item:not(.hidden) .boxlist_controls.hidden {
+	display: none;
+}
+
+.boxlist_item.hidden .boxlist_controls:not(.hidden), .boxlist_item.hidden .boxlist_content {
+	display: none;
+}

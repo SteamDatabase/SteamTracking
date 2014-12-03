@@ -258,14 +258,14 @@
 	margin-bottom: 8px;
 	float: left;
 	background: #464646; /* Old browsers */
-	background: -moz-linear-gradient(top, #363636 5%, #464646 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#363636), color-stop(95%,#464646));background: -webkit-linear-gradient(top, #363636 5%,#464646 95%);background: -o-linear-gradient(top, #363636 5%,#464646 95%);background: -ms-linear-gradient(top, #363636 5%,#464646 95%);background: linear-gradient(to bottom, #363636 5%,#464646 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#464646',GradientType=0 );	border: 1px solid #1C1D1D;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#363636), color-stop(95%,#464646));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#464646',GradientType=0 );background: -moz-linear-gradient( top, #363636 5%, #464646 95%);background: -webkit-linear-gradient( top, #363636 5%, #464646 95%);background: -o-linear-gradient( top, #363636 5%, #464646 95%);background: -ms-linear-gradient( top, #363636 5%, #464646 95%);background: linear-gradient( to bottom, #363636 5%, #464646 95%);	border: 1px solid #1C1D1D;
 	cursor: pointer;;
 }
 
 .guide_home_category_selection:hover
 {
 	background: #464646; /* Old browsers */
-	background: -moz-linear-gradient(top, #484848 5%, #5a5a5a 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#5a5a5a));background: -webkit-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: -o-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: -ms-linear-gradient(top, #484848 5%,#5a5a5a 95%);background: linear-gradient(to bottom, #484848 5%,#5a5a5a 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#5a5a5a',GradientType=0 );	border: 1px solid #5a5a5a;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#5a5a5a));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#5a5a5a',GradientType=0 );background: -moz-linear-gradient( top, #484848 5%, #5a5a5a 95%);background: -webkit-linear-gradient( top, #484848 5%, #5a5a5a 95%);background: -o-linear-gradient( top, #484848 5%, #5a5a5a 95%);background: -ms-linear-gradient( top, #484848 5%, #5a5a5a 95%);background: linear-gradient( to bottom, #484848 5%, #5a5a5a 95%);	border: 1px solid #5a5a5a;
 }
 
 .guide_home_category_selection .guide_category_icon

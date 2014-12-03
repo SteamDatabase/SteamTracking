@@ -32,6 +32,7 @@ CChatFriend.prototype.ReadPersonaFields = function( rgFriendData )
 
 
 	this.m_ePersonaState = rgFriendData.m_ePersonaState;
+	this.m_nPersonaStateFlags = rgFriendData.m_nPersonaStateFlags;
 	this.m_strAvatarHash = rgFriendData.m_strAvatarHash;
 	this.m_bInGame = rgFriendData.m_bInGame;
 	this.m_nInGameAppID = rgFriendData.m_nInGameAppID;
@@ -277,7 +278,7 @@ CChatFriend.prototype.GetOnlineState = function()
 		case 2:
 		case 5:
 		case 6:
-			if ( this.m_bInGame )
+						if ( this.m_bInGame )
 				return 'in-game';
 			else
 				return 'online';

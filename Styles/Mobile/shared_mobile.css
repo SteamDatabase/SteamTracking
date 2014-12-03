@@ -45,7 +45,7 @@ body.mobileBody {
 ------------------------- STYLE FOR HEADER AND FOOTER ---------------------------
 */
 
-#global_header {
+div#mobile_global_header {
 	height: 40px;
 	width: 100%;
 	background-image: -webkit-radial-gradient(50% 100%, 300px 80px, #283951 0%, #101010 100%);
@@ -97,12 +97,6 @@ div#secondary_header .content, div#secondary_header_title .content {
 	height: 40px;
 }
 
-#headerUserAvatarIcon {
-	width: 30px;
-	height: 30px;
-	border-radius: 4px;
-}
-
 #global_actions_avatar {
 	position: absolute;
 	right: 6px;
@@ -149,19 +143,19 @@ div#secondary_header .content, div#secondary_header_title .content {
 
 /* main nav */
 
-div#global_header .menuitemdiv {
+div#mobile_global_header .menuitemdiv {
 	font-size: 13px;
 	display: inline;
 	background-color: transparent;
 	position: relative;
 }
 
-div#global_header .menuitemdiv.menuitemdiv_login {
+div#mobile_global_header .menuitemdiv.menuitemdiv_login {
 	float: right;
 	margin-right: 10px;
 }
 
-div#global_header .menuitema {
+div#mobile_global_header .menuitema {
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 13px;
@@ -177,11 +171,11 @@ div#global_header .menuitema {
 	height: 100%;
 }
 
-div#global_header .menuitema.active {
+div#mobile_global_header .menuitema.active {
 	color: #FFFFFF;
 }
 
-div#global_header #background {
+div#mobile_global_header #background {
 	width: 100%;
 	height: 40px;
 	position: absolute;
@@ -190,7 +184,7 @@ div#global_header #background {
 	z-index: 0;
 }
 
-div#global_header #fullstretch {
+div#mobile_global_header #fullstretch {
 	width: 100%;
 	height: 40px;
 }
@@ -341,7 +335,7 @@ div#global_actions_pageoverlay .globaloverlayactionval {
 
 .tableViewTopShadow {
 	height: 15px;
-	background: -moz-linear-gradient(top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 0, 0, 0, 0.55)), color-stop(95%,rgba( 0, 0, 0, 0 )));background: -webkit-linear-gradient(top, rgba( 0, 0, 0, 0.55) 5%,rgba( 0, 0, 0, 0 ) 95%);background: -o-linear-gradient(top, rgba( 0, 0, 0, 0.55) 5%,rgba( 0, 0, 0, 0 ) 95%);background: -ms-linear-gradient(top, rgba( 0, 0, 0, 0.55) 5%,rgba( 0, 0, 0, 0 ) 95%);background: linear-gradient(to bottom, rgba( 0, 0, 0, 0.55) 5%,rgba( 0, 0, 0, 0 ) 95%);}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 0, 0, 0, 0.55)), color-stop(95%,rgba( 0, 0, 0, 0 )));background: -moz-linear-gradient( top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -webkit-linear-gradient( top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -o-linear-gradient( top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: -ms-linear-gradient( top, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.55) 5%, rgba( 0, 0, 0, 0 ) 95%);}
 
 .tableViewCell {
 	display: block;
@@ -458,16 +452,31 @@ div.smallCapIcon img {
 	height: 52px;
 }
 
+.itemBlockIcon .playerAvatar {
+	width: 50px;
+	height: 50px;
+}
+
+.itemBlockIcon .playerAvatar img {
+	width: 48px;
+	height: 48px;
+}
+
 .iconHolder {
 	width: 52px;
 	height: 52px;
 	position: relative;
 }
 
-.mobileHeaderIconHolder {
+.playerAvatar.mobileHeaderIconHolder {
 	width: 32px;
 	height: 32px;
 	position: relative;
+}
+
+.playerAvatar.mobileHeaderIconHolder img {
+	width: 30px;
+	height: 30px;
 }
 
 .iconHolder_in-game {
@@ -493,6 +502,11 @@ div.smallCapIcon img {
 .iconHolder_game {
 	background-color: #CFD2D4;
 	border-radius: 4px;
+}
+
+.iconHolder_golden {
+	background-color: #e4ca63;
+	background: -moz-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -webkit-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -o-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -ms-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);	border-radius: 4px;
 }
 
 div.avatarIcon {

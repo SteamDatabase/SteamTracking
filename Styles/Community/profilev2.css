@@ -197,21 +197,21 @@ div.profile_page.has_profile_background {
 	border: 1px solid #212121;
 
 	background: #373f4f; /* Old browsers */
-	background: -moz-linear-gradient(top, #7a8494 5%, #282f3d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7a8494), color-stop(95%,#282f3d));background: -webkit-linear-gradient(top, #7a8494 5%,#282f3d 95%);background: -o-linear-gradient(top, #7a8494 5%,#282f3d 95%);background: -ms-linear-gradient(top, #7a8494 5%,#282f3d 95%);background: linear-gradient(to bottom, #7a8494 5%,#282f3d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a8494', endColorstr='#282f3d',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7a8494), color-stop(95%,#282f3d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a8494', endColorstr='#282f3d',GradientType=0 );background: -moz-linear-gradient( top, #7a8494 5%, #282f3d 95%);background: -webkit-linear-gradient( top, #7a8494 5%, #282f3d 95%);background: -o-linear-gradient( top, #7a8494 5%, #282f3d 95%);background: -ms-linear-gradient( top, #7a8494 5%, #282f3d 95%);background: linear-gradient( to bottom, #7a8494 5%, #282f3d 95%);}
 .btn_profile_action > span {
 
 	border-radius: 2px;
 	display: block;
 	background: #2e394c; /* Old browsers */
-	background: -moz-linear-gradient(top, #33425a 5%, #282f3d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#33425a), color-stop(95%,#282f3d));background: -webkit-linear-gradient(top, #33425a 5%,#282f3d 95%);background: -o-linear-gradient(top, #33425a 5%,#282f3d 95%);background: -ms-linear-gradient(top, #33425a 5%,#282f3d 95%);background: linear-gradient(to bottom, #33425a 5%,#282f3d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33425a', endColorstr='#282f3d',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#33425a), color-stop(95%,#282f3d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33425a', endColorstr='#282f3d',GradientType=0 );background: -moz-linear-gradient( top, #33425a 5%, #282f3d 95%);background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);background: -o-linear-gradient( top, #33425a 5%, #282f3d 95%);background: -ms-linear-gradient( top, #33425a 5%, #282f3d 95%);background: linear-gradient( to bottom, #33425a 5%, #282f3d 95%);}
 .btn_profile_action:hover, .btn_profile_action.focus {
 	text-decoration: none;
 
 	background: #688bb1 ; /* Old browsers */
-background: -moz-linear-gradient(top, #9ba9bf 5%, #282f3d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#9ba9bf), color-stop(95%,#282f3d));background: -webkit-linear-gradient(top, #9ba9bf 5%,#282f3d 95%);background: -o-linear-gradient(top, #9ba9bf 5%,#282f3d 95%);background: -ms-linear-gradient(top, #9ba9bf 5%,#282f3d 95%);background: linear-gradient(to bottom, #9ba9bf 5%,#282f3d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ba9bf', endColorstr='#282f3d',GradientType=0 );}
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#9ba9bf), color-stop(95%,#282f3d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ba9bf', endColorstr='#282f3d',GradientType=0 );background: -moz-linear-gradient( top, #9ba9bf 5%, #282f3d 95%);background: -webkit-linear-gradient( top, #9ba9bf 5%, #282f3d 95%);background: -o-linear-gradient( top, #9ba9bf 5%, #282f3d 95%);background: -ms-linear-gradient( top, #9ba9bf 5%, #282f3d 95%);background: linear-gradient( to bottom, #9ba9bf 5%, #282f3d 95%);}
 .btn_profile_action:hover > span, .btn_profile_action.focus > span {
 	background: #526d95; /* Old browsers */
-background: -moz-linear-gradient(top, #3c597b 5%, #282f3d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3c597b), color-stop(95%,#282f3d));background: -webkit-linear-gradient(top, #3c597b 5%,#282f3d 95%);background: -o-linear-gradient(top, #3c597b 5%,#282f3d 95%);background: -ms-linear-gradient(top, #3c597b 5%,#282f3d 95%);background: linear-gradient(to bottom, #3c597b 5%,#282f3d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c597b', endColorstr='#282f3d',GradientType=0 );}
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3c597b), color-stop(95%,#282f3d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c597b', endColorstr='#282f3d',GradientType=0 );background: -moz-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: -webkit-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: -o-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: -ms-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: linear-gradient( to bottom, #3c597b 5%, #282f3d 95%);}
 
 #profile_action_dropdown {
 	white-space: nowrap;
@@ -759,7 +759,7 @@ img.workshop_showcase_item_image {
 	background-image: none;
 	background-color: #000000;
 
-	background: -moz-linear-gradient(left, #000000 5%, #282828 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,#000000), color-stop(95%,#282828));background: -webkit-linear-gradient(left, #000000 5%,#282828 95%);background: -o-linear-gradient(left, #000000 5%,#282828 95%);background: -ms-linear-gradient(left, #000000 5%,#282828 95%);background: linear-gradient(to right, #000000 5%,#282828 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#282828',GradientType=1 );}
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#000000), color-stop(95%,#282828));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#282828',GradientType=1 );background: -moz-linear-gradient( left, #000000 5%,#282828 95%);background: -webkit-linear-gradient( left, #000000 5%,#282828 95%);background: -o-linear-gradient( left, #000000 5%,#282828 95%);background: -ms-linear-gradient( left, #000000 5%,#282828 95%);background: linear-gradient( to right, #000000 5%,#282828 95%);}
 
 .myguide_showcase_item {
 	width: 280px;
@@ -910,7 +910,7 @@ img.workshop_showcase_item_image {
 	border-radius: 3px;
 
 	background-color: #88c743;
-	background: -moz-linear-gradient(top, #b0f951 5%, #88c743 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#b0f951), color-stop(95%,#88c743));background: -webkit-linear-gradient(top, #b0f951 5%,#88c743 95%);background: -o-linear-gradient(top, #b0f951 5%,#88c743 95%);background: -ms-linear-gradient(top, #b0f951 5%,#88c743 95%);background: linear-gradient(to bottom, #b0f951 5%,#88c743 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0f951', endColorstr='#88c743',GradientType=0 );
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#b0f951), color-stop(95%,#88c743));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0f951', endColorstr='#88c743',GradientType=0 );background: -moz-linear-gradient( top, #b0f951 5%, #88c743 95%);background: -webkit-linear-gradient( top, #b0f951 5%, #88c743 95%);background: -o-linear-gradient( top, #b0f951 5%, #88c743 95%);background: -ms-linear-gradient( top, #b0f951 5%, #88c743 95%);background: linear-gradient( to bottom, #b0f951 5%, #88c743 95%);
 }
 
 .recent_game_now_playing .content {
@@ -1004,7 +1004,7 @@ img.workshop_showcase_item_image {
 	background-color: #364359;
 	height: 8px;
 	border-radius: 4px;
-	background: -moz-linear-gradient(top, #516179 5%, #2a3547 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#516179), color-stop(95%,#2a3547));background: -webkit-linear-gradient(top, #516179 5%,#2a3547 95%);background: -o-linear-gradient(top, #516179 5%,#2a3547 95%);background: -ms-linear-gradient(top, #516179 5%,#2a3547 95%);background: linear-gradient(to bottom, #516179 5%,#2a3547 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#516179', endColorstr='#2a3547',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#516179), color-stop(95%,#2a3547));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#516179', endColorstr='#2a3547',GradientType=0 );background: -moz-linear-gradient( top, #516179 5%, #2a3547 95%);background: -webkit-linear-gradient( top, #516179 5%, #2a3547 95%);background: -o-linear-gradient( top, #516179 5%, #2a3547 95%);background: -ms-linear-gradient( top, #516179 5%, #2a3547 95%);background: linear-gradient( to bottom, #516179 5%, #2a3547 95%);}
 .game_info_achievements_only_ctn .achievement_icons {
 	position: absolute;
 	left: 366px;
@@ -1616,7 +1616,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .graytab.active {
 	background-color: #6a6a6a;
 	cursor: default;
-	background: -moz-linear-gradient(top, #7d7d7d 5%, #4d4d4d 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7d7d7d), color-stop(95%,#4d4d4d));background: -webkit-linear-gradient(top, #7d7d7d 5%,#4d4d4d 95%);background: -o-linear-gradient(top, #7d7d7d 5%,#4d4d4d 95%);background: -ms-linear-gradient(top, #7d7d7d 5%,#4d4d4d 95%);background: linear-gradient(to bottom, #7d7d7d 5%,#4d4d4d 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7d7d', endColorstr='#4d4d4d',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7d7d7d), color-stop(95%,#4d4d4d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7d7d', endColorstr='#4d4d4d',GradientType=0 );background: -moz-linear-gradient( top, #7d7d7d 5%, #4d4d4d 95%);background: -webkit-linear-gradient( top, #7d7d7d 5%, #4d4d4d 95%);background: -o-linear-gradient( top, #7d7d7d 5%, #4d4d4d 95%);background: -ms-linear-gradient( top, #7d7d7d 5%, #4d4d4d 95%);background: linear-gradient( to bottom, #7d7d7d 5%, #4d4d4d 95%);}
 
 a.graytab:hover {
 	text-decoration: none;
@@ -1630,13 +1630,13 @@ a.graytab:hover {
 	border-top-right-radius: 3px;
 
 	background-color: #272728;
-	background: -moz-linear-gradient(top, #4e4e4d 19px, #252526 45px);background: -webkit-gradient(linear, left top, left bottom, color-stop(19px,#4e4e4d), color-stop(45px,#252526));background: -webkit-linear-gradient(top, #4e4e4d 19px,#252526 45px);background: -o-linear-gradient(top, #4e4e4d 19px,#252526 45px);background: -ms-linear-gradient(top, #4e4e4d 19px,#252526 45px);background: linear-gradient(to bottom, #4e4e4d 19px,#252526 45px);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e4e4d', endColorstr='#252526',GradientType=0 );	background-repeat: repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(19px,#4e4e4d), color-stop(45px,#252526));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e4e4d', endColorstr='#252526',GradientType=0 );background: -moz-linear-gradient( top, #4e4e4d 19px, #252526 45px);background: -webkit-linear-gradient( top, #4e4e4d 19px, #252526 45px);background: -o-linear-gradient( top, #4e4e4d 19px, #252526 45px);background: -ms-linear-gradient( top, #4e4e4d 19px, #252526 45px);background: linear-gradient( to bottom, #4e4e4d 19px, #252526 45px);	background-repeat: repeat-x;
 	background-position: top;
 }
 
 .graytab_body {
 	background-color: #252526;
-	background: -moz-linear-gradient(top, #4f4f4e 0, #252526 42px);background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#4f4f4e), color-stop(42px,#252526));background: -webkit-linear-gradient(top, #4f4f4e 0,#252526 42px);background: -o-linear-gradient(top, #4f4f4e 0,#252526 42px);background: -ms-linear-gradient(top, #4f4f4e 0,#252526 42px);background: linear-gradient(to bottom, #4f4f4e 0,#252526 42px);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4e', endColorstr='#252526',GradientType=0 );	background-repeat: repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#4f4f4e), color-stop(42px,#252526));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4e', endColorstr='#252526',GradientType=0 );background: -moz-linear-gradient( top, #4f4f4e 0, #252526 42px);background: -webkit-linear-gradient( top, #4f4f4e 0, #252526 42px);background: -o-linear-gradient( top, #4f4f4e 0, #252526 42px);background: -ms-linear-gradient( top, #4f4f4e 0, #252526 42px);background: linear-gradient( to bottom, #4f4f4e 0, #252526 42px);	background-repeat: repeat-x;
 	background-position: top;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;

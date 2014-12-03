@@ -424,7 +424,7 @@ a.nohover, a.nohover:hover
 	min-width: 196px;
 	margin-right: 18px;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_tagstatus.gif' );
-	/*background: -moz-linear-gradient(top, #7095ca 5%, #4c6488 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7095ca), color-stop(95%,#4c6488));background: -webkit-linear-gradient(top, #7095ca 5%,#4c6488 95%);background: -o-linear-gradient(top, #7095ca 5%,#4c6488 95%);background: -ms-linear-gradient(top, #7095ca 5%,#4c6488 95%);background: linear-gradient(to bottom, #7095ca 5%,#4c6488 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7095ca', endColorstr='#4c6488',GradientType=0 );*/
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7095ca), color-stop(95%,#4c6488));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7095ca', endColorstr='#4c6488',GradientType=0 );background: -moz-linear-gradient( top, #7095ca 5%, #4c6488 95%);background: -webkit-linear-gradient( top, #7095ca 5%, #4c6488 95%);background: -o-linear-gradient( top, #7095ca 5%, #4c6488 95%);background: -ms-linear-gradient( top, #7095ca 5%, #4c6488 95%);background: linear-gradient( to bottom, #7095ca 5%, #4c6488 95%);*/
 	background-repeat:repeat-x;
 }
 

@@ -32,6 +32,11 @@ CBroadcastWatch.k_InClient = 2;
 CBroadcastWatch.k_InOverlay = 3;
 CBroadcastWatch.k_InOldClient = 4;
 
+CBroadcastWatch.prototype.GetBroadcastID = function()
+{
+	return this.m_ulBroadcastID;
+}
+
 CBroadcastWatch.prototype.ShowVideoError = function( strError )
 {
 	if ( $J( '#PageContents' ).hasClass( 'ShowPlayer' ) )
