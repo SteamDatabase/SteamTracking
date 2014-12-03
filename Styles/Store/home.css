@@ -565,7 +565,7 @@ a.home_smallcap:hover {
 	box-shadow: 0 0 12px #000000;
 
 	background: rgb(227,234,239); /* Old browsers */
-	background: -moz-linear-gradient(top, #e3eaef 5%, #c7d5e0 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#e3eaef), color-stop(95%,#c7d5e0));background: -webkit-linear-gradient(top, #e3eaef 5%,#c7d5e0 95%);background: -o-linear-gradient(top, #e3eaef 5%,#c7d5e0 95%);background: -ms-linear-gradient(top, #e3eaef 5%,#c7d5e0 95%);background: linear-gradient(to bottom, #e3eaef 5%,#c7d5e0 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3eaef', endColorstr='#c7d5e0',GradientType=0 );}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#e3eaef), color-stop(95%,#c7d5e0));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3eaef', endColorstr='#c7d5e0',GradientType=0 );background: -moz-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: -o-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: -ms-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);}
 
 .home_viewsettings_instructions {
 	margin-bottom: 12px;
@@ -930,7 +930,7 @@ a.curated_app_link img {
 	height: 341px;/*380px;*/
 	margin-bottom: 2px;
 	background-color: rgba( 0, 0, 0, 0.2 );
-	background: -moz-linear-gradient(left, rgba(0,0,0,0.2) 5%, rgba(0,0,0,0.4) 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -webkit-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient(to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);	padding: 16px;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -moz-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -webkit-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient( to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);	padding: 16px;
 
 	color: #8f98a0;
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
@@ -948,7 +948,7 @@ a.recommended_spotlight {
 }
 
 #home_recommended_more {
-	background: background: -moz-linear-gradient(left, rgba(0,0,0,0.2) 5%, rgba(0,0,0,0.4) 95%);background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -webkit-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient(left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient(to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);}
+	background: background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(0,0,0,0.2)), color-stop(95%,rgba(0,0,0,0.4)));background: -moz-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -webkit-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -o-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: -ms-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient( to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);}
 
 .recommended_spotlight_cap img {
 	width: 276px;
