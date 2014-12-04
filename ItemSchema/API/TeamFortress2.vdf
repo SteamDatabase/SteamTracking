@@ -54508,7 +54508,7 @@
 			"equip_regions"
 			{
 				"medic_hip"		"1"
-				"shirt"			"1"
+				"shirt"		"1"
 			}
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/medic/sf14_medic_herzensbrecher/sf14_medic_herzensbrecher"
@@ -54609,7 +54609,7 @@
 			"item_description"		"#TF_sf14_nugget_noggin_Desc"
 			"equip_regions"
 			{
-				"whole_head"	"1"
+				"whole_head"		"1"
 				"necklace"		"1"
 			}
 			"propername"		"1"
@@ -54688,7 +54688,7 @@
 			"item_description"		"#TF_sf14_scout_hunter_head_Desc"
 			"equip_regions"
 			{
-				"hat"			"1"
+				"hat"		"1"
 				"necklace"		"1"
 			}
 			"propername"		"1"
@@ -55058,7 +55058,7 @@
 			"equip_region"
 			{
 				"whole_head"		"1"
-				"shirt"				"1"
+				"shirt"		"1"
 			}
 			"propername"		"1"
 			"visuals"
@@ -55539,8 +55539,8 @@
 			"item_description"		"#TF_sf14_halloween_bone_cut_belt_Desc"
 			"equip_region"
 			{
-				"left_shoulder"			"1"
-				"shirt"					"1"
+				"left_shoulder"		"1"
+				"shirt"		"1"
 			}
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/heavy/sf14_halloween_bone_cut_belt/sf14_halloween_bone_cut_belt"
@@ -55668,6 +55668,149 @@
 			}
 		}
 		
+		"30563"
+		{
+			"name"		"Jungle Booty"
+			"prefab"		"promo misc"
+			"first_sale_date"		"2014/12/03"
+			"item_type_name"		"#TF_Wearable_Shorts"
+			"item_name"		"#TF_tr_jungle_booty"
+			"item_description"		"#TF_tr_jungle_booty_Desc"
+			"equip_region"		"pants"
+			"image_inventory"		"backpack/workshop/player/items/all_class/tr_jungle_booty/tr_jungle_booty"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/all_class/tr_jungle_booty/tr_jungle_booty_heavy.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30567"
+		{
+			"name"		"Crown of the Old Kingdom"
+			"prefab"		"promo hat"
+			"first_sale_date"		"2014/12/03"
+			"item_name"		"#TF_tr_crown_of_the_old_kingdom"
+			"item_description"		"#TF_tr_crown_of_the_old_kingdom_Desc"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/tr_crown_of_the_old_kingdom/tr_crown_of_the_old_kingdom_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30569"
+		{
+			"name"		"Tomb Readers"
+			"prefab"		"promo misc"
+			"first_sale_date"		"2014/12/03"
+			"item_type_name"		"#TF_Wearable_Glasses"
+			"item_name"		"#TF_tomb_readers"
+			"item_description"		"#TF_tomb_readers_Desc"
+			"equip_region"		"glasses"
+			"image_inventory"		"backpack/workshop/player/items/all_class/tomb_readers/tomb_readers"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/tomb_readers/tomb_readers_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/tomb_readers/tomb_readers_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/tomb_readers/tomb_readers_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/tomb_readers/tomb_readers_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/tomb_readers/tomb_readers_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/tomb_readers/tomb_readers_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/tomb_readers/tomb_readers_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/tomb_readers/tomb_readers_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/tomb_readers/tomb_readers_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30571"
+		{
+			"name"		"Brimstone"
+			"prefab"		"promo hat"
+			"first_sale_date"		"2014/12/03"
+			"item_name"		"#TF_brimstone_hat"
+			"item_description"		"#TF_brimstone_hat_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/brimstone_hat/brimstone_hat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/brimstone_hat/brimstone_hat_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/brimstone_hat/brimstone_hat_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/brimstone_hat/brimstone_hat_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/brimstone_hat/brimstone_hat_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/brimstone_hat/brimstone_hat_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/brimstone_hat/brimstone_hat_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/brimstone_hat/brimstone_hat_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/brimstone_hat/brimstone_hat_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/brimstone_hat/brimstone_hat_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
 
 
 
