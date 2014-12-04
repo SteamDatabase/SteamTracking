@@ -57,11 +57,11 @@ CBroadcastWatch.prototype.SetVideoLoadingText = function( strText )
 {
 	if ( $J( '#PageContents' ).hasClass( 'ShowPlayer' ) )
 	{
-		$J( '#VideoLoadingText' ).text( strText  );
+		$J( '#VideoLoadingText' ).html( strText  );
 	}
 	else
 	{
-		$J('#PageLoadingText').text( strText );
+		$J('#PageLoadingText').html( strText );
 	}
 }
 
@@ -135,7 +135,8 @@ CBroadcastWatch.prototype.OnPlayerDownloadFailed = function()
 
 CBroadcastWatch.prototype.AddBroadcasterName = function( str )
 {
-	return str.replace( /%s/, this.m_strBroadcastName );
+	var strEscaped = $J( '<span/>' ).text( this.m_strBroadcastName ).html();
+	return str.replace( /%s/, strEscaped );
 }
 
 function LocalizeCount( strSingular, strPlural, nValue )
