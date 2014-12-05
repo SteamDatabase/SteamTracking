@@ -108,6 +108,7 @@
 14CMsgNeedsPaint
 14CMsgOpenNewTab
 14CMsgStatusText
+14CMsgUnlockH264
 14CMsgURLChanged
 14CMsgViewSource
 14CServerBrowser
@@ -487,6 +488,7 @@ CMsgStartRequestResponse
 CMsgStatusText
 CMsgStopFind
 CMsgStopLoad
+CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgURLChanged
 CMsgVerticalScrollBarSize
@@ -1859,6 +1861,7 @@ unicode
 uninterpreted_option
 UninterpretedOption
 unknown
+unlock_code
 UnpinnedCornerOffsetX
 UnpinnedCornerOffsetY
 uparrow

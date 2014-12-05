@@ -5,16 +5,16 @@
 		"BroadcastDisabledLabel" { ControlName="Label" fieldName="BroadcastDisabledLabel" labelText="#Steam_Settings_Broadcast_Disabled_System" }
 		
 		"PermissionsHeader" { ControlName="Label" fieldName="PermissionsHeader" labelText="#Steam_Settings_Broadcast_PermissionsHeader" group="HideWhenDisabled" }
-		"Permissions" { ControlName="ComboBox" fieldName="Permissions" group="HideWhenDisabled" }			
+		"Permissions" { ControlName="ComboBox" fieldName="Permissions" group="HideWhenDisabled" editable="0" }			
 		
 		"DimensionsHeader" { ControlName="Label" fieldName="DimensionsHeader" labelText="#Steam_Settings_Broadcast_DimensionsHeader" group="HideWhenDisabled" }
-		"Dimensions" { ControlName="ComboBox" fieldName="Dimensions" group="HideWhenDisabled" }
+		"Dimensions" { ControlName="ComboBox" fieldName="Dimensions" group="HideWhenDisabled" editable="0" }
 		
 		"BitrateLimitHeader" { ControlName="Label" fieldName="BitrateLimitHeader" labelText="#Steam_Settings_Broadcast_BitrateHeader" group="HideWhenDisabled" }
-		"BitrateLimit" { ControlName="ComboBox" fieldName="BitrateLimit" group="HideWhenDisabled" }
+		"BitrateLimit" { ControlName="ComboBox" fieldName="BitrateLimit" group="HideWhenDisabled" editable="0" }
 		
 		"ShowChatHeader" { ControlName="Label" fieldName="ShowChatHeader" labelText="#Steam_Settings_Broadcast_ShowChat" group="HideWhenDisabled" }
-		"ShowChatCombo" { ControlName="ComboBox" fieldName="ShowChatCombo" group="HideWhenDisabled" }
+		"ShowChatCombo" { ControlName="ComboBox" fieldName="ShowChatCombo" group="HideWhenDisabled" editable="0" }
 		
 		"IncludeDesktop" { ControlName="CheckButton" fieldName="IncludeDesktop" group="HideWhenDisabled" }
 		"RecordMic" { ControlName="CheckButton" fieldName="RecordMic" group="HideWhenDisabled" }

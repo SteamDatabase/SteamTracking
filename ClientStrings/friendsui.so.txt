@@ -127,6 +127,7 @@
 14CMsgNeedsPaint
 14CMsgOpenNewTab
 14CMsgStatusText
+14CMsgUnlockH264
 14CMsgURLChanged
 14CMsgViewSource
 14ConCommandBase
@@ -1113,6 +1114,7 @@ CMsgStartRequestResponse
 CMsgStatusText
 CMsgStopFind
 CMsgStopLoad
+CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgURLChanged
 CMsgVerticalScrollBarSize
@@ -2268,6 +2270,7 @@ joint-iso-itu-t
 JOINT-ISO-ITU-T
 JPEGMEM
 _Jv_RegisterClasses
+KAut5
 KEY_0
 KEY_1
 KEY_2
@@ -4175,6 +4178,7 @@ uninterpreted_option
 UninterpretedOption
 uniqueMember
 unknown
+unlock_code
 UnpinnedCornerOffsetX
 UnpinnedCornerOffsetY
 unstructuredAddress

@@ -115,6 +115,7 @@
 14CMsgNeedsPaint
 14CMsgOpenNewTab
 14CMsgStatusText
+14CMsgUnlockH264
 14CMsgURLChanged
 14CMsgViewSource
 14CNewsItemPanel
@@ -347,6 +348,7 @@
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI14CParentalCache25ParentalLockChangeBegin_tLb0EE
+9CCallbackI16CSteamAuthedHTML18UnlockH264Result_tLb0EE
 9CCallbackI16CSteamAuthedHTML24WebAuthRequestCallback_tLb0EE
 9CCallbackI16CSteamAuthedHTML25LogOnCredentialsChanged_tLb0EE
 9CCallbackI16CSteamAuthedHTML25ParentalWebTokenChanged_tLb0EE
@@ -419,6 +421,7 @@
 9wttj
 9ZooDialog
 a2d_ASN1_OBJECT
+A890t
 aaControls
 ac-auditEntity
 Accel
@@ -1134,6 +1137,7 @@ CMsgStartRequestResponse
 CMsgStatusText
 CMsgStopFind
 CMsgStopLoad
+CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgURLChanged
 CMsgVerticalScrollBarSize
@@ -3217,6 +3221,7 @@ N10CBasePanel36CCallbackOnBroadcastShowFirstTimeDlgE
 N10CBasePanel38CCallbackOnAsyncNotificationsRequestedE
 N10CBasePanel39CCallbackOnGameOverlayActivateRequestedE
 N14CParentalCache34CCallbackOnParentalLockChangeBeginE
+N16CSteamAuthedHTML27CCallbackOnUnlockH264ResultE
 N16CSteamAuthedHTML29CCallbackOnCredentialsChangedE
 N16CSteamAuthedHTML30CCallbackOnWebAuthRequestAsyncE
 N16CSteamAuthedHTML34CCallbackOnParentalWebTokenChangedE
@@ -4508,6 +4513,7 @@ ShowMusicPlayerIfWanted
 ShowSettings
 showticks
 ShowTimeInChatLogCheck
+ShowUserProfile
 ShuffleButton
 signal
 SignatureVerificationFilterFlags
@@ -4916,6 +4922,7 @@ UninterpretedOption
 uniqueMember
 unknown
 Unknown
+unlock_code
 UnlockedGroupAchievement
 UnpinnedCornerOffsetX
 UnpinnedCornerOffsetY

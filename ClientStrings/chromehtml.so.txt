@@ -30,6 +30,7 @@
 14CMsgNeedsPaint
 14CMsgOpenNewTab
 14CMsgStatusText
+14CMsgUnlockH264
 14CMsgURLChanged
 14CMsgViewSource
 14CUtlMemoryBase
@@ -235,6 +236,7 @@ CMsgStartRequestResponse
 CMsgStatusText
 CMsgStopFind
 CMsgStopLoad
+CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgURLChanged
 CMsgVerticalScrollBarSize
@@ -584,6 +586,7 @@ stderr
 SteamChrome_MasterStream
 SteamChrome_MasterStream_Event
 SteamRealPath
+STEAMVIDEOTOKEN
 steamwebhelper
 strcasecmp
 strcasestr
@@ -647,6 +650,7 @@ unichar
 uninterpreted_option
 UninterpretedOption
 unknown
+unlock_code
 updatetall
 updatewide
 updatex

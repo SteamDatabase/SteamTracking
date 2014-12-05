@@ -820,6 +820,7 @@
 14CMsgNeedsPaint
 14CMsgOpenNewTab
 14CMsgStatusText
+14CMsgUnlockH264
 14CMsgURLChanged
 14CMsgViewSource
 14CNetConnection
@@ -5372,6 +5373,7 @@ CMsgStopFind
 CMsgStopLoad
 CMsgTrading_CancelTradeRequest
 CMsgTrading_StartSession
+CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgURLChanged
 CMsgVerticalScrollBarSize
@@ -17095,6 +17097,7 @@ SteamUtils005
 SteamUtils006
 SteamUtils007
 STEAMVIDEO_INTERFACE_V001
+STEAMVIDEOTOKEN
 SteamVRSupport
 steamwebhelper
 stick
@@ -17784,6 +17787,7 @@ unknown_conn_pkts_recv
 unknown_packageids
 unlink
 UnloadModule
+unlock_code
 UnlockedGroupAchievement
 UnlockedH264Feature
 UnlockH264

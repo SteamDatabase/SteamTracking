@@ -434,6 +434,7 @@
 14CMsgOpenNewTab
 14CMsgStatusText
 14CMsgTextFormat
+14CMsgUnlockH264
 14CMsgURLChanged
 14CMsgViewSource
 14CNewsItemPanel
@@ -1597,6 +1598,7 @@
 9CCallbackI16CMusicQueuePanel26PlaybackStatusHasChanged_tLb0EE
 9CCallbackI16CMusicQueuePanel29CurrentQueueEntryHasChanged_tLb0EE
 9CCallbackI16CMusicQueuePanel40CurrentQueueEntrySecondsElapsedChanged_tLb0EE
+9CCallbackI16CSteamAuthedHTML18UnlockH264Result_tLb0EE
 9CCallbackI16CSteamAuthedHTML24WebAuthRequestCallback_tLb0EE
 9CCallbackI16CSteamAuthedHTML25LogOnCredentialsChanged_tLb0EE
 9CCallbackI16CSteamAuthedHTML25ParentalWebTokenChanged_tLb0EE
@@ -2002,6 +2004,7 @@
 9wttj
 9ZooDialog
 A8194D02193CD03792937D27590AECBD
+A890t
 ABGRToARGB
 ABGRToI420
 ABGRToUVRow_Any_SSSE3
@@ -3775,6 +3778,7 @@ CMsgTransformOriginData
 .CMsgTransformOriginData2a
 CMsgTransitionData
 .CMsgTransitionData
+CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgURLChanged
 CMsgVerticalScrollBarSize
@@ -9002,6 +9006,7 @@ N16CMusicQueuePanel34CCallbackOnQueueEntriesHaveChangedE
 N16CMusicQueuePanel35CCallbackOnPlaybackStatusHasChangedE
 N16CMusicQueuePanel38CCallbackOnCurrentQueueEntryHasChangedE
 N16CMusicQueuePanel49CCallbackOnCurrentQueueEntrySecondsElapsedChangedE
+N16CSteamAuthedHTML27CCallbackOnUnlockH264ResultE
 N16CSteamAuthedHTML29CCallbackOnCredentialsChangedE
 N16CSteamAuthedHTML30CCallbackOnWebAuthRequestAsyncE
 N16CSteamAuthedHTML34CCallbackOnParentalWebTokenChangedE
@@ -13755,6 +13760,7 @@ unknown
 UNKNOWN
 UnloadModule
 UnlockButton
+unlock_code
 UnlockedGroupAchievement
 unlockh264
 UnpinnedCornerOffsetX
