@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.de39b0c62dd00335b8f68c49fbb1a2d2167fd5d7.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.cecfcd4cc9f0a1da74396badcb59fcee1cd97238.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1765,6 +1765,181 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 4
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Winter 2014 CS:GO Champion",
+				"defindex": 890,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at DreamHack Winter 2014",
+				"item_description": "This championship trophy was awarded to the Champion at The DreamHack Winter 2014 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/dhw_2014_champion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw_2014_champion.1e06beca89c812e4162c94cba3519c42eac4db33.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw_2014_champion_large.00b52cf3cab0182fcc466cfad2f8c560812d8a5a.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Winter 2014 CS:GO Finalist",
+				"defindex": 891,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at DreamHack Winter 2014",
+				"item_description": "This championship trophy was awarded to the Finalist at The DreamHack Winter 2014 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/dhw_2014_finalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw_2014_finalist.87a5068df8f33af8f5a8633326cb15ecec6dec73.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw_2014_finalist_large.5dd601bef4b79c3e1623898773cb22b12e1ff4cb.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Winter 2014 CS:GO Semifinalist",
+				"defindex": 892,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at DreamHack Winter 2014",
+				"item_description": "This championship trophy was awarded to the Semifinalist at The DreamHack Winter 2014 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/dhw_2014_semifinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw_2014_semifinalist.989c220ae4fa6c37b74793c43067538103770e6e.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw_2014_semifinalist_large.be9e9fd274a887c4a742d42aa01bfdb97b53c969.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Winter 2014 CS:GO Quarterfinalist",
+				"defindex": 893,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at DreamHack Winter 2014",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at The DreamHack Winter 2014 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/dhw_2014_quarterfinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw_2014_quarterfinalist.fba4a759e6d2d65057e72463045c042120d48104.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw_2014_quarterfinalist_large.431337841f75ff3c3dd1ef980a571d204433d50d.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Winter 2014 Pick 'Em Challenge Bronze",
+				"defindex": 894,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze DreamHack Winter 2014 Pick'Em Challenge Trophy",
+				"item_description": "This bronze trophy was awarded during the DreamHack Winter 2014 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/dhw14_prediction_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw14_prediction_bronze.fc8d7e76bf8d0816bf7e0781d4d02a1c59d71040.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw14_prediction_bronze_large.75a3748d4a79bcbf7174e980f212670797655edd.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Winter 2014 Pick 'Em Challenge Silver",
+				"defindex": 895,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver DreamHack Winter 2014 Pick'Em Challenge Trophy",
+				"item_description": "This silver trophy was awarded during the DreamHack Winter 2014 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/dhw14_prediction_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw14_prediction_silver.c0d45cf1aba660da0d5049d737399493439c80f4.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw14_prediction_silver_large.844b1c6fcc8438fb9bdadd97385912e660c58d11.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "DreamHack Winter 2014 Pick 'Em Challenge Gold",
+				"defindex": 896,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold DreamHack Winter 2014 Pick'Em Challenge Trophy",
+				"item_description": "This gold trophy was awarded during the DreamHack Winter 2014 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/dhw14_prediction_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw14_prediction_gold.9a57885b7a0c677409735e749ce1c0a3ab773209.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/dhw14_prediction_gold_large.161b3da47a840446eba78537ecbbf60563d01852.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 5
 					}
 				]
 				

@@ -10695,6 +10695,125 @@
 				}
 			}
 		}
+		"890"
+		{
+			"name"		"DreamHack Winter 2014 CS:GO Champion"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_DHW2014_Champion"
+			"item_description"		"#CSGO_CollectibleCoin_DHW2014_Champion_Desc"
+			"image_inventory"		"econ/status_icons/dhw_2014_champion"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/dhw_2014_champion.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+		}
+		"891"
+		{
+			"name"		"DreamHack Winter 2014 CS:GO Finalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_DHW2014_Finalist"
+			"item_description"		"#CSGO_CollectibleCoin_DHW2014_Finalist_Desc"
+			"image_inventory"		"econ/status_icons/dhw_2014_finalist"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/dhw_2014_finalist.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+		}
+		"892"
+		{
+			"name"		"DreamHack Winter 2014 CS:GO Semifinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_DHW2014_SemiFinalist"
+			"item_description"		"#CSGO_CollectibleCoin_DHW2014_SemiFinalist_Desc"
+			"image_inventory"		"econ/status_icons/dhw_2014_semifinalist"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/dhw_2014_semifinalist.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+		}
+		"893"
+		{
+			"name"		"DreamHack Winter 2014 CS:GO Quarterfinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_DHW2014_QuarterFinalist"
+			"item_description"		"#CSGO_CollectibleCoin_DHW2014_QuarterFinalist_Desc"
+			"image_inventory"		"econ/status_icons/dhw_2014_quarterfinalist"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/dhw_2014_quarterfinalist.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+		}
+		"894"
+		{
+			"name"		"DreamHack Winter 2014 Pick 'Em Challenge Bronze"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_DHW2014_PickEmBronze"
+			"item_description"		"#CSGO_CollectibleCoin_DHW2014_PickEmBronze_Desc"
+			"image_inventory"		"econ/status_icons/dhw14_prediction_bronze"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/dhw_2014_pickem_bronze.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+		}
+		"895"
+		{
+			"name"		"DreamHack Winter 2014 Pick 'Em Challenge Silver"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_DHW2014_PickEmSilver"
+			"item_description"		"#CSGO_CollectibleCoin_DHW2014_PickEmSilver_Desc"
+			"image_inventory"		"econ/status_icons/dhw14_prediction_silver"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/dhw_2014_pickem_silver.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+		}
+		"896"
+		{
+			"name"		"DreamHack Winter 2014 Pick 'Em Challenge Gold"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_DHW2014_PickEmGold"
+			"item_description"		"#CSGO_CollectibleCoin_DHW2014_PickEmGold_Desc"
+			"image_inventory"		"econ/status_icons/dhw14_prediction_gold"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/dhw_2014_pickem_gold.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"5"
+				}
+			}
+		}
 		"1000"
 		{
 			"name"		"Community Season One Spring 2013"
