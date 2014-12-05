@@ -25,6 +25,7 @@
 		PingRateCombo
 		{
 			controlname=combobox
+      			editable="0"
 		}		
 	}
 	

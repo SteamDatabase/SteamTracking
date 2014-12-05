@@ -12,11 +12,13 @@
 		ThrottleRates
 		{
 			controlname=combobox
+			editable="0"
 		}	
 		
 		DownloadRegionCombo
 		{
 			controlname=combobox
+			editable="0"
 		}
 		
 		ManageInstalledApps
