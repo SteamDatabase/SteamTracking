@@ -165,18 +165,21 @@ function ShowAppHubCards( parentID, ogCards, rowTemplates, fallbackRowTemplates,
 	for ( var i = 0; i < ogCards.length; ++i )
 	{
 		var card = ogCards[i];
-		card.select( "a" ).each(
-			function( elem )
-			{
-				Event.observe( elem, 'click',
-					function(event)
-					{
-						Event.stop( event );
-						top.location.href = elem.href;
-					}
-				);
-			}
-		);
+		if ( !$J( card ).hasClass( 'Broadcast_Card' ) )
+		{
+			card.select( "a" ).each(
+				function( elem )
+				{
+					Event.observe( elem, 'click',
+						function(event)
+						{
+							Event.stop( event );
+							top.location.href = elem.href;
+						}
+					);
+				}
+			);
+		}
 		CategorizeCard( card );
 		cards.push( card );
 		// remove from current parent, as we will re-parent in possibly a different order

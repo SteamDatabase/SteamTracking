@@ -1,9 +1,14 @@
 
 .Broadcast_Card .apphub_CardContentAppName
 {
-	margin-left: 5px;
+	margin-left: 0px;
 	margin-right: 5px;
 	padding: 0px;
+}
+
+.Broadcast_Card a
+{
+	outline: 0;
 }
 
 .Broadcast_Card.apphub_Card.interactable:hover .apphub_CardContentAppName a,
@@ -19,6 +24,7 @@
 	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	color: #636363;
 	float: right;
+	padding: 5px;
 }
 
 .Broadcast_Card.apphub_Card
@@ -34,9 +40,14 @@
 
 .Broadcast_Card .apphub_CardContentPreviewImage
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/broadcast/apphub_default_thumbnail.jpg?v=2' );
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	display: none;
 	max-width: 458px;
 	max-height: 257px;
+}
+
+.Broadcast_Card .apphub_CardContentMain
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/broadcast/apphub_default_thumbnail.jpg?v=2' );
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
