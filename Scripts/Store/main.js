@@ -539,7 +539,7 @@ function AddToWishlistButton( button, appid, navref )
 			if ( data && data.success )
 			{
 				$J(button).addClass('btn_disabled');
-				$J('span',button).text("#wishlist_on_wishlist");
+				$J('span',button).text("On Wishlist");
 			}
 			else
 			{
@@ -560,7 +560,7 @@ function IgnoreButton( button, appid )
 		$J(button).addClass('btn_disabled');
 		GDynamicStore.InvalidateCache();
 	}).fail( function() {
-		ShowAlertDialog( '#text_store_not_interested', 'There was a problem saving your changes.  Please try again later.' );
+		ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
 	});
 }
 
