@@ -788,6 +788,25 @@ body.flat_page
 	padding-left: 28px;
 }
 
+#ReportBroadcast.Reported,
+#ReportBroadcast.Reported:hover
+{
+	color: #35d340;
+	cursor: default;
+}
+
+.report_dialog_text_area
+{
+	height: 100px;
+}
+
+.report_dialog_explanation
+{
+	width: 500px;
+	padding-bottom: 10px;
+	text-align: left;
+}
+
 #footer_spacer
 {
 	background-color: black;
