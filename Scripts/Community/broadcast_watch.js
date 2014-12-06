@@ -436,6 +436,51 @@ CBroadcastWatch.prototype.MaximizeChat = function()
 	$J( '#PageContents' ).removeClass( 'MinimizedChat' );
 }
 
+CBroadcastWatch.prototype.ReportBroadcast = function()
+{
+	if ( this.m_ulBroadcastID == 0 || $J( '#ReportBroadcast' ).hasClass( 'Reported' ) )
+		return;
+
+	var dialog = ShowPromptWithTextAreaDialog( 'Report this item', '', null, null, 1000 );
+	var explanation = $J('<div/>', { 'class': 'report_dialog_explanation' } );
+	explanation.html( 'Please enter the reason why you are reporting this item for violating the Steam Terms of Service. This cannot be undone.' );
+
+	var textArea = dialog.m_$Content.find( 'textarea' );
+	textArea.addClass( "report_dialog_text_area" );
+	textArea.parent().before( explanation );
+
+	var _watch = this;
+	dialog.done( function( data )
+	{
+		data = v_trim( data );
+		if ( data.length < 1 )
+		{
+			alert( 'Please enter a valid reason.')
+			return;
+		}
+
+		$J.post( 'https://steamcommunity.com/broadcast/report',
+		{
+			steamid: _watch.m_ulBroadcastSteamID,
+			broadcastid: _watch.m_ulBroadcastID,
+			description: data,
+		}
+		).done( function( json )
+		{
+			$J( '#ReportBroadcast' ).text( 'Report Successful' );
+			$J( '#ReportBroadcast' ).addClass( 'Reported' );
+			$J( '#ReportBroadcast' ).removeClass( 'BroadcastButton' );
+		})
+		.fail( function()
+		{
+			alert( 'There was a problem submitting your request to our servers. Please try again.')
+		});
+	});
+}
+
+//////////////////////////////////////////////////
+// Stats
+//////////////////////////////////////////////////
 CBroadcastStats = function( element )
 {
 	this.elePlayer = element;
