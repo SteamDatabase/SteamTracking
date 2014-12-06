@@ -91,7 +91,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$UnIgnoreBtn.show();
 			GDynamicStore.InvalidateCache();
 		}).fail( function() {
-			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
+			ShowAlertDialog( '#text_store_not_interested', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -105,7 +105,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$UnIgnoreBtn.hide();
 			GDynamicStore.InvalidateCache();
 		}).fail( function() {
-			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
+			ShowAlertDialog( '#text_store_not_interested', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -117,7 +117,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$FollowBtn.hide();
 			$UnFollowBtn.show();
 		}).fail( function() {
-			ShowAlertDialog( 'Follow', 'There was a problem saving your changes.  Please try again later.' );
+			ShowAlertDialog( '#text_store_follow', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -130,7 +130,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$FollowBtn.show();
 			$UnFollowBtn.hide();
 		}).fail( function() {
-			ShowAlertDialog( 'Follow', 'There was a problem saving your changes.  Please try again later.' );
+			ShowAlertDialog( '#text_store_follow', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 }
