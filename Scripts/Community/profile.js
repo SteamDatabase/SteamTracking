@@ -432,26 +432,26 @@ function StartTradeOffer( unAccountID, rgParams )
 function CancelTradeOffer( tradeOfferID )
 {
 	ShowConfirmDialog(
-		'#Economy_TradeOffer_Cancel',
-		'#Economy_TradeOffer_CancelConfirm',
-		'#Shared_ButtonYes',
-		'#Shared_ButtonNo'
+		'Cancel Trade Offer',
+		'Are you sure you want to cancel this trade offer?',
+		'Yes',
+		'No'
 	).done( function() {
-		ActOnTradeOffer( tradeOfferID, 'cancel', 'Trade Offer Canceled', '#Economy_TradeOffer_Cancel' );
+		ActOnTradeOffer( tradeOfferID, 'cancel', 'Trade Offer Canceled', 'Cancel Trade Offer' );
 	} );
 }
 
 function DeclineTradeOffer( tradeOfferID )
 {
 	ShowConfirmDialog(
-		'#Economy_TradeOffer_DeclineTrade',
+		'Decline Trade',
 		'Are you sure you want to decline this trade offer?  You can also modify the items and send a counter offer.',
-		'#Economy_TradeOffer_DeclineTrade',
+		'Decline Trade',
 		null,
 		'Make a Counter Offer'
 	).done( function( strButton ) {
 		if ( strButton == 'OK' )
-			ActOnTradeOffer( tradeOfferID, 'decline', 'Trade Declined', '#Economy_TradeOffer_DeclineTrade' );
+			ActOnTradeOffer( tradeOfferID, 'decline', 'Trade Declined', 'Decline Trade' );
 		else
 			ShowTradeOffer( tradeOfferID, {counteroffer: 1} );
 	} );
@@ -473,7 +473,7 @@ function ActOnTradeOffer( tradeOfferID, strAction, strCompletedBanner, strAction
 
 		RefreshNotificationArea();
 	}).fail( function() {
-		ShowAlertDialog( strActionDisplayName, '#Economy_TradeOffer_ErrorModifying' );
+		ShowAlertDialog( strActionDisplayName, 'There was an error modifying this trade offer.  Please try again later.' );
 		$TradeOffer.find( '.tradeoffer_footer_actions').show();
 	});
 }
