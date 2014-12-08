@@ -132,9 +132,9 @@ function DeclineTradeOffer()
 		return;
 
 	ShowConfirmDialog(
-		'Decline Trade',
-		'Are you sure you want to decline this trade offer?',
-		'Decline Trade'
+		'#Economy_TradeOffer_DeclineTrade',
+		'#Economy_TradeOffer_DeclineConfirm',
+		'#Economy_TradeOffer_DeclineTrade'
 	).done( function() {
 		GTradeStateManager.DeclineTradeOffer();
 	} );
@@ -146,15 +146,15 @@ function DismissTradeOfferWindow()
 	if ( ( g_cMyItemsInTrade > 0 || g_cTheirItemsInTrade > 0 || g_cCurrenciesInTrade > 0 ) &&
 		GTradeStateManager.m_eTradeOfferState != CTradeOfferStateManager.TRADE_OFFER_STATE_VIEW )
 	{
-		var strConfirmMessage = 'Are you sure you want to cancel this trade offer?  Any changes will not be saved.';
+		var strConfirmMessage = '#Economy_TradeOffer_CancelConfirmUnsaved';
 		if ( this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_COUNTEROFFER )
-			strConfirmMessage = 'Are you sure you want to cancel this trade offer?' + '<br><br>' + 'Any changes will not be saved.  You will still be able to accept, decline, or counter this trade offer at a later time.';
+			strConfirmMessage = '#Economy_TradeOffer_CancelConfirm' + '<br><br>' + '#Economy_TradeOffer_CancelConfirmUnsavedCounterOffer';
 
 		ShowConfirmDialog(
-			'Cancel Trade Offer',
+			'#Economy_TradeOffer_Cancel',
 			strConfirmMessage,
-			'Yes',
-			'No'
+			'#Shared_ButtonYes',
+			'#Shared_ButtonNo'
 		).done( function() {
 			EndTradeOffer();
 		});
@@ -326,15 +326,15 @@ CTradeOfferStateManager = {
 
 		if ( this.m_eTradeOfferState == this.TRADE_OFFER_STATE_COUNTEROFFER )
 		{
-			$('trade_confirmbtn_text').update( 'Send Counter Offer');
+			$('trade_confirmbtn_text').update( '#Economy_TradeOffer_ConfirmCounterOffer');
 		}
 		else if ( this.m_eTradeOfferState == this.TRADE_OFFER_STATE_VIEW )
 		{
-			$('trade_confirmbtn_text').update( 'Accept Trade');
+			$('trade_confirmbtn_text').update( '#Economy_TradeOffer_AcceptOffer');
 		}
 		else
 		{
-			$('trade_confirmbtn_text').update( 'Make Offer');
+			$('trade_confirmbtn_text').update( '#Economy_TradeOffer_ConfirmOffer');
 		}
 
 		if ( UserYou.bReady )
@@ -343,11 +343,11 @@ CTradeOfferStateManager = {
 
 			if ( this.m_eTradeOfferState == this.TRADE_OFFER_STATE_COUNTEROFFER || this.m_eTradeOfferState == this.TRADE_OFFER_STATE_NEW )
 			{
-				$('trade_confirm_message').update( 'Ready to send your offer.' );
+				$('trade_confirm_message').update( '#Economy_TradeOffer_ReadyToConfirm' );
 			}
 			else
 			{
-				$('trade_confirm_message').update( 'Ready to complete the trade.' );
+				$('trade_confirm_message').update( '#Economy_TradeOffer_ReadyToAccept' );
 			}
 		}
 		else
@@ -358,17 +358,17 @@ CTradeOfferStateManager = {
 				if( g_rgCurrentTradeStatus.me.assets.length || g_rgCurrentTradeStatus.me.currency.length ||
 					g_rgCurrentTradeStatus.them.assets.length || g_rgCurrentTradeStatus.them.currency.length )
 				{
-					$('trade_confirm_message').update( 'Waiting for you to confirm your offer.' );
+					$('trade_confirm_message').update( '#Economy_TradeOffer_WaitingToConfirm' );
 				}
 				else
 				{
-					$('trade_confirm_message').update( 'Make Offer' );
+					$('trade_confirm_message').update( '#Economy_TradeOffer_ConfirmOffer' );
 				}
 			}
 			else
 			{
 				//view
-				$('trade_confirm_message').update( 'Waiting for you to confirm trade contents.' );
+				$('trade_confirm_message').update( '#Economy_TradeOffer_WaitingToAccept' );
 			}
 		}
 	},
@@ -411,9 +411,9 @@ CTradeOfferStateManager = {
 			if ( this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_COUNTEROFFER && !this.m_bChangesMade )
 			{
 				// user has not made changes.  Prompt to just accept the offer
-				ShowConfirmDialog( 'Send Counter Offer',
-					'You have not made any changes to this counter offer.  Would you like to accept the original offer?',
-					'Accept Trade'
+				ShowConfirmDialog( '#Economy_TradeOffer_ConfirmCounterOffer',
+					'#Economy_TradeOffer_CounterNoChanges',
+					'#Economy_TradeOffer_AcceptOffer'
 				).done( function() {
 					// flip back to VIEW state so that this function will run the usual accept AJAX
 					StateManager.m_eTradeOfferState = CTradeOfferStateManager.TRADE_OFFER_STATE_VIEW;
@@ -465,8 +465,8 @@ CTradeOfferStateManager = {
 				}
 			).done( function( data ) {
 				ShowAlertDialog(
-					'Trade Offer Sent',
-					'Success!  Your trade offer has been sent to %s.<br><br>You can manage your outstanding trade offers from your Sent Trade Offers page.'.replace( /%s/, g_strTradePartnerPersonaName )
+					'#Economy_TradeOffer_TradeOfferSent',
+					'#Economy_TradeOffer_TradeOfferSentDescription'.replace( /%s/, g_strTradePartnerPersonaName )
 				).always( function() {
 						EndTradeOffer( UserYou.GetProfileURL() + '/tradeoffers/sent/', true );
 				} );
@@ -474,7 +474,7 @@ CTradeOfferStateManager = {
 				var data = $J.parseJSON( jqXHR.responseText );
 				g_bConfirmPending = false;
 				StateManager.UpdateConfirmButtonStatus();
-				ShowAlertDialog( 'Make Offer', data && data.strError ? data.strError : 'There was an error sending your trade offer.  Please try again later.' );
+				ShowAlertDialog( '#Economy_TradeOffer_ConfirmOffer', data && data.strError ? data.strError : '#Economy_TradeOffer_ErrorSendingTradeOffer' );
 			});
 		}
 		else if ( this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_VIEW )
@@ -515,7 +515,7 @@ CTradeOfferStateManager = {
 				var data = $J.parseJSON( jqXHR.responseText );
 				g_bConfirmPending = false;
 				StateManager.UpdateConfirmButtonStatus();
-				ShowAlertDialog( 'Accept Trade', data && data.strError ? data.strError : 'There was an error accepting this trade offer.  Please try again later.' );
+				ShowAlertDialog( '#Economy_TradeOffer_AcceptOffer', data && data.strError ? data.strError : '#Economy_TradeOffer_ErrorAcceptingTradeOffer' );
 			});
 		}
 	},
@@ -546,7 +546,7 @@ CTradeOfferStateManager = {
 		}).fail( function() {
 			g_bConfirmPending = false;
 			StateManager.UpdateConfirmButtonStatus();
-			ShowAlertDialog( 'Decline Trade', 'There was an error modifying this trade offer.  Please try again later.' );
+			ShowAlertDialog( '#Economy_TradeOffer_DeclineTrade', '#Economy_TradeOffer_ErrorModifying' );
 		});
 	}
 
