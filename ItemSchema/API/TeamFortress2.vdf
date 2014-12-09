@@ -74707,6 +74707,7 @@
 		"5778"
 		{
 			"name"	"Duck Token"
+			"prefab"	"eotlkey_rules" 
 			"first_sale_date"		"2014/12/03"
 			"item_class"	"tool"
 			"craft_class"	"tool"
@@ -74737,6 +74738,7 @@
 		"5779"
 		{
 			"name"	"Gift - 23 Duck Tokens"
+			"prefab"	"eotlkey_rules" 
 			"loadondemand"	"1"
 			"item_class"	"tf_wearable"
 			"first_sale_date"	"2014/12/02"
@@ -74786,6 +74788,7 @@
 		"5780"
 		{
 			"name"	"Gift - 1 Duck Token"
+			"prefab"	"eotlkey_rules" 
 			"loadondemand"	"1"
 			"item_class"	"tf_wearable"
 			"first_sale_date"	"2014/12/02"
