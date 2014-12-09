@@ -822,6 +822,7 @@
 			"craft_material_type"	"weapon"
 			"item_type_name"	"#TF_Weapon_Wrench"
 			"item_name"	"#TF_Weapon_Wrench"
+			"item_description"	"#TF_Weapon_Wrench_Desc"
 			"item_slot"	"melee"
 			"item_quality"	"normal"
 			"baseitem" "1"
@@ -2700,6 +2701,9 @@
 		"robokey_rules"
 		{
 		}
+		"eotlkey_rules"
+		{
+		}
 		"eventcratebase" 
 		{
 			"item_class"	"supply_crate"
@@ -2840,6 +2844,45 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
 			"drop_sound"		"ui/item_metal_tiny_drop.wav"
+		}
+		"randomgiftself"
+		{
+			"prefab"		"randomgift"
+			"tool"
+			{
+				"usage"
+				{
+					"num_items"		"1"
+					"max_recipients"	"1"
+					"target_rule"	"only_self"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+				"usable_out_of_game"	"1"
+			}
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+		}
+		"randomgiftserver"
+		{
+			"prefab"		"randomgift"
+			"tool"
+			{
+				"usage"
+				{
+					"loot_list"	   	"dev_duck_tracker_gift_output"
+					"num_items"		"1"
+					"max_recipients"	"23"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+			}
+			"min_ilevel"	"23"
+			"max_ilevel"	"23"
 		}
 		"halloween2013_spellbook"
 		{
@@ -43524,7 +43567,201 @@
 			"drop_type"	"none"
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}		
+		"1126"
+		{
+			"name"		"Duck Badge"
+			"first_sale_date"		"2014/12/03"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"duck_upgradable"	"1"
+			}
+			"item_type_name"	"#TF_ItemType_Journal"
+			"item_name"	"#TF_Item_DuckBadge"
+			"item_description"	"#TF_Item_DuckBadge_Desc"
+			"armory_desc"		"duckbadge"
+			"show_in_armory"	"0"
+			"image_inventory"	"backpack/workshop/player/items/all_class/all_class_badge_bonusd/all_class_badge_bonusd"
+			"model_player"		"models/workshop/player/items/all_class/all_class_badge_bonusd/all_class_badge_bonusd.mdl"
+			"propername" "0"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"item_quality"		"unique"
+			"item_slot"			"action"
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"spy" 		"1"
+				"engineer" 	"1"
+				"pyro" 		"1"
+			}
+			"visuals"
+			{
+				"custom_sound0"		"Duck.Quack"
+			
+				"styles"
+				{
+					"0"
+					{
+						"skin_red" "1"
+						"skin_blu" "2"
+						"name"	"#TF_DuckBadge_Style0"
+					}
+					"1"
+					{
+						"skin_red" "3"
+						"skin_blu" "12"
+						"name"	"#TF_DuckBadge_Style1"
+					}
+					"2"
+					{
+						"skin_red" "4"
+						"skin_blu" "13"
+						"name"	"#TF_DuckBadge_Style2"
+					}
+					"3"
+					{
+						"skin_red" "5"
+						"skin_blu" "14"
+						"name"	"#TF_DuckBadge_Style3"
+					}
+					"4"
+					{
+						"skin_red" "6"
+						"skin_blu" "15"
+						"name"	"#TF_DuckBadge_Style4"
+					}
+					"5"
+					{
+						"skin_red" "7"
+						"skin_blu" "16"
+						"name"	"#TF_DuckBadge_Style5"
+					}
+					"6"
+					{
+						"skin_red" "8"
+						"skin_blu" "17"
+						"name"	"#TF_DuckBadge_Style6"
+					}
+					"7"
+					{
+						"skin_red" "9"
+						"skin_blu" "18"
+						"name"	"#TF_DuckBadge_Style7"
+					}
+					"8"
+					{
+						"skin_red" "10"
+						"skin_blu" "19"
+						"name"	"#TF_DuckBadge_Style8"
+					}
+					"9"
+					{
+						"skin_red" "11"
+						"skin_blu" "20"
+						"name"	"#TF_DuckBadge_Style9"
+					}
+					"10"
+					{
+						"skin" "21"
+						"name"	"#TF_DuckBadge_Style10"
+					}
+				}
+			}
+			"attributes"
+			{
+				"display duck leaderboard"
+				{
+					"attribute_class"	"display_duck_leaderboard"
+					"value" 	"1"
+				}
+				"decoded by itemdefindex"
+				{
+					"attribute_class"	"decoded_by_itemdefindex"
+					"value" "5778"	
+				}
+				"noise maker"
+				{
+					"attribute_class"	"enable_misc2_noisemaker"
+					"value"			"1"
+				}
+				"unlimited quantity hidden"
+				{
+					"attribute_class"	"unlimited_quantity"
+					"value" "1"
+				}
+				"duckstreaks active"
+				{
+					"attribute_class"	"duckstreaks_active"
+					"value" "1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
 		}
+		"1127"
+		{
+			"name"	"The Crossing Guard"
+			"first_sale_date"	"2014/12/08"
+			"item_class"	"saxxy"
+			"craft_class"			"" 
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_gift_wrap" 	"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Sign"
+			"item_name"	"#TF_CrossingGuard"
+			"item_description"	"#TF_CrossingGuard_Desc"
+			"item_slot"	"melee"
+			"item_quality"	"unique"
+			"min_ilevel"	"25"
+			"max_ilevel"	"25"
+			"propername"	"1"
+			"attach_to_hands"	"1"
+			"item_logname"	"crossing_guard"
+			"item_iconname"	"crossing_guard"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_crossing_guard/c_crossing_guard"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_crossing_guard/c_crossing_guard.mdl"
+			"anim_slot" "MELEE_ALLCLASS"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"pyro" "1"
+			}
+			"visuals"
+			{
+				"sound_melee_hit_world"	"Weapon_Machete.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_melee_hit"	"Weapon_Machete.HitFlesh"
+				"sound_melee_burst"	"Weapon_Machete.MissCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
+			"drop_sound"		"ui/item_wood_pole_drop.wav"
+		}
+
 
 
 
@@ -55667,7 +55904,595 @@
 				"engineer"		"1"
 			}
 		}
-		
+		"30538"
+		{
+			"name"		"EOTL_Skier"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_skier"
+			"item_description"		"#TF_skier_Desc"
+			"equip_region"		"pyro_head_replacement"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"head"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/skier/skier"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/skier/skier.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30539"
+		{
+			"name"		"EOTL_Insulated_innovator"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_insulated_innovator"
+			"item_description"		"#TF_insulated_innovator_Desc"
+			"equip_region"		"shirt"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/engineer/insulated_innovator/insulated_innovator"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/insulated_innovator/insulated_innovator.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30540"
+		{
+			"name"		"EOTL_blinks_breeches"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_blinks_breeches"
+			"item_description"		"#TF_blinks_breeches_Desc"
+			"equip_region"		"feet"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"shoes_socks"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/blinks_breeches/blinks_breeches"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/blinks_breeches/blinks_breeches.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30541"
+		{
+			"name"		"EOTL_demo_dynamite"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_demo_dynamite"
+			"item_description"		"#TF_demo_dynamite_Desc"
+			"equip_region"		"grenades"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/demo/demo_dynamite/demo_dynamite"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/demo_dynamite/demo_dynamite.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30542"
+		{
+			"name"		"EOTL_Brisk-weather Beanie"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_EOTL_briskweather_beanie"
+			"item_description"		"#TF_briskweather_beanie_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/briskweather_beanie/briskweather_beanie_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30543"
+		{
+			"name"		"EOTL_winter_pants"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_winter_pants"
+			"item_description"		"#TF_eotl_winter_pants_Desc"
+			"equip_region"		"pants"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/engineer/eotl_winter_pants/eotl_winter_pants"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/eotl_winter_pants/eotl_winter_pants.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30544"
+		{
+			"name"		"EOTL_pyro_sweater"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_pyro_sweater"
+			"item_description"		"#TF_pyro_sweater_Desc"
+			"equip_region"		"shirt"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/pyro_sweater/pyro_sweater"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/pyro_sweater/pyro_sweater.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30545"
+		{
+			"name"		"EOTL_Flat_cap"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_EOTL_flat_cap"
+			"item_description"		"#TF_eotl_flat_cap_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/heavy/eotl_flat_cap/eotl_flat_cap"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/eotl_flat_cap/eotl_flat_cap.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30546"
+		{
+			"name"		"EOTL_FURCAP"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_EOTL_furcap"
+			"item_description"		"#TF_eotl_furcap_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/eotl_furcap/eotl_furcap"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/eotl_furcap/eotl_furcap_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/eotl_furcap/eotl_furcap_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/eotl_furcap/eotl_furcap_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/eotl_furcap/eotl_furcap_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/eotl_furcap/eotl_furcap_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/eotl_furcap/eotl_furcap_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/eotl_furcap/eotl_furcap_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/eotl_furcap/eotl_furcap_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/eotl_furcap/eotl_furcap_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30547"
+		{
+			"name"		"EOTL_summerhat"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_EOTL_summerhat"
+			"item_description"		"#TF_eotl_summerhat_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/demo/eotl_summerhat/eotl_summerhat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/eotl_summerhat/eotl_summerhat.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30548"
+		{
+			"name"		"EOTL_soldier_garrison"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_EOTL_soldier_garrison"
+			"item_description"		"#TF_soldier_garrison_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/soldier/soldier_garrison/soldier_garrison"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/soldier_garrison/soldier_garrison.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30549"
+		{
+			"name"		"EOTL_hiphunter_hat"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_EOTL_hiphunter_hat"
+			"item_description"		"#TF_hiphunter_hat_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/hiphunter_hat/hiphunter_hat_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30550"
+		{
+			"name"		"EOTL_hiphunter_jacket"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_hiphunter_jacket"
+			"item_description"		"#TF_hiphunter_jacket_Desc"
+			"equip_region"		"shirt"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/hiphunter_jacket/hiphunter_jacket"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"sniper"		"models/workshop/player/items/all_class/hiphunter_jacket/hiphunter_jacket_sniper.mdl"
+				"demoman"		"models/workshop/player/items/all_class/hiphunter_jacket/hiphunter_jacket_demo.mdl"
+				"heavy"		"models/workshop/player/items/all_class/hiphunter_jacket/hiphunter_jacket_heavy.mdl"
+			}
+			"used_by_classes"
+			{
+				"sniper"		"1"
+				"demoman"		"1"
+				"heavy"		"1"
+			}
+		}
+		"30551"
+		{
+			"name"		"EOTL_hiphunter_boots"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_hiphunter_boots"
+			"item_description"		"#TF_hiphunter_boots_Desc"
+			"equip_region"		"sniper_legs"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"shoes"		"1"
+					"shoes_socks"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/hiphunter_boots/hiphunter_boots_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30552"
+		{
+			"name"		"EOTL_thermal_sleeves"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_thermal_sleeves"
+			"item_description"		"#TF_thermal_sleeves_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/scout/thermal_sleeves/thermal_sleeves"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/thermal_sleeves/thermal_sleeves.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30553"
+		{
+			"name"		"EOTL_soldierhat"
+			"prefab"		"no_craft hat"
+			"item_name"		"#TF_EOTL_soldierhat"
+			"item_description"		"#TF_eotl_soldierhat_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/soldier/eotl_soldierhat/eotl_soldierhat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/eotl_soldierhat/eotl_soldierhat.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30554"
+		{
+			"name"		"EOTL_beard"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_beard"
+			"item_description"		"#TF_beard_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/soldier/beard/beard"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/beard/beard.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30555"
+		{
+			"name"		"EOTL_demopants"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_demopants"
+			"item_description"		"#TF_eotl_demopants_Desc"
+			"equip_region"		"pants"
+			"image_inventory"		"backpack/workshop/player/items/demo/eotl_demopants/eotl_demopants"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/eotl_demopants/eotl_demopants.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30556"
+		{
+			"name"		"EOTL_Ursa Major"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_ursa_major"
+			"item_description"		"#TF_ursa_major_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/ursa_major/ursa_major"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/ursa_major/ursa_major.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30557"
+		{
+			"name"		"EOTL_sheavyshirt"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_sheavyshirt"
+			"item_description"		"#TF_eotl_sheavyshirt_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/eotl_sheavyshirt/eotl_sheavyshirt"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/eotl_sheavyshirt/eotl_sheavyshirt.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30558"
+		{
+			"name"		"EOTL_Coldfront Curbstompers"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_EOTL_coldfront_curbstompers"
+			"item_description"		"#TF_coldfront_curbstompers_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/soldier/coldfront_curbstompers/coldfront_curbstompers"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/coldfront_curbstompers/coldfront_curbstompers.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
 		"30563"
 		{
 			"name"		"Jungle Booty"
@@ -55772,6 +56597,58 @@
 				"pyro"		"1"
 				"spy"		"1"
 				"engineer"		"1"
+			}
+		}
+		"30570"
+		{
+			"name"		"Pool Party Taunt"
+			"prefab"		"taunt"
+			"first_sale_date"		"2014/06/17"
+			"item_name"		"#TF_TauntPyroPoolParty"
+			"item_description"		"#TF_TauntPyroPoolParty_Desc"
+			"image_inventory"		"backpack/player/items/all_class/all_eotl_taunt"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"item_quality"		"unique"
+			"min_ilevel"		"1"
+			"max_ilevel"		"100"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+			"attributes"
+			{
+				"taunt is press and hold"
+				{
+					"attribute_class"		"enable_misc2_holdtaunt"
+					"value"		"1"
+				}
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"pyro"		"scenes/workshop/player/pyro/low/taunt_pool_party_intro.vcd"
+				}
+				"custom_taunt_outro_scene_per_class"
+				{
+					"pyro"		"scenes/workshop/player/pyro/low/taunt_pool_party_outro.vcd"
+				}
+				"custom_taunt_prop_per_class"
+				{
+					"pyro"		"models/workshop/player/items/taunts/pyro_poolparty/pyro_poolparty.mdl"
+				}
+				"custom_taunt_prop_scene_per_class"
+				{
+					"pyro"		"scenes/workshop/player/items/pool_party/taunt_pool_party_intro.vcd"
+				}
+				"custom_taunt_prop_outro_scene_per_class"
+				{
+					"pyro"		"scenes/workshop/player/items/pool_party/taunt_pool_party_outro.vcd"
+				}
+				"min_taunt_time"		"5"
+				"stop_taunt_if_moved"		"1"
+				"camera_dist_up"		"-10"
 			}
 		}
 		"30571"
@@ -73703,6 +74580,266 @@
 			{
 			}
 		}
+		"5775"
+		{
+			"name"	"EOTL Community Key" 
+			"prefab"	"eotlkey_rules" 
+			"item_class"	"tool"
+			"craft_class"	"tool"
+			"first_sale_date"	"2014/12/04"
+			"tool"
+			{
+				"type"	"decoder_ring"
+				"usage_capabilities"
+				{
+					"decodable"	"1"
+				}
+				"restriction"	"eotl_2014"
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
+			"armory_desc" "key"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_T"
+			"item_name"		"#TF_EOTL_Key"
+			"item_description"	"#TF_EOTL_Key_Desc"
+			"image_inventory"	"backpack/player/items/crafting/eotl_key"
+			"item_quality"		"unique"
+			"min_ilevel"	"14"
+			"max_ilevel"	"14"
+			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
+			"drop_sound"		"ui/item_metal_tiny_drop.wav"
+		}
+		"5776"
+		{
+			"name"	"Gift - 23 EOTL Keys"
+			"prefab"	"eotlkey_rules" 
+			"loadondemand"	"1"
+			"item_class"	"tf_wearable"
+			"first_sale_date"	"2014/12/02"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"	   	"eotl_gift_key_loot_list"
+					"max_recipients"	"23"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
+			"show_in_armory"	"1"
+			"armory_desc" "action gift_24"
+			"item_type_name"	"#TF_Gift"
+			"item_name"	"#TF_Gift_EOTL_EntireServer"
+			"item_description"	"#TF_Gift_EOTL_EntireServer_Desc"
+			"item_slot"	"action"
+			"image_inventory"	"backpack/player/items/crafting/eotl_key_pile"
+			"item_quality"		"unique"
+			"model_player"	""
+			"min_ilevel"	"23"
+			"max_ilevel"	"23"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
+			"drop_sound"		"ui/item_metal_tiny_drop.wav"
+		}
+		"5777"
+		{
+			"name"	"Gift - 1 EOTL Key"
+			"prefab"	"eotlkey_rules" 
+			"loadondemand"	"1"
+			"item_class"	"tf_wearable"
+			"first_sale_date"	"2014/12/02"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"	   	"eotl_gift_key_loot_list"
+					"max_recipients"	"1"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
+			"show_in_armory"	"1"
+			"armory_desc" "action gift_1"
+			"item_type_name"	"#TF_Gift"
+			"item_name"	"#TF_Gift_EOTL_RandomPerson"
+			"item_description"	"#TF_Gift_EOTL_RandomPerson_Desc"
+			"item_slot"	"action"
+			"image_inventory"	"backpack/player/items/crafting/eotl_key_gift"
+			"item_quality"		"unique"
+			"model_player"	""
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"mouse_pressed_sound"	"ui/item_cardboard_pickup.wav"
+			"drop_sound"		"ui/item_cardboard_drop.wav"
+		}
+		"5778"
+		{
+			"name"	"Duck Token"
+			"first_sale_date"		"2014/12/03"
+			"item_class"	"tool"
+			"craft_class"	"tool"
+			"tool"
+			{
+				"type"	"duck_token"
+				"usage_capabilities"
+				{
+					"duck_upgradable"	"1"
+				}
+			}
+			"static_attrs"
+			{
+				"always tradable"		"1"
+				"is commodity"			"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_T"
+			"item_name"		"#TF_Tool_DuckToken"
+			"item_description"	"#TF_Tool_DuckToken_Desc"
+			"image_inventory"	"backpack/crafting/eotl_duck_token"
+			"item_quality"		"unique"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
+			"drop_sound"		"ui/item_bag_drop.wav"
+		}
+		"5779"
+		{
+			"name"	"Gift - 23 Duck Tokens"
+			"loadondemand"	"1"
+			"item_class"	"tf_wearable"
+			"first_sale_date"	"2014/12/02"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"	   	"eotl_duck_token_loot_list"
+					"max_recipients"	"23"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
+			"show_in_armory"	"1"
+			"armory_desc" "action gift_24"
+			"item_type_name"	"#TF_Gift"
+			"item_name"	"#TF_Gift_DuckToken_EntireServer"
+			"item_description"	"#TF_Gift_DuckToken_EntireServer_Desc"
+			"item_slot"	"action"
+			"image_inventory"	"backpack/crafting/eotl_duck_pile_of_tokens"
+			"item_quality"		"unique"
+			"model_player"	""
+			"min_ilevel"	"23"
+			"max_ilevel"	"23"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
+			"drop_sound"		"ui/item_metal_tiny_drop.wav"
+		}
+		"5780"
+		{
+			"name"	"Gift - 1 Duck Token"
+			"loadondemand"	"1"
+			"item_class"	"tf_wearable"
+			"first_sale_date"	"2014/12/02"
+			"tool"
+			{
+				"type"	"gift"
+				"usage"
+				{
+					"loot_list"	   	"eotl_duck_token_loot_list"
+					"max_recipients"	"1"
+				}
+			}
+			"capabilities"
+			{
+				"usable_gc"		"1"
+			}
+			"static_attrs"
+			{
+				"is commodity"			"1"
+			}
+			"show_in_armory"	"1"
+			"armory_desc" "action gift_24"
+			"item_type_name"	"#TF_Gift"
+			"item_name"	"#TF_Gift_DuckToken_RandomPerson"
+			"item_description"	"#TF_Gift_DuckToken_RandomPerson_Desc"
+			"item_slot"	"action"
+			"image_inventory"	"backpack/crafting/eotl_duck_token_gift"
+			"item_quality"		"unique"
+			"model_player"	""
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
+			"drop_sound"		"ui/item_metal_tiny_drop.wav"
+		}
 		
 		"5999"				
 		{
@@ -82330,7 +83467,64 @@
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
-
+		"700"
+		{
+			"name"	"display duck leaderboard"
+			"attribute_class"	"display_duck_leaderboard"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
+		}
+		"701"
+		{
+			"name"	"duck rating"
+			"attribute_class"	"duck_rating"
+			"description_string"	"#Attrib_duck_rating"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
+		}
+		"702"
+		{
+			"name"	"duck badge level"
+			"attribute_class"	"duck_badge_level"
+			"description_string"	"#Attrib_duck_badge_level"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
+		}
+		"703"
+		{
+			"name"	"tag__eotlearlysupport"
+			"attribute_class"	"tag__eotlearlysupport"
+			"description_string"	"#Attrib_eotl_early_supporter"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
+		}
+		"704"
+		{
+			"name"	"unlimited quantity hidden"
+			"attribute_class"	"unlimited_quantity"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"705"
+		{
+			"name"	"duckstreaks active"
+			"attribute_class"	"duckstreaks_active"
+			"description_string"	"#Attrib_duckstreaks"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
+		}
 		"1000"
 		{
 			"name"	"CARD: damage bonus"
@@ -84906,6 +86100,7 @@
 		"supply_crate_loot_list_83"	"83"	
 		"supply_crate_loot_list_84"	"84"	
 		"supply_crate_loot_list_85"	"85"	
+		"eotl_2014_crate_loot_list_87"	"87"	
 		
 		"kill_eater_set_demo_a"						"-1"
 		"kill_eater_set_soldier_a"					"-2"
@@ -93855,6 +95050,30 @@
 			"attachment"		"unusual"
 		}
 		
+		"87"
+		{
+			"system"			"unusual_eotl_frostbite"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"88"
+		{
+			"system"			"unusual_eotl_oribiting_burning_duck_parent"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"89"
+		{
+			"system"			"unusual_eotl_sunrise"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
+		"90"
+		{
+			"system"			"unusual_eotl_sunset"
+			"attach_to_rootbone"	"1"
+			"attachment"		"unusual"
+		}
 		
 		
 		"2001"
@@ -94023,6 +95242,7 @@
 			"can_customize_texture"		"#TF_Armory_Item_CanCustomizeTexture"
 			"strangepart"				"#TF_Armory_Item_StrangePart"
 			"tournamentmedal"			"#TF_Armory_Item_TournamentMedal"
+			"duckbadge"					"#TF_Armory_Item_DuckBadge"
 		}
 	}
 	"item_levels"
@@ -94807,6 +96027,94 @@
 				"score"		"25000"
 			}
 		}
+		"Journal_DuckBadge"
+		{
+			"0"
+			{
+				"score"		"1"
+			}                 
+			"1"               
+			{                 
+				"score"		"2"
+			}                 
+			"2"               
+			{                 
+				"score"		"3"
+			}                 
+			"3"               
+			{                 
+				"score"		"4"
+			}                 
+			"4"               
+			{                 
+				"score"		"5"
+			}                 
+			"5"               
+			{                 
+				"score"		"6"
+			}                 
+			"6"               
+			{                 
+				"score"		"7"
+			}                 
+			"7"               
+			{                 
+				"score"		"8"
+			}                 
+			"8"               
+			{                 
+				"score"		"9"
+			}                 
+			"9"               
+			{                 
+				"score"		"10"
+			}                 
+			"10"              
+			{                 
+				"score"		"11"
+			}                 
+			"11"              
+			{                 
+				"score"		"12"
+			}                 
+			"12"              
+			{                 
+				"score"		"13"
+			}                 
+			"13"              
+			{                 
+				"score"		"14"
+			}                 
+			"14"              
+			{                 
+				"score"		"15"
+			}                 
+			"15"              
+			{                 
+				"score"		"16"
+			}                 
+			"16"              
+			{                 
+				"score"		"17"
+			}                 
+			"17"              
+			{                 
+				"score"		"18"
+			}                 
+			"18"              
+			{                 
+				"score"		"19"
+			}                 
+			"19"              
+			{                 
+				"score"		"20"
+			}                 
+			"20"              
+			{                 
+				"score"		"21"
+			}
+		}
+		
 
 
 	}
@@ -95136,6 +96444,7 @@
 		{
 			"type_name"			"KillEaterEvent_HalloweenMinigamesWon"
 		}
+
 
 
 	}
