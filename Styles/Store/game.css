@@ -481,6 +481,11 @@ img.game_header_image_full {
 	background-image: url('https://steamstore-a.akamaihd.net/public/images//v5/subscription_savings_bg.png');
 }
 
+.game_area_purchase_game_dropdown_menu_item_no_discount
+{
+	background-color: rgb(60, 61, 62);
+}
+
 .game_area_purchase_game_dropdown_menu_items_container tr
 {
 	cursor: pointer;
