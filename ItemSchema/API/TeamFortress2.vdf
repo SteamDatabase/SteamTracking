@@ -56287,14 +56287,6 @@
 			"item_name"		"#TF_EOTL_hiphunter_jacket"
 			"item_description"		"#TF_hiphunter_jacket_Desc"
 			"equip_region"		"shirt"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-					"headphones"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/all_class/hiphunter_jacket/hiphunter_jacket"
 			"capabilities"
 			{
@@ -56404,7 +56396,7 @@
 			"prefab"		"no_craft misc"
 			"item_name"		"#TF_EOTL_beard"
 			"item_description"		"#TF_beard_Desc"
-			"equip_region"		"hat"
+			"equip_region"		"beard"
 			"image_inventory"		"backpack/workshop/player/items/soldier/beard/beard"
 			"capabilities"
 			{
@@ -56442,7 +56434,7 @@
 			"prefab"		"no_craft misc"
 			"item_name"		"#TF_EOTL_ursa_major"
 			"item_description"		"#TF_ursa_major_Desc"
-			"equip_region"		"hat"
+			"equip_region"		"shirt"
 			"image_inventory"		"backpack/workshop/player/items/heavy/ursa_major/ursa_major"
 			"capabilities"
 			{
@@ -56461,7 +56453,7 @@
 			"prefab"		"no_craft misc"
 			"item_name"		"#TF_EOTL_sheavyshirt"
 			"item_description"		"#TF_eotl_sheavyshirt_Desc"
-			"equip_region"		"hat"
+			"equip_region"		"shirt"
 			"image_inventory"		"backpack/workshop/player/items/heavy/eotl_sheavyshirt/eotl_sheavyshirt"
 			"capabilities"
 			{
@@ -56480,7 +56472,7 @@
 			"prefab"		"no_craft misc"
 			"item_name"		"#TF_EOTL_coldfront_curbstompers"
 			"item_description"		"#TF_coldfront_curbstompers_Desc"
-			"equip_region"		"hat"
+			"equip_region"		"feet"
 			"image_inventory"		"backpack/workshop/player/items/soldier/coldfront_curbstompers/coldfront_curbstompers"
 			"capabilities"
 			{
