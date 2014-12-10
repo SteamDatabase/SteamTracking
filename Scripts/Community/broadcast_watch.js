@@ -220,6 +220,10 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 		{
 			_watch.ShowVideoError( _watch.AddBroadcasterName( '%s\'s client must be updated to support Steam Broadcasting' ) );
 		}
+		else if ( data.success == 'poor_upload_quality' )
+		{
+			_watch.ShowVideoError( _watch.AddBroadcasterName( '%s is currently unable to maintain a stable broadcast connection to Steam.' ) );
+		}
 		else if ( data.success == 'request_failed' )
 		{
 			_watch.ShowVideoError( 'Failed to load this broadcast' );

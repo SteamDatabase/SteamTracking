@@ -5,10 +5,6 @@ body.chat_body {
 }
 
 .chat_page {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_background.png');
-	background-position: center 105px;
-	background-color: #262627;
-	background-repeat: no-repeat;
 	min-width: 599px;	/* .maincontent min-width + .maincontent margins */
 	padding: 0 12px;
 }

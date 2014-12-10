@@ -1277,6 +1277,11 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	margin-right: 10px;
 }
 
+.collectionItem .admin_stats
+{
+	float: right;
+	color: #b7a874
+}
 
 .collectionItem .general_btn.subscribe
 {

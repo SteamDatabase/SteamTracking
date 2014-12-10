@@ -548,14 +548,14 @@ BuyItemDialog = {
 		var bNoWallet = g_rgWalletInfo['wallet_currency'] == 0;
 		var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
 		var rgListing = g_rgListingInfo[listingid];
-		if ( rgListing['converted_fee'] > 0 )
+		if ( rgListing['converted_fee_per_unit'] > 0 )
 		{
-			this.m_nSubtotal = rgListing['converted_price'];
-			this.m_nFeeAmount = rgListing['converted_fee'];
-			this.m_nTotal = rgListing['converted_price'] + rgListing['converted_fee'];
+			this.m_nSubtotal = rgListing['converted_price_per_unit'];
+			this.m_nFeeAmount = rgListing['converted_fee_per_unit'];
+			this.m_nTotal = rgListing['converted_price_per_unit'] + rgListing['converted_fee_per_unit'];
 
-			var nFeePublisher = rgListing['converted_publisher_fee'];
-			var nFeeSteam = rgListing['converted_steam_fee'];
+			var nFeePublisher = rgListing['converted_publisher_fee_per_unit'];
+			var nFeeSteam = rgListing['converted_steam_fee_per_unit'];
 
 			if ( this.m_nFeeAmount != nFeePublisher + nFeeSteam || this.m_nTotal != this.m_nSubtotal + nFeePublisher + nFeeSteam )
 			{
@@ -583,9 +583,9 @@ BuyItemDialog = {
 		}
 		else
 		{
-			this.m_nSubtotal = rgListing['converted_price'];
+			this.m_nSubtotal = rgListing['converted_price_per_unit'];
 			this.m_nFeeAmount = 0;
-			this.m_nTotal = rgListing['converted_price'];
+			this.m_nTotal = rgListing['converted_price_per_unit'];
 			$('market_buynow_dialog_totals').hide();
 		}
 
@@ -649,6 +649,7 @@ BuyItemDialog = {
 		}
 
 		var oItemName = oListingRow.select('.market_listing_item_name').first();
+		oItemName.update( this.m_item.name.escapeHTML() ); // Remove any quantity from the item name
 		oItemName.id = oItemName.id + 'Copy';
 		oListingTableRows.appendChild( oListingRow );
 
@@ -725,7 +726,8 @@ BuyItemDialog = {
 				currency: g_rgWalletInfo['wallet_currency'],
 				subtotal: this.m_nSubtotal,
 				fee: this.m_nFeeAmount,
-				total: this.m_nTotal
+				total: this.m_nTotal,
+				quantity: 1
 			},
 			crossDomain: true,
 			xhrFields: { withCredentials: true }

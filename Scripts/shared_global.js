@@ -1341,6 +1341,18 @@ WebStorage = {
 // takes an integer
 function v_numberformat( n, decimals )
 {
+	if ( typeof Number != 'undefined' && typeof Number.toLocaleString != 'undefined' )
+	{
+		var options = {};
+		if ( typeof decimals != 'undefined' && decimals !== 0 )
+		{
+			options.minimumFractionDigits = decimals;
+			options.maximumFractionDigits = decimals;
+		}
+
+		return n.toLocaleString( false, options );
+	}
+
 	var str = '' + ( n ? n : 0 );
 	var len = str.indexOf( '.' );
 	if ( len == -1 )

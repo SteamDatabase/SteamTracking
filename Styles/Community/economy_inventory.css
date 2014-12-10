@@ -323,6 +323,10 @@ a.games_list_tab:hover {
 	overflow: hidden;
 }
 
+#contextselect .context_name {
+	padding-right: 37px;
+}
+
 #contextselect_options .context_name {
 	color: #cac9c9;
 	border-bottom: 1px solid #6c6c6c;
@@ -825,5 +829,7 @@ body.migrated_profile_page .inventory_rightnav {
 .item_market_action_button {
 	margin-right: 10px;
 }
+
+
 
 

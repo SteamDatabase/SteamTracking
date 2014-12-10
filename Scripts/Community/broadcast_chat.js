@@ -40,8 +40,8 @@ CBroadcastChat.s_MessageRetryMax = 4;
 CBroadcastChat.s_MessageRetryDelay = 500;
 CBroadcastChat.s_regexEmoticons = new RegExp( '\u02D0([^\u02D0]*)\u02D0', 'g' );
 CBroadcastChat.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)', 'gi' );
-CBroadcastChat.s_regexDomain = new RegExp( 'https?://[^/?]*?((?:[^/?]+\.)?([^/?]+\.[^/?]+))(?:[/?]|$)', 'i' );
-CBroadcastChat.s_regexValveDomains = new RegExp( '^https?://[^/?]*(?:valvesoftware|steamcommunity|steampowered)\.com(?:/|$)', 'i' );
+CBroadcastChat.s_regexDomain = new RegExp( '^(?:https?://)?([^/?#]+?\\.)?(([^/?#.]+?)\\.([^/?#]+?))(?=[/?#]|$)', 'i' );
+CBroadcastChat.s_regexValveDomains = new RegExp( '^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)', 'i' );
 CBroadcastChat.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","digg.com","facebook.com","google.com","reddit.com","twitter.com","developconference.com","diygamer.com","gdconf.com","indiecade.com","kickstarter.com","indiegogo.com","moddb.com","oculusvr.com","tigsource.com","indiedb.com","1up.com","destructoid.com","engadget.com","escapistmagazine.com","gametrailers.com","gizmodo.com","guardiannews.com","guardian.co.uk","ifanzine.com","igf.com","ign.com","indiegamemag.com","kotaku.com","mobot.net","modojo.com","pcgamer.com","rockpapershotgun.com","shacknews.com","toucharcade.com","wired.com","wired.co.uk"];
 
 CBroadcastChat.prototype.GetChatID = function()
@@ -147,11 +147,10 @@ CBroadcastChat.prototype.RequestLoop = function()
 		url: this.m_strChatURL,
 		type: 'GET',
 		data: rgRequest,
-		dataType: 'text'
+		dataType: 'json'
 	})
-	.done( function( result )
+	.done( function( rgResponse )
 	{
-		var rgResponse = $J.parseJSON( result );
 		_chat.m_cConsecutiveErrors = 0;
 
 		// add any messages we received
@@ -278,14 +277,10 @@ CBroadcastChat.prototype.AddLinks = function( strHTML )
 			if ( !rgTLDCandidates )
 				return false;
 
-			// nested for-loops instead of indexOf or filter for compatibility with IE <9
-			for ( var i = rgTLDCandidates.length - 1; i >= 1; --i )
+			for ( var j = CBroadcastChat.m_rgWhitelistedDomains.length - 1; j >= 0; --j )
 			{
-				for ( var j = CBroadcastChat.m_rgWhitelistedDomains.length - 1; j >= 0; --j )
-				{
-					if ( CBroadcastChat.m_rgWhitelistedDomains[j] == rgTLDCandidates[i].toLowerCase() )
-						return true;
-				}
+				if ( CBroadcastChat.m_rgWhitelistedDomains[j] == rgTLDCandidates[2].toLowerCase() )
+					return true;
 			}
 			return false;
 		}();
@@ -293,7 +288,7 @@ CBroadcastChat.prototype.AddLinks = function( strHTML )
 		if ( bTrustedDomain )
 			return ( s1 + '<a href="' + s2 + '" class="whiteLink" target="_blank">' + s2 + '</a>' );
 		else
-			return ( s1 + '<a href="https://steamcommunity.com/linkfilter/' + s2 + '" class="whiteLink" target="_blank">' + s2 + '</a>' );
+			return ( s1 + '<a href="https://steamcommunity.com/linkfilter/?url=' + s2 + '" class="whiteLink" target="_blank">' + s2 + '</a>' );
 	} );
 
 	return strHTML;

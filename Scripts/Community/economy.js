@@ -457,6 +457,23 @@ var CInventory = Class.create( {
 		}
 	},
 
+	destroy: function()
+	{
+		if ( this.elInventory )
+		{
+			if ( this.elInventory.parentNode )
+				this.elInventory.remove();
+
+			this.elInventory = null;
+		}
+		if ( this.elTagContainer )
+		{
+			if ( this.elTagContainer.parentNode )
+				this.elTagContainer.remove();
+			this.elTagContainer = null;
+		}
+	},
+
 	getInventoryElement: function()
 	{
 		return this.elInventory;
@@ -469,7 +486,8 @@ var CInventory = Class.create( {
 
 	hide: function()
 	{
-		this.elInventory.hide();
+		if ( this.elInventory )
+			this.elInventory.hide();
 		if( this.elTagContainer )
 			this.elTagContainer.hide();
 	},
@@ -548,7 +566,7 @@ var CInventory = Class.create( {
 			elTagCategory.category_name = sCategoryName;
 
 			var elTagCategoryLabel = new Element( 'div', { 'class' : 'econ_tag_filter_category_label' } );
-			elTagCategoryLabel.update( rgCategory.name );
+			$J(elTagCategoryLabel).text( rgCategory.name );
 			elTagCategory.appendChild( elTagCategoryLabel );
 
 			var rgCategoryTags = [];
@@ -599,13 +617,13 @@ var CInventory = Class.create( {
 				if( rgTag.color )
 				{
 					var elTagName = new Element( 'span' );
-					elTagName.update( rgTag.name )
+					$J(elTagName).text( rgTag.name )
 					elTagName.style.color = "#" + rgTag.color;
 					elTagLabel.appendChild( elTagName );
 				}
 				else
 				{
-					elTagLabel.update( rgTag.name );
+					$J(elTagLabel).text( rgTag.name );
 				}
 
 				var elItemCount = new Element( 'span', { 'class' : 'econ_tag_count' } );
@@ -1447,10 +1465,15 @@ var CUser = Class.create( {
 		var oldInventory = rgContext.inventory;
 		rgContext.inventory = inventory;
 
-		if ( oldInventory && oldInventory.pageCurrent )
-			inventory.SetActivePage( oldInventory.pageCurrent );
+		if ( oldInventory )
+		{
+			if ( oldInventory.pageCurrent )
+				inventory.SetActivePage( oldInventory.pageCurrent );
 
-		if ( ( this == UserYou || g_bTradeOffer ) && !inventory.BIsPendingInventory() && !this.BIsSingleContextApp( inventory.appid ) )
+			oldInventory.destroy();
+		}
+
+		if ( ( this == UserYou || g_bTradeOffer ) && inventory.contextid != APPWIDE_CONTEXT && !inventory.BIsPendingInventory() && !this.BIsSingleContextApp( inventory.appid ) )
 		{
 			var appwideContext = this.GetContext( inventory.appid, APPWIDE_CONTEXT );
 			appwideContext.inventory.AddChildInventory( inventory );
@@ -1727,16 +1750,33 @@ CUserYou = Class.create( CUser, {
 		if ( context && context.inventory )
 		{
 			this.rgReapplyFilterTags = Filter.rgCurrentTags;
-			this.loadInventory( appid, contextid );
+			var NewInventory = this.loadInventory( appid, contextid );
+
 			if ( !this.BIsSingleContextApp( appid ) )
 			{
 				var appwideContext = this.GetContext( appid, APPWIDE_CONTEXT );
-				appwideContext.inventory.OnInventoryReload( contextid );
+				var appwideInventory = appwideContext.inventory;
+
+				var newAppwideInventory = new CAppwideInventory( this, appid, appwideInventory.rgContextIds );
+				this.addInventory( newAppwideInventory );
+				for ( var sContextID in appwideInventory.rgChildInventories )
+				{
+					if ( sContextID != contextid )
+					{
+						var ChildInventory = appwideInventory.rgChildInventories[sContextID];
+						ChildInventory.bNeedsRepagination = true;
+						newAppwideInventory.AddChildInventory( ChildInventory );
+					}
+				}
+
+				var elNewAppwideInventory = newAppwideInventory.getInventoryElement();
+				elNewAppwideInventory.hide();
+				$('inventories').insert( elNewAppwideInventory );
 			}
 
 			if ( g_ActiveInventory && g_ActiveInventory.appid == appid && ( g_ActiveInventory.contextid == contextid || g_ActiveInventory.contextid == APPWIDE_CONTEXT ) )
 			{
-				ShowItemInventory( appid, g_ActiveInventory.contextid );
+				ShowItemInventory( appid, g_ActiveInventory.contextid, g_ActiveInventory.selectedItem ? g_ActiveInventory.selectedItem.id : null );
 			}
 		}
 	},
@@ -1746,13 +1786,16 @@ CUserYou = Class.create( CUser, {
 		if ( g_bIsTrading && !this.BAllowedToTradeItems( appid, contextid ) )
 		{
 			// not allowed to trade, so we just create an empty inventory
-			this.addInventory( new CInventory( this, appid, contextid, null, null ) );
-			return;
+			var EmptyInventory = new CInventory( this, appid, contextid, null, null );
+			this.addInventory( EmptyInventory );
+			return EmptyInventory;
 		}
 		this.cLoadsInFlight++;
-		this.addInventory( new CForeignInventoryPending( this, appid, contextid, null ) );
-		var thisClosure = this;
 
+		var PendingInventory = new CForeignInventoryPending( this, appid, contextid, null );
+		this.addInventory( PendingInventory );
+
+		var thisClosure = this;
 		var params = {};
 		if ( g_bIsTrading || g_bShowTradableItemsOnly )
 			params.trading = 1;
@@ -1767,6 +1810,8 @@ CUserYou = Class.create( CUser, {
 				null,
 				function( transport ) { thisClosure.OnLoadInventoryComplete( transport, appid, contextid ); }
 		);
+
+		return PendingInventory;
 	},
 
 	// an obj with .appid and .contextid
@@ -2303,7 +2348,7 @@ function BuildHover( prefix, item, owner )
 		$(prefix+'_game_icon').src = rgAppData.icon;
 		$(prefix+'_game_icon').alt = rgAppData.name;
 		$JFromIDOrElement(prefix+'_game_name').text( rgAppData.name );
-		$(prefix+'_item_type').update( item.type );
+		$JFromIDOrElement(prefix+'_item_type').text( item.type );
 		$(prefix+'_game_info').show();
 	}
 	else
@@ -2355,6 +2400,7 @@ function BuildHover( prefix, item, owner )
 		PopulateTags( elTags, elTagsContent, item.tags );
 	}
 
+	
 	var elMarketActions = $(prefix+'_item_market_actions');
 	if ( elMarketActions )
 	{
@@ -2484,7 +2530,7 @@ function PopulateTags( elTags, elTagsContent, rgTags )
 	if( sTagList != "" )
 	{
 		elTags.show();
-		elTagsContent.update( sTagList );
+		$J(elTagsContent).text( sTagList );
 	}
 	else
 	{
@@ -2509,6 +2555,7 @@ function CreateMarketActionButton( color, href, text )
 
 	return elButton;
 }
+
 
 function PopulateMarketActions( elActions, item )
 {
@@ -2683,6 +2730,8 @@ SellItemDialog = {
 			this.Initialize();
 
 		this.m_bWaitingForUserToConfirm = false;
+		this.m_nConfirmedPrice = 0;
+		this.m_nConfirmedQuantity = 0;
 
 		$('market_sell_quantity_input').style.borderColor = '';
 		$('market_sell_currency_input').style.borderColor = '';
@@ -2732,7 +2781,7 @@ SellItemDialog = {
 			elItemImage.src = ImageURL( item.icon_url, '96f', '96f' );
 
 		this.m_strEscapedName = GetNameForItem( item ).escapeHTML();
-		$('market_sell_dialog_item_name').update( this.m_strEscapedName );
+		$('market_sell_dialog_item_name').update( item.name.escapeHTML() );
 		$('market_sell_quantity_available_amt').update( item.amount );
 
 		if ( item.name_color )
@@ -2765,12 +2814,14 @@ SellItemDialog = {
 			$('market_sell_quantity_label').hide();
 			$('market_sell_quantity_input').hide();
 			$('market_sell_quantity_available').hide();
+			$('market_sell_dialog_total_youreceive' ).hide();
 		}
 		else
 		{
 			$('market_sell_quantity_label').show();
 			$('market_sell_quantity_input').show();
 			$('market_sell_quantity_available').show();
+			$('market_sell_dialog_total_youreceive' ).show();
 		}
 
 		this.m_fnDocumentKeyHandler = this.OnDocumentKeyPress.bindAsEventListener( this );
@@ -2780,6 +2831,7 @@ SellItemDialog = {
 		$('market_sell_quantity_input').value = 1;
 		$('market_sell_currency_input').value = GetCurrencySymbol( currencyCode );
 		$('market_sell_buyercurrency_input').value = GetCurrencySymbol( currencyCode );
+		$('market_sell_dialog_total_youreceive_amount').update( GetCurrencySymbol( currencyCode ) );
 
 		showModal( 'market_sell_dialog', true );
 		$('market_sell_currency_input').focus();
@@ -2885,8 +2937,18 @@ SellItemDialog = {
 			return 0;
 		}
 
-		nAmount = parseInt( strAmount.replace( /[,.]/g, '' ) );
-		nAmount = Math.max( nAmount, 1 );
+		strAmount = strAmount.replace( /[,.]/g, '' );
+		if ( !strAmount || strAmount.length == 0 )
+		{
+			return 0;
+		}
+
+		nAmount = parseInt( strAmount );
+		if ( isNaN( nAmount ) )
+		{
+			return 0;
+		}
+
 		return nAmount;
 	},
 
@@ -2909,11 +2971,15 @@ SellItemDialog = {
 		var buyerPrice = this.GetBuyerPriceAsInt();
 		var quantity = this.GetQuantityAsInt();
 
-		if ( quantity > this.m_item.amount )
+		if ( quantity < 1 || quantity > this.m_item.amount )
 		{
 			$('market_sell_quantity_input').style.borderColor = 'red';
+			this.DisplayError( 'You must enter a valid quantity.' );
 			return;
 		}
+
+		this.RecalculateTotal( price, quantity );
+		$( 'market_sell_quantity_input' ).value = quantity;
 
 		// If the price entered exceeds the maximum allowed, prevent the sale.
 		if ( buyerPrice > g_rgWalletInfo['wallet_trade_max_balance'] || price > g_rgWalletInfo['wallet_trade_max_balance'] )
@@ -3058,7 +3124,16 @@ SellItemDialog = {
 		if ( transport.responseJSON )
 		{
 			this.Dismiss();
-			$('market_headertip_itemsold_itemname').update( this.m_strEscapedName );
+
+			if ( this.m_nConfirmedQuantity > 1 )
+			{
+				$( 'market_headertip_itemsold_itemname' ).update( v_numberformat( this.m_nConfirmedQuantity ) + ' ' + this.m_item.name.escapeHTML() );
+			}
+			else
+			{
+				$( 'market_headertip_itemsold_itemname' ).update( this.m_item.name.escapeHTML() );
+			}
+
 			if ( this.m_item.name_color )
 			{
 				$('market_headertip_itemsold_itemname').style.color = '#' + this.m_item.name_color;
@@ -3126,6 +3201,7 @@ SellItemDialog = {
 	OnInputKeyUp: function( event ) {
 		var inputValue = this.GetPriceAsInt();
 		var nAmount = inputValue;
+		var quantity = this.GetQuantityAsInt();
 		
 		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
@@ -3133,12 +3209,15 @@ SellItemDialog = {
 			var publisherFee = typeof this.m_item.market_fee != 'undefined' ? this.m_item.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
 			var info = CalculateAmountToSendForDesiredReceivedAmount( nAmount, publisherFee );
 			$('market_sell_buyercurrency_input').value = v_currencyformat( info.amount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
+
+			this.RecalculateTotal( nAmount, quantity );
 		}
 	},
 
 	OnBuyerPriceInputKeyUp: function( event ) {
 		var inputValue = this.GetBuyerPriceAsInt();
 		var nAmount = inputValue;
+		var quantity = this.GetQuantityAsInt();
 
 		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
@@ -3147,6 +3226,21 @@ SellItemDialog = {
 			var feeInfo = CalculateFeeAmount( nAmount, publisherFee );
 			nAmount = nAmount - feeInfo.fees;
 			$('market_sell_currency_input').value = v_currencyformat( nAmount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
+
+			this.RecalculateTotal( nAmount, quantity );
+		}
+	},
+
+	RecalculateTotal: function( nAmount, quantity ) {
+		if ( quantity > 0 )
+		{
+			$( 'market_sell_dialog_total_youreceive_amount' ).update( v_currencyformat( nAmount * quantity,
+					GetCurrencyCode( g_rgWalletInfo['wallet_currency'] )
+			) );
+		}
+		else
+		{
+			$( 'market_sell_dialog_total_youreceive_amount' ).update( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
 		}
 	}
 }

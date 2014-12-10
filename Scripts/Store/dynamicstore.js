@@ -393,7 +393,7 @@ GDynamicStore = {
 	BIsPackageIgnored: function( packageid )
 	{
 		return GDynamicStore.s_rgIgnoredPackages[packageid] ? true: false;
-	},
+	}
 };
 
 GStoreItemData = {
@@ -593,7 +593,7 @@ GStoreItemData = {
 			return false;
 
 		return true;
-	},
+	}
 
 };
 
