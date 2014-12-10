@@ -605,6 +605,16 @@ a.market_dialog_title_cancel:hover .market_dialog_title_cancel_X {
 	text-align: center;
 }
 
+#market_sell_dialog_input_boxes {
+	white-space: nowrap;
+}
+
+.market_sell_dialog_input_multiline {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+
 #market_sell_dialog_error {
 	margin-top: 12px;
 }
@@ -670,8 +680,17 @@ input.market_dialog_input:focus {
 }
 
 #market_sell_currency_input, #market_sell_buyercurrency_input {
-	padding: 0 0.5em;
+	margin-bottom: 4px;	padding: 0 0.5em;
 	width: 7em;
+}
+
+#market_price_includesfees {
+	display: inline-block;
+	vertical-align: text-top;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100px;
 }
 
 #market_sell_dialog_confirm_buttons .market_dialog_bottom_buttons {

@@ -297,7 +297,7 @@ function UpdateSmallCapControl( targetid, delta, pageSize, totalCount )
 
 var g_HoverState = {
 	target: null,
-	hiding: false,
+	hiding: false
 }
 
 function GetHoverState( $Elem )
@@ -874,7 +874,9 @@ function CSlider( $Container, $Grabber, args )
 		$J(document).on( 'mouseup.CSlider', function( event ) {
 			$J(document).off('.CSlider');
 			_this.m_fnOnChange( _this.m_nValue, false );
-		})
+		});
+
+		event.preventDefault();
 	});
 }
 

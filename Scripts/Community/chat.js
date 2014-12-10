@@ -21,22 +21,23 @@ function CChatFriend( rgFriendData, fnOnClick )
 	this.m_rgPersonaStatusElements = [];
 
 	this.m_rgPersonaStateChangeListeners = [];
+	this.m_nRetryTimeoutID = 0;
 }
 
 CChatFriend.s_rgPersonaElementTypes = [ 'UnreadMessageElements', 'PersonaNameElements', 'PersonaStatusDescriptionElements', 'PersonaStatusElements' ];
 
 CChatFriend.prototype.ReadPersonaFields = function( rgFriendData )
 {
-	this.m_strName = rgFriendData.m_strName;
+	this.m_strName = rgFriendData.m_strName || '';
 	this.m_strNameNormalized = this.m_strName.toLowerCase();
 
 
-	this.m_ePersonaState = rgFriendData.m_ePersonaState;
-	this.m_nPersonaStateFlags = rgFriendData.m_nPersonaStateFlags;
-	this.m_strAvatarHash = rgFriendData.m_strAvatarHash;
-	this.m_bInGame = rgFriendData.m_bInGame;
-	this.m_nInGameAppID = rgFriendData.m_nInGameAppID;
-	this.m_strInGameName = rgFriendData.m_strInGameName;
+	this.m_ePersonaState = rgFriendData.m_ePersonaState || 0;
+	this.m_nPersonaStateFlags = rgFriendData.m_nPersonaStateFlags || 0;
+	this.m_strAvatarHash = rgFriendData.m_strAvatarHash || 'fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb';
+	this.m_bInGame = rgFriendData.m_bInGame || false;
+	this.m_nInGameAppID = rgFriendData.m_nInGameAppID || 0;
+	this.m_strInGameName = rgFriendData.m_strInGameName || '';
 }
 
 // callbacks will be passed a reference to this object when persona state changes
@@ -45,21 +46,32 @@ CChatFriend.prototype.RegisterOnPersonaStateChange = function ( fnOnChange )
 	this.m_rgPersonaStateChangeListeners.push( fnOnChange );
 }
 
-CChatFriend.prototype.Refresh = function()
+CChatFriend.prototype.Refresh = function( nRetryInterval )
 {
 	var _friend = this;
 	$J.ajax( {
 		url: 'https://steamcommunity.com/chat/friendstate/' + this.m_unAccountID,
 		type: 'GET'
-	}).done( function( data ) { _friend.OnRefreshedData( data ); } );
+	}).done( function( data ) { _friend.OnRefreshedData( data, nRetryInterval ); } );
 }
 
-CChatFriend.prototype.OnRefreshedData = function( data )
+CChatFriend.prototype.OnRefreshedData = function( data, nRetryInterval )
 {
-	if ( data )
+	if ( data && typeof data.m_strName != 'undefined' )
 	{
 		this.ReadPersonaFields( data );
 		this.OnPersonaStateChange();
+	}
+	else
+	{
+		// missing data in results - try again in a little bit
+		var nNextRetry = nRetryInterval ? nRetryInterval * 2 : 500;
+
+		if ( this.m_nRetryTimeoutID )
+			window.clearTimeout( this.m_nRetryTimeoutID );
+
+		var _friend = this;
+		this.m_nRetryTimeoutID = window.setTimeout( function() { _friend.Refresh( nNextRetry ); }, nNextRetry );
 	}
 }
 
@@ -617,11 +629,11 @@ function CWebChatDialog( Chat, elDialog, elContent )
 }
 
 CWebChatDialog.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)', 'gi' );
-CWebChatDialog.s_regexDomain = new RegExp( '^(?:https?://)?([^/?#]+\.)?(([^/?#.]+)\.([^/?#]+))(?:[/?#]|$)', 'i' );
+CWebChatDialog.s_regexDomain = new RegExp( '^(?:https?://)?([^/?#]+?\\.)?(([^/?#.]+?)\\.([^/?#]+?))(?=[/?#]|$)', 'i' );
 CWebChatDialog.s_regexEmoticons = new RegExp( '\u02D0([^\u02D0]*)\u02D0', 'g' );
 CWebChatDialog.s_regexMyEmoticons = null;
 
-CWebChatDialog.s_regexValveDomains = new RegExp( '^https?://[^/?]*(?:valvesoftware|steamcommunity|steampowered)\.com(?:/|$)', 'i' );
+CWebChatDialog.s_regexValveDomains = new RegExp( '^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)', 'i' );
 CWebChatDialog.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","digg.com","facebook.com","google.com","reddit.com","twitter.com","developconference.com","diygamer.com","gdconf.com","indiecade.com","kickstarter.com","indiegogo.com","moddb.com","oculusvr.com","tigsource.com","indiedb.com","1up.com","destructoid.com","engadget.com","escapistmagazine.com","gametrailers.com","gizmodo.com","guardiannews.com","guardian.co.uk","ifanzine.com","igf.com","ign.com","indiegamemag.com","kotaku.com","mobot.net","modojo.com","pcgamer.com","rockpapershotgun.com","shacknews.com","toucharcade.com","wired.com","wired.co.uk"];
 
 CWebChatDialog.prototype.AppendChatMessage = function( Sender, timestamp, strMessage, eMessageType )

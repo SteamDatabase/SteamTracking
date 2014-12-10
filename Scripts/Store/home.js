@@ -1348,7 +1348,7 @@ var g_bDisableAutoloader = false;
 	$.fn.pagedautoloader = function( options ) {
 		var settings = $.extend({
 			triggerStart: 0,
-			template_url: false,
+			template_url: false
 		}, options );
 
 
