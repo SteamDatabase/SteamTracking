@@ -820,7 +820,7 @@ function ShowTradeOffer( tradeOfferID, rgParams )
 
 	var strKey = ( tradeOfferID == 'new' ? 'NewTradeOffer' + rgParams['partner'] : 'TradeOffer' + tradeOfferID );
 
-	var winHeight = 948;
+	var winHeight = 1120;
 	if ( Steam.BIsUserInSteamClient() && Steam.GetClientPackageVersion() < 1407800248 )
 	{
 		// workaround for client break when the popup window is too tall for the screen.  Try and pick a height that will fit here.
