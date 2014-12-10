@@ -944,6 +944,7 @@
 16CAsyncFileIOItem
 16CClientInventory
 16CContentManifest
+16CCookieContainer
 16CDepotCollection
 16CMediaController
 16CMsgBrowserReady
@@ -5765,6 +5766,7 @@ CreateChannel_w
 CreateChatRoom
 CreateConnections
 CreateConnectionSocket
+CreateCookieContainer
 CreateDefaultTransportChannel
 CreateEmergencyCodes
 CreateFriendsGroup
@@ -6886,6 +6888,7 @@ EAppType
 EAppUpdateError
 EAppUpdateState
 EAsyncGameSessionUserState
+EAudioRecorderInitResult
 eauth_session_response
 ebay.com
 Ebn_mont.c
@@ -8757,6 +8760,7 @@ GetGuestPassToRedeemSenderName
 gethostbyname
 gethostname
 GetHTTPDownloadProgressPct
+GetHTTPRequestWasTimedOut
 GetHTTPResponseBodyData
 GetHTTPResponseBodySize
 GetHTTPResponseHeaderSize
@@ -14573,6 +14577,8 @@ recipientInfos
 recipient-unavailable
 Reconfiguring
 ReconstructDepotFromManifestAndChunks
+RecordAudioInitFail_t
+RecordAudioInitFailure
 RecoverAuthenticator
 RecoverOldScreenshots
 recovery_code
@@ -14619,6 +14625,7 @@ Reject
 relative_mouse
 relayport.cc
 RELEASE
+ReleaseCookieContainer
 RELEASEDATE
 ReleaseGMSQuery
 ReleaseHTTPRequest
@@ -15468,11 +15475,15 @@ SetGameData
 SetGameDescription
 SetGameTags
 SetHeartbeatInterval
+SetHTTPRequestAbsoluteTimeoutMS
 SetHTTPRequestContextValue
+SetHTTPRequestCookieContainer
 SetHTTPRequestGetOrPostParameter
 SetHTTPRequestHeaderValue
 SetHTTPRequestNetworkActivityTimeout
 SetHTTPRequestRawPostBody
+SetHTTPRequestRequiresVerifiedCertificate
+SetHTTPRequestUserAgentInfo
 SetInGameVoiceSpeaking
 SetInt
 SetInt32

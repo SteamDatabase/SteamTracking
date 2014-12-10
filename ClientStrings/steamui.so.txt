@@ -11811,12 +11811,14 @@ SDL_JoystickUpdate
 SDL_NumJoysticks
 SDL_PumpEvents
 SDL_QuitSubSystem
+SDL_RaiseWindow
 SDL_SetHint
 SDL_ShowCursor
 SDL_ShowSimpleMessageBox
 SDL_TIMER_RESOLUTION
 SDL_UnionRect
 SDL_VIDEO_ALLOW_SCREENSAVER
+SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
 SDL_WasInit
 searchbuttontext
 SearchCommunityGroups

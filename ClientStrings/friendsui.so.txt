@@ -266,6 +266,7 @@
 25CPlayersSubCurrentPlayers
 25SharedLibraryNotification
 26CAppDownloadedNotification
+26CBroadcastRecordAudioError
 26CMsgFileLoadDialogResponse
 26CMsgLinkAtPositionResponse
 26CMsgSavePageToJPEGResponse
@@ -398,6 +399,7 @@
 9CCallbackI14CFriendsDialog20RichInviteReceived_tLb0EE
 9CCallbackI14CFriendsDialog20VoiceCallInitiated_tLb0EE
 9CCallbackI14CFriendsDialog21ParentalLockChanged_tLb0EE
+9CCallbackI14CFriendsDialog21RecordAudioInitFail_tLb0EE
 9CCallbackI14CFriendsDialog21TradeInviteReceived_tLb0EE
 9CCallbackI14CFriendsDialog21ViewerNeedsApproval_tLb0EE
 9CCallbackI14CFriendsDialog22BroadcastViewerState_tLb0EE
@@ -794,6 +796,7 @@ BroadcasterApproved
 BroadcasterIgnore
 BroadcastImageEnd
 BroadcastPublicStateNotification
+BroadcastRecordAudioErrorNotification
 BroadcastViewerNotification
 BrowserExitFullScreen
 browser_handle
@@ -895,6 +898,7 @@ CBroadcastApproveNotification
 CBroadcastInviteBar
 CBroadcastInviteNotification
 CBroadcastPublicState
+CBroadcastRecordAudioError
 CBroadcastViewerWatching
 cc_generic_services
 CChatActionsButton
@@ -2270,7 +2274,6 @@ joint-iso-itu-t
 JOINT-ISO-ITU-T
 JPEGMEM
 _Jv_RegisterClasses
-KAut5
 KEY_0
 KEY_1
 KEY_2
@@ -2788,6 +2791,7 @@ N14CFriendsDialog31CCallbackOnBroadcastViewerStateE
 N14CFriendsDialog31CCallbackOnViewerApprovalResultE
 N14CFriendsDialog32CCallbackOnChatRoomDlgSerializedE
 N14CFriendsDialog33CCallbackOnBroadcastInvitedToViewE
+N14CFriendsDialog33CCallbackOnRecordAudioInitFailureE
 N14CFriendsDialog35CCallbackOnUserRequestingFriendshipE
 N14CFriendsDialog36CCallbackOnPrimaryChatDestinationSetE
 N14CFriendsDialog38CCallbackOnFriendPublishedStatusUpdateE
@@ -3597,7 +3601,10 @@ SDL_GL_SetAttribute
 SDL_GL_SwapWindow
 SDL_InitSubSystem
 SDL_PumpEvents
+SDL_RaiseWindow
+SDL_SetHint
 SDL_ShowCursor
+SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
 SDL_WasInit
 sdsiCertificate
 searchbuttontext

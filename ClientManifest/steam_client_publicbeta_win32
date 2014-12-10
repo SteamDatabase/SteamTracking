@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1417829162"
+	"version"		"1418175755"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.58953b82bb3fd0a0a913f479996effd0ed3a5ca3"
@@ -62,9 +62,9 @@
 	}
 	"strings_en_all"
 	{
-		"file"		"strings_en_all.zip.3aac2f7d6e244adb1c2a4567c6689dc1994c44c0"
-		"checksum"		"3aac2f7d6e244adb1c2a4567c6689dc1994c44c0"
-		"size"		"116534"
+		"file"		"strings_en_all.zip.9138070b8683bcfcb8bb5e637b92505115832341"
+		"checksum"		"9138070b8683bcfcb8bb5e637b92505115832341"
+		"size"		"116992"
 	}
 	"strings_all"
 	{
@@ -82,10 +82,10 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.0bf7b9f4c490cb2bf32c165e7baa75a5be8292d3"
-		"checksum"		"0bf7b9f4c490cb2bf32c165e7baa75a5be8292d3"
-		"size"		"1550120"
-		"zipvz"		"public_all.zip.vz.bf513d635386ba610cf473591e8d9e307aba1642_751789"
+		"file"		"public_all.zip.f4d0c0b0ec938d4fb56eda3853a1ccb5e22554c6"
+		"checksum"		"f4d0c0b0ec938d4fb56eda3853a1ccb5e22554c6"
+		"size"		"1551315"
+		"zipvz"		"public_all.zip.vz.dd93320bf3ceab83130710aa36855b2594395744_751308"
 	}
 	"gamesforwindows_win32"
 	{
@@ -117,21 +117,21 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.6994975c3735b727b4ecc684769179e09cd0ef6d"
-		"checksum"		"6994975c3735b727b4ecc684769179e09cd0ef6d"
-		"size"		"28981903"
-		"zipvz"		"bins_win32.zip.vz.121d8f8ef7a0570b7e264e909f2de809c73a4a42_15924610"
+		"file"		"bins_win32.zip.adb1cf43c472124173f16469835c34d40db5ce62"
+		"checksum"		"adb1cf43c472124173f16469835c34d40db5ce62"
+		"size"		"29025893"
+		"zipvz"		"bins_win32.zip.vz.c85bb5e00772220074082f6006ef89a9f8dd6a63_15903229"
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.ae0c530498443e7df32b72da160c24041cd76ed5"
-		"checksum"		"ae0c530498443e7df32b72da160c24041cd76ed5"
-		"size"		"776412"
-		"zipvz"		"steam_win32.zip.vz.09401fa2e11d3983d1948e32119835bd6199a40c_630980"
+		"file"		"steam_win32.zip.e3b344517bc8161c28525b19a2bd27381ecda851"
+		"checksum"		"e3b344517bc8161c28525b19a2bd27381ecda851"
+		"size"		"776418"
+		"zipvz"		"steam_win32.zip.vz.0e347f94da038c037aa48a1bca644addd3cb0205_631251"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"778bbe7588c4fe3b292a07d0263da06a2ec7ca5e2935ed21d75e8829c7b598228f069c53704d0102ab60ef75c7fe71ab69c62ced6b3af7455c095da6ddb2240518c1be298d6522bc32cc733b836f023424f3084e10ebe1cdd781d4fd0e1a7b59e72cec4726fdf5d192eabbc92117f35be71594637c1d6e2e92986c6726dd2b37"
+	"win32"		"144664daf7556901c1fadf79228382a6c364c16c3cb8000307f4fb76a5cb7a2c1e4ee5855f5d93909e52e31a7c06881f84f9fd5c98df05c21b03bd7fe37f342d47da592d89ab786871133cff4b41209417c7c7760c45a1846c42e9c63cc60d261a4a416f26903ebf4e0048944ca22c849d75ba282cf6d7a21905e2bf0b6ed7c1"
 }

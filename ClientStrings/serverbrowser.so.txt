@@ -1619,7 +1619,10 @@ SDL_GL_SetAttribute
 SDL_GL_SwapWindow
 SDL_InitSubSystem
 SDL_PumpEvents
+SDL_RaiseWindow
+SDL_SetHint
 SDL_ShowCursor
+SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
 SDL_WasInit
 searchbuttontext
 section
