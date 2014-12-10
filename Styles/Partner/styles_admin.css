@@ -2351,15 +2351,18 @@ html, body { height:100%; }
 	color: #8BB006;
 }
 .option_header {
-	font-weight: bold;
+	font-weight: normal;
 	font-size: 14px;
-	color: #b2b2b2;
+	color: #00adee;
 	margin-top: 10px;
 }
+.admin_new .option_header {
+	margin-top: 0px;
+}
 .option_title {
-	font-size: 11px;
-	text-transform: uppercase;
-	color: #ab9569;
+	font-size: 12px;
+	color: #B5976D;
+	vertical-align: text-top;
 }
 .option_title span {
 	color: #7f8184;
@@ -2408,4 +2411,9 @@ html, body { height:100%; }
 .landingTable .auction_app_highlight_link, .landingTable .auction_app_highlight_link a {
 	background-color: white;
 	color: black;
+}
+
+.AllPagesContent
+{
+    padding-bottom: 128px;
 }

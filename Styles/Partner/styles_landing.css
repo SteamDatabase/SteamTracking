@@ -4,6 +4,7 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: normal;
 	font-size: 13px;
+    	height: 100%;
 }
 
 #pageContainer {
@@ -780,7 +781,7 @@ h2.incomplete {
 
 .AdminPageContent {
 	margin: 12px 0 0 0;
-	padding-bottom: 138px;
+	padding-bottom: 128px;
 }
 
 .AdminPageContent.FullWidth {
@@ -931,6 +932,7 @@ input {
 	color: #E2C58B;
 	position: absolute;
 	bottom:0;
+    	left: 0;
 	height: 128px;
 	width: 100%;
 }
@@ -1980,4 +1982,22 @@ a.pagelink:hover {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+.appCompleter
+{
+    position: absolute;
+    display: inline;
+    padding: 7px 0 0 14px;
+}
+input#appAutoHeader_compl
+{
+    box-shadow: none;
+    float: right;
+}
+div#appAutoHeader_list
+{
+    width: 455px !important;
+    left: -293px !important;
+    top: 32px !important;
 }
