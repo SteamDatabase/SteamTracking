@@ -81,7 +81,10 @@ CBroadcastPlayer.prototype.Close = function()
 	this.m_loaders = [];
 	if ( this.m_mediaSource )
 	{
-		this.m_mediaSource.endOfStream();
+		$J( this.m_mediaSource ).off( '.BroadcastPlayerEvents' );
+		if ( this.m_mediaSource.readyState != 'closed' )
+			this.m_mediaSource.endOfStream();
+
 		this.m_mediaSource = null;
 	}
 
@@ -91,6 +94,14 @@ CBroadcastPlayer.prototype.Close = function()
 	this.m_bIsWaiting = false;
 	this.m_bIsSeeking = false;
 	this.m_bExiting = false;
+}
+
+CBroadcastPlayer.prototype.CloseWithError = function()
+{
+	this.Close();
+
+	var event = new Event( 'playbackerror' );
+	this.m_elVideoPlayer.dispatchEvent( event );
 }
 
 CBroadcastPlayer.prototype.PlayMPD = function( strURL )
@@ -238,15 +249,30 @@ CBroadcastPlayer.prototype.InitVideoControl = function()
 
 	// need to wait for the source to open then can add buffers
 	var _player = this;
-	mediaSource.addEventListener( 'sourceopen', function( e )
-	{
-		for ( var i = 0; i < _player.m_loaders.length; i++ )
-		{
-			_player.m_loaders[i].SetMediaSource( mediaSource );
-		}
+	$J( mediaSource ).on( 'sourceopen.BroadcastPlayerEvents', function() { _player.OnMediaSourceOpen(); });
+	$J( mediaSource ).on( 'sourceended.BroadcastPlayerEvents', function( e ) { _player.OnMediaSourceEnded( e ); });
+	$J( mediaSource ).on( 'sourceclose.BroadcastPlayerEvents', function( e ) { _player.OnMediaSourceClose( e ); });
+}
 
-		_player.BeginPlayback();
-	});
+CBroadcastPlayer.prototype.OnMediaSourceOpen = function()
+{
+	for ( var i = 0; i < this.m_loaders.length; i++ )
+	{
+		this.m_loaders[i].SetMediaSource( this.m_mediaSource );
+	}
+
+	this.BeginPlayback();
+}
+
+CBroadcastPlayer.prototype.OnMediaSourceEnded = function( e )
+{
+	BroadcastLog( 'Media source ended' );
+}
+
+CBroadcastPlayer.prototype.OnMediaSourceClose = function( e )
+{
+		BroadcastLog( 'Media source closed' );
+	this.CloseWithError();
 }
 
 CBroadcastPlayer.prototype.BeginPlayback = function()
@@ -337,7 +363,6 @@ CBroadcastPlayer.prototype.OnSegmentDownloadFailed = function()
 
 CBroadcastPlayer.prototype.playerSeeking = function(_player)
 {
-	// BroadcastLog( "Seeking to " + SecondsToTime( _player.m_elVideoPlayer.currentTime ) );
 	this.m_bIsSeeking = true;
 	_player.m_nLastSeekTime = new Date().getTime();
 
@@ -384,6 +409,27 @@ CBroadcastPlayer.prototype.BIsLiveContent = function()
 	{
 		return true;
 	}
+}
+
+CBroadcastPlayer.prototype.GetPercentBuffered = function()
+{
+	var unVideoBuffered = 0;
+	var unAudioBuffered = 0 ;
+
+	for ( var i = 0; i < this.m_loaders.length; i++ )
+	{
+		if ( this.m_loaders[i].ContainsVideo() )
+		{
+			unVideoBuffered = Math.min( this.m_nVideoBuffer * 100 / CBroadcastPlayer.TRACK_BUFFER_MS, 100 );
+		}
+
+		if ( this.m_loaders[i].ContainsAudio() && !this.m_loaders[i].ContainsVideo() )
+		{
+			unAudioBuffered = Math.min( this.m_nAudioBuffer * 100 / CBroadcastPlayer.TRACK_BUFFER_MS, 100 );
+		}
+	}
+
+	return Math.min( unVideoBuffered, unAudioBuffered ).toFixed(0);
 }
 
 CBroadcastPlayer.prototype.GetLiveBufferWindow = function()
@@ -471,7 +517,6 @@ CBroadcastPlayer.prototype.UpdateRepresentation = function ( representationIndex
 			return;
 
 		// *** Adaptive Video Change
-		var unBandwidthAvailable = CBandwidthMonitor.GetBandwidthRate();
 		for (var i = 0; i < this.m_loaders.length; i++)
 		{
 			var newRepresentationIndex = this.m_loaders[i].GetRepresentationsCount() - 1;
@@ -479,10 +524,18 @@ CBroadcastPlayer.prototype.UpdateRepresentation = function ( representationIndex
 			if ( this.m_loaders[i].ContainsVideo() )
 			{
 				var nMaxRepresentations = this.m_loaders[i].GetRepresentationsCount() - 1;
+
+				// if we find there is only one representation, update to not-adaptive and get out
+				if (nMaxRepresentations == 0)
+				{
+					this.m_nVideoRepresentationIndex = newRepresentationIndex;
+					break;
+				}
+
 				for (var b = nMaxRepresentations; b >= 0; b--)
 				{
 					// proposed new video bit rate + current audio bit rate plus 20% overhead
-					if ( unBandwidthAvailable >= (this.m_loaders[i].m_adaptation.representations[b].bandwidth + this.m_nAudioBitRate) * 1.2 )
+					if ( this.m_nCurrentDownloadBitRate >= (this.m_loaders[i].m_adaptation.representations[b].bandwidth + this.m_nAudioBitRate) * 1.2 )
 					{
 						if (this.m_loaders[i].m_adaptation.representations[b].height != null)
 						{
@@ -558,6 +611,9 @@ CBroadcastPlayer.prototype.WaitForRepresentationChangeToPlay = function ( player
 
 CBroadcastPlayer.prototype.UpdateStats = function()
 {
+	this.m_nCurrentDownloadBitRate = 0;
+	var nBandwidthCount = 0;
+
 	for (var i = 0; i < this.m_loaders.length; i++)
 	{
 		if (this.m_loaders[i].ContainsVideo())
@@ -572,20 +628,39 @@ CBroadcastPlayer.prototype.UpdateStats = function()
 
 			// used for playback
 			this.m_nPlayerHeight = $J(this.m_elVideoPlayer.parentNode).height();
-			this.m_nCurrentDownloadBitRate = CBandwidthMonitor.GetBandwidthRate();
+			this.m_nCurrentDownloadBitRate += this.m_loaders[i].GetBandwidthRate();
+			nBandwidthCount++;
 		}
 
 		if (this.m_loaders[i].ContainsAudio())
 		{
 			this.m_nAudioBuffer = this.m_loaders[i].GetAmountBufferedInPlayer();
-			this.m_nAudioBitRate = this.m_loaders[i].m_representation.bandwidth;
+
+			// if a muxed audio stream, mark audio bitrate as zero
+			// otherwise bandwidth needed will be calculated as double.
+			if (this.m_loaders[i].ContainsVideo())
+			{
+				this.m_nAudioBitRate = 0;
+			}
+			else
+			{
+				this.m_nAudioBitRate = this.m_loaders[i].m_representation.bandwidth;
+				this.m_nCurrentDownloadBitRate += this.m_loaders[i].GetBandwidthRate();
+				nBandwidthCount++;
+			}
 		}
+	}
+
+	// Get average download rate across all loaders
+	if ( nBandwidthCount > 1 )
+	{
+		this.m_nCurrentDownloadBitRate /= nBandwidthCount;
 	}
 }
 
 CBroadcastPlayer.prototype.StatsVideoBuffer = function()
 {
-	return (this.m_nVideoBuffer / 1024).toFixed(2);
+	return (this.m_nVideoBuffer / 1000).toFixed(2);
 }
 
 CBroadcastPlayer.prototype.StatsAudioBuffer = function()
@@ -605,12 +680,12 @@ CBroadcastPlayer.prototype.StatsPlaybackHeight = function()
 
 CBroadcastPlayer.prototype.StatsAudioBitRate = function()
 {
-	return (this.m_nAudioBitRate / 1024).toFixed(2);
+	return (this.m_nAudioBitRate / 1000).toFixed(2);
 }
 
 CBroadcastPlayer.prototype.StatsVideoBitRate = function()
 {
-	return (this.m_nVideoBitRate  / 1024).toFixed(2);
+	return (this.m_nVideoBitRate  / 1000).toFixed(2);
 }
 
 CBroadcastPlayer.prototype.StatsDownloadVideoWidth = function()
@@ -625,7 +700,7 @@ CBroadcastPlayer.prototype.StatsDownloadVideoHeight = function()
 
 CBroadcastPlayer.prototype.StatsCurrentDownloadBitRate = function()
 {
-	return (this.m_nCurrentDownloadBitRate / 1024).toFixed(2);
+	return (this.m_nCurrentDownloadBitRate / 1000).toFixed(2);
 }
 
 CBroadcastPlayer.prototype.StatsBufferInfo = function()
@@ -637,7 +712,7 @@ CBroadcastPlayer.prototype.StatsBufferInfo = function()
 		{
 			for (var v = 0; v < this.m_loaders[i].m_sourceBuffer.buffered.length; v++)
 			{
-				bufferString += "Video Buffer " + v + ": Start: " + SecondsToTime(this.m_loaders[i].m_sourceBuffer.buffered.start(v)) + " End: " + SecondsToTime(this.m_loaders[i].m_sourceBuffer.buffered.end(v)) + " ";
+				bufferString += "Video Buffer " + v + ": " + SecondsToTime(this.m_loaders[i].m_sourceBuffer.buffered.start(v)) + " - " + SecondsToTime(this.m_loaders[i].m_sourceBuffer.buffered.end(v)) + "<br>";
 			}
 		}
 
@@ -645,7 +720,7 @@ CBroadcastPlayer.prototype.StatsBufferInfo = function()
 		{
 			for (var a = 0; a < this.m_loaders[i].m_sourceBuffer.buffered.length; a++)
 			{
-				bufferString += "Audio Buffer " + a + ": Start: " + SecondsToTime(this.m_loaders[i].m_sourceBuffer.buffered.start(a)) + " End: " + SecondsToTime(this.m_loaders[i].m_sourceBuffer.buffered.end(a)) + " ";
+				bufferString += "Audio Buffer " + a + ": " + SecondsToTime(this.m_loaders[i].m_sourceBuffer.buffered.start(a)) + " - " + SecondsToTime(this.m_loaders[i].m_sourceBuffer.buffered.end(a)) + "<br>";
 			}
 		}
 	}
@@ -668,12 +743,18 @@ CBroadcastPlayer.prototype.StatsSegmentInfo = function()
 	{
 		if (this.m_loaders[i].ContainsVideo())
 		{
-			bufferString += "Video " + (this.m_loaders[i].m_nNextSegment) + "/" + (this.m_loaders[i].m_nTotalSegments - 1) + " ";
+			bufferString += "Video " + (this.m_loaders[i].m_nNextSegment);
+			if (!this.BIsLiveContent())
+				bufferString += "/" + (this.m_loaders[i].m_nTotalSegments - 1);
+			bufferString += ", ";
 		}
 
 		if (this.m_loaders[i].ContainsAudio())
 		{
-			bufferString += "Audio " + (this.m_loaders[i].m_nNextSegment) + "/" + (this.m_loaders[i].m_nTotalSegments - 1) + " ";
+			bufferString += "Audio " + (this.m_loaders[i].m_nNextSegment);
+			if (!this.BIsLiveContent())
+				bufferString += "/" + (this.m_loaders[i].m_nTotalSegments - 1);
+			bufferString += " ";
 		}
 	}
 
@@ -703,6 +784,11 @@ function CSegmentLoader( player, adaptationSet )
 	this.m_xhr = null;
 	this.m_schNextDownload = null;
 	this.m_schRetryDownload = null;
+	this.m_schWaitForBuffer = null;
+
+	// bandwidth monitoring
+	this.m_rgDownloadLog = [];
+	this.m_nDownloadLogSize = 4;
 }
 
 CSegmentLoader.s_BufferUpdateNone = 0;
@@ -735,6 +821,12 @@ CSegmentLoader.prototype.Close = function()
 		this.m_schRetryDownload = null;
 	}
 
+	if ( this.m_schWaitForBuffer )
+	{
+		clearTimeout( this.m_schWaitForBuffer );
+		this.m_schWaitForBuffer = null;
+	}
+
 	this.m_player = null;
 	this.m_mediaSource = null;
 	this.m_sourceBuffer = null;
@@ -753,16 +845,23 @@ CSegmentLoader.prototype.Close = function()
 	this.m_xhr = null;
 	this.m_schNextDownload = null;
 	this.m_schRetryDownload = null;
+	this.m_schWaitForBuffer = null;
 }
 
 CSegmentLoader.prototype.ContainsVideo = function()
 {
-	return this.m_adaptation.containsVideo;
+	if ( this.m_adaptation )
+		return this.m_adaptation.containsVideo;
+	else
+		return false;
 }
 
 CSegmentLoader.prototype.ContainsAudio = function()
 {
-	return this.m_adaptation.containsAudio;
+	if ( this.m_adaptation )
+		return this.m_adaptation.containsAudio;
+	else
+		return false;
 }
 
 CSegmentLoader.prototype.SetMediaSource = function( mediaSource )
@@ -822,7 +921,10 @@ CSegmentLoader.prototype.ChangeRepresentation = function( representation )
 	if ( !this.m_sourceBuffer )
 	{
 		this.m_sourceBuffer = this.m_mediaSource.addSourceBuffer( representation.mimeType + ';codecs=' + representation.codecs );
+		//BroadcastLog( representation.mimeType + ';codecs=' + representation.codecs );
 		$J( this.m_sourceBuffer ).on( 'updateend.SegmentLoaderEvents', function() { _loader.OnSourceBufferUpdateEnd() } );
+		$J( this.m_sourceBuffer ).on( 'error.SegmentLoaderEvents', function( e ) { _loader.OnSourceBufferError( e ) } );
+		$J( this.m_sourceBuffer ).on( 'abort.SegmentLoaderEvents', function( e ) { _loader.OnSourceBufferAbort( e ) } );
 	}
 }
 
@@ -845,8 +947,6 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 	// VOD ended?
 	if (this.m_nNextSegment > this.m_nTotalSegments)
 	{
-		// if (this.ContainsVideo()) BroadcastLog("Video Segments Complete");
-		// if (this.ContainsAudio()) BroadcastLog("Audio Segments Complete");
 		return;
 	}
 
@@ -859,7 +959,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 	xhr.send();
 	xhr.responseType = 'arraybuffer';
 
-	CBandwidthMonitor.StoreDownloadStart( url );
+	downloadStart = new Date().getTime();
 
 	try
 	{
@@ -892,7 +992,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 					segment.data = arr;
 					_loader.m_bufSegments.push( segment );
 
-					CBandwidthMonitor.StoreDownloadEnd(xhr.responseURL, segment.data.length);
+					_loader.LogDownload( xhr, downloadStart, segment.data.length );
 				}
 				catch (e)
 				{
@@ -930,7 +1030,7 @@ CSegmentLoader.prototype.DownloadNextSegment = function()
 		this.m_nNextSegment++;
 	}
 
-    this.DownloadSegment( url, nSegmentDuration );
+	this.DownloadSegment( url, nSegmentDuration );
 }
 
 CSegmentLoader.prototype.UpdateBuffer = function()
@@ -989,6 +1089,16 @@ CSegmentLoader.prototype.OnSourceBufferUpdateEnd = function()
 	this.UpdateBuffer();
 }
 
+CSegmentLoader.prototype.OnSourceBufferError = function( e )
+{
+	BroadcastLog( 'Source buffer error' );
+}
+
+CSegmentLoader.prototype.OnSourceBufferAbort = function( e )
+{
+	BroadcastLog( 'Source buffer update aborted' );
+}
+
 CSegmentLoader.prototype.DownloadFailed = function()
 {
 	this.m_player.OnSegmentDownloadFailed();
@@ -1029,7 +1139,16 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 
 	// next segment is available but buffer is full. Can wait on download
 	unDeltaMS = unAmountBuffered - CBroadcastPlayer.TRACK_BUFFER_MS;
-	this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, unDeltaMS );
+	if ( unAmountBuffered < ( CBroadcastPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CBroadcastPlayer.TRACK_BUFFER_MS )
+	{
+		// should be room in buffer in TRACK_BUFFER_MS time for next segment
+		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, unDeltaMS );
+	}
+	else
+	{
+		// no more room in buffer, don't download now. Check again soon.
+		this.m_schWaitForBuffer = setTimeout( function() { _loader.ScheduleNextDownload() }, unDeltaMS );
+	}
 }
 
 CSegmentLoader.prototype.BVideoBuffered = function()
@@ -1115,6 +1234,12 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 			this.m_schRetryDownload = null;
 		}
 
+		if ( this.m_schWaitForBuffer )
+		{
+			clearTimeout( this.m_schWaitForBuffer );
+			this.m_schWaitForBuffer = null;
+		}
+
 		// Set the next segment based on nSeekTime, -1 for start of the segment for the time.
 		var nSegmentTime = CMPDParser.GetSegmentForTime( this.m_adaptation, nSeekTime * 1000 ) - 1;
 		this.m_nNextSegment = Math.max( nSegmentTime, this.m_adaptation.segmentTemplate.startNumber );
@@ -1131,10 +1256,14 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 	else
 	{
 		// if not downloading, update next scheduled download in case we did a seek to the end of the buffered data
-		if ( !this.m_xhr && this.m_schNextDownload )
+		if ( ( !this.m_xhr && this.m_schNextDownload ) || this.m_schWaitForBuffer )
 		{
 			clearTimeout( this.m_schNextDownload );
 			this.m_schNextDownload = null;
+
+			clearTimeout( this.m_schWaitForBuffer );
+			this.m_schWaitForBuffer = null;
+
 			this.ScheduleNextDownload();
 		}
 	}
@@ -1156,11 +1285,59 @@ CSegmentLoader.prototype.RemoveAllBuffers = function()
 		{
 			this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateRemove;
 			this.m_sourceBuffer.remove( nBufferedStart, nBufferedEnd );
-			// BroadcastLog("Removing All " + (this.ContainsVideo() ? "Video" : "Audio") + " Buffered Data " + SecondsToTime(nBufferedStart) + " - " + SecondsToTime(nBufferedEnd) );
 		}
 	}
 
 	this.m_bRemoveBufferState = false;
+}
+
+CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes )
+{
+	// If CORS with Date Header is enabled, use it for cache check
+	var responseTime;
+	if (xhr.getAllResponseHeaders().indexOf("Date:") != -1)
+		responseTime = Date.parse( xhr.getResponseHeader( "Date" ));
+	else
+		responseTime = startTime;
+
+	// check if download wasn't from cache (startTime earlier than or equal to responseTime ... round to nearest second)
+	var startSeconds = Math.floor( startTime / 1000 );
+	var responseSeconds = responseTime / 1000;
+	if ( startSeconds <= responseSeconds || this.m_rgDownloadLog.length < this.m_nDownloadLogSize)
+	{
+		// remove the oldest log as needed
+		if ( this.m_rgDownloadLog.length > this.m_nDownloadLogSize )
+		{
+			this.m_rgDownloadLog.shift();
+		}
+
+		// store the download
+		var logEntry = [];
+		logEntry.downloadTime = (new Date().getTime()) - startTime;
+		logEntry.dataSizeBytes = dataSizeBytes;
+		this.m_rgDownloadLog.push( logEntry );
+	}
+}
+
+CSegmentLoader.prototype.GetBandwidthRate = function ()
+{
+	var nTotalTime = 0;
+	var nTotalDataSizeBits = 0;
+	for (var i = 0; i < this.m_rgDownloadLog.length; i++)
+	{
+		nTotalTime +=  this.m_rgDownloadLog[i].downloadTime;
+		nTotalDataSizeBits +=  this.m_rgDownloadLog[i].dataSizeBytes;
+	}
+
+	// return in bits (per second) as representation bandwidth is as well
+	if (nTotalTime != 0)
+	{
+		return ((nTotalDataSizeBits * 8) / (nTotalTime / 1000));
+	}
+	else
+	{
+		return 0;
+	}
 }
 
 /////////////////////////////////////////////////////////////////
@@ -1226,7 +1403,6 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 	if (baseUrl)
 	{
 		CMPDParser.strBaseURL = baseUrl.text();
-		BroadcastLog("BaseURL: " + CMPDParser.strBaseURL);
 	}
 
 	// grab all periods.. only support 1
@@ -1526,6 +1702,13 @@ CMPDParser.GetSegmentForTime = function( adaptationSet, unLiveEdge )
 	return Math.floor( unLiveEdge / unSegmentDuration ) + 1;
 }
 
+CMPDParser.prototype.GetPeriodDuration = function( unPeriod )
+{
+	if ( unPeriod < this.periods.length && this.periods[unPeriod].duration )
+		return this.periods[unPeriod].duration;
+	else
+		return 0;
+}
 
 /////////////////////////////////////////////////////////////////
 // UI
@@ -1540,6 +1723,8 @@ function CBroadcastPlayerUI( player )
 	this.m_elContainer = null;
 	this.m_timeoutHide = null;
 	this.m_bPlayingLiveEdge = true;
+	this.m_elVideoTitle = null;
+	this.m_elBufferingMessage = null;
 }
 
 CBroadcastPlayerUI.s_overlaySrc =	'<div class="html5_video_overlay">' +
@@ -1623,12 +1808,24 @@ CBroadcastPlayerUI.prototype.OnVideoInitialized = function()
 		this.m_elLiveBanner = null;
 	}
 
+	if ( !this.m_elBufferingMessage )
+	{
+		this.m_elBufferingMessage = $J( '<div id="VideoBufferingMessage"></div>' );
+		this.m_elContainer.append( this.m_elBufferingMessage );
+	}
+
+	if ( !this.m_elVideoTitle )
+	{
+		this.m_elVideoTitle = $J( '<div id="VideoTitleBanner"></div>' );
+		this.m_elContainer.append( this.m_elVideoTitle );
+	}
+
 	this.InitRepresentationsInUI();
 }
 
 CBroadcastPlayerUI.prototype.InitRepresentationsInUI = function()
 {
-    	var _ui = this;
+   	var _ui = this;
 	rgRepresentation = this.m_player.GetRepresentationsArray( true );
 
 	// show selector if only more than one video representation
@@ -1732,6 +1929,10 @@ CBroadcastPlayerUI.prototype.GetTimelineData = function()
 		nTimeStart = nBufferedStart;
 		nTimeEnd = Math.max( nBufferedEnd, this.m_player.GetLiveBufferWindow() + nBufferedStart );
 	}
+	else
+	{
+		nTimeEnd = this.m_player.m_mpd.GetPeriodDuration(0);
+	}
 
 	var rgRet = {};
 	rgRet.nBufferedStart = nBufferedStart;
@@ -1744,6 +1945,9 @@ CBroadcastPlayerUI.prototype.GetTimelineData = function()
 
 CBroadcastPlayerUI.prototype.OnTimeUpdatePlayer = function()
 {
+	// buffering should show/hide no matter if the UI is on screen
+	this.UpdateBufferingProgress();
+
 	if ( this.m_bHidden )
 		return;
 
@@ -1785,15 +1989,6 @@ CBroadcastPlayerUI.prototype.OnTimeUpdatePlayer = function()
 
 	$J( '.time', this.m_elOverlay ).text( timeString );
 
-	if (this.m_player.BIsWaiting())
-	{
-		$J( '.progress_bar').text("buffering");
-	}
-	else
-	{
-		$J( '.progress_bar').text("");
-	}
-
 	// show adaptive value when selected
 	var repVideo = $J("#representation_select_video");
 	if ( repVideo != null && !repVideo.is(":focus") )
@@ -1807,6 +2002,36 @@ CBroadcastPlayerUI.prototype.OnTimeUpdatePlayer = function()
 			$J( '#representation_select_video option:first' ).text("Auto");
 		}
 	}
+}
+
+CBroadcastPlayerUI.prototype.UpdateBufferingProgress = function()
+{
+	var buffMsg = $J( '#VideoBufferingMessage');
+	if ( this.m_player.BIsWaiting() && this.m_player.m_elVideoPlayer.readyState != CBroadcastPlayer.HAVE_NOTHING )
+	{
+		if ( this.m_player.GetPercentBuffered() != 100 )
+			buffMsg.text("Loading (" + this.m_player.GetPercentBuffered() + "%)").show();
+	}
+	else
+	{
+		if (buffMsg.text() != "")
+		{
+			if ( buffMsg.queue() == 0 )
+			{
+				buffMsg.text("Loading (100%)");
+				buffMsg.fadeOut(500, function()
+				{
+					buffMsg.text("");
+				});
+			}
+		}
+	}
+}
+
+CBroadcastPlayerUI.prototype.SetVideoTitle = function( strTitle )
+{
+	if ( $J('#VideoTitleBanner') )
+		$J( '#VideoTitleBanner' ).text( strTitle );
 }
 
 CBroadcastPlayerUI.prototype.JumpToLive = function()
@@ -2031,100 +2256,4 @@ function SecondsToTime( seconds )
 	return out + minutes + ":" + seconds;
 }
 
-
-/////////////////////////////////////////////////////////////////
-// Bandwidth Monitor for Adaptive Streaming
-/////////////////////////////////////////////////////////////////
-function CBandwidthMonitor()
-{
-
-}
-
-CBandwidthMonitor.s_DownloadLog = [];
-CBandwidthMonitor.s_DownloadLogSize = 4;
-
-CBandwidthMonitor.s_TestEnabled = false;
-CBandwidthMonitor.s_TestCount = 0;
-CBandwidthMonitor.s_TestBitRate = 2500000;
-
-CBandwidthMonitor.ClearDownloadLog = function()
-{
-	CBandwidthMonitor.s_DownloadLog = [];
-}
-
-CBandwidthMonitor.StoreDownloadStart = function ( url )
-{
-	CBandwidthMonitor.s_DownloadLog.push(new CBandwidthLog( url ));
-}
-
-CBandwidthMonitor.StoreDownloadEnd = function ( url, dataSizeBytes )
-{
-	// out of space, remove the oldest
-	if ( CBandwidthMonitor.s_DownloadLog.length > CBandwidthMonitor.s_DownloadLogSize )
-	{
-		CBandwidthMonitor.s_DownloadLog.shift();
-	}
-
-	// find the url and calculate the length of time
-	for (var i = 0; i < CBandwidthMonitor.s_DownloadLog.length; i++)
-	{
-		var logEntry = CBandwidthMonitor.s_DownloadLog[i];
-		if ( logEntry.m_url == url )
-		{
-			logEntry.m_downloadTime = (new Date().getTime()) - logEntry.m_startTime;
-			logEntry.m_dataSizeBytes = dataSizeBytes;
-			break;
-		}
-	}
-
-	if (CBandwidthMonitor.s_TestEnabled)
-	{
-		CBandwidthMonitor.s_TestCount++;
-		if (CBandwidthMonitor.s_TestCount > CBandwidthMonitor.s_DownloadLogSize)
-		{
-			CBandwidthMonitor.s_TestCount = 0;
-			CBandwidthMonitor.s_TestBitRate += Math.floor((Math.random() * 2000000) - 1000000);
-			CBandwidthMonitor.s_TestBitRate = Math.min(Math.max(CBandwidthMonitor.s_TestBitRate, 1250000), 6000000);
-		}
-	}
-}
-
-CBandwidthMonitor.GetBandwidthRate = function ()
-{
-	var nTotalTime = 0;
-	var nTotalDataSizeBits = 0;
-	for (var i = 0; i < CBandwidthMonitor.s_DownloadLog.length; i++)
-	{
-		if (CBandwidthMonitor.s_DownloadLog[i].m_downloadTime != Number.MAX_VALUE)
-		{
-			nTotalTime += CBandwidthMonitor.s_DownloadLog[i].m_downloadTime;
-			nTotalDataSizeBits += CBandwidthMonitor.s_DownloadLog[i].m_dataSizeBytes;
-		}
-	}
-
-	// return in bits (per second) as representation bandwidth is as well
-	if (nTotalTime != 0)
-	{
-		if (!CBandwidthMonitor.s_TestEnabled)
-		{
-			return ((nTotalDataSizeBits * 8) / (nTotalTime / 1000));
-		}
-		else
-		{
-			return CBandwidthMonitor.s_TestBitRate;
-		}
-	}
-	else
-	{
-		return 0;
-	}
-}
-
-function CBandwidthLog( url )
-{
-	this.m_startTime = new Date().getTime();
-	this.m_downloadTime = Number.MAX_VALUE;
-	this.m_url = url;
-	this.m_dataSizeBytes = 0;
-}
 

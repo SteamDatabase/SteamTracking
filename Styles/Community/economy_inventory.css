@@ -833,3 +833,24 @@ body.migrated_profile_page .inventory_rightnav {
 
 
 
+
+.item_scrap_actions {
+	padding: 11px;
+	min-height: 32px;
+	background-color: #1f2836;
+}
+
+.item_scrap_actions div {
+	margin-bottom: 8px;
+}
+
+.item_scrap_holiday_title {
+	font-size: 20px;
+	font-style: italic;
+	color: white;
+}
+
+.item_scrap_value {
+	color: #5b9ace;
+}
+

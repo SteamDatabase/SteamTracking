@@ -244,10 +244,14 @@ body.flat_page
 	bottom: 100px;
 	background-color: rgba(0,0,0,0.35);
 	box-shadow: 2px 2px 2px rgba(255,255,255,0.06);
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-}
+
+			display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		display: -webkit-inline-flex;
+		-webkit-align-items: center;
+		-webkit-justify-content: center;
+		}
 
 #LoadingVideoContent
 {
@@ -262,10 +266,13 @@ body.flat_page
 
 .LoadingVideo #LoadingVideoContent
 {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-}
+			display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		display: -webkit-inline-flex;
+		-webkit-align-items: center;
+		-webkit-justify-content: center;
+		}
 
 .ShowPlayer #LoadingContent
 {
@@ -841,10 +848,14 @@ body.flat_page
 	right: 0px;
 	top: 0px;
 	bottom: 0px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-}
+
+			display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		display: -webkit-inline-flex;
+		-webkit-align-items: center;
+		-webkit-justify-content: center;
+		}
 
 #LoadingViewerModal .LoadingWrapper
 {
@@ -1223,4 +1234,45 @@ body.flat_page
 {
 	background: rgba(55,55,55,0.9);
 	color: #fff;
+}
+
+#VideoBufferingMessage
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    padding: 20px;
+    background: rgba(80,80,80,0.5);
+    border-radius: 5px;
+    min-width: 150px;
+
+    font-family: 'Motiva Sans', Arial, sans-serfif;
+    font-size: 18px;
+    color: #EEEEEE;
+    line-height: 14px;
+    text-align: center;
+
+    display: none;
+
+}
+
+#VideoTitleBanner
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    color: #FFF;
+    font-family: 'Motiva Sans', Arial, sans-serfif;
+
+    opacity: 0.0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.ShowPlayerUI #VideoTitleBanner
+{
+    opacity: 1.0;
 }

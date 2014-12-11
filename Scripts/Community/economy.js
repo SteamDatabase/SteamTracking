@@ -2400,6 +2400,13 @@ function BuildHover( prefix, item, owner )
 		PopulateTags( elTags, elTagsContent, item.tags );
 	}
 
+			var elScrapActions = $(prefix+'_item_scrap_actions');
+		var elScrapAmount = $(prefix+'_item_scrap_value');
+		var elScrapLink = $(prefix+'_item_scrap_link');
+		if ( elScrapActions && elScrapAmount && elScrapLink )
+		{
+			PopulateScrapAction( elScrapActions, elScrapAmount, elScrapLink, item );
+		}
 	
 	var elMarketActions = $(prefix+'_item_market_actions');
 	if ( elMarketActions )
@@ -2556,6 +2563,45 @@ function CreateMarketActionButton( color, href, text )
 	return elButton;
 }
 
+function PopulateScrapAction( elActions, elScrapAmount, elScrapLink, item )
+{
+	if ( item.appid != 753 || item.contextid != 6 || !item.tradable || !item.app_data || !item.app_data.appid )
+	{
+		elActions.hide();
+		return;
+	}
+
+	elScrapAmount.update( '' );
+	elScrapLink.setAttribute( 'href', '#' );
+
+	// this currently uses a per-user request getting the scrap value of the item for the specific user - so it doesn't get cached
+	// would be better to use one based off the properties of the item, but we don't have the item_type and border_color handy here
+	$J.ajax({
+		url: 'https://steamcommunity.com' + '/auction/ajaxgetgoovalueforitemtype/',
+		type: 'GET',
+		data: {
+			appid: item.app_data.appid,
+			item_type: item.app_data.item_type,
+			border_color: item.app_data.border_color,
+		},
+		error: function() {
+			elActions.hide();
+		},
+		success: function( response )
+		{
+			if ( response.goo_value && parseInt(response.goo_value) > 0 )
+			{
+				elScrapAmount.update( response.goo_value + ' Gems' );
+				elScrapLink.setAttribute( 'href', 'javascript:GrindIntoGoo( ' + item.app_data.appid + ',' + item.contextid + ',\'' + item.id + '\' )' );
+				elActions.show();
+			}
+			else
+			{
+				elActions.hide();
+			}
+		}
+	});
+}
 
 function PopulateMarketActions( elActions, item )
 {
