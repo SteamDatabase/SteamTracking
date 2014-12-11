@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.cecfcd4cc9f0a1da74396badcb59fcee1cd97238.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.206a087c7dc50213e8e5b645516bfe763dc80991.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1178,7 +1178,7 @@
 				"item_class": "weapon_p250",
 				"item_type_name": "Pistol",
 				"item_name": "CZ75-Auto",
-				"item_description": "A fully automatic variant of the CZ75, the CZ75-Auto is another inexpensive choice against armored opponents. But with very little ammo provided, strong trigger discipline is required.",
+				"item_description": "A fully automatic variant of the CZ75, the CZ75-Auto is the ideal short-term choice for turning the tables and gaining your opponents weapon. But with very little ammo in the magazine, strong trigger discipline is required.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ/weapons/base_weapons/weapon_cz75a",
@@ -7711,6 +7711,501 @@
 				
 			},
 			{
+				"name": "coupon - blood_broiler",
+				"defindex": 10035,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_blood_broiler",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - dinked",
+				"defindex": 10036,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_dinked",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - drugwarveteran",
+				"defindex": 10037,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_drugwarveteran",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - hohoho",
+				"defindex": 10038,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_hohoho",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - massivepear",
+				"defindex": 10039,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_massivepear",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - mylittlefriend",
+				"defindex": 10040,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_mylittlefriend",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - pandamonium",
+				"defindex": 10041,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_pandamonium",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - pieceofcake",
+				"defindex": 10042,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_pieceofcake",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - saschicken",
+				"defindex": 10043,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_saschicken",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - thuglife",
+				"defindex": 10044,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_thuglife",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - trekt",
+				"defindex": 10045,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_trekt",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - warowl",
+				"defindex": 10046,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_warowl",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - workforfood",
+				"defindex": 10047,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_workforfood",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - phoenix_foil",
+				"defindex": 10048,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_phoenix_foil",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - bombsquad_foil",
+				"defindex": 10049,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_bombsquad_foil",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
 				"name": "coupon key - bossyburger",
 				"defindex": 20000,
 				"item_class": "tool",
@@ -8686,6 +9181,441 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "coupon_zombielover",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - blood_broiler",
+				"defindex": 20035,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Blood Boiler",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_blood_broiler",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - dinked",
+				"defindex": 20036,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Dinked",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_dinked",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - drugwarveteran",
+				"defindex": 20037,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Drug War Veteran",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_drugwarveteran",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - hohoho",
+				"defindex": 20038,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Ho Ho Ho",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_hohoho",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - massivepear",
+				"defindex": 20039,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Massive Pear",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_massivepear",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - mylittlefriend",
+				"defindex": 20040,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | My Little Friend",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_mylittlefriend",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - pandamonium",
+				"defindex": 20041,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Pandamonium",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_pandamonium",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - pieceofcake",
+				"defindex": 20042,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Piece Of Cake",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_pieceofcake",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - saschicken",
+				"defindex": 20043,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | SAS Chicken",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_saschicken",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - thuglife",
+				"defindex": 20044,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Thug Life",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_thuglife",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - trekt",
+				"defindex": 20045,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | T-Rekt",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_trekt",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - warowl",
+				"defindex": 20046,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Warowl",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_warowl",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - workforfood",
+				"defindex": 20047,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Work For Ammo",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_workforfood",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - phoenix_foil",
+				"defindex": 20048,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Phoenix (Foil)",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_phoenix_foil",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - bombsquad_foil",
+				"defindex": 20049,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: Sticker | Bomb Squad (Foil)",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_bombsquad_foil",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -9930,6 +10860,15 @@
 				"effect_type": "negative",
 				"hidden": true,
 				"stored_as_integer": true
+			},
+			{
+				"name": "kill award",
+				"defindex": 197,
+				"attribute_class": "kill_award",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
 			}
 		]
 		,
