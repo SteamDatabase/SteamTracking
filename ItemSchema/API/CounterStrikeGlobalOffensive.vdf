@@ -7478,19 +7478,21 @@
 			"image_inventory"		"econ/weapons/base_weapons/weapon_cz75a"
 			"attributes"
 			{
+				"damage"		"33"
 				"is full auto"		"1"
 				"in game price"		"500"
-				"cycletime"		"0.100000"
+				"cycletime"		"0.110000"
 				"recoil angle"		"0"
 				"recoil angle variance"		"180"
-				"recoil magnitude"		"25"
-				"recoil magnitude variance"		"10"
+				"recoil magnitude"		"27"
+				"recoil magnitude variance"		"12"
 				"spread"		"3"
-				"primary clip size"		"12"
-				"inaccuracy fire"		"25.000000"
+				"primary clip size"		"8"
 				"magazine model"		"models/weapons/w_pist_cz_75_mag.mdl"
 				"inaccuracy stand"		"10.430000"
+				"inaccuracy fire"		"25.000000"
 				"inaccuracy crouch"		"7.600000"
+				"kill award"		"100"
 			}
 			"stickers"
 			{
@@ -9427,7 +9429,7 @@
 				"is full auto"		"1"
 				"time between burst shots"		"0.090000"
 				"has silencer"		"1"
-				"in game price"		"2900"
+				"in game price"		"3100"
 				"primary clip size"		"20"
 				"heat per shot"		"0.350000"
 				"addon scale"		"0.900000"
@@ -14129,6 +14131,396 @@
 			}
 			"associated_item"		"10034"
 		}
+		"10035"
+		{
+			"name"		"coupon - blood_broiler"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - blood_broiler"
+			"tool"
+			{
+				"restriction"		"coupon_blood_broiler"
+			}
+			"associated_item"		"20035"
+		}
+		"20035"
+		{
+			"name"		"coupon key - blood_broiler"
+			"item_name"		"#coupon_key_blood_broiler"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_blood_broiler"
+			}
+			"associated_item"		"10035"
+		}
+		"10036"
+		{
+			"name"		"coupon - dinked"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - dinked"
+			"tool"
+			{
+				"restriction"		"coupon_dinked"
+			}
+			"associated_item"		"20036"
+		}
+		"20036"
+		{
+			"name"		"coupon key - dinked"
+			"item_name"		"#coupon_key_dinked"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_dinked"
+			}
+			"associated_item"		"10036"
+		}
+		"10037"
+		{
+			"name"		"coupon - drugwarveteran"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - drugwarveteran"
+			"tool"
+			{
+				"restriction"		"coupon_drugwarveteran"
+			}
+			"associated_item"		"20037"
+		}
+		"20037"
+		{
+			"name"		"coupon key - drugwarveteran"
+			"item_name"		"#coupon_key_drugwarveteran"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_drugwarveteran"
+			}
+			"associated_item"		"10037"
+		}
+		"10038"
+		{
+			"name"		"coupon - hohoho"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - hohoho"
+			"tool"
+			{
+				"restriction"		"coupon_hohoho"
+			}
+			"associated_item"		"20038"
+		}
+		"20038"
+		{
+			"name"		"coupon key - hohoho"
+			"item_name"		"#coupon_key_hohoho"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_hohoho"
+			}
+			"associated_item"		"10038"
+		}
+		"10039"
+		{
+			"name"		"coupon - massivepear"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - massivepear"
+			"tool"
+			{
+				"restriction"		"coupon_massivepear"
+			}
+			"associated_item"		"20039"
+		}
+		"20039"
+		{
+			"name"		"coupon key - massivepear"
+			"item_name"		"#coupon_key_massivepear"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_massivepear"
+			}
+			"associated_item"		"10039"
+		}
+		"10040"
+		{
+			"name"		"coupon - mylittlefriend"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - mylittlefriend"
+			"tool"
+			{
+				"restriction"		"coupon_mylittlefriend"
+			}
+			"associated_item"		"20040"
+		}
+		"20040"
+		{
+			"name"		"coupon key - mylittlefriend"
+			"item_name"		"#coupon_key_mylittlefriend"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_mylittlefriend"
+			}
+			"associated_item"		"10040"
+		}
+		"10041"
+		{
+			"name"		"coupon - pandamonium"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - pandamonium"
+			"tool"
+			{
+				"restriction"		"coupon_pandamonium"
+			}
+			"associated_item"		"20041"
+		}
+		"20041"
+		{
+			"name"		"coupon key - pandamonium"
+			"item_name"		"#coupon_key_pandamonium"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_pandamonium"
+			}
+			"associated_item"		"10041"
+		}
+		"10042"
+		{
+			"name"		"coupon - pieceofcake"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - pieceofcake"
+			"tool"
+			{
+				"restriction"		"coupon_pieceofcake"
+			}
+			"associated_item"		"20042"
+		}
+		"20042"
+		{
+			"name"		"coupon key - pieceofcake"
+			"item_name"		"#coupon_key_pieceofcake"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_pieceofcake"
+			}
+			"associated_item"		"10042"
+		}
+		"10043"
+		{
+			"name"		"coupon - saschicken"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - saschicken"
+			"tool"
+			{
+				"restriction"		"coupon_saschicken"
+			}
+			"associated_item"		"20043"
+		}
+		"20043"
+		{
+			"name"		"coupon key - saschicken"
+			"item_name"		"#coupon_key_saschicken"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_saschicken"
+			}
+			"associated_item"		"10043"
+		}
+		"10044"
+		{
+			"name"		"coupon - thuglife"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - thuglife"
+			"tool"
+			{
+				"restriction"		"coupon_thuglife"
+			}
+			"associated_item"		"20044"
+		}
+		"20044"
+		{
+			"name"		"coupon key - thuglife"
+			"item_name"		"#coupon_key_thuglife"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_thuglife"
+			}
+			"associated_item"		"10044"
+		}
+		"10045"
+		{
+			"name"		"coupon - trekt"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - trekt"
+			"tool"
+			{
+				"restriction"		"coupon_trekt"
+			}
+			"associated_item"		"20045"
+		}
+		"20045"
+		{
+			"name"		"coupon key - trekt"
+			"item_name"		"#coupon_key_trekt"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_trekt"
+			}
+			"associated_item"		"10045"
+		}
+		"10046"
+		{
+			"name"		"coupon - warowl"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - warowl"
+			"tool"
+			{
+				"restriction"		"coupon_warowl"
+			}
+			"associated_item"		"20046"
+		}
+		"20046"
+		{
+			"name"		"coupon key - warowl"
+			"item_name"		"#coupon_key_warowl"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_warowl"
+			}
+			"associated_item"		"10046"
+		}
+		"10047"
+		{
+			"name"		"coupon - workforfood"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - workforfood"
+			"tool"
+			{
+				"restriction"		"coupon_workforfood"
+			}
+			"associated_item"		"20047"
+		}
+		"20047"
+		{
+			"name"		"coupon key - workforfood"
+			"item_name"		"#coupon_key_workforfood"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_workforfood"
+			}
+			"associated_item"		"10047"
+		}
+		"10048"
+		{
+			"name"		"coupon - phoenix_foil"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - phoenix_foil"
+			"tool"
+			{
+				"restriction"		"coupon_phoenix_foil"
+			}
+			"associated_item"		"20048"
+		}
+		"20048"
+		{
+			"name"		"coupon key - phoenix_foil"
+			"item_name"		"#coupon_key_phoenix_foil"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_phoenix_foil"
+			}
+			"associated_item"		"10048"
+		}
+		"10049"
+		{
+			"name"		"coupon - bombsquad_foil"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - bombsquad_foil"
+			"tool"
+			{
+				"restriction"		"coupon_bombsquad_foil"
+			}
+			"associated_item"		"20049"
+		}
+		"20049"
+		{
+			"name"		"coupon key - bombsquad_foil"
+			"item_name"		"#coupon_key_bombsquad_foil"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_bombsquad_foil"
+			}
+			"associated_item"		"10049"
+		}
 	}
 	"attributes"
 	{
@@ -15688,6 +16080,15 @@
 			"hidden"		"1"
 			"effect_type"		"neutral"
 			"stored_as_integer"		"1"
+		}
+		"197"
+		{
+			"name"		"kill award"
+			"attribute_class"		"kill_award"
+			"description_format"		"value_is_additive"
+			"hidden"		"0"
+			"effect_type"		"positive"
+			"attribute_type"		"uint32"
 		}
 	}
 	"sticker_kits"
@@ -17970,6 +18371,126 @@
 			"item_rarity"		"legendary"
 			"tournament_event_id"		"5"
 			"tournament_team_id"		"43"
+		}
+		"258"
+		{
+			"name"		"blood_broiler"
+			"item_name"		"#StickerKit_comm02_blood_broiler"
+			"description_string"		"#StickerKit_desc_comm02_blood_broiler"
+			"sticker_material"		"community02/blood_broiler"
+			"item_rarity"		"rare"
+		}
+		"259"
+		{
+			"name"		"dinked"
+			"item_name"		"#StickerKit_comm02_dinked"
+			"description_string"		"#StickerKit_desc_comm02_dinked"
+			"sticker_material"		"community02/dinked"
+			"item_rarity"		"rare"
+		}
+		"260"
+		{
+			"name"		"drugwarveteran"
+			"item_name"		"#StickerKit_comm02_drugwarveteran"
+			"description_string"		"#StickerKit_desc_comm02_drugwarveteran"
+			"sticker_material"		"community02/drugwarveteran"
+			"item_rarity"		"rare"
+		}
+		"261"
+		{
+			"name"		"hohoho"
+			"item_name"		"#StickerKit_comm02_hohoho"
+			"description_string"		"#StickerKit_desc_comm02_hohoho"
+			"sticker_material"		"community02/hohoho"
+			"item_rarity"		"rare"
+		}
+		"262"
+		{
+			"name"		"massivepear"
+			"item_name"		"#StickerKit_comm02_massivepear"
+			"description_string"		"#StickerKit_desc_comm02_massivepear"
+			"sticker_material"		"community02/massivepear"
+			"item_rarity"		"rare"
+		}
+		"263"
+		{
+			"name"		"mylittlefriend"
+			"item_name"		"#StickerKit_comm02_mylittlefriend"
+			"description_string"		"#StickerKit_desc_comm02_mylittlefriend"
+			"sticker_material"		"community02/mylittlefriend"
+			"item_rarity"		"rare"
+		}
+		"264"
+		{
+			"name"		"pandamonium"
+			"item_name"		"#StickerKit_comm02_pandamonium"
+			"description_string"		"#StickerKit_desc_comm02_pandamonium"
+			"sticker_material"		"community02/pandamonium"
+			"item_rarity"		"rare"
+		}
+		"265"
+		{
+			"name"		"pieceofcake"
+			"item_name"		"#StickerKit_comm02_pieceofcake"
+			"description_string"		"#StickerKit_desc_comm02_pieceofcake"
+			"sticker_material"		"community02/pieceofcake"
+			"item_rarity"		"rare"
+		}
+		"266"
+		{
+			"name"		"saschicken"
+			"item_name"		"#StickerKit_comm02_saschicken"
+			"description_string"		"#StickerKit_desc_comm02_saschicken"
+			"sticker_material"		"community02/saschicken"
+			"item_rarity"		"rare"
+		}
+		"267"
+		{
+			"name"		"thuglife"
+			"item_name"		"#StickerKit_comm02_thuglife"
+			"description_string"		"#StickerKit_desc_comm02_thuglife"
+			"sticker_material"		"community02/thuglife"
+			"item_rarity"		"rare"
+		}
+		"268"
+		{
+			"name"		"trekt"
+			"item_name"		"#StickerKit_comm02_trekt"
+			"description_string"		"#StickerKit_desc_comm02_trekt"
+			"sticker_material"		"community02/trekt"
+			"item_rarity"		"rare"
+		}
+		"269"
+		{
+			"name"		"warowl"
+			"item_name"		"#StickerKit_comm02_warowl"
+			"description_string"		"#StickerKit_desc_comm02_warowl"
+			"sticker_material"		"community02/warowl"
+			"item_rarity"		"rare"
+		}
+		"270"
+		{
+			"name"		"workforfood"
+			"item_name"		"#StickerKit_comm02_workforfood"
+			"description_string"		"#StickerKit_desc_comm02_workforfood"
+			"sticker_material"		"community02/workforfood"
+			"item_rarity"		"rare"
+		}
+		"271"
+		{
+			"name"		"phoenix_foil"
+			"item_name"		"#StickerKit_comm02_phoenix_foil"
+			"description_string"		"#StickerKit_desc_comm02_phoenix_foil"
+			"sticker_material"		"community02/phoenix_foil"
+			"item_rarity"		"rare"
+		}
+		"272"
+		{
+			"name"		"bombsquad_foil"
+			"item_name"		"#StickerKit_comm02_bombsquad_foil"
+			"description_string"		"#StickerKit_desc_comm02_bombsquad_foil"
+			"sticker_material"		"community02/bombsquad_foil"
+			"item_rarity"		"rare"
 		}
 	}
 	"paint_kits"
@@ -27283,6 +27804,81 @@
 		{
 			"public_list_contents"		"1"
 			"[zombielover]sticker"		"1"
+		}
+		"coupon loot list - blood_broiler"
+		{
+			"public_list_contents"		"1"
+			"[blood_broiler]sticker"		"1"
+		}
+		"coupon loot list - dinked"
+		{
+			"public_list_contents"		"1"
+			"[dinked]sticker"		"1"
+		}
+		"coupon loot list - drugwarveteran"
+		{
+			"public_list_contents"		"1"
+			"[drugwarveteran]sticker"		"1"
+		}
+		"coupon loot list - hohoho"
+		{
+			"public_list_contents"		"1"
+			"[hohoho]sticker"		"1"
+		}
+		"coupon loot list - massivepear"
+		{
+			"public_list_contents"		"1"
+			"[massivepear]sticker"		"1"
+		}
+		"coupon loot list - mylittlefriend"
+		{
+			"public_list_contents"		"1"
+			"[mylittlefriend]sticker"		"1"
+		}
+		"coupon loot list - pandamonium"
+		{
+			"public_list_contents"		"1"
+			"[pandamonium]sticker"		"1"
+		}
+		"coupon loot list - pieceofcake"
+		{
+			"public_list_contents"		"1"
+			"[pieceofcake]sticker"		"1"
+		}
+		"coupon loot list - saschicken"
+		{
+			"public_list_contents"		"1"
+			"[saschicken]sticker"		"1"
+		}
+		"coupon loot list - thuglife"
+		{
+			"public_list_contents"		"1"
+			"[thuglife]sticker"		"1"
+		}
+		"coupon loot list - trekt"
+		{
+			"public_list_contents"		"1"
+			"[trekt]sticker"		"1"
+		}
+		"coupon loot list - warowl"
+		{
+			"public_list_contents"		"1"
+			"[warowl]sticker"		"1"
+		}
+		"coupon loot list - workforfood"
+		{
+			"public_list_contents"		"1"
+			"[workforfood]sticker"		"1"
+		}
+		"coupon loot list - phoenix_foil"
+		{
+			"public_list_contents"		"1"
+			"[phoenix_foil]sticker"		"1"
+		}
+		"coupon loot list - bombsquad_foil"
+		{
+			"public_list_contents"		"1"
+			"[bombsquad_foil]sticker"		"1"
 		}
 	}
 	"revolving_loot_lists"
