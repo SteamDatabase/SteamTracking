@@ -43576,6 +43576,7 @@
 			"capabilities"
 			{
 				"duck_upgradable"	"1"
+				"nameable"		"1"
 			}
 			"item_type_name"	"#TF_ItemType_Journal"
 			"item_name"	"#TF_Item_DuckBadge"
@@ -55908,6 +55909,7 @@
 		{
 			"name"		"EOTL_Skier"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Hat"
 			"item_name"		"#TF_EOTL_skier"
 			"item_description"		"#TF_skier_Desc"
 			"equip_region"		"pyro_head_replacement"
@@ -55934,16 +55936,10 @@
 		{
 			"name"		"EOTL_Insulated_innovator"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Coat"
 			"item_name"		"#TF_EOTL_insulated_innovator"
 			"item_description"		"#TF_insulated_innovator_Desc"
 			"equip_region"		"shirt"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/engineer/insulated_innovator/insulated_innovator"
 			"capabilities"
 			{
@@ -55960,6 +55956,7 @@
 		{
 			"name"		"EOTL_blinks_breeches"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Boots"
 			"item_name"		"#TF_EOTL_blinks_breeches"
 			"item_description"		"#TF_blinks_breeches_Desc"
 			"equip_region"		"feet"
@@ -55986,6 +55983,7 @@
 		{
 			"name"		"EOTL_demo_dynamite"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Bombs"
 			"item_name"		"#TF_EOTL_demo_dynamite"
 			"item_description"		"#TF_demo_dynamite_Desc"
 			"equip_region"		"grenades"
@@ -56014,7 +56012,6 @@
 			"prefab"		"no_craft hat"
 			"item_name"		"#TF_EOTL_briskweather_beanie"
 			"item_description"		"#TF_briskweather_beanie_Desc"
-			"equip_region"		"hat"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -56058,17 +56055,10 @@
 		{
 			"name"		"EOTL_winter_pants"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Boots"
 			"item_name"		"#TF_EOTL_winter_pants"
 			"item_description"		"#TF_eotl_winter_pants_Desc"
-			"equip_region"		"pants"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-					"headphones"		"1"
-				}
-			}
+			"equip_region"		"feet"
 			"image_inventory"		"backpack/workshop/player/items/engineer/eotl_winter_pants/eotl_winter_pants"
 			"capabilities"
 			{
@@ -56085,17 +56075,10 @@
 		{
 			"name"		"EOTL_pyro_sweater"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Sweater"
 			"item_name"		"#TF_EOTL_pyro_sweater"
 			"item_description"		"#TF_pyro_sweater_Desc"
 			"equip_region"		"shirt"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-					"headphones"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/pyro/pyro_sweater/pyro_sweater"
 			"capabilities"
 			{
@@ -56114,15 +56097,6 @@
 			"prefab"		"no_craft hat"
 			"item_name"		"#TF_EOTL_flat_cap"
 			"item_description"		"#TF_eotl_flat_cap_Desc"
-			"equip_region"		"hat"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-					"headphones"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/heavy/eotl_flat_cap/eotl_flat_cap"
 			"capabilities"
 			{
@@ -56141,7 +56115,6 @@
 			"prefab"		"no_craft hat"
 			"item_name"		"#TF_EOTL_furcap"
 			"item_description"		"#TF_eotl_furcap_Desc"
-			"equip_region"		"hat"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -56187,15 +56160,6 @@
 			"prefab"		"no_craft hat"
 			"item_name"		"#TF_EOTL_summerhat"
 			"item_description"		"#TF_eotl_summerhat_Desc"
-			"equip_region"		"hat"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-					"headphones"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/demo/eotl_summerhat/eotl_summerhat"
 			"capabilities"
 			{
@@ -56214,14 +56178,6 @@
 			"prefab"		"no_craft hat"
 			"item_name"		"#TF_EOTL_soldier_garrison"
 			"item_description"		"#TF_soldier_garrison_Desc"
-			"equip_region"		"hat"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/soldier/soldier_garrison/soldier_garrison"
 			"capabilities"
 			{
@@ -56240,7 +56196,6 @@
 			"prefab"		"no_craft hat"
 			"item_name"		"#TF_EOTL_hiphunter_hat"
 			"item_description"		"#TF_hiphunter_hat_Desc"
-			"equip_region"		"hat"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -56284,6 +56239,7 @@
 		{
 			"name"		"EOTL_hiphunter_jacket"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Jacket"
 			"item_name"		"#TF_EOTL_hiphunter_jacket"
 			"item_description"		"#TF_hiphunter_jacket_Desc"
 			"equip_region"		"shirt"
@@ -56312,7 +56268,7 @@
 			"prefab"		"no_craft misc"
 			"item_name"		"#TF_EOTL_hiphunter_boots"
 			"item_description"		"#TF_hiphunter_boots_Desc"
-			"equip_region"		"sniper_legs"
+			"equip_region"		"feet"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -56377,7 +56333,6 @@
 			"prefab"		"no_craft hat"
 			"item_name"		"#TF_EOTL_soldierhat"
 			"item_description"		"#TF_eotl_soldierhat_Desc"
-			"equip_region"		"hat"
 			"image_inventory"		"backpack/workshop/player/items/soldier/eotl_soldierhat/eotl_soldierhat"
 			"capabilities"
 			{
@@ -56394,6 +56349,7 @@
 		{
 			"name"		"EOTL_beard"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_FacialHair"
 			"item_name"		"#TF_EOTL_beard"
 			"item_description"		"#TF_beard_Desc"
 			"equip_region"		"beard"
@@ -56413,6 +56369,7 @@
 		{
 			"name"		"EOTL_demopants"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Pants"
 			"item_name"		"#TF_EOTL_demopants"
 			"item_description"		"#TF_eotl_demopants_Desc"
 			"equip_region"		"pants"
@@ -56432,6 +56389,7 @@
 		{
 			"name"		"EOTL_Ursa Major"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Vest"
 			"item_name"		"#TF_EOTL_ursa_major"
 			"item_description"		"#TF_ursa_major_Desc"
 			"equip_region"		"shirt"
@@ -56451,6 +56409,7 @@
 		{
 			"name"		"EOTL_sheavyshirt"
 			"prefab"		"no_craft misc"
+			"item_type_name"	"#TF_Wearable_Jacket"
 			"item_name"		"#TF_EOTL_sheavyshirt"
 			"item_description"		"#TF_eotl_sheavyshirt_Desc"
 			"equip_region"		"shirt"
