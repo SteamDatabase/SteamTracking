@@ -1396,6 +1396,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 	.mediaTop.modal {
 		margin-right: 324px;
+		padding-right: 10px;
 	}
 
 		.mediaTop.modal > .img {
@@ -1413,7 +1414,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		width: 324px;
 		background-color: #262627;
 		height: 100%;
-		padding: 0 0 0 5px;
+		padding: 0 5px 0 5px;
 	}
 
 	.mediaTop .workshopItemControls

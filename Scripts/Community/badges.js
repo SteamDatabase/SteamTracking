@@ -457,6 +457,397 @@ function ShowBoosterEligibility()
 
 
 
+	function GrindIntoGoo( appid, contextid, itemid )
+	{
+		var rgAJAXParams = {
+			sessionid: g_sessionID,
+			appid: appid,
+			assetid: itemid,
+			contextid: contextid
+		};
+		var strActionURL = g_strProfileURL + "/ajaxgetgoovalue/";
 
+		$J.get( strActionURL, rgAJAXParams ).done( function( data ) {
+			var $Content = $J(data.strHTML);
+			var strDialogTitle = data.strTitle;
+			ShowConfirmDialog( strDialogTitle, $Content ).done( function() {
+				strActionURL = g_strProfileURL + "/ajaxgrindintogoo/";
+				rgAJAXParams.goo_value_expected = data.goo_value;
+
+				$J.post( strActionURL, rgAJAXParams).done( function( data ) {
+					ShowAlertDialog( strDialogTitle, data.strHTML );
+					ReloadCommunityInventory();
+				}).fail( function() {
+					ShowAlertDialog( strDialogTitle, 'There was an error communicating with the network. Please try again later.' );
+				});
+			});
+		});
+	}
+
+	function PackGameGooIntoBarrel( appid, itemid )
+	{
+		var rgAJAXParams = {
+			sessionid: g_sessionID,
+			appid: appid,
+			assetid: itemid,
+			goo_denomination_in: 1,
+			goo_amount_in: 1000,
+			goo_denomination_out: 1000,
+			goo_amount_out_expected: 1
+		};
+		var strActionURL = g_strProfileURL + "/ajaxexchangegoo/";
+
+		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
+				if ( data.success == 78 )
+				{
+					ShowAlertDialog( 'Action Failed', 'You need at least 1000 Gems to make a Sack' );
+				}
+				else
+				{
+					ShowAlertDialog( 'Success', 'The new Sack has been added to your inventory.' );		// localize
+					ReloadCommunityInventory();
+				}
+			}).fail( function() {
+				ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
+			});
+	}
+
+	function UnpackGameGooFromBarrel( appid, itemid )
+	{
+		var rgAJAXParams = {
+			sessionid: g_sessionID,
+			appid: appid,
+			assetid: itemid,
+			goo_denomination_in: 1000,
+			goo_amount_in: 1,
+			goo_denomination_out: 1,
+			goo_amount_out_expected: 1000
+		};
+		var strActionURL = g_strProfileURL + "/ajaxexchangegoo/";
+
+		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
+				ShowAlertDialog( 'Success', '%s Gems received from Sack.'.replace( /%s/, v_numberformat( 1000 ) ) );		// localize
+				ReloadCommunityInventory();
+			}).fail( function() {
+				ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
+			});
+	}
+
+	function EnableProfileModifier( appid, itemid, enabled )
+	{
+		var rgAJAXParams = {
+			sessionid: g_sessionID,
+			appid: appid,
+			assetid: itemid,
+			enabled: enabled
+		};
+		var strActionURL = g_strProfileURL + "/ajaxenableprofilemodifier/";
+
+		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
+				if ( enabled )
+					ShowAlertDialog( 'Enable Profile Modifier', 'This item has been applied to your profile.' );
+				else
+					ShowAlertDialog( 'Disable Profile Modifier', 'This item has been removed from your profile.' );
+
+				ReloadCommunityInventory();
+			}).fail( function() {
+				ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
+			});
+	}
+
+
+
+
+
+CBoosterCreatorPage = {
+
+	sm_rgBoosterData: {},
+	sm_flUserGooAmount: 0,
+	sm_strBoosterOptionTemplate: '',
+
+	Init: function( rgBoosterCatalog, flUserGooAmount, strBoosterOptionTemplate, rgSuggestedApps )
+	{
+		CBoosterCreatorPage.sm_flUserGooAmount = flUserGooAmount;
+		CBoosterCreatorPage.sm_strBoosterOptionTemplate = strBoosterOptionTemplate;
+
+		var k_cInitialSetSize = 6;
+
+		var rgInitialBoosterSet = [];
+		var rgAvailableAppIDs = [];
+
+		for ( var i = 0; i < rgBoosterCatalog.length; i++ )
+		{
+			var rgBoosterData = rgBoosterCatalog[i];
+
+			CBoosterCreatorPage.sm_rgBoosterData[ rgBoosterData.appid ] = rgBoosterData;
+			rgAvailableAppIDs.push( rgBoosterData.appid );
+		}
+
+		if ( rgSuggestedApps && rgSuggestedApps.length )
+		{
+			for ( var i = 0; i < rgSuggestedApps.length && rgInitialBoosterSet.length < k_cInitialSetSize; i++ )
+			{
+				if ( rgAvailableAppIDs.indexOf( rgSuggestedApps[i] ) >= 0 )
+					rgInitialBoosterSet.push( rgSuggestedApps[i] );
+			}
+		}
+
+		while ( rgInitialBoosterSet.length < k_cInitialSetSize && rgAvailableAppIDs.length > 0 )
+		{
+			var iGuess = Math.floor( Math.random() * rgAvailableAppIDs.length );
+
+			var i = iGuess;
+			do
+			{
+				i = ( i + 1 ) % rgAvailableAppIDs.length;
+				if ( rgInitialBoosterSet.indexOf( rgAvailableAppIDs[i] ) < 0 )
+				{
+					rgInitialBoosterSet.push( rgAvailableAppIDs[i] );
+					break;
+				}
+			} while ( i != iGuess );
+
+			// exhausted all options
+			if ( i == iGuess )
+				break;
+		}
+
+		var $Options = $J('.booster_options' );
+		for ( var i = 0 ; i < rgInitialBoosterSet.length && i < k_cInitialSetSize; i++ )
+		{
+			var $Option = CBoosterCreatorPage.CreateBoosterOption( rgInitialBoosterSet[i], true );
+			$Options.append( $Option );
+		}
+
+		var $SelectBox = $J( '#booster_game_selector' );
+		rgBoosterCatalog.sort( function( a, b ) {
+			var aname = a.name.toLowerCase();
+			var bname = b.name.toLowerCase();
+			if ( aname < bname )
+				return -1;
+			else if ( aname > bname )
+				return 1;
+			else
+				return 0;
+		} );
+		for( var i = 0; i < rgBoosterCatalog.length; i++ )
+		{
+			var rgBoosterData = rgBoosterCatalog[i];
+			var $SelectOption = $J('<option/>', {value: rgBoosterData.appid} ).html( rgBoosterData.name );
+
+			if ( rgBoosterData.unavailable || rgBoosterData.price > CBoosterCreatorPage.sm_flUserGooAmount )
+			{
+				$SelectOption.addClass( 'unavailable' );
+			}
+			else
+			{
+				$SelectOption.addClass( 'available' );
+			}
+
+			$SelectBox.append( $SelectOption );
+		}
+
+		var $SelectTarget = $J('#booster_game_selector_booster');
+		$SelectBox.change( function() {
+			$SelectTarget.children().detach();
+			var $BoosterOption = $SelectBox.val() ? CBoosterCreatorPage.CreateBoosterOption( $SelectBox.val() ) : null;
+			if ( $BoosterOption )
+			{
+				$SelectTarget.append( $BoosterOption );
+				window.location.replace( '#' + $SelectBox.val() );
+			}
+			else
+			{
+				if ( history && history.replaceState )
+					history.replaceState( '', document.title, window.location.pathname + window.location.search );
+				else
+					window.location.replace( '#' );
+			}
+		});
+
+		$J(window).on('hashchange', function() {
+			if ( window.location.hash.length > 1 )
+			{
+				var nAppID = parseInt( window.location.hash.substr(1) );
+				if ( nAppID )
+					$SelectBox.val( nAppID ).change();
+			}
+		});
+		$J(window).trigger('hashchange');
+
+	},
+
+	UpdateGooDisplay: function( nGooAmount )
+	{
+		CBoosterCreatorPage.sm_flUserGooAmount = parseFloat( nGooAmount );
+		$J('.goovalue').text( v_numberformat( nGooAmount ) );
+		$J('.booster_option').each( function() { CBoosterCreatorPage.ToggleActionButton( $J(this) ); } );
+	},
+
+	RefreshSelectOptions: function()
+	{
+		var $Select = $J( '#booster_game_selector' );
+		$Select.children().each( function() {
+			var $Option = $J(this);
+			var appid = $Option.val();
+			if ( appid && CBoosterCreatorPage.sm_rgBoosterData[appid] && $Option.hasClass( 'available' ) )
+			{
+				var rgBoosterData = CBoosterCreatorPage.sm_rgBoosterData[appid];
+				if ( rgBoosterData['unavailable'] ||
+					rgBoosterData.price > CBoosterCreatorPage.sm_flUserGooAmount )
+					$Option.removeClass( 'available' ).addClass( 'unavailable' );
+			}
+		});
+	},
+
+
+	ExecuteCreateBooster: function( rgBoosterData )
+	{
+		$J.post( 'https://steamcommunity.com/tradingcards/ajaxcreatebooster/', {
+			sessionid: g_sessionID,
+			appid: rgBoosterData.appid,
+			series: rgBoosterData.series
+		}).done( function( data ) {
+
+			// this will show the booster along with unpack actions
+			CBoosterCreatorPage.ShowBoosterCreatedDialog( data.purchase_result );
+
+			// update display of page elements
+			CBoosterCreatorPage.UpdateGooDisplay( data.goo_amount );
+			rgBoosterData.unavailable = true;
+			if ( rgBoosterData.$Option )
+			{
+				CBoosterCreatorPage.ToggleActionButton( rgBoosterData.$Option );
+			}
+			if ( rgBoosterData.$MiniOption )
+			{
+				CBoosterCreatorPage.ToggleActionButton( rgBoosterData.$MiniOption );
+			}
+
+			// gray out packs we can't afford anymore
+			CBoosterCreatorPage.RefreshSelectOptions();
+
+		}).fail( function( jqXHR ) {
+			ShowAlertDialog( 'Booster Pack Creator', 'There was a problem creating your booster pack.  Please try again later.' );
+
+			var data = $J.parseJSON( jqXHR.responseText );
+			if ( data && typeof( data.goo_amount ) != 'undefined' )
+				CBoosterCreatorPage.UpdateGooDisplay( data.goo_amount );
+		});
+	},
+
+	ShowBoosterCreatedDialog: function( rgPurchaseResults )
+	{
+		var Modal = BuildBoosterModal( 'Booster Pack Creator', rgPurchaseResults.appid );
+
+		var $CloseBtn = Modal.GetContent().find('.newmodal_close').show();
+		Modal.SetDismissOnBackgroundClick( true );
+
+		var $Content = Modal.GetContent().find( '.booster_unpack_dialog' );
+		var $UnpackActions = $J('<div/>', {'class': 'booster_creator_actions' } );
+
+		var $BtnUnpack = $J('<div/>', {'class': 'btn_grey_grey btn_small' } );
+		$BtnUnpack.append( $J('<span/>').text('Unpack it now') );
+		$BtnUnpack.click( function() {
+			$UnpackActions.slideUp( 'fast' );
+			$CloseBtn.hide();
+			Modal.SetDismissOnBackgroundClick( false );
+			ExecuteBoosterUnpack( Modal, rgPurchaseResults.appid, rgPurchaseResults.communityitemid, 0 );
+		});
+
+		var $BtnInventory = $J('<a/>', {'class': 'btn_grey_grey btn_small', 'href': g_strProfileURL + '/inventory/#753_6_' + rgPurchaseResults.communityitemid  } );
+		$BtnInventory.append( $J('<span/>').text('View my Inventory') );
+
+		$UnpackActions.append( $J('<div/>').append($BtnUnpack), $J('<div/>').append($BtnInventory) );
+		$Content.append( $UnpackActions );
+	},
+
+
+	CreateBoosterOption: function( appid, bMiniOption )
+	{
+		var rgBoosterData = CBoosterCreatorPage.sm_rgBoosterData[ appid ];
+
+		if ( !rgBoosterData )
+			return null;
+		else if ( rgBoosterData.$Option && !bMiniOption )
+		{
+			CBoosterCreatorPage.ToggleActionButton( rgBoosterData.$Option );
+			return rgBoosterData.$Option;
+		}
+
+		var strTemplate = CBoosterCreatorPage.sm_strBoosterOptionTemplate.replace( /{[^}]+}/g, function( match ) {
+			switch( match.substr( 1, match.length - 2 ) )
+			{
+				case 'appid':
+					return rgBoosterData.appid;
+				case 'appname':
+					return rgBoosterData.name.replace( /&/g, '&amp;' );	// aready escaped, but needs one more level for tooltip
+				case 'price':
+					return v_numberformat( rgBoosterData.price );
+				case 'img_params':
+					return bMiniOption ? '?size=120x' : '';
+				default:
+					return match;
+			}
+		});
+
+		var $Option = $J(strTemplate);
+		$Option.data( 'appid', rgBoosterData.appid );
+
+		var $ActionBtn = $Option.find( '.btn_makepack');
+		$ActionBtn.click( function() {
+			if ( !$ActionBtn.hasClass( 'btn_disabled') )
+			{
+				ShowConfirmDialog( 'Booster Pack Creator',
+					'Are you sure you want to spend %1$s Gems to create a %2$s Booster Pack?'.replace( /%1\$s/, v_numberformat( rgBoosterData.price ) ).replace( /%2\$s/, rgBoosterData.name ),
+					'Make Pack' ).done( function() {
+					CBoosterCreatorPage.ExecuteCreateBooster( rgBoosterData );
+				});
+			}
+		});
+		CBoosterCreatorPage.ToggleActionButton( $Option );
+
+		BindCommunityTooltip( $Option.find( '[data-community-tooltip]' ) );
+
+		if ( bMiniOption )
+			rgBoosterData.$MiniOption = $Option;
+		else
+			rgBoosterData.$Option = $Option;
+
+		return $Option;
+	},
+
+
+	ToggleActionButton: function( $Option )
+	{
+		var $ActionBtn = $Option.find( '.btn_makepack');
+		var rgBoosterData = CBoosterCreatorPage.sm_rgBoosterData[ $Option.data('appid') ];
+		if ( rgBoosterData && rgBoosterData.unavailable )
+		{
+			console.log( rgBoosterData );
+			$ActionBtn.addClass( 'btn_disabled' );
+			if ( rgBoosterData.available_at_time )
+				$ActionBtn.data( 'community-tooltip', 'You will not be able to create another %1$s Booster Pack until %2$s.'.replace( /%1\$s/, rgBoosterData.name ).replace( /%2\$s/, rgBoosterData.available_at_time ) );
+			else
+				$ActionBtn.data( 'community-tooltip', 'You can only create one booster pack per game, per day.  Check back tomorrow to create another %s booster.'.replace( /%s/, rgBoosterData.name ) );
+		}
+		else
+		{
+			var nPrice = rgBoosterData.price;
+			if ( CBoosterCreatorPage.sm_flUserGooAmount >= nPrice )
+			{
+				$ActionBtn.removeClass( 'btn_disabled' );
+				$ActionBtn.data( 'community-tooltip', '' );
+			}
+			else
+			{
+				$ActionBtn.addClass( 'btn_disabled' );
+				$ActionBtn.data( 'community-tooltip', 'Not enough Gems.' );
+			}
+		}
+	}
+
+
+};
 
 

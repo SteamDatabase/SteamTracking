@@ -113,11 +113,12 @@ CBroadcastWatch.prototype.Start = function()
 
 	this.m_chat = new CBroadcastChat( this.m_ulBroadcastSteamID );
 	this.m_player = new CBroadcastPlayer( this.m_elVideoPlayer );
-    this.m_playerUI = new CBroadcastPlayerUI( this.m_player );
-    this.m_playerUI.Init();
+	this.m_playerUI = new CBroadcastPlayerUI( this.m_player );
+	this.m_playerUI.Init();
 
 	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.BroadcastWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 	$J( this.m_elVideoPlayer ).on( 'downloadfailed.BroadcastWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
+	$J( this.m_elVideoPlayer ).on( 'playbackerror.BroadcastWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
 
 	this.GetBroadcastMPD();
 }
@@ -129,8 +130,13 @@ CBroadcastWatch.prototype.OnPlayerBufferingComplete = function()
 
 CBroadcastWatch.prototype.OnPlayerDownloadFailed = function()
 {
-	$J( '#VideoLoadingText' ).text( 'Loading...' );
+	this.SetVideoLoadingText( 'Loading...' );
 	this.GetBroadcastMPD();
+}
+
+CBroadcastWatch.prototype.OnPlayerPlaybackError = function()
+{
+	this.ShowVideoError( 'An unexpected error occurred while playing this video' );
 }
 
 CBroadcastWatch.prototype.AddBroadcasterName = function( str )

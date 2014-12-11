@@ -393,6 +393,44 @@ function ShowAliasPopup(e)
 }
 
 
+function IsValidNickname( str )
+{
+	return str.length == 0 || str.strip().length > 2;
+}
+
+function ShowNicknameModal( )
+{
+	// Show the dialogue
+	ShowPromptDialog( "Add Nickname", "Add a persistent nickname to this player to keep track of who they are.", "Add Nickname", "Cancel" )
+		.done( function( nickname, other ) {
+			// User clicked 'OK', so we have a value; need to send it to the server
+			$J.ajax( { url: g_rgProfileData['url'] + "ajaxsetnickname/",
+				data: { nickname: nickname, sessionid: g_sessionID },
+				type: 'POST',
+				dataType: 'json'
+			} ).done( function( data ) {
+				// Got request result back, show it on the page
+				if(data.nickname != undefined && data.nickname.length > 0)
+				{
+					$target = $J('.persona_name .nickname');
+					// Add the nickname element if we don't already have one.
+					if( $target.length == 0 )
+						$target = $J('<span class="nickname"></span>').insertBefore( '.namehistory_link' );
+
+					$target.text( "(" + data.nickname + ") " );
+					$target.show();
+				} else
+					$J('.persona_name .nickname').hide();
+
+			}).fail( function( data ) {
+				ShowAlertDialog( '', data.results ? data.results : 'Error processing your request. Please try again.' );
+			});
+
+		}
+	);
+}
+
+
 function ShowFriendSelect( title, fnOnSelect )
 {
 	var Modal = ShowAlertDialog( title, '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>', 'Cancel' );
