@@ -159,6 +159,7 @@ message CBroadcast_StopBroadcastUpload_Notification {
 	optional fixed64 broadcast_id = 1;
 	optional fixed64 broadcast_relay_id = 2;
 	optional uint32 upload_result = 3;
+	optional bool too_many_poor_uploads = 4;
 }
 
 message CBroadcast_SessionClosed_Notification {

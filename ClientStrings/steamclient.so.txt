@@ -3679,7 +3679,6 @@ attemptSend
 ATTLIST
 attrib
 attributes
-audio
 AudioSinkList
 AUDIOSOURCEWEBPAGE
 a_utctm.c
@@ -4325,6 +4324,7 @@ Broadcast\ShowChat
 Broadcast\ShowDebugInfo
 BroadcastShowFirstTimeDlg_t
 BroadcastStatus_t
+BroadcastUploadsDisabled_t
 BroadcastUploadStart_t
 BroadcastUploadStatus_t
 BroadcastUploadStop_t
@@ -17492,6 +17492,7 @@ tokens_left
 token_source
 ToNumeric
 tools
+too_many_poor_uploads
 ToReal
 total
 total_changes
