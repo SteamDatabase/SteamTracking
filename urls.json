@@ -126,6 +126,16 @@
 "Styles/user_reviews.css"                        : "https://steamcommunity-a.akamaihd.net/public/shared/css/user_reviews.css?__TIME__",
 
 //
+// Holiday CSS
+//
+"Styles/auction.css"                              : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/auction.css?__TIME__",
+
+//
+// Holiday JS
+//
+"Scripts/Community/auction.js"                   : "https://steamcommunity-a.akamaihd.net/public/javascript/auction.js?__TIME__&l=english",
+
+//
 // Store JS
 //
 "Scripts/Store/app_tagging.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/app_tagging.js?__TIME__&l=english",
