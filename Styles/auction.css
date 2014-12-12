@@ -71,6 +71,11 @@ a.auction_nav_header_readcomic {
 	padding-top: 0;
 }
 
+.auction_comic_bug {
+	float: right;
+	padding: 12px 19px;
+}
+
 .home_block_content.howitworks a {
 	text-decoration: underline;
 }
