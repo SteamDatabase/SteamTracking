@@ -1098,7 +1098,7 @@
 				"item_class": "weapon_m4a1",
 				"item_type_name": "Rifle",
 				"item_name": "M4A1-S",
-				"item_description": "Less expensive and with a smaller magazine than its unmuffled counterpart, the silenced M4A1 provides quieter shots with less recoil and better accuracy.",
+				"item_description": "With a smaller magazine than its unmuffled counterpart, the silenced M4A1 provides quieter shots with less recoil and better accuracy.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ/weapons/base_weapons/weapon_m4a1_silencer",
