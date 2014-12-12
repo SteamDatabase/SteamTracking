@@ -2643,7 +2643,7 @@ function PopulateMarketActions( elActions, item )
 						var strInfo = '';
 						if ( transport.responseJSON.lowest_price )
 						{
-							strInfo += 'Starting at: ' + transport.responseJSON.lowest_price + '<br>'
+							strInfo += 'Prix de départ : ' + transport.responseJSON.lowest_price + '<br>'
 						}
 						else
 						{
