@@ -276,8 +276,8 @@
 "Random/BPEventBackground.xml"                   : "https://store.steampowered.com/api/bpeventbackground/",
 "Random/ControllerFirmware.vdf"                  : "https://steamcdn-a.akamaihd.net/controller_config/firmware/firmware.vdf",
 "Random/Alchemist.txt"                           : "http://repo.steampowered.com/steamos/lists/default_alchemist_main_amd64_Packages",
-"Random/JobPostings.html"                        : "https://valvesoftware.com/jobs/job_postings.html",
-"Random/Security.html"                           : "https://valvesoftware.com/security/",
+"Random/JobPostings.html"                        : "http://valvesoftware.com/jobs/job_postings.html",
+"Random/Security.html"                           : "http://valvesoftware.com/security/",
 "Random/ValveGroup.json"                         : "https://steamcommunity.com/groups/valve/memberslistxml",
 "Random/SteamModerators.json"                    : "https://steamcommunity.com/groups/SUFMods/memberslistxml"
 }
