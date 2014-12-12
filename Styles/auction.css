@@ -1,0 +1,685 @@
+
+.pagecontent {
+	font-family: "Motiva Sans Light",Arial,Helvetica,Verdana,sans-serif;
+	font-size: 13px;
+}
+
+.pagecontent.auction_page .maincontent {
+	width: 970px;
+}
+
+.pagecontent.auction_home_page {
+	overflow: hidden;
+	min-width: 994px;
+}
+
+.pagecontent.auction_home_page .maincontent {
+	width: 970px;
+}
+
+.has_tooltip {
+	cursor: default;
+}
+
+.auction_nav {
+	margin: 0 auto -26px;
+	max-width: 1010px;
+	min-width: 970px;
+}
+
+.auction_nav a {
+	margin-left: 30px;
+	color: #b1b1b1;
+}
+
+.auction_nav_header {
+	background-position: center top;
+	height: 250px;
+}
+.auction_nav_pos {
+	width: 970px;
+	position: relative;
+}
+
+a.auction_nav_header_readcomic {
+	position: absolute;
+	top: 84px;
+	right: 50px;
+	width: 196px;
+	height: 30px;
+}
+
+.auction_block, .auction_home_block {
+	background-color: #0d131c;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.auction_block {
+	padding: 25px 33px;
+	text-align: center;
+}
+
+.home_block_content {
+	padding: 21px 19px;
+	color: #ffffff;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.home_block_content.with_title {
+	padding-top: 0;
+}
+
+.home_block_content.howitworks a {
+	text-decoration: underline;
+}
+
+.home_block_content.howitworks .howitworks_addtl {
+	font-size: 16px;
+	color: #b0c0ce;
+	margin-top: 12px;
+}
+
+.home_block_content.howitworks .howitworks_addtl .howitworks_addtl_addtl {
+	font-size: 14px;
+	margin-top: 12px;
+}
+
+.howitworks_image {
+	position: relative;
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/home_howitworks.jpg' ) center top no-repeat;
+	height: 265px;
+}
+
+.howitworks_image .step {
+	position: absolute;
+	top: 200px;
+	text-align: center;
+
+	font-size: 18px;
+	color: #dcb31e;
+	font-style: italic;
+}
+
+.howitworks_image .step.step1 {
+	left: 0;
+	width: 238px;
+}
+
+.howitworks_image .step.step2 {
+	left: 278px;
+	width: 376px;
+}
+
+.howitworks_image .step.step3 {
+	left: 700px;
+	width: 224px;
+}
+
+.howitworks_faqlink {
+	text-align: center;
+	font-size: 18px;
+}
+
+.how_comic_link {
+	float: right;
+	font-size: 14px;
+}
+
+.how_comic_link a:hover {
+	text-decoration: underline;
+}
+
+.countdown_ctn {
+	color: #58c1f5;
+}
+
+.auction_home_scrapstatus {
+	float: right;
+	padding-top: 21px;
+	padding-right: 15px;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: right;
+	color: #ffffff;
+}
+
+.auction_home_scrapstatus .scrapstatus_count {
+	color: #58c1f5;
+	margin-bottom: 8px;
+}
+
+.auction_home_scrapstatus a {
+	text-decoration: underline;
+	font-size: 14px;
+}
+
+.auction_home_scrapstatus a:hover {
+
+}
+
+.home_active_bid {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 9px;
+	padding: 8px;
+	background: #151e2c;
+	width: 160px;
+
+	color: #b0c0ce;
+	font-size: 12px;
+	line-height: 20px;
+
+	text-align: center;
+	position: relative;
+}
+
+.home_active_bid.last {
+	margin-right: 0;
+}
+
+.home_active_bid.high_bid .highbid_footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 5px;
+}
+
+.home_active_bid.high_bid .highbid_footer, .home_active_bid.win
+{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff19), color-stop(100%,#fabf10));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff19', endColorstr='#fabf10',GradientType=0 );background: -moz-linear-gradient( top, #ffff19 0%, #fabf10 100%);background: -webkit-linear-gradient( top, #ffff19 0%, #fabf10 100%);background: -o-linear-gradient( top, #ffff19 0%, #fabf10 100%);background: -ms-linear-gradient( top, #ffff19 0%, #fabf10 100%);background: linear-gradient( to bottom, #ffff19 0%, #fabf10 100%);;
+}
+
+.home_active_bid.win, .home_active_bid.win .active_bid_mybid {
+	color: #000000;
+
+}
+
+a.home_active_bid:hover {
+	background: #2a3f5a;
+}
+
+a.home_active_bid.win:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffBB), color-stop(100%,#fef417));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffBB', endColorstr='#fef417',GradientType=0 );background: -moz-linear-gradient( top, #ffffBB 0%, #fef417 100%);background: -webkit-linear-gradient( top, #ffffBB 0%, #fef417 100%);background: -o-linear-gradient( top, #ffffBB 0%, #fef417 100%);background: -ms-linear-gradient( top, #ffffBB 0%, #fef417 100%);background: linear-gradient( to bottom, #ffffBB 0%, #fef417 100%);;
+}
+
+.home_active_bid .active_bid_logo, .home_active_bid .active_bid_logo img {
+	width: 160px;
+	height: 60px;
+}
+
+.home_active_bid .active_bid_logo {
+	margin-bottom: 8px;
+}
+
+.active_bid_mybid {
+	font-size: 12px;
+	color: #fcda14;
+}
+
+.faq_left {
+	display: inline-block;
+	vertical-align: top;
+	width: 440px;
+	margin-right: 18px;
+}
+
+.faq_right {
+	display: inline-block;
+	vertical-align: top;
+	width: 440px;
+	margin-left: 18px;
+}
+
+.faq_a {
+	margin-bottom: 1.5em;
+}
+
+.faq_a a {
+	text-decoration: underline;
+}
+
+.top_video_ctn {
+	position: relative;
+	text-align: center;
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/video/auction_top_background.png') center top no-repeat;
+	padding-top: 6px;
+	z-index: 5;
+}
+
+.footer_video_ctn {
+	text-align: center;
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/video/auction_bottom_background.png') center top no-repeat;
+	padding-top: 1px;
+	height: 302px;
+
+	position: relative;
+	z-index: 5;
+}
+
+.auction_home_video {
+	width: 958px;
+}
+
+.top_video_ctn .auction_home_video {
+	height: 200px;
+}
+
+.footer_video_ctn .auction_home_video {
+	height: 300px;
+}
+
+.pipe_position {
+	position: relative;
+	width: 970px;
+	margin: 0 auto;
+}
+
+.pipe_position.header_video .pipe {
+	top: -117px;
+}
+.pipe_position.behind_iframe .pipe.right {
+	top: 300px;
+}
+.pipe_position.behind_iframe .pipe.left {
+	top: 500px;
+}
+
+.pipe {
+	position: absolute;
+	width: 100px;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.pipe.tall {
+	top: -385px;
+	height: 574px;
+}
+
+.pipe.large {
+	top: -190px;
+	height: 379px;
+}
+
+.pipe.small {
+	top: -142px;
+	height: 285px;
+}
+
+.pipe.left {
+	left: -100px;
+}
+
+.pipe.right {
+	right: -100px;
+}
+
+.pipe.tall.left {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_tall_left.png' );
+}
+
+.pipe.large.left {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_large_left.png' );
+}
+
+.pipe.large.right {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_large_right.png' );
+}
+
+.pipe.small.left {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_small_left.png' );
+}
+
+.pipe.small.right {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/pipe_small_right.png' );
+}
+
+.pipe.mid {
+	height: 20px;
+	top: -20px;
+	background-position: 0 -166px;
+	left: auto;
+	right: auto;
+}
+
+.pipe.mid.right {
+	right: 200px;
+}
+
+.pipe.mid.left {
+}
+
+.home_body_text {
+	color: #b0c0ce;
+	font-size: 14px;
+}
+
+.booster_creator_banner {
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/auction/auction_home_boostercreator.png') no-repeat top left;
+	height: 213px;
+	margin-top: 24px;
+}
+
+.booster_creator_banner .content {
+	padding: 32px 618px 0 36px;
+	color: #8f98a0;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.booster_creator_title {
+	font-size: 24px;
+	color: #ffffff;
+	line-height: normal;
+	margin-bottom: 4px;
+}
+
+.booster_creator_banner .content .btn_medium_tall {
+	margin-top: 12px;
+}
+
+.auction_block_game_image {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+
+.auction_block_game_image img {
+	width: 395px;
+}
+
+.auction_block_left {
+	display: inline-block;
+	width: 460px;
+	text-align: right;
+}
+
+.auction_block_right {
+	display: inline-block;
+	width: 490px;
+	text-align: left;
+}
+
+.auction_block_game_info {
+	vertical-align: middle;
+}
+
+.auction_block_game_info .btn_medium {
+	margin-top: 15px;
+}
+
+.queue_control_button {
+	display: inline-block;
+}
+
+.queue_btn_active {
+	background-color: rgba( 103, 193, 245, 0.6 );
+	color: #ffffff;
+}
+
+.queue_control_button.disabled {
+	cursor: default;
+}
+
+.btnv6_blue_hoverfade.queue_btn_active img {
+	vertical-align: middle;
+	margin-left: -6px;
+	margin-top: -2px;
+	margin-right: 3px;
+}
+
+.auction_block_separator {
+	position: relative;
+	height: 23px;
+	margin: 15px 0;
+	font-size: 18px;
+	color: #67C1F5;
+	text-align: center;
+}
+
+.auction_block_separator .sep_line {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	top: 11px;
+	background: background: -moz-linear-gradient( left, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);background: -webkit-linear-gradient( left, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);background: -o-linear-gradient( left, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);background: -ms-linear-gradient( left, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);background: linear-gradient( to right, #19293b 0%,#4ca2ce 15%,#4ca2ce 85%,#19293b 100%);}
+
+.auction_block_separator .sep_text {
+	position: relative;
+	padding: 0 15px;
+	background:  url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center center repeat-y #000000;
+	z-index: 2;
+}
+
+.auction_block_separator.sep_grey {
+	color: #a5b5c2;
+}
+
+.auction_block_separator.sep_grey .sep_line {
+	background: background: -moz-linear-gradient( left, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);background: -webkit-linear-gradient( left, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);background: -o-linear-gradient( left, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);background: -ms-linear-gradient( left, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);background: linear-gradient( to right, #212e3e 0%,#a5b5c2 15%,#a5b5c2 85%,#212e3e 100%);}
+
+.auction_game_name {
+	color: white;
+	font-family: "Motiva Sans Light Italic",Arial,Helvetica,Verdana,sans-serif;
+	font-size: 18px;
+	margin-bottom: 0.5em;
+}
+
+.auction_highest_bidder {
+	font-size: 16px;
+}
+
+.auction_highest_bidder > img {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.auction_highest_bidder_text {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+}
+
+.auction_bidder_name {
+	font-family: "Motiva Sans Bold",Arial,Helvetica,Verdana,sans-serif;
+}
+
+.auction_block_bidinfo {
+	width: 365px;
+	margin-right: 30px;
+	vertical-align: top;
+	color: white;
+	font-size: 18px;
+}
+
+.mybid_tip {
+	color: #8F98A0;
+}
+
+.auction_bidinfo_text {
+	text-align: center;
+	margin-bottom: 24px;
+	margin-top: -5px;
+}
+
+.auction_current_bid {
+	margin-top: 0.5em;
+	color: #fcda14;
+}
+
+.auction_scrap_remaining {
+	color: #fcda14;
+	font-size: 13px;
+}
+
+.auction_bid_button {
+	display: inline-block;
+	width: 190px;
+	vertical-align: middle;
+	line-height: 54px;
+	border-radius: 2px;
+	margin-right: 15px;
+	padding: 0 10px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fabf10), color-stop(95%,#ffff19));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fabf10', endColorstr='#ffff19',GradientType=0 );background: -moz-linear-gradient( top, #fabf10 5%, #ffff19 95%);background: -webkit-linear-gradient( top, #fabf10 5%, #ffff19 95%);background: -o-linear-gradient( top, #fabf10 5%, #ffff19 95%);background: -ms-linear-gradient( top, #fabf10 5%, #ffff19 95%);background: linear-gradient( to bottom, #fabf10 5%, #ffff19 95%);	font-size: 22px;
+	color: #0d131c;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border: 1px solid transparent;
+}
+
+.auction_block_bidactions {
+	vertical-align: top;
+}
+
+.auction_block_bidactions a {
+}
+
+a.auction_bid_cancel {
+	color: #959595;
+}
+
+.auction_bid_button:hover {
+	border: 1px solid white;
+}
+
+.auction_round {
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height: 35px;
+	margin: 3px;
+	padding: 17px;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.auction_round .round_bg {
+	position: absolute;
+	width: 184px;
+	height: 69px;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.auction_round.auction_round_ended .round_bg {
+	opacity: 0.2;
+}
+
+.auction_round .round_winner {
+	position: relative;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	z-index: 2;
+}
+
+.auction_round .round_winner > img {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.auction_dialog {
+	max-width: 500px;
+	font-family: "Motiva Sans Light",Arial,Helvetica,Verdana,sans-serif;
+	font-size: 13px;
+}
+
+.auction_dialog .rule {
+	height: 1px;
+	background-color: #212121;
+	border-top: 1px solid #323232;
+}
+
+.auction_dialog_maincontent {
+	text-align: center;
+}
+
+.auction_dialog_largetext {
+	font-size: 16px;
+	color: white;
+}
+
+.auction_dialog .auction_dialog_yellow {
+	color: #fcda14;
+}
+
+#auction_place_bid_current {
+	margin: 5px 0;
+}
+
+#auction_place_bid_yourbid {
+	font-size: 20px;
+	margin: 10px;
+}
+
+.auction_dialog_input_container {
+	padding: 10px;
+}
+
+.auction_dialog input {
+	width: 100%;
+	height: 22px;
+	padding: 8px 0;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	background-color: #3a3a3a;
+	border: 1px solid #7e7e7e;
+}
+
+.auction_dialog_actions {
+	margin: 20px 0;
+	text-align: right;
+}
+
+#auction_place_bid_error {
+	color: red;
+	margin: 5px 0;
+}
+
+.auction_cancel_bid_dialog .auction_dialog_maincontent {
+	padding: 15px 0;
+}
+
+.auction_store_iframe_ctn {
+	background-color: #0d131c;
+	margin-bottom: 20px;
+}
+
+.auction_store_iframe {
+	border: none;
+	padding: 0;
+	width: 946px;
+	height: 870px;	/* will be overridden in javascript based on page height */
+	background: #0d131c;
+}
+
+.comic .auction_nav {
+	max-width: 980px;
+	margin-bottom: 0;
+}
+
+.comic .auction_nav a {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.comic .auction_nav_header {
+	height: 365px;
+}
+
+.comiccontent {
+	width: 940px;
+	border: 20px solid black;
+	border-top: none;
+	margin: 0 auto;
+}
