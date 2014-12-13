@@ -53565,6 +53565,28 @@
 			{
 				"engineer"		"1"
 			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"0"
+				}
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#TF_short2014_engineer_nerd_hair_style0"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+						}
+					}
+					"1"
+					{
+						"name"		"#TF_short2014_engineer_nerd_hair_style1"
+					}
+				}
+			}
 		}
 		"30407"
 		{
@@ -55873,7 +55895,6 @@
 			"item_name"		"#TF_sf14_cursed_cruise"
 			"item_description"		"#TF_sf14_cursed_cruise_Desc"
 			"equip_region"		"disconnected_floating_item"
-			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/all_class/sf14_cursed_cruise/sf14_cursed_cruise"
 			"capabilities"
 			{
@@ -55904,6 +55925,7 @@
 				"spy"		"1"
 				"engineer"		"1"
 			}
+			"propername"		"1"
 		}
 		"30538"
 		{
@@ -56637,6 +56659,33 @@
 				"pyro"		"1"
 				"spy"		"1"
 				"engineer"		"1"
+			}
+		}
+		"30601"
+		{
+			"name"		"eotl_winter_coat"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"item_name"		"#TF_eotl_winter_coat"
+			"item_description"		"#TF_eotl_winter_coat_Desc"
+			"equip_region"		"soldier_coat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/soldier/eotl_winter_coat/eotl_winter_coat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/eotl_winter_coat/eotl_winter_coat.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
 			}
 		}
 
