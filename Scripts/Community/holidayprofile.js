@@ -101,9 +101,12 @@ CAnimation = function( rgAnimation, $Parent, x, y )
 	this.m_interval = 0;
 };
 
+CAnimation.sm_cAnimationsRunning = 0;
+
 CAnimation.prototype.Start = function() {
 	this.m_start = $J.now();
 	this.m_interval = window.setInterval( $J.proxy( this.Tick, this ), ANIMATION_TICK_RATE );
+	CAnimation.sm_cAnimationsRunning++;
 };
 
 CAnimation.prototype.Tick = function () {
@@ -129,6 +132,7 @@ CAnimation.prototype.Destroy = function () {
 	if ( this.m_interval )
 		window.clearInterval( this.m_interval );
 	this.m_$Element.remove();
+	CAnimation.sm_cAnimationsRunning--;
 };
 
 function StartAnimation()
@@ -144,10 +148,20 @@ function StartAnimation()
 	});
 
 	window.setInterval( function() {
-		if ( Math.random() < 0.25 )
+		if ( CAnimation.sm_cAnimationsRunning == 0 && Math.random() < 0.25 )
 		{
-			var nShowcase = Math.floor( Math.random() * $Showcases.length );
-			AnimationForShowcase( $J($Showcases[nShowcase]) );
+			var nScrollY = window.scrollY;
+			var nWindowHeight = $J(window).height();
+			var $VisibleShowcases = $Showcases.filter( function() {
+				var $Showcase = $J(this);
+				var nShowcaseTop = $Showcase.offset().top;
+				return nShowcaseTop >= nScrollY + 100 && nShowcaseTop < ( nScrollY + nWindowHeight );
+			});
+			if ( $VisibleShowcases.length )
+			{
+				var nShowcase = Math.floor( Math.random() * $VisibleShowcases.length );
+				AnimationForShowcase( $J($VisibleShowcases[nShowcase]) );
+			}
 		}
 	}, 1500 );
 }
