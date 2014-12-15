@@ -879,6 +879,15 @@ input.filter_search_box:focus {
 	padding-top: 24px;
 }
 
+.market_listing_warning_msg {
+	margin-top: 1em;
+	margin-left: 16px;
+	margin-right: 16px;
+	padding: 10px;
+	border: 1px solid orange;
+	color: #8F98A0;
+}
+
 .market_listing_iteminfo {
 	background-color: #171717;
 	background: -moz-linear-gradient(-45deg, #1f1f1f 0%, #171717 33%); /* FF3.6+ */
