@@ -47,8 +47,8 @@
 
 .holidayprofile .profile_content {
 	margin-top: -48px;
-	z-index: 1;
 	padding-top: 6px;
+	overflow: visible;
 }
 
 .holidayprofile .profile_rightcol {
@@ -89,9 +89,11 @@
 	position: relative;
 	text-shadow: 1px 1px 2px #000000;
 	margin-bottom: 40px;
+	color: #e4ca63;
 }
 
 .holidayprofile_animation {
 	position: absolute;
 	background-repeat: no-repeat;
+	z-index: 10;
 }
