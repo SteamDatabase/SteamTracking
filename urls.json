@@ -123,11 +123,13 @@
 // Holiday CSS
 //
 "Styles/auction.css"                              : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/auction.css?__TIME__",
+"Styles/holidayprofile.css"                       : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/holidayprofile.css?__TIME__",
 
 //
 // Holiday JS
 //
 "Scripts/Community/auction.js"                   : "https://steamcommunity-a.akamaihd.net/public/javascript/auction.js?__TIME__&l=english",
+"Scripts/Community/holidayprofile.js"            : "https://steamcommunity-a.akamaihd.net/public/javascript/holidayprofile.js?__TIME__&l=english",
 
 //
 // Store JS
