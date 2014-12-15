@@ -1350,7 +1350,7 @@ function v_numberformat( n, decimals )
 			options.maximumFractionDigits = decimals;
 		}
 
-		return n.toLocaleString( false, options );
+		return new Number(n).toLocaleString( false, options );
 	}
 
 	var str = '' + ( n ? n : 0 );
