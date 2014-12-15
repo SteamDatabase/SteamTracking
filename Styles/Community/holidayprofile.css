@@ -1,0 +1,97 @@
+
+
+.holidayprofile .profile_header_bg {
+	background: url('https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/header_bg.png') no-repeat center top;
+	height: 280px;
+	z-index: 2;
+	max-width: 1057px;
+}
+
+.holidayprofile .profile_header_bg_texture {
+	background: none;
+}
+
+.holidayprofile_header_overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/header_front.png' ) no-repeat center top;
+	pointer-events: none;
+}
+
+.holidayprofile .profile_header_content .whiteLink,
+.holidayprofile .profile_header_content .btn_profile_action,
+.holidayprofile .profile_header_content .persona_name
+{
+	z-index: 2;
+	position: relative;
+}
+
+/* these guys are already positioned, so just set z-index */
+.holidayprofile .profile_header_content .favorite_badge > div
+{
+	z-index: 2;
+}
+
+.holidayprofile .profile_header_content .persona_name {
+	z-index: 3;	/* to make menu appear on top of "View more" link */
+}
+
+.holidayprofile .profile_header_content .actual_persona_name {
+	color:#e4ca63;
+}
+
+.holidayprofile .profile_content {
+	margin-top: -48px;
+	z-index: 1;
+	padding-top: 6px;
+}
+
+.holidayprofile .profile_rightcol {
+	padding-top: 52px;
+}
+
+
+.holidayprofile .profile_customization:not(.none_selected) {
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/showcase_repeat.png' ) repeat-y center -6px;
+	overflow: visible;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.holidayprofile .profile_customization:not(.none_selected)::before {
+	content: '';
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/showcase_top.png' ) no-repeat center top;
+	width: 664px;
+	height: 85px;
+	position: absolute;
+	z-index: 0;
+	left: -15px;
+	top: -10px;
+	display: block;
+}
+
+.holidayprofile .profile_customization:not(.none_selected)::after {
+	content: '';
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/holidayprofile/showcase_bottom.png' ) no-repeat center bottom;
+	width: 664px;
+	height: 85px;
+	position: absolute;
+	left: -15px;
+	display: block;
+}
+
+.holidayprofile .profile_customization:not(.none_selected) .profile_customization_header {
+	position: relative;
+	text-shadow: 1px 1px 2px #000000;
+	margin-bottom: 40px;
+}
+
+.holidayprofile_animation {
+	position: absolute;
+	background-repeat: no-repeat;
+}
