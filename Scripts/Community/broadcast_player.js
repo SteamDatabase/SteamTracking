@@ -100,8 +100,7 @@ CBroadcastPlayer.prototype.CloseWithError = function()
 {
 	this.Close();
 
-	var event = new Event( 'playbackerror' );
-	this.m_elVideoPlayer.dispatchEvent( event );
+	$J( this.m_elVideoPlayer ).trigger( 'playbackerror' );
 }
 
 CBroadcastPlayer.prototype.PlayMPD = function( strURL )
@@ -290,8 +289,7 @@ CBroadcastPlayer.prototype.BeginPlayback = function()
 		this.m_loaders[i].BeginPlayback( unLiveEdge );
 	}
 
-	var event = new Event( 'initialized' );
-	this.m_elVideoPlayer.dispatchEvent( event );
+	$J( this.m_elVideoPlayer ).trigger( 'initialized' );
 }
 
 CBroadcastPlayer.prototype.OnSegmentDownloaded = function()
@@ -299,8 +297,7 @@ CBroadcastPlayer.prototype.OnSegmentDownloaded = function()
 	this.UpdateStats();
 	this.UpdateRepresentation( this.m_nVideoRepresentationIndex, true );
 
-	var event = new Event( 'bufferedupdate' );
-	this.m_elVideoPlayer.dispatchEvent( event );
+	$J( this.m_elVideoPlayer ).trigger( 'bufferedupdate' );
 
 	if ( !this.m_bPlayAfterBuffering )
 		return;
@@ -338,8 +335,7 @@ CBroadcastPlayer.prototype.OnSegmentDownloaded = function()
 			{
 				_player.m_elVideoPlayer.currentTime = nStartPlayback;
 
-				var event = new Event( 'bufferingcomplete' );
-				_player.m_elVideoPlayer.dispatchEvent( event );
+				$J( _player.m_elVideoPlayer ).trigger( 'bufferingcomplete' );
 
 				// setup events now that we are playing
 				_player.m_elVideoPlayer.addEventListener("seeking",function() { _player.playerSeeking(_player); });
@@ -357,8 +353,7 @@ CBroadcastPlayer.prototype.OnSegmentDownloadFailed = function()
 {
 		this.StopDownloads();
 
-	var event = new Event( 'downloadfailed' );
-	this.m_elVideoPlayer.dispatchEvent( event );
+	$J( this.m_elVideoPlayer ).trigger( 'downloadfailed' );
 }
 
 CBroadcastPlayer.prototype.playerSeeking = function(_player)

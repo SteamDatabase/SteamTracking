@@ -790,7 +790,7 @@ CBoosterCreatorPage = {
 				case 'price':
 					return v_numberformat( rgBoosterData.price );
 				case 'img_params':
-					return bMiniOption ? '?size=120x' : '';
+					return '?l=english' + ( bMiniOption ? '&size=120x' : '' );
 				default:
 					return match;
 			}
