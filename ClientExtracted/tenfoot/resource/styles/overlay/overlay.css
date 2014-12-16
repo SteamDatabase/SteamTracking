@@ -275,3 +275,15 @@
 }
 
 
+#BroadcastLabelText
+{
+	width: 100%;
+	height: fill-parent-flow( 1.0 );
+	font-size: 21px;
+	line-height: 24px;
+	margin-bottom: 2px;
+	white-space: normal;
+	font-weight: normal;
+	font-family: platformfont;
+}
+

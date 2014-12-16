@@ -82,7 +82,7 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"labelText"		"is watching your broadcast"
+		"labelText"		"#Broadcast_Notification_Is_Watching"
 		"textAlignment"		"north-west"
 		"wrap"		"0"
 		"font"		FriendsSmall

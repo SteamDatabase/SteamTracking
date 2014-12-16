@@ -6,7 +6,7 @@
 	</styles>
 
   <FriendsSelfHeader>
-		<AvatarImage id="FriendPanelImage" class="FriendsMyAvatar" onmouseactivate="BrowseToSteamURL( SteamIDMyProfile );" />
+		<AvatarImage id="FriendPanelImage" class="FriendsMyAvatar" onmouseactivate="OpenMyProfile();" />
 		<Panel id="FriendsMyNameAndStateContainer">
 			<Label id="FriendPersonaName" class="FriendsMyName" />
 			<Label id="FriendStatus" class="FriendsMyState" />

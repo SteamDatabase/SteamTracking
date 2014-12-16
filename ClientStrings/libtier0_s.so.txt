@@ -365,6 +365,7 @@ ThreadInterlockedExchangePointer
 ThreadInterlockedIncrement
 ThreadInterlockedIncrement64
 ThreadIsProcessActive
+ThreadIsProcessIdActive
 ThreadIsThreadRunning
 ThreadMicroSleepPOSIX
 ThreadOpenProcess

@@ -17,7 +17,7 @@
 	padding-bottom: 45px;
 	overflow: clip clip;
 	transform-origin: 0% 0% parent-relative;
-	transition-duration: 0.4s;
+	transition-duration: 0.3s;
 	transition-property: transform, opacity, opacity-mask, position;
 	transition-timing-function: ease-in-out;
 }
@@ -35,7 +35,7 @@
 #SystemIMBackground #CarouselTitle
 {
 	transition-property: transform, position, opacity !immediate;
-	transition-duration: 0.4s !immediate;
+	transition-duration: 0.3s !immediate;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 	position: -37.0px 0.0px -500.0px;
@@ -87,7 +87,7 @@
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
 
 	transition-property: transform, opacity !immediate; 
-	transition-duration: 0.4s;
+	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
 
 	transform-origin: 0% 0% parent-relative;
@@ -107,7 +107,7 @@
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
 
 	transition-property: transform, opacity !immediate; 
-	transition-duration: 0.4s;
+	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
 
 	transform-origin: 0% 0% parent-relative;
@@ -127,7 +127,7 @@
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
 
 	transition-property: transform, opacity !immediate; 
-	transition-duration: 0.4s;
+	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
 
 	transform-origin: 0% 0% parent-relative;
@@ -237,7 +237,7 @@
 
 	//	transform-origin: 0% 0% parent-relative;
 	transition-property: transform, position, opacity, blur, box-shadow, wash-color, desaturation, opacity-mask !immediate;
-	transition-duration: 0.4s;
+	transition-duration: 0.3s;
 	transition-delay: 0.1s;
 	transition-timing-function: ease-in-out;
 
@@ -249,12 +249,13 @@
 
 #SystemIMBackground:descendantfocus .SystemIMImage
 {
-	transition-duration: 0.25s !immediate;
+	transition-duration: 0.3s !immediate;
 }
 
 #SystemIMBackground:descendantfocus .SystemIMImage:descendantfocus
 {
 	blur: none;
+	visibility: visible;
 	opacity: 1.0;
 	desaturation: 0.0;
 }
@@ -285,7 +286,12 @@
 	opacity: 0.0;
 }
 
-#SystemIMBackground:descendantfocus .SystemIMImage:focus
+#SystemIMBackground .SystemIMImage #SystemIMImage
+{
+	margin: 10px;
+	}
+
+#SystemIMBackground:descendantfocus .SystemIMImage:focus #SystemIMImage
 {
 
 	animation-name: main-button-glow-movement;
@@ -308,16 +314,124 @@
 	font-size: 36px;
 }
 
-.SystemIMImage:focus #SystemIMDisclaimer
-{
-	margin-left: 4px;
+#SystemIMDisclaimer
+{	
+	color: applabelsolid;
+	margin-left: 10px;
 	margin-top: 8px;
-	margin-bottom: 4px;
+	margin-bottom: 8px;
 	font-family: platformfont;
 	font-size: 11px;
-	color: applabelsolid;
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+.SystemIMImage:focus #SystemIMDisclaimer
+{
 	opacity: 1.0;
 }
+
+
+#PlatformSupport
+{
+	margin: 10px;
+	padding-left: 40px;
+	padding-right: 5px;
+	padding-top: 0px;
+	width: fit-children;
+	height: 80px;
+
+	flow-children: right;
+	vertical-align: bottom;
+	horizontal-align: right;
+	opacity: 0.0;
+	z-index: 10;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+
+	background-image: url( "file://{images}/store/shadow.png" );
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#SystemIMImage:descendantfocus #PlatformSupport
+{
+	opacity: 1.0;
+}
+
+#IMContents
+{
+
+}
+
+#GamePadControllerIcon, #WindowsIcon, #OSXIcon, #LinuxIcon
+{
+	width: 50px;
+	height: 50px;
+
+	horizontal-align: right;
+	vertical-align: bottom;
+
+	visibility: collapse;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+}
+
+.OSXIcon #OSXIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_mac_storefront.png" );
+}
+
+.LinuxIcon #LinuxIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_steamos_storefront.png" );
+}
+
+
+.WindowsIcon #WindowsIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_windows_storefront.png" );
+}
+
+#GamePadControllerIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
+}
+
+.GamepadControllerIcon #GamePadControllerIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_fullcontroller_storefront.png" );
+}
+
+.SteamPad #GamePadControllerIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_legacycontroller_storefront.png" );
+}
+
+
+.SteamPad.GamepadControllerIcon #GamePadControllerIcon
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_steamcontroller_storefront.png" );
+}
+
+
 
 
 .SystemIMCountThree .SystemIMImage1
@@ -377,11 +491,11 @@
 	transition-property: opacity, blur, box-shadow, wash-color, desaturation !immediate;
 	transition-duration: 0.3s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-out;
+	transition-timing-function: ease-in-out;
 
-	animation-duration: 0.4s;
+	animation-duration: 0.3s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-out;
+	animation-timing-function: ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }
@@ -599,14 +713,14 @@
 	opacity: 0.8;
 
 	transform: none;
-	margin: 0px 0px;
+	margin: 10px;
 	wash-color: none;
 	box-shadow: none;
 	animation-name: none;
 
-	transition-duration: 0.25s;
+	transition-duration: 0.3s;
 	transition-delay: 0.0s !immediate;
-	transition-property: opacity, position, box-shadow, z-index, wash-color, desaturation, blur;
+	transition-property: opacity, opacity-mask, z-index, position, box-shadow, z-index, wash-color, desaturation, blur;
 }
 
 
@@ -624,9 +738,9 @@
 #SystemIMBackground:descendantfocus .SystemIMImage.SystemIMImage1, #SystemIMBackground:descendantfocus .SystemIMImage.SystemIMImage2, #SystemIMBackground:descendantfocus .SystemIMImage.SystemIMImage3
 {
 	// we apply this animation instead of using transitions so we can leave position transitioning
-	// at the 0.4s when changing focus in the carousel
+	// at the 0.3s when changing focus in the carousel
 	animation-name: IMToForeground;
-	animation-duration: 0.4s;
+	animation-duration: 0.3s;
 	animation-delay: 0.0s;
 	animation-timing-function: linear;
 	animation-iteration-count: 1;

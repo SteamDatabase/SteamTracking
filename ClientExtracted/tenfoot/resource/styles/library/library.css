@@ -910,7 +910,7 @@ LibraryAppDetails .ContentsRow
 	margin: 4px 20px 10px 26px;
 	height: 60px;
 	flow-children: right;
-
+	box-shadow: none;
 	color: detailsdatalabelfocus;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
 	border-style: solid;

@@ -293,9 +293,7 @@ ToggleButton .TickBox
 	color: applabelsolid;
 	max-width: 475px;
 	text-overflow: clip;
-	white-space: nowrap;
 	width: 100%;
-
 }
 
 .SettingsFullContent
@@ -415,6 +413,7 @@ Label.SettingsStatic
 	horizontal-align: left;
 	padding-right: 40px;
 	margin-left: 50px;
+	height: 770px;
 }
 
 .SettingsRightContent

@@ -17,6 +17,7 @@ Attrib_Position
 Attrib_TexCoord
 AXCreateGC
 BOverlayNeedsPresent
+BpL9Lo
 __bss_start
 CAsyncCaptureGL
 chdir
@@ -95,7 +96,6 @@ glClientActiveTextureARB
 glColor4f
 glColor4ub
 glColorMask
-GL_COLOR_MATRIX
 glCompileShader
 glCreateProgram
 glCreateShader
@@ -159,7 +159,6 @@ glLinkProgram
 glLoadIdentity
 glLoadMatrixf
 glMatrixMode
-GL_MODELVIEW_MATRIX
 glOrtho
 GLOVERLAYCOREPROFILE
 GLOverlay_v0.frag
@@ -168,8 +167,6 @@ glPixelZoom
 glPolygonMode
 glPopAttrib
 glPopClientAttrib
-GL_PROGRAM_PIPELINE_BINDING
-GL_PROJECTION_MATRIX
 glPushAttrib
 glPushClientAttrib
 glReadBuffer
@@ -182,7 +179,6 @@ glTexCoord2i
 glTexEnvf
 glTexImage2D
 glTexParameterf
-GL_TEXTURE_MATRIX
 glTranslatef
 glUniform1i
 glUniform4fv
@@ -317,7 +313,6 @@ strtol
 strtoull
 syscall
 system
-TextureReloadFromCached
 timegm
 __timezone
 u4PPW
@@ -327,7 +322,6 @@ uvOffset
 valid
 Value
 ValveHookScreenshots
-ValveSetRenderState
 vfprintf
 VR_GetControlPanel
 vsnprintf

@@ -1,11 +1,18 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/button.css" />
 		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/overlay/overlay.css" />
 	</styles>
 
 	<BroadcastOverlay class="BroadcastOverlayPanel" >
-				<Label text="Broadcast" class="HeaderLabel" /> 
+				<Label text="#Broadcast_Overlay_Title" class="HeaderLabel" /> 
+				<Label id="BroadcastLabelText" class="HeaderLabel" text="#Broadcast_Overlay_Text" /> 
+				
+				<Button id="BroadcastStopBotton" tabindex="auto" selectionpos="auto" onactivate="StopBroadcast()" >
+					<Label text="#Broadcast_Overlay_Stop" /> 
+				</Button>
 	</BroadcastOverlay>
 
 </root>
