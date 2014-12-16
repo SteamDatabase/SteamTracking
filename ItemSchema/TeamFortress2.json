@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.69ac51715d8cc9e86125f2d06bbb30d26d548552.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.a39e1462ed18b0ffa5dd1ea686bcd992a6077e49.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -62716,6 +62716,94 @@
 				"tool": {
 					"type": "gift"
 				}
+			},
+			{
+				"name": "Naughty Winter Crate 2014",
+				"defindex": 5789,
+				"item_class": "supply_crate",
+				"item_type_name": "Supply Crate",
+				"item_name": "Naughty Winter Crate 2014",
+				"item_description": "This crate's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/smissmas_crate_naughty_2014",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http://media.steampowered.com/apps/440/icons/smissmas_crate_naughty_2014.ac8047eba6bcf22da4b2bcb33b2deef08b4cbdd2.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/smissmas_crate_naughty_2014_large.ea1ac9c9643ed6222f79b080f0c48429562a98bd.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "winter2014_naughty"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 88
+					}
+				]
+				
+			},
+			{
+				"name": "Nice Winter Crate 2014",
+				"defindex": 5790,
+				"item_class": "supply_crate",
+				"item_type_name": "Supply Crate",
+				"item_name": "Nice Winter Crate 2014",
+				"item_description": "This crate's contents are unknown and\nnormal keys don't fit the lock.\n\nYou'd better hold onto it.\nThere will probably be a way to open it later.",
+				"proper_name": false,
+				"model_player": null,
+				"item_quality": 6,
+				"image_inventory": "backpack/player/items/crafting/smissmas_crate_2014",
+				"min_ilevel": 13,
+				"max_ilevel": 13,
+				"image_url": "http://media.steampowered.com/apps/440/icons/smissmas_crate_2014.ba5e7a0a8d87bc071fb5476c28068af2212a3a3d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/smissmas_crate_2014_large.e5a3db37b3dec3d9459969f417f7fb3943f81453.png",
+				"craft_class": "supply_crate",
+				"craft_material_type": "supply_crate",
+				"capabilities": {
+					"decodable": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
+				"tool": {
+					"type": "",
+					"restriction": "winter2014_nice"
+				},
+				"used_by_classes": [
+
+				]
+				,
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 89
+					}
+				]
+				
 			},
 			{
 				"name": "Strange Part (Armory)",

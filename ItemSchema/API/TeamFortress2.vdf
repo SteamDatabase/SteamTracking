@@ -74843,6 +74843,40 @@
 			"mouse_pressed_sound"	"ui/item_metal_tiny_pickup.wav"
 			"drop_sound"		"ui/item_metal_tiny_drop.wav"
 		}
+		"5789" 
+		{
+			"name"	"Naughty Winter Crate 2014"
+			"prefab" "eventcrate"
+			"first_sale_date"	"2014/12/15"
+			"tool"
+			{
+				"restriction"	"winter2014_naughty"
+			}
+			"armory_desc" "winter_crate"
+			"item_name"		"#TF_WinterCrate2014_Naughty"
+			"item_description"	"#TF_WinterCrate2014_Naughty_Desc"
+			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_naughty_2014"
+			"attributes"
+			{
+			}
+		}
+		"5790" 
+		{
+			"name"	"Nice Winter Crate 2014"
+			"prefab" "eventcrate"
+			"first_sale_date"	"2014/12/15"
+			"tool"
+			{
+				"restriction"	"winter2014_nice"
+			}
+			"armory_desc" "winter_crate"
+			"item_name"		"#TF_WinterCrate2014_Nice"
+			"item_description"	"#TF_WinterCrate2014_Nice_Desc"
+			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_2014"
+			"attributes"
+			{
+			}
+		}
 		
 		"5999"				
 		{
