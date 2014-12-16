@@ -52,6 +52,9 @@ h2 {
 
 	text-align: center;
 	font-size: 18px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .item_currency_name {
