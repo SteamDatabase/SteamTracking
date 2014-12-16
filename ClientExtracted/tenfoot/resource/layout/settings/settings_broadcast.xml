@@ -1,0 +1,48 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_Broadcast class="SettingsSection" defaultfocus="SettingsDownloads_Libraries">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_Broadcast" />
+		</Panel>
+		
+		<Panel class="SettingsBottomPanel FlowDown">
+			<!-- main panel -->
+			<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
+
+			</Panel>
+			<!-- used for enable/disable CSS -->
+			<Panel id="SettingsBroadcast_SubControls" tabindex="auto" selectionpos="auto">
+				
+				<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">
+					
+					<Label class="SettingsLabel" text="#Settings_Broadcast_PermissionsHeader" />
+					<DropDown id="SettingsBroadcast_Permissions" class="Filter" />			
+					
+					<Panel class="Spacer" />
+					
+					<Label class="SettingsLabel" text="#Settings_Broadcast_DimensionsHeader" />
+					<DropDown id="SettingsBroadcast_Dimensions" class="Filter" />	
+					
+					<Panel class="Spacer" />
+					
+					<Label class="SettingsLabel" text="#Settings_Broadcast_BitrateHeader" />
+					<DropDown id="SettingsBroadcast_Bitrate" class="Filter" />	
+					
+					<Panel class="Spacer" />
+					<Panel class="Spacer" />
+					
+					<ToggleButton class="CheckBox" id="SettingsBroadcast_RecordMic" text="#Settings_Broadcast_RecordMic" />
+																			
+				</Panel>
+				
+			</Panel>
+		</Panel>
+		
+	</SettingsPanel_Broadcast>
+
+</root>

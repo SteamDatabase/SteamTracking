@@ -6,14 +6,10 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../common/parentalinterpreter.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/completionportmanager.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/completionportmanager_posix.cpp
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/cookiecontainer.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/enum_names.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/filesystem_helpers.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/framefunction.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/gid.cpp
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/httpclient.cpp
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/httpclient.h
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/http.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/job.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/jobmgr.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/language.cpp
@@ -24,6 +20,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/msgprotobuf.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/netfilter.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/netfilter.h
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/opensslconnection.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../public/rtime.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/RateLimiter.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/registry.cpp
@@ -169,7 +166,6 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/gamespage_details_news.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/gamespage_grid.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/gamespage_list.cpp
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/broadcastsession.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/desktopcapturex11.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/desktopstreamthread.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamerecordsession.cpp
@@ -232,6 +228,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/avatarimage.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/avatarimage.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/backgroundvideopanel.h
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/broadcast/broadcastoverlay.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/community/community.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/community/community.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/controls/keyboardshortcut.cpp

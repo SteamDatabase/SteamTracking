@@ -87,6 +87,9 @@
 				<Button id="RemoteControlSettingsButton" class="Button" onactivate="ShowSettings( RemoteControl );">
 					<Label class="LongDesc" text="#Settings_RemoteControl" />
 				</Button>
+				<Button id="BroadcastSettingsButton" class="Button" onactivate="ShowSettings( Broadcast );">
+					<Label class="LongDesc" text="#Settings_Broadcast" />
+				</Button>
 				<Button id="AlienFXSettingsButton" class="Button" onactivate="ShowSettings( AlienFX );">
 					<Label class="LongDesc" text="#Settings_AlienFX" />
 				</Button>
