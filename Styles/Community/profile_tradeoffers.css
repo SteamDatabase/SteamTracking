@@ -98,6 +98,11 @@
 	margin-bottom: 5px;
 }
 
+.tradeoffer_items.secondary .trade_item .item_currency_amount {
+	top: 44px;
+	font-size: 15px;
+}
+
 .trade_item.missing {
 	border-style: dashed;
 }

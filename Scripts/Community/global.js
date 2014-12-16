@@ -761,7 +761,7 @@ function InitEconomyHovers( strEconomyCSSURL, strEconomyCommonJSURL, strEconomyJ
 
 	var fnDataFactory = function( key ) {
 		var rgItemKey = key.split('/');
-		if ( rgItemKey.length == 3 || rgItemKey.length == 4 )
+		if ( rgItemKey.length >= 3 && rgItemKey.length <= 5 )
 		{
 			if ( fnOneTimeEconomySetup )
 			{
@@ -769,9 +769,17 @@ function InitEconomyHovers( strEconomyCSSURL, strEconomyCommonJSURL, strEconomyJ
 				fnOneTimeEconomySetup = null;
 			}
 
+			// pop amount off the end first if it's present
+			var nAmount;
+			var strLastEntry = rgItemKey[rgItemKey.length - 1];
+			if ( strLastEntry && strLastEntry.length > 2 && strLastEntry.substr( 0, 2 ) == 'a:' )
+			{
+				nAmount = strLastEntry.substr( 2 );
+				rgItemKey.pop();
+			}
+
 			var strURL = null;
 			var appid = rgItemKey[0];
-
 			if ( appid == 'classinfo' )
 			{
 				// class info style
@@ -797,6 +805,8 @@ function InitEconomyHovers( strEconomyCSSURL, strEconomyCommonJSURL, strEconomyJ
 						strURL += '&o=' + strOwner;
 				}
 			}
+			if ( nAmount && nAmount > 1 )
+				strURL += '&amount=' + nAmount;
 			return new CDelayedAJAXData( strURL, 100 );
 		}
 		else
