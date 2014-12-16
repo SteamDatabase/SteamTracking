@@ -2405,7 +2405,10 @@ function BuildHover( prefix, item, owner )
 		var elScrapLink = $(prefix+'_item_scrap_link');
 		if ( elScrapActions && elScrapAmount && elScrapLink )
 		{
-			PopulateScrapAction( elScrapActions, elScrapAmount, elScrapLink, item );
+			if ( typeof(g_bViewingOwnProfile) != 'undefined' && g_bViewingOwnProfile )
+			{
+				PopulateScrapAction( elScrapActions, elScrapAmount, elScrapLink, item );
+			}
 		}
 	
 	var elMarketActions = $(prefix+'_item_market_actions');
