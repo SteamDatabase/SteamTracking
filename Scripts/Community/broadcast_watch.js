@@ -212,7 +212,7 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 		}
 		else if ( data.success == 'noservers' )
 		{
-			_watch.ShowVideoError( _watch.AddBroadcasterName( 'BroadcastWatch_BroadcastWatch_ServersTooBusy' ) );
+			_watch.ShowVideoError( _watch.AddBroadcasterName( 'Steam is currently experiencing high broadcast load in %s\'s area and is currently unable to reserve a server spot to start this broadcast.<br><br>Additional server capacity will be added throughout the Steam Broadcast beta. Please try again later.' ) );
 		}
 		else if ( data.success == 'system_not_supported' )
 		{
