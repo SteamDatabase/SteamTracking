@@ -489,53 +489,337 @@ function ShowBoosterEligibility()
 		window.location = 'http://steamcommunity.com/' + '/tradingcards/boostercreator/';
 	}
 
-	function PackGameGooIntoBarrel( appid, itemid )
-	{
+CGameGooExchangeDialog = {
+
+	m_bInitialized: false,
+	m_appid: 0,
+	m_currency: null,
+	m_nSourceDenomination: 0,
+	m_nTargetDenomination: 0,
+	m_fnDocumentKeyHandler: null,
+	m_slider: null,
+	m_elSliderHandle: null,
+	m_elSliderProgress: null,
+	m_elSliderCount: null,
+	m_bIgnoreSlider: false,
+
+	Initialize: function() {
+		var oDialog = this;
+		$J('#goo_exchange_dialog_accept').click( function( event ) { oDialog.OnAccept( event ); } );
+		$J('#goo_exchange_dialog_cancel').click( function( event ) { oDialog.OnCancel( event ); } );
+		$J('#goo_exchange_input').keypress( function( event ) { oDialog.OnInputKeyPress( event ) } );
+		$J('#goo_exchange_input').keyup( function( event ) { oDialog.OnInputKeyUp( event ) } );
+
+		$J('#goo_exchange_dialog').css( 'visibility', 'hidden' );
+		$J('#goo_exchange_dialog').show();
+
+		this.m_elSliderHandle = $J('#goo_exchange_slider .handle');
+		this.m_slider = new CSlider( $J('#goo_exchange_slider'), this.m_elSliderHandle, {
+			min: 0,
+			max: 1,
+			increment: 1,
+			fnOnChange: function( value, bInDrag ) { oDialog.OnSliderChange( value, bInDrag ) }
+		});
+		this.m_elSliderProgress = $J('#goo_exchange_slider_ctn .slider_progress');
+		this.m_elSliderCount = $J('#goo_exchange_slider_count');
+		$J('#goo_exchange_dialog').hide();
+		$J('#goo_exchange_dialog').css( 'visibility', '' );
+		this.m_bInitialized = true;
+	},
+
+	Show: function ( appid, currency, nSourceDenomination, nTargetDenomination, strAction ) {
+
+		if ( !this.m_bInitialized )
+			this.Initialize();
+
+		this.m_appid = appid;
+		this.m_currency = currency;
+		this.m_nSourceDenomination = nSourceDenomination;
+		this.m_nTargetDenomination = nTargetDenomination;
+
+		this.m_slider.SetIncrement( nTargetDenomination );
+		$J('#goo_exchange_dialog_title').text( strAction );
+
+		$J('.goo_exchange_dialog_currencyname').text( currency.name );
+
+		var amount = currency.amount > 0 ? currency.amount : 1;
+
+		var nMaxOut = Math.floor( amount / nTargetDenomination );
+		if ( nMaxOut <= 0 )
+		{
+			ShowAlertDialog( 'Action Failed', 'You do not have enough ' + currency.name.escapeHTML() + '.' );
+			return;
+		}
+
+		$J('#goo_exchange_input').val( amount );
+
+		var iconUrl = ImageURL( currency.icon_url, 42, '42f' );
+		$J('#goo_exchange_dialog_symbol1').attr( 'src', iconUrl );
+		$J('#goo_exchange_dialog_symbol2').attr( 'src', iconUrl );
+
+		$J('#goo_exchange_input').css( 'color', currency.name_color ? '#' + currency.name_color : '' );
+		$J('#goo_exchange_dialog_remaining_display').css( 'color', currency.name_color ? '#' + currency.name_color : '' );
+
+		$J('#goo_exchange_dialog_error').text('');
+
+		var oDialog = this;
+		this.m_fnDocumentKeyHandler = function( event ) { oDialog.OnDocumentKeyPress( event ) };
+		$J(document).bind( 'keydown', this.m_fnDocumentKeyHandler );
+
+		showModal( 'goo_exchange_dialog', true );
+
+		this.m_slider.SetRange( 0, nMaxOut * nTargetDenomination, 0 );
+		this.OnSliderChange( 0 );
+
+		this.UpdateRemainingCurrencyDisplay();
+
+		$J('#goo_exchange_input').focus();
+	},
+
+	UpdateRemainingCurrencyDisplay: function() {
+		var inputValue = this.GetInputValueAsInt();
+		var nAmount = inputValue;
+
+		var nDisplayAmount = this.m_currency.amount;
+		if ( nAmount <= this.m_currency.amount )
+			nDisplayAmount = this.m_currency.amount - nAmount;
+
+		$J('#goo_exchange_dialog_remaining_display').text( v_numberformat( nDisplayAmount ) );
+	},
+
+	DisplayError: function( error ) {
+		$J('#goo_exchange_dialog_error').text( error );
+		$J('#goo_exchange_dialog_error').css( 'color', '#ff0000' );
+	},
+
+	Dismiss: function() {
+		$J(document).unbind( 'keydown', this.m_fnDocumentKeyHandler );
+		hideModal( 'goo_exchange_dialog' );
+	},
+
+	GetInputValueAsInt: function() {
+		var nAmount;
+		var strAmount = $J('#goo_exchange_input').val();
+
+		if ( !strAmount )
+		{
+			return 0;
+		}
+
+		nAmount = parseInt( strAmount.replace( /[,.]/g, '' ) );
+
+		nAmount = Math.max( nAmount, 0 );
+		return nAmount;
+	},
+
+	OnAccept: function( event ) {
+		event.preventDefault();
+
+		var inputValue = $J('#goo_exchange_input').val();
+		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
+		{
+			this.DisplayError( 'Please enter a valid amount above.' );
+			return;
+		}
+
+		var xferAmount = this.GetInputValueAsInt();
+		if ( xferAmount <= 0 )
+		{
+			this.Dismiss();
+			event.preventDefault();
+			return;
+		}
+
+		var nExpectedOut = (xferAmount * (this.m_nSourceDenomination / this.m_nTargetDenomination) );
+		if ( parseInt(nExpectedOut) != nExpectedOut )
+		{
+			var nRequiredMultiple = this.m_nTargetDenomination / this.m_nSourceDenomination;
+			this.DisplayError( 'You must enter a multiple of %1$s.'.replace( '%1$s', v_numberformat( nRequiredMultiple ) ) );
+			return;
+		}
+
+		if ( xferAmount > this.m_currency.amount )
+		{
+			this.DisplayError( 'You do not have enough ' + this.m_currency.name + '.' );
+			return;
+		}
+
+		nExpectedOut = parseInt(nExpectedOut);
+		var currency = this.m_currency;
+		var nSourceDenomination = this.m_nSourceDenomination;
+		var nTargetDenomination = this.m_nTargetDenomination;
+
 		var rgAJAXParams = {
 			sessionid: g_sessionID,
-			appid: appid,
-			assetid: itemid,
-			goo_denomination_in: 1,
-			goo_amount_in: 1000,
-			goo_denomination_out: 1000,
-			goo_amount_out_expected: 1
+			appid: this.m_appid,
+			assetid: currency.id,
+			goo_denomination_in: nSourceDenomination,
+			goo_amount_in: xferAmount,
+			goo_denomination_out: nTargetDenomination,
+			goo_amount_out_expected: nExpectedOut
 		};
 		var strActionURL = g_strProfileURL + "/ajaxexchangegoo/";
 
 		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
 				if ( data.success == 78 )
 				{
-					ShowAlertDialog( 'Action Failed', 'You need at least 1000 Gems to make a Sack' );
+					ShowAlertDialog( 'Action Failed', 'You do not have enough %s.'.replace( '%1$s', currency.name ) );
 				}
-				else
+				else if ( data.success == 1 )
 				{
-					ShowAlertDialog( 'Success', 'The new Sack has been added to your inventory.' );		// localize
+					if ( nSourceDenomination == 1 && nTargetDenomination == 1000 )
+					{
+						if ( nExpectedOut == 1 )
+						{
+							ShowAlertDialog( 'Success', 'One new Sack of Gems has been added to your inventory.' );
+						}
+						else
+						{
+							ShowAlertDialog( 'Success', '%1$s new Sacks of Gems have been added to your inventory.'.replace( '%1$s', v_numberformat( nExpectedOut ) ) );
+						}
+					}
+					else if ( nSourceDenomination == 1000 && nTargetDenomination == 1 )
+					{
+						ShowAlertDialog( 'Success', '%s Gems received from Sack.'.replace( '%s', v_numberformat( nExpectedOut ) ) );
+					}
+					else
+					{
+						ShowAlertDialog( 'Success', '%1$s %2$s successfully exchanged.'.replace( '%1$s', v_numberformat( xferAmount ) ).replace( '%2$s', currency.name ) );
+					}
+
 					ReloadCommunityInventory();
 				}
 			}).fail( function() {
 				ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
 			});
+
+
+		this.Dismiss();
+	},
+
+	OnCancel: function( event ) {
+		this.Dismiss();
+		event.preventDefault();
+	},
+
+	OnDocumentKeyPress: function( event ) {
+		if ( event.keyCode == Event.KEY_ESC )
+		{
+			this.Dismiss();
+			event.preventDefault();
+		}
+	},
+
+	OnInputKeyPress: function( event ) {
+		if ( event.keyCode == Event.KEY_RETURN )
+		{
+			this.OnAccept( event );
+		}
+	},
+
+	OnInputKeyUp: function( event ) {
+
+		var value = this.GetInputValueAsInt();
+
+		this.UpdateRemainingCurrencyDisplay();
+
+		this.m_bIgnoreSlider = true;
+		this.m_slider.SetValue( value );
+		this.m_bIgnoreSlider = false;
+		this.UpdateSliderNumberDisplays( value );
+	},
+
+	UpdateSliderNumberDisplays: function( value )
+	{
+		var flooredValue = Math.floor( value );
+		var strValue = v_numberformat( flooredValue );
+
+		var nProgressPx = parseInt( value * this.m_slider.m_flRatio );
+		var nMaxWidth = this.m_elSliderProgress.parent().find( '.slider_background' ).width();
+		if ( nProgressPx > nMaxWidth )
+		{
+			nProgressPx = nMaxWidth;
+		}
+
+		this.m_elSliderProgress.css( 'width', nProgressPx + 'px' );
+
+		this.m_elSliderCount.css( 'left', (nProgressPx - 40) + 'px' );
+		this.m_elSliderCount.text( strValue );
+	},
+
+	SetInputValuesFromSlider: function( value )
+	{
+		var flooredValue = Math.floor( value );
+		var strValue = v_numberformat( flooredValue );
+		$J('#goo_exchange_input').val( strValue.escapeHTML() );
+		this.UpdateRemainingCurrencyDisplay();
+	},
+
+	OnSliderChange: function( value, bInDrag )
+	{
+		if ( this.m_bIgnoreSlider )
+			return;
+		this.m_bIgnoreSlider = true;
+
+		this.UpdateSliderNumberDisplays( value );
+		this.m_slider.SetValue( value );
+
+		this.SetInputValuesFromSlider( value );
+
+		this.m_bIgnoreSlider = false;
+	}
+};
+
+	function PackGameGooIntoBarrel( appid, itemid, nSourceDenomination, nTargetDenomination )
+	{
+		if ( $J('#goo_exchange_dialog').length == 0 )
+		{
+			$J.get( 'https://steamcommunity.com/tradingcards/gooexchangedialog', function( data ) {
+				$J(data).insertAfter( '#modalBG' );
+
+				CGameGooExchangeDialog.Show( appid,
+						UserYou.findAsset( 753, 6, itemid ),
+						nSourceDenomination,
+						nTargetDenomination,
+						'Pack Gems into a Sack'
+				);
+			} );
+		}
+		else
+		{
+			CGameGooExchangeDialog.Show( appid,
+					UserYou.findAsset( 753, 6, itemid ),
+					nSourceDenomination,
+					nTargetDenomination,
+					'Pack Gems into a Sack'
+			);
+		}
 	}
 
-	function UnpackGameGooFromBarrel( appid, itemid )
+	function UnpackGameGooFromBarrel( appid, itemid, nSourceDenomination, nTargetDenomination )
 	{
-		var rgAJAXParams = {
-			sessionid: g_sessionID,
-			appid: appid,
-			assetid: itemid,
-			goo_denomination_in: 1000,
-			goo_amount_in: 1,
-			goo_denomination_out: 1,
-			goo_amount_out_expected: 1000
-		};
-		var strActionURL = g_strProfileURL + "/ajaxexchangegoo/";
+		if ( $J('#goo_exchange_dialog').length == 0 )
+		{
+			$J.get( 'https://steamcommunity.com/tradingcards/gooexchangedialog', function( data ) {
+				$J(data).insertAfter( '#modalBG' );
 
-		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
-				ShowAlertDialog( 'Success', '%s Gems received from Sack.'.replace( /%s/, v_numberformat( 1000 ) ) );		// localize
-				ReloadCommunityInventory();
-			}).fail( function() {
-				ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
-			});
+				CGameGooExchangeDialog.Show( appid,
+						UserYou.findAsset( 753, 6, itemid ),
+						nSourceDenomination,
+						nTargetDenomination,
+						'Unpack Gems from Sack'
+				);
+			} );
+		}
+		else
+		{
+			CGameGooExchangeDialog.Show( appid,
+					UserYou.findAsset( 753, 6, itemid ),
+					nSourceDenomination,
+					nTargetDenomination,
+					'Unpack Gems from Sack'
+			);
+		}
 	}
 
 	function EnableProfileModifier( appid, itemid, enabled )
@@ -829,7 +1113,6 @@ CBoosterCreatorPage = {
 		var rgBoosterData = CBoosterCreatorPage.sm_rgBoosterData[ $Option.data('appid') ];
 		if ( rgBoosterData && rgBoosterData.unavailable )
 		{
-			console.log( rgBoosterData );
 			$ActionBtn.addClass( 'btn_disabled' );
 			if ( rgBoosterData.available_at_time )
 				$ActionBtn.data( 'community-tooltip', 'You will not be able to create another %1$s Booster Pack until %2$s.'.replace( /%1\$s/, rgBoosterData.name ).replace( /%2\$s/, rgBoosterData.available_at_time ) );

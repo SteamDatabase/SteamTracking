@@ -2015,6 +2015,7 @@ function CSlider( $Container, $Grabber, args )
 	this.m_$Grabber = $Grabber;
 	this.m_nMinVal = args.min || 0;
 	this.m_nMaxVal = args.max || 100;
+	this.m_nIncrement = args.increment || 1;
 	this.m_nValue = args.value || 0;
 	this.m_fnOnChange = args.fnOnChange || function( value, bInDrag ) {};
 
@@ -2035,6 +2036,11 @@ function CSlider( $Container, $Grabber, args )
 
 			_this.m_$Grabber.css('left', nNewPosition + 'px' );
 			_this.m_nValue = nNewPosition / _this.m_flRatio;
+			if ( _this.m_nIncrement > 1 && _this.m_nValue < _this.m_nMaxVal ) {
+				//_this.m_nValue += _this.m_nIncrement - 1;
+				_this.m_nValue = parseInt(_this.m_nValue / _this.m_nIncrement) * _this.m_nIncrement;
+			}
+
 			_this.m_fnOnChange( _this.m_nValue, true );
 		}
 		var nInitialPosition = parseInt( _this.m_$Grabber.css('left') );
@@ -2047,6 +2053,11 @@ function CSlider( $Container, $Grabber, args )
 
 			_this.m_$Grabber.css('left', nNewPosition + 'px' );
 			_this.m_nValue = nNewPosition / _this.m_flRatio;
+			if ( _this.m_nIncrement > 1  && _this.m_nValue < _this.m_nMaxVal ) {
+				//_this.m_nValue += _this.m_nIncrement - 1;
+				_this.m_nValue = parseInt(_this.m_nValue / _this.m_nIncrement) * _this.m_nIncrement;
+			}
+
 			_this.m_fnOnChange( _this.m_nValue, true );
 		});
 		$J(document).on( 'mouseup.CSlider', function( event ) {
@@ -2088,6 +2099,11 @@ CSlider.prototype.SetRange = function( nMinVal, nMaxVal, nValue )
 	if ( typeof nValue != 'undefined' )
 		this.m_nValue = nValue;
 	this.SetValue( this.m_nValue );
+}
+
+CSlider.prototype.SetIncrement = function( nIncrement )
+{
+	this.m_nIncrement = nIncrement;
 }
 
 
