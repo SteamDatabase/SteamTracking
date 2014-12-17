@@ -2981,6 +2981,7 @@ brighttext
 BringMainMenuToTop
 broadcast
 BroadcastDisabledLabel
+BroadcastDisabledSupportURL
 BroadcastOverlay
 BroadcastStatus
 broadcast_stop

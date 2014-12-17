@@ -833,6 +833,7 @@ BResizeImageRGBA
 brighttext
 BroadcastDetailPanel
 BroadcastDisabledLabel
+BroadcastDisabledSupportURL
 BroadcastUploadErrorNotification
 BrowseButton
 BrowseMusic
