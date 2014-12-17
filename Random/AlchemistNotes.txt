@@ -1,0 +1,268 @@
+==== SteamOS build 148 2014-12-12 ====
+[list]
+[*] eglibc - Fix crashes with Dota 2 and Dead Island
+[/list]
+
+==== SteamOS build 147 2014-12-04 ====
+[list]
+[*] steamos-compositor - Fix "XCOM: Enemy Unknown" not focusing on startup
+[/list]
+
+==== SteamOS build 146 2014-12-04 ====
+[list]
+[*] axis - Debian 7.7 update
+[*] base-files - Debian 7.7 update
+[*] ca-certificates - Debian 7.7 update
+[*] curl - CVE-2014-3707
+[*] debian-archive-keyring - Debian 7.7 update
+[*] debootstrap - latest upstream release
+[*] elfutils - Debian 7.7 update
+[*] exim4 - Debian 7.7 update
+[*] file - CVE-2014-3710
+[*] firmware-free - <no comment>
+[*] flac - CVE-2014-8962, CVE-2014-9028
+[*] hawtjni - Debian 7.7 update
+[*] iceweasel - CVE-2014-1587, CVE-2014-1590, CVE-2014-1592, CVE-2014-1593, CVE-2014-1594
+[*] iceweasel - latest iceweasel
+[*] iso-scan - Debian 7.7 update
+[*] keyutils - Debian 7.7 update
+[*] libdrm - Debian 7.7 update
+[*] libgcrypt11 - CVE-2014-5270
+[*] libtasn1-3 - Debian 7.7 update
+[*] libvdpau - Debian 7.7 update
+[*] libxml2 - CVE-2014-3660
+[*] linux - <no comment>
+[*] mysql-5.5 - CVE-2012-5615 CVE-2014-4274 CVE-2014-4287 CVE-2014-6463 CVE-2014-6464 CVE-2014-6469 CVE-2014-6478 CVE-2014-6484 CVE-2014-6491 CVE-2014-6494 CVE-2014-6495 CVE-2014-6496 CVE-2014-6500 CVE-2014-6505 CVE-2014-6507 CVE-2014-6520 CVE-2014-6530 CVE-2014-6551 CVE-2014-6555 CVE-2014-6559
+[*] net-snmp - Debian 7.7 update
+[*] netcfg - Debian 7.7 update
+[*] nss - CVE-2014-1568
+[*] perl - Debian 7.7 update
+[*] postgresql-9.1 - Debian 7.7 update
+[*] tzdata - Debian 7.7 update
+[*] unattended-upgrades - <no comment>
+[*] xdg-utils - Debian 7.7 update
+[*] fglrx-driver - Updated AMD graphics driver to 14.9.
+[*] nvidia-graphics-drivers - Updated NVIDIA drivers to 343.22.
+[/list]
+
+==== SteamOS build 145 2014-10-20 ====
+[list]
+[*] openssl - CVE-2014-3513, CVE-2014-3567, CVE-2014-3568
+[*] wpa - upstream security fix for CVE-2014-3686
+[/list]
+
+==== SteamOS build 144 2014-10-14 ====
+[list]
+[*]apt - upstream fix for CVE-2014-7206
+[*]libappindicator, libdbusmenu, libindicate, libindicator, xdg-utils - new packages to support chrome
+[*]nspr, nss - update to latest from jessie to support chrome
+[*]plymouth - upstream bugfix for https://bugs.freedesktop.org/show_bug.cgi?id=80553
+[*]plymouth-themes-steamos - implement progress bar while applying updates at shutdown
+[*]python2.6 - added to support python-pip
+[*]rsyslog - upstream fix for CVE-2014-3634
+[*]strace - added to support debugging
+[*]unattended-upgrades - remove unnecessary call to steam when updates are pending
+[/list]
+==== SteamOS build 140 2014-10-02 ====
+[list]
+[*]plymouth - merge latest upstream and add script support for system update notifications
+[*]rsyslog - upstream security fix - CVE-2014-3634
+[*]unattended-upgrades - update to latest upstream to fix debian bug #743594
+[*]add the following new packages to the steamos repo as requested by [url=http://steamcommunity.com/groups/steamuniverse/discussions/1/616188677803960888/]this thread[/url]
+[list]
+[*]bash-completion
+[*]file-roller
+[*]gedit
+[*]htop
+[*]iotop
+[*]lsof
+[*]nautilus-open-terminal
+[*]pastebinit
+[*]python-pip
+[*]zip
+[/list]
+[/list]
+==== SteamOS build 139 2014-09-25 ====
+[list]
+[*]plymouth - move to the right version
+[*]plymouth - back this out for now
+[/list]
+
+==== SteamOS build 138 2014-09-25 ====
+[list]
+[*]apt - upstream fix CVE-2014-6273
+[*]bash - upstream fix for CVE-2014-6271 ("shellshock" bug)
+[*]iceweasel - upstream fix for CVE-2014-1568/mfsa2014-73
+[*]nss - upstream fix for CVE-2014-1568: RSA signature verification bypass
+[*]plymouth - latest upstream release, support system update notification
+[*]steamos-autoupdate - handle multiple steam PIDs
+[*]unattended-upgrades - notify plymouth about system update progress
+[/list]
+
+==== SteamOS build 137 2014-09-18 ====
+[list]
+[*]linux - Improved out-of-the-box support for DualShock 3 and 4
+[/list]
+
+==== SteamOS build 136 2014-09-18 ====
+[list]
+[*]acpi-support - upstream security fix CVE-2014-0484
+[*]apt - upstream security updates CVE-2014-0487, CVE-2014-0488,
+[*]bind9 - upstream security fixes CVE-2014-0591
+[*]curl - upstream security fix CVE-2014-3613
+[*]dbus - upstream security fixes CVE-2014-3635,CVE-2014-3636,
+[*]debian-installer - remove xen images, update kernel version
+[*]e2fsprogs - latest upstream version
+[*]file - upstream security fixes CVE-2014-0207, CVE-2014-0237,
+[*]geoclue - latest upstream changes
+[*]gnupg - upstream security fixes CVE-2014-5270
+[*]iceweasel - latest upstream release, fixes CVE-2014-1562, CVE-2014-1567
+[*]libdrm - latest upstream release
+[*]lua5.1 - upstream security fix CVE-2014-5461
+[*]plymouth - Fix a bug where splash screen would sometimes not appear on
+[*]python-imaging - upstream security fix CVE-2014-3589
+[*]steamos-compositor - Fix Planetary Annihilation freezing on startup. Fix cursor
+[/list]
+
+==== SteamOS build 135 2014-09-05 ====
+[list]
+[*]udev - Fixed regression with gamepad pass-through when hosting in-home
+[/list]
+
+==== SteamOS build 134 2014-09-04 ====
+[list]
+[*]linux - Fixed NVIDIA HDMI audio regression.
+[/list]
+
+==== SteamOS build 133 2014-08-25 ====
+[list]
+[/list]
+
+==== SteamOS build 132 2014-08-25 ====
+[list]
+[/list]
+
+==== SteamOS build 131 2014-08-21 ====
+[list]
+[/list]
+
+==== SteamOS build 130 2014-08-21 ====
+[list]
+[/list]
+
+==== SteamOS build 129 2014-08-20 ====
+[list]
+[*]libva - Removed fool_postp from libva-x11
+[*]linux - Update Linux kernel to the tip of steamos_kernel branch, with
+[*]nvidia-graphics-drivers - Updated NVIDIA graphics drivers to version 340.32, which fixes
+[/list]
+
+==== SteamOS build 128 2014-08-19 ====
+[list]
+[/list]
+
+==== SteamOS build 127 2014-08-19 ====
+[list]
+[*]acpi-support - latest upstream security fix
+[*]gpgme1.0 - upstream security fix for CVE-2014-3564
+[*]intel-vaapi-driver - Removed codecs not licensed for SteamOS
+[*]intel-vaapi-driver - Updated intel-vaapi-driver from latest jessie package
+[*]intel-vaapi-driver - Added Intel VAAPI driver for Steam In-Home Streaming
+[*]krb5 - upstream security updates CVE-2012-1016, CVE-2013-1415,
+[*]libav - latest upstream release, fixes CVE-2011-3934, CVE-2014-2263,
+[*]libva - Fixed build due to missing m4 directory
+[*]libva - Updated libva from latest jessie package
+[*]lzo2 - upstream security fix CVE-2014-4607
+[*]nss - upstream security fixes CVE-2014-1492, CVE-2014-1491,
+[*]openssl - Upstream security fixes for CVE-2014-3512, CVE-2014-3511,
+[*]steamos-autoupdate - install i965-va-driver:i386 if it was not preinstalled
+[*]vdpau-video - latest upstream release
+[/list]
+
+==== SteamOS build 124 2014-07-29 ====
+[list]
+[*]Add additional packages needed by XBMC
+[*]acpi-support - upstream security fixes CVE-2014-1419
+[*]apache2 - upstream security fixes CVE-2014-0226, CVE-2014-0231,
+[*]cups - upstream security fixes, CVE-2014-5029, CVE-2014-5030,
+[*]e2fsprogs - latest upstream release
+[*]iceweasel - upstream security fixes CVE-2014-1547, CVE-2014-1555,
+[*]mysql-5.5 - upstream security fixes CVE-2014-2494, CVE-2014-4207,
+[*]steamos-compositor - Fix regression where the overlay would sometimes flicker.
+[/list]
+
+==== SteamOS build 123 2014-07-16 ====
+[list]
+[*]steamos-compositor - Fix occasional flash of corruption the first time the overlay or a notification is shown
+[/list]
+==== SteamOS build 122 2014-07-15 ====
+[list]
+[*]apache2 - upstream security fixes CVE-2013-6438, CVE-2014-0098
+[*]base-files - Update /etc/debian_version to 7.6, for Debian 7.6 point release
+[*]cups - upstream security fix for CVE-2014-2856
+[*]libjpeg8 - upstream security fix for CVE-2013-6629 and CVE-2013-6630
+[*]libopenobex - latest upstream fixes
+[*]libxml2 - upstream security fix for CVE-2014-0191
+[*]openssh - latest upstream release
+[/list]
+==== SteamOS build 121 2014-07-09 ====
+[list]
+[*]dbus - upstream security fixes CVE-2014-3532, CVE-2014-3533,
+[*]e2fsprogs - Latest upstream release
+[*]elfutils - latest upstream updates
+[*]gnupg - upstream security fix, CVE-2014-4617
+[/list]
+==== SteamOS build 119 2014-06-27 ====
+[list]
+[*]apt - upstream security fix, CVE-2014-0478
+[*]dpkg - upstream security fixes, CVE-2014-3864 and CVE-2014-3865
+[*]fonts-liberation - new package
+[*]iceweasel - latest upstream release, fixes CVE-2014-1533, CVE-2014-1538,
+[*]libav - latest upstream release
+[*]nspr - upstream security fix CVE-2014-1545
+[*]openssl - upstream security fixes, CVE-2012-4929, CVE-2014-0224
+[*]samba - upstream security fixes, CVE-2014-0178 CVE-2014-0244
+[*]tzdata - latest upstream version
+[*]unattended-upgrades - Eliminate unnecessary 5 second delay on shutdown/reboot
+[*]vdpau-video - latest upstream update
+[*]fglrx-driver - Upgraded AMD Catalyst driver to version 14.10.1006.
+[/list]
+
+==== SteamOS build 118 2014-06-05 ====
+[list]
+[*]openssl - upstream security fixes, CVE-2014-0195, CVE-2014-0224, CVE-2014-0221, CVE-2014-3470
+[/list]
+
+==== SteamOS build 117 2014-06-03 ====
+[list]
+[*]steamos-autoupdate - install updates at shutdown
+[*]unattended-upgrades - defer updates until shutdown
+[/list]
+
+==== SteamOS build 116 2014-06-02 ====
+[list]
+[*]gnutls26 - upstream security fix CVE-2014-3466
+[*]lxml - upstream security update CVE-2014-3146
+[/list]
+
+==== SteamOS build 115 2014-05-29 ====
+[list]
+[*]e2fsprogs - latest upstream updates
+[*]iptables - latest upstream updates
+[*]openssl - fix http://github.com/ValveSoftware/SteamOS/issues/177
+[/list]
+==== SteamOS build 113 2014-05-20 ====
+[list]
+[*]openssl - Upstream security fixes
+[*]libvdpau - latest upstream release
+[*]added some XBMC dependencies to the repo (fonts-android,fribidi,heimdal,jasper,jbigkit,jquery,libgsm,lzo2,node-iscroll,python-imaging,sidplay-libs,tbb,vdpau-video)
+[/list]
+==== SteamOS build 112 2014-05-16 ====
+[list]
+[*]debootstrap - latest upstream updates
+[*]libdrm - latest upstream release
+[*]libxfont - upstream security fixes
+[*]tzdata - latest upstream version
+[*]libxfont - upstream security fixes
+[*]tzdata - New upstream version
+[/list]
