@@ -1012,3 +1012,188 @@ a.game_button {
 	background-color: #1d1d1d;
 }
 
+
+#goo_exchange_dialog {
+	position: absolute;
+	background: #383635 bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog.png?v=3' );
+	border: 1px solid black;
+	width: 436px;
+	height: 318px;
+	z-index: 1000;
+
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.goo_exchange_dialog_corner {
+	position: absolute;
+	right: -1px;
+	bottom: -1px;
+	background: right bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog_corner.png?v=1' );
+	width: 174px;
+	height: 153px;
+}
+
+.goo_exchange_dialog_title {
+	position: absolute;
+	top: 27px;
+	left: 0;
+	width: 434px;
+}
+
+.goo_exchange_dialog_info {
+	position: absolute;
+	top: 42px;
+	left: 0;
+	width: 418px;
+
+	padding: 0 8px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #767676;
+}
+
+.goo_exchange_dialog_input_area {
+	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_entry_background.png?v=1' );
+	width: 136px;
+	height: 54px;
+	padding-left: 54px;
+	text-align: left;
+}
+
+#goo_exchange_dialog_input_area {
+	position: absolute;
+	left: 123px;
+	top: 69px;
+}
+
+#goo_exchange_dialog_input_icon_area {
+	position: absolute;
+	left: 4px;
+	top: 6px;
+	width: 42px;
+	height: 42px;
+}
+
+.goo_exchange_dialog_input_area input {
+	background-color: transparent;
+	border: none;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 2px 0 0;
+	margin: 0;
+	line-height: 44px;
+	height: 44px;
+	width: 130px;
+	outline: none;
+}
+
+.goo_exchange_dialog_error {
+	width: 434px;
+	line-height: 32px;
+	color: #ff0000;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+#goo_exchange_dialog_error {
+	position: absolute;
+	top: 118px;
+	left: 0;
+}
+
+#goo_exchange_dialog_remaining {
+	position: absolute;
+	top: 227px;
+	left: 0;
+
+	width: 434px;
+	line-height: 42px;
+}
+
+#goo_exchange_dialog_remaining img {
+	vertical-align: middle;
+}
+
+.goo_exchange_dialog_footer {
+	position: absolute;
+	bottom: 0;
+	left: 9px;
+
+	width: 416px;
+	text-align: right;
+}
+
+.goo_exchange_dialog_footer a.item_action {
+	margin-right: 0;
+	margin-left: 5px;
+	text-align: left;
+	padding: 0 5px;
+	width: 82px;
+}
+
+.goo_exchange_slider_ctn {
+	padding-top: 20px;
+	width: 381px;
+}
+
+#goo_exchange_slider_ctn {
+	position: absolute;
+	top: 146px;
+	left: 28px;
+}
+
+.trade_wallet #goo_exchange_slider_ctn {
+	top: 216px;
+}
+
+.goo_exchange_slider_count {
+	position: absolute;
+	top: 0;
+	height: 20px;
+	line-height: 20px;
+	color: #b7b7b7;
+
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+
+	width: 104px;
+}
+
+.goo_exchange_slider_ctn .slider {
+	position: relative;
+	height: 42px;
+}
+
+.goo_exchange_slider_ctn .slider_background, .goo_exchange_slider_ctn .slider_progress {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/slider_background.png' );
+	background-position: left top;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 12px;
+	top: 20px;
+
+	height: 9px;
+	width: 357px;
+}
+
+.goo_exchange_slider_ctn .slider_progress {
+	background-position: -357px 0;
+}
+
+.goo_exchange_slider_ctn .slider .handle {
+	position: absolute;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/slider_handle.png' );
+	background-position: left top;
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 35px;
+	top: 5px;
+}
+
+.goo_exchange_slider_ctn .slider .handle.active {
+	background-position: right;
+}
