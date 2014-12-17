@@ -2646,7 +2646,7 @@ function PopulateMarketActions( elActions, item )
 						var strInfo = '';
 						if ( transport.responseJSON.lowest_price )
 						{
-							strInfo += 'Starting at: ' + transport.responseJSON.lowest_price + '<br>'
+							strInfo += '開始： ' + transport.responseJSON.lowest_price + '<br>'
 						}
 						else
 						{
