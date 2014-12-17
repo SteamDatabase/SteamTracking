@@ -2009,6 +2009,88 @@ CAjaxPagingControls.prototype.AddPageLink = function( elPageLinks, iPage )
 }
 
 
+function CSlider( $Container, $Grabber, args )
+{
+	this.m_$Container = $Container;
+	this.m_$Grabber = $Grabber;
+	this.m_nMinVal = args.min || 0;
+	this.m_nMaxVal = args.max || 100;
+	this.m_nValue = args.value || 0;
+	this.m_fnOnChange = args.fnOnChange || function( value, bInDrag ) {};
+
+	this.m_$Grabber.css( 'position', 'absolute' );
+	this.SetValue( this.m_nValue );
+
+	var _this = this;
+	this.m_$Container.on( 'mousedown', function( event ) {
+		_this.CalcRatios();
+
+		if ( !_this.m_$Grabber.is( event.target ) )
+		{
+			// jump the grabber to this position and start the drag
+			var nPosition = event.pageX - _this.m_$Container.offset().left;
+			// we want the grabber centered under the mosue if possible
+			nPosition -= Math.floor( _this.m_$Grabber.width() / 2 );
+			var nNewPosition = Math.min( Math.max( nPosition, 0 ), _this.m_nWidth );
+
+			_this.m_$Grabber.css('left', nNewPosition + 'px' );
+			_this.m_nValue = nNewPosition / _this.m_flRatio;
+			_this.m_fnOnChange( _this.m_nValue, true );
+		}
+		var nInitialPosition = parseInt( _this.m_$Grabber.css('left') );
+		var nStartDragX = event.pageX;
+
+		$J(document).on( 'mousemove.CSlider', function( event ) {
+			var nDelta = event.pageX - nStartDragX;
+
+			var nNewPosition = Math.min( Math.max( nInitialPosition + nDelta, 0 ), _this.m_nWidth );
+
+			_this.m_$Grabber.css('left', nNewPosition + 'px' );
+			_this.m_nValue = nNewPosition / _this.m_flRatio;
+			_this.m_fnOnChange( _this.m_nValue, true );
+		});
+		$J(document).on( 'mouseup.CSlider', function( event ) {
+			$J(document).off('.CSlider');
+			_this.m_fnOnChange( _this.m_nValue, false );
+		});
+
+		event.preventDefault();
+	});
+}
+
+CSlider.prototype.CalcRatios = function()
+{
+	var nGrabberWidth = this.m_$Grabber.width();
+	this.m_nWidth = this.m_$Container.width() - nGrabberWidth;
+
+	this.m_flRatio = this.m_nWidth / ( this.m_nMaxVal - this.m_nMinVal );
+}
+
+CSlider.prototype.SetValue = function( nValue, nAnimationSpeed )
+{
+	this.CalcRatios();
+
+	this.m_nValue = Math.min( Math.max( nValue, this.m_nMinVal ), this.m_nMaxVal );
+
+	var nNewPosition = Math.floor( ( this.m_nValue - this.m_nMinVal ) * this.m_flRatio );
+
+	this.m_$Grabber.stop();
+	if ( nAnimationSpeed )
+		this.m_$Grabber.animate( {left: nNewPosition }, nAnimationSpeed );
+	else
+		this.m_$Grabber.css( 'left',  nNewPosition + 'px' );
+}
+
+CSlider.prototype.SetRange = function( nMinVal, nMaxVal, nValue )
+{
+	this.m_nMinVal = nMinVal;
+	this.m_nMaxVal = nMaxVal;
+	if ( typeof nValue != 'undefined' )
+		this.m_nValue = nValue;
+	this.SetValue( this.m_nValue );
+}
+
+
 function IsValidEmailAddress( email )
 {
 	var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
