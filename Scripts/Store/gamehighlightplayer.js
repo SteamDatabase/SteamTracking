@@ -253,7 +253,7 @@ HighlightPlayer.prototype.LoadScreenshot = function( id )
 
 HighlightPlayer.prototype.GetScreenshotURL = function( id, size )
 {
-	return this.m_rgScreenshotURLs[ id ].replace( /_SIZE_/, size ? '.' + size : '' );
+	return this.m_rgScreenshotURLs[ id ].replace( /_SIZE_/g, size ? '.' + size : '' );
  }
 
 HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation )
