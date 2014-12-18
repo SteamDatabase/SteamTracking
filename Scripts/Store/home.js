@@ -483,7 +483,7 @@ GHomepage = {
 		var $CapCtn = $J('<a/>', params );
 		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
 
-		$CapCtn.append( $J('<img/>', { src: rgItemData.small_capsule } ) );
+		$CapCtn.append( $J('<img/>', { src: rgItemData.small_capsulev5 } ) );
 		$CapCtn.append( $J('<div/>', {'class': 'home_smallcap_title ellipsis' } ).html( rgItemData.name ) );
 		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;' ) );
 
