@@ -165,6 +165,7 @@
 "Scripts/Store/search.js"                        : "https://steamstore-a.akamaihd.net/public/javascript/search.js?__TIME__&l=english",
 "Scripts/Store/supportmessages.js"               : "https://steamstore-a.akamaihd.net/public/javascript/supportmessages.js?__TIME__&l=english",
 "Scripts/Store/youraccount.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/youraccount.js?__TIME__&l=english",
+"Scripts/Store/salefunctions.js"                 : "https://steamstore-a.akamaihd.net/public/javascript/promo/salefunctions.js?__TIME__&l=english",
 
 //
 // Community JS
