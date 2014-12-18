@@ -247,7 +247,7 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
 		var $CapCtn = $J('<a/>', params );
 		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, null );
 
-		$CapCtn.append( $J('<img/>', {src: rgItemData.small_capsule, 'class': 'small_cap_img' } ) );
+		$CapCtn.append( $J('<img/>', {src: rgItemData.small_capsulev5, 'class': 'small_cap_img' } ) );
 		$CapCtn.append( $J('<h4/>').html( rgItemData.name ) );
 		$CapCtn.append( $J(rgItemData.discount_block).addClass( 'discount_block_inline') );
 
