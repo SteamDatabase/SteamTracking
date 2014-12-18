@@ -863,7 +863,7 @@ textarea.comment_input
 	overflow: hidden;
 }
 
-.game_recommendation .error_message, .recommend_game .error_message {
+#review_create .error_message, .game_recommendation .error_message, .recommend_game .error_message {
 	color: #ff0000;
 	margin-bottom: 12px;
 }
