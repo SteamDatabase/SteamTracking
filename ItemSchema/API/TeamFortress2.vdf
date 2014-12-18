@@ -55931,7 +55931,7 @@
 		{
 			"name"		"EOTL_Skier"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Hat"
+			"item_type_name"		"#TF_Wearable_Hat"
 			"item_name"		"#TF_EOTL_skier"
 			"item_description"		"#TF_skier_Desc"
 			"equip_region"		"pyro_head_replacement"
@@ -55958,7 +55958,7 @@
 		{
 			"name"		"EOTL_Insulated_innovator"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Coat"
+			"item_type_name"		"#TF_Wearable_Coat"
 			"item_name"		"#TF_EOTL_insulated_innovator"
 			"item_description"		"#TF_insulated_innovator_Desc"
 			"equip_region"		"shirt"
@@ -55978,7 +55978,7 @@
 		{
 			"name"		"EOTL_blinks_breeches"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Boots"
+			"item_type_name"		"#TF_Wearable_Boots"
 			"item_name"		"#TF_EOTL_blinks_breeches"
 			"item_description"		"#TF_blinks_breeches_Desc"
 			"equip_region"		"feet"
@@ -56005,7 +56005,7 @@
 		{
 			"name"		"EOTL_demo_dynamite"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Bombs"
+			"item_type_name"		"#TF_Wearable_Bombs"
 			"item_name"		"#TF_EOTL_demo_dynamite"
 			"item_description"		"#TF_demo_dynamite_Desc"
 			"equip_region"		"grenades"
@@ -56077,7 +56077,7 @@
 		{
 			"name"		"EOTL_winter_pants"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Boots"
+			"item_type_name"		"#TF_Wearable_Boots"
 			"item_name"		"#TF_EOTL_winter_pants"
 			"item_description"		"#TF_eotl_winter_pants_Desc"
 			"equip_region"		"feet"
@@ -56097,7 +56097,7 @@
 		{
 			"name"		"EOTL_pyro_sweater"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Sweater"
+			"item_type_name"		"#TF_Wearable_Sweater"
 			"item_name"		"#TF_EOTL_pyro_sweater"
 			"item_description"		"#TF_pyro_sweater_Desc"
 			"equip_region"		"shirt"
@@ -56261,7 +56261,7 @@
 		{
 			"name"		"EOTL_hiphunter_jacket"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Jacket"
+			"item_type_name"		"#TF_Wearable_Jacket"
 			"item_name"		"#TF_EOTL_hiphunter_jacket"
 			"item_description"		"#TF_hiphunter_jacket_Desc"
 			"equip_region"		"shirt"
@@ -56371,7 +56371,7 @@
 		{
 			"name"		"EOTL_beard"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_FacialHair"
+			"item_type_name"		"#TF_Wearable_FacialHair"
 			"item_name"		"#TF_EOTL_beard"
 			"item_description"		"#TF_beard_Desc"
 			"equip_region"		"beard"
@@ -56391,7 +56391,7 @@
 		{
 			"name"		"EOTL_demopants"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Pants"
+			"item_type_name"		"#TF_Wearable_Pants"
 			"item_name"		"#TF_EOTL_demopants"
 			"item_description"		"#TF_eotl_demopants_Desc"
 			"equip_region"		"pants"
@@ -56411,7 +56411,7 @@
 		{
 			"name"		"EOTL_Ursa Major"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Vest"
+			"item_type_name"		"#TF_Wearable_Vest"
 			"item_name"		"#TF_EOTL_ursa_major"
 			"item_description"		"#TF_ursa_major_Desc"
 			"equip_region"		"shirt"
@@ -56431,7 +56431,7 @@
 		{
 			"name"		"EOTL_sheavyshirt"
 			"prefab"		"no_craft misc"
-			"item_type_name"	"#TF_Wearable_Jacket"
+			"item_type_name"		"#TF_Wearable_Jacket"
 			"item_name"		"#TF_EOTL_sheavyshirt"
 			"item_description"		"#TF_eotl_sheavyshirt_Desc"
 			"equip_region"		"shirt"
@@ -56464,6 +56464,44 @@
 			"used_by_classes"
 			{
 				"soldier"		"1"
+			}
+		}
+		"30559"
+		{
+			"name"		"End of the Line Community Update Medal"
+			"prefab"		"no_craft misc"
+			"item_type_name"		"#TF_Wearable_CommunityMedal"
+			"item_name"		"#TF_EOTL_medal"
+			"item_description"		"#TF_EOTL_medal_Desc"
+			"equip_region"		"medal"
+			"image_inventory"		"backpack/workshop/player/items/all_class/eotl_medal/eotl_medal"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/eotl_medal/eotl_medal_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/eotl_medal/eotl_medal_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/eotl_medal/eotl_medal_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/eotl_medal/eotl_medal_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/eotl_medal/eotl_medal_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/eotl_medal/eotl_medal_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/eotl_medal/eotl_medal_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/eotl_medal/eotl_medal_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/eotl_medal/eotl_medal_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
 			}
 		}
 		"30563"

@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.a39e1462ed18b0ffa5dd1ea686bcd992a6077e49.txt",
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.82a0b1528f7c705e72a8b556b16f765c227bfab1.txt",
 		"qualities": {
 			"Normal": 0,
 			"rarity1": 1,
@@ -125000,6 +125000,52 @@
 					"Soldier"
 				]
 				,
+				"attributes": [
+					{
+						"name": "kill eater score type",
+						"class": "kill_eater_score_type",
+						"value": 64
+					},
+					{
+						"name": "kill eater kill type",
+						"class": "kill_eater_kill_type",
+						"value": 64
+					}
+				]
+				
+			},
+			{
+				"name": "End of the Line Community Update Medal",
+				"defindex": 30559,
+				"item_class": "tf_wearable",
+				"item_type_name": "Community Medal",
+				"item_name": "End of the Line Community Update Medal",
+				"item_description": "",
+				"proper_name": false,
+				"item_slot": "misc",
+				"model_player": "models/workshop/player/items/all_class/eotl_medal/eotl_medal_scout.mdl",
+				"item_quality": 6,
+				"image_inventory": "backpack/workshop/player/items/all_class/eotl_medal/eotl_medal",
+				"min_ilevel": 1,
+				"max_ilevel": 100,
+				"image_url": "http://media.steampowered.com/apps/440/icons/eotl_medal.800cd73ea929527f09b1d850afd3fc0f12f2261d.png",
+				"image_url_large": "http://media.steampowered.com/apps/440/icons/eotl_medal_large.ffd6b9c95d015cb62aef7807f4191b8bdd4a5f77.png",
+				"drop_type": "none",
+				"craft_class": "",
+				"craft_material_type": "hat",
+				"capabilities": {
+					"nameable": true,
+					"can_craft_if_purchased": true,
+					"can_gift_wrap": true,
+					"can_craft_count": true,
+					"can_craft_mark": true,
+					"can_be_restored": true,
+					"strange_parts": true,
+					"can_card_upgrade": true,
+					"can_strangify": true,
+					"can_killstreakify": true,
+					"can_consume": true
+				},
 				"attributes": [
 					{
 						"name": "kill eater score type",
