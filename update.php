@@ -155,24 +155,7 @@
 		
 		private function HandleResponse( $File, $Data )
 		{
-			// Handle item schemas differently
-			if( SubStr( $File, 0, 13 ) === 'GetItemSchema' )
-			{
-				$DataJSON = JSON_Decode( $Data, true );
-				
-				$File = SubStr( $File, 3 );
-				
-				if( isset( $DataJSON[ 'result' ][ 'items_game_url' ] ) )
-				{
-					$this->URLsToFetch[ ] = Array(
-						'URL'  => $DataJSON[ 'result' ][ 'items_game_url' ],
-						'File' => Str_Replace( Array( 'ItemSchema/', '.json' ), Array( 'ItemSchema/API/', '.vdf' ), $File )
-					);
-				}
-				
-				unset( $DataJSON );
-			}
-			else if( $File === 'API/SupportedAPIList.json' )
+			if( $File === 'API/SupportedAPIList.json' )
 			{
 				$Data = JSON_Decode( $Data, true );
 				
@@ -433,12 +416,6 @@
 				// Otherwise, check if the file exists
 				else
 				{
-					// Item schemas are handled differently
-					if( SubStr( $File, 0, 13 ) === 'GetItemSchema' )
-					{
-						$File = SubStr( $File, 3 );
-					}
-					
 					if( File_Exists( $File ) )
 					{
 						$Options[ CURLOPT_HTTPHEADER ] = Array( 'If-Modified-Since: ' . GMDate( 'D, d M Y H:i:s \G\M\T', FileMTime( $File ) ) );
