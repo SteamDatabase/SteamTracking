@@ -688,3 +688,25 @@ a.auction_bid_cancel {
 	border-top: none;
 	margin: 0 auto;
 }
+
+.home_ended {
+	text-align: center;
+}
+
+.auction_home_end1 {
+	font-style: italic;
+	color: #c0a92c;
+	padding: 20px;
+}
+
+.auction_home_end2 {
+	font-size: 120%;
+	text-decoration: underline;
+	padding: 20px;
+}
+
+.auction_home_end3 {
+	font-size: 80%;
+	padding: 20px;
+	color: #b8c5cd;
+}
