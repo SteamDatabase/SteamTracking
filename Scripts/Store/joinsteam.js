@@ -78,7 +78,7 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	var accountname = $('accountname').value;
 	if ( accountname.length < 3 || accountname.length > 64 )
 	{
-		errorString += 'Please enter an account name that is at least 3 characters long and uses only a-z, A-Z, 0-9 or _ characters.<br/>';
+		errorString += '#joinsteam_error_accountname_invalid<br/>';
 		rgBadFields.accountname = true;
 	}
 	else
@@ -99,7 +99,7 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 		}
 		if ( !bNameOK )
 		{
-			errorString += 'Please enter an account name that is at least 3 characters long and uses only a-z, A-Z, 0-9 or _ characters.<br/>';
+			errorString += '#joinsteam_error_accountname_invalid<br/>';
 			rgBadFields.accountname = true;
 		}
 	}
@@ -107,14 +107,14 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	var password =  $('password').value;
 	if ( password.length > 64 )
 	{
-		errorString += 'Please enter a password that is less than 64 characters long.<br/>';
+		errorString += '#joinsteam_error_password_too_long<br/>';
 		rgBadFields.password = true;
 		rgBadFields.reenter_password = true;
 	}
 
 	if ( !g_bPasswordAvailable )
 	{
-		errorString += 'The password you entered is not allowed.  Please select a different password, with at least 8 characters.<br/>';
+		errorString += '#joinsteam_error_password_not_allowed<br/>';
 		rgBadFields.password = true;
 		rgBadFields.reenter_password = true;
 	}
@@ -122,12 +122,12 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	var reenter_password = $('reenter_password').value;
 	if ( reenter_password == '' )
 	{
-		errorString += 'Please fill in the Re-enter password field.<br/>';
+		errorString += '#joinsteam_error_password_reenter_empty<br/>';
 		rgBadFields.reenter_password = true;
 	}
 	else if ( password != reenter_password )
 	{
-		errorString += 'Please enter the same password in both password fields.<br/>';
+		errorString += '#joinsteam_error_password_mismatch<br/>';
 		rgBadFields.password = true;
 		rgBadFields.reenter_password = true;
 	}
@@ -136,7 +136,7 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
 	if ( email == '' || !email_regex.test(email) )
 	{
-		errorString += 'Please enter a valid email address.<br/>';
+		errorString += '#joinsteam_error_bad_email<br/>';
 		rgBadFields.email = true;
 		rgBadFields.reenter_email = true;
 	}
@@ -144,12 +144,12 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	var reenter_email = $('reenter_email').value;
 	if ( reenter_email == '' )
 	{
-		errorString += 'Please fill in the Re-enter email address field.<br/>';
+		errorString += '#joinsteam_error_email_reenter_empty<br/>';
 		rgBadFields.reenter_email = true;
 	}
 	else if ( email != reenter_email )
 	{
-		errorString += 'Please enter the same address in both email address fields.<br/>';
+		errorString += '#joinsteam_error_email_mismatch<br/>';
 		rgBadFields.email = true;
 		rgBadFields.reenter_email = true;
 	}
@@ -157,21 +157,21 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	var challenge_question = $('challenge_question').value;
 	if ( challenge_question == '' )
 	{
-		errorString += 'Please select the challenge question you wish to use.<br/>';
+		errorString += '#joinsteam_error_challenge_question<br/>';
 		rgBadFields.challenge_question_trigger = true;
 	}
 	
 	var secret_answer = $('secret_answer').value;
 	if ( secret_answer == '' )
 	{
-		errorString += 'Please enter a secret answer for your challenge question.<br/>';
+		errorString += '#joinsteam_error_secret_answer<br/>';
 		rgBadFields.secret_answer = true;
 	}
 	
 	if ( !bCaptchaIsValid )
 	{
 	
-		errorString += 'Please verify your humanity by re-entering the characters below.<br/>';
+		errorString += '#joinsteam_error_captcha_bad<br/>';
 		rgBadFields.captcha_text = true;
 		
 				RefreshCaptcha();
@@ -180,7 +180,7 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 	var ssa_check = $('i_agree_check');
 	if ( !ssa_check.checked )
 	{
-		errorString += 'You must agree to the Steam Subscriber Agreement to continue.<br/>';
+		errorString += '#joinsteam_error_ssa_not_agreed<br/>';
 		rgBadFields.ssa_body = true;
 	}
 
@@ -198,7 +198,7 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 				if ( rgErrors.length > 3 )
 		{
 			errorString = '';
-			errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + 'And find more errors highlighted below.' + '<br/>';
+			errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + '#joinsteam_error_more_errors' + '<br/>';
 		}		
 	
 		$('error_display').innerHTML = errorString;
@@ -252,7 +252,7 @@ function ReallyCreateAccount()
 			if (!bSuccess) {
 				$('cart_area').style.display = 'block';
 				$('email_used_area').style.display = 'none';
-				$('error_display').innerHTML = 'Your account creation request failed, please try again later.<br/>';
+				$('error_display').innerHTML = '#joinsteam_error_request_failed<br/>';
 				$('error_display').style.display = 'block';
 				Effect.ScrollTo('error_display');
 				new Effect.Highlight('error_display', { endcolor: '#CEC7BD', startcolor: '#CCC983' });
@@ -279,7 +279,7 @@ function ReallyCreateAccount()
 	    {
 	    	$('cart_area').style.display = 'block';
       	  	$('email_used_area').style.display = 'none';
-	     	$('error_display').innerHTML = 'Your account creation request failed, please try again later.<br/>';
+	     	$('error_display').innerHTML = '#joinsteam_error_request_failed<br/>';
 	      	$('error_display').style.display = 'block';
 	      	Effect.ScrollTo( 'error_display' );
 			new Effect.Highlight( 'error_display', { endcolor : '#CEC7BD', startcolor : '#CCC983' } );
@@ -320,13 +320,13 @@ function CheckAccountNameAvailability()
 
 	      	if ( result && result.bAvailable )
 	      	{
-	      	  span.innerHTML = 'Available!';
+	      	  span.innerHTML = '#joinsteam_name_available';
 	      	  span.style.color = "#6C8942";
 	      	  $('form_row_choose_suggested_name').style.display = 'none';
 	      	}
 	      	else
 	      	{
-	      	  span.innerHTML = 'Not available!';
+	      	  span.innerHTML = '#joinsteam_name_notavailable';
 	      	  span.style.color = "#FF7B00";
 	      	  if ( result.rgSuggestions.length > 0 )
 	      	  {
@@ -452,25 +452,25 @@ function DisplayPasswordStrength()
 	}
 	else if ( !g_bPasswordAvailable )
 	{
-		strength_text.innerHTML = 'Not allowed';
+		strength_text.innerHTML = '#joinsteam_pass_notallowed';
 		strength_text.style.color = "#b02222";
 		strength_img.src = 'https://steamstore-a.akamaihd.net/public/images/password_weak.gif';
 	}
 	else if ( nStrength == 3 )
 	{
-		strength_text.innerHTML = 'Strong';
+		strength_text.innerHTML = '#joinsteam_pass_strong';
 		strength_text.style.color = "#6C8942";
 		strength_img.src = 'https://steamstore-a.akamaihd.net/public/images/password_strong.gif';
 	}
 	else if ( nStrength == 2 )
 	{
-		strength_text.innerHTML = 'Alright';
+		strength_text.innerHTML = '#joinsteam_pass_ok';
 		strength_text.style.color = "#dbc142";
 		strength_img.src = 'https://steamstore-a.akamaihd.net/public/images/password_ok.gif';
 	}
 	else
 	{
-		strength_text.innerHTML = 'Weak';
+		strength_text.innerHTML = '#joinsteam_pass_weak';
 		strength_text.style.color = "#b02222";
 		strength_img.src = 'https://steamstore-a.akamaihd.net/public/images/password_weak.gif';
 	}
