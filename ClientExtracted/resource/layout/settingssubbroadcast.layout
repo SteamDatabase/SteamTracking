@@ -2,8 +2,8 @@
 {
 	controls
 	{
-		"BroadcastDisabledLabel" { ControlName="Label" fieldName="BroadcastDisabledLabel" labelText="#Steam_Settings_Broadcast_Disabled_System" wrap="1" }
-		"BroadcastDisabledSupportURL" { ControlName="URLLabel" fieldName="BroadcastDisabledSupportURL" }
+		"BroadcastDisabledLabel" { ControlName="Label" fieldName="BroadcastDisabledLabel" labelText="#Steam_Settings_Broadcast_Disabled_System" wrap="1" group="ShowWhenDisabled" }
+		"BroadcastDisabledSupportURL" { ControlName="URLLabel" fieldName="BroadcastDisabledSupportURL" group="ShowWhenDisabled" }
 		
 		"BroadcastStatusHeader" { ControlName="Label" fieldName="BroadcastStatusHeader" labelText="#Steam_Settings_Broadcast_StatusHeader" group="HideWhenDisabled" }
 		"BroadcastStatus" { ControlName="URLLabel" labeltext="#Steam_Settings_Broadcast_StatusNotBroadcast" style="rightcolumnlink" fieldName="BroadcastStatus" group="HideWhenDisabled" }
@@ -34,7 +34,7 @@
 		place { start="BroadcastStatusHeader" control="BroadcastStatus" dir=right margin-left=4 }
 		
 		place { start="BroadcastStatusHeader" control="PermissionsHeader" dir=down margin-top=20 width=max }
-		place { start="PermissionsHeader" control="Permissions" dir=down margin-top=4 width=250 }
+		place { start="PermissionsHeader" control="Permissions" dir=down margin-top=4 width=350 }
 		
 		place { start="Permissions" control="DimensionsHeader" dir=down margin-top=10 width=max }
 		place { start="DimensionsHeader" control="Dimensions" dir=down margin-top=4 width=250 }

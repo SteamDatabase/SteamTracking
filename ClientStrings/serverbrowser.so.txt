@@ -634,7 +634,6 @@ EnumValueDescriptorProto
 EnumValueOptions
 en_US.UTF-8
 __errno_location
-Error
 ERROR
 EVCert
 Expand
@@ -794,10 +793,12 @@ glBindTexture
 glClear
 glClearColor
 glColor4ub
+glDeleteTextures
 glDisable
 glEnable
 glEnd
 glGenTextures
+glGetError
 GLIBC_2.0
 GLIBC_2.1
 GLIBC_2.1.3

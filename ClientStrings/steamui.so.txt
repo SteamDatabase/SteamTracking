@@ -778,6 +778,7 @@
 19CRegisterSubReceipt
 19CSaveBindingsMsgBox
 19CSearchStoreSection
+19CSetBurstBitrateMsg
 19CSetJumplistOptions
 19CSetOverrideModeMsg
 19CSettingsController
@@ -4161,6 +4162,7 @@ CScreenshotsPanel
 CScreenshotThumbPanel
 CScreenshotUploadDialog
 cs_CZ
+CSetBurstBitrateMsg
 CSetCursorImageMsg
 CSetCursorMsg
 CSetCustomImageDialog
@@ -5806,6 +5808,7 @@ glFramebufferTexture2DEXT
 glGenFramebuffers
 glGenFramebuffersEXT
 glGenTextures
+glGetError
 glGetIntegerv
 glGetProgramInfoLog
 glGetProgramiv
@@ -7089,6 +7092,7 @@ k_EStreamControlInputMouseWheel
 k_EStreamControlNegotiationInit
 k_EStreamControlOverlayEnabled
 k_EStreamControlQuitRequest
+k_EStreamControlSetBurstBitrate
 k_EStreamControlSetCursor
 k_EStreamControlSetCursorImage
 k_EStreamControlSetGammaRamp
@@ -12199,6 +12203,7 @@ ShowURLChoiceDialog
 ShowWebBrowser
 ShowWhenAutoUpdateWindow
 ShowWhenComplete
+ShowWhenDisabled
 ShowWhenThrottled
 ShowWhileDownloading
 ShowWindowsIcon
