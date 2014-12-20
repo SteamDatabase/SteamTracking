@@ -1,9 +1,11 @@
 <root>
 <styles>
 	<include src="file://{resources}/styles/steamstyles.css" />
-			<include src="https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground_empty.css?v=KvtD7dCW09Zq" />
+			<include src="https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground.css?v=nJOw5QZ8o8R8" />
 	</styles>
 <EventBackground>
+			<Panel class="Winter OnlyInStore"></Panel>
+		<Panel class="Snow"></Panel>
 	
 </EventBackground>
 </root>
