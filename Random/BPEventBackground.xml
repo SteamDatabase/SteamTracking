@@ -1,10 +1,10 @@
 <root>
 <styles>
 	<include src="file://{resources}/styles/steamstyles.css" />
-			<include src="https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground.css?v=nJOw5QZ8o8R8" />
+			<include src="https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground.css?v=GkWeFdDSpgRZ" />
 	</styles>
 <EventBackground>
-			<Panel class="Winter OnlyInStore"></Panel>
+			<Image class="Winter OnlyInStore" src="https://steamcdn-a.akamaihd.net/steam/clusters/sale_winter2014_assets/976e28e9/logo_tenfoot_english.jpg?t=1419387247"></Image>
 		<Panel class="Snow"></Panel>
 	
 </EventBackground>
