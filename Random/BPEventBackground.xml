@@ -4,7 +4,7 @@
 			<include src="https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground.css?v=GkWeFdDSpgRZ" />
 	</styles>
 <EventBackground>
-			<Image class="Winter OnlyInStore" src="https://steamcdn-a.akamaihd.net/steam/clusters/sale_winter2014_assets/976e28e9/logo_tenfoot_english.jpg?t=1419387247"></Image>
+			<Image class="Winter OnlyInStore" src="https://steamcdn-a.akamaihd.net/steam/clusters/sale_winter2014_assets/976e28e9/logo_tenfoot_english.jpg?t=1419968936"></Image>
 		<Panel class="Snow"></Panel>
 	
 </EventBackground>
