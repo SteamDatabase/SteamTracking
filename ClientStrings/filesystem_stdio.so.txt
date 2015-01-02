@@ -1,4 +1,3 @@
----------------
 10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiEE
 10CUtlRBTreeIN15CUtlSymbolTable16CStringPoolIndexEtNS0_5CLessE25CDefRBTreeBalanceListenerItEE
 10CUtlRBTreeIN7CUtlMapIPKciiPFbRKS2_S4_EE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiEE
@@ -20,6 +19,7 @@
 15IBaseFileSystem
 17CFileSystem_Stdio
 18CUtlCharConversion
+%.18g
 19CUtlNoEscConversion
 21CUtlCStringConversion
 27CFileSystemStdIODLLValidate
@@ -30,6 +30,20 @@ alphasort64
 AssertMsgImplementation
 __bss_start
 CBaseFileSystem
+CBaseFileSystem::Close
+CBaseFileSystem::FileExists
+CBaseFileSystem::FindFirst
+CBaseFileSystem::FindNext
+CBaseFileSystem::Flush
+CBaseFileSystem::FPrintf
+CBaseFileSystem::GetFileTime
+CBaseFileSystem::Open
+CBaseFileSystem::Read
+CBaseFileSystem::ReadLine
+CBaseFileSystem::Seek
+CBaseFileSystem::Size
+CBaseFileSystem::Tell
+CBaseFileSystem::Write
 CFileSystem_Stdio
 CFileWriterThread
 chmod
@@ -41,6 +55,7 @@ __ctype_b_loc
 __ctype_tolower_loc
 CUtlDict
 CUtlSymbolTable
+CUtlSymbol::ValidateGlobals
 __cxa_atexit
 __cxa_finalize
 __cxa_guard_abort
@@ -48,6 +63,7 @@ __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
 CXXABI_1.3
+%d:00
 DBG_PATHMATCH
 DEFAULT_WRITE_PATH
 desktop
@@ -57,8 +73,10 @@ dl_iterate_phdr
 dlmopen
 dlopen
 dlsym
+:done
 _edata
 __errno_location
+:error
 Error
 EXECUTABLE_PATH
 fclose
@@ -77,9 +95,6 @@ freopen
 fs_debug
 fseek
 fseeko64
--fs_log
--fs_logbins
--fs_target
 ftell
 ftruncate64
 futimes
@@ -110,7 +125,6 @@ isspace
 IVALIDATE001
 _Jv_RegisterClasses
 lchown
-ld-linux.so.2
 libc.so.6
 libdl.so.2
 libpthread.so.0
@@ -147,6 +161,7 @@ m_StringPools
 m_Tree
 munmap
 opendir
+Paths:
 Plat_ctime
 Plat_GetExecutablePath
 Plat_localtime
@@ -166,10 +181,13 @@ rmdir
 scandir
 scandir64
 sched_yield
+%s%c%s
 sendfile64
 setlocal
 setvbuf
 s_pSymbolTable
+%s/%s
+%s/.steam/steam
 __stack_chk_fail
 statvfs
 statvfs64
@@ -243,6 +261,7 @@ __xstat64
 _Z9V_stristrPKcS0_
 _ZdaPv
 _ZdlPv
+zip%i.zip
 _ZN10CValidator11ClaimMemoryEPv
 _ZN10CValidator16ClaimArrayMemoryEPv
 _ZN10CValidator3PopEv

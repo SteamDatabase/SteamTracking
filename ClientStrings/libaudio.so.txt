@@ -173,7 +173,6 @@ isspace
 IVALIDATE001
 _Jv_RegisterClasses
 lchown
-ld-linux.so.2
 libc.so.6
 libdl.so.2
 libmiles.so
@@ -276,6 +275,9 @@ scandir64
 SOUND
 s_pAudioController
 s_pSymbolTable
+%s/%s
+%s/.steam/%s
+%s/.steam/steam
 __stack_chk_fail
 statvfs
 statvfs64

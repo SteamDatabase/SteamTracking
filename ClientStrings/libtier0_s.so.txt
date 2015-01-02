@@ -1,4 +1,7 @@
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
 12CStdMemAlloc
+15:03:26
 9IMemAlloc
 9N\vx
 access
@@ -56,7 +59,7 @@ __cxa_throw
 CXXABI_1.3
 __daylight
 DBG_PATHMATCH
--debugbreak
+%d.%d.%d.%d:%d
 DeclareCurrentThreadIsMainThread
 dladdr
 dlclose
@@ -74,6 +77,7 @@ EnableCrashingOnCrashes
 Encryption
 __errno_location
 Error
+/e%s%s
 _ExitOnFatalAssert
 externaltests.so
 fclose
@@ -135,7 +139,7 @@ g_VProfManager
 g_VProfProfilesRunningCount
 __gxx_personality_v0
 HasStackTrackingFilters
--hometest
+%%.%if%s
 InitializeStackTrackingFilters
 InitPME
 Is64BitOS
@@ -144,9 +148,9 @@ IsLogActive
 IsSpewActive
 IsStackTrackingFiltered
 IVALIDATE001
+Jobs/Coroutines
 _Jv_RegisterClasses
 lchown
-ld-linux.so.2
 libc.so.6
 libdl.so.2
 libpthread.so.0
@@ -158,8 +162,10 @@ __lxstat64
 malloc
 malloc_usable_size
 memcpy
+MemFree:
 memmove
 memset
+MemTotal:
 MiniDumpUnlock
 misc.h
 mkdir
@@ -174,8 +180,6 @@ N16SteamThreadTools7CThreadE
 nanosleep
 nattypeprobe.so
 Network
--noassert
--nocrashdialog
 opendir
 OverlayInput
 OverlayRendering
@@ -219,7 +223,13 @@ Plat_VirtualAccessFlags
 Plat_VirtualAlloc
 Plat_VirtualFree
 Plat_VirtualProtect
+/proc
+/proc/cpuinfo
+_/proc/%d/status
 processor
+/proc/meminfo
+/proc/self/exe
+/proc/%u/stat
 propack.so
 pthread_attr_init
 pthread_attr_setstacksize
@@ -298,14 +308,13 @@ _SpewMessage
 _SpewMessageType
 sprintf
 sscanf
+%s/.steam/steam
 __stack_chk_fail
 statvfs
 statvfs64
 stderr
 Steam
 steamclient.so
--steamconsole
--steamos
 SteamRealPath
 steamservice.so
 SteamUI
@@ -327,6 +336,8 @@ strstr
 strtol
 symlink
 syscall
+/sys/devices/system/clocksource/clocksource0/current_clocksource
+/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 system
 TenFoot
 tenfoot.so
@@ -379,6 +390,7 @@ ThreadTerminateProcessCode
 ThreadWaitForProcessExit
 ThreadWorkItem
 __timezone
+TracerPid:
 u4PPW
 Unaccounted
 uname
