@@ -22,7 +22,10 @@
 		
 		"IncludeDesktop" { ControlName="CheckButton" fieldName="IncludeDesktop" group="HideWhenDisabled" }
 		"RecordMic" { ControlName="CheckButton" fieldName="RecordMic" group="HideWhenDisabled" }
+		"EnableHardwareSupport" { ControlName="CheckButton" fieldName="EnableHardwareSupport" group="HideWhenDisabled" }
 		"ShowDebugInfo" { ControlName="CheckButton" fieldName="ShowDebugInfo" group="HideWhenDisabled" }
+		
+		"RequiresRestartLabel" { ControlName="Label" fieldName="RequiresRestartLabel" labelText="#Steam_Settings_Broadcast_RequiresRestart" group="HideWhenDisabled" }
 	}
 	
 	layout
@@ -45,6 +48,7 @@
 		place { start="BitrateLimit" control="ShowChatHeader" dir=down margin-top=10 width=max }
 		place { start="ShowChatHeader" control="ShowChatCombo" dir=down margin-top=4 width=250 }
 				
-		place { start="ShowChatCombo" control="IncludeDesktop,RecordMic,ShowDebugInfo" dir=down margin-top=10 width=400 }	
+		place { start="ShowChatCombo" control="IncludeDesktop,RecordMic,EnableHardwareSupport,ShowDebugInfo" dir=down margin-top=10 width=400 }	
+		place { control="RequiresRestartLabel" margin-left=20 margin-right=20 width=max margin-top=500 }
 	}
 }

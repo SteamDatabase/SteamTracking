@@ -1,0 +1,36 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+		<include src="file://{resources}/styles/friends/friends.css" />
+		<include src="file://{resources}/styles/overlay/overlay.css" />
+	</styles>
+
+
+		
+	<FirstTimeBroadcastPanel class="FirstTimeBroadcastPanel" >
+		<Panel class="FirstTimeBroadcastFrame" >
+			<!-- top header panel -->
+			<Label class="LongDesc" text="#Broadcast_FirstTime_Header" />
+			
+			<!-- <FriendsProfileDetailsCompositeHeader id="FriendsProfileDetailsCompositeHeader" /> -->
+			
+			<Label class="LongDesc FirstTimeBroadcastSpacer" text="#Broadcast_FirstTime_PermissionHeader" />
+							
+			<!-- main panel -->
+			<Panel id="BroadcastSettingsContainer" class="Radios FirstTimeBroadcastOptions" childfocusonhover="false">
+					<RadioButton group="BroadcastSettings" class="Button RadioButton" id="InviteOnly" tabindex="0.0" text="#Settings_Broadcast_InviteOnly" selectionpos="auto" />
+					<RadioButton group="BroadcastSettings" class="Button RadioButton" id="FriendsApprove" tabindex="1.0" text="#Settings_Broadcast_FriendsApprove" selectionpos="auto" />
+					<RadioButton group="BroadcastSettings" class="Button RadioButton" id="FriendsAllowed" tabindex="1.0" text="#Settings_Broadcast_FriendsAllowed" selectionpos="auto" />
+					<RadioButton group="BroadcastSettings" class="Button RadioButton" id="Public" tabindex="1.0" text="#Settings_Broadcast_FriendsPublic" selectionpos="auto"  />
+			</Panel>
+			
+			<Label class="LongDesc FirstTimeBroadcastSpacer" text="#Broadcast_FirstTime_DesktopOnly" />
+			
+			<Button class="Button FirstTimeBroadcastSpacer" tabindex="1.0" onactivate="FirstTimeBroadcastClose()" >
+				<Label class="LongDesc" text="#Broadcast_FirstTime_OK" />
+			</Button>
+		</Panel>
+	</FirstTimeBroadcastPanel>
+	
+</root>

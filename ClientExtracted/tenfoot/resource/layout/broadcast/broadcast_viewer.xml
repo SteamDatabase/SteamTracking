@@ -1,0 +1,11 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/friends/friends.css" />
+		<include src="file://{resources}/styles/broadcast/broadcast.css" />
+	</styles>
+
+	<Panel >
+	</Panel>
+
+</root>

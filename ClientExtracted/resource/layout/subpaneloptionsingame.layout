@@ -18,6 +18,8 @@
 		
 		OverlayHomePageLabel { ControlName=Label labelText="#Overlay_SettingsHomepageLabel" }
 		OverlayHomePage { ControlName=TextEntry }
+		
+		ShowIngameFPSCheck { ControlName=CheckButton labelText="#Overlay_SettingsShowIngameFPS" style=checkbox }
 	
 		Divider1 { ControlName=Divider	}
 		PingRateLabel {	controlname=label	labeltext=#Steam_ServerBrowserPingRateLabel wrap=1 style=highlight		}
@@ -63,6 +65,8 @@
 		place { controls=HotKeySelectorLabel,HotKeySelector dir=down spacing=5 width=max region=topleft }
 		
 		place { controls=OverlayHomePageLabel,OverlayHomePage dir=down spacing=5 start=HotKeySelector margin-top=20 width=max region=topleft }
+		
+		place { controls=ShowIngameFPSCheck dir=down start=OverlayHomePage margin-top=16 width=max region=topleft )
 			
 		place { controls=ScreenshotLabel region=topright }
 		place { controls=ScreenshotHotKeySelector,SetScreenshotFolderButton 
@@ -81,6 +85,5 @@
 		place { controls="PingRateLabel" region=bottom start=Divider1 margin-top=10 width=max dir=down }
 		place { controls="PingRateCombo" region=bottom start=PingRateLabel margin-top=10 width=235 dir=down height=25 }
 		place { controls="PingRateInfo" region=bottom start=PingRateCombo margin-top=10 width=235 dir=down }				
-			
 	}
 }
