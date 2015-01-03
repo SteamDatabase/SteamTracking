@@ -112,6 +112,7 @@
 13CMsgShowPopup
 13CMsgSizePopup
 13CVolumeSlider
+14:13:17
 14CColorProperty
 14CFloatProperty
 14CHFontProperty
@@ -143,7 +144,6 @@
 14IBaseInterface
 14IHTMLResponses
 14IRunGameEngine
-15:03:59
 1.5.2
 15CConVarAccessor
 15CEmoticonButton
@@ -159,6 +159,7 @@
 15IOverlayOSPumps
 16AppModalQueryBox
 16CHostOfflineMode
+16CIngameFPSBanner
 16CMsgBrowserReady
 16CMsgClearHistory
 16CMsgNodeHasFocus
@@ -947,6 +948,7 @@ CHTMLFindBar
 CHTMLHeader
 CHTMLIMEBar
 CHTMLPageSecurityInfo
+CIngameFPSBanner
 clearance
 clearbutton
 ClearField
@@ -1691,6 +1693,8 @@ empty
 Empty
 EmptyDatabaseText
 EnableGameOverlay
+EnableHardwareEncodingV2
+EnableHardwareSupport
 EnableNotifications
 EnableOverlayCheck
 EncodingLookupArray
@@ -1980,14 +1984,13 @@ GameName
 GAMEOVERLAY
 GameOverlay_GameExitingEvent_%s
 GameOverlayHomePage
-GameOverlayHomePageChanged
 GameOverlay_InGameRenderingCompleted_%s
 GameOverlay_InputEventStream_%s
 gameoverlayrenderer.so
 GameOverlayRender_PaintCmdStream_%s
 GameOverlayScreenshotKeyChanged
 GameOverlay_SerializedWorkQueued_%s
-GameOverlayShortcutKeyChanged
+GameOverlaySettingsChanged
 gameoverlayui
 GameOverlay_VGUIPaintingCompleted_%s
 game_selector
@@ -2154,6 +2157,7 @@ handleValue
 Hangul
 Hanunoo
 Harassment
+HardwareSupportChanged
 HasField
 HashVerificationFilterFlags
 header
@@ -2293,6 +2297,7 @@ InGameOverlayScreenshotPlaySound
 InGameOverlayScreenshotSaveUncompressed
 InGameOverlayScreenshotSaveUncompressedPath
 InGameOverlayShortcutKey
+InGameOverlayShowFPS
 Inherited
 inhibitAnyPolicy
 initialFile
@@ -3436,6 +3441,7 @@ Owner
 p88Hp88H
 package
 packed
+PageChanged
 PageCountChanged
 PageDragFrame
 PageDragPanel
@@ -3455,7 +3461,6 @@ PanelGrid
 Panel::IsWithinTraverse
 panel_list
 Panel::OnThink
-Panel::PaintTraverse
 PanelPtr
 param
 parameters
@@ -3786,6 +3791,7 @@ resource/layout/broadcast_livebanner.layout
 resource/layout/htmlfindbar.layout
 resource/layout/htmlimebar.layout
 resource/layout/htmlpopup.layout
+resource/layout/ingamefpsbanner.layout
 resource/layout/layoutdebugdialog_details.layout
 resource/layout/layoutdebugdialog.layout
 resource/layout/musiclibrarypanel.layout
@@ -4128,6 +4134,7 @@ ShowCurrentAlbum
 ShowDebugInfo
 ShowEntryInSystem
 ShowFriendsPanelInOverlay
+ShowIngameFPSCheck
 ShowLegacyCDKey
 ShowMusicPlayerIfWanted
 ShowSettings
@@ -4291,6 +4298,7 @@ steamid
 steamid/
 %steamID%
 SteamIDAchievementsPage/%u
+SteamIDBroadcastPage
 SteamIDBroadcastPage/%llu
 steamIDControlPage
 Steam_Language
@@ -4475,6 +4483,7 @@ textfile
 textHidden
 _textImage
 TextKillFocus
+TextLabel
 TextNewLine
 textNotice
 textstreamindex
@@ -4617,6 +4626,7 @@ unstructuredAddress
 unstructuredName
 UokOP
 uparrow
+UpdateHardwareSupport
 updatetall
 updatewide
 updatex
@@ -4819,6 +4829,7 @@ Wallet
 Warning
 WARNING
 WarningText
+watch
 wcscasecmp
 wcschr
 wcscmp

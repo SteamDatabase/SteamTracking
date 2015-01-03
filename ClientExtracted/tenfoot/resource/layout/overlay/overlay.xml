@@ -50,6 +50,7 @@
 				</CommunityFriendsStrip>
 				<Carousel id="ContentsRow" class="ContentsRow" tabindex="auto" selectionpos="auto" focus="center" wrap="false" onmoveup="GoUpFromFeedStrip();">
 					<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore DetailsDataPanel" />
+					<OverlayNotificationPanel id="Notifications" class="Controller DetailsDataPanel" />
 					<BroadcastOverlay id="Broadcast" class="Controller DetailsDataPanel" />
 					<LibraryController id="Controller" class="Controller DetailsDataPanel" />
 					<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel" />

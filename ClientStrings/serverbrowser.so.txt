@@ -1456,7 +1456,6 @@ paintbackground
 _panelDar
 Panel::IsWithinTraverse
 Panel::OnThink
-Panel::PaintTraverse
 PanelPtr
 parse
 parsing

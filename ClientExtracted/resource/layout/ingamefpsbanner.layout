@@ -1,0 +1,12 @@
+"resource/layout/ingamefpsbanner.layout"
+{
+	controls
+	{
+		TextLabel { controlname=Label labeltext="99" tall=16 }
+	}
+	
+	layout
+	{
+		place { control="TextLabel" }
+	}
+}

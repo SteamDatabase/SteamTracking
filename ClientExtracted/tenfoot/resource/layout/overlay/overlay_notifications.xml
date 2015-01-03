@@ -1,0 +1,22 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/overlay/overlay.css" />
+		<include src="file://{resources}/styles/settings.css" />
+	</styles>
+
+	<OverlayNotificationPanel class="OverlayNotificationPanel" >
+				<Label text="Notifications" class="HeaderLabel" /> 
+				
+				<Panel id="OverlayNotificationList" class="OverlayNotificationList" >
+					<!-- reminder panel will be programmatically added here -->
+				</Panel>
+				
+				<Button tabindex="auto" selectionpos="auto" onactivate="RemoveAllReminders()" >
+					<Label text="Remove All" /> 
+				</Button>
+	</OverlayNotificationPanel>
+
+</root>

@@ -16,7 +16,6 @@ Attrib_Position
 Attrib_TexCoord
 AXCreateGC
 BOverlayNeedsPresent
-BpL9Lo
 __bss_start
 CAsyncCaptureGL
 chdir

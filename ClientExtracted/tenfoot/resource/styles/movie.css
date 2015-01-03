@@ -119,7 +119,8 @@ LoadingThrobber
 	align: center center;
 }
 
-.MovieBuffering LoadingThrobber
+.MovieBuffering LoadingThrobber,
+.BroadcastLoading LoadingThrobber
 {
 	opacity: 1.0;
 
@@ -525,4 +526,17 @@ MovieDebug Label
 {
 	flow-children: down;
 	margin-right: 10px;
+}
+
+
+
+.ChatVisible Movie
+{
+	background-color: black;
+}
+
+.ChatVisible MoviePanel
+{
+	height: 65%;
+	transform: translatey( 100px );
 }

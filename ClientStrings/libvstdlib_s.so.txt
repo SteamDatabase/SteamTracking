@@ -533,6 +533,7 @@ V_MakeAbsolutePath
 V_MakeRelativePath
 V_MatchWildcardDNSName
 V_MatchWildcardString
+V_memcpy_nocache
 V_NormalizeUTF8
 V_NormalizeUTF8Old
 VODKA

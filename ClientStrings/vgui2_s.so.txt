@@ -34,6 +34,7 @@
 10CUtlVectorI7style_t10CUtlMemoryIS0_EE
 10CUtlVectorIc10CUtlMemoryIcEE
 10CUtlVectorIj10CUtlMemoryIjEE
+10CUtlVectorIN12CBaseSurface16TraversalEntry_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
 10CUtlVectorIN16CStyleAppearance6line_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN16CStyleAppearance8DrawOp_tE10CUtlMemoryIS1_EE
@@ -351,6 +352,7 @@ CBaseSurface::GetTextSize
 CBaseSurface::InternalSchemeSettingsTraverse
 CBaseSurface::PaintTraverse
 CBaseSurface::PushMakeCurrent
+CBaseSurface::RecomputeTraversalOrder
 CBC/CTS
 cCKEY_C
 CCrypto::Base64Decode
@@ -1221,6 +1223,7 @@ m_vecPanelList
 m_vecPanelsToDelete
 m_vecParentNames
 m_vecTextColorRangeValues
+m_vecTraversalCache
 m_VGuiSurfaceTextures
 mXRecord
 N4vgui10IVGuiSetupE

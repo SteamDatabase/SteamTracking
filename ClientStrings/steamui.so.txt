@@ -408,6 +408,8 @@
 13ISteamService
 13WebFavorite_t
 14000
+14:14:53
+14:15:05
 14CAgreementHTML
 14CAlbumGridItem
 14CBindingButton
@@ -471,7 +473,6 @@
 14CUtlLinkedListIN15CUtlExpiringMapIj9CSmartPtrIK13CStorePackage17CRefCountAccessorEi8CDefLessIjE19CDefExpiringMapFreeIS5_EE9NodeLRU_tEiE
 14CUtlLinkedListIN15CUtlExpiringMapIj9CSmartPtrIK17CStoreAppUserData17CRefCountAccessorEi8CDefLessIjE19CDefExpiringMapFreeIS5_EE9NodeLRU_tEiE
 14CUtlLinkedListIN15CUtlExpiringMapIj9CSmartPtrIK9CStoreApp17CRefCountAccessorEi8CDefLessIjE19CDefExpiringMapFreeIS5_EE9NodeLRU_tEiE
-14CUtlLinkedListIN18CGameRecordSession13QueuedAudio_tEiE
 14CUtlLinkedListIN18CStreamSampleQueueI23CGameFrameDurationStatsjLi3ELb0EE8Sample_tEiE
 14CUtlLinkedListIN18CStreamSampleQueueIN13CStreamServer17CRecentFrameStatsE15CFastFrameStatsLi10ELb0EE8Sample_tEiE
 14CUtlLinkedListIN18CStreamSampleQueueIN17CStreamConnection11PacketStatsENS2_14PacketSample_tELi3ELb0EE8Sample_tEiE
@@ -490,6 +491,8 @@
 14CUtlLinkedListIP22CBaseScheduledFunctioniE
 14CUtlLinkedListIP8CUtlDictIbiEiE
 14CUtlLinkedListIPN12CStoreAccess25QueuedUserAuthedRequest_tEiE
+14CUtlLinkedListIPN18CGameRecordSession13QueuedAudio_tEiE
+14CUtlLinkedListIPN18CGameRecordSession13QueuedVideo_tEiE
 14CUtlLinkedListIPN4vgui12ListViewItemEiE
 14CUtlLinkedListIPN4vgui13ListPanelItemEiE
 14CUtlLinkedListIPN4vgui23ISectionedListPanelItemEiE
@@ -503,8 +506,6 @@
 14IHTMLResponses
 14IRunGameEngine
 14IVoiceRecorder
-15:05:32
-15:05:44
 1.5.2
 15CArtistGridItem
 15CCheckoutReview
@@ -1108,6 +1109,7 @@
 24CAchievementsLockedPanel
 24CBackupSelectOptionsPage
 24CContactEmailWizardChild
+24CFirstTimeBroadcastPanel
 24CForgotAccountNameWizard
 24CGamesPage_Details_Cloud
 24CGameStreamBaseMemStream
@@ -1171,6 +1173,7 @@
 25CMsgRenderTextRangeFormat
 25CMsgVerticalScrollBarSize
 25CMusicTenfootNotification
+25COverlayNotificationPanel
 25CPanelAnimationDictionary
 25CParentalReplacementPanel
 25CParentalSetRecoveryChild
@@ -1351,6 +1354,7 @@
 32CMsgBoxShadow_AnimationFrameData
 32CMsgDrawYUV420DoubleBufferedRect
 32COOBETimeZoneSettingsWizardChild
+32COverlayNotificationWatchRequest
 32CRemoteDeviceAuthorizationDialog
 32CRequestAsyncNotificationsMsgBox
 32CRequestDeviceAuthorizationPanel
@@ -1376,6 +1380,7 @@
 34CMsgOpacityMask_AnimationFrameData
 34CSteamGuardNotifyNewMachinesDialog
 34CSubValidateContactEmailWizardDone
+35CBroadcastViewerRequestNotification
 35CChoosePurchaseOrAuthorizationPanel
 35CInputControllerWirelessPresenceMsg
 35CLibraryRecentActivateProductDialog
@@ -1827,13 +1832,16 @@
 9CCallbackI25CLibraryAchievementsPanel28UserAchievementIconFetched_tLb0EE
 9CCallbackI25CLibraryAllGamesPanelBase37RemoteClientStreamingEnabledChanged_tLb0EE
 9CCallbackI25CLibraryLinksAndMorePanel17ShortcutChanged_tLb0EE
+9CCallbackI25COverlayNotificationPanel21ViewerNeedsApproval_tLb0EE
 9CCallbackI25CSettingsPanelNetwork_WAP26NetworkDeviceStateChange_tLb0EE
 9CCallbackI25CSubChangeContactComplete21EmailChangeResponse_tLb0EE
 9CCallbackI25CSubExtraFactorAuthResult23SteamServersConnected_tLb0EE
 9CCallbackI25CSubExtraFactorAuthResult27SteamServerConnectFailure_tLb0EE
 9CCallbackI25CSubPanelOptionsDownloads15CellIDChanged_tLb0EE
+9CCallbackI25CTenfootOverlayController21ViewerNeedsApproval_tLb0EE
 9CCallbackI25CTenfootOverlayController23SteamServersConnected_tLb0EE
 9CCallbackI25CTenfootOverlayController26SteamServersDisconnected_tLb0EE
+9CCallbackI25CTenfootOverlayController27BroadcastShowFirstTimeDlg_tLb0EE
 9CCallbackI25CTenfootOverlayDispatcher17BroadcastStatus_tLb0EE
 9CCallbackI25CTenfootOverlayDispatcher22ShowGamepadTextInput_tLb0EE
 9CCallbackI26CGamesPage_Details_Friends20PersonaStateChange_tLb0EE
@@ -2026,6 +2034,7 @@ absolute_mouse
 Accel
 accept
 ACCEPT
+AcceptBroadcastWatchRequest
 AcceptButton
 AcceptEULA
 AcceptLocalButton
@@ -2990,11 +2999,14 @@ BResizeImageRGBA
 brighttext
 BringMainMenuToTop
 broadcast
+broadcast_adjust_bitrate
 BroadcastDisabledLabel
 BroadcastDisabledSupportURL
 BroadcastOverlay
 BroadcastStatus
 broadcast_stop
+BroadcastViewerRequestNotification
+BroadcastWatchRequest%u
 Browse
 BrowseButton
 BrowseByCategoryTabActivated
@@ -3078,7 +3090,6 @@ ButtonAddAFriend
 button_b
 ButtonBody
 ButtonBodyDisabled
-ButtonClicked
 ButtonContinue
 ButtonCreateCategory
 ButtonGeneric
@@ -3559,6 +3570,7 @@ Check360GuideButton
 checkable
 CheckAllItems
 CheckButtonChecked
+CheckButtonClicked
 CheckButtonList.CheckButton
 CheckForLayoutFilesChanges
 CheckForOpenContextMenu
@@ -4430,6 +4442,7 @@ CoverImage
 COverlayBasePanel::OnAsyncNotificationsRequested
 COverlayBasePanel::OnMicroTxnAuthRequest
 COverlayEnabledMsg
+COverlayNotificationPanel::OnViewerNeedsApproval
 CPaginationPanel
 CPanel2D::BSetProperty
 CPanel2D::Initialize
@@ -4875,8 +4888,10 @@ CTenfootController::OnSteamSessionInfoClosed
 CTenfootController::OnSteamSessionInfoIssued
 CTenfootFooterPanel::BApplyTransitionForButton
 CTenfootMsgBoxGlobal
+CTenfootOverlayController::OnBroadcastShowFirstTimeDlg
 CTenfootOverlayController::OnLoggedOff
 CTenfootOverlayController::OnLoggedOn
+CTenfootOverlayController::OnViewerNeedsApproval
 CTenfootOverlayDispatcher::OnBroadcastStatus
 CTenfootOverlayDispatcher::OnDispatchShowGamepadTextInput
 CTenfootOverlayManager::OnGameOverlayActivateRequested
@@ -5621,6 +5636,7 @@ EnableHardwareDecoding
 EnableHardwareDecodingV2
 EnableHardwareEncoding
 EnableHardwareEncodingV2
+EnableHardwareSupport
 enable_license
 EnableMediaKeysCheckbox
 EnableOverlay
@@ -6007,6 +6023,8 @@ FirstBindRow
 FirstDayInRange
 FirstLink
 first_name
+FirstTimeBroadcastClose
+FirstTimeBroadcastPanel
 FirstTimeComplete
 FixedDiv_C
 FixedDiv_X86
@@ -6162,7 +6180,9 @@ FriendRecommendAvatar
 friend_recommend_count
 FriendRequest
 FriendsActionsMsgBox
+FriendsAllowed
 friends/already_own
+FriendsApprove
 friends/apps
 FriendsBlocked
 FriendsChatBody
@@ -6344,7 +6364,6 @@ GameNameID
 GameOverlay_GameExitingEvent_%d
 GameOverlay_GameInputStream_%d
 GameOverlayHomePage
-GameOverlayHomePageChanged
 GameOverlay_InGameRenderingCompleted_%d
 GameOverlay_InputEventStream_%d
 GameOverlay_MovieStream_%u
@@ -6353,7 +6372,7 @@ GameOverlayRender_PaintCmdStream_%d
 GameOverlayScreenshotKeyChanged
 GameOverlay_ScreenshotStream_%d
 GameOverlay_SerializedWorkQueued_%d
-GameOverlayShortcutKeyChanged
+GameOverlaySettingsChanged
 GameOverlay_VGUIPaintingCompleted_%d
 GamepadBound
 GamepadBtn
@@ -6769,6 +6788,7 @@ Hangul
 Hanunoo
 Harassment
 HardwareModel
+HardwareSupportChanged
 hardware_vendor
 has_adult_content
 HasBeenValidated
@@ -7101,6 +7121,7 @@ Iface
 IfHasClassEvent
 IfNotHasClassEvent
 ign.com
+IgnoreBroadcastWatchRequest
 IgnoredFriend
 IgnoreInstallError
 IgnoreLegacyKeyError
@@ -7185,6 +7206,7 @@ InGameOverlayScreenshotPlaySound
 InGameOverlayScreenshotSaveUncompressed
 InGameOverlayScreenshotSaveUncompressedPath
 InGameOverlayShortcutKey
+InGameOverlayShowFPS
 InGameSettingsControlSelected
 Inherited
 InitCpuFlags
@@ -7274,6 +7296,7 @@ InviteCount
 Invited
 InviteFriendToTargetLobby
 InviteLabel
+InviteOnly
 InviteSent
 ioctl
 IO_ERROR
@@ -8694,6 +8717,7 @@ m_Contents
 m_CurrentColumns
 m_CurrentDirectory
 m_CustomURLHandlers
+m_data
 m_DataItems
 mdct_backward
 mdct_clear
@@ -8888,6 +8912,7 @@ m_listSeriesInfo
 m_listValue
 m_llQueuedAudio
 m_llQueuedUserAuthedRequests
+m_llQueuedVideo
 m_LogEventPrev
 m_Lookup
 m_lstQueuedMsgBoxes
@@ -9178,7 +9203,6 @@ m_pXbuttonAction
 m_pYbuttonAction
 m_QueueCallbackMsg
 m_QueuedCommands
-m_queuedVideo.m_bufData
 m_QueueJobSleeping
 m_queuePendingOffThreadSpew
 m_QueueScheduledItems
@@ -10000,6 +10024,7 @@ N25CLibraryAchievementsPanel28CCallbackOnUserStatsReceivedE
 N25CLibraryAchievementsPanel31CCallbackOnAchievementIconReadyE
 N25CLibraryAllGamesPanelBase46CCallbackOnRemoteClientStreamingEnabledChangedE
 N25CLibraryLinksAndMorePanel26CCallbackOnShortcutChangedE
+N25COverlayNotificationPanel30CCallbackOnViewerNeedsApprovalE
 N25CSettingsPanelNetwork_WAP39CCallbackOnNetworkConnectionStateChangeE
 N25CSubChangeContactComplete30CCallbackOnEmailChangeResponseE
 N25CSubExtraFactorAuthResult23CCallbackOnLoginFailureE
@@ -10007,6 +10032,8 @@ N25CSubExtraFactorAuthResult23CCallbackOnLoginSuccessE
 N25CSubPanelOptionsDownloads24CCallbackOnCellIDChangedE
 N25CTenfootOverlayController19CCallbackOnLoggedOnE
 N25CTenfootOverlayController20CCallbackOnLoggedOffE
+N25CTenfootOverlayController30CCallbackOnViewerNeedsApprovalE
+N25CTenfootOverlayController36CCallbackOnBroadcastShowFirstTimeDlgE
 N25CTenfootOverlayDispatcher26CCallbackOnBroadcastStatusE
 N25CTenfootOverlayDispatcher39CCallbackOnDispatchShowGamepadTextInputE
 N26CGamesPage_Details_Friends29CCallbackOnPersonaStateChangeE
@@ -10837,6 +10864,7 @@ NX9n\u
 nytimes.com
 OBJ_ln2nid
 OBJ_obj2nid
+odalf
 oemeula
 Officer
 Official
@@ -11091,6 +11119,10 @@ openurl_external
 OpenVRSessionDetails
 open_with
 OpenWithFile
+o%pp2
+o%pq2
+o%Pq2
+o%Pt2
 optimize_for
 OptimizeMode
 optional
@@ -11159,6 +11191,9 @@ overlay
 OverlayBasePanel
 OverlayGamepadInputMsg
 OverlayKey
+OverlayNotificationList
+OverlayNotificationPanel
+OverlayNotificationWatchRequest
 override_mode
 OverrideThrottleCheckBox
 p09p4v
@@ -11243,6 +11278,7 @@ PadWestLabel
 pad_x
 pad_y
 PageChange
+PageChanged
 PageCountChanged
 page%d
 PageDown
@@ -11281,7 +11317,6 @@ Panel::IsWithinTraverse
 panel_list
 PanelLoaded
 Panel::OnThink
-Panel::PaintTraverse
 panel_position
 PanelPtr
 panelStyle
@@ -11480,6 +11515,7 @@ PerformOfflineOnline
 PeriodsBelowMinFPS
 Permanent
 PermitDownloadClientUpdates
+persona
 personaname
 persona_name
 personastate
@@ -12094,6 +12130,7 @@ remotestoragefileroot
 remotetime
 remove
 RemoveAllOptions
+RemoveAllReminders
 RemoveAndDeleteChildren
 RemoveAppFromFavorites
 RemoveAppFromUnblockedGames
@@ -12120,6 +12157,7 @@ RemoveLibraryButton
 RemoveLoginUser
 RemoveOption
 RemoveOtherComputersButton
+RemoveOverlayNotification
 RemoveRemoteControlDevice
 RemoveSelectedEntryFromLibraryAction
 RemoveSetupEntry
@@ -12855,11 +12893,13 @@ SetAppLaunchOptions
 SetBinding
 SetBool
 SetColor
+SetControls
 SetCouponAndClose
 SetCursor
 SetCursorOffset
 SetDebugTarget
 SetDialogVariable
+SetDialogVariableInt
 SetDisplayMode
 SetDouble
 SetEnum
@@ -12887,6 +12927,7 @@ SetMainMenuStackDepth
 SetMaxChars
 SetMiniDumpBuildID
 SetMiniDumpSteamID
+SetMovie
 SetMusicNavDisplayMode
 SetOfflineMode
 SetPanelEvent
@@ -13121,6 +13162,7 @@ showbar
 ShowBaseUI
 ShowBigPicture
 ShowBindingDialog
+ShowBroadcastViewer
 ShowBusyStatus
 ShowCDKeyInMenu
 ShowChat
@@ -13165,6 +13207,7 @@ ShowGlobalGameAchievements
 ShowHidden
 ShowHidePassword
 ShowHome
+ShowIngameFPSCheck
 ShowingLanguage
 ShowingLoginProgress
 ShowingProgress
@@ -15013,6 +15056,7 @@ UpdateFriendsCheckClearTypingNotification
 UpdateFriendsScrollToMostRecentChatMsg
 UpdateGameControllerName
 UpdateGuidesPanelData
+UpdateHardwareSupport
 UpdateHomeButtonVisibility
 UpdateInfoText
 UpdateJSConsoleNextHistory
@@ -15966,7 +16010,6 @@ _Z15V_UnicodeRepairPc25EStringConvertErrorPolicy
 _Z16V_UnicodeAdvancePci
 _Z17GetCPUInformationv
 _Z17V_UnicodeValidatePKc
-z2u01
 Z48wN39
 _Z9V_stristrPKcS0_
 _ZdaPv

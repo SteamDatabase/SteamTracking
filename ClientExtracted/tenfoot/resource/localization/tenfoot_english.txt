@@ -1774,6 +1774,8 @@
 	"Friends_ProfileDetails_Action_ViewAliases"		"View Aliases"
 	"Friends_ProfileDetails_Action_BlockAllCommunication"	"Block All Communication"
 	"Friends_ProfileDetails_Action_RemoveFriend"	"Remove Friend"
+	"Friends_ProfileDetails_Action_WatchGame" "Watch Game"
+	"Friends_ProfileDetails_Action_InviteToWatch" "Invite to Watch"
 	"Friends_ClanStatus_Chat1_Game1_Online1"	"{i:numfriendsinchat} In Chat, {i:numfriendsingame} In-Game, {i:numfriendsonline} Online"
 	"Friends_ClanStatus_Chat1_Game1_Online0"	"{i:numfriendsinchat} In Chat, {i:numfriendsingame} In-Game"
 	"Friends_ClanStatus_Chat1_Game0_Online1"	"{i:numfriendsinchat} In Chat, {i:numfriendsonline} Online"
@@ -1819,7 +1821,10 @@
 	"Friends_CloseInviteLobbyDialog"	"CLOSE"
 	"Friends_InviteToLobbyFooter"		"INVITE"
 	"Friends_InviteToLobbySent"		"INVITE SENT"
-
+	
+	"Friends_InviteToWatchTitle"		"Invite To Watch"
+	"Friends_InviteToWatchSent"		"INVITE SENT"
+	
 	"Community_Friends_InGame_Count"	"{i:numfriendsingame} FRIENDS IN-GAME"
 	"Community_Friends_MoreOnline_Count"	"{i:numfriendsonline} MORE ONLINE"
 	"Community_Friends_JustOnline_Count"	"{i:numfriendsonline} FRIENDS ONLINE"
@@ -2626,7 +2631,19 @@
 	"Broadcast_Notification_Joined_Public"	"A user has joined your public broadcast"
 	"Broadcast_Notification_Stopped_Public"	"All users have stopped watching your public broadcast"
 	"Broadcast_Notification_Is_Watching"	"is watching your broadcast"
-
+	"Broadcast_Notification_Viewer_Request"	"{s:friend} would like to watch you play"
+	"Broadcast_Notification_Accept_Request" "Accept"
+	"Broadcast_Notification_Ignore_Request" "Ignore"
+	
+	"Broadcast_FirstTime_Header" "Welcome to Steam Broadcasting! You can now watch other players and broadcast your own games with Steam."
+	"Broadcast_FirstTime_PermissionHeader" "Your friend {s:persona} would like to watch you play. Take a minute to set up your preferences..."
+	"Broadcast_FirstTime_DesktopOnly" "By default, only your game content can be watched. Your desktop will not be broadcast."
+	"Broadcast_FirstTime_FAQ" "Read the Steam Broadcasting FAQ"
+	"Broadcast_FirstTime_Title" "Steam Broadcasting"
+	"Broadcast_FirstTime_OK" "OK"
+	"Broadcast_FirstTime_Cancel" "Cancel"
+	"Broadcast_FirstTime_ViewerRequest" "{s:friend} would like to watch you play {s:gamename}"
+	
 	"SettingsVoice_VoiceOutputtoInput"	"Use for voice output too"
 
 	"SettingsAudioConfig_BeginWizard"	"Reconfigure Audio"
@@ -2718,6 +2735,9 @@
 
 	"You_Are_Offline"						"You are in offline mode"
 	"Community_Offline2"					"Community content is not available in offline mode.  To exit offline mode and view community content, return to the main menu and select the Offline button in the top row."
-	"Profile_Offline2"						"Your profile content is not available in offline mode.  To exit offline mode and view your profile, return to the main menu and select the Offline button in the top row."	
+	"Profile_Offline2"						"Your profile content is not available in offline mode.  To exit offline mode and view your profile, return to the main menu and select the Offline button in the top row."
 
+	"Broadcast_ChatJoined"					"{s:persona} joined the chat"
+	"Broadcast_ChatLeft"					"{s:persona} left the chat"
+	"Broadcast_ChatMuted"					"{s:persona} muted"
 }
