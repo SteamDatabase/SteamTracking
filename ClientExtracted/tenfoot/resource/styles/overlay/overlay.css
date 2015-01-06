@@ -333,9 +333,9 @@
 
 .FirstTimeBroadcastPanel
 {
-	width: 700px;
-	height: 600px;
-	
+	width: 880px;
+	height: fit-children;
+
 	vertical-align: center;
 	horizontal-align: center;
 
@@ -346,22 +346,81 @@
 
 .FirstTimeBroadcastFrame
 {
-	margin: 20px;
-		
+	margin: 40px;
+	padding-left: 30px;
+	padding-top: 30px;
 	flow-children: down;
 	overflow: clip scroll;
 }
 
 .FirstTimeBroadcastSpacer
 {
-	margin-top: 12px;
+	margin-top: 21px;
 }
 
 
 .FirstTimeBroadcastOptions
 {
-	margin-top: 20px;
+	margin-top: 24px;
 	margin-bottom: 20px;
-	horizontal-align: center;
+	horizontal-align: left;
 }
 
+.ButtonText
+{	
+	font-size: 24px;
+	margin-left: 10px;
+	margin-top: 3px;
+	color: applabelsolid;
+	text-transform: uppercase;
+}
+
+Button:focus .ButtonText,
+Button:hover .ButtonText,
+Button:focus:hover .ButtonText
+{
+	color: applabelselectedsolid;	
+}
+
+#FirstTimeBroadcastPanel Button
+{
+	width: 150px;
+}
+
+#FirstTimeBroadcastPanel .RadioButton Label
+{
+	margin-top: 0px;
+	margin-left: 4px;
+	font-size: 24px;
+	transform: translateX( 0px );
+}
+	
+#FirstTimeBroadcastPanel .RadioButton:hover Label,
+#FirstTimeBroadcastPanel .RadioButton:focus Label, 
+#FirstTimeBroadcastPanel .RadioButton:focus:hover Label 
+{
+	transform: translateX( 0px );
+}
+
+#FirstTimeBroadcastPanel .CheckBox Label
+{
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	font-size: 28px;
+}
+
+#FirstTimeBroadcastPanel .CheckBox:hover Label
+{
+	color: #ffffffff;
+}
+
+#FirstTimeBroadcastPanel .CheckBox:focus Label
+{
+	color: #000000ff;
+}
+
+#FirstTimeBroadcastPanel .SettingsLeftContent Button, .CheckBox,RadioButton
+{
+	width: 620px;
+}

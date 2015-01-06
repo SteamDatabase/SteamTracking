@@ -2,11 +2,30 @@
 {
 	controls
 	{
-		TextLabel { controlname=Label labeltext="99" tall=16 }
+		TextLabel { controlname=Label labeltext="99" }
+	}
+	
+	styles
+	{
+		CounterTextSmall
+		{
+			font-size="12"
+		}
+		
+		CounterTextMedium
+		{
+			font-size="16"
+		}
+		
+		CounterTextLarge
+		{
+			font-size="20"
+		}
+		
 	}
 	
 	layout
 	{
-		place { control="TextLabel" }
+		place { control="TextLabel" margin=4 align=center }
 	}
 }

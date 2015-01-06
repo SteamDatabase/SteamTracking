@@ -8,6 +8,6 @@
 		<AvatarImage id="AvatarImage" class="AvatarImage" />
 		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
 		<Label id="FriendName" class="NotificationTitle" />
-		<Label id="NotificationTextLabel" class="NotificationOneLabelBody" text="#Broadcast_Notification_Viewer_Request" />
+		<Label id="NotificationTextLabel" class="NotificationTwoLabelBodyLineTwo" text="#Broadcast_Notification_Viewer_Request" />
 	</Panel>
 </root>
