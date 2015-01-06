@@ -112,7 +112,6 @@
 13CMsgShowPopup
 13CMsgSizePopup
 13CVolumeSlider
-14:13:17
 14CColorProperty
 14CFloatProperty
 14CHFontProperty
@@ -157,6 +156,7 @@
 15CTrackItemPanel
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
 15IOverlayOSPumps
+16:33:44
 16AppModalQueryBox
 16CHostOfflineMode
 16CIngameFPSBanner
@@ -1225,6 +1225,9 @@ copylink
 copyurl
 %cost%
 countersignature
+CounterTextLarge
+CounterTextMedium
+CounterTextSmall
 countrycodes
 countryName
 CoverImage
@@ -2297,7 +2300,8 @@ InGameOverlayScreenshotPlaySound
 InGameOverlayScreenshotSaveUncompressed
 InGameOverlayScreenshotSaveUncompressedPath
 InGameOverlayShortcutKey
-InGameOverlayShowFPS
+InGameOverlayShowFPSContrast
+InGameOverlayShowFPSCorner
 Inherited
 inhibitAnyPolicy
 initialFile
@@ -4134,7 +4138,8 @@ ShowCurrentAlbum
 ShowDebugInfo
 ShowEntryInSystem
 ShowFriendsPanelInOverlay
-ShowIngameFPSCheck
+ShowIngameFPSContrastCheck
+ShowIngameFPSCornerCombo
 ShowLegacyCDKey
 ShowMusicPlayerIfWanted
 ShowSettings

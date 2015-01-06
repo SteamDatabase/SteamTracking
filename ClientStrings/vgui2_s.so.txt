@@ -702,6 +702,7 @@ ERR_unload_strings
 es_ES
 /etc/hostname
 /etc/mtab
+eventfd
 evp_pkey
 ex_data
 ex_data.c
@@ -825,6 +826,7 @@ GLIBC_2.2.4
 GLIBC_2.3
 GLIBC_2.3.4
 GLIBC_2.4
+GLIBC_2.7
 GLIBCXX_3.4
 GLIBCXX_3.4.9
 glIsTexture

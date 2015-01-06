@@ -19,7 +19,9 @@
 		OverlayHomePageLabel { ControlName=Label labelText="#Overlay_SettingsHomepageLabel" }
 		OverlayHomePage { ControlName=TextEntry }
 		
-		ShowIngameFPSCheck { ControlName=CheckButton labelText="#Overlay_SettingsShowIngameFPS" style=checkbox }
+		ShowIngameFPSLabel { ControlName=Label labelText="#Steam_Settings_Ingame_ShowFPS_Title" }
+		ShowIngameFPSCornerCombo { ControlName="ComboBox" fieldName="ShowIngameFPSCombo" editable="0" }
+		ShowIngameFPSContrastCheck { ControlName=CheckButton labelText="#Steam_Settings_Ingame_ShowFPS_HightContrast" style=checkbox }
 	
 		Divider1 { ControlName=Divider	}
 		PingRateLabel {	controlname=label	labeltext=#Steam_ServerBrowserPingRateLabel wrap=1 style=highlight		}
@@ -56,7 +58,7 @@
 		region { name=topleft region=top y=100 width=255 margin-right=20 }
 		region { name=topright region=top x=263 width=235 y=101}
 		
-		region { name=bottom region=box y=295 }
+		region { name=bottom region=box y=320 }
 		
 		place { controls=TitleLabel region=top }
 		place { controls=DescriptionLabel height=40 width=max region=top start=TitleLabel dir=down margin-top=8 }
@@ -66,7 +68,7 @@
 		
 		place { controls=OverlayHomePageLabel,OverlayHomePage dir=down spacing=5 start=HotKeySelector margin-top=20 width=max region=topleft }
 		
-		place { controls=ShowIngameFPSCheck dir=down start=OverlayHomePage margin-top=16 width=max region=topleft )
+		place { controls=ShowIngameFPSLabel,ShowIngameFPSCombo,ShowIngameFPSContrastCheck dir=down spacing=5 start=OverlayHomePage margin-top=20 width=max region=topleft }
 			
 		place { controls=ScreenshotLabel region=topright }
 		place { controls=ScreenshotHotKeySelector,SetScreenshotFolderButton 

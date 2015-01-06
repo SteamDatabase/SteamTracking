@@ -408,8 +408,6 @@
 13ISteamService
 13WebFavorite_t
 14000
-14:14:53
-14:15:05
 14CAgreementHTML
 14CAlbumGridItem
 14CBindingButton
@@ -555,6 +553,8 @@
 15CWebLoadedPanel
 15IDesktopCapture
 1600x900
+16:39:21
+16:43:39
 16AppModalQueryBox
 16CBackupStartPage
 16CBorderImageData
@@ -7206,7 +7206,8 @@ InGameOverlayScreenshotPlaySound
 InGameOverlayScreenshotSaveUncompressed
 InGameOverlayScreenshotSaveUncompressedPath
 InGameOverlayShortcutKey
-InGameOverlayShowFPS
+InGameOverlayShowFPSContrast
+InGameOverlayShowFPSCorner
 InGameSettingsControlSelected
 Inherited
 InitCpuFlags
@@ -13207,7 +13208,8 @@ ShowGlobalGameAchievements
 ShowHidden
 ShowHidePassword
 ShowHome
-ShowIngameFPSCheck
+ShowIngameFPSContrastCheck
+ShowIngameFPSCornerCombo
 ShowingLanguage
 ShowingLoginProgress
 ShowingProgress
