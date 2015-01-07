@@ -4,7 +4,7 @@
 	position: relative;
 	height: 242px;
 
-	border-bottom: 5px solid #364862;
+	border-bottom: 5px solid #417B9C;
 }
 
 .grouppage_member_tiles {
@@ -55,7 +55,7 @@ body.nodatauri .grouppage_membertiles_overlay {
 	height: 23px;
 	line-height: 23px;
 
-	background-color: #262627;
+	background-color: rgba( 0, 0, 0, 1 );
 
 	color: #949491;
 	font-size: 11px;
@@ -71,7 +71,7 @@ body.nodatauri .grouppage_membertiles_overlay {
 	padding: 0 11px;
 	line-height: 42px;
 
-	background-color: #171717;
+	background-color: rgba( 0, 0, 0, 0.6 );
 
 	color: #ffffff;
 	font-size: 34px;
@@ -171,37 +171,50 @@ img.member_tile {
 }
 
 .group_tab {
+	margin-top: 7px;
+	display: block;
 	float: left;
-	margin-right: 3px;
-	background-color: #444444;
 	color: #dadada;
-	font-size: 14px;
-	line-height: 26px;
-	padding: 0 12px;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-
-	cursor: pointer;
-
-	margin-top: 9px;
+	background-color: rgba( 0, 0, 0, 0.5 );
+	line-height: 29px;
+	height: 29px;
+	padding: 0px 12px;
+	margin-right: 5px;
+	text-decoration: none;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	-moz-border-radius: 2px;
+	-moz-border-radius-bottomleft: 0px;
+	-moz-border-radius-bottomright: 0px;
 }
 
 a.group_tab:hover {
-	text-decoration: none;
+	background-color: rgba( 102, 192, 244, 0.8 );
+	color: #ffffff;
 }
 
 .group_tab.active {
-	line-height: 34px;
-	color: #ffffff;
+	margin-top: 0px;
+	height: 34px;
+	padding: 1px;
+	text-decoration: none;
+	border: none;
 
-	padding: 0 14px;
-	margin-top: 0;
+	background: #57749e; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+	.group_tab.active > span {
+		height: 35px;
+		line-height: 36px;
+		padding: 0 19px;
+		border-radius: 2px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		color: #ffffff;
 
-	border: 1px solid #57739d;
-	border-bottom: none;
-	background-color: #364862;
-	background: top center repeat-x url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/tab_blue_active.png' );
-}
+		display: block;
+		background: #417B9C; /* Old browsers */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D6), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AA9D6', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -o-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -ms-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);	}
 
 .grouppage_content_area {
 
@@ -292,13 +305,13 @@ a.group_tab:hover {
 
 /* members does not have the bottom background */
 .group_content.bottomless {
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png' ) top left no-repeat;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) top left no-repeat;
 
 	min-height: 228px;
 }
 
 .group_content_rule {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png');
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1');
 	background-position: bottom left;
 	background-repeat: no-repeat;
 	width: 645px;
@@ -398,7 +411,7 @@ a.readmore_link {
 	font-size: 24px;
 	font-weight:normal;
 	margin: 0;
-	padding: 0;
+	padding: 10px 0px 0px 0px;
 	text-decoration: none;
 }
 a.large_title:hover {
@@ -758,7 +771,7 @@ fieldset.editRow_textarea label {
 
 
 .rightbox_list_header, .rightbox_content_header {
-	color: #676765;
+	color: #61696D;
 	font-size: 12px;
 	margin-bottom: 12px;
 }

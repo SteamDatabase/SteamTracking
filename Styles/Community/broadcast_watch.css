@@ -1041,16 +1041,177 @@ body.flat_page
 
 }
 
-.html5_video_overlay .representation_select {
-    float: right;
+.html5_video_overlay .representation_select
+{
     margin-right: 10px;
     font-size: 12px;
     background-color: #2c2b28;
-    color: rgb(169,169,169);
-    border: 0px;
+    color: #CCC;
     padding-top: 1px;
+    border: 1px solid #9d9d9d;
+    min-width: 150px;
 }
 
+.html5_video_overlay .settings_icon
+{
+    float: right;
+    width: 16px;
+    height: 16px;
+    padding-right: 20px;
+    padding-top: 2px;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/icon_settings.png' );
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.html5_video_overlay .settings_icon:hover
+{
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/icon_settings_hover.png' );
+}
+
+.html5_video_overlay .settings_icon:hover div
+{
+    color: #CCCCCC;
+}
+
+.html5_video_overlay .settings_panel
+{
+    background: rgba(44,43,40,0.95);
+    bottom: 40px;
+    position: absolute;
+    right: 7px;
+    padding: 20px 10px 10px 20px;
+    border-radius: 5px 5px;
+    display: none;
+}
+
+.html5_video_overlay .settings_label
+{
+    color: #9d9d9d;
+    font-size: 13px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.html5_video_overlay .representation_video,
+.html5_video_overlay .representation_audio,
+.html5_video_overlay .representation_playbackRate,
+.html5_video_overlay .representation_captions
+{
+    clear: both;
+    padding-bottom: 10px;
+    text-align: right;
+    display: none;
+}
+
+.html5_video_overlay .customize_captions
+{
+    color: #9d9d9d;
+    font-size: 12px;
+    text-decoration: underline;
+    margin-right: 10px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.html5_video_overlay .customize_captions:hover
+{
+    color: #CCCCCC;
+}
+
+.closed_captions_customization
+{
+    min-width: 310px;
+    min-height: 200px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+
+    padding: 20px;
+    background: rgba(44,43,40,0.95);
+    border-radius: 5px;
+
+    font-family: 'Motiva Sans', Arial, sans-serfif;
+    text-align: left;
+
+    display: none;
+}
+
+.closed_captions_customization .cc_title
+{
+    font-size: 14px;
+    color: #CCC;
+    padding-bottom: 10px;
+}
+
+.closed_captions_customization span
+{
+    font-size: 13px;
+    color: #9d9d9d;
+    text-align: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.closed_captions_customization select
+{
+    margin-right: 10px;
+    font-size: 12px;
+    background-color: #2c2b28;
+    color: #CCC;
+    padding-top: 1px;
+    border: 1px solid #9d9d9d;
+    width: 170px
+}
+
+.closed_captions_customization .cc_select_wrapper
+{
+    clear: both;
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+.closed_captions_customization .cc_done,
+.closed_captions_customization .cc_cancel
+{
+    float: right;
+    color: #9d9d9d;
+    font-size: 13px;
+    margin-top: 6px;
+    padding: 2px;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: right;
+}
+
+.closed_captions_customization .cc_cancel
+{
+    float: left;
+    text-align: left;
+}
+
+.closed_captions_customization .cc_done:hover,
+.closed_captions_customization .cc_cancel:hover
+{
+    color: #CCCCCC;
+}
+
+.html5_video_overlay .video_quality_label
+{
+    float: right;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #9d9d9d;
+    border: 0px;
+    line-height: 16px;
+}
 
 .html5_video_overlay .fullscreen_button {
 	height: 19px;
@@ -1102,6 +1263,37 @@ body.flat_page
 	font-size: 10px;
 	padding-left: 2px;
 	padding-top: 0px;
+}
+
+.html5_video_overlay .progress_time_info
+{
+    min-width: 40px;
+    text-align: center;
+    color: #CCC;
+    background-color: #2c2b28;
+    border: 1px solid #9d9d9d;
+    border-radius: 2px;
+    padding: 1px 5px;
+    position: relative;
+    top: -21px;
+    left: -100px;
+    display: inline-block;
+    pointer: default;
+    font-size: 11px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.html5_video_overlay .progress_time_bar
+{
+    left: -100px;
+    width: 2px;
+    height: 11px;
+    background-color: white;
+    position: relative;
+    top: -16px;
+    pointer: default;
+    display: block;
 }
 
 /* Scrollbar */
@@ -1242,15 +1434,17 @@ body.flat_page
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
 
     padding: 20px;
-    background: rgba(80,80,80,0.5);
+    background: rgba(44,43,40,0.8);
     border-radius: 5px;
     min-width: 150px;
 
-    font-family: 'Motiva Sans', Arial, sans-serfif;
+    font-family: Arial, sans-serfif;
     font-size: 18px;
-    color: #EEEEEE;
+    color: #CCC;
     line-height: 14px;
     text-align: center;
 
@@ -1263,9 +1457,11 @@ body.flat_page
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
     color: #FFF;
-    font-family: 'Motiva Sans', Arial, sans-serfif;
+    font-family: Arial, sans-serif;
+    text-shadow: 1px 1px 2px #000000;
 
     opacity: 0.0;
     transition-property: opacity;
@@ -1276,3 +1472,4 @@ body.flat_page
 {
     opacity: 1.0;
 }
+

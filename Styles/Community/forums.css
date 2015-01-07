@@ -78,7 +78,6 @@ input {
 	outline: none;
 	color: #BFBFBF;
 	border: none;
-	background-color: #565658;
 }
 
 textarea.forumtopic_reply_textarea {
@@ -882,7 +881,7 @@ a.forum_comment_action:hover {
 	position:relative;
 	width:296px;
 	height:46px;
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png);
+	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png?v=1);
 	background-repeat:no-repeat;
 	padding:0;
 	margin:0;
@@ -900,7 +899,7 @@ input.discussionSearchText
 	left:12px;
 	width: 244px;
 	height: 20px;
-	background-color:#303030;
+	background-color:transparent;
 }
 
 input.discussionSearchText::-webkit-input-placeholder {

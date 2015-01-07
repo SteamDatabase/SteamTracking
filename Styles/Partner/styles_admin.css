@@ -1757,6 +1757,10 @@ html, body { height:100%; }
 	left: 12px;
 }
 
+.gamecard_preview.art_border_swapped .gamecard_preview_inset {
+	z-index: 1;
+}
+
 .gamecard_preview_text {
 	position: absolute;
 	top: 8px;

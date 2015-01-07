@@ -57,33 +57,27 @@
 #permissionsBlock {
 	width:708px;
 	margin:0;
-	padding:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/permissionsBlockBG.gif');
-	background-repeat:repeat-y;
+	padding: 18px;
+	background: rgba( 0, 0, 0, 0.4 );
 }
 #permissionsBlockTop {
 	width:708px;
 	margin:0;
 	padding:0;
 	height:5px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/permissionsBlockHeader.gif');
-	background-repeat:no-repeat;
+
 }
 #permissionsBlockBottom {
 	width:708px;
 	margin:0;
 	padding:0;
 	height:5px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/permissionsBlockFooter.gif');
-	background-repeat:no-repeat;
+
 }
 	
 .permissionHeaderRow, .permissionRow, .permissionRowAlt {
-	width:680px;
-	height:31px;
 	margin:0;
-	padding:0;
-	margin-left:15px;
+	padding: 12px;
 	margin-top:1px;
 	margin-bottom:1px;
 }
@@ -93,11 +87,11 @@
 }
 
 .permissionRowAlt {
-	background-color:#212121;
+	background-color: #111923;
 }
 
 .permissionRowAlt input {
-	background-color:#212121;
+	background-color:#000;
 }
 
 #permissions form {
@@ -127,7 +121,7 @@
 
 .headerTitle, .permissionRadio {
 	float:right;
-	width:69px;
+	width:35px;
 	margin:0;
 	padding:0;
 	text-align:center;
@@ -146,13 +140,12 @@
 
 
 .permissionRadio {
-	height:28px;
-	padding-top:3px;
+
 }
 
 .permissionRowAlt p, .permissionRow p {
-	padding-top:9px;
-	color:#959595;
+	color:#8F98A0;
+	margin: 0px;
 }
 
 #actionButtonRow {
@@ -182,14 +175,14 @@
 }
 
 .permissionBlockHeader,.permissionBlockHeader2 {
-	padding:6px 0px 6px 6px;
-	font-size:12px;
-	font-weight:bold;
-	color:#939393;
+	padding: 12px 0px 6px 6px;
+	font-size:14px;
+	font-weight:normal;
+	color:#66C0F4;
 }
 
 .permissionBlockHeader {
-	padding-top:14px;
+	padding-top: 20px;
 }
 
 .settingsBlock {

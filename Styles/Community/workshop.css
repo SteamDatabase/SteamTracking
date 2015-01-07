@@ -418,6 +418,7 @@ a.general_btn:hover {
 	margin-top: 43px;
 }
 
+
 #leftContents {
 	width: 650px;
 }
@@ -2295,7 +2296,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 .workshopItemDescriptionTitle {
 	font-size: 11px;
 	text-transform: uppercase;
-	color: #6d6d6b;
+	color: #61696D;
 	margin: 3px 0 16px 0;
 }
 	.workshopItemDescriptionTitle > .detail {
@@ -2555,7 +2556,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .linkedAppBlock.accepted
 {
-	background-color: #3c516e;
+	background-color: #769106;
 }
 
 .linkedAppBlock:hover {
@@ -2729,7 +2730,7 @@ input[type='checkbox'] {
 	position:relative;
 	width:296px;
 	height:46px;
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png);
+	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png?v=1);
 	background-repeat:no-repeat;
 	padding:0;
 	margin:0;
@@ -2741,7 +2742,7 @@ input[type='checkbox'] {
 	position:relative;
 	width:296px;
 	height:46px;
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png);
+	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png?v=1);
 	background-repeat:no-repeat;
 	padding:0;
 	margin:0 0 10px 0;
@@ -3778,7 +3779,7 @@ div.hover {
 	background-color: #417B9C;
 	height: 5px;
 	left: 0px;
-	width: 950px;
+	width: 948px;
 }
 
 
@@ -4113,7 +4114,7 @@ div.hover {
 	left: -10px;
 	height: 1px;
 	background-color: #000;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #17212e;
 	width: 290px;
 }
 
@@ -4564,7 +4565,7 @@ a.tooltip {
 
 .service_provider_row:hover
 {
-	background-color: #444444;
+	background-color: rgba( 42, 60, 83, 0.6 );
 }
 
 .service_provider_row input
