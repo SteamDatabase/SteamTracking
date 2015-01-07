@@ -1,3 +1,32 @@
+==== SteamOS build 153 2015-01-06 ====
+[list]
+[/list]
+
+==== SteamOS build 152 2015-01-06 ====
+[list]
+[/list]
+
+==== SteamOS build 151 2015-01-06 ====
+[list]
+[*] libevent - CVE-2014-6272
+[/list]
+
+==== SteamOS build 150 2015-01-05 ====
+[list]
+[/list]
+
+==== SteamOS build 149 2015-01-05 ====
+[list]
+[*] bind9 - CVE-2014-8500
+[*] dbus - CVE-2014-7824
+[*] jasper - CVE-2014-8137, CVE-2014-8138
+[*] jasper - CVE-2014-9029
+[*] mime-support - CVE-2014-7209
+[*] nss - CVE-2014-1569
+[*] ntp - CVE-2014-9293, CVE-2014-9294, CVE-2014-9295, CVE-2014-9296
+[*] unzip - CVE-2014-8139, CVE-2014-8140, CVE-2014-8141
+[/list]
+
 ==== SteamOS build 148 2014-12-12 ====
 [list]
 [*] eglibc - Fix crashes with Dota 2 and Dead Island
