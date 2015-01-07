@@ -290,7 +290,9 @@ CChatFriend.prototype.GetOnlineState = function()
 		case 2:
 		case 5:
 		case 6:
-						if ( this.m_bInGame )
+			if ( ( this.m_nPersonaStateFlags & 4 ) != 0 )
+				return 'golden';
+			else if ( this.m_bInGame )
 				return 'in-game';
 			else
 				return 'online';
