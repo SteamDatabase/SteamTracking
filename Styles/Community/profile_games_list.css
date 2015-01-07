@@ -1024,7 +1024,7 @@ body.migrated_profile_page #wishlist_comic {
     position: relative;
     width: 144px;
     height: 58px;
-    background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/gamelogoholder_default.jpg');
+	background: rgba( 0, 0, 0, 0.5 );
 }
 
 .changingGameLogo {

@@ -6,20 +6,20 @@
 
 .discussions_header {
 	position: relative;
-	border-bottom: 5px solid #364862;
+	border-bottom: 5px solid #417B9C;
 }
 
 .steam_discussions_intro {
-	color: #989898;
+	color: #8F98A0;
 }
 
 .steam_discussions_intro b {
-	color: #d0d0d0;
+	color: #C6D4DF;
 	font-weight: normal;
 }
 
 .steam_discussions_moderationdisclaimer {
-	color: #989898;
+	color: #8F98A0;
 	font-size: 12px;
 }
 

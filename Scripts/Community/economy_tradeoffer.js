@@ -165,19 +165,27 @@ function DismissTradeOfferWindow()
 	}
 }
 
+function MessageWindowOpener( msg )
+{
+		try {
+		window.opener.postMessage( msg, 'http://steamcommunity.com/' );
+	} catch ( e ) {}
+	try {
+		window.opener.postMessage( msg, 'https://steamcommunity.com/' );
+	} catch ( e ) {}
+}
+
 // URL is optional and is where we'll go if this isn't a popup for some reason.
 //	if bSendOpenerToURL is true, then we will always send the window that opened the popup to that URL.
 function EndTradeOffer( url, bSendOpenerToURL )
 {
 	// window.opener does not work in the steam client or overlay
-	if ( window.opener )
+	if ( window.opener && window.opener.postMessage )
 	{
 		if ( bSendOpenerToURL )
 		{
-			window.opener.location = url;
+			MessageWindowOpener( {type: 'location', url: url } );
 		}
-		window.opener.focus();	// probably won't work, but worth a shot
-
 		window.close();
 	}
 	else
@@ -497,9 +505,9 @@ CTradeOfferStateManager = {
 			).done( function( data ) {
 
 				try {
-					if ( window.opener && typeof window.opener.OnTradeOfferAccepted != 'undefined')
+					if ( window.opener && window.opener.postMessage )
 					{
-						window.opener.OnTradeOfferAccepted( nTradeOfferID, data.tradeid );
+						MessageWindowOpener( { type: 'accepted', tradeofferid: nTradeOfferID } );
 					}
 				}
 				catch ( e )

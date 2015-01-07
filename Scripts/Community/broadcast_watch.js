@@ -112,8 +112,8 @@ CBroadcastWatch.prototype.Start = function()
 	}
 
 	this.m_chat = new CBroadcastChat( this.m_ulBroadcastSteamID );
-	this.m_player = new CBroadcastPlayer( this.m_elVideoPlayer );
-	this.m_playerUI = new CBroadcastPlayerUI( this.m_player );
+	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
+	this.m_playerUI = new CDASHPlayerUI( this.m_player );
 	this.m_playerUI.Init();
 
 	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.BroadcastWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );

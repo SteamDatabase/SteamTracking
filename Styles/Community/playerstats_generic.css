@@ -105,7 +105,7 @@
 }
 
 .compareVal {
-	color:#aa5555;
+	color:#FFCC6A;
 }
 
 #tabs {
@@ -116,7 +116,7 @@
 #subtabs {
 	width:918px;
 	height:43px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/statsSubtabsBG.gif');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/statsSubtabsBG.gif?v=1');
 	padding-left:14px;
 	clear:left;
 }
@@ -133,12 +133,16 @@
 	float:left;
 	padding:8px 8px 6px 8px;
 	height:15px;
+	margin-right: 8px;
 	font-size:12px;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 	color: #ffffff;
-	background-color:#4f4f4e;
-}
+	background: #417B9C; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D6), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AA9D6', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -o-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -ms-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);}
 .tabOff {
-	background-color:#3a3a3a;
+	background: rgba( 0, 0, 0, 0.5 );
 }
 .tabOnL,.tabOnR,.tabOffL,.tabOffR {
 	float:left;
@@ -204,6 +208,7 @@
 	width:747px;
 	height:66px;
 	padding:0px;
+	background: rgba( 0, 0, 0, 0.5 );
 }
 
 .achieveTxt {

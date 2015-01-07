@@ -47,7 +47,7 @@
 
 .commentnotifications_header {
 	/* 907 x 51 */
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_header.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_header.png?v=1' );
 	width: 871px;
 	height: 51px;
 	padding-left: 36px;
@@ -81,14 +81,14 @@
 .commentnotifications_header_rule {
 	height: 1px;
 	background-color: #000000;
-	border-bottom: 1px solid #333333;
+	border-bottom: 1px solid #17435C;
 	margin-bottom: 14px;
 }
 
 
 
 .commentnotification {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_notification.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_notification.png?v=1' );
 	background-repeat: repeat-x;
 	background-position: bottom center;
 	height: 48px;
@@ -114,21 +114,23 @@
 .commentnotification_title {
 	padding-top: 6px;
 	line-height: 19px;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 	color: #8F98A0;
 	font-size: 14px;
 }
 .commentnotification.unread .commentnotification_title {
 	color: #66C0F4;
-	font-weight: bold;
-	text-shadow: 1px 1px #434345;
+	font-weight: normal;
+	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px rgba( 0, 0, 0, 0.5 );
 }
 
 .commentnotification_description {
-	color: #717171;
+	color: #61696D;
 	font-size: 11px;
 }
 .commentnotification.unread .commentnotification_description {
-	color: #b2b2b2;
+	color: #C6D4DF;
 }
 
 
@@ -156,7 +158,7 @@
 }
 
 .commentnotification_date {
-	color: #969696;
+	color: #8F98A0;
 	font-size: 11px;
 	text-align: right;
 	min-width: 80px;
@@ -204,7 +206,7 @@
 	height: 25px;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
-	color: #747474;
+	color: #61696D;
 
 	padding: 0px 6px;
 	margin: 8px 0px;

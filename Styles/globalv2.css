@@ -313,7 +313,7 @@ a.pagelink:hover {
 	border:0;
 	padding: 4px;
 	margin:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/gamelogoholder_default.jpg');
+	background: rgba( 0, 0, 0, 0.5 );
 }
 
 .gameLogo img {

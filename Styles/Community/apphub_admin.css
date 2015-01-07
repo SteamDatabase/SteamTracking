@@ -9,7 +9,7 @@ body
 
 P {
 	font-size: 16px;
-    color: #888888;
+    color: #8F98A0;
 }
 
 .maincontent
@@ -65,14 +65,14 @@ P {
 	font-size: 11px;
 	text-transform: uppercase;
 	margin: 3px 0 10px 0;
-	color: #676765;
+	color: #ca5029;
 }
 
 .panel .divider
 {
 	position: relative;
 	background: #000;
-	border-bottom: 1px solid #333333;
+	border-bottom: 1px solid #17212e;
 	height: 1px;
 	left: -11px;
 	width: 294px;
@@ -111,6 +111,8 @@ P {
 	padding: 15px;
 	padding-bottom: 20px;
 	margin-top: 20px;
+	font-size: 13px;
+	line-height: 17px;
 	background-color: rgba( 0, 0, 0, 0.2 );
 }
 
@@ -123,7 +125,7 @@ P {
 
 .faq_sub_title
 {
-	color: #529CDE;
+	color: #66C0F4;
 	padding-bottom: 5px;
     font-size: 14px;
 }

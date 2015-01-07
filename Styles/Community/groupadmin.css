@@ -36,7 +36,7 @@
 .group_admin_header.ogg .admin_avatar_dropshadow {
 	left: 0px;
 	padding: 4px;
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/gamelogoholder_default.jpg' );
+	background: rgba( 0, 0, 0, 0.5 );
 }
 
 .groupadmin_header_content {
