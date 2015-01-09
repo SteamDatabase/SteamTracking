@@ -6,6 +6,7 @@ function BeginTradeOffer( nTradeOfferID, bShowTutorial )
 
 	// have the TradeOfferStateManager handle all trade updates
 	GTradeStateManager = CTradeOfferStateManager;
+	GTradeStateManager.InitCaptcha();
 	Tutorial = new CTradeOfferTutorial();
 
 
@@ -216,6 +217,7 @@ CTradeOfferStateManager = {
 	m_eTradeOfferState: 0,	/* TRADE_OFFER_STATE_NEW */
 	m_bChangesMade: false,
 	m_rgTradeOfferCreateParams: {},
+	m_bCaptchaReady: true,
 
 	SetTradeOfferCreateParams: function( rgParams )
 	{
@@ -316,7 +318,62 @@ CTradeOfferStateManager = {
 
 	ToggleReady: function( bReady )
 	{
+		if ( !this.m_bCaptchaReady )
+		{
+			$J('#captcha_entry' ).focus();
+		}
+	},
 
+	SetCaptchaReady: function( bReady )
+	{
+		if ( bReady != this.m_bCaptchaReady )
+		{
+			this.m_bCaptchaReady = bReady;
+			this.UpdateConfirmButtonStatus();
+		}
+	},
+
+	InitCaptcha: function()
+	{
+		if ( $J('#captcha_entry').length != 0 )
+		{
+			this.m_bCaptchaReady = false;
+			var $CaptchaEntry = $J('#captcha_entry');
+
+			var _this = this;
+			var fnUpdateCaptchaReadyState = function()
+			{
+				if ( $CaptchaEntry.val().length == 6 )
+					_this.SetCaptchaReady( true );
+				else
+					_this.SetCaptchaReady( false );
+			};
+
+			$CaptchaEntry.on( 'blur change', function() {
+				fnUpdateCaptchaReadyState();
+			});
+
+			// keyup is handled differently to check for enter key
+			$CaptchaEntry.on( 'keyup', function ( event ) {
+				fnUpdateCaptchaReadyState();
+				if ( event.which == 13 )
+					_this.ConfirmTradeOffer();
+			} );
+
+			$J('#trade_captcha_refresh').click( function() { _this.RefreshCaptcha(); } );
+		}
+	},
+
+	RefreshCaptcha: function()
+	{
+		var bIsNewOffer = this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_NEW || this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_COUNTEROFFER;
+		var strURL =  'https://steamcommunity.com/tradeoffer/' + ( bIsNewOffer ? 'new' : this.m_nTradeOfferID ) + '/captcha';
+		strURL += '?v=' + (new Date()).getTime() + '&sessionid=' + g_sessionID + '&partner=' + g_ulTradePartnerSteamID;
+		$J('#trade_confirm_captcha').attr( 'src', strURL );
+
+		this.m_bCaptchaReady = false;
+		$J('#captcha_entry').val('');
+		$J('#captcha_entry').focus();
 	},
 
 	UpdateConfirmButtonStatus: function()
@@ -345,7 +402,7 @@ CTradeOfferStateManager = {
 			$('trade_confirmbtn_text').update( 'Make Offer');
 		}
 
-		if ( UserYou.bReady )
+		if ( UserYou.bReady && this.m_bCaptchaReady )
 		{
 			$('trade_confirmbtn').addClassName( 'active' );
 
@@ -361,22 +418,38 @@ CTradeOfferStateManager = {
 		else
 		{
 			$('trade_confirmbtn').removeClassName( 'active' );
-			if ( this.m_eTradeOfferState == this.TRADE_OFFER_STATE_COUNTEROFFER || this.m_eTradeOfferState == this.TRADE_OFFER_STATE_NEW )
+
+			if ( UserYou.bReady && !this.m_bCaptchaReady )
 			{
-				if( g_rgCurrentTradeStatus.me.assets.length || g_rgCurrentTradeStatus.me.currency.length ||
-					g_rgCurrentTradeStatus.them.assets.length || g_rgCurrentTradeStatus.them.currency.length )
+				var $CaptchaCtn = $J('#trade_confirm_captchaentry');
+				if ( !$CaptchaCtn.is(':visible' ) )
 				{
-					$('trade_confirm_message').update( 'Waiting for you to confirm your offer.' );
+					this.RefreshCaptcha();
+					$CaptchaCtn.show();
+					$J('#captcha_entry').focus();
 				}
-				else
-				{
-					$('trade_confirm_message').update( 'Make Offer' );
-				}
+
+				$('trade_confirm_message').update( 'Waiting for you to enter the characters above.' );
 			}
 			else
 			{
-				//view
-				$('trade_confirm_message').update( 'Waiting for you to confirm trade contents.' );
+				if ( this.m_eTradeOfferState == this.TRADE_OFFER_STATE_COUNTEROFFER || this.m_eTradeOfferState == this.TRADE_OFFER_STATE_NEW )
+				{
+					if( g_rgCurrentTradeStatus.me.assets.length || g_rgCurrentTradeStatus.me.currency.length ||
+						g_rgCurrentTradeStatus.them.assets.length || g_rgCurrentTradeStatus.them.currency.length )
+					{
+						$('trade_confirm_message').update( 'Waiting for you to confirm your offer.' );
+					}
+					else
+					{
+						$('trade_confirm_message').update( 'Make Offer' );
+					}
+				}
+				else
+				{
+					//view
+					$('trade_confirm_message').update( 'Waiting for you to confirm trade contents.' );
+				}
 			}
 		}
 	},
@@ -408,6 +481,11 @@ CTradeOfferStateManager = {
 
 	ConfirmTradeOffer: function()
 	{
+		if ( !this.m_bCaptchaReady )
+			return;
+
+		// we need to do this after modal dismissals because the focus goes to a button in the modal
+		var fnFocusCaptcha = function() { $J('#captcha_entry').focus(); }
 
 		g_bConfirmPending = true;
 		this.UpdateConfirmButtonStatus();
@@ -447,7 +525,8 @@ CTradeOfferStateManager = {
 				sessionid: g_sessionID,
 				serverid: 1,				partner: g_ulTradePartnerSteamID,
 				tradeoffermessage: $('trade_offer_note') ? $('trade_offer_note').value : '',
-				json_tradeoffer: V_ToJSON( g_rgCurrentTradeStatus )
+				json_tradeoffer: V_ToJSON( g_rgCurrentTradeStatus ),
+				captcha: $J('#captcha_entry').val()
 			};
 
 			if ( this.m_rgTradeOfferCreateParams )
@@ -481,8 +560,9 @@ CTradeOfferStateManager = {
 			}).fail( function( jqXHR ) {
 				var data = $J.parseJSON( jqXHR.responseText );
 				g_bConfirmPending = false;
+				StateManager.RefreshCaptcha();
 				StateManager.UpdateConfirmButtonStatus();
-				ShowAlertDialog( 'Make Offer', data && data.strError ? data.strError : 'There was an error sending your trade offer.  Please try again later.' );
+				ShowAlertDialog( 'Make Offer', data && data.strError ? data.strError : 'There was an error sending your trade offer.  Please try again later.' ).always( fnFocusCaptcha );
 			});
 		}
 		else if ( this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_VIEW )
@@ -491,7 +571,8 @@ CTradeOfferStateManager = {
 			var rgParams = {
 				sessionid: g_sessionID,
 				serverid: 1,				tradeofferid: nTradeOfferID,
-				partner: g_ulTradePartnerSteamID
+				partner: g_ulTradePartnerSteamID,
+				captcha: $J('#captcha_entry').val()
 			};
 
 			return $J.ajax(
@@ -522,8 +603,9 @@ CTradeOfferStateManager = {
 			}).fail( function( jqXHR ) {
 				var data = $J.parseJSON( jqXHR.responseText );
 				g_bConfirmPending = false;
+				StateManager.RefreshCaptcha();
 				StateManager.UpdateConfirmButtonStatus();
-				ShowAlertDialog( 'Accept Trade', data && data.strError ? data.strError : 'There was an error accepting this trade offer.  Please try again later.' );
+				ShowAlertDialog( 'Accept Trade', data && data.strError ? data.strError : 'There was an error accepting this trade offer.  Please try again later.' ).always( fnFocusCaptcha );
 			});
 		}
 	},
