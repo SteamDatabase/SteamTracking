@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.26bafec1c9346af4d321e38f0ae4e71369f696ae.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.b214bd61758dd47021f17a8f6a1f3fe3a4cf4c00.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -4425,6 +4425,31 @@
 				}
 			},
 			{
+				"name": "Community Case Key 6",
+				"defindex": 1323,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Chroma Case Key",
+				"item_description": "This key only opens Chroma Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/crate_key_community_6.f12230edccc052ca8909ea30bc7167d7d9cf4570.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_6",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
 				"name": "crate_valve_1",
 				"defindex": 4001,
 				"item_class": "supply_crate",
@@ -6353,6 +6378,40 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_6",
+				"defindex": 4061,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Chroma Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_6",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_community_6.4a84ff42a0e0149973c8580dd23f8ba6e7c68142.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_case_6",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 38
 					}
 				]
 				
@@ -11199,6 +11258,27 @@
 					"weapon_xm1014",
 					"weapon_ak47",
 					"weapon_hkp2000"
+				]
+				
+			},
+			{
+				"item_set": "set_community_6",
+				"name": "The Chroma Collection",
+				"items": [
+					"weapon_glock",
+					"weapon_m249",
+					"weapon_mp9",
+					"weapon_scar20",
+					"weapon_xm1014",
+					"weapon_elite",
+					"weapon_deagle",
+					"weapon_mac10",
+					"weapon_sawedoff",
+					"weapon_ak47",
+					"weapon_m4a1",
+					"weapon_p250",
+					"weapon_awp",
+					"weapon_galilar"
 				]
 				
 			},
