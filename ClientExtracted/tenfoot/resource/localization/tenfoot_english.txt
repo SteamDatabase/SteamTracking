@@ -2640,7 +2640,6 @@
 	"Broadcast_FirstTime_PermissionHeader" "Your friend {s:persona} would like to watch you play. What are your broadcasting preferecences?"
 	"Broadcast_FirstTime_DesktopOnly" "By default, only your game content can be watched. Your desktop will not be broadcast."
 	"Broadcast_FirstTime_FAQ" "Read the Steam Broadcasting FAQ"
-	"Broadcast_FirstTime_Title" "Steam Broadcasting"
 	"Broadcast_FirstTime_OK" "OK"
 	"Broadcast_FirstTime_Cancel" "Cancel"
 	"Broadcast_FirstTime_ViewerRequest" "{s:friend} would like to watch you play {s:gamename}"
