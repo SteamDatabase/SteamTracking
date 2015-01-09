@@ -553,8 +553,6 @@
 15CWebLoadedPanel
 15IDesktopCapture
 1600x900
-16:39:21
-16:43:39
 16AppModalQueryBox
 16CBackupStartPage
 16CBorderImageData
@@ -602,6 +600,8 @@
 16HTMLComboBoxHost
 16IRetailInstaller
 16ListPanelDragger
+17:53:23
+17:53:35
 17CAddShortcutPanel
 17CAppDownloadPanel
 17CAppSectionHeader
@@ -2813,6 +2813,7 @@ BCAccountNameValidator::OnAccountNameAvailableResult
 BCanSeeInParentScroll
 bClientRecommendationsEnabled
 BCParentalEditablePanel
+BCreateMilesSoundAudioDevice
 BD9AD
 BDeleteKey
 BDeleteValue
@@ -4545,7 +4546,6 @@ CreateDirectory
 CreateDirectoryDialog
 CreateInterface
 CreateMilesMusicAudioDevice
-CreateMilesSoundAudioDevice
 CreateMilesVoiceAudioDevice
 CreateNewAccountButton
 CreateNewCategory
@@ -5595,6 +5595,7 @@ electedbeta
 ELegacyKeyRegistrationMethod
 elementtagname
 el_GR
+Elibaudio.so
 ELicenseFlags
 ELicenseType
 ellipsis
@@ -6260,7 +6261,6 @@ FrontPageLoaded
 FrontPageLoading
 fseek
 fseeko64
-Fstreaming_log
 ftell
 ftp://
 ftruncate
@@ -10924,7 +10924,6 @@ Old_South_Arabian
 oldtall
 Old_Turkic
 oldwide
-Olibaudio.so
 O:%llu
 onactivate
 OnActivated
@@ -11120,10 +11119,6 @@ openurl_external
 OpenVRSessionDetails
 open_with
 OpenWithFile
-o%pp2
-o%pq2
-o%Pq2
-o%Pt2
 optimize_for
 OptimizeMode
 optional
@@ -14123,6 +14118,7 @@ steam://url/SteamWorkshopUpdatedSubscriptions/%u
 steam://url/StoreAccount
 steam://url/StoreAppPage/%u
 steam://url/StoreDlcPage/%u
+steam://url/SupportAppPage/%u
 SteamVRSupport
 SteamWebAuthCompleted
 SteamWorkshopPage/%u
@@ -14291,6 +14287,7 @@ StreamFromValue
 streamheader
 streaming
 StreamingActive
+streaming_log
 streaming_log_spikes
 StreamingSourceChosen
 StreamingSourceInstalled
@@ -15425,6 +15422,8 @@ VoiceChatDialing
 VoiceChatLevels%d
 VoiceChatRinging
 Voice_DefaultDevice
+voice_minabs
+voice_minavg
 VoiceReceiveVolume
 voicesettings
 VoiceSinkAdded

@@ -961,7 +961,6 @@
 15ISteamInventory
 15ISteamUserStats
 16000
-16:34:19
 16CAPIJobShareFile
 16CAppReleaseState
 16CAppUninstallJob
@@ -1026,6 +1025,7 @@
 172.16.3.39
 172.16.3.84:27017
 172.16.3.84:27018
+17:51:50
 17CAPIJobEndSession
 17CAppUpdateContext
 17CClientDeviceAuth
@@ -4323,6 +4323,7 @@ Broadcast\IncludeDesktop
 BroadcastInvitedToView_t
 broadcast_log
 Broadcast\MaxKbps
+BroadcastMicrophoneStatus_t
 Broadcast\OutputHeight
 Broadcast\OutputWidth
 Broadcast\Permissions
@@ -9857,7 +9858,7 @@ IgnoredFriend
 ignoreexternalfiles
 IH9NHt:f
 IHmd_005
-IHmdSystem_003
+IHmdSystem_004
 II9Irp
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
@@ -15334,6 +15335,7 @@ SetMatchAnyTag
 SetMaxPlayerCount
 SetMaxStatsLoaded
 SetMicBoost
+SetMicrophoneState
 SetModDir
 SetNotificationPosition
 SetOfflineMode

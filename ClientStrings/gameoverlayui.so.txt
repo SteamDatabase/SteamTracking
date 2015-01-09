@@ -156,7 +156,6 @@
 15CTrackItemPanel
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
 15IOverlayOSPumps
-16:33:44
 16AppModalQueryBox
 16CHostOfflineMode
 16CIngameFPSBanner
@@ -174,6 +173,7 @@
 16CSteamAuthedHTML
 16HTMLComboBoxHost
 16ListPanelDragger
+17:51:50
 17CBaseDesktopPanel
 17CItemImageManager
 17CMsgBrowserCreate
@@ -396,6 +396,7 @@
 9CCallbackI20CBroadcastChatBanner22BroadcastChatMessage_tLb0EE
 9CCallbackI20CBroadcastLiveBanner23BroadcastUploadStatus_tLb0EE
 9CCallbackI20CBroadcastLiveBanner25BroadcastSettingsLoaded_tLb0EE
+9CCallbackI20CBroadcastLiveBanner27BroadcastMicrophoneStatus_tLb0EE
 9CCallbackI21CSettingsSubBroadcast17BroadcastStatus_tLb0EE
 9CCallbackI22CAchievementImagePanel28UserAchievementIconFetched_tLb0EE
 9CCallbackI22SerializedOverlayPumps21ScreenshotTriggered_tLb0EE
@@ -873,6 +874,7 @@ CBroadcastChatBanner
 CBroadcastChatBanner::OnBroadcastChatMessage
 CBroadcastFirstTimeDialog
 CBroadcastLiveBanner
+CBroadcastLiveBanner::OnBroadcastMicrophoneStatus
 CBroadcastLiveBanner::OnBroadcastSettingsLoaded
 CBroadcastLiveBanner::OnBroadcastUploadStatus
 CBroadcastUploadErrorNotification
@@ -2115,6 +2117,9 @@ graphics/avatarBorderOffline
 graphics/avatarBorderOnline
 graphics/broadcast/broadcast_live_grey
 graphics/broadcast/broadcast_live_red
+graphics/broadcast/icon_mic_disabled
+graphics/broadcast/icon_mic_off
+graphics/broadcast/icon_mic_on
 graphics/chk_menu_item
 graphics/facebookLogo12
 graphics/html_lock
@@ -2755,6 +2760,7 @@ m_HandleTable
 MicBoost
 MicMeter
 MicMeter2
+MicrophoneImage
 MicrophoneLabel
 MicrophoneVolume
 microsoft.com
@@ -3061,6 +3067,7 @@ N19CSettingsSubFriends29CCallbackOnPersonaStateChangeE
 N20CBroadcastChatBanner31CCallbackOnBroadcastChatMessageE
 N20CBroadcastLiveBanner32CCallbackOnBroadcastUploadStatusE
 N20CBroadcastLiveBanner34CCallbackOnBroadcastSettingsLoadedE
+N20CBroadcastLiveBanner36CCallbackOnBroadcastMicrophoneStatusE
 N21CSettingsSubBroadcast26CCallbackOnBroadcastStatusE
 N22CAchievementImagePanel31CCallbackOnAchievementIconReadyE
 N24CMusicPage_Details_Album27CCallbackOnAlbumCoverLoadedE
@@ -4777,6 +4784,7 @@ V_IsTLD
 V_IsValidDomainNameCharacter
 V_IsValidURLCharacter
 V_MakeAbsolutePath
+voice
 VoiceReceiveVolume
 voicesettings
 VolumeButton

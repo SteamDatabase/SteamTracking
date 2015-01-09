@@ -238,6 +238,12 @@ DownloadsSupportInfo
 	url			"http://support.steampowered.com/"
 	method		"external"
 }
+SupportAppPage
+{
+	url			"https://support.steampowered.com/kb_article.php?appid=%p1%"
+	method		"external"
+}
+
 
 StoreFrontPage
 {

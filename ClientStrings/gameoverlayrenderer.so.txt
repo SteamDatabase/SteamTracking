@@ -87,6 +87,7 @@ GL_ARB_texture_rg
 glAttachShader
 glBegin
 glBindBuffer
+glBindBufferARB
 glBindFramebuffer
 glBindFramebufferEXT
 glBindProgramPipeline
@@ -97,7 +98,9 @@ glBlendEquationSeparate
 glBlendFunc
 glBlendFuncSeparate
 glBlitFramebuffer
+glBlitFramebufferEXT
 glBufferData
+glBufferDataARB
 glBufferSubData
 glCheckFramebufferStatus
 glCheckFramebufferStatusEXT
@@ -111,6 +114,7 @@ glCompileShader
 glCreateProgram
 glCreateShader
 glDeleteBuffers
+glDeleteBuffersARB
 glDeleteFramebuffers
 glDeleteFramebuffersEXT
 glDeleteProgram
@@ -133,6 +137,7 @@ GL_EXT_texture_rectangle
 glFramebufferTexture2D
 glFramebufferTexture2DEXT
 glGenBuffers
+glGenBuffersARB
 glGenFramebuffers
 glGenFramebuffersEXT
 glGenTextures
@@ -169,6 +174,7 @@ glIsTexture
 glLinkProgram
 glLoadIdentity
 glLoadMatrixf
+glMapBufferARB
 glMatrixMode
 glOrtho
 GLOVERLAYCOREPROFILE
@@ -178,8 +184,10 @@ glPixelZoom
 glPolygonMode
 glPopAttrib
 glPopClientAttrib
+glPopMatrix
 glPushAttrib
 glPushClientAttrib
+glPushMatrix
 glReadBuffer
 glReadPixels
 glRenderMode
@@ -194,6 +202,7 @@ glTranslatef
 glUniform1i
 glUniform4fv
 glUniformMatrix4fv
+glUnmapBufferARB
 glUseProgram
 glVertex2f
 glVertex3f
@@ -282,7 +291,6 @@ pthread_setschedparam
 pthread_setspecific
 Qkkbal
 readdir
-realloc
 rename
 resourceClass
 ResourceID
