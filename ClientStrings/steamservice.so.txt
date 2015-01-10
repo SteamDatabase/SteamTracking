@@ -41,7 +41,6 @@
 16CKeyValuesSystem
 16CServiceRegistry
 16IKeyValuesSystem
-17:51:14
 17CCrossProcessPipe
 17CDebugStatsSystem
 17IDebugStatsSystem
@@ -52,6 +51,7 @@
 18CUtlCharConversion
 %.18g
 18IRegistryInterface
+19:01:13
 19CClientInstallUtils
 19CUtlNoEscConversion
 19IClientInstallUtils

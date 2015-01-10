@@ -600,8 +600,6 @@
 16HTMLComboBoxHost
 16IRetailInstaller
 16ListPanelDragger
-17:53:23
-17:53:35
 17CAddShortcutPanel
 17CAppDownloadPanel
 17CAppSectionHeader
@@ -750,6 +748,8 @@
 18IShutdownUIHandler
 18ITenfootController
 18ScreenshotToLoad_t
+19:03:23
+19:03:35
 1920x1080
 19CAddControllerPanel
 19CCDKeyDisplayDialog
@@ -10658,6 +10658,7 @@ NavigationLevel
 NavUrlBar
 nClientCMUDPPingTimeGoodEnoughThresholdMS
 nClientCMUDPPingTimeoutUseGoodEnoughMS
+nCommunityFilesToShowMax
 Nd9Odu
 NearRank
 NearValue

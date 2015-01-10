@@ -184,10 +184,8 @@ glPixelZoom
 glPolygonMode
 glPopAttrib
 glPopClientAttrib
-glPopMatrix
 glPushAttrib
 glPushClientAttrib
-glPushMatrix
 glReadBuffer
 glReadPixels
 glRenderMode

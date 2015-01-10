@@ -173,7 +173,6 @@
 16CSteamAuthedHTML
 16HTMLComboBoxHost
 16ListPanelDragger
-17:51:50
 17CBaseDesktopPanel
 17CItemImageManager
 17CMsgBrowserCreate
@@ -216,6 +215,7 @@
 18CUtlCharConversion
 %.18g
 18ScreenshotToLoad_t
+19:01:48
 1920x1080
 19CBaseDashboardPanel
 19CMsgComboNeedsPaint
@@ -2174,6 +2174,7 @@ Hebrew
 height
 hi5.com
 HideWhenDisabled
+HighContrast
 highwinds
 hintText
 Hipercard
@@ -2659,6 +2660,7 @@ logon
 longjmp
 LookInLabel
 loopback
+LowContrast
 lower
 lseek
 lseek64
