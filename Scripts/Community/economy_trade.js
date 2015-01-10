@@ -2775,18 +2775,24 @@ function SizeWindow()
 	
 	var widthZoom = document.viewport.getWidth() / 976;
 	var heightZoom = document.viewport.getHeight() / Math.min( $(document.body).getHeight() + 16, 1012 );
+	var flSetZoom = flZoom > 0.55 ? flZoom : 0.55;
 	if ( widthZoom <= 0.99 || heightZoom <= 0.99 )
 	{
 		var flZoom = widthZoom < heightZoom ? widthZoom : heightZoom;
-		document.body.style.zoom = flZoom > 0.55 ? flZoom : 0.55;
+		flSetZoom = flZoom > 0.55 ? flZoom : 0.55;
 	}
 	else
 	{
-		document.body.style.zoom = 1.0;
+		flSetZoom = 1.0;
 	}
+
+	$J('#mainContent' ).css( 'zoom', flSetZoom );
+	$J('#tutorial_header_message' ).css( 'zoom', flSetZoom );
 
 	if ( !g_bTradeOffer )
 		$('log').scrollTop = 10000;
+
+		$J('#trade_recaptcha').css( 'zoom', 1.0 / flSetZoom );
 }
 
 function TradingUnloaded( e )
