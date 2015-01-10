@@ -5,33 +5,36 @@
 		TextLabel { controlname=Label labeltext="99" }
 	}
 	
-	colors
-	{
-	
-		bgtrans="0 0 0 60"
-	}
-	
 	styles
 	{
 		CounterTextSmall
 		{
 			font-size="12"
 			font-weight="500"
-			bgcolor="bgtrans"
 		}
 		
 		CounterTextMedium
 		{
 			font-size="16"
 			font-weight="500"
-			bgcolor="bgtrans"
 		}
 		
 		CounterTextLarge
 		{
 			font-size="20"
 			font-weight="500"
-			bgcolor="bgtrans"
+		}
+		
+		HighContrast
+		{
+			bgcolor="0 0 0 60"
+			textcolor="0 255 0 255"
+		}
+	  
+		LowContrast
+		{
+			bgcolor="0 0 0 0"
+			textcolor="128 128 128 255"
 		}
 	}
 	
