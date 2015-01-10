@@ -218,6 +218,8 @@ CTradeOfferStateManager = {
 	m_bChangesMade: false,
 	m_rgTradeOfferCreateParams: {},
 	m_bCaptchaReady: true,
+	m_Recaptcha: null,
+	m_nPollIntervalId: 0,
 
 	SetTradeOfferCreateParams: function( rgParams )
 	{
@@ -318,10 +320,6 @@ CTradeOfferStateManager = {
 
 	ToggleReady: function( bReady )
 	{
-		if ( !this.m_bCaptchaReady )
-		{
-			$J('#captcha_entry' ).focus();
-		}
 	},
 
 	SetCaptchaReady: function( bReady )
@@ -330,50 +328,61 @@ CTradeOfferStateManager = {
 		{
 			this.m_bCaptchaReady = bReady;
 			this.UpdateConfirmButtonStatus();
+
+			if ( bReady && this.m_nPollIntervalId )
+			{
+				clearInterval( this.m_nPollIntervalId );
+				this.m_nPollIntervalId = 0;
+			}
 		}
 	},
 
 	InitCaptcha: function()
 	{
-		if ( $J('#captcha_entry').length != 0 )
+		if ( $J('#trade_confirm_captchaentry').length != 0 )
 		{
 			this.m_bCaptchaReady = false;
-			var $CaptchaEntry = $J('#captcha_entry');
-
-			var _this = this;
-			var fnUpdateCaptchaReadyState = function()
-			{
-				if ( $CaptchaEntry.val().length == 6 )
-					_this.SetCaptchaReady( true );
-				else
-					_this.SetCaptchaReady( false );
-			};
-
-			$CaptchaEntry.on( 'blur change', function() {
-				fnUpdateCaptchaReadyState();
-			});
-
-			// keyup is handled differently to check for enter key
-			$CaptchaEntry.on( 'keyup', function ( event ) {
-				fnUpdateCaptchaReadyState();
-				if ( event.which == 13 )
-					_this.ConfirmTradeOffer();
-			} );
-
-			$J('#trade_captcha_refresh').click( function() { _this.RefreshCaptcha(); } );
 		}
 	},
 
 	RefreshCaptcha: function()
 	{
-		var bIsNewOffer = this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_NEW || this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_COUNTEROFFER;
-		var strURL =  'https://steamcommunity.com/tradeoffer/' + ( bIsNewOffer ? 'new' : this.m_nTradeOfferID ) + '/captcha';
-		strURL += '?v=' + (new Date()).getTime() + '&sessionid=' + g_sessionID + '&partner=' + g_ulTradePartnerSteamID;
-		$J('#trade_confirm_captcha').attr( 'src', strURL );
+		if ( this.m_nPollIntervalId )
+		{
+			clearInterval( this.m_nPollIntervalId );
+		}
+
+		if ( this.m_Recaptcha == null )
+		{
+			this.m_Recaptcha = grecaptcha.render( 'trade_recaptcha', {
+				'sitekey': '6LdlRgATAAAAAMipBNy6Zu2SsnhwioBCrwf47dNX',
+				'theme': 'dark'
+			} );
+		}
+		else
+		{
+			grecaptcha.reset( this.m_Recaptcha );
+		}
 
 		this.m_bCaptchaReady = false;
-		$J('#captcha_entry').val('');
-		$J('#captcha_entry').focus();
+		var _this = this;
+		this.m_nPollIntervalId = setInterval( function() {
+			var strResponse = grecaptcha.getResponse( _this.m_Recaptcha );
+			if ( strResponse )
+			{
+				_this.SetCaptchaReady( true );
+				clearInterval( _this.m_nPollIntervalId );
+				_this.m_nPollIntervalId = 0;
+			}
+		}, 200 );
+	},
+
+	GetCaptchaResponse: function()
+	{
+		if ( this.m_bCaptchaReady )
+			return grecaptcha.getResponse( this.m_Recaptcha );
+		else
+			return "";
 	},
 
 	UpdateConfirmButtonStatus: function()
@@ -426,10 +435,9 @@ CTradeOfferStateManager = {
 				{
 					this.RefreshCaptcha();
 					$CaptchaCtn.show();
-					$J('#captcha_entry').focus();
 				}
 
-				$('trade_confirm_message').update( 'Waiting for you to enter the characters above.' );
+				$('trade_confirm_message').update( 'Waiting for you to check the box above.' );
 			}
 			else
 			{
@@ -484,9 +492,6 @@ CTradeOfferStateManager = {
 		if ( !this.m_bCaptchaReady )
 			return;
 
-		// we need to do this after modal dismissals because the focus goes to a button in the modal
-		var fnFocusCaptcha = function() { $J('#captcha_entry').focus(); }
-
 		g_bConfirmPending = true;
 		this.UpdateConfirmButtonStatus();
 
@@ -526,7 +531,7 @@ CTradeOfferStateManager = {
 				serverid: 1,				partner: g_ulTradePartnerSteamID,
 				tradeoffermessage: $('trade_offer_note') ? $('trade_offer_note').value : '',
 				json_tradeoffer: V_ToJSON( g_rgCurrentTradeStatus ),
-				captcha: $J('#captcha_entry').val()
+				captcha: CTradeOfferStateManager.GetCaptchaResponse()
 			};
 
 			if ( this.m_rgTradeOfferCreateParams )
@@ -562,7 +567,7 @@ CTradeOfferStateManager = {
 				g_bConfirmPending = false;
 				StateManager.RefreshCaptcha();
 				StateManager.UpdateConfirmButtonStatus();
-				ShowAlertDialog( 'Make Offer', data && data.strError ? data.strError : 'There was an error sending your trade offer.  Please try again later.' ).always( fnFocusCaptcha );
+				ShowAlertDialog( 'Make Offer', data && data.strError ? data.strError : 'There was an error sending your trade offer.  Please try again later.' );
 			});
 		}
 		else if ( this.m_eTradeOfferState == CTradeOfferStateManager.TRADE_OFFER_STATE_VIEW )
@@ -572,7 +577,7 @@ CTradeOfferStateManager = {
 				sessionid: g_sessionID,
 				serverid: 1,				tradeofferid: nTradeOfferID,
 				partner: g_ulTradePartnerSteamID,
-				captcha: $J('#captcha_entry').val()
+				captcha: CTradeOfferStateManager.GetCaptchaResponse()
 			};
 
 			return $J.ajax(
@@ -605,7 +610,7 @@ CTradeOfferStateManager = {
 				g_bConfirmPending = false;
 				StateManager.RefreshCaptcha();
 				StateManager.UpdateConfirmButtonStatus();
-				ShowAlertDialog( 'Accept Trade', data && data.strError ? data.strError : 'There was an error accepting this trade offer.  Please try again later.' ).always( fnFocusCaptcha );
+				ShowAlertDialog( 'Accept Trade', data && data.strError ? data.strError : 'There was an error accepting this trade offer.  Please try again later.' );
 			});
 		}
 	},
