@@ -379,7 +379,7 @@ CTradeOfferStateManager = {
 
 	GetCaptchaResponse: function()
 	{
-		if ( this.m_bCaptchaReady )
+		if ( this.m_bCaptchaReady && $J('#trade_confirm_captchaentry').length != 0 )
 			return grecaptcha.getResponse( this.m_Recaptcha );
 		else
 			return "";
