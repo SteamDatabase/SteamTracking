@@ -2437,33 +2437,33 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 		var description = rgDescriptions[i];
 		if ( !description.value )
 			continue;
+
+		var strParsedDescription = v_trim( description.value.replace(/\[date\](\d*)\[\/date\]/g, function( match, p1 ) {
+			var date = new Date( p1 * 1000 );
+			return date.toLocaleString();
+		}) );
 		
 		var elDescription = new Element( 'div', {'class': 'descriptor' } );
 		if ( description.color )
 			elDescription.style.color = '#' + description.color;
 
 		// just use a blank space for an empty string
-		if ( v_trim( description.value ).length == 0 )
+		if ( strParsedDescription.length == 0 )
 		{
 			elDescription.update( '&nbsp;' );
 		}
 		else if ( description.type == 'image' )
 		{
-			var elImage = new Element( 'img', {src: description.value } );
+			var elImage = new Element( 'img', {src: v_trim( description.value ) } );
 			elDescription.appendChild( elImage );
 		}
 		else if ( description.type == 'html' )
 		{
-			elDescription.update( description.value );
+			elDescription.update( strParsedDescription );
 		}
 		else
 		{
-			description.value = description.value.replace(/\[date\](\d*)\[\/date\]/g, function( match, p1 ) {
-				var date = new Date( p1 * 1000 );
-				return date.toLocaleString();
-			});
-
-			elDescription.update( description.value.escapeHTML().replace( /\n/g, '<br>' ) );
+			elDescription.update( strParsedDescription.escapeHTML().replace( /\n/g, '<br>' ) );
 		}
 
 		if ( description.label )

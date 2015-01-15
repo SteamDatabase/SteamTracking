@@ -18,10 +18,10 @@
 		"style" "Notification"
 	}
 	
-	"BroacdastImageStart"
+	"BroadcastImageBlue"
 	{
 		"ControlName"		"ImagePanel"
-		"fieldName"		"BroacdastImageStart"
+		"fieldName"		"BroadcastImageBlue"
 		"xpos"		"1"
 		"ypos"		"1"
 		"zpos" 		"1"
@@ -38,10 +38,10 @@
 		"image"  "graphics/stream_notification"
 	}
 	
-	"BroadcastImageEnd"
+	"BroadcastImageRed"
 	{
 		"ControlName"		"ImagePanel"
-		"fieldName"		"BroadcastImageEnd"
+		"fieldName"		"BroadcastImageRed"
 		"xpos"		"1"
 		"ypos"		"1"
 		"zpos" 		"1"
@@ -58,11 +58,11 @@
 		"image"  "graphics/stream_disconnect_notification"
 	}
 
-	"LabelStreaming"
+	"LabelTitle"
 	{
 		"ControlName"		"Label"
-		"fieldName"			"LabelStreaming"
-		"style"			"NotifyRemoteClientTitle"
+		"fieldName"			"LabelTitle"
+		"style"				"NotifyRemoteClientTitle"
 		"xpos"				"64"
 		"ypos"				"10"
 		"zpos" 				"2"
@@ -74,7 +74,7 @@
 		"enabled"			"1"
 		"tabPosition"		"0"
 		"paintbackground"	"1"
-		"labelText"			"Broadcast"
+		"labelText"			"#Broadcast_Notification_Title"
 		"textAlignment"		"north-west"
 		"wrap"				"1"
 	}	

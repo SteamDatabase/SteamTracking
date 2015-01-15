@@ -22,7 +22,7 @@
 							
 			<!-- main panel -->
 			<Panel id="BroadcastSettingsContainer" class="Radios FirstTimeBroadcastOptions" tabindex="auto" selectionpos="auto" defaultfocus="FriendsApprove" childfocusonhover="false">
-					<RadioButton group="BroadcastSettings" class="Button RadioButton" tabindex="auto" id="InviteOnly" text="#Settings_Broadcast_InviteOnly" selectionpos="auto" />
+					<RadioButton group="BroadcastSettings" class="Button RadioButton" tabindex="auto" id="Disabled" text="#Settings_Broadcast_Disabled" selectionpos="auto" />
 					<RadioButton group="BroadcastSettings" class="Button RadioButton" tabindex="auto" id="FriendsApprove" text="#Settings_Broadcast_FriendsApprove" selectionpos="auto" />
 					<RadioButton group="BroadcastSettings" class="Button RadioButton" tabindex="auto" id="FriendsAllowed" text="#Settings_Broadcast_FriendsAllowed" selectionpos="auto" />
 					<RadioButton group="BroadcastSettings" class="Button RadioButton" tabindex="auto" id="Public" text="#Settings_Broadcast_FriendsPublic" selectionpos="auto"  />

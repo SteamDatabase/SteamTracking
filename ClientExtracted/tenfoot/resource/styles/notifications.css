@@ -349,3 +349,15 @@
 	z-index: notification2_zindex;
 }
 
+.BroadcastAvailableToWatch .NotificationTitle
+{
+	margin-top: 36px;
+}
+
+.BroadcastAvailableToWatch .NotificationMessage
+{
+	margin-right: 100px;
+	margin-top: 68px;
+	white-space: normal;
+	height: 66px;
+}

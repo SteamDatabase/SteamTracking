@@ -5,11 +5,16 @@
 		"BroadcastDisabledLabel" { ControlName="Label" fieldName="BroadcastDisabledLabel" labelText="#Steam_Settings_Broadcast_Disabled_System" wrap="1" group="ShowWhenDisabled" }
 		"BroadcastDisabledSupportURL" { ControlName="URLLabel" fieldName="BroadcastDisabledSupportURL" group="ShowWhenDisabled" }
 		
-		"BroadcastStatusHeader" { ControlName="Label" fieldName="BroadcastStatusHeader" labelText="#Steam_Settings_Broadcast_StatusHeader" group="HideWhenDisabled" }
-		"BroadcastStatus" { ControlName="URLLabel" labeltext="#Steam_Settings_Broadcast_StatusNotBroadcast" style="rightcolumnlink" fieldName="BroadcastStatus" group="HideWhenDisabled" }
+		"BroadcastStatusHeader" { ControlName="Label" fieldName="BroadcastStatusHeader" labelText="#Steam_Settings_Broadcast_StatusHeader" group="HideWhenUnavailable" }
+		"BroadcastStatus" { ControlName="URLLabel" labeltext="#Steam_Settings_Broadcast_StatusNotBroadcast" style="rightcolumnlink" fieldName="BroadcastStatus" group="HideWhenUnavailable" }
+    
+		"BroadcastHelpHeader" { ControlName="Label" fieldName="BroadcastHelpHeader" labelText="#Steam_Settings_Broadcast_HelpHeader" group="HideWhenUnavailable" }
+		"BroadcastHelpURL" { ControlName="URLLabel" fieldName="BroadcastHelpURL" labelText="#Steam_Settings_Broadcast_HelpURL_Desc" URLText="#Steam_Settings_Broadcast_HelpURL_URL" group="HideWhenUnavailable" }
 		
-		"PermissionsHeader" { ControlName="Label" fieldName="PermissionsHeader" labelText="#Steam_Settings_Broadcast_PermissionsHeader" group="HideWhenDisabled" }
-		"Permissions" { ControlName="ComboBox" fieldName="Permissions" group="HideWhenDisabled" editable="0" }			
+		"Divider1" { ControlName="Divider"	}				
+		
+		"PermissionsHeader" { ControlName="Label" fieldName="PermissionsHeader" labelText="#Steam_Settings_Broadcast_PermissionsHeader" group="HideWhenUnavailable" }
+		"Permissions" { ControlName="ComboBox" fieldName="Permissions" editable="0" group="HideWhenUnavailable" }			
 		
 		"DimensionsHeader" { ControlName="Label" fieldName="DimensionsHeader" labelText="#Steam_Settings_Broadcast_DimensionsHeader" group="HideWhenDisabled" }
 		"Dimensions" { ControlName="ComboBox" fieldName="Dimensions" group="HideWhenDisabled" editable="0" }
@@ -37,7 +42,12 @@
 		place { control="BroadcastStatusHeader" margin-left=20 margin-right=20 margin-top=20 }
 		place { start="BroadcastStatusHeader" control="BroadcastStatus" dir=right margin-left=4 }
 		
-		place { start="BroadcastStatusHeader" control="PermissionsHeader" dir=down margin-top=20 width=max }
+		place { start="BroadcastStatusHeader" margin-top=4 control="BroadcastHelpHeader" dir=down }
+		place { start="BroadcastStatus" margin-top=4 control="BroadcastHelpURL" dir=down }
+		
+		place { start="BroadcastStatusHeader" control="Divider1" dir=down margin-top=24 width=max}						
+		
+		place { start="Divider1" control="PermissionsHeader" dir=down margin-top=20 width=max }
 		place { start="PermissionsHeader" control="Permissions" dir=down margin-top=4 width=350 }
 		
 		place { start="Permissions" control="DimensionsHeader" dir=down margin-top=10 width=max }
