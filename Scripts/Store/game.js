@@ -266,7 +266,7 @@ function ShowEULA( elLink )
 
 // formerly user_reviews_store.js
 
-var g_recommendationContents = [ 'friend', 'all', 'positive', 'negative' ];
+var g_recommendationContents = [ 'friend', 'all', 'positive', 'negative', 'recent', 'funny' ];
 
 
 function OnRecommendationVotedUp( recommendationid )
@@ -274,7 +274,7 @@ function OnRecommendationVotedUp( recommendationid )
 	for ( var i = 0; i < g_recommendationContents.length; ++i )
 	{
 		$J( '#RecommendationVoteUpBtn' + g_recommendationContents[i] + recommendationid ).addClass( 'btn_active' );
-		$J( "#RecommendationVoteDownBtn" + g_recommendationContents[i] + recommendationid ).removeClass( "btn_active" );
+		$J( '#RecommendationVoteDownBtn' + g_recommendationContents[i] + recommendationid ).removeClass( "btn_active" );
 	}
 }
 
@@ -283,7 +283,22 @@ function OnRecommendationVotedDown( recommendationid )
 	for ( var i = 0; i < g_recommendationContents.length; ++i )
 	{
 		$J( '#RecommendationVoteUpBtn' + g_recommendationContents[i] + recommendationid ).removeClass( 'btn_active' );
-		$J( "#RecommendationVoteDownBtn" + g_recommendationContents[i] + recommendationid ).addClass( "btn_active" );
+		$J( '#RecommendationVoteDownBtn' + g_recommendationContents[i] + recommendationid ).addClass( "btn_active" );
+	}
+}
+
+function OnRecommendationVotedTag( recommendationid, tagID, bRateUp )
+{
+	for ( var i = 0; i < g_recommendationContents.length; ++i )
+	{
+		if ( bRateUp )
+		{
+			$J( '#RecommendationVoteTagBtn' + g_recommendationContents[i] + recommendationid + '_' + tagID ).addClass( 'btn_active' );
+		}
+		else
+		{
+			$J( '#RecommendationVoteTagBtn' + g_recommendationContents[i] + recommendationid + '_' + tagID ).removeClass( 'btn_active' );
+		}
 	}
 }
 
@@ -312,6 +327,10 @@ function RequestCurrentUserRecommendationVotes( recommendationIDs )
 					{
 						OnRecommendationVotedDown( vote.recommendationid );
 					}
+					if ( vote.voted_funny )
+					{
+						OnRecommendationVotedTag( vote.recommendationid, 1, true );
+					}
 				}
 			}
 		} );
@@ -331,6 +350,17 @@ function UserReviewVoteDown( id )
 	UserReview_Rate( id, false, 'http://store.steampowered.com/',
 		function( rgResults ) {
 			OnRecommendationVotedDown( id );
+		}
+	);
+}
+
+function UserReviewVoteTag( id, tagID, elemID )
+{
+	var elem = $J( '#' + elemID );
+	var bRateUp = !elem.hasClass( 'btn_active' );
+	UserReview_VoteTag( id, tagID, bRateUp, 'https://store.steampowered.com/',
+		function( rgResults ) {
+			OnRecommendationVotedTag( id, tagID, bRateUp );
 		}
 	);
 }
@@ -399,12 +429,14 @@ function SelectReviews( appid, context, reviewDayRange, language )
 	$J( "#ReviewsTab_recent" ).removeClass( "active" );
 	$J( "#ReviewsTab_positive" ).removeClass( "active" );
 	$J( "#ReviewsTab_negative" ).removeClass( "active" );
+	$J( "#ReviewsTab_funny" ).removeClass( "active" );
 	$J( "#ReviewsTab_" + context ).addClass( "active" );
 
 	$J( "#Reviews_all" ).hide();
 	$J( "#Reviews_recent" ).hide();
 	$J( "#Reviews_positive" ).hide();
 	$J( "#Reviews_negative" ).hide();
+	$J( "#Reviews_funny" ).hide();
 	$J( "#Reviews_" + context ).show();
 
 	var container = $J( "#Reviews_" + context );

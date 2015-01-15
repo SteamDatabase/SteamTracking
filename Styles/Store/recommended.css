@@ -1563,8 +1563,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	padding: 8px 9px;
 	font-size: 12px;
 	color: #898a8c;
-    background-color: rgba( 0, 0, 0, 0.2 );
-    height: 16px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	min-height: 16px;
 }
 
 .review_box .header .commentCount, .recommendation_row .header .commentCount {
@@ -1828,7 +1828,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	color: #61686d;
 }
 
-#LoadMoreReviewsall, #LoadMoreReviewspositive, #LoadMoreReviewsnegative {
+.load_more_reviews_btn {
 	text-align: center;
 }
 

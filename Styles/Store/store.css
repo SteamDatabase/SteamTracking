@@ -150,6 +150,10 @@ body.v6 #footer {
     body.v6 #footer .valve_links a:hover {
         color: #ffffff;
     }
+	body.v6 #footer .valve_links img {
+		vertical-align: bottom;
+	}
+
 
 
 body.v6.blue #footer {
