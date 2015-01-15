@@ -173,6 +173,7 @@
 16CSteamAuthedHTML
 16HTMLComboBoxHost
 16ListPanelDragger
+17:19:08
 17CBaseDesktopPanel
 17CItemImageManager
 17CMsgBrowserCreate
@@ -215,7 +216,6 @@
 18CUtlCharConversion
 %.18g
 18ScreenshotToLoad_t
-19:01:48
 1920x1080
 19CBaseDashboardPanel
 19CMsgComboNeedsPaint
@@ -281,6 +281,7 @@
 25CMsgVerticalScrollBarSize
 25COverlayCDKeyNotification
 25CPanelAnimationDictionary
+26CBroadcastAvailableToWatch
 26CMsgFileLoadDialogResponse
 26CMsgLinkAtPositionResponse
 26CMsgSavePageToJPEGResponse
@@ -394,6 +395,7 @@
 9CCallbackI19CRefreshLoginDialog27SteamServerConnectFailure_tLb0EE
 9CCallbackI19CSettingsSubFriends20PersonaStateChange_tLb0EE
 9CCallbackI20CBroadcastChatBanner22BroadcastChatMessage_tLb0EE
+9CCallbackI20CBroadcastLiveBanner17BroadcastStatus_tLb0EE
 9CCallbackI20CBroadcastLiveBanner23BroadcastUploadStatus_tLb0EE
 9CCallbackI20CBroadcastLiveBanner25BroadcastSettingsLoaded_tLb0EE
 9CCallbackI20CBroadcastLiveBanner27BroadcastMicrophoneStatus_tLb0EE
@@ -782,6 +784,9 @@ brighttext
 BroadcastDetailPanel
 BroadcastDisabledLabel
 BroadcastDisabledSupportURL
+BroadcastImageBlue
+BroadcastImageRed
+BroadcastPublicStateNotification
 BroadcastUploadErrorNotification
 Broadcast_Upload_Result_%u
 BrowseButton
@@ -870,12 +875,14 @@ CBasePanel::OnScreenshotWritten
 CBasePanel::ShellExecuteHook
 CBC/CTS
 CBitmapImagePanel
+CBroadcastAvailableToWatch
 CBroadcastChatBanner
 CBroadcastChatBanner::OnBroadcastChatMessage
 CBroadcastFirstTimeDialog
 CBroadcastLiveBanner
 CBroadcastLiveBanner::OnBroadcastMicrophoneStatus
 CBroadcastLiveBanner::OnBroadcastSettingsLoaded
+CBroadcastLiveBanner::OnBroadcastStatus
 CBroadcastLiveBanner::OnBroadcastUploadStatus
 CBroadcastUploadErrorNotification
 cc_generic_services
@@ -1951,6 +1958,7 @@ friendremove
 friendrequestaccept
 friendrequestignore
 friends/
+friends/broadcastpublicstatenotification.res
 friends/broadcastuploaderrornotification.res
 friends_chat_name
 friends_chat_name_ingame
@@ -2174,6 +2182,7 @@ Hebrew
 height
 hi5.com
 HideWhenDisabled
+HideWhenUnavailable
 HighContrast
 highwinds
 hintText
@@ -2546,6 +2555,7 @@ LABEL_REPEATED
 LABEL_REQUIRED
 labeltext
 labelText
+LabelTitle
 %language%
 LanguageMenu
 languages_tab
@@ -2639,6 +2649,8 @@ ListViewItem
 ListViewItemSelected
 ListViewPanel
 LITE_RUNTIME
+LiveBannerStyleDesktop
+LiveBannerStyleNormal
 live.com
 LiveImage
 LoadDefaultControlSettings
@@ -3067,6 +3079,7 @@ N19CRefreshLoginDialog23CCallbackOnLogonFailureE
 N19CRefreshLoginDialog23CCallbackOnLogonSuccessE
 N19CSettingsSubFriends29CCallbackOnPersonaStateChangeE
 N20CBroadcastChatBanner31CCallbackOnBroadcastChatMessageE
+N20CBroadcastLiveBanner26CCallbackOnBroadcastStatusE
 N20CBroadcastLiveBanner32CCallbackOnBroadcastUploadStatusE
 N20CBroadcastLiveBanner34CCallbackOnBroadcastSettingsLoadedE
 N20CBroadcastLiveBanner36CCallbackOnBroadcastMicrophoneStatusE
@@ -3525,8 +3538,8 @@ percent
 perfectworld
 Permanent
 PermissionAccept
+PermissionDisabled
 PermissionFriends
-PermissionInvite
 PermissionPublic
 persona
 personalSignature
@@ -4514,7 +4527,6 @@ ThreadInMainThread
 ThreadInterlockedAssignIf
 ThreadInterlockedAssignIf64
 ThreadInterlockedCompareExchange
-ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
 ThreadInterlockedExchangeAdd
@@ -4585,6 +4597,17 @@ tr_TR
 trunc
 TruncatedDigestSize
 trustRoot
+TSListBase_Init
+TSListBase_Pop
+TSListBase_Push
+TSListBase_SwapList
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 turkish
 tvseries
 TwoFactorEdit

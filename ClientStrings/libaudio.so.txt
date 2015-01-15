@@ -147,7 +147,6 @@ dlopen
 dlsym
 _edata
 __errno_location
-Error
 _fini
 fopen
 fopen64
@@ -294,7 +293,10 @@ strncasecmp
 strpbrk
 strstr
 symlink
-ThreadInterlockedAssignIf64
+TSListBase_Init
+TSListBase_Pop
+TSListBase_Push
+TSListBase_SwapList
 u4PPW
 unlink
 utime

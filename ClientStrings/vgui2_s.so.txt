@@ -1789,8 +1789,6 @@ ThisPointer:
 ThreadGetCurrentId
 ThreadGetCurrentRunningRef
 ThreadInterlockedAssignIf
-ThreadInterlockedAssignIf64
-ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
 ThreadInterlockedExchangeAdd
@@ -1813,6 +1811,17 @@ tr_TR
 trunc
 TruncatedDigestSize
 trustRoot
+TSListBase_Init
+TSListBase_Pop
+TSListBase_Push
+TSListBase_SwapList
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 tTKEY_T
 turkish
 \u000

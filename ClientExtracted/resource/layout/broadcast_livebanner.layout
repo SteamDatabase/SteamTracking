@@ -2,9 +2,9 @@
 {
 	controls
 	{
-		BroadcastLiveBanner { style="LiveBannerStyle" wide=148 }
+		BroadcastLiveBanner { wide=148 }
 		
-		LiveImage { controlname=ImagePanel image=graphics/broadcast/broadcast_live_red tall=22 wide=67 }		
+		LiveImage { controlname=ImagePanel image=graphics/broadcast/broadcast_live_grey tall=22 wide=67 }		
 		MicrophoneImage { controlname=ImagePanel image=graphics/broadcast/icon_mic_disabled tall=22 wide=20 }
 		ViewersText { controlname=Label labeltext="%numviewers%" style="ViewersTextStyle" tall=22 }
 		ViewersImage { controlname=ImagePanel image=graphics/broadcast/icon_viewers tall=22 wide=20 }
@@ -17,6 +17,7 @@
 	colors
 	{
 		transparent_bg = "0 0 0 80"
+		black_bg = "0 0 0 255"
 		debug_green = "0 128 0 255"
 		debug_yellow = "128 128 0 255"
 		debug_red = "128 0 0 255"
@@ -29,7 +30,7 @@
 			font-size="20"
 		}		
 		
-		LiveBannerStyle
+		LiveBannerStyleIngame
 		{   
 			render_bg
 			{
@@ -38,6 +39,15 @@
 			}
 		}
 		
+		LiveBannerStyleDesktop
+		{   
+			render_bg
+			{
+				// background fill
+				0="fill( x0, y0, x1, y1, black_bg )"
+			}
+		}
+				
 		DebugLineStyleGreen
 		{   
 			render_bg { 0="fill( x0, y0, x1, y1, debug_green )" }

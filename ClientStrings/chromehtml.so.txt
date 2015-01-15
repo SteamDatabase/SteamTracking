@@ -124,7 +124,6 @@ AddMessage
 AddString
 AddUInt32
 AddUInt64
-Al90tH
 Am_pFromChromeStream
 __assert_fail
 AssertMsgImplementation
@@ -315,7 +314,6 @@ EnumOptions
 EnumValueDescriptorProto
 EnumValueOptions
 __errno_location
-Error
 ERROR
 experimental_map_key
 expires
@@ -617,10 +615,7 @@ ThreadFindProcessByName
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadGetCurrentRunningRef
-ThreadInterlockedAssignIf64
-ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
-ThreadInterlockedExchange
 ThreadInterlockedIncrement
 ThreadIsProcessActive
 ThreadIsProcessIdActive
@@ -629,6 +624,15 @@ ThreadTerminateProcessCode
 ThreadWaitForProcessExit
 title
 /tmp/steam_chrome_shmem
+TSListBase_Init
+TSListBase_Pop
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 TYPE_BYTES
 TYPE_DOUBLE
 TYPE_FIXED32

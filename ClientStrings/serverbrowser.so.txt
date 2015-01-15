@@ -1831,10 +1831,7 @@ textureid
 ThreadGetCurrentId
 ThreadGetCurrentRunningRef
 ThreadInMainThread
-ThreadInterlockedAssignIf64
-ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
-ThreadInterlockedExchange
 ThreadInterlockedExchangeAdd
 ThreadInterlockedIncrement
 ThreadIsThreadRunning
@@ -1869,6 +1866,15 @@ TreeNodeText
 TreeViewItemSelected
 TreeViewSubPanel
 trGrip
+TSListBase_Init
+TSListBase_Pop
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 TYPE_BYTES
 TYPE_DOUBLE
 TYPE_FIXED32

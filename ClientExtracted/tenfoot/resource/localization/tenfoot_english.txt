@@ -2592,7 +2592,8 @@
 	"SettingsAudio_Steam"	"Steam Audio Settings"
 	"SettingsAudio_Hardware"	"System Audio Settings"
 	
-	"Settings_Broadcast"				"Broadcasting"
+	"Settings_Broadcast" "Broadcasting"
+	"Settings_Broadcast_Disabled" "Broadcasting disabled"
 	"Settings_Broadcast_InviteOnly" "Only friends whom I invite can watch"
 	"Settings_Broadcast_FriendsApprove" "Friends can request to watch"
 	"Settings_Broadcast_FriendsAllowed" "Friends can watch"
@@ -2634,6 +2635,9 @@
 	"Broadcast_Notification_Viewer_Request"	"would like to watch you play"
 	"Broadcast_Notification_Accept_Request" "Accept"
 	"Broadcast_Notification_Ignore_Request" "Ignore"
+	"Broadcast_Notification_AvailableToWatch_Title" "Broadcasting is enabled!"
+	"Broadcast_Notification_AvailableToWatch_Friends" "Your friends can join your broadcast at any time."
+	"Broadcast_Notification_AvailableToWatch_Public" "Any Steam user can join your broadcast at any time."
 	
 	"Broadcast_FirstTime_Title" "Steam Broadcasting"
 	"Broadcast_FirstTime_Header" "With Steam Broadcasting you can broadcast your gameplay and watch others play games."

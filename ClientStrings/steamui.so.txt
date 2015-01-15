@@ -600,6 +600,8 @@
 16HTMLComboBoxHost
 16IRetailInstaller
 16ListPanelDragger
+17:20:50
+17:21:03
 17CAddShortcutPanel
 17CAppDownloadPanel
 17CAppSectionHeader
@@ -748,8 +750,6 @@
 18IShutdownUIHandler
 18ITenfootController
 18ScreenshotToLoad_t
-19:03:23
-19:03:35
 1920x1080
 19CAddControllerPanel
 19CCDKeyDisplayDialog
@@ -827,6 +827,7 @@
 20.CAuthenticationResponseMsg.AuthenticationResult
 20CBackgroundImageTest
 20CBackupCopyFilesPage
+20CBroadcastLiveBanner
 20CCDDBAppDetailCommon
 20CCheckoutBillingInfo
 20CCheckoutVerifyEmail
@@ -1727,7 +1728,12 @@
 9CCallbackI19CRegisterSubReceipt26PurchaseLineItemReceived_tLb0EE
 9CCallbackI19CRegisterSubReceipt26RequestAccountDataResult_tLb0EE
 9CCallbackI19CSettingsSubFriends20PersonaStateChange_tLb0EE
+9CCallbackI19CSteamGamesUIModule17BroadcastStatus_tLb0EE
 9CCallbackI19CSteamGamesUIModule22BroadcastViewerState_tLb0EE
+9CCallbackI20CBroadcastLiveBanner17BroadcastStatus_tLb0EE
+9CCallbackI20CBroadcastLiveBanner23BroadcastUploadStatus_tLb0EE
+9CCallbackI20CBroadcastLiveBanner25BroadcastSettingsLoaded_tLb0EE
+9CCallbackI20CBroadcastLiveBanner27BroadcastMicrophoneStatus_tLb0EE
 9CCallbackI20CCheckoutVerifyEmail27AccountInformationUpdated_tLb0EE
 9CCallbackI20CFullScreenshotPanel26ScreenshotUploadProgress_tLb0EE
 9CCallbackI20CMarketingController30ClientMarketingMessageUpdate_tLb0EE
@@ -2809,10 +2815,10 @@ BayerRGGBToI420
 BayerToARGB
 BayerToI420
 bbc.co.uk
-BCAccountNameValidator::OnAccountNameAvailableResult
 BCanSeeInParentScroll
 bClientRecommendationsEnabled
 BCParentalEditablePanel
+BCPasswordValidator::OnPasswordAvailableResult
 BCreateMilesSoundAudioDevice
 BD9AD
 BDeleteKey
@@ -2999,7 +3005,6 @@ bReplace
 BResizeImageRGBA
 brighttext
 BringMainMenuToTop
-broadcast
 broadcast_adjust_bitrate
 BroadcastDisabledLabel
 BroadcastDisabledSupportURL
@@ -3111,6 +3116,7 @@ BytesDownloaded
 BytesProgressLabel
 c8nPr8
 CAboutDialog
+CAccountNameValidator::OnAccountNameAvailableResult
 CAccountPage
 CAccountPage::OnAccountInfoUpdated
 CAccountPage::OnSteamGuardDetailsResponse
@@ -3239,6 +3245,11 @@ CBorderWidthData
 CBoxShadowData
 .CBoxShadowData
 .CBoxShadowData2Y
+CBroadcastLiveBanner
+CBroadcastLiveBanner::OnBroadcastMicrophoneStatus
+CBroadcastLiveBanner::OnBroadcastSettingsLoaded
+CBroadcastLiveBanner::OnBroadcastStatus
+CBroadcastLiveBanner::OnBroadcastUploadStatus
 CBroadcastOverlayPanel::OnBroadcastStatus
 CCDDBAppDetailCommon
 CCDKeyDisplayDialog
@@ -3525,6 +3536,7 @@ changeemailresult
 changeemailresultstring
 ChangeEmailSuccess
 ChangeEmailWizard
+ChangeLanguage
 ChangePassword2
 ChangePasswordButton
 ChangePasswordDone
@@ -4462,7 +4474,6 @@ CParentalURLLabel
 CParentalURLLabelBase
 CParentalURLLabelBase::OnParentalLockChanged
 CPasswordEntryField
-CPasswordValidator::OnPasswordAvailableResult
 CPathString
 CPendingMsg::SendPkt
 CPickledRadixTrie::CChildren
@@ -4724,6 +4735,7 @@ CSteamDoc::RefreshAllDynamicConfigs
 CSteamDoc::RefreshSubscriptionMetadata
 CSteamDoc::RefreshSubscriptionsFromData
 CSteamGamesUIModule::LoadSteamClient
+CSteamGamesUIModule::OnBroadcastStatus
 CSteamGamesUIModule::OnBroadcastViewerState
 CSteamGuardNotifyNewMachinesCompromisedDialog
 CSteamGuardNotifyNewMachinesDialog
@@ -5134,6 +5146,10 @@ DebugLayoutElementText
 DebugLayoutPanelClose
 DebugLayoutPanelOpen
 DebugLayoutPanelRowSelected
+DebugLine
+DebugLineStyleGreen
+DebugLineStyleRed
+DebugLineStyleYellow
 DebugPanel
 DebugPanelComputed
 DebugPanelPages
@@ -5583,6 +5599,7 @@ eightway
 eightwayoverlap
 ejcorner
 EKeyType
+elanguage
 ELanguage_ISO639
 ElapsedLabel
 ElapsedSeconds
@@ -6666,7 +6683,12 @@ graphics/avatarBorderGolden
 graphics/avatarBorderInGame
 graphics/avatarBorderOffline
 graphics/avatarBorderOnline
+graphics/broadcast/broadcast_live_grey
+graphics/broadcast/broadcast_live_red
 graphics/broadcast/desktop_placeholder.jpg
+graphics/broadcast/icon_mic_disabled
+graphics/broadcast/icon_mic_off
+graphics/broadcast/icon_mic_on
 graphics/chk_menu_item
 graphics/facebookLogo12
 graphics/html_lock
@@ -6834,6 +6856,7 @@ HidePointers
 HideSharingNotifications
 HideThrobber
 HideWhenDisabled
+HideWhenUnavailable
 HierarchicalViewSelection
 Hierarchy
 highlight
@@ -7297,7 +7320,6 @@ InviteCount
 Invited
 InviteFriendToTargetLobby
 InviteLabel
-InviteOnly
 InviteSent
 ioctl
 IO_ERROR
@@ -8496,7 +8518,10 @@ ListViewItem
 ListViewItemSelected
 ListViewPanel
 LITE_RUNTIME
+LiveBannerStyleDesktop
+LiveBannerStyleNormal
 live.com
+LiveImage
 %llu.png
 LoadAsyncComplete
 LoadCategories
@@ -8848,6 +8873,7 @@ MicMeter
 MicMeter2
 m_iconURL
 microphone
+MicrophoneImage
 MicrophoneLabel
 MicrophoneVolume
 microsoft.com
@@ -9205,7 +9231,6 @@ m_pYbuttonAction
 m_QueueCallbackMsg
 m_QueuedCommands
 m_QueueJobSleeping
-m_queuePendingOffThreadSpew
 m_QueueScheduledItems
 m_queueSendBuffers
 m_queueSwapIntervalHistory
@@ -9921,7 +9946,12 @@ N19CRegisterSubReceipt27CCallbackOnPurchaseLineItemE
 N19CRegisterSubReceipt27CCallbackOnPurchaseResponseE
 N19CRegisterSubReceipt33CCallbackOnRequestAccountFinishedE
 N19CSettingsSubFriends29CCallbackOnPersonaStateChangeE
+N19CSteamGamesUIModule26CCallbackOnBroadcastStatusE
 N19CSteamGamesUIModule31CCallbackOnBroadcastViewerStateE
+N20CBroadcastLiveBanner26CCallbackOnBroadcastStatusE
+N20CBroadcastLiveBanner32CCallbackOnBroadcastUploadStatusE
+N20CBroadcastLiveBanner34CCallbackOnBroadcastSettingsLoadedE
+N20CBroadcastLiveBanner36CCallbackOnBroadcastMicrophoneStatusE
 N20CCheckoutVerifyEmail29CCallbackOnAccountInfoUpdatedE
 N20CDesktopStreamThread14CCaptureThreadE
 N20CFullScreenshotPanel35CCallbackOnScreenshotUploadProgressE
@@ -10772,7 +10802,6 @@ NoPersonalInfoCheck
 NoPublicBetas
 NoRecentGames
 normal
-Normal
 northeast
 northwest
 norwegian
@@ -10834,9 +10863,11 @@ numgames
 numItems
 NumMonitors
 numpause
+numrequests
 numscreenshots
 NumSLIGPUs
 numtotal
+numviewers
 NumViewers
 NV12ToARGB
 NV12ToARGBRow_Any_SSSE3
@@ -11187,10 +11218,12 @@ out_sample_rate
 overlay
 OverlayBasePanel
 OverlayGamepadInputMsg
+OverlayHidden
 OverlayKey
 OverlayNotificationList
 OverlayNotificationPanel
 OverlayNotificationWatchRequest
+OverlayShown
 override_mode
 OverrideThrottleCheckBox
 p09p4v
@@ -12194,6 +12227,8 @@ RequestFriends
 RequestGlobal
 request_id
 RequestOSXAccessibility
+RequestsImage
+RequestsText
 required_age
 RequiredBranch
 requires_cvv
@@ -12249,6 +12284,7 @@ resource/icon_newfolder
 resource/icon_warning
 resource/layout/appdownloadpanel.layout
 resource/layout/app_validation_dialog.layout
+resource/layout/broadcast_livebanner.layout
 resource/layout/choosepurchaseorauthorization.layout
 resource/layout/cloud_conflict_dialog.layout
 resource/layout/debugstats.layout
@@ -14684,7 +14720,6 @@ ThreadInMainThread
 ThreadInterlockedAssignIf
 ThreadInterlockedAssignIf64
 ThreadInterlockedCompareExchange
-ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
 ThreadInterlockedDecrement64
 ThreadInterlockedExchange
@@ -14923,6 +14958,17 @@ troubleshooterLink
 tr_TR
 TruncateBackStack
 TruncatedDigestSize
+TSListBase_Init
+TSListBase_Pop
+TSListBase_Push
+TSListBase_SwapList
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 t_urf
 turkish
 turnnotification
@@ -15354,6 +15400,8 @@ VideoQualityPopup
 VideoRAM
 videos
 VideoSegment
+videosendfps
+videosendkbps
 VideoVendorID
 viewall
 ViewAllAchievements
@@ -15367,6 +15415,8 @@ ViewDLC
 ViewedLaunchEULA
 ViewEntireAlbum
 view_error_data
+ViewersImage
+ViewersText
 view_financials
 view_friends
 viewfriendsgame
@@ -15657,6 +15707,7 @@ web/url/CommunityHome
 web/url/CommunityInventory
 web/url/CommunityMarket
 web/url/CommunityScreenshots
+web/url/GameHubBroadcasts
 web/url/NewsHomePage
 web/url/SteamDiscussions
 web/url/SteamGreenlight
@@ -15972,7 +16023,6 @@ yandex
 Yandex
 yborder
 year_number
-Yellow
 yhotspot
 yielding
 y_is_percent

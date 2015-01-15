@@ -1006,6 +1006,7 @@
 16ITCPHostCallback
 16JobStatsBucket_t
 16ParentalSettings
+17:19:11
 172.16.3.10
 172.16.3.106
 172.16.3.11
@@ -1192,7 +1193,6 @@
 18IWakeableByUIEvent
 18IWorkThreadFactory
 18VoiceRecord_OpenAL
-19:01:51
 19CAdapterSteamUGC001
 19CAdapterSteamUGC002
 19CAdapterSteamUGC003
@@ -11827,6 +11827,7 @@ m_Query
 m_QueryRemoveList
 m_QueueCallbackMsg
 m_QueueJobSleeping
+m_queuePendingBufDataToWrite
 m_QueueScheduledItems
 m_queueSendBuffers
 m_qVoiceChunks
@@ -15412,6 +15413,7 @@ SetUserPublishedFileAction
 SetUserStat
 setvbuf
 SetVideoAdapterInfo
+SetVideoSource
 SetVoiceMicrophoneVolume
 SetVoiceSpeakerVolume
 SetVolume
@@ -17279,7 +17281,6 @@ ThreadInMainThread
 ThreadInterlockedAssignIf
 ThreadInterlockedAssignIf64
 ThreadInterlockedCompareExchange64
-ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
 ThreadInterlockedDecrement64
 ThreadInterlockedExchange
@@ -17500,8 +17501,19 @@ TS_CHECK_STATUS_INFO
 TS_COMPUTE_IMPRINT
 TS_CONF_set_default_engine
 TS_GET_STATUS_TEXT
+TSListBase_Init
+TSListBase_Pop
+TSListBase_Push
+TSListBase_SwapList
+TSListBase_UnsafePeek
 TS_MSG_IMPRINT_set_algo
 Tsonga
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 TS_REQ_set_msg_imprint
 TS_REQ_set_nonce
 TS_REQ_set_policy_id

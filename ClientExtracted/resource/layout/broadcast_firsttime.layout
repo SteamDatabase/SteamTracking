@@ -11,7 +11,7 @@
 		"Header"			{ controlname="Label" labeltext="#Broadcast_FirstTime_Header" style="IntroHeading" wrap="1" }		
 		"ViewerRequest"		{ controlname="Label" labeltext="#Broadcast_FirstTime_ViewerRequest" group="intro" style="ViewerRequest" wrap="1" }
 		"PermissionHeader"	{ controlname="Label" labeltext="#Broadcast_FirstTime_Permissionheader" group="intro" style="PermissionHeader" }
-		"PermissionInvite"	{ controlname="RadioButton" labeltext="#Steam_Settings_Broadcast_InviteOnly" group="intro" style="PermissionOption" }
+		"PermissionDisabled"{ controlname="RadioButton" labeltext="#Steam_Settings_Broadcast_Disabled" group="intro" style="PermissionOption" }
 		"PermissionAccept"	{ controlname="RadioButton" labeltext="#Steam_Settings_Broadcast_FriendsApprove" group="intro" style="PermissionOption" }
 		"PermissionFriends"	{ controlname="RadioButton" labeltext="#Steam_Settings_Broadcast_FriendsAllowed" group="intro" style="PermissionOption" }
 		"PermissionPublic"	{ controlname="RadioButton" labeltext="#Steam_Settings_Broadcast_FriendsPublic" group="intro" style="PermissionOption" }
@@ -64,7 +64,7 @@ place { control="Header" margin-left=20 margin-right=20 margin-top=40 margin-bot
 place { start="Header" control="ViewerAvatar" width=50 height=50 dir=down margin-left=-4 margin-right=20 margin-top=6 }
 place { start="ViewerAvatar" control="ViewerRequest" dir=right width=max margin-right=20 margin-top=10 }
 place { start="ViewerAvatar" control="PermissionHeader" dir=down width=max margin-top=20 spacing=-4 }
-place { start="PermissionHeader" control="PermissionInvite,PermissionAccept,PermissionFriends,PermissionPublic" dir=down width=max margin-top=2 spacing=-6 }
+place { start="PermissionHeader" control="PermissionDisabled,PermissionAccept,PermissionFriends,PermissionPublic" dir=down width=max margin-top=2 spacing=-6 }
 place { start="PermissionPublic" control="DesktopOnlyLabel" width=max dir=down margin-top=20 margin-right=20 }
 place { control="FAQLink" align=bottom margin-left=20 margin-bottom=18 }
 }

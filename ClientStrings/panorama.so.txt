@@ -294,6 +294,8 @@
 16CSharedMemStream
 16CStructNetPacket
 16JobStatsBucket_t
+17:19:45
+17:19:47
 17CDummyCnxCallback
 17CFrameFunctionMgr
 17CHTTPRequestCache
@@ -337,8 +339,6 @@
 %.18g
 18IUDPSocketCallback
 18IWorkThreadFactory
-19:02:26
-19:02:28
 19CHTTPClientResponse
 19CMsgClearBackbuffer
 19CMsgComboNeedsPaint
@@ -3268,6 +3268,7 @@ m_pVecClipLayers
 m_pVecElementProperties
 m_pWorkItem
 m_QueueJobSleeping
+m_queuePendingBufDataToWrite
 m_QueueScheduledItems
 m_queueSendBuffers
 m_RadialGradient
@@ -4783,7 +4784,6 @@ ThreadGetCurrentRunningRef
 ThreadInMainThread
 ThreadInterlockedAssignIf
 ThreadInterlockedAssignIf64
-ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
 ThreadInterlockedDecrement64
 ThreadInterlockedExchange
@@ -4852,6 +4852,17 @@ transparent
 transport_error
 tr_TR
 TruncatedDigestSize
+TSListBase_Init
+TSListBase_Pop
+TSListBase_Push
+TSListBase_SwapList
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 turkish
 TurnOffActiveController
 tvseries

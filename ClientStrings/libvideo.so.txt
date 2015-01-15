@@ -4758,6 +4758,7 @@ m_pthreadWatcher
 m_pTicketKeyMgr
 m_pVideoDecoder
 m_QueueJobSleeping
+m_queuePendingBufDataToWrite
 m_queueRunningPlayers
 m_QueueScheduledItems
 m_queueSendBuffers
@@ -7110,7 +7111,6 @@ ThreadGetCurrentRunningRef
 ThreadInMainThread
 ThreadInterlockedAssignIf
 ThreadInterlockedAssignIf64
-ThreadInterlockedCompareExchangePointer
 ThreadInterlockedDecrement
 ThreadInterlockedDecrement64
 ThreadInterlockedExchange
@@ -7191,7 +7191,18 @@ TS_CHECK_STATUS_INFO
 TS_COMPUTE_IMPRINT
 TS_CONF_set_default_engine
 TS_GET_STATUS_TEXT
+TSListBase_Init
+TSListBase_Pop
+TSListBase_Push
+TSListBase_SwapList
+TSListBase_UnsafePeek
 TS_MSG_IMPRINT_set_algo
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
 TS_REQ_set_msg_imprint
 TS_REQ_set_nonce
 TS_REQ_set_policy_id

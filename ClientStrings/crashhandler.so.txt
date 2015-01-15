@@ -8,9 +8,9 @@
 13ICrashHandler
 16CBreakpadFactory
 16IBreakpadFactory
+17:18:30
 18CUtlCharConversion
 %.18g
-19:01:13
 19CUtlNoEscConversion
 21CUtlCStringConversion
 %8X%4X%4X%2X%2X%2X%2X%2X%2X%2X%2X
@@ -39,7 +39,7 @@ chmod
 chromehtml.so
 clock_gettime
 closedir
-_CPathString
+CPathString
 CPU_MHZ
 crash
 crashhandler002
