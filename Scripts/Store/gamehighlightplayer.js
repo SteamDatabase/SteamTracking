@@ -199,6 +199,7 @@ HighlightPlayer.prototype.LoadHTML5Movie = function( id, bUserAction )
 
 	if( $Target.length > 0 && $Target[0].play )
 	{
+		$Target[0].load();
 		$Target[0].play();
 
 		$Target.on( 'ended', $J.proxy( this.Transition, this) );

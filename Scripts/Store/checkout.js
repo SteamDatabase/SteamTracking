@@ -903,7 +903,7 @@ function OnPayPalCancel( gidTransID )
 		if ( gidTransID && $('transaction_id').value != gidTransID )
 		return;
 
-	HandleFinalizeTransactionFailure( 4, 0, false );
+	HandleFinalizeTransactionFailure( 4, 0, false, '' );
 	return true;
 }
 
@@ -3675,27 +3675,131 @@ function UpdateGiftTextCharsRemaining()
 	}
 }
 
-function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSpecificCreditCardError )
+function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSpecificCreditCardError, sErrorText )
 {
 	try
 	{
 		var error_text = '';
-		switch ( ePaymentType )
+
+		if ( sErrorText && sErrorText != '' )
 		{
-			case 2:
+			error_text = sErrorText;			
+		}
+		else
+		{
+			switch ( ePaymentType )
 			{
-				if ( bShowBRSpecificCreditCardError && ( 
-					eErrorDetail == 1 
-					|| eErrorDetail == 4 
-					|| eErrorDetail == 0 
-					|| eErrorDetail == 2 
-					|| eErrorDetail == 13 
-					)
-				)
+				case 2:
 				{
-					error_text = 'Your credit card transaction was rejected.<br/><br/>Some Brazilian banks may reject purchases with international credit cards when purchasing in foreign stores that offer prices in Reais.  We suggest you try the transaction again, selecting the national version of your card type or another payment method of your preference.';
+					if ( bShowBRSpecificCreditCardError && ( 
+						eErrorDetail == 1 
+						|| eErrorDetail == 4 
+						|| eErrorDetail == 0 
+						|| eErrorDetail == 2 
+						|| eErrorDetail == 13 
+						)
+					)
+					{
+						error_text = 'Your credit card transaction was rejected.<br/><br/>Some Brazilian banks may reject purchases with international credit cards when purchasing in foreign stores that offer prices in Reais.  We suggest you try the transaction again, selecting the national version of your card type or another payment method of your preference.';
+					}
+					else
+					{
+						switch ( eErrorDetail )
+						{
+							default:
+							case 3:
+							case 8:
+							case 9:
+							case 7:
+							case 11:
+							case 57:
+								error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+								break;
+							case 1:
+								error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company due to an incorrect address being entered.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged. After correcting any errors in the information displayed below, please try your purchase again.';
+								break;
+							case 4:
+								error_text = 'Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later.';
+								break;
+							case 0:
+								error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged. After correcting any errors in the information displayed below, please try your purchase again.';
+								break;
+							case 2:
+								error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company due to insufficient funds in the account.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged.';
+								break;
+							case 13:
+								error_text = 'Sorry, but one of the items you tried to purchase is not available for purchase in this country. Your purchase has been cancelled.';
+								break;
+							case 35:
+								error_text = 'Your purchase has not been completed.<br>The amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance.';
+								break;
+							case 44:
+								error_text = 'Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details.';
+								break;
+							case 46:
+								error_text = 'For the protection of the account holder, this purchase has been declined. Further purchasing will be temporarily limited - please contact Steam Support to resolve this issue.';
+								break;
+						}
+					}
 				}
-				else
+				break;	
+				case 3:
+				case 4:
+				case 5:
+				case 6:
+				case 7:
+				case 9:
+				case 10:
+				case 11:
+				case 12:
+				case 14:
+				case 33:
+				case 17:
+				case 18:
+				case 19:
+				case 20:
+				case 21:
+				case 22:
+				case 23:
+				case 24:
+				case 25:
+				case 26:
+				case 27:
+				case 28:
+				case 29:
+				case 45:
+				case 46:
+				case 47:
+				case 48:
+				case 49:
+				case 50:
+				case 51:
+				case 52:
+				case 53:
+				case 54:
+				case 55:
+				case 56:
+				case 57:
+				case 58:
+				case 59:
+				case 60:
+				case 61:
+				case 62:
+				case 63:
+				case 31:
+				case 34:
+				case 36:
+				case 37:
+				case 38:
+				case 65:
+				case 39:
+				case 40:
+				case 41:
+				case 42:
+				case 43:
+				case 44:
+				case 35:
+				default:
 				{
 					switch ( eErrorDetail )
 					{
@@ -3708,20 +3812,34 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 						case 57:
 							error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 							break;
-						case 1:
-							error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company due to an incorrect address being entered.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged. After correcting any errors in the information displayed below, please try your purchase again.';
+						case 13:
+							error_text = 'Sorry, but one of the items you tried to purchase is not available for purchase in this country. Your purchase has been cancelled.';
 							break;
 						case 4:
 							error_text = 'Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later.';
 							break;
 						case 0:
-							error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged. After correcting any errors in the information displayed below, please try your purchase again.';
+						case 22:
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported an authorization failure. Please select a different payment method.';
 							break;
+						case 16:
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported an authorization failure. Please select a different payment method.';
+							break;
+						case 17:
 						case 2:
-							error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company due to insufficient funds in the account.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged.';
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with the funding source associated with your account. Please <a href=\'javascript:SetTabEnabled("payment_info");\'>select a different payment method</a> or update your funding source with PayPal and try again.';
 							break;
-						case 13:
-							error_text = 'Sorry, but one of the items you tried to purchase is not available for purchase in this country. Your purchase has been cancelled.';
+						case 18:
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with the address associated with your account. You can either correct this problem through the processor, or select a different payment method.';
+							break;
+						case 19:
+							error_text = 'Your purchase has not been completed.<br>Your chosen payment method is currently unavailable in your country. Please choose a different payment method.';
+							break;
+						case 20:
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with your account. Please contact the processor or choose an alternate payment method.';
+							break;
+						case 21:
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported that your account needs to be verified or funded to complete the purchase. Please contact the processor or choose an alternate payment method.';
 							break;
 						case 35:
 							error_text = 'Your purchase has not been completed.<br>The amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance.';
@@ -3733,116 +3851,6 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 							error_text = 'For the protection of the account holder, this purchase has been declined. Further purchasing will be temporarily limited - please contact Steam Support to resolve this issue.';
 							break;
 					}
-				}
-			}
-			break;	
-			case 3:
-			case 4:
-			case 5:
-			case 6:
-			case 7:
-			case 9:
-			case 10:
-			case 11:
-			case 12:
-			case 14:
-			case 33:
-			case 17:
-			case 18:
-			case 19:
-			case 20:
-			case 21:
-			case 22:
-			case 23:
-			case 24:
-			case 25:
-			case 26:
-			case 27:
-			case 28:
-			case 29:
-			case 45:
-			case 46:
-			case 47:
-			case 48:
-			case 49:
-			case 50:
-			case 51:
-			case 52:
-			case 53:
-			case 54:
-			case 55:
-			case 56:
-			case 57:
-			case 58:
-			case 59:
-			case 60:
-			case 61:
-			case 62:
-			case 63:
-			case 31:
-			case 34:
-			case 36:
-			case 37:
-			case 38:
-			case 65:
-			case 39:
-			case 40:
-			case 41:
-			case 42:
-			case 43:
-			case 44:
-			case 35:
-			default:
-			{
-				switch ( eErrorDetail )
-				{
-					default:
-					case 3:
-					case 8:
-					case 9:
-					case 7:
-					case 11:
-					case 57:
-						error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
-						break;
-					case 13:
-						error_text = 'Sorry, but one of the items you tried to purchase is not available for purchase in this country. Your purchase has been cancelled.';
-						break;
-					case 4:
-						error_text = 'Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later.';
-						break;
-					case 0:
-					case 22:
-						error_text = 'Your purchase has not been completed.<br>The payment processor has reported an authorization failure. Please select a different payment method.';
-						break;
-					case 16:
-						error_text = 'Your purchase has not been completed.<br>The payment processor has reported an authorization failure. Please select a different payment method.';
-						break;
-					case 17:
-					case 2:
-						error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with the funding source associated with your account. Please <a href=\'javascript:SetTabEnabled("payment_info");\'>select a different payment method</a> or update your funding source with PayPal and try again.';
-						break;
-					case 18:
-						error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with the address associated with your account. You can either correct this problem through the processor, or select a different payment method.';
-						break;
-					case 19:
-						error_text = 'Your purchase has not been completed.<br>Your chosen payment method is currently unavailable in your country. Please choose a different payment method.';
-						break;
-					case 20:
-						error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with your account. Please contact the processor or choose an alternate payment method.';
-						break;
-					case 21:
-						error_text = 'Your purchase has not been completed.<br>The payment processor has reported that your account needs to be verified or funded to complete the purchase. Please contact the processor or choose an alternate payment method.';
-						break;
-					case 35:
-						error_text = 'Your purchase has not been completed.<br>The amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance.';
-						break;
-					case 44:
-						error_text = 'Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details.';
-						break;
-					case 46:
-						error_text = 'For the protection of the account holder, this purchase has been declined. Further purchasing will be temporarily limited - please contact Steam Support to resolve this issue.';
-						break;
 				}
 			}
 		}
@@ -4194,7 +4202,7 @@ function PollForTransactionStatus( txnid, retries, timeout )
 		      	   			if ( result.purchasereceipt && result.purchasereceipt.paymentmethod )
 		      	   				ePaymentMethod = result.purchasereceipt.paymentmethod;
 		      	   			
-			      	   		HandleFinalizeTransactionFailure( ePaymentMethod, result.purchaseresultdetail, result.bShowBRSpecificCreditCardError );
+			      	   		HandleFinalizeTransactionFailure( ePaymentMethod, result.purchaseresultdetail, result.bShowBRSpecificCreditCardError, result.errorDescription );
 			      	   		return;
 			      	   	}
 				}
@@ -4202,7 +4210,7 @@ function PollForTransactionStatus( txnid, retries, timeout )
 			  			      		g_bFinalizeTransactionInProgress = false;
 			  	g_bPollingForTransactionStatus = false;
 				g_timeoutPoll = false;
-				HandleFinalizeTransactionFailure( 2, 3, false );
+				HandleFinalizeTransactionFailure( 2, 3, false, '' );
 		    },
 		    onFailure: function()
 			{
@@ -4249,7 +4257,7 @@ function FinalizeTransaction()
 	 
 	if ( $('transaction_id').value == -1 || $('transaction_id').value == '' )
 	{
-		HandleFinalizeTransactionFailure( 2, 0, false );
+		HandleFinalizeTransactionFailure( 2, 0, false, '' );
 		return;
 	}
 	
@@ -4299,7 +4307,7 @@ function FinalizeTransaction()
 						var result = transport.responseText.evalJSON(true);
 		      		} catch ( e ) {
 		      			// Failure
-		      			HandleFinalizeTransactionFailure( 2, 3, false );
+		      			HandleFinalizeTransactionFailure( 2, 3, false, '' );
 		      			g_bFinalizeTransactionInProgress = false;
 		      			return;
 		      		}
@@ -4324,17 +4332,17 @@ function FinalizeTransaction()
 		      	   		if ( result.purchasereceipt && result.purchasereceipt.paymentmethod )
 		      	   			ePaymentMethod = result.purchasereceipt.paymentmethod;
 		      	   			
-		      	   		HandleFinalizeTransactionFailure( ePaymentMethod, result.purchaseresultdetail, result.bShowBRSpecificCreditCardError );
+		      	   		HandleFinalizeTransactionFailure( ePaymentMethod, result.purchaseresultdetail, result.bShowBRSpecificCreditCardError, result.errorDescription );
 		      	   		return;
 		      	   	}
 			  	}
 			  	
 			  				  	g_bFinalizeTransactionInProgress = false;
-				HandleFinalizeTransactionFailure( 2, 3, false );
+				HandleFinalizeTransactionFailure( 2, 3, false, '' );
 		    },
 		    onFailure: function(){
 								g_bFinalizeTransactionInProgress = false;
-				HandleFinalizeTransactionFailure( 2, 3 );
+				HandleFinalizeTransactionFailure( 2, 3, false, '' );
 			}
 		});
 	}
