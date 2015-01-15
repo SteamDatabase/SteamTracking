@@ -28,6 +28,36 @@ function UserReview_Rate( recommendationID, bRateUp, baseURL, callback )
 	} );
 }
 
+function UserReview_VoteTag( recommendationID, tagID, bRateUp, baseURL, callback )
+{
+	$J.post( baseURL + '/userreviews/votetag/' + recommendationID,{
+		'tagid' : tagID,
+		'rateup' : bRateUp,
+		'sessionid' : g_sessionID
+	}).done( function( results ) {
+		if ( results.success == 1 )
+		{
+			callback( results );
+		}
+		else if ( results.success == 21 )
+		{
+			ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+		}
+		else if ( results.success == 15 )
+		{
+			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action.' );
+		}
+		else if ( results.success == 24 )
+		{
+			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+		}
+		else
+		{
+			ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + results.success );
+		}
+	} );
+}
+
 function UserReview_Report( recommendationID, baseURL, callback )
 {
 	var dialog = ShowPromptWithTextAreaDialog( 'Report Review', '', null, null, 1000 );

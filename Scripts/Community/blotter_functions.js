@@ -1,5 +1,23 @@
 
 g_BlotterNextLoadURL = null;
+g_BlotterSeenEvents = [];
+
+function Blotter_RemoveDuplicatesFromHTML(html)
+{
+	var $html = $J(html);
+	$J('.blotter_block:not([data-event-id=""])', $html ).each(function(i,j){
+		var strEventID = $J(j).data('event-id');
+		if( g_BlotterSeenEvents.indexOf( strEventID ) != -1 )
+		{
+			$J(j).hide();
+		}
+		else
+		{
+			g_BlotterSeenEvents.push(strEventID);
+		}
+	});
+	return $html[0];
+}
 
 function StartLoadingBlotter( url )
 {
@@ -18,8 +36,13 @@ function StartLoadingBlotter( url )
 			if ( response && response.success == true && response.blotter_html )
 			{
 				// append the new day, having it fade in quickly
+
+				// Scan each blotter response for an event ID we've seen before, so we can prune them out
+				var html = Blotter_RemoveDuplicatesFromHTML(response.blotter_html);
+
+
 				var newDiv = new Element ( 'div' );
-				newDiv.update( response.blotter_html );
+				newDiv.update( html );
 				newDiv.setOpacity(0);
 				$('blotter_content').appendChild( newDiv );
 				new Effect.Appear( newDiv, { duration: .75 }  );
@@ -462,6 +485,12 @@ function LogUpvote()
 		$J.post( 'https://steamcommunity.com/actions/LogFriendActivityUpvote', {sessionID: g_sessionID} );
 	}
 }
+
+// Do the intial replace
+$J(function() {
+	var html = Blotter_RemoveDuplicatesFromHTML($J('#blotter_content')[0]);
+	$J('#blotter_content').replaceWith(html);
+});
 
 
 

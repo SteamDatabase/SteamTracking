@@ -1462,7 +1462,19 @@ function RateAnnouncement( rateURL, gid, bVoteUp )
 
 	} )
 	.fail( function( jqxhr ) {
-		alert( jqxhr );
+		var responseJSON = jqxhr.responseText.evalJSON();
+		switch ( responseJSON.success )
+		{
+			case 21:
+				ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+				break;
+			case RateAnnouncement_Error_AccessDenied:
+				ShowAlertDialog( 'Error', 'You do not have permission to perform that action.' );
+				break;
+			default:
+				ShowAlertDialog( 'Error', 'There was an error encountered while processing your request: ' + responseJSON.success );
+				break;
+		}
 	} );
 	return false;
 }

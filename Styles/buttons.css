@@ -219,7 +219,16 @@
 	.btn_grey_black:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
 		background: transparent;			}
 
-.btn_black {
+	.btn_grey_black.btn_active, btn_grey_black.active {
+	text-decoration: none !important;
+	color: #fff !important;
+
+		background: rgba( 102, 192, 244, 0.2 );;			}
+
+	.btn_grey_black.btn_active > span, btn_grey_black.active > span {
+		background: transparent;			}
+
+	.btn_black {
 	border-radius: 2px;
 	border: none;
 	padding: 1px;
@@ -397,7 +406,16 @@
 	.btnv6_grey_black:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
 		background: transparent;			}
 
+	.btnv6_grey_black.btn_active, btnv6_grey_black.active {
+	text-decoration: none !important;
+	color: #fff !important;
 
+		background: rgba( 103, 193, 245, 0.4 );;			}
+
+	.btnv6_grey_black.btn_active > span, btnv6_grey_black.active > span {
+		background: transparent;			}
+
+	
 /* This class must be applied to anything you want to use buttons in to enable hover states. */
 .btn_hover {}
 
@@ -544,7 +562,7 @@ btnv6_border_2px > span {
 	display: inline-block;
 	width: 16px;
 	height: 16px;
-	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_16.png?v=4);
+	background: url(https://steamcommunity-a.akamaihd.net/public/shared/images/buttons/icons_16.png?v=5);
 	vertical-align: text-top;
 }
 
@@ -651,6 +669,15 @@ btnv6_border_2px > span {
 		background-position: -192px -16px;	}
 
 	
+		
+	.ico16.funny {
+		background-position: -208px -16px;	}
+
+			.ico_hover:not(.btn_disabled):not(.btn_active):not(.active):hover .ico16.funny {
+			background-position: -224px -16px;		}
+	
+			.btn_active .ico16.funny, .active .ico16.funny {
+			background-position: -224px -16px;		}
 		
 	.ico16.bluearrow_down {
 		background-position: -304px 0px;	}
