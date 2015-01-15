@@ -430,6 +430,20 @@ function ShowNicknameModal( )
 	);
 }
 
+function SetFollowing( bFollowing, fnOnSuccess )
+{
+	var url = bFollowing ? g_rgProfileData['url'] + "followuser/" : g_rgProfileData['url'] + "unfollowuser/"
+	$J.ajax( { url: url,
+		data: { sessionid: g_sessionID },
+		type: 'POST',
+		dataType: 'json'
+	} ).done( function( data ) {
+		fnOnSuccess( bFollowing );
+	}).fail( function( data ) {
+		ShowAlertDialog( '', data.results ? data.results : 'Error processing your request. Please try again.' );
+	});
+}
+
 
 function ShowFriendSelect( title, fnOnSelect )
 {

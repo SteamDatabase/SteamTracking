@@ -107,7 +107,7 @@ CBroadcastWatch.prototype.Start = function()
 			return;
 		}
 
-		this.ShowVideoError( 'Your web browser does not support the minimum set of features required to watch this broadcast.<br><br>Try again using the Steam Client or <a href="https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497">visit the Broadcast FAQ</a> for a list of supported browsers.' );
+		this.ShowVideoError( 'Your web browser does not support the minimum set of features required to watch this broadcast.<br><br>You can watch this broadcast from <a href="steam://broadcast/watch/%steamid%">inside the Steam Client</a> or, for a list of supported browsers, please <a href="https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497">visit the Broadcast FAQ</a>.'.replace( '%steamid%', this.m_ulBroadcastSteamID ) );
 		return;
 	}
 

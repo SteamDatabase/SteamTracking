@@ -98,7 +98,7 @@ select {
 	}
 
 .ratingBar {
-	height: 15px;
+	min-height: 15px;
 	background-color: rgba(0, 0, 0, 0.4);
 	font-size: 12px;
 	color: #898A8C;

@@ -1522,6 +1522,10 @@ span.icon_actual_authority { display: inline-block;}
 	cursor: pointer;
 }
 
+tr .faded, .tr.faded {
+	opacity: 0.3;
+}
+
 .tr.warning1 .td {
 	background-color: #886A08 !important;
 }

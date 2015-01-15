@@ -36,6 +36,7 @@
 .dmca_takedownnotice_view_content_desc
 {
 	padding-top: 10px;
+	word-wrap: break-word;
 }
 
 .dmca_takedownnotice_view_plaintiff

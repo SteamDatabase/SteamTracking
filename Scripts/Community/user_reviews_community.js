@@ -43,3 +43,21 @@ function UserReviewVoteDown( id )
 		}
 	);
 }
+
+function UserReviewVoteTag( id, tagID, elemID )
+{
+	var elem = $J( "#" + elemID );
+	var bRateUp = !elem.hasClass( "btn_active" );
+	UserReview_VoteTag( id, tagID, bRateUp, 'https://steamcommunity.com',
+		function( rgResults ) {
+			if ( bRateUp )
+			{
+				$J( "#RecommendationVoteTagBtn" + id + "_" + tagID ).addClass( "btn_active" );
+			}
+			else
+			{
+				$J( "#RecommendationVoteTagBtn" + id + "_" + tagID ).removeClass( "btn_active" );
+			}
+		}
+	);
+}
