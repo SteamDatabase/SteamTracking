@@ -2,10 +2,9 @@
 g_BlotterNextLoadURL = null;
 g_BlotterSeenEvents = [];
 
-function Blotter_RemoveDuplicatesFromHTML(html)
+function Blotter_RemoveDuplicates(newDiv)
 {
-	var $html = $J(html);
-	$J('.blotter_block:not([data-event-id=""])', $html ).each(function(i,j){
+	$J('.blotter_block:not([data-event-id=""])', newDiv ).each(function(i,j){
 		var strEventID = $J(j).data('event-id');
 		if( g_BlotterSeenEvents.indexOf( strEventID ) != -1 )
 		{
@@ -16,7 +15,6 @@ function Blotter_RemoveDuplicatesFromHTML(html)
 			g_BlotterSeenEvents.push(strEventID);
 		}
 	});
-	return $html[0];
 }
 
 function StartLoadingBlotter( url )
@@ -38,12 +36,13 @@ function StartLoadingBlotter( url )
 				// append the new day, having it fade in quickly
 
 				// Scan each blotter response for an event ID we've seen before, so we can prune them out
-				var html = Blotter_RemoveDuplicatesFromHTML(response.blotter_html);
+				var html = response.blotter_html;
 
 
 				var newDiv = new Element ( 'div' );
 				newDiv.update( html );
 				newDiv.setOpacity(0);
+				Blotter_RemoveDuplicates(newDiv);
 				$('blotter_content').appendChild( newDiv );
 				new Effect.Appear( newDiv, { duration: .75 }  );
 
@@ -488,8 +487,7 @@ function LogUpvote()
 
 // Do the intial replace
 $J(function() {
-	var html = Blotter_RemoveDuplicatesFromHTML($J('#blotter_content')[0]);
-	$J('#blotter_content').replaceWith(html);
+	var html = Blotter_RemoveDuplicates($J('#blotter_content'));
 });
 
 
