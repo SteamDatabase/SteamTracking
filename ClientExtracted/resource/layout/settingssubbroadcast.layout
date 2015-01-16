@@ -30,6 +30,7 @@
 		"ConfigMic" { ControlName="URLLabel" fieldName="ConfigMic" labelText="#Steam_Settings_Broadcast_ConfigMic" URLText="steam://settings/voice" group="HideWhenDisabled" }
 		"EnableHardwareSupport" { ControlName="CheckButton" fieldName="EnableHardwareSupport" group="HideWhenDisabled" }
 		"ShowDebugInfo" { ControlName="CheckButton" fieldName="ShowDebugInfo" group="HideWhenDisabled" }
+		"ShowReminder" { ControlName="CheckButton" fieldName="ShowReminder" group="HideWhenDisabled" }
 		
 		"RequiresRestartLabel" { ControlName="Label" fieldName="RequiresRestartLabel" labelText="#Steam_Settings_Broadcast_RequiresRestart" group="HideWhenDisabled" }
 	}
@@ -59,7 +60,7 @@
 		place { start="BitrateLimit" control="ShowChatHeader" dir=down margin-top=10 width=max }
 		place { start="ShowChatHeader" control="ShowChatCombo" dir=down margin-top=4 width=250 }
 				
-		place { start="ShowChatCombo" control="IncludeDesktop,RecordMic,EnableHardwareSupport,ShowDebugInfo" dir=down margin-top=10 }	
+		place { start="ShowChatCombo" control="IncludeDesktop,RecordMic,EnableHardwareSupport,ShowDebugInfo,ShowReminder" dir=down margin-top=10 }	
 		place { start="RecordMic" control="ConfigMic" dir=right margin-top=9  }	
 		
 		place { control="RequiresRestartLabel" margin-left=20 margin-right=20 width=max margin-top=500 }
