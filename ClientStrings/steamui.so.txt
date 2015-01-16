@@ -553,6 +553,8 @@
 15CWebLoadedPanel
 15IDesktopCapture
 1600x900
+16:13:18
+16:13:36
 16AppModalQueryBox
 16CBackupStartPage
 16CBorderImageData
@@ -600,8 +602,6 @@
 16HTMLComboBoxHost
 16IRetailInstaller
 16ListPanelDragger
-17:20:50
-17:21:03
 17CAddShortcutPanel
 17CAppDownloadPanel
 17CAppSectionHeader
@@ -3585,6 +3585,7 @@ CheckAllItems
 CheckButtonChecked
 CheckButtonClicked
 CheckButtonList.CheckButton
+CheckButtonListControls
 CheckForLayoutFilesChanges
 CheckForOpenContextMenu
 CheckForSteamClientUpdate
@@ -10249,6 +10250,7 @@ N4vgui22HotkeyEntryClearButtonE
 N4vgui22ListPanelCollapserBaseE
 N4vgui22ListPanelSectionHeaderE
 N4vgui22SectionedListPanelItemE
+N4vgui23CNotificationClickPanelE
 N4vgui23ISectionedListPanelItemE
 N4vgui24SectionedListPanelHeaderE
 N4vgui25ISectionedListPanelHeaderE
@@ -10808,7 +10810,6 @@ norwegian
 no_screenshots
 NoScreenshots
 no_standard_descriptor_accessor
-NotificationClickPanel
 NotificationFading
 NotificationPlaylistNowPlayingCheckbox
 Notifications_ShowIngame
@@ -13324,6 +13325,7 @@ ShowQueuedFriendInviteNotifications
 ShowQuitDialog
 ShowRecoveryDialog
 ShowRefreshLogin
+ShowReminder
 ShowRulerWhenShowCurrent
 ShowSavings
 ShowScreenshot
@@ -14016,6 +14018,7 @@ SteamService_GetIPCServer
 SteamService_Shutdown
 steamservice.so
 SteamService_StartThread
+steam://settings/broadcast
 steam/SettingsDialog
 steam://settings/music
 steam://store

@@ -370,7 +370,6 @@ ClearField
 ClearSchemeSettings
 clickabletextaction
 _clickableTextPanels
-ClickPanel
 ClientAPI_RunCallbacks
 CLIENTAPPMANAGER_INTERFACE_VERSION001
 CLIENTAPPS_INTERFACE_VERSION001
@@ -505,6 +504,7 @@ CMsgVerticalScrollBarSize
 CMsgViewSource
 CMsgZoomToElementAtPosition
 CMsgZoomToFocusedElement
+CNotificationClickPanel
 CollapserChanged
 ColumnResized
 ComboBox

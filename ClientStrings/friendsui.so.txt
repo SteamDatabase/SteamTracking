@@ -246,7 +246,6 @@
 23CMsgBrowserErrorStrings
 23CMsgCanGoBackAndForward
 23CMsgSetHorizontalScroll
-23CNotificationClickPanel
 23IClientParentalSettings
 24CAchievementNotification
 24CBroadcastViewerWatching
@@ -2702,6 +2701,7 @@ N4vgui21ListPanelColumnHeaderE
 N4vgui22ListPanelCollapserBaseE
 N4vgui22ListPanelSectionHeaderE
 N4vgui22SectionedListPanelItemE
+N4vgui23CNotificationClickPanelE
 N4vgui23ISectionedListPanelItemE
 N4vgui24SectionedListPanelHeaderE
 N4vgui25ISectionedListPanelHeaderE

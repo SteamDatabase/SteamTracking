@@ -156,6 +156,7 @@
 15CTrackItemPanel
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
 15IOverlayOSPumps
+16:11:19
 16AppModalQueryBox
 16CHostOfflineMode
 16CIngameFPSBanner
@@ -173,7 +174,6 @@
 16CSteamAuthedHTML
 16HTMLComboBoxHost
 16ListPanelDragger
-17:19:08
 17CBaseDesktopPanel
 17CItemImageManager
 17CMsgBrowserCreate
@@ -1161,6 +1161,7 @@ cNAMERecord
 cnet.com
 CNewsItemPanel
 cnn.com
+CNotificationClickPanel
 cntrl
 CodeSignature
 codeSigning
@@ -3188,6 +3189,7 @@ N4vgui21ListPanelColumnHeaderE
 N4vgui22HotkeyEntryClearButtonE
 N4vgui22ListPanelCollapserBaseE
 N4vgui22ListPanelSectionHeaderE
+N4vgui23CNotificationClickPanelE
 N4vgui25ListPanelSectionCollapserE
 N4vgui32IPanelAnimationPropertyConverterE
 N4vgui4HTML11CHTMLIMEBarE
@@ -4164,6 +4166,7 @@ ShowIngameFPSContrastCheck
 ShowIngameFPSCornerCombo
 ShowLegacyCDKey
 ShowMusicPlayerIfWanted
+ShowReminder
 ShowSettings
 showticks
 ShowTimeInChatLogCheck

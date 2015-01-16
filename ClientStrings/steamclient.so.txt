@@ -961,6 +961,7 @@
 15ISteamInventory
 15ISteamUserStats
 16000
+16:11:25
 16CAPIJobShareFile
 16CAppReleaseState
 16CAppUninstallJob
@@ -1006,7 +1007,6 @@
 16ITCPHostCallback
 16JobStatsBucket_t
 16ParentalSettings
-17:19:11
 172.16.3.10
 172.16.3.106
 172.16.3.11
@@ -4334,6 +4334,7 @@ BroadcastSettingsLoaded_t
 Broadcast\ShowChat
 Broadcast\ShowDebugInfo
 BroadcastShowFirstTimeDlg_t
+Broadcast\ShowReminder
 BroadcastStatus_t
 broadcast_upload_drop_sec
 BroadcastUploadsDisabled_t
@@ -8848,6 +8849,7 @@ GetBroadcastRecordMic
 GetBroadcastSessionID
 GetBroadcastShowChatCorner
 GetBroadcastShowDebugInfo
+GetBroadcastShowReminderBanner
 GetBroadcastStatus
 GetBuildID
 GetCachedUGCCount
