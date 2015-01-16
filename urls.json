@@ -215,6 +215,7 @@
 "Scripts/apphub.js"                              : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/apphub.js?__TIME__&l=english",
 "Scripts/shared_global.js"                       : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/shared_global.js?__TIME__&l=english",
 "Scripts/user_reviews.js"                        : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/user_reviews.js?__TIME__&l=english",
+"Scripts/dash_player.js"                         : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/dash_player.js?__TIME__&l=english",
 
 //
 // Big Picture CSS
