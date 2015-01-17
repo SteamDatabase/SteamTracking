@@ -442,6 +442,11 @@ function reset_steam()
 		return 1
 	fi
 
+	if [ "$STEAMROOT" = "" ]; then
+		show_message --error $"Couldn't find Steam, it's not safe to reset Steam. Please contact technical support."
+		return 1
+	fi
+
 	STEAM_SAVE="$STEAMROOT/.save"
 
 	# Don't let the user interrupt us, or they may corrupt the install
@@ -464,8 +469,10 @@ function reset_steam()
 		mv -f "$i" "$i.bak"
 	done
 
-	# Scary!
-	rm -rf "$STEAMROOT/"*
+	# Check before removing
+	if [ "$STEAMROOT" != "" ]; then
+		rm -rf "$STEAMROOT/"*
+	fi
 
 	# Move things back into place
 	mv -f "$STEAM_SAVE/"* "$STEAMROOT/"
