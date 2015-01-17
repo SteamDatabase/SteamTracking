@@ -126,6 +126,7 @@ glDepthRange
 glDisable
 glDisableClientState
 glDisableVertexAttribArray
+glDrawArrays
 glDrawBuffers
 glDrawElements
 glEnable

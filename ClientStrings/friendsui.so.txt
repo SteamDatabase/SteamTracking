@@ -335,6 +335,7 @@
 35CMsgPauseFullScreenFlashMovieIfOpen
 35CMsgZoomToElementAtPositionResponse
 36DF0AAFD8B8D7597CA10520D04B
+37CBroadcastCantStartFriendNotification
 51DEF1815DB5ED74FCC34C85D709
 %5EUeu
 6127C24C05F38A0AAAF65C0EF02C
@@ -396,6 +397,7 @@
 9CCallbackI14CFriendsDialog16TableGameWatch_tLb0EE
 9CCallbackI14CFriendsDialog19ClanEventReceived_tLb0EE
 9CCallbackI14CFriendsDialog19FriendsMenuChange_tLb0EE
+9CCallbackI14CFriendsDialog20BroadcastCantStart_tLb0EE
 9CCallbackI14CFriendsDialog20NotifyIncomingCall_tLb0EE
 9CCallbackI14CFriendsDialog20PersonaStateChange_tLb0EE
 9CCallbackI14CFriendsDialog20RichInviteReceived_tLb0EE
@@ -726,6 +728,7 @@ b_print.c
 Break
 brighttext
 broadcast
+BroadcastCantStartFriend
 BroadcasterApproved
 BroadcasterIgnore
 BroadcastImageBlue
@@ -884,6 +887,7 @@ CFriendPanel::OnChatRoomVoiceStateChanged
 CFriendPanel::OnPersonaStateChange
 CFriendsClansPage
 CFriendsDialog
+CFriendsDialog::OnBroadcastCantStart
 CFriendsDialog::OnBroadcastInvitedToView
 CFriendsDialog::OnBroadcastViewerState
 CFriendsDialog::OnChatRoomCreate
@@ -1651,6 +1655,7 @@ friends/BlockCommunicationResultDialog.res
 friends/BlockCommunicationWarningDialog.res
 friends/broadcastapprovebar.res
 friends/broadcastapprovenotification.res
+friends/broadcastcantstartfriend.res
 friends/broadcastinvitebar.res
 friends/broadcastinvitenotification.res
 friends/broadcastpublicstatenotification.res
@@ -2587,6 +2592,7 @@ N14CFriendsDialog26CCallbackOnUserAchievementE
 N14CFriendsDialog28CCallbackOnClanEventReceivedE
 N14CFriendsDialog28CCallbackOnIncomingVoiceCallE
 N14CFriendsDialog28CCallbackTradeInviteReceivedE
+N14CFriendsDialog29CCallbackOnBroadcastCantStartE
 N14CFriendsDialog29CCallbackOnPersonaStateChangeE
 N14CFriendsDialog29CCallbackOnRichInviteReceivedE
 N14CFriendsDialog29CCallbackOnVoiceCallInitiatedE

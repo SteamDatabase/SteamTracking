@@ -1116,7 +1116,7 @@
 17ISteamMusicRemote
 17ISteamScreenshots
 17VoiceEncoder_SILK
-18:29:09
+18:41:55
 18446744073709551615
 18CAPIJobDownloadUGC
 18CAPIJobIsFollowing
@@ -4313,6 +4313,7 @@ BRequestBetaPasswords
 BResizeImageRGBA
 BritPop
 broadcast
+BroadcastCantStart_t
 BroadcastChatMessage_t
 BroadcastClient
 broadcaster_steamid
@@ -7191,6 +7192,7 @@ eauth_session_response
 eb:798
 ebay.com
 Ebn_mont.c
+EBroadcastCantStartReason
 EBroadcastChatMsg
 EBroadcastPermission
 EBroadcastUploadResult
@@ -11367,6 +11369,7 @@ m_eNewBehavior
 m_eNewState
 m_eOldState
 m_ePermission
+m_eReason
 Merengue
 m_eResult
 m_EResult
@@ -14297,7 +14300,6 @@ PRUNE
 ps3os
 pseudonym
 pseudotcp.cc
-PShBB
 p_sign.c
 psn_trophy
 Psychedelic
@@ -15302,6 +15304,7 @@ SetHTTPRequestRequiresVerifiedCertificate
 SetHTTPRequestUserAgentInfo
 %s/etilqs_
 SetInGameVoiceSpeaking
+SetInHomeStreamState
 SetInt
 SetInt32
 SetInt64

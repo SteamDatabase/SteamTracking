@@ -199,7 +199,7 @@
 17CSettingsSubVoice
 17DirectoryTreeView
 17LayoutDebugDialog
-18:27:26
+18:41:51
 18CMsgExitFullScreen
 18CMsgFileLoadDialog
 18CMsgLinkAtPosition
