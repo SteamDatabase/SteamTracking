@@ -5,6 +5,7 @@
 %04u%02u%02u
 %04u%02u%02u%02u%02u%02u
 %04u%02u%02uT%02u%02u%02uZ
+10:11:47
 10BlankImage
 10CBasePanel
 10CHintLabel
@@ -199,7 +200,6 @@
 17CSettingsSubVoice
 17DirectoryTreeView
 17LayoutDebugDialog
-18:41:51
 18CMsgExitFullScreen
 18CMsgFileLoadDialog
 18CMsgLinkAtPosition

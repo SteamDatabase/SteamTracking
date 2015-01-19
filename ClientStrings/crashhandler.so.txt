@@ -2,13 +2,13 @@
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 %0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
+10:10:22
 11CPathString
 12CStdMemAlloc
 13CCrashHandler
 13ICrashHandler
 16CBreakpadFactory
 16IBreakpadFactory
-18:41:12
 18CUtlCharConversion
 %.18g
 19CUtlNoEscConversion

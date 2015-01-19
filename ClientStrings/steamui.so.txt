@@ -10,6 +10,8 @@
 %04u%02u%02u%02u%02u%02u
 %04u%02u%02uT%02u%02u%02uZ
 0CUIStatusPanel
+10:13:37
+10:13:52
 1066x600
 10BlankImage
 10CAppFilter
@@ -661,8 +663,6 @@
 17CUtlStringBuilder
 17DirectoryTreeView
 17LayoutDebugDialog
-18:43:11
-18:43:21
 18446744073709551615
 18CAddShortcutDialog
 18CBaseFrameFunction

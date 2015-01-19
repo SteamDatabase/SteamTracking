@@ -118,6 +118,7 @@
 0x%08x
 0x%llX
 1000000
+10:12:03
 1.0.7
 10ByteReader
 10CClientJob
@@ -1116,7 +1117,6 @@
 17ISteamMusicRemote
 17ISteamScreenshots
 17VoiceEncoder_SILK
-18:41:55
 18446744073709551615
 18CAPIJobDownloadUGC
 18CAPIJobIsFollowing

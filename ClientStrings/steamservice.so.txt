@@ -8,6 +8,7 @@
 %04u%02u%02u%02u%02u%02u
 %04u%02u%02uT%02u%02u%02uZ
 %0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
+10:10:22
 10CIPCServer
 10CPipeEvent
 10IIPCServer
@@ -44,7 +45,6 @@
 17CCrossProcessPipe
 17CDebugStatsSystem
 17IDebugStatsSystem
-18:41:12
 18446744073709551615
 18CBaseFrameFunction
 18CScheduledFunctionI10CIPCServerE
