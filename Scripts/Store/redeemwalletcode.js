@@ -177,20 +177,24 @@ function OnValidateWalletCodeFailure( detail )
 {
 	try 
 	{
-		var sErrorMessage = 'An unexpected error has occurred. Your code could not be redeemed at this time.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 			
 		switch ( detail )
 		{
 			case 14:
-				sErrorMessage = 'The wallet code you entered is invalid.';
+				sErrorMessage = 'The Steam Wallet code you have entered is invalid.  Please carefully verify the characters as you re-enter the code.';
 				break;
 				
 			case 15:
-				sErrorMessage = 'The wallet code you entered has already been redeemed.';
+				sErrorMessage = 'The Steam Wallet code you have entered has already been redeemed.  If you have recently purchased this code, please contact the seller for further assistance.';
+				break;
+
+			case 58:
+				sErrorMessage = 'The Steam Wallet code you have entered does not appear to be activated.  Please note that it may take several hours after time of purchase before activation is completed by your retailer.  If the problem persists, please return to where the code was purchased for further assistance.';
 				break;
 
 			default:
-				sErrorMessage = 'An unexpected error has occurred. Your code could not be redeemed at this time.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 				break;
 		}
 		
@@ -498,27 +502,27 @@ function OnRedeemWalletCodeFailure( success, detail )
 {
 	try 
 	{
-		var sErrorMessage = 'An unexpected error has occurred. Your code could not be redeemed at this time.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 
 		switch ( success )
 		{
 			case 16:
-				sErrorMessage = 'An unexpected error has occurred. Your code could not be redeemed at this time.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 				break;
 
 			default:
 				switch ( detail )
 				{
 					case 48:
-						sErrorMessage = 'The wallet code you entered is invalid.';
+						sErrorMessage = 'The Steam Wallet code you have entered is invalid.  Please carefully verify the characters as you re-enter the code.';
 						break;
 			
 					case 14:
-						sErrorMessage = 'The wallet code you entered is invalid.';
+						sErrorMessage = 'The Steam Wallet code you have entered is invalid.  Please carefully verify the characters as you re-enter the code.';
 						break;
 				
 					default:
-						sErrorMessage = 'An unexpected error has occurred. Your code could not be redeemed at this time.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
+						sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 						break;
 				}
 				break;
