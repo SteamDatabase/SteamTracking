@@ -15,7 +15,7 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_loaders = [];
 	this.m_mediaSource = null;
 	this.m_rtLiveContentStarted = 0;
-	this.m_bPlayAfterBuffering = true;
+	this.m_rtVODResumeAtTime = 0;
 	this.m_schUpdateMPD = null;
 	this.m_xhrUpdateMPD = null;
 
@@ -24,11 +24,13 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nAudioRepresentationIndex = 0;
 	this.m_nPlayerHeight = 0;
 	this.m_nCurrentDownloadBitRate = 0;
+	this.m_nSavedPlaybackRate = 1.0;
 
 	// player states
-	this.m_bIsWaiting = false;
-	this.m_bIsSeeking = false;
+	this.m_bIsBuffering = true;
+	this.m_bShouldStayPaused = false;
 	this.m_bExiting = false;
+	this.m_nCurrentSeekTime = -1;
 
 	// Logging
 	this.m_nVideoBuffer = 0;
@@ -39,7 +41,6 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nVideoBitRate = 0;
 	this.m_nDownloadVideoWidth = 0;
 	this.m_nDownloadVideoHeight = 0;
-	this.m_nLastSeekTime = 0;
 	this.m_bVideoLogVerbose = false;
 
 	// Captions
@@ -93,9 +94,11 @@ CDASHPlayer.prototype.Close = function()
 
 	this.m_strMPD = '';
 	this.m_rtLiveContentStarted = 0;
-	this.m_bPlayAfterBuffering = true;
-	this.m_bIsWaiting = false;
-	this.m_bIsSeeking = false;
+	this.m_rtVODResumeAtTime = 0;
+	this.m_bIsBuffering = true;
+	this.m_bShouldStayPaused = false;
+	this.m_nCurrentSeekTime = -1;
+	this.m_nSavedPlaybackRate = 1.0;
 	this.m_bExiting = false;
 
 	if ( this.m_VTTCaptionLoader )
@@ -260,6 +263,9 @@ CDASHPlayer.prototype.InitVideoControl = function()
 	$J( mediaSource ).on( 'sourceopen.DASHPlayerEvents', function() { _player.OnMediaSourceOpen(); });
 	$J( mediaSource ).on( 'sourceended.DASHPlayerEvents', function( e ) { _player.OnMediaSourceEnded( e ); });
 	$J( mediaSource ).on( 'sourceclose.DASHPlayerEvents', function( e ) { _player.OnMediaSourceClose( e ); });
+
+	$J( this.m_elVideoPlayer ).on( 'progress.DASHPlayerEvents', function() { _player.OnVideoBufferProgress(); });
+	$J( this.m_elVideoPlayer ).on( 'stalled.DASHPlayerEvents', function() { _player.OnVideoStalled(); });
 }
 
 CDASHPlayer.prototype.OnMediaSourceOpen = function()
@@ -283,79 +289,94 @@ CDASHPlayer.prototype.OnMediaSourceClose = function( e )
 	this.CloseWithError();
 }
 
+CDASHPlayer.prototype.SetVODResumeTime = function( nTime )
+{
+	this.m_rtVODResumeAtTime = nTime;
+}
+
 CDASHPlayer.prototype.BeginPlayback = function()
 {
-	var _player = this;
-	var unLiveEdge = 0;
+	var unStartTime = 0;
 
-	if (_player.BIsLiveContent())
+	if ( this.BIsLiveContent() )
 	{
-		unLiveEdge = Date.now() - this.m_rtLiveContentStarted;
+		unStartTime = Date.now() - this.m_rtLiveContentStarted;
+	}
+	else
+	{
+		var unVideoDuration = Math.floor( this.m_mpd.GetPeriodDuration(0) ) - ( CDASHPlayer.TRACK_BUFFER_MS / 1000 );
+		if ( 0 < this.m_rtVODResumeAtTime && this.m_rtVODResumeAtTime < unVideoDuration )
+		{
+			unStartTime = this.m_rtVODResumeAtTime * 1000;
+		}
 	}
 
 	for ( var i = 0; i < this.m_loaders.length; i++ )
 	{
-		this.m_loaders[i].BeginPlayback( unLiveEdge );
+		this.m_loaders[i].BeginPlayback( unStartTime );
 	}
 
 	$J( this.m_elVideoPlayer ).trigger( 'initialized' );
+}
+
+CDASHPlayer.prototype.OnVideoBufferProgress = function()
+{
+	if ( !this.BIsBuffering() )
+		return;
+
+	if ( this.m_nCurrentSeekTime != -1 )
+		this.m_elVideoPlayer.currentTime = this.m_nCurrentSeekTime;
+
+	// when all loaders have enough buffered data, play
+	var bPlay = (this.m_loaders.length > 0);
+	var nStartPlayback = ( this.m_nCurrentSeekTime != -1 ) ? this.m_nCurrentSeekTime : 0;
+	for ( var i = 0; i < this.m_loaders.length; i++ )
+	{
+		if ( this.m_loaders[i].m_bSeekInProgress || !this.m_loaders[i].BIsLoaderBuffered() )
+		{
+			bPlay = false;
+			break;
+		}
+
+		nStartPlayback = Math.max( nStartPlayback, this.m_loaders[i].GetBufferedStart() );
+	}
+
+	if ( bPlay && this.m_elVideoPlayer.readyState != CDASHPlayer.HAVE_NOTHING )
+	{
+		this.m_bIsBuffering = false;
+		this.m_nCurrentSeekTime = -1;
+
+		this.m_elVideoPlayer.currentTime = nStartPlayback;
+
+		if ( !this.m_bShouldStayPaused )
+			this.m_elVideoPlayer.play();
+
+		this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate;
+
+		$J( this.m_elVideoPlayer ).trigger( 'bufferingcomplete' );
+	}
+}
+
+CDASHPlayer.prototype.OnVideoStalled = function()
+{
+	if ( !this.BIsLiveContent() && !this.BIsBuffering() )
+	{
+		for ( var i = 0; i < this.m_loaders.length; i++ )
+		{
+			if ( this.m_loaders[i].BIsLoaderStalling() )
+			{
+				this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
+				break;
+			}
+		}
+	}
 }
 
 CDASHPlayer.prototype.OnSegmentDownloaded = function()
 {
 	this.UpdateStats();
 	this.UpdateRepresentation( this.m_nVideoRepresentationIndex, true );
-
 	$J( this.m_elVideoPlayer ).trigger( 'bufferedupdate' );
-
-	if ( !this.m_bPlayAfterBuffering )
-		return;
-
-	// when all loaders have enough buffered data, play
-	var bPlay = (this.m_loaders.length > 0);
-	var nStartPlayback = 0;
-	for ( var i = 0; i < this.m_loaders.length; i++ )
-	{
-		if ( !this.m_loaders[i].BVideoBuffered() )
-		{
-    		bPlay = false;
-    		break;
-    	}
-
-		nStartPlayback = Math.max( nStartPlayback, this.m_loaders[i].GetBufferedStart() );
-	}
-
-	if ( bPlay )
-	{
-		this.m_elVideoPlayer.play();
-		this.m_bPlayAfterBuffering = false;
-		this.m_nSeek = nStartPlayback;
-
-		// need to wait till ready state advances before setting current time
-		// bugbug - addEventListener isn't firing... polling wait below
-		var _player = this;
-		var funcInitialSeek = function()
-		{
-			if ( _player.m_elVideoPlayer.readyState == CDASHPlayer.HAVE_NOTHING )
-			{
-				setTimeout( funcInitialSeek, 50 );
-			}
-			else
-			{
-				_player.m_elVideoPlayer.currentTime = nStartPlayback;
-
-				$J( _player.m_elVideoPlayer ).trigger( 'bufferingcomplete' );
-
-				// setup events now that we are playing
-				//_player.m_elVideoPlayer.addEventListener("seeking",function() { _player.playerSeeking(_player); });
-				//_player.m_elVideoPlayer.addEventListener("seeked", function() { _player.playerSeeked(_player); });
-				_player.m_elVideoPlayer.addEventListener("waiting", function() { _player.playerWaiting(_player); });
-				_player.m_elVideoPlayer.addEventListener("playing", function() { _player.playerPlaying(_player); });
-			}
-		};
-
-		setTimeout( funcInitialSeek, 50 );
-	}
 }
 
 CDASHPlayer.prototype.OnSegmentDownloadFailed = function()
@@ -365,43 +386,9 @@ CDASHPlayer.prototype.OnSegmentDownloadFailed = function()
 	$J( this.m_elVideoPlayer ).trigger( 'downloadfailed' );
 }
 
-CDASHPlayer.prototype.playerSeeking = function(_player)
+CDASHPlayer.prototype.BIsBuffering = function()
 {
-	this.m_bIsSeeking = true;
-	_player.m_nLastSeekTime = new Date().getTime();
-
-	// seek to the correct segment for each loader
-	for (var i = 0; i < _player.m_loaders.length; i++)
-	{
-		_player.m_loaders[i].SeekToSegment( _player.m_elVideoPlayer.currentTime, false );
-	}
-}
-
-CDASHPlayer.prototype.playerSeeked = function(_player)
-{
-	_player.m_bIsSeeking = false;
-	_player.m_bIsWaiting = false;
-	_player.m_nLastSeekTime = new Date().getTime() - _player.m_nLastSeekTime;
-}
-
-CDASHPlayer.prototype.playerWaiting = function(_player)
-{
-	_player.m_bIsWaiting = true;
-}
-
-CDASHPlayer.prototype.playerPlaying = function(_player)
-{
-	_player.m_bIsWaiting = false;
-}
-
-CDASHPlayer.prototype.BIsWaiting = function()
-{
-	return this.m_bIsSeeking || this.m_bIsWaiting || this.m_elVideoPlayer.readyState == CDASHPlayer.HAVE_NOTHING;
-}
-
-CDASHPlayer.prototype.BIsSeeking = function()
-{
-	return this.m_bIsSeeking;
+	return this.m_bIsBuffering || this.m_elVideoPlayer.readyState == CDASHPlayer.HAVE_NOTHING;
 }
 
 CDASHPlayer.prototype.BIsLiveContent = function()
@@ -423,6 +410,9 @@ CDASHPlayer.prototype.GetPercentBuffered = function()
 
 	for ( var i = 0; i < this.m_loaders.length; i++ )
 	{
+		if ( this.m_loaders[i].m_bSeekInProgress )
+			return 0;
+
 		if ( this.m_loaders[i].ContainsVideo() )
 		{
 			unVideoBuffered = Math.min( this.m_nVideoBuffer * 100 / CDASHPlayer.TRACK_BUFFER_MS, 100 );
@@ -466,8 +456,31 @@ CDASHPlayer.prototype.SeekToBufferedEnd = function()
 
 CDASHPlayer.prototype.SeekTo = function( nTime )
 {
-	if (this.m_elVideoPlayer.readyState != CDASHPlayer.HAVE_NOTHING)
-		this.m_elVideoPlayer.currentTime = nTime;
+	if ( !this.BIsBuffering() )
+	{
+		var bCanSeekImmediately = true;
+		for (var i = 0; i < this.m_loaders.length; i++)
+		{
+			bCanSeekImmediately &= this.m_loaders[i].SeekToSegment( nTime, false );
+		}
+
+		if ( bCanSeekImmediately )
+		{
+			this.m_elVideoPlayer.currentTime = nTime;
+		}
+		else
+		{
+			this.SavePlaybackStateForBuffering( nTime );
+		}
+	}
+}
+
+CDASHPlayer.prototype.SavePlaybackStateForBuffering = function( nSeekTime )
+{
+	this.m_bShouldStayPaused = this.m_elVideoPlayer.paused;
+	this.m_elVideoPlayer.pause();
+	this.m_nCurrentSeekTime = nSeekTime;
+	this.m_bIsBuffering = true;
 }
 
 CDASHPlayer.prototype.GetClosedCaptionsArray = function()
@@ -565,10 +578,10 @@ CDASHPlayer.prototype.UpdateRepresentation = function ( representationIndex, bVi
 	if ( representationIndex == -1 )
 	{
 		// don't automatically shift bit rates while waiting on the player
-		if ( this.BIsWaiting() )
+		if ( this.BIsBuffering() )
 			return;
 
-		// *** Adaptive Video Change
+		// Adaptive Video Change
 		for (var i = 0; i < this.m_loaders.length; i++)
 		{
 			var newRepresentationIndex = this.m_loaders[i].GetRepresentationsCount() - 1;
@@ -632,34 +645,8 @@ CDASHPlayer.prototype.UpdateRepresentation = function ( representationIndex, bVi
 			}
 		}
 
-		// if playing, then pause and wait for buffer to fill before playing again
-		if ( !this.m_elVideoPlayer.paused )
-		{
-			this.m_bIsSeeking = true;
-			this.m_elVideoPlayer.pause();
-			var _player = this;
-			setTimeout( function() { _player.WaitForRepresentationChangeToPlay( _player ) }, CDASHPlayer.DOWNLOAD_RETRY_MS );
-		}
+		this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
 	}
-}
-
-CDASHPlayer.prototype.WaitForRepresentationChangeToPlay = function ( player )
-{
-	for (var i = 0; i < player.m_loaders.length; i++)
-	{
-		if ( player.m_loaders[i].ContainsVideo() || player.m_loaders[i].ContainsAudio() )
-		{
-			if ( player.m_loaders[i].m_bRemoveBufferState || !player.m_loaders[i].BVideoBuffered() )
-			{
-				var _player = player;
-				setTimeout( function() { _player.WaitForRepresentationChangeToPlay( _player ) }, CDASHPlayer.DOWNLOAD_RETRY_MS );
-				return;
-			}
-		}
-	}
-
-	player.m_elVideoPlayer.play();
-	player.m_bIsSeeking = false;
 }
 
 CDASHPlayer.prototype.UpdateClosedCaption = function ( closedCaptionCode )
@@ -674,8 +661,7 @@ CDASHPlayer.prototype.UpdateClosedCaption = function ( closedCaptionCode )
 
 CDASHPlayer.prototype.SetPlaybackRate = function ( unRate )
 {
-	if ( unRate > 0 && unRate < 3 )
-		this.m_elVideoPlayer.playbackRate = unRate;
+	this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate = unRate;
 }
 
 CDASHPlayer.prototype.UpdateStats = function()
@@ -806,8 +792,7 @@ CDASHPlayer.prototype.StatsBufferInfo = function()
 
 CDASHPlayer.prototype.StatsProperties = function()
 {
-	return "Error: " + ((this.m_elVideoPlayer.error) ? this.m_elVideoPlayer.error.code : "None") + ", Network: " + this.m_elVideoPlayer.networkState
-		+ ", Last Seek Time: " + (this.BIsSeeking() ? "..." : Math.max(0, this.m_nLastSeekTime) + "ms");
+	return "Error: " + ( (this.m_elVideoPlayer.error) ? this.m_elVideoPlayer.error.code : "None" ) + ", Network: " + this.m_elVideoPlayer.networkState;
 }
 
 CDASHPlayer.prototype.StatsSegmentInfo = function()
@@ -858,6 +843,7 @@ function CSegmentLoader( player, adaptationSet )
 	this.m_nNextSegment = 0;
 	this.m_nTotalSegments = Number.MAX_VALUE;
 	this.m_bRemoveBufferState = false;
+	this.m_bSeekInProgress = false;
 
 	// need to be closed
 	this.m_xhr = null;
@@ -919,6 +905,7 @@ CSegmentLoader.prototype.Close = function()
 	this.m_nNextSegment = 0;
 	this.m_nTotalSegments = Number.MAX_VALUE;
 	this.m_bRemoveBufferState = false;
+	this.m_bSeekInProgress = false;
 
 	// need to be closed
 	this.m_xhr = null;
@@ -964,7 +951,7 @@ CSegmentLoader.prototype.GetTotalSegments = function()
 	return this.m_nTotalSegments;
 }
 
-CSegmentLoader.prototype.BeginPlayback = function( unLiveEdge )
+CSegmentLoader.prototype.BeginPlayback = function( unStartTime )
 {
 	if ( !this.GetRepresentationsCount() )
 		return false;
@@ -973,8 +960,8 @@ CSegmentLoader.prototype.BeginPlayback = function( unLiveEdge )
 
 	if ( this.ContainsVideo() )
 	{
-		this.m_nNextSegment = CMPDParser.GetSegmentForTime( this.m_adaptation, unLiveEdge );
-		PlayerLog( 'Video Live edge at: ' + unLiveEdge + ', starting segment: ' + this.m_nNextSegment );
+		this.m_nNextSegment = CMPDParser.GetSegmentForTime( this.m_adaptation, unStartTime );
+		PlayerLog( 'Video Stream Starting at: ' + SecondsToTime( unStartTime / 1000 ) + ', starting segment: ' + this.m_nNextSegment );
 
 		this.ChangeRepresentationByIndex( this.GetRepresentationsCount() - 1 );
 		this.DownloadNextSegment();
@@ -983,8 +970,8 @@ CSegmentLoader.prototype.BeginPlayback = function( unLiveEdge )
 	else if ( this.ContainsAudio() && !this.ContainsVideo())
 	{
 		// alternate audio stream
-		this.m_nNextSegment = CMPDParser.GetSegmentForTime( this.m_adaptation, unLiveEdge );
-		PlayerLog( 'Audio Stream Starting at: ' + unLiveEdge + ', starting segment: ' + this.m_nNextSegment );
+		this.m_nNextSegment = CMPDParser.GetSegmentForTime( this.m_adaptation, unStartTime );
+		PlayerLog( 'Audio Stream Starting at: ' + SecondsToTime( unStartTime / 1000 ) + ', starting segment: ' + this.m_nNextSegment );
 
 		this.ChangeRepresentationByIndex( 0 );
 		this.DownloadNextSegment();
@@ -1144,7 +1131,7 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 		buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : {};
 		if ( buffered.length > 0 && (buffered.end( 0 ) - buffered.start( 0 )) > CDASHPlayer.TRACK_BUFFER_MAX_SEC )
 		{
-			var nStart = buffered.start(0);
+			var nStart = Math.max( 0, buffered.start(0) - 1 );
 			var nEnd = buffered.end(0) - CDASHPlayer.TRACK_BUFFER_MAX_SEC;
 
 			// if playback is within this range, need to advance forward
@@ -1169,6 +1156,9 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 
 CSegmentLoader.prototype.OnSourceBufferUpdateEnd = function()
 {
+	if ( this.m_nBufferUpdate == CSegmentLoader.s_BufferUpdateRemove && this.m_bSeekInProgress )
+		this.m_bSeekInProgress = false;
+
 	if ( this.m_nBufferUpdate == CSegmentLoader.s_BufferUpdateAppend )
 		this.m_player.OnSegmentDownloaded();
 
@@ -1226,6 +1216,10 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 
 	// next segment is available but buffer is full. Can wait on download
 	unDeltaMS = unAmountBuffered - CDASHPlayer.TRACK_BUFFER_MS;
+
+	if ( this.m_player.m_elVideoPlayer.playbackRate > 1.0 )
+		unDeltaMS /= this.m_player.m_elVideoPlayer.playbackRate;
+
 	if ( unAmountBuffered < ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_MS )
 	{
 		// should be room in buffer in TRACK_BUFFER_MS time for next segment
@@ -1238,9 +1232,14 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 	}
 }
 
-CSegmentLoader.prototype.BVideoBuffered = function()
+CSegmentLoader.prototype.BIsLoaderStalling = function()
 {
-	return (this.GetAmountBufferedInPlayer() >= CDASHPlayer.TRACK_BUFFER_MS);
+	return ( this.GetAmountBufferedInPlayer() < CMPDParser.GetSegmentDuration( this.m_adaptation ) && ( this.m_nNextSegment <= this.m_nTotalSegments ) );
+}
+
+CSegmentLoader.prototype.BIsLoaderBuffered = function()
+{
+	return ( this.GetAmountBufferedInPlayer() >= CDASHPlayer.TRACK_BUFFER_MS || this.m_nNextSegment > this.m_nTotalSegments );
 }
 
 CSegmentLoader.prototype.GetAmountBufferedInPlayer = function()
@@ -1299,6 +1298,8 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 	// if seeking outside of the main buffer or forced override
 	if ( nSeekTime < this.GetBufferedStart() || nSeekTime > this.GetBufferedEnd() || bForceBufferClear )
 	{
+		this.m_bSeekInProgress = true;
+
 		// Allow any current download to complete
 		if ( this.m_xhr )
 		{
@@ -1337,8 +1338,9 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 		this.m_bRemoveBufferState = true;
 		this.UpdateBuffer();
 
-		// start the download
 		this.DownloadNextSegment();
+
+		return false; // can't shift time just yet
 	}
 	else
 	{
@@ -1353,6 +1355,8 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 
 			this.ScheduleNextDownload();
 		}
+
+		return true; // can shift time now
 	}
 }
 
@@ -1815,11 +1819,11 @@ CMPDParser.GetSegmentDuration = function( adaptationSet )
 	return (adaptationSet.segmentTemplate.duration / adaptationSet.segmentTemplate.timescale) * 1000;
 }
 
-CMPDParser.GetSegmentForTime = function( adaptationSet, unLiveEdge )
+CMPDParser.GetSegmentForTime = function( adaptationSet, unTime )
 {
 	// currently only support all segments having the same duration
 	var unSegmentDuration = (adaptationSet.segmentTemplate.duration / adaptationSet.segmentTemplate.timescale) * 1000;
-	return Math.floor( unLiveEdge / unSegmentDuration ) + 1;
+	return Math.floor( unTime / unSegmentDuration ) + 1;
 }
 
 CMPDParser.prototype.GetPeriodDuration = function( unPeriod )
@@ -1851,6 +1855,8 @@ function CDASHPlayerUI( player )
 	this.m_bPlayingLiveEdge = true;
 	this.m_elVideoTitle = null;
 	this.m_elBufferingMessage = null;
+	this.m_bIsSafariBrowser = (navigator.userAgent.toLowerCase().indexOf('safari') != -1 && navigator.userAgent.toLowerCase().indexOf('chrome') == -1);
+	this.m_bIsInternetExplorer = (navigator.appVersion.toLowerCase().indexOf('trident/') != -1);
 }
 
 CDASHPlayerUI.s_overlaySrc =	'<div class="dash_overlay no_select">' +
@@ -1975,7 +1981,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 	{
 		if ( $J('.dash_closed_captions_customization').length != 0 )
 		{
-			$J( '.cc_done' ).click();
+			$J( '.cc_cancel' ).click();
 		}
 
 		$J('.settings_panel').toggle();
@@ -2086,16 +2092,13 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 		}
 
 		// customize captions link and action
-		if ( window.VTTCue )
+		$J( '.representation_captions' ).append('<div class="customize_captions_wrap"><span class="customize_captions"></span></div>');
+		$J( '.customize_captions' ).text("Caption Options");
+		$J( '.customize_captions').on('click', function()
 		{
-			$J( '.representation_captions' ).append('<div class="customize_captions_wrap"><span class="customize_captions"></span></div>');
-			$J( '.customize_captions' ).text("Caption Options");
-			$J( '.customize_captions').on('click', function()
-			{
-				_ui.ShowClosedCaptionOptions();
-				$J('.settings_panel').toggle();
-			} );
-		}
+			_ui.ShowClosedCaptionOptions();
+			$J('.settings_panel').toggle();
+		} );
 
 		_ui.InitClosedCaptionOptionDialog();
 	}
@@ -2242,7 +2245,7 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 CDASHPlayerUI.prototype.UpdateBufferingProgress = function()
 {
 	var buffMsg = $J( '#dash_video_buffering_message');
-	if ( this.m_player.BIsWaiting() && this.m_player.m_elVideoPlayer.readyState != CDASHPlayer.HAVE_NOTHING )
+	if ( this.m_player.BIsBuffering() && this.m_player.m_elVideoPlayer.readyState != CDASHPlayer.HAVE_NOTHING )
 	{
 		if ( this.m_player.GetPercentBuffered() != 100 )
 			buffMsg.text("Loading... " + this.m_player.GetPercentBuffered() + "%").show();
@@ -2310,6 +2313,7 @@ CDASHPlayerUI.prototype.TogglePlayPause = function()
 	if( elVideoPlayer.paused )
 	{
 		elVideoPlayer.play();
+		elVideoPlayer.playbackRate = this.m_player.m_nSavedPlaybackRate;
 		$J( '.play_button', this.m_elOverlay ).addClass( 'pause' );
 		$J( '.play_button', this.m_elOverlay ).removeClass( 'play' );
 	}
@@ -2391,14 +2395,13 @@ CDASHPlayerUI.prototype.ToggleMute = function( e, ele )
 CDASHPlayerUI.prototype.ToggleFullscreen = function()
 {
 	var elContainer = this.m_elOverlay[0].parentNode;
-	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen;
-	var bIsSafari = (navigator.userAgent.toLowerCase().indexOf('safari') != -1 && navigator.userAgent.toLowerCase().indexOf('chrome') == -1);
+	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement;
 
 	if( !bFullscreen )
 	{
 		if( elContainer.requestFullscreen )
 			elContainer.requestFullscreen();
-		else if( elContainer.webkitRequestFullScreen && bIsSafari )
+		else if( elContainer.webkitRequestFullScreen && this.m_bIsSafariBrowser )
 			elContainer.webkitRequestFullScreen();
 		else if( elContainer.webkitRequestFullScreen )
 			elContainer.webkitRequestFullScreen( Element.ALLOW_KEYBOARD_INPUT );
@@ -2427,12 +2430,12 @@ CDASHPlayerUI.prototype.ToggleFullscreen = function()
 CDASHPlayerUI.prototype.OnFullScreenChange = function()
 {
 	var _ui = this;
-	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen;
+	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement;
 	if ( bFullscreen )
 	{
 		$J( document ).on( 'keydown', function( e )
 		{
-			var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen;
+			var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement;
 			if ( e.keyCode == 27 && bFullscreen )
 				_ui.ToggleFullscreen();
 		});
@@ -2544,87 +2547,100 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionDialog = function()
 	var ccDialog = $J( '.dash_closed_captions_customization' );
 	ccDialog.append('<div class="cc_title">Caption Options</div>');
 
-	this.AddClosedCaptionDropDown(ccDialog, 'Font Family:', 'font-family', [
-												'Monospaced Serif|FreeMono, Courier New, Courier, monospace; font-variant: normal',
-												'Proportional Serif|Georgia, Times New Roman, serif; font-variant: normal',
-												'Monospaced Sans-Serif|Lucida Console, Monaco, DejaVu Sans Mono, Liberation Mono, monospace; font-variant: normal',
-												'Proportional Sans-Serif|Helvetica, Arial, sans-serif; font-variant: normal',
-												'Casual|Comic Sans MS, Segoe Print, Papyrus, Purisa, casual; font-variant: normal',
-												'Cursive|Monotype Corsiva, Apple Chancery, Segoe Script, ITC Zapf Chancery, URW Chancery L, Brush Script MT, cursive; font-variant: normal',
-												'Small Caps|Helvetica, Arial, sans-serif; font-variant: small-caps'
-												], 3 );
+	// Steam/Chrome options we present, Safari captions options are controlled at the OS level, IE in the browser Internet Options
+	if ( this.m_bIsSafariBrowser )
+	{
+		ccDialog.append('<div class="cc_style_instructions"><p>For Safari</p><br/>\n                                                 <ol>\n                                                     <li>From the Apple Menu, select System Preferences</li>\n                                                     <li>Click Accessibility</li>\n                                                     <li>Click Captions</li>\n                                                     <li>Select a pre-defined style or create a custom style by clicking +</li>\n                                                 </ol></div>');
+	}
+	else if ( this.m_bIsInternetExplorer )
+	{
+		ccDialog.append('<div class="cc_style_instructions"><p>For Internet Explorer</p><br/>\n                                                        <ol>\n                                                           <li>From the Tools Menu, select Internet options</li>\n                                                           <li>Click Accessibility</li>\n                                                           <li>Click Captions</li>\n                                                           <li>Turn on Ignore default caption fonts and colors</li>\n                                                           <li>Customize the font, font style and color as desired</li>\n                                                           <li>Click OK, OK, OK</li>\n                                                           <li>Restart the movie for the changes to take effect</li>\n                                                        </ol></div>');
+	}
+	else
+	{
+		this.AddClosedCaptionDropDown(ccDialog, 'Font Family:', 'font-family', [
+													'Monospaced Serif|FreeMono, Courier New, Courier, monospace; font-variant: normal',
+													'Proportional Serif|Georgia, Times New Roman, serif; font-variant: normal',
+													'Monospaced Sans-Serif|Lucida Console, Monaco, DejaVu Sans Mono, Liberation Mono, monospace; font-variant: normal',
+													'Proportional Sans-Serif|Helvetica, Arial, sans-serif; font-variant: normal',
+													'Casual|Comic Sans MS, Segoe Print, Papyrus, Purisa, casual; font-variant: normal',
+													'Cursive|Monotype Corsiva, Apple Chancery, Segoe Script, ITC Zapf Chancery, URW Chancery L, Brush Script MT, cursive; font-variant: normal',
+													'Small Caps|Helvetica, Arial, sans-serif; font-variant: small-caps'
+													], 3 );
 
-	this.AddClosedCaptionDropDown(ccDialog, 'Font Color:', 'color', [
-												'White|rgba(255,255,255,1)',
-												'Yellow|rgba(255,255,0,1)',
-												'Green|rgba(0,255,0,1)',
-												'Cyan|rgba(0,255,255,1)',
-												'Blue|rgba(0,0,255,1)',
-												'Magenta|rgba(255,0,255,1)',
-												'Red|rgba(255,0,0,1)',
-												'Black|rgba(0,0,0,1)',
-												], 0 );
+		this.AddClosedCaptionDropDown(ccDialog, 'Font Color:', 'color', [
+													'White|rgba(255,255,255,1)',
+													'Yellow|rgba(255,255,0,1)',
+													'Green|rgba(0,255,0,1)',
+													'Cyan|rgba(0,255,255,1)',
+													'Blue|rgba(0,0,255,1)',
+													'Magenta|rgba(255,0,255,1)',
+													'Red|rgba(255,0,0,1)',
+													'Black|rgba(0,0,0,1)',
+													], 0 );
 
-	this.AddClosedCaptionDropDown(ccDialog, 'Font Size:', 'font-size', [
-												'50%|50%',
-												'75%|75%',
-												'90%|90%',
-												'100%|100%',
-												'125%|125%',
-												'150%|150%',
-												'200%|200%',
-												], 3 );
+		this.AddClosedCaptionDropDown(ccDialog, 'Font Size:', 'font-size', [
+													'50%|50%',
+													'75%|75%',
+													'90%|90%',
+													'100%|100%',
+													'125%|125%',
+													'150%|150%',
+													'200%|200%',
+													], 3 );
 
-	this.AddClosedCaptionDropDown(ccDialog, 'Font Shadow:', 'text-shadow', [
-												'None|none',
-												'Drop Shadow|2px 2px 4px #000000',
-												'Raised|0px 2px 1px #000000',
-												'Depressed|0px -1px 0px #000000',
-												'Uniform|0 0 2px #000000'
-												], 0 );
+		this.AddClosedCaptionDropDown(ccDialog, 'Font Shadow:', 'text-shadow', [
+													'None|none',
+													'Drop Shadow|2px 2px 4px #000000',
+													'Raised|0px 2px 1px #000000',
+													'Depressed|0px -1px 0px #000000',
+													'Uniform|0 0 2px #000000'
+													], 0 );
 
-	this.AddClosedCaptionDropDown(ccDialog, 'Line Height:', 'line-height', [
-												'Automatic|inherit',
-												'100%|100%',
-												'105%|105%',
-												'110%|110%',
-												'115%|115%',
-												'120%|120%',
-												'125%|125%',
-												'130%|130%',
-												'140%|140%',
-												'150%|150%'
-												], 0 );
+		this.AddClosedCaptionDropDown(ccDialog, 'Line Height:', 'line-height', [
+													'Automatic|inherit',
+													'100%|100%',
+													'105%|105%',
+													'110%|110%',
+													'115%|115%',
+													'120%|120%',
+													'125%|125%',
+													'130%|130%',
+													'140%|140%',
+													'150%|150%'
+													], 0 );
 
-	this.AddClosedCaptionDropDown(ccDialog, 'Background Color:', 'background-color', [
-												'White|rgba(255,255,255,0.8)',
-												'Yellow|rgba(255,255,0,0.8)',
-												'Green|rgba(0,255,0,0.8)',
-												'Cyan|rgba(0,255,255,0.8)',
-												'Blue|rgba(0,0,255,0.8)',
-												'Magenta|rgba(255,0,255,0.8)',
-												'Red|rgba(255,0,0,0.8)',
-												'Black|rgba(0,0,0,0.8)',
-												'None|Transparent'
-												], 7 );
+		this.AddClosedCaptionDropDown(ccDialog, 'Background Color:', 'background-color', [
+													'White|rgba(255,255,255,0.8)',
+													'Yellow|rgba(255,255,0,0.8)',
+													'Green|rgba(0,255,0,0.8)',
+													'Cyan|rgba(0,255,255,0.8)',
+													'Blue|rgba(0,0,255,0.8)',
+													'Magenta|rgba(255,0,255,0.8)',
+													'Red|rgba(255,0,0,0.8)',
+													'Black|rgba(0,0,0,0.8)',
+													'None|Transparent'
+													], 7 );
 
-	this.AddClosedCaptionDropDown(ccDialog, 'Opacity:', 'opacity', [
-												'25%|.25',
-												'50%|.5',
-												'75%|.75',
-												'100%|1.0'
-												], 3 );
+		this.AddClosedCaptionDropDown(ccDialog, 'Opacity:', 'opacity', [
+													'25%|.25',
+													'50%|.5',
+													'75%|.75',
+													'100%|1.0'
+													], 3 );
 
-	this.AddClosedCaptionDropDown(ccDialog, 'Text Wrap:', 'white-space', [
-												'Default|pre-line',
-												'Minimize|normal'
-												], 0 );
+		this.AddClosedCaptionDropDown(ccDialog, 'Text Wrap:', 'white-space', [
+													'Default|pre-line',
+													'Minimize|normal'
+													], 0 );
+
+		ccDialog.append('<div class="cc_cancel">Cancel</div>');
+
+		// now get any saved values
+		CDASHPlayerUI.LoadClosedCaptionOptions();
+	}
 
 	ccDialog.append('<div class="cc_done">Done</div>');
-	ccDialog.append('<div class="cc_cancel">Cancel</div>');
-
-	// now get any saved values
-	CDASHPlayerUI.LoadClosedCaptionOptions();
 
 	$J( '.cc_cancel' ).on('click', function()
 	{
