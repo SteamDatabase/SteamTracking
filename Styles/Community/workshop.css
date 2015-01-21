@@ -688,17 +688,12 @@ h3 {
 	text-align: left;
 	margin: 0px auto;
 	padding: 8px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/notification_green.png');
-	background-repeat: repeat-x;
 	background-color: #6b9731;
-	color: #ffffff;
+	color: #DCF769;
 	font-size: 14px;
-	border-color: #42522d;
-	border-style: solid;
-	border-width: 2px;
 	margin-top: 8px;
 	margin-bottom: 8px;
-	margin-right: 17px;
+	box-shadow: 0px 0px 5px #000;
 }
 
 .needsFinalizeNotification .title
@@ -2383,17 +2378,31 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	margin-right: 10px;
 }
 
+#splits,
+#ServiceProviders {
+	background: rgba( 145, 134, 101, 0.5);
+}
+#splits .sectionTitle,
+#ServiceProviders .sectionTitle {
+	font-size: 18px;
+	font-family: "Motiva Sans Light", Arial, Tahoma, Sans-serif;
+	color: #caba8d;
+	padding: 8px;
+}
+
 .workshopItemSplitsCollapsed {
 
 	position: relative;
 	padding: 5px 10px 5px 10px;
 	margin-top: 10px;
 	margin-bottom: 20px;
-	background-color: rgba( 84, 133, 183, 0.2);
+	background-color: rgba( 202, 186, 141, 0.8);
+	color: #576e03;
 	cursor: pointer;
 }
 .workshopItemSplitsCollapsed:hover {
-	background-color: rgba( 117, 186, 255, 0.3);
+	background-color: rgba( 202, 186, 141, 1);
+	color: #ffffff;
 }
 
 .workshopItemSplits h1 {
@@ -2403,15 +2412,22 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .workshopItemSplits p {
 	font-size: 13px;
-	color: #b1b1b1;
+	color: #413c2f;
 }
+	.workshopItemSplits p a {
+		text-decoration: underline;
+		color: #413c2f;
+	}
+	.workshopItemSplits p a:hover {
+		color: #ffffff;
+	}
 
 .splits_expand_btn
 {
 	height: 16px;
 	width: 16px;
 	padding: 0px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/expand_ico.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/expand_ico.png?v=1');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -2435,16 +2451,9 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 .workshopItemSplits {
 	position: relative;
 	padding: 16px 16px 16px 16px;
-	margin-top: 10px;
 	margin-bottom: 30px;
 	min-height: 100px;
-	background-color: rgba( 84, 133, 183, 0.2);
-}
-
-.workshopItemSplits.needsAction
-{
-	border-width: 1px;
-	border-color: #81a313;
+	background-color: rgba( 202, 186, 141, 0.5);
 }
 
 .splitsHR {
@@ -2484,11 +2493,13 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 .workshopSplitPercentage {
 	float: left;
 	margin-left: 10px;
+	color: #413c2f;
 }
 
 .workshopSplitAcceptedDate {
 	float: left;
 	margin-left: 25px;
+	color: #413c2f;
 }
 
 .workshopSplitControls {

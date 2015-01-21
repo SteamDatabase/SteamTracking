@@ -2392,15 +2392,20 @@ CDASHPlayerUI.prototype.ToggleFullscreen = function()
 {
 	var elContainer = this.m_elOverlay[0].parentNode;
 	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen;
+	var bIsSafari = (navigator.userAgent.toLowerCase().indexOf('safari') != -1 && navigator.userAgent.toLowerCase().indexOf('chrome') == -1);
 
 	if( !bFullscreen )
 	{
 		if( elContainer.requestFullscreen )
 			elContainer.requestFullscreen();
+		else if( elContainer.webkitRequestFullScreen && bIsSafari )
+			elContainer.webkitRequestFullScreen();
 		else if( elContainer.webkitRequestFullScreen )
 			elContainer.webkitRequestFullScreen( Element.ALLOW_KEYBOARD_INPUT );
 		else if( elContainer.mozRequestFullScreen )
 			elContainer.mozRequestFullScreen();
+		else if( elContainer.msRequestFullscreen )
+			elContainer.msRequestFullscreen();
 
 		$J( elContainer ).addClass( 'fullscreen' );
 	}
@@ -2412,6 +2417,8 @@ CDASHPlayerUI.prototype.ToggleFullscreen = function()
 			document.webkitCancelFullScreen();
 		else if( document.mozCancelFullScreen )
 			document.mozCancelFullScreen();
+		else if( document.msExitFullscreen )
+			document.msExitFullscreen();
 
 		$J( elContainer ).removeClass( 'fullscreen' );
 	}

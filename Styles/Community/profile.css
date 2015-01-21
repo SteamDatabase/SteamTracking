@@ -1106,8 +1106,8 @@ a.popup_menu_item:hover h4 {
 .commentthread_header, .commentthread_footer {
 	border-bottom: none;
 	border-top: none;
-	background-color: #1e1e1f;
-	color: #626467;
+	background-color: rgba( 0, 0, 0, 0.4 );
+	color: #898A8C;
 
 	padding: 0px 4px;
 	margin-bottom: 3px;

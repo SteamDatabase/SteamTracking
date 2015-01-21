@@ -140,7 +140,7 @@
 	text-decoration: none !important;
 	color: #ebebeb !important;
 
-	background: #2c2c2c;	}
+	background: rgba( 0, 0, 0, 0.4);	}
 
 	.btn_grey_grey > span {
 		border-radius: 2px;
@@ -153,7 +153,7 @@
 	text-decoration: none !important;
 	color: #000 !important;
 
-	background: #97C0E3;	}
+	background: #7bb7e3;	}
 
 	.btn_grey_grey:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
 		background: transparent;			}
