@@ -17,11 +17,11 @@
 {
 	float: left;
 	width: 830px;
+	margin-top: -5px;
 }
 
 body.v6 h2.curator_name
 {
-	padding-top: 10px;
     font-family: "Motiva Sans", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
@@ -29,6 +29,7 @@ body.v6 h2.curator_name
     font-size: 16px;
     color: #8f98a0;
     font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	margin-top: 5px;
 }
 .curator_desc
 {
@@ -38,7 +39,6 @@ body.v6 h2.curator_name
 
 .follow_controls
 {
-	padding-top: 10px;
 	float: right;
 	text-align: right;
 	width: 250px;
@@ -94,7 +94,7 @@ body.v6 h2.curator_name
 	background-color: #1d2a3a;
 	padding: 5px;
 	padding-left: 10px;
-	color: #62696e;
+	color: #61686D;
     font-size: 11px;
 }
 .highlighted_recommendation_stat
