@@ -170,6 +170,7 @@ function MessageWindowOpener( msg )
 {
 		try {
 		window.opener.postMessage( msg, 'http://steamcommunity.com/' );
+		return;
 	} catch ( e ) {}
 	try {
 		window.opener.postMessage( msg, 'https://steamcommunity.com/' );
@@ -350,6 +351,11 @@ CTradeOfferStateManager = {
 		if ( this.m_nPollIntervalId )
 		{
 			clearInterval( this.m_nPollIntervalId );
+		}
+
+		if ( $J('#trade_confirm_captchaentry').length == 0 )
+		{
+			return;
 		}
 
 		if ( this.m_Recaptcha == null )
@@ -556,10 +562,21 @@ CTradeOfferStateManager = {
 					xhrFields: { withCredentials: true }
 				}
 			).done( function( data ) {
-				ShowAlertDialog(
-					'Trade Offer Sent',
-					'Success!  Your trade offer has been sent to %s.<br><br>You can manage your outstanding trade offers from your Sent Trade Offers page.'.replace( /%s/, g_strTradePartnerPersonaName )
-				).always( function() {
+				var bNeedsEmailConfirmation = data && data.needs_email_confirmation;
+
+				var Modal;
+				if ( bNeedsEmailConfirmation )
+					Modal = ShowAlertDialog(
+						'Additional confirmation needed',
+						'In order to send this trade offer, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.'.replace( /%s/, data.email_domain )
+					);
+				else
+					Modal = ShowAlertDialog(
+						'Trade Offer Sent',
+						'Success!  Your trade offer has been sent to %s.<br><br>You can manage your outstanding trade offers from your Sent Trade Offers page.'.replace( /%s/, g_strTradePartnerPersonaName )
+					);
+
+				Modal.always( function() {
 						EndTradeOffer( UserYou.GetProfileURL() + '/tradeoffers/sent/', true );
 				} );
 			}).fail( function( jqXHR ) {
@@ -590,21 +607,37 @@ CTradeOfferStateManager = {
 				}
 			).done( function( data ) {
 
-				try {
+				var bNeedsEmailConfirmation = data && data.needs_email_confirmation;
+
+				if ( bNeedsEmailConfirmation )
+				{
+					ShowAlertDialog(
+						'Additional confirmation needed',
+						'In order to complete this trade, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.'.replace( /%s/, data.email_domain )
+					).always( function() {
+						if ( window.opener )
+							window.close();
+						else
+							EndTradeOffer( UserYou.GetProfileURL() + '/tradeoffers/' );
+					});
+
+					if ( window.opener && window.opener.postMessage )
+					{
+						MessageWindowOpener( { type: 'await_confirm', tradeofferid: nTradeOfferID } );
+					}
+				}
+				else
+				{
 					if ( window.opener && window.opener.postMessage )
 					{
 						MessageWindowOpener( { type: 'accepted', tradeofferid: nTradeOfferID } );
 					}
-				}
-				catch ( e )
-				{
-					// maybe someone else opened the popup?
-				}
 
-				if ( data.tradeid )
-					window.location = 'https://steamcommunity.com/trade/' + data.tradeid + '/receipt';
-				else
-					EndTradeOffer( UserYou.GetProfileURL() + '/inventory/' );	//?? not sure
+					if ( data.tradeid )
+						window.location = 'https://steamcommunity.com/trade/' + data.tradeid + '/receipt';
+					else
+						EndTradeOffer( UserYou.GetProfileURL() + '/inventory/' );	//?? not sure
+				}
 			}).fail( function( jqXHR ) {
 				var data = $J.parseJSON( jqXHR.responseText );
 				g_bConfirmPending = false;

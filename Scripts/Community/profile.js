@@ -344,6 +344,13 @@ function ManageFriendsRemove( $Form )
 		'Are you sure you want to remove these %s friends?' + ' ' + 'These players will no longer appear in your friends list and you will not be able to communicate with them.');
 }
 
+function ManageFollowingRemove( $Form )
+{
+	ManageFriendsConfirmBulkAction( $Form, 'removefollowing', 'Remove from your following list?',
+		'Are you sure you want to stop following this person?',
+		'Are you sure you want to stop following %s people?');
+}
+
 
 
 

@@ -75,12 +75,13 @@ a.hoverunderline:hover {
 	text-decoration: underline;
 }
 
-a.underlinedLink {
+a.underlinedLink, span.underlinedLink {
 	color: #ebebeb;
 	text-decoration: underline;
+	cursor: pointer;
 }
 
-a.whiteLink:hover, .whiteLink:hover, a.linkStandard:hover, a.linkTitle:hover, a.underlinedLink:hover {
+a.whiteLink:hover, .whiteLink:hover, a.linkStandard:hover, a.linkTitle:hover, a.underlinedLink:hover, span.underlinedLink:hover {
 	color: #66C0F4;
 	text-decoration: none;
 	cursor: pointer;

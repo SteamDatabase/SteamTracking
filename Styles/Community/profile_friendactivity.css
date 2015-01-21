@@ -26,9 +26,19 @@ a:hover {
 
 div#headerSearch.friend_activity_header_search {
 	margin-top: 22px;
-	width: 280px;
+	width: 268px;
 	outline: none;
-	background-image: url(https://steamcommunity-a.akamaihd.net/public/images/community/searchbox_friendactivity_bg.gif);
+	background-color: rgba( 0, 0, 0, 0.4 );
+	border-radius: 4px;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-right: 1px solid #354357;
+	border-bottom: 1px solid #354357;
+	background-image: none;
+}
+
+div#headerSearch.friend_activity_header_search #searchInputBoxNew {
+	background-color: transparent;
 }
 
 #blotter_page
@@ -51,12 +61,12 @@ div#headerSearch.friend_activity_header_search {
 
 .friend_activity_header span {
 	font-size: 10px;
-	margin-right: 14px;
+	margin-right: 17px;
 	margin-top: 4px;
 }
 
 .friend_activity_header a {
-	color: #8b8b8a;
+	color: #8f98a0;
 }
 
 .friend_activity_header a:hover {
@@ -75,6 +85,7 @@ div#headerSearch.friend_activity_header_search {
 {
 	width: 662px;
 	float: left;
+	margin-top: 6px;
 }
 
 #blotter_nofriends_block {
@@ -128,10 +139,7 @@ div#headerSearch.friend_activity_header_search {
 }
 
 .blotter_eventsblock {
-	background: rgba(15,15,14,.36);
-	border: 1px solid #000;
-	border-radius: 2px;
-	box-shadow: 1px 1px 0 0 #2f2f30;
+	background: rgba( 0, 0, 0, 0.4 );
 	padding: 4px;
 	margin-top: 20px;
 }
@@ -158,8 +166,8 @@ div#headerSearch.friend_activity_header_search {
 
 .friends_launch_area
 {
-	/*background: #171717 -webkit-gradient(linear, center top, center bottom, from(rgb(34, 34, 34)), to(rgb(32, 42, 48)));*/
-	padding: 6px 10px 0;
+
+	padding: 6px 0px 0px 10px;
 	color: darkGray;
 	/*border: 1px solid #000000;*/
 	font-size: 12px;
@@ -171,14 +179,13 @@ div#headerSearch.friend_activity_header_search {
 	font-size: 26px;
 	font-weight: normal;
 }
-
+.friends_add_block {
+	padding: 10px;
+	background: rgba( 0, 0, 0, 0.4 );
+	margin-bottom: 8px;
+}
 .friends_link_block
 {
-	background-color: #3a3a3a;
-	border-color: #000000;
-	border-style: solid;
-	border-radius: 1px;
-	border-width: 1px;
 	min-height: 32px;
 	margin-bottom: 8px;
 	color: #dfdfdf;
@@ -198,6 +205,9 @@ div#headerSearch.friend_activity_header_search {
 {
 	padding-top: 10px;
 	margin-left: 36px;
+}
+.profile_add_friends_title {
+	color: #8f98a0;
 }
 
 .friends_link_block:hover
@@ -220,7 +230,7 @@ div#headerSearch.friend_activity_header_search {
 	min-height: 32px;
 	margin-bottom: 8px;
 	color: #dfdfdf;
-	padding: 6px;
+	padding: 10px;
 }
 
 .profile_button_icon
@@ -251,10 +261,15 @@ a.nohover, a.nohover:hover
 
 .profileFriendSearchBox {
 	position: relative;
-	border: 1px solid #000000;
-	margin: 12px 6px 6px 6px;
-	background-color: #3a3a3a;
-	box-shadow: inset 0px 0px 5px #171717;
+	margin: 12px 0px 6px 0px;
+	padding: 2px;
+	font-size: 12px;
+	background-color: rgba( 84, 133, 183, 0.2);
+	border-radius: 4px;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-right: 1px solid #354357;
+	border-bottom: 1px solid #354357;
 }
 
 #profileFriendSearchInputBox {
@@ -272,7 +287,7 @@ a.nohover, a.nohover:hover
 
 #profileFriendSearchSubmitImg {
 	position: absolute;
-	top: 0px;
+	top: 2px;
 	right: 0px;
 	margin: 2px;
 	border: none;
@@ -297,7 +312,8 @@ a.nohover, a.nohover:hover
 }
 
 .profile_menu_item {
-	height: 22px;
+	height: 25px;
+	font-size: 14px;
 }
 
 .profile_menu_text {
@@ -310,11 +326,6 @@ a.nohover, a.nohover:hover
 }
 
 .profile_group_block {
-	background-color: #3a3a3a;
-	border-style: solid;
-	border-radius: 1px;
-	border: 1px solid #000;
-	min-height: 32px;
 	margin-bottom: 8px;
 	color: #dfdfdf;
 	padding: 6px;
@@ -349,21 +360,21 @@ a.nohover, a.nohover:hover
 
 /* status posting */
 .blotter_status_entry .commentthread_entry {
-	background-color: #3a3a3a;
 	margin-bottom: 25px;
-	border: 1px solid #4d4d4d;
 	padding-top:10px;
 	padding-right:12px;
 	/*border-bottom: 1px solid #333333;*/
 }
 
 .blotter_status_entry .commentthread_entry_quotebox {
-	background-color: #565656;
-	border: 1px solid #262626;
-	border-radius: 0px;
 	padding: 7px 7px 9px 7px;
-	box-shadow: 1px 1px 0 0 #5b5b5b;
-
+	font-size: 12px;
+	background-color: rgba( 0, 0, 0, 0.4 );
+	border-radius: 4px;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-right: 1px solid #354357;
+	border-bottom: 1px solid #354357;
 	
 }
 
@@ -582,33 +593,16 @@ a.nohover, a.nohover:hover
 .blotter_block {
 	margin-bottom: 25px;
 	word-wrap: break-word;
-	background-color: #0d0d0d;
-	border: 1px solid #3a3a3a;
+
+	border: 1px transparent;
 }
 
-/* recommendations block */
-.blotter_recommendation
-{
-	background-color: #1a1c1f;
-}
 
-.blotter_recommendation_content
-{
-	font-size: 13px;
-	padding: 8px;
-	text-align: left;
-
-}
-
-.blotter_recommendation_content img
-{
-	margin-right: 6px;
-}
 
 
 /* user status block */
 .blotter_userstatus {
-	background-color: #0d0d0d;
+
 }
 
 .blotter_userstatus_content {
@@ -616,11 +610,10 @@ a.nohover, a.nohover:hover
 	padding: 10px;
 	text-align: left;
 	font-family: font-family: Arial, Helvetica, Verdana, sans-serif;
-	background-color: #1e1e1e;
-	min-height: 30px;
+	min-height: 60px;
 	overflow: hidden;
 	word-wrap: break-word;
-	color: #8C8C8C;
+	color: #c6d4df;
 }
 
 .blotter_user_status_delete {
@@ -655,15 +648,18 @@ a.nohover, a.nohover:hover
 
 .blotter_group_announcement_header
 {
-	min-height: 84px;
+	min-height: 76px;
 	padding-left: 86px;
 	position: relative;
-	background-color: #3E3D3D;
+	border-bottom: 1px solid #2e3a4a;
+	background: rgba( 0, 0, 0, 0.2 );
+
 }
 
 .blotter_group_announcement_header_ogg
 {
-	background-color: #3e3d3d;	
+	border-bottom: 1px solid #2e3a4a;
+	background: rgba( 0, 0, 0, 0.2 );
 	min-height: 88px;
 	padding-left: 210px;
 	position: relative;
@@ -687,8 +683,7 @@ a.nohover, a.nohover:hover
 	padding-left: 12px;
 	text-align: left;
 	font-family: Arial, Helvetica, Verdana, sans-serif;
-	color: #bdbcbb;
-	background-color: #1e1e1e;
+	color: #c6d4df;
 	min-height: 30px;
 	overflow: hidden;
 	word-wrap: break-word;
@@ -720,7 +715,7 @@ a.nohover, a.nohover:hover
 /* DAILY ROLLUP block */
 .blotter_daily_rollup
 {
-	background-color: #0d0d0d;
+	background-color: rgba( 0, 0, 0, 0.4 );
 	text-align: left;
 	padding-left: 10px;
 	padding-bottom: 8px;
@@ -818,16 +813,16 @@ a.nohover, a.nohover:hover
 	/*margin-bottom: 4px;
 	border-bottom: 1px solid #333333;
 	background-color: #1a1c1f;*/
-	
+
 }
 
 .blotter_screenshot_image
 {
 	position: relative; /* since we are overlapping it with extras */
 	min-height: 200px;
-	background-color: #1e1e1e;
-	margin-top: 1px;
-	
+	background-color: rgba( 0, 0, 0, 0.5 );
+	padding-left: 1px;
+	padding-top: 2px;
 }
 
 .blotter_screenshots_metadata
@@ -849,7 +844,7 @@ a.nohover, a.nohover:hover
 	padding: 4px 6px 8px 6px;
 	font-size: 14px;
 	color: #7cc5fb;
-	background-color: #1e1e1e;
+
 }
 
 .blotter_screenshot_fullscreen
@@ -913,7 +908,7 @@ a.nohover, a.nohover:hover
 .blotter_viewallcomments_container {
 	/*margin: 6px 0px 0px 7px;*/
 	padding: 10px 0px 0px 6px;
-	background-color: #0d0d0d;
+
 }
 
 .blotter_viewallcomments_container a {
@@ -940,7 +935,7 @@ a.nohover, a.nohover:hover
 .blotter_screenshot_gallery_image_selected
 {
 	float: left;
-	border: 3px solid #999999;
+	border: 3px solid #c6d4df;
 }
 
 img.movie_thumb {
@@ -963,8 +958,12 @@ img.movie_thumb {
 /* blotter videos */
 .blotter_videopublished
 {
-	background-color: #1a1c1f;
-	border-bottom: 1px solid #333333;
+
+}
+.blotter_video_player {
+	background-color: rgba( 0, 0, 0, 0.5 );
+	padding-left: 1px;
+	padding-top: 2px;
 }
 
 .blotter_videopublished .movieFrame
@@ -984,7 +983,6 @@ img.movie_thumb {
 }*/
 
 .blotter_gamepurchase_content {
-	background-color: #1e1e1e;
 	height: 88px;
 	padding: 10px 0px 2px 6px;
 	overflow: hidden;
@@ -1020,7 +1018,6 @@ img.movie_thumb {
 }
 
 .blotter_gamepurchase_details {
-	background-color: #1e1e1e;
 	font-size: 12px;
 	padding: 0 6px 6px 10px;
 	color: #8b8b8a;
@@ -1029,7 +1026,7 @@ img.movie_thumb {
 /* blotter workshop items */
 .blotter_workshopitempublished
 {
-	background-color: #1e1e1e;
+
 }
 
 .blotter_workshopitem
@@ -1041,8 +1038,7 @@ img.movie_thumb {
 
 .blotter_workshopitem.greenlight
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_greenlight_blotter.jpg?v=2' );
-	background-color: #2C2C2C;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_greenlight_blotter.png?v=2' );
 }
 
 .blotter_workshopitem.guide
@@ -1057,7 +1053,7 @@ img.movie_thumb {
 {
 	position: relative;
 	background-image: none;
-	background-color: #2C2C2C;
+	margin-bottom: 6px;
 }
 
 .blotter_workshopitem_preview img
@@ -1122,7 +1118,7 @@ img.movie_thumb {
 	padding-bottom: 4px;
 	padding-right: 14px;
 	font-size: 14px;
-	color: #8c8c8c;
+	color: #c6d4df;
 	overflow: hidden;
 	
 }
@@ -1168,79 +1164,86 @@ img.movie_thumb {
 	position: relative;
 	padding: 6px;
 	/*margin-top: 2px;*/
-	background-color: #3e3d3d;
+	/*background-color: #3e3d3d;*/
 	min-height: 40px;
 	font-size: 15px;
+	background: rgba( 0, 0, 0, 0.2 );
+	border-bottom: 1px solid #2e3a4a;
+}
+.blotter_screenshot>.blotter_author_block,
+.blotter_videopublished>.blotter_author_block{
+	border-bottom: 1px transparent;
 }
 
 .blotter_avatar_holder
 {
-	float: left;
-	margin-right: 6px;
+float: left;
+margin-right: 6px;
 }
 
 .blotter_comment_thread
 {
-	background-color: #0d0d0d;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-top: 1px solid #121b27;
 }
 
 .blotter_comment_thread_showall_container
 {
-	background-color: #2c2c2c;
-	padding-right: 4px;
-	padding-bottom: 3px;
-	padding-top: 3px;
-	border-color: #1b1b1b;
-	border-radius: 2px;
+background-color: #2c2c2c;
+padding-right: 4px;
+padding-bottom: 3px;
+padding-top: 3px;
+border-color: #1b1b1b;
+border-radius: 2px;
 }
 
 a.blotter_comment_thread_showall
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/comment_quoteicon.png' );
-	background-repeat: no-repeat;
-	background-position: left center;
-	display: inline-block;
-	height: 16px;
-	margin-left: 6px;
-	padding-left: 6px;
-	margin-bottom: 6px;
+background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/comment_quoteicon.png' );
+background-repeat: no-repeat;
+background-position: left center;
+display: inline-block;
+height: 16px;
+margin-left: 6px;
+padding-left: 6px;
+margin-bottom: 6px;
 }
 
 a.blotter_comment_thread_showall span
 {
-	display: inline;
-	line-height: 16px;
-	padding: 12px 4px 2px 18px;
-	font-size: 12px;
+display: inline;
+line-height: 16px;
+padding: 12px 4px 2px 18px;
+font-size: 12px;
 }
 
 .blotter_comment_thread .commentthread_area {
-	padding-left: 2px;
-	padding-right: 15px;
+padding-left: 2px;
+padding-right: 15px;
+
 }
 
 .blotter_comment_thread .commentthread_entry {
-	background-color: transparent;
-	padding: 0px 0px 16px 6px;
-	min-height: 0;
+background-color: transparent;
+padding: 0px 0px 16px 6px;
+min-height: 0;
 }
 
 .blotter_comment_thread .commentthread_entry_quotebox, .blotter_comment_thread .commentthread_textarea
 {
-	background-color: #1e1e1e;
 	font-size: 12px;
 }
 
 .blotter_comment_thread .commentthread_entry_submitlink {
-	padding-top: 10px;
+padding-top: 10px;
 }
 
 .blotter_status_entry .commentthread_textarea:-moz-placeholder{
-	color: #8c8885;
+color: #8c8885;
 }
 
 .blotter_status_entry .commentthread_textarea::-webkit-input-placeholder{
-	color: #8c8885;
+color: #8c8885;
 }
 
 /* turn off some comment thread features */
@@ -1274,8 +1277,12 @@ a.blotter_comment_thread_showall span
 	border-radius: 0;
 	padding: 4px 6px 4px 6px;
 	font-size: 12px;
-	
-
+	background-color: rgba( 0, 0, 0, 0.4 );
+	border-radius: 4px;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-right: 1px solid #354357;
+	border-bottom: 1px solid #354357;
 	
 }
 
@@ -1287,7 +1294,7 @@ a.blotter_comment_thread_showall span
 }
 
 .nickname_block {
-	color: #828282;
+	color: #61696d;
 }
 
 #friendactivity_right_column .panel
@@ -1318,10 +1325,9 @@ a.blotter_comment_thread_showall span
 
 #friendactivity_right_column .box {
 	/*background-color: #3a3a3a;*/
-	background: rgba(15,15,14,.36);
-	border: 1px solid #000;
-	border-radius: 2px;
-	box-shadow: 1px 1px 0 0 #2f2f30;
+	background: rgba( 0, 0, 0, 0.4 );
+
+
 }
 
 .highlight_strip_bg {
@@ -1391,7 +1397,7 @@ a.blotter_comment_thread_showall span
 div.slider {
 	height: 13px;
 	position: relative;
-	background-color:#323232;
+	background-color: rgba( 0, 0, 0, 0.2 );
 }
 
 div.slider div.handle {
@@ -1402,9 +1408,7 @@ div.slider div.handle {
 	height: 13px;
 	cursor: pointer;
 
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/control_slider.png' );
-	background-repeat: no-repeat;
-	background-position: left;
+	background-color: rgba( 0, 0, 0, 0.5 );
 }
 
 div.slider div.handle:hover {
@@ -1432,8 +1436,8 @@ div.slider div.handle:hover {
 }
 
 .blotter_control_container {
-	padding: 10px 6px 10px 6px;
-	background-color: #1e1e1e;
+	padding: 4px 6px 10px 6px;
+	/*background-color: #1e1e1e;*/
 }
 
 .blotter_control_container .btn_grey_grey {
@@ -1563,7 +1567,7 @@ div.slider div.handle:hover {
 }
 
 .webchat_launch {
-	padding-bottom: 14px;
+
 }
 
 .webchat_launch .btn_medium_tall {
@@ -1617,25 +1621,40 @@ div.slider div.handle:hover {
 /* User review */
 .blotter_block {
 	position: relative;
+	box-shadow: 0 0 4px #000;
+	background: rgba( 84, 133, 183, 0.2);
 }
 
 .blotter_block .UserReviewCardContent_Footer {
 
 }
 
+/* recommendations block */
+.blotter_recommendation_content
+{
+	font-size: 14px;
+	padding: 8px;
+	text-align: left;
+	padding-top: 4px;
+	color: #c6d4df;
+
+}
+.blotter_recommendation_content img
+{
+	margin-right: 6px;
+}
 .blotter_recommendation_content .hr {
-	height: 2px;
-	background-color: #272f38;
+	height: 1px;
+	background-color: #121b27;
 	margin: 5px 0px;
 }
-
-.blotter_recommendation_content {
-	font-style: italic;
-	padding-top: 4px;
+.curation_app_block_link {
+	font-size: 12px;
 }
 
+
 .blotter_block .UserReviewCardContent_Footer .content {
-	background-color: #1b1b1b;
+
 }
 
 .blotter_block .found_helpful {
@@ -1647,6 +1666,7 @@ div.slider div.handle:hover {
 .blotter_block .vote_header {
 	height: 44px;
 	margin-bottom: 13px;
+	margin-top: 4px;
 }
 
 .blotter_block .vote_header .title {
@@ -1670,7 +1690,7 @@ div.slider div.handle:hover {
 .blotter_block .apphub_CardTextContent {
 	line-height: 20px;
 	font-size: 13px;
-	color: #cdcac1;
+	color: #c6d4df;
 	font-family: 'Motiva Sans', arial, tahoma;
 }
 
@@ -1685,7 +1705,7 @@ div.slider div.handle:hover {
 	padding: 0 9px 5px 0px;
 	font-size: 12px;
 	color: #898a8c;
-	border-bottom: 1px solid #2e3a4a;
+	border-bottom: 1px solid #121b27;
 }
 
 
