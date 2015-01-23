@@ -1,4 +1,5 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/html/chrome_ipc_client.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/html/chromewrapper.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/html/../../overlay/common/shmemstream.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/html/../../public/html/htmlmessages.pb.cc
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/html/../../public/html/htmlprotobuf.cpp
