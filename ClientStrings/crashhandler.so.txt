@@ -2,9 +2,9 @@
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 %0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
-10:10:22
 11CPathString
 12CStdMemAlloc
+13:46:12
 13CCrashHandler
 13ICrashHandler
 16CBreakpadFactory

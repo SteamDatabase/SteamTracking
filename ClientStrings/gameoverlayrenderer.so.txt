@@ -113,6 +113,7 @@ glColorMask
 glCompileShader
 glCreateProgram
 glCreateShader
+glDebugMessageCallbackARB
 glDeleteBuffers
 glDeleteBuffersARB
 glDeleteFramebuffers

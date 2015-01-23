@@ -5,7 +5,6 @@
 %04u%02u%02u
 %04u%02u%02u%02u%02u%02u
 %04u%02u%02uT%02u%02u%02uZ
-10:11:47
 10BlankImage
 10CBasePanel
 10CHintLabel
@@ -100,6 +99,7 @@
 12CMsgStopFind
 12CMsgStopLoad
 12CTradeDialog
+13:46:45
 13CBoolProperty
 13CCallbackBase
 13CMsgAddHeader
@@ -2076,7 +2076,6 @@ glBindTexture
 glClear
 glClearColor
 glColor4ub
-glDeleteTextures
 glDisable
 glEnable
 glEnd
@@ -2103,7 +2102,6 @@ glOrtho
 glPixelStorei
 glTexCoord2f
 glTexImage2D
-glTexParameterf
 glVertex2f
 g_MenuMgr
 __gmon_start__
@@ -3979,6 +3977,7 @@ SDL_GetWindowFromID
 SDL_GetWindowSize
 SDL_GetWindowWMInfo
 SDL_GL_CreateContext
+SDL_GL_DeleteContext
 SDL_GL_MakeCurrent
 SDL_GL_SetAttribute
 SDL_GL_SwapWindow
@@ -3987,6 +3986,7 @@ SDL_PumpEvents
 SDL_RaiseWindow
 SDL_SetHint
 SDL_ShowCursor
+SDL_TIMER_RESOLUTION
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
 SDL_WasInit
 sdsiCertificate
