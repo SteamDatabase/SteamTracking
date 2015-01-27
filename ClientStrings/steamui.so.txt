@@ -10,6 +10,8 @@
 %04u%02u%02u%02u%02u%02u
 %04u%02u%02uT%02u%02u%02uZ
 0CUIStatusPanel
+10:28:18
+10:28:45
 1066x600
 10BlankImage
 10CAppFilter
@@ -364,8 +366,6 @@
 12IProcessPipe
 12IVideoPlayer
 12SuperNavMenu
-13:48:10
-13:48:19
 1366x768
 13CAutoAuthHTML
 13CBackupWizard

@@ -8,6 +8,7 @@
 %04u%02u%02u%02u%02u%02u
 %04u%02u%02uT%02u%02u%02uZ
 %0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
+10:24:59
 10CIPCServer
 10CPipeEvent
 10IIPCServer
@@ -23,7 +24,6 @@
 127.0.0.1:57344
 12CStdMemAlloc
 12IProcessPipe
-13:46:12
 13CMsgAppRights
 14CFrameFunctionI21CScheduledFunctionMgrE
 14CFrameFunctionI7CJobMgrE
