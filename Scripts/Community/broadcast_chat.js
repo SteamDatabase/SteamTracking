@@ -20,19 +20,25 @@ var CBroadcastChat = function( broadcastSteamID )
 
 	this.m_bAutoScroll = true;
 	this.m_nLastHeight = 0;
+	this.m_mapMutedUsers = [];
 
-	var context = this;
+	var _chat = this;
+	$J( document ).on( 'keydown.BroadcastChat', function( e )
+	{
+		if ( e.keyCode == 27 && $J( '#ChatMessageMenuBackground' ).is( ':visible' ) )
+			_chat.HideChatMessageMenu();
+	});
 
 	$J(window).resize(function(event){
-		context.UpdateScroll();
+		_chat.UpdateScroll();
 		$J('.scrollbar').perfectScrollbar('update');
 	});
 
 	$J('#ChatBox').scroll(function(){
 		// If our viewport wasn't just resized, lets take a look at the new scrollheight and see
 		// if maybe the user doesn't want to be at the bottom
-		if( context.m_nLastHeight == this.offsetHeight )
-			context.m_bAutoScroll = this.scrollTop == (this.scrollHeight - this.offsetHeight);
+		if( _chat.m_nLastHeight == this.offsetHeight )
+			_chat.m_bAutoScroll = this.scrollTop == (this.scrollHeight - this.offsetHeight);
 	});
 };
 
@@ -42,7 +48,7 @@ CBroadcastChat.s_regexEmoticons = new RegExp( '\u02D0([^\u02D0]*)\u02D0', 'g' );
 CBroadcastChat.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)', 'gi' );
 CBroadcastChat.s_regexDomain = new RegExp( '^(?:https?://)?([^/?#]+?\\.)?(([^/?#.]+?)\\.([^/?#]+?))(?=[/?#]|$)', 'i' );
 CBroadcastChat.s_regexValveDomains = new RegExp( '^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)', 'i' );
-CBroadcastChat.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","digg.com","facebook.com","google.com","reddit.com","twitter.com","developconference.com","diygamer.com","gdconf.com","indiecade.com","kickstarter.com","indiegogo.com","moddb.com","oculusvr.com","tigsource.com","indiedb.com","1up.com","destructoid.com","engadget.com","escapistmagazine.com","gametrailers.com","gizmodo.com","guardiannews.com","guardian.co.uk","ifanzine.com","igf.com","ign.com","indiegamemag.com","kotaku.com","mobot.net","modojo.com","pcgamer.com","rockpapershotgun.com","shacknews.com","toucharcade.com","wired.com","wired.co.uk","imageshack.com","imageshack.us"];
+CBroadcastChat.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","digg.com","facebook.com","google.com","reddit.com","twitter.com","developconference.com","diygamer.com","gdconf.com","indiecade.com","kickstarter.com","indiegogo.com","moddb.com","oculusvr.com","tigsource.com","indiedb.com","1up.com","destructoid.com","engadget.com","escapistmagazine.com","gametrailers.com","gizmodo.com","guardiannews.com","guardian.co.uk","ifanzine.com","igf.com","ign.com","indiegamemag.com","kotaku.com","mobot.net","modojo.com","pcgamer.com","rockpapershotgun.com","shacknews.com","toucharcade.com","wired.com","wired.co.uk","imageshack.com","imageshack.us","games-workshop.com"];
 
 CBroadcastChat.prototype.GetChatID = function()
 {
@@ -161,6 +167,9 @@ CBroadcastChat.prototype.RequestLoop = function()
 				if( rgResponse.messages[i].steamid == _chat.m_steamID && rgResponse.messages[i].instance_id == _chat.m_unInstanceID )
 					continue;
 
+				if ( _chat.IsUserMuted( rgResponse.messages[i].steamid ) )
+					continue;
+
 				_chat.DisplayChatMessage( rgResponse.messages[i].persona_name, rgResponse.messages[i].in_game, rgResponse.messages[i].steamid, rgResponse.messages[i].msg, false );
 			}
 		}
@@ -187,7 +196,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 		{
 			for ( var i = 0; i < rgResponse.muted.length; i++ )
 			{
-				var strMsg = ( rgResponse.muted[i].muted == _chat.m_steamID ) ? 'You has been muted and cannot post messages to this chat' : '%s has been muted';
+				var strMsg = ( rgResponse.muted[i].muted == _chat.m_steamID ) ? 'You has been muted and cannot post messages to this chat' : '%s has been muted by the broadcaster';
 				_chat.DisplayChatNotification( strMsg.replace( /%s/, rgResponse.muted[i].persona_name ) );
 			}
 		}
@@ -309,6 +318,8 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 	var _chat = this;
 
 		var elMessage = $J('#ChatMessagetemplate').clone();
+	elMessage.data( 'steamid', steamID );
+
 	var elChatName = $J( '.tmplChatName', elMessage );
 	elChatName.text( strPersonaName );
 	elChatName.attr( 'href', 'http://steamcommunity.com/profiles/' + steamID );
@@ -349,10 +360,18 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 
 CBroadcastChat.prototype.UpdateScroll = function()
 {
+	if ( $J( '#ChatMessageMenuBackground' ).is( ':visible' ) )
+		return;
+
 	if( this.m_bAutoScroll )
-		$J('#ChatBox').scrollTop( $J('#ChatBox').prop("scrollHeight") );
+		this.ScrollToBottom();
 
 	this.m_nLastHeight = $J('#ChatBox')[0].offsetHeight;
+}
+
+CBroadcastChat.prototype.ScrollToBottom = function()
+{
+	$J('#ChatBox').scrollTop( $J('#ChatBox').prop("scrollHeight") );
 }
 
 CBroadcastChat.prototype.DisplayChatError = function( strError )
@@ -400,4 +419,69 @@ CBroadcastChat.prototype.ChatSubmit = function()
 	{
 		_chat.DisplayChatError( 'Failed to send chat message: ' + strMessage );
 	});
+}
+
+CBroadcastChat.prototype.ShowChatMessageMenu = function( elButton )
+{
+	var elMenu = $J( '#ChatMessageMenuBackground' );
+	elMenu.show();
+
+	var elMessage = $J( elButton ).closest( '#ChatMessagetemplate ' );
+	elMenu.data( 'elMessage', elMessage );
+	elMessage.addClass( 'ShowingMenu' );
+
+	// position modal
+	var rectBody = document.body.getBoundingClientRect();
+	var rectViewerBtn = elButton.getBoundingClientRect();
+	var nTop = rectViewerBtn.bottom - rectBody.top + 2;
+	var nRight = rectBody.right - rectViewerBtn.right;
+	$J( '#ChatMessageMenu' ).css( {top: nTop, right: nRight} );
+}
+
+CBroadcastChat.prototype.HideChatMessageMenu = function()
+{
+	var elMessage = $J( '#ChatMessageMenuBackground' ).data( 'elMessage' );
+	elMessage.removeClass( 'ShowingMenu' );
+
+	$J( '#ChatMessageMenuBackground' ).hide();
+	this.UpdateScroll();
+}
+
+CBroadcastChat.prototype.MuteChatMessageUser = function()
+{
+	var elMessage = $J( '#ChatMessageMenuBackground' ).data( 'elMessage' );
+	this.MuteUserByMessage( elMessage );
+
+	this.HideChatMessageMenu();
+	this.ScrollToBottom();
+	this.UpdateScroll();
+}
+
+CBroadcastChat.prototype.MuteUserByMessage = function( elMessage )
+{
+	var steamID = elMessage.data( 'steamid' );
+	var elChatName = $J( '.tmplChatName', elMessage );
+
+	this.MuteUser( steamID, elChatName.text() );
+}
+
+CBroadcastChat.prototype.MuteUser = function( steamID, strPersonaName )
+{
+	if ( steamID == this.m_steamID )
+		return;
+
+	if ( !this.m_mapMutedUsers[ steamID ] )
+	{
+		this.m_mapMutedUsers[ steamID ] = strPersonaName;
+	}
+
+    this.DisplayChatNotification( '%s has been muted'.replace( /%s/, strPersonaName ) );
+}
+
+CBroadcastChat.prototype.IsUserMuted = function( steamID )
+{
+	if ( this.m_mapMutedUsers[ steamID ] )
+		return true;
+
+	return false;
 }

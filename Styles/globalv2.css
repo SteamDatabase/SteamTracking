@@ -93,9 +93,11 @@ form {
 }
 
 input[type=text], input[type=password], select {
-	background-color:#1a1a1a;
 	color: #909090;
-	border: 1px solid #707070;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	border-radius: 3px;
 }
 
 
@@ -803,6 +805,7 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_
 .gray_bevel input, .gray_bevel textarea {
 	border: none;
 	outline: none;
+	box-shadow: none;
 	background-color: transparent;
 	font-size: 13px;
 	color: #C6D4DF;

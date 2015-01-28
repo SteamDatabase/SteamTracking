@@ -138,10 +138,21 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 				'Friend request accepted'
 			).done( function() { window.location.reload(); } );
 		}
-	} ).fail( function() {
-		ShowAlertDialog( 'Add Friend',
-			'Error adding friend. Please try again.'
-		);
+	} ).fail( function( jqXHR  ) {
+		var failedInvites = jqXHR.responseJSON['failed_invites_result'];
+		if ( failedInvites[0] !== undefined && failedInvites[0] == 40 )
+		{
+			ShowAlertDialog( 'Add Friend',
+				'Error adding Friend. Communication between you and this user has been blocked.'
+			);
+		}
+		else
+		{
+			ShowAlertDialog( 'Add Friend',
+				'Error adding friend. Please try again.'
+			);
+		}
+
 	} );
 }
 

@@ -1,15 +1,4 @@
 
-input[type=text], input[type=password], select {
-	background-color: rgba( 0, 0, 0, 0.2 );
-	border-radius: 3px;
-	border: 1px solid #000;
-	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
-	color: #C6D4DF;
-	margin-bottom: 6px;
-	outline: none;
-	padding: 4px 6px;
-}
-
 .visibilityNotification
 {
 	text-align: left;
