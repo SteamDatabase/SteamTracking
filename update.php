@@ -111,7 +111,7 @@
 				$this->Log( '{lightblue}Extracting client archives and doing voodoo magic' );
 				
 				// Let's break all kinds of things! :(
-				System( 'sh ' . __DIR__ . '/.support/extract_client.sh' );
+				System( 'sh ' . __DIR__ . '/extract_client.sh' );
 			}
 			
 			$this->CheckCDN( );
