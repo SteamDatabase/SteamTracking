@@ -23,15 +23,15 @@ function ShowRefundableItems()
 var g_bVerifyRefundRunning = false;
 function VerifyRefund(transid)
 {
-	var selection = $$('input:checked[type="radio"][name="packageid"]');
+	var selection = $$('input:checked[type="radio"][name="lineitem"]');
 	
-	var packageid = '';
+	var lineitem = '';
 	if ( selection )
 	{
-		packageid = selection.pluck('value');
+		lineitem = selection.pluck('value');
 	}
 
-	if ( packageid == '' )
+	if ( lineitem == '' )
 		return;
 		
 		if( g_bVerifyRefundRunning )
@@ -46,7 +46,7 @@ function VerifyRefund(transid)
 		    method:'post',
 		    parameters: { 
 				'transid' : transid,
-				'packageid' : packageid
+				'lineitem' : lineitem
 			},
 		    onSuccess: function(transport){
 		    	g_bVerifyRefundRunning = false;
@@ -121,15 +121,15 @@ function OnVerifyRefundFailure( transid )
 var g_bConfirmRefundRunning = false;
 function ConfirmRefund(transid)
 {
-	var selection = $$('input:checked[type="radio"][name="packageid"]');
+	var selection = $$('input:checked[type="radio"][name="lineitem"]');
 	
-	var packageid = '';
+	var lineitem = '';
 	if ( selection )
 	{
-		packageid = selection.pluck('value');
+		lineitem = selection.pluck('value');
 	}
 
-	if ( packageid == '' )
+	if ( lineitem == '' )
 		return;
 		
 		if( g_bConfirmRefundRunning )
@@ -144,7 +144,7 @@ function ConfirmRefund(transid)
 		    method:'post',
 		    parameters: { 
 				'transid' : transid,
-				'packageid' : packageid
+				'lineitem' : lineitem
 			},
 		    onSuccess: function(transport){
 		    	g_bConfirmRefundRunning = false;
