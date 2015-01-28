@@ -3555,15 +3555,15 @@ function PublishActionNext( rgRequest )
 
 function CreateDemo( parentId, demoName )
 {
-	CreateNewAppHelper( 0, parentId, demoName, 'Demo', 10, true );
+	CreateNewAppHelper( 0, parentId, demoName, 'Demo', false, 10, true );
 }
 
-function CreateNewApp( pubId, appName, appType, reservedRange, bAddPartnerAppReporting )
+function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting )
 {
-	CreateNewAppHelper( pubId, 0, appName, appType, reservedRange, bAddPartnerAppReporting );
+	CreateNewAppHelper( pubId, 0, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting );
 }
 
-function CreateNewAppHelper( pubId, parentId, appName, appType, reservedRange, bAddPartnerAppReporting )
+function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting )
 {
 	var progressDialog = ShowProgressDialog( 'Create New App', 'Creating new app' );
 	progressDialog.done( function() { top.location.reload(); } );
@@ -3580,6 +3580,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, reservedRange, b
 			'add_partner_app_reporting' : bAddPartnerAppReporting,
 			'publisherid' : pubId,
 			'parentid' : parentId,
+			'f2p' : bF2P,
 			'sessionid' : g_sessionID
 		}
 	).done(
