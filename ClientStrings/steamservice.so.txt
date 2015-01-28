@@ -8,7 +8,6 @@
 %04u%02u%02u%02u%02u%02u
 %04u%02u%02uT%02u%02u%02uZ
 %0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
-10:24:59
 10CIPCServer
 10CPipeEvent
 10IIPCServer

@@ -10,8 +10,6 @@
 %04u%02u%02u%02u%02u%02u
 %04u%02u%02uT%02u%02u%02uZ
 0CUIStatusPanel
-10:28:18
-10:28:45
 1066x600
 10BlankImage
 10CAppFilter

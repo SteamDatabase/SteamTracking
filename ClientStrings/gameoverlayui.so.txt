@@ -5,7 +5,6 @@
 %04u%02u%02u
 %04u%02u%02u%02u%02u%02u
 %04u%02u%02uT%02u%02u%02uZ
-10:26:15
 10BlankImage
 10CBasePanel
 10CHintLabel

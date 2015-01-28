@@ -2,7 +2,6 @@
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 %0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
-10:24:59
 11CPathString
 12CStdMemAlloc
 13CCrashHandler
