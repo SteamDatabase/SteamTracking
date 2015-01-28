@@ -381,7 +381,7 @@ body.v6.login .rightcol .spotlight_block {
 .review_row .review_row_label {
 	position: absolute;
 	left: 0px;
-	color: #61686D;
+	color: #61696D;
 }
 
 .review_row .review_row_value {
@@ -610,6 +610,13 @@ body.v6.login .rightcol .spotlight_block {
 }
 .cart_item .package_contents {
 	padding-left: 12px;
+}
+.cart_item_list .package_contents {
+	padding-left: 16px;
+	margin-top: -10px;
+	padding-bottom: 16px;
+	font-size: 12px;
+	color: #a4d7f5;
 }
 .cart_item_img {
 	position: absolute;
@@ -862,7 +869,7 @@ body.v6.login .rightcol .spotlight_block {
 
 .cart_total_rule {
 	margin: 9px 0px;
-	border-top: 1px solid #626366;
+	border-top: 1px solid #38444e;
 }
 
 .cart_checkout_buttons

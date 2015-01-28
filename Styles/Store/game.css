@@ -543,6 +543,23 @@ img.game_header_image_full {
 .game_area_purchase_game_wrapper .game_area_purchase_game {
 	margin-bottom: 0px;
 }
+.game_area_purchase_game_wrapper.bundle .bundleTag,
+.game_area_purchase_game.bundle .bundleTag {
+	color: #a4d7f5;
+	font-family: "Motiva Sans Light", arial, tahoma, sans-serif;
+	font-size: 15px;
+	margin-left: 3px;
+}
+.game_area_purchase_game_wrapper.bundle .bundleTag .bundleHelper,
+.game_area_purchase_game.bundle .bundleTag .bundleHelper{
+	color: #838383;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.game_area_purchase_game_wrapper.bundle .game_area_purchase_game b {
+	color: #a4d7f5;
+}
 
 .game_area_purchase_game .game_area_purchase_platform {
 	float: right;
@@ -567,6 +584,7 @@ img.game_header_image_full {
 .game_area_purchase_game p.package_contents a {
 	color: #b0aeac;
 }
+
 
 .game_purchase_action {
 	/* height: 40px; */
@@ -1264,7 +1282,7 @@ table.game_language_options {
     }
 
 .game_details .language_list i {
-	color: #626366;
+	color: #61686d;
 	font-style: normal;
 }
 
@@ -1883,6 +1901,9 @@ img.package_header {
 #package_savings_bar > .message {
     padding: 8px;
     font-size: 12px;
+}
+.bundleNew {
+	color: #A68C62;
 }
 
 .queue_ctn {
