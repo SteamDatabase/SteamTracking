@@ -212,7 +212,10 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#9ba9b
 .btn_profile_action:hover > span, .btn_profile_action.focus > span {
 	background: #526d95; /* Old browsers */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3c597b), color-stop(95%,#282f3d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c597b', endColorstr='#282f3d',GradientType=0 );background: -moz-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: -webkit-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: -o-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: -ms-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: linear-gradient( to bottom, #3c597b 5%, #282f3d 95%);}
-
+.btn_profile_action_disabled {
+	opacity: 0.5;
+	cursor: default;
+}
 #profile_action_dropdown {
 	white-space: nowrap;
 }

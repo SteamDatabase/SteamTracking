@@ -32,6 +32,11 @@ CBroadcastWatch.k_InClient = 2;
 CBroadcastWatch.k_InOverlay = 3;
 CBroadcastWatch.k_InOldClient = 4;
 
+CBroadcastWatch.prototype.GetChat = function()
+{
+	return this.m_chat;
+}
+
 CBroadcastWatch.prototype.GetBroadcastID = function()
 {
 	return this.m_ulBroadcastID;
@@ -282,9 +287,8 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 {
 	$J( '#BroadcastViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
 
-	var strTitle = data.title;
-	if ( !strTitle || strTitle.length == 0 )
-		strTitle = 'Playing: ' + data.app_title;
+	var strTitle = data.title ? data.title : '';
+	var strGameName = data.app_title ? data.app_title : '';
 
 	var strBroadcastURL = 'http://steamcommunity.com/app/' + data.appid + '/broadcasts';
 	if ( data.appid == 0 )
@@ -305,17 +309,26 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	if ( data.appid == 0 )
 	{
 		$J( '#ViewStorePage' ).hide();
+		$J( '#BroadcastGameLink' ).hide();
 	}
 	else
 	{
 		$J( '#ViewStorePage' ).show();
+		$J( '#BroadcastGameLink' ).show();
 	}
 
+	if ( strTitle.length > 0 && strGameName.length > 0 && data.appid != 0 )
+		$J( '#BroadcastTitleSeparator' ).show();
+	else
+		$J( '#BroadcastTitleSeparator' ).hide();
+
+	$J( '#BroadcastGame' ).text( strGameName );
 	$J( '#BroadcastTitle' ).text( strTitle );
 	$J( '#MoreBroadcastLink' ).attr( 'href', strBroadcastURL).attr( 'target', target );
 	$J( '#ViewStorePage' ).attr( 'href', strStoreURL).attr( 'target', target );
+	$J( '#BroadcastGameLink' ).attr( 'href', strStoreURL).attr( 'target', target );
 
-	$J( '#BroadcastInfoRow' ).show();
+	$J( '#BroadcastInfoButtons' ).show();
 }
 
 function OpenBroadcastLink()

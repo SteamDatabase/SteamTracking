@@ -664,6 +664,19 @@ CDASHPlayer.prototype.SetPlaybackRate = function ( unRate )
 	this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate = unRate;
 }
 
+CDASHPlayer.prototype.GetLanguageForAudioTrack = function()
+{
+	for ( var i = 0; i < this.m_loaders.length; i++ )
+	{
+		if ( this.m_loaders[i].ContainsAudio() )
+		{
+			return this.m_loaders[i].m_adaptation.language;
+		}
+	}
+
+	return null;
+}
+
 CDASHPlayer.prototype.UpdateStats = function()
 {
 	this.m_nCurrentDownloadBitRate = 0;
@@ -1527,6 +1540,7 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 		var adaptationSet = {};
 		adaptationSet.segmentAlignment = _mpd.ParseBool( xmlAdaptation, 'segmentAlignment' );
 		adaptationSet.isClosedCaption = ( xmlAdaptation.attr( 'mimeType' ) == "text/vtt" ? true : false );
+		adaptationSet.language = xmlAdaptation.attr( 'lang' );
 		adaptationSet.containsVideo = false;
 		adaptationSet.containsAudio = false;
 
@@ -1624,8 +1638,6 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 		else
 		{
 			// parse each adaptation set for closed captions
-			adaptationSet.language = xmlAdaptation.attr( 'lang' );
-
 			adaptationSet.representations = [];
 			$J( xmlAdaptation ).find( 'Representation' ).each( function()
 			{
@@ -1855,9 +1867,13 @@ function CDASHPlayerUI( player )
 	this.m_bPlayingLiveEdge = true;
 	this.m_elVideoTitle = null;
 	this.m_elBufferingMessage = null;
+	this.m_elBigPlayPauseIndicator = null;
 	this.m_bIsSafariBrowser = (navigator.userAgent.toLowerCase().indexOf('safari') != -1 && navigator.userAgent.toLowerCase().indexOf('chrome') == -1);
 	this.m_bIsInternetExplorer = (navigator.appVersion.toLowerCase().indexOf('trident/') != -1);
+	this.m_strUniqueSettingsID = '';
 }
+
+CDASHPlayerUI.s_ClosedCaptionsNone = "none";
 
 CDASHPlayerUI.s_overlaySrc =	'<div class="dash_overlay no_select">' +
 										'<div class="play_button play"></div>' +
@@ -1906,6 +1922,8 @@ CDASHPlayerUI.prototype.Init = function()
 	elVideoPlayer.on( 'click', function() { _ui.TogglePlayPause() } );
 	elVideoPlayer.on( 'pause', function() { _ui.OnPause() } );
 	elVideoPlayer.on( 'initialized', function() { _ui.OnVideoInitialized(); } );
+
+	$J( window ).on( 'keypress', function(e) { _ui.OnKeyPress( e ); } );
 
 	this.m_elOverlay.on( 'mouseenter', function() { _ui.OnMouseEnterOverlay() } );
 	this.m_elOverlay.on( 'mouseleave', function( e ) { _ui.OnMouseLeaveOverlay( e ) } );
@@ -1957,6 +1975,15 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 	{
 		this.m_elVideoTitle = $J( '<div id="dash_video_title_banner"></div>' );
 		this.m_elContainer.append( this.m_elVideoTitle );
+	}
+
+	if ( !this.m_elBigPlayPauseIndicator )
+	{
+		this.m_elBigPlayPauseIndicator = $J( '<div class="dash_big_playpause_indicator">' +
+			'<div class="dash_big_playpause_indicator_state"></div>' +
+			'</div>' );
+		this.m_elContainer.append( this.m_elBigPlayPauseIndicator );
+		this.m_elBigPlayPauseIndicator.on( 'click', function() { _ui.TogglePlayPause() } );
 	}
 
 	this.InitSettingsPanelInUI();
@@ -2065,31 +2092,22 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 	{
 		$J( '.representation_captions').show();
 		$J( '.representation_captions').append('<div class="settings_label">Captions:</div><select id="representation_select_captions" class="representation_select"></select>');
-		$J( '#representation_select_captions').append('<option value="none">None</option>');
+		$J( '#representation_select_captions').append('<option value="' + CDASHPlayerUI.s_ClosedCaptionsNone + '">None</option>');
 
 		for (var r = 0; r < rgRepresentation.length; r++)
 		{
-			$J('#representation_select_captions').append('<option value="' + rgRepresentation[r].code + '">' + rgRepresentation[r].display + "</option>");
+			if ( rgRepresentation[r].code.toUpperCase() != CDASHPlayerUI.s_ClosedCaptionsNone.toUpperCase() )
+			{
+				$J('#representation_select_captions').append('<option value="' + rgRepresentation[r].code + '">' + rgRepresentation[r].display + "</option>");
+			}
 		}
 
-		// change event for caption language selection
 		$J( '#representation_select_captions').on('change', function()
 		{
-			WebStorage.SetLocal( "closed_caption_language_setting", this.value );
-			_ui.m_player.UpdateClosedCaption(this.value);
+			WebStorage.SetLocal( "closed_caption_language_setting_" + _ui.m_strUniqueSettingsID, this.value );
+			_ui.m_player.UpdateClosedCaption( this.value );
 			this.blur();
 		} );
-
-		// now load previous cc language setting
-		var value = WebStorage.GetLocal( "closed_caption_language_setting" );
-		if (value)
-		{
-			$J( '#representation_select_captions option[value="' + value + '"]').attr('selected', 'selected').change();
-		}
-		else
-		{
-			$J( '#representation_select_captions option[value="none"]').attr('selected', 'selected').change();
-		}
 
 		// customize captions link and action
 		$J( '.representation_captions' ).append('<div class="customize_captions_wrap"><span class="customize_captions"></span></div>');
@@ -2102,6 +2120,24 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 
 		_ui.InitClosedCaptionOptionDialog();
 	}
+}
+
+CDASHPlayerUI.prototype.SetUniqueSettingsID = function( uniqueSettingsID )
+{
+	this.m_strUniqueSettingsID = uniqueSettingsID.toString();
+}
+
+CDASHPlayerUI.SetClosedCaptionLanguageInUI = function( strCode )
+{
+	var uiCaptionLanguage = $J("#representation_select_captions");
+
+	if ( uiCaptionLanguage.length )
+		$J( '#representation_select_captions option[value="' + strCode + '"]').attr('selected', 'selected');
+}
+
+CDASHPlayerUI.GetSavedClosedCaptionLanguage = function( strUniqueSettingsID )
+{
+	return WebStorage.GetLocal( "closed_caption_language_setting_" + strUniqueSettingsID.toString() );
 }
 
 CDASHPlayerUI.prototype.Show = function()
@@ -2316,12 +2352,46 @@ CDASHPlayerUI.prototype.TogglePlayPause = function()
 		elVideoPlayer.playbackRate = this.m_player.m_nSavedPlaybackRate;
 		$J( '.play_button', this.m_elOverlay ).addClass( 'pause' );
 		$J( '.play_button', this.m_elOverlay ).removeClass( 'play' );
+		this.ShowBigPlayPauseIndicator( true );
 	}
 	else
 	{
 		elVideoPlayer.pause();
 		$J( '.play_button', this.m_elOverlay ).addClass( 'play' );
 		$J( '.play_button', this.m_elOverlay ).removeClass( 'pause' );
+		this.ShowBigPlayPauseIndicator( false )
+	}
+}
+
+CDASHPlayerUI.prototype.ShowBigPlayPauseIndicator = function( playing )
+{
+	$J( '.dash_big_playpause_indicator' ).one( "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+		function() {
+			$J(this).removeClass( "show" );
+		}
+	);
+
+	if ( playing )
+	{
+		$J( '.dash_big_playpause_indicator_state' ).addClass('play_triangle');
+		$J( '.dash_big_playpause_indicator_state' ).removeClass('pause_bars');
+	}
+	else
+	{
+		$J( '.dash_big_playpause_indicator_state' ).addClass('pause_bars');
+		$J( '.dash_big_playpause_indicator_state' ).removeClass('play_triangle');
+	}
+
+	$J( '.dash_big_playpause_indicator' ).addClass('show');
+}
+
+CDASHPlayerUI.prototype.OnKeyPress = function( e )
+{
+		if ( e.keyCode == 32 && e.target == document.body )
+	{
+		e.preventDefault();
+		this.TogglePlayPause();
+		return false;
 	}
 }
 
@@ -3017,85 +3087,112 @@ CVTTCaptionLoader.SortClosedCaptionsByDisplayLanguage = function(a,b) {
 
 CVTTCaptionLoader.LanguageCountryCodes = {
     "bg-BG":{
-        "displayName":"Български (Bulgarian)"
+        "displayName":"Български (Bulgarian)",
+	"steamLanguage":"bulgarian"
     },
     "cs-CZ":{
-        "displayName":"čeština (Czech)"
+        "displayName":"čeština (Czech)",
+	"steamLanguage":"czech"
     },
     "da-DK":{
-        "displayName":"Dansk (Danish)"
+        "displayName":"Dansk (Danish)",
+	"steamLanguage":"danish"
     },
     "en-US":{
-        "displayName":"English"
+        "displayName":"English",
+	"steamLanguage":"english"
     },
     "fi-FI":{
-        "displayName":"Suomi (Finnish)"
+        "displayName":"Suomi (Finnish)",
+	"steamLanguage":"finnish"
     },
     "fr-FR":{
-        "displayName":"Français (French)"
+        "displayName":"Français (French)",
+	"steamLanguage":"french"
     },
     "de-DE":{
-        "displayName":"Deutsch (German)"
+        "displayName":"Deutsch (German)",
+	"steamLanguage":"german"
     },
     "el-GR":{
-        "displayName":"Ελληνικά (Greek)"
+        "displayName":"Ελληνικά (Greek)",
+	"steamLanguage":"greek"
     },
     "es-ES":{
-        "displayName":"Español (Spanish)"
+        "displayName":"Español (Spanish)",
+	"steamLanguage":"spanish"
     },
     "hu-HU":{
-        "displayName":"Magyar (Hungarian)"
+        "displayName":"Magyar (Hungarian)",
+	"steamLanguage":"hungarian"
     },
     "it-IT":{
-        "displayName":"Italiano (Italian)"
+        "displayName":"Italiano (Italian)",
+	"steamLanguage":"italian"
     },
     "ja-JP":{
-        "displayName":"日本語 (Japanese)"
+        "displayName":"日本語 (Japanese)",
+	"steamLanguage":"japanese"
     },
     "ko-KR":{
-        "displayName":"한국어 (Korean)"
+        "displayName":"한국어 (Korean)",
+	"steamLanguage":"koreana"
     },
     "nl-NL":{
-        "displayName":"Nederlands (Dutch)"
+        "displayName":"Nederlands (Dutch)",
+	"steamLanguage":"dutch"
     },
     "nb-NO":{
-        "displayName":"Norsk (Norwegian)"
+        "displayName":"Norsk (Norwegian)",
+	"steamLanguage":"norwegian"
     },
     "pl-PL":{
-        "displayName":"Polski (Polish)"
+        "displayName":"Polski (Polish)",
+	"steamLanguage":"polish"
     },
     "pt-BR":{
-        "displayName":"Português-Brasil (Portuguese-Brazil)"
+        "displayName":"Português-Brasil (Portuguese-Brazil)",
+	"steamLanguage":"brazilian"
     },
     "pt-PT":{
-        "displayName":"Português (Portuguese)"
+        "displayName":"Português (Portuguese)",
+	"steamLanguage":"portuguese"
     },
     "ro-RO":{
-        "displayName":"Română (Romanian)"
+        "displayName":"Română (Romanian)",
+	"steamLanguage":"romanian"
     },
     "ru-RU":{
-        "displayName":"Русский (Russian)"
+        "displayName":"Русский (Russian)",
+	"steamLanguage":"russian"
     },
     "sv-SE":{
-        "displayName":"Svenska (Swedish)"
+        "displayName":"Svenska (Swedish)",
+	"steamLanguage":"swedish"
     },
     "th-TH":{
-        "displayName":"ไทย (Thai)"
+        "displayName":"ไทย (Thai)",
+	"steamLanguage":"thai"
     },
     "tr-TR":{
-        "displayName":"Türkçe (Turkish)"
+        "displayName":"Türkçe (Turkish)",
+	"steamLanguage":"turkish"
     },
     "uk-UA":{
-        "displayName":"Українська (Ukrainian)"
+        "displayName":"Українська (Ukrainian)",
+	"steamLanguage":"ukrainian"
     },
     "vi-VN":{
-        "displayName":"tiếng Việt (Vietnamese)"
+        "displayName":"tiếng Việt (Vietnamese)",
+	"steamLanguage":"vietnamese"
     },
     "zh-CH":{
         "displayName":"简体中文 (Simplified Chinese)",
+	"steamLanguage":"schinese"
 	},
     "zh-CN":{
         "displayName":"繁體中文 (Traditional Chinese)",
+	"steamLanguage":"tchinese"
     },
 }
 

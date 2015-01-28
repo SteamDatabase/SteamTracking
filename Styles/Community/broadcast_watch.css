@@ -35,7 +35,11 @@ body
 
 .profile_small_header_avatar
 {
-	left: 0px;
+	position: static;
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .profile_small_header_text
@@ -54,36 +58,6 @@ body
 {
 	width: 48px;
 	height: 48px;
-}
-
-.BetaHeader
-{
-	margin-left: 10px;
-}
-
-.BetaHeader, .BetaHeader a
-{
-	color: #67c1f5;
-	font-style: italic;
-}
-
-.BetaHeader a
-{
-	font-family: Motiva Sans Thin;
-}
-
-.BetaHeader a:hover
-{
-	text-decoration: underline;
-}
-
-.BetaLabel
-{
-	background-color: #171a21;
-	padding: 2px 4px;
-	border-radius: 3px;
-	color: #67c1f5;
-	font-style: normal;
 }
 
 @keyframes loading_throbber_bar
@@ -178,12 +152,8 @@ body
 
 body.flat_page .pagecontent
 {
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/broadcast_background.jpg' );
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: 130% 100%;
-	padding-bottom: 0px;
-}
+	padding: 20px 0px 0px 0px;
+	background: -moz-linear-gradient( left, #192533 5%,#213148 40%,#213148 60%,#192533 95%);background: -webkit-linear-gradient( left, #192533 5%,#213148 40%,#213148 60%,#192533 95%);background: -o-linear-gradient( left, #192533 5%,#213148 40%,#213148 60%,#192533 95%);background: -ms-linear-gradient( left, #192533 5%,#213148 40%,#213148 60%,#192533 95%);background: linear-gradient( to right, #192533 5%,#213148 40%,#213148 60%,#192533 95%);}
 
 body.flat_page #footer
 {
@@ -230,12 +200,21 @@ body.flat_page
 #PageContents
 {
 	min-width: 948px;
-	min-height: 480px;
 	width: 100%;
 	position: relative;
 }
 
-#LoadingContent
+#LoadingContent .BottomFade
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,rgba( 25, 37, 51, 0.4 )), color-stop(95%,black));background: -moz-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: -webkit-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: -o-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: -ms-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: linear-gradient( to bottom, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
+	height: 100px;
+}
+
+.LoadingContentBackground
 {
 	position: absolute;
 	left: 20px;
@@ -261,6 +240,7 @@ body.flat_page
 	top: 0px;
 	bottom: 0px;
 	background-color: rgba(0,0,0,0.75);
+	z-index: 2;
 	display: none;
 }
 
@@ -342,17 +322,11 @@ body.flat_page
 
 .BroadcastInfoWrapper
 {
-	padding-right: 360px;
+	padding-right: 20px;
 	padding-left: 20px;
 	overflow: hidden;
 	height: 143px;
-
-	background-color: black;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/broadcast_background_bottom.jpg' );
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: 100% 100%;
-}
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,rgba( 25, 37, 51, 0.4 )), color-stop(95%,black));background: -moz-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: -webkit-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: -o-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: -ms-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: linear-gradient( to bottom, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);}
 
 .BroadcastPlayer
 {
@@ -467,7 +441,7 @@ body.flat_page
 	left: 0;
 	bottom: 44px;
 	margin-top: 4px;
-	padding: 0px 10px 4px 2px;
+	padding: 0px 0px 4px 2px;
 	overflow: hidden;
 	right: 0px;
 }
@@ -518,7 +492,7 @@ body.flat_page
 	color: #90ba3c;
 }
 
-.ChatMessage
+.ChatEntry
 {
 	color: #d4d4d4;
 	line-height: 18px;
@@ -527,17 +501,90 @@ body.flat_page
 	overflow: hidden;
 	word-break: break-word;
 	position: relative;
-	margin-top: 8px;
-	padding-left: 8px;
-	padding-right: 12px;
+	margin: 8px 1px 0px 0px;
+	padding: 0px 22px 0px 8px;
 }
+
+.ChatMessage
+{
+	padding: 1px 22px 1px 8px;
+	margin: 7px 1px 0px 0px;
+}
+
+.ChatMessageMenuBtn
+{
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 4px;
+
+	width: 12px;
+	height: 12px;
+	border-radius: 2px;
+	background-color: #2b4a63;
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/chat_tab.png' );
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.ChatMessage:hover,
+.ChatMessage.ShowingMenu
+{
+	background-color: #172635;
+}
+
+.ChatMessage:hover .ChatMessageMenuBtn,
+.ChatMessage.ShowingMenu .ChatMessageMenuBtn
+{
+	display: block;
+}
+
+.ChatMessageMenuBtn:hover
+{
+	cursor: pointer;
+}
+
+#ChatMessageMenuBackground
+{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 901;
+}
+
+#ChatMessageMenu
+{
+	position: absolute;
+	z-index: 901;
+	top: 0px;
+	right: 0px;
+	background-color: #2b4a63;
+	box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+	padding: 4px 6px;
+}
+
+.ChatMessageMenuOption
+{
+	color: #57cbde;
+	cursor: pointer;
+	padding: 1px;
+}
+
+.ChatMessageMenuOption:hover
+{
+	color: white;
+}
+
 
 .ChatExpand
 {
 	position: absolute;
-	right: 0px;
+	right: 10px;
 	bottom: 0px;
-	background-color: rgba( 50, 50, 50, 1.0 );
+	background-color: #2b4a63;
+	color: #57cbde;
 	padding: 0px 2px;
 	border-radius: 3px;
 	line-height: 13px;
@@ -567,14 +614,6 @@ body.flat_page
 	background-repeat: no-repeat;
 	background-position: left 6px;
 }
-
-/*
-.tmplChatMessage:hover
-{
-	text-decoration: underline;
-	cursor: pointer;
-}
-*/
 
 .ChatError
 {
@@ -655,21 +694,42 @@ body.flat_page
 
 .BroadcastTitleRow
 {
+	font-family: Motiva Sans Light;
+	font-size: 18px;
 }
 
+.BroadcastPersonaRow
+{
+	height: 36px;
+	line-height: 36px;
+	margin-top: 4px;
+}
+
+.BroadcastProfileName
+{
+	margin-left: 4px;
+}
+
+#BroadcastGame
+{
+	color: white;
+}
+
+#BroadcastGame:hover
+{
+	text-decoration: underline;
+}
+
+#BroadcastTitleSeparator,
 #BroadcastTitle
 {
-	color: #67c1f5;
-	font-size: 20px;
-	line-height: 20px;
-	height: 20px;
-	font-family: Motiva Sans;
+	color: #9099a1;
 }
 
 #BroadcastViewerCount
 {
 	font-size: 14px;
-	margin-top: 8px;
+	margin: 8px 0px 0px 8px;
 	padding-left: 28px;
 	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_viewers.png' );
 	background-repeat: no-repeat;
@@ -679,46 +739,40 @@ body.flat_page
 
 #BroadcastInfo
 {
-	margin: 0px 0px 10px 0px;
-	margin-top: 14px;
+	margin-top: 10px;
+	height: 80px;
 
 	position: relative;
 }
 
-#BroadcastInfo a
+.BroadcastInfoButtonColumn
 {
-	color: #959595;
+	float: right;
+	margin-top: 10px;
+	margin-left: 10px;
+	z-index: 2;
+	position: relative;
 }
 
-#BroadcastInfo a:hover
+#BroadcastInfoButtons
 {
-	color: white;
-}
-
-#BroadcastInfoRow
-{
-	margin-top: 30px;
-	line-height: 40px;
-	padding: 0px;
-
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/broadcast/cluster_bg.png' );
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: 100% 100%;
 }
 
 .BroadcastButton
 {
 	display: inline-block;
-	
-	padding: 0px 12px 0px 12px;
-	margin-right: 5px;
+	padding: 0px 8px 0px 8px;
+	margin-left: 15px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	cursor: pointer;
-	color: #939393;
-	height: 30px;
-	line-height: 30px;
+	height: 22px;
+	line-height: 22px;
+
+	font-size: 13px;
+	font-family: Motiva Sans Light;
+	color: #9099a1;
+	background: rgba( 43, 74, 99, 0.5 );
 }
 
 .BroadcastButton:hover
@@ -738,10 +792,15 @@ body.flat_page
 
 #ReportBroadcast
 {
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images//skin_1/notification_icon_flag_dark.png');
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_report.png' );
 	background-position: 6px center;
 	background-repeat: no-repeat;
 	padding-left: 28px;
+}
+
+#ReportBroadcast:hover
+{
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_report_white.png' );
 }
 
 #ReportBroadcast.Reported,
@@ -910,6 +969,8 @@ body.flat_page
 	-webkit-transition: background-color .2s linear, opacity .2s linear;
 	-moz-transition: background-color .2s linear, opacity .2s linear;
 	transition: background-color .2s linear, opacity .2s linear;
+
+	z-index: 1000;
 }
 
 .ps-container:hover>.ps-scrollbar-y-rail {

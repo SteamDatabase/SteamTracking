@@ -290,6 +290,15 @@ a.item_action:hover {
 	color: #767676;
 }
 
+.fraud_warning .fraud_warning_msg
+{
+	text-align: left;
+}
+.fraud_warning .fraud_warning_msg:not(:last-child)
+{
+	margin-bottom: 9px;
+}
+
 .item_desc_content .fraud_warning {
 	margin-bottom: 9px;
 }
