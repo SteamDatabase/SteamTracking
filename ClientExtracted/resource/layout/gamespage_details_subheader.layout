@@ -435,6 +435,7 @@
 			region=header
 			dir=right
 			align=middle
+			margin-top=-3
 			margin-left=10
 			margin-right=0
 			spacing=10

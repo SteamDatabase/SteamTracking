@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
+set -e
+set -o pipefail
+shopt -s failglob
+set -u 
+
 # Allow us to debug what's happening in the script if necessary
-if [ "$STEAM_DEBUG" ]; then
+if [ "${STEAM_DEBUG-}" ]; then
 	set -x
 fi
 export TEXTDOMAIN=steam
@@ -15,9 +20,13 @@ ARCHIVE_EXT=tar.xz
 # directory lives - and all this in a subshell, so we don't affect
 # $PWD
 
-STEAMROOT="$(cd "${0%/*}" && echo $PWD)"
+STEAMROOT="$(cd $(dirname $0) && echo $PWD)"
+if [ -z ${STEAMROOT} ]; then
+	echo $"Couldn't find Steam root directory from "$0", aborting!"
+	exit 1
+fi
 STEAMDATA="$STEAMROOT"
-if [ -z $STEAMEXE ]; then
+if [ -z ${STEAMEXE-} ]; then
   STEAMEXE=`basename "$0" .sh`
 fi
 # Backward compatibility for server operators
@@ -36,7 +45,7 @@ MINIMUM_STEAMSCRIPT_VERSION=100020
 
 # Save the system paths in case we need to restore them
 export SYSTEM_PATH="$PATH"
-export SYSTEM_LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
+export SYSTEM_LD_LIBRARY_PATH="${LD_LIBRARY_PATH-}"
 
 function show_message()
 {
@@ -403,7 +412,7 @@ function get_missing_libraries()
 		# We couldn't run the link loader for this architecture
 		echo "libc.so.6"
 	else
-		LD_PRELOAD= ldd "$1" | grep "=>" | grep -v linux-gate | grep -v / | awk '{print $1}'
+		LD_PRELOAD= ldd "$1" | grep "=>" | grep -v linux-gate | grep -v / | awk '{print $1}' || true
 	fi
 }
 
@@ -426,6 +435,12 @@ function ignore_signal()
 
 function reset_steam()
 {
+	# Ensure STEAMROOT is defined to something reasonable so we don't wipe the wrong thing
+	if [ -z "${STEAMROOT}" ]; then
+		show_message --error $"Couldn't find Steam directory, it's not safe to reset Steam. Please contact technical support."
+		return 1
+	fi
+
 	# Don't wipe development files
 	if [ -f "$STEAMROOT/steam_dev.cfg" ]; then
 		echo "Can't reset development directory"
@@ -518,8 +533,8 @@ fi
 
 # identify Linux distribution and pick an optimal bin dir
 PLATFORM=`detect_platform`
-PLATFORM32=`echo $PLATFORM | fgrep 32`
-PLATFORM64=`echo $PLATFORM | fgrep 64`
+PLATFORM32=`echo $PLATFORM | grep 32 || true`
+PLATFORM64=`echo $PLATFORM | grep 64 || true`
 if [ -z "$PLATFORM32" ]; then
 	PLATFORM32=`echo $PLATFORM | sed 's/64/32/'`
 fi
@@ -544,6 +559,7 @@ STEAMDATALINK="`detect_steamdatalink`" # points at the Steam content path
 STEAMSTARTING="$STEAMCONFIG/starting"
 
 # Was -steamos specified
+: "${STEAMOS:=}"
 if steamos_arg $@; then
 	STEAMOS=1
 fi
@@ -551,9 +567,11 @@ fi
 # See if this is the initial launch of Steam
 if [ ! -f "$PIDFILE" ] || ! kill -0 $(cat "$PIDFILE") 2>/dev/null; then
 	INITIAL_LAUNCH=true
+else
+	INITIAL_LAUNCH=false
 fi
 
-if [ "$1" = "--reset" ]; then
+if [ "${1-}" = "--reset" ]; then
 	reset_steam
 	exit
 fi
@@ -563,13 +581,15 @@ if [ "$INITIAL_LAUNCH" ]; then
 	show_license_agreement
 
 	# See if we need to update the /usr/bin/steam script
-	if [ -z "$STEAMSCRIPT" ]; then
+	if [ -z "${STEAMSCRIPT:-}" ]; then
 		STEAMSCRIPT="/usr/bin/`detect_package`"
 	fi
 	if [ -f "$STEAMSCRIPT" ]; then
 		if ! check_scriptversion "$STEAMSCRIPT" STEAMSCRIPT_VERSION "$MINIMUM_STEAMSCRIPT_VERSION"; then
 			STEAMSCRIPT_OUTOFDATE=1
 			warn_outofdate
+		else
+			STEAMSCRIPT_OUTOFDATE=0
 		fi
 	fi
 
@@ -618,15 +638,16 @@ echo "Running Steam on $(distro_description)"
 # as possible, so feel free to tinker with it and submit patches and
 # bug reports.
 #
+: "${STEAM_RUNTIME:=}"
 if [ "$STEAM_RUNTIME" = "debug" ]; then
 	# Use the debug runtime if it's available, and the default if not.
 	export STEAM_RUNTIME="$STEAMROOT/$PLATFORM/steam-runtime"
 
 	if unpack_runtime; then
-		if [ -z "$STEAM_RUNTIME_DEBUG" ]; then
+		if [ -z "${STEAM_RUNTIME_DEBUG-}" ]; then
 			STEAM_RUNTIME_DEBUG="$(cat "$STEAM_RUNTIME/version.txt" | sed 's,-release,-debug,')"
 		fi
-		if [ -z "$STEAM_RUNTIME_DEBUG_DIR" ]; then
+		if [ -z "{$STEAM_RUNTIME_DEBUG_DIR-}" ]; then
 			STEAM_RUNTIME_DEBUG_DIR="$STEAMROOT/$PLATFORM"
 		fi
 		if [ ! -d "$STEAM_RUNTIME_DEBUG_DIR/$STEAM_RUNTIME_DEBUG" ]; then
@@ -681,7 +702,7 @@ if [ "$STEAM_RUNTIME" -a "$STEAM_RUNTIME" != "0" ]; then
 				;;
 		esac
 
-		export LD_LIBRARY_PATH="$STEAM_RUNTIME/i386/lib/i386-linux-gnu:$STEAM_RUNTIME/i386/lib:$STEAM_RUNTIME/i386/usr/lib/i386-linux-gnu:$STEAM_RUNTIME/i386/usr/lib:$STEAM_RUNTIME/amd64/lib/x86_64-linux-gnu:$STEAM_RUNTIME/amd64/lib:$STEAM_RUNTIME/amd64/usr/lib/x86_64-linux-gnu:$STEAM_RUNTIME/amd64/usr/lib:$LD_LIBRARY_PATH"
+		export LD_LIBRARY_PATH="$STEAM_RUNTIME/i386/lib/i386-linux-gnu:$STEAM_RUNTIME/i386/lib:$STEAM_RUNTIME/i386/usr/lib/i386-linux-gnu:$STEAM_RUNTIME/i386/usr/lib:$STEAM_RUNTIME/amd64/lib/x86_64-linux-gnu:$STEAM_RUNTIME/amd64/lib:$STEAM_RUNTIME/amd64/usr/lib/x86_64-linux-gnu:$STEAM_RUNTIME/amd64/usr/lib:${LD_LIBRARY_PATH-}"
 	else
 		echo "Unpack runtime failed, error code $?"
 		show_message --error $"Couldn't set up the Steam Runtime. Are you running low on disk space?\nContinuing..."
@@ -711,12 +732,13 @@ MAGIC_RESTART_EXITCODE=42
 SEGV_EXITCODE=139
 
 # and launch steam
-STEAM_DEBUGGER=$DEBUGGER
+STEAM_DEBUGGER=${DEBUGGER-}
 unset DEBUGGER # Don't use debugger if Steam launches itself recursively
 if [ "$STEAM_DEBUGGER" == "gdb" ] || [ "$STEAM_DEBUGGER" == "cgdb" ]; then
 	ARGSFILE=$(mktemp $USER.steam.gdb.XXXX)
 
 	# Set the LD_PRELOAD varname in the debugger, and unset the global version. 
+	: "${LD_PRELOAD=}"
 	if [ "$LD_PRELOAD" ]; then
 		echo set env LD_PRELOAD=$LD_PRELOAD >> "$ARGSFILE"
 		echo show env LD_PRELOAD >> "$ARGSFILE"
@@ -744,7 +766,7 @@ if [ "$UNAME" = "Linux" ]; then
 	if [ "$INITIAL_LAUNCH" -a \
 	     $STATUS -ne $MAGIC_RESTART_EXITCODE -a \
 	     -f "$STEAMSTARTING" -a \
-	     -z "$STEAM_INSTALLED_BOOTSTRAP" -a \
+	     -z "${STEAM_INSTALLED_BOOTSTRAP-}" -a \
 	     -z "$STEAMSCRIPT_OUTOFDATE" ]; then
 		# Launching the bootstrap failed, try reinstalling
 		if reset_steam; then

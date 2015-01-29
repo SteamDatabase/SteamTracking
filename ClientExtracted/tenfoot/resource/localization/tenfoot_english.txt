@@ -268,7 +268,7 @@
 	"Login_UserPersonaName"			"{s:personaname}"
 	"Login_UserAccountName"			"{s:accountname}"
 	"Login_RemoveUserTitle"			"Remove {s:accountname}"
-	"Login_RemoveUserDescription"	"Are you sure you'd like to remove {s:accountname}?"
+	"Login_RemoveUserDescription"	"Are you sure you want to remove {s:accountname}?"
 	"Login_SteamUnreachable_Title"	"Network Problem"
 	"Login_SteamUnreachable_Description" "We're having trouble connecting to the Steam service. Please check your network."
 	"Login_SteamUnreachable_SteamUnavailable" "We're having trouble connecting to the Steam service. Please try again later."
@@ -276,7 +276,7 @@
 	"Login_SteamUnreachable_LoginOffline" "LOGIN OFFLINE"
 	"Login_ErrorCouldNotConnect" 	"Could not connect to Steam network.\nThis could be due to a problem with your Internet connection, or with the \nSteam network. Please visit www.steampowered.com for more info."
 	"Login_Cancel_Title"			"Login"
-	"Login_Cancel_Description"		"Are you sure you'd like to cancel?"
+	"Login_Cancel_Description"		"Are you sure you want to cancel?"
 
 	"WizardButton_Next"				"NEXT"
 	"WizardButton_Back"				"BACK"
@@ -286,7 +286,7 @@
 	"CreateAccount_ServiceUnavailable" "Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later."
 	"CreateAccount_NextField"		"NEXT"
 	"CreateAccount_Cancel_Title"	"Create Account"
-	"CreateAccount_Cancel_Description"	"Are you sure you'd like to cancel creating this account?"
+	"CreateAccount_Cancel_Description"	"Are you sure you want to cancel creating this account?"
 
 	"CreateAccount_Credentials_Title" "Hello,"
 	"CreateAccount_Credentials_Description" "Creating a Steam account takes just a few simple steps.\nLet's get started."
@@ -686,7 +686,7 @@
 	"SettingsNetwork_Device_PluggedIn"		"Cable detected"
 	"SettingsNetwork_Device_Unplugged"		"No cable detected"
 
-	"SettingsNetwork_Device_Choose"			"Select how you'd like to connect to the internet."
+	"SettingsNetwork_Device_Choose"			"Select how you want to connect to the internet."
 	"SettingsNetwork_Wireless_Choice"		"Use a Wi-Fi connection"
 	"SettingsNetwork_Wired_Choice"			"Use a wired connection"
 	"SettingsNetwork_Wireless_Found"		"Wireless card found"
@@ -696,7 +696,7 @@
 	"SettingsNetwork_WAP_Credentials"		"Enter the password required to access {s:ssid}"
 	"SettingsNetwork_Credentials_C"			"Finished entering password"
 	"SettingsNetwork_ShowPassword"			"Show password"
-	"SettingsNetwork_WAP_Choose"			"Select the wireless network you'd like to connect to"
+	"SettingsNetwork_WAP_Choose"			"Select the wireless network you want to connect to"
 	"SettingsNetwork_WAP_Refresh"			"Refresh List"
 	"SettingsNetwork_OtherSSID"				"Other"
 	"SettingsNetwork_WAP_OtherSSID_Security"	"Select which security mechanism to use"
@@ -1233,7 +1233,7 @@
 	"Library_Details_Achievements_MoreUnachieved"	"MORE UNACHIEVED"	
 	"Library_Details_YouvePlayed"	"YOU'VE PLAYED"
 	"Library_Details_LastPlayed"	"LAST PLAYED"
-	"Library_Details_LastPlayedValue"	"{t:r:lastplayed}"
+	"Library_Details_LastPlayedValue"	"{t:r:t:lastplayed}"
 	"Library_Details_SteamCloud"	"STEAM CLOUD"
 	"Library_Details_Minutes"	"{i:minutes} Minutes"
 	"Library_Details_Hours"		"{i:hours} Hours"
@@ -2176,7 +2176,7 @@
 	"Parental_No_Recovery_Email_Title"		 "No Recovery Email Address"
 	"Parental_No_Recovery_Email_Text"		 "No recovery email address is set for your account. To update your recovery email address, please exit Family View and rerun Family View setup."
 	"Parental_LockTitle"	"Family View"
-	"Parental_LockPrompt"	"Please confirm you'd like to return to Family View."
+	"Parental_LockPrompt"	"Please confirm you want to return to Family View."
 	"Parental_LockedPanel"	"This isn't available while in Family View."
 	"Parental_SelectToEnter"	"Select to change"
 	"Parental_SelectToAccess"	"Select to view"
@@ -2208,7 +2208,7 @@
 
 
 	"Parental_Set_Big_Switch" 	"Use Family View with this account"
-	"Parental_Choose_Apps"			"Choose the games you'd like to be accessible while in Family View."
+	"Parental_Choose_Apps"			"Choose the games you want to be accessible while in Family View."
 
 	"Parental_Set_Recovery1"		"To assist if your Family View PIN is lost or forgotten, please configure an email address to be used for PIN recovery."
 	"Parental_Set_Recovery2"		"This should be the email address of the parent, not the child, as anyone with access to this email account can disable Family View without knowledge of the PIN."
@@ -2242,7 +2242,7 @@
 	"Parental_Disable_Success_Instr"	"To re-enable Family View at any time, return to these settings."
 	
 	"Parental_DisableTitle"		"Disable Family View"
-	"Parental_DisablePrompt"	"Are you sure you'd like to disable the Family View associated with this account?"
+	"Parental_DisablePrompt"	"Are you sure you want to disable the Family View associated with this account?"
 	"Parental_Disable"			"DISABLE"
 	"Parental_Disable_Cancel"	"CANCEL"
 	
@@ -2502,6 +2502,7 @@
 	"Music_Settings_Reset_Database_Cancel" "Cancel"
 	
 	"Music_Settings_Reset_Database"	"Reset database"
+	"Music_Settings_Stop_Scanning"	"Stop Scanning"
 	"Music_Settings_Setup_Music_Library"	"Setup music library"
 	"Music_Settings_Audio_Header"	"Volume"
 	"Music_Settings_Music_Volume"	"Music"

@@ -59,6 +59,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./controls/panel2d.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./controls/slideshow.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./controls/textentry.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./controls/tooltip.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./controls/vumeter.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./data/panoramavideoplayer.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/panorama/./layout/backgroundimage.cpp
@@ -192,7 +193,6 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../overlay/common/videomemstream.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../overlay/gameoverlayui/screenshotthread.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../overlay/gameoverlayui/screenshotthread.h
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/../panorama/webm/vorbisencoder.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/PlatformMainPanel.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/refreshloginpanel.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/refreshloginpanel.h
@@ -228,6 +228,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/avatarimage.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/avatarimage.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/backgroundvideopanel.h
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/broadcast/broadcastchat.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/broadcast/broadcastoverlay.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/community/community.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./tenfoot/community/community.h
