@@ -1,0 +1,127 @@
+/* Styles for broadcasting */
+
+.BroadcastChatPanel
+{
+	flow-children: down;
+}
+
+#ChatContent
+{
+	flow-children: down;
+	width: 100%;
+	height: 85%;
+	overflow: clip scroll;
+
+	background-color: #1a578023;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#ChatContent Label
+{
+	color: white;
+	font-size: 16px;
+	padding-bottom: 3px;
+	width: 100%;
+	white-space: normal;
+	padding-left: 8px;
+}
+
+#ChatContent Label .ingame
+{
+	color: friendsingame_darkbg;
+}
+
+#ChatContent Label .notingame
+{
+	color: friendsonline_darkbg;
+}
+
+#ChatContent Label.Broadcaster
+{
+	background-image: url('file://{images}/broadcast/live_chat.png' );
+	background-repeat: no-repeat;
+	background-position: left 9px;
+}
+
+#TextEntryLine
+{
+	height: 106px;
+	width: 100%;
+	flow-children: right;
+
+
+	padding-left: 8px;
+	padding-right: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 28px;
+	font-weight: normal;
+	text-overflow: clip;
+}
+
+#ChatEntry
+{
+	width: fill-parent-flow(1.0);
+	height: 100%;
+
+	opacity: 0.85;
+
+	border-width: 5px;
+	border-color: friendstab;
+	border-style: solid;
+	border-radius: 0px;
+
+	color: friendsitemmainlistbkgnd_from;
+	background-color: friendschatinputbkgnd_text;
+}
+
+#ChatEntry:focus
+{
+	color: applabelselectedsolid;
+	background-color: friendsitemmainlistbkgnd;
+}
+
+
+#ChatEntry:hover
+{
+	opacity: 1.0;
+}
+
+#ChatSubmit
+{
+	vertical-align: center;
+	horizontal-align: right;
+	min-width: 106px;
+	height: 106px;
+	font-weight: light;
+	font-size: 24px;
+	color: tclegendlabel;
+	white-space: nowrap;
+	padding: 8px;
+	margin-left: 8px;
+
+	border-radius: 0px;
+
+	background-color: friendstab;
+}
+
+#ChatSubmit:hover,
+#ChatSubmit:focus
+{
+	background-color: friendstabcurrentselection;
+}
+
+#ChatSubmit:disabled
+{
+	background-color: friendschatinputbkgnd;
+}
+
+#ChatSubmit Label
+{
+	align: center center;
+}

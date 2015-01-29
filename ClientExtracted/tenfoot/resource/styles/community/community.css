@@ -203,13 +203,10 @@ CommunityPanel LoadingThrobber
 CommunityPanel#CommunityMarketItemPicker
 {
 	width: 100%;
-	height: 100%;
 
 	background-image: url( "file://{images}/profile/activity_bg_wash.png" );
 	background-size: 100% 100%;
 	box-shadow: #000000aa -4px -4px 8px 8px;
-
-	transform: translatey( 157px );
 
 	transition-property: transform, position, opacity;
 	transition-duration: mediumduration;
@@ -222,21 +219,6 @@ CommunityPanel#CommunityMarketItemPicker
 	transition-property: transform;
 	transition-timing-function: ease-out;
 	transition-duration: 0.23s;
-}
-
-.MarketStack1
-{
-	transform: translatey( -50px );
-}
-
-#CommunityMarketItemPicker.MarketStack1
-{
-	transform: translatey( 107px ); /* 157 - 50*/
-}
-
-.MarketStack2
-{
-	transform: translatey( -55px );
 }
 
 
@@ -322,4 +304,30 @@ CommunityPanel#CommunityMarketItemPicker
 #OverlayBasePanel #CommunityGameHub.CommunityVisible
 {
 	opacity: 1.0;
+}
+
+
+#CommunityWrapper .MarketPanel
+{
+	width: 2120px;
+	margin-left: -100px;
+	margin-right: -100px;
+	padding-left: 100px;
+	padding-right: 100px;
+
+	box-shadow: #000000aa -4px -4px 8px 8px;
+}
+
+#CommunityWrapper.MarketStackDepth1 #CommunityMarket,
+#CommunityWrapper.MarketStackDepth2 #CommunityMarket,
+#CommunityWrapper.MarketStackDepth2 #CommunityMarketItemPicker,
+#CommunityWrapper.MarketStackDepth2 #CommunityMarketDetails
+{
+	transform: translate3d( 0px, -100px, -100px );
+}
+
+#CommunityWrapper.MarketStackDepth2 #CommunityMarketItemPicker:descendantfocus,
+#CommunityWrapper.MarketStackDepth2 #CommunityMarketItemPicker.CommunityLoading
+{
+	transform: none;
 }

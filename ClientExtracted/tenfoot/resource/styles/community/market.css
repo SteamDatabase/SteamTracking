@@ -5,7 +5,11 @@
 	background-image: url("file://{images}/profile/activity_bg_wash.png");
 	background-size: 100% 100%;
 	box-shadow: #000000aa -4px -4px 8px 8px;
-	flow-children: down;
+}
+
+#CommunityMarketDetails:descendantfocus
+{
+	opacity: 1.0;
 }
 
 #CommunityMarketDetails .Hidden
@@ -13,9 +17,14 @@
 	opacity: 0.0;
 }
 
+#CommunityMarketDetailsContent
+{
+	flow-children: down;
+}
+
 #Stats
 {
-//	visibility: collapse;
+	visibility: collapse;
 	font-size: 22px;
 	color: white;
 	margin-left: 20px;
@@ -96,6 +105,7 @@
 	box-shadow: fill box_shadow_on_color -5.5px -5.5px 18px 9px;
 }
 
+// BUGBUG: Styling here needs work
 #ItemsCarousel .DetailPanel.NeverFocused
 {
 	box-shadow: fill yellow -1.5px -1.5px 6px 3px;
@@ -115,7 +125,7 @@
 
 .ItemDetailInner .ListingID
 {
-//	visibility: collapse;
+	visibility: collapse;
 	color: red;
 }
 
@@ -217,4 +227,38 @@
 	margin-right: 0px;
 }
 
+//
+// BUGBUG: Positioning on this needs work
+//
+#ThrobberPanel
+{
+	width: 100%;
+	height: 756px;
+	z-index: 10;
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+}
+
+#ThrobberPanel.ContentLoaded
+{
+	opacity: 0.0;
+}
+
+#ThrobberPanel LoadingThrobber
+{
+	vertical-align: center;
+	horizontal-align: right;
+	margin-right: 40px;
+	margin-top: 0px;
+	
+	opacity: 0.7;
+}
+
+#ThrobberPanel.First LoadingThrobber
+{
+	margin-right: 0px;
+	horizontal-align: center;
+}
 

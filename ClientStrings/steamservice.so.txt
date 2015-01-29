@@ -41,6 +41,7 @@
 16CKeyValuesSystem
 16CServiceRegistry
 16IKeyValuesSystem
+%.16llX
 17CCrossProcessPipe
 17CDebugStatsSystem
 17IDebugStatsSystem

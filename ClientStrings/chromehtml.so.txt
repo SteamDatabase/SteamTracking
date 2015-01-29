@@ -99,6 +99,7 @@
 27CMsgZoomToElementAtPosition
 28CMsgGetCookiesForURLResponse
 28CMsgScalePageToValueResponse
+28CMsgScreenInformationChanged
 29CMsgRequestFullScreenResponse
 30CMsgCloseFullScreenFlashIfOpen
 33CMsgVerticalScrollBarSizeResponse
@@ -227,6 +228,7 @@ CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
 CMsgScalePageToValueResponse
+CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetCookie
 CMsgSetCursor
@@ -463,6 +465,8 @@ m_pSpaceAvail
 m_pToChromeStream
 m_sCookieDir
 m_sHTMLCacheDir
+m_sMasterEventName
+m_sMasterSharedMemoryName
 m_Tree
 munmap
 MutableMessage
@@ -486,6 +490,8 @@ OptimizeMode
 optional
 options
 output_type
+override_height
+override_width
 package
 packed
 pageserial
@@ -573,6 +579,7 @@ sint64
 %s_mutex
 socket
 SPEED
+_spid%u
 %s_server
 %s/.steam/steam
 __stack_chk_fail
@@ -620,6 +627,7 @@ ThreadInterlockedIncrement
 ThreadIsProcessActive
 ThreadIsProcessIdActive
 ThreadIsThreadRunning
+ThreadSleep
 ThreadTerminateProcessCode
 ThreadWaitForProcessExit
 title
@@ -685,7 +693,6 @@ V_StrTrim
 V_UnqualifiedFileName
 V_vsnprintf
 V_vsnprintfRet
-Warning
 WARNING
 width
 write

@@ -675,7 +675,6 @@ __xstat64
 YACHTS
 YANDEX
 YOKOHAMA
-yStd4
 _Z13V_SplitStringPKcS0_R10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEb
 _Z14V_SplitString2PKcPKS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS4_EEb
 _Z15V_UnicodeLengthPKc

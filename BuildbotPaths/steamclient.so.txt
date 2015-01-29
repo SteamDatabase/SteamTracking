@@ -32,6 +32,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/audio/clientaudio.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/chunkdatastore.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/html/chrome_ipc_client.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/html/chrome_ipc_shared.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/interfacemap.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/ipcclient.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/../common/ipcserver.cpp

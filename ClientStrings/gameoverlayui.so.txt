@@ -297,6 +297,7 @@
 27ListPanelColumnSelectButton
 28CMsgGetCookiesForURLResponse
 28CMsgScalePageToValueResponse
+28CMsgScreenInformationChanged
 29CMsgRequestFullScreenResponse
 29COverlay_Details_Achievements
 29COverlayDetailsBroadcastPanel
@@ -1094,6 +1095,7 @@ CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
 CMsgScalePageToValueResponse
+CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetCookie
 CMsgSetCursor
@@ -1734,6 +1736,7 @@ EPurchaseStatus
 ERCPt
 ERCPt6
 ERCPu
+ERegKeyRoot
 EResult
 ERR_add_error_data
 ERR_add_error_vdata
@@ -2186,7 +2189,10 @@ highwinds
 hintText
 Hipercard
 Hiragana
+HKEY_CLASSES_ROOT
+HKEY_CURRENT_USER
 HKEY_CURRENT_USER\Software\Valve\Steam\SkinV4
+HKEY_LOCAL_MACHINE
 hmacWithMD5
 hmacWithSHA1
 hmacWithSHA224
@@ -3459,6 +3465,8 @@ OverlayHidden
 OverlayShown
 OverlaySplashScreen
 OverlayWebBrowserNew
+override_height
+override_width
 owner
 Owner
 \%p1\%
@@ -3873,6 +3881,7 @@ RichText::DrawString
 RichText.InsetX
 RichText.InsetY
 RichTextInterior
+RichText::ParseTextStringForURL
 RichText::RecalculateLineBreaks
 RichTextReceivedUnneededFocus
 rightarrow
@@ -3925,8 +3934,6 @@ schinese
 %s_collapsed
 sCommunityShareScreenshotLink
 %s/config
-%s/config/overlaycookies
-%s/config/overlayhtmlcache
 Score
 screenshot_caption_charsleft
 screenshot_hotkey
@@ -4338,6 +4345,7 @@ steam://nav/music/details
 steam://open/musicplayer
 steam/OverlaySettingsDialog
 steamparental
+steam.pid
 steampipe
 SteamRealPath
 Steam_ServerBrowserPingRateDefault
@@ -4611,7 +4619,6 @@ TSQueueBase_UnsafeDummy
 TSQueueBase_UnsafePeek
 TSQueue_PopIntoFreeList
 turkish
-tvseries
 TwoFactorEdit
 TwoFactorLabel
 TwoWeeksText
@@ -4999,6 +5006,7 @@ _ZN16SteamThreadTools7CThread15IsThreadRunningEv
 _ZN16SteamThreadTools7CThread4InitEv
 _ZN16SteamThreadTools7CThread4JoinEj
 _ZN16SteamThreadTools7CThread5StartEj
+_ZN16SteamThreadTools7CThread5YieldEv
 _ZN16SteamThreadTools7CThread6OnExitEv
 _ZN16SteamThreadTools7CThread7IsAliveEv
 _ZN16SteamThreadTools7CThread7SetNameEPKc

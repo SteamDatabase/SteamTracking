@@ -204,6 +204,7 @@
 27ListPanelColumnSelectButton
 28CMsgGetCookiesForURLResponse
 28CMsgScalePageToValueResponse
+28CMsgScreenInformationChanged
 29CMsgRequestFullScreenResponse
 29ISteamMatchmakingPingResponse
 30CMsgCloseFullScreenFlashIfOpen
@@ -480,6 +481,7 @@ CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
 CMsgScalePageToValueResponse
+CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetCookie
 CMsgSetCursor
@@ -1437,6 +1439,8 @@ optional
 options
 original
 output_type
+override_height
+override_width
 package
 packed
 PageChanged
@@ -1564,6 +1568,7 @@ RichText::DrawString
 RichText.InsetX
 RichText.InsetY
 RichTextInterior
+RichText::ParseTextStringForURL
 RichText::RecalculateLineBreaks
 RichTextReceivedUnneededFocus
 rightarrow

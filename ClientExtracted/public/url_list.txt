@@ -358,13 +358,6 @@ StoreAddCachedPmtMethodPage
 	filter		"store"
 }
 
-PSNAccountSetupPage
-{
-	url		"%store%/psn/beginsetup"
-	method	"internal"
-	filter		"store"
-}
-
 GiftActivationPage
 {
 	url			"%community%/actions/RedeemGift"
@@ -621,7 +614,7 @@ CommunityMarket
 }
 CommunityMarketListings
 {
-	url		"%community%/market/listings/%p1%/%p2%"
+	url		"%community%/market/listings/%p1%/%p2%?filter=%p3%"
 	method		"internal"
 	filter		"community"
 }
@@ -792,4 +785,10 @@ GameHubBroadcasts
 	url			"%community%/?subsection=broadcasts"
 	method		"internal"
 	filter		"community"
+}
+
+WatchVideo
+{
+	url			"%store%/video/watch/%p1%/"
+	method	"internal"
 }

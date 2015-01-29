@@ -544,22 +544,14 @@ VerticalScrollBar
 	horizontal-align: right;
 	vertical-align: center;
 
-	// NOTE: The transition duration and timing function must match constants used in code:
-	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-property: transform;
-	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
 }
 
 VerticalScrollBar .ScrollThumb
 {
 	background-color: #f2f2f2dd;
 
-	// NOTE: The transition duration and timing function must match constants used in code:
-	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-property: position;
-	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
 }
 
 HorizontalScrollBar
@@ -572,24 +564,30 @@ HorizontalScrollBar
 	horizontal-align: left;
 	vertical-align: bottom;
 
-	// NOTE: The transition duration and timing function must match constants used in code:
-	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-property: transform;
-	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
 }
 
 HorizontalScrollBar .ScrollThumb
 {
 	background-color: #f2f2f2dd;
 
-	// NOTE: The transition duration and timing function must match constants used in code:
-	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-property: position;
+}
+
+VerticalScrollBar, VerticalScrollBar .ScrollThumb, HorizontalScrollBar, HorizontalScrollBar .ScrollThumb
+{
+	// The transition duration and timing function must match constants used in code:
+	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-duration: 0.20s;
 	transition-timing-function: ease-in-out;
 }
 
+VerticalScrollBar.MouseDown, VerticalScrollBar.MouseDown .ScrollThumb, HorizontalScrollBar.MouseDown, HorizontalScrollBar.MouseDown .ScrollThumb
+{
+    // Disable the transition when the mouse is dragging the scroll thumb. Note that this must match
+    // when IUIScrollBar::IsMouseDown returns true, or else the content will be out of sync
+    transition-duration: 0.0s;
+}
 
 Tooltip
 {

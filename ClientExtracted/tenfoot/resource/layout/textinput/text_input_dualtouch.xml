@@ -84,13 +84,20 @@
 				</Panel>
 				
 			</Panel>
-			
+
+			<Panel id="TextPreviewBackground">
+				<TextEntry id="TextPreview" />
+			</Panel>
 			<Panel id="BackDrop">
-				<Panel id="KeyboardBackground" />
 				<Panel id="TouchPadLeft" class="TouchPad Left">
 					<Panel id="RowContainer">
 						<Panel id="TopRow" class="TouchRow">
-							<Panel id="TouchKey_LeftSuggest" class="TouchKey" />
+							<Panel id="TouchKey_Suggest_0" class="TouchKey">
+								<Label id="TouchKey_Suggest_0_text" class="TouchKeyLabel" />
+							</Panel>
+							<Panel id="TouchKey_Suggest_1" class="TouchKey">
+								<Label id="TouchKey_Suggest_1_text" class="TouchKeyLabel" />
+							</Panel>
 						</Panel>
 						<Panel id="Row0" class="TouchRow">
 							<Panel id="TouchKey_0_0" class="TouchKey" />
@@ -142,7 +149,12 @@
 				<Panel id="TouchPadRight" class="TouchPad Right">
 					<Panel id="RowContainer">
 						<Panel id="TopRow" class="TouchRow">
-							<Panel id="TouchKey_RightSuggest" class="TouchKey" />
+							<Panel id="TouchKey_Suggest_2" class="TouchKey">
+								<Label id="TouchKey_Suggest_2_text" class="TouchKeyLabel" />
+							</Panel>
+							<Panel id="TouchKey_Suggest_3" class="TouchKey">
+								<Label id="TouchKey_Suggest_3_text" class="TouchKeyLabel" />
+							</Panel>
 						</Panel>
 						<Panel id="Row0" class="TouchRow">
 							<Panel id="TouchKey_6_0" class="TouchKey LeftQuadrant" />

@@ -384,7 +384,7 @@
 		"labelText"		"#Friends_ViewSteamCommunityProfile"
 		"textAlignment"		"west"
 		"wrap"		"0"
-		"URLText"		"steam://url/SteamIDControlPage"
+		"URLText"		"steam://url/SteamIDMyProfile"
 	}
 	"URLLabel2"
 	{

@@ -8,10 +8,10 @@
 	
 	<CommunityWrapper defaultfocus="CommunityMenu" >
 		<CommunityPanel id="CommunityMenu" class="CommunityPanel" onactivate="" onmoveup="CloseCommunity();" />
-		<CommunityPanel id="CommunityMarket" class="CommunityPanel" onmoveup="OpenCommunityMenu( false );" />
-		<CommunityPanel id="CommunityMarketDetails" class="CommunityPanel" onmoveup="OpenCommunityMarket( false );" />
-		<CommunityPanel id="CommunityMarketItemPicker" class="CommunityPanel" onmoveup="OpenCommunityMarket( false );" />
-		<CommunityPanel id="CommunityMarketSellDialog" class="CommunityPanel" onmoveup="ShowMarketCreateListingDialog( false );" />
+		<CommunityPanel id="CommunityMarket" class="CommunityPanel MarketPanel" onmoveup="OpenCommunityMenu( false );" />
+		<CommunityPanel id="CommunityMarketDetails" class="CommunityPanel MarketPanel" onmoveup="OpenCommunityMarket( false );" />
+		<CommunityPanel id="CommunityMarketItemPicker" class="CommunityPanel MarketPanel" onmoveup="OpenCommunityMarket( false );" />
+		<CommunityPanel id="CommunityMarketSellDialog" class="CommunityPanel MarketPanel" onmoveup="ShowMarketCreateListingDialog( false );" />
 		<CommunityPanel id="CommunityHome" class="CommunityPanel" onmoveup="OpenCommunityMenu( false );" />
 		<CommunityPanel id="CommunityGameHub" class="CommunityPanel" onactivate="" onmoveup="OpenCommunityMenu( false );" />
 	</CommunityWrapper>

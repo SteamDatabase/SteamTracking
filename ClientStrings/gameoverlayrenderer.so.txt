@@ -18,6 +18,7 @@ AXCreateGC
 BOverlayNeedsPresent
 __bss_start
 CAsyncCaptureGL
+CAsyncCaptureGLNVIFR
 chdir
 clientWindow
 clock_gettime
@@ -251,6 +252,7 @@ memmove
 memset
 munmap
 N16SteamThreadTools7CThreadE
+N20CAsyncCaptureGLNVIFR14CCaptureThreadE
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -260,6 +262,7 @@ N3IPC6IMutexE
 nanosleep
 NotifyVRCleanup
 NotifyVRInit
+NvIFROGLCreateInstance
 opendir
 /proc
 /proc/%u/stat
@@ -314,6 +317,8 @@ sigprocmask
 %s_mem
 %s_mutex
 sprintf
+srcHeight
+srcWidth
 sscanf
 __stack_chk_fail
 stderr
@@ -325,6 +330,7 @@ SteamOverlay
 SteamOverlayRunning_%llu
 SteamStreaming
 SteamStreamingAsyncCapture
+SteamStreamingHardwareEncoding
 SteamStreamingMaximumResolution
 SteamTenfoot
 strcat
@@ -341,6 +347,7 @@ syscall
 system
 timegm
 __timezone
+TJd_C
 /tmp/gameoverlayrenderer.log
 /tmp/gameoverlayrenderer.log.last
 u4PPW

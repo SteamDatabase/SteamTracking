@@ -13,7 +13,7 @@ TextInputDualTouch
 	margin-bottom: 210px;
 	margin-right: 20px;
 	margin-left: 20px;
-	margin-top: 120px;
+	margin-top: 190px;
 	horizontal-align: center;
 	
 	background-color: daisy_bg_color;
@@ -25,28 +25,50 @@ TextInputDualTouch
 	border-radius: 10px;
 }
 
-#KeyboardBackground
+#TextPreviewBackground
 {
-	x: 2%;
-	y: 100px;
-	width: 96%;
-	height: 75%;
-	//background-color:  daisy_petal_color;
+	y: 8%;
+	background-color: daisy_bg_color;
+	horizontal-align: center;
+	width: 720px;
+	height: 88px;
+	box-shadow: fill #00000022 -4px -4px 8px 12px;
+	border-radius: 10px;
+}
+
+#TextPreview
+{
+	horizontal-align: center;
+	width: 700px;
+	height: 68px;
+	background-color: daisy_petal_color;
+	overflow: clip;
+	color: #ccccccff;
+	font-size: 38px;
+	font-family: platformfont;
+	animation-name: none;
+	vertical-align: center;
+	background-color: #173a4c;
+	
+	text-overflow: clip;
+	white-space: nowrap;
+	text-align: left;
 }
 
 .TouchPad
 {
 	y: 6px;
 	width: 500px;
-	height: 500px;
-/* 	margin-top: 15px; */
+	height: 510px;
 	background-repeat: no-repeat;
 	margin-left: -35px;
 	margin-right: -35px;
+	margin-top: -10px;
 }
 
 #RowContainer
 {
+	margin-top: 10px;
 	width: 100%;
 	height: 100%;
 	flow-children: down;
@@ -157,10 +179,12 @@ TextInputDualTouch
 	width: 91.7%;
 }
 
-#TouchKey_LeftSuggest,
-#TouchKey_RightSuggest
+#TouchKey_Suggest_0,
+#TouchKey_Suggest_1,
+#TouchKey_Suggest_2,
+#TouchKey_Suggest_3
 {
-	width: 89.5%;
+	width: 44.75%;
 }
 
 #TouchKey_LeftArrow,
@@ -171,6 +195,7 @@ TextInputDualTouch
 
 #TouchKey_LeftArrow.LeftArrowFill
 {
+	margin-top: 10px;
 	x: 9%;
 	y: 14.8%;
 	width: 1.8%;
@@ -180,6 +205,7 @@ TextInputDualTouch
 
 #TouchKey_RightArrow.RightArrowFill
 {
+	margin-top: 10px;
 	x: 89.2%;
 	y: 14.8%;
 	width: 1.64%;
@@ -212,12 +238,6 @@ TextInputDualTouch
 	visibility: collapse;
 }
 
-.TouchKeyHover #TouchKeyLabel
-{
-	color: #000000ff;
-	wash-color: #000000ff;
-}
-
 #TouchKeyLabel,
 .TouchKeyLabel
 {
@@ -227,3 +247,17 @@ TextInputDualTouch
 	color: #ccccccff;
 	wash-color: #ccccccff;
 }
+
+.TouchKeyHover #TouchKeyLabel,
+.TouchKeyHover .TouchKeyLabel,
+{
+	color: #000000ff;
+	wash-color: #000000ff;
+}
+
+/*#TextPreview
+{
+	horizontal-align: right;
+	text-overflow: clip;
+	white-space: nowrap;
+}*/

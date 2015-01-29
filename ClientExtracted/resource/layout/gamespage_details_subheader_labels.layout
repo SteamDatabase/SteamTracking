@@ -31,8 +31,8 @@
 		headertext-red
 		{
 			padding-left=0
-			padding-bottom=0
-			padding-top=-1
+			padding-bottom=-1
+			padding-top=2
 			font-size=14
 			textcolor=GameDetailsRed
 			font-style=uppercase
@@ -42,8 +42,8 @@
 		headertext-green
 		{
 			padding-left=0
-			padding-bottom=0
-			padding-top=-1
+			padding-bottom=-1
+			padding-top=2
 			font-size=14
 			textcolor=GameDetailsGreen
 			font-style=uppercase
@@ -53,8 +53,8 @@
 		headertext-blue
 		{
 			padding-left=0
-			padding-bottom=0
-			padding-top=-1
+			padding-bottom=-1
+			padding-top=2
 			font-size=14
 			textcolor=GameDetailsBlue
 			font-style=uppercase
@@ -64,8 +64,8 @@
 		valuetext
 		{
 			padding-left=0
-			padding-bottom=0
-			padding-top=-1
+			padding-bottom=-1
+			padding-top=2
 			font-size=14
 			textcolor=Text
 		}
