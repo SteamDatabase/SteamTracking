@@ -54,6 +54,7 @@
 "Styles/styles_supportmessages.css"              : "https://steamstore-a.akamaihd.net/public/css/styles_supportmessages.css?__TIME__",
 "Styles/styles_video.css"                        : "https://steamstore-a.akamaihd.net/public/css/styles_video.css?__TIME__",
 "Styles/styles_widget.css"                       : "https://steamstore-a.akamaihd.net/public/css/styles_widget.css?__TIME__",
+"Styles/styles_video_watch.css"                  : "https://steamstore-a.akamaihd.net/public/css/styles_video_watch.css?__TIME__",
 
 //
 // Community CSS
@@ -124,6 +125,7 @@
 "Styles/globalv2.css"                            : "https://steamcommunity-a.akamaihd.net/public/css/globalv2.css?__TIME__",
 "Styles/shared_global.css"                       : "https://steamcommunity-a.akamaihd.net/public/shared/css/shared_global.css?__TIME__",
 "Styles/user_reviews.css"                        : "https://steamcommunity-a.akamaihd.net/public/shared/css/user_reviews.css?__TIME__",
+"Styles/dash_player.css"                         : "https://steamcommunity-a.akamaihd.net/public/shared/css/dash_player.css?__TIME__",
 
 //
 // Holiday CSS
@@ -166,6 +168,7 @@
 "Scripts/Store/supportmessages.js"               : "https://steamstore-a.akamaihd.net/public/javascript/supportmessages.js?__TIME__&l=english",
 "Scripts/Store/youraccount.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/youraccount.js?__TIME__&l=english",
 "Scripts/Store/salefunctions.js"                 : "https://steamstore-a.akamaihd.net/public/javascript/promo/salefunctions.js?__TIME__&l=english",
+"Scripts/Store/video_watch.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/promo/video_watch.js?__TIME__&l=english",
 
 //
 // Community JS
