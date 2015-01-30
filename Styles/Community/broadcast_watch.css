@@ -650,7 +650,7 @@ body.flat_page
 
 
 .NoEmoticons {
-	width: 254px;
+	width: 274px;
 }
 
 .ChatSend
@@ -674,6 +674,11 @@ body.flat_page
 	float: left;
 	padding: 8px;
 	vertical-align: top;
+}
+
+.emoticon_popup_ctn
+{
+	z-index: 1000;
 }
 
 .BroadcastRow

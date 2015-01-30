@@ -60,8 +60,15 @@
 	cursor: pointer;
 }
 
-.dash_overlay .volume_icon.muted {
+.dash_overlay .volume_icon.muted
+{
 	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FARYTD/vTzoUAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAQpJREFUOMtj1NHWYCALMDGQC2ig09HJWV1dg2SdmZnZkyZN4eXjxaOTBY3Pw8PT0tru7OxC0LUscA0aGpq8vLxZ2TkaGprE+BOqU0NDc/6CRVhVcHFxMTAwfPv2jYuLy83NY8OGdcSGrYiISF5eoYaGZlNTq4iICAmx8ujRoyNHDlVUVh85cnjOnFkk6OTi4goICNq1c4eGhibE5cTqjIqKuXHj+rJlS5YtW2xjY4seQp8+fzp96pSUtLS0tDSaTrgLHz169OjRI3Q7b928mZQUHxIcsGHDenJS35cvX2prqjo62shMt0uXLE5MiPv06RN+nYy48qeUlBQDA8OzZ8+ITbdwgEcPpfkTADH3UjunQa9YAAAAAElFTkSuQmCC);
+}
+
+.dash_overlay .no_audio_track .volume_icon
+{
+	background-image: url(data:image/png;base64, );
+	cursor: auto;
 }
 
 .dash_overlay .autoplay_checkbox {
@@ -98,6 +105,11 @@
 	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAATCAYAAAAH3YpvAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FARUcHhS9TOEAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAFBJREFUWMPt18EJwCAQRcEYUowQb/+WQPrvyvSgBxHmlTDsLmxpd+2HhjsRAAQIEKAAAtyz63k/CiZwTUkATq9wEgoTFb+wGwgQIEABBLhnPwULBQqEx95FAAAAAElFTkSuQmCC);
 	position: relative;
 	cursor: pointer;
+}
+
+.dash_overlay .no_audio_track .volume_slider
+{
+	display: none;
 }
 
 .dash_overlay .volume_slider .volume_handle
@@ -193,6 +205,43 @@
 	text-align: right;
 	display: inline-block;
 	margin-right: 10px;
+}
+
+.playback_notification
+{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	bottom: 10%;
+
+	color: white;
+	font-size: 20px;
+	text-align: center;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-timing-function: ease;
+	transition-duration: 1s;
+	transition-delay: 3s;
+}
+
+.playback_notification span
+{
+	background-color: rgba( 0, 0, 0, 0.6 );
+	padding: 4px 6px;
+}
+
+.playback_notification.show_notification
+{
+	opacity: 1.0;
+}
+
+.playback_notification.close_notification
+{
+	opacity: 0.0;
 }
 
 .dash_overlay .representation_video,

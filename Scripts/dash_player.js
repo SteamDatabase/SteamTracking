@@ -677,6 +677,17 @@ CDASHPlayer.prototype.GetLanguageForAudioTrack = function()
 	return null;
 }
 
+CDASHPlayer.prototype.BPlayingAudio = function()
+{
+	for ( var i = 0; i < this.m_loaders.length; i++ )
+	{
+		if ( this.m_loaders[i].ContainsAudio() )
+			return true;
+	}
+
+	return false;
+}
+
 CDASHPlayer.prototype.UpdateStats = function()
 {
 	this.m_nCurrentDownloadBitRate = 0;
@@ -1871,6 +1882,8 @@ function CDASHPlayerUI( player )
 	this.m_bIsSafariBrowser = (navigator.userAgent.toLowerCase().indexOf('safari') != -1 && navigator.userAgent.toLowerCase().indexOf('chrome') == -1);
 	this.m_bIsInternetExplorer = (navigator.appVersion.toLowerCase().indexOf('trident/') != -1);
 	this.m_strUniqueSettingsID = '';
+	this.m_elActiveNotification = null;
+	this.m_schNotificationTimeout = null;
 }
 
 CDASHPlayerUI.s_ClosedCaptionsNone = "none";
@@ -1984,6 +1997,16 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 			'</div>' );
 		this.m_elContainer.append( this.m_elBigPlayPauseIndicator );
 		this.m_elBigPlayPauseIndicator.on( 'click', function() { _ui.TogglePlayPause() } );
+	}
+
+	if ( !this.m_player.BPlayingAudio() )
+	{
+		$J( '.control_container', this.m_elOverlay ).addClass( 'no_audio_track' );
+		$J( this.m_player.m_elVideoPlayer ).one( 'bufferingcomplete', function() { _ui.DisplayNotification( 'This video does not contain any audio', 15000 ) } );
+	}
+	else
+	{
+		$J( '.control_container', this.m_elOverlay ).removeClass( 'no_audio_track' );
 	}
 
 	this.InitSettingsPanelInUI();
@@ -2445,6 +2468,9 @@ CDASHPlayerUI.prototype.OnVolumeStopDrag = function( e, ele )
 
 CDASHPlayerUI.prototype.ToggleMute = function( e, ele )
 {
+	if ( !this.m_player.BPlayingAudio() )
+		return;
+
 	var elVideoPlayer = this.m_player.m_elVideoPlayer;
 	elVideoPlayer.muted = !elVideoPlayer.muted;
 
@@ -2776,6 +2802,50 @@ CDASHPlayerUI.SaveClosedCaptionOptions = function()
 		var elementId = '#' + element.id + ' option:selected';
 		WebStorage.SetLocal( element.id, $J( elementId ).val() );
 	});
+}
+
+CDASHPlayerUI.prototype.DisplayNotification = function( strNotification, nDisplayTimeMS )
+{
+	// hide any active notification
+	if ( this.m_elActiveNotification )
+	{
+		this.m_elActiveNotification.remove();
+		this.m_elActiveNotification = null;
+	}
+
+	if ( this.m_schNotificationTimeout )
+	{
+		clearTimeout( this.m_schNotificationTimeout );
+		this.m_schNotificationTimeout = null;
+	}
+
+	var elNotification = $J( '<div class="playback_notification"><span></span></div>' );
+	elNotification.find( 'span').text( strNotification );
+	this.m_elContainer.append( elNotification );
+	this.m_elActiveNotification = elNotification;
+
+		var _ui = this;
+	setTimeout( function() { elNotification.addClass( 'show_notification' ); }, 100 );
+	this.m_schNotificationTimeout = setTimeout( function() { _ui.CloseNotification(); }, nDisplayTimeMS );
+}
+
+CDASHPlayerUI.prototype.CloseNotification = function()
+{
+	this.m_schNotificationTimeout = null;
+	if ( !this.m_elActiveNotification )
+		return;
+
+	var _ui = this;
+	var elNotification = this.m_elActiveNotification;
+	elNotification.one( 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function()
+	{
+		if ( _ui.m_elActiveNotification == elNotification )
+			_ui.m_elActiveNotification = null;
+
+		elNotification.remove();
+	});
+
+	elNotification.addClass( 'close_notification' );
 }
 
 function SecondsToTime( seconds )
