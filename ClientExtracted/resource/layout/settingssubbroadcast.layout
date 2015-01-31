@@ -11,7 +11,7 @@
 		"BroadcastHelpHeader" { ControlName="Label" fieldName="BroadcastHelpHeader" labelText="#Steam_Settings_Broadcast_HelpHeader" group="HideWhenUnavailable" }
 		"BroadcastHelpURL" { ControlName="URLLabel" fieldName="BroadcastHelpURL" labelText="#Steam_Settings_Broadcast_HelpURL_Desc" URLText="#Steam_Settings_Broadcast_HelpURL_URL" group="HideWhenUnavailable" }
 		
-		"Divider1" { ControlName="Divider"	}				
+		"Divider1" { ControlName="Divider" }
 		
 		"PermissionsHeader" { ControlName="Label" fieldName="PermissionsHeader" labelText="#Steam_Settings_Broadcast_PermissionsHeader" group="HideWhenUnavailable" }
 		"Permissions" { ControlName="ComboBox" fieldName="Permissions" editable="0" group="HideWhenUnavailable" }			
@@ -22,17 +22,20 @@
 		"BitrateLimitHeader" { ControlName="Label" fieldName="BitrateLimitHeader" labelText="#Steam_Settings_Broadcast_BitrateHeader" group="HideWhenDisabled" }
 		"BitrateLimit" { ControlName="ComboBox" fieldName="BitrateLimit" group="HideWhenDisabled" editable="0" }
 		
+		"EncoderHeader" { ControlName="Label" fieldName="EncoderHeader" labelText="#Steam_Settings_Broadcast_EncoderHeader" group="HideWhenDisabled" }
+		"EncoderSetting" { ControlName="ComboBox" fieldName="EncoderSetting" group="HideWhenDisabled" editable="0" }
+		
 		"ShowChatHeader" { ControlName="Label" fieldName="ShowChatHeader" labelText="#Steam_Settings_Broadcast_ShowChat" group="HideWhenDisabled" }
 		"ShowChatCombo" { ControlName="ComboBox" fieldName="ShowChatCombo" group="HideWhenDisabled" editable="0" }
 		
 		"IncludeDesktop" { ControlName="CheckButton" fieldName="IncludeDesktop" group="HideWhenDisabled" }
 		"RecordMic" { ControlName="CheckButton" fieldName="RecordMic" group="HideWhenDisabled" }
 		"ConfigMic" { ControlName="URLLabel" fieldName="ConfigMic" labelText="#Steam_Settings_Broadcast_ConfigMic" URLText="steam://settings/voice" group="HideWhenDisabled" }
-		"EnableHardwareSupport" { ControlName="CheckButton" fieldName="EnableHardwareSupport" group="HideWhenDisabled" }
+		"EnableHardwareSupport" { ControlName="CheckButton" fieldName="EnableHardwareSupport" visible="0" }
 		"ShowDebugInfo" { ControlName="CheckButton" fieldName="ShowDebugInfo" group="HideWhenDisabled" }
 		"ShowReminder" { ControlName="CheckButton" fieldName="ShowReminder" group="HideWhenDisabled" }
 		
-		"RequiresRestartLabel" { ControlName="Label" fieldName="RequiresRestartLabel" labelText="#Steam_Settings_Broadcast_RequiresRestart" group="HideWhenDisabled" }
+		"RequiresRestartLabel" { ControlName="Label" fieldName="RequiresRestartLabel" labelText="#Steam_Settings_Broadcast_RequiresRestart" visible="0" }
 	}
 	
 	layout
@@ -57,7 +60,10 @@
 		place { start="Dimensions" control="BitrateLimitHeader" dir=down margin-top=10 width=max }
 		place { start="BitrateLimitHeader" control="BitrateLimit" dir=down margin-top=4 width=250 }
 		
-		place { start="BitrateLimit" control="ShowChatHeader" dir=down margin-top=10 width=max }
+		place { start="BitrateLimit" control="EncoderHeader" dir=down margin-top=10 width=max }
+		place { start="EncoderHeader" control="EncoderSetting" dir=down margin-top=4 width=250 }
+		
+		place { start="EncoderSetting" control="ShowChatHeader" dir=down margin-top=10 width=max }
 		place { start="ShowChatHeader" control="ShowChatCombo" dir=down margin-top=4 width=250 }
 				
 		place { start="ShowChatCombo" control="IncludeDesktop,RecordMic,EnableHardwareSupport,ShowDebugInfo,ShowReminder" dir=down margin-top=10 }	
