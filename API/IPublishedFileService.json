@@ -144,6 +144,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "Populate the short_description field instead of file_description"
+                },
+                {
+                    "name": "return_for_sale_data",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Return pricing information, if applicable"
                 }
             ]
         }
