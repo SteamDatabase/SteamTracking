@@ -2548,6 +2548,9 @@ function HideWithFade( elem )
 	$Elem.fadeOut( 200 );
 }
 
-
+function FlushStyleChanges( element )
+{
+	$J( element ).css( 'opacity');
+}
 
 

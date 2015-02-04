@@ -935,8 +935,13 @@ a.game_button {
 }
 
 .jqplot-yaxis {
-	left: 0 !important;
-	width: 45px !important;
+	text-align: right;
+	right: 0 !important;
+	width: 52px !important;
+}
+
+.jqplot-yaxis-tick {
+	min-width: 92%;
 }
 
 .jqplot-xaxis {
