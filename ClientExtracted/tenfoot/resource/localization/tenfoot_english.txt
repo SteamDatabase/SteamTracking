@@ -2745,4 +2745,8 @@
 	"Broadcast_ChatJoined"					"{s:persona} joined the chat"
 	"Broadcast_ChatLeft"					"{s:persona} left the chat"
 	"Broadcast_ChatMuted"					"{s:persona} muted"
+
+	"SettingsInterface_DeleteAllCookies"	"Delete all browser cookies"
+	"SettingsInterface_DeleteTitle"	"Delete Cookies"
+	"SettingsInterface_DeleteMsg"	"Clear all Steam browser cookie data?"
 }

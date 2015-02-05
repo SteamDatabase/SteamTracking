@@ -1,0 +1,48 @@
+"resource/layout/subpaneloptionsbrowser.layout"
+{
+	controls
+	{
+		TitleLabel { controlname=label labeltext="#Steam_Settings_BrowserTitle" style=highlight }
+		DescriptionLabel	{ ControlName=Label labeltext="#Overlay_SettingsBrowserDesc" wrap=1  }
+		Divider1 { ControlName=Divider	}
+
+		OverlayHomePageLabel { ControlName=Label labelText="#Overlay_SettingsHomepageLabel" }
+		OverlayHomePage { ControlName=TextEntry }
+		
+		ClearAllCookiesButton { ControlName=Button labelText="#Steam_SettingsBrowserClearAllCookies" 	command=ClearCookies }
+
+	}
+	
+	colors
+	{
+	}	
+	
+	styles
+	{
+		highlight
+		{
+			textcolor=Text
+		}	
+		
+		checkbox
+		{
+			padding-top=0
+			padding-bottom=0
+		}
+	}
+	
+	layout
+	{
+		region { name=box margin-top=10 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
+		region { name=top region=box margin-top=10 }
+		region { name=topleft region=top y=30 width=235 margin-right=20 }
+		region { name=bottom region=box y=100 }
+		
+		place { controls=TitleLabel region=top }
+		place { controls=DescriptionLabel height=40 width=max region=top start=TitleLabel dir=down margin-top=8 }
+		place { controls=OverlayHomePageLabel,OverlayHomePage, dir=down spacing=5 margin-top=20 width=max region=topleft }
+		place { controls=Divider1 region=bottom width=max margin-top=8 }
+		place { controls=ClearAllCookiesButton height=20 width=240 region=bottom start=Divider1 dir=down margin-top=15 }
+		
+	}
+}
