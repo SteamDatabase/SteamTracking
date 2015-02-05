@@ -267,6 +267,15 @@ div.hr-grey hr {
 	padding:0;
 }
 
+#signInBlockTop {
+	height: 12px;
+	background: url('../images/signInBlockTop.gif') no-repeat left top;
+}
+#signInBlockBottom {
+	height: 4px;
+	background: url('../images/signInBlockBottom.gif') no-repeat left top;
+}
+
 #rightCol {
 	float:right;
 	text-align:left;
