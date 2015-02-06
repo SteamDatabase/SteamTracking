@@ -14,10 +14,9 @@ function BMediaSourceExtensionsSupported()
 }
 
 
-var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDViewer )
+var CBroadcastWatch = function( steamID, name, eClientType )
 {
-	this.m_ulBroadcastSteamID = steamIDBroadcast;
-	this.m_ulViewerSteamID = steamIDViewer;
+	this.m_ulBroadcastSteamID = steamID;
 	this.m_strBroadcastName = name;
 	this.m_ulBroadcastID = 0;
 	this.m_eClientType = eClientType;
@@ -41,11 +40,6 @@ CBroadcastWatch.prototype.GetChat = function()
 CBroadcastWatch.prototype.GetBroadcastID = function()
 {
 	return this.m_ulBroadcastID;
-}
-
-CBroadcastWatch.prototype.IsBroadcaster = function()
-{
-	return (this.m_ulBroadcastSteamID == this.m_ulViewerSteamID);
 }
 
 CBroadcastWatch.prototype.ShowVideoError = function( strError )
@@ -361,11 +355,6 @@ CBroadcastWatch.prototype.FocusChatTextArea = function()
 	$J( chatmessage ).attr( 'placeholder', '' );
 }
 
-function CreateUnmuteFunc( chat, viewer, elMute )
-{
-	return function() { chat.UnmuteUser( viewer.id, viewer.name ); elMute.hide(); };
-}
-
 CBroadcastWatch.prototype.ShowViewers = function()
 {
 	if ( this.m_xhrViewUsers )
@@ -406,8 +395,7 @@ CBroadcastWatch.prototype.ShowViewers = function()
 	{
 		url: 'https://steamcommunity.com/broadcast/getbroadcastviewers/',
 		data: {
-			chatid: _watch.m_chat.GetChatID(),
-			muted: _watch.m_chat.GetMutedUsers(),
+			chatid: _watch.m_chat.GetChatID()
 		},
 		type: 'GET'
 	})
@@ -425,19 +413,7 @@ CBroadcastWatch.prototype.ShowViewers = function()
 			for ( var i = 0; i < data.viewers.length; i++ )
 			{
 				var viewer = data.viewers[i];
-				var elUser = $J( '<div class="UserRow"><a href="https://steamcommunity.com/profiles/' + viewer.id + '" target="_blank">' + viewer.name + '</a></div>' );
-				if ( viewer.muted || _watch.m_chat.IsUserMutedLocally( viewer.id ) )
-				{
-					var elMute = $J( '<div class="Muted"></div>' );
-					if ( !viewer.muted || _watch.IsBroadcaster() )
-					{
-						elMute.addClass( 'CanUnmute' );
-						elMute.on( 'click', CreateUnmuteFunc( _watch.m_chat, viewer, elMute ) );
-					}
-
-					elUser.append( elMute );
-				}
-
+				var elUser = $J( '<div><a href="https://steamcommunity.com/profiles/' + viewer.id + '" target="_blank">' + viewer.name + '</a></div>' );
 				BindSingleMiniprofileHover( elUser.children( 'a' ).data( 'miniprofile', 's' + viewer.id ) );
 				$J( '#ViewerModalUsers' ).append( elUser );
 			}
