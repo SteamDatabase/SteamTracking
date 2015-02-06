@@ -180,6 +180,8 @@ input.search_text
 	border: none;
 	width: 250px;
 	height: 25px;
+	background: transparent;
+	box-shadow: none;
 }
 input.search_text.default_text {
 	color: #6d6d6a;
