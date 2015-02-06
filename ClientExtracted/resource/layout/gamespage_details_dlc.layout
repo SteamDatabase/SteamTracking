@@ -8,7 +8,6 @@
 		overlayimage { controlname"ImagePanel" style="overlayimage" scaling="fit" zpos=2 image="resource/dlc_overlay" }
 		latesttimelabel { controlname="Label" style="mostrecenttime" labeltext="#Steam_DLC_LatestItemAdded" }
 		dlclist { controlname="ListPanel" style="dlclist" }
-		managedlc { controlname="Button" labeltext="#Steam_ManageDLC" command="ManageDLC" }
 		moredlc { controlname="Button" labeltext="#Steam_FindDLCInStore" command="FindDLCInStore" }
 	}
 
@@ -57,7 +56,7 @@
 		place { region=body y=159 control=latesttimelabel }
 		place { control=dlclist height=120 width=max }
 		place { region=body y=26 x=267 control=dlclist dir=down }
-		place { region=body y=156 x=267 control=managedlc,moredlc dir=right spacing=10 }
+		place { region=body y=156 x=267 control=moredlc dir=right spacing=10 }
 	}
 
 }

@@ -283,7 +283,7 @@
 		// Body contents
 		place 
 		{ 
-			control=welcomedetails,dlcdetails,turnnotifications,friendsdetails,clouddetails,communityfilesdetails,achievementsdetails,newsdetails,nonsteamdetails,screenshotsdetails
+			control=welcomedetails,turnnotifications,friendsdetails,achievementsdetails,dlcdetails,clouddetails,communityfilesdetails,newsdetails,nonsteamdetails,screenshotsdetails
 			region=detailsbody
 			dir=down
 			width=max

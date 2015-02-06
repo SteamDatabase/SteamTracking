@@ -15,10 +15,7 @@
 		ScreenshotSaveUncompressedCheck { ControlName=CheckButton labelText="#Overlay_SaveUncompressed" }
 	
 		SetScreenshotFolderButton { ControlName=Button labelText="#Steam_SettingsInGameScreenshotFolder" 	command=SetScreenshotFolder }
-		
-		OverlayHomePageLabel { ControlName=Label labelText="#Overlay_SettingsHomepageLabel" }
-		OverlayHomePage { ControlName=TextEntry }
-		
+						
 		ShowIngameFPSLabel { ControlName=Label labelText="#Steam_Settings_Ingame_ShowFPS_Title" }
 		ShowIngameFPSCornerCombo { ControlName="ComboBox" fieldName="ShowIngameFPSCombo" editable="0" }
 		ShowIngameFPSContrastCheck { ControlName=CheckButton labelText="#Steam_Settings_Ingame_ShowFPS_HightContrast" style=checkbox }
@@ -66,9 +63,7 @@
 	
 		place { controls=HotKeySelectorLabel,HotKeySelector dir=down spacing=5 width=max region=topleft }
 		
-		place { controls=OverlayHomePageLabel,OverlayHomePage dir=down spacing=5 start=HotKeySelector margin-top=20 width=max region=topleft }
-		
-		place { controls=ShowIngameFPSLabel,ShowIngameFPSCombo,ShowIngameFPSContrastCheck dir=down spacing=5 start=OverlayHomePage margin-top=20 width=max region=topleft }
+		place { controls=ShowIngameFPSLabel,ShowIngameFPSCombo,ShowIngameFPSContrastCheck dir=down spacing=5 start=HotKeySelector margin-top=44 width=max region=topleft }
 			
 		place { controls=ScreenshotLabel region=topright }
 		place { controls=ScreenshotHotKeySelector,SetScreenshotFolderButton 
