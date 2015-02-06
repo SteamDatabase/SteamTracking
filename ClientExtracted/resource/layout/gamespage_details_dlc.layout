@@ -45,6 +45,12 @@
 			textcolor="text"
 			selectedtextcolor="white"
 		}
+
+		"mostrecenttime"
+		{
+			padding-top=3
+			minimum-width=256
+		}
 	}
 
 	layout
@@ -53,10 +59,10 @@
 		place { region=body control=headerlabel width=max }
 		place { region=body y=26 control=latestimage width=257 height=120 }
 		place { region=body y=26 control=overlayimage width=257 height=120 }
-		place { region=body y=159 control=latesttimelabel }
-		place { control=dlclist height=120 width=max }
-		place { region=body y=26 x=267 control=dlclist dir=down }
-		place { region=body y=156 x=267 control=moredlc dir=right spacing=10 }
+		place { region=body y=159 width=257 control=latesttimelabel }
+		place { region=body width=max control=dlclist }
+		place { region=body y=26 control=latestimage,dlclist dir=right height=120 spacing=9 }
+		place { region=body y=156 control=latesttimelabel,moredlc dir=right spacing=10 }
 	}
 
 }
