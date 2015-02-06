@@ -20,7 +20,7 @@ var CBroadcastChat = function( broadcastSteamID )
 
 	this.m_bAutoScroll = true;
 	this.m_nLastHeight = 0;
-	this.m_mapMutedUsers = [];
+	this.m_mapMutedUsers = {};
 
 	var _chat = this;
 	$J( document ).on( 'keydown.BroadcastChat', function( e )
@@ -167,7 +167,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 				if( rgResponse.messages[i].steamid == _chat.m_steamID && rgResponse.messages[i].instance_id == _chat.m_unInstanceID )
 					continue;
 
-				if ( _chat.IsUserMuted( rgResponse.messages[i].steamid ) )
+				if ( _chat.IsUserMutedLocally( rgResponse.messages[i].steamid ) )
 					continue;
 
 				_chat.DisplayChatMessage( rgResponse.messages[i].persona_name, rgResponse.messages[i].in_game, rgResponse.messages[i].steamid, rgResponse.messages[i].msg, false );
@@ -196,7 +196,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 		{
 			for ( var i = 0; i < rgResponse.muted.length; i++ )
 			{
-				var strMsg = ( rgResponse.muted[i].muted == _chat.m_steamID ) ? 'You has been muted and cannot post messages to this chat' : '%s has been muted by the broadcaster';
+				var strMsg = ( rgResponse.muted[i].muted == _chat.m_steamID ) ? 'You has been muted and can not post messages to this chat' : '%s has been muted in this chatroom';
 				_chat.DisplayChatNotification( strMsg.replace( /%s/, rgResponse.muted[i].persona_name ) );
 			}
 		}
@@ -413,11 +413,23 @@ CBroadcastChat.prototype.ChatSubmit = function()
 	.done( function( response )
 	{
 		response = response.response;
+		if ( response.result && response.result != 1 )
+		{
+			var strError = "";
+			if ( response.result == 17 )
+				strError = 'You has been muted and can not post messages to this chat';
+			else
+				strError = 'Failed to send chat message: %s'.replace( /%s/, strMessage );
+
+			_chat.DisplayChatError( strError );
+			return;
+		}
+
 		_chat.DisplayChatMessage( response.persona_name, response.in_game, _chat.m_steamID, strMessage, true );
 	})
 	.fail( function()
 	{
-		_chat.DisplayChatError( 'Failed to send chat message: ' + strMessage );
+		_chat.DisplayChatError( 'Failed to send chat message: %s'.replace( /%s/, strMessage ) );
 	});
 }
 
@@ -429,6 +441,18 @@ CBroadcastChat.prototype.ShowChatMessageMenu = function( elButton )
 	var elMessage = $J( elButton ).closest( '#ChatMessagetemplate ' );
 	elMenu.data( 'elMessage', elMessage );
 	elMessage.addClass( 'ShowingMenu' );
+
+	// enable options
+	if ( this.IsUserMutedLocally( elMessage.data( 'steamid' ) ) )
+	{
+		elMenu.find( '#MuteOption' ).hide();
+		elMenu.find( '#UnmuteOption' ).show();
+	}
+	else
+	{
+		elMenu.find( '#MuteOption' ).show();
+		elMenu.find( '#UnmuteOption' ).hide();
+	}
 
 	// position modal
 	var rectBody = document.body.getBoundingClientRect();
@@ -457,6 +481,16 @@ CBroadcastChat.prototype.MuteChatMessageUser = function()
 	this.UpdateScroll();
 }
 
+CBroadcastChat.prototype.UnmuteChatMessageUser = function()
+{
+	var elMessage = $J( '#ChatMessageMenuBackground' ).data( 'elMessage' );
+	this.UnmuteUserByMessage( elMessage );
+
+	this.HideChatMessageMenu();
+	this.ScrollToBottom();
+	this.UpdateScroll();
+}
+
 CBroadcastChat.prototype.MuteUserByMessage = function( elMessage )
 {
 	var steamID = elMessage.data( 'steamid' );
@@ -465,23 +499,105 @@ CBroadcastChat.prototype.MuteUserByMessage = function( elMessage )
 	this.MuteUser( steamID, elChatName.text() );
 }
 
+CBroadcastChat.prototype.UnmuteUserByMessage = function( elMessage )
+{
+	var steamID = elMessage.data( 'steamid' );
+	var elChatName = $J( '.tmplChatName', elMessage );
+
+	this.UnmuteUser( steamID, elChatName.text() );
+}
+
 CBroadcastChat.prototype.MuteUser = function( steamID, strPersonaName )
 {
 	if ( steamID == this.m_steamID )
 		return;
 
+	// can't mute the broadcaster
+	if ( this.m_broadcastSteamID == steamID )
+		return;
+
+	var bOwner = (this.m_broadcastSteamID == this.m_steamID);
 	if ( !this.m_mapMutedUsers[ steamID ] )
 	{
 		this.m_mapMutedUsers[ steamID ] = strPersonaName;
+
+				var rgParams =
+		{
+			chat_id: this.m_ulChatID,
+			user_steamid: steamID,
+			muted: 1
+		};
+
+		var _chat = this;
+		this.m_webapi.ExecJSONP( 'IBroadcastService', 'MuteBroadcastChatUser', rgParams, true, null, 15 )
+		.done( function( response )
+		{
+			response = response.response;
+					})
+		.fail( function()
+		{
+						if ( bOwner )
+			{
+				_chat.DisplayChatError( 'Failed to mute %s. Please try again.'.replace( /%s/, strPersonaName ) );
+				delete _chat.m_mapMutedUsers[ steamID ];
+			}
+		});
 	}
 
-    this.DisplayChatNotification( '%s has been muted'.replace( /%s/, strPersonaName ) );
+		if ( !bOwner )
+		this.DisplayChatNotification( '%s has been muted'.replace( /%s/, strPersonaName ) );
 }
 
-CBroadcastChat.prototype.IsUserMuted = function( steamID )
+CBroadcastChat.prototype.UnmuteUser = function( steamID, strPersonaName )
+{
+	if ( steamID == this.m_steamID )
+		return;
+
+		if ( this.m_mapMutedUsers[ steamID ] )
+		delete this.m_mapMutedUsers[ steamID ];
+
+	var bOwner = (this.m_broadcastSteamID == this.m_steamID);
+	if ( bOwner )
+	{
+				var rgParams =
+		{
+			chat_id: this.m_ulChatID,
+			user_steamid: steamID,
+			muted: 0
+		};
+
+		var _chat = this;
+		this.m_webapi.ExecJSONP( 'IBroadcastService', 'MuteBroadcastChatUser', rgParams, true, null, 15 )
+		.done( function( response )
+		{
+			_chat.DisplayChatNotification( '%s has been unmuted'.replace( /%s/, strPersonaName ) );
+		})
+		.fail( function()
+		{
+			_chat.DisplayChatError( 'Failed to unmute %s. Please try again.'.replace( /%s/, strPersonaName ) );
+		});
+	}
+	else
+	{
+		this.DisplayChatNotification( '%s has been unmuted'.replace( /%s/, strPersonaName ) );
+	}
+}
+
+CBroadcastChat.prototype.IsUserMutedLocally = function( steamID )
 {
 	if ( this.m_mapMutedUsers[ steamID ] )
 		return true;
 
 	return false;
+}
+
+CBroadcastChat.prototype.GetMutedUsers = function()
+{
+	var rgSteamID = [];
+	jQuery.each( this.m_mapMutedUsers, function( i, val )
+	{
+		rgSteamID.push( i );
+	});
+
+	return rgSteamID;
 }
