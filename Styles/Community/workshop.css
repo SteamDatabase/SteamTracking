@@ -135,7 +135,7 @@ a:hover {
 
 #profileBlock {
 	width:638px;
-	margin: 11px 0px 0px 0px;
+	margin:0;
 	float: left;
 	padding-bottom: 7px;
 
@@ -874,7 +874,12 @@ h3 {
 	float: left;
 }
 
-
+.browsePageGotoSharedFiles
+{
+	min-height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+}
 
 .browsePageGotoSharedFiles .iconHolder_default
 {
