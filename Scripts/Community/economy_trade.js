@@ -944,12 +944,21 @@ function OnTradeStatusUpdate( transport )
 		{
 			rgNewTradeStatus = transport.responseJSON;
 
-			if ( rgNewTradeStatus.trade_status == 1 )
+			if ( rgNewTradeStatus.trade_status == 1 ||rgNewTradeStatus.trade_status == 6 )
 			{
 				// we're done here
 				Tutorial.OnCompletedTutorial();
 				StopWatchingForUnload();
-				window.location = 'https://steamcommunity.com/trade/' + rgNewTradeStatus.tradeid + '/receipt/';
+
+				if ( rgNewTradeStatus.trade_status == 6 )
+				{
+					window.location = 'https://steamcommunity.com/my/tradeoffers/view/' + rgNewTradeStatus.tradeid + '?partner=' + g_ulTradePartnerSteamID;
+				}
+				else
+				{
+					window.location = 'https://steamcommunity.com/trade/' + rgNewTradeStatus.tradeid + '/receipt/';
+				}
+
 				return;
 			}
 			else if ( rgNewTradeStatus.trade_status == 3 )
