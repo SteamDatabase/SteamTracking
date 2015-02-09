@@ -1236,7 +1236,7 @@ a.searchresult_forum_link:hover {
 
 
 .subforum_select_area, .forum_newtopic_infomessage {
-	background-color: rgba( 0, 0, 0, 0.4 );
+	background-color: #212121;
 	border-radius: 3px;
 	padding: 8px;
 	margin-bottom: 13px;
