@@ -639,7 +639,8 @@ h3 {
 
 .view_inventory_page {
 	position: relative;
-	background-color: rgba( 0, 0, 0, 0.4 );
+	background-color: #1f1f1f;
+	border: 1px solid #303030;
 	padding: 11px;
 }
 
