@@ -2824,8 +2824,10 @@ CDASHPlayerUI.prototype.DisplayNotification = function( strNotification, nDispla
 	this.m_elContainer.append( elNotification );
 	this.m_elActiveNotification = elNotification;
 
-		var _ui = this;
-	setTimeout( function() { elNotification.addClass( 'show_notification' ); }, 100 );
+		FlushStyleChanges( elNotification );
+	elNotification.addClass( 'show_notification' );
+
+	var _ui = this;
 	this.m_schNotificationTimeout = setTimeout( function() { _ui.CloseNotification(); }, nDisplayTimeMS );
 }
 
