@@ -933,15 +933,16 @@ function MergeWithAppDataArray( newAppData )
 }
 
 var g_bBusyLoadingMore = false;
-function LoadRecentListings( id, type, rows )
+function LoadRecentListings( type, rows )
 {
 	if ( g_bBusyLoadingMore )
 	{
 		return;
 	}
 
-	var elShowMore = $(id);
 	var elRows = $(rows);
+
+	elRows.update();
 
 	g_bBusyLoadingMore = true;
 	new Ajax.Request( 'https://steamcommunity.com/market/recent', {
@@ -962,30 +963,16 @@ function LoadRecentListings( id, type, rows )
 					g_rgRecents[type]['time'] = response.last_time;
 					g_rgRecents[type]['listing'] = response.last_listing;
 
-					elRows.insert( { 'bottom' : response.results_html } );
+					elRows.update( response.results_html );
 
 					MergeWithAssetArray( response.assets );
 					MergeWithListingInfoArray( response.listinginfo );
 					MergeWithAppDataArray( response.app_data );
 					eval( response.hovers );
 				}
-
-				/*if ( !response.more || response.assets.length == 0 )
-				{
-					elShowMore.hide();
-				}*/
 			}
 		},
 		onComplete: function() { g_bBusyLoadingMore = false; }
-	});
-}
-
-function MoreRecentListingsLink( id, type, rows )
-{
-	var elShowMore = $(id);
-	elShowMore.observe( 'click', function( event ) {
-		event.stop();
-		LoadRecentListings( id, type, rows );
 	});
 }
 
@@ -1249,7 +1236,7 @@ Event.observe( document, 'dom:loaded', function() {
 				oTabRecentSoldListings.addClassName( 'market_tab_well_tab_inactive' );
 				oTabRecentSoldListings.removeClassName( 'market_tab_well_tab_active' );
 
-				LoadRecentListings( 'sellListingsMore', 'sell_new', 'sellListingRows' );
+				LoadRecentListings( 'sell_new', 'sellListingRows' );
 			} );
 		}
 

@@ -1986,7 +1986,7 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 
 	if ( !this.m_elVideoTitle )
 	{
-		this.m_elVideoTitle = $J( '<div id="dash_video_title_banner"></div>' );
+		this.m_elVideoTitle = $J( '<div id="dash_video_title_banner" class="no_select"></div>' );
 		this.m_elContainer.append( this.m_elVideoTitle );
 	}
 
@@ -2388,24 +2388,25 @@ CDASHPlayerUI.prototype.TogglePlayPause = function()
 
 CDASHPlayerUI.prototype.ShowBigPlayPauseIndicator = function( playing )
 {
-	$J( '.dash_big_playpause_indicator' ).one( "animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
-		function() {
-			$J(this).removeClass( "show" );
-		}
-	);
+	var indicator = $J( '.dash_big_playpause_indicator' );
+	var state = $J( '.dash_big_playpause_indicator_state' );
+
+		indicator.one( 'animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() { $J(this).removeClass( 'show' ); } );
+	indicator.removeClass('show');
+	FlushStyleChanges( indicator );
 
 	if ( playing )
 	{
-		$J( '.dash_big_playpause_indicator_state' ).addClass('play_triangle');
-		$J( '.dash_big_playpause_indicator_state' ).removeClass('pause_bars');
+		state.addClass('play_triangle');
+		state.removeClass('pause_bars');
 	}
 	else
 	{
-		$J( '.dash_big_playpause_indicator_state' ).addClass('pause_bars');
-		$J( '.dash_big_playpause_indicator_state' ).removeClass('play_triangle');
+		state.addClass('pause_bars');
+		state.removeClass('play_triangle');
 	}
 
-	$J( '.dash_big_playpause_indicator' ).addClass('show');
+	indicator.addClass('show');
 }
 
 CDASHPlayerUI.prototype.OnKeyPress = function( e )

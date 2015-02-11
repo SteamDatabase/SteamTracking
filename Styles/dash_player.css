@@ -469,6 +469,7 @@
 	color: #FFF;
 	font-family: Arial, sans-serif;
 	text-shadow: 1px 1px 2px #000000;
+	cursor: default;
 
 	opacity: 0.0;
 	transition-property: opacity;

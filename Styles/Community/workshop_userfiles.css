@@ -1398,6 +1398,14 @@ textarea {
 	float: right;
 }
 
+.workshopItem .workshopItemPrice
+{
+	float: right;
+	font-size: 12px;
+	padding-top: 5px;
+	color: white;
+}
+
 .user_action_history_icon
 {
 	height: 20px;

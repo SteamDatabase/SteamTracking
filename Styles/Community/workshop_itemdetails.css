@@ -123,7 +123,7 @@
 
 .highlight_overflow {
 	overflow: hidden;
-	width: 644px;
+	width: 636px;
 	position: relative;
 	margin-top: 5px;
 
@@ -133,14 +133,16 @@
 	position: relative;
 	z-index: 4;
 	background:	rgba( 0, 0, 0, 0.5 );
-	margin-top: 2px;
+	margin-top: 1px;
+	padding-top: 7px;
 }
 
 #highlight_strip {
 	position: relative;
 	height: 71px;
 	margin-bottom: 0px;
-	width: 600px;
+	width: 593px;
+	left: 7px;
 	z-index: 40;
 }
 
@@ -156,7 +158,7 @@
 	width: 116px;
 	cursor: pointer;
 	text-align: center;
-	margin: 3px 3px 3px 0px;
+	margin: 0px 3px 0px 0px;
 	background-color: #000000;
 	position: relative;
 }
@@ -210,7 +212,7 @@
 	width: 116px;
 	height: 65px;
 	z-index: 50;
-	top: 3px;
+	top: 0px;
 }
 
 div.slider {

@@ -946,7 +946,7 @@ h3 {
 	font-size: 11px;
 	margin-top: 4px;
 }
-.browseOption.reported a, .browseOption.curatedadmin a {
+.browseOption.reported a, .browseOption.curatedadmin a, .browseOption.admin_forsale_pendingapproval a {
 	color: #ca5029;
 }
 
@@ -1686,6 +1686,13 @@ textarea {
 {
 	float: right;
 }
+.workshopItem .workshopItemPrice
+{
+	float: right;
+	font-size: 12px;
+	padding-top: 5px;
+	color: white;
+}
 
 .user_action_history_icon
 {
@@ -1699,9 +1706,9 @@ textarea {
 }
 
 #highlight_player_area {
-	border: 1px solid #000;
+
 	position: relative;
-	margin: 0 auto;
+	margin: 0;
 	width: 635px;
 }
 
@@ -1975,7 +1982,7 @@ textarea {
 
 .workshopItemPreviewImageEnlargeableContainer
 {
-	height: 360px;
+	height: 358px;
 	background-color: #000;
 }
 

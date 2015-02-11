@@ -357,6 +357,12 @@
 	color: #8F98A0;
 	max-width: 175px;
 }
+.workshop_item .workshop_item_price
+{
+	position: absolute;
+	right: 5px;
+	font-size: 14px;
+}
 
 /* voting queue */
 .section_contents.voting_queue
@@ -823,6 +829,13 @@ a.queue_area:hover .voting_queue_link {
 	color: #8f98a0;
 }
 
+.workshop_item_row .workshop_item_price
+{
+	position: absolute;
+	right: 20px;
+	font-size: 16px;
+}
+
 /* played/subscribed/favorited icons */
 .user_actions
 {
@@ -1010,6 +1023,13 @@ a.readmore_link
 {
 	margin-left: 10px;
 	padding-top: 4px;
+}
+.slideshow_item .workshop_item_price
+{
+	position: absolute;
+	right: 10px;
+	font-size: 14px;
+	color: white;
 }
 
 /* scrollbar */

@@ -133,3 +133,11 @@ function OnElementBlur_DefaultText( element, defaultText )
 	}
 }
 
+function Logout()
+{
+	var $Form = $J('<form/>', {'action': 'https://steamcommunity.com/login/logout/', 'method': 'POST' } );
+	$Form.append( $J('<input/>', {'type': 'hidden', 'name': 'sessionid', 'value': g_sessionID } ) );
+	$Form.appendTo( 'body' );
+	$Form.submit();
+}
+

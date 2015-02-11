@@ -852,6 +852,25 @@ function Logout()
 	$Form.submit();
 }
 
+function ChangeLanguage( strTargetLanguage, bStayOnPage )
+{
+	var Modal = ShowBlockingWaitDialog( 'Change language', '' );
+	$J.post( 'https://steamcommunity.com/actions/SetLanguage/', {language: strTargetLanguage, sessionid: g_sessionID })
+		.done( function() {
+			if ( bStayOnPage )
+				Modal.Dismiss();
+			else
+			{
+				if ( window.location.href.match( /[?&]l=/ ) )
+					window.location = window.location.href.replace( /([?&])l=[^&]*&?/, '$1' );
+				else
+					window.location.reload();
+			}
+		}).fail( function() {
+			Modal.Dismiss();
+			ShowAlertDialog( 'Change language', 'There was a problem communicating with the Steam servers.  Please try again later.' );
+		});
+}
 
 
 
