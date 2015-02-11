@@ -566,7 +566,48 @@ function InitializeTransaction()
 			else
 				bSaveBillingAddress = true;
 		}
-	 
+
+		$('gift_tracking_description').hide();
+				if ( bIsGift )
+		{
+			if ( $('send_self') && $('send_self').checked )
+			{
+								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+			}
+			else
+			{
+								$('checkout_receipt_description').innerHTML = 'Your gift is on its way! A receipt will be emailed to you soon.';
+				$('gift_tracking_description').show();
+			}
+		}
+		else if ( g_bMicroTxn )
+		{
+						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately, and a receipt will be emailed to you shortly.';
+		}
+		else if ( g_bWalletCreditOnly )
+		{
+						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately, and a receipt will be emailed to you shortly.';
+		}
+		else if ( g_bIsInOverlay )
+		{
+						 			$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br /><br/>Your digitally delivered items are now registered to your account on Steam.  To access your games, simply visit your <a href="steam://open/games">game library</a> in Steam and install them whenever you\'re ready.';
+					}		
+		else
+		{
+			if ( g_nItemsForSelf > 0 && g_nItemsForGifts > 0 )
+			{
+								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>Your digitally delivered items are now registered to your account on Steam. To access your games, simply visit your game library in Steam and install them whenever you\'re ready.<br/><br/>Extra copies of items from this purchase have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending your extra copies as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+			}
+			else if ( g_nItemsForSelf == 0 && g_nItemsForGifts > 0 )
+			{
+								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+			}
+			else
+			{
+												$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br /><br/>Your digitally delivered items are now registered to your account on Steam.  To access your games, simply visit your <a href="steam://open/games">game library</a> in Steam and install them whenever you\'re ready.';
+							}
+		}
+
 		new Ajax.Request('https://store.steampowered.com/checkout/inittransaction/',
 		{
 		    method:'post',

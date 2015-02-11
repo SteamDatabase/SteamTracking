@@ -1223,6 +1223,12 @@ a#store_search_link img {
 	margin-top: 4px;
 }
 
+img.category_icon {
+	width: 26px;
+	height: 16px;
+	vertical-align: top;
+}
+
 /*
  * FRIEND BLOCKS
  */
