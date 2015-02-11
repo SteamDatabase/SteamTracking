@@ -104,6 +104,12 @@
                     "description": "If query_type is k_PublishedFileQueryType_RankedByTrend, then limit result set just to items that have votes within the day range given"
                 },
                 {
+                    "name": "cache_max_age_seconds",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Allow stale data to be returned for the specified number of seconds."
+                },
+                {
                     "name": "totalonly",
                     "type": "bool",
                     "optional": false,
