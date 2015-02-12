@@ -1599,6 +1599,8 @@
 	"Notification_FriendsInviteCount"	"+{d:InviteCount}"
 	"Notification_ClanInvites"		"You have {d:InviteCount} waiting group invites."
 	"Notification_ClansInviteCount"	"+{d:InviteCount}"
+	"Notification_SteamLinkAuth_Title"	"Remote device detected"
+	"Notification_SteamLinkAuth_Text"	"Enter access code to confirm"
 
 	"Friends_GroupEvent_NowStarting"		"has event starting"
 
@@ -2561,6 +2563,9 @@
 	"SteamUI_StreamLaunch_Timeout"		"Timed out waiting for stream to launch."
 	"SteamUI_StreamLaunch_InstallRequiresUI" "Installation of this game requires user intervention.\n\nInstall manually on the remote computer."
 	"SteamUI_StreamLaunch_Failed"		"Unable to launch stream."
+
+	"SteamUI_RemoteDeviceAuthorization_Title"		"Authorize Device"
+	"SteamUI_RemoteDeviceAuthorization_Text"		"Please enter the authorization code to allow a device to control Steam."
 
 	"Steam_OtherSessionPlaying_Title" "Error - Steam"
 	"Steam_OtherSessionPlaying_Text" "Your are logged in on another computer already playing \"{s:existing_app}\".\nLaunching \"{s:launching_app}\" here will disconnect the other session from Steam."
