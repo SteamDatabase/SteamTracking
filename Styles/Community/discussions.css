@@ -397,6 +397,24 @@ div.quicklistselect div.option img, div.quicklistselect_options div.option img {
 	font-size: 12px;
 }
 
+.report_comment {
+	width: 650px;
+}
+
+.forum_report.withpost {
+	padding-bottom: 12px;
+	border-bottom: 1px solid #00adee;
+	margin-bottom: 12px;
+}
+
+.forum_report.withpost .report_row {
+	background: rgba( 80, 121, 173, 0.1);
+}
+
+.report_comment .forum_op {
+	background: rgba( 80, 121, 173, 0.1);
+}
+
 /** wordfilter admin **/
 .wordfilter_status {
 	font-size: 16px;

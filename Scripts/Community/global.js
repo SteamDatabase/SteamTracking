@@ -1041,6 +1041,7 @@ var CCommentThread = Class.create( {
 
 	m_bIncludeRaw: false,
 	m_rgRawCommentCache: null,
+	m_bHasPaging: true,
 
 	// these vars are id's we'll update when values change
 	m_votecountID: null,
@@ -1073,6 +1074,8 @@ var CCommentThread = Class.create( {
 
 		this.m_bSubscribed = rgCommentData['subscribed'];
 
+		this.m_bHasPaging = !rgCommentData['no_paging'];
+
 
 		var strPrefix = 'commentthread_' + this.m_strName;
 		this.m_elTextArea = $( strPrefix + '_textarea');
@@ -1094,10 +1097,13 @@ var CCommentThread = Class.create( {
 			this.m_oTextAreaSizer = new CAutoSizingTextArea( this.m_elTextArea, iMinHeight, this.OnTextInput.bind( this, elSaveButton ) );
 		}
 
-		$(strPrefix + '_pagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage )  );
-		$(strPrefix + '_fpagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage )  );
-		$(strPrefix + '_pagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
-		$(strPrefix + '_fpagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
+		if ( this.m_bHasPaging )
+		{
+			$(strPrefix + '_pagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage )  );
+			$(strPrefix + '_fpagebtn_prev').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.PrevPage )  );
+			$(strPrefix + '_pagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
+			$(strPrefix + '_fpagebtn_next').observe( 'click', this.OnPagingButtonClick.bindAsEventListener( this , this.NextPage ) );
+		}
 
 		var elForm = $( strPrefix + '_form');
 		if ( elForm )
@@ -1214,7 +1220,7 @@ var CCommentThread = Class.create( {
 		return false;
 	},
 
-	DeleteComment: function( gidComment, bUndelete )
+	DeleteComment: function( gidComment, bUndelete, fnOnSuccess )
 	{
 		if ( this.m_bLoading )
 			return;
@@ -1231,7 +1237,7 @@ var CCommentThread = Class.create( {
 		new Ajax.Request( this.GetActionURL( 'delete' ), {
 			method: 'post',
 			parameters: params,
-			onSuccess: this.OnResponseDeleteComment.bind( this ),
+			onSuccess: fnOnSuccess ? fnOnSuccess : this.OnResponseDeleteComment.bind( this ),
 			onFailure: this.OnFailureDisplayError.bind( this ),
 			onComplete: this.OnAJAXComplete.bind( this )
 		} );
@@ -1545,6 +1551,9 @@ var CCommentThread = Class.create( {
 
 	UpdatePagingDisplay: function()
 	{
+		if ( !this.m_bHasPaging )
+			return;
+
 		var strPrefix = 'commentthread_' + this.m_strName;
 
 		// this element not displayed on the forum topic page

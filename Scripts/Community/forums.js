@@ -852,7 +852,7 @@ CForumTopic = Class.create( {
 		});
 	},
 
-	Delete: function()
+	Delete: function( fnOnSuccess )
 	{
 		if ( this.m_bAJAXInFlight )
 			return;
@@ -862,7 +862,7 @@ CForumTopic = Class.create( {
 		new Ajax.Request( this.GetActionURL( 'deletetopic' ), {
 			method: 'post',
 			parameters: this.ParametersWithDefaults(),
-			onSuccess: this.RedirectToTopicListPage.bind(this),
+			onSuccess: fnOnSuccess ? fnOnSuccess : this.RedirectToTopicListPage.bind(this),
 			onFailure: this.OnModeratorActionFailed.bind(this)
 		} );
 	},
@@ -1169,8 +1169,14 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 	},
 
 
-	DeleteComment: function( $super, gidComment, bUndelete )
+	DeleteComment: function( $super, gidComment, bUndelete, fnOnSuccess )
 	{
+		if ( fnOnSuccess )
+		{
+			// special global reports mode
+			$super( gidComment, bUndelete, fnOnSuccess );
+			return;
+		}
 		var fnOnConfirm = $super.bind( this, gidComment, bUndelete );
 		if ( !bUndelete )
 		{
