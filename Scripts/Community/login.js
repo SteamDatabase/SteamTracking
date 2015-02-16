@@ -1,7 +1,8 @@
 
-// Used to add a unique get var to all ajax calls, so IE doesn't do stupid caching
+//Used to add a unique get var to all ajax calls, so IE doesn't do stupid caching
 var iAjaxCalls = 0;
 
+var iIncorrectLoginFailures = 0;
 
 function HighlightFailure( msg )
 {
@@ -10,17 +11,21 @@ function HighlightFailure( msg )
 	{
 		errorDisplay.update( msg );
 		errorDisplay.show();
-		//Effect.ScrollTo( 'error_display' );
-		new Effect.Highlight( 'error_display', { endcolor : '#000000', startcolor : '#cc3300' } );
-	}
+		errorDisplay.style.color = '#ffffff';
+				try { 
+			new Effect.Morph( 'error_display', { style: 'color: #d0434b' } );
+		}
+		catch(err) { }
+			}
 }
 
-// Refresh the catpcha image 
+
+//Refresh the catpcha image 
 function RefreshCaptcha()
 {
 	++iAjaxCalls;
 	
-	new Ajax.Request('https://store.steampowered.com/join/refreshcaptcha/',
+		new Ajax.Request('https://steamcommunity.com/actions/RefreshCaptcha/',
 	  {
 	    method:'get',
 	    parameters: { count : iAjaxCalls },
@@ -30,7 +35,7 @@ function RefreshCaptcha()
 	        try {
 	      	  var result = transport.responseText.evalJSON(true);
 	      	} catch ( e ) {
-	      	  //alert(e);
+			  //alert(e);
 	      	  return;
 	      	}
 	      	
@@ -46,10 +51,10 @@ function UpdateCaptcha( gid )
 	if ( gid != -1 ) 
 	{
 		$('captcha_entry').show();
-		$('captchaImg').src = 'https://store.steampowered.com/public/captcha.php?gid='+gid;
-		$('input_captcha').value='';
-	}
-	document.getElementById('captchagid').value = gid;
+		$('captchaImg').src = 'https://steamcommunity.com/public/captcha.php?gid='+gid;
+					$('input_captcha').value='';
+			}
+	$('captchagid').value = gid;
 }
 
 var g_bLoginInFlight = false;
@@ -60,6 +65,7 @@ var g_bLoginTransferInProgress = false;
 var g_bEmailAuthSuccessfulWantToLeave = false;
 var g_bTwoFactorAuthSuccessful = false;
 var g_bTwoFactorAuthSuccessfulWantToLeave = false;
+var g_sOAuthRedirectURI = 'steammobile://mobileloginsucceeded';
 var g_sAuthCode = "";
 
 function DoLogin()
@@ -68,41 +74,46 @@ function DoLogin()
 
 	var username = form.elements['username'].value;
 	username = username.replace( /[^\x00-\x7F]/g, '' ); // remove non-standard-ASCII characters
-
+	
 	var password = form.elements['password'].value;
 	password = password.replace( /[^\x00-\x7F]/g, '' ); // remove non-standard-ASCII characters
 
-	if ( g_bLoginInFlight || username.length == 0 || password.length == 0 )
+	if ( g_bLoginInFlight || password.length == 0 || username.length == 0 )
 		return;
 
 	g_bLoginInFlight = true;
 	$('login_btn_signin').hide();
 	$('login_btn_wait').show();
-	new Ajax.Request( 'https://store.steampowered.com/login/getrsakey/',
+	
+	new Ajax.Request( 'https://steamcommunity.com/login/getrsakey/',
 		{
 			method: 'post',
 			parameters: {
-				username: username
+				username: username,
+				donotcache: ( new Date().getTime() )
 			},
 			onSuccess: OnRSAKeyResponse,
-			onException: function( req, e ) { throw e; }
+			onException: function( req, e ) {
+				throw e;
+			}
 		}
 	);
 }
 
+	
+	function getAuthCode( results )
+	{
+		var authCode = g_sAuthCode;
+		g_sAuthCode = '';
+		return authCode;
+	}
 
-function getAuthCode( results )
-{
-	var authCode = g_sAuthCode;
-	g_sAuthCode = '';
-	return authCode;
-}
 
 
 function OnRSAKeyResponse( transport )
 {
 	var results = transport.responseJSON;
-	if ( results && results.publickey_mod && results.publickey_exp && results.timestamp )
+	if ( results.publickey_mod && results.publickey_exp && results.timestamp )
 	{
 		var form = document.forms['logon'];
 
@@ -112,33 +123,37 @@ function OnRSAKeyResponse( transport )
 		var password = form.elements['password'].value;
 		password = password.replace( /[^\x00-\x7F]/g, '' ); // remove non-standard-ASCII characters
 		var encryptedPassword = RSA.encrypt( password, pubKey );
-		new Ajax.Request( 'https://store.steampowered.com/login/dologin/',
-		{
-			method: 'post',
-			parameters: {
-				username: username,
-				password: encryptedPassword,
-				twofactorcode: getAuthCode( results ),
-				emailauth: form.elements['emailauth'].value,
-				loginfriendlyname: form.elements['loginfriendlyname'].value,
-				captchagid: form.elements['captchagid'].value,
-				captcha_text: form.elements['captcha_text'].value,
-				emailsteamid: form.elements['emailsteamid'].value,
-				rsatimestamp: results.timestamp,
-				remember_login: ( form.elements['remember_login'] && form.elements['remember_login'].checked ) ? 'true' : 'false'
-			},
-			onSuccess: OnLoginResponse,
-			onException: function( req, e ) { throw e; }
-		}
+
+		new Ajax.Request( 'https://steamcommunity.com/login/dologin/',
+			{
+				method: 'post',
+				parameters: {
+					password: encryptedPassword,
+					username: username,
+					twofactorcode: getAuthCode( results ),
+					emailauth: form.elements['emailauth'].value,
+					loginfriendlyname: form.elements['loginfriendlyname'].value,
+										captchagid: form.elements['captchagid'].value,
+					captcha_text: form.elements['captcha_text'].value,
+					emailsteamid: form.elements['emailsteamid'].value,
+					rsatimestamp: results.timestamp,
+					remember_login: ( form.elements['remember_login'] && form.elements['remember_login'].checked ) ? 'true' : 'false',
+					donotcache: ( new Date().getTime() )
+				},
+				onSuccess: OnLoginResponse,
+				onException: function( req, e ) {
+							throw e;
+						}
+			}
 		);
 	}
 	else
 	{
-	    if ( results && results.message )
+		if ( results.message )
 		{
 			HighlightFailure( results.message );
 		}
-		
+
 		$('login_btn_signin').show();
 		$('login_btn_wait').hide();
 
@@ -151,9 +166,10 @@ function OnLoginResponse( transport )
 	var results = transport.responseJSON;
 	g_bLoginInFlight = false;
 	var bRetry = true;
-	
+
 	if ( results.login_complete )
 	{
+		
 		var bRunningTransfer = false;
 		if ( results.transfer_url && results.transfer_parameters )
 		{
@@ -192,6 +208,7 @@ function OnLoginResponse( transport )
 		else if ( results.captcha_needed && results.captcha_gid )
 		{
 			UpdateCaptcha( results.captcha_gid );
+			iIncorrectLoginFailures ++;
 		}
 		else if ( results.emailauth_needed )
 		{
@@ -211,11 +228,15 @@ function OnLoginResponse( transport )
 			$('loginIPTModal').OnModalDismissal = ClearLoginForm;
 			showModal( 'loginIPTModal' );
 		}
+		else
+		{
+		    iIncorrectLoginFailures ++;
+		}
 		
 		if ( results.message )
 		{
 			HighlightFailure( results.message );
-		}
+					}
 	}
 	if ( bRetry )
 	{
@@ -242,10 +263,12 @@ function ClearLoginForm()
 function StartEmailAuthProcess()
 {
 	g_bInEmailAuthProcess = true;
-	$('loginAuthCodeModal').OnModalDismissal = CancelEmailAuthProcess;
+
 	SetEmailAuthModalState( 'entercode' );
-	showModal ( 'loginAuthCodeModal', true );
-}
+	
+			$('loginAuthCodeModal').OnModalDismissal = CancelEmailAuthProcess;
+		showModal ( 'loginAuthCodeModal', true );
+	}
 
 function CancelEmailAuthProcess()
 {
@@ -257,13 +280,15 @@ function CancelEmailAuthProcess()
 		ClearLoginForm();
 }
 
-function TransferLogin( url, parameters)
+function TransferLogin( url, parameters )
 {
 	if ( g_bLoginTransferInProgress )
 		return;
 	g_bLoginTransferInProgress = true;
-	
-	var iframe = new Element( 'iframe', {id: 'transfer_iframe' } );
+
+		var iframeElement = document.createElement( 'iframe' );
+	iframeElement.id = 'transfer_iframe';
+	var iframe = $( iframeElement );
 	iframe.hide();
 	$(document.body).appendChild( iframe );
 	
@@ -303,10 +328,10 @@ function OnEmailAuthSuccessContinue()
 {
 	if ( g_bLoginTransferInProgress )
 	{
-				$('auth_buttonsets').childElements().invoke('hide');
-		if ( $('auth_buttonset_waiting') )
-			$('auth_buttonset_waiting').show();
-		
+							$('auth_buttonsets').childElements().invoke('hide');
+			if ( $('auth_buttonset_waiting') )
+				$('auth_buttonset_waiting').show();
+				
 		g_bEmailAuthSuccessfulWantToLeave = true;
 	}
 	else
@@ -315,10 +340,16 @@ function OnEmailAuthSuccessContinue()
 
 function LoginComplete()
 {
-	if ( $('openidForm') )
+		if ( $('openidForm') )
+	{
 		$('openidForm').submit();
+	}
 	else
-		window.location = document.forms['logon'].elements['redir'].value;
+	{
+				{
+			window.location = document.forms['logon'].elements['redir'].value;
+		}
+	}
 }
 
 function SubmitAuthCode( defaultFriendlyNameText )
@@ -331,68 +362,70 @@ function SubmitAuthCode( defaultFriendlyNameText )
 	}
 	$('auth_buttonsets').childElements().invoke('hide');
 	if ( $('auth_buttonset_waiting') )
-	    $('auth_buttonset_waiting').show();
-	document.forms['logon'].elements['loginfriendlyname'].value = friendlyname;
-	document.forms['logon'].elements['emailauth'].value = $('authcode').value;
-	DoLogin();
+		$('auth_buttonset_waiting').show();
+
+			document.forms['logon'].elements['loginfriendlyname'].value = friendlyname;
+		document.forms['logon'].elements['emailauth'].value = $('authcode').value;
+		DoLogin();
 }
 
 function SetEmailAuthModalState( step )
 {
-	$('auth_messages').childElements().invoke('hide');
-	$('auth_message_' + step ).show();
 	
-	$('auth_details_messages').childElements().invoke('hide');
-	if ( $('auth_details_' + step ) )
-		$('auth_details_' + step ).show();
-	
-	$('auth_buttonsets').childElements().invoke('hide');
-	if ( $('auth_buttonset_' + step ) )
-		$('auth_buttonset_' + step ).show();
-	
-	$('authcode_help_supportlink').hide();
-	
-	var icon='key';
-	var bShowAuthcodeEntry = true;
-	if ( step == 'entercode' )
-	{
-		icon = 'key';
-	}
-	else if ( step == 'checkspam' )
-	{
-		icon = 'trash';
-	}
-	else if ( step == 'success' )
-	{
-		icon = 'unlock';
-		bShowAuthcodeEntry = false;
-		$('success_continue_btn').focus();
-	}
-	else if ( step == 'incorrectcode' )
-	{
-		icon = 'lock';
-	}
-	else if ( step == 'help' )
-	{
-		icon = 'steam';
-		bShowAuthcodeEntry = false;
-		$('authcode_help_supportlink').show();
-	}
-	
-	if ( bShowAuthcodeEntry )
-	{
-		$('authcode_entry').show();
-		$('auth_details_computer_name').show();
-	}
-	else
-	{
-		$('authcode_entry').hide();
-		$('auth_details_computer_name').hide();
-	}
+		$('auth_messages').childElements().invoke('hide');
+		$('auth_message_' + step ).show();
 
-	
-	$('auth_icon').className = 'auth_icon auth_icon_' + icon;
-}
+		$('auth_details_messages').childElements().invoke('hide');
+		if ( $('auth_details_' + step ) )
+			$('auth_details_' + step ).show();
+
+		$('auth_buttonsets').childElements().invoke('hide');
+		if ( $('auth_buttonset_' + step ) )
+			$('auth_buttonset_' + step ).show();
+
+		$('authcode_help_supportlink').hide();
+
+		var icon='key';
+		var bShowAuthcodeEntry = true;
+		if ( step == 'entercode' )
+		{
+			icon = 'key';
+		}
+		else if ( step == 'checkspam' )
+		{
+			icon = 'trash';
+		}
+		else if ( step == 'success' )
+		{
+			icon = 'unlock';
+			bShowAuthcodeEntry = false;
+			$('success_continue_btn').focus();
+		}
+		else if ( step == 'incorrectcode' )
+		{
+			icon = 'lock';
+		}
+		else if ( step == 'help' )
+		{
+			icon = 'steam';
+			bShowAuthcodeEntry = false;
+			$('authcode_help_supportlink').show();
+		}
+
+		if ( bShowAuthcodeEntry )
+		{
+			$('authcode_entry').show();
+			$('auth_details_computer_name').show();
+		}
+		else
+		{
+			$('authcode_entry').hide();
+			$('auth_details_computer_name').hide();
+		}
+
+		$('auth_icon').className = 'auth_icon auth_icon_' + icon;
+
+	}
 
 function OnAuthcodeFocus( defaultText )
 {
@@ -412,31 +445,32 @@ function OnAuthcodeBlur( defaultText )
 	}
 }
 
-function OnFriendlyNameFocus( defaultText )
-{
-	if ( $('friendlyname').value == defaultText )
-	{
-		$('friendlyname').value = '';
-		$('friendlyname').removeClassName( 'defaulttext' );
-	}
-}
-
-function OnFriendlyNameBlur( defaultText )
-{
-	if ( $('friendlyname').value == '' )
-	{
-		$('friendlyname').value = defaultText;
-		$('friendlyname').addClassName( 'defaulttext' );
-	}
-}
+function OnFriendlyNameFocus( defaultText ) 
+{ 
+    if ( $('friendlyname').value == defaultText ) 
+    { 
+        $('friendlyname').value = ''; 
+        $('friendlyname').removeClassName( 'defaulttext' ); 
+    } 
+} 
+  
+function OnFriendlyNameBlur( defaultText ) 
+{ 
+    if ( $('friendlyname').value == '' ) 
+    { 
+        $('friendlyname').value = defaultText; 
+        $('friendlyname').addClassName( 'defaulttext' ); 
+    } 
+} 
 
 
 function StartTwoFactorAuthProcess()
 {
 	g_bInTwoFactorAuthProcess = true;
 	SetTwoFactorAuthModalState( 'entercode' );
-	$('loginTwoFactorCodeModal').OnModalDismissal = CancelTwoFactorAuthProcess;
-}
+
+			$('loginTwoFactorCodeModal').OnModalDismissal = CancelTwoFactorAuthProcess;
+	}
 
 
 function CancelTwoFactorAuthProcess()
@@ -454,10 +488,10 @@ function OnTwoFactorAuthSuccessContinue()
 {
 	if ( g_bLoginTransferInProgress )
 	{
-		$('login_twofactorauth_buttonsets').childElements().invoke('hide');
-		if ( $('login_twofactorauth_buttonset_waiting') )
-			$('login_twofactorauth_buttonset_waiting').show();
-
+					$('login_twofactorauth_buttonsets').childElements().invoke('hide');
+			if ( $('login_twofactorauth_buttonset_waiting') )
+				$('login_twofactorauth_buttonset_waiting').show();
+		
 		g_bTwoFactorAuthSuccessfulWantToLeave = true;
 	}
 	else
@@ -466,6 +500,7 @@ function OnTwoFactorAuthSuccessContinue()
 
 function SetTwoFactorAuthModalState( step )
 {
+	
 	if ( step == 'success' )
 	{
 		g_bInTwoFactorAuthProcess = false;
@@ -499,7 +534,7 @@ function SetTwoFactorAuthModalState( step )
 	else if ( step == 'help' )
 	{
 		icon = 'steam';
-		$('twofactorcode_entry').hide();
+		$('login_twofactor_authcode_entry').hide();
 		$('login_twofactor_authcode_help_supportlink').show();
 	}
 
@@ -509,12 +544,14 @@ function SetTwoFactorAuthModalState( step )
 	}
 
 	$('login_twofactorauth_icon').className = 'auth_icon auth_icon_' + icon;
-}
+
+	}
 
 function SubmitTwoFactorCode( )
 {
 	g_sAuthCode = $('twofactorcode_entry').value;
 
+		
 	$('login_twofactorauth_messages').childElements().invoke('hide');
 	$('login_twofactorauth_details_messages').childElements().invoke('hide');
 
@@ -523,7 +560,7 @@ function SubmitTwoFactorCode( )
 	{
 		$('login_twofactorauth_buttonset_waiting').show();
 	}
-	
+
 	DoLogin();
 }
 

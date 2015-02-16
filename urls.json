@@ -157,7 +157,6 @@
 "Scripts/Store/gamehighlightplayer.js"           : "https://steamstore-a.akamaihd.net/public/javascript/gamehighlightplayer.js?__TIME__&l=english",
 "Scripts/Store/home.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/home.js?__TIME__&l=english",
 "Scripts/Store/joinsteam.js"                     : "https://steamstore-a.akamaihd.net/public/javascript/joinsteam.js?__TIME__&l=english",
-"Scripts/Store/login.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/login.js?__TIME__&l=english",
 "Scripts/Store/modal.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/modal.js?__TIME__&l=english",
 "Scripts/Store/news.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/news.js?__TIME__&l=english",
 "Scripts/Store/redeemwalletcode.js"              : "https://steamstore-a.akamaihd.net/public/javascript/redeemwalletcode.js?__TIME__&l=english",
@@ -178,7 +177,6 @@
 "Scripts/Community/badges.js"                    : "https://steamcommunity-a.akamaihd.net/public/javascript/badges.js?__TIME__&l=english",
 "Scripts/Community/blotter_functions.js"         : "https://steamcommunity-a.akamaihd.net/public/javascript/blotter_functions.js?__TIME__&l=english",
 "Scripts/Community/broadcast_chat.js"            : "https://steamcommunity-a.akamaihd.net/public/javascript/broadcast_chat.js?__TIME__&l=english",
-"Scripts/Community/broadcast_player.js"          : "https://steamcommunity-a.akamaihd.net/public/javascript/broadcast_player.js?__TIME__&l=english",
 "Scripts/Community/broadcast_watch.js"           : "https://steamcommunity-a.akamaihd.net/public/javascript/broadcast_watch.js?__TIME__&l=english",
 "Scripts/Community/chat.js"                      : "https://steamcommunity-a.akamaihd.net/public/javascript/chat.js?__TIME__&l=english",
 "Scripts/Community/commentnotifications.js"      : "https://steamcommunity-a.akamaihd.net/public/javascript/commentnotifications.js?__TIME__&l=english",
@@ -211,6 +209,7 @@
 "Scripts/Community/workshop_functions.js"        : "https://steamcommunity-a.akamaihd.net/public/javascript/workshop_functions.js?__TIME__&l=english",
 "Scripts/Community/workshop_home.js"             : "https://steamcommunity-a.akamaihd.net/public/javascript/workshop_home.js?__TIME__&l=english",
 "Scripts/Community/workshop_previewplayer.js"    : "https://steamcommunity-a.akamaihd.net/public/javascript/workshop_previewplayer.js?__TIME__&l=english",
+"Scripts/Community/login.js"                     : "https://steamcommunity-a.akamaihd.net/public/javascript/login.js?__TIME__&l=english",
 
 //
 // Global and shared JS
@@ -219,6 +218,7 @@
 "Scripts/shared_global.js"                       : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/shared_global.js?__TIME__&l=english",
 "Scripts/user_reviews.js"                        : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/user_reviews.js?__TIME__&l=english",
 "Scripts/dash_player.js"                         : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/dash_player.js?__TIME__&l=english",
+"Scripts/login.js"                               : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/login.js?__TIME__&l=english",
 
 //
 // Big Picture CSS
@@ -273,7 +273,9 @@
 //
 "ItemSchema/CounterStrikeGlobalOffensive.json"   : "https://api.steampowered.com/IEconItems_730/GetSchema/v2/?__KEY__&language=english",
 "ItemSchema/Dota2.json"                          : "https://api.steampowered.com/IEconItems_570/GetSchema/v1/?__KEY__&language=english",
-"ItemSchema/Dota2Test.json"                      : "https://api.steampowered.com/IEconItems_205790/GetSchema/v1/?__KEY__&language=english",
+
+// Disabled while broken
+//"ItemSchema/Dota2Test.json"                      : "https://api.steampowered.com/IEconItems_205790/GetSchema/v1/?__KEY__&language=english",
 "ItemSchema/Portal2.json"                        : "https://api.steampowered.com/IEconItems_620/GetSchema/v1/?__KEY__&language=english",
 "ItemSchema/TeamFortress2.json"                  : "https://api.steampowered.com/IEconItems_440/GetSchema/v1/?__KEY__&language=english",
 
