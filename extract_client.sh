@@ -10,10 +10,11 @@ cd "$DIR/.support"
 
 echo Deleting existing files
 
-rm -r "$DIR/ClientExtracted/*"
-rm -r ubuntu/*
-rm "$DIR/BuildbotPaths/*"
-rm -r "$DIR/Protobufs/*"
+# Scary!
+rm -rf "$DIR"/ClientExtracted/*
+rm -rf ubuntu/*
+rm -f "$DIR"/BuildbotPaths/*
+rm -rf "$DIR"/Protobufs/*
 
 #
 # EXTRACT EVERYTHING
