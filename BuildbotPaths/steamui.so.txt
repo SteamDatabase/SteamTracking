@@ -184,7 +184,6 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamvideostagequeuethread.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamvideostagex264.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/gamestreamvideostageyv12.cpp
-/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/libavaudioencoder.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/./gamestream/x264wrapper.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/InstallAppWizard.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/steamUI/joingamecontroller.cpp

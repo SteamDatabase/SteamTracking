@@ -4,6 +4,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../common/video/videomanifest.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../common/video/videoplayer.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../common/video/videoplayermanager.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/../common/video/videoutils.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/completionportmanager.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/completionportmanager_posix.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/cookiecontainer.cpp
