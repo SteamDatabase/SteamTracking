@@ -2491,7 +2491,8 @@ function PopulateActions( elActions, rgActions, item, owner )
 		if ( !action.link || !action.name )
 			continue;
 
-		var strLink = action.link.replace("%assetid%", item.id);
+		var strLink = action.link.replace( "%assetid%", item.id );
+		strLink = strLink.replace( "%contextid%", item.contextid );
 		if ( owner )
 		{
 			if ( typeof owner == 'string' )
@@ -3989,7 +3990,7 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 			var elNewAction = $J( '<a></a>' );
 			elNewAction.addClass( 'popup_menu_item' );
 
-			var strLink = rgAction.link.replace( "%assetid%", item.id ).replace( "%owner_steamid%", user.GetSteamId() );
+			var strLink = rgAction.link.replace( "%assetid%", item.id ).replace( "%contextid%", item.contextid ).replace( "%owner_steamid%", user.GetSteamId() );
 			elNewAction.attr( 'href', strLink );
 
 			if ( rgAction.link.substr( 0, 6 ) != "steam:" )

@@ -2384,6 +2384,9 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 #ServiceProviders {
 	background: rgba( 145, 134, 101, 0.5);
 }
+#ServiceProviders {
+	margin-bottom: 30px;
+}
 #splits .sectionTitle,
 #ServiceProviders .sectionTitle {
 	font-size: 18px;

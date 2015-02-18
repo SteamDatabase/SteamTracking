@@ -98,27 +98,6 @@
 	padding-top: 8px;
 }
 
-.loginbox_psn
-{
-	padding: 14px 0px 0px 0px;
-}
-
-.loginbox_psn_logo
-{
-	float: left;
-	margin-right: 1em;
-}
-
-.loginbox_psn_text
-{
-	margin-top: 0.5em;
-}
-
-.loginbox_psn_text h2
-{
-	font-size: 16px;
-}
-
 #join_sys_req_title {
 	display: block;
 }

@@ -1137,6 +1137,7 @@ function HandleMarketActionMenu( elActionMenuButton, item )
 		elNewAction.attr(
 			'href',
 			rgAction.link.replace( "%assetid%", item.id )
+					.replace( "%contextid%", item.contextid )
 					.replace( "%owner_steamid%", item.owner )
 		);
 

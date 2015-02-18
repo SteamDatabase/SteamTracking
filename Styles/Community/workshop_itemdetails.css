@@ -2483,7 +2483,17 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	border: 1px solid #39393a;
 }
 
+.game_area_purchase_game.buy {
+	background: -moz-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%, rgba(226,244,255,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(97,100,101,0.3)), color-stop(100%,rgba(226,244,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d616465', endColorstr='#4de2f4ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
+	border: none;
+}
 
 .game_area_purchase_game.publish {
 	margin: 20px 0 -10px 0;
@@ -2535,13 +2545,23 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	right: 12px;
 	bottom: 12px;
 }
+.game_area_purchase_game.buy .commerce_container {
+	position: absolute;
+	right: 12px;
+	top: 14px;
+	border-radius: 4px;
+	border: 2px solid #222222;
+	background: rgba( 0, 0, 0, 0.2 );
+}
 
 .commerce_price
 {
-	font-size: 17px;
+	font-size: 15px;
 	color: white;
 	font-weight: normal;
-	margin-right: 5px;
+	margin-right: 8px;
+	margin-left: 12px;
+	vertical-align: middle;
 }
 
 .official_content_text_area

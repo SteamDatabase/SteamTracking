@@ -9,10 +9,11 @@ function DownloadFile( publishFileID )
             // Need to make sure the filename is set, in case there is no Content-Disposition on the result
             // So cook up an anchor, set the href and download attributes, and click it.
             // Apparently the download attribute does not work on IE. . .
-            var f = $J("<a>");
+            var f = $J("<a>").hide().appendTo(document.body);
             f.attr("href", response.url );
             f[0].download = response.filename;
             f[0].click();
+            setTimeout( function() { f.remove() }, 0 );
         }
         else
         {

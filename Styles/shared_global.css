@@ -1427,6 +1427,22 @@ img.dynamiclink_preview {
 	line-height: 13px;
 }
 
+/* pre release tag on reviews*/
+.pre_release_review
+{
+	background-color: #8b734d;
+	border: 1px solid #bca177;
+	text-transform: uppercase;
+	font-family: arial;
+	font-size: 11px;
+	color: #dabb8a;
+	padding: 1px 4px 0px 4px;
+	margin-bottom: 10px;
+	display: inline-block;
+	cursor: default;
+	line-height: 13px;
+}
+
 /* shared bbcode styles */
 
 span.bb_spoiler {

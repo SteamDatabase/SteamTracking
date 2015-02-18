@@ -577,6 +577,9 @@ GStoreItemData = {
 		if ( ApplicableSettings.games_not_in_library && !Settings.games_not_in_library && !GDynamicStore.BIsAppOwned( appid ) )
 			return false;
 
+		if ( rgAppData.video && ApplicableSettings.video && !Settings.video )
+			return false;
+
 		return true;
 	},
 

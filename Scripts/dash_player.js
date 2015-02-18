@@ -140,10 +140,14 @@ CDASHPlayer.prototype.PlayMPD = function( strURL )
 			return;
 		}
 
-		// if dynamic, schedule mpd reload
-		if ( _player.BIsLiveContent() && _player.m_mpd.minimumUpdatePeriod > 0 )
+		// special handling for dynamic content
+		if ( _player.BIsLiveContent() )
 		{
-			_player.m_schUpdateMPD = setTimeout( function() { _player.UpdateMPD(); }, _player.m_mpd.minimumUpdatePeriod * 1000 );
+			// schedule mpd reload
+			if ( _player.m_mpd.minimumUpdatePeriod > 0 )
+			{
+				_player.m_schUpdateMPD = setTimeout( function() { _player.UpdateMPD(); }, _player.m_mpd.minimumUpdatePeriod * 1000 );
+			}
 
 			// calculate when the video started relative to system clock
 			var strServerTime = xhr.getResponseHeader( 'date' );
