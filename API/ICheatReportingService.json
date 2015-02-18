@@ -5,7 +5,7 @@
             "name": "ReportCheatData",
             "version": 1,
             "httpmethod": "POST",
-            "description": "Reports cheat data",
+            "description": "Reports cheat data. Only use on test account that is running the game but not in a multiplayer session.",
             "parameters": [
                 {
                     "name": "key",
@@ -54,6 +54,24 @@
                     "type": "uint64",
                     "optional": false,
                     "description": "local system time when cheat process stopped. ( 0 if still running )"
+                },
+                {
+                    "name": "cheatname",
+                    "type": "string",
+                    "optional": false,
+                    "description": "descriptive name for the cheat."
+                },
+                {
+                    "name": "game_process_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "process ID of the running game."
+                },
+                {
+                    "name": "cheat_process_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "process ID of the cheat process that ran"
                 }
             ]
         }
