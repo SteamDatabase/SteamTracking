@@ -132,7 +132,12 @@
 		{
 			$this->Log( '{lightblue}Checking CDN subdomains' );
 			
-			$Questions = [];
+			$Questions =
+			[
+				'cdn.level3.cs.steampowered.com',
+				'cdn.akamai.cs.steampowered.com',
+				'cdn.highwinds.cs.steampowered.com',
+			];
 			$Response = [];
 			
 			for( $i = 1; $i < 11; $i++ )
