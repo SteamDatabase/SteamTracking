@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.14bbe1d347edf60201aa27ca80c5f7e87fcc4797.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.869fad8b5e09cb057ad7ef2a5e02a367918cd190.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -10429,7 +10429,7 @@
 				"defindex": 20055,
 				"item_class": "tool",
 				"item_type_name": "Key",
-				"item_name": "Claim: MusicKit | Damjan Mravunac, The Talos Principal",
+				"item_name": "Claim: MusicKit | Damjan Mravunac, The Talos Principle",
 				"item_description": "You have claimed a limited time offer.",
 				"proper_name": false,
 				"item_quality": 4,
