@@ -3580,7 +3580,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 			'add_partner_app_reporting' : bAddPartnerAppReporting,
 			'publisherid' : pubId,
 			'parentid' : parentId,
-			'f2p' : bF2P,
+			'f2p' : bF2P ? 1 : 0,
 			'sessionid' : g_sessionID
 		}
 	).done(
