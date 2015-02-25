@@ -2013,3 +2013,10 @@ div#appAutoHeader_list
     left: -293px !important;
     top: 32px !important;
 }
+
+.bundleModal .enter_bundle_name {
+	width: 300px;
+}
+.bundleModal .enter_bundle_discount {
+	width: 30px;
+}

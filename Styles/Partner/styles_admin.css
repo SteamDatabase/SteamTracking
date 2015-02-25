@@ -1643,6 +1643,12 @@ html, body { height:100%; }
 	width: 500px;
 }
 
+#app_content_specs__area textarea
+{
+	width: 1000px;
+	height: 100px;
+}
+
 #app_content_legal__area textarea
 {
 	width: 1000px;
