@@ -662,7 +662,7 @@ a.forum_comment_action:hover {
 }
 
 
-.searchmatch_highlight {
+.post_searchresult .searchmatch_highlight, .discussion_searchresults .searchmatch_highlight {
 	color: #d2ff96;
 	background-color: #68932f;
 	padding: 0px 2px;

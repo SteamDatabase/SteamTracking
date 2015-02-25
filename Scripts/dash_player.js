@@ -111,7 +111,6 @@ CDASHPlayer.prototype.Close = function()
 CDASHPlayer.prototype.CloseWithError = function()
 {
 	this.Close();
-
 	$J( this.m_elVideoPlayer ).trigger( 'playbackerror' );
 }
 
@@ -137,6 +136,7 @@ CDASHPlayer.prototype.PlayMPD = function( strURL )
 		if ( !_player.m_mpd.BParse( data ) )
 		{
 			PlayerLog( 'Failed to parse MPD file' );
+			_player.CloseWithError();
 			return;
 		}
 
@@ -160,6 +160,7 @@ CDASHPlayer.prototype.PlayMPD = function( strURL )
 		if ( !_player.BCreateLoaders() )
 		{
 			PlayerLog( 'Failed to create segment loaders' );
+			_player.CloseWithError();
 			return;
 		}
 
@@ -170,6 +171,7 @@ CDASHPlayer.prototype.PlayMPD = function( strURL )
 	{
 		_player.m_xhrUpdateMPD = null;
 		PlayerLog( 'Failed to download: ' + _player.m_strMPD );
+		_player.CloseWithError();
 	});
 }
 
@@ -196,6 +198,7 @@ CDASHPlayer.prototype.UpdateMPD = function()
 		if ( !_player.m_mpd.BUpdate( data ) )
 		{
 			PlayerLog( 'Failed to update MPD file' );
+			_player.CloseWithError();
 			return;
 		}
 
@@ -208,6 +211,7 @@ CDASHPlayer.prototype.UpdateMPD = function()
 	{
 		_player.m_xhrUpdateMPD = null;
 		PlayerLog( 'Failed to download: ' + _player.m_strMPD );
+		_player.CloseWithError();
 	});
 }
 
