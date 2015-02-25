@@ -23,6 +23,7 @@ var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage )
 	this.m_HTML5VideoStats = null;
 	this.m_rtRestartTime = rtRestartTime;
 	this.m_strLanguage = strLanguage;
+	this.m_nVideoRestarts = 0;
 }
 
 CVideoWatch.k_InBrowser = 1;
@@ -30,6 +31,8 @@ CVideoWatch.k_InClient = 2;
 CVideoWatch.k_InOverlay = 3;
 CVideoWatch.k_InOldClient = 4;
 CVideoWatch.k_InHTML5AppWrapper = 5;
+
+CVideoWatch.k_MaximumVideoRestarts = 3;
 
 CVideoWatch.prototype.ToggleStats = function()
 {
@@ -43,6 +46,7 @@ CVideoWatch.prototype.ShowVideoError = function( strError )
 	{
 		$J( '#video_loading_text' ).html( strError );
 		$J( '#video_loading_text' ).addClass( 'error' );
+		$J( '#page_contents' ).addClass( 'loading_video' );
 		$J( '.loading_wrapper' ).show();
 	}
 	else
@@ -148,8 +152,17 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function( player )
 
 CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 {
-	$J( '#video_loading_text' ).text( 'Loading...' );
-	this.GetVideoDetails();
+	this.m_nVideoRestarts++;
+	if ( this.m_nVideoRestarts > CVideoWatch.k_MaximumVideoRestarts )
+	{
+		this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.' );
+	}
+	else
+	{
+		$J( '#video_loading_text' ).text( 'Loading...' );
+		this.GetVideoDetails();
+		$J( '#page_contents' ).removeClass( 'loading_video' );
+	}
 }
 
 CVideoWatch.prototype.OnPlayerPlaybackError = function()

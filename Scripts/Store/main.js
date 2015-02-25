@@ -951,7 +951,7 @@ Countdown.prototype.render = function( remainDays, remainHours, remainMinutes, r
 	}
 	else
 	{
-		str += remainDays + ' #days ';
+		str += remainDays + ' days ';
 	}
 	str += (remainHours < 10 ? '0' : '') + remainHours + ':';
 	str += (remainMinutes < 10 ? '0' : '') + remainMinutes + ':';
