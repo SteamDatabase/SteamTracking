@@ -70,6 +70,9 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/contentupdatecontext.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/controller.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/controller.h
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/controller_mapping.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/controller_mode.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/controller_source.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/csinterface.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuild.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/depotbuilder.cpp
@@ -78,6 +81,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/gameserver.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/gameserver.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/htmlsurface.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/inputgenerator_linux.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/installscript.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/installscript_posix.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/clientdll/interfacemap_client.h
@@ -156,6 +160,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/job.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/job.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/jobmgr.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/language.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/logger.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/messagetranslation.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/msgbase.h
@@ -198,6 +203,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/workthreadpool.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/common/zip_helpers.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/p2pengine/p2pjinglewrapper/./socketclient.cc
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/public/mathlib/vector2d.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/public/steam/steamclientpublic.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/public/tier0/threadtools.h
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/public/tier0/tslist.h

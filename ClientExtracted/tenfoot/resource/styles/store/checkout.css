@@ -1801,3 +1801,24 @@ CheckoutMicroTxnAuthLineItem #MainRow
 {
 	margin-bottom: 8px;
 }
+
+CheckoutConfirmation .CheckoutConfirmationBtnGrouping
+{
+	visibility: collapse;
+}
+
+CheckoutConfirmation.Microtransaction #ReturnToMicrotransaction,
+CheckoutConfirmation.Library #GoToLibrarySection,
+CheckoutConfirmation.Store #ReturnToStoreSection,
+CheckoutConfirmation.Market #ReturnToMarketSection
+{
+	visibility: visible;
+}
+
+CheckoutConfirmation.Market #ReturnToMicrotransaction,
+CheckoutConfirmation.Market #GoToLibrarySection,
+CheckoutConfirmation.Market #ReturnToStoreSection
+{
+	visibility: collapse;
+}
+

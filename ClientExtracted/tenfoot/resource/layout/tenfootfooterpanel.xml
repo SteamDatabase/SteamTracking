@@ -36,31 +36,6 @@
 							<FooterLabelButton id="B_txt" class="LegendText BButtonText" padevent="pad_b" />
 						</Panel>
 					</Panel>
-					<Panel id="SteamPad_ABXY_Footer_Wrapper">
-						<Panel id="SteamPadFlowRight">
-							<Panel id="SteamPadFlowXY">
-								<Panel id="X_Wrapper">
-									<FooterLabelButton id="X_txt_s" class="LegendText XButtonText" padevent="pad_x" />
-									<Label id="X_btn_s" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
-								</Panel>
-								<Panel id="Y_Wrapper">
-									<FooterLabelButton id="Y_txt_s" class="LegendText YButtonText" padevent="pad_y" />
-									<Label id="Y_btn_s" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
-								</Panel>
-							</Panel>
-							<Panel id="SteamPadFlowCenter" />
-							<Panel id="SteamPadFlowAB">
-								<Panel id="B_Wrapper">
-									<Label id="B_btn_s" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
-									<FooterLabelButton id="B_txt_s" class="LegendText BButtonText" padevent="pad_b" />
-								</Panel>
-								<Panel id="A_Wrapper">
-									<Label id="A_btn_s" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
-									<FooterLabelButton id="A_txt_s" class="LegendText AButtonText" padevent="pad_a" />
-								</Panel>
-							</Panel>
-						</Panel>
-					</Panel>
 					<Panel id="RightWrapper">
 						<Panel id="BACKWrapper">
 							<Panel id="BACKInnerWrapper">

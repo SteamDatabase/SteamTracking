@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1424485524"
+	"version"		"1424832166"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.0f55f659f9339a1ed0c85f0c591607e4b8dfbc5e"
@@ -34,17 +34,17 @@
 	}
 	"tenfoot_images_all"
 	{
-		"file"		"tenfoot_images_all.zip.e03dc27225c0b54c8d783b09dccbaccb6974089b"
-		"checksum"		"e03dc27225c0b54c8d783b09dccbaccb6974089b"
-		"size"		"14982562"
-		"zipvz"		"tenfoot_images_all.zip.vz.561f9170feb0aed6024fcf396580bef70eb2924c_11573495"
+		"file"		"tenfoot_images_all.zip.f8a07444628c37fb4250af771f93995dcd910049"
+		"checksum"		"f8a07444628c37fb4250af771f93995dcd910049"
+		"size"		"13402771"
+		"zipvz"		"tenfoot_images_all.zip.vz.c680afadd591d23c2498aa3dd3f65eb8139f0e97_12100869"
 	}
 	"tenfoot_all"
 	{
-		"file"		"tenfoot_all.zip.43efc2be54b9aadb9e599d15caa62e8100a1c0eb"
-		"checksum"		"43efc2be54b9aadb9e599d15caa62e8100a1c0eb"
-		"size"		"2871274"
-		"zipvz"		"tenfoot_all.zip.vz.35de79293299e59ec4c13b155c14048353f2ae67_1031483"
+		"file"		"tenfoot_all.zip.c18c0018f2116ea44deb89b15c9e3de044371f37"
+		"checksum"		"c18c0018f2116ea44deb89b15c9e3de044371f37"
+		"size"		"2889681"
+		"zipvz"		"tenfoot_all.zip.vz.a1724caf192864e0e5f6865078ad6b550d83f69c_1039520"
 	}
 	"resources_misc_all"
 	{
@@ -62,16 +62,16 @@
 	}
 	"strings_en_all"
 	{
-		"file"		"strings_en_all.zip.2864f07d78b94873d28ff1a33fcd2422490096ac"
-		"checksum"		"2864f07d78b94873d28ff1a33fcd2422490096ac"
-		"size"		"118433"
+		"file"		"strings_en_all.zip.bd02a67ddad5e205730752a0efc633dc058a4216"
+		"checksum"		"bd02a67ddad5e205730752a0efc633dc058a4216"
+		"size"		"118542"
 	}
 	"strings_all"
 	{
-		"file"		"strings_all.zip.d532e8da1e594d8a3eb3999b1bec24556a175940"
-		"checksum"		"d532e8da1e594d8a3eb3999b1bec24556a175940"
-		"size"		"6025187"
-		"zipvz"		"strings_all.zip.vz.a1d85d56465821b4ad8d09b197c7f7c6a797137f_1871085"
+		"file"		"strings_all.zip.cc4fd183720f68ce5cc6d413168368578c66356c"
+		"checksum"		"cc4fd183720f68ce5cc6d413168368578c66356c"
+		"size"		"6027354"
+		"zipvz"		"strings_all.zip.vz.ebfc1e5f4976e64083b3d2f4214c10d4fd842228_1870393"
 	}
 	"remoteui_all"
 	{
@@ -82,17 +82,24 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.b4f3f4040da68f16bff278286351441c37711d88"
-		"checksum"		"b4f3f4040da68f16bff278286351441c37711d88"
-		"size"		"1555118"
-		"zipvz"		"public_all.zip.vz.dc5565d2d9befbf913149f31c7b1e0428aac1148_752103"
+		"file"		"public_all.zip.78dee68bbc2fd37ad72789d97266d3f09503c9d7"
+		"checksum"		"78dee68bbc2fd37ad72789d97266d3f09503c9d7"
+		"size"		"1555972"
+		"zipvz"		"public_all.zip.vz.5319f80dfb1dd6917cfe3562a8949ddd70b00fd9_752791"
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.94cea975181360e255023e787948d687d3cca62a"
-		"checksum"		"94cea975181360e255023e787948d687d3cca62a"
-		"size"		"43315847"
-		"zipvz"		"bins_osx.zip.vz.8fcf614a28f7642cc8a4c2b9e6c3f75b13ddaf62_24780265"
+		"file"		"bins_osx.zip.f87df5dbe830b67286f1191325c88d4da6de5c4f"
+		"checksum"		"f87df5dbe830b67286f1191325c88d4da6de5c4f"
+		"size"		"28853865"
+		"zipvz"		"bins_osx.zip.vz.7515ef6831c6dfbd2ceced99af27331a01938e73_15991521"
+	}
+	"bins_client_osx"
+	{
+		"file"		"bins_client_osx.zip.64f0ce0ebd08a1f26eb798b107e2b8cf0557abea"
+		"checksum"		"64f0ce0ebd08a1f26eb798b107e2b8cf0557abea"
+		"size"		"14906685"
+		"zipvz"		"bins_client_osx.zip.vz.768f8893666066eb6dedf0478d2b5eeb99b82dd4_8900931"
 	}
 	"bins_codecs_osx"
 	{
@@ -108,17 +115,17 @@
 	}
 	"sdl2_osx"
 	{
-		"file"		"sdl2_osx.zip.6ca978d77d06bb65b8b21463e15b259319e5e756"
-		"checksum"		"6ca978d77d06bb65b8b21463e15b259319e5e756"
-		"size"		"436060"
-		"zipvz"		"sdl2_osx.zip.vz.225fef6fbf2764a451ae0a25a1d1075cdda67f81_289466"
+		"file"		"sdl2_osx.zip.a496f3ee0cdc5b24e4816132e08ca64da04705fd"
+		"checksum"		"a496f3ee0cdc5b24e4816132e08ca64da04705fd"
+		"size"		"440282"
+		"zipvz"		"sdl2_osx.zip.vz.5b05bd4721bab55c2302a9b15a55f21be626ac75_292783"
 	}
 	"webhelpers_osx"
 	{
-		"file"		"webhelpers_osx.zip.5474a7c63462bc01d42aa8a8eb51bbaf295af352"
-		"checksum"		"5474a7c63462bc01d42aa8a8eb51bbaf295af352"
-		"size"		"1405579"
-		"zipvz"		"webhelpers_osx.zip.vz.ea730c46c3abdc35484e1a910bf8724d8793e139_488524"
+		"file"		"webhelpers_osx.zip.72f28bbeb84c1ec31b3ab75ad4630431f7db8474"
+		"checksum"		"72f28bbeb84c1ec31b3ab75ad4630431f7db8474"
+		"size"		"1407151"
+		"zipvz"		"webhelpers_osx.zip.vz.5a5cf17fc13977edf451c3f24219052bd6b38679_491159"
 	}
 	"webkit_osx"
 	{
@@ -150,14 +157,14 @@
 	}
 	"steam_osx"
 	{
-		"file"		"steam_osx.zip.f13ef88110e501fc48025e943723062d8ec4dde6"
-		"checksum"		"f13ef88110e501fc48025e943723062d8ec4dde6"
-		"size"		"1550580"
-		"zipvz"		"steam_osx.zip.vz.1de5f370d496120c6caaf1f0ba95d35d9217e8f1_1171642"
+		"file"		"steam_osx.zip.809fcb2b57d35fe7758737b30bfd0bbbf4493494"
+		"checksum"		"809fcb2b57d35fe7758737b30bfd0bbbf4493494"
+		"size"		"1557219"
+		"zipvz"		"steam_osx.zip.vz.e246cafa47dfbd379eea194861701df24962363f_1177078"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"c738a9f61477d25a047dc3eefcfb16c1c41656e609e4be15909cdd95de3e0a5455b3eee39f99d8e565d67b7016b21a477be57362ed4f4cfec83d3b655bbedc4c80925edaef30743a9e75ca0e6b5efda331e5165690ee105b8d5e92695c659ff52f9e875de7d5be79c6c77ac4fff26a5b197b08c991acca85df9f26c3edd530cb"
+	"osx"		"58adf63f72030d0a0bac127875b429c91167472f62c4dc5d304233b3e4ec9a8cf15a9e9eace1dda16b56af7007a40d2f5e975cd26b9ebe80b7b63770cb144815cdf502afb259b17e54db91432c924b606a3aaa0effdd125ea1a8f878077376f3116be42e84558855bb4e89e8a8c7ae3158c19deb9524a8e082faf2ea9f22640f"
 }

@@ -55,6 +55,17 @@ TextInputDualTouch
 	text-align: left;
 }
 
+.NoPreview #TextPreview,
+.NoPreview #TextPreviewBackground
+{
+	visibility: collapse;
+}
+
+.HiddenFooter
+{
+	visibility: collapse;
+}
+
 .TouchPad
 {
 	y: 6px;
@@ -113,10 +124,21 @@ TextInputDualTouch
 	height: 14%;
 }
 
+.NoSuggest #TopRow
+{
+	visibility: collapse;
+}
+
 .TouchRow
 {
 	flow-children: right;
 	height: 18%;
+}
+
+.NoSuggest .TouchRow,
+.NoSuggest #LastRow
+{
+	height: 20.8%;
 }
 
 .Left #LastRow
@@ -211,6 +233,13 @@ TextInputDualTouch
 	width: 1.64%;
 	height: 70.4%;
 	border-style: none;
+}
+
+.NoSuggest #TouchKey_LeftArrow.LeftArrowFill,
+.NoSuggest #TouchKey_RightArrow.RightArrowFill
+{
+	y: 0.75%;
+	height: 81.5%;
 }
 
 #TouchKey_Alt

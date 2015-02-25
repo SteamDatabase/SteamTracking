@@ -1,0 +1,22 @@
+"controller_mappings"
+{
+    "version" "2"
+    "game" "Steam Big Picture"
+
+    "group"
+    {
+        "id" "0"
+        "mode" "absolute_mouse"
+    }
+
+    "group_source_bindings"
+    {
+        "0" "right_trackpad"
+    }
+
+    "settings"
+    {
+        "left_trackpad_mode" "none"
+        "right_trackpad_mode" "none"
+    }
+}

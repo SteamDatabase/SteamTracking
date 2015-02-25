@@ -83,3 +83,4 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/debugstatssystem.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/keyvaluessystem.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/strtools.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/strtools_unicode.cpp

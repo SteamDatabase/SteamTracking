@@ -12,6 +12,7 @@
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/parseurl.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/stringnormalize.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/strtools.cpp
+/home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/strtools_unicode.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/../tier1/mempool.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/../tier1/utlbuffer.cpp
 /home/buildbot/buildslave_steam/steam_rel_client_ubuntu12_linux/build/src/vstdlib/../tier1/utlmemory.cpp

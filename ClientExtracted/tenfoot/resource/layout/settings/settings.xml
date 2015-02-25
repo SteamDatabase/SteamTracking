@@ -48,10 +48,6 @@
 					<Label class="LongDesc" text="#Settings_Controller" />
 				</Button>
 
-				<Button id="SteamControllerSettingsButton" class="Button" onactivate="ShowSettings( SteamController );">
-					<Label class="LongDesc" text="#Settings_SteamController" />
-				</Button>
-
 				<Button id="StoreSettingsButton" class="Button" onactivate="ShowSettings( Store );">
 					<Label class="LongDesc" text="#Settings_Store" />
 				</Button>

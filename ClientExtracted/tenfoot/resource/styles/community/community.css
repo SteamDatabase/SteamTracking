@@ -331,3 +331,36 @@ CommunityPanel#CommunityMarketItemPicker
 {
 	transform: none;
 }
+
+#CommunityMarketBuyDialog
+{
+	background-image: url("file://{images}/profile/activity_bg_wash.png");
+	background-size: 100% 100%;
+}
+
+#CommunityAppHubPopup
+{
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+
+	transition-property: pre-transform-scale2d, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#CommunityAppHubPopup LoadingThrobber
+{
+	horizontal-align: center;
+	vertical-align: center;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+}
+
+#CommunityAppHubPopup LoadingThrobber.LoadComplete
+{
+	opacity: 0.0;
+}
+
+

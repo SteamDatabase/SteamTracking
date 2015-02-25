@@ -1,0 +1,21 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
+	</styles>
+
+	<ControllerConfigBrowser defaultfocus="PersonalCategory" tabindex="auto" selectionpos="auto">
+		<Panel id="ColumnContainer">
+			<Panel class="ConfigColumn" id="ConfigCategoriesColumn">
+				<Button class="ConfigCategory" id="PersonalCategory" onactivate="SelectConfigCategory( personal );">
+					<Label text="#Library_Details_Controller_Personal" />
+				</Button>
+				<Button class="ConfigCategory" id="CommunityCategory" onactivate="SelectConfigCategory( community );">
+					<Label text="#Library_Details_Controller_Community" />
+				</Button>
+			</Panel>
+			<Panel class="ConfigColumn" id="ConfigsColumn" />
+		</Panel>
+	</ControllerConfigBrowser>
+</root>

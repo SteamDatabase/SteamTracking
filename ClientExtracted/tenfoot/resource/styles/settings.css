@@ -3499,3 +3499,16 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	margin: 0px 5px 0px 5px;
 }
 
+#SettingsBroadcast_SubControls .SettingsLeftContent
+{
+	width: 600px;
+}
+
+#SettingsBroadcast_SubControls DropDown,
+#SettingsBroadcast_SubControls ToggleButton
+{
+	horizontal-align: left;
+	width: 575px;
+}
+
+

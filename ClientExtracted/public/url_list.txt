@@ -624,6 +624,18 @@ CommunityMarketSellDialog
 	method		"internal"
 	filter		"community"
 }
+CommunityMarketBuyDialog
+{
+	url		"%community%/market/buydialog/%p1%/"
+	method		"internal"
+	filter		"community"
+}
+CommunityMarketCreateBuyOrderDialog
+{
+	url		"%community%/market/buyorderdialog/%p1%/%p2%/"
+	method		"internal"
+	filter		"community"
+}
 ManageGiftsPage
 {
 	url		"%community%/%mystuff%/inventory/#pending_gifts"
