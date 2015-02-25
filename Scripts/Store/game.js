@@ -13,7 +13,7 @@ function ShowEmbedWidget( )
 	var deferred = new jQuery.Deferred();
 	var fnOK = function() { deferred.resolve(); };
 
-	var Modal = _BuildDialog( "#Widget_Create_Title", $Content, [], fnOK, {} );
+	var Modal = _BuildDialog( "Create Widget to Embed", $Content, [], fnOK, {} );
 	deferred.always( function() { Modal.Dismiss(); } );
 	Modal.Show();
 
@@ -35,7 +35,7 @@ function ShowShareDialog( )
 	$Content.detach();
 	$Content.show();
 
-	ShowAlertDialog( "#search_share", $Content).always(
+	ShowAlertDialog( "Share", $Content).always(
 		function() {
 			// save it away again for later
 			$Content.hide();
@@ -91,7 +91,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$UnIgnoreBtn.show();
 			GDynamicStore.InvalidateCache();
 		}).fail( function() {
-			ShowAlertDialog( 'Not Interested', '#text_game_error_generic' );
+			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -105,7 +105,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$UnIgnoreBtn.hide();
 			GDynamicStore.InvalidateCache();
 		}).fail( function() {
-			ShowAlertDialog( 'Not Interested', '#text_game_error_generic' );
+			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -117,7 +117,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$FollowBtn.hide();
 			$UnFollowBtn.show();
 		}).fail( function() {
-			ShowAlertDialog( 'Follow', '#text_game_error_generic' );
+			ShowAlertDialog( 'Follow', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -130,7 +130,7 @@ function InitQueueControls( store_appid, steamworks_appid )
 			$FollowBtn.show();
 			$UnFollowBtn.hide();
 		}).fail( function() {
-			ShowAlertDialog( 'Follow', '#text_game_error_generic' );
+			ShowAlertDialog( 'Follow', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 }
@@ -162,7 +162,7 @@ function InitAutocollapse()
 
 		var $Container = $Content.parent();
 
-		var $ReadMore = $J('<div/>', {'class': 'game_page_autocollapse_readmore' }).text( '#btn_read_more' );
+		var $ReadMore = $J('<div/>', {'class': 'game_page_autocollapse_readmore' }).text( 'READ MORE' );
 		var $Fade = $J('<div/>', {'class': 'game_page_autocollapse_fade' } ).append( $ReadMore );
 		$Container.append( $Fade );
 
@@ -550,7 +550,7 @@ function ShowReportDialog( nAppId )
 
 function ShowGotSteamModal( strSteamURL, strAppName, strPlayLaunchVerb )
 {
-		var $ModalContent = $J("<div class=\"gotsteamModal\">\r\n\t<div class=\"got_steam_ctn\">\r\n\t<div class=\"got_steam_box\">\r\n\t\t<h1>#got_steam_header<\/h1>\r\n\t\t<p>#got_steam_warning3<\/p>\r\n\t\t<div class=\"gotsteam_buttons\">\r\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\r\n\t\t\t\t<h3>#got_steam_yes_installed<\/h3>\r\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<a href=\"http:\/\/store.steampowered.com\/about\/\" class=\"btn_blue\">\r\n\t\t\t\t<h3>#got_steam_no_download<\/h3>\r\n\t\t\t\t<h5>#got_steam_no_download_now<\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<div style=\"clear: left;\"><\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"got_steam_low_block\">\r\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\r\n\t\t\t#got_steam_blurb <a href=\"http:\/\/store.steampowered.com\/about\/\">#steam_learn_more<\/a>\r\n\t\t<\/div><\/div>\r\n\t<\/div>\r\n<\/div>");
+		var $ModalContent = $J("<div class=\"gotsteamModal\">\r\n\t<div class=\"got_steam_ctn\">\r\n\t<div class=\"got_steam_box\">\r\n\t\t<h1>Got Steam?<\/h1>\r\n\t\t<p>You need to have the <a href=\"http:\/\/store.steampowered.com\/about\/\">Steam desktop application<\/a> installed before you can install and launch <strong class=\"gotSteam_AppName\"><\/strong>. Do you have Steam installed on this computer?<\/p>\r\n\t\t<div class=\"gotsteam_buttons\">\r\n\t\t\t<a class=\"gotSteam_SteamURL btn_blue leftbtn\" href=\"\">\r\n\t\t\t\t<h3>Yes, Steam is installed<\/h3>\r\n\t\t\t\t<h5 class=\"gotsteam_action\"><\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<a href=\"http:\/\/store.steampowered.com\/about\/\" class=\"btn_blue\">\r\n\t\t\t\t<h3>No, I need Steam<\/h3>\r\n\t\t\t\t<h5>Read about and download Steam<\/h5>\r\n\t\t\t<\/a>\r\n\t\t\t<div style=\"clear: left;\"><\/div>\r\n\t\t<\/div>\r\n\t\t<div class=\"got_steam_low_block\">\r\n\t\t\t<div class=\"gotsteam_steam_ico\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/steam_ico.png\" width=\"40\" height=\"40\" border=\"0\" \/><\/div>\r\n\t\t\tSteam is the premiere desktop gaming platform. It's free to join and easy to use. <a href=\"http:\/\/store.steampowered.com\/about\/\">Learn more about Steam.<\/a>\r\n\t\t<\/div><\/div>\r\n\t<\/div>\r\n<\/div>");
 	$ModalContent.find('.gotSteam_AppName').text( strAppName );
 	$ModalContent.find('.gotsteam_action').text( strPlayLaunchVerb );
 	$ModalContent.find( '.gotSteam_SteamURL').attr( 'href', strSteamURL );

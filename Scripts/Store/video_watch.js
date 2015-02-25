@@ -69,12 +69,12 @@ CVideoWatch.prototype.UnlockH264 = function()
 {
 	if ( this.m_eClientType == CVideoWatch.k_InOldClient )
 	{
-		this.ShowVideoError( 'SteamVideo_UpdateClient' );
+		this.ShowVideoError( 'You must opt into the beta version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=3252-WEUN-2306">Visit the FAQ</a> for instructions on how to opt into the latest beta client.' );
 		return;
 	}
 
 	window.open( 'steam://unlockh264/' );
-	this.SetVideoLoadingText( 'SteamVideo_UpdatingSteam' );
+	this.SetVideoLoadingText( 'Updating Steam...' );
 	this.WaitUnlockH264( Date.now() );
 }
 
@@ -88,7 +88,7 @@ CVideoWatch.prototype.WaitUnlockH264 = function( rtStart )
 
 	if ( Date.now() - rtStart > 30000 )
 	{
-		this.ShowVideoError( 'SteamVideo_FailedH264Unlock' );
+		this.ShowVideoError( 'Failed to apply a Steam update that is required to watch this video.<br><br>Please ensure your client is connected to Steam and try again.' );
 		return;
 	}
 
@@ -102,7 +102,7 @@ CVideoWatch.prototype.Start = function()
 
 	if ( this.m_eClientType == CVideoWatch.k_InOldClient )
 	{
-		this.ShowVideoError( 'SteamVideo_UpdateClient' );
+		this.ShowVideoError( 'You must opt into the beta version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=3252-WEUN-2306">Visit the FAQ</a> for instructions on how to opt into the latest beta client.' );
 		return;
 	}
 
@@ -114,7 +114,7 @@ CVideoWatch.prototype.Start = function()
 			return;
 		}
 
-		this.ShowVideoError( 'SteamVideo_BrowserRequired' );
+		this.ShowVideoError( 'Your web browser does not support the minimum set of features required to watch this video.<br><br>Try again using the beta version of the Steam Client or <a href="https://support.steampowered.com/kb_article.php?ref=3252-WEUN-2306">visit the FAQ</a> for a list of supported browsers.' );
 		return;
 	}
 
@@ -139,7 +139,7 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function( player )
 	$J( '#page_contents' ).removeClass( 'loading_video' );
 
 	this.m_playerUI.SetVideoTitle( this.m_strVideoTitle );
-	document.title = this.m_strVideoTitle + ' :: SteamVideo_WatchVideoPageTitle';
+	document.title = this.m_strVideoTitle + ' :: Steam';
 
 	this.SetClosedCaptionFromSteamLanguage( player );
 
@@ -154,7 +154,7 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 
 CVideoWatch.prototype.OnPlayerPlaybackError = function()
 {
-	this.ShowVideoError( 'SteamVideo_UnexpectedError' );
+	this.ShowVideoError( 'An unexpected error occurred while trying to play this video.' );
 }
 
 CVideoWatch.prototype.GetVideoDetails = function()
@@ -180,22 +180,22 @@ CVideoWatch.prototype.GetVideoDetails = function()
 			switch ( data.error_code )
 			{
 				case 15:
-					_watch.ShowVideoError( 'SteamVideo_AccessDenied' );
+					_watch.ShowVideoError( 'The video could not be accessed. <br><br>Please ensure you are logged in and own this video.' );
 					break;
 				case 16:
-					_watch.ShowVideoError( 'SteamVideo_VideoNotAvailable' );
+					_watch.ShowVideoError( 'The video is not currently available.' );
 					break;
 				case 20:
-					_watch.ShowVideoError( 'SteamVideo_ServiceUnavailable' );
+					_watch.ShowVideoError( 'The video service is not available.' );
 					break;
 				default:
-					_watch.ShowVideoError( 'SteamVideo_UnexpectedError' + ' Code: ' + data.error_code );
+					_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.' + ' Code: ' + data.error_code );
 			}
 		}
 	})
 	.fail( function()
 	{
-		_watch.ShowVideoError( 'SteamVideo_UnexpectedError' );
+		_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.' );
 	});
 }
 

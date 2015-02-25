@@ -81,7 +81,7 @@ function ValidateWalletCode()
 		
 	if ( $('wallet_code').value == '' )
 	{
-		DisplayErrorMessage( '#youraccount_must_enter_wallet_code_error' );		
+		DisplayErrorMessage( 'You must enter a wallet code to proceed.' );		
 	}
 	else
 	{
@@ -177,24 +177,24 @@ function OnValidateWalletCodeFailure( detail )
 {
 	try 
 	{
-		var sErrorMessage = '#youraccount_wallet_code_generic_error';
+		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 			
 		switch ( detail )
 		{
 			case 14:
-				sErrorMessage = '#youraccount_wallet_code_invalid_code';
+				sErrorMessage = 'The Steam Wallet code you have entered is invalid.  Please carefully verify the characters as you re-enter the code.';
 				break;
 				
 			case 15:
-				sErrorMessage = '#youraccount_wallet_code_already_redeemed';
+				sErrorMessage = 'The Steam Wallet code you have entered has already been redeemed.  If you have recently purchased this code, please contact the seller for further assistance.';
 				break;
 
 			case 58:
-				sErrorMessage = '#youraccount_wallet_code_not_activated';
+				sErrorMessage = 'The Steam Wallet code you have entered does not appear to be activated.  Please note that it may take several hours after time of purchase before activation is completed by your retailer.  If the problem persists, please return to where the code was purchased for further assistance.';
 				break;
 
 			default:
-				sErrorMessage = '#youraccount_wallet_code_generic_error';
+				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 				break;
 		}
 		
@@ -225,13 +225,13 @@ function SubmitAddressForm()
 	{
 		if ( $( 'billing_address' ).value.length < 1 )
 		{
-			errorString += '#checkout_error_bad_address<br/>';
+			errorString += 'Please enter your billing address.<br/>';
 			rgBadFields.billing_address = true;
 		}
 				
 		if ( $( 'billing_city' ).value.length < 1 )
 		{
-			errorString += '#checkout_error_bad_city<br/>';
+			errorString += 'Please enter your billing city.<br/>';
 			rgBadFields.billing_city = true;
 		}
 			
@@ -239,7 +239,7 @@ function SubmitAddressForm()
 		{
 			if ( $('billing_state_select').value.length < 1 )
 			{
-				errorString += '#checkout_error_bad_state<br/>';
+				errorString += 'Please enter a State or Province.<br/>';
 				rgBadFields.billing_state_select_trigger = true;
 			}
 		}
@@ -248,13 +248,13 @@ function SubmitAddressForm()
 		{
 			if ( $( 'billing_postal_code' ).value.length < 5 )
 			{
-				errorString += '#checkout_error_bad_postal<br/>';
+				errorString += 'Please enter your zip or postal code.<br/>';
 				rgBadFields.billing_postal_code = true;
 			}
 		}
 		else if ( $( 'billing_postal_code' ).value.length < 1 )
 		{
-			errorString += '#checkout_error_bad_postal<br/>';
+			errorString += 'Please enter your zip or postal code.<br/>';
 			rgBadFields.billing_postal_code = true;
 		}
 	}
@@ -283,7 +283,7 @@ function SubmitAddressForm()
 			if ( rgErrors.length > 3 )
 			{
 				errorString = '';
-				errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + '#checkout_error_more_errors' + '<br/>';
+				errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + 'And find more errors highlighted below.' + '<br/>';
 			}		
 		
 			DisplayErrorMessage( errorString );
@@ -415,7 +415,7 @@ function OnCreateWalletAndCheckFundsFailure( detail )
 {
 	try 
 	{
-		DisplayErrorMessage( '#youraccount_wallet_code_wallet_creation_error' );
+		DisplayErrorMessage( 'There was an error validating your wallet.  Your wallet code has not been redeemed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.' );
 		$('address_btn').style.display = '';
 		$('address_btn_in_progress').style.display = 'none';
 		$('validate_btn').style.display = '';
@@ -502,27 +502,27 @@ function OnRedeemWalletCodeFailure( success, detail )
 {
 	try 
 	{
-		var sErrorMessage = '#youraccount_wallet_code_generic_error';
+		var sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 
 		switch ( success )
 		{
 			case 16:
-				sErrorMessage = '#youraccount_wallet_code_generic_error';
+				sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 				break;
 
 			default:
 				switch ( detail )
 				{
 					case 48:
-						sErrorMessage = '#youraccount_wallet_code_invalid_code';
+						sErrorMessage = 'The Steam Wallet code you have entered is invalid.  Please carefully verify the characters as you re-enter the code.';
 						break;
 			
 					case 14:
-						sErrorMessage = '#youraccount_wallet_code_invalid_code';
+						sErrorMessage = 'The Steam Wallet code you have entered is invalid.  Please carefully verify the characters as you re-enter the code.';
 						break;
 				
 					default:
-						sErrorMessage = '#youraccount_wallet_code_generic_error';
+						sErrorMessage = 'An unexpected error has occurred.  Your Steam Wallet code has not been redeemed.  Please wait 30 minutes and try redeeming the code again.  If the problem persists, please contact <a href="http://support.steampowered.com">Steam Support</a> for further assistance.';
 						break;
 				}
 				break;
