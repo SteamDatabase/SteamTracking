@@ -3577,7 +3577,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 			'name' : appName,
 			'type' : appType,
 			'range' : reservedRange,
-			'add_partner_app_reporting' : bAddPartnerAppReporting,
+			'add_partner_app_reporting' : bAddPartnerAppReporting ? 1 : 0,
 			'publisherid' : pubId,
 			'parentid' : parentId,
 			'f2p' : bF2P ? 1 : 0,
