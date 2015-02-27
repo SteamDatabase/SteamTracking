@@ -1,0 +1,20 @@
+
+ b global
+ d dyld__mach_header
+ _dyld_get_image_header
+ _dyld_image_count
+ getenv
+ mach_task_self_
+ mach_vm_region
+ pause
+ pause$UNIX2003
+ __stack_chk_fail
+ __stack_chk_guard
+ task_info
+ T CGlobalInitter::CGlobalInitter()
+ T CGlobalInitter::CrackMainImage()
+ T CGlobalInitter::PatchPreLion()
+ T _dyld_func_lookup
+ T dyld_stub_binding_helper
+ t global constructors keyed to a
+ vm_protect
