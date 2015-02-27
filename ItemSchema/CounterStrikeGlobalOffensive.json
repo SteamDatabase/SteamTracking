@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.869fad8b5e09cb057ad7ef2a5e02a367918cd190.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.05e656872ea098654bb29c7cbbea15c431e028b3.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1940,6 +1940,181 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 5
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Katowice 2015 CS:GO Champion",
+				"defindex": 897,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at ESL One Katowice 2015",
+				"item_description": "This championship trophy was awarded to the Champion at The ESL One Katowice 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/kat_2015_champion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_champion.8d232d41cc4db8a6ac550ec7daf7eb38e2c184c6.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_champion_large.b47b1434bebd63e38cbf6fd459596b83c4373e84.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Katowice 2015 CS:GO Finalist",
+				"defindex": 898,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at ESL One Katowice 2015",
+				"item_description": "This championship trophy was awarded to the Finalist at The ESL One Katowice 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/kat_2015_finalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_finalist.3d609fedee862446593f86f8ac3519c2660a75d9.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_finalist_large.13b6801257101bb04576ae6996bc10ed7071d0ba.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Katowice 2015 CS:GO Semifinalist",
+				"defindex": 899,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at ESL One Katowice 2015",
+				"item_description": "This championship trophy was awarded to the Semifinalist at The ESL One Katowice 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/kat_2015_semifinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_semifinalist.8c933a723c7faad61f06ae523c8153165c2d85ee.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_semifinalist_large.cea47ad50ded8822423cdb53f7630d5eaaa6494a.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Katowice 2015 CS:GO Quarterfinalist",
+				"defindex": 900,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at ESL One Katowice 2015",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at The ESL One Katowice 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/kat_2015_quarterfinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_quarterfinalist.4bc3c857e972ce41ba40115a749be0f09d91c6e1.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_quarterfinalist_large.be34f82794020c5cd9be6a50356b1f48510eddcb.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Katowice 2015 Pick 'Em Challenge Bronze",
+				"defindex": 901,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze ESL One Katowice 2015 Pick'Em Challenge Trophy",
+				"item_description": "This bronze trophy was awarded during the ESL One Katowice 2015 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/kat_2015_prediction_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_prediction_bronze.4de99e45999ccdf8d46509af4cad415eb225e110.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_prediction_bronze_large.e38f0a5b8fdff591f127686b3daae1e01b6794f6.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Katowice 2015 Pick 'Em Challenge Silver",
+				"defindex": 902,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver ESL One Katowice 2015 Pick'Em Challenge Trophy",
+				"item_description": "This silver trophy was awarded during the ESL One Katowice 2015 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/kat_2015_prediction_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_prediction_silver.2257ee12af0025a47a867abd068ac668d483eb0b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_prediction_silver_large.5c6f227f1777820d854db714ef7336420b5b4cc5.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Katowice 2015 Pick 'Em Challenge Gold",
+				"defindex": 903,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold ESL One Katowice 2015 Pick'Em Challenge Trophy",
+				"item_description": "This gold trophy was awarded during the ESL One Katowice 2015 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/kat_2015_prediction_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_prediction_gold.2640d8036b43b35d4fa968ed1642aeff06e5fc0b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/kat_2015_prediction_gold_large.24dcfaafb780964860428b19fa7a0edabc941ef8.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
 					}
 				]
 				
@@ -6417,19 +6592,889 @@
 				
 			},
 			{
+				"name": "crate_sticker_pack_eslkatowice2015_3dmax",
+				"defindex": 4062,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "3DMAX | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/3dmax",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/3dmax.1d4d237d5accd6772b7533c5f838933384c36fd6.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/3dmax_large.6dd94c5043a00ba0116d9cba6f632f93254637f5.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_cloud9",
+				"defindex": 4063,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cloud9 G2A | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/cloud9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/cloud9.e7f524a1cf632445e17916a8d40fccac7a17eca2.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/cloud9_large.cbcc87fdb71be8e2f62f6a54fd063c229d3b4e82.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_counterlogic",
+				"defindex": 4064,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Counter Logic Gaming | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/counterlogic",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/counterlogic.e4e142b37448b4fb0993905f45ffc46fbd082389.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/counterlogic_large.090756bf8659c195754d3519907290bb67953426.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_flipsid3",
+				"defindex": 4065,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Flipsid3 Tactics | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/flipsid3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/flipsid3.46cb8714f33dbf7f5aeff1b69677ee62b58114ff.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/flipsid3_large.84f5a0408e732c3405580c211050a916195e5b9b.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_fnatic",
+				"defindex": 4066,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Fnatic | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/fnatic",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/fnatic.bbe64eeddabc45840a4769053b9ae91640b5c7db.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/fnatic_large.436b02dafa7d8f097f9742e2d10f29a9a7a2d801.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_hellraisers",
+				"defindex": 4067,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "HellRaisers | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/hellraisers",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/hellraisers.08b81e7a62851208da1b723ea2f8ede797554a3c.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/hellraisers_large.791b11a91b2a12c5cc56018056ac6ef4a4cd7bc2.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_keyd",
+				"defindex": 4068,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Keyd Stars | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/keyd",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/keyd.31583a8bac97b8b4cbc00f766564b3ec78d331ad.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/keyd_large.1371381a6ac4c1a9275ed55285f93658f844fc05.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_lgb",
+				"defindex": 4069,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "LGB eSports | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/lgb",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/lgb.51e70e553cd78a9202e1462156e9545ad634b961.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/lgb_large.e2433db63170f333355ec88914b901efa6e002fc.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_navi",
+				"defindex": 4070,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Natus Vincere | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/navi.e0d545a35959a1f605c9274faeefbb879d9918a9.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/navi_large.ead83ccce5bb308db55d2eb92b2e4d511adf6307.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_ninjasinpyjamas",
+				"defindex": 4071,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Ninjas in Pyjamas  | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/ninjasinpyjamas",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/ninjasinpyjamas.daaab6c1b5af972cc9a0e5192a360faa419f13f3.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/ninjasinpyjamas_large.b651b80e8c58f443bd1b24c5de146931ff380992.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_pentasports",
+				"defindex": 4072,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "PENTA Sports  | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/pentasports",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/pentasports.a2522f782fe8401516020465f154a17aaa14af39.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/pentasports_large.8fdf2611c611d48069b2bbc1d580d457ab7e3a5f.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_teamenvyus",
+				"defindex": 4073,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team EnVyUs | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/teamenvyus",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamenvyus.cbcc0130b5295a0f38ede10b6b16d806ed23cf94.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamenvyus_large.3c1190df69cc8880c2b443ca109ea9cafe1b2c97.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_teamsolomid",
+				"defindex": 4074,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "TSM Kinguin | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/teamsolomid",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamsolomid.df7f0b1994e1dfd11d6a35c81ba3e7106abbcfee.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamsolomid_large.be234b9678c6c4b3116f72e24efd9347e4e2f50d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_titan",
+				"defindex": 4075,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Titan | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/titan",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/titan.f709b3e1e51496c6b3f65d6804d9479ae990491b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/titan_large.ec5f872517c77762c74f1461867c76f929d0a620.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_virtuspro",
+				"defindex": 4076,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Virtus.pro | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/virtuspro",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/virtuspro.de015f4b1740a6d1f96cbacd555461fae095727d.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/virtuspro_large.aacafa7a15b4d315ac8b6c2d873af56824100a62.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_voxeminor",
+				"defindex": 4077,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Vox Eminor  | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/voxeminor",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/voxeminor.2f20927c40a69eb2d6cf3315e20c46ada8d63f10.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/voxeminor_large.283cf0be32bf62f205be77bfaa8afc5641a86167.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_esl_a",
+				"defindex": 4078,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One | Katowice 2015",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/eslkatowice2015/esl_a",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/esl_a.01ebe00d32f3596900e9a7d9899214077034f50b.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/esl_a_large.b6e94be2643e41e1db192c0794c0cf18101106de.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslkatowice2015_promo_de_dust2",
+				"defindex": 4079,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Katowice 2015 Dust II Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslkatowice2015_promo_de_dust2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_eslkatowice2015_promo_de_dust2.fdd533379af9f88b554611acfb06c49717109b3b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 39
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslkatowice2015_promo_de_inferno",
+				"defindex": 4080,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Katowice 2015 Inferno Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslkatowice2015_promo_de_inferno",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_eslkatowice2015_promo_de_inferno.20668cdf600cf5679345ee1bca188258312678af.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 40
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslkatowice2015_promo_de_mirage",
+				"defindex": 4081,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Katowice 2015 Mirage Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslkatowice2015_promo_de_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_eslkatowice2015_promo_de_mirage.3c168637f2a150e95b0bc786dc364128a627d5d1.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 41
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslkatowice2015_promo_de_nuke",
+				"defindex": 4082,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Katowice 2015 Nuke Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslkatowice2015_promo_de_nuke",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_eslkatowice2015_promo_de_nuke.7c963862e4c4a2b783ac45893601dbf4520b0cab.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 42
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslkatowice2015_promo_de_cache",
+				"defindex": 4083,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Katowice 2015 Cache Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslkatowice2015_promo_de_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_eslkatowice2015_promo_de_cache.e3d4caa342c69142c0fb59c11b1bea091f5bc441.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 43
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslkatowice2015_promo_de_cbble",
+				"defindex": 4084,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Katowice 2015 Cobblestone Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslkatowice2015_promo_de_cbble",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_eslkatowice2015_promo_de_cbble.8650a00e848d547b173076d5cde6882ec4441c31.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 44
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslkatowice2015_promo_de_overpass",
+				"defindex": 4085,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Katowice 2015 Overpass Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslkatowice2015_promo_de_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_eslkatowice2015_promo_de_overpass.f518bda0e34a1a12346009a5d0a1c0acf8a6efd0.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 45
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_01",
+				"defindex": 4086,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Katowice 2015 Legends (Holo/Foil)",
+				"item_description": "This capsule contains a single ESL One Katowice 2015 participant Holo or Foil sticker. A portion of the proceeds is shared equally among the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_eslkatowice2015_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_sticker_pack_eslkatowice2015_01.5c7057fb4d6e20a98ac073aeb54b6d8497d1b43a.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 46
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslkatowice2015_02",
+				"defindex": 4087,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Katowice 2015 Challengers (Holo/Foil)",
+				"item_description": "This capsule contains a single ESL One Katowice 2015 participant Holo or Foil sticker. A portion of the proceeds is shared equally among the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_eslkatowice2015_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_sticker_pack_eslkatowice2015_02.762617e39f9d6545c44623a27178d7a192fe87cc.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 47
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
 				"name": "Collectible Pin - Dust II",
 				"defindex": 6001,
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Dust II Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Dust II",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_dust2",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_dust2.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_dust2_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_dust2.c2b64c6cf2893ac8fb4d0668c01bab388928886e.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_dust2_large.619f7e63556591eda38a7982f63dcd686f746371.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6443,14 +7488,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Guardian Elite Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Guardian Elite",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_guardianelite",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardianelite.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardianelite_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardianelite.aeea5d10ccb6cc1d983f7c9ede91952d45b5a4ba.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardianelite_large.709bd555c8af75e87ee661aaacc5ea4f87ac8f36.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6464,14 +7509,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Mirage Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Mirage",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_mirage",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_mirage.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_mirage_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_mirage.607582c02d7b97f3c54c42305ed7904beb4ed3dd.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_mirage_large.52d568542487696880ef395ef009853cdd88c2e8.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6485,14 +7530,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Inferno Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Inferno",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_inferno",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_inferno.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_inferno_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_inferno.a69c33326577afd8f756ddf372504d58d590418a.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_inferno_large.082a3bf33e7f6e812a47b11821f477e491f4ad2d.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6506,14 +7551,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Italy Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Italy",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_italy",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_italy.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_italy_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_italy.4a75fb79ff53f05e78a17716c786f6ba2ffab61a.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_italy_large.ebe62876c27f1bd012cb1c3b61b4b8e8ec2d6a9a.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6527,14 +7572,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Victory Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Victory",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_victory",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_victory.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_victory_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_victory.d973599327bdeba058aa38f23163a0270f1fe2dc.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_victory_large.64efa85ea1f1241610c21ca355ee60a24430c581.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6548,14 +7593,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Militia Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Militia",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_militia",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_militia.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_militia_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_militia.f8af25e03f9026a093a585ef845983f2a07abafb.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_militia_large.7c2d05990e80c386018596b4dc45982aa1bf8e4e.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6569,14 +7614,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Nuke Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Nuke",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_nuke",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_nuke.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_nuke_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_nuke.2d618d5afb6483f779693f2f49b8939933b65170.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_nuke_large.a523a4fe17b12c42f7a99e12fc6db499ff97d5bb.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6590,14 +7635,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Train Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Train",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_train",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_train.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_train_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_train.535e6a2ffc60fa755f265f548998d42e3c217a0a.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_train_large.86f41b7a5eb7046a720fea36546d71b54ff30200.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6611,14 +7656,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Guardian Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Guardian",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_guardian",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardian.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardian_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardian.7c0275e29b7c586eb2c92cea97dfa4d7bd9a54f1.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_guardian_large.0ec6a8661f634532fbf231a2838c1db57ab6537c.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
@@ -6632,14 +7677,14 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Tactics Pin",
-				"item_description": "CS:GO event attendance collection pin - Series 1 - Tactics",
+				"item_description": "This is a Series 1 collectible pin. It can be displayed on your CS:GO profile.",
 				"proper_name": false,
 				"item_quality": 1,
 				"image_inventory": "econ/status_icons/collectible_pin_tactics",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_tactics.fe39aaca61b36fdffef9082976b3e0a01740849b.png",
-				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_tactics_large.f1ebf522f7ca289c3e08cb609417705e254bcb9b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_tactics.1c97c0df274bd03126686664f6956272a367783a.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/collectible_pin_tactics_large.d90bab9e7a60906d447d8b6663a52cde989a7047.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
 				"attributes": [
