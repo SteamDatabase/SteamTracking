@@ -774,7 +774,7 @@ CHomeSettings.prototype.DisplayPopup = function( $Btn )
 	if ( this.m_ApplicableSettings.dlc )
 		this.m_$Popup.append( this.RenderCheckbox( 'dlc', 'Downloadable Content' ) );
 	if ( this.m_ApplicableSettings.video )
-		this.m_$Popup.append( this.RenderCheckbox( 'video', 'Video' ) );
+		this.m_$Popup.append( this.RenderCheckbox( 'video', 'Videos' ) );
 
 	if ( this.m_ApplicableSettings.only_current_platform )
 	{
