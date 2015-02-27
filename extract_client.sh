@@ -54,8 +54,18 @@ do
 	name=$(basename "$i" .dylib);
 	
 	strings "$i" | grep "/buildbot/" | sed "s/^[^\/]*\//\//" | sed "s/\:[0-9]*$//" | sort -u > "$DIR/BuildbotPaths/$name.txt"
-	strings "$i" -n 5 | grep "^[a-zA-Z0-9\.\_\-\%\:\/\\]*$" | grep -Evi "protobuf|GCC_except_table|home\/buildbot|[0-9]{2}:[0-9]{2}:[0-9]{2}" | c++filt -t_ | sort -u > "$DIR/ClientStrings/$name.txt"
+	strings "$i" -n 5 | grep "^[a-zA-Z0-9\.\_\-\%\:\/\\]*$" | grep -Evi "protobuf|GCC_except_table|\/buildbot\/|[0-9]{2}:[0-9]{2}:[0-9]{2}" > temp.txt
+	
+	# -t option seg faults when on some string from steamclient.dylib
+	if [ "$name" = "steamclient" ];
+	then
+		cat temp.txt | c++filt -_ | sort -u > "$DIR/ClientStrings/$name.txt"
+	else
+		cat temp.txt | c++filt -t_ | sort -u > "$DIR/ClientStrings/$name.txt"
+	fi
 done
+
+rm temp.txt
 
 #
 # CHANGE CRAPPY ENCODINGS TO UTF-8
