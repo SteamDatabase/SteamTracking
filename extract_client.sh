@@ -54,7 +54,7 @@ do
 	name=$(basename "$i");
 	
 	strings "$i" | grep "/home/buildbot/" | sed "s/^[^\/]*\//\//" | sed "s/\:[0-9]*$//" | sort -u > "$DIR/BuildbotPaths/$name.txt"
-	strings "$i" -n 5 | grep "^[a-zA-Z0-9\.\_\-\%\:\/\\]*$" | grep -Evi "protobuf|GCC_except_table|home\/buildbot|[0-9]{2}:[0-9]{2}:[0-9]{2}" | sort -u > "$DIR/ClientStrings/$name.txt"
+	strings "$i" -n 5 | grep "^[a-zA-Z0-9\.\_\-\%\:\/\\]*$" | grep -Evi "protobuf|GCC_except_table|home\/buildbot|[0-9]{2}:[0-9]{2}:[0-9]{2}" | c++filt | sort -u > "$DIR/ClientStrings/$name.txt"
 done
 
 #
