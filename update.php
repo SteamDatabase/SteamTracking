@@ -8,11 +8,12 @@
 		private $CurrentTime;
 		private $UseCache = true;
 		private $ExtractClientArchives = false;
-		private $ETags = Array( );
-		private $Requests = Array( );
-		private $URLsToFetch = Array( );
+		private $ETags = [];
+		private $Requests = [];
+		private $URLsToFetch = [];
 		
-		private $ClientArchives = Array(
+		private $ClientArchives =
+		[
 			'resources_all.zip',
 			'remoteui_all.zip',
 			'public_all.zip',
@@ -20,9 +21,10 @@
 			'tenfoot_all.zip',
 			'tenfoot_images_all.zip',
 			'tenfoot_misc_all.zip',
-			'steam_ubuntu12.zip',
-			'bins_ubuntu12.zip'
-		);
+			'steam_osx.zip',
+			'bins_osx.zip',
+			'bins_client_osx.zip',
+		];
 		
 		private $Options = Array(
 			CURLOPT_USERAGENT      => 'SteamDB',
@@ -111,7 +113,7 @@
 				$this->Log( '{lightblue}Extracting client archives and doing voodoo magic' );
 				
 				// Let's break all kinds of things! :(
-				System( 'sh ' . __DIR__ . '/extract_client.sh' );
+				System( 'bash ' . __DIR__ . '/extract_client.sh' );
 			}
 			
 			$this->CheckCDN( );
@@ -184,7 +186,7 @@
 				return true;
 			}
 			// Get archives from beta manifest
-			else if( $File === 'ClientManifest/steam_client_publicbeta_ubuntu12' )
+			else if( $File === 'ClientManifest/steam_client_publicbeta_osx' )
 			{
 				foreach( $this->ClientArchives as $Archive )
 				{

@@ -12,9 +12,9 @@ echo Deleting existing files
 
 # Scary!
 rm -rf "$DIR"/ClientExtracted/*
-rm -rf ubuntu/*
+rm -rf bins/*
 rm -f "$DIR"/BuildbotPaths/*
-rm -rf "$DIR"/Protobufs/*
+#rm -rf "$DIR"/Protobufs/*
 
 #
 # EXTRACT EVERYTHING
@@ -24,9 +24,9 @@ echo Extracting archives
 
 for z in *.zip;
 do
-	if [ "$z" = "bins_ubuntu12.zip" ];
+	if [[ "$z" =~ ^bins.* ]];
 	then
-		unzip -q "$z" -d ubuntu/
+		unzip -q "$z" -d bins/
 	else
 		unzip -q -o "$z" -d "$DIR/ClientExtracted/"
 	fi
@@ -39,7 +39,7 @@ done
 echo Dumping protobufs
 
 #mono ProtobufDumper/ProtobufDumper.exe ubuntu/ubuntu12_32/steamui.so ../Protobufs/ > /dev/null
-mono ProtobufDumper/ProtobufDumper.exe ubuntu/ubuntu12_32/steamclient.so "$DIR/Protobufs/" > /dev/null
+mono ProtobufDumper/ProtobufDumper.exe bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
 #
 # BUILDBOT PATHS
@@ -47,14 +47,14 @@ mono ProtobufDumper/ProtobufDumper.exe ubuntu/ubuntu12_32/steamclient.so "$DIR/P
 
 echo Dumping buildbot paths
 
-find ubuntu/ | sort > "$DIR/BuildbotPaths/ubuntu_binaries.txt"
+#find ubuntu/ | sort > "$DIR/BuildbotPaths/ubuntu_binaries.txt"
 
-for i in $(find ubuntu/ubuntu12_32/ -name '*.so');
+for i in $(find bins/ -name '*.dylib');
 do
-	name=$(basename "$i");
+	name=$(basename "$i" .dylib);
 	
 	strings "$i" | grep "/home/buildbot/" | sed "s/^[^\/]*\//\//" | sed "s/\:[0-9]*$//" | sort -u > "$DIR/BuildbotPaths/$name.txt"
-	strings "$i" -n 5 | grep "^[a-zA-Z0-9\.\_\-\%\:\/\\]*$" | grep -Evi "protobuf|GCC_except_table|home\/buildbot|[0-9]{2}:[0-9]{2}:[0-9]{2}" | c++filt | sort -u > "$DIR/ClientStrings/$name.txt"
+	strings "$i" -n 5 | grep "^[a-zA-Z0-9\.\_\-\%\:\/\\]*$" | grep -Evi "protobuf|GCC_except_table|home\/buildbot|[0-9]{2}:[0-9]{2}:[0-9]{2}" | c++filt -t_ | sort -u > "$DIR/ClientStrings/$name.txt"
 done
 
 #
