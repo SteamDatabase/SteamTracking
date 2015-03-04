@@ -211,7 +211,7 @@ body
 
 .loading_text.error
 {
-    font-style: italic;
+    /*font-style: italic;*/
 }
 
 .loading_text.error a

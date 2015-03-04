@@ -74,7 +74,7 @@ CVideoWatch.prototype.UnlockH264 = function()
 {
 	if ( this.m_eClientType == CVideoWatch.k_InOldClient )
 	{
-		this.ShowVideoError( 'You must upgrade your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=3252-WEUN-2306">Visit the FAQ</a> for additional requirements.' );
+		this.ShowVideoError( 'You must upgrade your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for additional requirements.' );
 		return;
 	}
 
@@ -107,7 +107,7 @@ CVideoWatch.prototype.Start = function()
 
 	if ( this.m_eClientType == CVideoWatch.k_InOldClient )
 	{
-		this.ShowVideoError( 'You must upgrade your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=3252-WEUN-2306">Visit the FAQ</a> for additional requirements.' );
+		this.ShowVideoError( 'You must upgrade your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for additional requirements.' );
 		return;
 	}
 
@@ -119,7 +119,7 @@ CVideoWatch.prototype.Start = function()
 			return;
 		}
 
-		this.ShowVideoError( 'Your web browser does not support the minimum set of features required to watch this video.<br><br>Try again using the latest version of the Steam Client or <a href="https://support.steampowered.com/kb_article.php?ref=3252-WEUN-2306">visit the FAQ</a> for a list of supported browsers.' );
+		this.ShowVideoError( 'Your web browser does not support the minimum set of features required to watch this video.<br><br>Try again using the latest version of the Steam Client or <a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">visit the FAQ</a> for a list of supported browsers.' );
 		return;
 	}
 
@@ -158,11 +158,12 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 	this.m_nVideoRestarts++;
 	if ( this.m_nVideoRestarts > CVideoWatch.k_MaximumVideoRestarts )
 	{
-		this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br><a %s>Visit the FAQ</a> for troubleshooting information.' );
+		this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 	}
 	else
 	{
-		$J( '#video_loading_text' ).text( 'Preparing to Stream Video... One Moment Please.' );
+		var _watch = this;
+		this.ShowVideoError( 'Reestablishing Stream... One Moment Please.' );
 		$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete( _watch.m_player, false ); } );
 		this.GetVideoDetails();
 	}
@@ -170,7 +171,7 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 
 CVideoWatch.prototype.OnPlayerPlaybackError = function()
 {
-	this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a %s>Visit the FAQ</a> for troubleshooting information.' );
+	this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 }
 
 CVideoWatch.prototype.GetVideoDetails = function()
