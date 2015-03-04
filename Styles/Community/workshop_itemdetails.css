@@ -92,7 +92,7 @@
 
 .detailsStatLeft
 {
-	color: #61686D;
+	color: #5c8699;
 	padding-top: 4px;
 }
 
@@ -104,14 +104,14 @@
 
 .detailsStatRight
 {
-	color: #61686D;
+	color: #5c8699;
 	padding-top: 4px;
 }
 
 .detailsStatNumChangeNotes
 {
 	padding-top: 5px;
-	color: #787875;
+	color: #5c8699;
 	font-size: 13px;
 }
 
@@ -2470,17 +2470,25 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	color: #67c1f5;
 }
 
+.game_area_purchase_margin {
+	margin-bottom: 28px;
+}
 .game_area_purchase_game
 {
 	position: relative;
-	padding: 21px 183px 21px 16px;
-	margin-bottom: 28px;
-	margin-top: 6px;
+	padding: 16px 16px 21px 16px;
+	margin-bottom: 5px;
 	min-height: 20px;
 
 	background: #1f1f1f;
 	background: rgba(21,21,21,.36);
 	border: 1px solid #39393a;
+}
+.game_area_purchase_game.admin {
+	border-color: #A55B13;
+}
+.game_area_purchase_game.admin h1 {
+	color: #A55B13;
 }
 
 .game_area_purchase_game.buy {
@@ -2532,12 +2540,19 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	font-size: 17px;
 	color: white;
 	font-weight: normal;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+}
+.game_area_purchase_game > h1 span {
+	color: #5c8699;
+}
+.game_area_purchase_game.buy > h1 span {
+	color: #66c0f4;
 }
 
 .game_area_purchase_game > a {
 	position: absolute;
-	right: 12px;
-	bottom: 12px;
+	right: 16px;
+	bottom: -20px;
 }
 
 .game_area_purchase_game .commerce_container {
@@ -2548,20 +2563,92 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .game_area_purchase_game.buy .commerce_container {
 	position: absolute;
 	right: 12px;
-	top: 14px;
+	top: 12px;
 	border-radius: 4px;
 	border: 2px solid #222222;
 	background: rgba( 0, 0, 0, 0.2 );
+	height: 32px;
+}
+.game_area_already_owned {
+	height: 40px;
+	padding: 0px 15px 0px 0px;
+	position: relative;
+
+	background: -moz-linear-gradient(left,  rgba(163,207,6,0.6) 0%, rgba(75,106,33,0.6) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(163,207,6,0.6)), color-stop(100%,rgba(75,106,33,0.6))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99a3cf06', endColorstr='#994b6a21',GradientType=1 ); /* IE6-9 */
+
+
+	font-size: 18px;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	color: #a3cf06;
+	margin-bottom: 1px;
+	margin-top: 0px;
+	width: 935px;
+}
+
+.game_area_already_owned .already_in_inventory {
+	display: inline-block;
+}
+.game_area_play_stats {
+	background: -moz-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%, rgba(226,244,255,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(97,100,101,0.3)), color-stop(100%,rgba(226,244,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d616465', endColorstr='#4de2f4ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	padding: 0px 16px 16px 16px;
+	margin: 0px auto;
+	margin-bottom: 40px;
+	width: 918px;
+
+}
+.already_owned_actions {
+	padding-top: 8px;
+}
+.already_owned_actions .action_overview {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	color: #c7d5e0;
+}
+
+.game_area_already_owned_btn {
+	float: left;
+	position: relative;
+	margin-right: 12px;
+}
+.game_area_already_owned .ds_flag {
+	position: relative;
+	display: inline-block;
+	top: -2px;
+	left: -8px;
+	box-shadow: 1px 1px 2px #000000;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRF…BVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC') no-repeat 4px 4px #a3cf06;
+}
+.hours_played {
+	color: #8f98a0;
+	font-size: 12px;
+	margin-bottom: 1px;
+	margin-top: 3px;
 }
 
 .commerce_price
 {
 	font-size: 15px;
-	color: white;
+	color: #c6d4df;
+	font-family: "Motiva Sans Light", Arial, Tahoma, Sans-serif;
 	font-weight: normal;
 	margin-right: 8px;
 	margin-left: 12px;
-	vertical-align: middle;
 }
 
 .official_content_text_area
@@ -2860,7 +2947,7 @@ iframe.sharedFilePreviewYouTubeVideo.floatLeft, iframe.sharedFilePreviewYouTubeV
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 
-	background: rgba( 0, 0, 0, 0.2 );
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 64, 128, 183, 0.4)), color-stop(95%,rgba( 64, 128, 183, 0.2)));background: -moz-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: -webkit-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: -o-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: -ms-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: linear-gradient( to bottom, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);
 
 	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 }

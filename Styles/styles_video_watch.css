@@ -31,16 +31,9 @@ body
     padding: 0;
 }
 
-.video_watch_playback_stats {
-    right: 20px;
-    top: 20px;
-    background: rgba(0, 0, 0, .5);
-    position: absolute;
-    color: white;
-    display: none;
-    border: 1px white solid;
-    padding: 10px;
-    width: 220px;
+.dash_player_playback_stats {
+	left: 10px;
+	top: 50px;
 }
 
 .context_menu
@@ -213,7 +206,7 @@ body
     font-size: 22px;
     text-align: center;
     font-family: Motiva Sans Light;
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .loading_text.error

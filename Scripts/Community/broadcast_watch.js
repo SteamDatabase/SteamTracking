@@ -25,6 +25,7 @@ var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDView
 	this.m_elVideoPlayer = document.getElementById( 'videoplayer' );
 	this.m_xhrViewUsers = null;
 	this.m_bUnlockingH264 = false;
+	this.m_DASHPlayerStats = null;
 }
 
 CBroadcastWatch.s_UpdateTimeoutSec = 120;
@@ -32,6 +33,12 @@ CBroadcastWatch.k_InBrowser = 1;
 CBroadcastWatch.k_InClient = 2;
 CBroadcastWatch.k_InOverlay = 3;
 CBroadcastWatch.k_InOldClient = 4;
+
+CBroadcastWatch.prototype.ToggleStats = function()
+{
+	if ( this.m_DASHPlayerStats )
+		this.m_DASHPlayerStats.Toggle();
+}
 
 CBroadcastWatch.prototype.GetChat = function()
 {
@@ -126,6 +133,8 @@ CBroadcastWatch.prototype.Start = function()
 	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
 	this.m_playerUI = new CDASHPlayerUI( this.m_player );
 	this.m_playerUI.Init();
+
+	this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_ulViewerSteamID );
 
 	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.BroadcastWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 	$J( this.m_elVideoPlayer ).on( 'downloadfailed.BroadcastWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
@@ -525,155 +534,3 @@ CBroadcastWatch.prototype.ReportBroadcast = function()
 	});
 }
 
-//////////////////////////////////////////////////
-// Stats
-//////////////////////////////////////////////////
-CBroadcastStats = function( element )
-{
-	this.elePlayer = element;
-	this.eleOverlay = $J('<div class="VideoStatsOverlay"></div>')[0];
-	$J(this.elePlayer).parent().append( this.eleOverlay );
-
-	this.timerTick = false;
-	this.timerSecond = false;
-	this.nDecodedFramesPerSecond = 0;
-	this.bRunning = false;
-}
-
-CBroadcastStats.prototype.Show = function() {
-	if( this.bRunning )
-		return;
-
-	this.bRunning = true;
-
-	$J(this.eleOverlay).show();
-	var context = this;
-	this.timerTick = setInterval( function() { context.Tick() }, 1000/60 );
-	this.timerCalculateTotals = setInterval(function() { context.CalculateTotals() }, 500);
-}
-
-CBroadcastStats.prototype.Hide = function() {
-	if( !this.bRunning )
-		return;
-
-	this.bRunning = false;
-
-	$J(this.eleOverlay).hide();
-	clearInterval(this.timerTick);
-	clearInterval(this.timerCalculateTotals);
-}
-
-CBroadcastStats.prototype.Toggle = function() {
-	if( this.bRunning )
-		this.Hide();
-	else
-		this.Show();
-}
-
-CBroadcastStats.prototype.CalculateTotals = function()
-{
-	// runs on a 500ms timer, so frame counts must be multiplied by 2.
-	this.nDecodedFramesPerSecond = 2 * ( ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount ) - ( this.nLastDecodedFrames || 0 ) )
-	this.nLastDecodedFrames = ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount );
-
-}
-
-CBroadcastStats.prototype.FormattingBytesToHuman = function ( nBytes )
-{
-	if( nBytes < 1000 )
-		return nBytes + " B";
-	if( nBytes < 1000000 )
-		return ( nBytes / 1000 ).toFixed(2) + ' KB';
-
-	if( nBytes < 1000000000)
-		return ( nBytes / 1000000 ).toFixed(2) + ' MB';
-
-	return (nBytes / 1000000000 ).toFixed(2) + ' GB';
-}
-
-CBroadcastStats.prototype.Tick = function() {
-	$ele = $J(this.elePlayer);
-	ele = this.elePlayer;
-	var rgStatsDefinitions = [
-		// Webkit
-		{
-			id: 'webkitAudioBytesDecoded',
-			label: 'Audio Bytes Decoded',
-			value: ele.webkitAudioBytesDecoded || ele.webkitAudioDecodedByteCount,
-			formatFunc: this.FormattingBytesToHuman
-		},
-		{
-			id: 'webkitVideoBytesDecoded',
-			label: 'Video Bytes Decoded',
-			value: ele.webkitVideoBytesDecoded || ele.webkitVideoDecodedByteCount,
-			formatFunc: this.FormattingBytesToHuman
-		},
-		{
-			id: 'webkitDecodedFrames',
-			label: 'Decoded Frames',
-			value: ele.webkitDecodedFrames || ele.webkitDecodedFrameCount
-		},
-		{
-			id: 'webkitDroppedFrames',
-			label: 'Dropped Frames',
-			value: ele.webkitDroppedFrames || ele.webkitDroppedFrameCount
-		},
-		// Firefox
-		{
-			id: 'mozParsedFrames',
-			label: 'Parsed Frames',
-			value: ele.mozParsedFrames
-		},
-		{
-			id: 'mozDecodedFrames',
-			label: 'Decoded Frames',
-			value: ele.mozDecodedFrames
-		},
-		{
-			id: 'mozPresentedFrames',
-			label: 'Presented Frames',
-			value: ele.mozPresentedFrames
-		},
-		{
-			id: 'mozPaintedFrames',
-			label: 'Painted Frames',
-			value: ele.mozPaintedFrames
-		},
-		{
-			id: 'mozFrameDelay',
-			label: 'Frame Delay',
-			value: ele.mozFrameDelay
-		},
-		// Generic
-		{
-			id: 'videoSize',
-			label: 'Video Size',
-			value: ele.videoWidth +"x" + ele.videoHeight + " (Scaled to "+$ele.innerWidth() + "x" + $ele.innerHeight()+ ")"
-		},
-		{
-			id: 'decodedFramesPerSecond',
-			label: 'Decoded Frames Per Second',
-			value: this.nDecodedFramesPerSecond
-		}
-	];
-
-	for( var i=0; i < rgStatsDefinitions.length; i++)
-	{
-		var rgStatDefinition = rgStatsDefinitions[i];
-		if( rgStatDefinition.value != undefined && rgStatDefinition.value != NaN )
-		{
-			$target = $J( '.value', $J('#' + rgStatDefinition.id) );
-			// Create element if needed
-			if( $target.length == 0 )
-			{
-				var container = $J('<div id="'+rgStatDefinition.id+'">' + rgStatDefinition.label + ': <span class="value"></span></div>');
-				$J(this.eleOverlay).append( container );
-				$target = $J( '.value', container );
-			}
-			if( rgStatDefinition.formatFunc )
-				$target.text( rgStatDefinition.formatFunc( rgStatDefinition.value ) );
-			else
-				$target.text( rgStatDefinition.value );
-		}
-	}
-}

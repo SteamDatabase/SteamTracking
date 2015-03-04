@@ -43,6 +43,12 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nDownloadVideoHeight = 0;
 	this.m_bVideoLogVerbose = false;
 
+	// For Server Event Logging
+	this.m_nBandwidthTotal = 0;
+	this.m_nBandwidthEntries = 0;
+	this.m_nBandwidthMinimum = 0;
+	this.m_nBandwidthMaximum = 0;
+
 	// Captions
 	this.m_VTTCaptionLoader = null;
 }
@@ -100,6 +106,12 @@ CDASHPlayer.prototype.Close = function()
 	this.m_nCurrentSeekTime = -1;
 	this.m_nSavedPlaybackRate = 1.0;
 	this.m_bExiting = false;
+
+	// For Server Event Logging
+	this.m_nBandwidthTotal = 0;
+	this.m_nBandwidthEntries = 0;
+	this.m_nBandwidthMinimum = 0;
+	this.m_nBandwidthMaximum = 0;
 
 	if ( this.m_VTTCaptionLoader )
 	{
@@ -367,13 +379,17 @@ CDASHPlayer.prototype.OnVideoBufferProgress = function()
 
 CDASHPlayer.prototype.OnVideoStalled = function()
 {
-	if ( !this.BIsLiveContent() && !this.BIsBuffering() )
+	if ( !this.BIsBuffering() )
 	{
 		for ( var i = 0; i < this.m_loaders.length; i++ )
 		{
 			if ( this.m_loaders[i].BIsLoaderStalling() )
 			{
-				this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
+				if ( !this.BIsLiveContent() )
+					this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
+
+				$J( this.m_elVideoPlayer ).trigger( 'playbackstalled', [ this.m_loaders[i].ContainsVideo() ] );
+
 				break;
 			}
 		}
@@ -672,6 +688,16 @@ CDASHPlayer.prototype.SetPlaybackRate = function ( unRate )
 	this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate = unRate;
 }
 
+CDASHPlayer.prototype.GetPlaybackRate = function()
+{
+	return this.m_elVideoPlayer.playbackRate;
+}
+
+CDASHPlayer.prototype.GetPlaybackTimeInSeconds = function()
+{
+	return parseInt( this.m_elVideoPlayer.currentTime );
+}
+
 CDASHPlayer.prototype.GetLanguageForAudioTrack = function()
 {
 	for ( var i = 0; i < this.m_loaders.length; i++ )
@@ -743,6 +769,12 @@ CDASHPlayer.prototype.UpdateStats = function()
 	{
 		this.m_nCurrentDownloadBitRate /= nBandwidthCount;
 	}
+
+	// For Server Event Logging
+	this.m_nBandwidthTotal += this.m_nCurrentDownloadBitRate;
+	this.m_nBandwidthEntries++;
+	this.m_nBandwidthMinimum = ( this.m_nBandwidthMinimum == 0 ? this.m_nCurrentDownloadBitRate : ( this.m_nCurrentDownloadBitRate < this.m_nBandwidthMinimum ) ? this.m_nCurrentDownloadBitRate : this.m_nBandwidthMinimum );
+	this.m_nBandwidthMaximum = ( this.m_nBandwidthMaximum == 0 ? this.m_nCurrentDownloadBitRate : ( this.m_nCurrentDownloadBitRate > this.m_nBandwidthMaximum ) ? this.m_nCurrentDownloadBitRate : this.m_nBandwidthMaximum );
 }
 
 CDASHPlayer.prototype.StatsVideoBuffer = function()
@@ -772,7 +804,20 @@ CDASHPlayer.prototype.StatsAudioBitRate = function()
 
 CDASHPlayer.prototype.StatsVideoBitRate = function()
 {
-	return (this.m_nVideoBitRate  / 1000).toFixed(2);
+	return (this.m_nVideoBitRate / 1000).toFixed(2);
+}
+
+CDASHPlayer.prototype.StatsAudioChannels = function()
+{
+	for (var i = 0; i < this.m_loaders.length; i++)
+	{
+		if ( this.m_loaders[i].ContainsAudio() && this.m_loaders[i].m_representation.audioChannels )
+		{
+			return this.m_loaders[i].m_representation.audioChannels;
+		}
+	}
+
+	return 0;
 }
 
 CDASHPlayer.prototype.StatsDownloadVideoWidth = function()
@@ -852,6 +897,124 @@ CDASHPlayer.prototype.StatsSegmentInfo = function()
 	return bufferString;
 }
 
+CDASHPlayer.prototype.StatsDownloadHost = function()
+{
+	for (var i = 0; i < this.m_loaders.length; i++)
+	{
+		if ( this.m_loaders[i].ContainsVideo() )
+		{
+			var parser = document.createElement('a');
+			parser.href = CMPDParser.GetInitSegmentURL( this.m_loaders[i].m_adaptation, this.m_loaders[i].m_representation );
+			return parser.host;
+		}
+	}
+	
+	return '';
+}
+
+CDASHPlayer.prototype.StatsAllBytesReceived = function()
+{
+	var bytes = 0;
+	for (var i = 0; i < this.m_loaders.length; i++)
+	{
+		bytes += this.m_loaders[i].GetBytesReceived();
+	}
+	
+	return bytes;
+}
+
+CDASHPlayer.prototype.StatsAllFailedSegmentDownloads = function()
+{
+	var segments = 0;
+	for (var i = 0; i < this.m_loaders.length; i++)
+	{
+		segments += this.m_loaders[i].GetFailedSegmentDownloads();
+	}
+	
+	return segments;
+}
+
+CDASHPlayer.prototype.StatsBandwidthRates = function( bResetStats )
+{
+	var bw_stats = {};
+
+	if ( this.m_nBandwidthEntries > 0 )
+	{
+		bw_stats = {
+			'bw_avg': this.m_nBandwidthTotal / this.m_nBandwidthEntries,
+			'bw_min': this.m_nBandwidthMinimum,
+			'bw_max': this.m_nBandwidthMaximum,
+		}
+	}
+	else
+	{
+		bw_stats = {
+			'bw_avg': 0,
+			'bw_min': 0,
+			'bw_max': 0,
+		}
+	}
+
+	if ( bResetStats )
+	{
+		this.m_nBandwidthTotal = 0;
+		this.m_nBandwidthEntries = 0;
+		this.m_nBandwidthMinimum = 0;
+		this.m_nBandwidthMaximum = 0;
+	}
+
+	return bw_stats;
+}
+
+CDASHPlayer.prototype.StatsSegmentDownloadTimes = function( bResetStats )
+{
+	for (var i = 0; i < this.m_loaders.length; i++)
+	{
+		// for now, just video download time stats
+		if ( this.m_loaders[i].ContainsVideo() )
+			return this.m_loaders[i].GetSegmentDownloadTimeStats( bResetStats );
+	}
+
+	return {
+		'seg_avg': 0,
+		'seg_min': 0,
+		'seg_max': 0,
+	};
+}
+
+CDASHPlayer.prototype.StatsRecentSegmentDownloads = function( bVideo )
+{
+	var stats = {
+		'last_segment_number': 0,
+		'last_segment_response': 200
+	};
+
+	for (var i = 0; i < this.m_loaders.length; i++)
+	{
+		if ( bVideo && this.m_loaders[i].ContainsVideo() ||
+			!bVideo && !this.m_loaders[i].ContainsVideo() && this.m_loaders[i].ContainsAudio() )
+		{
+			var downloadLog = this.m_loaders[i].GetDownloadLog();
+			stats['last_segment_number'] = this.m_loaders[i].m_nNextSegment - 1;
+			stats['last_segment_response'] = this.m_loaders[i].m_nLastSegmentDownloadStatus;
+
+			var segNum = 1;
+			for ( var l = downloadLog.length - 1; l >= 0; l-- )
+			{
+				stats['segment' + segNum + '_bytes'] = downloadLog[l].dataSizeBytes;
+				stats['segment' + segNum + '_time'] = downloadLog[l].downloadTime / 1000;
+
+				if ( ++segNum > 3 )
+					break;
+			}
+
+			break;
+		}
+	}
+
+	return stats;
+}
+
 CDASHPlayer.prototype.BLogVideoVerbose = function()
 {
 	return this.m_bVideoLogVerbose;
@@ -886,6 +1049,15 @@ function CSegmentLoader( player, adaptationSet )
 	// bandwidth monitoring
 	this.m_rgDownloadLog = [];
 	this.m_nDownloadLogSize = 4;
+
+	// for stats tracking
+	this.m_nBytesReceivedTotal = 0;
+	this.m_nFailedSegmentDownloads = 0;
+	this.m_nSegmentDownloadTimeTotal = 0;
+	this.m_nSegmentDownloadTimeEntries = 0;
+	this.m_nSegmentDownloadTimeMinimum = 0;
+	this.m_nSegmentDownloadTimeMaximum = 0;
+	this.m_nLastSegmentDownloadStatus = 200;
 }
 
 CSegmentLoader.s_BufferUpdateNone = 0;
@@ -944,6 +1116,15 @@ CSegmentLoader.prototype.Close = function()
 	this.m_schNextDownload = null;
 	this.m_schRetryDownload = null;
 	this.m_schWaitForBuffer = null;
+
+	// for stats tracking
+	this.m_nBytesReceivedTotal = 0;
+	this.m_nFailedSegmentDownloads = 0;
+	this.m_nSegmentDownloadTimeTotal = 0;
+	this.m_nSegmentDownloadTimeEntries = 0;
+	this.m_nSegmentDownloadTimeMinimum = 0;
+	this.m_nSegmentDownloadTimeMaximum = 0;
+	this.m_nLastSegmentDownloadStatus = 200;
 }
 
 CSegmentLoader.prototype.ContainsVideo = function()
@@ -1031,7 +1212,7 @@ CSegmentLoader.prototype.ChangeRepresentationByIndex = function( representationI
 	if ( representationIndex >= 0 && representationIndex < this.GetRepresentationsCount()
 		&& this.m_representation != this.m_adaptation.representations[representationIndex] )
 	{
-		// PlayerLog("Changing Representation to " + this.m_adaptation.representations[representationIndex].id);
+		// PlayerLog( ( this.ContainsVideo() ? "Video" : "Audio" ) + " Changing Representation to " + Math.ceil( this.m_adaptation.representations[representationIndex].bandwidth / 1000 ) + 'Kb at Segment ' + this.m_nNextSegment );
 		this.ChangeRepresentation( this.m_adaptation.representations[representationIndex] );
 	}
 }
@@ -1045,6 +1226,9 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 	// VOD ended?
 	if (this.m_nNextSegment > this.m_nTotalSegments)
 	{
+		if ( this.ContainsVideo() )
+			$J( this.m_player.m_elVideoPlayer ).trigger( 'voddownloadcomplete' );
+
 		return;
 	}
 
@@ -1071,8 +1255,12 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 				var nDownloadMS = now - rtDownloadStart;
 
 				_loader.m_xhr = null;
+				_loader.m_nLastSegmentDownloadStatus = xhr.status;
+				
 				if ( xhr.status != 200 || !xhr.response )
 				{
+					_loader.m_nFailedSegmentDownloads++;
+
 					PlayerLog( '[video] HTTP ' + xhr.status + ' (' + nDownloadMS + 'ms, ' + + '0k): ' + url );
 					if ( now - rtAttemptStarted > CDASHPlayer.TRACK_BUFFER_MS + CDASHPlayer.DOWNLOAD_RETRY_MS )
 					{
@@ -1440,6 +1628,13 @@ CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes 
 		logEntry.downloadTime = (new Date().getTime()) - startTime;
 		logEntry.dataSizeBytes = dataSizeBytes;
 		this.m_rgDownloadLog.push( logEntry );
+
+		// for stats tracking
+		this.m_nBytesReceivedTotal += logEntry.dataSizeBytes;
+		this.m_nSegmentDownloadTimeTotal += logEntry.downloadTime;
+		this.m_nSegmentDownloadTimeEntries++;
+		this.m_nSegmentDownloadTimeMinimum = ( this.m_nSegmentDownloadTimeMinimum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime < this.m_nSegmentDownloadTimeMinimum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMinimum );
+		this.m_nSegmentDownloadTimeMaximum = ( this.m_nSegmentDownloadTimeMaximum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime > this.m_nSegmentDownloadTimeMaximum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMaximum );
 	}
 }
 
@@ -1464,6 +1659,53 @@ CSegmentLoader.prototype.GetBandwidthRate = function ()
 	}
 }
 
+CSegmentLoader.prototype.GetSegmentDownloadTimeStats = function( bResetStats )
+{
+	var seg_stats = {};
+	if ( this.m_nSegmentDownloadTimeEntries > 0 )
+	{
+		seg_stats = {
+			'seg_avg': ( this.m_nSegmentDownloadTimeTotal / this.m_nSegmentDownloadTimeEntries ) / 1000,
+			'seg_min': this.m_nSegmentDownloadTimeMinimum / 1000,
+			'seg_max': this.m_nSegmentDownloadTimeMaximum / 1000,
+		}
+	}
+	else
+	{
+		seg_stats = {
+			'seg_avg': 0,
+			'seg_min': 0,
+			'seg_max': 0,
+		}
+	}
+
+	if ( bResetStats )
+	{
+		this.m_nSegmentDownloadTimeTotal = 0;
+		this.m_nSegmentDownloadTimeEntries = 0;
+		this.m_nSegmentDownloadTimeMinimum = 0;
+		this.m_nSegmentDownloadTimeMaximum = 0;
+	}
+
+	return seg_stats;
+}
+
+CSegmentLoader.prototype.GetBytesReceived = function()
+{
+	return this.m_nBytesReceivedTotal;
+}
+
+
+CSegmentLoader.prototype.GetFailedSegmentDownloads = function()
+{
+	return this.m_nFailedSegmentDownloads;
+}
+
+CSegmentLoader.prototype.GetDownloadLog = function()
+{
+	return this.m_rgDownloadLog;
+}
+
 /////////////////////////////////////////////////////////////////
 // MPD parser
 /////////////////////////////////////////////////////////////////
@@ -1477,6 +1719,18 @@ CMPDParser.strBaseURL = '';
 CMPDParser.GetBaseURL = function()
 {
 	return CMPDParser.strBaseURL;
+}
+
+CMPDParser.strStatsLink = '';
+CMPDParser.strStalledLink = '';
+CMPDParser.GetAnalyticsStatsLink = function()
+{
+	return CMPDParser.strStatsLink;
+}
+
+CMPDParser.GetAnalyticsStalledLink = function()
+{
+	return CMPDParser.strStalledLink;
 }
 
 CMPDParser.prototype.BParse = function( xmlDoc )
@@ -1524,9 +1778,17 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 
 	// MPD BaseURL if set - Must be direct child of MPD
 	var baseUrl = $J( xmlMPD ).find('> BaseURL');
-	if (baseUrl)
+	if ( baseUrl )
 	{
 		CMPDParser.strBaseURL = baseUrl.text();
+	}
+
+	// stats reporting if Analytics set in MPD
+	var analytics = $J( xmlMPD ).find( 'Analytics' );
+	if ( analytics )
+	{
+		CMPDParser.strStatsLink = $J( analytics ).attr( 'statslink' );
+		CMPDParser.strStalledLink = $J( analytics ).attr( 'stalledlink' );
 	}
 
 	// grab all periods.. only support 1
@@ -3169,111 +3431,459 @@ CVTTCaptionLoader.SortClosedCaptionsByDisplayLanguage = function(a,b) {
 CVTTCaptionLoader.LanguageCountryCodes = {
     "bg-BG":{
         "displayName":"Български (Bulgarian)",
-	"steamLanguage":"bulgarian"
+        "steamLanguage":"bulgarian"
     },
     "cs-CZ":{
         "displayName":"čeština (Czech)",
-	"steamLanguage":"czech"
+        "steamLanguage":"czech"
     },
     "da-DK":{
         "displayName":"Dansk (Danish)",
-	"steamLanguage":"danish"
+        "steamLanguage":"danish"
     },
     "en-US":{
         "displayName":"English",
-	"steamLanguage":"english"
+        "steamLanguage":"english"
     },
     "fi-FI":{
         "displayName":"Suomi (Finnish)",
-	"steamLanguage":"finnish"
+        "steamLanguage":"finnish"
     },
     "fr-FR":{
         "displayName":"Français (French)",
-	"steamLanguage":"french"
+        "steamLanguage":"french"
     },
     "de-DE":{
         "displayName":"Deutsch (German)",
-	"steamLanguage":"german"
+        "steamLanguage":"german"
     },
     "el-GR":{
         "displayName":"Ελληνικά (Greek)",
-	"steamLanguage":"greek"
+        "steamLanguage":"greek"
     },
     "es-ES":{
         "displayName":"Español (Spanish)",
-	"steamLanguage":"spanish"
+        "steamLanguage":"spanish"
     },
     "hu-HU":{
         "displayName":"Magyar (Hungarian)",
-	"steamLanguage":"hungarian"
+        "steamLanguage":"hungarian"
     },
     "it-IT":{
         "displayName":"Italiano (Italian)",
-	"steamLanguage":"italian"
+        "steamLanguage":"italian"
     },
     "ja-JP":{
         "displayName":"日本語 (Japanese)",
-	"steamLanguage":"japanese"
+        "steamLanguage":"japanese"
     },
     "ko-KR":{
         "displayName":"한국어 (Korean)",
-	"steamLanguage":"koreana"
+        "steamLanguage":"koreana"
     },
     "nl-NL":{
         "displayName":"Nederlands (Dutch)",
-	"steamLanguage":"dutch"
+        "steamLanguage":"dutch"
     },
     "nb-NO":{
         "displayName":"Norsk (Norwegian)",
-	"steamLanguage":"norwegian"
+        "steamLanguage":"norwegian"
     },
     "pl-PL":{
         "displayName":"Polski (Polish)",
-	"steamLanguage":"polish"
+        "steamLanguage":"polish"
     },
     "pt-BR":{
         "displayName":"Português-Brasil (Portuguese-Brazil)",
-	"steamLanguage":"brazilian"
+        "steamLanguage":"brazilian"
     },
     "pt-PT":{
         "displayName":"Português (Portuguese)",
-	"steamLanguage":"portuguese"
+        "steamLanguage":"portuguese"
     },
     "ro-RO":{
         "displayName":"Română (Romanian)",
-	"steamLanguage":"romanian"
+        "steamLanguage":"romanian"
     },
     "ru-RU":{
         "displayName":"Русский (Russian)",
-	"steamLanguage":"russian"
+        "steamLanguage":"russian"
     },
     "sv-SE":{
         "displayName":"Svenska (Swedish)",
-	"steamLanguage":"swedish"
+        "steamLanguage":"swedish"
     },
     "th-TH":{
         "displayName":"ไทย (Thai)",
-	"steamLanguage":"thai"
+        "steamLanguage":"thai"
     },
     "tr-TR":{
         "displayName":"Türkçe (Turkish)",
-	"steamLanguage":"turkish"
+        "steamLanguage":"turkish"
     },
     "uk-UA":{
         "displayName":"Українська (Ukrainian)",
-	"steamLanguage":"ukrainian"
+        "steamLanguage":"ukrainian"
     },
     "vi-VN":{
         "displayName":"tiếng Việt (Vietnamese)",
-	"steamLanguage":"vietnamese"
+        "steamLanguage":"vietnamese"
     },
     "zh-CH":{
         "displayName":"简体中文 (Simplified Chinese)",
-	"steamLanguage":"schinese"
+        "steamLanguage":"schinese"
 	},
     "zh-CN":{
         "displayName":"繁體中文 (Traditional Chinese)",
-	"steamLanguage":"tchinese"
+        "steamLanguage":"tchinese"
     },
 }
+
+//////////////////////////////////////////////////
+// Stats & Server Logging
+//////////////////////////////////////////////////
+CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
+{
+	this.m_elVideoPlayer = elVideoPlayer;
+
+	this.eleOverlay = $J('<div class="dash_player_playback_stats"></div>')[0];
+	$J(this.m_elVideoPlayer).parent().append( this.eleOverlay );
+	this.m_videoPlayer = videoPlayer;
+
+	this.timerTick = false;
+	this.timerSecond = false;
+	this.nDecodedFramesPerSecond = 0;
+	this.bRunning = false;
+
+	this.strResolution = '';
+	this.strVideoBuffered = '';
+	this.strAudioBuffered = '';
+	this.strBandwidth = '';
+	this.strBuffers = '';
+
+	// For Server Event Logging
+	this.m_bAutoLoggingEventsToServer = ( Math.random() * 100 ) < CDASHPlayerStats.LOGGING_RATE_PERC;
+	this.m_xhrLogEventToServer = null;
+	this.m_steamID = viewerSteamID;
+	this.m_statsLastSnapshot = {
+		'time': new Date().getTime(),
+		'bytes_received': 0,
+		'frames_decoded': 0,
+		'frames_dropped': 0,
+		'failed_segments': 0,
+	}
+
+	// events that trigger server event logging
+	var _stats = this;
+	this.m_schNextLogEvent = null;
+	if ( this.m_bAutoLoggingEventsToServer )
+	{
+		$J( this.m_elVideoPlayer ).on( 'voddownloadcomplete.DASHPlayerStats', function() { _stats.LogEventToServer( false, false ); });
+
+		// set up for the first event logged
+		this.m_schNextLogEvent = window.setTimeout( function() { _stats.LogEventToServer( false, false ); }, CDASHPlayerStats.LOG_FIRST_EVENT );
+	}
+
+	// always log stalled events
+	$J( this.m_elVideoPlayer ).on( 'playbackstalled.DASHPlayerStats', function( e, bVideoStalled ) { _stats.LogEventToServer( true, bVideoStalled ); });
+}
+
+CDASHPlayerStats.LOGGING_RATE_PERC = 100;
+CDASHPlayerStats.LOG_FIRST_EVENT = 1000 * 30; 	// 30 seconds
+CDASHPlayerStats.LOG_NEXT_EVENT = 1000 * 300; 	// 5 minutes
+CDASHPlayerStats.SEND_LOG_TO_SERVER = true;
+
+CDASHPlayerStats.prototype.Close = function()
+{
+	$J( this.m_elVideoPlayer ).off( '.DASHPlayerStats' );
+
+	clearTimeout( this.m_schNextLogEvent );
+
+	if ( this.m_xhrLogEventToServer )
+	{
+		this.m_xhrLogEventToServer.abort();
+		this.m_xhrLogEventToServer = null;
+	}
+}
+
+CDASHPlayerStats.prototype.LogEventToServer = function( bStalledEvent, bVideoStalled )
+{
+	var _stats = this;
+
+	var statsURL;
+	if ( bStalledEvent )
+		statsURL = CMPDParser.GetAnalyticsStalledLink();
+	else
+		statsURL = CMPDParser.GetAnalyticsStatsLink();
+
+	if ( statsURL )
+	{
+		var statsCollected = this.CollectStatsForEvent( bStalledEvent, bVideoStalled );
+		if ( Object.keys( statsCollected ).length )
+		{
+			// PlayerLog( statsCollected );
+
+			if ( CDASHPlayerStats.SEND_LOG_TO_SERVER )
+			{
+				_stats.m_xhrLogEventToServer = $J.ajax(
+				{
+					url: statsURL,
+					type: 'POST',
+					data: statsCollected
+				})
+				.done( function( data, status, xhr )
+				{
+					_stats.m_xhrLogEventToServer = null;
+				})
+				.fail( function( jqXHR, textStatus, errorThrown )
+				{
+					_stats.m_xhrLogEventToServer = null;
+				});
+			}
+		}
+
+		// set up for the next log event
+		if ( _stats.m_bAutoLoggingEventsToServer && !bStalledEvent )
+		{
+			clearTimeout( _stats.m_schNextLogEvent );
+			_stats.m_schNextLogEvent = window.setTimeout( function() { _stats.LogEventToServer( false, false ); }, CDASHPlayerStats.LOG_NEXT_EVENT );
+		}
+	}
+}
+
+CDASHPlayerStats.prototype.CollectStatsForEvent = function( bStalledEvent, bVideoStalled )
+{
+	var statsCollected = {};
+
+	if ( bStalledEvent )
+	{
+		statsCollected = this.m_videoPlayer.StatsRecentSegmentDownloads( bVideoStalled );
+		statsCollected['segment_stalled'] = statsCollected['last_segment_number'];
+		delete statsCollected['last_segment_number'];
+		statsCollected['audio_stalled'] = !bVideoStalled;
+	}
+	else
+	{
+		var statsSnapshot = {
+			'time': new Date().getTime(),
+			'bytes_received': this.m_videoPlayer.StatsAllBytesReceived(),
+			'frames_decoded': ( this.m_elVideoPlayer.webkitDecodedFrames || this.m_elVideoPlayer.webkitDecodedFrameCount ),
+			'frames_dropped': ( this.m_elVideoPlayer.webkitDroppedFrames || this.m_elVideoPlayer.webkitDroppedFrameCount ),
+			'failed_segments': this.m_videoPlayer.StatsAllFailedSegmentDownloads(),
+		}
+
+		// if the player hasn't played or downloaded since the last snapshot then nothing new to log
+		if ( statsSnapshot['frames_decoded'] == this.m_statsLastSnapshot['frames_decoded'] && statsSnapshot['bytes_received'] == this.m_statsLastSnapshot['bytes_received'] )
+			 return statsCollected;
+
+		var bw_rates = this.m_videoPlayer.StatsBandwidthRates( true );
+		var seg_times = this.m_videoPlayer.StatsSegmentDownloadTimes( true );
+
+		statsCollected = {
+			'video_buffer': Math.round( this.m_videoPlayer.StatsVideoBuffer() ),
+			'audio_buffer': Math.round( this.m_videoPlayer.StatsAudioBuffer() ),
+			'seconds_delta': Math.round( ( statsSnapshot['time'] - this.m_statsLastSnapshot['time'] ) / 1000 ),
+			'bytes_received': statsSnapshot['bytes_received'] - this.m_statsLastSnapshot['bytes_received'],
+			'frames_decoded': statsSnapshot['frames_decoded'] - this.m_statsLastSnapshot['frames_decoded'],
+			'frames_dropped': statsSnapshot['frames_dropped'] - this.m_statsLastSnapshot['frames_dropped'],
+			'failed_segments': statsSnapshot['failed_segments'] - this.m_statsLastSnapshot['failed_segments'],
+			'bw_avg': Math.round( bw_rates['bw_avg'] ),
+			'bw_min': Math.round( bw_rates['bw_min'] ),
+			'bw_max': Math.round( bw_rates['bw_max'] ),
+			'seg_time_avg': Number( seg_times['seg_avg'].toFixed(3) ),
+			'seg_time_min': seg_times['seg_min'],
+			'seg_time_max': seg_times['seg_max'],
+		}
+
+		this.m_statsLastSnapshot = statsSnapshot;
+	}
+
+	// common for both log events
+	statsCollected['steamid'] = this.m_steamID,
+	statsCollected['host'] = this.m_videoPlayer.StatsDownloadHost();
+	statsCollected['playback_position'] = this.m_videoPlayer.GetPlaybackTimeInSeconds();
+	statsCollected['playback_speed'] = this.m_videoPlayer.GetPlaybackRate();
+	statsCollected['video_res'] = this.m_videoPlayer.StatsPlaybackHeight();
+	statsCollected['audio_rate'] = Math.round ( this.m_videoPlayer.StatsAudioBitRate() );
+	statsCollected['audio_ch'] = this.m_videoPlayer.StatsAudioChannels();
+
+	return statsCollected;
+}
+
+//////////////////////
+// On-Screen Events
+//////////////////////
+
+CDASHPlayerStats.prototype.Show = function()
+{
+	if( this.bRunning )
+		return;
+
+	this.bRunning = true;
+
+	$J(this.eleOverlay).show();
+	var context = this;
+	this.timerTick = setInterval( function() { context.Tick() }, 1000/60 );
+	this.timerCalculateTotals = setInterval(function() { context.CalculateTotals() }, 500);
+}
+
+CDASHPlayerStats.prototype.Hide = function()
+{
+	if( !this.bRunning )
+		return;
+
+	this.bRunning = false;
+
+	$J(this.eleOverlay).hide();
+	clearInterval(this.timerTick);
+	clearInterval(this.timerCalculateTotals);
+}
+
+CDASHPlayerStats.prototype.Toggle = function()
+{
+	if( this.bRunning )
+		this.Hide();
+	else
+		this.Show();
+}
+
+CDASHPlayerStats.prototype.CalculateTotals = function()
+{
+	// runs on a 500ms timer, so frame counts must be multiplied by 2.
+	this.nDecodedFramesPerSecond = 2 * ( ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount ) - ( this.nLastDecodedFrames || 0 ) )
+	this.nLastDecodedFrames = ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount );
+
+	this.strResolution = this.m_videoPlayer.StatsPlaybackWidth() + 'x' + this.m_videoPlayer.StatsPlaybackHeight() + ' (' + $J(this.m_elVideoPlayer).innerWidth() + 'x' + $J(this.m_elVideoPlayer).innerHeight() + ')';
+	this.strVideoBuffered = this.m_videoPlayer.StatsVideoBuffer() + 's';
+	this.strAudioBuffered = this.m_videoPlayer.StatsAudioBuffer() + 's';
+	this.strBandwidth = this.m_videoPlayer.StatsCurrentDownloadBitRate() * 1000;
+	this.strBuffers = this.m_videoPlayer.StatsBufferInfo();
+}
+
+CDASHPlayerStats.prototype.FormattingBytesToHuman = function ( nBytes )
+{
+	if( nBytes < 1000 )
+		return nBytes + " B";
+	if( nBytes < 1000000 )
+		return ( nBytes / 1000 ).toFixed(2) + ' KB';
+
+	if( nBytes < 1000000000)
+		return ( nBytes / 1000000 ).toFixed(2) + ' MB';
+
+	return (nBytes / 1000000000 ).toFixed(2) + ' GB';
+}
+
+CDASHPlayerStats.prototype.Tick = function()
+{
+	$ele = $J(this.m_elVideoPlayer);
+	ele = this.m_elVideoPlayer;
+	var rgStatsDefinitions = [
+		// Webkit
+		{
+			id: 'webkitAudioBytesDecoded',
+			label: 'Audio Bytes Decoded',
+			value: ele.webkitAudioBytesDecoded || ele.webkitAudioDecodedByteCount,
+			formatFunc: this.FormattingBytesToHuman
+		},
+		{
+			id: 'webkitVideoBytesDecoded',
+			label: 'Video Bytes Decoded',
+			value: ele.webkitVideoBytesDecoded || ele.webkitVideoDecodedByteCount,
+			formatFunc: this.FormattingBytesToHuman
+		},
+		{
+			id: 'webkitDecodedFrames',
+			label: 'Decoded Frames',
+			value: ele.webkitDecodedFrames || ele.webkitDecodedFrameCount
+		},
+		{
+			id: 'webkitDroppedFrames',
+			label: 'Dropped Frames',
+			value: ele.webkitDroppedFrames || ele.webkitDroppedFrameCount
+		},
+		// Firefox
+		{
+			id: 'mozParsedFrames',
+			label: 'Parsed Frames',
+			value: ele.mozParsedFrames
+		},
+		{
+			id: 'mozDecodedFrames',
+			label: 'Decoded Frames',
+			value: ele.mozDecodedFrames
+		},
+		{
+			id: 'mozPresentedFrames',
+			label: 'Presented Frames',
+			value: ele.mozPresentedFrames
+		},
+		{
+			id: 'mozPaintedFrames',
+			label: 'Painted Frames',
+			value: ele.mozPaintedFrames
+		},
+		{
+			id: 'mozFrameDelay',
+			label: 'Frame Delay',
+			value: ele.mozFrameDelay
+		},
+		// Generic
+		{
+			id: 'decodedFramesPerSecond',
+			label: 'Decoded Frames Per Second',
+			value: this.nDecodedFramesPerSecond
+		},
+		// DASHPlayer
+		{
+			id: 'playbackResolution',
+			label: 'Resolution',
+			value: this.strResolution
+		},
+		{
+			id: 'videobuffered',
+			label: 'Video Buffered',
+			value: this.strVideoBuffered
+		},
+		{
+			id: 'audiobuffered',
+			label: 'Audio Buffered',
+			value: this.strAudioBuffered
+		},
+		{
+			id: 'downloadbandwidth',
+			label: 'Bandwidth (bits)',
+			value: this.strBandwidth,
+			formatFunc: this.FormattingBytesToHuman
+		},
+		{
+			id: 'dashbuffers',
+			label: 'Buffers',
+			value: this.strBuffers
+		}
+
+];
+
+	for( var i=0; i < rgStatsDefinitions.length; i++)
+	{
+		var rgStatDefinition = rgStatsDefinitions[i];
+		if( rgStatDefinition.value != undefined && rgStatDefinition.value != NaN )
+		{
+			$target = $J( '.value', $J('#' + rgStatDefinition.id) );
+			// Create element if needed
+			if( $target.length == 0 )
+			{
+				var container = $J('<div id="'+rgStatDefinition.id+'">' + rgStatDefinition.label + ': <span class="value"></span></div>');
+				$J(this.eleOverlay).append( container );
+				$target = $J( '.value', container );
+			}
+
+			if( rgStatDefinition.formatFunc )
+				$target.text( rgStatDefinition.formatFunc( rgStatDefinition.value ) );
+			else
+				$target.html( rgStatDefinition.value );
+		}
+	}
+}
+
+
 

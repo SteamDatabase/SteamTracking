@@ -490,18 +490,18 @@
 	-ms-transform: translateX(-50%) translateY(-50%);
 	-webkit-transform: translateX(-50%) translateY(-50%);
 
+	margin-top: 1px;
 	padding: 20px;
 	background: rgba(44,43,40,0.8);
 	min-width: 150px;
 
-	font-family: Arial, sans-serfif;
-	font-size: 18px;
+	font-family: 'Motiva Sans Light', Arial, Helvetica, sans-serif;
+	font-size: 20px;
 	color: #CCC;
 	line-height: 14px;
 	text-align: center;
 	z-index: 5;
 	display: none;
-
 }
 
 .dash_video_live_banner
@@ -654,4 +654,14 @@
 	cursor: auto;
 }
 
-
+.dash_player_playback_stats {
+	left: 10px;
+	top: 10px;
+	background: rgba(0, 0, 0, .4);
+	position: absolute;
+	color: #FFF;
+	display: none;
+	padding: 10px;
+	font-size: 12px;
+	line-height: 14px;
+}

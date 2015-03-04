@@ -1395,6 +1395,11 @@ select.subforum_select_control {
 	visibility: visible;
 }
 
+.commentsearch_options input[type=text], .commentsearch_options input[type=password], .commentsearch_options select
+{
+	background: rgba( 103, 193, 245, 0.2 );
+}
+
 .rightbox_header, .rightbox_footer {
 	/*background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );*/
 	width: 295px;

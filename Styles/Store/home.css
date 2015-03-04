@@ -1181,7 +1181,6 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	z-index: -10;
 	display: inline-block;
 	vertical-align: top;
-	overflow: hidden;
 }
 
 
@@ -1209,12 +1208,25 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	height: 120px;
 	margin: 10px 21px 0 -22px;
 	margin-top: 8px;
+	transition: scale 0.5s;
+	-webkit-transition: scale 0.5s;
 }
 
 .home_content.single a.screenshot img {
 	display: block;
 	width: 213px;
 	height: 120px;
+	position: relative;
+	z-index: 9;
+	transition: transform .2s ease-out, z-index 0.2s, box-shadow 0.2s ease-out;
+	-webkit-transition: transform .2s ease-out, z-index 0.2s ease-out, box-shadow 0.2s ease-out;
+	transition-delay: 0.2s;
+}
+
+.home_content.single a.screenshot:hover img {
+	transform: scale(2);
+	z-index: 40;
+	box-shadow: 0px 0px 4px #000;
 }
 
 

@@ -82,6 +82,14 @@ a:hover {
 	text-align:left;
 }
 
+#BG_bottom.paymentinfo_background .formSectionTitle {
+	color: #66c0f4;
+	font-size: 24px;
+	font-family: 'Motiva Sans',Arial,Helvetica,Verdana,sans-serif;
+	font-weight: normal;
+}
+
+
 #ig_bottom.smallheader {
 	background: none;
 }
@@ -135,10 +143,13 @@ a:hover {
 
 #profileBlock {
 	width:638px;
-	margin: 11px 0px 0px 0px;
+	margin: 5px 0px 0px 0px;
 	float: left;
 	padding-bottom: 7px;
-
+}
+#profileBlock p {
+	font-size: 14px;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
 }
 
 .detailBox {
@@ -509,6 +520,9 @@ a.general_btn:hover {
 	padding-top: 5px;
 	margin-bottom: 10px;
 }
+.rightSectionTopTitle.condensed {
+	margin-bottom: 2px;
+}
 
 
 
@@ -578,9 +592,25 @@ a.general_btn:hover {
 
 h2 {
 	color: #c6c6c6;
-	font-size: 22px;
+	font-size: 24px;
+	font-family: 'Motiva Sans',Arial,Helvetica,Verdana,sans-serif;
 	font-weight: normal;
 	margin-bottom: 10px;
+}
+h2.stats:before {
+	content: "";
+	display: block;
+	height: 1px;
+	margin: 20px 0px 5px 0px;
+}
+h2.stats:after {
+	content: "";
+	display: block;
+	height: 1px;
+	margin: 5px 0px 5px 0px;
+}
+h2.stats {
+	color: #66c0f4;
 }
 
 h3 {
@@ -687,24 +717,24 @@ h3 {
 {
 	text-align: left;
 	margin: 0px auto;
-	padding: 8px;
-	background-color: #6b9731;
-	color: #DCF769;
+	padding: 12px;
+	background-color: #546b04;
+	color: #D2E885;
 	font-size: 14px;
 	margin-top: 8px;
 	margin-bottom: 8px;
-	box-shadow: 0px 0px 5px #000;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 }
 
 .needsFinalizeNotification .title
 {
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: normal;
 }
 
 .needsFinalizeNotification .text
 {
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: normal;
 }
 .needsFinalizeNotification .text a
@@ -1296,10 +1326,10 @@ a.instructionsBtn:hover {
 
 .workshop_paymentinfo_third_party_notice
 {
-	padding-top: 16px;
-	padding-bottom: 16px;
+	margin-top: 16px;
+	margin-bottom: -16px;
 }
-.workshop_paymentinfo_third_party_notice .alert
+.workshop_paymentinfo_third_party_notice.alert
 {
 	color: #CA7900;
 }
@@ -1350,9 +1380,10 @@ a.instructionsBtn:hover {
 
 .formRowTitle {
 	padding-right:4px;
-	font-size:14px;
-	color:#707070;
-	padding: 9px 5px 4px 0px;
+	font-size:10px;
+	color:#5c8699;
+	text-transform: uppercase;
+	padding: 9px 5px 2px 0px;
 }
 .formSectionTitle {
 	font-size: 17px;
@@ -1368,18 +1399,21 @@ a.instructionsBtn:hover {
 
 .formRowFields.text
 {
-	padding: 9px 5px 4px 0px;
+	padding: 2px 5px 4px 0px;
 }
 
 .formRowFields.completed
 {
-	color: #97c0e3;
+	color: #729004;
+	background: rgba( 0, 0, 0, 0.4 );
+	padding: 8px;
+	margin-top: 12px;
 }
 
 .formRowFields.incomplete
 {
-	color: #CA7900;
-	background: rgba( 0, 0, 0, 0.2 );
+	color: #cc4f46;
+	background: rgba( 0, 0, 0, 0.4 );
 	padding: 8px;
 	margin-top: 12px;
 }
@@ -1408,6 +1442,20 @@ a.instructionsBtn:hover {
 	padding: 10px 0px;
 }
 
+#BankInfo.infoArea,
+#TaxInfo.infoArea {
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 12px;
+}
+#BankInfo.infoArea p,
+#TaxInfo.infoArea p {
+	margin-top: 0px;
+}
+#TaxInfo.infoArea .noInfo {
+	color: #cc4f46;
+	margin-bottom: 1em;
+}
+
 .taxinfo
 {
 	padding-right: 50px;
@@ -1418,14 +1466,20 @@ a.instructionsBtn:hover {
 	margin-top: 20px;
 	padding: 20px;
 	font-size: 18px;
-	background-color: #68932f;
-	color: #d2ff96;
+	background-color: #546b04;
+	color: #D2E885;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
+}
+.workshop_payment_info_done a {
+	text-decoration: underline;
+	color: #fff;
 }
 
 .workshop_taxinfo_overwrite_warning
 {
 	padding-top: 5px;
 	color: #CA7900;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
 }
 
 .formHR
@@ -2094,7 +2148,7 @@ textarea {
 
 .ratingSection
 {
-	color: #494947;
+	color: #495f68;
 	font-size: 11px;
 	align: right;
 	text-align: right;
@@ -2342,30 +2396,46 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	display: block;
 	float: left;
 	color: white;
-	background-color: #3A3A3A;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+	background-color: rgba( 0, 0, 0, 0.5 );
 	line-height: 25px;
 	padding: 0px 12px;
 	margin-left: 9px;
 	text-decoration: none;
 }
+a.commentsTab:hover {
+	background-color: rgba( 102, 192, 244, 0.8 )
+}
 
 .commentsTab.active {
-	background-color: #4E4E4D;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+
+	background: #417B9C; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D6), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AA9D6', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -o-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -ms-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
 }
 
 #commentsTabsFade {
 	margin-left: 10px;
 	position: relative;
 }
+#commentsTabFade {
+	background-color: #417B9C;
+	height: 5px;
+	left: 0px;
+	width: 100%;
+	display: inline-block;
+}
 
 #commentsTabFade img
 {
 	width: 100%;
-}
-
-.publicComments
-{
-	margin-right: 2px;
+	display: none;
 }
 
 .developerCommentsDesc
@@ -2378,6 +2448,11 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 {
 	margin-left: 10px;
 	margin-right: 10px;
+}
+.commentthread_area .commentthread_header {
+	background-color: #223349;
+	margin-top: 0px;
+	padding: 4px;
 }
 
 #splits,
@@ -2458,7 +2533,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	padding: 16px 16px 16px 16px;
 	margin-bottom: 30px;
 	min-height: 100px;
-	background-color: rgba( 202, 186, 141, 0.5);
+	background-color: rgba( 202, 186, 141, 1 );
 }
 
 .splitsHR {
@@ -2485,7 +2560,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 }
 
 .workshopItemSplitName {
-	color:#ebebeb;
+	color:#413C2F;
 	width:150px;
 	font-size:11;
 	font-weight: bold;
@@ -2518,7 +2593,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .workshopTagsTitle
 {
-	color: #61686D;
+	color: #5c8699;
 }
 
 .workshopTags
@@ -2709,11 +2784,12 @@ input, select {
 	border: 1px #777777 solid;
 }
 
-.inputSplits {
-	background-color:#1d1d1d;
+input.inputSplits {
+	background-color: rgba(0, 0, 0, 0.2);
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0px 0px rgba(91, 132, 181, 0.2);
 	color:#e1e1e1;
 	font-size:13px;
-	border: 1px #777777 solid;
 	width:30px;
 	position: relative;
 	top:0px;
@@ -2721,7 +2797,10 @@ input, select {
 	text-align: right;
 	padding: 5px 5px 5px 5px;
 }
-
+.workshopSplitPercentage input.inputSplits {
+	border: 1px solid #545349;
+	box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}
 .selectTagsFilter
 {
 	margin-top: 10px;
@@ -3795,7 +3874,7 @@ div.hover {
 	background-color: #417B9C;
 	height: 5px;
 	left: 0px;
-	width: 948px;
+	width: 950px;
 }
 
 
@@ -3823,6 +3902,7 @@ div.hover {
     padding: 10px 10px 10px 11px;
 	margin: 0 0 10px 0;
 }
+#rightContents .panel,
 .revenue #rightContents .panel {
 	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 	padding: 10px 10px 10px 11px;
@@ -4136,8 +4216,8 @@ div.hover {
 }
 
 .commentthread_area {
-	margin: 0 0px 0 2px;
-	padding-right: 1px;
+	margin: 0px;
+	padding-right: 0px;
 }
 
 .commentthread_footer {
@@ -4151,7 +4231,7 @@ div.hover {
 }
 
 .publicComments {
-	padding-right: 5px;
+	padding-right: 0px;
 }
 
 .chromeless {
@@ -4546,7 +4626,7 @@ td.negative {
 }
 
 .dotted_hr_uri, h2.stats:before, h2.stats:after {
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABAgMAAABmjvwnAAAAAXNSR0IArs4c6QAAAAlQTFRFHB0fKystVlZWMEVQagAAAAF0Uk5TAEDm2GYAAAABYktHRACIBR1IAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QEKFDQCfqL18gAAAApJREFUCNdjSAAAAGIAYRsWYbAAAAAASUVORK5CYII=);
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzhBQzZDQTlCREVBMTFFNDk0NjlEOTA4MUExQjU3N0UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzhBQzZDQUFCREVBMTFFNDk0NjlEOTA4MUExQjU3N0UiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDOEFDNkNBN0JERUExMUU0OTQ2OUQ5MDgxQTFCNTc3RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDOEFDNkNBOEJERUExMUU0OTQ2OUQ5MDgxQTFCNTc3RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnDA1kcAAAAWSURBVHjaYkg78CUNiI3////PABBgADJRB8uinSMKAAAAAElFTkSuQmCC);
 }
 
 a.tooltip {

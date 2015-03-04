@@ -493,13 +493,11 @@ h3 {
 	padding: 10px;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/notification_green.png');
 	background-repeat: repeat-x;
-	background-color: #6b9731;
-	color: #deffb2;
-	border-color: #42522d;
-	border-style: solid;
-	border-width: 2px;
+	background-color: #546b04;
+	color: #D2E885;
 	margin-bottom: 8px;
 	margin-right: 17px;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
 }
 
 .hasLinkedItems h1

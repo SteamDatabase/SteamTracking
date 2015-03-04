@@ -433,6 +433,33 @@ div[data-role='page'] {
 	z-index: 1;
 }
 
+.game_area_comingsoon {
+	position: relative;
+
+	margin: 8px 8px 20px 8px;
+
+	background: -moz-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%, rgba(102,192,244,0.4) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(10%,rgba(64,120,152,0.4)), color-stop(100%,rgba(102,192,244,0.4))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66407898', endColorstr='#6667c1f5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	font-size: 14px;
+	color: #d5d6d8;
+
+	padding: 12px;
+
+	z-index: 1;
+}
+
+.game_area_bubble h1 {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+
 .game_area_purchase_notes b {
 	font-weight: normal;
 	font-size: 14px;
@@ -533,7 +560,9 @@ div[data-role='page'] {
 	height: auto !important;
 }
 
-.game_area_purchase_game .game_purchase_action {
+.game_area_purchase_game .game_purchase_action,
+.game_area_comingsoon .content .game_purchase_action
+{
 	position: absolute;
 
 	right: 16px;
