@@ -985,7 +985,8 @@ function HighlightSearchText( text, elem )
 
 		if (node.nodeType == Node.TEXT_NODE )
 		{
-			strReplace = node.nodeValue.replace( new RegExp('(' + text.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")  + ')', 'gi' ), '<span class="searchedForText">$1</span>');
+			var strEscaped = $J('<div>').text(node.nodeValue).html();
+			strReplace = strEscaped.replace( new RegExp('(' + text.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")  + ')', 'gi' ), '<span class="searchedForText">$1</span>');
 			eleReplace = document.createElement('div');
 			eleReplace.innerHTML = strReplace;
 
@@ -994,7 +995,7 @@ function HighlightSearchText( text, elem )
 
 			node.parentNode.removeChild( node );
 		}
-		else ( node.nodeType == Node.ELEMENT_NODE )
+		else if ( node.nodeType == Node.ELEMENT_NODE )
 			HighlightSearchText(text, node);
 	}
 }
