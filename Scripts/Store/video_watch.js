@@ -205,7 +205,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					_watch.ShowVideoError( 'The video service is not available.' );
 					break;
 				default:
-					_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a %s>Visit the FAQ</a> for troubleshooting information.' + ' Code: ' + data.error_code );
+					_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
 			}
 		}
 	})
