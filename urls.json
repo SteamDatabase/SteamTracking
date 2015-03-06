@@ -287,6 +287,7 @@
 "Random/Alchemist.txt"                           : "http://repo.steampowered.com/steamos/lists/default_alchemist_main_amd64_Packages",
 "Random/AlchemistNotes.txt"                      : "http://repo.steampowered.com/steamos/log/relnotes.txt",
 "Random/JobPostings.html"                        : "http://valvesoftware.com/jobs/job_postings.html",
+"Random/Publications.html"                       : "http://www.valvesoftware.com/company/publications.html",
 "Random/Security.html"                           : "http://valvesoftware.com/security/",
 "Random/ValveGroup.json"                         : "https://steamcommunity.com/groups/valve/memberslistxml",
 "Random/SteamModerators.json"                    : "https://steamcommunity.com/groups/SUFMods/memberslistxml"
