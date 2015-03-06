@@ -1,10 +1,10 @@
 {
     "cdn.level3.cs.steampowered.com": "content2.steampowered.com.c.footprint.net",
     "cdn.akamai.cs.steampowered.com": "akacdn.valve.com.edgesuite.net",
-    "cdn.highwinds.cs.steampowered.com": "cds.f3b7q2p3.hwcdn.net",
+    "cdn.highwinds.cs.steampowered.com": "",
     "content1.steampowered.com": "",
     "content2.steampowered.com": "content2.steampowered.com.c.footprint.net",
-    "content3.steampowered.com": "cds.f3b7q2p3.hwcdn.net",
+    "content3.steampowered.com": "",
     "content4.steampowered.com": "",
     "content5.steampowered.com": "",
     "content6.steampowered.com": "edge.steam-dns.top.comcast.net",
