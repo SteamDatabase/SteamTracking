@@ -18,7 +18,7 @@ function OnSelectGame( GameSelector, rgAppData )
 
 function OnLoad()
 {
-	gSearchField_Apps = new SearchFieldWithText( 'appHubsSearchText', "Search for games or software", ShowAppSuggestions, null );
+	gSearchField_Apps = new SearchFieldWithText( 'appHubsSearchText', "Search for products", ShowAppSuggestions, null );
 	gSearchField_Players = new SearchFieldWithText( 'SearchPlayers', "Search players and groups", null, null );
 
 	CheckForMoreContent();

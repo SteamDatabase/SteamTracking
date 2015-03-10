@@ -1128,6 +1128,9 @@ a.readmore_link
 	font-size: 14px;
 	line-height: 24px;
 }
+.tag_label:hover {
+	color: #66c0f4;
+}
 .tag_label .tag_count
 {
 	color: #718a98;

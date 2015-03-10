@@ -55,6 +55,7 @@ function CDASHPlayer( elVideoPlayer )
 
 CDASHPlayer.TRACK_BUFFER_MS = 5000;
 CDASHPlayer.TRACK_BUFFER_MAX_SEC = 30 * 60;
+CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD = 30 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
 
 CDASHPlayer.HAVE_NOTHING = 0;
@@ -1064,6 +1065,9 @@ CSegmentLoader.s_BufferUpdateNone = 0;
 CSegmentLoader.s_BufferUpdateAppend = 1;
 CSegmentLoader.s_BufferUpdateRemove = 2;
 
+CSegmentLoader.PIPELINE_NEXT_SEGMENT = true;
+CSegmentLoader.PIPELINE_RANGE_BYTES = 128;
+
 CSegmentLoader.prototype.Close = function()
 {
 	if ( this.m_sourceBuffer )
@@ -1303,6 +1307,16 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 		PlayerLog( 'Failed to download segment: ' + e );
 		return;
 	}
+
+	// Hint to the CDN to get the next segment ready for download
+	if ( CSegmentLoader.PIPELINE_NEXT_SEGMENT && !this.m_player.BIsLiveContent() && this.m_nNextSegment < this.m_nTotalSegments )
+	{
+		urlNext = CMPDParser.GetSegmentURL( this.m_adaptation, this.m_representation, this.m_nNextSegment );
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open( "GET" , urlNext );
+		xmlhttp.setRequestHeader( "Range", "bytes=0-" + parseInt( CSegmentLoader.PIPELINE_RANGE_BYTES - 1) );
+		xmlhttp.send();
+	}
 }
 
 CSegmentLoader.prototype.DownloadNextSegment = function()
@@ -1426,21 +1440,21 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 		return;
 	}
 
-	// check if we need to buffer. Keep downloading for dynamic content
+	// check if we need to buffer. Keep downloading for dynamic content, minimum amount for VOD
 	var unAmountBuffered = this.GetAmountBuffered();
-	if ( this.m_player.BIsLiveContent() || unAmountBuffered < CDASHPlayer.TRACK_BUFFER_MS )
+	if ( this.m_player.BIsLiveContent() || unAmountBuffered < CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD )
 	{
 		this.DownloadNextSegment();
 		return;
 	}
 
 	// next segment is available but buffer is full. Can wait on download
-	unDeltaMS = unAmountBuffered - CDASHPlayer.TRACK_BUFFER_MS;
+	unDeltaMS = unAmountBuffered - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD;
 
 	if ( this.m_player.m_elVideoPlayer.playbackRate > 1.0 )
 		unDeltaMS /= this.m_player.m_elVideoPlayer.playbackRate;
 
-	if ( unAmountBuffered < ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_MS )
+	if ( unAmountBuffered < ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD )
 	{
 		// should be room in buffer in TRACK_BUFFER_MS time for next segment
 		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, unDeltaMS );
@@ -1959,6 +1973,14 @@ CMPDParser.prototype.BUpdate = function( xmlDoc )
 	var xmlMPD = xml.find( 'MPD' );
 	if ( xmlMPD.size() == 0 )
 		return false;
+
+	// stats reporting if Analytics set in MPD
+	var analytics = $J( xmlMPD ).find( 'Analytics' );
+	if ( analytics )
+	{
+		CMPDParser.strStatsLink = $J( analytics ).attr( 'statslink' );
+		CMPDParser.strStalledLink = $J( analytics ).attr( 'stalledlink' );
+	}
 
 	// find existing period
 	if ( this.periods.length == 0 )

@@ -233,11 +233,12 @@ center
 	text-align: left;
 	padding-left: 15px;
 	line-height: 68px;
-	color: #EBEBEB;
+	color: #c6d4df;
 }
 
 .apphub_HeaderBottomText span a
 {
+	color: #c6d4df;
 	text-decoration: underline;
 }
 

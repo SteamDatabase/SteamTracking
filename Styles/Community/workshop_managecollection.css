@@ -36,8 +36,12 @@
 .createCollectionSection
 {
 	padding: 18px;
-	background-color: #303031;
+	background-color: rgba( 0, 0, 0, 0.4 );
 	margin-bottom: 20px;
+}
+.createCollectionSection input[type=text] {
+	background-color:#1f303f;
+	color: #c6d4df;
 }
 
 .createCollectionArrow
@@ -53,9 +57,10 @@
 .title
 {
 	line-height: 13px;
-	font-size: 16px;
-	font-weight: bold;
-	color: #ffffff;
+	font-size: 18px;
+	font-weight: normal;
+	color: #66c0f4;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	padding-bottom: 10px;
 }
 
@@ -71,12 +76,12 @@
 	height: 27px;
 	width: 400px;
 	top: 0px;	
-	background-color:#565658;
+	background-color:#1f303f;
 	border: solid 1px #262627;
 	box-shadow: 1px 1px 0px #39393A;
 	border-radius: 3px;
 	padding: 4px 5px 4px 8px;
-	color: #BFBFBF;
+	color: #c6d4df;
 }
 
 .descField
@@ -84,14 +89,15 @@
 	font-size: 14px;
 	line-height: 20px;
 	margin-top: 25px;
+	margin-bottom: 5px;
 	width: 860px;
 	height: 255px;
-	background-color:#565658;
-	border: solid 1px #262627;
-	box-shadow: 1px 1px 0px #39393A;
+	background-color:#1f303f;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
 	border-radius: 3px;
 	padding: 4px 5px 4px 8px;
-	color: #BFBFBF;
+	color: #c6d4df;
 }
 
 .collectionType
@@ -116,7 +122,7 @@
 .collectionTypeDesc
 {
 	font-size: 14px;
-	color: #535353;
+	color: #61696d;
 }
 
 .subscribeAllDesc
@@ -133,6 +139,7 @@
 {
 	float: right;
 	margin-right: 0px;
+	margin-left: 10px;
 }
 
 /* add items page */
@@ -140,6 +147,7 @@
 {
 	font-size: 30px;
 	color: #ffffff;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 }
 
 .manageCollectionItems
@@ -166,14 +174,15 @@
 .collectionAddItemsTitle
 {
 	font-size: 18px;
-	font-weight: bold;
-	color: #ffffff;
+	font-weight: normal;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	color: #66c0f4;
 	padding-bottom: 10px;
 }
 
 .collectionAddItemsSection
 {
-	border: 1px solid #729AC6;
+	border: 1px solid #66c0f4;
 	padding: 15px;
 	margin-top: 20px;
 	margin-right: 17px;
@@ -243,7 +252,7 @@
 
 .itemChoice.inCollection
 {
-	background-color: #323233;
+	background-color: rgba( 84, 133, 183, 0.2);
 }
 
 .itemChoiceNotVisible
@@ -373,8 +382,7 @@
 {
 	position: relative;
 	width: 638px;
-	outline: 1px solid #4d4d4d;
-	background-color:#4d4d4d;
+	background-color: rgba( 84, 133, 183, 0.2);
 	margin-bottom: 5px;
 	cursor: move;
 	cursor: -moz-grab;
@@ -382,8 +390,8 @@
 
 .managedCollectionItem:hover
 {
-	outline: 1px solid #3a3a3a;
-	background-color:#636363;
+	outline: 1px solid #66c0f4;
+	background-color: rgba( 84, 133, 183, 0.4);
 }
 
 .managedCollectionItem:hover .managedCollectionItemControls
@@ -408,13 +416,15 @@
 
 .manageItemsTitle
 {
-	font-size: 14px;
-	color: #729AC6;
+	font-size: 18px;
+	color: #66c0f4;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 }
 
 .manageItemsDragDesc
 {
 	line-height: 20px;
+	font-size: 13px;
 }
 
 .manageItemsSort
@@ -451,7 +461,7 @@
 {
 	padding-top: 5px;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 .missingCollectionItem

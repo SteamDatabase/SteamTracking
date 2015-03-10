@@ -106,12 +106,12 @@ input[type=text], input[type=password], select {
 	position:relative;
 	text-align:left;
 	width: auto;
-	font-size: 11px;
-	color:#777777;
+	font-size: 12px;
+	color: #8F98A0;
 	border:0;
 	margin: 0;
 	padding: 32px 0;
-	background-color: #000000;
+	background-color: rgba( 0, 0, 0, 0.4 );
 }
 
 body.flat_page #footer, body.headerless_page #footer {
@@ -143,8 +143,8 @@ body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
 }
 
 #footer a {
-	color:#777777;
-	text-decoration: underline;
+	color: #C6D4DF;
+	text-decoration: none;
 }
 
 #footer a:hover {
@@ -155,6 +155,7 @@ body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
 	padding: 2px 0 0 0;
 	line-height: 14px;
 	display: block;
+	color: #8F98A0;
 }
 
 #footerLogo {
@@ -379,7 +380,11 @@ a.pagelink:hover {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	position: relative;
 
-	padding: 6px 6px 6px 66px;
+	padding: 8px 8px 8px 52px;
+}
+.commentthread_entry .commentthread_user_avatar {
+	left: 8px;
+	top: 8px;
 }
 
 .commentthread_allcommentslink {
@@ -406,9 +411,15 @@ a.commentthread_allcommentslink:hover {
 }
 
 .commentthread_entry_quotebox {
-	border: 1px solid #515152;
-	border-radius: 3px;
-	padding: 7px;
+	border: none;
+	padding: 4px 6px 4px 6px;
+	font-size: 12px;
+	background-color: rgba( 0, 0, 0, 0.4 );
+	border-radius: 4px;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-right: 1px solid #354357;
+	border-bottom: 1px solid #354357;
 }
 
 .commentthread_textarea {

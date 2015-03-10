@@ -1090,7 +1090,7 @@ a.popup_menu_item:hover h4 {
 	border: 1px solid #706d69;
 	border-radius: 2px;
 	cursor: pointer;
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/header/btn_header_installsteam_gray.png );
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/header/btn_header_installsteam_gray.png?v=1 );
 	background-position: 0 -21px;
 }
 

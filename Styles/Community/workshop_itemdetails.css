@@ -374,6 +374,18 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+.panel .requiredDLCItem {
+	background-color: rgba( 84, 133, 183, 0.2);
+	padding: 1px;
+}
+.panel .requiredDLCName {
+	display: inline-block;
+	font-size: 10px;
+	padding-top: 3px;
+	width: 120px;
+	height: 23px;
+	overflow: hidden;
+}
 
 .rateUpCount
 {
@@ -2560,6 +2572,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	right: 12px;
 	bottom: 12px;
 }
+
 .game_area_purchase_game.buy .commerce_container {
 	position: absolute;
 	right: 12px;
@@ -2649,6 +2662,12 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	font-weight: normal;
 	margin-right: 8px;
 	margin-left: 12px;
+}
+
+.commerce_price.purchase_dialog
+{
+	position: relative;
+	top: -10px;
 }
 
 .official_content_text_area

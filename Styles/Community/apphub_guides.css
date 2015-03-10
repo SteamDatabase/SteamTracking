@@ -11,20 +11,24 @@
 .apphub_Guides .subtitle
 {
 	font-size: 14px;
-	color: #959595;
-	margin-bottom: 16px;
-	margin-top: 16px;
+	color: #c6d4df;
+	padding-top: 16px;
+	padding-left: 16px;
+	padding-bottom: 16px;
+	background: rgba( 0, 0, 0, 0.4 );
+	margin-top: -10px;
+	margin-bottom: 8px;
 }
 
 .apphub_Guides .subtitle a
 {
-	color: #959595;
+	color: #c6d4df;
 	text-decoration:underline;
 }
 
 .apphub_Guides .subtitle a:hover
 {
-	color: #e5e5e5;
+	color: #fff;
 }
 
 #ig_bottom
@@ -233,6 +237,13 @@
 	background-position: top center;
 	margin-right: 0px;
 }
+.guide_category_tags label {
+	color: #fff;
+}
+.guide_category_tags label:hover {
+	color: #66c0f4;
+	cursor: pointer;
+}
 
 .guide_category_tags_title
 {
@@ -258,14 +269,14 @@
 	margin-bottom: 8px;
 	float: left;
 	background: #464646; /* Old browsers */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#363636), color-stop(95%,#464646));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#464646',GradientType=0 );background: -moz-linear-gradient( top, #363636 5%, #464646 95%);background: -webkit-linear-gradient( top, #363636 5%, #464646 95%);background: -o-linear-gradient( top, #363636 5%, #464646 95%);background: -ms-linear-gradient( top, #363636 5%, #464646 95%);background: linear-gradient( to bottom, #363636 5%, #464646 95%);	border: 1px solid #1C1D1D;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#17435c), color-stop(95%,#21658a));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17435c', endColorstr='#21658a',GradientType=0 );background: -moz-linear-gradient( top, #17435c 5%, #21658a 95%);background: -webkit-linear-gradient( top, #17435c 5%, #21658a 95%);background: -o-linear-gradient( top, #17435c 5%, #21658a 95%);background: -ms-linear-gradient( top, #17435c 5%, #21658a 95%);background: linear-gradient( to bottom, #17435c 5%, #21658a 95%);	border: 1px solid #1C1D1D;
 	cursor: pointer;;
 }
 
 .guide_home_category_selection:hover
 {
 	background: #464646; /* Old browsers */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484848), color-stop(95%,#5a5a5a));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#5a5a5a',GradientType=0 );background: -moz-linear-gradient( top, #484848 5%, #5a5a5a 95%);background: -webkit-linear-gradient( top, #484848 5%, #5a5a5a 95%);background: -o-linear-gradient( top, #484848 5%, #5a5a5a 95%);background: -ms-linear-gradient( top, #484848 5%, #5a5a5a 95%);background: linear-gradient( to bottom, #484848 5%, #5a5a5a 95%);	border: 1px solid #5a5a5a;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#2f89bc), color-stop(95%,#66c0f4));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f89bc', endColorstr='#66c0f4',GradientType=0 );background: -moz-linear-gradient( top, #2f89bc 5%, #66c0f4 95%);background: -webkit-linear-gradient( top, #2f89bc 5%, #66c0f4 95%);background: -o-linear-gradient( top, #2f89bc 5%, #66c0f4 95%);background: -ms-linear-gradient( top, #2f89bc 5%, #66c0f4 95%);background: linear-gradient( to bottom, #2f89bc 5%, #66c0f4 95%);	border: 1px solid #5a5a5a;
 }
 
 .guide_home_category_selection .guide_category_icon
@@ -301,6 +312,10 @@
 .guide_home_category_count
 {
 	padding-top: 0px;
+	color: #2f89bc;
+}
+.guide_home_category_selection:hover .guide_home_category_count {
+	color: #c6d4df;
 }
 
 .guideInfo
@@ -323,5 +338,9 @@
 	padding-top: 28px;
 	padding-left: 12px;
 }
-
+#your_guides .rightDetailsBlock p {
+	color: #c6d4df;
+	margin-bottom: 0px;
+	font-size: 14px;
+}
 

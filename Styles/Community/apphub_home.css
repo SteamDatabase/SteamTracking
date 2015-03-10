@@ -214,7 +214,7 @@ body.apphub_blue
 .apphub_SectionFilterLabel
 {
 	float: left;
-	color: #58759f;
+	color: #2f89bc;
 	text-transform: uppercase;
 	padding-left: 12px;
 	line-height: 46px;
@@ -231,7 +231,15 @@ body.apphub_blue
 {
 	float:right;
 	padding-top: 16px;
-	padding-right: 8px;
+	padding-right: 16px;
+	color: #c6d4df;
+}
+.apphub_SectionFilter .learnMore a {
+	text-decoration: underline;
+	color: #c6d4df;
+}
+.apphub_SectionFilter .learnMore a:hover {
+	color: #fff;
 }
 
 .apphub_AllContentText
@@ -524,7 +532,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 {
 	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_gameinfo.png' );*/
     border-top: 1px solid #272f38;
-    background-color: #1B1B1B;
+    background-color: rgba( 0, 0, 0, 0.8 );
 	width: 948px;
 	height: 212px;
 	text-align: left;

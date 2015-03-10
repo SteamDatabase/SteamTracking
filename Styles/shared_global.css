@@ -949,11 +949,11 @@ div#global_header .activebg {
 }
 
 .header_installsteam_btn_green .header_installsteam_btn_leftcap, .header_installsteam_btn_green .header_installsteam_btn_rightcap, .header_installsteam_btn_green .header_installsteam_btn_content {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_green.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_green.png?v=1' );
 }
 
 .header_installsteam_btn_gray .header_installsteam_btn_leftcap, .header_installsteam_btn_gray .header_installsteam_btn_rightcap, .header_installsteam_btn_gray .header_installsteam_btn_content {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_gray.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_gray.png?v=1' );
 }
 
 .header_installsteam_btn_leftcap {

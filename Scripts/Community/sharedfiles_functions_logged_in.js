@@ -64,6 +64,9 @@ function CheckVoteResultsJSON( json )
 		case 21:
 			alert( 'You must be logged in to perform that action.' );
 			return false;
+		case 15:
+			alert( 'Your account does not have sufficient privileges to perform this action. Please make sure that you own the this game and that your account is in good standing.' );
+			return false;
 		case 1:
 			return true;
 		default:

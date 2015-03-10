@@ -973,31 +973,9 @@ a.game_button {
 	text-align: center;
 }
 
-/* from workshop_itemdetails.css */
 .tradeoffer .btn_report {
 	margin-top: -8px;
 	float: right;
-}
-
-.btn_report
-{
-	padding-left: 32px;
-	width: 0;
-	line-height: 30px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/report_ico_tiled.png');
-	background-position: 8px 0px;
-	background-repeat: no-repeat;
-}
-
-.btn_report.toggled
-{
-	background-position: 8px -60px;
-}
-
-.btn_report:hover
-{
-	background-position: 8px -30px;
-	text-decoration: none;
 }
 
 .trade_scam_report_label {

@@ -65,7 +65,7 @@ a:hover {
 }
 
 #BG_bottom {
-	background: #262627 url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/greenlight_content_background.png') top center no-repeat;
+	background: rgba( 0, 0, 0, 0.2 );
 	width: 950px;
 	margin: 0 auto 0 auto;
 	text-align:left;
@@ -480,6 +480,11 @@ a.general_btn:hover {
 	margin-bottom: 16px;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rightWorkshopBlockFooter.gif');
 }
+.rightSectionMinorText {
+	color: #61686D;
+	font-size: 12px;
+	margin-bottom: 6px;
+}
 
 .rightDetailsBlock
 {
@@ -865,7 +870,7 @@ h3 {
 
 .waitingForAcceptanceText
 {
-	color: #9bccff;
+	color: #a13e37;
 	margin-bottom: 10px;
 }
 
@@ -2850,11 +2855,12 @@ input.searchText
 	margin:0;
 	border:none;
 	position:absolute;
+	box-shadow: none;
 	top:14px;
 	left:12px;
 	width: 244px;
 	height: 20px;
-	background-color:#303030;
+	background-color: transparent;
 }
 
 .searchTextSubmitImg
@@ -3755,6 +3761,7 @@ div.hover {
 	position: relative;
 	padding-top: 20px;
 	padding-bottom: 20px;
+
 }
 
 .editCollectionControls .saveCollection

@@ -156,6 +156,8 @@ body
 	width: 294px;
 	margin-right: 10px;
 	font-size: 12px;
+	line-height: 17px;
+	color: #c6d4df;
 }
 
 .community_home_join_steam
@@ -165,7 +167,8 @@ body
 
 .community_home_join_steam a, .community_home_join_steam a:visited
 {
-	color: #939393;
+	color: #c6d4df;
+	text-decoration: underline;
 }
 .community_home_join_steam a:hover
 {
@@ -174,7 +177,8 @@ body
 
 .community_home_app_shortcuts_list_header
 {
-	font-size: 12px;
+	font-size: 11px;
+	color: #8f98a0;
 	text-transform: uppercase;
 	padding-bottom: 10px;
 }
@@ -209,7 +213,8 @@ body
 
 .community_home_search_title
 {
-	font-size: 12px;
+	font-size: 11px;
+	color: #8f98a0;
 	text-transform: uppercase;
 	padding-bottom: 5px;
 }
@@ -234,6 +239,7 @@ input.community_home_search_app_input
 	border: none;
 	outline: none;
 	position: absolute;
+	box-shadow: none;
 	top: 6px;
 	left: 6px;
 	width: 250px;
@@ -274,6 +280,7 @@ input.community_home_search_players_input
 	border: none;
 	outline: none;
 	position: absolute;
+	box-shadow: none;
 	top: 6px;
 	left: 6px;
 	width: 250px;

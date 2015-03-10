@@ -12,7 +12,7 @@
 {
 	display: table;
 	width: 958px;
-	height: 206px;
+	height: 160px;
 	position: relative;
 }
 
@@ -35,14 +35,16 @@
 .customBrowseTitle
 {
 	font-size: 22px;
-	color: #ffffff;
+	color: #66c0f4;
+	font-family: "Motiva Sans Light", "Motiva Sans", Arial, Helvetica, sans-serif;
 }
 
 .customBrowseText
 {
 	font-size: 13px;
 	line-height: 17px;
-	color: #ffffff;
+	color: #a5b4bd;
+	font-family: "Motiva Sans Light", "Motiva Sans", Arial, Helvetica, sans-serif;
 }
 
 .Portal2CustomTextTitle
@@ -120,7 +122,10 @@
 	color: #cccccc;
 	padding-left: 10px;
 }
-
+.workshop_browse_tab.active {
+	border-bottom: 2px solid #fff;
+	padding-bottom: 8px;
+}
 .workshop_browse_tab a:hover,
 .workshop_browse_tab.active a:hover
 {

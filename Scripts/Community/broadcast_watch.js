@@ -261,7 +261,7 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 	})
 	.fail( function()
 	{
-		_watch.ShowVideoError( 'An unexpected error occurred while trying to load this broadcast' );
+		_watch.ShowVideoError( 'An unexpected error occurred while trying to view this broadcast' );
 	});
 }
 
