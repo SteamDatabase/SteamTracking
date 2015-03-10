@@ -173,7 +173,7 @@ body
     -webkit-justify-content: center;
     }
 
-#loading_video_content
+#loaded_video_content
 {
     position: absolute;
     left: 0px;
@@ -185,7 +185,7 @@ body
     display: none;
 }
 
-.loading_video #loading_video_content
+.loading_video #loaded_video_content
 {
         display: inline-flex;
     align-items: center;
@@ -211,7 +211,7 @@ body
 
 .loading_text.error
 {
-    /*font-style: italic;*/
+    margin-top: -130px;
 }
 
 .loading_text.error a
@@ -220,13 +220,15 @@ body
     text-decoration: underline;
 }
 
-.loading_wrapper
+.loading_wrapper,
+.loaded_wrapper
 {
     position: relative;
     width: 750px;
 }
 
-.show_player .loading_wrapper
+.show_player .loading_wrapper,
+.show_player .loaded_wrapper
 {
     display: none;
 }

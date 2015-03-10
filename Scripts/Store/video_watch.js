@@ -45,10 +45,10 @@ CVideoWatch.prototype.ShowVideoError = function( strError )
 {
 	if ( $J( '#page_contents' ).hasClass( 'show_player' ) )
 	{
-		$J( '#video_loading_text' ).html( strError );
-		$J( '#video_loading_text' ).addClass( 'error' );
+		$J( '#video_loaded_text' ).html( strError );
+		$J( '#video_loaded_text' ).addClass( 'error' );
 		$J( '#page_contents' ).addClass( 'loading_video' );
-		$J( '.loading_wrapper' ).show();
+		$J( '.loaded_wrapper' ).show();
 	}
 	else
 	{
@@ -62,7 +62,7 @@ CVideoWatch.prototype.SetVideoLoadingText = function( strText )
 {
 	if ( $J( '#page_contents' ).hasClass( 'show_player' ) )
 	{
-		$J( '#video_loading_text' ).html( strText  );
+		$J( '#video_loaded_text' ).html( strText  );
 	}
 	else
 	{
