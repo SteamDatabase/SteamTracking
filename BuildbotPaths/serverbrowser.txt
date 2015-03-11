@@ -213,7 +213,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui/IImage.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui/IScheme.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/icommandline.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/parseurl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/strtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/serverbrowser/BaseGamesPage.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/serverbrowser/BaseGamesPage.h

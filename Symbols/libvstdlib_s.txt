@@ -616,6 +616,7 @@
  T V_stricmp(char const*, char const*)
  T V_stricmp_prefix
  T V_StripAndPreserveHTML
+ T V_StripAndPreserveHTMLCore
  T V_StripBBCode
  T V_StripExtension
  T V_StripFilename
@@ -675,6 +676,7 @@
  T V_URLEncodeInternal(char*, int, char const*, int, bool)
  T V_URLEncodeRaw
  T V_URLParse
+ T V_URLPartsToString
  T V_UTF16CharsToUTF32
  T V_UTF16CharsToUTF8
  T V_UTF16ToUChar32

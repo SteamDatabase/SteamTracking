@@ -606,6 +606,7 @@ DebugStyleBlock TextEntry:focus
 .DebugPropertyRow
 {
 	flow-children: right;
+    tooltip-position: bottom;
 }
 
 .DebugPropertyLeftMargin

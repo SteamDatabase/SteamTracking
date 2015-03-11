@@ -34,11 +34,13 @@
  av_register_all
  av_register_malloc
  avresample_alloc_context
+ avresample_available
  avresample_close
  avresample_convert
  avresample_free
  avresample_get_out_samples
  avresample_open
+ avresample_read
  av_rescale
  av_rescale_q
  av_samples_get_buffer_size
@@ -1858,6 +1860,7 @@
  printf
  pthread_attr_init
  pthread_attr_setstacksize
+ pthread_cond_broadcast
  pthread_cond_destroy
  pthread_cond_init$UNIX2003
  pthread_cond_signal
@@ -2334,7 +2337,9 @@
  R typeinfo name for CUtlRBTree<unsigned int, unsigned short, CDefLess<unsigned int>, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >
+ R typeinfo name for CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >
  R typeinfo name for CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >
+ R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
  R typeinfo name for CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >
  R typeinfo name for CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >
  R typeinfo name for CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >
@@ -3181,6 +3186,7 @@
  T CAudioResampler::BInit(EAudioSampleFormat, int, unsigned int, EAudioSampleFormat, int, unsigned int)
  T CAudioResampler::~CAudioResampler()
  T CAudioResampler::Convert(unsigned char*, int*, unsigned char const*, int)
+ T CAudioResampler::Flush()
  T CAudioResampler::GetChannelMaskOut()
  T CAudioResampler::GetFormatOut()
  T CAudioResampler::GetMaxConvertSamples(int)
@@ -3967,6 +3973,7 @@
  T CONF_set_nconf
  t conf_value_LHASH_COMP
  t conf_value_LHASH_HASH
+ T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
  T ConVar::ApplyReplicatedValue(char const*)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
@@ -3979,11 +3986,13 @@
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
  T ConVar::Init()
+ T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
+ T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetValue(char const*)
@@ -4130,6 +4139,7 @@
  T CRTime::CSecsPassed() const
  T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32FromHTTPDateString(char const*)
+ T CRTime::RTime32FromRFC3339UTCString(char const*)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::UpdateRealTime()
  T CRYPTO_add_lock
@@ -5809,6 +5819,7 @@
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::InsertBefore(int, CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsLeft(int, int)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Validate(CValidator&, char const*)
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::GrowVector(int)
@@ -5832,6 +5843,11 @@
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::RemoveAll()
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::ShiftElementsRight(int, int)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::Validate(CValidator&, char const*)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::~CUtlVector()
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::GrowVector(int)
@@ -6027,7 +6043,7 @@
  T CVideoDecoderLibav::BDecodeQueuedVideoFrame(CVideoDecodedFrame**, long long, bool)
  T CVideoDecoderLibav::BHasAudioTrack()
  T CVideoDecoderLibav::BHasVideoTrack()
- T CVideoDecoderLibav::BInit(CVideoFileStream*, CVideoFileStream*)
+ T CVideoDecoderLibav::BInit(CVideoFileStream*, CVideoFileStream*, bool)
  T CVideoDecoderLibav::BQueueVideoFrameSkipAudio(bool*)
  T CVideoDecoderLibav::BRemoveUpToLastQueuedKeyFrame(long long)
  T CVideoDecoderLibav::Close()
@@ -6052,9 +6068,11 @@
  T CVideoDecoderLibav::SetAudioOut(int, unsigned long long, int)
  T CVideoDecoderLibav::SetStartTime()
  T CVideoDecoderLibav::Validate(CValidator&, char const*)
+ T CVideoFileStream::BHTTPDownloadFailed()
  T CVideoFileStream::BLoad(char const*, VideoByteRange_t*)
  T CVideoFileStream::BLoadFromExternalBuffer(CUtlBuffer*)
  T CVideoFileStream::BRead(unsigned char*, unsigned int, unsigned int*, bool*)
+ T CVideoFileStream::BRetryDownload()
  T CVideoFileStream::BSeek(long long, CVideoFileStream::ESeekOrigin)
  T CVideoFileStream::Close()
  T CVideoFileStream::CloseHTTPRequest(bool)
@@ -6062,6 +6080,7 @@
  T CVideoFileStream::CVideoFileStream(CHTTPClient*)
  T CVideoFileStream::GetAvailableFromTell()
  T CVideoFileStream::GetDownloadBitrate()
+ T CVideoFileStream::GetDownloadFinish()
  T CVideoFileStream::GetFileSize()
  T CVideoFileStream::GetPath()
  T CVideoFileStream::OnBodyDataReceived(CHTTPRequestHandle*, CUtlBuffer&, unsigned int)
@@ -6082,15 +6101,19 @@
  T CVideoManifest::BInitWithDecoder(CVideoDecoderLibav*)
  T CVideoManifest::BLoadIndexSegment(VideoSegmentKey_t const&, CVideoFileStream*, CVideoFileStream*)
  T CVideoManifest::BNeedIndexSegment(VideoSegmentKey_t const&)
+ T CVideoManifest::BNeedUpdate()
  T CVideoManifest::BRepresentationHasInitSegment(VideoSegmentKey_t const&)
+ T CVideoManifest::BUpdateFromMPD(CUtlBuffer&)
  T CVideoManifest::ChangeToLowestRepresentation(VideoSegmentKey_t*)
  T CVideoManifest::~CVideoManifest()
  T CVideoManifest::CVideoManifest()
  T CVideoManifest::DecrementSegment(VideoSegmentKey_t*)
  T CVideoManifest::FillInTemplateURL(CUtlString*, VideoAdaptationSet_t*, VideoRepresentation_t*, int, char const*)
  T CVideoManifest::GetDefaultRepresentation(VideoSegmentKey_t*, EVideoTrack)
+ T CVideoManifest::GetLiveContentStartTime(unsigned int)
  T CVideoManifest::GetRepresentationForBandwidth(VideoSegmentKey_t const&, long long, int)
  T CVideoManifest::GetRepresentationVideoInfo(VideoSegmentKey_t const&, int*, int*)
+ T CVideoManifest::GetSegmentAvailableFromNow(VideoSegmentKey_t const&, unsigned int)
  T CVideoManifest::GetSegmentForTime(VideoSegmentKey_t*, long long)
  T CVideoManifest::GetSegmentTotal(VideoSegmentKey_t const&)
  T CVideoManifest::IncrementSegment(VideoSegmentKey_t*)
@@ -6116,7 +6139,6 @@
  T CVideoPlayer::BLoad(char const*)
  T CVideoPlayer::BLoad(unsigned char const*, unsigned int)
  T CVideoPlayer::BPlaybackComplete()
- T CVideoPlayer::BPlaybackError()
  T CVideoPlayer::BRepeatIfNecessary()
  T CVideoPlayer::BRunFrame()
  T CVideoPlayer::BRunFramePause()
@@ -6139,9 +6161,11 @@
  T CVideoPlayer::FillAudioToPTS(long long)
  T CVideoPlayer::ForceVideoRepresentation(int)
  T CVideoPlayer::FreeDecoderAndReleaseStream(EVideoTrack, CVideoDecoderLibav*)
+ T CVideoPlayer::GetBufferedTime(EVideoTrack)
  T CVideoPlayer::GetCurrentPlaybackTime()
  T CVideoPlayer::GetCurrentVideoRepresentation()
  T CVideoPlayer::GetDuration()
+ T CVideoPlayer::GetPlaybackError()
  T CVideoPlayer::GetPlaybackSpeed()
  T CVideoPlayer::GetPlaybackState()
  T CVideoPlayer::GetPlaybackTime()
@@ -6189,6 +6213,7 @@
  T CVideoPlayer::Stop()
  T CVideoPlayer::SuggestMaxVeritcalResolution(int)
  T CVideoPlayer::UpdateMainThreadPlaybackInfo()
+ T CVideoPlayer::UpdateManifest()
  T CVideoPlayer::Validate(CValidator&, char const*)
  T CVideoWebMCuesParser::AddCuePoint(unsigned long long, unsigned long long, unsigned long long)
  T CVideoWebMCuesParser::BParse(CVideoFileStream*, CVideoFileStream*)
@@ -8599,6 +8624,7 @@
  T Plat_GetStackBackTrace
  T Plat_IsInDebugSession
  T Plat_localtime
+ T Plat_MSTime
  T Plat_OutputDebugString
  T Plat_RelativeTickFrequency
  T Plat_RelativeTicks
@@ -8894,6 +8920,8 @@
  T SortRepresentationByBandwidth(VideoRepresentation_t* const&, VideoRepresentation_t* const&)
  T _SpewMessage
  T _SpewMessageType
+ T SpewOutputFunc
+ t SpewOutputFunc(SpewType_t, char const*)
  t _sse_AES_decrypt_compact
  t _sse_AES_encrypt_compact
  T ssl23_accept

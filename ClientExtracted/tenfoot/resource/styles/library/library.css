@@ -4146,6 +4146,7 @@ DropDown
 #GamesFilterDropDownMenu Label
 {
 	margin-right: 8px;
+	min-height: 52px;
 	visibility: visible;
 }
 

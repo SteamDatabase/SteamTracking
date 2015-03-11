@@ -1,0 +1,32 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/login/loginhelp.css" />
+	</styles>
+
+	<LoginHelpWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonNext">
+		<Label class="WizardChildTitle" text="#LoginHelp_Title" />
+		<Label class="WizardChildDescription" text="#LoginHelp_Description" />
+
+		<Panel id="RadioButtonContainer">
+			<Panel class="InputContainerDown GapDown">
+				<RadioButton group="OPT" class="Button RadioButton" id="RadioResetPassword" tabindex="0.0" text="#LoginHelp_ForgotPassword" selectionpos="auto" />
+			</Panel>
+			<Panel class="InputContainerDown GapDown">
+				<RadioButton group="OPT" class="Button RadioButton" id="RadioRecoverAuthenticator" tabindex="0.0" text="#LoginHelp_LostAuthenticator" selectionpos="auto" />
+			</Panel>
+		</Panel>
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#WizardButton_Next" />
+			</Button>
+			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
+				<Label id="Label" text="#WizardButton_Cancel" />
+			</Button>
+		</Panel>
+
+	</LoginHelpWizardChild>
+
+</root>

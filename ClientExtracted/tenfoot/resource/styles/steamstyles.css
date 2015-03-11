@@ -307,21 +307,34 @@ DropDownMenu
 
 DropDownMenu Label
 {
+	color: #ffffff99;
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+
+	transition-property: color, transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+DropDownMenu .DropDownChild:hover Label,
+DropDownMenu .DropDownChild:focus Label
+{
+	color: applabelselected;
+}
+
+DropDownMenu .DropDownChild
+{
 	width: 100%;
 	padding: 4px 3px 4px 3px;
-	margin: 2px 0px;
 	margin-right: 8px;
 
-	color: #ffffff99;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
 	border-style: solid;
 	border-width: 5px;
 	border-color: #3d414200;
 	box-shadow: box_shadow_off_color -4.5px -4.5px 18px 9px;
 
-	font-family: platformfont;
-	font-size: 24px;
-	font-weight: normal;
 	transform: translatex(-7px);
 
 	transition-property: border, background-color, color, box-shadow, transform;
@@ -329,9 +342,8 @@ DropDownMenu Label
 	transition-timing-function: ease-in-out;
 }
 
-DropDownMenu Label:hover,
-
-DropDownMenu Label:focus
+DropDownMenu .DropDownChild:hover,
+DropDownMenu .DropDownChild:focus
 {
 	color: applabelselected;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );

@@ -389,12 +389,15 @@
  open$UNIX2003
  property_copyAttributeList
  protocol_getMethodDescription
+ pthread_cond_broadcast
  pthread_cond_destroy
  pthread_cond_init
  pthread_cond_init$UNIX2003
  pthread_cond_signal
  pthread_cond_timedwait
  pthread_cond_timedwait$UNIX2003
+ pthread_cond_wait
+ pthread_cond_wait$UNIX2003
  pthread_getspecific
  pthread_join
  pthread_join$UNIX2003

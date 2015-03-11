@@ -335,6 +335,7 @@ ControllerBindingButton.BindingButton Label
 	margin-left: 96px;
 	vertical-align: center;
 	width: 100%;
+	text-overflow: clip;
 }
 
 ControllerBindingButton.BindingButton.Right Label
@@ -823,6 +824,11 @@ Slider:Selected
 	opacity: 0.0;
 }
 
+#ModeProperties.ModeShiftVisible
+{
+	//background-color: #121d0a;
+}
+
 #ModeProperties:descendantfocus, #ChooseBinding:descendantfocus
 {
 	opacity: 1.0;
@@ -834,6 +840,11 @@ Slider:Selected
 	height: tabheight;
 	padding-top: 10px;
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e354dff ), color-stop( 0.50, #0d1f35ff ), to( #0e354dff ) );
+}
+
+.ModeShiftVisible #TabBackground
+{
+	//background-color: gradient( linear, 0% 0%, 100% 0%, from( #132606ff ), color-stop( 0.50, #0b1a06ff ), to( #132606ff ) );
 }
 
 #PropertiesBackground
@@ -935,22 +946,22 @@ Slider:Selected
 	visibility: collapse;
 }
 
-.ModeLeftJoystickVisible .JoystickMode
+.ModeJoystickVisible .JoystickMode
 {
 	visibility: visible;
 }
 
-.ModeLeftJoystickVisible .JoystickMode.Advanced
+.ModeJoystickVisible .JoystickMode.Advanced
 {
 	visibility: collapse;
 }
 
-.ModeLeftJoystickVisible.AdvancedPropertiesVisible .JoystickMode
+.ModeJoystickVisible.AdvancedPropertiesVisible .JoystickMode
 {
 	visibility: collapse;
 }
 
-.ModeLeftJoystickVisible.AdvancedPropertiesVisible .JoystickMode.Advanced
+.ModeJoystickVisible.AdvancedPropertiesVisible .JoystickMode.Advanced
 {
 	visibility: visible;
 }
@@ -1066,12 +1077,12 @@ Slider:Selected
 	visibility: visible;
 }
 
-.ModeTriggerVisible #LeftTab
+.ModeTriggerVisible #ModeTab
 {
 	visibility: collapse;
 }
 
-.ModeTriggerVisible #RightTab
+.ModeTriggerVisible #ModeShiftButtonTab
 {
 	visibility: collapse;
 }
@@ -1096,12 +1107,27 @@ Slider:Selected
 	visibility: visible;
 }
 
-.AdvancedPropertiesVisible #LeftTab
+.AdvancedPropertiesVisible #ModeTab
 {
 	visibility: collapse;
 }
 
-.AdvancedPropertiesVisible #RightTab
+.AdvancedPropertiesVisible #ModeShiftButtonTab
+{
+	visibility: collapse;
+}
+
+#ModeShiftPulldownTab
+{
+	visibility: collapse;
+}
+
+.ModeShiftVisible #ModeShiftPulldownTab
+{
+	visibility: visible;
+}
+
+.ModeShiftVisible #ModeShiftButtonTab, .ModeShiftVisible.AdvancedPropertiesVisible #ModeShiftPulldownTab
 {
 	visibility: collapse;
 }
@@ -1167,7 +1193,6 @@ Slider:Selected
 
 .FieldWrapper Button Label, .FieldWrapper ControllerBindingButton Label
 {
-	padding-top: 5px;
 	color: white;
 	font-size: 24px;
 	font-family: platformfont;
@@ -1250,6 +1275,15 @@ Slider:Selected
 	background-image: url("file://{images}/library/controller/controller_config_inspector_trackpad_zone_modifier.png");
 }
 
+#CenterImageMouseRotation
+{
+	background-image: url("file://{images}/library/controller/controller_config_inspector_trackpad_rotation.png");
+	visibility: collapse;
+	background-position: center center;
+	height: 400px;
+	margin-top: 28px;
+}
+
 
 DropDownMenu.DropDownMenuVisible
 {
@@ -1297,7 +1331,7 @@ DropDownMenu.DropDownMenuVisible
 #RightColumnWrapper
 {
 	width: fieldwidth;
-	height: 410px;
+	height: 420px;
 }
 
 .AdvancedPropertiesWrapper
@@ -1324,7 +1358,8 @@ DropDownMenu.DropDownMenuVisible
 
 .AdvancedPropertiesVisible #HideAdvancedProperties
 {
-	visibility: visible;
+	// There is already a back button in the footer, so keep this collapsed for now
+	//visibility: visible;
 }
 
 #KeyboardWrapper

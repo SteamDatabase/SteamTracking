@@ -41,7 +41,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uievent.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uievents.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uifileresource.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uifontfileloaderosx.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uifontfileloaderlinux.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uifontfile.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uiinput.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uijsregistration.o
@@ -50,7 +50,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uipbmsgbase.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uirenderengine.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uischeduleddel.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitextlayoutosx.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uisoundsystem.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitextlayoutpango.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitoplevelwindow.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitoplevelwindowoverlay.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitoplevelwindowsdl.o
@@ -359,8 +360,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uirenderengine.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/../steamexe/osx/ipctool.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/uifontfileloaderosx.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/uitextlayoutosx.mm
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/uifontfileloaderlinux.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/uitextlayoutpango.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/transformations.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uicommands.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uiengine.cpp
@@ -373,6 +374,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uipanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uipbmsgbase.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uischeduleddel.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uisoundsystem.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uisoundsystem.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindow.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowoverlay.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowsdl.cpp

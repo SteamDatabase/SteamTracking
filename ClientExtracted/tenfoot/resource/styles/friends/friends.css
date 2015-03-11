@@ -1276,6 +1276,10 @@ FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedImageFriendRequ
 {
 	visibility: visible;
 }
+FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedImageGroupRequest
+{
+	visibility: visible;
+}
 
 FriendsIndicatorContainer.Chat #FriendIndicatorContainedTextChat
 {
@@ -1287,6 +1291,7 @@ FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextChat,
 FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextChat,
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextChat,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextChat,
+FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextChat,
 {
 	visibility: collapse;
 }
@@ -1299,6 +1304,7 @@ FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextVoiceCha
 FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChat,
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChat,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChat,
+FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChat,
 {
 	visibility: collapse;
 }
@@ -1310,6 +1316,7 @@ FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextVoiceCha
 FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChatDialing,
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChatDialing,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChatDialing,
+FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChatDialing,
 {
 	visibility: collapse;
 }
@@ -1320,6 +1327,7 @@ FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextVoiceCha
 FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChatRinging,
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChatRinging,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChatRinging,
+FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChatRinging,
 {
 	visibility: collapse;
 }
@@ -1329,6 +1337,7 @@ FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChat
 }
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChatOnHold,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChatOnHold,
+FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChatOnHold,
 {
 	visibility: collapse;
 }
@@ -1336,11 +1345,17 @@ FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextGameInvite
 {
 	visibility: visible;
 }
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextGameInvite
+FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextGameInvite,
+FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGameInvite
 {
 	visibility: collapse;
 }
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendRequest
+{
+	visibility: visible;
+}
+
+FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
 {
 	visibility: visible;
 }

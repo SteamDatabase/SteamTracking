@@ -5110,11 +5110,8 @@
  T CUtlString::AssertStringTooLong()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
- T CUtlStringBuilder::Data::TakeOwnership(unsigned long&, unsigned long&)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
- T CUtlStringBuilder::TakeOwnership(unsigned long*, unsigned long*)
- T CUtlStringResult::~CUtlStringResult()
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
@@ -5838,7 +5835,6 @@
  T Sys_ValidateModules(CValidator*, bool)
  t unsigned char const* HTML_GetTextureMemory<CMsgNeedsPaint>(CCrossProcessSharedMemory&, CMsgNeedsPaint const*, unsigned int)
  T URLLabel_Factory()
- T URLParts_t::~URLParts_t()
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T vgui::AnimatingImagePanel::AddImage(vgui::IImage*)
  T vgui::AnimatingImagePanel::~AnimatingImagePanel()
@@ -8597,8 +8593,6 @@
  V_GetFileExtension
  V_IsAbsolutePath
  V_isbreakablewspace
- V_IsTLD
- V_IsValidDomainNameCharacter
  V_IsValidURLCharacter
  V_MakeAbsolutePath
  V_pretifymem
@@ -8618,15 +8612,12 @@
  V_strncmp
  V_strncpy
  V_strnicmp
- V_strristr
  V_strtoui64
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  V_tolower
- V_UnicodeAdvance(char*, int)
  V_UnqualifiedFileName
- V_URLParse
  V_UTF16ToUTF32
  V_UTF16ToUTF8
  V_UTF32CharsToUTF8

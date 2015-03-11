@@ -976,6 +976,7 @@
  R typeinfo name for CUtlVector<char, CUtlMemory<char> >
  R typeinfo name for CUtlVector<CNotificationManager::NotificationPanel, CUtlMemory<CNotificationManager::NotificationPanel> >
  R typeinfo name for CUtlVector<Color, CUtlMemory<Color> >
+ R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
  R typeinfo name for CUtlVector<CScheme*, CUtlMemory<CScheme*> >
  R typeinfo name for CUtlVector<CScheme::fontalias_t, CUtlMemory<CScheme::fontalias_t> >
  R typeinfo name for CUtlVector<CStyleAppearance::DrawOp_t, CUtlMemory<CStyleAppearance::DrawOp_t> >
@@ -2664,6 +2665,7 @@
  T CUtlVector<Color, CUtlMemory<Color> >::SetCount(int)
  T CUtlVector<Color, CUtlMemory<Color> >::ShiftElementsLeft(int, int)
  T CUtlVector<Color, CUtlMemory<Color> >::Validate(CValidator&, char const*)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CScheme*, CUtlMemory<CScheme*> >::~CUtlVector()
  T CUtlVector<CScheme*, CUtlMemory<CScheme*> >::GrowVector(int)
  T CUtlVector<CScheme*, CUtlMemory<CScheme*> >::InsertBefore(int, CScheme* const&)

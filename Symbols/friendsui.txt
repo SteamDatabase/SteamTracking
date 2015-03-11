@@ -4925,6 +4925,7 @@
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >
  R typeinfo name for CUtlVector<Color, CUtlMemory<Color> >
+ R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
@@ -6274,6 +6275,7 @@
  T CChatRoomDlg::GetVoiceImage(CSteamID const&, bool*)
  T CChatRoomDlg::HandleChatRoomEnter(ChatRoomEnter_t*)
  T CChatRoomDlg::HideBroadcastApproveBar()
+ T CChatRoomDlg::InsertChatFilterBlockWarning()
  T CChatRoomDlg::InsertChatInfoMsg(CSteamID const&, char const*, KeyValues*, bool, char const*, bool)
  T CChatRoomDlg::InsertChatInfoMsgNoTimestamp(CSteamID const&, char const*, KeyValues*, bool, char const*, bool)
  T CChatRoomDlg::InsertPhishingWarning()
@@ -8740,6 +8742,7 @@
  T ConCommandBase::ValidateConCommands(CValidator&)
  t consume_data
  t consume_markers
+ T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
  T ConVar::ApplyReplicatedValue(char const*)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
@@ -8751,11 +8754,13 @@
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
  T ConVar::Init()
+ T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
+ T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetValue(char const*)
@@ -10313,6 +10318,11 @@
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::Validate(CValidator&, char const*)
  T CUtlVector<Color, CUtlMemory<Color> >::~CUtlVector()
  T CUtlVector<Color, CUtlMemory<Color> >::Validate(CValidator&, char const*)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::~CUtlVector()
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::FastRemove(int)
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::FindAndFastRemove(CSteamID const&)
@@ -12113,7 +12123,6 @@
  T unsigned int* std::fill_n<unsigned int*, unsigned long, unsigned int>(unsigned int*, unsigned long, unsigned int const&)
  t update_box
  T URLLabel_Factory()
- T URLParts_t::~URLParts_t()
  t use_merged_upsample
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T vgui::AnimatingImagePanel::AddImage(vgui::IImage*)
@@ -15367,8 +15376,6 @@
  V_hextobinary
  V_IsAbsolutePath
  V_isbreakablewspace
- V_IsTLD
- V_IsValidDomainNameCharacter
  V_IsValidURLCharacter
  V_MakeAbsolutePath
  V_pretifymem
@@ -15392,7 +15399,6 @@
  V_strncpy
  V_strnicmp
  V_strnistr
- V_strristr
  V_StrSubstInPlace
  V_strtoui64
  vtable for __cxxabiv1::__class_type_info
@@ -15402,10 +15408,8 @@
  vtable for __cxxabiv1::__vmi_class_type_info
  vtable for std::bad_alloc
  V_tolower
- V_UnicodeAdvance(char*, int)
  V_UnqualifiedFileName
  V_URLContainsDomain
- V_URLParse
  V_UTF16ToUTF32
  V_UTF16ToUTF8
  V_UTF32CharsToUTF8

@@ -165,6 +165,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecoderlibav.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecoderlibav.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videofilestream.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videofilestream.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videolib.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videomanifest.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videomanifest.h

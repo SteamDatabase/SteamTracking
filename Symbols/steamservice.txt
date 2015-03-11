@@ -1626,6 +1626,7 @@
  printf
  pthread_attr_init
  pthread_attr_setstacksize
+ pthread_cond_broadcast
  pthread_cond_destroy
  pthread_cond_init$UNIX2003
  pthread_cond_signal
@@ -3265,6 +3266,7 @@
  T CONF_set_nconf
  t conf_value_LHASH_COMP
  t conf_value_LHASH_HASH
+ T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
  T ConVar::ApplyReplicatedValue(char const*)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
@@ -3277,11 +3279,13 @@
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
  T ConVar::Init()
+ T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
+ T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetValue(char const*)
@@ -4661,6 +4665,10 @@
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::GrowVector(int)
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::InsertBefore(int)
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::ShiftElementsRight(int, int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::~CUtlVector()
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::GrowVector(int)

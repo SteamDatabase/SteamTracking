@@ -2,10 +2,14 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/friends/friends.css" />
+		<include src="file://{resources}/styles/backgroundvideopanel.css" />
 		<include src="file://{resources}/styles/broadcast/broadcast.css" />
 	</styles>
 
-	<Panel >
-	</Panel>
+	<BroadcastViewer>
+		<LoadingThrobber class="WebLoadThrobber"></LoadingThrobber>
+		<Label id="LoadStatus"></Label>
+		<Panel id="WebContent"></Panel>
+	</BroadcastViewer>
 
 </root>

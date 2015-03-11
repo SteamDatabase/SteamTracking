@@ -8487,6 +8487,7 @@
  T ConCommandBase::IsBitSet(unsigned int) const
  t consume_data
  t consume_markers
+ T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
  T ConVar::ApplyReplicatedValue(char const*)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
@@ -8498,11 +8499,13 @@
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
  T ConVar::Init()
+ T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
+ T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetValue(char const*)
@@ -10323,18 +10326,15 @@
  T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
- T CUtlStringBuilder::Data::TakeOwnership(unsigned long&, unsigned long&)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Replace(char const*, char const*)
  T CUtlStringBuilder::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
- T CUtlStringBuilder::TakeOwnership(unsigned long*, unsigned long*)
  T CUtlString::CUtlString(CUtlString const&)
  T CUtlString::Format(char const*, ...)
  T CUtlString::FormatV(char const*, char*)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
- T CUtlStringResult::~CUtlStringResult()
  T CUtlString::VAppendFormat(char const*, char*)
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
@@ -10402,6 +10402,10 @@
  T CUtlVector<CNewsItemPanel*, CUtlMemory<CNewsItemPanel*> >::GrowVector(int)
  T CUtlVector<Color, CUtlMemory<Color> >::~CUtlVector()
  T CUtlVector<Color, CUtlMemory<Color> >::Validate(CValidator&, char const*)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
  T CUtlVector<COverlay_Details_Guides_Panel::CGuideData, CUtlMemory<COverlay_Details_Guides_Panel::CGuideData> >::~CUtlVector()
  T CUtlVector<COverlay_Details_Guides_Panel::CGuideData, CUtlMemory<COverlay_Details_Guides_Panel::CGuideData> >::GrowVector(int)
  T CUtlVector<COverlay_Details_Guides_Panel::CGuideData, CUtlMemory<COverlay_Details_Guides_Panel::CGuideData> >::InsertBefore(int)
@@ -12250,7 +12254,6 @@
  T UpdateProfilingState()
  T URLEncode(char const*)
  T URLLabel_Factory()
- T URLParts_t::~URLParts_t()
  t use_merged_upsample
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T vgui::AnimatingImagePanel::AddImage(vgui::IImage*)
@@ -15473,8 +15476,6 @@
  V_GetFileExtension
  V_IsAbsolutePath
  V_isbreakablewspace
- V_IsTLD
- V_IsValidDomainNameCharacter
  V_IsValidURLCharacter
  V_MakeAbsolutePath
  V_pretifymem
@@ -15498,7 +15499,6 @@
  V_strncmp
  V_strncpy
  V_strnicmp
- V_strristr
  V_StrSkipArticles
  V_StrSubstInPlace
  V_strtoui64
@@ -15509,12 +15509,10 @@
  vtable for std::bad_alloc
  V_tolower
  VTT for std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
- V_UnicodeAdvance(char*, int)
  V_UnqualifiedFileName
  V_URLCracker
  V_URLDecodeRaw
  V_URLEncode
- V_URLParse
  V_UTF16ToUTF32
  V_UTF16ToUTF8
  V_UTF32CharsToUTF8
