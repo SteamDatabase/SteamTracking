@@ -590,13 +590,13 @@ function InitializeTransaction()
 		}
 		else if ( g_bIsInOverlay )
 		{
-						 			$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br /><br/>Your digitally delivered items are now registered to your account on Steam.  To access your games, simply visit your <a href="steam://open/games">game library</a> in Steam and install them whenever you\'re ready.';
+						 			$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br /><br/>Your digitally delivered items are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
 					}		
 		else
 		{
 			if ( g_nItemsForSelf > 0 && g_nItemsForGifts > 0 )
 			{
-								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>Your digitally delivered items are now registered to your account on Steam. To access your games, simply visit your game library in Steam and install them whenever you\'re ready.<br/><br/>Extra copies of items from this purchase have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending your extra copies as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>Your digitally delivered items are now registered to your account on Steam. To access your items, simply visit your library in Steam whenever you\'re ready.<br/><br/>Extra copies of items from this purchase have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending your extra copies as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
 			}
 			else if ( g_nItemsForSelf == 0 && g_nItemsForGifts > 0 )
 			{
@@ -604,7 +604,7 @@ function InitializeTransaction()
 			}
 			else
 			{
-												$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br /><br/>Your digitally delivered items are now registered to your account on Steam.  To access your games, simply visit your <a href="steam://open/games">game library</a> in Steam and install them whenever you\'re ready.';
+												$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br /><br/>Your digitally delivered items are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
 							}
 		}
 
