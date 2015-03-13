@@ -127,6 +127,8 @@
  b (anonymous namespace)::CInputControllerAttachedMsg_reflection_
  b (anonymous namespace)::CInputControllerDetachedMsg_descriptor_
  b (anonymous namespace)::CInputControllerDetachedMsg_reflection_
+ b (anonymous namespace)::CInputControllerStateHIDMsg_descriptor_
+ b (anonymous namespace)::CInputControllerStateHIDMsg_reflection_
  b (anonymous namespace)::CInputControllerStateMsg_descriptor_
  b (anonymous namespace)::CInputControllerStateMsg_reflection_
  b (anonymous namespace)::CInputControllerWirelessPresenceMsg_descriptor_
@@ -911,6 +913,8 @@
  B CInboxMsgBox::m_symbol
  B CInputControllerAttachedMsg::default_instance_
  B CInputControllerDetachedMsg::default_instance_
+ B CInputControllerStateHIDMsg::default_instance_
+ B CInputControllerStateHIDMsg::_default_payload_
  B CInputControllerStateMsg::default_instance_
  B CInputControllerWirelessPresenceMsg::default_instance_
  B CInputGamepadAttachedMsg::default_instance_
@@ -10832,6 +10836,7 @@
  D typeinfo for CInboxMsgBox
  D typeinfo for CInputControllerAttachedMsg
  D typeinfo for CInputControllerDetachedMsg
+ D typeinfo for CInputControllerStateHIDMsg
  D typeinfo for CInputControllerStateMsg
  D typeinfo for CInputControllerWirelessPresenceMsg
  D typeinfo for CInputGamepadAttachedMsg
@@ -14151,6 +14156,7 @@
  D vtable for CInboxMsgBox
  D vtable for CInputControllerAttachedMsg
  D vtable for CInputControllerDetachedMsg
+ D vtable for CInputControllerStateHIDMsg
  D vtable for CInputControllerStateMsg
  D vtable for CInputControllerWirelessPresenceMsg
  D vtable for CInputGamepadAttachedMsg
@@ -16793,6 +16799,7 @@
  r protobuf_AssignDesc_stream_2eproto()::CHideCursorMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CInputControllerAttachedMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CInputControllerDetachedMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputControllerStateHIDMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CInputControllerStateMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CInputControllerWirelessPresenceMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CInputGamepadAttachedMsg_offsets_
@@ -17921,6 +17928,7 @@
  R typeinfo name for CInboxMsgBox
  R typeinfo name for CInputControllerAttachedMsg
  R typeinfo name for CInputControllerDetachedMsg
+ R typeinfo name for CInputControllerStateHIDMsg
  R typeinfo name for CInputControllerStateMsg
  R typeinfo name for CInputControllerWirelessPresenceMsg
  R typeinfo name for CInputGamepadAttachedMsg
@@ -27939,7 +27947,7 @@
  T CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
  T CGameStreamSession::OnControllerAttached(unsigned int)
  T CGameStreamSession::OnControllerDetached(unsigned int)
- T CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short)
+ T CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)
  T CGameStreamSession::OnControllerWirelessPresence(bool, bool)
  T CGameStreamSession::OnDebugDump(void const*, int)
  T CGameStreamSession::OnGamepadAttached(int, unsigned char, unsigned char)
@@ -28520,6 +28528,18 @@
  T CInputControllerDetachedMsg::New() const
  T CInputControllerDetachedMsg::SerializeWithCachedSizesToArray(unsigned char*) const
  T CInputControllerDetachedMsg::SetCachedSize(int) const
+ T CInputControllerStateHIDMsg::ByteSize() const
+ T CInputControllerStateHIDMsg::~CInputControllerStateHIDMsg()
+ T CInputControllerStateHIDMsg::CInputControllerStateHIDMsg()
+ T CInputControllerStateHIDMsg::Clear()
+ T CInputControllerStateHIDMsg::GetCachedSize() const
+ T CInputControllerStateHIDMsg::GetMetadata() const
+ T CInputControllerStateHIDMsg::IsInitialized() const
+ T CInputControllerStateHIDMsg::MergeFrom(CInputControllerStateHIDMsg const&)
+ T CInputControllerStateHIDMsg::New() const
+ T CInputControllerStateHIDMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputControllerStateHIDMsg::SetCachedSize(int) const
+ T CInputControllerStateHIDMsg::SharedDtor()
  T CInputControllerStateMsg::ByteSize() const
  T CInputControllerStateMsg::~CInputControllerStateMsg()
  T CInputControllerStateMsg::CInputControllerStateMsg()
@@ -38898,6 +38918,7 @@
  T CStreamServer::OnInputControllerAttached(CStreamFrame&)
  T CStreamServer::OnInputControllerDetached(CStreamFrame&)
  T CStreamServer::OnInputControllerState(CStreamFrame&)
+ T CStreamServer::OnInputControllerStateHID(CStreamFrame&)
  T CStreamServer::OnInputControllerWirelessPresence(CStreamFrame&)
  T CStreamServer::OnInputGamepadAttached(CStreamFrame&)
  T CStreamServer::OnInputGamepadDetached(CStreamFrame&)
@@ -46523,7 +46544,7 @@
  T non-virtual thunk to CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
  T non-virtual thunk to CGameStreamSession::OnControllerAttached(unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerDetached(unsigned int)
- T non-virtual thunk to CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short)
+ T non-virtual thunk to CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)
  T non-virtual thunk to CGameStreamSession::OnControllerWirelessPresence(bool, bool)
  T non-virtual thunk to CGameStreamSession::OnDebugDump(void const*, int)
  T non-virtual thunk to CGameStreamSession::OnGamepadAttached(int, unsigned char, unsigned char)
