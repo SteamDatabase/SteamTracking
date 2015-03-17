@@ -795,18 +795,6 @@ div.appselect div.appselect_inner {
 	margin-right: 20px;
 }
 
-#package_included_app_list option.giftable:before {
-	content: "* ";
-}
-
-#package_included_app_list option.giftable {
-	color: #FF88AA;
-}
-
-#package_giftable_legend {
-	color: #FF88AA;
-}
-
 .indented {
 	margin-left: 20px;
 }
@@ -2426,4 +2414,14 @@ html, body { height:100%; }
 .AllPagesContent
 {
     padding-bottom: 128px;
+}
+
+.page_list_archive
+{
+	font-style italic;
+}
+
+.page_list_inprogress
+{
+	font-weight: bold;
 }

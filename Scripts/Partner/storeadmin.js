@@ -53,7 +53,7 @@ function OnFreeGameCheck( checkbox, appid )
 	}
 }
 
-function PopulatePackageAppLists( rgIncludedItemIds, rgGiftableItemIds )
+function PopulatePackageAppLists( rgIncludedItemIds )
 {
 	var elemAllApps = $('package_available_app_list');
 	var elemIncludedApps = $('package_included_app_list');
@@ -66,8 +66,6 @@ function PopulatePackageAppLists( rgIncludedItemIds, rgGiftableItemIds )
 
 		var opt = new Element('option', {value: itemId, 'class': g_rgReferencedItems[itemId]['cssClass'] } );
 		opt.innerHTML = g_rgReferencedItems[itemId]['name'];
-		if ( rgGiftableItemIds[itemId] )
-			opt.addClassName( 'giftable' );
 		elemIncludedApps.appendChild(opt);
 	});
 }
@@ -368,20 +366,10 @@ function MovePackageApp( from, to )
 	return valuesMoved;
 }
 
-function TogglePackageItemGiftability( select )
-{
-	var selectElem = $(select);
-	if ( selectElem.selectedIndex >= 0 )
-	{
-		$( selectElem.options[ selectElem.selectedIndex ] ).toggleClassName( 'giftable' );
-	}
-}
-
 function BuildPackageAppList( form )
 {
 	var elemIncludedApps = $('package_included_app_list');
 	var strAppList = '';
-	var strGiftableList = '';
 	var bFirst = true;
 	for ( var i = 0; i < elemIncludedApps.options.length; i++ )
 	{
@@ -390,13 +378,10 @@ function BuildPackageAppList( form )
 		else
 			bFirst = false;
 		strAppList += elemIncludedApps.options[i].value;
-		if ( elemIncludedApps.options[i].hasClassName( 'giftable' ) )
-			strGiftableList += elemIncludedApps.options[i].value + ',';
 	}
 	
 	form.appendChild( new Element( 'input', {type: 'hidden', name: 'package_included_apps', value: strAppList } ) );
-	form.appendChild( new Element( 'input', {type: 'hidden', name: 'package_giftable_apps', value: strGiftableList } ) );
-	
+
 	return true;
 }
 
