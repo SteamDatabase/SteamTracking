@@ -58,8 +58,6 @@ do
 	./nm-with-macho -C -p "$i" | grep -Evi "GCC_except_table|google::protobuf" | awk '{$1=""; print $0}' | sort -u > "$DIR/Symbols/$name.txt"
 done
 
-rm temp.txt
-
 #
 # CHANGE CRAPPY ENCODINGS TO UTF-8
 #
