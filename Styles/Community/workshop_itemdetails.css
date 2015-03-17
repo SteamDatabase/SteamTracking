@@ -239,11 +239,6 @@ div.slider div.handle:hover {
 	background-position: right;
 }
 
-.highlight_player_item span.zoom-icon
-{
-	bottom: 105px;
-}
-
 /** visibility select **/
 
 .visibilityselectcontainer
@@ -377,14 +372,20 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .panel .requiredDLCItem {
 	background-color: rgba( 84, 133, 183, 0.2);
 	padding: 1px;
+	margin-bottom: 1px;
+}
+.panel .requiredDLCItem a {
+	height: 45px;
+	float: left;
 }
 .panel .requiredDLCName {
 	display: inline-block;
-	font-size: 10px;
+	font-size: 12px;
 	padding-top: 3px;
 	width: 120px;
-	height: 23px;
+	height: 40px;
 	overflow: hidden;
+	float: left;
 }
 
 .rateUpCount
@@ -2482,6 +2483,30 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	color: #67c1f5;
 }
 
+.game_area_required_dlc {
+	color: #d5d6d8;
+	background: -moz-linear-gradient(-60deg,  rgba(72,23,70,0.8) 10%, rgba(165,84,177,0.8) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(10%,rgba(72,23,70,0.8)), color-stop(100%,rgba(165,84,177,0.8))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  rgba(72,23,70,0.8) 10%,rgba(165,84,177,0.8) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  rgba(72,23,70,0.8) 10%,rgba(165,84,177,0.8) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  rgba(72,23,70,0.8) 10%,rgba(165,84,177,0.8) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(72,23,70,0.8) 10%,rgba(165,84,177,0.8) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc481746', endColorstr='#cca554b1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	padding: 8px 16px 8px 16px;
+
+	width: 606px;
+	margin-bottom: 2px;
+	font-size: 13px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+}
+.game_area_required_dlc a {
+	text-decoration: underline;
+	color: #d5d6d8;
+}
+.game_area_required_dlc a:hover {
+	color: #fff;
+}
 .game_area_purchase_margin {
 	margin-bottom: 28px;
 }
@@ -2496,6 +2521,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	background: rgba(21,21,21,.36);
 	border: 1px solid #39393a;
 }
+.game_area_purchase_game .contributorNote {
+	color: #81a313;
+}
+
 .game_area_purchase_game.admin {
 	border-color: #A55B13;
 }
@@ -2638,6 +2667,9 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	float: left;
 	position: relative;
 	margin-right: 12px;
+}
+.game_area_already_owned_btn .subscribeIcon {
+	top: auto;
 }
 .game_area_already_owned .ds_flag {
 	position: relative;

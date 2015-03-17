@@ -854,18 +854,24 @@ img.gamecard {
 	border-top: 1px solid #2c405a;
 	margin-top: 12px;
 	padding-top: 36px;
-	padding-left: 256px;
 	position: relative;
+}
+
+.booster_creator_goostatus .goostatus_left, .booster_creator_goostatus .goostatus_right {
+	display: inline-block;
+	vertical-align: top;
 }
 
 .booster_creator_goostatus .goostatus_left {
 	line-height: 24px;
-	position: absolute;
-	top: 36px;
-	left: 0;
+	margin-right: 6px;
 	overflow: hidden;
 	white-space: nowrap;
-	width: 256px;
+	width: 250px;
+}
+
+.booster_creator_goostatus .goostatus_right {
+	width: 310px;
 }
 
 .booster_creator_goostatus a {
@@ -877,10 +883,16 @@ img.gamecard {
 	color: #ffffff;
 }
 
-.booster_creator_intro .booster_creator_limit {
-	position: absolute;
-	left: 20px;
-	bottom: 0;
+.goo_untradable_note {
+	border: 1px solid #2C405A;
+	background: rgba( 0, 0, 0, 0.2 );
+	margin: 16px;
+	padding: 18px;
+}
+
+.goo_untradable_note strong {
+	color: #67C1F5;
+	font-weight: normal;
 }
 
 .booster_creator_area {
@@ -888,15 +900,21 @@ img.gamecard {
 	background: rgba( 0, 0, 0, 0.2 );
 	margin: 0 16px;
 
-	padding-top: 18px;
-	padding-left: 362px;
+	padding: 18px;
 	min-height: 546px;
 }
 
 .booster_creator_left {
-	top: 18px;
-	left: 18px;
-	position: absolute;
+	display: inline-block;
+	width: 300px;
+	margin: 18px 9px 18px 0;
+}
+
+.booster_creator_right {
+	display: inline-block;
+	vertical-align: top;
+	width: 558px;
+	margin: 18px 0 18px 9px;
 }
 
 p#recent_games_label {
@@ -921,6 +939,18 @@ p#recent_games_label {
 	margin-bottom: 12px;
 }
 
+.booster_option_tradability_preference {
+	margin-bottom: 12px;
+}
+
+.booster_option_tradability_preference input, .booster_option_tradability_preference label {
+	vertical-align: middle;
+}
+
+.booster_option_tradability_preference input[disabled] {
+	opacity: 0.5;
+}
+
 .booster_creator_actions {
 	padding-top: 40px;
 	text-align: center;
@@ -936,6 +966,9 @@ p#recent_games_label {
 
 select#booster_game_selector {
 	width: 300px;
+}
+
+.booster_creator_page select {
 	background: #212f43;
 	border: 1px solid #2c405a;
 	border-radius: 3px;
@@ -964,5 +997,9 @@ select#booster_game_selector {
 	width: 235px;
 	height: 268px;
 	margin-bottom: 12px;
+}
+
+.booster_options .booster_option:hover .booster_option_image {
+	filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
 }
 

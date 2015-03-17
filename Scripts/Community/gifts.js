@@ -32,7 +32,7 @@ function UnpackGift( gidGift )
 		method: 'post',
 		parameters: { sessionid: g_sessionID },
 		onSuccess: function( transport ) { OnValidateUnpackResults( gidGift, transport ); },
-		onFailure: function( transport ) { ShowGiftModalError( 'Unable to add the gift to your game library.  The gift may have already been redeemed.  Please try again later.' ); }
+		onFailure: function( transport ) { ShowGiftModalError( 'Unable to add the gift to your library.  The gift may have already been redeemed.  Please try again later.' ); }
 	} );
 }
 
@@ -83,7 +83,7 @@ function UnpackGiftItemReward( gidGift )
 				Modal.AdjustSizing();
 			}
 		},
-		onFailure: function( transport ) { ShowGiftModalError( 'Unable to add the gift to your game library.  The gift may have already been redeemed.  Please try again later.' ); }
+		onFailure: function( transport ) { ShowGiftModalError( 'Unable to add the gift to your library.  The gift may have already been redeemed.  Please try again later.' ); }
 	} );
 }
 
@@ -127,7 +127,7 @@ function DeleteGift( gidGift )
 			method: 'post',
 			parameters: { sessionid: g_sessionID },
 			onSuccess: function( transport ) { OnDeleteGiftResults( gidGift, transport ); },
-			onFailure: function( transport ) { ShowGiftModalError( 'Unable to delete the gift from your game library.  The gift may have already been deleted or redeemed.  Please try again later.' ); }
+			onFailure: function( transport ) { ShowGiftModalError( 'Unable to delete the gift from your library.  The gift may have already been deleted or redeemed.  Please try again later.' ); }
 		} );
 	} );
 }
@@ -140,7 +140,7 @@ function OnDeleteGiftResults( gidGift, transport )
 	}
 	else
 	{
-		ShowGiftModalError( 'Unable to delete the gift from your game library.  The gift may have already been deleted or redeemed.  Please try again later.' );
+		ShowGiftModalError( 'Unable to delete the gift from your library.  The gift may have already been deleted or redeemed.  Please try again later.' );
 	}
 }
 
@@ -204,7 +204,7 @@ function OnAcceptGiftResults( gidGift, bUnpack, transport )
 function ShowUnpackError( gidGift, bUnpack, transport )
 {
 	var response = transport.responseJSON;
-	var strError = bUnpack ? 'Unable to add the gift to your game library.  The gift may have already been redeemed.  Please try again later.' : 'Unable to accept gift.  The gift may have already been redeemed.  Please try again later.';
+	var strError = bUnpack ? 'Unable to add the gift to your library.  The gift may have already been redeemed.  Please try again later.' : 'Unable to accept gift.  The gift may have already been redeemed.  Please try again later.';
 	var strDetails = false;
 	if ( response && response.error )
 	{
@@ -212,7 +212,7 @@ function ShowUnpackError( gidGift, bUnpack, transport )
 	}
 	if ( response && response.accepted )
 	{
-		strDetails = 'This game has not been added to your game library.  It will be stored in your inventory, to be traded or added to library later.';
+		strDetails = 'This gift has not been added to your library.  It will be stored in your inventory, to be traded or added to library later.';
 		if ( response.gidgiftnew )
 			ShowAcceptedGiftMessage( gidGift, response.gidgiftnew );
 	}

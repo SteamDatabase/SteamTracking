@@ -517,6 +517,10 @@ a.general_btn:hover {
 	height: 1px;
 	border-style: none;
 }
+.rightDetailsBlock label:hover {
+	color: #66c0f4;
+	cursor: pointer;
+}
 
 .rightSectionTopTitle {
 	text-transform: uppercase;
@@ -1988,8 +1992,8 @@ textarea {
 {
 	visibility:hidden;
 	position:absolute;
-	right: 22px;
-	bottom: 10px;
+	right: 16px;
+	bottom: 16px;
 }
 
 .workshopItemPreviewImageMain:hover span.zoom-icon
@@ -2049,8 +2053,8 @@ textarea {
 {
 	visibility:hidden;
 	position:absolute;
-	right: 5px;
-	bottom: 5px;
+	right: 16px;
+	bottom: 16px;
 }
 
 .workshopItemPreviewImageEnlargeableContainer:hover span.zoom-icon

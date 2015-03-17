@@ -99,6 +99,8 @@ CDASHPlayer.prototype.Close = function()
 		this.m_mediaSource = null;
 	}
 
+	$J( this.m_elVideoPlayer ).off( '.DASHPlayerEvents' );
+
 	this.m_strMPD = '';
 	this.m_rtLiveContentStarted = 0;
 	this.m_rtVODResumeAtTime = 0;
@@ -3593,7 +3595,9 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 		'frames_decoded': 0,
 		'frames_dropped': 0,
 		'failed_segments': 0,
-	}
+	};
+
+	this.m_lastStalledSegmentNumber = 0;
 
 	// events that trigger server event logging
 	var _stats = this;
@@ -3680,7 +3684,12 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( bStalledEvent, bVide
 	if ( bStalledEvent )
 	{
 		statsCollected = this.m_videoPlayer.StatsRecentSegmentDownloads( bVideoStalled );
-		statsCollected['segment_stalled'] = statsCollected['last_segment_number'];
+
+		// if the stalled segment is the same segment as last stall or the last segment error was 0 (request failed) or 404, no need to log.
+		if ( statsCollected['last_segment_number'] == this.m_lastStalledSegmentNumber || statsCollected['last_segment_response'] == 0 || statsCollected['last_segment_response'] == 404 )
+			return {};
+
+		this.m_lastStalledSegmentNumber = statsCollected['segment_stalled'] = statsCollected['last_segment_number'];
 		delete statsCollected['last_segment_number'];
 		statsCollected['audio_stalled'] = !bVideoStalled;
 	}
@@ -3696,7 +3705,7 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( bStalledEvent, bVide
 
 		// if the player hasn't played or downloaded since the last snapshot then nothing new to log
 		if ( statsSnapshot['frames_decoded'] == this.m_statsLastSnapshot['frames_decoded'] && statsSnapshot['bytes_received'] == this.m_statsLastSnapshot['bytes_received'] )
-			 return statsCollected;
+			 return {};
 
 		var bw_rates = this.m_videoPlayer.StatsBandwidthRates( true );
 		var seg_times = this.m_videoPlayer.StatsSegmentDownloadTimes( true );

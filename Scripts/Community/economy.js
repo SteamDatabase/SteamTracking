@@ -2569,7 +2569,7 @@ function CreateMarketActionButton( color, href, text )
 
 function PopulateScrapAction( elActions, elScrapAmount, elScrapLink, item )
 {
-	if ( item.appid != 753 || item.contextid != 6 || !item.tradable || !item.app_data || !item.app_data.appid )
+	if ( item.appid != 753 || item.contextid != 6 || !item.app_data || !item.app_data.appid )
 	{
 		elActions.hide();
 		return;

@@ -132,14 +132,17 @@
 
 .profile_background_current {
 	line-height: normal;
-	background-color: #222223;
+	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 10px 8px;
 	color: #6d6d6b;
 	margin-bottom: 13px;
 
-	border: 1px solid #212121;
+	border-top: 1px solid #25384c;
+	border-left: 1px solid #25384c;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
 	border-radius: 3px;
-	box-shadow: 1px 1px 0 #333334;
+
 }
 
 .profile_background_current_image_ctn {

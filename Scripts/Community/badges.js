@@ -848,11 +848,15 @@ CBoosterCreatorPage = {
 
 	sm_rgBoosterData: {},
 	sm_flUserGooAmount: 0,
+	sm_flUserTradableGooAmount: 0,
+	sm_flUserUntradableGooAmount: 0,
 	sm_strBoosterOptionTemplate: '',
 
-	Init: function( rgBoosterCatalog, flUserGooAmount, strBoosterOptionTemplate, rgSuggestedApps )
+	Init: function( rgBoosterCatalog, flUserGooAmount, flUserTradableGooAmount, flUserUntradableGooAmount, strBoosterOptionTemplate, rgSuggestedApps )
 	{
 		CBoosterCreatorPage.sm_flUserGooAmount = flUserGooAmount;
+		CBoosterCreatorPage.sm_flUserTradableGooAmount = flUserTradableGooAmount;
+		CBoosterCreatorPage.sm_flUserUntradableGooAmount = flUserUntradableGooAmount;
 		CBoosterCreatorPage.sm_strBoosterOptionTemplate = strBoosterOptionTemplate;
 
 		var k_cInitialSetSize = 6;
@@ -933,11 +937,18 @@ CBoosterCreatorPage = {
 		}
 
 		var $SelectTarget = $J('#booster_game_selector_booster');
+		if ( flUserUntradableGooAmount > 0.99 )
+		{
+			$SelectTarget.css( 'text-align', 'left' );
+		}
+
 		$SelectBox.change( function() {
 			$SelectTarget.children().detach();
-			var $BoosterOption = $SelectBox.val() ? CBoosterCreatorPage.CreateBoosterOption( $SelectBox.val() ) : null;
+			var $BoosterOption = $SelectBox.val() ? CBoosterCreatorPage.CreateBoosterOption( $SelectBox.val(), false ) : null;
+
 			if ( $BoosterOption )
 			{
+				$BoosterOption.find('input').each( function() { $J(this).prop( 'checked', false ); } );
 				$SelectTarget.append( $BoosterOption );
 				window.location.replace( '#' + $SelectBox.val() );
 			}
@@ -962,11 +973,23 @@ CBoosterCreatorPage = {
 
 	},
 
-	UpdateGooDisplay: function( nGooAmount )
+	UpdateGooDisplay: function( nGooAmount, nTradableGooAmount, nUnTradableGooAmount )
 	{
 		CBoosterCreatorPage.sm_flUserGooAmount = parseFloat( nGooAmount );
+		CBoosterCreatorPage.sm_flUserTradableGooAmount = parseFloat( nTradableGooAmount );
+		CBoosterCreatorPage.sm_flUserUntradableGooAmount = parseFloat( nUnTradableGooAmount );
 		$J('.goovalue').text( v_numberformat( nGooAmount ) );
+		$J('.untradablegoovalue').text( v_numberformat( nUnTradableGooAmount ) );
 		$J('.booster_option').each( function() { CBoosterCreatorPage.ToggleActionButton( $J(this) ); } );
+
+		if ( nUnTradableGooAmount == 0 )
+		{
+			$J('.goo_untradable_note').hide();
+		}
+		else
+		{
+			$J('.goo_untradable_note').show();
+		}
 	},
 
 	RefreshSelectOptions: function()
@@ -986,19 +1009,20 @@ CBoosterCreatorPage = {
 	},
 
 
-	ExecuteCreateBooster: function( rgBoosterData )
+	ExecuteCreateBooster: function( rgBoosterData, nTradabilityPreference )
 	{
 		$J.post( 'https://steamcommunity.com/tradingcards/ajaxcreatebooster/', {
 			sessionid: g_sessionID,
 			appid: rgBoosterData.appid,
-			series: rgBoosterData.series
+			series: rgBoosterData.series,
+			tradability_preference: nTradabilityPreference
 		}).done( function( data ) {
 
 			// this will show the booster along with unpack actions
 			CBoosterCreatorPage.ShowBoosterCreatedDialog( data.purchase_result );
 
 			// update display of page elements
-			CBoosterCreatorPage.UpdateGooDisplay( data.goo_amount );
+			CBoosterCreatorPage.UpdateGooDisplay( data.goo_amount, data.tradable_goo_amount, data.untradable_goo_amount );
 			rgBoosterData.unavailable = true;
 			if ( rgBoosterData.$Option )
 			{
@@ -1017,7 +1041,7 @@ CBoosterCreatorPage = {
 
 			var data = $J.parseJSON( jqXHR.responseText );
 			if ( data && typeof( data.goo_amount ) != 'undefined' )
-				CBoosterCreatorPage.UpdateGooDisplay( data.goo_amount );
+				CBoosterCreatorPage.UpdateGooDisplay( data.goo_amount, data.tradable_goo_amount, data.untradable_goo_amount );
 		});
 	},
 
@@ -1079,17 +1103,80 @@ CBoosterCreatorPage = {
 		var $Option = $J(strTemplate);
 		$Option.data( 'appid', rgBoosterData.appid );
 
-		var $ActionBtn = $Option.find( '.btn_makepack');
-		$ActionBtn.click( function() {
-			if ( !$ActionBtn.hasClass( 'btn_disabled') )
-			{
-				ShowConfirmDialog( 'Booster Pack Creator',
-					'Are you sure you want to spend %1$s Gems to create a %2$s Booster Pack?'.replace( /%1\$s/, v_numberformat( rgBoosterData.price ) ).replace( /%2\$s/, rgBoosterData.name ),
-					'Make Pack' ).done( function() {
-					CBoosterCreatorPage.ExecuteCreateBooster( rgBoosterData );
-				});
-			}
-		});
+		var $ActionBtn = $Option.find( '.btn_makepack' );
+		if ( bMiniOption )
+		{
+			$Option.addClass( 'minioption ');
+			$Option.find( '.booster_option_action' ).hide();
+			$Option.click( function() {
+				var $SelectBox = $J( '#booster_game_selector' );
+				$SelectBox.val( appid );
+				$SelectBox.change();
+			})
+		}
+		else
+		{
+			$ActionBtn.click( function() {
+				if ( !$ActionBtn.hasClass( 'btn_disabled') )
+				{
+					var nTradabilityPreference = 2;
+
+					// If we asked the user to pick, get the user's selection
+					var $TradabilitySelection = $Option.find( '.booster_option_tradability_preference' );
+					if ( $TradabilitySelection.is(":visible") )
+					{
+						$CheckedPreference = $TradabilitySelection.find("input[name=booster_tradability_preference]:checked")
+						if ( $CheckedPreference.length != 0 )
+						{
+							nTradabilityPreference = $CheckedPreference.val();
+						}
+						else
+						{
+							nTradabilityPreference = 0;
+						}
+					}
+
+					if ( nTradabilityPreference == 0 )
+					{
+						ShowAlertDialog( 'Booster Pack Creator', 'You must select whether you want to create a tradable booster pack or untradable booster pack.' );
+					}
+					else
+					{
+						var sConfirmText = 'Are you sure you want to spend %1$s Gems to create a %2$s Booster Pack?'.replace( /%1\$s/,
+								v_numberformat( rgBoosterData.price )
+						).replace( /%2\$s/, rgBoosterData.name );
+
+
+						if ( nTradabilityPreference == 1 && CBoosterCreatorPage.sm_flUserTradableGooAmount < rgBoosterData.price )
+						{
+							// Some untradable gems will be used
+							// The UI should prevent this case since the "Make tradable pack" option will be disabled, but here it is anyways.
+							sConfirmText += '<br><br>You only have %1$s tradable Gems, so some of your untradable Gems will be used to create this booster. The booster will have the same trade restriction as the untradable Gems that are used to create it.'.replace( /%1\$s/,
+									v_numberformat( parseInt( CBoosterCreatorPage.sm_flUserTradableGooAmount ) )
+							);
+						}
+
+						if ( nTradabilityPreference == 3 && CBoosterCreatorPage.sm_flUserUntradableGooAmount < rgBoosterData.price )
+						{
+							// Some tradable gems will be used
+							sConfirmText += '<br><br>You only have %1$s untradable Gems, so some of your tradable Gems will be used to create this booster.'.replace( /%1\$s/,
+									v_numberformat( parseInt( CBoosterCreatorPage.sm_flUserUntradableGooAmount ) )
+							);
+						}
+
+						ShowConfirmDialog( 'Booster Pack Creator',
+								sConfirmText,
+								'Make Pack'
+						).done( function ()
+								{
+									CBoosterCreatorPage.ExecuteCreateBooster( rgBoosterData, nTradabilityPreference );
+								}
+						);
+					}
+				}
+			});
+		}
+
 		CBoosterCreatorPage.ToggleActionButton( $Option );
 
 		BindCommunityTooltip( $Option.find( '[data-community-tooltip]' ) );
@@ -1105,11 +1192,19 @@ CBoosterCreatorPage = {
 
 	ToggleActionButton: function( $Option )
 	{
-		var $ActionBtn = $Option.find( '.btn_makepack');
+		var $ActionBtn = $Option.find( '.btn_makepack' );
+		var $TradabilitySelection = $Option.find( '.booster_option_tradability_preference' );
+		var bActionsShown = !($Option.hasClass("minioption"));
 		var rgBoosterData = CBoosterCreatorPage.sm_rgBoosterData[ $Option.data('appid') ];
 		if ( rgBoosterData && rgBoosterData.unavailable )
 		{
 			$ActionBtn.addClass( 'btn_disabled' );
+			$TradabilitySelection.hide();
+			if ( bActionsShown )
+			{
+				$Option.css( 'text-align', '' );
+			}
+
 			if ( rgBoosterData.available_at_time )
 				$ActionBtn.data( 'community-tooltip', 'You will not be able to create another %1$s Booster Pack until %2$s.'.replace( /%1\$s/, rgBoosterData.name ).replace( /%2\$s/, rgBoosterData.available_at_time ) );
 			else
@@ -1118,6 +1213,28 @@ CBoosterCreatorPage = {
 		else
 		{
 			var nPrice = rgBoosterData.price;
+
+			// Hide radio buttons if the user has no untradable gems
+			if ( CBoosterCreatorPage.sm_flUserUntradableGooAmount < 0.01 )
+			{
+				$TradabilitySelection.hide();
+				if ( bActionsShown )
+				{
+					$Option.css( 'text-align', '' );
+				}
+			}
+			else
+			{
+				$TradabilitySelection.show();
+				if ( bActionsShown )
+				{
+					$Option.css( 'text-align', 'left' );
+				}
+			}
+
+			// Disable the tradable pack option if the user doesn't have enough
+			$Option.find('.booster_tradability_preference_tradable').attr( 'disabled', nPrice > CBoosterCreatorPage.sm_flUserTradableGooAmount );
+
 			if ( CBoosterCreatorPage.sm_flUserGooAmount >= nPrice )
 			{
 				$ActionBtn.removeClass( 'btn_disabled' );
