@@ -1011,6 +1011,14 @@ function BDoesUserPreferHTML5()
 	return ( rgMatches && rgMatches[2] == 1 );
 }
 
+function BCanPlayWebm()
+{
+	var ele = document.createElement('video');
+
+	return ele.canPlayType('video/webm; codecs="vp8, vorbis"') == "probably"; // Eh, I dunno, probably.
+
+}
+
 function SetUserPrefersHTML5( bEnabled )
 {
 	var dateExpires = new Date();
