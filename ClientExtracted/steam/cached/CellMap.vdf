@@ -12,12 +12,13 @@
 		"LocalCostJapanToKorea"			14
 		"LocalCostBetweenAustraliaAndNewZealand"	4
 		"LocalCostBetweenIsraelAndEurope"			8
-		"LocalCostIndiaToSingapore"			2
+		"LocalCostIndiaToSingapore"			4
+		"LocalCostSingaporeToIndia"			8
 		"LocalCostOneWayCellEdge"					25
 		"LocalCostAUSBetweenRegions"				1
 		"LocalCostAUSFromRegionToISP"				1
 		"LocalCostAUSFromISPToRegion"				2
-		"LocalCostToLeaveChina"							2
+		"LocalCostToLeaveChina"							8
 		"LocalCostCanadaToUS"								2
 		"LocalCostIndiaToDubai"					2
 		"InwardCost"	0.2
@@ -48,11 +49,12 @@
 				0 { "dest"	79  }
 				1 { "dest"	80  }
 				2 { "dest"	2  }
-				3 { "dest"	95  }
-				4 { "dest"	77  }
-				5 { "dest"	49  }
-				6 { "dest"	76  }
-				7 
+				3 { "dest"	63	"cost"	InwardCost }
+				4 { "dest"	95  }
+				5 { "dest"	77  }
+				6 { "dest"	49  }
+				7 { "dest"	76  }
+				8 
 				{ 
 					"dest"	20  
 					"cost"	LocalCostOneWayCellEdge
@@ -69,7 +71,7 @@
 			"longitude"	"-73.990949"
 			"edges"
 			{
-				0 { "dest"	63  }
+				0 { "dest"	63	"cost"	InwardCost }
 				1 { "dest"	83  }
 				2 { "dest"	82  }
 				3 { "dest"	1  }
@@ -138,6 +140,11 @@
 				4 { "dest"	14 }
 				5 { "dest"	88 }
 				6 { "dest"	129 }
+				7
+				{ 
+					"dest"	37 
+					"cost"	LocalCostOneWayCellEdge
+				}	
 			}
 		}
 
@@ -673,18 +680,17 @@
 		33
 		{
 			"name" "China - Hong Kong"
-			"region"	"china"
+			"region"	"asia"
 			"latitude"	"22.289096"
 			"longitude"	"114.212151"
 			"edges"
 			{
 				0 
 				{ 
-					"dest"	35  
-					"cost"	LocalCostToLeaveChina
+					"dest"	35
 				}
-				1 { "dest"	47  }
-				2 { "dest"	48  }
+				1 { "dest"	47 "cost"	LocalCostOneWayCellEdge }
+				2 { "dest"	148 "cost"	LocalCostOneWayCellEdge }
 			}
 		}
 
@@ -719,7 +725,6 @@
 				2
 				{ 
 					"dest"	33 
-					"cost"	LocalCostOneWayCellEdge
 				}
 				3
 				{ 
@@ -728,8 +733,8 @@
 				}
 				4
 				{ 
-					"dest"	36 
-					"cost"	LocalCostOneWayCellEdge
+					"dest"	141 
+					"cost"	LocalCostSingaporeToIndia
 				}
 				5
 				{
@@ -801,9 +806,8 @@
 			"longitude"	"12.478752"
 			"edges"
 			{
-				0 { "dest"	88 	"cost"	InwardCost }
+				0 { "dest"	5 	"cost"	InwardCost }
 				1 { "dest"	14 	"cost"	InwardCost }			
-				2 { "dest"	96 	"cost"	InwardCost }
 			}
 		}
 
@@ -882,8 +886,8 @@
 			"longitude"	"14.434319"
 			"edges"
 			{
-				0 { "dest"	90 	"cost"	InwardCost }
-				1 { "dest"	91 	"cost"	InwardCost }
+				0 { "dest"	5 	"cost"	InwardCost }
+				1 { "dest"	92  }
 				2 { "dest"	93  }
 			}
 		}
@@ -955,16 +959,17 @@
 				0
 				{ 
 					"dest"	33
-					"cost"	InwardCost
+					"cost"	LocalCostToLeaveChina
 				}
 				1 { "dest"	46 	"cost"	InwardCost }
 				2 { "dest"	48 	"cost"	InwardCost }
-				3 
+				3 { "dest"	148 	"cost"	InwardCost }
+				4 
 				{ 
 					"dest"	137  
 					"cost"	LocalCostOneWayCellEdge
 				}
-				4 
+				5 
 				{ 
 					"dest"	138  
 					"cost"	LocalCostOneWayCellEdge
@@ -983,6 +988,7 @@
 			{
 				0 { "dest"	46 	"cost"	InwardCost }
 				1 { "dest"	47 	"cost"	InwardCost }	
+				2 { "dest"	148 	"cost"	InwardCost }	
 			}
 		}
 
@@ -1302,10 +1308,9 @@
 			{
 				0 { "dest"	2	"cost"	InwardCost }
 				1 { "dest"	83 }
-				2 { "dest"	80 }
-				3 { "dest"	84 }
-				4 { "dest"	50 }
-				5 { "dest"	105 }
+				2 { "dest"	84 }
+				3 { "dest"	50 }
+				4 { "dest"	105 }
 			}
 		}
 		// #64 US - Los Angeles
@@ -1648,8 +1653,7 @@
 			"edges"
 			{
 				0 { "dest"	5	"cost"	InwardCost }
-				1 { "dest"	37 }
-				2 { "dest"	14	"cost"	InwardCost }
+				1 { "dest"	14	"cost"	InwardCost }
 			}
 		}			
 		// #89 Hamburg
@@ -1677,10 +1681,8 @@
 			{
 				0 { "dest"	89 }
 				1 { "dest"	91 }
-				2 { "dest"	42 }
-				3 { "dest"	92 }
-				4 { "dest"	5	"cost"	InwardCost }
-				5 
+				2 { "dest"	5	"cost"	InwardCost }
+				3 
 				{ 
 					"dest"	38 
 					"cost"	LocalCostOneWayCellEdge
@@ -1696,10 +1698,8 @@
 			"longitude"	"11.577873"
 			"edges"
 			{
-				0 { "dest"	90	"cost"	InwardCost }
+				0 { "dest"	90 }
 				1 { "dest"	5	"cost"	InwardCost }
-				2 { "dest"	42 }
-				3 { "dest"	92}
 			}
 		}			
 		// #92 Vienna
@@ -1711,8 +1711,8 @@
 			"longitude"	"16.388168"
 			"edges"
 			{
-				0 { "dest"	90	"cost"	InwardCost }
-				1 { "dest"	91	"cost"	InwardCost }
+				0 { "dest"	5	"cost"	InwardCost }
+				1 { "dest"	42 }
 				2 { "dest"	93 }
 			}
 		}			
@@ -1725,10 +1725,9 @@
 			"longitude"	"19.015617"
 			"edges"
 			{
-				0 { "dest"	42	"cost"	InwardCost }
-				1 { "dest"	92	"cost"	InwardCost }
-				2 { "dest"	16 }
-				3 
+				0 { "dest"	92	"cost"	InwardCost }
+				1 { "dest"	16 }
+				2 
 				{ 
 					"dest"	73 
 					"cost"	LocalCostOneWayCellEdge
@@ -2459,6 +2458,19 @@
 			"edges"
 			{
 				0 { "dest"	31	"cost"	InwardCost }
+			}		
+		}			
+		148
+		{
+			"name" "China - Guangzhou"
+			"region"	"china"
+			"latitude"	"23.125205"
+			"longitude"	"113.257198"
+			"edges"
+			{
+				0 { "dest"	47	"cost"	InwardCost }
+				1 { "dest"	48 }
+				2 { "dest"	33	"cost"	LocalCostToLeaveChina }
 			}		
 		}										
 	}
