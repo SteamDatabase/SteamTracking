@@ -19158,7 +19158,6 @@
  R typeinfo name for CUtlLinkedList<CellCost_t, int>
  R typeinfo name for CUtlLinkedList<CFastFrameStats, int>
  R typeinfo name for CUtlLinkedList<CGameRecordSession::QueuedAudio_t*, int>
- R typeinfo name for CUtlLinkedList<CGameRecordSession::QueuedVideo_t*, int>
  R typeinfo name for CUtlLinkedList<ChartPt_t, int>
  R typeinfo name for CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>
  R typeinfo name for CUtlLinkedList<CScheduledItem, int>
@@ -27308,7 +27307,7 @@
  T CGameRecordSession::SetBroadcastVideoKbps(int)
  T CGameRecordSession::Shutdown()
  T CGameRecordSession::SupportsFrameSlices()
- T CGameRecordSession::UploadQueuedData()
+ T CGameRecordSession::UploadQueuedAudioData()
  T CGameRecordSession::Validate(CValidator&, char const*)
  T CGamesListFavoritesToggle::~CGamesListFavoritesToggle()
  T CGamesListFavoritesToggle::CGamesListFavoritesToggle(CGamesListPanel*, unsigned int, int)
@@ -41691,14 +41690,6 @@
  T CUtlLinkedList<CGameRecordSession::QueuedAudio_t*, int>::RemoveAll()
  T CUtlLinkedList<CGameRecordSession::QueuedAudio_t*, int>::Unlink(int)
  T CUtlLinkedList<CGameRecordSession::QueuedAudio_t*, int>::Validate(CValidator&, char const*)
- T CUtlLinkedList<CGameRecordSession::QueuedVideo_t*, int>::AllocInternal(bool)
- T CUtlLinkedList<CGameRecordSession::QueuedVideo_t*, int>::Free(int)
- T CUtlLinkedList<CGameRecordSession::QueuedVideo_t*, int>::InsertBefore(int, CGameRecordSession::QueuedVideo_t* const&)
- T CUtlLinkedList<CGameRecordSession::QueuedVideo_t*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CGameRecordSession::QueuedVideo_t*, int>::PurgeAndDeleteElements()
- T CUtlLinkedList<CGameRecordSession::QueuedVideo_t*, int>::RemoveAll()
- T CUtlLinkedList<CGameRecordSession::QueuedVideo_t*, int>::Unlink(int)
- T CUtlLinkedList<CGameRecordSession::QueuedVideo_t*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<ChartPt_t, int>::AllocInternal(bool)
  T CUtlLinkedList<ChartPt_t, int>::Free(int)
  T CUtlLinkedList<ChartPt_t, int>::InsertBefore(int, ChartPt_t const&)
