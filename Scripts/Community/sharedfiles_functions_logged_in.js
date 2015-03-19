@@ -486,9 +486,8 @@ function SubscribeCollectionItem( id, appID )
 		$('PublishedFileSubscribe').id.value = id;
 		$('PublishedFileSubscribe').appid.value = appID;
 		$('PublishedFileSubscribe').request( {
-			onComplete: function()
+			onSuccess: function( response )
 			{
-				$('JustSubscribed').show();
 				$('SubscribeItemBtn' + id).className = "general_btn subscribe toggled";
 				$('action_wait_' + id).hide();
 			}
@@ -499,9 +498,8 @@ function SubscribeCollectionItem( id, appID )
 		$('PublishedFileUnsubscribe').id.value = id;
 		$('PublishedFileUnsubscribe').appid.value = appID;
 		$('PublishedFileUnsubscribe').request( {
-			onComplete: function()
+			onSuccess: function( response )
 			{
-				$('JustSubscribed').hide();
 				$('SubscribeItemBtn' + id).className = "general_btn subscribe";
 				$('action_wait_' + id).hide();
 			}

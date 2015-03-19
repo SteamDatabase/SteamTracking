@@ -1301,6 +1301,13 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	float: right;
 	color: #b7a874
 }
+.collectionItem .collectionItemPrice
+{
+	float: right;
+	font-size: 16px;
+	padding-top: 40px;
+	margin-right: 10px;
+}
 
 .collectionItem .general_btn.subscribe
 {
