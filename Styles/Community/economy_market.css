@@ -705,8 +705,11 @@ a.market_tab_well_tab_inactive:hover {
 	padding-bottom: 2em;
 }
 
+#searchResultsTable {
+	padding-bottom: 0;}
+
 #searchResultsTable, #sellListingsTable, #soldListingTable {
-	padding-bottom: 0;	background-color: #171717;
+	background-color: #171717;
 }
 
 .market_listing_table_showmore {

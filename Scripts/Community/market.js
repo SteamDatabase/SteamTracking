@@ -942,7 +942,7 @@ function LoadRecentListings( type, rows )
 
 	var elRows = $(rows);
 
-	elRows.update();
+	elRows.update( g_htmlThrobber );
 
 	g_bBusyLoadingMore = true;
 	new Ajax.Request( 'https://steamcommunity.com/market/recent', {
@@ -963,7 +963,7 @@ function LoadRecentListings( type, rows )
 					g_rgRecents[type]['time'] = response.last_time;
 					g_rgRecents[type]['listing'] = response.last_listing;
 
-					elRows.update( response.results_html );
+					elRows.update( g_htmlSellListingsTableHeader + response.results_html );
 
 					MergeWithAssetArray( response.assets );
 					MergeWithListingInfoArray( response.listinginfo );
@@ -980,11 +980,13 @@ var g_bBusyLoadingRecentCompleted = false;
 var g_bLoadedRecentCompleted = false;
 function LoadRecentCompletedListings( )
 {
-	var elRows = $('soldListingRows');
-	if ( g_bBusyLoadingRecentCompleted || g_bLoadedRecentCompleted )
+	if ( g_bBusyLoadingRecentCompleted )
 	{
 		return;
 	}
+
+	var elRows = $('soldListingRows');
+	elRows.update( g_htmlThrobber );
 
 	g_bBusyLoadingRecentCompleted = true;
 	new Ajax.Request( 'https://steamcommunity.com/market/recentcompleted', {
@@ -1000,7 +1002,7 @@ function LoadRecentCompletedListings( )
 					g_rgRecents['sell_sold']['time'] = response.last_time;
 					g_rgRecents['sell_sold']['listing'] = response.last_listing;
 
-					elRows.insert( { 'bottom' : response.results_html } );
+					elRows.update( g_htmlSoldListingTableHeader + response.results_html );
 
 					MergeWithAssetArray( response.assets );
 					MergeWithListingInfoArray( response.listinginfo );
