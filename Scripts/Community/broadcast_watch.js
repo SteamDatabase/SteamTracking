@@ -13,6 +13,30 @@ function BMediaSourceExtensionsSupported()
 	return bSupported;
 }
 
+// called by steam client when going into minimized broadcast view
+function SteamClientMinimize()
+{
+	$J( '#body_base' ).addClass( 'SteamClientMinimized' );
+}
+
+// called by steam client when going into normal broadcast view
+function SteamClientMaximize()
+{
+	$J( '#body_base' ).removeClass( 'SteamClientMinimized' );
+}
+
+// called by steam client when moved to popout
+function SteamClientPopOut()
+{
+	$J( '#PopOutBtn' ).hide();
+}
+
+// called by steam client when loaded in nav panel
+function SteamClientShowPopOut()
+{
+	$J( '#PopOutBtn' ).show();
+}
+
 
 var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDViewer )
 {

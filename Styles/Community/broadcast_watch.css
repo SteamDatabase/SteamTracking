@@ -334,6 +334,37 @@ body.flat_page
 	width: 100%;
 }
 
+.SteamClientMinimized #video_content
+{
+	width: 300px;
+	height: 168px;
+	padding: 0px;
+	margin: 0px;
+}
+
+body.flat_page.SteamClientMinimized .pagecontent
+{
+	padding: 0px;
+}
+
+body.flat_page.SteamClientMinimized
+{
+	overflow: hidden;
+}
+
+.SteamClientMinimized .dash_overlay,
+.SteamClientMinimized .dash_video_live_banner
+{
+	display: none;
+}
+
+.SteamClientMinimized .BroadcastPlayer
+{
+	min-width: 0px;
+	width: 300px;
+	height: 168px;
+}
+
 #ChatWindow
 {
 	width: 340px;
