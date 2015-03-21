@@ -5281,6 +5281,11 @@
  D CBandwidthUsageDialog::GetKBMap()::s_pMap
  D CBandwidthUsageDialog::GetMessageMap()::s_pMap
  D CBandwidthUsageDialog::KB_ChainToMap()::chained
+ D CBroadcastClickPanel::ChainToAnimationMap()::chained
+ D CBroadcastClickPanel::ChainToMap()::chained
+ D CBroadcastClickPanel::GetKBMap()::s_pMap
+ D CBroadcastClickPanel::GetMessageMap()::s_pMap
+ D CBroadcastClickPanel::KB_ChainToMap()::chained
  D CBroadcastLiveBanner::ChainToAnimationMap()::chained
  D CBroadcastLiveBanner::ChainToMap()::chained
  D CBroadcastLiveBanner::GetKBMap()::s_pMap
@@ -5289,6 +5294,19 @@
  D CBroadcastLiveBanner::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()::bAdded
  D CBroadcastLiveBanner::PanelMessageFunc_OnOverlayHidden::InitVar()::bAdded
  D CBroadcastLiveBanner::PanelMessageFunc_OnOverlayShown::InitVar()::bAdded
+ D CBroadcastPopOut::ChainToAnimationMap()::chained
+ D CBroadcastPopOut::ChainToMap()::chained
+ D CBroadcastPopOut::GetKBMap()::s_pMap
+ D CBroadcastPopOut::GetMessageMap()::s_pMap
+ D CBroadcastPopOut::KB_ChainToMap()::chained
+ D CBroadcastPopOut::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
+ D CBroadcastPopOut::PanelMessageFunc_OnCustomURL::InitVar()::bAdded
+ D CBroadcastPopOut::PanelMessageFunc_OnSetHTMLTitle::InitVar()::bAdded
+ D CBroadcastView::ChainToAnimationMap()::chained
+ D CBroadcastView::ChainToMap()::chained
+ D CBroadcastView::GetKBMap()::s_pMap
+ D CBroadcastView::GetMessageMap()::s_pMap
+ D CBroadcastView::KB_ChainToMap()::chained
  D CCDKeyDisplayDialog::ChainToAnimationMap()::chained
  D CCDKeyDisplayDialog::ChainToMap()::chained
  D CCDKeyDisplayDialog::GetKBMap()::s_pMap
@@ -6031,6 +6049,7 @@
  D construction vtable for CParentalMenuButton-in-CInboxButton
  D construction vtable for CParentalURLLabelBase-in-CParentalAppURLLabel
  D construction vtable for CParentalURLLabelBase-in-CParentalURLLabel
+ D construction vtable for CSteamAuthedHTML-in-CBroadcastView
  D construction vtable for CSteamAuthedHTML-in-CWebPanel
  D construction vtable for CSubNewPasswordEntryFields-in-CSubChangePasswordChangePassword
  D construction vtable for CSubNewPasswordEntryFields-in-CSubPanelWelcomeCreateNewAccountAccountName
@@ -6090,7 +6109,9 @@
  D construction vtable for vgui::EditablePanel-in-CBackupStartPage
  D construction vtable for vgui::EditablePanel-in-CBackupWizard
  D construction vtable for vgui::EditablePanel-in-CBandwidthUsageDialog
+ D construction vtable for vgui::EditablePanel-in-CBroadcastClickPanel
  D construction vtable for vgui::EditablePanel-in-CBroadcastLiveBanner
+ D construction vtable for vgui::EditablePanel-in-CBroadcastPopOut
  D construction vtable for vgui::EditablePanel-in-CCDKeyDisplayDialog
  D construction vtable for vgui::EditablePanel-in-CChangeContactEmailWizard
  D construction vtable for vgui::EditablePanel-in-CChangePasswordWizard
@@ -6345,6 +6366,7 @@
  D construction vtable for vgui::Frame-in-CAddShortcutDialog
  D construction vtable for vgui::Frame-in-CBackupWizard
  D construction vtable for vgui::Frame-in-CBandwidthUsageDialog
+ D construction vtable for vgui::Frame-in-CBroadcastPopOut
  D construction vtable for vgui::Frame-in-CCDKeyDisplayDialog
  D construction vtable for vgui::Frame-in-CChangeContactEmailWizard
  D construction vtable for vgui::Frame-in-CChangePasswordWizard
@@ -6437,6 +6459,7 @@
  D construction vtable for vgui::Frame-in-vgui::WizardPanel
  D construction vtable for vgui::Frame-in-ZooDialog
  D construction vtable for vgui::HTML-in-CAgreementHTML
+ D construction vtable for vgui::HTML-in-CBroadcastView
  D construction vtable for vgui::HTML-in-CPrintHTML::CSubHTML
  D construction vtable for vgui::HTML-in-CSteamAuthedHTML
  D construction vtable for vgui::HTML-in-CWebPanel
@@ -6537,7 +6560,10 @@
  D construction vtable for vgui::Panel-in-CBackupStartPage
  D construction vtable for vgui::Panel-in-CBackupWizard
  D construction vtable for vgui::Panel-in-CBandwidthUsageDialog
+ D construction vtable for vgui::Panel-in-CBroadcastClickPanel
  D construction vtable for vgui::Panel-in-CBroadcastLiveBanner
+ D construction vtable for vgui::Panel-in-CBroadcastPopOut
+ D construction vtable for vgui::Panel-in-CBroadcastView
  D construction vtable for vgui::Panel-in-CCDKeyDisplayDialog
  D construction vtable for vgui::Panel-in-CChangeContactEmailWizard
  D construction vtable for vgui::Panel-in-CChangePasswordWizard
@@ -7995,6 +8021,10 @@
  D CUINavigatorPanel::KB_ChainToMap()::chained
  D CUINavigatorPanel::PanelMessageFunc_OnAddMusicButtonPressed::InitVar()::bAdded
  D CUINavigatorPanel::PanelMessageFunc_OnAppChangeNotification::InitVar()::bAdded
+ D CUINavigatorPanel::PanelMessageFunc_OnBroadcastPageMaximize::InitVar()::bAdded
+ D CUINavigatorPanel::PanelMessageFunc_OnBroadcastPageNavigate::InitVar()::bAdded
+ D CUINavigatorPanel::PanelMessageFunc_OnBroadcastPopOut::InitVar()::bAdded
+ D CUINavigatorPanel::PanelMessageFunc_OnCloseBroadcastView::InitVar()::bAdded
  D CUINavigatorPanel::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
  D CUINavigatorPanel::PanelMessageFunc_OnHTMLBackRequested::InitVar()::bAdded
  D CUINavigatorPanel::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()::bAdded
@@ -8006,6 +8036,7 @@
  D CUINavigatorPanel::PanelMessageFunc_OnTextEscape::InitVar()::bAdded
  D CUINavigatorPanel::PanelMessageFunc_OnWebAuthCompleted::InitVar()::bAdded
  D CUINavigatorPanel::PanelMessageFunc_OnWebLoadingURL::InitVar()::bAdded
+ D CUINavigatorPanel::PanelMessageFunc_OnWebPanelHorizontalScrollBarResized::InitVar()::bAdded
  D CUINavigatorPanel::PanelMessageFunc_OnWebPanelURLChanged::InitVar()::bAdded
  D CUINavigatorPanel::PanelMessageFunc_SetFilterPanelKV::InitVar()::bAdded
  D CUINavigatorPanel::PanelMessageFunc_SetMusicNavDisplayMode::InitVar()::bAdded
@@ -8280,8 +8311,14 @@
  D guard variable for CBackupWizard::GetMessageMap()::s_pMap
  D guard variable for CBandwidthUsageDialog::GetKBMap()::s_pMap
  D guard variable for CBandwidthUsageDialog::GetMessageMap()::s_pMap
+ D guard variable for CBroadcastClickPanel::GetKBMap()::s_pMap
+ D guard variable for CBroadcastClickPanel::GetMessageMap()::s_pMap
  D guard variable for CBroadcastLiveBanner::GetKBMap()::s_pMap
  D guard variable for CBroadcastLiveBanner::GetMessageMap()::s_pMap
+ D guard variable for CBroadcastPopOut::GetKBMap()::s_pMap
+ D guard variable for CBroadcastPopOut::GetMessageMap()::s_pMap
+ D guard variable for CBroadcastView::GetKBMap()::s_pMap
+ D guard variable for CBroadcastView::GetMessageMap()::s_pMap
  D guard variable for CCDKeyDisplayDialog::GetKBMap()::s_pMap
  D guard variable for CCDKeyDisplayDialog::GetMessageMap()::s_pMap
  D guard variable for CChangeContactEmailWizard::GetKBMap()::s_pMap
@@ -9964,6 +10001,7 @@
  D typeinfo for CBoxShadowData
  D typeinfo for CBroadcastChatPanel
  D typeinfo for CBroadcastChatPanel::CCallbackOnBroadcastChatMessage
+ D typeinfo for CBroadcastClickPanel
  D typeinfo for CBroadcastLiveBanner
  D typeinfo for CBroadcastLiveBanner::CCallbackOnBroadcastMicrophoneStatus
  D typeinfo for CBroadcastLiveBanner::CCallbackOnBroadcastSettingsLoaded
@@ -9971,6 +10009,8 @@
  D typeinfo for CBroadcastLiveBanner::CCallbackOnBroadcastUploadStatus
  D typeinfo for CBroadcastOverlayPanel
  D typeinfo for CBroadcastOverlayPanel::CCallbackOnBroadcastStatus
+ D typeinfo for CBroadcastPopOut
+ D typeinfo for CBroadcastView
  D typeinfo for CBroadcastViewer
  D typeinfo for CBroadcastViewer::CCallbackOnUnlockH264
  D typeinfo for CBroadcastViewerRequestNotification
@@ -13288,6 +13328,7 @@
  D vtable for CBoxShadowData
  D vtable for CBroadcastChatPanel
  D vtable for CBroadcastChatPanel::CCallbackOnBroadcastChatMessage
+ D vtable for CBroadcastClickPanel
  D vtable for CBroadcastLiveBanner
  D vtable for CBroadcastLiveBanner::CCallbackOnBroadcastMicrophoneStatus
  D vtable for CBroadcastLiveBanner::CCallbackOnBroadcastSettingsLoaded
@@ -13295,6 +13336,8 @@
  D vtable for CBroadcastLiveBanner::CCallbackOnBroadcastUploadStatus
  D vtable for CBroadcastOverlayPanel
  D vtable for CBroadcastOverlayPanel::CCallbackOnBroadcastStatus
+ D vtable for CBroadcastPopOut
+ D vtable for CBroadcastView
  D vtable for CBroadcastViewer
  D vtable for CBroadcastViewer::CCallbackOnUnlockH264
  D vtable for CBroadcastViewerRequestNotification
@@ -15764,7 +15807,10 @@
  D VTT for CBackupStartPage
  D VTT for CBackupWizard
  D VTT for CBandwidthUsageDialog
+ D VTT for CBroadcastClickPanel
  D VTT for CBroadcastLiveBanner
+ D VTT for CBroadcastPopOut
+ D VTT for CBroadcastView
  D VTT for CCDKeyDisplayDialog
  D VTT for CChangeContactEmailWizard
  D VTT for CChangePasswordWizard
@@ -17052,6 +17098,7 @@
  R typeinfo name for CBoxShadowData
  R typeinfo name for CBroadcastChatPanel
  R typeinfo name for CBroadcastChatPanel::CCallbackOnBroadcastChatMessage
+ R typeinfo name for CBroadcastClickPanel
  R typeinfo name for CBroadcastLiveBanner
  R typeinfo name for CBroadcastLiveBanner::CCallbackOnBroadcastMicrophoneStatus
  R typeinfo name for CBroadcastLiveBanner::CCallbackOnBroadcastSettingsLoaded
@@ -17059,6 +17106,8 @@
  R typeinfo name for CBroadcastLiveBanner::CCallbackOnBroadcastUploadStatus
  R typeinfo name for CBroadcastOverlayPanel
  R typeinfo name for CBroadcastOverlayPanel::CCallbackOnBroadcastStatus
+ R typeinfo name for CBroadcastPopOut
+ R typeinfo name for CBroadcastView
  R typeinfo name for CBroadcastViewer
  R typeinfo name for CBroadcastViewer::CCallbackOnUnlockH264
  R typeinfo name for CBroadcastViewerRequestNotification
@@ -21692,6 +21741,19 @@
  T CBroadcastChatPanel* panorama::GetThisPtrForJSCall<CBroadcastChatPanel>(v8::Local<v8::Object>)
  T CBroadcastChatPanel::SetSession(char const*, char const*)
  T CBroadcastChatPanel::SetupJavascriptObjectTemplate()
+ T CBroadcastClickPanel::~CBroadcastClickPanel()
+ T CBroadcastClickPanel::CBroadcastClickPanel(vgui::Panel*, char const*)
+ T CBroadcastClickPanel::ChainToAnimationMap()
+ T CBroadcastClickPanel::ChainToMap()
+ T CBroadcastClickPanel::GetAnimMap()
+ T CBroadcastClickPanel::GetClassSize() const
+ T CBroadcastClickPanel::GetKBMap()
+ T CBroadcastClickPanel::GetMessageMap()
+ T CBroadcastClickPanel::GetPanelClassName()
+ T CBroadcastClickPanel::GetPanelTopClassName() const
+ T CBroadcastClickPanel::KB_ChainToMap()
+ T CBroadcastClickPanel::OnMousePressed(vgui::MouseCode)
+ T CBroadcastClickPanel::PerformLayout()
  T CBroadcastLiveBanner::~CBroadcastLiveBanner()
  T CBroadcastLiveBanner::CBroadcastLiveBanner(vgui::Panel*)
  T CBroadcastLiveBanner::CCallbackOnBroadcastMicrophoneStatus::Run(void*)
@@ -21730,6 +21792,28 @@
  T CBroadcastOverlayPanel::GetPanelType() const
  T CBroadcastOverlayPanel::OnBroadcastStatus(BroadcastStatus_t*)
  T CBroadcastOverlayPanel::OnStopBroadcast()
+ T CBroadcastPopOut::~CBroadcastPopOut()
+ T CBroadcastPopOut::CBroadcastPopOut(CBroadcastView*)
+ T CBroadcastPopOut::ChainToAnimationMap()
+ T CBroadcastPopOut::ChainToMap()
+ T CBroadcastPopOut::GetAnimMap()
+ T CBroadcastPopOut::GetClassSize() const
+ T CBroadcastPopOut::GetKBMap()
+ T CBroadcastPopOut::GetMessageMap()
+ T CBroadcastPopOut::GetPanelClassName()
+ T CBroadcastPopOut::GetPanelTopClassName() const
+ T CBroadcastPopOut::KB_ChainToMap()
+ T CBroadcastPopOut::OnCloseWindow()
+ T CBroadcastPopOut::OnCustomURL(KeyValues*)
+ T CBroadcastPopOut::OnSetHTMLTitle(char const*)
+ T CBroadcastPopOut::PanelMessageFunc_OnCloseWindow::InitVar()
+ T CBroadcastPopOut::PanelMessageFunc_OnCustomURL::InitVar()
+ T CBroadcastPopOut::PanelMessageFunc_OnSetHTMLTitle::InitVar()
+ T CBroadcastPopOut::PerformLayout()
+ T CBroadcastView::~CBroadcastView()
+ T CBroadcastView::CBroadcastView(vgui::Panel*)
+ T CBroadcastView::ChainToAnimationMap()
+ T CBroadcastView::ChainToMap()
  T CBroadcastViewer::~CBroadcastViewer()
  T CBroadcastViewer::CBroadcastViewer(panorama::CPanel2D*, char const*)
  T CBroadcastViewer::CCallbackOnUnlockH264::Run(void*)
@@ -21743,6 +21827,24 @@
  T CBroadcastViewerRequestNotification::~CBroadcastViewerRequestNotification()
  T CBroadcastViewerRequestNotification::CBroadcastViewerRequestNotification(panorama::IUIWindow*, CSteamID)
  T CBroadcastViewerRequestNotification::GetPanelType() const
+ T CBroadcastView::GetAnimMap()
+ T CBroadcastView::GetClassSize() const
+ T CBroadcastView::GetKBMap()
+ T CBroadcastView::GetMessageMap()
+ T CBroadcastView::GetPanelClassName()
+ T CBroadcastView::GetPanelTopClassName() const
+ T CBroadcastView::KB_ChainToMap()
+ T CBroadcastView::Maximize()
+ T CBroadcastView::Minimize()
+ T CBroadcastView::OnFinishRequest(char const*, char const*)
+ T CBroadcastView::OnKeyCodeTyped(vgui::KeyCode)
+ T CBroadcastView::OnSetHTMLTitle(char const*)
+ T CBroadcastView::OnStartRequest(char const*, char const*, char const*, bool)
+ T CBroadcastView::OnTick()
+ T CBroadcastView::OpenURL(char const*, char const*, bool, bool)
+ T CBroadcastView::PopOut()
+ T CBroadcastView::SetNameForLayout()
+ T CBroadcastView::Validate(CValidator&, char const*)
  T CBrowseByCategoryData::BParseStoreResponse(KeyValues*)
  T CBrowseByCategoryData::~CBrowseByCategoryData()
  T CBrowseByCategoryData::CBrowseByCategoryData()
@@ -41052,6 +41154,7 @@
  T CUINavigatorPanel::ApplyUserConfigSettings(KeyValues*)
  T CUINavigatorPanel::BControlVisible(IUINavigatorSubPanel::ENavControl)
  T CUINavigatorPanel::BDecodeNavPlaceholderURL(char const*, CUtlString&)
+ T CUINavigatorPanel::BroadcastPageMinimize()
  T CUINavigatorPanel::CalcFullNavURL(IUINavigatorSubPanel*, CUtlString&)
  T CUINavigatorPanel::CCallbackOnAccountInfoUpdated::Run(void*)
  T CUINavigatorPanel::CCallbackOnAccountInfoUpdated::Run(void*, bool, unsigned long long)
@@ -41064,6 +41167,7 @@
  T CUINavigatorPanel::ChainToAnimationMap()
  T CUINavigatorPanel::ChainToMap()
  T CUINavigatorPanel::ClearWGAuthentication()
+ T CUINavigatorPanel::ClosingFrame()
  T CUINavigatorPanel::CreateFilterMenuCommand(CUINavigatorPanel::EUIPanel, EAppFilter, char const*)
  T CUINavigatorPanel::~CUINavigatorPanel()
  T CUINavigatorPanel::CUINavigatorPanel(vgui::Panel*, char const*)
@@ -41084,6 +41188,10 @@
  T CUINavigatorPanel::OnAddMusicButtonPressed()
  T CUINavigatorPanel::OnAppChangeNotification()
  T CUINavigatorPanel::OnBackRequested()
+ T CUINavigatorPanel::OnBroadcastPageMaximize()
+ T CUINavigatorPanel::OnBroadcastPageNavigate(KeyValues*)
+ T CUINavigatorPanel::OnBroadcastPopOut()
+ T CUINavigatorPanel::OnCloseBroadcastView()
  T CUINavigatorPanel::OnCommand(char const*)
  T CUINavigatorPanel::OnConfigUpdated(SteamConfigStoreChanged_t*)
  T CUINavigatorPanel::OnFinishRequest()
@@ -41099,17 +41207,23 @@
  T CUINavigatorPanel::OnRefreshRequested()
  T CUINavigatorPanel::OnRunGame(unsigned long long)
  T CUINavigatorPanel::OnSecurityStatus(KeyValues*)
+ T CUINavigatorPanel::OnStartRequestCallback(char const*, char const*, char const*, bool)
  T CUINavigatorPanel::OnStopRequested()
  T CUINavigatorPanel::OnTextChanged()
  T CUINavigatorPanel::OnTextEscape()
  T CUINavigatorPanel::OnTick()
  T CUINavigatorPanel::OnWebAuthCompleted()
  T CUINavigatorPanel::OnWebLoadingURL(KeyValues*)
+ T CUINavigatorPanel::OnWebPanelHorizontalScrollBarResized()
  T CUINavigatorPanel::OnWebPanelURLChanged(KeyValues*)
  T CUINavigatorPanel::OpenPage(char const*, char const*, char const*, CUINavigatorPanel::EURLHistory)
  T CUINavigatorPanel::OpenPage(char const*, CUINavigatorPanel::EURLHistory)
  T CUINavigatorPanel::PanelMessageFunc_OnAddMusicButtonPressed::InitVar()
  T CUINavigatorPanel::PanelMessageFunc_OnAppChangeNotification::InitVar()
+ T CUINavigatorPanel::PanelMessageFunc_OnBroadcastPageMaximize::InitVar()
+ T CUINavigatorPanel::PanelMessageFunc_OnBroadcastPageNavigate::InitVar()
+ T CUINavigatorPanel::PanelMessageFunc_OnBroadcastPopOut::InitVar()
+ T CUINavigatorPanel::PanelMessageFunc_OnCloseBroadcastView::InitVar()
  T CUINavigatorPanel::PanelMessageFunc_OnFinishRequest::InitVar()
  T CUINavigatorPanel::PanelMessageFunc_OnHTMLBackRequested::InitVar()
  T CUINavigatorPanel::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()
@@ -41121,6 +41235,7 @@
  T CUINavigatorPanel::PanelMessageFunc_OnTextEscape::InitVar()
  T CUINavigatorPanel::PanelMessageFunc_OnWebAuthCompleted::InitVar()
  T CUINavigatorPanel::PanelMessageFunc_OnWebLoadingURL::InitVar()
+ T CUINavigatorPanel::PanelMessageFunc_OnWebPanelHorizontalScrollBarResized::InitVar()
  T CUINavigatorPanel::PanelMessageFunc_OnWebPanelURLChanged::InitVar()
  T CUINavigatorPanel::PanelMessageFunc_SetFilterPanelKV::InitVar()
  T CUINavigatorPanel::PanelMessageFunc_SetMusicNavDisplayMode::InitVar()
@@ -41132,6 +41247,7 @@
  T CUINavigatorPanel::SetFilterPanel(CUINavigatorPanel::EUIPanel, EAppFilter, char const*)
  T CUINavigatorPanel::SetFilterPanelKV(KeyValues*)
  T CUINavigatorPanel::SetMusicNavDisplayMode(int)
+ T CUINavigatorPanel::ShowBroadcast(CSteamID)
  T CUINavigatorPanel::UpdateControlsState(bool)
  T CUINavigatorPanel::UpdateGameFiltersMenu(CUINavButton*, vgui::MenuButton*, CUINavigatorPanel::EUIPanel, vgui::Panel*, bool, EAppFilter)
  T CUINavigatorPanel::UpdateMeMenuText()
@@ -41227,6 +41343,7 @@
  T CUpperCaseTextEntry::~CUpperCaseTextEntry()
  T CUpperCaseTextEntry::InsertChar(wchar_t)
  T CURLHelper::BIsTrustedURL(char const*)
+ T CURLManager::BMatchingFullURL(int, char const*, int*)
  T CURLManager::ConstructFullURL(char const*, CUtlString*, char const*, char const*, char const*)
  T CURLManager::ConstructFullURL(int, CUtlString*, char const*, char const*, char const*)
  T CURLManager::ConstructFullURL(int, CUtlVector<char const*, CUtlMemory<char const*> >&, char*, int)
@@ -44724,9 +44841,11 @@
  T CWebPanel::KB_ChainToMap()
  T CWebPanel::OnAbortLastRequest()
  T CWebPanel::OnFinishRequest(char const*, char const*)
+ T CWebPanel::OnHorizontalScrollBarResized()
  T CWebPanel::OnStartRequest(char const*, char const*, char const*, bool)
  T CWebPanel::OnTick()
  T CWebPanel::OnURLChanged(KeyValues*)
+ T CWebPanel::OnVerticalScrollBarResized()
  T CWebPanel::OpenURL(char const*, char const*, bool, bool)
  T CWebPanel::PageOpenRequest(KeyValues*)
  T CWebPanel::PanelMessageFunc_OnURLChanged::InitVar()
@@ -46326,6 +46445,7 @@
  T non-virtual thunk to CAppSectionHeader::SetColor(Color)
  T non-virtual thunk to CAppSubscriptionsDownloadPanel::~CAppSubscriptionsDownloadPanel()
  T non-virtual thunk to CAutoAuthHTML::~CAutoAuthHTML()
+ T non-virtual thunk to CBroadcastView::~CBroadcastView()
  T non-virtual thunk to CConsolePage::BLoading()
  T non-virtual thunk to CConsolePage::BShowControl(IUINavigatorSubPanel::ENavControl)
  T non-virtual thunk to CConsolePage::BShowPage(char const*, char const*, char const*)
@@ -54949,6 +55069,7 @@
  T vgui::HTML::HidePopup()
  T vgui::HTML::~HTML()
  T vgui::HTML::HTML(vgui::Panel*, char const*, bool, char const*)
+ T vgui::HTML::IsHorizontalOverflow() const
  T vgui::HTML::IsOpaque()
  T vgui::HTML::KB_ChainToMap()
  T vgui::HTML::LoadedPageHeight() const
@@ -54965,6 +55086,7 @@
  T vgui::HTML::OnFileSelectionCancelled()
  T vgui::HTML::OnFinishRequest(char const*, char const*)
  T vgui::HTML::OnFullScreenCursorMoved(int, int)
+ T vgui::HTML::OnHorizontalScrollBarResized()
  T vgui::HTML::OnKeyCodePressed(vgui::KeyCode)
  T vgui::HTML::OnKeyCodeReleased(vgui::KeyCode)
  T vgui::HTML::OnKeyCodeTyped(vgui::KeyCode)
@@ -54984,6 +55106,7 @@
  T vgui::HTML::OnSizeChanged(int, int)
  T vgui::HTML::OnStartRequest(char const*, char const*, char const*, bool)
  T vgui::HTML::OnTick()
+ T vgui::HTML::OnVerticalScrollBarResized()
  T vgui::HTML::OpenURL(char const*, char const*, bool)
  T vgui::HTML::Paint()
  T vgui::HTML::PaintComboBox()

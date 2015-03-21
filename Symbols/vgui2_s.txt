@@ -1128,6 +1128,7 @@
  T ASN1_object_size
  T ASN1_put_eoc
  T ASN1_put_object
+ T ASN1_STRING_clear_free
  T ASN1_STRING_cmp
  T ASN1_STRING_copy
  T ASN1_STRING_data

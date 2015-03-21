@@ -1172,6 +1172,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/bandwidthusagedialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/bandwidthusagedialog.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/BandwidthUsageSampleSmoother.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/broadcastview.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/broadcastview.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/cdkeydisplaydialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/cdkeydisplaydialog.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/changepasswordutil.cpp

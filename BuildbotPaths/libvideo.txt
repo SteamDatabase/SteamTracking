@@ -1,4 +1,9 @@
 /Users/buildbot/buildslave/../.ccache/tmp/
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/lib/engines
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/ssl
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/ssl/cert.pem
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/ssl/certs
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/ssl/private
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/bitstring.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/checksum_crc.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/checksum_sha1.o

@@ -5563,6 +5563,7 @@
  T ASN1_object_size
  T ASN1_put_eoc
  T ASN1_put_object
+ T ASN1_STRING_clear_free
  T ASN1_STRING_cmp
  T ASN1_STRING_copy
  T ASN1_STRING_data
@@ -9838,6 +9839,7 @@
  T CTradeDialog::PanelMessageFunc_OnSetHTMLTitle::InitVar()
  T CTSList<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::~CTSList()
  T CTSList<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::Purge()
+ T CURLManager::BMatchingFullURL(int, char const*, int*)
  T CURLManager::ConstructFullURL(char const*, CUtlString*, char const*, char const*, char const*)
  T CURLManager::ConstructFullURL(int, CUtlString*, char const*, char const*, char const*)
  T CURLManager::ConstructFullURL(int, CUtlVector<char const*, CUtlMemory<char const*> >&, char*, int)
@@ -13219,6 +13221,7 @@
  T vgui::HTML::OnFileSelectionCancelled()
  T vgui::HTML::OnFinishRequest(char const*, char const*)
  T vgui::HTML::OnFullScreenCursorMoved(int, int)
+ T vgui::HTML::OnHorizontalScrollBarResized()
  T vgui::HTML::OnKeyCodePressed(vgui::KeyCode)
  T vgui::HTML::OnKeyCodeReleased(vgui::KeyCode)
  T vgui::HTML::OnKeyCodeTyped(vgui::KeyCode)
@@ -13238,6 +13241,7 @@
  T vgui::HTML::OnSizeChanged(int, int)
  T vgui::HTML::OnStartRequest(char const*, char const*, char const*, bool)
  T vgui::HTML::OnTick()
+ T vgui::HTML::OnVerticalScrollBarResized()
  T vgui::HTML::OpenURL(char const*, char const*, bool)
  T vgui::HTML::Paint()
  T vgui::HTML::PaintComboBox()

@@ -2722,6 +2722,7 @@
  T ASN1_seq_unpack
  T asn1_set_choice_selector
  T ASN1_sign
+ T ASN1_STRING_clear_free
  T ASN1_STRING_cmp
  T ASN1_STRING_copy
  T ASN1_STRING_data
