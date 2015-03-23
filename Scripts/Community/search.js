@@ -19,14 +19,19 @@ var CommunitySearch = {
 		this.m_nLastKeyPressTimeMS = time_now_ms;
 
 		if ( e.which == 13 )
-			this.CheckForSearchStart( time_now_ms );	// ENTER key triggers immediately
+			this.UpdateHashURL();
 		else
 			setTimeout( function() { CommunitySearch.CheckForSearchStart( time_now_ms ); }, 400 );
 	},
 
 	CheckForSearchStart: function( time_last_keyup ) {
 		if ( time_last_keyup == this.m_nLastKeyPressTimeMS ) {
-			this.UpdateHashURL();
+			// don't start search-as-we-type until we have at least 3 characters
+			var text = $J('#search_text_box').val().trim()
+			if ( text.length > 2 || text.length == 0 )
+			{
+				this.UpdateHashURL();
+			}
 		}
 	},
 
