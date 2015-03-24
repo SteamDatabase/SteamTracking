@@ -18,7 +18,7 @@
 		"LocalCostAUSBetweenRegions"				1
 		"LocalCostAUSFromRegionToISP"				1
 		"LocalCostAUSFromISPToRegion"				2
-		"LocalCostToLeaveChina"							8
+		"LocalCostToLeaveChina"							4
 		"LocalCostCanadaToUS"								2
 		"LocalCostIndiaToDubai"					2
 		"InwardCost"	0.2
@@ -225,7 +225,7 @@
 			"edges"
 			{
 				0 { "dest"	75 }
-				1 { "dest"	64 }
+				1 { "dest"	64 	"cost"	InwardCost }
 				2 { "dest"	31 }
 				3 { "dest"	18 }
 				4 { "dest"	49 }
@@ -305,13 +305,14 @@
 			"longitude"	"2.349358"
 			"edges"
 			{
-				0 { "dest"	 4  }
-				1 { "dest"	 5  }
-				2 { "dest"	86  }
-				3 { "dest"	88  }
-				4 { "dest"	37  }
-				5 { "dest"	40  }
-				6 { "dest"	96  }
+				0 { "dest"	 4  	"cost"	InwardCost}
+				1 { "dest"	 5  	"cost"	InwardCost}
+				2 { "dest"	129  	"cost"	InwardCost}
+				3 { "dest"	86  }
+				4 { "dest"	88  }
+				5 { "dest"	37  }
+				6 { "dest"	40  }
+				7 { "dest"	96  }
 			}
 		}
 
@@ -324,11 +325,11 @@
 			"longitude"	"4.888058"
 			"edges"
 			{
-				0 { "dest"	 4  }
-				1 { "dest"	 5  }
-				2 { "dest"	86  }
-				3 { "dest"	87  }
-				4 { "dest"	129  }
+				0 { "dest"	4  	"cost"	InwardCost}
+				1 { "dest"	5  	"cost"	InwardCost}
+				2 { "dest"	129  	"cost"	InwardCost}
+				3 { "dest"	86  }
+				4 { "dest"	87  }
 			}
 		}
 
@@ -450,13 +451,6 @@
 			"longitude"	"174.768791"
 			"edges"
 			{
-				0 { "dest"	107  }
-				1 { "dest"	108 }
-				2 { "dest"	109  }
-				3 { "dest"	110  }
-				4 { "dest"	111  }
-				5 { "dest"	112  }
-				6 { "dest"	113  }
 				7 { "dest"	17  }
 				8 
 				{ 
@@ -538,8 +532,6 @@
 			"edges"
 			{
 				0 { "dest"	97 }
-				1 { "dest"	99 }
-				2 { "dest"	101 }
 				3 { "dest"	123 }
 			}
 		}
@@ -549,6 +541,7 @@
 		{
 			"name" "Australia - NSW (Telstra)"
 			"region"	"australasia"
+			"deprecated" 1
 			"edges"
 			{
 				0 
@@ -564,6 +557,7 @@
 		{
 			"name" "Australia - NSW (Internode)"
 			"region"	"australasia"
+			"deprecated" 1
 			"edges"
 			{
 				0 
@@ -571,7 +565,6 @@
 					"dest"	52  
 					"cost"	LocalCostAUSFromISPToRegion
 				}
-				1 { "dest"	59  }
 			}
 		}
 
@@ -611,8 +604,7 @@
 			"longitude"	"-122.336395"
 			"edges"
 			{
-				0 { "dest"	10 	"cost"	InwardCost }
-				1 { "dest"	106  }				
+				0 { "dest"	10 	"cost"	InwardCost }		
 				2
 				{ 
 					"dest"	94
@@ -680,7 +672,7 @@
 		33
 		{
 			"name" "China - Hong Kong"
-			"region"	"asia"
+			"region"	"hongkong"
 			"latitude"	"22.289096"
 			"longitude"	"114.212151"
 			"edges"
@@ -1036,11 +1028,6 @@
 					"dest"	52  
 					"cost"	InwardCost
 				}
-				1
-				{ 
-					"dest"	122  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
 			}
 		}
 		// #52 AUS NSW
@@ -1073,21 +1060,6 @@
 					"dest"	54  
 					"cost"	LocalCostAUSBetweenRegions
 				}
-				5 
-				{ 
-					"dest"	27  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
-				6 
-				{ 
-					"dest"	28  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
-				7 
-				{ 
-					"dest"	56  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
 				8 
 				{ 
 					"dest"	51  
@@ -1113,16 +1085,6 @@
 				{ 
 					"dest"	54  
 					"cost"	LocalCostAUSBetweenRegions
-				}
-				2 
-				{ 
-					"dest"	57  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
-				3
-				{ 
-					"dest"	121  
-					"cost"	LocalCostAUSFromRegionToISP
 				}
 			}
 		}
@@ -1150,16 +1112,6 @@
 					"dest"	55  
 					"cost"	LocalCostAUSBetweenRegions
 				}
-				3 
-				{ 
-					"dest"	58  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
-				4 
-				{ 
-					"dest"	59  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
 			}
 		}
 		// #55 AUS WA
@@ -1181,27 +1133,13 @@
 					"dest"	54  
 						"cost"	InwardCost
 				}
-				2 
-				{ 
-					"dest"	60  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
-				3 
-				{ 
-					"dest"	61  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
-				4
-				{ 
-					"dest"	120  
-					"cost"	LocalCostAUSFromRegionToISP
-				}
 			}
 		}
 		// #56 AUS NSW (3FL)
 		56
 		{
 			"name" "Australia - NSW (3FL)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1210,13 +1148,13 @@
 					"dest"	52  
 					"cost"	LocalCostAUSFromISPToRegion
 				}
-				1 {  "dest"	60  }
 			}
 		}
 		// #57 AUS VIC (Gamespace)
 		57
 		{
 			"name" "Australia - VIC (Gamespace)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1231,6 +1169,7 @@
 		58
 		{
 			"name" "Australia - SA (Adam Internet)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1245,6 +1184,7 @@
 		59
 		{
 			"name" "Australia - SA (Internode)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1253,13 +1193,13 @@
 					"dest"	54  
 					"cost"	LocalCostAUSFromISPToRegion
 				}
-				1 { "dest"	28  }
 			}
 		}
 		// #60 AUS WA (3FL)
 		60
 		{
 			"name" "Australia - WA (3FL)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1268,13 +1208,13 @@
 					"dest"	55  
 					"cost"	LocalCostAUSFromISPToRegion
 				}
-				1 { "dest"	56 }
 			}
 		}
 		// #61 AUS WA (EGN)
 		61
 		{
 			"name" "Australia - WA (EGN)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1310,7 +1250,6 @@
 				1 { "dest"	83 }
 				2 { "dest"	84 }
 				3 { "dest"	50 }
-				4 { "dest"	105 }
 			}
 		}
 		// #64 US - Los Angeles
@@ -1343,9 +1282,10 @@
 			"edges"
 			{
 				0 { "dest"	78 }
-				1 { "dest"	50	"cost"	InwardCost }
-				2 { "dest"	64	"cost"	InwardCost }
-				3 { "dest"	11 }
+				1 { "dest"	49	"cost"	InwardCost }
+				2 { "dest"	50	"cost"	InwardCost }
+				3 { "dest"	64	"cost"	InwardCost }
+				4 { "dest"	11 }
 			}
 		}
 		// #66 Sweden
@@ -1793,8 +1733,6 @@
 			"edges"
 			{
 				0 { "dest"	26 }
-				1 { "dest"	98 }
-				2 { "dest"	100 }
 				3 { "dest"	24 }
 			}
 		}						
@@ -1803,10 +1741,10 @@
 		{
 			"name" "South Africa - Cape Town (MWEB)"
 			"region"	"africa"
+			"deprecated"	"1"
 			"edges"
 			{
-				0 { "dest"	99 }
-				1 { "dest"	97 
+				0 { "dest"	97 
 					"cost"	LocalCostAUSFromISPToRegion
 				}
 			}
@@ -1816,9 +1754,9 @@
 		{
 			"name" "South Africa - Johannesburg (MWEB)"
 			"region"	"africa"
+			"deprecated"	"1"
 			"edges"
 			{
-				0 { "dest"	98 }
 				1 { "dest"	26 
 					"cost"	LocalCostAUSFromISPToRegion
 				}
@@ -1829,6 +1767,7 @@
 		{
 			"name" "South Africa - Cape Town (Web Africa)"
 			"region"	"africa"
+			"deprecated"	"1"
 			"edges"
 			{
 				0 
@@ -1843,6 +1782,7 @@
 		{
 			"name" "South Africa - Johannesburg (IS Gaming)"
 			"region"	"africa"
+			"deprecated"	"1"
 			"edges"
 			{
 				0 { "dest"	26 
@@ -1899,6 +1839,7 @@
 		{
 			"name" "US - Washington, DC (Comcast)"
 			"region"	"usa"
+			"deprecated"	"1"
 			"edges"
 			{
 				0 
@@ -1913,6 +1854,7 @@
 		{
 			"name" "US - Seattle (Comcast)"
 			"region"	"usa"
+			"deprecated"	"1"
 			"edges"
 			{
 				0 
@@ -1926,6 +1868,7 @@
 		107
 		{
 			"name" "New Zealand (Helix)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1940,6 +1883,7 @@
 		108
 		{
 			"name" "New Zealand (Orcon)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1954,6 +1898,7 @@
 		109
 		{
 			"name" "New Zealand (Slingshot)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1968,6 +1913,7 @@
 		110
 		{
 			"name" "New Zealand (snap!)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1982,6 +1928,7 @@
 		111
 		{
 			"name" "New Zealand (TelstraClear)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -1997,6 +1944,7 @@
 		{
 			// this is not a typo
 			"name" "New Zealand (InSPire)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -2011,6 +1959,7 @@
 		113
 		{
 			"name" "New Zealand (Xnet)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -2108,6 +2057,7 @@
 		120
 		{
 			"name" "Australia - WA (WAIX)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -2118,6 +2068,7 @@
 		121
 		{
 			"name" "Australia - VIC (VIC-IX)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{
@@ -2128,6 +2079,7 @@
 		122
 		{
 			"name" "Australia - QLD (QLD-IX)"
+			"deprecated" 1
 			"region"	"australasia"
 			"edges"
 			{

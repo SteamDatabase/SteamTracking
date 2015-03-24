@@ -3289,6 +3289,7 @@
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
  .objc_class_name_NSProcessInfo
+ .objc_class_name_NSRunningApplication
  .objc_class_name_NSString
  .objc_class_name_NSUserDefaults
  .objc_class_name_NSWorkspace

@@ -768,6 +768,7 @@
  .objc_class_name_NSObject
  .objc_class_name_NSOpenPanel
  .objc_class_name_NSProcessInfo
+ .objc_class_name_NSRunningApplication
  .objc_class_name_NSScreen
  .objc_class_name_NSString
  .objc_class_name_NSUserDefaults

@@ -16388,6 +16388,7 @@
  .objc_class_name_NSPredicate
  .objc_class_name_NSProcessInfo
  .objc_class_name_NSRunLoop
+ .objc_class_name_NSRunningApplication
  .objc_class_name_NSString
  .objc_class_name_NSUserDefaults
  .objc_class_name_NSWorkspace
@@ -21810,10 +21811,14 @@
  T CBroadcastPopOut::PanelMessageFunc_OnCustomURL::InitVar()
  T CBroadcastPopOut::PanelMessageFunc_OnSetHTMLTitle::InitVar()
  T CBroadcastPopOut::PerformLayout()
+ T CBroadcastView::BLoading()
+ T CBroadcastView::BShowControl(IUINavigatorSubPanel::ENavControl)
+ T CBroadcastView::BShowPage(char const*, char const*, char const*)
  T CBroadcastView::~CBroadcastView()
  T CBroadcastView::CBroadcastView(vgui::Panel*)
  T CBroadcastView::ChainToAnimationMap()
  T CBroadcastView::ChainToMap()
+ T CBroadcastView::EndTypeToSearch()
  T CBroadcastViewer::~CBroadcastViewer()
  T CBroadcastViewer::CBroadcastViewer(panorama::CPanel2D*, char const*)
  T CBroadcastViewer::CCallbackOnUnlockH264::Run(void*)
@@ -21827,12 +21832,17 @@
  T CBroadcastViewerRequestNotification::~CBroadcastViewerRequestNotification()
  T CBroadcastViewerRequestNotification::CBroadcastViewerRequestNotification(panorama::IUIWindow*, CSteamID)
  T CBroadcastViewerRequestNotification::GetPanelType() const
+ T CBroadcastView::FilterApplied(EAppFilter, EAppFilter, char const*)
  T CBroadcastView::GetAnimMap()
  T CBroadcastView::GetClassSize() const
  T CBroadcastView::GetKBMap()
+ T CBroadcastView::GetKeyNavTargetPanel()
  T CBroadcastView::GetMessageMap()
+ T CBroadcastView::GetPageURL()
+ T CBroadcastView::GetPanel()
  T CBroadcastView::GetPanelClassName()
  T CBroadcastView::GetPanelTopClassName() const
+ T CBroadcastView::GetSelectedGames(CUtlMap<unsigned int, CUtlPtr<CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> > >, int, CDefLess<unsigned int> >*)
  T CBroadcastView::KB_ChainToMap()
  T CBroadcastView::Maximize()
  T CBroadcastView::Minimize()
@@ -21843,7 +21853,10 @@
  T CBroadcastView::OnTick()
  T CBroadcastView::OpenURL(char const*, char const*, bool, bool)
  T CBroadcastView::PopOut()
+ T CBroadcastView::SectionCollapsed(char const*, bool)
  T CBroadcastView::SetNameForLayout()
+ T CBroadcastView::SetSelectedGames(CUtlMap<unsigned int, CUtlPtr<CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> > >, int, CDefLess<unsigned int> > const*)
+ T CBroadcastView::StartTypeToSearch()
  T CBroadcastView::Validate(CValidator&, char const*)
  T CBrowseByCategoryData::BParseStoreResponse(KeyValues*)
  T CBrowseByCategoryData::~CBrowseByCategoryData()
@@ -41247,6 +41260,7 @@
  T CUINavigatorPanel::SetFilterPanel(CUINavigatorPanel::EUIPanel, EAppFilter, char const*)
  T CUINavigatorPanel::SetFilterPanelKV(KeyValues*)
  T CUINavigatorPanel::SetMusicNavDisplayMode(int)
+ T CUINavigatorPanel::ShowBroadcast(char const*)
  T CUINavigatorPanel::ShowBroadcast(CSteamID)
  T CUINavigatorPanel::UpdateControlsState(bool)
  T CUINavigatorPanel::UpdateGameFiltersMenu(CUINavButton*, vgui::MenuButton*, CUINavigatorPanel::EUIPanel, vgui::Panel*, bool, EAppFilter)
@@ -46445,7 +46459,19 @@
  T non-virtual thunk to CAppSectionHeader::SetColor(Color)
  T non-virtual thunk to CAppSubscriptionsDownloadPanel::~CAppSubscriptionsDownloadPanel()
  T non-virtual thunk to CAutoAuthHTML::~CAutoAuthHTML()
+ T non-virtual thunk to CBroadcastView::BLoading()
+ T non-virtual thunk to CBroadcastView::BShowControl(IUINavigatorSubPanel::ENavControl)
+ T non-virtual thunk to CBroadcastView::BShowPage(char const*, char const*, char const*)
  T non-virtual thunk to CBroadcastView::~CBroadcastView()
+ T non-virtual thunk to CBroadcastView::EndTypeToSearch()
+ T non-virtual thunk to CBroadcastView::FilterApplied(EAppFilter, EAppFilter, char const*)
+ T non-virtual thunk to CBroadcastView::GetKeyNavTargetPanel()
+ T non-virtual thunk to CBroadcastView::GetPageURL()
+ T non-virtual thunk to CBroadcastView::GetPanel()
+ T non-virtual thunk to CBroadcastView::GetSelectedGames(CUtlMap<unsigned int, CUtlPtr<CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> > >, int, CDefLess<unsigned int> >*)
+ T non-virtual thunk to CBroadcastView::SectionCollapsed(char const*, bool)
+ T non-virtual thunk to CBroadcastView::SetSelectedGames(CUtlMap<unsigned int, CUtlPtr<CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> > >, int, CDefLess<unsigned int> > const*)
+ T non-virtual thunk to CBroadcastView::StartTypeToSearch()
  T non-virtual thunk to CConsolePage::BLoading()
  T non-virtual thunk to CConsolePage::BShowControl(IUINavigatorSubPanel::ENavControl)
  T non-virtual thunk to CConsolePage::BShowPage(char const*, char const*, char const*)
@@ -47285,6 +47311,7 @@
  T opus_repacketizer_out_range
  T opus_repacketizer_out_range_impl
  T opus_strerror
+ T OSXHelpers::ActivateApplicationByPID(unsigned int)
  T OSXHelpers::BIsAccessibilityEnabled(bool)
  T OSXHelpers::BIsSteamEnabledForAutostart()
  T OSXHelpers::BIsVolumeRemovable(char const*)
