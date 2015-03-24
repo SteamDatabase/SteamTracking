@@ -537,14 +537,24 @@ GHomepage = {
 	BuildSupportedPlatformIcon: function( rgItemData )
 	{
 		var strHTML = '';
+		var nPlatforms = 0;
+		if ( rgItemData.os_windows )
+		{
+			strHTML += '<span class="platform_img win"></span>';
+			nPlatforms++;
+		}
 		if ( rgItemData.os_macos )
+		{
 			strHTML += '<span class="platform_img mac"></span>';
+			nPlatforms++;
+		}
 		if ( rgItemData.os_linux )
+		{
 			strHTML += '<span class="platform_img linux"></span>';
+			nPlatforms++;
+		}
 
-		var bIsSteamplay = strHTML.length > 0;
-
-		return '<span class="platform_img win"></span>' + strHTML + ( bIsSteamplay ? '<span class="platform_img steamplay"></span>' : '' );
+		return strHTML + ( nPlatforms > 1 ? '<span class="platform_img steamplay"></span>' : '' );
 	},
 
 	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay )

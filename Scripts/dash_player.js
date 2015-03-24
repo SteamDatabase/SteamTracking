@@ -351,7 +351,7 @@ CDASHPlayer.prototype.OnVideoBufferProgress = function()
 		this.m_elVideoPlayer.currentTime = this.m_nCurrentSeekTime;
 
 	// when all loaders have enough buffered data, play
-	var bPlay = (this.m_loaders.length > 0);
+	var bPlay = ( this.m_loaders.length > 0 );
 	var nStartPlayback = ( this.m_nCurrentSeekTime != -1 ) ? this.m_nCurrentSeekTime : 0;
 	for ( var i = 0; i < this.m_loaders.length; i++ )
 	{
@@ -714,6 +714,20 @@ CDASHPlayer.prototype.GetLanguageForAudioTrack = function()
 	return null;
 }
 
+CDASHPlayer.prototype.GetThumbnailInfoForVideo = function()
+{
+	for ( var i = 0; i < this.m_loaders.length; i++ )
+	{
+		if ( this.m_loaders[i].ContainsVideo() )
+		{
+			if ( this.m_loaders[i].m_adaptation.thumbnails )
+				return this.m_loaders[i].m_adaptation.thumbnails;
+		}
+	}
+
+	return null;
+}
+
 CDASHPlayer.prototype.BPlayingAudio = function()
 {
 	for ( var i = 0; i < this.m_loaders.length; i++ )
@@ -884,7 +898,7 @@ CDASHPlayer.prototype.StatsSegmentInfo = function()
 		{
 			bufferString += "Video " + (this.m_loaders[i].m_nNextSegment);
 			if (!this.BIsLiveContent())
-				bufferString += "/" + (this.m_loaders[i].m_nTotalSegments - 1);
+				bufferString += "/" + (this.m_loaders[i].m_nTotalSegments );
 			bufferString += ", ";
 		}
 
@@ -892,7 +906,7 @@ CDASHPlayer.prototype.StatsSegmentInfo = function()
 		{
 			bufferString += "Audio " + (this.m_loaders[i].m_nNextSegment);
 			if (!this.BIsLiveContent())
-				bufferString += "/" + (this.m_loaders[i].m_nTotalSegments - 1);
+				bufferString += "/" + (this.m_loaders[i].m_nTotalSegments );
 			bufferString += " ";
 		}
 	}
@@ -908,7 +922,7 @@ CDASHPlayer.prototype.StatsDownloadHost = function()
 		{
 			var parser = document.createElement('a');
 			parser.href = CMPDParser.GetInitSegmentURL( this.m_loaders[i].m_adaptation, this.m_loaders[i].m_representation );
-			return parser.host;
+			return parser.hostname;
 		}
 	}
 	
@@ -1164,7 +1178,8 @@ CSegmentLoader.prototype.GetTotalSegments = function()
 	// Calculate total segments if appropriate
 	if (this.m_player.m_mpd.periods[0].duration)
 	{
-		this.m_nTotalSegments = CMPDParser.GetSegmentForTime( this.m_adaptation, this.m_player.m_mpd.periods[0].duration * 1000 );
+		// asking for segment after end of video, so - 1 for actual segment count
+		this.m_nTotalSegments = CMPDParser.GetSegmentForTime( this.m_adaptation, this.m_player.m_mpd.periods[0].duration * 1000 ) - 1;
 	}
 
 	return this.m_nTotalSegments;
@@ -1172,7 +1187,8 @@ CSegmentLoader.prototype.GetTotalSegments = function()
 
 CSegmentLoader.prototype.BeginPlayback = function( unStartTime )
 {
-	if ( !this.GetRepresentationsCount() )
+	var nRepCounts = this.GetRepresentationsCount();
+	if ( !nRepCounts )
 		return false;
 
 	this.GetTotalSegments();
@@ -1182,7 +1198,12 @@ CSegmentLoader.prototype.BeginPlayback = function( unStartTime )
 		this.m_nNextSegment = CMPDParser.GetSegmentForTime( this.m_adaptation, unStartTime );
 		PlayerLog( 'Video Stream Starting at: ' + SecondsToTime( unStartTime / 1000 ) + ', starting segment: ' + this.m_nNextSegment );
 
-		this.ChangeRepresentationByIndex( this.GetRepresentationsCount() - 1 );
+		// start at 1 better than lowest quality if possible
+		if ( nRepCounts > 1 )
+			this.ChangeRepresentationByIndex( nRepCounts - 2 );
+		else
+			this.ChangeRepresentationByIndex( 0 );
+
 		this.DownloadNextSegment();
 
 	}
@@ -1229,9 +1250,12 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 	if ( !rtAttemptStarted )
 		rtAttemptStarted = Date.now();
 
-	// VOD ended?
-	if (this.m_nNextSegment > this.m_nTotalSegments)
+	// VOD ended if the segment about to be downloaded is more than the total segments
+	if ( ( this.m_nNextSegment - 1 ) > this.m_nTotalSegments )
 	{
+		// PlayerLog ( this.ContainsVideo() ? "Video" : "Audio" ) ;
+		// PlayerLog ( this.m_sourceBuffer.buffered.end(0) );
+
 		if ( this.ContainsVideo() )
 			$J( this.m_player.m_elVideoPlayer ).trigger( 'voddownloadcomplete' );
 
@@ -1262,7 +1286,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 
 				_loader.m_xhr = null;
 				_loader.m_nLastSegmentDownloadStatus = xhr.status;
-				
+
 				if ( xhr.status != 200 || !xhr.response )
 				{
 					_loader.m_nFailedSegmentDownloads++;
@@ -1444,9 +1468,16 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 
 	// check if we need to buffer. Keep downloading for dynamic content, minimum amount for VOD
 	var unAmountBuffered = this.GetAmountBuffered();
-	if ( this.m_player.BIsLiveContent() || unAmountBuffered < CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD )
+	if ( this.m_player.BIsLiveContent() || unAmountBuffered < CDASHPlayer.TRACK_BUFFER_MS )
 	{
 		this.DownloadNextSegment();
+		return;
+	}
+
+	// if enough to play, but not fully buffered, download with delay to allow adaptive changes to occur
+	if ( unAmountBuffered < CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD )
+	{
+		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, CDASHPlayer.DOWNLOAD_RETRY_MS );
 		return;
 	}
 
@@ -1641,16 +1672,20 @@ CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes 
 
 		// store the download
 		var logEntry = [];
-		logEntry.downloadTime = (new Date().getTime()) - startTime;
-		logEntry.dataSizeBytes = dataSizeBytes;
-		this.m_rgDownloadLog.push( logEntry );
+		logEntry.downloadTime = ( new Date().getTime() ) - startTime;
 
-		// for stats tracking
-		this.m_nBytesReceivedTotal += logEntry.dataSizeBytes;
-		this.m_nSegmentDownloadTimeTotal += logEntry.downloadTime;
-		this.m_nSegmentDownloadTimeEntries++;
-		this.m_nSegmentDownloadTimeMinimum = ( this.m_nSegmentDownloadTimeMinimum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime < this.m_nSegmentDownloadTimeMinimum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMinimum );
-		this.m_nSegmentDownloadTimeMaximum = ( this.m_nSegmentDownloadTimeMaximum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime > this.m_nSegmentDownloadTimeMaximum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMaximum );
+		if ( logEntry.downloadTime > 0 )
+		{
+			logEntry.dataSizeBytes = dataSizeBytes;
+			this.m_rgDownloadLog.push( logEntry );
+
+			// for stats tracking
+			this.m_nBytesReceivedTotal += logEntry.dataSizeBytes;
+			this.m_nSegmentDownloadTimeTotal += logEntry.downloadTime;
+			this.m_nSegmentDownloadTimeEntries++;
+			this.m_nSegmentDownloadTimeMinimum = ( this.m_nSegmentDownloadTimeMinimum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime < this.m_nSegmentDownloadTimeMinimum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMinimum );
+			this.m_nSegmentDownloadTimeMaximum = ( this.m_nSegmentDownloadTimeMaximum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime > this.m_nSegmentDownloadTimeMaximum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMaximum );
+		}
 	}
 }
 
@@ -1710,7 +1745,6 @@ CSegmentLoader.prototype.GetBytesReceived = function()
 {
 	return this.m_nBytesReceivedTotal;
 }
-
 
 CSegmentLoader.prototype.GetFailedSegmentDownloads = function()
 {
@@ -1861,6 +1895,20 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 					adaptationSet.containsAudio = true;
 			});
 
+			if ( adaptationSet.containsVideo )
+			{
+				var xmlThumbnails = $J( xmlAdaptation ).find('> Thumbnails');
+				if ( xmlThumbnails.size() != 0 )
+				{
+					adaptationSet.thumbnails = {
+						period: _mpd.ParseInt( xmlThumbnails, 'period' ),
+						template: $J( xmlThumbnails ).attr( 'template' ),
+						sheet: _mpd.ParseInt( xmlThumbnails, 'sheet' ),
+						sheetSeconds: _mpd.ParseInt( xmlThumbnails, 'period' ) * _mpd.ParseInt( xmlThumbnails, 'sheet' )
+					}
+				}
+			}
+
 			// find segment template
 			var xmlSegmentTemplates = $J( xmlAdaptation ).find( 'SegmentTemplate' );
 			if ( xmlSegmentTemplates.size() == 0 )
@@ -1957,7 +2005,7 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 				adaptationSet.representations.push( representation );
 			});
 		}
-		
+
 		// done
 		_mpd.periods[0].adaptationSets.push( adaptationSet );
 	});
@@ -2023,17 +2071,31 @@ CMPDParser.prototype.BUpdate = function( xmlDoc )
 		if ( !adaptationSet )
 			return;
 
-		var strMedia = $J( xmlSegmentTemplate ).attr( 'media' );
-	        var strInitialization = $J( xmlSegmentTemplate ).attr( 'initialization' );
-	        if ( !strMedia || !strInitialization )
-	        {
-	        	bError = true;
-	        	return;
-	        }
+		if ( adaptationSet.containsVideo )
+		{
+			var xmlThumbnails = $J( xmlAdaptation ).find('> Thumbnails');
+			if ( xmlThumbnails )
+			{
+				adaptationSet.thumbnails = {
+					period: _mpd.ParseInt( xmlThumbnails, 'period' ),
+					template: $J( xmlThumbnails ).attr( 'template' ),
+					sheet: _mpd.ParseInt( xmlThumbnails, 'sheet' ),
+					sheetSeconds: _mpd.ParseInt( xmlThumbnails, 'period' ) * _mpd.ParseInt( xmlThumbnails, 'sheet' )
+				}
+			}
+		}
 
-	        var segmentTemplate = adaptationSet.segmentTemplate;
-	        segmentTemplate.media = strMedia;
-	        segmentTemplate.initialization = strInitialization;
+		var strMedia = $J( xmlSegmentTemplate ).attr( 'media' );
+		var strInitialization = $J( xmlSegmentTemplate ).attr( 'initialization' );
+		if ( !strMedia || !strInitialization )
+		{
+			bError = true;
+			return;
+		}
+
+		var segmentTemplate = adaptationSet.segmentTemplate;
+		segmentTemplate.media = strMedia;
+		segmentTemplate.initialization = strInitialization;
 	});
 
 	return !bError;
@@ -2139,7 +2201,7 @@ CMPDParser.GetSegmentDuration = function( adaptationSet )
 CMPDParser.GetSegmentForTime = function( adaptationSet, unTime )
 {
 	// currently only support all segments having the same duration
-	var unSegmentDuration = (adaptationSet.segmentTemplate.duration / adaptationSet.segmentTemplate.timescale) * 1000;
+	var unSegmentDuration = CMPDParser.GetSegmentDuration( adaptationSet );
 	return Math.floor( unTime / unSegmentDuration ) + 1;
 }
 
@@ -2178,9 +2240,11 @@ function CDASHPlayerUI( player )
 	this.m_strUniqueSettingsID = '';
 	this.m_elActiveNotification = null;
 	this.m_schNotificationTimeout = null;
+	this.m_ThumbnailInfo = null;
 }
 
 CDASHPlayerUI.s_ClosedCaptionsNone = "none";
+CDASHPlayerUI.PRELOAD_THUMBNAILS = false;
 
 CDASHPlayerUI.s_overlaySrc =	'<div class="dash_overlay no_select">' +
 										'<div class="play_button play"></div>' +
@@ -2198,7 +2262,9 @@ CDASHPlayerUI.s_overlaySrc =	'<div class="dash_overlay no_select">' +
 											'<div class="progress_bar_container">' +
 												'<div class="progress_bar_background"></div>' +
 												'<div class="progress_bar">' +
-													'<div class="progress_time_info no_select"></div>' +
+													'<div class="progress_time_info no_select">' +
+														'<span class="time_display"></span>' +
+													'</div>' +
 													'<div class="progress_time_bar"></div>'
 												'</div>' +
 											'</div>' +
@@ -2301,6 +2367,26 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 	else
 	{
 		$J( '.control_container', this.m_elOverlay ).removeClass( 'no_audio_track' );
+	}
+
+	this.m_ThumbnailInfo = this.m_player.GetThumbnailInfoForVideo();
+	if ( this.m_ThumbnailInfo && this.m_ThumbnailInfo.template )
+	{
+		// update display
+		$J( '.progress_time_info' ).addClass( 'thumbnails' );
+
+		// precache images for VOD
+		if ( !this.m_player.BIsLiveContent() && CDASHPlayerUI.PRELOAD_THUMBNAILS )
+		{
+			var rgData = _ui.GetTimelineData();
+			var nThumbnailSheets = Math.ceil( ( rgData.nTimeEnd - _ui.m_ThumbnailInfo.period ) / _ui.m_ThumbnailInfo.sheetSeconds );
+			$J( '<div/>', { id: 'thumbnailcache' } ).appendTo( 'body' );
+			for ( var i = 0; i < nThumbnailSheets; i++ )
+			{
+				var image_url = this.m_ThumbnailInfo.template.replace( '$Seconds$', i * _ui.m_ThumbnailInfo.sheetSeconds );
+				$J('<img />').attr( 'src', image_url ).appendTo( '#thumbnailcache' ).hide();
+			}
+		}
 	}
 
 	this.InitSettingsPanelInUI();
@@ -2479,6 +2565,7 @@ CDASHPlayerUI.prototype.Hide = function()
 			$J( _ui.m_elContainer ).removeClass( 'dash_show_player_ui' );
 			$J( '.volume_slider', _ui.m_elOverlay ).off( 'mousemove' );
 			$J( '.settings_panel' ).hide();
+			_ui.OnProgressLeave();
 		}, 3000 );
 	}
 }
@@ -2574,8 +2661,8 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 	$J( '.time', this.m_elOverlay ).text( timeString );
 
 	// show adaptive value when selected
-	var repVideo = $J("#representation_select_video");
-	if ( repVideo.length != 0 && !repVideo.is(":focus") )
+	var repVideo = $J( '#representation_select_video' );
+	if ( repVideo.length != 0 && !repVideo.is( ':focus' ) )
 	{
 		if ( repVideo.val() == -1 && this.m_player.m_nPlaybackHeight > 0)
 		{
@@ -2868,6 +2955,9 @@ CDASHPlayerUI.prototype.OnProgressClick = function( e, ele )
 
 CDASHPlayerUI.prototype.OnProgressHover = function( e, ele )
 {
+	if ( this.m_bHidden )
+		return;
+
 	var parentOffset = $J(ele).offset();
 	var barWidth = $J(ele).innerWidth();
 	var relX = e.pageX - parentOffset.left;
@@ -2887,21 +2977,41 @@ CDASHPlayerUI.prototype.OnProgressHover = function( e, ele )
 	}
 	else
 	{
-		strTime = SecondsToTime( Math.max( nSeekTo, 0 ) );
+		strTime = SecondsToTime( Math.min( Math.max( nSeekTo, 0 ), rgData.nTimeEnd ) );
 	}
 
 	var timeWidth = $J('.progress_time_info').outerWidth();
 	var nTimeInfoLeft = Math.min( Math.max( relX - timeWidth / 2, -2 ), barWidth - timeWidth - 4 );
 
-	$J('.progress_time_info').css('left',nTimeInfoLeft).text( strTime );
-	$J('.progress_time_bar').css('left', relX - $J('.progress_time_bar').width() / 2 );
+	$J('.progress_time_info').css('left', nTimeInfoLeft );
+	$J('.progress_time_info .time_display').text( strTime );
+	$J('.progress_time_bar').css('left', relX  );
+
+	// if we have thumbnails to show
+	if ( this.m_ThumbnailInfo && this.m_ThumbnailInfo.template )
+	{
+		// find the sprite sheet, the image in the sprite sheet and render it
+
+		// note: don't try to get a thumbnail beyond the length of the video
+		var nLastThumbnailTime = Math.floor( ( rgData.nTimeEnd - this.m_ThumbnailInfo.period ) / this.m_ThumbnailInfo.period ) * this.m_ThumbnailInfo.period;
+		nSeekTo = Math.min( nSeekTo, nLastThumbnailTime );
+
+		var nThumbnailSheetSeconds = Math.floor( nSeekTo / this.m_ThumbnailInfo.sheetSeconds ) * this.m_ThumbnailInfo.sheetSeconds;
+		var nThumbnailIndexInSheet = Math.floor( ( nSeekTo - nThumbnailSheetSeconds ) / this.m_ThumbnailInfo.period );
+		var nThumbnailWidth = $J( '.progress_time_info.thumbnails' ).innerWidth();
+		var strThumbnailSheetURL = this.m_ThumbnailInfo.template.replace( '$Seconds$', nThumbnailSheetSeconds );
+		var nXPosInSheet = -1 * nThumbnailWidth * nThumbnailIndexInSheet;
+
+		$J( '.progress_time_info' ).css( 'background-image', 'url(\'' + strThumbnailSheetURL + '\')');
+		$J( '.progress_time_info' ).css( 'background-position', nXPosInSheet + 'px 0px');
+	}
 }
 
 CDASHPlayerUI.prototype.OnProgressLeave = function( e, ele )
 {
-	
-	$J('.progress_time_info').css('left', '-100px');
-	$J('.progress_time_bar').css('left', '-100px');
+		var nHoverHideLocation = ( -2 * $J( '.progress_time_info' ).outerWidth() ) + 'px';
+	$J( '.progress_time_info' ).css( 'left', nHoverHideLocation );
+	$J( '.progress_time_bar' ).css( 'left', nHoverHideLocation );
 }
 
 CDASHPlayerUI.prototype.LoadVolumeSettings = function()

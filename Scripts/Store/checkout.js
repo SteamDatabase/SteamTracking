@@ -2456,27 +2456,20 @@ function UpdatePaymentInfoForm()
 			$J('#cant_use_payment_method_in_overlay').hide();
 		}	
 		
-		var strCCDisplay = bShowCreditCardNumberExp ? 'block' : 'none';
-		$('credit_card_row').style.display = strCCDisplay;
-		$('card_number_label').style.display = strCCDisplay;
-		$('card_number').style.display = strCCDisplay;
-		$('expiration_date_cvv_label').style.display = strCCDisplay;
+		var $CCFields = $J('#credit_card_row, #card_number_label, #card_number, #expiration_date_cvv_label, #expiration_date_label, #expiration_month_dselect_container, #expiration_year_dselect_container')
+		if ( bShowCreditCardNumberExp )
+			$CCFields.show();
+		else
+			$CCFields.hide();
 
-		if ( $('expiration_date_label'))
-			$('expiration_date_label').style.display = strCCDisplay;
-
-		$('expiration_month_dselect_container').style.display = strCCDisplay;
-		$('expiration_year_dselect_container').style.display = strCCDisplay;
-		
-				var strCVVDisplay = bShowCVV ? 'block' : 'none';
-		$('security_code_section').style.display = strCVVDisplay;
-
-		if ( bShowCVV  )
+				if ( bShowCVV  )
 		{
+			$('security_code_section' ).show();
 			$('expiration_date_cvv_label').innerHTML = 'Expiration date and security code';
 		}
 		else
 		{
+			$('security_code_section' ).hide();
 			$('expiration_date_cvv_label').innerHTML = 'Expiration date';
 		}
 		

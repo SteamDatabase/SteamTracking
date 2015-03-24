@@ -165,11 +165,6 @@ ul#why_list li {
 	height: 18px;
 }
 
-.join_form .dselect_container a {
-	color: #ffffff;
-	text-decoration: none;
-}
-
 .joinsteam_page .btn_checkout_large {
 	position: absolute;
 	bottom: -20px;
@@ -277,116 +272,9 @@ ul#why_list {
 	overflow: hidden;
 }
 
-/* DSelect */
-.dselect_container {
-	color: #b0aeac;
-	text-shadow: 1px 1px 0 0 #000;
-	font-size: 12px;
-
-	display: inline-block;
-	position: relative;
-}
-.dselect_container a.trigger, a.activetrigger {
-	background: url('https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_arrow_dn_for_select.png') no-repeat right transparent;
-	color: #ebebeb;
-	padding: 4px 30px 4px 8px;
-	font-size: 12px;
-	line-height: 19px;
-	border: 1px transparent;
-	border-radius: 3px;
-	text-overflow: ellipsis;
-	text-decoration: none;
-	white-space: nowrap;
-	height: 19px;
-	width: 105px;
-	background-color: #000;
-	background-color:rgba(0,0,0,0.2);
-}
-
-.dselect_container a.trigger:hover,
-.dselect_container a.activetrigger,
-.dselect_container a.activetrigger:hover
-{
-	color: #ffffff;
-	border-radius: 1px;
-	background-color: #67c1f5;
-}
-
-.activetrigger{
-	background:#B3B0AA url(https://steamstore-a.akamaihd.net/public/images/select_arrow.gif) no-repeat scroll right top;
-	border:1px solid #6B6A44;
-	color: #4A4945;
-	overflow: hidden;
-}
-
-
-.dropcontainer ul {
-	list-style-type:none;
-	line-height: 22px;
-	background-color:#262626;
-	border:1px solid #82807C;
-	margin:0;
-	width:300px;
-	position:absolute;
-	left: 0px;
-	z-index: 999999;
-
-	overflow: auto;
-	overflow-x: hidden;
-}
-
-
-.dropdownhidden{
-	display: none;
-}
-.dropdownvisible{
-	top:5px;
-	display: block;
-}
-.dropcontainer ul li {
-	padding: 0px;
-	margin: 0px;
-}
-.dropcontainer ul li.emptyvalue {
-	font-style: italic;
-}
-.dropcontainer ul a {
-	padding-left:2px;
-	padding-right:2px;
-	display:block;
-	text-decoration:none;
-	color:#B0AEAC;
-	line-height: 22px;
-	height: 22px;
-}
-.dropcontainer a.highlighted_selection {
-	color: #ffffff;
-	border-radius: 1px;
-	background: #67c1f5; /* Old browsers */
-	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
-	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	text-decoration: none;
-}
-.dropcontainer{
-	position:relative;
-}
-
 #challenge_question_dselect_container {
 	margin-top: 5px;
-}
-
-#challenge_question_trigger {
 	width: 264px;
-	display: block;
-	line-height: 19px;
-}
-.dropdownvisible#challenge_question_droplist {
-	top: 0;
 }
 
 #privacy_link {

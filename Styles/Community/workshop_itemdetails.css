@@ -387,6 +387,17 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	overflow: hidden;
 	float: left;
 }
+.requiredItem {
+	background-color: rgba( 84, 133, 183, 0.2);
+	padding: 7px;
+	margin-bottom: 1px;
+	position: relative;
+}
+.requiredItem .requiredItemSubscribed {
+	position: absolute;
+	right: 7px;
+	bottom: 8px;
+}
 
 .rateUpCount
 {

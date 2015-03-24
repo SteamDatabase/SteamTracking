@@ -56,21 +56,21 @@ function CheckVoteResultsJSON( json )
 	switch ( json['success'] )
 	{
 		case 16:
-			alert( 'There was a problem submitting your request to our servers. Please try again.' );
+			ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
 			return false;
 		case 24:
-			alert( 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
 			return false;
 		case 21:
-			alert( 'You must be logged in to perform that action.' );
+			ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
 			return false;
 		case 15:
-			alert( 'Your account does not have sufficient privileges to perform this action. Please make sure that you own the this game and that your account is in good standing.' );
+			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. Please make sure that you own the this game and that your account is in good standing.' );
 			return false;
 		case 1:
 			return true;
 		default:
-			alert( 'There was a problem submitting your request.' );
+			ShowAlertDialog( 'Error', 'There was a problem submitting your request.' );
 			return false;
 	}
 }
@@ -374,22 +374,35 @@ function SubscribeItem()
 	if ( !$('SubscribeItemBtn').hasClassName( "toggled" ) )
 	{
 		$('PublishedFileSubscribe').request( {
-			onComplete: function()
+			onSuccess: function( response )
 			{
-				$('JustSubscribed').show();
+				if ($('JustSubscribed') !== null )
+				{
+					$('JustSubscribed').show();
+				}
 				$('SubscribeItemBtn').addClassName("toggled");
 				$('SubscribeItemOptionAdd').className = "subscribeOption add";
 				$('SubscribeItemOptionSubscribed').className = "subscribeOption subscribed selected";
 				$('action_wait').hide();
+
+				if ( response.responseJSON.required_items.length != 0 )
+				{
+					var requiredItems = $J( "#RequiredItems").clone();
+					requiredItems.prepend( 'This item requires all of the following other items in order to function properly:<br><br>' );
+					var dialog = ShowAlertDialog( 'Additional Required Items', requiredItems );
+				}
 			}
 		} );
 	}
 	else
 	{
 		$('PublishedFileUnsubscribe').request( {
-			onComplete: function()
+			onSuccess: function( response )
 			{
-				$('JustSubscribed').hide();
+				if ($('JustSubscribed') !== null )
+				{
+					$('JustSubscribed').hide();
+				}
 				$('SubscribeItemBtn').removeClassName("toggled");
 				$('SubscribeItemOptionAdd').className = "subscribeOption add selected";
 				$('SubscribeItemOptionSubscribed').className = "subscribeOption subscribed";

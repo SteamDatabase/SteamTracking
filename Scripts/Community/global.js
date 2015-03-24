@@ -2006,7 +2006,7 @@ CGameSelectorOwnedGames = Class.create( CGameSelector, {
 				var rgRegex = [];
 				for ( var iTerm = 0; iTerm < rgTerms.length; iTerm++ )
 				{
-					var term = RegExp.escape( rgTerms[iTerm] );	// prototype-specific function
+					var term = V_EscapeRegExp( rgTerms[iTerm] );
 					rgRegex.push( new RegExp( term ) );
 				}
 				var rgMatchingGames = [];

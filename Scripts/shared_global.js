@@ -1026,6 +1026,11 @@ function InitEmoticonHovers()
 	window.DismissEmoticonHover = rgCallbacks.fnCancelHover;
 }
 
+function V_EscapeRegExp( str )
+{
+	return str.replace( /[.*+?^${}()|[\]\\]/g, '\\$&' );
+}
+
 function v_trim( str )
 {
 	if ( str.trim )

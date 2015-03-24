@@ -1868,3 +1868,106 @@ body.v6 .discover_queue_empty>h3 {
 }
 
 /* END TEMPORARY */
+
+
+.dropcontainer ul {
+	list-style-type:none;
+	line-height: 22px;
+	margin:0;
+	position:absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index: 90;
+
+	overflow: auto;
+	overflow-x: hidden;
+
+	box-shadow: 0 0 5px 0 #000000;
+	background: #417A9B;
+}
+.dropdownhidden{
+	display: none;
+}
+.dropdownvisible{
+	display: block;
+}
+.dropcontainer ul li {
+	padding: 0;
+	margin: 0;
+}
+.dropcontainer ul li.emptyvalue {
+	font-style: italic;
+}
+.dropcontainer ul a {
+	padding: 0 10px;
+	display:block;
+	text-decoration:none;
+	color: #e5e4dc;
+	line-height: 22px;
+	height: 22px;
+
+	white-space: nowrap;
+}
+
+.dropcontainer{
+	position:relative;
+}
+
+.dselect_container {
+	font-size: 12px;
+}
+
+.dselect_container {
+	position: relative;
+
+}
+.dselect_container a.trigger, .dselect_container a.activetrigger {
+	display: block;
+	color: #67c1f5;
+	padding: 0 30px 0 8px;
+	font-size: 12px;
+	line-height: 21px;
+	border: 0;
+	border-radius: 3px;
+	text-decoration: none;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dselect_container a.trigger {
+	background: rgba( 103, 193, 245, 0.1 );
+}
+
+.dselect_container a.activetrigger, .dselect_container a.activetrigger:hover {
+	color: #ffffff;
+	background: #67c1f5;
+}
+
+
+.dselect_container a.activetrigger {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	z-index: 91;
+	position: relative;
+}
+
+.dselect_container a.trigger::after, .dselect_container a.activetrigger::after {
+	position: absolute;
+	right: 0;
+	top: 3px;
+	width: 24px;
+	height: 14px;
+	background: url('https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_arrow_dn_for_select.png') no-repeat right;
+	content: '';
+}
+
+.dselect_container a.trigger:hover,
+.dselect_container .dropcontainer a.highlighted_selection
+{
+	color: #ffffff;
+	background-color: #67c1f5; /* Old browsers */
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b), color-stop(95%,#67c1f5));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#417a9b', endColorstr='#67c1f5',GradientType=1 );background: -moz-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -o-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -ms-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););}
+

@@ -322,6 +322,7 @@ function CreateWalletAndCheckFunds( bCreateFromAddress )
 					'wallet_code' : $('wallet_code').value,
 					'CreateFromAddress' : bCreateFromAddress ? 1 : 0,
 					'Address' : $('billing_address').value,
+					'City' : $('billing_city').value,
 					'Country' : $('billing_country').value,
 					'State' : ($('billing_country').value == 'US' ? $('billing_state_select').value : $('billing_state_text').value),
 					'PostCode' : $('billing_postal_code').value

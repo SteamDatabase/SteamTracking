@@ -2724,56 +2724,10 @@ h2.bb_tag + br {
 	text-align: right;
 }
 
-.dropcontainer ul {
-	list-style-type:none;
-	line-height: 22px;
-	background-color:#67c1f5;
-	margin:0;
-	width:300px;
-	position:absolute;
-	left: 0px;
-	z-index: 999999;
-
-	overflow: auto;
-	overflow-x: hidden;
-}
-
-.dropcontainer ul#ReviewLanguage_droplist {
-	right: 0px;
+.dropcontainer ul#ReviewLanguage_droplist,
+.dropcontainer ul#ReviewVisibility_droplist {
+	right: 0;
 	left: auto;
-}
-
-.dropdownhidden{
-	display: none;
-}
-.dropdownvisible{
-	top:5px;
-	display: block;
-}
-.dropcontainer ul li {
-	padding: 0px;
-	margin: 0px;
-}
-.dropcontainer ul li.emptyvalue {
-	font-style: italic;
-}
-.dropcontainer ul a {
-	padding-left:2px;
-	padding-right:2px;
-	display:block;
-	text-decoration:none;
-	color:#ffffff;
-	line-height: 22px;
-	height: 22px;
-}
-.dropcontainer a.highlighted_selection {
-    color: #ffffff;
-    border-radius: 1px;
-    background: #212d3d;
-	text-decoration: none;
-}
-.dropcontainer{
-	position:relative;
 }
 
 .glance_tags_ctn {
