@@ -156,6 +156,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "Return pricing information, if applicable"
+                },
+                {
+                    "name": "return_metadata",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Populate the metadata"
                 }
             ]
         }
