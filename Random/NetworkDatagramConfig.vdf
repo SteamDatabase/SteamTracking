@@ -1,5 +1,5 @@
 {
-	"revision": 7,
+	"revision": 8,
 	"data_centers": {
 		"vie": {
 			"lat": 48.12,
@@ -72,8 +72,8 @@
 			]
 		}
 	},
-	"routing_clusters": [
-		{ "addresses": [ "208.64.200.252:27015-27030" ] },
-		{ "addresses": [ "205.196.6.134:27015-27030" ] }
-	]
+	"routing_clusters": {
+		"tuk": { "addresses": [ "208.64.200.252:27015-27038" ] },
+		"sea": { "addresses": [ "205.196.6.134:27015-27038" ] }
+	}
 }
