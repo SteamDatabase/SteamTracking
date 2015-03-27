@@ -15,6 +15,13 @@
 	height: 160px;
 	position: relative;
 }
+.customBrowseLink {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 500px;
+	height: 158px;
+}
 
 .customBrowseDescContainer
 {
