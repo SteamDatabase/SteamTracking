@@ -185,6 +185,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrcommon.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrinternal.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrmanager.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vrpathregistry.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/vthumbstick.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/workshopcontentupdatejob.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/xinputmemstream.o
@@ -364,6 +365,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrcommon.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrinternal.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrmanager.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrpathregistry.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vthumbstick.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/workshopcontentupdatejob.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/xinputmemstream.o
@@ -654,6 +656,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrinternal.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrmanager.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrpathregistry.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/vr/vrpathregistry.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/workshopcontentupdatejob.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/workshopcontentupdatejob.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/accountutils.cpp

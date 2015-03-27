@@ -707,7 +707,7 @@
  T CVideoMemStreamWriter::~CVideoMemStreamWriter()
  T CVideoMemStreamWriter::CVideoMemStreamWriter(char const*, unsigned int)
  T CVideoMemStreamWriter::GetFrameSize() const
- T CVROverlayInterfaceGL::CreateDistortMap(vr::IHmd*, vr::Hmd_Eye, unsigned int, unsigned int) const
+ T CVROverlayInterfaceGL::CreateDistortMap(vr::IVRSystem*, vr::Hmd_Eye, unsigned int, unsigned int) const
  T CVROverlayInterfaceGL::CVROverlayInterfaceGL(CVROverlayInterfaceGL::CreateStruct_t const&)
  T CVROverlayInterfaceGL::DrawQuad(CVROverlayInterfaceGL::Texture_t*, vr::utils::CVRConstants const&, vr::Hmd_Eye, unsigned int, unsigned int, unsigned int, unsigned int) const
  T __cxa_allocate_exception
@@ -976,10 +976,10 @@
  t transcribeProtocols(objc_class*, glue_class_ro_t*)
  T UpdateVRState(int, int)
  T ValveHookScreenshots
- T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IHmd*, vr::Hmd_Eye, int, int, unsigned short*, int)
+ T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IVRSystem*, vr::Hmd_Eye, int, int, unsigned short*, int)
  T vr::utils::COverlayView<CVROverlayInterfaceGL>::COverlayView(CVROverlayInterfaceGL::CreateStruct_t const&)
  T vr::utils::COverlayView<CVROverlayInterfaceGL>::Draw(float, float, float, float, float) const
- T vr::utils::CVRConstants::ComputeConstants(vr::IHmd*)
+ T vr::utils::CVRConstants::ComputeConstants(vr::IVRSystem*)
  T WindowInVRBounds(int, int)
  __udivdi3
  __umoddi3

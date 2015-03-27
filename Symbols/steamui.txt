@@ -28861,6 +28861,7 @@
  T CInstallManager::GetExternalSignupApps(CUtlVector<unsigned int, CUtlMemory<unsigned int> >&) const
  T CInstallManager::GetProductName()
  T CInstallManager::GetWizardDialogSize(int&, int&)
+ T CInstallManager::HasAppsThatRequireInstallation() const
  T CInstallManager::RetailInstallMissingAppFixup()
  T CInstallManager::SetRetailInstall(char const*, ELanguage)
  T CInstallManager::ShowCancelInstallDialog(vgui::Frame*, vgui::Panel*)

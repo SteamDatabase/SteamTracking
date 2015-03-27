@@ -14887,8 +14887,8 @@
  T void std::__merge_without_buffer<panorama::CUIAnimationEngine::RenderOperation_t**, int, bool (*)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&)>(panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, int, int, bool (*)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&))
  T void std::__rotate<panorama::CUIAnimationEngine::RenderOperation_t**>(panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, std::random_access_iterator_tag)
  T void std::__stable_sort_adaptive<panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, int, bool (*)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&)>(panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, int, bool (*)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&))
- T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IHmd*, vr::Hmd_Eye, int, int, unsigned short*, int)
- T vr::utils::CVRConstants::ComputeConstants(vr::IHmd*)
+ T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IVRSystem*, vr::Hmd_Eye, int, int, unsigned short*, int)
+ T vr::utils::CVRConstants::ComputeConstants(vr::IVRSystem*)
  t write_file_header
  t write_file_trailer
  t write_frame_header

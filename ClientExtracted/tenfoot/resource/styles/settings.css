@@ -2176,6 +2176,35 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	visibility: collapse;
 }
 
+.NotLoggedIn #StoreSettingsButton
+{
+	visibility: collapse;
+}
+
+.NotLoggedIn #MusicSettingsButton
+{
+	visibility: collapse;
+}
+
+.NotLoggedIn #VoiceSettingsButton
+{
+	visibility: collapse;
+}
+
+.NotLoggedIn #BroadcastSettingsButton
+{
+	visibility: collapse;
+}
+
+.NotLoggedIn #DownloadsSettingsButton
+{
+	visibility: collapse;
+}
+
+.NotLoggedIn #RemoteControlSettingsButton
+{
+	visibility: collapse;
+}
 
 .ClientUpdateMargin
 {
