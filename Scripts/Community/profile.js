@@ -43,7 +43,7 @@ function PresentGroupInviteOptions( rgFriendsToInvite )
 			if ( groupid )
 			{
 				$J(this).click( function() {
-					fnOnModalDismiss = function() {;};	// don't resolve the deferred on modal dismiss anymore, user has picked something
+					fnOnModalDismiss = function () {;};	// don't resolve the deferred on modal dismiss anymore, user has picked something
 					InviteUserToGroup( Modal, groupid, steamIDInvitee)
 					.done( function() { deferred.resolve(); } )
 					.fail( function() { deferred.reject(); } );
@@ -85,7 +85,7 @@ function InviteUserToGroup( Modal, groupID, steamIDInvitee )
 
 	}).fail( function( data ) {
 		Modal && Modal.Dismiss();
-		ShowAlertDialog( '', data.results ? data.results : 'Error processing your request. Please try again.' );
+		ShowAlertDialog( 'Error', data.responseJSON.results ? data.responseJSON.results : 'Error processing your request. Please try again.' );
 	});
 }
 
@@ -139,18 +139,36 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 			).done( function() { window.location.reload(); } );
 		}
 	} ).fail( function( jqXHR  ) {
+
 		var failedInvites = jqXHR.responseJSON['failed_invites_result'];
-		if ( failedInvites[0] !== undefined && failedInvites[0] == 40 )
-		{
-			ShowAlertDialog( 'Add Friend',
-				'Error adding Friend. Communication between you and this user has been blocked.'
-			);
-		}
-		else
+
+		if ( failedInvites === undefined )
 		{
 			ShowAlertDialog( 'Add Friend',
 				'Error adding friend. Please try again.'
 			);
+			return;
+		}
+
+		switch ( failedInvites[0] )
+		{
+			case 40:
+				ShowAlertDialog( 'Add Friend',
+					'Error adding Friend. Communication between you and this user has been blocked.'
+				);
+				break;
+
+			case 15:
+			case 24:
+				ShowAlertDialog( 'Add Friend',
+					'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663">Visit Steam Support</a> for more information.'
+				);
+				break;
+
+			default:
+				ShowAlertDialog( 'Add Friend',
+					'Error adding friend. Please try again.'
+				);
 		}
 
 	} );
@@ -282,7 +300,7 @@ function ToggleManageFriends()
 
 function ManageFriendsInviteToGroup( $Form, groupid )
 {
-	$Form.find('input[type="checkbox"]')
+	$Form.find('input[type="checkbox"]');
 	var rgFriendSteamIDs = [];
 	$Form.find( 'input[type=checkbox]' ).each( function() {
 		if ( this.checked )
@@ -450,7 +468,7 @@ function ShowNicknameModal( )
 
 function SetFollowing( bFollowing, fnOnSuccess )
 {
-	var url = bFollowing ? g_rgProfileData['url'] + "followuser/" : g_rgProfileData['url'] + "unfollowuser/"
+	var url = bFollowing ? g_rgProfileData['url'] + "followuser/" : g_rgProfileData['url'] + "unfollowuser/";
 	$J.ajax( { url: url,
 		data: { sessionid: g_sessionID },
 		type: 'POST',

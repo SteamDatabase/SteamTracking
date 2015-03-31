@@ -283,7 +283,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 		}
 		else
 		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_SessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
 		}
 		
 		$('purchase_button_bottom').style.display = 'none';
@@ -4488,7 +4488,7 @@ function SendGift()
 				'GiftSentiment' : gift_sentiment,
 				'GiftSignature' : gift_signature,
 				'GiftGID':		g_gidGift,
-				'SessionID':	g_SessionID
+				'SessionID':	g_sessionID
 			},
 		    onSuccess: function(transport){
 		    	g_bSendGiftCallRunning = false;
@@ -4567,7 +4567,7 @@ function UnsendGift()
 		    parameters: {
 				// gift info
 				'GiftGID':		g_gidGift,
-				'SessionID':	g_SessionID
+				'SessionID':	g_sessionID
 			},
 		    onSuccess: function(transport){
 		    	g_bSendGiftCallRunning = false;

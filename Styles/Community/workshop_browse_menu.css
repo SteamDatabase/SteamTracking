@@ -50,7 +50,7 @@
 {
 	font-size: 13px;
 	line-height: 17px;
-	color: #a5b4bd;
+	color: #c6d4df;
 	font-family: "Motiva Sans Light", "Motiva Sans", Arial, Helvetica, sans-serif;
 }
 
@@ -175,7 +175,7 @@
 	height: 32px;
 	right: 5px;
 	padding: 0px 7px 0px 0px;
-	background-color: #1a1a1a;
+	background-color: rgba( 0, 0, 0, 0.6 );
 	border-radius: 4px;
 	border-left: 1px solid #000;
 	border-top: 1px solid #000;
@@ -215,13 +215,14 @@ input.search_text.default_text {
 .workshop_browsing
 {
 	float: left;
-	padding-top: 14px;
+	padding-top: 11px;
 	padding-right: 10px;
 	font-size: 18px;
 	color: #67c1f5;
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-weight: normal;
 	margin-right: 4px;
+	margin-bottom: 3px;
 }
 
 .workshop_browsing_section

@@ -420,22 +420,21 @@ a.large_title:hover {
 
 .group_content.group_comments {
 	padding-bottom: 4px;
-	padding-right: 6px;
+	padding-right: 0px;
 }
 
 .group_comments .commentthread_header, .group_comments .commentthread_footer {
 	border: none;
 }
 .group_comments .commentthread_area {
-	padding-top: 8px;
+	padding-top: 0px;
 }
 
 .group_comments .commentthread_header .commentthread_count {
-	opacity: 0.4;
 }
 
 .group_comments .commentthread_entry {
-	background: none;
+	background: rgba( 0, 0, 0, 0.2 );
 }
 
 .group_comments .commentthread_entry_quotebox_quote {

@@ -1471,3 +1471,7 @@ select.subforum_select_control {
 .weblink img {
 	vertical-align: middle;
 }
+
+.topic_cannotreply_reason {
+	text-align: center;
+}

@@ -426,7 +426,7 @@ a.general_btn:hover {
 }
 
 #rightContents.browsePage {
-	margin-top: 43px;
+	margin-top: 50px;
 }
 
 
@@ -1762,10 +1762,9 @@ textarea {
 	height: 20px;
 	width: 20px;
 	overflow: hidden;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state.png');
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icon_show_state.png?v=1');
 	background-repeat: no-repeat;
 	float: right;
-	margin-right: 2px;
 }
 
 #highlight_player_area {
@@ -1973,6 +1972,7 @@ textarea {
 .workshopItemPreviewArea
 {
 	position: relative;
+	margin-bottom: 25px;
 }
 
 .workshopItemPreviewImageMain
@@ -2478,6 +2478,9 @@ a.commentsTab:hover {
 	color: #caba8d;
 	padding: 8px;
 }
+#ServiceProviders .sectionTitle.small {
+	font-size: 14px;
+}
 
 .workshopItemSplitsCollapsed {
 
@@ -2502,6 +2505,7 @@ a.commentsTab:hover {
 .workshopItemSplits p {
 	font-size: 13px;
 	color: #413c2f;
+	margin-top: 0px;
 }
 	.workshopItemSplits p a {
 		text-decoration: underline;
@@ -2820,6 +2824,37 @@ input.inputSplits {
 {
 	border-style: none;
 }
+input.inputTagsFilter + label {
+	color: #fff;
+	width: 263px;
+	display: inline-block;
+	height: 19px;
+	vertical-align: top;
+	padding-top: 4px;
+	margin-left: -31px;
+	padding-left: 31px;
+}
+input.inputTagsFilter:checked + label
+{
+	color: #a3cf06;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba( 87, 110, 4, 0 )), color-stop(100%,rgba( 87, 110, 4, 1 )));background: -moz-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);background: -webkit-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);background: -o-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);background: -ms-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);background: linear-gradient( to right, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);}
+input.inputTagsFilter:hover + label,
+input.inputTagsFilter:checked + label:hover
+{
+	color: #67c1f5;
+}
+.filterOption {
+	margin-left: -10px;
+	padding-left: 10px;
+	margin-right: -10px;
+	height: 20px;
+	padding-top: 0px;
+	padding-bottom: 3px;
+}
+.filterOption:hover {
+	cursor: pointer;
+	background-color: rgba(27,43,59,1);
+}
 
 input[type='checkbox'] {
 	border-style: none;
@@ -2899,8 +2934,8 @@ input.searchText
 .searchedForTerm
 {
 	float: left;
-	min-height: 20px;
-	line-height: 20px;
+	min-height: 15px;
+	line-height: 15px;
 	padding: 4px;
 	background-color: #68932f;
 	border: 2px solid #68932f;
@@ -2909,8 +2944,7 @@ input.searchText
 	color: #d2ff96;
 	font-size: 14px;
 	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-top: 10px;
+	margin-top: 9px;
 }
 
 .searchedForTerm:hover
@@ -3907,11 +3941,13 @@ div.hover {
 	font-size: 14px;
 }
 
-#ig_bottom .sidebar .panel
+#ig_bottom .sidebar .panel,
+#ig_bottom .sidebar .detailPanel
 {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
     padding: 10px 10px 10px 11px;
 	margin: 0 0 10px 0;
+	border: none;
 }
 #rightContents .panel,
 .revenue #rightContents .panel {
@@ -3989,12 +4025,23 @@ div.hover {
 
 	.detailPanel > .bigNumber {
 		font-size: 41px;
-		color: #b7b7b7;
+		color: #c6d4df;
+		font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+		margin-top: -5px;
 	}
 	
 	.detailPanel > .smallText {
 		font-size: 11px;
 		margin-top: 5px;
+		color: #396c99;
+	}
+	.detailPanel > .descriptorText {
+		font-size: 12px;
+		color: #6d8499;
+	}
+
+	.detailPanel > .descriptorText > a {
+		color: #a9cded;
 	}
 	
 .detailPanelHighlight {
@@ -4010,7 +4057,9 @@ div.hover {
 
 	.detailPanelHighlight > .bigNumber {
 		font-size: 41px;
-		color: #e1e1e1;
+		color: #c6d4df;
+		font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+		margin-top: -5px;
 	}
 	
 	.detailPanelHighlight > .smallText {
@@ -4243,10 +4292,6 @@ div.hover {
 
 .publicComments {
 	padding-right: 0px;
-}
-
-.chromeless {
-	background-position: 0 0;
 }
 
 .panel .hr {

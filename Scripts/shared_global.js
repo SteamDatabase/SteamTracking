@@ -1473,7 +1473,12 @@ function RateAnnouncement( rateURL, gid, bVoteUp )
 			case 21:
 				ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
 				break;
-			case RateAnnouncement_Error_AccessDenied:
+			case 24:
+				ShowAlertDialog( 'Error',
+					'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank">Visit Steam Support</a> for more information.'
+				);
+				break;
+			case 15:
 				ShowAlertDialog( 'Error', 'You do not have permission to perform that action.' );
 				break;
 			default:

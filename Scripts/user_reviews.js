@@ -19,7 +19,7 @@ function UserReview_Rate( recommendationID, bRateUp, baseURL, callback )
 		}
 		else if ( results.success == 24 )
 		{
-			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank">Visit Steam Support</a> for more information.' );
 		}
 		else
 		{
@@ -49,7 +49,7 @@ function UserReview_VoteTag( recommendationID, tagID, bRateUp, baseURL, callback
 		}
 		else if ( results.success == 24 )
 		{
-			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank">Visit Steam Support</a> for more information.' );
 		}
 		else
 		{

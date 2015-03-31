@@ -117,11 +117,24 @@
 	font-size: 14px;
 	color: white;
 	line-height: 30px;
+	margin-left: -12px;
 }
+	.browse_option a
+	{
+		width: 100%;
+		display: block;
+		padding-left: 12px;
+	}
+	.browse_option a:hover
+	{
+		cursor: pointer;
+		background-color: rgba(27,43,59,1);
+	}
 .browse_option.admin a
 {
 	color: #ca5029;
 }
+
 .browse_option.admin a:hover
 {
 	color: #67c1f5;
@@ -972,6 +985,15 @@ a.readmore_link
 	overflow: hidden;
 	box-shadow: 0 0 6px 0 #000000;
 }
+.slideshow_content.threeup {
+	box-shadow: none;
+}
+.slideshow_content.threeup .slideshow_item {
+	background: transparent;
+}
+.slideshow_content.threeup .workshop_item a .preview_image {
+	box-shadow: none;
+}
 
 .slideshow_items_container
 {
@@ -985,6 +1007,9 @@ a.readmore_link
 	width: 638px;
 	padding-bottom: 10px;
 	background-color: black;
+}
+.slideshow_content.threeup .slideshow_item {
+	padding-bottom: 0px;
 }
 
 .slideshow_item_link
@@ -1023,6 +1048,10 @@ a.readmore_link
 {
 	margin-left: 10px;
 	padding-top: 4px;
+}
+ .slideshow_item .square .workshop_item_rating {
+	margin-left: 0px;
+	 padding-top: 0px;
 }
 .slideshow_item .workshop_item_price
 {
@@ -1126,7 +1155,6 @@ a.readmore_link
 	cursor: pointer;
 	color: white;
 	font-size: 14px;
-	line-height: 24px;
 }
 .tag_label:hover {
 	color: #66c0f4;
@@ -1134,6 +1162,33 @@ a.readmore_link
 .tag_label .tag_count
 {
 	color: #718a98;
+}
+input.inputTagsFilter + label {
+	color: #fff;
+	width: 263px;
+	display: inline-block;
+	height: 19px;
+	vertical-align: top;
+	padding-top: 4px;
+	margin-left: -31px;
+	padding-left: 31px;
+}
+input.inputTagsFilter:hover + label,
+input.inputTagsFilter:checked + label:hover
+{
+	color: #67c1f5;
+}
+.filterOption {
+	margin-left: -10px;
+	padding-left: 10px;
+	margin-right: -10px;
+	height: 20px;
+	padding-top: 0px;
+	padding-bottom: 3px;
+}
+.filterOption:hover {
+	cursor: pointer;
+	background-color: rgba(27,43,59,1);
 }
 .selectTagsFilter
 {

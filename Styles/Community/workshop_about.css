@@ -1,8 +1,24 @@
 
+h3 {
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
+	margin-bottom: 3px;
+}
+h4 {
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
+	margin-bottom: 3px;
+	color: #67c1f5;
+	font-size: 14px;
+	font-weight: normal;
+}
+#profileBlock p.initial {
+	margin-top: 4px;
+}
 .page_title
 {
 	font-size: 28px;
 	color: white;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	margin-top: 20px;
 }
 
 .page_desc
@@ -10,6 +26,7 @@
 	font-size: 16px;
 	padding-top: 10px;
 	padding-bottom: 20px;
+	border-top: 1px solid #2c3f58;
 }
 
 	.page_desc > P {
@@ -18,7 +35,7 @@
 
 .enabled_features
 {
-	color: #529CDE;
+	color: #66c0f4;
 	text-transform: uppercase;
 	font-size: 12px;
 }
@@ -46,14 +63,17 @@
 
 .feature_title
 {
-	color: #529CDE;
-	font-size: 17px;
+	color: #66c0f4;
+	font-size: 14px;
+	margin-bottom: 4px;
 }
 
 .feature_desc
 {
-	font-size: 14px;
+	font-size: 13px;
 	padding-bottom: 20px;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
+	color: #acb2b8;
 }
 
 .service_providers
@@ -80,7 +100,7 @@
 {
 	font-weight: normal;
 	font-size: 15px;
-	color: #529CDE;
+	color: #67c1f5;
 }
 
 .service_provider_description
@@ -94,4 +114,81 @@
 	padding-bottom: 20px;
 	border-top: 1px solid #444444;
 	padding-top: 4px;
+}
+.ws_about_big_button_ctn {
+	position: relative;
+	margin-bottom: 30px;
+	margin-top: -20px;
+}
+a.ws_about_big_button {
+	width: 172px;
+	height: 113px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px #000;
+
+	float: left;
+
+	padding: 26px 16px 10px 16px;
+
+	text-align: center;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#294767), color-stop(95%,#1f3449));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#294767', endColorstr='#1f3449',GradientType=0 );background: -moz-linear-gradient( top, #294767 5%, #1f3449 95%);background: -webkit-linear-gradient( top, #294767 5%, #1f3449 95%);background: -o-linear-gradient( top, #294767 5%, #1f3449 95%);background: -ms-linear-gradient( top, #294767 5%, #1f3449 95%);background: linear-gradient( to bottom, #294767 5%, #1f3449 95%);
+}
+a.ws_about_big_button.one,
+a.ws_about_big_button.two {
+	margin-right: 12px;
+}
+a.ws_about_big_button:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#316cab), color-stop(95%,#1e4265));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#316cab', endColorstr='#1e4265',GradientType=0 );background: -moz-linear-gradient( top, #316cab 5%, #1e4265 95%);background: -webkit-linear-gradient( top, #316cab 5%, #1e4265 95%);background: -o-linear-gradient( top, #316cab 5%, #1e4265 95%);background: -ms-linear-gradient( top, #316cab 5%, #1e4265 95%);background: linear-gradient( to bottom, #316cab 5%, #1e4265 95%);}
+a.ws_about_big_button:hover span,
+#profileBlock a.ws_about_big_button:hover p {
+	color: #fff;
+}
+
+a.ws_about_big_button span {
+	font-size: 21px;
+	color: #66c0f4;
+	line-height: 19px;
+}
+#profileBlock a.ws_about_big_button p {
+	font-size: 13px;
+	color: #4784a7;
+	margin-top: 0px;
+}
+.ws_about_content_area {
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 1px 16px 16px 16px;
+	border-top: 1px solid #2c3f58;
+	margin-bottom: 20px;
+}
+
+.ws_about_content_area .feature_body {
+	width: 555px;
+}
+.FAQ {
+	margin-left: 12px;
+}
+.FAQ_Q {
+	font-size: 13px;
+	font-family: 'Motiva Sans Bold', Arial, Tahoma;
+	line-height: 16px;
+}
+.FAQ_A {
+	font-size: 13px;
+	font-family: 'Motiva Sans Light', Arial, Tahoma;
+	margin-bottom: 12px;
+	line-height: 16px;
+}
+.rightDetailsBlock span {
+	font-size: 11px;
+	color: #505a64;
+	margin-left: 27px;
+	width: 249px;
+	overflow: hidden;
+	display: inline-block;
+	text-overflow: ellipsis;
+}
+.primary_panel_border.panel_margin_none {
+	margin-top: 0px;
 }

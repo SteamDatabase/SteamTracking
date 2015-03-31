@@ -29,7 +29,7 @@ function OnGroupHashChange( hash, bInitialLoad )
 		if ( rgMatches && rgMatches[0] )
 		{
 			url = rgMatches[0];
-			url = url.replace( /\.+[\/\\]/g, '' );	//clean out any ./ or ../ in the URL
+			url = url.replace( /(\.|%2E)+([\/\\]|%2F|%5C)/g, '' );	//clean out any ./ or ../ in the URL
 			strTab = url.match( /^[a-zA-Z]*/ )[0];
 		}
 	}

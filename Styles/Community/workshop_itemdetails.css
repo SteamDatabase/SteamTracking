@@ -10,7 +10,6 @@
 	line-height: 27px;
 	color: #FFC369;
 	background-color: #CA7900;
-	box-shadow: 0px 0px 5px #000;
 
 }
 
@@ -813,9 +812,9 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .just_added_to_list
 {
 	padding: 10px;
-	background-color: #314a67;
-	border: 1px solid #567397;
-	color: #7cb0f1;
+	background-color: rgba( 64, 128, 183, 0.8);
+
+	color: #66c0f4;
 	margin: 5px 0;
 }
 
@@ -840,7 +839,6 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .just_added_text
 {
 	float: left;
-	padding-top: 5px;
 }
 
 .just_subscribed_icon
@@ -2531,20 +2529,25 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .game_area_purchase_game
 {
 	position: relative;
-	padding: 16px 16px 21px 16px;
+	padding: 16px;
 	margin-bottom: 5px;
-	min-height: 20px;
+	min-height: 32px;
 
 	background: #1f1f1f;
 	background: rgba(21,21,21,.36);
-	border: 1px solid #39393a;
+	border: 1px solid #35465e;
 }
-.game_area_purchase_game .contributorNote {
-	color: #81a313;
+.game_area_purchase_margin .contributorNote {
+	background-color: #536904;
+	color: #a4d007;
+	width: 630px;
+	display: block;
+	padding: 4px;
 }
 
 .game_area_purchase_game.admin {
 	border-color: #A55B13;
+	min-height: 38px;
 }
 .game_area_purchase_game.admin h1 {
 	color: #A55B13;
@@ -2596,38 +2599,66 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	}
 
 .game_area_purchase_game > h1 {
-	font-size: 17px;
+	font-size: 20px;
 	color: white;
 	font-weight: normal;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
+	width: 450px;
+}
+.game_area_purchase_game > h1.purchase {
+	margin-top: 5px;
 }
 .game_area_purchase_game > h1 span {
 	color: #5c8699;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 }
 .game_area_purchase_game.buy > h1 span {
 	color: #66c0f4;
+}
+.game_area_purchase_game.buy > h1 span.bundle_tag {
+	color: #66c0f4;
+	font-size: 15px;
 }
 
 .game_area_purchase_game > a {
 	position: absolute;
 	right: 16px;
-	bottom: -20px;
+	top: 16px;
 }
 
 .game_area_purchase_game .commerce_container {
 	position: absolute;
 	right: 12px;
-	bottom: 12px;
+	top: 20px;
 }
 
 .game_area_purchase_game.buy .commerce_container {
 	position: absolute;
 	right: 12px;
-	top: 12px;
+	top: 15px;
 	border-radius: 4px;
 	border: 2px solid #222222;
 	background: rgba( 0, 0, 0, 0.2 );
 	height: 32px;
+	padding-left: 9px;
+}
+.game_area_purchase_game.buy .bundle_includes {
+	margin-top: 15px;
+	margin-right: -16px;
+	margin-bottom: -16px;
+	margin-left: -16px;
+
+	padding-top: 8px;
+	padding-right: 16px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+
+	line-height: 16px;
+	color: #66c0f4;
+
+	background: rgba( 0, 0, 0, 0.2 );
 }
 .game_area_already_owned {
 	height: 40px;
@@ -2707,17 +2738,32 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .commerce_price
 {
 	font-size: 15px;
-	color: #c6d4df;
+	color: #dae9f2;
 	font-family: "Motiva Sans Light", Arial, Tahoma, Sans-serif;
 	font-weight: normal;
 	margin-right: 8px;
-	margin-left: 12px;
 }
-
-.commerce_price.purchase_dialog
+.commerce_price.original_price
 {
-	position: relative;
-	top: -10px;
+	color: #8f98a0;
+	text-decoration: line-through;
+}
+.price_stacked {
+	display: inline-block;
+	vertical-align: bottom;
+	text-align: right;
+}
+	.price_stacked .commerce_price.original_price {
+		position: absolute;
+		/* left: 46px; */
+		/* right: 0px; */
+		top: 2px;
+		font-size: 11px;
+	}
+
+.commerce_owned_bundled_item
+{
+	color: orange;
 }
 
 .official_content_text_area

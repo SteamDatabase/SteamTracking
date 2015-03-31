@@ -59,7 +59,7 @@ function CheckVoteResultsJSON( json )
 			ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
 			return false;
 		case 24:
-			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663">Visit Steam Support</a> for more information.' );
 			return false;
 		case 21:
 			ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
@@ -259,7 +259,7 @@ function ValidateVoteSuccess( transport )
 	}
 	else if ( transport.responseJSON.success == 24 )
 	{
-		ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. To access all features of Steam, simply purchase a game from the Steam store, redeem a Gift on Steam, complete a microtransaction, or activate a retail game on Steam.' );
+		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663">Visit Steam Support</a> for more information.' );
 	}
 	else if ( transport.responseJSON.success == 16 )
 	{
@@ -368,34 +368,45 @@ function HideSharePoup()
 	$('ShareItemBtn').removeClassName( 'toggled' );
 }
 
-function SubscribeItem()
+function SendSubscribeItemRequest()
 {
 	$('action_wait').show();
+	$('PublishedFileSubscribe').request( {
+		onSuccess: function( response )
+		{
+			if ($('JustSubscribed') !== null )
+			{
+				$('JustSubscribed').show();
+			}
+			$('SubscribeItemBtn').addClassName("toggled");
+			$('SubscribeItemOptionAdd').className = "subscribeOption add";
+			$('SubscribeItemOptionSubscribed').className = "subscribeOption subscribed selected";
+			$('action_wait').hide();
+		}
+	} );
+}
+
+function SubscribeItem()
+{
 	if ( !$('SubscribeItemBtn').hasClassName( "toggled" ) )
 	{
-		$('PublishedFileSubscribe').request( {
-			onSuccess: function( response )
-			{
-				if ($('JustSubscribed') !== null )
-				{
-					$('JustSubscribed').show();
-				}
-				$('SubscribeItemBtn').addClassName("toggled");
-				$('SubscribeItemOptionAdd').className = "subscribeOption add";
-				$('SubscribeItemOptionSubscribed').className = "subscribeOption subscribed selected";
-				$('action_wait').hide();
-
-				if ( response.responseJSON.required_items.length != 0 )
-				{
-					var requiredItems = $J( "#RequiredItems").clone();
-					requiredItems.prepend( 'This item requires all of the following other items in order to function properly:<br><br>' );
-					var dialog = ShowAlertDialog( 'Additional Required Items', requiredItems );
-				}
-			}
-		} );
+		if ( $J( "[name=requiredItems]").length != 0 )
+		{
+			var requiredItems = $J( "#RequiredItems").clone();
+			requiredItems.prepend( 'This item requires all of the following other items in order to function properly.<br><br>You can click on each one here to learn more about and subscribe to the item before proceeding.<br><br>' );
+			var dialog = ShowConfirmDialog( 'Additional Required Items', requiredItems, 'Continue' );
+			dialog.done( function() {
+				SendSubscribeItemRequest();
+			} );
+		}
+		else
+		{
+			SendSubscribeItemRequest();
+		}
 	}
 	else
 	{
+		$('action_wait').show();
 		$('PublishedFileUnsubscribe').request( {
 			onSuccess: function( response )
 			{
