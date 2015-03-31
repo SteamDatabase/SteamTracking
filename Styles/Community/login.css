@@ -423,6 +423,7 @@ box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 .OpenID_MainHeader {
 	background-color: #1c1c1c;
 	width: 950px;
+	height: 110px;
 }
 
 	.OpenID_MainHeader h1{
@@ -430,15 +431,16 @@ box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 		color: #ffffff;
 		font-family: 'Motiva Sans Thin', Arial, Tahoma;
 		font-weight: normal;
-		padding: 30px 0px 0px 18px;
+		padding: 24px 0px 0px 18px;
 	}
 	
 	.OpenID_MainHeader h2{
-		font-size: 24px;
-		color: #579bda;
+		font-size: 16px;
+		color: #e1b54a;
 		font-family: 'Motiva Sans Thin', Arial, Tahoma;
 		font-weight: normal;
-		padding: 0px 0px 20px 18px;
+		padding: 10px 8px 8px 0px;
+		height: 45px;
 	}
 	
 .OpenID_LowerContents {
@@ -480,6 +482,8 @@ box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 	background-color: #1c1c1c;
 	border-radius: 3px;
 	padding: 8px;
+	margin-left: -8px;
+	margin-right: -8px;
 }
 	.OpenID_UserName {
 		float: left;
@@ -500,9 +504,21 @@ box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 .OpenID_Logout {
 	float: right;
 	text-decoration:underline;
-	margin-bottom: 35px;
+	margin-top: 21px;
 }
 
 .OpenID_linkLoggedInAccount {
 
 }
+
+.OpenID_list
+{
+	float: left;
+	font-size: 13px;
+	width: 370px;
+}
+
+.OpenID_listitem
+{
+	margin-bottom: 8px;
+	}
