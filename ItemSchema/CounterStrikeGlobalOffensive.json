@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.05e656872ea098654bb29c7cbbea15c431e028b3.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.4c9b1812635130ac3f82f4befe34ebb1fc1fa853.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -151,7 +151,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -177,7 +178,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -203,7 +205,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -229,7 +232,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -255,7 +259,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -281,7 +286,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -307,7 +313,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -333,7 +340,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -359,7 +367,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -385,7 +394,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -411,7 +421,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -437,7 +448,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -463,7 +475,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -489,7 +502,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -515,7 +529,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -541,7 +556,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -567,7 +583,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -593,7 +610,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -619,7 +637,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -645,7 +664,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -658,7 +678,7 @@
 				"item_class": "weapon_tec9",
 				"item_type_name": "Pistol",
 				"item_name": "Tec-9",
-				"item_description": "A low-accuracy semi-automatic, the Tec-9 offers excellent penetration damage and a high magazine capacity, though its recoil can be unforgiving.",
+				"item_description": "An ideal pistol for the Terrorist on the move, the Tec-9 is lethal in close quarters and features a high magazine capacity.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": "econ/weapons/base_weapons/weapon_tec9",
@@ -671,7 +691,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -714,7 +735,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -740,7 +762,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -766,7 +789,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -792,7 +816,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -818,7 +843,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -844,7 +870,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -870,7 +897,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -896,7 +924,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -920,7 +949,8 @@
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
 				"capabilities": {
-					"nameable": true
+					"nameable": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1085,7 +1115,8 @@
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
 				"capabilities": {
-					"nameable": true
+					"nameable": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1111,7 +1142,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1137,7 +1169,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1191,7 +1224,8 @@
 				"capabilities": {
 					"paintable": true,
 					"nameable": true,
-					"can_sticker": true
+					"can_sticker": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1216,7 +1250,8 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"paintable": true,
-					"nameable": true
+					"nameable": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1241,7 +1276,8 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"paintable": true,
-					"nameable": true
+					"nameable": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1266,7 +1302,8 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"paintable": true,
-					"nameable": true
+					"nameable": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1291,7 +1328,8 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"paintable": true,
-					"nameable": true
+					"nameable": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1316,7 +1354,8 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"paintable": true,
-					"nameable": true
+					"nameable": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1341,7 +1380,8 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"paintable": true,
-					"nameable": true
+					"nameable": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -1366,7 +1406,8 @@
 				"craft_material_type": "weapon",
 				"capabilities": {
 					"paintable": true,
-					"nameable": true
+					"nameable": true,
+					"can_stattrack_swap": true
 				},
 				"attributes": [
 
@@ -3030,7 +3071,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Operation Breakout Challenge Coin",
-				"item_description": "Participated in Operation Breakout.\nFulfill missions on official matchmaking servers to upgrade this coin.",
+				"item_description": "Participated in Operation Breakout.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_breakout_bronze",
@@ -3140,7 +3181,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Silver Operation Breakout Coin",
-				"item_description": "Participated in Operation Breakout.\nFulfill missions on official matchmaking servers to upgrade this coin.",
+				"item_description": "Participated in Operation Breakout.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_breakout_silver",
@@ -4137,7 +4178,7 @@
 				"item_class": "tool",
 				"item_type_name": "Pass",
 				"item_name": "Operation Vanguard Access Pass",
-				"item_description": "Grants access to Operation Vanguard, which consists of an upgradeable Challenge Coin, two campaigns that contain missions that reward weapon finishes, Operation Vanguard Case drops, and a journal that contains Campaign Overviews, an Active Duty Scorecard, an Operation Scorecard, and Friends leaderboard.",
+				"item_description": "The Operation Vanguard event ran from November 11th, 2014 to March 31st, 2015. This pass no longer grants access to an Operation, but may be redeemed for a commemorative Operation Vanguard Coin.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_vanguard_pass",
@@ -4166,7 +4207,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Operation Vanguard Challenge Coin",
-				"item_description": "Participated in Operation Vanguard.\nComplete Campaigns and upgrade this coin.",
+				"item_description": "Participated in Operation Vanguard.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_vanguard_bronze",
@@ -4281,7 +4322,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Collectible",
 				"item_name": "Silver Operation Vanguard Coin",
-				"item_description": "Participated in Operation Vanguard.\nComplete Campaigns and upgrade this coin.",
+				"item_description": "Participated in Operation Vanguard.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/status_icons/operation_vanguard_silver",
@@ -4621,6 +4662,29 @@
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "stattrak_swap_tool",
+				"defindex": 1324,
+				"item_class": "tool",
+				"item_type_name": "Tool",
+				"item_name": "StatTrak™ Swap Tool",
+				"item_description": "This item swaps StatTrak™ values between two of the same weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/stattrak_swap_tool",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/stattrak_swap_tool.e5bf9223e6ffb0681c53f451badd9d8a17032905.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "stattrak_swap",
+					"usage_capabilities": {
+						"can_stattrack_swap": true
 					}
 				}
 			},
@@ -7460,6 +7524,30 @@
 					}
 				]
 				
+			},
+			{
+				"name": "crate_stattrak_swap_tool",
+				"defindex": 4088,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "StatTrak™ Swap Tool Two-pack",
+				"item_description": "This item contains two StatTrak™ Swap Tools. A StatTrak™ Swap Tool swaps StatTrak™ values between two of the same weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/stattrak_swap_tool_bundle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/stattrak_swap_tool_bundle.cc65eb839230ac929686bacb6cb8ecd2f3c48f8a.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				}
 			},
 			{
 				"name": "Collectible Pin - Dust II",
