@@ -62,6 +62,7 @@ message CPublishedFile_GetDetails_Request {
 	optional bool includevotes = 6 [(description) = "If true, return vote data in the returned details."];
 	optional bool short_description = 8 [(description) = "If true, return a short description instead of the full description."];
 	optional bool includeforsaledata = 10 [(description) = "If true, return pricing data, if applicable."];
+	optional bool includemetadata = 11 [(description) = "If true, populate the metadata field."];
 }
 
 message PublishedFileDetails {
@@ -100,6 +101,9 @@ message PublishedFileDetails {
 		optional bool is_for_sale = 1;
 		optional uint32 price_category = 2;
 		optional .PublishedFileDetails.EPublishedFileForSaleStatus estatus = 3 [default = k_PFFSS_NotForSale];
+		optional uint32 price_category_floor = 4;
+		optional bool price_is_pay_what_you_want = 5;
+		optional uint32 discount_percentage = 6;
 	}
 
 	enum EPublishedFileForSaleStatus {
@@ -167,6 +171,7 @@ message PublishedFileDetails {
 	optional .PublishedFileDetails.VoteData vote_data = 55;
 	optional uint32 time_subscribed = 56 [(description) = "Only valid in PublishedFile.GetUserFiles and not normal PublishedFile.GetDetail calls"];
 	optional .PublishedFileDetails.ForSaleData for_sale_data = 57 [(description) = "Pricing information, if applicable."];
+	optional string metadata = 58 [(description) = "Metadata associated with the item"];
 }
 
 message CPublishedFile_GetDetails_Response {
@@ -196,6 +201,7 @@ message CPublishedFile_GetUserFiles_Request {
 	optional bool return_children = 23 [(description) = "Return child item ids in the file details"];
 	optional bool return_short_description = 24 [default = true, (description) = "Populate the short_description field instead of file_description"];
 	optional bool return_for_sale_data = 26 [(description) = "Return pricing information, if applicable"];
+	optional bool return_metadata = 28 [default = false, (description) = "Populate the metadata field"];
 }
 
 message CPublishedFile_GetUserFiles_Response {
@@ -293,6 +299,7 @@ message CPublishedFile_QueryFiles_Request {
 	optional bool return_children = 21 [(description) = "Return child item ids in the file details"];
 	optional bool return_short_description = 22 [(description) = "Populate the short_description field instead of file_description"];
 	optional bool return_for_sale_data = 30 [(description) = "Return pricing information, if applicable"];
+	optional bool return_metadata = 32 [default = false, (description) = "Populate the metadata"];
 }
 
 message CPublishedFile_QueryFiles_Response {

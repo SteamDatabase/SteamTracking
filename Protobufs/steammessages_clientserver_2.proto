@@ -82,6 +82,8 @@ message CMsgClientUCMUpdatePublishedFile {
 	optional string url = 17;
 	optional bool update_content_manifest = 18;
 	optional fixed64 content_manifest = 19;
+	optional string metadata = 20;
+	optional bool update_metadata = 21;
 }
 
 message CMsgClientUCMUpdatePublishedFileResponse {
