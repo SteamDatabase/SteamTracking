@@ -2742,6 +2742,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	font-family: "Motiva Sans Light", Arial, Tahoma, Sans-serif;
 	font-weight: normal;
 	margin-right: 8px;
+	line-height: 32px;
 }
 .commerce_price.original_price
 {
