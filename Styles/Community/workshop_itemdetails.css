@@ -2751,12 +2751,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .price_stacked {
 	display: inline-block;
 	vertical-align: bottom;
-	text-align: right;
+	/* text-align: right; */
 }
 	.price_stacked .commerce_price.original_price {
 		position: absolute;
-		/* left: 46px; */
-		/* right: 0px; */
 		top: 2px;
 		font-size: 11px;
 	}
@@ -2934,6 +2932,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .subSection
 {
 	padding-bottom: 10px;
+	word-wrap: break-word;
 }
 
 .subSectionTitle
