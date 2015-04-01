@@ -2308,30 +2308,30 @@ function BuildHover( prefix, item, owner )
 		if ( elArrowRight ) elArrowRight.style.borderLeftColor = '';
 	}
 
-	var elFraudWarnings = $(prefix+'_fraud_warnings');
+	var elFraudWarnings = $J('#'+prefix+'_fraud_warnings');
 	if ( elFraudWarnings )
 	{
 		// on the inventory page, we only show fraud warnings for currency (special privacy notice)
 		if ( item.fraudwarnings || ( g_bIsInventoryPage && item.is_currency ) )
 		{
-			elFraudWarnings.update( '' );
+			elFraudWarnings.empty();
 			if ( item.fraudwarnings )
 			{
 				for ( var i=0; i < item.fraudwarnings.length; i++ )
 				{
-					var warning = new Element( 'div', { 'class': 'fraud_warning_box' } );
-					var warningImage = new Element( 'img', { 'class': 'fraud_warning_image', src: 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_warning.png' } );
-					warning.appendChild( warningImage );
-					var warningText = new Element( 'span' );
-					warningText.update( item.fraudwarnings[i] );
-					warning.appendChild( warningText );
-					elFraudWarnings.appendChild( warning );
+					var warning = $J( '<div/>', { class: 'fraud_warning_box' } );
+					var warningImage = $J( '<img>', { class: 'fraud_warning_image', src: 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_warning.png' } );
+					warning.append( warningImage );
+					var warningText = $J( '<span/>' );
+					warningText.text( item.fraudwarnings[i] );
+					warning.append( warningText );
+					elFraudWarnings.append( warning );
 				}
 			}
 			if ( g_bIsInventoryPage && item.is_currency )
 			{
-				var warning = new Element( 'div' );
-				warning.update( 'This amount is private and shown only to you.' );
+				var warning = $J( '<div/>' );
+				warning.text( 'This amount is private and shown only to you.' );
 				elFraudWarnings.appendChild( warning );
 			}
 			elFraudWarnings.show();
