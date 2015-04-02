@@ -8879,6 +8879,7 @@
  T COverlayWebBrowserHTML::GetPanelClassName()
  T COverlayWebBrowserHTML::GetPanelTopClassName() const
  T COverlayWebBrowserHTML::KB_ChainToMap()
+ T COverlayWebBrowserHTML::OnBrowserSetCursor(EMouseCursor*)
  T COverlayWebBrowserHTML::OnCommand(char const*)
  T COverlayWebBrowserHTML::OnEnterFullScreen()
  T COverlayWebBrowserHTML::OnExitFullScreen()
@@ -13213,6 +13214,7 @@
  T vgui::HTML::NewWindowsOnly(bool)
  T vgui::HTML::OnAbortLastRequest()
  T vgui::HTML::OnBrowserExitFullScreen()
+ T vgui::HTML::OnBrowserSetCursor(EMouseCursor*)
  T vgui::HTML::OnCommand(char const*)
  T vgui::HTML::OnCursorExited()
  T vgui::HTML::OnCursorMoved(int, int)
