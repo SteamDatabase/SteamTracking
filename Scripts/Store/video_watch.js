@@ -123,6 +123,8 @@ CVideoWatch.prototype.Start = function()
 		return;
 	}
 
+	this.SetVideoLoadingText( 'Preparing to Stream Video... One Moment Please.' );
+
 		CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
 
 	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
