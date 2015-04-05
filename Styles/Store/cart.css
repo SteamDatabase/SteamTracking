@@ -630,6 +630,7 @@ body.v6.login .rightcol .spotlight_block {
 
 .cart_currency_select .dselect_container {
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .cart_row.activeborder {
@@ -1447,28 +1448,20 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 
 #gift_sentiment_droplist
 {
-	width: 204px;
 	height: 100px;
-	overflow-y: scroll;
-}
-
-#billing_country_droplist
-{
-	height: 250px;
-	width: 300px;
 	overflow-y: scroll;
 }
 
 #billing_state_select_droplist
 {
-	height: 225px;
-	overflow-y: scroll;
+	max-height: 225px;
+	overflow-y: auto;
 }
 
-#expiration_year_droplist
+#billing_country_droplist, #expiration_year_droplist
 {
-	height: 340px;
-	overflow-y: scroll;
+	max-height: 340px;
+	overflow-y: auto;
 }
 
 /*
@@ -1608,6 +1601,14 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 	color: #FFFFFF;
 	font-size: 14px;
 }
+.approvetxn_lineitem_row.bundle
+{
+
+}
+.approvetxn_lineitem_row.isinbundle
+{
+	color: #8F98A0;
+}
 
 .approvetxn_lineitem_qty
 {
@@ -1628,6 +1629,11 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 {
 	color: #FFFFFF;
 	font-size: 14px;
+}
+
+.approvetxn_lineitem_row.isinbundle .approvetxn_lineitem_description
+{
+	color: #8F98A0;
 }
 
 .approvetxn_walletbalance
@@ -1806,44 +1812,3 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 }
 .checkout_gotsteam_area a.btn_blue:hover {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -moz-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -o-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);}
-
-.currency_change_confirm_dialog {
-	max-width: 670px;
-}
-
-.currency_change_confirm_dialog p {
-	margin: 24px 0;
-}
-
-.currency_change_confirm_dialog b {
-	color: #67c1f5;
-	font-weight: normal;
-}
-
-.currency_change_option {
-	display: inline-block;
-	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
-}
-.currency_change_option:first-child {
-	margin-right: 20px;
-}
-
-.currency_change_option > span {
-	display: block;
-	width: 245px;
-	min-height: 67px;
-	padding: 21px 19px;
-}
-
-.currency_change_option .country {
-	font-size: 20px;
-	margin-bottom: 8px;
-}
-.currency_change_option .notes {
-	font-size: 13px;
-	line-height: 18px;
-}
-
-p.currency_change_confirm_dialog_footer {
-	margin-top: 128px;
-}
