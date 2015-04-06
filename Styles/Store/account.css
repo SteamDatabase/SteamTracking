@@ -822,7 +822,3 @@ div.youraccount_history_home>div.account_wallet {
 	background: #67c1f5; /* Old browsers */
 	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b), color-stop(95%,#67c1f5));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#417a9b', endColorstr='#67c1f5',GradientType=1 );background: -moz-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -o-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -ms-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););}
 
-
-#usercountrycurrency_dselect_container {
-	margin: 8px 0;
-}
