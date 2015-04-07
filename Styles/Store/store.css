@@ -1971,17 +1971,3 @@ body.v6 .discover_queue_empty>h3 {
 	background-color: #67c1f5; /* Old browsers */
 	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b), color-stop(95%,#67c1f5));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#417a9b', endColorstr='#67c1f5',GradientType=1 );background: -moz-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -o-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -ms-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););}
 
-.promo_leftcol {
-	margin-right: 5px;
-	padding: 10px 20px 10px 20px;
-	background-color: rgba( 0, 0, 0, 0.4 );
-}
-.promo_rightcol {
-	margin-left: 5px;
-	padding: 1px 15px 10px 15px;
-	border-radius: 4px;
-	background: rgba( 0, 0, 0, 0.2 );
-}
-.promo_banner {
-	box-shadow: 0px 0px 5px #000;
-}
