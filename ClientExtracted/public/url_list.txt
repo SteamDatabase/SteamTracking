@@ -243,6 +243,11 @@ SupportAppPage
 	url			"https://support.steampowered.com/kb_article.php?appid=%p1%"
 	method		"external"
 }
+HelpAppPage
+{
+	url			"%help%/#HelpWithGame/?appid=%p1%"
+	method		"internal"
+}
 
 
 StoreFrontPage
