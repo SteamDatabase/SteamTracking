@@ -60,7 +60,7 @@ function PerformPayPalAuthorization()
 		{
 			var paypal_url = encodeURIComponent( 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s'.replace( "%s", $('paypaltoken').value ) );
 			var transID = $('transaction_id').value;
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_sessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_SessionID );
 			$('external_payment_processor_notice').innerHTML = 'A new window has been opened to the PayPal web site.  Please login or create an account there to review your purchase details and authorize the transaction.  If you do not see a new window check that your browser is not blocking it as a pop-up.';
 			g_bPayPalAuthInFlight = true;
 		}
@@ -283,7 +283,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 		}
 		else
 		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_SessionID );
 		}
 		
 		$('purchase_button_bottom').style.display = 'none';
@@ -4488,7 +4488,7 @@ function SendGift()
 				'GiftSentiment' : gift_sentiment,
 				'GiftSignature' : gift_signature,
 				'GiftGID':		g_gidGift,
-				'SessionID':	g_sessionID
+				'SessionID':	g_SessionID
 			},
 		    onSuccess: function(transport){
 		    	g_bSendGiftCallRunning = false;
@@ -4567,7 +4567,7 @@ function UnsendGift()
 		    parameters: {
 				// gift info
 				'GiftGID':		g_gidGift,
-				'SessionID':	g_sessionID
+				'SessionID':	g_SessionID
 			},
 		    onSuccess: function(transport){
 		    	g_bSendGiftCallRunning = false;
