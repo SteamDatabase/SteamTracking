@@ -4720,6 +4720,7 @@
  b s_unPacketNums
  B s_varCloudDetailsEnabled
  B s_varCloudDetailsSimulatedFileCount
+ b s_varNewGameHelpSiteEnabled
  B s_varRecommendationsEnabled
  b s_vecpSDLJoyStick
  B SwitchToHDMIInput::symbol
@@ -12399,7 +12400,6 @@
  D typeinfo for panorama::CUIEvent4<bool, int, int, int>
  D typeinfo for panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>
  D typeinfo for panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>
- D typeinfo for panorama::CUIEvent4<CUtlBuffer*, unsigned int, unsigned int, CGameID>
  D typeinfo for panorama::CUIEvent4<unsigned int, char const*, char const*, bool>
  D typeinfo for panorama::CUIEvent4<unsigned int, char const*, char const*, int>
  D typeinfo for panorama::CUIEventBase
@@ -15621,7 +15621,6 @@
  D vtable for panorama::CUIEvent4<bool, int, int, int>
  D vtable for panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>
  D vtable for panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>
- D vtable for panorama::CUIEvent4<CUtlBuffer*, unsigned int, unsigned int, CGameID>
  D vtable for panorama::CUIEvent4<unsigned int, char const*, char const*, bool>
  D vtable for panorama::CUIEvent4<unsigned int, char const*, char const*, int>
  D vtable for panorama::CUIEventBase
@@ -19836,7 +19835,6 @@
  R typeinfo name for panorama::CUIEvent4<bool, int, int, int>
  R typeinfo name for panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>
  R typeinfo name for panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>
- R typeinfo name for panorama::CUIEvent4<CUtlBuffer*, unsigned int, unsigned int, CGameID>
  R typeinfo name for panorama::CUIEvent4<unsigned int, char const*, char const*, bool>
  R typeinfo name for panorama::CUIEvent4<unsigned int, char const*, char const*, int>
  R typeinfo name for panorama::CUIEventBase
@@ -35808,9 +35806,9 @@
  T CScreenshotsPanel::OnScreenshotWritten(ScreenshotWritten_t*)
  T CScreenshotsPanel::PerformLayout()
  T CScreenshotsPanel::UpdatePanelData(unsigned int)
+ T CScreenshotThread::BGetScreenshot(CUtlBuffer*, unsigned int*, unsigned int*)
  T CScreenshotThread::~CScreenshotThread()
  T CScreenshotThread::CScreenshotThread(CSharedMemStream*, unsigned int, CGameID)
- T CScreenshotThread::ProcessScreenshot()
  T CScreenshotThread::Run()
  T CScreenshotThumbPanel::ChainToAnimationMap()
  T CScreenshotThumbPanel::ChainToMap()
@@ -45463,6 +45461,7 @@
  T Get_h1_Symbol()
  T Get_h2_Symbol()
  T GetHardwareSupportCheckboxVec()
+ T GetHelpBaseURLForUniverse(EUniverse, CUtlString&)
  T GetHTMLParamIntValue(char const*, char const*)
  t get_interesting_appn
  T Get_i_Symbol()
@@ -49924,11 +49923,6 @@
  T panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>::Validate(CValidator&, char const*)
- T panorama::CUIEvent4<CUtlBuffer*, unsigned int, unsigned int, CGameID>::Copy() const
- T panorama::CUIEvent4<CUtlBuffer*, unsigned int, unsigned int, CGameID>::~CUIEvent4()
- T panorama::CUIEvent4<CUtlBuffer*, unsigned int, unsigned int, CGameID>::Dispatch(CUtlAbstractDelegate)
- T panorama::CUIEvent4<CUtlBuffer*, unsigned int, unsigned int, CGameID>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
- T panorama::CUIEvent4<CUtlBuffer*, unsigned int, unsigned int, CGameID>::Validate(CValidator&, char const*)
  T panorama::CUIEvent4<unsigned int, char const*, char const*, bool>::Copy() const
  T panorama::CUIEvent4<unsigned int, char const*, char const*, bool>::~CUIEvent4()
  T panorama::CUIEvent4<unsigned int, char const*, char const*, bool>::CUIEvent4(panorama::CPanoramaSymbol, panorama::IUIPanel const*, unsigned int, char const*, char const*, bool)
@@ -52767,7 +52761,6 @@
  T ScaleSlope
  T ScreenshotReady::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ScreenshotReady::GetEventType()
- T ScreenshotReady::MakeEvent(panorama::IUIPanelClient const*, CUtlBuffer*, unsigned int, unsigned int, CGameID)
  T ScreenshotToLoad_t::ScreenshotToLoad_t()
  T ScreenshotToLoad_t::Validate(CValidator&, char const*)
  T ScrollBar_Horizontal_Factory()
