@@ -18,8 +18,8 @@ function BeginTradeOffer( nTradeOfferID, bShowTutorial )
 			if ( this.value.length > 0 )
 				Tutorial.OnUserEnteredNote();
 		};
-		$J('#trade_offer_note').change( fnCheckNote );
-		$J('#trade_offer_note').keyup( fnCheckNote );
+		$J('#trade_offer_note').on( 'change keyup', fnCheckNote );
+		$J('#trade_offer_note').on( 'keypress', function( event ) { if ( event.which == 13 ) return false; else return true;} );
 	}
 
 	if ( nTradeOfferID )

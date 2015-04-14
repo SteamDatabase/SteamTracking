@@ -384,6 +384,7 @@ CDASHPlayer.prototype.OnVideoStalled = function()
 {
 	if ( !this.BIsBuffering() )
 	{
+		this.UpdateStats();
 		for ( var i = 0; i < this.m_loaders.length; i++ )
 		{
 			if ( this.m_loaders[i].BIsLoaderStalling() )
@@ -1652,40 +1653,27 @@ CSegmentLoader.prototype.RemoveAllBuffers = function()
 
 CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes )
 {
-	// If CORS with Date Header is enabled, use it for cache check
-	var responseTime;
-	if (xhr.getAllResponseHeaders().indexOf("Date:") != -1)
-		responseTime = Date.parse( xhr.getResponseHeader( "Date" ));
-	else
-		responseTime = startTime;
-
-	// check if download wasn't from cache (startTime earlier than or equal to responseTime ... round to nearest second)
-	var startSeconds = Math.floor( startTime / 1000 );
-	var responseSeconds = responseTime / 1000;
-	if ( startSeconds <= responseSeconds || this.m_rgDownloadLog.length < this.m_nDownloadLogSize)
+	// remove the oldest log as needed
+	if ( this.m_rgDownloadLog.length > this.m_nDownloadLogSize )
 	{
-		// remove the oldest log as needed
-		if ( this.m_rgDownloadLog.length > this.m_nDownloadLogSize )
-		{
-			this.m_rgDownloadLog.shift();
-		}
+		this.m_rgDownloadLog.shift();
+	}
 
-		// store the download
-		var logEntry = [];
-		logEntry.downloadTime = ( new Date().getTime() ) - startTime;
+	// store the download
+	var logEntry = [];
+	logEntry.downloadTime = ( new Date().getTime() ) - startTime;
 
-		if ( logEntry.downloadTime > 0 )
-		{
-			logEntry.dataSizeBytes = dataSizeBytes;
-			this.m_rgDownloadLog.push( logEntry );
+	if ( logEntry.downloadTime > 0 )
+	{
+		logEntry.dataSizeBytes = dataSizeBytes;
+		this.m_rgDownloadLog.push( logEntry );
 
-			// for stats tracking
-			this.m_nBytesReceivedTotal += logEntry.dataSizeBytes;
-			this.m_nSegmentDownloadTimeTotal += logEntry.downloadTime;
-			this.m_nSegmentDownloadTimeEntries++;
-			this.m_nSegmentDownloadTimeMinimum = ( this.m_nSegmentDownloadTimeMinimum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime < this.m_nSegmentDownloadTimeMinimum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMinimum );
-			this.m_nSegmentDownloadTimeMaximum = ( this.m_nSegmentDownloadTimeMaximum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime > this.m_nSegmentDownloadTimeMaximum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMaximum );
-		}
+		// for stats tracking
+		this.m_nBytesReceivedTotal += logEntry.dataSizeBytes;
+		this.m_nSegmentDownloadTimeTotal += logEntry.downloadTime;
+		this.m_nSegmentDownloadTimeEntries++;
+		this.m_nSegmentDownloadTimeMinimum = ( this.m_nSegmentDownloadTimeMinimum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime < this.m_nSegmentDownloadTimeMinimum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMinimum );
+		this.m_nSegmentDownloadTimeMaximum = ( this.m_nSegmentDownloadTimeMaximum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime > this.m_nSegmentDownloadTimeMaximum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMaximum );
 	}
 }
 
@@ -3707,7 +3695,14 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 		'failed_segments': 0,
 	};
 
-	this.m_lastStalledSegmentNumber = 0;
+	// on screen reporting from stats report
+	this.m_nStalledSegmentNumber = 0;
+	this.m_nFailedSegmentResponse = 200;
+	this.m_nCountStalls = 0;
+	this.m_strVideoDownloadHost = '...';
+	this.m_nReportedPlaybackPos = 0;
+	this.m_fSegmentTimeAverage = 0;
+	this.m_fBandwidthAverage = 0;
 
 	// events that trigger server event logging
 	var _stats = this;
@@ -3796,12 +3791,13 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( bStalledEvent, bVide
 		statsCollected = this.m_videoPlayer.StatsRecentSegmentDownloads( bVideoStalled );
 
 		// if the stalled segment is the same segment as last stall or the last segment error was 0 (request failed) or 404, no need to log.
-		if ( statsCollected['last_segment_number'] == this.m_lastStalledSegmentNumber || statsCollected['last_segment_response'] == 0 || statsCollected['last_segment_response'] == 404 )
+		if ( statsCollected['last_segment_number'] == this.m_nStalledSegmentNumber || statsCollected['last_segment_response'] == 0 || statsCollected['last_segment_response'] == 404 )
 			return {};
 
-		this.m_lastStalledSegmentNumber = statsCollected['segment_stalled'] = statsCollected['last_segment_number'];
+		this.m_nStalledSegmentNumber = statsCollected['segment_stalled'] = statsCollected['last_segment_number'];
 		delete statsCollected['last_segment_number'];
 		statsCollected['audio_stalled'] = !bVideoStalled;
+		this.m_nCountStalls++;
 	}
 	else
 	{
@@ -3836,12 +3832,17 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( bStalledEvent, bVide
 			'seg_time_max': seg_times['seg_max'],
 		}
 
+		// stats being displayed on screen
+		this.m_fBandwidthAverage = statsCollected['bw_avg'];
+		this.m_fSegmentTimeAverage = statsCollected['seg_time_avg'];
+		this.m_nReportedPlaybackPos = this.m_videoPlayer.GetPlaybackTimeInSeconds();
+
 		this.m_statsLastSnapshot = statsSnapshot;
 	}
 
 	// common for both log events
 	statsCollected['steamid'] = this.m_steamID,
-	statsCollected['host'] = this.m_videoPlayer.StatsDownloadHost();
+	statsCollected['host'] = this.m_strVideoDownloadHost = this.m_videoPlayer.StatsDownloadHost();
 	statsCollected['playback_position'] = this.m_videoPlayer.GetPlaybackTimeInSeconds();
 	statsCollected['playback_speed'] = this.m_videoPlayer.GetPlaybackRate();
 	statsCollected['video_res'] = this.m_videoPlayer.StatsPlaybackHeight();
@@ -4000,8 +4001,39 @@ CDASHPlayerStats.prototype.Tick = function()
 			id: 'dashbuffers',
 			label: 'Buffers',
 			value: this.strBuffers
+		},
+		// Report Stats
+		{
+			id: 'stalls',
+			label: 'Stalled Events',
+			value: this.m_nCountStalls
+		},
+		{
+			id: 'reportsent',
+			label: 'Stats Sent',
+			value: SecondsToTime( this.m_nReportedPlaybackPos )
+		},
+		{
+			id: 'host',
+			label: ' - Host',
+			value: this.m_strVideoDownloadHost
+		},
+		{
+			id: 'bandwidthavg',
+			label: ' - Bandwidth Average (bits)',
+			value: this.m_fBandwidthAverage,
+			formatFunc: this.FormattingBytesToHuman
+		},
+		{
+			id: 'segmentfails',
+			label: ' - Segment D/L Fails',
+			value: this.m_statsLastSnapshot['failed_segments']
+		},
+		{
+			id: 'segmenttimeaverage',
+			label: ' - Segment D/L Time Average',
+			value: this.m_fSegmentTimeAverage + 's'
 		}
-
 ];
 
 	for( var i=0; i < rgStatsDefinitions.length; i++)

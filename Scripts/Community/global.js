@@ -844,12 +844,17 @@ function ShowTradeOffer( tradeOfferID, rgParams )
 	winOffer.focus();
 }
 
-function Logout()
+function PostToURLWithSession( url )
 {
-	var $Form = $J('<form/>', {'action': 'https://steamcommunity.com/login/logout/', 'method': 'POST' } );
+	var $Form = $J('<form/>', {'action': url, 'method': 'POST' } );
 	$Form.append( $J('<input/>', {'type': 'hidden', 'name': 'sessionid', 'value': g_sessionID } ) );
 	$Form.appendTo( 'body' );
 	$Form.submit();
+}
+
+function Logout()
+{
+	PostToURLWithSession( 'https://steamcommunity.com/login/logout/' );
 }
 
 function ChangeLanguage( strTargetLanguage, bStayOnPage )

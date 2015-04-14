@@ -1270,3 +1270,13 @@ $J(function() {
 	} );
 } );
 
+function UnlinkFacebook()
+{
+	PostToURLWithSession( 'https://steamcommunity.com/actions/FacebookAccountUnlink/' );
+}
+
+function LinkFacebook()
+{
+	PostToURLWithSession( 'https://steamcommunity.com/actions/LinkMyFacebookProfile/' );
+}
+

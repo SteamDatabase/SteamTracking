@@ -1060,6 +1060,14 @@ div.image_hover_preview {
 	position: relative;
 }
 
+.formrow_release {
+	/*padding-bottom: 5px;*/
+	margin-bottom: 8px;
+	margin-top: 8px;
+    height:24px;
+	position: relative;
+}
+
 .news_list_item_created {
 	position: absolute;
 	right: 0px;
@@ -1069,6 +1077,54 @@ div.image_hover_preview {
 	position: absolute;
 	left: 0px;
 	width: 120px;
+}
+
+.news_list_item_appid {
+	position: absolute;
+	left: 0px;
+	width: 260px;
+}
+
+.news_list_item_groups {
+	position: absolute;
+	left: 260px;
+	width: 120px;
+}
+
+.news_list_item_releasetime {
+	position: absolute;
+	left: 320px;
+	width: 160px;
+}
+
+.news_list_item_template {
+	position: absolute;
+	left: 500px;
+	width: 120px;
+}
+
+.news_list_item_countries {
+	position: absolute;
+	left: 580px;
+	width: 120px;
+}
+
+.news_list_item_emailssent {
+	position: absolute;
+	left: 670px;
+	width: 120px;
+}
+
+.news_list_item_status {
+	position: absolute;
+	left: 750px;
+	width: 120px;
+}
+
+.news_list_item_action {
+	position: absolute;
+	left: 800px;
+	width: 60px;
 }
 
 .news_list_label {

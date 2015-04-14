@@ -341,7 +341,7 @@ function SetDateControlToNow( id )
 	$( id + '[month]' ).value = now.getMonth() + 1;	// javascript uses 0-11 for months
 	$( id + '[day]' ).value = now.getDate();
 	$( id + '[hour]' ).value = now.getHours();
-	$( id + '[minute]' ).value = now.getMinutes();
+	$( id + '[minute]' ).value = 0;
 }
 
 // template for the date control

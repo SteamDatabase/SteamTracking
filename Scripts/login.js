@@ -684,6 +684,7 @@ CLoginPromptManager.prototype.StartTwoFactorAuthProcess = function()
 		this.m_TwoFactorModal.SetDismissOnBackgroundClick( false );
 		this.m_TwoFactorModal.SetRemoveContentOnDismissal( false );
 	}
+	$J('#twofactorcode_entry').focus();
 };
 
 

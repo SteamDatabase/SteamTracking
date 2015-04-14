@@ -1248,7 +1248,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionItem .workshopItemTitle
 {
-	padding-top: 20px;
+	padding-top: 13px;
 	font-size: 16px;
 	font-weight: normal;
 }
@@ -2591,11 +2591,12 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	}
 
 	.game_area_purchase_game.publish > a {
-		bottom: 20px;
+		top: 40px;
 	}
 
 	.game_area_purchase_game.publish > p {
 		margin-bottom: 0px;
+		width: 90%;
 	}
 
 .game_area_purchase_game > h1 {
@@ -2633,7 +2634,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	right: 12px;
 	top: 20px;
 }
-
+.game_area_purchase_game .commerce_container .pwyw_tip {
+	margin-right: 3px;
+	cursor: help;
+}
 .game_area_purchase_game.buy .commerce_container {
 	position: absolute;
 	right: 12px;
@@ -2642,7 +2646,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	border: 2px solid #222222;
 	background: rgba( 0, 0, 0, 0.2 );
 	height: 32px;
-	padding-left: 9px;
+	padding-left: 4px;
 }
 .game_area_purchase_game.buy .bundle_includes {
 	margin-top: 15px;
@@ -2660,6 +2664,55 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 	background: rgba( 0, 0, 0, 0.2 );
 }
+
+.bundle_price_summary {
+	color: #9099a1;
+	font-size: 12px;
+	line-height: 18px;
+
+	padding-top: 15px;
+	padding-right: 12px;
+	padding-left: 12px;
+	padding-bottom: 12px;
+	margin-top: -18px;
+	margin-bottom: 20px;
+	margin-left: auto;
+
+	background: rgba( 0, 0, 0, 0.2 );
+}
+	.bundle_price_summary .bundle_totals_row {
+		position: relative;
+		padding-right: 124px;
+		text-align: right;
+	}
+	.bundle_price_summary .bundle_totals_row .price {
+	position: absolute;
+	right: 0px;
+	text-align: right;
+	color: #9099a1;
+	font-size: 13px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	}
+#package_savings_bar {
+	background-color: #000000;
+	border-radius: 3px;
+	color: #A3CF06;
+	margin: 20px 0 5px 0;
+	height: 34px;
+}
+#package_savings_bar > .savings {
+	text-align: right;
+	width: 140px;
+	position: relative;
+	float: right;
+	font-size: 14px;
+	padding: 8px;
+}
+#package_savings_bar > .message {
+	padding: 8px;
+	font-size: 12px;
+}
+
 .game_area_already_owned {
 	height: 40px;
 	padding: 0px 15px 0px 0px;
@@ -2742,7 +2795,6 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	font-family: "Motiva Sans Light", Arial, Tahoma, Sans-serif;
 	font-weight: normal;
 	margin-right: 8px;
-	line-height: 32px;
 }
 .commerce_price.original_price
 {
@@ -2752,17 +2804,18 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .price_stacked {
 	display: inline-block;
 	vertical-align: bottom;
-	/* text-align: right; */
+	margin-left: 3px;
 }
 	.price_stacked .commerce_price.original_price {
 		position: absolute;
 		top: 2px;
 		font-size: 11px;
+		font-family: Tahoma, Arial, Sans-serif;
 	}
 
 .commerce_owned_bundled_item
 {
-	color: orange;
+	color: #a3cf06;
 }
 
 .official_content_text_area

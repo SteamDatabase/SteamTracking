@@ -368,6 +368,21 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	$J( '#BroadcastGameLink' ).attr( 'href', strStoreURL).attr( 'target', target );
 
 	$J( '#BroadcastInfoButtons' ).show();
+
+	if ( this.IsBroadcaster() && data.is_rtmp )
+	{
+		// show admin box instead of regular box
+		$J( '#BroadcasterAdminBox' ).show();
+		$J( '#BroadcastInfo' ).hide();
+		$J( '#ViewStorePage' ).hide();
+		$J( '#ReportBroadcast' ).hide();
+
+		// allow to change Game ID for RTMP streams
+		$J( '#BroadcastAdminTitleInput' ).val( strTitle );
+		$J( '#BroadcastAdminPermissionSelect' ).val( data.permission );
+		$J( '#BroadcastAdminGameIDInput' ).val( data.appid );
+		$J( '#BroadcastAdminViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
+	}
 }
 
 function OpenBroadcastLink()
@@ -555,6 +570,69 @@ CBroadcastWatch.prototype.ReportBroadcast = function()
 		{
 			alert( 'There was a problem submitting your request to our servers. Please try again.')
 		});
+	});
+}
+
+CBroadcastWatch.prototype.UpdateBroadcast = function()
+{
+	if ( this.m_ulBroadcastID == 0 )
+		return;
+
+	var _watch = this;
+
+	$J.post( 'https://steamcommunity.com/broadcast/updatebroadcastsettings',
+	{
+		steamid: _watch.m_ulBroadcastSteamID,
+		title: $J( '#BroadcastAdminTitleInput' ).val(),
+		permission : $J( '#BroadcastAdminPermissionSelect' ).val(),
+		gameid : $J( '#BroadcastAdminGameIDInput' ).val(),
+	}
+
+	).done( function( json )
+	{
+		$J( '#BroadcastAdminUpdateResult' ).show();
+		$J( '#BroadcastAdminUpdateResult' ).css('color', 'green')
+		$J( '#BroadcastAdminUpdateResult' ).text( 'Broadcast updated.' );
+		$J( '#BroadcastAdminUpdateResult' ).delay(3000).fadeOut("slow");
+	})
+	.fail( function()
+	{
+		$J( '#BroadcastAdminUpdateResult' ).show();
+		$J( '#BroadcastAdminUpdateResult' ).css('color', 'red')
+		$J( '#BroadcastAdminUpdateResult' ).text( 'Failed to update broadcast.' );
+		$J( '#BroadcastAdminUpdateResult' ).delay(3000).fadeOut("slow");
+	});
+}
+
+CBroadcastWatch.prototype.StopBroadcast = function()
+{
+	if ( this.m_ulBroadcastID == 0 )
+		return;
+
+	if ( !confirm( 'Stop broadcast ?' ) )
+		return;
+
+	var _watch = this;
+
+	$J.post( 'https://steamcommunity.com/broadcast/stopbroadcast',
+	{
+		steamid: _watch.m_ulBroadcastSteamID,
+		broadcastid : this.m_ulBroadcastID,
+	}
+
+	).done( function( json )
+	{
+		$J( '#BroadcastAdminUpdateResult' ).show();
+		$J( '#BroadcastAdminUpdateResult' ).css('color', 'green')
+		$J( '#BroadcastAdminUpdateResult' ).text( 'Broadcast stopped.' );
+		$J( '#BroadcastAdminUpdateResult' ).delay(3000).fadeOut("slow");
+	})
+	.fail( function()
+	{
+		$J( '#BroadcastAdminUpdateResult' ).show();
+		$J( '#BroadcastAdminUpdateResult' ).css('color', 'red')
+		$J( '#BroadcastAdminUpdateResult' ).text( 'Failed to stop broadcast' );
+		$J( '#BroadcastAdminUpdateResult' ).delay(3000).fadeOut("slow");
 	});
 }
 

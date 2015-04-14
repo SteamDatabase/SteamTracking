@@ -1133,3 +1133,91 @@ body.flat_page.SteamClientMinimized
 	color: #fff;
 }
 
+#BroadcasterAdminBox
+{
+    color: #8F98A0;
+}
+
+.BroadcasterAdminFormLeft
+{
+    margin-left: 180px;
+    position: absolute;
+}
+
+.BroadcasterAdminFormRight
+{
+    margin-left: 280px;
+    position: absolute;
+}
+
+.BroadcasterAdminFormRow1
+{
+    margin-top: 10px;
+    position: absolute;
+}
+
+.BroadcasterAdminFormRow2
+{
+    margin-top: 40px;
+    position: absolute;
+}
+
+#BroadcasterAdminFormRowGameID
+{
+    margin-top: 70px;
+    position: absolute;
+}
+
+.BroadcastAdminInput
+{
+    width: 230px;
+    height: 22px;
+    color: white;
+    border: 1px solid #4c4c4c;
+    background-color: #292929;
+    box-sizing: border-box;
+    resize: none;
+}
+
+#BroadcasterAdminHeader
+{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+#BroadcastAdminPermissionSelect
+{
+    width: 230px;
+    height: 24px;
+}
+
+#BroadcasterAdminStopButton
+{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 520px;
+    width: 120px;
+}
+
+#BroadcasterAdminUpdateButton
+{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 520px;
+    width: 120px;
+}
+
+#BroadcastAdminUpdateResult
+{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 10px;
+}
+
+#BroadcastAdminViewerCount
+{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 10px;
+}
