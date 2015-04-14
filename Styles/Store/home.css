@@ -66,6 +66,13 @@
 	margin-bottom: 20px;
 }
 
+.home_page_gutter_movies {
+	border-top: solid #223141 1px;
+	padding-top: 3px;
+	width: 100%;
+	margin-top: 10px;
+}
+
 .gutter_header {
 	color: #3f7696;
 	font-size: 12px;
