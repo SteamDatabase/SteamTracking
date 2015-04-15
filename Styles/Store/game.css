@@ -1473,11 +1473,6 @@ a.friend_block_holder:hover {
 	vertical-align: top;
 }
 
-#agegate_box select option {
-	background-color: #417a9b;
-	color: #e5e4dc;
-}
-
 #agegate_box input[type=submit] {
 	border:solid #82807c 1px;
 	padding:2px 8px 2px 8px;
