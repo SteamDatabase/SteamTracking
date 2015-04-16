@@ -819,6 +819,9 @@ function OnInitializeTransactionFailure( detail, result )
 				case 38:
 					error_text = 'Your order cannot be completed because one or more items in your cart is currently out of stock.  Please try again later.';
 					break;
+				case 59:
+					error_text = 'Your order cannot be completed because one or more items in your cart cannot be shipping to your shipping address.';
+					break;
 				case 44:
 					error_text = 'Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details.';
 					break;
