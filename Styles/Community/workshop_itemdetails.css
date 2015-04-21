@@ -91,7 +91,7 @@
 
 .detailsStatLeft
 {
-	color: #5c8699;
+	color: #8f98a0;
 	padding-top: 4px;
 }
 
@@ -103,14 +103,14 @@
 
 .detailsStatRight
 {
-	color: #5c8699;
+	color: #8f98a0;
 	padding-top: 4px;
 }
 
 .detailsStatNumChangeNotes
 {
 	padding-top: 5px;
-	color: #5c8699;
+	color: #2f89bc;
 	font-size: 13px;
 }
 
@@ -1199,12 +1199,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	font-size: 12px;
 	color: #95afcb;
-	background-color: #343d48;
-	border: 3px solid #343d48;
+
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	margin-right: 4px;
-	padding: 0px 5px 0px 5px;
 	text-decoration: none;
 	overflow: hidden;
 	white-space: nowrap;
@@ -1216,13 +1214,17 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionItemAuthor a
 {
-	color: #95afcb;
+	color: #66c0f4;
 	text-decoration: none;
+	padding: 3px 6px 2px 6px;
+	background-color: rgba( 102, 192, 244, 0.4 );
+	line-height: 20px;
 }
 
 .collectionItemAuthor:hover a
 {
 	color: white;
+	background-color: rgba( 102, 192, 244, 1 );
 }
 
 .collectionItem
@@ -2609,6 +2611,22 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .game_area_purchase_game > h1.purchase {
 	margin-top: 5px;
 }
+.game_area_purchase_game > h1.purchase.pwyw {
+	margin-top: 0;
+}
+#profileBlock .game_area_purchase_game > p.pwyw {
+	font-size: 12px;
+	color: #94b508;
+	margin-top: 0;
+	line-height: 13px;
+	width: 390px;
+	margin-bottom: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#profileBlock .game_area_purchase_game > p.pwyw span {
+	font-weight: bold;
+	color: #c5f20a;
+}
 .game_area_purchase_game > h1 span {
 	color: #5c8699;
 	font-size: 13px;
@@ -2634,10 +2652,16 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	right: 12px;
 	top: 20px;
 }
-.game_area_purchase_game .commerce_container .pwyw_tip {
-	margin-right: 3px;
+#profileBlock .game_area_purchase_game > p.pwyw span.pwyw_tip {
 	cursor: help;
+	font-weight: normal;
+	color: #acb2b8;
 }
+.purchase_workshop_item_dialog .commerce_price {
+	margin-top: 6px;
+	display: block;
+}
+
 .game_area_purchase_game.buy .commerce_container {
 	position: absolute;
 	right: 12px;
@@ -2660,9 +2684,23 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding-left: 16px;
 
 	line-height: 16px;
-	color: #66c0f4;
+	color: #8f98a0;
 
 	background: rgba( 0, 0, 0, 0.2 );
+}
+.game_area_purchase_game.buy .bundle_includes span {
+	color: #66c0f4;
+}
+.game_area_purchase_game.buy .bundle_includes span.commerce_owned_bundled_item,
+.game_area_purchase_game.buy .bundle_includes .commerce_owned_bundled_item span
+{
+	color: #a3cf06;
+}
+.game_area_purchase_game.buy .bundle_includes a {
+	color: #c6d4df;
+}
+.game_area_purchase_game.buy .bundle_includes a:hover {
+	color: #fff;
 }
 
 .bundle_price_summary {
@@ -2686,12 +2724,19 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		text-align: right;
 	}
 	.bundle_price_summary .bundle_totals_row .price {
-	position: absolute;
-	right: 0px;
-	text-align: right;
-	color: #9099a1;
-	font-size: 13px;
-	font-family: Tahoma, Arial, Helvetica, sans-serif;
+		position: absolute;
+		right: 0px;
+		text-align: right;
+		color: #9099a1;
+		font-size: 15px;
+	}
+	.bundle_price_summary .bundle_totals_row.discount .price {
+		color: #a4d007;
+		background: #4c6b22;
+	}
+	.bundle_price_summary .bundle_totals_row.yours,
+	.bundle_price_summary .bundle_totals_row.yours .price {
+		color: #dae9f2;
 	}
 #package_savings_bar {
 	background-color: #000000;
@@ -2792,31 +2837,34 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	font-size: 15px;
 	color: #dae9f2;
-	font-family: "Motiva Sans Light", Arial, Tahoma, Sans-serif;
 	font-weight: normal;
 	margin-right: 8px;
+	padding-left: 3px;
 }
 .commerce_price.original_price
 {
 	color: #8f98a0;
 	text-decoration: line-through;
 }
+
 .price_stacked {
 	display: inline-block;
 	vertical-align: bottom;
-	margin-left: 3px;
+
 }
 	.price_stacked .commerce_price.original_price {
 		position: absolute;
 		top: 2px;
 		font-size: 11px;
 		font-family: Tahoma, Arial, Sans-serif;
+		margin-top: 0px;
+	}
+	.price_stacked .commerce_price
+	{
+		margin-top: 0px;
 	}
 
-.commerce_owned_bundled_item
-{
-	color: #a3cf06;
-}
+
 
 .official_content_text_area
 {

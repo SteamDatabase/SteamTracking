@@ -689,7 +689,8 @@ CDASHPlayer.prototype.UpdateClosedCaption = function ( closedCaptionCode )
 
 CDASHPlayer.prototype.SetPlaybackRate = function ( unRate )
 {
-	this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate = unRate;
+	if ( unRate )
+		this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate = unRate;
 }
 
 CDASHPlayer.prototype.GetPlaybackRate = function()
@@ -2531,6 +2532,11 @@ CDASHPlayerUI.GetSavedClosedCaptionLanguage = function( strUniqueSettingsID )
 	return WebStorage.GetLocal( "closed_caption_language_setting_" + strUniqueSettingsID.toString() );
 }
 
+CDASHPlayerUI.prototype.SetPlayerPlaybackRate = function()
+{
+	this.m_player.SetPlaybackRate( $J( '#representation_select_playbackRate' ).val() );
+}
+
 CDASHPlayerUI.prototype.Show = function()
 {
 	this.m_bHidden = false;
@@ -3301,9 +3307,12 @@ CVTTCaptionLoader.prototype.Close = function()
 	// clean up cues and turn off tracks
 	for (var i = this.m_elVideoPlayer.textTracks.length - 1; i >= 0; i--)
 	{
-		for (var c = this.m_elVideoPlayer.textTracks[i].cues.length - 1; c >=0; c--)
+		if ( this.m_elVideoPlayer.textTracks[i].cues )
 		{
-			this.m_elVideoPlayer.textTracks[i].removeCue(this.m_elVideoPlayer.textTracks[i].cues[c]);
+			for (var c = this.m_elVideoPlayer.textTracks[i].cues.length - 1; c >=0; c--)
+			{
+				this.m_elVideoPlayer.textTracks[i].removeCue(this.m_elVideoPlayer.textTracks[i].cues[c]);
+			}
 		}
 
 		this.m_elVideoPlayer.textTracks[i].mode = CVTTCaptionLoader.s_TrackOff;
@@ -3352,11 +3361,15 @@ CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode )
 	var ccTextTrack = this.GetTextTrackByCode( closedCaptionCode );
 	if ( ccTextTrack )
 	{
+		// .cues seems to only be filled in now after showing the track?
 		ccTextTrack.mode = CVTTCaptionLoader.s_TrackShowing;
-		return true;
+		if ( ccTextTrack.cues && ccTextTrack.cues.length )
+			return true;
+		else
+			ccTextTrack.mode = CVTTCaptionLoader.s_TrackHidden;
 	}
 
-	// no text track so go get it
+	// no text track or cues are empty so go get the VTT file
 	var ccUrl = this.GetClosedCaptionUrl( closedCaptionCode );
 	if ( ccUrl )
 	{
@@ -3393,7 +3406,10 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 {
 	browserCue = window.VTTCue || window.TextTrackCue;
 
-	var newTextTrack = this.m_elVideoPlayer.addTextTrack( "captions", closedCaptionCode, closedCaptionCode );
+	// there may be a track but the cues are empty, so try to get it first and then create if needed
+	var newTextTrack = this.GetTextTrackByCode( closedCaptionCode );
+	if ( !newTextTrack )
+		newTextTrack = this.m_elVideoPlayer.addTextTrack( "captions", closedCaptionCode, closedCaptionCode );
 
 	var rgCuesFromVTT = this.ParseVTTForCues( data );
 	if (rgCuesFromVTT.length == 0)
@@ -3411,7 +3427,30 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 				var rgKeyVal = rgCuesFromVTT[c].layout[i].split(":");
 				if (rgKeyVal.length == 2)
 				{
-					newCue[rgKeyVal[0]] = rgKeyVal[1];
+					try
+					{
+						// skip size percentages as caption options don't scale with these
+						if ( rgKeyVal[0].indexOf('size') == 0 && rgKeyVal[1].indexOf('%') != -1 )
+							continue;
+
+						// relative (percentage) screen attributes require snapToLines off
+						if ( newCue.snapToLines && rgKeyVal[1].indexOf('%') != -1 )
+						{
+							newCue.snapToLines = false;
+							rgKeyVal[1] = rgKeyVal[1].replace('%','');
+						}
+
+						// if the value is a number, then make sure the cue knows it's a number
+						if ( !isNaN( parseFloat( rgKeyVal[1] ) ) )
+							newCue[rgKeyVal[0]] = parseFloat( rgKeyVal[1] );
+						else
+							newCue[rgKeyVal[0]] = String( rgKeyVal[1] );
+					}
+					catch(e)
+					{
+						PlayerLog( 'VTTCue Error: ' + e.message );
+						PlayerLog( rgCuesFromVTT[c] );
+					}
 				}
 			}
 
@@ -3492,49 +3531,49 @@ CVTTCaptionLoader.prototype.UpdateLayoutInfo = function( rgLayoutInfo, rgFoundLa
 	switch ( rgFoundLayoutInfo )
 	{
 		case "{\\an1}":
-			rgLayoutInfo.push("line:14");
+			rgLayoutInfo.push("line:99%");
 			rgLayoutInfo.push("align:left");
-			rgLayoutInfo.push("position:1");
+			rgLayoutInfo.push("position:20%");
 			break;
 		case "{\\an2}":
-			rgLayoutInfo.push("line:14");
+			rgLayoutInfo.push("line:99%");
 			rgLayoutInfo.push("align:middle");
-			rgLayoutInfo.push("position:50");
+			rgLayoutInfo.push("position:50%");
 			break;
 		case "{\\an3}":
-			rgLayoutInfo.push("line:14");
+			rgLayoutInfo.push("line:99%");
 			rgLayoutInfo.push("align:right");
-			rgLayoutInfo.push("position:100");
+			rgLayoutInfo.push("position:80%");
 			break;
 		case "{\\an4}":
-			rgLayoutInfo.push("line:8");
+			rgLayoutInfo.push("line:50%");
 			rgLayoutInfo.push("align:left");
-			rgLayoutInfo.push("position:1");
+			rgLayoutInfo.push("position:20%");
 			break;
 		case "{\\an5}":
-			rgLayoutInfo.push("line:8");
+			rgLayoutInfo.push("line:50%");
 			rgLayoutInfo.push("align:middle");
-			rgLayoutInfo.push("position:50");
+			rgLayoutInfo.push("position:50%");
 			break;
 		case "{\\an6}":
-			rgLayoutInfo.push("line:8");
+			rgLayoutInfo.push("line:50%");
 			rgLayoutInfo.push("align:right");
-			rgLayoutInfo.push("position:100");
+			rgLayoutInfo.push("position:80%");
 			break;
 		case "{\\an7}":
-			rgLayoutInfo.push("line:1");
+			rgLayoutInfo.push("line:10%");
 			rgLayoutInfo.push("align:left");
-			rgLayoutInfo.push("position:1");
+			rgLayoutInfo.push("position:20%");
 			break;
 		case "{\\an8}":
-			rgLayoutInfo.push("line:1");
+			rgLayoutInfo.push("line:10%");
 			rgLayoutInfo.push("align:middle");
-			rgLayoutInfo.push("position:50");
+			rgLayoutInfo.push("position:50%");
 			break;
 		case "{\\an9}":
-			rgLayoutInfo.push("line:1");
+			rgLayoutInfo.push("line:10%");
 			rgLayoutInfo.push("align:right");
-			rgLayoutInfo.push("position:100");
+			rgLayoutInfo.push("position:80%");
 			break;
 		default:
 			break;

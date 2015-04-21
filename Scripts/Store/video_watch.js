@@ -134,14 +134,14 @@ CVideoWatch.prototype.Start = function()
 
    	this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_nViewerSteamID );
 
-	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete( _watch.m_player, true ); } );
+	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 	$J( this.m_elVideoPlayer ).on( 'downloadfailed.VideoWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
 	$J( this.m_elVideoPlayer ).on( 'playbackerror.VideoWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
 
 	this.GetVideoDetails();
 }
 
-CVideoWatch.prototype.OnPlayerBufferingComplete = function( player, bSetCaptionLanguage )
+CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 {
 	$J( '#page_contents' ).removeClass( 'loading_video' );
 	$J( '#page_contents' ).addClass( 'show_player' );
@@ -149,8 +149,9 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function( player, bSetCaptionL
 	this.m_playerUI.SetVideoTitle( this.m_strVideoTitle );
 	document.title = this.m_strVideoTitle + ' :: Steam';
 
-	if ( bSetCaptionLanguage )
-		this.SetClosedCaptionFromSteamLanguage( player );
+	// options that need setting on playback start
+	this.SetClosedCaptionLanguage();
+	this.m_playerUI.SetPlayerPlaybackRate();
 
 	$J( this.m_elVideoPlayer ).off( 'bufferingcomplete.VideoWatchEvents' );
 }
@@ -166,7 +167,7 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 	{
 		var _watch = this;
 		this.ShowVideoError( 'Reestablishing Stream... One Moment Please.' );
-		$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete( _watch.m_player, false ); } );
+		$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 		this.GetVideoDetails();
 	}
 }
@@ -249,7 +250,7 @@ CVideoWatch.prototype.OnTimeUpdatePlayer = function()
 	WebStorage.SetLocal( "steam_video_watch_last_time_indicator_" + this.m_nAppId, parseInt( this.m_player.m_elVideoPlayer.currentTime.toFixed(0) ) );
 }
 
-CVideoWatch.prototype.SetClosedCaptionFromSteamLanguage = function( player )
+CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 {
 	var strClosedCaptionCode = CDASHPlayerUI.GetSavedClosedCaptionLanguage( this.m_nAppId );
 	if ( !strClosedCaptionCode )
@@ -258,7 +259,7 @@ CVideoWatch.prototype.SetClosedCaptionFromSteamLanguage = function( player )
 		{
 			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
 			{
-				if ( player.GetLanguageForAudioTrack() == strCode )
+				if ( this.m_player.GetLanguageForAudioTrack() == strCode )
 					strClosedCaptionCode = CDASHPlayerUI.s_ClosedCaptionsNone;
 				else
 					strClosedCaptionCode = strCode;
@@ -271,7 +272,7 @@ CVideoWatch.prototype.SetClosedCaptionFromSteamLanguage = function( player )
 	if ( strClosedCaptionCode )
 	{
 		CDASHPlayerUI.SetClosedCaptionLanguageInUI( strClosedCaptionCode );
-		player.UpdateClosedCaption( strClosedCaptionCode );
+		this.m_player.UpdateClosedCaption( strClosedCaptionCode );
 	}
 }
 
