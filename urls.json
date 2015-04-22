@@ -53,8 +53,8 @@
 "Styles/styles_ssav5.css"                        : "https://steamstore-a.akamaihd.net/public/css/styles_ssav5.css?__TIME__",
 "Styles/styles_supportmessages.css"              : "https://steamstore-a.akamaihd.net/public/css/styles_supportmessages.css?__TIME__",
 "Styles/styles_video.css"                        : "https://steamstore-a.akamaihd.net/public/css/styles_video.css?__TIME__",
-"Styles/styles_widget.css"                       : "https://steamstore-a.akamaihd.net/public/css/styles_widget.css?__TIME__",
 "Styles/styles_video_watch.css"                  : "https://steamstore-a.akamaihd.net/public/css/styles_video_watch.css?__TIME__",
+"Styles/styles_widget.css"                       : "https://steamstore-a.akamaihd.net/public/css/styles_widget.css?__TIME__",
 
 //
 // Community CSS
@@ -110,22 +110,22 @@
 "Styles/Community/sharedfiles_manage_image.css"  : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/sharedfiles_manage_image.css?__TIME__",
 "Styles/Community/workshop.css"                  : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop.css?__TIME__",
 "Styles/Community/workshop_about.css"            : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_about.css?__TIME__",
+"Styles/Community/workshop_browse_menu.css"      : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_browse_menu.css?__TIME__",
 "Styles/Community/workshop_home.css"             : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_home.css?__TIME__",
+"Styles/Community/workshop_hover.css"            : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_hover.css?__TIME__",
 "Styles/Community/workshop_itemdetails.css"      : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_itemdetails.css?__TIME__",
 "Styles/Community/workshop_managecollection.css" : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_managecollection.css?__TIME__",
 "Styles/Community/workshop_userfiles.css"        : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_userfiles.css?__TIME__",
-"Styles/Community/workshop_browse_menu.css"      : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_browse_menu.css?__TIME__",
-"Styles/Community/workshop_hover.css"            : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_hover.css?__TIME__",
 
 //
 // Global and shared CSS
 //
 "Styles/apphub.css"                              : "https://steamcommunity-a.akamaihd.net/public/shared/css/apphub.css?__TIME__",
 "Styles/buttons.css"                             : "https://steamcommunity-a.akamaihd.net/public/shared/css/buttons.css?__TIME__",
+"Styles/dash_player.css"                         : "https://steamcommunity-a.akamaihd.net/public/shared/css/dash_player.css?__TIME__",
 "Styles/globalv2.css"                            : "https://steamcommunity-a.akamaihd.net/public/css/globalv2.css?__TIME__",
 "Styles/shared_global.css"                       : "https://steamcommunity-a.akamaihd.net/public/shared/css/shared_global.css?__TIME__",
 "Styles/user_reviews.css"                        : "https://steamcommunity-a.akamaihd.net/public/shared/css/user_reviews.css?__TIME__",
-"Styles/dash_player.css"                         : "https://steamcommunity-a.akamaihd.net/public/shared/css/dash_player.css?__TIME__",
 
 //
 // Holiday CSS
@@ -148,8 +148,8 @@
 "Scripts/Store/cluster.js"                       : "https://steamstore-a.akamaihd.net/public/javascript/cluster.js?__TIME__&l=english",
 "Scripts/Store/comments.js"                      : "https://steamstore-a.akamaihd.net/public/javascript/comments.js?__TIME__&l=english",
 "Scripts/Store/communitylink.js"                 : "https://steamstore-a.akamaihd.net/public/javascript/communitylink.js?__TIME__&l=english",
-"Scripts/Store/curators_browse.js"               : "https://steamstore-a.akamaihd.net/public/javascript/curators_browse.js?__TIME__&l=english",
 "Scripts/Store/curator_recommendations.js"       : "https://steamstore-a.akamaihd.net/public/javascript/curator_recommendations.js?__TIME__&l=english",
+"Scripts/Store/curators_browse.js"               : "https://steamstore-a.akamaihd.net/public/javascript/curators_browse.js?__TIME__&l=english",
 "Scripts/Store/demos.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/demos.js?__TIME__&l=english",
 "Scripts/Store/discoveryqueue.js"                : "https://steamstore-a.akamaihd.net/public/javascript/discoveryqueue.js?__TIME__&l=english",
 "Scripts/Store/dynamicstore.js"                  : "https://steamstore-a.akamaihd.net/public/javascript/dynamicstore.js?__TIME__&l=english",
@@ -157,17 +157,17 @@
 "Scripts/Store/gamehighlightplayer.js"           : "https://steamstore-a.akamaihd.net/public/javascript/gamehighlightplayer.js?__TIME__&l=english",
 "Scripts/Store/home.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/home.js?__TIME__&l=english",
 "Scripts/Store/joinsteam.js"                     : "https://steamstore-a.akamaihd.net/public/javascript/joinsteam.js?__TIME__&l=english",
+"Scripts/Store/main.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/main.js?__TIME__&l=english",
 "Scripts/Store/modal.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/modal.js?__TIME__&l=english",
 "Scripts/Store/news.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/news.js?__TIME__&l=english",
 "Scripts/Store/redeemwalletcode.js"              : "https://steamstore-a.akamaihd.net/public/javascript/redeemwalletcode.js?__TIME__&l=english",
 "Scripts/Store/refundpurchase.js"                : "https://steamstore-a.akamaihd.net/public/javascript/refundpurchase.js?__TIME__&l=english",
-"Scripts/Store/searchpage.js"                    : "https://steamstore-a.akamaihd.net/public/javascript/searchpage.js?__TIME__&l=english",
-"Scripts/Store/main.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/main.js?__TIME__&l=english",
-"Scripts/Store/search.js"                        : "https://steamstore-a.akamaihd.net/public/javascript/search.js?__TIME__&l=english",
-"Scripts/Store/supportmessages.js"               : "https://steamstore-a.akamaihd.net/public/javascript/supportmessages.js?__TIME__&l=english",
-"Scripts/Store/youraccount.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/youraccount.js?__TIME__&l=english",
 "Scripts/Store/salefunctions.js"                 : "https://steamstore-a.akamaihd.net/public/javascript/promo/salefunctions.js?__TIME__&l=english",
+"Scripts/Store/search.js"                        : "https://steamstore-a.akamaihd.net/public/javascript/search.js?__TIME__&l=english",
+"Scripts/Store/searchpage.js"                    : "https://steamstore-a.akamaihd.net/public/javascript/searchpage.js?__TIME__&l=english",
+"Scripts/Store/supportmessages.js"               : "https://steamstore-a.akamaihd.net/public/javascript/supportmessages.js?__TIME__&l=english",
 "Scripts/Store/video_watch.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/video_watch.js?__TIME__&l=english",
+"Scripts/Store/youraccount.js"                   : "https://steamstore-a.akamaihd.net/public/javascript/youraccount.js?__TIME__&l=english",
 
 //
 // Community JS
@@ -191,6 +191,7 @@
 "Scripts/Community/global.js"                    : "https://steamcommunity-a.akamaihd.net/public/javascript/global.js?__TIME__&l=english",
 "Scripts/Community/group.js"                     : "https://steamcommunity-a.akamaihd.net/public/javascript/group.js?__TIME__&l=english",
 "Scripts/Community/group_admin_functions.js"     : "https://steamcommunity-a.akamaihd.net/public/javascript/group_admin_functions.js?__TIME__&l=english",
+"Scripts/Community/login.js"                     : "https://steamcommunity-a.akamaihd.net/public/javascript/login.js?__TIME__&l=english",
 "Scripts/Community/market.js"                    : "https://steamcommunity-a.akamaihd.net/public/javascript/market.js?__TIME__&l=english",
 "Scripts/Community/profile.js"                   : "https://steamcommunity-a.akamaihd.net/public/javascript/profile.js?__TIME__&l=english",
 "Scripts/Community/profile_edit_functions.js"    : "https://steamcommunity-a.akamaihd.net/public/javascript/profile_edit_functions.js?__TIME__&l=english",
@@ -203,13 +204,13 @@
 "Scripts/Community/search.js"                    : "https://steamcommunity-a.akamaihd.net/public/javascript/search.js?__TIME__&l=english",
 "Scripts/Community/sharedfiles_functions_logged_in.js": "https://steamcommunity-a.akamaihd.net/public/javascript/sharedfiles_functions_logged_in.js?__TIME__&l=english",
 "Scripts/Community/sharedfiles_guide_functions.js": "https://steamcommunity-a.akamaihd.net/public/javascript/sharedfiles_guide_functions.js?__TIME__&l=english",
+"Scripts/Community/steamguard.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/steamguard.js?__TIME__&l=english",
 "Scripts/Community/user_reviews_community.js"    : "https://steamcommunity-a.akamaihd.net/public/javascript/user_reviews_community.js?__TIME__&l=english",
 "Scripts/Community/video_functions.js"           : "https://steamcommunity-a.akamaihd.net/public/javascript/video_functions.js?__TIME__&l=english",
 "Scripts/Community/video_functions_v2.js"        : "https://steamcommunity-a.akamaihd.net/public/javascript/video_functions_v2.js?__TIME__&l=english",
 "Scripts/Community/workshop_functions.js"        : "https://steamcommunity-a.akamaihd.net/public/javascript/workshop_functions.js?__TIME__&l=english",
 "Scripts/Community/workshop_home.js"             : "https://steamcommunity-a.akamaihd.net/public/javascript/workshop_home.js?__TIME__&l=english",
 "Scripts/Community/workshop_previewplayer.js"    : "https://steamcommunity-a.akamaihd.net/public/javascript/workshop_previewplayer.js?__TIME__&l=english",
-"Scripts/Community/login.js"                     : "https://steamcommunity-a.akamaihd.net/public/javascript/login.js?__TIME__&l=english",
 
 //
 // Global and shared JS
@@ -231,6 +232,7 @@
 //
 "Styles/Mobile/shared_mobile.css"                : "https://steamcommunity-a.akamaihd.net/public/shared/css/shared_mobile.css?__TIME__",
 "Styles/Mobile/styles_profile.css"               : "https://steamcommunity-a.akamaihd.net/public/css/mobile/styles_profile.css?__TIME__",
+"Styles/Mobile/styles_steamguard.css"            : "https://steamcommunity-a.akamaihd.net/public/css/mobile/styles_steamguard.css?__TIME__",
 "Styles/Mobile/styles_store.css"                 : "https://steamstore-a.akamaihd.net/public/css/mobile/styles_store.css?__TIME__",
 
 //

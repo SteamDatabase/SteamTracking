@@ -1,0 +1,399 @@
+
+.steamguard_choice_list {
+}
+
+.steamguard_choice_wrapper {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.steamguard_choice_bar {
+	float: left;
+	width: 90%;
+}
+
+.steamguard_choice_title {
+	font-size: 18px;
+	text-shadow: none;
+	color: #ffffff;
+}
+
+.steamguard_choice_check {
+	float: right;
+}
+
+.steamguard_choice_text {
+	margin-top: 10px;
+	font-size: 15px;
+	text-shadow: none;
+	color: #909090;
+}
+
+.steamguard_choice_text_not_recommended {
+	font-size: 14px;
+	text-shadow: none;
+	color: #a94847;
+}
+
+.steamguard_confirm_wrapper {
+	margin-top: 20px;
+}
+
+.steamguard_splash_wrapper, .steamguard_done_wrapper, .steamguard_error_wrapper, .steamguard_email_wrapper, .steamguard_none_wrapper, .steamguard_prechange_wrapper, .steamguard_help_wrapper {
+	margin-top: 30px;
+}
+
+.steamguard_confirm_title, .steamguard_done_title, .steamguard_error_title {
+	font-size: 18px;
+	text-shadow: none;
+	color: #ffffff;
+	text-align: center;
+}
+
+.steamguard_confirm_text, .steamguard_done_text, .steamguard_error_text {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	font-size: 18px;
+	text-shadow: none;
+	color: #7a7a7a;
+	text-align: center;
+}
+
+.steamguard_cannot_change_title, .steamguard_none_title, .steamguard_email_title, .steamguard_splash_title, .steamguard_prechange_title, .steamguard_help_title, .steamguard_twofactordone_success {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	font-size: 18px;
+	text-shadow: none;
+	color: #ffffff;
+}
+
+.steamguard_cannot_change_text, .steamguard_none_text, .steamguard_email_text, .steamguard_splash_text, .steamguard_prechange_text, .steamguard_help_text, .steamguard_errorpage_text {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	font-size: 16px;
+	text-shadow: none;
+	color: #7a7a7a;
+}
+
+.steamguard_none_warning {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	font-size: 16px;
+	text-shadow: none;
+	color: #a94847;
+}
+
+.steamguard_legal_text {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	font-size: 15px;
+	text-shadow: none;
+	color: #7a7a7a;
+}
+
+.steamguard_splash_text a {
+	font-size: 18px;
+}
+
+.steamguard_done_text b {
+	font-size: 18px;
+}
+
+.steamguard_error_text {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	font-size: 18px;
+	text-shadow: none;
+	color: #ff0000;
+	text-align: center;
+}
+
+.yellow_bubble {
+	background: #c2a068;
+	background-image: linear-gradient(bottom, rgb(191,159,103) 0%, rgb(231,192,124) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(191,159,103) 0%, rgb(231,192,124) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(191,159,103) 0%, rgb(231,192,124) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(191,159,103) 0%, rgb(231,192,124) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(191,159,103) 0%, rgb(231,192,124) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(191,159,103)),
+		color-stop(1, rgb(231,192,124))
+	);
+
+	box-shadow: 1px 1px 0 0 #d8bb8d inset;
+	border: 1px solid #1c232c;
+	border-radius: 3px;
+	position: relative;
+	color: #515151;
+	font-size: 14px;
+	padding: 5px 10px 5px 10px;
+}
+
+.steamguard_next_button {
+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#e7c07c), color-stop(95%,#bf9f67));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7c07c', endColorstr='#bf9f67',GradientType=0 );background: -moz-linear-gradient( top, #e7c07c 5%, #bf9f67 95%);background: -webkit-linear-gradient( top, #e7c07c 5%, #bf9f67 95%);background: -o-linear-gradient( top, #e7c07c 5%, #bf9f67 95%);background: -ms-linear-gradient( top, #e7c07c 5%, #bf9f67 95%);background: linear-gradient( to bottom, #e7c07c 5%, #bf9f67 95%);		
+	background-color: #866f48;
+	border-radius: 3px;
+	border: 1px solid #1c232c;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 14px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px 0 10px;
+	text-shadow: none;
+	cursor: pointer;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.steamguard_cancel_button {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	font-size: 18px;
+	text-shadow: none;
+	color: #ffffff;
+}
+
+input#activationcode_entry {
+	background-color: #1e1e1e;
+	border-radius: 2px;
+	color: #ffffff;
+	font-size: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 3px 3px 3px 3px;
+	text-align: center;
+	display: inline-block;
+	width: 30%;
+}
+
+input#phone_number {
+	background-color: #1e1e1e;
+	border-radius: 2px;
+	color: #ffffff;
+	font-size: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 3px 3px 3px 3px;
+	text-align: center;
+	display: inline-block;
+	width: 60%;
+}
+
+
+input#sms_code {
+	background-color: #1e1e1e;
+	border-radius: 2px;
+	color: #ffffff;
+	font-size: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 3px 3px 3px 3px;
+	text-align: center;
+	display: inline-block;
+	width: 30%;
+}
+
+
+.steamguard_email_button, .steamguard_anotherPhone_button {
+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#808080), color-stop(95%,#404040));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#404040',GradientType=0 );background: -moz-linear-gradient( top, #808080 5%, #404040 95%);background: -webkit-linear-gradient( top, #808080 5%, #404040 95%);background: -o-linear-gradient( top, #808080 5%, #404040 95%);background: -ms-linear-gradient( top, #808080 5%, #404040 95%);background: linear-gradient( to bottom, #808080 5%, #404040 95%);
+	background-color: #866f48;
+	border-radius: 3px;
+	border: 1px solid #1c232c;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 14px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px 0 10px;
+	text-shadow: none;
+	cursor: pointer;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.steamguard_revocation_code_wrapper {
+	background-color: rgba(169, 72, 71, 0.5);
+	text-align: center;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.steamguard_revocation_code_wrapper_row {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	vertical-align: middle;
+	white-space: normal;
+	text-align: center;
+}
+
+.steamguard_revocation_left_icon {
+	float: left;
+	height: 50px;
+
+	position: relative;
+	top: 50%;
+	margin-left: 10px;
+}
+
+.steamguard_revocation_right_icon {
+	float: right;
+	height: 50px;
+
+	position: relative;
+	top: 50%;
+	margin-right: 10px;
+}
+
+.steamguard_revocation_code {
+	position: relative;
+	top: 50%;
+
+	background-color: #2a2a2a;
+	text-align: center;
+	border: 4px solid #ffffff;
+	border-radius: 4px;
+
+	text-align: center;
+	padding: 10px 30px 10px 30px;
+	font-size: 18px;
+	font-style: bold;
+	color: #ffffff;
+	text-shadow: none;
+	display: inline-block;
+}
+
+.steamguard_shortaddphone_wrapper {
+	background-color: #000000;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.steamguard_shortaddphone_text {
+	font-size: 18px;
+	text-shadow: none;
+	color: #2684ca;
+}
+
+.steamguard_country_dropdown_container {
+	margin-top: 5px;
+	width: 80%;
+	display: inline-block;
+}
+
+.steamguard_country_dropdown {
+}
+
+.steamguard_button_row {
+	margin-top: 30px;
+}
+
+.steamguard_left_button {
+	font-size: 18px;
+	text-shadow: none;
+	color: #ffffff;
+	float: left;
+	margin-left: 20px;
+}
+
+.steamguard_right_button {
+	font-size: 18px;
+	text-shadow: none;
+	color: #ffffff;
+	float: right;
+	margin-right: 20px;
+}
+
+.steamguard_centered_button {
+	text-align: center;
+	font-size: 18px;
+	text-shadow: none;
+	color: #ffffff;
+}
+
+
+/* "splashette" menu items, closely matches native UI */
+
+.steamguard_splashette_wrapper {
+	margin-top: 20px;
+}
+
+.steamguard_splashette_chevron {
+	margin-top: 10px;
+	float: right;
+	font-size: 25px;
+	text-shadow: none;
+	color: #ffffff;
+	margin-right: 10px;
+	font-weight: 900;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.steamguard_splashette_line {
+}
+
+.steamguard_splashette_sep {
+	border-top: 1px solid #262626;
+}
+
+.steamguard_splashette_text {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	text-shadow: none;
+	color: #ffffff;
+}
+
+.steamguard_splashette_single_text {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-size: 18px;
+	text-shadow: none;
+	color: #ffffff;
+}
+
+.steamguard_splashette_details {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	font-size: 16px;
+	text-shadow: none;
+	color: #7a7a7a;
+}
+
+.steamguard_splashette_text_wrapper {
+	float: left;
+	display: inline-block;
+}
+
+.steamguard_splashette_top {
+	border-top: 1px solid #000000;
+}
