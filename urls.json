@@ -294,6 +294,6 @@
 "Random/JobPostings.html"                        : "http://valvesoftware.com/jobs/job_postings.html",
 "Random/Publications.html"                       : "http://www.valvesoftware.com/company/publications.html",
 "Random/Security.html"                           : "http://valvesoftware.com/security/",
-"Random/ValveGroup.json"                         : "https://steamcommunity.com/groups/valve/memberslistxml",
-"Random/SteamModerators.json"                    : "https://steamcommunity.com/groups/SUFMods/memberslistxml"
+"Random/ValveGroup.json"                         : "https://steamcommunity.com/groups/valve/memberslistxml?xml=1",
+"Random/SteamModerators.json"                    : "https://steamcommunity.com/groups/SUFMods/memberslistxml?xml=1"
 }
