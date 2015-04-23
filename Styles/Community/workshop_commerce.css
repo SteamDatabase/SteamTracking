@@ -1,0 +1,326 @@
+
+/* details page */
+.workshop_commerce_not_visible_header
+{
+	padding: 12px;
+	background-color: #a13e37;
+	text-align: left;
+	color: #ffebb2;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+}
+.workshop_commerce_not_visible_title
+{
+	font-size: 24px;
+}
+.workshop_commerce_not_visible_subtitle
+{
+	font-size: 13px;
+}
+
+.workshop_commerce_status_header
+{
+	padding: 10px;
+	background-color: #CABA8D;
+	text-align: left;
+	color: black;
+}
+.workshop_commerce_status_title
+{
+	font-size: 18px;
+	color: #13110D;
+	font-family: "Motiva Sans Bold",Arial,Helvetica,sans-serif;
+}
+.workshop_commerce_status_desc
+{
+	font-size: 14px;
+	color: #56503E;
+}
+
+.workshop_commerce_publishing_option
+{
+	text-align: left;
+	padding: 12px;
+	background-color: #caba8d;
+	color: black;
+}
+.workshop_commerce_publishing_option_title
+{
+	font-size: 18px;
+	color: #13110d;
+	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
+}
+.workshop_commerce_publishing_option_desc
+{
+	color: #56503e;
+	font-size: 14px;
+}
+.workshop_commerce_publishing_option_btn
+{
+	padding-top: 10px;
+}
+
+.workshop_commerce_checklist_step
+{
+	padding-left: 2px;
+	padding-top: 10px;
+}
+.workshop_commerce_checklist_step a
+{
+	color: black;
+	text-decoration: underline;
+}
+.workshop_commerce_checklist_step_status
+{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	margin-right: 4px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/checkboxes_minimal.png');
+}
+.workshop_commerce_checklist_step_status.complete
+{
+}
+.workshop_commerce_checklist_step_status.incomplete
+{
+	background-position: 13px 0px;
+}
+.step_complete,
+.step_complete a {
+	color: #576e03;
+}
+.step_incomplete,
+.step_incomplete a
+{
+	color: #a13e37;
+}
+.step_incomplete a:hover {
+	color: #ffffff;
+}
+
+/* edit page */
+
+.header
+{
+	padding-top: 10px;
+	padding-bottom: 16px;
+}
+
+.header #rightContents
+{
+	padding-top: 15px;
+}
+
+.pageTitle
+{
+	font-size: 30px;
+	color: #ffffff;
+	font-family: "Motiva Sans Light",Arial,Helvetica,sans-serif;
+}
+
+.sectionTitle
+{
+	font-size: 18px;
+	line-height: 30px;
+	color: #66c0f4;
+	font-family: "Motiva Sans Light",Arial,Helvetica,sans-serif;
+}
+
+.section
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	font-family: "Motiva Sans Light",Arial,Helvetica,sans-serif;
+	color: #8f98a0;
+}
+.section p {
+	margin-bottom: 8px;
+}
+
+.priceCategory
+{
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+	border-top-color: #3d5b82;
+	border-right-color: #121a24;
+	border-bottom-color: #121a24;
+	border-left-color: #3d5b82;
+	background-color: #2c4961;
+	color: #66c0f4;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	height: 25px;
+	box-shadow: none;
+}
+
+.priceCategory.purchaseOption
+{
+	width: auto;
+	border: none;
+	padding-right: 12px;
+	padding-left: 2px;
+	margin-right: 4px;
+	font-size: 15px;
+	color: #dae9f2;
+	font-weight: normal;
+	background: url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_arrow_down.png?v=2') no-repeat right transparent;
+	-webkit-appearance: none;
+}
+.priceCategory.purchaseOption option {
+	background: #417a9b;
+	color: #e5e4dc;
+}
+.priceCategory.purchaseOption.pwyw {
+	color: #a3cf06;
+}
+.priceCategory.purchaseOption.pwyw:hover {
+	background-color: rgba(33,101,138,0.6);
+}
+
+
+.inventoryDesc
+{
+	font-size: 14px;
+	width: 100%;
+	max-width: 900px;
+	height: 120px;
+
+	line-height: 20px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	border-radius: 3px;
+	padding: 4px 5px 4px 8px;
+	color: #BFBFBF;
+	top: 0px;
+}
+
+.legalWarning
+{
+	color: #CA7900;
+	padding: 5px;
+	font-size: 14px;
+}
+.legalWarning label {
+	 display: block;
+	 padding-left: 28px;
+	 text-indent: -28px;
+}
+.legalWarning input {
+	width: 28px;
+	padding: 0;
+	margin:0;
+	vertical-align: bottom;
+	position: relative;
+	top: -1px;
+	*overflow: hidden;
+}
+.priceOpt label {
+	display: block;
+	padding-left: 28px;
+	text-indent: -28px;
+}
+.priceOpt label strong {
+	font-weight: normal;
+	font-family: "Motiva Sans Bold", Arial, Tahoma, Sans-serif;
+}
+.priceOpt input {
+	width: 28px;
+	padding: 0;
+	margin:0;
+	vertical-align: bottom;
+	position: relative;
+	top: -1px;
+	*overflow: hidden;
+}
+.priceMinimum {
+	padding-left: 28px;
+}
+
+.pageButtons
+{
+	float: right;
+	padding-bottom: 20px;
+}
+
+/* purchase dialog */
+.workshop_refund_policy_title
+{
+	font-size: 14px;
+	color: #AC966A;
+}
+.workshop_refund_policy_desc
+{
+	padding-top: 5px;
+}
+
+/* refund dialog */
+.workshop_refund_select_reason
+{
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+.workshop_refund_reason
+{
+	margin-bottom: 16px;
+	line-height: 20px;
+}
+.workshop_refund_reason_input {
+	margin-top: 4px;
+	float: left;
+}
+.workshop_refund_reason_input input {
+	padding: 0;
+	margin: 0;
+	top: 0;
+}
+.workshop_refund_reason_text {
+	margin-left: 25px;
+	color: #c6d4df;
+}
+.workshop_refund_reason_text .sub {
+	font-size: 12px;
+	color: #777777;
+}
+.workshop_refund_amount
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.workshop_refund_policy
+{
+	padding-bottom: 5px;
+}
+.workshop_refund_contributors
+{
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.workshop_refund_items
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.workshop_refund_items_title
+{
+	padding-bottom: 5px;
+	font-size: 16px;
+}
+.workshop_refund_item
+{
+	padding: 5px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	margin-bottom: 1px;
+}
+
+.purchase_workshop_item_dialog
+{
+	max-width: 800px;
+}
+
+.game_area_required_dlc.purchase_dialog {
+	width: auto;
+}
