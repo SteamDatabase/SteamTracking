@@ -3196,7 +3196,7 @@ input.searchText
 /** HOVER stuff */
 div.hover {
 	position: absolute;
-	z-index: 400;
+	z-index: 405;
 	top: 40px;
 	left: 400px;
 	text-align:left;

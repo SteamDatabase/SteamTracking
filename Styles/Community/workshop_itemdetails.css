@@ -2694,7 +2694,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .game_area_purchase_game.buy .bundle_includes span.commerce_owned_bundled_item,
 .game_area_purchase_game.buy .bundle_includes .commerce_owned_bundled_item span
 {
-	color: #a3cf06;
+	color: #ca5029;
+}
+.bundle_owned_bundled_item {
+	color: #a4d007;
 }
 .game_area_purchase_game.buy .bundle_includes a {
 	color: #c6d4df;
@@ -2733,6 +2736,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	.bundle_price_summary .bundle_totals_row.discount .price {
 		color: #a4d007;
 		background: #4c6b22;
+		padding-right: 3px;
+		padding-left: 3px;
 	}
 	.bundle_price_summary .bundle_totals_row.yours,
 	.bundle_price_summary .bundle_totals_row.yours .price {
