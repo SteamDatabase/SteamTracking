@@ -90,6 +90,8 @@ HTMLHorizontalScrollBar, HTMLVerticalScrollBar, HorizontalScrollBar, VerticalScr
 #MainPage
 {
 	flow-children: down;
+	width: 100%;
+	height: 100%;
 }
 
 

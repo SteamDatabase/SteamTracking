@@ -97,13 +97,13 @@ TextInputDualTouch
 
 .Left .TouchRow
 {
-	x: -2.25%;
+	transform: translateX( -2.25% );
 	horizontal-align: right;
 }
 
 .Right .TouchRow
 {
-	x: 2.25%;
+	transform: translateX( 2.25% );
 	horizontal-align: left;
 }
 
@@ -122,6 +122,7 @@ TextInputDualTouch
 #LastRow
 {
 	height: 14%;
+	width: 88.8%;
 }
 
 .NoSuggest #TopRow
@@ -133,6 +134,28 @@ TextInputDualTouch
 {
 	flow-children: right;
 	height: 18%;
+	width: 86.1%;
+}
+
+
+#Row1
+{
+	width: 89%;
+}
+
+#Row1 .TouchKey
+{
+	width: 15.5%;
+}
+
+#Row2
+{
+	width: 86%;
+}
+
+#Row2 .TouchKey
+{
+	width: 16.05%;
 }
 
 .NoSuggest .TouchRow,
@@ -155,7 +178,7 @@ TextInputDualTouch
 
 .TouchKey
 {
-	width: 13.8%;
+	width: 16%;
 	height: 100%;
 	background-color: daisy_petal_color;
 	border-style: solid;
@@ -164,55 +187,67 @@ TextInputDualTouch
 }
 
 // 6, 7, B, N
-#TouchKey_5_0,
-#TouchKey_6_0,
-#TouchKey_4_3,
-#TouchKey_5_3
+#TouchKey_5_0.TouchKey,
+#TouchKey_6_0.TouchKey,
+#TouchKey_4_3.TouchKey,
+#TouchKey_5_3.TouchKey
 {
-	width: 17.1%;
+	width: 19.9%;
 }
 
 // T, Y
-#TouchKey_4_1,
-#TouchKey_5_1
+#TouchKey_4_1.TouchKey,
+#TouchKey_5_1.TouchKey
 {
-	width: 22.3%;
+	width: 25.05%;
 }
 
 // H, G
-#TouchKey_5_2,
-#TouchKey_4_2
+#TouchKey_5_2.TouchKey,
+#TouchKey_4_2.TouchKey
 {
-	width: 19.8%;
+	width: 23.02%;
 }
 
 .Left #TouchKey_Space
 {
 	border-right-width: 0px;
+	border-left-width: 0px;
 }
 
 .Right #TouchKey_Space
 {
 	border-left-width: 0px;
+	border-right-width: 0px;
 }
 
 #TouchKey_Space
 {
-	width: 91.7%;
+	width: 100%;
 }
 
-#TouchKey_Suggest_0,
-#TouchKey_Suggest_1,
-#TouchKey_Suggest_2,
-#TouchKey_Suggest_3
+#TouchKey_Suggest_0.TouchKey,
+#TouchKey_Suggest_1.TouchKey,
+#TouchKey_Suggest_2.TouchKey,
+#TouchKey_Suggest_3.TouchKey
 {
-	width: 44.75%;
+	width: 50%;	
 }
 
-#TouchKey_LeftArrow,
-#TouchKey_RightArrow
+#TouchKey_Suggest_0.TouchKey
 {
-	width: 11.5%;
+	border-left-width: 0px;	
+}
+
+#TouchKey_Suggest_3.TouchKey
+{
+	border-right-width: 0px;
+}
+
+#TouchKey_LeftArrow.TouchKey,
+#TouchKey_RightArrow.TouchKey
+{
+	width: 12.9%;
 }
 
 #TouchKey_LeftArrow.LeftArrowFill
@@ -221,7 +256,7 @@ TextInputDualTouch
 	x: 9%;
 	y: 14.8%;
 	width: 1.8%;
-	height: 70.4%;
+	height: 69%;
 	border-style: none;
 }
 
@@ -231,7 +266,7 @@ TextInputDualTouch
 	x: 89.2%;
 	y: 14.8%;
 	width: 1.64%;
-	height: 70.4%;
+	height: 68.5%;
 	border-style: none;
 }
 
@@ -239,17 +274,17 @@ TextInputDualTouch
 .NoSuggest #TouchKey_RightArrow.RightArrowFill
 {
 	y: 0.75%;
-	height: 81.5%;
+	height: 80%;
 }
 
-#TouchKey_Alt
+#TouchKey_Alt.TouchKey
 {
-	width: 11%;
+	width: 12.79%;
 }
 
-#TouchKey_Enter
+#TouchKey_Enter.TouchKey
 {
-	width: 25%;
+	width: 29.07%;
 }
 
 .TouchKeyHover

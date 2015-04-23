@@ -176,8 +176,32 @@ ControllerBindingsGordon.ScreenSaverMode
 
 .ModeWrapper
 {
+	border-radius: 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #0f99bc;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0b2142 ), to( #1e5a78 ) );
+
 	width: 417px;
 	height: 228px;
+}
+
+.ModeWrapper:focus
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#01b6ed), to(#01ddf5));
+	border-color: white;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ModeWrapper:focus Label
+{
+	color: #0e182a;
 }
 
 .ModeWrapper.GapRight
@@ -223,9 +247,11 @@ ControllerBindingsGordon.ScreenSaverMode
 	background-image: url("file://{images}/library/controller/input_controller_glyph_right_trigger.png");
 }
 
-.ModeWrapper:focus, ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
+
+ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
 {
-	//background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd));
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#01b6ed), to(#01ddf5));
+	border-color: white;
 
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
@@ -235,17 +261,15 @@ ControllerBindingsGordon.ScreenSaverMode
 	animation-direction: normal;
 }
 
+ControllerBindingButton.BindingButton:focus Label, Button.Trigger:focus Label
+{
+	color: #0e182a;
+}
+
 .ControllerMode
 {
 	width: 100%;
 	height: 100%;
-
-	border-radius: 2px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #0f99bc;
-
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0b2142 ), to( #1e5a78 ) );
 }
 
 .ControllerMode.Trigger
@@ -492,6 +516,11 @@ ControllerSourceModeDpad #SourceModeLines
 	background-image: url("file://{images}/library/controller/controller_config_mode_dpad.png");
 }
 
+Button:focus ControllerSourceModeDpad #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_dpad_focused.png");
+}
+
 ControllerSourceModeDpad #BindingSlotContainer
 {
 	margin-top: 16px;
@@ -501,20 +530,47 @@ ControllerSourceModeDpad #BindingSlotContainer
 ControllerSourceModeDpad ControllerBindingButton
 {
 	horizontal-align: right;
-	margin-bottom: 3px;
+	margin-bottom: 6px;
 }
 
-ControllerSourceModeJoystick #SourceModeBackground
+ControllerSourceModeJoystickMove #SourceModeBackground
 {
 	background-image: url("file://{images}/library/controller/input_controller_mode_stick.png");
 }
 
-ControllerSourceModeJoystick #SourceModeLines
+ControllerSourceModeJoystickMove #SourceModeLines
 {
 	background-image: url("file://{images}/library/controller/controller_config_mode_stick.png");
 }
 
-ControllerSourceModeJoystick #JoystickClick
+Button:focus ControllerSourceModeJoystickMove #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick_focused.png");
+}
+
+ControllerSourceModeJoystickMove #JoystickClick
+{
+	horizontal-align: right;
+	margin-right: 12px;
+	transform: translatey( 175px );
+}
+
+ControllerSourceModeJoystickCamera #SourceModeBackground
+{
+	background-image: url("file://{images}/library/controller/input_controller_mode_stick.png");
+}
+
+ControllerSourceModeJoystickCamera #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick.png");
+}
+
+Button:focus ControllerSourceModeJoystickCamera #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick_focused.png");
+}
+
+ControllerSourceModeJoystickCamera #JoystickClick
 {
 	horizontal-align: right;
 	margin-right: 12px;
@@ -530,7 +586,7 @@ ControllerSourceModeABXY #BindingSlotContainer
 ControllerSourceModeABXY ControllerBindingButton
 {
 	horizontal-align: right;
-	margin-bottom: 2px;
+	margin-bottom: 6px;
 }
 
 ControllerSourceModeABXY #SourceModeBackground
@@ -543,11 +599,19 @@ ControllerSourceModeABXY #SourceModeLines
 	background-image: url("file://{images}/library/controller/controller_config_mode_bpad.png");
 }
 
+Button:focus ControllerSourceModeABXY #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_bpad_focus.png");
+}
+
 #ABXYButtonA Label
 {
-	margin-top: 2px;
-	margin-bottom: 1px;
 	color: #42ff00;
+}
+
+Button:focus #ABXYButtonA Label
+{
+	color: #0e182a;
 }
 
 #ABXYButtonB Label
@@ -555,14 +619,29 @@ ControllerSourceModeABXY #SourceModeLines
 	color: #ff0000;
 }
 
+Button:focus #ABXYButtonB Label
+{
+	color: #0e182a;
+}
+
 #ABXYButtonX Label
 {
 	color: #01c4f5;
 }
 
+Button:focus #ABXYButtonX Label
+{
+	color: #0e182a;
+}
+
 #ABXYButtonY Label
 {
 	color: #ffde00;
+}
+
+Button:focus #ABXYButtonY Label
+{
+	color: #0e182a;
 }
 
 ControllerSourceModeAbsoluteMouse .ModeTitle
@@ -579,7 +658,7 @@ ControllerSourceModeAbsoluteMouse #BindingSlotContainer
 ControllerSourceModeAbsoluteMouse ControllerBindingButton
 {
 	horizontal-align: right;
-	margin-bottom: 3px;
+	margin-bottom: 6px;
 }
 
 ControllerSourceModeAbsoluteMouse #SourceModeBackground
@@ -592,6 +671,11 @@ ControllerSourceModeAbsoluteMouse #SourceModeLines
 	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex.png");
 }
 
+Button:focus ControllerSourceModeAbsoluteMouse #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex_focused.png");
+}
+
 ControllerSourceModeRelativeMouse #SourceModeBackground
 {
 	background-image: url("file://{images}/library/controller/input_controller_mode_stick.png");
@@ -601,6 +685,12 @@ ControllerSourceModeRelativeMouse #SourceModeLines
 {
 	background-image: url("file://{images}/library/controller/controller_config_mode_stick.png");
 }
+
+Button:focus ControllerSourceModeRelativeMouse #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick_focused.png");
+}
+
 
 ControllerSourceModeRelativeMouse #RelMouseClick
 {
@@ -623,7 +713,7 @@ ControllerSourceModeScrollWheel #BindingSlotContainer
 ControllerSourceModeScrollWheel ControllerBindingButton
 {
 	horizontal-align: right;
-	margin-bottom: 3px;
+	margin-bottom: 6px;
 }
 
 ControllerSourceModeScrollWheel #SourceModeBackground
@@ -636,6 +726,10 @@ ControllerSourceModeScrollWheel #SourceModeLines
 	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex.png");
 }
 
+Button:focus ControllerSourceModeScrollWheel #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex_focused.png");
+}
 
 ControllerSourceModeTrigger
 {
@@ -941,27 +1035,52 @@ Slider:Selected
 	visibility: visible;
 }
 
-.JoystickMode
+.JoystickMoveMode
 {
 	visibility: collapse;
 }
 
-.ModeJoystickVisible .JoystickMode
+.ModeJoystickMoveVisible .JoystickMoveMode
 {
 	visibility: visible;
 }
 
-.ModeJoystickVisible .JoystickMode.Advanced
+.ModeJoystickMoveVisible .JoystickMoveMode.Advanced
 {
 	visibility: collapse;
 }
 
-.ModeJoystickVisible.AdvancedPropertiesVisible .JoystickMode
+.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode
 {
 	visibility: collapse;
 }
 
-.ModeJoystickVisible.AdvancedPropertiesVisible .JoystickMode.Advanced
+.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode.Advanced
+{
+	visibility: visible;
+}
+
+.JoystickCameraMode
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible .JoystickCameraMode
+{
+	visibility: visible;
+}
+
+.ModeJoystickCameraVisible .JoystickCameraMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode.Advanced
 {
 	visibility: visible;
 }
@@ -1365,6 +1484,7 @@ DropDownMenu.DropDownMenuVisible
 #KeyboardWrapper
 {
 	flow-children: down;
+	height: 100%;
 }
 
 #BindingDescriptionWrapper
@@ -1385,10 +1505,34 @@ DropDownMenu.DropDownMenuVisible
 
 #BindingDescriptionTextEntry
 {
-	margin-top: 5px;
+	margin: 5px;
 	width: 400px;
 	font-size: 28px;
 	font-family: platformfont;
+	opacity: 0.0;
+}
+
+.ShowCustomDescription #BindingDescriptionTextEntry
+{
+	opacity: 1.0;
+}
+
+#BindingDescriptionDropDown
+{
+	margin-top: 5px;
+	margin-right: 40px;
+	width: 450px;
+	visibility: collapse;
+}
+
+.ShowBindingDescriptionDropDown #BindingDescriptionDropDown
+{
+	visibility: visible;
+}
+
+#BindingDescriptionDropDownDropDownMenu
+{
+	width: 450px;
 }
 
 ChooseBinding

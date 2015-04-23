@@ -3,6 +3,8 @@
 /* in front of main panel, which has a Z of 1000, and top row, which has a Z of 2000 */
 @define settingszindex: 3000;
 
+@define settingsmaxbuttonspercolumn: 10;
+
 /* text colors */
 @define tcsettingsbutton: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #abababff ) );
 
@@ -274,7 +276,7 @@ ToggleButton .TickBox
 {
 	color: tcstatictext;
 	margin-top: 4px;
-	margin-bottom: 2px;
+	margin-bottom: 4px;
 	font-family: platformfont;
 
 }
@@ -289,7 +291,7 @@ ToggleButton .TickBox
 // text of textual item in settings RHS
 .SettingsValue
 {
-	margin: 8px 0px 12px 0px;
+	margin: 4px 0px 12px 0px;
 	color: applabelsolid;
 	max-width: 475px;
 	text-overflow: clip;
@@ -338,11 +340,6 @@ RadioButton
 .CheckBox
 {
 	background-color: simplebutton;
-}
-
-.SettingsLeftContent Button,.CheckBox,RadioButton
-{
-	width: 475px;
 }
 
 #SettingsSteamOS_EnableDesktop
@@ -407,7 +404,7 @@ Label.SettingsStatic
 	padding-top: 10px;
 }
 
-.SettingsMainRightContent
+.SettingsMiddleContent
 {
 	width: 525px;
 	horizontal-align: left;
@@ -424,6 +421,18 @@ Label.SettingsStatic
 	margin-left: 550px;
 	horizontal-align: left;
 	padding-right: 40px;
+}
+
+#SettingsContent .SettingsRightContent
+{
+	margin-left: 50px;
+}
+
+.VisibleColumns3 #SettingsContent .SettingsLeftContent, 
+.VisibleColumns3 #SettingsContent .SettingsMiddleContent,
+.VisibleColumns3 #SettingsContent .SettingsRightContent
+{
+	width: 400px;
 }
 
 #Settings_Voice .SettingsRightContent
@@ -533,6 +542,7 @@ RadioButton Label
 {
 	opacity: 0.0;
 	height: 100%;
+	width: 100%;
 
 	transition-property: opacity;
 	transition-duration: SettingsPanelTransitionDuration;
@@ -698,7 +708,7 @@ DropDown Label
 
 #ContinentsDropDownMenu,#CountriesDropDownMenu,#RegionsDropDownMenu
 {
-	height: 475px;
+	height: fit-children;
 }
 
 .TimeZoneDropDown
@@ -728,7 +738,7 @@ DropDown Label
 	height: 600px;
 	width: 985px;
 
-	overflow: clip scroll;
+	overflow: squish scroll;
 	background-color: simplebutton;
 
 	opacity: 0.8;
@@ -1494,7 +1504,8 @@ DropDownMenu
 	transition-duration: SettingsPanelTransitionDuration;
 	transition-timing-function: ease-in;
 	margin-left: 4px;
-	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-top: 0px;
 }
 
 #TestMicrophone Label.AltLabel
@@ -1931,7 +1942,7 @@ SettingsPanel_GameController_Binding
 	padding-top:5px;
 	padding-bottom:5px;
 	height: 600px;
-	overflow: clip scroll;
+	overflow: squish scroll;
 	flow-children: down;
 //	font-size: 20px;
 	
@@ -2201,10 +2212,11 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	visibility: collapse;
 }
 
-.NotLoggedIn #RemoteControlSettingsButton
+.NotLoggedIn #DiskManagetmentButton
 {
 	visibility: collapse;
 }
+
 
 .ClientUpdateMargin
 {
@@ -2215,8 +2227,8 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 .SettingsPanel_Family_Sharing_List
 {
 	flow-children: down;
-	overflow: clip scroll;
-	width: 1000px;
+	overflow: squish scroll;
+	width: 975px;
 	height: 395px;
 	margin-top: 10px;
 	padding: 8px;
@@ -2324,12 +2336,12 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	margin-top: 20px;
 }
 
-.SettingsManageDevices_List
+.SettingsManageDevices_List, #AppList #SettingsDiskManagementTable
 {
 	height: 500px;
 	width: 1200px;
 	flow-children: down;
-	overflow: clip scroll;
+	overflow: squish scroll;
 	background-color: dialog_bg_color;
 }
 
@@ -2340,12 +2352,13 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	margin-top: 20px;
 }
 
-.SettingsManageDevices_ColumnName
+.SettingsManageDevices_ColumnName, .SettingsDiskSpaceManagement_ColumnName
 {
 
 	font-size: 24px;
-	margin-left: 4px;
+	margin-left: 8px;
 	margin-top: 20px;
+	margin-right: 28px;
 	color: detailsdatalabel;
 }
 
@@ -2358,6 +2371,17 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 #Settings_RemoteClients .SettingsManageDevices_ColumnName
 {
 	width: 536px;
+}
+
+#AppNameHeader.SettingsDiskSpaceManagement_ColumnName
+{
+	width: 672px;
+}
+
+#AppSizeHeader.SettingsDiskSpaceManagement_ColumnName
+{
+	text-align: right;
+	width: 317px;
 }
 
 
@@ -2446,7 +2470,7 @@ color: black;
 	color: #abb4b9;
 }
 
-#SettingsRemoteClientTable
+#SettingsRemoteClientTable, #SettingsDiskManagementTable
 {
 	flow-children: down;
 	width: 1025px;
@@ -2461,12 +2485,17 @@ color: black;
 	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
 }
 
-#SettingsRemoteClientTable:descendantfocus
+#SettingsDiskManagementTable
+{
+	height: 500px;	
+}
+
+#SettingsRemoteClientTable:descendantfocus, #SettingsDiskManagementTable:descendantfocus
 {
 	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
 }
 	
-#SettingsRemoteClientTable:focus
+#SettingsRemoteClientTable:focus, #SettingsDiskManagementTable:focus
 {
 	border-color: applabelsolid;
 
@@ -2495,7 +2524,12 @@ color: black;
 	width: 676px;
 }
 
-.SettingsRemoteClientsHeader
+.SettingsDiskManagementApp
+{
+	width: 776px;
+}
+
+.SettingsRemoteClientsHeader, .SettingsDiskSpaceManagementHeader
 {
 	margin: -12px 0px 0px 0px;
 	padding-bottom: 6px;
@@ -2504,13 +2538,13 @@ color: black;
 	width: 1025px;
 }
 
-#SettingsRemoteClientList
+#SettingsRemoteClientList, #AppList #SettingsDiskManagementTable
 {
 	height: fill-parent-flow( 1.0 );
 	width: 100%;
 	padding: 8px;
 	flow-children: down;
-	overflow: clip scroll;
+	overflow: squish scroll;
 	
 	
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
@@ -2518,7 +2552,7 @@ color: black;
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
 }
 
-#SettingsRemoteClientTable:descendantfocus #SettingsRemoteClientList
+#SettingsRemoteClientTable:descendantfocus #SettingsRemoteClientList, #SettingsDiskManagementTable:descendantfocus
 {
 	background-color: ui_common_control;
 }
@@ -2572,13 +2606,40 @@ SettingsPanelRemoteClientListing
 	transition-timing-function: ease-out;
 }
 
+
+SettingsPanelDiskManagementAppListing Button
+{
+	width: 100%;
+	flow-children: right;
+	background-color: transparent;
+	width: fit-children;
+	color: white;
+	margin-right: 16px;
+	margin-left: 8px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	horizontal-align: center;
+
+	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+
+	pre-transform-scale2d: 1.0;
+
+	transition-property: border, blur, background-color,  transform, pre-transform-scale2d, box-shadow, opacity, opacity-mask;
+	transition-timing-function: ease-out;
+	transition-duration: 1.0s;
+}
+
 SettingsPanel_RemoteClients.Loading SettingsPanelRemoteClientListing
 {
 	visibility: collapse;
 }
 
 
-SettingsPanelRemoteClientListing:focus
+SettingsPanelRemoteClientListing:focus, SettingsPanelDiskManagementAppListing Button:focus
 {
 	transition-duration: 0.25s !immediate;
 
@@ -2594,7 +2655,19 @@ SettingsPanelRemoteClientListing:focus
 
 }
 
-SettingsPanelRemoteClientListing:descendantfocus
+#SettingsDiskManagementTable .VertContainer
+{
+	overflow: squish scroll;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	
+	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+
+SettingsPanelRemoteClientListing:descendantfocus, SettingsPanelDiskManagementAppListing Button:descendantfocus
+
 {
 	color: black;
 	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
@@ -2605,6 +2678,38 @@ SettingsPanelRemoteClientListing:descendantfocus
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+}
+
+SettingsPanelDiskManagementAppListing Button Label
+{
+	margin-top: 4px;
+	transform: translateX( -7px );
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+SettingsPanelDiskManagementAppListing Button:descendantfocus Label
+{
+	transform: translateX( 7px );
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+.SettingsDiskManagementSize
+{
+	text-align: right;
+	width: 438px;
+}
+
+SettingsPanelDiskManagementAppListing Button:descendantfocus .SettingsDiskManagementSize
+{
+	transform: translateX( -7px );
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	
 }
 
 SettingsPanelRemoteClientListing #Status
@@ -2659,12 +2764,14 @@ SettingsPanelRemoteClientListing #Status
 #SettingsInterface_SteamClientChecking
 {
 	visibility: collapse;
+	width: 100%;
 }
 
 /* hide check label if chekcing or downloading or have update*/
 .SteamClientPending #SettingsInterface_SteamClientCheckForUpdates, .SteamClientChecking #SettingsInterface_SteamClientCheckForUpdatesLabel, .SteamClientDownloading #SettingsInterface_SteamClientCheckForUpdatesLabel
 {
 	visibility: collapse;
+	width: 100%;
 }
 
 .SteamClientChecking #SettingsInterface_SteamClientChecking
@@ -2676,6 +2783,7 @@ SettingsPanelRemoteClientListing #Status
 #SettingsInterface_SteamClientPending
 {
 	visibility: collapse;
+	width: 100%;
 }
 
 .SteamClientPending #SettingsInterface_SteamClientPending
@@ -2687,6 +2795,7 @@ SettingsPanelRemoteClientListing #Status
 #SettingsInterface_SteamClientDownloading
 {
 	visibility: collapse;
+	width: 100%;
 }
 
 .SteamClientDownloading #SettingsInterface_SteamClientDownloading
@@ -2715,7 +2824,8 @@ SettingsPanelRemoteClientListing #Status
 
 .ClientInfoSectionHeader
 {
-	margin-top: 82px;
+	margin-top: 50px;
+	margin-bottom: 4px;
 }
 
 .SteamOS .ClientInfoSectionHeader
@@ -2897,98 +3007,6 @@ SettingsPanel_Display.Underscan
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 }
 
-// Remote Control
-.SettingsRemoteControl_DevicesHeader
-{
-	font-size: 32px;
-	flow-children: right;
-	margin-top: 20px;
-}
-
-.SettingsRemoteControl_List
-{
-	height: 500px;
-	width: 1200px;
-	flow-children: down;
-	overflow: clip scroll;
-	background-color: simplebutton;
-
-	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
-	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
-	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
-}
-
-.SettingsRemoteControl_ColumnItem
-{
-	width: 48px;
-	font-size: 24px;
-	margin-top: 20px;
-}
-
-.SettingsRemoteControl_ColumnName
-{
-	width: 352px;
-	font-size: 24px;
-	margin-left: 4px;
-	margin-top: 20px;
-	color: tcstatictext;
-}
-
-.SettingsRemoteControl_ColumnTime
-{
-	width: 400px;
-	font-size: 24px;
-	margin-top: 20px;
-	margin-left: 8px;
-	color: tcstatictext;
-}
-
-.SettingsRemoteControl_ColumnAccess
-{
-	width: 150px;
-	font-size: 24px;
-	margin-top: 20px;
-	margin-left: 8px;
-	color: tcstatictext;
-}
-
-.SettingsController_BindRow:focus .SettingsRemoteControl_ColumnItemContent,.SettingsController_BindRow:focus .SettingsRemoteControl_ColumnNameContent, .SettingsController_BindRow:focus .SettingsRemoteControl_ColumnTimeContent, .SettingsController_BindRow:focus .SettingsRemoteControl_ColumnAccessContent
-{
-	color:black;
-}
-
-.SettingsRemoteControl_ColumnItemContent
-{
-	width: 32px;
-	margin-right: 8px;
-	font-size: 24px;
-	text-align: right;
-	color: applabelsolid;
-}
-
-.SettingsRemoteControl_ColumnNameContent
-{
-	width: 350px;
-	font-size: 24px;
-	margin-right: 8px;
-	color: applabelsolid;
-}
-
-.SettingsRemoteControl_ColumnTimeContent
-{
-	width: 400px;
-	font-size: 24px;
-	margin-right: 8px;
-	color: applabelsolid;
-}
-
-.SettingsRemoteControl_ColumnAccessContent
-{
-	width: 150px;
-	font-size: 24px;
-	margin-right: 8px;
-	color: applabelsolid;
-}
 
 .OfflineMode #SettingsAccount_ChangePassword,.OfflineMode #SettingsAccount_ChangeEmail
 {
@@ -3231,13 +3249,13 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	height: 500px;
 	width: 500px;
 
-	overflow: clip scroll;
+	overflow: squish scroll;
 
 	opacity: 0.8;
 
-	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
-	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
-	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+	opacity-mask-scroll-up: url( "file://{images}/list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
 }
 
 .SettingsContained #LanguageList
@@ -3255,6 +3273,7 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	background-color: none;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	padding-left: 2px;
 	box-shadow: none;
 	transition-property: background-color;
 	animation-name: none;
@@ -3540,4 +3559,18 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	width: 575px;
 }
 
+#SettingsDiskSpaceManagement_IntroBlock
+{
+	flow-children: down;
+}
+
+.HiddenColum.SettingsContent
+{
+	visibility: collapse;
+}
+
+SettingsPanelDiskManagementAppListing.Deleting Button
+{
+	opacity: 0.0;
+}
 

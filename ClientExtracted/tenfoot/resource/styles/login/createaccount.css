@@ -97,9 +97,14 @@ CreateAccountWizard .ShowingLoginProgress
 	opacity: 1.0;
 }
 
-#ppa #PPAButton
+#ppa 
 {
-	width: 845px;
+	width: buttonwidth;
+}
+
+#PPAButton, #SSAButton
+{
+	width: 750px;
 }
 
 #AgreementsHTML
@@ -185,6 +190,7 @@ CreateAccountSuccessWizardChild #PasswordTextEntry
 {
 	margin-top: 75px;
 	flow-children: down;
+	width: 100%;
 }
 
 RadioButton.Wide
@@ -205,7 +211,7 @@ RadioButton.Wide
 
 #SSAButtonContainer .WizardButton
 {
-	width: 745px;
+	width: 725px;
 }
 
 #ScrollHintXInput,
@@ -218,7 +224,7 @@ RadioButton.Wide
 	opacity: 0.8;
 	text-align: right;
 	width: 100%;
-
+	height: 40px;
 	font-family: platformfont;
 }
 
@@ -272,7 +278,7 @@ RadioButton.Wide
 // and make room for the tickbox
 .CheckBox Label
 {
-	padding-left: 67px;
+	padding-left: 10px;
 	padding-top: 6px;
 	color: detailsdatalabel;
 	width: 100%;

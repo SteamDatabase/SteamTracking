@@ -540,7 +540,7 @@ CommunityFriendInventory
 }
 CommunityMarketItemPicker
 {
-	url			"%community%/profiles/%p1%/inventory/?market=1"
+	url			"%community%/profiles/%p1%/inventory/?market=1&moveupevent=%p2%"
 	method		"internal"
 	filter		"profile"
 }
@@ -589,7 +589,7 @@ SteamIDCommunityFilesPage
 }
 SteamWorkshopPage
 {
-	url		"%community%/workshop/browse?appid=%p1%"
+	url		"%community%/app/%p1%/workshop/"
 	method		"internal"
 	filter		"community"
 }
@@ -631,13 +631,13 @@ CommunityMarketSellDialog
 }
 CommunityMarketBuyDialog
 {
-	url		"%community%/market/buydialog/%p1%/"
+	url		"%community%/market/buydialog/%p1%/?filter=%p2%"
 	method		"internal"
 	filter		"community"
 }
 CommunityMarketCreateBuyOrderDialog
 {
-	url		"%community%/market/buyorderdialog/%p1%/%p2%/"
+	url		"%community%/market/buyorderdialog/%p1%/%p2%/?filter=%p3%"
 	method		"internal"
 	filter		"community"
 }

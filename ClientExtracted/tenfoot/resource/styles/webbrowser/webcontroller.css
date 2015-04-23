@@ -5,6 +5,9 @@ WebController
 	transition-duration: 0.4s;
 	transition-timing-function: ease-in;
 
+	width: 100%;
+	height: 100%;
+
 	opacity: 1.0;
 	transform: translateX( 0px );
 }

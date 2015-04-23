@@ -146,7 +146,7 @@
 	z-index: 100;
 	transform: translatex( -372px );
 
-	overflow: clip scroll;
+	overflow: squish scroll;
 	background-color: #202121ff;
 
 	border-right-style: solid;
@@ -1760,7 +1760,7 @@ Button:focus .PActionMappingWrapper Image
 {
 	height: 200px;
 	white-space: normal;
-	overflow: clip scroll;
+	overflow: squish scroll;
 }
 
 #VisibilityDropDown

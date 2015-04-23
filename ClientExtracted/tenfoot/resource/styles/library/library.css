@@ -99,6 +99,8 @@
 
 }
 
+
+
 .LibraryPanel:descendantfocus .MostRecentBaseVisible .RecentApp .AppImage
 {
 	opacity: 1.0;
@@ -870,7 +872,7 @@ LibraryAppDetails .ContentsRow
 	height: 100%;
 	flow-children: down;
 	opacity: 0.0;
-	overflow: clip scroll;
+	overflow: squish scroll;
 
 	margin-right: 6px;
 	margin-bottom: 6px;
@@ -1190,6 +1192,8 @@ LibraryAchievements:focus .AchievementsBody, LibraryAchievements:descendantfocus
 
 LibraryAchievements .AchievementsSmallBody
 {
+	width: 100%;
+	height: 100%;
 	flow-children: down;
 	opacity: 0.8;
 	transition-property: opacity !immediate;
@@ -1209,7 +1213,7 @@ LibraryAchievements .AchievementsLargeBody
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	overflow: clip scroll;
+	overflow: squish scroll;
 
 	margin-right: 6px;
 	margin-bottom: 12px;
@@ -1500,7 +1504,7 @@ LibraryGuides .GuidesLargeBody
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	overflow: clip scroll;
+	overflow: squish scroll;
 
 	margin-right: 6px;
 	margin-bottom: 12px;
@@ -1735,7 +1739,7 @@ LibraryController .ControllerLargeBody
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	overflow: clip scroll;
+	overflow: squish scroll;
 
 	margin-right: 6px;
 	margin-bottom: 12px;
@@ -2010,7 +2014,7 @@ LibraryFriendsWhoPlay .FriendsWhoPlayLargeBody
 	transition-property: opacity, border, background-color, color !immediate; 
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
-	overflow: clip scroll;
+	overflow: squish scroll;
 
 	opacity: 0.0;
 	flow-children: down;
@@ -2220,6 +2224,7 @@ LibraryFriendsWhoPlay:focus .FriendsWhoPlayBody, LibraryFriendsWhoPlay:descendan
 	margin-left: 21px;
 	margin-right: 4px;
 	margin-bottom: 6px;
+	width: 100%;
 }
 
 LibraryFriendsWhoPlay AvatarImage
@@ -2305,7 +2310,7 @@ LibraryRecentNews .RecentNewsLargeBody
 	margin-right: 6px;
 	width: 100%;
 	height: 100%;
-	overflow: clip scroll;
+	overflow: squish scroll;
 	flow-children: down;
 	opacity: 0.0;
 
@@ -3162,7 +3167,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	margin: 20px 20px 0px 20px;
 	margin-left: 30px;
 	font-size: 22px;
-	font-family: basefont;
+	font-family: platformfont;
 	color: applabelsolid;
 	z-index: 1000;
 	visibility: collapse;
@@ -3986,6 +3991,9 @@ AppGridItem.FullController:focus #GridControllerSupport
 {
 	pre-transform-scale2d: 1.0;
 	background-image: url( "file://{images}/library/game_grid_shadow.png");
+	background-position: left 10px top 30px;
+	background-size: 100% 85%;
+	background-repeat: no-repeat;
 	opacity: 1.0;
 
 	z-index: 200;
@@ -4048,6 +4056,12 @@ AppGridItem.FullController:focus #GridControllerSupport
 	height: 100px;
 	z-index: 5;
 	position: 0px 30px 0px;
+}
+
+AddShortcutPanel
+{
+    width: 100%;
+    height: 100%;
 }
 
 #AddShortcutStripWrapper .GridBackground
@@ -4139,7 +4153,7 @@ DropDown
 #GamesFilterDropDownMenu
 {
 	width: 480px;
-	overflow: clip scroll;
+	overflow: squish scroll;
 	max-height: 690px;
 }
 
@@ -4193,6 +4207,8 @@ DropDown #FilterController
 DropDown #FilterGamesICanPlay
 {
 	visibility: visible;
+	width: 100%;
+	height: 100%;
 }
 
 #FilterUnblocked.ShowUnblocked,
@@ -4260,7 +4276,6 @@ DropDown Label
 
 	background-color: bgcolor;
 	background-image: url( "file://{images}/store/store_app_bg.png" );
-	opacity-mask: url( "file://{images}/bg_gradient_mask.tga" ) 1.0;
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	background-size: 1920px 1080px;
@@ -4906,7 +4921,7 @@ KeyboardShortcut Image
 	margin-top: 10px;
 	margin-left: -10px;
 	flow-children: down;
-	overflow: clip scroll;
+	overflow: squish scroll;
 	max-height: 500px;
 	width: 100%;
 	

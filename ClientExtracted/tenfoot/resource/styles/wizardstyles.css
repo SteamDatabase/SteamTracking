@@ -104,18 +104,24 @@
 
 .OOBEControllerHintTitle
 {
-	position: 985px 570px 0px;
+	position: 760px 572px 0px;
+	width: 675px;
+	transform: translateY( 40px );
+	text-align: left;
 }
 
 .OOBEControllerHintBody
 {
-	position: 750px 610px 0px;
+	position: 760px 612px 0px;
+	width: 675px;
+	text-align: left;
+	transform: translateY( 40px );
 }
 
 .WizardChildDescription
 {
 	padding-top: 50px;
-	width: 1300px;
+	width: 1350px;
 	padding-bottom: 20px;
 	font-size: 36px;
 	font-family: platformfont;
@@ -509,6 +515,7 @@ ToggleButton .WizardLabel
 .InputContainerDown.GapDown
 {
 	margin-bottom: controlgapvert;
+	width: 100%;
 }
 
 .InputContainerRight

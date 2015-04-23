@@ -815,6 +815,7 @@
  readdir$INODE64
  read$UNIX2003
  realloc
+ realpath$DARWIN_EXTSN
  r fourbppswaptable
  r Hex
  rindex

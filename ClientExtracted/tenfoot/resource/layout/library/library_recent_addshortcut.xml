@@ -7,8 +7,6 @@
 	</styles>
 
 	<LibraryRecentAddShortcutDialog class="TenfootMsgBox" onmouseactivate="ActivateCancel()" >
-		<Panel id="AddShortcutStripWrapper" tabindex="auto" selectionpos="auto">
-            <AddShortcutPanel/>
-        </Panel>
+		<AddShortcutPanel id="AddShortcutStripWrapper" tabindex="auto" selectionpos="auto"/>
 	</LibraryRecentAddShortcutDialog>
 </root>

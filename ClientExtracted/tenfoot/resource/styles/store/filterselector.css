@@ -194,6 +194,7 @@ FilterSelectorItem.SteamControllerIcon #SteamControllerIcon
 #FilterDropDownMenu FilterSelectorItem
 {
 	padding: 0px 0px;
+	width: 100%;
 }
 
 #GamesFilterDropDownMenu FilterSelectorItem.DropDownChild Label

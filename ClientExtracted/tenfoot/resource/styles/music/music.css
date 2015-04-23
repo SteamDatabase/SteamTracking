@@ -39,9 +39,10 @@
 MusicPanel
 {
 	width: 100%;
+	height: 100%;
 	vertical-align: bottom;
 	opacity: 0.0;
-	}
+}
 
 
 .MusicVisible:descendantfocus

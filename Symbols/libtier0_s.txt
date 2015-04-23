@@ -122,6 +122,7 @@
  fputs
  fputs$UNIX2003
  free
+ fwrite
  getenv
  gethostname
  getpid

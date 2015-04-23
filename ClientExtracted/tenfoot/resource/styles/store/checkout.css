@@ -52,7 +52,7 @@ CheckoutAddFundsButton Label, Button Label
 	vertical-align: center;
 
 	font-family: platformfont;
-	font-size: 28px;
+	font-size: 26px;
 	font-weight: bold;
 	transform: translatex(-5px);
 	color: detailsdatalabelfocus;
@@ -139,7 +139,7 @@ CartLineItem:descendantfocus #FinalPrice
 	vertical-align: center;
 
 	font-family: platformfont;
-	font-size: 28px;
+	font-size: 26px;
 	font-weight: bold;
 	transform: translatex(-7px);
 	color: detailsdatalabelfocus;
@@ -346,7 +346,7 @@ CheckoutController.Visible
 	width: 100%;
 	height: 1010px;
 	vertical-align: bottom;
-	background-color: black;
+	background-color: bgcolor;
 	opacity: 0.0;
 
 	transition-property: opacity;
@@ -469,6 +469,7 @@ CheckoutController.Visible
 	background-color: checkout_body_bg;
 
 	font-size: 27px;
+	width: 100%;
 	line-height: 30px;
 	color: #e4e4e4;
 }
@@ -531,7 +532,8 @@ CheckoutController.Visible
 .CheckoutStep
 {
 	width: 100%;
-	height: 948px;
+	height: 1080px;
+	transform: translateY( 132px );
 	vertical-align: bottom;
 	flow-children: down;
 	background-color: checkout_body_bg;
@@ -550,7 +552,7 @@ CheckoutController.Visible
 
 .CheckoutStep.InStoreStack
 {
-	transform: translate3d( 0px, -60px, 0px );
+	transform: translate3d( 0px, 70px, 0px );
 	opacity: 1.0;
 	desaturation: 0.0;
 	box-shadow: #000000aa -2px -2px 4px 4px;
@@ -558,7 +560,7 @@ CheckoutController.Visible
 
 .CheckoutStep:descendantfocus
 {
-	transform: translate3d( 0px, 0px, 0px );
+	transform: translate3d( 0px, 132px, 0px );
 	opacity: 1.0;
 	desaturation: 0.0;
 	wash-color: none;
@@ -653,6 +655,7 @@ Button:focus StorePrice #FinalPrice
 #LineItems
 {
 	flow-children: down;
+	width: 100%;
 	overflow: squish scroll;
 	height: fill-parent-flow( 1.0 );
 	padding-right: 12px;
@@ -662,7 +665,7 @@ CartLineItem
 {
 	width: 100%;
 	min-height: 84px;
-	font-size: 28px;
+	font-size: 26px;
 	flow-children: down;
 	padding: 8px 0px 0px 0px;
 	margin-left: 12px;
@@ -939,14 +942,21 @@ CheckoutGiftRecipient .CheckoutBodyRightColumn
 .CheckoutGiftRegionWarningPanel
 {
 	margin-bottom: 18px;
+	width: 100%;
 	background-color: gradient( linear, 100% 0%, 0% 0%, color-stop( 0.0, #b5901eff ), color-stop( 1.0, #a76819ff ) );
 	padding: 8px 7px 8px 7px;
 	flow-children: right;
 }
 
+.CheckoutGiftRegionWarningText
+{
+	width: 100%;
+}
+
 .CheckoutReviewGiftRegionWarningText
 {
 	font-size: 16px;
+	width: 100%;
 }
 
 .CartItemNamePriceRow .CheckoutGiftRegionWarningIcon
@@ -977,6 +987,7 @@ CheckoutGiftRecipient .CheckoutBodyRightColumn
 .CheckoutGiftReceiptOptionWrapper
 {
 	flow-children: down;
+	width: 100%;
 }
 
 .HowToSendTitle
@@ -1051,10 +1062,11 @@ CheckoutGiftRecipient TextEntry
 #SendToFriendsList
 {
 	flow-children: down;
+	width: 100%;
 	overflow: squish scroll;
 	padding-right: 20px;
 	padding-left: 10px;
-	
+
 	opacity: 1.0;
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
@@ -1254,7 +1266,7 @@ CheckoutPaymentMethodFields
 #PaymentMethodDropDownMenu
 {
 	width: 400px;
-	height: 324px;
+	height: 294px;
 	overflow: squish scroll;
 }
 
@@ -1511,6 +1523,8 @@ CheckoutReview .CheckoutBodyRightColumn
 #CheckoutReviewLineItems
 {
 	flow-children: down;
+	width: 100%;
+	height: fill-parent-flow( 1.0 );
 }
 
 CheckoutReviewLineItem

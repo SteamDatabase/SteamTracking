@@ -126,8 +126,6 @@
  b (anonymous namespace)::CMsgMouseWheel_reflection_
  b (anonymous namespace)::CMsgNeedsPaint_descriptor_
  b (anonymous namespace)::CMsgNeedsPaint_reflection_
- b (anonymous namespace)::CMsgNeedsPaintResponse_descriptor_
- b (anonymous namespace)::CMsgNeedsPaintResponse_reflection_
  b (anonymous namespace)::CMsgNodeHasFocus_descriptor_
  b (anonymous namespace)::CMsgNodeHasFocus_reflection_
  b (anonymous namespace)::CMsgOpenDevTools_descriptor_
@@ -178,6 +176,8 @@
  b (anonymous namespace)::CMsgSetHorizontalScroll_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
+ b (anonymous namespace)::CMsgSetSharedPaintBuffers_descriptor_
+ b (anonymous namespace)::CMsgSetSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgSetTargetFrameRate_descriptor_
  b (anonymous namespace)::CMsgSetTargetFrameRate_reflection_
  b (anonymous namespace)::CMsgSetVerticalScroll_descriptor_
@@ -334,7 +334,6 @@
  B CMsgMouseUp::default_instance_
  B CMsgMouseWheel::default_instance_
  B CMsgNeedsPaint::default_instance_
- B CMsgNeedsPaintResponse::default_instance_
  B CMsgNodeHasFocus::_default_elementtagname_
  B CMsgNodeHasFocus::_default_input_type_
  B CMsgNodeHasFocus::default_instance_
@@ -380,6 +379,7 @@
  B CMsgSetHorizontalScroll::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHTMLTitle::_default_title_
+ B CMsgSetSharedPaintBuffers::default_instance_
  B CMsgSetTargetFrameRate::default_instance_
  B CMsgSetVerticalScroll::default_instance_
  B CMsgSetZoomLevel::default_instance_
@@ -2287,7 +2287,6 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseMove>
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseUp>
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseWheel>
- D typeinfo for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgOpenDevTools>
  D typeinfo for CHTMLProtoBufMsg<CMsgPaste>
  D typeinfo for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -2357,7 +2356,6 @@
  D typeinfo for CMsgMouseUp
  D typeinfo for CMsgMouseWheel
  D typeinfo for CMsgNeedsPaint
- D typeinfo for CMsgNeedsPaintResponse
  D typeinfo for CMsgNodeHasFocus
  D typeinfo for CMsgOpenDevTools
  D typeinfo for CMsgOpenNewTab
@@ -2383,6 +2381,7 @@
  D typeinfo for CMsgSetFocus
  D typeinfo for CMsgSetHorizontalScroll
  D typeinfo for CMsgSetHTMLTitle
+ D typeinfo for CMsgSetSharedPaintBuffers
  D typeinfo for CMsgSetTargetFrameRate
  D typeinfo for CMsgSetVerticalScroll
  D typeinfo for CMsgSetZoomLevel
@@ -3519,7 +3518,6 @@
  D vtable for CHTMLProtoBufMsg<CMsgMouseMove>
  D vtable for CHTMLProtoBufMsg<CMsgMouseUp>
  D vtable for CHTMLProtoBufMsg<CMsgMouseWheel>
- D vtable for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D vtable for CHTMLProtoBufMsg<CMsgOpenDevTools>
  D vtable for CHTMLProtoBufMsg<CMsgPaste>
  D vtable for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -3589,7 +3587,6 @@
  D vtable for CMsgMouseUp
  D vtable for CMsgMouseWheel
  D vtable for CMsgNeedsPaint
- D vtable for CMsgNeedsPaintResponse
  D vtable for CMsgNodeHasFocus
  D vtable for CMsgOpenDevTools
  D vtable for CMsgOpenNewTab
@@ -3615,6 +3612,7 @@
  D vtable for CMsgSetFocus
  D vtable for CMsgSetHorizontalScroll
  D vtable for CMsgSetHTMLTitle
+ D vtable for CMsgSetSharedPaintBuffers
  D vtable for CMsgSetTargetFrameRate
  D vtable for CMsgSetVerticalScroll
  D vtable for CMsgSetZoomLevel
@@ -4264,7 +4262,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseWheel_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaint_offsets_
- r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaintResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNodeHasFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenDevTools_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenNewTab_offsets_
@@ -4290,6 +4287,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetTargetFrameRate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetVerticalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetZoomLevel_offsets_
@@ -4582,7 +4580,6 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseMove>
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseUp>
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseWheel>
- R typeinfo name for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgOpenDevTools>
  R typeinfo name for CHTMLProtoBufMsg<CMsgPaste>
  R typeinfo name for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -4652,7 +4649,6 @@
  R typeinfo name for CMsgMouseUp
  R typeinfo name for CMsgMouseWheel
  R typeinfo name for CMsgNeedsPaint
- R typeinfo name for CMsgNeedsPaintResponse
  R typeinfo name for CMsgNodeHasFocus
  R typeinfo name for CMsgOpenDevTools
  R typeinfo name for CMsgOpenNewTab
@@ -4678,6 +4674,7 @@
  R typeinfo name for CMsgSetFocus
  R typeinfo name for CMsgSetHorizontalScroll
  R typeinfo name for CMsgSetHTMLTitle
+ R typeinfo name for CMsgSetSharedPaintBuffers
  R typeinfo name for CMsgSetTargetFrameRate
  R typeinfo name for CMsgSetVerticalScroll
  R typeinfo name for CMsgSetZoomLevel
@@ -4867,7 +4864,6 @@
  R typeinfo name for CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >
  R typeinfo name for CUtlLinkedList<CUtlDict<bool, int>*, int>
  R typeinfo name for CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>
- R typeinfo name for CUtlLinkedList<float, int>
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<vgui::DialogManager<CChatIntroductionDialog, CSteamID>::DialogItem_t, int>
  R typeinfo name for CUtlLinkedList<vgui::DialogManager<CChatRoomDlg, CSteamID>::DialogItem_t, int>
@@ -4924,7 +4920,6 @@
  R typeinfo name for CUtlRBTree<vgui::ListPanel::IndexItem_t, int, bool (*)(vgui::ListPanel::IndexItem_t const&, vgui::ListPanel::IndexItem_t const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >
- R typeinfo name for CUtlVector<Color, CUtlMemory<Color> >
  R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
@@ -6435,6 +6430,7 @@
  T CChatTitlePanel::PerformLayout()
  T CChatTitlePanel::SetChatName(char const*)
  T CChatTitlePanel::UpdateContents()
+ T CChromePaintBufferClient::GetLockedReadPtr() const
  T CClanEventDialog::~CClanEventDialog()
  T CClanEventDialog::CClanEventDialog(vgui::Panel*, CSteamID)
  T CClanEventDialog::ChainToAnimationMap()
@@ -6507,6 +6503,7 @@
  T CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::CCopyableUtlVector(CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> > const&)
  T CCrossProcessSharedMemory::Base() const
  T CCrossProcessSharedMemory::BInit(void const*, void const*, unsigned int, bool)
+ T CCrossProcessSharedMemory::BInitWriteable(void const*, void const*, unsigned int, bool)
  T CCrossProcessSharedMemory::~CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::Close()
@@ -7473,8 +7470,6 @@
  T CHTMLProtoBufMsg<CMsgMouseUp>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgMouseWheel>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgMouseWheel>::CHTMLProtoBufMsg(EHTMLCommands)
- T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::~CHTMLProtoBufMsg()
- T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgOpenDevTools>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgOpenDevTools>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgPaste>::~CHTMLProtoBufMsg()
@@ -8178,17 +8173,6 @@
  T CMsgNeedsPaint::IsInitialized() const
  T CMsgNeedsPaint::MergeFrom(CMsgNeedsPaint const&)
  T CMsgNeedsPaint::New() const
- T CMsgNeedsPaintResponse::ByteSize() const
- T CMsgNeedsPaintResponse::Clear()
- T CMsgNeedsPaintResponse::~CMsgNeedsPaintResponse()
- T CMsgNeedsPaintResponse::CMsgNeedsPaintResponse()
- T CMsgNeedsPaintResponse::GetCachedSize() const
- T CMsgNeedsPaintResponse::GetMetadata() const
- T CMsgNeedsPaintResponse::IsInitialized() const
- T CMsgNeedsPaintResponse::MergeFrom(CMsgNeedsPaintResponse const&)
- T CMsgNeedsPaintResponse::New() const
- T CMsgNeedsPaintResponse::SerializeWithCachedSizesToArray(unsigned char*) const
- T CMsgNeedsPaintResponse::SetCachedSize(int) const
  T CMsgNeedsPaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgNeedsPaint::SetCachedSize(int) const
  T CMsgNodeHasFocus::ByteSize() const
@@ -8477,6 +8461,17 @@
  T CMsgSetHTMLTitle::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetHTMLTitle::SetCachedSize(int) const
  T CMsgSetHTMLTitle::SharedDtor()
+ T CMsgSetSharedPaintBuffers::ByteSize() const
+ T CMsgSetSharedPaintBuffers::Clear()
+ T CMsgSetSharedPaintBuffers::~CMsgSetSharedPaintBuffers()
+ T CMsgSetSharedPaintBuffers::CMsgSetSharedPaintBuffers()
+ T CMsgSetSharedPaintBuffers::GetCachedSize() const
+ T CMsgSetSharedPaintBuffers::GetMetadata() const
+ T CMsgSetSharedPaintBuffers::IsInitialized() const
+ T CMsgSetSharedPaintBuffers::MergeFrom(CMsgSetSharedPaintBuffers const&)
+ T CMsgSetSharedPaintBuffers::New() const
+ T CMsgSetSharedPaintBuffers::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetSharedPaintBuffers::SetCachedSize(int) const
  T CMsgSetTargetFrameRate::ByteSize() const
  T CMsgSetTargetFrameRate::Clear()
  T CMsgSetTargetFrameRate::~CMsgSetTargetFrameRate()
@@ -9931,8 +9926,6 @@
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::RemoveAll()
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Unlink(int)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Validate(CValidator&, char const*)
- T CUtlLinkedList<float, int>::RemoveAll()
- T CUtlLinkedList<float, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertBefore(int, int const&)
@@ -10317,8 +10310,6 @@
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::Validate(CValidator&, char const*)
- T CUtlVector<Color, CUtlMemory<Color> >::~CUtlVector()
- T CUtlVector<Color, CUtlMemory<Color> >::Validate(CValidator&, char const*)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
@@ -10875,6 +10866,7 @@
  t h2v2_upsample
  ThreadGetCurrentId
  ThreadGetCurrentRunningRef
+ ThreadInterlockedCompareExchange
  ThreadInterlockedDecrement
  ThreadIsThreadRunning
  ThreadSleep
@@ -10916,6 +10908,7 @@
  T HTMLPopup::OnFinishRequest()
  T HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
  T HTMLPopup::OnSecurityStatus(KeyValues*)
+ T HTMLPopup::OnSetSecurityStatus(bool, bool, bool, char const*)
  T HTMLPopup::OnStartRequest(KeyValues*)
  T HTMLPopup::OnTick()
  T HTMLPopup::OnURLChanged(KeyValues*)
@@ -11445,6 +11438,7 @@
  T non-virtual thunk to vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
  T non-virtual thunk to vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T non-virtual thunk to vgui::HTML::BrowserSetIndex(int)
+ T non-virtual thunk to vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
  T non-virtual thunk to vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T non-virtual thunk to vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
  T non-virtual thunk to vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)
@@ -12115,7 +12109,6 @@
  t __tcf_3
  t __tcf_4
  T TSLNodeTemplate_t<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::operator delete(void*)
- t unsigned char const* HTML_GetTextureMemory<CMsgNeedsPaint>(CCrossProcessSharedMemory&, CMsgNeedsPaint const*, unsigned int)
  T unsigned int CryptoPP::BitPrecision<unsigned int>(unsigned int const&)
  T unsigned int CryptoPP::BitPrecision<unsigned long>(unsigned long const&)
  T unsigned int CryptoPP::BytePrecision<unsigned int>(unsigned int const&)
@@ -12911,10 +12904,9 @@
  T vgui::GraphPanel::GetPanelClassName()
  T vgui::GraphPanel::GetPanelTopClassName() const
  T vgui::GraphPanel::~GraphPanel()
- T vgui::GraphPanel::GraphPanel(vgui::Panel*, char const*, int)
+ T vgui::GraphPanel::GraphPanel(vgui::Panel*, char const*)
  T vgui::GraphPanel::KB_ChainToMap()
  T vgui::GraphPanel::Paint()
- T vgui::GraphPanel::PerformLayout()
  T vgui::GraphPanel::Validate(CValidator&, char const*)
  T vgui::HotKeyInfo::HotKeyInfo(char const*)
  T vgui::HotKeyInfo::HotKeyInfo(vgui::KeyCode, int)
@@ -12954,6 +12946,7 @@
  T vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
  T vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T vgui::HTML::BrowserSetIndex(int)
+ T vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
  T vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
  T vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)

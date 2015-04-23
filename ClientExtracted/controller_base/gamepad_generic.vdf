@@ -41,7 +41,7 @@
 	"group"
 	{
 		"id" "2"
-		"mode" "right_joystick"
+		"mode" "joystick_camera"
 
 		"bindings"
 		{
@@ -58,7 +58,7 @@
 	{
 		"id" "3"
 
-		"mode" "left_joystick"
+		"mode" "joystick_move"
 
 		"bindings"
 		{

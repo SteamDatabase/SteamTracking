@@ -65,39 +65,59 @@
 					<Slider id="ButtonDistanceFourButtons" direction="horizontal" />
 				</Panel>
 
-				<!-- Joystick Mode -->
-				<Panel class="FieldWrapper JoystickMode">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
-					<DropDown id="OutputJoystick" />
-				</Panel>
-				<Panel class="FieldWrapper JoystickMode">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
-					<ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClick" />
-				</Panel>
-				<Panel class="FieldWrapper JoystickMode">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
-					<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingJoystick" />
-				</Panel>
+        <!-- Joystick Move Mode -->
+        <Panel class="FieldWrapper JoystickMoveMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
+          <DropDown id="OutputJoystick" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClick" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingJoystick" />
+        </Panel>
 
-				<!-- Joystick Mode Advanced -->
-				<Panel class="FieldWrapper JoystickMode Advanced">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
-					<DropDown id="AdaptiveCentering" />
-				</Panel>
-				<Panel class="FieldWrapper JoystickMode Advanced">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_VirtualCapSize" />
-					<Slider id="VirtualCapSize" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper JoystickMode Advanced">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZone" />
-					<Slider id="AntiDeadZone" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper JoystickMode Advanced">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZoneBuffer" />
-					<Slider id="AntiDeadZoneBuffer" direction="horizontal" />
-				</Panel>
+        <!-- Joystick Move Mode Advanced -->
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
+          <DropDown id="AdaptiveCentering" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_VirtualCapSize" />
+          <Slider id="VirtualCapSize" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_VirtualStickThrow" />
+          <Slider id="VirtualStickThrow" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZone" />
+          <Slider id="AntiDeadZone" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZoneBuffer" />
+          <Slider id="AntiDeadZoneBuffer" direction="horizontal" />
+        </Panel>
 
-				<!-- Mouse Mode -->
+        <!-- Joystick Camera Mode -->
+        <Panel class="FieldWrapper JoystickCameraMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+          <DropDown id="HapticIntensityJoystickCameraMode" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickCameraMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
+          <DropDown id="CurveExponentCameraMode" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickCameraMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_SwipeDuration" />
+          <DropDown id="SwipeDurationCameraMode" />
+        </Panel>
+
+        <!-- Joystick Camera Mode Advanced -->
+
+        <!-- Mouse Mode -->
 				<Panel class="FieldWrapper MouseMode">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Trackball" />
 					<DropDown id="Trackball" />
@@ -201,28 +221,33 @@
 					</Panel>
 				</Panel>
 
-				<!-- Joystick Mode -->
-				<Panel id="CenterImageJoystick" class="CenterImage JoystickMode" />
+        <!-- Joystick Move Mode -->
+        <Panel id="CenterImageJoystick" class="CenterImage JoystickMoveMode" />
 
-				<!-- Joystick Mode Advanced -->
-				<Panel class="FieldWrapper JoystickMode Advanced">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
-					<DropDown id="CurveExponent" />
-				</Panel>
-				<Panel class="FieldWrapper JoystickMode Advanced">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneInnerRadius" />
-					<Slider id="DeadZoneInnerRadius" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper JoystickMode Advanced">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneOuterRadius" />
-					<Slider id="DeadZoneOuterRadius" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper JoystickMode Advanced">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneShape" />
-					<DropDown id="DeadZoneShape" />
-				</Panel>
+        <!-- Joystick Move Mode Advanced -->
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
+          <DropDown id="CurveExponent" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneInnerRadius" />
+          <Slider id="DeadZoneInnerRadius" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneOuterRadius" />
+          <Slider id="DeadZoneOuterRadius" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneShape" />
+          <DropDown id="DeadZoneShape" />
+        </Panel>
 
-				<!-- Mouse Mode -->
+        <!-- Joystick Camera Mode -->
+        <Panel id="CenterImageJoystick" class="CenterImage JoystickCameraMode" />
+
+        <!-- Joystick Camera Mode Advanced -->
+
+        <!-- Mouse Mode -->
 				<Panel id="CenterImageMouse" class="CenterImage MouseMode" >
 					<Panel id="CenterImageMouseRotation" class ="CenterImage MouseMode" />
 				</Panel>
@@ -321,23 +346,35 @@
 						<DropDown id="RequiresClickFourButtons" />
 					</Panel>
 
-					<!-- Joystick Mode -->
-					<Panel class="FieldWrapper JoystickMode">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
-						<DropDown id="HapticIntensityJoystick" />
-					</Panel>
+          <!-- Joystick Move Mode -->
+          <Panel class="FieldWrapper JoystickMoveMode">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+            <DropDown id="HapticIntensityJoystick" />
+          </Panel>
 
-					<!-- Joystick Mode Advanced -->
-					<Panel class="FieldWrapper JoystickMode Advanced">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
-						<Slider id="EdgeBindingRadiusJoystick" direction="horizontal" />
-					</Panel>
-					<Panel class="FieldWrapper JoystickMode Advanced">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
-						<DropDown id="EdgeBindingInvertJoystick" />
-					</Panel>
+          <!-- Joystick Move Mode Advanced -->
+          <Panel class="FieldWrapper JoystickMoveMode Advanced">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
+            <Slider id="EdgeBindingRadiusJoystick" direction="horizontal" />
+          </Panel>
+          <Panel class="FieldWrapper JoystickMoveMode Advanced">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
+            <DropDown id="EdgeBindingInvertJoystick" />
+          </Panel>
 
-					<!-- Mouse Mode -->
+          <!-- Joystick Camera Mode -->
+          <Panel class="FieldWrapper JoystickCameraMode">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
+            <DropDown id="OutputJoystickCameraMode" />
+          </Panel>
+          <Panel class="FieldWrapper JoystickCameraMode">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
+            <ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClickCameraMode" />
+          </Panel>
+
+          <!-- Joystick Camera Mode Advanced -->
+
+          <!-- Mouse Mode -->
 					<Panel class="FieldWrapper MouseMode">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityAbsMouse" />

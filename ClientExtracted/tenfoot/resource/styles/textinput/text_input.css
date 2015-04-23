@@ -757,7 +757,7 @@ TextInputDaisy
 	height: 100%;
 	min-height: 94px;
 	height: fit-children;
-	overflow: clip scroll;
+	overflow: squish scroll;
 	white-space: normal;
 
 	padding-left: 8px;

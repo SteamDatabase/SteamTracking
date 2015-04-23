@@ -86,6 +86,7 @@ LoginUser:descendantfocus .LoginHidden
 	flow-children: down;
 	height: fit-children;
 	margin-top: 40px;
+	width: 100%;
 }
 
 .Bezel
@@ -231,11 +232,13 @@ LoginUser:descendantfocus .LoginHidden
 	flow-children: down;
 	height: fit-children;
 	vertical-align: bottom;
+	width: 100%;
 }
 
 #MessageAreaLabel
 {
 	font-size: 34px;
+	width: 100%;
 	font-family: platformfont;
 	color: #bcc0c3;
 	visibility: collapse;

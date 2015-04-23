@@ -26,6 +26,12 @@ BroadcastViewer.Fullscreen
 	desaturation: 0.0;
 }
 
+#WebContent
+{
+	width: 100%;
+	height: 100%;
+}
+
 #LoadStatus
 {
 	color: white;
@@ -73,7 +79,7 @@ BroadcastViewer.LoadingError .WebLoadThrobber
 	flow-children: down;
 	width: 100%;
 	height: fill-parent-flow( 1.0 );
-	overflow: clip scroll;
+	overflow: squish scroll;
 
 	background-color: #1a578040;
 	padding: 4px;

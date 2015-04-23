@@ -129,8 +129,6 @@
  b (anonymous namespace)::CMsgMouseWheel_reflection_
  b (anonymous namespace)::CMsgNeedsPaint_descriptor_
  b (anonymous namespace)::CMsgNeedsPaint_reflection_
- b (anonymous namespace)::CMsgNeedsPaintResponse_descriptor_
- b (anonymous namespace)::CMsgNeedsPaintResponse_reflection_
  b (anonymous namespace)::CMsgNodeHasFocus_descriptor_
  b (anonymous namespace)::CMsgNodeHasFocus_reflection_
  b (anonymous namespace)::CMsgOpenDevTools_descriptor_
@@ -181,6 +179,8 @@
  b (anonymous namespace)::CMsgSetHorizontalScroll_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
+ b (anonymous namespace)::CMsgSetSharedPaintBuffers_descriptor_
+ b (anonymous namespace)::CMsgSetSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgSetTargetFrameRate_descriptor_
  b (anonymous namespace)::CMsgSetTargetFrameRate_reflection_
  b (anonymous namespace)::CMsgSetVerticalScroll_descriptor_
@@ -372,7 +372,6 @@
  B CMsgMouseUp::default_instance_
  B CMsgMouseWheel::default_instance_
  B CMsgNeedsPaint::default_instance_
- B CMsgNeedsPaintResponse::default_instance_
  B CMsgNodeHasFocus::_default_elementtagname_
  B CMsgNodeHasFocus::_default_input_type_
  B CMsgNodeHasFocus::default_instance_
@@ -418,6 +417,7 @@
  B CMsgSetHorizontalScroll::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHTMLTitle::_default_title_
+ B CMsgSetSharedPaintBuffers::default_instance_
  B CMsgSetTargetFrameRate::default_instance_
  B CMsgSetVerticalScroll::default_instance_
  B CMsgSetZoomLevel::default_instance_
@@ -2338,6 +2338,7 @@
  D typeinfo for CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
+ D typeinfo for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>
@@ -2448,7 +2449,6 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseMove>
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseUp>
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseWheel>
- D typeinfo for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgOpenDevTools>
  D typeinfo for CHTMLProtoBufMsg<CMsgPaste>
  D typeinfo for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -2467,6 +2467,7 @@
  D typeinfo for CItemImageManager
  D typeinfo for CMainOverlay
  D typeinfo for CMicroTxnAuthorizeDialog
+ D typeinfo for CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgBrowserCreate
  D typeinfo for CMsgBrowserCreateResponse
@@ -2519,7 +2520,6 @@
  D typeinfo for CMsgMouseUp
  D typeinfo for CMsgMouseWheel
  D typeinfo for CMsgNeedsPaint
- D typeinfo for CMsgNeedsPaintResponse
  D typeinfo for CMsgNodeHasFocus
  D typeinfo for CMsgOpenDevTools
  D typeinfo for CMsgOpenNewTab
@@ -2545,6 +2545,7 @@
  D typeinfo for CMsgSetFocus
  D typeinfo for CMsgSetHorizontalScroll
  D typeinfo for CMsgSetHTMLTitle
+ D typeinfo for CMsgSetSharedPaintBuffers
  D typeinfo for CMsgSetTargetFrameRate
  D typeinfo for CMsgSetVerticalScroll
  D typeinfo for CMsgSetZoomLevel
@@ -3539,6 +3540,7 @@
  D vtable for CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
+ D vtable for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
  D vtable for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  D vtable for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
  D vtable for CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>
@@ -3648,7 +3650,6 @@
  D vtable for CHTMLProtoBufMsg<CMsgMouseMove>
  D vtable for CHTMLProtoBufMsg<CMsgMouseUp>
  D vtable for CHTMLProtoBufMsg<CMsgMouseWheel>
- D vtable for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D vtable for CHTMLProtoBufMsg<CMsgOpenDevTools>
  D vtable for CHTMLProtoBufMsg<CMsgPaste>
  D vtable for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -3667,6 +3668,7 @@
  D vtable for CItemImageManager
  D vtable for CMainOverlay
  D vtable for CMicroTxnAuthorizeDialog
+ D vtable for CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss
  D vtable for CMsgAddHeader
  D vtable for CMsgBrowserCreate
  D vtable for CMsgBrowserCreateResponse
@@ -3719,7 +3721,6 @@
  D vtable for CMsgMouseUp
  D vtable for CMsgMouseWheel
  D vtable for CMsgNeedsPaint
- D vtable for CMsgNeedsPaintResponse
  D vtable for CMsgNodeHasFocus
  D vtable for CMsgOpenDevTools
  D vtable for CMsgOpenNewTab
@@ -3745,6 +3746,7 @@
  D vtable for CMsgSetFocus
  D vtable for CMsgSetHorizontalScroll
  D vtable for CMsgSetHTMLTitle
+ D vtable for CMsgSetSharedPaintBuffers
  D vtable for CMsgSetTargetFrameRate
  D vtable for CMsgSetVerticalScroll
  D vtable for CMsgSetZoomLevel
@@ -4322,6 +4324,7 @@
  localeconv
  localtime
  Log
+ log10
  longjmp
  lround
  lstat$INODE64
@@ -4533,7 +4536,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseWheel_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaint_offsets_
- r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaintResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNodeHasFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenDevTools_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenNewTab_offsets_
@@ -4559,6 +4561,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetTargetFrameRate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetVerticalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetZoomLevel_offsets_
@@ -4668,6 +4671,7 @@
  R typeinfo name for CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
+ R typeinfo name for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>
@@ -4778,7 +4782,6 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseMove>
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseUp>
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseWheel>
- R typeinfo name for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgOpenDevTools>
  R typeinfo name for CHTMLProtoBufMsg<CMsgPaste>
  R typeinfo name for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -4797,6 +4800,7 @@
  R typeinfo name for CItemImageManager
  R typeinfo name for CMainOverlay
  R typeinfo name for CMicroTxnAuthorizeDialog
+ R typeinfo name for CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgBrowserCreate
  R typeinfo name for CMsgBrowserCreateResponse
@@ -4849,7 +4853,6 @@
  R typeinfo name for CMsgMouseUp
  R typeinfo name for CMsgMouseWheel
  R typeinfo name for CMsgNeedsPaint
- R typeinfo name for CMsgNeedsPaintResponse
  R typeinfo name for CMsgNodeHasFocus
  R typeinfo name for CMsgOpenDevTools
  R typeinfo name for CMsgOpenNewTab
@@ -4875,6 +4878,7 @@
  R typeinfo name for CMsgSetFocus
  R typeinfo name for CMsgSetHorizontalScroll
  R typeinfo name for CMsgSetHTMLTitle
+ R typeinfo name for CMsgSetSharedPaintBuffers
  R typeinfo name for CMsgSetTargetFrameRate
  R typeinfo name for CMsgSetVerticalScroll
  R typeinfo name for CMsgSetZoomLevel
@@ -5093,7 +5097,6 @@
  R typeinfo name for CUtlLinkedList<BrowserPosition_t, int>
  R typeinfo name for CUtlLinkedList<CUtlDict<bool, int>*, int>
  R typeinfo name for CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>
- R typeinfo name for CUtlLinkedList<float, int>
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<vgui::GraphPanel::Sample_t, int>
  R typeinfo name for CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>
@@ -5134,7 +5137,6 @@
  R typeinfo name for CUtlVector<CMusicPage_Details_Album*, CUtlMemory<CMusicPage_Details_Album*> >
  R typeinfo name for CUtlVector<CMusicPage_Details_Content::PlaylistData_t, CUtlMemory<CMusicPage_Details_Content::PlaylistData_t> >
  R typeinfo name for CUtlVector<CMusicPage_Details_Playlist*, CUtlMemory<CMusicPage_Details_Playlist*> >
- R typeinfo name for CUtlVector<Color, CUtlMemory<Color> >
  R typeinfo name for CUtlVector<CScreenshotImageClickPanel*, CUtlMemory<CScreenshotImageClickPanel*> >
  R typeinfo name for CUtlVector<CTrackItemPanel*, CUtlMemory<CTrackItemPanel*> >
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
@@ -6143,6 +6145,12 @@
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*, bool, unsigned long long)
+ T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::~CCallback()
+ T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::CCallback(CMicroTxnAuthorizeDialog*, void (CMicroTxnAuthorizeDialog::*)(MicroTxnAuthDismissCallback_t*))
+ T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::GetCallbackSizeBytes()
+ T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Register(CMicroTxnAuthorizeDialog*, void (CMicroTxnAuthorizeDialog::*)(MicroTxnAuthDismissCallback_t*))
+ T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Run(void*)
+ T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Run(void*, bool, unsigned long long)
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::CCallback(CMusicPage_Details_Album*, void (CMusicPage_Details_Album::*)(AlbumCoverLoaded_t*))
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::GetCallbackSizeBytes()
@@ -6588,6 +6596,7 @@
  T CCallResult<CSettingsSubFriends, SetPersonaNameResponse_t>::Run(void*)
  T CCallResult<CSettingsSubFriends, SetPersonaNameResponse_t>::Run(void*, bool, unsigned long long)
  T CCallResult<CSettingsSubFriends, SetPersonaNameResponse_t>::Set(unsigned long long, CSettingsSubFriends*, void (CSettingsSubFriends::*)(SetPersonaNameResponse_t*, bool))
+ T CChromePaintBufferClient::GetLockedReadPtr() const
  T CClassMemoryPool<PanelAnimationMap>::Alloc()
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CColorProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -6608,6 +6617,7 @@
  T CCookie::SharedDtor()
  T CCrossProcessSharedMemory::Base() const
  T CCrossProcessSharedMemory::BInit(void const*, void const*, unsigned int, bool)
+ T CCrossProcessSharedMemory::BInitWriteable(void const*, void const*, unsigned int, bool)
  T CCrossProcessSharedMemory::~CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::Close()
@@ -6765,8 +6775,6 @@
  T CHTMLProtoBufMsg<CMsgMouseUp>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgMouseWheel>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgMouseWheel>::CHTMLProtoBufMsg(EHTMLCommands)
- T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::~CHTMLProtoBufMsg()
- T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgOpenDevTools>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgOpenDevTools>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgPaste>::~CHTMLProtoBufMsg()
@@ -6923,6 +6931,8 @@
  T CMicroTxnAuthorizeDialog::BLoadTransaction()
  T CMicroTxnAuthorizeDialog::BUpdateWalletAmount()
  T CMicroTxnAuthorizeDialog::CancelTransaction()
+ T CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss::Run(void*)
+ T CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss::Run(void*, bool, unsigned long long)
  T CMicroTxnAuthorizeDialog::ChainToAnimationMap()
  T CMicroTxnAuthorizeDialog::ChainToMap()
  T CMicroTxnAuthorizeDialog::CloseBrowser()
@@ -6936,6 +6946,7 @@
  T CMicroTxnAuthorizeDialog::GetPanelClassName()
  T CMicroTxnAuthorizeDialog::GetPanelTopClassName() const
  T CMicroTxnAuthorizeDialog::KB_ChainToMap()
+ T CMicroTxnAuthorizeDialog::OnAuthDismiss(MicroTxnAuthDismissCallback_t*)
  T CMicroTxnAuthorizeDialog::OnAuthorizeCompleted(MicroTxnAuthResponse_t*, bool)
  T CMicroTxnAuthorizeDialog::OnAuthorizeTransaction()
  T CMicroTxnAuthorizeDialog::OnClose()
@@ -7530,17 +7541,6 @@
  T CMsgNeedsPaint::IsInitialized() const
  T CMsgNeedsPaint::MergeFrom(CMsgNeedsPaint const&)
  T CMsgNeedsPaint::New() const
- T CMsgNeedsPaintResponse::ByteSize() const
- T CMsgNeedsPaintResponse::Clear()
- T CMsgNeedsPaintResponse::~CMsgNeedsPaintResponse()
- T CMsgNeedsPaintResponse::CMsgNeedsPaintResponse()
- T CMsgNeedsPaintResponse::GetCachedSize() const
- T CMsgNeedsPaintResponse::GetMetadata() const
- T CMsgNeedsPaintResponse::IsInitialized() const
- T CMsgNeedsPaintResponse::MergeFrom(CMsgNeedsPaintResponse const&)
- T CMsgNeedsPaintResponse::New() const
- T CMsgNeedsPaintResponse::SerializeWithCachedSizesToArray(unsigned char*) const
- T CMsgNeedsPaintResponse::SetCachedSize(int) const
  T CMsgNeedsPaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgNeedsPaint::SetCachedSize(int) const
  T CMsgNodeHasFocus::ByteSize() const
@@ -7829,6 +7829,17 @@
  T CMsgSetHTMLTitle::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetHTMLTitle::SetCachedSize(int) const
  T CMsgSetHTMLTitle::SharedDtor()
+ T CMsgSetSharedPaintBuffers::ByteSize() const
+ T CMsgSetSharedPaintBuffers::Clear()
+ T CMsgSetSharedPaintBuffers::~CMsgSetSharedPaintBuffers()
+ T CMsgSetSharedPaintBuffers::CMsgSetSharedPaintBuffers()
+ T CMsgSetSharedPaintBuffers::GetCachedSize() const
+ T CMsgSetSharedPaintBuffers::GetMetadata() const
+ T CMsgSetSharedPaintBuffers::IsInitialized() const
+ T CMsgSetSharedPaintBuffers::MergeFrom(CMsgSetSharedPaintBuffers const&)
+ T CMsgSetSharedPaintBuffers::New() const
+ T CMsgSetSharedPaintBuffers::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetSharedPaintBuffers::SetCachedSize(int) const
  T CMsgSetTargetFrameRate::ByteSize() const
  T CMsgSetTargetFrameRate::Clear()
  T CMsgSetTargetFrameRate::~CMsgSetTargetFrameRate()
@@ -8903,6 +8914,7 @@
  T COverlayWebBrowser::OnParentalLockChanged(ParentalLockChanged_t*)
  T COverlayWebBrowser::OnRunStoreJavascript(KeyValues*)
  T COverlayWebBrowser::OnSecurityStatus(KeyValues*)
+ T COverlayWebBrowser::OnSetSecurityStatus(bool, bool, bool, char const*)
  T COverlayWebBrowser::OnSetStatusText(char const*)
  T COverlayWebBrowser::OnTick()
  T COverlayWebBrowser::OnURLChanged(KeyValues*)
@@ -9585,9 +9597,9 @@
  T CScreenshotNotification::GetPanelTopClassName() const
  T CScreenshotNotification::KB_ChainToMap()
  T CScreenshotNotification::PerformLayout()
+ T CScreenshotThread::BGetScreenshot(CUtlBuffer*, unsigned int*, unsigned int*)
  T CScreenshotThread::~CScreenshotThread()
  T CScreenshotThread::CScreenshotThread(CSharedMemStream*, unsigned int, CGameID)
- T CScreenshotThread::ProcessScreenshot()
  T CScreenshotThread::Run()
  T CScreenshotUploadDialog::ChainToAnimationMap()
  T CScreenshotUploadDialog::ChainToMap()
@@ -10038,12 +10050,6 @@
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CWatchingLog, int>::~CUtlLinkedList()
  T CUtlLinkedList<CWatchingLog, int>::RemoveAll()
- T CUtlLinkedList<float, int>::AllocInternal(bool)
- T CUtlLinkedList<float, int>::InsertBefore(int, float const&)
- T CUtlLinkedList<float, int>::LinkBefore(int, int)
- T CUtlLinkedList<float, int>::RemoveAll()
- T CUtlLinkedList<float, int>::Unlink(int)
- T CUtlLinkedList<float, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertAfter(int, int const&)
@@ -10404,8 +10410,6 @@
  T CUtlVector<CNewsItemPanel*, CUtlMemory<CNewsItemPanel*> >::AddToTail(CNewsItemPanel*&&)
  T CUtlVector<CNewsItemPanel*, CUtlMemory<CNewsItemPanel*> >::~CUtlVector()
  T CUtlVector<CNewsItemPanel*, CUtlMemory<CNewsItemPanel*> >::GrowVector(int)
- T CUtlVector<Color, CUtlMemory<Color> >::~CUtlVector()
- T CUtlVector<Color, CUtlMemory<Color> >::Validate(CValidator&, char const*)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
@@ -11022,6 +11026,7 @@
  T HTMLPopup::OnFinishRequest()
  T HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
  T HTMLPopup::OnSecurityStatus(KeyValues*)
+ T HTMLPopup::OnSetSecurityStatus(bool, bool, bool, char const*)
  T HTMLPopup::OnStartRequest(KeyValues*)
  T HTMLPopup::OnTick()
  T HTMLPopup::OnURLChanged(KeyValues*)
@@ -11526,6 +11531,7 @@
  T non-virtual thunk to vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
  T non-virtual thunk to vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T non-virtual thunk to vgui::HTML::BrowserSetIndex(int)
+ T non-virtual thunk to vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
  T non-virtual thunk to vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T non-virtual thunk to vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
  T non-virtual thunk to vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)
@@ -12251,7 +12257,6 @@
  T TimeCompare(unsigned int const*, unsigned int const*)
  T TSLNodeTemplate_t<CryptoPP::AutoSeededX917RNG<CryptoPP::Rijndael> >::operator delete(void*)
  T UnlinkFile(char const*)
- t unsigned char const* HTML_GetTextureMemory<CMsgNeedsPaint>(CCrossProcessSharedMemory&, CMsgNeedsPaint const*, unsigned int)
  T unsigned int CryptoPP::BitPrecision<unsigned int>(unsigned int const&)
  t update_box
  T UpdateHardwarSupportCheckboxes(vgui::Panel*, bool)
@@ -13041,7 +13046,7 @@
  T vgui::GetControlsModuleName()
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
  T vgui::GetINotificationManager()
- T vgui::GraphPanel::AddItem(float, float, float*, int)
+ T vgui::GraphPanel::AddItem(float, float)
  T vgui::GraphPanel::ChainToAnimationMap()
  T vgui::GraphPanel::ChainToMap()
  T vgui::GraphPanel::GetAnimMap()
@@ -13052,10 +13057,9 @@
  T vgui::GraphPanel::GetPanelClassName()
  T vgui::GraphPanel::GetPanelTopClassName() const
  T vgui::GraphPanel::~GraphPanel()
- T vgui::GraphPanel::GraphPanel(vgui::Panel*, char const*, int)
+ T vgui::GraphPanel::GraphPanel(vgui::Panel*, char const*)
  T vgui::GraphPanel::KB_ChainToMap()
  T vgui::GraphPanel::Paint()
- T vgui::GraphPanel::PerformLayout()
  T vgui::GraphPanel::SetDisplayDomainSize(float)
  T vgui::GraphPanel::SetUseFixedRange(float, float)
  T vgui::GraphPanel::Validate(CValidator&, char const*)
@@ -13141,6 +13145,7 @@
  T vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
  T vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T vgui::HTML::BrowserSetIndex(int)
+ T vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
  T vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
  T vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)

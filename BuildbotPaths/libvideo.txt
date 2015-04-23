@@ -24,7 +24,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/utlqueue.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/utlstring.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/utlsymbol.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videodecode.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videodecoderlibav.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videoencode.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videofilestream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videolib.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videomanifest.o
@@ -167,8 +169,10 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpsocket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnpkt.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnudp.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecoderlibav.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecoderlibav.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videofilestream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videofilestream.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videolib.cpp
@@ -265,6 +269,14 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libprotobuf.a(zero_copy_stream_impl_lite.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libprotobuf.a(zero_copy_stream_impl.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libprotobuf.a(zero_copy_stream.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.cpu_id.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.planar_functions.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.row_any.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.row_common.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.row_posix.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.scale_common.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.scale.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.scale_posix.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/crashhandler/icrashhandler.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_endian.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_macros.h
@@ -341,6 +353,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/generichash.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp

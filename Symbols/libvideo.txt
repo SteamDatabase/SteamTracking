@@ -5,11 +5,13 @@
  __assert_rtn
  atoi
  atoll
+ avcodec_alloc_context3
  avcodec_close
  avcodec_decode_audio4
  avcodec_decode_video2
  avcodec_find_decoder
  avcodec_flush_buffers
+ avcodec_free_context
  avcodec_open2
  avcodec_register_all
  av_find_best_stream
@@ -29,6 +31,7 @@
  avio_alloc_context
  av_lockmgr_register
  av_log_set_callback
+ av_malloc_tracked
  av_opt_set_int
  av_read_frame
  av_register_all
@@ -79,6 +82,7 @@
  b BUF_str_reasons
  b build_SYS_str_reasons.init
  b build_SYS_str_reasons.strerror_tab
+ b BVideoLibLoadX264()::s_bLoaded
  B CCDDBAppDetailCommon::_default_friendly_name_
  B CCDDBAppDetailCommon::_default_icon_
  B CCDDBAppDetailCommon::default_instance_
@@ -482,8 +486,10 @@
  b tty_out
  b VideoLibInit()::s_bInitialized
  b WHIRLPOOL.m
+ b x264()::s_x264
  b X509_verify_cert_error_string.buf
  b xptable
+ __bzero
  b _ZL6g_Info.0
  b _ZL6g_Info.1
  b _ZL6g_Info.2
@@ -766,6 +772,7 @@
  D construction vtable for CryptoPP::PublicKey-in-CryptoPP::X509PublicKey
  D construction vtable for CryptoPP::X509PublicKey-in-CryptoPP::RSAFunction
  d Coroutine_Launch(CCoroutine&)::sThisFunctionHasParentFramePointer
+ D cpu_info_
  D CRL_DIST_POINTS_it
  d CRL_DIST_POINTS_item_tt
  d crl_reasons
@@ -933,6 +940,25 @@
  dladdr
  dlclose
  dlerror
+ d libyuv::kMadd01
+ d libyuv::kMadd11
+ d libyuv::kMadd21
+ d libyuv::kRound34
+ d libyuv::kScaleAb2
+ d libyuv::kScaleAc33
+ d libyuv::kShuf0
+ d libyuv::kShuf01
+ d libyuv::kShuf1
+ d libyuv::kShuf11
+ d libyuv::kShuf2
+ d libyuv::kShuf21
+ d libyuv::kShuf38a
+ d libyuv::kShuf38b
+ d libyuv::kShufAb0
+ d libyuv::kShufAb1
+ d libyuv::kShufAb2
+ d libyuv::kShufAc
+ d libyuv::kShufAc3
  d lock_names
  D LONG_it
  d long_pf
@@ -1074,6 +1100,7 @@
  d PKCS8_PRIV_KEY_INFO_seq_tt
  D PKEY_USAGE_PERIOD_it
  d PKEY_USAGE_PERIOD_seq_tt
+ D pModuleExtension
  D POLICY_CONSTRAINTS_it
  d POLICY_CONSTRAINTS_seq_tt
  d policydefault_tt
@@ -1424,7 +1451,9 @@
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlNoEscConversion
  D typeinfo for CVConnPkt<ConnectChallenge>
+ D typeinfo for CVideoDecoder
  D typeinfo for CVideoDecoderLibav
+ D typeinfo for CVideoEncoderH264
  D typeinfo for CVideoFileStream
  D typeinfo for CVideoManifest
  D typeinfo for CVideoMPDParser
@@ -1459,6 +1488,8 @@
  D typeinfo for IStreamParserMessageCallback
  D typeinfo for IUDPSocketCallback
  D typeinfo for IUniformRandomStream
+ D typeinfo for IVideoDecoder
+ D typeinfo for IVideoEncoderH264
  D typeinfo for IVideoPlayer
  D typeinfo for IWorkThreadFactory
  D typeinfo for OSXHelpers::CIOPollingHelper
@@ -1682,7 +1713,9 @@
  D vtable for CUtlCStringConversion
  D vtable for CUtlNoEscConversion
  D vtable for CVConnPkt<ConnectChallenge>
+ D vtable for CVideoDecoder
  D vtable for CVideoDecoderLibav
+ D vtable for CVideoEncoderH264
  D vtable for CVideoFileStream
  D vtable for CVideoManifest
  D vtable for CVideoMPDParser
@@ -1819,6 +1852,7 @@
  kCFProxyPortNumberKey
  kCFProxyTypeAutoConfigurationURL
  kCFProxyTypeHTTP
+ kCFProxyTypeHTTPS
  kCFProxyTypeKey
  kCFProxyTypeNone
  kCFRunLoopCommonModes
@@ -2316,6 +2350,7 @@
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<NetPacketToDelete_t, int>
  R typeinfo name for CUtlLinkedList<unsigned int, int>
+ R typeinfo name for CUtlLinkedList<VideoEncodedFrame_t*, int>
  R typeinfo name for CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >
  R typeinfo name for CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >
  R typeinfo name for CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >
@@ -2361,7 +2396,9 @@
  R typeinfo name for CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >
  R typeinfo name for CVConnPkt<ConnectChallenge>
  R typeinfo name for CVideoDecodedFrame
+ R typeinfo name for CVideoDecoder
  R typeinfo name for CVideoDecoderLibav
+ R typeinfo name for CVideoEncoderH264
  R typeinfo name for CVideoFileStream
  R typeinfo name for CVideoManifest
  R typeinfo name for CVideoMPDParser
@@ -2397,6 +2434,8 @@
  R typeinfo name for IStreamParserMessageCallback
  R typeinfo name for IUDPSocketCallback
  R typeinfo name for IUniformRandomStream
+ R typeinfo name for IVideoDecoder
+ R typeinfo name for IVideoEncoderH264
  R typeinfo name for IVideoPlayer
  R typeinfo name for IWorkThreadFactory
  R typeinfo name for OSXHelpers::CIOPollingHelper
@@ -2575,6 +2614,7 @@
  t aes_xts_ctrl
  t aes_xts_init_key
  T AllocateCircularBuffer(int)
+ T AllocImageYUV
  t ameth_cmp
  t ameth_cmp_BSEARCH_CMP_FN
  t (anonymous namespace)::CLEANUP::~CLEANUP()
@@ -3098,6 +3138,8 @@
  T BReadEbmlUInt(unsigned long long*, CVideoFileStream*, int)
  T BRemoveDirectory(char const*)
  T BRemoveDirectoryRecursive(char const*)
+ T BRenameFile(char const*, char const*)
+ T BScaleImageYUV
  t buffer_callback_ctrl
  t buffer_ctrl
  T BufferedIStream_AppendBytes
@@ -3123,6 +3165,7 @@
  T BUF_strlcpy
  T BUF_strndup
  T BuildSegmentRequestPath(CUtlString*, CUtlString const&, CUtlString const&, CUtlString const&)
+ T BVideoLibLoadX264()
  T BWritingMiniDump
  t by_dir_entry_free
  t by_dir_hash_cmp
@@ -3359,6 +3402,7 @@
  T CFileWriterThread::~CFileWriterThread()
  T CFileWriterThread::CFileWriterThread()
  T CFileWriterThread::FileWriterItem_t::Validate(CValidator&, char const*)
+ T CFileWriterThread::RegisterWriter(CFileWriter const*)
  T CFileWriterThread::Run()
  T CFileWriterThread::StartThreadIfNecessary()
  T CFileWriterThread::UnregisterWriter(CFileWriter const*)
@@ -4061,6 +4105,11 @@
  T COpenSSLWrapper::Shutdown()
  T COpenSSLWrapper::ValidateStatics(CValidator&, char const*)
  t copy_email
+ T CopyPlane
+ T CopyRow_C
+ T CopyRow_ERMS
+ T CopyRow_SSE2
+ T CopyRow_X86
  t CopyUriTableProc
  T Coroutine_Continue
  T Coroutine_Finish()
@@ -4120,6 +4169,8 @@
  T CreatePlatformSocket(int, int, int, unsigned int, int*)
  T CreateTempFileName(CUtlString*)
  T CreateThreadMutex()
+ T CreateVideoDecoder
+ T CreateVideoEncoderH264
  T CreateVideoPlayer
  T CreateVProfile
  T CReceivedPkt::Init(int, netadr_t const&, unsigned char*, int, void*, unsigned int)
@@ -5341,6 +5392,9 @@
  T CUniformRandomStream::RandomFloat(float, float)
  T CUniformRandomStream::RandomInt(int, int)
  T CUniformRandomStream::SetSeed(int)
+ T CUtlAllocation::Copy(void const*, int)
+ T CUtlAllocation::~CUtlAllocation()
+ T CUtlAllocation::Purge()
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CheckArbitraryPeekGet(int, int&)
  T CUtlBuffer::CheckGet(int)
@@ -5597,6 +5651,12 @@
  T CUtlLinkedList<unsigned int, int>::RemoveAll()
  T CUtlLinkedList<unsigned int, int>::Unlink(int)
  T CUtlLinkedList<unsigned int, int>::Validate(CValidator&, char const*)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::AllocInternal(bool)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::Free(int)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::InsertBefore(int, VideoEncodedFrame_t* const&)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::LinkBefore(int, int)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::RemoveAll()
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::Unlink(int)
  T CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Validate(CValidator&, char const*)
  T CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Find(CHTTPClient::SSLContextLookup_t const&) const
  T CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Insert(CHTTPClient::SSLContextLookup_t const&, COpenSSLContext* const&)
@@ -5917,6 +5977,11 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::~CUtlVector()
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::GrowVector(int)
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::InsertBefore(int, CVideoDecoder::QueuedOutput_t* const&)
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::~CUtlVector()
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::GrowVector(int)
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::InsertBefore(int, CVideoFileStream::AvailableByteRange_t const&)
@@ -5974,6 +6039,9 @@
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::GrowVector(int)
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::InsertBefore(int, NetConnectPingResults_t const&)
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::ShiftElementsRight(int, int)
@@ -6022,6 +6090,7 @@
  T CValidateAutoPushPop::~CValidateAutoPushPop()
  T CValidator::ClaimArrayMemory(void*)
  T CValidator::ClaimConnection(unsigned int)
+ T CValidator::ClaimMemory_Aligned(void*)
  T CValidator::ClaimMemory(void*)
  T CValidator::ClaimSocket(int)
  T CValidator::IsClaimed(void*)
@@ -6037,6 +6106,14 @@
  T CVConnPkt<ConnectChallenge>::~CVConnPkt()
  T CVideoDecodedFrame::~CVideoDecodedFrame()
  T CVideoDecodedFrame::Validate(CValidator&, char const*)
+ T CVideoDecoder::BDecodeFrameInternal(AVPacket*, bool*)
+ T CVideoDecoder::BDecodeFrame(unsigned char const*, int, long long, long long)
+ T CVideoDecoder::BInitH264AVCC(unsigned char const*, int)
+ T CVideoDecoder::~CVideoDecoder()
+ T CVideoDecoder::FlushDecoder()
+ T CVideoDecoder::FreeDecodedFrame(VideoYUVFrame_t*)
+ T CVideoDecoder::GetDecodedFrame(VideoYUVFrame_t**, long long*)
+ T CVideoDecoder::IsDecodedFrameAvailable()
  T CVideoDecoderLibav::BAtEndOfStream()
  T CVideoDecoderLibav::BDecodeAudio(CUtlBuffer*, long long*, AVPacket&)
  T CVideoDecoderLibav::BDecodeAudioQueueVideo(CUtlBuffer*, long long*, long long*, bool*)
@@ -6069,6 +6146,18 @@
  T CVideoDecoderLibav::SetAudioOut(int, unsigned long long, int)
  T CVideoDecoderLibav::SetStartTime()
  T CVideoDecoderLibav::Validate(CValidator&, char const*)
+ T CVideoEncoderH264::BEncodeFrameInternal(x264_picture_t*)
+ T CVideoEncoderH264::BEncodeFrame(VideoYUVFrame_t*, long long, bool)
+ T CVideoEncoderH264::BInit(int, int, int)
+ T CVideoEncoderH264::~CVideoEncoderH264()
+ T CVideoEncoderH264::CVideoEncoderH264()
+ T CVideoEncoderH264::Flush()
+ T CVideoEncoderH264::GetEncodedFrame(VideoEncodedFrame_t**)
+ T CVideoEncoderH264::GetHeight()
+ T CVideoEncoderH264::GetPPS(unsigned char**, int*)
+ T CVideoEncoderH264::GetSPS(unsigned char**, int*)
+ T CVideoEncoderH264::GetWidth()
+ T CVideoEncoderH264::IsEncodedFrameAvailable()
  T CVideoFileStream::BHTTPDownloadFailed()
  T CVideoFileStream::BLoad(char const*, VideoByteRange_t*)
  T CVideoFileStream::BLoadFromExternalBuffer(CUtlBuffer*)
@@ -6502,6 +6591,8 @@
  t def_to_int
  T DeleteAudioResampler
  T DeleteThreadMutex(SteamThreadTools::CThreadMutex*)
+ T DeleteVideoDecoder
+ T DeleteVideoEncoderH264
  T DeleteVideoPlayer
  T DeleteVideoPlayerManager()
  t der_cmp
@@ -7587,11 +7678,14 @@
  T FioRegisterAsyncFinalize(void (*)(int, unsigned int))
  T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
  T FioWrite(int, void const*, int, int*)
+ T FixedDiv_X86
  t fmtint
  T FreeCircularBuffer(CCircularBuffer*)
  T FreeDeletedPackets()
  t free_dir
+ T FreeEncodedFrame
  t free_evp_pbe_ctl
+ T FreeImageYUV
  t freelist_insert
  t free_string
  T gcm_ghash_4bit_mmx
@@ -7874,6 +7968,7 @@
  T i2v_GENERAL_NAMES
  t i2v_POLICY_CONSTRAINTS
  t i2v_POLICY_MAPPINGS
+ T I420Scale
  T IConnectionCallback::ConnectionDataSent(unsigned int, unsigned int)
  T IConnectionCallback::NetQOSLevelChanged(unsigned int, ENetQOSLevel, ENetQOSLevel)
  T IHTTPRedirectHandler::AddRef() const
@@ -7888,6 +7983,7 @@
  t init256
  t init384
  t init512
+ T InitCpuFlags
  T InitializeSpewConfig()
  T InitStackWalk()
  t InitTicks()
@@ -7904,6 +8000,13 @@
  t int_ec_size
  T Internal_Coroutine_Continue(int, bool, char const*)
  t internal_verify
+ T InterpolateRow_Any_SSE2
+ T InterpolateRow_Any_SSSE3
+ T InterpolateRow_C
+ T InterpolateRow_SSE2
+ T InterpolateRow_SSSE3
+ T InterpolateRow_Unaligned_SSE2
+ T InterpolateRow_Unaligned_SSSE3
  t int_err_del
  t int_err_del_item
  t int_err_get
@@ -7969,6 +8072,8 @@
  T lh_num_items
  T lh_retrieve
  T lh_strhash
+ t libyuv::ScaleAddCols1_C(int, int, int, int, unsigned short const*, unsigned char*)
+ t libyuv::ScaleAddCols2_C(int, int, int, int, unsigned short const*, unsigned char*)
  T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
  t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
  t local_sk_X509_NAME_ENTRY_free
@@ -8819,6 +8924,43 @@
  t s2i_skey_id
  t satsub64be
  T SaveBufferToFile(CUtlBuffer const&, char const*, EFileIOFlags)
+ T ScaleAddRows_C
+ T ScaleAddRows_SSE2
+ T ScaleCols_C
+ T ScaleColsUp2_C
+ T ScaleFilterCols_C
+ T ScaleFilterCols_SSSE3
+ T ScaleFilterReduce
+ T ScalePlane
+ T ScalePlaneBilinearDown
+ T ScalePlaneBilinearUp
+ T ScalePlaneVertical
+ T ScaleRowDown2Box_C
+ T ScaleRowDown2Box_SSE2
+ T ScaleRowDown2Box_Unaligned_SSE2
+ T ScaleRowDown2_C
+ T ScaleRowDown2Linear_C
+ T ScaleRowDown2Linear_SSE2
+ T ScaleRowDown2Linear_Unaligned_SSE2
+ T ScaleRowDown2_SSE2
+ T ScaleRowDown2_Unaligned_SSE2
+ T ScaleRowDown34_0_Box_C
+ T ScaleRowDown34_0_Box_SSSE3
+ T ScaleRowDown34_1_Box_C
+ T ScaleRowDown34_1_Box_SSSE3
+ T ScaleRowDown34_C
+ T ScaleRowDown34_SSSE3
+ T ScaleRowDown38_2_Box_C
+ T ScaleRowDown38_2_Box_SSSE3
+ T ScaleRowDown38_3_Box_C
+ T ScaleRowDown38_3_Box_SSSE3
+ T ScaleRowDown38_C
+ T ScaleRowDown38_SSSE3
+ T ScaleRowDown4Box_C
+ T ScaleRowDown4Box_SSE2
+ T ScaleRowDown4_C
+ T ScaleRowDown4_SSE2
+ T ScaleSlope
  t seed_cbc_cipher
  T SEED_cbc_encrypt
  t seed_cfb128_cipher
@@ -9560,6 +9702,8 @@
  t sxnet_v2i
  t SymmetricDecryptWorker(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, CryptoPP::BlockCipherFinal<(CryptoPP::CipherDir)1, CryptoPP::Rijndael::Dec>&)
  t SymmetricEncryptHelper(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int, bool)
+ T Sys_GetProcAddress(CSysModule*, char const*)
+ T Sys_LoadModule(char const*, Sys_Flags)
  t table_cmp_BSEARCH_CMP_FN
  t __tcf_0
  t __tcf_1
@@ -9745,6 +9889,7 @@
  t v2i_POLICY_MAPPINGS
  t v2i_subject_alt
  t v3_generic_extension
+ T ValidateImageYUV
  T ValidateNetPacketGlobals(CValidator&)
  t value_free_hash_LHASH_DOALL_ARG
  t value_free_stack_LHASH_DOALL
@@ -9763,6 +9908,7 @@
  T VideoAdaptationSet_t::~VideoAdaptationSet_t()
  T VideoAdaptationSet_t::VideoAdaptationSet_t()
  T VideoLibData_t::~VideoLibData_t()
+ T VideoLibGetInitMutex()
  T VideoLibInit()
  T VideoLibValidateStatics(CValidator&)
  T VideoPauseForValidation
@@ -9865,6 +10011,7 @@
  T V_vsnprintfRet
  T V_wcstoui64
  T WeakRandomInt
+ T WeakRandomUint32
  T WHIRLPOOL
  T WHIRLPOOL_BitUpdate
  T whirlpool_block
@@ -9877,6 +10024,7 @@
  T WriteMiniDump
  t WriteMiniDumpThread(void*)
  t write_string
+ t x264_log(void*, int, char const*, char*)
  T X509_add1_ext_i2d
  T X509_add1_reject_object
  T X509_add1_trust_object

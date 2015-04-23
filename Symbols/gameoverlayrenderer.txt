@@ -71,6 +71,7 @@
  B fn_glVertexAttrib4fv
  B fn_glVertexAttribPointer
  B g_ActiveRenderInstance
+ B g_bIgnoreChildProcesses
  b g_bKeyEnabledMovieCapture
  b g_bMicDuckingDisabled
  B g_bOverlayEnabled
@@ -950,6 +951,7 @@
  T SteamThreadTools::CThread::IsThreadRunning()
  T SteamThreadTools::CThread::Join(unsigned int)
  T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
+ T SteamThreadTools::CThreadLocalBase::Set(void*)
  T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
  T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
  T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()

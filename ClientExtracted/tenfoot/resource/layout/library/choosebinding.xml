@@ -9,7 +9,8 @@
 		<Panel id="KeyboardWrapper" selectionpos="0,1">
 			<Panel id="BindingDescriptionWrapper" selectionpos="0,0">
 				<Label id="SelectBindingHeader" text="#Library_Details_SelectYourBindingFor" class="SelectBindingHeader" />
-				<TextEntry tabindex="-1" selectionpos="0,-1" id="BindingDescriptionTextEntry" maxchars="24" textinputid="BindingDescriptionTextInput" textinputdoneactionstring="#Library_Details_SaveBindingDescription" textinputclass="HalfWidth DockRight AppearFromBottomCenter" onmovedown="SetInputFocus( kb_key_esc );" ontabforward="SetInputFocus( kb_key_esc );" />
+				<DropDown tabindex="-1" selectionpos="0,-1" id="BindingDescriptionDropDown" />
+				<TextEntry tabindex="-2" selectionpos="0,-2" id="BindingDescriptionTextEntry" textinputid="BindingDescriptionTextInput" textinputdoneactionstring="#Library_Details_SaveBindingDescription" textinputclass="HalfWidth DockRight AppearFromBottomCenter" onmovedown="SetInputFocus( kb_key_esc );" ontabforward="SetInputFocus( kb_key_esc );" />
 			</Panel>
 			<Panel id="VirtualKeyboard" tabindex="auto" selectionpos="0,1">
 				<Panel id="VKBRow1" selectionpos="0,0">
