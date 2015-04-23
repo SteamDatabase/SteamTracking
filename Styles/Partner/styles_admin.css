@@ -1879,6 +1879,7 @@ html, body { height:100%; }
 .recent_app_row
 {
 	padding: 5px;
+	min-height: 16px;
 	background-color: #323233;
 	margin-bottom: 1px;
 	border: 1px solid #373737;
