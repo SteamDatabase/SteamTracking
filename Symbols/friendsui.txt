@@ -5354,6 +5354,7 @@
  T BIO_vprintf
  T BIO_vsnprintf
  T BIO_write
+ T BIsFriendsDialogValid()
  t BIsMatchMore(char const*, char const*, int)
  T BIsValidDirectory(char const*)
  T BlankImage::~BlankImage()
