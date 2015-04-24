@@ -24,9 +24,9 @@ echo Extracting archives
 
 for z in *.zip;
 do
-	if [[ "$z" =~ ^bins.* ]];
+	if [[ "$z" == *"bins"* ]];
 	then
-		unzip -q "$z" -d bins/
+		unzip -q -n "$z" -d bins/
 	else
 		unzip -q -o "$z" -d "$DIR/ClientExtracted/"
 	fi

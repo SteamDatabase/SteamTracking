@@ -23,6 +23,13 @@
 "ClientManifest/steam_cmd_osx"                   : "https://steamcdn-a.akamaihd.net/client/steam_cmd_osx?__TIME__",
 
 //
+// Beta SteamCMD Manifests
+//
+"ClientManifest/steam_cmd_publicbeta_linux"      : "https://steamcdn-a.akamaihd.net/client/steam_cmd_publicbeta_linux?__TIME__",
+"ClientManifest/steam_cmd_publicbeta_win32"      : "https://steamcdn-a.akamaihd.net/client/steam_cmd_publicbeta_win32?__TIME__",
+"ClientManifest/steam_cmd_publicbeta_osx"        : "https://steamcdn-a.akamaihd.net/client/steam_cmd_publicbeta_osx?__TIME__",
+
+//
 // Store CSS (v6)
 //
 "Styles/Store/account.css"                       : "https://steamstore-a.akamaihd.net/public/css/v6/account.css?__TIME__",

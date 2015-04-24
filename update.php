@@ -24,6 +24,7 @@
 			'steam_osx.zip',
 			'bins_osx.zip',
 			'bins_client_osx.zip',
+			'steamcmd_bins_osx.zip',
 		];
 		
 		private $Options = Array(
@@ -186,7 +187,7 @@
 				return true;
 			}
 			// Get archives from beta manifest
-			else if( $File === 'ClientManifest/steam_client_publicbeta_osx' )
+			else if( $File === 'ClientManifest/steam_client_publicbeta_osx' || $File === 'ClientManifest/steam_cmd_publicbeta_osx' )
 			{
 				foreach( $this->ClientArchives as $Archive )
 				{
