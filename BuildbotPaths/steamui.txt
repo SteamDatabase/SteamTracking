@@ -598,6 +598,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vgui/vprofpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/zip_helpers.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/algparam.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/cryptlib.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/filters.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/hmac.h
@@ -950,7 +951,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/rendermessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/rendermessages.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/styleproperties.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/renderer/uirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/textinput/textinput.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/textinput/textinput_daisywheel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/textinput/textinput_dualtouch.cpp
@@ -972,6 +972,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/beziercurve.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/mathlib.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/math_pfns.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector4d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector.h
@@ -1010,18 +1011,19 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../iuiengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/iuiinput.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuiengine.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuipanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuipanelstyle.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/backgroundimage.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/csshelpers.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/../data/panoramavideoplayer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/fillbrush.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/../iuipanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/stylesymbol.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/uilength.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/localization/ilocalize.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/panorama.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/iui3dsurface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/rendermessages.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/uirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/panoramasymbol.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/renderer/styleproperties.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/textinput/textinput_daisywheel.h
@@ -1561,6 +1563,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/libraryrecent_addshortcut.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/libraryrecent.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/libraryrecent.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/../mainmenu.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/screenshot_browser.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/screenshot_browser.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/../store/storepanel.h
@@ -1698,9 +1701,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaynotificationpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/../tenfootnotification.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../community/community.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../friends/friends.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_screenshots.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/libraryrecent_addcontent.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_achievements.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../mainmenu.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/parentalbutton.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/parentalbutton.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/parentaleventfilter.cpp

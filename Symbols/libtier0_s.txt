@@ -411,7 +411,18 @@
  T GetStackTrackingFilter
  t global constructors keyed to 000101
  t global constructors keyed to 000200
- t global constructors keyed to a
+ t _GLOBAL__sub_I_fasttimer.stdout.steam_rel_osx_builder.5210.g8sLG1.ii
+ t _GLOBAL__sub_I_fasttimer.stdout.steam_rel_osx_builder.5382.f1cbvG.ii
+ t _GLOBAL__sub_I_memstd.stdout.steam_rel_osx_builder.5254.8aRtih.ii
+ t _GLOBAL__sub_I_memstd.stdout.steam_rel_osx_builder.5404.YXoneD.ii
+ t _GLOBAL__sub_I_minidump.stdout.steam_rel_osx_builder.19856.FBt1pt.ii
+ t _GLOBAL__sub_I_minidump.stdout.steam_rel_osx_builder.19914.8jqpLr.ii
+ t _GLOBAL__sub_I_testthread.stdout.steam_rel_osx_builder.5304.vmh18s.ii
+ t _GLOBAL__sub_I_testthread.stdout.steam_rel_osx_builder.5459.UJRgpv.ii
+ t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.5306.NcRl3H.ii
+ t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.5461.aWfSoL.ii
+ t _GLOBAL__sub_I_vprof.stdout.steam_rel_osx_builder.5342.dqAU1I.ii
+ t _GLOBAL__sub_I_vprof.stdout.steam_rel_osx_builder.5505.XBG5m0.ii
  T HasStackTrackingFilters
  time
  timegm

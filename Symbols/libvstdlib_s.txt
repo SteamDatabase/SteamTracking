@@ -470,7 +470,28 @@
  T GetPlatformNameFromEPlatformType
  T GetPortableOsVersionInformation
  t GetStackPtr()
- t global constructors keyed to a
+ t _GLOBAL__sub_I_checksum_c.stdout.steam_rel_osx_builder.5536.LmQxYv.ii
+ t _GLOBAL__sub_I_checksum_c.stdout.steam_rel_osx_builder.5811.bwcJdQ.ii
+ t _GLOBAL__sub_I_coroutine.stdout.steam_rel_osx_builder.5697.ugTeNk.ii
+ t _GLOBAL__sub_I_coroutine.stdout.steam_rel_osx_builder.5953.1OpbuU.ii
+ t _GLOBAL__sub_I_cvar.stdout.steam_rel_osx_builder.5707.eS7zGS.ii
+ t _GLOBAL__sub_I_cvar.stdout.steam_rel_osx_builder.5959.e5o2ST.ii
+ t _GLOBAL__sub_I_interface.stdout.steam_rel_osx_builder.5607.D462Km.ii
+ t _GLOBAL__sub_I_interface.stdout.steam_rel_osx_builder.5865.wafcaM.ii
+ t _GLOBAL__sub_I_random.stdout.steam_rel_osx_builder.5739.v51iQV.ii
+ t _GLOBAL__sub_I_random.stdout.steam_rel_osx_builder.5992.hxrAMO.ii
+ t _GLOBAL__sub_I_stringnorm.stdout.steam_rel_osx_builder.5743.alAbx7.ii
+ t _GLOBAL__sub_I_stringnorm.stdout.steam_rel_osx_builder.6009.4CkYcB.ii
+ t _GLOBAL__sub_I_strtools.stdout.steam_rel_osx_builder.5753.iZqbP5.ii
+ t _GLOBAL__sub_I_strtools.stdout.steam_rel_osx_builder.6011.dGqtjl.ii
+ t _GLOBAL__sub_I_urlutils.stdout.steam_rel_osx_builder.5771.7pZu0h.ii
+ t _GLOBAL__sub_I_urlutils.stdout.steam_rel_osx_builder.6025.iY2Lq8.ii
+ t _GLOBAL__sub_I_utlbuffer.stdout.steam_rel_osx_builder.5658.Kwrjqv.ii
+ t _GLOBAL__sub_I_utlbuffer.stdout.steam_rel_osx_builder.5918.QKuKYq.ii
+ t _GLOBAL__sub_I_utlsymbol.stdout.steam_rel_osx_builder.5687.cmpVhQ.ii
+ t _GLOBAL__sub_I_utlsymbol.stdout.steam_rel_osx_builder.5941.zgvRph.ii
+ t _GLOBAL__sub_I_validate_v.stdout.steam_rel_osx_builder.5775.LrfUDv.ii
+ t _GLOBAL__sub_I_validate_v.stdout.steam_rel_osx_builder.6026.emkpsh.ii
  T HashStringCaseless(char const*, unsigned long)
  ThreadGetCurrentId
  ThreadGetCurrentProcessId

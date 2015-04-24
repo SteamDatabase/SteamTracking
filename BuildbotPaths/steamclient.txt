@@ -879,7 +879,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/integer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/iterhash.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/misc.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/oaep.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/osrng.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/pkcspad.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/pubkey.h
@@ -901,6 +900,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/p2p/base/candidate.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/p2p/base/p2ptransportchannel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/p2p/base/portallocator.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/p2p/base/pseudotcp.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/p2p/base/transportchannel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/p2p/base/transport.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.3.0/src/google/protobuf/descriptor.h
@@ -1334,11 +1334,13 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/mathlib.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/math_pfns.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_endian.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_macros.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_securezeromemory_impl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/nattypes.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/p2pjinglewrapper/ip2pjinglewrapper.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/p2pjinglewrapper/p2pcandidate.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/p2pjinglewrapper/p2pcandidate.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/p2pvoice/P2PVoicePackets.h

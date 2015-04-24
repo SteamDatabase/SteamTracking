@@ -9,6 +9,7 @@
  b add_image_hook_swiftV1(mach_header const*, long)::patches
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
  B CBreakpadFactory::sm_HandlerMutex
+ b CFStringGetCStringPtr_fn
  b CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::values
  b ClearWritingMiniDump::fAsserted
  b Demangled
@@ -43,10 +44,22 @@
  B g_VProfProfilesRunningCount
  _Block_copy
  b NSAutoreleasePool_class
+ b NSConstantString_class
+ b NSMutableDictionary_class
+ b NSString_class
  b NSUndoManagerProxy_targetClass
  bootstrap_look_up
  bootstrap_port
  b original_class_getName
+ b original_NSKKMS_fastIndexForKnownKey
+ b original_NSKKMS_indexForKey
+ b original_NSKKsD_addEntriesFromDictionary
+ b original_NSKKsD_objectForKey
+ b original_NSKKsD_removeObjectForKey
+ b original_NSKKsD_setObject_forKey
+ b original_NSManagedObject_allocBatch
+ b original_NSManagedObject_allocWithEntity
+ b original_NSManagedObject_init
  b original_objc_allocateClassPair
  b original_objc_copyClassNamesForImage
  b original_objc_getClass
@@ -100,6 +113,7 @@
  class_addMethod
  class_addProperty
  class_addProtocol
+ class_getInstanceMethod
  class_getInstanceSize
  class_getInstanceVariable
  class_getIvarLayout
@@ -184,6 +198,7 @@
  memcpy
  memmove
  memset
+ method_setImplementation
  nanosleep
  nanosleep$UNIX2003
  _NSGetExecutablePath
@@ -195,6 +210,7 @@
  OBJC_CLASS_$_NSBundle
  OBJC_CLASS_$_NSString
  objc_collectingEnabled
+ objc_constructInstance
  _objc_empty_cache
  _objc_empty_vtable
  objc_getClass
@@ -279,6 +295,15 @@
  t __ARCLite__load()
  t __arclite_NSArray_objectAtIndexedSubscript(NSArray*, objc_selector*, unsigned long)
  t __arclite_NSDictionary_objectForKeyedSubscript(NSDictionary*, objc_selector*, objc_object*)
+ t __arclite_NSKKMS_fastIndexForKnownKey(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSKKMS_indexForKey(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSKKsD_addEntriesFromDictionary(objc_object*, objc_selector*, NSDictionary*)
+ t __arclite_NSKKsD_objectForKey(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSKKsD_removeObjectForKey(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSKKsD_setObject_forKey(objc_object*, objc_selector*, objc_object*, objc_object*)
+ t __arclite_NSManagedObject_allocBatch(objc_object*, objc_selector*, objc_object**, objc_object*, unsigned int)
+ t __arclite_NSManagedObject_allocWithEntity(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSManagedObject_init(objc_object*, objc_selector*)
  t __arclite_NSMutableArray_setObject_atIndexedSubscript(NSMutableArray*, objc_selector*, objc_object*, unsigned long)
  t __arclite_NSMutableDictionary__setObject_forKeyedSubscript(NSMutableDictionary*, objc_selector*, objc_object*, objc_object)
  t __arclite_NSMutableOrderedSet_setObject_atIndexedSubscript(NSMutableOrderedSet*, objc_selector*, objc_object*, unsigned long)
@@ -308,6 +333,7 @@
  t __arclite_object_setInstanceVariable(objc_object*, char const*, void*)
  t __arclite_object_setIvar(objc_object*, objc_ivar*, objc_object*)
  t __arclite_protocol_getName(Protocol*)
+ t arclite_uninitialized_function()
  T AssertMsgImplementation
  T BBlockingGetMiniDumpLock
  T BGetMiniDumpLock
@@ -455,6 +481,7 @@
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::InsertBefore(int, CHandlerContext* const&)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::ShiftElementsLeft(int, int)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::ShiftElementsRight(int, int)
+ t cxxConstruct(objc_object*)
  T DefaultSpewFunc(SpewType_t, char const*)
  t demangledName(char const*, bool)
  T _DMsg
@@ -463,13 +490,29 @@
  T Error
  T _ExitOnFatalAssert
  T FindSpewGroup(char const*, int*)
+ t fixStringForCoreData(objc_object*)
  T GetCPUInformation()
  T GetMemAlloc
  t GetMiniDumpMutex()
  t GetMinidumpsWritten()
  T GetProcessorDetailBlob(int*)
  t global constructors keyed to 000200
- t global constructors keyed to a
+ t _GLOBAL__sub_I_breakpad.stdout.steam_rel_osx_builder.5157.uC8ZxW.mii
+ t _GLOBAL__sub_I_breakpad.stdout.steam_rel_osx_builder.5160.WBLDkD.mii
+ t _GLOBAL__sub_I_fasttimer.stdout.steam_rel_osx_builder.2916.a4JPYk.ii
+ t _GLOBAL__sub_I_fasttimer.stdout.steam_rel_osx_builder.3082.UU7F6u.ii
+ t _GLOBAL__sub_I_minidump.stdout.steam_rel_osx_builder.18982.N9tIdx.ii
+ t _GLOBAL__sub_I_minidump.stdout.steam_rel_osx_builder.19039.xpf8qW.ii
+ t _GLOBAL__sub_I_strtools.stdout.steam_rel_osx_builder.3597.uV5YmS.ii
+ t _GLOBAL__sub_I_strtools.stdout.steam_rel_osx_builder.3694.wrufbN.ii
+ t _GLOBAL__sub_I_testthread.stdout.steam_rel_osx_builder.3003.XU3ldn.ii
+ t _GLOBAL__sub_I_testthread.stdout.steam_rel_osx_builder.3150.gF0OJy.ii
+ t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.3006.rBRGG2.ii
+ t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.3156.c4PiQ7.ii
+ t _GLOBAL__sub_I_utlbuffer.stdout.steam_rel_osx_builder.3325.qwbmD6.ii
+ t _GLOBAL__sub_I_utlbuffer.stdout.steam_rel_osx_builder.3484.Ip8wQs.ii
+ t _GLOBAL__sub_I_vprof.stdout.steam_rel_osx_builder.3046.lGC5Ic.ii
+ t _GLOBAL__sub_I_vprof.stdout.steam_rel_osx_builder.3199.L8Zd7j.ii
  time
  t initialize_imp(objc_object*, objc_selector*)
  T InitStackWalk()
@@ -490,6 +533,7 @@
  t ProcessRawStack(void**, int, int, CStack&)
  T RealGetCallStack
  T RealPrintCallStack
+ t replaceMethod(objc_class*, objc_selector*, objc_object* (*)(objc_object, objc_selector, ...), objc_object* (*)(objc_object, objc_selector, ...))
  t scanMangledField(char const*&, char const*, char const*&, int&)
  T SetInAssert
  T SetWritingMiniDump(bool)

@@ -212,6 +212,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/misc.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/osrng.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/secblock.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/sha.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/simple.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/JSON_parser/JSON_parser.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.3.0/src/google/protobuf/descriptor.h
@@ -403,6 +405,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/fileio.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/generichash.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/interface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/keyvalues.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/mempool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h

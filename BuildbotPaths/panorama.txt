@@ -175,6 +175,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/uifontfile.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/zip_helpers.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/algparam.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/cryptlib.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/filters.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/iterhash.h
@@ -184,6 +185,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/rijndael.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/secblock.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/seckey.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/sha.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/simple.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/JSON_parser/JSON_parser.c
@@ -385,6 +387,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/beziercurve.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/mathlib.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/math_pfns.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector4d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector.h
@@ -400,18 +403,19 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/../iuiengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/input/iuiinput.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuifilesystem.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuipanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuipanelstyle.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/backgroundimage.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/csshelpers.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/fillbrush.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/../iuipanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/panel2dfactory.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/stylesymbol.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/uilength.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/iui3dsurface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/../layout/stylepropertyfactory.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/rendermessages.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/../../panorama/renderer/uirenderengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/panoramasymbol.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/renderer/styleproperties.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/transformations.h

@@ -718,7 +718,18 @@
  T dyld_stub_binding_helper
  T FreeAudioDevice
  T GetMilesFunctionsList()
- t global constructors keyed to a
+ t _GLOBAL__sub_I_audiocontr.stdout.steam_rel_osx_builder.8390.73NHz0.ii
+ t _GLOBAL__sub_I_audiocontr.stdout.steam_rel_osx_builder.8397.qbdsaR.ii
+ t _GLOBAL__sub_I_interface.stdout.steam_rel_osx_builder.1358.zSDjR3.ii
+ t _GLOBAL__sub_I_interface.stdout.steam_rel_osx_builder.1513.vlbUq4.ii
+ t _GLOBAL__sub_I_milesaudio.stdout.steam_rel_osx_builder.8392.ho8oQR.ii
+ t _GLOBAL__sub_I_milesaudio.stdout.steam_rel_osx_builder.8394.cDE5x6.ii
+ t _GLOBAL__sub_I_milesaudio.stdout.steam_rel_osx_builder.8442.zXA70L.ii
+ t _GLOBAL__sub_I_milesaudio.stdout.steam_rel_osx_builder.8454.MgxF03.ii
+ t _GLOBAL__sub_I_mileswrapp.stdout.steam_rel_osx_builder.8395.XX0Vhv.ii
+ t _GLOBAL__sub_I_mileswrapp.stdout.steam_rel_osx_builder.8456.vLzV3m.ii
+ t _GLOBAL__sub_I_utlsymbol.stdout.steam_rel_osx_builder.1437.JaUCbl.ii
+ t _GLOBAL__sub_I_utlsymbol.stdout.steam_rel_osx_builder.1592.h74dZv.ii
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_LoadModule(char const*, Sys_Flags)

@@ -11,6 +11,7 @@
  b BOverlayNeedsPresent::dwLastTrueTickCount
  b CBaseOverlayRenderer::RenderFrame()::bTenfoot
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastUpdateTime
+ b CFStringGetCStringPtr_fn
  B cgl_ctx
  b Demangled
  b eh_globals
@@ -112,10 +113,22 @@
  _Block_copy
  b Log(char const*, ...)::bCheckedLogEnabled
  b NSAutoreleasePool_class
+ b NSConstantString_class
+ b NSMutableDictionary_class
+ b NSString_class
  b NSUndoManagerProxy_targetClass
  bootstrap_look_up
  bootstrap_port
  b original_class_getName
+ b original_NSKKMS_fastIndexForKnownKey
+ b original_NSKKMS_indexForKey
+ b original_NSKKsD_addEntriesFromDictionary
+ b original_NSKKsD_objectForKey
+ b original_NSKKsD_removeObjectForKey
+ b original_NSKKsD_setObject_forKey
+ b original_NSManagedObject_allocBatch
+ b original_NSManagedObject_allocWithEntity
+ b original_NSManagedObject_init
  b original_objc_allocateClassPair
  b original_objc_copyClassNamesForImage
  b original_objc_getClass
@@ -178,6 +191,7 @@
  class_addMethod
  class_addProperty
  class_addProtocol
+ class_getInstanceMethod
  class_getInstanceSize
  class_getInstanceVariable
  class_getIvarLayout
@@ -356,6 +370,7 @@
  memcpy
  memmove
  memset
+ method_setImplementation
  mmap
  mmap$UNIX2003
  munmap
@@ -372,6 +387,7 @@
  OBJC_CLASS_$_NSCursor
  OBJC_CLASS_$_NSGraphicsContext
  objc_collectingEnabled
+ objc_constructInstance
  _objc_empty_cache
  _objc_empty_vtable
  objc_getClass
@@ -497,6 +513,15 @@
  t __ARCLite__load()
  t __arclite_NSArray_objectAtIndexedSubscript(NSArray*, objc_selector*, unsigned long)
  t __arclite_NSDictionary_objectForKeyedSubscript(NSDictionary*, objc_selector*, objc_object*)
+ t __arclite_NSKKMS_fastIndexForKnownKey(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSKKMS_indexForKey(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSKKsD_addEntriesFromDictionary(objc_object*, objc_selector*, NSDictionary*)
+ t __arclite_NSKKsD_objectForKey(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSKKsD_removeObjectForKey(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSKKsD_setObject_forKey(objc_object*, objc_selector*, objc_object*, objc_object*)
+ t __arclite_NSManagedObject_allocBatch(objc_object*, objc_selector*, objc_object**, objc_object*, unsigned int)
+ t __arclite_NSManagedObject_allocWithEntity(objc_object*, objc_selector*, objc_object*)
+ t __arclite_NSManagedObject_init(objc_object*, objc_selector*)
  t __arclite_NSMutableArray_setObject_atIndexedSubscript(NSMutableArray*, objc_selector*, objc_object*, unsigned long)
  t __arclite_NSMutableDictionary__setObject_forKeyedSubscript(NSMutableDictionary*, objc_selector*, objc_object*, objc_object)
  t __arclite_NSMutableOrderedSet_setObject_atIndexedSubscript(NSMutableOrderedSet*, objc_selector*, objc_object*, unsigned long)
@@ -526,6 +551,7 @@
  t __arclite_object_setInstanceVariable(objc_object*, char const*, void*)
  t __arclite_object_setIvar(objc_object*, objc_ivar*, objc_object*)
  t __arclite_protocol_getName(Protocol*)
+ t arclite_uninitialized_function()
  t base_of_encoded_value(unsigned char, _Unwind_Context*)
  t BlockingWait(int*, unsigned int, int*)
  T BOverlayNeedsPresent
@@ -740,6 +766,7 @@
  T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
  T __cxxabiv1::__terminate(void (*)())
  T __cxxabiv1::__unexpected(void (*)())
+ t cxxConstruct(objc_object*)
  t d_bare_function_type
  t d_call_offset
  t d_cv_qualifiers
@@ -769,6 +796,7 @@
  T dyld_stub_binding_helper
  t eh_globals_dtor(void*)
  T Exiting()
+ t fixStringForCoreData(objc_object*)
  t get_adjusted_ptr(std::type_info const*, std::type_info const*, void**)
  T GetGLProcAddress(char*)
  T GetGLRGBAShader(bool)
@@ -780,9 +808,18 @@
  t get_ttype_entry(lsda_header_info*, unsigned int)
  t get_ttype_entry(lsda_header_info*, unsigned long)
  T GetVideoTickCount()
- t global constructors keyed to a
  t global constructors keyed to (anonymous namespace)::emergency_mutex
  t global constructors keyed to __cxa_get_globals_fast
+ t _GLOBAL__sub_I_glinterfac.stdout.steam_rel_osx_builder.7520.74S36k.ii
+ t _GLOBAL__sub_I_glinterfac.stdout.steam_rel_osx_builder.7646.7F5QGc.ii
+ t _GLOBAL__sub_I_input_osx.stdout.steam_rel_osx_builder.7548.a5VRfm.ii
+ t _GLOBAL__sub_I_input_osx.stdout.steam_rel_osx_builder.7676.xsjtle.ii
+ t _GLOBAL__sub_I_ipcposix.stdout.steam_rel_osx_builder.7449.qf3dVu.ii
+ t _GLOBAL__sub_I_ipcposix.stdout.steam_rel_osx_builder.7593.i5bNAl.ii
+ t _GLOBAL__sub_I_main.stdout.steam_rel_osx_builder.7554.QQnHeq.ii
+ t _GLOBAL__sub_I_main.stdout.steam_rel_osx_builder.7682.sZdbXw.ii
+ t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.7447.o1jcDQ.ii
+ t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.7584.hjDR95.ii
  T __gnu_cxx::__concurrence_lock_error::~__concurrence_lock_error()
  T __gnu_cxx::__concurrence_lock_error::what() const
  T __gnu_cxx::__concurrence_unlock_error::~__concurrence_unlock_error()
@@ -858,6 +895,7 @@
  t read_encoded_value_with_base(unsigned char, unsigned int, unsigned char const*, unsigned int*)
  t read_encoded_value_with_base(unsigned char, unsigned long, unsigned char const*, unsigned long*)
  T ReadGameStream()
+ t replaceMethod(objc_class*, objc_selector*, objc_object* (*)(objc_object, objc_selector, ...), objc_object* (*)(objc_object, objc_selector, ...))
  t scanMangledField(char const*&, char const*, char const*&, int&)
  T SendGameStream(GameStreamMessageFromGame_t const*)
  T SendOneTimeInputPid()

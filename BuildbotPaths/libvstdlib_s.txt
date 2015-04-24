@@ -38,7 +38,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/osversion.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/parseurl.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/random.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/splitstring.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/stringnormalize.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/strtools.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/strtools_unicode.o
@@ -49,6 +48,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/utlstring.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/utlsymbol.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/vstdlib_s.build/Objects-normal/x86_64/validate_vstdlib.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/icvar.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_macros.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/basetypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/commonmacros.h

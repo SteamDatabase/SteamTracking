@@ -18,7 +18,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/netadr.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/stdafx.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/tsmempool.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/tsmultimempool.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/utlbuffer.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/utlmemory.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/utlqueue.o
@@ -199,7 +198,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/iterhash.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/misc.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/modes.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/oaep.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/osrng.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/pubkey.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/rijndael.h
