@@ -175,7 +175,7 @@ function ShowcaseGamePicker( elSlot, eShowcase, iSlot, fnOnChange )
 {
 	var $DialogContent = $J('<div/>', {'class': 'newmodal_content_innerbg' });
 	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( 'Select one of your games to display as a Featured Game on your profile.' ) );
-	$DialogContent.append( $J('<p/>', {'class': '' }).text( 'Enter the game\'s name:' ) );
+	$DialogContent.append( $J('<p/>', {'class': '' }).text( 'Enter the game\'s name' ) );
 	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: 'Search games' } );
 	$Input.attr( 'size', '45' );	/* jquery constructor ignores size for some reason, needs to be set here */
 	$DialogContent.append( $Input );
@@ -312,7 +312,7 @@ function ShowcaseAchievementPicker( elSlot, eShowcase, iSlot, rgGamesWithAchieve
 {
 	var $Content = $J('<div/>', {'class': 'showcase_achievement_picker'} );
 	var $SelectCtn = $J('<div/>', {'class': 'showcase_achievement_picker_select_ctn'});
-	$SelectCtn.text( 'Game:');
+	$SelectCtn.text( 'Game');
 
 	var $Select = $J('<select/>', {'class': 'gray_bevel'} );
 	$Select.append( $J('<option/>', {'value': 0}).text( '<None selected>' ) );

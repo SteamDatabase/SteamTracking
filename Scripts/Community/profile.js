@@ -6,7 +6,7 @@ function PresentGroupInviteOptions( rgFriendsToInvite )
 	// this deferred will succeed if an invite is succesfully sent, fail if the user dismisses the modal or the invite AJAX fails
 	var deferred = new jQuery.Deferred();
 
-	var Modal = ShowDialog( 'Invite to join your group', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
+	var Modal = ShowDialog( 'Invite to Join Your Group', '<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>' );
 	var $ListElement = $J('<div/>', {'class': 'newmodal_content_innerbg'} );
 
 	var bBulkFriendInvite = false;
@@ -81,7 +81,7 @@ function InviteUserToGroup( Modal, groupID, steamIDInvitee )
 		{
 			strMessage += '<br>Some invites were not sent because the recipients are already in the group or have already received invites.';
 		}
-		ShowAlertDialog( 'Invite to join your group', strMessage );
+		ShowAlertDialog( 'Invite to Join Your Group', strMessage );
 
 	}).fail( function( data ) {
 		Modal && Modal.Dismiss();
@@ -200,7 +200,7 @@ function ConfirmBlock()
 	var steamid = g_rgProfileData['steamid'];
 	var strPersonaName = g_rgProfileData['personaname'];
 
-	ShowConfirmDialog( 'Block all communication',
+	ShowConfirmDialog( 'Block All Communication',
 		'You are about to block all communication with %s.'.replace( /%s/, strPersonaName ),
 		'Yes, block them'
 	).done( function() {
@@ -208,11 +208,11 @@ function ConfirmBlock()
 				'https://steamcommunity.com/actions/BlockUserAjax',
 				{sessionID: g_sessionID, steamid: steamid }
 			).done( function() {
-				ShowAlertDialog( 'Block all communication',
+				ShowAlertDialog( 'Block All Communication',
 					'You have blocked all communications with this player.'
 				);
 			} ).fail( function() {
-				ShowAlertDialog( 'Block all communication',
+				ShowAlertDialog( 'Block All Communication',
 					'Error processing your request. Please try again.'
 				);
 			} );
@@ -325,7 +325,7 @@ function ManageFriendsInviteToGroup( $Form, groupid )
 	}
 	else
 	{
-		ShowAlertDialog( 'Invite to join your group', 'You have not selected any friends.' );
+		ShowAlertDialog( 'Invite to Join Your Group', 'You have not selected any friends.' );
 	}
 }
 

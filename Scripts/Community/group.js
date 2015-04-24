@@ -439,11 +439,11 @@ function Curator_Follow( groupid, bFollow )
 			{
 				if ( data.following )
 				{
-					$J('#group_curation_follow_button').html( 'Stop following' );
+					$J('#group_curation_follow_button').html( 'Stop Following' );
 				}
 				else
 				{
-					$J('#group_curation_follow_button').html( 'Follow this curator' );
+					$J('#group_curation_follow_button').html( 'Follow this Curator' );
 				}
 
 				$J('#group_curation_follow_link').attr( 'onclick', "Curator_Follow('" + groupid + "', " + (data.following?'0':'1') + "); return false;" );

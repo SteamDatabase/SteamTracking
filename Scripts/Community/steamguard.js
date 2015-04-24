@@ -487,7 +487,7 @@ function DoTwoFactorValidate( sms_code )
 
 			if ( ++g_SmsCodeFailures > 5 )
 			{
-				FatalError( "#Steamguard_TwoFactorSmsErrorFatal" );
+				FatalError( "Sorry, there was an error processing your SMS code." );
 			}
 			else
 			{
@@ -499,7 +499,7 @@ function DoTwoFactorValidate( sms_code )
 				}
 				else
 				{
-					ShowError( "#Steamguard_TwoFactorSmsError" );
+					ShowError( "There was an error with that code" );
 				}
 			}
 		},
