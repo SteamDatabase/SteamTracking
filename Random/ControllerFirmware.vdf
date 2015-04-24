@@ -2,86 +2,16 @@
 {
 	// product id first
 
-	// Bastille/Chell - old PID "VOLTROLLER"/"BASTILLE"
-	"8706"
-	{
-		// unordered list of available firmware binaries, and rules about which to use based on 
-		// steam client build.  Remove old entries from this list when there should be no need for them
-		// on any reasonably up-to-date steam install.
-		"0"
-		{
-			"firmwarebinary" 	"/firmware/vcf_wired_controller_bastille_1370042269.bin"
-			"firmwaretimestamp"	"1370042269"
-			"minclientpackage"	"1370553819"
-		}
-
-		"1"
-		{
-			"firmwarebinary"	"/firmware/vcf_wired_controller_bastille_1371748731.bin"
-			"firmwaretimestamp"	"1371748731"
-			"minclientpackage"	"1372883926"
-		}
-
-		"2"
-		{
-			"firmwarebinary" "/firmware/vcf_wired_controller_bastille_1375922179.bin"
-			"firmwaretimestamp"	"1375922179"
-			"minclientpackage"	"1372883926"
-		}
-	}
-
-	// Bastille/Chell - new CHELL PID 
-	"4353"
-	{
-		// unordered list of available firmware binaries, and rules about which to use based on 
-		// steam client build.  Remove old entries from this list when there should be no need for them
-		// on any reasonably up-to-date steam install.
-
-
-		// Need to add firmware here...
-		"0"
-		{
-			"firmwarebinary"	"/firmware/vcf_wired_controller_chell_1375922216.bin"
-			"firmwaretimestamp"	"1375922216"
-			"minclientpackage"	"1372883926"
-		}
-	
-		"1"
-		{
-			"firmwarebinary"	"/firmware/vcf_wired_controller_chell_1376085090.bin"	
-			"firmwaretimestamp"	"1376085090"
-			"minclientpackage"	"1376085090"
-		}
-	
-		"2"
-		{
-			"firmwarebinary"	"/firmware/vcf_wired_controller_chell_1379977869.bin"	
-			"firmwaretimestamp"	"1379977869"
-			"minclientpackage"	"1379977869"
-		}
-	
-		"3"
-		{
-			"firmwarebinary"	"/firmware/vcf_wired_controller_chell_1379983591.bin"	
-			"firmwaretimestamp"	"1379983591"
-			"minclientpackage"	"1379983591"
-		}
-	
-		"4"
-		{
-			"firmwarebinary"	"/firmware/vcf_wired_controller_chell_1380076158.bin"	
-			"firmwaretimestamp"	"1380076158"
-			"minclientpackage"	"1380076158"
-		}
-	
-		"5"
-		{
-			"firmwarebinary"	"/firmware/vcf_wired_controller_chell_1389813893.bin"	
-			"firmwaretimestamp"	"1389813893"
-			"minclientpackage"	"1389813893"
-		}
-	
-		
-	}
-
+    // D0G / D0GGLE / FREEMAN / GORDON PRIME
+    "4354"
+    {
+        "0"
+        {
+            "firmwarebinary"   "/firmware/vcf_wired_controller_d0g_55393371.bin"
+            "firmwaretimestamp"     "55393371"
+            "minclientpackage" "1429832485" // 2015/4/23 client, bootloader-aware
+            "crc128"  "9715bee2e0a66df17bb6e9420005829d"
+            "bootloadertimestamp"   "551def90"
+        }
+    }
 }
