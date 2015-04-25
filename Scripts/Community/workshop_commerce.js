@@ -243,7 +243,23 @@ function SendItemToFriends( publishedFileID, steamIDs )
 		{ 'sessionid' : g_sessionID, 'steamids' : steamIDs }
 	).done( function( json ) {
 			waitDialog.Dismiss();
-			ShowAlertDialog( 'Gift Item to Friends', 'Number of gifts given: ' + json.num_granted );
+			if ( json.num_granted == 0 && json.num_requested != 0 )
+			{
+				var strError = 'A problem was encountered trying to give this item as a gift to the selected friends: ';
+				if ( json.errors && json.errors.length != 0 )
+				{
+					for ( var i = 0; i < json.errors.length; ++i )
+					{
+						var e = json.errors[i];
+						strError += '<br>' + e['persona'] + ' = ' + e['eresult'];
+					}
+				}
+				ShowAlertDialog( 'Gift Item to Friends', strError );
+			}
+			else
+			{
+				ShowAlertDialog( 'Gift Item to Friends', 'Number of gifts given: ' + json.num_granted );
+			}
 		}
 	).fail( function( jqXHR ) {
 			waitDialog.Dismiss();
