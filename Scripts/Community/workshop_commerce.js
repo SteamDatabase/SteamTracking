@@ -99,6 +99,18 @@ function ShowPurchaseDialog( publishedFileID, returnPublishedFileID, priceOverri
 					{
 						ShowAlertDialog( 'Purchase Workshop Item', json.required_dlc_msg );
 					}
+					else if ( json.price == 0 )
+					{
+						$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgrantcommerceitem/' + publishedFileID + '/',
+							{ 'sessionid' : g_sessionID }
+						).done( function( json ) {
+								top.location.reload();
+							}
+						).fail( function( jqXHR ) {
+								ShowAlertDialog( 'Error', 'There was a problem trying to grant this item: ' + jqXHR.responseJSON.success );
+							}
+						);
+					}
 					else
 					{
 						form.submit();
