@@ -1,0 +1,757 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.contentBox {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.PreviewContainer,.BundleContainer,.RecommendedContainer {
+	background-color: #071215;
+	box-shadow: 0px 0px 5px #000;
+	overflow: visible;
+	position: relative;
+	display: block;
+	font-size: 14px;
+	color: #686868;
+	max-width: 932px;
+	margin: 16px 0px 10px 14px;
+	padding: 12px;
+	padding-bottom: 44px;
+	border-bottom:solid #22282b 1px;
+}
+
+.RecommendedContainer {
+	height: 250px;
+}
+
+.PreviewItemPageBody {
+	margin: 21px auto 0 auto;
+	position: relative;
+	min-width: 968px;
+	padding: 0;
+}
+
+.PreviewItemPageBody .StoreContainer {
+	min-height: 800px;
+}
+
+.ItemDetailsTopGradient {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 38px;
+}
+
+#PreviewSubContainerRight,.BundleSubContainerRight {
+	float: left;
+	position: relative;
+	display: inline-block;
+	width: 310px;
+	padding: 10px 6px 0 18px;
+	line-height: 20px;
+	color: #6c7075;
+    margin-top:26px;
+}
+
+#PreviewContainer h2 {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: lighter;
+	color: #c6c6c6;
+	padding:  0 0 8px 0;
+	margin:  0;
+	max-width: 900px;
+    overflow: visible;
+}
+
+h2.Title {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: lighter;
+	color: #c6c6c6;
+	padding:  0 0 8px 0;
+	margin:  0;
+	max-width: 900px;
+    overflow: visible;
+	color:#beb7b4;
+}
+
+#PreviewSubContainerRight .Rarity {
+	font-size: 14px;
+	margin-bottom: 12px;
+}
+
+#PreviewSubContainerRight .AttribName {
+	color:#6C7075;
+	font-size: 14px;
+}
+
+#PreviewSubContainerRight .AttribValue {
+	color:#beb7b4;
+	font-size: 14px;
+}
+
+#PreviewSubContainerRight .Description {
+}
+
+#DescriptionContainer {
+}
+
+#PreviewSubContainerRight ul {
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#PreviewSubContainerRight .Name {
+	color: #969696;
+}
+
+#PreviewSubContainerRight .Item {
+}
+
+#PreviewSubContainerRight .TopContainer {
+	position: relative;
+	overflow:  auto;
+	margin-bottom: 18px;
+}
+
+#PreviewSubContainerRight .ItemAttribs {
+	float: left;
+}
+
+#PreviewSubContainerRight .WorkshopContributorInfo {
+	float: left;
+}
+
+#PreviewSubContainerRight .WorkshopContributorInfo ul {
+	margin: 0 0 0 6px;
+	list-style: none;
+	list-style-type: none;
+	float: right;
+}
+
+#PreviewSubContainerRight .WorkshopContributorInfo .CreatedByLabel {
+	float: left;
+}
+
+#PreviewImage {
+	box-shadow: 0px 0px 5px #111111;
+    width: 598px;
+    height:399px;
+	background-color: #111111;
+	position: relative;
+}
+
+#PreviewImage img {
+	width: 598px;
+    height:399px;
+}
+
+.BundlePreviewImage img {
+	width:194px;
+	height:auto;
+}
+
+#PreviewImage .Discount {
+	background-color: #4c6b22;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	padding: 0 4px;
+	font-size: 12px;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 36px;
+	font-size: 19px;
+	padding-top: 6px;
+	width: 68px;
+}
+
+#SetContents {
+   text-transform:uppercase;
+   letter-spacing:1px;
+   margin-top:17px;
+}
+
+.LargeNumber {
+    font-size:20px;
+}
+
+#SetItems {
+	display: block;
+}
+
+#SetItems ul {
+    width:598px;
+}
+
+#SetItems li {
+     list-style: none;
+}
+
+#SetItems li img {
+    width:93px;
+    height:auto;
+    float:left;
+    margin-top: 8px;
+}
+
+.SetItemsLeftMargin {
+    margin-left: 8px;
+}
+
+#TreasurePreviewImage {
+	margin-top: 11px;
+	width: 282px;
+	height: auto;
+}
+
+#TreasureContainerBase, #TreasureContainerBonus {
+	background-color: #10191D;
+	border: 1px solid #0A1010;
+	padding: 4px 4px 4px 4px;
+	box-shadow: 0px 0px 4px #080808;
+	margin-top: 10px;
+}
+
+#TreasureContainerBase {
+	margin-top: 0px;
+}
+
+#TreasureContainerBonus {
+	padding-bottom: 10px;
+}
+
+#TreasureDescBase, #TreasureDescBonus {
+	text-align: center;
+}
+
+#TreasureDescBonus {
+	font-size: 18px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#TreasureItemsBase, #TreasureItemsBonus {
+	display: block;
+    margin-left: -10px;
+}
+
+#TreasureItemsBase ul, #TreasureItemsBonus ul {
+	width: 598px;
+}
+
+#TreasureItemsBase li, #TreasureItemsBonus li {
+    list-style: none;
+    width: 285px;
+    height: auto;
+    float: left;
+    margin-top: 4px;
+    margin-left: 13px;
+}
+
+#TreasureItemsBonus li {
+	color: #beb7b4;
+    text-align: center;
+    line-height: 16px;
+}
+
+#TreasureItemsBase li img, #TreasureItemsBonus li img {
+    width: 285px;
+}
+
+#PreviewImage .CarouselImages {
+	z-index: 0;
+}
+
+#PreviewSubContainerLeft,.BundleSubContainerLeft {
+	float: left;
+	position: relative;
+	width: 598px;
+}
+
+#PreviewSubContainerLeft img {
+	opacity: 0;
+}
+
+h3.BundlesContaining,h3.Recommendations {
+	text-transform:uppercase;
+	margin:20px 0px 10px 30px;
+	font-size:14px;
+	color:#424140;
+	letter-spacing:1px;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
+
+.BundleUpsellContainer {
+	background-color:#151f23;
+	width: 425px;
+	min-height: 108px;
+	padding: 14px;
+	box-shadow: 1px 1px 5px #080808;
+	line-height: 14px;
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.BundleUpsellContainer h1 {
+	color: #c6c6c6;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 8px;
+}
+
+.BundleUpsellContainer h1 i {
+}
+
+.BundleUpsellContainer h2 {
+	color: #5e5e5e;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 16px;
+	padding-bottom: 15px;
+}
+
+.BundleContents {
+	color:#676e7a;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	margin-top:8px;
+}
+
+.BundleUpsellContainer h2 a {
+	color: #5E5E5E;
+}
+
+.BundleUpsellContainer h2 a:hover {
+	color: #b7b7b7;
+}
+
+.BundleUpsellContainer h3 {
+	color: #969aa1;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	position: absolute;
+	bottom: 0;
+}
+
+.RecommendedContainer h3 {
+    height: 12px;
+    border-bottom: 1px solid #22282B;
+    margin-bottom: 20px;
+	color: #575B63;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform:uppercase;
+}
+
+.RecommendedContainer h3:first-line {
+    background-color: #071215;
+}
+
+.RecommendedContainer h3:after {
+    content:"\00a0\00a0";
+}
+
+.DetailsItemContainer .ItemContainerOverlay {
+	width: 100%;
+	background-color: #000;
+	opacity: 0.85;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.DetailsItemContainer .ItemContainerRow {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 170px;
+}
+
+.DetailsItemContainer .ItemContainerCell {
+	padding: 8px;
+	text-align: center;
+	float: left;
+	position: relative;
+	width: 180px;
+	min-height: 217px;
+}
+
+.DetailsItemContainer .ItemContainerCell .AddToCartButtonContainer {
+	position: absolute;
+	bottom: -1px;
+	width: 100%;
+	min-height: 40px;
+	z-index: 1;
+	cursor: default;
+}
+
+.DetailsItemContainer .ItemContainerCell .AddToCartButtonContainer .Spinner {
+	display: none;
+	position: relative;
+	top: 8px;
+	left: 0;
+}
+
+.DetailsItemContainer .ItemContainerCell .ItemImage {
+}
+
+.DetailsItemContainer .ItemContainerCell .TagContainer {
+	top: 10px;
+	left: 15px;
+}
+
+.DetailsItemContainer .ItemContainerCell .HoverContentContainer {
+	margin: 0px 6px 8px 6px;
+}
+
+.DetailsItemContainer .ItemContainerCell .ItemText .Name {
+	text-align: center;
+}
+
+.DetailsItemContainer .ItemContainerCell .ItemImage img {
+	width: 150px;
+	height: 100px;
+}
+
+.ItemDetailsMiniPopup {
+	margin-top: -100px;
+}
+
+.PreviewIcon {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/icon_preview_white.png');
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 18px;
+	position: relative;
+	display: inline-block;
+}
+
+.LimitedQuantityItemInfo {
+	float:right;
+	width:228px;
+	margin-right:4px;
+	text-align:left;
+}
+
+.ButtonsAndPriceContainer {
+	float:right;
+	margin-right:4px;
+}	
+
+.PrizePoolTracker {
+	width: 100%;
+	color: #beb7b4;
+	background-color: #1C2226;
+	border: 5px solid #1C2226;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.PrizePoolTrackerAmount {
+	font-size: 18px;
+	line-height: 22px;
+	padding-top: 3px;
+}
+
+.PrizePoolTrackerTitle {
+	padding-bottom: 4px;
+	line-height: 14px;
+	color: #6B6F74;
+}
+
+.MarketLinkContainer {
+	float: right;
+	margin-right:5px;
+	background-color:#0a1010;
+	width:284px;
+	border: solid #2B363C 1px;
+}
+
+.MarketLinkButton {
+	height:56px;
+	width:100%;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 2px;
+	padding-top: 7px;
+	text-align: center;
+	font-weight: normal;
+	line-height: 20px;
+}
+
+.MarketLinkButton:active, .MarketLinkButton:visited, .MarketLinkButton:link, .MarketLinkButton:focus {
+	color: #838C9B;
+}
+
+.MarketLinkButton:hover {
+	color: #FFFFFF;
+}
+
+.MarketLinkHeader {
+	text-transform: none;
+	float: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+	font-size: 12px;
+}
+
+.MarketLinkAvailability {
+	font-size: 12px;
+}
+
+.ButtonContainer {
+	background-color:#16191b;
+	width:270px;
+	border:solid #16191b 8px;
+	border-radius: 5px;
+	border-bottom-left-radius: 0;
+	-webkit-border-radius: 5px;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-radius: 5px;
+	-moz-border-radius-bottomleft: 0;
+}
+
+.ButtonsAndPriceContainer .Price {
+	float: left;
+	background-color: #0a1010;
+	min-width: 60px;
+	padding:6px 20px 5px 20px;
+	font-size:16px;
+	line-height:22px;
+	text-align: center;
+	margin: 0;
+	color: #c1bbb7;
+	border:solid #16191b 8px;
+	border-top:none;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+}
+
+.ButtonsAndPriceContainer .Price .OriginalPrice {
+	color: #686868;
+	text-decoration: line-through;
+}
+
+.BigButton {
+	height:35px;
+	padding-top:5px;
+}
+
+/*
+.AddToCartContainer .Button {
+	margin-left: 3px;
+	float: right;
+	color: #ffffff;
+	width: 95px;
+	height: 31px;
+	text-align: center;
+	padding-top: 10px;
+	background-color: #6a9630;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.AddToCartContainer .Bundle .DetailPrice {
+	height: 31px;
+}
+
+.AddToCartContainer .Bundle .Price {
+	height: 25px;
+}
+
+.AddToCartContainer .Bundle .Price .OriginalPrice {
+	color: #686868;
+	text-decoration: line-through;
+	display: inline-block;
+}
+*/
+
+.ItemDetailsAddToCartButton_Base {
+	width:270px;
+	color: #fff;
+	text-transform: none;
+	float:none;
+}
+.ItemDetailsAddToCartButton_BaseText {
+	text-transform: uppercase;
+	font-weight:bold;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
+	
+a.BundleDetailsButton {
+	width:270px;
+	color:#838c9b;
+	margin-bottom:8px;
+}
+.BundleDetailsButton:hover {
+	color:#fff;
+}
+.DarkGrayButton2Text {
+	text-transform: uppercase;
+	font-weight:bold;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
+
+.ItemDetailsAddToCartButton {
+}
+
+.DetailPrice_Base {
+	background-color: #30363a;
+	/*height: 46px;*/
+	float:right;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+.DetailPrice {
+	margin: 10px 3px 0 0;
+}
+
+div.PreviewButton {
+	float: right;
+	width: 100px;
+	margin-top: 8px;
+	margin-left: 0px;
+	color:#ddd;
+}
+
+div.TreasureBaseItemPreviewButton, div.TreasureBonusItemPreviewButton {
+	position: absolute;
+	bottom: 7px;
+	right: 0px;
+	width: 35px;
+	opacity: 0.8;
+}
+
+div.TreasureBonusItemPreviewButton {
+	bottom: 19px;
+}
+
+div.TreasureBaseItemPreviewButton:hover, div.TreasureBonusItemPreviewButton:hover {
+	opacity: 1.0;
+}
+
+/*
+ * Carousel
+ */
+.CarouselContainer {
+	position: relative;
+	cursor: pointer;
+	z-index: 0;
+}
+
+.StoreCarousel {
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 616px;
+	height: 440px;
+	background-color: #071215;
+	margin-bottom:16px;
+	box-shadow: 0px 0px 5px #000;
+}
+
+.CarouselCells {
+	float: left;
+	width: 425px;
+	left: 0px;
+	right: 0;
+	cursor: pointer;
+	z-index: 1000;
+	cursor: default;
+	padding-right: 16px;
+}
+
+.CarouselCells a {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/ticker_off.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	float: left;
+	width: 21px;
+	height: 32px;
+	top: 2px;
+	z-index: 1000;
+}
+
+.CarouselCells a.activeSlide, .CarouselCells a.activeSlide:hover {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/ticker_on.png');
+}
+
+.CarouselCells a:hover {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/ticker_hover.png');
+}
+
+.CarouselContainer .CarouselImages {
+	padding: 0;
+	margin: 0;
+	height: 440px;
+	list-style: none;
+	list-style-type: none;
+}
+
+.CarouselContainer .CarouselImages img {
+	width: 616px;
+	height: 338px;
+}
+
+.CarouselFooter {
+	font-family: arial, helvetica, sans-serif;
+	height: 94px;
+	margin: 16px 16px 0 16px;
+	position: relative;
+}
+
+.CarouselFooter h1 {
+	color: #cbcbcb;
+	font-size: 24px;
+	font-weight: normal;
+	width: 530px;
+}
+
+.CarouselFooter .ItemPrice {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 20px;
+	font-weight: bold;
+	color: #cbcbcb;
+}
+
+.CarouselFooter p {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	color: #999999;
+}
+
+.PartnerBanner {
+    width: 932px;
+    height: 128px;
+    display: block;
+    position: relative;
+    margin: 10px 0 -5px 14px;
+    box-shadow: 0px 0px 5px #000;
+}

@@ -1,0 +1,802 @@
+
+body {
+	margin:0;
+	padding:0;
+	background-color:#232425;
+	background-image:none;
+}
+img {
+	border:none;
+}
+
+
+#bodyContainer {
+	position:relative;
+}
+#calloutContainer {
+	position:absolute;
+	top:0px;
+	z-index:1;
+}
+
+#centerColOuter_Callout,#centerColOuter_NoCallout {
+	width:984px;
+	margin:0 auto;
+}
+#centerColOuter_Callout {
+	padding-top:300px;
+}
+#centerColOuter_NoCallout {
+	padding-top:20px;
+}
+#centerColTopShadow,#centerColTop,#centerColBottom,#centerColBottomShadow {
+	z-index:2;
+	width:984px;
+}
+#centerColTopShadow,#centerColBottomShadow {
+	height:25px;
+}
+#centerColTop,#centerColBottom {
+	height:9px;
+}
+#centerColContainer {
+	z-index:2;
+	width:938px;
+	padding:10px 23px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/centercolbox_repeat.png');
+	background-repeat:repeat-y;
+}
+#centerColContent {
+	width:938px;
+}
+#centerColContent h1 {
+	margin:0;
+	padding:8px 0;
+	font-family:KoreanFont,georgia,serif;
+	font-weight:normal;
+	text-transform:uppercase;
+	letter-spacing:7px;
+	font-size:36px;
+	color:#d9d9d9;
+}
+#heroTopPortraitContainer {
+	width:262px;
+	height:149px;
+	position:relative;
+	margin:10px 0 20px 0;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/herotopportrait_container.png');
+}
+#heroTopPortraitIMG {
+	position:absolute;
+	width:256px;
+	height:144px;
+	top:2px;
+	left:3px;
+}
+#centerColContent h3 {
+	color:#9c3627;
+	font-family:KoreanFont,georgia,serif;
+	font-weight:normal;
+	text-transform:uppercase;
+	font-size:24px;
+	margin:20px 0 10px 0;
+}
+
+.centerColHR {
+	height:3px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/centercolbox_hr.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:10px 0;
+}
+.redboxOuter {
+	margin:0;
+	padding:0;
+	width:914px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#242728', endColorstr='#111313'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#242728), to(#111313)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #242728,  #111313); /* for firefox 3.6+ */ 	
+}
+.redboxTop,.redboxBottom {
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/redborderbox_top.png');
+	margin:0;
+	width:914px;
+	height:23px;
+}
+.redboxBottom {
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/redborderbox_bottom.png');
+}	
+.redboxContent {
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/redborderbox_bg_vtile.png');
+	background-repeat:repeat-y;
+	background-position:center;
+	width:914px;
+	margin:0;
+}
+#overviewInner {
+	padding:6px 32px;
+	width:850px;
+	text-align:left;
+}
+#overviewHeroLeft {
+	float:left;
+	width:270px;
+}
+#overviewHeroAbilities {
+	float:left;
+	width:580px;
+}
+#heroPrimaryPortraitHolder {
+	width:243px;
+	height:280px;
+	position:relative;
+	margin-bottom:14px;
+}
+#heroPrimaryPortraitImg {
+	position:absolute;
+	z-index:1;
+	top:3px;
+	left:3px;
+}
+#heroPrimaryPortraitOverlay {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:5;
+}
+#overviewPrimaryStats {
+	width:270px;
+	height:126px;
+	position:relative;
+}
+#overviewIcon_Primary {
+	position:absolute;
+	left:3px;
+	/*top:83px;*/
+	z-index:4;
+}
+#overviewIcon_Int {
+	position:absolute;
+	left:6px;
+	top:5px;
+	z-index:5;
+}
+#overviewIcon_Agi {
+	position:absolute;
+	left:6px;
+	top:47px;
+	z-index:5;
+}
+#overviewIcon_Str {
+	position:absolute;
+	left:6px;
+	top:87px;
+	z-index:5;
+}
+#overviewIcon_Attack {
+	position:absolute;
+	left:124px;
+	top:5px;
+}
+#overviewIcon_Speed {
+	position:absolute;
+	left:117px;
+	top:43px;
+}
+#overviewIcon_Defense {
+	position:absolute;
+	left:122px;
+	top:82px;
+}
+.overview_StatVal {
+	position:absolute;
+	font-size:14px;
+	font-weight:bold;
+}
+#overview_IntVal {
+	top:14px;
+	left:47px;
+}
+#overview_AgiVal {
+	top:54px;
+	left:47px;
+}
+#overview_StrVal {
+	top:94px;
+	left:47px;
+}
+#overview_AttackVal {
+	top:14px;
+	left:178px;
+}
+#overview_SpeedVal {
+	top:54px;
+	left:178px;
+}
+#overview_DefenseVal {
+	top:94px;
+	left:178px;
+}
+
+.overviewAbilityRow {
+	margin-bottom:4px;
+}
+
+.overviewAbilityImg {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.abilityIconHolder {
+	width:99px;
+	height:99px;
+	position:relative;
+	float:left;
+	margin-right:4px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/abilityicon_holder.png');
+}
+.overviewAbilityRow {
+	color:#999999;
+}
+.overviewAbilityRow h2 {
+	font-family:KoreanFont,georgia,serif;
+	font-weight:normal;
+	font-size:18px;
+	margin:0;
+	padding:0;
+	padding-bottom:2px;
+}
+.overviewAbilityRow p {
+	margin:0;
+	padding:0;
+	font-size:12px;
+	line-height:21px;
+}
+.overviewAbilityRowDescription {
+	width:468px;
+	/*border:solid red 1px;*/
+	float:left;
+}
+#bioInner {
+	font-size:14px;
+	padding:6px 32px;
+	width:850px;
+	text-align:left;
+	line-height:22px;
+}
+#statsInner {
+	padding:6px 32px;
+	width:850px;
+	text-align:left;
+}
+#statsLeft {
+	float:left;
+	width:420px;
+	margin-right:10px;
+}
+#statsRight {
+	float:left;
+	width:420px;
+}
+.statRow,.statRowB {
+	font-size:11px;
+	padding:4px 10px;
+	width:400px;
+	text-transform:uppercase;
+	color:#a6a6a6;
+}
+.statRowB {
+	background-color:#313333;
+}
+.statRowCol,.statRowColW,.statRowCol2W {
+    float:right;
+    width:80px;
+    text-align:left;
+}
+.statRowColW,.statRowCol2W {
+    color:#ffffff;
+}
+.statRowCol2W {
+    width:196px;
+}
+
+#abilitiesInner {
+	margin:-10px 0 -14px 0;
+	padding:0px 9px 0px 8px;
+	width:897px;
+	text-align:left;
+}
+.abilitiesInsetBoxTop,.abilitiesInsetBoxBottom {
+	width:897px;
+	height:10px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/abilitiesinsetbox_top.png');
+}
+.abilitiesInsetBoxBottom {
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/abilitiesinsetbox_bottom.png');
+	margin-bottom:10px;
+}	
+.abilitiesInsetBoxInner {
+	width:897px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/abilitiesinsetbox_repeat.png');
+	background-repeat:repeat-y;
+}
+.abilitiesInsetBoxContent {
+	width:875px;
+	margin:0 5px;
+	padding:6px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222525', endColorstr='#131515'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#222525), to(#131515)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #222525,  #131515); /* for firefox 3.6+ */ 	
+}	
+.abilityHeaderBox {
+	width:845px;
+	padding:10px 12px;
+	margin:0 3px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f3031', endColorstr='#252626'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#2f3031), to(#252626)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #2f3031,  #252626); /* for firefox 3.6+ */ 	
+	-moz-box-shadow: 0px 0px 4px 0px #1c1e1e;
+	-webkit-box-shadow: 0px 0px 4px 0px #1c1e1e;
+	box-shadow: 0px 0px 4px 0px #1c1e1e;
+}
+.abilityIconHolder2 {
+	width:114px;
+	height:114px;
+	position:relative;
+	float:left;
+	margin-right:4px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/abilityicon_holder2.png');
+}
+.abilityHeaderBox {
+	color:#999999;
+}
+.abilityHeaderRowDescription h2 {
+	font-family:KoreanFont,georgia,serif;
+	font-weight:normal;
+	font-size:18px;
+	margin:0;
+	padding:0;
+	padding-top:10px;
+	padding-bottom:8px;
+	color:#d0d0d0;
+}
+.abilityHeaderRowDescription p {
+	margin:0;
+	padding:0;
+	font-size:12px;
+	line-height:21px;
+}
+.abilityHeaderRowDescription {
+	width:450px;
+	float:left;
+	padding-right:20px;
+}
+.abilityHeaderRowDescriptionRight {
+	float:left;
+	padding-top:30px;
+	font-size:12px;
+	line-height:20px;
+	text-transform:uppercase;
+	color:#d0d0d0;
+	font-weight:bold;
+}
+.manaCoolKey {
+	color:#999;
+}
+.abilityHeaderRowDescriptionRight img {
+	margin-bottom:2px;
+}
+.cooldownImg,.manaImg {
+	border:solid #202020 2px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.abilityLore {
+	text-align:center;
+	font-size:12px;
+	padding:6px 10px;
+}
+.abilityVideoContainer,.abilityVideoContainer2 {
+	width:868px;
+	height:491px;
+	padding:3px;
+	background-color:#000000;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin:10px 0 0 0;
+}
+.abilityVideoContainer2 {
+	margin:0;
+}
+.abilityFooterBox {
+	width:815px;
+	padding:10px 12px;
+	margin:0 3px;
+}
+.abilityFooterBoxLeft {
+	float:left;
+	width:330px;
+	padding-left:118px;
+	margin-right:10px;
+	font-size:12px;
+	line-height:20px;
+	font-weight:bold;
+	color:#999;
+	text-transform:uppercase;
+}
+.abilityFooterBoxRight {
+	float:left;
+	width:330px;
+	font-size:12px;
+	line-height:20px;
+	font-weight:bold;
+	color:#999;
+}
+.abilityFooterBoxRight .attribVal {
+	color:#d0d0d0;
+}
+.abilityFooterBoxLeft .attribVal {
+	color:#d0d0d0;
+}
+.scepterVal {
+	color:#6fe871;
+}
+.cooldownMana {
+	line-height:20px;
+}
+.cooldownMana .cooldown {
+	clear:left;
+}
+.cooldownMana .manaImg,.cooldownMana .cooldownImg {
+	float:left;
+	margin-right:8px;
+	margin-bottom:6px;
+}
+
+
+.heroIcons {
+	text-align:left;
+}
+.heroPickerInner {
+	width:914px;
+}
+.heroPickerIconLink {
+	float:left;
+	position:relative;
+	display:block;
+	width:59px;
+	height:33px;
+	padding:4px;
+	margin-left:2px;
+	margin-bottom:3px;
+	background-color:#000000;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.filterMatchedHero {
+	background-color:#000;
+}
+.filterUnmatchedHero {
+	filter:alpha(opacity=10);
+	-moz-opacity: .1;
+	opacity: .1;
+  	background-color:#000000;
+  	cursor:default;
+}
+.heroHoverLarge {
+	position:absolute;
+	width:127px;
+	height:71px;
+	top:-19px;
+	left:-34px;
+	z-index:3;
+	border:solid white 3px;
+	padding:1px;
+	background-color:#000000;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0px 0px 4px 4px #1c1e1e;
+	-webkit-box-shadow: 0px 0px 4px 4px #1c1e1e;
+	box-shadow: 0px 0px 4px 4px #1c1e1e;
+}
+
+.heroHoverSmall {
+	z-index:1;
+}
+.heroColLeft {
+	float:left;
+	width:277px;
+	padding:0px 7px 0px 23px;
+	text-align:center;
+}
+.heroColMiddle {
+	float:left;
+	width:277px;
+	padding:0px 10px;
+	text-align:center;
+}
+.heroColRight {
+	float:left;
+	width:277px;
+	padding:0px 23px 0px 7px;
+	text-align:center;
+}
+#columnHeaderImg {
+	margin-right:10px;
+	float:left;
+}
+#columnHeader {
+	margin:0 auto;
+	text-align:center;
+	padding:10px 0px 14px 0px;
+}
+#columnHeaderTextStr,#columnHeaderTextAgi,#columnHeaderTextInt {
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/overviewicon_str.png');
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	padding:6px 10px 15px 40px;
+	overflow:visible;
+	text-transform:uppercase;
+	color:#616363;
+	font-size:16px;
+	font-family:KoreanFont,georgia,serif;
+}
+#columnHeaderTextAgi {
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/overviewicon_agi.png');
+}
+#columnHeaderTextInt {
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/overviewicon_int.png');
+}
+
+#heroBioArea,#itemsHeader {
+	background-color:#000000;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	width:814px;
+	height:80px;
+	padding:8px 30px 3px 30px;
+	margin:0px 0px 20px 0px;
+	text-align:left;
+	overflow:hidden;
+}
+#heroBioArea {
+	position:relative;
+}
+#itemsHeader {
+	padding:8px 10px;
+	width:854px;
+	height:auto;
+}
+#bioBoxFade {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:874px;
+	height:26px;
+	display:none;
+}
+h1#heroBioName,h2#heroBioLoading {
+	color:#c4c0c0;
+	font-size:24px;
+	margin:6px 0px 6px 0px;
+	padding:0;
+	text-align:center;
+	font-family:KoreanFont,georgia,serif;
+	font-weight:normal;
+}
+.bioBoxHR {
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/heropedia/biobox_hr.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	height:1px;
+	margin:6px 0px;
+}
+p#heroBioText {
+	font-size:12px;
+	margin:0;
+	padding:0;
+}
+#heroBioRoles {
+	font-size:14px;
+	text-align:center;
+	margin:0;
+	padding:0;
+	padding-top:2px;
+}
+.bioTextAttack {
+	color:#ffffff;
+}
+#heroFilterArea {
+	font-size:12px;
+	text-transform:uppercase;
+	margin:0px 0px 10px 0px;
+}
+.filterSelect {
+	width:150px;
+	padding:3px;
+	font-size:12px;
+	background-color:#2a2c2d;
+	border-top:solid #363939 1px;
+	border-left:solid #363939 1px;
+	border-bottom:solid #1b1e1e 1px;
+	border-right:solid #1b1e1e 1px;
+	color:#999999;
+	text-transform:uppercase;
+}
+.noCaps {
+	text-transform:none;
+}
+.filterSelect:focus {
+	outline:none;
+}
+
+#itemPickerInner {
+	width:880px;
+	margin:0 auto;
+/*	height:940px;*/
+}
+#itemPickerColHeaders {
+	width:880px;
+	margin:0 auto;
+	position:relative;
+	height:20px;
+}
+
+.shopColumn {
+	float:left;
+	width:70px;
+	padding:0px 5px;
+}
+.floatItemImage {
+	float:left;
+	width:70px;
+	height:53px;
+	margin-bottom:5px;
+}
+.floatRecipeImage {
+	float:left;
+	width:49px;
+	height:37px;
+	margin-right:5px;
+}
+
+.shopColumnHeaderImg {
+	margin-bottom:10px;
+}
+#basicsHeader,#upgradesHeader,#secretsHeader {
+	text-transform:uppercase;
+	font-size:11px;
+	color:#636464;
+	position:absolute;
+	top:0px;
+}
+#basicsHeader {
+	left:10px;
+}
+#upgradesHeader {
+	left:327px;
+}
+#secretsHeader {
+	left:806px;
+}
+
+#fullItemRecipeItems {
+	float:right;
+}
+
+#fullItemRecipeItemsTitle {
+	float:left;
+	padding-top:12px;
+	font-size:12px;
+	color:#cfcfcf;
+	margin-right:10px;
+}
+
+#itemsHeader .itemName {
+	margin-left:5px;
+	color:#ffffff;
+	font-size:18px;
+	font-family:KoreanFont,georgia,serif;
+	text-transform:uppercase;
+}
+#itemsHeader .quality_rare {
+	color:#1a87f9;
+}
+#itemsHeader .quality_artifact {
+	color:#e29b01;
+}
+#itemsHeader .quality_secret_shop {
+	color:#ffffff;
+}
+#itemsHeader .quality_consumable {
+	color:#1d80e7;
+}
+#itemsHeader .quality_common {
+	color:#2bab01;
+}
+#itemsHeader .quality_epic {
+	color:#b812f9;
+}
+#itemsHeader .quality_component {
+	color:#ffffff;
+}
+#itemsHeader .cooldownMana {
+	color:#fbb040;
+	font-size:13px;
+	margin:8px 0 10px 0;
+	line-height:22px;
+	height:22px;
+	padding-left:2px;
+}
+#itemsHeader .mana {
+	float:right;
+	width:85px;
+}
+
+.goldIcon {
+	float:left;
+	margin:2px 4px 0 5px;
+}
+.goldCost {
+	font-weight:bold;
+	color:#f5c433;
+	font-size:15px;
+	margin:0;
+	padding:0;
+}
+.largeItemImg {
+	float:left;
+	clear:both;
+	width:182px;
+	height:138px;
+	border:solid #242424 3px;
+	margin-right:10px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.itemBoxDetails {
+	width:654px;
+	float:left;
+}
+
+.itemBoxHR {
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.detailBoxCol {
+	float:left;
+	width:208px;
+	margin-right:10px;
+	font-size:12px;
+	line-height:17px;
+}
+
+.detailBoxLore {
+	font-family:KoreanFont,georgia,serif;
+	color:#858585;
+}
+.detailBoxDesc {
+	color:#cfcfcf;
+}
+.detailBoxAttribs .attribVal {
+	color:#fbb040;
+}
+.detailBoxAttribs .attribs {
+	font-weight:bold;
+	color:#7a7a7a;
+	font-size:15px;
+	line-height:21px;
+	margin:6px 0 0 11px;
+	padding-left:2px;
+}
+.detailBoxAttribs .attribValText {
+	color:#c0c0c0;
+}
+#itemTopRow {
+	margin-bottom:5px;
+}
+
+
+
+

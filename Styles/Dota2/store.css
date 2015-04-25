@@ -1,0 +1,1507 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Radiance';
+    src: url('http://cdn.dota2.com/apps/dota2/fonts/radiance.eot');
+    src: url('http://cdn.dota2.com/apps/dota2/fonts/radiance.eot?#iefix') format('embedded-opentype'),
+    url('http://cdn.dota2.com/apps/dota2/fonts/radiance.woff') format('woff'),
+    url('http://cdn.dota2.com/apps/dota2/fonts/radiance.ttf') format('truetype'),
+    url('http://cdn.dota2.com/apps/dota2/fonts/radiance.svg#ywftsvg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Radiance-Bold';
+    src: url('http://cdn.dota2.com/apps/dota2/fonts/radiance-bold.eot');
+    src: url('http://cdn.dota2.com/apps/dota2/fonts/radiance-bold.eot?#iefix') format('embedded-opentype'),
+    url('http://cdn.dota2.com/apps/dota2/fonts/radiance-bold.woff') format('woff'),
+    url('http://cdn.dota2.com/apps/dota2/fonts/radiance-bold.ttf') format('truetype'),
+    url('http://cdn.dota2.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Radiance-SemiBold';
+    src: url('http://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.eot');
+    src: url('http://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.eot?#iefix') format('embedded-opentype'),
+    url('http://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.woff') format('woff'),
+    url('http://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.ttf') format('truetype'),
+    url('http://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: arial, helvetica, sans-serif;
+}
+
+a:link {    /* unvisited link */
+	color: #b7b7b7;
+	text-decoration: none
+}
+
+a:visited {	/* visited link */
+	color: #b7b7b7;
+	text-decoration: none
+}
+
+a:hover {  /* mouse over link */
+	color: #ffffff;
+	text-decoration: none
+}
+
+a:active {  /* selected link */
+	color: #b7b7b7;
+	text-decoration: none
+}
+
+.ZeroOpacity {
+	opacity: 0;
+}
+
+.Hidden {
+	display: none;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	font-size: 14px;
+	line-height: 24px;
+	color: #5e5e5e;
+	background-color: #0a1010;
+}
+
+.MainBackgroundImage {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_main.jpg');
+	background-repeat:repeat;
+	background-position:center top;
+}
+
+.NoSelect {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.Label {
+	color: #8f8884;
+	position: relative;
+}
+
+.LabelDisabled {
+	color: #666666;
+	position: relative;
+}
+
+.DropdownBox {
+	width: 190px;
+	height: 27px;
+
+		position: relative;
+}
+
+.DropdownBox input {
+	border: none;
+	background-color: #111111;
+	border-color: #555352;
+	border-style: solid;
+	border-width: 1px;
+	color: #8f8884;
+	margin: 0;
+	width: 190px;
+	outline: none;
+	font-size: 12px;
+}
+
+.DropdownBox input:disabled {
+	border: none;
+	background-color: #171819;
+	border-color: #333333;
+	border-style: solid;
+	border-width: 1px;
+	color: #333333;
+	margin: 0;
+	width: 186px;
+	height: 25px;
+	outline: none;
+	font-size: 12px;
+	padding-left: 4px;
+}
+
+.DropdownBox input.default {
+	font-style: italic;
+	padding: 4px;
+}
+
+.Dropdown {
+	width: 190px;
+	position: absolute;
+	background-color: #111111;
+	border-color: #555352;
+	border-style: solid;
+	border-width: 1px;
+	z-index: 2;
+	display: none;
+	padding: 4px;
+	max-height: 600px;
+	overflow-y: auto;
+}
+
+.Dropdown a, .Dropdown a:visited, .Dropdown a:active {
+	display: block;
+	color: #8F8884;
+	outline: none !important;
+}
+
+.Dropdown a:hover {
+	background-color: #222222;
+}
+
+.DropdownItemActive {
+	background-color: #222222;
+}
+
+.DropdownItemInactive {
+	background-color: #111111;
+}
+
+.DropdownItemSelected {
+	background-color: #3a120e;
+}
+
+.DropdownBox .DropdownButton {
+	position: absolute;
+	display: inline;
+	width: 29px;
+	top: 1px;
+	right: 0;
+	height: 20px;
+	border-left: 1px solid #363534;
+	cursor: pointer;
+}
+
+.DropdownBox .DropdownButtonDisabled
+{
+	position: absolute;
+	display: inline;
+	width: 29px;
+	top: 1px;
+	right: 0;
+	height: 20px;
+	border-left: 1px solid #333333;
+	cursor: default;
+}
+
+.DropdownBox .DropdownButton .DownArrow {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #cdc1a9;
+}
+
+.DropdownBox .DropdownButtonDisabled .DownArrow {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #333333;
+}
+
+.DropdownBox .DropdownButton .VerticalRule {
+	position: relative;
+	display: inline;
+	top: 1px;
+	right: 36px;
+	height: 25px;
+	border-left: 1px solid #363534;
+	padding: 0;
+	margin: 0;
+}
+
+.StorePageBody {
+	margin: 21px auto 0 auto;
+	position: relative;
+	padding: 0;
+}
+
+.StoreContainerShadowTop {
+	margin-right: auto;
+	margin-left: auto;
+	width: 966px;
+	height: 14px;
+}
+
+.StoreContainer {
+	margin: -4px auto 0 auto;
+	position: relative;
+	width: 966px;
+	overflow: hidden;
+}
+
+.StoreContainerRepeatingBg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 10px;
+	margin: 0 auto;
+}
+
+.StoreContainerBg {
+	overflow: visible;
+	top: 4px;
+	position: absolute;
+	width: 938px;
+	height: 708px;
+	margin-left:14px;
+	margin-right:14px;
+}
+
+#StoreFilters {
+	font-size: 12px;
+	color: #8f8884;
+	max-width: 932px;
+	min-height: 82px;
+	margin: 16px 14px 0px;
+	padding: 10px 36px 0px 36px;
+	position: relative;
+	width:937px;
+	box-shadow: 0px 0px 5px #000;
+}
+
+#StoreFilters .DropdownContainer {
+	float: left;
+	display: inline-block;
+	width: 25%;
+}
+
+.StoreItemNavContainer {
+	padding: 14px 25px 2px;
+	color: #8f8884;
+	position: relative;
+}
+
+.StoreItemNavContainer .NumDisplayItems {
+	float: left;
+	text-align: right;
+	max-height: 30px;
+}
+
+.StoreItemNavContainer .PageNav {
+	float: right;
+	width: 228px;	/* Fixed width so that the nav buttons don't jump around */
+	height: 26px;
+}
+
+.PageControls {
+	width:920px;
+	float:right;
+	font-size:12px;
+	color:#757575;
+	line-height:26px;
+}
+
+.PageControls .BaseNavButton {
+	float: left;
+	z-index: 10;
+	width: 40px;
+}
+
+.PageControls .BtnBack {
+	padding: 7px 0 0 15px;
+}
+
+.PageControls .BtnForward {
+	padding: 7px 0 0 17px;
+}
+
+.ArrowRight {
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #aaa;
+}
+
+.ArrowLeft {
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent; 
+	border-right: 6px solid #aaa; 
+}
+
+.BtnClose {
+	display: block;
+	margin: 8px;
+	width: 12px;
+	height: 12px;
+	background: url('http://cdn.dota2.com/apps/dota2/images/store/btn_close.png') no-repeat 0 0;
+	background-position: top;
+	float:right;
+	cursor: pointer;
+}
+
+.BtnClose:hover {
+	background-position: bottom;
+}
+
+.PageNavPagesContainer {
+	text-align: center;
+	width: 148px;
+	display: inline-block;
+	overflow: hidden;
+	float: left;
+	height: 25px;
+}
+
+#ItemDetailsMiniPopupBorderLeftArrow {
+	display: none;
+	width: 13px;
+	height: 26px;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/hover_arrow_both.gif');
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	top: 48px;
+	left: 0px;
+	z-index: 1500;
+}
+
+#ItemDetailsMiniPopupBorderRightArrow {
+	display: none;
+	width: 13px;
+	height: 26px;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/hover_arrow_both.gif');
+	background-repeat: no-repeat;
+	background-position: right top;
+	position: absolute;
+	top: 48px;
+	right: 0px;
+	z-index: 1500;
+}
+
+/* popup formatting */
+
+#ItemDetailsMiniPopup {
+	position: absolute;
+	width: 306px;
+	z-index: 1000;
+	border-style:  solid;
+	border-width:  1px;
+	border-color:  #656565;
+	background-color: #262a2d;
+	padding: 12px 12px 12px 12px;
+	box-shadow: 3px 3px 4px #000;
+	font-size: 14px;
+	display: none;
+	color: #6f6f6f;
+	text-align: center;
+}
+
+#ItemDetailsMiniPopup .Name {
+	font-size: 18px;
+	line-height: 22px;
+	color: #beb7b4;
+	margin-bottom: 6px;
+}
+
+#ItemDetailsMiniPopup .Rarity {
+	font-size: 18px;
+	color:#071215;
+}
+
+#ItemDetailsMiniPopup .RarityCell {
+	height:24px;
+	margin: 12px 0px 12px -12px;
+	width:304px;
+}
+
+.RarityCommon {
+	background: #8694a5; /* Old browsers */
+	background: -moz-linear-gradient(left,  #8694a5 0%, #b0c3d9 36%, #b0c3d9 64%, #8694a5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#8694a5), color-stop(36%,#b0c3d9), color-stop(64%,#b0c3d9), color-stop(100%,#8694a5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #8694a5 0%,#b0c3d9 36%,#b0c3d9 64%,#8694a5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #8694a5 0%,#b0c3d9 36%,#b0c3d9 64%,#8694a5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #8694a5 0%,#b0c3d9 36%,#b0c3d9 64%,#8694a5 100%); /* IE10+ */
+	background: linear-gradient(to right,  #8694a5 0%,#b0c3d9 36%,#b0c3d9 64%,#8694a5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8694a5', endColorstr='#8694a5',GradientType=1 ); /* IE6-9 */
+}
+
+.RarityUncommon {
+	background: #406894; /* Old browsers */
+	background: -moz-linear-gradient(left,  #406894 0%, #5e98d9 36%, #5e98d9 64%, #406894 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#406894), color-stop(36%,#5e98d9), color-stop(64%,#5e98d9), color-stop(100%,#406894)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #406894 0%,#5e98d9 36%,#5e98d9 64%,#406894 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #406894 0%,#5e98d9 36%,#5e98d9 64%,#406894 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #406894 0%,#5e98d9 36%,#5e98d9 64%,#406894 100%); /* IE10+ */
+	background: linear-gradient(to right,  #406894 0%,#5e98d9 36%,#5e98d9 64%,#406894 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#406894', endColorstr='#406894',GradientType=1 ); /* IE6-9 */
+}
+
+.RarityRare {
+	background: #273dad; /* Old browsers */
+	background: -moz-linear-gradient(left,  #273dad 0%, #395aff 36%, #395aff 64%, #273dad 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#273dad), color-stop(36%,#395aff), color-stop(64%,#395aff), color-stop(100%,#273dad)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #273dad 0%,#395aff 36%,#395aff 64%,#273dad 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #273dad 0%,#395aff 36%,#395aff 64%,#273dad 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #273dad 0%,#395aff 36%,#395aff 64%,#273dad 100%); /* IE10+ */
+	background: linear-gradient(to right,  #273dad 0%,#395aff 36%,#395aff 64%,#273dad 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#273dad', endColorstr='#273dad',GradientType=1 ); /* IE6-9 */
+}
+
+.RarityMythical {
+	background: #5b2faa; /* Old browsers */
+	background: -moz-linear-gradient(left,  #5b2faa 0%, #8847ff 36%, #8847ff 64%, #5b2faa 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#5b2faa), color-stop(36%,#8847ff), color-stop(64%,#8847ff), color-stop(100%,#5b2faa)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #5b2faa 0%,#8847ff 36%,#8847ff 64%,#5b2faa 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #5b2faa 0%,#8847ff 36%,#8847ff 64%,#5b2faa 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #5b2faa 0%,#8847ff 36%,#8847ff 64%,#5b2faa 100%); /* IE10+ */
+	background: linear-gradient(to right,  #5b2faa 0%,#8847ff 36%,#8847ff 64%,#5b2faa 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b2faa', endColorstr='#5b2faa',GradientType=1 ); /* IE6-9 */
+}
+
+.RarityLegendary {
+	background: #8b1d98; /* Old browsers */
+	background: -moz-linear-gradient(left,  #8b1d98 0%, #d32ce6 36%, #d32ce6 64%, #8b1d98 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#8b1d98), color-stop(36%,#d32ce6), color-stop(64%,#d32ce6), color-stop(100%,#8b1d98)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #8b1d98 0%,#d32ce6 36%,#d32ce6 64%,#8b1d98 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #8b1d98 0%,#d32ce6 36%,#d32ce6 64%,#8b1d98 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #8b1d98 0%,#d32ce6 36%,#d32ce6 64%,#8b1d98 100%); /* IE10+ */
+	background: linear-gradient(to right,  #8b1d98 0%,#d32ce6 36%,#d32ce6 64%,#8b1d98 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b1d98', endColorstr='#8b1d98',GradientType=1 ); /* IE6-9 */
+}
+
+.RarityAncient {
+	background: #9f3333; /* Old browsers */
+	background: -moz-linear-gradient(left,  #9f3333 0%, #eb4b4b 36%, #eb4b4b 64%, #9f3333 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#9f3333), color-stop(36%,#eb4b4b), color-stop(64%,#eb4b4b), color-stop(100%,#9f3333)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #9f3333 0%,#eb4b4b 36%,#eb4b4b 64%,#9f3333 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #9f3333 0%,#eb4b4b 36%,#eb4b4b 64%,#9f3333 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #9f3333 0%,#eb4b4b 36%,#eb4b4b 64%,#9f3333 100%); /* IE10+ */
+	background: linear-gradient(to right,  #9f3333 0%,#eb4b4b 36%,#eb4b4b 64%,#9f3333 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f3333', endColorstr='#9f3333',GradientType=1 ); /* IE6-9 */
+}
+
+.RarityImmortal{
+	background: #977326; /* Old browsers */
+	background: -moz-linear-gradient(left,  #977326 0%, #e4ae39 36%, #e4ae39 64%, #977326 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#977326), color-stop(36%,#e4ae39), color-stop(64%,#e4ae39), color-stop(100%,#977326)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #977326 0%,#e4ae39 36%,#e4ae39 64%,#977326 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #977326 0%,#e4ae39 36%,#e4ae39 64%,#977326 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #977326 0%,#e4ae39 36%,#e4ae39 64%,#977326 100%); /* IE10+ */
+	background: linear-gradient(to right,  #977326 0%,#e4ae39 36%,#e4ae39 64%,#977326 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#977326', endColorstr='#977326',GradientType=1 ); /* IE6-9 */
+}
+
+.RarityArcana{
+	background: #759a3e; /* Old browsers */
+	background: -moz-linear-gradient(left,  #759a3e 0%, #ade55c 36%, #ade55c 64%, #759a3e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#759a3e), color-stop(36%,#ade55c), color-stop(64%,#ade55c), color-stop(100%,#759a3e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #759a3e 0%,#ade55c 36%,#ade55c 64%,#759a3e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #759a3e 0%,#ade55c 36%,#ade55c 64%,#759a3e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #759a3e 0%,#ade55c 36%,#ade55c 64%,#759a3e 100%); /* IE10+ */
+	background: linear-gradient(to right,  #759a3e 0%,#ade55c 36%,#ade55c 64%,#759a3e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#759a3e', endColorstr='#759a3e',GradientType=1 ); /* IE6-9 */
+}
+
+#ItemDetailsMiniPopup .PortraitContainer {
+	margin: 0px -12px 0px -12px;
+	padding: 0 0 0 10px;
+}
+
+#ItemDetailsMiniPopup .Portrait {
+	background-size: 80px 46px;
+	background-repeat:no-repeat;
+	width:80px;
+	height: 46px;
+	padding-top:10px;
+}
+
+#ItemDetailsMiniPopup .UsageType {
+	margin-top: 3px;
+	line-height: 20px;
+	float:left;
+	padding-left:92px;
+	text-align:left;
+}
+
+#ItemDetailsMiniPopup .UsageInfo {
+	margin-top: 3px;
+	line-height: 20px;
+	color: #beb7b4;	
+	float:left;
+	padding-left:10px;
+	text-align:left;
+}
+
+#ItemDetailsMiniPopup .NoticeCell {
+	background-color:#34363a;
+}
+
+#ItemDetailsMiniPopup .NoticeInfo {
+	position: relative;
+	margin: 12px 0 -12px -12px;
+	line-height: 16px;
+	float:left;
+	width: 304px;
+	padding: 14px 5px 14px 39px;
+	background-color: #333539;
+	color: #b6afad;
+}
+
+#ItemDetailsMiniPopup .NoticeText {
+	position: relative;
+	display: inline-block;
+	float: left;
+	text-align: left;
+	margin-left: 10px;
+}
+
+#ItemDetailsMiniPopup .NoticeIcon {
+	position: relative;
+	display: inline-block;
+	float: left;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/icon_notice.png');
+	background-repeat:no-repeat;
+	top: 0;
+	height: 22px;
+	width: 22px;
+	margin-top: 5px;
+}
+
+#ItemDetailsMiniPopupDescription 
+{
+    position: relative;
+    margin-top: 80px;
+    display: block;
+}
+
+#ItemDetailsMiniPopupDescription p
+{
+    line-height: 16px;
+    text-align: left;
+}
+
+#ItemDetailsMiniPopup .SetInfo {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+#ItemDetailsMiniPopup span.SetName {
+	color: #6f6f6f;
+}
+
+#ItemDetailsMiniPopup ul {
+	font-size: 12px;
+	list-style: none;
+	list-style-type: none;
+	padding: 0;
+	border: none;
+	margin: 0 0 5px 0;
+}
+
+#ItemDetailsMiniPopup li {
+	line-height: 17px;
+}
+
+.DescriptionNote {
+    font-style:italic;
+}
+
+
+/* end popup formatting sz */
+
+#ContentContainer {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+	margin-top:16px;
+	position: relative;
+	width: 937px;
+	min-height: 814px;
+}
+
+.MainItemContainer .ErrorContainer {
+	width: 80%;
+	margin: 100px auto 0 auto;
+}
+
+.MainItemContainer .Grid {
+	padding:16px 0px 24px 0px;
+	background-color: #071215;
+	min-height: 814px;
+	width:932px;
+	box-shadow: 0px 0px 5px #000;
+}
+
+.ItemContainerBg {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	position: absolute;
+	top: 0;
+	width: 932px;
+	height: 1260px;
+}
+
+.ItemContainerGradient {
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	position: absolute;
+	top: 0;
+	width: 932px;
+	height: 38px;
+}
+
+#CartBackground {
+	background-color:#0a1010;
+	padding: 20px;
+}
+
+.HorizontalRule {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/rule.jpg');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	min-height: 1px;
+	width: 920px;
+	position: relative;
+	margin: 10px 0;
+}
+
+.MainItemContainer {
+}
+
+.MainItemContainer .ItemContainerOverlay {
+	width: 100%;
+	background-color: #000;
+	opacity: 0.85;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.MainItemContainer .ItemContainerRow {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 880px;
+	height: 250px;
+}
+
+.MainItemContainer .ItemContainerCell {
+	padding: 8px;
+	text-align: center;
+	float: left;
+	position: relative;
+	width: 220px;
+	min-height: 250px;
+}
+
+.MainItemContainer .ItemContainerCell .AddToCartButtonContainer {
+	position: absolute;
+	bottom: -1px;
+	width: 100%;
+	min-height: 40px;
+	z-index: 1;
+	cursor: default;
+}
+
+.MainItemContainer .ItemContainerCell .AddToCartButtonContainer .Spinner {
+	display: none;
+	position: relative;
+	top: 8px;
+	left: 0;
+}
+
+.MainItemContainer .ItemContainerCell .ItemImage {
+}
+
+.MainItemContainer .ItemContainerCell .TagContainer {
+	top: 10px;
+	left: 10px;
+}
+
+.ItemContainerCell .ItemImage img {
+	opacity: 0;
+}
+
+.MainItemContainer .ItemContainerCell .ItemText {
+}
+
+.MainItemContainer .ItemContainerCell .ItemText .Name {
+	text-align: center;
+}
+
+.ItemDetailsMiniPopupBorderActive {
+	border-top-style: solid;
+	border-width:  2px;
+	border-radius: 0;
+	padding: 0px 2px;
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-position: 0 0, 100% 0;
+	background-repeat: no-repeat;
+}
+
+.ItemDetailsMiniPopupBorderInactive {
+	padding: 2px;
+}
+
+.ItemContainerCell_Base {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.HoverContentContainer_Base {
+	background-color: #262a2d;
+	padding: 5px;
+	border:1px #3c3c3c solid;
+}
+
+.TagContainer_Base {
+	color: #bcbcbc;
+	position: absolute;
+	z-index: 1;
+}
+
+.DiscountTag_Base {
+	background: #2b3c15; /* Old browsers */
+	background: -moz-linear-gradient(top,  #2b3c15 0%, #4d6c22 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2b3c15), color-stop(100%,#4d6c22)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #2b3c15 0%,#4d6c22 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #2b3c15 0%,#4d6c22 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #2b3c15 0%,#4d6c22 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #2b3c15 0%,#4d6c22 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3c15', endColorstr='#4d6c22',GradientType=0 ); /* IE6-9 */
+
+	color: #d3cbc7;
+	text-shadow: 1px 1px 1px #263810;
+
+	position: relative;
+	padding: 0 5px;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+}
+
+.NewTag_Base {
+	background-color: #963222;
+	color: #bcbcbc;
+	position: relative;
+	padding: 0 5px;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #5c1a13;
+	letter-spacing: 1px;
+}
+
+.IconPrizePool, .IconCompendium, .IconFantasy {
+	width: 12px;
+	height: 12px;
+	vertical-align: top;
+	margin-top: 3px;
+}
+
+.ItemContainerCell .ItemImage img {
+	width: 200px;
+	height: 133px;
+}
+
+.ItemImageDropShadow {
+	box-shadow: 0px 0px 3px #000;
+}
+
+.ItemImage_Base {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+}
+
+.ItemText_Base {
+	font-size: 14px;
+	line-height: 18px;
+	padding-top: 6px;
+}
+
+.SaleText_Base {
+	color: #5d5b5a;
+	display: block;
+}
+
+.ItemName_Base {
+	color: #bcbcbc;
+	line-height: 18px;
+}
+
+.ItemText .PlayerClass {
+	display: block;
+	color: #686868;
+	font-size: 14px;
+}
+
+.ItemText .Price {
+	display: inline-block;
+	color: #948c88;
+	font-size: 14px;
+}
+
+.ItemText .DiscountedPrice {
+	display: inline-block;
+}
+
+.ItemText .OriginalPrice {
+	color: #686868;
+	text-decoration: line-through;
+	display: inline-block;
+}
+
+#PreviewContainer {
+	background-color: #071215;
+	box-shadow: 0px 0px 5px #000;
+	overflow: visible;
+	position: relative;
+	display: block;
+	font-size: 14px;
+	color: #686868;
+	max-width: 932px;
+	margin: 16px 14px 0px;
+	padding: 12px;
+	padding-bottom: 44px;
+}
+#PreviewBG {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_container_top.png');
+	background-repeat: repeat-x;
+	height:38px;
+	width: 932px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.ErrorText {
+	color: #a53727;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 190px;
+}
+
+#StoreTabs {
+	margin: 24px 0 0 14px;
+	height: 52px;
+	position: relative;
+	width: 932px;
+}
+
+#StoreTabButtons {
+	position: absolute;
+	z-index: 2;
+}
+
+#StoreTabButtons .LowerBg {
+	position: absolute;
+	left: 0;
+	top: 4px;
+	width: 100%;
+	height: 48px;
+	background-color: #000;
+	z-index: 1;
+}
+
+.StoreTabMenu {
+	position: absolute;
+	min-width: 185px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #373c40;
+	color: #8c8a80;
+	display: none;
+	background-color: #000;
+	z-index: 2000;
+	font-size: 9px;
+	text-align: left;
+	padding: 3px;
+	box-shadow: 9px 9px 36px black;
+}
+
+.StoreTabMenu .StoreTabMenuItem {
+	text-transform: none;
+	cursor: pointer;
+	font-size: 12px;
+	color: #8c8a80;
+	padding: 2px 0 2px 5px;
+	letter-spacing:normal;
+}
+
+.StoreTabMenu .StoreTabMenuItem:hover {
+	cursor: pointer;
+	font-size: 12px;
+	padding:  2px 0 2px 5px;
+	background-color: #1c242d;
+}
+
+/* Base store tab style */
+.StoreTab {
+	top: 4px;
+	padding-top: 13px;
+	width: 150px;
+	height: 48px;
+	display: inline-block;
+	text-align: center;
+	float: left;
+	text-transform: uppercase;
+	min-width: 157px;
+	margin-right:2px;
+	cursor: pointer;
+	z-index: 2;
+	position: relative;
+	color: #969aa1;
+	font-size:12px;
+	letter-spacing:1px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #111111;
+}
+
+.StoreTab:active {
+	color: #000 !important;
+	text-shadow: none !important;
+	font-weight:bold;
+}
+
+.StoreTab .DownArrowBase {
+	display: inline-block;
+	position: relative;
+	top: -2px;
+	margin-left: 5px;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+}
+
+.StoreTab:active .DownArrowBase {
+	border-top: 6px solid #111111 !important;
+}
+
+.StoreTab .DownArrow .Shadow {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #111;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	z-index: -1;
+}
+
+.StoreTab:active .DownArrow .Shadow {
+	border: none;
+}
+
+.StoreTabActive, .StoreTabActive:link, .StoreTabActive:visited {
+	font-weight:bold;
+	color: #000 !important;
+	text-shadow: none;
+	height: 52px;
+	top: 0;
+	padding-top: 17px;
+}
+
+.StoreTabActive:active {
+	font-weight:bold;
+	color: #000 !important;
+	padding-top: 17px;
+	height: 52px;
+}
+
+.StoreTabActive:hover {
+	background-position:bottom;
+}
+
+.StoreTabActive .DownArrow {
+	border-top: 6px solid #111111 !important;
+}
+
+.StoreTab .DownArrow {
+	border-top: 6px solid #969AA1;
+}
+
+.StoreTabActive .DownArrow .Shadow {
+	display: none;
+}
+
+.StoreTabMenuButton {
+}
+
+.StoreTabInactive {
+	color: #969aa1;
+	text-shadow: 1px 1px 1px #111111;
+}
+
+.StoreTabInactive:hover {
+	background-position:bottom;
+}
+
+/* Tab styles for international tab */
+.StoreTabActive_International {
+	color: #111111;
+	padding-top: 11px;
+	height:29px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/store/tab_international_on.png');
+	z-index: 2;
+}
+
+.StoreTabActive_International:hover {
+	background-position:bottom;
+}
+
+.StoreTabInactive_International {
+	color: #969aa1;
+	text-shadow: 1px 1px 1px #111111;
+	bottom: 0;
+	padding-top: 8px;
+	margin-top: 4px;
+	height:28px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/store/tab_international_off.png');
+}
+
+.StoreTabInactive_International:hover {
+	background-position:bottom;
+}
+
+.StoreTabPadding {
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 100%;
+	height: 48px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/store/tab_bar_48.jpg');
+	background-repeat:repeat-x;
+	box-shadow: 0px 0px 5px #000;
+	overflow: visible;
+}
+
+#WalletButtonText {
+	position: absolute;
+	top: 1px;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	font-weight:bold;
+	letter-spacing:normal;
+}
+
+.HighlightedNavText {
+	color: #cccccc;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+/* BUTTONS */
+.ToggleFiltersButton {
+	min-width: 150px;
+}
+
+.HoverAddToCartButton {
+	width: 100%;
+	position: relative;
+	height: 43px !important;
+	padding-top: 5px !important;
+}
+
+.WalletHeaderButton {
+	min-width: 94px;
+	position: absolute;
+	box-shadow: 0px 0px 3px #111;
+	overflow: visible;
+	top: -24px;
+	right: 100px;
+}
+
+#WalletButton_Spinner {
+	display: none;
+	left: 50%;
+	top: 50%;
+	margin-left: -7px;
+	margin-top: -7px;
+	width: 14px;
+	height: 14px;
+	position: absolute;
+}
+
+#CartButton {
+	position: absolute;
+	right: 5px;
+	top: -24px;
+	vertical-align: top;
+	cursor: pointer;
+	min-width: 85px;
+	min-height: 24px;
+}
+
+#CartButtonTextIcon {
+	margin-right: 5px;
+	margin-bottom: -3px;
+	height: 18px;
+	width: 18px;
+	display: inline-block;
+}
+
+#CartButton.NoItems #CartButtonText #CartButtonTextIcon {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/icon_cart_empty.png');
+}
+
+#CartButton.NoItems #CartButtonText #CartButtonTextIcon {
+	background-position: 0px 0;
+}
+
+#CartButton.NoItems:hover #CartButtonText #CartButtonTextIcon {
+	background-position: -18px 0;
+}
+
+#CartButton.HasItems #CartButtonText #CartButtonTextIcon {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/icon_cart.png?h');
+}
+
+#CartButton.HasItems #CartButtonText #CartButtonTextIcon {
+	background-position: 0px 0;
+}
+
+#CartButton.HasItems:hover #CartButtonText #CartButtonTextIcon {
+	background-position: -18px 0;
+}
+
+#CartButton.NoItems {
+	color: #6d6d6d;
+}
+
+#CartButton.NoItems:hover {
+	color: #a9aeb6;
+}
+
+#CartButton.HasItems {
+	color: #6f9c32;
+}
+
+#CartButton.HasItems:hover {
+	color: #95d143;
+}
+
+#CartButtonText {
+	top: 1px;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	font-size: 14px;
+	letter-spacing: normal;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.ModalConfirmButton {
+	width:250px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.ModalBase {
+	background-repeat:no-repeat;
+	display: none;
+	text-align:center;
+	z-index: 9999;
+	opacity: 1;
+	box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+}
+
+.ModalBg {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_modal.jpg');
+	width: 458px;
+	height: 216px;
+}
+
+.ModalBgBig {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_modal_big.jpg');
+	width: 530px;
+	height: 255px;
+	padding: 15px;
+}
+
+.ModalTextBox {
+	margin-top: 30px;
+}
+
+.ModalBigText {
+	font-size: 18px;
+	margin: 40px 60px 0 60px;
+	color: #999;
+}
+
+.ModalBigButton {
+	position: absolute;
+	bottom: 20px;
+	width: 170px;
+}
+
+.AlignModalButtonCenter {
+	left: 50%;
+	margin-left: -80px;
+}
+
+.AlignModalButtonLeft {
+	left: 90px;
+}
+
+.AlignModalButtonRight {
+	right: 90px;
+}
+
+#CartConfirmModal h2 {
+	margin: 0;
+	padding: 36px 0 12px 0;
+	font-size: 20px;
+	font-weight: normal;
+	color:#c6c6c6;
+}
+
+#CartConfirmModal p {
+	margin: 0;
+	padding: 10px 0 13px 0;
+	font-size: 20px;
+	font-weight: normal;
+	color:#c6c6c6;
+}
+
+#CartConfirmSpinner {
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	top: 35px;
+	width: 150px;
+	height: 150px;
+}
+
+#OpeningSoon {
+	background-color: #0a1010;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/openingsoon.jpg');
+	background-position:center top;
+	background-repeat: no-repeat;
+	height:810px;
+}
+
+#Closed {
+	background-color: #0a1010;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/closed.jpg');
+	background-position:center top;
+	background-repeat: no-repeat;
+	height:810px;
+	position:relative;
+}
+
+#NowClosed {
+	padding-top:240px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size: 18px;
+	color: #5e5e5e;
+}
+
+.SoldOutTextContainer {
+	color: #9d3c21;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.NoPadding {
+	padding: 0;
+}
+
+.AllCurrencyModeView {
+	display: block;
+	opacity: 0;
+	position: absolute;
+	background-color: #000;
+	right: 10px;
+	top: 10px;
+	font-size: 12px;
+	line-height: 17px;
+	padding: 14px;
+}
+
+.AllCurrencyModeView:hover {
+	opacity: 1;
+}
+
+.SlimButton {
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 2px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 11px;
+	text-align: center;
+	font-weight: normal;
+}
+
+.BigButton {
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 2px;
+	height: 40px;
+	padding-top: 8px;
+	font-size: 13px;
+	text-align: center;
+	font-weight: normal;
+}
+
+.ButtonPrice {
+	display:inline-block;
+	color:#fff;
+	font-weight:bold;
+	font-size:14px;
+	text-shadow: 1px 1px 1px #111111;
+	line-height:32px;
+	vertical-align:bottom;
+}
+
+.SmallCartIcon {
+	width:20px;
+	height:20px;
+}
+
+#FullScreenOverlay {
+    display:none;
+    z-index:10000;
+}
+
+.FrostivusSaleBanner_Base {
+	background-color: #0a1010;
+	background-position:center top;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 5px #000;
+	position: relative;
+	display: block;
+	width: 932px;
+	height: 180px;
+	margin: 16px 14px 0px;
+}
+
+.FrostivusSaleBanner {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/compendium_banner_x.jpg');
+}
+
+#FrostivusSaleBannerShopNow {
+	position: absolute;
+	left: 726px;
+	top: 125px;
+	display: block;
+	width: 189px;
+	height: 33px;
+}
+
+#FrostivusSaleBannerShopNowText {
+	text-align: center;
+	vertical-align: middle;
+	height: 33px;
+	line-height: 31px;
+	font-family: 'Radiance-SemiBold', serif;
+	font-size: 17px;
+	color: #F4D8B5;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 1px #111111;
+	text-transform: uppercase;
+}
+
+.FilterItemTag {
+	background-color: #963222;
+	color: #bcbcbc;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #5c1a13;
+	font-size: 10px;
+	padding: 0px 3px 2px 2px;
+	line-height: 12px;
+	margin-left: 3px;
+	vertical-align: 1px
+}
+
+.ItemAttribute {
+	text-align: left;
+	margin-top: 9px;
+	margin-bottom: 3px;
+	padding-left: 33px;
+	min-height: 24px;
+	line-height: 22px;
+	color: #747A86;
+}
+
+.ItemAttribute.PrizePool {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/attribute_icon_prizepool.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	line-height: 18px;
+	color: #a3770a;
+}
+
+.ItemAttribute.Compendium {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/attribute_icon_compendium.png');
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.ItemAttribute.Fantasy {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/attribute_icon_fantasy.png');
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#PromoBannerCopy {
+    position: absolute;
+    left: 24px;
+    top: 76px;
+    display: block;
+    width: 508px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 24px;
+    font-family: 'Radiance', serif;
+    font-size: 14px;
+    color: #827c7c;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px #111111;
+}
+
+#PikeColor {
+    color:#493d36;
+}

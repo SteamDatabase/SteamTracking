@@ -275,6 +275,23 @@
 "Scripts/Partner/storeadmin.js"                  : "https://partner.steamgames.com/public/javascript/storeadmin.js?__TIME__&l=english",
 
 //
+// Dota 2 CSS
+//
+"Styles/Dota2/store.css"                       : "https://www.dota2.com/public/css/store.css?__TIME__",
+"Styles/Dota2/store_featured.css"              : "https://www.dota2.com/public/css/store_featured.css?__TIME__",
+"Styles/Dota2/itemdetails.css"                 : "https://www.dota2.com/public/css/itemdetails.css?__TIME__",
+"Styles/Dota2/cart.css"                        : "https://www.dota2.com/public/css/cart.css?__TIME__",
+"Styles/Dota2/heropedia.css"                   : "https://www.dota2.com/public/css/heropedia.css?__TIME__",
+
+//
+// Dota 2 JS
+//
+"Scripts/Dota2/storecommon.js"                 : "https://www.dota2.com/public/javascript/storecommon.js?__TIME__&l=english",
+"Scripts/Dota2/store.js"                       : "https://www.dota2.com/public/javascript/store.js?__TIME__&l=english",
+"Scripts/Dota2/itemdetails.js"                 : "https://www.dota2.com/public/javascript/itemdetails.js?__TIME__&l=english",
+"Scripts/Dota2/heropedia.js"                   : "https://www.dota2.com/public/javascript/heropedia.js?__TIME__&l=english",
+
+//
 // API
 //
 "API/SupportedAPIList.json"                      : "https://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?__KEY__",

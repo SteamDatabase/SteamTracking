@@ -1,0 +1,671 @@
+@charset "utf-8";
+
+* {
+	font-family: Arial;
+}
+
+.FeaturedViewHeader {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/featured_cell_header_bg.png');
+	background-position:center top;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 33px;
+	position: relative;
+	text-transform: uppercase;
+	top: 0;
+	left: 0
+}
+
+.FeaturedViewHeader p {
+	padding: 5px 0 0 10px;
+	color: #676e7a;
+	font-weight: bold;
+	font-size: 12px;
+	letter-spacing:1px;
+}
+
+.FeaturedViewHeader p a {
+	color: #676e7a;
+}
+
+.FeaturedViewHeader p a:hover {
+	color: #a7aeba;
+}
+
+.FeaturedViewBottomPadding {
+	margin-bottom: 16px;
+}
+
+.LeftColumn {
+	float: left;
+	overflow: visible;
+	width: 616px;
+}
+
+.RightColumn {
+	float: left;
+	overflow: visible;
+	width: 300px;
+	margin-left: 16px;
+}
+
+.FeaturedContainer_Base {
+	box-shadow: 0px 0px 5px #000;
+	background-position:center top;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.SpotlightViewContainer {
+	float: right;
+	width: 300px;
+	height: 326px;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_spotlight.png');
+}
+
+.SpotlightTreasureViewContainer {
+	float: right;
+	width: 300px;
+	height: 296px;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_spotlight.png');
+}
+
+.SpotlightTreasureViewContainer .TagContainer {
+	display: none;
+}
+
+.AutographedTreasureViewContainer {
+	float: right;
+	width: 300px;
+	asheight: 234px;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_spotlight.png');
+	box-shadow: 0px 0px 20px #49095E;
+}
+
+.AutographedContainer {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/signature_ad.png');
+	width: 300px;
+	height: 200px;
+}
+
+.AutographedText {
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+	text-shadow: 1px 1px 1px #000000;
+	line-height: 20px;
+	color: #BEBEBD;
+	background-color: rgba( 0, 0, 0, 0.8 );
+	width: 300px;
+}
+
+.SpotlightView {
+}
+
+.SpotlightView .ItemContainerCell {
+	padding: 0;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	width: 300px;
+	height: 280px;
+}
+
+.SpotlightView .ItemContainerCell .ItemImage img {
+	width: 300px;
+	height: 200px;
+}
+
+.SpotlightView .ItemContainerCell .TagContainer {
+	top: 0;
+	left: 0;
+	width: 68px;
+}
+
+.SpotlightView .ItemContainerCell .TagContainer .Tag {
+	margin: 0;
+	width: 100%;
+	height: 36px;
+	font-size: 19px;
+	padding-top: 6px;
+}
+
+.ItemText .Counter {
+}
+
+.PopularToolsViewContainer {
+	position: relative;
+	float: right;
+	width: 300px;
+	height: 350px;
+	margin-bottom: 26px;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_popular_tools.png');
+}
+
+.TournamentsViewContainer {
+	position: relative;
+	float: right;
+	width: 300px;
+	height: 350px;
+	margin-bottom: 26px;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_popular_tools.png');
+}
+
+.InterfaceItemsViewContainer {
+	position: relative;
+	float: right;
+	width: 300px;
+	height: 550px;
+	margin-bottom: 26px;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_popular_tools.png?2');
+}
+
+.FeaturedContainer_Base .ViewAllButtonContainer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 11px;
+	background: #172024;
+	background: -moz-linear-gradient(top, #172024 0%, #12161a 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #172024), color-stop(100%, #12161a));
+	background: -webkit-linear-gradient(top, #172024 0%, #12161a 100%);
+	background: -o-linear-gradient(top, #172024 0%, #12161a 100%);
+	background: -ms-linear-gradient(top, #172024 0%, #12161a 100%);
+	background: linear-gradient(to bottom, #172024 0%, #12161a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#172024', endColorstr='#12161a', GradientType=0 );
+	border-width: 1px;
+	border-style: solid;
+	border-color: #21262a #101516 #101516 #21262a;
+	box-shadow: 0px 0px 3px #111;
+}
+
+.FeaturedContainer_Base .ViewAllButtonContainer a {
+	position: absolute;
+	top: -1px;
+	right: -2px;
+	display: block;
+	padding: 0px 19px 0px 19px;
+	background: #2b2e34;
+	background: -moz-linear-gradient(top, #2b2e34 0%, #202326 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #2b2e34), color-stop(100%, #202326));
+	background: -webkit-linear-gradient(top, #2b2e34 0%, #202326 100%);
+	background: -o-linear-gradient(top, #2b2e34 0%, #202326 100%);
+	background: -ms-linear-gradient(top, #2b2e34 0%, #202326 100%);
+	background: linear-gradient(to bottom, #2b2e34 0%, #202326 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2e34', endColorstr='#202326', GradientType=0 );
+	border-width: 1px;
+	border-style: solid;
+	border-color: #37393f #1f2324 #1f2324 #37393f;
+	text-transform: uppercase;
+	font-size: 10px;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 1px #111111;
+	line-height: 21px;
+}
+
+.RightColumnItemsView {
+}
+
+.RightColumnItemsView .ItemContainerRow {
+	height: 92px;
+	margin-top: 8px;
+}
+
+.RightColumnItemsView .ItemContainerCell {
+	width: 300px;
+	height: 100px;
+}
+
+.RightColumnItemsView .ItemContainerCell .ItemImage {
+	float: left;
+	margin-left: 8px;
+	position: relative;
+}
+
+.RightColumnItemsView .ItemContainerCell .ItemImage img {
+	width: 126px;
+	height: 84px;
+}
+
+.RightColumnItemsView .ItemContainerCell .TagContainer {
+	top: 2px;
+	left: -6px;
+}
+
+.RightColumnItemsView .Tag {
+	left: 16px;
+}
+
+.RightColumnItemsView .ItemContainerCell .ItemText {
+	float: left;
+	text-align: left;
+	height: 100%;
+	width: 148px;
+	margin-left: 7px;
+	padding: 0;
+}
+
+.RightColumnItemsView .ItemContainerCell .HoverContentContainer {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 156px;
+	height: 55px;
+	margin-left: 2px;
+}
+
+.TournamentCondensedView .ItemContainerRow {
+	height: 45px;
+	margin-top: 14px;
+}
+
+.TournamentCondensedView .ItemContainerCell {
+	width: 300px;
+	height: 53px;
+}
+
+.TournamentCondensedView .ItemContainerCell .ItemImage img {
+	width: 63px;
+	height: 42px;
+}
+
+.TournamentCondensedView .ItemContainerCell .ItemText {
+	padding-left: 0px;
+	width: 205px;
+	margin-left: 10px;
+}
+
+.TournamentCondensedView .ItemContainerCell .ItemText .Name {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 13px;
+	margin-top: 4px;
+}
+
+.TournamentCondensedView .ItemContainerCell .ItemText .Price {
+	font-size: 13px;
+}
+
+.TournamentCondensedView .ItemContainerCell .ItemText .PlayerClass {
+	display: none;
+}
+
+.TournamentCondensedView .ItemContainerCell .TagContainer .Tag {
+	font-size: 10px;
+	padding: 0px 3px 2px 2px;
+	line-height: 12px;
+	letter-spacing: 0px;
+}
+
+.TournamentCondensedView .ItemContainerCell .HoverContentContainer {
+	width: 218px;
+	height: 44px;
+	margin-left: 2px;
+}
+
+.TournamentCondensedView .ItemContainerCell .HoverContentContainer .HoverAddToCartButton {
+	height: 32px !important;
+	padding-top: 1px !important;
+}
+
+.MerchViewContainer {
+	position: relative;
+	float: right;
+	width: 300px;
+}
+
+.MerchView {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/featured_merch.png');
+	background-position:center top;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 140px;
+}
+
+.MerchViewFooter {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/featured_merch_footer.png');
+	background-position:center top;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 25px;
+	text-transform: uppercase;
+	text-align: center;
+	color:#c44127;
+	letter-spacing:1px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #111111;
+}
+
+.MiniGridNavBar {
+	height: 33px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.MiniGridTabContainer {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+
+.MiniGridTabPadding {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 33px;
+	background-image:url('http://cdn.dota2.com/apps/dota2/images/store/tab_bar.jpg');
+	background-repeat:repeat-x;
+}
+
+.MiniGridNavButtonSpacing {
+	float: left;
+	width: 2px;
+	height: 33px;
+	display: inline-block;
+	background-color: #000;
+}
+
+.MainFeaturedItemViewContainer {
+	position: relative;
+	float: left;
+	width: 616px;
+	height: 1040px;
+	background-color: #071215;
+}
+
+.MainFeaturedItemViewContainer .Name {
+	overflow: hidden;
+}
+	
+.MainFeaturedItemViewContainer .ItemContainerRow {
+	position: relative;
+	overflow: visible;
+	margin-top: 15px;
+	height: 220px;
+	padding-left:4px;
+}
+
+.MainFeaturedItemViewContainer .ItemText {
+	text-align: center;
+	margin-top: 6px;
+	line-height: 20px;
+	width:185px;
+}
+
+.MainFeaturedItemViewContainer .ItemContainerCell .TagContainer {
+	top: 10px;
+	left: 10px;
+}
+
+.MainFeaturedItemViewContainer .ItemContainerCell {
+	float: left;
+	width: 201px;
+	height: 230px;
+	text-align: center;
+	padding: 8px;
+}
+
+.MainFeaturedItemViewContainer .ItemContainerCell .ItemImage {
+}
+
+.MainFeaturedItemViewContainer .ItemContainerCell .ItemImage img {
+	width: 185px;
+	height: 122px;
+}
+
+.MainFeaturedItemViewContainer .ItemContainerCell .HoverContentContainer {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 55px;
+	margin: 0 2px;
+}
+
+.MiniGridNavButton {
+	padding: 5px 3px 3px 3px;
+	width: 150px;
+	height: 33px;
+	display: inline-block;
+	text-align: center;
+	float: left;
+	font-size:12px;
+	letter-spacing:1px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #111111;
+}
+
+.ActiveMiniGridButton {
+	color: #000 !important;
+	text-shadow: none !important;
+}
+
+#MainFeaturedNavFooter {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 586px;
+	margin: 0px auto 10px auto;
+	padding: 5px 15px 5px 15px;
+	background-color: #131c1e;
+}
+
+.MarketViewContainer {
+	position: relative;
+	float: left;
+	width: 616px;
+	height: 250px;
+}
+
+.MarketButton {
+	text-transform: uppercase;
+	position: absolute;
+	z-index: 1;
+	right: 18px;
+	top: 50px;
+	width: 185px;
+	font-size:12px;
+	letter-spacing:1px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #1f2f1b;
+	box-shadow: 0px 0px 3px #111;
+}
+
+.MarketViewContainer .Header {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/featured_market_header.png');
+	background-position:center top;
+	background-repeat: no-repeat;
+	width: 616px;
+	height: 67px;
+	position: relative;
+	color: #8cac6b;
+	box-shadow: 3px 0px 5px #111;
+}
+
+.MarketViewContainer .Header p {
+	padding: 9px 0 0 18px;
+	max-width: 360px;
+}
+
+.MarketViewContainer .View {
+	width: 616px;
+	height: 241px;
+	padding-top: 31px;
+	position: relative;
+}
+
+.MarketItemCell {
+	width: 182px;
+	position: relative;
+	margin: 10px 0 25px 15px;
+	display: inline-block;
+}
+
+.MarketItemCell .Price {
+	width: 70px;
+	height: 24px;
+	background-color: #2a2d34;
+	text-align:center;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-right: -2px;
+}
+
+.WorkshopViewContainer {
+	position: relative;
+	float: left;
+	width: 616px;
+	height: 315px;
+	background-color: #1b1f24;
+}
+
+.WorkshopButton {
+	text-transform: uppercase;
+	position: absolute;
+	z-index: 1;
+	right: 18px;
+	top: 50px;
+	width: 185px;
+	font-size:12px;
+	letter-spacing:1px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #182431;
+	box-shadow: 0px 0px 3px #111;
+}
+
+.WorkshopViewContainer .Header {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/featured_workshop_header.png');
+	background-position:center top;
+	background-repeat: no-repeat;
+	width: 616px;
+	height: 67px;
+	position: relative;
+	color: #a4c5e9;
+	box-shadow: 3px 0px 5px #111;
+}
+
+.WorkshopViewContainer .Header p {
+	padding: 20px 0 0 18px;
+	max-width: 400px;
+}
+
+.WorkshopViewContainer .View {
+	width: 616px;
+	height: 241px;
+	padding-top: 31px;
+	position: relative;
+}
+
+.FeaturedWorkshopItemCell {
+	width: 200px;
+	height: 205px;
+	float: left;
+	padding-left: 15px;
+}
+
+.FeaturedWorkshopItemCell img {
+	width: 183px;
+	height: 183px;
+	padding: 3px;
+}
+
+.FeaturedWorkshopItemCell .Title {
+}
+
+/*
+ * Carousel
+ */
+.CarouselContainer {
+	position: relative;
+	cursor: pointer;
+	z-index: 0;
+}
+
+.StoreCarousel {
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 616px;
+	height: 440px;
+	background-color: #071215;
+	margin-bottom:16px;
+	box-shadow: 0px 0px 5px #000;
+}
+
+.CarouselCells {
+	position: absolute;
+	top: 401px;
+	right: 0;
+	cursor: pointer;
+	z-index: 1000;
+	cursor: default;
+	padding-right: 16px;
+}
+
+.CarouselCells a {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/ticker_off.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	float: left;
+	width: 21px;
+	height: 32px;
+	top: 2px;
+	z-index: 1000;
+}
+
+.CarouselCells a.activeSlide, .CarouselCells a.activeSlide:hover {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/ticker_on.png');
+}
+
+.CarouselCells a:hover {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/ticker_hover.png');
+}
+
+.CarouselContainer .CarouselImages {
+	padding: 0;
+	margin: 0;
+	height: 440px;
+	list-style: none;
+	list-style-type: none;
+}
+
+.CarouselContainer .CarouselImages img {
+	width: 616px;
+	height: 338px;
+}
+
+.CarouselFooter {
+	font-family: arial, helvetica, sans-serif;
+	height: 94px;
+	margin: 16px 16px 0 16px;
+	position: relative;
+}
+
+.CarouselFooter h1 {
+	color: #cbcbcb;
+	font-size: 24px;
+	font-weight: normal;
+	width: 530px;
+}
+
+.CarouselFooter .ItemPrice {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 20px;
+	font-weight: bold;
+	color: #cbcbcb;
+}
+
+.CarouselFooter p {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	color: #999999;
+}

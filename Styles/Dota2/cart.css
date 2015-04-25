@@ -1,0 +1,1956 @@
+@charset "utf-8";
+/* CSS Document */
+
+form {
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+
+form input {
+	width: 30px;
+	padding: 1px;
+	border: 1px solid #82807c;
+	border-width: 1px;
+	margin: 5px 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	background: #4d4b49;
+	text-align:center;
+}
+
+.CartPageBody {
+	margin-right: 28px auto 0 auto;
+	position: relative;
+	min-height:800px;
+	min-width: 968px;
+	padding: 0;
+}
+
+#PageBody {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_jug.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	height: 1200px;
+	min-width: 968px;
+	padding: 0;
+	margin:  0;
+}
+
+#StoreHeader {
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	height: 298px;
+}
+
+#ItemContainer {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/bg_item_container.jpg');
+	background-repeat: no-repeat;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	width: 918px;
+	height: 875px;
+	padding-top: 20px;
+}
+
+#CartBackground {
+	background-color: #000000;
+	padding: 20px;
+}
+
+/* Child of the overlay - container for actual cart contents */
+#CartContainer {
+	border-radius: 8px;
+	background-color: #181b1d;
+	width: 650px;
+	margin:  0px auto;
+	padding: 40px;
+	text-align: center;
+}
+
+/* The actual contents of the cart are rendered within this element */
+#CartContents {
+	margin: auto;
+	margin:  50px;
+}
+
+.CartHeaderQty {
+	float: left;
+	min-width: 80px;
+	min-height: 10px;	/* This will keep the description from shifting to the left when the throbber is displayed */
+	padding-left: 14px;
+	color: #9f9d9b;
+	padding-top:2px;
+	font-size:12px;
+	margin-right:20px;
+}
+
+.CartHeaderName {
+	padding-top:2px;
+	color: #9f9d9b;
+	font-size:12px;
+}
+
+.CartHeaderPrice {
+	float: right;
+	width: 100px;
+	text-align: right;
+	padding-right: 14px;
+	padding-top:2px;
+	color: #9f9d9b;
+	font-size:12px;
+}
+
+
+
+
+.CartLine {
+	text-align: left;
+	margin:  0px;
+	padding:  3px;
+	width: 500px;
+}
+
+.CartLineQuantity {
+	display: inline;
+	margin-right: 30px;
+}
+
+.CartLinePrice {
+	display: inline;
+	right: 0px;
+	position: relative;
+	text-align: right;
+	float: right;
+}
+
+.CheckoutHeader {
+	margin-bottom: 30px;
+}
+
+#Checkout {
+	margin-bottom: 10px;
+}
+
+/* client-like buttons */
+
+.btn_checkout_green, .btn_checkout_blue, .btn_checkout_gray {
+	display: block;
+	position: relative;
+	height: 28px;
+	background-repeat: repeat-x;
+
+	padding: 0px 17px;
+	text-transform: uppercase;
+
+	font-size: 11px;
+	color: #ffffff;
+	line-height: 24px;
+
+	text-align: center;
+
+	cursor: pointer;
+}
+
+.btn_checkout_green {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/btn_checkout_active_bg.png');
+}
+.btn_checkout_green .leftcap, .btn_checkout_green .rightcap {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/btn_checkout_active_corners.png');
+}
+
+.btn_checkout_blue {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/btn_checkout_blue_bg.png');
+}
+.btn_checkout_blue .leftcap, .btn_checkout_blue .rightcap {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/btn_checkout_blue_corners.png');
+}
+
+.btn_checkout_gray, .btn_checkout_gray .leftcap, .btn_checkout_gray .rightcap {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/btn_checkout_gray_comp.png');
+}
+
+
+a.btn_checkout_green, a.btn_checkout_green:hover,
+a.btn_checkout_blue, a.btn_checkout_blue:hover,
+a.btn_checkout_gray, a.btn_checkout_gray:hover {
+	text-decoration: none;
+	color: #ffffff !important;
+}
+
+.btn_checkout_green .leftcap, .btn_checkout_green .rightcap,
+ .btn_checkout_blue .leftcap, .btn_checkout_blue .rightcap,
+ .btn_checkout_gray .leftcap, .btn_checkout_gray .rightcap {
+	position: absolute;
+	top: 0px;
+
+	height: 28px;
+	width: 4px;
+
+}
+
+.btn_checkout_green .leftcap, .btn_checkout_blue .leftcap, .btn_checkout_gray .leftcap {
+	left: 0px;
+	background-position: bottom left;
+}
+
+.btn_checkout_green .rightcap, .btn_checkout_blue .rightcap, .btn_checkout_gray .rightcap {
+	right: 0px;
+	background-position: bottom right;
+}
+
+.btn_checkout_green.disabled, .btn_checkout_gray.disabled {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/btn_checkout_inactive_bg.png');
+	color: #626467;
+	cursor: default;
+}
+
+.btn_checkout_green.disabled .leftcap, .btn_checkout_green.disabled .rightcap,
+ .btn_checkout_gray.disabled .leftcap, .btn_checkout_gray.disabled .rightcap {
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/btn_checkout_inactive_corners.png');
+}
+
+.iepopupfix {
+	display: none;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+img.iepopupfix_img {
+	width: 200px;
+	height: 500px;
+}
+
+
+/* CSS Document */
+
+.checkout_content_box
+{
+	position: relative;
+	background-color: #262626;
+	border: 1px solid #4d4b49;
+	color: #b0aeac;
+	line-height: 18px;
+}
+
+.checkout_content_box h2
+{
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.checkout_content_box h3.tab_header
+{
+	color: #8BC53F;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.checkout_content_box a
+{
+	color: #B0AEAC;
+	text-decoration: underline;
+}
+
+.checkout_content_box a:hover
+{
+	color: #FFFFFF;
+}
+
+.checkout_content_box input[type="text"], .checkout_content_box input[type="password"], .checkout_content_box select, .checkout_content_box textarea
+{
+	background-color: #4d4b49;
+	border: 1px solid #82807c;
+	color: #ffffff;
+}
+
+.checkout_content_box .checkout_content {
+	padding: 14px;
+}
+
+.checkout_content .rule {
+	border-top: 1px solid #36383e;
+	margin: 15px 0px;
+}
+
+.checkout_error {
+	border: 1px solid #ff9900;
+	background-color: #000000;
+	color: #cdcac1;
+	margin: 15px;
+	padding: 11px 15px;
+}
+
+.checkout_content_box a.btn_checkout_green, .checkout_content_box a.btn_checkout_blue {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.btn_checkout_working {
+	width: 121px;
+	height: 28px;
+	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/btn_checkout_working.gif');
+
+	color: #626466;
+	font-size: 11px;
+	text-transform: uppercase;
+
+	text-align: center;
+	line-height: 28px;
+
+	cursor: default;
+}
+
+.button_row {
+	display: block;
+}
+
+.button_row .btn_checkout_green, .button_row .btn_checkout_working {
+	float: right;
+	margin-left: 20px;
+}
+
+.button_row .btn_checkout_green, .button_row .btn_checkout_working {
+	float: right;
+	margin-left: 20px;
+}
+
+.button_row .btn_checkout_green.btn_checkout_green_client_style {
+	float: none;
+	display: inline-block;
+	margin-left: 16px;
+}
+
+/* match 121px width of btn_checkout_working */
+.button_row .btn_checkout_green {
+	min-width: 87px;
+}
+
+.client_button_row {
+	text-align: right;
+}
+
+/* fixes a layout bug in IE7 when .btn_client is mixed with position:relative btn_checkout_green */
+.client_button_row .btn_client {
+	position: relative;
+}
+
+.checkout_rule {
+	border-top: 1px solid #36383e;
+	margin: 9px 0px;
+}
+
+.checkout_notes {
+	color: #82807c;
+	line-height: 20px;
+}
+
+.checkout_notes b {
+	font-weight: normal;
+	/* color: #ff9900; */
+}
+
+.checkout_footer_notes {
+	color: #b0aeac;
+	line-height: 20px;
+}
+
+.cart_digital_notice {
+	position: relative;
+	min-height: 56px;
+
+	margin-bottom: 8px;
+}
+
+.cart_digital_notice_content {
+	padding-left: 84px;
+	padding-top: 8px;
+}
+
+.cart_digital_notice_steam_logo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.cart_digital_notice h4 {
+	font-size: 16px;
+}
+
+/* review */
+
+
+
+.checkout_review_payment_method_area
+{
+}
+
+.payment_method_review_row
+{
+	width: 440px;
+	position: relative;
+}
+
+.payment_method_total
+{
+	position: absolute;
+	right: 165px;
+	top: 0px;
+}
+
+.payment_method_review_method_label
+{
+	color: #8BC53F;
+}
+
+
+.checkout_review_cart_item {
+	border-bottom: 1px solid #000000;
+	position: relative;
+	height: 77px;
+	line-height: 16px;
+}
+
+.checkout_review_cart_item.even {
+	background-color: #1a1a1a;
+}
+
+.checkout_review_cart_item.odd {
+	background-color: #1f1f1f;
+}
+
+.checkout_review_item_img {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+}
+
+.checkout_review_item_desc {
+	margin-left: 151px;
+	margin-right: 90px;
+	padding-top: 23px;
+	color: #ffffff;
+}
+
+.checkout_review_item_desc .checkout_review_item_platform {
+	float: right;
+}
+
+.checkout_review_item_desc_ext {
+	color: #626366;
+}
+
+.checkout_review_item_desc_ext b, .review_notice b {
+	color: #ff7b00;
+	font-size: 22px;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+.checkout_review_hit_min_provider_amount {
+	color: #626366;
+}
+
+.checkout_review_hit_min_provider_amount_div {
+	position: absolute;
+	left: 278px;
+	top: 0px;
+}
+
+.duplicate_app_list {
+	list-style-position: inside;
+	list-style-type: square;
+}
+
+.checkout_review_item_price {
+	position: absolute;
+	right: 14px;
+	top: 29px;
+	text-align: right;
+}
+
+.checkout_review_item_price.price {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.checkout_review_prepurchase_notice {
+}
+
+.checkout_review_tax_notice {
+	margin-top: 10px;
+}
+
+.checkout_review_item_restriction_notice {
+	padding-top:4px;
+	padding-bottom:4px;
+}
+
+.cart_total_row.rebate_total_row, .cart_total_row.rebate_total_row .price {
+	color: #5e5e5e;
+}
+
+#checkout_review_rebate_note {
+	text-align: right;
+	color: #626366;
+}
+
+.review_row {
+	position: relative;
+	margin-bottom: 12px;
+	line-height: 14px;
+}
+
+.review_row .review_row_label {
+	position: absolute;
+	left: 0px;
+	color: #626366;
+}
+
+.review_row .review_row_value {
+	padding-left: 135px;
+	color: #cdcac1;
+}
+
+.review_notice {
+	color: #cdcac1;
+}
+
+#purchase_bottom_note_paypalgc {
+	margin-top: 9px;
+}
+
+/* global checkout */
+
+#checkout_header {
+}
+
+#checkout_header .content {
+	position: relative;
+	width: 940px;
+	height: 104px;
+	margin: 0px auto;
+}
+
+#checkout_pipeline, #receipt_pipeline {
+	padding-top: 33px;
+}
+
+.cart_tab,
+.cart_tab_spacer {
+	float: left;
+	color: #b0aeac;
+	font-size: 14px;
+	cursor: default;
+	position: relative;
+}
+
+.cart_tab_left_on {
+	position: absolute;
+	background-image: url( http://cdn.dota2.com/apps/dota2/images/store/checkout_pipeline_undershadow.png );
+	height: 9px;
+	top: 30px;
+	left: 1px;
+	right: 1px;
+
+	background-position: top center;
+}
+
+.cart_tab_right_on {
+	position: absolute;
+	width: 1px;
+	height: 28px;
+
+	top: 0px;
+	right: 0px;
+
+	background-image: url( http://cdn.dota2.com/apps/dota2/images/store/checkout_pipeline_rightshadow.png );
+}
+
+.cart_tab_on, .cart_tab_off, .cart_tab_inactive {
+	padding: 7px 11px;
+	margin-right: 1px;
+}
+
+.cart_tab_on {
+	background-color: #8bc53f;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #006000;
+}
+
+.cart_tab_inactive {
+	cursor: pointer;
+}
+
+.cart_tab_off {
+	color: #626366;
+}
+
+.cart_tab_spacer {
+	width: 4px;
+	height: 8px;
+	background-image: url( http://cdn.dota2.com/apps/dota2/images/store/checkout_tab_spacer.gif );
+	background-repeat: no-repeat;
+	margin: 10px 10px;
+}
+
+#checkout_steam_logo {
+	position: absolute;
+	right: 0px;
+	top: 30px;
+	width: 176px;
+	height: 44px;
+}
+
+
+/* checkout styles */
+
+.checkout_main input[type="text"], .checkout_main input[type="password"], .checkout_main select {
+	width: 212px;
+	padding: 2px 4px 3px 4px;
+}
+
+.checkout_main input[type="text"], .checkout_main input[type="password"] {
+	height: 18px;
+}
+
+.checkout_main textarea {
+	padding: 2px 4px 3px 4px;
+}
+
+.rightcol p {
+	padding:5px 0px 5px 2px;
+}
+
+/* shopping cart page */
+
+.cart_status_message_ctn {
+	position: relative;
+	height: 29px;
+	float: left;
+	margin-bottom: 1px;
+	z-index: 99;
+}
+
+.cart_status_message_left, .cart_status_message_right {
+	position: absolute;
+	background-image: url( http://cdn.dota2.com/apps/dota2/images/store/cart_statusmessage_corners.png );
+	height: 29px;
+	width: 2px;
+	top: 0px;
+}
+
+.cart_status_message_left {
+	left: 0px;
+	background-position: left;
+}
+
+.cart_status_message_right {
+	right: 0px;
+	background-position: right;
+}
+
+.cart_status_message {
+	color: #ffffff;
+	font-weight: bold;
+	line-height: 29px;
+	background-color: #557dab;
+	margin: 0px 2px;
+	padding: 0px 14px;
+}
+
+.cart_status_message_arrow_holder {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	height: 9px;
+	bottom: -9px;
+	z-index: 100;
+}
+
+.cart_status_message_arrow {
+	background-image: url( http://cdn.dota2.com/apps/dota2/images/store/cart_statusmessage_arrow.png );
+	height: 9px;
+	width: 18px;
+	margin: 0px auto;
+}
+
+.cart_row {
+	border-bottom: 1px solid #000000;
+}
+
+.cart_row.even {
+	background-color: #1a1a1a;
+}
+
+.cart_row.odd {
+	background-color: #1f1f1f;
+}
+
+.cart_row.activeborder {
+	border: 1px solid #84ba3c;
+	border-bottom: none;
+}
+
+.cart_item {
+	position: relative;
+	height: 77px;
+	line-height: 16px;
+}
+.cart_item_img {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+}
+
+.cart_item_desc {
+	margin-left: 151px;
+	margin-right: 90px;
+	padding-top: 23px;
+	color: #626366;
+}
+
+.cart_item_desc .cart_item_platform {
+	float: right;
+}
+
+.cart_item .cart_item_desc a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.cart_item_price {
+	position: absolute;
+	right: 14px;
+	top: 20px;
+	text-align: right;
+	color: #5e5e5e;
+}
+
+.cart_item_price.with_discount {
+	top: 15px;
+}
+
+.cart_item_price .price {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.cart_item_price .price.original_price {
+	text-decoration: line-through;
+	color: #626366;
+	font-size: 10px;
+}
+
+.cart_item_price .remove_link {
+	color: #626366;
+	text-decoration: underline;
+}
+
+.cart_totals_area {
+	width: 234px;
+	margin-left: auto;
+	padding-top: 16px;
+}
+
+.cart_total_row {
+	position: relative;
+	padding-right: 124px;
+	text-align: right;
+}
+
+.cart_coupon_ctn {
+	padding: 0px 0px 12px 150px;
+}
+
+.cart_coupon {
+	border: 1px solid #39490f;
+	background-color: #1f1f1f;
+	margin-right: -4px;
+	padding: 12px 11px;
+	color: #8b8b8b;
+	font-size: 12px;
+}
+
+.cart_coupon.coupon_available {
+	border-color: #38480f;
+}
+
+.cart_coupon.in_use {
+	position: relative;
+	padding-left: 110px;
+	height: 46px;
+}
+
+.coupon_icon, .coupon_icon img {
+	width: 96px;
+	height: 64px;
+}
+
+.cart_coupon .coupon_icon {
+	position: absolute;
+	left: 6px;
+	top: 3px;
+}
+
+.cart_coupon .coupon_savings {
+	position: absolute;
+	right: 20px;
+	top: 24px;
+
+	line-height: 18px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.cart_coupon .cart_coupon_body {
+	padding-top: 4px;
+}
+
+.cart_coupon .coupon_status {
+	color: #81b53a;
+	font-size: 14px;
+}
+
+.cart_coupon .coupon_actions {
+	font-size: 11px;
+}
+
+.coupon_actions a {
+	color: #dadada;
+	text-decoration: none;
+}
+
+.coupon_actions a:hover {
+	text-decoration: underline;
+}
+
+.cart_coupon_selector_ctn {
+	position: absolute;
+	z-index: 1000;
+	width: 624px;
+}
+
+.cart_coupon_selector_ctn .cart_row_dupe {
+	width: 614px;
+	margin: 0px auto;
+}
+
+.cart_coupon_selector {
+	background-color: #444444;
+	border: 1px solid #393939;
+
+	font-size: 14px;
+	color: #ababaa;
+}
+
+.cart_coupon_selector_top {
+	height: 12px;
+	background-image: url( 'http://cdn.dota2.com/apps/dota2/images/store/shadow_topbottom.png' );
+	background-repeat: repeat-x;
+	background-position: top;
+	margin-top: -12px;
+}
+
+.cart_coupon_selector p {
+	padding: 20px;
+}
+
+#coupon_selector_bg {
+	position:absolute;
+	z-index:900;
+	background-color:#000000;
+}
+
+.coupon_choice .coupon_icon {
+	position: absolute;
+	left: 44px;
+	top: 6px;
+}
+
+.coupon_choice .coupon_savings {
+	position: absolute;
+	right: 8px;
+	top: 32px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.cart_coupon_selector .coupon_choice.tall {
+	height: 60px;
+	padding-left: 154px;
+}
+
+.cart_coupon_selector .coupon_choice.active {
+	background-color: #383838;
+}
+
+.cart_coupon_selector .coupon_choice_rule {
+	padding: 0px;
+	height: 2px;
+}
+
+.coupon_choice .coupon_choice_radio {
+	position: absolute;
+	left: 0px;
+	top: 8px;
+	width: 44px;
+	text-align: center;
+}
+
+.coupon_choice_body {
+	padding-top: 16px;
+	padding-right: 96px;
+}
+
+.coupon_choice.tall .coupon_choice_radio {
+	height: 60px;
+	line-height: 60px;
+}
+
+.coupon_choice.disabled > * {
+	opacity: 0.3;
+}
+
+.cart_totals_area .price {
+	position: absolute;
+	right: 0px;
+	text-align: right;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.cart_total_rule {
+	margin: 9px 0px;
+	border-top: 1px solid #626366;
+}
+
+.cart_checkout_buttons .btn_checkout_green, .cart_checkout_buttons .btn_checkout_working
+{
+	float: right;
+	margin-left: 20px;
+}
+
+.cart_total_row
+{
+	font-size: 11px;
+	color: #B0AEAC;
+}
+
+.cart_total_row.savings, .cart_total_row.savings .price
+{
+	color: #8BC53F;
+}
+
+.cart_total_row#cart_price_total_text, .cart_total_row#cart_price_total_text .price
+{
+	font-size: 14px;
+	color: #ffffff;
+}
+
+
+/* checkout - gift */
+
+
+.checkout_content.cart_send_choice {
+	background-color: #1a1a1a;
+	padding-right: 0px;
+}
+
+label.send_choice_txt {
+	font-weight: bold;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.send_choice_inner {
+	padding-left: 17px;
+}
+
+.cart_send_choice_rule {
+	border-top: 1px solid #000000;
+}
+
+#send_via_friends_box {
+	margin-top: 20px;
+}
+
+#friends_chooser {
+	width: 560px;
+	height: 189px;
+	border: 1px solid #4d4b49;
+	overflow: auto;
+	overflow-x: hidden;
+	position: relative;
+}
+
+#friends_chooser .friend_block {
+	min-height: 43px;
+	position: relative;
+	padding-left: 70px;
+	padding-top: 3px;
+	line-height: 18px;
+	border: 1px solid #1a1a1a;
+}
+
+#friends_chooser .friend_block.even, #friends_chooser .friend_block.even.disabled:hover {
+	background-color: #1a1a1a;
+	border-color: #1a1a1a;
+}
+
+#friends_chooser .friend_block.odd, #friends_chooser .friend_block.odd.disabled:hover {
+	background-color: #1f1f1f;
+	border-color: #1f1f1f;
+}
+
+#friends_chooser .friend_block:hover {
+	border-color: #8bb9e0;
+}
+
+#friends_chooser .friend_block.active {
+	background-color: #222D3D;
+}
+
+
+#friends_chooser .friend_block .friend_block_radio {
+	position: absolute;
+	left: 5px;
+	top: 16px;
+}
+
+
+#friends_chooser .friend_block .friend_block_avatar {
+	position: absolute;
+	left: 22px;
+	top: 3px;
+}
+
+#friends_chooser .friend_block .friend_name {
+	font-size: 14px;
+	color: #ffffff;
+	float: left;
+	padding-right: 12px;
+}
+
+#friends_chooser .friend_block .friend_ownership_info {
+	margin-right: 7px;
+	color: #626366;
+	font-size: 11px;
+	text-align: right;
+}
+
+#friends_chooser .friend_block .friend_ownership_info.already_owns {
+	color: #FF7B00;
+}
+
+#friends_chooser .friend_block .friend_ownership_info.wants {
+	color: #8BB9E0;
+}
+
+#friends_chooser .friend_block .friend_ownership_info .edit_cart_link a {
+	text-decoration: none;
+	color: #B0AEAC;
+}
+
+#friends_chooser .friend_block .friend_ownership_info .edit_cart_link a:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#friends_chooser .friend_block.disabled .friend_block_avatar,
+#friends_chooser .friend_block.disabled .friend_name,
+#friends_chooser .friend_block.disabled .friend_block_radio {
+	opacity: 0.5;
+}
+
+.gift_tradable_time_notice {
+	font-size: 11px;
+	margin-top: 16px;
+}
+
+/* checkout - gift message */
+
+#gift_message_text {
+	width: 575px;
+	height: 158px;
+	font-size: 18px;
+	resize: none;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/* checkout - payment method */
+
+
+#expiration_month
+{
+	width: 44px;
+	margin-right: 4px;
+}
+
+#expiration_year
+{
+	width: 60px;
+	margin-right: 100px;
+}
+
+#security_code
+{
+	width: 36px;
+}
+
+#security_code_cached
+{
+	width: 36px;
+}
+
+#what_is_this
+{
+	padding-left: 5px;
+	padding-right: 89px;
+	text-align: left;
+	padding-top:5px;
+}
+
+#what_is_this a
+{
+	color: #cdcac1;
+	text-decoration: underline;
+	clear: none;
+	font-weight: normal;
+}
+
+#verify_country
+{
+	float: left;
+	clear: none;
+	margin-top: 5px;
+}
+
+.checkout_tab input.two_line_check {
+	margin-top:3px;
+	padding:3px;
+	vertical-align:middle;
+}
+
+.checkout_tab
+{
+	margin: 60px auto;
+	width: 600px;
+}
+
+.checkout_tab .form_row_sizable, .checkout_tab .form_row
+{
+	margin-top:5px;
+	margin-bottom: 12px;
+	clear: both;
+}
+
+.checkout_tab .form_row
+{
+	font-size: 11px;
+}
+
+.checkout_tab .form_right
+{
+	clear: right;
+	float: right;
+	text-align: left;
+	width: 292px;
+}
+
+.checkout_tab .form_left
+{
+	clear: left;
+	float: left;
+	text-align: left;
+}
+
+.checkout_tab .form_right label, .checkout_tab .form_left label, .checkout_tab .form_row_sizable label, .checkout_tab .form_row label
+{
+	display: block;
+	width: 292px;
+	text-align: left;
+	margin-bottom: 2px;
+	font-size: 12px;
+}
+
+#first_name_label
+{
+	float: left;
+	width: 92px;
+}
+
+#last_name_label
+{
+	float: left;
+	width: 126px;
+}
+
+#first_name
+{
+	width: 76px;
+}
+
+#last_name
+{
+	width: 114px;
+}
+
+#i_verify_country
+{
+	dislay: block;
+	clear: right;
+	float: left;
+	padding-left: 5px;
+	padding-right: 50px;
+	text-align: left;
+	padding-top:0px;
+	width: 140px;
+	font-size: 10px;
+}
+
+#i_verify_country label
+{
+	display: block;
+	width: 137px;
+	float: left;
+	font-size: 10px;
+	line-height: 12px;
+}
+
+#save_my_address
+{
+	float: left;
+	clear: none;
+	margin-top: 5px;
+}
+
+#i_want_to_save_address
+{
+	dislay: block;
+	clear: right;
+	float: left;
+	padding-left: 5px;
+	padding-right: 30px;
+	text-align: left;
+	padding-top:0px;
+	width: 160px;
+	font-size: 10px;
+}
+
+#i_want_to_save_address label
+{
+	display: block;
+	width: 157px;
+	float: left;
+	font-size: 10px;
+}
+
+#verify_country_check
+{
+	float: left;
+	padding-top: 2px;
+}
+
+#verify_country_notes
+{
+	float: left;
+	padding-left: 4px;
+}
+
+#cancel_pending_check
+{
+	float: left;
+	padding-top: 2px;
+}
+
+#cancel_pending_notes
+{
+	float: left;
+	padding-left: 4px;
+}
+
+
+/* checkout - stored credit card */
+
+#stored_card_processing
+{
+	height: 460px;
+}
+
+#stored_card_processing_label
+{
+	font-weight: bold;
+	margin-left: 180px;
+	margin-top: 30px;
+}
+
+/* checkout - receipt */
+
+.receipt_confirmation_row {
+	position: relative;
+	margin-bottom: 12px;
+	line-height: 14px;
+}
+
+.receipt_confirmation_label {
+	position: absolute;
+	left: 0px;
+	color: #626366;
+}
+
+.receipt_confirmation_data {
+	padding-left: 135px;
+	color: #cdcac1;
+}
+
+#receipt_area p, #ackgift_area p {
+	margin: 9px 0px;
+}
+
+.btn_checkout_print {
+	display: block;
+	background-image: url( http://cdn.dota2.com/apps/dota2/images/store/btn_checkout_print.png );
+	width: 168px;
+	height: 40px;
+}
+
+a.btn_checkout_print .text {
+	color: #3c3d3e;
+	font-size: 14px;
+
+	margin-left: 45px;
+	margin-right: 3px;
+	padding-top: 9px;
+
+	text-align: center;
+	text-shadow: #bfbebe 1px 1px 0px;
+
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.btn_checkout_print, a.btn_checkout_print:hover {
+	text-decoration: none ! important;
+}
+
+#gotsteam_buttons a.btn_white {
+	float: left;
+	margin-right: 16px;
+}
+
+
+/* dselect */
+
+
+.dselect_container {
+	padding: 0px;
+	display: inline;
+}
+
+.dselect_container a, .dselect_container a:hover, .dselect_container a:active, .dselect_container a:visited
+{
+	font-size: 12px;
+	line-height: 22px;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a.trigger, a.activetrigger {
+	background: url(http://cdn.dota2.com/apps/dota2/images/store/ico_search_dropdown.gif) no-repeat scroll right center;
+
+	display:block;
+	float:left;
+	color: #B0AEAC;
+	height: 22px;
+	padding-left:8px;
+	padding-right: 30px;
+	overflow: hidden;
+
+
+	background-color: #4d4b49;
+	border: 1px solid #82807c;
+	color: #ffffff;
+}
+
+.dropcontainer ul {
+	background-color: #4d4b49;
+	border:1px solid #82807C;
+	list-style-type:none;
+	margin:0;
+	width:300px;
+	position:absolute;
+	line-height: 22px;
+	z-index: 999999;
+
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.dropdownhidden{
+	display: none;
+}
+.dropdownvisible{
+	top:23px;
+	display: block;
+}
+.dropcontainer ul li {
+	padding: 0px;
+	margin: 0px;
+}
+.dropcontainer ul li.emptyvalue {
+	font-style: italic;
+}
+.dropcontainer ul a {
+	padding-left:2px;
+	padding-right:2px;
+	display:block;
+	text-decoration:none;
+	color:#FFFFFF;
+	line-height: 22px;
+	height: 22px;
+}
+.dropcontainer a.highlighted_selection {
+	background:#3196FF;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.dropcontainer{
+	position:relative;
+}
+
+
+.checkout_main .dselect_container {
+	float: left;
+	width: 212px;
+	margin-top: 3px;
+	#margin-top: 4px; 	padding: 0px;
+	display: inline;
+}
+
+.checkout_main .dselect_container a, .checkout_main .dselect_container a:hover, .checkout_main .dselect_container a:active, .checkout_main .dselect_container a:visited
+{
+	font-size: 12px;
+	line-height: 19px;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.checkout_main .trigger {
+	display:block;
+	float:left;
+	height:19px;
+	width:200px;
+	padding-left:2px;
+	padding-right:2px;
+	overflow: hidden;
+}
+
+.checkout_main .activetrigger{
+	display:block;
+	float:left;
+	height:19px;
+	width:200px;
+	padding-left: 2px;
+	padding-right: 2px;
+	overflow: hidden;
+}
+
+.checkout_main .dropcontainer ul {
+	list-style-type:none;
+	margin:0;
+	width:240px;
+	position:absolute;
+	line-height: 19x;
+	z-index: 999999;
+}
+
+#payment_method_droplist
+{
+	width: 204px;
+}
+
+.checkout_main .dropdownhidden{
+	top:0;
+	left:-999em;
+}
+.checkout_main .dropdownvisible{
+	top:20px;
+	left:0px;
+}
+.checkout_main .dropcontainer ul li {
+	padding: 0px;
+	margin: 0px;
+}
+.checkout_main .dropcontainer ul a {
+	padding-left:2px;
+	padding-right:2px;
+	display:block;
+	text-decoration:none;
+	line-height: 19px;
+	height: 19px;
+}
+.checkout_main .dropcontainer a.highlighted_selection {
+	text-decoration: none;
+}
+.checkout_main .dropcontainer{
+	position:relative;
+}
+
+#gift_sentiment_dselect_container
+{
+	#margin-top: 5px; }
+
+#gift_sentiment_droplist
+{
+	width: 204px;
+	height: 100px;
+	overflow-y: scroll;
+}
+
+#billing_country_droplist
+{
+	height: 250px;
+	width: 300px;
+	overflow-y: scroll;
+}
+
+#billing_state_select_droplist
+{
+	height: 225px;
+	width: 205px;
+	overflow-y: scroll;
+}
+
+#expiration_month_dselect_container
+{
+	margin-right: 10px;
+}
+
+
+#expiration_month_dselect_container, #expiration_month_trigger
+{
+	width: 44px;
+}
+
+#expiration_month_droplist
+{
+	width: 46px;
+}
+
+#expiration_year_dselect_container, #expiration_year_trigger
+{
+	width: 60px;
+}
+
+#expiration_year_droplist
+{
+	width: 64px;
+}
+
+/*
+ * EMAIL VALIDATION
+ */
+
+.emailvalidation_content {
+	min-height: 520px;
+	position: relative;
+}
+
+.emailvalidation_content h2 {
+	color: #8BC53F;
+}
+
+.emailvalidation_content p, .emailvalidation_content h2  {
+	margin-bottom: 9px;
+}
+
+.emailvalidation_status_area {
+	height: 71px;
+	position: relative;
+	margin: 8px 0px;
+}
+
+.emailvalidation_status_logo {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.emailvalidation_status_desc {
+	padding-left: 87px;
+	padding-top: 21px;
+	color: #8BC53F;
+}
+
+.emailvalidation_buttons {
+	position: absolute;
+	bottom: 27px;
+	width: 586px;
+
+	line-height: 28px;
+}
+
+.email_formrow {
+	position: relative;
+	min-height: 28px;
+}
+.email_formrow .input {
+	position: absolute;
+	left: 0px;
+}
+.email_formrow .input input {
+	width: 221px;
+	height: 22px;
+}
+.email_formrow .desc {
+	padding-left: 235px;
+	font-size: 11px;
+	line-height: 11px;
+}
+
+
+/*
+ * EXTERNAL PAYMENT LANDING PAGE (paypal, etc)
+ */
+
+#external_landing_header .content {
+	position: relative;
+	width: 940px;
+	height: 104px;
+	margin: 0px auto 64px auto;
+}
+
+#external_landing_header_logo
+{
+	margin: 0px auto;
+	width: 176px;
+	padding-top: 30px;
+}
+
+.external_landing_content
+{
+	width: 400px;
+	margin: 0px auto;
+	text-align: center;
+	color: #B0AEAC;
+}
+
+.external_landing_content a
+{
+	color: #B0AEAC;
+	text-decoration: underline;
+}
+
+.external_landing_content a:hover
+{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#external_landing_notice
+{
+	font-weight: bold;
+}
+
+#external_landing_notice b
+{
+	color: #ff7b00;
+}
+
+
+/* Transaction approval */
+.approvetxn_header
+{
+	margin-bottom: 14px;
+	color:#b0aeac;
+	font-weight:normal;
+	font-size:20px;
+	padding-left:8px;
+}
+
+.approvetxn_lineitem_container
+{
+	margin-top: 10px;
+	background-color: #131518;
+	-moz-box-shadow: 0 0 10px 2px #121315;
+	-webkit-box-shadow: 0 0 10px 2px #121315;
+	box-shadow: 0px 0px 5px #000;
+	padding-bottom:30px;
+
+}
+
+.approvetxn_lineitem_container_header
+{
+	line-height: 20px;
+	color: #c6c6c6;
+	height: 26px;
+}
+
+.approvetxn_lineitem_row
+{
+	background-color: #131518;
+	border-bottom: 1px solid #36383e;
+	line-height: 26px;
+	font-size: 14px;
+	padding-bottom: 10px;
+	min-height: 55px;
+}
+
+.approvetxn_lineitem_row_emptycart
+{
+	background-color: #131518;
+	line-height: 26px;
+	font-size: 20px;
+	padding-bottom: 10px;
+	padding-top: 45px;
+	height: 150px;
+	text-align: center;
+	font-family: Arial;
+}
+
+.approvetxn_lineitem_qty
+{
+	float: left;
+	min-width: 80px;
+	min-height: 10px;	/* This will keep the description from shifting to the left when the throbber is displayed */
+	padding-left: 14px;
+	color: #c6c6c6;
+	padding-top:2px;
+}
+
+.approvetxn_lineitem_price
+{
+	float: right;
+	width: 100px;
+	text-align: right;
+	padding-right: 14px;
+	padding-top:2px;
+	color: #5e5e5e;
+}
+
+.approvetxn_lineitem_name
+{
+	padding-top:2px;
+}
+
+
+.approvetxn_lineitem_description
+{
+	color: #969aa1;
+	font-size: 14px;
+}
+
+a.approvetxn_lineitem_description:link
+{
+	color: #969aa1;
+}
+
+a.approvetxn_lineitem_description:visited
+{
+	color: #969aa1;
+}
+
+a.approvetxn_lineitem_description:hover
+{
+	color: #cfcfcf;
+}
+
+.CartLink
+{
+	font-family: Arial;
+	line-height: 12px;
+}
+
+a.CartLink:link
+{
+	color: #555555;
+}
+
+a.CartLink:visited
+{
+	color: #555555;
+}
+
+a.CartLink:hover
+{
+	color: #777777;
+}
+
+#cart_price_summary {
+	color: #5e5e5e;
+	font-size:14px;
+}
+
+#review_subtotal_value {
+	color: #b0aeac;
+	font-size:14px;
+	text-align: right;
+	padding-right: 14px;
+}
+
+#WalletBalanceValue {
+	color: #b0aeac;
+	font-size:14px;
+	text-align: right;
+	padding-right: 14px;
+}
+
+/* send gift pipeline */
+.sendto_accountname {
+	color: #ffffff;
+}
+
+.sendgift_review_item .checkout_review_item_desc
+{
+	margin-right: 10px;
+}
+
+.cart_table {
+	width: 600px;
+	border: none;
+	border-collapse:collapse;
+	border-spacing: 0px;
+}
+
+.cart_table th {
+	color: #9F9D9B;
+	font-size: 12px;
+	font-weight: normal;
+	padding: 5px 5px 4px 8px;
+	line-height: 15px;
+	text-transform: uppercase;
+	background: transparent;
+}
+
+
+.cart_table td:not(:first-child), .cart_table th:not(:first-child) {
+	text-align: right;
+}
+
+.cart_table td:first-child + td {
+	text-align: left;
+}
+
+.cart_table td {
+	vertical-align:middle;
+	padding: 6px 6px 6px 6px;
+}
+
+.cart_table tbody tr {
+	height: 80px;
+}
+
+.cart_table tbody tr.cart_item_warning {
+	height: auto;
+	padding-top: 0px;
+	position: relative;
+	top: -10px;
+	font-size: 12px;
+	color: rgb( 175, 168, 83 );
+	background-color: rgb( 23, 25, 27 );
+}
+
+.cart_table tbody td {
+	border-bottom: 1px solid #36383e;
+	margin: 0px;
+}
+
+.cart_table tbody tr.cart_item_has_warning td {
+	border-bottom: none;
+}
+
+.cart_table tbody tr.subtotal td {
+	border-bottom: none;
+}
+
+.cart_table tbody tr.cart_item_warning td {
+	padding: 4px 0px 8px 0px;
+	text-align: center;
+}
+
+.cart_table .subtotal {
+	height: 35px;
+}
+
+.cart_table .WalletBalance {
+	height: 45px;
+}
+
+.cart_table thead tr {
+	background: url('http://cdn.dota2.com/apps/dota2/images/store/cart_header.jpg');
+	height: 24px;
+	width:602px;
+}
+
+.cart_qty {
+	padding: 3px 7px 3px 7px;
+	margin-top: 16px;
+}
+
+.itemQuantity {
+	visibility: hidden;
+}
+
+.Checkout {
+	width: 90px;
+	float: right;
+	margin-right: 4px;
+}
+
+.Checkout a, .Checkout a:hover {
+	color: #fff;
+}
+
+.ContinueShoppingButton {
+	min-width:180px;
+	float:right;
+}
+
+.CheckoutButton {
+	float:right;
+	margin: 12px 0;
+	min-width: 150px;
+}
+
+#CheckoutSpinner {
+	display: none;
+	background: url('http://cdn.dota2.com/apps/dota2/images/throbber.gif') no-repeat 0 0;
+	background-size: 100% 100%;
+	top: 15px;
+	width: 20px;
+	height: 20px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.CheckoutButtonContainer {
+	float: right;
+	width: 128px;
+	height: 60px;
+}
+
+.MiniSpinner {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.CartStoreTabContainer {
+	margin: 31px auto;
+	position: relative;
+	width: 966px;
+}
