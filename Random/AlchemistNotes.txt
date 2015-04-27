@@ -1,7 +1,27 @@
+==== SteamOS build 159 2015-04-27 ====
+[list]
+[*]curl - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3143]CVE-2015-3143[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3144]CVE-2015-3144[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3145]CVE-2015-3145[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3148]CVE-2015-3148[/url]
+[/list]
+
+==== SteamOS build 158 2015-04-27 ====
+[list]
+[*]dpkg - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0840]CVE-2015-0840[/url]
+[*]iceweasel - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0815]CVE-2015-0815[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0813]CVE-2015-0813[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0816]CVE-2015-0816[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0807]CVE-2015-0807[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0801]CVE-2015-0801[/url]
+[*]libgd2 - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2497]CVE-2014-2497[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9709]CVE-2014-9709[/url]
+[*]libtasn1-3 - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2806]CVE-2015-2806[/url]
+[*]libx11 - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7439]CVE-2013-7439[/url]
+[*]libxrender - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7439]CVE-2013-7439[/url]
+[*]ntp - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1798]CVE-2015-1798[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1799]CVE-2015-1799[/url]
+[*]openldap - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4449]CVE-2013-4449[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9713]CVE-2014-9713[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1545]CVE-2015-1545[/url]
+[*]openssl - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0209]CVE-2015-0209[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0286]CVE-2015-0286[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0287]CVE-2015-0287[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0288]CVE-2015-0288[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0289]CVE-2015-0289[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0292]CVE-2015-0292[/url]
+[*]tzdata - latest upstream version
+[*]wpa - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1863]CVE-2015-1863[/url]
+[/list]
+
 ==== SteamOS build 157 2015-03-24 ====
 [list]
-[*] plymouth-themes-steamos - Add support for OEM branding.
-[*] plymouth-themes-steamos-branding-alienware - Add package for Alienware splash branding.
+[*]plymouth-themes-steamos - Add support for OEM branding.
+[*]plymouth-themes-steamos-branding-alienware - Add package for Alienware splash branding.
 [/list]
 
 ==== SteamOS build 156 2015-03-24 ====
