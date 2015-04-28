@@ -57,17 +57,15 @@ function PopulatePackageAppLists( rgIncludedItemIds )
 {
 	var elemAllApps = $('package_available_app_list');
 	var elemIncludedApps = $('package_included_app_list');
-	
-	// is the list of included apps an empty array?
-	if ( rgIncludedItemIds.size && rgIncludedItemIds.size() == 0 )
-		return;
 
-	rgIncludedItemIds.each(function(itemId, index) {
-
-		var opt = new Element('option', {value: itemId, 'class': g_rgReferencedItems[itemId]['cssClass'] } );
-		opt.innerHTML = g_rgReferencedItems[itemId]['name'];
+	for ( var i = 0; i < rgIncludedItemIds.length; i++ )
+	{
+		var itemId = rgIncludedItemIds[i];
+		var rgItemData = g_rgReferencedItems[itemId] || {};
+		var opt = new Element('option', {value: itemId, 'class': rgItemData['cssClass'] } );
+		opt.innerHTML = rgItemData['name'] || ( '{unknown item ' + itemId + '}' );
 		elemIncludedApps.appendChild(opt);
-	});
+	}
 }
 
 var g_rgstrLastSearch = "";
