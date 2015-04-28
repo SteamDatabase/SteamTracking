@@ -351,7 +351,6 @@ function CheckAccountNameAvailability()
 
 var g_timerPasswordAvail = null;
 var g_bPasswordAvailable = false;
-var g_bPasswordAvailableCheckInFlight = false;
 
 function CalculatePasswordStrength( pass )
 {

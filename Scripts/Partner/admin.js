@@ -1227,3 +1227,15 @@ function OnAIWaitComplete(func)
 	doCheck();
 }
 
+function LoadPageClusterArchive( pageid, $Element, fnOnSuccess )
+{
+	$J.get( 'https://partner.steamgames.com/admin/store/clusterarchiveajax/' + pageid )
+		.done( function( html ) {
+			$Element.html( html );
+			if ( fnOnSuccess )
+				fnOnSuccess();
+		} ).fail( function() {
+			$Element.html( '<div style="color: red;">Failed to load history data</div>' );
+		});
+}
+

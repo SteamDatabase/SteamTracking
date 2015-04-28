@@ -50,6 +50,13 @@
 	margin: 10px;
 }
 
+.twofactor_settings_choice_warning
+{
+	font-size: 16px;
+	color: #a94847;
+	margin: 10px;
+}
+
 .twofactor_manual_entry_body
 {
 	font-size: 12px;

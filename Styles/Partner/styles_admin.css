@@ -2482,3 +2482,16 @@ html, body { height:100%; }
 {
 	font-weight: bold;
 }
+
+.page_archived_cluster
+{
+
+}
+
+.page_archived_cluster_last_published
+{
+	display: inline-block;
+	width: 160px;
+	text-align: right;
+	color: #666666;
+}

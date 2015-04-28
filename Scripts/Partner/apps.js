@@ -196,10 +196,10 @@ function SetAppSigningInfo( appid, fileKeyMap, signaturesCheckedOnLaunch )
 //
 // Set the economy info
 //
-function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, privateMode, hasItemServer )
+function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, refundApiLevel, privateMode, hasItemServer )
 {
     AppsAjaxRequest( g_szBaseURL + '/apps/seteconomyinfo/' + appid,
-		{ 'assetURL' : assetURL, 'assetKey' : assetKey, 'apiLevel' : apiLevel, 'privateMode' : privateMode, 'hasItemServer' : hasItemServer },
+		{ 'assetURL' : assetURL, 'assetKey' : assetKey, 'apiLevel' : apiLevel, 'refundApiLevel': refundApiLevel, 'privateMode' : privateMode, 'hasItemServer' : hasItemServer },
 		function( results )
 		{
 			// now reflect results
@@ -1729,7 +1729,7 @@ function EditStat( appid, stat )
 		item.attr( 'id', id + "_incrementonly" );
 		if ( "incrementonly" in stat && stat[ "incrementonly" ] != 0 )
 		{
-			item.checked = true;
+			item.attr( 'checked', true );
 		}
 		item.click( DirtyRowClosure( row ) );
 		addCell( row, item );

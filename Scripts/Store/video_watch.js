@@ -221,6 +221,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 CVideoWatch.prototype.LoadVideoMPD = function( url )
 {
 	this.m_player.Close();
+	this.m_DASHPlayerStats.Reset();
 	this.SetResumeTimeForAppID();
 	this.m_player.PlayMPD( url );
 }
