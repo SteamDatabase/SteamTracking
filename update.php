@@ -237,6 +237,12 @@
 				
 				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
 			}
+			// Prettify
+			else if( $File === 'Scripts/Dota2/heropickerdata.json' )
+			{
+				$Data = JSON_Decode( $Data, true );
+				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
+			}
 			// Unzip it
 			else if( SubStr( $File, -4 ) === '.zip' )
 			{
