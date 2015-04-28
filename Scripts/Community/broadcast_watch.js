@@ -292,6 +292,7 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 CBroadcastWatch.prototype.LoadBroadcastMPD = function( url )
 {
 	this.m_player.Close();
+	this.m_DASHPlayerStats.Reset();
 	this.m_player.PlayMPD( url );
 }
 

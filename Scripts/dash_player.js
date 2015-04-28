@@ -55,7 +55,7 @@ function CDASHPlayer( elVideoPlayer )
 
 CDASHPlayer.TRACK_BUFFER_MS = 5000;
 CDASHPlayer.TRACK_BUFFER_MAX_SEC = 30 * 60;
-CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD = 30 * 1000;
+CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 30 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
 
 CDASHPlayer.HAVE_NOTHING = 0;
@@ -792,8 +792,8 @@ CDASHPlayer.prototype.UpdateStats = function()
 	// For Server Event Logging
 	this.m_nBandwidthTotal += this.m_nCurrentDownloadBitRate;
 	this.m_nBandwidthEntries++;
-	this.m_nBandwidthMinimum = ( this.m_nBandwidthMinimum == 0 ? this.m_nCurrentDownloadBitRate : ( this.m_nCurrentDownloadBitRate < this.m_nBandwidthMinimum ) ? this.m_nCurrentDownloadBitRate : this.m_nBandwidthMinimum );
-	this.m_nBandwidthMaximum = ( this.m_nBandwidthMaximum == 0 ? this.m_nCurrentDownloadBitRate : ( this.m_nCurrentDownloadBitRate > this.m_nBandwidthMaximum ) ? this.m_nCurrentDownloadBitRate : this.m_nBandwidthMaximum );
+	this.m_nBandwidthMinimum = ( this.m_nBandwidthMinimum == 0 ? this.m_nCurrentDownloadBitRate : ( this.m_nCurrentDownloadBitRate < this.m_nBandwidthMinimum ? this.m_nCurrentDownloadBitRate : this.m_nBandwidthMinimum ) );
+	this.m_nBandwidthMaximum = ( this.m_nBandwidthMaximum == 0 ? this.m_nCurrentDownloadBitRate : ( this.m_nCurrentDownloadBitRate > this.m_nBandwidthMaximum ? this.m_nCurrentDownloadBitRate : this.m_nBandwidthMaximum ) );
 }
 
 CDASHPlayer.prototype.StatsVideoBuffer = function()
@@ -1294,7 +1294,13 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 					_loader.m_nFailedSegmentDownloads++;
 
 					PlayerLog( '[video] HTTP ' + xhr.status + ' (' + nDownloadMS + 'ms, ' + + '0k): ' + url );
-					if ( now - rtAttemptStarted > CDASHPlayer.TRACK_BUFFER_MS + CDASHPlayer.DOWNLOAD_RETRY_MS )
+					var nTimeToRetry = CDASHPlayer.DOWNLOAD_RETRY_MS;
+					if ( _loader.m_player.BIsLiveContent() )
+						nTimeToRetry += CDASHPlayer.TRACK_BUFFER_MS;
+					else
+						nTimeToRetry += CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS;
+
+					if ( now - rtAttemptStarted > nTimeToRetry )
 					{
 						_loader.DownloadFailed();
 						return;
@@ -1477,19 +1483,19 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 	}
 
 	// if enough to play, but not fully buffered, download with delay to allow adaptive changes to occur
-	if ( unAmountBuffered < CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD )
+	if ( unAmountBuffered < CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS )
 	{
 		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, CDASHPlayer.DOWNLOAD_RETRY_MS );
 		return;
 	}
 
 	// next segment is available but buffer is full. Can wait on download
-	unDeltaMS = unAmountBuffered - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD;
+	unDeltaMS = unAmountBuffered - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS;
 
 	if ( this.m_player.m_elVideoPlayer.playbackRate > 1.0 )
 		unDeltaMS /= this.m_player.m_elVideoPlayer.playbackRate;
 
-	if ( unAmountBuffered < ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD )
+	if ( unAmountBuffered < ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS )
 	{
 		// should be room in buffer in TRACK_BUFFER_MS time for next segment
 		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, unDeltaMS );
@@ -1673,8 +1679,8 @@ CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes 
 		this.m_nBytesReceivedTotal += logEntry.dataSizeBytes;
 		this.m_nSegmentDownloadTimeTotal += logEntry.downloadTime;
 		this.m_nSegmentDownloadTimeEntries++;
-		this.m_nSegmentDownloadTimeMinimum = ( this.m_nSegmentDownloadTimeMinimum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime < this.m_nSegmentDownloadTimeMinimum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMinimum );
-		this.m_nSegmentDownloadTimeMaximum = ( this.m_nSegmentDownloadTimeMaximum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime > this.m_nSegmentDownloadTimeMaximum ) ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMaximum );
+		this.m_nSegmentDownloadTimeMinimum = ( this.m_nSegmentDownloadTimeMinimum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime < this.m_nSegmentDownloadTimeMinimum ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMinimum ) );
+		this.m_nSegmentDownloadTimeMaximum = ( this.m_nSegmentDownloadTimeMaximum == 0 ? logEntry.downloadTime : ( logEntry.downloadTime > this.m_nSegmentDownloadTimeMaximum ? logEntry.downloadTime : this.m_nSegmentDownloadTimeMaximum ) );
 	}
 }
 
@@ -3774,6 +3780,17 @@ CDASHPlayerStats.prototype.Close = function()
 		this.m_xhrLogEventToServer.abort();
 		this.m_xhrLogEventToServer = null;
 	}
+}
+
+CDASHPlayerStats.prototype.Reset = function()
+{
+	this.m_statsLastSnapshot = {
+		'time': new Date().getTime(),
+		'bytes_received': 0,
+		'frames_decoded': 0,
+		'frames_dropped': 0,
+		'failed_segments': 0,
+	};
 }
 
 CDASHPlayerStats.prototype.LogEventToServer = function( bStalledEvent, bVideoStalled )

@@ -344,7 +344,20 @@ function HandleActivationCode( near, bUsingSms )
 				}
 			);
 		},
-		ShowError,
+
+		function( msg, code )
+		{
+			if ( code == 88 ||
+				code == 89 )
+			{
+				ShowError( "The activation code is incorrect" );
+			}
+			else
+			{
+				FatalError( "Sorry, there was an error processing your activation code." );
+			}
+		},
+
 		FatalError
 	);
 }
@@ -469,12 +482,12 @@ function HandlePhoneNumber( near, bForTwoFactor )
 g_SmsCodeFailures = 0;
 
 
-
 function DoTwoFactorValidate( sms_code )
 {
 	if ( CheckCallInProgress() )
 		return;
 	ShowBusy();
+	
 	GetValueFromLocalURL( 'steammobile://steamguardvalidate?code=' + sms_code, 60,
 		function()
 		{
@@ -483,17 +496,14 @@ function DoTwoFactorValidate( sms_code )
 
 		function( data, code )
 		{
-			ClearBusy();
-
 			if ( ++g_SmsCodeFailures > 5 )
 			{
 				FatalError( "Sorry, there was an error processing your SMS code." );
 			}
 			else
 			{
-				var err = parseInt( result[2] );
-				if ( err == 88 ||
-					err == 89 )
+				if ( code == 88 ||
+					code == 89 )
 				{
 					ShowError( "The SMS code is incorrect" );
 				}
@@ -560,7 +570,20 @@ function HandleSmsCode( near, bForTwoFactor )
 						}
 					},
 
-					HandleAjaxError
+					function( errorText, fatal )
+					{
+						if ( fatal )
+							FatalError( errorText );
+						
+						if ( ++g_SmsCodeFailures > 5 )
+						{
+							FatalError( "Sorry, there was an error processing your SMS code." );
+						}
+						else
+						{
+							HandleAjaxError( errorText, fatal );
+						}
+					}
 					);
 			}
 		},
@@ -581,6 +604,7 @@ function HandleSmsResend( near, bForTwoFactor )
 	PhoneAjax( 'send_sms_code', bForTwoFactor,
 		function()
 		{
+			g_SmsCodeFailures = 0;
 			ClearBusy();
 			$J('#sms_code').val('');
 		},
