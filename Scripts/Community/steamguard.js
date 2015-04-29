@@ -328,14 +328,7 @@ function HandleActivationCode( near, bUsingSms )
 			PhoneAjax( 'has_phone', null,
 				function( data )
 				{
-					if ( data.has_phone )
-					{
-						window.location = 'https://steamcommunity.com/steamguard/twofactor_recoverycode';
-					}
-					else
-					{
-						window.location = 'https://steamcommunity.com/steamguard/phone_splash?bRevoke2fOnCancel=true';
-					}
+					window.location = 'https://steamcommunity.com/steamguard/twofactor_recoverycode';
 				},
 
 				function()
@@ -393,7 +386,19 @@ function HandlePhoneSplashContinue( near, bForTwoFactor )
 							{
 								window.location = 'https://steamcommunity.com/steamguard/phone_checksms?bForTwoFactor=1&bRevoke2fOnCancel=';
 							},
-							FatalError,
+						
+							function( data, code )
+							{
+								if ( code == 84 )
+								{
+									window.location = 'https://steamcommunity.com/steamguard/phone_cantsendsms';
+								}
+								else
+								{
+									FatalError( data, code );
+								}
+							},
+							
 							FatalError
 						);
 				}
