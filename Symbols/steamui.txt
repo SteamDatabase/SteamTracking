@@ -2999,6 +2999,7 @@
  B g_URLLabelLinkerHack
  B g_URLLabelPullInModule
  B g_URLManager
+ B g_varNewGameHelpSiteEnabled
  B g_VecLoadedModules
  B g_vecTempTextBuffer
  B g_VerifyEmailWizard_Helper
@@ -4745,7 +4746,6 @@
  b s_unPacketNums
  B s_varCloudDetailsEnabled
  B s_varCloudDetailsSimulatedFileCount
- b s_varNewGameHelpSiteEnabled
  B s_varRecommendationsEnabled
  b s_vecpSDLJoyStick
  B SwapPanels::symbol
@@ -45456,7 +45456,7 @@
  t _GLOBAL__sub_I_friendscha.stdout.steam_rel_osx_builder.12863.3h45Kh.ii
  t _GLOBAL__sub_I_FriendsIma.stdout.steam_rel_osx_builder.7283.4hn9hk.ii
  t _GLOBAL__sub_I_friendspro.stdout.steam_rel_osx_builder.12867.mdcknS.ii
- t _GLOBAL__sub_I_friends.stdout.steam_rel_osx_builder.12853.6OO0jR.ii
+ t _GLOBAL__sub_I_friends.stdout.steam_rel_osx_builder.72139.lm3CGw.ii
  t _GLOBAL__sub_I_gamerecord.stdout.steam_rel_osx_builder.12655.icnJaT.ii
  t _GLOBAL__sub_I_Games_Dial.stdout.steam_rel_osx_builder.14079.08WUeB.ii
  t _GLOBAL__sub_I_gamestream.stdout.steam_rel_osx_builder.12661.i3GI57.ii
@@ -45648,7 +45648,7 @@
  t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.13515.Hn6khw.ii
  t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.13519.Kev0H9.ii
  t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.13529.bOp3rw.ii
- t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.25065.FicmIq.ii
+ t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.86185.1tkav0.ii
  t _GLOBAL__sub_I_settings_b.stdout.steam_rel_osx_builder.13533.fADNmw.ii
  t _GLOBAL__sub_I_settings_d.stdout.steam_rel_osx_builder.13537.fv4ALC.ii
  t _GLOBAL__sub_I_settings_d.stdout.steam_rel_osx_builder.13541.TvSKgg.ii
@@ -45680,7 +45680,7 @@
  t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.14143.ylHntv.ii
  t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.14149.Yn8zHq.ii
  t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.14157.Awh9hf.ii
- t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.25499.v2kX32.ii
+ t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.86619.49Ao1f.ii
  t _GLOBAL__sub_I_ssa.stdout.steam_rel_osx_builder.12763.yvI7RI.ii
  t _GLOBAL__sub_I_sseconst.stdout.steam_rel_osx_builder.8859.L9xmLP.ii
  t _GLOBAL__sub_I_stat.stdout.steam_rel_osx_builder.3732.VrYDeb.ii
@@ -45792,7 +45792,7 @@
  t _GLOBAL__sub_I_uievent.stdout.steam_rel_osx_builder.11719.IClbm9.ii
  t _GLOBAL__sub_I_uifilereso.stdout.steam_rel_osx_builder.11730.GcvQRy.ii
  t _GLOBAL__sub_I_uilength.stdout.steam_rel_osx_builder.11647.vvFekf.ii
- t _GLOBAL__sub_I_UI_Navigat.stdout.steam_rel_osx_builder.14177.HIbZOG.ii
+ t _GLOBAL__sub_I_UI_Navigat.stdout.steam_rel_osx_builder.53461.da7mtX.ii
  t _GLOBAL__sub_I_uischedule.stdout.steam_rel_osx_builder.11735.ju3dtK.ii
  t _GLOBAL__sub_I_urlhelper.stdout.steam_rel_osx_builder.7285.AGkn3y.ii
  t _GLOBAL__sub_I_URLLabel.stdout.steam_rel_osx_builder.7231.54gXBm.ii

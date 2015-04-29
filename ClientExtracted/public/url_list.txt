@@ -227,6 +227,11 @@ SupportFrontPage
 	url			"http://support.steampowered.com/"
 	method		"external"
 }
+HelpFrontPage
+{
+	url			"%help%/"
+	method		"internal"
+}
 SupportNewTicket
 {
 	url			"https://support.steampowered.com/newticket.php"
