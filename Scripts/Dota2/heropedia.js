@@ -12,7 +12,7 @@ $(document).ready(
 				{
 					type:'GET',
 					cache:true,
-					url:'http://www.dota2.com/jsfeed/heropickerdata?v=2734028&l=english',
+					url:'http://www.dota2.com/jsfeed/heropickerdata?v=ayyvalve&l=english',
 					dataType:'json',
 					success:function(heroPickerJSON){ g_rgHeroPickerData = heroPickerJSON; sortHeroNameDropdown(); g_bHeroPickerDataReady = true; $('#heroBioLoading').hide(); $('#heroBioDynamic').show(); $('#heroBioName').html( 'Choose a hero' ); updateFilters(); }
 				}

@@ -243,6 +243,10 @@
 				$Data = JSON_Decode( $Data, true );
 				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
 			}
+			else if( $File === 'Scripts/Dota2/heropedia.js' )
+			{
+				$Data = preg_replace( '/\?v=[0-9]+/', '?v=ayyvalve', $Data );
+			}
 			// Unzip it
 			else if( SubStr( $File, -4 ) === '.zip' )
 			{
