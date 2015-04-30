@@ -311,6 +311,12 @@ function HandleTwoFactorSplashContinue( near )
 }
 
 
+function HandleActivateUsingEmail( near )
+{
+	HandleTwoFactorSplashContinue( near );
+}
+
+
 function HandleActivationCode( near, bUsingSms )
 {
 	if ( CheckCallInProgress() )
