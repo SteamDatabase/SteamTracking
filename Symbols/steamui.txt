@@ -3169,7 +3169,9 @@
  B OpenCommunityMenu::symbol
  B OpenEntry::symbol
  B OpenFriendActivity::symbol
+ B OpenGameGuides::symbol
  B OpenGameHub::symbol
+ B OpenGameWorkshop::symbol
  B OpenMyInventory::symbol
  B OpenMyProfile::symbol
  B OpenProfileMenu::symbol
@@ -9275,7 +9277,9 @@
  D OpenCommunityMenu::pchEvent
  D OpenEntry::pchEvent
  D OpenFriendActivity::pchEvent
+ D OpenGameGuides::pchEvent
  D OpenGameHub::pchEvent
+ D OpenGameWorkshop::pchEvent
  D OpenMyInventory::pchEvent
  D OpenMyProfile::pchEvent
  D OpenProfileMenu::pchEvent
@@ -25298,13 +25302,16 @@
  T CCommunityWrapperPanel::OnOpenCommunityHome(bool)
  T CCommunityWrapperPanel::OnOpenCommunityMarket(bool)
  T CCommunityWrapperPanel::OnOpenCommunityMenu(bool)
+ T CCommunityWrapperPanel::OnOpenGameGuides(unsigned int, bool)
  T CCommunityWrapperPanel::OnOpenGameHub(unsigned int, bool)
+ T CCommunityWrapperPanel::OnOpenGameWorkshop(unsigned int, bool)
  T CCommunityWrapperPanel::OnSellItemOnMarket(unsigned int, char const*, char const*, char const*)
  T CCommunityWrapperPanel::OnShowMarketCreateBuyOrderDialog(unsigned int, char const*, char const*)
  T CCommunityWrapperPanel::OnShowMarketDetails(unsigned int, char const*, char const*, bool)
  T CCommunityWrapperPanel::OnShowMarketItemPicker(char const*, bool)
  T CCommunityWrapperPanel::OnShowWorkshopDetails(unsigned long long, bool)
  T CCommunityWrapperPanel::OpenCommunityMenuHelper(bool)
+ T CCommunityWrapperPanel::OpenGameHubHelper(char const*, char const*, unsigned int, bool)
  T CCommunityWrapperPanel::SetCommunityDepth(panorama::CPanel2D*, unsigned int)
  T CCommunityWrapperPanel::SetPanelVisibility(panorama::CPanel2D*, bool)
  T CCommunityWrapperPanel::Validate(CValidator&, char const*)
@@ -45402,7 +45409,7 @@
  t _GLOBAL__sub_I_communityf.stdout.steam_rel_osx_builder.12837.w1ZDX1.ii
  t _GLOBAL__sub_I_communityf.stdout.steam_rel_osx_builder.12843.oCj0wQ.ii
  t _GLOBAL__sub_I_communitym.stdout.steam_rel_osx_builder.12849.kgqQqI.ii
- t _GLOBAL__sub_I_community.stdout.steam_rel_osx_builder.12815.Dw5bg6.ii
+ t _GLOBAL__sub_I_community.stdout.steam_rel_osx_builder.89905.noqqrP.ii
  t _GLOBAL__sub_I_completion.stdout.steam_rel_osx_builder.3801.wXnVRJ.ii
  t _GLOBAL__sub_I_completion.stdout.steam_rel_osx_builder.3806.Ju3bN5.ii
  t _GLOBAL__sub_I_constants.stdout.steam_rel_osx_builder.3809.JHkdvu.ii
@@ -45439,7 +45446,7 @@
  t _GLOBAL__sub_I_downloadsp.stdout.steam_rel_osx_builder.12827.hiM0VP.ii
  t _GLOBAL__sub_I_driverupda.stdout.steam_rel_osx_builder.14067.1whcJa.ii
  t _GLOBAL__sub_I_Driver_Ver.stdout.steam_rel_osx_builder.14075.5YXbxL.ii
- t _GLOBAL__sub_I_dropdown.stdout.steam_rel_osx_builder.11513.SLVrNP.ii
+ t _GLOBAL__sub_I_dropdown.stdout.steam_rel_osx_builder.89080.aRWAnC.ii
  t _GLOBAL__sub_I_EditablePa.stdout.steam_rel_osx_builder.6931.upXIWR.ii
  t _GLOBAL__sub_I_emailwizar.stdout.steam_rel_osx_builder.13129.2wQT8U.ii
  t _GLOBAL__sub_I_enterauthe.stdout.steam_rel_osx_builder.13130.JbGyDW.ii
@@ -45505,17 +45512,17 @@
  t _GLOBAL__sub_I_library_de.stdout.steam_rel_osx_builder.13033.Sb9FeO.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12927.jbsIkz.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12931.OP86Pv.ii
- t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12937.7dtrJO.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12941.hY8TJR.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12953.FUnsOS.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12957.4DofjU.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12963.BwXY1F.ii
- t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12971.xvKr4k.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12975.6BRHSn.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12979.x17664.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12983.CJ7CMp.ii
  t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.12987.YWtV1e.ii
- t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.13001.roeDaj.ii
+ t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.89991.tXyXEj.ii
+ t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.90011.f4uR2i.ii
+ t _GLOBAL__sub_I_librarydet.stdout.steam_rel_osx_builder.90031.4AHwL4.ii
  t _GLOBAL__sub_I_library_eu.stdout.steam_rel_osx_builder.13043.44tkPh.ii
  t _GLOBAL__sub_I_librarygri.stdout.steam_rel_osx_builder.12823.lOFUiS.ii
  t _GLOBAL__sub_I_library_la.stdout.steam_rel_osx_builder.13046.h3U9wd.ii
@@ -45532,7 +45539,7 @@
  t _GLOBAL__sub_I_logger.stdout.steam_rel_osx_builder.3997.zVQQZY.ii
  t _GLOBAL__sub_I_loginhelpw.stdout.steam_rel_osx_builder.13173.rbZkvb.ii
  t _GLOBAL__sub_I_loginpanel.stdout.steam_rel_osx_builder.13177.zKAbJD.ii
- t _GLOBAL__sub_I_mainmenu.stdout.steam_rel_osx_builder.13273.VtvEuk.ii
+ t _GLOBAL__sub_I_mainmenu.stdout.steam_rel_osx_builder.90221.Omk7Ta.ii
  t _GLOBAL__sub_I_managestea.stdout.steam_rel_osx_builder.13181.fbsWlG.ii
  t _GLOBAL__sub_I_mathlib_ba.stdout.steam_rel_osx_builder.8783.h7FLga.ii
  t _GLOBAL__sub_I_MenuBar.stdout.steam_rel_osx_builder.7059.ejYBJa.ii
@@ -45597,7 +45604,7 @@
  t _GLOBAL__sub_I_parentalbu.stdout.steam_rel_osx_builder.13447.xdwQY5.ii
  t _GLOBAL__sub_I_parentalca.stdout.steam_rel_osx_builder.7282.sJnZBG.ii
  t _GLOBAL__sub_I_parentaled.stdout.steam_rel_osx_builder.14099.TAXE2e.ii
- t _GLOBAL__sub_I_parentalev.stdout.steam_rel_osx_builder.13451.n8GNw4.ii
+ t _GLOBAL__sub_I_parentalev.stdout.steam_rel_osx_builder.90343.3HEHkv.ii
  t _GLOBAL__sub_I_parentalin.stdout.steam_rel_osx_builder.3727.4PiAyy.ii
  t _GLOBAL__sub_I_parentalli.stdout.steam_rel_osx_builder.13453.URlNMo.ii
  t _GLOBAL__sub_I_parentalme.stdout.steam_rel_osx_builder.14103.Oo6VWh.ii
@@ -45648,7 +45655,7 @@
  t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.13515.Hn6khw.ii
  t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.13519.Kev0H9.ii
  t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.13529.bOp3rw.ii
- t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.86185.1tkav0.ii
+ t _GLOBAL__sub_I_settings_a.stdout.steam_rel_osx_builder.7215.EQnWAs.ii
  t _GLOBAL__sub_I_settings_b.stdout.steam_rel_osx_builder.13533.fADNmw.ii
  t _GLOBAL__sub_I_settings_d.stdout.steam_rel_osx_builder.13537.fv4ALC.ii
  t _GLOBAL__sub_I_settings_d.stdout.steam_rel_osx_builder.13541.TvSKgg.ii
@@ -45680,7 +45687,7 @@
  t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.14143.ylHntv.ii
  t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.14149.Yn8zHq.ii
  t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.14157.Awh9hf.ii
- t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.86619.49Ao1f.ii
+ t _GLOBAL__sub_I_Source_Fil.stdout.steam_rel_osx_builder.7649.iF6cEJ.ii
  t _GLOBAL__sub_I_ssa.stdout.steam_rel_osx_builder.12763.yvI7RI.ii
  t _GLOBAL__sub_I_sseconst.stdout.steam_rel_osx_builder.8859.L9xmLP.ii
  t _GLOBAL__sub_I_stat.stdout.steam_rel_osx_builder.3732.VrYDeb.ii
@@ -45712,7 +45719,6 @@
  t _GLOBAL__sub_I_store_cart.stdout.steam_rel_osx_builder.13873.QiFTRs.ii
  t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.13735.NaEjiE.ii
  t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.13739.2qElTq.ii
- t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.13743.cXVOo9.ii
  t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.13755.vvzcjS.ii
  t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.13759.FQWEW4.ii
  t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.13769.5zsp6I.ii
@@ -45722,6 +45728,7 @@
  t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.13787.csHKZ4.ii
  t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.13797.MHRqBM.ii
  t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.13803.FofOGN.ii
+ t _GLOBAL__sub_I_storecheck.stdout.steam_rel_osx_builder.90541.zrVmQK.ii
  t _GLOBAL__sub_I_store_chec.stdout.steam_rel_osx_builder.13879.ICkYKu.ii
  t _GLOBAL__sub_I_store_feat.stdout.steam_rel_osx_builder.13887.MMO1YC.ii
  t _GLOBAL__sub_I_store_filt.stdout.steam_rel_osx_builder.13891.zq9TCd.ii
@@ -47560,9 +47567,15 @@
  T OpenFriendActivity::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T OpenFriendActivity::GetEventType()
  T OpenFriendActivity::MakeEvent(panorama::IUIPanelClient const*, bool)
+ T OpenGameGuides::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T OpenGameGuides::GetEventType()
+ T OpenGameGuides::MakeEvent(panorama::IUIPanelClient const*, unsigned int, bool)
  T OpenGameHub::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T OpenGameHub::GetEventType()
  T OpenGameHub::MakeEvent(panorama::IUIPanelClient const*, unsigned int, bool)
+ T OpenGameWorkshop::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T OpenGameWorkshop::GetEventType()
+ T OpenGameWorkshop::MakeEvent(panorama::IUIPanelClient const*, unsigned int, bool)
  T OpenMyInventory::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T OpenMyInventory::GetEventType()
  T OpenMyInventory::MakeEvent(panorama::IUIPanelClient const*)
@@ -51204,7 +51217,9 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenCommunityMenu, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenEntry>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenFriendActivity, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenGameGuides, unsigned int, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenGameHub, unsigned int, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenGameWorkshop, unsigned int, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenMyInventory>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenMyProfile>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<OpenProfileMenu, bool>(panorama::IUIPanel*, char const*, char const**)

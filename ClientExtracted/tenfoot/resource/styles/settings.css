@@ -120,6 +120,7 @@ SettingsPanel
 .SettingsContentFlowRight
 {
 	flow-children: right;
+	height: 100%;
 }
 
 SettingsPanel.SectionVisible #SettingsContent

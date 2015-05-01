@@ -1702,6 +1702,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/../tenfootnotification.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../community/community.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_achievements.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_community_guides.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../mainmenu.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/parentalbutton.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/parentalbutton.h
