@@ -14,6 +14,7 @@
  b CFStringGetCStringPtr_fn
  B cgl_ctx
  b Demangled
+ B dwLastScreenshotTime
  b eh_globals
  b emergency_buffer
  b emergency_used
@@ -1007,6 +1008,7 @@
  T SteamThreadTools::CThread::ThreadProc(void*)
  T SteamThreadTools::InitMainThread()
  T StopMovieRecording()
+ T TakeScreenshotNextFrame(bool)
  t __tcf_0
  T ThreadInterlockedAssignIf64
  T ThreadInterlockedCompareExchange
