@@ -80,9 +80,9 @@ done
 # CONVERT .TGA AND .ICO TO .PNG
 #
 
-echo Converting images to pngs
+#echo Converting images to pngs
 
-for i in $(find -name '*.tga');
-do
-	convert -strip "$i" "$i.png"
-done
+#for i in $(find -name '*.tga');
+#do
+#	convert -strip "$i" "$i.png"
+#done
