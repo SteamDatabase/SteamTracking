@@ -1511,6 +1511,12 @@ div.bb_code {
 	overflow-x: auto;
 }
 
+span.bb_removedlink {
+	color: #535354;
+	font-weight: normal;
+	font-size: 80%;
+}
+
 table.bb_table
 {
 	border-spacing: 0px;

@@ -135,23 +135,6 @@ function InitQueueControls( store_appid, steamworks_appid )
 	});
 }
 
-function InitSysReqs()
-{
-	var $Tabs = $J('.sysreq_tab');
-	var $Content = $J('.sysreq_content');
-
-	$Tabs.click( function() {
-		var $Tab = $J(this);
-		$Tabs.removeClass('active');
-		$Tab.addClass('active');
-
-		$Content.removeClass('active');
-		$Content.filter('[data-os=' + $Tab.data('os') + ']').addClass('active');
-
-		$Content.trigger('gamepage_autocollapse_expand');
-	});
-}
-
 
 function InitAutocollapse()
 {

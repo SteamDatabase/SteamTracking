@@ -975,7 +975,17 @@ input.filter_search_box:focus {
 }
 
 .market_commodity_explanation {
-    padding: 18px;
+    margin: 18px;
+}
+
+.market_commodity_explanation ul, #largeiteminfo_warning ul, .market_purchase_restrictions ul {
+	margin: 0;
+}
+
+.market_purchase_restrictions {
+	margin-left: 20px;
+	color: #B0AEAC;
+	font-size: 85.7%;
 }
 
 #market_commodity_order_spread {

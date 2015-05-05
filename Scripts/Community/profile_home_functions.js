@@ -85,6 +85,7 @@ function ReceiveInviteProcessResponse()
 			var data = eval( '(' + req.responseText + ')' );
 			if ( data.error_text && data.error_text != "" )
 			{
+				ShowAlertDialog( 'Error', data.error_text );
 				el = document.getElementById( 'errorText' );
 				if ( el )
 				{
