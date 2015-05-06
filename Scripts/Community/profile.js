@@ -158,7 +158,6 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 				);
 				break;
 
-			case 15:
 			case 24:
 				ShowAlertDialog( 'Add Friend',
 					'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663">Visit Steam Support</a> for more information.'
