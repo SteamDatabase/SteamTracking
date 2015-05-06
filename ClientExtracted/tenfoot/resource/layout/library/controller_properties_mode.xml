@@ -84,6 +84,7 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
           <DropDown id="AdaptiveCentering" />
         </Panel>
+        <!-- 
         <Panel class="FieldWrapper JoystickMoveMode Advanced">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_VirtualCapSize" />
           <Slider id="VirtualCapSize" direction="horizontal" />
@@ -100,6 +101,7 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZoneBuffer" />
           <Slider id="AntiDeadZoneBuffer" direction="horizontal" />
         </Panel>
+        -->
 
         <!-- Joystick Camera Mode -->
         <Panel class="FieldWrapper JoystickCameraMode">

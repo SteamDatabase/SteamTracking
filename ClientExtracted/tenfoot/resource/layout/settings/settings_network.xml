@@ -11,7 +11,7 @@
 		</Panel>
 
 		<!-- main panel -->
-		<Panel class="SettingsBottomPanel" tabindex="auto" selectionpos="auto">
+		<Panel class="SettingsBottomPanel SettingsLeftContent" tabindex="auto" selectionpos="auto">
 			<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">
 				<Panel id="WizardButtonsNetwork" tabindex="auto" selectionpos="auto">
 					<Button class="Button" onactivate="NetworkWizardStart()">
@@ -20,13 +20,13 @@
 				</Panel>
 			</Panel>
 
-			<Panel id="SettingsNetwork_Unavailable" class="SettingsContent SettingsRightContent">
+			<Panel id="SettingsNetwork_Unavailable" class="SettingsContent SettingsLeftContent">
 				<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
 					<Label class="SettingsCallout" text="#SettingsNetwork_Unavailable" />
 				</Panel>
 			</Panel>
 
-			<Panel id="SettingsNetwork_Available" class="SettingsContent SettingsRightContent">
+			<Panel id="SettingsNetwork_Available" class="SettingsContent SettingsLeftContent">
 				<Panel id="SettingsNetwork_WiFi_Enabled" tabindex="auto" selectionpos="auto">
 					<Label class="SettingsLegend" text="#SettingsNetwork_WAP" />
 					<Label class="SettingsValue" id="SettingsNetwork_WAP_Name" />

@@ -11,11 +11,14 @@
 				<Button class="ConfigCategory" id="PersonalCategory" onactivate="SelectConfigCategory( personal );">
 					<Label text="#Library_Details_Controller_Personal" />
 				</Button>
-				<Button class="ConfigCategory" id="CommunityCategory" onactivate="SelectConfigCategory( community );">
-					<Label text="#Library_Details_Controller_Community" />
-				</Button>
-			</Panel>
-			<Panel class="ConfigColumn" id="ConfigsColumn" />
+        <Button class="ConfigCategory" id="CommunityCategory" onactivate="SelectConfigCategory( community );">
+          <Label text="#Library_Details_Controller_Community" />
+        </Button>
+        <Button class="ConfigCategory" id="TemplateCategory" onactivate="SelectConfigCategory( template );">
+          <Label text="#Library_Details_Controller_Templates" />
+        </Button>
+      </Panel>
+			<Panel class="ConfigColumn" id="ConfigsColumn" childfocusonhover="true"/>
 		</Panel>
 	</ControllerConfigBrowser>
 </root>

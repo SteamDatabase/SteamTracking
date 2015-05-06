@@ -608,6 +608,12 @@ LibraryAppDetails
 	z-index: 5;
 }
 
+#BGScreenshotWrapper
+{
+	height: 100%;
+	width: 100%;
+}
+
 .DetailsBackground .BGScreenshotVisible
 {
 	opacity-mask: url( "file://{images}/library/library_app_details_bg_mask.png" );

@@ -1439,7 +1439,7 @@
 	"Library_Details_MouseButton_Forward"			"MOUSE FORWARD"
 	"Library_Details_MouseScrollWheel_Up"			"SCROLL UP"
 	"Library_Details_MouseScrollWheel_Down"			"SCROLL DOWN"
-	"Library_Details_Binding_Unknown"				"UNKNOWN"
+	"Library_Details_Binding_Unknown"				"--"
 	"Library_Details_Binding_NotBound"				"--"
 
 	"Library_Details_GamepadButton_Select"			"SELECT"
@@ -1610,6 +1610,7 @@
 
 	"Library_Details_Controller_Personal"				"PERSONAL"
 	"Library_Details_Controller_Community"				"COMMUNITY"
+	"Library_Details_Controller_Templates"				"TEMPLATES"
 	"Library_Details_Controller_AdvancedSettings"		"ADVANCED SETTINGS"
 
 	"Library_Details_Remove_Binding_Title"				"Remove Controller Binding"
@@ -1617,7 +1618,7 @@
 
 	"Library_Details_Default_Config_Title"				"Default"
 	"Library_Details_Default_Config_Author"				"Valve Corporation"
-	"Library_Details_Default_Config_Description"		"This is a default configuration for all games. For best results you will likely need to edit bindings."
+	"Library_Details_Default_Config_Description"		"For best results, edit this generic configuration or start from a template to create unique bindings tailored to this game."
 
 	"Library_AllGames_Header"		"GAMES"
 	"Library_AllGames"			"All Games ({d:games})"
@@ -2932,8 +2933,8 @@
 
 	"Store_LoadingError"		"Steam was unable to load the requested store section. Please try again."
 	
-	"SteamUI_UpdateControllerFirmware_Cancel"	"Not Now"
-	"SteamUI_UpdateControllerFirmware_Continue"	"Next"
+	"SteamUI_UpdateControllerFirmware_Cancel"	"NOT NOW"
+	"SteamUI_UpdateControllerFirmware_Continue"	"NEXT"
 	"SteamUI_UpdateControllerFirmware_Done"		"OK"
 	"SteamUI_UpdateControllerFirmware_Title"	"Update Steam Controller Firmware"
 	"SteamUI_UpdateControllerFirmware_Intro"	"There is new firmware available for your Steam Controller.  We'll run you through the update steps now."

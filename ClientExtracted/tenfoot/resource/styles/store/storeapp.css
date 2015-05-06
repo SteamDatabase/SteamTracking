@@ -41,6 +41,7 @@
 StoreApp.Stackable
 {
 	color: applabel;
+	height: 1080px;
 }
 
 StoreApp:descendantfocus

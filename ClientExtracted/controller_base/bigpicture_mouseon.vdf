@@ -1,22 +1,37 @@
 "controller_mappings"
 {
-    "version" "2"
-    "game" "Steam Big Picture"
+	"version" "2"
+	"game" "Steam Big Picture"
 
-    "group"
-    {
-        "id" "0"
-        "mode" "absolute_mouse"
-    }
+	"group"
+	{
+		"id" "0"
+		"mode" "absolute_mouse"
+	}
+	"group"
+	{
+		"id"		"1"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"edge"		"mouse_button LEFT"
+		}
+		"settings"
+		{
+			"adaptive_threshold"		"0"
+			"hold_repeat_inverval"		"99"
+		}
+	}
 
-    "group_source_bindings"
-    {
-        "0" "right_trackpad"
-    }
+	"group_source_bindings"
+	{
+		"0" "right_trackpad"
+		"1" "right_trigger"
+	}
 
-    "settings"
-    {
-        "left_trackpad_mode" "none"
-        "right_trackpad_mode" "none"
-    }
+	"settings"
+	{
+		"left_trackpad_mode" "none"
+		"right_trackpad_mode" "none"
+	}
 }
