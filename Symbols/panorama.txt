@@ -9973,34 +9973,34 @@
  t global constructors keyed to CryptoPP::PolynomialMod2::PolynomialMod2()
  T GlobalRNGList()
  t _GLOBAL__sub_I_amount.stdout.steam_rel_osx_builder.3751.t09ewZ.ii
- t _GLOBAL__sub_I_background.stdout.steam_rel_osx_builder.53964.tP2PxQ.ii
+ t _GLOBAL__sub_I_background.stdout.steam_rel_osx_builder.38114.9ffahp.ii
  t _GLOBAL__sub_I_checksum_c.stdout.steam_rel_osx_builder.3222.c6Pa63.ii
- t _GLOBAL__sub_I_client_api.stdout.steam_rel_osx_builder.11080.ms5pXG.ii
+ t _GLOBAL__sub_I_client_api.stdout.steam_rel_osx_builder.38054.7CRKCh.ii
  t _GLOBAL__sub_I_color_conv.stdout.steam_rel_osx_builder.8726.hbEZ8j.ii
  t _GLOBAL__sub_I_completion.stdout.steam_rel_osx_builder.3801.wXnVRJ.ii
  t _GLOBAL__sub_I_completion.stdout.steam_rel_osx_builder.3806.Ju3bN5.ii
  t _GLOBAL__sub_I_constants.stdout.steam_rel_osx_builder.3809.JHkdvu.ii
- t _GLOBAL__sub_I_controller.stdout.steam_rel_osx_builder.53953.Qu8B0E.ii
+ t _GLOBAL__sub_I_controller.stdout.steam_rel_osx_builder.38087.PTEhFX.ii
  t _GLOBAL__sub_I_crypto.stdout.steam_rel_osx_builder.11074.PgHSgQ.ii
- t _GLOBAL__sub_I_csshelpers.stdout.steam_rel_osx_builder.53973.UkyDLK.ii
+ t _GLOBAL__sub_I_csshelpers.stdout.steam_rel_osx_builder.38132.RMlkKH.ii
  t _GLOBAL__sub_I_debugstats.stdout.steam_rel_osx_builder.3863.nlAeO3.ii
  t _GLOBAL__sub_I_enum_names.stdout.steam_rel_osx_builder.3875.3mg0lk.ii
- t _GLOBAL__sub_I_fillbrush.stdout.steam_rel_osx_builder.53994.J0aebS.ii
+ t _GLOBAL__sub_I_fillbrush.stdout.steam_rel_osx_builder.38136.qPgC9D.ii
  t _GLOBAL__sub_I_framefunct.stdout.steam_rel_osx_builder.3885.LqYefr.ii
  t _GLOBAL__sub_I_globals.stdout.steam_rel_osx_builder.3899.vy9Bek.ii
- t _GLOBAL__sub_I_htmlmessag.stdout.steam_rel_osx_builder.11137.uuLYU8.ii
- t _GLOBAL__sub_I_imageloade.stdout.steam_rel_osx_builder.53943.I6BEuB.ii
+ t _GLOBAL__sub_I_htmlmessag.stdout.steam_rel_osx_builder.38072.yH8xGS.ii
+ t _GLOBAL__sub_I_imageloade.stdout.steam_rel_osx_builder.38081.7KiONu.ii
  t _GLOBAL__sub_I_interface.stdout.steam_rel_osx_builder.3284.C5loYn.ii
  t _GLOBAL__sub_I_ipcposix.stdout.steam_rel_osx_builder.11131.V1nZuk.ii
  t _GLOBAL__sub_I_jobmgr.stdout.steam_rel_osx_builder.3959.OITUGg.ii
  t _GLOBAL__sub_I_job.stdout.steam_rel_osx_builder.3949.XuDWR7.ii
  t _GLOBAL__sub_I_jpegloader.stdout.steam_rel_osx_builder.11076.5kWKn1.ii
  t _GLOBAL__sub_I_language.stdout.steam_rel_osx_builder.3991.zttNrY.ii
- t _GLOBAL__sub_I_layoutfile.stdout.steam_rel_osx_builder.13133.Tm26ef.ii
- t _GLOBAL__sub_I_localize.stdout.steam_rel_osx_builder.54022.5yL1mF.ii
+ t _GLOBAL__sub_I_layoutfile.stdout.steam_rel_osx_builder.38140.ODh9ne.ii
+ t _GLOBAL__sub_I_localize.stdout.steam_rel_osx_builder.38174.MG2GwP.ii
  t _GLOBAL__sub_I_logger.stdout.steam_rel_osx_builder.3997.zVQQZY.ii
  t _GLOBAL__sub_I_mathlib_ba.stdout.steam_rel_osx_builder.8783.h7FLga.ii
- t _GLOBAL__sub_I_mousecurso.stdout.steam_rel_osx_builder.53954.PlZPdZ.ii
+ t _GLOBAL__sub_I_mousecurso.stdout.steam_rel_osx_builder.38092.7VTFte.ii
  t _GLOBAL__sub_I_msgspewthr.stdout.steam_rel_osx_builder.4031.czUC8b.ii
  t _GLOBAL__sub_I_msg.stdout.steam_rel_osx_builder.4011.6CRgvO.ii
  t _GLOBAL__sub_I_netconnect.stdout.steam_rel_osx_builder.4045.BjYXSq.ii
@@ -10009,66 +10009,66 @@
  t _GLOBAL__sub_I_net_misc.stdout.steam_rel_osx_builder.4073.uDwwr0.ii
  t _GLOBAL__sub_I_netpacket.stdout.steam_rel_osx_builder.4069.WIemtM.ii
  t _GLOBAL__sub_I_net.stdout.steam_rel_osx_builder.4033.n7lSGV.ii
- t _GLOBAL__sub_I_opengllazy.stdout.steam_rel_osx_builder.54042.k3aCqg.ii
+ t _GLOBAL__sub_I_opengllazy.stdout.steam_rel_osx_builder.38182.6lilWD.ii
  t _GLOBAL__sub_I_opensslcon.stdout.steam_rel_osx_builder.4079.YzJdCY.ii
  t _GLOBAL__sub_I_opensslwra.stdout.steam_rel_osx_builder.4083.fbVJYL.ii
  t _GLOBAL__sub_I_osxhelpers.stdout.steam_rel_osx_builder.11078.uJzVAQ.mii
- t _GLOBAL__sub_I_panel2dfac.stdout.steam_rel_osx_builder.54002.F5xFaV.ii
- t _GLOBAL__sub_I_panoramasy.stdout.steam_rel_osx_builder.54036.F6okMD.ii
- t _GLOBAL__sub_I_panoramavi.stdout.steam_rel_osx_builder.53950.pArXYB.ii
+ t _GLOBAL__sub_I_panel2dfac.stdout.steam_rel_osx_builder.38144.RRGtV8.ii
+ t _GLOBAL__sub_I_panoramasy.stdout.steam_rel_osx_builder.38178.NYyK9P.ii
+ t _GLOBAL__sub_I_panoramavi.stdout.steam_rel_osx_builder.38086.OWGzZC.ii
  t _GLOBAL__sub_I_platform_s.stdout.steam_rel_osx_builder.4089.JWcjc5.ii
  t _GLOBAL__sub_I_pngloader.stdout.steam_rel_osx_builder.11079.UiF4nc.ii
  t _GLOBAL__sub_I_randsse.stdout.steam_rel_osx_builder.8825.HQ8NgL.ii
  t _GLOBAL__sub_I_reliableti.stdout.steam_rel_osx_builder.4121.d3vbfs.ii
  t _GLOBAL__sub_I_rendermess.stdout.steam_rel_osx_builder.11275.zTRIa8.ii
- t _GLOBAL__sub_I_rendermess.stdout.steam_rel_osx_builder.54046.U6QppR.ii
+ t _GLOBAL__sub_I_rendermess.stdout.steam_rel_osx_builder.38186.PNohsE.ii
  t _GLOBAL__sub_I_rtime.stdout.steam_rel_osx_builder.3731.M9TD9M.ii
  t _GLOBAL__sub_I_scheduledf.stdout.steam_rel_osx_builder.4133.WCQkJ1.ii
  t _GLOBAL__sub_I_scheduler.stdout.steam_rel_osx_builder.4139.oVxBtJ.ii
- t _GLOBAL__sub_I_sdlopengls.stdout.steam_rel_osx_builder.54052.uHixUf.ii
+ t _GLOBAL__sub_I_sdlopengls.stdout.steam_rel_osx_builder.38194.x5n83F.ii
  t _GLOBAL__sub_I_simplebits.stdout.steam_rel_osx_builder.4159.A4zwNc.ii
  t _GLOBAL__sub_I_sseconst.stdout.steam_rel_osx_builder.8859.L9xmLP.ii
  t _GLOBAL__sub_I_stat.stdout.steam_rel_osx_builder.3732.VrYDeb.ii
- t _GLOBAL__sub_I_stdafx.stdout.steam_rel_osx_builder.54084.7wyQnH.ii
- t _GLOBAL__sub_I_steamcontr.stdout.steam_rel_osx_builder.53962.b6ntrE.ii
+ t _GLOBAL__sub_I_stdafx.stdout.steam_rel_osx_builder.38228.1gPlJU.ii
+ t _GLOBAL__sub_I_steamcontr.stdout.steam_rel_osx_builder.38104.5FcqsA.ii
  t _GLOBAL__sub_I_steamid.stdout.steam_rel_osx_builder.4183.vM437d.ii
  t _GLOBAL__sub_I_steammessa.stdout.steam_rel_osx_builder.2087.0jUjWU.ii
  t _GLOBAL__sub_I_stime.stdout.steam_rel_osx_builder.3733.N2DqfS.ii
  t _GLOBAL__sub_I_string_mis.stdout.steam_rel_osx_builder.4211.jQs0iF.ii
- t _GLOBAL__sub_I_stylefile.stdout.steam_rel_osx_builder.54006.4N3fmN.ii
- t _GLOBAL__sub_I_styleprope.stdout.steam_rel_osx_builder.54010.AxMvb8.ii
- t _GLOBAL__sub_I_styleprope.stdout.steam_rel_osx_builder.54056.dwjhsp.ii
- t _GLOBAL__sub_I_styles.stdout.steam_rel_osx_builder.54064.au2XTz.ii
+ t _GLOBAL__sub_I_stylefile.stdout.steam_rel_osx_builder.38145.dcoRXN.ii
+ t _GLOBAL__sub_I_styleprope.stdout.steam_rel_osx_builder.38152.EHmNNl.ii
+ t _GLOBAL__sub_I_styleprope.stdout.steam_rel_osx_builder.38200.XgzlHs.ii
+ t _GLOBAL__sub_I_styles.stdout.steam_rel_osx_builder.38208.TJ0Eoq.ii
  t _GLOBAL__sub_I_tcpconnect.stdout.steam_rel_osx_builder.4219.X4YKxS.ii
  t _GLOBAL__sub_I_tcphost.stdout.steam_rel_osx_builder.4221.28cVwk.ii
  t _GLOBAL__sub_I_tgaloader.stdout.steam_rel_osx_builder.11119.otZtHT.ii
  t _GLOBAL__sub_I_timeutils.stdout.steam_rel_osx_builder.4223.RhZTru.ii
- t _GLOBAL__sub_I_transforma.stdout.steam_rel_osx_builder.54098.O2mafQ.ii
+ t _GLOBAL__sub_I_transforma.stdout.steam_rel_osx_builder.38244.VjVpio.ii
  t _GLOBAL__sub_I_udpconnect.stdout.steam_rel_osx_builder.4235.LJYaKy.ii
  t _GLOBAL__sub_I_udphost.stdout.steam_rel_osx_builder.4243.YMmgHk.ii
  t _GLOBAL__sub_I_udpsocket.stdout.steam_rel_osx_builder.4255.9CMEj6.ii
- t _GLOBAL__sub_I_uianimatio.stdout.steam_rel_osx_builder.54072.jx237t.ii
- t _GLOBAL__sub_I_uicommands.stdout.steam_rel_osx_builder.54106.vfYIvN.ii
- t _GLOBAL__sub_I_uienginesd.stdout.steam_rel_osx_builder.54116.TwkEsW.ii
- t _GLOBAL__sub_I_uiengine.stdout.steam_rel_osx_builder.13211.KFjL7Z.ii
- t _GLOBAL__sub_I_uievents.stdout.steam_rel_osx_builder.54126.jtQLT4.ii
- t _GLOBAL__sub_I_uievent.stdout.steam_rel_osx_builder.54120.l5EZUo.ii
- t _GLOBAL__sub_I_uifilereso.stdout.steam_rel_osx_builder.54130.q1tSa5.ii
+ t _GLOBAL__sub_I_uianimatio.stdout.steam_rel_osx_builder.38216.1KHPa9.ii
+ t _GLOBAL__sub_I_uicommands.stdout.steam_rel_osx_builder.38250.yLMI8Z.ii
+ t _GLOBAL__sub_I_uienginesd.stdout.steam_rel_osx_builder.38260.5X7CTl.ii
+ t _GLOBAL__sub_I_uiengine.stdout.steam_rel_osx_builder.38254.nmFcFE.ii
+ t _GLOBAL__sub_I_uievents.stdout.steam_rel_osx_builder.38268.pkyO5n.ii
+ t _GLOBAL__sub_I_uievent.stdout.steam_rel_osx_builder.38264.OMS7jU.ii
+ t _GLOBAL__sub_I_uifilereso.stdout.steam_rel_osx_builder.38271.0oQTij.ii
  t _GLOBAL__sub_I_uifontfile.stdout.steam_rel_osx_builder.11120.nbynop.ii
  t _GLOBAL__sub_I_uifontfile.stdout.steam_rel_osx_builder.2167.4Z9V8l.ii
- t _GLOBAL__sub_I_uiinput.stdout.steam_rel_osx_builder.53963.i1lF0B.ii
- t _GLOBAL__sub_I_uijsregist.stdout.steam_rel_osx_builder.54136.RJNukD.ii
- t _GLOBAL__sub_I_uilength.stdout.steam_rel_osx_builder.54014.4eUChO.ii
- t _GLOBAL__sub_I_uipanel.stdout.steam_rel_osx_builder.54146.mcVb7b.ii
- t _GLOBAL__sub_I_uipbmsgbas.stdout.steam_rel_osx_builder.54152.83wHbW.ii
- t _GLOBAL__sub_I_uirenderen.stdout.steam_rel_osx_builder.54076.wVdo8A.ii
- t _GLOBAL__sub_I_uischedule.stdout.steam_rel_osx_builder.54160.Fl9UcW.ii
- t _GLOBAL__sub_I_uisoundsys.stdout.steam_rel_osx_builder.54164.tp4QCh.ii
- t _GLOBAL__sub_I_uitextlayo.stdout.steam_rel_osx_builder.54094.xVkq6d.ii
- t _GLOBAL__sub_I_uitoplevel.stdout.steam_rel_osx_builder.54168.OyAFKi.ii
- t _GLOBAL__sub_I_uitoplevel.stdout.steam_rel_osx_builder.54172.2CNNtp.ii
- t _GLOBAL__sub_I_uitoplevel.stdout.steam_rel_osx_builder.54182.tKXCnY.ii
- t _GLOBAL__sub_I_uiwebapicl.stdout.steam_rel_osx_builder.54188.tKGPuN.ii
+ t _GLOBAL__sub_I_uiinput.stdout.steam_rel_osx_builder.38110.z83fiC.ii
+ t _GLOBAL__sub_I_uijsregist.stdout.steam_rel_osx_builder.38286.0eolR8.ii
+ t _GLOBAL__sub_I_uilength.stdout.steam_rel_osx_builder.38168.sKBygy.ii
+ t _GLOBAL__sub_I_uipanel.stdout.steam_rel_osx_builder.38290.qOvLtz.ii
+ t _GLOBAL__sub_I_uipbmsgbas.stdout.steam_rel_osx_builder.38296.WMbvuL.ii
+ t _GLOBAL__sub_I_uirenderen.stdout.steam_rel_osx_builder.38224.i7xP0V.ii
+ t _GLOBAL__sub_I_uischedule.stdout.steam_rel_osx_builder.38304.6U3Gh3.ii
+ t _GLOBAL__sub_I_uisoundsys.stdout.steam_rel_osx_builder.38308.XEp12U.ii
+ t _GLOBAL__sub_I_uitextlayo.stdout.steam_rel_osx_builder.38234.4Wb6MT.ii
+ t _GLOBAL__sub_I_uitoplevel.stdout.steam_rel_osx_builder.38312.1vFeJE.ii
+ t _GLOBAL__sub_I_uitoplevel.stdout.steam_rel_osx_builder.38322.I6TPn7.ii
+ t _GLOBAL__sub_I_uitoplevel.stdout.steam_rel_osx_builder.38326.wDPZqs.ii
+ t _GLOBAL__sub_I_uiwebapicl.stdout.steam_rel_osx_builder.38330.Hv4BuV.ii
  t _GLOBAL__sub_I_utlbuffer.stdout.steam_rel_osx_builder.3325.qwbmD6.ii
  t _GLOBAL__sub_I_utlsymbol.stdout.steam_rel_osx_builder.3359.rp43vl.ii
  t _GLOBAL__sub_I_vmatrix.stdout.steam_rel_osx_builder.8879.5Bbk4e.ii

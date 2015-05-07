@@ -1265,7 +1265,7 @@
  T CBaseSurface::AreAnyPopupsViewable()
  T CBaseSurface::BeginMove(unsigned int)
  T CBaseSurface::BeginResize(unsigned int, int, int)
- T CBaseSurface::BIsAHTMLWindowVisible()
+ T CBaseSurface::BIsAHTMLWindowViewable()
  T CBaseSurface::BIsGameRunning()
  T CBaseSurface::BIsShuttingDown()
  T CBaseSurface::BRunHTMLFast()
@@ -2980,12 +2980,12 @@
  t _GLOBAL__sub_I_registry.stdout.steam_rel_osx_builder.2015.8xMvzM.ii
  t _GLOBAL__sub_I_rtime.stdout.steam_rel_osx_builder.1613.3LCF6o.ii
  t _GLOBAL__sub_I_Scheme.stdout.steam_rel_osx_builder.6749.4do2Ov.ii
- t _GLOBAL__sub_I_Serialized.stdout.steam_rel_osx_builder.10019.E0Gen7.ii
+ t _GLOBAL__sub_I_Serialized.stdout.steam_rel_osx_builder.35179.fjauwY.ii
  t _GLOBAL__sub_I_simplebits.stdout.steam_rel_osx_builder.2057.9eMT1C.ii
  t _GLOBAL__sub_I_string_mis.stdout.steam_rel_osx_builder.2117.9PdfLH.ii
- t _GLOBAL__sub_I_surface_ba.stdout.steam_rel_osx_builder.6754.e1J7Ap.ii
- t _GLOBAL__sub_I_surface_op.stdout.steam_rel_osx_builder.6762.pyXrRl.ii
- t _GLOBAL__sub_I_surface_os.stdout.steam_rel_osx_builder.6765.ReOQ2k.mii
+ t _GLOBAL__sub_I_surface_ba.stdout.steam_rel_osx_builder.35181.K0G5RS.ii
+ t _GLOBAL__sub_I_surface_op.stdout.steam_rel_osx_builder.35184.2FYmy9.ii
+ t _GLOBAL__sub_I_surface_os.stdout.steam_rel_osx_builder.35188.c43zd7.mii
  t _GLOBAL__sub_I_system_pos.stdout.steam_rel_osx_builder.6768.f88UDw.ii
  t _GLOBAL__sub_I_tgaloader.stdout.steam_rel_osx_builder.6629.VIAXfD.ii
  t _GLOBAL__sub_I_timeutils.stdout.steam_rel_osx_builder.2141.scRuWq.ii
@@ -2994,7 +2994,7 @@
  t _GLOBAL__sub_I_utlsymbol.stdout.steam_rel_osx_builder.1437.JaUCbl.ii
  t _GLOBAL__sub_I_vgui_inter.stdout.steam_rel_osx_builder.6807.wLwQ7u.ii
  t _GLOBAL__sub_I_vgui_key_t.stdout.steam_rel_osx_builder.6817.sio2U8.ii
- t _GLOBAL__sub_I_vguisetup.stdout.steam_rel_osx_builder.10033.SRKR2h.ii
+ t _GLOBAL__sub_I_vguisetup.stdout.steam_rel_osx_builder.35199.OqcNyj.ii
  t _GLOBAL__sub_I_vgui.stdout.steam_rel_osx_builder.6793.SQLp7s.ii
  t _GLOBAL__sub_I_vguisystem.stdout.steam_rel_osx_builder.6803.w6liKX.ii
  t _GLOBAL__sub_I_VPanel.stdout.steam_rel_osx_builder.6821.ZzcKsw.ii
