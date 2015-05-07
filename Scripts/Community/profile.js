@@ -150,25 +150,42 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 			return;
 		}
 
+		// defaults
+		var strTitle = 'Add Friend';
+		var strMessage = 'Error adding friend. Please try again.';
+
 		switch ( failedInvites[0] )
 		{
+			case 25:
+				strMessage = 'Could not invite this friend. Your limit is exceeded.';
+				break;
+
+			case 15:
+				strMessage = 'Could not invite this friend. Your friend\'s limit is exceeded.';
+				break;
+
 			case 40:
-				ShowAlertDialog( 'Add Friend',
-					'Error adding Friend. Communication between you and this user has been blocked.'
-				);
+				strMessage = 'Error adding Friend. Communication between you and this user has been blocked.';
+				break;
+
+			case 11:
+				strMessage = 'You are blocking all communication with this user. Before communicating with this user, you must unblock them by visiting their Steam Community Profile.';
+				break;
+
+			case 84:
+				strMessage = 'You\'ve sent too many invitations recently. Try again in a day or two.';
 				break;
 
 			case 24:
-				ShowAlertDialog( 'Add Friend',
-					'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663">Visit Steam Support</a> for more information.'
-				);
+				strMessage = 'Your account does not meet the requirements to use this feature. <a class="whiteLink" target="_blank" href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663">Visit Steam Support</a> for more information.';
 				break;
 
 			default:
-				ShowAlertDialog( 'Add Friend',
-					'Error adding friend. Please try again.'
-				);
+				// default text is <above></above>
+				break;
 		}
+
+		ShowAlertDialog( strTitle, strMessage );
 
 	} );
 }
