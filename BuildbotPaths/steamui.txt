@@ -238,6 +238,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/storecheckout_paymentmethod.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/storecheckout_review_lineitem.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/storecheckout_review.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/storecheckout_shippingaddress.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/storecheckout_verifyemail.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/store_featuredcategory.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/store_filterselector.o
@@ -1826,6 +1827,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/store/storecheckout_review.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/store/storecheckout_review_lineitem.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/store/storecheckout_review_lineitem.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/store/storecheckout_shippingaddress.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/store/storecheckout_shippingaddress.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/store/storecheckout_verifyemail.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/store/storecheckout_verifyemail.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/store/store_featuredcategory.cpp

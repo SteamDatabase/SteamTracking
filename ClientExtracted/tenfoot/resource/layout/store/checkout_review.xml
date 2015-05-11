@@ -28,6 +28,10 @@
 						<Label text="#Checkout_Review_Subtotal" />
 						<Label id="ReviewSubTotal" text="" />
 					</Panel>
+					<Panel id="ShippingRow" class="ReviewTotalRow">							
+						<Label text="#Checkout_Review_Shipping" />
+						<Label id="ReviewShipping" text="" />			
+					</Panel>
 					<Panel id="TaxRow" class="ReviewTotalRow">							
 						<Label text="#Checkout_Review_Tax" />
 						<Label id="ReviewTax" text="" />			
@@ -80,6 +84,10 @@
 					<Panel id="AddressRow" class="PaymentMethodReviewRow PaymentMethodReviewGap">
 						<Label class="PaymentMethodReviewHeader" text="#Checkout_Review_BillingAddress" />
 						<Label id="ReviewAddress" text="" />
+					</Panel>
+					<Panel id="ShippingAddressRow" class="PaymentMethodReviewRow PaymentMethodReviewGap">
+						<Label class="PaymentMethodReviewHeader" text="#Checkout_Review_ShippingAddress" />
+						<Label id="ReviewShippingAddress" text="" />
 					</Panel>
 					<Panel id="PhoneRow" class="PaymentMethodReviewRow PaymentMethodReviewGap">
 						<Label class="PaymentMethodReviewHeader" text="#Checkout_Review_Phone" />

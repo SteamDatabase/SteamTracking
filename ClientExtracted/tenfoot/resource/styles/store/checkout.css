@@ -1380,12 +1380,34 @@ CheckoutBillingInfo .CheckoutBodyRightColumn
 	flow-children: down;
 }
 
+//
+// Shipping Info
+//
+CheckoutShippingInfo .CheckoutBodyLeftColumn
+{
+	flow-children: none;
+}
+
+CheckoutShippingInfo .CheckoutBodyRightColumn
+{
+	flow-children: down;
+}
+
+
 .BillingInfoHeader
 {
 	margin: 34px 0px 4px 0px;
 }
 
 .CheckoutBillingInfoLeftColumn
+{
+	width: 600px;
+	height: 500px;
+	margin-right: 24px;
+	flow-children: down;
+}
+
+.CheckoutShippingInfoLeftColumn
 {
 	width: 600px;
 	height: 500px;
@@ -1439,6 +1461,14 @@ CheckoutBillingInfo .CheckoutBodyRightColumn
 	flow-children: down;
 }
 
+.CheckoutShippingInfoRightColumn
+{
+	width: 250px;
+	height: 500px;
+	position: 624px 0px 0px;
+	flow-children: down;
+}
+
 #City
 {
 	width: 248px;
@@ -1474,6 +1504,11 @@ CheckoutBillingInfo .CheckoutBodyRightColumn
 {
 	width: 700px;
 	margin: 0px 0px 4px 0px;
+	position: 0px 500px 0px;
+}
+
+#ShippingInfoShippingRestrictions
+{
 	position: 0px 500px 0px;
 }
 
@@ -1580,7 +1615,7 @@ CheckoutReviewLineItem
 	horizontal-align: right;
 }
 
-#ReviewSubTotal, #ReviewTax, #ReviewTotal, #ConvertedReviewTotal
+#ReviewSubTotal, #ReviewShipping, #ReviewTax, #ReviewTotal, #ConvertedReviewTotal
 {
 	width: 150px;
 	text-align: right;
@@ -1605,6 +1640,7 @@ CheckoutReviewLineItem
 	font-size: 21px;
 	line-height: 24px;
 	margin-top: 5px;
+	width: 100%;
 }
 
 .PaymentMethodReviewRow
@@ -1633,7 +1669,7 @@ CheckoutReviewLineItem
 	color: tcstatictext;
 }
 
-#ReviewPaymentMethod, #ReviewGiftOption, #ReviewAddress, #ReviewPhone
+#ReviewPaymentMethod, #ReviewGiftOption, #ReviewAddress, #ReviewShippingAddress, #ReviewPhone
 {
 	width: 380px;
 	font-size: 22px;
@@ -1697,6 +1733,7 @@ CheckoutConfirmation .CheckoutBodyRightColumn
 .CheckoutConfirmationBtnGrouping
 {
 	flow-children: down;
+	width: 100%;
 }
 
 
