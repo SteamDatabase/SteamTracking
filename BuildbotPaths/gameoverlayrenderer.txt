@@ -1,7 +1,7 @@
 /Users/buildbot/buildslave/../.ccache/tmp/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/asynccapturegl.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/gamestreammemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/gamestream.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/gamestreammemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/glframecapture.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/glinterface.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/ime.o
@@ -17,8 +17,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/threadtools.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/i386/videomemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/asynccapturegl.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/gamestreammemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/gamestream.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/gamestreammemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/glframecapture.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/glinterface.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/gameoverlayrenderer.build/Objects-normal/x86_64/ime.o

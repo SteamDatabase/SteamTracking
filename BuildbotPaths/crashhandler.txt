@@ -1,8 +1,4 @@
 /Users/buildbot/buildslave/../.ccache/tmp/
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/crashhandler.build/Objects-normal/i386/breakpad.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/crashhandler.build/Objects-normal/i386/crashhandler.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/crashhandler.build/Objects-normal/x86_64/breakpad.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/crashhandler.build/Objects-normal/x86_64/crashhandler.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier0_static.a(assert_dialog.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier0_static.a(cpu.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier0_static.a(cpu_posix.o)
@@ -20,9 +16,13 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(utlbuffer.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(utlmemory.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(utlstring.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/crashhandler.build/Objects-normal/i386/breakpad.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/crashhandler.build/Objects-normal/i386/crashhandler.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/crashhandler.build/Objects-normal/x86_64/breakpad.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/crashhandler.build/Objects-normal/x86_64/crashhandler.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/crashhandler/../steamexe/osx/ipctool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/crashhandler/breakpad.mm
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/crashhandler/crashhandler.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/crashhandler/../steamexe/osx/ipctool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/../common/mach_helpers.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/crashhandler/icrashhandler.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_macros.h

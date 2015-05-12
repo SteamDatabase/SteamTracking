@@ -291,7 +291,7 @@
 "Scripts/Dota2/store.js"                       : "https://www.dota2.com/public/javascript/store.js?__TIME__&l=english",
 "Scripts/Dota2/itemdetails.js"                 : "https://www.dota2.com/public/javascript/itemdetails.js?__TIME__&l=english",
 "Scripts/Dota2/heropedia.js"                   : "https://www.dota2.com/public/javascript/heropedia.js?__TIME__&l=english",
-"Scripts/Dota2/heropickerdata.json"            : "https://www.dota2.com/jsfeed/heropickerdata?__TIME__&l=english",
+"Scripts/Dota2/heropickerdata.json"            : "http://www.dota2.com/jsfeed/heropickerdata?__TIME__&l=english",
 
 //
 // API

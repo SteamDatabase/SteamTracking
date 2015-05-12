@@ -148,6 +148,13 @@
 	flow-children: right;
 }
 
+.SSAFlowRight
+{
+	flow-children: right;
+	width: 100%;
+}
+
+
 .WizardButton
 {
 	width: buttonwidth;
@@ -210,6 +217,7 @@
 {
 	margin-bottom: 4px;
 	padding-top: 5px;
+	padding-right: 10px;
 	color: white;
 	font-size: 24px;
 	font-family: platformfont;
@@ -550,3 +558,10 @@ ToggleButton .WizardLabel
 	background-repeat: no-repeat no-repeat;
 	background-size: 100% 100%;
 }
+
+OOBENetworkSettingsWizardChild SettingsPanel_Network.SettingsSection
+{
+	margin-top: 0px;
+}
+
+

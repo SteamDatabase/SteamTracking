@@ -178,7 +178,7 @@ SettingsPanel.SectionVisible #SettingsContent
 .LongDesc
 {
 	transform: translateX( 4px );
-
+	padding-right: 10px;
 	color: detailsdatalabel;
 	font-family: platformfont;
 	transform: translateX( 7px );
@@ -238,6 +238,12 @@ SettingsPanel.SectionVisible #SettingsContent
 	padding: 0px;
 }
 
+#SettingsInGame_Enable.CheckBox
+{
+	width: fit-children;
+	min-width: 475px;
+}
+
 #SettingsInGame_SubControls .SettingsContent
 {
 	padding: 0px;
@@ -258,13 +264,14 @@ SettingsPanel.SectionVisible #SettingsContent
 	visibility: collapse;
 }
 
-.SettingsContent .Button,.CheckBox,ToggleButton
+.SettingsContent .Button,
+.SettingsContent .CheckBox,
+.SettingsContent ToggleButton
 {
 	// vcenter alignment is applied after the flow, causing the last item
 	// to stick in weird places.
 	vertical-align: top;
 	margin-left: 0px;
-	margin-right: 0px;
 }
 
 ToggleButton .TickBox
@@ -393,7 +400,7 @@ Label.SettingsStatic
 	vertical-align: top;
 	flow-children: down;
 	width: 500px;
-	height: 770px;
+	height: fit-children;
 }
 
 .SettingsColumnarContent
@@ -507,11 +514,11 @@ Label.SettingsStatic
 // and make room for the tickbox
 .CheckBox Label, RadioButton Label
 {
-	padding-left: 5px;
-	margin: 0px 14px 0px 0px;
+	padding-left: 14px;
+	margin: 0px 10px 0px 0px;
 	color: detailsdatalabel;
 	width: fit-children;
-	text-overflow: clip;
+	text-overflow: ellipsis;
 	font-family: platformfont;
 	white-space: nowrap;
 
@@ -560,7 +567,7 @@ RadioButton Label
 .SettingsBottomPanel
 {
 	margin-left: 295px;
-	height: 775px;
+	width: 100%;
 	padding-left: 10px;
 }
 
@@ -736,7 +743,7 @@ DropDown Label
 #AvailableNetworksList
 {
 	padding: 10px;
-	height: 600px;
+	height: 525px;
 	width: 985px;
 
 	overflow: squish scroll;
@@ -1209,29 +1216,41 @@ SettingsPanelNetwork_Credentials #ShowPasswordLabel
 {
 	width: 100%;
 	padding-left: 0px;
-	flow-children: right;
+	flow-children: down;
 }
 
 .SettingsNetwork_LeftButton
 {
-	width: 200px;
+	width: 480px;
 	horizontal-align: left;
 	padding-left: 0px;
+	margin-bottom: 0px;
+	margin-right: 25px;
 }
 
 .SettingsNetwork_RightButton
 {
-	width: 200px;
-	horizontal-align: right;
+	width: 480px;
+	horizontal-align: left;
 	padding-right: 0px;
+	margin-bottom: 0px;
+	margin-right: 25px;
+}
+
+.SettingsContent .SettingsNetwork_LeftButton .Button, 
+.SettingsContent .SettingsNetwork_RightButton .Button
+{
+	margin-right: 25px;
 }
 
 .NetworkSettingsRightPane
 {
-	width: 440px;
-	flow-children: down;
-	margin-top: 2px;
-	margin-left: 25px;
+	width: 1005px;
+	vertical-align: bottom;
+	height: fit-children;
+	flow-children: right;
+	margin-top: 25px;
+	margin-bottom: 0px;
 }
 
 .NetworkThrobber
@@ -1240,11 +1259,12 @@ SettingsPanelNetwork_Credentials #ShowPasswordLabel
 	height: 100px;
 	margin-top: 250px;
 	horizontal-align: center;
+	margin-left: 50px;
 }
 	
 .CenteredContainer
 {
-	width: 1475px;
+	width: 1575px;
 	height: 500px;
 	flow-children: down;
 }	
@@ -3575,3 +3595,20 @@ SettingsPanelDiskManagementAppListing.Deleting Button
 	opacity: 0.0;
 }
 
+.NonSteamOSButton,
+#SettingsInterface_EnableScreenSaver.CheckBox,
+#SearchProviders.Radios,
+#SearchProviders .Button.RadioButton,
+.Cookie.Button
+{
+	width: fit-children;
+	min-width: 475px;
+	padding-right: 10px;
+}
+
+OOBENetworkSettingsWizardChild .SettingsBottomPanel
+{
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-top: 10px;
+}

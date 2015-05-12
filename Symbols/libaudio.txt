@@ -1,9 +1,663 @@
 
  AssertMsgImplementation
+ B CUtlSymbol::s_pSymbolTable
+ B InterfaceReg::s_pInterfaceRegs
+ B __g_CreateCDLLValidateIValidate_reg
+ B g_VecLoadedModules
+ B s_pAudioController
+ CValidator::ClaimArrayMemory(void*)
+ CValidator::ClaimMemory(void*)
+ CValidator::IsClaimed(void*)
+ CValidator::Pop()
+ CValidator::Push(char const*, void*, char const*)
+ D CUtlSymbol::s_bAllowStaticSymbolTable
+ D g_DLLValidate
+ D pModuleExtension
+ D typeinfo for CDLLValidate
+ D typeinfo for CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>
+ D typeinfo for CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>
+ D typeinfo for CDynamicFunc<char* (*)()>
+ D typeinfo for CDynamicFunc<char* (*)(char const*)>
+ D typeinfo for CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
+ D typeinfo for CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
+ D typeinfo for CDynamicFunc<int (*)(_DIG_DRIVER*)>
+ D typeinfo for CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>
+ D typeinfo for CDynamicFunc<int (*)(_SAMPLE*)>
+ D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>
+ D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>
+ D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, int)>
+ D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>
+ D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>
+ D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>
+ D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>
+ D typeinfo for CDynamicFunc<int (*)(char const*, char const*, unsigned int)>
+ D typeinfo for CDynamicFunc<int (*)(char*, unsigned int*)>
+ D typeinfo for CDynamicFunc<int (*)(char*, unsigned long long*)>
+ D typeinfo for CDynamicFunc<int (*)(int*, unsigned int*, char**)>
+ D typeinfo for CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>
+ D typeinfo for CDynamicFunc<int (*)(unsigned int)>
+ D typeinfo for CDynamicFunc<int (*)(unsigned int, int)>
+ D typeinfo for CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>
+ D typeinfo for CDynamicFunc<long long (*)(unsigned int)>
+ D typeinfo for CDynamicFunc<long long (*)(unsigned int, long long)>
+ D typeinfo for CDynamicFunc<unsigned int (*)()>
+ D typeinfo for CDynamicFunc<unsigned int (*)(_SAMPLE*)>
+ D typeinfo for CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>
+ D typeinfo for CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>
+ D typeinfo for CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>
+ D typeinfo for CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>
+ D typeinfo for CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>
+ D typeinfo for CDynamicFunc<void (*)()>
+ D typeinfo for CDynamicFunc<void (*)(_DIG_DRIVER*)>
+ D typeinfo for CDynamicFunc<void (*)(_SAMPLE*)>
+ D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>
+ D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, float, float)>
+ D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, int)>
+ D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>
+ D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>
+ D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>
+ D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>
+ D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>
+ D typeinfo for CDynamicFunc<void (*)(void*)>
+ D typeinfo for CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>
+ D typeinfo for CIAudioSinkListNull
+ D typeinfo for CMilesAudioDevice
+ D typeinfo for CMilesAudioOutputStream
+ D typeinfo for CMilesAudioSound
+ D typeinfo for IAudioDevice
+ D typeinfo for IAudioOutputStream
+ D typeinfo for IAudioSinkList
+ D typeinfo for IAudioSound
+ D typeinfo for IDynamicFunction
+ D typeinfo for IValidate
+ D vtable for CDLLValidate
+ D vtable for CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>
+ D vtable for CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>
+ D vtable for CDynamicFunc<char* (*)()>
+ D vtable for CDynamicFunc<char* (*)(char const*)>
+ D vtable for CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
+ D vtable for CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
+ D vtable for CDynamicFunc<int (*)(_DIG_DRIVER*)>
+ D vtable for CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>
+ D vtable for CDynamicFunc<int (*)(_SAMPLE*)>
+ D vtable for CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>
+ D vtable for CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>
+ D vtable for CDynamicFunc<int (*)(_SAMPLE*, int)>
+ D vtable for CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>
+ D vtable for CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>
+ D vtable for CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>
+ D vtable for CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>
+ D vtable for CDynamicFunc<int (*)(char const*, char const*, unsigned int)>
+ D vtable for CDynamicFunc<int (*)(char*, unsigned int*)>
+ D vtable for CDynamicFunc<int (*)(char*, unsigned long long*)>
+ D vtable for CDynamicFunc<int (*)(int*, unsigned int*, char**)>
+ D vtable for CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>
+ D vtable for CDynamicFunc<int (*)(unsigned int)>
+ D vtable for CDynamicFunc<int (*)(unsigned int, int)>
+ D vtable for CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>
+ D vtable for CDynamicFunc<long long (*)(unsigned int)>
+ D vtable for CDynamicFunc<long long (*)(unsigned int, long long)>
+ D vtable for CDynamicFunc<unsigned int (*)()>
+ D vtable for CDynamicFunc<unsigned int (*)(_SAMPLE*)>
+ D vtable for CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>
+ D vtable for CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>
+ D vtable for CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>
+ D vtable for CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>
+ D vtable for CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>
+ D vtable for CDynamicFunc<void (*)()>
+ D vtable for CDynamicFunc<void (*)(_DIG_DRIVER*)>
+ D vtable for CDynamicFunc<void (*)(_SAMPLE*)>
+ D vtable for CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>
+ D vtable for CDynamicFunc<void (*)(_SAMPLE*, float, float)>
+ D vtable for CDynamicFunc<void (*)(_SAMPLE*, int)>
+ D vtable for CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>
+ D vtable for CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>
+ D vtable for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>
+ D vtable for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>
+ D vtable for CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>
+ D vtable for CDynamicFunc<void (*)(void*)>
+ D vtable for CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>
+ D vtable for CIAudioSinkListNull
+ D vtable for CMilesAudioDevice
+ D vtable for CMilesAudioOutputStream
+ D vtable for CMilesAudioSound
+ Log
+ Plat_FloatTime
+ Plat_GetExecutablePath
+ R typeinfo name for CAudioController
+ R typeinfo name for CDLLValidate
+ R typeinfo name for CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>
+ R typeinfo name for CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>
+ R typeinfo name for CDynamicFunc<char* (*)()>
+ R typeinfo name for CDynamicFunc<char* (*)(char const*)>
+ R typeinfo name for CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
+ R typeinfo name for CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
+ R typeinfo name for CDynamicFunc<int (*)(_DIG_DRIVER*)>
+ R typeinfo name for CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>
+ R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*)>
+ R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>
+ R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>
+ R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, int)>
+ R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>
+ R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>
+ R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>
+ R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>
+ R typeinfo name for CDynamicFunc<int (*)(char const*, char const*, unsigned int)>
+ R typeinfo name for CDynamicFunc<int (*)(char*, unsigned int*)>
+ R typeinfo name for CDynamicFunc<int (*)(char*, unsigned long long*)>
+ R typeinfo name for CDynamicFunc<int (*)(int*, unsigned int*, char**)>
+ R typeinfo name for CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>
+ R typeinfo name for CDynamicFunc<int (*)(unsigned int)>
+ R typeinfo name for CDynamicFunc<int (*)(unsigned int, int)>
+ R typeinfo name for CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>
+ R typeinfo name for CDynamicFunc<long long (*)(unsigned int)>
+ R typeinfo name for CDynamicFunc<long long (*)(unsigned int, long long)>
+ R typeinfo name for CDynamicFunc<unsigned int (*)()>
+ R typeinfo name for CDynamicFunc<unsigned int (*)(_SAMPLE*)>
+ R typeinfo name for CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>
+ R typeinfo name for CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>
+ R typeinfo name for CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>
+ R typeinfo name for CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>
+ R typeinfo name for CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>
+ R typeinfo name for CDynamicFunc<void (*)()>
+ R typeinfo name for CDynamicFunc<void (*)(_DIG_DRIVER*)>
+ R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*)>
+ R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>
+ R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, float, float)>
+ R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, int)>
+ R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>
+ R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>
+ R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>
+ R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>
+ R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>
+ R typeinfo name for CDynamicFunc<void (*)(void*)>
+ R typeinfo name for CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>
+ R typeinfo name for CIAudioSinkListNull
+ R typeinfo name for CMilesAudioDevice
+ R typeinfo name for CMilesAudioOutputStream
+ R typeinfo name for CMilesAudioSound
+ R typeinfo name for CMilesLibrary
+ R typeinfo name for CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >
+ R typeinfo name for CUtlMemoryBase
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
+ R typeinfo name for CUtlString
+ R typeinfo name for CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >
+ R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
+ R typeinfo name for CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >
+ R typeinfo name for CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >
+ R typeinfo name for CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >
+ R typeinfo name for IAudioDevice
+ R typeinfo name for IAudioOutputStream
+ R typeinfo name for IAudioSinkList
+ R typeinfo name for IAudioSound
+ R typeinfo name for IDynamicFunction
+ R typeinfo name for IValidate
+ SteamThreadTools::CThreadMutex::CThreadMutex()
+ SteamThreadTools::CThreadMutex::~CThreadMutex()
+ T AudioSinkList
+ T CAudioController::BIsDormant()
+ T CAudioController::CAudioController()
+ T CAudioController::CloseDriverForDevice(CMilesAudioDevice*)
+ T CAudioController::CreateMilesAudioDevice(AudioType, int, int, int)
+ T CAudioController::FindOrCreateSoundImage(char const*)
+ T CAudioController::FreeAudioDevice(IAudioDevice*)
+ T CAudioController::GetSingleton()
+ T CAudioController::GoActiveIfNeeded()
+ T CAudioController::GoDormantIfPossible()
+ T CAudioController::OpenDriverForDevice(CMilesAudioDevice*)
+ T CAudioController::UpdateSharedContextForDevice(CMilesAudioDevice*)
+ T CAudioController::Validate(CValidator&, char const*)
+ T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
+ T CDLLValidate::Validate(CValidator&)
+ T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::GetNextPointer()
+ T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::Init(CSysModule*)
+ T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::Release()
+ T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>::GetNextPointer()
+ T CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>::Init(CSysModule*)
+ T CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>::Release()
+ T CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<char* (*)()>::GetNextPointer()
+ T CDynamicFunc<char* (*)()>::Init(CSysModule*)
+ T CDynamicFunc<char* (*)()>::Release()
+ T CDynamicFunc<char* (*)()>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<char* (*)(char const*)>::GetNextPointer()
+ T CDynamicFunc<char* (*)(char const*)>::Init(CSysModule*)
+ T CDynamicFunc<char* (*)(char const*)>::Release()
+ T CDynamicFunc<char* (*)(char const*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::Release()
+ T CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::Release()
+ T CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_DIG_DRIVER*)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_DIG_DRIVER*)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_DIG_DRIVER*)>::Release()
+ T CDynamicFunc<int (*)(_DIG_DRIVER*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>::Release()
+ T CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_SAMPLE*)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_SAMPLE*)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_SAMPLE*)>::Release()
+ T CDynamicFunc<int (*)(_SAMPLE*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>::Release()
+ T CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>::Release()
+ T CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_SAMPLE*, int)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_SAMPLE*, int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_SAMPLE*, int)>::Release()
+ T CDynamicFunc<int (*)(_SAMPLE*, int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>::Release()
+ T CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>::Release()
+ T CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>::Release()
+ T CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>::GetNextPointer()
+ T CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>::Release()
+ T CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(char const*, char const*, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<int (*)(char const*, char const*, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(char const*, char const*, unsigned int)>::Release()
+ T CDynamicFunc<int (*)(char const*, char const*, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(char*, unsigned int*)>::GetNextPointer()
+ T CDynamicFunc<int (*)(char*, unsigned int*)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(char*, unsigned int*)>::Release()
+ T CDynamicFunc<int (*)(char*, unsigned int*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(char*, unsigned long long*)>::GetNextPointer()
+ T CDynamicFunc<int (*)(char*, unsigned long long*)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(char*, unsigned long long*)>::Release()
+ T CDynamicFunc<int (*)(char*, unsigned long long*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(int*, unsigned int*, char**)>::GetNextPointer()
+ T CDynamicFunc<int (*)(int*, unsigned int*, char**)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(int*, unsigned int*, char**)>::Release()
+ T CDynamicFunc<int (*)(int*, unsigned int*, char**)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>::GetNextPointer()
+ T CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>::Release()
+ T CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(unsigned int)>::GetNextPointer()
+ T CDynamicFunc<int (*)(unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(unsigned int)>::Release()
+ T CDynamicFunc<int (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<int (*)(unsigned int, int)>::GetNextPointer()
+ T CDynamicFunc<int (*)(unsigned int, int)>::Init(CSysModule*)
+ T CDynamicFunc<int (*)(unsigned int, int)>::Release()
+ T CDynamicFunc<int (*)(unsigned int, int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>::Release()
+ T CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<long long (*)(unsigned int)>::GetNextPointer()
+ T CDynamicFunc<long long (*)(unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<long long (*)(unsigned int)>::Release()
+ T CDynamicFunc<long long (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<long long (*)(unsigned int, long long)>::GetNextPointer()
+ T CDynamicFunc<long long (*)(unsigned int, long long)>::Init(CSysModule*)
+ T CDynamicFunc<long long (*)(unsigned int, long long)>::Release()
+ T CDynamicFunc<long long (*)(unsigned int, long long)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<unsigned int (*)()>::GetNextPointer()
+ T CDynamicFunc<unsigned int (*)()>::Init(CSysModule*)
+ T CDynamicFunc<unsigned int (*)()>::Release()
+ T CDynamicFunc<unsigned int (*)()>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<unsigned int (*)(_SAMPLE*)>::GetNextPointer()
+ T CDynamicFunc<unsigned int (*)(_SAMPLE*)>::Init(CSysModule*)
+ T CDynamicFunc<unsigned int (*)(_SAMPLE*)>::Release()
+ T CDynamicFunc<unsigned int (*)(_SAMPLE*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>::Release()
+ T CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>::GetNextPointer()
+ T CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>::Init(CSysModule*)
+ T CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>::Release()
+ T CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>::GetNextPointer()
+ T CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>::Init(CSysModule*)
+ T CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>::Release()
+ T CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>::GetNextPointer()
+ T CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>::Init(CSysModule*)
+ T CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>::Release()
+ T CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>::GetNextPointer()
+ T CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>::Init(CSysModule*)
+ T CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>::Release()
+ T CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)()>::GetNextPointer()
+ T CDynamicFunc<void (*)()>::Init(CSysModule*)
+ T CDynamicFunc<void (*)()>::Release()
+ T CDynamicFunc<void (*)()>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_DIG_DRIVER*)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_DIG_DRIVER*)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_DIG_DRIVER*)>::Release()
+ T CDynamicFunc<void (*)(_DIG_DRIVER*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_SAMPLE*)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_SAMPLE*)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_SAMPLE*)>::Release()
+ T CDynamicFunc<void (*)(_SAMPLE*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>::Release()
+ T CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_SAMPLE*, float, float)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_SAMPLE*, float, float)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_SAMPLE*, float, float)>::Release()
+ T CDynamicFunc<void (*)(_SAMPLE*, float, float)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_SAMPLE*, int)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_SAMPLE*, int)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_SAMPLE*, int)>::Release()
+ T CDynamicFunc<void (*)(_SAMPLE*, int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>::Release()
+ T CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>::Release()
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>::Release()
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>::Release()
+ T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::Release()
+ T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(void*)>::GetNextPointer()
+ T CDynamicFunc<void (*)(void*)>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(void*)>::Release()
+ T CDynamicFunc<void (*)(void*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>::GetNextPointer()
+ T CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>::Init(CSysModule*)
+ T CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>::Release()
+ T CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunctionList::InitFunctions(char const*)
+ T CDynamicFunctionList::Shutdown()
+ T CIAudioSinkListNull::AddListener(IAudioSinkDeviceListener*)
+ T CIAudioSinkListNull::BAvailable()
+ T CIAudioSinkListNull::BHasInput(int) const
+ T CIAudioSinkListNull::BHasOutput(int) const
+ T CIAudioSinkListNull::BIsDigitalOutput(int) const
+ T CIAudioSinkListNull::BIsSupported()
+ T CIAudioSinkListNull::BStarted()
+ T CIAudioSinkListNull::DetermineBestDefaultDevice()
+ T CIAudioSinkListNull::GetActiveCodecPassthruForSink(int, bool*, bool*, bool*)
+ T CIAudioSinkListNull::GetActiveSink() const
+ T CIAudioSinkListNull::GetActiveVoiceSink() const
+ T CIAudioSinkListNull::GetSink(int) const
+ T CIAudioSinkListNull::GetSinkActivePort(int) const
+ T CIAudioSinkListNull::GetSinkActiveProfile(int) const
+ T CIAudioSinkListNull::GetSinkCount() const
+ T CIAudioSinkListNull::GetSinkDeviceName(int, CUtlString&) const
+ T CIAudioSinkListNull::GetSinkName(int, CUtlString&) const
+ T CIAudioSinkListNull::GetSinkPortList(int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
+ T CIAudioSinkListNull::GetSinkProfileList(int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
+ T CIAudioSinkListNull::GetSourceActivePort(int) const
+ T CIAudioSinkListNull::GetSourcePortList(int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
+ T CIAudioSinkListNull::RemoveListener(IAudioSinkDeviceListener*)
+ T CIAudioSinkListNull::RunFrame()
+ T CIAudioSinkListNull::SetActiveCodecPassthruForSink(int, bool, bool, bool)
+ T CIAudioSinkListNull::SetActivePortForSink(int, int)
+ T CIAudioSinkListNull::SetActiveProfileForSink(int, int)
+ T CIAudioSinkListNull::SetActiveSink(int)
+ T CIAudioSinkListNull::SetActiveSourcePortForSink(int, int)
+ T CIAudioSinkListNull::SetActiveVoiceSink(int)
+ T CIAudioSinkListNull::SetDefaultDevice(char const*)
+ T CIAudioSinkListNull::SetDefaultVoiceDevice(char const*)
+ T CIAudioSinkListNull::Start()
+ T CIAudioSinkListNull::Stop()
+ T CIAudioSinkListNull::UseSystemAudioSinkForVoice(bool)
+ T CIAudioSinkListNull::~CIAudioSinkListNull()
+ T CMilesAudioDevice::AddListener(IAudioDeviceListener*)
+ T CMilesAudioDevice::BAudioSoundIsValid(IAudioSound*)
+ T CMilesAudioDevice::BCanGoDormant()
+ T CMilesAudioDevice::BIsInitialized() const
+ T CMilesAudioDevice::CMilesAudioDevice(CAudioController*, AudioType, int, int, int)
+ T CMilesAudioDevice::CreateAudioOutputStream()
+ T CMilesAudioDevice::CreateAudioOutputStream(int, int, int)
+ T CMilesAudioDevice::CreateAudioSound(char const*, bool, bool)
+ T CMilesAudioDevice::FreeAudioOutputStream(IAudioOutputStream*)
+ T CMilesAudioDevice::FreeAudioSound(IAudioSound*)
+ T CMilesAudioDevice::GetAudioType()
+ T CMilesAudioDevice::Init()
+ T CMilesAudioDevice::Pause()
+ T CMilesAudioDevice::PauseIfPossible()
+ T CMilesAudioDevice::RemoveListener(IAudioDeviceListener*)
+ T CMilesAudioDevice::RemoveSounds(bool, bool)
+ T CMilesAudioDevice::ServiceAudioDevice()
+ T CMilesAudioDevice::SetCheckForDeletableSoundsOnNextService(bool)
+ T CMilesAudioDevice::Shutdown()
+ T CMilesAudioDevice::UnpauseIfNeeded(double)
+ T CMilesAudioDevice::Validate(CValidator&, char const*)
+ T CMilesAudioDevice::~CMilesAudioDevice()
+ T CMilesAudioOutputStream::CMilesAudioOutputStream(_DIG_DRIVER*, int, int, int)
+ T CMilesAudioOutputStream::CommitMixBuffer(void*, unsigned int)
+ T CMilesAudioOutputStream::EnableStreamForDecoding()
+ T CMilesAudioOutputStream::EnsureBufferSize(unsigned int)
+ T CMilesAudioOutputStream::Flush()
+ T CMilesAudioOutputStream::GetDigitalLatency()
+ T CMilesAudioOutputStream::GetMinMixBufferData()
+ T CMilesAudioOutputStream::GetMixBuffer()
+ T CMilesAudioOutputStream::GetMixBufferSize()
+ T CMilesAudioOutputStream::GetMixedMilliseconds()
+ T CMilesAudioOutputStream::GetPlaybackStatus()
+ T CMilesAudioOutputStream::GetQueuedBytesToPlay()
+ T CMilesAudioOutputStream::GetRemainingCommittedBytes()
+ T CMilesAudioOutputStream::GetRemainingCommittedBytesInternal()
+ T CMilesAudioOutputStream::GetStreamInfo(int*, unsigned int*, unsigned int*, int*, int*)
+ T CMilesAudioOutputStream::IsReadyToMix()
+ T CMilesAudioOutputStream::Pause()
+ T CMilesAudioOutputStream::Play()
+ T CMilesAudioOutputStream::SetStreamListener(IAudioOutputStreamListener*)
+ T CMilesAudioOutputStream::SetVolume(float)
+ T CMilesAudioOutputStream::StreamHasEnded(_SAMPLE*)
+ T CMilesAudioOutputStream::Validate(CValidator&, char const*)
+ T CMilesAudioOutputStream::~CMilesAudioOutputStream()
+ T CMilesAudioSound::BaseInit(_DIG_DRIVER*)
+ T CMilesAudioSound::BaseLoad(bool)
+ T CMilesAudioSound::CMilesAudioSound(CAudioController*, CMilesAudioDevice*)
+ T CMilesAudioSound::FadeOut(float)
+ T CMilesAudioSound::GetFileName()
+ T CMilesAudioSound::GetSampleDuration()
+ T CMilesAudioSound::GetSampleDurationRemaining()
+ T CMilesAudioSound::Init(_DIG_DRIVER*, char const*, bool, bool)
+ T CMilesAudioSound::IsLoaded() const
+ T CMilesAudioSound::IsPlaying() const
+ T CMilesAudioSound::IsValid() const
+ T CMilesAudioSound::Pause()
+ T CMilesAudioSound::Play(int)
+ T CMilesAudioSound::SetSoundListener(IAudioSoundListener*)
+ T CMilesAudioSound::SetVolumePan(float, float)
+ T CMilesAudioSound::Shutdown()
+ T CMilesAudioSound::SoundHasEndedCallback(_SAMPLE*)
+ T CMilesAudioSound::Stop()
+ T CMilesAudioSound::UnPause()
+ T CMilesAudioSound::Validate(CValidator&, char const*)
+ T CMilesAudioSound::VolumeRamp(float, float)
+ T CMilesAudioSound::~CMilesAudioSound()
+ T CMilesLibrary::BEnsureLoadedAndStarted()
+ T CMilesLibrary::CloseDriver(_DIG_DRIVER*)
+ T CMilesLibrary::GetContextOfDriver(_DIG_DRIVER*)
+ T CMilesLibrary::GetSingleton()
+ T CMilesLibrary::OpenDriver(int, int, int, int)
+ T CMilesLibrary::Shutdown()
+ T CMilesLibrary::Unload()
+ T CMilesLibrary::~CMilesLibrary()
+ T CMilesWrapper::AIL_allocate_sample_handle(_DIG_DRIVER*)
+ T CMilesWrapper::AIL_digital_latency(_DIG_DRIVER*)
+ T CMilesWrapper::AIL_file_read_info(char const*, void*, char const*, unsigned int)
+ T CMilesWrapper::AIL_find_filter(char*, unsigned int*)
+ T CMilesWrapper::AIL_find_filter(char*, unsigned long long*)
+ T CMilesWrapper::AIL_init_sample(_SAMPLE*, int)
+ T CMilesWrapper::AIL_last_error()
+ T CMilesWrapper::AIL_load_sample_buffer(_SAMPLE*, int, void const*, unsigned int)
+ T CMilesWrapper::AIL_mem_free_lock(void*)
+ T CMilesWrapper::AIL_minimum_sample_buffer_size(_DIG_DRIVER*, int, int)
+ T CMilesWrapper::AIL_register_EOS_callback(_SAMPLE*, void (*)(_SAMPLE*))
+ T CMilesWrapper::AIL_release_sample_handle(_SAMPLE*)
+ T CMilesWrapper::AIL_resume_sample(_SAMPLE*)
+ T CMilesWrapper::AIL_sample_buffer_available(_SAMPLE*)
+ T CMilesWrapper::AIL_sample_buffer_info(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)
+ T CMilesWrapper::AIL_sample_loop_count(_SAMPLE*)
+ T CMilesWrapper::AIL_sample_mixed_ms(_SAMPLE*)
+ T CMilesWrapper::AIL_sample_ms_position(_SAMPLE*, int*, int*)
+ T CMilesWrapper::AIL_sample_stage_property(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)
+ T CMilesWrapper::AIL_sample_status(_SAMPLE*)
+ T CMilesWrapper::AIL_sample_user_data(_SAMPLE*, unsigned int)
+ T CMilesWrapper::AIL_set_named_sample_file(_SAMPLE*, char const*, void const*, unsigned int, int)
+ T CMilesWrapper::AIL_set_preference(unsigned int, int)
+ T CMilesWrapper::AIL_set_preference(unsigned int, long long)
+ T CMilesWrapper::AIL_set_sample_address(_SAMPLE*, void const*, unsigned int)
+ T CMilesWrapper::AIL_set_sample_buffer_count(_SAMPLE*, int)
+ T CMilesWrapper::AIL_set_sample_file(_SAMPLE*, void const*, int)
+ T CMilesWrapper::AIL_set_sample_loop_count(_SAMPLE*, int)
+ T CMilesWrapper::AIL_set_sample_playback_rate(_SAMPLE*, int)
+ T CMilesWrapper::AIL_set_sample_processor(_SAMPLE*, SAMPLESTAGE, unsigned int)
+ T CMilesWrapper::AIL_set_sample_processor(_SAMPLE*, SAMPLESTAGE, unsigned long long)
+ T CMilesWrapper::AIL_set_sample_user_data(_SAMPLE*, unsigned int, int)
+ T CMilesWrapper::AIL_set_sample_user_data(_SAMPLE*, unsigned int, long long)
+ T CMilesWrapper::AIL_set_sample_volume_pan(_SAMPLE*, float, float)
+ T CMilesWrapper::AIL_start_sample(_SAMPLE*)
+ T CMilesWrapper::AIL_stop_sample(_SAMPLE*)
+ T CMilesWrapper::RIB_find_files_provider(char const*, char const*, char const*, char const*, char const*)
+ T CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Validate(CValidator&, char const*)
+ T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
+ T CUtlMemoryBase::Grow(int)
+ T CUtlMemoryBase::NumAllocated() const
+ T CUtlMemoryBase::Purge()
+ T CUtlMemoryBase::Validate(CValidator&, char const*)
+ T CUtlMemoryBase::~CUtlMemoryBase()
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlSymbolTable::CStringPoolIndex const&) const
+ T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CUtlSymbolTable::CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
+ T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CUtlSymbolTable::CStringPoolIndex const&, bool)
+ T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
+ T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
+ T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
+ T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
+ T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
+ T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
+ T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_InsertRebalance(unsigned short, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_LinkToParent(unsigned short, unsigned short, bool, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
+ T CUtlString::AssertStringTooLong()
+ T CUtlString::Format(char const*, ...)
+ T CUtlString::FormatV(char const*, __va_list_tag*)
+ T CUtlString::FormatV(char const*, char*)
+ T CUtlSymbol::CUtlSymbol(char const*)
+ T CUtlSymbol::Initialize()
+ T CUtlSymbol::String() const
+ T CUtlSymbol::ValidateGlobals(CValidator&, char const*)
+ T CUtlSymbolTable::AddString(char const*)
+ T CUtlSymbolTable::CLess::operator()(CUtlSymbolTable::CStringPoolIndex const&, CUtlSymbolTable::CStringPoolIndex const&) const
+ T CUtlSymbolTable::CUtlSymbolTable(int, int, bool, int)
+ T CUtlSymbolTable::RemoveAll()
+ T CUtlSymbolTable::String(CUtlSymbol) const
+ T CUtlSymbolTable::Validate(CValidator&, char const*)
+ T CUtlSymbolTable::~CUtlSymbolTable()
+ T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
+ T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::FindAndRemove(CMilesAudioDevice* const&)
+ T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::GrowVector(int)
+ T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::InsertBefore(int, CMilesAudioDevice* const&)
+ T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::~CUtlVector()
+ T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
+ T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::InsertBefore(int, CUtlSymbolTable::StringPool_t* const&)
+ T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
+ T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::FindAndRemove(IAudioDeviceListener* const&)
+ T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::GrowVector(int)
+ T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::InsertBefore(int, IAudioDeviceListener* const&)
+ T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::ShiftElementsRight(int, int)
+ T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::Validate(CValidator&, char const*)
+ T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::~CUtlVector()
+ T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::AddToTail(IAudioOutputStream*&&)
+ T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::FindAndRemove(IAudioOutputStream* const&)
+ T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::GrowVector(int)
+ T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::Validate(CValidator&, char const*)
+ T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::~CUtlVector()
+ T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::AddToTail(IAudioSound*&&)
+ T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::GrowVector(int)
+ T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::Validate(CValidator&, char const*)
+ T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::~CUtlVector()
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsLeft(int, int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
+ T CValidateAutoPushPop::~CValidateAutoPushPop()
+ T CreateInterface
+ T CreateInterfaceInternal(char const*, int*)
+ T CreateMilesMusicAudioDevice
+ T CreateMilesSoundAudioDevice
+ T CreateMilesVoiceAudioDevice
+ T FreeAudioDevice
+ T GetMilesFunctionsList()
+ T InterfaceReg::InterfaceReg(void* (*)(), char const*)
+ T Sys_GetProcAddress(CSysModule*, char const*)
+ T Sys_LoadModule(char const*, Sys_Flags)
+ T Sys_UnloadModule(CSysModule*)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T __CreateCDLLValidateIValidate_interface()
+ T __clang_call_terminate
+ T dyld_stub_binding_helper
+ V_FixSlashes
+ V_IsAbsolutePath
+ V_UnqualifiedFileName
+ V_snprintf
+ V_stristr(char const*, char const*)
+ V_strncat
+ V_strncpy
+ V_strnicmp
+ _Unwind_Resume
+ __cxa_atexit
+ __cxa_bad_typeid
+ __cxa_begin_catch
+ __cxa_guard_acquire
+ __cxa_guard_release
+ __gxx_personality_v0
+ __stack_chk_fail
+ __stack_chk_guard
  b AudioSinkList::s_AudioSink
  b CMilesAudioDevice::CMilesAudioDevice(CAudioController*, AudioType, int, int, int)::s_nAudioDeviceCounter
  b CUtlSymbol::Initialize()::symbolsInitialized
- B CUtlSymbol::s_pSymbolTable
+ b GetMilesFunctionsList()::g_MilesFunctions
  b df_AIL_allocate_sample_handle
  b df_AIL_close_digital_driver
  b df_AIL_digital_latency
@@ -52,146 +706,18 @@
  b df_RADSS_CAInstallDriver
  b df_RIB_find_files_provider
  b g_CleanupSymbolTable
- B __g_CreateCDLLValidateIValidate_reg
- b GetMilesFunctionsList()::g_MilesFunctions
  b guard variable for AudioSinkList::s_AudioSink
  b guard variable for GetMilesFunctionsList()::g_MilesFunctions
- B g_VecLoadedModules
- B InterfaceReg::s_pInterfaceRegs
  b k_InvalidClientID
  b s_MilesLoader
- B s_pAudioController
- CValidator::ClaimArrayMemory(void*)
- CValidator::ClaimMemory(void*)
- CValidator::IsClaimed(void*)
- CValidator::Pop()
- CValidator::Push(char const*, void*, char const*)
- __cxa_atexit
- __cxa_bad_typeid
- __cxa_begin_catch
- __cxa_guard_acquire
- __cxa_guard_release
- D CUtlSymbol::s_bAllowStaticSymbolTable
  d dyld__mach_header
- D g_DLLValidate
  dlclose
  dlopen
  dlsym
- D pModuleExtension
- D typeinfo for CDLLValidate
- D typeinfo for CDynamicFunc<char* (*)()>
- D typeinfo for CDynamicFunc<char* (*)(char const*)>
- D typeinfo for CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>
- D typeinfo for CDynamicFunc<int (*)(char const*, char const*, unsigned int)>
- D typeinfo for CDynamicFunc<int (*)(char*, unsigned int*)>
- D typeinfo for CDynamicFunc<int (*)(char*, unsigned long long*)>
- D typeinfo for CDynamicFunc<int (*)(_DIG_DRIVER*)>
- D typeinfo for CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>
- D typeinfo for CDynamicFunc<int (*)(int*, unsigned int*, char**)>
- D typeinfo for CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>
- D typeinfo for CDynamicFunc<int (*)(_SAMPLE*)>
- D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>
- D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, int)>
- D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>
- D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>
- D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>
- D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>
- D typeinfo for CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>
- D typeinfo for CDynamicFunc<int (*)(unsigned int)>
- D typeinfo for CDynamicFunc<int (*)(unsigned int, int)>
- D typeinfo for CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
- D typeinfo for CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
- D typeinfo for CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>
- D typeinfo for CDynamicFunc<long long (*)(unsigned int)>
- D typeinfo for CDynamicFunc<long long (*)(unsigned int, long long)>
- D typeinfo for CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>
- D typeinfo for CDynamicFunc<unsigned int (*)()>
- D typeinfo for CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>
- D typeinfo for CDynamicFunc<unsigned int (*)(_SAMPLE*)>
- D typeinfo for CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>
- D typeinfo for CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>
- D typeinfo for CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>
- D typeinfo for CDynamicFunc<void (*)()>
- D typeinfo for CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>
- D typeinfo for CDynamicFunc<void (*)(_DIG_DRIVER*)>
- D typeinfo for CDynamicFunc<void (*)(_SAMPLE*)>
- D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, float, float)>
- D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>
- D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, int)>
- D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>
- D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>
- D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>
- D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>
- D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>
- D typeinfo for CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>
- D typeinfo for CDynamicFunc<void (*)(void*)>
- D typeinfo for CIAudioSinkListNull
- D typeinfo for CMilesAudioDevice
- D typeinfo for CMilesAudioOutputStream
- D typeinfo for CMilesAudioSound
- D typeinfo for IAudioDevice
- D typeinfo for IAudioOutputStream
- D typeinfo for IAudioSinkList
- D typeinfo for IAudioSound
- D typeinfo for IDynamicFunction
- D typeinfo for IValidate
- D vtable for CDLLValidate
- D vtable for CDynamicFunc<char* (*)()>
- D vtable for CDynamicFunc<char* (*)(char const*)>
- D vtable for CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>
- D vtable for CDynamicFunc<int (*)(char const*, char const*, unsigned int)>
- D vtable for CDynamicFunc<int (*)(char*, unsigned int*)>
- D vtable for CDynamicFunc<int (*)(char*, unsigned long long*)>
- D vtable for CDynamicFunc<int (*)(_DIG_DRIVER*)>
- D vtable for CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>
- D vtable for CDynamicFunc<int (*)(int*, unsigned int*, char**)>
- D vtable for CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>
- D vtable for CDynamicFunc<int (*)(_SAMPLE*)>
- D vtable for CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>
- D vtable for CDynamicFunc<int (*)(_SAMPLE*, int)>
- D vtable for CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>
- D vtable for CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>
- D vtable for CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>
- D vtable for CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>
- D vtable for CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>
- D vtable for CDynamicFunc<int (*)(unsigned int)>
- D vtable for CDynamicFunc<int (*)(unsigned int, int)>
- D vtable for CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
- D vtable for CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
- D vtable for CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>
- D vtable for CDynamicFunc<long long (*)(unsigned int)>
- D vtable for CDynamicFunc<long long (*)(unsigned int, long long)>
- D vtable for CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>
- D vtable for CDynamicFunc<unsigned int (*)()>
- D vtable for CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>
- D vtable for CDynamicFunc<unsigned int (*)(_SAMPLE*)>
- D vtable for CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>
- D vtable for CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>
- D vtable for CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>
- D vtable for CDynamicFunc<void (*)()>
- D vtable for CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>
- D vtable for CDynamicFunc<void (*)(_DIG_DRIVER*)>
- D vtable for CDynamicFunc<void (*)(_SAMPLE*)>
- D vtable for CDynamicFunc<void (*)(_SAMPLE*, float, float)>
- D vtable for CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>
- D vtable for CDynamicFunc<void (*)(_SAMPLE*, int)>
- D vtable for CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>
- D vtable for CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>
- D vtable for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>
- D vtable for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>
- D vtable for CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>
- D vtable for CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>
- D vtable for CDynamicFunc<void (*)(void*)>
- D vtable for CIAudioSinkListNull
- D vtable for CMilesAudioDevice
- D vtable for CMilesAudioOutputStream
- D vtable for CMilesAudioSound
  floor
  free
- getcwd
  g_pMemAllocSteam
- __gxx_personality_v0
- Log
+ getcwd
  memcpy
  memmove
  memset
@@ -199,540 +725,14 @@
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
- Plat_FloatTime
- Plat_GetExecutablePath
  pthread_mutex_lock
  pthread_mutex_unlock
- R typeinfo name for CAudioController
- R typeinfo name for CDLLValidate
- R typeinfo name for CDynamicFunc<char* (*)()>
- R typeinfo name for CDynamicFunc<char* (*)(char const*)>
- R typeinfo name for CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>
- R typeinfo name for CDynamicFunc<int (*)(char const*, char const*, unsigned int)>
- R typeinfo name for CDynamicFunc<int (*)(char*, unsigned int*)>
- R typeinfo name for CDynamicFunc<int (*)(char*, unsigned long long*)>
- R typeinfo name for CDynamicFunc<int (*)(_DIG_DRIVER*)>
- R typeinfo name for CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>
- R typeinfo name for CDynamicFunc<int (*)(int*, unsigned int*, char**)>
- R typeinfo name for CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>
- R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*)>
- R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>
- R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, int)>
- R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>
- R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>
- R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>
- R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>
- R typeinfo name for CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>
- R typeinfo name for CDynamicFunc<int (*)(unsigned int)>
- R typeinfo name for CDynamicFunc<int (*)(unsigned int, int)>
- R typeinfo name for CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
- R typeinfo name for CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>
- R typeinfo name for CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>
- R typeinfo name for CDynamicFunc<long long (*)(unsigned int)>
- R typeinfo name for CDynamicFunc<long long (*)(unsigned int, long long)>
- R typeinfo name for CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>
- R typeinfo name for CDynamicFunc<unsigned int (*)()>
- R typeinfo name for CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>
- R typeinfo name for CDynamicFunc<unsigned int (*)(_SAMPLE*)>
- R typeinfo name for CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>
- R typeinfo name for CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>
- R typeinfo name for CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>
- R typeinfo name for CDynamicFunc<void (*)()>
- R typeinfo name for CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>
- R typeinfo name for CDynamicFunc<void (*)(_DIG_DRIVER*)>
- R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*)>
- R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, float, float)>
- R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>
- R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, int)>
- R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>
- R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>
- R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>
- R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>
- R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>
- R typeinfo name for CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>
- R typeinfo name for CDynamicFunc<void (*)(void*)>
- R typeinfo name for CIAudioSinkListNull
- R typeinfo name for CMilesAudioDevice
- R typeinfo name for CMilesAudioOutputStream
- R typeinfo name for CMilesAudioSound
- R typeinfo name for CMilesLibrary
- R typeinfo name for CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >
- R typeinfo name for CUtlMemoryBase
- R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
- R typeinfo name for CUtlString
- R typeinfo name for CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >
- R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
- R typeinfo name for CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >
- R typeinfo name for CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >
- R typeinfo name for CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >
- R typeinfo name for IAudioDevice
- R typeinfo name for IAudioOutputStream
- R typeinfo name for IAudioSinkList
- R typeinfo name for IAudioSound
- R typeinfo name for IDynamicFunction
- R typeinfo name for IValidate
- __stack_chk_fail
- __stack_chk_guard
  std::terminate()
- SteamThreadTools::CThreadMutex::~CThreadMutex()
- SteamThreadTools::CThreadMutex::CThreadMutex()
  strcmp
  strlen
  strncpy
  strrchr
- T AudioSinkList
- T CAudioController::BIsDormant()
- T CAudioController::CAudioController()
- T CAudioController::CloseDriverForDevice(CMilesAudioDevice*)
- T CAudioController::CreateMilesAudioDevice(AudioType, int, int, int)
- T CAudioController::FindOrCreateSoundImage(char const*)
- T CAudioController::FreeAudioDevice(IAudioDevice*)
- T CAudioController::GetSingleton()
- T CAudioController::GoActiveIfNeeded()
- T CAudioController::GoDormantIfPossible()
- T CAudioController::OpenDriverForDevice(CMilesAudioDevice*)
- T CAudioController::UpdateSharedContextForDevice(CMilesAudioDevice*)
- T CAudioController::Validate(CValidator&, char const*)
- T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
- T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
- T CDLLValidate::Validate(CValidator&)
- T CDynamicFunc<char* (*)(char const*)>::GetNextPointer()
- T CDynamicFunc<char* (*)(char const*)>::Init(CSysModule*)
- T CDynamicFunc<char* (*)(char const*)>::Release()
- T CDynamicFunc<char* (*)(char const*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<char* (*)()>::GetNextPointer()
- T CDynamicFunc<char* (*)()>::Init(CSysModule*)
- T CDynamicFunc<char* (*)()>::Release()
- T CDynamicFunc<char* (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::GetNextPointer()
- T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::Init(CSysModule*)
- T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::Release()
- T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(char const*, char const*, unsigned int)>::GetNextPointer()
- T CDynamicFunc<int (*)(char const*, char const*, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(char const*, char const*, unsigned int)>::Release()
- T CDynamicFunc<int (*)(char const*, char const*, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(char*, unsigned int*)>::GetNextPointer()
- T CDynamicFunc<int (*)(char*, unsigned int*)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(char*, unsigned int*)>::Release()
- T CDynamicFunc<int (*)(char*, unsigned int*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(char*, unsigned long long*)>::GetNextPointer()
- T CDynamicFunc<int (*)(char*, unsigned long long*)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(char*, unsigned long long*)>::Release()
- T CDynamicFunc<int (*)(char*, unsigned long long*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_DIG_DRIVER*)>::GetNextPointer()
- T CDynamicFunc<int (*)(_DIG_DRIVER*)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>::GetNextPointer()
- T CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>::Release()
- T CDynamicFunc<int (*)(_DIG_DRIVER*, int, int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_DIG_DRIVER*)>::Release()
- T CDynamicFunc<int (*)(_DIG_DRIVER*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(int*, unsigned int*, char**)>::GetNextPointer()
- T CDynamicFunc<int (*)(int*, unsigned int*, char**)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(int*, unsigned int*, char**)>::Release()
- T CDynamicFunc<int (*)(int*, unsigned int*, char**)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>::GetNextPointer()
- T CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>::Release()
- T CDynamicFunc<int (*)(long long*, unsigned long long*, char**)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>::GetNextPointer()
- T CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>::Release()
- T CDynamicFunc<int (*)(_SAMPLE*, char const*, void const*, unsigned int, int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_SAMPLE*)>::GetNextPointer()
- T CDynamicFunc<int (*)(_SAMPLE*)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_SAMPLE*, int)>::GetNextPointer()
- T CDynamicFunc<int (*)(_SAMPLE*, int)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_SAMPLE*, int)>::Release()
- T CDynamicFunc<int (*)(_SAMPLE*, int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>::GetNextPointer()
- T CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>::Release()
- T CDynamicFunc<int (*)(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>::GetNextPointer()
- T CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>::Release()
- T CDynamicFunc<int (*)(_SAMPLE*, int, void const*, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_SAMPLE*)>::Release()
- T CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>::GetNextPointer()
- T CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>::Release()
- T CDynamicFunc<int (*)(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_SAMPLE*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>::GetNextPointer()
- T CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>::Release()
- T CDynamicFunc<int (*)(_SAMPLE*, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>::GetNextPointer()
- T CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>::Release()
- T CDynamicFunc<int (*)(_SAMPLE*, void const*, int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(unsigned int)>::GetNextPointer()
- T CDynamicFunc<int (*)(unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(unsigned int, int)>::GetNextPointer()
- T CDynamicFunc<int (*)(unsigned int, int)>::Init(CSysModule*)
- T CDynamicFunc<int (*)(unsigned int, int)>::Release()
- T CDynamicFunc<int (*)(unsigned int, int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*)(unsigned int)>::Release()
- T CDynamicFunc<int (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::GetNextPointer()
- T CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::Release()
- T CDynamicFunc<int (*(*)(unsigned int, unsigned int))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::GetNextPointer()
- T CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::Release()
- T CDynamicFunc<int (*(*)(unsigned long long, unsigned long long))(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>::GetNextPointer()
- T CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>::Release()
- T CDynamicFunc<long long (*)(_SAMPLE*, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<long long (*)(unsigned int)>::GetNextPointer()
- T CDynamicFunc<long long (*)(unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<long long (*)(unsigned int, long long)>::GetNextPointer()
- T CDynamicFunc<long long (*)(unsigned int, long long)>::Init(CSysModule*)
- T CDynamicFunc<long long (*)(unsigned int, long long)>::Release()
- T CDynamicFunc<long long (*)(unsigned int, long long)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<long long (*)(unsigned int)>::Release()
- T CDynamicFunc<long long (*)(unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>::GetNextPointer()
- T CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>::Init(CSysModule*)
- T CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>::Release()
- T CDynamicFunc<_SAMPLE* (*)(_DIG_DRIVER*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunctionList::InitFunctions(char const*)
- T CDynamicFunctionList::Shutdown()
- T CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>::GetNextPointer()
- T CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>::Init(CSysModule*)
- T CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>::Release()
- T CDynamicFunc<unsigned int (*)(char const*, char const*, char const*, char const*, char const*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<unsigned int (*)()>::GetNextPointer()
- T CDynamicFunc<unsigned int (*)()>::Init(CSysModule*)
- T CDynamicFunc<unsigned int (*)()>::Release()
- T CDynamicFunc<unsigned int (*)(_SAMPLE*)>::GetNextPointer()
- T CDynamicFunc<unsigned int (*)(_SAMPLE*)>::Init(CSysModule*)
- T CDynamicFunc<unsigned int (*)(_SAMPLE*)>::Release()
- T CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>::GetNextPointer()
- T CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>::Release()
- T CDynamicFunc<unsigned int (*)(_SAMPLE*, SAMPLESTAGE, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<unsigned int (*)(_SAMPLE*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<unsigned int (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>::GetNextPointer()
- T CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>::Init(CSysModule*)
- T CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>::Release()
- T CDynamicFunc<unsigned long long (*)(char const*, char const*, char const*, char const*, char const*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>::GetNextPointer()
- T CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>::Init(CSysModule*)
- T CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>::Release()
- T CDynamicFunc<unsigned long long (*)(_SAMPLE*, SAMPLESTAGE, unsigned long long)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>::GetNextPointer()
- T CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>::Release()
- T CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(_DIG_DRIVER*)>::GetNextPointer()
- T CDynamicFunc<void (*)(_DIG_DRIVER*)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_DIG_DRIVER*)>::Release()
- T CDynamicFunc<void (*)(_DIG_DRIVER*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)()>::GetNextPointer()
- T CDynamicFunc<void (*)()>::Init(CSysModule*)
- T CDynamicFunc<void (*)()>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*, float, float)>::GetNextPointer()
- T CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>::GetNextPointer()
- T CDynamicFunc<void (*)(_SAMPLE*, float, float)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_SAMPLE*, float, float)>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*, float, float)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(_SAMPLE*, float*, float*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(_SAMPLE*)>::GetNextPointer()
- T CDynamicFunc<void (*)(_SAMPLE*)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_SAMPLE*, int)>::GetNextPointer()
- T CDynamicFunc<void (*)(_SAMPLE*, int)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>::GetNextPointer()
- T CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*, int*, int*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(_SAMPLE*, int)>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*, int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(_SAMPLE*)>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>::GetNextPointer()
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>::GetNextPointer()
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>::GetNextPointer()
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::GetNextPointer()
- T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::Release()
- T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>::GetNextPointer()
- T CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>::Init(CSysModule*)
- T CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>::Release()
- T CDynamicFunc<void (*(*)(_SAMPLE*, void (*)(_SAMPLE*)))(_SAMPLE*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<void (*)(void*)>::GetNextPointer()
- T CDynamicFunc<void (*)(void*)>::Init(CSysModule*)
- T CDynamicFunc<void (*)(void*)>::Release()
- T CDynamicFunc<void (*)(void*)>::SetNextPointer(IDynamicFunction*)
- T CIAudioSinkListNull::AddListener(IAudioSinkDeviceListener*)
- T CIAudioSinkListNull::BAvailable()
- T CIAudioSinkListNull::BHasInput(int) const
- T CIAudioSinkListNull::BHasOutput(int) const
- T CIAudioSinkListNull::BIsDigitalOutput(int) const
- T CIAudioSinkListNull::BIsSupported()
- T CIAudioSinkListNull::BStarted()
- T CIAudioSinkListNull::~CIAudioSinkListNull()
- T CIAudioSinkListNull::DetermineBestDefaultDevice()
- T CIAudioSinkListNull::GetActiveCodecPassthruForSink(int, bool*, bool*, bool*)
- T CIAudioSinkListNull::GetActiveSink() const
- T CIAudioSinkListNull::GetActiveVoiceSink() const
- T CIAudioSinkListNull::GetSinkActivePort(int) const
- T CIAudioSinkListNull::GetSinkActiveProfile(int) const
- T CIAudioSinkListNull::GetSinkCount() const
- T CIAudioSinkListNull::GetSinkDeviceName(int, CUtlString&) const
- T CIAudioSinkListNull::GetSink(int) const
- T CIAudioSinkListNull::GetSinkName(int, CUtlString&) const
- T CIAudioSinkListNull::GetSinkPortList(int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
- T CIAudioSinkListNull::GetSinkProfileList(int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
- T CIAudioSinkListNull::GetSourceActivePort(int) const
- T CIAudioSinkListNull::GetSourcePortList(int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
- T CIAudioSinkListNull::RemoveListener(IAudioSinkDeviceListener*)
- T CIAudioSinkListNull::RunFrame()
- T CIAudioSinkListNull::SetActiveCodecPassthruForSink(int, bool, bool, bool)
- T CIAudioSinkListNull::SetActivePortForSink(int, int)
- T CIAudioSinkListNull::SetActiveProfileForSink(int, int)
- T CIAudioSinkListNull::SetActiveSink(int)
- T CIAudioSinkListNull::SetActiveSourcePortForSink(int, int)
- T CIAudioSinkListNull::SetActiveVoiceSink(int)
- T CIAudioSinkListNull::SetDefaultDevice(char const*)
- T CIAudioSinkListNull::SetDefaultVoiceDevice(char const*)
- T CIAudioSinkListNull::Start()
- T CIAudioSinkListNull::Stop()
- T CIAudioSinkListNull::UseSystemAudioSinkForVoice(bool)
- T __clang_call_terminate
- T CMilesAudioDevice::AddListener(IAudioDeviceListener*)
- T CMilesAudioDevice::BAudioSoundIsValid(IAudioSound*)
- T CMilesAudioDevice::BCanGoDormant()
- T CMilesAudioDevice::BIsInitialized() const
- T CMilesAudioDevice::~CMilesAudioDevice()
- T CMilesAudioDevice::CMilesAudioDevice(CAudioController*, AudioType, int, int, int)
- T CMilesAudioDevice::CreateAudioOutputStream()
- T CMilesAudioDevice::CreateAudioOutputStream(int, int, int)
- T CMilesAudioDevice::CreateAudioSound(char const*, bool, bool)
- T CMilesAudioDevice::FreeAudioOutputStream(IAudioOutputStream*)
- T CMilesAudioDevice::FreeAudioSound(IAudioSound*)
- T CMilesAudioDevice::GetAudioType()
- T CMilesAudioDevice::Init()
- T CMilesAudioDevice::Pause()
- T CMilesAudioDevice::PauseIfPossible()
- T CMilesAudioDevice::RemoveListener(IAudioDeviceListener*)
- T CMilesAudioDevice::RemoveSounds(bool, bool)
- T CMilesAudioDevice::ServiceAudioDevice()
- T CMilesAudioDevice::SetCheckForDeletableSoundsOnNextService(bool)
- T CMilesAudioDevice::Shutdown()
- T CMilesAudioDevice::UnpauseIfNeeded(double)
- T CMilesAudioDevice::Validate(CValidator&, char const*)
- T CMilesAudioOutputStream::~CMilesAudioOutputStream()
- T CMilesAudioOutputStream::CMilesAudioOutputStream(_DIG_DRIVER*, int, int, int)
- T CMilesAudioOutputStream::CommitMixBuffer(void*, unsigned int)
- T CMilesAudioOutputStream::EnableStreamForDecoding()
- T CMilesAudioOutputStream::EnsureBufferSize(unsigned int)
- T CMilesAudioOutputStream::Flush()
- T CMilesAudioOutputStream::GetDigitalLatency()
- T CMilesAudioOutputStream::GetMinMixBufferData()
- T CMilesAudioOutputStream::GetMixBuffer()
- T CMilesAudioOutputStream::GetMixBufferSize()
- T CMilesAudioOutputStream::GetMixedMilliseconds()
- T CMilesAudioOutputStream::GetPlaybackStatus()
- T CMilesAudioOutputStream::GetQueuedBytesToPlay()
- T CMilesAudioOutputStream::GetRemainingCommittedBytes()
- T CMilesAudioOutputStream::GetRemainingCommittedBytesInternal()
- T CMilesAudioOutputStream::GetStreamInfo(int*, unsigned int*, unsigned int*, int*, int*)
- T CMilesAudioOutputStream::IsReadyToMix()
- T CMilesAudioOutputStream::Pause()
- T CMilesAudioOutputStream::Play()
- T CMilesAudioOutputStream::SetStreamListener(IAudioOutputStreamListener*)
- T CMilesAudioOutputStream::SetVolume(float)
- T CMilesAudioOutputStream::StreamHasEnded(_SAMPLE*)
- T CMilesAudioOutputStream::Validate(CValidator&, char const*)
- T CMilesAudioSound::BaseInit(_DIG_DRIVER*)
- T CMilesAudioSound::BaseLoad(bool)
- T CMilesAudioSound::~CMilesAudioSound()
- T CMilesAudioSound::CMilesAudioSound(CAudioController*, CMilesAudioDevice*)
- T CMilesAudioSound::FadeOut(float)
- T CMilesAudioSound::GetFileName()
- T CMilesAudioSound::GetSampleDuration()
- T CMilesAudioSound::GetSampleDurationRemaining()
- T CMilesAudioSound::Init(_DIG_DRIVER*, char const*, bool, bool)
- T CMilesAudioSound::IsLoaded() const
- T CMilesAudioSound::IsPlaying() const
- T CMilesAudioSound::IsValid() const
- T CMilesAudioSound::Pause()
- T CMilesAudioSound::Play(int)
- T CMilesAudioSound::SetSoundListener(IAudioSoundListener*)
- T CMilesAudioSound::SetVolumePan(float, float)
- T CMilesAudioSound::Shutdown()
- T CMilesAudioSound::SoundHasEndedCallback(_SAMPLE*)
- T CMilesAudioSound::Stop()
- T CMilesAudioSound::UnPause()
- T CMilesAudioSound::Validate(CValidator&, char const*)
- T CMilesAudioSound::VolumeRamp(float, float)
- T CMilesLibrary::BEnsureLoadedAndStarted()
- T CMilesLibrary::CloseDriver(_DIG_DRIVER*)
- T CMilesLibrary::~CMilesLibrary()
- T CMilesLibrary::GetContextOfDriver(_DIG_DRIVER*)
- T CMilesLibrary::GetSingleton()
- T CMilesLibrary::OpenDriver(int, int, int, int)
- T CMilesLibrary::Shutdown()
- T CMilesLibrary::Unload()
- T CMilesWrapper::AIL_allocate_sample_handle(_DIG_DRIVER*)
- T CMilesWrapper::AIL_digital_latency(_DIG_DRIVER*)
- T CMilesWrapper::AIL_file_read_info(char const*, void*, char const*, unsigned int)
- T CMilesWrapper::AIL_find_filter(char*, unsigned int*)
- T CMilesWrapper::AIL_find_filter(char*, unsigned long long*)
- T CMilesWrapper::AIL_init_sample(_SAMPLE*, int)
- T CMilesWrapper::AIL_last_error()
- T CMilesWrapper::AIL_load_sample_buffer(_SAMPLE*, int, void const*, unsigned int)
- T CMilesWrapper::AIL_mem_free_lock(void*)
- T CMilesWrapper::AIL_minimum_sample_buffer_size(_DIG_DRIVER*, int, int)
- T CMilesWrapper::AIL_register_EOS_callback(_SAMPLE*, void (*)(_SAMPLE*))
- T CMilesWrapper::AIL_release_sample_handle(_SAMPLE*)
- T CMilesWrapper::AIL_resume_sample(_SAMPLE*)
- T CMilesWrapper::AIL_sample_buffer_available(_SAMPLE*)
- T CMilesWrapper::AIL_sample_buffer_info(_SAMPLE*, int, unsigned int*, unsigned int*, int*, int*)
- T CMilesWrapper::AIL_sample_loop_count(_SAMPLE*)
- T CMilesWrapper::AIL_sample_mixed_ms(_SAMPLE*)
- T CMilesWrapper::AIL_sample_ms_position(_SAMPLE*, int*, int*)
- T CMilesWrapper::AIL_sample_stage_property(_SAMPLE*, SAMPLESTAGE, char const*, int, void*, void const*, void*)
- T CMilesWrapper::AIL_sample_status(_SAMPLE*)
- T CMilesWrapper::AIL_sample_user_data(_SAMPLE*, unsigned int)
- T CMilesWrapper::AIL_set_named_sample_file(_SAMPLE*, char const*, void const*, unsigned int, int)
- T CMilesWrapper::AIL_set_preference(unsigned int, int)
- T CMilesWrapper::AIL_set_preference(unsigned int, long long)
- T CMilesWrapper::AIL_set_sample_address(_SAMPLE*, void const*, unsigned int)
- T CMilesWrapper::AIL_set_sample_buffer_count(_SAMPLE*, int)
- T CMilesWrapper::AIL_set_sample_file(_SAMPLE*, void const*, int)
- T CMilesWrapper::AIL_set_sample_loop_count(_SAMPLE*, int)
- T CMilesWrapper::AIL_set_sample_playback_rate(_SAMPLE*, int)
- T CMilesWrapper::AIL_set_sample_processor(_SAMPLE*, SAMPLESTAGE, unsigned int)
- T CMilesWrapper::AIL_set_sample_processor(_SAMPLE*, SAMPLESTAGE, unsigned long long)
- T CMilesWrapper::AIL_set_sample_user_data(_SAMPLE*, unsigned int, int)
- T CMilesWrapper::AIL_set_sample_user_data(_SAMPLE*, unsigned int, long long)
- T CMilesWrapper::AIL_set_sample_volume_pan(_SAMPLE*, float, float)
- T CMilesWrapper::AIL_start_sample(_SAMPLE*)
- T CMilesWrapper::AIL_stop_sample(_SAMPLE*)
- T CMilesWrapper::RIB_find_files_provider(char const*, char const*, char const*, char const*, char const*)
- T __CreateCDLLValidateIValidate_interface()
- T CreateInterface
- T CreateInterfaceInternal(char const*, int*)
- T CreateMilesMusicAudioDevice
- T CreateMilesSoundAudioDevice
- T CreateMilesVoiceAudioDevice
- T CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Validate(CValidator&, char const*)
- T CUtlMemoryBase::~CUtlMemoryBase()
- T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
- T CUtlMemoryBase::Grow(int)
- T CUtlMemoryBase::NumAllocated() const
- T CUtlMemoryBase::Purge()
- T CUtlMemoryBase::Validate(CValidator&, char const*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
- T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_InsertRebalance(unsigned short, unsigned long, void*)
- T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_LinkToParent(unsigned short, unsigned short, bool, unsigned long, void*)
- T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
- T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&) const
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CUtlSymbolTable::CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CUtlSymbolTable::CStringPoolIndex const&, bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
- T CUtlString::AssertStringTooLong()
- T CUtlString::Format(char const*, ...)
- T CUtlString::FormatV(char const*, char*)
- T CUtlString::FormatV(char const*, __va_list_tag*)
- T CUtlSymbol::CUtlSymbol(char const*)
- T CUtlSymbol::Initialize()
- T CUtlSymbol::String() const
- T CUtlSymbolTable::AddString(char const*)
- T CUtlSymbolTable::CLess::operator()(CUtlSymbolTable::CStringPoolIndex const&, CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlSymbolTable::~CUtlSymbolTable()
- T CUtlSymbolTable::CUtlSymbolTable(int, int, bool, int)
- T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
- T CUtlSymbolTable::RemoveAll()
- T CUtlSymbolTable::String(CUtlSymbol) const
- T CUtlSymbolTable::Validate(CValidator&, char const*)
- T CUtlSymbol::ValidateGlobals(CValidator&, char const*)
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::~CUtlVector()
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::FindAndRemove(CMilesAudioDevice* const&)
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::GrowVector(int)
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::InsertBefore(int, CMilesAudioDevice* const&)
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::ShiftElementsRight(int, int)
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::InsertBefore(int, CUtlSymbolTable::StringPool_t* const&)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::ShiftElementsRight(int, int)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
- T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::~CUtlVector()
- T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::FindAndRemove(IAudioDeviceListener* const&)
- T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::GrowVector(int)
- T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::InsertBefore(int, IAudioDeviceListener* const&)
- T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::ShiftElementsLeft(int, int)
- T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::ShiftElementsRight(int, int)
- T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::Validate(CValidator&, char const*)
- T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::AddToTail(IAudioOutputStream*&&)
- T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::~CUtlVector()
- T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::FindAndRemove(IAudioOutputStream* const&)
- T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::GrowVector(int)
- T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::ShiftElementsLeft(int, int)
- T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::Validate(CValidator&, char const*)
- T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::AddToTail(IAudioSound*&&)
- T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::~CUtlVector()
- T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::GrowVector(int)
- T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::ShiftElementsLeft(int, int)
- T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::Validate(CValidator&, char const*)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
- T CValidateAutoPushPop::~CValidateAutoPushPop()
- T dyld_stub_binding_helper
- T FreeAudioDevice
- T GetMilesFunctionsList()
- T InterfaceReg::InterfaceReg(void* (*)(), char const*)
- T Sys_GetProcAddress(CSysModule*, char const*)
- T Sys_LoadModule(char const*, Sys_Flags)
- T Sys_UnloadModule(CSysModule*)
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
- _Unwind_Resume
  vasprintf
- V_FixSlashes
- V_IsAbsolutePath
  vsnprintf
- V_snprintf
- V_stristr(char const*, char const*)
- V_strncat
- V_strncpy
- V_strnicmp
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
- V_UnqualifiedFileName
