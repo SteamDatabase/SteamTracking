@@ -421,11 +421,6 @@
  T _findnext(long long, _finddata_t*)
  T FioGetFileData(char const*, SFioFileData*)
  t FixPath(char*)
- t _GLOBAL__sub_I_BaseFileSy.stdout.steam_rel_osx_builder.6602.4cMyMO.ii
- t _GLOBAL__sub_I_filesystem.stdout.steam_rel_osx_builder.6603.KJM5P2.ii
- t _GLOBAL__sub_I_interface.stdout.steam_rel_osx_builder.1358.zSDjR3.ii
- t _GLOBAL__sub_I_utlbuffer.stdout.steam_rel_osx_builder.1400.fSATVe.ii
- t _GLOBAL__sub_I_utlsymbol.stdout.steam_rel_osx_builder.1437.JaUCbl.ii
  ThreadGetCurrentId
  ThreadGetCurrentRunningRef
  ThreadInterlockedDecrement

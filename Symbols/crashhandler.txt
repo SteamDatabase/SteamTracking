@@ -497,22 +497,6 @@
  t GetMinidumpsWritten()
  T GetProcessorDetailBlob(int*)
  t global constructors keyed to 000200
- t _GLOBAL__sub_I_breakpad.stdout.steam_rel_osx_builder.5157.uC8ZxW.mii
- t _GLOBAL__sub_I_breakpad.stdout.steam_rel_osx_builder.5160.WBLDkD.mii
- t _GLOBAL__sub_I_fasttimer.stdout.steam_rel_osx_builder.2916.a4JPYk.ii
- t _GLOBAL__sub_I_fasttimer.stdout.steam_rel_osx_builder.3082.UU7F6u.ii
- t _GLOBAL__sub_I_minidump.stdout.steam_rel_osx_builder.64331.WfSGjq.ii
- t _GLOBAL__sub_I_minidump.stdout.steam_rel_osx_builder.64385.FRAjqe.ii
- t _GLOBAL__sub_I_strtools.stdout.steam_rel_osx_builder.3597.uV5YmS.ii
- t _GLOBAL__sub_I_strtools.stdout.steam_rel_osx_builder.3694.wrufbN.ii
- t _GLOBAL__sub_I_testthread.stdout.steam_rel_osx_builder.3003.XU3ldn.ii
- t _GLOBAL__sub_I_testthread.stdout.steam_rel_osx_builder.3150.gF0OJy.ii
- t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.3006.rBRGG2.ii
- t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.3156.c4PiQ7.ii
- t _GLOBAL__sub_I_utlbuffer.stdout.steam_rel_osx_builder.3325.qwbmD6.ii
- t _GLOBAL__sub_I_utlbuffer.stdout.steam_rel_osx_builder.3484.Ip8wQs.ii
- t _GLOBAL__sub_I_vprof.stdout.steam_rel_osx_builder.3046.lGC5Ic.ii
- t _GLOBAL__sub_I_vprof.stdout.steam_rel_osx_builder.3199.L8Zd7j.ii
  time
  t initialize_imp(objc_object*, objc_selector*)
  T InitStackWalk()

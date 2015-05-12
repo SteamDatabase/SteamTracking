@@ -55,7 +55,7 @@ do
 	
 	strings "$i" | grep "/buildbot/" | sed "s/^[^\/]*\//\//" | sed "s/\:[0-9]*$//" | sort -u > "$DIR/BuildbotPaths/$name.txt"
 	
-	./nm-with-macho -C -p "$i" | grep -Evi "GCC_except_table|google::protobuf" | awk '{$1=""; print $0}' | sort -u > "$DIR/Symbols/$name.txt"
+	./nm-with-macho -C -p "$i" | grep -Evi "GCC_except_table|google::protobuf|steam_rel_osx_builder" | awk '{$1=""; print $0}' | sort -u > "$DIR/Symbols/$name.txt"
 done
 
 #

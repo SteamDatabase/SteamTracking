@@ -811,16 +811,6 @@
  T GetVideoTickCount()
  t global constructors keyed to (anonymous namespace)::emergency_mutex
  t global constructors keyed to __cxa_get_globals_fast
- t _GLOBAL__sub_I_glinterfac.stdout.steam_rel_osx_builder.7520.74S36k.ii
- t _GLOBAL__sub_I_glinterfac.stdout.steam_rel_osx_builder.7646.7F5QGc.ii
- t _GLOBAL__sub_I_input_osx.stdout.steam_rel_osx_builder.7548.a5VRfm.ii
- t _GLOBAL__sub_I_input_osx.stdout.steam_rel_osx_builder.7676.xsjtle.ii
- t _GLOBAL__sub_I_ipcposix.stdout.steam_rel_osx_builder.7449.qf3dVu.ii
- t _GLOBAL__sub_I_ipcposix.stdout.steam_rel_osx_builder.7593.i5bNAl.ii
- t _GLOBAL__sub_I_main.stdout.steam_rel_osx_builder.7554.QQnHeq.ii
- t _GLOBAL__sub_I_main.stdout.steam_rel_osx_builder.7682.sZdbXw.ii
- t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.7447.o1jcDQ.ii
- t _GLOBAL__sub_I_threadtool.stdout.steam_rel_osx_builder.7584.hjDR95.ii
  T __gnu_cxx::__concurrence_lock_error::~__concurrence_lock_error()
  T __gnu_cxx::__concurrence_lock_error::what() const
  T __gnu_cxx::__concurrence_unlock_error::~__concurrence_unlock_error()
