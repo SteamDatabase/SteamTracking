@@ -31,6 +31,7 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_bShouldStayPaused = false;
 	this.m_bExiting = false;
 	this.m_nCurrentSeekTime = -1;
+	this.m_nRepChangeTargetHeight = 0;
 
 	// Logging
 	this.m_nVideoBuffer = 0;
@@ -109,6 +110,7 @@ CDASHPlayer.prototype.Close = function()
 	this.m_nCurrentSeekTime = -1;
 	this.m_nSavedPlaybackRate = 1.0;
 	this.m_bExiting = false;
+	this.m_nRepChangeTargetHeight = 0
 
 	// For Server Event Logging
 	this.m_nBandwidthTotal = 0;
@@ -663,18 +665,25 @@ CDASHPlayer.prototype.UpdateRepresentation = function ( representationIndex, bVi
 			{
 				this.m_nVideoRepresentationIndex = representationIndex;
 				this.m_loaders[i].ChangeRepresentationByIndex( this.m_nVideoRepresentationIndex );
-				this.m_loaders[i].SeekToSegment( this.m_elVideoPlayer.currentTime, true );
+				this.m_loaders[i].SeekToSegment( this.m_elVideoPlayer.currentTime, !this.BIsLiveContent() );
+				this.m_nRepChangeTargetHeight = this.m_loaders[i].m_adaptation.representations[this.m_nVideoRepresentationIndex].height;
 			}
 			else if (!bVideo && this.m_loaders[i].ContainsAudio())
 			{
 				this.m_nAudioRepresentationIndex = representationIndex;
 				this.m_loaders[i].ChangeRepresentationByIndex( this.m_nAudioRepresentationIndex );
-				this.m_loaders[i].SeekToSegment( this.m_elVideoPlayer.currentTime, true );
+				this.m_loaders[i].SeekToSegment( this.m_elVideoPlayer.currentTime, !this.BIsLiveContent() );
 			}
 		}
 
-		this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
+		if ( !this.BIsLiveContent() )
+			this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
 	}
+}
+
+CDASHPlayer.prototype.BIsRepresentationChanging = function()
+{
+	return ( this.m_nRepChangeTargetHeight != 0 );
 }
 
 CDASHPlayer.prototype.UpdateClosedCaption = function ( closedCaptionCode )
@@ -753,6 +762,11 @@ CDASHPlayer.prototype.UpdateStats = function()
 			// logging
 			this.m_nVideoBuffer = this.m_loaders[i].GetAmountBufferedInPlayer();
 			this.m_nPlaybackWidth = this.m_elVideoPlayer.videoWidth;
+
+			// if changing representations, reset the target height if showing the requested height
+			if ( this.m_nRepChangeTargetHeight == this.m_elVideoPlayer.videoHeight )
+				this.m_nRepChangeTargetHeight = 0;
+
 			this.m_nPlaybackHeight = this.m_elVideoPlayer.videoHeight;
 			this.m_nVideoBitRate = this.m_loaders[i].m_representation.bandwidth;
 			this.m_nDownloadVideoWidth = (this.m_loaders[i].m_representation.width != null) ? this.m_loaders[i].m_representation.width : 0;
@@ -2390,11 +2404,11 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 {
 	// Init Panel - only once
-	if ( $J( '.player_settings .settings_icon').length != 0 )
+	if ( $J( '.player_settings #settings_icon').length != 0 )
 		return;
 
 	$J( '.player_settings').append(
-		    '<div class="settings_icon"><div class="video_quality_label"></div></div>' +
+		    '<div id="settings_icon" class="settings_icon"><div class="video_quality_label"></div></div>' +
 			'<div class="settings_panel">' +
 				'<div class="representation_video"></div>' +
 				'<div class="representation_audio"></div>' +
@@ -2402,7 +2416,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 				'<div class="representation_captions"></div>' +
 			'</div>');
 
-	$J( '.settings_icon').on('click', function()
+	$J( '#settings_icon').on('click', function()
 	{
 		if ( $J('.dash_closed_captions_customization').length != 0 )
 		{
@@ -2678,8 +2692,13 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 	if ( repQualityLabel.length != 0 )
 	{
 		if ( this.m_player.m_nPlaybackHeight != 0 )
-			repQualityLabel.text(this.m_player.m_nPlaybackHeight + "p");
+			repQualityLabel.text( this.m_player.m_nPlaybackHeight + "p" );
 	}
+
+	if ( this.m_player.BIsRepresentationChanging() )
+		$J( '#settings_icon' ).addClass( 'settings_icon_animated' ).removeClass( 'settings_icon' );
+	else
+		$J( '#settings_icon' ).addClass( 'settings_icon' ).removeClass( 'settings_icon_animated' );
 }
 
 CDASHPlayerUI.prototype.UpdateBufferingProgress = function()
@@ -3196,6 +3215,12 @@ CDASHPlayerUI.LoadClosedCaptionOptions = function()
 		if (value)
 		{
 			$J( '#' + element.id ).val(value).change();
+		}
+		else
+		{
+			// save the default value so we have something to cancel back to
+			var elementId = '#' + element.id + ' option:selected';
+			WebStorage.SetLocal( element.id, $J( elementId ).val() );
 		}
 	});
 }

@@ -118,12 +118,13 @@ function PopulateItemListAJAX( elemAutoCompleteName, elemListName, packageCollec
 {
 	var matchText = $J( "#" + elemAutoCompleteName ).val();
 
-	if ( matchText.length < 3 )
+	if ( matchText.length < 1 )
 		return;
 
 	var params = {
 		term : matchText,
-		sessionid: g_sessionID
+		sessionid: g_sessionID,
+		max_suggestions: 100
 	};
 	new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestitemjson/', {
 		method: 'post',
@@ -192,8 +193,9 @@ function AjaxPopulateClusterList( elemValue, elemListID, clusterName, clusterTyp
 	var params = {
 		term : matchText,
 		type : clusterType,
-		sessionid: g_sessionID
-	}
+		sessionid: g_sessionID,
+		max_suggestions: 100
+	};
 	new Ajax.Request( 'https://partner.steamgames.com/admin/store/suggestclusteritemsjson/', {
 		method: 'post',
 		parameters: params,

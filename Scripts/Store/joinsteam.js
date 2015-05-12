@@ -69,8 +69,6 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 		reenter_password : false,
 		email: false,
 		reenter_email: false,
-		challenge_question_trigger: false,
-		secret_answer: false,
 		captcha_text: false,
 		ssa_body: false
 	}
@@ -153,21 +151,7 @@ function FinishFormVerification( bCaptchaIsValid, bEmailIsAvailable )
 		rgBadFields.email = true;
 		rgBadFields.reenter_email = true;
 	}
-	
-	var challenge_question = $('challenge_question').value;
-	if ( challenge_question == '' )
-	{
-		errorString += 'Please select the challenge question you wish to use.<br/>';
-		rgBadFields.challenge_question_trigger = true;
-	}
-	
-	var secret_answer = $('secret_answer').value;
-	if ( secret_answer == '' )
-	{
-		errorString += 'Please enter a secret answer for your challenge question.<br/>';
-		rgBadFields.secret_answer = true;
-	}
-	
+
 	if ( !bCaptchaIsValid )
 	{
 	
@@ -231,8 +215,6 @@ function ReallyCreateAccount()
 	    method:'post', 	    parameters: { accountname : $('accountname').value, 
 	    			  password : $('password').value,
 	    			  email : $('email').value,
-	    			  challenge_question : $('challenge_question').value,
-	    			  secret_answer : $('secret_answer').value,
 	    			  captchagid : $('captchagid').value,
 	    			  captcha_text : $('captcha_text').value,
 	    			  i_agree : $('i_agree_check').checked ? '1' : '0',
@@ -354,6 +336,9 @@ var g_bPasswordAvailable = false;
 
 function CalculatePasswordStrength( pass )
 {
+	if ( pass.length < 7 )
+		return 0;
+
 	var bHasUppercase = false;
 	var bHasLowercase = false;
 	var bHasNumbers = false;
@@ -393,18 +378,46 @@ function CalculatePasswordStrength( pass )
 	return nStrength;
 }
 
+function SetPasswordTag( strTagID, strClass, strText )
+{
+	if ( strText.length == 0 )
+	{
+		$J( strTagID ).removeClass( 'visible' );
+		return;
+	}
+
+	$J( strTagID ).text( strText );
+	$J( strTagID ).removeClass( 'error warning' );
+	$J( strTagID ).addClass( strClass );
+	$J( strTagID ).addClass( 'visible' );
+}
 
 function CheckPasswordAvail()
 {
-	var strength_text = $('password_strength_text');
-	var stregnth_img = $('password_strength_image');
-	strength_text.style.display = 'none'; 
+	var strAccountName = $J( '#accountname' ).val();
 	var password_before = document.getElementById('password').value;
-
-	if ( password_before == '' || password_before.length < 8 )
+	if ( password_before == '' )
 	{
-		// too short, we'll just display the "weak" warning
-		DisplayPasswordStrength();
+		SetPasswordTag( '#password_tag', '', '' );
+		return;
+	}
+
+	if ( strAccountName.length > 0 && strAccountName.toLowerCase() == password_before.toLowerCase() )
+	{
+		SetPasswordTag( '#password_tag', 'error', 'Can\'t use your user name as your password' );
+		return;
+	}
+
+	if ( password_before.length < 7 )
+	{
+		SetPasswordTag( '#password_tag', 'error', 'Password must contain at least 7 characters' );
+		return;
+	}
+
+	var iInvalidChar = password_before.search( /[^\x00-\x7F]/g );
+	if ( iInvalidChar >= 0 )
+	{
+		SetPasswordTag( '#password_tag', 'error', '%s can\'t be used in passwords'.replace( /%s/, password_before.charAt( iInvalidChar ) ) );
 		return;
 	}
 
@@ -412,7 +425,7 @@ function CheckPasswordAvail()
 	new Ajax.Request('https://store.steampowered.com/join/checkpasswordavail/',
 	{
 		method:'get',
-		parameters: { password: document.getElementById('password').value, accountname: document.getElementById('accountname').value, count : iAjaxCalls },
+		parameters: { password: document.getElementById('password').value, accountname: strAccountName, count : iAjaxCalls },
 		onSuccess: function(transport){
 			if ( transport.responseJSON )
 			{
@@ -422,6 +435,8 @@ function CheckPasswordAvail()
 				{
 					  g_bPasswordAvailable = true;
 				}
+
+				SetPasswordTag( '#password_tag', '', '' );
 				DisplayPasswordStrength();
 			}
 		},
@@ -432,48 +447,39 @@ function CheckPasswordAvail()
 
 function DisplayPasswordStrength()
 {
-	var strength_text = $('password_strength_text');
-	var strength_img = $('password_strength_image');
-	var pass =  document.getElementById('password').value;
+	var strPassword = document.getElementById('password').value;
 
-
-	var nStrength = 0;
-	if ( pass.length >= 8 )
-	{
-		nStrength = CalculatePasswordStrength( pass )
-	}
-
-	if ( pass.length == 0 )
-	{
-		strength_text.style.display = 'none';
-		strength_img.src = 'https://steamstore-a.akamaihd.net/public/images/password_unchecked.gif';
-		return;
-	}
+	var nStrength = CalculatePasswordStrength( strPassword );
+	if ( strPassword.length == 0 )
+		SetPasswordTag( '#password_tag', '', '' );
 	else if ( !g_bPasswordAvailable )
-	{
-		strength_text.innerHTML = 'Not allowed';
-		strength_text.style.color = "#b02222";
-		strength_img.src = 'https://steamstore-a.akamaihd.net/public/images/password_weak.gif';
-	}
-	else if ( nStrength == 3 )
-	{
-		strength_text.innerHTML = 'Strong';
-		strength_text.style.color = "#6C8942";
-		strength_img.src = 'https://steamstore-a.akamaihd.net/public/images/password_strong.gif';
-	}
-	else if ( nStrength == 2 )
-	{
-		strength_text.innerHTML = 'Alright';
-		strength_text.style.color = "#dbc142";
-		strength_img.src = 'https://steamstore-a.akamaihd.net/public/images/password_ok.gif';
-	}
+		SetPasswordTag( '#password_tag', 'error', 'Choose a less commonly used password' );
+	else if ( nStrength >= 3 )
+		SetPasswordTag( '#password_tag', 'good', '' );
 	else
-	{
-		strength_text.innerHTML = 'Weak';
-		strength_text.style.color = "#b02222";
-		strength_img.src = 'https://steamstore-a.akamaihd.net/public/images/password_weak.gif';
-	}
-	Effect.Appear( 'password_strength_text', { from : 0.2, to : 1.0, duration : 0.5 } );
+		SetPasswordTag( '#password_tag', 'warning', 'Include a-z, A-Z, 0-9 or symbols for a stronger password' );
+
+	CheckPasswordsMatch();
+}
+
+var g_timerReenterChange = null;
+function ReenterPasswordChange()
+{
+	SetPasswordTag( '#reenter_tag', '', '' );
+	if ( g_timerReenterChange )
+		window.clearTimeout( g_timerReenterChange );
+
+	g_timerReenterChange = window.setTimeout( CheckPasswordsMatch, 1000 );
+}
+
+function CheckPasswordsMatch()
+{
+	var strPassword = $J( '#password' ).val();
+	var strReenter = $J( '#reenter_password' ).val();
+	if ( strPassword.length > 0 && strReenter.length > 0 && strPassword != strReenter )
+		SetPasswordTag( '#reenter_tag', 'error', 'Passwords do not match' );
+	else
+		SetPasswordTag( '#reenter_tag', '', '' );
 }
 
 var g_strLastPassword = '';
@@ -486,7 +492,6 @@ function CheckPasswordStrength()
 	g_strLastPassword = pass;
 
 		g_bPasswordAvailable = false;	// reset
-	$('password_strength_text').style.display = 'none'; 
 
 	if ( g_timerPasswordAvail )
 		window.clearTimeout( g_timerPasswordAvail );

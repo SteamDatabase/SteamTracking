@@ -188,6 +188,20 @@
 	color: #CCCCCC;
 }
 
+.dash_overlay .settings_icon_animated
+{
+	float: right;
+	width: 16px;
+	height: 16px;
+	padding-right: 20px;
+	padding-top: 2px;
+	display: inline-block;
+	cursor: pointer;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/icon_settings_animated.gif' );
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .dash_overlay .settings_panel
 {
 	background: rgba(44,43,40,0.95);

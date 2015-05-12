@@ -14,6 +14,7 @@ function CLoginPromptManager( strBaseURL, rgOptions )
 	this.m_$LogonForm = $JFromIDOrElement( rgOptions.elLogonForm || document.forms['logon'] );
 
 	this.m_fnOnFailure = rgOptions.fnOnFailure || null;
+	this.m_fnOnSuccess = rgOptions.fnOnSuccess || null;
 
 	this.m_strRedirectURL = rgOptions.strRedirectURL || strBaseURL ;
 	this.m_strSessionID = rgOptions.strSessionID || null;
@@ -550,9 +551,13 @@ CLoginPromptManager.prototype.OnEmailAuthSuccessContinue = function()
 
 CLoginPromptManager.prototype.LoginComplete = function()
 {
-		if ( $J('#openidForm').length )
+	if ( this.m_fnOnSuccess )
 	{
-		$J('#openidForm').submit();
+		this.m_fnOnSuccess();
+	}
+	else if ( $J('#openidForm').length )
+	{
+				$J('#openidForm').submit();
 	}
 	else if ( this.m_bIsMobile )
 	{

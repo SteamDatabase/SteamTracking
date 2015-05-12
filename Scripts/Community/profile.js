@@ -157,11 +157,11 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 		switch ( failedInvites[0] )
 		{
 			case 25:
-				strMessage = 'Could not invite this friend. Your limit is exceeded.';
+				strMessage = 'Could not invite %s. Your friends list is full.';
 				break;
 
 			case 15:
-				strMessage = 'Could not invite this friend. Your friend\'s limit is exceeded.';
+				strMessage = 'Could not invite %s. Their friends list is full.';
 				break;
 
 			case 40:
@@ -181,10 +181,11 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 				break;
 
 			default:
-				// default text is <above></above>
+				// default text is above
 				break;
 		}
 
+		strMessage = strMessage.replace( /%s/, strPersonaName );
 		ShowAlertDialog( strTitle, strMessage );
 
 	} );
