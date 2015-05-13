@@ -1,0 +1,143 @@
+
+.phone_box {
+	background: rgba( 0, 0, 0, 0.3 );
+	padding: 15px 15px 15px 25px;
+	margin-top: 15px;
+
+}
+
+input.phone_input_number {
+	background-color: #c0c0c0;
+	color: #000000;
+	font-size: 30px;
+	padding: 5px;
+	cursor: text;
+	border: 1px solid #82807c;
+	margin-left: 100px;
+	margin-top: 10px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.phone_header_description {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.phone_box_container{
+	margin-left: 50px;
+}
+
+.phone_box_item{
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+
+.current_phone_box {
+	background: rgba(42, 63, 90, 0.5 );
+	padding: 20px;
+
+}
+
+.phone_subheader {
+	font-size: 18px;
+	color: #67c1f5;
+	margin: 10px 10px 15px 0;
+}
+
+.phonebox_content_description {
+	font-size: 16px;
+	float: left;
+	margin-top: 10px;
+	width:400px;
+}
+
+.phone_box_subtext {
+	font-size: 14px;
+	color: #61686d;
+	margin: 5px;
+}
+
+.phone_button_remove {
+	float: right;
+}
+
+.phone_right_button {
+	margin-left:270px;
+}
+
+.phone_button {
+	margin: 10px;
+	text-align: center;
+}
+
+.phone_done_button {
+	margin: 10px;
+	text-align: center;
+}
+
+.phone_highlight {
+}
+
+.phone_error {
+	margin: 20px 0 20px 150px;
+	color: #ff0000;
+	font-weight: bold;
+	height: 15px;
+}
+
+.state_get_phone_number_dropdown_wrapper {
+}
+
+.dselect_container {
+	margin-top: 5px;
+	margin-left: 100px;
+	color: #ffffff;
+	width: 250px;
+}
+
+.dselect_container a {
+	color: #67c1f5;
+	font-size: 11px;
+	outline: 0px;
+}
+
+.dselect_container a :hover {
+}
+
+.dropcontainer ul a {
+	line-height: 15px;
+	height: 15px;	
+}
+
+.sample_number_container {
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+.sample_number_header {
+	font-size: 11px;
+	padding-right: 20px;
+}
+
+.sample_number {
+	font-size: 11px;
+}
+
+.phone_header {
+
+}
+
+.phone_input_container {
+	margin-top: 5px;
+
+}
+
+.phone_sms_warning {
+	color: #61686d;
+	text-align: left;
+	margin-top:20px;
+	font-size: 14px;
+
+}

@@ -57,12 +57,13 @@
 "Styles/styles_aboutv5.css"                      : "https://steamstore-a.akamaihd.net/public/css/styles_aboutv5.css?__TIME__",
 "Styles/styles_hwsurvey.css"                     : "https://steamstore-a.akamaihd.net/public/css/styles_hwsurvey.css?__TIME__",
 "Styles/styles_parental.css"                     : "https://steamstore-a.akamaihd.net/public/css/styles_parental.css?__TIME__",
+"Styles/styles_phone.css"                        : "https://steamstore-a.akamaihd.net/public/css/styles_phone.css?__TIME__",
 "Styles/styles_ssav5.css"                        : "https://steamstore-a.akamaihd.net/public/css/styles_ssav5.css?__TIME__",
 "Styles/styles_supportmessages.css"              : "https://steamstore-a.akamaihd.net/public/css/styles_supportmessages.css?__TIME__",
+"Styles/styles_twofactor.css"                    : "https://steamstore-a.akamaihd.net/public/css/styles_twofactor.css?__TIME__",
 "Styles/styles_video.css"                        : "https://steamstore-a.akamaihd.net/public/css/styles_video.css?__TIME__",
 "Styles/styles_video_watch.css"                  : "https://steamstore-a.akamaihd.net/public/css/styles_video_watch.css?__TIME__",
 "Styles/styles_widget.css"                       : "https://steamstore-a.akamaihd.net/public/css/styles_widget.css?__TIME__",
-"Styles/styles_twofactor.css"                    : "https://steamstore-a.akamaihd.net/public/css/styles_twofactor.css?__TIME__",
 
 //
 // Community CSS
