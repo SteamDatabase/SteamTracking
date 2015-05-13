@@ -250,8 +250,6 @@ GHomepage = {
 				strStatus = 'Top Seller';
 			else if ( rgData && rgData.coming_soon )
 				strStatus = 'Pre-Purchase Now'
-			else if ( rgData && rgData.video )
-				strStatus = 'Now Available to Watch'
 			else
 				strStatus = 'Now Available'
 
