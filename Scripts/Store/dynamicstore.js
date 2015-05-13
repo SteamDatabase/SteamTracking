@@ -165,9 +165,9 @@ GDynamicStore = {
 		{
 			return;
 		}
-		if ( typeof strAppIDs == 'string' && strAppIDs.indexOf( ',' ) >= 0 )
+		if ( !parseInt( strAppIDs ) )
 		{
-			strAppIDs = strAppIDs.replace(/,/g , ":");
+			strAppIDs.replace(/,/g , ":");
 		}
 		var snr = GetElemSNR( $Elem );
 		if ( !snr )
