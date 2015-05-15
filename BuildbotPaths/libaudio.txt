@@ -1,8 +1,4 @@
 /Users/buildbot/buildslave/../.ccache/tmp/
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(interface.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(utlmemory.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(utlstring.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(utlsymbol.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libaudio.build/Objects-normal/i386/audiocontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libaudio.build/Objects-normal/i386/audiosink_null.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libaudio.build/Objects-normal/i386/milesaudiodevice.o
@@ -15,6 +11,10 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libaudio.build/Objects-normal/x86_64/milesaudiooutputstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libaudio.build/Objects-normal/x86_64/milesaudiosound.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libaudio.build/Objects-normal/x86_64/mileswrapper.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(interface.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(utlmemory.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(utlstring.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(utlsymbol.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/audiocontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/audiosink_null.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/milesaudiodevice.cpp

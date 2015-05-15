@@ -1,54 +1,106 @@
 
+ alphasort$INODE64
  AssertMsgImplementation
+ b CUtlSymbol::Initialize()::symbolsInitialized
  B CUtlSymbol::s_pSymbolTable
- B InterfaceReg::s_pInterfaceRegs
+ b g_CleanupSymbolTable
  B __g_CreateCFileSystemStdIODLLValidateIValidate_reg
  B __g_CreateCFileSystem_StdioIBaseFileSystem_reg
  B __g_CreateCFileSystem_StdioIFileSystem_reg
  B g_FileSystem_Stdio
  B g_PathIDTable
  B g_VecLoadedModules
+ B InterfaceReg::s_pInterfaceRegs
+ b selectBuf
+ b s_FSLogParam
+ b s_FSTargetParam
+ b s_LogBinsParam
  B s_NoEscConversion
+ b s_pScratchFileName
  B s_StringCharConversion
  CFRelease
  CFStringGetCStringPtr
+ chmod$UNIX2003
+ CreateVProfile
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
- CreateVProfile
+ __cxa_atexit
+ __cxa_begin_catch
+ __cxa_pure_virtual
  D CUtlSymbol::s_bAllowStaticSymbolTable
+ d dyld__mach_header
  D g_FileSystemStdIODLLValidate
+ dlclose
+ dlopen
  D pModuleExtension
+ d s_pConversionArrays_NoEscConversion
+ d s_pConversionArrays_StringCharConversion
  D typeinfo for CBaseFileSystem
- D typeinfo for CFileSystemStdIODLLValidate
  D typeinfo for CFileSystem_Stdio
+ D typeinfo for CFileSystemStdIODLLValidate
  D typeinfo for CPathString
- D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
+ D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlNoEscConversion
  D typeinfo for IAppSystem
  D typeinfo for IBaseFileSystem
  D typeinfo for IFileSystem
  D typeinfo for IValidate
  D vtable for CBaseFileSystem
- D vtable for CFileSystemStdIODLLValidate
  D vtable for CFileSystem_Stdio
+ D vtable for CFileSystemStdIODLLValidate
  D vtable for CPathString
- D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
+ D vtable for CUtlCStringConversion
  D vtable for CUtlNoEscConversion
+ __error
+ fclose
+ feof
+ ferror
+ fflush
+ fgets
+ fopen
+ fprintf
+ fputs
+ fread
+ free
+ fseek
  FSPathMakeRef
+ ftell
+ fwrite
+ fwrite$UNIX2003
+ getcwd
+ getenv
+ g_pMemAllocSteam
+ g_VProfile
+ g_VProfManager
+ g_VProfProfilesRunningCount
+ __gxx_personality_v0
  LSCopyKindStringForRef
- Plat_GetExecutablePath
+ lstat$INODE64
+ memcpy
+ memmove
+ memset
+ mkdir
+ operator delete(void*)
+ operator delete[](void*)
+ operator new(unsigned long)
+ operator new[](unsigned long)
  Plat_ctime
+ Plat_GetExecutablePath
+ pthread_mutex_lock
+ pthread_mutex_unlock
+ puts
+ rename
  R typeinfo name for CBaseFileSystem
- R typeinfo name for CFileSystemStdIODLLValidate
  R typeinfo name for CFileSystem_Stdio
+ R typeinfo name for CFileSystemStdIODLLValidate
  R typeinfo name for CPathString
- R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
+ R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
@@ -60,44 +112,62 @@
  R typeinfo name for CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >
  R typeinfo name for CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >
  R typeinfo name for CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >
- R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
- R typeinfo name for CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >
  R typeinfo name for CUtlVector<char, CUtlMemory<char> >
+ R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
  R typeinfo name for CUtlVector<int*, CUtlMemory<int*> >
+ R typeinfo name for CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >
  R typeinfo name for CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >
  R typeinfo name for IAppSystem
  R typeinfo name for IBaseFileSystem
  R typeinfo name for IFileSystem
  R typeinfo name for IValidate
- SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+ scandir$INODE64
+ setvbuf
+ snprintf
+ __stack_chk_fail
+ __stack_chk_guard
+ stat$INODE64
+ __stderrp
+ std::terminate()
  SteamStdLib::CCommandLineParam::~CCommandLineParam()
+ SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
  SteamStdLib::CommandLine()
  SteamThreadTools::CThreadLocalBase::Get() const
  SteamThreadTools::CThreadLocalBase::Set(void*)
- SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
+ SteamThreadTools::CThreadMutex::CThreadMutex()
+ SteamVProf::CVProfile::~CVProfile()
  SteamVProf::CVProfNode::EnterScope(void*)
  SteamVProf::CVProfNode::ExitScope()
  SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
- SteamVProf::CVProfile::~CVProfile()
+ strcat
+ strchr
+ strcmp
+ strlen
+ _strlwr
+ strncpy
+ strrchr
+ strstr
  T BCreateDirectory(char const*)
+ T CaselessStringLessThan(char const* const&, char const* const&)
+ T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T CBaseFileSystem::AddLoggingFunc(void (*)(char const*, char const*))
  T CBaseFileSystem::AddMapPackFile(char const*, char const*, SearchPathAdd_t)
  T CBaseFileSystem::AddPackFile(char const*, char const*)
  T CBaseFileSystem::AddPackFileFromPath(char const*, char const*, bool, char const*)
  T CBaseFileSystem::AddPackFiles(char const*, SearchPathAdd_t)
  T CBaseFileSystem::AddSearchPath(char const*, char const*, SearchPathAdd_t)
+ T CBaseFileSystem::~CBaseFileSystem()
  T CBaseFileSystem::CBaseFileSystem()
- T CBaseFileSystem::COpenedFile::COpenedFile(CBaseFileSystem::COpenedFile const&)
- T CBaseFileSystem::COpenedFile::SetName(char const*)
- T CBaseFileSystem::CSearchPath::CSearchPath()
- T CBaseFileSystem::CSearchPath::PackFileLessFunc(CBaseFileSystem::CPackFileEntry const&, CBaseFileSystem::CPackFileEntry const&)
- T CBaseFileSystem::CSearchPath::~CSearchPath()
  T CBaseFileSystem::CheckAndMarkIfSearchPathVisited(CBaseFileSystem::FindData_t*, CBaseFileSystem::CSearchPath*)
  T CBaseFileSystem::Close(void*)
+ T CBaseFileSystem::COpenedFile::COpenedFile(CBaseFileSystem::COpenedFile const&)
+ T CBaseFileSystem::COpenedFile::SetName(char const*)
  T CBaseFileSystem::CreateDirHierarchy(char const*, char const*)
+ T CBaseFileSystem::CSearchPath::~CSearchPath()
+ T CBaseFileSystem::CSearchPath::CSearchPath()
+ T CBaseFileSystem::CSearchPath::PackFileLessFunc(CBaseFileSystem::CPackFileEntry const&, CBaseFileSystem::CPackFileEntry const&)
  T CBaseFileSystem::EndOfFile(void*)
- T CBaseFileSystem::FPrintf(void*, char*, ...)
  T CBaseFileSystem::FastFileTime(CBaseFileSystem::CSearchPath const*, char const*)
  T CBaseFileSystem::FastFindFile(CBaseFileSystem::CSearchPath const*, char const*)
  T CBaseFileSystem::FileExists(char const*, char const*)
@@ -107,25 +177,26 @@
  T CBaseFileSystem::FindFirst(char const*, int*)
  T CBaseFileSystem::FindFirstEx(char const*, char const*, int*)
  T CBaseFileSystem::FindIsDirectory(int)
- T CBaseFileSystem::FindNext(int)
  T CBaseFileSystem::FindNextFileHelper(CBaseFileSystem::FindData_t*)
+ T CBaseFileSystem::FindNext(int)
  T CBaseFileSystem::FindOrAddFileName(char const*)
  T CBaseFileSystem::FindOrAddPathIDInfo(CUtlSymbol const&, int)
  T CBaseFileSystem::FindWritePath(char const*)
  T CBaseFileSystem::Flush(void*)
+ T CBaseFileSystem::FPrintf(void*, char*, ...)
  T CBaseFileSystem::FullPathToRelativePath(char const*, char*, int)
  T CBaseFileSystem::GetCurrentDirectory(char*, int)
+ T CBaseFileSystem::GetFilesystemStatistics()
  T CBaseFileSystem::GetFileTime(char const*, char const*)
  T CBaseFileSystem::GetFileTypeForFullPath(char const*, wchar_t*, unsigned long)
- T CBaseFileSystem::GetFilesystemStatistics()
  T CBaseFileSystem::GetLocalCopy(char const*)
  T CBaseFileSystem::GetLocalPath(char const*, char*, int)
  T CBaseFileSystem::GetWritePath(char const*)
  T CBaseFileSystem::Init()
  T CBaseFileSystem::IsDirectory(char const*, char const*)
  T CBaseFileSystem::IsFileWritable(char const*, char const*)
- T CBaseFileSystem::IsOk(void*)
  T CBaseFileSystem::IsOk2(void*)
+ T CBaseFileSystem::IsOk(void*)
  T CBaseFileSystem::LoadModule(char const*, char const*, bool)
  T CBaseFileSystem::LogAccessToFile(char const*, char const*, char const*)
  T CBaseFileSystem::LogFileAccess(char const*)
@@ -140,8 +211,8 @@
  T CBaseFileSystem::PrintOpenedFiles()
  T CBaseFileSystem::PrintSearchPaths()
  T CBaseFileSystem::QueryInterface(char const*)
- T CBaseFileSystem::Read(void*, int, void*)
  T CBaseFileSystem::ReadLine(char*, int, void*)
+ T CBaseFileSystem::Read(void*, int, void*)
  T CBaseFileSystem::RemoveAllMapSearchPaths()
  T CBaseFileSystem::RemoveAllSearchPaths()
  T CBaseFileSystem::RemoveFile(char const*, char const*)
@@ -167,34 +238,34 @@
  T CBaseFileSystem::Validate(CValidator&, char const*)
  T CBaseFileSystem::Warning(FileWarningLevel_t, char const*, ...)
  T CBaseFileSystem::Write(void const*, int, void*)
- T CBaseFileSystem::~CBaseFileSystem()
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BCurrentIsReadOnly() const
  T CDirIterator::BNextFile()
+ T CDirIterator::~CDirIterator()
  T CDirIterator::CDirIterator(char const*)
  T CDirIterator::CurrentFileName()
  T CDirIterator::Init(char const*)
  T CDirIterator::IsValid() const
- T CDirIterator::~CDirIterator()
- T CFileSystemStdIODLLValidate::Validate(CValidator&)
  T CFileSystem_Stdio::CancelWaitForResources(int)
- T CFileSystem_Stdio::FS_FindClose(void*)
- T CFileSystem_Stdio::FS_FindFirstFile(char*, WIN32_FIND_DATA*)
- T CFileSystem_Stdio::FS_FindNextFile(void*, WIN32_FIND_DATA*)
- T CFileSystem_Stdio::FS_GetFileInfo(char const*, CBaseFileSystem::SFS_FileInfo*)
+ T CFileSystem_Stdio::~CFileSystem_Stdio()
+ T CFileSystemStdIODLLValidate::Validate(CValidator&)
  T CFileSystem_Stdio::FS_chmod(char const*, int)
  T CFileSystem_Stdio::FS_fclose(__sFILE*)
  T CFileSystem_Stdio::FS_feof(__sFILE*)
  T CFileSystem_Stdio::FS_ferror(__sFILE*)
  T CFileSystem_Stdio::FS_fflush(__sFILE*)
  T CFileSystem_Stdio::FS_fgets(char*, int, __sFILE*)
+ T CFileSystem_Stdio::FS_FindClose(void*)
+ T CFileSystem_Stdio::FS_FindFirstFile(char*, WIN32_FIND_DATA*)
+ T CFileSystem_Stdio::FS_FindNextFile(void*, WIN32_FIND_DATA*)
  T CFileSystem_Stdio::FS_fopen(char const*, char const*)
  T CFileSystem_Stdio::FS_fread(void*, unsigned long, __sFILE*)
  T CFileSystem_Stdio::FS_fseek(__sFILE*, int, int)
  T CFileSystem_Stdio::FS_ftell(__sFILE*)
  T CFileSystem_Stdio::FS_fwrite(void const*, unsigned long, __sFILE*)
+ T CFileSystem_Stdio::FS_GetFileInfo(char const*, CBaseFileSystem::SFS_FileInfo*)
  T CFileSystem_Stdio::FS_vfprintf(__sFILE*, char const*, char*)
  T CFileSystem_Stdio::GetLocalCopy(char const*)
  T CFileSystem_Stdio::GetWaitForResourcesProgress(int, float*, bool*)
@@ -204,29 +275,43 @@
  T CFileSystem_Stdio::MountSteamContent(int)
  T CFileSystem_Stdio::Validate(CValidator&, char const*)
  T CFileSystem_Stdio::WaitForResources(char const*)
- T CFileSystem_Stdio::~CFileSystem_Stdio()
- T CPathString::CPathString(char const*, char const*)
+ T __clang_call_terminate
  T CPathString::Clear()
+ T CPathString::CPathString(char const*, char const*)
  T CPathString::Validate(CValidator&, char const*)
- T CStrAutoEncode::ToUTF32()
+ T __CreateCFileSystemStdIODLLValidateIValidate_interface()
+ T __CreateCFileSystem_StdioIBaseFileSystem_interface()
+ T __CreateCFileSystem_StdioIFileSystem_interface()
+ T CreateInterface
+ T CreateInterfaceInternal(char const*, int*)
  T CStrAutoEncode::~CStrAutoEncode()
- T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCStringConversion::FindConversion(char const*, int*)
+ T CStrAutoEncode::ToUTF32()
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(char const*, int*)
+ T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCStringConversion::FindConversion(char const*, int*)
+ T CUtlDict<int, int>::~CUtlDict()
  T CUtlDict<int, int>::CUtlDict(EDictCompareType, int, int)
  T CUtlDict<int, int>::Insert(char const*, int const&)
  T CUtlDict<int, int>::RemoveAll()
  T CUtlDict<int, int>::Validate(CValidator&, char const*)
- T CUtlDict<int, int>::~CUtlDict()
  T CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
+ T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
  T CUtlMemoryBase::Grow(int)
  T CUtlMemoryBase::NumAllocated() const
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::Validate(CValidator&, char const*)
- T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
+ T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
+ T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
+ T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_NextInorder(int, unsigned long, void*) const
+ T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
+ T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_InsertRebalance(unsigned short, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_LinkToParent(unsigned short, unsigned short, bool, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, bool (*)(CBaseFileSystem::CPackFileEntry const&, CBaseFileSystem::CPackFileEntry const&), CDefRBTreeBalanceListener<int> >::Find(CBaseFileSystem::CPackFileEntry const&) const
  T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, bool (*)(CBaseFileSystem::CPackFileEntry const&, CBaseFileSystem::CPackFileEntry const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CBaseFileSystem::CPackFileEntry const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, bool (*)(CBaseFileSystem::CPackFileEntry const&, CBaseFileSystem::CPackFileEntry const&), CDefRBTreeBalanceListener<int> >::Insert(CBaseFileSystem::CPackFileEntry const&, bool)
@@ -245,48 +330,40 @@
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_NextInorder(int, unsigned long, void*) const
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
- T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
- T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_InsertRebalance(unsigned short, unsigned long, void*)
- T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_LinkToParent(unsigned short, unsigned short, bool, unsigned long, void*)
- T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
- T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
- T CUtlSymbol::ValidateGlobals(CValidator&, char const*)
  T CUtlSymbolTable::AddString(char const*)
  T CUtlSymbolTable::CLess::operator()(CUtlSymbolTable::CStringPoolIndex const&, CUtlSymbolTable::CStringPoolIndex const&) const
+ T CUtlSymbolTable::~CUtlSymbolTable()
  T CUtlSymbolTable::CUtlSymbolTable(int, int, bool, int)
+ T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
  T CUtlSymbolTable::RemoveAll()
  T CUtlSymbolTable::String(CUtlSymbol) const
  T CUtlSymbolTable::Validate(CValidator&, char const*)
- T CUtlSymbolTable::~CUtlSymbolTable()
- T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
+ T CUtlSymbol::ValidateGlobals(CValidator&, char const*)
+ T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::~CUtlVector()
  T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::FindAndRemove(CBaseFileSystem::CFileHandle* const&)
  T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::GrowVector(int)
  T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::InsertBefore(int, CBaseFileSystem::CFileHandle* const&)
  T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::ShiftElementsLeft(int, int)
  T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::ShiftElementsRight(int, int)
  T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::Validate(CValidator&, char const*)
- T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::~CUtlVector()
+ T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::~CUtlVector()
  T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::GrowVector(int)
  T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::InsertBefore(int, CBaseFileSystem::COpenedFile const&)
- T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::Remove(int)
  T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::RemoveAll()
+ T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::Remove(int)
  T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::ShiftElementsLeft(int, int)
  T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::ShiftElementsRight(int, int)
  T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::Validate(CValidator&, char const*)
- T CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >::~CUtlVector()
+ T CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >::~CUtlVector()
  T CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >::GrowVector(int)
  T CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >::InsertBefore(int, CBaseFileSystem::CPathIDInfo* const&)
  T CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >::PurgeAndDeleteElements()
  T CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >::ShiftElementsRight(int, int)
  T CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >::Validate(CValidator&, char const*)
- T CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >::~CUtlVector()
+ T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::~CUtlVector()
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::FastRemove(int)
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::GrowVector(int)
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::InsertBefore(int)
@@ -294,7 +371,7 @@
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::ShiftElementsLeft(int, int)
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::ShiftElementsRight(int, int)
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::Validate(CValidator&, char const*)
- T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::~CUtlVector()
+ T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::~CUtlVector()
  T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::FastRemove(int)
  T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::GrowVector(int)
  T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::InsertBefore(int)
@@ -302,163 +379,86 @@
  T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::Validate(CValidator&, char const*)
- T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::~CUtlVector()
+ T CUtlVector<char, CUtlMemory<char> >::~CUtlVector()
+ T CUtlVector<char, CUtlMemory<char> >::GrowVector(int)
+ T CUtlVector<char, CUtlMemory<char> >::InsertMultipleBefore(int, int, char const*)
+ T CUtlVector<char, CUtlMemory<char> >::ShiftElementsRight(int, int)
+ T CUtlVector<char, CUtlMemory<char> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::InsertBefore(int, CUtlSymbolTable::StringPool_t* const&)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
+ T CUtlVector<int*, CUtlMemory<int*> >::~CUtlVector()
+ T CUtlVector<int*, CUtlMemory<int*> >::GrowVector(int)
+ T CUtlVector<int*, CUtlMemory<int*> >::InsertBefore(int, int* const&)
+ T CUtlVector<int*, CUtlMemory<int*> >::ShiftElementsRight(int, int)
+ T CUtlVector<int*, CUtlMemory<int*> >::Validate(CValidator&, char const*)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
+ T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::~CUtlVector()
  T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::FindAndRemove(__sFILE* const&)
  T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::GrowVector(int)
  T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::InsertBefore(int, __sFILE* const&)
  T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::ShiftElementsLeft(int, int)
  T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::ShiftElementsRight(int, int)
  T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::Validate(CValidator&, char const*)
- T CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >::~CUtlVector()
- T CUtlVector<char, CUtlMemory<char> >::GrowVector(int)
- T CUtlVector<char, CUtlMemory<char> >::InsertMultipleBefore(int, int, char const*)
- T CUtlVector<char, CUtlMemory<char> >::ShiftElementsRight(int, int)
- T CUtlVector<char, CUtlMemory<char> >::Validate(CValidator&, char const*)
- T CUtlVector<char, CUtlMemory<char> >::~CUtlVector()
- T CUtlVector<int*, CUtlMemory<int*> >::GrowVector(int)
- T CUtlVector<int*, CUtlMemory<int*> >::InsertBefore(int, int* const&)
- T CUtlVector<int*, CUtlMemory<int*> >::ShiftElementsRight(int, int)
- T CUtlVector<int*, CUtlMemory<int*> >::Validate(CValidator&, char const*)
- T CUtlVector<int*, CUtlMemory<int*> >::~CUtlVector()
+ T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::~CUtlVector()
  T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::FindAndRemove(void (* const&)(char const*, char const*))
  T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::GrowVector(int)
  T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::InsertBefore(int, void (* const&)(char const*, char const*))
  T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::ShiftElementsLeft(int, int)
  T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::ShiftElementsRight(int, int)
  T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::Validate(CValidator&, char const*)
- T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::~CUtlVector()
- T CaselessStringLessThan(char const* const&, char const* const&)
- T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
- T CreateInterface
- T CreateInterfaceInternal(char const*, int*)
+ T dyld_stub_binding_helper
+ t FileSelect(dirent const*)
  T FillDataStruct(_finddata_t*)
- T FioGetFileData(char const*, SFioFileData*)
- T InterfaceReg::InterfaceReg(void* (*)(), char const*)
- T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
- T SteamVProf::CVProfileThreadEntry::DeleteProfile()
- T StringLessThan(char const* const&, char const* const&)
- T Sys_LoadModule(char const*, Sys_Flags)
- T Sys_UnloadModule(CSysModule*)
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
- T __CreateCFileSystemStdIODLLValidateIValidate_interface()
- T __CreateCFileSystem_StdioIBaseFileSystem_interface()
- T __CreateCFileSystem_StdioIFileSystem_interface()
- T __clang_call_terminate
+ t FillFindData(CDirIterator*, WIN32_FIND_DATA*)
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T dyld_stub_binding_helper
- T non-virtual thunk to CBaseFileSystem::Init()
- T non-virtual thunk to CBaseFileSystem::QueryInterface(char const*)
- T non-virtual thunk to CBaseFileSystem::Shutdown()
- T void Destruct<CBaseFileSystem::FindData_t>(CBaseFileSystem::FindData_t*)
+ T FioGetFileData(char const*, SFioFileData*)
+ t FixPath(char*)
  ThreadGetCurrentId
  ThreadGetCurrentRunningRef
  ThreadInterlockedDecrement
  ThreadIsThreadRunning
+ T InterfaceReg::InterfaceReg(void* (*)(), char const*)
+ T non-virtual thunk to CBaseFileSystem::Init()
+ T non-virtual thunk to CBaseFileSystem::QueryInterface(char const*)
+ T non-virtual thunk to CBaseFileSystem::Shutdown()
+ __toupper
+ T SteamVProf::CVProfileThreadEntry::DeleteProfile()
+ T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
+ T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
+ T StringLessThan(char const* const&, char const* const&)
+ T Sys_LoadModule(char const*, Sys_Flags)
+ T Sys_UnloadModule(CSysModule*)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T void Destruct<CBaseFileSystem::FindData_t>(CBaseFileSystem::FindData_t*)
+ unlink
+ _Unwind_Resume
  V_ExtractFilePath
  V_FixDoubleSlashes
  V_FixSlashes
+ vfprintf
  V_IsAbsolutePath
  V_MakeAbsolutePath
- V_StripFilename
- V_UTF16ToUTF32
- V_UTF8ToUTF32
- V_UnqualifiedFileName
+ vsnprintf
  V_snprintf
  V_strcat
+ V_StripFilename
  V_stristr(char const*, char const*)
  V_strncat
  V_strncpy
  V_strnicmp
- V_vsnprintf
- _Unwind_Resume
- __cxa_atexit
- __cxa_begin_catch
- __cxa_pure_virtual
- __error
- __gxx_personality_v0
- __stack_chk_fail
- __stack_chk_guard
- __stderrp
- __toupper
- _strlwr
- alphasort$INODE64
- b CUtlSymbol::Initialize()::symbolsInitialized
- b g_CleanupSymbolTable
- b s_FSLogParam
- b s_FSTargetParam
- b s_LogBinsParam
- b s_pScratchFileName
- b selectBuf
- chmod$UNIX2003
- d dyld__mach_header
- d s_pConversionArrays_NoEscConversion
- d s_pConversionArrays_StringCharConversion
- dlclose
- dlopen
- fclose
- feof
- ferror
- fflush
- fgets
- fopen
- fprintf
- fputs
- fread
- free
- fseek
- ftell
- fwrite
- fwrite$UNIX2003
- g_VProfManager
- g_VProfProfilesRunningCount
- g_VProfile
- g_pMemAllocSteam
- getcwd
- getenv
- lstat$INODE64
- memcpy
- memmove
- memset
- mkdir
- operator delete(void*)
- operator delete[](void*)
- operator new(unsigned long)
- operator new[](unsigned long)
- pthread_mutex_lock
- pthread_mutex_unlock
- puts
- rename
- scandir$INODE64
- setvbuf
- snprintf
- stat$INODE64
- std::terminate()
- strcat
- strchr
- strcmp
- strlen
- strncpy
- strrchr
- strstr
- t FileSelect(dirent const*)
- t FillFindData(CDirIterator*, WIN32_FIND_DATA*)
- t FixPath(char*)
- unlink
- vfprintf
- vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
+ V_UnqualifiedFileName
+ V_UTF16ToUTF32
+ V_UTF8ToUTF32
+ V_vsnprintf
  wcsncpy

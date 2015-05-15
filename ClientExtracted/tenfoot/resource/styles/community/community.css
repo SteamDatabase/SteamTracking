@@ -161,6 +161,19 @@ CommunityPanel #Loading
 	opacity: 0.0;
 }
 
+#Loading
+{
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-delay: 1.0s;
+}
+
+#Loading:focus
+{
+	opacity: 1.0;
+}
+
 #Loading #LoadingStatus
 {
 	align: center top;
