@@ -1,23 +1,13 @@
 
- abort
- asprintf
- atoi
- b add_image_hook_ARC(mach_header const*, long)::patches
- b add_image_hook_GC(mach_header const*, long)::patches
- b add_image_hook_swiftV1(mach_header const*, long)::dlh
- b add_image_hook_swiftV1(mach_header const*, long)::patches
- b (anonymous namespace)::emergency_mutex
- b BLogAlignmentIssue()::s_bLogged
- b BOverlayNeedsPresent::dwLastTrueTickCount
- b CBaseOverlayRenderer::RenderFrame()::bTenfoot
- b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastUpdateTime
- b CFStringGetCStringPtr_fn
+ .objc_class_name_NSAutoreleasePool
+ .objc_class_name_NSBitmapImageRep
+ .objc_class_name_NSCursor
+ .objc_class_name_NSGraphicsContext
+ B SteamThreadTools::g_SuspendResumeLock
+ B SteamThreadTools::g_nCurThreadSuspendCount
+ B SteamThreadTools::g_pCurThread
  B cgl_ctx
- b Demangled
  B dwLastScreenshotTime
- b eh_globals
- b emergency_buffer
- b emergency_used
  B fn_glActiveTextureARB
  B fn_glAttachShader
  B fn_glBindBuffer
@@ -58,8 +48,8 @@
  B fn_glGetProgramiv
  B fn_glGetShaderInfoLog
  B fn_glGetShaderiv
- B fn_glGetUniformiv
  B fn_glGetUniformLocation
+ B fn_glGetUniformiv
  B fn_glIsProgram
  B fn_glLinkProgram
  B fn_glMapBufferARB
@@ -73,86 +63,26 @@
  B fn_glVertexAttrib4fv
  B fn_glVertexAttribPointer
  B g_ActiveRenderInstance
- B g_bIgnoreChildProcesses
- b g_bKeyEnabledMovieCapture
- b g_bMicDuckingDisabled
- B g_bOverlayEnabled
- b g_bScreenshotsHooked
- b g_bStreamingMovieCapture
- b g_bTakeScreenshotNextFrame
- B g_bVRModeActive
- b GetGLProcAddress(char*)::m_pLibGL
  B g_InputHandler
+ B g_OpenGLRenderer
+ B g_bIgnoreChildProcesses
+ B g_bOverlayEnabled
+ B g_bVRModeActive
  B g_lifetime
  B g_loggingMutexCreated
  B g_machClient
  B g_nGameID
- b g_nMaximumMovieResolutionX
- b g_nMaximumMovieResolutionY
- b __gnu_cxx::__verbose_terminate_handler()::terminating
- B g_OpenGLRenderer
  B g_pCurrentVRControlPanel
  B g_pCurrentVRHmd
  B g_pGameExitingEvent
  B g_pInGameRenderingEvent
  B g_pInputStreamOutOfGame
- b g_pMovieRenderer
  B g_pOverlayRunningEvent
  B g_pRenderStreamIn
  B g_pScreenshotStream
  B g_pSerializedWorkQueuedEvent
  B g_pVGUIPaintEvent
- b g_TickBase
- b g_TickFrequency
- b g_TickFrequencyDouble
- b g_TickLastReturned
- b guard variable for add_image_hook_ARC(mach_header const*, long)::patches
- b guard variable for add_image_hook_GC(mach_header const*, long)::patches
- b guard variable for add_image_hook_swiftV1(mach_header const*, long)::dlh
- b guard variable for add_image_hook_swiftV1(mach_header const*, long)::patches
- b init
- _Block_copy
- b Log(char const*, ...)::bCheckedLogEnabled
- b NSAutoreleasePool_class
- b NSConstantString_class
- b NSMutableDictionary_class
- b NSString_class
- b NSUndoManagerProxy_targetClass
- bootstrap_look_up
- bootstrap_port
- b original_class_getName
- b original_NSKKMS_fastIndexForKnownKey
- b original_NSKKMS_indexForKey
- b original_NSKKsD_addEntriesFromDictionary
- b original_NSKKsD_objectForKey
- b original_NSKKsD_removeObjectForKey
- b original_NSKKsD_setObject_forKey
- b original_NSManagedObject_allocBatch
- b original_NSManagedObject_allocWithEntity
- b original_NSManagedObject_init
- b original_objc_allocateClassPair
- b original_objc_copyClassNamesForImage
- b original_objc_getClass
- b original_objc_getMetaClass
- b original_objc_getProtocol
- b original_objc_getRequiredClass
- b original_objc_lookUpClass
- b original_object_getIndexedIvars
- b original_protocol_getName
- b s_bDoLog
- b s_bFirstLogEntry
- b s_bIsStreaming
- b SendOneTimeInputPid()::s_bOneTimeInitializationDone
- b s_pGamestream
- b s_Pid
  B std::string::_Rep::_S_empty_rep_storage
- B SteamThreadTools::g_nCurThreadSuspendCount
- B SteamThreadTools::g_pCurThread
- B SteamThreadTools::g_SuspendResumeLock
- b SteamThreadTools::g_ThreadMainThreadID
- bzero
- calloc
- ceilf
  CFAllocatorAllocate
  CFAllocatorDeallocate
  CFRelease
@@ -184,11 +114,624 @@
  CGLSetCurrentContext
  CGLSetParameter
  CGMainDisplayID
- _CGSDefaultConnection
  CGSForceShowCursor
  CGSGetSurfaceBounds
  CGSGetWindowBounds
  CGWarpMouseCursorPosition
+ D OBJC_METACLASS_$___ARCLite__
+ D __cxxabiv1::__terminate_handler
+ D __cxxabiv1::__unexpected_handler
+ D _non_lazy_classes
+ D g_IdentityMatrix
+ D g_iNotificationPosition
+ D g_loggingMutex
+ D typeinfo for CAsyncCaptureGL
+ D typeinfo for CBaseOverlayRenderer
+ D typeinfo for CGameStreamBaseMemStream
+ D typeinfo for CGameStreamGameMemStream
+ D typeinfo for CIMENullImpl
+ D typeinfo for COverlayGLRenderer
+ D typeinfo for CSavedMemStream
+ D typeinfo for CSharedMemStream
+ D typeinfo for IIME
+ D typeinfo for IMemStream
+ D typeinfo for IPC::BinarySemaphore
+ D typeinfo for IPC::IEvent
+ D typeinfo for IPC::IMutex
+ D typeinfo for IPC::ISharedMem
+ D typeinfo for IPC::ISyncObject
+ D typeinfo for IPC::PosixEvent
+ D typeinfo for IPC::PosixMutex
+ D typeinfo for IPC::PosixSharedMemory
+ D typeinfo for SteamThreadTools::CThread
+ D typeinfo for __cxxabiv1::__class_type_info
+ D typeinfo for __cxxabiv1::__si_class_type_info
+ D typeinfo for __gnu_cxx::__concurrence_lock_error
+ D typeinfo for __gnu_cxx::__concurrence_unlock_error
+ D typeinfo for std::bad_alloc
+ D typeinfo for std::bad_exception
+ D typeinfo for std::domain_error
+ D typeinfo for std::exception
+ D typeinfo for std::invalid_argument
+ D typeinfo for std::length_error
+ D typeinfo for std::logic_error
+ D typeinfo for std::out_of_range
+ D typeinfo for std::overflow_error
+ D typeinfo for std::range_error
+ D typeinfo for std::runtime_error
+ D typeinfo for std::type_info
+ D typeinfo for std::underflow_error
+ D vtable for CAsyncCaptureGL
+ D vtable for CBaseOverlayRenderer
+ D vtable for CGameStreamBaseMemStream
+ D vtable for CGameStreamGameMemStream
+ D vtable for CIMENullImpl
+ D vtable for COverlayGLRenderer
+ D vtable for CSavedMemStream
+ D vtable for CSharedMemStream
+ D vtable for IPC::BinarySemaphore
+ D vtable for IPC::PosixEvent
+ D vtable for IPC::PosixMutex
+ D vtable for IPC::PosixSharedMemory
+ D vtable for SteamThreadTools::CThread
+ D vtable for __cxxabiv1::__class_type_info
+ D vtable for __cxxabiv1::__si_class_type_info
+ D vtable for __gnu_cxx::__concurrence_lock_error
+ D vtable for __gnu_cxx::__concurrence_unlock_error
+ D vtable for std::bad_alloc
+ D vtable for std::bad_exception
+ D vtable for std::domain_error
+ D vtable for std::exception
+ D vtable for std::invalid_argument
+ D vtable for std::length_error
+ D vtable for std::logic_error
+ D vtable for std::out_of_range
+ D vtable for std::overflow_error
+ D vtable for std::range_error
+ D vtable for std::runtime_error
+ D vtable for std::underflow_error
+ HideCursor
+ InitCursor
+ OBJC_CLASS_$_NSAutoreleasePool
+ OBJC_CLASS_$_NSBitmapImageRep
+ OBJC_CLASS_$_NSCursor
+ OBJC_CLASS_$_NSGraphicsContext
+ R typeinfo name for CAsyncCaptureGL
+ R typeinfo name for CBaseOverlayRenderer
+ R typeinfo name for CGameStreamBaseMemStream
+ R typeinfo name for CGameStreamGameMemStream
+ R typeinfo name for CIMENullImpl
+ R typeinfo name for COverlayGLRenderer
+ R typeinfo name for CSavedMemStream
+ R typeinfo name for CSharedMemStream
+ R typeinfo name for IIME
+ R typeinfo name for IMemStream
+ R typeinfo name for IPC::BinarySemaphore
+ R typeinfo name for IPC::IEvent
+ R typeinfo name for IPC::IMutex
+ R typeinfo name for IPC::ISharedMem
+ R typeinfo name for IPC::ISyncObject
+ R typeinfo name for IPC::PosixEvent
+ R typeinfo name for IPC::PosixMutex
+ R typeinfo name for IPC::PosixSharedMemory
+ R typeinfo name for SteamThreadTools::CThread
+ R typeinfo name for __cxxabiv1::__class_type_info
+ R typeinfo name for __cxxabiv1::__si_class_type_info
+ R typeinfo name for __gnu_cxx::__concurrence_lock_error
+ R typeinfo name for __gnu_cxx::__concurrence_unlock_error
+ R typeinfo name for std::bad_alloc
+ R typeinfo name for std::bad_exception
+ R typeinfo name for std::domain_error
+ R typeinfo name for std::exception
+ R typeinfo name for std::invalid_argument
+ R typeinfo name for std::length_error
+ R typeinfo name for std::logic_error
+ R typeinfo name for std::out_of_range
+ R typeinfo name for std::overflow_error
+ R typeinfo name for std::range_error
+ R typeinfo name for std::runtime_error
+ R typeinfo name for std::type_info
+ R typeinfo name for std::underflow_error
+ ShowCursor
+ T AlignPitch16(unsigned int)
+ T BOverlayNeedsPresent
+ T CAsyncCaptureGL::AsyncCaptureFrame(unsigned int)
+ T CAsyncCaptureGL::AsyncPutFrame(ScreenshotData_t*)
+ T CAsyncCaptureGL::CAsyncCaptureGL()
+ T CAsyncCaptureGL::Cleanup()
+ T CAsyncCaptureGL::CleanupAsyncContext()
+ T CAsyncCaptureGL::CleanupRenderData(CAsyncCaptureGL::RenderData_t*)
+ T CAsyncCaptureGL::Run()
+ T CAsyncCaptureGL::Shutdown()
+ T CAsyncCaptureGL::~CAsyncCaptureGL()
+ T CBaseOverlayRenderer::CBaseOverlayRenderer()
+ T CBaseOverlayRenderer::CleanupMovieStream()
+ T CBaseOverlayRenderer::CreateMovieStream()
+ T CBaseOverlayRenderer::OnMovieStreamStopping()
+ T CBaseOverlayRenderer::ReadRenderStream(IMemStream*)
+ T CBaseOverlayRenderer::RenderFrame()
+ T CBaseOverlayRenderer::RequestTexture(int)
+ T CBaseOverlayRenderer::Sleep(unsigned int)
+ T CBaseOverlayRenderer::TakeMovieScreenshotIfNeeded()
+ T CBaseOverlayRenderer::UpdateFPSCounter()
+ T CBaseOverlayRenderer::UpdateNotificationToastPosition()
+ T CBaseOverlayRenderer::ValveCheckAsyncCapture()
+ T CBaseOverlayRenderer::ValveDrawSharedHandleTexture(int, int, int, int, float, float, float, float, float, float, void*, int, int, ETextureFormat, bool)
+ T CBaseOverlayRenderer::ValveGetInputClipRegion(int&, int&, int&, int&)
+ T CBaseOverlayRenderer::ValveGetPreferredTextureFormat()
+ T CBaseOverlayRenderer::ValveGetRenderFormat()
+ T CBaseOverlayRenderer::ValveGetRendererType()
+ T CBaseOverlayRenderer::ValveGetRendererWindow()
+ T CBaseOverlayRenderer::ValveGetSharedD3DTextureSupport()
+ T CBaseOverlayRenderer::ValveLockRenderResources()
+ T CBaseOverlayRenderer::ValveTakeScreenshot(bool, unsigned int)
+ T CBaseOverlayRenderer::ValveUnlockRenderResources()
+ T CBaseOverlayRenderer::~CBaseOverlayRenderer()
+ T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CGameStreamBaseMemStream::CGameStreamBaseMemStream(unsigned int)
+ T CGameStreamBaseMemStream::~CGameStreamBaseMemStream()
+ T CGameStreamGameMemStream::BGetMessage(GameStreamMessageFromSteam_t*)
+ T CGameStreamGameMemStream::CGameStreamGameMemStream(unsigned int)
+ T CGameStreamGameMemStream::SendMessage(GameStreamMessageFromGame_t const*)
+ T CGameStreamGameMemStream::~CGameStreamGameMemStream()
+ T CIMENullImpl::GetIMEWindow()
+ T CIMENullImpl::OnChangeIME(bool)
+ T CIMENullImpl::OnChangeIMEByHandle(unsigned int)
+ T CIMENullImpl::OnChangeIMEByHandle(unsigned long long)
+ T CIMENullImpl::OnChangeIMEConversionModeByHandle(unsigned int)
+ T CIMENullImpl::OnChangeIMEConversionModeByHandle(unsigned long long)
+ T CIMENullImpl::OnChangeIMESentenceModeByHandle(unsigned int)
+ T CIMENullImpl::OnChangeIMESentenceModeByHandle(unsigned long long)
+ T CIMENullImpl::OnFlipIME()
+ T CIMENullImpl::OnIMEChangeCandidates()
+ T CIMENullImpl::OnIMECloseCandidates()
+ T CIMENullImpl::OnIMEComposition(int)
+ T CIMENullImpl::OnIMEEndComposition()
+ T CIMENullImpl::OnIMERecomputeModes()
+ T CIMENullImpl::OnIMEShowCandidates()
+ T CIMENullImpl::OnIMEStartComposition()
+ T CIMENullImpl::OnSelectCandidate(int, wchar_t const*)
+ T CIMENullImpl::RequestIMECandidates(unsigned int)
+ T CIMENullImpl::RequestIMECandidates(unsigned long long)
+ T CIMENullImpl::RequestIMEConversionModes(unsigned int)
+ T CIMENullImpl::RequestIMEConversionModes(unsigned long long)
+ T CIMENullImpl::RequestIMELanguageList(unsigned int)
+ T CIMENullImpl::RequestIMELanguageList(unsigned long long)
+ T CIMENullImpl::RequestIMESentenceModes(unsigned int)
+ T CIMENullImpl::RequestIMESentenceModes(unsigned long long)
+ T CIMENullImpl::SetCandidateWindowPos(int, int)
+ T CIMENullImpl::SetIMEWindow(unsigned int)
+ T CIMENullImpl::SetIMEWindow(unsigned long long)
+ T CIMENullImpl::~CIMENullImpl()
+ T CIPCToolMachClient::DoBasicCommand(int, char const*, char const*, int)
+ T CIPCToolMachClient::DoKillCommand(char const*)
+ T CIPCToolMachClient::Init()
+ T CIPCToolMachClient::~CIPCToolMachClient()
+ T CInputHandler::CInputHandler()
+ T CInputHandler::CursorIsVisible()
+ T CInputHandler::DetectAndSetGameID()
+ T CInputHandler::DisplayMoveCursorToPoint(unsigned int, CGPoint)
+ T CInputHandler::FakeTabPressIfNeeded()
+ T CInputHandler::ForceDisableVisibility()
+ T CInputHandler::ForceEnableVisibility()
+ T CInputHandler::GetCustomCursorData(unsigned long)
+ T CInputHandler::GetLastMouseDelta(int*, int*)
+ T CInputHandler::HideCursor(unsigned int)
+ T CInputHandler::InputAttach()
+ T CInputHandler::MarkEndOfInputFrame()
+ T CInputHandler::SendTextToGame(wchar_t const*)
+ T CInputHandler::SetHotKey(int, int)
+ T CInputHandler::SetInputClipRegion(int, int, int, int)
+ T CInputHandler::SetMovieHotKey(int, int)
+ T CInputHandler::SetOrigin(int, int)
+ T CInputHandler::SetScreenSize(int, int, int, int, bool)
+ T CInputHandler::SetScreenshotHotKey(int, int)
+ T CInputHandler::SetSize(int, int)
+ T CInputHandler::SetTreatEscAsHotkey(bool)
+ T CInputHandler::ShowCursor(unsigned int)
+ T CInputHandler::ValveDeleteCursor(unsigned long)
+ T CInputHandler::ValveSetCursor(unsigned long)
+ T CInputHandler::ValveShowCursor(int)
+ T CInputHandler::~CInputHandler()
+ T CMyGlobal::~CMyGlobal()
+ T COpenGLFrameCapture::BBeginCapture(_CGLContextObject*, int, int, CVideoMemStreamWriter*, unsigned int)
+ T COpenGLFrameCapture::BCreatePlaneData(COpenGLFrameCapture::PlaneData_t*, int, int, int, unsigned int, unsigned int, int, char const*)
+ T COpenGLFrameCapture::BInit(CVideoMemStreamWriter*, _CGLContextObject*, int, int)
+ T COpenGLFrameCapture::BProcessingFrame()
+ T COpenGLFrameCapture::COpenGLFrameCapture(COverlayGLRenderer*, bool)
+ T COpenGLFrameCapture::FreePlaneData(COpenGLFrameCapture::PlaneData_t*)
+ T COpenGLFrameCapture::InitFailed(char const*)
+ T COpenGLFrameCapture::LockAndSend(bool)
+ T COpenGLFrameCapture::LostContext()
+ T COpenGLFrameCapture::PutVideo(ScreenshotData_t*, unsigned char*, unsigned char*, unsigned char*)
+ T COpenGLFrameCapture::RestoreState()
+ T COpenGLFrameCapture::SetupForRendering()
+ T COpenGLFrameCapture::Shutdown()
+ T COpenGLFrameCapture::~COpenGLFrameCapture()
+ T COverlayGLRenderer::COverlayGLRenderer()
+ T COverlayGLRenderer::FindGLMonitorDimensions(unsigned int, int&, int&)
+ T COverlayGLRenderer::FlushDrawable(_CGLContextObject*)
+ T COverlayGLRenderer::GenTextureID(int)
+ T COverlayGLRenderer::OnMovieStreamStopping()
+ T COverlayGLRenderer::ValveCheckForNewContext()
+ T COverlayGLRenderer::ValveDeleteAllTextures()
+ T COverlayGLRenderer::ValveDeleteTexture(int)
+ T COverlayGLRenderer::ValveDrawTexturedRect(int, int, int, int, float, float, float, float, int, unsigned int, unsigned int, EOverlayGradientDirection, float)
+ T COverlayGLRenderer::ValveForgetAllTextures()
+ T COverlayGLRenderer::ValveGetFullscreenMonitor()
+ T COverlayGLRenderer::ValveGetPreferredTextureFormat()
+ T COverlayGLRenderer::ValveGetRenderFormat()
+ T COverlayGLRenderer::ValveGetRendererType()
+ T COverlayGLRenderer::ValveGetScreenSize(int&, int&)
+ T COverlayGLRenderer::ValveGetTargetSize(int&, int&)
+ T COverlayGLRenderer::ValveGetWindowOrigin(int*, int*)
+ T COverlayGLRenderer::ValveIsFullScreen()
+ T COverlayGLRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
+ T COverlayGLRenderer::ValveRestoreRenderState()
+ T COverlayGLRenderer::ValveSetDesiredRenderState()
+ T COverlayGLRenderer::ValveSetupForNewContext(_CGLContextObject*)
+ T COverlayGLRenderer::ValveTakeScreenshot(bool, unsigned int)
+ T COverlayGLRenderer::ValveUpdateAndDrawSharedTexture(int, int, int, int, float, float, float, float, float, float, int, char*, unsigned int, unsigned int, unsigned int, ETextureFormat, bool*)
+ T COverlayGLRenderer::~COverlayGLRenderer()
+ T CSavedMemStream::BWaitForDataToGet()
+ T CSavedMemStream::CSavedMemStream(unsigned int)
+ T CSavedMemStream::Clear(unsigned int)
+ T CSavedMemStream::Get(void*, unsigned int)
+ T CSavedMemStream::GetBytesAvailable()
+ T CSavedMemStream::GetBytesRemaining()
+ T CSavedMemStream::Put(void const*, unsigned int)
+ T CSavedMemStream::ResetReadCursor()
+ T CSavedMemStream::~CSavedMemStream()
+ T CSharedMemStream::BWaitForDataToGet()
+ T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
+ T CSharedMemStream::Clear(unsigned int)
+ T CSharedMemStream::Get(void*, unsigned int)
+ T CSharedMemStream::GetBytesAvailable()
+ T CSharedMemStream::GetBytesRemaining()
+ T CSharedMemStream::GetInternal(void*, unsigned int)
+ T CSharedMemStream::Put(void const*, unsigned int)
+ T CSharedMemStream::PutInternal(void const*, unsigned int)
+ T CSharedMemStream::UnlockMemoryForPut(unsigned int)
+ T CSharedMemStream::~CSharedMemStream()
+ T CSimpleMachClient::DoVersionCommand()
+ T CSimpleMachClient::Init(char const*, unsigned int, bool)
+ T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
+ T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
+ T CSimpleMachClient::~CSimpleMachClient()
+ T CVROverlayInterfaceGL::CVROverlayInterfaceGL(CVROverlayInterfaceGL::CreateStruct_t const&)
+ T CVROverlayInterfaceGL::CreateDistortMap(vr::IVRSystem*, vr::Hmd_Eye, unsigned int, unsigned int) const
+ T CVROverlayInterfaceGL::DrawQuad(CVROverlayInterfaceGL::Texture_t*, vr::utils::CVRConstants const&, vr::Hmd_Eye, unsigned int, unsigned int, unsigned int, unsigned int) const
+ T CVideoMemStreamWriter::BGetRequestedCaptureFramerate(unsigned int*, unsigned int*)
+ T CVideoMemStreamWriter::BGetRequestedGameFramerate(unsigned int*, unsigned int*)
+ T CVideoMemStreamWriter::BReadyForNewFrame() const
+ T CVideoMemStreamWriter::BeginFrame()
+ T CVideoMemStreamWriter::CVideoMemStreamWriter(char const*, unsigned int)
+ T CVideoMemStreamWriter::CommitFrame(bool)
+ T CVideoMemStreamWriter::GetFrameSize() const
+ T CVideoMemStreamWriter::~CVideoMemStreamWriter()
+ T CopyPlaneAdvanceDst(unsigned char**, unsigned int, unsigned char const*, unsigned int, unsigned int)
+ T CreateShader(char const*, char const*)
+ T Exiting()
+ T GetGLProcAddress(char*)
+ T GetGLRGBAShader(bool)
+ T GetGLVertexShader(bool)
+ T GetGLYUVShaderUV(bool)
+ T GetGLYUVShaderY(bool)
+ T GetIMENullImpl()
+ T GetMovieResolution(int, int, int*, int*)
+ T GetVideoTickCount()
+ T HasGLExtension(char const*, char const*)
+ T IPC::BinarySemaphore::Destroy()
+ T IPC::BinarySemaphore::Init(char const*, bool, bool*, bool)
+ T IPC::BinarySemaphore::Lock(unsigned int)
+ T IPC::BinarySemaphore::Release()
+ T IPC::BinarySemaphore::~BinarySemaphore()
+ T IPC::CreateBinarySemaphore(char const*, bool, bool*, bool)
+ T IPC::CreateEvent(char const*, bool, bool, bool*, bool)
+ T IPC::CreateMutex(char const*, bool, bool*, bool)
+ T IPC::CreateSharedMem(char const*, unsigned int, IPC::ISharedMem::Access, bool*, bool)
+ T IPC::ISyncObject::GetOpaque()
+ T IPC::PosixEvent::Destroy()
+ T IPC::PosixEvent::Init(char const*, bool, bool, bool*, bool)
+ T IPC::PosixEvent::ResetEvent()
+ T IPC::PosixEvent::SetEvent()
+ T IPC::PosixEvent::Wait(unsigned int)
+ T IPC::PosixEvent::~PosixEvent()
+ T IPC::PosixMutex::Destroy()
+ T IPC::PosixMutex::Init(char const*, bool, bool*, bool)
+ T IPC::PosixMutex::Release()
+ T IPC::PosixMutex::Wait(unsigned int)
+ T IPC::PosixMutex::~PosixMutex()
+ T IPC::PosixSharedMemory::Destroy()
+ T IPC::PosixSharedMemory::Init(char const*, unsigned int, IPC::ISharedMem::Access, bool*, bool)
+ T IPC::PosixSharedMemory::IsValid() const
+ T IPC::PosixSharedMemory::Pointer() const
+ T IPC::PosixSharedMemory::~PosixSharedMemory()
+ T IPC::PurgeCurrentProcess()
+ T IPC::crc32(unsigned int, void*, unsigned int)
+ T InitializeGameStream()
+ T IsOverlayEnabled
+ T Log(char const*, ...)
+ T NotifyVRCleanup
+ T NotifyVRInit
+ T Plat_FloatTime
+ T Plat_MSTime
+ T Plat_RelativeTickFrequency
+ T Plat_RelativeTicks
+ T Plat_TickDiffMilliSec
+ T PutScreenshotFrame(ScreenshotDataCommand_t const&, unsigned char*, unsigned short*, unsigned short*, unsigned short*)
+ T PutScreenshotImageAligned(unsigned int, ScreenshotData_t const*, unsigned char**, unsigned char const*, unsigned int, unsigned int)
+ T PutScreenshotImageAligned16(ScreenshotData_t const*, unsigned char**, unsigned char const*, unsigned int, unsigned int)
+ T ReadGameStream()
+ T SendGameStream(GameStreamMessageFromGame_t const*)
+ T SendOneTimeInputPid()
+ T SetNotificationPosition
+ T ShutdownGameStream()
+ T StartMovieRecordingNextFrame(int, int)
+ T SteamCFRunLoopRun()
+ T SteamCFRunLoopRunInMode(__CFString const*, double, unsigned char)
+ T SteamCGAssociateMouseAndMouseCursorPosition(int)
+ T SteamCGAssociateMouseAndMouseCursorPosition(unsigned int)
+ T SteamCGCursorIsVisible()
+ T SteamCGDisplayHideCursor(unsigned int)
+ T SteamCGDisplayMoveCursorToPoint(unsigned int, CGPoint)
+ T SteamCGDisplayShowCursor(unsigned int)
+ T SteamCGGetLastMouseDelta(int*, int*)
+ T SteamCGLChoosePixelFormat(_CGLPixelFormatAttribute const*, _CGLPixelFormatObject**, int*)
+ T SteamCGLDisable(_CGLContextObject*, _CGLContextEnable)
+ T SteamCGLEnable(_CGLContextObject*, _CGLContextEnable)
+ T SteamCGLFlushDrawable(_CGLContextObject*)
+ T SteamCGLSetParameter(_CGLContextObject*, _CGLContextParameter, int const*)
+ T SteamCGWarpMouseCursorPosition(CGPoint)
+ T SteamHideCursor()
+ T SteamInitCursor()
+ T SteamShowCursor()
+ T SteamThreadTools::CThread::CThread()
+ T SteamThreadTools::CThread::GetName()
+ T SteamThreadTools::CThread::GetThreadProc()
+ T SteamThreadTools::CThread::Init()
+ T SteamThreadTools::CThread::IsAlive()
+ T SteamThreadTools::CThread::IsThreadRunning()
+ T SteamThreadTools::CThread::Join(unsigned int)
+ T SteamThreadTools::CThread::OnExit()
+ T SteamThreadTools::CThread::SetName(char const*)
+ T SteamThreadTools::CThread::ThreadProc(void*)
+ T SteamThreadTools::CThread::~CThread()
+ T SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+ T SteamThreadTools::CThreadEvent::Set()
+ T SteamThreadTools::CThreadLocalBase::Set(void*)
+ T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
+ T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
+ T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
+ T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
+ T SteamThreadTools::CThreadMutex::~CThreadMutex()
+ T SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
+ T SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
+ T SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
+ T SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
+ T SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
+ T SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
+ T SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
+ T SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+ T SteamThreadTools::InitMainThread()
+ T StopMovieRecording()
+ T TakeScreenshotNextFrame(bool)
+ T ThreadInterlockedAssignIf64
+ T ThreadInterlockedCompareExchange
+ T ThreadSleep
+ T UpdateVRState(int, int)
+ T ValveHookScreenshots
+ T WindowInVRBounds(int, int)
+ T __clang_call_terminate
+ T __cxa_allocate_exception
+ T __cxa_begin_catch
+ T __cxa_call_terminate
+ T __cxa_call_unexpected
+ T __cxa_current_exception_type
+ T __cxa_demangle
+ T __cxa_end_catch
+ T __cxa_free_exception
+ T __cxa_get_globals
+ T __cxa_get_globals_fast
+ T __cxa_pure_virtual
+ T __cxa_rethrow
+ T __cxa_throw
+ T __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+ T __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+ T __cxxabiv1::__class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+ T __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ T __cxxabiv1::__class_type_info::__do_find_public_src(long, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+ T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+ T __cxxabiv1::__class_type_info::~__class_type_info()
+ T __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+ T __cxxabiv1::__si_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+ T __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ T __cxxabiv1::__si_class_type_info::__do_find_public_src(long, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+ T __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+ T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+ T __cxxabiv1::__terminate(void (*)())
+ T __cxxabiv1::__unexpected(void (*)())
+ T __gnu_cxx::__concurrence_lock_error::what() const
+ T __gnu_cxx::__concurrence_lock_error::~__concurrence_lock_error()
+ T __gnu_cxx::__concurrence_unlock_error::what() const
+ T __gnu_cxx::__concurrence_unlock_error::~__concurrence_unlock_error()
+ T __gnu_cxx::__mutex::__mutex()
+ T __gnu_cxx::__mutex::lock()
+ T __gnu_cxx::__mutex::unlock()
+ T __gnu_cxx::__scoped_lock::~__scoped_lock()
+ T __gnu_cxx::__throw_concurrence_lock_error()
+ T __gnu_cxx::__throw_concurrence_unlock_error()
+ T __gnu_cxx::__verbose_terminate_handler()
+ T __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*)
+ T __gxx_personality_v0
+ T char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
+ T dyld_stub_binding_helper
+ T operator delete(void*)
+ T operator delete[](void*)
+ T operator new(unsigned long)
+ T operator new[](unsigned long)
+ T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >*)
+ T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> const&)
+ T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_insert_unique(std::_Rb_tree_iterator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> const&)
+ T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_insert_unique(std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> const&)
+ T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::find(int const&)
+ T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, COverlayGLRenderer::GLTexture*> >*)
+ T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<int const, COverlayGLRenderer::GLTexture*> const&)
+ T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_insert_unique(std::_Rb_tree_iterator<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::pair<int const, COverlayGLRenderer::GLTexture*> const&)
+ T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_insert_unique(std::pair<int const, COverlayGLRenderer::GLTexture*> const&)
+ T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::find(int const&)
+ T std::_Rb_tree<unsigned long long, std::pair<unsigned long long const, CursorInfo_t>, std::_Select1st<std::pair<unsigned long long const, CursorInfo_t> >, std::less<unsigned long long>, std::allocator<std::pair<unsigned long long const, CursorInfo_t> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned long long const, CursorInfo_t> >*)
+ T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >*)
+ T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<unsigned long const, CInputHandler::CustomCursorData_t> const&)
+ T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_insert_unique(std::_Rb_tree_iterator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::pair<unsigned long const, CInputHandler::CustomCursorData_t> const&)
+ T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_insert_unique(std::pair<unsigned long const, CInputHandler::CustomCursorData_t> const&)
+ T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::find(unsigned long const&)
+ T std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+ T std::_Rb_tree_increment(std::_Rb_tree_node_base*)
+ T std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+ T std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+ T std::__throw_bad_alloc()
+ T std::__throw_length_error(char const*)
+ T std::__throw_logic_error(char const*)
+ T std::bad_alloc::what() const
+ T std::bad_alloc::~bad_alloc()
+ T std::bad_exception::what() const
+ T std::bad_exception::~bad_exception()
+ T std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+ T std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)
+ T std::domain_error::~domain_error()
+ T std::exception::what() const
+ T std::exception::~exception()
+ T std::invalid_argument::~invalid_argument()
+ T std::length_error::length_error(std::string const&)
+ T std::length_error::~length_error()
+ T std::logic_error::logic_error(std::string const&)
+ T std::logic_error::what() const
+ T std::logic_error::~logic_error()
+ T std::map<int, CBaseOverlayRenderer::SharedTexData_t, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::operator[](int const&)
+ T std::map<int, COverlayGLRenderer::GLTexture*, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::operator[](int const&)
+ T std::map<unsigned long, CInputHandler::CustomCursorData_t, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::operator[](unsigned long const&)
+ T std::out_of_range::~out_of_range()
+ T std::overflow_error::~overflow_error()
+ T std::range_error::~range_error()
+ T std::runtime_error::what() const
+ T std::runtime_error::~runtime_error()
+ T std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long)
+ T std::string::_Rep::_M_dispose(std::allocator<char> const&)
+ T std::string::_Rep::_M_grab(std::allocator<char> const&, std::allocator<char> const&)
+ T std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&)
+ T std::terminate()
+ T std::type_info::__is_function_p() const
+ T std::type_info::__is_pointer_p() const
+ T std::underflow_error::~underflow_error()
+ T std::unexpected()
+ T std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<IPC::IEvent**, std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> > >, IPC::IEvent* const&)
+ T std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> >::push_back(IPC::IEvent* const&)
+ T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IVRSystem*, vr::Hmd_Eye, int, int, unsigned short*, int)
+ T vr::utils::COverlayView<CVROverlayInterfaceGL>::COverlayView(CVROverlayInterfaceGL::CreateStruct_t const&)
+ T vr::utils::COverlayView<CVROverlayInterfaceGL>::Draw(float, float, float, float, float) const
+ T vr::utils::CVRConstants::ComputeConstants(vr::IVRSystem*)
+ _Block_copy
+ _CGSDefaultConnection
+ _DefaultRuneLocale
+ _Unwind_DeleteException
+ _Unwind_GetDataRelBase
+ _Unwind_GetIP
+ _Unwind_GetLanguageSpecificData
+ _Unwind_GetRegionStart
+ _Unwind_GetTextRelBase
+ _Unwind_RaiseException
+ _Unwind_Resume
+ _Unwind_Resume_or_Rethrow
+ _Unwind_SetGR
+ _Unwind_SetIP
+ __cxa_atexit
+ __error
+ __fixunsdfdi
+ __stack_chk_fail
+ __stack_chk_guard
+ __stderrp
+ __udivdi3
+ __umoddi3
+ _dyld_get_image_name
+ _dyld_image_count
+ _dyld_register_func_for_add_image
+ _objc_empty_cache
+ _objc_empty_vtable
+ abort
+ asprintf
+ atoi
+ b (anonymous namespace)::emergency_mutex
+ b BLogAlignmentIssue()::s_bLogged
+ b BOverlayNeedsPresent::dwLastTrueTickCount
+ b CBaseOverlayRenderer::RenderFrame()::bTenfoot
+ b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastUpdateTime
+ b CFStringGetCStringPtr_fn
+ b Demangled
+ b GetGLProcAddress(char*)::m_pLibGL
+ b Log(char const*, ...)::bCheckedLogEnabled
+ b NSAutoreleasePool_class
+ b NSConstantString_class
+ b NSMutableDictionary_class
+ b NSString_class
+ b NSUndoManagerProxy_targetClass
+ b SendOneTimeInputPid()::s_bOneTimeInitializationDone
+ b SteamThreadTools::g_ThreadMainThreadID
+ b __gnu_cxx::__verbose_terminate_handler()::terminating
+ b add_image_hook_ARC(mach_header const*, long)::patches
+ b add_image_hook_GC(mach_header const*, long)::patches
+ b add_image_hook_swiftV1(mach_header const*, long)::dlh
+ b add_image_hook_swiftV1(mach_header const*, long)::patches
+ b eh_globals
+ b emergency_buffer
+ b emergency_used
+ b g_TickBase
+ b g_TickFrequency
+ b g_TickFrequencyDouble
+ b g_TickLastReturned
+ b g_bKeyEnabledMovieCapture
+ b g_bMicDuckingDisabled
+ b g_bScreenshotsHooked
+ b g_bStreamingMovieCapture
+ b g_bTakeScreenshotNextFrame
+ b g_nMaximumMovieResolutionX
+ b g_nMaximumMovieResolutionY
+ b g_pMovieRenderer
+ b guard variable for add_image_hook_ARC(mach_header const*, long)::patches
+ b guard variable for add_image_hook_GC(mach_header const*, long)::patches
+ b guard variable for add_image_hook_swiftV1(mach_header const*, long)::dlh
+ b guard variable for add_image_hook_swiftV1(mach_header const*, long)::patches
+ b init
+ b original_NSKKMS_fastIndexForKnownKey
+ b original_NSKKMS_indexForKey
+ b original_NSKKsD_addEntriesFromDictionary
+ b original_NSKKsD_objectForKey
+ b original_NSKKsD_removeObjectForKey
+ b original_NSKKsD_setObject_forKey
+ b original_NSManagedObject_allocBatch
+ b original_NSManagedObject_allocWithEntity
+ b original_NSManagedObject_init
+ b original_class_getName
+ b original_objc_allocateClassPair
+ b original_objc_copyClassNamesForImage
+ b original_objc_getClass
+ b original_objc_getMetaClass
+ b original_objc_getProtocol
+ b original_objc_getRequiredClass
+ b original_objc_lookUpClass
+ b original_object_getIndexedIvars
+ b original_protocol_getName
+ b s_Pid
+ b s_bDoLog
+ b s_bFirstLogEntry
+ b s_bIsStreaming
+ b s_pGamestream
+ bootstrap_look_up
+ bootstrap_port
+ bzero
+ calloc
+ ceilf
  class_addMethod
  class_addProperty
  class_addProtocol
@@ -201,18 +744,11 @@
  class_respondsToSelector
  close
  close$UNIX2003
- __cxa_atexit
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
- d cplus_demangle_builtin_types
- d cplus_demangle_operators
- D __cxxabiv1::__terminate_handler
- D __cxxabiv1::__unexpected_handler
- d demangleLock
- d dyld__mach_header
- _DefaultRuneLocale
- D g_IdentityMatrix
- D g_iNotificationPosition
- D g_loggingMutex
+ d OBJC_$_CLASS_METHODS___ARCLite__
+ d OBJC_CLASS_$___ARCLite__
+ d OBJC_CLASS_RO_$___ARCLite__
+ d OBJC_METACLASS_RO_$___ARCLite__
  d _interpose_CFRunLoopRun
  d _interpose_CFRunLoopRunInMode
  d _interpose_CGAssociateMouseAndMouseCursorPosition
@@ -230,89 +766,17 @@
  d _interpose_HideCursor
  d _interpose_InitCursor
  d _interpose_ShowCursor
- dlclose
- dlopen
- dlsym
- D _non_lazy_classes
- d OBJC_CLASS_$___ARCLite__
- d OBJC_$_CLASS_METHODS___ARCLite__
- d OBJC_CLASS_RO_$___ARCLite__
- D OBJC_METACLASS_$___ARCLite__
- d OBJC_METACLASS_RO_$___ARCLite__
+ d cplus_demangle_builtin_types
+ d cplus_demangle_operators
+ d demangleLock
+ d dyld__mach_header
  d s_pchFragmentShader
  d s_pchVertexShader
  d standard_subs
- D typeinfo for CAsyncCaptureGL
- D typeinfo for CBaseOverlayRenderer
- D typeinfo for CGameStreamBaseMemStream
- D typeinfo for CGameStreamGameMemStream
- D typeinfo for CIMENullImpl
- D typeinfo for COverlayGLRenderer
- D typeinfo for CSavedMemStream
- D typeinfo for CSharedMemStream
- D typeinfo for __cxxabiv1::__class_type_info
- D typeinfo for __cxxabiv1::__si_class_type_info
- D typeinfo for __gnu_cxx::__concurrence_lock_error
- D typeinfo for __gnu_cxx::__concurrence_unlock_error
- D typeinfo for IIME
- D typeinfo for IMemStream
- D typeinfo for IPC::BinarySemaphore
- D typeinfo for IPC::IEvent
- D typeinfo for IPC::IMutex
- D typeinfo for IPC::ISharedMem
- D typeinfo for IPC::ISyncObject
- D typeinfo for IPC::PosixEvent
- D typeinfo for IPC::PosixMutex
- D typeinfo for IPC::PosixSharedMemory
- D typeinfo for std::bad_alloc
- D typeinfo for std::bad_exception
- D typeinfo for std::domain_error
- D typeinfo for std::exception
- D typeinfo for std::invalid_argument
- D typeinfo for std::length_error
- D typeinfo for std::logic_error
- D typeinfo for std::out_of_range
- D typeinfo for std::overflow_error
- D typeinfo for std::range_error
- D typeinfo for std::runtime_error
- D typeinfo for std::type_info
- D typeinfo for std::underflow_error
- D typeinfo for SteamThreadTools::CThread
- D vtable for CAsyncCaptureGL
- D vtable for CBaseOverlayRenderer
- D vtable for CGameStreamBaseMemStream
- D vtable for CGameStreamGameMemStream
- D vtable for CIMENullImpl
- D vtable for COverlayGLRenderer
- D vtable for CSavedMemStream
- D vtable for CSharedMemStream
- D vtable for __cxxabiv1::__class_type_info
- D vtable for __cxxabiv1::__si_class_type_info
- D vtable for __gnu_cxx::__concurrence_lock_error
- D vtable for __gnu_cxx::__concurrence_unlock_error
- D vtable for IPC::BinarySemaphore
- D vtable for IPC::PosixEvent
- D vtable for IPC::PosixMutex
- D vtable for IPC::PosixSharedMemory
- D vtable for std::bad_alloc
- D vtable for std::bad_exception
- D vtable for std::domain_error
- D vtable for std::exception
- D vtable for std::invalid_argument
- D vtable for std::length_error
- D vtable for std::logic_error
- D vtable for std::out_of_range
- D vtable for std::overflow_error
- D vtable for std::range_error
- D vtable for std::runtime_error
- D vtable for std::underflow_error
- D vtable for SteamThreadTools::CThread
- _dyld_get_image_name
- _dyld_image_count
- _dyld_register_func_for_add_image
- __error
+ dlclose
+ dlopen
+ dlsym
  fclose
- __fixunsdfdi
  fopen
  fprintf
  fputc
@@ -348,8 +812,6 @@
  gmtime_r
  hash_create
  hash_search
- HideCursor
- InitCursor
  ivar_getName
  ivar_getOffset
  kill
@@ -379,18 +841,8 @@
  nanosleep
  nanosleep$UNIX2003
  objc_autoreleasePoolPush
- .objc_class_name_NSAutoreleasePool
- .objc_class_name_NSBitmapImageRep
- .objc_class_name_NSCursor
- .objc_class_name_NSGraphicsContext
- OBJC_CLASS_$_NSAutoreleasePool
- OBJC_CLASS_$_NSBitmapImageRep
- OBJC_CLASS_$_NSCursor
- OBJC_CLASS_$_NSGraphicsContext
  objc_collectingEnabled
  objc_constructInstance
- _objc_empty_cache
- _objc_empty_vtable
  objc_getClass
  objc_getMetaClass
  objc_getProtocol
@@ -423,76 +875,36 @@
  pthread_key_delete
  pthread_kill
  pthread_mach_thread_np
- pthread_mutexattr_destroy
- pthread_mutexattr_destroy$UNIX2003
- pthread_mutexattr_init
- pthread_mutexattr_settype
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
  pthread_mutex_unlock
+ pthread_mutexattr_destroy
+ pthread_mutexattr_destroy$UNIX2003
+ pthread_mutexattr_init
+ pthread_mutexattr_settype
  pthread_self
  pthread_setspecific
+ r IPC::gTable
  realloc
  rename
- r IPC::gTable
- R typeinfo name for CAsyncCaptureGL
- R typeinfo name for CBaseOverlayRenderer
- R typeinfo name for CGameStreamBaseMemStream
- R typeinfo name for CGameStreamGameMemStream
- R typeinfo name for CIMENullImpl
- R typeinfo name for COverlayGLRenderer
- R typeinfo name for CSavedMemStream
- R typeinfo name for CSharedMemStream
- R typeinfo name for __cxxabiv1::__class_type_info
- R typeinfo name for __cxxabiv1::__si_class_type_info
- R typeinfo name for __gnu_cxx::__concurrence_lock_error
- R typeinfo name for __gnu_cxx::__concurrence_unlock_error
- R typeinfo name for IIME
- R typeinfo name for IMemStream
- R typeinfo name for IPC::BinarySemaphore
- R typeinfo name for IPC::IEvent
- R typeinfo name for IPC::IMutex
- R typeinfo name for IPC::ISharedMem
- R typeinfo name for IPC::ISyncObject
- R typeinfo name for IPC::PosixEvent
- R typeinfo name for IPC::PosixMutex
- R typeinfo name for IPC::PosixSharedMemory
- R typeinfo name for std::bad_alloc
- R typeinfo name for std::bad_exception
- R typeinfo name for std::domain_error
- R typeinfo name for std::exception
- R typeinfo name for std::invalid_argument
- R typeinfo name for std::length_error
- R typeinfo name for std::logic_error
- R typeinfo name for std::out_of_range
- R typeinfo name for std::overflow_error
- R typeinfo name for std::range_error
- R typeinfo name for std::runtime_error
- R typeinfo name for std::type_info
- R typeinfo name for std::underflow_error
- R typeinfo name for SteamThreadTools::CThread
  sched_yield
  sel_getUid
  sem_close
- semctl
- semctl$UNIX2003
- semop
  sem_open
  sem_post
  sem_trywait
  sem_unlink
  sem_wait
  sem_wait$UNIX2003
+ semctl
+ semctl$UNIX2003
+ semop
  setrlimit
  setrlimit$UNIX2003
  shm_open
- ShowCursor
  snprintf
  sscanf
- __stack_chk_fail
- __stack_chk_guard
- __stderrp
  strcat
  strcmp
  strcpy
@@ -505,12 +917,9 @@
  strncpy
  strstr
  strtoull
- t add_image_hook_ARC(mach_header const*, long)
- t add_image_hook_GC(mach_header const*, long)
- t add_image_hook_swiftV1(mach_header const*, long)
- T AlignPitch16(unsigned int)
- t allocateMaybeSwift(glue_swift_class_t*, unsigned long)
- t __arclite_class_getName(objc_class*)
+ t BlockingWait(int*, unsigned int, int*)
+ t Init()
+ t InitTicks()
  t __ARCLite__load()
  t __arclite_NSArray_objectAtIndexedSubscript(NSArray*, objc_selector*, unsigned long)
  t __arclite_NSDictionary_objectForKeyedSubscript(NSDictionary*, objc_selector*, objc_object*)
@@ -528,6 +937,7 @@
  t __arclite_NSMutableOrderedSet_setObject_atIndexedSubscript(NSMutableOrderedSet*, objc_selector*, objc_object*, unsigned long)
  t __arclite_NSOrderedSet_objectAtIndexedSubscript(NSOrderedSet*, objc_selector*, unsigned long)
  t __arclite_NSUndoManagerProxy_isKindOfClass(objc_object*, objc_selector*, objc_class*)
+ t __arclite_class_getName(objc_class*)
  t __arclite_objc_allocateClassPair(glue_swift_class_t*, char const*, unsigned long)
  t __arclite_objc_autorelease(objc_object*)
  t __arclite_objc_autoreleasePoolPop(void*)
@@ -541,241 +951,40 @@
  t __arclite_objc_lookUpClass(char const*)
  t __arclite_objc_readClassPair(objc_class*, objc_image_info const*)
  t __arclite_objc_release(objc_object*)
- t __arclite_objc_retainAutoreleasedReturnValue(objc_object*)
+ t __arclite_objc_retain(objc_object*)
  t __arclite_objc_retainAutorelease(objc_object*)
  t __arclite_objc_retainAutoreleaseReturnValue(objc_object*)
+ t __arclite_objc_retainAutoreleasedReturnValue(objc_object*)
  t __arclite_objc_retainBlock(objc_object*)
- t __arclite_objc_retain(objc_object*)
  t __arclite_objc_storeStrong(objc_object**, objc_object*)
  t __arclite_object_copy(objc_object*, unsigned long)
  t __arclite_object_getIndexedIvars(objc_object*)
  t __arclite_object_setInstanceVariable(objc_object*, char const*, void*)
  t __arclite_object_setIvar(objc_object*, objc_ivar*, objc_object*)
  t __arclite_protocol_getName(Protocol*)
+ t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Exception*)
+ t __static_initialization_and_destruction_0(int, int)
+ t __tcf_0
+ t _class_name
+ t _load_method_name
+ t _load_method_type
+ t add_image_hook_ARC(mach_header const*, long)
+ t add_image_hook_GC(mach_header const*, long)
+ t add_image_hook_swiftV1(mach_header const*, long)
+ t allocateMaybeSwift(glue_swift_class_t*, unsigned long)
  t arclite_uninitialized_function()
  t base_of_encoded_value(unsigned char, _Unwind_Context*)
- t BlockingWait(int*, unsigned int, int*)
- T BOverlayNeedsPresent
- T CAsyncCaptureGL::AsyncCaptureFrame(unsigned int)
- T CAsyncCaptureGL::AsyncPutFrame(ScreenshotData_t*)
- T CAsyncCaptureGL::~CAsyncCaptureGL()
- T CAsyncCaptureGL::CAsyncCaptureGL()
- T CAsyncCaptureGL::Cleanup()
- T CAsyncCaptureGL::CleanupAsyncContext()
- T CAsyncCaptureGL::CleanupRenderData(CAsyncCaptureGL::RenderData_t*)
- T CAsyncCaptureGL::Run()
- T CAsyncCaptureGL::Shutdown()
- T CBaseOverlayRenderer::~CBaseOverlayRenderer()
- T CBaseOverlayRenderer::CBaseOverlayRenderer()
- T CBaseOverlayRenderer::CleanupMovieStream()
- T CBaseOverlayRenderer::CreateMovieStream()
- T CBaseOverlayRenderer::OnMovieStreamStopping()
- T CBaseOverlayRenderer::ReadRenderStream(IMemStream*)
- T CBaseOverlayRenderer::RenderFrame()
- T CBaseOverlayRenderer::RequestTexture(int)
- T CBaseOverlayRenderer::Sleep(unsigned int)
- T CBaseOverlayRenderer::TakeMovieScreenshotIfNeeded()
- T CBaseOverlayRenderer::UpdateFPSCounter()
- T CBaseOverlayRenderer::UpdateNotificationToastPosition()
- T CBaseOverlayRenderer::ValveCheckAsyncCapture()
- T CBaseOverlayRenderer::ValveDrawSharedHandleTexture(int, int, int, int, float, float, float, float, float, float, void*, int, int, ETextureFormat, bool)
- T CBaseOverlayRenderer::ValveGetInputClipRegion(int&, int&, int&, int&)
- T CBaseOverlayRenderer::ValveGetPreferredTextureFormat()
- T CBaseOverlayRenderer::ValveGetRendererType()
- T CBaseOverlayRenderer::ValveGetRendererWindow()
- T CBaseOverlayRenderer::ValveGetRenderFormat()
- T CBaseOverlayRenderer::ValveGetSharedD3DTextureSupport()
- T CBaseOverlayRenderer::ValveLockRenderResources()
- T CBaseOverlayRenderer::ValveTakeScreenshot(bool, unsigned int)
- T CBaseOverlayRenderer::ValveUnlockRenderResources()
- T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
- T CGameStreamBaseMemStream::~CGameStreamBaseMemStream()
- T CGameStreamBaseMemStream::CGameStreamBaseMemStream(unsigned int)
- T CGameStreamGameMemStream::BGetMessage(GameStreamMessageFromSteam_t*)
- T CGameStreamGameMemStream::~CGameStreamGameMemStream()
- T CGameStreamGameMemStream::CGameStreamGameMemStream(unsigned int)
- T CGameStreamGameMemStream::SendMessage(GameStreamMessageFromGame_t const*)
- T char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
  t check_exception_spec(lsda_header_info*, std::type_info const*, void*, int)
  t check_exception_spec(lsda_header_info*, std::type_info const*, void*, long)
- T CIMENullImpl::~CIMENullImpl()
- T CIMENullImpl::GetIMEWindow()
- T CIMENullImpl::OnChangeIME(bool)
- T CIMENullImpl::OnChangeIMEByHandle(unsigned int)
- T CIMENullImpl::OnChangeIMEByHandle(unsigned long long)
- T CIMENullImpl::OnChangeIMEConversionModeByHandle(unsigned int)
- T CIMENullImpl::OnChangeIMEConversionModeByHandle(unsigned long long)
- T CIMENullImpl::OnChangeIMESentenceModeByHandle(unsigned int)
- T CIMENullImpl::OnChangeIMESentenceModeByHandle(unsigned long long)
- T CIMENullImpl::OnFlipIME()
- T CIMENullImpl::OnIMEChangeCandidates()
- T CIMENullImpl::OnIMECloseCandidates()
- T CIMENullImpl::OnIMEComposition(int)
- T CIMENullImpl::OnIMEEndComposition()
- T CIMENullImpl::OnIMERecomputeModes()
- T CIMENullImpl::OnIMEShowCandidates()
- T CIMENullImpl::OnIMEStartComposition()
- T CIMENullImpl::OnSelectCandidate(int, wchar_t const*)
- T CIMENullImpl::RequestIMECandidates(unsigned int)
- T CIMENullImpl::RequestIMECandidates(unsigned long long)
- T CIMENullImpl::RequestIMEConversionModes(unsigned int)
- T CIMENullImpl::RequestIMEConversionModes(unsigned long long)
- T CIMENullImpl::RequestIMELanguageList(unsigned int)
- T CIMENullImpl::RequestIMELanguageList(unsigned long long)
- T CIMENullImpl::RequestIMESentenceModes(unsigned int)
- T CIMENullImpl::RequestIMESentenceModes(unsigned long long)
- T CIMENullImpl::SetCandidateWindowPos(int, int)
- T CIMENullImpl::SetIMEWindow(unsigned int)
- T CIMENullImpl::SetIMEWindow(unsigned long long)
- T CInputHandler::~CInputHandler()
- T CInputHandler::CInputHandler()
- T CInputHandler::CursorIsVisible()
- T CInputHandler::DetectAndSetGameID()
- T CInputHandler::DisplayMoveCursorToPoint(unsigned int, CGPoint)
- T CInputHandler::FakeTabPressIfNeeded()
- T CInputHandler::ForceDisableVisibility()
- T CInputHandler::ForceEnableVisibility()
- T CInputHandler::GetCustomCursorData(unsigned long)
- T CInputHandler::GetLastMouseDelta(int*, int*)
- T CInputHandler::HideCursor(unsigned int)
- T CInputHandler::InputAttach()
- T CInputHandler::MarkEndOfInputFrame()
- T CInputHandler::SendTextToGame(wchar_t const*)
- T CInputHandler::SetHotKey(int, int)
- T CInputHandler::SetInputClipRegion(int, int, int, int)
- T CInputHandler::SetMovieHotKey(int, int)
- T CInputHandler::SetOrigin(int, int)
- T CInputHandler::SetScreenshotHotKey(int, int)
- T CInputHandler::SetScreenSize(int, int, int, int, bool)
- T CInputHandler::SetSize(int, int)
- T CInputHandler::SetTreatEscAsHotkey(bool)
- T CInputHandler::ShowCursor(unsigned int)
- T CInputHandler::ValveDeleteCursor(unsigned long)
- T CInputHandler::ValveSetCursor(unsigned long)
- T CInputHandler::ValveShowCursor(int)
- T CIPCToolMachClient::~CIPCToolMachClient()
- T CIPCToolMachClient::DoBasicCommand(int, char const*, char const*, int)
- T CIPCToolMachClient::DoKillCommand(char const*)
- T CIPCToolMachClient::Init()
- T __clang_call_terminate
- t _class_name
- T CMyGlobal::~CMyGlobal()
- T COpenGLFrameCapture::BBeginCapture(_CGLContextObject*, int, int, CVideoMemStreamWriter*, unsigned int)
- T COpenGLFrameCapture::BCreatePlaneData(COpenGLFrameCapture::PlaneData_t*, int, int, int, unsigned int, unsigned int, int, char const*)
- T COpenGLFrameCapture::BInit(CVideoMemStreamWriter*, _CGLContextObject*, int, int)
- T COpenGLFrameCapture::BProcessingFrame()
- T COpenGLFrameCapture::~COpenGLFrameCapture()
- T COpenGLFrameCapture::COpenGLFrameCapture(COverlayGLRenderer*, bool)
- T COpenGLFrameCapture::FreePlaneData(COpenGLFrameCapture::PlaneData_t*)
- T COpenGLFrameCapture::InitFailed(char const*)
- T COpenGLFrameCapture::LockAndSend(bool)
- T COpenGLFrameCapture::LostContext()
- T COpenGLFrameCapture::PutVideo(ScreenshotData_t*, unsigned char*, unsigned char*, unsigned char*)
- T COpenGLFrameCapture::RestoreState()
- T COpenGLFrameCapture::SetupForRendering()
- T COpenGLFrameCapture::Shutdown()
- T CopyPlaneAdvanceDst(unsigned char**, unsigned int, unsigned char const*, unsigned int, unsigned int)
  t copySwiftV1MangledName(char const*, bool)
- T COverlayGLRenderer::~COverlayGLRenderer()
- T COverlayGLRenderer::COverlayGLRenderer()
- T COverlayGLRenderer::FindGLMonitorDimensions(unsigned int, int&, int&)
- T COverlayGLRenderer::FlushDrawable(_CGLContextObject*)
- T COverlayGLRenderer::GenTextureID(int)
- T COverlayGLRenderer::OnMovieStreamStopping()
- T COverlayGLRenderer::ValveCheckForNewContext()
- T COverlayGLRenderer::ValveDeleteAllTextures()
- T COverlayGLRenderer::ValveDeleteTexture(int)
- T COverlayGLRenderer::ValveDrawTexturedRect(int, int, int, int, float, float, float, float, int, unsigned int, unsigned int, EOverlayGradientDirection, float)
- T COverlayGLRenderer::ValveForgetAllTextures()
- T COverlayGLRenderer::ValveGetFullscreenMonitor()
- T COverlayGLRenderer::ValveGetPreferredTextureFormat()
- T COverlayGLRenderer::ValveGetRendererType()
- T COverlayGLRenderer::ValveGetRenderFormat()
- T COverlayGLRenderer::ValveGetScreenSize(int&, int&)
- T COverlayGLRenderer::ValveGetTargetSize(int&, int&)
- T COverlayGLRenderer::ValveGetWindowOrigin(int*, int*)
- T COverlayGLRenderer::ValveIsFullScreen()
- T COverlayGLRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
- T COverlayGLRenderer::ValveRestoreRenderState()
- T COverlayGLRenderer::ValveSetDesiredRenderState()
- T COverlayGLRenderer::ValveSetupForNewContext(_CGLContextObject*)
- T COverlayGLRenderer::ValveTakeScreenshot(bool, unsigned int)
- T COverlayGLRenderer::ValveUpdateAndDrawSharedTexture(int, int, int, int, float, float, float, float, float, float, int, char*, unsigned int, unsigned int, unsigned int, ETextureFormat, bool*)
- T CreateShader(char const*, char const*)
- T CSavedMemStream::BWaitForDataToGet()
- T CSavedMemStream::Clear(unsigned int)
- T CSavedMemStream::~CSavedMemStream()
- T CSavedMemStream::CSavedMemStream(unsigned int)
- T CSavedMemStream::GetBytesAvailable()
- T CSavedMemStream::GetBytesRemaining()
- T CSavedMemStream::Get(void*, unsigned int)
- T CSavedMemStream::Put(void const*, unsigned int)
- T CSavedMemStream::ResetReadCursor()
- T CSharedMemStream::BWaitForDataToGet()
- T CSharedMemStream::Clear(unsigned int)
- T CSharedMemStream::~CSharedMemStream()
- T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
- T CSharedMemStream::GetBytesAvailable()
- T CSharedMemStream::GetBytesRemaining()
- T CSharedMemStream::GetInternal(void*, unsigned int)
- T CSharedMemStream::Get(void*, unsigned int)
- T CSharedMemStream::PutInternal(void const*, unsigned int)
- T CSharedMemStream::Put(void const*, unsigned int)
- T CSharedMemStream::UnlockMemoryForPut(unsigned int)
- T CSimpleMachClient::~CSimpleMachClient()
- T CSimpleMachClient::DoVersionCommand()
- T CSimpleMachClient::Init(char const*, unsigned int, bool)
- T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
- T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
- T CVideoMemStreamWriter::BeginFrame()
- T CVideoMemStreamWriter::BGetRequestedCaptureFramerate(unsigned int*, unsigned int*)
- T CVideoMemStreamWriter::BGetRequestedGameFramerate(unsigned int*, unsigned int*)
- T CVideoMemStreamWriter::BReadyForNewFrame() const
- T CVideoMemStreamWriter::CommitFrame(bool)
- T CVideoMemStreamWriter::~CVideoMemStreamWriter()
- T CVideoMemStreamWriter::CVideoMemStreamWriter(char const*, unsigned int)
- T CVideoMemStreamWriter::GetFrameSize() const
- T CVROverlayInterfaceGL::CreateDistortMap(vr::IVRSystem*, vr::Hmd_Eye, unsigned int, unsigned int) const
- T CVROverlayInterfaceGL::CVROverlayInterfaceGL(CVROverlayInterfaceGL::CreateStruct_t const&)
- T CVROverlayInterfaceGL::DrawQuad(CVROverlayInterfaceGL::Texture_t*, vr::utils::CVRConstants const&, vr::Hmd_Eye, unsigned int, unsigned int, unsigned int, unsigned int) const
- T __cxa_allocate_exception
- T __cxa_begin_catch
- T __cxa_call_terminate
- T __cxa_call_unexpected
- T __cxa_current_exception_type
- T __cxa_demangle
- T __cxa_end_catch
- T __cxa_free_exception
- T __cxa_get_globals
- T __cxa_get_globals_fast
- T __cxa_pure_virtual
- T __cxa_rethrow
- T __cxa_throw
- T __cxxabiv1::__class_type_info::~__class_type_info()
- T __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
- T __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
- T __cxxabiv1::__class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
- T __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
- T __cxxabiv1::__class_type_info::__do_find_public_src(long, void const*, __cxxabiv1::__class_type_info const*, void const*) const
- T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
- T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
- T __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
- T __cxxabiv1::__si_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
- T __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
- T __cxxabiv1::__si_class_type_info::__do_find_public_src(long, void const*, __cxxabiv1::__class_type_info const*, void const*) const
- T __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
- T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
- T __cxxabiv1::__terminate(void (*)())
- T __cxxabiv1::__unexpected(void (*)())
  t cxxConstruct(objc_object*)
  t d_bare_function_type
  t d_call_offset
  t d_cv_qualifiers
  t d_demangle
- t demangledName(char const*, bool)
  t d_encoding
- t d_expression
  t d_expr_primary
+ t d_expression
  t d_name
  t d_operator_name
  t d_print_append_buffer
@@ -794,239 +1003,30 @@
  t d_template_param
  t d_type
  t d_unqualified_name
- T dyld_stub_binding_helper
+ t demangledName(char const*, bool)
  t eh_globals_dtor(void*)
- T Exiting()
  t fixStringForCoreData(objc_object*)
  t get_adjusted_ptr(std::type_info const*, std::type_info const*, void**)
- T GetGLProcAddress(char*)
- T GetGLRGBAShader(bool)
- T GetGLVertexShader(bool)
- T GetGLYUVShaderUV(bool)
- T GetGLYUVShaderY(bool)
- T GetIMENullImpl()
- T GetMovieResolution(int, int, int*, int*)
  t get_ttype_entry(lsda_header_info*, unsigned int)
  t get_ttype_entry(lsda_header_info*, unsigned long)
- T GetVideoTickCount()
  t global constructors keyed to (anonymous namespace)::emergency_mutex
  t global constructors keyed to __cxa_get_globals_fast
- T __gnu_cxx::__concurrence_lock_error::~__concurrence_lock_error()
- T __gnu_cxx::__concurrence_lock_error::what() const
- T __gnu_cxx::__concurrence_unlock_error::~__concurrence_unlock_error()
- T __gnu_cxx::__concurrence_unlock_error::what() const
- T __gnu_cxx::__mutex::lock()
- T __gnu_cxx::__mutex::__mutex()
- T __gnu_cxx::__mutex::unlock()
- T __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*)
- T __gnu_cxx::__scoped_lock::~__scoped_lock()
- T __gnu_cxx::__throw_concurrence_lock_error()
- T __gnu_cxx::__throw_concurrence_unlock_error()
- T __gnu_cxx::__verbose_terminate_handler()
- t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Exception*)
- T __gxx_personality_v0
- T HasGLExtension(char const*, char const*)
  t has_return_type
- time
- t Init()
- T InitializeGameStream()
  t initialize_imp(objc_object*, objc_selector*)
- t InitTicks()
- T IPC::BinarySemaphore::~BinarySemaphore()
- T IPC::BinarySemaphore::Destroy()
- T IPC::BinarySemaphore::Init(char const*, bool, bool*, bool)
- T IPC::BinarySemaphore::Lock(unsigned int)
- T IPC::BinarySemaphore::Release()
- T IPC::crc32(unsigned int, void*, unsigned int)
- T IPC::CreateBinarySemaphore(char const*, bool, bool*, bool)
- T IPC::CreateEvent(char const*, bool, bool, bool*, bool)
- T IPC::CreateMutex(char const*, bool, bool*, bool)
- T IPC::CreateSharedMem(char const*, unsigned int, IPC::ISharedMem::Access, bool*, bool)
- T IPC::ISyncObject::GetOpaque()
- T IPC::PosixEvent::Destroy()
- T IPC::PosixEvent::Init(char const*, bool, bool, bool*, bool)
- T IPC::PosixEvent::~PosixEvent()
- T IPC::PosixEvent::ResetEvent()
- T IPC::PosixEvent::SetEvent()
- T IPC::PosixEvent::Wait(unsigned int)
- T IPC::PosixMutex::Destroy()
- T IPC::PosixMutex::Init(char const*, bool, bool*, bool)
- T IPC::PosixMutex::~PosixMutex()
- T IPC::PosixMutex::Release()
- T IPC::PosixMutex::Wait(unsigned int)
- T IPC::PosixSharedMemory::Destroy()
- T IPC::PosixSharedMemory::Init(char const*, unsigned int, IPC::ISharedMem::Access, bool*, bool)
- T IPC::PosixSharedMemory::IsValid() const
- T IPC::PosixSharedMemory::Pointer() const
- T IPC::PosixSharedMemory::~PosixSharedMemory()
- T IPC::PurgeCurrentProcess()
  t is_ctor_dtor_or_conversion
- T IsOverlayEnabled
- t _load_method_name
- t _load_method_type
- T Log(char const*, ...)
- T NotifyVRCleanup
- T NotifyVRInit
- T operator delete(void*)
- T operator delete[](void*)
- T operator new(unsigned long)
- T operator new[](unsigned long)
  t parse_lsda_header(_Unwind_Context*, unsigned char const*, lsda_header_info*)
  t patch_lazy_pointers(mach_header const*, patch_t*, unsigned long)
- T Plat_FloatTime
- T Plat_MSTime
- T Plat_RelativeTickFrequency
- T Plat_RelativeTicks
- T Plat_TickDiffMilliSec
- T PutScreenshotFrame(ScreenshotDataCommand_t const&, unsigned char*, unsigned short*, unsigned short*, unsigned short*)
- T PutScreenshotImageAligned16(ScreenshotData_t const*, unsigned char**, unsigned char const*, unsigned int, unsigned int)
- T PutScreenshotImageAligned(unsigned int, ScreenshotData_t const*, unsigned char**, unsigned char const*, unsigned int, unsigned int)
  t read_encoded_value(_Unwind_Context*, unsigned char, unsigned char const*, unsigned int*)
  t read_encoded_value(_Unwind_Context*, unsigned char, unsigned char const*, unsigned long*)
  t read_encoded_value_with_base(unsigned char, unsigned int, unsigned char const*, unsigned int*)
  t read_encoded_value_with_base(unsigned char, unsigned long, unsigned char const*, unsigned long*)
- T ReadGameStream()
  t replaceMethod(objc_class*, objc_selector*, objc_object* (*)(objc_object, objc_selector, ...), objc_object* (*)(objc_object, objc_selector, ...))
  t scanMangledField(char const*&, char const*, char const*&, int&)
- T SendGameStream(GameStreamMessageFromGame_t const*)
- T SendOneTimeInputPid()
- T SetNotificationPosition
- T ShutdownGameStream()
- T StartMovieRecordingNextFrame(int, int)
- t __static_initialization_and_destruction_0(int, int)
- T std::bad_alloc::~bad_alloc()
- T std::bad_alloc::what() const
- T std::bad_exception::~bad_exception()
- T std::bad_exception::what() const
- T std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
- T std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)
- T std::domain_error::~domain_error()
- T std::exception::~exception()
- T std::exception::what() const
- T std::invalid_argument::~invalid_argument()
- T std::length_error::~length_error()
- T std::length_error::length_error(std::string const&)
- T std::logic_error::~logic_error()
- T std::logic_error::logic_error(std::string const&)
- T std::logic_error::what() const
- T std::map<int, CBaseOverlayRenderer::SharedTexData_t, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::operator[](int const&)
- T std::map<int, COverlayGLRenderer::GLTexture*, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::operator[](int const&)
- T std::map<unsigned long, CInputHandler::CustomCursorData_t, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::operator[](unsigned long const&)
- T std::out_of_range::~out_of_range()
- T std::overflow_error::~overflow_error()
- T std::range_error::~range_error()
- T std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
- T std::_Rb_tree_increment(std::_Rb_tree_node_base*)
- T std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::find(int const&)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >*)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> const&)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_insert_unique(std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> const&)
- T std::_Rb_tree<int, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t>, std::_Select1st<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::less<int>, std::allocator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> > >::_M_insert_unique(std::_Rb_tree_iterator<std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> >, std::pair<int const, CBaseOverlayRenderer::SharedTexData_t> const&)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::find(int const&)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, COverlayGLRenderer::GLTexture*> >*)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<int const, COverlayGLRenderer::GLTexture*> const&)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_insert_unique(std::pair<int const, COverlayGLRenderer::GLTexture*> const&)
- T std::_Rb_tree<int, std::pair<int const, COverlayGLRenderer::GLTexture*>, std::_Select1st<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::less<int>, std::allocator<std::pair<int const, COverlayGLRenderer::GLTexture*> > >::_M_insert_unique(std::_Rb_tree_iterator<std::pair<int const, COverlayGLRenderer::GLTexture*> >, std::pair<int const, COverlayGLRenderer::GLTexture*> const&)
- T std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
- T std::_Rb_tree<unsigned long long, std::pair<unsigned long long const, CursorInfo_t>, std::_Select1st<std::pair<unsigned long long const, CursorInfo_t> >, std::less<unsigned long long>, std::allocator<std::pair<unsigned long long const, CursorInfo_t> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned long long const, CursorInfo_t> >*)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::find(unsigned long const&)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >*)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<unsigned long const, CInputHandler::CustomCursorData_t> const&)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_insert_unique(std::pair<unsigned long const, CInputHandler::CustomCursorData_t> const&)
- T std::_Rb_tree<unsigned long, std::pair<unsigned long const, CInputHandler::CustomCursorData_t>, std::_Select1st<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> > >::_M_insert_unique(std::_Rb_tree_iterator<std::pair<unsigned long const, CInputHandler::CustomCursorData_t> >, std::pair<unsigned long const, CInputHandler::CustomCursorData_t> const&)
- T std::runtime_error::~runtime_error()
- T std::runtime_error::what() const
- T std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long)
- T std::string::_Rep::_M_dispose(std::allocator<char> const&)
- T std::string::_Rep::_M_grab(std::allocator<char> const&, std::allocator<char> const&)
- T std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&)
- T std::terminate()
- T std::__throw_bad_alloc()
- T std::__throw_length_error(char const*)
- T std::__throw_logic_error(char const*)
- T std::type_info::__is_function_p() const
- T std::type_info::__is_pointer_p() const
- T std::underflow_error::~underflow_error()
- T std::unexpected()
- T std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<IPC::IEvent**, std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> > >, IPC::IEvent* const&)
- T std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> >::push_back(IPC::IEvent* const&)
- T SteamCFRunLoopRun()
- T SteamCFRunLoopRunInMode(__CFString const*, double, unsigned char)
- T SteamCGAssociateMouseAndMouseCursorPosition(int)
- T SteamCGAssociateMouseAndMouseCursorPosition(unsigned int)
- T SteamCGCursorIsVisible()
- T SteamCGDisplayHideCursor(unsigned int)
- T SteamCGDisplayMoveCursorToPoint(unsigned int, CGPoint)
- T SteamCGDisplayShowCursor(unsigned int)
- T SteamCGGetLastMouseDelta(int*, int*)
- T SteamCGLChoosePixelFormat(_CGLPixelFormatAttribute const*, _CGLPixelFormatObject**, int*)
- T SteamCGLDisable(_CGLContextObject*, _CGLContextEnable)
- T SteamCGLEnable(_CGLContextObject*, _CGLContextEnable)
- T SteamCGLFlushDrawable(_CGLContextObject*)
- T SteamCGLSetParameter(_CGLContextObject*, _CGLContextParameter, int const*)
- T SteamCGWarpMouseCursorPosition(CGPoint)
- T SteamHideCursor()
- T SteamInitCursor()
- T SteamShowCursor()
- T SteamThreadTools::CThread::~CThread()
- T SteamThreadTools::CThread::CThread()
- T SteamThreadTools::CThreadEvent::CThreadEvent(bool)
- T SteamThreadTools::CThreadEvent::Set()
- T SteamThreadTools::CThread::GetName()
- T SteamThreadTools::CThread::GetThreadProc()
- T SteamThreadTools::CThread::Init()
- T SteamThreadTools::CThread::IsAlive()
- T SteamThreadTools::CThread::IsThreadRunning()
- T SteamThreadTools::CThread::Join(unsigned int)
- T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
- T SteamThreadTools::CThreadLocalBase::Set(void*)
- T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
- T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
- T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
- T SteamThreadTools::CThreadMutex::~CThreadMutex()
- T SteamThreadTools::CThread::OnExit()
- T SteamThreadTools::CThread::SetName(char const*)
- T SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
- T SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
- T SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
- T SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
- T SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
- T SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
- T SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
- T SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
- T SteamThreadTools::CThread::ThreadProc(void*)
- T SteamThreadTools::InitMainThread()
- T StopMovieRecording()
- T TakeScreenshotNextFrame(bool)
- t __tcf_0
- T ThreadInterlockedAssignIf64
- T ThreadInterlockedCompareExchange
- T ThreadSleep
  t transcribeMethods(objc_class*, glue_class_ro_t*)
  t transcribeProperties(objc_class*, glue_class_ro_t*)
  t transcribeProtocols(objc_class*, glue_class_ro_t*)
- T UpdateVRState(int, int)
- T ValveHookScreenshots
- T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IVRSystem*, vr::Hmd_Eye, int, int, unsigned short*, int)
- T vr::utils::COverlayView<CVROverlayInterfaceGL>::COverlayView(CVROverlayInterfaceGL::CreateStruct_t const&)
- T vr::utils::COverlayView<CVROverlayInterfaceGL>::Draw(float, float, float, float, float) const
- T vr::utils::CVRConstants::ComputeConstants(vr::IVRSystem*)
- T WindowInVRBounds(int, int)
- __udivdi3
- __umoddi3
+ time
  unlink
- _Unwind_DeleteException
- _Unwind_GetDataRelBase
- _Unwind_GetIP
- _Unwind_GetLanguageSpecificData
- _Unwind_GetRegionStart
- _Unwind_GetTextRelBase
- _Unwind_RaiseException
- _Unwind_Resume
- _Unwind_Resume_or_Rethrow
- _Unwind_SetGR
- _Unwind_SetIP
  usleep
  usleep$UNIX2003
  vfprintf

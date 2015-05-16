@@ -1,76 +1,18 @@
 
- asctime_r
- atoi
- backtrace
- backtrace_symbols
- b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
- b ClearWritingMiniDump::fAsserted
- b g_bBreak
- b g_bDumpWritten
- B g_bInException
- b g_bWriteFullMemOnCrash
- b g_bWritingFatalMinidump
- b g_bWritingNonfatalMinidump
- b g_CmdLine
- B g_CpuTimeUnreliable
- b g_DumpHelper
- b GetCPUInformation()::pi
- b GetCRunTimeVersion::rgchVersionStr
- b GetLocalHostname::rgchHostname
- b GetMiniDumpMutex()::ThreadMutexMiniDump
- b GetMinidumpsWritten()::MinidumpsWritten
- b GetProcessorDetailBlob(int*)::DetailBlob
- b GetProcessorVendorId()::VendorID
- b g_nNumFilters
- b g_pAssertDisables
- b g_pCrashMemoryReserve
- b g_rgchStackTrackingFilters
- B g_StackDumpMutex
- B g_TestHarness
- b g_TickBase
- b g_TickFrequency
- b g_TickFrequencyDouble
- b g_TickLastReturned
- b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
- b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
- b guard variable for GetMinidumpsWritten()::MinidumpsWritten
- b guard variable for _SpewMessageType::autoMutex__
- B g_VProfile
- B g_VProfManager
- B g_VProfProfilesRunningCount
- b Plat_IsSteamConsoleMode::bInited
- b Plat_IsSteamConsoleMode::bIsSteamConsole
- b s_AssertFailedNotifyFunc
- B s_bInAssert
- b s_bSetSigHandler
- b s_DefaultLevel
- b s_DefaultLogLevel
- b SetWritingMiniDump(bool)::fAsserted
- b s_FlushLogFunc
- b s_GroupCount
- b s_LastMiniDumpTime
- b s_Line
- b sm_bAssertDumpStack
- b _SpewMessageType::autoMutex__
- b s_pFileName
- b s_pSpewGroups
- b s_SpewType
- b s_StdMemAlloc
+ B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
- B SteamThreadTools::g_SuspendResumeLock
- b SteamThreadTools::g_ThreadMainThreadID
- b SteamThreadTools::ThreadShellExecute::bInstalledSignalHandler
- b SteamVProf::CVProfile::FindOrCreateCounter(char const*, SteamVProf::CounterGroup_t)::dummy
  B SteamVProf::CVProfNode::s_iCurrentUniqueNodeID
  B SteamVProf::g_mutexProfileDump
  B TLS_cubAllocated
- b V_pretifymem(float, int, bool)::current
- b V_pretifymem(float, int, bool)::output
- b _ZL6g_Info.0
- b _ZL6g_Info.1
- b _ZL6g_Info.2
- __CFConstantStringClassReference
+ B g_CpuTimeUnreliable
+ B g_StackDumpMutex
+ B g_TestHarness
+ B g_VProfManager
+ B g_VProfProfilesRunningCount
+ B g_VProfile
+ B g_bInException
+ B s_bInAssert
  CFDictionaryGetTypeID
  CFDictionaryGetValueIfPresent
  CFGetTypeID
@@ -79,23 +21,6 @@
  CFStringGetCString
  CFURLCreateDataAndPropertiesFromResource
  CFURLCreateWithFileSystemPath
- chdir
- ctime_r
- __cxa_allocate_exception
- __cxa_atexit
- __cxa_begin_catch
- __cxa_call_unexpected
- __cxa_end_catch
- __cxa_guard_abort
- __cxa_guard_acquire
- __cxa_guard_release
- __cxa_pure_virtual
- __cxa_rethrow
- __cxa_throw
- daylight
- d CValidator::BExcludeAllocationFromTracking(char const*, int)::fileLineInfoExclude
- d dyld__mach_header
- _DefaultRuneLocale
  D g_AllocError
  D g_ClockSpeed
  D g_ClockSpeedMicrosecondsMultiplier
@@ -103,138 +28,14 @@
  D g_ClockSpeedSecondsMultiplier
  D g_dwClockSpeed
  D g_pMemAllocSteam
- __divdi3
- dladdr
- dlclose
- dlopen
- dlsym
- d s_SpewOutputFunc
  D typeinfo for CStdMemAlloc
  D typeinfo for IMemAlloc
  D typeinfo for SteamThreadTools::CThread
  D vtable for CStdMemAlloc
  D vtable for SteamThreadTools::CThread
- __error
- _exit
- __fixunsdfdi
- fork
- fprintf
- fputs
- fputs$UNIX2003
- free
- fwrite
- getenv
- gethostname
- getpid
- gettimeofday
- gmtime_r
- __gxx_personality_v0
- host_page_size
- host_statistics
- kCFAllocatorDefault
- kill
- kill$UNIX2003
- localtime_r
- mach_absolute_time
- mach_host_self
- mach_timebase_info
- malloc
- malloc_size
- __maskrune
- memcpy
- memmove
- memset
- mmap
- mmap$UNIX2003
- mprotect
- mprotect$UNIX2003
- munmap
- munmap$UNIX2003
- nanosleep
- nanosleep$UNIX2003
- _NSGetExecutablePath
- operator delete(void*)
- operator delete[](void*)
- operator new(unsigned long)
- operator new[](unsigned long)
- printf
- pthread_attr_init
- pthread_attr_setstacksize
- pthread_cancel
- pthread_cancel$UNIX2003
- pthread_cond_broadcast
- pthread_cond_destroy
- pthread_cond_init
- pthread_cond_init$UNIX2003
- pthread_cond_signal
- pthread_cond_timedwait
- pthread_cond_timedwait$UNIX2003
- pthread_cond_wait
- pthread_cond_wait$UNIX2003
- pthread_create
- pthread_exit
- pthread_getschedparam
- pthread_getspecific
- pthread_join
- pthread_join$UNIX2003
- pthread_key_create
- pthread_key_delete
- pthread_kill
- pthread_mach_thread_np
- pthread_mutexattr_destroy
- pthread_mutexattr_destroy$UNIX2003
- pthread_mutexattr_init
- pthread_mutexattr_settype
- pthread_mutex_destroy
- pthread_mutex_init
- pthread_mutex_lock
- pthread_mutex_trylock
- pthread_mutex_unlock
- pthread_self
- pthread_setschedparam
- pthread_setspecific
- r crc32(unsigned long, void const*, unsigned long)::crcTable
- realloc
- r SteamVProf::g_ColorLookup
  R typeinfo name for CStdMemAlloc
  R typeinfo name for IMemAlloc
  R typeinfo name for SteamThreadTools::CThread
- sched_yield
- semctl
- semctl$UNIX2003
- semget
- semop
- sigaction
- signal
- sigprocmask
- snprintf
- sscanf
- __stack_chk_fail
- __stack_chk_guard
- stat
- __stderrp
- std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
- std::_Rb_tree_increment(std::_Rb_tree_node_base*)
- std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
- std::terminate()
- std::__throw_bad_alloc()
- std::__throw_length_error(char const*)
- strcasecmp
- strchr
- strcmp
- strcpy
- strerror
- strerror$UNIX2003
- strlen
- strncasecmp
- strncat
- strncpy
- strrchr
- strstr
- sysctl
- sysctlnametomib
- system
- system$UNIX2003
  T AllocateCrashMemoryReserve
  T AreStackTrackingFiltersEnabledAtStart
  T AssertMsgImplementation
@@ -243,36 +44,18 @@
  T BWritingFatalMiniDump
  T BWritingMiniDump
  T BWritingNonFatalMiniDump
- T CalculateCPUFreq()
- T CallAssertFailedNotifyFunc
- T CallFlushLogFunc
- T CatchAndWriteContext_t::Invoke()
- T CatchAndWriteMiniDump
- T CatchAndWriteMiniDumpEx
- T CatchAndWriteMiniDumpExForVoidPtrFn
- T CatchAndWriteMiniDumpExReturnsInt
- T CatchAndWriteMiniDumpForVoidPtrFn
- T CatchAndWriteMiniDump_Impl(CatchAndWriteContext_t&)
  T CCrashHandlerScope::~CCrashHandlerScope()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
- T CheckSSE4aTechnology()
- T CL2Cache::~CL2Cache()
  T CL2Cache::CL2Cache()
  T CL2Cache::End()
  T CL2Cache::Start()
  T CL2Cache::Validate(CValidator&, char const*)
- T __clang_call_terminate
- T ClearStackTrackingFilters
- T ClearWritingMiniDump
- T CrackSmokingCompiler
- T CrashOnPurpose()
- T CreateSimpleProcess
- T CreateVProfile
+ T CL2Cache::~CL2Cache()
+ T CStdMemAlloc::Alloc(unsigned long)
+ T CStdMemAlloc::Alloc(unsigned long, char const*, int, bool, bool)
  T CStdMemAlloc::AllocCanFail(unsigned long)
  T CStdMemAlloc::AllocCanFail(unsigned long, char const*, int, bool)
  T CStdMemAlloc::AllocTracked(unsigned long)
- T CStdMemAlloc::Alloc(unsigned long)
- T CStdMemAlloc::Alloc(unsigned long, char const*, int, bool, bool)
  T CStdMemAlloc::BIsVirtualHeapInitialized()
  T CStdMemAlloc::CompactHeap()
  T CStdMemAlloc::CompactIncremental()
@@ -288,7 +71,6 @@
  T CStdMemAlloc::CrtSetReportFile(int, void*)
  T CStdMemAlloc::CrtSetReportHook(void*)
  T CStdMemAlloc::CrtSetReportMode(int, int)
- T CStdMemAlloc::~CStdMemAlloc()
  T CStdMemAlloc::CubAllocated()
  T CStdMemAlloc::CubAllocatedUntracked()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
@@ -296,9 +78,9 @@
  T CStdMemAlloc::DumpStatsFileBase(char const*)
  T CStdMemAlloc::Expand_NoLongerSupported(void*, unsigned long)
  T CStdMemAlloc::Expand_NoLongerSupported(void*, unsigned long, char const*, int)
- T CStdMemAlloc::FreeTracked(void*)
  T CStdMemAlloc::Free(void*, bool)
  T CStdMemAlloc::Free(void*, char const*, int, bool)
+ T CStdMemAlloc::FreeTracked(void*)
  T CStdMemAlloc::GetActualDbgInfo(char const*&, int&)
  T CStdMemAlloc::GetAllocationFile(void*)
  T CStdMemAlloc::GetAllocationLine(void*)
@@ -306,16 +88,15 @@
  T CStdMemAlloc::GetNextMemBlock(void*)
  T CStdMemAlloc::GetSize(void*)
  T CStdMemAlloc::GetSize(void*, bool)
- T CStdMemAlloc::heapchk()
  T CStdMemAlloc::InitVirtualHeap(EVirtualHeapSize)
- T CStdMemAlloc::InternalAllocFromPools(unsigned long)
  T CStdMemAlloc::InternalAlloc(unsigned long, bool)
+ T CStdMemAlloc::InternalAllocFromPools(unsigned long)
  T CStdMemAlloc::InternalFree(void*)
  T CStdMemAlloc::InternalRealloc(void*, unsigned long)
  T CStdMemAlloc::IsClaimed(void*)
  T CStdMemAlloc::IsDebugHeap()
- T CStdMemAlloc::IsMemLeakReported(void*)
  T CStdMemAlloc::IsMemLeak(void*)
+ T CStdMemAlloc::IsMemLeakReported(void*)
  T CStdMemAlloc::IsMemUntracked(void*)
  T CStdMemAlloc::IsValid(void*)
  T CStdMemAlloc::MemoryAllocFailed()
@@ -335,15 +116,16 @@
  T CStdMemAlloc::SetMemLeakReported(void*)
  T CStdMemAlloc::SetMemUntracked(void*)
  T CStdMemAlloc::WalkAndAuditHeap()
+ T CStdMemAlloc::heapchk()
+ T CStdMemAlloc::~CStdMemAlloc()
  T CSteam3DumpHelper::ComputeBuildID(char const*, char const*)
  T CSteam3DumpHelper::ComputeExeNameFromArgv0(char const*)
- T CSteam3DumpHelper::~CSteam3DumpHelper()
  T CSteam3DumpHelper::GetProduct()
  T CSteam3DumpHelper::GetVersion()
  T CSteam3DumpHelper::Init()
  T CSteam3DumpHelper::LoadModule(char const*)
  T CSteam3DumpHelper::Shutdown()
- T CTestHarness::~CTestHarness()
+ T CSteam3DumpHelper::~CSteam3DumpHelper()
  T CTestHarness::Init()
  T CTestHarness::RunTest(void (*)(void*), void*)
  T CTestHarness::TerminateThread()
@@ -351,19 +133,22 @@
  T CTestHarness::TestThreadProxy(void*)
  T CTestHarness::YieldToMainThread()
  T CTestHarness::YieldToTestThread()
+ T CTestHarness::~CTestHarness()
  T CTier0::ValidateGlobals(CValidator&)
+ T CValObject::ClaimChildMemoryBlock(unsigned long)
+ T CValObject::ClaimMemoryBlock(void*, unsigned long)
+ T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
  T CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
  T CValidator::BExcludeAllocationFromTracking(char const*, int)
+ T CValidator::CValidator(int, bool)
  T CValidator::ClaimArrayMemory(void*)
  T CValidator::ClaimConnection(unsigned int)
- T CValidator::ClaimMemory_Aligned(void*)
  T CValidator::ClaimMemory(void*)
+ T CValidator::ClaimMemory_Aligned(void*)
  T CValidator::ClaimOsFile(int)
  T CValidator::ClaimSocket(int)
  T CValidator::ClaimTrackedKey(CTrackItems*, void*, unsigned long*)
  T CValidator::ClaimUntrackedMemory(unsigned long)
- T CValidator::~CValidator()
- T CValidator::CValidator(int, bool)
  T CValidator::DiffAgainst(CValidator*)
  T CValidator::Finalize()
  T CValidator::FindObject(void*)
@@ -375,32 +160,41 @@
  T CValidator::SetAllocSizeFilter(int)
  T CValidator::UnlockValidationLocks()
  T CValidator::Validate(CValidator&, char const*)
- T CValObject::ClaimChildMemoryBlock(unsigned long)
- T CValObject::ClaimMemoryBlock(void*, unsigned long)
- T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
+ T CValidator::~CValidator()
+ T CalculateCPUFreq()
+ T CallAssertFailedNotifyFunc
+ T CallFlushLogFunc
+ T CatchAndWriteContext_t::Invoke()
+ T CatchAndWriteMiniDump
+ T CatchAndWriteMiniDumpEx
+ T CatchAndWriteMiniDumpExForVoidPtrFn
+ T CatchAndWriteMiniDumpExReturnsInt
+ T CatchAndWriteMiniDumpForVoidPtrFn
+ T CatchAndWriteMiniDump_Impl(CatchAndWriteContext_t&)
+ T CheckSSE4aTechnology()
+ T ClearStackTrackingFilters
+ T ClearWritingMiniDump
+ T CrackSmokingCompiler
+ T CrashOnPurpose()
+ T CreateSimpleProcess
+ T CreateVProfile
+ T DLog
+ T DWarning
  T DeclareCurrentThreadIsMainThread
  T DefaultSpewFunc(SpewType_t, char const*)
- T DLog
- T _DMsg
  T DoNewAssertDialog
- T _DSpewMessage
- T DWarning
- T dyld_stub_binding_helper
  T EnableCrashingOnCrashes
  T Error
- T _ExitOnFatalAssert
  T FindSpewGroup(char const*, int*)
  T FreeCrashMemoryReserve
  T GetAvailableRAM
  T GetCPUInformation()
- T GetCrashHandlerFactory
  T GetCRunTimeVersion
+ T GetCrashHandlerFactory
  T GetInstalledRAM
  T GetLocalHostname
  T GetMiniDumpBuildID
- t GetMiniDumpMutex()
  T GetMiniDumpSteamID
- t GetMinidumpsWritten()
  T GetNumberOfSpewAndLogGroups
  T GetNumberOfStackTrackingFilters
  T GetPortableSystemInformation
@@ -409,17 +203,10 @@
  T GetSpewAndLogLevelByGroupIndex
  T GetSpewOutputFunc
  T GetStackTrackingFilter
- t global constructors keyed to 000101
- t global constructors keyed to 000200
  T HasStackTrackingFilters
- time
- timegm
- timezone
- timezone$UNIX2003
- T InitializeStackTrackingFilters
  T InitPME
  T InitStackWalk()
- t InitTicks()
+ T InitializeStackTrackingFilters
  T Is64BitOS
  T IsInAssert
  T IsLogActive
@@ -429,14 +216,10 @@
  T MiniDumpUnlock
  T MinidumpValidate(CValidator&)
  T Msg
- __tolower
  T Plat_AbsoluteTime
  T Plat_AbsoluteTimeToFloat
  T Plat_Alloc
- T Plat_asctime
  T Plat_AttachDebuggerToProcess
- T Plat_ctime
- T Plat_daylight
  T Plat_DefaultAllocErrorFn
  T Plat_FloatTime
  T Plat_Free
@@ -444,11 +227,9 @@
  T Plat_GetExecutablePath
  T Plat_GetExecutablePathUTF8
  T Plat_GetStackBackTrace
- T Plat_gmtime
  T Plat_IsInDebugSession
  T Plat_IsSteamConsoleMode
  T Plat_IsSteamOS
- T Plat_localtime
  T Plat_MSTime
  T Plat_MSTime64
  T Plat_OutputDebugString
@@ -461,13 +242,17 @@
  T Plat_SetCommandLineArgs
  T Plat_TickDiffMicroSec
  T Plat_TickDiffMilliSec
- T Plat_timegm
- T Plat_timezone
  T Plat_VirtualAccessFlags
  T Plat_VirtualAlloc
  T Plat_VirtualFree
  T Plat_VirtualProtect
- t ProcessRawStack(void**, int, int, CStack&)
+ T Plat_asctime
+ T Plat_ctime
+ T Plat_daylight
+ T Plat_gmtime
+ T Plat_localtime
+ T Plat_timegm
+ T Plat_timezone
  T RealGetCallStack
  T RealPrintCallStack
  T RealPrintRawCallStack
@@ -489,39 +274,9 @@
  T SpewAndLogActivate
  T SpewAndLogChangeIfStillDefault
  T SpewChangeIfStillDefault
- T _SpewInfo
- T _SpewMessage
- T _SpewMessageType
  T SpewOutputFunc
- T std::_Rb_tree<char const*, std::pair<char const* const, unsigned int>, std::_Select1st<std::pair<char const* const, unsigned int> >, std::less<char const*>, std::allocator<std::pair<char const* const, unsigned int> > >::_M_erase(std::_Rb_tree_node<std::pair<char const* const, unsigned int> >*)
- T std::_Rb_tree<char const*, std::pair<char const* const, unsigned int>, std::_Select1st<std::pair<char const* const, unsigned int> >, std::less<char const*>, std::allocator<std::pair<char const* const, unsigned int> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const* const, unsigned int> const&)
- T std::_Rb_tree<char const*, std::pair<char const* const, unsigned int>, std::_Select1st<std::pair<char const* const, unsigned int> >, std::less<char const*>, std::allocator<std::pair<char const* const, unsigned int> > >::_M_insert_unique(std::pair<char const* const, unsigned int> const&)
- T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::find(FileAndLine_t const&)
- T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_erase(std::_Rb_tree_node<FileAndLine_t>*)
- T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, FileAndLine_t const&)
- T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert_unique(FileAndLine_t const&)
- T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::find(SteamVProf::CVProfNode* const&)
- T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::_M_erase(std::_Rb_tree_node<std::pair<SteamVProf::CVProfNode* const, double> >*)
- T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<SteamVProf::CVProfNode* const, double> const&)
- T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::_M_insert_unique(std::pair<SteamVProf::CVProfNode* const, double> const&)
- T std::set<FileAndLine_t, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::~set()
- T std::vector<SteamVProf::IVProfileCallbackHandler*, std::allocator<SteamVProf::IVProfileCallbackHandler*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<SteamVProf::IVProfileCallbackHandler**, std::vector<SteamVProf::IVProfileCallbackHandler*, std::allocator<SteamVProf::IVProfileCallbackHandler*> > >, SteamVProf::IVProfileCallbackHandler* const&)
- T std::vector<SteamVProf::IVProfileCallbackHandler*, std::allocator<SteamVProf::IVProfileCallbackHandler*> >::push_back(SteamVProf::IVProfileCallbackHandler* const&)
- T std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> >::_M_insert_aux(__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, SteamVProf::TimeSums_t const&)
- T std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> >::operator=(std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > const&)
- T std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> >::push_back(SteamVProf::TimeSums_t const&)
- T SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
  T SteamThreadTools::CThread::BHasValidThreadID()
- T SteamThreadTools::CThread::~CThread()
  T SteamThreadTools::CThread::CThread()
- T SteamThreadTools::CThreadEvent::Check()
- T SteamThreadTools::CThreadEvent::CThreadEvent(bool)
- T SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
- T SteamThreadTools::CThreadEvent::Reset()
- T SteamThreadTools::CThreadEvent::Set()
- T SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
- T SteamThreadTools::CThreadFullMutex::IsCreator() const
- T SteamThreadTools::CThreadFullMutex::Release()
  T SteamThreadTools::CThread::GetCurrentCThread()
  T SteamThreadTools::CThread::GetName()
  T SteamThreadTools::CThread::GetPriority() const
@@ -531,99 +286,76 @@
  T SteamThreadTools::CThread::IsAlive()
  T SteamThreadTools::CThread::IsThreadRunning()
  T SteamThreadTools::CThread::Join(unsigned int)
- T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
- T SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
- T SteamThreadTools::CThreadLocalBase::Get() const
- T SteamThreadTools::CThreadLocalBase::Set(void*)
- T SteamThreadTools::CThreadLocal<int>::~CThreadLocal()
- T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
- T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
- T SteamThreadTools::CThreadLocal<long long>::~CThreadLocal()
- T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
- T SteamThreadTools::CThreadLocalPtr<SteamVProf::CVProfile>::~CThreadLocalPtr()
- T SteamThreadTools::CThreadLocalStackCounter<int>::~CThreadLocalStackCounter()
- T SteamThreadTools::CThreadLocalStackCounter<int>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<int>&)
- T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
- T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
- T SteamThreadTools::CThreadMutex::~CThreadMutex()
- T SteamThreadTools::CThreadMutex::CThreadMutex()
  T SteamThreadTools::CThread::OnExit()
  T SteamThreadTools::CThread::Resume()
- T SteamThreadTools::CThreadRWLock::LockForWrite()
- T SteamThreadTools::CThreadRWLock::UnlockWrite()
- T SteamThreadTools::CThreadRWLock::WaitForRead()
- T SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
- T SteamThreadTools::CThreadSemaphore::Release(long)
  T SteamThreadTools::CThread::SetName(char const*)
  T SteamThreadTools::CThread::SetPriority(int)
  T SteamThreadTools::CThread::Sleep(unsigned int)
- T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
- T SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
- T SteamThreadTools::CThreadSpinRWLock::LockForRead()
- T SteamThreadTools::CThreadSpinRWLock::SpinLockForWrite(unsigned int)
- T SteamThreadTools::CThreadSpinRWLock::UnlockRead()
- T SteamThreadTools::CThreadSpinRWLock::UnlockWrite()
  T SteamThreadTools::CThread::Start(unsigned long)
  T SteamThreadTools::CThread::Stop(int)
  T SteamThreadTools::CThread::Suspend()
- T SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
- T SteamThreadTools::CThreadSyncObject::AssertUseable()
- T SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
- T SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
- T SteamThreadTools::CThreadSyncObject::CreateSemaphoreInternal(char const*, long, bool, bool*)
- T SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
- T SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
- T SteamThreadTools::CThreadSyncObject::EnsureSemaphoreClearedInternal(int)
- T SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
- T SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
- T SteamThreadTools::CThreadSyncObject::OpenSemaphoreInternal(char const*, bool)
- T SteamThreadTools::CThreadSyncObject::operator!() const
- T SteamThreadTools::CThreadSyncObject::ReleaseSemaphoreInternal(int, long)
- T SteamThreadTools::CThreadSyncObject::SaveNameToFile(char const*)
- T SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
- T SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
  T SteamThreadTools::CThread::Terminate(int)
  T SteamThreadTools::CThread::ThreadExceptionWrapper(void*)
  T SteamThreadTools::CThread::ThreadProc(void*)
  T SteamThreadTools::CThread::WaitForCreateComplete(SteamThreadTools::CThreadEvent*)
  T SteamThreadTools::CThread::Yield()
+ T SteamThreadTools::CThread::~CThread()
+ T SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+ T SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
+ T SteamThreadTools::CThreadEvent::Check()
+ T SteamThreadTools::CThreadEvent::Reset()
+ T SteamThreadTools::CThreadEvent::Set()
+ T SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
+ T SteamThreadTools::CThreadFullMutex::IsCreator() const
+ T SteamThreadTools::CThreadFullMutex::Release()
+ T SteamThreadTools::CThreadLocal<int>::~CThreadLocal()
+ T SteamThreadTools::CThreadLocal<long long>::~CThreadLocal()
+ T SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
+ T SteamThreadTools::CThreadLocalBase::Get() const
+ T SteamThreadTools::CThreadLocalBase::Set(void*)
+ T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
+ T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
+ T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
+ T SteamThreadTools::CThreadLocalPtr<SteamThreadTools::CThread>::~CThreadLocalPtr()
+ T SteamThreadTools::CThreadLocalPtr<SteamVProf::CVProfile>::~CThreadLocalPtr()
+ T SteamThreadTools::CThreadLocalStackCounter<int>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<int>&)
+ T SteamThreadTools::CThreadLocalStackCounter<int>::~CThreadLocalStackCounter()
+ T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
+ T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
+ T SteamThreadTools::CThreadMutex::CThreadMutex()
+ T SteamThreadTools::CThreadMutex::~CThreadMutex()
+ T SteamThreadTools::CThreadRWLock::LockForWrite()
+ T SteamThreadTools::CThreadRWLock::UnlockWrite()
+ T SteamThreadTools::CThreadRWLock::WaitForRead()
+ T SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+ T SteamThreadTools::CThreadSemaphore::Release(long)
+ T SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
+ T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
+ T SteamThreadTools::CThreadSpinRWLock::LockForRead()
+ T SteamThreadTools::CThreadSpinRWLock::SpinLockForWrite(unsigned int)
+ T SteamThreadTools::CThreadSpinRWLock::UnlockRead()
+ T SteamThreadTools::CThreadSpinRWLock::UnlockWrite()
+ T SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
+ T SteamThreadTools::CThreadSyncObject::AssertUseable()
+ T SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
+ T SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
+ T SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
+ T SteamThreadTools::CThreadSyncObject::CreateSemaphoreInternal(char const*, long, bool, bool*)
+ T SteamThreadTools::CThreadSyncObject::EnsureSemaphoreClearedInternal(int)
+ T SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
+ T SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
+ T SteamThreadTools::CThreadSyncObject::OpenSemaphoreInternal(char const*, bool)
+ T SteamThreadTools::CThreadSyncObject::ReleaseSemaphoreInternal(int, long)
+ T SteamThreadTools::CThreadSyncObject::SaveNameToFile(char const*)
+ T SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
+ T SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
+ T SteamThreadTools::CThreadSyncObject::operator!() const
+ T SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+ T SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
  T SteamThreadTools::InitMainThread()
- t SteamThreadTools::ThreadProcConvert(void*)
- t SteamVProf::AverageTimeCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t SteamVProf::AverageTimeLessChildrenCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
- T SteamVProf::CVProfileArray::~CVProfileArray()
- T SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
- T SteamVProf::CVProfile::BudgetGroupNameToBudgetGroupID(char const*) const
- T SteamVProf::CVProfile::CreateBudgetGroups()
- T SteamVProf::CVProfile::~CVProfile()
- T SteamVProf::CVProfile::CVProfile()
- T SteamVProf::CVProfile::Dump(char const*, ...)
- T SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, int, bool)
- T SteamVProf::CVProfile::DumpSorted(char const*, double, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), int)
- T SteamVProf::CVProfile::FindNode(SteamVProf::CVProfNode*, char const*)
- T SteamVProf::CVProfile::FindOrCreateCounter(char const*, SteamVProf::CounterGroup_t)
- T SteamVProf::CVProfile::FreeNodes_R(SteamVProf::CVProfNode*)
- T SteamVProf::CVProfile::GetBudgetGroupColor(EVProfBugdetGroup, int&, int&, int&, int&)
- T SteamVProf::CVProfile::GetCounterGroup(int) const
- T SteamVProf::CVProfile::GetCounterNameAndValue(int, int&) const
- T SteamVProf::CVProfile::GetCounterName(int) const
- T SteamVProf::CVProfile::GetCounterValue(int) const
- T SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
- T SteamVProf::CVProfile::GetNumCounters() const
- T SteamVProf::CVProfile::GetThreadID()
- T SteamVProf::CVProfile::OutputReport(int, char const*, int)
- T SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
- T SteamVProf::CVProfile::ResetCounters(SteamVProf::CounterGroup_t)
- T SteamVProf::CVProfile::SumTimes(char const*, int)
- T SteamVProf::CVProfile::SumTimes(SteamVProf::CVProfNode*, int)
- T SteamVProf::CVProfile::Term()
- T SteamVProf::CVProfileThreadEntry::DeleteProfile()
- T SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
- T SteamVProf::CVProfile::Validate(CValidator&, char const*)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
- T SteamVProf::CVProfManager::~CVProfManager()
  T SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
+ T SteamVProf::CVProfManager::~CVProfManager()
  T SteamVProf::CVProfNode::EnterScope(void*)
  T SteamVProf::CVProfNode::ExitScope()
  T SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup)
@@ -635,11 +367,50 @@
  T SteamVProf::CVProfNode::Resume()
  T SteamVProf::CVProfNode::SetCurFrameTime(unsigned long)
  T SteamVProf::CVProfNode::Validate(CValidator&, char const*)
- t SteamVProf::PeakCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t SteamVProf::PeakOverAverageCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t SteamVProf::TimeCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t SteamVProf::TimeLessChildrenCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
+ T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
+ T SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
+ T SteamVProf::CVProfile::BudgetGroupNameToBudgetGroupID(char const*) const
+ T SteamVProf::CVProfile::CVProfile()
+ T SteamVProf::CVProfile::CreateBudgetGroups()
+ T SteamVProf::CVProfile::Dump(char const*, ...)
+ T SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, int, bool)
+ T SteamVProf::CVProfile::DumpSorted(char const*, double, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), int)
+ T SteamVProf::CVProfile::FindNode(SteamVProf::CVProfNode*, char const*)
+ T SteamVProf::CVProfile::FindOrCreateCounter(char const*, SteamVProf::CounterGroup_t)
+ T SteamVProf::CVProfile::FreeNodes_R(SteamVProf::CVProfNode*)
+ T SteamVProf::CVProfile::GetBudgetGroupColor(EVProfBugdetGroup, int&, int&, int&, int&)
+ T SteamVProf::CVProfile::GetCounterGroup(int) const
+ T SteamVProf::CVProfile::GetCounterName(int) const
+ T SteamVProf::CVProfile::GetCounterNameAndValue(int, int&) const
+ T SteamVProf::CVProfile::GetCounterValue(int) const
+ T SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
+ T SteamVProf::CVProfile::GetNumCounters() const
+ T SteamVProf::CVProfile::GetThreadID()
+ T SteamVProf::CVProfile::OutputReport(int, char const*, int)
+ T SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+ T SteamVProf::CVProfile::ResetCounters(SteamVProf::CounterGroup_t)
+ T SteamVProf::CVProfile::SumTimes(SteamVProf::CVProfNode*, int)
+ T SteamVProf::CVProfile::SumTimes(char const*, int)
+ T SteamVProf::CVProfile::Term()
+ T SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+ T SteamVProf::CVProfile::Validate(CValidator&, char const*)
+ T SteamVProf::CVProfile::~CVProfile()
+ T SteamVProf::CVProfileArray::~CVProfileArray()
+ T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T SteamVProf::TimeSums_t* std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t const*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > > >(unsigned long, __gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t const*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, __gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t const*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >)
+ T TSListBase_Init
+ T TSListBase_Pop
+ T TSListBase_Push
+ T TSListBase_SwapList
+ T TSListBase_UnsafePeek
+ T TSQueueBase_Init
+ T TSQueueBase_Pop
+ T TSQueueBase_Push
+ T TSQueueBase_UnsafeDummy
+ T TSQueueBase_UnsafePeek
+ T TSQueue_PopIntoFreeList
+ T TSQueue_UnsafeDebugCheck
+ T TestThread_Yield
  T Test_HasFailed
  T Test_HasFinished
  T Test_IsActive
@@ -647,7 +418,6 @@
  T Test_RunTest
  T Test_SetFailed
  T Test_TerminateThread
- T TestThread_Yield
  T ThreadCloseProcess
  T ThreadFindProcessByName
  T ThreadGetCurrentHandle
@@ -688,22 +458,34 @@
  T ThreadTerminate
  T ThreadTerminateProcessCode
  T ThreadWaitForProcessExit
- T TSListBase_Init
- T TSListBase_Pop
- T TSListBase_Push
- T TSListBase_SwapList
- T TSListBase_UnsafePeek
- T TSQueueBase_Init
- T TSQueueBase_Pop
- t TSQueueBase_PopInternal_StackAlloc(TSLHead_t*, unsigned long, unsigned long, void*)
- t TSQueueBase_PopInternal(TSLHead_t*, unsigned long, unsigned long, unsigned int*)
- t TSQueueBase_PopInternal(TSLHead_t*, unsigned long, unsigned long, unsigned long long*)
- T TSQueueBase_Push
- T TSQueueBase_UnsafeDummy
- T TSQueueBase_UnsafePeek
- T TSQueue_PopIntoFreeList
- T TSQueue_UnsafeDebugCheck
  T ValidateSpew
+ T Warning
+ T WriteMiniDump
+ T _DMsg
+ T _DSpewMessage
+ T _ExitOnFatalAssert
+ T _SpewInfo
+ T _SpewMessage
+ T _SpewMessageType
+ T __clang_call_terminate
+ T dyld_stub_binding_helper
+ T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_erase(std::_Rb_tree_node<FileAndLine_t>*)
+ T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, FileAndLine_t const&)
+ T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert_unique(FileAndLine_t const&)
+ T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::find(FileAndLine_t const&)
+ T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::_M_erase(std::_Rb_tree_node<std::pair<SteamVProf::CVProfNode* const, double> >*)
+ T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<SteamVProf::CVProfNode* const, double> const&)
+ T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::_M_insert_unique(std::pair<SteamVProf::CVProfNode* const, double> const&)
+ T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::find(SteamVProf::CVProfNode* const&)
+ T std::_Rb_tree<char const*, std::pair<char const* const, unsigned int>, std::_Select1st<std::pair<char const* const, unsigned int> >, std::less<char const*>, std::allocator<std::pair<char const* const, unsigned int> > >::_M_erase(std::_Rb_tree_node<std::pair<char const* const, unsigned int> >*)
+ T std::_Rb_tree<char const*, std::pair<char const* const, unsigned int>, std::_Select1st<std::pair<char const* const, unsigned int> >, std::less<char const*>, std::allocator<std::pair<char const* const, unsigned int> > >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const* const, unsigned int> const&)
+ T std::_Rb_tree<char const*, std::pair<char const* const, unsigned int>, std::_Select1st<std::pair<char const* const, unsigned int> >, std::less<char const*>, std::allocator<std::pair<char const* const, unsigned int> > >::_M_insert_unique(std::pair<char const* const, unsigned int> const&)
+ T std::set<FileAndLine_t, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::~set()
+ T std::vector<SteamVProf::IVProfileCallbackHandler*, std::allocator<SteamVProf::IVProfileCallbackHandler*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<SteamVProf::IVProfileCallbackHandler**, std::vector<SteamVProf::IVProfileCallbackHandler*, std::allocator<SteamVProf::IVProfileCallbackHandler*> > >, SteamVProf::IVProfileCallbackHandler* const&)
+ T std::vector<SteamVProf::IVProfileCallbackHandler*, std::allocator<SteamVProf::IVProfileCallbackHandler*> >::push_back(SteamVProf::IVProfileCallbackHandler* const&)
+ T std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> >::_M_insert_aux(__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, SteamVProf::TimeSums_t const&)
+ T std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> >::operator=(std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > const&)
+ T std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> >::push_back(SteamVProf::TimeSums_t const&)
  T void std::__adjust_heap<__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, int, SteamVProf::TimeSums_t, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)>(__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, int, int, SteamVProf::TimeSums_t, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T void std::__adjust_heap<__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, long, SteamVProf::TimeSums_t, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)>(__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, long, long, SteamVProf::TimeSums_t, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T void std::__final_insertion_sort<__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)>(__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, __gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
@@ -712,15 +494,233 @@
  T void std::__introsort_loop<__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, int, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)>(__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, __gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, int, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T void std::__introsort_loop<__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, long, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)>(__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, __gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, long, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T void std::sort_heap<__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)>(__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, __gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
- t V_pretifymem(float, int, bool)
  T vtune
- T Warning
- T WriteMiniDump
- t WriteMiniDumpThread(void*)
- typeinfo for int
+ _DefaultRuneLocale
+ _NSGetExecutablePath
+ _Unwind_Resume
+ __CFConstantStringClassReference
+ __cxa_allocate_exception
+ __cxa_atexit
+ __cxa_begin_catch
+ __cxa_call_unexpected
+ __cxa_end_catch
+ __cxa_guard_abort
+ __cxa_guard_acquire
+ __cxa_guard_release
+ __cxa_pure_virtual
+ __cxa_rethrow
+ __cxa_throw
+ __divdi3
+ __error
+ __fixunsdfdi
+ __gxx_personality_v0
+ __maskrune
+ __stack_chk_fail
+ __stack_chk_guard
+ __stderrp
+ __tolower
  __udivdi3
  __umoddi3
- _Unwind_Resume
+ _exit
+ asctime_r
+ atoi
+ b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
+ b ClearWritingMiniDump::fAsserted
+ b GetCPUInformation()::pi
+ b GetCRunTimeVersion::rgchVersionStr
+ b GetLocalHostname::rgchHostname
+ b GetMiniDumpMutex()::ThreadMutexMiniDump
+ b GetMinidumpsWritten()::MinidumpsWritten
+ b GetProcessorDetailBlob(int*)::DetailBlob
+ b GetProcessorVendorId()::VendorID
+ b Plat_IsSteamConsoleMode::bInited
+ b Plat_IsSteamConsoleMode::bIsSteamConsole
+ b SetWritingMiniDump(bool)::fAsserted
+ b SteamThreadTools::ThreadShellExecute::bInstalledSignalHandler
+ b SteamThreadTools::g_ThreadMainThreadID
+ b SteamVProf::CVProfile::FindOrCreateCounter(char const*, SteamVProf::CounterGroup_t)::dummy
+ b V_pretifymem(float, int, bool)::current
+ b V_pretifymem(float, int, bool)::output
+ b _SpewMessageType::autoMutex__
+ b _ZL6g_Info.0
+ b _ZL6g_Info.1
+ b _ZL6g_Info.2
+ b g_CmdLine
+ b g_DumpHelper
+ b g_TickBase
+ b g_TickFrequency
+ b g_TickFrequencyDouble
+ b g_TickLastReturned
+ b g_bBreak
+ b g_bDumpWritten
+ b g_bWriteFullMemOnCrash
+ b g_bWritingFatalMinidump
+ b g_bWritingNonfatalMinidump
+ b g_nNumFilters
+ b g_pAssertDisables
+ b g_pCrashMemoryReserve
+ b g_rgchStackTrackingFilters
+ b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
+ b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
+ b guard variable for GetMinidumpsWritten()::MinidumpsWritten
+ b guard variable for _SpewMessageType::autoMutex__
+ b s_AssertFailedNotifyFunc
+ b s_DefaultLevel
+ b s_DefaultLogLevel
+ b s_FlushLogFunc
+ b s_GroupCount
+ b s_LastMiniDumpTime
+ b s_Line
+ b s_SpewType
+ b s_StdMemAlloc
+ b s_bSetSigHandler
+ b s_pFileName
+ b s_pSpewGroups
+ b sm_bAssertDumpStack
+ backtrace
+ backtrace_symbols
+ chdir
+ ctime_r
+ d CValidator::BExcludeAllocationFromTracking(char const*, int)::fileLineInfoExclude
+ d dyld__mach_header
+ d s_SpewOutputFunc
+ daylight
+ dladdr
+ dlclose
+ dlopen
+ dlsym
+ fork
+ fprintf
+ fputs
+ fputs$UNIX2003
+ free
+ fwrite
+ getenv
+ gethostname
+ getpid
+ gettimeofday
+ gmtime_r
+ host_page_size
+ host_statistics
+ kCFAllocatorDefault
+ kill
+ kill$UNIX2003
+ localtime_r
+ mach_absolute_time
+ mach_host_self
+ mach_timebase_info
+ malloc
+ malloc_size
+ memcpy
+ memmove
+ memset
+ mmap
+ mmap$UNIX2003
+ mprotect
+ mprotect$UNIX2003
+ munmap
+ munmap$UNIX2003
+ nanosleep
+ nanosleep$UNIX2003
+ operator delete(void*)
+ operator delete[](void*)
+ operator new(unsigned long)
+ operator new[](unsigned long)
+ printf
+ pthread_attr_init
+ pthread_attr_setstacksize
+ pthread_cancel
+ pthread_cancel$UNIX2003
+ pthread_cond_broadcast
+ pthread_cond_destroy
+ pthread_cond_init
+ pthread_cond_init$UNIX2003
+ pthread_cond_signal
+ pthread_cond_timedwait
+ pthread_cond_timedwait$UNIX2003
+ pthread_cond_wait
+ pthread_cond_wait$UNIX2003
+ pthread_create
+ pthread_exit
+ pthread_getschedparam
+ pthread_getspecific
+ pthread_join
+ pthread_join$UNIX2003
+ pthread_key_create
+ pthread_key_delete
+ pthread_kill
+ pthread_mach_thread_np
+ pthread_mutex_destroy
+ pthread_mutex_init
+ pthread_mutex_lock
+ pthread_mutex_trylock
+ pthread_mutex_unlock
+ pthread_mutexattr_destroy
+ pthread_mutexattr_destroy$UNIX2003
+ pthread_mutexattr_init
+ pthread_mutexattr_settype
+ pthread_self
+ pthread_setschedparam
+ pthread_setspecific
+ r SteamVProf::g_ColorLookup
+ r crc32(unsigned long, void const*, unsigned long)::crcTable
+ realloc
+ sched_yield
+ semctl
+ semctl$UNIX2003
+ semget
+ semop
+ sigaction
+ signal
+ sigprocmask
+ snprintf
+ sscanf
+ stat
+ std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+ std::_Rb_tree_increment(std::_Rb_tree_node_base*)
+ std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+ std::__throw_bad_alloc()
+ std::__throw_length_error(char const*)
+ std::terminate()
+ strcasecmp
+ strchr
+ strcmp
+ strcpy
+ strerror
+ strerror$UNIX2003
+ strlen
+ strncasecmp
+ strncat
+ strncpy
+ strrchr
+ strstr
+ sysctl
+ sysctlnametomib
+ system
+ system$UNIX2003
+ t GetMiniDumpMutex()
+ t GetMinidumpsWritten()
+ t InitTicks()
+ t ProcessRawStack(void**, int, int, CStack&)
+ t SteamThreadTools::ThreadProcConvert(void*)
+ t SteamVProf::AverageTimeCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
+ t SteamVProf::AverageTimeLessChildrenCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
+ t SteamVProf::PeakCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
+ t SteamVProf::PeakOverAverageCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
+ t SteamVProf::TimeCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
+ t SteamVProf::TimeLessChildrenCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
+ t TSQueueBase_PopInternal(TSLHead_t*, unsigned long, unsigned long, unsigned int*)
+ t TSQueueBase_PopInternal(TSLHead_t*, unsigned long, unsigned long, unsigned long long*)
+ t TSQueueBase_PopInternal_StackAlloc(TSLHead_t*, unsigned long, unsigned long, void*)
+ t V_pretifymem(float, int, bool)
+ t WriteMiniDumpThread(void*)
+ t global constructors keyed to 000101
+ t global constructors keyed to 000200
+ time
+ timegm
+ timezone
+ timezone$UNIX2003
+ typeinfo for int
  usleep
  usleep$UNIX2003
  vfprintf

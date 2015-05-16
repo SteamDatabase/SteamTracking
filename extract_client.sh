@@ -4,6 +4,8 @@
 # PREPARE EVERYTHING
 #
 
+export LC_ALL=C
+
 DIR="$(dirname "$(readlink -f "$0")")"
 
 cd "$DIR/.support"
