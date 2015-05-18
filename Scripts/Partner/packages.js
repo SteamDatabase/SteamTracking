@@ -634,6 +634,9 @@ function CreateDiscount( target, id, discount )
 	{
 		for ( var i in amt['country'] )
 		{
+			if( !amt['country'][i]['value'] )
+				continue;
+
 			AddCountryOverride( countryDiv, id + '[countryDiscounts]', i, amt['country'][i]['value'], amt['country'][i]['currency'], true, false );
 		}
 	}
