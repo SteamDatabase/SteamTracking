@@ -352,7 +352,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 			
 		var targetId = strTargetPrefix + rgHoverData['id'];
 		var $HoverData = $JFromIDOrElement( targetId );
-		var accountId = g_AccountID ? g_AccountID : 0;
+		var accountId = ( typeof g_AccountID !== 'undefined' ) ? g_AccountID : 0;
 		var params = rgHoverData['params'] || {};
 
 		if ( !$HoverData.length && !oElemState.bAjaxRequestMade )
