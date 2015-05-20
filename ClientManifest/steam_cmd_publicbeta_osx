@@ -1,18 +1,18 @@
 "osx"
 {
-	"version"		"1422050055"
+	"version"		"1428529675"
 	"steamcmd_public_all"
 	{
-		"file"		"steamcmd_public_all.zip.07b6e1dec0e6e94172ab71a2e495a2ed2a5b81d0"
-		"checksum"		"07b6e1dec0e6e94172ab71a2e495a2ed2a5b81d0"
-		"size"		"57646"
+		"file"		"steamcmd_public_all.zip.dec7b6b554bcd6ff2ad6cc1e05f9a2ab8d5c2cc1"
+		"checksum"		"dec7b6b554bcd6ff2ad6cc1e05f9a2ab8d5c2cc1"
+		"size"		"57666"
 	}
 	"steamcmd_bins_osx"
 	{
-		"file"		"steamcmd_bins_osx.zip.1cb23aeafb65dbf7342b827dd71622d4cac9fecb"
-		"checksum"		"1cb23aeafb65dbf7342b827dd71622d4cac9fecb"
-		"size"		"15116078"
-		"zipvz"		"steamcmd_bins_osx.zip.vz.13148820fcb353caec2ccc1bed47a1782bc9440c_9128234"
+		"file"		"steamcmd_bins_osx.zip.e25fe3182c76fb5b85323b209181c08ebc158b73"
+		"checksum"		"e25fe3182c76fb5b85323b209181c08ebc158b73"
+		"size"		"15564686"
+		"zipvz"		"steamcmd_bins_osx.zip.vz.228e604e23941258e762a2d233ab2dd06600ea81_9300928"
 	}
 	"steamcmd_breakpad_osx"
 	{
@@ -23,14 +23,14 @@
 	}
 	"steamcmd_osx"
 	{
-		"file"		"steamcmd_osx.zip.effb0d30e0061bae6d997972ecec9fcc478ed812"
-		"checksum"		"effb0d30e0061bae6d997972ecec9fcc478ed812"
-		"size"		"966334"
-		"zipvz"		"steamcmd_osx.zip.vz.2300b38a6d6711191792f4b34aa9064544e1d024_684654"
+		"file"		"steamcmd_osx.zip.ee831fd5ff216020e4be237c0295f634582dc757"
+		"checksum"		"ee831fd5ff216020e4be237c0295f634582dc757"
+		"size"		"1454211"
+		"zipvz"		"steamcmd_osx.zip.vz.dbc0b4f0046a1dacf69357bb4a6b084c6190d0e2_1076197"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"0912753888ed77511a613d9b63186106ce0461cead2db6b23c4cdbf21f42ac5bb2a64081d674df3473c86235cb7fe12a562e76a4ba5aa145dee70aa0093817b38f39822ecafacf01ed48b56612e8c1d2b50d84132dbe8bbd63c27b2889fa2c19e8024b884f10646d698912dd0856fd851ed4983293e4ab24ea94afbe2873dd5c"
+	"osx"		"8fd57395ca8f393225b8ceb25bb5d1e1454b289b1fb7881d4ea0a37be5cf3fb76625d12d2a5f9d37102c98a6f80af3adf82be20431167542f068ffcbc153272ed83a87ffb7e83af47d311122c88e80124b1a69c314bb6a13be84b22551e72340f5d2a5ec21a64b401480b811ae9b20d4df7417590e88427ea44d9293300d8aa2"
 }

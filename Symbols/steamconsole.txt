@@ -111,6 +111,8 @@
  D typeinfo for CCallback<CSteamUser, SteamServersDisconnected_t, false>
  D typeinfo for CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>
+ D typeinfo for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
+ D typeinfo for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  D typeinfo for CCallbackBase
  D typeinfo for CConsoleInputThread
  D typeinfo for CFileWriter
@@ -129,6 +131,8 @@
  D typeinfo for CUtlNoEscConversion
  D typeinfo for CWorkshopItemBuilder::CCallbackOnAppInfoUpdate
  D typeinfo for CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate
+ D typeinfo for CWorkshopItemDownloader::CCallbackOnAppInfoUpdate
+ D typeinfo for CWorkshopItemDownloader::CCallbackOnDownloadItemResult
  D typeinfo for ConCommand
  D typeinfo for ConCommandBase
  D typeinfo for ConVar
@@ -148,6 +152,8 @@
  D vtable for CCallback<CSteamUser, SteamServersDisconnected_t, false>
  D vtable for CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>
+ D vtable for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
+ D vtable for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  D vtable for CConsoleInputThread
  D vtable for CFileWriter
  D vtable for CFileWriterThread
@@ -165,6 +171,8 @@
  D vtable for CUtlNoEscConversion
  D vtable for CWorkshopItemBuilder::CCallbackOnAppInfoUpdate
  D vtable for CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate
+ D vtable for CWorkshopItemDownloader::CCallbackOnAppInfoUpdate
+ D vtable for CWorkshopItemDownloader::CCallbackOnDownloadItemResult
  D vtable for ConCommand
  D vtable for ConVar
  D vtable for SteamClientConVarAccessor
@@ -179,7 +187,6 @@
  Plat_MSTime
  Plat_SetCommandLineArgs
  Plat_ctime
- Plat_gmtime
  Plat_localtime
  R k_rgchAnonymousUser
  R k_rgchLocalManifest
@@ -198,6 +205,8 @@
  R typeinfo name for CCallback<CSteamUser, SteamServersDisconnected_t, false>
  R typeinfo name for CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>
+ R typeinfo name for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
+ R typeinfo name for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  R typeinfo name for CCallbackBase
  R typeinfo name for CConsoleInputThread
  R typeinfo name for CFileWriter
@@ -218,6 +227,8 @@
  R typeinfo name for CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CWorkshopItemBuilder::CCallbackOnAppInfoUpdate
  R typeinfo name for CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate
+ R typeinfo name for CWorkshopItemDownloader::CCallbackOnAppInfoUpdate
+ R typeinfo name for CWorkshopItemDownloader::CCallbackOnDownloadItemResult
  R typeinfo name for ConCommand
  R typeinfo name for ConCommandBase
  R typeinfo name for ConVar
@@ -257,14 +268,10 @@
  T BDeleteFileIfExists(char const*)
  T BFileExists(char const*)
  T BIsValidDirectory(char const*)
- T BRunBuildProcess(unsigned int, char const*, char const*, char const*, char const*, unsigned int)
- T BWaitForAppUpdate(IClientAppManager*, unsigned int)
+ T BWaitForAppUpdate(IClientAppManager*, unsigned int, bool)
  T CAppContentBuilder::BInit(unsigned int, char const*, char const*, char const*, char const*, unsigned int)
  T CAppContentBuilder::BRunBuild()
  T CAppContentBuilder::CAppContentBuilder()
- T CAppDepotBuilder::BInit(char const*, KeyValues*)
- T CAppDepotBuilder::BRunBuild()
- T CAppDepotBuilder::CAppDepotBuilder()
  T CAppDepotBuilderHttp::BInit(char const*, KeyValues*)
  T CAppDepotBuilderHttp::BRunBuild()
  T CAppDepotBuilderHttp::CAppDepotBuilderHttp()
@@ -278,12 +285,12 @@
  T CAppInstallerBuilder::CCallbackOnAppBackupStatus::Run(void*, bool, unsigned long long)
  T CAppInstallerBuilder::OnAppBackupStatus(AppBackupStatus_t*)
  T CAppUpdater::BInit(KeyValues*)
- T CAppUpdater::BRunUpdate()
+ T CAppUpdater::BRunContentUpdate()
+ T CAppUpdater::BRunWorkshopUpdate()
  T CAppUpdater::CAppUpdater()
  T CAppUpdater::CCallbackOnAppInfoUpdate::Run(void*)
  T CAppUpdater::CCallbackOnAppInfoUpdate::Run(void*, bool, unsigned long long)
  T CAppUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
- T CAppUpdater::~CAppUpdater()
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppDepotsUpdater*, void (CAppDepotsUpdater::*)(AppInfoUpdateComplete_t*))
@@ -350,6 +357,18 @@
  T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::Run(void*)
  T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::Run(void*, bool, unsigned long long)
  T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::~CCallback()
+ T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(AppInfoUpdateComplete_t*))
+ T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::GetCallbackSizeBytes()
+ T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(AppInfoUpdateComplete_t*))
+ T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Run(void*)
+ T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Run(void*, bool, unsigned long long)
+ T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::~CCallback()
+ T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::CCallback(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(DownloadItemResult_t*))
+ T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::GetCallbackSizeBytes()
+ T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Register(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(DownloadItemResult_t*))
+ T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Run(void*)
+ T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Run(void*, bool, unsigned long long)
+ T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::~CCallback()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
@@ -372,12 +391,12 @@
  T CDirIterator::Init(char const*)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
- T CFileReader::BSetFile(char const*)
+ T CFileReader::BOpenFile(char const*)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
  T CFileReader::~CFileReader()
- T CFileWriter::BSetFile(char const*, bool)
+ T CFileWriter::BOpenFile(char const*, bool)
  T CFileWriter::CFileWriter(bool)
  T CFileWriter::Close(bool)
  T CFileWriter::Flush()
@@ -388,6 +407,7 @@
  T CFileWriterThread::FileWriterItem_t::Validate(CValidator&, char const*)
  T CFileWriterThread::Run()
  T CFileWriterThread::StartThreadIfNecessary()
+ T CFileWriterThread::UnregisterWriter(CFileWriter const*)
  T CFileWriterThread::Validate(CValidator&, char const*)
  T CFileWriterThread::~CFileWriterThread()
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
@@ -466,10 +486,10 @@
  T CPreDepotOperations::OnDRMWrap(DRMWrapResponse_t*, bool)
  T CPreDepotOperations::OnSignInstallScript(InstallScriptSignResponse_t*, bool)
  T CPreDepotOperations::SignInstallScript(ConParams&)
- T CRC32_ProcessBuffer(unsigned int*, void const*, int)
  T CRC32_ProcessSingleBuffer(void const*, int)
  T CRTime::CRTime()
  T CRTime::CSecsPassed() const
+ T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::Render(unsigned int)
  T CRTime::UpdateRealTime()
@@ -536,6 +556,7 @@
  T CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SetBufferType(bool, bool)
  T CUtlBuffer::VaScanf(char const*, char*)
+ T CUtlBuffer::Validate(CValidator&, char const*)
  T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
@@ -581,9 +602,7 @@
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RemoveAll()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::~CUtlHashMap()
  T CUtlIntrusiveList<CFileExtensionData>::Purge()
- T CUtlLinkedList<CLogWatchParam, int>::Next(int) const
  T CUtlLinkedList<CLogWatchParam, int>::RemoveAll()
- T CUtlLinkedList<CWatchingLog, int>::Next(int) const
  T CUtlLinkedList<CWatchingLog, int>::RemoveAll()
  T CUtlLinkedList<CWatchingLog, int>::~CUtlLinkedList()
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
@@ -676,6 +695,12 @@
  T CUtlThreadSafeQueue<CLogEvent*>::~CUtlThreadSafeQueue()
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::~CUtlThreadSafeQueue()
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::FindAndRemove(CFileWriter const* const&)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::GrowVector(int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::InsertBefore(int, CFileWriter const* const&)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
@@ -690,7 +715,6 @@
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int, CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
@@ -726,7 +750,9 @@
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::AddToTail(unsigned char&&)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::GrowVector(int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::InsertBefore(int, unsigned char const&)
- T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::InsertMultipleBefore(int, int, unsigned char const*)
+ T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::RemoveMultiple(int, int)
+ T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::SetCount(int)
+ T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsLeft(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::~CUtlVector()
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int&&)
@@ -757,6 +783,14 @@
  T CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate::Run(void*, bool, unsigned long long)
  T CWorkshopItemBuilderLegacy::CWorkshopItemBuilderLegacy()
  T CWorkshopItemBuilderLegacy::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
+ T CWorkshopItemDownloader::BDownloadItem()
+ T CWorkshopItemDownloader::CCallbackOnAppInfoUpdate::Run(void*)
+ T CWorkshopItemDownloader::CCallbackOnAppInfoUpdate::Run(void*, bool, unsigned long long)
+ T CWorkshopItemDownloader::CCallbackOnDownloadItemResult::Run(void*)
+ T CWorkshopItemDownloader::CCallbackOnDownloadItemResult::Run(void*, bool, unsigned long long)
+ T CWorkshopItemDownloader::CWorkshopItemDownloader()
+ T CWorkshopItemDownloader::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
+ T CWorkshopItemDownloader::OnDownloadItemResult(DownloadItemResult_t*)
  T CachedVPKRead_t::Less(CachedVPKRead_t const&, CachedVPKRead_t const&)
  T CallbackMgr_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T CallbackMgr_RegisterCallResult(CCallbackBase*, unsigned long long)
@@ -845,7 +879,6 @@
  T ExecScripFile(char const*)
  T FileHandleTracker_t::~FileHandleTracker_t()
  T FillDataStruct(_finddata_t*)
- T FinishAppBuild(unsigned int, unsigned int, bool, char const*, int)
  T FioClose(int)
  T FioCreateFile(char const*, EFioAccessFlags, EFioShareFlags, EFioCreateMode, unsigned int, int*)
  T FioFlush(int)
@@ -873,12 +906,10 @@
  T KeyValues::GetDataType(char const*) const
  T KeyValues::GetFirstSubKey() const
  T KeyValues::GetFirstTrueSubKey() const
- T KeyValues::GetFirstValue() const
  T KeyValues::GetIntFromString(char const*, int, KeyValues::EConversionState*)
  T KeyValues::GetName() const
  T KeyValues::GetNextKey() const
  T KeyValues::GetNextTrueSubKey() const
- T KeyValues::GetNextValue() const
  T KeyValues::GetUint64FromString(char const*, unsigned long long, KeyValues::EConversionState*)
  T KeyValues::InternalGetAsString(char*, int, KeyValues*)
  T KeyValues::InternalGetBool(KeyValues*, bool, KeyValues::EConversionState*)
@@ -928,7 +959,6 @@
  T PchSpewGroupName(ESpewGroup)
  T PchWrapText(char const*, int)
  T PrintHelp(char const*)
- T RegisterAppBuild(unsigned int, bool, char const*)
  T RunAppBuild(void*, ConParams&, ConCommand&)
  T RunFindCommand(char const*)
  T RunMessagePump()
@@ -1152,10 +1182,10 @@
  b quit_command
  b run_app_build_command
  b run_app_build_http_command
- b run_app_build_old_command
  b runscript_command
  b s_CurrentRoutingIDPtr
  b s_bCallbackManagerInitialized
+ b s_bHWAccelCRC32
  b selectBuf
  b set_spew_command
  b set_spew_level_command
@@ -1165,6 +1195,7 @@
  b verify_vpk_command
  b workshop_build_item_command
  b workshop_create_legacy_item_command
+ b workshop_download_item_command
  chmod$UNIX2003
  close$UNIX2003
  d dyld__mach_header
@@ -1205,6 +1236,7 @@
  memmove
  memset
  mkdir
+ mktime$UNIX2003
  open$UNIX2003
  operator delete(void*)
  operator delete[](void*)
@@ -1220,7 +1252,7 @@
  putchar
  puts
  qsort
- r pulCRCTable
+ r s_rgCRCTable_Standard
  read$UNIX2003
  remove
  rename
@@ -1248,6 +1280,7 @@
  strtol
  strtoul
  t (anonymous namespace)::CLEANUP::~CLEANUP()
+ t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t FileSelect(dirent const*)
  t FreeTree(ExprNode*&)
  t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long, unsigned long, CUtlBuffer&, bool)
@@ -1282,7 +1315,6 @@
  t quit(void*, ConParams&, ConCommand&)
  t run_app_build(void*, ConParams&, ConCommand&)
  t run_app_build_http(void*, ConParams&, ConCommand&)
- t run_app_build_old(void*, ConParams&, ConCommand&)
  t runscript(void*, ConParams&, ConCommand&)
  t set_spew(void*, ConParams&, ConCommand&)
  t set_spew_level(void*, ConParams&, ConCommand&)
@@ -1292,6 +1324,7 @@
  t verify_vpk(void*, ConParams&, ConCommand&)
  t workshop_build_item(void*, ConParams&, ConCommand&)
  t workshop_create_legacy_item(void*, ConParams&, ConCommand&)
+ t workshop_download_item(void*, ConParams&, ConCommand&)
  time
  typeinfo for SteamThreadTools::CThread
  unlink
