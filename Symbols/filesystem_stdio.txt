@@ -455,6 +455,7 @@
  t FileSelect(dirent const*)
  t FillFindData(CDirIterator*, WIN32_FIND_DATA*)
  t FixPath(char*)
+ t global constructors keyed to a
  unlink
  vfprintf
  vsnprintf

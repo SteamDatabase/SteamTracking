@@ -255,11 +255,11 @@ DropDown:focus
 	border-style: solid;
 	border-color: #fdfefeff;
 
-	animation-name: main-button-glow-movement; 
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	animation-name: main-button-glow-movement, quick-blur; 
+	animation-duration: 1.7s, 0.45s;
+	animation-delay: 0.0s, 0.0s;
+	animation-timing-function: ease-in-out, ease-out;
+	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }
 
@@ -307,34 +307,21 @@ DropDownMenu
 
 DropDownMenu Label
 {
-	color: #ffffff99;
-	font-family: platformfont;
-	font-size: 24px;
-	font-weight: normal;
-
-	transition-property: color, transform;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
-}
-
-DropDownMenu .DropDownChild:hover Label,
-DropDownMenu .DropDownChild:focus Label
-{
-	color: applabelselected;
-}
-
-DropDownMenu .DropDownChild
-{
 	width: 100%;
 	padding: 4px 3px 4px 3px;
+	margin: 2px 0px;
 	margin-right: 8px;
 
+	color: #ffffff99;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
 	border-style: solid;
 	border-width: 5px;
 	border-color: #3d414200;
 	box-shadow: box_shadow_off_color -4.5px -4.5px 18px 9px;
 
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
 	transform: translatex(-7px);
 
 	transition-property: border, background-color, color, box-shadow, transform;
@@ -342,8 +329,9 @@ DropDownMenu .DropDownChild
 	transition-timing-function: ease-in-out;
 }
 
-DropDownMenu .DropDownChild:hover,
-DropDownMenu .DropDownChild:focus
+DropDownMenu Label:hover,
+
+DropDownMenu Label:focus
 {
 	color: applabelselected;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
@@ -486,7 +474,6 @@ ToggleButton:descendantfocus .TickBox
 ToggleButton
 {
 	flow-children: right;
-	width: 100%;
 }
 
 ToggleButton .TickBox
@@ -602,7 +589,7 @@ VerticalScrollBar.MouseDown, VerticalScrollBar.MouseDown .ScrollThumb, Horizonta
     transition-duration: 0.0s;
 }
 
-TextTooltip
+Tooltip
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( white ), to( #e4e5f0 ) );
 	border-radius: 2.5px;
@@ -835,7 +822,7 @@ h2
 {
 	background-color: simplebutton;
 	height: 70px;
-	width: 200px;
+	width: 194px;
 	border-radius: 4px;
 	flow-children: right;
 	border: 5px solid #1c333dff;
@@ -861,8 +848,8 @@ h2
 	border-radius: 8px;
 	flow-children: right;
 	border: 5px solid #1c333dff;
-	padding-left: 0px;
-	padding-right: 0px;
+	padding-left: 6px;
+	padding-right: 4px;
 	padding-bottom: 5px;
 	padding-top: 5px;
 	margin: 14px;
@@ -1140,11 +1127,11 @@ FriendsChatDialog .VoiceBarContainer
 	padding: 20px 5px 20px 5px;
 
 	flow-children: down;
-	width: 350px;
+	max-width: 350px;
 
 	opacity: 1.0;
 
-	position: 41% 30% 0px;
+	position: 42% 38% 0px;
 
 
 
@@ -1162,9 +1149,9 @@ FriendsChatDialog .VoiceBarContainer
 	flow-children: down;
 	horizontal-align: center;
 	vertical-align: center;
+	max-width: 650px;
 	border-radius: 3px;
 	opacity: 1.0;
-	width: 380px;
 
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
@@ -1194,7 +1181,8 @@ FriendsChatDialog .VoiceBarContainer
 	margin-left: 10px;
 	margin-right: 10px;
 	height: 53px;
-	width: 100%;
+	min-width: 200px;
+
 	transition-property: border, blur, background-color, color, transform, box-shadow;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
@@ -1349,7 +1337,6 @@ FriendsChatDialog .VoiceBarContainer
 	margin-left: 20px;
 	margin-right: 20px;
 
-	width: 100%;
 	transition-property: border, blur, background-color, color, transform, box-shadow;
 	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
@@ -1451,32 +1438,18 @@ Slider
 {
 	height: 120px;
 	width: 10px;
-
 	background-color: #283842;
 	align: center center;
 	border-radius: 3px;
-}
-
-Slider.Horizontal #SliderTrack
-{
-	height: 10px;
-	width: 100%;
 }
 
 #SliderTrackProgress
 {
 	width: 10px;
 	height: 100%;
-
 	background-color: #5492b8;
 	align: center center;
 	border-radius: 3px;
-}
-
-Slider.Horizontal #SliderTrackProgress
-{
-	width: 100%;
-	height: 10px;
 }
 
 #SliderThumb

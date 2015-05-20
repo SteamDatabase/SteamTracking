@@ -8,7 +8,7 @@
 #PlaylistList
 {
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 	height: 580px; 	
 
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );

@@ -63,8 +63,6 @@
 
 Movie
 {
-	width: 100%;
-	height: 100%;
 }
 
 MoviePanel
@@ -371,7 +369,6 @@ LoadingThrobber .Bar
 	align: center center;
 	border-color: none;
 	box-shadow: none;
-	margin: 0px;
 	background-color: none;
 	background-image: url( "file://{images}/transport_controls/icon_pause.png" );
 }
@@ -394,7 +391,7 @@ LoadingThrobber .Bar
 
 #VolumeControl
 {
-	border-radius: 0px 6px 6px 0px;
+	border-radius: 0px 4px 4px 0px;
 }
 
 #PlaybackSpeed
@@ -416,11 +413,6 @@ LoadingThrobber .Bar
 #VideoQualityBtn:focus #VideoQualityCurrent
 {
 	color: black;
-}
-
-#FullscreenControl
-{
-	visibility: collapse;
 }
 
 
@@ -463,9 +455,8 @@ VideoQualityPopup
 
 VideoQualityPopup .PopupWrapper
 {
-	min-width: 80px;
+	width: 80px;
 	flow-children: down;
-	padding: 0px 6px;
 
 	background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) );
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
@@ -538,112 +529,14 @@ MovieDebug Label
 }
 
 
-//
-// Broadcast
-//
-BroadcastViewer .ChatVisible MoviePanel
+
+.ChatVisible Movie
 {
-	width: fill-parent-flow( 1.0 );
-	height: width-percentage ( 56.25% );
-	align: center center;	
+	background-color: black;
 }
 
-BroadcastViewer .ControlBarBackground
+.ChatVisible MoviePanel
 {
-	width: 180px;
-	background-color: #222222;
-}
-
-BroadcastViewer #JumpBack,
-BroadcastViewer #PlayPause,
-BroadcastViewer #FastForward
-{
-	visibility: collapse;
-}
-
-BroadcastViewer #VideoQualityBtn
-{
-	border-radius: 6px 0px 0px 6px;
-}
-
-BroadcastViewer #VolumeControl
-{
-	border-radius: 0px;
-}
-
-BroadcastViewer #FullscreenControl
-{
-	visibility: visible;
-	border-radius: 0px 6px 6px 0px;
-}
-
-BroadcastViewer .PlaybackTitleGlow
-{
-	visibility: collapse;
-}
-
-BroadcastViewer .PlaybackTitleBackground
-{
-	height: 144px;
-	background-color: none;
-	flow-children: none;
-}
-
-BroadcastViewer .Fullscreen .PlaybackTitleBackground
-{
-	background-color: slideshow_bg;
-}
-
-BroadcastViewer #PlaybackSpeed
-{
-	visibility: collapse;
-}
-
-BroadcastViewer #Timeline
-{
-	visibility: collapse;
-}
-
-BroadcastViewer #PlaybackControls
-{
-	align: right top;
-	margin-top: 24px;
-}
-
-BroadcastViewer #PlaybackTitle
-{
-	margin: 10px 200px 0px 20px;
-	font-size: 30px;
-	height: 40px;	
-}
-
-BroadcastViewer .ChatVisible #PlaybackTitleAndControls
-{
-	transform: none;
-}
-
-BroadcastViewer .ChatVisible .ShowTitle #PlaybackTitleAndControls
-{
-	opacity: 1.0;
-}
-
-BroadcastViewer #PlaybackTitleAndControls
-{
-	transform: translatey( 327px );
-	opacity: 1.0;
-}
-
-BroadcastViewer .PlaybackControl
-{
-	opacity: 1.0;
-}
-
-BroadcastViewer .PlaybackError LoadingThrobber
-{
-	opacity: 0.0;
-}
-
-BroadcastViewer #ErrorMessage
-{
-	visibility: collapse;
+	height: 65%;
+	transform: translatey( 100px );
 }

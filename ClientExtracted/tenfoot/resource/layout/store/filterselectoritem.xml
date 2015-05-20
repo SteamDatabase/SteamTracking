@@ -5,6 +5,7 @@
 	</styles>
 	
 	<FilterSelectorItem>
+		<Panel id="ItemLabel2">
 			<Label id="ItemLabel"/>
 			<Panel id="IconWrapper">
 				<Panel class="ItemIcon" id="WindowsIcon" />
@@ -13,5 +14,6 @@
 				<Panel class="ItemIcon" id="GamepadControllerIcon" />
 				<Panel class="ItemIcon" id="SteamControllerIcon" />
 			</Panel>
+		</Panel>
 	</FilterSelectorItem>
 </root>

@@ -12,10 +12,10 @@
 					<Image id="BGScreenshot" class="BGScreenshot" onload="AddStyle( BGScreenshotVisible ); RemoveStyle( BGScreenshotInvisible ); AddStyle( BGOverlay, BGOverlayVisible ); RemoveStyle( BGOverlay, BGOverlayInvisible );" />
 				</Panel>
 			</Panel>
-			<Button id="Loading">
+			<Panel id="Loading">
 				<Label id="LoadingStatus" text="#Profile_Loading" />
 				<LoadingThrobber  />
-			</Button>
+			</Panel>
 			<Panel id="Offline">
 				<Panel id="OfflineMessage">
 					<Label id="OfflineStatus1" text="#You_Are_Offline" />

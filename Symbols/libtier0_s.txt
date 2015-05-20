@@ -594,7 +594,6 @@
  fputs
  fputs$UNIX2003
  free
- fwrite
  getenv
  gethostname
  getpid
@@ -631,7 +630,6 @@
  pthread_attr_setstacksize
  pthread_cancel
  pthread_cancel$UNIX2003
- pthread_cond_broadcast
  pthread_cond_destroy
  pthread_cond_init
  pthread_cond_init$UNIX2003
@@ -716,6 +714,7 @@
  t WriteMiniDumpThread(void*)
  t global constructors keyed to 000101
  t global constructors keyed to 000200
+ t global constructors keyed to a
  time
  timegm
  timezone

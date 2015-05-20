@@ -252,7 +252,7 @@ MusicAlbumPanel
 	flow-children: down;
 	height: 610px;
 	width: 630px;
-	overflow: squish scroll;
+	overflow: clip scroll;
 	opacity: 0.99;
 	padding: 8px;
 

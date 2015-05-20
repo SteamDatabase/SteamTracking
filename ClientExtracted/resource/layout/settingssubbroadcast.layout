@@ -29,7 +29,6 @@
 		"ShowChatCombo" { ControlName="ComboBox" fieldName="ShowChatCombo" group="HideWhenDisabled" editable="0" }
 		
 		"IncludeDesktop" { ControlName="CheckButton" fieldName="IncludeDesktop" group="HideWhenDisabled" }
-		"RecordSystemAudio" { ControlName="CheckButton" fieldName="RecordSystemAudio" group="HideWhenDisabled" }
 		"RecordMic" { ControlName="CheckButton" fieldName="RecordMic" group="HideWhenDisabled" }
 		"ConfigMic" { ControlName="URLLabel" fieldName="ConfigMic" labelText="#Steam_Settings_Broadcast_ConfigMic" URLText="steam://settings/voice" group="HideWhenDisabled" }
 		"EnableHardwareSupport" { ControlName="CheckButton" fieldName="EnableHardwareSupport" visible="0" }
@@ -67,7 +66,7 @@
 		place { start="EncoderSetting" control="ShowChatHeader" dir=down margin-top=10 width=max }
 		place { start="ShowChatHeader" control="ShowChatCombo" dir=down margin-top=4 width=250 }
 				
-		place { start="ShowChatCombo" control="IncludeDesktop,RecordSystemAudio,RecordMic,EnableHardwareSupport,ShowDebugInfo,ShowReminder" dir=down margin-top=10 }	
+		place { start="ShowChatCombo" control="IncludeDesktop,RecordMic,EnableHardwareSupport,ShowDebugInfo,ShowReminder" dir=down margin-top=10 }	
 		place { start="RecordMic" control="ConfigMic" dir=right margin-top=9  }	
 		
 		place { control="RequiresRestartLabel" margin-left=20 margin-right=20 width=max margin-top=500 }

@@ -30,12 +30,6 @@
 					<Label id="NewInvitesLabel" class="LongDescSm" text="#MainMenu_NewInvites" />
 				</Panel>
 			</Button>
-			<Button id="NewGroupInvitesButton" onactivate="ShowNewGroupInvites();" >
-				<Image src="file://{images}/invites.png" />
-				<Panel class="ButtonLabelWrapper">
-					<Label id="NewGroupInvitesLabel" class="LongDescSm" text="#MainMenu_NewGroupInvites" />
-				</Panel>
-			</Button>
 			<Button id="NewGiftsButton" onactivate="ShowNewGifts();" >
 				<Image src="file://{images}/gifts.png" />
 				<Panel class="ButtonLabelWrapper">

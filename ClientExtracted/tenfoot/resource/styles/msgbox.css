@@ -153,7 +153,6 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	font-family: platformfont;
 	color: #ffffff99;
 	margin-top: 10px;
-	width: 100%;
 }
 
 .DescriptionEmpty #MsgBoxDescriptionArea
@@ -178,7 +177,6 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 #MsgBoxButtonsVertical
 {
 	horizontal-align: center;
-	width: 100%;
 	font-size: 42px;
 	font-family: platformfont;
 	color: #ffffffff;
@@ -331,10 +329,5 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	transition-timing-function: linear;
 
 	opacity: 0.0;
-}
-
-#MsgBoxHTMLContainer
-{
-	width: 100%;
 }
 

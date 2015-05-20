@@ -89,7 +89,6 @@ steam.styles
     TitleBarFocus="14 31 56 80"
     MenuBG="68 68 68 255"
     
-    Focus0="23 51 77 255" // used in window frame borders 
     Focus="25 55 84 255" // background color of any selected menu or list item
     Focus2="21 70 107 255" 	// background color of view buttons and anything else in focus that needs more 'punch'
     Focus3="82 82 82 255" 	// background color of highlighted friends 
@@ -810,8 +809,8 @@ steam.styles
       {
         0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, focus )"     
         1="gradient( x1 - 1, y0, x1, y1, ClientBG, focus )" 
-        2="gradient_horizontal( x0, y0, x1, y0 + 1, focus0, ClientBG )"
-        3="gradient( x0, y0, x0 + 1, y1, focus0, ClientBG )"
+        2="fill( x0, y0, x1, y0 + 1, ClientBG )"
+        3="fill( x0, y0, x0 + 1, y1, ClientBG )"
       }
     } 
     
@@ -822,8 +821,8 @@ steam.styles
       {
         0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, focus2 )"     
         1="gradient( x1 - 1, y0, x1, y1, ClientBG, focus2 )" 
-        2="gradient_horizontal( x0, y0, x1, y0 + 1, focus, ClientBG )"
-        3="gradient( x0, y0, x0 + 1, y1, focus, ClientBG )"
+        2="fill( x0, y0, x1, y0 + 1, ClientBG )"
+        3="fill( x0, y0, x0 + 1, y1, ClientBG )"
       }
     } 
     
@@ -1052,6 +1051,7 @@ steam.styles
     {
 		textcolor=Highlight5
 		bgcolor=none
+		inset="0 -3 0 0"
 		render_bg { }
     }
     

@@ -22,7 +22,15 @@ WebBrowser.Hidden
 	opacity: 0.0;
 }
 
-HTMLVerticalScrollBar, VerticalScrollBar
+VerticalScrollBar .ScrollThumb
+{
+	background-color: #ffffffff;
+	transition-property: position;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+VerticalScrollBar
 {
 	width: 6px;
 	margin: 14px, 0px, 14px 24px;
@@ -43,15 +51,16 @@ HTMLVerticalScrollBar, VerticalScrollBar
 	transition-timing-function: ease-in-out;
 }
 
-HTMLHorizontalScrollBar, HorizontalScrollBar 
+HorizontalScrollBar .ScrollThumb
 {
-	height: 6px;
-	width: 100%;
-	horizontal-align: left;
-	vertical-align: bottom;
+	background-color: #ffffffff;
+	transition-property: position;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
 
-	transition-property: transform;
-
+HorizontalScrollBar 
+{
 	background-color: #aeaeae66;
 	border-radius: 2px;
 	box-shadow: #00000033 -3px -3px 6px 6px;
@@ -59,28 +68,13 @@ HTMLHorizontalScrollBar, HorizontalScrollBar
 	margin-right: 34px;	
 }
 
-HTMLVerticalScrollBar .ScrollThumb, VerticalScrollBar .ScrollThumb
-{
-	background-color: #ffffffff;
-	transition-property: position;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
-}
-
-HTMLHorizontalScrollBar .ScrollThumb, HorizontalScrollBar .ScrollThumb
-{
-	background-color: #ffffffff;
-	transition-property: position;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
-}
-
-HTMLHorizontalScrollBar, HTMLVerticalScrollBar, HorizontalScrollBar, VerticalScrollBar
+HorizontalScrollBar,VerticalScrollBar
 {
 	opacity : 0.0;
 }
 
-.FooterVisible HTMLHorizontalScrollBar, .FooterVisible HTMLVerticalScrollBar, .FooterVisible HorizontalScrollBar, .FooterVisible VerticalScrollBar
+
+.FooterVisible HorizontalScrollBar, .FooterVisible VerticalScrollBar
 {
 	opacity : 1.0;
 }
@@ -90,8 +84,6 @@ HTMLHorizontalScrollBar, HTMLVerticalScrollBar, HorizontalScrollBar, VerticalScr
 #MainPage
 {
 	flow-children: down;
-	width: 100%;
-	height: 100%;
 }
 
 

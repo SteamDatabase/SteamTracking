@@ -31,11 +31,6 @@
 				<Label class="SettingsLegend ClientBetaOptIn" text="#SettingsAbout_BetaParticipation" />	
 				<ToggleButton class="CheckBox ClientBetaOptIn" id="SettingsAbout_BetaOption" text="#SettingsAbout_BetaOption" onactivate="ToggleBetaOptIn()" />
 				
-				<Button class="Button ResBody" id="SettingsAbout_LegalInformationButton" onactivate="ShowLegalInformation();">
-					<Label class="LongDesc" text="#SettingsAbout_LegalInformation"  />
-				</Button>
-
-				
 				<Label class="ClientInfoSectionHeader" text="#SettingsAbout_Built" />
 				<Label class="SettingsValue" text="#SettingsAbout_BuildDateTime" />
 
@@ -82,8 +77,12 @@
 				<Label class="SettingsLegend" id="DriverDateLabel" text="#SettingsAbout_DriverDateLabel" />
 				<Label class="SettingsValue" id="DriverDateValue" text="#SettingsAbout_DriverDate" />
 
-				<Label class="SettingsLegend" text="#SettingsAbout_VideoRAMLabel" />
+				<Label class="ResLabel" text="#SettingsAbout_VideoRAMLabel" />
 				<Label class="SettingsValue" text="#SettingsAbout_VideoRAM" />
+
+				<Button class="Button ResBody" id="SettingsAbout_LegalInformationButton" onactivate="ShowLegalInformation();">
+					<Label class="LongDesc" text="#SettingsAbout_LegalInformation"  />
+				</Button>
 
 		</Panel>
 	</Panel>	

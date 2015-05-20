@@ -23,12 +23,6 @@
 		PlayersButton {	controlname="URLLabel" labeltext="#Overlay_Taskbar_Players" style=sidemenu }
 		AchievementsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Achievements" style=sidemenu }				
 		ScreenshotsButton { controlname="URLLabel" labeltext="#Overlay_Taskbar_Screenshots" style=sidemenu }
-		
-		Clock { controlname="Label" labeltext="10:43" style=topbar }
-		ClockSuffix { controlname="Label" labeltext="am" style=clocksuffix }
-		SessionText { controlname=label style=TimeStrings labeltext="#Overlay_Playtime_Session" }
-		TwoWeeksText { controlname=label style=TimeStrings }
-		ForeverText { controlname=label style=TimeStrings }
 	}
 	
 	styles
@@ -44,43 +38,16 @@
 			font-size=15
 			textcolor=Text
 		}
-		
-		clocksuffix
-		{
-			font-size=24
-			padding-top=10
-			//textcolor=Text
-			font-weight=400
-			font-style=uppercase;
-		}
-		
-		topbar
-		{
-			font-size=36
-			textcolor=Label
-		}
-		
-		timeStrings
-		{
-			font-size="17"
-			textcolor="label"
-			font-family=basefont
-			font-weight=700
-		}
 	}
 	
 	layout
 	{
 		region { name=overlay width=1000 align=top-center margin-top=10 margin-bottom=10 margin-left=10 margin-right=10 }
-		region { name="topbar" region=overlay width="max" height=50 }
 	
 		region { name="detailpanels" region=overlay align=bottom width=max height=210 margin-bottom=100 }
 		region { name="taskbar" region=overlay width="max" height=75 align=bottom }
 		
 		place { controls="BroadcastDetailPanel" region=detailpanels width=330 height=240 spacing=10 }
 		place { controls="GameHubButton,GameGroupsButton,ChatRoomButton,DLCButton,GuideButton,GuidesButton,LegacyCDKeyButton,WebSiteButton,ForumsButton,RecommendButton,WorkshopButton,FriendsButton,PlayersButton,AchievementsButton,ScreenshotsButton" y=50 align=right region=overlay dir=down spacing=10 }
-		
-		place { control="Clock,ClockSuffix" region=topbar }
-		place { control="SessionText,TwoWeeksText,ForeverText,CloseButton" dir=down region=overlay y=35 }
 	}	
 }

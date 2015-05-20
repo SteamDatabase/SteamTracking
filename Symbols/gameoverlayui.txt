@@ -2,7 +2,6 @@
  .objc_class_name_NSAutoreleasePool
  .objc_class_name_NSBundle
  .objc_class_name_NSProcessInfo
- .objc_class_name_NSRunningApplication
  .objc_class_name_NSString
  .objc_class_name_NSUserDefaults
  .objc_class_name_NSWorkspace
@@ -71,7 +70,6 @@
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
- B CMsgClearAllCookies::default_instance_
  B CMsgClearHistory::default_instance_
  B CMsgClose::default_instance_
  B CMsgCloseDevTools::default_instance_
@@ -129,6 +127,7 @@
  B CMsgMouseUp::default_instance_
  B CMsgMouseWheel::default_instance_
  B CMsgNeedsPaint::default_instance_
+ B CMsgNeedsPaintResponse::default_instance_
  B CMsgNodeHasFocus::_default_elementtagname_
  B CMsgNodeHasFocus::_default_input_type_
  B CMsgNodeHasFocus::_default_name_
@@ -174,7 +173,6 @@
  B CMsgSetHTMLTitle::_default_title_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
- B CMsgSetSharedPaintBuffers::default_instance_
  B CMsgSetTargetFrameRate::default_instance_
  B CMsgSetVerticalScroll::default_instance_
  B CMsgSetZoomLevel::default_instance_
@@ -807,11 +805,6 @@
  D CSettingsSubBroadcast::PanelMessageFunc_HardwareSupportChanged::InitVar()::bAdded
  D CSettingsSubBroadcast::PanelMessageFunc_OnComboBoxChanged::InitVar()::bAdded
  D CSettingsSubBroadcast::PanelMessageFunc_UpdateHardwareSupport::InitVar()::bAdded
- D CSettingsSubBrowser::ChainToAnimationMap()::chained
- D CSettingsSubBrowser::ChainToMap()::chained
- D CSettingsSubBrowser::GetKBMap()::s_pMap
- D CSettingsSubBrowser::GetMessageMap()::s_pMap
- D CSettingsSubBrowser::KB_ChainToMap()::chained
  D CSettingsSubFriends::ChainToAnimationMap()::chained
  D CSettingsSubFriends::ChainToMap()::chained
  D CSettingsSubFriends::GetKBMap()::s_pMap
@@ -1003,7 +996,6 @@
  D VTT for CScreenshotNotification
  D VTT for CScreenshotUploadDialog
  D VTT for CSettingsSubBroadcast
- D VTT for CSettingsSubBrowser
  D VTT for CSettingsSubFriends
  D VTT for CSettingsSubInGame
  D VTT for CSettingsSubVoice
@@ -1203,7 +1195,6 @@
  D construction vtable for vgui::EditablePanel-in-CScreenshotNotification
  D construction vtable for vgui::EditablePanel-in-CScreenshotUploadDialog
  D construction vtable for vgui::EditablePanel-in-CSettingsSubBroadcast
- D construction vtable for vgui::EditablePanel-in-CSettingsSubBrowser
  D construction vtable for vgui::EditablePanel-in-CSettingsSubFriends
  D construction vtable for vgui::EditablePanel-in-CSettingsSubInGame
  D construction vtable for vgui::EditablePanel-in-CSettingsSubVoice
@@ -1396,7 +1387,6 @@
  D construction vtable for vgui::Panel-in-CScreenshotNotification
  D construction vtable for vgui::Panel-in-CScreenshotUploadDialog
  D construction vtable for vgui::Panel-in-CSettingsSubBroadcast
- D construction vtable for vgui::Panel-in-CSettingsSubBrowser
  D construction vtable for vgui::Panel-in-CSettingsSubFriends
  D construction vtable for vgui::Panel-in-CSettingsSubInGame
  D construction vtable for vgui::Panel-in-CSettingsSubVoice
@@ -1503,7 +1493,6 @@
  D construction vtable for vgui::PropertyDialog-in-COverlayInGameVoiceSettingsDialog
  D construction vtable for vgui::PropertyDialog-in-COverlaySettingsDialog
  D construction vtable for vgui::PropertyPage-in-CSettingsSubBroadcast
- D construction vtable for vgui::PropertyPage-in-CSettingsSubBrowser
  D construction vtable for vgui::PropertyPage-in-CSettingsSubFriends
  D construction vtable for vgui::PropertyPage-in-CSettingsSubInGame
  D construction vtable for vgui::PropertyPage-in-CSettingsSubVoice
@@ -1644,8 +1633,6 @@
  D guard variable for CScreenshotUploadDialog::GetMessageMap()::s_pMap
  D guard variable for CSettingsSubBroadcast::GetKBMap()::s_pMap
  D guard variable for CSettingsSubBroadcast::GetMessageMap()::s_pMap
- D guard variable for CSettingsSubBrowser::GetKBMap()::s_pMap
- D guard variable for CSettingsSubBrowser::GetMessageMap()::s_pMap
  D guard variable for CSettingsSubFriends::GetKBMap()::s_pMap
  D guard variable for CSettingsSubFriends::GetMessageMap()::s_pMap
  D guard variable for CSettingsSubInGame::GetKBMap()::s_pMap
@@ -1863,7 +1850,6 @@
  D typeinfo for CBaseDesktopPanel
  D typeinfo for CBasePanel
  D typeinfo for CBasePanel::CCallbackOnAsyncNotificationsRequested
- D typeinfo for CBasePanel::CCallbackOnBroadcastRecorderError
  D typeinfo for CBasePanel::CCallbackOnBroadcastSettingsLoaded
  D typeinfo for CBasePanel::CCallbackOnBroadcastShowFirstTimeDlg
  D typeinfo for CBasePanel::CCallbackOnBroadcastStatus
@@ -1877,6 +1863,7 @@
  D typeinfo for CBasePanel::CCallbackOnParentalLockChanged
  D typeinfo for CBasePanel::CCallbackOnPersonaStateChange
  D typeinfo for CBasePanel::CCallbackOnPublishedFileUpdated
+ D typeinfo for CBasePanel::CCallbackOnRecordAudioInitFailure
  D typeinfo for CBasePanel::CCallbackOnScreenshotWritten
  D typeinfo for CBoolProperty
  D typeinfo for CBroadcastAvailableToWatch
@@ -1900,7 +1887,6 @@
  D typeinfo for CCallResult<CScreenshotUploadDialog, ScreenshotBatchComplete_t>
  D typeinfo for CCallResult<CSettingsSubFriends, SetPersonaNameResponse_t>
  D typeinfo for CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>
- D typeinfo for CCallback<CBasePanel, BroadcastRecorderError_t, false>
  D typeinfo for CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>
  D typeinfo for CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>
  D typeinfo for CCallback<CBasePanel, BroadcastStatus_t, false>
@@ -1912,6 +1898,7 @@
  D typeinfo for CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>
  D typeinfo for CCallback<CBasePanel, ParentalLockChanged_t, false>
  D typeinfo for CCallback<CBasePanel, PersonaStateChange_t, false>
+ D typeinfo for CCallback<CBasePanel, RecordAudioInitFail_t, false>
  D typeinfo for CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>
  D typeinfo for CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>
  D typeinfo for CCallback<CBasePanel, ScreenshotWritten_t, false>
@@ -1923,7 +1910,6 @@
  D typeinfo for CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
- D typeinfo for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>
@@ -2023,6 +2009,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseMove>
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseUp>
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseWheel>
+ D typeinfo for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgOpenDevTools>
  D typeinfo for CHTMLProtoBufMsg<CMsgPaste>
  D typeinfo for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -2043,7 +2030,6 @@
  D typeinfo for CItemImageManager
  D typeinfo for CMainOverlay
  D typeinfo for CMicroTxnAuthorizeDialog
- D typeinfo for CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgBrowserCreate
  D typeinfo for CMsgBrowserCreateResponse
@@ -2053,7 +2039,6 @@
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
- D typeinfo for CMsgClearAllCookies
  D typeinfo for CMsgClearHistory
  D typeinfo for CMsgClose
  D typeinfo for CMsgCloseDevTools
@@ -2096,6 +2081,7 @@
  D typeinfo for CMsgMouseUp
  D typeinfo for CMsgMouseWheel
  D typeinfo for CMsgNeedsPaint
+ D typeinfo for CMsgNeedsPaintResponse
  D typeinfo for CMsgNodeHasFocus
  D typeinfo for CMsgOpenDevTools
  D typeinfo for CMsgOpenNewTab
@@ -2121,7 +2107,6 @@
  D typeinfo for CMsgSetFocus
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
- D typeinfo for CMsgSetSharedPaintBuffers
  D typeinfo for CMsgSetTargetFrameRate
  D typeinfo for CMsgSetVerticalScroll
  D typeinfo for CMsgSetZoomLevel
@@ -2260,7 +2245,6 @@
  D typeinfo for CScreenshotUploadDialog
  D typeinfo for CSettingsSubBroadcast
  D typeinfo for CSettingsSubBroadcast::CCallbackOnBroadcastStatus
- D typeinfo for CSettingsSubBrowser
  D typeinfo for CSettingsSubFriends
  D typeinfo for CSettingsSubFriends::CCallbackOnPersonaStateChange
  D typeinfo for CSettingsSubInGame
@@ -3059,7 +3043,6 @@
  D vtable for CBaseDesktopPanel
  D vtable for CBasePanel
  D vtable for CBasePanel::CCallbackOnAsyncNotificationsRequested
- D vtable for CBasePanel::CCallbackOnBroadcastRecorderError
  D vtable for CBasePanel::CCallbackOnBroadcastSettingsLoaded
  D vtable for CBasePanel::CCallbackOnBroadcastShowFirstTimeDlg
  D vtable for CBasePanel::CCallbackOnBroadcastStatus
@@ -3073,6 +3056,7 @@
  D vtable for CBasePanel::CCallbackOnParentalLockChanged
  D vtable for CBasePanel::CCallbackOnPersonaStateChange
  D vtable for CBasePanel::CCallbackOnPublishedFileUpdated
+ D vtable for CBasePanel::CCallbackOnRecordAudioInitFailure
  D vtable for CBasePanel::CCallbackOnScreenshotWritten
  D vtable for CBoolProperty
  D vtable for CBroadcastAvailableToWatch
@@ -3096,7 +3080,6 @@
  D vtable for CCallResult<CScreenshotUploadDialog, ScreenshotBatchComplete_t>
  D vtable for CCallResult<CSettingsSubFriends, SetPersonaNameResponse_t>
  D vtable for CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>
- D vtable for CCallback<CBasePanel, BroadcastRecorderError_t, false>
  D vtable for CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>
  D vtable for CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>
  D vtable for CCallback<CBasePanel, BroadcastStatus_t, false>
@@ -3108,6 +3091,7 @@
  D vtable for CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>
  D vtable for CCallback<CBasePanel, ParentalLockChanged_t, false>
  D vtable for CCallback<CBasePanel, PersonaStateChange_t, false>
+ D vtable for CCallback<CBasePanel, RecordAudioInitFail_t, false>
  D vtable for CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>
  D vtable for CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>
  D vtable for CCallback<CBasePanel, ScreenshotWritten_t, false>
@@ -3119,7 +3103,6 @@
  D vtable for CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
- D vtable for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
  D vtable for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  D vtable for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
  D vtable for CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>
@@ -3217,6 +3200,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgMouseMove>
  D vtable for CHTMLProtoBufMsg<CMsgMouseUp>
  D vtable for CHTMLProtoBufMsg<CMsgMouseWheel>
+ D vtable for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D vtable for CHTMLProtoBufMsg<CMsgOpenDevTools>
  D vtable for CHTMLProtoBufMsg<CMsgPaste>
  D vtable for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -3237,7 +3221,6 @@
  D vtable for CItemImageManager
  D vtable for CMainOverlay
  D vtable for CMicroTxnAuthorizeDialog
- D vtable for CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss
  D vtable for CMsgAddHeader
  D vtable for CMsgBrowserCreate
  D vtable for CMsgBrowserCreateResponse
@@ -3247,7 +3230,6 @@
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
- D vtable for CMsgClearAllCookies
  D vtable for CMsgClearHistory
  D vtable for CMsgClose
  D vtable for CMsgCloseDevTools
@@ -3290,6 +3272,7 @@
  D vtable for CMsgMouseUp
  D vtable for CMsgMouseWheel
  D vtable for CMsgNeedsPaint
+ D vtable for CMsgNeedsPaintResponse
  D vtable for CMsgNodeHasFocus
  D vtable for CMsgOpenDevTools
  D vtable for CMsgOpenNewTab
@@ -3315,7 +3298,6 @@
  D vtable for CMsgSetFocus
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
- D vtable for CMsgSetSharedPaintBuffers
  D vtable for CMsgSetTargetFrameRate
  D vtable for CMsgSetVerticalScroll
  D vtable for CMsgSetZoomLevel
@@ -3454,7 +3436,6 @@
  D vtable for CScreenshotUploadDialog
  D vtable for CSettingsSubBroadcast
  D vtable for CSettingsSubBroadcast::CCallbackOnBroadcastStatus
- D vtable for CSettingsSubBrowser
  D vtable for CSettingsSubFriends
  D vtable for CSettingsSubFriends::CCallbackOnPersonaStateChange
  D vtable for CSettingsSubInGame
@@ -3687,7 +3668,6 @@
  R typeinfo name for CBaseDesktopPanel
  R typeinfo name for CBasePanel
  R typeinfo name for CBasePanel::CCallbackOnAsyncNotificationsRequested
- R typeinfo name for CBasePanel::CCallbackOnBroadcastRecorderError
  R typeinfo name for CBasePanel::CCallbackOnBroadcastSettingsLoaded
  R typeinfo name for CBasePanel::CCallbackOnBroadcastShowFirstTimeDlg
  R typeinfo name for CBasePanel::CCallbackOnBroadcastStatus
@@ -3701,6 +3681,7 @@
  R typeinfo name for CBasePanel::CCallbackOnParentalLockChanged
  R typeinfo name for CBasePanel::CCallbackOnPersonaStateChange
  R typeinfo name for CBasePanel::CCallbackOnPublishedFileUpdated
+ R typeinfo name for CBasePanel::CCallbackOnRecordAudioInitFailure
  R typeinfo name for CBasePanel::CCallbackOnScreenshotWritten
  R typeinfo name for CBoolProperty
  R typeinfo name for CBroadcastAvailableToWatch
@@ -3724,7 +3705,6 @@
  R typeinfo name for CCallResult<CScreenshotUploadDialog, ScreenshotBatchComplete_t>
  R typeinfo name for CCallResult<CSettingsSubFriends, SetPersonaNameResponse_t>
  R typeinfo name for CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>
- R typeinfo name for CCallback<CBasePanel, BroadcastRecorderError_t, false>
  R typeinfo name for CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>
  R typeinfo name for CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>
  R typeinfo name for CCallback<CBasePanel, BroadcastStatus_t, false>
@@ -3736,6 +3716,7 @@
  R typeinfo name for CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>
  R typeinfo name for CCallback<CBasePanel, ParentalLockChanged_t, false>
  R typeinfo name for CCallback<CBasePanel, PersonaStateChange_t, false>
+ R typeinfo name for CCallback<CBasePanel, RecordAudioInitFail_t, false>
  R typeinfo name for CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>
  R typeinfo name for CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>
  R typeinfo name for CCallback<CBasePanel, ScreenshotWritten_t, false>
@@ -3747,7 +3728,6 @@
  R typeinfo name for CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
- R typeinfo name for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>
@@ -3847,6 +3827,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseMove>
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseUp>
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseWheel>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgOpenDevTools>
  R typeinfo name for CHTMLProtoBufMsg<CMsgPaste>
  R typeinfo name for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -3867,7 +3848,6 @@
  R typeinfo name for CItemImageManager
  R typeinfo name for CMainOverlay
  R typeinfo name for CMicroTxnAuthorizeDialog
- R typeinfo name for CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgBrowserCreate
  R typeinfo name for CMsgBrowserCreateResponse
@@ -3877,7 +3857,6 @@
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
- R typeinfo name for CMsgClearAllCookies
  R typeinfo name for CMsgClearHistory
  R typeinfo name for CMsgClose
  R typeinfo name for CMsgCloseDevTools
@@ -3920,6 +3899,7 @@
  R typeinfo name for CMsgMouseUp
  R typeinfo name for CMsgMouseWheel
  R typeinfo name for CMsgNeedsPaint
+ R typeinfo name for CMsgNeedsPaintResponse
  R typeinfo name for CMsgNodeHasFocus
  R typeinfo name for CMsgOpenDevTools
  R typeinfo name for CMsgOpenNewTab
@@ -3945,7 +3925,6 @@
  R typeinfo name for CMsgSetFocus
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
- R typeinfo name for CMsgSetSharedPaintBuffers
  R typeinfo name for CMsgSetTargetFrameRate
  R typeinfo name for CMsgSetVerticalScroll
  R typeinfo name for CMsgSetZoomLevel
@@ -4084,7 +4063,6 @@
  R typeinfo name for CScreenshotUploadDialog
  R typeinfo name for CSettingsSubBroadcast
  R typeinfo name for CSettingsSubBroadcast::CCallbackOnBroadcastStatus
- R typeinfo name for CSettingsSubBrowser
  R typeinfo name for CSettingsSubFriends
  R typeinfo name for CSettingsSubFriends::CCallbackOnPersonaStateChange
  R typeinfo name for CSettingsSubInGame
@@ -4110,6 +4088,7 @@
  R typeinfo name for CUtlLinkedList<BrowserPosition_t, int>
  R typeinfo name for CUtlLinkedList<CUtlDict<bool, int>*, int>
  R typeinfo name for CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>
+ R typeinfo name for CUtlLinkedList<float, int>
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<vgui::GraphPanel::Sample_t, int>
  R typeinfo name for CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>
@@ -4155,6 +4134,7 @@
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
+ R typeinfo name for CUtlVector<Color, CUtlMemory<Color> >
  R typeinfo name for CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >
  R typeinfo name for CUtlVector<PanelAnimationMapEntry, CUtlMemory<PanelAnimationMapEntry> >
  R typeinfo name for CUtlVector<float, CUtlMemory<float> >
@@ -4440,7 +4420,6 @@
  T ASN1_OBJECT_create
  T ASN1_OBJECT_free
  T ASN1_OBJECT_new
- T ASN1_STRING_clear_free
  T ASN1_STRING_cmp
  T ASN1_STRING_copy
  T ASN1_STRING_data
@@ -4644,8 +4623,6 @@
  T CBasePanel::CBasePanel()
  T CBasePanel::CCallbackOnAsyncNotificationsRequested::Run(void*)
  T CBasePanel::CCallbackOnAsyncNotificationsRequested::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnBroadcastRecorderError::Run(void*)
- T CBasePanel::CCallbackOnBroadcastRecorderError::Run(void*, bool, unsigned long long)
  T CBasePanel::CCallbackOnBroadcastSettingsLoaded::Run(void*)
  T CBasePanel::CCallbackOnBroadcastSettingsLoaded::Run(void*, bool, unsigned long long)
  T CBasePanel::CCallbackOnBroadcastShowFirstTimeDlg::Run(void*)
@@ -4672,6 +4649,8 @@
  T CBasePanel::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
  T CBasePanel::CCallbackOnPublishedFileUpdated::Run(void*)
  T CBasePanel::CCallbackOnPublishedFileUpdated::Run(void*, bool, unsigned long long)
+ T CBasePanel::CCallbackOnRecordAudioInitFailure::Run(void*)
+ T CBasePanel::CCallbackOnRecordAudioInitFailure::Run(void*, bool, unsigned long long)
  T CBasePanel::CCallbackOnScreenshotWritten::Run(void*)
  T CBasePanel::CCallbackOnScreenshotWritten::Run(void*, bool, unsigned long long)
  T CBasePanel::ChainToAnimationMap()
@@ -4698,7 +4677,6 @@
  T CBasePanel::LoadScreenshotNotificationThumb(unsigned int, CUtlBuffer&, int, int)
  T CBasePanel::OnActivateModule(int)
  T CBasePanel::OnAsyncNotificationsRequested(NotifyAsyncNotificationsRequested_t*)
- T CBasePanel::OnBroadcastRecorderError(BroadcastRecorderError_t*)
  T CBasePanel::OnBroadcastSettingsLoaded(BroadcastSettingsLoaded_t*)
  T CBasePanel::OnBroadcastShowFirstTimeDlg(BroadcastShowFirstTimeDlg_t*)
  T CBasePanel::OnBroadcastStatus(BroadcastStatus_t*)
@@ -4716,6 +4694,7 @@
  T CBasePanel::OnParentalLockChanged(ParentalLockChanged_t*)
  T CBasePanel::OnPersonaStateChange(PersonaStateChange_t*)
  T CBasePanel::OnPublishedFileUpdated(RemoteStorageUpdatePublishedFileResult_t*)
+ T CBasePanel::OnRecordAudioInitFailure(RecordAudioInitFail_t*)
  T CBasePanel::OnScreenshotHotKeyChanged()
  T CBasePanel::OnScreenshotWritten(ScreenshotWritten_t*)
  T CBasePanel::OnViewGuide()
@@ -4924,12 +4903,6 @@
  T CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>::Run(void*)
  T CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>::Run(void*, bool, unsigned long long)
  T CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>::~CCallback()
- T CCallback<CBasePanel, BroadcastRecorderError_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(BroadcastRecorderError_t*))
- T CCallback<CBasePanel, BroadcastRecorderError_t, false>::GetCallbackSizeBytes()
- T CCallback<CBasePanel, BroadcastRecorderError_t, false>::Register(CBasePanel*, void (CBasePanel::*)(BroadcastRecorderError_t*))
- T CCallback<CBasePanel, BroadcastRecorderError_t, false>::Run(void*)
- T CCallback<CBasePanel, BroadcastRecorderError_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, BroadcastRecorderError_t, false>::~CCallback()
  T CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(BroadcastSettingsLoaded_t*))
  T CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>::Register(CBasePanel*, void (CBasePanel::*)(BroadcastSettingsLoaded_t*))
@@ -4996,6 +4969,12 @@
  T CCallback<CBasePanel, PersonaStateChange_t, false>::Run(void*)
  T CCallback<CBasePanel, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
  T CCallback<CBasePanel, PersonaStateChange_t, false>::~CCallback()
+ T CCallback<CBasePanel, RecordAudioInitFail_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(RecordAudioInitFail_t*))
+ T CCallback<CBasePanel, RecordAudioInitFail_t, false>::GetCallbackSizeBytes()
+ T CCallback<CBasePanel, RecordAudioInitFail_t, false>::Register(CBasePanel*, void (CBasePanel::*)(RecordAudioInitFail_t*))
+ T CCallback<CBasePanel, RecordAudioInitFail_t, false>::Run(void*)
+ T CCallback<CBasePanel, RecordAudioInitFail_t, false>::Run(void*, bool, unsigned long long)
+ T CCallback<CBasePanel, RecordAudioInitFail_t, false>::~CCallback()
  T CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(RemoteStoragePublishFileResult_t*))
  T CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>::Register(CBasePanel*, void (CBasePanel::*)(RemoteStoragePublishFileResult_t*))
@@ -5060,12 +5039,6 @@
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*, bool, unsigned long long)
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallback()
- T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::CCallback(CMicroTxnAuthorizeDialog*, void (CMicroTxnAuthorizeDialog::*)(MicroTxnAuthDismissCallback_t*))
- T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::GetCallbackSizeBytes()
- T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Register(CMicroTxnAuthorizeDialog*, void (CMicroTxnAuthorizeDialog::*)(MicroTxnAuthDismissCallback_t*))
- T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Run(void*)
- T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::CCallback(CMusicPage_Details_Album*, void (CMusicPage_Details_Album::*)(AlbumCoverLoaded_t*))
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::Register(CMusicPage_Details_Album*, void (CMusicPage_Details_Album::*)(AlbumCoverLoaded_t*))
@@ -5461,7 +5434,6 @@
  T CCallbackMgr::Unregister(CCallbackBase*)
  T CCallbackMgr::UnregisterCallResult(CCallbackBase*, unsigned long long)
  T CCallbackMgr::~CCallbackMgr()
- T CChromePaintBufferClient::GetLockedReadPtr() const
  T CClassMemoryPool<PanelAnimationMap>::Alloc()
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CColorProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -5481,7 +5453,6 @@
  T CCookie::SharedDtor()
  T CCookie::~CCookie()
  T CCrossProcessSharedMemory::BInit(void const*, void const*, unsigned int, bool)
- T CCrossProcessSharedMemory::BInitWriteable(void const*, void const*, unsigned int, bool)
  T CCrossProcessSharedMemory::Base() const
  T CCrossProcessSharedMemory::CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::Close()
@@ -5628,6 +5599,8 @@
  T CHTMLProtoBufMsg<CMsgMouseUp>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgMouseWheel>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgMouseWheel>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgOpenDevTools>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgOpenDevTools>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgPaste>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -5765,8 +5738,6 @@
  T CMicroTxnAuthorizeDialog::BAddFunds()
  T CMicroTxnAuthorizeDialog::BLoadTransaction()
  T CMicroTxnAuthorizeDialog::BUpdateWalletAmount()
- T CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss::Run(void*)
- T CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss::Run(void*, bool, unsigned long long)
  T CMicroTxnAuthorizeDialog::CMicroTxnAuthorizeDialog(unsigned long long)
  T CMicroTxnAuthorizeDialog::CancelTransaction()
  T CMicroTxnAuthorizeDialog::ChainToAnimationMap()
@@ -5780,7 +5751,6 @@
  T CMicroTxnAuthorizeDialog::GetPanelClassName()
  T CMicroTxnAuthorizeDialog::GetPanelTopClassName() const
  T CMicroTxnAuthorizeDialog::KB_ChainToMap()
- T CMicroTxnAuthorizeDialog::OnAuthDismiss(MicroTxnAuthDismissCallback_t*)
  T CMicroTxnAuthorizeDialog::OnAuthorizeCompleted(MicroTxnAuthResponse_t*, bool)
  T CMicroTxnAuthorizeDialog::OnAuthorizeTransaction()
  T CMicroTxnAuthorizeDialog::OnClose()
@@ -5893,17 +5863,6 @@
  T CMsgCanGoBackAndForward::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCanGoBackAndForward::SetCachedSize(int) const
  T CMsgCanGoBackAndForward::~CMsgCanGoBackAndForward()
- T CMsgClearAllCookies::ByteSize() const
- T CMsgClearAllCookies::CMsgClearAllCookies()
- T CMsgClearAllCookies::Clear()
- T CMsgClearAllCookies::GetCachedSize() const
- T CMsgClearAllCookies::GetMetadata() const
- T CMsgClearAllCookies::IsInitialized() const
- T CMsgClearAllCookies::MergeFrom(CMsgClearAllCookies const&)
- T CMsgClearAllCookies::New() const
- T CMsgClearAllCookies::SerializeWithCachedSizesToArray(unsigned char*) const
- T CMsgClearAllCookies::SetCachedSize(int) const
- T CMsgClearAllCookies::~CMsgClearAllCookies()
  T CMsgClearHistory::ByteSize() const
  T CMsgClearHistory::CMsgClearHistory()
  T CMsgClearHistory::Clear()
@@ -6378,6 +6337,17 @@
  T CMsgNeedsPaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgNeedsPaint::SetCachedSize(int) const
  T CMsgNeedsPaint::~CMsgNeedsPaint()
+ T CMsgNeedsPaintResponse::ByteSize() const
+ T CMsgNeedsPaintResponse::CMsgNeedsPaintResponse()
+ T CMsgNeedsPaintResponse::Clear()
+ T CMsgNeedsPaintResponse::GetCachedSize() const
+ T CMsgNeedsPaintResponse::GetMetadata() const
+ T CMsgNeedsPaintResponse::IsInitialized() const
+ T CMsgNeedsPaintResponse::MergeFrom(CMsgNeedsPaintResponse const&)
+ T CMsgNeedsPaintResponse::New() const
+ T CMsgNeedsPaintResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgNeedsPaintResponse::SetCachedSize(int) const
+ T CMsgNeedsPaintResponse::~CMsgNeedsPaintResponse()
  T CMsgNodeHasFocus::ByteSize() const
  T CMsgNodeHasFocus::CMsgNodeHasFocus()
  T CMsgNodeHasFocus::Clear()
@@ -6664,17 +6634,6 @@
  T CMsgSetHorizontalScroll::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetHorizontalScroll::SetCachedSize(int) const
  T CMsgSetHorizontalScroll::~CMsgSetHorizontalScroll()
- T CMsgSetSharedPaintBuffers::ByteSize() const
- T CMsgSetSharedPaintBuffers::CMsgSetSharedPaintBuffers()
- T CMsgSetSharedPaintBuffers::Clear()
- T CMsgSetSharedPaintBuffers::GetCachedSize() const
- T CMsgSetSharedPaintBuffers::GetMetadata() const
- T CMsgSetSharedPaintBuffers::IsInitialized() const
- T CMsgSetSharedPaintBuffers::MergeFrom(CMsgSetSharedPaintBuffers const&)
- T CMsgSetSharedPaintBuffers::New() const
- T CMsgSetSharedPaintBuffers::SerializeWithCachedSizesToArray(unsigned char*) const
- T CMsgSetSharedPaintBuffers::SetCachedSize(int) const
- T CMsgSetSharedPaintBuffers::~CMsgSetSharedPaintBuffers()
  T CMsgSetTargetFrameRate::ByteSize() const
  T CMsgSetTargetFrameRate::CMsgSetTargetFrameRate()
  T CMsgSetTargetFrameRate::Clear()
@@ -7563,7 +7522,6 @@
  T COverlayWebBrowser::OnParentalLockChanged(ParentalLockChanged_t*)
  T COverlayWebBrowser::OnRunStoreJavascript(KeyValues*)
  T COverlayWebBrowser::OnSecurityStatus(KeyValues*)
- T COverlayWebBrowser::OnSetSecurityStatus(bool, bool, bool, char const*)
  T COverlayWebBrowser::OnSetStatusText(char const*)
  T COverlayWebBrowser::OnTick()
  T COverlayWebBrowser::OnURLChanged(KeyValues*)
@@ -7605,7 +7563,6 @@
  T COverlayWebBrowserHTML::GetPanelClassName()
  T COverlayWebBrowserHTML::GetPanelTopClassName() const
  T COverlayWebBrowserHTML::KB_ChainToMap()
- T COverlayWebBrowserHTML::OnBrowserSetCursor(EMouseCursor*)
  T COverlayWebBrowserHTML::OnCommand(char const*)
  T COverlayWebBrowserHTML::OnEnterFullScreen()
  T COverlayWebBrowserHTML::OnExitFullScreen()
@@ -7886,7 +7843,6 @@
  T CProportionalIntProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CRTime::CSecsPassed() const
- T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::Render(unsigned int)
  T CRTime::UpdateRealTime()
@@ -8144,8 +8100,8 @@
  T CScreenshotNotification::KB_ChainToMap()
  T CScreenshotNotification::PerformLayout()
  T CScreenshotNotification::~CScreenshotNotification()
- T CScreenshotThread::BGetScreenshot(CUtlBuffer*, unsigned int*, unsigned int*)
  T CScreenshotThread::CScreenshotThread(CSharedMemStream*, unsigned int, CGameID)
+ T CScreenshotThread::ProcessScreenshot()
  T CScreenshotThread::Run()
  T CScreenshotThread::~CScreenshotThread()
  T CScreenshotUploadDialog::CScreenshotUploadDialog(CScreenshotManager*, char const*, CGameID, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&, unsigned long long, unsigned long long)
@@ -8190,20 +8146,6 @@
  T CSettingsSubBroadcast::PanelMessageFunc_UpdateHardwareSupport::InitVar()
  T CSettingsSubBroadcast::UpdateHardwareSupport(int)
  T CSettingsSubBroadcast::~CSettingsSubBroadcast()
- T CSettingsSubBrowser::CSettingsSubBrowser(vgui::Panel*)
- T CSettingsSubBrowser::ChainToAnimationMap()
- T CSettingsSubBrowser::ChainToMap()
- T CSettingsSubBrowser::GetAnimMap()
- T CSettingsSubBrowser::GetClassSize() const
- T CSettingsSubBrowser::GetKBMap()
- T CSettingsSubBrowser::GetMessageMap()
- T CSettingsSubBrowser::GetPanelClassName()
- T CSettingsSubBrowser::GetPanelTopClassName() const
- T CSettingsSubBrowser::KB_ChainToMap()
- T CSettingsSubBrowser::OnApplyChanges()
- T CSettingsSubBrowser::OnCommand(char const*)
- T CSettingsSubBrowser::OnResetData()
- T CSettingsSubBrowser::~CSettingsSubBrowser()
  T CSettingsSubFriends::ApplySchemeSettings(vgui::IScheme*)
  T CSettingsSubFriends::CCallbackOnPersonaStateChange::Run(void*)
  T CSettingsSubFriends::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
@@ -8399,14 +8341,12 @@
  T CTradeDialog::PanelMessageFunc_OnCustomURL::InitVar()
  T CTradeDialog::PanelMessageFunc_OnSetHTMLTitle::InitVar()
  T CTradeDialog::~CTradeDialog()
- T CURLManager::BMatchingFullURL(int, char const*, int*)
  T CURLManager::CURLManager()
  T CURLManager::ConstructFullURL(char const*, CUtlString*, char const*, char const*, char const*)
  T CURLManager::ConstructFullURL(int, CUtlString*, char const*, char const*, char const*)
  T CURLManager::ConstructFullURL(int, CUtlVector<char const*, CUtlMemory<char const*> >&, char*, int)
  T CURLManager::FindURL(char const*)
  T CURLManager::FindURLFromFullURL(char const*)
- T CURLManager::GetAllWGAuthedURLs()
  T CURLManager::GetURLFeature(int)
  T CURLManager::GetURLNav(int)
  T CURLManager::LoadURLFile(char const*, IBaseFileSystem*)
@@ -8508,7 +8448,6 @@
  T CUtlDict<vgui::StyleHandle_t, int>::RemoveAll()
  T CUtlDict<vgui::StyleHandle_t, int>::Validate(CValidator&, char const*)
  T CUtlDict<vgui::StyleHandle_t, int>::~CUtlDict()
- T CUtlFmtString::CUtlFmtString(char const*, ...)
  T CUtlHandleTable<vgui::BuildGroup, 20>::AddHandle()
  T CUtlHandleTable<vgui::BuildGroup, 20>::CUtlHandleTable()
  T CUtlHandleTable<vgui::BuildGroup, 20>::GetEntry(unsigned int) const
@@ -8580,11 +8519,15 @@
  T CUtlLinkedList<BrowserPosition_t, int>::Free(int)
  T CUtlLinkedList<BrowserPosition_t, int>::InsertAfter(int, BrowserPosition_t const&)
  T CUtlLinkedList<BrowserPosition_t, int>::LinkAfter(int, int)
+ T CUtlLinkedList<BrowserPosition_t, int>::Previous(int) const
  T CUtlLinkedList<BrowserPosition_t, int>::RemoveAll()
  T CUtlLinkedList<BrowserPosition_t, int>::Unlink(int)
  T CUtlLinkedList<BrowserPosition_t, int>::~CUtlLinkedList()
+ T CUtlLinkedList<CLogWatchParam, int>::Next(int) const
  T CUtlLinkedList<CLogWatchParam, int>::RemoveAll()
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::Free(int)
+ T CUtlLinkedList<CUtlDict<bool, int>*, int>::Next(int) const
+ T CUtlLinkedList<CUtlDict<bool, int>*, int>::Previous(int) const
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::RemoveAll()
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::Unlink(int)
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::Validate(CValidator&, char const*)
@@ -8592,17 +8535,29 @@
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Free(int)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::InsertBefore(int, CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >* const&)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Previous(int) const
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::RemoveAll()
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Unlink(int)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Validate(CValidator&, char const*)
+ T CUtlLinkedList<CWatchingLog, int>::Next(int) const
  T CUtlLinkedList<CWatchingLog, int>::RemoveAll()
  T CUtlLinkedList<CWatchingLog, int>::~CUtlLinkedList()
+ T CUtlLinkedList<float, int>::AllocInternal(bool)
+ T CUtlLinkedList<float, int>::InsertBefore(int, float const&)
+ T CUtlLinkedList<float, int>::LinkBefore(int, int)
+ T CUtlLinkedList<float, int>::Next(int) const
+ T CUtlLinkedList<float, int>::Previous(int) const
+ T CUtlLinkedList<float, int>::RemoveAll()
+ T CUtlLinkedList<float, int>::Unlink(int)
+ T CUtlLinkedList<float, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertAfter(int, int const&)
  T CUtlLinkedList<int, int>::InsertBefore(int, int const&)
  T CUtlLinkedList<int, int>::LinkAfter(int, int)
  T CUtlLinkedList<int, int>::LinkBefore(int, int)
+ T CUtlLinkedList<int, int>::Next(int) const
+ T CUtlLinkedList<int, int>::Previous(int) const
  T CUtlLinkedList<int, int>::RemoveAll()
  T CUtlLinkedList<int, int>::Unlink(int)
  T CUtlLinkedList<int, int>::Validate(CValidator&, char const*)
@@ -8610,6 +8565,7 @@
  T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::Free(int)
  T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::InsertBefore(int, vgui::GraphPanel::Sample_t const&)
  T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::LinkBefore(int, int)
+ T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::Previous(int) const
  T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::RemoveAll()
  T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::Unlink(int)
  T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::Validate(CValidator&, char const*)
@@ -8617,6 +8573,8 @@
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Free(unsigned char)
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::InsertBefore(unsigned char)
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::LinkBefore(unsigned char, unsigned char)
+ T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Next(unsigned char) const
+ T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Previous(unsigned char) const
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::RemoveAll()
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Unlink(unsigned char)
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Validate(CValidator&, char const*)
@@ -8624,19 +8582,26 @@
  T CUtlLinkedList<vgui::ListPanelItem*, int>::Free(int)
  T CUtlLinkedList<vgui::ListPanelItem*, int>::InsertBefore(int, vgui::ListPanelItem* const&)
  T CUtlLinkedList<vgui::ListPanelItem*, int>::LinkBefore(int, int)
+ T CUtlLinkedList<vgui::ListPanelItem*, int>::Next(int) const
+ T CUtlLinkedList<vgui::ListPanelItem*, int>::Previous(int) const
  T CUtlLinkedList<vgui::ListPanelItem*, int>::RemoveAll()
  T CUtlLinkedList<vgui::ListPanelItem*, int>::Unlink(int)
  T CUtlLinkedList<vgui::ListPanelItem*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<vgui::ListViewItem*, int>::AllocInternal(bool)
+ T CUtlLinkedList<vgui::ListViewItem*, int>::Find(vgui::ListViewItem* const&) const
  T CUtlLinkedList<vgui::ListViewItem*, int>::Free(int)
  T CUtlLinkedList<vgui::ListViewItem*, int>::InsertBefore(int, vgui::ListViewItem* const&)
  T CUtlLinkedList<vgui::ListViewItem*, int>::LinkBefore(int, int)
+ T CUtlLinkedList<vgui::ListViewItem*, int>::Next(int) const
+ T CUtlLinkedList<vgui::ListViewItem*, int>::Previous(int) const
  T CUtlLinkedList<vgui::ListViewItem*, int>::RemoveAll()
  T CUtlLinkedList<vgui::ListViewItem*, int>::Unlink(int)
  T CUtlLinkedList<vgui::MenuItem*, int>::AllocInternal(bool)
  T CUtlLinkedList<vgui::MenuItem*, int>::Free(int)
  T CUtlLinkedList<vgui::MenuItem*, int>::InsertBefore(int, vgui::MenuItem* const&)
  T CUtlLinkedList<vgui::MenuItem*, int>::LinkBefore(int, int)
+ T CUtlLinkedList<vgui::MenuItem*, int>::Next(int) const
+ T CUtlLinkedList<vgui::MenuItem*, int>::Previous(int) const
  T CUtlLinkedList<vgui::MenuItem*, int>::RemoveAll()
  T CUtlLinkedList<vgui::MenuItem*, int>::Unlink(int)
  T CUtlLinkedList<vgui::MenuItem*, int>::Validate(CValidator&, char const*)
@@ -8644,6 +8609,7 @@
  T CUtlLinkedList<vgui::TreeNode*, int>::Free(int)
  T CUtlLinkedList<vgui::TreeNode*, int>::InsertBefore(int, vgui::TreeNode* const&)
  T CUtlLinkedList<vgui::TreeNode*, int>::LinkBefore(int, int)
+ T CUtlLinkedList<vgui::TreeNode*, int>::Previous(int) const
  T CUtlLinkedList<vgui::TreeNode*, int>::RemoveAll()
  T CUtlLinkedList<vgui::TreeNode*, int>::Unlink(int)
  T CUtlLinkedList<vgui::TreeNode*, int>::Validate(CValidator&, char const*)
@@ -8889,10 +8855,13 @@
  T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
+ T CUtlStringBuilder::Data::TakeOwnership(unsigned long&, unsigned long&)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Replace(char const*, char const*)
  T CUtlStringBuilder::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
+ T CUtlStringBuilder::TakeOwnership(unsigned long*, unsigned long*)
+ T CUtlStringResult::~CUtlStringResult()
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
@@ -8995,20 +8964,15 @@
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::InsertBefore(int, CUtlSymbolTable::StringPool_t* const&)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
+ T CUtlVector<Color, CUtlMemory<Color> >::Validate(CValidator&, char const*)
+ T CUtlVector<Color, CUtlMemory<Color> >::~CUtlVector()
  T CUtlVector<EventTapInfo_t*, CUtlMemory<EventTapInfo_t*> >::GrowVector(int)
  T CUtlVector<EventTapInfo_t*, CUtlMemory<EventTapInfo_t*> >::InsertBefore(int, EventTapInfo_t* const&)
  T CUtlVector<EventTapInfo_t*, CUtlMemory<EventTapInfo_t*> >::ShiftElementsRight(int, int)
@@ -9081,8 +9045,7 @@
  T CUtlVector<short, CUtlMemory<short> >::~CUtlVector()
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::GrowVector(int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::InsertBefore(int, unsigned char const&)
- T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::RemoveMultiple(int, int)
- T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::SetCount(int)
+ T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::InsertMultipleBefore(int, int, unsigned char const*)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsLeft(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::Validate(CValidator&, char const*)
@@ -9142,9 +9105,8 @@
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::~CUtlVector()
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::GrowVector(int)
- T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::RemoveMultiple(int, int)
- T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::SetCount(int)
- T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::ShiftElementsLeft(int, int)
+ T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::InsertMultipleBefore(int, int, vgui::CTreeViewListControl::CColumnInfo const*)
+ T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::~CUtlVector()
  T CUtlVector<vgui::CheckButtonList::CheckItem_t, CUtlMemory<vgui::CheckButtonList::CheckItem_t> >::GrowVector(int)
  T CUtlVector<vgui::CheckButtonList::CheckItem_t, CUtlMemory<vgui::CheckButtonList::CheckItem_t> >::InsertBefore(int, vgui::CheckButtonList::CheckItem_t const&)
@@ -9302,7 +9264,6 @@
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertBefore(int, wchar_t const&)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertMultipleBefore(int, int, wchar_t const*)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::RemoveMultiple(int, int)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::SetCount(int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsRight(int, int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::Validate(CValidator&, char const*)
@@ -9375,7 +9336,6 @@
  T ConCommandBase::GetFlags() const
  T ConCommandBase::GetTargetType() const
  T ConCommandBase::IsBitSet(unsigned int) const
- T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
  T ConVar::ApplyReplicatedValue(char const*)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
@@ -9386,13 +9346,11 @@
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
  T ConVar::Init()
- T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
- T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetValue(char const*)
@@ -9736,7 +9694,6 @@
  T HTMLPopup::OnFinishRequest()
  T HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
  T HTMLPopup::OnSecurityStatus(KeyValues*)
- T HTMLPopup::OnSetSecurityStatus(bool, bool, bool, char const*)
  T HTMLPopup::OnStartRequest(KeyValues*)
  T HTMLPopup::OnTick()
  T HTMLPopup::OnURLChanged(KeyValues*)
@@ -10077,7 +10034,7 @@
  T TimeCompare(unsigned int const*, unsigned int const*)
  T URLEncode(char const*)
  T URLLabel_Factory()
- T UnlinkFile(char const*)
+ T URLParts_t::~URLParts_t()
  T UpdateHardwarSupportCheckboxes(vgui::Panel*, bool)
  T UpdateProfilingState()
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
@@ -10388,7 +10345,6 @@
  T non-virtual thunk to vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
  T non-virtual thunk to vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T non-virtual thunk to vgui::HTML::BrowserSetIndex(int)
- T non-virtual thunk to vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
  T non-virtual thunk to vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T non-virtual thunk to vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
  T non-virtual thunk to vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)
@@ -11685,7 +11641,7 @@
  T vgui::GetAnimationController()
  T vgui::GetControlsModuleName()
  T vgui::GetINotificationManager()
- T vgui::GraphPanel::AddItem(float, float)
+ T vgui::GraphPanel::AddItem(float, float, float*, int)
  T vgui::GraphPanel::ChainToAnimationMap()
  T vgui::GraphPanel::ChainToMap()
  T vgui::GraphPanel::GetAnimMap()
@@ -11695,9 +11651,10 @@
  T vgui::GraphPanel::GetMessageMap()
  T vgui::GraphPanel::GetPanelClassName()
  T vgui::GraphPanel::GetPanelTopClassName() const
- T vgui::GraphPanel::GraphPanel(vgui::Panel*, char const*)
+ T vgui::GraphPanel::GraphPanel(vgui::Panel*, char const*, int)
  T vgui::GraphPanel::KB_ChainToMap()
  T vgui::GraphPanel::Paint()
+ T vgui::GraphPanel::PerformLayout()
  T vgui::GraphPanel::SetDisplayDomainSize(float)
  T vgui::GraphPanel::SetUseFixedRange(float, float)
  T vgui::GraphPanel::Validate(CValidator&, char const*)
@@ -11742,7 +11699,6 @@
  T vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
  T vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T vgui::HTML::BrowserSetIndex(int)
- T vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
  T vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
  T vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)
@@ -11814,7 +11770,6 @@
  T vgui::HTML::NewWindowsOnly(bool)
  T vgui::HTML::OnAbortLastRequest()
  T vgui::HTML::OnBrowserExitFullScreen()
- T vgui::HTML::OnBrowserSetCursor(EMouseCursor*)
  T vgui::HTML::OnCommand(char const*)
  T vgui::HTML::OnCursorExited()
  T vgui::HTML::OnCursorMoved(int, int)
@@ -11824,7 +11779,6 @@
  T vgui::HTML::OnFileSelectionCancelled()
  T vgui::HTML::OnFinishRequest(char const*, char const*)
  T vgui::HTML::OnFullScreenCursorMoved(int, int)
- T vgui::HTML::OnHorizontalScrollBarResized()
  T vgui::HTML::OnKeyCodePressed(vgui::KeyCode)
  T vgui::HTML::OnKeyCodeReleased(vgui::KeyCode)
  T vgui::HTML::OnKeyCodeTyped(vgui::KeyCode)
@@ -11844,7 +11798,6 @@
  T vgui::HTML::OnSizeChanged(int, int)
  T vgui::HTML::OnStartRequest(char const*, char const*, char const*, bool)
  T vgui::HTML::OnTick()
- T vgui::HTML::OnVerticalScrollBarResized()
  T vgui::HTML::OpenURL(char const*, char const*, bool)
  T vgui::HTML::Paint()
  T vgui::HTML::PaintComboBox()
@@ -12154,7 +12107,7 @@
  T vgui::ListPanel::ResetScrollBar()
  T vgui::ListPanel::ResizeColumnToContents(int)
  T vgui::ListPanel::ScrollToItem(int)
- T vgui::ListPanel::ScrollToItemIfNeeded(int, int)
+ T vgui::ListPanel::ScrollToItemIfNeeded(int)
  T vgui::ListPanel::SetAllowUserModificationOfColumns(bool)
  T vgui::ListPanel::SetColumnEnabled(int, bool)
  T vgui::ListPanel::SetColumnHeaderHeight(int)
@@ -12172,7 +12125,6 @@
  T vgui::ListPanel::SetIgnoreDoubleClick(bool)
  T vgui::ListPanel::SetImageList(vgui::ImageList*, bool)
  T vgui::ListPanel::SetItemDisabled(int, bool)
- T vgui::ListPanel::SetItemSelectionDisabled(int, bool)
  T vgui::ListPanel::SetItemUserKV(int, KeyValues*, bool)
  T vgui::ListPanel::SetItemVisible(int, bool)
  T vgui::ListPanel::SetMultiSelectEnabled(bool)
@@ -12682,7 +12634,6 @@
  T vgui::PageTab::SetCustomTabPanel(vgui::Panel*)
  T vgui::PageTab::UpdateTabSize()
  T vgui::PageTab::~PageTab()
- T vgui::Panel::AddActionSignalTarget(unsigned int)
  T vgui::Panel::AddActionSignalTarget(vgui::Panel*)
  T vgui::Panel::AddKeyBinding(char const*, int, int)
  T vgui::Panel::AddPropertyConverter(char const*, vgui::IPanelAnimationPropertyConverter*)
@@ -13170,7 +13121,6 @@
  T vgui::QueryBox::QueryBox(wchar_t const*, wchar_t const*, vgui::Panel*, bool)
  T vgui::QueryBox::SetCancelButtonText(char const*)
  T vgui::QueryBox::SetCancelCommand(KeyValues*)
- T vgui::QueryBox::SetKeyFocusOnCancelButton()
  T vgui::QueryBox::SetOKCommand(KeyValues*)
  T vgui::QueryBox::~QueryBox()
  T vgui::RGBAImage::GetContentSize(int&, int&)
@@ -14050,7 +14000,6 @@
  T void CryptoPP::ByteReverse<unsigned int>(unsigned int*, unsigned int const*, unsigned long)
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T void Destruct<CScreenshotGameSelector::NameSort_t>(CScreenshotGameSelector::NameSort_t*)
- T void Destruct<CUtlString>(CUtlString*)
  TSListBase_Init
  TSListBase_SwapList
  Test_IsActive
@@ -14076,6 +14025,8 @@
  V_FixSlashes
  V_GetFileExtension
  V_IsAbsolutePath
+ V_IsTLD
+ V_IsValidDomainNameCharacter
  V_IsValidURLCharacter
  V_MakeAbsolutePath
  V_RemoveDotSlashes
@@ -14091,6 +14042,7 @@
  V_URLCracker
  V_URLDecodeRaw
  V_URLEncode
+ V_URLParse
  V_UTF16ToUTF32
  V_UTF16ToUTF8
  V_UTF32CharsToUTF8
@@ -14099,6 +14051,7 @@
  V_UTF8ToUChar32
  V_UTF8ToUTF16
  V_UTF8ToUTF32
+ V_UnicodeAdvance(char*, int)
  V_UnqualifiedFileName
  V_WcsSkipArticles
  V_atof
@@ -14115,6 +14068,7 @@
  V_strncmp
  V_strncpy
  V_strnicmp
+ V_strristr
  V_strtoui64
  V_tolower
  V_vsnprintf
@@ -14194,8 +14148,6 @@
  b (anonymous namespace)::CMsgBuildID_reflection_
  b (anonymous namespace)::CMsgCanGoBackAndForward_descriptor_
  b (anonymous namespace)::CMsgCanGoBackAndForward_reflection_
- b (anonymous namespace)::CMsgClearAllCookies_descriptor_
- b (anonymous namespace)::CMsgClearAllCookies_reflection_
  b (anonymous namespace)::CMsgClearHistory_descriptor_
  b (anonymous namespace)::CMsgClearHistory_reflection_
  b (anonymous namespace)::CMsgCloseDevTools_descriptor_
@@ -14278,6 +14230,8 @@
  b (anonymous namespace)::CMsgMouseUp_reflection_
  b (anonymous namespace)::CMsgMouseWheel_descriptor_
  b (anonymous namespace)::CMsgMouseWheel_reflection_
+ b (anonymous namespace)::CMsgNeedsPaintResponse_descriptor_
+ b (anonymous namespace)::CMsgNeedsPaintResponse_reflection_
  b (anonymous namespace)::CMsgNeedsPaint_descriptor_
  b (anonymous namespace)::CMsgNeedsPaint_reflection_
  b (anonymous namespace)::CMsgNodeHasFocus_descriptor_
@@ -14330,8 +14284,6 @@
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
  b (anonymous namespace)::CMsgSetHorizontalScroll_reflection_
- b (anonymous namespace)::CMsgSetSharedPaintBuffers_descriptor_
- b (anonymous namespace)::CMsgSetSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgSetTargetFrameRate_descriptor_
  b (anonymous namespace)::CMsgSetTargetFrameRate_reflection_
  b (anonymous namespace)::CMsgSetVerticalScroll_descriptor_
@@ -14621,7 +14573,6 @@
  b s_bCallbackManagerInitialized
  b s_bDebugVGUI2Messages
  b s_bFirstLogEntry
- b s_bHWAccelCRC32
  b s_bSettingsHardwareEncodingState
  b s_bSuppressRebindChecks
  b s_hCurrentSortingColumnSymbol
@@ -14647,8 +14598,6 @@
  b vgui::Label::ApplySingleSetting(KeyValues*)::hKeyLabelText
  b vgui::Label::ApplySingleSetting(KeyValues*)::hKeyTextAlignment
  b vgui::Label::ApplySingleSetting(KeyValues*)::hKeyWrap
- b vgui::ListPanel::PaintInterior()::fAsserted
- b vgui::ListPanel::PerformLayout()::fAsserted
  b vgui::Panel::ApplySingleSetting(KeyValues*)::hGroup
  b vgui::Panel::ApplySingleSetting(KeyValues*)::hKeyEnabled
  b vgui::Panel::ApplySingleSetting(KeyValues*)::hKeyStyle
@@ -14750,7 +14699,6 @@
  d s_iDuplicateIndex
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
- d s_rgchWGAuthedURLs
  d stringconverter
  d textureidconverter
  d typeinfo for (anonymous namespace)::CaptionGripPanel
@@ -14837,7 +14785,6 @@
  launch_msg
  localeconv
  localtime
- log10
  longjmp
  lround
  lstat$INODE64
@@ -14853,7 +14800,6 @@
  memset
  memset_pattern16
  mkdir
- mktime$UNIX2003
  mmap$UNIX2003
  modf
  munmap$UNIX2003
@@ -14953,7 +14899,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_
- r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearAllCookies_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearHistory_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCloseDevTools_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCloseFullScreenFlashIfOpen_offsets_
@@ -14995,6 +14940,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseMove_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseWheel_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaintResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNodeHasFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenDevTools_offsets_
@@ -15021,7 +14967,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
- r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetTargetFrameRate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetVerticalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetZoomLevel_offsets_
@@ -15502,7 +15447,6 @@
  t self_destruct
  t sep_downsample
  t sep_upsample
- t set_error(JSON_parser_struct*)
  t skip_variable
  t start_input_pass
  t start_output_pass
@@ -15520,6 +15464,7 @@
  t start_pass_merged_upsample
  t start_pass_prep
  t start_pass_upsample
+ t unsigned char const* HTML_GetTextureMemory<CMsgNeedsPaint>(CCrossProcessSharedMemory&, CMsgNeedsPaint const*, unsigned int)
  t update_box
  t use_merged_upsample
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)

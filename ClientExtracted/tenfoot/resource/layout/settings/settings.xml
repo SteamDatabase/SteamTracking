@@ -48,6 +48,10 @@
 					<Label class="LongDesc" text="#Settings_Controller" />
 				</Button>
 
+				<Button id="SteamControllerSettingsButton" class="Button" onactivate="ShowSettings( SteamController );">
+					<Label class="LongDesc" text="#Settings_SteamController" />
+				</Button>
+
 				<Button id="StoreSettingsButton" class="Button" onactivate="ShowSettings( Store );">
 					<Label class="LongDesc" text="#Settings_Store" />
 				</Button>
@@ -55,7 +59,7 @@
 
 			<!-- Column 2 -->
 
-			<Panel class="SettingsContent SettingsMiddleContent">
+			<Panel class="SettingsContent SettingsMainRightContent">
 				<Button id="DisplaySettingsButton" class="Button" onactivate="ShowSettings( Display );">
 					<Label class="LongDesc" text="#Settings_Display" />
 				</Button>
@@ -80,24 +84,19 @@
 				<Button id="TimeZoneSettingsButton" class="Button" onactivate="ShowSettings( TimeZone );">
 					<Label class="LongDesc" text="#Settings_TimeZone" />
 				</Button>
+				<Button id="RemoteControlSettingsButton" class="Button" onactivate="ShowSettings( RemoteControl );">
+					<Label class="LongDesc" text="#Settings_RemoteControl" />
+				</Button>
 				<Button id="BroadcastSettingsButton" class="Button" onactivate="ShowSettings( Broadcast );">
 					<Label class="LongDesc" text="#Settings_Broadcast" />
 				</Button>
 				<Button id="AlienFXSettingsButton" class="Button" onactivate="ShowSettings( AlienFX );">
 					<Label class="LongDesc" text="#Settings_AlienFX" />
 				</Button>
-				<Button id="DiskManagetmentButton" class="Button" onactivate="ShowSettings( DiskManagement );">
-					<Label class="LongDesc" text="#Settings_DiskManagement" />
-				</Button>
 
 				<!-- <Button class="Button" >
 					<Label class="LongDesc" text="#Settings_Cloud" />
 				</Button> -->
-			</Panel>
-			
-			<!-- Column 3 -->
-
-			<Panel class="SettingsContent SettingsRightContent">
 			</Panel>
 
 

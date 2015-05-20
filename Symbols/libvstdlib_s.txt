@@ -152,8 +152,6 @@
  T CMemoryPool::Clear()
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
- T CParseURL::FindAnyCharInSegment(char const*, char const*, char const*)
- T CParseURL::FindInSegment(char const*, char const*, char const*)
  T CParseURL::Parse(char const*, int, URLParts_t&)
  T CParseURL::ParseURLImpl(char const*, int, URLParts_t&)
  T CParseURL::SetURLPart(char const*, char const*, CUtlString&)
@@ -163,7 +161,6 @@
  T CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)
  T CStringNormalization::Test_BValidateStructures()
  T CStringNormalization::ValidateStatics(CValidator&, char const*)
- T CURLUtils::FixupSeparatorScheme(CUtlString&)
  T CURLUtils::IsTLD(char const*)
  T CURLUtils::ValidateStatics(CValidator&, char const*)
  T CUniformRandomStream::CUniformRandomStream()
@@ -193,6 +190,8 @@
  T CUtlLinkedList<CCoroutine, int>::Free(int)
  T CUtlLinkedList<CCoroutine, int>::InsertBefore(int)
  T CUtlLinkedList<CCoroutine, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CCoroutine, int>::Next(int) const
+ T CUtlLinkedList<CCoroutine, int>::Previous(int) const
  T CUtlLinkedList<CCoroutine, int>::RemoveAll()
  T CUtlLinkedList<CCoroutine, int>::Unlink(int)
  T CUtlLinkedList<CCoroutine, int>::Validate(CValidator&, char const*)
@@ -201,6 +200,8 @@
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Free(int)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::InsertBefore(int, SteamStdLib::CCommandLine::CommandLineParam_t const&)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::LinkBefore(int, int)
+ T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Next(int) const
+ T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Previous(int) const
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::RemoveAll()
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Unlink(int)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Validate(CValidator&, char const*)
@@ -264,15 +265,10 @@
  T CUtlString::FormatV(char const*, char*)
  T CUtlString::VAppendFormat(char const*, __va_list_tag*)
  T CUtlString::VAppendFormat(char const*, char*)
- T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
- T CUtlStringBuilder::Data::SetPtr(char*, unsigned long)
- T CUtlStringBuilder::Data::TakeOwnership(unsigned long&, unsigned long&)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
- T CUtlStringBuilder::TakeOwnership(unsigned long*, unsigned long*)
- T CUtlStringResult::~CUtlStringResult()
  T CUtlSymbolTable::RemoveAll()
  T CUtlSymbolTable::~CUtlSymbolTable()
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::GrowVector(int)
@@ -284,19 +280,20 @@
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::ShiftElementsLeft(int, int)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::Validate(CValidator&, char const*)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::~CUtlVector()
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::CopyArray(CUtlString const*, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int, CUtlString const&)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertMultipleBefore(int, int, CUtlString const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::GrowVector(int)
+ T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::InsertMultipleBefore(int, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> > const*)
  T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::RemoveAll()
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::RemoveMultiple(int, int)
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::SetCount(int)
- T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::ShiftElementsLeft(int, int)
+ T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlVector<CUtlString, CUtlMemory<CUtlString> >, CUtlMemory<CUtlVector<CUtlString, CUtlMemory<CUtlString> > > >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
@@ -469,7 +466,6 @@
  T V_StrSubstInPlace
  T V_StrTrim
  T V_StripAndPreserveHTML
- T V_StripAndPreserveHTMLCore
  T V_StripBBCode
  T V_StripExtension
  T V_StripFilename
@@ -493,7 +489,6 @@
  T V_URLEncodeInternal(char*, int, char const*, int, bool)
  T V_URLEncodeRaw
  T V_URLParse
- T V_URLPartsToString
  T V_UTF16CharsToUTF32
  T V_UTF16CharsToUTF8
  T V_UTF16ToUChar32
@@ -584,7 +579,6 @@
  T dyld_stub_binding_helper
  T int SplitNumbers<CUtlVector<int, CUtlMemory<int> > >(char const*, char, CUtlVector<int, CUtlMemory<int> >&)
  T int SplitNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char const*, char, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
- T void Destruct<CUtlString>(CUtlString*)
  T void JoinNumbers<CUtlVector<int, CUtlMemory<int> > >(char, CUtlVector<int, CUtlMemory<int> > const&, CUtlString&)
  T void JoinNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char, CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, CUtlString&)
  T vstdlib_wcsicmp
@@ -641,7 +635,6 @@
  b s_GaussianStream
  b s_UniformStream
  b s_bCPUHasFastREPMOVSB
- b s_bHWAccelCRC32
  chdir
  d Coroutine_Launch(CCoroutine&)::sThisFunctionHasParentFramePointer
  d GetOSType::eOSVersion
@@ -712,6 +705,7 @@
  t GetStackPtr()
  t KeyValuesSystem()
  t StripWhitespaceWorker(int, wchar_t*, bool*, bool)
+ t global constructors keyed to a
  vasprintf
  vsnprintf
  vswprintf

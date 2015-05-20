@@ -40,8 +40,9 @@
 //
 StoreApp.Stackable
 {
+	width: 100%;
+	height: 100%;
 	color: applabel;
-	height: 1080px;
 }
 
 StoreApp:descendantfocus
@@ -72,12 +73,6 @@ StoreApp:descendantfocus
 //
 // Background
 //
-#ScreenshotBG
-{
-	width: 100%;
-	height: 100%;
-}
-
 #DetailsBackground
 {
 	width: 100%;
@@ -109,11 +104,6 @@ StoreApp:descendantfocus
 	animation-direction: alternate;
 }
 
-#ScreenshotBG
-{
-	width: 100%;
-	height: 100%;
-}
 
 #BGOverlay
 {
@@ -169,7 +159,6 @@ StoreApp:descendantfocus
 	align: center top;
 	margin-top: 300px;
 	width: 100%;
-	height: 100%;
 	text-align: center;
 	font-size: 32px;
 	color: applabelsolid;
@@ -222,8 +211,6 @@ LoadingThrobber .Bar
 #Loaded
 {
 	opacity: 0.0;
-	width: 100%;
-	height: 100%;
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
@@ -503,7 +490,7 @@ Button
 	width: 100%;
 	margin: 4px 22px;
 	padding: 8px 7px 8px 7px;
-	box-shadow: none;
+
 	color: detailsdatalabelfocus;
 	background-color: none;
 	border-style: solid;
@@ -644,9 +631,8 @@ Button:focus
 #NoteSection .AppSectionOverviewLabel
 {
 	color: applabelsolid;
-	opacity: 0.6;
 	font-size: 21px;
-	margin-top: 4px;
+	margin-top: 8px;
 }
 
 .AppSection:descendantfocus .AppSectionBody
@@ -757,7 +743,7 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 	opacity: 0.85;
 	desaturation: 0.1;
 
-	pre-transform-scale2d: 0.722, 0.89;
+	pre-transform-scale2d: 0.721, 0.89;
 	transform: translate3d( -76px, -24px, 0px );
 
 	transition-property: transform, opacity, desaturation, pre-transform-scale2d;
@@ -829,10 +815,8 @@ StorePackagePurchaseSection #PurchasePriceOverview
 
 #DLCInfo
 {
-	width: 100%;
 	flow-children: down;
 	margin: 0px 12px;
-	width: 100%;
 }
 
 .DLCLabel
@@ -865,18 +849,15 @@ StorePackagePurchaseSection #PurchasePriceOverview
 
 .PurchaseSectionButtons
 {
-	width: 100%;
-	height: fill-parent-flow( 1.0 );
 	margin-top: 12px;
 	flow-children: down;
 	overflow: squish scroll;
-	width: 100%;
-	height: 100%;
+	
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
 	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
-
-
+	
+	
 }
 
 #AppSections #PurchaseBtn
@@ -910,7 +891,6 @@ StorePackagePurchaseSection #PurchasePriceOverview
 	font-size: 24px;
 	color: #a9bd26;
 	margin: 4px 12px;
-	width: 100%;
 }
 
 #AppSections .StoreAppPurchaseSection Button
@@ -1209,7 +1189,6 @@ StoreAppNoteSection #LearnMoreButton
 	margin-left: 0px;
 	margin-right: 0px;
 	width: 490px;
-	height: 100%;
 	vertical-align: bottom;
 
 	// Hide until the button does something
@@ -1218,7 +1197,7 @@ StoreAppNoteSection #LearnMoreButton
 
 StoreAppNoteSection.AppSection
 {
-	background-color: #3486b0b1;
+	background-color: #3486b0;
 }
 
 StoreAppNoteSection .AppSectionOverviewLabel
@@ -1229,13 +1208,11 @@ StoreAppNoteSection .AppSectionOverviewLabel
 #RequiresStreaming, #RequiresOverviewStreaming
 {
 	visibility: collapse;
-	width: 100%;
 }
 
 .ShowRequiresStreaming #RequiresStreaming
 {
 	visibility: visible;
-	width: 100%;
 }
 
 .ShowRequiresStreaming #RequiresOverviewStreaming
@@ -1247,13 +1224,11 @@ StoreAppNoteSection .AppSectionOverviewLabel
 #RequiresController, #RequiresOverviewController
 {
 	visibility: collapse;
-	width: 100%;
 }
 
 .ShowRequiresController #RequiresController
 {
 	visibility: visible;
-	width: 100%;
 }
 
 .ShowRequiresController #RequiresOverviewController
@@ -1286,21 +1261,18 @@ StoreAppNoteSection .AppSectionOverviewLabel
 
 .ShowEarlyAccess #EarlyAccess
 {
-	visibility: visible;
-	width: 100%;
+    visibility: visible;
 }
 
 .ShowEarlyAccess #RequiresOverviewEarlyAccess
 {
     visibility: visible;
-    width: 100%;
 }
 
 .Note
 {
 	flow-children: down;
 	margin-bottom: 20px;
-	width: 100%;
 }
 
 Label.NoteLabel
@@ -1317,7 +1289,7 @@ Label.NoteLabel
 .NoteIconWrapper
 {
 	flow-children: right;
-	vertical-align: top;
+	vertical-align: center;
 }
 
 #HeaderIconWrapper.NoteIconWrapper
@@ -1333,8 +1305,7 @@ Label.NoteLabel
 	background-repeat: no-repeat;
 	width: 50px;
 	height: 50px;
-	margin-right: 10px;
-	wash-color: storeoverviewcolor;
+	wash-color: noteiconwash;
 	visibility: collapse;
 }
 
@@ -1378,21 +1349,21 @@ Label.NoteLabel
 	// Hide this for now
 	//visibility: visible;
 	//background-image: url( "file://{images}/store/icon_legacycontroller_storefront.png" );
+	//margin-right: 4px;
 }
 
 .KeyboardMouseIcon #KeyboardMouseIcon
 {
 	visibility: visible;
 	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
+	margin-right: 4px;
 }
 
 .ShowEarlyAccess #EarlyAccessIcon
 {
 	visibility: visible;
 	background-image: url( "file://{images}/store/icon_early_access.png" );
-	width: 40px;
-	height: 40px;
-	margin-left: 5px;
+	margin-right: 4px;
 }
 
 
@@ -1470,7 +1441,7 @@ Label.NoteLabel
 	transform: translatex( 48px );
 	opacity: 1.0;
 	padding-top: 10px;
-	width: 100%;
+
 	transition-property: opacity;
 	transition-duration: AppSectionTransitionDuration;
 	transition-timing-function: ease-in-out;
@@ -1575,7 +1546,7 @@ Label.NoteLabel
 	vertical-align: center;
 
 	// show exactly 5 images max
-	width: 200px;
+	width: 205px;
 }
 
 #DetailsCategoryOverview Image
@@ -1923,7 +1894,7 @@ Label.NoteLabel
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 
 	transform: translatex( 50px );
 
@@ -2112,7 +2083,7 @@ Label.NoteLabel
 .StoreAppReviewsSection .AppSectionLargeBody
 {
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 
 	transform: translatex( 50px );
 
@@ -2260,7 +2231,6 @@ StoreAppPackageGroup #SavingsText, .StoreAppPackage #SavingsText
 StoreAppPackageGroup #ViewPackageSection, .StoreAppPackage #ViewPackageSection
 {
 	margin-top: 4px;
-	width: 100%;
 }
 
 .PackagePriceSystemRow
@@ -2324,7 +2294,7 @@ StoreAppPackage Button, StoreAppPackageGroup Button, .StoreAppPackage Button
 	margin: 8px 12px 0px 12px;
 	font-size: 24px;
 	color: #cfb53fff;
-	width: 100%;
+
 }
 
 .Focused #RecurringSubscriptionDescription
@@ -2366,8 +2336,6 @@ StoreAppDLC
 StoreAppDLC #Loaded
 {
 	flow-children: down;
-	width: 100%;
-	height: 100%;
 }
 
 #DlcList
@@ -2417,14 +2385,12 @@ StoreAppDLCItem:descendantfocus:hover
 #DlcTitle
 {
 	font-size: 28px;
-	height: 70px;
-	color: applabelsolid;
+	color: applabel;
 	font-weight: bold;
 	width: fill-parent-flow( 1.0 );
-	white-space: normal;
-	margin-right: 8px;
-	margin-top: -4px;
-	text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 8px;
+    text-overflow: clip;
 }
 
 StoreAppDLCItem #DlcHeaderImage
@@ -2478,7 +2444,7 @@ StoreAppDLCItem:descendantfocus #DlcImageWrapper
 	opacity: 0.0;
 	flow-children: right;
 	width: 546px;
-	height: 70px;
+	height: 40px;
 	margin: 0px 10px;
 	margin-right: 0px;
 
@@ -2755,7 +2721,6 @@ StorePackageAppOverview:descendantfocus .OnlyVisibleOnCarouselFocus
 .ItemDetails
 {
 	flow-children: down;
-	width: 100%;
 	margin-top: 8px;
 	margin-left: 10px;
 }
@@ -2878,7 +2843,7 @@ DropDown#Day
 #DayDropDownMenu
 {
 	width: 130px;
-	height: 334px;
+	height: 414px;
 	background-color: transparent_module2;
 }
 
@@ -2892,7 +2857,7 @@ DropDown#Month
 #MonthDropDownMenu
 {
 	width: 250px;
-	height: 334px;
+	height: 414px;
 	background-color: transparent_module2;
 }
 
@@ -2906,7 +2871,7 @@ DropDown#Year
 #YearDropDownMenu
 {
 	width: 200px;
-	height: 334px;
+	height: 414px;
 	background-color: transparent_module2;
 }
 
@@ -3054,7 +3019,6 @@ DropDown.DropDownMenuVisible:focus Label
 .FlowDownContainer
 {
 	flow-children: down;
-	width: 100%;
 }
 
 

@@ -17,7 +17,6 @@
  .objc_class_name_NSObject
  .objc_class_name_NSOpenPanel
  .objc_class_name_NSProcessInfo
- .objc_class_name_NSRunningApplication
  .objc_class_name_NSScreen
  .objc_class_name_NSString
  .objc_class_name_NSUserDefaults
@@ -560,7 +559,6 @@
  R typeinfo name for CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >
  R typeinfo name for CUtlVector<CVGuiSystemModuleLoader::module_t, CUtlMemory<CVGuiSystemModuleLoader::module_t> >
  R typeinfo name for CUtlVector<Color, CUtlMemory<Color> >
- R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
  R typeinfo name for CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >
  R typeinfo name for CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >
  R typeinfo name for CUtlVector<char, CUtlMemory<char> >
@@ -690,7 +688,6 @@
  T ASN1_OBJECT_create
  T ASN1_OBJECT_free
  T ASN1_OBJECT_new
- T ASN1_STRING_clear_free
  T ASN1_STRING_cmp
  T ASN1_STRING_copy
  T ASN1_STRING_data
@@ -815,7 +812,7 @@
  T CBaseSurface::AddPanel(unsigned int)
  T CBaseSurface::AllocTextureForId(int)
  T CBaseSurface::AreAnyPopupsViewable()
- T CBaseSurface::BIsAHTMLWindowViewable()
+ T CBaseSurface::BIsAHTMLWindowVisible()
  T CBaseSurface::BIsGameRunning()
  T CBaseSurface::BIsShuttingDown()
  T CBaseSurface::BRunHTMLFast()
@@ -826,7 +823,6 @@
  T CBaseSurface::CPanelPaintScope::CPanelPaintScope(CBaseSurface*, unsigned int, unsigned int, bool)
  T CBaseSurface::CPanelPaintScope::~CPanelPaintScope()
  T CBaseSurface::CalculateMouseVisible()
- T CBaseSurface::ClearAllCookies()
  T CBaseSurface::ClearTextColorRangeValues()
  T CBaseSurface::Connect(vgui::IVGuiSetup*)
  T CBaseSurface::CountPopupsViewable()
@@ -1230,6 +1226,7 @@
  T CPosixRegistryManager::LoadRegistryVDF()
  T CPosixRegistryManager::SaveRegistryVDF()
  T CPosixRegistryManager::~CPosixRegistryManager()
+ T CRC32_ProcessBuffer(unsigned int*, void const*, int)
  T CRC32_ProcessSingleBuffer(void const*, int)
  T CRTime::CRTime()
  T CRTime::UpdateRealTime()
@@ -1663,30 +1660,39 @@
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::Free(int)
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::InsertBefore(int, CFontTextureCache::CacheLRUEntry_t const&)
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::Next(int) const
+ T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::Previous(int) const
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::RemoveAll()
  T CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>::Unlink(int)
  T CUtlLinkedList<CInputBase::InputContext_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CInputBase::InputContext_t, int>::Free(int)
  T CUtlLinkedList<CInputBase::InputContext_t, int>::InsertBefore(int)
  T CUtlLinkedList<CInputBase::InputContext_t, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CInputBase::InputContext_t, int>::Next(int) const
+ T CUtlLinkedList<CInputBase::InputContext_t, int>::Previous(int) const
  T CUtlLinkedList<CInputBase::InputContext_t, int>::RemoveAll()
  T CUtlLinkedList<CInputBase::InputContext_t, int>::Unlink(int)
  T CUtlLinkedList<CInputBase::InputContext_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CSerializedSurface::CustomCursorData_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CSerializedSurface::CustomCursorData_t, int>::InsertBefore(int)
  T CUtlLinkedList<CSerializedSurface::CustomCursorData_t, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CSerializedSurface::CustomCursorData_t, int>::Previous(int) const
  T CUtlLinkedList<CSerializedSurface::CustomCursorData_t, int>::RemoveAll()
  T CUtlLinkedList<CSerializedSurface::CustomCursorData_t, int>::Unlink(int)
  T CUtlLinkedList<CUtlString, int>::AllocInternal(bool)
  T CUtlLinkedList<CUtlString, int>::Free(int)
  T CUtlLinkedList<CUtlString, int>::InsertBefore(int, CUtlString const&)
  T CUtlLinkedList<CUtlString, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CUtlString, int>::Next(int) const
+ T CUtlLinkedList<CUtlString, int>::Previous(int) const
  T CUtlLinkedList<CUtlString, int>::RemoveAll()
  T CUtlLinkedList<CUtlString, int>::Unlink(int)
  T CUtlLinkedList<CUtlString, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CVGui::Context_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CVGui::Context_t, int>::Free(int)
  T CUtlLinkedList<CVGui::Context_t, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CVGui::Context_t, int>::Next(int) const
+ T CUtlLinkedList<CVGui::Context_t, int>::Previous(int) const
  T CUtlLinkedList<CVGui::Context_t, int>::RemoveAll()
  T CUtlLinkedList<CVGui::Context_t, int>::Unlink(int)
  T CUtlLinkedList<CVGui::Context_t, int>::Validate(CValidator&, char const*)
@@ -1694,12 +1700,16 @@
  T CUtlLinkedList<MessageItem_t, int>::Free(int)
  T CUtlLinkedList<MessageItem_t, int>::InsertBefore(int, MessageItem_t const&)
  T CUtlLinkedList<MessageItem_t, int>::LinkBefore(int, int)
+ T CUtlLinkedList<MessageItem_t, int>::Next(int) const
+ T CUtlLinkedList<MessageItem_t, int>::Previous(int) const
  T CUtlLinkedList<MessageItem_t, int>::RemoveAll()
  T CUtlLinkedList<MessageItem_t, int>::Unlink(int)
  T CUtlLinkedList<MessageItem_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<vgui::SerialPanel_t, unsigned int>::AllocInternal(bool)
  T CUtlLinkedList<vgui::SerialPanel_t, unsigned int>::Free(unsigned int)
  T CUtlLinkedList<vgui::SerialPanel_t, unsigned int>::LinkBefore(unsigned int, unsigned int)
+ T CUtlLinkedList<vgui::SerialPanel_t, unsigned int>::Next(unsigned int) const
+ T CUtlLinkedList<vgui::SerialPanel_t, unsigned int>::Previous(unsigned int) const
  T CUtlLinkedList<vgui::SerialPanel_t, unsigned int>::RemoveAll()
  T CUtlLinkedList<vgui::SerialPanel_t, unsigned int>::Unlink(unsigned int)
  T CUtlLinkedList<vgui::SerialPanel_t, unsigned int>::Validate(CValidator&, char const*)
@@ -1709,6 +1719,8 @@
  T CUtlLinkedList<vgui::TextColorRange_t, int>::InsertBefore(int, vgui::TextColorRange_t const&)
  T CUtlLinkedList<vgui::TextColorRange_t, int>::LinkAfter(int, int)
  T CUtlLinkedList<vgui::TextColorRange_t, int>::LinkBefore(int, int)
+ T CUtlLinkedList<vgui::TextColorRange_t, int>::Next(int) const
+ T CUtlLinkedList<vgui::TextColorRange_t, int>::Previous(int) const
  T CUtlLinkedList<vgui::TextColorRange_t, int>::Unlink(int)
  T CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Find(CFontManager::CFontAttributes const&) const
  T CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Insert(CFontManager::CFontAttributes const&, CFontManager::CFontInfo const&)
@@ -2017,8 +2029,7 @@
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::CopyArray(CUtlSymbol const*, int)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::GrowVector(int)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::InsertBefore(int, CUtlSymbol const&)
- T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::RemoveMultiple(int, int)
- T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::SetCount(int)
+ T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::InsertMultipleBefore(int, int, CUtlSymbol const*)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::ShiftElementsLeft(int, int)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::Validate(CValidator&, char const*)
@@ -2040,12 +2051,11 @@
  T CUtlVector<CVGuiSystemModuleLoader::module_t, CUtlMemory<CVGuiSystemModuleLoader::module_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CVGuiSystemModuleLoader::module_t, CUtlMemory<CVGuiSystemModuleLoader::module_t> >::~CUtlVector()
  T CUtlVector<Color, CUtlMemory<Color> >::GrowVector(int)
- T CUtlVector<Color, CUtlMemory<Color> >::RemoveMultiple(int, int)
- T CUtlVector<Color, CUtlMemory<Color> >::SetCount(int)
+ T CUtlVector<Color, CUtlMemory<Color> >::InsertMultipleBefore(int, int, Color const*)
  T CUtlVector<Color, CUtlMemory<Color> >::ShiftElementsLeft(int, int)
+ T CUtlVector<Color, CUtlMemory<Color> >::ShiftElementsRight(int, int)
  T CUtlVector<Color, CUtlMemory<Color> >::Validate(CValidator&, char const*)
  T CUtlVector<Color, CUtlMemory<Color> >::~CUtlVector()
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::GrowVector(int)
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::InsertBefore(int, KeyValues const* const&)
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::ShiftElementsRight(int, int)
@@ -2069,10 +2079,8 @@
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::CopyArray(SFontDescription const*, int)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::GrowVector(int)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::InsertBefore(int, SFontDescription const&)
+ T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::InsertMultipleBefore(int, int, SFontDescription const*)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::RemoveAll()
- T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::RemoveMultiple(int, int)
- T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::SetCount(int)
- T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::ShiftElementsLeft(int, int)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::ShiftElementsRight(int, int)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::ValidateSelfAndElements(CValidator&, char const*)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::~CUtlVector()
@@ -2098,8 +2106,8 @@
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::FindAndRemove(unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
+ T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertMultipleBefore(int, int, unsigned int const*)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::RemoveMultiple(int, int)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::SetCount(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsLeft(int, int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Validate(CValidator&, char const*)
@@ -2157,6 +2165,7 @@
  T CVGui::ClearMessageQueues()
  T CVGui::ConCommandInit(IConCommandBaseAccessor*)
  T CVGui::CreateContext()
+ T CVGui::DestroyAllContexts()
  T CVGui::DestroyContext(int)
  T CVGui::DispatchMessageInternal(MessageItem_t*, char const*)
  T CVGui::DispatchMessages()
@@ -3632,7 +3641,6 @@
  b s_bEnableQuartzGL
  b s_bFixWindowOrderAtEndOfTick
  b s_bForegroundStatusChanged
- b s_bHWAccelCRC32
  b s_bOSFocusChanged
  b s_bShuttingDown
  b s_bWhiteTextureCreated
@@ -3846,13 +3854,12 @@
  r png_write_tIME.png_tIME
  r png_write_tRNS.png_tRNS
  r png_write_zTXt.png_zTXt
- r s_rgCRCTable_Standard
+ r pulCRCTable
  r sn_objs
  r twobppswaptable
  read$UNIX2003
  readdir$INODE64
  realloc
- realpath$DARWIN_EXTSN
  rindex
  roundf
  setjmp
@@ -3931,7 +3938,6 @@
  t -[VGUITranslatorResponder validAttributesForMarkedText]
  t BlitToCGContextWithVFlip(CGContext*, unsigned char const*, int, int, int, int, int, vgui::ISurface::ETextureFormat, bool*)
  t CBaseSurface::RecomputeTraversalOrder(CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >&, unsigned int, int, bool)::LocalZSort::Fn(CBaseSurface::TraversalEntry_t const* const*, CBaseSurface::TraversalEntry_t const* const*)
- t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t CUtlVector<(anonymous namespace)::BadTextureData_t, CUtlMemory<(anonymous namespace)::BadTextureData_t> >::AddToTail((anonymous namespace)::BadTextureData_t const&)
  t CUtlVector<(anonymous namespace)::BadTextureData_t, CUtlMemory<(anonymous namespace)::BadTextureData_t> >::~CUtlVector()
  t CryptoPP::TrySSE2()
@@ -4007,6 +4013,7 @@
  t global constructors keyed to CryptoPP::DEFAULT_CHANNEL
  t global constructors keyed to CryptoPP::PKCS_DigestDecoration<CryptoPP::SHA1>::decoration
  t global constructors keyed to CryptoPP::PolynomialMod2::PolynomialMod2()
+ t global constructors keyed to a
  t int_cleanup
  t int_dup_ex_data
  t int_err_del

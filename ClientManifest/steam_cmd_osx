@@ -1,18 +1,18 @@
 "osx"
 {
-	"version"		"1428529675"
+	"version"		"1421357526"
 	"steamcmd_public_all"
 	{
-		"file"		"steamcmd_public_all.zip.dec7b6b554bcd6ff2ad6cc1e05f9a2ab8d5c2cc1"
-		"checksum"		"dec7b6b554bcd6ff2ad6cc1e05f9a2ab8d5c2cc1"
-		"size"		"57666"
+		"file"		"steamcmd_public_all.zip.07b6e1dec0e6e94172ab71a2e495a2ed2a5b81d0"
+		"checksum"		"07b6e1dec0e6e94172ab71a2e495a2ed2a5b81d0"
+		"size"		"57646"
 	}
 	"steamcmd_bins_osx"
 	{
-		"file"		"steamcmd_bins_osx.zip.e25fe3182c76fb5b85323b209181c08ebc158b73"
-		"checksum"		"e25fe3182c76fb5b85323b209181c08ebc158b73"
-		"size"		"15564686"
-		"zipvz"		"steamcmd_bins_osx.zip.vz.228e604e23941258e762a2d233ab2dd06600ea81_9300928"
+		"file"		"steamcmd_bins_osx.zip.eb8d4d54a13bdcc8b4499b918eea58ed1bc9907e"
+		"checksum"		"eb8d4d54a13bdcc8b4499b918eea58ed1bc9907e"
+		"size"		"15114729"
+		"zipvz"		"steamcmd_bins_osx.zip.vz.7d503126b4100cd11ddb9eeeaa0d7bff39bf04af_9095832"
 	}
 	"steamcmd_breakpad_osx"
 	{
@@ -23,14 +23,14 @@
 	}
 	"steamcmd_osx"
 	{
-		"file"		"steamcmd_osx.zip.ee831fd5ff216020e4be237c0295f634582dc757"
-		"checksum"		"ee831fd5ff216020e4be237c0295f634582dc757"
-		"size"		"1454211"
-		"zipvz"		"steamcmd_osx.zip.vz.dbc0b4f0046a1dacf69357bb4a6b084c6190d0e2_1076197"
+		"file"		"steamcmd_osx.zip.31797071af872404dfbd6f681c0f00c1183e1463"
+		"checksum"		"31797071af872404dfbd6f681c0f00c1183e1463"
+		"size"		"966300"
+		"zipvz"		"steamcmd_osx.zip.vz.8ca9d252fe388c667cb862bcdfdf4e0b345464a4_684386"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"osx"		"8fd57395ca8f393225b8ceb25bb5d1e1454b289b1fb7881d4ea0a37be5cf3fb76625d12d2a5f9d37102c98a6f80af3adf82be20431167542f068ffcbc153272ed83a87ffb7e83af47d311122c88e80124b1a69c314bb6a13be84b22551e72340f5d2a5ec21a64b401480b811ae9b20d4df7417590e88427ea44d9293300d8aa2"
+	"osx"		"496bd5eb66f7b00fff6cfd855a3809888d34a8b1b058d57aebdfd26b7d4b5d290fef1dd470eed33b58cfc2c371f570f6bc962e63dcbc7bc60ddf33ec050be107cad2c8ff1e8c8dadfcfe3b2975c1241a128527974b7bd5702188af6eee13d5751a0259ed4635f99f0d6cc4d0998832e4598f8a3ec7fb7ea5f7aa011078ed69be"
 }

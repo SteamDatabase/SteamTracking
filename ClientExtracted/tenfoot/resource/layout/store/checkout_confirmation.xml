@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/store/checkout.css" />
 	</styles>
 	
-	<CheckoutReview class="CheckoutStep" tabindex="none" selectionpos="none" defaultfocus="GoToLibraryBtn" >
+	<CheckoutReview class="CheckoutStep" tabindex="none" selectionpos="none" defaultfocus="GoToLibraryBtn" oncancel="CloseAndShowStore()">
 		<Panel class="CheckoutTitleRow">
 			<Label id="CheckoutTitle" class="CheckoutTitle" text="#Checkout_Confirmation_Title" />
 		</Panel>
@@ -46,12 +46,6 @@
 				<Panel id="ReturnToStoreSection" class="CheckoutConfirmationBtnGrouping">
 					<Button id="ReturnToStoreBtn" onactivate="CloseAndShowStore()">
 						<Label text="#Checkout_Confirmation_ReturnToStore" />
-					</Button>
-					<Panel class="HorizontalRule" />
-				</Panel>
-				<Panel id="ReturnToMarketSection" class="CheckoutConfirmationBtnGrouping">
-					<Button id="ReturnToMarketBtn" onactivate="CloseAndShowMarket();">
-						<Label text="#Checkout_Confirmation_ReturnToMarket" />
 					</Button>
 					<Panel class="HorizontalRule" />
 				</Panel>

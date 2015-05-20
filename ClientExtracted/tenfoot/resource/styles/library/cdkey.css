@@ -15,7 +15,7 @@
 	width: 100%;
 
 	max-height: 280px;
-	overflow: squish scroll;
+	overflow: clip scroll;
 }
 
 #CDKeyEntry

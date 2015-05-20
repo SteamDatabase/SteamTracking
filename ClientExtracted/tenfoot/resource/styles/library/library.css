@@ -99,8 +99,6 @@
 
 }
 
-
-
 .LibraryPanel:descendantfocus .MostRecentBaseVisible .RecentApp .AppImage
 {
 	opacity: 1.0;
@@ -608,12 +606,6 @@ LibraryAppDetails
 	z-index: 5;
 }
 
-#BGScreenshotWrapper
-{
-	height: 100%;
-	width: 100%;
-}
-
 .DetailsBackground .BGScreenshotVisible
 {
 	opacity-mask: url( "file://{images}/library/library_app_details_bg_mask.png" );
@@ -878,7 +870,7 @@ LibraryAppDetails .ContentsRow
 	height: 100%;
 	flow-children: down;
 	opacity: 0.0;
-	overflow: squish scroll;
+	overflow: clip scroll;
 
 	margin-right: 6px;
 	margin-bottom: 6px;
@@ -1198,8 +1190,6 @@ LibraryAchievements:focus .AchievementsBody, LibraryAchievements:descendantfocus
 
 LibraryAchievements .AchievementsSmallBody
 {
-	width: 100%;
-	height: 100%;
 	flow-children: down;
 	opacity: 0.8;
 	transition-property: opacity !immediate;
@@ -1219,7 +1209,7 @@ LibraryAchievements .AchievementsLargeBody
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 
 	margin-right: 6px;
 	margin-bottom: 12px;
@@ -1510,7 +1500,7 @@ LibraryGuides .GuidesLargeBody
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 
 	margin-right: 6px;
 	margin-bottom: 12px;
@@ -1745,7 +1735,7 @@ LibraryController .ControllerLargeBody
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 
 	margin-right: 6px;
 	margin-bottom: 12px;
@@ -2020,7 +2010,7 @@ LibraryFriendsWhoPlay .FriendsWhoPlayLargeBody
 	transition-property: opacity, border, background-color, color !immediate; 
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
-	overflow: squish scroll;
+	overflow: clip scroll;
 
 	opacity: 0.0;
 	flow-children: down;
@@ -2230,7 +2220,6 @@ LibraryFriendsWhoPlay:focus .FriendsWhoPlayBody, LibraryFriendsWhoPlay:descendan
 	margin-left: 21px;
 	margin-right: 4px;
 	margin-bottom: 6px;
-	width: 100%;
 }
 
 LibraryFriendsWhoPlay AvatarImage
@@ -2316,7 +2305,7 @@ LibraryRecentNews .RecentNewsLargeBody
 	margin-right: 6px;
 	width: 100%;
 	height: 100%;
-	overflow: squish scroll;
+	overflow: clip scroll;
 	flow-children: down;
 	opacity: 0.0;
 
@@ -3173,7 +3162,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	margin: 20px 20px 0px 20px;
 	margin-left: 30px;
 	font-size: 22px;
-	font-family: platformfont;
+	font-family: basefont;
 	color: applabelsolid;
 	z-index: 1000;
 	visibility: collapse;
@@ -3997,9 +3986,6 @@ AppGridItem.FullController:focus #GridControllerSupport
 {
 	pre-transform-scale2d: 1.0;
 	background-image: url( "file://{images}/library/game_grid_shadow.png");
-	background-position: left 10px top 30px;
-	background-size: 100% 85%;
-	background-repeat: no-repeat;
 	opacity: 1.0;
 
 	z-index: 200;
@@ -4062,12 +4048,6 @@ AppGridItem.FullController:focus #GridControllerSupport
 	height: 100px;
 	z-index: 5;
 	position: 0px 30px 0px;
-}
-
-AddShortcutPanel
-{
-    width: 100%;
-    height: 100%;
 }
 
 #AddShortcutStripWrapper .GridBackground
@@ -4159,14 +4139,13 @@ DropDown
 #GamesFilterDropDownMenu
 {
 	width: 480px;
-	overflow: squish scroll;
+	overflow: clip scroll;
 	max-height: 690px;
 }
 
 #GamesFilterDropDownMenu Label
 {
 	margin-right: 8px;
-	min-height: 52px;
 	visibility: visible;
 }
 
@@ -4213,8 +4192,6 @@ DropDown #FilterController
 DropDown #FilterGamesICanPlay
 {
 	visibility: visible;
-	width: 100%;
-	height: 100%;
 }
 
 #FilterUnblocked.ShowUnblocked,
@@ -4282,6 +4259,7 @@ DropDown Label
 
 	background-color: bgcolor;
 	background-image: url( "file://{images}/store/store_app_bg.png" );
+	opacity-mask: url( "file://{images}/bg_gradient_mask.tga" ) 1.0;
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	background-size: 1920px 1080px;
@@ -4927,7 +4905,7 @@ KeyboardShortcut Image
 	margin-top: 10px;
 	margin-left: -10px;
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 	max-height: 500px;
 	width: 100%;
 	

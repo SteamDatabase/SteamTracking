@@ -47,7 +47,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(URLLabel.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(bitstring.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(characterset.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(checksum_crc.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(controls.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(exprsimplifier.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(fileio.o)
@@ -213,6 +212,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/URLLabel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/typingjump.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/icommandline.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/parseurl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/strtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/serverbrowser/BaseGamesPage.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/serverbrowser/BaseGamesPage.h
@@ -247,7 +247,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/characterset.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/checksum_crc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/exprsimplifier.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/generichash.cpp

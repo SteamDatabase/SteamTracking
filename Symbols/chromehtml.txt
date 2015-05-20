@@ -31,7 +31,6 @@
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
- B CMsgClearAllCookies::default_instance_
  B CMsgClearHistory::default_instance_
  B CMsgClose::default_instance_
  B CMsgCloseDevTools::default_instance_
@@ -89,6 +88,7 @@
  B CMsgMouseUp::default_instance_
  B CMsgMouseWheel::default_instance_
  B CMsgNeedsPaint::default_instance_
+ B CMsgNeedsPaintResponse::default_instance_
  B CMsgNodeHasFocus::_default_elementtagname_
  B CMsgNodeHasFocus::_default_input_type_
  B CMsgNodeHasFocus::_default_name_
@@ -134,7 +134,6 @@
  B CMsgSetHTMLTitle::_default_title_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
- B CMsgSetSharedPaintBuffers::default_instance_
  B CMsgSetTargetFrameRate::default_instance_
  B CMsgSetVerticalScroll::default_instance_
  B CMsgSetZoomLevel::default_instance_
@@ -189,7 +188,6 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserRemove>
  D typeinfo for CHTMLProtoBufMsg<CMsgBuildID>
  D typeinfo for CHTMLProtoBufMsg<CMsgCanGoBackAndForward>
- D typeinfo for CHTMLProtoBufMsg<CMsgClearAllCookies>
  D typeinfo for CHTMLProtoBufMsg<CMsgClose>
  D typeinfo for CHTMLProtoBufMsg<CMsgComboNeedsPaint>
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
@@ -208,6 +206,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgLoadedRequest>
  D typeinfo for CHTMLProtoBufMsg<CMsgLoadingResource>
  D typeinfo for CHTMLProtoBufMsg<CMsgNeedsPaint>
+ D typeinfo for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgNodeHasFocus>
  D typeinfo for CHTMLProtoBufMsg<CMsgOpenNewTab>
  D typeinfo for CHTMLProtoBufMsg<CMsgOpenSteamURL>
@@ -220,7 +219,6 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgSetCookie>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetCursor>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetHTMLTitle>
- D typeinfo for CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetTargetFrameRate>
  D typeinfo for CHTMLProtoBufMsg<CMsgShowPopup>
  D typeinfo for CHTMLProtoBufMsg<CMsgShowToolTip>
@@ -241,7 +239,6 @@
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
- D typeinfo for CMsgClearAllCookies
  D typeinfo for CMsgClearHistory
  D typeinfo for CMsgClose
  D typeinfo for CMsgCloseDevTools
@@ -284,6 +281,7 @@
  D typeinfo for CMsgMouseUp
  D typeinfo for CMsgMouseWheel
  D typeinfo for CMsgNeedsPaint
+ D typeinfo for CMsgNeedsPaintResponse
  D typeinfo for CMsgNodeHasFocus
  D typeinfo for CMsgOpenDevTools
  D typeinfo for CMsgOpenNewTab
@@ -309,7 +307,6 @@
  D typeinfo for CMsgSetFocus
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
- D typeinfo for CMsgSetSharedPaintBuffers
  D typeinfo for CMsgSetTargetFrameRate
  D typeinfo for CMsgSetVerticalScroll
  D typeinfo for CMsgSetZoomLevel
@@ -356,7 +353,6 @@
  D vtable for CHTMLProtoBufMsg<CMsgBrowserRemove>
  D vtable for CHTMLProtoBufMsg<CMsgBuildID>
  D vtable for CHTMLProtoBufMsg<CMsgCanGoBackAndForward>
- D vtable for CHTMLProtoBufMsg<CMsgClearAllCookies>
  D vtable for CHTMLProtoBufMsg<CMsgClose>
  D vtable for CHTMLProtoBufMsg<CMsgComboNeedsPaint>
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
@@ -375,6 +371,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgLoadedRequest>
  D vtable for CHTMLProtoBufMsg<CMsgLoadingResource>
  D vtable for CHTMLProtoBufMsg<CMsgNeedsPaint>
+ D vtable for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D vtable for CHTMLProtoBufMsg<CMsgNodeHasFocus>
  D vtable for CHTMLProtoBufMsg<CMsgOpenNewTab>
  D vtable for CHTMLProtoBufMsg<CMsgOpenSteamURL>
@@ -387,7 +384,6 @@
  D vtable for CHTMLProtoBufMsg<CMsgSetCookie>
  D vtable for CHTMLProtoBufMsg<CMsgSetCursor>
  D vtable for CHTMLProtoBufMsg<CMsgSetHTMLTitle>
- D vtable for CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>
  D vtable for CHTMLProtoBufMsg<CMsgSetTargetFrameRate>
  D vtable for CHTMLProtoBufMsg<CMsgShowPopup>
  D vtable for CHTMLProtoBufMsg<CMsgShowToolTip>
@@ -408,7 +404,6 @@
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
- D vtable for CMsgClearAllCookies
  D vtable for CMsgClearHistory
  D vtable for CMsgClose
  D vtable for CMsgCloseDevTools
@@ -451,6 +446,7 @@
  D vtable for CMsgMouseUp
  D vtable for CMsgMouseWheel
  D vtable for CMsgNeedsPaint
+ D vtable for CMsgNeedsPaintResponse
  D vtable for CMsgNodeHasFocus
  D vtable for CMsgOpenDevTools
  D vtable for CMsgOpenNewTab
@@ -476,7 +472,6 @@
  D vtable for CMsgSetFocus
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
- D vtable for CMsgSetSharedPaintBuffers
  D vtable for CMsgSetTargetFrameRate
  D vtable for CMsgSetVerticalScroll
  D vtable for CMsgSetZoomLevel
@@ -526,7 +521,6 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserRemove>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBuildID>
  R typeinfo name for CHTMLProtoBufMsg<CMsgCanGoBackAndForward>
- R typeinfo name for CHTMLProtoBufMsg<CMsgClearAllCookies>
  R typeinfo name for CHTMLProtoBufMsg<CMsgClose>
  R typeinfo name for CHTMLProtoBufMsg<CMsgComboNeedsPaint>
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
@@ -545,6 +539,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgLoadedRequest>
  R typeinfo name for CHTMLProtoBufMsg<CMsgLoadingResource>
  R typeinfo name for CHTMLProtoBufMsg<CMsgNeedsPaint>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgNodeHasFocus>
  R typeinfo name for CHTMLProtoBufMsg<CMsgOpenNewTab>
  R typeinfo name for CHTMLProtoBufMsg<CMsgOpenSteamURL>
@@ -557,7 +552,6 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetCookie>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetCursor>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetHTMLTitle>
- R typeinfo name for CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetTargetFrameRate>
  R typeinfo name for CHTMLProtoBufMsg<CMsgShowPopup>
  R typeinfo name for CHTMLProtoBufMsg<CMsgShowToolTip>
@@ -578,7 +572,6 @@
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
- R typeinfo name for CMsgClearAllCookies
  R typeinfo name for CMsgClearHistory
  R typeinfo name for CMsgClose
  R typeinfo name for CMsgCloseDevTools
@@ -621,6 +614,7 @@
  R typeinfo name for CMsgMouseUp
  R typeinfo name for CMsgMouseWheel
  R typeinfo name for CMsgNeedsPaint
+ R typeinfo name for CMsgNeedsPaintResponse
  R typeinfo name for CMsgNodeHasFocus
  R typeinfo name for CMsgOpenDevTools
  R typeinfo name for CMsgOpenNewTab
@@ -646,7 +640,6 @@
  R typeinfo name for CMsgSetFocus
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
- R typeinfo name for CMsgSetSharedPaintBuffers
  R typeinfo name for CMsgSetTargetFrameRate
  R typeinfo name for CMsgSetVerticalScroll
  R typeinfo name for CMsgSetZoomLevel
@@ -713,7 +706,7 @@
  T CChromeIPCClient::AbortWaitForPendingData()
  T CChromeIPCClient::BExitMasterCEFProcess()
  T CChromeIPCClient::BRestartMasterCEFProcess()
- T CChromeIPCClient::BStartMasterCEFProcess(char const*)
+ T CChromeIPCClient::BStartMasterCEFProcess(char const*, char const*)
  T CChromeIPCClient::BWaitForPendingData()
  T CChromeIPCClient::BWaitForResponse(EHTMLCommands, unsigned int)
  T CChromeIPCClient::CChromeIPCClient()
@@ -733,9 +726,10 @@
  T CChromeMemStream::Initialize(char const*, bool)
  T CChromeMemStream::PchMasterEventName(unsigned int)
  T CChromeMemStream::PchMasterSharedMemoryName(unsigned int)
- T CChromeMemStream::PchMasterSocketName(unsigned int)
  T CChromeMemStream::Shutdown()
  T CChromeMemStream::Validate(CValidator&, char const*)
+ T CChromeUpdateRegion::GetUpdateTall(int) const
+ T CChromeUpdateRegion::GetUpdateWide(int) const
  T CCookie::ByteSize() const
  T CCookie::CCookie()
  T CCookie::Clear()
@@ -752,20 +746,20 @@
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CHTMLBaseProtoBufMsg::BDeserializeCrossProc(CUtlBuffer*, EHTMLCommands*, unsigned int*)
  T CHTMLBaseProtoBufMsg::SerializeCrossProc(CUtlBuffer*, EHTMLCommands, unsigned int) const
- T CHTMLController::BDispatchThreadedPaintCommand(HTMLCommandBuffer_t*)
+ T CHTMLController::BBrowserSupportsOffMainThreadPaint(unsigned int)
  T CHTMLController::BExitMasterCEFProcess()
- T CHTMLController::BStartMasterCEFProcess(char const*)
- T CHTMLController::BrowserDetails_t::BrowserDetails_t(IHTMLResponses*, char const*, char const*, bool)
+ T CHTMLController::BStartMasterCEFProcess(char const*, char const*)
+ T CHTMLController::BrowserDetails_t::BrowserDetails_t(IHTMLResponses*, char const*, char const*)
  T CHTMLController::CHTMLController()
  T CHTMLController::CIPCTaskPost::CIPCTaskPost(CHTMLController*)
  T CHTMLController::CIPCTaskPost::Run()
  T CHTMLController::CIPCTaskPost::~CIPCTaskPost()
  T CHTMLController::ChromePrepareForValidate()
  T CHTMLController::ChromeResumeFromValidate()
- T CHTMLController::ClearAllCookies()
- T CHTMLController::CreateBrowser(IHTMLResponses*, bool, char const*, char const*, bool)
+ T CHTMLController::CreateBrowser(IHTMLResponses*, bool, char const*, char const*)
  T CHTMLController::GetFreeCommandBuffer(EHTMLCommands, int)
  T CHTMLController::GetWebCookiesForURL(CUtlString*, char const*, char const*)
+ T CHTMLController::HandleDeferredPaints(CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >&)
  T CHTMLController::Init()
  T CHTMLController::NotifyMainThreadPaintPending(unsigned int)
  T CHTMLController::PushCommand(HTMLCommandBuffer_t*)
@@ -773,7 +767,6 @@
  T CHTMLController::ReleaseCommandBuffer(HTMLCommandBuffer_t*)
  T CHTMLController::RemoveBrowser(IHTMLResponses*)
  T CHTMLController::RunFrame()
- T CHTMLController::SetBrowserFrameRate(IHTMLResponses*, int)
  T CHTMLController::SetCefThreadTargetFrameRate(unsigned int)
  T CHTMLController::SetClientBuildID(unsigned long long)
  T CHTMLController::SetSteamPID(unsigned int)
@@ -819,8 +812,6 @@
  T CHTMLProtoBufMsg<CMsgBuildID>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgCanGoBackAndForward>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgCanGoBackAndForward>::~CHTMLProtoBufMsg()
- T CHTMLProtoBufMsg<CMsgClearAllCookies>::CHTMLProtoBufMsg(EHTMLCommands)
- T CHTMLProtoBufMsg<CMsgClearAllCookies>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgClose>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgClose>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgComboNeedsPaint>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -857,6 +848,8 @@
  T CHTMLProtoBufMsg<CMsgLoadingResource>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgNeedsPaint>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgNeedsPaint>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgNodeHasFocus>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgNodeHasFocus>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgOpenNewTab>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -881,8 +874,6 @@
  T CHTMLProtoBufMsg<CMsgSetCursor>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetHTMLTitle>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgSetHTMLTitle>::~CHTMLProtoBufMsg()
- T CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>::CHTMLProtoBufMsg(EHTMLCommands)
- T CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetTargetFrameRate>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgSetTargetFrameRate>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgShowPopup>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -1011,17 +1002,6 @@
  T CMsgCanGoBackAndForward::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCanGoBackAndForward::SetCachedSize(int) const
  T CMsgCanGoBackAndForward::~CMsgCanGoBackAndForward()
- T CMsgClearAllCookies::ByteSize() const
- T CMsgClearAllCookies::CMsgClearAllCookies()
- T CMsgClearAllCookies::Clear()
- T CMsgClearAllCookies::GetCachedSize() const
- T CMsgClearAllCookies::GetMetadata() const
- T CMsgClearAllCookies::IsInitialized() const
- T CMsgClearAllCookies::MergeFrom(CMsgClearAllCookies const&)
- T CMsgClearAllCookies::New() const
- T CMsgClearAllCookies::SerializeWithCachedSizesToArray(unsigned char*) const
- T CMsgClearAllCookies::SetCachedSize(int) const
- T CMsgClearAllCookies::~CMsgClearAllCookies()
  T CMsgClearHistory::ByteSize() const
  T CMsgClearHistory::CMsgClearHistory()
  T CMsgClearHistory::Clear()
@@ -1496,6 +1476,17 @@
  T CMsgNeedsPaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgNeedsPaint::SetCachedSize(int) const
  T CMsgNeedsPaint::~CMsgNeedsPaint()
+ T CMsgNeedsPaintResponse::ByteSize() const
+ T CMsgNeedsPaintResponse::CMsgNeedsPaintResponse()
+ T CMsgNeedsPaintResponse::Clear()
+ T CMsgNeedsPaintResponse::GetCachedSize() const
+ T CMsgNeedsPaintResponse::GetMetadata() const
+ T CMsgNeedsPaintResponse::IsInitialized() const
+ T CMsgNeedsPaintResponse::MergeFrom(CMsgNeedsPaintResponse const&)
+ T CMsgNeedsPaintResponse::New() const
+ T CMsgNeedsPaintResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgNeedsPaintResponse::SetCachedSize(int) const
+ T CMsgNeedsPaintResponse::~CMsgNeedsPaintResponse()
  T CMsgNodeHasFocus::ByteSize() const
  T CMsgNodeHasFocus::CMsgNodeHasFocus()
  T CMsgNodeHasFocus::Clear()
@@ -1782,17 +1773,6 @@
  T CMsgSetHorizontalScroll::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetHorizontalScroll::SetCachedSize(int) const
  T CMsgSetHorizontalScroll::~CMsgSetHorizontalScroll()
- T CMsgSetSharedPaintBuffers::ByteSize() const
- T CMsgSetSharedPaintBuffers::CMsgSetSharedPaintBuffers()
- T CMsgSetSharedPaintBuffers::Clear()
- T CMsgSetSharedPaintBuffers::GetCachedSize() const
- T CMsgSetSharedPaintBuffers::GetMetadata() const
- T CMsgSetSharedPaintBuffers::IsInitialized() const
- T CMsgSetSharedPaintBuffers::MergeFrom(CMsgSetSharedPaintBuffers const&)
- T CMsgSetSharedPaintBuffers::New() const
- T CMsgSetSharedPaintBuffers::SerializeWithCachedSizesToArray(unsigned char*) const
- T CMsgSetSharedPaintBuffers::SetCachedSize(int) const
- T CMsgSetSharedPaintBuffers::~CMsgSetSharedPaintBuffers()
  T CMsgSetTargetFrameRate::ByteSize() const
  T CMsgSetTargetFrameRate::CMsgSetTargetFrameRate()
  T CMsgSetTargetFrameRate::Clear()
@@ -2100,9 +2080,9 @@
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
- T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::FastRemove(int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::GrowVector(int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::InsertBefore(int, HTMLCommandBuffer_t* const&)
+ T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::ShiftElementsLeft(int, int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
@@ -2110,6 +2090,7 @@
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
  T CValidateAutoPushPop::~CValidateAutoPushPop()
+ T ChromeIPC()
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T HTMLCommandBuffer_t::Validate(CValidator&, char const*)
@@ -2212,7 +2193,6 @@
  TSQueueBase_UnsafeDummy
  TSQueueBase_UnsafePeek
  TSQueue_PopIntoFreeList
- ThreadCloseProcess
  ThreadFindProcessByName
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
@@ -2280,8 +2260,6 @@
  b (anonymous namespace)::CMsgBuildID_reflection_
  b (anonymous namespace)::CMsgCanGoBackAndForward_descriptor_
  b (anonymous namespace)::CMsgCanGoBackAndForward_reflection_
- b (anonymous namespace)::CMsgClearAllCookies_descriptor_
- b (anonymous namespace)::CMsgClearAllCookies_reflection_
  b (anonymous namespace)::CMsgClearHistory_descriptor_
  b (anonymous namespace)::CMsgClearHistory_reflection_
  b (anonymous namespace)::CMsgCloseDevTools_descriptor_
@@ -2364,6 +2342,8 @@
  b (anonymous namespace)::CMsgMouseUp_reflection_
  b (anonymous namespace)::CMsgMouseWheel_descriptor_
  b (anonymous namespace)::CMsgMouseWheel_reflection_
+ b (anonymous namespace)::CMsgNeedsPaintResponse_descriptor_
+ b (anonymous namespace)::CMsgNeedsPaintResponse_reflection_
  b (anonymous namespace)::CMsgNeedsPaint_descriptor_
  b (anonymous namespace)::CMsgNeedsPaint_reflection_
  b (anonymous namespace)::CMsgNodeHasFocus_descriptor_
@@ -2416,8 +2396,6 @@
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
  b (anonymous namespace)::CMsgSetHorizontalScroll_reflection_
- b (anonymous namespace)::CMsgSetSharedPaintBuffers_descriptor_
- b (anonymous namespace)::CMsgSetSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgSetTargetFrameRate_descriptor_
  b (anonymous namespace)::CMsgSetTargetFrameRate_reflection_
  b (anonymous namespace)::CMsgSetVerticalScroll_descriptor_
@@ -2458,13 +2436,15 @@
  b (anonymous namespace)::CMsgZoomToElementAtPosition_reflection_
  b (anonymous namespace)::CMsgZoomToFocusedElement_descriptor_
  b (anonymous namespace)::CMsgZoomToFocusedElement_reflection_
- b CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamForceGDIText
+ b CChromeIPCClient::BStartMasterCEFProcess(char const*, char const*)::s_CmdLineParamForceGDIText
  b CChromeIPCClient::GetMainThreadCommandInternal(HTMLCommandBuffer_t**)::fAsserted
  b CChromeIPCClient::Init(unsigned int)::fAsserted
  b CChromeIPCClient::PushCommand(HTMLCommandBuffer_t*)::fAsserted
  b CChromeIPCClient::RunFrame()::fAsserted
+ b ChromeIPC()::s_ChromeIPC
  b _ZZN6google8protobuf55protobuf_AddDesc_google_2fprotobuf_2fdescriptor_2eprotoEvE12already_here.b
- b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*)::s_CmdLineParamForceGDIText
+ b guard variable for CChromeIPCClient::BStartMasterCEFProcess(char const*, char const*)::s_CmdLineParamForceGDIText
+ b guard variable for ChromeIPC()::s_ChromeIPC
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
  b s_HTMLController
@@ -2527,7 +2507,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_
- r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearAllCookies_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearHistory_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCloseDevTools_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCloseFullScreenFlashIfOpen_offsets_
@@ -2569,6 +2548,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseMove_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseWheel_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaintResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNodeHasFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenDevTools_offsets_
@@ -2595,7 +2575,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
- r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetTargetFrameRate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetVerticalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetZoomLevel_offsets_

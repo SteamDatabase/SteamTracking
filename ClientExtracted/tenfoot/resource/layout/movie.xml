@@ -37,6 +37,7 @@
 									<Image src="file://{images}/transport_controls/icon_jump_back.png" />
 								</Button>
 								<ToggleButton id="PlayPause" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerTogglePlayPause();">
+									<Image />
 								</ToggleButton>
 								<Button id="FastForward" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerFastForward();">
 									<Image src="file://{images}/transport_controls/icon_ffwd.png" />
@@ -46,9 +47,6 @@
 								</Button>
 								<Button id="VolumeControl" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerVolumeControl();">
 									<Panel class="VolumeImage" />
-								</Button>
-								<Button id="FullscreenControl" class="ControlBarButton" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerFullscreenControl();">
-									<Image src="file://{images}/transport_controls/icon_fullscreen.png" />
 								</Button>
 							</Panel>
 						</Panel>

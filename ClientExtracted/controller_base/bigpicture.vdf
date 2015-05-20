@@ -1,15 +1,113 @@
 "controller_mappings"
 {
-    "version" "2"
-    "game" "Steam Big Picture"
+	"buttons"
+	{
+		"button_0"			""
+		"button_1"			""
+		"button_2"			""
+		"button_3"			""
 
-    "group_source_bindings"
-    {
-    }
+		"right_trigger" 	""
+		"left_trigger"		""
+		"right_bumper"		""
+		"left_bumper"		""
 
-    "settings"
-    {
-        "left_trackpad_mode" "none"
-        "right_trackpad_mode" "none"
-    }
+		"button_escape"		""
+		"button_menu"		""
+
+		"backside_left"		""
+		"backside_right"	""
+		
+	}
+
+	"touchscreen"
+	{
+		"touch_button_0"			""
+		"touch_button_1"			""
+		"touch_button_2"			""
+		"touch_button_3"			""
+	}
+
+	"pads"
+	{
+		"left_stick_up"		""
+		"left_stick_right"	""
+		"left_stick_down"	""
+		"left_stick_left"	""
+		"left_stick_click"	""
+	
+		"left_north"		""
+		"left_northeast"	""
+		"left_east"		""
+		"left_southeast"	""
+		"left_south"		""
+		"left_southwest"	""
+		"left_west"		""
+		"left_northwest"	""
+
+		"left_double_tap"	""
+		"left_outer_edge"	""
+		"left_click"		""
+
+		"right_north"		""
+		"right_northeast"	""
+		"right_east"		""
+		"right_southeast"	""
+		"right_south"		""
+		"right_southwest"	""
+		"right_west"		""
+		"right_northwest"	""
+	
+		"right_double_tap"	""
+		"right_outer_edge"	""
+		"right_click"		""
+	}
+
+	"settings"
+	{
+		"left_trackpad_mode"						"none"
+		"right_trackpad_mode"						"none"
+		"haptic_increment"							"100"
+		"haptic_intensity_mouse_mode"				"450"
+		"double_tap_beep_enabled"					"0"
+		"trackpad_outer_spin_vel"					"0"
+	}
+
+	"mode_overrides"
+	{
+		"daisywheel"
+		{
+			"pads"
+			{
+				"right_double_tap" 	""
+				"right_click" 		""
+			}
+
+			"settings"
+			{
+				"right_trackpad_mode"						"none"
+			}
+		}
+
+		"mouseon"
+		{
+			"buttons"
+			{
+				"left_trigger"	"mouse:right_button"
+				"right_trigger"	"mouse:left_button"
+			}
+			
+			"pads"
+			{
+				"right_click"		"mouse:left_button"
+			}
+
+			"settings"
+			{
+				"right_trackpad_mode"						"absolute_mouse"
+			}
+		}
+	}
 }
+
+	

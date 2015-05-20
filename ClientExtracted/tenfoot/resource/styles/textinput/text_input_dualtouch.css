@@ -55,17 +55,6 @@ TextInputDualTouch
 	text-align: left;
 }
 
-.NoPreview #TextPreview,
-.NoPreview #TextPreviewBackground
-{
-	visibility: collapse;
-}
-
-.HiddenFooter
-{
-	visibility: collapse;
-}
-
 .TouchPad
 {
 	y: 6px;
@@ -97,13 +86,13 @@ TextInputDualTouch
 
 .Left .TouchRow
 {
-	transform: translateX( -2.25% );
+	x: -2.25%;
 	horizontal-align: right;
 }
 
 .Right .TouchRow
 {
-	transform: translateX( 2.25% );
+	x: 2.25%;
 	horizontal-align: left;
 }
 
@@ -122,46 +111,12 @@ TextInputDualTouch
 #LastRow
 {
 	height: 14%;
-	width: 88.8%;
-}
-
-.NoSuggest #TopRow
-{
-	visibility: collapse;
 }
 
 .TouchRow
 {
 	flow-children: right;
 	height: 18%;
-	width: 86.1%;
-}
-
-
-#Row1
-{
-	width: 89%;
-}
-
-#Row1 .TouchKey
-{
-	width: 15.5%;
-}
-
-#Row2
-{
-	width: 86%;
-}
-
-#Row2 .TouchKey
-{
-	width: 16.05%;
-}
-
-.NoSuggest .TouchRow,
-.NoSuggest #LastRow
-{
-	height: 20.8%;
 }
 
 .Left #LastRow
@@ -178,7 +133,7 @@ TextInputDualTouch
 
 .TouchKey
 {
-	width: 16%;
+	width: 13.8%;
 	height: 100%;
 	background-color: daisy_petal_color;
 	border-style: solid;
@@ -187,67 +142,55 @@ TextInputDualTouch
 }
 
 // 6, 7, B, N
-#TouchKey_5_0.TouchKey,
-#TouchKey_6_0.TouchKey,
-#TouchKey_4_3.TouchKey,
-#TouchKey_5_3.TouchKey
+#TouchKey_5_0,
+#TouchKey_6_0,
+#TouchKey_4_3,
+#TouchKey_5_3
 {
-	width: 19.9%;
+	width: 17.1%;
 }
 
 // T, Y
-#TouchKey_4_1.TouchKey,
-#TouchKey_5_1.TouchKey
+#TouchKey_4_1,
+#TouchKey_5_1
 {
-	width: 25.05%;
+	width: 22.3%;
 }
 
 // H, G
-#TouchKey_5_2.TouchKey,
-#TouchKey_4_2.TouchKey
+#TouchKey_5_2,
+#TouchKey_4_2
 {
-	width: 23.02%;
+	width: 19.8%;
 }
 
 .Left #TouchKey_Space
 {
 	border-right-width: 0px;
-	border-left-width: 0px;
 }
 
 .Right #TouchKey_Space
 {
 	border-left-width: 0px;
-	border-right-width: 0px;
 }
 
 #TouchKey_Space
 {
-	width: 100%;
+	width: 91.7%;
 }
 
-#TouchKey_Suggest_0.TouchKey,
-#TouchKey_Suggest_1.TouchKey,
-#TouchKey_Suggest_2.TouchKey,
-#TouchKey_Suggest_3.TouchKey
+#TouchKey_Suggest_0,
+#TouchKey_Suggest_1,
+#TouchKey_Suggest_2,
+#TouchKey_Suggest_3
 {
-	width: 50%;	
+	width: 44.75%;
 }
 
-#TouchKey_Suggest_0.TouchKey
+#TouchKey_LeftArrow,
+#TouchKey_RightArrow
 {
-	border-left-width: 0px;	
-}
-
-#TouchKey_Suggest_3.TouchKey
-{
-	border-right-width: 0px;
-}
-
-#TouchKey_LeftArrow.TouchKey,
-#TouchKey_RightArrow.TouchKey
-{
-	width: 12.9%;
+	width: 11.5%;
 }
 
 #TouchKey_LeftArrow.LeftArrowFill
@@ -256,7 +199,7 @@ TextInputDualTouch
 	x: 9%;
 	y: 14.8%;
 	width: 1.8%;
-	height: 69%;
+	height: 70.4%;
 	border-style: none;
 }
 
@@ -266,25 +209,18 @@ TextInputDualTouch
 	x: 89.2%;
 	y: 14.8%;
 	width: 1.64%;
-	height: 68.5%;
+	height: 70.4%;
 	border-style: none;
 }
 
-.NoSuggest #TouchKey_LeftArrow.LeftArrowFill,
-.NoSuggest #TouchKey_RightArrow.RightArrowFill
+#TouchKey_Alt
 {
-	y: 0.75%;
-	height: 80%;
+	width: 11%;
 }
 
-#TouchKey_Alt.TouchKey
+#TouchKey_Enter
 {
-	width: 12.79%;
-}
-
-#TouchKey_Enter.TouchKey
-{
-	width: 29.07%;
+	width: 25%;
 }
 
 .TouchKeyHover

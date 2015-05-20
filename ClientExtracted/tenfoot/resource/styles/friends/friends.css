@@ -6,8 +6,6 @@
 @define friendsverticalscrollpad: 18px;
 @define friendsitemsecondaryfocus: gradient( linear, 0% 0%, 100% 100%, from( #caccccff  ), to( #aaacacce ) );
 @define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696aa ), to( #365b7866 ) );
-/* below this number suppress the search box on friends */
-@define friendslisthidesearch: 10;
 
 Friends
 {
@@ -308,7 +306,7 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 	width: 100%;
 	height: fill-parent-flow( 1.0 );
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 	padding-right: 16px;
 	margin-right: 2px;
 	padding-top: 4px;
@@ -374,7 +372,7 @@ FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
 {
 	width: fill-parent-flow(1.0);
 	height: 106px;
-	overflow: squish scroll;
+	overflow: clip scroll;
 	white-space: normal;
 	opacity: 0.85;
 
@@ -633,10 +631,6 @@ FriendsSelfHeader.Golden Label
 
 .RollupPendingInvites .LeftMainListItem.PendingInviteRollup #FriendPanelImage,
 .RollupPendingInvites .LeftMainListItem.PendingInviteRollup #FriendPanelLabels,
-.LeftMainListItem.SearchEntry #FriendPanelLabels,
-.LeftMainListItem.SearchEntry #Indicator,
-.LeftMainListItem.CommunitySearchEntry #FriendStatus,
-.LeftMainListItem.CommunitySearchEntry #FriendStatusDetail,
 {
 	visibility: collapse;
 	opacity: 0.0;
@@ -769,7 +763,7 @@ FriendsSelfHeader.Golden Label
 	transform: translateX( 10px );
 	height: 114px;
 
-	transition-property: background-color, border, box-shadow, pre-transform-scale2d, transform, opacity, height;
+	transition-property: background-color, border, box-shadow, pre-transform-scale2d, transform;
 	transition-duration: 0.2s !immediate;
 	transition-timing-function: ease-in-out;
 }
@@ -911,14 +905,14 @@ GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
 	color: friendsingame_lightbg;
 }
 
-.LeftMainListItem.CurrentSelection.InGame Label
-{
-	color: friendsingame_darkbg;
-}
-
 .LeftMainListItem.CurrentSelection.InGame:descendantfocus Label
 {
 	color: friendsingame_lightbg;
+}
+
+.LeftMainListItem.CurrentSelection.InGame Label
+{
+	color: friendsingame_darkbg;
 }
 
 .LeftMainListItem.CurrentSelection.Golden Label
@@ -951,7 +945,6 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 {
 	vertical-align: bottom;
 	horizontal-align: right;
-	margin-right: 15px;
 	flow-children: right;
 }
 
@@ -1000,6 +993,7 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	padding-top: 12px;
 	background-color: friendstab;
 	margin-left: 15px;
+	margin-right: 0px;
 
 	transition-property: background-color, color, box-shadow;
 	transition-timing-function: ease-out;
@@ -1071,7 +1065,7 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 
 	padding-top: 6px;
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
@@ -1098,11 +1092,11 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	overflow: squish scroll;
-	padding-top: 6px;
+	overflow: clip scroll;
+
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
-	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );	
 
 }
 
@@ -1282,10 +1276,6 @@ FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedImageFriendRequ
 {
 	visibility: visible;
 }
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedImageGroupRequest
-{
-	visibility: visible;
-}
 
 FriendsIndicatorContainer.Chat #FriendIndicatorContainedTextChat
 {
@@ -1297,7 +1287,6 @@ FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextChat,
 FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextChat,
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextChat,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextChat,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextChat,
 {
 	visibility: collapse;
 }
@@ -1310,7 +1299,6 @@ FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextVoiceCha
 FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChat,
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChat,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChat,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChat,
 {
 	visibility: collapse;
 }
@@ -1322,7 +1310,6 @@ FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextVoiceCha
 FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChatDialing,
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChatDialing,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChatDialing,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChatDialing,
 {
 	visibility: collapse;
 }
@@ -1333,7 +1320,6 @@ FriendsIndicatorContainer.VoiceChatRinging #FriendIndicatorContainedTextVoiceCha
 FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChatRinging,
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChatRinging,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChatRinging,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChatRinging,
 {
 	visibility: collapse;
 }
@@ -1343,7 +1329,6 @@ FriendsIndicatorContainer.VoiceChatOnHold #FriendIndicatorContainedTextVoiceChat
 }
 FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextVoiceChatOnHold,
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextVoiceChatOnHold,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextVoiceChatOnHold,
 {
 	visibility: collapse;
 }
@@ -1351,17 +1336,11 @@ FriendsIndicatorContainer.GameInvite #FriendIndicatorContainedTextGameInvite
 {
 	visibility: visible;
 }
-FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextGameInvite,
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGameInvite
+FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextGameInvite
 {
 	visibility: collapse;
 }
 FriendsIndicatorContainer.FriendRequest #FriendIndicatorContainedTextFriendRequest
-{
-	visibility: visible;
-}
-
-FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
 {
 	visibility: visible;
 }
@@ -1491,7 +1470,7 @@ FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
 
 .FriendsOptionWrapper .FriendsOptionLabel
 {
-	width: 252px;
+	width: 262px;
 	font-size: 28px;
 	margin-top: 8px;
 	margin-left: 20px;
@@ -1555,8 +1534,8 @@ DropDownMenu.DropDownMenuVisible
 
 DropDownMenu
 {
-	height: 200px;
-	overflow: squish scroll;
+	height: 220px;
+	overflow: clip scroll;
 	border-width: 5px;
 
 }
@@ -1608,7 +1587,7 @@ DropDownMenu
 	height: 560px;
 	width: 600px;
 	flow-children: down;
-	overflow: squish scroll;
+	overflow: clip scroll;
 	
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
@@ -1738,179 +1717,4 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 	width: 100%;
 }
 
-/* the search text entry in the friends ui */
-.LeftMainListItem.SearchEntry #SearchEntry
-{
-	vertical-align: center;
-	margin-left: 30px;
-	width: 500px;
-	margin-bottom: 5px;
-	font-weight: bold;
-	font-size: 27px;
-	text-overflow: clip;
-}
 
-/* friend entries hidden by a search */
-.LeftMainListItem.FilterInvisible
-{
-	opacity: 0.0;
-	height: 0px;
-}
-
-/* the help text inside the search entry */
-#SearchEntry Label
-{
-	width: 500px;
-	font-style: italic;
-	font-weight: normal;
-	color: friendsoffline_darkbg;
-	transition-property: opacity;
-	transition-duration: 0.1s;
-	transition-timing-function: ease-in-out;
-}
-
-#SearchEntry:descendantfocus Label
-{
-	opacity: 0.0;
-
-}
-
-.LeftMainListItem.SearchEntry:descendantfocus Label,
-.LeftMainListItem.SearchEntry:descendantfocus:hover Label
-{
-	color: white;
-}
-
-.LeftMainListItem.SearchEntry:focus #SearchEntry Label
-{
-	color: black;
-}
-
-#SearchEntry.HasInput Label
-{
-	opacity: 0.0;
-}
-
-.LeftMainListItem.SearchEntry
-{
-	height: 75px;
-	margin-top: 5px;
-}
-
-TextEntry:focus
-{
-	animation-name: none;
-	color: blue;
-}
-
-TextEntry.CurrentSelection Label
-{
-	color: white;
-}
-
-.LeftMainListItem.SearchEntry.descendantfocus, .LeftMainListItem.SearchEntry.CurrentSelection:hover, 
-{
-	background-color: friendsitemmainlistbkgnd;
-}
-
-.LeftMainListItem.SearchEntry #FriendPanelImage
-{
-	background-image: url( "file://{images}/friends/friends_search.png" );
-	background-repeat: no-repeat;
-	width: 40px;
-	height: 40px;
-	margin-left: 24px;
-	margin-top: 8px;
-	border-width: 0px;
-	box-shadow: none;
-	wash-color: none;
-}
-
-.LeftMainListItem.CommunitySearchEntry #FriendPanelImage
-{
-	background-image: url( "file://{images}/friends/friends_search.png" );
-	background-repeat: no-repeat;
-	background-position: left 25px top 25px;
-	height: 90px;
-	width: 90px;
-	border-width: 4px;
-	border-style: solid;
-	border-radius: 0px;
-	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;
-	background-color: #111111ff;
-
-	transition-property: box-shadow;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
-}
-
-.LeftMainListItem.SearchEntry:descendantfocus,
-.LeftMainListItem.SearchEntry:descendantfocus:hover
-{
-	background-color: none;
-	animation-name: none;
-	transform: translateX( 0px );
-	}
-
-.LeftMainListItem.SearchEntry:descendantfocus #FriendPanelImage
-.LeftMainListItem.SearchEntry:descendantfocus:hover #FriendPanelImage
-{
-	wash-color: black;
-	}
-
-.LeftMainListItem.SearchEntry #SearchEntry
-{
-	transform: translateX( 0px );
-	transition-duration: 0.2s;
-	transition-property: transform;
-	transition-timing-function: ease-in-out;
-}
-
-.LeftMainListItem.SearchEntry:descendantfocus #SearchEntry
-{
-	transform: translateX( 5px );
-}
-
-
-.LeftMainListItem.SearchEntry #SearchEntry
-{
-	background-color: none;
-}
-
-.LeftMainListItem.SearchEntry:focus #SearchEntry
-{
-	color: black;
-}
-
-.LeftMainListItem.CommunitySearchEntry.SearchEmpty
-{
-	opacity: 0.0;
-}
-
-.LeftMainListItem.CommunitySearchEntry #FriendPanelLabels
-{
-	height: 100%;
-}
-
-.LeftMainListItem.CommunitySearchEntry
-{
-	height: 114px;
-}
-
-.LeftMainListItem.CommunitySearchEntry.SearchEmpty
-{
-	height: 0px;
-}
-
-.LeftMainListItem.CommunitySearchEntry #FriendPersonaName
-{
-	margin-top: 30px;
-	margin-left: 0px;
-	color: friendsoffline_darkbg;
-	text-overflow: clip;
-}
-
-.LeftMainListItem.CommunitySearchEntry:descendantfocus #FriendPersonaName
-{	
-	color: friendsoffline_lightbg;
-}

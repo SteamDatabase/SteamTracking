@@ -168,25 +168,4 @@
 		"Command"		"ChooseIcon"
 		"Default"		"0"
 	}
-	"LaunchOptionsButton"
-	{
-		"ControlName"		"Button"
-		"fieldName"		"LaunchOptionsButton"
-		"xpos"		"12"
-		"ypos"		"258"
-		"wide"		"200"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"2"
-		"paintbackground"		"1"
-		"labelText"		"#Steam_Game_SetLaunchOptions"
-		"textAlignment"		"west"
-		"wrap"		"0"
-		"Command"		"SetLaunchOptions"
-		"Default"		"0"
-		"selected"		"0"
-	}
 }

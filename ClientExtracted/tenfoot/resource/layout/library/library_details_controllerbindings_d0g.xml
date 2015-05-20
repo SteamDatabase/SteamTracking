@@ -225,7 +225,7 @@
 
 						<Panel id="EditPadBindingsBody" class="EditPadBindingsBody" >
 							<Panel class="PadLeftCollumn" selectionpos="0,0" tabindex="0">
-								<Panel id="PadLibrary_Details_ControllerPadStyle" class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
+								<Panel class="PadSettingDropDown" selectionpos="auto" tabindex="auto">
 									<Label text="#Library_Details_ControllerPadStyle" class="PadSettingLabel" />
 									<DropDown id="PadStyleDropDown">
 										<Label id="4way" text="#Library_Details_ControllerPad_4way" />

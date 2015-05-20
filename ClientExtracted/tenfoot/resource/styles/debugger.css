@@ -143,7 +143,6 @@ HorizontalSplitter
 	height: fill-parent-flow( 0.2 );
 	min-height: 10px;
 	background-color: white;
-	width: 100%;
 
 	flow-children: down;
 }
@@ -157,7 +156,7 @@ HorizontalSplitter
 	font-family: Courier New;
 	width: 100%;
 
-	overflow: squish scroll;
+	overflow: clip scroll;
 }
 
 #JSConsoleText
@@ -429,7 +428,6 @@ DebugPanel
 {
 	flow-children: down;
 	height: 100%;
-	width: 100%;
 }
 
 //
@@ -608,7 +606,6 @@ DebugStyleBlock TextEntry:focus
 .DebugPropertyRow
 {
 	flow-children: right;
-    tooltip-position: bottom;
 }
 
 .DebugPropertyLeftMargin

@@ -29,12 +29,6 @@ MusicLibraryContainerPanel
 	flow-children: down;
 }
 
-#LibraryContent
-{
-	width: 100%;
-	height: 100%;
-}
-
 .DuringCrawling #ContentPanel
 {
 	opacity: 0.0;
@@ -529,7 +523,7 @@ AlbumGridItem Label
 	width: 300px;
 	font-size: 26px;
 	transform: translateY( 240px );
-	font-family: platformfont;
+	font-family: basefont;
 	font-weight: normal;
 	color: applabel;
 	opacity: 0.0;
@@ -815,7 +809,7 @@ AlbumGridItem:focus Label
 
 #OverlayBasePanel .MusicAlbumGrid
 {
-	padding-bottom: 60px;
+	padding-bottom: 110px;
 	margin-top: 10px;
 }
 
@@ -988,7 +982,7 @@ ArtistGridItem Label
 	height: 32px;
 	width: 300px;
 	font-size: 26px;
-	font-family: platformfont;
+	font-family: basefont;
 	font-weight: normal;
 	color: applabel;
 	opacity: 0.8;
@@ -1167,7 +1161,7 @@ MusicArtistPanel AlbumGridItem Label
 	height: 32px;
 	width: 600px;
 	font-size: 26px;
-	font-family: platformfont;
+	font-family: basefont;
 	font-weight: bold;
 	color: applabel;
 	opacity: 0.0;
@@ -1345,7 +1339,7 @@ PlaylistGridItem Label
 	height: 32px;
 	width: 300px;
 	font-size: 26px;
-	font-family: platformfont;
+	font-family: basefont;
 	font-weight: normal;
 	color: applabel;
 	opacity: 0.8;

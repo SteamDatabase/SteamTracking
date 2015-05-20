@@ -1,0 +1,14 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+	</styles>
+
+	<SettingsPanel_RemoteControl_ListEntry class="SettingsController_BindRow" >
+			<Label id="NumberLabel" text="1" class="SettingsRemoteControl_ColumnItemContent" />
+			<Label id="DeviceNameLabel" text="#SettingsRemoteControl_Device_Entry" class="SettingsRemoteControl_ColumnNameContent" />
+			<Label id="AccessLabel" text="#SettingsRemoteControl_Access_Entry" class="SettingsRemoteControl_ColumnAccessContent" />
+			<Label id="LastTimeLabel" text="#SettingsRemoteControl_Time_Entry" class="SettingsRemoteControl_ColumnTimeContent" />
+	</SettingsPanel_RemoteControl_ListEntry>
+
+</root>

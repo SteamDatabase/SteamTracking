@@ -7,7 +7,6 @@
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
  B cgl_ctx
- B dwLastScreenshotTime
  B fn_glActiveTextureARB
  B fn_glAttachShader
  B fn_glBindBuffer
@@ -65,7 +64,6 @@
  B g_ActiveRenderInstance
  B g_InputHandler
  B g_OpenGLRenderer
- B g_bIgnoreChildProcesses
  B g_bOverlayEnabled
  B g_bVRModeActive
  B g_lifetime
@@ -399,7 +397,7 @@
  T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::~CSimpleMachClient()
  T CVROverlayInterfaceGL::CVROverlayInterfaceGL(CVROverlayInterfaceGL::CreateStruct_t const&)
- T CVROverlayInterfaceGL::CreateDistortMap(vr::IVRSystem*, vr::Hmd_Eye, unsigned int, unsigned int) const
+ T CVROverlayInterfaceGL::CreateDistortMap(vr::IHmd*, vr::Hmd_Eye, unsigned int, unsigned int) const
  T CVROverlayInterfaceGL::DrawQuad(CVROverlayInterfaceGL::Texture_t*, vr::utils::CVRConstants const&, vr::Hmd_Eye, unsigned int, unsigned int, unsigned int, unsigned int) const
  T CVideoMemStreamWriter::BGetRequestedCaptureFramerate(unsigned int*, unsigned int*)
  T CVideoMemStreamWriter::BGetRequestedGameFramerate(unsigned int*, unsigned int*)
@@ -499,7 +497,6 @@
  T SteamThreadTools::CThread::~CThread()
  T SteamThreadTools::CThreadEvent::CThreadEvent(bool)
  T SteamThreadTools::CThreadEvent::Set()
- T SteamThreadTools::CThreadLocalBase::Set(void*)
  T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
  T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
  T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
@@ -515,7 +512,6 @@
  T SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  T SteamThreadTools::InitMainThread()
  T StopMovieRecording()
- T TakeScreenshotNextFrame(bool)
  T ThreadInterlockedAssignIf64
  T ThreadInterlockedCompareExchange
  T ThreadSleep
@@ -628,10 +624,10 @@
  T std::unexpected()
  T std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<IPC::IEvent**, std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> > >, IPC::IEvent* const&)
  T std::vector<IPC::IEvent*, std::allocator<IPC::IEvent*> >::push_back(IPC::IEvent* const&)
- T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IVRSystem*, vr::Hmd_Eye, int, int, unsigned short*, int)
+ T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IHmd*, vr::Hmd_Eye, int, int, unsigned short*, int)
  T vr::utils::COverlayView<CVROverlayInterfaceGL>::COverlayView(CVROverlayInterfaceGL::CreateStruct_t const&)
  T vr::utils::COverlayView<CVROverlayInterfaceGL>::Draw(float, float, float, float, float) const
- T vr::utils::CVRConstants::ComputeConstants(vr::IVRSystem*)
+ T vr::utils::CVRConstants::ComputeConstants(vr::IHmd*)
  _Block_copy
  _CGSDefaultConnection
  _DefaultRuneLocale
@@ -667,14 +663,10 @@
  b BOverlayNeedsPresent::dwLastTrueTickCount
  b CBaseOverlayRenderer::RenderFrame()::bTenfoot
  b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastUpdateTime
- b CFStringGetCStringPtr_fn
  b Demangled
  b GetGLProcAddress(char*)::m_pLibGL
  b Log(char const*, ...)::bCheckedLogEnabled
  b NSAutoreleasePool_class
- b NSConstantString_class
- b NSMutableDictionary_class
- b NSString_class
  b NSUndoManagerProxy_targetClass
  b SendOneTimeInputPid()::s_bOneTimeInitializationDone
  b SteamThreadTools::g_ThreadMainThreadID
@@ -703,15 +695,6 @@
  b guard variable for add_image_hook_swiftV1(mach_header const*, long)::dlh
  b guard variable for add_image_hook_swiftV1(mach_header const*, long)::patches
  b init
- b original_NSKKMS_fastIndexForKnownKey
- b original_NSKKMS_indexForKey
- b original_NSKKsD_addEntriesFromDictionary
- b original_NSKKsD_objectForKey
- b original_NSKKsD_removeObjectForKey
- b original_NSKKsD_setObject_forKey
- b original_NSManagedObject_allocBatch
- b original_NSManagedObject_allocWithEntity
- b original_NSManagedObject_init
  b original_class_getName
  b original_objc_allocateClassPair
  b original_objc_copyClassNamesForImage
@@ -735,7 +718,6 @@
  class_addMethod
  class_addProperty
  class_addProtocol
- class_getInstanceMethod
  class_getInstanceSize
  class_getInstanceVariable
  class_getIvarLayout
@@ -833,7 +815,6 @@
  memcpy
  memmove
  memset
- method_setImplementation
  mmap
  mmap$UNIX2003
  munmap
@@ -842,7 +823,6 @@
  nanosleep$UNIX2003
  objc_autoreleasePoolPush
  objc_collectingEnabled
- objc_constructInstance
  objc_getClass
  objc_getMetaClass
  objc_getProtocol
@@ -859,15 +839,12 @@
  open$UNIX2003
  property_copyAttributeList
  protocol_getMethodDescription
- pthread_cond_broadcast
  pthread_cond_destroy
  pthread_cond_init
  pthread_cond_init$UNIX2003
  pthread_cond_signal
  pthread_cond_timedwait
  pthread_cond_timedwait$UNIX2003
- pthread_cond_wait
- pthread_cond_wait$UNIX2003
  pthread_getspecific
  pthread_join
  pthread_join$UNIX2003
@@ -923,15 +900,6 @@
  t __ARCLite__load()
  t __arclite_NSArray_objectAtIndexedSubscript(NSArray*, objc_selector*, unsigned long)
  t __arclite_NSDictionary_objectForKeyedSubscript(NSDictionary*, objc_selector*, objc_object*)
- t __arclite_NSKKMS_fastIndexForKnownKey(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSKKMS_indexForKey(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSKKsD_addEntriesFromDictionary(objc_object*, objc_selector*, NSDictionary*)
- t __arclite_NSKKsD_objectForKey(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSKKsD_removeObjectForKey(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSKKsD_setObject_forKey(objc_object*, objc_selector*, objc_object*, objc_object*)
- t __arclite_NSManagedObject_allocBatch(objc_object*, objc_selector*, objc_object**, objc_object*, unsigned int)
- t __arclite_NSManagedObject_allocWithEntity(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSManagedObject_init(objc_object*, objc_selector*)
  t __arclite_NSMutableArray_setObject_atIndexedSubscript(NSMutableArray*, objc_selector*, objc_object*, unsigned long)
  t __arclite_NSMutableDictionary__setObject_forKeyedSubscript(NSMutableDictionary*, objc_selector*, objc_object*, objc_object)
  t __arclite_NSMutableOrderedSet_setObject_atIndexedSubscript(NSMutableOrderedSet*, objc_selector*, objc_object*, unsigned long)
@@ -972,12 +940,10 @@
  t add_image_hook_GC(mach_header const*, long)
  t add_image_hook_swiftV1(mach_header const*, long)
  t allocateMaybeSwift(glue_swift_class_t*, unsigned long)
- t arclite_uninitialized_function()
  t base_of_encoded_value(unsigned char, _Unwind_Context*)
  t check_exception_spec(lsda_header_info*, std::type_info const*, void*, int)
  t check_exception_spec(lsda_header_info*, std::type_info const*, void*, long)
  t copySwiftV1MangledName(char const*, bool)
- t cxxConstruct(objc_object*)
  t d_bare_function_type
  t d_call_offset
  t d_cv_qualifiers
@@ -1005,12 +971,12 @@
  t d_unqualified_name
  t demangledName(char const*, bool)
  t eh_globals_dtor(void*)
- t fixStringForCoreData(objc_object*)
  t get_adjusted_ptr(std::type_info const*, std::type_info const*, void**)
  t get_ttype_entry(lsda_header_info*, unsigned int)
  t get_ttype_entry(lsda_header_info*, unsigned long)
  t global constructors keyed to (anonymous namespace)::emergency_mutex
  t global constructors keyed to __cxa_get_globals_fast
+ t global constructors keyed to a
  t has_return_type
  t initialize_imp(objc_object*, objc_selector*)
  t is_ctor_dtor_or_conversion
@@ -1020,7 +986,6 @@
  t read_encoded_value(_Unwind_Context*, unsigned char, unsigned char const*, unsigned long*)
  t read_encoded_value_with_base(unsigned char, unsigned int, unsigned char const*, unsigned int*)
  t read_encoded_value_with_base(unsigned char, unsigned long, unsigned char const*, unsigned long*)
- t replaceMethod(objc_class*, objc_selector*, objc_object* (*)(objc_object, objc_selector, ...), objc_object* (*)(objc_object, objc_selector, ...))
  t scanMangledField(char const*&, char const*, char const*&, int&)
  t transcribeMethods(objc_class*, glue_class_ro_t*)
  t transcribeProperties(objc_class*, glue_class_ro_t*)

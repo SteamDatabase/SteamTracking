@@ -35,8 +35,8 @@
 					</Panel>
 
 					<DropDown id="VisibilityDropDown" class="VisibilityDropDown">
-						<Label id="Private" text="#Library_ControllerBindingPrivate" />
 						<Label id="Public" text="#Library_ControllerBindingPublic" />
+						<Label id="Private" text="#Library_ControllerBindingPrivate" />
 					</DropDown>
 
 				</Panel>

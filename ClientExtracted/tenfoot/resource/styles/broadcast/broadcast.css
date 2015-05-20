@@ -1,75 +1,6 @@
-/* Styles for broadcast view panel */
+/* Styles for broadcasting */
 
-BroadcastViewer
-{
-	width: 1920px;
-	height: 1080px;
-	z-index: 1000;
-	background-color: black;
-	background-size: 100% 100%;
-	background-image: url( "file://{images}/mainmenu_bg_2.png" );
-	
-	transform: translate3d( 0px, 1000px, 1000px );
-	opacity: 0.0;
-	desaturation: 1.0;
-	
-	transition-property: transform, opacity, desaturation;
-	transition-duration: 0.4s;
-	transition-delay: 0s;
-	transition-timing-function: ease-in-out;
-}
-
-BroadcastViewer.Fullscreen
-{
-	transform: translate3d( 0px, 0px, 0px );
-	opacity: 1.0;
-	desaturation: 0.0;
-}
-
-#WebContent
-{
-	width: 100%;
-	height: 100%;
-}
-
-#LoadStatus
-{
-	color: white;
-	font-size: 28px;
-}
-
-BroadcastViewer #LoadStatus,
-BroadcastViewer .WebLoadThrobber
-{
-	align: center center;
-	visibility: collapse;
-}
-
-BroadcastViewer.Loading
-{
-	background-image: url( "file://{images}/profile/activity_bg_wash.png" );
-}
-
-BroadcastViewer.Loading .WebLoadThrobber
-{
-	visibility: visible;
-}
-
-BroadcastViewer.LoadingError #LoadStatus
-{
-	visibility: visible;
-}
-
-BroadcastViewer.LoadingError .WebLoadThrobber
-{
-	visibility: collapse;
-}
-
-
-////////////////////////////////////////////////
-// Chat Panels
-////////////////////////////////////////////////
-#ChatPanel
+.BroadcastChatPanel
 {
 	flow-children: down;
 }
@@ -78,27 +9,26 @@ BroadcastViewer.LoadingError .WebLoadThrobber
 {
 	flow-children: down;
 	width: 100%;
-	height: fill-parent-flow( 1.0 );
-	overflow: squish scroll;
+	height: 85%;
+	overflow: clip scroll;
 
-	background-color: #1a578040;
-	padding: 4px;
+	background-color: #1a578023;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #ChatContent Label
 {
 	color: white;
-	font-size: 22px;
-	font-weight: medium;
+	font-size: 16px;
 	padding-bottom: 3px;
 	width: 100%;
 	white-space: normal;
 	padding-left: 8px;
-}
-
-#ChatContent .ChatNotification
-{
-	color: #ffffff60;
 }
 
 #ChatContent Label .ingame
@@ -124,11 +54,14 @@ BroadcastViewer.LoadingError .WebLoadThrobber
 	width: 100%;
 	flow-children: right;
 
-	font-size: 22px;
+
+	padding-left: 8px;
+	padding-right: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 28px;
 	font-weight: normal;
 	text-overflow: clip;
-
-	margin-top: 4px;
 }
 
 #ChatEntry
@@ -152,6 +85,7 @@ BroadcastViewer.LoadingError .WebLoadThrobber
 	color: applabelselectedsolid;
 	background-color: friendsitemmainlistbkgnd;
 }
+
 
 #ChatEntry:hover
 {

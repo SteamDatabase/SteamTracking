@@ -22,32 +22,32 @@
 					<Label id="RB_txt_RS" class="LegendText TriggerButtonText RB_txt" text="#UI_MoveCaretRight" />
 					<Label id="RB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightBumper_Short" />
 				</Panel>
-				<Panel id="LeftLegend" class="LegendButton HiddenFooter">
+				<Panel id="LeftLegend" class="LegendButton">
 					<Label id="LT_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_LeftTrigger_Short" />
 					<Label id="LT_txt" class="LegendText TriggerButtonText" />
 				</Panel>
-				<Panel id="RightLegend" class="LegendButton HiddenFooter">
+				<Panel id="RightLegend" class="LegendButton">
 					<Label id="RT_txt" class="LegendText TriggerButtonText" />
 					<Label id="RT_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightTrigger_Short" />
 				</Panel>
 				<Panel id="DPadLegend" class="LegendButton">
 					<Image class="XInputPad" src="file://{images}/textinput/gamepad_digital_blank.tga" />
 					<Image class="SteamPad" src="file://{images}/textinput/textinput_paddles.png" />
-					<Label id="DPad_txt" class="LegendText TriggerButtonText" text="SHIFT / ALT" />
+					<Label id="DPad_txt" class="LegendText TriggerButtonText" text="#UI_MoveCaret" />
 				</Panel>
-				<Panel id="LangLegend" class="LegendButton HiddenFooter">
+				<Panel id="LangLegend" class="LegendButton">
 					<Panel class="LangImage"/>
 					<Label id="Lang_txt" class="LegendText TriggerButtonText" text="#UI_Languages" />
 				</Panel>
-				<Panel id="StartLegend" class="LegendButton HiddenFooter">
+				<Panel id="StartLegend" class="LegendButton">
 					<Image src="file://{images}/textinput/textinput_footer_start.tga" />
 					<Label id="Start_txt" class="LegendText TriggerButtonText" text="#UI_InputDone" />
 				</Panel>
 				
 				<Panel id="MiddleLegendRS" class="LegendButton">
 					<Panel id="ABXY_Footer_Wrapper">
-						<Label id="A_btn" class="LegendButtonBox AButtonBox HiddenFooter" text="#UI_AButton" />
-						<Label id="A_txt" class="LegendText AButtonText HiddenFooter" text="#UI_InputDone" />
+						<Label id="A_btn" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
+						<Label id="A_txt" class="LegendText AButtonText" text="#UI_InputDone" />
 						<Label id="B_btn" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
 						<Label id="B_txt" class="LegendText BButtonText" text="#UI_Dismiss" />
 						<Label id="X_btn" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
@@ -119,7 +119,7 @@
 						</Panel>
 						<Panel id="Row2" class="TouchRow">
 							<Panel id="TouchKey_Alt" class="TouchKey">
-								<Label class="TouchKeyLabel" text="Alt" />
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/alt.tga" />
 							</Panel>
 							<Panel id="TouchKey_0_2" class="TouchKey" />
 							<Panel id="TouchKey_1_2" class="TouchKey" />

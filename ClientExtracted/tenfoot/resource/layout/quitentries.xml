@@ -19,41 +19,38 @@
 		<Button class="SystemButton StreamingHidden ExitButtons" onactivate="ExitSteam()" selectionpos="10,3">
 			<Label text="#Quit_ExitSteam" />
 		</Button>
-		<Button id="TurnControllerOff" class="ControllerActiveVisible SystemButton" onactivate="TurnOffActiveController()" selectionpos="10,4">
-			<Label text="#Quit_TurnOffController" />
-		</Button>
 		
 		<Panel class="HorizontalRule" />
 
-		<Button id="ZeroTracker" class="SystemButton ExitButtons" onactivate="ZeroTracker()" selectionpos="10,5">
+		<Button id="ZeroTracker" class="SystemButton ExitButtons" onactivate="ZeroTracker()" selectionpos="10,4">
 			<Label text="#Quit_ZeroTracker" />
 		</Button>
 
-		<Button class="SystemButton NotLoggedInHidden" onactivate="ShowSettingsFromQuitEntries();" selectionpos="10,6">
+		<Button class="SystemButton NotLoggedInHidden" onactivate="ShowSettingsFromQuitEntries();" selectionpos="10,5">
 			<Label text="#Quit_Settings" />
 		</Button>
 		
-		<Button class="SystemButton NotLoggedInHidden" onactivate="ChangeUser()" selectionpos="10,7">
+		<Button class="SystemButton NotLoggedInHidden" onactivate="ChangeUser()" selectionpos="10,6">
 			<Label text="#Quit_ChangeUser" />
 		</Button>
 		
-		<Button class="SystemButton OfflineMode GoOffline" onactivate="GoOffline()" selectionpos="10,8">
+		<Button class="SystemButton OfflineMode GoOffline" onactivate="GoOffline()" selectionpos="10,7">
 			<Label text="#Quit_GoOffline" />
 		</Button>
 
-		<Button class="SystemButton OfflineMode GoOnline" onactivate="GoOnline()" selectionpos="10,9">
+		<Button class="SystemButton OfflineMode GoOnline" onactivate="GoOnline()" selectionpos="10,8">
 			<Label text="#Quit_GoOnline" />
 		</Button>
 
 		<Panel class="HorizontalRule StreamingHidden NotLoggedInHidden" />
 
-		<Button class="SystemButton System SystemCanShutdown StreamingHidden" onactivate="CloseModalDialog(); AsyncEvent( 0.5, ShutdownMachine() )" selectionpos="10,10">
+		<Button class="SystemButton System SystemCanShutdown StreamingHidden" onactivate="CloseModalDialog(); AsyncEvent( 0.5, ShutdownMachine() )" selectionpos="10,9">
 			<Label text="#Quit_Shutdown" />
 		</Button>
-		<Button class="SystemButton System SystemCanRestart StreamingHidden" onactivate="CloseModalDialog(); AsyncEvent( 0.5, RestartMachine() )" selectionpos="10,11">
+		<Button class="SystemButton System SystemCanRestart StreamingHidden" onactivate="CloseModalDialog(); AsyncEvent( 0.5, RestartMachine() )" selectionpos="10,10">
 			<Label text="#Quit_Restart" />
 		</Button>
-		<Button class="SystemButton System SystemCanSuspend StreamingHidden" onactivate="CloseModalDialog(); AsyncEvent( 0.5, SuspendMachine() )" selectionpos="10,12">
+		<Button class="SystemButton System SystemCanSuspend StreamingHidden" onactivate="CloseModalDialog(); AsyncEvent( 0.5, SuspendMachine() )" selectionpos="10,11">
 			<Label text="#Quit_Sleep" />
 		</Button>
 	</QuitEntriesPanel>

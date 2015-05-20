@@ -62,7 +62,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(URLLabel.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(bitstring.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(characterset.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(checksum_crc.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(controls.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(convar.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(exprsimplifier.o)
@@ -108,7 +107,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/friendsui.build/Objects-normal/i386/vgui_controls.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/constants.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.h
@@ -391,12 +389,12 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/URLLabel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/typingjump.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/icommandline.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/parseurl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/strtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steam_api/callbackmgr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/characterset.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/checksum_crc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/exprsimplifier.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp

@@ -1,0 +1,264 @@
+/* This should move to the website once we're done iterating on it */
+
+#CommunityMarketDetails
+{
+	background-image: url("file://{images}/profile/activity_bg_wash.png");
+	background-size: 100% 100%;
+	box-shadow: #000000aa -4px -4px 8px 8px;
+}
+
+#CommunityMarketDetails:descendantfocus
+{
+	opacity: 1.0;
+}
+
+#CommunityMarketDetails .Hidden
+{
+	opacity: 0.0;
+}
+
+#CommunityMarketDetailsContent
+{
+	flow-children: down;
+}
+
+#Stats
+{
+	visibility: collapse;
+	font-size: 22px;
+	color: white;
+	margin-left: 20px;
+}
+
+#ItemsTemp
+{
+	opacity: 0.0;
+}
+
+#ItemsCarousel
+{
+	width: 100%;
+	height: 680px;
+	overflow: noclip clip;
+
+	opacity: 0.999;
+	flow-children: right;
+
+	horizontal-align: center;
+
+	padding-top: 26px;
+
+	perspective: 800;
+	z-index: 1;
+
+
+	transition-property: opacity, transform, desaturation, wash-color, pre-transform-scale2d, opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+#ItemsCarousel .Offscreen
+{
+	visibility: collapse;
+}
+
+#ItemsCarousel .DetailPanel
+{
+	width: 800px;
+	height: 600px;
+
+	box-shadow: fill #000000aa -4px 0px 16px 8px;
+
+	transition-property: position, transform, opacity, opacity-mask, pre-transform-scale2d, blur, wash-color, desaturation;
+	transition-duration: 0.3s;
+}
+
+#ItemsCarousel .DetailPanel:descendantfocus
+{
+	height: 600px;
+}
+
+#ItemsCarousel:descendantfocus .DetailPanel:hover
+{
+}
+
+#ItemsCarousel .DetailPanel:descendantfocus
+{
+}
+
+#ItemsCarousel:descendantfocus .DetailPanel:descendantfocus
+{
+	desaturation: 0.0;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.45s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	wash-color: #00000000;
+}
+
+#MainMenu.BehindMessageBox #ItemsCarousel:descendantfocus .DetailPanel:descendantfocus
+{
+	animation-name: none;
+	box-shadow: fill box_shadow_on_color -5.5px -5.5px 18px 9px;
+}
+
+// BUGBUG: Styling here needs work
+#ItemsCarousel .DetailPanel.NeverFocused
+{
+	box-shadow: fill yellow -1.5px -1.5px 6px 3px;
+}
+
+#ItemsCarousel .ItemDetailImage
+{
+	width: 33%;
+	background-image: none;
+}
+
+.ItemDetailPanelTop
+{
+	background-color: #0F2636;
+	height: 525px;
+}
+
+.ItemDetailInner .ListingID
+{
+	visibility: collapse;
+	color: red;
+}
+
+.ItemPricePanel
+{
+	vertical-align: bottom;
+	height: 75px;
+	width: 100%;
+	background-color: #0F2636;
+
+	opacity: 1.0;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.DetailPanel:descendantfocus .ItemPricePanel
+{
+	background-color: #214D69;
+	opacity: 1.0;
+}
+
+.ItemPricePanel Label
+{
+	font-size: 28px;
+	margin-right: 10px;
+	color: white;
+}
+
+.ItemPriceCentered
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+.DetailPanel Button
+{
+	height: 100%;
+	width: 100%;
+}
+
+#WalletBalance
+{
+	horizontal-align: center;
+	font-size: 24px;
+	color: #5c96be;
+}
+
+#ItemTitle
+{
+	font-size: 26px;
+	color: white;
+	margin-top: 40px;
+	horizontal-align: center;
+}
+
+
+#MarketDetailsSearch
+{
+	height: 100%;
+	width: 100%;
+	z-index: 10000;
+}
+
+#MarketDetailsSearchPopout
+{
+	width: 700px;
+	height: fit-children;
+	
+	horizontal-align: center;
+	vertical-align: center;
+	flow-children: down;
+	padding: 40px 30px 20px 30px;
+}
+
+#MarketDetailsSearchTitle
+{
+	font-size: 28px;
+	color: white;
+	margin-right: 10px;
+	vertical-align: center;
+	margin-bottom: 20px;
+}
+
+#MarketDetailsSearchPopout TextEntry
+{
+	font-size: 22px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#MarketDetailsSearchPopout #MsgBoxButtons
+{
+	horizontal-align: right;
+}
+
+#MarketDetailsSearchPopout #OK
+{
+	margin-right: 0px;
+}
+
+//
+// BUGBUG: Positioning on this needs work
+//
+#ThrobberPanel
+{
+	width: 100%;
+	height: 756px;
+	z-index: 10;
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+}
+
+#ThrobberPanel.ContentLoaded
+{
+	opacity: 0.0;
+}
+
+#ThrobberPanel LoadingThrobber
+{
+	vertical-align: center;
+	horizontal-align: right;
+	margin-right: 40px;
+	margin-top: 0px;
+	
+	opacity: 0.7;
+}
+
+#ThrobberPanel.First LoadingThrobber
+{
+	margin-right: 0px;
+	horizontal-align: center;
+}
+

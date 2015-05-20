@@ -19,26 +19,6 @@
 	visibility: visible;
 }
 
-.ControllerActive .ControllerActiveVisible
-{
-	visibility: visible;
-}
-
-.ControllerActive .ControllerActiveHidden
-{
-	visibility: collapse;
-}
-
-.ControllerActiveVisible
-{
-	visibility: collapse;
-}
-
-.ControllerActiveHidden
-{
-	visibility: visible;
-}
-
 .System
 {
     visibility: collapse;

@@ -26,13 +26,28 @@
 .StackDepth2 #CommunityWrapper.CommunityInvisible,
 .StackDepth3 #CommunityWrapper.CommunityInvisible
 {
-	transform: translate3d( 0px, 1280px, 1000px );
+	transform: translatey( 1080px );
 	opacity: 0.0;
 }
 
 #CommunityWrapper CommunityPanel
 {
 	opacity: 0.0;
+}
+
+.StackDepth1 CommunityPanel #CommunityContent.CommunityLoading,
+.StackDepth2 CommunityPanel #CommunityContent.CommunityLoading,
+.StackDepth3 CommunityPanel #CommunityContent.CommunityLoading
+{
+	transition-duration: 0.3s;
+	opacity: 0.0;
+}
+
+.StackDepth1 CommunityPanel #CommunityContent.CommunityLoading.LoadingVisible,
+.StackDepth2 CommunityPanel #CommunityContent.CommunityLoading.LoadingVisible,
+.StackDepth3 CommunityPanel #CommunityContent.CommunityLoading.LoadingVisible
+{
+	opacity: 1.0;
 }
 
 CommunityPanel
@@ -56,13 +71,7 @@ CommunityPanel
 	opacity: 1.0;
 }
 
-#CommunityWrapper:descendantfocus #CommunityMenu.CommunityLoaded
-{
-	opacity: 1.0;
-}
-
-.CommunityInvisible,
-#CommunityWrapper CommunityPanel.CommunityInvisible
+.CommunityInvisible, #CommunityWrapper CommunityPanel.CommunityInvisible
 {
 	opacity: 0.0;
 }
@@ -74,6 +83,7 @@ CommunityPanel #ContentRow
 	height: 100%;
 
 	opacity: 0.0;
+	/*opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;*/
 
 	transform-origin: 0% 0% parent-relative;
 	transition-property: transform, position, opacity, pre-transform-scale2d, opacity-mask;
@@ -82,18 +92,15 @@ CommunityPanel #ContentRow
 	transition-timing-function: ease-in-out;
 }
 
-.StackDepth1 #CommunityMenu #CommunityContent
-{
-	opacity: 1.0;
-}
-
-
 .StackDepth2 CommunityPanel #CommunityContent,
 .StackDepth3 CommunityPanel #CommunityContent,
 .StackDepth2 CommunityPanel #ContentRow,
 .StackDepth3 CommunityPanel #ContentRow
 {
 	opacity: 1.0;
+
+
+	transform: translateX( 0px );
 }
 
 @keyframes 'background-visible'
@@ -107,6 +114,18 @@ CommunityPanel #ContentRow
 	{
 		opacity: 1.0;
 	}
+}
+
+.StackDepth2 CommunityPanel #CommunityContent,
+.StackDepth3 CommunityPanel #CommunityContent
+{
+	transform: translatex( 0px );
+}
+
+
+.StackDepth2 CommunityWrapper.CommunityVisible CommunityPanel,
+.StackDepth3 CommunityWrapper.CommunityVisible CommunityPanel
+{
 }
 
 CommunityPanel .CommunityBackground
@@ -159,19 +178,6 @@ CommunityPanel #Loading
 .StackDepth1 CommunityPanel #Loading
 {
 	opacity: 0.0;
-}
-
-#Loading
-{
-	opacity: 0.0;
-	transition-property: opacity;
-	transition-duration: 0.25s;
-	transition-delay: 1.0s;
-}
-
-#Loading:focus
-{
-	opacity: 1.0;
 }
 
 #Loading #LoadingStatus
@@ -274,33 +280,20 @@ CommunityPanel#CommunityMarketItemPicker
 	
 
 
-CommunityPanel
+#CommunityWrapper CommunityPanel
 {
 	transform: translate3d( 0px, 1280px, 1000px );
 }
 
-
-.StackDepth1 #CommunityMenu,
-.StackDepth2 #CommunityMenu,
-.StackDepth3 #CommunityMenu
+.StackDepth1 #CommunityWrapper #CommunityMenu,
+.StackDepth2 #CommunityWrapper #CommunityMenu
 {
 	transform: none;
 }
 
-.CommunityDepth1 CommunityPanel.CommunityVisible.VisibleDepth1,
-.CommunityDepth2 CommunityPanel.CommunityVisible.VisibleDepth2,
-.CommunityDepth3 CommunityPanel.CommunityVisible.VisibleDepth3,
-.CommunityDepth4 CommunityPanel.CommunityVisible.VisibleDepth4,
-.CommunityDepth5 CommunityPanel.CommunityVisible.VisibleDepth5
+#CommunityWrapper CommunityPanel.CommunityVisible
 {
 	transform: none;
-}
-
-.CommunityDepth3 CommunityPanel.CommunityVisible.VisibleDepth2,
-.CommunityDepth4 CommunityPanel.CommunityVisible.VisibleDepth3,
-.CommunityDepth5 CommunityPanel.CommunityVisible.VisibleDepth4
-{
-	transform: translate3d( 0px, -100px, -100px );
 }
 
 #OverlayBasePanel #CommunityGameHub #CommunityContent
@@ -314,7 +307,7 @@ CommunityPanel
 }
 
 
-#CommunityWrapper CommunityPanel
+#CommunityWrapper .MarketPanel
 {
 	width: 2120px;
 	margin-left: -100px;
@@ -325,57 +318,16 @@ CommunityPanel
 	box-shadow: #000000aa -4px -4px 8px 8px;
 }
 
-#CommunityAppHubPopup
+#CommunityWrapper.MarketStackDepth1 #CommunityMarket,
+#CommunityWrapper.MarketStackDepth2 #CommunityMarket,
+#CommunityWrapper.MarketStackDepth2 #CommunityMarketItemPicker,
+#CommunityWrapper.MarketStackDepth2 #CommunityMarketDetails
 {
-	height: 100%;
-	width: 100%;
-	z-index: 1000;
-
-	transition-property: pre-transform-scale2d, transform;
-	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
+	transform: translate3d( 0px, -100px, -100px );
 }
 
-#CommunityAppHubPopup LoadingThrobber
+#CommunityWrapper.MarketStackDepth2 #CommunityMarketItemPicker:descendantfocus,
+#CommunityWrapper.MarketStackDepth2 #CommunityMarketItemPicker.CommunityLoading
 {
-	horizontal-align: center;
-	vertical-align: center;
-
-	transition-property: opacity;
-	transition-duration: shortduration;
+	transform: none;
 }
-
-#CommunityAppHubPopup LoadingThrobber.LoadComplete
-{
-	opacity: 0.0;
-}
-
-
-.TopBarButton
-{
-	height: 70px;
-	width: 100%;
-	background-color: transparent;
-}
-
-.CommunityDepth1 .TopBarButton,
-.CommunityDepth1 .MidStackButton,
-.CommunityDepth2 .MidStackButton
-{
-	visibility: collapse;
-}
-
-.CommunityDepth2 .TopBarButton
-{
-	height: 122px;
-}
-
-.MidStackButton
-{
-	height: 52px;
-	width: 100%;
-	background-color: transparent;
-	y: 70px;
-}
-
-
