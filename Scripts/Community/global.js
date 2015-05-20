@@ -1526,6 +1526,7 @@ var CCommentThread = Class.create( {
 		var elPosts = $('commentthread_' + this.m_strName + '_posts' );
 		var elContainer = $('commentthread_' + this.m_strName + '_postcontainer' );
 		elContainer.style.height = elContainer.getHeight() + 'px';
+		elContainer.style.overflow = 'hidden';
 
 		var bNewPost = ( eRenderReason == CCommentThread.RENDER_NEWPOST );
 
@@ -1550,7 +1551,7 @@ var CCommentThread = Class.create( {
 			elContainer.effect.cancel();
 
 		( function() {
-			elContainer.effect = new Effect.Morph( elContainer, { style: 'height: ' + elPosts.getHeight() + 'px', duration: 0.25, afterFinish: function() { elPosts.style.position = 'static'; elContainer.style.height = 'auto';  } } );
+			elContainer.effect = new Effect.Morph( elContainer, { style: 'height: ' + elPosts.getHeight() + 'px', duration: 0.25, afterFinish: function() { elPosts.style.position = 'static'; elContainer.style.height = 'auto'; elContainer.style.overflow = '';  } } );
 		}).defer();
 	},
 
@@ -2508,7 +2509,7 @@ function ShowSharePopup( url, baseSocialShareURL )
 {
 	var appendQueryParam = baseSocialShareURL.indexOf( "?" ) != -1 ? '&' : '?';
 
-	$( "SharePopupLink_Facebook" ).href = baseSocialShareURL + appendQueryParam + "site=facebook";
+	$( "SharePopupLink_Facebook" ).href = baseSocialShareURL + appendQueryParam + "site=facebook&t=" + Math.random();
 	$( "SharePopupLink_Twitter" ).href = baseSocialShareURL + appendQueryParam + "site=twitter";
 	$( "SharePopupLink_Reddit" ).href = baseSocialShareURL + appendQueryParam + "site=reddit";
 	$( "SharePopupLink_Digg" ).href = baseSocialShareURL + appendQueryParam + "site=digg";

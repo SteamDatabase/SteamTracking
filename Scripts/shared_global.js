@@ -1311,6 +1311,10 @@ WebStorage = {
 		}
 		return value;
 	},
+	GetLocalSession: function( key )
+	{
+		return WebStorage.GetLocal( key, true );
+	},
 	SetLocal: function ( key, value, bSessionOnly )
 	{
 		var type = ( bSessionOnly ) ? 'session' : 'local';
@@ -1323,6 +1327,10 @@ WebStorage = {
 		value = V_ToJSON( value );
 
 		storage.setItem( key, value, type);
+	},
+	SetLocalSession: function( key, value )
+	{
+		WebStorage.SetLocal( key, value, true );
 	},
 	GetCookie: function( key )
 	{

@@ -1214,11 +1214,18 @@ CSegmentLoader.prototype.BeginPlayback = function( unStartTime )
 		this.m_nNextSegment = CMPDParser.GetSegmentForTime( this.m_adaptation, unStartTime );
 		PlayerLog( 'Video Stream Starting at: ' + SecondsToTime( unStartTime / 1000 ) + ', starting segment: ' + this.m_nNextSegment );
 
-		// start at 1 better than lowest quality if possible
-		if ( nRepCounts > 1 )
-			this.ChangeRepresentationByIndex( nRepCounts - 2 );
+		if ( this.m_player.m_nVideoRepresentationIndex == -1 )
+		{
+			// start at 1 better than lowest quality if possible
+			if ( nRepCounts > 1 )
+				this.ChangeRepresentationByIndex( nRepCounts - 2 );
+			else
+				this.ChangeRepresentationByIndex( 0 );
+		}
 		else
-			this.ChangeRepresentationByIndex( 0 );
+		{
+			this.ChangeRepresentationByIndex( this.m_player.m_nVideoRepresentationIndex );
+		}
 
 		this.DownloadNextSegment();
 
@@ -1229,7 +1236,7 @@ CSegmentLoader.prototype.BeginPlayback = function( unStartTime )
 		this.m_nNextSegment = CMPDParser.GetSegmentForTime( this.m_adaptation, unStartTime );
 		PlayerLog( 'Audio Stream Starting at: ' + SecondsToTime( unStartTime / 1000 ) + ', starting segment: ' + this.m_nNextSegment );
 
-		this.ChangeRepresentationByIndex( 0 );
+		this.ChangeRepresentationByIndex( this.m_player.m_nAudioRepresentationIndex );
 		this.DownloadNextSegment();
 	}
 }

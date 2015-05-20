@@ -39,6 +39,10 @@ function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly 
 		else
 			ShowItemInventory( 753, 1 );
 	}
+	else if ( window.location.hash == '#gift_history' && g_bViewingOwnProfile )
+	{
+		ShowGiftHistory();
+	}
 	else if ( oHashParams && BValidateHashParams( oHashParams ) )
 	{
 		ShowItemInventory( oHashParams.appid, oHashParams.contextid, oHashParams.assetid );

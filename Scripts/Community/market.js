@@ -1103,6 +1103,11 @@ function MarketCheckHash()
 		var strAsset = window.location.hash.substr(5);
 		ShowModalContent('https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, 'Choose an item from your inventory', 'https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, true);
 	}
+	else if ( window.location.hash == "#myhistory" )
+	{
+		var oTabMyMarketHistory = $('tabMyMarketHistory');
+		oTabMyMarketHistory.click();
+	}
 }
 
 function InstallMarketActionMenuButtons()
