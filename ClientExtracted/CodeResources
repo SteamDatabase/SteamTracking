@@ -25,16 +25,9 @@
 			<key>weight</key>
 			<real>10</real>
 		</dict>
-		<key>^(Frameworks|SharedFrameworks|Plugins|Plug-ins|XPCServices|Helpers|MacOS)/</key>
+		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
 		<dict>
 			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>0.0</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>top</key>
 			<true/>
 			<key>weight</key>
 			<real>0.0</real>

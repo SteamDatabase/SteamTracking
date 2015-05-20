@@ -1,0 +1,11 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
+	</styles>
+
+	<ControllerSourceModeNone class="ControllerMode" tabindex="auto">
+		<Label class="ModeTitle" id="Title" text="#Library_Details_SourceMode_None_Title" />
+	</ControllerSourceModeNone>
+</root>

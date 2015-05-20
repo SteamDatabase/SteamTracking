@@ -271,15 +271,14 @@
 		{
 			bgcolor   "none"	
 			textcolor "highlight5"
-			inset="0 3 3 3"
 			render_bg
 			{
 				// no background
 			}
 			render
 			{
-				0="fill( x0, y0, x0+170,	y1, panelBackground	)"
-				1="gradient_horizontal( x0+170, y0, x0+375, y1, panelBackground,	panelBackgroundTransparent )"
+				0="fill( x0, y0, x0+40,	y1, panelBackground	)"
+				1="gradient_horizontal( x0+40, y0, x0+80, y1, panelBackground,	panelBackgroundTransparent )"
 				
 			}
 		}
@@ -294,7 +293,7 @@
 		region { name=left_column x=0	y=21	 width=max  region=head }
 		region { name=middle_column x=200 y=0 width=max  region=head }
 		
-		place { control="GraphPanel" region="head" x=18 width="max"	height="75" margin-top=27 margin-right=14 }				   
+		place { control="GraphPanel" region="head" x=180 width="max"	height="75" margin-top=27 margin-right=14 }				   
 		
 		// put NETWORK	USAGE in the top left
 		place { control="header"	region=head dir=down x=0	y=0	}

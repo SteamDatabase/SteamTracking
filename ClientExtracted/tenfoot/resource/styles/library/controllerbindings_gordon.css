@@ -1,0 +1,2536 @@
+@define shortduration: 0.25s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+@define tabheight: 120px;
+@define fieldwidth: 512px;
+@define propertiesheight: 580px;
+@define bindingbuttonwidth: 420px;
+@define negbindingbuttonwidth: -420px;
+
+ControllerBindingsGordon
+{
+	opacity: 0.0;
+	background-color: gradient( radial, 50% 0%, 0px 0px, 50% 100%, from( #102f4b ), to( #080f20 ) );
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	width: 100%;
+	height: 100%;
+}
+
+ControllerBindingsGordon:descendantfocus
+{
+	opacity: 1.0;
+}
+
+ControllerBindingsGordon.Destructing
+{
+	opacity: 0.0;
+}
+
+ControllerBindingsGordon.BehindMessageBox:descendantfocus,
+ControllerBindingsGordon.BehindAnotherMsgBox:descendantfocus
+{
+	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+
+	desaturation: 0.4;
+	blur: gaussian( 1.5 );
+	wash-color: #00000066;
+}
+
+ControllerBindingsGordon.BehindMessageBox.BehindDaisyWheel:descendantfocus,
+ControllerBindingsGordon.BehindAnotherMsgBox.BehindDaisyWheel:descendantfocus
+{
+	blur: none;
+	desaturation: 0.0;
+	wash-color: #00000000;
+}
+
+ControllerBindingsGordon.ScreenSaverMode
+{
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 1.5s, 0.3s !immediate;
+	transition-timing-function: linear;
+}
+
+#VDFDump
+{
+	width: 20px;
+	height: 20px;
+}
+
+.BottomPanelVisible #VDFDump
+{
+	opacity: 0.0;
+}
+
+#BindingsContainer
+{
+	margin-top: 35px;
+	height: 100%;
+	width: 1767px;
+	horizontal-align: center;
+	flow-children: down;
+}
+
+#TopHalfContainer
+{
+	height: 621px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#TopHalfContainer .Background
+{
+	background-repeat: no-repeat;
+
+	horizontal-align: center;
+
+	width: 1800px;
+	height: 100%;
+}
+
+#BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller.png");
+}
+
+.EditLeftTrackpadSource #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s1.png");
+}
+
+.EditJoystickSource #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s2.png");
+}
+
+.EditABXYSource #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s3.png");
+}
+
+.EditRightTrackpadSource #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s4.png");
+}
+
+.EditLeftBumper #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_lb.png");
+}
+
+.EditRightBumper #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_rb.png");
+}
+
+.EditLeftTrigger #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_lt.png");
+}
+
+.EditRightTrigger #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_rt.png");
+}
+
+.EditBackButton #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_back.png");
+}
+
+.EditStartButton #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_i_forward.png");
+}
+
+#BackgroundLines
+{
+	background-position: 208px 73px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines.png");
+}
+
+#ModeContainer
+{
+	horizontal-align: center;
+	width: 1737px;
+	height: 228px;
+	flow-children: right;
+}
+
+.ModeWrapper
+{
+	border-radius: 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #0f99bc;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0b2142 ), to( #1e5a78 ) );
+
+	width: 417px;
+	height: 228px;
+}
+
+.ModeWrapper:focus
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#01b6ed), to(#01ddf5));
+	border-color: white;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ModeWrapper:focus Label
+{
+	color: #0e182a;
+}
+
+.ModeWrapper.GapRight
+{
+	margin-right: 24px;
+}
+
+.ModeWrapper.Trigger
+{
+	width: bindingbuttonwidth;
+	height: 96px;
+	background-repeat: no-repeat;
+
+	margin-bottom: 9px;
+}
+
+.ModeWrapper.Trigger Label
+{
+	margin-top: 5px;
+	margin-left: 96px;
+	margin-right: 96px;
+	width: 100%;
+}
+
+.ModeWrapper.Trigger.Right Label
+{
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-right: 96px;
+	width: 100%;
+	text-align: right;
+}
+
+.ModeWrapper.Trigger.Left #SourceModeBackground
+{
+	background-position: 0px -4px;
+	background-image: url("file://{images}/library/controller/input_controller_glyph_left_trigger.png");
+}
+
+.ModeWrapper.Trigger.Right #SourceModeBackground
+{
+	background-position: 324px -4px;
+	background-image: url("file://{images}/library/controller/input_controller_glyph_right_trigger.png");
+}
+
+
+ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#01b6ed), to(#01ddf5));
+	border-color: white;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+ControllerBindingButton.BindingButton:focus Label, Button.Trigger:focus Label
+{
+	color: #0e182a;
+}
+
+.ControllerMode
+{
+	width: 100%;
+	height: 100%;
+}
+
+.ControllerMode.Trigger
+{
+	background-color: none;
+}
+
+Label.ModeTitle
+{
+	margin-top: 16px;
+	margin-right: 12px;
+	font-size: 30px;
+	font-family: platformfont;
+	font-weight: light;
+	text-overflow: ellipsis;
+	color: #0f99bc;
+	horizontal-align: right;
+}
+
+#BindingSlotContainer
+{
+	flow-children: down;
+	width: 100%;
+	height: 100%;
+}
+
+#SourceModeBackground
+{
+	background-repeat: no-repeat no-repeat;
+	width: 100%;
+	height: 100%;
+	margin-top: 50px;
+	margin-left: 30px;
+}
+
+#SourceModeLines
+{
+	background-repeat: no-repeat no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.BindingSlotStrip
+{
+	flow-children: down;
+	height: fit-children;
+	width: fit-children;
+	margin-top: 23px;
+}
+
+#Right.BindingSlotStrip
+{
+	horizontal-align: right;
+}
+
+ControllerBindingButton.BindingButton
+{
+	width: bindingbuttonwidth;
+	height: 96px;
+	margin-bottom: 9px;
+	border-radius: 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #0f99bc;
+
+	background-repeat: no-repeat;
+}
+
+ControllerBindingButton.BindingButtonPropertiesMode
+{
+    padding-left: 8px;
+	margin-bottom: 9px;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 2px;
+	border-color: none;
+	text-align: right;
+
+	background-color: simplebuttonsolid;
+	width: 100%;
+	height: 50px;
+	background-repeat: no-repeat;
+}
+
+ControllerBindingButton.BindingButton Label
+{
+	margin-left: 96px;
+	vertical-align: center;
+	width: 100%;
+	text-overflow: clip;
+}
+
+ControllerBindingButton.BindingButton.Right Label
+{
+	margin-left: 0px;
+	margin-right: 96px;
+	width: 100%;
+	text-align: right;
+}
+
+ControllerBindingButton.BindingButton.Right
+{
+	background-position: 324px;
+}
+
+.Gradient0
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #091731 ), to( #0b1b34 ) );
+}
+
+.Gradient1
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0b1c35 ), to( #0e253d ) );
+}
+
+.Gradient2
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0e263e ), to( #112e46 ) );
+}
+
+.Gradient3
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #112f47 ), to( #13354c ) );
+}
+
+#LeftBumperButton.BindingButton
+{
+	background-image: url("file://{images}/library/controller/input_controller_glyph_left_bumper.png");
+}
+
+#LeftTriggerButton.BindingButton
+{
+	background-image: url("file://{images}/library/controller/input_controller_glyph_left_trigger.png");
+}
+
+#LeftGripButton.BindingButton
+{
+	background-image: url("file://{images}/library/controller/input_controller_glyph_left_grip.png");
+}
+
+#BackButton.BindingButton
+{
+	background-image: url("file://{images}/library/controller/input_controller_glyph_left_back.png");
+}
+
+#RightBumperButton.BindingButton
+{
+	background-image: url("file://{images}/library/controller/input_controller_glyph_right_bumper.png");
+}
+
+#RightTriggerButton.BindingButton
+{
+	background-image: url("file://{images}/library/controller/input_controller_glyph_right_trigger.png");
+}
+
+#RightGripButton.BindingButton
+{
+	background-image: url("file://{images}/library/controller/input_controller_glyph_right_grip.png");
+}
+
+#StartButton.BindingButton
+{
+	background-image: url("file://{images}/library/controller/input_controller_glyph_left_start.png");
+}
+
+.BindingSlotStrip
+{
+	transition-property: transform, opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.BottomPanelVisible #Right.BindingSlotStrip
+{
+	transform: translatex( bindingbuttonwidth );
+	opacity: 0.0;
+}
+
+.BottomPanelVisible .BindingSlotStrip
+{
+	transform: translatex( negbindingbuttonwidth );
+	opacity: 0.0;
+}
+
+#BackgroundLines
+{
+	transition-property: pre-transform-scale2d, transform, opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.BottomPanelVisible #BackgroundLines
+{
+	opacity: 0.0;
+}
+
+#TopHalfContainer #BackgroundController
+{
+	transition-property: opacity, transform, pre-transform-scale2d;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.BottomPanelVisible #TopHalfContainer #BackgroundController
+{
+	transform: translatey( -115px );
+	pre-transform-scale2d: 0.80;
+}
+
+ControllerPropertiesMode
+{
+	transition-property: transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+
+	transform: translatey( propertiesheight );
+}
+
+.BottomPanelVisible ControllerPropertiesMode
+{
+	transform: translatey( 0px );
+}
+
+#ModeContainer
+{
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+.BottomPanelVisible #ModeContainer
+{
+	transition-duration: 0.1s;
+	opacity: 0.0;
+}
+
+ControllerSourceModeDpad #SourceModeBackground
+{
+	background-image: url("file://{images}/library/controller/input_controller_mode_dpad.png");
+}
+
+ControllerSourceModeDpad #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_dpad.png");
+}
+
+Button:focus ControllerSourceModeDpad #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_dpad_focused.png");
+}
+
+ControllerSourceModeDpad #BindingSlotContainer
+{
+	margin-top: 16px;
+	margin-right: 12px;
+}
+
+ControllerSourceModeDpad ControllerBindingButton
+{
+	horizontal-align: right;
+	margin-bottom: 6px;
+}
+
+ControllerSourceModeTrigger ControllerBindingButton
+{
+	height: 50%;
+	width: 100%;
+}
+
+ControllerSourceModeJoystickMove #SourceModeBackground
+{
+	background-image: url("file://{images}/library/controller/input_controller_mode_stick.png");
+}
+
+ControllerSourceModeJoystickMove #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick.png");
+}
+
+Button:focus ControllerSourceModeJoystickMove #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick_focused.png");
+}
+
+ControllerSourceModeJoystickMove #JoystickClick
+{
+	horizontal-align: right;
+	margin-right: 12px;
+	transform: translatey( 175px );
+}
+
+ControllerSourceModeJoystickCamera #SourceModeBackground
+{
+	background-image: url("file://{images}/library/controller/input_controller_mode_stick.png");
+}
+
+ControllerSourceModeJoystickCamera #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick.png");
+}
+
+Button:focus ControllerSourceModeJoystickCamera #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick_focused.png");
+}
+
+ControllerSourceModeJoystickCamera #JoystickClick
+{
+	horizontal-align: right;
+	margin-right: 12px;
+	transform: translatey( 175px );
+}
+
+ControllerSourceModeABXY #BindingSlotContainer
+{
+	margin-top: 16px;
+	margin-right: 12px;
+}
+
+ControllerSourceModeABXY ControllerBindingButton
+{
+	horizontal-align: right;
+	margin-bottom: 6px;
+}
+
+ControllerSourceModeABXY #SourceModeBackground
+{
+	background-image: url("file://{images}/library/controller/input_controller_mode_bpad.png");
+}
+
+ControllerSourceModeABXY #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_bpad.png");
+}
+
+Button:focus ControllerSourceModeABXY #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_bpad_focus.png");
+}
+
+#ABXYButtonA Label
+{
+	color: #42ff00;
+}
+
+Button:focus #ABXYButtonA Label
+{
+	color: #0e182a;
+}
+
+#ABXYButtonB Label
+{
+	color: #ff0000;
+}
+
+Button:focus #ABXYButtonB Label
+{
+	color: #0e182a;
+}
+
+#ABXYButtonX Label
+{
+	color: #01c4f5;
+}
+
+Button:focus #ABXYButtonX Label
+{
+	color: #0e182a;
+}
+
+#ABXYButtonY Label
+{
+	color: #ffde00;
+}
+
+Button:focus #ABXYButtonY Label
+{
+	color: #0e182a;
+}
+
+ControllerSourceModeAbsoluteMouse .ModeTitle
+{
+	margin-bottom: 40px;
+}
+
+ControllerSourceModeAbsoluteMouse #BindingSlotContainer
+{
+	margin-top: 96px;
+	margin-right: 12px;
+}
+
+ControllerSourceModeAbsoluteMouse ControllerBindingButton
+{
+	horizontal-align: right;
+	margin-bottom: 6px;
+}
+
+ControllerSourceModeAbsoluteMouse #SourceModeBackground
+{
+	background-image: url("file://{images}/library/controller/input_controller_mode_mouse_complex.png");
+}
+
+ControllerSourceModeAbsoluteMouse #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex.png");
+}
+
+Button:focus ControllerSourceModeAbsoluteMouse #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex_focused.png");
+}
+
+ControllerSourceModeRelativeMouse #SourceModeBackground
+{
+	background-image: url("file://{images}/library/controller/input_controller_mode_stick.png");
+}
+
+ControllerSourceModeRelativeMouse #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick.png");
+}
+
+Button:focus ControllerSourceModeRelativeMouse #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_stick_focused.png");
+}
+
+
+ControllerSourceModeRelativeMouse #RelMouseClick
+{
+	horizontal-align: right;
+	margin-right: 12px;
+	transform: translatey( 175px );
+}
+
+ControllerSourceModeScrollWheel .ModeTitle
+{
+	margin-bottom: 40px;
+}
+
+ControllerSourceModeScrollWheel #BindingSlotContainer
+{
+	margin-top: 96px;
+	margin-right: 12px;
+}
+
+ControllerSourceModeScrollWheel ControllerBindingButton
+{
+	horizontal-align: right;
+	margin-bottom: 6px;
+}
+
+ControllerSourceModeScrollWheel #SourceModeBackground
+{
+	background-image: url("file://{images}/library/controller/input_controller_mode_mouse_complex.png");
+}
+
+ControllerSourceModeScrollWheel #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex.png");
+}
+
+Button:focus ControllerSourceModeScrollWheel #SourceModeLines
+{
+	background-image: url("file://{images}/library/controller/controller_config_mode_pad_complex_focused.png");
+}
+
+ControllerSourceModeTrigger
+{
+	width: bindingbuttonwidth;
+	height: 96px;
+	background-repeat: no-repeat;
+}
+
+
+ControllerSourceModeTrigger #SourceModeBackground
+{
+	background-repeat: no-repeat no-repeat;
+	width: 100%;
+	height: 100%;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+
+Slider:focus
+{
+	border-width: 3px;
+	border-style: solid;
+	border-radius: 3px;
+	border-color: white;
+
+	background-color: simplebuttonsolid;
+}
+
+ControllerBindingButton.Glyph
+{
+	width: 72px;
+	height: 72px;
+	background-repeat: no-repeat;
+}
+
+ControllerBindingButton.Glyph.KeyboardShape, ControllerBindingButton.Glyph.UnboundShape, ControllerBindingButton.Glyph.MouseShape
+{
+	background-image: url("file://{images}/library/controller/glyph_input_wrapper_keyboard_offset.png");
+}
+
+ControllerBindingButton.Glyph.KeyboardShape #BindingShape, ControllerBindingButton.Glyph.UnboundShape #BindingShape, ControllerBindingButton.Glyph.MouseShape #BindingShape
+{
+	width: 100%;
+	height: 100%;
+
+	background-image: url("file://{images}/library/controller/glyph_input_wrapper_keyboard.png");
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+}
+
+ControllerBindingButton.Glyph.GamepadShape
+{
+	background-image: url("file://{images}/library/controller/glyph_input_wrapper_gamepad_offset.png");
+}
+
+ControllerBindingButton.Glyph.GamepadShape #BindingShape
+{
+	width: 100%;
+	height: 100%;
+
+	background-image: url("file://{images}/library/controller/glyph_input_wrapper_gamepad.png");
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+}
+
+ControllerBindingButton Label
+{
+	font-size: 30px;
+	font-family: platformfont;
+	font-weight: light;
+	text-overflow: ellipsis;
+	color: #00ccff;
+}
+
+ControllerBindingButton.Glyph Label
+{
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: -1px 0px;
+}
+
+ControllerBindingButton.Glyph.ShortName Label
+{
+	margin-left: -1px;
+	margin-top: -1px;
+	font-size: 20px;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+ControllerBindingButton.Glyph.ReturnBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_return.png");
+}
+
+ControllerBindingButton.Glyph.BackspaceBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_backspace.png");
+}
+
+ControllerBindingButton.Glyph.TabBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_tab.png");
+}
+
+ControllerBindingButton.Glyph.SpaceBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_space.png");
+}
+
+ControllerBindingButton.Glyph.RightArrowBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_right.png");
+}
+
+ControllerBindingButton.Glyph.LeftArrowBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_left.png");
+}
+
+ControllerBindingButton.Glyph.UpArrowBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_up.png");
+}
+
+ControllerBindingButton.Glyph.DownArrowBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_down.png");
+}
+
+ControllerBindingButton.Glyph.PrintBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_print.png");
+}
+
+ControllerBindingButton.Glyph.ScrollLockBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_scroll_lock.png");
+}
+
+ControllerBindingButton.Glyph.HomeBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_kb_home.png");
+}
+
+Slider:Selected
+{
+	//temporary until we decide how to visually handle focus
+	background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) );
+	box-shadow: box_shadow_on_color -2.5px -2.5px 8px 5px;
+	border: 2px solid #fdfefef0;
+	border-radius: 2px;
+    border-style: none;
+}
+
+
+#ModeProperties, #ChooseBinding
+{
+	width: 100%;
+	height: propertiesheight;
+	vertical-align: bottom;
+	background-color: #13283c;
+	opacity: 0.0;
+}
+
+#ModeProperties.ModeShiftVisible
+{
+	//background-color: #121d0a;
+}
+
+#ModeProperties:descendantfocus, #ChooseBinding:descendantfocus
+{
+	opacity: 1.0;
+}
+
+#TabBackground
+{
+	width: 100%;
+	height: tabheight;
+	padding-top: 10px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e354dff ), color-stop( 0.50, #0d1f35ff ), to( #0e354dff ) );
+}
+
+.ModeShiftVisible #TabBackground
+{
+	//background-color: gradient( linear, 0% 0%, 100% 0%, from( #132606ff ), color-stop( 0.50, #0b1a06ff ), to( #132606ff ) );
+}
+
+#PropertiesBackground
+{
+	flow-children: down;
+}
+
+.ColumnContainer
+{
+	width: 1676px;
+	horizontal-align: center;
+	flow-children: right;
+}
+
+.Column
+{
+	flow-children: down;
+	width: fieldwidth;
+        height: 500px;
+}
+
+#MiddleColumn
+{
+	margin-left: 70px;
+	margin-right: 70px;
+}
+
+.FieldWrapper
+{
+	width: fieldwidth;
+	height: fit-children;
+	flow-children: down;
+	margin-bottom: 15px;
+}
+
+.FieldLabel
+{
+	font-size: 28px;
+	font-family: platformfont;
+	color: #01caef;
+	margin-bottom: 5px;
+}
+
+.FieldWrapper.TabHeader
+{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.FieldWrapper DropDown
+{
+	width: 100%;
+}
+
+.FieldWrapper Slider
+{
+	width: 100%;
+	height: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.NoneMode
+{
+	visibility: collapse;
+}
+
+.ModeNoneVisible .NoneMode
+{
+	visibility: visible;
+}
+
+.ABXYMode
+{
+	visibility: collapse;
+}
+
+.ModeABXYVisible .ABXYMode
+{
+	visibility: visible;
+}
+
+.ModeABXYVisible .ABXYMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeABXYVisible.AdvancedPropertiesVisible .ABXYMode
+{
+	visibility: collapse;
+}
+
+.ModeABXYVisible.AdvancedPropertiesVisible .ABXYMode.Advanced
+{
+	visibility: visible;
+}
+
+.JoystickMoveMode
+{
+	visibility: collapse;
+}
+
+.ModeJoystickMoveVisible .JoystickMoveMode
+{
+	visibility: visible;
+}
+
+.ModeJoystickMoveVisible .JoystickMoveMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode
+{
+	visibility: collapse;
+}
+
+.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode.Advanced
+{
+	visibility: visible;
+}
+
+.JoystickCameraMode
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible .JoystickCameraMode
+{
+	visibility: visible;
+}
+
+.ModeJoystickCameraVisible .JoystickCameraMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode.Advanced
+{
+	visibility: visible;
+}
+
+.MouseMode
+{
+	visibility: collapse;
+}
+
+.ModeAbsMouseVisible .MouseMode
+{
+	visibility: visible;
+}
+
+.ModeAbsMouseVisible .MouseMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeAbsMouseVisible.AdvancedPropertiesVisible .MouseMode
+{
+	visibility: collapse;
+}
+
+.ModeAbsMouseVisible.AdvancedPropertiesVisible .MouseMode.Advanced
+{
+	visibility: visible;
+}
+
+.RelMouseMode
+{
+	visibility: collapse;
+}
+
+.ModeRelMouseVisible .RelMouseMode
+{
+	visibility: visible;
+}
+
+.ModeRelMouseVisible .RelMouseMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeRelMouseVisible.AdvancedPropertiesVisible .RelMouseMode
+{
+	visibility: collapse;
+}
+
+.ModeRelMouseVisible.AdvancedPropertiesVisible .RelMouseMode.Advanced
+{
+	visibility: visible;
+}
+
+.DpadMode
+{
+	visibility: collapse;
+}
+
+.ModeDpadVisible .DpadMode
+{
+	visibility: visible;
+}
+
+.ModeDpadVisible .DpadMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeDpadVisible.AdvancedPropertiesVisible .DpadMode
+{
+	visibility: collapse;
+}
+
+.ModeDpadVisible.AdvancedPropertiesVisible .DpadMode.Advanced
+{
+	visibility: visible;
+}
+
+.ScrollWheelMode
+{
+	visibility: collapse;
+}
+
+.ModeScrollWheelVisible .ScrollWheelMode
+{
+	visibility: visible;
+}
+
+.ModeScrollWheelVisible .ScrollWheelMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeScrollWheelVisible.AdvancedPropertiesVisible .ScrollWheelMode
+{
+	visibility: collapse;
+}
+
+.ModeScrollWheelVisible.AdvancedPropertiesVisible .ScrollWheelMode.Advanced
+{
+	visibility: visible;
+}
+
+
+.TriggerMode
+{
+	visibility: collapse;
+}
+
+.ModeTriggerVisible .TriggerMode
+{
+	visibility: visible;
+}
+
+.ModeTriggerVisible #ModeTab
+{
+	visibility: collapse;
+}
+
+.ModeTriggerVisible #ModeShiftButtonTab
+{
+	visibility: collapse;
+}
+
+.ModeTriggerVisible #TabBackground
+{
+	visibility: collapse;
+}
+
+.ModeTriggerVisible .TriggerMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeTriggerVisible.AdvancedPropertiesVisible .TriggerMode
+{
+	visibility: collapse;
+}
+
+.ModeTriggerVisible.AdvancedPropertiesVisible .TriggerMode.Advanced
+{
+	visibility: visible;
+}
+
+.AdvancedPropertiesVisible #ModeTab
+{
+	visibility: collapse;
+}
+
+.AdvancedPropertiesVisible #ModeShiftButtonTab
+{
+	visibility: collapse;
+}
+
+#ModeShiftPulldownTab
+{
+	visibility: collapse;
+}
+
+.ModeShiftVisible #ModeShiftPulldownTab
+{
+	visibility: visible;
+}
+
+.ModeShiftVisible #ModeShiftButtonTab, .ModeShiftVisible.AdvancedPropertiesVisible #ModeShiftPulldownTab
+{
+	visibility: collapse;
+}
+
+.AdvancedPropertiesVisible #TabBackground
+{
+	visibility: collapse;
+}
+
+.AdvancedPropertiesVisible .CenterImage
+{
+	visibility: collapse;
+}
+
+.AdvancedPropertiesVisible .Column
+{
+	margin-top: 10px;
+}
+
+.FieldWrapper Button, .FieldWrapper ControllerBindingButton
+{
+	padding-left: 8px;
+	border-width: 5px;
+	border-style: solid;
+	border-radius: 2px;
+	border-color: none;
+
+	background-color: simplebuttonsolid;
+
+	transition-property: background-color, box-shadow;
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+	transition-duration: 0.23s;
+
+	width: 100%;
+	height: 50px;
+}
+
+.Column ControllerBindingButton:focus Label
+{
+	color: black;
+}
+
+.Column ControllerBindingButton:focus #BindingShape
+{
+	background-color: white;
+}
+
+#BindingShape
+{
+    border-radius: 10px;
+}
+
+.FieldWrapper Button:focus, .FieldWrapper ControllerBindingButton:focus
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
+	border-color: white;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	z-index: 100;
+}
+
+.FieldWrapper Button:hover, .FieldWrapper ControllerBindingButton:hover, .FieldWrapper DropDown:hover
+{
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	z-index: 100;
+}
+
+.FieldWrapper Button:disabled:hover, .FieldWrapper ControllerBindingButton:disabled:hover
+{
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+.FieldWrapper Button Label, .FieldWrapper ControllerBindingButton Label
+{
+	color: white;
+	font-size: 24px;
+	font-family: platformfont;
+	border-width: 0px;
+	vertical-align: center;
+}
+
+.FieldWrapper Button:focus Label, .FieldWrapper ControllerBindingButton:focus Label
+{
+	color: black;
+}
+
+.PropertyColumn
+{
+	height: 100%;
+	padding-top: 10px;
+	width: fit-children;
+	flow-children: down;
+}
+
+#RightPropertyColumn.PropertyColumn
+{
+	horizontal-align: right;
+}
+
+.PropertiesContainer
+{
+	width: 100%;
+	opacity: 0.0;
+}
+
+.PropertiesContainer.PropertyChildVisible
+{
+	opacity: 1.0;
+}
+
+#CenterPanelColumn
+{
+	width: fit-children;
+	height: fit-children;
+
+	horizontal-align: center;
+}
+
+.CenterImage
+{
+	width: fieldwidth;
+	height: 100%;
+	background-repeat: no-repeat;
+	visibility: collapse;
+}
+
+#CenterImageDpad.CenterImage
+{
+	background-image: url("file://{images}/library/controller/controller_config_inspector_dpad_bg.png");
+}
+
+#CenterImageJoystick.CenterImage
+{
+	background-image: url("file://{images}/library/controller/controller_config_inspector_stick_bg.png");
+}
+
+#CenterImageABXY.CenterImage
+{
+	background-image: url("file://{images}/library/controller/controller_config_inspector_bpad_bg.png");
+}
+
+#CenterImageMouse.CenterImage
+{
+	background-image: url("file://{images}/library/controller/controller_config_inspector_trackpad_zone_modifier.png");
+}
+
+#CenterImageRelMouse.CenterImage
+{
+	background-image: url("file://{images}/library/controller/controller_config_inspector_trackpad_zone_modifier.png");
+}
+
+#CenterImageScrollWheel.CenterImage
+{
+	background-image: url("file://{images}/library/controller/controller_config_inspector_trackpad_zone_modifier.png");
+}
+
+#CenterImageMouseRotation
+{
+	background-image: url("file://{images}/library/controller/controller_config_inspector_trackpad_rotation.png");
+	visibility: collapse;
+	background-position: center center;
+	height: 400px;
+	margin-top: 28px;
+}
+
+
+DropDownMenu.DropDownMenuVisible
+{
+	width: fieldwidth;
+}
+
+.FlowDown
+{
+	flow-children: down;
+	width: fit-children;
+	height: fit-children;
+}
+
+.FlowRight
+{
+	flow-children: right;
+	width: fit-children;
+	height: fit-children;
+}
+
+#DpadUpButton, #YButton
+{
+	margin-left: 220px;
+	margin-top: 86px;
+}
+
+#DpadLeftButton, #XButton
+{
+	margin-left: 115px;
+	margin-top: 33px;
+}
+
+#DpadRightButton, #BButton
+{
+	margin-left: 138px;
+	margin-top: 33px;
+}
+
+#DpadDownButton, #AButton
+{
+	margin-left: 220px;
+	margin-top: 33px;
+}
+
+#RightColumnWrapper
+{
+	width: fieldwidth;
+	height: 420px;
+}
+
+.AdvancedPropertiesWrapper
+{
+	visibility: collapse;
+	vertical-align: bottom;
+	margin-bottom: 0px;
+}
+
+.AdvancedPropertiesButtonVisible #ShowAdvancedProperties
+{
+	visibility: visible;
+}
+
+.AdvancedPropertiesVisible #ShowAdvancedProperties
+{
+	visibility: collapse;
+}
+
+.AdvancedPropertiesButtonVisible #HideAdvancedProperties
+{
+	visibility: collapse;
+}
+
+.AdvancedPropertiesVisible #HideAdvancedProperties
+{
+	// There is already a back button in the footer, so keep this collapsed for now
+	//visibility: visible;
+}
+
+#KeyboardWrapper
+{
+	flow-children: down;
+	height: 100%;
+}
+
+#BindingDescriptionWrapper
+{
+	flow-children: right;
+	margin-bottom: 20px;
+}
+
+#SelectBindingHeader
+{
+	padding-top: 5px;
+	color: white;
+	font-size: 24px;
+	font-family: platformfont;
+	vertical-align: center;
+	margin-right: 12px;
+}
+
+#BindingDescriptionTextEntry
+{
+	margin: 5px;
+	width: 400px;
+	font-size: 28px;
+	font-family: platformfont;
+	opacity: 0.0;
+}
+
+.ShowCustomDescription #BindingDescriptionTextEntry
+{
+	opacity: 1.0;
+}
+
+#BindingDescriptionDropDown
+{
+	margin-top: 5px;
+	margin-right: 40px;
+	width: 450px;
+	visibility: collapse;
+}
+
+.ShowBindingDescriptionDropDown #BindingDescriptionDropDown
+{
+	visibility: visible;
+}
+
+#BindingDescriptionDropDownDropDownMenu
+{
+	width: 450px;
+}
+
+ChooseBinding
+{
+	padding-left: 30px;
+	padding-top: 20px;
+	height: 520px; 
+	flow-children: right;
+	opacity-mask: url( "file://{images}/library/keyboardfade.png" ) 0.0;
+
+	transition-property: opacity, opacity-mask;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.DaisyWheelVisible #ChooseBinding
+{
+	opacity-mask: url( "file://{images}/library/keyboardfade.png" ) 0.9;
+	opacity: 0.35;
+}
+
+ChooseBinding #VirtualMouse
+{
+	flow-children: down;
+	height: 100%;
+	background-image: url( "file://{images}/library/mouse.png" );
+	background-position: left 20px top 2px;
+	background-repeat: no-repeat;
+}
+
+ChooseBinding #VirtualMouse 
+{
+	flow-children: none;
+}
+
+ChooseBinding Button
+{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #017895ff;
+	background-color: #080f20ff;
+
+	width: 58px;
+	height: 58px;
+
+	padding: 0px;
+	margin: 1px;
+
+	transition-property: background-color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
+}
+
+ChooseBinding #VirtualMouse Button
+{
+	background-color: #00000000;
+	border-color: #00000000;
+	margin: 0px;
+	border-width: 0px;
+}
+
+ChooseBinding #VirtualMouse Button.OriginalBinding
+{
+	background-color: #307c01ff;
+	margin: 0px;
+	border-width: 0px;
+}
+
+ChooseBinding #VirtualMouse Button:focus, ChooseBinding #VirtualMouse Button.OriginalBinding:focus
+{
+	background-color: gradient(linear, -15% 0%, 100% 0%, from(#fdfdfdee), to(#adafafe0));
+}
+
+ChooseBinding Button:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+}
+
+ChooseBinding Button.GamepadButton
+{
+	box-shadow: none;
+}
+
+.DaisyWheelVisible ChooseBinding Button:hover
+{
+	box-shadow: none;
+}
+
+ChooseBinding Button Label, ChooseBinding Label
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 25px;
+	font-weight: thin;
+	color: #00d4ffff;
+	vertical-align: center;
+	horizontal-align: center;
+	transform: translatex( 0px );
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
+}
+
+ChooseBinding Button:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+}
+
+ChooseBinding Button.GamepadButton
+{
+	box-shadow: none;
+}
+
+.DaisyWheelVisible ChooseBinding Button:hover
+{
+	box-shadow: none;
+}
+
+ChooseBinding Button Label, ChooseBinding Label
+{
+	margin: 0px;
+	padding: 0px;
+	font-size: 25px;
+	font-weight: thin;
+	color: #00d4ffff;
+	vertical-align: center;
+	horizontal-align: center;
+	transform: translatex( 0px );
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
+}
+
+ChooseBinding Button:focus,
+ChooseBinding Button.OriginalBinding:focus
+{
+	animation-name: main-button-glow-movement-small;
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
+
+	border-color: #fefefeff;
+	border-width: 2px;
+}
+
+ChooseBinding Button:focus Label
+{
+	color: #353535ff;
+}
+
+ChooseBinding Button.OriginalBinding
+{
+	background-color: #307c01ff;
+	box-shadow: #6893b570 -1.5px -1.5px 4px 3px;
+}
+
+ChooseBinding Button.OriginalBinding Label
+{
+	color: #54dd01ff;
+}
+
+ChooseBinding Button.OriginalBinding:focus Label
+{
+	color: #353535ff;
+}
+
+ChooseBinding #VKBRow1,
+ChooseBinding #VKBRow2,
+ChooseBinding #VKBRow3,
+ChooseBinding #VKBRow4,
+ChooseBinding #VKBRow5,
+ChooseBinding #VKBRow6
+{
+	flow-children: right;
+	margin-bottom: 1px;
+}
+
+ChooseBinding #VKBRow1
+{
+	margin-bottom: 8px;
+}
+
+ChooseBinding #VKBCol1,
+ChooseBinding #VKBCol2,
+ChooseBinding #VKBCol3
+{
+	flow-children: right;
+}
+
+ChooseBinding #VKBCol1
+{
+	margin-right: 15px;
+}
+
+ChooseBinding #VKBCol2
+{
+	margin-right: 15px;
+}
+
+ChooseBinding #VKBCol3
+{
+}
+
+ChooseBinding #kb_key_backspace
+{
+	width: 118px;
+}
+
+ChooseBinding #kb_key_tab,
+ChooseBinding #kb_key_backslash
+{
+	width: 88px;
+}
+
+ChooseBinding #kb_key_capslock,
+ChooseBinding #kb_key_enter
+{
+	width: 118px;
+}
+
+ChooseBinding #kb_key_lshift,
+ChooseBinding #kb_key_rshift
+{
+	width: 148px;
+}
+
+ChooseBinding #kb_key_lcontrol,
+ChooseBinding #kb_key_rcontrol,
+ChooseBinding #kb_key_lalt,
+ChooseBinding #kb_key_ralt
+{
+	width: 133px;
+}
+
+
+ChooseBinding #kb_key_space
+{
+	width: 369px;
+}
+
+ChooseBinding #kb_key_pad_0
+{
+	width: 118px;
+}
+
+ChooseBinding Button#kb_key_right Label
+{
+	transform-origin: 0% 0% parent-relative;
+	transform: rotatez( 90deg ) translatex( 100% );
+}
+
+ChooseBinding Button#kb_key_down Label
+{
+	transform-origin: 0% 0% parent-relative;
+	transform: rotatez( 180deg ) translatex( 100% ) translatey( 100% );
+}
+
+ChooseBinding Button#kb_key_left Label
+{
+	transform-origin: 0% 0% parent-relative;
+	transform: rotatez( -90deg ) translatey( 100% ); 
+}
+
+ChooseBinding
+{
+	height: fit-children;
+	width: fit-children;
+}
+
+ChooseBinding #VirtualKeyboard Button.Empty
+{
+	opacity: 0.0;
+}
+
+ChooseBinding #VirtualKeyboard
+{
+	height: 100%;
+	flow-children: down;
+
+	pre-transform-scale2d: 0.85;
+	margin-top: -35px;
+	margin-left: -100px;
+}
+
+ChooseBinding #VirtualGamepad
+{
+	width: 512px;
+	height: 420px;
+
+	background-image: url( "file://{images}/library/controller/binding_virtual_gamepad_bg.png" ); 
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	margin-left: -88px;
+}
+
+ChooseBinding #GamepadBoundLayer, ChooseBinding #GamepadFocusLayer
+{
+	width: 100%;
+	height: 100%;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+ChooseBinding.LeftTriggerBound #GamepadBoundLayer
+{
+	background-position: 103px 22px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_lt.png" ); 
+}
+
+ChooseBinding.RightTriggerBound #GamepadBoundLayer
+{
+	background-position: 345px 22px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rt.png" ); 
+}
+
+ChooseBinding.LeftShoulderBound #GamepadBoundLayer
+{
+	background-position: 98px 29px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_lb.png" ); 
+}
+
+ChooseBinding.RightShoulderBound #GamepadBoundLayer
+{
+	background-position: 321px 29px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rb.png" ); 
+}
+
+ChooseBinding.LeftJoystickBound #GamepadBoundLayer
+{
+	background-position: 110px 91px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_ls.png" ); 
+}
+
+ChooseBinding.RightJoystickBound #GamepadBoundLayer
+{
+	background-position: 284px 162px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_rs.png" ); 
+}
+
+ChooseBinding.SelectButtonBound #GamepadBoundLayer
+{
+	background-position: 186px 106px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_back.png" ); 
+}
+
+ChooseBinding.StartButtonBound #GamepadBoundLayer
+{
+	background-position: 259px 106px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_start.png" ); 
+}
+
+ChooseBinding.AButtonBound #GamepadBoundLayer
+{
+	background-position: 339px 127px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_a.png" ); 
+}
+
+ChooseBinding.BButtonBound #GamepadBoundLayer
+{
+	background-position: 364px 103px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_b.png" ); 
+}
+
+ChooseBinding.XButtonBound #GamepadBoundLayer
+{
+	background-position: 314px 102px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_x.png" ); 
+}
+
+ChooseBinding.YButtonBound #GamepadBoundLayer
+{
+	background-position: 339px 78px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_y.png" ); 
+}
+
+ChooseBinding.DpadUpBound #GamepadBoundLayer
+{
+	background-position: 184px 250px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_dp_up.png" ); 
+}
+
+ChooseBinding.DpadDownBound #GamepadBoundLayer
+{
+	background-position: 184px 278px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_dp_dn.png" ); 
+}
+
+ChooseBinding.DpadLeftBound #GamepadBoundLayer
+{
+	background-position: 169px 265px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_dp_lt.png" ); 
+}
+
+ChooseBinding.DpadRightBound #GamepadBoundLayer
+{
+	background-position: 197px 265px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_dp_rt.png" ); 
+}
+
+ChooseBinding.LeftTriggerFocus #GamepadFocusLayer
+{
+	background-position: 103px 22px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_lt.png" ); 
+}
+
+ChooseBinding.RightTriggerFocus #GamepadFocusLayer
+{
+	background-position: 345px 22px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rt.png" ); 
+}
+
+ChooseBinding.LeftShoulderFocus #GamepadFocusLayer
+{
+	background-position: 98px 29px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_lb.png" ); 
+}
+
+ChooseBinding.RightShoulderFocus #GamepadFocusLayer
+{
+	background-position: 321px 29px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rb.png" ); 
+}
+
+ChooseBinding.LeftJoystickFocus #GamepadFocusLayer
+{
+	background-position: 110px 91px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_ls.png" ); 
+}
+
+ChooseBinding.RightJoystickFocus #GamepadFocusLayer
+{
+	background-position: 284px 162px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_rs.png" ); 
+}
+
+ChooseBinding.SelectButtonFocus #GamepadFocusLayer
+{
+	background-position: 186px 106px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_back.png" ); 
+}
+
+ChooseBinding.StartButtonFocus #GamepadFocusLayer
+{
+	background-position: 259px 106px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_start.png" ); 
+}
+
+ChooseBinding.AButtonFocus #GamepadFocusLayer
+{
+	background-position: 339px 127px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_a.png" ); 
+}
+
+ChooseBinding.BButtonFocus #GamepadFocusLayer
+{
+	background-position: 364px 103px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_b.png" ); 
+}
+
+ChooseBinding.XButtonFocus #GamepadFocusLayer
+{
+	background-position: 314px 102px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_x.png" ); 
+}
+
+ChooseBinding.YButtonFocus #GamepadFocusLayer
+{
+	background-position: 339px 78px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_y.png" ); 
+}
+
+ChooseBinding.DpadUpFocus #GamepadFocusLayer
+{
+	background-position: 184px 250px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_dp_up.png" ); 
+}
+
+ChooseBinding.DpadDownFocus #GamepadFocusLayer
+{
+	background-position: 184px 278px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_dp_dn.png" ); 
+}
+
+ChooseBinding.DpadLeftFocus #GamepadFocusLayer
+{
+	background-position: 169px 265px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_dp_lt.png" ); 
+}
+
+ChooseBinding.DpadRightFocus #GamepadFocusLayer
+{
+	background-position: 197px 265px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_selection_dp_rt.png" ); 
+}
+
+ChooseBinding #VirtualMouse
+{
+	height: 100%;
+	width: 240px;
+
+	pre-transform-scale2d: 0.85;
+	margin-left: -30px;
+	margin-top: 30px;
+}
+
+ChooseBinding #mouse_left_button
+{
+	width: 44px;
+	height: 44px;
+	position: 48px 94px 0px;
+}
+
+ChooseBinding #mouse_right_button
+{
+	width: 44px;
+	height: 44px;
+	position: 141px 94px 0px;
+}
+
+ChooseBinding #mouse_middle_button
+{
+	width: 31px;
+	height: 46px;
+	position: 100px 94px 0px;
+}
+
+ChooseBinding #mouse_scroll_up
+{
+	width: 31px;
+	height: 45px;
+	position: 100px 50px 0px;
+	margin-left: 1px;
+}
+
+ChooseBinding #mouse_scroll_down
+{
+	width: 31px;
+	height: 32px;
+	position: 100px 139px 0px;
+}
+
+ChooseBinding #mouse_scroll_down Label
+{
+	margin-left: 2px;
+	transform-origin: 0% 0% parent-relative;
+	transform: rotatez( 180deg ) translatex( 100% ) translatey( 100% );
+}
+
+ChooseBinding #mouse_back_button
+{
+	width: 33px;
+	height: 44px;
+	position: 37px 191px 0px;
+}
+
+ChooseBinding #mouse_forward_button
+{
+	width: 33px;
+	height: 44px;
+	position: 160px 191px 0px;
+}
+
+#GamepadRowWrapper
+{
+	flow-children: down;
+	width: 100%;
+	height: 100%;
+}
+
+#VirtualGamepad #GamepadTopRow
+{
+	margin-left: 95px;
+	margin-top: 100px;
+	width: 325px;
+	height: 40px;
+	//background-color: #00ff0080;
+	flow-children: right;
+}
+
+#VirtualGamepad #GamepadMiddleRow
+{
+	margin-top: 23px;
+	margin-left: 105px;
+
+	width: 310px;
+	height: 84px;
+	//background-color: #ff000080;
+	flow-children: right;
+}
+
+#VirtualGamepad #GamepadBottomRow
+{
+	margin-left: 158px;
+	width: 195px;
+	height: 65px;
+	//background-color: #0000ff80;
+}
+
+#VirtualGamepad Button, #VirtualGamepad Button.OriginalBinding
+{
+	background-color: none;
+	animation-name: none;
+	border-width: 0px;
+	margin: 0px;
+	box-shadow: none;
+}
+
+#VirtualGamepad Button:focus
+{
+	//debug
+	//background-color: #ff000080;
+}
+
+#VirtualGamepad #LeftTriggerShoulderWrapper
+{
+	flow-children: down;
+}
+
+#VirtualGamepad #RightTriggerShoulderWRapper
+{
+	flow-children: down;
+	horizontal-align: right;
+}
+
+#VirtualGamepad #left_trigger, #VirtualGamepad #right_trigger
+{
+	width: 100px;
+	height: 19px;
+	//background-color: #ff000080;
+}
+
+#VirtualGamepad #left_shoulder, #VirtualGamepad #right_shoulder
+{
+	width: 100px;
+	height: 21px;
+	//background-color: #0000ff80;
+}
+
+#VirtualGamepad #left_joystick
+{
+	margin-top: 8px;
+	width: 72px;
+	height: 70px;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #button_select
+{
+	width: 24px;
+	height: 24px;
+	margin-top: 30px;
+	margin-left: 32px;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #button_start
+{
+	width: 24px;
+	height: 24px;
+	margin-top: 30px;
+	margin-left: 46px;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #ABXYWrapper
+{
+	horizontal-align: right;
+	height: 100%;
+	width: 88px;
+	//background-color: #00ff0080;
+	flow-children: down;
+}
+
+#VirtualGamepad #button_y
+{
+	horizontal-align: center;
+	height: 28px;
+	width: 30px;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #ABXYMiddleWrapper
+{
+	width: 100%;
+	height: 27px;
+	//background-color: #ff000080;
+}
+
+#VirtualGamepad #button_x
+{
+	margin-left: 2px;
+	height: 100%;
+	width: 30px;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #button_b
+{
+	horizontal-align: right;
+	margin-right: 2px;
+	height: 100%;
+	width: 30px;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #button_a
+{
+	horizontal-align: center;
+	height: 28px;
+	width: 30px;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #DpadWrapper
+{
+	margin-left: 9px;
+	width: 57px;
+	height: 57px;
+	flow-children: down;
+	//background-color: #00ff0080;
+}
+
+#VirtualGamepad #dpad_up
+{
+	horizontal-align: center;
+	width: 30px;
+	height: 20px;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #DpadMiddleWrapper
+{
+	width: 100%;
+	height: 20px;
+	flow-children: right;
+	//background-color: #ff000080;
+}
+
+#VirtualGamepad #dpad_left, #VirtualGamepad #dpad_right
+{
+	height: 100%;
+	width: 50%;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #dpad_down
+{
+	horizontal-align: center;
+	width: 30px;
+	height: 20px;
+	//background-color: #ffff0080;
+}
+
+#VirtualGamepad #right_joystick
+{
+	horizontal-align: right;
+	width: 72px;
+	height: 100%;
+	//background-color: #ffff0080;
+}
+
+ControllerConfigBrowser#ConfigBrowser
+{
+	visibility: collapse;
+}
+
+ControllerConfigBrowser#ConfigBrowser:descendantfocus
+{
+	width: 100%;
+	height: 100%;
+	background-color: #111625ff;
+	visibility: visible;
+}
+
+ControllerConfigBrowser #ColumnContainer
+{
+	margin-top: 80px;
+	width: fit-children;
+	height: 837px;
+	flow-children: right;
+	horizontal-align: center;
+}
+
+ControllerConfigBrowser #ConfigCategoriesColumn
+{
+	width: 575px;
+	flow-children: down;
+	height: 100%;
+}
+
+ControllerConfigBrowser #ConfigsColumn
+{
+	margin-left: 65px;
+	width: 1160px;
+	height: 100%;
+	flow-children: down;
+	overflow: squish scroll;
+	
+	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+
+ControllerConfigButton
+{
+	width: 100%;
+	height: 155px;
+	background-color: #25364bff;
+	margin-bottom: 8px;
+	margin-right: 12px;
+	border-width: 2px;
+	border-color: #25364bff;
+}
+
+ControllerConfigButton #ConfigButtonWrapper
+{
+	width: 100%;
+	height: 100%;
+	flow-children: right;
+}
+
+ControllerConfigButton #ControllerImage
+{
+	background-image: url("file://{images}/library/controller/controller_small_config.png");
+	background-repeat: no-repeat;
+	background-position: center -13px;
+	width: 400px;
+	height: 100%;
+}
+
+ControllerConfigButton #ConfigContentWrapper
+{
+	flow-children: down;
+	padding: 10px 20px;
+	height: 100%;
+	width: 100%;
+}
+
+ControllerConfigButton #Title
+{
+	font-size: 32px;
+	font-family: platformfont;
+	font-weight: bold;
+	color: #75c7fdff;
+}
+
+ControllerConfigButton #Author
+{
+	font-size: 24px;
+	font-family: platformfont;
+	font-weight: thin;
+	color: #75c7fdff;
+}
+
+ControllerConfigButton #Description
+{
+	margin-top: 8px;
+	font-size: 21px;
+	height: 54px;
+	font-family: platformfont;
+	font-weight: thin;
+	color: #75c7fdff;
+}
+
+ControllerConfigBrowser .ConfigCategory
+{
+	background-color: #25364bff;
+	height: 271px;
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+ControllerConfigBrowser .ConfigCategory Label
+{
+	font-size: 65px;
+	font-family: platformfont;
+	font-weight: thin;
+	color: #75c7fdff;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+ControllerConfigBrowser #PersonalCategory
+{
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.HasPersonalBindings #PersonalCategory
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser #CommunityCategory
+{
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.HasCommunityBindings #CommunityCategory
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser #TemplateCategory
+{
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.HasTemplateBindings #TemplateCategory
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser #PersonalBinding, ControllerConfigBrowser #CommunityBinding, ControllerConfigBrowser #TemplateBinding
+{
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.SelectPersonalBindings #PersonalBinding
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser.SelectCommunityBindings #CommunityBinding
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser.SelectTemplateBindings #TemplateBinding
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser.SelectPersonalBindings #PersonalCategory
+{
+	background-color: #195174ff;
+}
+
+ControllerConfigBrowser.SelectCommunityBindings #CommunityCategory
+{
+	background-color: #195174ff;
+}
+
+ControllerConfigBrowser.SelectTemplateBindings #TemplateCategory
+{
+	background-color: #195174ff;
+}
+
+ControllerConfigBrowser #ConfigCategoriesColumn Button:focus, ControllerConfigButton:focus #ConfigButtonWrapper
+{
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd));
+	border-color: white;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+ControllerConfigBrowser #ConfigCategoriesColumn Button:focus Label, ControllerConfigButton:focus #ConfigContentWrapper Label
+{
+	color: black;
+}
+
+ControllerConfigButton:focus #ControllerImage
+{
+	wash-color: #dfdfdfff;
+}

@@ -11,7 +11,7 @@
 
 		<Panel id="RadioButtonContainer">
 			<Panel class="InputContainerDown GapDown">
-				<RadioButton group="OPT" class="Button RadioButton" id="RadioForgotPassword" tabindex="0.0" text="#LoginHelp_ForgotPassword" selectionpos="auto" />
+				<RadioButton group="OPT" class="Button RadioButton" id="RadioHaveAccountName" tabindex="0.0" text="#LoginHelp_HaveAccountName" selectionpos="auto" />
 			</Panel>
 			<Panel class="InputContainerDown GapDown">
 				<RadioButton group="OPT" class="Button RadioButton" id="RadioForgotAccountName" tabindex="0.0" text="#LoginHelp_ForgotAccountName" selectionpos="auto" />
@@ -27,8 +27,8 @@
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="Label" text="#WizardButton_Next" />
 			</Button>
-			<Button class="WizardButton GapRight" id="ButtonDone" onactivate="WizardButtonDone()">
-				<Label id="Label" text="#WizardButton_Done" />
+			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
+				<Label id="Label" text="#WizardButton_Cancel" />
 			</Button>
 		</Panel>
 

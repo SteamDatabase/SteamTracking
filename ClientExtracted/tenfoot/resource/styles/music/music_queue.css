@@ -39,34 +39,56 @@ MusicQueuePanel
 
 
 .MusicFullQueuePanel
+
 {
+
 	padding: 10px 0px 0px 0px;
+
 	width: 640px;
+
 	height: 660px;
+
 	background-color: #eeeeee60;
+
 	vertical-align: center;
+
 	horizontal-align: center;
+
 	flow-children: down;
 
+
+
 	border-width: 5px;
+
 	border-style: solid;
+
 	border-color: ui_common_control_border;
+
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 
+
+
 	color: #ffffffff;
+
 	background-color: message_box_bg;
 
+
+
 	animation-name: msg-box-appear;
+
 	animation-duration: 0.4s;
+
 	animation-timing-function: ease-in-out;
+
 	animation-iteration-count: 1;
+
 }
 
 
 #MusicQueueEntriesList
 {
 	flow-children: down;
-	overflow: clip scroll;
+	overflow: squish scroll;
 	height: 580px; 	
 
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );

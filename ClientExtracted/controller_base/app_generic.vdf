@@ -1,85 +1,130 @@
 "controller_mappings"
 {
-	"buttons"
+	"version" "2"
+	"game" "Generic Defaults"
+	"description" "This is a generic set of bindings which has been selected because there is no Steam default configuration defined for this game.  For best results you will likely need to edit these bindings to correspond with the actual in-game input configuration."
+
+	"group"
 	{
-		"button_0"				"kb:key_tab, Tab"
-		"button_1"				"kb:key_f, F"
-		"button_2"				"kb:key_c, C"
-		"button_3"				"kb:key_q, Q"
+		"id" "0"
+		"mode" "four_buttons"
 
-		"right_trigger" 	"mouse:left_button, Left Mouse"
-		"left_trigger"		"mouse:right_button, Right Mouse"
-		"right_bumper"		"mouse:scroll_up, Mouse Scroll Up"
-		"left_bumper"		"mouse:scroll_down, Mouse Scroll Down"
-
-		"button_escape"		"kb:key_esc, Menu"
-		"button_menu"		"kb:key_tab"
-
-		"backside_left"		"mouse:middle_button, Middle Mouse"
-		"backside_right"	"kb:key_lcontrol, Left Control"
-		
-	}
-
-	"touchscreen"
-	{
-		"touch_button_0"			"kb:key_f6, F6"
-		"touch_button_1"			"kb:key_f7, F7"
-		"touch_button_2"			"kb:key_f5, F5"
-		"touch_button_3"			"kb:key_t, T"
-	}
-
-	"pads"
-	{
-		"left_stick_up"		""
-		"left_stick_right"	""
-		"left_stick_down"	""
-		"left_stick_left"	""
-		"left_stick_click"	""
-
-		"left_north"		"kb:key_w, W"
-		"left_northeast"	""
-		"left_east"		"kb:key_d, D"
-		"left_southeast"	""
-		"left_south"		"kb:key_s, S"
-		"left_southwest"	""
-		"left_west"		"kb:key_a, A"
-		"left_northwest"	""
-
-		"left_double_tap"	""
-		"left_outer_edge"	"kb:key_lshift, LShift"
-		"left_click"		"kb:key_space, Space"
-
-		"right_north"		"kb:key_up"
-		"right_northeast"	""
-		"right_east"		"kb:key_right"
-		"right_southeast"	""
-		"right_south"		"kb:key_down"
-		"right_southwest"	""
-		"right_west"		"kb:key_left"
-		"right_northwest"	""
-	
-		"right_double_tap"	"mouse:middle_button, Middle Mouse"
-		"right_outer_edge"	""
-		"right_click"		"kb:key_e, E"
-
-		// Extra descriptions for pads as a whole rather than just individual directions
-		pad_rollup_descriptions
+		"bindings"
 		{
-			"left_pad"	"Movement"
-			"right_pad"	"Look"
+			"button_a" "key_press SPACE"
+			"button_b" "key_press E"
+			"button_x" "key_press R"
+			"button_y" "key_press F"
+		}
+	}
+
+	"group"
+	{
+		"id"    1
+		"mode" "dpad"
+
+		"bindings"
+		{
+			"dpad_north"    "key_press W"
+			"dpad_south"    "key_press S"
+			"dpad_west"     "key_press A"
+			"dpad_east"     "key_press D"
+		}
+		"settings"
+		{
+			"requires_click" "0"
+
+			"overlap" "true"
+		}
+	}
+
+	"group"
+	{
+		"id"    "2"
+		"mode" "dpad"
+
+		"bindings"
+		{
+			"dpad_north"    "key_press UP_ARROW"
+			"dpad_south"    "key_press DOWN_ARROW"
+			"dpad_east"     "key_press RIGHT_ARROW"
+			"dpad_west"     "key_press LEFT_ARROW"
+		}
+
+		"settings"
+		{
+			"requires_click" "1"
+
+			"overlap" "false"
+		}
+	}
+
+	"group"
+	{
+		"id" "3"
+		"mode" "absolute_mouse"
+	}
+
+	"group"
+	{
+		"id"		"4"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"mouse_button RIGHT, Right Mouse"
+		}
+		"settings"
+		{
+			"output_trigger"		"1"
+		}
+	}
+
+	"group"
+	{
+		"id"		"5"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"mouse_button LEFT, Left Mouse"
+		}
+		"settings"
+		{
+			"output_trigger"		"2"
+		}
+	}
+
+	"group_source_bindings"
+	{
+		"0" "button_diamond"
+		"1" "joystick"
+		"2" "left_trackpad"
+		"3" "right_trackpad"
+		"4"	"left_trigger active"
+		"5"	"right_trigger active"
+	}
+
+	"switch_bindings"
+	{
+		"bindings"
+		{
+			"right_bumper"		"mouse_wheel SCROLL_UP, Mouse Scroll Up"
+			"left_bumper"		"mouse_wheel SCROLL_DOWN, Mouse Scroll Down"
+
+			"button_escape"		"key_press ESCAPE, Menu"
+			"button_menu"		"key_press TAB, Tab"
+
+			"button_back_left"	"mouse_button MIDDLE, Middle Mouse"
+			"button_back_right"	"key_press LEFT_CONTROL, Left Control"
+
 		}
 	}
 
 	"settings"
 	{
-		"mouse_sensitivity"		"9"
+		"left_trackpad_mode"						"none"
+		"right_trackpad_mode"						"none"
 	}
 
-	"metadata"
-	{
-		"title"	"Generic Defaults"
-		"description" "This is a generic set of bindings which has been selected because there is no Steam default configuration defined for this game.  For best results you will likely need to edit these bindings to correspond with the actual in-game input configuration."
-	}
 }
 
 	

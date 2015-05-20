@@ -32,6 +32,7 @@
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
+ B CMsgClearAllCookies::default_instance_
  B CMsgClearHistory::default_instance_
  B CMsgClose::default_instance_
  B CMsgCloseDevTools::default_instance_
@@ -89,7 +90,6 @@
  B CMsgMouseUp::default_instance_
  B CMsgMouseWheel::default_instance_
  B CMsgNeedsPaint::default_instance_
- B CMsgNeedsPaintResponse::default_instance_
  B CMsgNodeHasFocus::_default_elementtagname_
  B CMsgNodeHasFocus::_default_input_type_
  B CMsgNodeHasFocus::_default_name_
@@ -135,6 +135,7 @@
  B CMsgSetHTMLTitle::_default_title_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
+ B CMsgSetSharedPaintBuffers::default_instance_
  B CMsgSetTargetFrameRate::default_instance_
  B CMsgSetVerticalScroll::default_instance_
  B CMsgSetZoomLevel::default_instance_
@@ -900,7 +901,6 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseMove>
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseUp>
  D typeinfo for CHTMLProtoBufMsg<CMsgMouseWheel>
- D typeinfo for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgOpenDevTools>
  D typeinfo for CHTMLProtoBufMsg<CMsgPaste>
  D typeinfo for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -929,6 +929,7 @@
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
+ D typeinfo for CMsgClearAllCookies
  D typeinfo for CMsgClearHistory
  D typeinfo for CMsgClose
  D typeinfo for CMsgCloseDevTools
@@ -971,7 +972,6 @@
  D typeinfo for CMsgMouseUp
  D typeinfo for CMsgMouseWheel
  D typeinfo for CMsgNeedsPaint
- D typeinfo for CMsgNeedsPaintResponse
  D typeinfo for CMsgNodeHasFocus
  D typeinfo for CMsgOpenDevTools
  D typeinfo for CMsgOpenNewTab
@@ -997,6 +997,7 @@
  D typeinfo for CMsgSetFocus
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
+ D typeinfo for CMsgSetSharedPaintBuffers
  D typeinfo for CMsgSetTargetFrameRate
  D typeinfo for CMsgSetVerticalScroll
  D typeinfo for CMsgSetZoomLevel
@@ -1668,7 +1669,6 @@
  D vtable for CHTMLProtoBufMsg<CMsgMouseMove>
  D vtable for CHTMLProtoBufMsg<CMsgMouseUp>
  D vtable for CHTMLProtoBufMsg<CMsgMouseWheel>
- D vtable for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  D vtable for CHTMLProtoBufMsg<CMsgOpenDevTools>
  D vtable for CHTMLProtoBufMsg<CMsgPaste>
  D vtable for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -1697,6 +1697,7 @@
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
+ D vtable for CMsgClearAllCookies
  D vtable for CMsgClearHistory
  D vtable for CMsgClose
  D vtable for CMsgCloseDevTools
@@ -1739,7 +1740,6 @@
  D vtable for CMsgMouseUp
  D vtable for CMsgMouseWheel
  D vtable for CMsgNeedsPaint
- D vtable for CMsgNeedsPaintResponse
  D vtable for CMsgNodeHasFocus
  D vtable for CMsgOpenDevTools
  D vtable for CMsgOpenNewTab
@@ -1765,6 +1765,7 @@
  D vtable for CMsgSetFocus
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
+ D vtable for CMsgSetSharedPaintBuffers
  D vtable for CMsgSetTargetFrameRate
  D vtable for CMsgSetVerticalScroll
  D vtable for CMsgSetZoomLevel
@@ -1947,7 +1948,6 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseMove>
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseUp>
  R typeinfo name for CHTMLProtoBufMsg<CMsgMouseWheel>
- R typeinfo name for CHTMLProtoBufMsg<CMsgNeedsPaintResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgOpenDevTools>
  R typeinfo name for CHTMLProtoBufMsg<CMsgPaste>
  R typeinfo name for CHTMLProtoBufMsg<CMsgPauseRepaint>
@@ -1976,6 +1976,7 @@
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
+ R typeinfo name for CMsgClearAllCookies
  R typeinfo name for CMsgClearHistory
  R typeinfo name for CMsgClose
  R typeinfo name for CMsgCloseDevTools
@@ -2018,7 +2019,6 @@
  R typeinfo name for CMsgMouseUp
  R typeinfo name for CMsgMouseWheel
  R typeinfo name for CMsgNeedsPaint
- R typeinfo name for CMsgNeedsPaintResponse
  R typeinfo name for CMsgNodeHasFocus
  R typeinfo name for CMsgOpenDevTools
  R typeinfo name for CMsgOpenNewTab
@@ -2044,6 +2044,7 @@
  R typeinfo name for CMsgSetFocus
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
+ R typeinfo name for CMsgSetSharedPaintBuffers
  R typeinfo name for CMsgSetTargetFrameRate
  R typeinfo name for CMsgSetVerticalScroll
  R typeinfo name for CMsgSetZoomLevel
@@ -2081,7 +2082,6 @@
  R typeinfo name for CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >
  R typeinfo name for CUtlLinkedList<CUtlDict<bool, int>*, int>
  R typeinfo name for CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>
- R typeinfo name for CUtlLinkedList<float, int>
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<vgui::GraphPanel::Sample_t, int>
  R typeinfo name for CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>
@@ -2125,7 +2125,6 @@
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
- R typeinfo name for CUtlVector<Color, CUtlMemory<Color> >
  R typeinfo name for CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >
  R typeinfo name for CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >
  R typeinfo name for CUtlVector<MatchMakingKeyValuePair_t, CUtlMemory<MatchMakingKeyValuePair_t> >
@@ -2427,6 +2426,7 @@
  T CCallbackMgr::RunCallbacks(int, bool)
  T CCallbackMgr::Unregister(CCallbackBase*)
  T CCallbackMgr::~CCallbackMgr()
+ T CChromePaintBufferClient::GetLockedReadPtr() const
  T CClassMemoryPool<PanelAnimationMap>::Alloc()
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CColorProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -2445,6 +2445,7 @@
  T CCookie::SharedDtor()
  T CCookie::~CCookie()
  T CCrossProcessSharedMemory::BInit(void const*, void const*, unsigned int, bool)
+ T CCrossProcessSharedMemory::BInitWriteable(void const*, void const*, unsigned int, bool)
  T CCrossProcessSharedMemory::Base() const
  T CCrossProcessSharedMemory::CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::Close()
@@ -2677,8 +2678,6 @@
  T CHTMLProtoBufMsg<CMsgMouseUp>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgMouseWheel>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgMouseWheel>::~CHTMLProtoBufMsg()
- T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::CHTMLProtoBufMsg(EHTMLCommands)
- T CHTMLProtoBufMsg<CMsgNeedsPaintResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgOpenDevTools>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgOpenDevTools>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgPaste>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -2921,6 +2920,17 @@
  T CMsgCanGoBackAndForward::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCanGoBackAndForward::SetCachedSize(int) const
  T CMsgCanGoBackAndForward::~CMsgCanGoBackAndForward()
+ T CMsgClearAllCookies::ByteSize() const
+ T CMsgClearAllCookies::CMsgClearAllCookies()
+ T CMsgClearAllCookies::Clear()
+ T CMsgClearAllCookies::GetCachedSize() const
+ T CMsgClearAllCookies::GetMetadata() const
+ T CMsgClearAllCookies::IsInitialized() const
+ T CMsgClearAllCookies::MergeFrom(CMsgClearAllCookies const&)
+ T CMsgClearAllCookies::New() const
+ T CMsgClearAllCookies::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClearAllCookies::SetCachedSize(int) const
+ T CMsgClearAllCookies::~CMsgClearAllCookies()
  T CMsgClearHistory::ByteSize() const
  T CMsgClearHistory::CMsgClearHistory()
  T CMsgClearHistory::Clear()
@@ -3395,17 +3405,6 @@
  T CMsgNeedsPaint::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgNeedsPaint::SetCachedSize(int) const
  T CMsgNeedsPaint::~CMsgNeedsPaint()
- T CMsgNeedsPaintResponse::ByteSize() const
- T CMsgNeedsPaintResponse::CMsgNeedsPaintResponse()
- T CMsgNeedsPaintResponse::Clear()
- T CMsgNeedsPaintResponse::GetCachedSize() const
- T CMsgNeedsPaintResponse::GetMetadata() const
- T CMsgNeedsPaintResponse::IsInitialized() const
- T CMsgNeedsPaintResponse::MergeFrom(CMsgNeedsPaintResponse const&)
- T CMsgNeedsPaintResponse::New() const
- T CMsgNeedsPaintResponse::SerializeWithCachedSizesToArray(unsigned char*) const
- T CMsgNeedsPaintResponse::SetCachedSize(int) const
- T CMsgNeedsPaintResponse::~CMsgNeedsPaintResponse()
  T CMsgNodeHasFocus::ByteSize() const
  T CMsgNodeHasFocus::CMsgNodeHasFocus()
  T CMsgNodeHasFocus::Clear()
@@ -3692,6 +3691,17 @@
  T CMsgSetHorizontalScroll::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetHorizontalScroll::SetCachedSize(int) const
  T CMsgSetHorizontalScroll::~CMsgSetHorizontalScroll()
+ T CMsgSetSharedPaintBuffers::ByteSize() const
+ T CMsgSetSharedPaintBuffers::CMsgSetSharedPaintBuffers()
+ T CMsgSetSharedPaintBuffers::Clear()
+ T CMsgSetSharedPaintBuffers::GetCachedSize() const
+ T CMsgSetSharedPaintBuffers::GetMetadata() const
+ T CMsgSetSharedPaintBuffers::IsInitialized() const
+ T CMsgSetSharedPaintBuffers::MergeFrom(CMsgSetSharedPaintBuffers const&)
+ T CMsgSetSharedPaintBuffers::New() const
+ T CMsgSetSharedPaintBuffers::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetSharedPaintBuffers::SetCachedSize(int) const
+ T CMsgSetSharedPaintBuffers::~CMsgSetSharedPaintBuffers()
  T CMsgSetTargetFrameRate::ByteSize() const
  T CMsgSetTargetFrameRate::CMsgSetTargetFrameRate()
  T CMsgSetTargetFrameRate::Clear()
@@ -4106,8 +4116,6 @@
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Validate(CValidator&, char const*)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::~CUtlHashMap()
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::Free(int)
- T CUtlLinkedList<CUtlDict<bool, int>*, int>::Next(int) const
- T CUtlLinkedList<CUtlDict<bool, int>*, int>::Previous(int) const
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::RemoveAll()
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::Unlink(int)
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::Validate(CValidator&, char const*)
@@ -4115,30 +4123,22 @@
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Free(int)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::InsertBefore(int, CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >* const&)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Previous(int) const
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::RemoveAll()
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Unlink(int)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Validate(CValidator&, char const*)
- T CUtlLinkedList<float, int>::Next(int) const
- T CUtlLinkedList<float, int>::RemoveAll()
- T CUtlLinkedList<float, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertBefore(int, int const&)
  T CUtlLinkedList<int, int>::LinkBefore(int, int)
- T CUtlLinkedList<int, int>::Previous(int) const
  T CUtlLinkedList<int, int>::RemoveAll()
  T CUtlLinkedList<int, int>::Unlink(int)
  T CUtlLinkedList<int, int>::Validate(CValidator&, char const*)
- T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::Previous(int) const
  T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::RemoveAll()
  T CUtlLinkedList<vgui::GraphPanel::Sample_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::AllocInternal(bool)
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Free(unsigned char)
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::InsertBefore(unsigned char)
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::LinkBefore(unsigned char, unsigned char)
- T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Next(unsigned char) const
- T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Previous(unsigned char) const
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::RemoveAll()
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Unlink(unsigned char)
  T CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>::Validate(CValidator&, char const*)
@@ -4146,26 +4146,19 @@
  T CUtlLinkedList<vgui::ListPanelItem*, int>::Free(int)
  T CUtlLinkedList<vgui::ListPanelItem*, int>::InsertBefore(int, vgui::ListPanelItem* const&)
  T CUtlLinkedList<vgui::ListPanelItem*, int>::LinkBefore(int, int)
- T CUtlLinkedList<vgui::ListPanelItem*, int>::Next(int) const
- T CUtlLinkedList<vgui::ListPanelItem*, int>::Previous(int) const
  T CUtlLinkedList<vgui::ListPanelItem*, int>::RemoveAll()
  T CUtlLinkedList<vgui::ListPanelItem*, int>::Unlink(int)
  T CUtlLinkedList<vgui::ListPanelItem*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<vgui::ListViewItem*, int>::AllocInternal(bool)
- T CUtlLinkedList<vgui::ListViewItem*, int>::Find(vgui::ListViewItem* const&) const
  T CUtlLinkedList<vgui::ListViewItem*, int>::Free(int)
  T CUtlLinkedList<vgui::ListViewItem*, int>::InsertBefore(int, vgui::ListViewItem* const&)
  T CUtlLinkedList<vgui::ListViewItem*, int>::LinkBefore(int, int)
- T CUtlLinkedList<vgui::ListViewItem*, int>::Next(int) const
- T CUtlLinkedList<vgui::ListViewItem*, int>::Previous(int) const
  T CUtlLinkedList<vgui::ListViewItem*, int>::RemoveAll()
  T CUtlLinkedList<vgui::ListViewItem*, int>::Unlink(int)
  T CUtlLinkedList<vgui::MenuItem*, int>::AllocInternal(bool)
  T CUtlLinkedList<vgui::MenuItem*, int>::Free(int)
  T CUtlLinkedList<vgui::MenuItem*, int>::InsertBefore(int, vgui::MenuItem* const&)
  T CUtlLinkedList<vgui::MenuItem*, int>::LinkBefore(int, int)
- T CUtlLinkedList<vgui::MenuItem*, int>::Next(int) const
- T CUtlLinkedList<vgui::MenuItem*, int>::Previous(int) const
  T CUtlLinkedList<vgui::MenuItem*, int>::RemoveAll()
  T CUtlLinkedList<vgui::MenuItem*, int>::Unlink(int)
  T CUtlLinkedList<vgui::MenuItem*, int>::Validate(CValidator&, char const*)
@@ -4173,7 +4166,6 @@
  T CUtlLinkedList<vgui::TreeNode*, int>::Free(int)
  T CUtlLinkedList<vgui::TreeNode*, int>::InsertBefore(int, vgui::TreeNode* const&)
  T CUtlLinkedList<vgui::TreeNode*, int>::LinkBefore(int, int)
- T CUtlLinkedList<vgui::TreeNode*, int>::Previous(int) const
  T CUtlLinkedList<vgui::TreeNode*, int>::RemoveAll()
  T CUtlLinkedList<vgui::TreeNode*, int>::Unlink(int)
  T CUtlLinkedList<vgui::TreeNode*, int>::Validate(CValidator&, char const*)
@@ -4324,11 +4316,8 @@
  T CUtlString::AssertStringTooLong()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
- T CUtlStringBuilder::Data::TakeOwnership(unsigned long&, unsigned long&)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
- T CUtlStringBuilder::TakeOwnership(unsigned long*, unsigned long*)
- T CUtlStringResult::~CUtlStringResult()
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
@@ -4364,8 +4353,6 @@
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
- T CUtlVector<Color, CUtlMemory<Color> >::Validate(CValidator&, char const*)
- T CUtlVector<Color, CUtlMemory<Color> >::~CUtlVector()
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::GrowVector(int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::InsertBefore(int, HTMLCommandBuffer_t* const&)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::ShiftElementsRight(int, int)
@@ -4482,8 +4469,9 @@
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::~CUtlVector()
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::GrowVector(int)
- T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::InsertMultipleBefore(int, int, vgui::CTreeViewListControl::CColumnInfo const*)
- T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::RemoveMultiple(int, int)
+ T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::SetCount(int)
+ T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::ShiftElementsLeft(int, int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::~CUtlVector()
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::AddToTail(vgui::ClickPanel*&&)
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::GrowVector(int)
@@ -4621,6 +4609,7 @@
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertBefore(int, wchar_t const&)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertMultipleBefore(int, int, wchar_t const*)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::RemoveMultiple(int, int)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::SetCount(int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsRight(int, int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::Validate(CValidator&, char const*)
@@ -4714,6 +4703,7 @@
  T HTMLPopup::OnFinishRequest()
  T HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
  T HTMLPopup::OnSecurityStatus(KeyValues*)
+ T HTMLPopup::OnSetSecurityStatus(bool, bool, bool, char const*)
  T HTMLPopup::OnStartRequest(KeyValues*)
  T HTMLPopup::OnTick()
  T HTMLPopup::OnURLChanged(KeyValues*)
@@ -4888,7 +4878,6 @@
  T Sys_UnloadModule(CSysModule*)
  T Sys_ValidateModules(CValidator*, bool)
  T URLLabel_Factory()
- T URLParts_t::~URLParts_t()
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T __CreateCDLLValidateIValidate_interface()
  T __CreateCServerBrowserIServerBrowser_interface()
@@ -4981,6 +4970,7 @@
  T non-virtual thunk to vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
  T non-virtual thunk to vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T non-virtual thunk to vgui::HTML::BrowserSetIndex(int)
+ T non-virtual thunk to vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
  T non-virtual thunk to vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T non-virtual thunk to vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
  T non-virtual thunk to vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)
@@ -5744,10 +5734,9 @@
  T vgui::GraphPanel::GetMessageMap()
  T vgui::GraphPanel::GetPanelClassName()
  T vgui::GraphPanel::GetPanelTopClassName() const
- T vgui::GraphPanel::GraphPanel(vgui::Panel*, char const*, int)
+ T vgui::GraphPanel::GraphPanel(vgui::Panel*, char const*)
  T vgui::GraphPanel::KB_ChainToMap()
  T vgui::GraphPanel::Paint()
- T vgui::GraphPanel::PerformLayout()
  T vgui::GraphPanel::Validate(CValidator&, char const*)
  T vgui::GraphPanel::~GraphPanel()
  T vgui::HTML::AddCustomURLHandler(char const*, vgui::Panel*)
@@ -5787,6 +5776,7 @@
  T vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
  T vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T vgui::HTML::BrowserSetIndex(int)
+ T vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
  T vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
  T vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)
@@ -5858,6 +5848,7 @@
  T vgui::HTML::NewWindowsOnly(bool)
  T vgui::HTML::OnAbortLastRequest()
  T vgui::HTML::OnBrowserExitFullScreen()
+ T vgui::HTML::OnBrowserSetCursor(EMouseCursor*)
  T vgui::HTML::OnCommand(char const*)
  T vgui::HTML::OnCursorExited()
  T vgui::HTML::OnCursorMoved(int, int)
@@ -5867,6 +5858,7 @@
  T vgui::HTML::OnFileSelectionCancelled()
  T vgui::HTML::OnFinishRequest(char const*, char const*)
  T vgui::HTML::OnFullScreenCursorMoved(int, int)
+ T vgui::HTML::OnHorizontalScrollBarResized()
  T vgui::HTML::OnKeyCodePressed(vgui::KeyCode)
  T vgui::HTML::OnKeyCodeReleased(vgui::KeyCode)
  T vgui::HTML::OnKeyCodeTyped(vgui::KeyCode)
@@ -5886,6 +5878,7 @@
  T vgui::HTML::OnSizeChanged(int, int)
  T vgui::HTML::OnStartRequest(char const*, char const*, char const*, bool)
  T vgui::HTML::OnTick()
+ T vgui::HTML::OnVerticalScrollBarResized()
  T vgui::HTML::OpenURL(char const*, char const*, bool)
  T vgui::HTML::Paint()
  T vgui::HTML::PaintComboBox()
@@ -6164,6 +6157,7 @@
  T vgui::ListPanel::SetEmptyListText(wchar_t const*)
  T vgui::ListPanel::SetImageList(vgui::ImageList*, bool)
  T vgui::ListPanel::SetItemDisabled(int, bool)
+ T vgui::ListPanel::SetItemSelectionDisabled(int, bool)
  T vgui::ListPanel::SetItemUserKV(int, KeyValues*, bool)
  T vgui::ListPanel::SetItemVisible(int, bool)
  T vgui::ListPanel::SetRowHeight(int)
@@ -7793,6 +7787,7 @@
  ThreadGetCurrentId
  ThreadGetCurrentRunningRef
  ThreadInMainThread
+ ThreadInterlockedCompareExchange
  ThreadInterlockedDecrement
  ThreadIsThreadRunning
  V_AppendSlash
@@ -7803,8 +7798,6 @@
  V_FixSlashes
  V_GetFileExtension
  V_IsAbsolutePath
- V_IsTLD
- V_IsValidDomainNameCharacter
  V_IsValidURLCharacter
  V_MakeAbsolutePath
  V_RemoveDotSlashes
@@ -7812,14 +7805,12 @@
  V_StripLastDir
  V_StripPrecedingAndTrailingWhitespace
  V_StripTrailingSlash
- V_URLParse
  V_UTF16ToUTF32
  V_UTF16ToUTF8
  V_UTF32CharsToUTF8
  V_UTF32ToUTF8
  V_UTF8ToUChar32
  V_UTF8ToUTF32
- V_UnicodeAdvance(char*, int)
  V_UnqualifiedFileName
  V_WcsSkipArticles
  V_atof
@@ -7835,7 +7826,6 @@
  V_strncmp
  V_strncpy
  V_strnicmp
- V_strristr
  V_strtoui64
  V_tolower
  V_vsnprintfRet
@@ -7900,6 +7890,8 @@
  b (anonymous namespace)::CMsgBuildID_reflection_
  b (anonymous namespace)::CMsgCanGoBackAndForward_descriptor_
  b (anonymous namespace)::CMsgCanGoBackAndForward_reflection_
+ b (anonymous namespace)::CMsgClearAllCookies_descriptor_
+ b (anonymous namespace)::CMsgClearAllCookies_reflection_
  b (anonymous namespace)::CMsgClearHistory_descriptor_
  b (anonymous namespace)::CMsgClearHistory_reflection_
  b (anonymous namespace)::CMsgCloseDevTools_descriptor_
@@ -7982,8 +7974,6 @@
  b (anonymous namespace)::CMsgMouseUp_reflection_
  b (anonymous namespace)::CMsgMouseWheel_descriptor_
  b (anonymous namespace)::CMsgMouseWheel_reflection_
- b (anonymous namespace)::CMsgNeedsPaintResponse_descriptor_
- b (anonymous namespace)::CMsgNeedsPaintResponse_reflection_
  b (anonymous namespace)::CMsgNeedsPaint_descriptor_
  b (anonymous namespace)::CMsgNeedsPaint_reflection_
  b (anonymous namespace)::CMsgNodeHasFocus_descriptor_
@@ -8036,6 +8026,8 @@
  b (anonymous namespace)::CMsgSetHTMLTitle_reflection_
  b (anonymous namespace)::CMsgSetHorizontalScroll_descriptor_
  b (anonymous namespace)::CMsgSetHorizontalScroll_reflection_
+ b (anonymous namespace)::CMsgSetSharedPaintBuffers_descriptor_
+ b (anonymous namespace)::CMsgSetSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgSetTargetFrameRate_descriptor_
  b (anonymous namespace)::CMsgSetTargetFrameRate_reflection_
  b (anonymous namespace)::CMsgSetVerticalScroll_descriptor_
@@ -8215,6 +8207,7 @@
  b s_StartDirContexts
  b s_bCallbackManagerInitialized
  b s_bDebugVGUI2Messages
+ b s_bHWAccelCRC32
  b s_bSuppressRebindChecks
  b s_hCurrentSortingColumnSymbol
  b s_hCurrentSortingColumnSymbol2
@@ -8235,6 +8228,8 @@
  b vgui::Label::ApplySingleSetting(KeyValues*)::hKeyLabelText
  b vgui::Label::ApplySingleSetting(KeyValues*)::hKeyTextAlignment
  b vgui::Label::ApplySingleSetting(KeyValues*)::hKeyWrap
+ b vgui::ListPanel::PaintInterior()::fAsserted
+ b vgui::ListPanel::PerformLayout()::fAsserted
  b vgui::Panel::ApplySingleSetting(KeyValues*)::hGroup
  b vgui::Panel::ApplySingleSetting(KeyValues*)::hKeyEnabled
  b vgui::Panel::ApplySingleSetting(KeyValues*)::hKeyStyle
@@ -8373,6 +8368,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearAllCookies_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearHistory_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCloseDevTools_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCloseFullScreenFlashIfOpen_offsets_
@@ -8414,7 +8410,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseMove_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseUp_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseWheel_offsets_
- r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaintResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgNodeHasFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgOpenDevTools_offsets_
@@ -8441,6 +8436,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetTargetFrameRate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetVerticalScroll_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetZoomLevel_offsets_
@@ -8623,7 +8619,6 @@
  t NullSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t SimplifyNode(ExprNode*&)
  t global constructors keyed to a
- t unsigned char const* HTML_GetTextureMemory<CMsgNeedsPaint>(CCrossProcessSharedMemory&, CMsgNeedsPaint const*, unsigned int)
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
  time
  vsnprintf

@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/broadcast/broadcast.css" />
 	</styles>
 
-	<BroadcastChat class="BroadcastChatPanel" tabindex="auto" selectionpos="auto" >
+	<BroadcastChat tabindex="auto" selectionpos="auto" >
 		<Panel id="ChatContent" />
 		<Panel id="TextEntryLine">
 			<TextEntry id="ChatEntry"

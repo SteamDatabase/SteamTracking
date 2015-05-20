@@ -294,13 +294,13 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 	width: 100%;
 	height: 150px;
 	white-space: normal;
-	overflow: clip scroll;
+	overflow: squish scroll;
 }
 
 #VisibilityDropDown
 {
 	margin-top: 12px;
-	width: 324px;
+	width: 400px;
 }
 
 .UploadScreenshotMsgBox #MsgBoxButtons
@@ -401,6 +401,7 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 	height: 48px;
 	margin-bottom: 8px;
 	margin-top: 8px;
+	width: 100%;
 }
 
 // tickbox to turn togglebuttons into checkboxes
@@ -431,7 +432,7 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 // and make room for the tickbox
 #SpoilerTag Label
 {
-	margin-top: 5px;
+	margin-top: 0px;
 	color: applabel;
 	width: 100%;
 	text-overflow: clip;

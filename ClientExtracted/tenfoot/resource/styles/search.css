@@ -209,7 +209,7 @@ LoadingThrobber
 	flow-children: down;
 	overflow: squish scroll;
 	opacity: 1.0;
-
+	width: 100%;
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );

@@ -732,7 +732,6 @@
  strlen
  strncpy
  strrchr
- t global constructors keyed to a
  vasprintf
  vsnprintf
  vtable for __cxxabiv1::__class_type_info

@@ -104,18 +104,24 @@
 
 .OOBEControllerHintTitle
 {
-	position: 985px 570px 0px;
+	position: 760px 572px 0px;
+	width: 675px;
+	transform: translateY( 40px );
+	text-align: left;
 }
 
 .OOBEControllerHintBody
 {
-	position: 750px 610px 0px;
+	position: 760px 612px 0px;
+	width: 675px;
+	text-align: left;
+	transform: translateY( 40px );
 }
 
 .WizardChildDescription
 {
 	padding-top: 50px;
-	width: 1300px;
+	width: 1350px;
 	padding-bottom: 20px;
 	font-size: 36px;
 	font-family: platformfont;
@@ -141,6 +147,13 @@
 	width: 100%;
 	flow-children: right;
 }
+
+.SSAFlowRight
+{
+	flow-children: right;
+	width: 100%;
+}
+
 
 .WizardButton
 {
@@ -204,6 +217,7 @@
 {
 	margin-bottom: 4px;
 	padding-top: 5px;
+	padding-right: 10px;
 	color: white;
 	font-size: 24px;
 	font-family: platformfont;
@@ -509,6 +523,7 @@ ToggleButton .WizardLabel
 .InputContainerDown.GapDown
 {
 	margin-bottom: controlgapvert;
+	width: 100%;
 }
 
 .InputContainerRight
@@ -543,3 +558,10 @@ ToggleButton .WizardLabel
 	background-repeat: no-repeat no-repeat;
 	background-size: 100% 100%;
 }
+
+OOBENetworkSettingsWizardChild SettingsPanel_Network.SettingsSection
+{
+	margin-top: 0px;
+}
+
+

@@ -24,7 +24,7 @@ MusicLibrarySetupPanel.DaisyWheelVisible .MsgBoxBodyRegion
 	flow-children: down;
 	height: 400px;
 	width: 810px;
-	overflow: clip scroll;
+	overflow: squish scroll;
 	opacity: 0.99;
 	padding-top: 10px;
 	margin-top: 20px;

@@ -58,6 +58,7 @@
  B CNet::sm_THashSocketOwnerCallback
  B CNet::sm_bInit
  B CNet::sm_bReprocessCurrentPoll
+ B CNet::sm_bShuttingDown
  B CNet::sm_pFrameFunctionMgr
  B CNet::sm_pResolverJobMgr
  B CNet::sm_pResolverThreadPool
@@ -409,6 +410,7 @@
  D ZLONG_it
  D bio_method_st* CBIOCallbacksBase::GetDefinition<CBIOUtlBufferSinkCallbacks>(int, char const*)::def
  D bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOCallbacks>(int, char const*)::def
+ D bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOSinkCallbacks>(int, char const*)::def
  D cmac_asn1_meth
  D cmac_pkey_meth
  D construction vtable for CryptoPP::ASN1CryptoMaterial<CryptoPP::PublicKey>-in-CryptoPP::RSAFunction
@@ -417,6 +419,7 @@
  D construction vtable for CryptoPP::PublicKey-in-CryptoPP::RSAFunction
  D construction vtable for CryptoPP::PublicKey-in-CryptoPP::X509PublicKey
  D construction vtable for CryptoPP::X509PublicKey-in-CryptoPP::RSAFunction
+ D cpu_info_
  D default_pctx
  D dh_asn1_meth
  D dh_pkey_meth
@@ -437,14 +440,17 @@
  D guard variable for CryptoPP::Singleton<CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>, CryptoPP::NewObject<CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1> >, 0>::Ref() const::s_pObject
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<CBIOUtlBufferSinkCallbacks>(int, char const*)::def
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOCallbacks>(int, char const*)::def
+ D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOSinkCallbacks>(int, char const*)::def
  D hmac_asn1_meth
  D hmac_pkey_meth
+ D pModuleExtension
  D rand_ssleay_meth
  D rsa_asn1_meths
  D rsa_pkey_meth
  D s_LogWatchesAllWithType
  D ssl3_ciphers
  D ssl3_undef_enc_method
+ D typeinfo for CAudioResampler
  D typeinfo for CBaseFrameFunction
  D typeinfo for CBaseScheduledFunction
  D typeinfo for CCDDBAppDetailCommon
@@ -521,7 +527,9 @@
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
  D typeinfo for CVConnPkt<ConnectChallenge>
+ D typeinfo for CVideoDecoder
  D typeinfo for CVideoDecoderLibav
+ D typeinfo for CVideoEncoderH264
  D typeinfo for CVideoFileStream
  D typeinfo for CVideoMPDParser
  D typeinfo for CVideoManifest
@@ -692,6 +700,7 @@
  D typeinfo for CryptoPP::Waitable
  D typeinfo for CryptoPP::X509PublicKey
  D typeinfo for CryptoPP::X917RNG
+ D typeinfo for IAudioResampler
  D typeinfo for IConnectionCallback
  D typeinfo for IDebugStatsSystem
  D typeinfo for IHTTPRedirectHandler
@@ -707,6 +716,8 @@
  D typeinfo for IStreamParserMessageCallback
  D typeinfo for IUDPSocketCallback
  D typeinfo for IUniformRandomStream
+ D typeinfo for IVideoDecoder
+ D typeinfo for IVideoEncoderH264
  D typeinfo for IVideoPlayer
  D typeinfo for IWorkThreadFactory
  D typeinfo for OSXHelpers::CIOPollingHelper
@@ -745,6 +756,7 @@
  D v3_sinfo
  D v3_skey_id
  D v3_sxnet
+ D vtable for CAudioResampler
  D vtable for CBaseFrameFunction
  D vtable for CBaseScheduledFunction
  D vtable for CCDDBAppDetailCommon
@@ -816,7 +828,9 @@
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
  D vtable for CVConnPkt<ConnectChallenge>
+ D vtable for CVideoDecoder
  D vtable for CVideoDecoderLibav
+ D vtable for CVideoEncoderH264
  D vtable for CVideoFileStream
  D vtable for CVideoMPDParser
  D vtable for CVideoManifest
@@ -996,6 +1010,7 @@
  R ssl3_version_str
  R std::tr1::__detail::_Primes<4>::__primes
  R tls1_version_str
+ R typeinfo name for CAudioResampler
  R typeinfo name for CBaseFrameFunction
  R typeinfo name for CBaseScheduledFunction
  R typeinfo name for CCDDBAppDetailCommon
@@ -1092,6 +1107,7 @@
  R typeinfo name for CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>
  R typeinfo name for CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>
  R typeinfo name for CUtlLinkedList<NetPacketToDelete_t, int>
+ R typeinfo name for CUtlLinkedList<VideoEncodedFrame_t*, int>
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<unsigned int, int>
  R typeinfo name for CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >
@@ -1115,6 +1131,7 @@
  R typeinfo name for CUtlRBTree<unsigned int, unsigned short, CDefLess<unsigned int>, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >
+ R typeinfo name for CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >
  R typeinfo name for CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >
  R typeinfo name for CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >
  R typeinfo name for CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >
@@ -1128,6 +1145,7 @@
  R typeinfo name for CUtlVector<CVideoPlayerManager::CVideoThread*, CUtlMemory<CVideoPlayerManager::CVideoThread*> >
  R typeinfo name for CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >
  R typeinfo name for CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >
+ R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
  R typeinfo name for CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >
  R typeinfo name for CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >
  R typeinfo name for CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >
@@ -1137,7 +1155,9 @@
  R typeinfo name for CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >
  R typeinfo name for CVConnPkt<ConnectChallenge>
  R typeinfo name for CVideoDecodedFrame
+ R typeinfo name for CVideoDecoder
  R typeinfo name for CVideoDecoderLibav
+ R typeinfo name for CVideoEncoderH264
  R typeinfo name for CVideoFileStream
  R typeinfo name for CVideoMPDParser
  R typeinfo name for CVideoManifest
@@ -1309,6 +1329,7 @@
  R typeinfo name for CryptoPP::Waitable
  R typeinfo name for CryptoPP::X509PublicKey
  R typeinfo name for CryptoPP::X917RNG
+ R typeinfo name for IAudioResampler
  R typeinfo name for IConnectionCallback
  R typeinfo name for IDebugStatsSystem
  R typeinfo name for IHTTPRedirectHandler
@@ -1324,6 +1345,8 @@
  R typeinfo name for IStreamParserMessageCallback
  R typeinfo name for IUDPSocketCallback
  R typeinfo name for IUniformRandomStream
+ R typeinfo name for IVideoDecoder
+ R typeinfo name for IVideoEncoderH264
  R typeinfo name for IVideoPlayer
  R typeinfo name for IWorkThreadFactory
  R typeinfo name for OSXHelpers::CIOPollingHelper
@@ -1407,6 +1430,7 @@
  T ASN1_STRING_TABLE_add
  T ASN1_STRING_TABLE_cleanup
  T ASN1_STRING_TABLE_get
+ T ASN1_STRING_clear_free
  T ASN1_STRING_cmp
  T ASN1_STRING_copy
  T ASN1_STRING_data
@@ -1520,6 +1544,7 @@
  T AUTHORITY_INFO_ACCESS_new
  T AUTHORITY_KEYID_free
  T AUTHORITY_KEYID_new
+ T AllocImageYUV
  T AllocateCircularBuffer(int)
  T AppendPath(CUtlStringBuilder*, char const*, bool)
  T AssertMsgImplementation
@@ -1765,6 +1790,8 @@
  T BReadEbmlUInt(unsigned long long*, CVideoFileStream*, int)
  T BRemoveDirectory(char const*)
  T BRemoveDirectoryRecursive(char const*)
+ T BRenameFile(char const*, char const*)
+ T BScaleImageYUV
  T BUF_MEM_free
  T BUF_MEM_grow
  T BUF_MEM_grow_clean
@@ -1775,6 +1802,7 @@
  T BUF_strlcat
  T BUF_strlcpy
  T BUF_strndup
+ T BVideoLibLoadX264()
  T BWritingMiniDump
  T BufferedIStream_AppendBytes
  T BufferedIStream_EncodeBuffer
@@ -1790,6 +1818,14 @@
  T CAST_encrypt
  T CAST_ofb64_encrypt
  T CAST_set_key
+ T CAudioResampler::BInit(EAudioSampleFormat, int, unsigned int, EAudioSampleFormat, int, unsigned int)
+ T CAudioResampler::Convert(unsigned char*, int*, unsigned char const*, int)
+ T CAudioResampler::Flush()
+ T CAudioResampler::GetChannelMaskOut()
+ T CAudioResampler::GetFormatOut()
+ T CAudioResampler::GetMaxConvertSamples(int)
+ T CAudioResampler::SampleRateOut()
+ T CAudioResampler::~CAudioResampler()
  T CAutoRelease<CCookieContainer, CRefCountAccessor>::Reset(CCookieContainer*)
  T CAutoRelease<CCookieContainer, CRefCountAccessor>::~CAutoRelease()
  T CAutoRelease<CHTTPClientRequest, CRefCountAccessor>::Reset(CHTTPClientRequest*)
@@ -1955,9 +1991,10 @@
  T CFileWriterThread::BWriteAsync(CFileWriter*, void const*, int)
  T CFileWriterThread::CFileWriterThread()
  T CFileWriterThread::FileWriterItem_t::Validate(CValidator&, char const*)
+ T CFileWriterThread::RegisterWriter(CFileWriter const*)
  T CFileWriterThread::Run()
  T CFileWriterThread::StartThreadIfNecessary()
- T CFileWriterThread::UnregisterWriter()
+ T CFileWriterThread::UnregisterWriter(CFileWriter const*)
  T CFileWriterThread::Validate(CValidator&, char const*)
  T CFileWriterThread::~CFileWriterThread()
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
@@ -2519,6 +2556,7 @@
  T COpenSSLConnection::BeginHandshake()
  T COpenSSLConnection::CBIOCallbacks::FnCtrl(bio_st*, int, long, void*)
  T COpenSSLConnection::CBIOCallbacks::FnRead(bio_st*, char*, int)
+ T COpenSSLConnection::CBIOSinkCallbacks::FnWrite(bio_st*, char const*, int)
  T COpenSSLConnection::COpenSSLConnection(ISSLConnectionCallback*, ESSLConnectionType, COpenSSLContext*, CWorkThreadPool*, COpenSSLCachedSession*)
  T COpenSSLConnection::GetClientSession() const
  T COpenSSLConnection::GetPeerCertificate()
@@ -2600,7 +2638,9 @@
  T CRL_DIST_POINTS_new
  T CRTime::CRTime()
  T CRTime::CSecsPassed() const
+ T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32FromHTTPDateString(char const*)
+ T CRTime::RTime32FromRFC3339UTCString(char const*)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::UpdateRealTime()
  T CRYPTO_THREADID_cmp
@@ -2988,6 +3028,8 @@
  T CThreadSafeMemoryPool::ClearNoLock()
  T CThreadSafeMemoryPool::Free(void*)
  T CThreadSafeMemoryPool::Free(void*, int)
+ T CThreadSafeMemoryPool::PopNextEntry()
+ T CThreadSafeMemoryPool::PurgeIfNotInUse()
  T CThreadSafeMemoryPool::Validate(CValidator&, char const*)
  T CThreadSafeMemoryPool::~CThreadSafeMemoryPool()
  T CUDPConnection::AddPendingMsgToList(CPendingMsg*)
@@ -3059,6 +3101,9 @@
  T CUniformRandomStream::RandomFloat(float, float)
  T CUniformRandomStream::RandomInt(int, int)
  T CUniformRandomStream::SetSeed(int)
+ T CUtlAllocation::Copy(void const*, int)
+ T CUtlAllocation::Purge()
+ T CUtlAllocation::~CUtlAllocation()
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
  T CUtlBuffer::CheckArbitraryPeekGet(int, int&)
@@ -3097,6 +3142,7 @@
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(char const*, int*)
+ T CUtlFmtString::CUtlFmtString(char const*, ...)
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::Purge()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::~CUtlHashMap()
@@ -3198,8 +3244,6 @@
  T CUtlLinkedList<AVPacket, int>::Free(int)
  T CUtlLinkedList<AVPacket, int>::InsertBefore(int, AVPacket const&)
  T CUtlLinkedList<AVPacket, int>::LinkBefore(int, int)
- T CUtlLinkedList<AVPacket, int>::Next(int) const
- T CUtlLinkedList<AVPacket, int>::Previous(int) const
  T CUtlLinkedList<AVPacket, int>::RemoveAll()
  T CUtlLinkedList<AVPacket, int>::Unlink(int)
  T CUtlLinkedList<AVPacket, int>::Validate(CValidator&, char const*)
@@ -3207,61 +3251,48 @@
  T CUtlLinkedList<CBaseScheduledFunction*, int>::Free(int)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::InsertBefore(int, CBaseScheduledFunction* const&)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CBaseScheduledFunction*, int>::Previous(int) const
  T CUtlLinkedList<CBaseScheduledFunction*, int>::RemoveAll()
  T CUtlLinkedList<CBaseScheduledFunction*, int>::Unlink(int)
  T CUtlLinkedList<CCoroutine, int>::AllocInternal(bool)
  T CUtlLinkedList<CCoroutine, int>::Free(int)
  T CUtlLinkedList<CCoroutine, int>::InsertBefore(int)
  T CUtlLinkedList<CCoroutine, int>::LinkBefore(int, int)
- T CUtlLinkedList<CCoroutine, int>::Previous(int) const
  T CUtlLinkedList<CCoroutine, int>::RemoveAll()
  T CUtlLinkedList<CCoroutine, int>::Unlink(int)
  T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::Free(int)
  T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::InsertBefore(int, CHTTPRequestCache::CachedFileLRUData_t const&)
  T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::Next(int) const
- T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::Previous(int) const
  T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::RemoveAll()
  T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::Unlink(int)
  T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::AllocInternal(bool)
- T CUtlLinkedList<CHTTPRequestHandle*, int>::Find(CHTTPRequestHandle* const&) const
  T CUtlLinkedList<CHTTPRequestHandle*, int>::Free(int)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::InsertAfter(int, CHTTPRequestHandle* const&)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::InsertBefore(int, CHTTPRequestHandle* const&)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::LinkAfter(int, int)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CHTTPRequestHandle*, int>::Next(int) const
- T CUtlLinkedList<CHTTPRequestHandle*, int>::Previous(int) const
  T CUtlLinkedList<CHTTPRequestHandle*, int>::RemoveAll()
  T CUtlLinkedList<CHTTPRequestHandle*, int>::Unlink(int)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::InsertBefore(int, CJobMgr::JobTimeout_t const&)
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::Next(int) const
- T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::Previous(int) const
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::Unlink(int)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::InsertBefore(int, CJobMgr::JobYielding_t const&)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<CJobMgr::JobYielding_t, int>::Previous(int) const
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::Unlink(int)
- T CUtlLinkedList<CLogWatchParam, int>::Next(int) const
  T CUtlLinkedList<CLogWatchParam, int>::RemoveAll()
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::Free(int)
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::InsertBefore(int, CNet::NetConnectionWakeUp_t const&)
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::Previous(int) const
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::RemoveAll()
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::Unlink(int)
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::~CUtlLinkedList()
  T CUtlLinkedList<CNet::NetRecvThrottleGroup_t, int>::Free(int)
- T CUtlLinkedList<CNet::NetRecvThrottleGroup_t, int>::Previous(int) const
  T CUtlLinkedList<CNet::NetRecvThrottleGroup_t, int>::RemoveAll()
  T CUtlLinkedList<CNet::NetRecvThrottleGroup_t, int>::Unlink(int)
  T CUtlLinkedList<CNet::NetRecvThrottleGroup_t, int>::~CUtlLinkedList()
@@ -3269,8 +3300,6 @@
  T CUtlLinkedList<CNetPacket*, int>::Free(int)
  T CUtlLinkedList<CNetPacket*, int>::InsertBefore(int, CNetPacket* const&)
  T CUtlLinkedList<CNetPacket*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CNetPacket*, int>::Next(int) const
- T CUtlLinkedList<CNetPacket*, int>::Previous(int) const
  T CUtlLinkedList<CNetPacket*, int>::RemoveAll()
  T CUtlLinkedList<CNetPacket*, int>::Unlink(int)
  T CUtlLinkedList<CNetPacket*, int>::Validate(CValidator&, char const*)
@@ -3278,14 +3307,12 @@
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::Free(int)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::InsertBefore(int, COpenSSLConnection::JobWakeData_t const&)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::Previous(int) const
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::RemoveAll()
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::Unlink(int)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CScheduledItem, int>::AllocInternal(bool)
  T CUtlLinkedList<CScheduledItem, int>::InsertBefore(int, CScheduledItem const&)
  T CUtlLinkedList<CScheduledItem, int>::LinkBefore(int, int)
- T CUtlLinkedList<CScheduledItem, int>::Previous(int) const
  T CUtlLinkedList<CScheduledItem, int>::RemoveAll()
  T CUtlLinkedList<CScheduledItem, int>::Unlink(int)
  T CUtlLinkedList<CScheduledItem, int>::Validate(CValidator&, char const*)
@@ -3293,8 +3320,6 @@
  T CUtlLinkedList<CUtlBuffer*, int>::Free(int)
  T CUtlLinkedList<CUtlBuffer*, int>::InsertBefore(int, CUtlBuffer* const&)
  T CUtlLinkedList<CUtlBuffer*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CUtlBuffer*, int>::Next(int) const
- T CUtlLinkedList<CUtlBuffer*, int>::Previous(int) const
  T CUtlLinkedList<CUtlBuffer*, int>::RemoveAll()
  T CUtlLinkedList<CUtlBuffer*, int>::Unlink(int)
  T CUtlLinkedList<CUtlBuffer*, int>::Validate(CValidator&, char const*)
@@ -3302,34 +3327,34 @@
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::Free(int)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::InsertBefore(int, CVideoPlayer::QueuedSegment_t* const&)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::Next(int) const
- T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::Previous(int) const
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::RemoveAll()
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::Unlink(int)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::Validate(CValidator&, char const*)
- T CUtlLinkedList<CWatchingLog, int>::Next(int) const
  T CUtlLinkedList<CWatchingLog, int>::RemoveAll()
  T CUtlLinkedList<CWatchingLog, int>::~CUtlLinkedList()
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::AllocInternal(bool)
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::Free(int)
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::InsertBefore(int, CWorkItemNetFilterEncrypt* const&)
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::Previous(int) const
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::RemoveAll()
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::Unlink(int)
  T CUtlLinkedList<NetPacketToDelete_t, int>::AllocInternal(bool)
  T CUtlLinkedList<NetPacketToDelete_t, int>::Free(int)
  T CUtlLinkedList<NetPacketToDelete_t, int>::InsertBefore(int, NetPacketToDelete_t const&)
  T CUtlLinkedList<NetPacketToDelete_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<NetPacketToDelete_t, int>::Previous(int) const
  T CUtlLinkedList<NetPacketToDelete_t, int>::RemoveAll()
  T CUtlLinkedList<NetPacketToDelete_t, int>::Unlink(int)
  T CUtlLinkedList<NetPacketToDelete_t, int>::Validate(CValidator&, char const*)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::AllocInternal(bool)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::Free(int)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::InsertBefore(int, VideoEncodedFrame_t* const&)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::LinkBefore(int, int)
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::RemoveAll()
+ T CUtlLinkedList<VideoEncodedFrame_t*, int>::Unlink(int)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertAfter(int, int const&)
  T CUtlLinkedList<int, int>::LinkAfter(int, int)
- T CUtlLinkedList<int, int>::Previous(int) const
  T CUtlLinkedList<int, int>::RemoveAll()
  T CUtlLinkedList<int, int>::Unlink(int)
  T CUtlLinkedList<int, int>::Validate(CValidator&, char const*)
@@ -3337,8 +3362,6 @@
  T CUtlLinkedList<unsigned int, int>::Free(int)
  T CUtlLinkedList<unsigned int, int>::InsertBefore(int, unsigned int const&)
  T CUtlLinkedList<unsigned int, int>::LinkBefore(int, int)
- T CUtlLinkedList<unsigned int, int>::Next(int) const
- T CUtlLinkedList<unsigned int, int>::Previous(int) const
  T CUtlLinkedList<unsigned int, int>::RemoveAll()
  T CUtlLinkedList<unsigned int, int>::Unlink(int)
  T CUtlLinkedList<unsigned int, int>::Validate(CValidator&, char const*)
@@ -3560,6 +3583,13 @@
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::AddToTail(CCoroutineMgr*&&)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::GrowVector(int)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::~CUtlVector()
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::FindAndRemove(CFileWriter const* const&)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::GrowVector(int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::InsertBefore(int, CFileWriter const* const&)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::~CUtlVector()
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::GrowVector(int)
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::InsertBefore(int, CHTTPClientConnection* const&)
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::ShiftElementsRight(int, int)
@@ -3648,6 +3678,11 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::GrowVector(int)
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::InsertBefore(int, CVideoDecoder::QueuedOutput_t* const&)
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::~CUtlVector()
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FastRemove(int)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FindAndFastRemove(CVideoFileStream* const&)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::GrowVector(int)
@@ -3688,6 +3723,11 @@
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::ShiftElementsRight(int, int)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::Validate(CValidator&, char const*)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::~CUtlVector()
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::GrowVector(int)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::InsertBefore(int)
@@ -3699,6 +3739,9 @@
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::~CUtlVector()
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::GrowVector(int)
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::InsertBefore(int, NetConnectPingResults_t const&)
@@ -3760,6 +3803,7 @@
  T CValidator::ClaimArrayMemory(void*)
  T CValidator::ClaimConnection(unsigned int)
  T CValidator::ClaimMemory(void*)
+ T CValidator::ClaimMemory_Aligned(void*)
  T CValidator::ClaimSocket(int)
  T CValidator::IsClaimed(void*)
  T CValidator::Pop()
@@ -3771,6 +3815,14 @@
  T CVariableBitStringBase::Validate(CValidator&, char const*)
  T CVideoDecodedFrame::Validate(CValidator&, char const*)
  T CVideoDecodedFrame::~CVideoDecodedFrame()
+ T CVideoDecoder::BDecodeFrame(unsigned char const*, int, long long, long long)
+ T CVideoDecoder::BDecodeFrameInternal(AVPacket*, bool*)
+ T CVideoDecoder::BInitH264AVCC(unsigned char const*, int)
+ T CVideoDecoder::FlushDecoder()
+ T CVideoDecoder::FreeDecodedFrame(VideoYUVFrame_t*)
+ T CVideoDecoder::GetDecodedFrame(VideoYUVFrame_t**, long long*)
+ T CVideoDecoder::IsDecodedFrameAvailable()
+ T CVideoDecoder::~CVideoDecoder()
  T CVideoDecoderLibav::BAtEndOfStream()
  T CVideoDecoderLibav::BDecodeAudio(CUtlBuffer*, long long*, AVPacket&)
  T CVideoDecoderLibav::BDecodeAudioQueueVideo(CUtlBuffer*, long long*, long long*, bool*)
@@ -3778,7 +3830,7 @@
  T CVideoDecoderLibav::BDecodedAllVideoPackets()
  T CVideoDecoderLibav::BHasAudioTrack()
  T CVideoDecoderLibav::BHasVideoTrack()
- T CVideoDecoderLibav::BInit(CVideoFileStream*, CVideoFileStream*)
+ T CVideoDecoderLibav::BInit(CVideoFileStream*, CVideoFileStream*, bool)
  T CVideoDecoderLibav::BQueueVideoFrameSkipAudio(bool*)
  T CVideoDecoderLibav::BRemoveUpToLastQueuedKeyFrame(long long)
  T CVideoDecoderLibav::CVideoDecoderLibav()
@@ -3803,15 +3855,30 @@
  T CVideoDecoderLibav::SetStartTime()
  T CVideoDecoderLibav::Validate(CValidator&, char const*)
  T CVideoDecoderLibav::~CVideoDecoderLibav()
+ T CVideoEncoderH264::BEncodeFrame(VideoYUVFrame_t*, long long, bool)
+ T CVideoEncoderH264::BEncodeFrameInternal(x264_picture_t*)
+ T CVideoEncoderH264::BInit(int, int, int)
+ T CVideoEncoderH264::CVideoEncoderH264()
+ T CVideoEncoderH264::Flush()
+ T CVideoEncoderH264::GetEncodedFrame(VideoEncodedFrame_t**)
+ T CVideoEncoderH264::GetHeight()
+ T CVideoEncoderH264::GetPPS(unsigned char**, int*)
+ T CVideoEncoderH264::GetSPS(unsigned char**, int*)
+ T CVideoEncoderH264::GetWidth()
+ T CVideoEncoderH264::IsEncodedFrameAvailable()
+ T CVideoEncoderH264::~CVideoEncoderH264()
+ T CVideoFileStream::BHTTPDownloadFailed()
  T CVideoFileStream::BLoad(char const*, VideoByteRange_t*)
  T CVideoFileStream::BLoadFromExternalBuffer(CUtlBuffer*)
  T CVideoFileStream::BRead(unsigned char*, unsigned int, unsigned int*, bool*)
+ T CVideoFileStream::BRetryDownload()
  T CVideoFileStream::BSeek(long long, CVideoFileStream::ESeekOrigin)
  T CVideoFileStream::CVideoFileStream(CHTTPClient*)
  T CVideoFileStream::Close()
  T CVideoFileStream::CloseHTTPRequest(bool)
  T CVideoFileStream::GetAvailableFromTell()
  T CVideoFileStream::GetDownloadBitrate()
+ T CVideoFileStream::GetDownloadFinish()
  T CVideoFileStream::GetFileSize()
  T CVideoFileStream::GetPath()
  T CVideoFileStream::OnBodyDataReceived(CHTTPRequestHandle*, CUtlBuffer&, unsigned int)
@@ -3841,14 +3908,18 @@
  T CVideoManifest::BInitWithDecoder(CVideoDecoderLibav*)
  T CVideoManifest::BLoadIndexSegment(VideoSegmentKey_t const&, CVideoFileStream*, CVideoFileStream*)
  T CVideoManifest::BNeedIndexSegment(VideoSegmentKey_t const&)
+ T CVideoManifest::BNeedUpdate()
  T CVideoManifest::BRepresentationHasInitSegment(VideoSegmentKey_t const&)
+ T CVideoManifest::BUpdateFromMPD(CUtlBuffer&)
  T CVideoManifest::CVideoManifest()
  T CVideoManifest::ChangeToLowestRepresentation(VideoSegmentKey_t*)
  T CVideoManifest::DecrementSegment(VideoSegmentKey_t*)
  T CVideoManifest::FillInTemplateURL(CUtlString*, VideoAdaptationSet_t*, VideoRepresentation_t*, int, char const*)
  T CVideoManifest::GetDefaultRepresentation(VideoSegmentKey_t*, EVideoTrack)
+ T CVideoManifest::GetLiveContentStartTime(unsigned int)
  T CVideoManifest::GetRepresentationForBandwidth(VideoSegmentKey_t const&, long long, int)
  T CVideoManifest::GetRepresentationVideoInfo(VideoSegmentKey_t const&, int*, int*)
+ T CVideoManifest::GetSegmentAvailableFromNow(VideoSegmentKey_t const&, unsigned int)
  T CVideoManifest::GetSegmentForTime(VideoSegmentKey_t*, long long)
  T CVideoManifest::GetSegmentTotal(VideoSegmentKey_t const&)
  T CVideoManifest::IncrementSegment(VideoSegmentKey_t*)
@@ -3867,7 +3938,6 @@
  T CVideoPlayer::BLoad(char const*)
  T CVideoPlayer::BLoad(unsigned char const*, unsigned int)
  T CVideoPlayer::BPlaybackComplete()
- T CVideoPlayer::BPlaybackError()
  T CVideoPlayer::BRepeatIfNecessary()
  T CVideoPlayer::BRunFrame()
  T CVideoPlayer::BRunFramePause()
@@ -3889,9 +3959,11 @@
  T CVideoPlayer::FillAudioToPTS(long long)
  T CVideoPlayer::ForceVideoRepresentation(int)
  T CVideoPlayer::FreeDecoderAndReleaseStream(EVideoTrack, CVideoDecoderLibav*)
+ T CVideoPlayer::GetBufferedTime(EVideoTrack)
  T CVideoPlayer::GetCurrentPlaybackTime()
  T CVideoPlayer::GetCurrentVideoRepresentation()
  T CVideoPlayer::GetDuration()
+ T CVideoPlayer::GetPlaybackError()
  T CVideoPlayer::GetPlaybackSpeed()
  T CVideoPlayer::GetPlaybackState()
  T CVideoPlayer::GetPlaybackTime()
@@ -3906,6 +3978,7 @@
  T CVideoPlayer::Play()
  T CVideoPlayer::PresentBlackFrame()
  T CVideoPlayer::PresentDecodedVideoFrame()
+ T CVideoPlayer::PurgeQueuedSegments(CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>*, bool)
  T CVideoPlayer::ReleaseQueuedSegment(EVideoTrack, CVideoFileStream*)
  T CVideoPlayer::RemovedFromThreadPool()
  T CVideoPlayer::Seek(unsigned int)
@@ -3917,6 +3990,7 @@
  T CVideoPlayer::Stop()
  T CVideoPlayer::SuggestMaxVeritcalResolution(int)
  T CVideoPlayer::UpdateMainThreadPlaybackInfo()
+ T CVideoPlayer::UpdateManifest()
  T CVideoPlayer::Validate(CValidator&, char const*)
  T CVideoPlayer::~CVideoPlayer()
  T CVideoPlayerManager::AddPlayerToThreadPool(CVideoPlayer*)
@@ -3925,9 +3999,7 @@
  T CVideoPlayerManager::CVideoThread::Run()
  T CVideoPlayerManager::CVideoThread::~CVideoThread()
  T CVideoPlayerManager::CancelRunOnceMainThread(CUtlDelegate<void ()>)
- T CVideoPlayerManager::CreateThreadMutex()
  T CVideoPlayerManager::DeleteAllThreads()
- T CVideoPlayerManager::DeleteThreadMutex(SteamThreadTools::CThreadMutex*)
  T CVideoPlayerManager::GetHTTPClient()
  T CVideoPlayerManager::Init()
  T CVideoPlayerManager::PauseThreadsForValidate()
@@ -4071,6 +4143,7 @@
  T ConCommandBase::GetTargetType() const
  T ConCommandBase::IsBitSet(unsigned int) const
  T ConCommandBase::ValidateConCommands(CValidator&)
+ T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
  T ConVar::ApplyReplicatedValue(char const*)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
@@ -4082,11 +4155,13 @@
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
  T ConVar::Init()
+ T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
+ T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetValue(char const*)
@@ -4094,18 +4169,27 @@
  T ConVar::SetValue(int)
  T ConVar::Validate(CValidator&, char const*)
  T ConVar::~ConVar()
+ T CopyPlane
+ T CopyRow_C
+ T CopyRow_ERMS
+ T CopyRow_SSE2
+ T CopyRow_X86
  T Coroutine_Continue
  T Coroutine_Finish()
  T Coroutine_GetCurrentlyActive
  T Coroutine_Launch(CCoroutine&)
  T Coroutine_YieldToMain
  T CrashOnPurpose()
+ T CreateAudioResampler
  T CreateDirRecursive(char const*)
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T CreatePlatformSocket(int, int, int, unsigned int, int*)
  T CreateTempFileName(CUtlString*)
+ T CreateThreadMutex()
  T CreateVProfile
+ T CreateVideoDecoder
+ T CreateVideoEncoderH264
  T CreateVideoPlayer
  T CryptoPP::ASN1::pkcs_1()
  T CryptoPP::ASN1CryptoMaterial<CryptoPP::PublicKey>::Load(CryptoPP::BufferedTransformation&)
@@ -4650,6 +4734,7 @@
  T CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>::DigestSize() const
  T CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>::NewHash() const
  T CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>::NewMGF() const
+ T CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>::StaticAlgorithmName()
  T CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>::~OAEP()
  T CryptoPP::OAEP_Base::MaxUnpaddedLength(unsigned long) const
  T CryptoPP::OAEP_Base::Pad(CryptoPP::RandomNumberGenerator&, unsigned char const*, unsigned long, unsigned char*, unsigned long, CryptoPP::NameValuePairs const&) const
@@ -4805,6 +4890,7 @@
  T CryptoPP::TF_CryptoSystemBase<CryptoPP::PK_Encryptor, CryptoPP::TF_Base<CryptoPP::RandomizedTrapdoorFunction, CryptoPP::PK_EncryptionMessageEncodingMethod> >::FixedMaxPlaintextLength() const
  T CryptoPP::TF_CryptoSystemBase<CryptoPP::PK_Encryptor, CryptoPP::TF_Base<CryptoPP::RandomizedTrapdoorFunction, CryptoPP::PK_EncryptionMessageEncodingMethod> >::ParameterSupported(char const*) const
  T CryptoPP::TF_CryptoSystemBase<CryptoPP::PK_Encryptor, CryptoPP::TF_Base<CryptoPP::RandomizedTrapdoorFunction, CryptoPP::PK_EncryptionMessageEncodingMethod> >::~TF_CryptoSystemBase()
+ T CryptoPP::TF_ES<CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>, CryptoPP::RSA, int>::StaticAlgorithmName()
  T CryptoPP::TF_EncryptorBase::Encrypt(CryptoPP::RandomNumberGenerator&, unsigned char const*, unsigned long, unsigned char*, CryptoPP::NameValuePairs const&) const
  T CryptoPP::TF_ObjectImpl<CryptoPP::TF_EncryptorBase, CryptoPP::TF_CryptoSchemeOptions<CryptoPP::TF_ES<CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>, CryptoPP::RSA, int>, CryptoPP::RSA, CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1> >, CryptoPP::RSAFunction>::AccessKey()
  T CryptoPP::TF_ObjectImpl<CryptoPP::TF_EncryptorBase, CryptoPP::TF_CryptoSchemeOptions<CryptoPP::TF_ES<CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1>, CryptoPP::RSA, int>, CryptoPP::RSA, CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1> >, CryptoPP::RSAFunction>::GetKey() const
@@ -4849,7 +4935,6 @@
  T CryptoPP::member_ptr<CryptoPP::RandomNumberGenerator>::~member_ptr()
  T CryptoPP::memcpy_s(void*, unsigned long, void const*, unsigned long)
  T CryptoPP::operator+(CryptoPP::OID const&, unsigned long)
- T CryptoPP::simple_ptr<CryptoPP::OAEP<CryptoPP::SHA1, CryptoPP::P1363_MGF1> >::~simple_ptr()
  T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned char const*, unsigned long)
  T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned long)
  T DES_SPtrans
@@ -4952,6 +5037,10 @@
  T DSO_up_ref
  T DebugStatsSystem
  T DefaultSpewFunc(SpewType_t, char const*)
+ T DeleteAudioResampler
+ T DeleteThreadMutex(SteamThreadTools::CThreadMutex*)
+ T DeleteVideoDecoder
+ T DeleteVideoEncoderH264
  T DeleteVideoPlayer
  T DeleteVideoPlayerManager()
  T DeserializeVaArgs(char const*, char const*, char*, int)
@@ -5621,8 +5710,11 @@
  T FioRegisterAsyncFinalize(void (*)(int, unsigned int))
  T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
  T FioWrite(int, void const*, int, int*)
+ T FixedDiv_X86
  T FreeCircularBuffer(CCircularBuffer*)
  T FreeDeletedPackets()
+ T FreeEncodedFrame
+ T FreeImageYUV
  T GCoroutineMgr()
  T GENERAL_NAMES_free
  T GENERAL_NAMES_new
@@ -5651,6 +5743,7 @@
  T GetPchTempTextBuffer_Harmful()
  T GetProcessorDetailBlob(int*)
  T GetTimelineSegment(VideoAdaptationSet_t*, int)
+ T GetVideoLibData()
  T GetVideoPlayerManager()
  T GlobalRNGList()
  T HMAC
@@ -5663,6 +5756,7 @@
  T HMAC_Init_ex
  T HMAC_Update
  T HashStringCaseless(char const*, unsigned long)
+ T I420Scale
  T IConnectionCallback::ConnectionDataSent(unsigned int, unsigned int)
  T IConnectionCallback::NetQOSLevelChanged(unsigned int, ENetQOSLevel, ENetQOSLevel)
  T IHTTPRedirectHandler::AddRef() const
@@ -5673,9 +5767,17 @@
  T ISSUING_DIST_POINT_free
  T ISSUING_DIST_POINT_new
  T ISocketOwnerCallback::Unused()
+ T InitCpuFlags
  T InitStackWalk()
  T InitializeSpewConfig()
  T Internal_Coroutine_Continue(int, bool, char const*)
+ T InterpolateRow_Any_SSE2
+ T InterpolateRow_Any_SSSE3
+ T InterpolateRow_C
+ T InterpolateRow_SSE2
+ T InterpolateRow_SSSE3
+ T InterpolateRow_Unaligned_SSE2
+ T InterpolateRow_Unaligned_SSSE3
  T IsSpewActive
  T KeyValues::CopySubkeys(KeyValues*) const
  T KeyValues::FindKey(char const*) const
@@ -6108,6 +6210,7 @@
  T Plat_GetExecutablePath
  T Plat_GetStackBackTrace
  T Plat_IsInDebugSession
+ T Plat_MSTime
  T Plat_OutputDebugString
  T Plat_RelativeTickFrequency
  T Plat_RelativeTicks
@@ -6193,6 +6296,7 @@
  T RawInflateToBuffer(void const*, unsigned int, CUtlBuffer&, unsigned int)
  T RealGetCallStack
  T RealPrintCallStack
+ T RescaleBase
  T SEED_cbc_encrypt
  T SEED_cfb128_encrypt
  T SEED_decrypt
@@ -6471,6 +6575,43 @@
  T SXNET_get_id_ulong
  T SXNET_new
  T SaveBufferToFile(CUtlBuffer const&, char const*, EFileIOFlags)
+ T ScaleAddRows_C
+ T ScaleAddRows_SSE2
+ T ScaleColsUp2_C
+ T ScaleCols_C
+ T ScaleFilterCols_C
+ T ScaleFilterCols_SSSE3
+ T ScaleFilterReduce
+ T ScalePlane
+ T ScalePlaneBilinearDown
+ T ScalePlaneBilinearUp
+ T ScalePlaneVertical
+ T ScaleRowDown2Box_C
+ T ScaleRowDown2Box_SSE2
+ T ScaleRowDown2Box_Unaligned_SSE2
+ T ScaleRowDown2Linear_C
+ T ScaleRowDown2Linear_SSE2
+ T ScaleRowDown2Linear_Unaligned_SSE2
+ T ScaleRowDown2_C
+ T ScaleRowDown2_SSE2
+ T ScaleRowDown2_Unaligned_SSE2
+ T ScaleRowDown34_0_Box_C
+ T ScaleRowDown34_0_Box_SSSE3
+ T ScaleRowDown34_1_Box_C
+ T ScaleRowDown34_1_Box_SSSE3
+ T ScaleRowDown34_C
+ T ScaleRowDown34_SSSE3
+ T ScaleRowDown38_2_Box_C
+ T ScaleRowDown38_2_Box_SSSE3
+ T ScaleRowDown38_3_Box_C
+ T ScaleRowDown38_3_Box_SSSE3
+ T ScaleRowDown38_C
+ T ScaleRowDown38_SSSE3
+ T ScaleRowDown4Box_C
+ T ScaleRowDown4Box_SSE2
+ T ScaleRowDown4_C
+ T ScaleRowDown4_SSE2
+ T ScaleSlope
  T SerializeVaArgs(char const*, char*, CUtlBuffer&)
  T SetFileTimestamp(char const*, long long)
  T SetInAssert
@@ -6478,6 +6619,7 @@
  T ShouldUseNewAssertDialog
  T ShutdownPlatformSocket(int, int)
  T SortRepresentationByBandwidth(VideoRepresentation_t* const&, VideoRepresentation_t* const&)
+ T SpewOutputFunc
  T StaticFileWriterThread()
  T SteamThreadTools::CRWLockAutoRead<SteamThreadTools::CThreadSpinRWLock>::~CRWLockAutoRead()
  T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadSpinRWLock>::~CRWLockAutoWrite()
@@ -6566,6 +6708,8 @@
  T SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
  T SteamVProf::TimeSums_t* std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t const*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > > >(unsigned long, __gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t const*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >, __gnu_cxx::__normal_iterator<SteamVProf::TimeSums_t const*, std::vector<SteamVProf::TimeSums_t, std::allocator<SteamVProf::TimeSums_t> > >)
  T StringAfterPrefix
+ T Sys_GetProcAddress(CSysModule*, char const*)
+ T Sys_LoadModule(char const*, Sys_Flags)
  T TLSv1_1_client_method
  T TLSv1_1_method
  T TLSv1_1_server_method
@@ -6714,10 +6858,15 @@
  T V_vsnprintf
  T V_vsnprintfRet
  T V_wcstoui64
+ T ValidateImageYUV
  T ValidateNetPacketGlobals(CValidator&)
  T VideoAdaptationSet_t::Validate(CValidator&, char const*)
  T VideoAdaptationSet_t::VideoAdaptationSet_t()
  T VideoAdaptationSet_t::~VideoAdaptationSet_t()
+ T VideoLibData_t::~VideoLibData_t()
+ T VideoLibGetInitMutex()
+ T VideoLibInit()
+ T VideoLibValidateStatics(CValidator&)
  T VideoPauseForValidation
  T VideoPlaybackInitialize
  T VideoPlaybackRunFrame
@@ -6737,6 +6886,7 @@
  T WHIRLPOOL_Init
  T WHIRLPOOL_Update
  T WeakRandomInt
+ T WeakRandomUint32
  T WriteMiniDump
  T X509V3_EXT_CRL_add_conf
  T X509V3_EXT_CRL_add_nconf
@@ -7237,6 +7387,7 @@
  T asn1_template_print_ctx
  T bio_method_st* CBIOCallbacksBase::GetDefinition<CBIOUtlBufferSinkCallbacks>(int, char const*)
  T bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOCallbacks>(int, char const*)
+ T bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOSinkCallbacks>(int, char const*)
  T bn_GF2m_mul_2x2
  T bn_add_part_words
  T bn_add_words
@@ -8314,6 +8465,7 @@
  _Unwind_Resume
  __CFConstantStringClassReference
  __assert_rtn
+ __bzero
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_bad_typeid
@@ -8368,19 +8520,22 @@
  av_init_packet
  av_lockmgr_register
  av_log_set_callback
- av_log_set_level
+ av_malloc_tracked
  av_opt_set_int
  av_read_frame
  av_register_all
  av_register_malloc
+ av_rescale
  av_rescale_q
  av_samples_get_buffer_size
  av_seek_frame
+ avcodec_alloc_context3
  avcodec_close
  avcodec_decode_audio4
  avcodec_decode_video2
  avcodec_find_decoder
  avcodec_flush_buffers
+ avcodec_free_context
  avcodec_open2
  avcodec_register_all
  avformat_alloc_context
@@ -8389,10 +8544,13 @@
  avformat_open_input
  avio_alloc_context
  avresample_alloc_context
+ avresample_available
  avresample_close
  avresample_convert
  avresample_free
+ avresample_get_out_samples
  avresample_open
+ avresample_read
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
  b (anonymous namespace)::CMsgAppRights_descriptor_
@@ -8410,6 +8568,7 @@
  b BN_options.data
  b BN_options.init
  b BUF_str_reasons
+ b BVideoLibLoadX264()::s_bLoaded
  b CJob::Continue()::s_bCurrentlyProfilingJob
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
@@ -8456,6 +8615,7 @@
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b GetProcessorDetailBlob(int*)::DetailBlob
  b GetProcessorVendorId()::VendorID
+ b GetVideoLibData()::data
  b GlobalRNGList()::g_tslistPAutoSeededRNG
  b HMAC.m
  b KeyValuesSystem()::s_KeyValuesSystem
@@ -8472,6 +8632,7 @@
  b TestForAppleGraphicsUpdateInstalled()::bInstalled
  b TestForAppleGraphicsUpdateInstalled()::bLoaded
  b TestForAppleGraphicsUpdateInstalled()::handle
+ b VideoLibInit()::s_bInitialized
  b WHIRLPOOL.m
  b X509_verify_cert_error_string.buf
  b _SpewMessageType::autoMutex__
@@ -8561,6 +8722,7 @@
  b guard variable for GetMinidumpsWritten()::MinidumpsWritten
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
+ b guard variable for GetVideoLibData()::data
  b guard variable for GlobalRNGList()::g_tslistPAutoSeededRNG
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
  b guard variable for StaticFileWriterThread()::s_FileWriterThread
@@ -8614,6 +8776,7 @@
  b s_SpewType
  b s_UniformStream
  b s_bCPUHasFastREPMOVSB
+ b s_bHWAccelCRC32
  b s_bSetSigHandler
  b s_pFileName
  b s_pManager
@@ -8640,6 +8803,7 @@
  b tty_new
  b tty_orig
  b tty_out
+ b x264()::s_x264
  b xptable
  backtrace
  backtrace_symbols
@@ -9062,6 +9226,25 @@
  d k_prgchJobPauseReason
  d k_rgpchProxyExclusionDelims
  d key_usage_type_table
+ d libyuv::kMadd01
+ d libyuv::kMadd11
+ d libyuv::kMadd21
+ d libyuv::kRound34
+ d libyuv::kScaleAb2
+ d libyuv::kScaleAc33
+ d libyuv::kShuf0
+ d libyuv::kShuf01
+ d libyuv::kShuf1
+ d libyuv::kShuf11
+ d libyuv::kShuf2
+ d libyuv::kShuf21
+ d libyuv::kShuf38a
+ d libyuv::kShuf38b
+ d libyuv::kShufAb0
+ d libyuv::kShufAb1
+ d libyuv::kShufAb2
+ d libyuv::kShufAc
+ d libyuv::kShufAc3
  d lock_names
  d long_pf
  d malloc_ex_func
@@ -9184,6 +9367,7 @@
  kCFProxyPortNumberKey
  kCFProxyTypeAutoConfigurationURL
  kCFProxyTypeHTTP
+ kCFProxyTypeHTTPS
  kCFProxyTypeKey
  kCFProxyTypeNone
  kCFRunLoopCommonModes
@@ -9208,6 +9392,7 @@
  memset
  mkdir
  mktemp
+ mktime$UNIX2003
  nanosleep$UNIX2003
  open$UNIX2003
  opendir$UNIX2003
@@ -9218,6 +9403,7 @@
  printf
  pthread_attr_init
  pthread_attr_setstacksize
+ pthread_cond_broadcast
  pthread_cond_destroy
  pthread_cond_init$UNIX2003
  pthread_cond_signal
@@ -9356,8 +9542,8 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
- r pulCRCTable
  r rand8
+ r s_rgCRCTable_Standard
  r s_tdefl_packed_code_size_syms_swizzle
  r sigoid_srt
  r sn_objs
@@ -9479,6 +9665,7 @@
  t B64_write_ASN1
  t BN_from_montgomery_word
  t BPlayerScheduledBefore(CVideoPlayer* const&, CVideoPlayer* const&)
+ t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t CopyUriTableProc
  t CryptoPP::TrySSE2()
  t CryptoPP::TwosComplement(unsigned int*, unsigned long)
@@ -9532,6 +9719,7 @@
  t SetEncoding
  t SigIllHandlerCPUID
  t SigIllHandlerSSE2
+ t SpewOutputFunc(SpewType_t, char const*)
  t StaticCharacters(void*, unsigned char const*, int)
  t StaticEndElement(void*, unsigned char const*, unsigned char const*, unsigned char const*)
  t StaticErrorHandler(tagXMLPARSER*)
@@ -10021,6 +10209,8 @@
  t int_update
  t internal_verify
  t ipv6_cb
+ t libyuv::ScaleAddCols1_C(int, int, int, int, unsigned short const*, unsigned char*)
+ t libyuv::ScaleAddCols2_C(int, int, int, int, unsigned short const*, unsigned char*)
  t local_sk_X509_NAME_ENTRY_free
  t local_sk_X509_NAME_ENTRY_pop_free
  t long_c2i
@@ -10293,6 +10483,7 @@
  t write_bio
  t write_fp
  t write_string
+ t x264_log(void*, int, char const*, char*)
  t x509_cb
  t x509_name_canon
  t x509_name_ex_d2i

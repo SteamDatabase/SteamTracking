@@ -19,6 +19,7 @@
 	"UI_Dismiss" 	"DISMISS"
 	"UI_OK"		"OK"
 	"UI_Done"	"DONE"
+	"UI_Back"	"BACK"
 	"UI_Yes"	"YES"
 	"UI_No"		"NO"
 	"UI_Unknown"	"UNKNOWN"
@@ -195,6 +196,8 @@
 	"MainMenu_NewItemsSingular"	"{d:itemcount} New Inventory Item"
 	"MainMenu_NewInvites"	"{d:friendinvitecount} New Invites"
 	"MainMenu_NewInvitesSingular"	"{d:friendinvitecount} New Invite"
+	"MainMenu_NewGroupInvites"	"{d:friendgroupinvitecount} New Group Invites"
+	"MainMenu_NewGroupInvitesSingular"	"{d:friendgroupinvitecount} New Group Invite"
 	"MainMenu_NewGifts"	"{d:giftcount} New Gifts"
 	"MainMenu_NewGiftsSingular"	"{d:giftcount} New Gift"
 	"MainMenu_NewTradeOffers"	"{d:tradeoffercount} Pending Trade Offers"
@@ -289,7 +292,7 @@
 	"CreateAccount_Cancel_Description"	"Are you sure you want to cancel creating this account?"
 
 	"CreateAccount_Credentials_Title" "Hello,"
-	"CreateAccount_Credentials_Description" "Creating a Steam account takes just a few simple steps.\nLet's get started."
+	"CreateAccount_Credentials_Description" "Creating a Steam account takes just a few simple steps. Let's get started."
 	"CreateAccount_Credentials_AgeLimitNext" "I AM AT LEAST 13 YEARS OLD"
 	"CreateAccount_Credentials_AccountName" "Account name"
 	"CreateAccount_Credentials_Password" "Password"
@@ -315,7 +318,7 @@
 	"CreateAccount_Credentials_TooShort" "Too short"
 
 	"CreateAccount_Email_Title"		"How may we contact you?"
-	"CreateAccount_Email_Description" "If you forget your password or we need to verify your account,\nhow may we contact you?"
+	"CreateAccount_Email_Description" "If you forget your password or we need to verify your account, how may we contact you?"
 	"CreateAccount_Email_EmailAddress" "Email address"
 	"CreateAccount_Email_EmailAddressAgain" "Email address, one more time"
 	"CreateAccount_Email_Invalid"	"A valid email address is required."
@@ -367,8 +370,11 @@
 	"ChangePassword_ShowPassword"			"Show password"
 	"ChangePassword_NewPassword_Title"		"Change password"
 	"ChangePassword_NewPassword_Description"	"Please enter the confirmation code that was sent to your email address, along with your new password."
+	"ChangePassword_NewPassword_WithTwoFactorDescription"	"Please enter the current Steam Guard authenticator code from the mobile app on your phone, along with your new password."
+	"ChangePassword_NewPassword_WithSmsDescription"			"Please enter the SMS code that we just sent to your phone, along with your new password."
 	"ChangePassword_EnterConfirmationCode" 	"Confirmation code sent to {s:emailaddress}"
 	"ChangePassword_EnterTwoFactorCode" 	"Current code from your Steam Guard authenticator"
+	"ChangePassword_EnterSmsCode"		 	"SMS code that we just sent to your phone"
 	"ChangePassword_EnterConfirmationCodePlain" "Confirmation code"
 	"ChangePassword_EnterNewPassword"		"New password"
 	"ChangePassword_EnterNewPasswordAgain"	"New password, again"
@@ -388,14 +394,20 @@
 	"ChangePassword_ReusedPassword"			"You may not reuse an old password. Please choose again."
 	"ChangePassword_IllegalPassword"		"That password did not satisfy additional complexity requirements. Please choose again."
 	"ChangePassword_WrongPassword"			"Please check that you have entered your original password correctly."
+	"ChangePassword_IncorrectTwoFactorCode"	"The Steam Guard authenticator code was incorrect. Please check it and try again."
+	"ChangePassword_IncorrectSmsCode"		"The SMS code was incorrect. Please check it and try again."
 
+	"ChangePassword_RecoverAccount_Title"			"Recover Account"
 	"ChangePassword_ForgotPassword_Title"			"Forgot Password"
-	"ChangePassword_ForgotPassword_Description"		"Before changing your password, Steam needs to verify your identity. Please enter your account name."
+	"ChangePassword_ForgotPassword_Description"		"Before recovering your account, Steam needs to verify your identity. Please enter your account name."
+	"ChangePassword_ForgotPassword_EmailCodeDescription"	"Please enter the confirmation code that we just sent to your contact email address."
 	"ChangePassword_ForgotPassword_AccountName"		"Account Name"
 	"ChangePassword_ForgotPassword_AccountDisabled" "This account has been disabled. Please contact Steam Support."
 	"ChangePassword_ForgotPassword_AccountNotFound" "Account not found. Please enter the account name used to login to Steam."
 	"ChangePassword_ForgotPassword_EmailProgress" 	"Contacting Steam servers to send a confirmation code to contact email address."
 	"ChangePassword_NextField"				"NEXT"
+	"ChangePassword_Working_Description"	"Contacting Steam servers and getting account information, please wait."
+	"ChangePassword_SendingSms_Description"	"Since your account has a phone attached to it, we're sending a confirming SMS code to your phone."
 
 	"VerifyEmail_Start_Title"				"Verify your email address"
 	"VerifyEmail_Start_Description"		"This one-time step helps us maintain the security of your account and is required in order to make purchases and share Steam libraries with other users.\n\nSelect Next to get started."
@@ -408,10 +420,12 @@
 	"VerifyEmail_Support"					"WHAT MESSAGE?"
 
 	"LoginHelp_Title"					    "Need some help?"
+	"LoginHelp_Title2"					    "What do you need?"
 	"LoginHelp_Description"					"Please select one of the following choices to recover your account information."
+	"LoginHelp_HaveAccountName"				"I know my account name"
 	"LoginHelp_ForgotPassword"				"I forgot my password"
 	"LoginHelp_ForgotAccountName"			"I forgot my account name"
-	"LoginHelp_LostAuthenticator"			"I lost my Steam Guard authenticator"
+	"LoginHelp_LostAuthenticator"			"I lost my authenticator"
 
 	"ForgotAccountName_Type_Title"			"Forgot Account Name"
 	"ForgotAccountName_Type_Description"	"Steam can find your account name if you know either the contact email address of the account, or a product code you activated with the account."
@@ -733,7 +747,7 @@
 	"SettingsNetwork_Disconnecting"			"Disconnecting from existing networks"
 	"SettingsNetwork_Connecting"			"Connecting"
 	"SettingsNetwork_Connected_Wireless"	"Success!  You're now connected to {s:network}."
-	"SettingsNetwork_Connected_Wired"		"Success!  You're now connected to Wired Network."
+	"SettingsNetwork_Connected_Wired"		"Success!  You're now connected to your wired network."
 	"SettingsNetwork_Finished"				"FINISH"
 
 	// Settings, voice screen
@@ -878,12 +892,12 @@
 	"Store_DescriptionReadFull"		"Read Full Description"
 	"Store_Details"					"DETAILS"
 	"Store_Note"					"NOTE"
-	"Store_RequiresOverview_StreamingAndController" "Requires additional Streaming setup and devices"
-	"Store_RequiresOverview_Streaming" "Requires Streaming setup"
-	"Store_RequiresOverview_Controller" "Requires a keyboard/mouse"
-	"Store_RequiresOverview_EarlyAccess" "This is an Early Access Title"
-	"Store_Requires_Streaming" "This game requires an In-Home Streaming connection to a computer running another operating system in order to play it here"
-	"Store_Requires_Controller" "This game requires a keyboard & mouse in order to play"
+	"Store_RequiresOverview_StreamingAndController" "Requires additional streaming setup and devices"
+	"Store_RequiresOverview_Streaming" "Requires streaming setup"
+	"Store_RequiresOverview_Controller" "Requires input"
+	"Store_RequiresOverview_EarlyAccess" "Early Access"
+	"Store_Requires_Streaming" "This game requires an In-Home Streaming connection in order to play it here"
+	"Store_Requires_Controller" "This game requires a keyboard & mouse in order to play it here"
 	"Store_LearnMore"			"Learn more"
 	"Store_Reviews"					"REVIEWS"
 	"Store_ReviewsOverview"			"Score + Reviews"
@@ -1021,6 +1035,7 @@
 	"Checkout_Failed_InitTransaction_CannotGift"				"Your purchase could not be completed because your cart contains items that cannot be given as a gift."
 	"Checkout_Failed_InitTransaction_CannotShipInternationally"	"Your purchase could not be completed because your cart contains items that cannot be shipped outside the United States."
 	"Checkout_Failed_InitTransaction_OutOfInventory"			"Your order cannot be completed because one or more items in your cart is currently out of stock.  Please try again later."
+	"Checkout_Failed_InitTransaction_CannotShipToCountry"	"Your purchase could not be completed because your cart contains items that cannot be shipped to your location."
 	"Checkout_Failed_InitTransaction_PendingTransactions"		"Warning: Your recent transaction with us is still pending! Did you complete payment with your payment service provider? We're not sure yet, and we're waiting to receive an answer from them.\n\nIf you continue, and are purchasing any items a second time, you risk being charged twice."
 	"Checkout_Failed_InitTransaction_AccountLocked"				"Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details."
 	"Checkout_Failed_SteamLimitExceeded"						"For the protection of the account holder, this purchase has been declined. Further purchasing will be temporarily limited - please contact Steam Support to resolve this issue."
@@ -1053,6 +1068,7 @@
 	"Checkout_VerifyEmail_Success"				"Success! Your email address has been verified."
 	"Checkout_VerifyEmail_Thanks"				"Thanks for helping us maintain the security of your account! You may now continue with your purchase."
 	
+	"Checkout_PaymentStep_ShippingInfo"	"Shipping Info"
 	"Checkout_PaymentStep_Method"	"Payment Info"
 	"Checkout_PaymentStep_Review"	"Review + Purchase"
 	"Checkout_PaymentStep_GiftDelivery"	"Gift Delivery"
@@ -1127,15 +1143,22 @@
 	"Checkout_BillingInfo_PhoneNumber"			"Phone number"
 	"Checkout_BillingInfo_SelectState"			"Select state"
 
+	"Checkout_ShippingInfo_Title"				"Shipping address"
+	"Checkout_ShippingInfo_Address1"				"Shipping address"
+	"Checkout_ShippingInfo_Address2"				"Shipping address, line 2"
+	"Checkout_ShippingInfo_ShippingRestrictions"	"Shipment of any physical items cannot be delivered to P.O. Boxes and can only be delivered to {s:country}."
+
 	"Checkout_Review_Title"						"Review & Purchase"
 	"Checkout_Review_Purchase"					"Purchase"
 	"Checkout_Review_EditPayment"				"Edit Payment Method"
-	"Checkout_Review_AgreeTerms"				"I agree to the terms of the Steam Subscriber Agreement (last updated 12/11/2012.)"
+	"Checkout_Review_AgreeTerms"				"I agree to the terms of the Steam Subscriber Agreement (last updated March 16, 2015.)"
 	"Checkout_Review_PaymentMethod"				"Payment Method"
 	"Checkout_Review_GiftOptions"				"Gift Options"
 	"Checkout_Review_BillingAddress"			"Billing Address"
+	"Checkout_Review_ShippingAddress"			"Shipping Address"
 	"Checkout_Review_Phone"						"Phone"
 	"Checkout_Review_Subtotal"					"Subtotal"
+	"Checkout_Review_Shipping"			"Shipping & Handling"
 	"Checkout_Review_Tax"						"Tax"
 	"Checkout_Review_Total"						"Total"
 	"Checkout_Review_NoGift"					"None, this purchase is for your account."
@@ -1160,6 +1183,7 @@
 	"Checkout_Confirmation_Code"				"Confirmation code"
 	"Checkout_Confirmation_GoToLibrary"			"Go to your library"
 	"Checkout_Confirmation_ReturnToStore"		"Return to the store"
+	"Checkout_Confirmation_ReturnToMarket"		"Return to the Community Market"
 	"Checkout_Confirmation_ReturnTransaction"	"Return to your transaction"
 	"Checkout_Confirmation_Update_Billing_Info_Title"	"Your Billing Info Has Been Saved!"
 	"Checkout_Confirmation_Update_Billing_Info_Description"	"Your billing information has now been saved for future purchases."
@@ -1407,6 +1431,202 @@
 	"Library_Details_ControllerPad_OuterEdge_20pct" "20 %"
 	"Library_Details_ControllerPad_OuterEdge_40pct" "40 %"
 
+	"Library_Details_ControllerBindingsGordon_Select"	"SELECT"
+	"Library_Details_ControllerBindingsGordon_Presets"	"PRESETS"
+	"Library_Details_ControllerBindingsGordon_Save"		"SAVE"
+	"Library_Details_ControllerBindingsGordon_Done"		"DONE"
+	"Library_Details_ControllerBindingsGordon_Back"		"BACK"
+	"Library_Details_ControllerBindingsGordon_Remove"	"REMOVE"
+
+	"Library_Details_Binding_Custom_Description"		"Custom Description..."
+	
+	"Library_Details_MouseButton_Left"				"LEFT MOUSE"
+	"Library_Details_MouseButton_Right"				"RIGHT MOUSE"
+	"Library_Details_MouseButton_Middle"			"MIDDLE MOUSE"
+	"Library_Details_MouseButton_Back"				"MOUSE BACK"
+	"Library_Details_MouseButton_Forward"			"MOUSE FORWARD"
+	"Library_Details_MouseScrollWheel_Up"			"SCROLL UP"
+	"Library_Details_MouseScrollWheel_Down"			"SCROLL DOWN"
+	"Library_Details_Binding_Unknown"				"--"
+	"Library_Details_Binding_NotBound"				"--"
+
+	"Library_Details_GamepadButton_Select"			"SELECT"
+	"Library_Details_GamepadButton_Start"			"START"
+	"Library_Details_GamepadButton_Steam"			"STEAM"
+	"Library_Details_GamepadButton_DpadUp"			"DPAD UP"
+	"Library_Details_GamepadButton_DpadDown"		"DPAD DOWN"
+	"Library_Details_GamepadButton_DpadLeft"		"DPAD LEFT"
+	"Library_Details_GamepadButton_DpadRight"		"DPAD RIGHT"
+	"Library_Details_GamepadButton_LeftJoystick"   	"LS CLICK"
+	"Library_Details_GamepadButton_RightJoystick"	"RS CLICK"
+	"Library_Details_GamepadButton_LeftTrigger"		"LEFT TRIGGER"
+	"Library_Details_GamepadButton_RightTrigger"	"RIGHT TRIGGER"
+	"Library_Details_GamepadButton_LeftBumper"		"LEFT BUMPER"
+	"Library_Details_GamepadButton_RightBumper"		"RIGHT BUMPER"
+	"Library_Details_GamepadButton_A"				"A BUTTON"
+	"Library_Details_GamepadButton_B"				"B BUTTON"
+	"Library_Details_GamepadButton_X"				"X BUTTON"
+	"Library_Details_GamepadButton_Y"				"Y BUTTON"
+
+	"Library_Details_SourceMode_None_Title"			"UNASSIGNED"
+	"Library_Details_SourceMode_Joystick_Move_Title"		"JOYSTICK MOVE"
+	"Library_Details_SourceMode_Joystick_Camera_Title"		"JOYSTICK CAMERA"
+	"Library_Details_SourceMode_Mouse_Title"		"MOUSE"
+	"Library_Details_SourceMode_RelMouse_Title"		"STICK MOUSE"
+	"Library_Details_SourceMode_ScrollWheel_Title"	"SCROLLWHEEL"
+	"Library_Details_SourceMode_Trigger_Title"		"TRIGGER"
+
+	"Library_Details_KeyName_Return"				"RETURN"
+	"Library_Details_KeyName_Escape"				"ESCAPE"
+	"Library_Details_KeyName_Backspace"				"BACKSPACE"
+	"Library_Details_KeyName_Tab"					"TAB"
+	"Library_Details_KeyName_Space"					"SPACE"
+	"Library_Details_KeyName_CapsLock"				"CAPS LOCK"
+	"Library_Details_KeyName_PrintScreen"			"PRINT SCREEN"
+	"Library_Details_KeyName_ScrollLock"			"SCROLL LOCK"
+	"Library_Details_KeyName_Break"					"BREAK"
+	"Library_Details_KeyName_Insert"				"INSERT"
+	"Library_Details_KeyName_Home"					"HOME"
+	"Library_Details_KeyName_PageUp"				"PAGE UP"
+	"Library_Details_KeyName_PageDown"				"PAGE DOWN"
+	"Library_Details_KeyName_Delete"				"DELETE"
+	"Library_Details_KeyName_End"					"END"
+	"Library_Details_KeyName_RightArrow"			"RIGHT ARROW"
+	"Library_Details_KeyName_LeftArrow"				"LEFT ARROW"
+	"Library_Details_KeyName_DownArrow"				"DOWN ARROW"
+	"Library_Details_KeyName_UpArrow"				"UP ARROW"
+	"Library_Details_KeyName_NumLock"				"NUM LOCK"
+	"Library_Details_KeyName_KeypadSlash"			"KEYPAD /"
+	"Library_Details_KeyName_KeypadAsterisk"		"KEYPAD *"
+	"Library_Details_KeyName_KeypadDash"			"KEYPAD -"
+	"Library_Details_KeyName_KeypadPlus"			"KEYPAD +"
+	"Library_Details_KeyName_KeypadPeriod"			"KEYPAD ."
+	"Library_Details_KeyName_KeypadEnter"			"KEYPAD ENTER"
+	"Library_Details_KeyName_Keypad0"				"KEYPAD 0"
+	"Library_Details_KeyName_Keypad1"				"KEYPAD 1"
+	"Library_Details_KeyName_Keypad2"				"KEYPAD 2"
+	"Library_Details_KeyName_Keypad3"				"KEYPAD 3"
+	"Library_Details_KeyName_Keypad4"				"KEYPAD 4"
+	"Library_Details_KeyName_Keypad5"				"KEYPAD 5"
+	"Library_Details_KeyName_Keypad6"				"KEYPAD 6"
+	"Library_Details_KeyName_Keypad7"				"KEYPAD 7"
+	"Library_Details_KeyName_Keypad8"				"KEYPAD 8"
+	"Library_Details_KeyName_Keypad9"				"KEYPAD 9"
+
+	"Library_Details_KeyName_LeftAlt"				"LEFT ALT"
+	"Library_Details_KeyName_RightAlt"				"RIGHT ALT"
+	"Library_Details_KeyName_LeftShift"				"LEFT SHIFT"
+	"Library_Details_KeyName_RightShift"			"RIGHT SHIFT"
+	"Library_Details_KeyName_LeftWindows"			"LEFT WIN"
+	"Library_Details_KeyName_RightWindows"			"RIGHT WIN"
+	"Library_Details_KeyName_LeftControl"			"LEFT CONTROL"
+	"Library_Details_KeyName_RightControl"			"RIGHT CONTROL"
+
+	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
+	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"
+	"Library_Details_FieldLabel_ModeShiftButton"	"Mode Shift Button"
+	"Library_Details_FieldLabel_RequiresClick"		"Requires Click"
+	"Library_Details_FieldLabel_Deadzone"			"Deadzone"
+	"Library_Details_FieldLabel_Chording"			"Overlap Directions"
+	"Library_Details_FieldLabel_EdgeBinding"		"Outer Ring Binding"
+	"Library_Details_FieldLabel_EdgeRadius"			"Outer Ring Binding Radius"
+	"Library_Details_FieldLabel_HapticIntensity"	"Haptics Intensity"
+	"Library_Details_FieldLabel_OutputJoystick"		"Output Joystick"
+	"Library_Details_FieldLabel_DeadZoneInnerRadius" "Dead Zone Inner"
+	"Library_Details_FieldLabel_DeadZoneOuterRadius" "Dead Zone Outer"
+	"Library_Details_FieldLabel_DeadZoneShape"		"Dead Zone Shape"
+	"Library_Details_FieldLabel_AdaptiveCentering"	"Adaptive Centering"
+	"Library_Details_FieldLabel_VirtualCapSize"		"AC Virtual Stick Cap Size"
+	"Library_Details_FieldLabel_VirtualStickThrow"	"AC Virtual Stick Throw Distance"
+	"Library_Details_FieldLabel_CurveExponent"		"Stick Response Curve"	
+	"Library_Details_FieldLabel_SwipeDuration"			"Swipe Duration"	
+	"Library_Details_FieldLabel_AntiDeadZone"		"Output Anti-Deadzone"
+	"Library_Details_FieldLabel_AntiDeadZoneBuffer" "Output Anti-Deadzone Buffer"
+	"Library_Details_FieldLabel_EdgeBindingInvert"	"Edge Binding Invert"
+	"Library_Details_FieldLabel_HoldRepeats"		"Hold To Repeat (Turbo)"
+	"Library_Details_FieldLabel_HoldRepeatInterval"	"Repeat Interval"
+	"Library_Details_FieldLabel_JoystickClick"		"Joystick Click Binding"
+	"Library_Details_FieldLabel_DpadClick"			"Click Binding"
+	"Library_Details_FieldLabel_AbsMouseClick"		"Mouse Click Binding"
+	"Library_Details_FieldLabel_Sensitivity"		"Sensitivity"
+	"Library_Details_FieldLabel_Rotation"			"Rotation"
+	"Library_Details_FieldLabel_SensitivityVertScale"		"Sensitivity Vertical Scale"
+	"Library_Details_FieldLabel_Smoothing"			"Smoothing"
+	"Library_Details_FieldLabel_Trackball"			"Trackball Mode"
+	"Library_Details_FieldLabel_Friction"			"Trackball Friction"
+	"Library_Details_FieldLabel_FrictionVertScale"	"Friction Vertical Scale"
+	"Library_Details_FieldLabel_Acceleration"		"Acceleration"
+	"Library_Details_FieldLabel_DoubleTap"			"Double Tap Binding"
+	"Library_Details_FieldLabel_DoubleTapDuration"	"Double Tap Duration"
+	"Library_Details_FieldLabel_DoubleTapBeep"		"Double Tap Beep"
+	"Library_Details_FieldLabel_EdgeSpinRadius"		"Edge Spin Radius"
+	"Library_Details_FieldLabel_EdgeSpinVelocity"		"Edge Spin Speed"
+	"Library_Details_FieldLabel_InvertY"			"Invert Vertical Axis"
+	"Library_Details_FieldLabel_ScrollWheelClick"	"Scroll Wheel Click Binding"
+	"Library_Details_FieldLabel_ScrollWheelClockwise" "Clockwise Binding"
+	"Library_Details_FieldLabel_ScrollWheelCounterClockwise" "Counter Clockwise Binding"
+	"Library_Details_FieldLabel_TriggerClick"		"Trigger Click Binding"
+	"Library_Details_FieldLabel_OutputTrigger"		"Trigger Analog Output"
+	"Library_Details_FieldLabel_TriggerDeadZoneStart" 	"Trigger Range Start"
+	"Library_Details_FieldLabel_TriggerDeadZoneEnd" 	"Trigger Range End"
+	"Library_Details_FieldLabel_TriggerCurveExponent" 	"Trigger Response Curve"
+	"Library_Details_FieldLabel_TriggerThresholdBinding" 	"Trigger Threshold Binding"
+	"Library_Details_FieldLabel_TriggerThreshold"		"Threshold Point"
+	"Library_Details_FieldLabel_TriggerAdaptiveThreshold"		"Threshold Hair Trigger"
+	"Library_Details_FieldLabel_TriggerHapticIntensity" 	"Haptic Intensity"
+	"Library_Details_FieldLabel_ButtonRadius"		"Button Radius"
+	"Library_Details_FieldLabel_ButtonDistance"		"Button Distance"
+
+	"Library_Details_SourceMode_Title_None"				"None"
+	"Library_Details_SourceMode_Title_Dpad"				"Directional Pad"
+	"Library_Details_SourceMode_Title_Joystick_Move"			"Joystick Move"
+	"Library_Details_SourceMode_Title_Joystick_Camera"			"Joystick Camera"
+	"Library_Details_SourceMode_Title_ABXY"				"Button Pad"
+	"Library_Details_SourceMode_Title_AbsoluteMouse"		"Mouse"
+	"Library_Details_SourceMode_Title_RelativeMouse"		"Stick Mouse"
+	"Library_Details_SourceMode_Title_ScrollWheel"			"Scroll Wheel"
+	"Library_Details_SourceMode_Title_Trigger"			"Trigger"
+
+	"Library_Details_ModeShift_Title_None"				"None"
+	"Library_Details_ModeShift_Title_LeftTrigger"		"Left Trigger"
+	"Library_Details_ModeShift_Title_RightTrigger"		"Right Trigger"
+	"Library_Details_ModeShift_Title_LeftBumper"		"Left Bumper"
+	"Library_Details_ModeShift_Title_RightBumper"		"Right Bumper"
+	"Library_Details_ModeShift_Title_LeftGrip"			"Left Grip"
+	"Library_Details_ModeShift_Title_RightGrip"			"Right Grip"
+	"Library_Details_ModeShift_Title_LeftPadClick"		"Left Pad Click"
+	"Library_Details_ModeShift_Title_RightPadClick"		"Right Pad Click"
+
+	"Library_Controller_Property_Value_On"				"On"
+	"Library_Controller_Property_Value_Off"				"Off"
+	"Library_Controller_Property_Value_Low"				"Low"
+	"Library_Controller_Property_Value_Medium"			"Medium"
+	"Library_Controller_Property_Value_High"			"High"
+	"Library_Controller_Property_Value_Left"			"Left"
+	"Library_Controller_Property_Value_Right"			"Right"
+	"Library_Controller_Property_Value_Cross"			"Cross"
+	"Library_Controller_Property_Value_Circle"			"Circle"
+	"Library_Controller_Property_Value_Square"			"Square"
+	"Library_Controller_Property_Value_TriggerOff"		"Analog Off"
+	"Library_Controller_Property_Value_TriggerLeft"		"Left Trigger"
+	"Library_Controller_Property_Value_TriggerRight"	"Right Trigger"
+	"Library_Controller_Property_Value_Linear"			"Linear"
+	"Library_Controller_Property_Value_Curve_1"			"Aggressive"
+	"Library_Controller_Property_Value_Curve_2"			"Relaxed"
+	"Library_Controller_Property_Value_Curve_3"			"Wide"
+	"Library_Controller_Property_Value_Curve_4"			"Extra Wide"
+
+	"Library_Details_Controller_Personal"				"PERSONAL"
+	"Library_Details_Controller_Community"				"COMMUNITY"
+	"Library_Details_Controller_Templates"				"TEMPLATES"
+	"Library_Details_Controller_AdvancedSettings"		"ADVANCED SETTINGS"
+
+	"Library_Details_Remove_Binding_Title"				"Remove Controller Binding"
+	"Library_Details_Remove_Binding_Description"		"Would you like to remove this controller binding?"
+
+	"Library_Details_Default_Config_Title"				"Default"
+	"Library_Details_Default_Config_Author"				"Valve Corporation"
+	"Library_Details_Default_Config_Description"		"For best results, edit this generic configuration or start from a template to create unique bindings tailored to this game."
 
 	"Library_AllGames_Header"		"GAMES"
 	"Library_AllGames"			"All Games ({d:games})"
@@ -1599,6 +1819,8 @@
 	"Notification_FriendsInviteCount"	"+{d:InviteCount}"
 	"Notification_ClanInvites"		"You have {d:InviteCount} waiting group invites."
 	"Notification_ClansInviteCount"	"+{d:InviteCount}"
+	"Notification_SteamLinkAuth_Title"	"Remote device detected"
+	"Notification_SteamLinkAuth_Text"	"Enter access code to confirm"
 
 	"Friends_GroupEvent_NowStarting"		"has event starting"
 
@@ -1607,8 +1829,8 @@
 
 	
 	"Steam_DeleteCacheConfirmation_Title"		"Delete Content?"
-	"Steam_DeleteCacheConfirmation_Text"		"This will delete all {s:gamename} content from this computer.\n\nThe game will remain in your Library, but to play it in the future you'll have to re-download its content."
-	"Steam_DeleteApplicationConfirmation_Text"	"This will delete all {s:gamename} content from this computer.\n\nThe application will remain in your Library, but to run it in the future you'll have to re-download its content."
+	"Steam_DeleteCacheConfirmation_Text"		"This will delete all {s:gamename} content from this computer.\n\nThe game will remain in your Library, but to play it in the future you'll have to download its content again."
+	"Steam_DeleteApplicationConfirmation_Text"	"This will delete all {s:gamename} content from this computer.\n\nThe application will remain in your Library, but to run it in the future you'll have to download its content again."
 	"Steam_DeleteFreeCacheConfirmation_Text"		"This will delete all {s:gamename} content from this computer."
 	"Steam_CantDeleteCache_Title"			"Steam - Cannot delete {s:gamename}"
 	"Steam_CantDeleteCache_Info"			"Cannot delete {s:gamename}, since its data is used by the following games: {s:dependantgames}"
@@ -1635,7 +1857,7 @@
 	"Steam_ErrorPurchasePending_Title"	"Purchase pending"
 	"Steam_ErrorPurchasePending_Info"	"Your purchase is still being processed - Steam will notify you when the transaction has been completed.\nUntil then, this game is not available to play."
 	"Steam_Media_GenericFailure"				"Failed to add media to list."
-	"Steam_Media_ErrorNotEnoughDiskSpace"		"You do not have enough disk space available to play this media.\nPlease free up some disk space and then try again."
+	"Steam_Media_ErrorNotEnoughDiskSpace"		"You do not have enough available disk space to play this. Please free up some space and then try again."
 	"Steam_SteamErrorTitle"				"Error"
 	"Steam_MediaAdded_Title"					"Success"
 	"Steam_MediaAdded_Info"					"{s:media} has been added to your Steam media library."
@@ -1646,7 +1868,8 @@
 	"Steam_RegionRestricted_Title"			"Game unavailable"
 	"Steam_RegionRestrictedPurchase_Info"				"This game was activated with a product code that is valid only in a specific geographic region. Since you are not currently in that region, {s:game} is not available to play."
 	"Steam_ErrorNotEnoughDiskSpace_Title"		"Error"
-	"Steam_ErrorNotEnoughDiskSpace"			"You do not have enough disk space available to install this game.\nPlease free up some disk space and then try again."
+	"Steam_ErrorNotEnoughDiskSpace"			"You do not have enough available disk space to install this game. Please free up some space and then try again."
+	"Steam_ErrorNotEnoughDiskSpace_Manage"			"MANAGE DISK SPACE"
 	"Steam_InstallAborted_Title"	"Error"
 	"Steam_InstallAborted_InfoAppNoInfo" "This game cannot be installed."
 	"Steam_InstallAborted_InfoAppUnreleased"	"{s:game} cannot be installed yet, because it is not yet released."
@@ -1750,11 +1973,17 @@
 	"Friends_Indicator_VoiceChatOnHold"	"Voice Chat On Hold"
 	"Friends_Indicator_GameInvite"		"Game Invite"
 	"Friends_Indicator_FriendRequest"	"Friend Request"
+	"Friends_Indicator_GroupRequest"	"Group Request"
 	"Friends_Footer_More"			"MORE"
 	"Friends_Footer_ViewAllInvites"		"VIEW ALL INVITES"
 	"Friends_Footer_SendMessage"	"CHAT"
 	"Friends_Footer_JoinGroupChat"	"JOIN CHAT"
 	"Friends_Footer_LeaveGroupChat"	"LEAVE CHAT"
+	"Friends_Footer_Search"	"SEARCH"
+	"Friends_Footer_ClearSearch"	"CLEAR"
+	"Friends_Footer_CommunitySearch" "SEARCH ON COMMUNITY"
+	"Friends_Search_Hint" "search"
+	"Friends_Search_CommunitySearch" "Search for \"{s:search}\" on the Steam Community"
 	"Friends_ProfileDetails_Action_SendMessage"		"Send Message"
 	"Friends_ProfileDetails_Action_VoiceChatStart"	"Start Voice Chat"
 	"Friends_ProfileDetails_Action_VoiceChatAccept"	"Accept Voice Chat"
@@ -1774,6 +2003,7 @@
 	"Friends_ProfileDetails_Action_ViewAliases"		"View Aliases"
 	"Friends_ProfileDetails_Action_BlockAllCommunication"	"Block All Communication"
 	"Friends_ProfileDetails_Action_RemoveFriend"	"Remove Friend"
+	"Friends_ProfileDetails_Action_RemoveGroup" "Remove Group"
 	"Friends_ProfileDetails_Action_WatchGame" "Watch Game"
 	"Friends_ProfileDetails_Action_InviteToWatch" "Invite to Watch"
 	"Friends_ClanStatus_Chat1_Game1_Online1"	"{i:numfriendsinchat} In Chat, {i:numfriendsingame} In-Game, {i:numfriendsonline} Online"
@@ -1796,6 +2026,8 @@
 	"Friends_ProfileDetails_Action_IgnoreJoinGame""Ignore Game Invite"
 	"Friends_ProfileDetails_Action_AcceptFriendship"	"Accept Friend Invite"
 	"Friends_ProfileDetails_Action_IgnoreFriendship"	"Ignore Friend Invite"
+	"Friends_ProfileDetails_Action_AcceptGroupInvite"	"Accept Group Invite"
+	"Friends_ProfileDetails_Action_IgnoreGroupInvite"	"Ignore Group Invite"
 	"Friends_ProfileDetails_Action_BlockFriendship"	"Block Friend Invites"
 	"Friends_FriendsActions"		"Friends"
 	"Friends_SetPersonaStatus"			"Set Status"
@@ -1978,6 +2210,7 @@
 	"Movie_FastFoward" "{i:playback_speed}x fast-forward"
 	"Movie_Rewind" "{i:playback_speed}x rewind"
 	"Movie_Auto" "Auto"
+	"Movie_Auto_Resolution" "Auto({s:resolution})"
 
 	"TextInput_CAPS"					"CAPS"
 	"TextInput_LETTERS"					"LETTERS"
@@ -2028,12 +2261,13 @@
 	"Quit_Restart"				"Restart"
 	"Quit_Sleep"				"Sleep"
 	"Quit_StopStreaming"		"Stop Streaming"
+	"Quit_TurnOffController"		"Turn Off Controller"
 	"Quit_SwitchToHDMIInput"	"Switch to HDMI Input"
 	"Quit_ZeroTracker"			"Center View"
 
 	"OOBE_WelcomeTitle"				"Welcome to Steam"
 	"OOBE_WelcomeNavTutorialSteamPadTitle"	"NAVIGATION TIP"
-	"OOBE_WelcomeNavTutorialSteamPadBody"	"Tap the edges of the left touch pad or use the D-Pad"
+	"OOBE_WelcomeNavTutorialSteamPadBody"	"Tap the edges of the left trackpad or use the analog stick to navigate"
 	"OOBE_LanguageSelect"			"What language should we use?"
 	"OOBE_NetworkSettings_Title"		"Network Settings"
 	"OOBE_NetworkSettings_Description"	"Configure your network settings"
@@ -2172,7 +2406,7 @@
 	"Parental_UnlockFailureExceeded"	"Too many failed attempts. Please restart Steam to try again."
 	"Parental_UnlockFailureExceededSteamOS"	 "Too many failed attempts. Please restart your computer to try again."
 	"Parental_Recovery_Title"				 "Recovery Email Sent"
-	"Parental_Recovery_Text"				 "We've just sent a message from Steam Support to your recovery address at {s:email}.\nCheck your email now and click the link within the message to disable Family View on this account."
+	"Parental_Recovery_Text"				 "We've just sent a message from Steam Support to your recovery address at {s:email}. Check your email now and click the link within the message to disable Family View on this account."
 	"Parental_No_Recovery_Email_Title"		 "No Recovery Email Address"
 	"Parental_No_Recovery_Email_Text"		 "No recovery email address is set for your account. To update your recovery email address, please exit Family View and rerun Family View setup."
 	"Parental_LockTitle"	"Family View"
@@ -2306,7 +2540,7 @@
 	"Overlay_AsyncNotificatoinsRequestedDialog_Desc" "This game supports asynchronous gameplay, allowing you to close the game between your turns. Would you like to receive notifications in the Steam client when it is your turn?"
 
 	"Overlay_QuitApp_Title"		"Steam"
-	"Overlay_QuitApp_Desc"		"Are you stuck?\n\nExiting the game in this way should be considered a last resort, as forcing a game to quit here may result in lost data."
+	"Overlay_QuitApp_Desc"		"Exiting the game in this way should be considered a last resort, as forcing a game to quit here may result in lost data."
 	"Overlay_QuitApp_QuitAnyway"	"EXIT ANYWAY"
 	"Overlay_QuitApp_FatalTimeout_SteamOS"	"Steam is having difficulty exiting the current game.  Would you like to restart your machine?"
 	"Overlay_QuitApp_FatalTimeout_Default"	"Steam is having difficulty exiting the current game.  Would you like to keep trying?"
@@ -2562,6 +2796,9 @@
 	"SteamUI_StreamLaunch_InstallRequiresUI" "Installation of this game requires user intervention.\n\nInstall manually on the remote computer."
 	"SteamUI_StreamLaunch_Failed"		"Unable to launch stream."
 
+	"SteamUI_RemoteDeviceAuthorization_Title"		"Authorize Device"
+	"SteamUI_RemoteDeviceAuthorization_Text"		"Please enter the authorization code to allow a device to control Steam."
+
 	"Steam_OtherSessionPlaying_Title" "Error - Steam"
 	"Steam_OtherSessionPlaying_Text" "Your are logged in on another computer already playing \"{s:existing_app}\".\nLaunching \"{s:launching_app}\" here will disconnect the other session from Steam."
 	
@@ -2704,15 +2941,15 @@
 
 	"Store_LoadingError"		"Steam was unable to load the requested store section. Please try again."
 	
-	"SteamUI_UpdateControllerFirmware_Cancel"	"Not Now"
-	"SteamUI_UpdateControllerFirmware_Continue"	"Next"
+	"SteamUI_UpdateControllerFirmware_Cancel"	"NOT NOW"
+	"SteamUI_UpdateControllerFirmware_Continue"	"NEXT"
 	"SteamUI_UpdateControllerFirmware_Done"		"OK"
 	"SteamUI_UpdateControllerFirmware_Title"	"Update Steam Controller Firmware"
 	"SteamUI_UpdateControllerFirmware_Intro"	"There is new firmware available for your Steam Controller.  We'll run you through the update steps now."
 	"SteamUI_UpdateControllerFirmware_Install"	"New firmware is being installed on the controller.\nPlease do not disconnect the controller."
 	"SteamUI_UpdateControllerFirmware_Finished"	"Your Steam Controller firmware has been updated."
-	"SteamUI_UpdateControllerFirmware_Fallback"	"Steam needs to use recovery mode to install firmware on your controller:\n\n 1) Unplug the USB cable connecting the controller\n 2) Hold down the RIGHT TRIGGER and plug the controller back in\n 3) Wait a while (up to 30-60 seconds) for the OS to detect and mount the controller's firmware update volume.\n\nOnce you've completed those steps the controller will reconnect in firmware update mode and we'll move on to the next step."
-	"SteamUI_UpdateControllerFirmware_Fallback_Finished" "Your firmware has now been updated, please do the following:\n\n 1) Unplug the USB cable connecting the controller\n 2) Plug the USB cable back in without touching any buttons\n 3) Choose OK below to complete this wizard"
+	"SteamUI_UpdateControllerFirmware_Fallback"	"Initiating firmware update."
+	"SteamUI_UpdateControllerFirmware_Fallback_Finished" "Your firmware has now been updated, unplug the USB cable to continue."
 	"SteamUI_UpdateControllerFirmware_Disconnect"	"The Steam Controller disconnected during the firmware upgrade process.  You will have another opportunity to upgrade the firmware when it is reconnected."
 	"SteamUI_UpdateControllerFirmware_WiredUpdate"	"A firmware update is available for your Steam Controller.  Your controller requires a one-time wired update.\nWhen you are ready, connect the controller via USB and the update process will start automatically."
 	"SteamUI_UpdateControllerFirmware_UpdateTitle" "Controller Firmware Update"
@@ -2724,19 +2961,34 @@
 	"SteamUI_ConfirmPassword_FailureTitle" "INCORRECT PASSWORD"
 	"SteamUI_ConfirmPassword_Failure" "That password is incorrect, please try again."
 	
-	"LostAuthenticator_AccountInfoError"		"Bad account name or password, please try again."
-	"LostAuthenticator_AccountName"				"Account Name"
-	"LostAuthenticator_BadCodesError"			"Bad email code or sign-up code, please try again."
-	"LostAuthenticator_Description"				"We need some information to remove the Steam Guard authenticator from your account, starting with your account name and current password."
-	"LostAuthenticator_GetCodes_Description"	"Next we need the code that we just sent you in email, and the code that you were given to write down when you signed up for the authenticator (it starts with R and ends in some digits)."
-	"LostAuthenticator_NextField"				"Next"
+	"LostAuthenticator_Title"					"Reset Authenticator"
+	"LostAuthenticator_SendingSms_Description"	"Since your account has a phone attached to it, we're sending a confirming SMS code to your phone."
+
+	"LostAuthenticator_Password_Description"	"Before we can reset your Steam Guard authenticator, we need your account's password. Please enter it below."
 	"LostAuthenticator_Password"				"Password"
-	"LostAuthenticator_RevocationCode"			"Sign-up code"
 	"LostAuthenticator_ShowPassword"			"Show Password"
+	"LostAuthenticator_SmsOrRecoveryCode"		"If you remember the code you were given when you signed up for the Steam Guard authenticator (it looks like an R followed by some digits) you can use it to reset your authenticator.\n\nOtherwise we can send an SMS to the phone registered on your account."
+	"LostAuthenticator_UseRCode"				"I remember my sign-up code"
+	"LostAuthenticator_UseSms"					"Send my phone an SMS code"
+	"LostAuthenticator_EnterRecoveryCode_Description"	"Please enter the authenticator sign-up code below (it looks like an R followed by some digits)."
+	"LostAuthenticator_EnterSmsCode_Description"		"Please enter the SMS code we just sent your phone."
+	"LostAuthenticator_RCode"					"Recovery code (looks like R......)"
+	"LostAuthenticator_SmsCode"					"SMS code"
+	"LostAuthenticator_Working"					"Please wait..."
 	"LostAuthenticator_Success_Description"		"Success! You have removed the Steam Guard authenticator from your account.\n\nYou should be able to log in without the authenticator now."
-	"LostAuthenticator_Title"					"Recover Authenticator"
-	"LostAuthenticator_ValidationCode"			"Email code"
-	"LostAuthenticator_Working"					"Working"
+	"LostAuthenticator_Error_Description"		"Sorry, there was an error resetting your authenticator."
+	"LostAuthenticator_IncorrectPassword"		"Sorry, the password wasn't correct. Please try again."
+
+	"AccountRecovery_SmsError_Title"			"Wups!"
+	"AccountRecovery_SmsError_Desciption"		"Sorry, we had a problem sending an SMS to your phone."
+	"AccountRecovery_SmsError_RateLimit"		"We've sent too many messages to your phone, or to your account. Please wait a while before trying again."
+
+//	"LostAuthenticator_GetCodes_Description"	"Next we need the code that we just sent you in email, and the code that you were given to write down when you signed up for the authenticator (it starts with R and ends in some digits)."
+//	"LostAuthenticator_BadCodesError"			"Bad email code or sign-up code, please try again."
+//	"LostAuthenticator_Description"				"We need some information to remove the Steam Guard authenticator from your account, starting with your account name and current password."
+//	"LostAuthenticator_NextField"				"Next"
+//	"LostAuthenticator_ValidationCode"			"Email code"
+//	"LostAuthenticator_Working"					"Working"
 
 	"You_Are_Offline"						"You are in offline mode"
 	"Community_Offline2"					"Community content is not available in offline mode.  To exit offline mode and view community content, return to the main menu and select the Offline button in the top row."
@@ -2745,4 +2997,710 @@
 	"Broadcast_ChatJoined"					"{s:persona} joined the chat"
 	"Broadcast_ChatLeft"					"{s:persona} left the chat"
 	"Broadcast_ChatMuted"					"{s:persona} muted"
+
+	"SettingsInterface_DeleteAllCookies"	"Delete all browser cookies"
+	"SettingsInterface_DeleteTitle"	"Delete Cookies"
+	"SettingsInterface_DeleteMsg"	"Clear all Steam browser cookie data?"
+
+	"SettingsDiskManagement_UnknownApp" "Unknown name"
+	"Settings_DiskManagement"	"Disk Management"
+	"Settings_DiskManagementIntro" "The following items are installed on your local hard drive. To free up disk space, you may choose to delete local content. Note that deleted items will remain in your Steam Library, but once deleted, they must be downloaded again in order to play them."
+	"Settings_DiskManagement_App"	"ITEM"
+	"Settings_DiskManagement_Size"	"SIZE ON DISK"
+	"Settings_DiskManagement_AppName" "{s:appname}"
+	"SettingsDiskManagement_Delete_Title" "Delete this item?"
+	"SettingsDiskManagement_Delete_Description" "Are you sure you want to delete {s:appname}? To play it in the future you will need to download it again."
+	"SettingsDiskManagement_ViewInLibrary" "VIEW IN LIBRARY"
+	"SettingsDiskManagement_DeleteApp" "DELETE"
+	"SettingsDiskManagement_UnknownDisk" "Unknown"
+	"SettingsDiskManagement_AvailableDisk" "You currently have {s:freehdd} of available disk space."
+
+	"Country_AD"		"Andorra"
+	"Country_AE"		"United Arab Emirates"
+	"Country_AF"		"Afghanistan"
+	"Country_AG"		"Antigua & Barbuda"
+	"Country_AI"		"Anguilla"
+	"Country_AL"		"Albania"
+	"Country_AM"		"Armenia"
+	"Country_AO"		"Angola"
+	"Country_AQ"		"Antarctica"
+	"Country_AR"		"Argentina"
+	"Country_AS"		"Samoa (American)"
+	"Country_AT"		"Austria"
+	"Country_AU"		"Australia"
+	"Country_AW"		"Aruba"
+	"Country_AX"		"Aaland Islands"
+	"Country_AZ"		"Azerbaijan"
+	"Country_BA"		"Bosnia & Herzegovina"
+	"Country_BB"		"Barbados"
+	"Country_BD"		"Bangladesh"
+	"Country_BE"		"Belgium"
+	"Country_BF"		"Burkina Faso"
+	"Country_BG"		"Bulgaria"
+	"Country_BH"		"Bahrain"
+	"Country_BI"		"Burundi"
+	"Country_BJ"		"Benin"
+	"Country_BL"		"St Barthelemy"
+	"Country_BM"		"Bermuda"
+	"Country_BN"		"Brunei"
+	"Country_BO"		"Bolivia"
+	"Country_BQ"		"Caribbean Netherlands"
+	"Country_BR"		"Brazil"
+	"Country_BS"		"Bahamas"
+	"Country_BT"		"Bhutan"
+	"Country_BV"		"Bouvet Island"
+	"Country_BW"		"Botswana"
+	"Country_BY"		"Belarus"
+	"Country_BZ"		"Belize"
+	"Country_CA"		"Canada"
+	"Country_CC"		"Cocos (Keeling) Islands"
+	"Country_CD"		"Congo (Dem. Rep.)"
+	"Country_CF"		"Central African Rep."
+	"Country_CG"		"Congo (Rep.)"
+	"Country_CH"		"Switzerland"
+	"Country_CI"		"Cote d'Ivoire"
+	"Country_CK"		"Cook Islands"
+	"Country_CL"		"Chile"
+	"Country_CM"		"Cameroon"
+	"Country_CN"		"China"
+	"Country_CO"		"Colombia"
+	"Country_CR"		"Costa Rica"
+	"Country_CU"		"Cuba"
+	"Country_CV"		"Cape Verde"
+	"Country_CW"		"Curacao"
+	"Country_CX"		"Christmas Island"
+	"Country_CY"		"Cyprus"
+	"Country_CZ"		"Czech Republic"
+	"Country_DE"		"Germany"
+	"Country_DJ"		"Djibouti"
+	"Country_DK"		"Denmark"
+	"Country_DM"		"Dominica"
+	"Country_DO"		"Dominican Republic"
+	"Country_DZ"		"Algeria"
+	"Country_EC"		"Ecuador"
+	"Country_EE"		"Estonia"
+	"Country_EG"		"Egypt"
+	"Country_EH"		"Western Sahara"
+	"Country_ER"		"Eritrea"
+	"Country_ES"		"Spain"
+	"Country_ET"		"Ethiopia"
+	"Country_FI"		"Finland"
+	"Country_FJ"		"Fiji"
+	"Country_FK"		"Falkland Islands"
+	"Country_FM"		"Micronesia"
+	"Country_FO"		"Faroe Islands"
+	"Country_FR"		"France"
+	"Country_GA"		"Gabon"
+	"Country_GB"		"Britain (UK)"
+	"Country_GD"		"Grenada"
+	"Country_GE"		"Georgia"
+	"Country_GF"		"French Guiana"
+	"Country_GG"		"Guernsey"
+	"Country_GH"		"Ghana"
+	"Country_GI"		"Gibraltar"
+	"Country_GL"		"Greenland"
+	"Country_GM"		"Gambia"
+	"Country_GN"		"Guinea"
+	"Country_GP"		"Guadeloupe"
+	"Country_GQ"		"Equatorial Guinea"
+	"Country_GR"		"Greece"
+	"Country_GS"		"South Georgia & the South Sandwich Islands"
+	"Country_GT"		"Guatemala"
+	"Country_GU"		"Guam"
+	"Country_GW"		"Guinea-Bissau"
+	"Country_GY"		"Guyana"
+	"Country_HK"		"Hong Kong"
+	"Country_HM"		"Heard Island & McDonald Islands"
+	"Country_HN"		"Honduras"
+	"Country_HR"		"Croatia"
+	"Country_HT"		"Haiti"
+	"Country_HU"		"Hungary"
+	"Country_ID"		"Indonesia"
+	"Country_IE"		"Ireland"
+	"Country_IL"		"Israel"
+	"Country_IM"		"Isle of Man"
+	"Country_IN"		"India"
+	"Country_IO"		"British Indian Ocean Territory"
+	"Country_IQ"		"Iraq"
+	"Country_IR"		"Iran"
+	"Country_IS"		"Iceland"
+	"Country_IT"		"Italy"
+	"Country_JE"		"Jersey"
+	"Country_JM"		"Jamaica"
+	"Country_JO"		"Jordan"
+	"Country_JP"		"Japan"
+	"Country_KE"		"Kenya"
+	"Country_KG"		"Kyrgyzstan"
+	"Country_KH"		"Cambodia"
+	"Country_KI"		"Kiribati"
+	"Country_KM"		"Comoros"
+	"Country_KN"		"St Kitts & Nevis"
+	"Country_KP"		"Korea (North)"
+	"Country_KR"		"Korea (South)"
+	"Country_KW"		"Kuwait"
+	"Country_KY"		"Cayman Islands"
+	"Country_KZ"		"Kazakhstan"
+	"Country_LA"		"Laos"
+	"Country_LB"		"Lebanon"
+	"Country_LC"		"St Lucia"
+	"Country_LI"		"Liechtenstein"
+	"Country_LK"		"Sri Lanka"
+	"Country_LR"		"Liberia"
+	"Country_LS"		"Lesotho"
+	"Country_LT"		"Lithuania"
+	"Country_LU"		"Luxembourg"
+	"Country_LV"		"Latvia"
+	"Country_LY"		"Libya"
+	"Country_MA"		"Morocco"
+	"Country_MC"		"Monaco"
+	"Country_MD"		"Moldova"
+	"Country_ME"		"Montenegro"
+	"Country_MF"		"St Martin (French part)"
+	"Country_MG"		"Madagascar"
+	"Country_MH"		"Marshall Islands"
+	"Country_MK"		"Macedonia"
+	"Country_ML"		"Mali"
+	"Country_MM"		"Myanmar (Burma)"
+	"Country_MN"		"Mongolia"
+	"Country_MO"		"Macau"
+	"Country_MP"		"Northern Mariana Islands"
+	"Country_MQ"		"Martinique"
+	"Country_MR"		"Mauritania"
+	"Country_MS"		"Montserrat"
+	"Country_MT"		"Malta"
+	"Country_MU"		"Mauritius"
+	"Country_MV"		"Maldives"
+	"Country_MW"		"Malawi"
+	"Country_MX"		"Mexico"
+	"Country_MY"		"Malaysia"
+	"Country_MZ"		"Mozambique"
+	"Country_NA"		"Namibia"
+	"Country_NC"		"New Caledonia"
+	"Country_NE"		"Niger"
+	"Country_NF"		"Norfolk Island"
+	"Country_NG"		"Nigeria"
+	"Country_NI"		"Nicaragua"
+	"Country_NL"		"Netherlands"
+	"Country_NO"		"Norway"
+	"Country_NP"		"Nepal"
+	"Country_NR"		"Nauru"
+	"Country_NU"		"Niue"
+	"Country_NZ"		"New Zealand"
+	"Country_OM"		"Oman"
+	"Country_PA"		"Panama"
+	"Country_PE"		"Peru"
+	"Country_PF"		"French Polynesia"
+	"Country_PG"		"Papua New Guinea"
+	"Country_PH"		"Philippines"
+	"Country_PK"		"Pakistan"
+	"Country_PL"		"Poland"
+	"Country_PM"		"St Pierre & Miquelon"
+	"Country_PN"		"Pitcairn"
+	"Country_PR"		"Puerto Rico"
+	"Country_PS"		"Palestine"
+	"Country_PT"		"Portugal"
+	"Country_PW"		"Palau"
+	"Country_PY"		"Paraguay"
+	"Country_QA"		"Qatar"
+	"Country_RE"		"Reunion"
+	"Country_RO"		"Romania"
+	"Country_RS"		"Serbia"
+	"Country_RU"		"Russia"
+	"Country_RW"		"Rwanda"
+	"Country_SA"		"Saudi Arabia"
+	"Country_SB"		"Solomon Islands"
+	"Country_SC"		"Seychelles"
+	"Country_SD"		"Sudan"
+	"Country_SE"		"Sweden"
+	"Country_SG"		"Singapore"
+	"Country_SH"		"St Helena"
+	"Country_SI"		"Slovenia"
+	"Country_SJ"		"Svalbard & Jan Mayen"
+	"Country_SK"		"Slovakia"
+	"Country_SL"		"Sierra Leone"
+	"Country_SM"		"San Marino"
+	"Country_SN"		"Senegal"
+	"Country_SO"		"Somalia"
+	"Country_SR"		"Suriname"
+	"Country_SS"		"South Sudan"
+	"Country_ST"		"Sao Tome & Principe"
+	"Country_SV"		"El Salvador"
+	"Country_SX"		"St Maarten (Dutch part)"
+	"Country_SY"		"Syria"
+	"Country_SZ"		"Swaziland"
+	"Country_TC"		"Turks & Caicos Is"
+	"Country_TD"		"Chad"
+	"Country_TF"		"French Southern & Antarctic Lands"
+	"Country_TG"		"Togo"
+	"Country_TH"		"Thailand"
+	"Country_TJ"		"Tajikistan"
+	"Country_TK"		"Tokelau"
+	"Country_TL"		"East Timor"
+	"Country_TM"		"Turkmenistan"
+	"Country_TN"		"Tunisia"
+	"Country_TO"		"Tonga"
+	"Country_TR"		"Turkey"
+	"Country_TT"		"Trinidad & Tobago"
+	"Country_TV"		"Tuvalu"
+	"Country_TW"		"Taiwan"
+	"Country_TZ"		"Tanzania"
+	"Country_UA"		"Ukraine"
+	"Country_UG"		"Uganda"
+	"Country_UM"		"US minor outlying islands"
+	"Country_US"		"United States"
+	"Country_UY"		"Uruguay"
+	"Country_UZ"		"Uzbekistan"
+	"Country_VA"		"Vatican City"
+	"Country_VC"		"St Vincent"
+	"Country_VE"		"Venezuela"
+	"Country_VG"		"Virgin Islands (UK)"
+	"Country_VI"		"Virgin Islands (US)"
+	"Country_VN"		"Vietnam"
+	"Country_VU"		"Vanuatu"
+	"Country_WF"		"Wallis & Futuna"
+	"Country_WS"		"Samoa (western)"
+	"Country_YE"		"Yemen"
+	"Country_YT"		"Mayotte"
+	"Country_ZA"		"South Africa"
+	"Country_ZM"		"Zambia"
+	"Country_ZW"		"Zimbabwe"
+	"TZRegionContinent_Europe"		"Europe"
+	"TZRegionSub_Andorra"		"Andorra"		// Andorra (Europe)
+	"TZRegionContinent_Asia"		"Asia"
+	"TZRegionSub_Dubai"		"Dubai"		// United Arab Emirates (Asia)
+	"TZRegionSub_Kabul"		"Kabul"		// Afghanistan (Asia)
+	"TZRegionContinent_America"		"America"
+	"TZRegionSub_Antigua"		"Antigua"		// Antigua & Barbuda (America)
+	"TZRegionSub_Anguilla"		"Anguilla"		// Anguilla (America)
+	"TZRegionSub_Tirane"		"Tirane"		// Albania (Europe)
+	"TZRegionSub_Yerevan"		"Yerevan"		// Armenia (Asia)
+	"TZRegionContinent_Africa"		"Africa"
+	"TZRegionSub_Luanda"		"Luanda"		// Angola (Africa)
+	"TZRegionContinent_Antarctica"		"Antarctica"
+	"TZRegionSub_McMurdo"		"McMurdo"		// Antarctica (Antarctica)
+	"TZRegionSub_Rothera"		"Rothera"		// Antarctica (Antarctica)
+	"TZRegionSub_Palmer"		"Palmer"		// Antarctica (Antarctica)
+	"TZRegionSub_Mawson"		"Mawson"		// Antarctica (Antarctica)
+	"TZRegionSub_Davis"		"Davis"		// Antarctica (Antarctica)
+	"TZRegionSub_Casey"		"Casey"		// Antarctica (Antarctica)
+	"TZRegionSub_Vostok"		"Vostok"		// Antarctica (Antarctica)
+	"TZRegionSub_DumontDUrville"		"DumontDUrville"		// Antarctica (Antarctica)
+	"TZRegionSub_Syowa"		"Syowa"		// Antarctica (Antarctica)
+	"TZRegionSub_Troll"		"Troll"		// Antarctica (Antarctica)
+	"TZRegionSub_Argentina__Buenos_Aires"		"Argentina/Buenos Aires"		// Argentina (America)
+	"TZRegionSub_Argentina__Cordoba"		"Argentina/Cordoba"		// Argentina (America)
+	"TZRegionSub_Argentina__Salta"		"Argentina/Salta"		// Argentina (America)
+	"TZRegionSub_Argentina__Jujuy"		"Argentina/Jujuy"		// Argentina (America)
+	"TZRegionSub_Argentina__Tucuman"		"Argentina/Tucuman"		// Argentina (America)
+	"TZRegionSub_Argentina__Catamarca"		"Argentina/Catamarca"		// Argentina (America)
+	"TZRegionSub_Argentina__La_Rioja"		"Argentina/La Rioja"		// Argentina (America)
+	"TZRegionSub_Argentina__San_Juan"		"Argentina/San Juan"		// Argentina (America)
+	"TZRegionSub_Argentina__Mendoza"		"Argentina/Mendoza"		// Argentina (America)
+	"TZRegionSub_Argentina__San_Luis"		"Argentina/San Luis"		// Argentina (America)
+	"TZRegionSub_Argentina__Rio_Gallegos"		"Argentina/Rio Gallegos"		// Argentina (America)
+	"TZRegionSub_Argentina__Ushuaia"		"Argentina/Ushuaia"		// Argentina (America)
+	"TZRegionContinent_Pacific"		"Pacific"
+	"TZRegionSub_Pago_Pago"		"Pago Pago"		// Samoa (American) (Pacific)
+	"TZRegionSub_Vienna"		"Vienna"		// Austria (Europe)
+	"TZRegionContinent_Australia"		"Australia"
+	"TZRegionSub_Lord_Howe"		"Lord Howe"		// Australia (Australia)
+	"TZRegionSub_Macquarie"		"Macquarie"		// Australia (Antarctica)
+	"TZRegionSub_Hobart"		"Hobart"		// Australia (Australia)
+	"TZRegionSub_Currie"		"Currie"		// Australia (Australia)
+	"TZRegionSub_Melbourne"		"Melbourne"		// Australia (Australia)
+	"TZRegionSub_Sydney"		"Sydney"		// Australia (Australia)
+	"TZRegionSub_Broken_Hill"		"Broken Hill"		// Australia (Australia)
+	"TZRegionSub_Brisbane"		"Brisbane"		// Australia (Australia)
+	"TZRegionSub_Lindeman"		"Lindeman"		// Australia (Australia)
+	"TZRegionSub_Adelaide"		"Adelaide"		// Australia (Australia)
+	"TZRegionSub_Darwin"		"Darwin"		// Australia (Australia)
+	"TZRegionSub_Perth"		"Perth"		// Australia (Australia)
+	"TZRegionSub_Eucla"		"Eucla"		// Australia (Australia)
+	"TZRegionSub_Aruba"		"Aruba"		// Aruba (America)
+	"TZRegionSub_Mariehamn"		"Mariehamn"		// Aaland Islands (Europe)
+	"TZRegionSub_Baku"		"Baku"		// Azerbaijan (Asia)
+	"TZRegionSub_Sarajevo"		"Sarajevo"		// Bosnia & Herzegovina (Europe)
+	"TZRegionSub_Barbados"		"Barbados"		// Barbados (America)
+	"TZRegionSub_Dhaka"		"Dhaka"		// Bangladesh (Asia)
+	"TZRegionSub_Brussels"		"Brussels"		// Belgium (Europe)
+	"TZRegionSub_Ouagadougou"		"Ouagadougou"		// Burkina Faso (Africa)
+	"TZRegionSub_Sofia"		"Sofia"		// Bulgaria (Europe)
+	"TZRegionSub_Bahrain"		"Bahrain"		// Bahrain (Asia)
+	"TZRegionSub_Bujumbura"		"Bujumbura"		// Burundi (Africa)
+	"TZRegionSub_Porto-Novo"		"Porto-Novo"		// Benin (Africa)
+	"TZRegionSub_St_Barthelemy"		"St Barthelemy"		// St Barthelemy (America)
+	"TZRegionContinent_Atlantic"		"Atlantic"
+	"TZRegionSub_Bermuda"		"Bermuda"		// Bermuda (Atlantic)
+	"TZRegionSub_Brunei"		"Brunei"		// Brunei (Asia)
+	"TZRegionSub_La_Paz"		"La Paz"		// Bolivia (America)
+	"TZRegionSub_Kralendijk"		"Kralendijk"		// Caribbean Netherlands (America)
+	"TZRegionSub_Noronha"		"Noronha"		// Brazil (America)
+	"TZRegionSub_Belem"		"Belem"		// Brazil (America)
+	"TZRegionSub_Fortaleza"		"Fortaleza"		// Brazil (America)
+	"TZRegionSub_Recife"		"Recife"		// Brazil (America)
+	"TZRegionSub_Araguaina"		"Araguaina"		// Brazil (America)
+	"TZRegionSub_Maceio"		"Maceio"		// Brazil (America)
+	"TZRegionSub_Bahia"		"Bahia"		// Brazil (America)
+	"TZRegionSub_Sao_Paulo"		"Sao Paulo"		// Brazil (America)
+	"TZRegionSub_Campo_Grande"		"Campo Grande"		// Brazil (America)
+	"TZRegionSub_Cuiaba"		"Cuiaba"		// Brazil (America)
+	"TZRegionSub_Santarem"		"Santarem"		// Brazil (America)
+	"TZRegionSub_Porto_Velho"		"Porto Velho"		// Brazil (America)
+	"TZRegionSub_Boa_Vista"		"Boa Vista"		// Brazil (America)
+	"TZRegionSub_Manaus"		"Manaus"		// Brazil (America)
+	"TZRegionSub_Eirunepe"		"Eirunepe"		// Brazil (America)
+	"TZRegionSub_Rio_Branco"		"Rio Branco"		// Brazil (America)
+	"TZRegionSub_Nassau"		"Nassau"		// Bahamas (America)
+	"TZRegionSub_Thimphu"		"Thimphu"		// Bhutan (Asia)
+	"TZRegionSub_Gaborone"		"Gaborone"		// Botswana (Africa)
+	"TZRegionSub_Minsk"		"Minsk"		// Belarus (Europe)
+	"TZRegionSub_Belize"		"Belize"		// Belize (America)
+	"TZRegionSub_St_Johns"		"St Johns"		// Canada (America)
+	"TZRegionSub_Halifax"		"Halifax"		// Canada (America)
+	"TZRegionSub_Glace_Bay"		"Glace Bay"		// Canada (America)
+	"TZRegionSub_Moncton"		"Moncton"		// Canada (America)
+	"TZRegionSub_Goose_Bay"		"Goose Bay"		// Canada (America)
+	"TZRegionSub_Blanc-Sablon"		"Blanc-Sablon"		// Canada (America)
+	"TZRegionSub_Toronto"		"Toronto"		// Canada (America)
+	"TZRegionSub_Nipigon"		"Nipigon"		// Canada (America)
+	"TZRegionSub_Thunder_Bay"		"Thunder Bay"		// Canada (America)
+	"TZRegionSub_Iqaluit"		"Iqaluit"		// Canada (America)
+	"TZRegionSub_Pangnirtung"		"Pangnirtung"		// Canada (America)
+	"TZRegionSub_Resolute"		"Resolute"		// Canada (America)
+	"TZRegionSub_Atikokan"		"Atikokan"		// Canada (America)
+	"TZRegionSub_Rankin_Inlet"		"Rankin Inlet"		// Canada (America)
+	"TZRegionSub_Winnipeg"		"Winnipeg"		// Canada (America)
+	"TZRegionSub_Rainy_River"		"Rainy River"		// Canada (America)
+	"TZRegionSub_Regina"		"Regina"		// Canada (America)
+	"TZRegionSub_Swift_Current"		"Swift Current"		// Canada (America)
+	"TZRegionSub_Edmonton"		"Edmonton"		// Canada (America)
+	"TZRegionSub_Cambridge_Bay"		"Cambridge Bay"		// Canada (America)
+	"TZRegionSub_Yellowknife"		"Yellowknife"		// Canada (America)
+	"TZRegionSub_Inuvik"		"Inuvik"		// Canada (America)
+	"TZRegionSub_Creston"		"Creston"		// Canada (America)
+	"TZRegionSub_Dawson_Creek"		"Dawson Creek"		// Canada (America)
+	"TZRegionSub_Vancouver"		"Vancouver"		// Canada (America)
+	"TZRegionSub_Whitehorse"		"Whitehorse"		// Canada (America)
+	"TZRegionSub_Dawson"		"Dawson"		// Canada (America)
+	"TZRegionContinent_Indian"		"Indian"
+	"TZRegionSub_Cocos"		"Cocos"		// Cocos (Keeling) Islands (Indian)
+	"TZRegionSub_Kinshasa"		"Kinshasa"		// Congo (Dem. Rep.) (Africa)
+	"TZRegionSub_Lubumbashi"		"Lubumbashi"		// Congo (Dem. Rep.) (Africa)
+	"TZRegionSub_Bangui"		"Bangui"		// Central African Rep. (Africa)
+	"TZRegionSub_Brazzaville"		"Brazzaville"		// Congo (Rep.) (Africa)
+	"TZRegionSub_Zurich"		"Zurich"		// Switzerland (Europe)
+	"TZRegionSub_Abidjan"		"Abidjan"		// Cote d'Ivoire (Africa)
+	"TZRegionSub_Rarotonga"		"Rarotonga"		// Cook Islands (Pacific)
+	"TZRegionSub_Santiago"		"Santiago"		// Chile (America)
+	"TZRegionSub_Easter"		"Easter"		// Chile (Pacific)
+	"TZRegionSub_Douala"		"Douala"		// Cameroon (Africa)
+	"TZRegionSub_Shanghai"		"Shanghai"		// China (Asia)
+	"TZRegionSub_Urumqi"		"Urumqi"		// China (Asia)
+	"TZRegionSub_Bogota"		"Bogota"		// Colombia (America)
+	"TZRegionSub_Costa_Rica"		"Costa Rica"		// Costa Rica (America)
+	"TZRegionSub_Havana"		"Havana"		// Cuba (America)
+	"TZRegionSub_Cape_Verde"		"Cape Verde"		// Cape Verde (Atlantic)
+	"TZRegionSub_Curacao"		"Curacao"		// Curacao (America)
+	"TZRegionSub_Christmas"		"Christmas"		// Christmas Island (Indian)
+	"TZRegionSub_Nicosia"		"Nicosia"		// Cyprus (Asia)
+	"TZRegionSub_Prague"		"Prague"		// Czech Republic (Europe)
+	"TZRegionSub_Berlin"		"Berlin"		// Germany (Europe)
+	"TZRegionSub_Busingen"		"Busingen"		// Germany (Europe)
+	"TZRegionSub_Djibouti"		"Djibouti"		// Djibouti (Africa)
+	"TZRegionSub_Copenhagen"		"Copenhagen"		// Denmark (Europe)
+	"TZRegionSub_Dominica"		"Dominica"		// Dominica (America)
+	"TZRegionSub_Santo_Domingo"		"Santo Domingo"		// Dominican Republic (America)
+	"TZRegionSub_Algiers"		"Algiers"		// Algeria (Africa)
+	"TZRegionSub_Guayaquil"		"Guayaquil"		// Ecuador (America)
+	"TZRegionSub_Galapagos"		"Galapagos"		// Ecuador (Pacific)
+	"TZRegionSub_Tallinn"		"Tallinn"		// Estonia (Europe)
+	"TZRegionSub_Cairo"		"Cairo"		// Egypt (Africa)
+	"TZRegionSub_El_Aaiun"		"El Aaiun"		// Western Sahara (Africa)
+	"TZRegionSub_Asmara"		"Asmara"		// Eritrea (Africa)
+	"TZRegionSub_Madrid"		"Madrid"		// Spain (Europe)
+	"TZRegionSub_Ceuta"		"Ceuta"		// Spain (Africa)
+	"TZRegionSub_Canary"		"Canary"		// Spain (Atlantic)
+	"TZRegionSub_Addis_Ababa"		"Addis Ababa"		// Ethiopia (Africa)
+	"TZRegionSub_Helsinki"		"Helsinki"		// Finland (Europe)
+	"TZRegionSub_Fiji"		"Fiji"		// Fiji (Pacific)
+	"TZRegionSub_Stanley"		"Stanley"		// Falkland Islands (Atlantic)
+	"TZRegionSub_Chuuk"		"Chuuk"		// Micronesia (Pacific)
+	"TZRegionSub_Pohnpei"		"Pohnpei"		// Micronesia (Pacific)
+	"TZRegionSub_Kosrae"		"Kosrae"		// Micronesia (Pacific)
+	"TZRegionSub_Faroe"		"Faroe"		// Faroe Islands (Atlantic)
+	"TZRegionSub_Paris"		"Paris"		// France (Europe)
+	"TZRegionSub_Libreville"		"Libreville"		// Gabon (Africa)
+	"TZRegionSub_London"		"London"		// Britain (UK) (Europe)
+	"TZRegionSub_Grenada"		"Grenada"		// Grenada (America)
+	"TZRegionSub_Tbilisi"		"Tbilisi"		// Georgia (Asia)
+	"TZRegionSub_Cayenne"		"Cayenne"		// French Guiana (America)
+	"TZRegionSub_Guernsey"		"Guernsey"		// Guernsey (Europe)
+	"TZRegionSub_Accra"		"Accra"		// Ghana (Africa)
+	"TZRegionSub_Gibraltar"		"Gibraltar"		// Gibraltar (Europe)
+	"TZRegionSub_Godthab"		"Godthab"		// Greenland (America)
+	"TZRegionSub_Danmarkshavn"		"Danmarkshavn"		// Greenland (America)
+	"TZRegionSub_Scoresbysund"		"Scoresbysund"		// Greenland (America)
+	"TZRegionSub_Thule"		"Thule"		// Greenland (America)
+	"TZRegionSub_Banjul"		"Banjul"		// Gambia (Africa)
+	"TZRegionSub_Conakry"		"Conakry"		// Guinea (Africa)
+	"TZRegionSub_Guadeloupe"		"Guadeloupe"		// Guadeloupe (America)
+	"TZRegionSub_Malabo"		"Malabo"		// Equatorial Guinea (Africa)
+	"TZRegionSub_Athens"		"Athens"		// Greece (Europe)
+	"TZRegionSub_South_Georgia"		"South Georgia"		// South Georgia & the South Sandwich Islands (Atlantic)
+	"TZRegionSub_Guatemala"		"Guatemala"		// Guatemala (America)
+	"TZRegionSub_Guam"		"Guam"		// Guam (Pacific)
+	"TZRegionSub_Bissau"		"Bissau"		// Guinea-Bissau (Africa)
+	"TZRegionSub_Guyana"		"Guyana"		// Guyana (America)
+	"TZRegionSub_Hong_Kong"		"Hong Kong"		// Hong Kong (Asia)
+	"TZRegionSub_Tegucigalpa"		"Tegucigalpa"		// Honduras (America)
+	"TZRegionSub_Zagreb"		"Zagreb"		// Croatia (Europe)
+	"TZRegionSub_Port-au-Prince"		"Port-au-Prince"		// Haiti (America)
+	"TZRegionSub_Budapest"		"Budapest"		// Hungary (Europe)
+	"TZRegionSub_Jakarta"		"Jakarta"		// Indonesia (Asia)
+	"TZRegionSub_Pontianak"		"Pontianak"		// Indonesia (Asia)
+	"TZRegionSub_Makassar"		"Makassar"		// Indonesia (Asia)
+	"TZRegionSub_Jayapura"		"Jayapura"		// Indonesia (Asia)
+	"TZRegionSub_Dublin"		"Dublin"		// Ireland (Europe)
+	"TZRegionSub_Jerusalem"		"Jerusalem"		// Israel (Asia)
+	"TZRegionSub_Isle_of_Man"		"Isle of Man"		// Isle of Man (Europe)
+	"TZRegionSub_Kolkata"		"Kolkata"		// India (Asia)
+	"TZRegionSub_Chagos"		"Chagos"		// British Indian Ocean Territory (Indian)
+	"TZRegionSub_Baghdad"		"Baghdad"		// Iraq (Asia)
+	"TZRegionSub_Tehran"		"Tehran"		// Iran (Asia)
+	"TZRegionSub_Reykjavik"		"Reykjavik"		// Iceland (Atlantic)
+	"TZRegionSub_Rome"		"Rome"		// Italy (Europe)
+	"TZRegionSub_Jersey"		"Jersey"		// Jersey (Europe)
+	"TZRegionSub_Jamaica"		"Jamaica"		// Jamaica (America)
+	"TZRegionSub_Amman"		"Amman"		// Jordan (Asia)
+	"TZRegionSub_Tokyo"		"Tokyo"		// Japan (Asia)
+	"TZRegionSub_Nairobi"		"Nairobi"		// Kenya (Africa)
+	"TZRegionSub_Bishkek"		"Bishkek"		// Kyrgyzstan (Asia)
+	"TZRegionSub_Phnom_Penh"		"Phnom Penh"		// Cambodia (Asia)
+	"TZRegionSub_Tarawa"		"Tarawa"		// Kiribati (Pacific)
+	"TZRegionSub_Enderbury"		"Enderbury"		// Kiribati (Pacific)
+	"TZRegionSub_Kiritimati"		"Kiritimati"		// Kiribati (Pacific)
+	"TZRegionSub_Comoro"		"Comoro"		// Comoros (Indian)
+	"TZRegionSub_St_Kitts"		"St Kitts"		// St Kitts & Nevis (America)
+	"TZRegionSub_Pyongyang"		"Pyongyang"		// Korea (North) (Asia)
+	"TZRegionSub_Seoul"		"Seoul"		// Korea (South) (Asia)
+	"TZRegionSub_Kuwait"		"Kuwait"		// Kuwait (Asia)
+	"TZRegionSub_Cayman"		"Cayman"		// Cayman Islands (America)
+	"TZRegionSub_Almaty"		"Almaty"		// Kazakhstan (Asia)
+	"TZRegionSub_Qyzylorda"		"Qyzylorda"		// Kazakhstan (Asia)
+	"TZRegionSub_Aqtobe"		"Aqtobe"		// Kazakhstan (Asia)
+	"TZRegionSub_Aqtau"		"Aqtau"		// Kazakhstan (Asia)
+	"TZRegionSub_Oral"		"Oral"		// Kazakhstan (Asia)
+	"TZRegionSub_Vientiane"		"Vientiane"		// Laos (Asia)
+	"TZRegionSub_Beirut"		"Beirut"		// Lebanon (Asia)
+	"TZRegionSub_St_Lucia"		"St Lucia"		// St Lucia (America)
+	"TZRegionSub_Vaduz"		"Vaduz"		// Liechtenstein (Europe)
+	"TZRegionSub_Colombo"		"Colombo"		// Sri Lanka (Asia)
+	"TZRegionSub_Monrovia"		"Monrovia"		// Liberia (Africa)
+	"TZRegionSub_Maseru"		"Maseru"		// Lesotho (Africa)
+	"TZRegionSub_Vilnius"		"Vilnius"		// Lithuania (Europe)
+	"TZRegionSub_Luxembourg"		"Luxembourg"		// Luxembourg (Europe)
+	"TZRegionSub_Riga"		"Riga"		// Latvia (Europe)
+	"TZRegionSub_Tripoli"		"Tripoli"		// Libya (Africa)
+	"TZRegionSub_Casablanca"		"Casablanca"		// Morocco (Africa)
+	"TZRegionSub_Monaco"		"Monaco"		// Monaco (Europe)
+	"TZRegionSub_Chisinau"		"Chisinau"		// Moldova (Europe)
+	"TZRegionSub_Podgorica"		"Podgorica"		// Montenegro (Europe)
+	"TZRegionSub_Marigot"		"Marigot"		// St Martin (French part) (America)
+	"TZRegionSub_Antananarivo"		"Antananarivo"		// Madagascar (Indian)
+	"TZRegionSub_Majuro"		"Majuro"		// Marshall Islands (Pacific)
+	"TZRegionSub_Kwajalein"		"Kwajalein"		// Marshall Islands (Pacific)
+	"TZRegionSub_Skopje"		"Skopje"		// Macedonia (Europe)
+	"TZRegionSub_Bamako"		"Bamako"		// Mali (Africa)
+	"TZRegionSub_Rangoon"		"Rangoon"		// Myanmar (Burma) (Asia)
+	"TZRegionSub_Ulaanbaatar"		"Ulaanbaatar"		// Mongolia (Asia)
+	"TZRegionSub_Hovd"		"Hovd"		// Mongolia (Asia)
+	"TZRegionSub_Choibalsan"		"Choibalsan"		// Mongolia (Asia)
+	"TZRegionSub_Macau"		"Macau"		// Macau (Asia)
+	"TZRegionSub_Saipan"		"Saipan"		// Northern Mariana Islands (Pacific)
+	"TZRegionSub_Martinique"		"Martinique"		// Martinique (America)
+	"TZRegionSub_Nouakchott"		"Nouakchott"		// Mauritania (Africa)
+	"TZRegionSub_Montserrat"		"Montserrat"		// Montserrat (America)
+	"TZRegionSub_Malta"		"Malta"		// Malta (Europe)
+	"TZRegionSub_Mauritius"		"Mauritius"		// Mauritius (Indian)
+	"TZRegionSub_Maldives"		"Maldives"		// Maldives (Indian)
+	"TZRegionSub_Blantyre"		"Blantyre"		// Malawi (Africa)
+	"TZRegionSub_Mexico_City"		"Mexico City"		// Mexico (America)
+	"TZRegionSub_Cancun"		"Cancun"		// Mexico (America)
+	"TZRegionSub_Merida"		"Merida"		// Mexico (America)
+	"TZRegionSub_Monterrey"		"Monterrey"		// Mexico (America)
+	"TZRegionSub_Matamoros"		"Matamoros"		// Mexico (America)
+	"TZRegionSub_Mazatlan"		"Mazatlan"		// Mexico (America)
+	"TZRegionSub_Chihuahua"		"Chihuahua"		// Mexico (America)
+	"TZRegionSub_Ojinaga"		"Ojinaga"		// Mexico (America)
+	"TZRegionSub_Hermosillo"		"Hermosillo"		// Mexico (America)
+	"TZRegionSub_Tijuana"		"Tijuana"		// Mexico (America)
+	"TZRegionSub_Santa_Isabel"		"Santa Isabel"		// Mexico (America)
+	"TZRegionSub_Bahia_Banderas"		"Bahia Banderas"		// Mexico (America)
+	"TZRegionSub_Kuala_Lumpur"		"Kuala Lumpur"		// Malaysia (Asia)
+	"TZRegionSub_Kuching"		"Kuching"		// Malaysia (Asia)
+	"TZRegionSub_Maputo"		"Maputo"		// Mozambique (Africa)
+	"TZRegionSub_Windhoek"		"Windhoek"		// Namibia (Africa)
+	"TZRegionSub_Noumea"		"Noumea"		// New Caledonia (Pacific)
+	"TZRegionSub_Niamey"		"Niamey"		// Niger (Africa)
+	"TZRegionSub_Norfolk"		"Norfolk"		// Norfolk Island (Pacific)
+	"TZRegionSub_Lagos"		"Lagos"		// Nigeria (Africa)
+	"TZRegionSub_Managua"		"Managua"		// Nicaragua (America)
+	"TZRegionSub_Amsterdam"		"Amsterdam"		// Netherlands (Europe)
+	"TZRegionSub_Oslo"		"Oslo"		// Norway (Europe)
+	"TZRegionSub_Kathmandu"		"Kathmandu"		// Nepal (Asia)
+	"TZRegionSub_Nauru"		"Nauru"		// Nauru (Pacific)
+	"TZRegionSub_Niue"		"Niue"		// Niue (Pacific)
+	"TZRegionSub_Auckland"		"Auckland"		// New Zealand (Pacific)
+	"TZRegionSub_Chatham"		"Chatham"		// New Zealand (Pacific)
+	"TZRegionSub_Muscat"		"Muscat"		// Oman (Asia)
+	"TZRegionSub_Panama"		"Panama"		// Panama (America)
+	"TZRegionSub_Lima"		"Lima"		// Peru (America)
+	"TZRegionSub_Tahiti"		"Tahiti"		// French Polynesia (Pacific)
+	"TZRegionSub_Marquesas"		"Marquesas"		// French Polynesia (Pacific)
+	"TZRegionSub_Gambier"		"Gambier"		// French Polynesia (Pacific)
+	"TZRegionSub_Port_Moresby"		"Port Moresby"		// Papua New Guinea (Pacific)
+	"TZRegionSub_Bougainville"		"Bougainville"		// Papua New Guinea (Pacific)
+	"TZRegionSub_Manila"		"Manila"		// Philippines (Asia)
+	"TZRegionSub_Karachi"		"Karachi"		// Pakistan (Asia)
+	"TZRegionSub_Warsaw"		"Warsaw"		// Poland (Europe)
+	"TZRegionSub_Miquelon"		"Miquelon"		// St Pierre & Miquelon (America)
+	"TZRegionSub_Pitcairn"		"Pitcairn"		// Pitcairn (Pacific)
+	"TZRegionSub_Puerto_Rico"		"Puerto Rico"		// Puerto Rico (America)
+	"TZRegionSub_Gaza"		"Gaza"		// Palestine (Asia)
+	"TZRegionSub_Hebron"		"Hebron"		// Palestine (Asia)
+	"TZRegionSub_Lisbon"		"Lisbon"		// Portugal (Europe)
+	"TZRegionSub_Madeira"		"Madeira"		// Portugal (Atlantic)
+	"TZRegionSub_Azores"		"Azores"		// Portugal (Atlantic)
+	"TZRegionSub_Palau"		"Palau"		// Palau (Pacific)
+	"TZRegionSub_Asuncion"		"Asuncion"		// Paraguay (America)
+	"TZRegionSub_Qatar"		"Qatar"		// Qatar (Asia)
+	"TZRegionSub_Reunion"		"Reunion"		// Reunion (Indian)
+	"TZRegionSub_Bucharest"		"Bucharest"		// Romania (Europe)
+	"TZRegionSub_Belgrade"		"Belgrade"		// Serbia (Europe)
+	"TZRegionSub_Kaliningrad"		"Kaliningrad"		// Russia (Europe)
+	"TZRegionSub_Moscow"		"Moscow"		// Russia (Europe)
+	"TZRegionSub_Simferopol"		"Simferopol"		// Russia (Europe)
+	"TZRegionSub_Volgograd"		"Volgograd"		// Russia (Europe)
+	"TZRegionSub_Samara"		"Samara"		// Russia (Europe)
+	"TZRegionSub_Yekaterinburg"		"Yekaterinburg"		// Russia (Asia)
+	"TZRegionSub_Omsk"		"Omsk"		// Russia (Asia)
+	"TZRegionSub_Novosibirsk"		"Novosibirsk"		// Russia (Asia)
+	"TZRegionSub_Novokuznetsk"		"Novokuznetsk"		// Russia (Asia)
+	"TZRegionSub_Krasnoyarsk"		"Krasnoyarsk"		// Russia (Asia)
+	"TZRegionSub_Irkutsk"		"Irkutsk"		// Russia (Asia)
+	"TZRegionSub_Chita"		"Chita"		// Russia (Asia)
+	"TZRegionSub_Yakutsk"		"Yakutsk"		// Russia (Asia)
+	"TZRegionSub_Khandyga"		"Khandyga"		// Russia (Asia)
+	"TZRegionSub_Vladivostok"		"Vladivostok"		// Russia (Asia)
+	"TZRegionSub_Sakhalin"		"Sakhalin"		// Russia (Asia)
+	"TZRegionSub_Ust-Nera"		"Ust-Nera"		// Russia (Asia)
+	"TZRegionSub_Magadan"		"Magadan"		// Russia (Asia)
+	"TZRegionSub_Srednekolymsk"		"Srednekolymsk"		// Russia (Asia)
+	"TZRegionSub_Kamchatka"		"Kamchatka"		// Russia (Asia)
+	"TZRegionSub_Anadyr"		"Anadyr"		// Russia (Asia)
+	"TZRegionSub_Kigali"		"Kigali"		// Rwanda (Africa)
+	"TZRegionSub_Riyadh"		"Riyadh"		// Saudi Arabia (Asia)
+	"TZRegionSub_Guadalcanal"		"Guadalcanal"		// Solomon Islands (Pacific)
+	"TZRegionSub_Mahe"		"Mahe"		// Seychelles (Indian)
+	"TZRegionSub_Khartoum"		"Khartoum"		// Sudan (Africa)
+	"TZRegionSub_Stockholm"		"Stockholm"		// Sweden (Europe)
+	"TZRegionSub_Singapore"		"Singapore"		// Singapore (Asia)
+	"TZRegionSub_St_Helena"		"St Helena"		// St Helena (Atlantic)
+	"TZRegionSub_Ljubljana"		"Ljubljana"		// Slovenia (Europe)
+	"TZRegionContinent_Arctic"		"Arctic"
+	"TZRegionSub_Longyearbyen"		"Longyearbyen"		// Svalbard & Jan Mayen (Arctic)
+	"TZRegionSub_Bratislava"		"Bratislava"		// Slovakia (Europe)
+	"TZRegionSub_Freetown"		"Freetown"		// Sierra Leone (Africa)
+	"TZRegionSub_San_Marino"		"San Marino"		// San Marino (Europe)
+	"TZRegionSub_Dakar"		"Dakar"		// Senegal (Africa)
+	"TZRegionSub_Mogadishu"		"Mogadishu"		// Somalia (Africa)
+	"TZRegionSub_Paramaribo"		"Paramaribo"		// Suriname (America)
+	"TZRegionSub_Juba"		"Juba"		// South Sudan (Africa)
+	"TZRegionSub_Sao_Tome"		"Sao Tome"		// Sao Tome & Principe (Africa)
+	"TZRegionSub_El_Salvador"		"El Salvador"		// El Salvador (America)
+	"TZRegionSub_Lower_Princes"		"Lower Princes"		// St Maarten (Dutch part) (America)
+	"TZRegionSub_Damascus"		"Damascus"		// Syria (Asia)
+	"TZRegionSub_Mbabane"		"Mbabane"		// Swaziland (Africa)
+	"TZRegionSub_Grand_Turk"		"Grand Turk"		// Turks & Caicos Is (America)
+	"TZRegionSub_Ndjamena"		"Ndjamena"		// Chad (Africa)
+	"TZRegionSub_Kerguelen"		"Kerguelen"		// French Southern & Antarctic Lands (Indian)
+	"TZRegionSub_Lome"		"Lome"		// Togo (Africa)
+	"TZRegionSub_Bangkok"		"Bangkok"		// Thailand (Asia)
+	"TZRegionSub_Dushanbe"		"Dushanbe"		// Tajikistan (Asia)
+	"TZRegionSub_Fakaofo"		"Fakaofo"		// Tokelau (Pacific)
+	"TZRegionSub_Dili"		"Dili"		// East Timor (Asia)
+	"TZRegionSub_Ashgabat"		"Ashgabat"		// Turkmenistan (Asia)
+	"TZRegionSub_Tunis"		"Tunis"		// Tunisia (Africa)
+	"TZRegionSub_Tongatapu"		"Tongatapu"		// Tonga (Pacific)
+	"TZRegionSub_Istanbul"		"Istanbul"		// Turkey (Europe)
+	"TZRegionSub_Port_of_Spain"		"Port of Spain"		// Trinidad & Tobago (America)
+	"TZRegionSub_Funafuti"		"Funafuti"		// Tuvalu (Pacific)
+	"TZRegionSub_Taipei"		"Taipei"		// Taiwan (Asia)
+	"TZRegionSub_Dar_es_Salaam"		"Dar es Salaam"		// Tanzania (Africa)
+	"TZRegionSub_Kiev"		"Kiev"		// Ukraine (Europe)
+	"TZRegionSub_Uzhgorod"		"Uzhgorod"		// Ukraine (Europe)
+	"TZRegionSub_Zaporozhye"		"Zaporozhye"		// Ukraine (Europe)
+	"TZRegionSub_Kampala"		"Kampala"		// Uganda (Africa)
+	"TZRegionSub_Johnston"		"Johnston"		// US minor outlying islands (Pacific)
+	"TZRegionSub_Midway"		"Midway"		// US minor outlying islands (Pacific)
+	"TZRegionSub_Wake"		"Wake"		// US minor outlying islands (Pacific)
+	"TZRegionSub_New_York"		"New York"		// United States (America)
+	"TZRegionSub_Detroit"		"Detroit"		// United States (America)
+	"TZRegionSub_Kentucky__Louisville"		"Kentucky/Louisville"		// United States (America)
+	"TZRegionSub_Kentucky__Monticello"		"Kentucky/Monticello"		// United States (America)
+	"TZRegionSub_Indiana__Indianapolis"		"Indiana/Indianapolis"		// United States (America)
+	"TZRegionSub_Indiana__Vincennes"		"Indiana/Vincennes"		// United States (America)
+	"TZRegionSub_Indiana__Winamac"		"Indiana/Winamac"		// United States (America)
+	"TZRegionSub_Indiana__Marengo"		"Indiana/Marengo"		// United States (America)
+	"TZRegionSub_Indiana__Petersburg"		"Indiana/Petersburg"		// United States (America)
+	"TZRegionSub_Indiana__Vevay"		"Indiana/Vevay"		// United States (America)
+	"TZRegionSub_Chicago"		"Chicago"		// United States (America)
+	"TZRegionSub_Indiana__Tell_City"		"Indiana/Tell City"		// United States (America)
+	"TZRegionSub_Indiana__Knox"		"Indiana/Knox"		// United States (America)
+	"TZRegionSub_Menominee"		"Menominee"		// United States (America)
+	"TZRegionSub_North_Dakota__Center"		"North Dakota/Center"		// United States (America)
+	"TZRegionSub_North_Dakota__New_Salem"		"North Dakota/New Salem"		// United States (America)
+	"TZRegionSub_North_Dakota__Beulah"		"North Dakota/Beulah"		// United States (America)
+	"TZRegionSub_Denver"		"Denver"		// United States (America)
+	"TZRegionSub_Boise"		"Boise"		// United States (America)
+	"TZRegionSub_Phoenix"		"Phoenix"		// United States (America)
+	"TZRegionSub_Los_Angeles"		"Los Angeles"		// United States (America)
+	"TZRegionSub_Metlakatla"		"Metlakatla"		// United States (America)
+	"TZRegionSub_Anchorage"		"Anchorage"		// United States (America)
+	"TZRegionSub_Juneau"		"Juneau"		// United States (America)
+	"TZRegionSub_Sitka"		"Sitka"		// United States (America)
+	"TZRegionSub_Yakutat"		"Yakutat"		// United States (America)
+	"TZRegionSub_Nome"		"Nome"		// United States (America)
+	"TZRegionSub_Adak"		"Adak"		// United States (America)
+	"TZRegionSub_Honolulu"		"Honolulu"		// United States (Pacific)
+	"TZRegionSub_Montevideo"		"Montevideo"		// Uruguay (America)
+	"TZRegionSub_Samarkand"		"Samarkand"		// Uzbekistan (Asia)
+	"TZRegionSub_Tashkent"		"Tashkent"		// Uzbekistan (Asia)
+	"TZRegionSub_Vatican"		"Vatican"		// Vatican City (Europe)
+	"TZRegionSub_St_Vincent"		"St Vincent"		// St Vincent (America)
+	"TZRegionSub_Caracas"		"Caracas"		// Venezuela (America)
+	"TZRegionSub_Tortola"		"Tortola"		// Virgin Islands (UK) (America)
+	"TZRegionSub_St_Thomas"		"St Thomas"		// Virgin Islands (US) (America)
+	"TZRegionSub_Ho_Chi_Minh"		"Ho Chi Minh"		// Vietnam (Asia)
+	"TZRegionSub_Efate"		"Efate"		// Vanuatu (Pacific)
+	"TZRegionSub_Wallis"		"Wallis"		// Wallis & Futuna (Pacific)
+	"TZRegionSub_Apia"		"Apia"		// Samoa (western) (Pacific)
+	"TZRegionSub_Aden"		"Aden"		// Yemen (Asia)
+	"TZRegionSub_Mayotte"		"Mayotte"		// Mayotte (Indian)
+	"TZRegionSub_Johannesburg"		"Johannesburg"		// South Africa (Africa)
+	"TZRegionSub_Lusaka"		"Lusaka"		// Zambia (Africa)
+	"TZRegionSub_Harare"		"Harare"		// Zimbabwe (Africa)
+
+	"TZRegionSub_Alaska"			"Anchorage"
+	"TZRegionSub_Aleutian"			"Adak"
+	"TZRegionSub_Arizona"			"Phoenix"
+	"TZRegionSub_Central"			"Chicago"
+	"TZRegionSub_East-Indiana"		"East Indianapolis"
+	"TZRegionSub_Eastern"			"New York"
+	"TZRegionSub_Hawaii"			"Honolulu"
+	"TZRegionSub_Indiana-Starke"	"Indiana (Starke)"
+	"TZRegionSub_Michigan"			"Detroit"
+	"TZRegionSub_Mountain"			"Denver"
+	"TZRegionSub_Pacific"			"Los Angeles"
+	"TZRegionSub_Samoa"				"Pago Pago"
 }

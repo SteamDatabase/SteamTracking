@@ -77,10 +77,11 @@ DropDown.DropDownMenuVisible Label
 FilterSelectorItem Label
 {
 	font-size: 24px;
-	height: 48px;
+	padding-left: 3px;
+	vertical-align: center;
 	text-overflow: clip;
 	white-space: nowrap;
-	color: applabel;
+	width: 100%;
 }
 
 FilterSelectorItem #IconWrapper
@@ -90,27 +91,14 @@ FilterSelectorItem #IconWrapper
 	horizontal-align: right;
 	margin-right: 5px;
 	padding-right: 13px;
-	margin-top: 7px;
+	margin-top: 3px;
 	padding-top: 4px;
 	padding-left: 30px;
 	padding-bottom: -2px;
-	background-color: gradient( linear, 0% 0%, 100% 0%, color-stop( 0.0, #1d4c6f11 ), color-stop( 0.25, #1b4a6dff ), color-stop( 1.0, #164368ff ) );
 
 	transition-property: background-color;
 	transition-timing-function: ease-in-out;
 	transition-duration: 0.20s;
-}
-
-#GamesFilterDropDownMenu FilterSelectorItem #IconWrapper
-{
-	background-color:	gradient( linear, 0% 0%, 100% 0%, color-stop( 0.0, #23557511 ), color-stop( 0.25, #225374ff ), color-stop( 1.0, #1f4f71ff ) );
-}
-
-
-FilterSelectorItem:descendantfocus #IconWrapper,
-#GamesFilterDropDownMenu FilterSelectorItem:descendantfocus #IconWrapper
-{	
-	background-color: gradient( linear, 0% 0%, 20% 0%, from( #b2bcbe00 ), to( #aab3b5ff ) );
 }
 
 FilterSelectorItem #IconWrapper Panel
@@ -202,29 +190,21 @@ FilterSelectorItem.SteamControllerIcon #SteamControllerIcon
 	visibility: visible;
 }
 
-#Filter FilterSelectorItem 
+#Filter FilterSelectorItem,
+#FilterDropDownMenu FilterSelectorItem
 {
 	padding: 0px 0px;
+	width: 100%;
 }
 
-FilterSelectorItem:descendantfocus DropDownMenu:focus,
-FilterSelectorItem:descendantfocus Label,
-DropDownMenu Label:focus
+#GamesFilterDropDownMenu FilterSelectorItem.DropDownChild Label
 {
-	color: applabelselected;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
-	transform: translatex(0px);
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 18px 9px;
 }
 
+FilterSelectorItem.DropDownChild
+{
+	height: 52px;
+	padding: 0px;
+}
 

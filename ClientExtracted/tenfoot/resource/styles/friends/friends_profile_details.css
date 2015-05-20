@@ -310,7 +310,7 @@ ProfileOptions#FriendsProfileDetailsInLibraryFriendsWhoPlay #FriendsProfileDetai
 	margin-left: 10px;
 	margin-right: 10px;
 	flow-children: down;
-	overflow: clip scroll;
+	overflow: squish scroll;
 
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );

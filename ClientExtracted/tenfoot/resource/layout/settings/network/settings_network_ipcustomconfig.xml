@@ -13,7 +13,6 @@
 
 
 				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomIP" />
-				<Panel class="SettingsContentFlowRight">
 					<TextEntry
 						id="SettingsNetwork_CustomIP"
 						class="WizardTextEntry"
@@ -22,10 +21,7 @@
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 
-				</Panel>
-
 				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomMask" />
-				<Panel class="SettingsContentFlowRight">
 					<TextEntry
 						id="SettingsNetwork_CustomMask"
 						class="WizardTextEntry"
@@ -34,10 +30,7 @@
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 
-				</Panel>
-
 				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomGateway" />
-				<Panel class="SettingsContentFlowRight">
 					<TextEntry
 						id="SettingsNetwork_CustomGateway"
 						class="WizardTextEntry"
@@ -46,10 +39,7 @@
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 
-				</Panel>
-
 				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomPrimaryDNS" />
-				<Panel class="SettingsContentFlowRight">
 					<TextEntry
 						id="SettingsNetwork_CustomPrimaryDNS"
 						class="WizardTextEntry"
@@ -58,10 +48,7 @@
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 
-				</Panel>
-
 				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomSecondaryDNS" />
-				<Panel class="SettingsContentFlowRight">
 					<TextEntry
 						id="SettingsNetwork_CustomSecondaryDNS"
 						class="WizardTextEntry"
@@ -69,8 +56,6 @@
 						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
-
-				</Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

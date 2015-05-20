@@ -14,6 +14,8 @@ StoreBrowseByCategory
 
 StoreBrowseByCategory #Contents
 {
+	width: 100%;
+	height: 100%;
 	flow-children: down;
 }
 
@@ -286,6 +288,12 @@ StoreBrowseByCategory #Contents
 #Tabs Button:hover Label
 {
 	color: #ffffffff;
+}
+
+#TabContents
+{
+	width: 100%;
+	height: 100%;
 }
 
 #Items

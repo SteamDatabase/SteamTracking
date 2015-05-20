@@ -1,75 +1,130 @@
 "controller_mappings"
 {
-	"buttons"
+    "version" "2"
+    "game" "Steam Desktop"
+
+
+    "group"
+    {
+        "id" "0"
+        "mode" "four_buttons"
+
+        "bindings"
+        {
+			"button_A" "key_press SPACE"
+			"button_B" "key_press E"
+			"button_X" "key_press R"
+			"button_Y" "key_press F"
+        }
+    }
+
+    "group"
+    {
+        "id"    1
+        "mode" "dpad"
+
+        "bindings"
+        {
+            "dpad_north"    "key_press UP_ARROW"
+            "dpad_south"    "key_press DOWN_ARROW"
+            "dpad_east"     "key_press RIGHT_ARROW"
+            "dpad_west"     "key_press LEFT_ARROW"
+        }
+		"settings"
+		{
+			"requires_click" "0"
+
+			"overlap" "true"
+		}
+    }
+
+    "group"
+    {
+        "id"    "2"
+        "mode" "dpad"
+
+        "bindings"
+        {
+            "dpad_north"    "key_press UP_ARROW"
+            "dpad_south"    "key_press DOWN_ARROW"
+            "dpad_east"     "key_press RIGHT_ARROW"
+            "dpad_west"     "key_press LEFT_ARROW"
+        }
+
+		"settings"
+		{
+			"requires_click" "1"
+			"deadzone" "2000"
+			"overlap" "false"
+		}
+    }
+
+    "group"
+    {
+        "id" "3"
+        "mode" "absolute_mouse"
+
+    }
+
+	"group"
 	{
-		"button_0"			"mouse:left_button"
-		"button_1"			"mouse:left_button"
-		"button_2"			"mouse:right_button"
-		"button_3"			"mouse:right_button"
-
-		"right_trigger" 	"mouse:left_button"
-		"left_trigger"		"mouse:right_button"
-		"right_bumper"		""
-		"left_bumper"		""
-
-		"button_escape"		"kb:key_esc"
-		"button_menu"		"kb:key_tab"
-
-		"backside_left"		""
-		"backside_right"	""
-		
+		"id"		"4"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"mouse_button RIGHT, Right Mouse"
+		}
+		"settings"
+		{
+			"output_trigger"		"1"
+		}
 	}
 
-	"touchscreen"
+	"group"
 	{
-		"touch_button_0"			""
-		"touch_button_1"			""
-		"touch_button_2"			""
-		"touch_button_3"			""
+		"id"		"5"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"mouse_button LEFT, Left Mouse"
+		}
+		"settings"
+		{
+			"output_trigger"		"2"
+		}
 	}
 
-	"pads"
-	{
-		"left_stick_up"		""
-		"left_stick_right"	""
-		"left_stick_down"	""
-		"left_stick_left"	""
-		"left_stick_click"	""
-	
-		"left_north"		"kb:key_up"
-		"left_northeast"	""
-		"left_east"			"kb:key_right"
-		"left_southeast"	""
-		"left_south"		"kb:key_down"
-		"left_southwest"	""
-		"left_west"			"kb:key_left"
-		"left_northwest"	""
+    "group_source_bindings"
+    {
+        "0" "button_diamond"
+        "1" "joystick"
+        "2" "left_trackpad"
+        "3" "right_trackpad"
+		"4"	"left_trigger active"
+		"5"	"right_trigger active"
+    }
 
-		"left_double_tap"	""
-		"left_outer_edge"	""
-		"left_click"		"kb:key_enter"
+    "switch_bindings"
+    {
+        "bindings"
+        {
+    		"right_bumper"		"mouse_wheel SCROLL_UP, Mouse Scroll Up"
+    		"left_bumper"		"mouse_wheel SCROLL_DOWN, Mouse Scroll Down"
 
-		"right_north"		""
-		"right_northeast"	""
-		"right_east"		""
-		"right_southeast"	""
-		"right_south"		""
-		"right_southwest"	""
-		"right_west"		""
-		"right_northwest"	""
-	
-		"right_double_tap"	""
-		"right_outer_edge"	""
-		"right_click"		"mouse:left_button"
-	}
+    		"button_escape"		"key_press ESCAPE, Menu"
+    		"button_menu"		"key_press TAB, Tab"
 
-	"settings"
-	{
-		"left_trackpad_mode"						"dpad_4way_discrete"
-		"right_trackpad_mode"						"absolute_mouse"
-		"trackpad_outer_spin_vel"					"0"
-	}
+    		"button_back_left"	"mouse_button MIDDLE, Middle Mouse"
+		    "button_back_right"	"key_press LEFT_CONTROL, Left Control"
+
+        }
+    }
+
+    "settings"
+    {
+		"left_trackpad_mode"						"none"
+		"right_trackpad_mode"						"none"
+    }
+
 }
-
-	
 

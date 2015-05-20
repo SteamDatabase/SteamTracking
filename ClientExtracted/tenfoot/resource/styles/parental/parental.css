@@ -295,9 +295,7 @@ ParentalReplacementPanel Button:focus
 	height: 237px;
 	vertical-align: center;
 	horizontal-align: center;
-	margin: 4px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin: 10px;
 
 }
 
@@ -480,6 +478,7 @@ ParentalFeaturesChild .SettingsBottomPanel
 {
 	margin-left: 0px;
 	height: 770px;
+	width: 100%;
 	position: 0px -100px 0px;
 }
 
@@ -608,6 +607,7 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 .ParentalEnableCodeEntry
 {
 	flow-children: right;
+	width: 925px;
 	text-align: left;
 }
 
@@ -624,7 +624,7 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 
 .ParentalRecoveryEmailEntry Label
 {
-	width: 40%;
+	width: 450px;
 }
 
 .DaisyWheelVisible .ParentalSetPINDialog,
@@ -696,6 +696,7 @@ ParentalSetInProgressChild .SettingsBottomPanel
 {
 	position: 0px 0px 0px;
 	z-index: 50;
+	width: 100%;
 }
 
 #ParentalChooseAppsChild AppGridItem 
@@ -879,4 +880,10 @@ ParentalSetSuccessChild .email
 	padding: 0px;
 	margin-left: 5px;
 	margin-right: 5px;
+}
+
+#ParentalOverlay
+{
+	width: 100%;
+	height: 100%;
 }

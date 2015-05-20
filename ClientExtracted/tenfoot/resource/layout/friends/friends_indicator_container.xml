@@ -7,6 +7,7 @@
 
 	<FriendsIndicatorContainer>
 		<Label id="FriendIndicatorContainedTextFriendRequest" class="FriendIndicatorContainedText" text="#Friends_Indicator_FriendRequest" />
+		<Label id="FriendIndicatorContainedTextGroupRequest" class="FriendIndicatorContainedText" text="#Friends_Indicator_GroupRequest" />
 		<Label id="FriendIndicatorContainedTextGameInvite" class="FriendIndicatorContainedText" text="#Friends_Indicator_GameInvite" />
 		<Label id="FriendIndicatorContainedTextVoiceChatOnHold" class="FriendIndicatorContainedText" text="#Friends_Indicator_VoiceChatOnHold" />
 		<Label id="FriendIndicatorContainedTextVoiceChatRinging" class="FriendIndicatorContainedText" text="#Friends_Indicator_VoiceChatRinging" />

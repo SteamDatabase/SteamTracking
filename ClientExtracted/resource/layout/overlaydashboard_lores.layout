@@ -22,23 +22,7 @@
 			controlname="EditablePanel"
 			style=bottomfade
 			zpos=-1
-		}		
-		Clock
-		{
-			controlname="Label"
-			labeltext="10:43"
-			style=topbar
 		}
-		ClockSuffix
-		{
-			controlname="Label"
-			labeltext="am"
-			style=clocksuffix
-		}
-
-		SessionText { controlname=label style=TimeStrings labeltext="#Overlay_Playtime_Session" }
-		TwoWeeksText { controlname=label style=TimeStrings }
-		ForeverText { controlname=label style=TimeStrings }
 
 		GameName
 		{
@@ -65,7 +49,7 @@
 	
 	colors
 	{
-	backgroundOverlayTop="38 37 35 140"
+		backgroundOverlayTop="38 37 35 140"
 	}
 	
 	styles
@@ -94,26 +78,11 @@
 		{
 			bgcolor = "43 43 43 96"
 		}	
-		
-		clocksuffix
-		{
-			font-size=24
-			padding-top=10
-			//textcolor=Text
-			font-weight=400
-			font-style=uppercase;
-		}
+				
 		topbar
 		{
 			font-size=36
 			textcolor=Label
-		}
-		timeStrings
-		{
-			font-size="17"
-			textcolor="label"
-			font-family=basefont
-			font-weight=700
 		}
 	}
 	
@@ -133,11 +102,10 @@
 		
 		place { control="TopFadePanel" align=top width=max height=150 }
 		place { control="BottomFadePanel" align=bottom width=max height=130 }
-				
-		place { control="Clock,ClockSuffix" region=topbar }
-		place { control="SessionText,TwoWeeksText,ForeverText,CloseButton" dir=down region=overlay y=35 }
-		place { control="HotkeyLabel" start=CloseButton dir=down region=overlay  }
-		place { control="HotkeyExplain" start=HotkeyLabel region=overlay spacing=5 }
+		
+		place { control="CloseButton" region=mid align=top-center }
+		place { control="HotkeyLabel,HotkeyExplain" region=mid align=top-center y=14 spacing=5 }
+			
 		
 		place { controls="gamename" region=topbar align=right width=440 }
 				

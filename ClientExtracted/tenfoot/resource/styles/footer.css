@@ -27,7 +27,6 @@ TenfootFooterPanel
 .Show.Anim_MID #B_btn_s, .Show.Anim_MID #B_txt_s,
 .Show.Anim_MID #X_btn_s, .Show.Anim_MID #X_txt_s,
 .Show.Anim_MID #Y_btn_s, .Show.Anim_MID #Y_txt_s,
-.Show.Anim_MID #SteamPadFlowCenter,
 .Show.Anim_MID #RT_btn, .Show.Anim_MID #RT_txt,
 .Show.Anim_MID #LT_btn, .Show.Anim_MID #LT_txt,
 .Show.Anim_MID #START_btn, .Show.Anim_MID #START_txt,
@@ -104,7 +103,6 @@ TenfootFooterPanel
 .Hide #B_btn_s, .Hide #B_txt_s,
 .Hide #X_btn_s, .Hide #X_txt_s,
 .Hide #Y_btn_s, .Hide #Y_txt_s,
-.Hide #SteamPadFlowCenter,
 .Hide #RB_btn, .Hide #RB_txt,
 .Hide #LB_btn, .Hide #LB_txt,
 .Hide #START_btn, .Hide #START_txt,
@@ -127,7 +125,6 @@ TenfootFooterPanel
 .Hide.Anim_MID #B_btn_s, .Hide.Anim_MID #B_txt_s,
 .Hide.Anim_MID #X_btn_s, .Hide.Anim_MID #X_txt_s,
 .Hide.Anim_MID #Y_btn_s, .Hide.Anim_MID #Y_txt_s,
-.Hide.Anim_MID #SteamPadFlowCenter,
 .Hide.Anim_MID #RT_btn, .Hide.Anim_MID #RT_txt,
 .Hide.Anim_MID #LT_btn, .Hide.Anim_MID #LT_txt,
 .Hide.Anim_MID #START_btn, .Hide.Anim_MID #START_txt,
@@ -164,11 +161,6 @@ TenfootFooterPanel
 	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
 	z-index: 20;
-}
-
-.SteamPad #LegendRow
-{
-	margin-top: 30px;
 }
 
 .LegendButton Label
@@ -405,24 +397,12 @@ TenfootFooterPanel
 	color: tclegendlabel; 
 }
 
-.SteamPad #LegendRow #MiddleLegend .LegendText
-{
-	max-width: 200px;
-	max-height: 60px;
-}
-
-
 #LegendRow #LeftLegend
 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	horizontal-align: left;
 	vertical-align: top;
-}
-
-.SteamPad #LegendRow #LeftLegend
-{
-	margin-top: 22px;
 }
 
 #LegendRow #MiddleLegend
@@ -434,78 +414,10 @@ TenfootFooterPanel
 	padding-bottom: 10px;
 }
 
-.SteamPad #LegendRow #MiddleLegend
-{
-	horizontal-align: center;
-	vertical-align: top;
-	flow-children: right;
-	margin-top: -10px;
-	padding: 0px;
-	height: 120px;
-}
-
-
 #LegendRow #MiddleLegend #ABXY_Footer_Wrapper
 {
 	visibility: visible;
 	flow-children: right;
-}
-
-#LegendRow #MiddleLegend #SteamPad_ABXY_Footer_Wrapper
-{
-	visibility: collapse;
-}
-
-
-.SteamPad #LegendRow #MiddleLegend #ABXY_Footer_Wrapper
-{
-	visibility: collapse;
-}
-
-.SteamPad #LegendRow #MiddleLegend #SteamPad_ABXY_Footer_Wrapper
-{
-	visibility: visible;
-	height: 120px;
-	width: 640px;
-}
-
-.SteamPad #LBWrapper
-{
-	width: fill-parent-flow( 1.0 );
-}
-
-.SteamPad #RightWrapper
-{
-	width: fill-parent-flow( 1.0 );
-	flow-children: right;
-}
-
-#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowRight
-{
-	flow-children: right;
-	height: 120px;
-}
-
-#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowXY
-{
-	margin-top: 8px;
-	margin-bottom: 8px;
-	width: fill-parent-flow( 1.0 );
-	height: 100%;
-	flow-children: none;
-}
-
-#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowCenter
-{
-	height: 76px;
-	width: 76px;
-	background-image: url( "file://{images}/footer/grid.png" );
-}
-
-.HideCenterGrid #SteamPad_ABXY_Footer_Wrapper #SteamPadFlowCenter
-{
-	visibility: collapse;
-	opacity: 0.0;
 }
 
 .HideCenterGrid #A_btn_s,
@@ -518,119 +430,6 @@ TenfootFooterPanel
 }
 
 
-
-.Hide #SteamPad_ABXY_Footer_Wrapper #SteamPadFlowCenter
-{
-	height: 76px;
-	width: 76px;
-}
-
-#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowAB
-{
-	margin-top: 8px;
-	margin-bottom: 8px;
-	width: fill-parent-flow( 1.0 );
-	height: 100%;
-	flow-children: none;
-}
-
-.SteamPad #A_Wrapper,
-.SteamPad #B_Wrapper,
-.SteamPad #X_Wrapper,
-.SteamPad #Y_Wrapper
-{
-	flow-children: right;
-}
-
-.SteamPad #X_Wrapper,
-.SteamPad #Y_Wrapper
-{
-	horizontal-align: right;
-}
-
-.SteamPad #A_Wrapper,
-.SteamPad #B_Wrapper
-{
-	horizontal-align: left;
-}
-
-.SteamPad #A_Wrapper .AButtonBox,
-.SteamPad #B_Wrapper .BButtonBox,
-.SteamPad #X_Wrapper .XButtonBox,
-.SteamPad #Y_Wrapper .YButtonBox
-{
-	padding-left: 0px;
-	margin-left: 0px;
-	padding-right: 0px;
-	margin-right: 0px;
-	min-width: 48px;
-	width: 48px;
-	height: 48px;
-	border-radius: 0px;
-	box-shadow: none;
-
-	font-size: 20px;
-} 
-
-.SteamPad #A_Wrapper
-{
-	vertical-align: bottom;
-}
- 
-.SteamPad #A_Wrapper .AButtonBox
-{
-	padding-left: -14px;
-	padding-top: 13px;
-	background-image: url( "file://{images}/footer/a_button.png" );
-}
-
-.SteamPad #X_Wrapper
-{
-	vertical-align: bottom;
-}
- 
-.SteamPad #X_Wrapper .XButtonBox
-{
-	padding-top: 13px;
-	padding-left: 14px;
-	background-image: url( "file://{images}/footer/x_button.png" );
-}
-
-.SteamPad #Y_Wrapper
-{
-	vertical-align: top;
-}
- 
-.SteamPad #Y_Wrapper .YButtonBox
-{
-	padding-top: 2px;
-	padding-left: 14px;
-	background-image: url( "file://{images}/footer/y_button.png" );
-}
-
-.OSX.SteamPad #Y_Wrapper .YButtonBox,.Linux.SteamPad #Y_Wrapper .YButtonBox
-{
-	padding-top: 5px;
-}
-
-.SteamPad #B_Wrapper
-{
-	vertical-align: top;
-} 
-
-.SteamPad #B_Wrapper .BButtonBox
-{
-	padding-top: 2px;
-	padding-left: -18px;
-	background-image: url( "file://{images}/footer/b_button.png" );
-}
-
-.OSX.SteamPad #B_Wrapper .BButtonBox,.Linux.SteamPad #B_Wrapper .BButtonBox
-{
-	padding-top: 5px;
-}
-
-
 #LegendRow #RightLegend
 {
 	padding-top: 10px;
@@ -638,12 +437,6 @@ TenfootFooterPanel
 	horizontal-align: right;
 	vertical-align: top;
 }
-
-.SteamPad #LegendRow #RightLegend
-{
-	margin-top: 22px;
-}
-
 
 //
 // Cursor visible section
@@ -715,30 +508,6 @@ TenfootFooterPanel
 	margin: -20px;
 	margin-top: 0px;
 	border-radius: 4px;
-}
-
-.SteamPad.WebFooter #MiddleLegend
-{
-	background-color: #00000000;
-}
-
-.SteamPad.WebFooter #SteamPad_ABXY_Footer_Wrapper
-{
-	background-color: #000000bb;
-	border-radius: 4px;
-	margin: 0px 10px;
-}
-
-
-.SteamPad.WebFooter #LBInnerWrapper,
-.SteamPad.WebFooter #BACKInnerWrapper,
-.SteamPad.WebFooter #STARTInnerWrapper,
-.SteamPad.WebFooter #RBInnerWrapper
-{
-	background-color: #000000bb;
-	border-radius: 4px;
-	padding: 13px 0px;
-	margin: -13px 0px;
 }
 
 

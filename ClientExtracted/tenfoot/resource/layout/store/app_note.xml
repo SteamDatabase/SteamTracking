@@ -6,23 +6,18 @@
 
 	<StoreAppNoteSection defaultfocus="LearnMoreButton">
 		<Panel class="AppSectionWrapper">
-			<Label class="HeaderLabel" text="#Store_Note">
-				<Panel class="NoteIconWrapper" id="HeaderIconWrapper">
-					<Panel class="NoteIcon" id="WindowsIcon" />
-					<Panel class="NoteIcon" id="OSXIcon" />
-					<Panel class="NoteIcon" id="LinuxIcon" />
-					<Panel class="NoteIcon" id="SteamControllerIcon" />
-					<Panel class="NoteIcon" id="LegacyControllerIcon" />
-					<Panel class="NoteIcon" id="KeyboardMouseIcon" />
-					<Panel class="NoteIcon" id="EarlyAccessIcon" />
-				</Panel>
-			</Label>
+			<Label class="HeaderLabel" text="#Store_Note"/>
 			<Panel class="AppSectionBody">
 				<Panel class="AppSectionSmallBody">
-					<Label class="AppSectionOverviewLabel" id="RequiresOverviewStreamingAndController" text="#Store_RequiresOverview_StreamingAndController" />
-					<Label class="AppSectionOverviewLabel" id="RequiresOverviewStreaming" text="#Store_RequiresOverview_Streaming" />
-					<Label class="AppSectionOverviewLabel" id="RequiresOverviewController" text="#Store_RequiresOverview_Controller" />
-					<Label class="AppSectionOverviewLabel" id="RequiresOverviewEarlyAccess" text="#Store_RequiresOverview_EarlyAccess" />
+					<Panel class="NoteIconWrapper" id="HeaderIconWrapper">
+						<Panel class="NoteIcon" id="WindowsIcon" />
+						<Panel class="NoteIcon" id="OSXIcon" />
+						<Panel class="NoteIcon" id="LinuxIcon" />
+						<Panel class="NoteIcon" id="SteamControllerIcon" />
+						<Panel class="NoteIcon" id="LegacyControllerIcon" />
+						<Panel class="NoteIcon" id="KeyboardMouseIcon" />
+						<Panel class="NoteIcon" id="EarlyAccessIcon" />
+					</Panel>
 				</Panel>
 				<Panel class="AppSectionLargeBody" childfocusonhover="true">
 					<Panel class="Note" id="RequiresStreaming">

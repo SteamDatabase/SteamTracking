@@ -9,6 +9,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/BaseFileSystem.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/BaseFileSystem.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/filesystem.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/basetypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/dbg.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memalloc.h

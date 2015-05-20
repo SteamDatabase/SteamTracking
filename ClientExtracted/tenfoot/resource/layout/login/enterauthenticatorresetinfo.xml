@@ -1,0 +1,34 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		<include src="file://{resources}/styles/login/createaccount.css" />
+	</styles>
+
+	<EnterAuthenticatorResetInfo class="WizardChild" tabindex="auto" selectionpos="auto">
+		<Label class="WizardChildTitle" text="#LostAuthenticator_Title" />
+		<Label class="WizardChildDescription" id="LostAuthenticator_RCode_Description" text="#LostAuthenticator_EnterRecoveryCode_Description" />
+		<Label class="WizardChildDescription" id="LostAuthenticator_SmsCode_Description" text="#LostAuthenticator_EnterSmsCode_Description" />
+		<Label class="WizardErrorLabel" id="MessageLabel" />
+
+		<Panel class="InputContainerDown GapDown">
+			<Label class="WizardLabel" id="LostAuthenticator_RCode" text="#LostAuthenticator_RCode" />
+			<Label class="WizardLabel" id="LostAuthenticator_SmsCode" text="#LostAuthenticator_SmsCode" />
+			<TextEntry class="WizardTextEntry" id="ExtraCodeTextEntry"
+					textinputid="InnerValidationCodeTextEntry"
+					textinputhidesuggestions="1"
+					textinputclass="HalfWidth DockRight AppearFromBottomCenter" />
+		</Panel>
+
+		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#WizardButton_Next" />
+			</Button>
+			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
+				<Label id="Label" text="#WizardButton_Cancel" />
+			</Button>
+		</Panel>
+
+	</EnterAuthenticatorResetInfo>
+
+</root>

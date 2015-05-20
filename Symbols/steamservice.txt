@@ -1098,6 +1098,7 @@
  T ASN1_STRING_TABLE_add
  T ASN1_STRING_TABLE_cleanup
  T ASN1_STRING_TABLE_get
+ T ASN1_STRING_clear_free
  T ASN1_STRING_cmp
  T ASN1_STRING_copy
  T ASN1_STRING_data
@@ -1881,7 +1882,6 @@
  T CPosixRegistryManager::LoadRegistryVDF()
  T CPosixRegistryManager::SaveRegistryVDF()
  T CPosixRegistryManager::~CPosixRegistryManager()
- T CRC32_ProcessBuffer(unsigned int*, void const*, int)
  T CRC32_ProcessSingleBuffer(void const*, int)
  T CRL_DIST_POINTS_free
  T CRL_DIST_POINTS_new
@@ -1889,6 +1889,7 @@
  T CRSAKeyBase::SetFromHexEncodedString(char const*)
  T CRSAKeyBase::~CRSAKeyBase()
  T CRTime::CRTime()
+ T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::UpdateRealTime()
  T CRYPTO_THREADID_cmp
@@ -2226,6 +2227,7 @@
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(char const*, int*)
+ T CUtlFmtString::CUtlFmtString(char const*, ...)
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::Purge()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::~CUtlHashMap()
@@ -2301,30 +2303,24 @@
  T CUtlLinkedList<CBaseScheduledFunction*, int>::Free(int)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::InsertBefore(int, CBaseScheduledFunction* const&)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CBaseScheduledFunction*, int>::Previous(int) const
  T CUtlLinkedList<CBaseScheduledFunction*, int>::RemoveAll()
  T CUtlLinkedList<CBaseScheduledFunction*, int>::Unlink(int)
  T CUtlLinkedList<CCoroutine, int>::AllocInternal(bool)
  T CUtlLinkedList<CCoroutine, int>::Free(int)
  T CUtlLinkedList<CCoroutine, int>::InsertBefore(int)
  T CUtlLinkedList<CCoroutine, int>::LinkBefore(int, int)
- T CUtlLinkedList<CCoroutine, int>::Previous(int) const
  T CUtlLinkedList<CCoroutine, int>::RemoveAll()
  T CUtlLinkedList<CCoroutine, int>::Unlink(int)
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::Free(int)
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::Next(int) const
- T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::Previous(int) const
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::RemoveAll()
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::Unlink(int)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::Free(int)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::InsertBefore(int, CJobMgr::JobYielding_t const&)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<CJobMgr::JobYielding_t, int>::Previous(int) const
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::RemoveAll()
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::Unlink(int)
- T CUtlLinkedList<CLogWatchParam, int>::Next(int) const
  T CUtlLinkedList<CLogWatchParam, int>::RemoveAll()
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::RemoveAll()
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::~CUtlLinkedList()
@@ -2334,23 +2330,17 @@
  T CUtlLinkedList<CServerPipe*, int>::AllocInternal(bool)
  T CUtlLinkedList<CServerPipe*, int>::Free(int)
  T CUtlLinkedList<CServerPipe*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CServerPipe*, int>::Next(int) const
- T CUtlLinkedList<CServerPipe*, int>::Previous(int) const
  T CUtlLinkedList<CServerPipe*, int>::RemoveAll()
  T CUtlLinkedList<CServerPipe*, int>::Unlink(int)
- T CUtlLinkedList<CWatchingLog, int>::Next(int) const
  T CUtlLinkedList<CWatchingLog, int>::RemoveAll()
  T CUtlLinkedList<CWatchingLog, int>::~CUtlLinkedList()
  T CUtlLinkedList<CWorkItemFunctionCall*, int>::AllocInternal(bool)
  T CUtlLinkedList<CWorkItemFunctionCall*, int>::Free(int)
  T CUtlLinkedList<CWorkItemFunctionCall*, int>::InsertBefore(int, CWorkItemFunctionCall* const&)
  T CUtlLinkedList<CWorkItemFunctionCall*, int>::LinkBefore(int, int)
- T CUtlLinkedList<CWorkItemFunctionCall*, int>::Next(int) const
- T CUtlLinkedList<CWorkItemFunctionCall*, int>::Previous(int) const
  T CUtlLinkedList<CWorkItemFunctionCall*, int>::RemoveAll()
  T CUtlLinkedList<CWorkItemFunctionCall*, int>::Unlink(int)
  T CUtlLinkedList<CallbackMsg_t, int>::Free(int)
- T CUtlLinkedList<CallbackMsg_t, int>::Previous(int) const
  T CUtlLinkedList<CallbackMsg_t, int>::RemoveAll()
  T CUtlLinkedList<CallbackMsg_t, int>::Unlink(int)
  T CUtlLinkedList<NetPacketToDelete_t, int>::RemoveAll()
@@ -2359,8 +2349,6 @@
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Free(int)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::InsertBefore(int, SteamStdLib::CCommandLine::CommandLineParam_t const&)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Next(int) const
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Previous(int) const
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::RemoveAll()
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Unlink(int)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Validate(CValidator&, char const*)
@@ -2368,7 +2356,6 @@
  T CUtlLinkedList<TimeDilationRecord_t, int>::Free(int)
  T CUtlLinkedList<TimeDilationRecord_t, int>::InsertBefore(int, TimeDilationRecord_t const&)
  T CUtlLinkedList<TimeDilationRecord_t, int>::LinkBefore(int, int)
- T CUtlLinkedList<TimeDilationRecord_t, int>::Previous(int) const
  T CUtlLinkedList<TimeDilationRecord_t, int>::RemoveAll()
  T CUtlLinkedList<TimeDilationRecord_t, int>::Unlink(int)
  T CUtlLinkedList<unsigned int, int>::RemoveAll()
@@ -2494,6 +2481,11 @@
  T CUtlString::Format(char const*, ...)
  T CUtlString::FormatV(char const*, char*)
  T CUtlString::VAppendFormat(char const*, char*)
+ T CUtlStringBuilder::Data::FreeHeap()
+ T CUtlStringBuilder::Data::MoveToHeap()
+ T CUtlStringBuilder::Data::SetError(bool)
+ T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
+ T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlThreadSafeQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlThreadSafeQueue<CLogEvent*>::BRemoveAtHead(CLogEvent**)
  T CUtlThreadSafeQueue<CLogEvent*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
@@ -2570,6 +2562,10 @@
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::InsertBefore(int)
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::ShiftElementsRight(int, int)
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::~CUtlVector()
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::AddToTail(EventHeader_t const*&&)
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::GrowVector(int)
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::~CUtlVector()
@@ -2705,6 +2701,7 @@
  T ConCommandBase::GetFlags() const
  T ConCommandBase::GetTargetType() const
  T ConCommandBase::IsBitSet(unsigned int) const
+ T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
  T ConVar::ApplyReplicatedValue(char const*)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
@@ -2716,11 +2713,13 @@
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
  T ConVar::Init()
+ T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
+ T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetValue(char const*)
@@ -3372,7 +3371,6 @@
  T CryptoPP::TF_ObjectImplBase<CryptoPP::TF_VerifierBase, CryptoPP::TF_SignatureSchemeOptions<CryptoPP::TF_SS<CryptoPP::PKCS1v15, CryptoPP::SHA1, CryptoPP::RSA, int>, CryptoPP::RSA, CryptoPP::PKCS1v15_SignatureMessageEncodingMethod, CryptoPP::SHA1>, CryptoPP::RSAFunction>::GetTrapdoorFunctionBounds() const
  T CryptoPP::TF_ObjectImplBase<CryptoPP::TF_VerifierBase, CryptoPP::TF_SignatureSchemeOptions<CryptoPP::TF_SS<CryptoPP::PKCS1v15, CryptoPP::SHA1, CryptoPP::RSA, int>, CryptoPP::RSA, CryptoPP::PKCS1v15_SignatureMessageEncodingMethod, CryptoPP::SHA1>, CryptoPP::RSAFunction>::GetTrapdoorFunctionInterface() const
  T CryptoPP::TF_ObjectImplBase<CryptoPP::TF_VerifierBase, CryptoPP::TF_SignatureSchemeOptions<CryptoPP::TF_SS<CryptoPP::PKCS1v15, CryptoPP::SHA1, CryptoPP::RSA, int>, CryptoPP::RSA, CryptoPP::PKCS1v15_SignatureMessageEncodingMethod, CryptoPP::SHA1>, CryptoPP::RSAFunction>::NewVerificationAccumulator() const
- T CryptoPP::TF_SS<CryptoPP::PKCS1v15, CryptoPP::SHA1, CryptoPP::RSA, int>::StaticAlgorithmName()
  T CryptoPP::TF_SignatureSchemeBase<CryptoPP::PK_Verifier, CryptoPP::TF_Base<CryptoPP::TrapdoorFunction, CryptoPP::PK_SignatureMessageEncodingMethod> >::AllowNonrecoverablePart() const
  T CryptoPP::TF_SignatureSchemeBase<CryptoPP::PK_Verifier, CryptoPP::TF_Base<CryptoPP::TrapdoorFunction, CryptoPP::PK_SignatureMessageEncodingMethod> >::IsProbabilistic() const
  T CryptoPP::TF_SignatureSchemeBase<CryptoPP::PK_Verifier, CryptoPP::TF_Base<CryptoPP::TrapdoorFunction, CryptoPP::PK_SignatureMessageEncodingMethod> >::MaxRecoverableLength() const
@@ -7084,6 +7082,7 @@
  b s_SpewType
  b s_UniformStream
  b s_bCPUHasFastREPMOVSB
+ b s_bHWAccelCRC32
  b s_bSetSigHandler
  b s_pFileName
  b s_pSpewGroups
@@ -7658,6 +7657,7 @@
  memset
  mkdir
  mktemp
+ mktime$UNIX2003
  nanosleep$UNIX2003
  open$UNIX2003
  opendir$UNIX2003
@@ -7670,6 +7670,7 @@
  printf
  pthread_attr_init
  pthread_attr_setstacksize
+ pthread_cond_broadcast
  pthread_cond_destroy
  pthread_cond_init$UNIX2003
  pthread_cond_signal
@@ -7803,7 +7804,7 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
- r pulCRCTable
+ r s_rgCRCTable_Standard
  r s_szSignatureName
  r sigoid_srt
  r sn_objs
@@ -7911,6 +7912,7 @@
  t (anonymous namespace)::protobuf_RegisterTypes(std::string const&)
  t B64_write_ASN1
  t BN_from_montgomery_word
+ t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t CryptoPP::TrySSE2()
  t CryptoPP::TwosComplement(unsigned int*, unsigned long)
  t FileSelect(dirent const*)

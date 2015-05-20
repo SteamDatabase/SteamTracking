@@ -1,0 +1,458 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
+	</styles>
+
+	<ControllerPropertiesMode defaultfocus="ModeDropDown">
+
+		<Panel id="PropertiesBackground">
+			<Panel id="TabBackground" />
+		</Panel>
+
+		<Panel class="ColumnContainer" selectionpos="auto" tabindex="auto">
+			<!--
+				Left Column
+			-->
+			<Panel id="LeftColumn" class="Column">
+				<!-- Top tab -->
+				<Panel class="FieldWrapper TabHeader" id="ModeTab" >
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InputStyle" />
+					<DropDown id="ModeDropDown" />
+				</Panel>
+
+				<!-- Dpad Mode -->
+				<Panel class="FieldWrapper DpadMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
+					<DropDown id="RequiresClick" />
+				</Panel>
+				<Panel class="FieldWrapper DpadMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Chording" />
+					<DropDown id="Chording" />
+				</Panel>
+				<Panel class="FieldWrapper DpadMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
+				</Panel>
+
+				<!-- Dpad Mode Advanced -->
+				<Panel class="FieldWrapper DpadMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
+					<DropDown id="HoldRepeatsDpad" />
+				</Panel>
+				<Panel class="FieldWrapper DpadMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
+					<Slider id="HoldRepeatIntervalDpad" direction="horizontal" />
+				</Panel>
+
+				<!-- ABXY Mode -->
+				<Panel class="FieldWrapper ABXYMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
+					<DropDown id="HoldRepeatsFourButtons" />
+				</Panel>
+				<Panel class="FieldWrapper ABXYMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
+					<Slider id="HoldRepeatIntervalFourButtons" direction="horizontal" />
+				</Panel>
+				
+				<Panel class="FieldWrapper ABXYMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ButtonRadius" />
+					<Slider id="ButtonRadiusFourButtons" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper ABXYMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ButtonDistance" />
+					<Slider id="ButtonDistanceFourButtons" direction="horizontal" />
+				</Panel>
+
+        <!-- Joystick Move Mode -->
+        <Panel class="FieldWrapper JoystickMoveMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
+          <DropDown id="OutputJoystick" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClick" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingJoystick" />
+        </Panel>
+
+        <!-- Joystick Move Mode Advanced -->
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
+          <DropDown id="AdaptiveCentering" />
+        </Panel>
+        <!-- 
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_VirtualCapSize" />
+          <Slider id="VirtualCapSize" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_VirtualStickThrow" />
+          <Slider id="VirtualStickThrow" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZone" />
+          <Slider id="AntiDeadZone" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZoneBuffer" />
+          <Slider id="AntiDeadZoneBuffer" direction="horizontal" />
+        </Panel>
+        -->
+
+        <!-- Joystick Camera Mode -->
+        <Panel class="FieldWrapper JoystickCameraMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+          <DropDown id="HapticIntensityJoystickCameraMode" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickCameraMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
+          <DropDown id="CurveExponentCameraMode" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickCameraMode">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_SwipeDuration" />
+          <DropDown id="SwipeDurationCameraMode" />
+        </Panel>
+
+        <!-- Joystick Camera Mode Advanced -->
+
+        <!-- Mouse Mode -->
+				<Panel class="FieldWrapper MouseMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Trackball" />
+					<DropDown id="Trackball" />
+				</Panel>
+				<Panel class="FieldWrapper MouseMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
+					<Slider id="Sensitivity" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper MouseMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
+					<Slider id="RotationAbsMouse" direction="horizontal" />
+				</Panel>
+
+				<!-- Mouse Mode Advanced -->
+				<Panel class="FieldWrapper MouseMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Friction" />
+					<DropDown id="Friction" />
+				</Panel>
+				<Panel class="FieldWrapper MouseMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_FrictionVertScale" />
+					<Slider id="VerticalFriction" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper MouseMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
+					<Slider id="VerticalSensitivity" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper MouseMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Smoothing" />
+					<Slider id="SmoothingAbsMouse" direction="horizontal" />
+				</Panel>
+
+				<!-- Relative Mouse Mode -->
+				<Panel class="FieldWrapper RelMouseMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
+					<Slider id="SensitivityRelMouse" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper RelMouseMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
+					<DropDown id="AdaptiveCenteringRelMouse" />
+				</Panel>
+				<Panel class="FieldWrapper RelMouseMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_VirtualCapSize" />
+					<Slider id="VirtualCapSizeRelMouse" direction="horizontal" />
+				</Panel>
+
+				<!-- ScrollWheel Mode -->
+				<Panel class="FieldWrapper ScrollWheelMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
+					<Slider id="SensitivityScrollWheel" direction="horizontal" />
+				</Panel>				
+				<Panel class="FieldWrapper ScrollWheelMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelClockwise" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelClockwise" />
+				</Panel>
+				<Panel class="FieldWrapper ScrollWheelMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelCounterClockwise" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelCounterClockwise" />
+				</Panel>
+
+				<!-- Trigger Mode -->
+				<Panel class="FieldWrapper TriggerMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerClick" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerClick" />
+				</Panel>
+				<Panel class="FieldWrapper TriggerMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
+					<DropDown id="HoldRepeatsTrigger" />
+				</Panel>
+				<Panel class="FieldWrapper TriggerMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
+					<Slider id="HoldRepeatIntervalTrigger" direction="horizontal" />
+				</Panel>
+				
+			</Panel>
+			
+			<!--
+				Middle Column
+			-->
+			<Panel id="MiddleColumn" class="Column">
+				<!-- Dpad Mode -->
+				<Panel id="CenterImageDpad" class="CenterImage DpadMode">
+					<Panel id="DpadButtonContainer" class="FlowDown">
+						<ControllerBindingButton id="DpadUpButton" type="glyph" />
+						<Panel id="DpadButtonContainer" class="FlowRight">
+							<ControllerBindingButton id="DpadLeftButton" type="glyph" />
+							<ControllerBindingButton id="DpadRightButton" type="glyph" />
+						</Panel>
+						<ControllerBindingButton id="DpadDownButton" type="glyph" />
+					</Panel>
+				</Panel>
+
+				<!-- ABXY Mode -->
+				<Panel id="CenterImageABXY" class="CenterImage ABXYMode">
+					<Panel id="DpadButtonContainer" class="FlowDown">
+						<ControllerBindingButton id="YButton" type="glyph" />
+						<Panel id="ABXYButtonContainer" class="FlowRight">
+							<ControllerBindingButton id="XButton" type="glyph" />
+							<ControllerBindingButton id="BButton" type="glyph" />
+						</Panel>
+						<ControllerBindingButton id="AButton" type="glyph" />
+					</Panel>
+				</Panel>
+
+        <!-- Joystick Move Mode -->
+        <Panel id="CenterImageJoystick" class="CenterImage JoystickMoveMode" />
+
+        <!-- Joystick Move Mode Advanced -->
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
+          <DropDown id="CurveExponent" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneInnerRadius" />
+          <Slider id="DeadZoneInnerRadius" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneOuterRadius" />
+          <Slider id="DeadZoneOuterRadius" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneShape" />
+          <DropDown id="DeadZoneShape" />
+        </Panel>
+
+        <!-- Joystick Camera Mode -->
+        <Panel id="CenterImageJoystick" class="CenterImage JoystickCameraMode" />
+
+        <!-- Joystick Camera Mode Advanced -->
+
+        <!-- Mouse Mode -->
+				<Panel id="CenterImageMouse" class="CenterImage MouseMode" >
+					<Panel id="CenterImageMouseRotation" class ="CenterImage MouseMode" />
+				</Panel>
+
+				<!-- Mouse Mode Advanced -->
+				<Panel class="FieldWrapper MouseMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Acceleration" />
+					<DropDown id="Acceleration" />
+				</Panel>
+				<Panel class="FieldWrapper MouseMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTap" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="DoubleTap" />
+				</Panel>
+				<Panel class="FieldWrapper MouseMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTapDuration" />
+					<Slider id="DoubleTapDuration" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper MouseMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTapBeep" />
+					<DropDown id="DoubleTapBeep" />
+				</Panel>
+				
+				<!-- Relative Mouse Mode -->
+				<Panel id="CenterImageRelMouse" class="CenterImage RelMouseMode" />
+
+				<!-- ScrollWheel Mode -->
+				<Panel id="CenterImageScrollWheel" class="CenterImage ScrollWheelMode" />
+
+				<!-- Trigger Mode -->
+				<Panel class="FieldWrapper TriggerMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputTrigger" />
+					<DropDown id="OutputTrigger" />
+				</Panel>
+				<Panel class="FieldWrapper TriggerMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneStart" />
+					<Slider id="TriggerDeadZoneStart" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper TriggerMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneEnd" />
+					<Slider id="TriggerDeadZoneEnd" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper TriggerMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerCurveExponent" />
+					<DropDown id="TriggerCurveExponent" />
+				</Panel>
+				
+
+			</Panel>
+
+			<!--
+				Right Column
+			-->
+			<Panel id="RightColumnWrapper">
+				<Panel id="RightColumn" class="Column">
+					<Panel class="FieldWrapper TabHeader" id="ModeShiftButtonTab" >
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ModeShifting" />
+						<ControllerBindingButton id="ModeShiftButton" descriptive="true" onactivate="ShowModeShift( true );" />
+					</Panel>
+
+					<Panel class="FieldWrapper TabHeader" id="ModeShiftPulldownTab" >
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ModeShiftButton" />
+						<DropDown id="ModeShiftDropDown" />
+					</Panel>
+
+					<!-- Dpad Mode -->
+					<Panel class="FieldWrapper DpadMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+						<DropDown id="HapticIntensityDpad" />
+					</Panel>
+					<Panel class="FieldWrapper DpadMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Deadzone" />
+						<Slider id="Deadzone" direction="horizontal" />
+					</Panel>
+
+					<!-- Dpad Mode Advanced -->
+					<Panel class="FieldWrapper DpadMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
+						<Slider id="EdgeBindingRadiusDpad" direction="horizontal" />
+					</Panel>
+					<Panel class="FieldWrapper DpadMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingDpad" />
+					</Panel>
+					<Panel class="FieldWrapper DpadMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
+						<DropDown id="EdgeBindingInvertDpad" />
+					</Panel>
+
+					<!-- ABXY Mode -->
+					<Panel class="FieldWrapper ABXYMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+						<DropDown id="HapticIntensityFourButtons" />
+					</Panel>
+					<Panel class="FieldWrapper ABXYMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
+						<DropDown id="RequiresClickFourButtons" />
+					</Panel>
+
+          <!-- Joystick Move Mode -->
+          <Panel class="FieldWrapper JoystickMoveMode">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+            <DropDown id="HapticIntensityJoystick" />
+          </Panel>
+
+          <!-- Joystick Move Mode Advanced -->
+          <Panel class="FieldWrapper JoystickMoveMode Advanced">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
+            <Slider id="EdgeBindingRadiusJoystick" direction="horizontal" />
+          </Panel>
+          <Panel class="FieldWrapper JoystickMoveMode Advanced">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
+            <DropDown id="EdgeBindingInvertJoystick" />
+          </Panel>
+
+          <!-- Joystick Camera Mode -->
+          <Panel class="FieldWrapper JoystickCameraMode">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
+            <DropDown id="OutputJoystickCameraMode" />
+          </Panel>
+          <Panel class="FieldWrapper JoystickCameraMode">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
+            <ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClickCameraMode" />
+          </Panel>
+
+          <!-- Joystick Camera Mode Advanced -->
+
+          <!-- Mouse Mode -->
+					<Panel class="FieldWrapper MouseMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+						<DropDown id="HapticIntensityAbsMouse" />
+					</Panel>
+					<Panel class="FieldWrapper MouseMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseClick" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseClick" />
+					</Panel>
+
+					<!-- Mouse Mode Advanced -->
+					<Panel class="FieldWrapper MouseMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeSpinRadius" />
+						<Slider id="EdgeSpinRadius" direction="horizontal" />
+					</Panel>
+					<Panel class="FieldWrapper MouseMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeSpinVelocity" />
+						<Slider id="EdgeSpinScale" direction="horizontal" />
+					</Panel>
+					<Panel class="FieldWrapper MouseMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
+						<DropDown id="InvertMouseY" />
+					</Panel>
+					
+					<!-- Relative Mouse Mode -->
+					<Panel class="FieldWrapper RelMouseMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+						<DropDown id="HapticIntensityRelMouse" />
+					</Panel>
+					<Panel class="FieldWrapper RelMouseMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseClick" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="RelMouseClick" />
+					</Panel>
+					
+					<!-- ScrollWheel Mode -->
+					<Panel class="FieldWrapper ScrollWheelMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+						<DropDown id="HapticIntensityScrollWheel" />
+					</Panel>
+					<Panel class="FieldWrapper ScrollWheelMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelClick" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelClick" />
+					</Panel>
+					
+					<!-- Trigger Mode -->
+					<Panel class="FieldWrapper TriggerMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThresholdBinding" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerAnalogThresholdBinding" />
+					</Panel>
+					<Panel class="FieldWrapper TriggerMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
+						<Slider id="TriggerThreshold" direction="horizontal" />
+					</Panel>
+					<Panel class="FieldWrapper TriggerMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerAdaptiveThreshold" />
+						<DropDown id="AdaptiveThreshold" />
+					</Panel>					
+					<Panel class="FieldWrapper TriggerMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerHapticIntensity" />
+						<DropDown id="HapticIntensityTriggerThreshold" />
+					</Panel>
+				</Panel>
+				
+				<!-- Show advanced properties button -->
+				<Panel class="FieldWrapper AdvancedPropertiesWrapper" id="ShowAdvancedProperties">
+					<Button onactivate="ShowAdvancedProperties( true );">
+						<Label text="#Library_Details_Controller_AdvancedSettings" />
+					</Button>
+				</Panel>
+
+				<!-- Hide advanced properties button -->
+				<Panel class="FieldWrapper AdvancedPropertiesWrapper" id="HideAdvancedProperties">
+					<Button onactivate="ShowAdvancedProperties( false );">
+						<Label text="#UI_Back" />
+					</Button>
+				</Panel>
+			</Panel>
+		</Panel>
+	</ControllerPropertiesMode>
+</root>

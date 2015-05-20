@@ -1,0 +1,91 @@
+"controller_mappings"
+{
+	"version" "2"
+	"game" "Simple Mouse"
+	"title" "Mouse"
+	"description" "This is a template configuration for games that use a mouse."
+
+	"group"
+	{
+		"id"		"0"
+		"mode"		"four_buttons"
+	}
+	"group"
+	{
+		"id"		"1"
+		"mode"		"dpad"
+		"settings"
+		{
+			"deadzone"		"5000"
+		}
+	}
+	"group"
+	{
+		"id"		"2"
+		"mode"		"absolute_mouse"
+		"settings"
+		{
+			"sensitivity"		"99"
+			"doubetap_max_duration"		"324"
+		}
+	}
+	"group"
+	{
+		"id"		"3"
+		"mode"		"dpad"
+		"settings"
+		{
+			"deadzone"		"5000"
+		}
+	}
+	"group"
+	{
+		"id"		"4"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"edge"		"mouse_button RIGHT"
+		}
+		"settings"
+		{
+			"adaptive_threshold"		"0"
+			"hold_repeat_inverval"		"99"
+		}
+	}
+	"group"
+	{
+		"id"		"5"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"edge"		"mouse_button LEFT"
+		}
+		"settings"
+		{
+			"adaptive_threshold"		"0"
+			"hold_repeat_inverval"		"99"
+		}
+	}
+	"group_source_bindings"
+	{
+		"0"		"button_diamond active"
+		"1"		"left_trackpad active"
+		"2"		"right_trackpad active"
+		"3"		"joystick active"
+		"4"		"left_trigger active"
+		"5"		"right_trigger active"
+	}
+	"switch_bindings"
+	{
+		"bindings"
+		{
+			"button_menu"		"key_press TAB"
+			"button_escape"		"key_press ESCAPE"
+		}
+	}
+	"settings"
+	{
+		"left_trackpad_mode"		"0"
+		"right_trackpad_mode"		"0"
+	}
+}

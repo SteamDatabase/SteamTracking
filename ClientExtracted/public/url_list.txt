@@ -227,6 +227,11 @@ SupportFrontPage
 	url			"http://support.steampowered.com/"
 	method		"external"
 }
+HelpFrontPage
+{
+	url			"%help%/"
+	method		"internal"
+}
 SupportNewTicket
 {
 	url			"https://support.steampowered.com/newticket.php"
@@ -242,6 +247,11 @@ SupportAppPage
 {
 	url			"https://support.steampowered.com/kb_article.php?appid=%p1%"
 	method		"external"
+}
+HelpAppPage
+{
+	url			"%help%/#HelpWithGame/?appid=%p1%"
+	method		"internal"
 }
 
 
@@ -535,7 +545,7 @@ CommunityFriendInventory
 }
 CommunityMarketItemPicker
 {
-	url			"%community%/profiles/%p1%/inventory/?market=1"
+	url			"%community%/profiles/%p1%/inventory/?market=1&moveupevent=%p2%"
 	method		"internal"
 	filter		"profile"
 }
@@ -584,7 +594,7 @@ SteamIDCommunityFilesPage
 }
 SteamWorkshopPage
 {
-	url		"%community%/workshop/browse?appid=%p1%"
+	url		"%community%/app/%p1%/workshop/"
 	method		"internal"
 	filter		"community"
 }
@@ -621,6 +631,18 @@ CommunityMarketListings
 CommunityMarketSellDialog
 {
 	url		"%community%/market/selldialog/%p1%/%p2%/%p3%/"
+	method		"internal"
+	filter		"community"
+}
+CommunityMarketBuyDialog
+{
+	url		"%community%/market/buydialog/%p1%/?filter=%p2%"
+	method		"internal"
+	filter		"community"
+}
+CommunityMarketCreateBuyOrderDialog
+{
+	url		"%community%/market/buyorderdialog/%p1%/%p2%/?filter=%p3%"
 	method		"internal"
 	filter		"community"
 }
