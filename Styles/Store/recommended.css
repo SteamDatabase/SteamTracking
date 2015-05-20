@@ -1644,7 +1644,9 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	overflow: hidden;
 	position: relative;
 }
-.review_box.partial .content b {
+.review_box.partial .content b,
+.review_box.expanded .content b
+{
 	font-weight: normal;
 	font-family: "Motiva Sans Bold", Arial, Helvetica, sans-serif;
 }

@@ -1328,6 +1328,12 @@ span.platform_img.linux {
 	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_platform_linux.png' );
 }
 
+span.platform_img.streamingvideo {
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/v6/icon_streamingvideo_v6.png' );
+	background-position-y: 3px;
+	background-position-x: 2px;
+}
+
 /* GLOBAL TAG STYLES */
 
 .app_tag {

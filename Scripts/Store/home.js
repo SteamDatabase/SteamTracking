@@ -540,6 +540,10 @@ GHomepage = {
 	{
 		var strHTML = '';
 		var nPlatforms = 0;
+
+		if ( rgItemData.video )
+			return '<span class="platform_img streamingvideo"></span>';
+
 		if ( rgItemData.os_windows )
 		{
 			strHTML += '<span class="platform_img win"></span>';

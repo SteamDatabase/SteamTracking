@@ -101,6 +101,11 @@ CVideoWatch.prototype.WaitUnlockH264 = function( rtStart )
 	setTimeout( function() { _watch.WaitUnlockH264( rtStart ); }, 5000 );
 }
 
+CVideoWatch.prototype.BlockedPlaybackMessage = function()
+{
+	this.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
+}
+
 CVideoWatch.prototype.Start = function()
 {
 	var _watch = this;
@@ -206,6 +211,9 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					break;
 				case 20:
 					_watch.ShowVideoError( 'The video service is not available.' );
+					break;
+				case 82:
+					_watch.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
 					break;
 				default:
 					_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );

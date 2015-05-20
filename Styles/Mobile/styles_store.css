@@ -2079,6 +2079,13 @@ a.trigger, a.activetrigger {
 	height: 19px;
 }
 
+.platform_img.streamingvideo {
+	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/mobile/icon_streamingvideo_mobile.png' );
+	background-size: 17.5px 19px;
+	width: 17.5px;
+	height: 19px;
+}
+
 span.platform_img {
 	display: inline-block;
 	margin-left: 2px;
