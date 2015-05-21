@@ -822,6 +822,7 @@ LibraryAppDetails .ContentsRow
 {
 	font-family: platformfont;
 	margin: 30px 20px 6px 18px;
+	padding-right: 8px;
 	font-size: 38px;
 	color: detailsdatalabel;
 	opacity: 1.0;
@@ -1047,7 +1048,8 @@ ParentalButton.Locked
 .RecentNews,
 .Workshop,
 .Screenshots,
-.Controller
+.Controller,
+.DLC
 {
 	margin-left: -36px;
 	margin-right: -36px;
@@ -1071,7 +1073,8 @@ ParentalButton.Locked
 .RecentNews:hover,
 .Workshop:hover,
 .Screenshots:hover,
-.Controller:hover
+.Controller:hover,
+.DLC:hover
 {
 	pre-transform-scale2d: 0.85072, 0.5356;
 }
@@ -1086,6 +1089,7 @@ ParentalButton.Locked
 .Workshop:descendantfocus, .Workshop:focus,
 .Screenshots:descendantfocus, .Screenshots:focus,
 .Controller:descendantfocus, .Controller:focus,
+.DLC:descendantfocus, .DLC:focus,
 {
 	pre-transform-scale2d: 1.0, 1.0;
 	transform: translatey( 0px );
@@ -1123,6 +1127,7 @@ ParentalButton.Locked
 .Workshop:descendantfocus:hover,
 .Screenshots:descendantfocus:hover,
 .Controller:descendantfocus:hover,
+.DLC:descendantfocus:hover,
 {
 	pre-transform-scale2d: 1.0, 1.0;
 	z-index: 100;
@@ -1145,6 +1150,7 @@ ParentalButton.Locked
 .WorkshopFullWrapper,
 .ScreenshotsFullWrapper,
 .ControllerFullWrapper,
+.DLCFullWrapper,
 {
 	width: 100%;
 	height: 100%;
@@ -1166,6 +1172,7 @@ ParentalButton.Locked
 .Workshop:descendantfocus .WorkshopFullWrapper, .Workshop:focus .WorkshopFullWrapper,
 .Screenshots:descendantfocus .ScreenshotsFullWrapper, .Screenshots:focus .ScreenshotsFullWrapper,
 .Controller:descendantfocus .ControllerFullWrapper, .Controller:focus .ControllerFullWrapper,
+.DLC:descendantfocus .DLCFullWrapper, .DLC:focus .DLCFullWrapper,
 {
 	width: 100%;
 	height: 100%;
@@ -1477,7 +1484,7 @@ LibraryGuides .GuidesBody
 
 	pre-transform-scale2d: 1.15254, 1.15254;
 	transform: translatex( 54px ) translatey( 34px );
-	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate; 
+	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
@@ -1496,7 +1503,8 @@ LibraryGuides .GuidesSmallBody
 	transition-property: opacity !immediate;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
-
+	width: 100%;
+	height: 100%;
 	transform: translatex( 3px );
 }
 
@@ -1813,7 +1821,7 @@ LibraryController:focus .ControllerLargeBody, LibraryController:descendantfocus 
 	transform: translatex( 7px );
 }
 
-LibraryController .ControllerDetailImage, LibraryController .AddControllerDetailImage
+LibraryController .ControllerDetailImage, LibraryController .AddControllerDetailImage, LibraryController .TurnOffControllerDetailImage
 {
 	vertical-align: center;
 	width: 75px;
@@ -1834,6 +1842,11 @@ LibraryController .ControllerDetailImage, LibraryController .AddControllerDetail
 LibraryController .AddControllerDetailImage
 {
 	background-image: url( "file://{images}/library/add_controller_icon.png" );
+}
+
+LibraryController .TurnOffControllerDetailImage
+{
+	background-image: url( "file://{images}/library/turnoff_controller_icon.png" );
 }
 
 LibraryController .ControllerLabels 
@@ -1944,7 +1957,7 @@ LibraryController #ControllersRowTwo, LibraryController #ControllersRowThree
 	margin-top: 24px;
 }
 
-LibraryController .ControllerIcon, LibraryController .AddControllerIcon,
+LibraryController .ControllerIcon, LibraryController .AddControllerIcon, LibraryController .TurnOffControllerIcon
 {
 	width: 80px;
 	height: 80px;
@@ -1955,7 +1968,7 @@ LibraryController .ControllerIcon, LibraryController .AddControllerIcon,
 	border-color: #636363e0;
 }
 
-#ControllerWrapper8.ControllerIcon, #ControllerWrapper4.ControllerIcon, #ControllerWrapperAdd.AddControllerIcon
+#ControllerWrapper8.ControllerIcon, #ControllerWrapper4.ControllerIcon, #ControllerWrapperAdd.AddControllerIcon, #ControllerWrapperAdd.TurnOffControllerIcon
 {
 	margin-right: 0px;
 }
@@ -1980,7 +1993,15 @@ LibraryController .AddControllerIcon Image
 	background-repeat: no-repeat;
 }
 
-
+LibraryController .TurnOffControllerIcon Image
+{
+	width: 100%;
+	height: 100%;
+	box-shadow: fill #202020ff 0px 0px 6px 0px;
+	background-image: url( "file://{images}/library/turnoff_controller_icon.png" );
+	background-position: center;
+	background-repeat: no-repeat;
+}
 
 LibraryController .MoreRemainingLabel
 {
@@ -3710,6 +3731,7 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 .LibraryButton .ButtonLabel
 {
 	horizontal-align: center;
+	text-align: center;
 	vertical-align: center;
 	font-size: 48;
 	font-weight: light;
@@ -4620,7 +4642,8 @@ KeyboardShortcut Image
 .PlayActionModal .Workshop,
 .PlayActionModal .Screenshots
 .PlayActionModal .UpperRow,
-.PlayActionModal .Controller
+.PlayActionModal .Controller,
+.PlayActionModal .DLC
 {
 	desaturation: 0.3;
 	opacity: 0.7;
@@ -5168,3 +5191,168 @@ KeyboardShortcut Image
 	transition-timing-function: ease-in;
 }
 
+#DLC
+{
+	visibility: collapse;
+	width: 534px;
+}
+
+#DLC.ShowDLC
+{
+		visibility: visible;
+}
+
+
+LibraryDLCItem .LeftColum, LibraryDLCItem .RightColum
+{
+	flow-children: down;
+}
+
+LibraryDLCItem #Image
+{
+	width: 158px;
+	height: 74px;
+	margin: 4px;
+	margin-top: 8px;
+	margin-left: 8px;
+	transform: translateX( -7px );
+	
+	transition-property: transform;
+	transition-duration: shortduration;
+}
+
+LibraryDLCItem:descendantfocus #Image
+{
+	transform: translateX( 0px );
+	}
+
+LibraryDLCItem Label
+{
+	margin-left: 4px;
+	font-family: platformfont;
+	font-size: 38px;
+	font-weight: bold;
+	color: detailsdatalabelfocus;
+	
+	transition-property: color;
+	transition-duration: shortduration;
+}
+
+LibraryDLCItem Button:focus Label
+{
+	color: achievementstitledark;
+}
+
+
+#DLCTitle
+{
+	height: 60px;
+	font-size: 24px;
+	color: achievementstitle;
+	transform: translateX( 0px );
+		
+	transition-property: color, transform;
+	transition-duration: shortduration;
+}
+
+LibraryDLCItem Button:focus #DLCTitle
+{
+	color: achievementstitledark;
+	transform: translateX( 7px );
+}
+
+#DLCInstalled
+{
+	color: gradient( linear, 0% 0%, 0% 100%, from( #fdfdfd9f ), to( #bdbfbfaf ) );
+	transform: translateX( 0px );
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 4px;
+	
+	transition-property: color, transform;
+	transition-duration: shortduration;
+}
+
+LibraryDLCItem Button:focus #DLCInstalled
+{
+	color: achievementdetailsheaderdark;
+	transform: translateX( 7px );
+}
+
+LibraryDLCItem
+{
+	width: 100%;
+	margin-left: 4px;
+	margin-right: 10px;
+
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-right: 20px;
+}
+
+LibraryDLC #DLCItems
+{
+	overflow: squish scroll;
+	width: 100%;
+	height: 100%;
+	margin-right: 18px;
+	margin-bottom: 20px;
+	padding-top: -5px;
+	padding-bottom: -4px;
+	flow-children: down;
+	opacity: 0.8;
+	transform: translateX( 20px );
+	transition-property: transform, opacity;
+	transition-duration: shortduration;
+	height: 240px;
+	opacity-mask: url( "file://{images}/library/details_data_mask.tga" );
+}
+
+LibraryDLC:descendantfocus #DLCItems
+{
+	height: 100%;
+	opacity: 1.0;
+	transform: translateX( 10px );
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+}
+
+LibraryDLCItem #WrapperButton
+{
+	flow-children: right;
+}
+
+LibraryDLCItem.Deleting
+{
+	visibility: collapse;
+}
+
+LibraryDLCItem Button
+{
+	padding: 2px;
+	margin-left: 0px;
+	margin-right: 10px;
+	width: 100%;
+	border-width: 5px;
+}
+
+LibraryDLCItem Button:focus
+{
+
+	transform: translatex( 10px ) translatez( 0px );
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #fdfdfd9f ), to( #bdbfbfaf ) );
+	border-style: solid;
+	border-width: 5px;
+	border-color: #ffffffff;
+	transition-property: transform;
+	transition-duration: shortduration;
+	animation-name: links-and-more-button-focus; 
+	animation-duration: longduration;
+	animation-delay: 0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}

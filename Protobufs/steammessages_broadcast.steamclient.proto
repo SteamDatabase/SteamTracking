@@ -66,6 +66,7 @@ message CBroadcast_WatchBroadcast_Response {
 	optional uint32 num_viewers = 6;
 	optional int32 permission = 7;
 	optional bool is_rtmp = 8;
+	optional int32 seconds_delay = 9;
 }
 
 message CBroadcast_GetBroadcastStatus_Request {
@@ -79,6 +80,7 @@ message CBroadcast_GetBroadcastStatus_Response {
 	optional uint32 num_viewers = 3;
 	optional int32 permission = 4;
 	optional bool is_rtmp = 5;
+	optional int32 seconds_delay = 6;
 }
 
 message CBroadcast_InviteToBroadcast_Request {

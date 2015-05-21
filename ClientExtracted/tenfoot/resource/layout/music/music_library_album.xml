@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/music/music_library.css" />
 	</styles>
 	
-	<MusicLibraryAlbumPanel onmoveup="MusicLibraryActivateGridTabs( AlbumButton );"
+	<MusicLibraryAlbumPanel onmoveup="MusicLibraryAlbumMoveUp();"
 			defaultfocus="MusicAlbumGrid" selectionposboundary="vertical" >
 		
 		

@@ -34,6 +34,8 @@
  B ActivateViewAgreements::symbol
  B ActivityFeedNewsItemsResponse::symbol
  B AddAlbumToPlaylist::symbol
+ B AddAllPendingFriendInvites::symbol
+ B AddAllPendingGroupInvites::symbol
  B AddAppToFavorites::symbol
  B AddAppToUnblockedGames::symbol
  B AddArtistToPlaylist::symbol
@@ -277,6 +279,7 @@
  B CFriendsFeedItemMenuDetails::m_symbol
  B CFriendsFeedListItemCommunity::m_symbol
  B CFriendsFriendListItemCommunity::m_symbol
+ B CFriendsInvitePage::m_symbol
  B CFriendsInviteToLobbyDialog::m_symbol
  B CFriendsInviteToLobbyDialog::s_flLastCloseTime
  B CFriendsProfileDetails::m_symbol
@@ -299,7 +302,8 @@
  B CInboxMsgBox::m_symbol
  B CInputControllerAttachedMsg::default_instance_
  B CInputControllerDetachedMsg::default_instance_
- B CInputControllerStateHIDMsg::_default_payload_
+ B CInputControllerStateHIDMsg::_default_state_payload_
+ B CInputControllerStateHIDMsg::_default_status_payload_
  B CInputControllerStateHIDMsg::default_instance_
  B CInputControllerStateMsg::default_instance_
  B CInputControllerWirelessPresenceMsg::default_instance_
@@ -322,6 +326,8 @@
  B CLibraryControllerBindingsGordonPanel::m_symbol
  B CLibraryControllerPanel::m_symbol
  B CLibraryControllerVirtualKeyboardAndMouse::m_symbol
+ B CLibraryDLCItem::m_symbol
+ B CLibraryDLCPanel::m_symbol
  B CLibraryDetailsPanel::m_symbol
  B CLibraryEULAPanel::m_symbol
  B CLibraryFriend::m_symbol
@@ -1047,6 +1053,8 @@
  B CreatingAccountResult::symbol
  B CryptoPP::AAD_CHANNEL
  B CryptoPP::BufferedTransformation::NULL_CHANNEL
+ B DLCInstall::symbol
+ B DLCViewInStore::symbol
  B DaisyWheelNextFocus::symbol
  B DaisyWheelSettings::symbol
  B DaisyWheelShowThisLanguage::symbol
@@ -1081,6 +1089,7 @@
  B DisplayInboxDropdownInternal::symbol
  B DisplaySystemMessages::symbol
  B DoRunUninstall::symbol
+ B DongleTooOld::symbol
  B DownloadsActivate::symbol
  B DownloadsButtonFocused::symbol
  B DownloadsDelayedGridPanelUnready::symbol
@@ -1153,6 +1162,8 @@
  B HTMLRequestRepaint::symbol
  B HTMLScreenShotCaptured::symbol
  B HighlightTrack::symbol
+ B IgnoreAllPendingFriendInvites::symbol
+ B IgnoreAllPendingGroupInvites::symbol
  B IgnoreBroadcastWatchRequest::symbol
  B IgnoreInstallError::symbol
  B IgnoreLegacyKeyError::symbol
@@ -1205,6 +1216,7 @@
  B MovePlaylistItemUp::symbol
  B MovePlaylistTrackDown::symbol
  B MovePlaylistTrackUp::symbol
+ B MoveUpFromListItems::symbol
  B MusicBrowseMusic::symbol
  B MusicBrowseRecent::symbol
  B MusicChangeVolume::symbol
@@ -1212,6 +1224,7 @@
  B MusicControlGuide::symbol
  B MusicControlMore::symbol
  B MusicGuideButtonFocused::symbol
+ B MusicLibraryActivateAlbumTitleView::symbol
  B MusicLibraryActivateAlbumView::symbol
  B MusicLibraryActivateArtistView::symbol
  B MusicLibraryActivateFirstAlbum::symbol
@@ -1219,6 +1232,7 @@
  B MusicLibraryActivateFirstPlaylist::symbol
  B MusicLibraryActivateGridTabs::symbol
  B MusicLibraryActivatePlaylistView::symbol
+ B MusicLibraryAlbumMoveUp::symbol
  B MusicLibraryContextMenu::symbol
  B MusicLibraryDelayedGridPanelUnready::symbol
  B MusicLibraryShowDetail::symbol
@@ -1415,6 +1429,7 @@
  B ShowFriendOptionsMenu::symbol
  B ShowFriends::symbol
  B ShowFriendsProfileDetails::symbol
+ B ShowFriendsProfileDetailsBySteamID::symbol
  B ShowFriendsRecommendGame::symbol
  B ShowFriendsThatPlay::symbol
  B ShowFriendsWantGame::symbol
@@ -1477,6 +1492,7 @@
  B ShowStorePageForURL::symbol
  B ShowStreamSourceOptions::symbol
  B ShowTenfootPanel::symbol
+ B ShowTestPanel::symbol
  B ShowTrailerSlideshow::symbol
  B ShowURLChoiceDialog::symbol
  B ShowWebBrowser::symbol
@@ -1554,7 +1570,6 @@
  B SystemIM::symbol
  B SystemMenuButtonMoveUp::symbol
  B SystemMessagesButtonFocused::symbol
- B TLS_cubAllocated
  B TenfootMgrNotificationOngoingVoiceChat::symbol
  B TenfootMgrNotificationOngoingVoiceChatOnHold::symbol
  B TenfootMgrNotificationUnreadChatItems::symbol
@@ -1600,6 +1615,7 @@
  B TrailerSlideshowItemsResponse::symbol
  B TransportGotFocus::symbol
  B TruncateBackStack::symbol
+ B TurnOffWirelessController::symbol
  B TypeToJumpAlbumUpdate::symbol
  B TypeToJumpUpdate::symbol
  B UnderscanDeselected::symbol
@@ -1624,6 +1640,7 @@
  B UpdateLaunchProgressDialogVarString::symbol
  B UpdateLaunchProgressText::symbol
  B UpdateLibraryFriendPanel::symbol
+ B UpdateMainMenuBattery::symbol
  B UpdateMainMenuClock::symbol
  B UpdateOverlayClock::symbol
  B UpdateStreamingQuality::symbol
@@ -1860,6 +1877,7 @@
  B g_FriendsFeedListItemCommunity_Helper
  B g_FriendsFriendListItemCommunity_Helper
  B g_FriendsIndicatorContainer_Helper
+ B g_FriendsInvitePage_Helper
  B g_FriendsProfileDetailsActionButton_Helper
  B g_FriendsProfileDetailsCompositeHeader_Helper
  B g_FriendsProfileDetails_Helper
@@ -1892,6 +1910,8 @@
  B g_LibraryAllGames_Helper
  B g_LibraryAppDetails_Helper
  B g_LibraryController_Helper
+ B g_LibraryDLCItem_Helper
+ B g_LibraryDLC_Helper
  B g_LibraryEulaPanel_Helper
  B g_LibraryFriend_Helper
  B g_LibraryFriendsWhoPlay_Helper
@@ -2158,6 +2178,7 @@
  B g_TenfootFooterPanel_Helper
  B g_TenfootMsgBox_Helper
  B g_TenfootNotification_Helper
+ B g_TestButtonCmdLine
  B g_TestPanel_Helper
  B g_TextEntryLinkerHack
  B g_TextEntryPullInModule
@@ -2457,6 +2478,11 @@
  B panorama::CopyStringToClipboard::symbol
  B panorama::CreateDebuggerWindow::symbol
  B panorama::DeletePanel::symbol
+ B panorama::DragDrop::symbol
+ B panorama::DragEnd::symbol
+ B panorama::DragEnter::symbol
+ B panorama::DragLeave::symbol
+ B panorama::DragStart::symbol
  B panorama::DropDownSelectionChanged::symbol
  B panorama::DumpMemory::symbol
  B panorama::ExecuteSteamURL::symbol
@@ -2762,6 +2788,7 @@
  B panorama::g_FriendsFeedListItemCommunityLinkerHack
  B panorama::g_FriendsFriendListItemCommunityLinkerHack
  B panorama::g_FriendsIndicatorContainerLinkerHack
+ B panorama::g_FriendsInvitePageLinkerHack
  B panorama::g_FriendsLinkerHack
  B panorama::g_FriendsProfileDetailsActionButtonLinkerHack
  B panorama::g_FriendsProfileDetailsCompositeHeaderLinkerHack
@@ -2786,6 +2813,8 @@
  B panorama::g_LibraryAllGamesLinkerHack
  B panorama::g_LibraryAppDetailsLinkerHack
  B panorama::g_LibraryControllerLinkerHack
+ B panorama::g_LibraryDLCItemLinkerHack
+ B panorama::g_LibraryDLCLinkerHack
  B panorama::g_LibraryEulaPanelLinkerHack
  B panorama::g_LibraryFriendLinkerHack
  B panorama::g_LibraryFriendsWhoPlayLinkerHack
@@ -3041,9 +3070,6 @@
  B panorama::g_WizardChildLinkerHack
  B panorama::g_WizardPanelLinkerHack
  B panorama::g_pUIEngineSingleton
- B pcre_callout
- B pcre_stack_guard
- B pcrecpp::RE::no_arg
  B quat_identity
  B s_ClientConsole
  B s_ClientNoConsole
@@ -3069,6 +3095,7 @@
  B s_convarTCPLargeSendBufSizeMB
  B s_varCloudDetailsEnabled
  B s_varCloudDetailsSimulatedFileCount
+ B s_varExternalProcessForVOD
  B s_varRecommendationsEnabled
  B stat_client_TCPConnection_RecvBytes
  B stat_client_TCPConnection_SentBytes
@@ -3189,6 +3216,8 @@
  D ActivateViewAgreements::pchEvent
  D ActivityFeedNewsItemsResponse::pchEvent
  D AddAlbumToPlaylist::pchEvent
+ D AddAllPendingFriendInvites::pchEvent
+ D AddAllPendingGroupInvites::pchEvent
  D AddAppToFavorites::pchEvent
  D AddAppToUnblockedGames::pchEvent
  D AddArtistToPlaylist::pchEvent
@@ -4390,6 +4419,7 @@
  D CSettingsPanelAudio_Card::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)::s_bInDropDownChange
  D CSettingsPanelAudio_Port::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)::s_bInDropDownChange
  D CSettingsPanelAudio_Profile::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)::s_bInDropDownChange
+ D CSettingsPanelNetwork::BSetProperties(CUtlVector<panorama::ParsedPanelProperty_t, CUtlMemory<panorama::ParsedPanelProperty_t> > const&)::k_symOOBE
  D CSettingsPanelVoice::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)::s_bInDropDownChange
  D CSettingsSubBroadcast::ChainToAnimationMap()::chained
  D CSettingsSubBroadcast::ChainToMap()::chained
@@ -5200,6 +5230,8 @@
  D CryptoPP::g_pAssignIntToInteger
  D CryptoPP::g_powerUpSelfTestStatus
  D CryptoPP::g_x86DetectionDone
+ D DLCInstall::pchEvent
+ D DLCViewInStore::pchEvent
  D DaisyWheelNextFocus::pchEvent
  D DaisyWheelSettings::pchEvent
  D DaisyWheelShowThisLanguage::pchEvent
@@ -5239,6 +5271,7 @@
  D DisplayInboxDropdownInternal::pchEvent
  D DisplaySystemMessages::pchEvent
  D DoRunUninstall::pchEvent
+ D DongleTooOld::pchEvent
  D DownloadsActivate::pchEvent
  D DownloadsButtonFocused::pchEvent
  D DownloadsDelayedGridPanelUnready::pchEvent
@@ -5336,6 +5369,8 @@
  D HTMLRequestRepaint::pchEvent
  D HTMLScreenShotCaptured::pchEvent
  D HighlightTrack::pchEvent
+ D IgnoreAllPendingFriendInvites::pchEvent
+ D IgnoreAllPendingGroupInvites::pchEvent
  D IgnoreBroadcastWatchRequest::pchEvent
  D IgnoreInstallError::pchEvent
  D IgnoreLegacyKeyError::pchEvent
@@ -5404,6 +5439,7 @@
  D MovePlaylistItemUp::pchEvent
  D MovePlaylistTrackDown::pchEvent
  D MovePlaylistTrackUp::pchEvent
+ D MoveUpFromListItems::pchEvent
  D MusicBrowseMusic::pchEvent
  D MusicBrowseRecent::pchEvent
  D MusicChangeVolume::pchEvent
@@ -5411,6 +5447,7 @@
  D MusicControlGuide::pchEvent
  D MusicControlMore::pchEvent
  D MusicGuideButtonFocused::pchEvent
+ D MusicLibraryActivateAlbumTitleView::pchEvent
  D MusicLibraryActivateAlbumView::pchEvent
  D MusicLibraryActivateArtistView::pchEvent
  D MusicLibraryActivateFirstAlbum::pchEvent
@@ -5418,6 +5455,7 @@
  D MusicLibraryActivateFirstPlaylist::pchEvent
  D MusicLibraryActivateGridTabs::pchEvent
  D MusicLibraryActivatePlaylistView::pchEvent
+ D MusicLibraryAlbumMoveUp::pchEvent
  D MusicLibraryContextMenu::pchEvent
  D MusicLibraryDelayedGridPanelUnready::pchEvent
  D MusicLibraryShowDetail::pchEvent
@@ -5618,6 +5656,7 @@
  D ShowFriendOptionsMenu::pchEvent
  D ShowFriends::pchEvent
  D ShowFriendsProfileDetails::pchEvent
+ D ShowFriendsProfileDetailsBySteamID::pchEvent
  D ShowFriendsRecommendGame::pchEvent
  D ShowFriendsThatPlay::pchEvent
  D ShowFriendsWantGame::pchEvent
@@ -5680,6 +5719,7 @@
  D ShowStorePageForURL::pchEvent
  D ShowStreamSourceOptions::pchEvent
  D ShowTenfootPanel::pchEvent
+ D ShowTestPanel::pchEvent
  D ShowTrailerSlideshow::pchEvent
  D ShowURLChoiceDialog::pchEvent
  D ShowWebBrowser::pchEvent
@@ -5826,6 +5866,7 @@
  D TriStateCheckButtonList::KB_ChainToMap()::chained
  D TriStateCheckButtonList::PanelMessageFunc_OnCheckButtonChecked::InitVar()::bAdded
  D TruncateBackStack::pchEvent
+ D TurnOffWirelessController::pchEvent
  D TypeToJumpAlbumUpdate::pchEvent
  D TypeToJumpUpdate::pchEvent
  D UnderscanDeselected::pchEvent
@@ -5856,6 +5897,7 @@
  D UpdateLaunchProgressDialogVarString::pchEvent
  D UpdateLaunchProgressText::pchEvent
  D UpdateLibraryFriendPanel::pchEvent
+ D UpdateMainMenuBattery::pchEvent
  D UpdateMainMenuClock::pchEvent
  D UpdateOverlayClock::pchEvent
  D UpdateStreamingQuality::pchEvent
@@ -7663,6 +7705,7 @@
  D guard variable for CSetCustomImageDialog::GetMessageMap()::s_pMap
  D guard variable for CSetJumplistOptions::GetKBMap()::s_pMap
  D guard variable for CSetJumplistOptions::GetMessageMap()::s_pMap
+ D guard variable for CSettingsPanelNetwork::BSetProperties(CUtlVector<panorama::ParsedPanelProperty_t, CUtlMemory<panorama::ParsedPanelProperty_t> > const&)::k_symOOBE
  D guard variable for CSettingsSubBroadcast::GetKBMap()::s_pMap
  D guard variable for CSettingsSubBroadcast::GetMessageMap()::s_pMap
  D guard variable for CSettingsSubBrowser::GetKBMap()::s_pMap
@@ -8116,7 +8159,6 @@
  D guard variable for vgui::WizardSubPanel::GetMessageMap()::s_pMap
  D guard variable for vgui::WrapPanel::GetKBMap()::s_pMap
  D guard variable for vgui::WrapPanel::GetMessageMap()::s_pMap
- D jpeg_std_message_table
  D k_pchBroadcastFocused
  D k_pchCertError
  D k_pchDebugLabelPanelRow
@@ -8185,6 +8227,11 @@
  D panorama::CopyStringToClipboard::pchEvent
  D panorama::CreateDebuggerWindow::pchEvent
  D panorama::DeletePanel::pchEvent
+ D panorama::DragDrop::pchEvent
+ D panorama::DragEnd::pchEvent
+ D panorama::DragEnter::pchEvent
+ D panorama::DragLeave::pchEvent
+ D panorama::DragStart::pchEvent
  D panorama::DropDownSelectionChanged::pchEvent
  D panorama::DumpMemory::pchEvent
  D panorama::ExecuteSteamURL::pchEvent
@@ -8391,10 +8438,6 @@
  D panorama::g_VerticalScrollListPullInModule
  D panorama::g_VideoQualityPopupPullInModule
  D panorama::g_VolumeSliderPopupPullInModule
- D pcre_free
- D pcre_malloc
- D pcre_stack_free
- D pcre_stack_malloc
  D s_LogWatchesAllWithType
  D s_rgGamepadButtonNames
  D s_rgKeyNames
@@ -8430,6 +8473,8 @@
  D typeinfo for CAgreementsWizardChild
  D typeinfo for CAlbumGridItem
  D typeinfo for CAlbumGridItem::CCallbackOnAlbumCoverLoaded
+ D typeinfo for CAlignedBufferBase
+ D typeinfo for CAlignedYUV420Buffer
  D typeinfo for CAppDownloadPanel
  D typeinfo for CAppDownloadPanel::CCallbackOnParentalLockChanged
  D typeinfo for CAppFilter
@@ -9178,6 +9223,7 @@
  D typeinfo for CFriendsFeedListItemCommunity
  D typeinfo for CFriendsFriendListItemCommunity
  D typeinfo for CFriendsImageManager
+ D typeinfo for CFriendsInvitePage
  D typeinfo for CFriendsInviteToLobbyDialog
  D typeinfo for CFriendsMoreLabelPanel
  D typeinfo for CFriendsProfileDetails
@@ -9383,6 +9429,8 @@
  D typeinfo for CLibraryControllerPanel::CCallbackOnControllerDisconnected
  D typeinfo for CLibraryControllerPanel::CCallbackOnControllerWirelessPresence
  D typeinfo for CLibraryControllerVirtualKeyboardAndMouse
+ D typeinfo for CLibraryDLCItem
+ D typeinfo for CLibraryDLCPanel
  D typeinfo for CLibraryDetailsPanel
  D typeinfo for CLibraryEULAPanel
  D typeinfo for CLibraryFriend
@@ -9641,6 +9689,7 @@
  D typeinfo for CMultipleCallResults<CStoreAccess, WebAuthRequestCallback_t>
  D typeinfo for CMultipleCallResults<CTenfootController, WebAuthRequestCallback_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, ControllerDetails_t>
+ D typeinfo for CMultipleCallResults<CValveControllerManager, DongleDetails_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, HTTPRequestCompleted_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, LoadControllerConfigResult_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>
@@ -10635,6 +10684,7 @@
  D typeinfo for IVideoPlayerAudioCallback
  D typeinfo for IVideoPlayerEventCallback
  D typeinfo for IVideoPlayerVideoCallback
+ D typeinfo for IVideoYUVFrame
  D typeinfo for LayoutDebugDialog
  D typeinfo for ListPanelColumnSelectButton
  D typeinfo for ListPanelDragger
@@ -11679,6 +11729,7 @@
  D vtable for CAgreementsWizardChild
  D vtable for CAlbumGridItem
  D vtable for CAlbumGridItem::CCallbackOnAlbumCoverLoaded
+ D vtable for CAlignedYUV420Buffer
  D vtable for CAppDownloadPanel
  D vtable for CAppDownloadPanel::CCallbackOnParentalLockChanged
  D vtable for CAppFilter
@@ -12425,6 +12476,7 @@
  D vtable for CFriendsFeedListItemCommunity
  D vtable for CFriendsFriendListItemCommunity
  D vtable for CFriendsImageManager
+ D vtable for CFriendsInvitePage
  D vtable for CFriendsInviteToLobbyDialog
  D vtable for CFriendsMoreLabelPanel
  D vtable for CFriendsProfileDetails
@@ -12628,6 +12680,8 @@
  D vtable for CLibraryControllerPanel::CCallbackOnControllerDisconnected
  D vtable for CLibraryControllerPanel::CCallbackOnControllerWirelessPresence
  D vtable for CLibraryControllerVirtualKeyboardAndMouse
+ D vtable for CLibraryDLCItem
+ D vtable for CLibraryDLCPanel
  D vtable for CLibraryDetailsPanel
  D vtable for CLibraryEULAPanel
  D vtable for CLibraryFriend
@@ -12885,6 +12939,7 @@
  D vtable for CMultipleCallResults<CStoreAccess, WebAuthRequestCallback_t>
  D vtable for CMultipleCallResults<CTenfootController, WebAuthRequestCallback_t>
  D vtable for CMultipleCallResults<CValveControllerManager, ControllerDetails_t>
+ D vtable for CMultipleCallResults<CValveControllerManager, DongleDetails_t>
  D vtable for CMultipleCallResults<CValveControllerManager, HTTPRequestCompleted_t>
  D vtable for CMultipleCallResults<CValveControllerManager, LoadControllerConfigResult_t>
  D vtable for CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>
@@ -13788,6 +13843,7 @@
  D vtable for IPC::PosixSharedMemory
  D vtable for IRegistryInterfaceMap
  D vtable for ISteamService
+ D vtable for IVideoYUVFrame
  D vtable for LayoutDebugDialog
  D vtable for ListPanelColumnSelectButton
  D vtable for ListPanelDragger
@@ -14215,23 +14271,7 @@
  R CryptoPP::Rijndael::Base::Se
  R CryptoPP::Rijndael::Base::rcon
  R CryptoPP::SHA256_K
- R _pcre_OP_lengths
- R _pcre_default_tables
- R _pcre_hspace_list
- R _pcre_utf8_table1
- R _pcre_utf8_table1_size
- R _pcre_utf8_table2
- R _pcre_utf8_table4
- R _pcre_vspace_list
  R eMeans
- R jpeg_aritab
- R jpeg_natural_order
- R jpeg_natural_order2
- R jpeg_natural_order3
- R jpeg_natural_order4
- R jpeg_natural_order5
- R jpeg_natural_order6
- R jpeg_natural_order7
  R k_pchGlobalRegistryPath
  R k_rgchAnonymousUser
  R k_rgchLocalManifest
@@ -14338,6 +14378,8 @@
  R typeinfo name for CAgreementsWizardChild
  R typeinfo name for CAlbumGridItem
  R typeinfo name for CAlbumGridItem::CCallbackOnAlbumCoverLoaded
+ R typeinfo name for CAlignedBufferBase
+ R typeinfo name for CAlignedYUV420Buffer
  R typeinfo name for CAppDownloadPanel
  R typeinfo name for CAppDownloadPanel::CCallbackOnParentalLockChanged
  R typeinfo name for CAppFilter
@@ -15089,6 +15131,7 @@
  R typeinfo name for CFriendsFeedListItemCommunity
  R typeinfo name for CFriendsFriendListItemCommunity
  R typeinfo name for CFriendsImageManager
+ R typeinfo name for CFriendsInvitePage
  R typeinfo name for CFriendsInviteToLobbyDialog
  R typeinfo name for CFriendsMoreLabelPanel
  R typeinfo name for CFriendsProfileDetails
@@ -15294,6 +15337,8 @@
  R typeinfo name for CLibraryControllerPanel::CCallbackOnControllerDisconnected
  R typeinfo name for CLibraryControllerPanel::CCallbackOnControllerWirelessPresence
  R typeinfo name for CLibraryControllerVirtualKeyboardAndMouse
+ R typeinfo name for CLibraryDLCItem
+ R typeinfo name for CLibraryDLCPanel
  R typeinfo name for CLibraryDetailsPanel
  R typeinfo name for CLibraryEULAPanel
  R typeinfo name for CLibraryFriend
@@ -15554,6 +15599,7 @@
  R typeinfo name for CMultipleCallResults<CStoreAccess, WebAuthRequestCallback_t>
  R typeinfo name for CMultipleCallResults<CTenfootController, WebAuthRequestCallback_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, ControllerDetails_t>
+ R typeinfo name for CMultipleCallResults<CValveControllerManager, DongleDetails_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, HTTPRequestCompleted_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, LoadControllerConfigResult_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>
@@ -16633,7 +16679,6 @@
  R typeinfo name for CUtlVector<vgui::BoundKey_t, CUtlMemory<vgui::BoundKey_t> >
  R typeinfo name for CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >
  R typeinfo name for CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >
- R typeinfo name for CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >
  R typeinfo name for CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >
  R typeinfo name for CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >
  R typeinfo name for CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >
@@ -16869,6 +16914,7 @@
  R typeinfo name for IVideoPlayerAudioCallback
  R typeinfo name for IVideoPlayerEventCallback
  R typeinfo name for IVideoPlayerVideoCallback
+ R typeinfo name for IVideoYUVFrame
  R typeinfo name for LayoutDebugDialog
  R typeinfo name for ListPanelColumnSelectButton
  R typeinfo name for ListPanelDragger
@@ -17478,6 +17524,12 @@
  T AddAlbumToPlaylist::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AddAlbumToPlaylist::GetEventType()
  T AddAlbumToPlaylist::MakeEvent(panorama::IUIPanelClient const*)
+ T AddAllPendingFriendInvites::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T AddAllPendingFriendInvites::GetEventType()
+ T AddAllPendingFriendInvites::MakeEvent(panorama::IUIPanelClient const*)
+ T AddAllPendingGroupInvites::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T AddAllPendingGroupInvites::GetEventType()
+ T AddAllPendingGroupInvites::MakeEvent(panorama::IUIPanelClient const*)
  T AddAppToFavorites::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T AddAppToFavorites::GetEventType()
  T AddAppToFavorites::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
@@ -18084,6 +18136,15 @@
  T CAlignedBufferBase::InitYUV(int, int)
  T CAlignedBufferBase::Validate(CValidator&, char const*)
  T CAlignedBufferBase::~CAlignedBufferBase()
+ T CAlignedYUV420Buffer::Height() const
+ T CAlignedYUV420Buffer::UPlane() const
+ T CAlignedYUV420Buffer::UStride() const
+ T CAlignedYUV420Buffer::VPlane() const
+ T CAlignedYUV420Buffer::VStride() const
+ T CAlignedYUV420Buffer::Width() const
+ T CAlignedYUV420Buffer::YPlane() const
+ T CAlignedYUV420Buffer::YStride() const
+ T CAlignedYUV420Buffer::~CAlignedYUV420Buffer()
  T CAmount_t<int>::InvalidAmount()
  T CAmount_t<int>::operator-(CAmount_t<int> const&) const
  T CAppDownloadPanel::CAppDownloadPanel(vgui::Panel*, vgui::SectionedListPanel*, char const*, unsigned int)
@@ -18127,7 +18188,7 @@
  T CAppGridItem::GetFirstDisplayNameChar()
  T CAppGridItem::GetPanelType() const
  T CAppGridItem::OnDelayedGridPanelUnready(panorama::CPanelPtr<panorama::IUIPanel> const&)
- T CAppGridItem::OnImageFailedLoad(panorama::IImageSource*)
+ T CAppGridItem::OnImageFailedLoad(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
  T CAppGridItem::OnPanelDoneWithDisplay(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CAppGridItem::OnReadyAppGridItemNameRow()
  T CAppGridItem::OnReadyPanelForDisplay(panorama::CPanelPtr<panorama::IUIPanel> const&)
@@ -18298,6 +18359,7 @@
  T CAutoRelease<CTrailerSlideshowItem const, CRefCountAccessor>::~CAutoRelease()
  T CAutoRelease<panorama::CPanoramaVideoPlayer, CRefCountAccessor>::Reset(panorama::CPanoramaVideoPlayer*)
  T CAutoRelease<panorama::CPanoramaVideoPlayer, CRefCountAccessor>::~CAutoRelease()
+ T CAvatarImage::BSetProperty(panorama::CPanoramaSymbol, char const*)
  T CAvatarImage::CAvatarImage(panorama::CPanel2D*, char const*)
  T CAvatarImage::CCallbackOnPersonaStateChange::Run(void*)
  T CAvatarImage::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
@@ -23617,7 +23679,6 @@
  T CFriendListItemBase::MarkChatIndicatorRead()
  T CFriendListItemBase::NotifyParentList()
  T CFriendListItemBase::OnLayoutTraverse(float, float)
- T CFriendListItemBase::RemovePendingInviteIndicator()
  T CFriendListItemBase::SetLayoutFileAndFindControls(char const*, bool)
  T CFriendListItemBase::SetSteamID(CSteamID)
  T CFriendListItemBase::UpdatePanelData()
@@ -23625,6 +23686,7 @@
  T CFriendListItemBase::UpdatePanelData_Individual()
  T CFriendListItemBase::~CFriendListItemBase()
  T CFriends::ActivateFriendsProfileDetails(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CFriends::ActivateFriendsProfileDetailsBySteamID(unsigned long long)
  T CFriends::AddToFriendsListIncremental()
  T CFriends::CCallbackOnChatMemberStateChange::Run(void*)
  T CFriends::CCallbackOnChatMemberStateChange::Run(void*, bool, unsigned long long)
@@ -23656,9 +23718,12 @@
  T CFriends::GetCurrentlyActiveListTabIndex()
  T CFriends::GetFriendGameInfo(CSteamID, unsigned int&, CUtlString&)
  T CFriends::GetGameInviteInfo(CSteamID, CUtlString&, CUtlString&, bool)
+ T CFriends::GetListControlIndex(panorama::CPanel2D*)
  T CFriends::GetPanelType() const
  T CFriends::HandleActionShowFriend(unsigned long long, panorama::EPanelEventSource_t)
  T CFriends::HandleActionShowGroups()
+ T CFriends::HandleAddAllPendingFriendInvites()
+ T CFriends::HandleAddAllPendingGroupInvites()
  T CFriends::HandleAddFriend(panorama::EPanelEventSource_t)
  T CFriends::HandleAddFriendBySteamID(unsigned long long)
  T CFriends::HandleAnalogStickPassthrough(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::GamePadData_t)
@@ -23674,9 +23739,12 @@
  T CFriends::HandleFriendsSendChatMessage()
  T CFriends::HandleFriendsVoiceChatActivation()
  T CFriends::HandleFriendsVoiceChatDeactivation()
+ T CFriends::HandleIgnoreAllPendingFriendInvites()
+ T CFriends::HandleIgnoreAllPendingGroupInvites()
  T CFriends::HandleMoveDownFromHeaderButtons(int)
+ T CFriends::HandleMoveUpFromListItems()
  T CFriends::HandleRemoveFriend(CSteamID, bool)
- T CFriends::HandleRemoveFriendBySteamID(unsigned long long)
+ T CFriends::HandleRemoveFriendBySteamID(unsigned long long, bool)
  T CFriends::HandleScrollToActiveFriend()
  T CFriends::HandleSendChatToSteamID(panorama::CPanelPtr<panorama::IUIPanel> const&, unsigned long long, panorama::EPanelEventSource_t)
  T CFriends::HandleShowFriendOptionsMenu(unsigned long long)
@@ -23704,7 +23772,6 @@
  T CFriends::OnPersonaStateChange(PersonaStateChange_t*)
  T CFriends::OnRichInviteReceived(RichInviteReceived_t*)
  T CFriends::OnShowFromController()
- T CFriends::OnUpdatePendingInviteRollup()
  T CFriends::OnUpdateSearchEntry(panorama::CPanel2D*)
  T CFriends::ResetAndPopulateFriendsList()
  T CFriends::ResetAndPopulateGroupsList()
@@ -23712,6 +23779,7 @@
  T CFriends::ShowRightColDetailsForFriend(CFriendListItemBase*)
  T CFriends::UpdateFriendItemPositionInList(CFriendListItemBase*)
  T CFriends::UpdateFriendsFilter(panorama::CTextEntry*)
+ T CFriends::UpdateInviteButtonVisibility()
  T CFriends::UpdateVoiceChatActivityState()
  T CFriends::UpdateVoiceChatPeakLevels()
  T CFriends::ValidateClientPanel(CValidator&, char const*)
@@ -23778,6 +23846,8 @@
  T CFriendsImageManager::LoadSchemeColors()
  T CFriendsImageManager::Validate(CValidator&, char const*)
  T CFriendsImageManager::~CFriendsImageManager()
+ T CFriendsInvitePage::GetPanelType() const
+ T CFriendsInvitePage::~CFriendsInvitePage()
  T CFriendsInviteToLobbyDialog::CFriendsInviteToLobbyDialog(panorama::IUIWindow*, char const*, CSteamID, panorama::CPanel2D*)
  T CFriendsInviteToLobbyDialog::GetPanelType() const
  T CFriendsInviteToLobbyDialog::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
@@ -23860,6 +23930,7 @@
  T CGameActionController::CheckForOpeningLocalizedAudioChoiceDialog(CSteamApp*, KeyValues*)
  T CGameActionController::CheckSteamBetaParticipationChangeNeeded(CSteamApp*, int&)
  T CGameActionController::DeleteApps(CUtlVector<unsigned int, CUtlMemory<unsigned int> >&, bool)
+ T CGameActionController::LaunchVideoPlayer(CSteamApp*)
  T CGameActionController::OnDeleteAppsConfirmed(KeyValues*)
  T CGameActionController::OnDeleteAppsFullyConfirmed(KeyValues*)
  T CGameActionController::OnDeleteCacheCanceled()
@@ -23991,6 +24062,7 @@
  T CGameActions::OnStreamingStopProgressUI()
  T CGameActions::OnStreamingUpdateProgressUI(char const*)
  T CGameActions::OnUpdateAppsToInstall(CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
+ T CGameActions::OnVideoPlayerFailure()
  T CGameActions::OnViewCDKey(unsigned long long)
  T CGameActions::OnViewDLC(int)
  T CGameActions::OnViewGuide(int)
@@ -24290,6 +24362,7 @@
  T CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
  T CGameStreamSession::OnControllerAttached(unsigned int)
  T CGameStreamSession::OnControllerDetached(unsigned int)
+ T CGameStreamSession::OnControllerHIDReport(unsigned short, unsigned int, unsigned int, unsigned char const*, unsigned int)
  T CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)
  T CGameStreamSession::OnControllerWirelessPresence(bool, bool)
  T CGameStreamSession::OnDebugDump(void const*, int)
@@ -25973,6 +26046,7 @@
  T CLibraryControllerPanel::GetPanelType() const
  T CLibraryControllerPanel::HandleAddWirelessController()
  T CLibraryControllerPanel::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
+ T CLibraryControllerPanel::HandleTurnOffWirelessController()
  T CLibraryControllerPanel::HandleViewControllerDetails(unsigned int)
  T CLibraryControllerPanel::OnControllerConnected(ControllerConnected_t*)
  T CLibraryControllerPanel::OnControllerDisconnected(ControllerDisconnected_t*)
@@ -25984,6 +26058,19 @@
  T CLibraryControllerVirtualKeyboardAndMouse::GetPanelType() const
  T CLibraryControllerVirtualKeyboardAndMouse::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CLibraryControllerVirtualKeyboardAndMouse::~CLibraryControllerVirtualKeyboardAndMouse()
+ T CLibraryDLCItem::CLibraryDLCItem(panorama::CPanel2D*, char const*, unsigned int, unsigned int)
+ T CLibraryDLCItem::GetPanelType() const
+ T CLibraryDLCItem::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
+ T CLibraryDLCItem::OnDLCInstall(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CLibraryDLCItem::Update()
+ T CLibraryDLCItem::~CLibraryDLCItem()
+ T CLibraryDLCPanel::CLibraryDLCPanel(panorama::CPanel2D*, char const*)
+ T CLibraryDLCPanel::GetPanelType() const
+ T CLibraryDLCPanel::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
+ T CLibraryDLCPanel::OnDLCViewInStore(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CLibraryDLCPanel::SetAppID(unsigned int, bool, unsigned int)
+ T CLibraryDLCPanel::UpdatePanelData()
+ T CLibraryDLCPanel::~CLibraryDLCPanel()
  T CLibraryDetailsPanel::BPromptUser(bool)
  T CLibraryDetailsPanel::CLibraryDetailsPanel(panorama::CPanel2D*, char const*)
  T CLibraryDetailsPanel::CleanupChildren()
@@ -26192,7 +26279,7 @@
  T CLibraryRecentAddShortcutDialog::~CLibraryRecentAddShortcutDialog()
  T CLibraryRecentAppPanel::CLibraryRecentAppPanel(panorama::CPanel2D*, char const*, CSteamApp*)
  T CLibraryRecentAppPanel::GetPanelType() const
- T CLibraryRecentAppPanel::OnImageFailedLoad(panorama::IImageSource*)
+ T CLibraryRecentAppPanel::OnImageFailedLoad(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
  T CLibraryRecentAppPanel::UpdateData(CSteamApp*)
  T CLibraryRecentAppPanel::UpdateIndexedStyle(int)
  T CLibraryRecentAppPanel::~CLibraryRecentAppPanel()
@@ -26465,6 +26552,7 @@
  T CMainMenu::OnShowMainMenuNoBackstack()
  T CMainMenu::OnShowMusicLibrary()
  T CMainMenu::OnShowSettings(char const*)
+ T CMainMenu::OnShowTestPanel()
  T CMainMenu::OnShowWishlist()
  T CMainMenu::OnStoreButtonFocused()
  T CMainMenu::OnStoreShow()
@@ -26479,6 +26567,7 @@
  T CMainMenu::UIStateClassSetting_t::UIStateClassSetting_t(CMainMenu::UIStateClassSetting_t const&)
  T CMainMenu::UIStateClassSetting_t::UIStateClassSetting_t(CUtlString, ETransitionAction)
  T CMainMenu::UIStateClassSetting_t::Validate(CValidator&, char const*)
+ T CMainMenu::UpdateBattery()
  T CMainMenu::UpdateTime()
  T CMainMenu::ValidateClientPanel(CValidator&, char const*)
  T CMainMenu::~CMainMenu()
@@ -26535,13 +26624,6 @@
  T CMemoryPool::Free(void*)
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
- T CMenuManager::AbortMenus()
- T CMenuManager::AddMenu(vgui::Menu*)
- T CMenuManager::IsWithinMenuOrRelative(vgui::Panel*, int, int)
- T CMenuManager::OnInternalMouseReleased(vgui::Panel*, vgui::MouseCode)
- T CMenuManager::RemoveMenu(vgui::Menu*)
- T CMenuManager::Validate(CValidator&, char const*)
- T CMenuManager::~CMenuManager()
  T CMessageList::AddMsgInfo(MsgInfo_t*)
  T CMessageList::CMessageList(MsgInfo_t*, int)
  T CMessageList::Validate(CValidator&, char const*)
@@ -28834,6 +28916,12 @@
  T CMultipleCallResults<CValveControllerManager, ControllerDetails_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CValveControllerManager, ControllerDetails_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CValveControllerManager, ControllerDetails_t>::~CMultipleCallResults()
+ T CMultipleCallResults<CValveControllerManager, DongleDetails_t>::CMultipleCallResults(CValveControllerManager*, void (CValveControllerManager::*)(DongleDetails_t*, bool))
+ T CMultipleCallResults<CValveControllerManager, DongleDetails_t>::GetCallbackSizeBytes()
+ T CMultipleCallResults<CValveControllerManager, DongleDetails_t>::Run(void*)
+ T CMultipleCallResults<CValveControllerManager, DongleDetails_t>::Run(void*, bool, unsigned long long)
+ T CMultipleCallResults<CValveControllerManager, DongleDetails_t>::Validate(CValidator&, char const*)
+ T CMultipleCallResults<CValveControllerManager, DongleDetails_t>::~CMultipleCallResults()
  T CMultipleCallResults<CValveControllerManager, HTTPRequestCompleted_t>::CMultipleCallResults(CValveControllerManager*, void (CValveControllerManager::*)(HTTPRequestCompleted_t*, bool))
  T CMultipleCallResults<CValveControllerManager, HTTPRequestCompleted_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CValveControllerManager, HTTPRequestCompleted_t>::Run(void*)
@@ -29070,6 +29158,7 @@
  T CMusicHelper::GetIndexForDefaultCover(char const*, char const*)
  T CMusicHelper::MillisecondsToString(int)
  T CMusicHelper::OpenFileInSystem(char const*)
+ T CMusicLibraryAlbumPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)
  T CMusicLibraryAlbumPanel::CCallbackOnLocalLibraryDatabaseHasBeenReset::Run(void*)
  T CMusicLibraryAlbumPanel::CCallbackOnLocalLibraryDatabaseHasBeenReset::Run(void*, bool, unsigned long long)
  T CMusicLibraryAlbumPanel::CCallbackOnLocalLibraryRemoveAlbumFromCrawling::Run(void*)
@@ -29084,6 +29173,7 @@
  T CMusicLibraryAlbumPanel::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CMusicLibraryAlbumPanel::OnAddAlbumsToGrid()
  T CMusicLibraryAlbumPanel::OnAddingAllAlbumPanels()
+ T CMusicLibraryAlbumPanel::OnAlbumMoveUp()
  T CMusicLibraryAlbumPanel::OnLocalLibraryDatabaseHasBeenReset(LocalLibraryDatabaseHasBeenReset_t*)
  T CMusicLibraryAlbumPanel::OnLocalLibraryRemoveAlbumFromCrawling(LocalLibraryRemoveAlbumFromCrawling_t*)
  T CMusicLibraryAlbumPanel::OnLocalLibraryUpdateAlbumFromCrawling(LocalLibraryUpdateAlbumFromCrawling_t*)
@@ -29123,6 +29213,7 @@
  T CMusicLibraryContainerPanel::CCallbackOnLocalLibraryCrawlingWillStart::Run(void*, bool, unsigned long long)
  T CMusicLibraryContainerPanel::CMusicLibraryContainerPanel(panorama::CPanel2D*, char const*)
  T CMusicLibraryContainerPanel::GetPanelType() const
+ T CMusicLibraryContainerPanel::OnActivateAlbumTitleView()
  T CMusicLibraryContainerPanel::OnActivateAlbumView()
  T CMusicLibraryContainerPanel::OnActivateArtistView()
  T CMusicLibraryContainerPanel::OnActivateFirstAlbum()
@@ -32184,6 +32275,7 @@
  T CSettingsPanelManageDevicesListEntry::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CSettingsPanelManageDevicesListEntry::SetDeviceData(int, unsigned long long, char const*, char const*, unsigned int)
  T CSettingsPanelManageDevicesListEntry::~CSettingsPanelManageDevicesListEntry()
+ T CSettingsPanelNetwork::BSetProperties(CUtlVector<panorama::ParsedPanelProperty_t, CUtlMemory<panorama::ParsedPanelProperty_t> > const&)
  T CSettingsPanelNetwork::CCallbackOnNetworkDeviceStateChange::Run(void*)
  T CSettingsPanelNetwork::CCallbackOnNetworkDeviceStateChange::Run(void*, bool, unsigned long long)
  T CSettingsPanelNetwork::CSettingsPanelNetwork(panorama::CPanel2D*, char const*)
@@ -32199,6 +32291,7 @@
  T CSettingsPanelNetworkWiz::NavigateDone()
  T CSettingsPanelNetworkWiz::NavigateForward()
  T CSettingsPanelNetworkWiz::SetDeviceId(unsigned int)
+ T CSettingsPanelNetworkWiz::Teardown()
  T CSettingsPanelNetworkWiz::~CSettingsPanelNetworkWiz()
  T CSettingsPanelNetwork_Connect::CCallbackOnNetworkConnectionStateChange::Run(void*)
  T CSettingsPanelNetwork_Connect::CCallbackOnNetworkConnectionStateChange::Run(void*, bool, unsigned long long)
@@ -32224,6 +32317,7 @@
  T CSettingsPanelNetwork_Device::OnGetDefaultInputFocus()
  T CSettingsPanelNetwork_Device::OnNavigateTo()
  T CSettingsPanelNetwork_Device::OnNetworkDeviceStateChange(NetworkDeviceStateChange_t*)
+ T CSettingsPanelNetwork_Device::OnNetworkSelectionChange(ENetworkDeviceType)
  T CSettingsPanelNetwork_Device::OnPanelActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CSettingsPanelNetwork_Device::UpdateButtons(bool)
  T CSettingsPanelNetwork_Device::~CSettingsPanelNetwork_Device()
@@ -32930,6 +33024,7 @@
  T CStdMemAlloc::CrtSetReportMode(int, int)
  T CStdMemAlloc::CubAllocated()
  T CStdMemAlloc::CubAllocatedUntracked()
+ T CStdMemAlloc::CubLogicalAllocated()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
@@ -33492,7 +33587,10 @@
  T CSteamGuardWizardChild::OnTextInputFinished(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
  T CSteamGuardWizardChild::UpdateFromTextEntryChanged()
  T CSteamGuardWizardChild::~CSteamGuardWizardChild()
+ T CSteamID::CSteamID(char const*, EUniverse)
  T CSteamID::Render() const
+ T CSteamID::SetFromString(char const*, EUniverse)
+ T CSteamID::SetFromStringStrict(char const*, EUniverse)
  T CSteamIPC::ClearEventData()
  T CSteamIPC::HandleEvents()
  T CSteamIPC::Initialize()
@@ -34766,6 +34864,7 @@
  T CStreamingServerGameActions::OnStartingNextApp(CSteamApp*)
  T CStreamingServerGameActions::OnSteamClientOutOfDateForGame(CGameID)
  T CStreamingServerGameActions::OnUpdateRetailInstallProgress(float, float, unsigned long long, unsigned long long)
+ T CStreamingServerGameActions::OnVideoPlayerFailure()
  T CStreamingServerGameActions::OnWatchVideo(CSteamApp*)
  T CStreamingServerGameActions::ResetUpdateStartTime()
  T CStreamingServerGameActions::RunFrame()
@@ -36236,6 +36335,7 @@
  T CTenfootControllerBase::OnBrowseToSteamURL(char const*)
  T CTenfootControllerBase::OnConfirmURLChoice(char const*, panorama::CPanelPtr<panorama::CPanel2D>)
  T CTenfootControllerBase::OnControllerFirmwareOutOfDate(char const*, char const*, char const*, unsigned int)
+ T CTenfootControllerBase::OnDongleFirmwareOutOfDate()
  T CTenfootControllerBase::OnMessageBoxClose(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CTenfootControllerBase::OnNavigateTenfootBack()
  T CTenfootControllerBase::OnNavigateTenfootForward()
@@ -36434,6 +36534,7 @@
  T CTenfootGameActions::OnTickConvertApps()
  T CTenfootGameActions::OnTickJoinGame()
  T CTenfootGameActions::OnUpdateRetailInstallProgress(float, float, unsigned long long, unsigned long long)
+ T CTenfootGameActions::OnVideoPlayerFailure()
  T CTenfootGameActions::OnWatchVideo(CSteamApp*)
  T CTenfootGameActions::OpenInstallWizard(unsigned int)
  T CTenfootGameActions::OpenInstallWizardForApp(unsigned int, bool)
@@ -36648,6 +36749,7 @@
  T CTenfootWizardPanel::AddWizardChild(CTenfootWizardChild*)
  T CTenfootWizardPanel::CTenfootWizardPanel(panorama::CPanel2D*, char const*)
  T CTenfootWizardPanel::CTenfootWizardPanel(panorama::IUIWindow*, char const*)
+ T CTenfootWizardPanel::DisableCurrentChild()
  T CTenfootWizardPanel::FindChildIndex(panorama::CPanel2D*)
  T CTenfootWizardPanel::GetBackChild()
  T CTenfootWizardPanel::GetCurrentChild()
@@ -36670,6 +36772,11 @@
  T CTenfootWizardPanel::OnContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CTenfootWizardPanel::~CTenfootWizardPanel()
  T CTestPanel::CTestPanel(panorama::IUIWindow*, char const*)
+ T CTestPanel::EventDragDrop(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CPanelPtr<panorama::IUIPanel>)
+ T CTestPanel::EventDragEnd(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CPanelPtr<panorama::IUIPanel>)
+ T CTestPanel::EventDragEnter(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CPanelPtr<panorama::IUIPanel>)
+ T CTestPanel::EventDragLeave(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CPanelPtr<panorama::IUIPanel>)
+ T CTestPanel::EventDragStart(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IUIPanel**)
  T CTestPanel::GetPanelType() const
  T CTestPanel::OnSwapPanels()
  T CTestPanel::~CTestPanel()
@@ -39791,12 +39898,6 @@
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::GrowVector(int)
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::~CUtlVector()
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::GrowVector(int)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::InsertBefore(int, vgui::DHANDLE<vgui::Menu> const&)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::ShiftElementsRight(int, int)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::Validate(CValidator&, char const*)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::~CUtlVector()
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::GrowVector(int)
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::SortedFind(vgui::EditablePanel::LayoutPanel_t const&, bool (*)(vgui::EditablePanel::LayoutPanel_t const&, vgui::EditablePanel::LayoutPanel_t const&, void*), void*) const
@@ -40117,6 +40218,7 @@
  T CValveControllerManager::OnControllerConnected(ControllerConnected_t*)
  T CValveControllerManager::OnControllerDetails(ControllerDetails_t*, bool)
  T CValveControllerManager::OnControllerDisconnected(ControllerDisconnected_t*)
+ T CValveControllerManager::OnDongleDetails(DongleDetails_t*, bool)
  T CValveControllerManager::OnEnumerateWorkshopFilesResult(RemoteStorageEnumerateWorkshopFilesResult_t*, bool)
  T CValveControllerManager::OnFocusWindowChanged(FocusedSteamWindowChanged_t*)
  T CValveControllerManager::OnGetPublishedFileDetailsForEnumerate(RemoteStorageGetPublishedFileDetailsResult_t*, bool)
@@ -40435,9 +40537,10 @@
  T CWebFavorites::WebFrequent_t::GreaterFunc(CWebFavorites::WebFrequent_t const&, CWebFavorites::WebFrequent_t const&)
  T CWebFavorites::~CWebFavorites()
  T CWebLoadedPanel::BNeedsLoad(bool)
- T CWebLoadedPanel::CWebLoadedPanel(panorama::CPanel2D*, char const*, char const*, char const*, char const*)
+ T CWebLoadedPanel::CWebLoadedPanel(panorama::CPanel2D*, char const*, char const*, char const*)
  T CWebLoadedPanel::EventLoadedAsyncWithWebAuth(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
  T CWebLoadedPanel::LoadPanelAsyncWithWebAuth(CUtlString const&, bool)
+ T CWebLoadedPanel::OnImageFailedLoad(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
  T CWebLoadedPanel::Validate(CValidator&, char const*)
  T CWebLoadedPanel::~CWebLoadedPanel()
  T CWebPanel::BLoading()
@@ -40814,6 +40917,7 @@
  T CommunityShow::GetEventType()
  T CommunityShow::MakeEvent(panorama::IUIPanelClient const*)
  T CompareCommunityFriendFeedItemsFn(panorama::IUIPanelClient* const&, panorama::IUIPanelClient* const&)
+ T CompareDLCChildren(panorama::IUIPanelClient* const*, panorama::IUIPanelClient* const*)
  T CompareFriendListItemsLessFn(panorama::IUIPanelClient* const&, panorama::IUIPanelClient* const&)
  T CompareFriendListItemsLessFnPtr(panorama::IUIPanelClient* const*, panorama::IUIPanelClient* const*)
  T CompareGridChildren(panorama::IUIPanelClient* const*, panorama::IUIPanelClient* const*)
@@ -40960,7 +41064,7 @@
  T ConvertRGBAToPNG(CUtlBuffer&, int, int, CUtlBuffer&, int)
  T ConvertRGBToJpeg(CUtlBuffer&, int, int, int, CUtlBuffer&)
  T ConvertRGBToJpegInternal(CJpegDestMgr&, int, int, int, CUtlBuffer&)
- T ConvertRGBToRGBAImage(CUtlVector<unsigned char, CUtlMemory<unsigned char> >&, int, int, unsigned char*, int, int)
+ T ConvertRGBToRGBAImage(unsigned char const*, int, int, unsigned char*)
  T ConvertVGUIHotKeyToPanorama(vgui::HotKeyInfo const&, panorama::KeyData_t*)
  T ConvertVGUIHotKeyToString(CUtlString*, vgui::HotKeyInfo const&)
  T CopyAndEscapeNAL(unsigned char*, unsigned char const*, int)
@@ -41452,6 +41556,12 @@
  T CryptoPP::memcpy_s(void*, unsigned long, void const*, unsigned long)
  T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned char const*, unsigned long)
  T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned long)
+ T DLCInstall::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T DLCInstall::GetEventType()
+ T DLCInstall::MakeEvent(panorama::IUIPanelClient const*)
+ T DLCViewInStore::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T DLCViewInStore::GetEventType()
+ T DLCViewInStore::MakeEvent(panorama::IUIPanelClient const*)
  T DaisyWheelNextFocus::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DaisyWheelNextFocus::GetEventType()
  T DaisyWheelNextFocus::MakeEvent(panorama::IUIPanelClient const*)
@@ -41570,6 +41680,9 @@
  T DoRunUninstall::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DoRunUninstall::GetEventType()
  T DoRunUninstall::MakeEvent(panorama::IUIPanelClient const*)
+ T DongleTooOld::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T DongleTooOld::GetEventType()
+ T DongleTooOld::MakeEvent(panorama::IUIPanelClient const*)
  T DownloadsActivate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DownloadsActivate::GetEventType()
  T DownloadsActivate::MakeEvent(panorama::IUIPanelClient const*)
@@ -42077,6 +42190,13 @@
  T IRegistryInterfaceMap::BSetValueStr(ERegKeyRoot, char const*, char const*, char const*)
  T IRegistryInterfaceMap::BSetValueUint(ERegKeyRoot, char const*, char const*, unsigned int)
  T IStreamConnectionHandler::OnStreamConnected(CStreamConnection*)
+ T IVideoYUVFrame::~IVideoYUVFrame()
+ T IgnoreAllPendingFriendInvites::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T IgnoreAllPendingFriendInvites::GetEventType()
+ T IgnoreAllPendingFriendInvites::MakeEvent(panorama::IUIPanelClient const*)
+ T IgnoreAllPendingGroupInvites::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T IgnoreAllPendingGroupInvites::GetEventType()
+ T IgnoreAllPendingGroupInvites::MakeEvent(panorama::IUIPanelClient const*)
  T IgnoreBroadcastWatchRequest::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T IgnoreBroadcastWatchRequest::GetEventType()
  T IgnoreBroadcastWatchRequest::MakeEvent(panorama::IUIPanelClient const*)
@@ -42435,6 +42555,9 @@
  T MovePlaylistTrackUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T MovePlaylistTrackUp::GetEventType()
  T MovePlaylistTrackUp::MakeEvent(panorama::IUIPanelClient const*)
+ T MoveUpFromListItems::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T MoveUpFromListItems::GetEventType()
+ T MoveUpFromListItems::MakeEvent(panorama::IUIPanelClient const*)
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T MusicBrowseMusic::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T MusicBrowseMusic::GetEventType()
@@ -42456,6 +42579,9 @@
  T MusicGuideButtonFocused::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T MusicGuideButtonFocused::GetEventType()
  T MusicGuideButtonFocused::MakeEvent(panorama::IUIPanelClient const*)
+ T MusicLibraryActivateAlbumTitleView::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T MusicLibraryActivateAlbumTitleView::GetEventType()
+ T MusicLibraryActivateAlbumTitleView::MakeEvent(panorama::IUIPanelClient const*)
  T MusicLibraryActivateAlbumView::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T MusicLibraryActivateAlbumView::GetEventType()
  T MusicLibraryActivateAlbumView::MakeEvent(panorama::IUIPanelClient const*)
@@ -42477,6 +42603,9 @@
  T MusicLibraryActivatePlaylistView::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T MusicLibraryActivatePlaylistView::GetEventType()
  T MusicLibraryActivatePlaylistView::MakeEvent(panorama::IUIPanelClient const*)
+ T MusicLibraryAlbumMoveUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T MusicLibraryAlbumMoveUp::GetEventType()
+ T MusicLibraryAlbumMoveUp::MakeEvent(panorama::IUIPanelClient const*)
  T MusicLibraryContextMenu::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T MusicLibraryContextMenu::GetEventType()
  T MusicLibraryContextMenu::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
@@ -42906,7 +43035,7 @@
  T RemoveFriend::MakeEvent(panorama::IUIPanelClient const*, CSteamID, bool)
  T RemoveFriendSteamID::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T RemoveFriendSteamID::GetEventType()
- T RemoveFriendSteamID::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
+ T RemoveFriendSteamID::MakeEvent(panorama::IUIPanelClient const*, unsigned long long, bool)
  T RemoveIcon::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T RemoveIcon::GetEventType()
  T RemoveIcon::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
@@ -43234,6 +43363,9 @@
  T ShowFriendsProfileDetails::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowFriendsProfileDetails::GetEventType()
  T ShowFriendsProfileDetails::MakeEvent(panorama::IUIPanelClient const*)
+ T ShowFriendsProfileDetailsBySteamID::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ShowFriendsProfileDetailsBySteamID::GetEventType()
+ T ShowFriendsProfileDetailsBySteamID::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
  T ShowFriendsRecommendGame::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowFriendsRecommendGame::GetEventType()
  T ShowFriendsRecommendGame::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
@@ -43416,6 +43548,9 @@
  T ShowStreamSourceOptions::MakeEvent(panorama::IUIPanelClient const*)
  T ShowTenfootPanel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowTenfootPanel::GetEventType()
+ T ShowTestPanel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ShowTestPanel::GetEventType()
+ T ShowTestPanel::MakeEvent(panorama::IUIPanelClient const*)
  T ShowTrailerSlideshow::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowTrailerSlideshow::GetEventType()
  T ShowTrailerSlideshow::MakeEvent(panorama::IUIPanelClient const*)
@@ -43954,6 +44089,9 @@
  T TruncateBackStack::GetEventType()
  T TruncateBackStack::MakeEvent(panorama::IUIPanelClient const*)
  T TurnNotificationLessFunc(TurnNotification_t const&, TurnNotification_t const&)
+ T TurnOffWirelessController::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T TurnOffWirelessController::GetEventType()
+ T TurnOffWirelessController::MakeEvent(panorama::IUIPanelClient const*)
  T TypeToJumpAlbumUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T TypeToJumpAlbumUpdate::MakeEvent(panorama::IUIPanelClient const*)
  T TypeToJumpUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -44044,6 +44182,9 @@
  T UpdateLaunchProgressText::MakeEvent(panorama::IUIPanelClient const*, unsigned int, char const*)
  T UpdateLibraryFriendPanel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T UpdateLibraryFriendPanel::MakeEvent(panorama::IUIPanelClient const*)
+ T UpdateMainMenuBattery::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T UpdateMainMenuBattery::GetEventType()
+ T UpdateMainMenuBattery::MakeEvent(panorama::IUIPanelClient const*)
  T UpdateMainMenuClock::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T UpdateMainMenuClock::GetEventType()
  T UpdateMainMenuClock::MakeEvent(panorama::IUIPanelClient const*)
@@ -44261,12 +44402,6 @@
  T _celt_lpc
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T _pcre_find_bracket
- T _pcre_is_newline
- T _pcre_ord2utf
- T _pcre_valid_utf
- T _pcre_was_newline
- T _pcre_xclass
  T alg_quant
  T alg_unquant
  T amp2Log2
@@ -44327,6 +44462,7 @@
  T bool panorama::DispatchEvent<Login>(Login, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<MessageBoxClose>(MessageBoxClose, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<MonitorConfirmed>(MonitorConfirmed, panorama::IUIPanelClient const*)
+ T bool panorama::DispatchEvent<MusicLibraryActivateGridTabs, char const*>(MusicLibraryActivateGridTabs, panorama::IUIPanelClient const*, char const*)
  T bool panorama::DispatchEvent<NavigateCheckoutBack>(NavigateCheckoutBack, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<NavigateTenfootBack>(NavigateTenfootBack, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<NetworkRefresh>(NetworkRefresh, panorama::IUIPanelClient const*)
@@ -44385,6 +44521,7 @@
  T bool panorama::DispatchEvent<StoreShoppingCartResponse, CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >(StoreShoppingCartResponse, panorama::IUIPanelClient const*, CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>)
  T bool panorama::DispatchEvent<StoreShow>(StoreShow, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<StoreShowAppPurchaseOptions, unsigned int, char const*>(StoreShowAppPurchaseOptions, panorama::IUIPanelClient const*, unsigned int, char const*)
+ T bool panorama::DispatchEvent<StoreShowDlcForApp, unsigned int>(StoreShowDlcForApp, panorama::IUIPanelClient const*, unsigned int)
  T bool panorama::DispatchEvent<StreamingSourceChosen, unsigned long long>(StreamingSourceChosen, panorama::IUIPanelClient const*, unsigned long long)
  T bool panorama::DispatchEvent<TenfootMgrNotificationOngoingVoiceChat, bool>(TenfootMgrNotificationOngoingVoiceChat, panorama::IUIPanelClient const*, bool)
  T bool panorama::DispatchEvent<TenfootMgrNotificationOngoingVoiceChatOnHold, bool>(TenfootMgrNotificationOngoingVoiceChatOnHold, panorama::IUIPanelClient const*, bool)
@@ -44526,160 +44663,8 @@
  T init_JSON_config
  T init_caps
  T int RoundToIntegerType<int>(double, ERoundingMethod)
+ T int V_sprintf_safe<64ul>(char (&) [64ul], char const*, ...)
  T isqrt32
- T jcopy_block_row
- T jcopy_sample_rows
- T jdiv_round_up
- T jinit_1pass_quantizer
- T jinit_2pass_quantizer
- T jinit_arith_decoder
- T jinit_arith_encoder
- T jinit_c_coef_controller
- T jinit_c_main_controller
- T jinit_c_master_control
- T jinit_c_prep_controller
- T jinit_color_converter
- T jinit_color_deconverter
- T jinit_compress_master
- T jinit_d_coef_controller
- T jinit_d_main_controller
- T jinit_d_post_controller
- T jinit_downsampler
- T jinit_forward_dct
- T jinit_huff_decoder
- T jinit_huff_encoder
- T jinit_input_controller
- T jinit_inverse_dct
- T jinit_marker_reader
- T jinit_marker_writer
- T jinit_master_decompress
- T jinit_memory_mgr
- T jinit_merged_upsampler
- T jinit_upsampler
- T jpeg_CreateCompress
- T jpeg_CreateDecompress
- T jpeg_abort
- T jpeg_abort_compress
- T jpeg_abort_decompress
- T jpeg_add_quant_table
- T jpeg_alloc_huff_table
- T jpeg_alloc_quant_table
- T jpeg_calc_jpeg_dimensions
- T jpeg_calc_output_dimensions
- T jpeg_consume_input
- T jpeg_core_output_dimensions
- T jpeg_default_colorspace
- T jpeg_default_qtables
- T jpeg_destroy
- T jpeg_destroy_compress
- T jpeg_destroy_decompress
- T jpeg_fdct_10x10
- T jpeg_fdct_10x5
- T jpeg_fdct_11x11
- T jpeg_fdct_12x12
- T jpeg_fdct_12x6
- T jpeg_fdct_13x13
- T jpeg_fdct_14x14
- T jpeg_fdct_14x7
- T jpeg_fdct_15x15
- T jpeg_fdct_16x16
- T jpeg_fdct_16x8
- T jpeg_fdct_1x1
- T jpeg_fdct_1x2
- T jpeg_fdct_2x1
- T jpeg_fdct_2x2
- T jpeg_fdct_2x4
- T jpeg_fdct_3x3
- T jpeg_fdct_3x6
- T jpeg_fdct_4x2
- T jpeg_fdct_4x4
- T jpeg_fdct_4x8
- T jpeg_fdct_5x10
- T jpeg_fdct_5x5
- T jpeg_fdct_6x12
- T jpeg_fdct_6x3
- T jpeg_fdct_6x6
- T jpeg_fdct_7x14
- T jpeg_fdct_7x7
- T jpeg_fdct_8x16
- T jpeg_fdct_8x4
- T jpeg_fdct_9x9
- T jpeg_fdct_float
- T jpeg_fdct_ifast
- T jpeg_fdct_islow
- T jpeg_finish_compress
- T jpeg_finish_decompress
- T jpeg_finish_output
- T jpeg_free_large
- T jpeg_free_small
- T jpeg_get_large
- T jpeg_get_small
- T jpeg_has_multiple_scans
- T jpeg_idct_10x10
- T jpeg_idct_10x5
- T jpeg_idct_11x11
- T jpeg_idct_12x12
- T jpeg_idct_12x6
- T jpeg_idct_13x13
- T jpeg_idct_14x14
- T jpeg_idct_14x7
- T jpeg_idct_15x15
- T jpeg_idct_16x16
- T jpeg_idct_16x8
- T jpeg_idct_1x1
- T jpeg_idct_1x2
- T jpeg_idct_2x1
- T jpeg_idct_2x2
- T jpeg_idct_2x4
- T jpeg_idct_3x3
- T jpeg_idct_3x6
- T jpeg_idct_4x2
- T jpeg_idct_4x4
- T jpeg_idct_4x8
- T jpeg_idct_5x10
- T jpeg_idct_5x5
- T jpeg_idct_6x12
- T jpeg_idct_6x3
- T jpeg_idct_6x6
- T jpeg_idct_7x14
- T jpeg_idct_7x7
- T jpeg_idct_8x16
- T jpeg_idct_8x4
- T jpeg_idct_9x9
- T jpeg_idct_float
- T jpeg_idct_ifast
- T jpeg_idct_islow
- T jpeg_input_complete
- T jpeg_mem_available
- T jpeg_mem_init
- T jpeg_mem_term
- T jpeg_new_colormap
- T jpeg_open_backing_store
- T jpeg_quality_scaling
- T jpeg_read_header
- T jpeg_read_raw_data
- T jpeg_read_scanlines
- T jpeg_resync_to_restart
- T jpeg_save_markers
- T jpeg_set_colorspace
- T jpeg_set_defaults
- T jpeg_set_linear_quality
- T jpeg_set_marker_processor
- T jpeg_set_quality
- T jpeg_simple_progression
- T jpeg_start_compress
- T jpeg_start_decompress
- T jpeg_start_output
- T jpeg_std_error
- T jpeg_suppress_tables
- T jpeg_write_m_byte
- T jpeg_write_m_header
- T jpeg_write_marker
- T jpeg_write_raw_data
- T jpeg_write_scanlines
- T jpeg_write_tables
- T jround_up
- T jzero_far
  T mlp_process
  T mz_adler32
  T mz_compressBound
@@ -44846,6 +44831,7 @@
  T non-virtual thunk to CGameActions::OnStreamingStillDownloading(unsigned long long, unsigned int)
  T non-virtual thunk to CGameActions::OnStreamingStopProgressUI()
  T non-virtual thunk to CGameActions::OnStreamingUpdateProgressUI(char const*)
+ T non-virtual thunk to CGameActions::OnVideoPlayerFailure()
  T non-virtual thunk to CGameActions::OnWatchVideo(CSteamApp*)
  T non-virtual thunk to CGameActions::ShowStorePage(CGameID)
  T non-virtual thunk to CGameRecordSession::AudioAvailable(IGameStreamAudioCallback::FrameAudioTimestamps_t&, int, unsigned char*, unsigned int)
@@ -44878,6 +44864,7 @@
  T non-virtual thunk to CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
  T non-virtual thunk to CGameStreamSession::OnControllerAttached(unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerDetached(unsigned int)
+ T non-virtual thunk to CGameStreamSession::OnControllerHIDReport(unsigned short, unsigned int, unsigned int, unsigned char const*, unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)
  T non-virtual thunk to CGameStreamSession::OnControllerWirelessPresence(bool, bool)
  T non-virtual thunk to CGameStreamSession::OnDebugDump(void const*, int)
@@ -45995,7 +45982,7 @@
  T panorama::CHTML::GoBack()
  T panorama::CHTML::GoForward()
  T panorama::CHTML::HidePopup()
- T panorama::CHTML::IncrementPageScale(float)
+ T panorama::CHTML::IncrementPageScale(float, bool)
  T panorama::CHTML::InsertCharacterAtCursor(wchar_t const&)
  T panorama::CHTML::InsertCharactersAtCursor(wchar_t const*, unsigned long)
  T panorama::CHTML::MakeScrollBar(bool)
@@ -46003,6 +45990,7 @@
  T panorama::CHTML::OnFinishRequest(char const*, char const*)
  T panorama::CHTML::OnGamePadAnalog(panorama::GamePadData_t const&)
  T panorama::CHTML::OnGamePadDown(panorama::GamePadData_t const&)
+ T panorama::CHTML::OnGamePadUp(panorama::GamePadData_t const&)
  T panorama::CHTML::OnGamepadInput()
  T panorama::CHTML::OnHTMLCommitZoom(panorama::CPanelPtr<panorama::IUIPanel> const&, float)
  T panorama::CHTML::OnHTMLCursorMove(float, float)
@@ -46098,7 +46086,7 @@
  T panorama::CImagePanel::IsClonable()
  T panorama::CImagePanel::OnClearImageSource(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CImagePanel::OnContentSizeTraverse(float*, float*, float, float, bool)
- T panorama::CImagePanel::OnImageLoaded(panorama::IImageSource*)
+ T panorama::CImagePanel::OnImageLoaded(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
  T panorama::CImagePanel::OnSetImageSource(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
  T panorama::CImagePanel::Paint()
  T panorama::CImagePanel::SetAlignment(panorama::EImageHorizontalAlignment, panorama::EImageVerticalAlignment)
@@ -46341,8 +46329,8 @@
  T panorama::CPanel2D::EventIfHoverOverEventInternal(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, panorama::IUIEvent*, bool)
  T panorama::CPanel2D::EventIfNotHasClassEvent(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, panorama::IUIEvent*)
  T panorama::CPanel2D::EventIfNotHoverOtherEvent(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, panorama::IUIEvent*)
- T panorama::CPanel2D::EventImageFailedLoad(panorama::IImageSource*)
- T panorama::CPanel2D::EventImageLoaded(panorama::IImageSource*)
+ T panorama::CPanel2D::EventImageFailedLoad(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
+ T panorama::CPanel2D::EventImageLoaded(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
  T panorama::CPanel2D::EventMoveDown(int)
  T panorama::CPanel2D::EventMoveLeft(int)
  T panorama::CPanel2D::EventMoveRight(int)
@@ -46474,6 +46462,7 @@
  T panorama::CPanel2D::SetDialogVariable(char const*, CUtlString const&)
  T panorama::CPanel2D::SetDialogVariable(char const*, char const*)
  T panorama::CPanel2D::SetDialogVariable(char const*, int)
+ T panorama::CPanel2D::SetDialogVariableLocString(char const*, char const*)
  T panorama::CPanel2D::SetEnabled(bool)
  T panorama::CPanel2D::SetFocus()
  T panorama::CPanel2D::SetHasClass(char const*, bool)
@@ -48362,6 +48351,16 @@
  T panorama::DeletePanel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::DeletePanel::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::DetermineResourceType(panorama::CFileResource const&)
+ T panorama::DragDrop::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragDrop::GetEventType()
+ T panorama::DragEnd::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragEnd::GetEventType()
+ T panorama::DragEnter::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragEnter::GetEventType()
+ T panorama::DragLeave::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragLeave::GetEventType()
+ T panorama::DragStart::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragStart::GetEventType()
  T panorama::DropDownSelectionChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::DropDownSelectionChanged::GetEventType()
  T panorama::DropDownSelectionChanged::MakeEvent(panorama::IUIPanelClient const*)
@@ -48511,6 +48510,8 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ActivateViewAgreements>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ActivityFeedNewsItemsResponse, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddAlbumToPlaylist>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddAllPendingFriendInvites>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddAllPendingGroupInvites>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddAppToFavorites, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddAppToUnblockedGames, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AddArtistToPlaylist>(panorama::IUIPanel*, char const*, char const**)
@@ -48702,6 +48703,8 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CreateNewPlaylistFromSelection>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CreatePlaylistFromCurrentQueue>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<CreatePlaylistFromQueue>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DLCInstall>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DLCViewInStore>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DaisyWheelNextFocus>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DaisyWheelSettings>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DaisyWheelSwitchLanguage>(panorama::IUIPanel*, char const*, char const**)
@@ -48732,6 +48735,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DisplayInboxDropdownInternal>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DisplaySystemMessages>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DoRunUninstall>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DongleTooOld>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DownloadsActivate>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DownloadsButtonFocused>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<DownloadsDelayedGridPanelUnready>(panorama::IUIPanel*, char const*, char const**)
@@ -48798,6 +48802,8 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<HTMLRequestRepaint>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<HTMLScreenShotCaptured, int, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<HighlightTrack, char const*>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IgnoreAllPendingFriendInvites>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IgnoreAllPendingGroupInvites>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IgnoreBroadcastWatchRequest>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IgnoreInstallError>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<IgnoreLegacyKeyError>(panorama::IUIPanel*, char const*, char const**)
@@ -48841,6 +48847,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MovePlaylistItemUp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MovePlaylistTrackDown>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MovePlaylistTrackUp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MoveUpFromListItems>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicBrowseMusic>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicBrowseRecent>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicChangeVolume>(panorama::IUIPanel*, char const*, char const**)
@@ -48848,6 +48855,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicControlGuide>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicControlMore>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicGuideButtonFocused>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryActivateAlbumTitleView>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryActivateAlbumView>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryActivateArtistView>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryActivateFirstAlbum>(panorama::IUIPanel*, char const*, char const**)
@@ -48855,6 +48863,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryActivateFirstPlaylist>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryActivateGridTabs, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryActivatePlaylistView>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryAlbumMoveUp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryContextMenu, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryDelayedGridPanelUnready>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<MusicLibraryShowDetail, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
@@ -48966,7 +48975,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RemoveBinding>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RemoveConfigPrompt>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RemoveCurrentTrack>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RemoveFriendSteamID, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RemoveFriendSteamID, unsigned long long, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RemoveIcon, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RemoveOverlayNotification>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<RemoveSetupEntry>(panorama::IUIPanel*, char const*, char const**)
@@ -49038,6 +49047,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendOptionsMenu, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriends>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendsProfileDetails>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendsProfileDetailsBySteamID, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendsRecommendGame, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendsThatPlay, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowFriendsWantGame, unsigned int>(panorama::IUIPanel*, char const*, char const**)
@@ -49097,6 +49107,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowSettingsFromQuitEntries>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowStorePageForURL, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowStreamSourceOptions>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowTestPanel>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowTrailerSlideshow>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowURLChoiceDialog>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowWebBrowser>(panorama::IUIPanel*, char const*, char const**)
@@ -49214,6 +49225,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<TrailerSlideshowItemsResponse>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<TransportGotFocus>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<TruncateBackStack>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<TurnOffWirelessController>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<TypeToJumpAlbumUpdate>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<TypeToJumpUpdate>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UnderscanDeselected>(panorama::IUIPanel*, char const*, char const**)
@@ -49237,6 +49249,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateLaunchProgressDialogVarString, unsigned int, char const*, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateLaunchProgressText, unsigned int, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateLibraryFriendPanel>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateMainMenuBattery>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateMainMenuClock>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateOverlayClock>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateStreamingQuality>(panorama::IUIPanel*, char const*, char const**)
@@ -49859,416 +49872,9 @@
  T panorama::WindowShown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::WindowShown::GetEventType()
  T patch_transient_decision
- T pcre_compile
- T pcre_compile2
- T pcre_config
- T pcre_exec
- T pcre_fullinfo
- T pcrecpp::Arg::parse_char(char const*, int, void*)
- T pcrecpp::Arg::parse_double(char const*, int, void*)
- T pcrecpp::Arg::parse_float(char const*, int, void*)
- T pcrecpp::Arg::parse_int(char const*, int, void*)
- T pcrecpp::Arg::parse_int_cradix(char const*, int, void*)
- T pcrecpp::Arg::parse_int_hex(char const*, int, void*)
- T pcrecpp::Arg::parse_int_octal(char const*, int, void*)
- T pcrecpp::Arg::parse_int_radix(char const*, int, void*, int)
- T pcrecpp::Arg::parse_long(char const*, int, void*)
- T pcrecpp::Arg::parse_long_cradix(char const*, int, void*)
- T pcrecpp::Arg::parse_long_hex(char const*, int, void*)
- T pcrecpp::Arg::parse_long_octal(char const*, int, void*)
- T pcrecpp::Arg::parse_long_radix(char const*, int, void*, int)
- T pcrecpp::Arg::parse_longlong(char const*, int, void*)
- T pcrecpp::Arg::parse_longlong_cradix(char const*, int, void*)
- T pcrecpp::Arg::parse_longlong_hex(char const*, int, void*)
- T pcrecpp::Arg::parse_longlong_octal(char const*, int, void*)
- T pcrecpp::Arg::parse_longlong_radix(char const*, int, void*, int)
- T pcrecpp::Arg::parse_null(char const*, int, void*)
- T pcrecpp::Arg::parse_short(char const*, int, void*)
- T pcrecpp::Arg::parse_short_cradix(char const*, int, void*)
- T pcrecpp::Arg::parse_short_hex(char const*, int, void*)
- T pcrecpp::Arg::parse_short_octal(char const*, int, void*)
- T pcrecpp::Arg::parse_short_radix(char const*, int, void*, int)
- T pcrecpp::Arg::parse_string(char const*, int, void*)
- T pcrecpp::Arg::parse_stringpiece(char const*, int, void*)
- T pcrecpp::Arg::parse_uchar(char const*, int, void*)
- T pcrecpp::Arg::parse_uint(char const*, int, void*)
- T pcrecpp::Arg::parse_uint_cradix(char const*, int, void*)
- T pcrecpp::Arg::parse_uint_hex(char const*, int, void*)
- T pcrecpp::Arg::parse_uint_octal(char const*, int, void*)
- T pcrecpp::Arg::parse_uint_radix(char const*, int, void*, int)
- T pcrecpp::Arg::parse_ulong(char const*, int, void*)
- T pcrecpp::Arg::parse_ulong_cradix(char const*, int, void*)
- T pcrecpp::Arg::parse_ulong_hex(char const*, int, void*)
- T pcrecpp::Arg::parse_ulong_octal(char const*, int, void*)
- T pcrecpp::Arg::parse_ulong_radix(char const*, int, void*, int)
- T pcrecpp::Arg::parse_ulonglong(char const*, int, void*)
- T pcrecpp::Arg::parse_ulonglong_cradix(char const*, int, void*)
- T pcrecpp::Arg::parse_ulonglong_hex(char const*, int, void*)
- T pcrecpp::Arg::parse_ulonglong_octal(char const*, int, void*)
- T pcrecpp::Arg::parse_ulonglong_radix(char const*, int, void*, int)
- T pcrecpp::Arg::parse_ushort(char const*, int, void*)
- T pcrecpp::Arg::parse_ushort_cradix(char const*, int, void*)
- T pcrecpp::Arg::parse_ushort_hex(char const*, int, void*)
- T pcrecpp::Arg::parse_ushort_octal(char const*, int, void*)
- T pcrecpp::Arg::parse_ushort_radix(char const*, int, void*, int)
- T pcrecpp::RE::Cleanup()
- T pcrecpp::RE::Compile(pcrecpp::RE::Anchor)
- T pcrecpp::RE::Consume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
- T pcrecpp::RE::DoMatch(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int) const
- T pcrecpp::RE::DoMatchImpl(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int, int*, int) const
- T pcrecpp::RE::Extract(pcrecpp::StringPiece const&, pcrecpp::StringPiece const&, std::string*) const
- T pcrecpp::RE::FindAndConsume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
- T pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
- T pcrecpp::RE::GlobalReplace(pcrecpp::StringPiece const&, std::string*) const
- T pcrecpp::RE::Init(std::string const&, pcrecpp::RE_Options const*)
- T pcrecpp::RE::NumberOfCapturingGroups() const
- T pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
- T pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
  T pcrecpp::RE::RE(char const*, pcrecpp::RE_Options const&)
- T pcrecpp::RE::Replace(pcrecpp::StringPiece const&, std::string*) const
- T pcrecpp::RE::Rewrite(std::string*, pcrecpp::StringPiece const&, pcrecpp::StringPiece const&, int*, int) const
- T pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
- T pcrecpp::RE::~RE()
  T pitch_downsample
  T pitch_search
- T png_64bit_product
- T png_access_version_number
- T png_ascii_from_fixed
- T png_ascii_from_fp
- T png_benign_error
- T png_build_gamma_table
- T png_build_grayscale_palette
- T png_calculate_crc
- T png_calloc
- T png_check_IHDR
- T png_check_cHRM_fixed
- T png_check_chunk_name
- T png_check_fp_number
- T png_check_fp_string
- T png_check_keyword
- T png_chunk_benign_error
- T png_chunk_error
- T png_chunk_warning
- T png_combine_row
- T png_convert_from_struct_tm
- T png_convert_from_time_t
- T png_convert_to_rfc1123
- T png_crc_error
- T png_crc_finish
- T png_crc_read
- T png_create_info_struct
- T png_create_read_struct
- T png_create_read_struct_2
- T png_create_struct
- T png_create_struct_2
- T png_create_write_struct
- T png_create_write_struct_2
- T png_data_freer
- T png_decompress_chunk
- T png_default_flush
- T png_default_read_data
- T png_default_write_data
- T png_destroy_info_struct
- T png_destroy_read_struct
- T png_destroy_struct
- T png_destroy_struct_2
- T png_destroy_write_struct
- T png_do_background
- T png_do_bgr
- T png_do_chop
- T png_do_expand
- T png_do_expand_16
- T png_do_expand_palette
- T png_do_gamma
- T png_do_gray_to_rgb
- T png_do_invert
- T png_do_pack
- T png_do_packswap
- T png_do_quantize
- T png_do_read_filler
- T png_do_read_interlace
- T png_do_read_intrapixel
- T png_do_read_invert_alpha
- T png_do_read_swap_alpha
- T png_do_read_transformations
- T png_do_rgb_to_gray
- T png_do_shift
- T png_do_strip_channel
- T png_do_swap
- T png_do_unpack
- T png_do_unshift
- T png_do_write_interlace
- T png_do_write_intrapixel
- T png_do_write_invert_alpha
- T png_do_write_swap_alpha
- T png_do_write_transformations
- T png_error
- T png_fixed
- T png_fixed_error
- T png_flush
- T png_free
- T png_free_data
- T png_free_default
- T png_gamma_16bit_correct
- T png_gamma_8bit_correct
- T png_gamma_correct
- T png_gamma_significant
- T png_get_IHDR
- T png_get_PLTE
- T png_get_bKGD
- T png_get_bit_depth
- T png_get_cHRM
- T png_get_cHRM_fixed
- T png_get_channels
- T png_get_chunk_cache_max
- T png_get_chunk_malloc_max
- T png_get_color_type
- T png_get_compression_buffer_size
- T png_get_compression_type
- T png_get_copyright
- T png_get_current_pass_number
- T png_get_current_row_number
- T png_get_error_ptr
- T png_get_filter_type
- T png_get_gAMA
- T png_get_gAMA_fixed
- T png_get_hIST
- T png_get_header_ver
- T png_get_header_version
- T png_get_iCCP
- T png_get_image_height
- T png_get_image_width
- T png_get_int_32
- T png_get_interlace_type
- T png_get_io_chunk_name
- T png_get_io_chunk_type
- T png_get_io_ptr
- T png_get_io_state
- T png_get_libpng_ver
- T png_get_mem_ptr
- T png_get_oFFs
- T png_get_pCAL
- T png_get_pHYs
- T png_get_pHYs_dpi
- T png_get_pixel_aspect_ratio
- T png_get_pixel_aspect_ratio_fixed
- T png_get_pixels_per_inch
- T png_get_pixels_per_meter
- T png_get_rgb_to_gray_status
- T png_get_rowbytes
- T png_get_rows
- T png_get_sBIT
- T png_get_sCAL
- T png_get_sCAL_fixed
- T png_get_sCAL_s
- T png_get_sPLT
- T png_get_sRGB
- T png_get_signature
- T png_get_tIME
- T png_get_tRNS
- T png_get_text
- T png_get_uint_16
- T png_get_uint_31
- T png_get_uint_32
- T png_get_unknown_chunks
- T png_get_user_chunk_ptr
- T png_get_user_height_max
- T png_get_user_transform_ptr
- T png_get_user_width_max
- T png_get_valid
- T png_get_x_offset_inches
- T png_get_x_offset_inches_fixed
- T png_get_x_offset_microns
- T png_get_x_offset_pixels
- T png_get_x_pixels_per_inch
- T png_get_x_pixels_per_meter
- T png_get_y_offset_inches
- T png_get_y_offset_inches_fixed
- T png_get_y_offset_microns
- T png_get_y_offset_pixels
- T png_get_y_pixels_per_inch
- T png_get_y_pixels_per_meter
- T png_handle_IEND
- T png_handle_IHDR
- T png_handle_PLTE
- T png_handle_as_unknown
- T png_handle_bKGD
- T png_handle_cHRM
- T png_handle_gAMA
- T png_handle_hIST
- T png_handle_iCCP
- T png_handle_iTXt
- T png_handle_oFFs
- T png_handle_pCAL
- T png_handle_pHYs
- T png_handle_sBIT
- T png_handle_sCAL
- T png_handle_sPLT
- T png_handle_sRGB
- T png_handle_tEXt
- T png_handle_tIME
- T png_handle_tRNS
- T png_handle_unknown
- T png_handle_zTXt
- T png_info_destroy
- T png_info_init_3
- T png_init_io
- T png_init_read_transformations
- T png_longjmp
- T png_malloc
- T png_malloc_default
- T png_malloc_warn
- T png_muldiv
- T png_muldiv_warn
- T png_permit_mng_features
- T png_read_chunk_header
- T png_read_data
- T png_read_destroy
- T png_read_end
- T png_read_filter_row
- T png_read_finish_row
- T png_read_image
- T png_read_info
- T png_read_png
- T png_read_row
- T png_read_rows
- T png_read_sig
- T png_read_start_row
- T png_read_transform_info
- T png_read_update_info
- T png_reciprocal
- T png_reciprocal2
- T png_reset_crc
- T png_reset_zstream
- T png_save_int_32
- T png_save_uint_16
- T png_save_uint_32
- T png_set_IHDR
- T png_set_PLTE
- T png_set_add_alpha
- T png_set_bKGD
- T png_set_background
- T png_set_background_fixed
- T png_set_benign_errors
- T png_set_bgr
- T png_set_cHRM
- T png_set_cHRM_fixed
- T png_set_chunk_cache_max
- T png_set_chunk_malloc_max
- T png_set_compression_buffer_size
- T png_set_compression_level
- T png_set_compression_mem_level
- T png_set_compression_method
- T png_set_compression_strategy
- T png_set_compression_window_bits
- T png_set_crc_action
- T png_set_error_fn
- T png_set_expand
- T png_set_expand_16
- T png_set_expand_gray_1_2_4_to_8
- T png_set_filler
- T png_set_filter
- T png_set_filter_heuristics
- T png_set_filter_heuristics_fixed
- T png_set_flush
- T png_set_gAMA
- T png_set_gAMA_fixed
- T png_set_gamma
- T png_set_gamma_fixed
- T png_set_gray_to_rgb
- T png_set_hIST
- T png_set_iCCP
- T png_set_interlace_handling
- T png_set_invalid
- T png_set_invert_alpha
- T png_set_invert_mono
- T png_set_keep_unknown_chunks
- T png_set_longjmp_fn
- T png_set_mem_fn
- T png_set_oFFs
- T png_set_pCAL
- T png_set_pHYs
- T png_set_packing
- T png_set_packswap
- T png_set_palette_to_rgb
- T png_set_quantize
- T png_set_read_fn
- T png_set_read_status_fn
- T png_set_read_user_chunk_fn
- T png_set_read_user_transform_fn
- T png_set_rgb_to_gray
- T png_set_rgb_to_gray_fixed
- T png_set_rows
- T png_set_sBIT
- T png_set_sCAL
- T png_set_sCAL_fixed
- T png_set_sCAL_s
- T png_set_sPLT
- T png_set_sRGB
- T png_set_sRGB_gAMA_and_cHRM
- T png_set_shift
- T png_set_sig_bytes
- T png_set_strip_16
- T png_set_strip_alpha
- T png_set_swap
- T png_set_swap_alpha
- T png_set_tIME
- T png_set_tRNS
- T png_set_tRNS_to_alpha
- T png_set_text
- T png_set_text_2
- T png_set_unknown_chunk_location
- T png_set_unknown_chunks
- T png_set_user_limits
- T png_set_user_transform_info
- T png_set_write_fn
- T png_set_write_status_fn
- T png_set_write_user_transform_fn
- T png_sig_cmp
- T png_start_read_image
- T png_warning
- T png_write_IDAT
- T png_write_IEND
- T png_write_IHDR
- T png_write_PLTE
- T png_write_bKGD
- T png_write_cHRM_fixed
- T png_write_chunk
- T png_write_chunk_data
- T png_write_chunk_end
- T png_write_chunk_start
- T png_write_data
- T png_write_destroy
- T png_write_end
- T png_write_filtered_row
- T png_write_find_filter
- T png_write_finish_row
- T png_write_flush
- T png_write_gAMA_fixed
- T png_write_hIST
- T png_write_iCCP
- T png_write_iTXt
- T png_write_image
- T png_write_info
- T png_write_info_before_PLTE
- T png_write_oFFs
- T png_write_pCAL
- T png_write_pHYs
- T png_write_png
- T png_write_row
- T png_write_rows
- T png_write_sBIT
- T png_write_sCAL_s
- T png_write_sPLT
- T png_write_sRGB
- T png_write_sig
- T png_write_start_row
- T png_write_tEXt
- T png_write_tIME
- T png_write_tRNS
- T png_write_zTXt
- T png_zalloc
- T png_zfree
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AddDesc_renderer_2frendermessages_2eproto()
  T protobuf_AddDesc_steammessages_5fbase_2eproto()
@@ -52107,7 +51713,6 @@
  T vgui::Menu::OnCursorEnteredMenuItem(unsigned int)
  T vgui::Menu::OnCursorExitedMenuItem(unsigned int)
  T vgui::Menu::OnCursorMoved(int, int)
- T vgui::Menu::OnInternalMouseReleased(vgui::Panel*, vgui::MouseCode)
  T vgui::Menu::OnKeyCodePressed(vgui::KeyCode)
  T vgui::Menu::OnKeyCodeTyped(vgui::KeyCode)
  T vgui::Menu::OnKeyModeSet()
@@ -53832,7 +53437,6 @@
  T vgui::VPanelHandle::Get()
  T vgui::VPanelHandle::Set(unsigned int)
  T vgui::ValidateGlobals(CValidator&)
- T vgui::ValidateMenuGlobals(CValidator&)
  T vgui::Validate_AnimationControllerStatic(CValidator&)
  T vgui::Validate_PanelMessageMapDictionary(CValidator&)
  T vgui::WizardPanel::ActivateNextSubPanel(vgui::WizardSubPanel*)
@@ -54014,6 +53618,7 @@
  T void panorama::DispatchEventAsync<ChooseControllerBinding>(float, ChooseControllerBinding, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<ClearScreenshotImage>(float, ClearScreenshotImage, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<CloseCDKeyMessageBox>(float, CloseCDKeyMessageBox, panorama::IUIPanelClient const*)
+ T void panorama::DispatchEventAsync<CloseMusicControl>(CloseMusicControl, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<CommunityFeedStripAddItemsFromFeeds>(float, CommunityFeedStripAddItemsFromFeeds, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<ControllerFirmwareOutOfDate, char const*, char const*, CUtlString, unsigned int>(float, ControllerFirmwareOutOfDate, panorama::IUIPanelClient const*, char const*, char const*, CUtlString, unsigned int)
  T void panorama::DispatchEventAsync<ControllerFirmwareOutOfDate, char const*, char const*, char const*, int>(float, ControllerFirmwareOutOfDate, panorama::IUIPanelClient const*, char const*, char const*, char const*, int)
@@ -54023,7 +53628,9 @@
  T void panorama::DispatchEventAsync<DelayedGridPanelUnready>(float, DelayedGridPanelUnready, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<DeleteOverlayDispatcher, CTenfootOverlayDispatcher*>(float, DeleteOverlayDispatcher, panorama::IUIPanelClient const*, CTenfootOverlayDispatcher*)
  T void panorama::DispatchEventAsync<DisableOverlay>(DisableOverlay, panorama::IUIPanelClient const*)
+ T void panorama::DispatchEventAsync<DisableOverlay>(float, DisableOverlay, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<DisplayInboxDropdownInternal>(float, DisplayInboxDropdownInternal, panorama::IUIPanelClient const*)
+ T void panorama::DispatchEventAsync<DongleTooOld>(float, DongleTooOld, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<DownloadsDelayedGridPanelUnready>(float, DownloadsDelayedGridPanelUnready, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<EnableOverlay>(EnableOverlay, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<EnsureCurrentEntryIsVisible>(float, EnsureCurrentEntryIsVisible, panorama::IUIPanelClient const*)
@@ -54093,6 +53700,7 @@
  T void panorama::DispatchEventAsync<UpdateFriendsScrollToMostRecentChatMsg>(float, UpdateFriendsScrollToMostRecentChatMsg, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<UpdateGameControllerName>(float, UpdateGameControllerName, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<UpdateGuidesPanelData>(float, UpdateGuidesPanelData, panorama::IUIPanelClient const*)
+ T void panorama::DispatchEventAsync<UpdateMainMenuBattery>(float, UpdateMainMenuBattery, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<UpdateMainMenuClock>(float, UpdateMainMenuClock, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<UpdateOverlayClock>(float, UpdateOverlayClock, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<VoiceSinkAdded, int>(float, VoiceSinkAdded, panorama::IUIPanelClient const*, int)
@@ -54452,6 +54060,7 @@
  ThreadInterlockedExchange
  ThreadInterlockedExchange64
  ThreadInterlockedExchangeAdd
+ ThreadInterlockedExchangeAdd64
  ThreadInterlockedExchangePointer
  ThreadInterlockedIncrement
  ThreadInterlockedIncrement64
@@ -54583,8 +54192,6 @@
  __memcpy_chk
  __memset_chk
  __moddi3
- __snprintf_chk
- __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
@@ -54603,7 +54210,6 @@
  atan
  atan2
  atan2f
- atof
  atoi
  atoll
  b (anonymous namespace)::CAudioFormat_descriptor_
@@ -55174,6 +54780,7 @@
  b CAppGridItem::UpdateData()::k_symMacAvailable
  b CAppGridItem::UpdateData()::k_symSteamOSAvailable
  b CAppGridItem::UpdateData()::k_symWindowsAvailable
+ b CAvatarImage::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symSteamId
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CCheckoutAddFunds::Show(CSmartPtr<CStoreGetFundWalletInfoResults const, CRefCountAccessor>)::k_symHorizontalRule
  b CCheckoutPaymentMethod::Show(CSmartPtr<CStoreBeginCheckout const, CRefCountAccessor>, ECheckoutPurchaseType)::k_symPaymentMethodLogoRow
@@ -55221,6 +54828,7 @@
  b CLogger::FlushEventQueue(bool)::fAsserted
  b CMainMenu::OnAnimationEnd(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CPanoramaSymbol)::k_symFeaturedIMStyles
  b CMainMenu::OnAnimationEnd(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CPanoramaSymbol)::k_symIMBgToFg
+ b CMusicLibraryAlbumPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::sortSymbol
  b CONNECT_ACK_TIMEOUT_TICKS
  b CParentalButton::CheckAndRestyle()::k_symPropertyOnActivate
  b CPlatformMainPanel::OnWindowsEndSession()::bAlreadyShutdown
@@ -55451,7 +55059,6 @@
  b g_MenuBar_Helper
  b g_MenuButton_Helper
  b g_MenuItem_Helper
- b g_MenuMgr
  b g_Menu_Helper
  b g_Panel_Helper
  b g_ProgressBar_Helper
@@ -55538,6 +55145,7 @@
  b guard variable for CAppGridItem::UpdateData()::k_symMacAvailable
  b guard variable for CAppGridItem::UpdateData()::k_symSteamOSAvailable
  b guard variable for CAppGridItem::UpdateData()::k_symWindowsAvailable
+ b guard variable for CAvatarImage::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symSteamId
  b guard variable for CCheckoutAddFunds::Show(CSmartPtr<CStoreGetFundWalletInfoResults const, CRefCountAccessor>)::k_symHorizontalRule
  b guard variable for CCheckoutPaymentMethod::Show(CSmartPtr<CStoreBeginCheckout const, CRefCountAccessor>, ECheckoutPurchaseType)::k_symPaymentMethodLogoRow
  b guard variable for CControllerBindingButton::BSetProperty(panorama::CPanoramaSymbol, char const*)::symAcceptsFocus
@@ -55571,6 +55179,7 @@
  b guard variable for CLibraryRecentPanel::UpdateMRUApps()::k_symWindowsAvailable
  b guard variable for CMainMenu::OnAnimationEnd(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CPanoramaSymbol)::k_symFeaturedIMStyles
  b guard variable for CMainMenu::OnAnimationEnd(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CPanoramaSymbol)::k_symIMBgToFg
+ b guard variable for CMusicLibraryAlbumPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::sortSymbol
  b guard variable for CParentalButton::CheckAndRestyle()::k_symPropertyOnActivate
  b guard variable for CRemoteSteamApp::CRemoteSteamApp(CSteamApp*, unsigned long long, CRemoteSteamAppClient*)::s_KeyClientName
  b guard variable for CScreenshotBrowser::SetFullscreenStyles(bool)::k_symScreenshotSlideshowVisible
@@ -56325,8 +55934,6 @@
  b panorama::g_CStylePropertyWhiteSpace_Helper
  b panorama::g_CStylePropertyWidth_Helper
  b panorama::g_CStylePropertyZIndex_Helper
- b pcrecpp::default_options
- b pcrecpp::empty_string
  b profile_dump_command
  b profile_off_command
  b profile_on_command
@@ -56490,7 +56097,6 @@
  copyfile_state_alloc
  copyfile_state_free
  cos
- crc32
  d (anonymous namespace)::protobuf_AssignDescriptors_once_
  d CControllerPropertiesMode::ShowControls(EControllerSourceMode)::s_rgClassNames
  d CSettingsPanelTimeZone::InitTimeZoneTable()::pchSep
@@ -56638,15 +56244,10 @@
  d vgui::ScrollBarSlider::Paint()::styleNameList
  d vtable for (anonymous namespace)::CaptionGripPanel
  d vtable for (anonymous namespace)::ScrollBarButton
- deflate
- deflateEnd
- deflateInit2_
- deflateReset
  dlclose
  dlopen
  dlsym
  dup
- exit
  exp
  exp2
  fclose
@@ -56659,12 +56260,10 @@
  fmod
  fopen
  fprintf
- fputc
  fputs
  fputs$UNIX2003
  fread
  free
- frexp
  fseeko
  fstat$INODE64
  fstat64
@@ -56706,11 +56305,21 @@
  glTexImage2D
  glTexParameteri
  glVertex2f
- gmtime
- inflate
- inflateEnd
- inflateInit_
- inflateReset
+ jpeg_CreateCompress
+ jpeg_CreateDecompress
+ jpeg_destroy_compress
+ jpeg_destroy_decompress
+ jpeg_finish_compress
+ jpeg_finish_decompress
+ jpeg_read_header
+ jpeg_read_scanlines
+ jpeg_resync_to_restart
+ jpeg_set_defaults
+ jpeg_set_quality
+ jpeg_start_compress
+ jpeg_start_decompress
+ jpeg_std_error
+ jpeg_write_scanlines
  kCFAbsoluteTimeIntervalSince1970
  kCFAllocatorDefault
  kCFBooleanFalse
@@ -56756,7 +56365,6 @@
  mkdir
  mktime$UNIX2003
  mmap$UNIX2003
- modf
  munmap$UNIX2003
  objc_enumerationMutation
  objc_msgSend
@@ -56766,7 +56374,41 @@
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
+ pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+ pcrecpp::RE::GlobalReplace(pcrecpp::StringPiece const&, std::string*) const
+ pcrecpp::RE::Init(std::string const&, pcrecpp::RE_Options const*)
+ pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+ pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
+ pcrecpp::RE::no_arg
+ pcrecpp::RE::~RE()
  pipe
+ png_create_info_struct
+ png_create_read_struct
+ png_create_write_struct
+ png_destroy_read_struct
+ png_destroy_write_struct
+ png_get_IHDR
+ png_get_channels
+ png_get_image_height
+ png_get_image_width
+ png_get_rowbytes
+ png_get_valid
+ png_read_end
+ png_read_image
+ png_read_info
+ png_read_update_info
+ png_set_IHDR
+ png_set_expand
+ png_set_filler
+ png_set_gray_to_rgb
+ png_set_longjmp_fn
+ png_set_read_fn
+ png_set_strip_16
+ png_set_write_fn
+ png_sig_cmp
+ png_write_end
+ png_write_info
+ png_write_row
  poll$UNIX2003
  pow
  printf
@@ -56781,7 +56423,6 @@
  putenv$UNIX2003
  qsort
  r .memset_pattern
- r .memset_pattern1
  r .memset_pattern22
  r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
  r CDownloadSummaryPanel::CDownloadSummaryPanel(vgui::Panel*, char const*)::ranges
@@ -56801,11 +56442,8 @@
  r ParseStyleClassFromTag(char const*)::k_rgchClassStart
  r analysis_window
  r ascii_class
- r autoposstab
  r band_allocation
- r base_dither_matrix
  r beta_coef
- r bmask
  r cache_bits50
  r cache_caps50
  r cache_index50
@@ -56816,29 +56454,16 @@
  r dct_table
  r delay_matrix_dec
  r delay_matrix_enc
- r digitab
  r e_prob_model
  r eband5ms
- r error_texts
- r escapes
  r exp_rotation.SPREAD_FACTOR
  r extra_bands
- r extra_pool_slop
  r fft_bitrev120
  r fft_bitrev240
  r fft_bitrev480
  r fft_bitrev60
  r fft_twiddles48000_960
- r first_pool_slop
- r fourbppswaptable
  r g_PingRates
- r jpeg_zigzag_order
- r jpeg_zigzag_order2
- r jpeg_zigzag_order3
- r jpeg_zigzag_order4
- r jpeg_zigzag_order5
- r jpeg_zigzag_order6
- r jpeg_zigzag_order7
  r k_rgchDataURIForNavPlaceholderPrefix
  r k_rgchDataURIForNavPlaceholderSuffix
  r k_rgchDefaultHeader
@@ -56857,6 +56482,7 @@
  r k_rgchSSAVersionRegKeySteam
  r k_rgflMoviePlaybackSpeeds
  r k_szEventPrefix
+ r k_szHTML5AppExe
  r k_szJavascriptPrefix
  r logN400
  r mdct_twiddles960
@@ -56864,8 +56490,6 @@
  r mono_voice_bandwidth_thresholds
  r mz_bitmasks
  r mz_crc32::s_crc32
- r onebppswaptable
- r opcode_possessify
  r ordery_table
  r panorama::CDebugPanelStyle::SetAnimationInfo(CUtlBuffer*, panorama::CDebugStyleAnimation*)::k_rgchKeyFrames
  r panorama::CLabel::SetFromHTMLInternal(char const*, bool, bool)::k_rgKnownTagFormatFlags
@@ -56887,38 +56511,6 @@
  r panorama::CStylePropertyBackgroundImage::BSetFromString(panorama::CStyleSymbol, char const*)::k_rgchCover
  r panorama::CStylePropertyContextUIPosition::ResolveDefaultPositions(panorama::EContextUIPosition (&) [4])::arrAllPositions
  r panorama::CStylePropertyTransitionProperties::BParseAndRemoveImmediate(bool*, char*)::k_rgchImmediate
- r png_convert_to_rfc1123.short_months
- r png_digit
- r png_read_finish_row.png_pass_yinc
- r png_read_finish_row.png_pass_ystart
- r png_read_row.png_pass_dsp_mask
- r png_read_row.png_pass_mask
- r png_read_start_row.png_pass_inc
- r png_read_start_row.png_pass_start
- r png_write_IDAT.png_IDAT
- r png_write_IEND.png_IEND
- r png_write_IHDR.png_IHDR
- r png_write_PLTE.png_PLTE
- r png_write_bKGD.png_bKGD
- r png_write_cHRM_fixed.png_cHRM
- r png_write_gAMA_fixed.png_gAMA
- r png_write_hIST.png_hIST
- r png_write_iCCP.png_iCCP
- r png_write_iTXt.png_iTXt
- r png_write_oFFs.png_oFFs
- r png_write_pCAL.png_pCAL
- r png_write_pHYs.png_pHYs
- r png_write_sBIT.png_sBIT
- r png_write_sCAL_s.png_sCAL
- r png_write_sPLT.png_sPLT
- r png_write_sRGB.png_sRGB
- r png_write_tEXt.png_tEXt
- r png_write_tIME.png_tIME
- r png_write_tRNS.png_tRNS
- r png_write_zTXt.png_zTXt
- r posix_class_maps
- r posix_name_lengths
- r posix_names
  r pred_coef
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
@@ -57184,8 +56776,6 @@
  r protobuf_AssignDesc_stream_2eproto()::CVideoFormat_offsets_
  r quant_band.bit_deinterleave_table
  r quant_band.bit_interleave_table
- r rep_max
- r rep_min
  r s_rgCRCTable_Castagnoli
  r s_rgCRCTable_Standard
  r s_rgFilterFlagCharMap
@@ -57200,7 +56790,6 @@
  r s_vecLanguagesOrdered_Nexon
  r s_vecLanguagesOrdered_PerfectWorld
  r second_check
- r select_ncolors.RGB_order
  r sigm_LUT_neg_Q15
  r sigm_LUT_pos_Q15
  r sigm_LUT_slope_Q10
@@ -57233,25 +56822,9 @@
  r silk_NLSF_PRED_WB_Q8
  r small_energy_icdf
  r spread_icdf
- r start_pass.aanscalefactor
- r start_pass.aanscales
- r start_pass_fdctmgr.aanscalefactor
- r start_pass_fdctmgr.aanscales
  r state_transition_table
- r std_chrominance_quant_tbl
- r std_huff_tables.bits_ac_chrominance
- r std_huff_tables.bits_ac_luminance
- r std_huff_tables.bits_dc_chrominance
- r std_huff_tables.bits_dc_luminance
- r std_huff_tables.val_ac_chrominance
- r std_huff_tables.val_ac_luminance
- r std_huff_tables.val_dc_chrominance
- r std_huff_tables.val_dc_luminance
- r std_luminance_quant_tbl
  r stereo_music_bandwidth_thresholds
  r stereo_voice_bandwidth_thresholds
- r sub_end_of_word
- r sub_start_of_word
  r tansig_table
  r tapset_icdf
  r tbands
@@ -57264,13 +56837,10 @@
  r topo
  r transient_analysis.inv_table
  r trim_icdf
- r twobppswaptable
  r typeinfo name for (anonymous namespace)::CaptionGripPanel
  r typeinfo name for (anonymous namespace)::GripPanel
  r typeinfo name for (anonymous namespace)::ScrollBarButton
  r utf8_lead_bits
- r verbnames
- r verbs
  r weights
  r window120
  rand
@@ -57363,7 +56933,6 @@
  std::string::resize(unsigned long, char)
  std::string::rfind(char, unsigned long) const
  std::string::substr(unsigned long, unsigned long) const
- std::string::swap(std::string&)
  std::terminate()
  std::uncaught_exception()
  strcasecmp
@@ -57386,10 +56955,8 @@
  strtof$UNIX2003
  strtol
  strtoll
- strtoq
  strtoul
  strtoull
- strtouq
  swprintf
  sysconf
  sysctl
@@ -57535,6 +57102,7 @@
  t Create_FriendsChatDialog(char const*, panorama::IUIPanel*)
  t Create_FriendsFriendListItemCommunity(char const*, panorama::IUIPanel*)
  t Create_FriendsIndicatorContainer(char const*, panorama::IUIPanel*)
+ t Create_FriendsInvitePage(char const*, panorama::IUIPanel*)
  t Create_FriendsProfileDetailsCompositeHeader(char const*, panorama::IUIPanel*)
  t Create_FriendsSelfHeader(char const*, panorama::IUIPanel*)
  t Create_GraphPanel()
@@ -57552,6 +57120,7 @@
  t Create_LibraryAllGames(char const*, panorama::IUIPanel*)
  t Create_LibraryAppDetails(char const*, panorama::IUIPanel*)
  t Create_LibraryController(char const*, panorama::IUIPanel*)
+ t Create_LibraryDLC(char const*, panorama::IUIPanel*)
  t Create_LibraryFriend(char const*, panorama::IUIPanel*)
  t Create_LibraryFriendsWhoPlay(char const*, panorama::IUIPanel*)
  t Create_LibraryGuides(char const*, panorama::IUIPanel*)
@@ -57681,6 +57250,7 @@
  t Create_VideoQualityPopup(char const*, panorama::IUIPanel*)
  t Create_VolumeSliderPopup(char const*, panorama::IUIPanel*)
  t CryptoPP::TrySSE2()
+ t DecimalToUint64(char const*, unsigned long long, unsigned long long*)
  t DefaultSortFunc(KeyValues*, KeyValues*)
  t DefaultSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t DumpGuint32Address(unsigned int, bool, char*)
@@ -57739,22 +57309,13 @@
  t SzKeyNameAndDefaultFromSoundType(panorama::ESoundType, float*)
  t ValidatePipeQueueNode(CValidator&, char const*, unsigned long long)
  t __cxx_global_array_dtor
- t __cxx_global_var_init134
+ t __cxx_global_var_init133
  t __cxx_global_var_init98
  t __static_initialization_and_destruction_0(int, int)
  t __tcf_0
  t __tcf_2
  t __tcf_3
  t __tcf_4
- t access_virt_barray
- t access_virt_sarray
- t add_huff_table
- t add_to_class
- t adjust_recurse
- t alloc_barray
- t alloc_large
- t alloc_sarray
- t alloc_small
  t app_backup(void*, ConParams&, ConCommand&)
  t app_download_enable(void*, ConParams&, ConCommand&)
  t app_install(void*, ConParams&, ConCommand&)
@@ -57762,42 +57323,15 @@
  t app_restore(void*, ConParams&, ConCommand&)
  t app_start_validation(void*, ConParams&, ConCommand&)
  t app_uninstall(void*, ConParams&, ConCommand&)
- t arith_decode
- t arith_encode
  t build_installer(void*, ConParams&, ConCommand&)
- t build_ycc_rgb_table
- t check_escape
- t check_posix_syntax
  t clear_console(void*, ConParams&, ConCommand&)
  t clear_marketing_message_views(void*, ConParams&, ConCommand&)
  t cloud_sync_down(void*, ConParams&, ConCommand&)
  t cloud_sync_up(void*, ConParams&, ConCommand&)
- t cmyk_ycck_convert
- t color_quantize
- t color_quantize3
- t compare_opcodes
- t compile_branch
- t compile_regex
- t compress_data
- t compress_first_pass
- t compress_output
  t compute_mdcts
  t compute_theta
  t config_refresh(void*, ConParams&, ConCommand&)
  t connect_remote(void*, ConParams&, ConCommand&)
- t consume_data
- t consume_markers
- t could_be_empty_branch
- t create_colorindex
- t decode_mcu
- t decode_mcu_AC_first
- t decode_mcu_AC_refine
- t decode_mcu_DC_first
- t decode_mcu_DC_refine
- t decode_mcu_sub
- t decompress_data
- t decompress_onepass
- t decompress_smooth_data
  t deemphasis
  t def_alloc_func(void*, unsigned long, unsigned long)
  t def_free_func(void*, void*)
@@ -57806,83 +57340,20 @@
  t device_authorize_local(void*, ConParams&, ConCommand&)
  t device_deauthorize_local(void*, ConParams&, ConCommand&)
  t doMatch(panorama::ITextInputSuggest*, char const*, bool, bool)
- t do_barray_io
- t do_sarray_io
  t download_depot(void*, ConParams&, ConCommand&)
- t dummy_consume_data
  t ec_enc_carry_out
- t emit_bits_e
- t emit_bits_s
- t emit_dht
- t emit_dqt
- t emit_eobrun
- t emit_message
- t emit_restart
- t emit_restart_e
- t emit_sof
- t encode_mcu
- t encode_mcu_AC_first
- t encode_mcu_AC_refine
- t encode_mcu_DC_first
- t encode_mcu_DC_refine
- t encode_mcu_gather
- t encode_mcu_huff
- t error_exit
- t examine_app0
- t examine_app14
  t exp_rotation
- t fill_inverse_cmap
  t find(void*, ConParams&, ConCommand&)
- t find_firstassertedchar
- t find_fixedlength
- t finish_input_pass
- t finish_output_pass
- t finish_pass
- t finish_pass1
- t finish_pass2
- t finish_pass_1_quant
- t finish_pass_gather
- t finish_pass_huff
- t finish_pass_master
- t format_message
- t forward_DCT
- t forward_DCT_float
- t free_pool
- t fullsize_downsample
- t fullsize_smooth_downsample
- t fullsize_upsample
  t gain_fade
- t get_chr_property_list
- t get_interesting_appn
- t get_sof
  t global constructors keyed to CryptoPP::AssignIntToInteger(std::type_info const&, void*, void const*)
  t global constructors keyed to CryptoPP::DEFAULT_CHANNEL
  t global constructors keyed to CryptoPP::PKCS_DigestDecoration<CryptoPP::SHA1>::decoration
  t global constructors keyed to CryptoPP::PolynomialMod2::PolynomialMod2()
  t global constructors keyed to a
- t gray_rgb_convert
- t grayscale_convert
- t h2v1_downsample
- t h2v1_merged_upsample
- t h2v1_upsample
- t h2v2_downsample
- t h2v2_merged_upsample
- t h2v2_smooth_downsample
- t h2v2_upsample
  t html_exit_fullscreen(void*, ConParams&, ConCommand&)
- t init_error_limit
  t install_folder_add(void*, ConParams&, ConCommand&)
  t install_folder_ui(void*, ConParams&, ConCommand&)
- t int_downsample
- t int_upsample
  t interleave_hadamard
- t is_anchored
- t is_startline
- t jpeg_fill_bit_buffer
- t jpeg_gen_optimal_table
- t jpeg_huff_decode
- t jpeg_make_c_derived_tbl
- t jpeg_make_d_derived_tbl
  t kv_stats(void*, ConParams&, ConCommand&)
  t libyuv::ScaleARGB(unsigned char const*, int, int, int, unsigned char*, int, int, int, int, int, int, int, libyuv::FilterMode)
  t libyuv::ScaleAddCols1_C(int, int, int, int, unsigned short const*, unsigned char*)
@@ -57890,11 +57361,8 @@
  t libyuv::X420ToI420(unsigned char const*, int, int, unsigned char const*, int, unsigned char*, int, unsigned char*, int, unsigned char*, int, int, int)
  t lzma_alloc(void*, unsigned long)
  t lzma_free(void*, void*)
- t match
  t mem_validate(void*, ConParams&, ConCommand&)
  t mem_walk(void*, ConParams&, ConCommand&)
- t merged_1v_upsample
- t merged_2v_upsample
  t minidump_assert(void*, ConParams&, ConCommand&)
  t minidump_crash(void*, ConParams&, ConCommand&)
  t miniz_alloc(void*, unsigned long, unsigned long)
@@ -57909,17 +57377,9 @@
  t mz_zip_reader_read_central_dir(mz_zip_archive*, unsigned int)
  t mz_zip_writer_add_put_buf_callback(void const*, int, void*)
  t mz_zip_writer_write_zeros(mz_zip_archive*, unsigned long long, unsigned int)
- t new_color_map_1_quant
- t new_color_map_2_quant
- t next_marker
- t noop_upsample
- t null_convert
- t null_method
  t open(void*, ConParams&, ConCommand&)
  t opus_decode_frame
  t opus_packet_parse_impl
- t output_message
- t output_pass_setup
  t panorama::Create_CStylePropertyAlign()
  t panorama::Create_CStylePropertyAnimationProperties()
  t panorama::Create_CStylePropertyBackgroundColor()
@@ -58134,28 +57594,6 @@
  t panorama::ValidateMemPool_CStylePropertyZIndex(CValidator&)
  t parse_buffer_reserve_for(JSON_parser_struct*, unsigned int)
  t parse_parse_buffer(JSON_parser_struct*)
- t pass2_fs_dither
- t pass2_no_dither
- t pass_startup
- t per_scan_setup
- t png_build_16bit_table
- t png_format_buffer
- t png_inflate
- t png_init_filter_heuristics
- t png_text_compress
- t png_write_compressed_data_out
- t post_process_1pass
- t post_process_2pass
- t post_process_prepass
- t pre_process_context
- t pre_process_data
- t prepare_for_output_pass
- t prepare_for_pass
- t prescan_quantize
- t process_data_context_main
- t process_data_crank_post
- t process_data_simple_main
- t process_restart
  t profile_dump(void*, ConParams&, ConCommand&)
  t profile_off(void*, ConParams&, ConCommand&)
  t profile_on(void*, ConParams&, ConCommand&)
@@ -58165,26 +57603,7 @@
  t quant_band
  t quant_coarse_energy_impl
  t quant_partition
- t quantize3_ord_dither
- t quantize_fs_dither
- t quantize_ord_dither
  t quit(void*, ConParams&, ConCommand&)
- t read_markers
- t read_restart_marker
- t realize_virt_arrays
- t request_virt_barray
- t request_virt_sarray
- t reset_error_mgr
- t reset_input_controller
- t reset_marker_reader
- t rgb_gray_convert
- t rgb_ycc_convert
- t rgb_ycc_start
- t save_marker
- t select_scan_parameters
- t self_destruct
- t sep_downsample
- t sep_upsample
  t service_repair(void*, ConParams&, ConCommand&)
  t service_restart(void*, ConParams&, ConCommand&)
  t service_test(void*, ConParams&, ConCommand&)
@@ -58193,23 +57612,6 @@
  t set_spew_level(void*, ConParams&, ConCommand&)
  t silk_PLC_conceal
  t silk_setup_resamplers
- t skip_variable
- t start_input_pass
- t start_output_pass
- t start_pass
- t start_pass_1_quant
- t start_pass_2_quant
- t start_pass_coef
- t start_pass_dcolor
- t start_pass_downsample
- t start_pass_dpost
- t start_pass_fdctmgr
- t start_pass_huff
- t start_pass_huff_decoder
- t start_pass_main
- t start_pass_merged_upsample
- t start_pass_prep
- t start_pass_upsample
  t stats_dump(void*, ConParams&, ConCommand&)
  t stats_gui(void*, ConParams&, ConCommand&)
  t stats_monitor(void*, ConParams&, ConCommand&)
@@ -58223,23 +57625,12 @@
  t tenfoot_pickle_dictionaries(void*, ConParams&, ConCommand&)
  t tenfoot_pickle_single_dictionary(void*, ConParams&, ConCommand&)
  t tenfoot_text_hotspots(void*, ConParams&, ConCommand&)
- t update_box
- t use_merged_upsample
  t user_info(void*, ConParams&, ConCommand&)
  t verify_chunk_store(void*, ConParams&, ConCommand&)
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
  t vgui::NumericSort(void const*, void const*)
  t vgui_spewpanelstats(void*, ConParams&, ConCommand&)
- t write_file_header
- t write_file_trailer
- t write_frame_header
- t write_marker_byte
- t write_marker_header
- t write_scan_header
- t write_tables_only
  t x264_log(void*, int, char const*, char*)
- t ycc_rgb_convert
- t ycck_cmyk_convert
  time
  timegm
  times

@@ -3968,7 +3968,6 @@
  R typeinfo name for CUtlVector<vgui::BoundKey_t, CUtlMemory<vgui::BoundKey_t> >
  R typeinfo name for CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >
  R typeinfo name for CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >
- R typeinfo name for CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >
  R typeinfo name for CUtlVector<vgui::DHANDLE<vgui::QueryBoxTimed>, CUtlMemory<vgui::DHANDLE<vgui::QueryBoxTimed> > >
  R typeinfo name for CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >
  R typeinfo name for CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >
@@ -6540,13 +6539,6 @@
  T CMemoryPool::Clear()
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
- T CMenuManager::AbortMenus()
- T CMenuManager::AddMenu(vgui::Menu*)
- T CMenuManager::IsWithinMenuOrRelative(vgui::Panel*, int, int)
- T CMenuManager::OnInternalMouseReleased(vgui::Panel*, vgui::MouseCode)
- T CMenuManager::RemoveMenu(vgui::Menu*)
- T CMenuManager::Validate(CValidator&, char const*)
- T CMenuManager::~CMenuManager()
  T CMsgAddHeader::ByteSize() const
  T CMsgAddHeader::CMsgAddHeader()
  T CMsgAddHeader::Clear()
@@ -8670,12 +8662,6 @@
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::GrowVector(int)
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::~CUtlVector()
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::GrowVector(int)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::InsertBefore(int, vgui::DHANDLE<vgui::Menu> const&)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::ShiftElementsRight(int, int)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::Validate(CValidator&, char const*)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::~CUtlVector()
  T CUtlVector<vgui::DHANDLE<vgui::QueryBoxTimed>, CUtlMemory<vgui::DHANDLE<vgui::QueryBoxTimed> > >::GrowVector(int)
  T CUtlVector<vgui::DHANDLE<vgui::QueryBoxTimed>, CUtlMemory<vgui::DHANDLE<vgui::QueryBoxTimed> > >::InsertBefore(int)
  T CUtlVector<vgui::DHANDLE<vgui::QueryBoxTimed>, CUtlMemory<vgui::DHANDLE<vgui::QueryBoxTimed> > >::ShiftElementsLeft(int, int)
@@ -8976,7 +8962,7 @@
  T ConvertJpegToRGBA(unsigned char const*, int, CUtlBuffer&, int&, int&, int*)
  T ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
  T ConvertPNGToRGBA(unsigned char const*, int, CUtlBuffer&, int&, int&)
- T ConvertRGBToRGBAImage(CUtlVector<unsigned char, CUtlMemory<unsigned char> >&, int, int, unsigned char*, int, int)
+ T ConvertRGBToRGBAImage(unsigned char const*, int, int, unsigned char*)
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T CreateKeyValuesFromJSON(CUtlBuffer&)
@@ -12321,7 +12307,6 @@
  T vgui::Menu::OnCursorEnteredMenuItem(unsigned int)
  T vgui::Menu::OnCursorExitedMenuItem(unsigned int)
  T vgui::Menu::OnCursorMoved(int, int)
- T vgui::Menu::OnInternalMouseReleased(vgui::Panel*, vgui::MouseCode)
  T vgui::Menu::OnKeyCodePressed(vgui::KeyCode)
  T vgui::Menu::OnKeyCodeTyped(vgui::KeyCode)
  T vgui::Menu::OnKeyModeSet()
@@ -14033,7 +14018,6 @@
  T vgui::VPanelHandle::Get()
  T vgui::VPanelHandle::Set(unsigned int)
  T vgui::ValidateGlobals(CValidator&)
- T vgui::ValidateMenuGlobals(CValidator&)
  T vgui::Validate_AnimationControllerStatic(CValidator&)
  T vgui::Validate_PanelMessageMapDictionary(CValidator&)
  T vgui::filesystem()
@@ -14487,7 +14471,6 @@
  b g_MenuBar_Helper
  b g_MenuButton_Helper
  b g_MenuItem_Helper
- b g_MenuMgr
  b g_Menu_Helper
  b g_Panel_Helper
  b g_ProgressBar_Helper

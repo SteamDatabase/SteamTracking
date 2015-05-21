@@ -4,15 +4,15 @@
 		<include src="file://{resources}/styles/test/testpanel.css" />
 	</styles>
 	
-	<TestPanel onactivate="SwapPanels()">
+	<TestPanel>
 		<Panel id="container" class="Container">
 			<Panel id="first" class="FirstChild">
-				<Panel id="1" class="GreenBox">
+				<Panel id="1" class="GreenBox" draggable="true">
 					<Panel class="MeasureTest"></Panel>
 				</Panel>
-				<Panel id="2" class="GreenBox"></Panel>
+				<Panel id="2" class="GreenBox" draggable="true"></Panel>
 			</Panel>
-			<Panel id="second" class="DynamicWidth">
+			<Panel id="second" class="DynamicWidth" draggable="true">
 				<Panel class="GreenBox"></Panel>
 				<Panel class="GreenBox"></Panel>
 				<Panel class="GreenBox"></Panel>

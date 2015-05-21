@@ -109,9 +109,16 @@
 							<Label id="ControllerAddLabelTitle" class="ControllerLabelTitle" text="#Library_Details_Controller_Add" />
 							<Label id="ControllerAddLabelHeader" class="ControllerLabelHeader" text="#Library_Details_Controller_AddSub" />
 							<Label id="ControllerAddLabelDescription" class="ControllerLabelDescription" />
+						</Panel>					
+					</Button>
+					<Button id="TurnOffController" class="ControllerDetail" tabindex="10" selectionpos="1,10" onactivate="TurnOffWirelessController();">
+						<Image id="TurnOffControllerDetailImage" class="TurnOffControllerDetailImage" />
+						<Panel id="ControllerTurnOffLabel" class="ControllerLabels">
+							<Label id="ControllerTurnOffLabelTitle" class="ControllerLabelTitle" text="#Quit_TurnOffController" />
+							<Label id="ControllerTurnOffLabelDescription" class="ControllerLabelDescription" />
 						</Panel>
-					</Button>	
-				</Panel>
+					</Button>
+					</Panel>
 			</Panel>
 		</Panel>
 	</LibraryController>

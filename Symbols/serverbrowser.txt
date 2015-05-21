@@ -2144,7 +2144,6 @@
  R typeinfo name for CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >
  R typeinfo name for CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >
  R typeinfo name for CUtlVector<vgui::DHANDLE<CDialogGameInfo>, CUtlMemory<vgui::DHANDLE<CDialogGameInfo> > >
- R typeinfo name for CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >
  R typeinfo name for CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >
  R typeinfo name for CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >
  R typeinfo name for CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >
@@ -2793,13 +2792,6 @@
  T CMemoryPool::Clear()
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
- T CMenuManager::AbortMenus()
- T CMenuManager::AddMenu(vgui::Menu*)
- T CMenuManager::IsWithinMenuOrRelative(vgui::Panel*, int, int)
- T CMenuManager::OnInternalMouseReleased(vgui::Panel*, vgui::MouseCode)
- T CMenuManager::RemoveMenu(vgui::Menu*)
- T CMenuManager::Validate(CValidator&, char const*)
- T CMenuManager::~CMenuManager()
  T CModList::AddVGUIListener(unsigned int)
  T CModList::BHasAppID(unsigned int) const
  T CModList::CCallbackOnAppDataChanged::Run(void*)
@@ -4482,12 +4474,6 @@
  T CUtlVector<vgui::DHANDLE<CDialogGameInfo>, CUtlMemory<vgui::DHANDLE<CDialogGameInfo> > >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::DHANDLE<CDialogGameInfo>, CUtlMemory<vgui::DHANDLE<CDialogGameInfo> > >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::DHANDLE<CDialogGameInfo>, CUtlMemory<vgui::DHANDLE<CDialogGameInfo> > >::~CUtlVector()
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::GrowVector(int)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::InsertBefore(int, vgui::DHANDLE<vgui::Menu> const&)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::ShiftElementsRight(int, int)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::Validate(CValidator&, char const*)
- T CUtlVector<vgui::DHANDLE<vgui::Menu>, CUtlMemory<vgui::DHANDLE<vgui::Menu> > >::~CUtlVector()
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::GrowVector(int)
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::SortedFind(vgui::EditablePanel::LayoutPanel_t const&, bool (*)(vgui::EditablePanel::LayoutPanel_t const&, vgui::EditablePanel::LayoutPanel_t const&, void*), void*) const
@@ -6406,7 +6392,6 @@
  T vgui::Menu::OnCursorEnteredMenuItem(unsigned int)
  T vgui::Menu::OnCursorExitedMenuItem(unsigned int)
  T vgui::Menu::OnCursorMoved(int, int)
- T vgui::Menu::OnInternalMouseReleased(vgui::Panel*, vgui::MouseCode)
  T vgui::Menu::OnKeyCodePressed(vgui::KeyCode)
  T vgui::Menu::OnKeyCodeTyped(vgui::KeyCode)
  T vgui::Menu::OnKeyModeSet()
@@ -7773,7 +7758,6 @@
  T vgui::VPanelHandle::Get()
  T vgui::VPanelHandle::Set(unsigned int)
  T vgui::ValidateGlobals(CValidator&)
- T vgui::ValidateMenuGlobals(CValidator&)
  T vgui::Validate_AnimationControllerStatic(CValidator&)
  T vgui::Validate_PanelMessageMapDictionary(CValidator&)
  T vgui::filesystem()
@@ -8115,7 +8099,6 @@
  b g_MenuBar_Helper
  b g_MenuButton_Helper
  b g_MenuItem_Helper
- b g_MenuMgr
  b g_Menu_Helper
  b g_Panel_Helper
  b g_ProgressBar_Helper

@@ -119,7 +119,6 @@
  B SteamThreadTools::g_pCurThread
  B SteamVProf::CVProfNode::s_iCurrentUniqueNodeID
  B SteamVProf::g_mutexProfileDump
- B TLS_cubAllocated
  B _shadow_DES_check_key
  B app_pkey_methods
  B gConVarEnableSpewThrottle
@@ -450,6 +449,8 @@
  D s_LogWatchesAllWithType
  D ssl3_ciphers
  D ssl3_undef_enc_method
+ D typeinfo for CAlignedBufferBase
+ D typeinfo for CAlignedYUV420Buffer
  D typeinfo for CAudioResampler
  D typeinfo for CBaseFrameFunction
  D typeinfo for CBaseScheduledFunction
@@ -528,6 +529,7 @@
  D typeinfo for CUtlNoEscConversion
  D typeinfo for CVConnPkt<ConnectChallenge>
  D typeinfo for CVideoDecoder
+ D typeinfo for CVideoDecoder::CQueuedOutput
  D typeinfo for CVideoDecoderLibav
  D typeinfo for CVideoEncoderH264
  D typeinfo for CVideoFileStream
@@ -719,6 +721,7 @@
  D typeinfo for IVideoDecoder
  D typeinfo for IVideoEncoderH264
  D typeinfo for IVideoPlayer
+ D typeinfo for IVideoYUVFrame
  D typeinfo for IWorkThreadFactory
  D typeinfo for OSXHelpers::CIOPollingHelper
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
@@ -756,6 +759,7 @@
  D v3_sinfo
  D v3_skey_id
  D v3_sxnet
+ D vtable for CAlignedYUV420Buffer
  D vtable for CAudioResampler
  D vtable for CBaseFrameFunction
  D vtable for CBaseScheduledFunction
@@ -829,6 +833,7 @@
  D vtable for CUtlNoEscConversion
  D vtable for CVConnPkt<ConnectChallenge>
  D vtable for CVideoDecoder
+ D vtable for CVideoDecoder::CQueuedOutput
  D vtable for CVideoDecoderLibav
  D vtable for CVideoEncoderH264
  D vtable for CVideoFileStream
@@ -957,6 +962,7 @@
  D vtable for CryptoPP::Unflushable<CryptoPP::Filter>
  D vtable for CryptoPP::X509PublicKey
  D vtable for CryptoPP::X917RNG
+ D vtable for IVideoYUVFrame
  D vtable for OSXHelpers::CIOPollingHelper
  D vtable for SteamThreadTools::CThread
  D x509_dir_lookup
@@ -1010,6 +1016,8 @@
  R ssl3_version_str
  R std::tr1::__detail::_Primes<4>::__primes
  R tls1_version_str
+ R typeinfo name for CAlignedBufferBase
+ R typeinfo name for CAlignedYUV420Buffer
  R typeinfo name for CAudioResampler
  R typeinfo name for CBaseFrameFunction
  R typeinfo name for CBaseScheduledFunction
@@ -1156,6 +1164,7 @@
  R typeinfo name for CVConnPkt<ConnectChallenge>
  R typeinfo name for CVideoDecodedFrame
  R typeinfo name for CVideoDecoder
+ R typeinfo name for CVideoDecoder::CQueuedOutput
  R typeinfo name for CVideoDecoderLibav
  R typeinfo name for CVideoEncoderH264
  R typeinfo name for CVideoFileStream
@@ -1348,6 +1357,7 @@
  R typeinfo name for IVideoDecoder
  R typeinfo name for IVideoEncoderH264
  R typeinfo name for IVideoPlayer
+ R typeinfo name for IVideoYUVFrame
  R typeinfo name for IWorkThreadFactory
  R typeinfo name for OSXHelpers::CIOPollingHelper
  R typeinfo name for OSXHelpers::CIOPollingHelper::IHelperCallback
@@ -1359,6 +1369,7 @@
  R typeinfo name for std::string
  SCDynamicStoreCopyProxies
  SCDynamicStoreKeyCreateProxies
+ T ABGRToARGB
  T ACCESS_DESCRIPTION_free
  T ACCESS_DESCRIPTION_new
  T AES_cbc_encrypt
@@ -1369,6 +1380,19 @@
  T AES_set_encrypt_key
  T AES_unwrap_key
  T AES_wrap_key
+ T ARGBShuffle
+ T ARGBShuffleRow_AVX2
+ T ARGBShuffleRow_Any_AVX2
+ T ARGBShuffleRow_Any_SSE2
+ T ARGBShuffleRow_Any_SSSE3
+ T ARGBShuffleRow_C
+ T ARGBShuffleRow_SSE2
+ T ARGBShuffleRow_SSSE3
+ T ARGBShuffleRow_Unaligned_SSSE3
+ T ARGBToRGB24
+ T ARGBToRGB24Row_Any_SSSE3
+ T ARGBToRGB24Row_C
+ T ARGBToRGB24Row_SSSE3
  T ASN1_BIT_STRING_check
  T ASN1_BIT_STRING_free
  T ASN1_BIT_STRING_get_bit
@@ -1556,6 +1580,7 @@
  T BAbsoluteHTTP(char const*)
  T BBlockingGetMiniDumpLock
  T BCheckIndexSegmentMimeType(CUtlString const&)
+ T BConvertYUVtoRGB
  T BCreateDirectory(char const*)
  T BDeleteFileIfExists(char const*)
  T BF_cbc_encrypt
@@ -1818,6 +1843,21 @@
  T CAST_encrypt
  T CAST_ofb64_encrypt
  T CAST_set_key
+ T CAlignedBufferBase::CAlignedBufferBase()
+ T CAlignedBufferBase::InitRGB(int, int, int)
+ T CAlignedBufferBase::InitYUV(int, int)
+ T CAlignedBufferBase::Purge()
+ T CAlignedBufferBase::Validate(CValidator&, char const*)
+ T CAlignedBufferBase::~CAlignedBufferBase()
+ T CAlignedYUV420Buffer::Height() const
+ T CAlignedYUV420Buffer::UPlane() const
+ T CAlignedYUV420Buffer::UStride() const
+ T CAlignedYUV420Buffer::VPlane() const
+ T CAlignedYUV420Buffer::VStride() const
+ T CAlignedYUV420Buffer::Width() const
+ T CAlignedYUV420Buffer::YPlane() const
+ T CAlignedYUV420Buffer::YStride() const
+ T CAlignedYUV420Buffer::~CAlignedYUV420Buffer()
  T CAudioResampler::BInit(EAudioSampleFormat, int, unsigned int, EAudioSampleFormat, int, unsigned int)
  T CAudioResampler::Convert(unsigned char*, int*, unsigned char const*, int)
  T CAudioResampler::Flush()
@@ -2577,7 +2617,7 @@
  T COpenSSLContext::COpenSSLContext(ESSLConnectionType, ESSLCipherSuite, int, char const*, char const*, char const*, char const*)
  T COpenSSLContext::FindClientSession(netadr_t)
  T COpenSSLContext::PostInit(int)
- T COpenSSLContext::PreInit(ESSLConnectionType, ESSLCipherSuite, char const*)
+ T COpenSSLContext::PreInit(ESSLConnectionType, ESSLCipherSuite, int, char const*)
  T COpenSSLContext::RegisterClientSession(netadr_t, COpenSSLCachedSession*)
  T COpenSSLContext::Validate(CValidator&, char const*)
  T COpenSSLContext::~COpenSSLContext()
@@ -2829,6 +2869,7 @@
  T CStdMemAlloc::CrtSetReportMode(int, int)
  T CStdMemAlloc::CubAllocated()
  T CStdMemAlloc::CubAllocatedUntracked()
+ T CStdMemAlloc::CubLogicalAllocated()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
@@ -3419,6 +3460,7 @@
  T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CHTTPClientConnection* const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::Insert(CHTTPClientConnection* const&, bool)
  T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::Remove(CHTTPClientConnection* const&)
  T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
@@ -3678,11 +3720,11 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
- T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::GrowVector(int)
- T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::InsertBefore(int, CVideoDecoder::QueuedOutput_t* const&)
- T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::ShiftElementsRight(int, int)
- T CUtlVector<CVideoDecoder::QueuedOutput_t*, CUtlMemory<CVideoDecoder::QueuedOutput_t*> >::~CUtlVector()
+ T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::GrowVector(int)
+ T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::InsertBefore(int, CVideoDecoder::CQueuedOutput* const&)
+ T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::~CUtlVector()
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FastRemove(int)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FindAndFastRemove(CVideoFileStream* const&)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::GrowVector(int)
@@ -3818,9 +3860,18 @@
  T CVideoDecoder::BDecodeFrame(unsigned char const*, int, long long, long long)
  T CVideoDecoder::BDecodeFrameInternal(AVPacket*, bool*)
  T CVideoDecoder::BInitH264AVCC(unsigned char const*, int)
+ T CVideoDecoder::CQueuedOutput::Height() const
+ T CVideoDecoder::CQueuedOutput::UPlane() const
+ T CVideoDecoder::CQueuedOutput::UStride() const
+ T CVideoDecoder::CQueuedOutput::VPlane() const
+ T CVideoDecoder::CQueuedOutput::VStride() const
+ T CVideoDecoder::CQueuedOutput::Width() const
+ T CVideoDecoder::CQueuedOutput::YPlane() const
+ T CVideoDecoder::CQueuedOutput::YStride() const
+ T CVideoDecoder::CQueuedOutput::~CQueuedOutput()
  T CVideoDecoder::FlushDecoder()
- T CVideoDecoder::FreeDecodedFrame(VideoYUVFrame_t*)
- T CVideoDecoder::GetDecodedFrame(VideoYUVFrame_t**, long long*)
+ T CVideoDecoder::FreeDecodedFrame(IVideoYUVFrame*)
+ T CVideoDecoder::GetDecodedFrame(IVideoYUVFrame**, long long*)
  T CVideoDecoder::IsDecodedFrameAvailable()
  T CVideoDecoder::~CVideoDecoder()
  T CVideoDecoderLibav::BAtEndOfStream()
@@ -3855,7 +3906,7 @@
  T CVideoDecoderLibav::SetStartTime()
  T CVideoDecoderLibav::Validate(CValidator&, char const*)
  T CVideoDecoderLibav::~CVideoDecoderLibav()
- T CVideoEncoderH264::BEncodeFrame(VideoYUVFrame_t*, long long, bool)
+ T CVideoEncoderH264::BEncodeFrame(IVideoYUVFrame*, long long, bool)
  T CVideoEncoderH264::BEncodeFrameInternal(x264_picture_t*)
  T CVideoEncoderH264::BInit(int, int, int)
  T CVideoEncoderH264::CVideoEncoderH264()
@@ -5757,6 +5808,11 @@
  T HMAC_Update
  T HashStringCaseless(char const*, unsigned long)
  T I420Scale
+ T I420ToARGB
+ T I422ToARGBRow_Any_SSSE3
+ T I422ToARGBRow_C
+ T I422ToARGBRow_SSSE3
+ T I422ToARGBRow_Unaligned_SSSE3
  T IConnectionCallback::ConnectionDataSent(unsigned int, unsigned int)
  T IConnectionCallback::NetQOSLevelChanged(unsigned int, ENetQOSLevel, ENetQOSLevel)
  T IHTTPRedirectHandler::AddRef() const
@@ -5767,6 +5823,7 @@
  T ISSUING_DIST_POINT_free
  T ISSUING_DIST_POINT_new
  T ISocketOwnerCallback::Unused()
+ T IVideoYUVFrame::~IVideoYUVFrame()
  T InitCpuFlags
  T InitStackWalk()
  T InitializeSpewConfig()
@@ -9245,6 +9302,9 @@
  d libyuv::kShufAb2
  d libyuv::kShufAc
  d libyuv::kShufAc3
+ d libyuv::kShuffleMaskABGRToARGB
+ d libyuv::kShuffleMaskARGBToRGB24
+ d libyuv::kYuvConstants
  d lock_names
  d long_pf
  d malloc_ex_func

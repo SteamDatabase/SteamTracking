@@ -466,6 +466,7 @@
  T SendGameStream(GameStreamMessageFromGame_t const*)
  T SendOneTimeInputPid()
  T SetNotificationPosition
+ T SetVideoCaptureType(EVideoCaptureType)
  T ShutdownGameStream()
  T StartMovieRecordingNextFrame(int, int)
  T SteamCFRunLoopRun()
@@ -725,7 +726,7 @@
  b s_Pid
  b s_bDoLog
  b s_bFirstLogEntry
- b s_bIsStreaming
+ b s_bIsVideoRecording
  b s_pGamestream
  bootstrap_look_up
  bootstrap_port
@@ -770,6 +771,7 @@
  d cplus_demangle_operators
  d demangleLock
  d dyld__mach_header
+ d s_eCaptureType
  d s_pchFragmentShader
  d s_pchVertexShader
  d standard_subs

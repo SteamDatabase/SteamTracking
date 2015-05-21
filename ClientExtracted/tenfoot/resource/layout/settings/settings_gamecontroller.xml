@@ -19,6 +19,10 @@
 				<Panel class="HorzSub SettingsRight SettingsController">
 					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
 				</Panel>
+				<Panel id="SteamControllerVersion" class="SettingsController FlowDown">
+					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamControllerVersion" />
+					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamDongleVersion" />
+				</Panel>
 				<Button id="ConfigureButton" class="Button SettingsControllerBindingButton" onactivate="ShowBindingDialog();">
 					<Label class="LongDesc" text="#SettingsController_ConfigureController" />
 				</Button>

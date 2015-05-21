@@ -10,7 +10,7 @@
 		<Label class="WizardChildDescription" text="#OOBE_NetworkSettings_Description" />
 
 		<Panel id="SettingsContainer">
-			<SettingsPanel_Network class="SettingsSection SectionVisible SettingsContained" defaultfocus="AvailableNetworksList" />
+			<SettingsPanel_Network class="SettingsSection SectionVisible SettingsContained" defaultfocus="AvailableNetworksList" oobe="true" />
 		</Panel>
 		
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">

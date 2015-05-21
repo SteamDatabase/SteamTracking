@@ -25,11 +25,12 @@
 			<LibraryController id="Controller" class="Controller DetailsDataPanel" tabindex="1" selectionpos="1,0" mousecanactivate="iffocused" /> 
 			<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel" tabindex="2" selectionpos="2,0" mousecanactivate="iffocused" />
 			<LibraryPlayAction id="PlayAction" class="PlayAction DetailsDataPanel" tabindex="3" selectionpos="3,0" mousecanactivate="iffocused" />
-			<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel" tabindex="4" selectionpos="4,0" mousecanactivate="iffocused" />
-			<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" tabindex="5" selectionpos="5,0" mousecanactivate="iffocused" />
-			<LibraryWorkshop id="Workshop" class="Workshop DetailsDataPanel" tabindex="6" selectionpos="6,0" mousecanactivate="iffocused" />
-			<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" tabindex="7" selectionpos="7,0" mousecanactivate="iffocused" />
-			<LibraryGuides id="Guides" class="Guides DetailsDataPanel" tabindex="8" selectionpos="8,0" mousecanactivate="iffocused" />
+			<LibraryDLC id="DLC" class="DLC DetailsDataPanel" tabindex="4" selectionpos="4,0" mousecanactivate="iffocused" />
+			<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel" tabindex="5" selectionpos="5,0" mousecanactivate="iffocused" />
+			<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" tabindex="6" selectionpos="6,0" mousecanactivate="iffocused" />
+			<LibraryWorkshop id="Workshop" class="Workshop DetailsDataPanel" tabindex="7" selectionpos="7,0" mousecanactivate="iffocused" />
+			<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" tabindex="8" selectionpos="8,0" mousecanactivate="iffocused" />
+			<LibraryGuides id="Guides" class="Guides DetailsDataPanel" tabindex="9" selectionpos="9,0" mousecanactivate="iffocused" />
 		</Carousel>
 	</LibraryAppDetails>
 </root>

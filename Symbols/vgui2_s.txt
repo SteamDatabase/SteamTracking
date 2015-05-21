@@ -320,10 +320,12 @@
  D vgui::CBaseOSXSurface<CBaseSurface>::IsWithin(int, int)::bLastRes
  D vgui::CBaseOSXSurface<CBaseSurface>::IsWithin(int, int)::flLastCheckTime
  D vgui::CBaseOSXSurface<CBaseSurface>::IsWithin(int, int)::lastPnt
+ D vgui::CBaseOSXSurface<CBaseSurface>::RunFrame()::s_flLastForceInvalidate
  D vgui::CBaseOSXSurface<CBaseSurface>::RunFrame()::s_flLastRefreshCachedStatus
  D vgui::CBaseOSXSurface<vgui::COpenGLSurface>::IsWithin(int, int)::bLastRes
  D vgui::CBaseOSXSurface<vgui::COpenGLSurface>::IsWithin(int, int)::flLastCheckTime
  D vgui::CBaseOSXSurface<vgui::COpenGLSurface>::IsWithin(int, int)::lastPnt
+ D vgui::CBaseOSXSurface<vgui::COpenGLSurface>::RunFrame()::s_flLastForceInvalidate
  D vgui::CBaseOSXSurface<vgui::COpenGLSurface>::RunFrame()::s_flLastRefreshCachedStatus
  D vgui::g_pIVgui
  D vgui::g_pInput
@@ -813,6 +815,7 @@
  T BUF_strndup
  T CBaseSurface::AccessChromeHTMLController()
  T CBaseSurface::AddPanel(unsigned int)
+ T CBaseSurface::AddTrackedMenu(unsigned int)
  T CBaseSurface::AllocTextureForId(int)
  T CBaseSurface::AreAnyPopupsViewable()
  T CBaseSurface::BIsAHTMLWindowViewable()
@@ -913,6 +916,7 @@
  T CBaseSurface::IsOnScreen(unsigned int)
  T CBaseSurface::IsTextureIDValid(int)
  T CBaseSurface::IsWindowAlphaEnabled()
+ T CBaseSurface::IsWithinMenuOrRelative(unsigned int, int, int)
  T CBaseSurface::LoadTGA(vgui::Texture*, char const*)
  T CBaseSurface::LockCursor()
  T CBaseSurface::LockCursor(bool)
@@ -922,6 +926,7 @@
  T CBaseSurface::NarrowClipRegion(int, int, int, int)
  T CBaseSurface::NeedKBInput()
  T CBaseSurface::OSSetDockMenu(void*)
+ T CBaseSurface::OnMouseReleasedMenu()
  T CBaseSurface::OnScreenSizeChanged(int, int)
  T CBaseSurface::OpenOSFileOpenDialog(char const*, char const*, char const*, char*, int)
  T CBaseSurface::PaintTraverse(unsigned int)
@@ -934,6 +939,7 @@
  T CBaseSurface::ReleasePanel(unsigned int)
  T CBaseSurface::ReloadRegistryEnvironment()
  T CBaseSurface::RemoveBrowser(unsigned int, IHTMLResponses*)
+ T CBaseSurface::RemoveTrackedMenu(unsigned int)
  T CBaseSurface::RestrictPaintToSinglePanel(unsigned int)
  T CBaseSurface::SetClientBuildID(unsigned long long)
  T CBaseSurface::SetCurrentContextPanel(unsigned int)

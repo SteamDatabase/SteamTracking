@@ -392,7 +392,6 @@
  B KeyValues::sm_pchKeyNameBase
  B OSXHelpers::CIOPollingHelper::s_pPollingHelperSingleton
  B SinCosTable
- B TLS_cubAllocated
  B VideoPlayerFreeAudio::symbol
  B VideoPlayerInitAudio::symbol
  B debug_dead_pad
@@ -615,6 +614,11 @@
  B panorama::CopyStringToClipboard::symbol
  B panorama::CreateDebuggerWindow::symbol
  B panorama::DeletePanel::symbol
+ B panorama::DragDrop::symbol
+ B panorama::DragEnd::symbol
+ B panorama::DragEnter::symbol
+ B panorama::DragLeave::symbol
+ B panorama::DragStart::symbol
  B panorama::DumpMemory::symbol
  B panorama::ExecuteSteamURL::symbol
  B panorama::ExitSteam::symbol
@@ -958,6 +962,11 @@
  D panorama::CopyStringToClipboard::pchEvent
  D panorama::CreateDebuggerWindow::pchEvent
  D panorama::DeletePanel::pchEvent
+ D panorama::DragDrop::pchEvent
+ D panorama::DragEnd::pchEvent
+ D panorama::DragEnter::pchEvent
+ D panorama::DragLeave::pchEvent
+ D panorama::DragStart::pchEvent
  D panorama::DumpMemory::pchEvent
  D panorama::ExecuteSteamURL::pchEvent
  D panorama::ExitSteam::pchEvent
@@ -1551,7 +1560,6 @@
  D typeinfo for panorama::CUIEvent1<panorama::CPanoramaSymbol>
  D typeinfo for panorama::CUIEvent1<panorama::CReloadStyleFile*>
  D typeinfo for panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>
- D typeinfo for panorama::CUIEvent1<panorama::IImageSource*>
  D typeinfo for panorama::CUIEvent1<panorama::IUIWindow*>
  D typeinfo for panorama::CUIEvent1<void*>
  D typeinfo for panorama::CUIEvent2<char const*, void*>
@@ -1570,10 +1578,13 @@
  D typeinfo for panorama::CUIPanelEvent0
  D typeinfo for panorama::CUIPanelEvent1<bool>
  D typeinfo for panorama::CUIPanelEvent1<char const*>
+ D typeinfo for panorama::CUIPanelEvent1<panorama::CPanelPtr<panorama::IUIPanel> >
  D typeinfo for panorama::CUIPanelEvent1<panorama::CPanoramaSymbol>
  D typeinfo for panorama::CUIPanelEvent1<panorama::CStyleSymbol>
  D typeinfo for panorama::CUIPanelEvent1<panorama::EPanelEventSource_t>
+ D typeinfo for panorama::CUIPanelEvent1<panorama::IImageSource*>
  D typeinfo for panorama::CUIPanelEvent1<panorama::ILocalizationString const*>
+ D typeinfo for panorama::CUIPanelEvent1<panorama::IUIPanel**>
  D typeinfo for panorama::CUIPanelEvent2<KeyValues*, void*>
  D typeinfo for panorama::CUIPanelEvent2<char const*, bool>
  D typeinfo for panorama::CUIPanelEvent2<char const*, char const*>
@@ -1654,6 +1665,7 @@
  D typeinfo for panorama::IUIFileSystem
  D typeinfo for panorama::IUIImageManager
  D typeinfo for panorama::IUIInput
+ D typeinfo for panorama::IUIJSObject
  D typeinfo for panorama::IUILayoutFile
  D typeinfo for panorama::IUILayoutManager
  D typeinfo for panorama::IUILocalization
@@ -2102,7 +2114,6 @@
  D vtable for panorama::CUIEvent1<panorama::CPanoramaSymbol>
  D vtable for panorama::CUIEvent1<panorama::CReloadStyleFile*>
  D vtable for panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>
- D vtable for panorama::CUIEvent1<panorama::IImageSource*>
  D vtable for panorama::CUIEvent1<panorama::IUIWindow*>
  D vtable for panorama::CUIEvent1<void*>
  D vtable for panorama::CUIEvent2<char const*, void*>
@@ -2121,10 +2132,13 @@
  D vtable for panorama::CUIPanelEvent0
  D vtable for panorama::CUIPanelEvent1<bool>
  D vtable for panorama::CUIPanelEvent1<char const*>
+ D vtable for panorama::CUIPanelEvent1<panorama::CPanelPtr<panorama::IUIPanel> >
  D vtable for panorama::CUIPanelEvent1<panorama::CPanoramaSymbol>
  D vtable for panorama::CUIPanelEvent1<panorama::CStyleSymbol>
  D vtable for panorama::CUIPanelEvent1<panorama::EPanelEventSource_t>
+ D vtable for panorama::CUIPanelEvent1<panorama::IImageSource*>
  D vtable for panorama::CUIPanelEvent1<panorama::ILocalizationString const*>
+ D vtable for panorama::CUIPanelEvent1<panorama::IUIPanel**>
  D vtable for panorama::CUIPanelEvent2<KeyValues*, void*>
  D vtable for panorama::CUIPanelEvent2<char const*, bool>
  D vtable for panorama::CUIPanelEvent2<char const*, char const*>
@@ -2193,6 +2207,7 @@
  D vtable for panorama::CVideoPlayerAudioRenderer
  D vtable for panorama::CVideoPlayerEventDispatcher
  D vtable for panorama::CVideoPlayerVideoRenderer
+ D vtable for panorama::IUIJSObject
  D vtable for panorama::SDLOGLSurfaceNameSpace::CCompositionLayer
  D vtable for panorama::V8ArrayBufferAllocator
  D vtable for v8::Platform
@@ -2928,7 +2943,6 @@
  R typeinfo name for panorama::CUIEvent1<panorama::CPanoramaSymbol>
  R typeinfo name for panorama::CUIEvent1<panorama::CReloadStyleFile*>
  R typeinfo name for panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>
- R typeinfo name for panorama::CUIEvent1<panorama::IImageSource*>
  R typeinfo name for panorama::CUIEvent1<panorama::IUIWindow*>
  R typeinfo name for panorama::CUIEvent1<void*>
  R typeinfo name for panorama::CUIEvent2<char const*, void*>
@@ -2947,10 +2961,13 @@
  R typeinfo name for panorama::CUIPanelEvent0
  R typeinfo name for panorama::CUIPanelEvent1<bool>
  R typeinfo name for panorama::CUIPanelEvent1<char const*>
+ R typeinfo name for panorama::CUIPanelEvent1<panorama::CPanelPtr<panorama::IUIPanel> >
  R typeinfo name for panorama::CUIPanelEvent1<panorama::CPanoramaSymbol>
  R typeinfo name for panorama::CUIPanelEvent1<panorama::CStyleSymbol>
  R typeinfo name for panorama::CUIPanelEvent1<panorama::EPanelEventSource_t>
+ R typeinfo name for panorama::CUIPanelEvent1<panorama::IImageSource*>
  R typeinfo name for panorama::CUIPanelEvent1<panorama::ILocalizationString const*>
+ R typeinfo name for panorama::CUIPanelEvent1<panorama::IUIPanel**>
  R typeinfo name for panorama::CUIPanelEvent2<KeyValues*, void*>
  R typeinfo name for panorama::CUIPanelEvent2<char const*, bool>
  R typeinfo name for panorama::CUIPanelEvent2<char const*, char const*>
@@ -3031,6 +3048,7 @@
  R typeinfo name for panorama::IUIFileSystem
  R typeinfo name for panorama::IUIImageManager
  R typeinfo name for panorama::IUIInput
+ R typeinfo name for panorama::IUIJSObject
  R typeinfo name for panorama::IUILayoutFile
  R typeinfo name for panorama::IUILayoutManager
  R typeinfo name for panorama::IUILocalization
@@ -5813,6 +5831,7 @@
  T CStdMemAlloc::CrtSetReportMode(int, int)
  T CStdMemAlloc::CubAllocated()
  T CStdMemAlloc::CubAllocatedUntracked()
+ T CStdMemAlloc::CubLogicalAllocated()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
@@ -7776,7 +7795,7 @@
  T ConvertJpegToRGBA(unsigned char const*, int, CUtlBuffer&, int&, int&, int*)
  T ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
  T ConvertPNGToRGBA(unsigned char const*, int, CUtlBuffer&, int&, int&)
- T ConvertRGBToRGBAImage(CUtlVector<unsigned char, CUtlMemory<unsigned char> >&, int, int, unsigned char*, int, int)
+ T ConvertRGBToRGBAImage(unsigned char const*, int, int, unsigned char*)
  T CountDescendantSelectorComponents(char const*)
  T CreateDirRecursive(char const*)
  T CreateInterface
@@ -8497,6 +8516,11 @@
  T bool panorama::DispatchEvent<panorama::CloseDebuggerWindow>(panorama::CloseDebuggerWindow, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::ContextMenu, panorama::EPanelEventSource_t>(panorama::ContextMenu, panorama::IUIPanel const*, panorama::EPanelEventSource_t)
  T bool panorama::DispatchEvent<panorama::CreateDebuggerWindow>(panorama::CreateDebuggerWindow, panorama::IUIPanel const*)
+ T bool panorama::DispatchEvent<panorama::DragDrop, panorama::CPanelPtr<panorama::IUIPanel> >(panorama::DragDrop, panorama::IUIPanel const*, panorama::CPanelPtr<panorama::IUIPanel>)
+ T bool panorama::DispatchEvent<panorama::DragEnd, panorama::CPanelPtr<panorama::IUIPanel> >(panorama::DragEnd, panorama::IUIPanel const*, panorama::CPanelPtr<panorama::IUIPanel>)
+ T bool panorama::DispatchEvent<panorama::DragEnter, panorama::CPanelPtr<panorama::IUIPanel> >(panorama::DragEnter, panorama::IUIPanel const*, panorama::CPanelPtr<panorama::IUIPanel>)
+ T bool panorama::DispatchEvent<panorama::DragLeave, panorama::CPanelPtr<panorama::IUIPanel> >(panorama::DragLeave, panorama::IUIPanel const*, panorama::CPanelPtr<panorama::IUIPanel>)
+ T bool panorama::DispatchEvent<panorama::DragStart, panorama::IUIPanel**>(panorama::DragStart, panorama::IUIPanel const*, panorama::IUIPanel**)
  T bool panorama::DispatchEvent<panorama::GamepadInput>(panorama::GamepadInput, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::ImageFailedLoad, panorama::CImageProxySource*>(panorama::ImageFailedLoad, panorama::IUIPanel const*, panorama::CImageProxySource*)
  T bool panorama::DispatchEvent<panorama::ImageLoaded, panorama::CImageProxySource*>(panorama::ImageLoaded, panorama::IUIPanel const*, panorama::CImageProxySource*)
@@ -8936,6 +8960,7 @@
  T panorama::CImageLoaderTask::OnStartLoad()
  T panorama::CImageLoaderTask::Validate(CValidator&, char const*)
  T panorama::CImageLoaderTask::~CImageLoaderTask()
+ T panorama::CImageProxySource* panorama::GetThisPtrForJSCall<panorama::CImageProxySource>(v8::Local<v8::Object>)
  T panorama::CImageProxySource::AddPanelForOnLoadEvent(panorama::IUIPanel const*)
  T panorama::CImageProxySource::AddRef()
  T panorama::CImageProxySource::BIsAnimating()
@@ -8951,6 +8976,7 @@
  T panorama::CImageProxySource::OnImageLoaded()
  T panorama::CImageProxySource::Release()
  T panorama::CImageProxySource::SetImageSource(panorama::CImageData*)
+ T panorama::CImageProxySource::SetupJSObjectTemplate()
  T panorama::CImageProxySource::Validate(CValidator&, char const*)
  T panorama::CImageProxySource::~CImageProxySource()
  T panorama::CImageResourceManager::AddImageToManager(panorama::CFileResource&, panorama::CImageProxySource*, int, int, bool)
@@ -10677,11 +10703,6 @@
  T panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>::Validate(CValidator&, char const*)
  T panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>::~CUIEvent1()
- T panorama::CUIEvent1<panorama::IImageSource*>::Copy() const
- T panorama::CUIEvent1<panorama::IImageSource*>::Dispatch(CUtlAbstractDelegate)
- T panorama::CUIEvent1<panorama::IImageSource*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
- T panorama::CUIEvent1<panorama::IImageSource*>::Validate(CValidator&, char const*)
- T panorama::CUIEvent1<panorama::IImageSource*>::~CUIEvent1()
  T panorama::CUIEvent1<panorama::IUIWindow*>::Copy() const
  T panorama::CUIEvent1<panorama::IUIWindow*>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent1<panorama::IUIWindow*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -10955,6 +10976,7 @@
  T panorama::CUIPanel::IsChildSizeTransitioning()
  T panorama::CUIPanel::IsChildSizeValid()
  T panorama::CUIPanel::IsDescendantOf(panorama::IUIPanel const*) const
+ T panorama::CUIPanel::IsDraggable() const
  T panorama::CUIPanel::IsEnabled() const
  T panorama::CUIPanel::IsInspected() const
  T panorama::CUIPanel::IsLayoutLoading() const
@@ -11000,6 +11022,7 @@
  T panorama::CUIPanel::RemoveDisabledFlagFromChildren()
  T panorama::CUIPanel::RemoveFlagFromParents(panorama::EStyleFlags)
  T panorama::CUIPanel::RemoveFromTopLevelWindow()
+ T panorama::CUIPanel::RemoveParentDisabledFlag()
  T panorama::CUIPanel::RemoveStyleFlag(panorama::EStyleFlags)
  T panorama::CUIPanel::ScrollParentToMakePanelFit(bool)
  T panorama::CUIPanel::ScrollToBottom()
@@ -11021,6 +11044,7 @@
  T panorama::CUIPanel::SetClientPtr(panorama::IUIPanelClient*)
  T panorama::CUIPanel::SetDefaultFocus(char const*)
  T panorama::CUIPanel::SetDisableFocusOnMouseDown(bool)
+ T panorama::CUIPanel::SetDraggable(bool)
  T panorama::CUIPanel::SetEnabled(bool)
  T panorama::CUIPanel::SetFocus()
  T panorama::CUIPanel::SetFocusDueToHover()
@@ -11087,6 +11111,11 @@
  T panorama::CUIPanelEvent1<char const*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIPanelEvent1<char const*>::Validate(CValidator&, char const*)
  T panorama::CUIPanelEvent1<char const*>::~CUIPanelEvent1()
+ T panorama::CUIPanelEvent1<panorama::CPanelPtr<panorama::IUIPanel> >::Copy() const
+ T panorama::CUIPanelEvent1<panorama::CPanelPtr<panorama::IUIPanel> >::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIPanelEvent1<panorama::CPanelPtr<panorama::IUIPanel> >::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIPanelEvent1<panorama::CPanelPtr<panorama::IUIPanel> >::Validate(CValidator&, char const*)
+ T panorama::CUIPanelEvent1<panorama::CPanelPtr<panorama::IUIPanel> >::~CUIPanelEvent1()
  T panorama::CUIPanelEvent1<panorama::CPanoramaSymbol>::Copy() const
  T panorama::CUIPanelEvent1<panorama::CPanoramaSymbol>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIPanelEvent1<panorama::CPanoramaSymbol>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -11102,11 +11131,21 @@
  T panorama::CUIPanelEvent1<panorama::EPanelEventSource_t>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIPanelEvent1<panorama::EPanelEventSource_t>::Validate(CValidator&, char const*)
  T panorama::CUIPanelEvent1<panorama::EPanelEventSource_t>::~CUIPanelEvent1()
+ T panorama::CUIPanelEvent1<panorama::IImageSource*>::Copy() const
+ T panorama::CUIPanelEvent1<panorama::IImageSource*>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIPanelEvent1<panorama::IImageSource*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIPanelEvent1<panorama::IImageSource*>::Validate(CValidator&, char const*)
+ T panorama::CUIPanelEvent1<panorama::IImageSource*>::~CUIPanelEvent1()
  T panorama::CUIPanelEvent1<panorama::ILocalizationString const*>::Copy() const
  T panorama::CUIPanelEvent1<panorama::ILocalizationString const*>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIPanelEvent1<panorama::ILocalizationString const*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIPanelEvent1<panorama::ILocalizationString const*>::Validate(CValidator&, char const*)
  T panorama::CUIPanelEvent1<panorama::ILocalizationString const*>::~CUIPanelEvent1()
+ T panorama::CUIPanelEvent1<panorama::IUIPanel**>::Copy() const
+ T panorama::CUIPanelEvent1<panorama::IUIPanel**>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIPanelEvent1<panorama::IUIPanel**>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIPanelEvent1<panorama::IUIPanel**>::Validate(CValidator&, char const*)
+ T panorama::CUIPanelEvent1<panorama::IUIPanel**>::~CUIPanelEvent1()
  T panorama::CUIPanelEvent2<KeyValues*, void*>::Copy() const
  T panorama::CUIPanelEvent2<KeyValues*, void*>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIPanelEvent2<KeyValues*, void*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -11705,8 +11744,9 @@
  T panorama::CUIWindowInput::SetInputFocusContext(panorama::IUIPanel*)
  T panorama::CUIWindowInput::SetInputFocusContextInternal(panorama::IUIPanel*, bool)
  T panorama::CUIWindowInput::SetLastHover(double, unsigned long long, float, float)
- T panorama::CUIWindowInput::SetMouseDownPtr(panorama::IUIPanel*)
+ T panorama::CUIWindowInput::SetMouseDownPtr(panorama::IUIPanel*, panorama::MouseCode)
  T panorama::CUIWindowInput::SetMouseTrackingResults(CCopyableUtlVector<panorama::MouseTrackingResults_t, CUtlMemory<panorama::MouseTrackingResults_t> >&)
+ T panorama::CUIWindowInput::UpdateDragDrop()
  T panorama::CUIWindowInput::Validate(CValidator&, char const*)
  T panorama::CUIWindowInput::WakeupMouseCursor()
  T panorama::CUIWindowInput::~CUIWindowInput()
@@ -11773,6 +11813,16 @@
  T panorama::DeletePanel::GetEventType()
  T panorama::DeletePanel::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::DetermineResourceType(panorama::CFileResource const&)
+ T panorama::DragDrop::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragDrop::MakeEvent(panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::IUIPanel>)
+ T panorama::DragEnd::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragEnd::MakeEvent(panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::IUIPanel>)
+ T panorama::DragEnter::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragEnter::MakeEvent(panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::IUIPanel>)
+ T panorama::DragLeave::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragLeave::MakeEvent(panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::IUIPanel>)
+ T panorama::DragStart::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::DragStart::MakeEvent(panorama::IUIPanelClient const*, panorama::IUIPanel**)
  T panorama::DumpMemory::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::DumpMemory::GetEventType()
  T panorama::DumpMemory::MakeEvent(panorama::IUIPanelClient const*)
@@ -11804,6 +11854,7 @@
  T panorama::GuideButtonUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::GuideButtonUp::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::HashItem(panorama::CStyleSymbol const&)
+ T panorama::IImageSource::GetJSTypeName()
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AutoReloadFailedLayoutReloads>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ActivateMainWindow>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::Activated, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
@@ -11906,6 +11957,7 @@
  T panorama::IUIEvent::CanBubble() const
  T panorama::IUIFileSystem::RestoreContentFilename(char const*, CUtlString&)
  T panorama::IUIFileSystem::RestoreResourceFilename(char const*, CUtlString&)
+ T panorama::IUIJSObject::~IUIJSObject()
  T panorama::IUITexture::GetOriginalHeight()
  T panorama::IUITexture::GetOriginalWidth()
  T panorama::IfHasClassEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -11937,6 +11989,10 @@
  T panorama::JSCheckObjectValidity(v8::FunctionCallbackInfo<v8::Value> const&)
  T panorama::JSConsoleOutput::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::JSConsoleOutput::MakeEvent(panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::CPanel2D>, char const*)
+ T panorama::JSMethodCallbackWrapper<bool, panorama::CImageProxySource>::Call(panorama::CImageProxySource*, bool (panorama::CImageProxySource::*)(), v8::FunctionCallbackInfo<v8::Value> const&)
+ T panorama::JSMethodCallbackWrapper<int, panorama::CImageProxySource>::Call(panorama::CImageProxySource*, int (panorama::CImageProxySource::*)(), v8::FunctionCallbackInfo<v8::Value> const&)
+ T panorama::JSMethodCallbackWrapper<panorama::EImageFormat, panorama::CImageProxySource>::Call(panorama::CImageProxySource*, panorama::EImageFormat (panorama::CImageProxySource::*)(), v8::FunctionCallbackInfo<v8::Value> const&)
+ T panorama::JSMethodCallbackWrapper<unsigned int, panorama::CImageProxySource>::Call(panorama::CImageProxySource*, unsigned int (panorama::CImageProxySource::*)(), v8::FunctionCallbackInfo<v8::Value> const&)
  T panorama::JSONWebAPIResponse::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::JSONWebAPIResponse::MakeEvent(panorama::IUIPanelClient const*, KeyValues*, void*)
  T panorama::JSScheduledFunction::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -11994,6 +12050,7 @@
  T panorama::PanelStyleChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::PanelStyleChanged::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::PanoramaPanelTypeToV8Param(panorama::IUIPanel*&, v8::Handle<v8::Value>*)
+ T panorama::PanoramaTypeToV8ParamJSObject(panorama::IUIJSObject*, void*, v8::Handle<v8::Value>*)
  T panorama::ParseUIEventParamHelper(CUtlBuffer&, char const*, char const**)
  T panorama::PchNameFromEAnimationTimingFunction(int)
  T panorama::PchNameFromEBackgroundRepeat(int)
@@ -12909,13 +12966,29 @@
  T void panorama::DispatchEventAsync<panorama::StyleFlagsChanged>(panorama::StyleFlagsChanged, panorama::IUIPanel const*)
  T void panorama::DispatchEventAsync<panorama::TimeoutFastScrollSound>(float, panorama::TimeoutFastScrollSound, panorama::IUIPanel const*)
  T void panorama::FreeConvertedParam<v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
+ T void panorama::GetPtrToCallbackArray<bool (panorama::CImageProxySource::*)()>(bool (panorama::CImageProxySource::*)(), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<int (panorama::CImageProxySource::*)()>(int (panorama::CImageProxySource::*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const>(panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<panorama::EImageFormat (panorama::CImageProxySource::*)()>(panorama::EImageFormat (panorama::CImageProxySource::*)(), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<unsigned int (panorama::CImageProxySource::*)()>(unsigned int (panorama::CImageProxySource::*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)>(void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*), v8::Handle<v8::Array>&)
+ T void panorama::JSMethodCallTuple<panorama::CImageProxySource, bool>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<panorama::CImageProxySource, int>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<panorama::CImageProxySource, panorama::EImageFormat>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<panorama::CImageProxySource, unsigned int>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<panorama::CUIPanel, void, panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::PanoramaTypeToV8Param<char const>(char const*, v8::Handle<v8::Value>*)
  T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, int>(char const*, panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, int, void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&))
+ T void panorama::RegisterJSMethod<panorama::CImageProxySource, bool>(char const*, bool (panorama::CImageProxySource::*)())
+ T void panorama::RegisterJSMethod<panorama::CImageProxySource, int>(char const*, int (panorama::CImageProxySource::*)())
+ T void panorama::RegisterJSMethod<panorama::CImageProxySource, panorama::EImageFormat>(char const*, panorama::EImageFormat (panorama::CImageProxySource::*)())
+ T void panorama::RegisterJSMethod<panorama::CImageProxySource, unsigned int>(char const*, unsigned int (panorama::CImageProxySource::*)())
  T void panorama::RegisterJSMethod<panorama::CUIPanel, void, panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(char const*, void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*))
+ T void panorama::RestoreFuncPtr<bool (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<bool (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<int (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<int (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<panorama::EImageFormat (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<panorama::EImageFormat (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<unsigned int (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<unsigned int (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)>&, v8::Local<v8::Array>&, int)
  T void panorama::SetPtrToCallbackArray<int>(int, v8::Handle<v8::Array>&)
@@ -12974,6 +13047,7 @@
  ThreadInterlockedAssignIf
  ThreadInterlockedDecrement
  ThreadInterlockedExchange
+ ThreadInterlockedExchangeAdd64
  ThreadInterlockedIncrement
  ThreadIsProcessIdActive
  ThreadIsThreadRunning
@@ -13617,6 +13691,7 @@
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symChildFocusOnHover
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symDefaultFocus
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symDisabled
+ b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symDraggable
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symHitTestEnabled
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symInputNamespace
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symMouseCanActivate
@@ -13726,6 +13801,7 @@
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symChildFocusOnHover
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symDefaultFocus
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symDisabled
+ b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symDraggable
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symHitTestEnabled
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symInputNamespace
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symMouseCanActivate
@@ -14691,7 +14767,7 @@
  t TrieTok
  t TryTok
  t __cxx_global_array_dtor
- t __cxx_global_var_init191
+ t __cxx_global_var_init192
  t __cxx_global_var_init49
  t __cxx_global_var_init50
  t __cxx_global_var_init51

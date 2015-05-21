@@ -1759,7 +1759,19 @@ KeyboardShortcut .Graphic
 {
 	horizontal-align: left;
 	vertical-align: center;
-	margin-bottom: 48px;
+	//margin-bottom: 5px;
+}
+
+.SteamController #SteamControllerVersion
+{
+	visibility: visible;
+}
+
+#SteamControllerVersion
+{
+	horizontal-align: left;
+	vertical-align: center;
+	visibility: collapse;
 }
 
 .SettingsControllerBindingButton

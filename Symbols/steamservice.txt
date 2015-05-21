@@ -91,7 +91,6 @@
  B SteamThreadTools::g_pCurThread
  B SteamVProf::CVProfNode::s_iCurrentUniqueNodeID
  B SteamVProf::g_mutexProfileDump
- B TLS_cubAllocated
  B _shadow_DES_check_key
  B app_pkey_methods
  B gConVarEnableSpewThrottle
@@ -2091,6 +2090,7 @@
  T CStdMemAlloc::CrtSetReportMode(int, int)
  T CStdMemAlloc::CubAllocated()
  T CStdMemAlloc::CubAllocatedUntracked()
+ T CStdMemAlloc::CubLogicalAllocated()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
@@ -5196,6 +5196,7 @@
  T ThreadInterlockedAssignIf64
  T ThreadInterlockedDecrement
  T ThreadInterlockedExchange
+ T ThreadInterlockedExchangeAdd64
  T ThreadInterlockedIncrement
  T ThreadIsProcessIdActive
  T ThreadIsThreadRunning

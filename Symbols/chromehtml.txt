@@ -330,6 +330,7 @@
  D typeinfo for CMsgZoomToElementAtPosition
  D typeinfo for CMsgZoomToElementAtPositionResponse
  D typeinfo for CMsgZoomToFocusedElement
+ D typeinfo for COSXChromeIPCWakeThread
  D typeinfo for CSharedMemStream
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
@@ -497,6 +498,7 @@
  D vtable for CMsgZoomToElementAtPosition
  D vtable for CMsgZoomToElementAtPositionResponse
  D vtable for CMsgZoomToFocusedElement
+ D vtable for COSXChromeIPCWakeThread
  D vtable for CSharedMemStream
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
@@ -513,6 +515,7 @@
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_MSTime
+ Plat_MSTime64
  R std::tr1::__detail::_Primes<4>::__primes
  R typeinfo name for CCookie
  R typeinfo name for CHTMLBaseProtoBufMsg
@@ -667,6 +670,7 @@
  R typeinfo name for CMsgZoomToElementAtPosition
  R typeinfo name for CMsgZoomToElementAtPositionResponse
  R typeinfo name for CMsgZoomToFocusedElement
+ R typeinfo name for COSXChromeIPCWakeThread
  R typeinfo name for CSharedMemStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
@@ -698,10 +702,16 @@
  SteamThreadTools::CThread::SetName(char const*)
  SteamThreadTools::CThread::Start(unsigned long)
  SteamThreadTools::CThread::~CThread()
+ SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+ SteamThreadTools::CThreadEvent::Set()
  SteamThreadTools::CThreadLocalBase::Get() const
  SteamThreadTools::CThreadLocalBase::Set(void*)
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
+ SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+ SteamThreadTools::CThreadSemaphore::Release(long)
+ SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
+ SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  SteamVProf::CVProfNode::EnterScope(void*)
  SteamVProf::CVProfNode::ExitScope()
  SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
@@ -2019,6 +2029,11 @@
  T CMsgZoomToFocusedElement::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgZoomToFocusedElement::SetCachedSize(int) const
  T CMsgZoomToFocusedElement::~CMsgZoomToFocusedElement()
+ T COSXChromeIPCWakeThread::COSXChromeIPCWakeThread()
+ T COSXChromeIPCWakeThread::Run()
+ T COSXChromeIPCWakeThread::ShutdownFromMainThread()
+ T COSXChromeIPCWakeThread::TimedWaitFromMainThread(IPC::IEvent*, unsigned int)
+ T COSXChromeIPCWakeThread::~COSXChromeIPCWakeThread()
  T CSharedMemStream::BWaitForDataToGet()
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)

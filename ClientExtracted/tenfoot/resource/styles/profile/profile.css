@@ -429,19 +429,21 @@ ProfilePanel LoadingThrobber
 
 }
 
-#Offline
+#Offline,
+#Error
 {
 	opacity: 0.0;
 	width: 100%;
 	height: 100%;
 	transition-property: opacity;
 	transition-duration: 0.23s;
-	transition-delay: 0.23s;
+	transition-delay: 1.25s;
 
 	padding-bottom: 50px;
 }
 
-#OfflineMessage
+#OfflineMessage,
+#ErrorMessage
 {
 	flow-children: down;
 	width: 100%;
@@ -451,21 +453,26 @@ ProfilePanel LoadingThrobber
 .StackDepth1 #Loading,
 #OverlayBasePanel.Offline #Loading,
 .Offline.StackDepth2 #Loading,
-.Offline.StackDepth3 #Loading
+.Offline.StackDepth3 #Loading,
+.LoadError #Loading
 {
 	opacity: 0.0;
 }
 
 #OverlayBasePanel.Offline #Offline,
 .Offline.StackDepth2 #Offline,
-.Offline.StackDepth3 #Offline
+.Offline.StackDepth3 #Offline,
+.StackDepth2 .LoadError #Error,
+.StackDepth3 .LoadError #Error
 {
 	opacity: 1.0;
 	transition-delay: 0.0s;
 }
 
 #OfflineStatus1,
-#OfflineStatus2
+#OfflineStatus2,
+#ErrorStatus1,
+#ErrorStatus2
 {
 	color: tcstatictext;
 	horizontal-align: center;
@@ -475,12 +482,14 @@ ProfilePanel LoadingThrobber
 	text-align: center;
 }
 
-#OfflineStatus1
+#OfflineStatus1,
+#ErrorStatus1
 {
 	font-size: largefontsize;
 }
 
-#OfflineStatus2
+#OfflineStatus2,
+#ErrorStatus2
 {
 	font-size: medfontsize;
 	height: 200px;

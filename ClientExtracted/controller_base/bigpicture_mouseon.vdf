@@ -22,13 +22,26 @@
 			"hold_repeat_inverval"		"99"
 		}
 	}
-
+	"group"
+	{
+		"id"		"2"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"edge"		"mouse_button LEFT"
+		}
+		"settings"
+		{
+			"adaptive_threshold"		"0"
+			"hold_repeat_inverval"		"99"
+		}
+	}
 	"group_source_bindings"
 	{
 		"0" "right_trackpad"
-		"1" "right_trigger"
+		"1" "left_trigger"
+		"2" "right_trigger"
 	}
-
 	"settings"
 	{
 		"left_trackpad_mode" "none"

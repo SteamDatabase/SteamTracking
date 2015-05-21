@@ -561,8 +561,22 @@ AlbumGridItem Label
 	font-weight: bold;
 }
 
-.NoCover #AlbumUpperLabel,
-.NoCover:focus #AlbumUpperLabel
+#MusicLibraryAlbumTitlePanel AlbumGridItem:descendantfocus #AlbumUpperLabel 
+{
+	font-weight: normal;	
+	transform: translateY( 272px );
+}
+
+#MusicLibraryAlbumTitlePanel AlbumGridItem:descendantfocus #AlbumLowerLabel 
+{
+	font-weight: bold;	
+	transform: translateY( 211px );
+}
+
+#MusicLibraryAlbumTitlePanel .NoCover #AlbumUpperLabel,
+#MusicLibraryAlbumTitlePanel .NoCover:focus #AlbumUpperLabel,
+#MusicLibraryAlbumPanel .NoCover #AlbumUpperLabel,
+#MusicLibraryAlbumPanel .NoCover:focus #AlbumUpperLabel
 {
 	opacity: 0.5;
 	font-size: 64px;
@@ -576,10 +590,16 @@ AlbumGridItem Label
 	transform: none;
 }
 
+#MusicLibraryAlbumTitlePanel .NoCover #AlbumUpperLabel,
+#MusicLibraryAlbumTitlePanel .NoCover:focus #AlbumUpperLabel
+{
+	opacity: 0.2;
+}
 
-
-.NoCover #AlbumLowerLabel,
-.NoCover:focus #AlbumLowerLabel
+#MusicLibraryAlbumTitlePanel .NoCover #AlbumLowerLabel,
+#MusicLibraryAlbumTitlePanel .NoCover:focus #AlbumLowerLabel,
+#MusicLibraryAlbumPanel .NoCover #AlbumLowerLabel,
+#MusicLibraryAlbumPanel .NoCover:focus #AlbumLowerLabel
 {
 	opacity: 0.2;
 	font-size: 64px;
@@ -594,6 +614,11 @@ AlbumGridItem Label
 	vertical-align: top;
 }
 
+#MusicLibraryAlbumTitlePanel .NoCover #AlbumLowerLabel,
+#MusicLibraryAlbumTitlePanel .NoCover:focus #AlbumLowerLabel
+{
+	opacity: 0.5;
+}
 
 AlbumGridItem:focus Label
 {
@@ -1011,12 +1036,14 @@ ArtistGridItem Label
 
 .MusicArtistGrid #ArtistUpperLabel
 {
+	text-overflow: ellipsis;
 	height: 40px;
 	transform: translateY( -27px ) translateX( 0px );
 }
 
 #MusicLibraryArtistPanel ArtistGridItem:focus #ArtistUpperLabel
 {
+	text-overflow: ellipsis;
 	height: 40px;
 	transform: translateY( -27px ) translateX( 22px );
 }

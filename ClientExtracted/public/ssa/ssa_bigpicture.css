@@ -1,5 +1,10 @@
+@font-face {
+    font-family: NotoSansCJKJP;
+    src: url('../../tenfoot/resource/fonts/NotoSansCJKjp-Regular.otf') format('opentype');
+}
+
 BODY	{
-	font-family: motiva sans, arial, sans-serif;
+	font-family: motiva sans bold,trebuchet ms,arial narrow,helvetica narrow,verdana,tahoma,helvetica;
 	font-size:18pt;
 	color:#a2a09b;
 
@@ -26,7 +31,6 @@ DIV	{
 	margin:0px;
 	}
 H1	{
-	font-family:motiva sans bold,trebuchet ms,arial narrow,helvetica narrow;verdana,tahoma,helvetica;
 	font-size:36pt;
 
 	line-height:40pt;
@@ -36,7 +40,6 @@ H1	{
 	}
 H2	{
 	color:#C4CABE;
-	font-family:motiva sans bold,trebuchet ms,arial narrow,helvetica narrow;verdana,tahoma,helvetica;
 	font-size:32px;
 
 	line-height:36px;
@@ -46,7 +49,6 @@ H2	{
 	}
 H3	{
 	color:#cbbf57;
-	font-family:motiva sans bold,trebuchet ms,arial narrow,helvetica narrow;verdana,tahoma,helvetica;
 	font-size:28px;
 
 	line-height:30px;

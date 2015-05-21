@@ -118,6 +118,10 @@
         </Panel>
 
         <!-- Joystick Camera Mode Advanced -->
+        <Panel class="FieldWrapper JoystickCameraMode Advanced">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickSmoothing" />
+          <DropDown id="JoystickSmoothingCameraMode" />
+        </Panel>
 
         <!-- Mouse Mode -->
 				<Panel class="FieldWrapper MouseMode">

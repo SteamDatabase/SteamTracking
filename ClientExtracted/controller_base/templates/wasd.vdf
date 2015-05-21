@@ -12,9 +12,9 @@
 		"bindings"
 		{
 			"button_A"		"key_press SPACE, Jump"
-			"button_B"		"key_press R, Reload"
-			"button_X"		"key_press E, Use"
-			"button_Y"		"key_press TAB, Map"
+			"button_B"		"key_press E, Use"
+			"button_X"		"key_press R, Reload"
+			"button_Y"		"key_press F, Flashlight"
 		}
 		"settings"
 		{
@@ -62,13 +62,15 @@
 		"mode"		"dpad"
 		"bindings"
 		{
-			"dpad_north"		"key_press W, Walk Forward"
-			"dpad_south"		"key_press S, Walk Back"
-			"dpad_east"		"key_press D, Walk Right"
-			"dpad_west"		"key_press A, Walk Left"
+			"dpad_north"		"key_press W, Move Forward"
+			"dpad_south"		"key_press S, Move Back"
+			"dpad_east"		"key_press D, Move Right"
+			"dpad_west"		"key_press A, Move Left"
+			"click"		"key_press LEFT_SHIFT, Sprint"
 		}
 		"settings"
 		{
+			"requires_click"		"0"
 			"overlap"		"1"
 			"hold_repeat_inverval"		"99"
 			"edge_binding_radius"		"24995"

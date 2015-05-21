@@ -12,18 +12,18 @@
 
 		<Panel class="InputContainerDown GapDown">
 			<HTML id="AgreementsHTML" embedded="true" />
+		</Panel>
+		
+		<Panel class="SSAFlowRight">
+			<Button class="WizardButton" id="PPAButton" onactivate="WizardButtonBack()">
+				<Label id="Label" text="#CreateAccount_PPA_ViewSSA" />
+			</Button>
+			<Button class="WizardButton" id="SSAButton" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#CreateAccount_SSA_ViewPPA" />
+			</Button>
 			<Label id="ScrollHintXInput" text="#Steam_Html_ScrollHintXInput" />
 			<Label id="ScrollHintSteam" text="#Steam_Html_ScrollHintSteamPad" />
 		</Panel>
-
-		<Button class="WizardButton" id="PPAButton" onactivate="WizardButtonBack()">
-			<Label id="Label" text="#CreateAccount_PPA_ViewSSA" />
-		</Button>
-
-		<Button class="WizardButton" id="SSAButton" onactivate="WizardButtonNext()">
-			<Label id="Label" text="#CreateAccount_SSA_ViewPPA" />
-		</Button>
-
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton" onactivate="WizardButtonCancel()">
 				<Label id="Label" text="#WizardButton_Done" />

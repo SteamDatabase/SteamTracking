@@ -534,7 +534,7 @@ Button:hover .ShortDesc
 	color: applabelselectedsolid;	
 }
 
-.TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image
+.TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image, #BatteryPanel Image
 {
 	wash-color: ui_primary_color;
 
@@ -859,13 +859,20 @@ Button:hover .ShortDesc
 	padding: 6px;
 }
 
+#BatteryPanel
+{
+	flow-children: right;
+	vertical-align: center;
+	padding: 6px;
+}
+
 #Exit
 {
 	flow-children: right;
 	vertical-align: center;
 }
 
-#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image, #GoOnlineButton Image, .MusicGuideButton Image
+#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image, #GoOnlineButton Image, .MusicGuideButton Image, #BatteryPanel Image
 {
 	vertical-align: center;
 	horizontal-align: center;

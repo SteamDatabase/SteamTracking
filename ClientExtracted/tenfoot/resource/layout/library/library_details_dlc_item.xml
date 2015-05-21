@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+
+	<LibraryDLCItem>
+		<Button id="WrapperButton" mousecanactivate="iffocused" >
+			<Panel class="LeftColumn" >
+				<Image id="Image"  src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+			</Panel>
+			<Panel class="RightColum" >
+				<Label id="DLCInstalled"  text="#Library_DLC_Installed_State" />
+				<Label id="DLCTitle"  text="#Library_DLC_Name" />
+			</Panel>
+		</Button>
+	</LibraryDLCItem>	
+</root>

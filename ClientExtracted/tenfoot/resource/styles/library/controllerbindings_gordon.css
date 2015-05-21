@@ -222,7 +222,7 @@ ControllerBindingsGordon.ScreenSaverMode
 {
 	margin-top: 5px;
 	margin-left: 96px;
-	margin-right: 96px;
+	margin-right: 0px;
 	width: 100%;
 }
 
@@ -1800,7 +1800,7 @@ ChooseBinding #kb_key_ralt
 
 ChooseBinding #kb_key_space
 {
-	width: 369px;
+	width: 358px;
 }
 
 ChooseBinding #kb_key_pad_0

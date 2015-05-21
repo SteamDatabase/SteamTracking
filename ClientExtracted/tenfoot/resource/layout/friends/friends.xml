@@ -25,15 +25,20 @@
 									>
 								<Label text="#Friends_Tab_Groups" />
 							</Button>
+							<Button id="FriendsBtnTabInvites" class="FriendsMainBodyHeaderButton InviteButton"
+									onactivate="FriendsSetCurrentlyActiveListTabIndex( 2, 2 )"
+									onfocus="FriendsSetCurrentlyActiveListTabIndex( 2, 0 )"
+									>
+								<Label text="#Friends_Tab_Invites" />
+							</Button>
 						</Panel>
 					</Panel>
 					<Panel id="FriendsMainBodyLeftHeaderUnderline">
 					</Panel>
 					<Panel id="FriendsMainBodyListContainer">
-						<Panel id="FriendsMainBodyFriendsList" class="MainBodyLeftList CurrentSelection" tabindex="auto" selectionpos="auto" analogstickscroll="false">
-						</Panel>
-						<Panel id="FriendsMainBodyGroupsList" class="MainBodyLeftList" tabindex="auto" selectionpos="auto" analogstickscroll="false">
-						</Panel>
+						<Panel id="FriendsMainBodyFriendsList" class="MainBodyLeftList CurrentSelection" tabindex="auto" selectionpos="auto" analogstickscroll="false" />
+						<Panel id="FriendsMainBodyGroupsList" class="MainBodyLeftList" tabindex="auto" selectionpos="auto" analogstickscroll="false" />
+						<FriendsInvitePage id="FriendsMainBodyInviteList" class="MainBodyLeftList InviteList" tabindex="auto" selectionpos="auto" analogstickscroll="false" />
 					</Panel>
 				</Panel>
 				<Panel id="FriendsChatDialogContainer">

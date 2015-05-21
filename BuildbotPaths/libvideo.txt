@@ -91,6 +91,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/utlqueue.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/utlstring.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/utlsymbol.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videoalignedbuffer.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videodecode.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videodecoderlibav.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/videoencode.o
@@ -168,6 +169,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpsocket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnpkt.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnudp.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecoderlibav.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecoderlibav.h
@@ -267,6 +270,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libprotobuf.a(zero_copy_stream.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libprotobuf.a(zero_copy_stream_impl.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libprotobuf.a(zero_copy_stream_impl_lite.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.convert_argb.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.convert_from.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.convert_from_argb.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.cpu_id.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.planar_functions.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libyuv.a(libyuv.row_any.o)

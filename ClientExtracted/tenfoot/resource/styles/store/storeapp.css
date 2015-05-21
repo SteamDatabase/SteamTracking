@@ -2280,9 +2280,15 @@ StoreAppPackageGroup #ViewPackageSection, .StoreAppPackage #ViewPackageSection
 	horizontal-align: right;
 }
 
+#ViewPackageSection
+{
+	width: 100%;
+}
+
 StoreAppPackage Button, StoreAppPackageGroup Button, .StoreAppPackage Button
 {
 	margin: 6px 12px;
+	width: 100%;
 }
 
 #AddToCartBtn

@@ -1,0 +1,13 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+
+	<LibraryDLC tabindex="auto" selectionpos="auto" defaultfocus="DLCFullWrapper" >
+		<Panel id="DLCFullWrapper" class="DLCFullWrapper">
+			<Label id="DLCHeaderTitle" class="HeaderLabel" text="Library_DLC_Title" />
+			<Panel id="DLCItems" selectionposboundary="vertical" childfocusonhover="true" />
+		</Panel>
+	</LibraryDLC>	
+</root>

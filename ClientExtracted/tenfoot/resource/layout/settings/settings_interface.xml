@@ -33,7 +33,7 @@
 									textinputclass="HalfWidth DockRight AppearFromBottomCenter"
 									undohistory="enabled" />
 						</Panel>
-						<Button class="Button" onactivate="DeleteAllWebCookies()" selectionpos="auto">
+						<Button class="Cookie Button" onactivate="DeleteAllWebCookies()" selectionpos="auto">
 							<Label class="LongDesc" text="#SettingsInterface_DeleteAllCookies" />
 						</Button>
 

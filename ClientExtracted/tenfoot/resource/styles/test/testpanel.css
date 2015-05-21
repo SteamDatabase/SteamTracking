@@ -32,6 +32,16 @@ Label
 	transition-duration: 0.5s;
 }
 
+.FirstChild:hover
+{
+	background-color: white;
+}
+
+.FirstChild.DropHover
+{
+	background-color: purple;
+}
+
 .GreenBox
 {
 	background-color: green;
@@ -50,7 +60,7 @@ Label
 .DynamicWidth
 {
 	background-color: purple;
-	width: 100%;
+	width: fit-children;
 	height: 50px;
 	margin: 10px;
 	flow-children: right;
@@ -59,7 +69,17 @@ Label
 	transition-duration: 0.5s;
 }
 
+.Container .DynamicWidth
+{
+	width: 100%;
+}
+
 .DynamicWidth .GreenBox
 {
 	width: 80px;
+}
+
+.FirstChild .DynamicWidth
+{
+	width: fit-children;
 }

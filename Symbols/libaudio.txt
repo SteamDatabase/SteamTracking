@@ -4,6 +4,8 @@
  B InterfaceReg::s_pInterfaceRegs
  B __g_CreateCDLLValidateIValidate_reg
  B g_VecLoadedModules
+ B s_NoEscConversion
+ B s_StringCharConversion
  B s_pAudioController
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
@@ -64,6 +66,9 @@
  D typeinfo for CMilesAudioDevice
  D typeinfo for CMilesAudioOutputStream
  D typeinfo for CMilesAudioSound
+ D typeinfo for CUtlCStringConversion
+ D typeinfo for CUtlCharConversion
+ D typeinfo for CUtlNoEscConversion
  D typeinfo for IAudioDevice
  D typeinfo for IAudioOutputStream
  D typeinfo for IAudioSinkList
@@ -121,6 +126,9 @@
  D vtable for CMilesAudioDevice
  D vtable for CMilesAudioOutputStream
  D vtable for CMilesAudioSound
+ D vtable for CUtlCStringConversion
+ D vtable for CUtlCharConversion
+ D vtable for CUtlNoEscConversion
  Log
  Plat_FloatTime
  Plat_GetExecutablePath
@@ -177,8 +185,11 @@
  R typeinfo name for CMilesAudioOutputStream
  R typeinfo name for CMilesAudioSound
  R typeinfo name for CMilesLibrary
+ R typeinfo name for CUtlCStringConversion
+ R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >
  R typeinfo name for CUtlMemoryBase
+ R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlString
@@ -544,6 +555,10 @@
  T CMilesWrapper::AIL_start_sample(_SAMPLE*)
  T CMilesWrapper::AIL_stop_sample(_SAMPLE*)
  T CMilesWrapper::RIB_find_files_provider(char const*, char const*, char const*, char const*, char const*)
+ T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCStringConversion::FindConversion(char const*, int*)
+ T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCharConversion::FindConversion(char const*, int*)
  T CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Validate(CValidator&, char const*)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
  T CUtlMemoryBase::Grow(int)
@@ -551,6 +566,7 @@
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
+ T CUtlNoEscConversion::FindConversion(char const*, int*)
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool)
@@ -711,6 +727,8 @@
  b k_InvalidClientID
  b s_MilesLoader
  d dyld__mach_header
+ d s_pConversionArrays_NoEscConversion
+ d s_pConversionArrays_StringCharConversion
  dlclose
  dlopen
  dlsym

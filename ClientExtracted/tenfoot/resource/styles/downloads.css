@@ -928,7 +928,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 	font-size: 28px;
 	font-weight: bold;
 	margin-left: 0px;
-	height: 40px;
+	height: 38px;
 	transition-property: opacity;
 	transition-duration: DownloadsPanelTransitionDuration;
 	transition-timing-function: ease-in-out;

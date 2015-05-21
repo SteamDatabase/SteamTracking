@@ -22,6 +22,12 @@
 					<Label id="OfflineStatus2" text="#Profile_Offline2" />
 				</Panel>
 			</Panel>
+			<Panel id="Error">
+				<Button id="ErrorMessage">
+					<Label id="ErrorStatus1" text="#Panel_Download_Error" />
+					<Label id="ErrorStatus2" text="#Panel_Download_Error2" />
+				</Button>
+			</Panel>
 		</Panel>
 	</ProfilePanel>
 </root>

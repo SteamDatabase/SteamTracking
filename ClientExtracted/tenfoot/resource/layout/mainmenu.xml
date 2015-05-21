@@ -42,6 +42,9 @@
 				<Panel id="SettingsExitRow" tabindex="1" selectionpos="10,0">
 					<Label id="Clock" />
 					<Label id="ClockSuffix" />
+					<Panel id="BatteryPanel" >
+						<Image id="Battery" src="file://{images}/controller_battery_3.png" />
+					</Panel>
 					<Button id="MusicGuideButton" class="MusicGuideButton" tabindex="0" selectionpos="10.2,0"
 						onfocus="MusicGuideButtonFocused();" onactivate="ToggleMusicControlPanel( true );"		
 						>

@@ -4,7 +4,6 @@
  B SteamThreadTools::g_pCurThread
  B SteamVProf::CVProfNode::s_iCurrentUniqueNodeID
  B SteamVProf::g_mutexProfileDump
- B TLS_cubAllocated
  B g_CpuTimeUnreliable
  B g_StackDumpMutex
  B g_TestHarness
@@ -73,6 +72,7 @@
  T CStdMemAlloc::CrtSetReportMode(int, int)
  T CStdMemAlloc::CubAllocated()
  T CStdMemAlloc::CubAllocatedUntracked()
+ T CStdMemAlloc::CubLogicalAllocated()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)

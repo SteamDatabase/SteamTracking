@@ -96,6 +96,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 #MsgBoxBodyRegion, .MsgBoxBodyRegion
 {
 	width: 860px;
+	max-height: 860px;
 	padding: 50px 40px 40px 40px;
 	background-color: message_box_bg;
 	box-shadow: fill #00000044 -4px -4px 8px 8px;

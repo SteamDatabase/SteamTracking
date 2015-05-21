@@ -477,6 +477,7 @@ ParentalFeaturesChild .SettingsBottomPanel
 #ParentalChooseAppsChild .SettingsBottomPanel
 {
 	margin-left: 0px;
+	transform: translateY( -90px );
 	height: 770px;
 	width: 100%;
 	position: 0px -100px 0px;
@@ -488,7 +489,7 @@ ParentalFeaturesChild .SettingsBottomPanel
 	height: 750px;
 	pre-transform-scale2d: 1.0, .96;
 
-	margin-top: 20px;
+	margin-top: 00px;
 	position: 0px 130px 0px;
 	padding-top: 65px;
 	padding-bottom: 100px;
