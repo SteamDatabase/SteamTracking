@@ -141,6 +141,16 @@ a:hover {
 	width: 512px;
 }
 
+.appid_373030 .customBrowseDesc
+{
+    margin-top: 70px;
+}
+
+.appid_373030 .customBrowseTitle
+{
+    display: none;
+}
+
 #profileBlock {
 	width:638px;
 	margin: 5px 0px 0px 0px;
