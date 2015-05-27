@@ -13,5 +13,15 @@
             "crc128"  "9715bee2e0a66df17bb6e9420005829d"
             "bootloadertimestamp"   "551def90"
         }
+        "1"
+        {
+            // firmware with fixed left pad distance, analog stick, etc
+            // rolled out a bit in advance through a main client beta
+            "firmwarebinary"   "/firmware/vcf_wired_controller_d0g_555bf9c5.bin"
+            "firmwaretimestamp"     "555bf9c5"
+            "minclientpackage" "1432685245" // 2015/5/26 main client with recovery code
+            "crc128"  "855c31f864c84e072d3b0ace99ad1f77"
+            "bootloadertimestamp"   "551def90"
+        }
     }
 }
