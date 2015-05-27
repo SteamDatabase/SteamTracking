@@ -102,15 +102,15 @@ function OnUpdateSubscriptionSuccess( agreementid, cancelTerms, bBillingAgreemen
 
 		if ( results.bCancel )
 		{
-			$('transaction_due_date_'+agreementid).innerHTML = '#youraccount_subscription_status_cancelled';
+			$('transaction_due_date_'+agreementid).innerHTML = 'Cancelled';
 			$('subtext_subscription_'+agreementid).innerHTML = cancelTerms;
 			if ( bBillingAgreement )
 			{
-				$('update_subscription_'+agreementid).innerHTML = '#youraccount_cancel_game_agreement_successful'.replace( '%1$s', $('transaction_name_'+agreementid).innerText );
+				$('update_subscription_'+agreementid).innerHTML = 'Your pre-authorization of charges from %1$s has successfully been revoked.  You will no longer receive automatic charges from this game.'.replace( '%1$s', $('transaction_name_'+agreementid).innerText );
 			}
 			else
 			{
-				$('update_subscription_'+agreementid).innerHTML = '#youraccount_cancel_subscription_successful';
+				$('update_subscription_'+agreementid).innerHTML = 'This subscription is now cancelled.';
 			}
 		}
 		else
@@ -135,11 +135,11 @@ function OnUpdateSubscriptionFailure( agreementid, cancel )
 	{
 		if ( cancel )
 		{
-			$('update_subscription_'+agreementid).innerHTML = '#youraccount_cancel_subscription_error';
+			$('update_subscription_'+agreementid).innerHTML = 'There was a problem canceling this subscription.<br/>Please contact <a href="http://support.steampowered.com/">Steam Support</a>';
 		}
 		else
 		{
-			$('update_subscription_'+agreementid).innerHTML = 'youraccount_update_subscription_error';
+			$('update_subscription_'+agreementid).innerHTML = 'There was a problem updating this subscription.<br/>Please contact <a href="%s">Steam Support</a>';
 		}
 		new Effect.Highlight( 'update_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
 	} 
@@ -221,9 +221,9 @@ function OnCancelPendingTransactionSuccess( transid )
 {
 	try 
 	{
-		$('transaction_event_'+transid).innerHTML = '#youraccount_failed';
-		$('transaction_price_'+transid).innerHTML = '#youraccount_not_available';
-		$('cancel_transaction_'+transid).innerHTML = '#youraccount_cancel_transaction_successful';
+		$('transaction_event_'+transid).innerHTML = 'Failed';
+		$('transaction_price_'+transid).innerHTML = 'N/A';
+		$('cancel_transaction_'+transid).innerHTML = 'This transaction is now cancelled.';
 		new Effect.Highlight( 'cancel_transaction_'+transid, { endcolor : '#000000', startcolor : '#ff9900' } );	
 	} 
 	catch( e ) 
@@ -236,7 +236,7 @@ function OnCancelPendingTransactionFailure( transid )
 {
 	try 
 	{
-		$('cancel_transaction_'+transid).innerHTML = '#youraccount_cancel_transaction_error';
+		$('cancel_transaction_'+transid).innerHTML = 'There was a problem cancelling this transaction.<br/>Please contact <a href="http://support.steampowered.com/">Steam Support</a>';
 		new Effect.Highlight( 'cancel_transaction_'+transid, { endcolor : '#000000', startcolor : '#ff9900' } );	
 	} 
 	catch (e) 
@@ -324,11 +324,11 @@ function OnRenewSubscriptionSuccess( agreementid, duedate, terms, total, bBillin
 		$('subtext_subscription_'+agreementid).innerHTML = terms;
 		if ( bBillingAgreement )
 		{
-				$('renew_subscription_'+agreementid).innerHTML = '#youraccount_renew_billing_agreement_successful'.replace( '%1$s', $('transaction_name_'+agreementid).innerText );
+				$('renew_subscription_'+agreementid).innerHTML = 'Your pre-authorization of charges from %1$s has successfully been renewed.'.replace( '%1$s', $('transaction_name_'+agreementid).innerText );
 		}
 		else
 		{
-			$('renew_subscription_'+agreementid).innerHTML = '#youraccount_renew_transaction_successful';
+			$('renew_subscription_'+agreementid).innerHTML = 'This subscription has been renewed.';
 		}
 		new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
 	} 
@@ -342,7 +342,7 @@ function OnRenewSubscriptionFailure( agreementid )
 {
 	try 
 	{
-		$('renew_subscription_'+agreementid).innerHTML = '#youraccount_renew_transaction_error';
+		$('renew_subscription_'+agreementid).innerHTML = 'There was a problem renewing this subscription.<br/>Please contact <a href="http://support.steampowered.com/">Steam Support</a>';
 		new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
 	} 
 	catch (e) 
