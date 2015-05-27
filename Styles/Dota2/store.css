@@ -2,33 +2,33 @@
 
 @font-face {
     font-family: 'Radiance';
-    src: url('https://cdn.dota2.com/apps/dota2/fonts/radiance.eot');
-    src: url('https://cdn.dota2.com/apps/dota2/fonts/radiance.eot?#iefix') format('embedded-opentype'),
-    url('https://cdn.dota2.com/apps/dota2/fonts/radiance.woff') format('woff'),
-    url('https://cdn.dota2.com/apps/dota2/fonts/radiance.ttf') format('truetype'),
-    url('https://cdn.dota2.com/apps/dota2/fonts/radiance.svg#ywftsvg') format('svg');
+    src: url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance.eot');
+    src: url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance.woff') format('woff'),
+    url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance.ttf') format('truetype'),
+    url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Radiance-Bold';
-    src: url('https://cdn.dota2.com/apps/dota2/fonts/radiance-bold.eot');
-    src: url('https://cdn.dota2.com/apps/dota2/fonts/radiance-bold.eot?#iefix') format('embedded-opentype'),
-    url('https://cdn.dota2.com/apps/dota2/fonts/radiance-bold.woff') format('woff'),
-    url('https://cdn.dota2.com/apps/dota2/fonts/radiance-bold.ttf') format('truetype'),
-    url('https://cdn.dota2.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg') format('svg');
+    src: url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.eot');
+    src: url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.woff') format('woff'),
+    url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf') format('truetype'),
+    url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Radiance-SemiBold';
-    src: url('https://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.eot');
-    src: url('https://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.eot?#iefix') format('embedded-opentype'),
-    url('https://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.woff') format('woff'),
-    url('https://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.ttf') format('truetype'),
-    url('https://cdn.dota2.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg') format('svg');
+    src: url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot');
+    src: url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff') format('woff'),
+    url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf') format('truetype'),
+    url('https://cdn.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -82,7 +82,7 @@ body {
 }
 
 .MainBackgroundImage {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/bg_main.jpg');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_main.jpg');
 	background-repeat:repeat;
 	background-position:center top;
 }
@@ -353,7 +353,7 @@ body {
 	margin: 8px;
 	width: 12px;
 	height: 12px;
-	background: url('https://cdn.dota2.com/apps/dota2/images/store/btn_close.png') no-repeat 0 0;
+	background: url('https://cdn.steamstatic.com/apps/dota2/images/store/btn_close.png') no-repeat 0 0;
 	background-position: top;
 	float:right;
 	cursor: pointer;
@@ -376,7 +376,7 @@ body {
 	display: none;
 	width: 13px;
 	height: 26px;
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/hover_arrow_both.gif');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/hover_arrow_both.gif');
 	background-repeat: no-repeat;
 	background-position: left top;
 	position: absolute;
@@ -389,7 +389,7 @@ body {
 	display: none;
 	width: 13px;
 	height: 26px;
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/hover_arrow_both.gif');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/hover_arrow_both.gif');
 	background-repeat: no-repeat;
 	background-position: right top;
 	position: absolute;
@@ -579,7 +579,7 @@ body {
 	position: relative;
 	display: inline-block;
 	float: left;
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/icon_notice.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/icon_notice.png');
 	background-repeat:no-repeat;
 	top: 0;
 	height: 22px;
@@ -679,7 +679,7 @@ body {
 }
 
 .HorizontalRule {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/rule.jpg');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/rule.jpg');
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	min-height: 1px;
@@ -896,7 +896,7 @@ body {
 	padding-bottom: 44px;
 }
 #PreviewBG {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/bg_container_top.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_container_top.png');
 	background-repeat: repeat-x;
 	height:38px;
 	width: 932px;
@@ -1075,7 +1075,7 @@ body {
 	color: #111111;
 	padding-top: 11px;
 	height:29px;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/store/tab_international_on.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/store/tab_international_on.png');
 	z-index: 2;
 }
 
@@ -1090,7 +1090,7 @@ body {
 	padding-top: 8px;
 	margin-top: 4px;
 	height:28px;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/store/tab_international_off.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/store/tab_international_off.png');
 }
 
 .StoreTabInactive_International:hover {
@@ -1103,7 +1103,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 48px;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/store/tab_bar_48.jpg');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/store/tab_bar_48.jpg');
 	background-repeat:repeat-x;
 	box-shadow: 0px 0px 5px #000;
 	overflow: visible;
@@ -1176,7 +1176,7 @@ body {
 }
 
 #CartButton.NoItems #CartButtonText #CartButtonTextIcon {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/icon_cart_empty.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/icon_cart_empty.png');
 }
 
 #CartButton.NoItems #CartButtonText #CartButtonTextIcon {
@@ -1188,7 +1188,7 @@ body {
 }
 
 #CartButton.HasItems #CartButtonText #CartButtonTextIcon {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/icon_cart.png?h');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/icon_cart.png?h');
 }
 
 #CartButton.HasItems #CartButtonText #CartButtonTextIcon {
@@ -1243,13 +1243,13 @@ body {
 }
 
 .ModalBg {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/bg_modal.jpg');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_modal.jpg');
 	width: 458px;
 	height: 216px;
 }
 
 .ModalBgBig {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/bg_modal_big.jpg');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_modal_big.jpg');
 	width: 530px;
 	height: 255px;
 	padding: 15px;
@@ -1311,7 +1311,7 @@ body {
 
 #OpeningSoon {
 	background-color: #0a1010;
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/openingsoon.jpg');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/openingsoon.jpg');
 	background-position:center top;
 	background-repeat: no-repeat;
 	height:810px;
@@ -1319,7 +1319,7 @@ body {
 
 #Closed {
 	background-color: #0a1010;
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/closed.jpg');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/closed.jpg');
 	background-position:center top;
 	background-repeat: no-repeat;
 	height:810px;
@@ -1417,7 +1417,7 @@ body {
 }
 
 .FrostivusSaleBanner {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/compendium_banner_x.jpg');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/compendium_banner_x.jpg');
 }
 
 #FrostivusSaleBannerShopNow {
@@ -1467,7 +1467,7 @@ body {
 }
 
 .ItemAttribute.PrizePool {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/attribute_icon_prizepool.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/attribute_icon_prizepool.png');
 	background-repeat: no-repeat;
 	background-position: left center;
 	line-height: 18px;
@@ -1475,13 +1475,13 @@ body {
 }
 
 .ItemAttribute.Compendium {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/attribute_icon_compendium.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/attribute_icon_compendium.png');
 	background-repeat: no-repeat;
 	background-position: left top;
 }
 
 .ItemAttribute.Fantasy {
-	background-image: url('https://cdn.dota2.com/apps/dota2/images/store/attribute_icon_fantasy.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/attribute_icon_fantasy.png');
 	background-repeat: no-repeat;
 	background-position: left top;
 }

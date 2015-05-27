@@ -43,7 +43,7 @@ img {
 	z-index:2;
 	width:938px;
 	padding:10px 23px;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/centercolbox_repeat.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/centercolbox_repeat.png');
 	background-repeat:repeat-y;
 }
 #centerColContent {
@@ -64,7 +64,7 @@ img {
 	height:149px;
 	position:relative;
 	margin:10px 0 20px 0;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/herotopportrait_container.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/herotopportrait_container.png');
 }
 #heroTopPortraitIMG {
 	position:absolute;
@@ -84,7 +84,7 @@ img {
 
 .centerColHR {
 	height:3px;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/centercolbox_hr.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/centercolbox_hr.png');
 	background-repeat:no-repeat;
 	background-position:center;
 	margin:10px 0;
@@ -98,16 +98,16 @@ img {
 	background: -moz-linear-gradient(top,  #242728,  #111313); /* for firefox 3.6+ */ 	
 }
 .redboxTop,.redboxBottom {
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/redborderbox_top.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/redborderbox_top.png');
 	margin:0;
 	width:914px;
 	height:23px;
 }
 .redboxBottom {
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/redborderbox_bottom.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/redborderbox_bottom.png');
 }	
 .redboxContent {
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/redborderbox_bg_vtile.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/redborderbox_bg_vtile.png');
 	background-repeat:repeat-y;
 	background-position:center;
 	width:914px;
@@ -233,7 +233,7 @@ img {
 	position:relative;
 	float:left;
 	margin-right:4px;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/abilityicon_holder.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/abilityicon_holder.png');
 }
 .overviewAbilityRow {
 	color:#999999;
@@ -309,15 +309,15 @@ img {
 .abilitiesInsetBoxTop,.abilitiesInsetBoxBottom {
 	width:897px;
 	height:10px;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/abilitiesinsetbox_top.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/abilitiesinsetbox_top.png');
 }
 .abilitiesInsetBoxBottom {
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/abilitiesinsetbox_bottom.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/abilitiesinsetbox_bottom.png');
 	margin-bottom:10px;
 }	
 .abilitiesInsetBoxInner {
 	width:897px;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/abilitiesinsetbox_repeat.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/abilitiesinsetbox_repeat.png');
 	background-repeat:repeat-y;
 }
 .abilitiesInsetBoxContent {
@@ -345,7 +345,7 @@ img {
 	position:relative;
 	float:left;
 	margin-right:4px;
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/abilityicon_holder2.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/abilityicon_holder2.png');
 }
 .abilityHeaderBox {
 	color:#999999;
@@ -531,7 +531,7 @@ img {
 	padding:10px 0px 14px 0px;
 }
 #columnHeaderTextStr,#columnHeaderTextAgi,#columnHeaderTextInt {
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/overviewicon_str.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/overviewicon_str.png');
 	background-repeat:no-repeat;
 	background-position:0px 0px;
 	padding:6px 10px 15px 40px;
@@ -542,10 +542,10 @@ img {
 	font-family:KoreanFont,georgia,serif;
 }
 #columnHeaderTextAgi {
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/overviewicon_agi.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/overviewicon_agi.png');
 }
 #columnHeaderTextInt {
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/overviewicon_int.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/overviewicon_int.png');
 }
 
 #heroBioArea,#itemsHeader {
@@ -585,7 +585,7 @@ h1#heroBioName,h2#heroBioLoading {
 	font-weight:normal;
 }
 .bioBoxHR {
-	background-image:url('https://cdn.dota2.com/apps/dota2/images/heropedia/biobox_hr.png');
+	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/biobox_hr.png');
 	background-repeat:no-repeat;
 	background-position:center;
 	height:1px;
