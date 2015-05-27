@@ -1991,3 +1991,38 @@ body.v6 .discover_queue_empty>h3 {
 .promo_banner {
 	box-shadow: 0px 0px 5px #000;
 }
+
+/* Refund policy styles */
+.refund_policy .page_header_ctn {
+	padding-bottom: 74px;
+}
+.refund_policy h2 {
+	padding-top: 40px;
+}
+
+body.v6.refund_policy .page_content_ctn {
+	font-size: 14px;
+	line-height: 18px;
+	font-family: Motiva Sans;
+	color: #a4b0be;
+}
+
+.refund_policy #main_content h1 {
+	color: #ffffff;
+	font-size: 34px;
+	text-shadow: 1px 1px 0 #000000;
+	margin: 32px 0px 8px 0px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+	line-height: normal;
+}
+
+.refund_policy #main_content h2 {
+	padding-top: 12px;
+	margin-bottom: 4px;
+	line-height: 20px;
+}
+
+.refund_policy p {
+	margin-bottom: 16px;
+}

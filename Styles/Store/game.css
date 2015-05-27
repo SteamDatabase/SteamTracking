@@ -636,6 +636,22 @@ img.game_header_image_full {
 	color: #7cb8e4;
 }
 
+.game_area_purchase_not_refundable {
+	height: 26px;
+	padding: 25px 16px 0px 0px;
+
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #acb5be;
+	text-align: right;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(226,244,255,0.2)), color-stop(100%,rgba(97,100,101,0.2)));background: -moz-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: -webkit-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: -o-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: -ms-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););}
+
+.game_area_purchase_not_refundable a {
+	font-size: 12px;
+	color: #acb5be;
+	text-decoration: underline;
+}
+
 .btn_addtocart {
 	position: relative;
 }

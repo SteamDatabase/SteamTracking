@@ -2588,9 +2588,10 @@ function CardLuhnCheck( card_number )
 }
 	
 
-
+var g_bAutoSubmitPaymentInfo = false;
 function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 {
+	g_bAutoSubmitPaymentInfo = bAutoSubmitPaymentInfo;
 		var errorString = '';
 
 		var rgBadFields = { 
@@ -2705,20 +2706,193 @@ function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 		{
 						$('error_display').innerHTML = '';
 			$('error_display').style.display = 'none';
-	
-			if ( bAutoSubmitPaymentInfo )
-			{
-				SubmitPaymentInfoForm();
-			}
-			else
-			{
-				SetTabEnabled( 'payment_info' );
-			}
+			
+			VerifyShippingAddress();
 		}
 	}
 	catch(e) 
 	{
 		ReportCheckoutJSError( 'Failed showing errors or submitting shipping info form', e );
+	}
+}
+
+var g_bVerifyShippingAddressCallRunning = false;
+function VerifyShippingAddress()
+{
+		if( g_bVerifyShippingAddressCallRunning )
+		return;
+	
+	try 
+	{
+				g_bVerifyShippingAddressCallRunning = true;
+		
+				AnimateSubmitPaymentInfoButton();
+		
+		new Ajax.Request('https://store.steampowered.com/checkout/verifyshippingaddress/',
+		{
+		    method:'post',
+		    parameters: { 
+				'ShippingFirstName' : $('shipping_first_name') ? $('shipping_first_name').value : '',
+				'ShippingLastName' : $('shipping_last_name').value,
+				'ShippingAddress' : $('shipping_address').value,
+				'ShippingAddressTwo' : $('shipping_address_two').value,
+				'ShippingCountry' : $('shipping_country').value,
+				'ShippingCity' : $('shipping_city').value,
+				'ShippingState' : ($('shipping_country').value == 'US' ? $('shipping_state_select').value : $('shipping_state_text').value),
+				'ShippingPostalCode' : $('shipping_postal_code').value,
+				'ShippingPhone' : $('shipping_phone').value,
+			},
+		    onSuccess: function(transport){
+		    	g_bVerifyShippingAddressCallRunning = false;
+				if ( transport.responseText ){
+					try {
+						var result = transport.responseText.evalJSON(true);
+		      		} catch ( e ) {
+		      			// Failure
+		      			OnVerifyShippingAddressFailure();
+		      		}
+		      	   	// Success...
+		      	   	if ( result.success == 1 )
+		      	   	{
+		      	   		OnVerifyShippingAddressSuccess( result );
+		      	   		return;
+		      	   	}
+		      	   	else
+		      	   	{
+		      	   		OnVerifyShippingAddressFailure();
+		      	   		return;
+		      	   	}
+			  	}
+			  	
+								OnVerifyShippingAddressFailure();
+		    },
+		    onFailure: function(){
+								g_bVerifyShippingAddressCallRunning = false;
+				OnVerifyShippingAddressFailure();
+			}
+		});
+	} 
+	catch(e) 
+	{
+		ReportCheckoutJSError( 'Failed gathering form data and calling VerifyShippingAddress', e );
+	}
+}
+
+
+function OnVerifyShippingAddressSuccess( result )
+{
+	try 
+	{
+				if ( result.bValidAddress || result.bSuggestedAddressMatches )
+		{
+			ShippingAddressVerified( false );
+		}
+		else
+		{
+			$('corrected_shipping_address').value = result.correctedAddress.address1.value;
+			$('corrected_shipping_address_two').value = result.correctedAddress.address2.value;
+			$('corrected_shipping_city').value = result.correctedAddress.city.value;
+			$('corrected_shipping_state').value = result.correctedAddress.state.value;
+			$('corrected_shipping_postal_code').value = result.correctedAddress.postcode.value;
+			
+						$('shipping_info_verify_address_entered').innerHTML = '';
+			if ( !result.correctedAddress.address1.matches )
+			{
+				$('shipping_info_verify_address_entered').innerHTML += $('shipping_address').value + '<br/>';
+			}
+			
+			if ( !result.correctedAddress.address2.matches && $('shipping_address_two').value )
+			{
+				$('shipping_info_verify_address_entered').innerHTML += $('shipping_address_two').value + '<br/>';
+			}
+			
+			if ( !result.correctedAddress.city.matches || !result.correctedAddress.state.matches || !result.correctedAddress.postcode.matches )
+			{ 
+				$('shipping_info_verify_address_entered').innerHTML += $('shipping_city').value + ', ' + ($('shipping_country').value == 'US' ? $('shipping_state_select').value : $('shipping_state_text').value) + ' ' + $('shipping_postal_code').value + '<br/>';
+			}
+			
+						$('shipping_info_verify_address_corrected').innerHTML = '';
+
+			if ( !result.correctedAddress.address1.matches )
+			{
+				$('shipping_info_verify_address_corrected').innerHTML += $('corrected_shipping_address').value + '<br/>';
+			}
+			
+			if ( !result.correctedAddress.address2.matches && $('corrected_shipping_address_two').value )
+			{
+				$('shipping_info_verify_address_corrected').innerHTML += $('corrected_shipping_address_two').value + '<br/>';
+			}
+			
+			if ( !result.correctedAddress.city.matches || !result.correctedAddress.state.matches || !result.correctedAddress.postcode.matches )
+			{ 
+				$('shipping_info_verify_address_corrected').innerHTML += $('corrected_shipping_city').value + ', ' + $('corrected_shipping_state').value + ', ' + $('corrected_shipping_postal_code').value + '<br/>';
+			}
+			
+			$('shipping_info_confirm').show();
+			$('shipping_info_entry').hide();
+		
+						var error_text = 'We\'ve found a suggestion for your shipping address.';
+			
+			DisplayErrorMessage( error_text );
+		}
+	} 
+	catch( e ) 
+	{
+		ReportCheckoutJSError( 'Failed handling VerifyShippingAddress success', e );
+	}
+}
+
+function ShowShippingAddressForm()
+{
+	$('shipping_info_entry').show();
+	$('shipping_info_confirm').hide();
+	
+		$('error_display').innerHTML = '';
+	$('error_display').style.display = 'none';
+}
+
+function ShippingAddressVerified( bUseCorrected )
+{
+	if ( bUseCorrected )
+	{
+		$('shipping_address').value = $('corrected_shipping_address').value;
+		$('shipping_address_two').value = $('corrected_shipping_address_two').value;
+		$('shipping_city').value = $('corrected_shipping_city').value;
+		if ( $('shipping_country').value == 'US' )
+		{
+			 $('shipping_state_select').value = $('corrected_shipping_state').value;
+		}
+		else
+		{
+			$('shipping_state_text').value = $('corrected_shipping_state').value;
+		}
+		$('shipping_postal_code').value = $('corrected_shipping_postal_code').value;
+	}
+	
+	ShowShippingAddressForm();
+	
+	if ( g_bAutoSubmitPaymentInfo )
+	{
+		SubmitPaymentInfoForm();
+	}
+	else
+	{
+		SetTabEnabled( 'payment_info' );
+	}
+}
+
+function OnVerifyShippingAddressFailure()
+{
+	try 
+	{
+				SetTabEnabled( 'shipping_info' );
+		var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
+		
+		DisplayErrorMessage( error_text );
+	} 
+	catch (e) 
+	{
+		ReportCheckoutJSError( 'Failed handling VerifyShippingAddress failure', e );
 	}
 }
 

@@ -35,6 +35,25 @@
 	background: transparent;
 	padding: 0px 0px 4px 0px;
 }
+
+.block .block_sub_header {
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	color: #67c1f5;
+	background: transparent;
+	padding: 0px 0px 4px 0px;
+}
+
+.block .block_title {
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #8f98a0;
+	background: transparent;
+	padding: 0px 0px 4px 0px;
+}
+
 .block.subscriptions {
 	margin-bottom: 20px;
 }
@@ -150,4 +169,12 @@
 
 p.currency_change_confirm_dialog_footer {
 	margin-top: 128px;
+}
+
+.youraccount_updating_shipping_button_row {
+	padding-top: 10px;
+}
+
+.shipping_row_alternate {
+	background-color: rgba(0,0,0,0.1)
 }

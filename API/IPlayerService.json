@@ -2,6 +2,29 @@
     "name": "IPlayerService",
     "methods": [
         {
+            "name": "RecordOfflinePlaytime",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Tracks playtime for a user when they are offline",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "ticket",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "play_sessions",
+                    "type": "{message}",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "GetRecentlyPlayedGames",
             "version": 1,
             "httpmethod": "GET",

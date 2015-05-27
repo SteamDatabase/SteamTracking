@@ -21,7 +21,26 @@ body.v6.login .rightcol .spotlight_block {
 	padding: 16px;
 }
 
+#shipping_info_tab #shipping_info_entry {
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 16px;
+}
 
+.shipping_info_address_title {
+	padding-top: 8px;
+	font-size: 13px;
+}
+
+.shipping_info_address_display_row {
+	background: rgba( 0, 0, 0, 0.2 );
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.shipping_info_address_display {
+	padding: 8px;
+	font-size: 12px;
+}
 
 .checkout_content_box
 {
@@ -1452,7 +1471,7 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 	overflow-y: scroll;
 }
 
-#billing_state_select_droplist
+#billing_state_select_droplist, #shipping_state_select_droplist, #shipping_state_droplist
 {
 	max-height: 225px;
 	overflow-y: auto;
@@ -1653,6 +1672,11 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 .checkout_region_warning
 {
 	color: #bd4847;
+}
+
+.checkout_no_refund_warning
+{
+	color: #ffcc6a;
 }
 
 
