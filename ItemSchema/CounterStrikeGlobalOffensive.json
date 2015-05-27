@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.180ca98c1913271c087c2e64b10b8a46aafbc2bd.txt",
+		"items_game_url": "http://media.steampowered.com/apps/730/scripts/items/items_game.7b34e1dfc905d4adb8211b8dd918286e5a5255d7.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -128,6 +128,10 @@
 			{
 				"origin": 23,
 				"name": "Quest Reward"
+			},
+			{
+				"origin": 24,
+				"name": "Level Up Reward"
 			}
 		]
 		,
@@ -1375,6 +1379,32 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapons/base_weapons/weapon_knife_tactical.7621bbad70410deb629d60ed98ef248dac525356.png",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_stattrack_swap": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "weapon_knife_falchion",
+				"defindex": 512,
+				"item_class": "weapon_knife",
+				"item_type_name": "Knife",
+				"item_name": "Falchion Knife",
+				"item_description": "A modern homage to a falchion sword, this clip point blade has a curved edge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapons/base_weapons/weapon_knife_falchion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapons/base_weapons/weapon_knife_falchion.adcc43a018fd4fe315dbdbc7960cfc52c5d63e3e.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
@@ -3648,6 +3678,90 @@
 				
 			},
 			{
+				"name": "Map Token Log",
+				"defindex": 1043,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Log Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_log",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_log.56ea9c6915676d5cc06861cbd38a458b0e01dfe6.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_log_large.18aa8f6714f15fbcd05892b1ae2082893ac71dd0.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Rails",
+				"defindex": 1044,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Rails Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_rails",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_rails.fbacbd83d92dbb94bc2f96acc8bf7430b9ebb471.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_rails_large.fb22a52ddc8296012f447d9a852b4467bf2e82a8.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Resort",
+				"defindex": 1045,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Resort Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_resort",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_resort.6827ca91e80143feb27bd3c744adc313c592cb87.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_resort_large.94d6b94d99d55198741677b7f7ae8386b078416f.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Map Token Zoo",
+				"defindex": 1046,
+				"item_class": "map_token",
+				"item_type_name": "Collectible",
+				"item_name": "Zoo Map Coin",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/maptoken_zoo",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_zoo.2c52d2b297d9c77b25d6ff79f4255e0933e06c9c.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/maptoken_zoo_large.a59d93b91f6b0bb11410c2d3c45e10e729828b89.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "Name Tag",
 				"defindex": 1200,
 				"item_class": "tool",
@@ -3968,7 +4082,7 @@
 				"item_class": "collectible_item",
 				"item_type_name": "Mission",
 				"item_name": "Mission",
-				"item_description": "Fulfill missions on official matchmaking servers to earn the stated reward. You must complete the match to register any mission progress.",
+				"item_description": "",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/tools/mission",
@@ -4707,6 +4821,480 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "community_case_7",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
+			},
+			{
+				"name": "Community Season Six 2015",
+				"defindex": 1326,
+				"item_class": "tool",
+				"item_type_name": "Pass",
+				"item_name": "Operation Bloodhound Access Pass",
+				"item_description": "Grants access to Operation Bloodhound, which consists of an upgradeable Challenge Coin, two campaigns of missions that reward additional XP, Operation Bloodhound Case and weapon drops, and a journal that contains Campaign Overviews, an Active Duty Scorecard, an Operation Scorecard, and Friends leaderboard.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_6_pass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_6_pass.6c266208675ae8c4ad41b9ecd09502f7bf0fd97e.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"capabilities": {
+					"usable_gc": true,
+					"usable_out_of_game": true
+				},
+				"tool": {
+					"type": "season_pass",
+					"use_string": "USE"
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "Community Season Six 2015 Coin 1",
+				"defindex": 1327,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Operation Bloodhound Challenge Coin",
+				"item_description": "Participated in Operation Bloodhound.\nFulfill missions on official matchmaking servers to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_6_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_6_bronze.aa55ae15c60cc0d687e8e66f925a092b1c64d845.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_6_bronze_large.c8ad11b3ca16d8f261febe8f80834fe8f3788f4a.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "quest id",
+						"class": "quest_id",
+						"value": 0
+					},
+					{
+						"name": "campaign 5 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 5 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					},
+					{
+						"name": "campaign 6 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 6 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Six 2015 Coin 2",
+				"defindex": 1328,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver Operation Bloodhound Coin",
+				"item_description": "Participated in Operation Bloodhound.\nFulfill missions on official matchmaking servers to upgrade this coin.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_6_silver",
+				"min_ilevel": 2,
+				"max_ilevel": 2,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_6_silver.66218f52f6ca823fbc65c0169e203a1f71e63101.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_6_silver_large.42451df217bac9066549ca4f113065c4d281d086.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "quest id",
+						"class": "quest_id",
+						"value": 0
+					},
+					{
+						"name": "campaign 5 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 5 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					},
+					{
+						"name": "campaign 6 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 6 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Community Season Six 2015 Coin 3",
+				"defindex": 1329,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold Operation Bloodhound Coin",
+				"item_description": "Participated in Operation Bloodhound.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/operation_6_gold",
+				"min_ilevel": 3,
+				"max_ilevel": 3,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_6_gold.7d00062b0df6eb146f938d8d76833447b453ea07.png",
+				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/status_icons/operation_6_gold_large.5d677e66b4a7d3d15d9b5d82cc5496f537756836.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "minutes played",
+						"class": "minutes_played",
+						"value": 1
+					},
+					{
+						"name": "operation minutes played",
+						"class": "operation_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "operation wins",
+						"class": "operation_wins",
+						"value": 0
+					},
+					{
+						"name": "operation kills",
+						"class": "operation_kills",
+						"value": 0
+					},
+					{
+						"name": "operation 3k",
+						"class": "operation_3k",
+						"value": 0
+					},
+					{
+						"name": "operation 4k",
+						"class": "operation_4k",
+						"value": 0
+					},
+					{
+						"name": "operation 5k",
+						"class": "operation_5k",
+						"value": 0
+					},
+					{
+						"name": "operation hsp",
+						"class": "operation_hsp",
+						"value": 0
+					},
+					{
+						"name": "operation mvps",
+						"class": "operation_mvps",
+						"value": 0
+					},
+					{
+						"name": "competitive minutes played",
+						"class": "competitive_minutes_played",
+						"value": 0
+					},
+					{
+						"name": "competitive wins",
+						"class": "competitive_wins",
+						"value": 0
+					},
+					{
+						"name": "competitive kills",
+						"class": "competitive_kills",
+						"value": 0
+					},
+					{
+						"name": "competitive 3k",
+						"class": "competitive_3k",
+						"value": 0
+					},
+					{
+						"name": "competitive 4k",
+						"class": "competitive_4k",
+						"value": 0
+					},
+					{
+						"name": "competitive 5k",
+						"class": "competitive_5k",
+						"value": 0
+					},
+					{
+						"name": "competitive hsp",
+						"class": "competitive_hsp",
+						"value": 0
+					},
+					{
+						"name": "competitive mvps",
+						"class": "competitive_mvps",
+						"value": 0
+					},
+					{
+						"name": "quests complete",
+						"class": "quests_complete",
+						"value": 0
+					},
+					{
+						"name": "operation points",
+						"class": "operation_points",
+						"value": 0
+					},
+					{
+						"name": "quest id",
+						"class": "quest_id",
+						"value": 0
+					},
+					{
+						"name": "campaign 5 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 5 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					},
+					{
+						"name": "campaign 6 completion bitfield",
+						"class": "campaign_completion_bitfield",
+						"value": 0
+					},
+					{
+						"name": "campaign 6 last completed quest",
+						"class": "campaign_last_completed_quest",
+						"value": 0
+					}
+				]
+				
+			},
+			{
+				"name": "Falchion Case Key",
+				"defindex": 1330,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Falchion Case Key",
+				"item_description": "This key only opens Falchion Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_8",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/tools/crate_key_community_8.2f80c7209bd0853385326d4a6712e407981a77aa.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_8",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -5986,7 +6574,7 @@
 				"image_inventory": "econ/stickers/dhw2014/fnatic",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/fnatic.7e8d11de54a5550a98b9825ca2f00a83f9f87813.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/fnatic.0c11f7179e706d9f544da50b23c9d88f06c15314.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/fnatic_large.341e4130694509f10480111791ff42cdef73b585.png",
 				"capabilities": {
 					"decodable": true
@@ -6018,7 +6606,7 @@
 				"image_inventory": "econ/stickers/dhw2014/cloud9",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/cloud9.02151ad05148bf8c8e0648cae0e5cf4ae21cfcce.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/cloud9.493d0f432ff1ad6086cbef662735e078125d519c.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/cloud9_large.09729c21f58cf48dc8cbd2ea25cb9c938211d587.png",
 				"capabilities": {
 					"decodable": true
@@ -6050,7 +6638,7 @@
 				"image_inventory": "econ/stickers/dhw2014/ninjasinpyjamas",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ninjasinpyjamas.76de545bc289c1310b7304c3fac8d4131af77335.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ninjasinpyjamas.3a11cdb981fd4b9ad3775f67c06f18d95bc934ef.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ninjasinpyjamas_large.aaa876adaee626de2c090d2eaefd7a102ea3e21d.png",
 				"capabilities": {
 					"decodable": true
@@ -6082,7 +6670,7 @@
 				"image_inventory": "econ/stickers/dhw2014/virtuspro",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/virtuspro.8cd77904ae746bea43f1f674d6ed3765abf7923d.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/virtuspro.d09e01ff7eaefdf26330c6bf2036cfda0dcb4c35.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/virtuspro_large.3f54f2b45ab69b3830f2941855b37362a7c756c7.png",
 				"capabilities": {
 					"decodable": true
@@ -6114,7 +6702,7 @@
 				"image_inventory": "econ/stickers/dhw2014/navi",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/navi.674115e80481a7f8d3359f592a9e53ab068b70b1.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/navi.ba10531a835b688b607bfdc63f9db0e2827d5640.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/navi_large.3f406c283c73c0e394f859a7c9fe82b125b0b0e6.png",
 				"capabilities": {
 					"decodable": true
@@ -6146,7 +6734,7 @@
 				"image_inventory": "econ/stickers/dhw2014/dignitas",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dignitas.bb6186bd405fef34582cf5ee02a29539cb20140c.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dignitas.b13f62307e3babc9936b2064f3f01887e0a9be5c.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dignitas_large.bc7c4602e33c314a2c5336d197a393edf250e8e7.png",
 				"capabilities": {
 					"decodable": true
@@ -6178,7 +6766,7 @@
 				"image_inventory": "econ/stickers/dhw2014/bravadogaming",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/bravadogaming.64fea1fe37f39d1f765054bce58af90e9c31ba02.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/bravadogaming.4680bd06cf3be1dd80fb1839dfd2df90d1eee339.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/bravadogaming_large.502768f3a37eabc8e227f35300ebe4f50e30acd1.png",
 				"capabilities": {
 					"decodable": true
@@ -6210,7 +6798,7 @@
 				"image_inventory": "econ/stickers/dhw2014/escgaming",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/escgaming.4ae9141ed3300338868bf8ec22cb974fb08caab6.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/escgaming.183e636597f9e5f922a1d6bf570333c02179ec8d.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/escgaming_large.ce8418ad193e27b867b5ebcad15b131e37db4491.png",
 				"capabilities": {
 					"decodable": true
@@ -6242,7 +6830,7 @@
 				"image_inventory": "econ/stickers/dhw2014/hellraisers",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/hellraisers.18835af3e8534ed803ca04f18c8fd947017ca017.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/hellraisers.706e9a1c7a967b490730442b31b39dbfe341e31d.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/hellraisers_large.909a85109977d63ffc2c46a05409026657fdde6e.png",
 				"capabilities": {
 					"decodable": true
@@ -6274,7 +6862,7 @@
 				"image_inventory": "econ/stickers/dhw2014/myxmg",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/myxmg.8ff4dc7d245dac125673833d1681a0ccfb5f344a.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/myxmg.c36ff3c2ae77e84861c5d6222554a64dfec7b7cb.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/myxmg_large.64006519d172306cf1bbb404b446351241fdaec6.png",
 				"capabilities": {
 					"decodable": true
@@ -6306,7 +6894,7 @@
 				"image_inventory": "econ/stickers/dhw2014/ibuypower",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ibuypower.fa9e27a77a2d7326d5044fa9eee49dc71aa3835a.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ibuypower.9df10e3019f74586265d2f22f9c3f99664308e6c.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/ibuypower_large.436eab1f9a65109c260b2b718e57d3028a00ba83.png",
 				"capabilities": {
 					"decodable": true
@@ -6338,7 +6926,7 @@
 				"image_inventory": "econ/stickers/dhw2014/teamldlc",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/teamldlc.6ad4ae21a1aa3fdf4b1fd486dd09fa7da90878b2.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/teamldlc.c42985cc18855e89a2689ca3b11a1139bdf89f3f.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/teamldlc_large.e07013d978d6f91f8e20b2401085dfdd73032ff8.png",
 				"capabilities": {
 					"decodable": true
@@ -6370,7 +6958,7 @@
 				"image_inventory": "econ/stickers/dhw2014/pentasports",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/pentasports.8c83564c1e38165b4d36b63ff369f828f0207514.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/pentasports.98d46c99ca7f2209837a864b246c52000ca98cdb.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/pentasports_large.e1056a880b5071e5ef6ac74b307edf93041065ed.png",
 				"capabilities": {
 					"decodable": true
@@ -6402,7 +6990,7 @@
 				"image_inventory": "econ/stickers/dhw2014/planetkeydynamics",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/planetkeydynamics.a6b832ec62544fb396007e66204bdac0fb23ea1e.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/planetkeydynamics.b178643926f0fbc94a35ee041050270323a250f3.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/planetkeydynamics_large.33f51a8cb0edd49ee5d8411191037685b4832320.png",
 				"capabilities": {
 					"decodable": true
@@ -6434,7 +7022,7 @@
 				"image_inventory": "econ/stickers/dhw2014/dreamhackwinter2014",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dreamhackwinter2014.f91c86216b5efdf5d6215690713095f9113811ff.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dreamhackwinter2014.7f9f7b4710147b77727273055f57445092f86348.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/dreamhackwinter2014_large.44a3ae4ec611d0cc81bba7a6368cd26257cc5288.png",
 				"capabilities": {
 					"decodable": true
@@ -6466,7 +7054,7 @@
 				"image_inventory": "econ/stickers/dhw2014/3dmax",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/3dmax.ae5f6e6524fbae4d9baa5a9856edc8388905178d.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/3dmax.7af1311baffa42963099806bba2ea62da8ad7182.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/3dmax_large.fa11e39140200f3c441fc7e0fb0b9ce893918169.png",
 				"capabilities": {
 					"decodable": true
@@ -6498,7 +7086,7 @@
 				"image_inventory": "econ/stickers/dhw2014/copenhagenwolves",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/copenhagenwolves.4400372be242ab0638b24274a038963e84434043.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/copenhagenwolves.c49723911bc0ee349196fb0acf01bd7fabfdea63.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/copenhagenwolves_large.32935def21beead765167a528d65137bc4fabc82.png",
 				"capabilities": {
 					"decodable": true
@@ -6530,7 +7118,7 @@
 				"image_inventory": "econ/stickers/dhw2014/datteam",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/datteam.8c9d6c2c3b1ac45e8106f90c9452ca6bbae77385.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/datteam.e0c3d9f5b448ded43d1fcf53730ea2457c308281.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/datteam_large.d2a656a7d09c14a4a6e67e524aed0c3d194c20fb.png",
 				"capabilities": {
 					"decodable": true
@@ -6562,7 +7150,7 @@
 				"image_inventory": "econ/stickers/dhw2014/londonconspiracy",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/londonconspiracy.fd057f3e626fc096a8c6146e0c585b16493b85c6.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/londonconspiracy.eed671703979052cda8884bbd07263051280222d.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/londonconspiracy_large.39b6be0a1f1605efc103975636b064290715fff5.png",
 				"capabilities": {
 					"decodable": true
@@ -6594,7 +7182,7 @@
 				"image_inventory": "econ/stickers/dhw2014/mousesports",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/mousesports.2f88ba6f79996fa37f9a6816a4d9cd1cca8442f0.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/mousesports.c509123c89fcb404e9fed4f379702fd0f388c626.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/mousesports_large.c344d7ad5338f077af1923efce5f78fd8de3013b.png",
 				"capabilities": {
 					"decodable": true
@@ -6626,7 +7214,7 @@
 				"image_inventory": "econ/stickers/dhw2014/flipsid3",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/flipsid3.c27b5b46903eeaf1cbf41c10f904a5e179bf0a4c.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/flipsid3.cdce4e5bf6b4ce418ea8369a13587097b6e62095.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/dhw2014/flipsid3_large.c221f04f9e5019b0d604d103438ec7002b5d8d43.png",
 				"capabilities": {
 					"decodable": true
@@ -6692,7 +7280,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/3dmax",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/3dmax.1d4d237d5accd6772b7533c5f838933384c36fd6.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/3dmax.bfb723831b03d2e12de9f1d1b551c93634fe49cd.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/3dmax_large.6dd94c5043a00ba0116d9cba6f632f93254637f5.png",
 				"capabilities": {
 					"decodable": true
@@ -6724,7 +7312,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/cloud9",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/cloud9.e7f524a1cf632445e17916a8d40fccac7a17eca2.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/cloud9.3c51c6174cef500c61d547c42dc952cdd4ab7611.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/cloud9_large.cbcc87fdb71be8e2f62f6a54fd063c229d3b4e82.png",
 				"capabilities": {
 					"decodable": true
@@ -6756,7 +7344,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/counterlogic",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/counterlogic.feb937e6743ed7d21bf27f0d42c07fc7a77f8964.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/counterlogic.f49adabd6052a558bff3fe09f5a09e0675737936.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/counterlogic_large.03c5c9314466ac62842ca18f2928be56fd76647d.png",
 				"capabilities": {
 					"decodable": true
@@ -6788,7 +7376,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/flipsid3",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/flipsid3.46cb8714f33dbf7f5aeff1b69677ee62b58114ff.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/flipsid3.34ca10bd00eb1e307a4b2465927015270b338e4c.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/flipsid3_large.84f5a0408e732c3405580c211050a916195e5b9b.png",
 				"capabilities": {
 					"decodable": true
@@ -6820,7 +7408,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/fnatic",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/fnatic.58439ec0847cb7bd2d4856315624f4e083db2155.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/fnatic.933f108d8414959c6ccb902fdad3330ca8eb8310.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/fnatic_large.65da8ea42ccaa373812e4a3d08d70b3fc6b92ef8.png",
 				"capabilities": {
 					"decodable": true
@@ -6852,7 +7440,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/hellraisers",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/hellraisers.08b81e7a62851208da1b723ea2f8ede797554a3c.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/hellraisers.889f1377314658a29861f2a9ab106f9e941abb63.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/hellraisers_large.791b11a91b2a12c5cc56018056ac6ef4a4cd7bc2.png",
 				"capabilities": {
 					"decodable": true
@@ -6884,7 +7472,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/keyd",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/keyd.31583a8bac97b8b4cbc00f766564b3ec78d331ad.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/keyd.8757d7756845e9c7c04c26fd71e1fe38af3f2829.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/keyd_large.1371381a6ac4c1a9275ed55285f93658f844fc05.png",
 				"capabilities": {
 					"decodable": true
@@ -6916,7 +7504,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/lgb",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/lgb.51e70e553cd78a9202e1462156e9545ad634b961.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/lgb.e0683db5ccf434f75469f4a9f7b2f49822e89264.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/lgb_large.e2433db63170f333355ec88914b901efa6e002fc.png",
 				"capabilities": {
 					"decodable": true
@@ -6948,7 +7536,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/navi",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/navi.e0d545a35959a1f605c9274faeefbb879d9918a9.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/navi.2a907bfdb5eaf77c42f30c7f374ff29d0f79dfe2.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/navi_large.ead83ccce5bb308db55d2eb92b2e4d511adf6307.png",
 				"capabilities": {
 					"decodable": true
@@ -6980,7 +7568,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/ninjasinpyjamas",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/ninjasinpyjamas.daaab6c1b5af972cc9a0e5192a360faa419f13f3.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/ninjasinpyjamas.1850936680a25413d93dc240d76366a9088f51ed.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/ninjasinpyjamas_large.b651b80e8c58f443bd1b24c5de146931ff380992.png",
 				"capabilities": {
 					"decodable": true
@@ -7012,7 +7600,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/pentasports",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/pentasports.a2522f782fe8401516020465f154a17aaa14af39.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/pentasports.a6b0ddffefb5507453456c0d2c35b6a57821c171.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/pentasports_large.8fdf2611c611d48069b2bbc1d580d457ab7e3a5f.png",
 				"capabilities": {
 					"decodable": true
@@ -7044,7 +7632,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/teamenvyus",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamenvyus.8618f1ea0cd881e9d04be2def3409e73b9e1505f.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamenvyus.7055375c2c2682e9ed46e8b6db514814ee7db6a1.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamenvyus_large.ecd0526e2cf238b0425e98c4f7bd3c9779f9647b.png",
 				"capabilities": {
 					"decodable": true
@@ -7076,7 +7664,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/teamsolomid",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamsolomid.df7f0b1994e1dfd11d6a35c81ba3e7106abbcfee.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamsolomid.c133bd18f8edaaf4c13703cdfad293c29d962412.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/teamsolomid_large.be234b9678c6c4b3116f72e24efd9347e4e2f50d.png",
 				"capabilities": {
 					"decodable": true
@@ -7108,7 +7696,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/titan",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/titan.f709b3e1e51496c6b3f65d6804d9479ae990491b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/titan.fe5f4085cd69484463b529908b351ec066c01e5f.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/titan_large.ec5f872517c77762c74f1461867c76f929d0a620.png",
 				"capabilities": {
 					"decodable": true
@@ -7140,7 +7728,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/virtuspro",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/virtuspro.de015f4b1740a6d1f96cbacd555461fae095727d.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/virtuspro.f439f2e8088229af10a9340a593eb2095a876bbd.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/virtuspro_large.aacafa7a15b4d315ac8b6c2d873af56824100a62.png",
 				"capabilities": {
 					"decodable": true
@@ -7172,7 +7760,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/voxeminor",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/voxeminor.2f20927c40a69eb2d6cf3315e20c46ada8d63f10.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/voxeminor.d013b4a6b538881f7467120d147acfbffb242460.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/voxeminor_large.283cf0be32bf62f205be77bfaa8afc5641a86167.png",
 				"capabilities": {
 					"decodable": true
@@ -7204,7 +7792,7 @@
 				"image_inventory": "econ/stickers/eslkatowice2015/esl_a",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/esl_a.01ebe00d32f3596900e9a7d9899214077034f50b.png",
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/esl_a.fc2e4e24ecbf198f3f9736c051ff22feeb0e4ae3.png",
 				"image_url_large": "http://media.steampowered.com/apps/730/icons/econ/stickers/eslkatowice2015/esl_a_large.b6e94be2643e41e1db192c0794c0cf18101106de.png",
 				"capabilities": {
 					"decodable": true
@@ -7636,6 +8224,40 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 49
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_8",
+				"defindex": 4091,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Falchion Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_8",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "http://media.steampowered.com/apps/730/icons/econ/weapon_cases/crate_community_8.3cd07b46c7bcb7577453816c5d2f8afdbee98234.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_case_8",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 50
 					}
 				]
 				
@@ -13966,6 +14588,16 @@
 				"effect_type": "neutral",
 				"hidden": true,
 				"stored_as_integer": false
+			},
+			{
+				"name": "operation bonus points",
+				"defindex": 220,
+				"attribute_class": "operation_bonus_points",
+				"description_string": "Operation Bonus Earned: +%s1 XP",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
 			}
 		]
 		,
@@ -14103,6 +14735,29 @@
 					"weapon_tec9",
 					"weapon_famas",
 					"weapon_galilar"
+				]
+				
+			},
+			{
+				"item_set": "set_chopshop",
+				"name": "The Chop Shop Collection",
+				"items": [
+					"weapon_scar20",
+					"weapon_cz75a",
+					"weapon_m249",
+					"weapon_mag7",
+					"weapon_deagle",
+					"weapon_galilar",
+					"weapon_usp_silencer",
+					"weapon_mac10",
+					"weapon_p250",
+					"weapon_mp7",
+					"weapon_fiveseven",
+					"weapon_cz75a",
+					"weapon_sg556",
+					"weapon_elite",
+					"weapon_glock",
+					"weapon_m4a1_silencer"
 				]
 				
 			},
@@ -14281,6 +14936,29 @@
 				
 			},
 			{
+				"item_set": "set_community_8",
+				"name": "The Falchion Collection",
+				"items": [
+					"weapon_galilar",
+					"weapon_glock",
+					"weapon_nova",
+					"weapon_p90",
+					"weapon_ump45",
+					"weapon_usp_silencer",
+					"weapon_famas",
+					"weapon_m4a1",
+					"weapon_mp9",
+					"weapon_negev",
+					"weapon_hkp2000",
+					"weapon_cz75a",
+					"weapon_mp7",
+					"weapon_sg556",
+					"weapon_ak47",
+					"weapon_awp"
+				]
+				
+			},
+			{
 				"item_set": "set_dust",
 				"name": "The Dust Collection",
 				"items": [
@@ -14378,6 +15056,27 @@
 				
 			},
 			{
+				"item_set": "set_gods_and_monsters",
+				"name": "The Gods and Monsters Collection",
+				"items": [
+					"weapon_mp7",
+					"weapon_aug",
+					"weapon_elite",
+					"weapon_nova",
+					"weapon_tec9",
+					"weapon_hkp2000",
+					"weapon_awp",
+					"weapon_m249",
+					"weapon_ump45",
+					"weapon_mp9",
+					"weapon_g3sg1",
+					"weapon_m4a1_silencer",
+					"weapon_m4a1",
+					"weapon_awp"
+				]
+				
+			},
+			{
 				"item_set": "set_inferno",
 				"name": "The Inferno Collection",
 				"items": [
@@ -14409,6 +15108,29 @@
 					"weapon_mp7",
 					"weapon_sawedoff",
 					"weapon_awp"
+				]
+				
+			},
+			{
+				"item_set": "set_kimono",
+				"name": "The Rising Sun Collection",
+				"items": [
+					"weapon_bizon",
+					"weapon_sawedoff",
+					"weapon_tec9",
+					"weapon_g3sg1",
+					"weapon_p250",
+					"weapon_p250",
+					"weapon_deagle",
+					"weapon_galilar",
+					"weapon_mag7",
+					"weapon_tec9",
+					"weapon_fiveseven",
+					"weapon_deagle",
+					"weapon_deagle",
+					"weapon_m4a1",
+					"weapon_ak47",
+					"weapon_aug"
 				]
 				
 			},
