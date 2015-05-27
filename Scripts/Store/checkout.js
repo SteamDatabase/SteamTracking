@@ -590,7 +590,7 @@ function InitializeTransaction()
 		}
 		else if ( g_bIsInOverlay )
 		{
-						 			$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br /><br/>Your digitally delivered items are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
+						 			$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
 					}		
 		else
 		{
@@ -604,7 +604,7 @@ function InitializeTransaction()
 			}
 			else
 			{
-												$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br /><br/>Your digitally delivered items are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
+												$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
 							}
 		}
 
