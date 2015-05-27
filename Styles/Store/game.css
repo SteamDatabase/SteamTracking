@@ -376,6 +376,36 @@ img.game_header_image_full {
     font-family: "Motiva Sans Medium", Arial, Helvetica, sans-serif;
 }
 
+.notice_box_content_blue_box {
+    width: 584px;
+    color: #67c1f5;
+    font-size: 14px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    padding: 15px 15px;
+    margin-bottom: 15px;
+    background: -moz-linear-gradient(-60deg,  rgba(39,67,88,1) 0%, rgba(54,95,125,0.3) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(39,67,88,0.8)), color-stop(100%,rgba(54,95,125,0.3))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-60deg,  rgba(39,67,88,1) 0%,rgba(54,95,125,0.3) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-60deg,  rgba(39,67,88,1) 0%,rgba(54,95,125,0.3) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-60deg,  rgba(39,67,88,1) 0%,rgba(54,95,125,0.3) 100%); /* IE10+ */
+    background: linear-gradient(135deg,  rgba(39,67,88,1) 0%,rgba(54,95,125,0.3) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#274358ff', endColorstr='#365f7dff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.notice_box_content_blue_box b {
+    font-size: 18px;
+    font-weight: normal;
+    color: #f47b20;
+}
+
+.notice_box_content_blue_box strong {
+    font-size: 18px;
+    font-weight: normal;
+    color: #ffffff;
+    font-family: "Motiva Sans Medium", Arial, Helvetica, sans-serif;
+}
+
+
 .subscription_page_region_restriction {
 	margin-top: 15px;
 }
