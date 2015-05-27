@@ -2783,7 +2783,7 @@ function OnVerifyShippingAddressSuccess( result )
 {
 	try 
 	{
-				if ( result.bValidAddress || result.bSuggestedAddressMatches )
+				if ( result.bValidAddress && result.bSuggestedAddressMatches )
 		{
 			ShippingAddressVerified( false );
 		}
