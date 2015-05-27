@@ -106,7 +106,7 @@ function OnVerifyRefundFailure( transid )
 {
 	try 
 	{
-		$('refund_error').innerHTML = 'There was a problem processing your refund at this time.<br/>Please contact <a href="%s">Steam Support</a>';
+		$('refund_error').innerHTML = '#refund_purchase_generic_error';
 		$('refund_error').style.display = 'block';
 		Effect.ScrollTo( 'refund_error' );
 		new Effect.Highlight( 'refund_error', { endcolor : '#000000', startcolor : '#ff9900' } );		
@@ -204,7 +204,7 @@ function OnConfirmRefundFailure( transid, result )
 {
 	try 
 	{
-		$('refund_error').innerHTML = 'There was a problem processing your refund at this time.<br/>Please contact <a href="%s">Steam Support</a>';
+		$('refund_error').innerHTML = '#refund_purchase_generic_error';
 		$('refund_error').style.display = 'block';
 		Effect.ScrollTo( 'refund_error' );
 		new Effect.Highlight( 'refund_error', { endcolor : '#000000', startcolor : '#ff9900' } );		
@@ -279,7 +279,7 @@ function OnCancelPendingRefundSuccess( refundid, results )
 		$('refundPage2').style.display = 'none';
 		$('refundPage3').style.display = 'none';
 		$('refundPage4').style.display = 'block';
-		$('refundConfirmation').innerHTML = 'Your refund request has been cancelled.';
+		$('refundConfirmation').innerHTML = '#cancel_pending_refund_success';
 	} 
 	catch( e ) 
 	{
@@ -291,7 +291,7 @@ function OnCancelPendingRefundFailure( refundid, result )
 {
 	try 
 	{
-		$('refund_error').innerHTML = 'There was a problem processing your refund at this time.<br/>Please contact <a href="%s">Steam Support</a>';
+		$('refund_error').innerHTML = '#refund_purchase_generic_error';
 		$('refund_error').style.display = 'block';
 		Effect.ScrollTo( 'refund_error' );
 		new Effect.Highlight( 'refund_error', { endcolor : '#000000', startcolor : '#ff9900' } );		
