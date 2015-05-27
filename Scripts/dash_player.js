@@ -527,6 +527,7 @@ CDASHPlayer.prototype.GetClosedCaptionsArray = function()
 				code: adaptation.language,
 				display: adaptation.language,
 				url: adaptation.representations[0].closedCaptionFile,
+				roles: adaptation.roles,
 			};
 
 			for ( lang in CVTTCaptionLoader.LanguageCountryCodes )
@@ -686,14 +687,14 @@ CDASHPlayer.prototype.BIsRepresentationChanging = function()
 	return ( this.m_nRepChangeTargetHeight != 0 );
 }
 
-CDASHPlayer.prototype.UpdateClosedCaption = function ( closedCaptionCode )
+CDASHPlayer.prototype.UpdateClosedCaption = function ( closedCaptionCode, ccRole )
 {
 	if ( !this.m_VTTCaptionLoader )
 	{
 		this.m_VTTCaptionLoader = new CVTTCaptionLoader( this.m_elVideoPlayer, this.GetClosedCaptionsArray() );
 	}
 
-	this.m_VTTCaptionLoader.SwitchToTextTrack( closedCaptionCode );
+	this.m_VTTCaptionLoader.SwitchToTextTrack( closedCaptionCode, ccRole );
 }
 
 CDASHPlayer.prototype.SetPlaybackRate = function ( unRate )
@@ -1925,6 +1926,15 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 				}
 			}
 
+			// parse roles ( main, alternate, supplementary, commentary, dub )
+			adaptationSet.roles = [];
+			$J( xmlAdaptation ).find( 'Role' ).each( function()
+			{
+				var xmlComponent = $J( this );
+				var type = $J( xmlComponent ).attr( 'value' );
+				adaptationSet.roles.push( type );
+			});
+
 			// find segment template
 			var xmlSegmentTemplates = $J( xmlAdaptation ).find( 'SegmentTemplate' );
 			if ( xmlSegmentTemplates.size() == 0 )
@@ -1998,6 +2008,15 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 		}
 		else
 		{
+			// parse roles ( caption or subtitle )
+			adaptationSet.roles = ['subtitle']; // default
+			$J( xmlAdaptation ).find( 'Role' ).each( function()
+			{
+				var xmlComponent = $J( this );
+				var type = $J( xmlComponent ).attr( 'value' );
+				adaptationSet.roles[0] = type;
+			});
+
 			// parse each adaptation set for closed captions
 			adaptationSet.representations = [];
 			$J( xmlAdaptation ).find( 'Representation' ).each( function()
@@ -2261,6 +2280,7 @@ function CDASHPlayerUI( player )
 
 CDASHPlayerUI.s_ClosedCaptionsNone = "none";
 CDASHPlayerUI.PRELOAD_THUMBNAILS = false;
+CDASHPlayerUI.s_ClosedCaptionsSelectExt = "_CC";
 
 CDASHPlayerUI.s_overlaySrc =	'<div class="dash_overlay no_select">' +
 										'<div class="play_button play"></div>' +
@@ -2517,14 +2537,23 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 		{
 			if ( rgRepresentation[r].code.toUpperCase() != CDASHPlayerUI.s_ClosedCaptionsNone.toUpperCase() )
 			{
-				$J('#representation_select_captions').append('<option value="' + rgRepresentation[r].code + '">' + rgRepresentation[r].display + "</option>");
+				var strClosedCaptionValue = '';
+				var strClosedCaptionLabel = '';
+				if ( rgRepresentation[r].roles[0] == CVTTCaptionLoader.s_Caption )
+				{
+					strClosedCaptionValue = CDASHPlayerUI.s_ClosedCaptionsSelectExt;
+					strClosedCaptionLabel = ' (CC)';
+				}
+
+				$J('#representation_select_captions').append('<option value="' + rgRepresentation[r].code + strClosedCaptionValue + '">' + rgRepresentation[r].display + strClosedCaptionLabel + "</option>");
 			}
 		}
 
 		$J( '#representation_select_captions').on('change', function()
 		{
 			WebStorage.SetLocal( "closed_caption_language_setting_" + _ui.m_strUniqueSettingsID, this.value );
-			_ui.m_player.UpdateClosedCaption( this.value );
+			ccRole = endsWith( this.value, CDASHPlayerUI.s_ClosedCaptionsSelectExt ) ? CVTTCaptionLoader.s_Caption : CVTTCaptionLoader.s_Subtitle;
+			_ui.m_player.UpdateClosedCaption( this.value.replace( CDASHPlayerUI.s_ClosedCaptionsSelectExt, '' ), ccRole );
 			this.blur();
 		} );
 
@@ -3319,6 +3348,10 @@ function TimetoSeconds( strTime )
 	return seconds;
 }
 
+function endsWith( str, suffix ) {
+	return ( str.indexOf( suffix, str.length - suffix.length ) !== -1 );
+}
+
 //////////////////////////////////////////////////////////////////////////
 // CVTTCaptionLoader for Parsing and Managing VTT Closed Caption Files
 //////////////////////////////////////////////////////////////////////////
@@ -3332,6 +3365,8 @@ function CVTTCaptionLoader( elVideoPlayer, closedCaptions )
 CVTTCaptionLoader.s_TrackOff = "disabled";
 CVTTCaptionLoader.s_TrackHidden = "hidden";
 CVTTCaptionLoader.s_TrackShowing = "showing";
+CVTTCaptionLoader.s_Caption = "caption";
+CVTTCaptionLoader.s_Subtitle = "subtitle";
 
 CVTTCaptionLoader.prototype.Close = function()
 {
@@ -3368,35 +3403,35 @@ CVTTCaptionLoader.prototype.SetAllTextTracksDisplay = function( trackState )
 	}
 }
 
-CVTTCaptionLoader.prototype.GetTextTrackByCode = function( closedCaptionCode )
+CVTTCaptionLoader.prototype.GetTextTrackByCode = function( closedCaptionCode, role )
 {
 	for (var i = 0; i < this.m_elVideoPlayer.textTracks.length; i++ )
 	{
-		if ( this.m_elVideoPlayer.textTracks[i].label == closedCaptionCode )
+		if ( this.m_elVideoPlayer.textTracks[i].label == closedCaptionCode && ( this.m_elVideoPlayer.textTracks[i].kind + 's' ) == role )
 			return this.m_elVideoPlayer.textTracks[i];
 	}
 
 	return null;
 }
 
-CVTTCaptionLoader.prototype.GetClosedCaptionUrl = function( closedCaptionCode )
+CVTTCaptionLoader.prototype.GetClosedCaptionUrl = function( closedCaptionCode, role )
 {
 	for (var i = 0; i < this.m_rgClosedCaptions.length; i++)
 	{
-		if ( this.m_rgClosedCaptions[i].code == closedCaptionCode )
-			return this.m_rgClosedCaptions[i].url;
+		if ( this.m_rgClosedCaptions[i].code == closedCaptionCode && this.m_rgClosedCaptions[i].roles[0] == role )
+				return this.m_rgClosedCaptions[i].url;
 	}
 
 	return null;
 }
 
-CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode )
+CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode, role )
 {
 	// turn off any current track
 	this.SetAllTextTracksDisplay( CVTTCaptionLoader.s_TrackOff );
 
 	// see if the requested text track exists, if so, turn it on
-	var ccTextTrack = this.GetTextTrackByCode( closedCaptionCode );
+	var ccTextTrack = this.GetTextTrackByCode( closedCaptionCode, role );
 	if ( ccTextTrack )
 	{
 		// .cues seems to only be filled in now after showing the track?
@@ -3408,7 +3443,7 @@ CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode )
 	}
 
 	// no text track or cues are empty so go get the VTT file
-	var ccUrl = this.GetClosedCaptionUrl( closedCaptionCode );
+	var ccUrl = this.GetClosedCaptionUrl( closedCaptionCode, role );
 	if ( ccUrl )
 	{
 		var _loader = this;
@@ -3421,7 +3456,7 @@ CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode )
 		{
 			_loader.m_xhrDownloadVTT = null;
 
-			var newTextTrack = _loader.AddVTTCuesToNewTrack ( data, closedCaptionCode );
+			var newTextTrack = _loader.AddVTTCuesToNewTrack ( data, closedCaptionCode, role );
 			if ( !newTextTrack )
 			{
 				PlayerLog( 'Failed to parse VTT file ' + ccUrl );
@@ -3440,14 +3475,14 @@ CVTTCaptionLoader.prototype.SwitchToTextTrack = function( closedCaptionCode )
 	}
 }
 
-CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaptionCode )
+CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaptionCode, role )
 {
 	browserCue = window.VTTCue || window.TextTrackCue;
 
 	// there may be a track but the cues are empty, so try to get it first and then create if needed
-	var newTextTrack = this.GetTextTrackByCode( closedCaptionCode );
+	var newTextTrack = this.GetTextTrackByCode( closedCaptionCode, role );
 	if ( !newTextTrack )
-		newTextTrack = this.m_elVideoPlayer.addTextTrack( "captions", closedCaptionCode, closedCaptionCode );
+		newTextTrack = this.m_elVideoPlayer.addTextTrack( role + 's', closedCaptionCode, closedCaptionCode );
 
 	var rgCuesFromVTT = this.ParseVTTForCues( data );
 	if (rgCuesFromVTT.length == 0)
