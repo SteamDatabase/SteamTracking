@@ -281,7 +281,8 @@ CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 	if ( strClosedCaptionCode )
 	{
 		CDASHPlayerUI.SetClosedCaptionLanguageInUI( strClosedCaptionCode );
-		this.m_player.UpdateClosedCaption( strClosedCaptionCode );
+		ccRole = endsWith( strClosedCaptionCode, CDASHPlayerUI.s_ClosedCaptionsSelectExt ) ? CVTTCaptionLoader.s_Caption : CVTTCaptionLoader.s_Subtitle;
+		this.m_player.UpdateClosedCaption( strClosedCaptionCode.replace( CDASHPlayerUI.s_ClosedCaptionsSelectExt, '' ), ccRole );
 	}
 }
 
