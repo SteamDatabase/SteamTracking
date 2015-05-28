@@ -23,5 +23,15 @@
             "crc128"  "855c31f864c84e072d3b0ace99ad1f77"
             "bootloadertimestamp"   "551def90"
         }
+        "2"
+        {
+            // same as above with trackpad change reverted
+            "firmwarebinary"        "/firmware/vcf_wired_controller_d0g_5567949d.bin"
+            "firmwaretimestamp"     "5567949d"
+            "minclientpackage"      "1432685245"
+            "crc128"        "59fd892c78b7bb4893fb506ca8fb98ef"
+            "bootloadertimestamp"   "551def90"
+        }
+
     }
 }
