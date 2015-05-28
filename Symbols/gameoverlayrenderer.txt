@@ -68,6 +68,8 @@
  B g_bIgnoreChildProcesses
  B g_bOverlayEnabled
  B g_bVRModeActive
+ B g_iNotificationHorizontalInset
+ B g_iNotificationVerticalInset
  B g_lifetime
  B g_loggingMutexCreated
  B g_machClient
@@ -667,7 +669,10 @@
  b BLogAlignmentIssue()::s_bLogged
  b BOverlayNeedsPresent::dwLastTrueTickCount
  b CBaseOverlayRenderer::RenderFrame()::bTenfoot
- b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastUpdateTime
+ b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastInsetUpdateTime
+ b CBaseOverlayRenderer::UpdateNotificationToastPosition()::dwLastPositionUpdateTime
+ b CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastHorizontalInset
+ b CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastVerticalInset
  b CFStringGetCStringPtr_fn
  b Demangled
  b GetGLProcAddress(char*)::m_pLibGL

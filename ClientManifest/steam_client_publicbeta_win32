@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1432242480"
+	"version"		"1432771656"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.0f55f659f9339a1ed0c85f0c591607e4b8dfbc5e"
@@ -83,10 +83,10 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.2b84b6553c9f400830a5547897e1c3662acad101"
-		"checksum"		"2b84b6553c9f400830a5547897e1c3662acad101"
-		"size"		"1573278"
-		"zipvz"		"public_all.zip.vz.be4dc30207316bc268af543bca349223e67a999f_768872"
+		"file"		"public_all.zip.c3b81c104fe9abaffff3c1d4a47d8f2dd2181db5"
+		"checksum"		"c3b81c104fe9abaffff3c1d4a47d8f2dd2181db5"
+		"size"		"1573290"
+		"zipvz"		"public_all.zip.vz.d21f89afd2f76679810d7aed41c05baca5da7bec_767775"
 	}
 	"gamesforwindows_win32"
 	{
@@ -118,21 +118,21 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.00372440f6b5ffaa61bdbbf4eaf7bfc6562bb729"
-		"checksum"		"00372440f6b5ffaa61bdbbf4eaf7bfc6562bb729"
-		"size"		"29272661"
-		"zipvz"		"bins_win32.zip.vz.232e22cdc50a7bc5ba0cdadca80072e37a802e5e_15859656"
+		"file"		"bins_win32.zip.dc4d3860f6188a9d75ee269ebeef135f5d587440"
+		"checksum"		"dc4d3860f6188a9d75ee269ebeef135f5d587440"
+		"size"		"29272052"
+		"zipvz"		"bins_win32.zip.vz.fa0db5b19188b3f2805d1e53ef30e924f7dabef9_15867484"
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.2f9bc6e2bb6469a265e68dcb66e99aa371ca5994"
-		"checksum"		"2f9bc6e2bb6469a265e68dcb66e99aa371ca5994"
-		"size"		"1247265"
-		"zipvz"		"steam_win32.zip.vz.6a99a9e49379d6cd0e6e9b38a8a85149fb4f7b44_1008108"
+		"file"		"steam_win32.zip.cb7a2af4fa7139290874efb46904535916e55e14"
+		"checksum"		"cb7a2af4fa7139290874efb46904535916e55e14"
+		"size"		"1247261"
+		"zipvz"		"steam_win32.zip.vz.684268abe3110ac9c8c3627055e097003b8be438_1008017"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"43a4097d9dd137f6a30ebd401b9e2b309aa2a6d08f011cfb88932fe3d91b019fe69702a316253a2396506dbcbaf6d1ac949786f8daf3765b21222694777c47082e484a6cbf37f94c1679a237364ced5576daaa68271763851077e83ab58b841a165c24b4653db9327910a3aee7fb4f95d80be16eb73c18fdc4dcf5748ef685a6"
+	"win32"		"57213807858799172c72b8bb3405297a3aa2c25ed8c5c79d5d3bb575fb49e5da90d713e6e71acd2034c5ab8a1aa042b18dfa536463e57848090148a8906cc0e4414cfaac2c7b31d985bbe8ca0f26245ffedf34ab7eab10960da2f50676ed3a6bf5ea91bdfab42f6d1f763fca92fba6ff8900350c965742b22ac86a9ce7726c28"
 }

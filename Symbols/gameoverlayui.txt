@@ -11746,6 +11746,7 @@
  T vgui::HTML::CHTMLFindBar::ChainToMap()
  T vgui::HTML::CHTMLFindBar::GetAnimMap()
  T vgui::HTML::CHTMLFindBar::GetClassSize() const
+ T vgui::HTML::CHTMLFindBar::GetCurrentKeyFocus()
  T vgui::HTML::CHTMLFindBar::GetKBMap()
  T vgui::HTML::CHTMLFindBar::GetMessageMap()
  T vgui::HTML::CHTMLFindBar::GetPanelClassName()
@@ -11763,6 +11764,7 @@
  T vgui::HTML::CHTMLIMEBar::ChainToMap()
  T vgui::HTML::CHTMLIMEBar::GetAnimMap()
  T vgui::HTML::CHTMLIMEBar::GetClassSize() const
+ T vgui::HTML::CHTMLIMEBar::GetCurrentKeyFocus()
  T vgui::HTML::CHTMLIMEBar::GetKBMap()
  T vgui::HTML::CHTMLIMEBar::GetMessageMap()
  T vgui::HTML::CHTMLIMEBar::GetPanelClassName()
@@ -11800,7 +11802,6 @@
  T vgui::HTML::KB_ChainToMap()
  T vgui::HTML::LoadedPageHeight() const
  T vgui::HTML::LoadedPageWidth() const
- T vgui::HTML::NewWindowsOnly(bool)
  T vgui::HTML::OnAbortLastRequest()
  T vgui::HTML::OnBrowserExitFullScreen()
  T vgui::HTML::OnBrowserSetCursor(EMouseCursor*)
@@ -12444,6 +12445,7 @@
  T vgui::Menu::SetItemEnabled(int, bool)
  T vgui::Menu::SetItemVisible(char const*, bool)
  T vgui::Menu::SetItemVisible(int, bool)
+ T vgui::Menu::SetMenuItemAutoToggleCheck(int, bool)
  T vgui::Menu::SetMenuItemChecked(int, bool)
  T vgui::Menu::SetMenuItemHeight(int)
  T vgui::Menu::SetNumberOfVisibleItems(int)
@@ -15240,7 +15242,6 @@
  t FileSelect(dirent const*)
  t FindConverter(char const*)
  t FreeTree(ExprNode*&)
- t GetKeyModifiers()
  t InitStreamLocale(std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >&, ELanguage, long long, ECurrencyCode)
  t KVJSONParserCallback(void*, int, JSON_value_struct const*)
  t KVJSONParserCreateNewSubNode(KVJSONParserContext_t*, bool)

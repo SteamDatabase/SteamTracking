@@ -8483,6 +8483,7 @@
  D typeinfo for CAppSectionHeader
  D typeinfo for CAppSubscriptionsDownloadPanel
  D typeinfo for CArtistGridItem
+ D typeinfo for CAsyncFrameStatsWriter::CAsyncFrameStatsWriterThread
  D typeinfo for CAudioFormat
  D typeinfo for CAuthenticationRequestMsg
  D typeinfo for CAuthenticationResponseMsg
@@ -11738,6 +11739,7 @@
  D vtable for CAppSectionHeader
  D vtable for CAppSubscriptionsDownloadPanel
  D vtable for CArtistGridItem
+ D vtable for CAsyncFrameStatsWriter::CAsyncFrameStatsWriterThread
  D vtable for CAudioFormat
  D vtable for CAuthenticationRequestMsg
  D vtable for CAuthenticationResponseMsg
@@ -14388,6 +14390,7 @@
  R typeinfo name for CAppSectionHeader
  R typeinfo name for CAppSubscriptionsDownloadPanel
  R typeinfo name for CArtistGridItem
+ R typeinfo name for CAsyncFrameStatsWriter::CAsyncFrameStatsWriterThread
  R typeinfo name for CAudioFormat
  R typeinfo name for CAuthenticationRequestMsg
  R typeinfo name for CAuthenticationResponseMsg
@@ -18257,6 +18260,12 @@
  T CArtistGridItem::UpdateData()
  T CArtistGridItem::UpdateUIFromData()
  T CArtistGridItem::~CArtistGridItem()
+ T CAsyncFrameStatsWriter::CAsyncFrameStatsWriter()
+ T CAsyncFrameStatsWriter::CAsyncFrameStatsWriterThread::Run()
+ T CAsyncFrameStatsWriter::CAsyncFrameStatsWriterThread::~CAsyncFrameStatsWriterThread()
+ T CAsyncFrameStatsWriter::DumpFrameEvents(CUtlLinkedList<CFastFrameStats, int>*, char const*, char const*, unsigned int)
+ T CAsyncFrameStatsWriter::RunThread()
+ T CAsyncFrameStatsWriter::~CAsyncFrameStatsWriter()
  T CAudioFormat::ByteSize() const
  T CAudioFormat::CAudioFormat()
  T CAudioFormat::Clear()
@@ -34637,7 +34646,6 @@
  T CStreamServer::CreateFrame(EStreamingDataType, unsigned short, unsigned int)
  T CStreamServer::CreateVideoFrame(unsigned short, unsigned int, unsigned short)
  T CStreamServer::Disconnect()
- T CStreamServer::DumpFrameEvents(CUtlLinkedList<CFastFrameStats, int> const&, char const*, char const*)
  T CStreamServer::DumpFrameEvents(EStreamingDataType, char const*, char const*, bool)
  T CStreamServer::DumpRecentEvents(EStreamingDataType, char const*, char const*)
  T CStreamServer::FinishInputMark(unsigned short, CFastFrameStats*)
@@ -37916,6 +37924,11 @@
  T CUtlPtr<CUtlMap<CUtlSymbol, int, int, CDefLess<CUtlSymbol> > >::Release()
  T CUtlPtr<CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> > >::Release()
  T CUtlPtr<panorama::CTextInputDaisyWheel::CDaisyConfig>::Release()
+ T CUtlQueue<CAsyncFrameStatsWriter::FrameStatsEntry_t>::AddToTail(CAsyncFrameStatsWriter::FrameStatsEntry_t const&)
+ T CUtlQueue<CAsyncFrameStatsWriter::FrameStatsEntry_t>::BRemoveFromHead()
+ T CUtlQueue<CAsyncFrameStatsWriter::FrameStatsEntry_t>::BRemoveFromHead(CAsyncFrameStatsWriter::FrameStatsEntry_t*)
+ T CUtlQueue<CAsyncFrameStatsWriter::FrameStatsEntry_t>::RemoveAll()
+ T CUtlQueue<CAsyncFrameStatsWriter::FrameStatsEntry_t>::~CUtlQueue()
  T CUtlQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlQueue<CLogEvent*>::BRemoveFromHead(CLogEvent**)
  T CUtlQueue<CLogEvent*>::~CUtlQueue()
@@ -45900,6 +45913,7 @@
  T panorama::CGrid::OnTabForward(int)
  T panorama::CGrid::Paint()
  T panorama::CGrid::RegisterForCursorChanges()
+ T panorama::CGrid::ScrollPanelToLeftEdge()
  T panorama::CGrid::SetHorizontalAndVerticalCount(int, int)
  T panorama::CGrid::SetHorizontalCount(int)
  T panorama::CGrid::SetHorizontalFocusLimit(int)
@@ -51016,6 +51030,7 @@
  T vgui::HTML::CHTMLFindBar::ChainToMap()
  T vgui::HTML::CHTMLFindBar::GetAnimMap()
  T vgui::HTML::CHTMLFindBar::GetClassSize() const
+ T vgui::HTML::CHTMLFindBar::GetCurrentKeyFocus()
  T vgui::HTML::CHTMLFindBar::GetKBMap()
  T vgui::HTML::CHTMLFindBar::GetMessageMap()
  T vgui::HTML::CHTMLFindBar::GetPanelClassName()
@@ -51033,6 +51048,7 @@
  T vgui::HTML::CHTMLIMEBar::ChainToMap()
  T vgui::HTML::CHTMLIMEBar::GetAnimMap()
  T vgui::HTML::CHTMLIMEBar::GetClassSize() const
+ T vgui::HTML::CHTMLIMEBar::GetCurrentKeyFocus()
  T vgui::HTML::CHTMLIMEBar::GetKBMap()
  T vgui::HTML::CHTMLIMEBar::GetMessageMap()
  T vgui::HTML::CHTMLIMEBar::GetPanelClassName()
@@ -51072,7 +51088,6 @@
  T vgui::HTML::KB_ChainToMap()
  T vgui::HTML::LoadedPageHeight() const
  T vgui::HTML::LoadedPageWidth() const
- T vgui::HTML::NewWindowsOnly(bool)
  T vgui::HTML::OnAbortLastRequest()
  T vgui::HTML::OnBrowserExitFullScreen()
  T vgui::HTML::OnBrowserSetCursor(EMouseCursor*)
@@ -51122,6 +51137,7 @@
  T vgui::HTML::ReleaseSharedTexture(bool)
  T vgui::HTML::RunJavascript(char const*)
  T vgui::HTML::SendPendingHTMLMessages()
+ T vgui::HTML::SetAllowKBBackAndForward(bool)
  T vgui::HTML::SetContextMenuEnabled(bool)
  T vgui::HTML::SetRefreshRateOverride(int)
  T vgui::HTML::SetViewSourceEnabled(bool)
@@ -51745,6 +51761,7 @@
  T vgui::Menu::SetItemEnabled(int, bool)
  T vgui::Menu::SetItemVisible(char const*, bool)
  T vgui::Menu::SetItemVisible(int, bool)
+ T vgui::Menu::SetMenuItemAutoToggleCheck(int, bool)
  T vgui::Menu::SetMenuItemChecked(char const*, bool)
  T vgui::Menu::SetMenuItemChecked(int, bool)
  T vgui::Menu::SetMenuItemHeight(int)
@@ -54773,6 +54790,7 @@
  b (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
  b (anonymous namespace)::ScrollBarButton::KB_ChainToMap()::chained
  b (anonymous namespace)::_CLEANUP
+ b AsyncDumpFrameEvents(CUtlLinkedList<CFastFrameStats, int>*, char const*, char const*, unsigned int)::s_AsyncFrameStatsWriter
  b BLogAlignmentIssue()::s_bLogged
  b CAccountPage::OnResetData()::fAsserted
  b CAppGridItem::SetControllerStyles(CSteamApp*)::k_symFullController
@@ -55140,6 +55158,7 @@
  b guard variable for (anonymous namespace)::GripPanel::GetMessageMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
+ b guard variable for AsyncDumpFrameEvents(CUtlLinkedList<CFastFrameStats, int>*, char const*, char const*, unsigned int)::s_AsyncFrameStatsWriter
  b guard variable for CAppGridItem::SetControllerStyles(CSteamApp*)::k_symFullController
  b guard variable for CAppGridItem::SetControllerStyles(CSteamApp*)::k_symPartialController
  b guard variable for CAppGridItem::UpdateData()::k_symMacAvailable
@@ -57253,6 +57272,7 @@
  t DecimalToUint64(char const*, unsigned long long, unsigned long long*)
  t DefaultSortFunc(KeyValues*, KeyValues*)
  t DefaultSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
+ t DumpFrameEvents(CUtlLinkedList<CFastFrameStats, int> const&, char const*, char const*, unsigned int)
  t DumpGuint32Address(unsigned int, bool, char*)
  t FetchFriendNickname(CSteamID const&, CUtlString&)
  t FileSelect(dirent const*)
@@ -57261,7 +57281,6 @@
  t FormatSelPos(float, CFmtStrN<32, true, true>&)
  t FreeTree(ExprNode*&)
  t GetDebugPropertyOffsetList(CUtlVector<panorama::DebugPropertyOutput_t*, CUtlMemory<panorama::DebugPropertyOutput_t*> >*, char const*, CUtlVector<panorama::CUILength, CUtlMemory<panorama::CUILength> > const&, float)
- t GetKeyModifiers()
  t GetLogBaseDirectory()
  t GetPPARegKey()
  t GetSSARegKey()
