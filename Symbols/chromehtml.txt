@@ -2111,6 +2111,8 @@
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
  T CUtlString::AssertStringTooLong()
+ T CUtlString::Format(char const*, ...)
+ T CUtlString::FormatV(char const*, char*)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
@@ -2495,6 +2497,7 @@
  d s_pConversionArrays_StringCharConversion
  fflush
  fprintf
+ free
  ftruncate
  g_ClockSpeed
  g_VProfManager
@@ -2503,6 +2506,7 @@
  g_pMemAllocSteam
  getenv
  getpid
+ getuid
  launch_data_alloc
  launch_data_dict_insert
  launch_data_free
@@ -2697,6 +2701,7 @@
  t global constructors keyed to a
  typeinfo for SteamThreadTools::CThread
  usleep$UNIX2003
+ vasprintf
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info

@@ -493,7 +493,7 @@
 	"ManageSteamGuard_DeauthorizeSuccess_Description" "This computer is now the only one authorized to access your account."
 
 	"Steam_Html_ScrollHintXInput" "To scroll contents use your controller's right analog stick"
-	"Steam_Html_ScrollHintSteamPad" "To scroll contents use your controller's right touch pad"
+	"Steam_Html_ScrollHintSteamPad" "To scroll contents use your controller's left touch pad"
 
 	"Steam_RefreshLogin_InfoTicketExpired"	"Your Steam ticket has expired.\nPlease re-enter your password to continue."
 	"Steam_RefreshLogin_InvalidPassword"	"Your account credentials have expired.\nPlease re-enter your password to continue."
@@ -2271,7 +2271,7 @@
 
 	"OOBE_WelcomeTitle"				"Welcome to Steam"
 	"OOBE_WelcomeNavTutorialSteamPadTitle"	"NAVIGATION TIP"
-	"OOBE_WelcomeNavTutorialSteamPadBody"	"Tap the edges of the left trackpad or use the analog stick to navigate"
+	"OOBE_WelcomeNavTutorialSteamPadBody"	"Click the edges of the left trackpad or use the analog stick to navigate"
 	"OOBE_LanguageSelect"			"What language should we use?"
 	"OOBE_NetworkSettings_Title"		"Network Settings"
 	"OOBE_NetworkSettings_Description"	"View your basic network information and set up connections"
@@ -2950,11 +2950,11 @@
 	"Store_LoadingError"		"Steam was unable to load the requested store section. Please try again."
 	
 	"SteamUI_UpdateControllerFirmware_Cancel"	"NOT NOW"
-	"SteamUI_UpdateControllerFirmware_Continue"	"NEXT"
+	"SteamUI_UpdateControllerFirmware_Continue"	"UPDATE"
 	"SteamUI_UpdateControllerFirmware_Done"		"OK"
 	"SteamUI_UpdateControllerFirmware_Title"	"Update Steam Controller Firmware"
-	"SteamUI_UpdateControllerFirmware_Intro"	"There is new firmware available for your Steam Controller.  We'll run you through the update steps now."
-	"SteamUI_UpdateControllerFirmware_Install"	"New firmware is being installed on the controller.\nPlease do not disconnect the controller."
+	"SteamUI_UpdateControllerFirmware_Intro"	"There is new firmware available for your Steam Controller. The update will take up to a minute."
+	"SteamUI_UpdateControllerFirmware_Install"	"New firmware is being installed on the controller.\nPlease do not disconnect the controller.\nThe update can take up to a minute."
 	"SteamUI_UpdateControllerFirmware_Finished"	"Your Steam Controller firmware has been updated."
 	"SteamUI_UpdateControllerFirmware_Fallback"	"Initiating firmware update."
 	"SteamUI_UpdateControllerFirmware_Fallback_Finished" "Your firmware has now been updated, unplug the USB cable to continue."

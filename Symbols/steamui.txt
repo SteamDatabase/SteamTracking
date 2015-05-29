@@ -5869,6 +5869,11 @@
  D TurnOffWirelessController::pchEvent
  D TypeToJumpAlbumUpdate::pchEvent
  D TypeToJumpUpdate::pchEvent
+ D UINavAndTabCatchingTextEntry::ChainToAnimationMap()::chained
+ D UINavAndTabCatchingTextEntry::ChainToMap()::chained
+ D UINavAndTabCatchingTextEntry::GetKBMap()::s_pMap
+ D UINavAndTabCatchingTextEntry::GetMessageMap()::s_pMap
+ D UINavAndTabCatchingTextEntry::KB_ChainToMap()::chained
  D UnderscanDeselected::pchEvent
  D UnderscanSelected::pchEvent
  D UpdateAchievementsPanelData::pchEvent
@@ -6199,6 +6204,7 @@
  D VTT for SuperNavMenu
  D VTT for TabCatchingTextEntry
  D VTT for TriStateCheckButtonList
+ D VTT for UINavAndTabCatchingTextEntry
  D VTT for UpdateControllerFirmwareDialog
  D VTT for ZooDialog
  D VTT for ZooDialog::ZooPropertyPage
@@ -6371,6 +6377,7 @@
  D construction vtable for CWizardPausingSubPanel-in-CSubRecoverAuthenticatorGetPassword
  D construction vtable for CWizardPausingSubPanel-in-CSubRecoverAuthenticatorGetRecoveryCode
  D construction vtable for CWizardPausingSubPanel-in-CSubRecoverAuthenticatorGetSmsCode
+ D construction vtable for TabCatchingTextEntry-in-UINavAndTabCatchingTextEntry
  D construction vtable for vgui::AppRootPanel-in-CPlatformMainPanel
  D construction vtable for vgui::Button-in-CGameFilterMenuButton
  D construction vtable for vgui::Button-in-CInboxButton
@@ -7137,6 +7144,7 @@
  D construction vtable for vgui::Panel-in-SuperNavMenu
  D construction vtable for vgui::Panel-in-TabCatchingTextEntry
  D construction vtable for vgui::Panel-in-TriStateCheckButtonList
+ D construction vtable for vgui::Panel-in-UINavAndTabCatchingTextEntry
  D construction vtable for vgui::Panel-in-UpdateControllerFirmwareDialog
  D construction vtable for vgui::Panel-in-ZooDialog
  D construction vtable for vgui::Panel-in-ZooDialog::ZooPropertyPage
@@ -7272,6 +7280,7 @@
  D construction vtable for vgui::TextEntry-in-CScreenshotGameSelector
  D construction vtable for vgui::TextEntry-in-CUpperCaseTextEntry
  D construction vtable for vgui::TextEntry-in-TabCatchingTextEntry
+ D construction vtable for vgui::TextEntry-in-UINavAndTabCatchingTextEntry
  D construction vtable for vgui::TextEntry-in-vgui::ComboBox
  D construction vtable for vgui::TextEntry-in-vgui::FileCompletionEdit
  D construction vtable for vgui::TextEntry-in-vgui::TreeNodeText
@@ -7942,6 +7951,8 @@
  D guard variable for TabCatchingTextEntry::GetMessageMap()::s_pMap
  D guard variable for TriStateCheckButtonList::GetKBMap()::s_pMap
  D guard variable for TriStateCheckButtonList::GetMessageMap()::s_pMap
+ D guard variable for UINavAndTabCatchingTextEntry::GetKBMap()::s_pMap
+ D guard variable for UINavAndTabCatchingTextEntry::GetMessageMap()::s_pMap
  D guard variable for UpdateControllerFirmwareDialog::GetKBMap()::s_pMap
  D guard variable for UpdateControllerFirmwareDialog::GetMessageMap()::s_pMap
  D guard variable for VMatrix::GetIdentityMatrix()::identityMatrix
@@ -10700,6 +10711,7 @@
  D typeinfo for SuperNavMenu
  D typeinfo for TabCatchingTextEntry
  D typeinfo for TriStateCheckButtonList
+ D typeinfo for UINavAndTabCatchingTextEntry
  D typeinfo for UpdateControllerFirmwareDialog
  D typeinfo for WebFavorite_t
  D typeinfo for ZooDialog
@@ -10910,10 +10922,10 @@
  D typeinfo for panorama::CUIEvent3<unsigned long long, unsigned int, int>
  D typeinfo for panorama::CUIEvent4<bool, int, int, int>
  D typeinfo for panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>
- D typeinfo for panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>
  D typeinfo for panorama::CUIEvent4<unsigned int, char const*, char const*, bool>
  D typeinfo for panorama::CUIEvent4<unsigned int, char const*, char const*, char const*>
  D typeinfo for panorama::CUIEvent4<unsigned int, char const*, char const*, int>
+ D typeinfo for panorama::CUIEvent5<char const*, char const*, char const*, unsigned int, bool>
  D typeinfo for panorama::CUIEventBase
  D typeinfo for panorama::CUIPanelEvent0
  D typeinfo for panorama::CUIPanelEvent1<CTenfootFooterPanel*>
@@ -13858,6 +13870,7 @@
  D vtable for SuperNavMenu
  D vtable for TabCatchingTextEntry
  D vtable for TriStateCheckButtonList
+ D vtable for UINavAndTabCatchingTextEntry
  D vtable for UpdateControllerFirmwareDialog
  D vtable for WebFavorite_t
  D vtable for ZooDialog
@@ -14060,10 +14073,10 @@
  D vtable for panorama::CUIEvent3<unsigned long long, unsigned int, int>
  D vtable for panorama::CUIEvent4<bool, int, int, int>
  D vtable for panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>
- D vtable for panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>
  D vtable for panorama::CUIEvent4<unsigned int, char const*, char const*, bool>
  D vtable for panorama::CUIEvent4<unsigned int, char const*, char const*, char const*>
  D vtable for panorama::CUIEvent4<unsigned int, char const*, char const*, int>
+ D vtable for panorama::CUIEvent5<char const*, char const*, char const*, unsigned int, bool>
  D vtable for panorama::CUIEventBase
  D vtable for panorama::CUIPanelEvent0
  D vtable for panorama::CUIPanelEvent1<CTenfootFooterPanel*>
@@ -16932,6 +16945,7 @@
  R typeinfo name for SuperNavMenu
  R typeinfo name for TabCatchingTextEntry
  R typeinfo name for TriStateCheckButtonList
+ R typeinfo name for UINavAndTabCatchingTextEntry
  R typeinfo name for UpdateControllerFirmwareDialog
  R typeinfo name for WebFavorite_t
  R typeinfo name for ZooDialog
@@ -17145,10 +17159,10 @@
  R typeinfo name for panorama::CUIEvent3<unsigned long long, unsigned int, int>
  R typeinfo name for panorama::CUIEvent4<bool, int, int, int>
  R typeinfo name for panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>
- R typeinfo name for panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>
  R typeinfo name for panorama::CUIEvent4<unsigned int, char const*, char const*, bool>
  R typeinfo name for panorama::CUIEvent4<unsigned int, char const*, char const*, char const*>
  R typeinfo name for panorama::CUIEvent4<unsigned int, char const*, char const*, int>
+ R typeinfo name for panorama::CUIEvent5<char const*, char const*, char const*, unsigned int, bool>
  R typeinfo name for panorama::CUIEventBase
  R typeinfo name for panorama::CUIPanelEvent0
  R typeinfo name for panorama::CUIPanelEvent1<CTenfootFooterPanel*>
@@ -22428,12 +22442,13 @@
  T CControllerConfigSave::OnTextEntrySubmit(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
  T CControllerConfigSave::OnTextInputFinished(panorama::CPanelPtr<panorama::IUIPanel> const&, bool, char const*)
  T CControllerConfigSave::~CControllerConfigSave()
+ T CControllerFirmwareUpdateManager::BeginAutomatedUpdate()
  T CControllerFirmwareUpdateManager::BeginInteractiveUpdate()
  T CControllerFirmwareUpdateManager::CCallbackOnControllerConnected::Run(void*)
  T CControllerFirmwareUpdateManager::CCallbackOnControllerConnected::Run(void*, bool, unsigned long long)
  T CControllerFirmwareUpdateManager::CCallbackOnControllerDisconnected::Run(void*)
  T CControllerFirmwareUpdateManager::CCallbackOnControllerDisconnected::Run(void*, bool, unsigned long long)
- T CControllerFirmwareUpdateManager::CControllerFirmwareUpdateManager(CUtlString, CUtlString, unsigned int)
+ T CControllerFirmwareUpdateManager::CControllerFirmwareUpdateManager(CUtlString, CUtlString, unsigned int, bool)
  T CControllerFirmwareUpdateManager::CVolumeDetectionThread::Run()
  T CControllerFirmwareUpdateManager::CVolumeDetectionThread::~CVolumeDetectionThread()
  T CControllerFirmwareUpdateManager::CheckVolumeFound()
@@ -36342,7 +36357,7 @@
  T CTenfootControllerBase::OnActionGuideButton()
  T CTenfootControllerBase::OnBrowseToSteamURL(char const*)
  T CTenfootControllerBase::OnConfirmURLChoice(char const*, panorama::CPanelPtr<panorama::CPanel2D>)
- T CTenfootControllerBase::OnControllerFirmwareOutOfDate(char const*, char const*, char const*, unsigned int)
+ T CTenfootControllerBase::OnControllerFirmwareOutOfDate(char const*, char const*, char const*, unsigned int, bool)
  T CTenfootControllerBase::OnDongleFirmwareOutOfDate()
  T CTenfootControllerBase::OnMessageBoxClose(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CTenfootControllerBase::OnNavigateTenfootBack()
@@ -36731,8 +36746,7 @@
  T CTenfootPathname::Set(char const*)
  T CTenfootPathname::Validate(CValidator&, char const*)
  T CTenfootPathname::~CTenfootPathname()
- T CTenfootSSADialog::CTenfootSSADialog(unsigned int, char const*, panorama::CPanel2D*, char const*)
- T CTenfootSSADialog::CTenfootSSADialog(unsigned int, panorama::IUIWindow*, char const*)
+ T CTenfootSSADialog::CTenfootSSADialog(unsigned int, char const*, panorama::IUIWindow*, char const*)
  T CTenfootSSADialog::Close()
  T CTenfootSSADialog::ComputeURL(char*, int, char const*, char const*)
  T CTenfootSSADialog::DoNavigation(panorama::CHTML*, CTenfootSSADialog::ESubPage)
@@ -40254,7 +40268,7 @@
  T CValveControllerManager::SendBindingSaveResult(unsigned int, panorama::CPanel2D*, bool, bool, char const*, char const*)
  T CValveControllerManager::SetOverrideMode(EWindowType, unsigned int, char const*)
  T CValveControllerManager::SetSavedBindingSelection(unsigned int, char const*)
- T CValveControllerManager::ShowUpdateFirmwareDialogNow(char const*, char const*, unsigned int)
+ T CValveControllerManager::ShowUpdateFirmwareDialogNow(char const*, char const*, unsigned int, bool)
  T CValveControllerManager::UpdateAllControllerConfigs()
  T CValveControllerManager::UpdateControllerConfig(unsigned int)
  T CValveControllerManager::Validate(CValidator&, char const*)
@@ -41052,7 +41066,7 @@
  T ControllerDisableOverlay::MakeEvent(panorama::IUIPanelClient const*, CTenfootOverlayController*)
  T ControllerFirmwareOutOfDate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ControllerFirmwareOutOfDate::GetEventType()
- T ControllerFirmwareOutOfDate::MakeEvent(panorama::IUIPanelClient const*, char const*, char const*, char const*, unsigned int)
+ T ControllerFirmwareOutOfDate::MakeEvent(panorama::IUIPanelClient const*, char const*, char const*, char const*, unsigned int, bool)
  T ControllerHideBackground::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ControllerHideBackground::GetEventType()
  T ControllerHideBackground::MakeEvent(panorama::IUIPanelClient const*, CTenfootOverlayController*)
@@ -44110,6 +44124,18 @@
  T TypeToJumpUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T TypeToJumpUpdate::GetEventType()
  T TypeToJumpUpdate::MakeEvent(panorama::IUIPanelClient const*)
+ T UINavAndTabCatchingTextEntry::ChainToAnimationMap()
+ T UINavAndTabCatchingTextEntry::ChainToMap()
+ T UINavAndTabCatchingTextEntry::GetAnimMap()
+ T UINavAndTabCatchingTextEntry::GetClassSize() const
+ T UINavAndTabCatchingTextEntry::GetKBMap()
+ T UINavAndTabCatchingTextEntry::GetMessageMap()
+ T UINavAndTabCatchingTextEntry::GetPanelClassName()
+ T UINavAndTabCatchingTextEntry::GetPanelTopClassName() const
+ T UINavAndTabCatchingTextEntry::KB_ChainToMap()
+ T UINavAndTabCatchingTextEntry::OnKeyCodeTyped(vgui::KeyCode)
+ T UINavAndTabCatchingTextEntry::UINavAndTabCatchingTextEntry(vgui::Panel*, char const*)
+ T UINavAndTabCatchingTextEntry::~UINavAndTabCatchingTextEntry()
  T URLEncode(CUtlString*, char const*)
  T URLEncode(char const*)
  T URLLabel_Factory()
@@ -48003,12 +48029,6 @@
  T panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>::Validate(CValidator&, char const*)
  T panorama::CUIEvent4<char const*, char const*, EStoreItemType, unsigned int>::~CUIEvent4()
- T panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>::CUIEvent4(panorama::CPanoramaSymbol, panorama::IUIPanel const*, char const*, char const*, char const*, unsigned int)
- T panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>::Copy() const
- T panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>::Dispatch(CUtlAbstractDelegate)
- T panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
- T panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>::Validate(CValidator&, char const*)
- T panorama::CUIEvent4<char const*, char const*, char const*, unsigned int>::~CUIEvent4()
  T panorama::CUIEvent4<unsigned int, char const*, char const*, bool>::CUIEvent4(panorama::CPanoramaSymbol, panorama::IUIPanel const*, unsigned int, char const*, char const*, bool)
  T panorama::CUIEvent4<unsigned int, char const*, char const*, bool>::Copy() const
  T panorama::CUIEvent4<unsigned int, char const*, char const*, bool>::Dispatch(CUtlAbstractDelegate)
@@ -48027,6 +48047,12 @@
  T panorama::CUIEvent4<unsigned int, char const*, char const*, int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent4<unsigned int, char const*, char const*, int>::Validate(CValidator&, char const*)
  T panorama::CUIEvent4<unsigned int, char const*, char const*, int>::~CUIEvent4()
+ T panorama::CUIEvent5<char const*, char const*, char const*, unsigned int, bool>::CUIEvent5(panorama::CPanoramaSymbol, panorama::IUIPanel const*, char const*, char const*, char const*, unsigned int, bool)
+ T panorama::CUIEvent5<char const*, char const*, char const*, unsigned int, bool>::Copy() const
+ T panorama::CUIEvent5<char const*, char const*, char const*, unsigned int, bool>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent5<char const*, char const*, char const*, unsigned int, bool>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent5<char const*, char const*, char const*, unsigned int, bool>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent5<char const*, char const*, char const*, unsigned int, bool>::~CUIEvent5()
  T panorama::CUIEventBase::GetEventType() const
  T panorama::CUIEventBase::GetTargetPanel() const
  T panorama::CUIEventBase::SetTargetPanel(panorama::IUIPanel const*)
@@ -48701,7 +48727,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControlButtonMoveUp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerBindingLabelsReady, char const*, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerBindingSaveResult, bool, char const*, char const*>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerFirmwareOutOfDate, char const*, char const*, char const*, unsigned int>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerFirmwareOutOfDate, char const*, char const*, char const*, unsigned int, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerPropertiesClosing>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerPropertiesDoneGordon>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ControllerVolumeFound, char const*>(panorama::IUIPanel*, char const*, char const**)
@@ -53637,9 +53663,9 @@
  T void panorama::DispatchEventAsync<CloseCDKeyMessageBox>(float, CloseCDKeyMessageBox, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<CloseMusicControl>(CloseMusicControl, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<CommunityFeedStripAddItemsFromFeeds>(float, CommunityFeedStripAddItemsFromFeeds, panorama::IUIPanelClient const*)
- T void panorama::DispatchEventAsync<ControllerFirmwareOutOfDate, char const*, char const*, CUtlString, unsigned int>(float, ControllerFirmwareOutOfDate, panorama::IUIPanelClient const*, char const*, char const*, CUtlString, unsigned int)
- T void panorama::DispatchEventAsync<ControllerFirmwareOutOfDate, char const*, char const*, char const*, int>(float, ControllerFirmwareOutOfDate, panorama::IUIPanelClient const*, char const*, char const*, char const*, int)
- T void panorama::DispatchEventAsync<ControllerFirmwareOutOfDate, char const*, char const*, char const*, unsigned int>(float, ControllerFirmwareOutOfDate, panorama::IUIPanelClient const*, char const*, char const*, char const*, unsigned int)
+ T void panorama::DispatchEventAsync<ControllerFirmwareOutOfDate, char const*, char const*, CUtlString, unsigned int, bool>(float, ControllerFirmwareOutOfDate, panorama::IUIPanelClient const*, char const*, char const*, CUtlString, unsigned int, bool)
+ T void panorama::DispatchEventAsync<ControllerFirmwareOutOfDate, char const*, char const*, char const*, int, bool>(float, ControllerFirmwareOutOfDate, panorama::IUIPanelClient const*, char const*, char const*, char const*, int, bool)
+ T void panorama::DispatchEventAsync<ControllerFirmwareOutOfDate, char const*, char const*, char const*, unsigned int, bool>(float, ControllerFirmwareOutOfDate, panorama::IUIPanelClient const*, char const*, char const*, char const*, unsigned int, bool)
  T void panorama::DispatchEventAsync<ControllerVolumeFound, char const*>(float, ControllerVolumeFound, panorama::IUIPanelClient const*, char const*)
  T void panorama::DispatchEventAsync<DaisyWheelShowThisLanguage, ELanguage>(float, DaisyWheelShowThisLanguage, panorama::IUIPanelClient const*, ELanguage)
  T void panorama::DispatchEventAsync<DelayedGridPanelUnready>(float, DelayedGridPanelUnready, panorama::IUIPanelClient const*)
