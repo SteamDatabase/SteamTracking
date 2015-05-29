@@ -645,3 +645,17 @@ function SetImageSrc( id, url )
 	$(id).src=url;
 }
 
+function AddCountryOffsitePurchaseLink( country, name, url )
+{
+	var $optionsTable = $J( '#offsite_purchase_options_table' );
+	country = country.toLowerCase();
+
+	var newRow = '<tr id="offsite_purchase_options_' + country + '">';
+	newRow += '<td>' + country.toUpperCase() + '</td>';
+	newRow += '<td><input type="text" style="width:400px;" name="app[content][offsite_purchase][countries][' + country + '][name]" value="' + name + '"></td>';
+	newRow += '<td><input type="text" style="width:400px;" name="app[content][offsite_purchase][countries][' + country + '][url]" value="' + url + '"></td>';
+	newRow += '<td><span tabindex="0" style="cursor: pointer;" class="icon icon_delete" onkeypress="if (event.keyCode==13) $J( this ).click();" onclick="var row = $J( \'#offsite_purchase_options_' + country + '\' ); row.find(\'input\').val(\'\'); row.hide(); row.attr(\'id\', \'\');"></span></td>';
+	newRow += '</tr>';
+	$J( '#offsite_purchase_options_addnew' ).before( newRow );
+}
+
