@@ -923,6 +923,14 @@ CartNoteItem.WarningNote:descendantfocus #CartNoteItemIcon
 
 
 //
+// Verify Shipping Address
+//
+.VerifyShippingAddressSubTitle
+{
+	padding-top: 20px;
+}
+
+//
 // Gift Recipient
 //
 CheckoutGiftRecipient
@@ -1480,6 +1488,11 @@ CheckoutShippingInfo .CheckoutBodyRightColumn
 }
 
 #State
+{
+	width: 248px;
+}
+
+#StateText
 {
 	width: 248px;
 }

@@ -71,6 +71,13 @@
 						<DropDown tabindex="8" selectionpos="0,1" id="State" oninputsubmit="NavigateToNextField();">
 							<Label id="--" text="#Checkout_BillingInfo_SelectState" />
 						</DropDown>
+						<TextEntry selectionpos="0,0" id="StateText" maxchars="3"
+								textinputid="CheckoutFormTextEntry"
+								textinputclass="HalfWidth DockRight AppearFromBottomCenter"
+								textinputautocaps="true"
+								textinputdoneactionstring="#UI_Next"
+								oninputsubmit="NavigateToNextField();"
+						/>
 					</Panel>
 					<Label class="BillingInfoHeader" text="#Checkout_BillingInfo_PostCode" />
 					<TextEntry tabindex="9" selectionpos="0,2" id="PostCode" maxchars="16"

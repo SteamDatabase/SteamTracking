@@ -1149,6 +1149,12 @@
 	"Checkout_ShippingInfo_Address1"				"Shipping address"
 	"Checkout_ShippingInfo_Address2"				"Shipping address, line 2"
 	"Checkout_ShippingInfo_ShippingRestrictions"	"Shipment of any physical items cannot be delivered to P.O. Boxes and can only be delivered to {s:country}."
+	"Checkout_VerifyShippingInfo_Title" "Shipping address suggestion"
+	"Checkout_ShippingInfo_ShippingAddressSuggestion" "We've found a suggestion for your shipping address"
+	"Checkout_ShippingInfo_OurSuggestion" "Our suggestion:"
+	"Checkout_ShippingInfo_YouEntered" "You entered:"
+	"Checkout_ShippingInfo_OurSuggestionButton" "Use our suggestion"
+	"Checkout_ShippingInfo_YouEnteredButton" "Use what you entered"
 
 	"Checkout_Review_Title"						"Review & Purchase"
 	"Checkout_Review_Purchase"					"Purchase"

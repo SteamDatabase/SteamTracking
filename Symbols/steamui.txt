@@ -197,6 +197,7 @@
  B CCheckoutReview::m_symbol
  B CCheckoutShippingInfo::m_symbol
  B CCheckoutVerifyEmail::m_symbol
+ B CCheckoutVerifyShippingInfo::m_symbol
  B CChooseBinding::m_symbol
  B CChoosePurchaseOrAuthorizationPanel::m_symbol
  B CChooseResetTypeWizardChild::m_symbol
@@ -1562,6 +1563,7 @@
  B StoreShowPackage::symbol
  B StoreShowSalePage::symbol
  B StoreShowSearch::symbol
+ B StoreVerifyShippingAddressResponse::symbol
  B StoreViewSSA::symbol
  B StreamingSourceChosen::symbol
  B SubmitBroadcastChat::symbol
@@ -1652,6 +1654,8 @@
  B VerifyEmailDone::symbol
  B VerifyEmailFail::symbol
  B VerifyEmailSupport::symbol
+ B VerifyShippingInfoSuggestion::symbol
+ B VerifyShippingInfoUserEntered::symbol
  B VerifyingEmailResult::symbol
  B VideoPlayerFreeAudio::symbol
  B VideoPlayerInitAudio::symbol
@@ -1764,6 +1768,7 @@
  B g_CheckoutReview_Helper
  B g_CheckoutShippingInfo_Helper
  B g_CheckoutVerifyEmail_Helper
+ B g_CheckoutVerifyShippingInfo_Helper
  B g_ChooseBinding_Helper
  B g_ChoosePurchaseOrAuthorizationPanel_Helper
  B g_ChooseResetTypeWizardChild_Helper
@@ -2253,6 +2258,7 @@
  B g_pDialogController
  B g_pFioAsyncEnqueue
  B g_pFioAsyncFinalize
+ B g_pJSClientAccess
  B g_pMainPanel
  B g_pRunGameEngine
  B g_pServerBrowser
@@ -2706,6 +2712,7 @@
  B panorama::g_CheckoutReviewLinkerHack
  B panorama::g_CheckoutShippingInfoLinkerHack
  B panorama::g_CheckoutVerifyEmailLinkerHack
+ B panorama::g_CheckoutVerifyShippingInfoLinkerHack
  B panorama::g_ChooseBindingLinkerHack
  B panorama::g_ChoosePurchaseOrAuthorizationPanelLinkerHack
  B panorama::g_ChooseResetTypeWizardChildLinkerHack
@@ -5788,6 +5795,7 @@
  D StoreShowPackage::pchEvent
  D StoreShowSalePage::pchEvent
  D StoreShowSearch::pchEvent
+ D StoreVerifyShippingAddressResponse::pchEvent
  D StoreViewSSA::pchEvent
  D StreamingSourceChosen::pchEvent
  D SubForgotPasswordSetNewPassword::ChainToAnimationMap()::chained
@@ -6305,6 +6313,8 @@
  D VerifyEmailDone::pchEvent
  D VerifyEmailFail::pchEvent
  D VerifyEmailSupport::pchEvent
+ D VerifyShippingInfoSuggestion::pchEvent
+ D VerifyShippingInfoUserEntered::pchEvent
  D VerifyingEmailResult::pchEvent
  D VideoPlayerFreeAudio::pchEvent
  D VideoPlayerInitAudio::pchEvent
@@ -9057,6 +9067,7 @@
  D typeinfo for CCheckoutStepBase
  D typeinfo for CCheckoutVerifyEmail
  D typeinfo for CCheckoutVerifyEmail::CCallbackOnAccountInfoUpdated
+ D typeinfo for CCheckoutVerifyShippingInfo
  D typeinfo for CChooseBetaDialog
  D typeinfo for CChooseBinding
  D typeinfo for CChoosePurchaseOrAuthorizationPanel
@@ -9418,6 +9429,7 @@
  D typeinfo for CInstallSubOptions
  D typeinfo for CIntProperty
  D typeinfo for CIntroMoviePanel
+ D typeinfo for CJSClientConfigStore
  D typeinfo for CJoinGameController::CCallbackOnAppEventStateChange
  D typeinfo for CJoinGameController::CCallbackOnAppInfoReceived
  D typeinfo for CJoinGameController::CCallbackOnAppUpdateStopped
@@ -10274,6 +10286,7 @@
  D typeinfo for CStoreStackable
  D typeinfo for CStoreTextDialog
  D typeinfo for CStoreTrailerSlideshow
+ D typeinfo for CStoreVerifyShippingAddress
  D typeinfo for CStreamDataLostMsg
  D typeinfo for CStreamFrame
  D typeinfo for CStreamSampleQueue<CGameFrameDurationStats, unsigned int, 3, false>
@@ -10643,6 +10656,7 @@
  D typeinfo for IAudioRecorder
  D typeinfo for IAudioSinkDeviceListener
  D typeinfo for IBaseInterface
+ D typeinfo for IClientConfigStore
  D typeinfo for IClientInstallUtils
  D typeinfo for IClientInstallUtilsMap
  D typeinfo for IClientModuleManager
@@ -10855,6 +10869,7 @@
  D typeinfo for panorama::CUIEvent1<CSmartPtr<CStoreGetTransactionStatus const, CRefCountAccessor> >
  D typeinfo for panorama::CUIEvent1<CSmartPtr<CStoreInitializeTransaction const, CRefCountAccessor> >
  D typeinfo for panorama::CUIEvent1<CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >
+ D typeinfo for panorama::CUIEvent1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >
  D typeinfo for panorama::CUIEvent1<CSteamID>
  D typeinfo for panorama::CUIEvent1<CTenfootControllerBase*>
  D typeinfo for panorama::CUIEvent1<CTenfootOverlayController*>
@@ -12313,6 +12328,7 @@
  D vtable for CCheckoutStepBase
  D vtable for CCheckoutVerifyEmail
  D vtable for CCheckoutVerifyEmail::CCallbackOnAccountInfoUpdated
+ D vtable for CCheckoutVerifyShippingInfo
  D vtable for CChooseBetaDialog
  D vtable for CChooseBinding
  D vtable for CChoosePurchaseOrAuthorizationPanel
@@ -12671,6 +12687,7 @@
  D vtable for CInstallSubOptions
  D vtable for CIntProperty
  D vtable for CIntroMoviePanel
+ D vtable for CJSClientConfigStore
  D vtable for CJoinGameController::CCallbackOnAppEventStateChange
  D vtable for CJoinGameController::CCallbackOnAppInfoReceived
  D vtable for CJoinGameController::CCallbackOnAppUpdateStopped
@@ -13519,6 +13536,7 @@
  D vtable for CStoreStackable
  D vtable for CStoreTextDialog
  D vtable for CStoreTrailerSlideshow
+ D vtable for CStoreVerifyShippingAddress
  D vtable for CStreamDataLostMsg
  D vtable for CStreamFrame
  D vtable for CStreamSampleQueue<CGameFrameDurationStats, unsigned int, 3, false>
@@ -14006,6 +14024,7 @@
  D vtable for panorama::CUIEvent1<CSmartPtr<CStoreGetTransactionStatus const, CRefCountAccessor> >
  D vtable for panorama::CUIEvent1<CSmartPtr<CStoreInitializeTransaction const, CRefCountAccessor> >
  D vtable for panorama::CUIEvent1<CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >
+ D vtable for panorama::CUIEvent1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >
  D vtable for panorama::CUIEvent1<CSteamID>
  D vtable for panorama::CUIEvent1<CTenfootControllerBase*>
  D vtable for panorama::CUIEvent1<CTenfootOverlayController*>
@@ -14966,6 +14985,7 @@
  R typeinfo name for CCheckoutStepBase
  R typeinfo name for CCheckoutVerifyEmail
  R typeinfo name for CCheckoutVerifyEmail::CCallbackOnAccountInfoUpdated
+ R typeinfo name for CCheckoutVerifyShippingInfo
  R typeinfo name for CChooseBetaDialog
  R typeinfo name for CChooseBinding
  R typeinfo name for CChoosePurchaseOrAuthorizationPanel
@@ -15330,6 +15350,7 @@
  R typeinfo name for CInstallSubOptions
  R typeinfo name for CIntProperty
  R typeinfo name for CIntroMoviePanel
+ R typeinfo name for CJSClientConfigStore
  R typeinfo name for CJoinGameController::CCallbackOnAppEventStateChange
  R typeinfo name for CJoinGameController::CCallbackOnAppInfoReceived
  R typeinfo name for CJoinGameController::CCallbackOnAppUpdateStopped
@@ -16193,6 +16214,7 @@
  R typeinfo name for CStoreStackable
  R typeinfo name for CStoreTextDialog
  R typeinfo name for CStoreTrailerSlideshow
+ R typeinfo name for CStoreVerifyShippingAddress
  R typeinfo name for CStreamDataLostMsg
  R typeinfo name for CStreamFrame
  R typeinfo name for CStreamSampleQueue<CGameFrameDurationStats, unsigned int, 3, false>
@@ -16877,6 +16899,7 @@
  R typeinfo name for IAudioRecorder
  R typeinfo name for IAudioSinkDeviceListener
  R typeinfo name for IBaseInterface
+ R typeinfo name for IClientConfigStore
  R typeinfo name for IClientInstallUtils
  R typeinfo name for IClientInstallUtilsMap
  R typeinfo name for IClientModuleManager
@@ -17092,6 +17115,7 @@
  R typeinfo name for panorama::CUIEvent1<CSmartPtr<CStoreGetTransactionStatus const, CRefCountAccessor> >
  R typeinfo name for panorama::CUIEvent1<CSmartPtr<CStoreInitializeTransaction const, CRefCountAccessor> >
  R typeinfo name for panorama::CUIEvent1<CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >
+ R typeinfo name for panorama::CUIEvent1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >
  R typeinfo name for panorama::CUIEvent1<CSteamID>
  R typeinfo name for panorama::CUIEvent1<CTenfootControllerBase*>
  R typeinfo name for panorama::CUIEvent1<CTenfootOverlayController*>
@@ -18378,6 +18402,8 @@
  T CAutoRelease<CStoreShoppingCartCouponInfo const, CRefCountAccessor>::~CAutoRelease()
  T CAutoRelease<CStoreShoppingCartLineItem const, CRefCountAccessor>::Reset(CStoreShoppingCartLineItem const*)
  T CAutoRelease<CStoreShoppingCartLineItem const, CRefCountAccessor>::~CAutoRelease()
+ T CAutoRelease<CStoreVerifyShippingAddress const, CRefCountAccessor>::Reset(CStoreVerifyShippingAddress const*)
+ T CAutoRelease<CStoreVerifyShippingAddress const, CRefCountAccessor>::~CAutoRelease()
  T CAutoRelease<CTrailerSlideshowItem const, CRefCountAccessor>::Reset(CTrailerSlideshowItem const*)
  T CAutoRelease<CTrailerSlideshowItem const, CRefCountAccessor>::~CAutoRelease()
  T CAutoRelease<panorama::CPanoramaVideoPlayer, CRefCountAccessor>::Reset(panorama::CPanoramaVideoPlayer*)
@@ -21834,6 +21860,9 @@
  T CCheckoutController::EventStoreRemoveLineItemFromCartResponse(unsigned long long, bool, CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>)
  T CCheckoutController::EventStoreShoppingCartResponse(CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>)
  T CCheckoutController::EventUpdateBillingInfo(unsigned long long)
+ T CCheckoutController::EventVerifyShippingAddressResponse(CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>)
+ T CCheckoutController::EventVerifyShippingInfoSuggestion()
+ T CCheckoutController::EventVerifyShippingInfoUserEntered()
  T CCheckoutController::GetFinalizeFailureString(EPaymentMethod, EPurchaseResultDetail)
  T CCheckoutController::GetPanelType() const
  T CCheckoutController::HideStatusPanel()
@@ -21844,6 +21873,7 @@
  T CCheckoutController::ShowAddFunds(char const*)
  T CCheckoutController::ShowCart()
  T CCheckoutController::ShowConfirmation(CAmount_t<int>, bool)
+ T CCheckoutController::ShowCorrectedShippingAddress(CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>)
  T CCheckoutController::ShowMicroTxnAuth(unsigned long long)
  T CCheckoutController::ShowStatusError(char const*, panorama::IUIEvent*)
  T CCheckoutController::ShowStatusWaiting(char const*)
@@ -21952,10 +21982,12 @@
  T CCheckoutShippingInfo::EventInputFocusLost(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CCheckoutShippingInfo::EventShippingInfoComplete()
  T CCheckoutShippingInfo::EventTextEntryChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CCheckoutShippingInfo::FillInAddressInfo(CStoreBillingAddress&)
  T CCheckoutShippingInfo::FillInInitializeTransactionData(CStoreInitializeTransactionParams*)
  T CCheckoutShippingInfo::FillInReviewPaymentInfoData(ReviewPaymentInfo_t*)
  T CCheckoutShippingInfo::GetPanelType() const
  T CCheckoutShippingInfo::Show(CSmartPtr<CStoreBeginCheckout const, CRefCountAccessor>, CSmartPtr<CStoreCheckoutCountryData const, CRefCountAccessor>, ECheckoutPurchaseType)
+ T CCheckoutShippingInfo::UpdateFromAddress(CStoreBillingAddress const&)
  T CCheckoutShippingInfo::UpdateStateControlVisibility()
  T CCheckoutShippingInfo::ValidateOnFieldChanged(panorama::CPanel2D*)
  T CCheckoutShippingInfo::~CCheckoutShippingInfo()
@@ -21972,6 +22004,11 @@
  T CCheckoutVerifyEmail::OnAccountInfoUpdated(AccountInformationUpdated_t*)
  T CCheckoutVerifyEmail::Show()
  T CCheckoutVerifyEmail::~CCheckoutVerifyEmail()
+ T CCheckoutVerifyShippingInfo* CCheckoutController::FindPanelInStack<CCheckoutVerifyShippingInfo>()
+ T CCheckoutVerifyShippingInfo::CCheckoutVerifyShippingInfo(panorama::CPanel2D*, char const*)
+ T CCheckoutVerifyShippingInfo::GetPanelType() const
+ T CCheckoutVerifyShippingInfo::Show(CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>, CStoreBillingAddress const&)
+ T CCheckoutVerifyShippingInfo::~CCheckoutVerifyShippingInfo()
  T CChooseBetaDialog::CChooseBetaDialog(vgui::Panel*, char const*)
  T CChooseBetaDialog::ChainToAnimationMap()
  T CChooseBetaDialog::ChainToMap()
@@ -25841,6 +25878,32 @@
  T CIntroMoviePanel::Paint()
  T CIntroMoviePanel::SetMovieInitEvent(panorama::IUIEvent*)
  T CIntroMoviePanel::~CIntroMoviePanel()
+ T CJSClientAccess::CJSClientAccess()
+ T CJSClientAccess::GetClientConfigStore()
+ T CJSClientAccess::InitializeSingleton()
+ T CJSClientConfigStore* panorama::GetThisPtrForJSCall<CJSClientConfigStore>(v8::Local<v8::Object>)
+ T CJSClientConfigStore::CJSClientConfigStore()
+ T CJSClientConfigStore::FlushToDisk(bool)
+ T CJSClientConfigStore::GetBinary(EConfigStore, char const*, CUtlBuffer*)
+ T CJSClientConfigStore::GetBinary(EConfigStore, char const*, unsigned char*, unsigned int)
+ T CJSClientConfigStore::GetBinaryWatermarked(EConfigStore, char const*, unsigned char*, unsigned int)
+ T CJSClientConfigStore::GetBool(EConfigStore, char const*, bool)
+ T CJSClientConfigStore::GetFloat(EConfigStore, char const*, float)
+ T CJSClientConfigStore::GetInt(EConfigStore, char const*, int)
+ T CJSClientConfigStore::GetJSTypeName()
+ T CJSClientConfigStore::GetKeySerialized(EConfigStore, char const*, unsigned char*, int)
+ T CJSClientConfigStore::GetString(EConfigStore, char const*, char const*)
+ T CJSClientConfigStore::GetUint64(EConfigStore, char const*, unsigned long long)
+ T CJSClientConfigStore::IsSet(EConfigStore, char const*)
+ T CJSClientConfigStore::RemoveKey(EConfigStore, char const*)
+ T CJSClientConfigStore::SetBinary(EConfigStore, char const*, unsigned char const*, unsigned int)
+ T CJSClientConfigStore::SetBinaryWatermarked(EConfigStore, char const*, unsigned char const*, unsigned int)
+ T CJSClientConfigStore::SetBool(EConfigStore, char const*, bool)
+ T CJSClientConfigStore::SetFloat(EConfigStore, char const*, float)
+ T CJSClientConfigStore::SetInt(EConfigStore, char const*, int)
+ T CJSClientConfigStore::SetString(EConfigStore, char const*, char const*)
+ T CJSClientConfigStore::SetUint64(EConfigStore, char const*, unsigned long long)
+ T CJSClientConfigStore::SetupJSObjectTemplate()
  T CJob::ValidateStatics(CValidator&, char const*)
  T CJobMgr::ValidateStatics(CValidator&, char const*)
  T CJoinGameController::BGameLaunching()
@@ -32853,6 +32916,8 @@
  T CSmartPtr<CStoreShoppingCartCouponInfo const, CRefCountAccessor>::CSmartPtr(CSmartPtr<CStoreShoppingCartCouponInfo const, CRefCountAccessor> const&)
  T CSmartPtr<CStoreShoppingCartLineItem const, CRefCountAccessor>::CSmartPtr(CSmartPtr<CStoreShoppingCartLineItem const, CRefCountAccessor> const&)
  T CSmartPtr<CStoreShoppingCartLineItem const, CRefCountAccessor>::operator=(CSmartPtr<CStoreShoppingCartLineItem const, CRefCountAccessor> const&)
+ T CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>::CSmartPtr(CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> const&)
+ T CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>::operator=(CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> const&)
  T CSmartPtr<CTrailerSlideshowItem const, CRefCountAccessor>::CSmartPtr(CSmartPtr<CTrailerSlideshowItem const, CRefCountAccessor> const&)
  T CSmartPtr<panorama::CPanoramaVideoPlayer, CRefCountAccessor>::CSmartPtr(CSmartPtr<panorama::CPanoramaVideoPlayer, CRefCountAccessor> const&)
  T CSmartPtr<panorama::CPanoramaVideoPlayer, CRefCountAccessor>::operator=(CSmartPtr<panorama::CPanoramaVideoPlayer, CRefCountAccessor> const&)
@@ -34161,6 +34226,7 @@
  T CStoreAccess::OnStoreFeaturedResponse(unsigned long long, KeyValues*, void*)
  T CStoreAccess::OnStorePackageDetailsResponse(unsigned long long, KeyValues*, void*)
  T CStoreAccess::OnTrailerSlideshowItemsResponse(unsigned long long, KeyValues*, void*)
+ T CStoreAccess::OnVerifyShippingAddressResponse(unsigned long long, KeyValues*, void*)
  T CStoreAccess::OnWebAuthRequestAsync(WebAuthRequestCallback_t*)
  T CStoreAccess::OnWebAuthRequestCompleted(WebAuthRequestCallback_t*, bool)
  T CStoreAccess::RemoveLineItemFromCart(panorama::CPanel2D*, unsigned long long)
@@ -34183,6 +34249,7 @@
  T CStoreAccess::SetFilter(EStoreFilter)
  T CStoreAccess::UpdateFilterInfo()
  T CStoreAccess::Validate(CValidator&, char const*)
+ T CStoreAccess::VerifyShippingAddress(panorama::CPanel2D*, CStoreVerifyShippingAddressParams&)
  T CStoreAccess::~CStoreAccess()
  T CStoreAgeGate::BPassesRequiredAge()
  T CStoreAgeGate::CStoreAgeGate(panorama::CPanel2D*, char const*)
@@ -34315,6 +34382,7 @@
  T CStoreBeginCheckout::GetPackagesFriendOwns(CSteamID) const
  T CStoreBeginCheckout::~CStoreBeginCheckout()
  T CStoreBillingAddress::BParseStoreResponse(KeyValues*)
+ T CStoreBillingAddress::CStoreBillingAddress()
  T CStoreBillingAddress::operator=(CStoreBillingAddress const&)
  T CStoreBillingAddress::~CStoreBillingAddress()
  T CStoreBrowseByCategory::AddTab(char const*, int)
@@ -34571,6 +34639,9 @@
  T CStoreTrailerSlideshow::OnGetDefaultInputFocus()
  T CStoreTrailerSlideshow::Show()
  T CStoreTrailerSlideshow::~CStoreTrailerSlideshow()
+ T CStoreVerifyShippingAddress::BParseStoreResponse(KeyValues*)
+ T CStoreVerifyShippingAddress::~CStoreVerifyShippingAddress()
+ T CStoreVerifyShippingAddressParams::CStoreVerifyShippingAddressParams()
  T CStrAutoEncode::ToUTF16()
  T CStrAutoEncode::ToUTF32()
  T CStrAutoEncode::ToUTF8()
@@ -39666,7 +39737,9 @@
  T CUtlVector<panorama::AnimationProperty_t, CUtlMemory<panorama::AnimationProperty_t> >::~CUtlVector()
  T CUtlVector<panorama::CBackgroundImageLayer*, CUtlMemory<panorama::CBackgroundImageLayer*> >::AddToTail(panorama::CBackgroundImageLayer*&&)
  T CUtlVector<panorama::CBackgroundImageLayer*, CUtlMemory<panorama::CBackgroundImageLayer*> >::GrowVector(int)
+ T CUtlVector<panorama::CBackgroundImageLayer*, CUtlMemory<panorama::CBackgroundImageLayer*> >::InsertBefore(int, panorama::CBackgroundImageLayer* const&)
  T CUtlVector<panorama::CBackgroundImageLayer*, CUtlMemory<panorama::CBackgroundImageLayer*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<panorama::CBackgroundImageLayer*, CUtlMemory<panorama::CBackgroundImageLayer*> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::CBackgroundImageLayer*, CUtlMemory<panorama::CBackgroundImageLayer*> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CBackgroundImageLayer*, CUtlMemory<panorama::CBackgroundImageLayer*> >::~CUtlVector()
  T CUtlVector<panorama::CBackgroundPosition, CUtlMemory<panorama::CBackgroundPosition> >::GrowVector(int)
@@ -41821,6 +41894,7 @@
  T FastDelegate1<CSmartPtr<CStoreGetTransactionStatus const, CRefCountAccessor>, bool>::operator()(CSmartPtr<CStoreGetTransactionStatus const, CRefCountAccessor>) const
  T FastDelegate1<CSmartPtr<CStoreInitializeTransaction const, CRefCountAccessor>, bool>::operator()(CSmartPtr<CStoreInitializeTransaction const, CRefCountAccessor>) const
  T FastDelegate1<CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>, bool>::operator()(CSmartPtr<CStoreShoppingCart const, CRefCountAccessor>) const
+ T FastDelegate1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>, bool>::operator()(CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>) const
  T FastDelegate1<bool, void>::InvokeStaticFunction(bool) const
  T FastDelegate2<char const*, CSmartPtr<CStoreSearchResults const, CRefCountAccessor>, bool>::operator()(char const*, CSmartPtr<CStoreSearchResults const, CRefCountAccessor>) const
  T FastDelegate2<panorama::IUIWindow*, panorama::CPanelPtr<CIntroMoviePanel>, void>::InvokeStaticFunction(panorama::IUIWindow*, panorama::CPanelPtr<CIntroMoviePanel>) const
@@ -43842,6 +43916,9 @@
  T StoreShowSearch::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T StoreShowSearch::GetEventType()
  T StoreShowSearch::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
+ T StoreVerifyShippingAddressResponse::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T StoreVerifyShippingAddressResponse::GetEventType()
+ T StoreVerifyShippingAddressResponse::MakeEvent(panorama::IUIPanelClient const*, CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>)
  T StoreViewSSA::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T StoreViewSSA::GetEventType()
  T StoreViewSSA::MakeEvent(panorama::IUIPanelClient const*)
@@ -44272,6 +44349,12 @@
  T VerifyEmailSupport::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T VerifyEmailSupport::GetEventType()
  T VerifyEmailSupport::MakeEvent(panorama::IUIPanelClient const*)
+ T VerifyShippingInfoSuggestion::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T VerifyShippingInfoSuggestion::GetEventType()
+ T VerifyShippingInfoSuggestion::MakeEvent(panorama::IUIPanelClient const*)
+ T VerifyShippingInfoUserEntered::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T VerifyShippingInfoUserEntered::GetEventType()
+ T VerifyShippingInfoUserEntered::MakeEvent(panorama::IUIPanelClient const*)
  T VerifyingEmailResult::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T VerifyingEmailResult::GetEventType()
  T VerifyingEmailResult::MakeEvent(panorama::IUIPanelClient const*, EResult)
@@ -44445,6 +44528,7 @@
  T alg_unquant
  T amp2Log2
  T anti_collapse
+ T bool panorama::BConvertV8ArgToPanorama<EConfigStore>(v8::Handle<v8::Value> const&, EConfigStore*)
  T bool panorama::BConvertV8ArgToPanorama<bool>(v8::Handle<v8::Value> const&, bool*)
  T bool panorama::BConvertV8ArgToPanorama<char const*>(v8::Handle<v8::Value> const&, char const**)
  T bool panorama::BConvertV8ArgToPanorama<float>(v8::Handle<v8::Value> const&, float*)
@@ -44561,6 +44645,7 @@
  T bool panorama::DispatchEvent<StoreShow>(StoreShow, panorama::IUIPanelClient const*)
  T bool panorama::DispatchEvent<StoreShowAppPurchaseOptions, unsigned int, char const*>(StoreShowAppPurchaseOptions, panorama::IUIPanelClient const*, unsigned int, char const*)
  T bool panorama::DispatchEvent<StoreShowDlcForApp, unsigned int>(StoreShowDlcForApp, panorama::IUIPanelClient const*, unsigned int)
+ T bool panorama::DispatchEvent<StoreVerifyShippingAddressResponse, CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >(StoreVerifyShippingAddressResponse, panorama::IUIPanelClient const*, CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>)
  T bool panorama::DispatchEvent<StreamingSourceChosen, unsigned long long>(StreamingSourceChosen, panorama::IUIPanelClient const*, unsigned long long)
  T bool panorama::DispatchEvent<TenfootMgrNotificationOngoingVoiceChat, bool>(TenfootMgrNotificationOngoingVoiceChat, panorama::IUIPanelClient const*, bool)
  T bool panorama::DispatchEvent<TenfootMgrNotificationOngoingVoiceChatOnHold, bool>(TenfootMgrNotificationOngoingVoiceChatOnHold, panorama::IUIPanelClient const*, bool)
@@ -44998,6 +45083,7 @@
  T non-virtual thunk to CInstallSubConvertApps::OnStartRetailInstall(unsigned int, int)
  T non-virtual thunk to CInstallSubConvertApps::OnStartingNextApp(CSteamApp*)
  T non-virtual thunk to CInstallSubConvertApps::OnUpdateRetailInstallProgress(float, float, unsigned long long, unsigned long long)
+ T non-virtual thunk to CJSClientConfigStore::GetJSTypeName()
  T non-virtual thunk to CJoinGameDialog::ActivateUI()
  T non-virtual thunk to CJoinGameDialog::CloseDialog(bool)
  T non-virtual thunk to CJoinGameDialog::OnContentServersBusy(char const*)
@@ -46496,6 +46582,7 @@
  T panorama::CPanel2D::SetAttribute(char const*, char const*)
  T panorama::CPanel2D::SetAttribute(char const*, int)
  T panorama::CPanel2D::SetAttribute(char const*, unsigned int)
+ T panorama::CPanel2D::SetBackgroundImages(CUtlVector<panorama::CBackgroundImageLayer*, CUtlMemory<panorama::CBackgroundImageLayer*> > const&)
  T panorama::CPanel2D::SetDefaultFocus(char const*)
  T panorama::CPanel2D::SetDialogVariable(char const*, CAmount_t<int>)
  T panorama::CPanel2D::SetDialogVariable(char const*, CRTime)
@@ -46544,6 +46631,7 @@
  T panorama::CPanelPtr<CCheckoutBillingInfo>::CPanelPtr(panorama::IUIPanelClient const*)
  T panorama::CPanelPtr<CCheckoutBillingInfo>::Get() const
  T panorama::CPanelPtr<CCheckoutController>::Get() const
+ T panorama::CPanelPtr<CCheckoutShippingInfo>::Get() const
  T panorama::CPanelPtr<CCheckoutStepBase>::CPanelPtr(panorama::IUIPanelClient const*)
  T panorama::CPanelPtr<CCheckoutStepBase>::Get() const
  T panorama::CPanelPtr<CControllerBindingButton>::Get() const
@@ -47667,6 +47755,12 @@
  T panorama::CUIEvent1<CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent1<CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >::Validate(CValidator&, char const*)
  T panorama::CUIEvent1<CSmartPtr<CStoreShoppingCart const, CRefCountAccessor> >::~CUIEvent1()
+ T panorama::CUIEvent1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >::CUIEvent1(panorama::CPanoramaSymbol, panorama::IUIPanel const*, CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor>)
+ T panorama::CUIEvent1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >::Copy() const
+ T panorama::CUIEvent1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >::Validate(CValidator&, char const*)
+ T panorama::CUIEvent1<CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >::~CUIEvent1()
  T panorama::CUIEvent1<CSteamID>::Copy() const
  T panorama::CUIEvent1<CSteamID>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent1<CSteamID>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -48346,6 +48440,11 @@
  T panorama::ContextMenu::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ContextMenu::GetEventType()
  T panorama::ContextMenu::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
+ T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<EConfigStore, char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<EConfigStore, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<EConfigStore, char const*, float, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, float, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<EConfigStore, char const*, int, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, int, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<EConfigStore, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<char const*, bool, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<char const*, bool, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
@@ -48362,6 +48461,11 @@
  T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<panorama::CPanel2D*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<panorama::CPanel2D*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<panorama::CPanoramaSymbol, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<panorama::CPanoramaSymbol, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<1, std::tr1::tuple<unsigned int, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<unsigned int, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<EConfigStore, char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<EConfigStore, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<EConfigStore, char const*, float, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, float, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<EConfigStore, char const*, int, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, int, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<EConfigStore, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<char const*, bool, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<char const*, bool, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
@@ -48371,6 +48475,10 @@
  T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<panorama::CPanel2D*, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<panorama::CPanel2D*, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<panorama::CPanel2D*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<panorama::CPanel2D*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<panorama::CPanel2D*, panorama::CPanel2D*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<panorama::CPanel2D*, panorama::CPanel2D*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<3, std::tr1::tuple<EConfigStore, char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<3, std::tr1::tuple<EConfigStore, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<3, std::tr1::tuple<EConfigStore, char const*, float, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, float, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
+ T panorama::ConvertV8ArgsToTuple<3, std::tr1::tuple<EConfigStore, char const*, int, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, int, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<3, std::tr1::tuple<char const*, bool, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<char const*, bool, bool, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<3, std::tr1::tuple<int, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<int, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::ConvertV8ArgsToTuple<3, std::tr1::tuple<panorama::CPanel2D*, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<panorama::CPanel2D*, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
@@ -48418,6 +48526,7 @@
  T panorama::ExitSteam::GetEventType()
  T panorama::ExitSteam::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::FreeV8ArgsToTuple<2, std::tr1::tuple<char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, bool*)
+ T panorama::FreeV8ArgsToTuple<3, std::tr1::tuple<EConfigStore, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<EConfigStore, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, bool*)
  T panorama::FreeV8ArgsToTuple<3, std::tr1::tuple<int, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<int, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, bool*)
  T panorama::FreeV8ArgsToTuple<3, std::tr1::tuple<panorama::CPanel2D*, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<panorama::CPanel2D*, char const*, char const*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, bool*)
  T panorama::GameControllerMappingChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -49213,6 +49322,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<StoreShowPackage, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<StoreShowSalePage, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<StoreShowSearch, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<StoreVerifyShippingAddressResponse, CSmartPtr<CStoreVerifyShippingAddress const, CRefCountAccessor> >(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<StoreViewSSA>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<StreamingSourceChosen, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<SubmitBroadcastChat>(panorama::IUIPanel*, char const*, char const**)
@@ -49301,6 +49411,8 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VerifyEmailDone>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VerifyEmailFail>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VerifyEmailSupport>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VerifyShippingInfoSuggestion>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<VerifyShippingInfoUserEntered>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewAllAchievements>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewAllGuides>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ViewCDKeysForApp, unsigned int, KeyValues*>(panorama::IUIPanel*, char const*, char const**)
@@ -49535,12 +49647,21 @@
  T panorama::JSMethodCallbackWrapper<CTenfootMsgBox*, CTenfootControllerBase, int, char const*, char const*>::Call(CTenfootControllerBase*, CTenfootMsgBox* (CTenfootControllerBase::*)(int, char const*, char const*), v8::FunctionCallbackInfo<v8::Value> const&, int, char const*, char const*)
  T panorama::JSMethodCallbackWrapper<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const&, panorama::CPanel2D, char const*>::Call(panorama::CPanel2D*, CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)(char const*), v8::FunctionCallbackInfo<v8::Value> const&, char const*)
  T panorama::JSMethodCallbackWrapper<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const&, panorama::CPanel2D>::Call(panorama::CPanel2D*, CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)(), v8::FunctionCallbackInfo<v8::Value> const&)
+ T panorama::JSMethodCallbackWrapper<bool, CJSClientConfigStore, EConfigStore, char const*, bool>::Call(CJSClientConfigStore*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, bool), v8::FunctionCallbackInfo<v8::Value> const&, EConfigStore, char const*, bool)
+ T panorama::JSMethodCallbackWrapper<bool, CJSClientConfigStore, EConfigStore, char const*, char const*>::Call(CJSClientConfigStore*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, char const*), v8::FunctionCallbackInfo<v8::Value> const&, EConfigStore, char const*, char const*)
+ T panorama::JSMethodCallbackWrapper<bool, CJSClientConfigStore, EConfigStore, char const*, float>::Call(CJSClientConfigStore*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, float), v8::FunctionCallbackInfo<v8::Value> const&, EConfigStore, char const*, float)
+ T panorama::JSMethodCallbackWrapper<bool, CJSClientConfigStore, EConfigStore, char const*, int>::Call(CJSClientConfigStore*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, int), v8::FunctionCallbackInfo<v8::Value> const&, EConfigStore, char const*, int)
+ T panorama::JSMethodCallbackWrapper<bool, CJSClientConfigStore, EConfigStore, char const*>::Call(CJSClientConfigStore*, bool (CJSClientConfigStore::*)(EConfigStore, char const*), v8::FunctionCallbackInfo<v8::Value> const&, EConfigStore, char const*)
+ T panorama::JSMethodCallbackWrapper<bool, CJSClientConfigStore, bool>::Call(CJSClientConfigStore*, bool (CJSClientConfigStore::*)(bool), v8::FunctionCallbackInfo<v8::Value> const&, bool)
  T panorama::JSMethodCallbackWrapper<bool, CTenfootControllerBase>::Call(CTenfootControllerBase*, bool (CTenfootControllerBase::*)(), v8::FunctionCallbackInfo<v8::Value> const&)
  T panorama::JSMethodCallbackWrapper<bool, panorama::CDropDown, char const*>::Call(panorama::CDropDown*, bool (panorama::CDropDown::*)(char const*), v8::FunctionCallbackInfo<v8::Value> const&, char const*)
  T panorama::JSMethodCallbackWrapper<bool, panorama::CPanel2D, char const*, bool, bool>::Call(panorama::CPanel2D*, bool (panorama::CPanel2D::*)(char const*, bool, bool), v8::FunctionCallbackInfo<v8::Value> const&, char const*, bool, bool)
  T panorama::JSMethodCallbackWrapper<bool, panorama::CPanel2D, char const*>::Call(panorama::CPanel2D*, bool (panorama::CPanel2D::*)(char const*), v8::FunctionCallbackInfo<v8::Value> const&, char const*)
  T panorama::JSMethodCallbackWrapper<bool, panorama::CPanel2D>::Call(panorama::CPanel2D*, bool (panorama::CPanel2D::*)(), v8::FunctionCallbackInfo<v8::Value> const&)
+ T panorama::JSMethodCallbackWrapper<char const*, CJSClientConfigStore, EConfigStore, char const*, char const*>::Call(CJSClientConfigStore*, char const* (CJSClientConfigStore::*)(EConfigStore, char const*, char const*), v8::FunctionCallbackInfo<v8::Value> const&, EConfigStore, char const*, char const*)
  T panorama::JSMethodCallbackWrapper<char const*, panorama::CPanel2D, char const*, char const*>::Call(panorama::CPanel2D*, char const* (panorama::CPanel2D::*)(char const*, char const*), v8::FunctionCallbackInfo<v8::Value> const&, char const*, char const*)
+ T panorama::JSMethodCallbackWrapper<float, CJSClientConfigStore, EConfigStore, char const*, float>::Call(CJSClientConfigStore*, float (CJSClientConfigStore::*)(EConfigStore, char const*, float), v8::FunctionCallbackInfo<v8::Value> const&, EConfigStore, char const*, float)
+ T panorama::JSMethodCallbackWrapper<int, CJSClientConfigStore, EConfigStore, char const*, int>::Call(CJSClientConfigStore*, int (CJSClientConfigStore::*)(EConfigStore, char const*, int), v8::FunctionCallbackInfo<v8::Value> const&, EConfigStore, char const*, int)
  T panorama::JSMethodCallbackWrapper<int, panorama::CCarousel>::Call(panorama::CCarousel*, int (panorama::CCarousel::*)(), v8::FunctionCallbackInfo<v8::Value> const&)
  T panorama::JSMethodCallbackWrapper<int, panorama::CGrid>::Call(panorama::CGrid*, int (panorama::CGrid::*)(), v8::FunctionCallbackInfo<v8::Value> const&)
  T panorama::JSMethodCallbackWrapper<int, panorama::CPanel2D, char const*, int>::Call(panorama::CPanel2D*, int (panorama::CPanel2D::*)(char const*, int), v8::FunctionCallbackInfo<v8::Value> const&, char const*, int)
@@ -53781,10 +53902,17 @@
  T void panorama::DispatchEventAsync<panorama::TextEntryShowTextInputHandler>(float, panorama::TextEntryShowTextInputHandler, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<panorama::TextInputFullscreenClosed, bool, char const*>(panorama::TextInputFullscreenClosed, panorama::IUIPanelClient const*, bool, char const*)
  T void panorama::FreeConvertedParam<char const*>(char const*)
+ T void panorama::GetPtrToCallbackArray<CJSClientConfigStore* (*)()>(CJSClientConfigStore* (*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<CTenfootControllerBase* (*)(panorama::CPanel2D*)>(CTenfootControllerBase* (*)(panorama::CPanel2D*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<CTenfootMsgBox* (CTenfootControllerBase::*)(int, char const*, char const*)>(CTenfootMsgBox* (CTenfootControllerBase::*)(int, char const*, char const*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)()>(CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)(char const*)>(CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)(char const*), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<bool (CJSClientConfigStore::*)(EConfigStore, char const*)>(bool (CJSClientConfigStore::*)(EConfigStore, char const*), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<bool (CJSClientConfigStore::*)(EConfigStore, char const*, bool)>(bool (CJSClientConfigStore::*)(EConfigStore, char const*, bool), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<bool (CJSClientConfigStore::*)(EConfigStore, char const*, char const*)>(bool (CJSClientConfigStore::*)(EConfigStore, char const*, char const*), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<bool (CJSClientConfigStore::*)(EConfigStore, char const*, float)>(bool (CJSClientConfigStore::*)(EConfigStore, char const*, float), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<bool (CJSClientConfigStore::*)(EConfigStore, char const*, int)>(bool (CJSClientConfigStore::*)(EConfigStore, char const*, int), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<bool (CJSClientConfigStore::*)(bool)>(bool (CJSClientConfigStore::*)(bool), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<bool (CTenfootControllerBase::*)()>(bool (CTenfootControllerBase::*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<bool (panorama::CDropDown::*)(char const*)>(bool (panorama::CDropDown::*)(char const*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<bool (panorama::CLabel::*)() const>(bool (panorama::CLabel::*)() const, v8::Handle<v8::Array>&)
@@ -53792,13 +53920,16 @@
  T void panorama::GetPtrToCallbackArray<bool (panorama::CPanel2D::*)()>(bool (panorama::CPanel2D::*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<bool (panorama::CPanel2D::*)(char const*)>(bool (panorama::CPanel2D::*)(char const*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<bool (panorama::CPanel2D::*)(char const*, bool, bool)>(bool (panorama::CPanel2D::*)(char const*, bool, bool), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<char const* (CJSClientConfigStore::*)(EConfigStore, char const*, char const*)>(char const* (CJSClientConfigStore::*)(EConfigStore, char const*, char const*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<char const* (panorama::CLabel::*)() const>(char const* (panorama::CLabel::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<char const* (panorama::CPanel2D::*)() const>(char const* (panorama::CPanel2D::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<char const* (panorama::CPanel2D::*)(char const*, char const*)>(char const* (panorama::CPanel2D::*)(char const*, char const*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<char const* (panorama::CTextEntry::*)() const>(char const* (panorama::CTextEntry::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<char const* (panorama::CToggleButton::*)() const>(char const* (panorama::CToggleButton::*)() const, v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<float (CJSClientConfigStore::*)(EConfigStore, char const*, float)>(float (CJSClientConfigStore::*)(EConfigStore, char const*, float), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<float (panorama::CGrid::*)() const>(float (panorama::CGrid::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<float (panorama::CPanel2D::*)() const>(float (panorama::CPanel2D::*)() const, v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<int (CJSClientConfigStore::*)(EConfigStore, char const*, int)>(int (CJSClientConfigStore::*)(EConfigStore, char const*, int), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<int (panorama::CCarousel::*)() const>(int (panorama::CCarousel::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<int (panorama::CGrid::*)() const>(int (panorama::CGrid::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<int (panorama::CGrid::*)()>(int (panorama::CGrid::*)(), v8::Handle<v8::Array>&)
@@ -53846,9 +53977,19 @@
  T void panorama::GetPtrToCallbackArray<void (panorama::CTextEntry::*)(int)>(void (panorama::CTextEntry::*)(int), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (panorama::CTextEntry::*)(unsigned int)>(void (panorama::CTextEntry::*)(unsigned int), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (panorama::CToggleButton::*)(bool)>(void (panorama::CToggleButton::*)(bool), v8::Handle<v8::Array>&)
+ T void panorama::JSFunctionCallTuple<CJSClientConfigStore*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSFunctionCallTuple<CTenfootControllerBase*, panorama::CPanel2D*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSFunctionCallTuple<void, panorama::CPanel2D*, char const*, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<CBroadcastChatPanel, void, char const*, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<CJSClientConfigStore, bool, EConfigStore, char const*, bool>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<CJSClientConfigStore, bool, EConfigStore, char const*, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<CJSClientConfigStore, bool, EConfigStore, char const*, float>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<CJSClientConfigStore, bool, EConfigStore, char const*, int>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<CJSClientConfigStore, bool, EConfigStore, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<CJSClientConfigStore, bool, bool>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<CJSClientConfigStore, char const*, EConfigStore, char const*, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<CJSClientConfigStore, float, EConfigStore, char const*, float>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<CJSClientConfigStore, int, EConfigStore, char const*, int>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<CTenfootControllerBase, CTenfootMsgBox*, int, char const*, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<CTenfootControllerBase, bool>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<CTenfootControllerBase, panorama::CPanel2D*>(v8::FunctionCallbackInfo<v8::Value> const&)
@@ -53915,9 +54056,20 @@
  T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), panorama::CPanoramaSymbol (panorama::CPanel2D::*)() const, int>(char const*, panorama::CPanoramaSymbol (panorama::CPanel2D::*)() const, int, void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&))
  T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), panorama::IUIPanelStyle* (panorama::CPanel2D::*)() const, int>(char const*, panorama::IUIPanelStyle* (panorama::CPanel2D::*)() const, int, void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&))
  T void panorama::RegisterJSConstantValue<CTenfootMsgBox::EMsgBoxButtons>(char const*, CTenfootMsgBox::EMsgBoxButtons)
+ T void panorama::RegisterJSConstantValue<EConfigStore>(char const*, EConfigStore)
+ T void panorama::RegisterJSGlobalFunction<CJSClientConfigStore*>(char const*, CJSClientConfigStore* (*)(), bool)
  T void panorama::RegisterJSGlobalFunction<CTenfootControllerBase*, panorama::CPanel2D*>(char const*, CTenfootControllerBase* (*)(panorama::CPanel2D*), bool)
  T void panorama::RegisterJSGlobalFunction<void, panorama::CPanel2D*, char const*, char const*>(char const*, void (*)(panorama::CPanel2D*, char const*, char const*), bool)
  T void panorama::RegisterJSMethod<CBroadcastChatPanel, void, char const*, char const*>(char const*, void (CBroadcastChatPanel::*)(char const*, char const*))
+ T void panorama::RegisterJSMethod<CJSClientConfigStore, bool, EConfigStore, char const*, bool>(char const*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, bool))
+ T void panorama::RegisterJSMethod<CJSClientConfigStore, bool, EConfigStore, char const*, char const*>(char const*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, char const*))
+ T void panorama::RegisterJSMethod<CJSClientConfigStore, bool, EConfigStore, char const*, float>(char const*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, float))
+ T void panorama::RegisterJSMethod<CJSClientConfigStore, bool, EConfigStore, char const*, int>(char const*, bool (CJSClientConfigStore::*)(EConfigStore, char const*, int))
+ T void panorama::RegisterJSMethod<CJSClientConfigStore, bool, EConfigStore, char const*>(char const*, bool (CJSClientConfigStore::*)(EConfigStore, char const*))
+ T void panorama::RegisterJSMethod<CJSClientConfigStore, bool, bool>(char const*, bool (CJSClientConfigStore::*)(bool))
+ T void panorama::RegisterJSMethod<CJSClientConfigStore, char const*, EConfigStore, char const*, char const*>(char const*, char const* (CJSClientConfigStore::*)(EConfigStore, char const*, char const*))
+ T void panorama::RegisterJSMethod<CJSClientConfigStore, float, EConfigStore, char const*, float>(char const*, float (CJSClientConfigStore::*)(EConfigStore, char const*, float))
+ T void panorama::RegisterJSMethod<CJSClientConfigStore, int, EConfigStore, char const*, int>(char const*, int (CJSClientConfigStore::*)(EConfigStore, char const*, int))
  T void panorama::RegisterJSMethod<CTenfootControllerBase, CTenfootMsgBox*, int, char const*, char const*>(char const*, CTenfootMsgBox* (CTenfootControllerBase::*)(int, char const*, char const*))
  T void panorama::RegisterJSMethod<CTenfootControllerBase, bool>(char const*, bool (CTenfootControllerBase::*)())
  T void panorama::RegisterJSMethod<CTenfootControllerBase, panorama::CPanel2D*>(char const*, panorama::CPanel2D* (CTenfootControllerBase::*)())
@@ -53970,10 +54122,17 @@
  T void panorama::RegisterJSMethod<panorama::CTextEntry, void, unsigned int>(char const*, void (panorama::CTextEntry::*)(unsigned int))
  T void panorama::RegisterJSMethod<panorama::CTextEntry, void>(char const*, void (panorama::CTextEntry::*)())
  T void panorama::RegisterJSMethod<panorama::CToggleButton, void, bool>(char const*, void (panorama::CToggleButton::*)(bool))
+ T void panorama::RestoreFuncPtr<CJSClientConfigStore* (*)()>(panorama::HACKY_FUNC_PTR_CASTER<CJSClientConfigStore* (*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<CTenfootControllerBase* (*)(panorama::CPanel2D*)>(panorama::HACKY_FUNC_PTR_CASTER<CTenfootControllerBase* (*)(panorama::CPanel2D*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<CTenfootMsgBox* (CTenfootControllerBase::*)(int, char const*, char const*)>(panorama::HACKY_FUNC_PTR_CASTER<CTenfootMsgBox* (CTenfootControllerBase::*)(int, char const*, char const*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)()>(panorama::HACKY_FUNC_PTR_CASTER<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)(char const*)>(panorama::HACKY_FUNC_PTR_CASTER<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > const& (panorama::CPanel2D::*)(char const*)>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<bool (CJSClientConfigStore::*)(EConfigStore, char const*)>(panorama::HACKY_FUNC_PTR_CASTER<bool (CJSClientConfigStore::*)(EConfigStore, char const*)>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<bool (CJSClientConfigStore::*)(EConfigStore, char const*, bool)>(panorama::HACKY_FUNC_PTR_CASTER<bool (CJSClientConfigStore::*)(EConfigStore, char const*, bool)>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<bool (CJSClientConfigStore::*)(EConfigStore, char const*, char const*)>(panorama::HACKY_FUNC_PTR_CASTER<bool (CJSClientConfigStore::*)(EConfigStore, char const*, char const*)>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<bool (CJSClientConfigStore::*)(EConfigStore, char const*, float)>(panorama::HACKY_FUNC_PTR_CASTER<bool (CJSClientConfigStore::*)(EConfigStore, char const*, float)>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<bool (CJSClientConfigStore::*)(EConfigStore, char const*, int)>(panorama::HACKY_FUNC_PTR_CASTER<bool (CJSClientConfigStore::*)(EConfigStore, char const*, int)>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<bool (CJSClientConfigStore::*)(bool)>(panorama::HACKY_FUNC_PTR_CASTER<bool (CJSClientConfigStore::*)(bool)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<bool (CTenfootControllerBase::*)()>(panorama::HACKY_FUNC_PTR_CASTER<bool (CTenfootControllerBase::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<bool (panorama::CDropDown::*)(char const*)>(panorama::HACKY_FUNC_PTR_CASTER<bool (panorama::CDropDown::*)(char const*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<bool (panorama::CLabel::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<bool (panorama::CLabel::*)() const>&, v8::Local<v8::Array>&, int)
@@ -53981,13 +54140,16 @@
  T void panorama::RestoreFuncPtr<bool (panorama::CPanel2D::*)()>(panorama::HACKY_FUNC_PTR_CASTER<bool (panorama::CPanel2D::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<bool (panorama::CPanel2D::*)(char const*)>(panorama::HACKY_FUNC_PTR_CASTER<bool (panorama::CPanel2D::*)(char const*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<bool (panorama::CPanel2D::*)(char const*, bool, bool)>(panorama::HACKY_FUNC_PTR_CASTER<bool (panorama::CPanel2D::*)(char const*, bool, bool)>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<char const* (CJSClientConfigStore::*)(EConfigStore, char const*, char const*)>(panorama::HACKY_FUNC_PTR_CASTER<char const* (CJSClientConfigStore::*)(EConfigStore, char const*, char const*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<char const* (panorama::CLabel::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<char const* (panorama::CLabel::*)() const>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<char const* (panorama::CPanel2D::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<char const* (panorama::CPanel2D::*)() const>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<char const* (panorama::CPanel2D::*)(char const*, char const*)>(panorama::HACKY_FUNC_PTR_CASTER<char const* (panorama::CPanel2D::*)(char const*, char const*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<char const* (panorama::CTextEntry::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<char const* (panorama::CTextEntry::*)() const>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<char const* (panorama::CToggleButton::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<char const* (panorama::CToggleButton::*)() const>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<float (CJSClientConfigStore::*)(EConfigStore, char const*, float)>(panorama::HACKY_FUNC_PTR_CASTER<float (CJSClientConfigStore::*)(EConfigStore, char const*, float)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<float (panorama::CGrid::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<float (panorama::CGrid::*)() const>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<float (panorama::CPanel2D::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<float (panorama::CPanel2D::*)() const>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<int (CJSClientConfigStore::*)(EConfigStore, char const*, int)>(panorama::HACKY_FUNC_PTR_CASTER<int (CJSClientConfigStore::*)(EConfigStore, char const*, int)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<int (panorama::CCarousel::*)()>(panorama::HACKY_FUNC_PTR_CASTER<int (panorama::CCarousel::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<int (panorama::CGrid::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<int (panorama::CGrid::*)() const>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<int (panorama::CGrid::*)()>(panorama::HACKY_FUNC_PTR_CASTER<int (panorama::CGrid::*)()>&, v8::Local<v8::Array>&, int)
@@ -54057,6 +54219,7 @@
  T void panorama::UIEventSet<panorama::IUIEvent*>(panorama::IUIEvent**, panorama::IUIEvent*&)
  T void panorama::UIEventValidate<char const*>(CValidator&, char const*&)
  T void panorama::UIEventValidate<panorama::IUIEvent*>(CValidator&, panorama::IUIEvent*&)
+ T void panorama::V8ParamToPanoramaType<EConfigStore>(v8::Handle<v8::Value> const&, EConfigStore*)
  T void panorama::V8ParamToPanoramaType<bool>(v8::Handle<v8::Value> const&, bool*)
  T void panorama::V8ParamToPanoramaType<char const*>(v8::Handle<v8::Value> const&, char const**)
  T void panorama::V8ParamToPanoramaType<float>(v8::Handle<v8::Value> const&, float*)
@@ -57114,6 +57277,7 @@
  t Create_CheckoutReviewLineItem(char const*, panorama::IUIPanel*)
  t Create_CheckoutShippingInfo(char const*, panorama::IUIPanel*)
  t Create_CheckoutVerifyEmail(char const*, panorama::IUIPanel*)
+ t Create_CheckoutVerifyShippingInfo(char const*, panorama::IUIPanel*)
  t Create_ChooseBinding(char const*, panorama::IUIPanel*)
  t Create_CommunityFeedStrip(char const*, panorama::IUIPanel*)
  t Create_CommunityFriendsStrip(char const*, panorama::IUIPanel*)
