@@ -545,7 +545,7 @@ CommunityFriendInventory
 }
 CommunityMarketItemPicker
 {
-	url			"%community%/profiles/%p1%/inventory/?market=1&moveupevent=%p2%"
+	url			"%community%/profiles/%p1%/inventory/?market=1&appid=%p2%&hashname=%p3%&moveupevent=%p4%"
 	method		"internal"
 	filter		"profile"
 }
