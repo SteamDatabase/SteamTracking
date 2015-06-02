@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1433265571"
+	"version"		"1433266405"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.0f55f659f9339a1ed0c85f0c591607e4b8dfbc5e"
@@ -83,10 +83,10 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.68608b28c2b6ab2baa9c32a98492a95f84ba331a"
-		"checksum"		"68608b28c2b6ab2baa9c32a98492a95f84ba331a"
-		"size"		"1573349"
-		"zipvz"		"public_all.zip.vz.09aeab510a7297110052cfcf848f06d7e8898a1d_767767"
+		"file"		"public_all.zip.a114c4e51627d5c89f4b39fbbe950f8b46f67f88"
+		"checksum"		"a114c4e51627d5c89f4b39fbbe950f8b46f67f88"
+		"size"		"1573355"
+		"zipvz"		"public_all.zip.vz.8d6f2b8450d850c6bd2adda6403bf2393ded3f67_767727"
 	}
 	"gamesforwindows_win32"
 	{
@@ -134,5 +134,5 @@
 }
 "kvsignatures"
 {
-	"win32"		"4c24a11dfe43f09c5f60e58ff1690768a99a70e0c115ace5b1091ed7549abd7e075de9ce2333b926c309540c18e21ff9ce08d3ff8bea5bfcb1aad7dc2be6294490163f7df1f52341bee88d594002c655bd2e28ec26a675cb5985a95e08ead2f8ff2d8f2a28f56b68483baf5f1f9fff0f9ec39cd5b3c4f8a88310d66034b67bd3"
+	"win32"		"557b59d4eda63050b4282a96a524b71c917b99072806fca9e03a4a2dbfe4978175b51313df165693cd766404e2f4cf925297bd774e0d8d6953894bee38d442dcc523f9064d12dd43abe77d12172772528bb8242292303eb7d5f7aa15cb46b37dca1ddaeb7bbde6842fa337a0b58b0ef53c885ec3c0de1f6090f7f573c0c6b2f1"
 }

@@ -1,6 +1,6 @@
 "ubuntu12"
 {
-	"version"		"1433265571"
+	"version"		"1433266405"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.0f55f659f9339a1ed0c85f0c591607e4b8dfbc5e"
@@ -83,10 +83,10 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.68608b28c2b6ab2baa9c32a98492a95f84ba331a"
-		"checksum"		"68608b28c2b6ab2baa9c32a98492a95f84ba331a"
-		"size"		"1573349"
-		"zipvz"		"public_all.zip.vz.09aeab510a7297110052cfcf848f06d7e8898a1d_767767"
+		"file"		"public_all.zip.a114c4e51627d5c89f4b39fbbe950f8b46f67f88"
+		"checksum"		"a114c4e51627d5c89f4b39fbbe950f8b46f67f88"
+		"size"		"1573355"
+		"zipvz"		"public_all.zip.vz.8d6f2b8450d850c6bd2adda6403bf2393ded3f67_767727"
 	}
 	"bins_ubuntu12"
 	{
@@ -151,5 +151,5 @@
 }
 "kvsignatures"
 {
-	"ubuntu12"		"d12cebc7f951d1ad70ff3aaec62a201bb8fbbe17d357cc3e73f3aa3e5c7189b3a7e5079657f9bf924fa4ec9391c01458e2207916c8949dcd7d1f97c80248f3e1be8bda8b97a3415aadd7fba8c19e1e1cf732848ca1c408f053eb033fb1533f914456bf0bac6596f86f04a970a58a3061d80dd9f1e2757299dbb1c27cef045b6d"
+	"ubuntu12"		"af1bb8d5554ca254e7f6db501b998403a0c5a78fe99a872a8b7ca00de2ac2f89fcb80b5b82a74e78fce0ea79fd8d262794f657c844f77fdb86b457f5dc15bb9405ce95759795c4b31da91a4ba1393347a00f5d9ffbe728b6c8a80bb8be085b0013ef86a19d33f0cb3729317aea89ae30c7b1ccbafbef511c62f9d105c6513a21"
 }

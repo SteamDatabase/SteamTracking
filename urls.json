@@ -128,6 +128,11 @@
 "Styles/Community/workshop_userfiles.css"        : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/workshop_userfiles.css?__TIME__",
 
 //
+// Help CSS
+//
+"Styles/Help/help.css"                           : "https://help.steampowered.com/public/css/help.css?__TIME__",
+
+//
 // Global and shared CSS
 //
 "Styles/apphub.css"                              : "https://steamcommunity-a.akamaihd.net/public/shared/css/apphub.css?__TIME__",
@@ -222,6 +227,11 @@
 "Scripts/Community/workshop_functions.js"        : "https://steamcommunity-a.akamaihd.net/public/javascript/workshop_functions.js?__TIME__&l=english",
 "Scripts/Community/workshop_home.js"             : "https://steamcommunity-a.akamaihd.net/public/javascript/workshop_home.js?__TIME__&l=english",
 "Scripts/Community/workshop_previewplayer.js"    : "https://steamcommunity-a.akamaihd.net/public/javascript/workshop_previewplayer.js?__TIME__&l=english",
+
+//
+// Help JS
+//
+"Scripts/Help/help.js"                           : "https://help.steampowered.com/public/javascript/help.js?__TIME__&l=english",
 
 //
 // Global and shared JS

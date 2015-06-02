@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1433265571"
+	"version"		"1433266405"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.0f55f659f9339a1ed0c85f0c591607e4b8dfbc5e"
@@ -83,10 +83,10 @@
 	}
 	"public_all"
 	{
-		"file"		"public_all.zip.68608b28c2b6ab2baa9c32a98492a95f84ba331a"
-		"checksum"		"68608b28c2b6ab2baa9c32a98492a95f84ba331a"
-		"size"		"1573349"
-		"zipvz"		"public_all.zip.vz.09aeab510a7297110052cfcf848f06d7e8898a1d_767767"
+		"file"		"public_all.zip.a114c4e51627d5c89f4b39fbbe950f8b46f67f88"
+		"checksum"		"a114c4e51627d5c89f4b39fbbe950f8b46f67f88"
+		"size"		"1573355"
+		"zipvz"		"public_all.zip.vz.8d6f2b8450d850c6bd2adda6403bf2393ded3f67_767727"
 	}
 	"bins_osx"
 	{
@@ -174,5 +174,5 @@
 }
 "kvsignatures"
 {
-	"osx"		"b35b954391495b3bd8b8974db25d7f36697466b256dfdcde5f94fb8f311a609b38a8a9f3089aecbabfee99078927e9aec107a9b3a31df93fff3efe2fd67d15a28b7c6ec549347979caeca7dcd081645784b154e5cbddf7539bcac7e06dbec86951f424100d2b21c99b4234542f3fc984953fa7485604641ab6bd70fb63fcd624"
+	"osx"		"88fcfa3ba8fa59eb9d7c2015edad086f9469871e1bdbea23697e40d5e3d048dcf4065246e8093d2e6e7f964d6ccc35cce61ff1ecd266e99b014d25c9aad497c67127e0b367ca5d2f64434fcd2c14c21437d5dcc633179e21a3a038c80b1373a2512f23eb97839435c5567bc5fb60fd558b8e5f11941547357ed9594757c1ca6c"
 }

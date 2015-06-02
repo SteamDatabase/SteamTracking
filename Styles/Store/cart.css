@@ -1674,7 +1674,7 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 	color: #bd4847;
 }
 
-.checkout_no_refund_warning
+.checkout_no_refund_warning,.checkout_no_refund_warning a
 {
 	color: #ffcc6a;
 }
