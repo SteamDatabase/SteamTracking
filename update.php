@@ -278,6 +278,15 @@
 			
 			$File = __DIR__ . '/' . $File;
 			
+			$Folder = dirname( $File );
+			
+			if( !is_dir( $Folder ) )
+			{
+				$this->Log( '{lightblue}Creating ' . $Folder );
+				
+				mkdir( $Folder, 0755, true );
+			}
+			
 			if( File_Exists( $File ) && StrCmp( File_Get_Contents( $File ), $Data ) === 0 )
 			{
 				return false;

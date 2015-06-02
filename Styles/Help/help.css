@@ -1,0 +1,2109 @@
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	border: none;
+}
+
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+
+.a:focus {
+	outline: 0px none;
+}
+
+a:hover {
+	text-decoration: none;
+    color: #66c0f4;
+}
+
+a.nohover:hover {
+	text-decoration: none;
+}
+
+textarea
+{
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	background-color: #324965;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 #45556c;
+	padding: 4px;
+}
+
+
+html {
+	height: 100%;
+}
+
+input[type=submit] {
+	font-size: 14px;
+	padding: 6px 10px 6px 10px;
+	background-color: #264963;
+	color: #6abcf0;
+	margin-top: 34px;
+	cursor: pointer;
+	border: none;
+}
+
+input[type=submit]:hover {
+	color: #ffffff;
+}
+
+.help_site_button {
+	display: inline-block;
+	padding: 6px 10px 6px 10px;
+	background-color: #264963;
+	color: #6abcf0;
+	cursor: pointer;
+	border: none;
+}
+
+.help_site_button:hover {
+	color: #ffffff;
+}
+
+.dropcontainer ul {
+	list-style-type:none;
+	line-height: 22px;
+	margin:0;
+	position:absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index: 90;
+
+	overflow: auto;
+	overflow-x: hidden;
+
+	box-shadow: 0 0 5px 0 #000000;
+	background: #417A9B;
+}
+.dropdownhidden{
+	display: none;
+}
+.dropdownvisible{
+	display: block;
+}
+.dropcontainer ul li {
+	padding: 0;
+	margin: 0;
+}
+.dropcontainer ul li.emptyvalue {
+	font-style: italic;
+}
+.dropcontainer ul a {
+	padding: 0 10px;
+	display:block;
+	text-decoration:none;
+	color: #e5e4dc;
+	line-height: 22px;
+	height: 22px;
+
+	white-space: nowrap;
+}
+
+.dropcontainer{
+	position:relative;
+}
+
+.dselect_container
+{
+	font-size: 12px;
+}
+
+.dselect_container {
+	position: relative;
+
+}
+.dselect_container a.trigger, .dselect_container a.activetrigger {
+	display: block;
+	color: #dfdfdf;
+	padding: 0 30px 0 8px;
+	font-size: 12px;
+	line-height: 24px;
+	border: 0;
+	border-radius: 3px;
+	text-decoration: none;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dselect_container a.trigger {
+	background: rgba( 103, 193, 245, 0.1 );
+}
+
+.dselect_container a.activetrigger, .dselect_container a.activetrigger:hover {
+	color: #ffffff;
+	background: #67c1f5;
+}
+
+
+.dselect_container a.activetrigger {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	z-index: 91;
+	position: relative;
+}
+
+.dselect_container a.trigger::after, .dselect_container a.activetrigger::after {
+	position: absolute;
+	right: 0;
+	top: 3px;
+	width: 24px;
+	height: 14px;
+	background: url('https://help.steampowered.com/public/images//ico_arrow_dn_for_select.png') no-repeat right;
+	content: '';
+}
+
+.dselect_container a.trigger:hover,
+.dselect_container .dropcontainer a.highlighted_selection
+{
+	color: #ffffff;
+	background-color: #67c1f5; /* Old browsers */
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b), color-stop(95%,#67c1f5));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#417a9b', endColorstr='#67c1f5',GradientType=1 );background: -moz-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -o-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -ms-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););}
+
+
+body.v6 {
+	position: relative;
+	min-height: 100%;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	color: #c6d4df;
+	font-size: 12px;
+}
+
+body.v6.in_client {
+	background-position: center top;
+}
+
+body.v6 {
+	background: url( 'https://help.steampowered.com/public/images/blue_body_top.jpg?v=2' ) center top no-repeat,
+    url( 'https://help.steampowered.com/public/images/blue_body_repeat.jpg?v=2' ) center top repeat-y #000000;
+}
+
+body.v6 > div#global_header {
+	border-bottom-color: #171a21;
+}
+
+.page_background {
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+body.v6 #footer {
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 16px 0 60px 0;
+	margin: 0;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+body.v6 #footer.small_footer {
+	position: relative;
+	top: auto;
+	bottom: auto;
+}
+
+body.v6 #footer_spacer.small_footer {
+	height: 50px;
+}
+
+body.v6 #footer .footer_content {
+	width: 950px;
+	margin: 0px auto;
+	padding-top: 16px;
+}
+body.v6 #footer #footer_logo {
+	float: left;
+	padding-top: 2px;
+}
+body.v6 #footer #footer_text {
+	float: left;
+	margin-left: 12px;
+	color: #8F98A0;
+}
+body.v6 #footer #footer_text a {
+	color: #C6D4DF;
+}
+body.v6 #footer #footer_text a:hover {
+	color: #ffffff;
+}
+body.v6 #footer .rule{
+	height: 8px;
+}
+body.v6 #footer .valve_links {
+	margin-top: 8px;
+	float: left;
+	font-family: 'Motiva Sans', Arial,Helvetica,Verdana,sans-serif;
+	font-size: 13px;
+	color: #61686D;
+}
+body.v6 #footer .valve_links a {
+   color: #C6D4DF;
+}
+body.v6 #footer .valve_links a:hover {
+	color: #ffffff;
+}
+body.v6 #footer .valve_links img {
+	vertical-align: bottom;
+}
+
+body.v6.blue #footer {
+	background: #000000;
+}
+
+body.v6 #footer_spacer {
+	height: 260px;
+}
+
+body.v6 > .perf_timing_area .perf_timing_link {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+}
+
+.perf_timing_data {
+	position: relative;
+	background-color: #000000;
+	margin: 0px auto 48px auto;
+	padding: 8px;
+	text-align: left;
+	width: 936px;
+	font-size: 14px;
+	z-index: 5;
+}
+
+body.v6 h2 {
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	color: #67c1f5;
+}
+body.v6 h2 a {
+    color: #67c1f5;
+    text-decoration: none;
+}
+body.v6 h2 a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body.v6 .home_rightcol h2 {
+    margin-bottom: 7px;
+    margin-top: 0px;
+}
+body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
+    margin-top: 30px;
+    margin-bottom: 7px;
+}
+body.v6 .discovery_queue_ctn h2, body.v6 .steam_curators_ctn h2, body.v6  .apps_recommended_by_curators_ctn h2 {
+    margin-top: 40px;
+    margin-bottom: 7px;
+}
+
+body.v6 .upcoming_queue_ctn h2, body.v6 .steam_curators_ctn h2 {
+    margin-top: 40px;
+    margin-bottom: 7px;
+}
+
+body.v6 h2 .header_inline {
+	color: #9099a1;
+	font-size: 15px;
+}
+
+body.v6 h2 .header_inline a {
+	color: #c6d4df;
+	cursor: pointer;
+}
+body.v6 h2 .header_inline a:hover {
+	color: #67c1f5;
+}
+
+body.v6 h2.pageheader {
+	color: #ffffff;
+	font-size: 34px;
+	text-shadow: 1px 1px 0 #000000;
+	margin-top: -4px;
+}
+
+body.v6 h3 {
+	color: #ffffff;
+	font-size: 22px;
+	font-family: "Motiva Sans Regular", "Motiva Sans", arial, tahoma, sans-serif;
+	font-weight: normal;
+}
+
+body.v6 .page_content {
+	width: 950px;
+	margin: 0 auto;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.breadcrumbs {
+    color: #61686d;
+    font-size: 12px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+	padding-top: 10px;
+}
+.breadcrumbs a {
+    color: #8f98a0;
+}
+.breadcrumbs a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+div.leftcol {
+	width: 616px;
+	float: left;
+}
+div.leftcol.large {
+    width: 686px;
+}
+
+div.rightcol {
+	width: 308px;
+	margin-left: 14px;
+	float: right;
+}
+div.rightcol.small {
+    width: 238px;
+}
+
+body.v6 .supernav_content, body.v6 #global_header, body.v6 #global_header .content
+{
+	background: #171a21;
+}
+
+
+.searchbox {
+
+	background-image: url( 'https://help.steampowered.com/public/images/v6/store_header_search.png?v=1' );
+
+	color: #a6a5a2;
+	width: 216px;
+	height: 30px;
+
+	position: relative;
+	z-index: 150;
+	cursor: text;
+}
+.searchbox:hover {
+    background-image: url( 'https://help.steampowered.com/public/images/v6/store_header_search_hover.png' );
+}
+
+
+.searchbox input {
+	border: none;
+	background-color: transparent;
+	color: #000000;
+	margin-top: 6px;
+	margin-left: 8px;
+	width: 180px;
+	outline: none;
+}
+
+.searchbox input.default {
+	font-style: italic;
+    color: #305d8a;
+}
+
+
+/*
+ * SEARCH SUGGESTIONS
+ */
+
+
+.search_suggest {
+	text-align: left;
+	width: 430px;
+
+	top: 39px;
+	right: 4px;
+}
+
+.search_suggest .match {
+	display: block;
+	position: relative;
+	height: 54px;
+	overflow: hidden;
+	border-top: 1px solid #13242e;
+}
+
+.search_suggest .match.focus {
+	background-color: #212d3d;
+}
+
+.search_suggest .match:hover {
+	text-decoration: none;
+}
+
+.search_suggest .match .match_img {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+}
+
+.search_suggest .match .match_img img {
+	width: 120px;
+	height: 45px;
+}
+
+.search_suggest .match .match_name {
+	position: absolute;
+	left: 134px;
+	top: 12px;
+	width: 258px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.search_suggest .match .match_price {
+	position: absolute;
+	left: 134px;
+	top: 30px;
+}
+
+.search_suggest .match .ds_flag {
+	top: 18px;
+	left: 4px;
+}
+
+.slider_ctn {
+	position: relative;
+	height: 18px;
+}
+.slider_ctn.spotlight {
+    width: 308px;
+}
+
+.slider {
+	position: absolute;
+	left: 39px;
+	right: 39px;
+	top: 0;
+	bottom: 0;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+}
+
+.slider.slider_text {
+	opacity: 0.2;
+	text-align: center;
+	line-height: 13px;
+	font-size: 10px;
+	color: #ffffff;
+}
+
+.slider .handle {
+	position: absolute;
+	top: 0;
+    background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	height: 18px;
+	width: 60px;
+	cursor: pointer;
+}
+
+.slider_ctn .slider_left, .slider_ctn .slider_right {
+	position: absolute;
+	width: 38px;
+	top: 0;
+	bottom: 0;
+	background-color: rgba( 0, 0, 0, 0.4 );
+	border-radius: 3px;
+	cursor: pointer;
+}
+.highlight_ctn .slider_ctn .slider_left, .highlight_ctn .slider_ctn .slider_right, .highlight_ctn .slider .handle {
+	background-color: rgba( 35, 60, 81, 0.4 );
+}
+
+.slider_ctn .slider_left:hover, .slider_ctn .slider_right:hover, .slider .handle:hover {
+    background: #3d6c8d; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #3d6c8d 0%, #2e5470 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3d6c8d), color-stop(100%,#2e5470)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #3d6c8d 0%,#2e5470 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #3d6c8d 0%,#2e5470 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d6c8d', endColorstr='#2e5470',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.slider_left {
+	left: 0;
+}
+
+.slider_right {
+	right: 0;
+}
+.slider_right span {
+    display: inline-block;
+    background-position: -9px 0px;
+    background-repeat: no-repeat;
+    background-image: url('https://help.steampowered.com/public/images//v6/icon_cluster_controls.png');
+    width: 9px;
+    height: 7px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.slider_left span {
+    display: inline-block;
+    background-position: -18px 0px;
+    background-repeat: no-repeat;
+    background-image: url('https://help.steampowered.com/public/images//v6/icon_cluster_controls.png');
+    width: 9px;
+    height: 7px;
+    margin-left: 13px;
+    margin-top: 5px;
+}
+.slider_right:hover span {
+    background-position: -9px -7px;
+}
+.slider_left:hover span {
+    background-position: -18px -7px;
+}
+
+.slider_left.disabled, .slider_right.disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+
+
+/* Dark page cut */
+
+body.v6 .page_content_ctn.dark {
+	background-color: #000;
+	padding: 25px 0;
+}
+
+body.v6 .page_content_ctn.dark:last-child {
+	margin-bottom: -52px;
+}
+
+.page_content_ctn.dark .pageheader:after {
+	content: ' ';
+	display: block;
+	height: 1px;
+	margin-top: 5px;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#3b6e8c), color-stop(95%,#000000));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b6e8c', endColorstr='#000000',GradientType=1 );background: -moz-linear-gradient( left, #3b6e8c 5%,#000000 95%);background: -webkit-linear-gradient( left, #3b6e8c 5%,#000000 95%);background: -o-linear-gradient( left, #3b6e8c 5%,#000000 95%);background: -ms-linear-gradient( left, #3b6e8c 5%,#000000 95%);background: linear-gradient( to right, #3b6e8c 5%,#000000 95%);}
+
+
+#page_background_holder {
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	overflow: hidden;
+	z-index: -1;
+	min-width: 972px;
+}
+
+#page_background {
+	text-align: center;
+	background-position: center top;
+	background-repeat: no-repeat;
+	height: 1024px;
+	min-width: 972px;
+}
+
+#wizard_perf_data {
+	margin-top: 100px;
+}
+
+#page_content
+{
+	position: relative;
+	min-height: 450px;
+}
+
+@-webkit-keyframes fade_in
+{
+	0% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}
+
+@keyframes fade_in
+{
+	0% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}
+
+#wizard_contents, #error_contents
+{
+	opacity: 0.0;
+	visibility: hidden;
+
+			transition: visibility 0.0s linear 0.5s, opacity 0.5s linear;
+}
+
+#error_contents
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+
+.page_loaded #wizard_contents,
+.page_error #error_contents
+{
+	opacity: 1.0;
+	visibility: visible;
+	transition: none;
+
+		-webkit-animation: fade_in 0.3s linear;
+	animation: fade_in 0.3s linear;
+}
+
+.page_error #wizard_contents
+{
+	opacity: 0.0;
+	visibility: hidden;
+	transition: none;
+}
+
+#wizard_contents
+{
+	padding: 20px 0px 20px 0px;
+}
+
+#error_contents
+{
+	padding: 40px 0px 20px 0px;
+}
+
+.error_bg
+{
+	background-color: rgba( 0, 0, 0, 0.2 );
+	max-width: 890px;
+	padding: 0px 32px 32px 32px;
+	margin-top: 15px;
+}
+
+#error_header
+{
+	color: #67c1f5;
+	font-size: 44pt;
+	font-family: Motiva Light;
+	padding-top: 32px;
+}
+
+#error_description
+{
+	color: #a94847;
+	font-size: 14px;
+	padding-top: 32px;
+}
+
+#error_reload
+{
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.error_reload
+{
+	margin-top: 20px;
+}
+
+.help_page_title {
+	color: #5eafde;
+	font-size: 18px;
+	padding: 6px 0px 6px 0px;
+	margin-top: 15px;
+}
+
+.help_wizard_button {
+	display: block;
+	width: 640px;
+
+	margin-top: 10px;
+	border: solid 1px;
+	border-color: #66778b #323f51 #323f51 #66778b;
+
+	font-size: 16px;
+	color: white;
+
+	background-color: #445468;
+}
+
+.help_wizard_button.disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.help_wizard_button:hover {
+	color: white;
+}
+
+.help_wizard_button a:hover {
+	color: #ffffff;
+}
+
+.help_wizard_button > span {
+	margin: 10px 14px 10px 14px;
+	display: inline-block;
+}
+
+.help_wizard_button_large > span {
+	margin: 20px 14px 20px 14px;
+}
+
+.help_wizard_button > img {
+	float: left;
+	margin: 4px 4px 4px 6px;
+}
+
+.help_wizard_button > img + span {
+	margin-left: 8px;
+}
+
+.help_wizard_button_text {
+	padding: 10px 14px 10px 14px;
+}
+
+.help_wizard_button:not(.disabled):not(.nohover):hover {
+	background-color: #4581a5;
+	border-color: #8faec7 #4e5d6f #4e5d6f #8faec7;
+}
+
+.help_wizard_arrow_right {
+	background-image: url("https://help.steampowered.com/public/images/arrow_right.png");
+	background-repeat: no-repeat;
+	background-position: right 14px center;
+	background-size: auto 16px;
+
+	/* additional padding so contents do not render over arrow */
+	padding-right: 28px;
+	width: 612px;
+}
+
+.help_wizard_button_dark {
+	color: darkgray;
+	font-size: 80%;
+}
+
+.help_wizard_button_gap {
+	margin-top: 30px;
+}
+
+.help_game_playtime {
+	color: darkgray;
+	font-size: 12px;
+	margin: 1px 0px 1px 0px;
+}
+
+.help_wizard_product_info {
+	margin: 4px;
+}
+
+.help_wizard_button_notes {
+	background-color: #121a25;
+	width: 616px;
+	padding: 12px;
+	margin: 10px 0 0 0;
+
+	font-size: 14px;
+}
+
+.login_page {
+	padding: 20px 0px;
+}
+
+.login_page h2 {
+	margin-bottom: 6px;
+}
+
+.loginbox_highlight {
+	margin-top: 18px;
+	padding-bottom: 20px;
+	background-image: url( 'https://help.steampowered.com/public/images/login_highlight.png' );
+	background-size: 100%;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+.loginbox_background, .login_help_links_box {
+	max-width: 890px;
+	position: relative;
+	padding: 24px 30px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+}
+
+.login_help_links_box {
+	padding: 24px 30px 30px 30px;
+}
+
+.loginbox input.text_input {
+	width: 270px;
+	height: 18px;
+	padding: 2px 4px;
+	margin-top: 4px;
+	color: #ffffff;
+	background-color: #324965;
+	border-top: solid 1px #182636;
+	border-left: solid 1px #182636;
+	border-right: solid 1px #45566a;
+	border-bottom: solid 1px #45566a;
+}
+
+.loginbox .captcha_image_row {
+	position: relative;
+}
+
+.loginbox .login_row {
+	margin-bottom: 18px;
+}
+
+.loginbox #captchImg {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+.loginbox #captchaRefresh {
+	margin-left: 220px;
+	padding-top: 8px;
+}
+
+.login_error {
+	padding-bottom: 12px;
+}
+
+#login_btn_signin .btn_medium > span {
+	padding: 0px 30px;
+}
+
+.login_forgot_info {
+	margin-top: 20px;
+}
+
+.login_signin_msg {
+	width: 352px;
+	height: 196px;
+	padding: 0px 34px;
+	background-color: #24445f;
+	position: absolute;
+	top: 40px;
+	right: 46px;
+	text-align: center;
+	display: table;
+}
+
+.login_signin_msg span {
+	color: white;
+	font-size: 18px;
+	line-height: 30px;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.small_timestamp {
+	font-size: 14px;
+	color: lightgray;
+}
+
+.help_informational_block {
+	padding: 10px;
+}
+
+#help_refund_reason {
+	min-width: 400px;
+}
+#gift_refundable_notes h2{
+	margin-top: 20px;
+	color: #67c1f5;
+}
+
+.help_header {
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+
+.help_header:hover {
+	color: #ffffff;
+}
+
+.help_intro_text {
+	color: #5eafde;
+	font-size: 20px;
+	margin: 16px 0px 20px 0px;
+}
+
+.help_section_text {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #5eafde;
+}
+
+.help_arrow_right {
+	float: right;
+	padding: 14px;
+	background: url("https://help.steampowered.com/public/images/arrow_right.png") center no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.help_divider {
+	background-color: #3b718d;
+	height: 1px;
+	width: 640px;
+	margin: 14px 0 8px 0;
+}
+
+#help_search_support_input {
+	height: 44px;
+	width: 620px;
+	font-family: "Motiva Sans Light Italic", "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
+	font-size: 24px;
+	padding: 10px;
+	color: #ffffff;
+	background-color: #324965;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 #45556c;
+}
+
+#help_search_support_form {
+	margin-top: 5px;
+}
+
+::-webkit-input-placeholder {
+	font-style: italic;
+	text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	font-style: italic;
+	text-align: center;
+}
+
+:-ms-input-placeholder {
+	font-style: italic;
+	text-align: center;
+}
+
+.help_refund_request_area {
+	background-color: rgba(0, 0, 0, 0.2);
+	min-height: 200px;
+	margin-top: 30px;
+	width: 910px;
+	padding: 15px;
+}
+
+.help_refund_request_area h1 {
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 6px;
+	color: #67c1f5;
+}
+
+body.v6 .help_refund_request_area h2 {
+	font-size: 12px;
+	margin-bottom: 15px;
+	color: #82909a;
+}
+
+body.v6 .help_refund_request_area h2 a {
+	color: #adc4d3;
+}
+
+body.v6 .help_refund_request_area h2 a:hover {
+	color: #ffffff;
+}
+
+.refund_request_warnings
+{
+	color: #67c1f5;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.refund_result_message
+{
+	margin-top: 20px;
+	width: 604px;
+}
+
+.help_refund_request_area h1.failed
+{
+	color: #a94847;
+}
+
+#refund_tell_why_text {
+	max-width: 800px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.refund_notes {
+	margin-bottom: 20px;
+}
+
+.refund_notes_left {
+	float: left;
+	width: 100px;
+	text-align: right;
+	margin-top: 2px;
+}
+
+.refund_notes_left > div
+{
+	line-height: 24px;
+	margin-right: 6px;
+	margin-top: 6px;
+}
+
+.refund_notes_right {
+	float: left;
+	width: 700px;
+}
+
+.refund_notes_right > div {
+	margin: 6px 0 6px 0;
+}
+
+.refund_field {
+	color: #778592;
+}
+
+.refund_value {
+	color: #c6d4df;
+}
+
+.refund_info_box {
+	padding: 10px;
+	background-color: #1d2a3b;
+	margin-right: 80px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.refund_notes_box
+{
+	padding: 10px;
+	margin-right: 80px;
+}
+
+.refund_info_box_section {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.refund_info_box_left {
+	width: 90px;
+	min-height: 1px;
+	text-align: right;
+	padding-right: 10px;
+	float: left;
+}
+
+.refund_info_box_left.multiple_options {
+	line-height: 24px;
+}
+
+.refund_info_box_right {
+	float: left;
+	max-width: 700px;
+}
+
+.refund_note {
+	color: #9d9d9f;
+}
+
+/*.refund_bright {
+	color: #fdfdfd;
+}*/
+
+.purchase_detail_field {
+	color: #67c1f5;
+	text-align: right;
+}
+
+.refund_game_name {
+	color: #67c1f5;
+	padding: 0;
+	padding-right: 14px;
+	line-height: 22px;
+}
+
+.refund_game_detail {
+	line-height: 24px;
+	color: #9d9d9f;
+	padding-right: 14px;
+}
+
+.refund_game_line_item {
+	border-spacing: 0;
+}
+
+.refund_game_block {
+	margin-top: 10px;
+	border-spacing: 0;
+}
+
+#refund_text_input
+{
+	width: 100%;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+#refund_selector_droplist .not_refundable
+{
+	text-decoration: line-through;
+}
+
+.help_app_header_divider {
+	background-color: #3b718d;
+	height: 1px;
+	width: 940px;
+	margin: 6px 0 2px 0;
+}
+
+.help_app_header {
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 924px;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+.help_app_header .subbox_left {
+	width: 604px;
+	float: left;
+}
+
+.help_app_header img {
+	float: left;
+	margin: 6px 12px 6px 6px;
+}
+
+.help_app_header .game_name {
+	font-size: 24px;
+	color: #ffffff;
+	padding-top: 4px;
+	line-height: 28px;
+}
+
+.help_app_header .account_details {
+	float: right;
+	width: 276px;
+	margin-top: 10px;
+}
+
+.help_app_header .subbox {
+	float: left;
+	min-width: 130px;
+	margin-top: 8px;
+}
+
+.account_details > div {
+	margin-bottom: 4px;
+}
+
+.help_highlight_text {
+	color: #67c1f5;
+}
+
+a .help_highlight_text:hover {
+	color: #ffffff;
+}
+
+.help_whitelight_text {
+	color: #ffffff;
+	line-height: 28px;
+}
+
+.help_lowlight_text {
+	color: #b0b6c0;
+}
+
+.help_official_box {
+	background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgba(78, 145, 187, 0.3) 0%, rgba(226, 244, 255, 0.3) 100%) repeat scroll 0 0;
+	min-height: 88px;
+	width: 912px;
+	padding: 14px 14px 24px 14px;
+	margin-top: 6px;
+	margin-bottom: 14px;
+}
+
+.help_official_box .subbox {
+	float: left;
+	width: 33%;
+	margin-top: 10px;
+}
+
+.help_official_box .help_highlight_text {
+	font-size: 20px;
+	color: #ffffff;
+	line-height: 36px;
+}
+
+.help_header_link a {
+	font-size: 12px;
+}
+
+.help_header_nolink {
+	font-size: 12px;
+	color: #b0b6c0;
+}
+
+.help_header_right {
+	float: right;
+	width: 260px;
+	margin-left: 24px;
+}
+
+.help_text_block {
+	color: #8c96a0;
+	padding: 5px 0px 10px 0px;
+	line-height: 18px;
+}
+
+.help_game_header {
+	color: #67c1f5;
+	font-family: "Motiva Sans Light","Motiva Sans",arial,tahoma,sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.help_game_header a {
+	font-size: 14px;
+	color: #3c739a;
+	float: right;
+}
+
+.help_game_header a:hover {
+	color: #ffffff;
+}
+
+.help_your_issue {
+	color: #C6D4DF;
+	font-style: italic;
+	font-size: 16px;
+}
+
+.help_your_issue_start {
+	color: #8c96a0;
+	font-size: 16px;
+	margin-bottom: 16px;
+	padding-top: 10px;
+}
+
+.help_game_guides_box {
+	background-color: #121a25;
+	padding: 14px;
+	margin-bottom: 20px;
+}
+
+.help_game_guides_box .guide {
+	padding: 2px 2px 2px 2px;
+	/*background: rgba( 103, 193, 245, 0.1 );*/
+}
+
+a.guide_row {
+	display: block;
+	line-height: 32px;
+	padding: 2px;
+}
+
+.guide_row img {
+	float: left;
+	margin-right: 6px;
+}
+
+.guide_row .guide_views {
+	float: right;
+	margin-left: 20px;
+	padding-right: 4px;
+}
+
+.guide_row .guide_title {
+
+}
+
+.help_game_guides_box .guide .guide_title {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.help_game_guides_box .guide a {
+	color: #8c96a0;
+	display: block;
+}
+
+.help_game_guides_box .guide a:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background: #67c1f5; /* Old browsers */
+	background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.help_game_content_left {
+	width: 600px;
+	margin-right: 20px;
+	float: left;
+}
+
+.help_game_content_right {
+	float: left;
+	width: 320px;
+	min-height: 800px;
+}
+
+.help_game_refund_box {
+	background-color: #121a25;
+	padding: 14px;
+	color: #8c96a0;
+	line-height: 17px;
+}
+
+.help_game_request_refund_button {
+	padding: 6px 10px 6px 10px;
+	background-color: #264963;
+	color: #6abcf0;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.help_game_request_refund_button:hover {
+	color: #ffffff;
+}
+
+.help_purchase_button {
+	width: 740px;
+}
+
+.help_purchases .help_purchase_button {
+	font-size: 14px;
+}
+
+.help_purchase_time {
+	float: left;
+	min-width: 60px;
+}
+
+.help_purchase_img {
+	float: left;
+}
+
+.help_purchase_img img {
+	float: left;
+	margin: 0 6px 0 0;
+}
+
+.help_purchase_right {
+	float: right;
+	text-align: right;
+}
+
+.help_purchase_detail_text {
+	color: #9cacba;
+}
+
+.help_purchase_price {
+	display: inline-block;
+	text-align: right;
+}
+
+.help_purchase_price.price_strikeout {
+	text-decoration: line-through;
+	color: #9cacba;
+}
+
+.help_purchase_qty {
+	color: #9cacba;
+	font-size: 14px;
+	float: right;
+	margin-right: 10px;
+}
+
+.help_purchase_detail_box {
+	background-color: #1c2837;
+	padding: 10px;
+	margin: 6px;
+	line-height: 20px;
+	color: #82909a;
+}
+
+.help_purchase_detail_box .purchase_line_items {
+	margin-top: 10px;
+}
+
+.help_purchase_detail_box .purchase_totals {
+	margin-top: 10px;
+}
+
+.help_purchase_detail_box.help_purchase_package {
+	margin: 30px 0px;
+}
+
+.help_purchase_content {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.help_purchase_content img {
+	vertical-align: middle;
+}
+
+.help_purchase_package.price_strikeout .refund_value,
+.help_microtxn_info.price_strikeout .refund_value
+{
+	text-decoration: line-through;
+}
+
+.help_microtxn_info .warning
+{
+	color: #a94847;
+	margin-bottom: 1em;
+}
+
+.help_purchase_money {
+	text-align: right;
+	padding: 0px 8px 0px 8px;
+}
+
+.help_notinlibrary_details
+{
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 20px;
+	width: calc( 644px - 40px );
+	margin-bottom: 20px;
+}
+
+.help_notinlibrary_details p
+{
+	margin-top: 20px;
+	line-height: 16px;
+}
+
+.help_notinlibrary_details p:first-child
+{
+	margin-top: 0px;
+}
+
+.help_notinlibrary_details .HighlightedText
+{
+	color: white;
+}
+
+.microtxn_purchase_date {
+	margin-left: 10px;
+}
+
+.purchase_line_items {
+	line-height: 20px;
+}
+
+.purchase_totals {
+	color: #82909a;
+	line-height: 14px;
+}
+
+.purchase_totals td {
+	padding-right: 8px;
+}
+
+.purchase_total_header {
+	text-align: right;
+}
+
+.help_search_result {
+	display: block;
+	padding: 10px;
+}
+
+.help_search_result:hover {
+	background-color: #264963;
+}
+
+.help_search_result:hover h2 {
+	color: white;
+}
+
+.help_search_results_apps {
+	margin-top: 20px;
+}
+
+.help_search_results_faqs {
+	margin-top: 20px;
+	max-width: 680px;
+}
+
+.help_faq_text {
+	color: #949494;
+}
+
+.help_app_header img {
+	float: left;
+	margin: 6px 12px 6px 6px;
+}
+
+
+/*******************************************/
+/* Help with login info
+/*******************************************/
+#forgot_login_search, #forgot_login_code {
+	color: #ffffff;
+	background-color: #324965;
+	border-top: solid 1px #182636;
+	border-left: solid 1px #182636;
+	border-right: solid 1px #45566a;
+	border-bottom: solid 1px #45566a;
+	padding: 8px;
+	margin-top: 8px;
+	width: 300px;
+}
+
+.account_recovery_box {
+	display: table;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 10px 20px 20px 20px;
+	margin-top: 30px;
+	min-width: 500px;
+
+	color: #ffffff;
+	font-size: 12px;
+}
+
+.account_recovery_box .help_page_title {
+	margin: 0px;
+}
+
+.account_recovery_instructions {
+	color: #ffffff;
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.account_recovery_submit {
+	margin-top: 26px;
+}
+
+.account_recovery_submit .throbber {
+	padding-left: 14px;
+	margin-top: 0px;
+}
+
+.account_recovery_submit input[type=submit],
+.account_recovery_submit .help_site_button
+{
+	margin-top: 0px;
+}
+
+.loading .account_recovery_submit input[type=submit],
+.loading .account_recovery_submit .help_site_button
+{
+	display: none;
+}
+
+#verify_code_error_msg, #changepw_error_msg, #search_error_msg, #form_submit_error {
+	color: #ffffff;
+	border: 1px solid #810000;
+	background-color: #500000;
+	margin: 30px 8px 8px 0px;
+	padding: 8px;
+	display: inline-block;
+}
+
+#recovery_code_resent {
+	color: #ffffff;
+	border: 1px solid #00adee;
+	background-color: #003f57;
+	margin: 30px 8px 8px 0px;
+	padding: 8px;
+	display: inline-block;
+}
+
+.code_trouble_header
+{
+	margin-top: 40px;
+}
+
+.account_select_headers
+{
+	margin-top: 16px;
+}
+
+.account_select_headers > div,
+.account_select_row > div
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.account_select_row > div
+{
+	height: 42px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+}
+
+.account_login_column
+{
+	padding-left: 6px;
+}
+
+.account_profile_column
+{
+	width: 300px;
+}
+
+.account_login_column
+{
+	width: 220px;
+}
+
+.account_select_row .account_reset_column
+{
+	background-color: transparent;
+	padding-left: 8px;
+	width: 80px;
+}
+
+.account_select_row .account_reset_column .help_site_button
+{
+	font-size: 14px;
+	padding: 8px 34px;
+}
+
+.account_select_row
+{
+	margin-top: 6px;
+}
+
+.player_avatar,
+.player_name
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.player_avatar
+{
+	padding: 2px 6px 0px 2px;
+}
+
+.accountname_area
+{
+	margin-top: 20px;
+	padding: 8px 12px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	position: relative;
+	width: 576px;
+}
+
+.pwreset_left_column
+{
+	width: 300px;
+	display: inline-block;
+}
+
+.pwreset_right_column
+{
+	width: 276px;
+	position: absolute;
+	top: 8px;
+	right: 12px;
+}
+
+.pwreset_right_column .player_avatar, .pwreset_right_column .player_name
+{
+	height: 42px;
+}
+
+.pwreset_account_name
+{
+	font-size: 20px;
+	line-height: 42px;
+}
+
+.password_area
+{
+	margin-top: 20px;
+}
+
+.password_fields
+{
+	display: inline-block;
+}
+
+.password_field
+{
+	margin-bottom: 10px;
+}
+
+.password_fields input
+{
+	margin-top: 2px;
+}
+
+#password_reset, #password_reset_confirm, #password_twofactor, #twofactor_password, #twofactor_resetcode
+{
+	color: #ffffff;
+	background-color: #324965;
+	border-top: solid 1px #182636;
+	border-left: solid 1px #182636;
+	border-right: solid 1px #45566a;
+	border-bottom: solid 1px #45566a;
+	padding: 4px;
+	width: 300px;
+	margin-top: 2px;
+}
+
+#password_twofactor, #twofactor_resetcode
+{
+	width: 50px;
+}
+
+.password_tag {
+	opacity: 0.0;
+	background-color: #a0382b;
+	color: white;
+	padding: 8px;
+	border-radius: 4px;
+	margin-left: 6px;
+	max-width: 500px;
+
+	display: inline-block;
+	position: relative;
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
+	-webkit-transition-property: opacity;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.3s;
+}
+
+.password_tag:before {
+	display: inline-block;
+	content: "";
+	position: absolute;
+	right: 100%;
+	top: 5px;
+	width: 0px;
+	height: 0px;
+	border-top: 10px solid transparent;
+	border-right: 11px solid #a0382b;
+	border-bottom: 10px solid transparent;
+}
+
+.password_tag.visible {
+	opacity: 1.0;
+}
+
+.password_tag.error {
+	background-color: #a0382b;
+}
+
+.password_tag.error:before {
+	border-right: 11px solid #a0382b;
+}
+
+.password_tag.warning {
+	background-color: #b78124;
+}
+
+.password_tag.warning:before {
+	border-right: 11px solid #b78124;
+}
+
+.reset_twofactor_area
+{
+	margin-top: 20px;
+	width: 600px;
+}
+
+.reset_twofactor_instr
+{
+	margin-bottom: 20px;
+}
+
+.help_section_small_header {
+	margin-top: 16px;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #5eafde;
+}
+
+.help_section_content {
+	width: 700px;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: table;
+	font-size: 12px;
+	margin-top: 10px;
+	min-width: 500px;
+	padding: 10px 20px 30px 20px;
+}
+
+.help_section_body p {
+	margin-bottom: 8px;
+	line-height: 16px;
+
+}
+
+.help_section_body ul {
+	margin-left: 20px;
+}
+
+.help_section_body li {
+	margin-bottom: 4px;
+	line-height: 20px;
+}
+
+/* store category_icon class */
+img.category_icon {
+	width: 26px;
+	height: 16px;
+	vertical-align: top;
+}
+
+.help_tooltip {
+	background: #c2c2c2;
+	color: #3d3d3f;
+	font-size: 11px;
+	border-radius: 3px;
+	padding: 5px;
+	max-width: 225px;
+	white-space: normal;
+	box-shadow: 0 0 3px #000000;
+	word-wrap: break-word;
+}
+
+.LoadingWrapper
+{
+	position: relative;
+	margin: auto auto;
+	vertical-align: middle;
+}
+
+.LoadingThrobber
+{
+	margin: 0px auto 0px auto;
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+}
+
+@keyframes loading_throbber_bar
+{
+	0%
+	{
+		transform: scale( 1.0, 0.6 );
+		background-color: #67c1f5;
+	}
+
+	30%
+	{
+		transform: scale( 1.0, 1.0 );
+		background-color: #67c1f5;
+	}
+
+	55%
+	{
+		transform: scale( 1.0, 0.6 );
+		background-color: #67c1f5;
+	}
+
+	100%
+	{
+		transform: scale( 1.0, 0.6 );
+		background-color: #67c1f5;
+	}
+}
+
+@-webkit-keyframes loading_throbber_bar
+{
+	0%
+	{
+		-webkit-transform: scale( 1.0, 0.7 );
+		background-color: #67c1f5;
+	}
+
+	30%
+	{
+		-webkit-transform: scale( 1.0, 1.0 );
+		background-color: #67c1f5;
+	}
+
+	55%
+	{
+		-webkit-transform: scale( 1.0, 0.7 );
+		background-color: #67c1f5;
+	}
+
+	100%
+	{
+		-webkit-transform: scale( 1.0, 0.7 );
+		background-color: #67c1f5;
+	}
+}
+
+
+.LoadingThrobber .Bar
+{
+	margin-top: 3px;
+	-webkit-animation: test 2s infinite;
+	float: left;
+	margin-right: 4px;
+	width: 9px;
+	height: 36px;
+	background-color: #67c1f5;
+
+	animation: loading_throbber_bar 1s ease-in-out infinite;
+	-webkit-animation: loading_throbber_bar 1s ease-in-out infinite;
+}
+
+.LoadingThrobber .Bar1
+{
+}
+
+.LoadingThrobber .Bar2
+{
+	animation-delay: 0.16s;
+	-webkit-animation-delay: 0.16s;
+}
+
+.LoadingThrobber .Bar3
+{
+	animation-delay: 0.32s;
+	-webkit-animation-delay: 0.32s;
+}
+
+.throbber
+{
+	width: 35px;
+	height: 40px;
+	display: none;
+}
+
+.loading .throbber
+{
+	display: block;
+}
+
+.throbber > div
+{
+	float: left;
+	width: 25%;
+	height: 100%;
+	background-color: #67c1f5;
+}
+
+.loading .throbber > div
+{
+	animation: loading_throbber_bar 1s ease-in-out infinite;
+	-webkit-animation: loading_throbber_bar 1s ease-in-out infinite;
+}
+
+.throbber > div:nth-child(1)
+{
+	transform: scale( 1.0, 0.6 );
+	-webkit-transform: scale( 1.0, 0.6 );
+}
+
+.throbber > div:nth-child(2)
+{
+	margin-left: 4px;
+	margin-left: 12%;
+	transform: scale( 1.0, 0.6 );
+	-webkit-transform: scale( 1.0, 0.6 );
+	animation-delay: 0.16s;
+	-webkit-animation-delay: 0.16s;
+}
+
+.throbber > div:nth-child(3)
+{
+	margin-left: 4px;
+	margin-left: 12%;
+	transform: scale( 1.0, 0.6 );
+	-webkit-transform: scale( 1.0, 0.6 );
+	animation-delay: 0.32s;
+	-webkit-animation-delay: 0.32s;
+}
+
+@keyframes throbber_frames
+{
+	0%
+	{
+		transform: scale( 1.0, 0.6 );
+	}
+
+	30%
+	{
+		transform: scale( 1.0, 1.0 );
+	}
+
+	55%
+	{
+		transform: scale( 1.0, 0.6 );
+	}
+
+	100%
+	{
+		transform: scale( 1.0, 0.6 );
+	}
+}
+
+@-webkit-keyframes throbber_frames
+{
+	0%
+	{
+		transform: scale( 1.0, 0.6 );
+	}
+
+	30%
+	{
+		transform: scale( 1.0, 1.0 );
+	}
+
+	55%
+	{
+		transform: scale( 1.0, 0.6 );
+	}
+
+	100%
+	{
+		transform: scale( 1.0, 0.6 );
+	}
+}
