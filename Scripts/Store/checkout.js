@@ -103,8 +103,8 @@ function OnCreateQiwiInvoiceFailure( eResult, resultDetail )
 	}
 	DisplayErrorMessage( sErrorMessage );
 	
-	$('purchase_button_bottom').style.display = 'block';
-	$('purchase_button_inprogress_bottom').style.display = 'none';	
+	$J('#purchase_button_bottom').show();
+	$J('#purchase_button_inprogress_bottom').hide();	
 }
 
 
@@ -121,8 +121,8 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 		return;
 	}
 	
-	$('purchase_button_bottom').style.display = 'none';
-	$('purchase_button_inprogress_bottom').style.display = 'block';
+	$J('#purchase_button_bottom').hide();
+	$J('#purchase_button_inprogress_bottom').show();
 
 	var g_winQiwiWindow = window.open( 'http://store.steampowered.com/qiwi/launchauth', 'qiwiWindow' );
 
@@ -286,8 +286,8 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
 		}
 		
-		$('purchase_button_bottom').style.display = 'none';
-		$('purchase_button_inprogress_bottom').style.display = 'block';
+		$J('#purchase_button_bottom').hide();
+		$J('#purchase_button_inprogress_bottom').show();
 	} 
 	catch( e ) 
 	{
@@ -4079,11 +4079,11 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 			DisplayErrorMessage( error_text );
 		}
 		
-				$('purchase_button_bottom').style.display = 'none';
-		$('purchase_button_inprogress_bottom').style.display = 'none';
-		$('purchase_button_disabled_bottom').style.display = 'block';
-		$('change_payment_method_button_bottom').style.display = 'block';
-		$('cancel_button_bottom').style.display = 'block';
+				$J('#purchase_button_bottom').hide();
+		$J('#purchase_button_inprogress_bottom').hide();
+		$J('#purchase_button_disabled_bottom').show();
+		$J('#change_payment_method_button_bottom').show();
+		$J('#cancel_button_bottom').show();
 	}
 	catch( e )
 	{
@@ -4341,11 +4341,11 @@ function HandlePollForTransactionStatusFailure()
 			DisplayErrorMessage( error_text );
 		}
 		
-				$('purchase_button_bottom').style.display = 'none';
-		$('purchase_button_inprogress_bottom').style.display = 'none';
-		$('purchase_button_disabled_bottom').style.display = 'block';
-		$('change_payment_method_button_bottom').style.display = 'none';
-		$('cancel_button_bottom').style.display = 'block';
+				$J('#purchase_button_bottom').hide();
+		$J('#purchase_button_inprogress_bottom').hide();
+		$J('#purchase_button_disabled_bottom').show();
+		$J('#change_payment_method_button_bottom').hide();
+		$J('#cancel_button_bottom').show();
 	}
 	catch( e )
 	{
@@ -4477,11 +4477,11 @@ function FinalizeTransaction()
 	
 	try
 	{
-				$('purchase_button_bottom').style.display = 'none';
-		$('purchase_button_disabled_bottom').style.display = 'none';
-		$('purchase_button_inprogress_bottom').style.display = 'block';
-		$('change_payment_method_button_bottom').style.display = 'none';
-		$('cancel_button_bottom').style.display = 'none';
+				$J('#purchase_button_bottom').hide();
+		$J('#purchase_button_disabled_bottom').hide();
+		$J('#purchase_button_inprogress_bottom').show();
+		$J('#change_payment_method_button_bottom').hide();
+		$J('#cancel_button_bottom').hide();
 	}
 	catch ( e )
 	{

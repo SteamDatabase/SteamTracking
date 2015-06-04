@@ -285,8 +285,7 @@ img.game_header_image_full {
     font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 }
 
-.game_area_comingsoon,
-.game_area_offsite_purchase {
+.game_area_comingsoon {
 
 	color: #d5d6d8;
 	margin-bottom: 28px;
@@ -299,8 +298,7 @@ img.game_header_image_full {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66407898', endColorstr='#6667c1f5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.game_area_comingsoon p,
-.game_area_offsite_purchase p {
+.game_area_comingsoon p, {
 	color: #67c1f5;
 }
 
@@ -340,8 +338,7 @@ img.game_header_image_full {
 	text-decoration: underline;
 }
 
-.game_area_comingsoon .content,
-.game_area_offsite_purchase .content {
+.game_area_comingsoon .content {
 	overflow: visible;
 	padding-left: 16px;
 	padding-top: 12px;
@@ -349,7 +346,7 @@ img.game_header_image_full {
 	position: relative;
 }
 
-.game_area_comingsoon h1, .game_area_offsite_purchase h1 {
+.game_area_comingsoon h1 {
 	font-size: 24px;
     font-weight: normal;
     color: #d5d6d8;
@@ -410,7 +407,8 @@ img.game_header_image_full {
 	margin-top: 15px;
 }
 
-.game_area_purchase_game {
+.game_area_purchase_game,
+.game_area_offsite_purchase {
 	position: relative;
 
     background: -moz-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%, rgba(226,244,255,0.3) 100%); /* FF3.6+ */
@@ -600,23 +598,27 @@ img.game_header_image_full {
 	float: right;
 }
 
-.game_area_purchase_game h1 {
+.game_area_purchase_game h1,
+.game_area_offsite_purchase h1 {
 	font-size: 21px;
     font-family: "Motiva Sans", arial, tahoma;
 	color: #ffffff;
     font-weight: normal;
 }
 
-.game_area_purchase_game b {
+.game_area_purchase_game b,
+.game_area_offsite_purchase b {
 	font-weight: normal;
 	color: #8bc53f;
 }
 
-.game_area_purchase_game p.package_contents {
+.game_area_purchase_game p.package_contents,
+.game_area_offsite_purchase p.package_contents{
 	color: #8f98a0;
 }
 
-.game_area_purchase_game p.package_contents a {
+.game_area_purchase_game p.package_contents a,
+.game_area_offsite_purchase p.package_contents a {
 	color: #b0aeac;
 }
 

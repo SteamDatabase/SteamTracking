@@ -56,7 +56,10 @@ HelpWizard = {
 
 			if ( data.redirect )
 			{
-				window.location = data.redirect;
+				if ( data.replace )
+					window.location.replace( data.redirect );
+				else
+					window.location = data.redirect;
 				return;
 			}
 

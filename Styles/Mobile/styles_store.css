@@ -471,7 +471,8 @@ div[data-role='page'] {
 }
 
 
-.game_area_purchase_game {
+.game_area_purchase_game,
+.game_area_offsite_purchase {
 	position: relative;
 
 	margin: 0px 8px 28px 8px;
@@ -522,29 +523,35 @@ div[data-role='page'] {
 }
 
 
-.game_area_purchase_game_wrapper .game_area_purchase_game {
+.game_area_purchase_game_wrapper .game_area_purchase_game,
+.game_area_purchase_game_wrapper .game_area_offsite_purchase {
 	margin-bottom: 0px;
 }
 
-.game_area_purchase_game .game_area_purchase_platform {
+.game_area_purchase_game .game_area_purchase_platform,
+.game_area_offsite_purchase .game_area_purchase_platform {
 	float: right;
 }
 
-.game_area_purchase_game h1 {
+.game_area_purchase_game h1,
+.game_area_offsite_purchase h1 {
 	font-size: 21px;
 	color: #ffffff;
 }
 
-.game_area_purchase_game b {
+.game_area_purchase_game b,
+.game_area_offsite_purchase b {
 	font-weight: normal;
 	color: #8bc53f;
 }
 
-.game_area_purchase_game p.package_contents {
+.game_area_purchase_game p.package_contents,
+.game_area_offsite_purchase p.package_contents {
 	color: #626366;
 }
 
-.game_area_purchase_game p.package_contents a {
+.game_area_purchase_game p.package_contents a,
+.game_area_offsite_purchase p.package_contents a {
 	color: #b0aeac;
 }
 
@@ -561,7 +568,8 @@ div[data-role='page'] {
 }
 
 .game_area_purchase_game .game_purchase_action,
-.game_area_comingsoon .content .game_purchase_action
+.game_area_comingsoon .content .game_purchase_action,
+.game_area_offsite_purchase .game_purchase_action
 {
 	position: absolute;
 
