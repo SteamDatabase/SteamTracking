@@ -1438,7 +1438,7 @@ textarea {
 	right: 0px;
 }
 
-.workshopItemSubscriptionControls.landscape
+.workshopItemSubscriptionControls.aspectratio_16x9, .workshopItemSubscriptionControls.aspectratio_4x3
 {
 	top: 83px;
 }
@@ -1681,9 +1681,13 @@ textarea {
 	background-color: #000000;
 }
 
-.workshopItemPreviewHolder.landscape
+.workshopItemPreviewHolder.aspectratio_16x9
 {
 	height: 112px;
+}
+.workshopItemPreviewHolder.aspectratio_4x3
+{
+	height: 150px;
 }
 
 .workshopItemPreviewImage {
@@ -1692,8 +1696,11 @@ textarea {
 	vertical-align: middle;
 }
 
-.workshopItemPreviewImage.landscape {
+.workshopItemPreviewImage.aspectratio_16x9 {
 	max-height: 112px;
+}
+.workshopItemPreviewImage.aspectratio_4x3 {
+	max-height: 150px;
 }
 
 .workshopItemPreviewHolder:hover {

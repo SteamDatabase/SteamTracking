@@ -147,7 +147,7 @@ HelpWizard = {
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				help_issue_origin: help_issue,
 				help_issue: $J('#refund_reason_selector').val(),
-				contact_email: $J('#contact_email').text(),
+				contact_email: $J('#contact_email').data( 'email' ),
 				issue_text: explanation,
 				issue_appid: appid,
 				issue_transid: transid,

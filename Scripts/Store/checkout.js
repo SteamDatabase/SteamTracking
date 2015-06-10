@@ -2646,13 +2646,6 @@ function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 				rgBadFields.shipping_state_select_trigger = true;
 			}
 		}
-		else if ( $('shipping_state_text').value.length < 1 )
-		{
-			errorString += 'Please enter a State or Province.<br/>';
-			rgBadFields.shipping_state_text = true;
-		}
-			
-	
 	
 		if ( $( 'shipping_phone' ).value.length < 3 )
 		{

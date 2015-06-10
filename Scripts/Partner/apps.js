@@ -196,10 +196,10 @@ function SetAppSigningInfo( appid, fileKeyMap, signaturesCheckedOnLaunch )
 //
 // Set the economy info
 //
-function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, refundApiLevel, privateMode, hasItemServer )
+function SetAppEconomyInfo( appid, assetURL, assetKey, apiLevel, privateMode, refundApiLevel, refundPrivateMode, hasItemServer )
 {
     AppsAjaxRequest( g_szBaseURL + '/apps/seteconomyinfo/' + appid,
-		{ 'assetURL' : assetURL, 'assetKey' : assetKey, 'apiLevel' : apiLevel, 'refundApiLevel': refundApiLevel, 'privateMode' : privateMode, 'hasItemServer' : hasItemServer },
+		{ 'assetURL' : assetURL, 'assetKey' : assetKey, 'apiLevel' : apiLevel, 'privateMode' : privateMode, 'refundApiLevel': refundApiLevel, 'refundPrivateMode' : refundPrivateMode, 'hasItemServer' : hasItemServer },
 		function( results )
 		{
 			// now reflect results

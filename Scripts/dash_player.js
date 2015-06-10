@@ -28,7 +28,7 @@ function CDASHPlayer( elVideoPlayer )
 
 	// player states
 	this.m_bIsBuffering = true;
-	this.m_bShouldStayPaused = false;
+	this.m_bIsPlayingInUI = true;
 	this.m_bExiting = false;
 	this.m_nCurrentSeekTime = -1;
 	this.m_nRepChangeTargetHeight = 0;
@@ -52,12 +52,17 @@ function CDASHPlayer( elVideoPlayer )
 
 	// Captions
 	this.m_VTTCaptionLoader = null;
+
+	// Game state data
+	this.m_fLastGameDataEventTriggerTime = 0;
+	this.m_schGameDataEventTimer = null;
 }
 
 CDASHPlayer.TRACK_BUFFER_MS = 5000;
 CDASHPlayer.TRACK_BUFFER_MAX_SEC = 30 * 60;
 CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 30 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
+CDASHPlayer.GAMEDATA_TRIGGER_MS = 3000;
 
 CDASHPlayer.HAVE_NOTHING = 0;
 CDASHPlayer.HAVE_METADATA = 1;
@@ -106,7 +111,7 @@ CDASHPlayer.prototype.Close = function()
 	this.m_rtLiveContentStarted = 0;
 	this.m_rtVODResumeAtTime = 0;
 	this.m_bIsBuffering = true;
-	this.m_bShouldStayPaused = false;
+	this.m_bIsPlayingInUI = true;
 	this.m_nCurrentSeekTime = -1;
 	this.m_nSavedPlaybackRate = 1.0;
 	this.m_bExiting = false;
@@ -117,6 +122,13 @@ CDASHPlayer.prototype.Close = function()
 	this.m_nBandwidthEntries = 0;
 	this.m_nBandwidthMinimum = 0;
 	this.m_nBandwidthMaximum = 0;
+
+	// Stop game data triggering events
+	if ( this.m_schGameDataEventTimer )
+	{
+		clearTimeout(this.m_schGameDataEventTimer);
+		this.m_schGameDataEventTimer = null;
+	}
 
 	if ( this.m_VTTCaptionLoader )
 	{
@@ -270,8 +282,76 @@ CDASHPlayer.prototype.BCreateLoaders = function()
 			break;
 	}
 
+	for ( var i = 0; i < period.adaptationSets.length; i++ )
+	{
+		var adaptation = period.adaptationSets[i];
+		if ( adaptation.containsGame )
+		{
+			var loader = new CSegmentLoader( this, adaptation );
+			this.m_loaders.push( loader );
+
+			// ensure no existing event timer
+			if ( this.m_schGameDataEventTimer )
+				clearTimeout( this.m_schGameDataEventTimer );
+
+			var _player = this;
+			this.m_schGameDataEventTimer = setTimeout( function() { _player.GameDataEventTrigger(); }, CDASHPlayer.GAMEDATA_TRIGGER_MS );
+
+			break;
+		}
+	}
+
 	// want to always play video
 	return !bNeedVideo;
+}
+
+CDASHPlayer.prototype.GameDataEventTrigger = function()
+{
+	var _player = this;
+	var nCurrentTime = _player.m_elVideoPlayer.currentTime;
+	// PlayerLog( 'GameDataEventTrigger at ' + nCurrentTime );
+
+	// get the video buffer start for clearing data shortly
+	var nStartVideoTime = 0;
+	for (var i = 0; i < _player.m_loaders.length; i++)
+	{
+		if ( _player.m_loaders[i].ContainsVideo() )
+		{
+			nStartVideoTime = _player.m_loaders[i].GetBufferedStart();
+			break;
+		}
+	}
+
+	// now trigger events with the data that needs to be broadcast
+	for (var i = 0; i < _player.m_loaders.length; i++)
+	{
+		if ( _player.m_loaders[i].ContainsGame() )
+		{
+			// clear any frames that can't be seeked too any more
+			_player.m_loaders[i].ClearGameDataFramesBefore( nStartVideoTime );
+
+			var rgGameFrames = _player.m_loaders[i].GetGameDataFrames();
+			$J.each( rgGameFrames, function ( index, value )
+			{
+				var fFramePTS = value.pts / 1000;
+				if ( _player.m_fLastGameDataEventTriggerTime < fFramePTS && fFramePTS <= nCurrentTime )
+				{
+					// PlayerLog( 'Found GameData to Trigger: ' + _player.m_fLastGameDataEventTriggerTime + ', ' + fFramePTS + ', ' + nCurrentTime );
+					$J( _player.m_elVideoPlayer ).trigger( 'gamedataupdate', [ value.pts, value.gamedata ] );
+				}
+
+				// if we have moved ahead of the current time, don't bother going further
+				if (fFramePTS > nCurrentTime)
+				{
+					// returns from the each, not the broadcast function
+					return false;
+				}
+			});
+		}
+	}
+
+	_player.m_fLastGameDataEventTriggerTime = nCurrentTime;
+	this.m_schGameDataEventTimer = setTimeout( function() { _player.GameDataEventTrigger(); }, CDASHPlayer.GAMEDATA_TRIGGER_MS );
 }
 
 CDASHPlayer.prototype.InitVideoControl = function()
@@ -291,6 +371,8 @@ CDASHPlayer.prototype.InitVideoControl = function()
 
 	$J( this.m_elVideoPlayer ).on( 'progress.DASHPlayerEvents', function() { _player.OnVideoBufferProgress(); });
 	$J( this.m_elVideoPlayer ).on( 'stalled.DASHPlayerEvents', function() { _player.OnVideoStalled(); });
+
+	$J( this.m_elVideoPlayer ).on( 'changeuiplayingstate.DASHPlayerEvents', function( e, playing ) { _player.SavePlaybackStateFromUI( playing ); } );
 }
 
 CDASHPlayer.prototype.OnMediaSourceOpen = function()
@@ -373,7 +455,7 @@ CDASHPlayer.prototype.OnVideoBufferProgress = function()
 
 		this.m_elVideoPlayer.currentTime = nStartPlayback;
 
-		if ( !this.m_bShouldStayPaused )
+		if ( this.m_bIsPlayingInUI )
 			this.m_elVideoPlayer.play();
 
 		this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate;
@@ -467,6 +549,9 @@ CDASHPlayer.prototype.SeekToBufferedEnd = function()
 	var nStartPlayback = null;
 	for ( var i = 0; i < this.m_loaders.length; i++ )
 	{
+		if ( this.m_loaders[i].ContainsGame() )
+			continue;
+
 		if ( nStartPlayback == null )
 		{
 			nStartPlayback = this.m_loaders[i].GetBufferedEnd();
@@ -486,28 +571,81 @@ CDASHPlayer.prototype.SeekToBufferedEnd = function()
 
 CDASHPlayer.prototype.SeekTo = function( nTime )
 {
-	if ( !this.BIsBuffering() )
+	// bounds check the seek request
+	var minSeek = 0.0;
+	var maxSeek = Number.MAX_VALUE;
+	if ( this.BIsLiveContent() )
 	{
-		var bCanSeekImmediately = true;
-		for (var i = 0; i < this.m_loaders.length; i++)
+		for ( var i = 0; i < this.m_loaders.length; i++ )
 		{
-			bCanSeekImmediately &= this.m_loaders[i].SeekToSegment( nTime, false );
-		}
-
-		if ( bCanSeekImmediately )
-		{
-			this.m_elVideoPlayer.currentTime = nTime;
-		}
-		else
-		{
-			this.SavePlaybackStateForBuffering( nTime );
+			if ( this.m_loaders[i].ContainsVideo() || this.m_loaders[i].ContainsAudio() )
+			{
+				minSeek = Math.max( this.m_loaders[i].GetBufferedStart() + ( CDASHPlayer.TRACK_BUFFER_MS / 1000 ), minSeek );
+				maxSeek = Math.min( this.m_loaders[i].GetBufferedEnd() - ( CDASHPlayer.TRACK_BUFFER_MS / 1000 ), maxSeek );
+			}
 		}
 	}
+	else
+	{
+		maxSeek = this.m_mpd.GetPeriodDuration(0) - 1;
+	}
+
+	if ( minSeek > nTime )
+		nTime = minSeek;
+	else if ( nTime > maxSeek )
+		nTime = maxSeek;
+
+	// now do the seek
+	var bCanSeekImmediately = true;
+	for (var i = 0; i < this.m_loaders.length; i++)
+	{
+		bCanSeekImmediately &= this.m_loaders[i].SeekToSegment( nTime, false );
+	}
+
+	if ( bCanSeekImmediately )
+	{
+		this.m_elVideoPlayer.currentTime = nTime;
+	}
+	else
+	{
+		this.SavePlaybackStateForBuffering( nTime );
+	}
+
+	// return the actual time seeked to
+	return nTime;
+}
+
+CDASHPlayer.prototype.SkipTime = function( nTimeDelta )
+{
+	var nTime = this.m_elVideoPlayer.currentTime + nTimeDelta;
+	return this.SeekTo( nTime );
+}
+
+CDASHPlayer.prototype.BIsLiveEdge = function( nTime )
+{
+	// return true time passed in is within the live edge period and currently playing
+	if ( this.BIsLiveContent() && this.m_bIsPlayingInUI )
+	{
+		for ( var i = 0; i < this.m_loaders.length; i++ )
+		{
+			if ( this.m_loaders[i].ContainsVideo() )
+			{
+				if ( this.m_loaders[i].GetBufferedEnd() - nTime < ( CDASHPlayer.TRACK_BUFFER_MS / 1000 ) * 2 )
+					return true;
+			}
+		}
+	}
+
+	return false;
+}
+
+CDASHPlayer.prototype.SavePlaybackStateFromUI = function ( bPlaying )
+{
+	this.m_bIsPlayingInUI = bPlaying;
 }
 
 CDASHPlayer.prototype.SavePlaybackStateForBuffering = function( nSeekTime )
 {
-	this.m_bShouldStayPaused = this.m_elVideoPlayer.paused;
 	this.m_elVideoPlayer.pause();
 	this.m_nCurrentSeekTime = nSeekTime;
 	this.m_bIsBuffering = true;
@@ -693,6 +831,9 @@ CDASHPlayer.prototype.UpdateClosedCaption = function ( closedCaptionCode, ccRole
 	{
 		this.m_VTTCaptionLoader = new CVTTCaptionLoader( this.m_elVideoPlayer, this.GetClosedCaptionsArray() );
 	}
+
+	if ( typeof ccRole === 'undefined' || ccRole == '' )
+		ccRole = CVTTCaptionLoader.s_Subtitle;
 
 	this.m_VTTCaptionLoader.SwitchToTextTrack( closedCaptionCode, ccRole );
 }
@@ -1049,6 +1190,26 @@ CDASHPlayer.prototype.StatsRecentSegmentDownloads = function( bVideo )
 	return stats;
 }
 
+CDASHPlayer.prototype.StatsGameDataBufferCount = function()
+{
+	for (var i = 0; i < this.m_loaders.length; i++)
+	{
+		if ( this.m_loaders[i].ContainsGame() )
+			return this.m_loaders[i].GetGameDataFrames().length;
+	}
+}
+
+CDASHPlayer.prototype.StatsLastGameDataBuffer = function()
+{
+	for (var i = 0; i < this.m_loaders.length; i++)
+	{
+		if ( this.m_loaders[i].ContainsGame() )
+			return this.m_loaders[i].m_rgLastGameFrame;
+	}
+
+	return null;
+}
+
 CDASHPlayer.prototype.BLogVideoVerbose = function()
 {
 	return this.m_bVideoLogVerbose;
@@ -1092,6 +1253,10 @@ function CSegmentLoader( player, adaptationSet )
 	this.m_nSegmentDownloadTimeMinimum = 0;
 	this.m_nSegmentDownloadTimeMaximum = 0;
 	this.m_nLastSegmentDownloadStatus = 200;
+
+	// game data storage
+	this.m_rgGameDataFrames = [];
+	this.m_rgLastGameFrame = {};
 }
 
 CSegmentLoader.s_BufferUpdateNone = 0;
@@ -1162,6 +1327,10 @@ CSegmentLoader.prototype.Close = function()
 	this.m_nSegmentDownloadTimeMinimum = 0;
 	this.m_nSegmentDownloadTimeMaximum = 0;
 	this.m_nLastSegmentDownloadStatus = 200;
+
+	// game data storage
+	this.m_rgGameDataFrames = [];
+	this.m_rgLastGameFrame = {};
 }
 
 CSegmentLoader.prototype.ContainsVideo = function()
@@ -1180,6 +1349,14 @@ CSegmentLoader.prototype.ContainsAudio = function()
 		return false;
 }
 
+CSegmentLoader.prototype.ContainsGame = function()
+{
+	if ( this.m_adaptation )
+		return this.m_adaptation.containsGame;
+	else
+		return false;
+}
+
 CSegmentLoader.prototype.SetMediaSource = function( mediaSource )
 {
 	this.m_mediaSource = mediaSource;
@@ -1193,10 +1370,9 @@ CSegmentLoader.prototype.GetRepresentationsCount = function()
 CSegmentLoader.prototype.GetTotalSegments = function()
 {
 	// Calculate total segments if appropriate
-	if (this.m_player.m_mpd.periods[0].duration)
+	if ( this.m_player.m_mpd.periods[0].duration )
 	{
-		// asking for segment after end of video, so - 1 for actual segment count
-		this.m_nTotalSegments = CMPDParser.GetSegmentForTime( this.m_adaptation, this.m_player.m_mpd.periods[0].duration * 1000 ) - 1;
+		this.m_nTotalSegments = CMPDParser.GetSegmentForTime( this.m_adaptation, this.m_player.m_mpd.periods[0].duration * 1000 );
 	}
 
 	return this.m_nTotalSegments;
@@ -1231,13 +1407,22 @@ CSegmentLoader.prototype.BeginPlayback = function( unStartTime )
 		this.DownloadNextSegment();
 
 	}
-	else if ( this.ContainsAudio() && !this.ContainsVideo())
+	else if ( this.ContainsAudio() )
 	{
 		// alternate audio stream
 		this.m_nNextSegment = CMPDParser.GetSegmentForTime( this.m_adaptation, unStartTime );
 		PlayerLog( 'Audio Stream Starting at: ' + SecondsToTime( unStartTime / 1000 ) + ', starting segment: ' + this.m_nNextSegment );
 
 		this.ChangeRepresentationByIndex( this.m_player.m_nAudioRepresentationIndex );
+		this.DownloadNextSegment();
+	}
+	else if ( this.ContainsGame() )
+	{
+		// game data coming down in json
+		this.m_nNextSegment = CMPDParser.GetSegmentForTime( this.m_adaptation, unStartTime );
+		this.m_bNeedInitSegment = false;
+		this.m_representation = this.m_adaptation.representations[0];
+		PlayerLog( 'Game Data Stream Starting at: ' + SecondsToTime( unStartTime / 1000 ) + ', starting segment: ' + this.m_nNextSegment );
 		this.DownloadNextSegment();
 	}
 }
@@ -1268,23 +1453,28 @@ CSegmentLoader.prototype.ChangeRepresentationByIndex = function( representationI
 	}
 }
 
+CSegmentLoader.prototype.BIsEndVOD = function( bCheckCurrentSegment )
+{
+	var nSegToCheck = bCheckCurrentSegment ? this.m_nNextSegment - 1 : this.m_nNextSegment;
+	if ( nSegToCheck > this.m_nTotalSegments )
+	{
+		if ( this.ContainsVideo() )
+			$J( this.m_player.m_elVideoPlayer ).trigger( 'voddownloadcomplete' );
+
+		return true;
+	}
+
+	return false;
+}
+
 CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAttemptStarted )
 {
 	this.m_schRetryDownload = null;
 	if ( !rtAttemptStarted )
 		rtAttemptStarted = Date.now();
 
-	// VOD ended if the segment about to be downloaded is more than the total segments
-	if ( ( this.m_nNextSegment - 1 ) > this.m_nTotalSegments )
-	{
-		// PlayerLog ( this.ContainsVideo() ? "Video" : "Audio" ) ;
-		// PlayerLog ( this.m_sourceBuffer.buffered.end(0) );
-
-		if ( this.ContainsVideo() )
-			$J( this.m_player.m_elVideoPlayer ).trigger( 'voddownloadcomplete' );
-
+	if ( this.BIsEndVOD( true ) )
 		return;
-	}
 
 	// PlayerLog( Date.now() + ' downloading: ' + url );
 
@@ -1293,9 +1483,13 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 	this.m_xhr = xhr;
 	xhr.open( 'GET', url );
 	xhr.send();
-	xhr.responseType = 'arraybuffer';
 
-	var rtDownloadStart = new Date().getTime();
+	if ( !this.ContainsGame() )
+		xhr.responseType = 'arraybuffer';
+	else
+		xhr.responseType = 'json';
+
+	var rtDownloadStart = performance.now();
 	try
 	{
 		xhr.addEventListener( 'readystatechange', function ()
@@ -1313,6 +1507,10 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 
 				if ( xhr.status != 200 || !xhr.response )
 				{
+					// Check if next segment will end VOD and if so, stop now
+					if ( xhr.status == 404 && _loader.BIsEndVOD( false ) )
+						return;
+
 					_loader.m_nFailedSegmentDownloads++;
 
 					PlayerLog( '[video] HTTP ' + xhr.status + ' (' + nDownloadMS + 'ms, ' + + '0k): ' + url );
@@ -1332,28 +1530,42 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 					return;
 				}
 
-				try
+				if ( !_loader.ContainsGame() )
 				{
-					var arr = new Uint8Array( xhr.response );
-					var segment = {};
-					segment.duration = nSegmentDuration;
-					segment.data = arr;
-					_loader.m_bufSegments.push( segment );
-
-					_loader.LogDownload( xhr, rtDownloadStart, segment.data.length );
-
-					if ( _loader.m_player.BLogVideoVerbose() )
+					try
 					{
-						var nSize = segment.data.length / 1000;
-						PlayerLog( '[video] HTTP ' + xhr.status + ' (' + nDownloadMS + 'ms, ' + Math.floor( nSize ) + 'k): ' + url );
+						var arr = new Uint8Array(xhr.response);
+						var segment = {};
+						segment.duration = nSegmentDuration;
+						segment.data = arr;
+						_loader.m_bufSegments.push(segment);
+
+						_loader.LogDownload(xhr, rtDownloadStart, segment.data.length);
+						_loader.UpdateBuffer();
+
+						if (_loader.m_player.BLogVideoVerbose()) {
+							var nSize = segment.data.length / 1000;
+							PlayerLog('[video] HTTP ' + xhr.status + ' (' + nDownloadMS + 'ms, ' + Math.floor(nSize) + 'k): ' + url);
+						}
+					}
+					catch (e) {
+						PlayerLog('Exception while appending: ' + e);
 					}
 				}
-				catch (e)
+				else
 				{
-					PlayerLog('Exception while appending: ' + e);
+					for ( var f = 0; f < xhr.response.frames.length; f++ )
+					{
+						_loader.m_rgGameDataFrames.push( xhr.response.frames[f] );
+					}
+
+					_loader.m_rgLastGameFrame = xhr.response;
+
+					//if ( xhr.response.frames.length > 0 )
+					//	PlayerLog( 'Received Frame with PTS: ' + ( _loader.m_rgLastGameFrame.frames[_loader.m_rgLastGameFrame.frames.length-1].pts / 1000 ) );
+
 				}
 
-				_loader.UpdateBuffer();
 				_loader.ScheduleNextDownload();
 			}
 		}, false);
@@ -1418,7 +1630,7 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 	else
 	{
 		// check to see if we should remove any data
-		buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : {};
+		buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : [];
 		if ( buffered.length > 0 && (buffered.end( 0 ) - buffered.start( 0 )) > CDASHPlayer.TRACK_BUFFER_MAX_SEC )
 		{
 			var nStart = Math.max( 0, buffered.start(0) - 1 );
@@ -1446,8 +1658,7 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 
 CSegmentLoader.prototype.OnSourceBufferUpdateEnd = function()
 {
-	if ( this.m_nBufferUpdate == CSegmentLoader.s_BufferUpdateRemove && this.m_bSeekInProgress )
-		this.m_bSeekInProgress = false;
+	this.m_bSeekInProgress = false;
 
 	if ( this.m_nBufferUpdate == CSegmentLoader.s_BufferUpdateAppend )
 		this.m_player.OnSegmentDownloaded();
@@ -1531,19 +1742,25 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 
 CSegmentLoader.prototype.BIsLoaderStalling = function()
 {
-	return ( this.GetAmountBufferedInPlayer() < CMPDParser.GetSegmentDuration( this.m_adaptation ) && ( this.m_nNextSegment <= this.m_nTotalSegments ) );
+	if ( !this.ContainsGame() )
+		return ( this.GetAmountBufferedInPlayer() < CMPDParser.GetSegmentDuration( this.m_adaptation ) && ( this.m_nNextSegment <= this.m_nTotalSegments ) );
+	else
+		return false;
 }
 
 CSegmentLoader.prototype.BIsLoaderBuffered = function()
 {
-	return ( this.GetAmountBufferedInPlayer() >= CDASHPlayer.TRACK_BUFFER_MS || this.m_nNextSegment > this.m_nTotalSegments );
+	if ( !this.ContainsGame() )
+		return ( this.GetAmountBufferedInPlayer() >= CDASHPlayer.TRACK_BUFFER_MS || this.m_nNextSegment > this.m_nTotalSegments );
+	else
+		return true;
 }
 
 CSegmentLoader.prototype.GetAmountBufferedInPlayer = function()
 {
 	var nBuffered = 0;
 	var buffered = {};
-	buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : {};
+	buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : [];
 
 	if ( buffered.length > 0 )
 	{
@@ -1574,7 +1791,7 @@ CSegmentLoader.prototype.GetAmountBuffered = function()
 
 CSegmentLoader.prototype.GetBufferedStart = function()
 {
-	var buffered = this.m_sourceBuffer.buffered;
+	var buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : [];
 	if ( buffered.length == 0 )
 		return 0;
 
@@ -1583,7 +1800,7 @@ CSegmentLoader.prototype.GetBufferedStart = function()
 
 CSegmentLoader.prototype.GetBufferedEnd = function()
 {
-	var buffered = this.m_sourceBuffer.buffered;
+	var buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : [];
 	if ( buffered.length == 0 )
 		return 0;
 
@@ -1593,10 +1810,8 @@ CSegmentLoader.prototype.GetBufferedEnd = function()
 CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear )
 {
 	// if seeking outside of the main buffer or forced override
-	if ( nSeekTime < this.GetBufferedStart() || nSeekTime > this.GetBufferedEnd() || bForceBufferClear )
+	if ( !this.ContainsGame() && ( nSeekTime < this.GetBufferedStart() || nSeekTime > this.GetBufferedEnd() || bForceBufferClear ) )
 	{
-		this.m_bSeekInProgress = true;
-
 		// Allow any current download to complete
 		if ( this.m_xhr )
 		{
@@ -1605,6 +1820,8 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 			this.m_schNextDownload = setTimeout( function() { _loader.SeekToSegment( nSeekTime, bForceBufferClear ) }, CDASHPlayer.DOWNLOAD_RETRY_MS );
 			return;
 		}
+
+		this.m_bSeekInProgress = true;
 
 		// stop download timeouts
 		if ( this.m_schNextDownload )
@@ -1680,6 +1897,25 @@ CSegmentLoader.prototype.RemoveAllBuffers = function()
 	this.m_bRemoveBufferState = false;
 }
 
+CSegmentLoader.prototype.GetGameDataFrames = function()
+{
+	return this.m_rgGameDataFrames;
+}
+
+CSegmentLoader.prototype.ClearGameDataFramesBefore = function( nBeforeTime )
+{
+	var spliceCount = 0;
+	$J.each(this.m_rgGameDataFrames, function (index, value)
+	{
+		var fFramePTS = value.pts / 1000;
+		if ( fFramePTS < nBeforeTime )
+			spliceCount++;
+	});
+
+	// PlayerLog( 'Clearing Game Data Frames earlier than ' + nBeforeTime + '. Total Frames to Clear: ' + spliceCount );
+	this.m_rgGameDataFrames.splice( 0, spliceCount );
+}
+
 CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes )
 {
 	// remove the oldest log as needed
@@ -1690,7 +1926,7 @@ CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes 
 
 	// store the download
 	var logEntry = [];
-	logEntry.downloadTime = ( new Date().getTime() ) - startTime;
+	logEntry.downloadTime = performance.now() - startTime;
 
 	if ( logEntry.downloadTime > 0 )
 	{
@@ -1891,6 +2127,7 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 		adaptationSet.language = xmlAdaptation.attr( 'lang' );
 		adaptationSet.containsVideo = false;
 		adaptationSet.containsAudio = false;
+		adaptationSet.containsGame = false;
 
 		if ( !adaptationSet.isClosedCaption )
 		{
@@ -1910,6 +2147,8 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 					adaptationSet.containsVideo = true;
 				if ( type == 'audio' )
 					adaptationSet.containsAudio = true;
+				if ( type == 'game' )
+					adaptationSet.containsGame = true;
 			});
 
 			if ( adaptationSet.containsVideo )
@@ -1950,7 +2189,12 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 			segmentTemplate.duration = _mpd.ParseInt( xmlSegmentTemplate, 'duration' );
 			segmentTemplate.startNumber = _mpd.ParseInt( xmlSegmentTemplate, 'startNumber' );
 			segmentTemplate.media = $J( xmlSegmentTemplate ).attr( 'media' );
-			segmentTemplate.initialization = $J( xmlSegmentTemplate ).attr( 'initialization' );
+
+			if ( !adaptationSet.containsGame )
+				segmentTemplate.initialization = $J( xmlSegmentTemplate ).attr( 'initialization' );
+			else
+				segmentTemplate.initialization = segmentTemplate.media;
+
 			if ( !segmentTemplate.timescale || !segmentTemplate.duration || !segmentTemplate.startNumber || !segmentTemplate.media || !segmentTemplate.initialization )
 			{
 				bError = true;
@@ -2001,7 +2245,7 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 						PlayerLog("MPD - Representation Audio Data Missing");
 						return;
 					}
-			}
+				}
 
 				adaptationSet.representations.push( representation );
 			});
@@ -2281,15 +2525,18 @@ function CDASHPlayerUI( player )
 CDASHPlayerUI.s_ClosedCaptionsNone = "none";
 CDASHPlayerUI.PRELOAD_THUMBNAILS = false;
 CDASHPlayerUI.s_ClosedCaptionsSelectExt = "_CC";
+CDASHPlayerUI.s_SkipTimeSeconds = 15;
 
 CDASHPlayerUI.s_overlaySrc =	'<div class="dash_overlay no_select">' +
-										'<div class="play_button play"></div>' +
+										'<div class="play_button play" title="Play/Pause (Spacebar)"></div>' +
+										'<div class="skip_back" title="Skip Back (Left Arrow)"></div>' +
+										'<div class="skip_fwd" title="Skip Forward (Right Arrow)"></div>' +
 										'<div class="control_container">' +
-											'<div class="fullscreen_button"></div>' +
+											'<div class="fullscreen_button" title="Toggle Full Screen"></div>' +
 											'<div class="time"></div>' +
-											'<div class="live_button"></div>' +
+											'<div class="live_button" title="Skip To Live"></div>' +
 											'<div class="player_settings"></div>' +
-											'<div class="volume_icon"></div>' +
+											'<div class="volume_icon" title="Volume Mute"></div>' +
 											'<div class="volume_slider">' +
 												'<div class="volume_handle"></div>' +
 											'</div>' +
@@ -2332,7 +2579,7 @@ CDASHPlayerUI.prototype.Init = function()
 	elVideoPlayer.on( 'pause', function() { _ui.OnPause() } );
 	elVideoPlayer.on( 'initialized', function() { _ui.OnVideoInitialized(); } );
 
-	$J( window ).on( 'keypress', function(e) { _ui.OnKeyPress( e ); } );
+	$J( window ).on( 'keydown', function(e) { _ui.OnKeyDown( e ); } );
 
 	this.m_elOverlay.on( 'mouseenter', function() { _ui.OnMouseEnterOverlay() } );
 	this.m_elOverlay.on( 'mouseleave', function( e ) { _ui.OnMouseLeaveOverlay( e ) } );
@@ -2349,6 +2596,8 @@ CDASHPlayerUI.prototype.Init = function()
 	$J( '.progress_bar_container', _overlay ).on( 'click', function(e) { _ui.OnProgressClick( e, this ); });
 	$J( '.progress_bar_container', _overlay ).on( 'mousemove', function(e) { _ui.OnProgressHover( e, this ); });
 	$J( '.progress_bar_container', _overlay ).on( 'mouseleave', function(e) { _ui.OnProgressLeave( e, this ); });
+	$J( '.skip_back', _overlay ).on( 'click', function(e) { _ui.OnSkipTime( -CDASHPlayerUI.s_SkipTimeSeconds ); });
+	$J( '.skip_fwd', _overlay ).on( 'click', function(e) { _ui.OnSkipTime( CDASHPlayerUI.s_SkipTimeSeconds ); });
 
 	this.LoadVolumeSettings();
 }
@@ -2812,6 +3061,7 @@ CDASHPlayerUI.prototype.TogglePlayPause = function()
 		$J( '.play_button', this.m_elOverlay ).addClass( 'pause' );
 		$J( '.play_button', this.m_elOverlay ).removeClass( 'play' );
 		this.ShowBigPlayPauseIndicator( true );
+		$J( elVideoPlayer ).trigger( 'changeuiplayingstate', true );
 	}
 	else
 	{
@@ -2819,6 +3069,7 @@ CDASHPlayerUI.prototype.TogglePlayPause = function()
 		$J( '.play_button', this.m_elOverlay ).addClass( 'play' );
 		$J( '.play_button', this.m_elOverlay ).removeClass( 'pause' );
 		this.ShowBigPlayPauseIndicator( false )
+		$J( elVideoPlayer ).trigger( 'changeuiplayingstate', false );
 	}
 }
 
@@ -2845,14 +3096,52 @@ CDASHPlayerUI.prototype.ShowBigPlayPauseIndicator = function( playing )
 	indicator.addClass('show');
 }
 
-CDASHPlayerUI.prototype.OnKeyPress = function( e )
+CDASHPlayerUI.prototype.OnKeyDown = function( e )
 {
-		if ( e.keyCode == 32 && e.target == document.body )
+	var keycode;
+	if (window.event)
+		keycode = window.event.keyCode;
+	else if (e)
+		keycode = e.which;
+
+	var e = e || window.event;
+
+		if ( keycode == 32 && e.target == document.body )
 	{
 		e.preventDefault();
 		this.TogglePlayPause();
 		return false;
 	}
+
+		if ( e.target == document.body )
+	{
+		var nTimeDelta = 0;
+		switch (keycode)
+		{
+			case 37:
+				nTimeDelta = 0 - CDASHPlayerUI.s_SkipTimeSeconds;
+				break;
+			case 39:
+				nTimeDelta = CDASHPlayerUI.s_SkipTimeSeconds;
+				break;
+			default:
+				break;
+		}
+
+		if ( nTimeDelta != 0 )
+		{
+			e.preventDefault();
+			this.Show();
+			this.OnSkipTime( nTimeDelta );
+			return false;
+		}
+	}
+}
+
+CDASHPlayerUI.prototype.OnSkipTime = function( nTimeDelta )
+{
+	var nSeekedTime = this.m_player.SkipTime( nTimeDelta );
+	this.m_bPlayingLiveEdge = this.m_player.BIsLiveEdge( nSeekedTime );
 }
 
 CDASHPlayerUI.prototype.OnMouseEnterOverlay = function()
@@ -2991,7 +3280,7 @@ CDASHPlayerUI.prototype.OnProgressClick = function( e, ele )
 	var rgData = this.GetTimelineData();
 	var nSeekTo = ((rgData.nTimeEnd - rgData.nTimeStart) * nPercent) + rgData.nTimeStart;
 
-	if (this.m_player.BIsLiveContent())
+	if ( this.m_player.BIsLiveContent() )
 	{
 		nSeekTo = Math.min( nSeekTo, rgData.nBufferedEnd );
 	}
@@ -3367,6 +3656,7 @@ CVTTCaptionLoader.s_TrackHidden = "hidden";
 CVTTCaptionLoader.s_TrackShowing = "showing";
 CVTTCaptionLoader.s_Caption = "caption";
 CVTTCaptionLoader.s_Subtitle = "subtitle";
+CVTTCaptionLoader.s_DefaultLinePosition = 95;
 
 CVTTCaptionLoader.prototype.Close = function()
 {
@@ -3503,28 +3793,35 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 					try
 					{
 						// skip size percentages as caption options don't scale with these
-						if ( rgKeyVal[0].indexOf('size') == 0 && rgKeyVal[1].indexOf('%') != -1 )
+						if (rgKeyVal[0].indexOf('size') == 0 && rgKeyVal[1].indexOf('%') != -1)
 							continue;
 
 						// relative (percentage) screen attributes require snapToLines off
-						if ( newCue.snapToLines && rgKeyVal[1].indexOf('%') != -1 )
+						if (newCue.snapToLines && rgKeyVal[1].indexOf('%') != -1)
 						{
 							newCue.snapToLines = false;
-							rgKeyVal[1] = rgKeyVal[1].replace('%','');
+							rgKeyVal[1] = rgKeyVal[1].replace('%', '');
 						}
 
 						// if the value is a number, then make sure the cue knows it's a number
-						if ( !isNaN( parseFloat( rgKeyVal[1] ) ) )
-							newCue[rgKeyVal[0]] = parseFloat( rgKeyVal[1] );
+						if (!isNaN(parseFloat(rgKeyVal[1])))
+							newCue[rgKeyVal[0]] = parseFloat(rgKeyVal[1]);
 						else
-							newCue[rgKeyVal[0]] = String( rgKeyVal[1] );
+							newCue[rgKeyVal[0]] = String(rgKeyVal[1]);
 					}
-					catch(e)
+					catch (e)
 					{
-						PlayerLog( 'VTTCue Error: ' + e.message );
-						PlayerLog( rgCuesFromVTT[c] );
+						PlayerLog('VTTCue Error: ' + e.message);
+						PlayerLog(rgCuesFromVTT[c]);
 					}
 				}
+			}
+
+			// if no line position was set, set the default
+			if ( typeof newCue["line"] !== "undefined" )
+			{
+				newCue.snapToLines = false;
+				newCue["line"] = CVTTCaptionLoader.s_DefaultLinePosition;
 			}
 
 			newTextTrack.addCue( newCue );
@@ -3604,24 +3901,24 @@ CVTTCaptionLoader.prototype.UpdateLayoutInfo = function( rgLayoutInfo, rgFoundLa
 	switch ( rgFoundLayoutInfo )
 	{
 		case "{\\an1}":
-			rgLayoutInfo.push("line:99%");
+			rgLayoutInfo.push("line:" + CVTTCaptionLoader.s_DefaultLinePosition + "%");
 			rgLayoutInfo.push("align:left");
-			rgLayoutInfo.push("position:20%");
+			rgLayoutInfo.push("position:25%");
 			break;
 		case "{\\an2}":
-			rgLayoutInfo.push("line:99%");
+			rgLayoutInfo.push("line:" + CVTTCaptionLoader.s_DefaultLinePosition + "%");
 			rgLayoutInfo.push("align:middle");
 			rgLayoutInfo.push("position:50%");
 			break;
 		case "{\\an3}":
-			rgLayoutInfo.push("line:99%");
+			rgLayoutInfo.push("line:" + CVTTCaptionLoader.s_DefaultLinePosition + "%");
 			rgLayoutInfo.push("align:right");
-			rgLayoutInfo.push("position:80%");
+			rgLayoutInfo.push("position:75%");
 			break;
 		case "{\\an4}":
 			rgLayoutInfo.push("line:50%");
 			rgLayoutInfo.push("align:left");
-			rgLayoutInfo.push("position:20%");
+			rgLayoutInfo.push("position:25%");
 			break;
 		case "{\\an5}":
 			rgLayoutInfo.push("line:50%");
@@ -3631,12 +3928,12 @@ CVTTCaptionLoader.prototype.UpdateLayoutInfo = function( rgLayoutInfo, rgFoundLa
 		case "{\\an6}":
 			rgLayoutInfo.push("line:50%");
 			rgLayoutInfo.push("align:right");
-			rgLayoutInfo.push("position:80%");
+			rgLayoutInfo.push("position:75%");
 			break;
 		case "{\\an7}":
 			rgLayoutInfo.push("line:10%");
 			rgLayoutInfo.push("align:left");
-			rgLayoutInfo.push("position:20%");
+			rgLayoutInfo.push("position:25%");
 			break;
 		case "{\\an8}":
 			rgLayoutInfo.push("line:10%");
@@ -3646,7 +3943,7 @@ CVTTCaptionLoader.prototype.UpdateLayoutInfo = function( rgLayoutInfo, rgFoundLa
 		case "{\\an9}":
 			rgLayoutInfo.push("line:10%");
 			rgLayoutInfo.push("align:right");
-			rgLayoutInfo.push("position:80%");
+			rgLayoutInfo.push("position:75%");
 			break;
 		default:
 			break;
@@ -3663,6 +3960,10 @@ CVTTCaptionLoader.SortClosedCaptionsByDisplayLanguage = function(a,b) {
 }
 
 CVTTCaptionLoader.LanguageCountryCodes = {
+    "ar-SA":{
+        "displayName":"العربية (Arabic)",
+        "steamLanguage":"arabic"
+    },
     "bg-BG":{
         "displayName":"Български (Bulgarian)",
         "steamLanguage":"bulgarian"
@@ -3698,6 +3999,10 @@ CVTTCaptionLoader.LanguageCountryCodes = {
     "es-ES":{
         "displayName":"Español (Spanish)",
         "steamLanguage":"spanish"
+    },
+    "es-MX":{
+        "displayName":"Español-Mexicano (Spanish-Mexican)",
+        "steamLanguage":"mexican"
     },
     "hu-HU":{
         "displayName":"Magyar (Hungarian)",
@@ -3785,7 +4090,6 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 	this.m_videoPlayer = videoPlayer;
 
 	this.timerTick = false;
-	this.timerSecond = false;
 	this.nDecodedFramesPerSecond = 0;
 	this.bRunning = false;
 
@@ -3794,13 +4098,15 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 	this.strAudioBuffered = '';
 	this.strBandwidth = '';
 	this.strBuffers = '';
+	this.nGameDataBuffers = '';
+	this.oLastGameDataFrame = {};
 
 	// For Server Event Logging
 	this.m_bAutoLoggingEventsToServer = ( Math.random() * 100 ) < CDASHPlayerStats.LOGGING_RATE_PERC;
 	this.m_xhrLogEventToServer = null;
 	this.m_steamID = viewerSteamID;
 	this.m_statsLastSnapshot = {
-		'time': new Date().getTime(),
+		'time': performance.now(),
 		'bytes_received': 0,
 		'frames_decoded': 0,
 		'frames_dropped': 0,
@@ -3809,7 +4115,6 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 
 	// on screen reporting from stats report
 	this.m_nStalledSegmentNumber = 0;
-	this.m_nFailedSegmentResponse = 200;
 	this.m_nCountStalls = 0;
 	this.m_strVideoDownloadHost = '...';
 	this.m_nReportedPlaybackPos = 0;
@@ -3852,7 +4157,7 @@ CDASHPlayerStats.prototype.Close = function()
 CDASHPlayerStats.prototype.Reset = function()
 {
 	this.m_statsLastSnapshot = {
-		'time': new Date().getTime(),
+		'time': performance.now(),
 		'bytes_received': 0,
 		'frames_decoded': 0,
 		'frames_dropped': 0,
@@ -3925,7 +4230,7 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( bStalledEvent, bVide
 	else
 	{
 		var statsSnapshot = {
-			'time': new Date().getTime(),
+			'time': performance.now(),
 			'bytes_received': this.m_videoPlayer.StatsAllBytesReceived(),
 			'frames_decoded': ( this.m_elVideoPlayer.webkitDecodedFrames || this.m_elVideoPlayer.webkitDecodedFrameCount ),
 			'frames_dropped': ( this.m_elVideoPlayer.webkitDroppedFrames || this.m_elVideoPlayer.webkitDroppedFrameCount ),
@@ -4023,6 +4328,8 @@ CDASHPlayerStats.prototype.CalculateTotals = function()
 	this.strAudioBuffered = this.m_videoPlayer.StatsAudioBuffer() + 's';
 	this.strBandwidth = this.m_videoPlayer.StatsCurrentDownloadBitRate() * 1000;
 	this.strBuffers = this.m_videoPlayer.StatsBufferInfo();
+	this.nGameDataBuffers = this.m_videoPlayer.StatsGameDataBufferCount();
+	this.oLastGameDataFrame = this.m_videoPlayer.StatsLastGameDataBuffer();
 }
 
 CDASHPlayerStats.prototype.FormattingBytesToHuman = function ( nBytes )
@@ -4156,7 +4463,29 @@ CDASHPlayerStats.prototype.Tick = function()
 			id: 'segmenttimeaverage',
 			label: ' - Segment D/L Time Average',
 			value: this.m_fSegmentTimeAverage + 's'
-		}
+		},
+		// Game log data if available
+		{
+			id: 'lastgameframeappid',
+			label: 'Game Frame App ID',
+			value: ( this.oLastGameDataFrame != null ) ? this.oLastGameDataFrame.appid : null
+		},
+		{
+			id: 'lastgameframerelayid',
+			label: 'Game Broadcast Relay ID',
+			value: ( this.oLastGameDataFrame != null ) ? this.oLastGameDataFrame.broadcastrelayid : null
+		},
+		{
+			id: 'lastgameframesegmentid',
+			label: 'Game Segment Frame ID',
+			value: ( this.oLastGameDataFrame != null ) ? this.oLastGameDataFrame.segmentid : null
+		},
+		{
+			id: 'gamedatabuffers',
+			label: 'Game Frame Buffers',
+			value: ( this.nGameDataBuffers != 0 ) ? this.nGameDataBuffers : null
+		},
+
 ];
 
 	for( var i=0; i < rgStatsDefinitions.length; i++)

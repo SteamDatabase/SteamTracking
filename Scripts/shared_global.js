@@ -550,6 +550,13 @@ CModal.HideModalBackground = function()
 }
 
 CModal.s_rgModalStack = [];
+CModal.GetActiveModal = function()
+{
+	if ( CModal.s_rgModalStack.length )
+		return CModal.s_rgModalStack[CModal.s_rgModalStack.length-1];
+	else
+		return null;
+}
 CModal.DismissActiveModal = function()
 {
 	if ( CModal.s_rgModalStack.length )

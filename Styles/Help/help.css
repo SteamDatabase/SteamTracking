@@ -1156,13 +1156,14 @@ body.v6 .help_refund_request_area h2 a:hover {
 	color: #67c1f5;
 	padding: 0;
 	padding-right: 14px;
-	line-height: 22px;
+	padding-bottom: 14px;
+	max-width: 300px;
 }
 
 .refund_game_detail {
-	line-height: 24px;
-	color: #9d9d9f;
-	padding-right: 14px;
+	color: #c6d4df;
+	vertical-align: top;
+	padding-right: 20px;
 }
 
 .refund_game_line_item {

@@ -821,10 +821,15 @@ a.queue_area:hover .voting_queue_link {
 	float: left;
 	margin-right: 14px;
 }
-.workshop_item_row .preview_image.landscape
+.workshop_item_row .preview_image.aspectratio_16x9
 {
 	width: auto;
 	min-width: 138px;
+}
+.workshop_item_row .preview_image.aspectratio_4x3
+{
+	width: auto;
+	min-width: 102px;
 }
 .workshop_item_row .workshop_item_title
 {

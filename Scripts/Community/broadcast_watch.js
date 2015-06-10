@@ -38,7 +38,7 @@ function SteamClientShowPopOut()
 }
 
 
-var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDViewer )
+var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDViewer, rgIFrameDomainWhitelist, bInsideIFrame )
 {
 	this.m_ulBroadcastSteamID = steamIDBroadcast;
 	this.m_ulViewerSteamID = steamIDViewer;
@@ -50,9 +50,22 @@ var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDView
 	this.m_xhrViewUsers = null;
 	this.m_bUnlockingH264 = false;
 	this.m_DASHPlayerStats = null;
+	this.m_rgIFrameDomainWhitelist = rgIFrameDomainWhitelist;
+	this.m_bInsideIFrame = bInsideIFrame;
+	this.m_bChatEnabled = null;
+	this.m_bVideoEnabled = null;
+	this.m_bDisableChatTooltips = false;
+	
+	this.m_unViewerBrowserID = WebStorage.GetLocal( "viewerBrowserID" );
+
+	if ( this.m_unViewerBrowserID == null )
+	{
+		this.m_unViewerBrowserID = Math.floor(Math.random() * 4294967296);
+		WebStorage.SetLocal( "viewerBrowserID", this.m_unViewerBrowserID );
+	}
 }
 
-CBroadcastWatch.s_UpdateTimeoutSec = 120;
+CBroadcastWatch.s_UpdateTimeoutSec = 60;
 CBroadcastWatch.k_InBrowser = 1;
 CBroadcastWatch.k_InClient = 2;
 CBroadcastWatch.k_InOverlay = 3;
@@ -124,7 +137,7 @@ CBroadcastWatch.prototype.WaitUnlockH264 = function( rtStart )
 {
 	if ( BMediaSourceExtensionsSupported() )
 	{
-		this.Start();
+		this.Start( true, true );
 		return;
 	}
 
@@ -138,10 +151,14 @@ CBroadcastWatch.prototype.WaitUnlockH264 = function( rtStart )
 	window.setTimeout( function() { _watch.WaitUnlockH264( rtStart ); }, 5000 );
 }
 
-CBroadcastWatch.prototype.Start = function()
+CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 {
 	var _watch = this;
-	if ( !BMediaSourceExtensionsSupported() )
+
+	this.m_bVideoEnabled = bEnableVideo;
+	this.m_bChatEnabled = bEnableChat;
+
+	if ( bEnableVideo && !BMediaSourceExtensionsSupported() )
 	{
 		if ( this.m_eClientType != CBroadcastWatch.k_InBrowser )
 		{
@@ -153,18 +170,32 @@ CBroadcastWatch.prototype.Start = function()
 		return;
 	}
 
-	this.m_chat = new CBroadcastChat( this.m_ulBroadcastSteamID );
-	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
-	this.m_playerUI = new CDASHPlayerUI( this.m_player );
-	this.m_playerUI.Init();
+	if ( bEnableChat )
+	{
+		this.m_chat = new CBroadcastChat( this.m_ulBroadcastSteamID );
+	}
 
-	this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_ulViewerSteamID );
+	if ( bEnableVideo )
+	{
+		this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
+		this.m_playerUI = new CDASHPlayerUI( this.m_player );
+		this.m_playerUI.Init();
 
-	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.BroadcastWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
-	$J( this.m_elVideoPlayer ).on( 'downloadfailed.BroadcastWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
-	$J( this.m_elVideoPlayer ).on( 'playbackerror.BroadcastWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
+		this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_ulViewerSteamID );
+
+		$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.BroadcastWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
+		$J( this.m_elVideoPlayer ).on( 'downloadfailed.BroadcastWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
+		$J( this.m_elVideoPlayer ).on( 'playbackerror.BroadcastWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
+
+		$J( this.m_elVideoPlayer ).on( 'gamedataupdate', function( e, pts, Data ) { _watch.OnGameFrameReceived( pts, Data ); } );
+	}
 
 	this.GetBroadcastMPD();
+}
+
+CBroadcastWatch.prototype.DisableChatTooltips = function()
+{
+	this.m_bDisableChatTooltips = true;
 }
 
 CBroadcastWatch.prototype.OnPlayerBufferingComplete = function()
@@ -181,6 +212,11 @@ CBroadcastWatch.prototype.OnPlayerDownloadFailed = function()
 CBroadcastWatch.prototype.OnPlayerPlaybackError = function()
 {
 	this.ShowVideoError( 'An unexpected error occurred while playing this video' );
+}
+
+CBroadcastWatch.prototype.OnGameFrameReceived = function( pts, Data )
+{
+	this.PostMessageToIFrameParent( "OnGameDataReceived", { pts: pts, data: Data } );
 }
 
 CBroadcastWatch.prototype.AddBroadcasterName = function( str )
@@ -209,7 +245,8 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 		url: 'https://steamcommunity.com/broadcast/getbroadcastmpd/',
 		data: {
 			steamid: _watch.m_ulBroadcastSteamID,
-			broadcastid: _watch.m_ulBroadcastID
+			broadcastid: _watch.m_ulBroadcastID,
+			browserid: _watch.m_unViewerBrowserID
 		},
 		type: 'GET'
 	})
@@ -245,9 +282,13 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 			_watch.LoadBroadcastMPD( data.url );
 
 			_watch.SetBroadcastInfo( data );
-			_watch.ScheduleBroadcastInfoUpdate();
+			_watch.UpdateBroadcastInfo();
 
-			_watch.m_chat.RequestChatInfo(data.broadcastid);
+			if ( _watch.m_chat )
+			{
+				_watch.m_chat.RequestChatInfo(data.broadcastid);
+			}
+
 			$J( '#PageContents' ).addClass( 'ShowPlayer' );
 		}
 		else if ( data.success == 'end' )
@@ -291,6 +332,9 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 
 CBroadcastWatch.prototype.LoadBroadcastMPD = function( url )
 {
+	if ( !this.m_bVideoEnabled )
+		return;
+
 	this.m_player.Close();
 	this.m_DASHPlayerStats.Reset();
 	this.m_player.PlayMPD( url );
@@ -384,6 +428,8 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 		$J( '#BroadcastAdminGameIDInput' ).val( data.appid );
 		$J( '#BroadcastAdminViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
 	}
+
+	this.PostMessageToIFrameParent( "OnBroadcastInfoChanged", { viewer_count: data.viewer_count } );
 }
 
 function OpenBroadcastLink()
@@ -402,7 +448,9 @@ CBroadcastWatch.prototype.ScheduleBroadcastInfoUpdate = function()
 CBroadcastWatch.prototype.SubmitChat = function()
 {
 	if ( this.m_chat )
+	{
 		this.m_chat.ChatSubmit();
+	}
 }
 
 CBroadcastWatch.prototype.FocusChatTextArea = function()
@@ -434,7 +482,7 @@ CBroadcastWatch.prototype.ShowViewers = function()
 	$J( '#ViewerModalError' ).hide();
 	$J( '#ViewerNotReturned' ).hide();
 
-	if ( !this.m_chat || this.m_chat.GetChatID() == 0 )
+	if ( this.m_bChatEnabled && ( !this.m_chat || this.m_chat.GetChatID() == 0 ) )
 	{
 		$J( '#LoadingViewerModal' ).hide();
 		$J( '#LoadedViewerModal' ).show();
@@ -450,7 +498,16 @@ CBroadcastWatch.prototype.ShowViewers = function()
 	$J( '#ViewerModal' ).css( {top: nTop, right: nRight} );
 	$J( '#ChatViewersBtn' ).addClass( 'ViewersVisible' );
 
+	this.UpdateBroadcastViewerUI();
+}
+
+CBroadcastWatch.prototype.UpdateBroadcastViewerUI = function()
+{
+	if ( !this.m_chat )
+		return;
+
 	var _watch = this;
+
 	this.m_xhrViewers = $J.ajax(
 	{
 		url: 'https://steamcommunity.com/broadcast/getbroadcastviewers/',
@@ -487,7 +544,11 @@ CBroadcastWatch.prototype.ShowViewers = function()
 					elUser.append( elMute );
 				}
 
-				BindSingleMiniprofileHover( elUser.children( 'a' ).data( 'miniprofile', 's' + viewer.id ) );
+				if ( !_watch.m_bDisableChatTooltips )
+				{
+					BindSingleMiniprofileHover( elUser.children( 'a' ).data( 'miniprofile', 's' + viewer.id ) );
+				}
+
 				$J( '#ViewerModalUsers' ).append( elUser );
 			}
 		}
@@ -635,5 +696,17 @@ CBroadcastWatch.prototype.StopBroadcast = function()
 		$J( '#BroadcastAdminUpdateResult' ).text( 'Failed to stop broadcast' );
 		$J( '#BroadcastAdminUpdateResult' ).delay(3000).fadeOut("slow");
 	});
+}
+
+CBroadcastWatch.prototype.PostMessageToIFrameParent = function( strMessage, Data )
+{
+	if ( !this.m_bInsideIFrame || !window.parent )
+		return;
+
+	var Msg = $J.extend( Data, { msg: strMessage } );
+	for( var i = 0, cDomains = this.m_rgIFrameDomainWhitelist.length; i < cDomains; ++i )
+	{
+		window.parent.postMessage( Msg, this.m_rgIFrameDomainWhitelist[i] );
+	}
 }
 

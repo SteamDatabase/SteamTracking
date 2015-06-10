@@ -1812,17 +1812,18 @@ textarea {
 	top: 170px;
 	right: 0px;
 }
-
-.workshopItemSubscriptionControls.landscape
+.workshopItemSubscriptionControls.aspectratio_16x9
 {
     top: 83px;
 }
-
+.workshopItemSubscriptionControls.aspectratio_4x3
+{
+	top: 120px;
+}
 .workshopItem:hover .workshopItemSubscriptionControls
 {
 	visibility: visible;
 }
-
 .workshopItemSubscriptionControls .general_btn.subscribe
 {
 	position: relative;
@@ -1833,16 +1834,13 @@ textarea {
 	display: inline-block;
 	overflow: hidden;
 }
-
 .workshopItemSubscriptionControls .general_btn.subscribe.toggled
 {
 }
-
 .workshopItemSubscriptionControls .general_btn.subscribe:hover .subscribeIcon
 {
 	background-position: 0px -25px;
 }
-
 .workshopItemSubscriptionControls .subscribeIcon
 {
 	position: absolute;
@@ -1852,22 +1850,18 @@ textarea {
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
-
 .workshopItemSubscriptionControls .general_btn.subscribe.toggled .subscribeIcon
 {
 	background-position: 0px -50px;
 }
-
 .workshopItemSubscriptionControls .general_btn.subscribe.toggled:hover .subscribeIcon
 {
 	background-position: 0px -75px;
 }
-
 .workshopItemSubscriptionControls .action_wait
 {
 	float: left;
 }
-
 .workshopItemDetailsHeader
 {
 	margin-bottom: 10px;
@@ -2082,9 +2076,13 @@ textarea {
 	margin: 1px;
 }
 
-.workshopItemPreviewHolder.landscape
+.workshopItemPreviewHolder.aspectratio_16x9
 {
-    height: 112px;
+	height: 112px;
+}
+.workshopItemPreviewHolder.aspectratio_4x3
+{
+	height: 150px;
 }
 
 .workshopItemPreviewHolder.video
@@ -2100,9 +2098,13 @@ textarea {
 	vertical-align: middle;
 }
 
-.workshopItemPreviewImage.landscape
+.workshopItemPreviewImage.aspectratio_4x3
+ {
+	 max-height: 112px;
+ }
+.workshopItemPreviewImage.aspectratio_4x3
 {
-    max-height: 112px;
+	max-height: 150px;
 }
 
 .workshopItemPreviewImage.video
