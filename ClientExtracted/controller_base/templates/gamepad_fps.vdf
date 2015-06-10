@@ -1,9 +1,9 @@
 "controller_mappings"
 {
 	"version" "2"
-	"game" "Dual-Stick Shooter"
-	"title" "Twin-Stick Shooter"
-	"description" "This is a template configuration for games that use the left stick to move while using the right stick to fire in a circle."
+	"game" "Gamepad with Joystick Camera"
+	"title" "Gamepad with Joystick Camera"
+	"description" "This is a template configuration for games with First or Third Person camera controls."
 
 	"group"
 	{
@@ -11,10 +11,10 @@
 		"mode"		"four_buttons"
 		"bindings"
 		{
-			"button_A"		"xinput_button A"
-			"button_B"		"xinput_button B"
-			"button_X"		"xinput_button X"
-			"button_Y"		"xinput_button Y"
+			"button_a"		"xinput_button A"
+			"button_b"		"xinput_button B"
+			"button_x"		"xinput_button X"
+			"button_y"		"xinput_button Y"
 		}
 	}
 	"group"
@@ -85,24 +85,11 @@
 			"output_trigger"		"2"
 		}
 	}
-	"group"
-	{
-		"id"		"6"
-		"mode"		"joystick_move"
-		"settings"
-		{
-			"edge_binding_radius"		"24999"
-			"adaptive_centering"		"0"
-			"virtual_cap_size"		"7498"
-			"output_joystick"		"1"
-		}
-	}
 	"group_source_bindings"
 	{
 		"0"		"button_diamond active"
 		"1"		"left_trackpad active"
-		"2"		"right_trackpad inactive"
-		"6"		"right_trackpad active"
+		"2"		"right_trackpad active"
 		"3"		"joystick active"
 		"4"		"left_trigger active"
 		"5"		"right_trigger active"
@@ -125,3 +112,4 @@
 		"right_trackpad_mode"		"0"
 	}
 }
+

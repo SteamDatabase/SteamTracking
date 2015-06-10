@@ -1491,6 +1491,15 @@ Slider.Horizontal #SliderTrackProgress
 	box-shadow: fill black 1px 1.5px 4px 0px;
 }
 
+#SliderDefault
+{
+	width: 4px;
+	height: 40px;
+	background-color: #5492b8;
+	border-radius: 4px;
+//	box-shadow: fill black 1px 1.5px 2px 0px;
+}
+
 //
 // Loading throbber
 //

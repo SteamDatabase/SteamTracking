@@ -430,6 +430,7 @@
  B g_ThreadLocalModuleAddressRangeSerial
  B g_ThreadLocalModuleAddressRanges
  B g_VecLoadedModules
+ B g_cvarForceActiveControllerType
  B g_glBlendEquationSeparate
  B g_glGetProgramBinary
  B g_glProgramBinary
@@ -455,6 +456,7 @@
  B panorama::ACTION_UP
  B panorama::ActivateMainWindow::symbol
  B panorama::Activated::symbol
+ B panorama::ActiveControllerTypeChanged::symbol
  B panorama::AddStyle::symbol
  B panorama::AddStyleToEachChild::symbol
  B panorama::AnimationEnd::symbol
@@ -676,6 +678,7 @@
  B panorama::ReloadStyleFile::symbol
  B panorama::RemoveStyle::symbol
  B panorama::RemoveStyleFromEachChild::symbol
+ B panorama::ResetToDefaultValue::symbol
  B panorama::RestartMachine::symbol
  B panorama::RetryStyleReload::symbol
  B panorama::ScrollDown::symbol
@@ -862,6 +865,7 @@
  D pModuleExtension
  D panorama::ActivateMainWindow::pchEvent
  D panorama::Activated::pchEvent
+ D panorama::ActiveControllerTypeChanged::pchEvent
  D panorama::AddStyle::pchEvent
  D panorama::AddStyleToEachChild::pchEvent
  D panorama::AnimationEnd::pchEvent
@@ -1025,6 +1029,7 @@
  D panorama::ReloadStyleFile::pchEvent
  D panorama::RemoveStyle::pchEvent
  D panorama::RemoveStyleFromEachChild::pchEvent
+ D panorama::ResetToDefaultValue::pchEvent
  D panorama::RestartMachine::pchEvent
  D panorama::RetryStyleReload::pchEvent
  D panorama::ScrollDown::pchEvent
@@ -1560,6 +1565,7 @@
  D typeinfo for panorama::CUIEvent1<panorama::CPanoramaSymbol>
  D typeinfo for panorama::CUIEvent1<panorama::CReloadStyleFile*>
  D typeinfo for panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>
+ D typeinfo for panorama::CUIEvent1<panorama::EActiveControllerType>
  D typeinfo for panorama::CUIEvent1<panorama::IUIWindow*>
  D typeinfo for panorama::CUIEvent1<void*>
  D typeinfo for panorama::CUIEvent2<char const*, void*>
@@ -2114,6 +2120,7 @@
  D vtable for panorama::CUIEvent1<panorama::CPanoramaSymbol>
  D vtable for panorama::CUIEvent1<panorama::CReloadStyleFile*>
  D vtable for panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>
+ D vtable for panorama::CUIEvent1<panorama::EActiveControllerType>
  D vtable for panorama::CUIEvent1<panorama::IUIWindow*>
  D vtable for panorama::CUIEvent1<void*>
  D vtable for panorama::CUIEvent2<char const*, void*>
@@ -2943,6 +2950,7 @@
  R typeinfo name for panorama::CUIEvent1<panorama::CPanoramaSymbol>
  R typeinfo name for panorama::CUIEvent1<panorama::CReloadStyleFile*>
  R typeinfo name for panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>
+ R typeinfo name for panorama::CUIEvent1<panorama::EActiveControllerType>
  R typeinfo name for panorama::CUIEvent1<panorama::IUIWindow*>
  R typeinfo name for panorama::CUIEvent1<void*>
  R typeinfo name for panorama::CUIEvent2<char const*, void*>
@@ -8450,6 +8458,7 @@
  T XMLVector_Remove
  T XMLVector_Resize
  T _ZN8panorama21PanoramaTypeToV8ParamINS_15CPanoramaSymbolEEENS_18panorama_enable_ifIXntsr16panorama_is_enumIT_EE5valueEvE4typeERS3_PN2v86HandleINS7_5ValueEEE
+ T _ZN8panorama21PanoramaTypeToV8ParamINS_19EPanelEventSource_tEEENS_18panorama_enable_ifIXsr16panorama_is_enumIT_EE5valueEvE4typeERS3_PN2v86HandleINS7_5ValueEEE
  T _ZN8panorama21PanoramaTypeToV8ParamIbEENS_18panorama_enable_ifIXntsr16panorama_is_enumIT_EE5valueEvE4typeERS2_PN2v86HandleINS6_5ValueEEE
  T _ZN8panorama21PanoramaTypeToV8ParamIfEENS_18panorama_enable_ifIXntsr16panorama_is_enumIT_EE5valueEvE4typeERS2_PN2v86HandleINS6_5ValueEEE
  T _ZN8panorama21PanoramaTypeToV8ParamIiEENS_18panorama_enable_ifIXntsr16panorama_is_enumIT_EE5valueEvE4typeERS2_PN2v86HandleINS6_5ValueEEE
@@ -8787,6 +8796,8 @@
  T panorama::ActivateMainWindow::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::Activated::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::Activated::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
+ T panorama::ActiveControllerTypeChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ActiveControllerTypeChanged::MakeEvent(panorama::IUIPanelClient const*, panorama::EActiveControllerType)
  T panorama::AddStyle::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::AddStyle::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T panorama::AddStyleToEachChild::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -8922,7 +8933,7 @@
  T panorama::CGamepadController::GetAxisValue(panorama::CGamepadController::xdevice_t*, SDL_GameControllerAxis)
  T panorama::CGamepadController::GetButtonValue(panorama::CGamepadController::xdevice_t*, SDL_GameControllerButton)
  T panorama::CGamepadController::GetDeadZoneValue(panorama::GamePadCode)
- T panorama::CGamepadController::GetNumGamepadsConnected()
+ T panorama::CGamepadController::GetNumGamepadsConnected() const
  T panorama::CGamepadController::GotWindowFocus()
  T panorama::CGamepadController::HandleXDeviceAxis(panorama::CGamepadController::xdevice_t*, int, panorama::GamePadCode, panorama::GamePadCode, int)
  T panorama::CGamepadController::Initialize(panorama::IUISettings*)
@@ -9641,7 +9652,7 @@
  T panorama::CSSHelpers::EatCSSIgnorables(CUtlBuffer&)
  T panorama::CSSHelpers::SkipSpaces(char const*)
  T panorama::CSteamGameController::CSteamGameController(panorama::IUIInput*)
- T panorama::CSteamGameController::GetNumGamepadsConnected()
+ T panorama::CSteamGameController::GetNumGamepadsConnected() const
  T panorama::CSteamGameController::GotWindowFocus()
  T panorama::CSteamGameController::HandleDeviceAxis(int, int, panorama::GamePadCode, panorama::GamePadCode, panorama::CSteamGameController::EStickAxis)
  T panorama::CSteamGameController::PerformSteamControllerSwipeMove(Vector, float)
@@ -10703,6 +10714,11 @@
  T panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>::Validate(CValidator&, char const*)
  T panorama::CUIEvent1<panorama::CVideoPlayerAudioRenderer*>::~CUIEvent1()
+ T panorama::CUIEvent1<panorama::EActiveControllerType>::Copy() const
+ T panorama::CUIEvent1<panorama::EActiveControllerType>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent1<panorama::EActiveControllerType>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent1<panorama::EActiveControllerType>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent1<panorama::EActiveControllerType>::~CUIEvent1()
  T panorama::CUIEvent1<panorama::IUIWindow*>::Copy() const
  T panorama::CUIEvent1<panorama::IUIWindow*>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent1<panorama::IUIWindow*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -10781,7 +10797,7 @@
  T panorama::CUIFontLoaderLinux::~CUIFontLoaderLinux()
  T panorama::CUIInputEngine::BEmulatingGamePadWithJoystick()
  T panorama::CUIInputEngine::BIsCapsLockOn()
- T panorama::CUIInputEngine::BIsFingerDownOnSteamControllerRightPad()
+ T panorama::CUIInputEngine::BIsFingerDownOnSteamControllerRightPad() const
  T panorama::CUIInputEngine::BIsGamePadCodeEquivalentIgnoringVendor(panorama::GamePadCode, panorama::GamePadCode)
  T panorama::CUIInputEngine::BRegisterKeyBind(char const*, char const*, char const*, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
  T panorama::CUIInputEngine::BRegisterKeyBind(panorama::IUIPanel*, char const*, char const*, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
@@ -10789,14 +10805,15 @@
  T panorama::CUIInputEngine::BWasGamepadOrSteamControllerActive()
  T panorama::CUIInputEngine::CUIInputEngine()
  T panorama::CUIInputEngine::GamePadCodeFromName(char const*)
+ T panorama::CUIInputEngine::GetActiveControllerType() const
  T panorama::CUIInputEngine::GetDeadZoneValue(panorama::GamePadCode)
  T panorama::CUIInputEngine::GetGamePadBindForEvent(char const*, panorama::IUIPanel const*)
  T panorama::CUIInputEngine::GetInputCapture()
- T panorama::CUIInputEngine::GetLastGamePadControllerActiveTime()
- T panorama::CUIInputEngine::GetLastSteamControllerActiveIndex()
- T panorama::CUIInputEngine::GetLastSteamControllerActiveTime()
- T panorama::CUIInputEngine::GetNumGamepadsConnected()
- T panorama::CUIInputEngine::GetSteamControllerCount()
+ T panorama::CUIInputEngine::GetLastGamePadControllerActiveTime() const
+ T panorama::CUIInputEngine::GetLastSteamControllerActiveIndex() const
+ T panorama::CUIInputEngine::GetLastSteamControllerActiveTime() const
+ T panorama::CUIInputEngine::GetNumGamepadsConnected() const
+ T panorama::CUIInputEngine::GetSteamControllerCount() const
  T panorama::CUIInputEngine::Initialize(panorama::IUISettings*)
  T panorama::CUIInputEngine::InputEvent(panorama::InputMessage_t&)
  T panorama::CUIInputEngine::KeyCodeToWindowsVKey(panorama::KeyCode)
@@ -11922,6 +11939,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ReloadChangedUIFiles>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::RemoveStyle, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::RemoveStyleFromEachChild, char const*>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ResetToDefaultValue>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::RestartMachine>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollDown>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollPanelIntoView, bool>(panorama::IUIPanel*, char const*, char const**)
@@ -12058,6 +12076,7 @@
  T panorama::PchNameFromEFontStyle(int)
  T panorama::PchNameFromEFontWeight(int)
  T panorama::PchNameFromEHorizontalAlignment(panorama::EHorizontalAlignment)
+ T panorama::PchNameFromEPanelEventSource_t(int)
  T panorama::PchNameFromETextAlign(int)
  T panorama::PchNameFromETextDecoration(int)
  T panorama::PchNameFromETextTransform(int)
@@ -12090,6 +12109,8 @@
  T panorama::RemoveStyle::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T panorama::RemoveStyleFromEachChild::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::RemoveStyleFromEachChild::MakeEvent(panorama::IUIPanelClient const*, char const*)
+ T panorama::ResetToDefaultValue::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ResetToDefaultValue::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::ResolveSymbol(unsigned short)
  T panorama::RestartMachine::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::RestartMachine::MakeEvent(panorama::IUIPanelClient const*)
@@ -12875,7 +12896,6 @@
  T v8::platform::WorkerThread::WorkerThread(v8::platform::TaskQueue*)
  T v8::platform::WorkerThread::~WorkerThread()
  T void CryptoPP::ByteReverse<unsigned int>(unsigned int*, unsigned int const*, unsigned long)
- T void Destruct<CUtlString>(CUtlString*)
  T void Destruct<panorama::CLocalization::PanelLocEntry_t>(panorama::CLocalization::PanelLocEntry_t*)
  T void Destruct<panorama::CUIEngine::V8GlobalFunctionRegistration_t>(panorama::CUIEngine::V8GlobalFunctionRegistration_t*)
  T void Destruct<panorama::CUIEngine::V8GlobalObjectRegistration_t>(panorama::CUIEngine::V8GlobalObjectRegistration_t*)
@@ -14063,6 +14083,7 @@
  d panorama::s_EBackgroundRepeat
  d panorama::s_EFontStyle
  d panorama::s_EFontWeight
+ d panorama::s_EPanelEventSource_t
  d panorama::s_ETextAlign
  d panorama::s_ETextDecoration
  d panorama::s_ETextTransform

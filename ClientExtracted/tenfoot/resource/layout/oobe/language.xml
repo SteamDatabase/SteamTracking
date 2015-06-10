@@ -8,6 +8,8 @@
 	<OOBELanguageWizardChild class="OOBEControllerHintImage WizardChild FlowNone" tabindex="auto" selectionpos="auto">
 		<Label class="OOBEControllerHintTitle StdLabelMed SteamPadSpecific" text="#OOBE_WelcomeNavTutorialSteamPadTitle" />
 		<Label class="OOBEControllerHintBody StdLabelMedBlue SteamPadSpecific" text="#OOBE_WelcomeNavTutorialSteamPadBody" />
+		<Label class="OOBEControllerHintTitle StdLabelMed XInputPadSpecific" text="#OOBE_WelcomeNavTutorialXInputPadTitle" />
+		<Label class="OOBEControllerHintBody StdLabelMedBlue XInputPadSpecific" text="#OOBE_WelcomeNavTutorialXInputPadBody" />
 
 		<Panel id="LanguageWizard" class="FlowDown" tabindex="auto" selectionpos="auto">
 			<Label class="WizardChildTitle" text="#OOBE_WelcomeTitle" />

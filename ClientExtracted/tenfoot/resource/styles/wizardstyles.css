@@ -131,12 +131,14 @@
 	opacity: 0.8;
 }
 
-.SteamPadSpecific
+.SteamPadSpecific,
+.XInputPadSpecific
 {
 	visibility: collapse;
 }
 
-.SteamPad .SteamPadSpecific
+.SteamPad .SteamPadSpecific,
+.XInputPad .XInputPadSpecific
 {
 	visibility: visible;
 }

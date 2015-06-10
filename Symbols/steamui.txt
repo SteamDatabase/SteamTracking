@@ -1626,7 +1626,6 @@
  B UpdateAmbientTrack::symbol
  B UpdateBackStackFocusPanel::symbol
  B UpdateBillingInfo::symbol
- B UpdateControllerHints::symbol
  B UpdateControllerPanelData::symbol
  B UpdateDirtyPanelInfo::symbol
  B UpdateDownloadCounts::symbol
@@ -1779,7 +1778,6 @@
  B g_CloudManager
  B g_ComboBoxLinkerHack
  B g_ComboBoxPullInModule
- B g_CommunityBetaCmdLine
  B g_CommunityFeedStrip_Helper
  B g_CommunityFriendsStrip_Helper
  B g_CommunityMainPanel_Helper
@@ -2285,6 +2283,7 @@
  B msgpool_soft_limit
  B panorama::ActivateMainWindow::symbol
  B panorama::Activated::symbol
+ B panorama::ActiveControllerTypeChanged::symbol
  B panorama::AddStyle::symbol
  B panorama::AddStyleToEachChild::symbol
  B panorama::AnimationEnd::symbol
@@ -2591,6 +2590,7 @@
  B panorama::RemoveStyle::symbol
  B panorama::RemoveStyleFromEachChild::symbol
  B panorama::ResetCarouselMouseWheelCounts::symbol
+ B panorama::ResetToDefaultValue::symbol
  B panorama::RestartMachine::symbol
  B panorama::ScrollDown::symbol
  B panorama::ScrollPanelIntoView::symbol
@@ -5894,7 +5894,6 @@
  D UpdateControllerFirmwareDialog::GetMessageMap()::s_pMap
  D UpdateControllerFirmwareDialog::KB_ChainToMap()::chained
  D UpdateControllerFirmwareDialog::PanelMessageFunc_BeginFirmwareUpdate::InitVar()::bAdded
- D UpdateControllerHints::pchEvent
  D UpdateControllerPanelData::pchEvent
  D UpdateDirtyPanelInfo::pchEvent
  D UpdateDownloadCounts::pchEvent
@@ -8220,6 +8219,7 @@
  D pModuleExtension
  D panorama::ActivateMainWindow::pchEvent
  D panorama::Activated::pchEvent
+ D panorama::ActiveControllerTypeChanged::pchEvent
  D panorama::AddStyle::pchEvent
  D panorama::AddStyleToEachChild::pchEvent
  D panorama::AnimationEnd::pchEvent
@@ -8356,6 +8356,7 @@
  D panorama::RemoveStyle::pchEvent
  D panorama::RemoveStyleFromEachChild::pchEvent
  D panorama::ResetCarouselMouseWheelCounts::pchEvent
+ D panorama::ResetToDefaultValue::pchEvent
  D panorama::RestartMachine::pchEvent
  D panorama::ScrollDown::pchEvent
  D panorama::ScrollPanelIntoView::pchEvent
@@ -22512,6 +22513,7 @@
  T CControllerPropertiesBase::RegisterDigitalBindingButton(int, char const*, Voltroller::DigitalIO)
  T CControllerPropertiesBase::RegisterGroupBindingButton(int, char const*, EControllerModeInput)
  T CControllerPropertiesBase::SavePropertiesAndBindings(int, unsigned int, int)
+ T CControllerPropertiesBase::SetDefaultPropertyValue(panorama::CPanel2D*, int)
  T CControllerPropertiesBase::SetPropertyValue(panorama::CPanel2D*, int)
  T CControllerPropertiesBase::~CControllerPropertiesBase()
  T CControllerPropertiesMode::AddModeOption(EControllerSourceMode, char const*)
@@ -24028,7 +24030,6 @@
  T CGameActions::GetAnimMap()
  T CGameActions::GetClassSize() const
  T CGameActions::GetKBMap()
- T CGameActions::GetKVForMultiple(char const*, CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&)
  T CGameActions::GetMessageMap()
  T CGameActions::GetPanelClassName()
  T CGameActions::GetPanelTopClassName() const
@@ -26285,7 +26286,7 @@
  T CLibraryLinksAndMorePanel::~CLibraryLinksAndMorePanel()
  T CLibraryPanel::CLibraryPanel(panorama::CPanel2D*, char const*)
  T CLibraryPanel::GetPanelType() const
- T CLibraryPanel::OnCheckGamepadActivityChanges()
+ T CLibraryPanel::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
  T CLibraryPanel::ShowScreenshotBrowser(CGameID)
  T CLibraryPanel::~CLibraryPanel()
  T CLibraryPlayActionPanel::CCallbackOnAppMinutesPlayedNotification::Run(void*)
@@ -30142,10 +30143,10 @@
  T COOBEWizard::GetPanelType() const
  T COOBEWizard::HideProgressPanel()
  T COOBEWizard::NavigateForward()
+ T COOBEWizard::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
  T COOBEWizard::OnCheckSteamReachableResult(CheckSteamReachableResult_t*, bool)
  T COOBEWizard::OnDone()
  T COOBEWizard::OnProgressCheck()
- T COOBEWizard::OnUpdateControllerHints(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T COOBEWizard::ShowProgressPanel()
  T COOBEWizard::~COOBEWizard()
  T COSRequirementsdialog::ActivateOSWarningDialog(CSteamApp*, KeyValues*, char const*, char const*, bool)
@@ -31796,6 +31797,7 @@
  T CSearchStoreResult::CSearchStoreResult(panorama::CPanel2D*, char const*)
  T CSearchStoreResult::EventActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CSearchStoreResult::GetPanelType() const
+ T CSearchStoreResult::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
  T CSearchStoreResult::OnMoveUp(int)
  T CSearchStoreResult::Show(panorama::CPanel2D*, CStoreSearchResults::StoreSearchResult_t const&)
  T CSearchStoreResult::~CSearchStoreResult()
@@ -34105,6 +34107,7 @@
  T CSteamStartup::CSteamStartup()
  T CSteamStartup::CreatePreloadersCompleted()
  T CSteamStartup::ExecCommandLine(char const*)
+ T CSteamStartup::ExecSteamInstallerString()
  T CSteamStartup::ExecSteamURL(char const*, bool)
  T CSteamStartup::GetSteamClientVersion(int&)
  T CSteamStartup::Initialize(bool, IHTMLChromeController*)
@@ -34542,7 +34545,7 @@
  T CStorePanel::EventStoreShowSalePage(char const*)
  T CStorePanel::GetCheckoutController()
  T CStorePanel::GetPanelType() const
- T CStorePanel::OnCheckGamepadActivityChanges()
+ T CStorePanel::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
  T CStorePanel::OnEventFlip()
  T CStorePanel::OnSetLastStoreSearchValue(char const*)
  T CStorePanel::RefreshFrontPage()
@@ -36114,6 +36117,7 @@
  T CSystemIM::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CSystemIM::GetPanelType() const
  T CSystemIM::Initialize()
+ T CSystemIM::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
  T CSystemIM::OnCancelMessage()
  T CSystemIM::~CSystemIM()
  T CSystemInfoDialog::CSystemInfoDialog(vgui::Panel*, char const*)
@@ -36824,12 +36828,12 @@
  T CTenfootSSADialog::GetPanelType() const
  T CTenfootSSADialog::Init(unsigned int, char const*)
  T CTenfootSSADialog::OnAccept()
+ T CTenfootSSADialog::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
  T CTenfootSSADialog::OnCancel()
  T CTenfootSSADialog::OnContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CTenfootSSADialog::OnHTMLOpenLink(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
  T CTenfootSSADialog::OnInputTopLevelChanged(panorama::CPanelPtr<panorama::CPanel2D>)
  T CTenfootSSADialog::OnRefresh()
- T CTenfootSSADialog::OnUpdateControllerHints()
  T CTenfootSSADialog::~CTenfootSSADialog()
  T CTenfootTestController::CTenfootTestController(panorama::IUIWindow*)
  T CTenfootTestController::OnTopLevelWindowClose(panorama::IUIWindow*)
@@ -40520,6 +40524,7 @@
  T CWebBrowser::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
  T CWebBrowser::HideReticle()
  T CWebBrowser::LoadURL(char const*)
+ T CWebBrowser::OnActiveControllerTypeChanged(panorama::EActiveControllerType)
  T CWebBrowser::OnAddBrowserFavorite()
  T CWebBrowser::OnBrowserAddTab()
  T CWebBrowser::OnBrowserBack()
@@ -40546,7 +40551,6 @@
  T CWebBrowser::OnBrowserURLEdit()
  T CWebBrowser::OnBrowserZoom()
  T CWebBrowser::OnCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
- T CWebBrowser::OnCheckGamepadActivityChanges()
  T CWebBrowser::OnContextMenu(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T CWebBrowser::OnFinishedRequest(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, char const*)
  T CWebBrowser::OnFormHasFocus(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::HtmlFormHasFocus_t, char const*)
@@ -42055,6 +42059,7 @@
  T GetHardwareSupportCheckboxVec()
  T GetHelpBaseURLForUniverse(EUniverse, CUtlString&)
  T GetJpegDimensions(unsigned char const*, int, unsigned int&, unsigned int&)
+ T GetKVForMultiple(char const*, CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&)
  T GetLanguageCLocaleName(ELanguage)
  T GetLanguageICUName(ELanguage)
  T GetLanguageShortName(ELanguage)
@@ -42607,7 +42612,6 @@
  T MarketListingRemoved::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T MarketingController()
  T MarketingItem_t::MarketingItem_t(MarketingItem_t const&)
- T MarketingItem_t::~MarketingItem_t()
  T MathLib_Init(float, float, float, int)
  T MatrixAngles(matrix3x4_t const&, float*)
  T MatrixBuildScale(VMatrix&, float, float, float)
@@ -44250,9 +44254,6 @@
  T UpdateControllerFirmwareDialog::PanelMessageFunc_BeginFirmwareUpdate::InitVar()
  T UpdateControllerFirmwareDialog::UpdateControllerFirmwareDialog(vgui::Panel*, char const*, CControllerFirmwareUpdateManager*)
  T UpdateControllerFirmwareDialog::~UpdateControllerFirmwareDialog()
- T UpdateControllerHints::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T UpdateControllerHints::GetEventType()
- T UpdateControllerHints::MakeEvent(panorama::IUIPanelClient const*)
  T UpdateControllerPanelData::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T UpdateControllerPanelData::GetEventType()
  T UpdateControllerPanelData::MakeEvent(panorama::IUIPanelClient const*)
@@ -44509,6 +44510,7 @@
  T ZooDialog::~ZooDialog()
  T _ZN8panorama21PanoramaTypeToV8ParamIK10CUtlVectorIPNS_8IUIPanelE10CUtlMemoryIS3_EEEENS_18panorama_enable_ifIXntsr16panorama_is_enumIT_EE5valueEvE4typeERS9_PN2v86HandleINSD_5ValueEEE
  T _ZN8panorama21PanoramaTypeToV8ParamINS_15CPanoramaSymbolEEENS_18panorama_enable_ifIXntsr16panorama_is_enumIT_EE5valueEvE4typeERS3_PN2v86HandleINS7_5ValueEEE
+ T _ZN8panorama21PanoramaTypeToV8ParamINS_19EPanelEventSource_tEEENS_18panorama_enable_ifIXsr16panorama_is_enumIT_EE5valueEvE4typeERS3_PN2v86HandleINS7_5ValueEEE
  T _ZN8panorama21PanoramaTypeToV8ParamIbEENS_18panorama_enable_ifIXntsr16panorama_is_enumIT_EE5valueEvE4typeERS2_PN2v86HandleINS6_5ValueEEE
  T _ZN8panorama21PanoramaTypeToV8ParamIfEENS_18panorama_enable_ifIXntsr16panorama_is_enumIT_EE5valueEvE4typeERS2_PN2v86HandleINS6_5ValueEEE
  T _ZN8panorama21PanoramaTypeToV8ParamIiEENS_18panorama_enable_ifIXntsr16panorama_is_enumIT_EE5valueEvE4typeERS2_PN2v86HandleINS6_5ValueEEE
@@ -45636,6 +45638,8 @@
  T panorama::Activated::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::Activated::GetEventType()
  T panorama::Activated::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
+ T panorama::ActiveControllerTypeChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ActiveControllerTypeChanged::GetEventType()
  T panorama::AddStyle::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::AddStyle::GetEventType()
  T panorama::AddStyle::MakeEvent(panorama::IUIPanelClient const*, char const*)
@@ -45938,6 +45942,7 @@
  T panorama::CDropDown::CDropDown(panorama::CPanel2D*, char const*)
  T panorama::CDropDown::EventDropDownMenuClosed(bool)
  T panorama::CDropDown::EventPanelActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
+ T panorama::CDropDown::EventResetToDefault(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CDropDown::FindDropDownMenuChild(char const*)
  T panorama::CDropDown::FindOptionIDsByClass(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T panorama::CDropDown::GetPanelType() const
@@ -45948,8 +45953,10 @@
  T panorama::CDropDown::OnInitializedFromLayout()
  T panorama::CDropDown::OnLayoutTraverse(float, float)
  T panorama::CDropDown::OnMouseButtonDown(panorama::MouseData_t const&)
+ T panorama::CDropDown::OnResetToDefaultValue()
  T panorama::CDropDown::RemoveAllOptions()
  T panorama::CDropDown::RemoveOption(char const*)
+ T panorama::CDropDown::ResetToDefault(bool)
  T panorama::CDropDown::SetSelected(char const*)
  T panorama::CDropDown::SetSelected(char const*, bool)
  T panorama::CDropDown::SetupJavascriptObjectTemplate()
@@ -45963,10 +45970,12 @@
  T panorama::CDropDownMenu::EventCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T panorama::CDropDownMenu::EventInputFocusTopLevelChanged(panorama::CPanelPtr<panorama::CPanel2D>)
  T panorama::CDropDownMenu::EventPanelActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
+ T panorama::CDropDownMenu::EventResetToDefault(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CDropDownMenu::GetLocalizationParent() const
  T panorama::CDropDownMenu::GetPanelType() const
  T panorama::CDropDownMenu::HasOption(char const*)
  T panorama::CDropDownMenu::OnLayoutTraverse(float, float)
+ T panorama::CDropDownMenu::OnResetToDefaultValue()
  T panorama::CDropDownMenu::RemoveOption(char const*)
  T panorama::CDropDownMenu::Show()
  T panorama::CDropDownMenu::ValidateClientPanel(CValidator&, char const*)
@@ -46029,6 +46038,7 @@
  T panorama::CGrid::SetHorizontalAndVerticalCount(int, int)
  T panorama::CGrid::SetHorizontalCount(int)
  T panorama::CGrid::SetHorizontalFocusLimit(int)
+ T panorama::CGrid::SetIgnoreFastMotion(bool)
  T panorama::CGrid::SetVerticalCount(int)
  T panorama::CGrid::SetupJavascriptObjectTemplate()
  T panorama::CGrid::TriggerFastMotion()
@@ -46842,6 +46852,7 @@
  T panorama::CSlider::CSlider(panorama::CPanel2D*, char const*)
  T panorama::CSlider::EventActivated(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
  T panorama::CSlider::EventCancelled(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::EPanelEventSource_t)
+ T panorama::CSlider::EventResetToDefault(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CSlider::EventStyleFlagsChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CSlider::GetPanelSymbol()
  T panorama::CSlider::GetPanelType() const
@@ -46855,6 +46866,7 @@
  T panorama::CSlider::OnMoveLeft(int)
  T panorama::CSlider::OnMoveRight(int)
  T panorama::CSlider::OnMoveUp(int)
+ T panorama::CSlider::OnResetToDefaultValue()
  T panorama::CSlider::OnStyleFlagsChanged()
  T panorama::CSlider::SetDirection(panorama::CSlider::ESliderDirection)
  T panorama::CSlider::SetValue(float)
@@ -49384,7 +49396,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateAmbientTrack>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateBackStackFocusPanel>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateBillingInfo, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateControllerHints>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateControllerPanelData>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateDirtyPanelInfo>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<UpdateDownloadCounts, int, int, int>(panorama::IUIPanel*, char const*, char const**)
@@ -49556,6 +49567,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::RemoveStyle, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::RemoveStyleFromEachChild, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ResetCarouselMouseWheelCounts>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ResetToDefaultValue>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::RestartMachine>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollDown>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollPanelIntoView, bool>(panorama::IUIPanel*, char const*, char const**)
@@ -49765,6 +49777,7 @@
  T panorama::MoviePlayerVolumeControl::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::None::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::None::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::OnActiveControllerTypeChangedDefaultHandler(panorama::IUIPanel*, panorama::EActiveControllerType)
  T panorama::OpenFileForEdit::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::OpenFileForEdit::GetEventType()
  T panorama::OpenFileForEdit::MakeEvent(panorama::IUIPanelClient const*, char const*, unsigned int)
@@ -49795,6 +49808,7 @@
  T panorama::PchNameFromEFontStyle(int)
  T panorama::PchNameFromEFontWeight(int)
  T panorama::PchNameFromEHorizontalAlignment(panorama::EHorizontalAlignment)
+ T panorama::PchNameFromEPanelEventSource_t(int)
  T panorama::PchNameFromETextAlign(int)
  T panorama::PchNameFromETextDecoration(int)
  T panorama::PchNameFromETextInputHandlerType_t(int)
@@ -49833,6 +49847,9 @@
  T panorama::ResetCarouselMouseWheelCounts::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ResetCarouselMouseWheelCounts::GetEventType()
  T panorama::ResetCarouselMouseWheelCounts::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::ResetToDefaultValue::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ResetToDefaultValue::GetEventType()
+ T panorama::ResetToDefaultValue::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::RestartMachine::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::RestartMachine::GetEventType()
  T panorama::RestartMachine::MakeEvent(panorama::IUIPanelClient const*)
@@ -53758,6 +53775,7 @@
  T void Destruct<CTenfootPathname::PathnamePart>(CTenfootPathname::PathnamePart*)
  T void Destruct<CUtlRadixTrieNode>(CUtlRadixTrieNode*)
  T void Destruct<CUtlString>(CUtlString*)
+ T void Destruct<ConParams::Entry_t>(ConParams::Entry_t*)
  T void Destruct<LaunchOption_t>(LaunchOption_t*)
  T void Destruct<LoginUser_t>(LoginUser_t*)
  T void Destruct<MarketingItem_t>(MarketingItem_t*)
@@ -53853,7 +53871,6 @@
  T void panorama::DispatchEventAsync<TickWaitingForGames>(float, TickWaitingForGames, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<TypeToJumpUpdate>(float, TypeToJumpUpdate, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<UpdateAchievementsPanelData>(float, UpdateAchievementsPanelData, panorama::IUIPanelClient const*)
- T void panorama::DispatchEventAsync<UpdateControllerHints>(float, UpdateControllerHints, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<UpdateControllerPanelData>(float, UpdateControllerPanelData, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<UpdateDirtyPanelInfo>(float, UpdateDirtyPanelInfo, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<UpdateDownloadCounts, int, int, int>(UpdateDownloadCounts, panorama::IUIPanelClient const*, int, int, int)
@@ -53957,6 +53974,7 @@
  T void panorama::GetPtrToCallbackArray<void (panorama::CDropDown::*)(char const*)>(void (panorama::CDropDown::*)(char const*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (panorama::CDropDown::*)(panorama::CPanel2D*)>(void (panorama::CDropDown::*)(panorama::CPanel2D*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (panorama::CGrid::*)()>(void (panorama::CGrid::*)(), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<void (panorama::CGrid::*)(bool)>(void (panorama::CGrid::*)(bool), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (panorama::CImagePanel::*)(char const*)>(void (panorama::CImagePanel::*)(char const*), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (panorama::CImagePanel::*)(panorama::CPanoramaSymbol)>(void (panorama::CImagePanel::*)(panorama::CPanoramaSymbol), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<void (panorama::CMoviePlayer::*)(char const*)>(void (panorama::CMoviePlayer::*)(char const*), v8::Handle<v8::Array>&)
@@ -54006,6 +54024,7 @@
  T void panorama::JSMethodCallTuple<panorama::CDropDown, void, panorama::CPanel2D*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<panorama::CDropDown, void>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<panorama::CGrid, int>(v8::FunctionCallbackInfo<v8::Value> const&)
+ T void panorama::JSMethodCallTuple<panorama::CGrid, void, bool>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<panorama::CGrid, void>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<panorama::CImagePanel, void, char const*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<panorama::CImagePanel, void, panorama::CPanoramaSymbol>(v8::FunctionCallbackInfo<v8::Value> const&)
@@ -54086,6 +54105,7 @@
  T void panorama::RegisterJSMethod<panorama::CDropDown, void, panorama::CPanel2D*>(char const*, void (panorama::CDropDown::*)(panorama::CPanel2D*))
  T void panorama::RegisterJSMethod<panorama::CDropDown, void>(char const*, void (panorama::CDropDown::*)())
  T void panorama::RegisterJSMethod<panorama::CGrid, int>(char const*, int (panorama::CGrid::*)())
+ T void panorama::RegisterJSMethod<panorama::CGrid, void, bool>(char const*, void (panorama::CGrid::*)(bool))
  T void panorama::RegisterJSMethod<panorama::CGrid, void>(char const*, void (panorama::CGrid::*)())
  T void panorama::RegisterJSMethod<panorama::CImagePanel, void, char const*>(char const*, void (panorama::CImagePanel::*)(char const*))
  T void panorama::RegisterJSMethod<panorama::CImagePanel, void, panorama::CPanoramaSymbol>(char const*, void (panorama::CImagePanel::*)(panorama::CPanoramaSymbol))
@@ -54177,6 +54197,7 @@
  T void panorama::RestoreFuncPtr<void (panorama::CDropDown::*)(char const*)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CDropDown::*)(char const*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (panorama::CDropDown::*)(panorama::CPanel2D*)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CDropDown::*)(panorama::CPanel2D*)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (panorama::CGrid::*)()>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CGrid::*)()>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<void (panorama::CGrid::*)(bool)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CGrid::*)(bool)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (panorama::CGrid::*)(float)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CGrid::*)(float)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (panorama::CGrid::*)(int)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CGrid::*)(int)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (panorama::CImagePanel::*)(char const*)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CImagePanel::*)(char const*)>&, v8::Local<v8::Array>&, int)
@@ -55047,7 +55068,6 @@
  b CSearchStoreResult::Show(panorama::CPanel2D*, CStoreSearchResults::StoreSearchResult_t const&)::k_symAvailableWindows
  b CSearchStoreResult::Show(panorama::CPanel2D*, CStoreSearchResults::StoreSearchResult_t const&)::k_symFullController
  b CSearchStoreResult::Show(panorama::CPanel2D*, CStoreSearchResults::StoreSearchResult_t const&)::k_symPartialController
- b CSearchStoreResult::Show(panorama::CPanel2D*, CStoreSearchResults::StoreSearchResult_t const&)::k_symSteamPad
  b CSettingsPanelGameControllerBindRow::BSetProperty(panorama::CPanoramaSymbol, char const*)::actionSymbol
  b CSettingsPanelGameControllerBindRow::BSetProperty(panorama::CPanoramaSymbol, char const*)::axisSymbol
  b CSettingsPanelGameControllerBindRow::BSetProperty(panorama::CPanoramaSymbol, char const*)::buttonSymbol
@@ -55256,7 +55276,6 @@
  b g_GraphPanel_Helper
  b g_IPCLogCounts
  b g_ImagePanel_Helper
- b g_InventoryBetaCmdLine
  b g_KBMgr
  b g_Label_Helper
  b g_ListPanel_Helper
@@ -55397,7 +55416,6 @@
  b guard variable for CSearchStoreResult::Show(panorama::CPanel2D*, CStoreSearchResults::StoreSearchResult_t const&)::k_symAvailableWindows
  b guard variable for CSearchStoreResult::Show(panorama::CPanel2D*, CStoreSearchResults::StoreSearchResult_t const&)::k_symFullController
  b guard variable for CSearchStoreResult::Show(panorama::CPanel2D*, CStoreSearchResults::StoreSearchResult_t const&)::k_symPartialController
- b guard variable for CSearchStoreResult::Show(panorama::CPanel2D*, CStoreSearchResults::StoreSearchResult_t const&)::k_symSteamPad
  b guard variable for CSettingsPanelGameControllerBindRow::BSetProperty(panorama::CPanoramaSymbol, char const*)::actionSymbol
  b guard variable for CSettingsPanelGameControllerBindRow::BSetProperty(panorama::CPanoramaSymbol, char const*)::axisSymbol
  b guard variable for CSettingsPanelGameControllerBindRow::BSetProperty(panorama::CPanoramaSymbol, char const*)::buttonSymbol
@@ -55742,6 +55760,8 @@
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyWhiteSpace()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyWidth()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyZIndex()::s_pool
+ b guard variable for panorama::OnActiveControllerTypeChangedDefaultHandler(panorama::IUIPanel*, panorama::EActiveControllerType)::k_symSteamPad
+ b guard variable for panorama::OnActiveControllerTypeChangedDefaultHandler(panorama::IUIPanel*, panorama::EActiveControllerType)::k_symXInputPad
  b guard variable for vgui::Frame::ApplySingleSetting(KeyValues*)::hKeyCloseOnEscape
  b guard variable for vgui::Frame::ApplySingleSetting(KeyValues*)::hKeyMaximizeButtonVisible
  b guard variable for vgui::Frame::ApplySingleSetting(KeyValues*)::hKeySizeable
@@ -56028,6 +56048,8 @@
  b panorama::GetPropertyMemPool_CStylePropertyWhiteSpace()::s_pool
  b panorama::GetPropertyMemPool_CStylePropertyWidth()::s_pool
  b panorama::GetPropertyMemPool_CStylePropertyZIndex()::s_pool
+ b panorama::OnActiveControllerTypeChangedDefaultHandler(panorama::IUIPanel*, panorama::EActiveControllerType)::k_symSteamPad
+ b panorama::OnActiveControllerTypeChangedDefaultHandler(panorama::IUIPanel*, panorama::EActiveControllerType)::k_symXInputPad
  b panorama::g_CStylePropertyAlign_Helper
  b panorama::g_CStylePropertyAlign_symbolHorizontal
  b panorama::g_CStylePropertyAlign_symbolVertical
@@ -56394,6 +56416,7 @@
  d panorama::s_EBackgroundRepeat
  d panorama::s_EFontStyle
  d panorama::s_EFontWeight
+ d panorama::s_EPanelEventSource_t
  d panorama::s_ETextAlign
  d panorama::s_ETextDecoration
  d panorama::s_ETextInputHandlerType_t

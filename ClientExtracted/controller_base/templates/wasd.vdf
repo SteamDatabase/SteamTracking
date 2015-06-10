@@ -1,8 +1,8 @@
 "controller_mappings"
 {
 	"version" "2"
-	"game" "Keyboard and Mouse FPS"
-	"title" "WASD FPS"
+	"game" "WASD with Mouse"
+	"title" "WASD with Mouse"
 	"description" "This is a template configuration for games use the keyboard and mouse."
 
 	"group"
@@ -52,7 +52,7 @@
 		"settings"
 		{
 			"sensitivity"		"145"
-			"rotation"		"20"
+			"rotation"		"15"
 			"doubetap_max_duration"		"320"
 		}
 	}
@@ -87,7 +87,6 @@
 		"settings"
 		{
 			"hold_repeat_inverval"		"99"
-			"output_trigger"		"1"
 		}
 	}
 	"group"

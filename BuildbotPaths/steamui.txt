@@ -900,6 +900,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/transformations.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uiengineclient.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uievent.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uievents.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uifileresource.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uischeduleddel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/color.h

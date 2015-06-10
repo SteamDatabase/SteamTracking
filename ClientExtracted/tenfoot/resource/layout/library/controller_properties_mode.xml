@@ -122,7 +122,15 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickSmoothing" />
           <DropDown id="JoystickSmoothingCameraMode" />
         </Panel>
-
+				<Panel class="FieldWrapper JoystickCameraMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
+					<DropDown id="InvertYJoystickCamera" />
+				</Panel>
+				<Panel class="FieldWrapper JoystickCameraMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
+					<Slider id="VerticalSensitivityJoystickCamera" direction="horizontal" />
+				</Panel>				
+				
         <!-- Mouse Mode -->
 				<Panel class="FieldWrapper MouseMode">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Trackball" />
@@ -182,7 +190,24 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelCounterClockwise" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelCounterClockwise" />
 				</Panel>
-
+				<!-- ScrollWheel Mode Advanced -->
+				<Panel class="FieldWrapper ScrollWheelMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList0" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList0" />
+				</Panel>
+				<Panel class="FieldWrapper ScrollWheelMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList1" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList1" />
+				</Panel>
+				<Panel class="FieldWrapper ScrollWheelMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList2" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList2" />
+				</Panel>
+				<Panel class="FieldWrapper ScrollWheelMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList3" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList3" />
+				</Panel>
+				
 				<!-- Trigger Mode -->
 				<Panel class="FieldWrapper TriggerMode">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerClick" />
@@ -281,7 +306,24 @@
 
 				<!-- ScrollWheel Mode -->
 				<Panel id="CenterImageScrollWheel" class="CenterImage ScrollWheelMode" />
-
+				<!-- ScrollWheel Mode Advanced -->
+				<Panel class="FieldWrapper ScrollWheelMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList4" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList4" />
+				</Panel>
+				<Panel class="FieldWrapper ScrollWheelMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList5" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList5" />
+				</Panel>
+				<Panel class="FieldWrapper ScrollWheelMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList6" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList6" />
+				</Panel>
+				<Panel class="FieldWrapper ScrollWheelMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList7" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList7" />
+				</Panel>
+				
 				<!-- Trigger Mode -->
 				<Panel class="FieldWrapper TriggerMode">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputTrigger" />
@@ -423,7 +465,21 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelClick" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelClick" />
 					</Panel>
+					<!-- ScrollWheel Mode Advanced -->
+					<Panel class="FieldWrapper ScrollWheelMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList8" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList8" />
+					</Panel>
+					<Panel class="FieldWrapper ScrollWheelMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelList9" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="ScrollWheelList9" />
+					</Panel>
+					<Panel class="FieldWrapper ScrollWheelMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelListWrap" />
+						<DropDown id="ScrollWheelListWrap" />
+					</Panel>					
 					
+
 					<!-- Trigger Mode -->
 					<Panel class="FieldWrapper TriggerMode">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThresholdBinding" />
