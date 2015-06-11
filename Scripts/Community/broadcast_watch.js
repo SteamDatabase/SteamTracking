@@ -56,12 +56,11 @@ var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDView
 	this.m_bVideoEnabled = null;
 	this.m_bDisableChatTooltips = false;
 	
-	this.m_unViewerBrowserID = WebStorage.GetLocal( "viewerBrowserID" );
+	this.m_ulViewerToken = WebStorage.GetLocal( "broadcastViewerToken" );
 
-	if ( this.m_unViewerBrowserID == null )
+	if ( this.m_ulViewerToken == null )
 	{
-		this.m_unViewerBrowserID = Math.floor(Math.random() * 4294967296);
-		WebStorage.SetLocal( "viewerBrowserID", this.m_unViewerBrowserID );
+		this.m_ulViewerToken = 0;
 	}
 }
 
@@ -193,6 +192,14 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 	this.GetBroadcastMPD();
 }
 
+CBroadcastWatch.prototype.SetGameDataUpdateFrequency = function( flFreq )
+{
+	if ( !this.m_bVideoEnabled )
+		return;
+
+	CDASHPlayer.GAMEDATA_TRIGGER_MS = 1000 / Math.max( 3, Math.min( 10, flFreq ) );
+}
+
 CBroadcastWatch.prototype.DisableChatTooltips = function()
 {
 	this.m_bDisableChatTooltips = true;
@@ -246,7 +253,7 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 		data: {
 			steamid: _watch.m_ulBroadcastSteamID,
 			broadcastid: _watch.m_ulBroadcastID,
-			browserid: _watch.m_unViewerBrowserID
+			viewertoken: _watch.m_ulViewerToken
 		},
 		type: 'GET'
 	})
@@ -279,6 +286,13 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 		else if ( data.success == 'ready' )
 		{
 			_watch.m_ulBroadcastID = data.broadcastid;
+
+			if( _watch.m_ulViewerToken != data.viewertoken )
+			{
+				_watch.m_ulViewerToken = data.viewertoken;
+				WebStorage.SetLocal( "broadcastViewerToken", _watch.m_ulViewerToken );
+			}
+
 			_watch.LoadBroadcastMPD( data.url );
 
 			_watch.SetBroadcastInfo( data );
@@ -414,7 +428,7 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 
 	$J( '#BroadcastInfoButtons' ).show();
 
-	if ( this.IsBroadcaster() && data.is_rtmp )
+	if ( this.IsBroadcaster() )
 	{
 		// show admin box instead of regular box
 		$J( '#BroadcasterAdminBox' ).show();
@@ -422,10 +436,17 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 		$J( '#ViewStorePage' ).hide();
 		$J( '#ReportBroadcast' ).hide();
 
-		// allow to change Game ID for RTMP streams
 		$J( '#BroadcastAdminTitleInput' ).val( strTitle );
 		$J( '#BroadcastAdminPermissionSelect' ).val( data.permission );
 		$J( '#BroadcastAdminGameIDInput' ).val( data.appid );
+
+		// allow to change GameID and permission for RTMP streams only
+		if( !data.is_rtmp )
+		{
+			$J( '#BroadcastAdminFromRowPermission' ).hide();
+			$J( '#BroadcasterAdminFormRowGameID' ).hide();
+		}
+
 		$J( '#BroadcastAdminViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
 	}
 
