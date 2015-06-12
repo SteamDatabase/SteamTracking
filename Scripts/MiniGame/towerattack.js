@@ -4,6 +4,8 @@
 window.k_ScreenWidth = 1280;
 window.k_ScreenHeight = 720;
 
+var g_JSCacheKey = 'asdawg42tw';
+
 var g_rgTextureCache = {
 	// Particles
 	steam_coin: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/steam_coin.png?v='+g_CacheKey },
@@ -203,11 +205,11 @@ var CScenePreload = function()
 	if( typeof CUI === 'undefined' )
 	{
 		this.m_rgScriptsToLoad = [
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/running.js',
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/network.js',
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/ui.js',
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/easing.js',
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/enemies.js'
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/running.js?v=' + g_JSCacheKey,
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/network.js?v=' + g_JSCacheKey,
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/ui.js?v=' + g_JSCacheKey,
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/easing.js?v=' + g_JSCacheKey,
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/enemies.js?v=' + g_JSCacheKey
 		];
 	} else {
 		this.m_rgScriptsToLoad = [];

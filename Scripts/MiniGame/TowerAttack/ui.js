@@ -678,8 +678,6 @@ CUI.prototype.UpdateUpgrades = function()
 
 		$J('.cost', ele).text( FormatNumberForDisplay( nCost, 5 ) );
 		$J('.link', ele).data( 'cost', nCost );
-		if( i == 5 ) // Special case for elemental upgrades
-			$J('#element_cost').text( FormatNumberForDisplay( nCost, 5 ) );
 
 		// hide purchased abilities
 		if (upgrades[i].type == '8') {
@@ -727,6 +725,7 @@ CUI.prototype.UpdateUpgrades = function()
 		upgradesToSort.detach().appendTo( parentContainer );
 	}
 
+	var nCombinedElementalLevels = 1;
 	if ( bestElementalUpgradeLevel > 0 )
 	{
 		var elementalUpgrades = [ 3, 4, 5, 6 ];
@@ -735,6 +734,7 @@ CUI.prototype.UpdateUpgrades = function()
 			var idx = elementalUpgrades[i];
 			var elem = $J( this.m_rgElementCache['upgr_'+idx] );
 			var nLevel = this.m_Game.GetUpgradeLevel(idx);
+			nCombinedElementalLevels += nLevel;
 			if ( nLevel == bestElementalUpgradeLevel )
 			{
 				elem.addClass( "primary" );
@@ -744,6 +744,23 @@ CUI.prototype.UpdateUpgrades = function()
 				elem.removeClass("primary");
 			}
 		}
+
+		//console.log(nCombinedElementalLevels);
+
+		var upgrade = this.m_Game.m_rgTuningData.upgrades[4];
+
+		var nElementalCost = FloorToMultipleOf( 10, CalcExponentialTuningValve( nCombinedElementalLevels, upgrade.cost, upgrade.cost_exponential_base ) );
+
+		$J('#element_cost')[0].textContent =  FormatNumberForDisplay( nElementalCost, 5 );
+
+		for ( var i = 0; i < elementalUpgrades.length; ++i )
+		{
+			var idx = elementalUpgrades[i];
+			var elem = $J( this.m_rgElementCache['upgr_'+idx] );
+
+			$J('.link', elem).data( 'cost', nElementalCost );
+		}
+
 	}
 
 

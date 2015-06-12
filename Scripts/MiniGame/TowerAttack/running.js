@@ -160,10 +160,6 @@ window.CSceneGame = function()
 
 	this.CheckNewPlayer();
 
-	//
-	// SCANLINES???
-	//
-
 
 }
 
@@ -468,6 +464,9 @@ CSceneGame.prototype.Tick = function()
 
 	}
 
+	if( this.m_NoiseTarget )
+		this.m_NoiseTarget.noise = Math.random();
+
 }
 
 CSceneGame.prototype.ClientOverride = function( strOverrideTarget, strOverrideKey, strOverrideValue, strOverrideValueB, nOverrideCycles )
@@ -508,6 +507,20 @@ CSceneGame.prototype.ApplyClientOverrides = function( strTarget, bIgnoreTicks )
 				//console.log("Applying override:");
 				//console.log(this.m_rgLocalOverrides[i]);
 				this.m_rgPlayerData[ this.m_rgLocalOverrides[i].key ] = this.m_rgLocalOverrides[i].value;
+				break;
+
+			case 'upgrades':
+				// Why do we still use this loop? Pretty sure the data is in order...
+				if( this.m_rgPlayerUpgrades )
+				{
+					for( var j=0; j<this.m_rgPlayerUpgrades.length; j++ )
+					{
+						if( this.m_rgPlayerUpgrades[j].upgrade == this.m_rgLocalOverrides[i].key )
+						{
+							this.m_rgPlayerUpgrades[j].level = this.m_rgLocalOverrides[i].value;
+						}
+					}
+				}
 				break;
 
 			case 'ability':
@@ -593,7 +606,7 @@ CSceneGame.prototype.OnReceiveUpdate = function()
 function SmackTV()
 {
 	var r = null;
-	switch( Math.floor( Math.random() * 10 ) )
+	switch( Math.floor( Math.random() * 15 ) )
 	{
 		case 2:
 			var f = new PIXI.filters.RGBSplitFilter();
@@ -618,6 +631,62 @@ function SmackTV()
 			f.size.y = Math.floor( Math.random() * 20 );
 			r = [f];
 			break;
+
+		case 6: // This inverts and offsets for some reason. Probably a bug in pixi, might look at it later
+			var f = new PIXI.filters.AsciiFilter();
+			r = [f];
+			break;
+		case 7:
+			var f = new PIXI.filters.BloomFilter();
+			r = [f];
+			break;
+		case 8:
+			var f = new PIXI.filters.BlurDirFilter(Math.random(), Math.random());
+			r = [f];
+			break;
+
+		case 9:
+			var f = new PIXI.filters.ColorMatrixFilter();
+			f.matrix =  [
+				1,0,0,0,0,
+				0,1,0,0,0,
+				0,0,1,0,0,
+				0,0,0,1,0,
+			];
+
+			f.hue (360*Math.random(),0xFFFFFF*Math.random());
+
+			r = [f];
+			break;
+
+		case 10:
+			var f = new PIXI.filters.ColorMatrixFilter();
+			f.matrix =  [
+				1,0,0,0,0,
+				0,1,0,0,0,
+				0,0,1,0,0,
+				0,0,0,1,0,
+			];
+
+			f.browni  (Math.random());
+
+			r = [f];
+			break;
+
+		case 11:
+			var f = new PIXI.filters.ColorMatrixFilter();
+			f.matrix =  [
+				1,0,0,0,0,
+				0,1,0,0,0,
+				0,0,1,0,0,
+				0,0,0,1,0,
+			];
+
+			f.predator  (Math.random(), Math.random());
+
+			r = [f];
+			break;
+
 	}
 
 	g_Minigame.CurrentScene().m_Container.filters = r;
@@ -963,7 +1032,7 @@ CSceneGame.prototype.UpdateEnemies = function()
 	}
 
 	// Update particles...
-	if( this.m_rgLaneData )
+	if( this.m_rgLaneData && this.m_rgLaneData[this.m_rgPlayerData.current_lane] )
 	{
 		if( window.g_TESTA || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ 7 ] )
 		{
@@ -1104,11 +1173,19 @@ CSceneGame.prototype.GetUpgradeCost = function( nUpgradeID )
 		{
 			if( this.m_rgPlayerUpgrades[i].upgrade == nUpgradeID )
 			{
-				return this.m_rgPlayerUpgrades[i].cost_for_next_level || -1;
+				var upgrade = this.GetUpgradeTuningData( nUpgradeID );
+
+				var nPredictedCost = FloorToMultipleOf( 10, CalcExponentialTuningValve( this.m_rgPlayerUpgrades[i].level, upgrade.cost, upgrade.cost_exponential_base ) );
+				return nPredictedCost;
 			}
 		}
 	}
 	return 0;
+}
+
+CSceneGame.prototype.GetUpgradeTuningData = function( nUpgradeID )
+{
+	return this.m_rgTuningData.upgrades[nUpgradeID];
 }
 
 CSceneGame.prototype.bHaveAbility = function( nAbilityID )
@@ -1149,6 +1226,8 @@ CSceneGame.prototype.TryUpgrade = function( ele )
 {
 	var $ele = $J(ele);
 
+	var nUpgradeID = $ele.data('type');
+
 	if( $ele.data('cost') > this.m_rgPlayerData.gold )
 	{
 		g_AudioManager.play( 'wrongselection' );
@@ -1163,7 +1242,13 @@ CSceneGame.prototype.TryUpgrade = function( ele )
 	this.ClientOverride('player_data', 'gold', this.m_rgPlayerData.gold - $ele.data('cost') );
 	this.ApplyClientOverrides('player_data', true );
 
+	// Predict new upgrade level
+	var nCurrentLevel = this.GetUpgradeLevel( nUpgradeID )
+	this.ClientOverride('upgrades', nUpgradeID, nCurrentLevel+1 );
+	this.ApplyClientOverrides('upgrades', true );
+
 	this.m_rgUpgradesQueue.push( $ele.data('type') );
+	this.m_UI.UpdateUpgrades();
 
 	g_AudioManager.play( 'upgrade' );
 }
@@ -1795,17 +1880,13 @@ CSceneGame.prototype.CheckNewPlayer = function( )
 
 
 }
-
-
-
-function GetSpinner(nTick)
+// Stats functions we don't always include, redefine just in case.
+function FloorToMultipleOf( multipleOf, number )
 {
-	switch( nTick % 4 )
-	{
-		case 0: return '◴';
-		case 1: return '◷';
-		case 2: return '◶';
-		case 3: return '◵';
-	}
+	return Math.floor( number / multipleOf ) * multipleOf;
 }
 
+function CalcExponentialTuningValve( level, coefficient, base )
+{
+	return ( coefficient * ( Math.pow( base, level ) ) );
+}
