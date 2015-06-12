@@ -579,17 +579,14 @@ CSceneGame.prototype.OnReceiveUpdate = function()
 
 	this.m_nTarget = this.m_rgPlayerData.target;
 	var enemy = this.GetEnemy( this.m_rgPlayerData.current_lane, this.m_rgPlayerData.target  );
-	if( enemy && this.m_rgGameData && this.m_rgPlayerTechTree.dps > 0 && this.m_rgPlayerData.hp > 0  )
+	if( enemy && this.m_rgGameData && this.m_rgPlayerData.hp > 0  )
 	{
-		var element = this.m_rgGameData.lanes[this.m_rgPlayerData.current_lane].element;
-
 		if ( this.m_rgPlayerData.crit_damage )
 		{
 			this.DoCritEffect( this.m_rgPlayerData.crit_damage, enemy.m_Sprite.position.x - 50, enemy.m_Sprite.position.y - 100, 'Crit!' );
 			enemy.TakeDamage();
+			this.m_rgPlayerData.crit_damage = 0;
 		}
-
-
 	}
 }
 
