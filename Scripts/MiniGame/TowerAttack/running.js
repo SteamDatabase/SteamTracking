@@ -793,7 +793,7 @@ CSceneGame.prototype.OnGameDataUpdate = function()
 	{
 		if( this.m_nCurrentLevel )
 		{
-			$J('.level', '#nextlevel').text(this.m_rgGameData.level);
+			$J('.level', '#nextlevel').text(this.m_rgGameData.level + 1);
 			$J('#nextlevel').show();
 			setTimeout(function()
 			{
@@ -1811,5 +1811,4 @@ function GetSpinner(nTick)
 		case 3: return '◵';
 	}
 }
-
 
