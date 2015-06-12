@@ -147,6 +147,7 @@
 //
 "Styles/Community/auction.css"                   : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/auction.css?__TIME__",
 "Styles/Community/holidayprofile.css"            : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/holidayprofile.css?__TIME__",
+"Styles/MiniGame/towerattack.css"                : "https://steamcommunity-a.akamaihd.net/public/css/minigame/towerattack.css?__TIME__",
 
 //
 // Holiday JS
@@ -241,6 +242,18 @@
 "Scripts/user_reviews.js"                        : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/user_reviews.js?__TIME__&l=english",
 "Scripts/dash_player.js"                         : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/dash_player.js?__TIME__&l=english",
 "Scripts/login.js"                               : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/login.js?__TIME__&l=english",
+
+//
+// Mini game
+//
+"Scripts/MiniGame/minigame.js"                   : "https://steamcommunity-a.akamaihd.net/public/javascript/minigame/minigame.js?__TIME__&l=english",
+"Scripts/MiniGame/towerattack.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack.js?__TIME__&l=english",
+"Scripts/MiniGame/TowerAttack/running.js"        : "https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/running.js?__TIME__&l=english",
+"Scripts/MiniGame/TowerAttack/network.js"        : "https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/network.js?__TIME__&l=english",
+"Scripts/MiniGame/TowerAttack/ui.js"             : "https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/ui.js?__TIME__&l=english",
+"Scripts/MiniGame/TowerAttack/easing.js"         : "https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/easing.js?__TIME__&l=english",
+"Scripts/MiniGame/TowerAttack/enemies.js"        : "https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/enemies.js?__TIME__&l=english",
+
 
 //
 // Big Picture CSS
