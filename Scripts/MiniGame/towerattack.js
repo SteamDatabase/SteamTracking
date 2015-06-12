@@ -4,7 +4,7 @@
 window.k_ScreenWidth = 1280;
 window.k_ScreenHeight = 720;
 
-var g_JSCacheKey = 'asdawg42tw';
+var g_JSCacheKey = 'asdwawg42tw';
 
 var g_rgTextureCache = {
 	// Particles

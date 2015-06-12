@@ -222,8 +222,8 @@ CSceneGame.prototype.Tick = function()
 					if( rgResult.response.player_data )
 					{
 						instance.m_rgPlayerData = rgResult.response.player_data;
-						instance.ApplyClientOverrides('player_data', true);
-						instance.ApplyClientOverrides('ability', true);
+						instance.ApplyClientOverrides('player_data');
+						instance.ApplyClientOverrides('ability');
 					}
 
 					instance.m_bWaitingForResponse = false;
