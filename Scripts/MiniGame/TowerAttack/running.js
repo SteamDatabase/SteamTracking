@@ -82,6 +82,8 @@ window.CSceneGame = function()
 	this.m_rgTuningData = false;
 	this.m_bNeedTechTree = true;
 
+	this.m_rgStoredCrits = [];
+
 	this.m_rgLocalOverrides = [];
 
 	this.m_rgActiveParticles = {};
@@ -464,8 +466,23 @@ CSceneGame.prototype.Tick = function()
 
 	}
 
-	if( this.m_NoiseTarget )
-		this.m_NoiseTarget.noise = Math.random();
+	// Screen shake
+	if( this.m_bDoShake )
+	{
+		this.m_nShakeTimer++;
+
+		if( this.m_nShakeTimer > 10 )
+		{
+			this.m_bDoShake = false;
+			this.m_Container.x = 0;
+			this.m_Container.y = 0;
+		} else if( this.m_nShakeTimer % 1 == 0 )
+		{
+			this.m_Container.x = Math.random() * 10 - 5;
+			this.m_Container.y = Math.random() * 10 - 5;
+		}
+	}
+
 
 }
 
@@ -576,6 +593,8 @@ CSceneGame.prototype.OnReceiveUpdate = function()
 {
 	this.m_UI.OnPlayerDataUpdate();
 
+	if( this.m_rgPlayerData.crit_damage )
+		this.m_rgStoredCrits.push(this.m_rgPlayerData.crit_damage);
 
 	if( !this.m_easingBG )
 	{
@@ -591,16 +610,6 @@ CSceneGame.prototype.OnReceiveUpdate = function()
 	}
 
 	this.m_nTarget = this.m_rgPlayerData.target;
-	var enemy = this.GetEnemy( this.m_rgPlayerData.current_lane, this.m_rgPlayerData.target  );
-	if( enemy && this.m_rgGameData && this.m_rgPlayerData.hp > 0  )
-	{
-		if ( this.m_rgPlayerData.crit_damage )
-		{
-			this.DoCritEffect( this.m_rgPlayerData.crit_damage, enemy.m_Sprite.position.x - 50, enemy.m_Sprite.position.y - 100, 'Crit!' );
-			enemy.TakeDamage();
-			this.m_rgPlayerData.crit_damage = 0;
-		}
-	}
 }
 
 function SmackTV()
@@ -1355,8 +1364,16 @@ CSceneGame.prototype.DoClick = function( mouseData )
 		y = point.y;
 	}
 
+	if ( this.m_rgStoredCrits.length > 0 )
+	{
+		var rgDamage = this.m_rgStoredCrits.splice(0,1);
 
-	this.DoClickEffect(this.CalculateDamage( this.m_rgPlayerTechTree.damage_per_click, element ), x, y);
+		this.DoCritEffect( rgDamage[0],x, y, 'Crit!' );
+	} else {
+		this.DoClickEffect(this.CalculateDamage( this.m_rgPlayerTechTree.damage_per_click, element ), x, y);
+	}
+
+
 	this.SpawnEmitter( g_rgEmitterCache.click_burst, x - this.m_containerParticles.position.x, y );
 
 	var nClickGoldPct = this.m_rgGameData.lanes[ this.m_rgPlayerData.current_lane ].active_player_ability_gold_per_click;
@@ -1393,7 +1410,7 @@ CSceneGame.prototype.DoClick = function( mouseData )
 
 CSceneGame.prototype.DoClickEffect = function( nDamage, x, y, container )
 {
-	var text = new PIXI.Text("-" + FormatNumberForDisplay( nDamage, 5 ), {font: "35px 'Press Start 2P'", fill: "#fff", stroke: '#000', strokeThickness: 2 });
+	var text = new PIXI.Text("-" + FormatNumberForDisplay( nDamage, 5 ), {font: "30px 'Press Start 2P'", fill: "#fff", stroke: '#000', strokeThickness: 2 });
 
 	text.x = x;
 	text.y = y;
@@ -1422,31 +1439,43 @@ CSceneGame.prototype.DoClickEffect = function( nDamage, x, y, container )
 }
 
 
-CSceneGame.prototype.DoCritEffect = function( nDamage, x, y, additionalText )
+CSceneGame.prototype.DoCritEffect = function( nDamage, x, y, additionalText, container )
 {
-	var strText = ( additionalText ? additionalText : "" ) + " -" + FormatNumberForDisplay( nDamage );
-	var text = new PIXI.Text(strText, {font: "35px 'Press Start 2P'", fill: "#fff", stroke: '#000', strokeThickness: 2 });
+	var strText = ( additionalText ? additionalText : "" ) + "\n-" + FormatNumberForDisplay( nDamage );
+	var text = new PIXI.Text(strText, {font: "35px 'Press Start 2P'", fill: "#faa", stroke: '#000', strokeThickness: 2 });
 
-	text.x = x - ( text.width / 2 );
-	text.y = y ;
+	text.x = x;
+	text.y = y;
 
-	this.m_containerParticles.addChild( text );
-	text.container = this.m_containerParticles;
+	if( container )
+	{
+		container.addChild( text );
+		text.container = container;
+	} else {
+		this.m_containerUI.addChild( text );
+		text.container = this.m_containerUI;
+	}
 
-	var e = new CEasingLinear( text.y, -200, 500 );
+	var e = new CEasingSinOut( text.y, -200, 1000 );
 	e.parent = text;
 	text.m_easeY = e;
 
-	//var e = new CEasingLinear( text.x, 0, 500 );
-	//e.parent = text;
-	//text.m_easeX = e;
 
-	var e = new CEasingSinOut( 1.5, -1.5, 2000 );
+	var e = new CEasingSinOut( 2, -2, 1000 );
 	e.parent = text;
 	text.m_easeAlpha = e;
 
 	this.m_rgClickNumbers.push(text);
+	g_AudioManager.play( 'wrongselection' ); // @todo chrisk this sound isn't ideal, but it's the closest thing I can find on a friday at 6:45pm
 
+	this.DoScreenShake();
+
+}
+
+CSceneGame.prototype.DoScreenShake = function()
+{
+	this.m_bDoShake = true;
+	this.m_nShakeTimer = 0;
 }
 
 CSceneGame.prototype.TryAbility = function( ele )
