@@ -4,7 +4,9 @@ function InitSaleCountdown( idTimer, tsServerEnd )
 	var $elCountdown = $J('#' + idTimer );
 	if ( $elCountdown.length )
 	{
-		$elCountdown.css( 'width', $elCountdown.width() + 5 );
+		if ( !$elCountdown.hasClass( 'nofixedwidth' ) )
+			$elCountdown.css( 'width', $elCountdown.width() + 5 );
+
 		$elCountdown.addClass( 'countdown' );
 		InitDailyDealTimer( $elCountdown[0], tsServerEnd );
 	}
