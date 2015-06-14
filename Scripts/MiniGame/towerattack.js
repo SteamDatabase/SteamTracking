@@ -4,7 +4,7 @@
 window.k_ScreenWidth = 1280;
 window.k_ScreenHeight = 720;
 
-var g_JSCacheKey = 'as8wg42t0w';
+var g_JSCacheKey = 'as8wg42t0y';
 
 var g_rgTextureCache = {
 	// Particles
@@ -112,16 +112,19 @@ var g_rgIconMap = {
 	"ability_18": 	{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:critical:'  },
 	"ability_19": 				{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:fistpump:'  },
 	"ability_20": 						{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:VeneticaGoldCoin:' },
-	"ability_21": 					{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:swshield:' },
-	"ability_22":		 					{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:treasurechest:' },
-	"ability_23":		 				{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:healthvial:' },
-	"ability_24":		 				{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:sunportal:' },
-	"element_1":									{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:shelterwildfire:' },
-	"element_2":									{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:waterrune:' },
-	"element_3":										{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:Wisp:' },
-	"element_4":									{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:FateTree:' },
-	"enemy_2":									{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:like_king:' },
-	"enemy_4":								{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:goldenmilkminer:' },
+	"ability_21": 					{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:swshield:' },
+	"ability_22":		 					{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:treasurechest:' },
+	"ability_23":		 				{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:healthvial:' },
+	"ability_24":		 				{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:sunportal:' },
+	"ability_25":		 				{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:twteamrandom:' },
+	"ability_26":		 					{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:wormwarp:' },
+	"ability_27":	 					{ icon: 'http://cdn.steamcommunity.com//economy/emoticon/:cooldown:' },
+	"element_1":									{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:shelterwildfire:' },
+	"element_2":									{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:waterrune:' },
+	"element_3":										{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:Wisp:' },
+	"element_4":									{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:FateTree:' },
+	"enemy_2":									{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:like_king:' },
+	"enemy_4":								{ icon: 'http://cdn.steamcommunity.com/economy/emoticon/:goldenmilkminer:' },
 };
 
 var g_rgSoundCache = {

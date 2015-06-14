@@ -84,7 +84,7 @@ CUI.prototype.BuildUI = function()
 
 	var rgAbilities = this.m_Game.m_rgTuningData.abilities;
 
-	for( var i=0; i< 25; i++ )
+	for( var i=0; i< 28; i++ )
 	{
 		if( !rgAbilities[i] )
 			continue;
@@ -318,7 +318,7 @@ CUI.prototype.UpdateSpendBadgePointsDialog = function()
 	// add ability items
 	var bResort = false;
 	var abilities = this.m_Game.m_rgTuningData.abilities;
-	for ( var i=0; i< 25; i++ )
+	for ( var i=0; i< 28; i++ )
 	{
 		var ability = abilities[i];
 		if ( !ability || !ability.badge_points_cost )
@@ -808,7 +808,7 @@ CUI.prototype.UpdateActiveAbilities = function()
 	// TODO: Don't do this every tick, it's awful.
 	//container.empty();
 
-	for( var i=0; i< 25; i++ )
+	for( var i=0; i< 28; i++ )
 	{
 		var $ele = this.m_rgElementCache['activeability_' + i];
 
@@ -850,7 +850,7 @@ CUI.prototype.UpdateAbilities = function()
 	//container.empty();
 
 	var bResortAbilities = false;
-	for( var i=0; i< 25; i++ )
+	for( var i=0; i< 28; i++ )
 	{
 		if( !this.m_Game.bHaveAbility( i ) )
 			continue;
@@ -911,7 +911,7 @@ CUI.prototype.UpdateAbilities = function()
 		}
 	}
 
-	for( var i=0; i< 25; i++ )
+	for( var i=0; i< 28; i++ )
 	{
 		var ele = this.m_rgElementCache['abilityitem_'+i];// $J('#abilityitem_' + i)[0];
 
@@ -929,7 +929,7 @@ CUI.prototype.UpdateAbilities = function()
 			ele = item_template.clone();
 			$J(ele).attr('id','abilityitem_' + i);
 			this.m_rgElementCache['abilityitem_'+i] = ele;
-			$J(ele).data('sortIndex', 25 + i );
+			$J(ele).data('sortIndex', 28 + i );
 			$J('.name', ele).text( abilities[i].name );
 			$J('.link', ele).data( 'type', i );
 			$J('.link', ele).data( 'abilityid', i );
