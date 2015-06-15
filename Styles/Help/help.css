@@ -1451,6 +1451,11 @@ a.guide_row {
 	color: #9cacba;
 }
 
+.lineitem_price_strikeout {
+	text-decoration: line-through;
+	color: #9cacba;
+}
+
 .help_purchase_qty {
 	color: #9cacba;
 	font-size: 14px;
