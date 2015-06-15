@@ -1209,6 +1209,16 @@ CSceneGame.prototype.bIsAbilityActive = function( nAbilityID )
 
 CSceneGame.prototype.GetCooldownForAbility =  function( nAbilityID )
 {
+	if ( this.m_rgTuningData.abilities[nAbilityID].start_of_game_cooldown && this.m_rgGameData.timestamp_game_start )
+	{
+		var cooldown = this.m_rgTuningData.abilities[nAbilityID].start_of_game_cooldown;
+		var timeSinceStart = this.m_nTime - this.m_rgGameData.timestamp_game_start;
+		if ( timeSinceStart < cooldown )
+		{
+			return cooldown - timeSinceStart;
+		}
+	}
+
 	if( this.m_rgPlayerData && this.m_rgPlayerData.active_abilities )
 	{
 		for( var i=0; i<this.m_rgPlayerData.active_abilities.length; i++ )
