@@ -75,7 +75,29 @@ var g_rgNamesMap = {
 	'city_day_10': [ 'Fisher', 'Felix', 'Taven', 'Rama', 'Stansfield' ],
 	'city_day_11': [ 'Harry', 'Alonzo', 'Wayland', 'Vic', 'Lowery' ],
 	'city_day_boss': [ 'Bob, The Helldozer'],
-		'city_night_10': [ 'Murphy', 'Verhoven', 'Ed', 'Nuke', 'Cain' ],
+	'undersea_01': [ 'Johnny No-Neck', 'Smiling Jack', 'Francis', 'Pirate King', 'Jolly Rodger' ],
+	'undersea_02': [ 'Burton', 'Skullface', 'Lord of Bones', 'Ryu', 'Mr. Scurvy' ],
+	'undersea_03': [ 'Bandana Pete', 'One Eyed Nate', 'Crossbones', 'Desmond', 'The Cardinal' ],
+	'undersea_04': [ 'Squidface', 'Captain Calimari', 'Ink-Eye', 'Claude', 'Wiggly Jack' ],
+	'undersea_05': [ 'Jeffe', 'Mr Barnacles', 'Squinty Nick', 'Barnabus', 'Ahab' ],
+	'undersea_06': [ 'Sugar Beard', 'Soupcatcher', 'Swabby', 'Jimmy Face-Mob', 'Mr. Soho' ],
+	'undersea_07': [ 'Mr. Collins', 'Captain Lavender', 'Bristle-Face', 'Brillow Pad Paul', 'Mr. Soho' ],
+	'undersea_08': [ 'Simon Parrot Face', 'Kiki & Bones', 'Emma\'s Pet Skeleton', 'Mark', 'Sunshine Larry' ],
+	'undersea_09': [ 'Bobby the Starfish', 'Oblivious Jerry', 'Captain Starface', 'Erosion Stan', 'Lupe' ],
+	'undersea_10': [ 'Nautilus', 'The Ghost of Australia', 'Sydney', 'Fish-Hat Jones', 'Sammi Fishbones' ],
+	'ocean_floor_boss': [ 'Crusta-Sean, The Pirate King Necromancer'],
+	'snow_01': [ 'Yukon', 'Cornelius', 'Alpine', 'K2', 'Rainer'],
+	'snow_02': [ 'Snow Crab', 'Ice Thing', 'Blood Test', 'Kurt', 'Arctic Spider Dog'],
+	'snow_05': [ 'Moses', 'Ursos', 'The Bear', 'Genome', 'Frostbite'],
+	'snow_04': [ 'Rasputin', 'Sleet', 'Whiteout', 'Blizzard', 'Tundra'],
+	'snow_06': [ 'Hale', 'Hayter', 'Shadow', 'Russell', 'Crowe'],
+	'snow_08': [ 'Donner', 'Dragonblood', 'Storm Chaser', 'Magnus', 'Nord'],
+	'snow_09': [ 'Rabbie', 'Walker', 'Steel Born', 'The Troll Slayer', 'Asger'],
+	'snow_10': [ 'Gabor', 'Kaapo', 'Daan\', Cade', 'Lachlan'],
+	'snow_07': [ 'Flippy', 'Happy Jake', 'Maudlin Sam', 'Quietly Content Richard', 'Zip-Zip'],
+	'snow_03': [ 'Bear Mouth Larry', 'The Pelt Fiend', 'Teddy', 'Honey Bear', 'Rug Head'],
+	'snow_boss': [ 'Dansky, The Wrath of Winter' ],
+	'city_night_10': [ 'Murphy', 'Verhoven', 'Ed', 'Nuke', 'Cain' ],
 	'city_night_09': [ 'Reese', 'Kyle', 'Arnold', 'Tee-800', 'Fisher' ],
 	'city_night_08': [ 'Paxton', 'Lost Boy', 'Pigsticker', 'David', 'Spike' ],
 	'city_night_07': [ 'Dragon Force', 'White Tiger', 'Fury', 'Maniac', 'Patrick' ],
@@ -85,8 +107,13 @@ var g_rgNamesMap = {
 	'city_night_03': [ 'Shades', 'Dwayne', 'The Wolf', 'Fox', 'Jordie'],
 	'city_night_02': [ 'Marty', 'Doc', 'Morty', 'Rick', 'Biff'],
 	'city_night_01': [ 'Huxley', 'Kelly', 'Xavier', 'Silverman', 'Pierce'],
-	'city_night_14': [ 'Burton', '7 Demon Bag', 'Pork Chop', 'Mr. Reflexes', 'Jack'],
 	'city_night_15': [ 'The Baddest', 'The Prettiest', 'The Meanest', 'The Shogun', 'The Glow'],
+	'city_night_12': [ 'Cole', 'Slicker', 'Aden', 'The Hood', 'Ezzie' ],
+	'city_night_11': [ 'Parker', 'Louis', 'Dunn', 'Mr Glass', 'Enzo' ],
+	'city_night_13': [ 'Sheet Face', 'Crasher', 'Arthur', 'Bors', 'Galahad' ],
+	'city_night_14': [ 'Burton', '7 Demon Bag', 'Pork Chop', 'Mr. Reflexes', 'Jack'],
+
+
 	'city_night_boss': [ 'Dominic, The Mobile Apocalypse'],
 	'island_09': [ 'Roughneck', 'Rasczak', 'Pyle', 'Raine'],
 	'island_08': [ 'Joker', 'Mother', 'Rico', 'Blain', 'Willard'],
@@ -111,6 +138,26 @@ var g_rgNamesMap = {
 	'space_10': [ 'Commander Keyes', 'Major Bretai', 'Seraf', 'Korenen', 'Major Batou'],
 	'space_11': [ 'Schawrtz', 'Lonestar', 'Candy', 'Kazoo', 'Marvin'],
 	'space_boss': [ 'Gold Helm, The Spice Lord'],
+	'tf_01': ['Explosives Guy', 'Demolition Man', 'One Eyed Jack', 'Lucky', 'Monoclops'],
+	'tf_02': ['Engineer', 'Dell', 'Dr. Conagher', 'Roughneck', 'Nope'],
+	'tf_03': ['Medic', 'Doctor', 'Doc.', 'Bonesaw', 'Uberman'],
+	'tf_04': ['Pauling', 'Miss P.', 'Miss Pauling'],
+	'tf_05': ['Mmph mmmph', 'Pyro', 'Pyromaniac', 'Ash', 'Flamesmith'],
+	'tf_06': ['Saxton', 'Mr. Hale'],
+	'tf_07': ['Scooter', 'Scout', 'Pain Train', 'Boston Basher'],
+	'tf_08': ['Sniper', 'Sydney', 'The Huntsman', 'Gunman', 'Triggerman'],
+	'tf_09': ['Solly', 'Soldier', 'The Patrios', 'Mister J. Doe', 'Rocket Man'],
+	'tf_10': ['Spy', '???????', 'Mentlegen', 'Agent S.', 'Mole'],
+	'tf_11': ['Heavy', 'Heavy Weapons Guy', 'Misha', 'Mikhail', 'Bear'],
+	'tf_b_01': ['Explosives Guy', 'Demolition Man', 'One Eyed Jack', 'Lucky', 'Monoclops'],
+	'tf_b_02': ['Engineer', 'Dell', 'Dr. Conagher', 'Roughneck', 'Nope'],
+	'tf_b_03': ['Heavy', 'Heavy Weapons Guy', 'Misha', 'Mikhail', 'Bear'],
+	'tf_b_04': ['Medic', 'Doctor', 'Doc.', 'Bonesaw', 'Uberman'],
+	'tf_b_05': ['Mmph mmmph', 'Pyro', 'Pyromaniac', 'Ash', 'Flamesmith'],
+	'tf_b_06': ['Scooter', 'Scout', 'Pain Train', 'Boston Basher'],
+	'tf_b_07': ['Sniper', 'Sydney', 'The Huntsman', 'Gunman', 'Triggerman'],
+	'tf_b_08': ['Solly', 'Soldier', 'The Patrios', 'Mister J. Doe', 'Rocket Man'],
+	'tf_b_09': ['Spy', '???????', 'Mentlegen', 'Agent S.', 'Mole'],
 
 
 };
@@ -181,22 +228,28 @@ CEnemy.prototype.GetName = function()
 {
 	var rgNames = g_rgNamesMap[this.m_strSkinName];
 	if( !rgNames )
-		return this.m_strSkinName;
+		return "Jaegar";
 
-	return rgNames[ this.m_nID % rgNames.length ] || "Eren";
+	var nIndex = xorprng( this.m_nID + this.m_Game.m_rgGameData.level * 10 + this.m_nLane * 100, rgNames.length );
+
+	return rgNames[ nIndex ]
 }
 
 CEnemy.prototype.ApplyLevelSkin = function(strSetName)
 {
+	var rnd = xorprng( this.m_Game.m_rgGameData.level / 10, 50 );
+	if( rnd == 42 )
+		strSetName = 'tf2';
+
 	switch( strSetName )
 	{
-		case 'tf2': // ???
+		case 'tf2':
 			this.SetAttachment( 'body', 'Body' );
 			this.SetAttachment( 'face_plate', 'space_face' );
 			this.SetAttachment( 'steam_logo', 'Steam Logo' );
 			break;
 
-		case 'ocean':
+		case 'ocean_floor':
 			this.SetAttachment( 'body', 'undersea_body' );
 			this.SetAttachment( 'face_plate', 'undersea_face' );
 			this.SetAttachment( 'steam_logo', 'undersea_steam' );
@@ -420,14 +473,30 @@ CEnemyCreep.prototype.ApplyLevelSkin = function(strSetName)
 	if( strIndex < 10 )
 		strIndex = "0" + strIndex;
 
+	var rnd = xorprng( this.m_Game.m_rgGameData.level / 10, 50 );
+	if( rnd == 42 )
+		strSetName = 'tf2';
+
 	switch( strSetName )
 	{
 		case 'tf2': // ???
-			this.m_Sprite.skeleton.setSkinByName('tf_' + strIndex);
+			var nKey = this.m_nID + this.m_Game.m_rgGameData.level * 10 + this.m_nLane * 100
+			var nIndex = 1 + xorprng( nKey, 11 );
+			var bBlue = xorprng( nKey, 2 ) == 1;
+			if( nIndex < 10 )
+				strIndex = "0" + nIndex;
+			else
+				strIndex = nIndex;
+
 			this.m_strSkinName = 'tf_' + strIndex;
+			if( bBlue && nIndex <= 9 )
+				this.m_strSkinName  = 'tf_b_' + strIndex;
+
+			this.m_Sprite.skeleton.setSkinByName( this.m_strSkinName );
+
 			break;
 
-		case 'ocean':
+		case 'ocean_floor':
 			this.m_Sprite.skeleton.setSkinByName('undersea_' + strIndex);
 			this.m_strSkinName = 'undersea_' + strIndex;
 			break;
@@ -438,11 +507,17 @@ CEnemyCreep.prototype.ApplyLevelSkin = function(strSetName)
 			break;
 
 		case 'city_day':
+			strIndex = 1 + this.m_data.id % 11;// Math.floor( 1 + ( Math.random() * 10 ) )
+			if( strIndex < 10 )
+				strIndex = "0" + strIndex;
 			this.m_Sprite.skeleton.setSkinByName('city_day_' + strIndex);
 			this.m_strSkinName = 'city_day_' + strIndex;
 			break;
 
 		case 'city_night':
+			strIndex = 1 + this.m_data.id % 15;// Math.floor( 1 + ( Math.random() * 10 ) )
+			if( strIndex < 10 )
+				strIndex = "0" + strIndex;
 			this.m_Sprite.skeleton.setSkinByName('city_night_' + strIndex);
 			this.m_strSkinName = 'city_night_' + strIndex;
 			break;
@@ -486,6 +561,9 @@ CEnemyCreep.prototype.ApplyLevelSkin = function(strSetName)
 
 		default:
 		case 'space':
+			strIndex = 1 + this.m_data.id % 11;// Math.floor( 1 + ( Math.random() * 10 ) )
+			if( strIndex < 10 )
+				strIndex = "0" + strIndex;
 			this.m_Sprite.skeleton.setSkinByName('space_' + strIndex);
 			this.m_strSkinName = 'space_' + strIndex;
 	}
@@ -513,7 +591,7 @@ CEnemyBoss.prototype.ApplyLevelSkin = function(strSetName)
 
 CEnemyBoss.prototype.BuildSprite = function()
 {
-	console.log('boss_' + this.m_strLevel);
+	//console.log('boss_' + this.m_strLevel);
 
 	var Skeleton = g_rgSkeletonCache['boss_space'];
 	if( g_rgSkeletonCache['boss_' + this.m_strLevel] )
@@ -619,11 +697,12 @@ CEnemyMiniBoss.prototype.GetName = function()
 	if( !rgNames )
 		return this.m_strSkinName;
 
-	var strName = rgNames[ this.m_nID % rgNames.length ];
+	var nIndex = xorprng( this.m_nID + this.m_Game.m_rgGameData.level * 10 + this.m_nLane * 100, rgNames.length );
+	var nPrefixIndex = xorprng( this.m_nID + this.m_Game.m_rgGameData.level * 10 + this.m_nLane * 100, g_rgNamePrefixes.length );
 
-	var nID = 3 * (1+this.m_nID) + (1+this.m_nLane) + ( ( (1+this.m_Game.m_rgGameData.level)/10 ) * 9 );
+	var strName = rgNames[ nIndex ];
 
-	strName = g_rgNamePrefixes[ nID % g_rgNamePrefixes.length ] + strName;
+	strName = g_rgNamePrefixes[ nPrefixIndex ] + strName;
 
 	return strName;
 }

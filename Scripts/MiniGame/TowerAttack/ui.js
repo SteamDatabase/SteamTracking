@@ -61,9 +61,9 @@ CUI.prototype.BuildUI = function()
 	this.m_rgElementCache['lane_0_bar'] = $J('#lane0 .bar > div');
 	this.m_rgElementCache['lane_1_bar'] = $J('#lane1 .bar > div');
 	this.m_rgElementCache['lane_2_bar'] = $J('#lane2 .bar > div');
-	this.m_rgElementCache['lane_0_icon'] = $J('#lane0 .lane_element > img');
-	this.m_rgElementCache['lane_1_icon'] = $J('#lane1 .lane_element > img');
-	this.m_rgElementCache['lane_2_icon'] = $J('#lane2 .lane_element > img');
+	this.m_rgElementCache['lane_0_icon'] = $J('#lane0 .lane_element > span');
+	this.m_rgElementCache['lane_1_icon'] = $J('#lane1 .lane_element > span');
+	this.m_rgElementCache['lane_2_icon'] = $J('#lane2 .lane_element > span');
 	this.m_rgElementCache['lane0'] = $J('#lane0');
 	this.m_rgElementCache['lane1'] = $J('#lane1');
 	this.m_rgElementCache['lane2'] = $J('#lane2');
@@ -554,8 +554,13 @@ CUI.prototype.UpdateLanes = function()
 
 			this.m_rgElementCache['lane_' + i + '_element'].data( 'element', instance.m_rgGameData.lanes[i].element );
 
-			if( this.m_rgElementCache['lane_' + i + '_icon'][0].src !=  g_rgIconMap["element_" + instance.m_rgGameData.lanes[i].element].icon )
-				this.m_rgElementCache['lane_' + i + '_icon'][0].src = g_rgIconMap["element_" + instance.m_rgGameData.lanes[i].element].icon;
+			if( this.m_rgElementCache['lane_' + i + '_icon'].m_nElement !=  instance.m_rgGameData.lanes[i].element )
+			{
+				this.m_rgElementCache['lane_' + i + '_icon'].removeClass();
+				this.m_rgElementCache['lane_' + i + '_icon'].addClass('element_' + instance.m_rgGameData.lanes[i].element);
+				this.m_rgElementCache['lane_' + i + '_icon'].m_nElement = instance.m_rgGameData.lanes[i].element;
+
+			}
 
 			var laneData = instance.m_rgLaneData[i];
 
@@ -1170,6 +1175,10 @@ window.fnTooltipLaneElementDesc = function( context )
 	return strOut;
 }
 
+function log10( val ) {
+	return Math.log(val) / Math.LN10;
+}
+
 window.fnTooltipAbilityDesc = function( context )
 {
 	var strOut = '';
@@ -1180,6 +1189,13 @@ window.fnTooltipAbilityDesc = function( context )
 	var ability = rgAbilities[idx];
 
 	strOut += ability.name + '<br><br>' +  ability.desc ;
+
+	if ( idx == '22' )
+	{
+		var levelMultiplier = Math.pow( 10, Math.max( 0, Math.floor( log10( g_Minigame.CurrentScene().m_rgGameData.level + 1 ) ) - 1 ) );
+		var goldGiven = ability.multiplier * levelMultiplier;
+		strOut += '<br><br>Gold for this level: ' + FormatNumberForDisplay( goldGiven );
+	}
 
 	if ( ability.instant )
 	{

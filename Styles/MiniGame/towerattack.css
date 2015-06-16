@@ -779,15 +779,15 @@ body.flat_page.game.chromeless {
 	background: url('https://steamcommunity-a.akamaihd.net/public/images/promo/towerattack/panel_right_city.png');
 	background-repeat: no-repeat;
 }
-#col_right .lanes.cityr {
+#col_right .lanes.city_destroyed {
 	background: url('https://steamcommunity-a.akamaihd.net/public/images/promo/towerattack/panel_right_cityr.png');
 	background-repeat: no-repeat;
 }
-#col_right .lanes.ocean {
+#col_right .lanes.ocean_floor {
 	background: url('https://steamcommunity-a.akamaihd.net/public/images/promo/towerattack/panel_right_ocean.png');
 	background-repeat: no-repeat;
 }
-#col_right .lanes.night {
+#col_right .lanes.city_night {
 	background: url('https://steamcommunity-a.akamaihd.net/public/images/promo/towerattack/panel_right_night.png');
 	background-repeat: no-repeat;
 }
@@ -818,9 +818,11 @@ body.flat_page.game.chromeless {
 	margin-right: 2px;
 	padding: 2px;
 }
-#col_right .lanes .lane_element img {
+#col_right .lanes .lane_element span {
 	height: 18px;
 	width: 18px;
+	display: inline-block;
+	background-size: 100%;
 }
 #col_right .lanes .lane_enemy {
 	display: inline-block;
@@ -1575,4 +1577,21 @@ body.flat_page.game.chromeless {
 	display: none;
 	color: #fff;
 	text-shadow: 2px 2px 0px rgba( 0, 0, 0, 0.5 );
+}
+
+
+.icon_fire, .element_1 {
+	background-image: url('http://cdn.steamcommunity.com/economy/emoticon/:shelterwildfire:');
+}
+
+.icon_water, .element_2 {
+	background-image: url('http://cdn.steamcommunity.com/economy/emoticon/:waterrune:');
+}
+
+.icon_air, .element_3 {
+	background-image: url('http://cdn.steamcommunity.com/economy/emoticon/:Wisp:');
+}
+
+.icon_earth, .element_4 {
+	background-image: url('http://cdn.steamcommunity.com/economy/emoticon/:FateTree:');
 }

@@ -4,7 +4,7 @@
 window.k_ScreenWidth = 1280;
 window.k_ScreenHeight = 720;
 
-var g_JSCacheKey = 'as8wg42t0z';
+var g_JSCacheKey = 'a8Dw02Fe';
 
 var g_rgTextureCache = {
 	// Particles
@@ -44,6 +44,12 @@ var g_rgTextureCache = {
 	cityr_bg_near: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/cityr_bg_near.png?v='+g_CacheKey },
 	cityr_bg_mid: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/cityr_bg_mid.png?v='+g_CacheKey },
 	cityr_bg_far: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/cityr_bg_far.png?v='+g_CacheKey },
+	// Ocean
+	ocean_floor: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/ocean_floor.png?v='+g_CacheKey },
+	ocean_sky: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/ocean_sky.png?v='+g_CacheKey },
+	ocean_bg_near: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/ocean_bg_near.png?v='+g_CacheKey },
+	ocean_bg_mid: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/ocean_bg_mid.png?v='+g_CacheKey },
+	ocean_bg_far: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/ocean_bg_far.png?v='+g_CacheKey },
 	// night
 	night_floor: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/night_floor.png?v='+g_CacheKey },
 	night_sky: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/night_sky.png?v='+g_CacheKey },
@@ -56,6 +62,11 @@ var g_rgTextureCache = {
 	space_bg_near: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/space_bg_mid.png?v='+g_CacheKey },
 	space_bg_mid: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/space_bg_near.png?v='+g_CacheKey },
 	space_bg_far: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/space_bg_far.png?v='+g_CacheKey },
+	// snow
+	snow_floor: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/snow_floor.png?v='+g_CacheKey },
+	snow_sky: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/snow_sky.png?v='+g_CacheKey },
+	snow_bg_mid: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/snow_bg_mid.png?v='+g_CacheKey },
+	snow_bg_far: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/snow_bg_far.png?v='+g_CacheKey },
 	// statium
 	stadium_floor: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/statium_floor.png?v='+g_CacheKey },
 	stadium_sky: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/statium_sky.png?v='+g_CacheKey },
@@ -87,8 +98,10 @@ var g_rgSkeletonCache = {
 	boss_volcano: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/skeletons/boss_volcano.json?v='+g_CacheKey },
 	boss_city_day: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/skeletons/boss_city_day.json?v='+g_CacheKey },
 	boss_city_night: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/skeletons/boss_city_night.json?v='+g_CacheKey },
+	boss_ocean_floor: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/skeletons/boss_ocean_floor.json?v='+g_CacheKey },
+	boss_snow: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/skeletons/boss_snow.json?v='+g_CacheKey },
 	boss_city_destroyed: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/skeletons/boss_city_destroyed.json?v='+g_CacheKey },
-	creep: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/skeletons/creep.json?v='+g_CacheKey }
+	creep: { url: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/skeletons/creep.json?v='+g_CacheKey + '2' }
 };
 
 var g_rgIconMap = {
@@ -142,6 +155,7 @@ var g_rgSoundCache = {
 	wrongselection: {urlv: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/wrongselection.ogg?v='+g_CacheKey, urlm: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/wrongselection.mp3?v='+g_CacheKey },
 	music: {urlv: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/backgroundtrack.ogg?v='+g_CacheKey, urlm: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/backgroundtrack.mp3?v='+g_CacheKey },
 	music_boss: {urlv: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/bosslevel.ogg?v='+g_CacheKey, urlm: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/bosslevel.mp3?v='+g_CacheKey },
+	music_bossB: {urlv: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/bosslevel2.ogg?v='+g_CacheKey, urlm: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/bosslevel2.mp3?v='+g_CacheKey },
 	// Creep chatter
 	creep_1:  {urlv: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/creep1.ogg?v='+g_CacheKey, urlm: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/creep1.mp3?v='+g_CacheKey },
 	creep_2:  {urlv: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/creep2.ogg?v='+g_CacheKey, urlm: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/minigame/towerattack/sfx/creep2.mp3?v='+g_CacheKey },

@@ -99,9 +99,11 @@ window.CSceneGame = function()
 		'city_night',
 		'city_destroyed',
 		'stadium',
+		'snow',
 		'desert',
 		'island',
 		'volcano',
+		'ocean_floor',
 		'space',
 
 	];
@@ -226,6 +228,7 @@ CSceneGame.prototype.Tick = function()
 						instance.m_rgPlayerData = rgResult.response.player_data;
 						instance.ApplyClientOverrides('player_data');
 						instance.ApplyClientOverrides('ability');
+						instance.ApplyClientOverrides('upgrades');
 					}
 
 					instance.m_bWaitingForResponse = false;
@@ -252,6 +255,7 @@ CSceneGame.prototype.Tick = function()
 							instance.m_rgPlayerData = rgResult.response.player_data;
 							instance.ApplyClientOverrides('player_data');
 							instance.ApplyClientOverrides('ability');
+							instance.ApplyClientOverrides('upgrades');
 						}
 						if( rgResult.response.tech_tree )
 						{
@@ -284,6 +288,7 @@ CSceneGame.prototype.Tick = function()
 							instance.m_rgPlayerData = rgResult.response.player_data;
 							instance.ApplyClientOverrides('player_data');
 							instance.ApplyClientOverrides('ability');
+							instance.ApplyClientOverrides('upgrades');
 						}
 						if( rgResult.response.tech_tree )
 						{
@@ -855,6 +860,9 @@ CSceneGame.prototype.OnGameDataUpdate = function()
 							'time': nTimestampStart
 						});
 
+						if( instance.m_rgActionLog.length > 50 )
+							instance.m_rgActionLog.splice(0,instance.m_rgActionLog.length - 50);
+
 						if( nTimestampStart > nHighestTime )
 							nHighestTime = nTimestampStart;
 					}
@@ -1287,7 +1295,10 @@ CSceneGame.prototype.SendChooseUpgradesRequest = function()
 				{
 					instance.m_rgPlayerTechTree = rgResult.response.tech_tree;
 					if( rgResult.response.tech_tree.upgrades )
+					{
 						instance.m_rgPlayerUpgrades = V_ToArray( rgResult.response.tech_tree.upgrades );
+						instance.ApplyClientOverrides('upgrades');
+					}
 					else
 						instance.m_rgPlayerUpgrades = [];
 				}
@@ -1315,7 +1326,10 @@ CSceneGame.prototype.SendSpendBadgePointsRequest = function()
 				 {
 					 instance.m_rgPlayerTechTree = rgResult.response.tech_tree;
 					 if( rgResult.response.tech_tree.upgrades )
+					 {
 					 	instance.m_rgPlayerUpgrades = V_ToArray( rgResult.response.tech_tree.upgrades );
+						instance.ApplyClientOverrides('upgrades');
+					 }
 					 else
 					 	instance.m_rgPlayerUpgrades = [];
 				 }
@@ -1598,7 +1612,13 @@ CSceneGame.prototype.ChangeLevel = function( strSceneName )
 	var bIsBossLevel = this.m_rgGameData.level != 0 && (1+this.m_rgGameData.level) % 10 == 0;
 
 	if( bIsBossLevel )
-		g_AudioManager.CrossfadeTrack('music_boss');
+	{
+		if( (1+this.m_rgGameData.level) % 100 == 0 )
+			g_AudioManager.CrossfadeTrack('music_bossB');
+		else
+			g_AudioManager.CrossfadeTrack('music_boss');
+
+	}
 	else
 		g_AudioManager.CrossfadeTrack('music');
 
@@ -1630,7 +1650,17 @@ CSceneGame.prototype.ChangeLevel = function( strSceneName )
 			this.m_spriteBGClouds.alpha = this.m_spriteBGCloudsWrap.alpha = 0.7;
 			break;
 
-		
+			case 'snow':
+					this.m_spriteBGFloor = new PIXI.Sprite( g_rgTextureCache["snow_floor"].texture );
+					this.m_spriteBGSky = new PIXI.Sprite( g_rgTextureCache["snow_sky"].texture );
+					this.m_spriteBGFar = new PIXI.Sprite( g_rgTextureCache["snow_bg_far"].texture );
+					this.m_spriteBGMid = new PIXI.Sprite( g_rgTextureCache["snow_bg_mid"].texture );
+					this.m_spriteBGNear = new PIXI.Sprite( );
+					this.m_spriteBGClouds = new PIXI.Sprite( g_rgTextureCache["clouds"].texture );
+					this.m_spriteBGCloudsWrap = new PIXI.Sprite( g_rgTextureCache["clouds"].texture );
+					//this.m_spriteBGClouds.alpha = this.m_spriteBGCloudsWrap.alpha = 0.7;
+					break;
+
 			case 'city_destroyed':
 				this.m_spriteBGFloor = new PIXI.Sprite( g_rgTextureCache["cityr_floor"].texture );
 				this.m_spriteBGSky = new PIXI.Sprite( g_rgTextureCache["cityr_sky"].texture );
@@ -1685,33 +1715,44 @@ CSceneGame.prototype.ChangeLevel = function( strSceneName )
 
 
 
-				case 'city_night':
-					this.m_spriteBGFloor = new PIXI.Sprite( g_rgTextureCache["night_floor"].texture );
-					this.m_spriteBGSky = new PIXI.Sprite( g_rgTextureCache["night_sky"].texture );
-					this.m_spriteBGFar = new PIXI.Sprite( g_rgTextureCache["night_bg_far"].texture );
-					this.m_spriteBGMid = new PIXI.Sprite( g_rgTextureCache["night_bg_mid"].texture );
-					this.m_spriteBGNear = new PIXI.Sprite( g_rgTextureCache["night_bg_near"].texture );
-					this.m_spriteBGClouds = new PIXI.Sprite( g_rgTextureCache["clouds"].texture );
-					this.m_spriteBGCloudsWrap = new PIXI.Sprite( g_rgTextureCache["clouds"].texture );
+			case 'city_night':
+				this.m_spriteBGFloor = new PIXI.Sprite( g_rgTextureCache["night_floor"].texture );
+				this.m_spriteBGSky = new PIXI.Sprite( g_rgTextureCache["night_sky"].texture );
+				this.m_spriteBGFar = new PIXI.Sprite( g_rgTextureCache["night_bg_far"].texture );
+				this.m_spriteBGMid = new PIXI.Sprite( g_rgTextureCache["night_bg_mid"].texture );
+				this.m_spriteBGNear = new PIXI.Sprite( g_rgTextureCache["night_bg_near"].texture );
+				this.m_spriteBGClouds = new PIXI.Sprite( g_rgTextureCache["clouds"].texture );
+				this.m_spriteBGCloudsWrap = new PIXI.Sprite( g_rgTextureCache["clouds"].texture );
 
-					this.m_spriteBGClouds.tint = this.m_spriteBGCloudsWrap.tint = 0x333333;
-					this.m_spriteBGClouds.alpha = this.m_spriteBGCloudsWrap.alpha = 0.7;
-					break;
+				this.m_spriteBGClouds.tint = this.m_spriteBGCloudsWrap.tint = 0x333333;
+				this.m_spriteBGClouds.alpha = this.m_spriteBGCloudsWrap.alpha = 0.7;
+				break;
 
-				case 'space':
-					this.m_spriteBGFloor = new PIXI.Sprite( g_rgTextureCache["space_floor"].texture );
-					this.m_spriteBGSky = new PIXI.Sprite( g_rgTextureCache["space_sky"].texture );
-					this.m_spriteBGFar = new PIXI.Sprite( g_rgTextureCache["space_bg_far"].texture );
-					this.m_spriteBGMid = new PIXI.Sprite( g_rgTextureCache["space_bg_mid"].texture );
-					this.m_spriteBGNear = new PIXI.Sprite( g_rgTextureCache["space_bg_near"].texture );
-					this.m_spriteBGClouds = new PIXI.Sprite(  );
-					this.m_spriteBGCloudsWrap = new PIXI.Sprite( );
+			case 'space':
+				this.m_spriteBGFloor = new PIXI.Sprite( g_rgTextureCache["space_floor"].texture );
+				this.m_spriteBGSky = new PIXI.Sprite( g_rgTextureCache["space_sky"].texture );
+				this.m_spriteBGFar = new PIXI.Sprite( g_rgTextureCache["space_bg_far"].texture );
+				this.m_spriteBGMid = new PIXI.Sprite( g_rgTextureCache["space_bg_mid"].texture );
+				this.m_spriteBGNear = new PIXI.Sprite( g_rgTextureCache["space_bg_near"].texture );
+				this.m_spriteBGClouds = new PIXI.Sprite(  );
+				this.m_spriteBGCloudsWrap = new PIXI.Sprite( );
 
-					//this.m_spriteBGClouds.tint = this.m_spriteBGCloudsWrap.tint = 0x333333;
-					//this.m_spriteBGClouds.alpha = this.m_spriteBGCloudsWrap.alpha = 0.7;
-					break;
+				//this.m_spriteBGClouds.tint = this.m_spriteBGCloudsWrap.tint = 0x333333;
+				//this.m_spriteBGClouds.alpha = this.m_spriteBGCloudsWrap.alpha = 0.7;
+				break;
 
-		
+			case 'ocean_floor':
+				this.m_spriteBGFloor = new PIXI.Sprite( g_rgTextureCache["ocean_floor"].texture );
+				this.m_spriteBGSky = new PIXI.Sprite( g_rgTextureCache["ocean_sky"].texture );
+				this.m_spriteBGFar = new PIXI.Sprite( g_rgTextureCache["ocean_bg_far"].texture );
+				this.m_spriteBGMid = new PIXI.Sprite( g_rgTextureCache["ocean_bg_mid"].texture );
+				this.m_spriteBGNear = new PIXI.Sprite( g_rgTextureCache["ocean_bg_near"].texture );
+				this.m_spriteBGClouds = new PIXI.Sprite(  );
+				this.m_spriteBGCloudsWrap = new PIXI.Sprite(  );
+
+				this.m_spriteBGNear.alpha = 0.4;
+				break;
+
 
 		case 'desert':
 		default:
@@ -1745,30 +1786,6 @@ CSceneGame.prototype.ChangeLevel = function( strSceneName )
 
 	this.m_rtBackground.render( this.m_containerBG );
 
-	// Now create the floor strips
-
-	//this.m_containerBG.addChild( );
-
-/*	this.m_rgBGStrips = [];
-
-	for( var i=0; i<240; i++)
-	{
-		var sprite = new PIXI.Sprite(
-			new PIXI.Texture( g_rgTextureCache["desert_floor"].texture, {
-				x: 0,
-				y: i,
-				width: 960,
-				height: 1
-			})
-		);
-
-		sprite.y = i*nBGScale;
-		sprite.scale.x = sprite.scale.y = nBGScale;
-
-		this.m_containerBG.addChild(sprite);
-
-		this.m_rgBGStrips.push(sprite)
-	}*/
 
 
 }
@@ -1801,26 +1818,9 @@ CSceneGame.prototype.TickBG = function()
 
 	this.m_spriteBGCloudsWrap.position.x = this.m_spriteBGClouds.position.x + this.m_spriteBGClouds.width;
 
-	/*
-	//Now do the BG strips
-	for( var i=0; i<this.m_rgBGStrips.length; i++)
-	{
-		//var nScaleRate = (this.m_rgBGStrips.length-i)/200;
-		//this.m_rgBGStrips[i].scale.x = GetAdjustedScale( i*3, 3 )//flPerspectiveScaleFactor * ( (i * 3)/720 );
-		//this.m_rgBGStrips[i].position.x = GetAdjustedX(i*3, nPosition) //this.m_containerEnemies.position.x - (  this.m_rgBGStrips[i].width - 1280 ) / 2;
 
-		//var nScaleRate = (this.m_rgBGStrips.length-i)/200;
-		//this.m_rgBGStrips[i].scale.x = 3 + 1.5* nScaleRate;
-		//this.m_rgBGStrips[i].position.x = nScaleRate * nPosition;
-	}
-*/
-	// HAX
-	//g_Minigame.CurrentScene().m_containerBG.position.x = 302
-	//g_Minigame.CurrentScene().m_containerBG.scale.x = 0.3;
 }
 
-window.g_ScaleFactorA = 600;
-window.g_ScaleFactorB = 1.5;
 
 function GetAdjustedX(nLocalY, nParentX )
 {
@@ -1928,4 +1928,12 @@ function FloorToMultipleOf( multipleOf, number )
 function CalcExponentialTuningValve( level, coefficient, base )
 {
 	return ( coefficient * ( Math.pow( base, level ) ) );
+}
+
+// A shoddy implementation of an otherwise reasonable prng
+function xorprng( x, nMax ) {
+	x ^= parseInt( g_GameID ); // a
+	x ^= x << 25; // b
+	x ^= x >> 27; // c
+	return ( x * 338717 ) % nMax;
 }
