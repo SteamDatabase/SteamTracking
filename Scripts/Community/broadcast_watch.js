@@ -38,7 +38,7 @@ function SteamClientShowPopOut()
 }
 
 
-var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDViewer, rgIFrameDomainWhitelist, bInsideIFrame )
+var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper )
 {
 	this.m_ulBroadcastSteamID = steamIDBroadcast;
 	this.m_ulViewerSteamID = steamIDViewer;
@@ -50,11 +50,10 @@ var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDView
 	this.m_xhrViewUsers = null;
 	this.m_bUnlockingH264 = false;
 	this.m_DASHPlayerStats = null;
-	this.m_rgIFrameDomainWhitelist = rgIFrameDomainWhitelist;
-	this.m_bInsideIFrame = bInsideIFrame;
 	this.m_bChatEnabled = null;
 	this.m_bVideoEnabled = null;
 	this.m_bDisableChatTooltips = false;
+	this.m_IFrameHelper = IFrameHelper;
 	
 	this.m_ulViewerToken = WebStorage.GetLocal( "broadcastViewerToken" );
 
@@ -721,13 +720,9 @@ CBroadcastWatch.prototype.StopBroadcast = function()
 
 CBroadcastWatch.prototype.PostMessageToIFrameParent = function( strMessage, Data )
 {
-	if ( !this.m_bInsideIFrame || !window.parent )
+	if ( !this.m_IFrameHelper )
 		return;
 
-	var Msg = $J.extend( Data, { msg: strMessage } );
-	for( var i = 0, cDomains = this.m_rgIFrameDomainWhitelist.length; i < cDomains; ++i )
-	{
-		window.parent.postMessage( Msg, this.m_rgIFrameDomainWhitelist[i] );
-	}
+	this.m_IFrameHelper.PostMessageToIFrameParent( strMessage, Data );
 }
 

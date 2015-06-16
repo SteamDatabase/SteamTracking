@@ -1216,6 +1216,8 @@ body.flat_page.SteamClientMinimized
 {
     margin-left: 180px;
     position: absolute;
+    width: 92px;
+    margin-top: 3px;
 }
 
 .BroadcasterAdminFormRight
@@ -1269,8 +1271,8 @@ body.flat_page.SteamClientMinimized
 #BroadcasterAdminStopButton
 {
     position: absolute;
-    margin-top: 40px;
-    margin-left: 520px;
+    margin-top: 70px;
+    margin-left: 0px;
     width: 120px;
 }
 
@@ -1285,13 +1287,13 @@ body.flat_page.SteamClientMinimized
 #BroadcastAdminUpdateResult
 {
     position: absolute;
-    margin-top: 70px;
-    margin-left: 10px;
+    margin-top: 40px;
+    margin-left: 520px;
 }
 
 #BroadcastAdminViewerCount
 {
     position: absolute;
     margin-top: 40px;
-    margin-left: 10px;
+    margin-left: 0px;
 }

@@ -55,14 +55,16 @@ function CDASHPlayer( elVideoPlayer )
 
 	// Game state data
 	this.m_fLastGameDataEventTriggerTime = 0;
+	this.m_nLastGameDataEventArrayIndex = 0;
 	this.m_schGameDataEventTimer = null;
+	this.m_fGameDataEventTriggerPerf = 0;
 }
 
 CDASHPlayer.TRACK_BUFFER_MS = 5000;
 CDASHPlayer.TRACK_BUFFER_MAX_SEC = 30 * 60;
 CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 30 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
-CDASHPlayer.GAMEDATA_TRIGGER_MS = 3000;
+CDASHPlayer.GAMEDATA_TRIGGER_MS = 200;
 
 CDASHPlayer.HAVE_NOTHING = 0;
 CDASHPlayer.HAVE_METADATA = 1;
@@ -130,6 +132,10 @@ CDASHPlayer.prototype.Close = function()
 		this.m_schGameDataEventTimer = null;
 	}
 
+	this.m_fLastGameDataEventTriggerTime = 0;
+	this.m_nLastGameDataEventArrayIndex = 0;
+
+	
 	if ( this.m_VTTCaptionLoader )
 	{
 		this.m_VTTCaptionLoader.Close();
@@ -307,6 +313,7 @@ CDASHPlayer.prototype.BCreateLoaders = function()
 
 CDASHPlayer.prototype.GameDataEventTrigger = function()
 {
+	var start = performance.now();
 	var _player = this;
 	var nCurrentTime = _player.m_elVideoPlayer.currentTime;
 	// PlayerLog( 'GameDataEventTrigger at ' + nCurrentTime );
@@ -327,31 +334,47 @@ CDASHPlayer.prototype.GameDataEventTrigger = function()
 	{
 		if ( _player.m_loaders[i].ContainsGame() )
 		{
-			// clear any frames that can't be seeked too any more
-			_player.m_loaders[i].ClearGameDataFramesBefore( nStartVideoTime );
-
+			// clear out of range frames and then get the up to date set
+			var nFramesRemoved = _player.m_loaders[i].ClearGameDataFramesBefore( nStartVideoTime );
 			var rgGameFrames = _player.m_loaders[i].GetGameDataFrames();
-			$J.each( rgGameFrames, function ( index, value )
-			{
-				var fFramePTS = value.pts / 1000;
-				if ( _player.m_fLastGameDataEventTriggerTime < fFramePTS && fFramePTS <= nCurrentTime )
-				{
-					// PlayerLog( 'Found GameData to Trigger: ' + _player.m_fLastGameDataEventTriggerTime + ', ' + fFramePTS + ', ' + nCurrentTime );
-					$J( _player.m_elVideoPlayer ).trigger( 'gamedataupdate', [ value.pts, value.gamedata ] );
-				}
 
-				// if we have moved ahead of the current time, don't bother going further
-				if (fFramePTS > nCurrentTime)
+			// start at last frame checked unless watcher skipped back in time
+			var g = 0;
+			if ( _player.m_fLastGameDataEventTriggerTime < nCurrentTime )
+			{
+				g = Math.max( _player.m_nLastGameDataEventArrayIndex - nFramesRemoved, 0 );
+
+				// make sure we are scanning a valid array range
+				if ( g >= rgGameFrames.length )
+					_player.m_nLastGameDataEventArrayIndex = g = 0;
+			}
+
+			var triggerFrame = null;
+			for ( g ; g < rgGameFrames.length; g++ )
+			{
+				_player.m_nLastGameDataEventArrayIndex = g;
+				if ( ( rgGameFrames[g].pts / 1000 ) < nCurrentTime )
 				{
-					// returns from the each, not the broadcast function
-					return false;
+					triggerFrame = rgGameFrames[g];
 				}
-			});
+				else
+				{
+					break;
+				}
+			}
+
+			if ( triggerFrame != null )
+			{
+				// PlayerLog( 'Found GameData to Trigger: ' + triggerFrame.pts  / 1000 + ', ' + nCurrentTime );
+				$J( _player.m_elVideoPlayer ).trigger( 'gamedataupdate', [ triggerFrame.pts, triggerFrame.gamedata ] );
+			}
 		}
 	}
 
 	_player.m_fLastGameDataEventTriggerTime = nCurrentTime;
 	this.m_schGameDataEventTimer = setTimeout( function() { _player.GameDataEventTrigger(); }, CDASHPlayer.GAMEDATA_TRIGGER_MS );
+
+	this.m_fGameDataEventTriggerPerf = performance.now() - start;
 }
 
 CDASHPlayer.prototype.InitVideoControl = function()
@@ -1197,6 +1220,8 @@ CDASHPlayer.prototype.StatsGameDataBufferCount = function()
 		if ( this.m_loaders[i].ContainsGame() )
 			return this.m_loaders[i].GetGameDataFrames().length;
 	}
+
+	return 0;
 }
 
 CDASHPlayer.prototype.StatsLastGameDataBuffer = function()
@@ -1208,6 +1233,16 @@ CDASHPlayer.prototype.StatsLastGameDataBuffer = function()
 	}
 
 	return null;
+}
+
+CDASHPlayer.prototype.StatsLastGameDataEventTriggerPerf = function()
+{
+	return this.m_fGameDataEventTriggerPerf.toFixed(3);
+}
+
+CDASHPlayer.prototype.StatsLastGameDataEventTriggerFrame = function()
+{
+	return this.m_nLastGameDataEventArrayIndex + 1;
 }
 
 CDASHPlayer.prototype.BLogVideoVerbose = function()
@@ -1905,15 +1940,17 @@ CSegmentLoader.prototype.GetGameDataFrames = function()
 CSegmentLoader.prototype.ClearGameDataFramesBefore = function( nBeforeTime )
 {
 	var spliceCount = 0;
-	$J.each(this.m_rgGameDataFrames, function (index, value)
+	for ( i = 0; i < this.m_rgGameDataFrames.length; i++ )
 	{
-		var fFramePTS = value.pts / 1000;
-		if ( fFramePTS < nBeforeTime )
+		if ( ( this.m_rgGameDataFrames[i].pts / 1000 ) < nBeforeTime )
 			spliceCount++;
-	});
+		else
+			break;
+	}
 
 	// PlayerLog( 'Clearing Game Data Frames earlier than ' + nBeforeTime + '. Total Frames to Clear: ' + spliceCount );
 	this.m_rgGameDataFrames.splice( 0, spliceCount );
+	return spliceCount;
 }
 
 CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes )
@@ -4098,8 +4135,9 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 	this.strAudioBuffered = '';
 	this.strBandwidth = '';
 	this.strBuffers = '';
-	this.nGameDataBuffers = '';
+	this.strGameDataBuffers = '';
 	this.oLastGameDataFrame = {};
+	this.fGameDataTriggerPerf = 0;
 
 	// For Server Event Logging
 	this.m_bAutoLoggingEventsToServer = ( Math.random() * 100 ) < CDASHPlayerStats.LOGGING_RATE_PERC;
@@ -4328,8 +4366,12 @@ CDASHPlayerStats.prototype.CalculateTotals = function()
 	this.strAudioBuffered = this.m_videoPlayer.StatsAudioBuffer() + 's';
 	this.strBandwidth = this.m_videoPlayer.StatsCurrentDownloadBitRate() * 1000;
 	this.strBuffers = this.m_videoPlayer.StatsBufferInfo();
-	this.nGameDataBuffers = this.m_videoPlayer.StatsGameDataBufferCount();
+	if ( this.m_videoPlayer.StatsGameDataBufferCount() != 0 )
+		this.strGameDataBuffers = this.m_videoPlayer.StatsLastGameDataEventTriggerFrame() + '/' + this.m_videoPlayer.StatsGameDataBufferCount();
+	else
+		this.strGameDataBuffers = '';
 	this.oLastGameDataFrame = this.m_videoPlayer.StatsLastGameDataBuffer();
+	this.fGameDataTriggerPerf = this.m_videoPlayer.StatsLastGameDataEventTriggerPerf();
 }
 
 CDASHPlayerStats.prototype.FormattingBytesToHuman = function ( nBytes )
@@ -4483,9 +4525,13 @@ CDASHPlayerStats.prototype.Tick = function()
 		{
 			id: 'gamedatabuffers',
 			label: 'Game Frame Buffers',
-			value: ( this.nGameDataBuffers != 0 ) ? this.nGameDataBuffers : null
+			value: ( this.strGameDataBuffers != '' ) ? this.strGameDataBuffers : null
 		},
-
+		{
+			id: 'gametriggerperf',
+			label: 'Game Frame Perf',
+			value: ( this.fGameDataTriggerPerf != 0 ) ? this.fGameDataTriggerPerf + ' ms' : null
+		},
 ];
 
 	for( var i=0; i < rgStatsDefinitions.length; i++)
