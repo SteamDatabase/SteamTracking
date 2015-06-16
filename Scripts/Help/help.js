@@ -433,6 +433,11 @@ HelpWizard = {
 		this.ShowRefundRequestForm( this.m_nRefundIssueID, this.m_nRefundAppID, transid, refund_to_wallet, $J('#refund_info_box') );
 	},
 
+	ShowSubmitRefundArea: function() {
+		$J('#refund_text_input').show();
+		$J('#refund_submit_area').show();
+		$J('#refund_submit_area_extra').show();
+	},
 
 	ShowGiftRefundRequestForm: function( gid_guestpass ) {
 		this.m_bLoadingRefundDialog = true;
