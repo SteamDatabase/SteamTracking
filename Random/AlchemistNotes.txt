@@ -1,7 +1,14 @@
-==== SteamOS build 160 2015-05-06 ====
+==== SteamOS build 161 2015-06-15 ====
 [list]
+[*]cups - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1158]CVE-2015-1158[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1159]CVE-2015-1159[/url]
+[*]fuse - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3202]CVE-2015-3202[/url]
+[*]iceweasel - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3079]CVE-2011-3079[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0797]CVE-2015-0797[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2708]CVE-2015-2708[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2710]CVE-2015-2710[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2713]CVE-2015-2713[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2716]CVE-2015-2716[/url]
+[*]ntfs-3g - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3202]CVE-2015-3202[/url]
+[*]openssl - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8176]CVE-2014-8176[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1788]CVE-2015-1788[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1789]CVE-2015-1789[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1790]CVE-2015-1790[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1791]CVE-2015-1791[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1792]CVE-2015-1792[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000]CVE-2015-4000[/url]
+[*]p7zip - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1038]CVE-2015-1038[/url]
+[*]steamos-base-files - add fonts-liberation
+[*]tzdata - latest upstream release
 [/list]
-
 ==== SteamOS build 159 2015-04-27 ====
 [list]
 [*]curl - [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3143]CVE-2015-3143[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3144]CVE-2015-3144[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3145]CVE-2015-3145[/url] [url=https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3148]CVE-2015-3148[/url]
