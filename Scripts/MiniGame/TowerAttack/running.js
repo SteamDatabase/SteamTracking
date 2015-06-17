@@ -1341,13 +1341,13 @@ CSceneGame.prototype.SendSpendBadgePointsRequest = function()
 	}
 }
 
-CSceneGame.prototype.TrySpendBadgePoints = function( ele )
+CSceneGame.prototype.TrySpendBadgePoints = function( ele, count )
 {
 	var instance = this;
 	var $ele = $J(ele);
 
 	var type = $ele.data('type');
-	var cost = $ele.data('cost');
+	var cost = parseInt( $ele.data('cost') ) * count;
 
 	if ( instance.m_rgPlayerTechTree.badge_points < cost )
 	{
@@ -1358,7 +1358,10 @@ CSceneGame.prototype.TrySpendBadgePoints = function( ele )
 	//console.log("Attempting to purchase ability item %s", type );
 	instance.m_bUpgradesBusy = true;
 
-	this.m_rgPurchaseItemsQueue.push( type );
+	for ( var i = 0; i < count; ++i )
+	{
+		this.m_rgPurchaseItemsQueue.push( type );
+	}
 
 	g_AudioManager.play( 'upgrade' );
 }

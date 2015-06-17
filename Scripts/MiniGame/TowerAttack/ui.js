@@ -330,6 +330,10 @@ CUI.prototype.UpdateSpendBadgePointsDialog = function()
 		if ( !ele )
 		{
 			ele = template.clone();
+			$J(ele).click( function( event ) {
+				g_Minigame.CurrentScene().TrySpendBadgePoints( this, 1 );
+				event.stopPropagation();
+			} );
 			$J(ele).attr('id','purchase_abilityitem_' + i);
 			this.m_rgElementCache['purchase_abilityitem_'+i] = ele;
 			$J(ele).data('sortIndex', ability.badge_points_cost );
@@ -342,18 +346,40 @@ CUI.prototype.UpdateSpendBadgePointsDialog = function()
 			$J('img', ele).attr( 'src', g_rgIconMap['ability_' + i].icon );
 			$J(ele).v_tooltip({tooltipClass: 'ta_tooltip', location: 'top'});
 
+			var buyOption = $J('.sub_item', ele );
+			buyOption.data('type', i );
+			buyOption.data('cost', ability.badge_points_cost );
+			$J(buyOption).click( function( event ) {
+				g_Minigame.CurrentScene().TrySpendBadgePoints( this, 10 );
+				event.stopPropagation();
+			} );
+
 			container.append(ele);
 			bResort = true;
 		}
+
 		ele = $J( ele );
-		if ( parseInt( ele.data( "cost" ) ) > parseInt( this.m_Game.m_rgPlayerTechTree.badge_points ) )
+		var buyOption = $J('.sub_item', ele );
+		var cost = parseInt( ele.data( "cost" ) );
+		if ( cost > parseInt( this.m_Game.m_rgPlayerTechTree.badge_points ) )
 		{
+			$J(ele).addClass('disabled');
 			$J(ele).addClass('disabled');
 		}
 		else
 		{
 			$J(ele).removeClass('disabled');
+			if ( cost*10 > parseInt( this.m_Game.m_rgPlayerTechTree.badge_points ) )
+			{
+				buyOption.addClass('disabled');
+			}
+			else
+			{
+				buyOption.removeClass('disabled');
+			}
 		}
+
+
 	}
 
 	if ( bResort )

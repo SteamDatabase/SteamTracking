@@ -352,6 +352,7 @@ body.flat_page.game.chromeless {
 }
 #spend_badge_points_dialog .purchase_ability_item
 {
+	position: relative;
 	display: inline-block;
 	padding: 5px;
 	box-shadow: 2px 2px 0px rgba( 0, 0, 0, 0.6 );
@@ -407,7 +408,7 @@ body.flat_page.game.chromeless {
 	background-position: left;
 	background-size: 13px 13px;
 	padding-left: 16px;
-	}
+}
 	#spend_badge_points_dialog .purchase_ability_item .cost:lang(ja), /* Japanese */
 	#spend_badge_points_dialog .purchase_ability_item .cost:lang(zh-cn), /* Simplified Chinese */
 	#spend_badge_points_dialog .purchase_ability_item .cost:lang(zh-tw), /* Traditional Chinese */
@@ -417,6 +418,34 @@ body.flat_page.game.chromeless {
 		line-height: 18px;
 	}
 
+.purchase_ability_item .sub_item
+{
+	position: absolute;
+	top: 12px;
+	right: 5px;
+	display: inline-block;
+	padding: 5px;
+	color: #fff;
+	box-shadow: 2px 2px 0px rgba( 0, 0, 0, 0.6 );
+	cursor: pointer;
+	background-color: #ff7b00;
+	text-align: left;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.purchase_ability_item .sub_item:hover {
+	background-color: #e1b21e;
+}
+.purchase_ability_item .sub_item.disabled {
+	background-color: #68645c;
+	opacity: 0.5;
+	box-shadow: 2px 2px 0px rgba( 0, 0, 0, 0.8 );
+}
 
 #waiting_for_players_dialog {
 	position: absolute;
