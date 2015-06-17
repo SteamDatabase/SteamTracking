@@ -416,6 +416,8 @@ HelpWizard = {
 			{
 				if ( $J('#refund_request_button') )
 					$J('#refund_request_button').hide();
+				if ( $J('#refund_gift_request_button') )
+					$J('#refund_gift_request_button').show();
 				$J('#help_refund_request_form').html( data.html );
 			}
 			else
@@ -453,7 +455,9 @@ HelpWizard = {
 			if ( data.html && $J('#help_refund_request_form') )
 			{
 				if ( $J('#refund_request_button') )
-					$J('#refund_request_button').hide();
+					$J('#refund_request_button').show();
+				if ( $J('#refund_gift_request_button') )
+					$J('#refund_gift_request_button').hide();
 				$J('#help_refund_request_form').html( data.html );
 			}
 			else
