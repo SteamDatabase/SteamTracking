@@ -222,11 +222,11 @@ var CScenePreload = function()
 	if( typeof CUI === 'undefined' )
 	{
 		this.m_rgScriptsToLoad = [
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/running.js?v=' + g_JSCacheKey,
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/network.js?v=' + g_JSCacheKey,
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/ui.js?v=' + g_JSCacheKey,
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/easing.js?v=' + g_JSCacheKey,
-			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/enemies.js?v=' + g_JSCacheKey
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/running.js?v=' + g_JSCacheKey + '&l=english',
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/network.js?v=' + g_JSCacheKey + '&l=english',
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/ui.js?v=' + g_JSCacheKey + '&l=english',
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/easing.js?v=' + g_JSCacheKey + '&l=english',
+			'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/enemies.js?v=' + g_JSCacheKey + '&l=english'
 		];
 	} else {
 		this.m_rgScriptsToLoad = [];
