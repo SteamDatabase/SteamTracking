@@ -1185,16 +1185,16 @@ window.fnTooltipLaneElementDesc = function( context )
 	switch ( element )
 	{
 		case 1:
-			strOut = 'This lane has Fire Monsters';
+			strOut = "This lane has Fire Monsters" ;
 			break
 		case 2:
-			strOut = 'This lane has Water Monsters';
+			strOut = "This lane has Water Monsters";
 			break
 		case 3:
-			strOut = 'This lane has Air Monsters';
+			strOut = "This lane has Air Monsters";
 			break
 		case 4:
-			strOut = 'This lane has Earth Monsters';
+			strOut = "This lane has Earth Monsters";
 			break
 	}
 
