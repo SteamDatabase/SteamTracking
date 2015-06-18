@@ -13,6 +13,8 @@ window.k_ETowerAttackElement_Water = 2;
 window.k_ETowerAttackElement_Air = 3;
 window.k_ETowerAttackElement_Earth = 4;
 
+window.g_eUniverseState = false;
+
 // Tuning values
 window.g_msTickRate = 1000;
 window.g_nLaneScrollAmount = 450;
@@ -801,6 +803,28 @@ CSceneGame.prototype.RequestOutstandingPlayerNames = function( bAllowEmpty, call
 CSceneGame.prototype.OnGameDataUpdate = function()
 {
 	this.m_bRunning = this.m_rgGameData.status != '3';
+
+	if( this.m_rgGameData.universe_state && g_eUniverseState != this.m_rgGameData.universe_state )
+	{
+		g_eUniverseState = this.m_rgGameData.universe_state;
+
+		var instance = this;
+
+		$J.ajax({
+			url: 'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/' + this.m_rgGameData.universe_state + '/script.js',
+			dataType: "script"
+		}).done(
+			function(rgResult){
+				while( instance.m_rgEnemies.length > 0 )
+				{
+					instance.m_rgEnemies[0].Destroy();
+					instance.m_rgEnemies.shift();
+				}
+			}
+		);
+
+
+	}
 
 	if( this.m_rgGameData.timestamp == this.m_nTime )
 	{

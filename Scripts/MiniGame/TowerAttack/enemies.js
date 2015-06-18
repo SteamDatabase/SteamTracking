@@ -178,6 +178,9 @@ window.CEnemy = function( game, nLane, nID, data )
 
 	this.m_easingHP = new CEasingPrediction( CEasingLinear, this.m_data.hp, g_msTickRate, 0, this.m_data.max_hp );
 
+	if( window.FixTextures )
+		FixTextures();
+
 	this.BuildSprite();
 
 	this.m_Sprite.interactive = true;
@@ -232,6 +235,8 @@ CEnemy.prototype.GetName = function()
 
 	var nIndex = xorprng( this.m_nID + this.m_Game.m_rgGameData.level * 10 + this.m_nLane * 100, rgNames.length );
 
+	if( typeof QuickFixText != 'undefined' )
+		return QuickFixText( rgNames[ nIndex ] );
 	return rgNames[ nIndex ]
 }
 
@@ -703,6 +708,9 @@ CEnemyMiniBoss.prototype.GetName = function()
 	var strName = rgNames[ nIndex ];
 
 	strName = g_rgNamePrefixes[ nPrefixIndex ] + strName;
+
+	if( typeof QuickFixText != 'undefined' )
+		return QuickFixText( strName );
 
 	return strName;
 }
