@@ -811,8 +811,9 @@ CSceneGame.prototype.OnGameDataUpdate = function()
 		var instance = this;
 
 		$J.ajax({
-			url: 'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/' + this.m_rgGameData.universe_state + '/script.js',
-			dataType: "script"
+			url: 'https://steamcommunity-a.akamaihd.net/public/javascript/minigame/towerattack/' + this.m_rgGameData.universe_state + '/script.js?v=' + g_CacheKey,
+			dataType: "script",
+			cache: true
 		}).done(
 			function(rgResult){
 				while( instance.m_rgEnemies.length > 0 )
