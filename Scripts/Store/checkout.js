@@ -4562,6 +4562,12 @@ function SSAPopup()
 	win.focus();
 }
 
+function HardwareAgreementPopup()
+{
+		var win = OpenUrlInNewBlankWindow( 'https://store.steampowered.com/hardware_terms','steam_hardwareterms' );
+	win.focus();
+}
+
 function DisplayErrorMessage( strMessage )
 {
 	$('error_display').innerHTML = strMessage;
