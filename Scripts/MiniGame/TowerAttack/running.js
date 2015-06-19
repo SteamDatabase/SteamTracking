@@ -447,6 +447,7 @@ CSceneGame.prototype.Tick = function()
 		if( this.m_rgEmitters[i].emit == false && this.m_rgEmitters[i]._activeParticles.length == 0 )
 		{
 
+			this.m_rgEmitters[i].destroy();
 			this.m_rgEmitters.splice(i,1);
 
 		} else
