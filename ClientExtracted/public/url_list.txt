@@ -814,3 +814,13 @@ WatchVideo
 	url			"%store%/video/watch/%p1%/"
 	method	"internal"
 }
+ManageSteamGuard
+{
+	url		"%store%/twofactor/manage"
+	method	"internal"
+}
+AddOrEditPhone
+{
+	url		"%store%/phone/add"
+	method	"internal"
+}

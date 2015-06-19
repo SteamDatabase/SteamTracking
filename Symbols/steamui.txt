@@ -1791,6 +1791,7 @@
  B g_ConVarEnableUDPHistory
  B g_ConVarIOCPGetCompletionBatchSize
  B g_ConVarLibrarySharingAccountMax
+ B g_ConVarManageSteamGuardUseWeb
  B g_ConVarMsgErrorDump
  B g_ConVarNetEncryptionHandshakeWorkMax_HighPri
  B g_ConVarNetEncryptionHandshakeWorkMax_LowPri
