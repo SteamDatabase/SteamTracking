@@ -294,7 +294,6 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 
 			_watch.LoadBroadcastMPD( data.url );
 
-			_watch.SetBroadcastInfo( data );
 			_watch.UpdateBroadcastInfo();
 
 			if ( _watch.m_chat )
@@ -443,7 +442,8 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 		if( !data.is_rtmp )
 		{
 			$J( '#BroadcastAdminFromRowPermission' ).hide();
-			$J( '#BroadcasterAdminFormRowGameID' ).hide();
+			$J( '#BroadcasterAdminFormRow3' ).hide();
+			$J( '#BroadcasterAdminFormRow4' ).hide();
 		}
 
 		$J( '#BroadcastAdminViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
@@ -668,6 +668,7 @@ CBroadcastWatch.prototype.UpdateBroadcast = function()
 		title: $J( '#BroadcastAdminTitleInput' ).val(),
 		permission : $J( '#BroadcastAdminPermissionSelect' ).val(),
 		gameid : $J( '#BroadcastAdminGameIDInput' ).val(),
+		matchid : $J( '#BroadcastAdminMatchIDInput' ).val()
 	}
 
 	).done( function( json )

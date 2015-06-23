@@ -374,9 +374,10 @@ HelpWizard = {
 
 	m_bLoadingRefundDialog: false,
 	m_nRefundAppID: null,
+	m_nRefundPackageID: null,
 	m_nRefundIssueID: null,
 
-	ShowRefundRequestForm: function( issueid, appid, transid, refund_to_wallet, loading_div ) {
+	ShowRefundRequestForm: function( issueid, appid, packageid, transid, refund_to_wallet, loading_div ) {
 		if ( this.m_bLoadingRefundDialog )
 			return;
 
@@ -399,6 +400,7 @@ HelpWizard = {
 
 		this.m_bLoadingRefundDialog = true;
 		this.m_nRefundAppID = appid;
+		this.m_nRefundPackageID = packageid;
 		this.m_nRefundIssueID = issueid;
 		$J.ajax({
 			type: "GET",
@@ -406,6 +408,7 @@ HelpWizard = {
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				issueid: issueid,
 				appid: appid,
+				packageid: packageid,
 				transid: transid,
 				wallet: refund_to_wallet
 			} )
@@ -432,7 +435,7 @@ HelpWizard = {
 	UpdateRefundSelector: function() {
 		var transid = $J('#refund_selector').val();
 		var refund_to_wallet = $J('#refund_wallet_selector').val();
-		this.ShowRefundRequestForm( this.m_nRefundIssueID, this.m_nRefundAppID, transid, refund_to_wallet, $J('#refund_info_box') );
+		this.ShowRefundRequestForm( this.m_nRefundIssueID, this.m_nRefundAppID, this.m_nRefundPackageID, transid, refund_to_wallet, $J('#refund_info_box') );
 	},
 
 	ShowSubmitRefundArea: function() {

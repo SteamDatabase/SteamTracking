@@ -1599,7 +1599,7 @@ var CUser = Class.create( {
 	},
 
 	BIsSingleContextApp: function( appid ) {
-		return ( this.rgContextIdsByApp[appid] && this.rgContextIdsByApp[appid].length == 1 ) ? true : false;;
+		return ( this.rgContextIdsByApp[appid] && this.rgContextIdsByApp[appid].length == 1 ) ? true : false;
 	},
 
 	GetFirstContextForApp: function( appid ) {

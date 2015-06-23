@@ -1240,8 +1240,8 @@ CScrollOffsetWatcher.RegisterWatcher = function( Watcher )
 
 CScrollOffsetWatcher.OnScroll = function()
 {
-	var nScrollY = document.viewport.getScrollOffsets()[1];
-	var nOffsetBottom = nScrollY + document.viewport.getHeight();
+	var nScrollY = window.scrollY;
+	var nOffsetBottom = nScrollY + window.innerHeight;
 
 	var cCompletedWatchers = 0;
 	for( var i = 0; i < CScrollOffsetWatcher.sm_rgWatchers.length; i++ )
@@ -2557,20 +2557,20 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 
 
 
-function ShowWithFade( elem )
+function ShowWithFade( elem, speed )
 {
 	var $Elem = $JFromIDOrElement(elem);
 
 	$Elem.stop();
-	$Elem.fadeTo( 200, 1.0 );	//fadeTo rather than fadeIn in case it was already in a fade
+	$Elem.fadeTo( speed || 200, 1.0 );	//fadeTo rather than fadeIn in case it was already in a fade
 }
 
-function HideWithFade( elem )
+function HideWithFade( elem, speed )
 {
 	var $Elem = $JFromIDOrElement(elem);
 
 	$Elem.stop();
-	$Elem.fadeOut( 200 );
+	$Elem.fadeOut( speed || 200 );
 }
 
 function FlushStyleChanges( element )

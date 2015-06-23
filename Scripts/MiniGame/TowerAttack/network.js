@@ -3,6 +3,7 @@
 
 var g_bHalt = false;
 var g_IncludeGameStats = false;
+var g_bHTTPS = true;
 
 window.CServerInterface = function( builder )
 {
@@ -32,7 +33,7 @@ CServerInterface.prototype.Connect = function( callback )
 	var instance = this;
 
 	$J.ajax({
-		url: 'http://steamcommunity.com/minigame/gettoken',
+		url: 'https://steamcommunity.com/minigame/gettoken',
 		dataType: "json"
 	}).success(function(rgResult){
 		if( rgResult.success == 1)
@@ -77,7 +78,7 @@ CServerInterface.prototype.GetGameData = function( callback, error, bIncludeStat
 	var instance = this;
 
 	$J.ajax({
-		url: this.m_WebAPI.BuildURL( 'ITowerAttackMiniGameService', 'GetGameData', false ),
+		url: this.m_WebAPI.BuildURL( 'ITowerAttackMiniGameService', 'GetGameData', g_bHTTPS ),
 		data: rgParams,
 		xhrFields : {
 			responseType : 'arraybuffer'
@@ -106,7 +107,7 @@ CServerInterface.prototype.GetPlayerNames = function( callback, error, rgAccount
 	};
 
 	$J.ajax({
-		url: this.m_WebAPI.BuildURL( 'ITowerAttackMiniGameService', 'GetPlayerNames', false ),
+		url: this.m_WebAPI.BuildURL( 'ITowerAttackMiniGameService', 'GetPlayerNames', g_bHTTPS ),
 		data: rgRequest,
 		xhrFields : {
 			responseType : 'arraybuffer'
@@ -132,7 +133,7 @@ CServerInterface.prototype.GetPlayerData = function( callback, error, bIncludeTe
 	var instance = this;
 
 	$J.ajax({
-		url: this.m_WebAPI.BuildURL( 'ITowerAttackMiniGameService', 'GetPlayerData', false ),
+		url: this.m_WebAPI.BuildURL( 'ITowerAttackMiniGameService', 'GetPlayerData', g_bHTTPS ),
 		data: rgParams,
 		xhrFields : {
 			responseType : 'arraybuffer'

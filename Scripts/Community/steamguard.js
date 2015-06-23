@@ -440,6 +440,10 @@ function HandleRecoveryCodeDone( near )
 {
 	if ( CheckCallInProgress() )
 		return;
+
+	if ( g_SteamguardDoneSecondsLeft > 0 )
+		return;
+
 	ShowBusy( near );
 	window.location = 'https://steamcommunity.com/steamguard/twofactor_done';
 }

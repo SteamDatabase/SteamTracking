@@ -1154,10 +1154,9 @@ body.v6 .help_refund_request_area h2 a:hover {
 
 .refund_game_name {
 	color: #67c1f5;
-	padding: 0;
-	padding-right: 14px;
-	padding-bottom: 14px;
+	padding: 0 16px 14px;
 	max-width: 300px;
+	background: url('https://help.steampowered.com/public/images//icon_remove.png') no-repeat top left;
 }
 
 .refund_game_detail {
@@ -1173,6 +1172,9 @@ body.v6 .help_refund_request_area h2 a:hover {
 .refund_game_block {
 	margin-top: 10px;
 	border-spacing: 0;
+	background-color: #151f2d;
+	padding: 14px 10px 10px 10px;
+	border: solid 1px #324965;
 }
 
 #refund_text_input
@@ -1359,6 +1361,7 @@ a.guide_row {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	padding-left: 2px;
 }
 
 .help_game_guides_box .guide a {

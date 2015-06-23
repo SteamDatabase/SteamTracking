@@ -823,7 +823,7 @@ body.flat_page.SteamClientMinimized
 	font-size: 18px;
 }
 
-.BroadcastPersonaRow
+#BroadcastPersonaRow
 {
 	height: 36px;
 	line-height: 36px;
@@ -1238,9 +1238,15 @@ body.flat_page.SteamClientMinimized
     position: absolute;
 }
 
-#BroadcasterAdminFormRowGameID
+#BroadcasterAdminFormRow3
 {
     margin-top: 70px;
+    position: absolute;
+}
+
+#BroadcasterAdminFormRow4
+{
+    margin-top: 100px;
     position: absolute;
 }
 
