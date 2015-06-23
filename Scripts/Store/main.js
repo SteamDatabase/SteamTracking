@@ -316,7 +316,6 @@ function GameHover( elem, event, divHover, rgHoverData )
 	if (!event) var event = window.event;
 	var $Elem = $JFromIDOrElement(elem);
 	var $Hover = $JFromIDOrElement(divHover);
-	var bNewHoverSpeed = typeof ( g_bNewHoverSpeed) != 'undefined' && g_bNewHoverSpeed;
 
 	var oElemState = GetHoverState( $Elem );
 	
@@ -355,10 +354,6 @@ function GameHover( elem, event, divHover, rgHoverData )
 		var $HoverData = $JFromIDOrElement( targetId );
 		var accountId = ( typeof g_AccountID !== 'undefined' ) ? g_AccountID : 0;
 		var params = rgHoverData['params'] || {};
-		var nStartHoverTime = new Date().getTime();
-		var fnComputeHoverDelay = bNewHoverSpeed ?
-			function() { return Math.max( 400 - ( new Date().getTime() - nStartHoverTime ), 200 );} :
-			function() { return 200; };
 
 		if ( !$HoverData.length && !oElemState.bAjaxRequestMade )
 		{
@@ -381,18 +376,18 @@ function GameHover( elem, event, divHover, rgHoverData )
 						var $Content = $J(html);
 						$Content.hide();
 						$Hover.find( '.content' ).append( $Content );
-						ShowGameHover( $Elem, $Hover, targetId, params, fnComputeHoverDelay()  );
+						ShowGameHover( $Elem, $Hover, targetId, params );
 					} );
 				}
-			}, bNewHoverSpeed ? 50 : 150 );
+			}, 150 );
 		}
 		if ( !oElemState.timer )
 		{
 			oElemState.timer = window.setTimeout(function () {
 				oElemState.timer = false;
 				oElemState.bReadyForHover = true;
-				ShowGameHover( $Elem, $Hover, targetId, params, fnComputeHoverDelay() );
-			}, bNewHoverSpeed ? 100 : 300 );
+				ShowGameHover( $Elem, $Hover, targetId, params);
+			}, 300 );
 		}
 	}
 }
@@ -420,10 +415,10 @@ function HideGameHover( elem, event, divHover )
 	oElemState.bWantsHover = false;
 	oElemState.bReadyForHover = false;
 
-	HideWithFade( divHover, 200 );
+	HideWithFade( divHover );
 }
 
-function ShowGameHover( elem, divHover, targetContent, params, speed )
+function ShowGameHover( elem, divHover, targetContent, params )
 {
 	var $Elem = $JFromIDOrElement( elem );
 	var $Hover = $JFromIDOrElement( divHover );
@@ -511,7 +506,7 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 
 	g_HoverState.target = $Elem[0];
 	
-	ShowWithFade( $Hover, speed );
+	ShowWithFade( $Hover );
 }
 
 function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref )
