@@ -438,6 +438,7 @@ var templ_DiscountDiv = new Template( ''
 		+ '		<div class="boxlist_title"><span>#{Name}</span>'
 		+ '			<div class="boxlist_controls visible">'
 		+ '				<input style="float: right;" value="Delete Discount" type="submit" onclick="OnClickDeleteDiscount( \'#{DiscountId}\' ); return false;">'
+		+ '				<input style="float: right;" value="Hide Discount" type="submit" onclick="OnClickHideDiscount( \'#{DiscountId}\' ); return false;">'
 		+ '			</div>'
 		+ '			<div class="boxlist_controls hidden">'
 		+ '				<input style="float: right;" value="Show details" type="submit" onclick="OnClickShowDiscount( \'#{DiscountId}\' ); return false;">'
@@ -691,6 +692,12 @@ function OnClickShowDiscount( id )
 {
 	var escapedID = id.replace(/[[\]]/g, "\\$&");
 	$J('#' + escapedID + '_discountDiv').removeClass('hidden');
+}
+
+function OnClickHideDiscount( id )
+{
+	var escapedID = id.replace(/[[\]]/g, "\\$&");
+	$J('#' + escapedID + '_discountDiv').addClass('hidden');
 }
 
 // 

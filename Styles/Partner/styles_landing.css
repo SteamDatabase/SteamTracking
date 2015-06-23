@@ -436,6 +436,12 @@ body{
 	margin-left: 0;
 }
 
+p.notice {
+	color: #e66e34;
+	font-size: 14px;
+	margin-left: 0;
+}
+
 #UANotice {
 	background-color: #6b8705;
 	border: 1px solid #9bc505;
@@ -477,6 +483,10 @@ p {
 	.landingTable.nowrap .td, .landingTable.nowrap .th, .landingTable.nowrap a, .landingTable.nowrap td, .landingTable.nowrap th
 	{
 		white-space: nowrap;
+	}
+
+	.landingTable .td.blue, .landingTable td.blue {
+		color: #00adee;
 	}
 
 	.landingTable .td.editable, td.editable
