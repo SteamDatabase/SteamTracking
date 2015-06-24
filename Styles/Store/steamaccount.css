@@ -26,6 +26,12 @@
 	right: 0;
 }
 
+.need_help_block
+{
+	margin: 25px 0px 20px 0px;
+	padding: 16px;
+	background: rgba( 0, 0, 0, 0.2 );
+}
 
 .block .block_header {
 	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
