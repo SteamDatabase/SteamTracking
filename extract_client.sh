@@ -60,6 +60,8 @@ do
 	./nm-with-macho -C -p "$i" | grep -Evi "GCC_except_table|google::protobuf|steam_rel_osx_builder" | awk '{$1=""; print $0}' | sort -u > "$DIR/Symbols/$name.txt"
 done
 
+strings bins/steamui.dylib | grep "/api/" | sort > "$DIR/API/Storefront.txt"
+
 #
 # CHANGE CRAPPY ENCODINGS TO UTF-8
 #
