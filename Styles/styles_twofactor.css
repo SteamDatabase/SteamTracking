@@ -1,14 +1,7 @@
 
-.twofactor_error
+.twofactor_error, .twofactor_warning
 {
-	color: red;
-}
-
-.twofactor_settings_title
-{
-	font-size: 24px;
-	font-weight: normal;
-	color: #ffffff;
+	color: #a94847;
 }
 
 .twofactor_settings_description
@@ -16,16 +9,20 @@
 	margin-top: 10px;
 	font-size: 14px;
 	font-weight: normal;
-	color: #b0aeac;
 }
 
-.twofactor_settings_box
+.twofactor_header_description {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.twofactor_box
 {
-	background-color: #262626;
-	border: 1px solid #4d4b49;
-	color: #b0aeac;
+	background: rgba( 0, 0, 0, 0.3 );
 	line-height: 18px;
-	padding: 10px;
+	padding: 15px;
+	margin-top: 15px;
 }
 
 .twofactor_settings_form
@@ -40,14 +37,12 @@
 {
 	font-size: 16px;
 	font-weight: bold;
-	color: #ffffff;
 }
 
 .twofactor_settings_choice_description
 {
 	font-size: 14px;
-	color: #ffffff;
-	margin: 10px;
+	margin: 15px;
 }
 
 .twofactor_settings_choice_warning
@@ -60,18 +55,18 @@
 .twofactor_manual_entry_body
 {
 	font-size: 12px;
-	color: #ffffff;
 	margin: 10px;
 }
 
 .twofactor_settings_choice_rule
 {
-	border-top: 1px solid #3c3d3e;
-	margin: 30px 0px;
+	border-top: 1px solid rgba(42, 63, 90, 0.5 );
+	margin: 30px 0;
 }
 
 .twofactor_settings_right_button
 {
+	margin-top:10px;
 	display: inline-block;
 	float: right;
 }
@@ -79,7 +74,6 @@
 .twofactor_settings_instructions
 {
 	font-size: 14px;
-	color: white;
 	font-weight: normal;
 	margin-top: 4px;
 	margin-bottom: 20px;
@@ -94,12 +88,12 @@
 	font-size: 20px;
 	padding: 5px;
 	cursor: text;
+	text-transform: uppercase;
 }
 
 .twofactor_settings_input_label
 {
 	font-size: 14px;
-	color: #ffffff;
 	margin-left: 10px;
 	float: left;
 }
@@ -108,7 +102,6 @@
 {
 	width: 340px;
 	text-align: center;
-	background-color: #ffffff;
 	padding: 10px;
 }
 
@@ -154,8 +147,6 @@
 
 .twofactor_emergency_code_container
 {
-	background-color: #ffffff;
-	color: #000000;
 	margin-top: 30px;
 	margin-bottom: 10px;
 	padding-top: 30px;
@@ -164,15 +155,8 @@
 
 .twofactor_emergency_code_header
 {
-	margin-bottom: 30px;
-	margin-left: 30px;
+	margin:30px;
 	float: left;
-}
-
-.twofactor_emergency_code_username_wrapper
-{
-	float: right;
-	margin-right: 30px;
 }
 
 .twofactor_emergency_code_username_label
@@ -184,6 +168,7 @@
 {
 	font-size: 18px;
 	font-weight: bold;
+	margin-left: 5px;
 }
 
 .twofactor_emergency_code_row
@@ -230,8 +215,7 @@
 
 .twofactor_emergency_code_date
 {
-	float: right;
-	margin-right: 30px;
+	margin: 15px;
 }
 
 @media print {
@@ -251,4 +235,26 @@
 			border-style: solid;
 			border-width: 1px;
 	}
+}
+
+.twofactor_contactsupport {
+	margin-top: 20px;
+}
+
+a.twofactor_contactsupport {
+	color: #4ec1f5;
+}
+
+a.twofactor_contactsupport:hover {
+	text-decoration: underline;
+}
+
+.twofactor_cancel {
+	margin:15px 15px 15px 0;
+
+}
+
+.twofactor_done {
+	float:right;
+	margin-top:20px;
 }
