@@ -97,10 +97,6 @@ input.phone_input_number {
 	width: 250px;
 }
 
-.dselect_container a.trigger, .dselect_container a.activetrigger {
-	line-height: 22px;
-}
-
 .dselect_container a {
 	color: #67c1f5;
 	font-size: 11px;
@@ -111,13 +107,8 @@ input.phone_input_number {
 }
 
 .dropcontainer ul a {
-	line-height: 22px;
-	font-size: 12px;
-}
-
-#countries_droplist {
-	max-height: 250px;
-	overflow-y: auto;
+	line-height: 15px;
+	height: 15px;	
 }
 
 .sample_number_container {
