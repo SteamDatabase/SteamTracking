@@ -930,6 +930,10 @@ body.v6 .page_content_ctn.dark:last-child {
 	display: table-cell;
 }
 
+.forgot_login h2 {
+	margin-top: 16px;
+}
+
 .small_timestamp {
 	font-size: 14px;
 	color: lightgray;
