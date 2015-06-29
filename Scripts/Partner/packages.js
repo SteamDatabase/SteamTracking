@@ -486,6 +486,11 @@ var templ_DiscountDiv = new Template( ''
 		+ '				<div style="clear: both;"></div>'
 		+ '			</div>'
 		+ '			<div class="formrow">'
+		+ '				<div class="formlabel">Discount Percentage: </div>'
+		+ '				<div class="formdata">'
+		+ '					<input maxlength="2" style="width: 50px" class="Description" id="#{DiscountId}_discount_percent" name="#{DiscountId}[discount_percent]" value="#{DiscountPercentage}"> *A non-zero value will automatically update the discount when approving new prices through the new tool'
+		+ '				</div>'
+		+ '			</div>'		+ '			<div class="formrow">'
 		+ '				<div class="formlabel">Discount amounts:</div>'
 		+ '				<div class="formdata">'
 		+ '					<div style="margin-left: 100px;float:left">Discount in cents:</div>'
@@ -569,11 +574,12 @@ function CreateDiscount( target, id, discount )
 	var description = (discount['description'] == null ) ? '' : discount['description'];
 	var amt = (discount['discount'] == null) ? new Object() : discount['discount'];
 	var group = (discount['group'] == null) ? '' : discount['group'];
+	var discount_percent = (discount['discount_percent'] == null ) ? 0 : discount['discount_percent'];
 
 	// Base Discounts
 	var strDiscountPrices = GetRequiredCurrencyBlock( id + '[discount]', g_RequiredCurrencies, amt['base'], true, false );
 
-	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, Name: name, Description: description, DiscountPrices: strDiscountPrices, Group: group } );
+	var discountBlock = templ_DiscountDiv.evaluate( { DiscountId: id, Name: name, Description: description, DiscountPercentage: discount_percent, DiscountPrices: strDiscountPrices, Group: group } );
 	target.insert( discountBlock );
 	
 	// set up start & end dates
@@ -834,6 +840,7 @@ function AddPctgDiscount( target, id, pctg )
 	
 	var discount = new Object();
 	discount['discount'] = { base: discounts, country: discountsCountry, region: discountsRegion };
+	discount['discount_percent'] = pctg;
 
 	AddDiscount( target, id, discount, true );
 	return true;
