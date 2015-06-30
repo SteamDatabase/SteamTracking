@@ -736,26 +736,6 @@
  D HTMLComboBoxHost::GetKBMap()::s_pMap
  D HTMLComboBoxHost::GetMessageMap()::s_pMap
  D HTMLComboBoxHost::KB_ChainToMap()::chained
- D HTMLPopup::ChainToAnimationMap()::chained
- D HTMLPopup::ChainToMap()::chained
- D HTMLPopup::GetKBMap()::s_pMap
- D HTMLPopup::GetMessageMap()::s_pMap
- D HTMLPopup::KB_ChainToMap()::chained
- D HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnStartRequest::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnURLChanged::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnWebBack::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnWebForward::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnWebReload::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnWebStop::InitVar()::bAdded
- D HTMLPopup::PopupHTML::ChainToAnimationMap()::chained
- D HTMLPopup::PopupHTML::ChainToMap()::chained
- D HTMLPopup::PopupHTML::GetKBMap()::s_pMap
- D HTMLPopup::PopupHTML::GetMessageMap()::s_pMap
- D HTMLPopup::PopupHTML::KB_ChainToMap()::chained
  D ListPanelColumnSelectButton::ChainToAnimationMap()::chained
  D ListPanelColumnSelectButton::ChainToMap()::chained
  D ListPanelColumnSelectButton::GetKBMap()::s_pMap
@@ -837,8 +817,6 @@
  D VTT for CryptoPP::X509PublicKey
  D VTT for GridMenu
  D VTT for HTMLComboBoxHost
- D VTT for HTMLPopup
- D VTT for HTMLPopup::PopupHTML
  D VTT for ListPanelColumnSelectButton
  D VTT for ListPanelDragger
  D VTT for SharedLibraryNotification
@@ -872,6 +850,8 @@
  D VTT for vgui::HTML
  D VTT for vgui::HTML::CHTMLFindBar
  D VTT for vgui::HTML::CHTMLIMEBar
+ D VTT for vgui::HTMLPopup
+ D VTT for vgui::HTMLPopup::PopupHTML
  D VTT for vgui::ImagePanel
  D VTT for vgui::InputDialog
  D VTT for vgui::Label
@@ -1026,7 +1006,6 @@
  D construction vtable for vgui::EditablePanel-in-CVoiceTraffic
  D construction vtable for vgui::EditablePanel-in-GridMenu
  D construction vtable for vgui::EditablePanel-in-HTMLComboBoxHost
- D construction vtable for vgui::EditablePanel-in-HTMLPopup
  D construction vtable for vgui::EditablePanel-in-SharedLibraryNotification
  D construction vtable for vgui::EditablePanel-in-vgui::CheckButtonList
  D construction vtable for vgui::EditablePanel-in-vgui::EasyNotification
@@ -1035,6 +1014,7 @@
  D construction vtable for vgui::EditablePanel-in-vgui::Frame
  D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLFindBar
  D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLIMEBar
+ D construction vtable for vgui::EditablePanel-in-vgui::HTMLPopup
  D construction vtable for vgui::EditablePanel-in-vgui::InputDialog
  D construction vtable for vgui::EditablePanel-in-vgui::Menu
  D construction vtable for vgui::EditablePanel-in-vgui::MessageBox
@@ -1060,8 +1040,8 @@
  D construction vtable for vgui::Frame-in-CPlayersDialog
  D construction vtable for vgui::Frame-in-CSetNicknameDialog
  D construction vtable for vgui::Frame-in-CSteamTableChallengeOptions
- D construction vtable for vgui::Frame-in-HTMLPopup
  D construction vtable for vgui::Frame-in-vgui::FileOpenDialog
+ D construction vtable for vgui::Frame-in-vgui::HTMLPopup
  D construction vtable for vgui::Frame-in-vgui::InputDialog
  D construction vtable for vgui::Frame-in-vgui::MessageBox
  D construction vtable for vgui::Frame-in-vgui::PageDragFrame
@@ -1073,7 +1053,7 @@
  D construction vtable for vgui::FrameButton-in-vgui::FrameCloseButton
  D construction vtable for vgui::FrameButton-in-vgui::FrameMaximizeButton
  D construction vtable for vgui::FrameButton-in-vgui::FrameMinimizeButton
- D construction vtable for vgui::HTML-in-HTMLPopup::PopupHTML
+ D construction vtable for vgui::HTML-in-vgui::HTMLPopup::PopupHTML
  D construction vtable for vgui::ImagePanel-in-CAvatarOverlayImage
  D construction vtable for vgui::ImagePanel-in-CChatTabPanel
  D construction vtable for vgui::ImagePanel-in-CFriendPanel::ImagePanelMouseDelegate
@@ -1215,8 +1195,6 @@
  D construction vtable for vgui::Panel-in-CVoiceTraffic
  D construction vtable for vgui::Panel-in-GridMenu
  D construction vtable for vgui::Panel-in-HTMLComboBoxHost
- D construction vtable for vgui::Panel-in-HTMLPopup
- D construction vtable for vgui::Panel-in-HTMLPopup::PopupHTML
  D construction vtable for vgui::Panel-in-ListPanelColumnSelectButton
  D construction vtable for vgui::Panel-in-ListPanelDragger
  D construction vtable for vgui::Panel-in-SharedLibraryNotification
@@ -1250,6 +1228,8 @@
  D construction vtable for vgui::Panel-in-vgui::HTML
  D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLFindBar
  D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLIMEBar
+ D construction vtable for vgui::Panel-in-vgui::HTMLPopup
+ D construction vtable for vgui::Panel-in-vgui::HTMLPopup::PopupHTML
  D construction vtable for vgui::Panel-in-vgui::ImagePanel
  D construction vtable for vgui::Panel-in-vgui::InputDialog
  D construction vtable for vgui::Panel-in-vgui::Label
@@ -1459,10 +1439,6 @@
  D guard variable for CryptoPP::Singleton<CryptoPP::PKCS1v15_SignatureMessageEncodingMethod, CryptoPP::NewObject<CryptoPP::PKCS1v15_SignatureMessageEncodingMethod>, 0>::Ref() const::s_pObject
  D guard variable for HTMLComboBoxHost::GetKBMap()::s_pMap
  D guard variable for HTMLComboBoxHost::GetMessageMap()::s_pMap
- D guard variable for HTMLPopup::GetKBMap()::s_pMap
- D guard variable for HTMLPopup::GetMessageMap()::s_pMap
- D guard variable for HTMLPopup::PopupHTML::GetKBMap()::s_pMap
- D guard variable for HTMLPopup::PopupHTML::GetMessageMap()::s_pMap
  D guard variable for ListPanelColumnSelectButton::GetKBMap()::s_pMap
  D guard variable for ListPanelColumnSelectButton::GetMessageMap()::s_pMap
  D guard variable for ListPanelDragger::GetKBMap()::s_pMap
@@ -1525,6 +1501,10 @@
  D guard variable for vgui::HTML::CHTMLIMEBar::GetMessageMap()::s_pMap
  D guard variable for vgui::HTML::GetKBMap()::s_pMap
  D guard variable for vgui::HTML::GetMessageMap()::s_pMap
+ D guard variable for vgui::HTMLPopup::GetKBMap()::s_pMap
+ D guard variable for vgui::HTMLPopup::GetMessageMap()::s_pMap
+ D guard variable for vgui::HTMLPopup::PopupHTML::GetKBMap()::s_pMap
+ D guard variable for vgui::HTMLPopup::PopupHTML::GetMessageMap()::s_pMap
  D guard variable for vgui::ImagePanel::GetKBMap()::s_pMap
  D guard variable for vgui::ImagePanel::GetMessageMap()::s_pMap
  D guard variable for vgui::InputDialog::GetKBMap()::s_pMap
@@ -2168,8 +2148,6 @@
  D typeinfo for CryptoPP::X917RNG
  D typeinfo for GridMenu
  D typeinfo for HTMLComboBoxHost
- D typeinfo for HTMLPopup
- D typeinfo for HTMLPopup::PopupHTML
  D typeinfo for IBaseInterface
  D typeinfo for IClientParentalSettings
  D typeinfo for IFriendPanelContainer
@@ -2223,6 +2201,8 @@
  D typeinfo for vgui::HTML
  D typeinfo for vgui::HTML::CHTMLFindBar
  D typeinfo for vgui::HTML::CHTMLIMEBar
+ D typeinfo for vgui::HTMLPopup
+ D typeinfo for vgui::HTMLPopup::PopupHTML
  D typeinfo for vgui::IClientPanel
  D typeinfo for vgui::IImage
  D typeinfo for vgui::IPanelAnimationPropertyConverter
@@ -2480,6 +2460,26 @@
  D vgui::HTML::PanelMessageFunc_OnFileSelected::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnFileSelectionCancelled::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnSetCursorVGUI::InitVar()::bAdded
+ D vgui::HTMLPopup::ChainToAnimationMap()::chained
+ D vgui::HTMLPopup::ChainToMap()::chained
+ D vgui::HTMLPopup::GetKBMap()::s_pMap
+ D vgui::HTMLPopup::GetMessageMap()::s_pMap
+ D vgui::HTMLPopup::KB_ChainToMap()::chained
+ D vgui::HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnStartRequest::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnURLChanged::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnWebBack::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnWebForward::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnWebReload::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnWebStop::InitVar()::bAdded
+ D vgui::HTMLPopup::PopupHTML::ChainToAnimationMap()::chained
+ D vgui::HTMLPopup::PopupHTML::ChainToMap()::chained
+ D vgui::HTMLPopup::PopupHTML::GetKBMap()::s_pMap
+ D vgui::HTMLPopup::PopupHTML::GetMessageMap()::s_pMap
+ D vgui::HTMLPopup::PopupHTML::KB_ChainToMap()::chained
  D vgui::ImagePanel::ChainToAnimationMap()::chained
  D vgui::ImagePanel::ChainToMap()::chained
  D vgui::ImagePanel::GetKBMap()::s_pMap
@@ -3355,8 +3355,6 @@
  D vtable for CryptoPP::X917RNG
  D vtable for GridMenu
  D vtable for HTMLComboBoxHost
- D vtable for HTMLPopup
- D vtable for HTMLPopup::PopupHTML
  D vtable for IHTMLResponses
  D vtable for ListPanelColumnSelectButton
  D vtable for ListPanelDragger
@@ -3402,6 +3400,8 @@
  D vtable for vgui::HTML
  D vtable for vgui::HTML::CHTMLFindBar
  D vtable for vgui::HTML::CHTMLIMEBar
+ D vtable for vgui::HTMLPopup
+ D vtable for vgui::HTMLPopup::PopupHTML
  D vtable for vgui::IClientPanel
  D vtable for vgui::IToolWindowFactory
  D vtable for vgui::Image
@@ -4134,8 +4134,6 @@
  R typeinfo name for CryptoPP::X917RNG
  R typeinfo name for GridMenu
  R typeinfo name for HTMLComboBoxHost
- R typeinfo name for HTMLPopup
- R typeinfo name for HTMLPopup::PopupHTML
  R typeinfo name for IBaseInterface
  R typeinfo name for IClientParentalSettings
  R typeinfo name for IFriendPanelContainer
@@ -4190,6 +4188,8 @@
  R typeinfo name for vgui::HTML
  R typeinfo name for vgui::HTML::CHTMLFindBar
  R typeinfo name for vgui::HTML::CHTMLIMEBar
+ R typeinfo name for vgui::HTMLPopup
+ R typeinfo name for vgui::HTMLPopup::PopupHTML
  R typeinfo name for vgui::IClientPanel
  R typeinfo name for vgui::IImage
  R typeinfo name for vgui::IPanelAnimationPropertyConverter
@@ -9723,51 +9723,6 @@
  T HTMLComboBoxHost::PaintBackground()
  T HTMLComboBoxHost::PerformLayout()
  T HTMLComboBoxHost::~HTMLComboBoxHost()
- T HTMLPopup::ChainToAnimationMap()
- T HTMLPopup::ChainToMap()
- T HTMLPopup::GetAnimMap()
- T HTMLPopup::GetClassSize() const
- T HTMLPopup::GetKBMap()
- T HTMLPopup::GetMessageMap()
- T HTMLPopup::GetPanelClassName()
- T HTMLPopup::GetPanelTopClassName() const
- T HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, bool, bool)
- T HTMLPopup::KB_ChainToMap()
- T HTMLPopup::OnCloseWindow()
- T HTMLPopup::OnFinishRequest()
- T HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
- T HTMLPopup::OnSecurityStatus(KeyValues*)
- T HTMLPopup::OnSetSecurityStatus(bool, bool, bool, char const*)
- T HTMLPopup::OnStartRequest(KeyValues*)
- T HTMLPopup::OnTick()
- T HTMLPopup::OnURLChanged(KeyValues*)
- T HTMLPopup::OnWebBack()
- T HTMLPopup::OnWebForward()
- T HTMLPopup::OnWebReload()
- T HTMLPopup::OnWebStop()
- T HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()
- T HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()
- T HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()
- T HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()
- T HTMLPopup::PanelMessageFunc_OnStartRequest::InitVar()
- T HTMLPopup::PanelMessageFunc_OnURLChanged::InitVar()
- T HTMLPopup::PanelMessageFunc_OnWebBack::InitVar()
- T HTMLPopup::PanelMessageFunc_OnWebForward::InitVar()
- T HTMLPopup::PanelMessageFunc_OnWebReload::InitVar()
- T HTMLPopup::PanelMessageFunc_OnWebStop::InitVar()
- T HTMLPopup::PopupHTML::ChainToAnimationMap()
- T HTMLPopup::PopupHTML::ChainToMap()
- T HTMLPopup::PopupHTML::GetAnimMap()
- T HTMLPopup::PopupHTML::GetClassSize() const
- T HTMLPopup::PopupHTML::GetKBMap()
- T HTMLPopup::PopupHTML::GetMessageMap()
- T HTMLPopup::PopupHTML::GetPanelClassName()
- T HTMLPopup::PopupHTML::GetPanelTopClassName() const
- T HTMLPopup::PopupHTML::KB_ChainToMap()
- T HTMLPopup::PopupHTML::OnSetHTMLTitle(char const*)
- T HTMLPopup::PopupHTML::PopupHTML(vgui::Frame*, char const*, bool)
- T HTMLPopup::PopupHTML::~PopupHTML()
- T HTMLPopup::~HTMLPopup()
  T HTMLWatchSDLEvents(void*, SDL_Event*)
  T IFriendPanelContainer::BInviteUserToGame(CSteamID const&)
  T IFriendPanelContainer::BOpenProfile()
@@ -10304,7 +10259,6 @@
  T non-virtual thunk to CryptoPP::TF_SignatureSchemeBase<CryptoPP::PK_Verifier, CryptoPP::TF_Base<CryptoPP::TrapdoorFunction, CryptoPP::PK_SignatureMessageEncodingMethod> >::~TF_SignatureSchemeBase()
  T non-virtual thunk to CryptoPP::Unflushable<CryptoPP::Filter>::~Unflushable()
  T non-virtual thunk to CryptoPP::X509PublicKey::~X509PublicKey()
- T non-virtual thunk to HTMLPopup::PopupHTML::~PopupHTML()
  T non-virtual thunk to vgui::HTML::BSupportsOffMainThreadPaints()
  T non-virtual thunk to vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T non-virtual thunk to vgui::HTML::BrowserClose(CMsgClose const*)
@@ -10350,6 +10304,7 @@
  T non-virtual thunk to vgui::HTML::BrowserZoomToElementAtPositionResponse(CMsgZoomToElementAtPositionResponse const*)
  T non-virtual thunk to vgui::HTML::ThreadNotifyPendingPaints()
  T non-virtual thunk to vgui::HTML::~HTML()
+ T non-virtual thunk to vgui::HTMLPopup::PopupHTML::~PopupHTML()
  T non-virtual thunk to vgui::ListPanel::GetJumpItem(int, wchar_t*, int)
  T non-virtual thunk to vgui::ListPanel::GetJumpItemCount()
  T non-virtual thunk to vgui::ListPanel::GetJumpStart()
@@ -11633,6 +11588,8 @@
  T vgui::GraphPanel::Validate(CValidator&, char const*)
  T vgui::GraphPanel::~GraphPanel()
  T vgui::HTML::ApplySchemeSettings(vgui::IScheme*)
+ T vgui::HTML::BCanGoBack()
+ T vgui::HTML::BCanGoForward()
  T vgui::HTML::BSupportsOffMainThreadPaints()
  T vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T vgui::HTML::BrowserClose(CMsgClose const*)
@@ -11794,6 +11751,53 @@
  T vgui::HTML::TrackHTMLMouseMove(int, int, bool)
  T vgui::HTML::Validate(CValidator&, char const*)
  T vgui::HTML::~HTML()
+ T vgui::HTMLPopup::ChainToAnimationMap()
+ T vgui::HTMLPopup::ChainToMap()
+ T vgui::HTMLPopup::GetAnimMap()
+ T vgui::HTMLPopup::GetClassSize() const
+ T vgui::HTMLPopup::GetKBMap()
+ T vgui::HTMLPopup::GetMessageMap()
+ T vgui::HTMLPopup::GetPanelClassName()
+ T vgui::HTMLPopup::GetPanelTopClassName() const
+ T vgui::HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, bool, bool)
+ T vgui::HTMLPopup::KB_ChainToMap()
+ T vgui::HTMLPopup::OnClose()
+ T vgui::HTMLPopup::OnCloseWindow()
+ T vgui::HTMLPopup::OnFinishRequest()
+ T vgui::HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
+ T vgui::HTMLPopup::OnSecurityStatus(KeyValues*)
+ T vgui::HTMLPopup::OnSetSecurityStatus(bool, bool, bool, char const*)
+ T vgui::HTMLPopup::OnStartRequest(KeyValues*)
+ T vgui::HTMLPopup::OnTick()
+ T vgui::HTMLPopup::OnURLChanged(KeyValues*)
+ T vgui::HTMLPopup::OnWebBack()
+ T vgui::HTMLPopup::OnWebForward()
+ T vgui::HTMLPopup::OnWebReload()
+ T vgui::HTMLPopup::OnWebStop()
+ T vgui::HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnStartRequest::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnURLChanged::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnWebBack::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnWebForward::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnWebReload::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnWebStop::InitVar()
+ T vgui::HTMLPopup::PopupHTML::ChainToAnimationMap()
+ T vgui::HTMLPopup::PopupHTML::ChainToMap()
+ T vgui::HTMLPopup::PopupHTML::GetAnimMap()
+ T vgui::HTMLPopup::PopupHTML::GetClassSize() const
+ T vgui::HTMLPopup::PopupHTML::GetKBMap()
+ T vgui::HTMLPopup::PopupHTML::GetMessageMap()
+ T vgui::HTMLPopup::PopupHTML::GetPanelClassName()
+ T vgui::HTMLPopup::PopupHTML::GetPanelTopClassName() const
+ T vgui::HTMLPopup::PopupHTML::KB_ChainToMap()
+ T vgui::HTMLPopup::PopupHTML::OnSetHTMLTitle(char const*)
+ T vgui::HTMLPopup::PopupHTML::PopupHTML(vgui::Frame*, char const*, bool)
+ T vgui::HTMLPopup::PopupHTML::~PopupHTML()
+ T vgui::HTMLPopup::SetBounds(int, int, int, int)
+ T vgui::HTMLPopup::~HTMLPopup()
  T vgui::HotKeyInfo::HotKeyInfo(char const*)
  T vgui::HotKeyInfo::HotKeyInfo(vgui::KeyCode, int)
  T vgui::IImage::PaintTiled(int, int, int, int)

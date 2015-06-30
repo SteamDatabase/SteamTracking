@@ -78,6 +78,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(fileio.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(generichash.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(htmlmessages.pb.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(htmlpopup.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(htmlprotobuf.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(interface.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(mempool.o)
@@ -482,6 +483,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/TreeViewListControl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/URLLabel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/approotpanel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/htmlpopup.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/typingjump.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/vgui_controls.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/wrappanel.h
@@ -574,5 +576,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/URLLabel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/approotpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/controls.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/htmlpopup.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/typingjump.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/wrappanel.cpp

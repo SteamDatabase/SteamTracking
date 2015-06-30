@@ -254,6 +254,11 @@ HelpAppPage
 	method		"internal"
 }
 
+HelpWithLogin
+{
+	url			"%help%/#HelpWithLogin?redir=clientlogin"
+	Method		"internal"
+}
 
 StoreFrontPage
 {

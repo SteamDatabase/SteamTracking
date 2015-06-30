@@ -4545,8 +4545,6 @@
  D CSteamLoginDialog::GetKBMap()::s_pMap
  D CSteamLoginDialog::GetMessageMap()::s_pMap
  D CSteamLoginDialog::KB_ChainToMap()::chained
- D CSteamLoginDialog::PanelMessageFunc_OnForgotPasswordWizardFailure::InitVar()::bAdded
- D CSteamLoginDialog::PanelMessageFunc_OnForgotPasswordWizardSuccess::InitVar()::bAdded
  D CSteamLoginDialog::PanelMessageFunc_OnLockedAccountRecoverWizardCanceled::InitVar()::bAdded
  D CSteamLoginDialog::PanelMessageFunc_OnLockedAccountRecoverWizardFinished::InitVar()::bAdded
  D CSteamLoginDialog::PanelMessageFunc_OnTextChanged::InitVar()::bAdded
@@ -5354,26 +5352,6 @@
  D HTMLComboBoxHost::KB_ChainToMap()::chained
  D HTMLCommitZoom::pchEvent
  D HTMLFormFocusPending::pchEvent
- D HTMLPopup::ChainToAnimationMap()::chained
- D HTMLPopup::ChainToMap()::chained
- D HTMLPopup::GetKBMap()::s_pMap
- D HTMLPopup::GetMessageMap()::s_pMap
- D HTMLPopup::KB_ChainToMap()::chained
- D HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnStartRequest::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnURLChanged::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnWebBack::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnWebForward::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnWebReload::InitVar()::bAdded
- D HTMLPopup::PanelMessageFunc_OnWebStop::InitVar()::bAdded
- D HTMLPopup::PopupHTML::ChainToAnimationMap()::chained
- D HTMLPopup::PopupHTML::ChainToMap()::chained
- D HTMLPopup::PopupHTML::GetKBMap()::s_pMap
- D HTMLPopup::PopupHTML::GetMessageMap()::s_pMap
- D HTMLPopup::PopupHTML::KB_ChainToMap()::chained
  D HTMLRequestRepaint::pchEvent
  D HTMLScreenShotCaptured::pchEvent
  D HighlightTrack::pchEvent
@@ -6202,8 +6180,6 @@
  D VTT for CreateDirectoryDialog
  D VTT for DirectoryTreeView
  D VTT for HTMLComboBoxHost
- D VTT for HTMLPopup
- D VTT for HTMLPopup::PopupHTML
  D VTT for LayoutDebugDialog
  D VTT for ListPanelColumnSelectButton
  D VTT for ListPanelDragger
@@ -6249,6 +6225,8 @@
  D VTT for vgui::HTML
  D VTT for vgui::HTML::CHTMLFindBar
  D VTT for vgui::HTML::CHTMLIMEBar
+ D VTT for vgui::HTMLPopup
+ D VTT for vgui::HTMLPopup::PopupHTML
  D VTT for vgui::HotKeyEntry
  D VTT for vgui::HotkeyEntryClearButton
  D VTT for vgui::ImagePanel
@@ -6652,7 +6630,6 @@
  D construction vtable for vgui::EditablePanel-in-CWorkshopDetailsPanel
  D construction vtable for vgui::EditablePanel-in-CreateDirectoryDialog
  D construction vtable for vgui::EditablePanel-in-HTMLComboBoxHost
- D construction vtable for vgui::EditablePanel-in-HTMLPopup
  D construction vtable for vgui::EditablePanel-in-LayoutDebugDialog
  D construction vtable for vgui::EditablePanel-in-SubForgotPasswordSetNewPassword
  D construction vtable for vgui::EditablePanel-in-SuperNavMenu
@@ -6668,6 +6645,7 @@
  D construction vtable for vgui::EditablePanel-in-vgui::Frame
  D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLFindBar
  D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLIMEBar
+ D construction vtable for vgui::EditablePanel-in-vgui::HTMLPopup
  D construction vtable for vgui::EditablePanel-in-vgui::InputDialog
  D construction vtable for vgui::EditablePanel-in-vgui::Menu
  D construction vtable for vgui::EditablePanel-in-vgui::MessageBox
@@ -6763,12 +6741,12 @@
  D construction vtable for vgui::Frame-in-CWebURLDialog
  D construction vtable for vgui::Frame-in-CWelcomeToSteamDialog
  D construction vtable for vgui::Frame-in-CreateDirectoryDialog
- D construction vtable for vgui::Frame-in-HTMLPopup
  D construction vtable for vgui::Frame-in-LayoutDebugDialog
  D construction vtable for vgui::Frame-in-UpdateControllerFirmwareDialog
  D construction vtable for vgui::Frame-in-ZooDialog
  D construction vtable for vgui::Frame-in-vgui::DirectorySelectDialog
  D construction vtable for vgui::Frame-in-vgui::FileOpenDialog
+ D construction vtable for vgui::Frame-in-vgui::HTMLPopup
  D construction vtable for vgui::Frame-in-vgui::InputDialog
  D construction vtable for vgui::Frame-in-vgui::MessageBox
  D construction vtable for vgui::Frame-in-vgui::PageDragFrame
@@ -6785,8 +6763,8 @@
  D construction vtable for vgui::HTML-in-CPrintHTML::CSubHTML
  D construction vtable for vgui::HTML-in-CSteamAuthedHTML
  D construction vtable for vgui::HTML-in-CWebPanel
- D construction vtable for vgui::HTML-in-HTMLPopup::PopupHTML
  D construction vtable for vgui::HTML-in-SSAHTML
+ D construction vtable for vgui::HTML-in-vgui::HTMLPopup::PopupHTML
  D construction vtable for vgui::ImagePanel-in-CGameImage
  D construction vtable for vgui::ImagePanel-in-CVACLink
  D construction vtable for vgui::ImagePanel-in-vgui::HotkeyEntryClearButton
@@ -7144,8 +7122,6 @@
  D construction vtable for vgui::Panel-in-CreateDirectoryDialog
  D construction vtable for vgui::Panel-in-DirectoryTreeView
  D construction vtable for vgui::Panel-in-HTMLComboBoxHost
- D construction vtable for vgui::Panel-in-HTMLPopup
- D construction vtable for vgui::Panel-in-HTMLPopup::PopupHTML
  D construction vtable for vgui::Panel-in-LayoutDebugDialog
  D construction vtable for vgui::Panel-in-ListPanelColumnSelectButton
  D construction vtable for vgui::Panel-in-ListPanelDragger
@@ -7191,6 +7167,8 @@
  D construction vtable for vgui::Panel-in-vgui::HTML
  D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLFindBar
  D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLIMEBar
+ D construction vtable for vgui::Panel-in-vgui::HTMLPopup
+ D construction vtable for vgui::Panel-in-vgui::HTMLPopup::PopupHTML
  D construction vtable for vgui::Panel-in-vgui::HotKeyEntry
  D construction vtable for vgui::Panel-in-vgui::HotkeyEntryClearButton
  D construction vtable for vgui::Panel-in-vgui::ImagePanel
@@ -7941,10 +7919,6 @@
  D guard variable for DirectoryTreeView::GetMessageMap()::s_pMap
  D guard variable for HTMLComboBoxHost::GetKBMap()::s_pMap
  D guard variable for HTMLComboBoxHost::GetMessageMap()::s_pMap
- D guard variable for HTMLPopup::GetKBMap()::s_pMap
- D guard variable for HTMLPopup::GetMessageMap()::s_pMap
- D guard variable for HTMLPopup::PopupHTML::GetKBMap()::s_pMap
- D guard variable for HTMLPopup::PopupHTML::GetMessageMap()::s_pMap
  D guard variable for LayoutDebugDialog::GetKBMap()::s_pMap
  D guard variable for LayoutDebugDialog::GetMessageMap()::s_pMap
  D guard variable for ListPanelColumnSelectButton::GetKBMap()::s_pMap
@@ -8064,6 +8038,10 @@
  D guard variable for vgui::HTML::CHTMLIMEBar::GetMessageMap()::s_pMap
  D guard variable for vgui::HTML::GetKBMap()::s_pMap
  D guard variable for vgui::HTML::GetMessageMap()::s_pMap
+ D guard variable for vgui::HTMLPopup::GetKBMap()::s_pMap
+ D guard variable for vgui::HTMLPopup::GetMessageMap()::s_pMap
+ D guard variable for vgui::HTMLPopup::PopupHTML::GetKBMap()::s_pMap
+ D guard variable for vgui::HTMLPopup::PopupHTML::GetMessageMap()::s_pMap
  D guard variable for vgui::HotKeyEntry::GetKBMap()::s_pMap
  D guard variable for vgui::HotKeyEntry::GetMessageMap()::s_pMap
  D guard variable for vgui::HotkeyEntryClearButton::GetKBMap()::s_pMap
@@ -9508,6 +9486,7 @@
  D typeinfo for CMarketingController
  D typeinfo for CMarketingController::CCallbackOnMarketingMessageUpdate
  D typeinfo for CMemberFunctor0<CShutdownController*, void (CShutdownController::*)(), CFuncMemPolicyNone>
+ D typeinfo for CMemberFunctor0<CStartupHandlerVgui*, void (CStartupHandlerVgui::*)(), CFuncMemPolicyNone>
  D typeinfo for CMiniGameFilterMenuButton
  D typeinfo for CMsg3DTransformMatrix
  D typeinfo for CMsg3DTransformMatrix_AnimationFrameData
@@ -10651,8 +10630,6 @@
  D typeinfo for GameStreamApplicationState_t
  D typeinfo for GameStreamProcessState_t
  D typeinfo for HTMLComboBoxHost
- D typeinfo for HTMLPopup
- D typeinfo for HTMLPopup::PopupHTML
  D typeinfo for IAccountNameValidatorNotify
  D typeinfo for IAppSystem
  D typeinfo for IAudioRecorder
@@ -11034,6 +11011,8 @@
  D typeinfo for vgui::HTML
  D typeinfo for vgui::HTML::CHTMLFindBar
  D typeinfo for vgui::HTML::CHTMLIMEBar
+ D typeinfo for vgui::HTMLPopup
+ D typeinfo for vgui::HTMLPopup::PopupHTML
  D typeinfo for vgui::HotKeyEntry
  D typeinfo for vgui::HotkeyEntryClearButton
  D typeinfo for vgui::IClientPanel
@@ -11323,6 +11302,26 @@
  D vgui::HTML::PanelMessageFunc_OnFileSelected::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnFileSelectionCancelled::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnSetCursorVGUI::InitVar()::bAdded
+ D vgui::HTMLPopup::ChainToAnimationMap()::chained
+ D vgui::HTMLPopup::ChainToMap()::chained
+ D vgui::HTMLPopup::GetKBMap()::s_pMap
+ D vgui::HTMLPopup::GetMessageMap()::s_pMap
+ D vgui::HTMLPopup::KB_ChainToMap()::chained
+ D vgui::HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnStartRequest::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnURLChanged::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnWebBack::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnWebForward::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnWebReload::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnWebStop::InitVar()::bAdded
+ D vgui::HTMLPopup::PopupHTML::ChainToAnimationMap()::chained
+ D vgui::HTMLPopup::PopupHTML::ChainToMap()::chained
+ D vgui::HTMLPopup::PopupHTML::GetKBMap()::s_pMap
+ D vgui::HTMLPopup::PopupHTML::GetMessageMap()::s_pMap
+ D vgui::HTMLPopup::PopupHTML::KB_ChainToMap()::chained
  D vgui::HotKeyEntry::ChainToAnimationMap()::chained
  D vgui::HotKeyEntry::ChainToMap()::chained
  D vgui::HotKeyEntry::GetKBMap()::s_pMap
@@ -12765,6 +12764,7 @@
  D vtable for CMarketingController
  D vtable for CMarketingController::CCallbackOnMarketingMessageUpdate
  D vtable for CMemberFunctor0<CShutdownController*, void (CShutdownController::*)(), CFuncMemPolicyNone>
+ D vtable for CMemberFunctor0<CStartupHandlerVgui*, void (CStartupHandlerVgui::*)(), CFuncMemPolicyNone>
  D vtable for CMiniGameFilterMenuButton
  D vtable for CMsg3DTransformMatrix
  D vtable for CMsg3DTransformMatrix_AnimationFrameData
@@ -13865,8 +13865,6 @@
  D vtable for GameStreamApplicationState_t
  D vtable for GameStreamProcessState_t
  D vtable for HTMLComboBoxHost
- D vtable for HTMLPopup
- D vtable for HTMLPopup::PopupHTML
  D vtable for IClientInstallUtilsMap
  D vtable for IClientModuleManagerMap
  D vtable for IClientProcessMonitorMap
@@ -14177,6 +14175,8 @@
  D vtable for vgui::HTML
  D vtable for vgui::HTML::CHTMLFindBar
  D vtable for vgui::HTML::CHTMLIMEBar
+ D vtable for vgui::HTMLPopup
+ D vtable for vgui::HTMLPopup::PopupHTML
  D vtable for vgui::HotKeyEntry
  D vtable for vgui::HotkeyEntryClearButton
  D vtable for vgui::IClientPanel
@@ -15430,6 +15430,7 @@
  R typeinfo name for CMarketingController
  R typeinfo name for CMarketingController::CCallbackOnMarketingMessageUpdate
  R typeinfo name for CMemberFunctor0<CShutdownController*, void (CShutdownController::*)(), CFuncMemPolicyNone>
+ R typeinfo name for CMemberFunctor0<CStartupHandlerVgui*, void (CStartupHandlerVgui::*)(), CFuncMemPolicyNone>
  R typeinfo name for CMessageList
  R typeinfo name for CMiniGameFilterMenuButton
  R typeinfo name for CMsg3DTransformMatrix
@@ -16894,8 +16895,6 @@
  R typeinfo name for GameStreamApplicationState_t
  R typeinfo name for GameStreamProcessState_t
  R typeinfo name for HTMLComboBoxHost
- R typeinfo name for HTMLPopup
- R typeinfo name for HTMLPopup::PopupHTML
  R typeinfo name for IAccountNameValidatorNotify
  R typeinfo name for IAppSystem
  R typeinfo name for IAudioRecorder
@@ -17281,6 +17280,8 @@
  R typeinfo name for vgui::HTML
  R typeinfo name for vgui::HTML::CHTMLFindBar
  R typeinfo name for vgui::HTML::CHTMLIMEBar
+ R typeinfo name for vgui::HTMLPopup
+ R typeinfo name for vgui::HTMLPopup::PopupHTML
  R typeinfo name for vgui::HotKeyEntry
  R typeinfo name for vgui::HotkeyEntryClearButton
  R typeinfo name for vgui::IClientPanel
@@ -26703,8 +26704,11 @@
  T CMarketingController::Validate(CValidator&, char const*)
  T CMarketingController::~CMarketingController()
  T CMemberFuncProxy0<CShutdownController*, void (CShutdownController::*)(), CFuncMemPolicyNone>::operator()()
+ T CMemberFuncProxy0<CStartupHandlerVgui*, void (CStartupHandlerVgui::*)(), CFuncMemPolicyNone>::operator()()
  T CMemberFunctor0<CShutdownController*, void (CShutdownController::*)(), CFuncMemPolicyNone>::operator()()
  T CMemberFunctor0<CShutdownController*, void (CShutdownController::*)(), CFuncMemPolicyNone>::~CMemberFunctor0()
+ T CMemberFunctor0<CStartupHandlerVgui*, void (CStartupHandlerVgui::*)(), CFuncMemPolicyNone>::operator()()
+ T CMemberFunctor0<CStartupHandlerVgui*, void (CStartupHandlerVgui::*)(), CFuncMemPolicyNone>::~CMemberFunctor0()
  T CMemoryPool::AddNewBlob()
  T CMemoryPool::Alloc()
  T CMemoryPool::Alloc(unsigned int)
@@ -33038,6 +33042,7 @@
  T CStartupHandlerPanorama::OnShowLoginPanel()
  T CStartupHandlerPanorama::OnShowOOBE()
  T CStartupHandlerPanorama::OnStartupComplete()
+ T CStartupHandlerPanorama::OpenAccountRecovery()
  T CStartupHandlerPanorama::OpenLoginDialog(bool)
  T CStartupHandlerPanorama::OpenOfflineModeDialog()
  T CStartupHandlerPanorama::OpenProgressDialog(ISteamStartupHandler::EProgressType_t, char const*)
@@ -33072,7 +33077,9 @@
  T CStartupHandlerVgui::GetHandlerResult()
  T CStartupHandlerVgui::GetSteamLoginUI()
  T CStartupHandlerVgui::IsWelcomeComplete()
+ T CStartupHandlerVgui::OnAccountRecoveryClosed()
  T CStartupHandlerVgui::OnStartupComplete()
+ T CStartupHandlerVgui::OpenAccountRecovery()
  T CStartupHandlerVgui::OpenLoginDialog(bool)
  T CStartupHandlerVgui::OpenOfflineModeDialog()
  T CStartupHandlerVgui::OpenProgressDialog(ISteamStartupHandler::EProgressType_t, char const*)
@@ -33719,9 +33726,7 @@
  T CSteamLoginDialog::OnClose()
  T CSteamLoginDialog::OnCommand(char const*)
  T CSteamLoginDialog::OnConnectionIssues()
- T CSteamLoginDialog::OnForgotPassword()
- T CSteamLoginDialog::OnForgotPasswordWizardFailure()
- T CSteamLoginDialog::OnForgotPasswordWizardSuccess(char const*)
+ T CSteamLoginDialog::OnForgotPasswordComplete()
  T CSteamLoginDialog::OnIPRestrictionFailed()
  T CSteamLoginDialog::OnInvalidPassword()
  T CSteamLoginDialog::OnKeyCodeReleased(vgui::KeyCode)
@@ -33735,8 +33740,6 @@
  T CSteamLoginDialog::OnTick()
  T CSteamLoginDialog::OnTwoFactorCodeChallengeCanceled()
  T CSteamLoginDialog::OnTwoFactorCodeChallengeFinished()
- T CSteamLoginDialog::PanelMessageFunc_OnForgotPasswordWizardFailure::InitVar()
- T CSteamLoginDialog::PanelMessageFunc_OnForgotPasswordWizardSuccess::InitVar()
  T CSteamLoginDialog::PanelMessageFunc_OnLockedAccountRecoverWizardCanceled::InitVar()
  T CSteamLoginDialog::PanelMessageFunc_OnLockedAccountRecoverWizardFinished::InitVar()
  T CSteamLoginDialog::PanelMessageFunc_OnTextChanged::InitVar()
@@ -40694,6 +40697,7 @@
  T CWebURLDialog::GetPanelClassName()
  T CWebURLDialog::GetPanelTopClassName() const
  T CWebURLDialog::KB_ChainToMap()
+ T CWebURLDialog::OnClose()
  T CWebURLDialog::OnCloseWindow()
  T CWebURLDialog::OnCustomURL(KeyValues*)
  T CWebURLDialog::OnSetHTMLTitle(char const*)
@@ -40701,6 +40705,8 @@
  T CWebURLDialog::PanelMessageFunc_OnCustomURL::InitVar()
  T CWebURLDialog::PanelMessageFunc_OnSetHTMLTitle::InitVar()
  T CWebURLDialog::PerformLayout()
+ T CWebURLDialog::SetFullscreenResolutionLimits(int, int)
+ T CWebURLDialog::SetHTMLRefreshRateOverride(int)
  T CWebURLDialog::~CWebURLDialog()
  T CWelcomeToSteamDialog::CWelcomeToSteamDialog()
  T CWelcomeToSteamDialog::CancelInstall()
@@ -42174,51 +42180,6 @@
  T HTMLFormFocusPending::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T HTMLFormFocusPending::GetEventType()
  T HTMLFormFocusPending::MakeEvent(panorama::IUIPanelClient const*)
- T HTMLPopup::ChainToAnimationMap()
- T HTMLPopup::ChainToMap()
- T HTMLPopup::GetAnimMap()
- T HTMLPopup::GetClassSize() const
- T HTMLPopup::GetKBMap()
- T HTMLPopup::GetMessageMap()
- T HTMLPopup::GetPanelClassName()
- T HTMLPopup::GetPanelTopClassName() const
- T HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, bool, bool)
- T HTMLPopup::KB_ChainToMap()
- T HTMLPopup::OnCloseWindow()
- T HTMLPopup::OnFinishRequest()
- T HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
- T HTMLPopup::OnSecurityStatus(KeyValues*)
- T HTMLPopup::OnSetSecurityStatus(bool, bool, bool, char const*)
- T HTMLPopup::OnStartRequest(KeyValues*)
- T HTMLPopup::OnTick()
- T HTMLPopup::OnURLChanged(KeyValues*)
- T HTMLPopup::OnWebBack()
- T HTMLPopup::OnWebForward()
- T HTMLPopup::OnWebReload()
- T HTMLPopup::OnWebStop()
- T HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()
- T HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()
- T HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()
- T HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()
- T HTMLPopup::PanelMessageFunc_OnStartRequest::InitVar()
- T HTMLPopup::PanelMessageFunc_OnURLChanged::InitVar()
- T HTMLPopup::PanelMessageFunc_OnWebBack::InitVar()
- T HTMLPopup::PanelMessageFunc_OnWebForward::InitVar()
- T HTMLPopup::PanelMessageFunc_OnWebReload::InitVar()
- T HTMLPopup::PanelMessageFunc_OnWebStop::InitVar()
- T HTMLPopup::PopupHTML::ChainToAnimationMap()
- T HTMLPopup::PopupHTML::ChainToMap()
- T HTMLPopup::PopupHTML::GetAnimMap()
- T HTMLPopup::PopupHTML::GetClassSize() const
- T HTMLPopup::PopupHTML::GetKBMap()
- T HTMLPopup::PopupHTML::GetMessageMap()
- T HTMLPopup::PopupHTML::GetPanelClassName()
- T HTMLPopup::PopupHTML::GetPanelTopClassName() const
- T HTMLPopup::PopupHTML::KB_ChainToMap()
- T HTMLPopup::PopupHTML::OnSetHTMLTitle(char const*)
- T HTMLPopup::PopupHTML::PopupHTML(vgui::Frame*, char const*, bool)
- T HTMLPopup::PopupHTML::~PopupHTML()
- T HTMLPopup::~HTMLPopup()
  T HTMLRequestRepaint::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T HTMLRequestRepaint::GetEventType()
  T HTMLRequestRepaint::MakeEvent(panorama::IUIPanelClient const*)
@@ -45125,6 +45086,7 @@
  T non-virtual thunk to CLoginPanel::GetPanelType() const
  T non-virtual thunk to CLoginPanel::~CLoginPanel()
  T non-virtual thunk to CMemberFunctor0<CShutdownController*, void (CShutdownController::*)(), CFuncMemPolicyNone>::~CMemberFunctor0()
+ T non-virtual thunk to CMemberFunctor0<CStartupHandlerVgui*, void (CStartupHandlerVgui::*)(), CFuncMemPolicyNone>::~CMemberFunctor0()
  T non-virtual thunk to CMusicPage_Details::BLoading()
  T non-virtual thunk to CMusicPage_Details::BShowControl(IUINavigatorSubPanel::ENavControl)
  T non-virtual thunk to CMusicPage_Details::BShowPage(char const*, char const*, char const*)
@@ -45415,7 +45377,6 @@
  T non-virtual thunk to CryptoPP::Sink::~Sink()
  T non-virtual thunk to CryptoPP::StreamTransformationFilter::~StreamTransformationFilter()
  T non-virtual thunk to CryptoPP::SymmetricCipher::~SymmetricCipher()
- T non-virtual thunk to HTMLPopup::PopupHTML::~PopupHTML()
  T non-virtual thunk to LayoutDebugDialog::CursorMoved(vgui::Panel*, int, int)
  T non-virtual thunk to LayoutDebugDialog::KeyCodeReleased(vgui::Panel*, int)
  T non-virtual thunk to LayoutDebugDialog::KeyCodeTyped(vgui::Panel*, int)
@@ -45567,6 +45528,7 @@
  T non-virtual thunk to vgui::HTML::BrowserZoomToElementAtPositionResponse(CMsgZoomToElementAtPositionResponse const*)
  T non-virtual thunk to vgui::HTML::ThreadNotifyPendingPaints()
  T non-virtual thunk to vgui::HTML::~HTML()
+ T non-virtual thunk to vgui::HTMLPopup::PopupHTML::~PopupHTML()
  T non-virtual thunk to vgui::ListPanel::GetJumpItem(int, wchar_t*, int)
  T non-virtual thunk to vgui::ListPanel::GetJumpItemCount()
  T non-virtual thunk to vgui::ListPanel::GetJumpStart()
@@ -51314,6 +51276,54 @@
  T vgui::HTML::TrackHTMLMouseMove(int, int, bool)
  T vgui::HTML::Validate(CValidator&, char const*)
  T vgui::HTML::~HTML()
+ T vgui::HTMLPopup::ChainToAnimationMap()
+ T vgui::HTMLPopup::ChainToMap()
+ T vgui::HTMLPopup::GetAnimMap()
+ T vgui::HTMLPopup::GetClassSize() const
+ T vgui::HTMLPopup::GetKBMap()
+ T vgui::HTMLPopup::GetMessageMap()
+ T vgui::HTMLPopup::GetPanelClassName()
+ T vgui::HTMLPopup::GetPanelTopClassName() const
+ T vgui::HTMLPopup::HTMLPopup(vgui::Panel*, char const*, char const*, bool, bool)
+ T vgui::HTMLPopup::KB_ChainToMap()
+ T vgui::HTMLPopup::OnClose()
+ T vgui::HTMLPopup::OnCloseWindow()
+ T vgui::HTMLPopup::OnFinishRequest()
+ T vgui::HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
+ T vgui::HTMLPopup::OnSecurityStatus(KeyValues*)
+ T vgui::HTMLPopup::OnSetSecurityStatus(bool, bool, bool, char const*)
+ T vgui::HTMLPopup::OnStartRequest(KeyValues*)
+ T vgui::HTMLPopup::OnTick()
+ T vgui::HTMLPopup::OnURLChanged(KeyValues*)
+ T vgui::HTMLPopup::OnWebBack()
+ T vgui::HTMLPopup::OnWebForward()
+ T vgui::HTMLPopup::OnWebReload()
+ T vgui::HTMLPopup::OnWebStop()
+ T vgui::HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnStartRequest::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnURLChanged::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnWebBack::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnWebForward::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnWebReload::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnWebStop::InitVar()
+ T vgui::HTMLPopup::PopupHTML::ChainToAnimationMap()
+ T vgui::HTMLPopup::PopupHTML::ChainToMap()
+ T vgui::HTMLPopup::PopupHTML::GetAnimMap()
+ T vgui::HTMLPopup::PopupHTML::GetClassSize() const
+ T vgui::HTMLPopup::PopupHTML::GetKBMap()
+ T vgui::HTMLPopup::PopupHTML::GetMessageMap()
+ T vgui::HTMLPopup::PopupHTML::GetPanelClassName()
+ T vgui::HTMLPopup::PopupHTML::GetPanelTopClassName() const
+ T vgui::HTMLPopup::PopupHTML::KB_ChainToMap()
+ T vgui::HTMLPopup::PopupHTML::OnSetHTMLTitle(char const*)
+ T vgui::HTMLPopup::PopupHTML::PopupHTML(vgui::Frame*, char const*, bool)
+ T vgui::HTMLPopup::PopupHTML::~PopupHTML()
+ T vgui::HTMLPopup::SetBounds(int, int, int, int)
+ T vgui::HTMLPopup::SetCallbackOnClose(CFunctor*)
+ T vgui::HTMLPopup::~HTMLPopup()
  T vgui::HotKeyEntry::ApplySchemeSettings(vgui::IScheme*)
  T vgui::HotKeyEntry::ChainToAnimationMap()
  T vgui::HotKeyEntry::ChainToMap()

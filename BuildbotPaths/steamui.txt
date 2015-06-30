@@ -169,6 +169,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(approotpanel.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(controls.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(htmlmessages.pb.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(htmlpopup.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(htmlprotobuf.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(keyvaluestree.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvgui_controls.a(typingjump.o)
@@ -1096,6 +1097,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/WizardPanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/WizardSubPanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/approotpanel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/htmlpopup.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/keyvaluestree.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/typingjump.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/vgui_controls.cpp
@@ -1863,6 +1865,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/vacbandialog.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/webdialog.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/webdialog.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/webpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/webpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steam_api/callbackmgr.cpp
@@ -1960,6 +1964,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/WizardSubPanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/approotpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/controls.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/htmlpopup.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/keyvaluestree.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/typingjump.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/validate_globals.cpp
