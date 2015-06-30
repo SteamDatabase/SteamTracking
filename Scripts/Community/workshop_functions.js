@@ -1072,7 +1072,7 @@ function ShowExternalTagSelectorDialog( url, formID, submitFuncCB )
 	)
 }
 
-function EditPublishedFileChangeLog( publishedFileID, changeLog )
+function EditPublishedFileChangeLog( publishedFileID, changeLog, language )
 {
 	var dialog = ShowPromptWithTextAreaDialog( 'Edit Change Note', changeLog['change_description' ], null, null, 8000 );
 
@@ -1083,6 +1083,7 @@ function EditPublishedFileChangeLog( publishedFileID, changeLog )
 				'id' : publishedFileID,
 				'timestamp' : changeLog['timestamp'],
 				'change_description' : data,
+				'language' : language,
 				'sessionid' : g_sessionID
 			}
 		).done( function( json ) {

@@ -1865,3 +1865,16 @@ body.profile_page #footer {
 	height: 15px;
 	line-height: 15px;
 }
+
+.profile_broadcast_thumbnail{
+    width: 268px;
+    height: 150px;
+    display: inline;
+    margin-bottom:12px
+}
+
+.profile_broadcast_live
+{
+    margin-bottom:12px
+}
+

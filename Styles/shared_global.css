@@ -931,9 +931,13 @@ div#global_header .activebg {
 	display: none;
 }
 
+#header_wallet_balance {
+	display: inline-block;
+}
+
 #header_wallet_ctn {
 	text-align: right;
-	padding-right: 12px;
+	padding-right: 15px;
 	line-height: normal;
 }
 

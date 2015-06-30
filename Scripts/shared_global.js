@@ -1240,7 +1240,10 @@ CScrollOffsetWatcher.RegisterWatcher = function( Watcher )
 
 CScrollOffsetWatcher.OnScroll = function()
 {
-	var nScrollY = window.scrollY;
+	var supportPageOffset = window.pageYOffset !== undefined;
+	var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+
+	var nScrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 	var nOffsetBottom = nScrollY + window.innerHeight;
 
 	var cCompletedWatchers = 0;

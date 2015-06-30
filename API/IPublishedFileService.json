@@ -110,6 +110,12 @@
                     "description": "Allow stale data to be returned for the specified number of seconds."
                 },
                 {
+                    "name": "language",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "Language to search in and also what gets returned. Defaults to English."
+                },
+                {
                     "name": "totalonly",
                     "type": "bool",
                     "optional": false,
