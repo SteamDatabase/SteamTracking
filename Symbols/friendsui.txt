@@ -2466,6 +2466,7 @@
  D vgui::HTMLPopup::GetMessageMap()::s_pMap
  D vgui::HTMLPopup::KB_ChainToMap()::chained
  D vgui::HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnCustomURL::InitVar()::bAdded
  D vgui::HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
  D vgui::HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()::bAdded
  D vgui::HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()::bAdded
@@ -8681,6 +8682,9 @@
  T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::~CUtlVector()
+ T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::GrowVector(int)
+ T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::InsertBefore(int)
+ T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::~CUtlVector()
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::GrowVector(int)
@@ -11587,6 +11591,7 @@
  T vgui::GraphPanel::Paint()
  T vgui::GraphPanel::Validate(CValidator&, char const*)
  T vgui::GraphPanel::~GraphPanel()
+ T vgui::HTML::AddCustomURLHandler(char const*, vgui::Panel*)
  T vgui::HTML::ApplySchemeSettings(vgui::IScheme*)
  T vgui::HTML::BCanGoBack()
  T vgui::HTML::BCanGoForward()
@@ -11763,6 +11768,7 @@
  T vgui::HTMLPopup::KB_ChainToMap()
  T vgui::HTMLPopup::OnClose()
  T vgui::HTMLPopup::OnCloseWindow()
+ T vgui::HTMLPopup::OnCustomURL(KeyValues*)
  T vgui::HTMLPopup::OnFinishRequest()
  T vgui::HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
  T vgui::HTMLPopup::OnSecurityStatus(KeyValues*)
@@ -11775,6 +11781,7 @@
  T vgui::HTMLPopup::OnWebReload()
  T vgui::HTMLPopup::OnWebStop()
  T vgui::HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnCustomURL::InitVar()
  T vgui::HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()
  T vgui::HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()
  T vgui::HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()

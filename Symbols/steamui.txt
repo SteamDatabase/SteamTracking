@@ -11308,6 +11308,7 @@
  D vgui::HTMLPopup::GetMessageMap()::s_pMap
  D vgui::HTMLPopup::KB_ChainToMap()::chained
  D vgui::HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
+ D vgui::HTMLPopup::PanelMessageFunc_OnCustomURL::InitVar()::bAdded
  D vgui::HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
  D vgui::HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()::bAdded
  D vgui::HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()::bAdded
@@ -51288,6 +51289,7 @@
  T vgui::HTMLPopup::KB_ChainToMap()
  T vgui::HTMLPopup::OnClose()
  T vgui::HTMLPopup::OnCloseWindow()
+ T vgui::HTMLPopup::OnCustomURL(KeyValues*)
  T vgui::HTMLPopup::OnFinishRequest()
  T vgui::HTMLPopup::OnHTMLCanGoBackAndForward(KeyValues*)
  T vgui::HTMLPopup::OnSecurityStatus(KeyValues*)
@@ -51300,6 +51302,7 @@
  T vgui::HTMLPopup::OnWebReload()
  T vgui::HTMLPopup::OnWebStop()
  T vgui::HTMLPopup::PanelMessageFunc_OnCloseWindow::InitVar()
+ T vgui::HTMLPopup::PanelMessageFunc_OnCustomURL::InitVar()
  T vgui::HTMLPopup::PanelMessageFunc_OnFinishRequest::InitVar()
  T vgui::HTMLPopup::PanelMessageFunc_OnHTMLCanGoBackAndForward::InitVar()
  T vgui::HTMLPopup::PanelMessageFunc_OnSecurityStatus::InitVar()
