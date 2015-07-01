@@ -144,13 +144,6 @@
 	overflow: hidden;
 }
 
-.related_tag_see_more {
-	cursor: pointer;
-}
-.related_tag_see_more:hover {
-	color: #fff;
-}
-
 a.linkbar {
     padding-left: 12px;
     margin-right: 8px;
