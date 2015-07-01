@@ -13,16 +13,15 @@ input.phone_input_number {
 	padding: 5px;
 	cursor: text;
 	border: 1px solid #82807c;
-	margin-left: 100px;
-	margin-top: 10px;
+	margin: 20px 0 10px 100px;
 	text-transform: uppercase;
 	text-align: center;
 }
 
 .phone_header_description {
 	margin-top: 10px;
-	margin-bottom: 10px;
-	font-size: 16px;
+	margin-bottom: 20px;
+	font-size: 14px;
 }
 
 .phone_box_container{
@@ -47,9 +46,8 @@ input.phone_input_number {
 }
 
 .phonebox_content_description {
-	font-size: 16px;
+	font-size: 14px;
 	float: left;
-	margin-top: 10px;
 	width:400px;
 }
 
@@ -81,10 +79,10 @@ input.phone_input_number {
 }
 
 .phone_error {
-	margin: 20px 0 20px 150px;
-	color: #ff0000;
-	font-weight: bold;
+	margin: 20px 120px 20px 60px;
+	color: #cc3300;
 	height: 15px;
+	text-align: center;
 }
 
 .state_get_phone_number_dropdown_wrapper {
@@ -149,4 +147,10 @@ input.phone_input_number {
 	margin-top:20px;
 	font-size: 14px;
 
+}
+
+.phone_left_col
+{
+	width: 616px;
+	margin-bottom: 60px;
 }
