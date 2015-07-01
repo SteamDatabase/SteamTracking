@@ -826,7 +826,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details.';
 					break;
 				case 45:
-					error_text = 'Warning: Your recent transaction with us is still pending! Did you complete payment with your payment service provider? We\'re not sure yet, and we\'re waiting to receive an answer from them.<br/><br/>If you continue, and are purchasing any items a second time, you risk being charged twice.';
+					error_text = 'Warning!<br><br>Your last purchase with Steam is still pending. Your payment provider has not yet told us if they will charge you for that transaction.<br><br>Before continuing with this purchase, please contact your payment provider and verify that your previous purchase was not completed. If it was completed and you continue with this purchase, you could be charged twice for any items that are purchased for a second time.';
 					$J('#cancel_pending_verification').show();
 					ValidationMarkFieldBad( $('cancel_pending_label' ) );
 					break;
