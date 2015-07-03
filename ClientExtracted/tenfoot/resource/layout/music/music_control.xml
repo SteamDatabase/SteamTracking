@@ -9,28 +9,7 @@
 	
 
 	<MusicControlPanel onmouseactivate="CloseModalDialog();">
-		<Panel id="MusicControllerPanel" class="MusicControllerPanel" tabindex="auto" selectionpos="auto">
-		
-			<Panel id="HeaderButtons">
-
-				<Button id="SystemTabButton" class="MusicControlHeaderButton"
-						onactivate="ActivateNamedTab( System )"
-						onfocus="FocusNamedTab( System )">
-				<Label text="#Music_Control_System" />
-				</Button>	
-				<Button id="MusicTabButton" class="MusicControlHeaderButton"
-						onmovedown="MoveDownFromMusicTab();"
-						onactivate="ActivateNamedTab( Music )"
-						onfocus="FocusNamedTab( Music )">
-				<Label text="#Music_Control_Music" />
-				</Button>
-			</Panel> 
-		
-			<Panel id="SystemControlPanel" class="SystemControlTabPanel"
-					onmoveup="SystemMenuButtonMoveUp();" >
-				<QuitEntriesPanel id="QuitEntriesPanel"/>
-			</Panel>
-			
+		<Panel id="MusicControllerPanel" class="MusicControllerPanel" tabindex="auto" selectionpos="auto">			
 			<Panel id="MusicControlPanel" class="MusicControlTabPanel">
 				<MusicControlTransport childfocusonhover="true" id="MusicControlTransport" />			
 			</Panel>

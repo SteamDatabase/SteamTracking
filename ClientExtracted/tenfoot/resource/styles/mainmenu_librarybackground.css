@@ -28,7 +28,7 @@
 	height: 1080px;
 	perspective-origin: 62% 5% invert;
 	transition-property: transform, desaturation, opacity, position, blur, opacity-mask;
-	transition-duration: 0.4s;
+	transition-duration: 0.35s;
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
 }

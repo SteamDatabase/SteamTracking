@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/webbrowser/webbrowser_dialogs.css" />
 	</styles>
 
-	<WebBrowser defaultfocus="Html" tabindex="auto" oncancel="NavigateTenfootBack()">
+	<WebBrowser defaultfocus="Html" tabindex="auto" oncancel="BringMainMenuToTop();">
 		<Panel id="MainPage" > <!-- main web browser page -->
 
 			<Panel class="TopBar" selectionpos="0,0" >		

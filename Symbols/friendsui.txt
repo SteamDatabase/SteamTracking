@@ -7674,6 +7674,7 @@
  T CNewTurnsNotification::KB_ChainToMap()
  T CNewTurnsNotification::UpdateCount(int)
  T CNewTurnsNotification::~CNewTurnsNotification()
+ T CNumStr::CNumStr(unsigned char)
  T CPanelAnimationDictionary::CPanelAnimationDictionary()
  T CPanelAnimationDictionary::FindOrAddPanelAnimationMap(char const*)
  T CPanelAnimationDictionary::FindPanelAnimationMap(char const*)
@@ -8456,14 +8457,10 @@
  T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
- T CUtlStringBuilder::Data::TakeOwnership(unsigned long&, unsigned long&)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Replace(char const*, char const*)
  T CUtlStringBuilder::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
- T CUtlStringBuilder::TakeOwnership(unsigned long*, unsigned long*)
- T CUtlStringResult::CUtlStringResult(char const*)
- T CUtlStringResult::~CUtlStringResult()
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
@@ -9019,7 +9016,6 @@
  T CryptoPP::AlgorithmParameters::GetVoidValue(char const*, std::type_info const&, void*) const
  T CryptoPP::AlgorithmParameters::~AlgorithmParameters()
  T CryptoPP::AlgorithmParametersBase::GetVoidValue(char const*, std::type_info const&, void*) const
- T CryptoPP::AlgorithmParametersBase::ParameterNotUsed::ParameterNotUsed(char const*)
  T CryptoPP::AlgorithmParametersBase::ParameterNotUsed::~ParameterNotUsed()
  T CryptoPP::AlgorithmParametersBase::~AlgorithmParametersBase()
  T CryptoPP::AlgorithmParametersTemplate<CryptoPP::ConstByteArrayParameter>::AssignValue(char const*, std::type_info const&, void*) const
@@ -9297,7 +9293,6 @@
  T CryptoPP::InputRejecting<CryptoPP::BufferedTransformation>::~InputRejecting()
  T CryptoPP::InputRejecting<CryptoPP::Filter>::ChannelMessageSeriesEnd(std::string const&, int, bool)
  T CryptoPP::InputRejecting<CryptoPP::Filter>::ChannelPut2(std::string const&, unsigned char const*, unsigned long, int, bool)
- T CryptoPP::InputRejecting<CryptoPP::Filter>::InputRejected::InputRejected()
  T CryptoPP::InputRejecting<CryptoPP::Filter>::InputRejected::~InputRejected()
  T CryptoPP::InputRejecting<CryptoPP::Filter>::IsolatedFlush(bool, bool)
  T CryptoPP::InputRejecting<CryptoPP::Filter>::IsolatedMessageSeriesEnd(bool)

@@ -1327,7 +1327,6 @@
  R v8::internal::DateParser::KeywordTable::array
  R v8::internal::Deoptimizer::table_entry_size_
  R v8::internal::DispatchTable::Config::kNoKey
- R v8::internal::EffectsBase<int, -2147483648>::SplayTreeConfig::kNoKey
  R v8::internal::GCIdleTimeHandler::kConservativeTimeRatio
  R v8::internal::GCIdleTimeHandler::kIdleScavengeThreshold
  R v8::internal::GCIdleTimeHandler::kMaxMarkCompactTimeInMs
@@ -4229,6 +4228,7 @@
  T v8::internal::ConstantIsObject(v8::internal::HConstant*, v8::internal::Isolate*)
  T v8::internal::ConstantPoolArray::ClearPtrEntries(v8::internal::Isolate*)
  T v8::internal::ConstantPoolArray::ConstantPoolIterateBody(v8::internal::ObjectVisitor*)
+ T v8::internal::ConstantPoolArray::Iterator::update_section()
  T v8::internal::ConstantPoolArray::OffsetOfElementAt(int)
  T v8::internal::ConstructFrame::type() const
  T v8::internal::ConstructFrame::~ConstructFrame()
@@ -5619,7 +5619,9 @@
  T v8::internal::FastPackedDoubleElementsAccessor::~FastPackedDoubleElementsAccessor()
  T v8::internal::FastPackedObjectElementsAccessor::~FastPackedObjectElementsAccessor()
  T v8::internal::FastPackedSmiElementsAccessor::~FastPackedSmiElementsAccessor()
+ T v8::internal::FastSmiOrObjectElementsAccessor<v8::internal::FastHoleyObjectElementsAccessor, v8::internal::ElementsKindTraits<(v8::internal::ElementsKind)3> >::CopyElementsImpl(v8::internal::FixedArrayBase*, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int, int)
  T v8::internal::FastSmiOrObjectElementsAccessor<v8::internal::FastHoleySmiElementsAccessor, v8::internal::ElementsKindTraits<(v8::internal::ElementsKind)1> >::CopyElementsImpl(v8::internal::FixedArrayBase*, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int, int)
+ T v8::internal::FastSmiOrObjectElementsAccessor<v8::internal::FastPackedObjectElementsAccessor, v8::internal::ElementsKindTraits<(v8::internal::ElementsKind)2> >::CopyElementsImpl(v8::internal::FixedArrayBase*, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int, int)
  T v8::internal::FastSmiOrObjectElementsAccessor<v8::internal::FastPackedSmiElementsAccessor, v8::internal::ElementsKindTraits<(v8::internal::ElementsKind)0> >::CopyElementsImpl(v8::internal::FixedArrayBase*, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int, int)
  T v8::internal::FatalProcessOutOfMemory(char const*)
  T v8::internal::FindCaller(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSFunction>)
@@ -7006,16 +7008,13 @@
  T v8::internal::HLoadKeyedGeneric::RequiredInputRepresentation(int)
  T v8::internal::HLoadKeyedGeneric::opcode() const
  T v8::internal::HLoadKeyedGeneric::~HLoadKeyedGeneric()
- T v8::internal::HLoadNamedField* v8::internal::HGraphBuilder::New<v8::internal::HLoadNamedField, v8::internal::HContext*, v8::internal::HValue*, v8::internal::HObjectAccess>(v8::internal::HContext*, v8::internal::HValue*, v8::internal::HObjectAccess)
- T v8::internal::HLoadNamedField* v8::internal::HGraphBuilder::New<v8::internal::HLoadNamedField, v8::internal::HInstruction*, v8::internal::HValue*, v8::internal::HObjectAccess>(v8::internal::HInstruction*, v8::internal::HValue*, v8::internal::HObjectAccess)
- T v8::internal::HLoadNamedField* v8::internal::HGraphBuilder::New<v8::internal::HLoadNamedField, v8::internal::HLoadNamedField*, v8::internal::HValue*, v8::internal::HObjectAccess>(v8::internal::HLoadNamedField*, v8::internal::HValue*, v8::internal::HObjectAccess)
- T v8::internal::HLoadNamedField* v8::internal::HGraphBuilder::New<v8::internal::HLoadNamedField, v8::internal::HValue*, v8::internal::HValue*, v8::internal::HObjectAccess>(v8::internal::HValue*, v8::internal::HValue*, v8::internal::HObjectAccess)
  T v8::internal::HLoadNamedField::CompileToLithium(v8::internal::LChunkBuilder*)
  T v8::internal::HLoadNamedField::DataEquals(v8::internal::HValue*)
  T v8::internal::HLoadNamedField::HasEscapingOperandAt(int)
  T v8::internal::HLoadNamedField::HasOutOfBoundsAccess(int)
  T v8::internal::HLoadNamedField::InferRange(v8::internal::Zone*)
  T v8::internal::HLoadNamedField::IsDeletable() const
+ T v8::internal::HLoadNamedField::New(v8::internal::Zone*, v8::internal::HValue*, v8::internal::HValue*, v8::internal::HValue*, v8::internal::HObjectAccess)
  T v8::internal::HLoadNamedField::PrintDataTo(std::ostream&) const
  T v8::internal::HLoadNamedField::RequiredInputRepresentation(int)
  T v8::internal::HLoadNamedField::opcode() const
@@ -7739,6 +7738,7 @@
  T v8::internal::HUnaryMathOperation::Canonicalize()
  T v8::internal::HUnaryMathOperation::CompileToLithium(v8::internal::LChunkBuilder*)
  T v8::internal::HUnaryMathOperation::DataEquals(v8::internal::HValue*)
+ T v8::internal::HUnaryMathOperation::HUnaryMathOperation(v8::internal::HValue*, v8::internal::HValue*, v8::internal::BuiltinFunctionId)
  T v8::internal::HUnaryMathOperation::InferRange(v8::internal::Zone*)
  T v8::internal::HUnaryMathOperation::IsDeletable() const
  T v8::internal::HUnaryMathOperation::New(v8::internal::Zone*, v8::internal::HValue*, v8::internal::HValue*, v8::internal::BuiltinFunctionId)
@@ -12999,6 +12999,7 @@
  T v8::internal::SloppyArgumentsElementsAccessor::Delete(v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::JSReceiver::DeleteMode)
  T v8::internal::SloppyArgumentsElementsAccessor::GetAccessorPairImpl(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::FixedArrayBase>)
  T v8::internal::SloppyArgumentsElementsAccessor::GetAttributesImpl(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::FixedArrayBase>)
+ T v8::internal::SloppyArgumentsElementsAccessor::GetCapacityImpl(v8::internal::Handle<v8::internal::FixedArrayBase>)
  T v8::internal::SloppyArgumentsElementsAccessor::GetImpl(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::FixedArrayBase>)
  T v8::internal::SloppyArgumentsElementsAccessor::HasElementImpl(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::FixedArrayBase>)
  T v8::internal::SloppyArgumentsElementsAccessor::~SloppyArgumentsElementsAccessor()
@@ -14699,6 +14700,7 @@
  T v8::internal::compiler::Graph::Decorate(v8::internal::compiler::Node*)
  T v8::internal::compiler::Graph::Graph(v8::internal::Zone*)
  T v8::internal::compiler::Graph::NewNode(v8::internal::compiler::Operator const*, int, v8::internal::compiler::Node**, bool)
+ T v8::internal::compiler::Graph::RemoveDecorator(v8::internal::compiler::GraphDecorator*)
  T v8::internal::compiler::GraphC1Visualizer::GraphC1Visualizer(std::ostream&, v8::internal::Zone*)
  T v8::internal::compiler::GraphC1Visualizer::PrintAllocator(char const*, v8::internal::compiler::RegisterAllocator const*)
  T v8::internal::compiler::GraphC1Visualizer::PrintBlockProperty(char const*, v8::internal::compiler::BasicBlock::Id)
@@ -15338,6 +15340,7 @@
  T v8::internal::compiler::NodeProperties::ReplaceWithValue(v8::internal::compiler::Node*, v8::internal::compiler::Node*, v8::internal::compiler::Node*)
  T v8::internal::compiler::OperandGenerator::DefineAsConstant(v8::internal::compiler::Node*)
  T v8::internal::compiler::OperandGenerator::ToUnallocatedOperand(v8::internal::compiler::LinkageLocation, v8::internal::compiler::MachineType)
+ T v8::internal::compiler::OperandGenerator::UseImmediate(v8::internal::compiler::Node*)
  T v8::internal::compiler::Operator1<double, v8::base::bit_equal_to<double>, v8::base::bit_hash<double> >::Equals(v8::internal::compiler::Operator const*) const
  T v8::internal::compiler::Operator1<double, v8::base::bit_equal_to<double>, v8::base::bit_hash<double> >::HashCode() const
  T v8::internal::compiler::Operator1<double, v8::base::bit_equal_to<double>, v8::base::bit_hash<double> >::InputCount() const
@@ -15762,7 +15765,6 @@
  T v8::internal::compiler::Typer::Decorator::Decorate(v8::internal::compiler::Node*)
  T v8::internal::compiler::Typer::Decorator::~Decorator()
  T v8::internal::compiler::Typer::Narrow(v8::internal::compiler::Node*)
- T v8::internal::compiler::Typer::NarrowVisitor::Pre(v8::internal::compiler::Node*)
  T v8::internal::compiler::Typer::Run()
  T v8::internal::compiler::Typer::RunVisitor::Post(v8::internal::compiler::Node*)
  T v8::internal::compiler::Typer::Typer(v8::internal::compiler::Graph*, v8::internal::MaybeHandle<v8::internal::Context>)
@@ -16159,6 +16161,7 @@
  VTT for std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
  _DefaultRuneLocale
  __assert_rtn
+ __bzero
  __cxa_demangle
  __cxa_pure_virtual
  __divdi3
@@ -16295,14 +16298,14 @@
  fileno
  floor
  fmod
- fopen
+ fopen$UNIX2003
  fprintf
  fputc
  fputs
  fread
  free
  fseek
- fstat
+ fstat$INODE64
  ftell
  fwrite
  fwrite$UNIX2003
@@ -16796,7 +16799,6 @@
  r v8::internal::kSpaceRanges
  r v8::internal::kSurrogateRanges
  r v8::internal::kWordRanges
- r v8::internal::kZapValue
  r v8::internal::no_reg
  r v8::internal::one_char_tokens
  r v8::internal::sources
@@ -16837,7 +16839,6 @@
  std::basic_ios<char, std::char_traits<char> >::widen(char) const
  std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode)
  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, int)
- std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char)
  std::basic_ostream<char, std::char_traits<char> >::~basic_ostream()
  std::basic_streambuf<char, std::char_traits<char> >::imbue(std::locale const&)
  std::basic_streambuf<char, std::char_traits<char> >::pbackfail(int)
@@ -16856,15 +16857,13 @@
  std::ios_base::~ios_base()
  std::locale::locale()
  std::locale::~locale()
+ std::ostream& std::ostream::_M_insert<bool>(bool)
  std::ostream& std::ostream::_M_insert<double>(double)
+ std::ostream& std::ostream::_M_insert<long long>(long long)
+ std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)
+ std::ostream& std::ostream::_M_insert<void const*>(void const*)
  std::ostream::flush()
- std::ostream::operator<<(bool)
- std::ostream::operator<<(double)
  std::ostream::operator<<(int)
- std::ostream::operator<<(long long)
- std::ostream::operator<<(unsigned int)
- std::ostream::operator<<(unsigned long)
- std::ostream::operator<<(void const*)
  std::ostream::put(char)
  std::string::_Rep::_M_destroy(std::allocator<char> const&)
  std::string::_Rep::_S_empty_rep_storage
@@ -17102,6 +17101,7 @@
  t v8::internal::LoadFromSuper(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Name>)
  t v8::internal::LoadLookupSlotHelper(v8::internal::Arguments, v8::internal::Isolate*, bool)
  t v8::internal::MarkObjectGreyDoNotEnqueue(v8::internal::Object*)
+ t v8::internal::MatchLiteralCompareTypeof(v8::internal::Expression*, v8::internal::Token::Value, v8::internal::Expression*, v8::internal::Expression**, v8::internal::Handle<v8::internal::String>*)
  t v8::internal::MaterializeScopeDetails(v8::internal::Isolate*, v8::internal::ScopeIterator*)
  t v8::internal::MaterializeStackLocalsWithFrameInspector(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::FrameInspector*)
  t v8::internal::MemMoveWrapper(void*, void const*, unsigned long)

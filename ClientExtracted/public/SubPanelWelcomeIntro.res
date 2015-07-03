@@ -21,7 +21,7 @@
 	{
 		"ControlName"		"Label"
 		"fieldName"		"infolabel"
-		"xpos"		"15"
+		"xpos"		"58"
 		"ypos"		"146"
 		"wide"		"328"
 		"tall"		"100"
@@ -82,7 +82,7 @@
 	{
 		"ControlName"		"ImagePanel"
 		"fieldName"		"ValveLogo"
-		"xpos"		"14"
+		"xpos"		"67"
 		"ypos"		"353"
 		"wide"		"98"
 		"tall"		"30"

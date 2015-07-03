@@ -58,14 +58,22 @@ MainMenu.SlideAwayToRight
 .BehindMessageBox #BodyWrapper
 {
 	desaturation: 0.2;
-	opacity: 1.0;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
-
-	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
 }
+
+.SystemMenuVisible #TopRow
+{
+		opacity: 0.0;
+}
+
+.BehindMessageBox.SearchWheel #BodyWrapper
+{
+  desaturation: none;
+	blur: none;
+	wash-color: none;
+}
+
 
 .BehindMessageBox SettingsPanel
 {
@@ -126,6 +134,10 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 	height: 100%;
 	opacity-mask: none;
 	z-index: 100;
+
+	transition-property: blur, desaturation, opacity, wash-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
 }
 
 .PlayActionModal #BodyWrapper
@@ -789,12 +801,12 @@ Button:hover .ShortDesc
 	visibility: collapse;
 }
 
-.SteamOS.Linux #BetaButton
+/*.SteamOS.Linux #BetaButton
 {
 	flow-children: right;
 	opacity: 1.0;
 	visibility: visible;
-}
+}*/
 
 #BetaButton Label
 {
@@ -930,10 +942,10 @@ Button:hover .ShortDesc
 
 MainMenu.StackDepth2 #MenuRow
 {
-	blur: gaussian( 1.0 );
+	blur: gaussian( 1.5 );
 	desaturation: 0.15;
-	opacity: 0.8;
-	wash-color: bgcolorwashlight;
+	opacity: 0.7;
+	wash-color: bgcolorwashmedium;
 
 	transform-origin: 0% 0% parent-relative;
 	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.72, 0.72, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -430px );
@@ -1441,4 +1453,3 @@ ParentalButton.Locked
 	visibility: visible;
 	opacity: 1.0;
 }
-

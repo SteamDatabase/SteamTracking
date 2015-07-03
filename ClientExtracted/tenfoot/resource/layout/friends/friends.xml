@@ -5,8 +5,7 @@
 		<include src="file://{resources}/styles/friends/friends.css" />
 	</styles>
 
-	<Friends defaultfocus="FriendsMainBodyFriendsList" oncancel="NavigateTenfootBack()">
-
+	<Friends defaultfocus="FriendsMainBodyFriendsList" oncancel="BringMainMenuToTop();">
 		<Panel id="BodyWrapper">
 			<Panel id="FriendsMainBodyColumnsContainer">
 				<Panel id="FriendsMainBodyColumnLeft">
@@ -42,14 +41,9 @@
 					</Panel>
 				</Panel>
 				<Panel id="FriendsChatDialogContainer">
-					<FriendsChatDialog id="FriendsChatDialog">
-					</FriendsChatDialog>
-					<FriendsChatDialog id="FriendsChatDialogFake">
-					</FriendsChatDialog>
+					<FriendsChatDialog id="FriendsChatDialog" class="AnimationRightColumn" />
 				</Panel>
 			</Panel>
-
 		</Panel>
-
 	</Friends>
 </root>

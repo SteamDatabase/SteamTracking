@@ -576,6 +576,7 @@
  B panorama::CStylePropertyTextOverflow::symbol
  B panorama::CStylePropertyTextShadow::symbol
  B panorama::CStylePropertyTextTransform::symbol
+ B panorama::CStylePropertyTextureSampleMode::symbol
  B panorama::CStylePropertyTooltipArrowPosition::symbol
  B panorama::CStylePropertyTooltipBodyPosition::symbol
  B panorama::CStylePropertyTooltipPosition::symbol
@@ -665,9 +666,16 @@
  B panorama::None::symbol
  B panorama::OverlayGamepadInputMsg::symbol
  B panorama::PageDown::symbol
+ B panorama::PageLeft::symbol
+ B panorama::PagePanelDown::symbol
+ B panorama::PagePanelLeft::symbol
+ B panorama::PagePanelRight::symbol
+ B panorama::PagePanelUp::symbol
+ B panorama::PageRight::symbol
  B panorama::PageUp::symbol
  B panorama::PanelLoaded::symbol
  B panorama::PanelStyleChanged::symbol
+ B panorama::PollingForSteamClientUpdate::symbol
  B panorama::ProfileOff::symbol
  B panorama::ProfileOn::symbol
  B panorama::PropertyTransitionEnd::symbol
@@ -682,13 +690,20 @@
  B panorama::RestartMachine::symbol
  B panorama::RetryStyleReload::symbol
  B panorama::ScrollDown::symbol
+ B panorama::ScrollLeft::symbol
+ B panorama::ScrollPanelDown::symbol
  B panorama::ScrollPanelIntoView::symbol
+ B panorama::ScrollPanelLeft::symbol
+ B panorama::ScrollPanelRight::symbol
+ B panorama::ScrollPanelUp::symbol
+ B panorama::ScrollRight::symbol
  B panorama::ScrollToBottom::symbol
  B panorama::ScrollToTop::symbol
  B panorama::ScrollUp::symbol
  B panorama::ScrolledIntoView::symbol
  B panorama::ScrolledOutOfView::symbol
  B panorama::SetAllChildrenActivationEnabled::symbol
+ B panorama::SetChildPanelsSelected::symbol
  B panorama::SetInputFocus::symbol
  B panorama::SetPanelEvent::symbol
  B panorama::SetPanelSelected::symbol
@@ -712,6 +727,7 @@
  B panorama::ToggleConsole::symbol
  B panorama::ToggleDebugger::symbol
  B panorama::ToggleFullscreen::symbol
+ B panorama::TogglePanelSelected::symbol
  B panorama::ToggleStyle::symbol
  B panorama::TopLevelWindowClose::symbol
  B panorama::TopLevelWindowClosed::symbol
@@ -747,6 +763,8 @@
  B s_SpewConfig
  B s_StringCharConversion
  B s_bMathlibInitialized
+ B s_convarPanoramaClearFramesOnDeviceRestore
+ B s_convarPanoramaExperimentalOverdrawPrevention
  B s_convarPanoramaFBOAllocBatch
  B s_convarPanoramaMaxFreeFBO
  B s_convarPanoramaMinFreeFBO
@@ -1015,10 +1033,17 @@
  D panorama::None::pchEvent
  D panorama::OverlayGamepadInputMsg::pchEvent
  D panorama::PageDown::pchEvent
+ D panorama::PageLeft::pchEvent
+ D panorama::PagePanelDown::pchEvent
+ D panorama::PagePanelLeft::pchEvent
+ D panorama::PagePanelRight::pchEvent
+ D panorama::PagePanelUp::pchEvent
+ D panorama::PageRight::pchEvent
  D panorama::PageUp::pchEvent
  D panorama::PanelHandle_t::InvalidHandle()::s_invalid
  D panorama::PanelLoaded::pchEvent
  D panorama::PanelStyleChanged::pchEvent
+ D panorama::PollingForSteamClientUpdate::pchEvent
  D panorama::ProfileOff::pchEvent
  D panorama::ProfileOn::pchEvent
  D panorama::PropertyTransitionEnd::pchEvent
@@ -1033,13 +1058,20 @@
  D panorama::RestartMachine::pchEvent
  D panorama::RetryStyleReload::pchEvent
  D panorama::ScrollDown::pchEvent
+ D panorama::ScrollLeft::pchEvent
+ D panorama::ScrollPanelDown::pchEvent
  D panorama::ScrollPanelIntoView::pchEvent
+ D panorama::ScrollPanelLeft::pchEvent
+ D panorama::ScrollPanelRight::pchEvent
+ D panorama::ScrollPanelUp::pchEvent
+ D panorama::ScrollRight::pchEvent
  D panorama::ScrollToBottom::pchEvent
  D panorama::ScrollToTop::pchEvent
  D panorama::ScrollUp::pchEvent
  D panorama::ScrolledIntoView::pchEvent
  D panorama::ScrolledOutOfView::pchEvent
  D panorama::SetAllChildrenActivationEnabled::pchEvent
+ D panorama::SetChildPanelsSelected::pchEvent
  D panorama::SetInputFocus::pchEvent
  D panorama::SetPanelEvent::pchEvent
  D panorama::SetPanelSelected::pchEvent
@@ -1063,6 +1095,7 @@
  D panorama::ToggleConsole::pchEvent
  D panorama::ToggleDebugger::pchEvent
  D panorama::ToggleFullscreen::pchEvent
+ D panorama::TogglePanelSelected::pchEvent
  D panorama::ToggleStyle::pchEvent
  D panorama::TopLevelWindowClose::pchEvent
  D panorama::TopLevelWindowClosed::pchEvent
@@ -1432,6 +1465,7 @@
  D typeinfo for panorama::CJSAsyncWebRequest
  D typeinfo for panorama::CLayoutFile
  D typeinfo for panorama::CLayoutManager
+ D typeinfo for panorama::CLayoutRefCounted
  D typeinfo for panorama::CLinearGradient
  D typeinfo for panorama::CLoadFileLocalTask
  D typeinfo for panorama::CLoadFileURLTask
@@ -1533,6 +1567,7 @@
  D typeinfo for panorama::CStylePropertyTextOverflow
  D typeinfo for panorama::CStylePropertyTextShadow
  D typeinfo for panorama::CStylePropertyTextTransform
+ D typeinfo for panorama::CStylePropertyTextureSampleMode
  D typeinfo for panorama::CStylePropertyTooltipArrowPosition
  D typeinfo for panorama::CStylePropertyTooltipBodyPosition
  D typeinfo for panorama::CStylePropertyTooltipPosition
@@ -1571,11 +1606,11 @@
  D typeinfo for panorama::CUIEvent2<char const*, void*>
  D typeinfo for panorama::CUIEvent2<float, panorama::IUIEvent*>
  D typeinfo for panorama::CUIEvent2<panorama::CPanelPtr<panorama::CPanel2D>, char const*>
- D typeinfo for panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>
  D typeinfo for panorama::CUIEvent2<panorama::CVideoPlayerEventDispatcher*, EVideoPlayerEvent>
  D typeinfo for panorama::CUIEvent2<panorama::ESoundType, float>
  D typeinfo for panorama::CUIEvent2<panorama::IUIWindow*, bool>
  D typeinfo for panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>
+ D typeinfo for panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>
  D typeinfo for panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
  D typeinfo for panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>
  D typeinfo for panorama::CUIEventBase
@@ -1595,6 +1630,7 @@
  D typeinfo for panorama::CUIPanelEvent2<char const*, bool>
  D typeinfo for panorama::CUIPanelEvent2<char const*, char const*>
  D typeinfo for panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>
+ D typeinfo for panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>
  D typeinfo for panorama::CUIPanelEvent3<bool, panorama::ELoadLayoutAsyncDetails, bool>
  D typeinfo for panorama::CUIProtoBufMsg<CMsgBeginFrame>
  D typeinfo for panorama::CUIProtoBufMsg<CMsgBeginPaintBackground>
@@ -2089,6 +2125,7 @@
  D vtable for panorama::CStylePropertyTextOverflow
  D vtable for panorama::CStylePropertyTextShadow
  D vtable for panorama::CStylePropertyTextTransform
+ D vtable for panorama::CStylePropertyTextureSampleMode
  D vtable for panorama::CStylePropertyTooltipArrowPosition
  D vtable for panorama::CStylePropertyTooltipBodyPosition
  D vtable for panorama::CStylePropertyTooltipPosition
@@ -2126,11 +2163,11 @@
  D vtable for panorama::CUIEvent2<char const*, void*>
  D vtable for panorama::CUIEvent2<float, panorama::IUIEvent*>
  D vtable for panorama::CUIEvent2<panorama::CPanelPtr<panorama::CPanel2D>, char const*>
- D vtable for panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>
  D vtable for panorama::CUIEvent2<panorama::CVideoPlayerEventDispatcher*, EVideoPlayerEvent>
  D vtable for panorama::CUIEvent2<panorama::ESoundType, float>
  D vtable for panorama::CUIEvent2<panorama::IUIWindow*, bool>
  D vtable for panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>
+ D vtable for panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>
  D vtable for panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
  D vtable for panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>
  D vtable for panorama::CUIEventBase
@@ -2150,6 +2187,7 @@
  D vtable for panorama::CUIPanelEvent2<char const*, bool>
  D vtable for panorama::CUIPanelEvent2<char const*, char const*>
  D vtable for panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>
+ D vtable for panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>
  D vtable for panorama::CUIPanelEvent3<bool, panorama::ELoadLayoutAsyncDetails, bool>
  D vtable for panorama::CUIProtoBufMsg<CMsgBeginFrame>
  D vtable for panorama::CUIProtoBufMsg<CMsgBeginPaintBackground>
@@ -2263,11 +2301,6 @@
  R jpeg_natural_order5
  R jpeg_natural_order6
  R jpeg_natural_order7
- R panorama::k_rgchCSSAtRuleNameTerm
- R panorama::k_rgchCSSDefaultTerm
- R panorama::k_rgchCSSSelectorTerm
- R panorama::k_rgchCSSValueTerm
- R panorama::k_rgchCSSValueTermOrEndOfString
  R std::tr1::__detail::_Primes<4>::__primes
  R typeinfo name for CBorderData
  R typeinfo name for CBorderData_CBorderSide
@@ -2544,6 +2577,7 @@
  R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >
  R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CUtlString, int, CDefLess<panorama::CPanoramaSymbol> >
  R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >
+ R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >
  R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >
  R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutManager::InMemoryFile_t, int, CDefLess<panorama::CPanoramaSymbol> >
  R typeinfo name for CUtlMap<panorama::CPanoramaSymbol, panorama::CStyleAnimation*, short, CDefLess<panorama::CPanoramaSymbol> >
@@ -2563,7 +2597,7 @@
  R typeinfo name for CUtlMap<panorama::IUIPanel*, v8::Persistent<v8::Context, v8::NonCopyablePersistentTraits<v8::Context> >*, int, CDefLess<panorama::IUIPanel*> >
  R typeinfo name for CUtlMap<panorama::IUIPanel*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<panorama::IUIPanel*> >
  R typeinfo name for CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >
- R typeinfo name for CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >
+ R typeinfo name for CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >
  R typeinfo name for CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >
@@ -2593,6 +2627,7 @@
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlString, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlString, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::Node_t, short, CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<short> >
+ R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutManager::InMemoryFile_t, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutManager::InMemoryFile_t, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CStyleAnimation*, short, CDefLess<panorama::CPanoramaSymbol> >::Node_t, short, CUtlMap<panorama::CPanoramaSymbol, panorama::CStyleAnimation*, short, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<short> >
@@ -2612,7 +2647,7 @@
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::IUIPanel*, v8::Persistent<v8::Context, v8::NonCopyablePersistentTraits<v8::Context> >*, int, CDefLess<panorama::IUIPanel*> >::Node_t, int, CUtlMap<panorama::IUIPanel*, v8::Persistent<v8::Context, v8::NonCopyablePersistentTraits<v8::Context> >*, int, CDefLess<panorama::IUIPanel*> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::IUIPanel*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<panorama::IUIPanel*> >::Node_t, int, CUtlMap<panorama::IUIPanel*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<panorama::IUIPanel*> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >::Node_t, int, CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -2682,6 +2717,8 @@
  R typeinfo name for CUtlVector<panorama::JSInclude_t, CUtlMemory<panorama::JSInclude_t> >
  R typeinfo name for CUtlVector<panorama::MouseTrackingResults_t, CUtlMemory<panorama::MouseTrackingResults_t> >
  R typeinfo name for CUtlVector<panorama::PanelDescription_t*, CUtlMemory<panorama::PanelDescription_t*> >
+ R typeinfo name for CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >
+ R typeinfo name for CUtlVector<panorama::RegisterJSScopeInfoInternal_t, CUtlMemory<panorama::RegisterJSScopeInfoInternal_t> >
  R typeinfo name for CUtlVector<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CUtlMemory<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*> >
  R typeinfo name for CUtlVector<panorama::StyleEntry_t, CUtlMemory<panorama::StyleEntry_t> >
  R typeinfo name for CUtlVector<panorama::TransitionProperty_t, CUtlMemory<panorama::TransitionProperty_t> >
@@ -2808,8 +2845,10 @@
  R typeinfo name for panorama::CImageProxySource
  R typeinfo name for panorama::CImageResourceManager
  R typeinfo name for panorama::CJSAsyncWebRequest
+ R typeinfo name for panorama::CJSFile
  R typeinfo name for panorama::CLayoutFile
  R typeinfo name for panorama::CLayoutManager
+ R typeinfo name for panorama::CLayoutRefCounted
  R typeinfo name for panorama::CLinearGradient
  R typeinfo name for panorama::CLoadFileLocalTask
  R typeinfo name for panorama::CLoadFileURLTask
@@ -2917,6 +2956,7 @@
  R typeinfo name for panorama::CStylePropertyTextOverflow
  R typeinfo name for panorama::CStylePropertyTextShadow
  R typeinfo name for panorama::CStylePropertyTextTransform
+ R typeinfo name for panorama::CStylePropertyTextureSampleMode
  R typeinfo name for panorama::CStylePropertyTooltipArrowPosition
  R typeinfo name for panorama::CStylePropertyTooltipBodyPosition
  R typeinfo name for panorama::CStylePropertyTooltipPosition
@@ -2956,11 +2996,11 @@
  R typeinfo name for panorama::CUIEvent2<char const*, void*>
  R typeinfo name for panorama::CUIEvent2<float, panorama::IUIEvent*>
  R typeinfo name for panorama::CUIEvent2<panorama::CPanelPtr<panorama::CPanel2D>, char const*>
- R typeinfo name for panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>
  R typeinfo name for panorama::CUIEvent2<panorama::CVideoPlayerEventDispatcher*, EVideoPlayerEvent>
  R typeinfo name for panorama::CUIEvent2<panorama::ESoundType, float>
  R typeinfo name for panorama::CUIEvent2<panorama::IUIWindow*, bool>
  R typeinfo name for panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>
+ R typeinfo name for panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>
  R typeinfo name for panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
  R typeinfo name for panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>
  R typeinfo name for panorama::CUIEventBase
@@ -2980,6 +3020,7 @@
  R typeinfo name for panorama::CUIPanelEvent2<char const*, bool>
  R typeinfo name for panorama::CUIPanelEvent2<char const*, char const*>
  R typeinfo name for panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>
+ R typeinfo name for panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>
  R typeinfo name for panorama::CUIPanelEvent3<bool, panorama::ELoadLayoutAsyncDetails, bool>
  R typeinfo name for panorama::CUIProtoBufMsg<CMsgBeginFrame>
  R typeinfo name for panorama::CUIProtoBufMsg<CMsgBeginPaintBackground>
@@ -3366,6 +3407,7 @@
  T CClassMemoryPool<panorama::CStylePropertyTextShadow>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyTextShadow>::~CClassMemoryPool()
  T CClassMemoryPool<panorama::CStylePropertyTextTransform>::~CClassMemoryPool()
+ T CClassMemoryPool<panorama::CStylePropertyTextureSampleMode>::~CClassMemoryPool()
  T CClassMemoryPool<panorama::CStylePropertyTooltipArrowPosition>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyTooltipArrowPosition>::~CClassMemoryPool()
  T CClassMemoryPool<panorama::CStylePropertyTooltipBodyPosition>::Alloc()
@@ -5745,6 +5787,7 @@
  T CNet::DestroyNetConnection(CNetConnection*)
  T CNet::FreeGlobals()
  T CNet::GetSocketOwnerCallback(unsigned int)
+ T CNumStr::CNumStr(double)
  T CPathString::CPathString(char const*, char const*)
  T CPathString::Clear()
  T CPathString::GetUTF8Path() const
@@ -6498,6 +6541,7 @@
  T CUtlMap<panorama::CPanoramaSymbol, CUtlString, int, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
  T CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::Insert(panorama::CPanoramaSymbol const&, CUtlString const&)
  T CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
+ T CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
  T CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
  T CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutManager::InMemoryFile_t, int, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
  T CUtlMap<panorama::CPanoramaSymbol, panorama::CStyleAnimation*, short, CDefLess<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
@@ -6529,7 +6573,7 @@
  T CUtlMap<panorama::IUIPanel*, v8::Persistent<v8::Context, v8::NonCopyablePersistentTraits<v8::Context> >*, int, CDefLess<panorama::IUIPanel*> >::Validate(CValidator&, char const*)
  T CUtlMap<panorama::IUIPanel*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<panorama::IUIPanel*> >::Validate(CValidator&, char const*)
  T CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >::Validate(CValidator&, char const*)
- T CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
+ T CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Find(unsigned int const&) const
  T CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Insert(unsigned int const&, panorama::CUIEngine::JSONWebAPIRequestInFlight_t const&)
  T CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Validate(CValidator&, char const*)
@@ -6603,6 +6647,7 @@
  T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::Node_t, int, CUtlMap<CUtlKeyPtr<panorama::CStyleFileKey>, panorama::CStyleFile*, int, CDefLess<CUtlKeyPtr<panorama::CStyleFileKey> > >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefLess<CUtlString> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
@@ -6726,7 +6771,6 @@
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Remove(CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&)
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, CUtlBuffer*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
@@ -6741,6 +6785,14 @@
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::Node_t, short, CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<short> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::Node_t, short, CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<short> >::RemoveAll()
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::Node_t, short, CUtlMap<panorama::CPanoramaSymbol, CUtlString, short, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<short> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Remove(CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CJSFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t, int, CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<panorama::CPanoramaSymbol, panorama::CLayoutFile*, int, CDefLess<panorama::CPanoramaSymbol> >::Node_t const&, bool)
@@ -6897,13 +6949,13 @@
  T CUtlRBTree<CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >::Node_t, int, CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >::Node_t, int, CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >::Node_t, int, CUtlMap<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::Layer_t, int, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t const&) const
- T CUtlRBTree<CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CFileResource*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CLoadLayoutFileAsync::IncludeRequestData_t*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, panorama::CUIEngine::JSONWebAPIRequestInFlight_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
@@ -6932,6 +6984,11 @@
  T CUtlRBTree<CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::Layer_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, panorama::CUIEngine::PanelPaintCount_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<void*, v8::Persistent<v8::Object, v8::NonCopyablePersistentTraits<v8::Object> >*, int, CDefLess<void*> >::Node_t const&, bool)
@@ -6992,6 +7049,7 @@
  T CUtlRBTree<panorama::CPanoramaSymbol, int, CDefLess<panorama::CPanoramaSymbol>, CDefRBTreeBalanceListener<int> >::Insert(panorama::CPanoramaSymbol const&, bool)
  T CUtlRBTree<panorama::CPanoramaSymbol, int, CDefLess<panorama::CPanoramaSymbol>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<panorama::CPanoramaSymbol, int, CDefLess<panorama::CPanoramaSymbol>, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<panorama::CPanoramaSymbol, int, CDefLess<panorama::CPanoramaSymbol>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<panorama::CPanoramaSymbol, int, CDefLess<panorama::CPanoramaSymbol>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<panorama::CReloadStyleFile*, int, CDefLess<panorama::CReloadStyleFile*>, CDefRBTreeBalanceListener<int> >::Find(panorama::CReloadStyleFile* const&) const
  T CUtlRBTree<panorama::CReloadStyleFile*, int, CDefLess<panorama::CReloadStyleFile*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(panorama::CReloadStyleFile* const&, bool, int&, bool&, bool&)
@@ -7061,8 +7119,6 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_LinkToParent(unsigned short, unsigned short, bool, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
- T CUtlSortVector<CUtlString>::Insert(CUtlString const&)
- T CUtlSortVector<CUtlString>::~CUtlSortVector()
  T CUtlSortVector<panorama::CStyleKeyFrame*>::Insert(panorama::CStyleKeyFrame* const&)
  T CUtlSortVector<panorama::CUIEngine::QueuedEvent_t>::Insert(panorama::CUIEngine::QueuedEvent_t const&)
  T CUtlString::AssertStringTooLong()
@@ -7071,6 +7127,7 @@
  T CUtlString::FormatV(char const*, char*)
  T CUtlString::ReplaceCaseless(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
+ T CUtlStringBuilder::AppendFormat(char const*, ...)
  T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::FreeHeap()
  T CUtlStringBuilder::Data::MoveToHeap()
@@ -7248,6 +7305,11 @@
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::ShiftElementsRight(int, int)
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::~CUtlVector()
+ T CUtlVector<LayoutIncludeFile_t, CUtlMemory<LayoutIncludeFile_t> >::GrowVector(int)
+ T CUtlVector<LayoutIncludeFile_t, CUtlMemory<LayoutIncludeFile_t> >::InsertBefore(int, LayoutIncludeFile_t const&)
+ T CUtlVector<LayoutIncludeFile_t, CUtlMemory<LayoutIncludeFile_t> >::RemoveAll()
+ T CUtlVector<LayoutIncludeFile_t, CUtlMemory<LayoutIncludeFile_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<LayoutIncludeFile_t, CUtlMemory<LayoutIncludeFile_t> >::~CUtlVector()
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
@@ -7262,6 +7324,10 @@
  T CUtlVector<OSXHelpers::VideoCardDetails_t, CUtlMemory<OSXHelpers::VideoCardDetails_t> >::InsertBefore(int, OSXHelpers::VideoCardDetails_t const&)
  T CUtlVector<OSXHelpers::VideoCardDetails_t, CUtlMemory<OSXHelpers::VideoCardDetails_t> >::ShiftElementsRight(int, int)
  T CUtlVector<OSXHelpers::VideoCardDetails_t, CUtlMemory<OSXHelpers::VideoCardDetails_t> >::~CUtlVector()
+ T CUtlVector<ParentOcclusionRegion_t, CUtlMemory<ParentOcclusionRegion_t> >::GrowVector(int)
+ T CUtlVector<ParentOcclusionRegion_t, CUtlMemory<ParentOcclusionRegion_t> >::InsertMultipleBefore(int, int, ParentOcclusionRegion_t const*)
+ T CUtlVector<ParentOcclusionRegion_t, CUtlMemory<ParentOcclusionRegion_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ParentOcclusionRegion_t, CUtlMemory<ParentOcclusionRegion_t> >::~CUtlVector()
  T CUtlVector<TSLNodeTemplate_t<panorama::CMsgLiteRefCount*>*, CUtlMemory<TSLNodeTemplate_t<panorama::CMsgLiteRefCount*>*> >::GrowVector(int)
  T CUtlVector<TSLNodeTemplate_t<panorama::CMsgLiteRefCount*>*, CUtlMemory<TSLNodeTemplate_t<panorama::CMsgLiteRefCount*>*> >::InsertBefore(int, TSLNodeTemplate_t<panorama::CMsgLiteRefCount*>* const&)
  T CUtlVector<TSLNodeTemplate_t<panorama::CMsgLiteRefCount*>*, CUtlMemory<TSLNodeTemplate_t<panorama::CMsgLiteRefCount*>*> >::ShiftElementsRight(int, int)
@@ -7431,10 +7497,8 @@
  T CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >::~CUtlVector()
- T CUtlVector<panorama::CStyleFile*, CUtlMemory<panorama::CStyleFile*> >::AddMultipleToTail(int, panorama::CStyleFile* const*)
  T CUtlVector<panorama::CStyleFile*, CUtlMemory<panorama::CStyleFile*> >::GrowVector(int)
  T CUtlVector<panorama::CStyleFile*, CUtlMemory<panorama::CStyleFile*> >::InsertBefore(int, panorama::CStyleFile* const&)
- T CUtlVector<panorama::CStyleFile*, CUtlMemory<panorama::CStyleFile*> >::InsertMultipleBefore(int, int, panorama::CStyleFile* const*)
  T CUtlVector<panorama::CStyleFile*, CUtlMemory<panorama::CStyleFile*> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::CStyleFile*, CUtlMemory<panorama::CStyleFile*> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CStyleFile*, CUtlMemory<panorama::CStyleFile*> >::~CUtlVector()
@@ -7662,6 +7726,18 @@
  T CUtlVector<panorama::PropertyInTransition_t*, CUtlMemory<panorama::PropertyInTransition_t*> >::InsertBefore(int, panorama::PropertyInTransition_t* const&)
  T CUtlVector<panorama::PropertyInTransition_t*, CUtlMemory<panorama::PropertyInTransition_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::PropertyInTransition_t*, CUtlMemory<panorama::PropertyInTransition_t*> >::~CUtlVector()
+ T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::GrowVector(int)
+ T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::InsertBefore(int)
+ T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::RemoveAll()
+ T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::~CUtlVector()
+ T CUtlVector<panorama::RegisterJSScopeInfoInternal_t, CUtlMemory<panorama::RegisterJSScopeInfoInternal_t> >::GrowVector(int)
+ T CUtlVector<panorama::RegisterJSScopeInfoInternal_t, CUtlMemory<panorama::RegisterJSScopeInfoInternal_t> >::InsertBefore(int)
+ T CUtlVector<panorama::RegisterJSScopeInfoInternal_t, CUtlMemory<panorama::RegisterJSScopeInfoInternal_t> >::RemoveAll()
+ T CUtlVector<panorama::RegisterJSScopeInfoInternal_t, CUtlMemory<panorama::RegisterJSScopeInfoInternal_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<panorama::RegisterJSScopeInfoInternal_t, CUtlMemory<panorama::RegisterJSScopeInfoInternal_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<panorama::RegisterJSScopeInfoInternal_t, CUtlMemory<panorama::RegisterJSScopeInfoInternal_t> >::~CUtlVector()
  T CUtlVector<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CUtlMemory<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*> >::GrowVector(int)
  T CUtlVector<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CUtlMemory<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*> >::InsertBefore(int, panorama::SDLOGLSurfaceNameSpace::CCompositionLayer* const&)
  T CUtlVector<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CUtlMemory<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*> >::ShiftElementsLeft(int, int)
@@ -7741,6 +7817,7 @@
  T CaselessStringLessThan(char const* const&, char const* const&)
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T CheckDirectoryForChanges(char const*, CDirWatcher*, bool)
+ T CheckEqualsHelper(char const*, int, char const*, int, char const*, int)
  T ClientAPI_Init()
  T ClientAPI_PostAPIResultInProcess(unsigned long long, void*, unsigned int, int)
  T ClientAPI_RunCallbacks()
@@ -7754,13 +7831,13 @@
  T Common_FreeGlobals()
  T CompletionPortManagerFioEnqueue(int, CompletionData_t*)
  T CompletionPortManagerFioFinalize(int, unsigned int)
- T ConCommand::AutoCompleteSuggest(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&)
+ T ConCommand::AutoCompleteSuggest(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T ConCommand::CanAutoComplete()
- T ConCommand::ConCommand(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&), void (*)(void*, CRemoteCmd*))
- T ConCommand::Create(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&), void (*)(void*, CRemoteCmd*))
+ T ConCommand::ConCommand(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
+ T ConCommand::Create(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
  T ConCommand::Dispatch(void*, ConParams&)
  T ConCommand::IsCommand() const
- T ConCommand::SetCompletionFunc(int (*)(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&))
+ T ConCommand::SetCompletionFunc(int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&))
  T ConCommand::~ConCommand()
  T ConCommandBase::AddFlags(unsigned int)
  T ConCommandBase::Create(char const*, char const*, unsigned long long)
@@ -8174,7 +8251,7 @@
  T CryptoPP::memcpy_s(void*, unsigned long, void const*, unsigned long)
  T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned char const*, unsigned long)
  T CryptoPP::xorbuf(unsigned char*, unsigned char const*, unsigned long)
- T DefaultCompletionFunc(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&)
+ T DefaultCompletionFunc(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T DeserializeVaArgs(char const*, char const*, char*, int)
  T DispatchVideoPlayerEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T DispatchVideoPlayerEvent::GetEventType()
@@ -8270,6 +8347,7 @@
  T KeyValues::FindKey(char const*) const
  T KeyValues::FindKey(char const*, bool)
  T KeyValues::FreeBuffers()
+ T KeyValues::GetFirstSubKey() const
  T KeyValues::GetFirstValue() const
  T KeyValues::GetName() const
  T KeyValues::GetNextValue() const
@@ -8566,6 +8644,7 @@
  T bool panorama::ParseUIEventParam<int>(int*, panorama::IUIPanel*, char const*, char const**)
  T bool panorama::ParseUIEventParam<panorama::EPanelEventSource_t>(panorama::EPanelEventSource_t*, panorama::IUIPanel*, char const*, char const**)
  T bool panorama::ParseUIEventParam<panorama::IUIEvent*>(panorama::IUIEvent**, panorama::IUIPanel*, char const*, char const**)
+ T bool panorama::ParseUIEventParam<panorama::ScrollBehavior_t>(panorama::ScrollBehavior_t*, panorama::IUIPanel*, char const*, char const**)
  T bool std::operator==<v8::Task*, v8::Task*&, v8::Task**>(std::_Deque_iterator<v8::Task*, v8::Task*&, v8::Task**> const&, std::_Deque_iterator<v8::Task*, v8::Task*&, v8::Task**> const&)
  T char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
  T delete_JSON_parser
@@ -8844,8 +8923,6 @@
  T panorama::CAnimationAndTransformContext::BNeedsCompositionLayer()
  T panorama::CAnimationAndTransformContext::CAnimationAndTransformContext()
  T panorama::CAnimationAndTransformContext::GetExplicitClipRect(float*, float*, float*, float*)
- T panorama::CAnimationAndTransformContext::GetMousePosition()
- T panorama::CAnimationAndTransformContext::SetMousePosition(Vector2D)
  T panorama::CAnimationAndTransformContext::SetPosition(float, float, float)
  T panorama::CAnimationParticleSystem::RunSystem(double)
  T panorama::CAnimationParticleSystem::SerializeParticles(CMsgParticleSystem&)
@@ -8905,6 +8982,7 @@
  T panorama::CFileResource::CFileResource(panorama::CFileResource const&)
  T panorama::CFileResource::GetCookieHeadersForHTTPURL() const
  T panorama::CFileResource::GetReferencePath() const
+ T panorama::CFileResource::Set(char const*)
  T panorama::CFileResource::Validate(CValidator&, char const*)
  T panorama::CFileResource::operator<(panorama::CFileResource const&) const
  T panorama::CFileResource::operator=(panorama::CFileResource const&)
@@ -9017,6 +9095,11 @@
  T panorama::CJSAsyncWebRequest::Validate(CValidator&, char const*)
  T panorama::CJSAsyncWebRequest::XMLHttpRequestObjectFromHTTPResponse(HTTPRequestCompleted_t*, char const*, v8::Handle<v8::Value>*)
  T panorama::CJSAsyncWebRequest::~CJSAsyncWebRequest()
+ T panorama::CJSFile::CJSFile()
+ T panorama::CJSFile::GetBuffer() const
+ T panorama::CJSFile::LoadFromBuffer(panorama::CPanoramaSymbol, CUtlBuffer const&)
+ T panorama::CJSFile::LoadFromFile(panorama::CPanoramaSymbol)
+ T panorama::CJSFile::Validate(CValidator&, char const*)
  T panorama::CJSPropGetter<panorama::CUIPanel, panorama::CPanoramaSymbol>::GetProp(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&)
  T panorama::CJSPropGetter<panorama::CUIPanel, panorama::CPanoramaSymbol>::SetProp(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&)
  T panorama::CLayoutFile::AddInlineJavascript(char const*, int, int)
@@ -9050,12 +9133,15 @@
  T panorama::CLayoutFileXMLParser::StaticStartElement(void*, unsigned char const*, unsigned char const*, unsigned char const*, tagXMLVECTOR*)
  T panorama::CLayoutFileXMLParser::cstream(unsigned char*, int, int*, void*)
  T panorama::CLayoutFileXMLParser::~CLayoutFileXMLParser()
+ T panorama::CLayoutManager::AddToLocalP4Paths(CUtlString const&, panorama::CPanoramaSymbol)
  T panorama::CLayoutManager::AutoReloadFailedFileLoads()
  T panorama::CLayoutManager::BConvertHTTPPathToLocalP4Path(char const*, CUtlString&)
  T panorama::CLayoutManager::BHasFilesInMemory() const
+ T panorama::CLayoutManager::BIsIncludeBufferCached(panorama::ELayoutIncludeFileType, char const*)
  T panorama::CLayoutManager::CLayoutManager()
  T panorama::CLayoutManager::ClearAsyncLoad(panorama::CLoadLayoutFileAsync*)
  T panorama::CLayoutManager::ClearAsyncReload(panorama::CReloadStyleFile*)
+ T panorama::CLayoutManager::ClearFileCache()
  T panorama::CLayoutManager::GetCLayoutFile(panorama::CPanoramaSymbol)
  T panorama::CLayoutManager::GetJavaScriptFile(char const*, CUtlString*)
  T panorama::CLayoutManager::GetLayoutFile(char const*, bool)
@@ -9064,9 +9150,11 @@
  T panorama::CLayoutManager::GetLayoutFileFromString(char const*, bool)
  T panorama::CLayoutManager::GetLayoutFileFromStringAsync(char const*, panorama::IUIPanel*, bool)
  T panorama::CLayoutManager::GetStyleFile(char const*, panorama::CStyleFileSet const&)
- T panorama::CLayoutManager::LoadFileIntoBuffer(panorama::CPanoramaSymbol, CUtlBuffer&)
+ T panorama::CLayoutManager::LoadStyleIntoBuffer(panorama::CPanoramaSymbol, CUtlBuffer&)
  T panorama::CLayoutManager::OnLayoutFileBufferLoaded(CUtlBuffer&, panorama::CPanoramaSymbol, char const*, panorama::IUIPanel*, bool, bool, panorama::ELoadLayoutAsyncDetails, bool)
  T panorama::CLayoutManager::OnLoadRemoteCSSFileFromBuffer(CUtlBuffer&, CUtlString const&, bool)
+ T panorama::CLayoutManager::OnLoadRemoteJSFileFromBuffer(CUtlBuffer&, CUtlString const&, bool)
+ T panorama::CLayoutManager::PrintCacheStatus()
  T panorama::CLayoutManager::ReloadChangedFile(char const*)
  T panorama::CLayoutManager::ReloadLayoutFile(panorama::CPanoramaSymbol)
  T panorama::CLayoutManager::ReloadScriptFile(panorama::CPanoramaSymbol)
@@ -9077,6 +9165,10 @@
  T panorama::CLayoutManager::UpdateStyleInMemory(panorama::IUILayoutManager::EUpdateStyleType, panorama::CPanoramaSymbol, unsigned int, char const*)
  T panorama::CLayoutManager::Validate(CValidator&, char const*)
  T panorama::CLayoutManager::~CLayoutManager()
+ T panorama::CLayoutRefCounted::Release()
+ T panorama::CLayoutRefPtr<panorama::CJSFile>::~CLayoutRefPtr()
+ T panorama::CLayoutRefPtr<panorama::CLayoutFile>::operator=(panorama::CLayoutRefPtr<panorama::CLayoutFile> const&)
+ T panorama::CLayoutRefPtr<panorama::CLayoutFile>::~CLayoutRefPtr()
  T panorama::CLazyShaderProgram::Attach(panorama::CVertexShader*, panorama::CFragmentShader*)
  T panorama::CLazyShaderProgram::BShouldPreloadShaders()
  T panorama::CLazyShaderProgram::BTryingBinaryShaders()
@@ -9203,7 +9295,6 @@
  T panorama::CMouseCursorRender::BCursorVisible()
  T panorama::CMouseCursorRender::CMouseCursorRender(panorama::CTopLevelWindow*)
  T panorama::CMouseCursorRender::FadeOutCursorNow()
- T panorama::CMouseCursorRender::GetRenderCursorPosition()
  T panorama::CMouseCursorRender::RunFrame(Vector2D, bool, bool, bool, bool)
  T panorama::CMouseCursorRender::RunRenderFrame(SDL_Window*, float, unsigned int, unsigned int, bool)
  T panorama::CMouseCursorRender::RunRenderFrame(float, int, int, unsigned int, unsigned int, unsigned int, unsigned int, bool)
@@ -9353,6 +9444,7 @@
  T panorama::CPanel2DFactory::CreatePanelInternal(char const*, panorama::IUIPanel*)
  T panorama::CPanelIdentifiers::CPanelIdentifiers(panorama::IUIPanel*)
  T panorama::CPanelKeyValue::BCompareValues(panorama::CPanelKeyValue const&) const
+ T panorama::CPanelKeyValue::CPanelKeyValue(char const*)
  T panorama::CPanelKeyValue::CPanelKeyValue(char const*, CAmount_t<int>)
  T panorama::CPanelKeyValue::CPanelKeyValue(char const*, char const*)
  T panorama::CPanelKeyValue::CPanelKeyValue(char const*, int)
@@ -9366,11 +9458,13 @@
  T panorama::CPanelStyle::BHasAnyStyleDataForProperty(panorama::CStyleSymbol)
  T panorama::CPanelStyle::BHasAnyTransition()
  T panorama::CPanelStyle::BHasAnyTransitionOrAnimation(bool)
+ T panorama::CPanelStyle::BHasConstantOpaqueBackground()
  T panorama::CPanelStyle::BHasPossibleBackgroundColor()
  T panorama::CPanelStyle::BHasTransitionOrAnimation(panorama::CStyleSymbol)
  T panorama::CPanelStyle::BIsTransparentWithNoOpacityTransition()
  T panorama::CPanelStyle::BPropertyBitFlagSet(panorama::CStyleSymbol)
  T panorama::CPanelStyle::BPropertySetFromElement(panorama::CStyleSymbol) const
+ T panorama::CPanelStyle::BTransformIsIdentityRegardlessOfParentSize()
  T panorama::CPanelStyle::BuildListOfExistingPropsNotInTree(panorama::CStyleProperty**, bool*)
  T panorama::CPanelStyle::CPanelStyle(panorama::IUIPanel*, float)
  T panorama::CPanelStyle::CleanupTransitionsAndAnimations()
@@ -9449,6 +9543,7 @@
  T panorama::CPanelStyle::GetTextOverflow(bool&)
  T panorama::CPanelStyle::GetTextShadowMsg(CMsgTextShadow&)
  T panorama::CPanelStyle::GetTextTransform(panorama::ETextTransform&)
+ T panorama::CPanelStyle::GetTexturesSampleMode()
  T panorama::CPanelStyle::GetTooltipArrowPosition(panorama::CUILength&, panorama::CUILength&)
  T panorama::CPanelStyle::GetTooltipBodyPosition(panorama::CUILength&, panorama::CUILength&)
  T panorama::CPanelStyle::GetTooltipPositions(panorama::EContextUIPosition (&) [4])
@@ -9643,7 +9738,8 @@
  T panorama::CSSHelpers::BParseVerticalAlignment(panorama::EVerticalAlignment*, char const*, char const**)
  T panorama::CSSHelpers::BPeekCSSToken(CUtlBuffer&, char*)
  T panorama::CSSHelpers::BReadCSSComment(CUtlBuffer&, char*, unsigned int)
- T panorama::CSSHelpers::BReadCSSToken(CUtlBuffer&, char*, unsigned int, char const*)
+ T panorama::CSSHelpers::BReadCSSToken(CUtlBuffer&, char*, unsigned int)
+ T panorama::CSSHelpers::BReadCSSToken(CUtlBuffer&, char*, unsigned int, char const*, unsigned int)
  T panorama::CSSHelpers::BSkipComma(char const*, char const**)
  T panorama::CSSHelpers::BSkipLeftParen(char const*, char const**)
  T panorama::CSSHelpers::BSkipQuote(char const*, char const**)
@@ -9706,10 +9802,14 @@
  T panorama::CStyleFileSet::BContainsStyleFile(panorama::CPanoramaSymbol) const
  T panorama::CStyleFileSet::BSelectorMatchesPanel(panorama::StyleFromFile_t const*, panorama::CPanelIdentifiers const&)
  T panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::CLayoutFile*)
+ T panorama::CStyleFileSet::CStyleFileSet(panorama::EStyleFileSetRefBehavior)
+ T panorama::CStyleFileSet::Clear()
  T panorama::CStyleFileSet::GetAnimation(panorama::CPanoramaSymbol) const
  T panorama::CStyleFileSet::GetDefine(char const*) const
  T panorama::CStyleFileSet::GetStyleFile(panorama::CPanoramaSymbol) const
+ T panorama::CStyleFileSet::MergeTo(panorama::CStyleFileSet*) const
  T panorama::CStyleFileSet::Validate(CValidator&, char const*)
+ T panorama::CStyleFileSet::~CStyleFileSet()
  T panorama::CStyleKeyFrame::Validate(CValidator&, char const*)
  T panorama::CStyleKeyFrame::~CStyleKeyFrame()
  T panorama::CStyleProperty::ApplyUIScaleFactor(float)
@@ -10194,6 +10294,15 @@
  T panorama::CStylePropertyTextTransform::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyTextTransform::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTextTransform::~CStylePropertyTextTransform()
+ T panorama::CStylePropertyTextureSampleMode::BCanTransition()
+ T panorama::CStylePropertyTextureSampleMode::BSetFromString(panorama::CStyleSymbol, char const*)
+ T panorama::CStylePropertyTextureSampleMode::GetDescription(panorama::CStyleSymbol)
+ T panorama::CStylePropertyTextureSampleMode::GetInvalidateLayout(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyTextureSampleMode::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
+ T panorama::CStylePropertyTextureSampleMode::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyTextureSampleMode::ToString(CFmtStrN<1024, true, true>*) const
+ T panorama::CStylePropertyTextureSampleMode::operator==(panorama::CStyleProperty const&) const
+ T panorama::CStylePropertyTextureSampleMode::~CStylePropertyTextureSampleMode()
  T panorama::CStylePropertyTooltipArrowPosition::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyTooltipArrowPosition::~CStylePropertyTooltipArrowPosition()
  T panorama::CStylePropertyTooltipBodyPosition::GetDescription(panorama::CStyleSymbol)
@@ -10301,6 +10410,7 @@
  T panorama::CTopLevelWindow::BAllowInput(panorama::InputMessage_t&)
  T panorama::CTopLevelWindow::BCursorFadingOut()
  T panorama::CTopLevelWindow::BCursorVisible()
+ T panorama::CTopLevelWindow::BDeviceLost()
  T panorama::CTopLevelWindow::BIsFullscreen()
  T panorama::CTopLevelWindow::BIsFullscreenBorderlessWindow()
  T panorama::CTopLevelWindow::BIsGuideButton(panorama::InputMessage_t const&)
@@ -10313,6 +10423,7 @@
  T panorama::CTopLevelWindow::BWasSteamControllerConnectedThisSession()
  T panorama::CTopLevelWindow::BWasSteamControllerUsedThisSession()
  T panorama::CTopLevelWindow::CTopLevelWindow(panorama::CUIEngine*)
+ T panorama::CTopLevelWindow::ClearGPUResourcesBeforeNextFrame()
  T panorama::CTopLevelWindow::ConvertClientToSurfaceCoord(float*, float*)
  T panorama::CTopLevelWindow::Delete()
  T panorama::CTopLevelWindow::FadeOutCursorNow()
@@ -10320,6 +10431,7 @@
  T panorama::CTopLevelWindow::GetClearColor()
  T panorama::CTopLevelWindow::GetContextPtr() const
  T panorama::CTopLevelWindow::GetDaisyWheelWPM(int&, float&, float&, float&)
+ T panorama::CTopLevelWindow::GetFocusBehavior()
  T panorama::CTopLevelWindow::GetMouseCursorTexture(Vector2D*)
  T panorama::CTopLevelWindow::GetMouseWheelRepeats(bool, int, unsigned char&)
  T panorama::CTopLevelWindow::GetNumPeriodsBelowMinFPS(int&)
@@ -10333,7 +10445,10 @@
  T panorama::CTopLevelWindow::GetWindowHeight()
  T panorama::CTopLevelWindow::GetWindowWidth()
  T panorama::CTopLevelWindow::LayoutAndPaintIfNeeded()
+ T panorama::CTopLevelWindow::OnDeviceLost()
+ T panorama::CTopLevelWindow::OnDeviceRestored()
  T panorama::CTopLevelWindow::OnReloadStyleFile(panorama::CPanoramaSymbol)
+ T panorama::CTopLevelWindow::PaintEmptyFrameAndForceLaterRepaint()
  T panorama::CTopLevelWindow::PerformLayout()
  T panorama::CTopLevelWindow::PrepareForValidate()
  T panorama::CTopLevelWindow::RecordDaisyWheelUsage(float, int, bool, bool)
@@ -10344,6 +10459,7 @@
  T panorama::CTopLevelWindow::ResumeFromValidate()
  T panorama::CTopLevelWindow::RunPlatformFrame()
  T panorama::CTopLevelWindow::SetContextPtr(void*)
+ T panorama::CTopLevelWindow::SetFocusBehavior(panorama::EWindowFocusBehavior)
  T panorama::CTopLevelWindow::SetFullscreen(bool)
  T panorama::CTopLevelWindow::SetInhibitInput(bool)
  T panorama::CTopLevelWindow::SetMaxFPS(float)
@@ -10436,11 +10552,11 @@
  T panorama::CUIAnimationEngine::EndPaintBackground(panorama::CRenderMsg<CMsgEndPaintBackground> const&, CUtlBuffer*)
  T panorama::CUIAnimationEngine::EndPaintLast(panorama::CRenderMsg<CMsgEndPaintLast> const&, CUtlBuffer*)
  T panorama::CUIAnimationEngine::FreeAndForceRepaintOfCompositingLayer(unsigned long long, bool)
+ T panorama::CUIAnimationEngine::FreeChildLayersRecursive(panorama::CUIAnimationEngine::RenderOperation_t*)
  T panorama::CUIAnimationEngine::FreeRenderOpsVector(CUtlVector<panorama::CUIAnimationEngine::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngine::RenderOperation_t*> >*)
  T panorama::CUIAnimationEngine::GetCurrentDrawingOffsets(float&, float&, float&)
  T panorama::CUIAnimationEngine::GetFPSAverage()
  T panorama::CUIAnimationEngine::GetFreeRenderOpsVector()
- T panorama::CUIAnimationEngine::GetLastHitTestPanelCoords()
  T panorama::CUIAnimationEngine::GetSessionFPSAverages()
  T panorama::CUIAnimationEngine::GetTimingTransitionProgress(CMsgTransitionData const&)
  T panorama::CUIAnimationEngine::InterpolateFillBrush(CMsgFillBrushCollection const&, CMsgRenderFillBrushCollection*)
@@ -10485,6 +10601,7 @@
  T panorama::CUIEngine::BAnyOverlayWindowHasFocus()
  T panorama::CUIEngine::BAnyVisibleWindowHasFocus()
  T panorama::CUIEngine::BAnyWindowHasFocus()
+ T panorama::CUIEngine::BHasAnyWindows()
  T panorama::CUIEngine::BHasFocus()
  T panorama::CUIEngine::BHasOverlayForApp(unsigned long long, unsigned long long)
  T panorama::CUIEngine::BHaveEventHandlersRegisteredForType(panorama::CPanoramaSymbol)
@@ -10498,6 +10615,7 @@
  T panorama::CUIEngine::CancelAsyncJSONWebAPIRequest(unsigned int)
  T panorama::CUIEngine::CancelScheduledDelegate(int)
  T panorama::CUIEngine::ClearAsyncJSWebRequest(panorama::CJSAsyncWebRequest*)
+ T panorama::CUIEngine::ClearFileCache()
  T panorama::CUIEngine::ClearGlobalObjectForJavaScript(char const*, void*)
  T panorama::CUIEngine::CloseDebuggerWindow()
  T panorama::CUIEngine::CompileScript(panorama::IUIPanel*, char const*, char const*)
@@ -10520,6 +10638,7 @@
  T panorama::CUIEngine::DispatchEventAsync(float, panorama::IUIEvent*)
  T panorama::CUIEngine::DispatchJSEventHandler(panorama::IUIEvent*, panorama::IUIPanel const*, panorama::EventHandler_t const&)
  T panorama::CUIEngine::DispatchQueuedEvent(CLimitTimer&)
+ T panorama::CUIEngine::EndRegisterJSScope()
  T panorama::CUIEngine::ExposeGlobalObjectToJavaScript(char const*, void*, char const*, bool)
  T panorama::CUIEngine::ExposeObjectTypeToJavaScript(char const*, CUtlAbstractDelegate&)
  T panorama::CUIEngine::FreePanelStyle(panorama::IUIPanelStyle*)
@@ -10543,15 +10662,22 @@
  T panorama::CUIEngine::GetLocalPathForNamedPath(char const*)
  T panorama::CUIEngine::GetLocalPathForRelativePath(char const*, char const*, CUtlString&)
  T panorama::CUIEngine::GetMouseCanActivateParent(panorama::IUIPanel*)
+ T panorama::CUIEngine::GetNumRegisterJSScopes()
+ T panorama::CUIEngine::GetPaintCountTrackingEnabled()
  T panorama::CUIEngine::GetPanelBaseClassSymbol(panorama::CPanoramaSymbol)
  T panorama::CUIEngine::GetPanelForJavaScriptContext(v8::Context*)
  T panorama::CUIEngine::GetPanelHandle(panorama::IUIPanel const*)
+ T panorama::CUIEngine::GetPanelPaintInfo(unsigned long long, unsigned int&, bool&, double&)
  T panorama::CUIEngine::GetPanelPtr(panorama::PanelHandle_t const&)
+ T panorama::CUIEngine::GetRegisterJSEntryInfo(int, int, panorama::RegisterJSEntryInfo_t*)
+ T panorama::CUIEngine::GetRegisterJSScopeInfo(int, panorama::RegisterJSScopeInfo_t*)
  T panorama::CUIEngine::GetRemoteHostForNamedHost(char const*)
  T panorama::CUIEngine::GetV8GlobalContext()
  T panorama::CUIEngine::GetV8Isolate()
  T panorama::CUIEngine::GetWheelScrollLines()
+ T panorama::CUIEngine::GetWindowsForDebugger(CUtlVector<panorama::IUIWindow*, CUtlMemory<panorama::IUIWindow*> >&)
  T panorama::CUIEngine::IncrementEventHandlerCount(panorama::CPanoramaSymbol const&, bool, bool)
+ T panorama::CUIEngine::IncrementPaintCountForPanel(unsigned long long, bool, double)
  T panorama::CUIEngine::InitializePanoramaContext(v8::Persistent<v8::Context, v8::NonCopyablePersistentTraits<v8::Context> >*)
  T panorama::CUIEngine::InitiateAsyncJSONWebAPIRequest(EHTTPMethod, CUtlString, CUtlDelegate<void (unsigned long long, KeyValues*, void*)>, void*, panorama::CJSONWebAPIParams*, unsigned int)
  T panorama::CUIEngine::InitiateAsyncJSONWebAPIRequest(EHTTPMethod, CUtlString, panorama::IUIPanel*, void*, panorama::CJSONWebAPIParams*, unsigned int)
@@ -10564,24 +10690,29 @@
  T panorama::CUIEngine::MakeSymbol(char const*)
  T panorama::CUIEngine::MarkLayerToRepaintThreadSafe(unsigned long long)
  T panorama::CUIEngine::MsgMemoryPoolMgr()
+ T panorama::CUIEngine::NewRegisterJSEntry(char const*, unsigned int, char const*, panorama::RegisterJSType_t)
  T panorama::CUIEngine::OnAsyncEvent(float, panorama::IUIEvent*)
  T panorama::CUIEngine::OnCopyStringToClipboard(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
  T panorama::CUIEngine::OnDeletePanel(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T panorama::CUIEngine::OnFileCacheRemoved(panorama::CPanoramaSymbol)
  T panorama::CUIEngine::OnHTTPJSONWebAPIRequestFinished(HTTPRequestCompleted_t*, bool)
- T panorama::CUIEngine::OnJSScheduledFunction(panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
+ T panorama::CUIEngine::OnJSScheduledFunction(panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int)
  T panorama::CUIEngine::OnMemDump()
  T panorama::CUIEngine::OnReloadStyleFile(panorama::CPanoramaSymbol)
  T panorama::CUIEngine::OnSetAllChildrenActivationEnabled(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
+ T panorama::CUIEngine::OnSetChildPanelsSelected(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
  T panorama::CUIEngine::OnSetInputFocus(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CUIEngine::OnSetPanelSelected(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
  T panorama::CUIEngine::OnShowPanelZoo()
  T panorama::CUIEngine::OnToggleConsole()
  T panorama::CUIEngine::OnToggleDebug()
+ T panorama::CUIEngine::OnTogglePanelSelected(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CUIEngine::OnWindowShutdown(panorama::IUIWindow*)
  T panorama::CUIEngine::OutputJSExceptionToConsole(v8::TryCatch&, panorama::IUIPanel*)
  T panorama::CUIEngine::OverlayForApp(unsigned long long, unsigned long long)
  T panorama::CUIEngine::PanelDestroyed(panorama::IUIPanel*, panorama::IUIPanel*)
  T panorama::CUIEngine::PrepareForValidate()
+ T panorama::CUIEngine::PrintCacheStatus()
  T panorama::CUIEngine::PulseActiveControllerHaptic(panorama::IUIEngine::EHapticFeedbackPosition, panorama::IUIEngine::EHapticFeedbackStrength)
  T panorama::CUIEngine::QueueDecrementRefNextFrame(CRefCounted<CRefCountServiceBase<true, CRefMT> >*)
  T panorama::CUIEngine::QueuedMsgSort(panorama::CUIEngine::QueuedEvent_t const&, panorama::CUIEngine::QueuedEvent_t const&, void*)
@@ -10621,8 +10752,11 @@
  T panorama::CUIEngine::SetAggressiveFrameRateLimit(bool)
  T panorama::CUIEngine::SetCookieHeaderForNamedRemoteHost(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&)
  T panorama::CUIEngine::SetCookieHeaderForRemoteHost(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&)
+ T panorama::CUIEngine::SetPaintCountTrackingEnabled(bool)
  T panorama::CUIEngine::SetPanelWaitingAsyncDelete(panorama::IUIPanel*)
+ T panorama::CUIEngine::SetRegisterJSEntryParams(int, unsigned char, panorama::RegisterJSType_t*)
  T panorama::CUIEngine::Shutdown()
+ T panorama::CUIEngine::StartRegisterJSScope(char const*, char const*)
  T panorama::CUIEngine::StartupSubsystems(panorama::IUISettings*, IHTMLChromeController*)
  T panorama::CUIEngine::ToggleDebugMode()
  T panorama::CUIEngine::TrackOverlayForApp(unsigned long long, unsigned long long, void*)
@@ -10745,12 +10879,6 @@
  T panorama::CUIEvent2<panorama::CPanelPtr<panorama::CPanel2D>, char const*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent2<panorama::CPanelPtr<panorama::CPanel2D>, char const*>::Validate(CValidator&, char const*)
  T panorama::CUIEvent2<panorama::CPanelPtr<panorama::CPanel2D>, char const*>::~CUIEvent2()
- T panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>::CUIEvent2(panorama::CPanoramaSymbol, panorama::IUIPanel const*, panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
- T panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>::Copy() const
- T panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>::Dispatch(CUtlAbstractDelegate)
- T panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
- T panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>::Validate(CValidator&, char const*)
- T panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>::~CUIEvent2()
  T panorama::CUIEvent2<panorama::CVideoPlayerEventDispatcher*, EVideoPlayerEvent>::Copy() const
  T panorama::CUIEvent2<panorama::CVideoPlayerEventDispatcher*, EVideoPlayerEvent>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent2<panorama::CVideoPlayerEventDispatcher*, EVideoPlayerEvent>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -10771,6 +10899,12 @@
  T panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>::Validate(CValidator&, char const*)
  T panorama::CUIEvent2<panorama::IUIWindow*, panorama::InputMessage_t*>::~CUIEvent2()
+ T panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>::CUIEvent3(panorama::CPanoramaSymbol, panorama::IUIPanel const*, panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int)
+ T panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>::Copy() const
+ T panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>::~CUIEvent3()
  T panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>::Copy() const
  T panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -10907,7 +11041,7 @@
  T panorama::CUIPanel::BStylesDirty() const
  T panorama::CUIPanel::BTopOfInputContext()
  T panorama::CUIPanel::CUIPanel()
- T panorama::CUIPanel::ClearLayoutTransitionFlagsBubble()
+ T panorama::CUIPanel::ClearLayoutTransitionFlagsBubble(unsigned int)
  T panorama::CUIPanel::ClearPanelEvents()
  T panorama::CUIPanel::ClearPanelEvents(panorama::CPanoramaSymbol)
  T panorama::CUIPanel::ClearParentLookupMapsTraverse()
@@ -10942,6 +11076,7 @@
  T panorama::CUIPanel::GetAttribute(char const*, char const*)
  T panorama::CUIPanel::GetAttribute(char const*, int)
  T panorama::CUIPanel::GetAttribute(char const*, unsigned int)
+ T panorama::CUIPanel::GetAttribute(char const*, unsigned long long)
  T panorama::CUIPanel::GetChild(int) const
  T panorama::CUIPanel::GetChildCount() const
  T panorama::CUIPanel::GetChildCountOfType(panorama::CPanoramaSymbol)
@@ -10962,6 +11097,9 @@
  T panorama::CUIPanel::GetDesiredLayoutHeight() const
  T panorama::CUIPanel::GetDesiredLayoutWidth() const
  T panorama::CUIPanel::GetFirstChild() const
+ T panorama::CUIPanel::GetHiddenChild(int)
+ T panorama::CUIPanel::GetHiddenChildCount() const
+ T panorama::CUIPanel::GetHorizontalScrollBar()
  T panorama::CUIPanel::GetID() const
  T panorama::CUIPanel::GetInputNamespace() const
  T panorama::CUIPanel::GetInterpolatedXScrollOffset()
@@ -10970,6 +11108,7 @@
  T panorama::CUIPanel::GetLastChild() const
  T panorama::CUIPanel::GetLayoutFile() const
  T panorama::CUIPanel::GetLayoutFileLoadedFrom() const
+ T panorama::CUIPanel::GetLayoutFileReloadCount() const
  T panorama::CUIPanel::GetMouseCanActivate()
  T panorama::CUIPanel::GetPanelEvents(panorama::CPanoramaSymbol)
  T panorama::CUIPanel::GetPanelType() const
@@ -10980,9 +11119,13 @@
  T panorama::CUIPanel::GetRawActualXOffset() const
  T panorama::CUIPanel::GetRawActualYOffset() const
  T panorama::CUIPanel::GetSelectionPositionX() const
+ T panorama::CUIPanel::GetSelectionPositionX_Raw() const
  T panorama::CUIPanel::GetSelectionPositionY() const
+ T panorama::CUIPanel::GetSelectionPositionY_Raw() const
  T panorama::CUIPanel::GetStyleFlags() const
  T panorama::CUIPanel::GetTabIndex() const
+ T panorama::CUIPanel::GetTabIndex_Raw() const
+ T panorama::CUIPanel::GetVerticalScrollBar()
  T panorama::CUIPanel::InitClonedPanel(panorama::IUIPanel*)
  T panorama::CUIPanel::Initialize(panorama::IUIWindow*, panorama::IUIPanel*, char const*, unsigned int)
  T panorama::CUIPanel::InvalidatePosition()
@@ -11011,12 +11154,13 @@
  T panorama::CUIPanel::MoveChildAfter(panorama::IUIPanel*, panorama::IUIPanel*)
  T panorama::CUIPanel::MoveChildBefore(panorama::IUIPanel*, panorama::IUIPanel*)
  T panorama::CUIPanel::OnCheckChildrenScrolledIntoView()
- T panorama::CUIPanel::OnChildLayoutTransitionFlagsCleared()
+ T panorama::CUIPanel::OnChildLayoutTransitionFlagsCleared(unsigned int)
  T panorama::CUIPanel::OnContentSizeTraverse(float*, float*, float, float, bool)
  T panorama::CUIPanel::OnGetLayoutFileAsyncComplete(panorama::CLayoutFile*, panorama::ELoadLayoutAsyncDetails, bool)
  T panorama::CUIPanel::OnLayoutTraverse(float, float)
  T panorama::CUIPanel::OnLoadLayoutAsyncCompleteInternal(panorama::CLayoutFile*, panorama::ELoadLayoutAsyncDetails, bool)
  T panorama::CUIPanel::OnScrollPositionChanged()
+ T panorama::CUIPanel::OnStyleTransitionsCleanup()
  T panorama::CUIPanel::OnStylesChangedInternal()
  T panorama::CUIPanel::OnUIScaleFactorChangedTraverse(float)
  T panorama::CUIPanel::PaintBackground()
@@ -11041,9 +11185,9 @@
  T panorama::CUIPanel::RemoveFromTopLevelWindow()
  T panorama::CUIPanel::RemoveParentDisabledFlag()
  T panorama::CUIPanel::RemoveStyleFlag(panorama::EStyleFlags)
- T panorama::CUIPanel::ScrollParentToMakePanelFit(bool)
+ T panorama::CUIPanel::ScrollParentToMakePanelFit(panorama::ScrollBehavior_t, bool)
  T panorama::CUIPanel::ScrollToBottom()
- T panorama::CUIPanel::ScrollToFitRegion(float, float, float, float, bool, bool)
+ T panorama::CUIPanel::ScrollToFitRegion(float, float, float, float, panorama::ScrollBehavior_t, bool, bool)
  T panorama::CUIPanel::ScrollToLeftEdge()
  T panorama::CUIPanel::ScrollToRightEdge()
  T panorama::CUIPanel::ScrollToTop()
@@ -11057,6 +11201,7 @@
  T panorama::CUIPanel::SetAttribute(char const*, char const*)
  T panorama::CUIPanel::SetAttribute(char const*, int)
  T panorama::CUIPanel::SetAttribute(char const*, unsigned int)
+ T panorama::CUIPanel::SetAttribute(char const*, unsigned long long)
  T panorama::CUIPanel::SetChildFocusOnHover(bool)
  T panorama::CUIPanel::SetClientPtr(panorama::IUIPanelClient*)
  T panorama::CUIPanel::SetDefaultFocus(char const*)
@@ -11077,9 +11222,9 @@
  T panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)
  T panorama::CUIPanel::SetInputNamespace(char const*)
  T panorama::CUIPanel::SetLayoutFile(panorama::CPanoramaSymbol)
- T panorama::CUIPanel::SetLayoutFileLoadedFrom(panorama::CPanoramaSymbol)
  T panorama::CUIPanel::SetLayoutFileTraverse(panorama::CPanoramaSymbol)
  T panorama::CUIPanel::SetLayoutFlagsOnParents(unsigned int)
+ T panorama::CUIPanel::SetLayoutLoadedFromParent(panorama::IUIPanel*)
  T panorama::CUIPanel::SetMouseCanActivate(panorama::EMouseCanActivate, char const*)
  T panorama::CUIPanel::SetMouseTracking(bool)
  T panorama::CUIPanel::SetOnStylesChangedNeeded()
@@ -11102,6 +11247,8 @@
  T panorama::CUIPanel::SetupJavascriptObjectTemplate()
  T panorama::CUIPanel::Shutdown()
  T panorama::CUIPanel::SortChildren(int (*)(panorama::IUIPanelClient* const*, panorama::IUIPanelClient* const*))
+ T panorama::CUIPanel::SwitchClass(char const*, char const*)
+ T panorama::CUIPanel::SwitchClass(char const*, panorama::CPanoramaSymbol)
  T panorama::CUIPanel::ToggleClass(char const*)
  T panorama::CUIPanel::ToggleClass(panorama::CPanoramaSymbol)
  T panorama::CUIPanel::TransitionPositionApplied(bool)
@@ -11185,6 +11332,11 @@
  T panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>::Validate(CValidator&, char const*)
  T panorama::CUIPanelEvent2<char const*, panorama::IUIEvent*>::~CUIPanelEvent2()
+ T panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>::Copy() const
+ T panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>::Validate(CValidator&, char const*)
+ T panorama::CUIPanelEvent2<panorama::ScrollBehavior_t, bool>::~CUIPanelEvent2()
  T panorama::CUIPanelEvent3<bool, panorama::ELoadLayoutAsyncDetails, bool>::Copy() const
  T panorama::CUIPanelEvent3<bool, panorama::ELoadLayoutAsyncDetails, bool>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIPanelEvent3<bool, panorama::ELoadLayoutAsyncDetails, bool>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -11620,7 +11772,7 @@
  T panorama::CUIRenderEngine::BCreateDoubleBufferedTexture(panorama::IUIDoubleBufferedTexture**, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType, bool)
  T panorama::CUIRenderEngine::BCreateDoubleBufferedYUV420Texture(panorama::IUIDoubleBufferedYUV420Texture**, unsigned int, unsigned int)
  T panorama::CUIRenderEngine::BCreateTexture(panorama::IUITexture**, void*, unsigned int, unsigned int, unsigned int, panorama::E2DTextureFormat, panorama::EAlphaChannelType)
- T panorama::CUIRenderEngine::BeginFrame(unsigned int, unsigned int, panorama::IUIEngine::ERenderTarget, Color, float)
+ T panorama::CUIRenderEngine::BeginFrame(unsigned int, unsigned int, panorama::IUIEngine::ERenderTarget, Color, float, bool, bool)
  T panorama::CUIRenderEngine::BeginPaintBackground()
  T panorama::CUIRenderEngine::BeginPaintLast()
  T panorama::CUIRenderEngine::CUIAnimationThread::CUIAnimationThread(panorama::CUIRenderEngine*, panorama::CUIWindowInput*)
@@ -11635,8 +11787,8 @@
  T panorama::CUIRenderEngine::CUIRenderThread::Validate(CValidator&, char const*)
  T panorama::CUIRenderEngine::CUIRenderThread::~CUIRenderThread()
  T panorama::CUIRenderEngine::DrawFilledRect(float, float, float, float, CMsgFillBrushCollection const&, panorama::EAntialiasing)
- T panorama::CUIRenderEngine::DrawSyncronizedTexturedRect(unsigned int, int, float, float, float, float, float, float, float, float)
- T panorama::CUIRenderEngine::DrawTexturedRect(unsigned int, float, float, float, float, float, float, float, float)
+ T panorama::CUIRenderEngine::DrawSyncronizedTexturedRect(unsigned int, panorama::ETextureSampleMode, int, float, float, float, float, float, float, float, float)
+ T panorama::CUIRenderEngine::DrawTexturedRect(unsigned int, panorama::ETextureSampleMode, float, float, float, float, float, float, float, float)
  T panorama::CUIRenderEngine::EndFrame()
  T panorama::CUIRenderEngine::EndPaintBackground()
  T panorama::CUIRenderEngine::EndPaintLast()
@@ -11744,7 +11896,7 @@
  T panorama::CUIWindowInput::HookPanelInput(panorama::IUIPanel*, panorama::IInputCapture*)
  T panorama::CUIWindowInput::InputEvent(panorama::InputMessage_t&, bool)
  T panorama::CUIWindowInput::LostWindowFocus()
- T panorama::CUIWindowInput::OnMouseButtonUp(panorama::MouseData_t const&)
+ T panorama::CUIWindowInput::OnMouseButtonUp(panorama::MouseData_t const&, bool)
  T panorama::CUIWindowInput::OnMouseLeave()
  T panorama::CUIWindowInput::OnMouseMove(float, float, bool)
  T panorama::CUIWindowInput::OnMouseWheel(panorama::MouseData_t const&)
@@ -11813,6 +11965,7 @@
  T panorama::CloseDebuggerWindow::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::CloseModalDialog::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::CloseModalDialog::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::CompareStylePropertyName(CUtlString const*, CUtlString const*)
  T panorama::ContextMenu::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ContextMenu::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
  T panorama::ConvertRGBA8ToA8(CUtlBuffer&, CUtlBuffer&, unsigned int, unsigned int)
@@ -11929,9 +12082,16 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::MoveUp, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::None>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PageDown>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PageLeft>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PagePanelDown>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PagePanelLeft>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PagePanelRight>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PagePanelUp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PageRight>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PageUp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PanelLoaded>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PanelStyleChanged>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PollingForSteamClientUpdate>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ProfileOff>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ProfileOn>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::QuitApp>(panorama::IUIPanel*, char const*, char const**)
@@ -11942,13 +12102,20 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ResetToDefaultValue>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::RestartMachine>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollDown>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollPanelIntoView, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollLeft>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollPanelDown>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollPanelIntoView, panorama::ScrollBehavior_t, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollPanelLeft>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollPanelRight>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollPanelUp>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollRight>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollToBottom>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollToTop>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrollUp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrolledIntoView>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ScrolledOutOfView>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SetAllChildrenActivationEnabled, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SetChildPanelsSelected, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SetInputFocus>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SetPanelEvent, char const*, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SetPanelSelected, bool>(panorama::IUIPanel*, char const*, char const**)
@@ -11969,6 +12136,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TimeoutFastScrollSound>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ToggleConsole>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ToggleDebugger>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TogglePanelSelected>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ToggleStyle, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TurnOffActiveController>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::UserInputActive>(panorama::IUIPanel*, char const*, char const**)
@@ -12015,7 +12183,7 @@
  T panorama::JSONWebAPIResponse::MakeEvent(panorama::IUIPanelClient const*, KeyValues*, void*)
  T panorama::JSScheduledFunction::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::JSScheduledFunction::GetEventType()
- T panorama::JSScheduledFunction::MakeEvent(panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
+ T panorama::JSScheduledFunction::MakeEvent(panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int)
  T panorama::LayoutManager()
  T panorama::LerpUILength(float, panorama::CUILength, panorama::CUILength, float)
  T panorama::LoadAsyncComplete::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -12058,6 +12226,18 @@
  T panorama::OverlayGamepadInputMsg::MakeEvent(panorama::IUIPanelClient const*, panorama::IUIWindow*, panorama::InputMessage_t*)
  T panorama::PageDown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::PageDown::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::PageLeft::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PageLeft::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::PagePanelDown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PagePanelDown::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::PagePanelLeft::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PagePanelLeft::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::PagePanelRight::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PagePanelRight::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::PagePanelUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PagePanelUp::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::PageRight::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PageRight::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::PageUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::PageUp::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::PanelDescription_t::PanelDescription_t()
@@ -12081,6 +12261,8 @@
  T panorama::PchNameFromETextDecoration(int)
  T panorama::PchNameFromETextTransform(int)
  T panorama::PchNameFromEVerticalAlignment(panorama::EVerticalAlignment)
+ T panorama::PollingForSteamClientUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PollingForSteamClientUpdate::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::ProfileOff::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ProfileOff::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::ProfileOn::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -12097,6 +12279,7 @@
  T panorama::Refresh::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::Refresh::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::RegisterEventTypesWithEngine(panorama::IUIEngine*)
+ T panorama::RegisterJSScopeInfoInternal_t::Validate(CValidator&, char const*)
  T panorama::RegisterPanelFactoriesWithEngine(panorama::IUIEngine*)
  T panorama::RegisterUIEvent(panorama::CPanoramaSymbol*, char const*, int, bool, panorama::IUIEvent* (*)(panorama::IUIPanel*, char const*, char const**), panorama::IUIEvent* (*)(panorama::IUIPanelClient const*), panorama::IUIEvent* (*)(panorama::IUIPanelClient const*, int), panorama::IUIEvent* (*)(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t))
  T panorama::ReloadChangedUIFiles::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -12131,8 +12314,20 @@
  T panorama::SDLOGLSurfaceNameSpace::CCompositionLayer::~CCompositionLayer()
  T panorama::ScrollDown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ScrollDown::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::ScrollLeft::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ScrollLeft::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::ScrollPanelDown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ScrollPanelDown::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::ScrollPanelIntoView::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T panorama::ScrollPanelIntoView::MakeEvent(panorama::IUIPanelClient const*, bool)
+ T panorama::ScrollPanelIntoView::MakeEvent(panorama::IUIPanelClient const*, panorama::ScrollBehavior_t, bool)
+ T panorama::ScrollPanelLeft::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ScrollPanelLeft::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::ScrollPanelRight::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ScrollPanelRight::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::ScrollPanelUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ScrollPanelUp::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::ScrollRight::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::ScrollRight::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::ScrollToBottom::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ScrollToBottom::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::ScrollToTop::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -12146,6 +12341,9 @@
  T panorama::SetAllChildrenActivationEnabled::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::SetAllChildrenActivationEnabled::GetEventType()
  T panorama::SetAllChildrenActivationEnabled::MakeEvent(panorama::IUIPanelClient const*, bool)
+ T panorama::SetChildPanelsSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::SetChildPanelsSelected::GetEventType()
+ T panorama::SetChildPanelsSelected::MakeEvent(panorama::IUIPanelClient const*, bool)
  T panorama::SetInputFocus::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::SetInputFocus::GetEventType()
  T panorama::SetInputFocus::MakeEvent(panorama::IUIPanelClient const*)
@@ -12202,6 +12400,9 @@
  T panorama::ToggleDebugger::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::ToggleFullscreen::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ToggleFullscreen::MakeEvent(panorama::IUIPanelClient const*, panorama::IUIWindow*, bool)
+ T panorama::TogglePanelSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::TogglePanelSelected::GetEventType()
+ T panorama::TogglePanelSelected::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::ToggleStyle::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ToggleStyle::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T panorama::TopLevelWindowClose::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -12849,6 +13050,8 @@
  T v8::base::DumpBacktrace()
  T v8::base::LockGuard<v8::base::Mutex>::LockGuard(v8::base::Mutex*)
  T v8::base::LockGuard<v8::base::Mutex>::~LockGuard()
+ T v8::base::Mutex::AssertHeldAndUnmark()
+ T v8::base::Mutex::AssertUnheldAndMark()
  T v8::base::Mutex::Lock()
  T v8::base::Mutex::Mutex()
  T v8::base::Mutex::Unlock()
@@ -12862,11 +13065,20 @@
  T v8::base::Semaphore::~Semaphore()
  T v8::base::SysInfo::NumberOfProcessors()
  T v8::base::Thread::Join()
+ T v8::base::Thread::NotifyStartedAndRun()
  T v8::base::Thread::Options::Options(char const*, int)
+ T v8::base::Thread::Options::name() const
+ T v8::base::Thread::Options::stack_size() const
+ T v8::base::Thread::PlatformData::PlatformData()
+ T v8::base::Thread::PlatformData::~PlatformData()
  T v8::base::Thread::Start()
  T v8::base::Thread::Thread(v8::base::Thread::Options const&)
+ T v8::base::Thread::data()
+ T v8::base::Thread::name() const
+ T v8::base::Thread::set_name(char const*)
  T v8::base::Thread::~Thread()
  T v8::base::TimeTicks::HighResolutionNow()
+ T v8::base::TimeTicks::TimeTicks(long long)
  T v8::base::TimeTicks::ToInternalValue() const
  T v8::platform::CreateDefaultPlatform(int)
  T v8::platform::DefaultPlatform::CallOnBackgroundThread(v8::Task*, v8::Platform::ExpectedRuntime)
@@ -12896,11 +13108,15 @@
  T v8::platform::WorkerThread::WorkerThread(v8::platform::TaskQueue*)
  T v8::platform::WorkerThread::~WorkerThread()
  T void CryptoPP::ByteReverse<unsigned int>(unsigned int*, unsigned int const*, unsigned long)
+ T void Destruct<CUtlString>(CUtlString*)
+ T void Destruct<LayoutIncludeFile_t>(LayoutIncludeFile_t*)
  T void Destruct<panorama::CLocalization::PanelLocEntry_t>(panorama::CLocalization::PanelLocEntry_t*)
  T void Destruct<panorama::CUIEngine::V8GlobalFunctionRegistration_t>(panorama::CUIEngine::V8GlobalFunctionRegistration_t*)
  T void Destruct<panorama::CUIEngine::V8GlobalObjectRegistration_t>(panorama::CUIEngine::V8GlobalObjectRegistration_t*)
  T void Destruct<panorama::DialogVariable_t>(panorama::DialogVariable_t*)
  T void Destruct<panorama::JSInclude_t>(panorama::JSInclude_t*)
+ T void Destruct<panorama::RegisterJSEntryInfoInternal_t>(panorama::RegisterJSEntryInfoInternal_t*)
+ T void Destruct<panorama::RegisterJSScopeInfoInternal_t>(panorama::RegisterJSScopeInfoInternal_t*)
  T void GetRenderCmdDataAnimation<CBorderData const*, CMsgBorder>(CBorderData const**, CMsgBorder const&, int, int)
  T void GetRenderCmdDataAnimation<CBoxShadowData const*, CMsgBoxShadow>(CBoxShadowData const**, CMsgBoxShadow const&, int, int)
  T void GetRenderCmdDataAnimation<CMsgClipData const*, CMsgClip>(CMsgClipData const**, CMsgClip const&, int, int)
@@ -12913,6 +13129,7 @@
  T void GetRenderCmdDataAnimation<CMsgTransformOriginData const*, CMsg3DTransformOrigin>(CMsgTransformOriginData const**, CMsg3DTransformOrigin const&, int, int)
  T void GetRenderCmdDataAnimation<CRadiusData const*, CMsgBorderRadius>(CRadiusData const**, CMsgBorderRadius const&, int, int)
  T void GetRenderCmdDataAnimation<CTextShadowData const*, CMsgTextShadow>(CTextShadowData const**, CMsgTextShadow const&, int, int)
+ T void USE<int>(int)
  T void panorama::CPanelStyle::FillRenderMsg<panorama::CStylePropertyBackgroundColor, CMsgFillBrushCollection>(CMsgFillBrushCollection&, void*)
  T void panorama::CPanelStyle::FillRenderMsg<panorama::CStylePropertyBlur, CMsgGaussianBlur>(CMsgGaussianBlur&, void*)
  T void panorama::CPanelStyle::FillRenderMsg<panorama::CStylePropertyBorder, CMsgBorder>(CMsgBorder&, void*)
@@ -12973,15 +13190,14 @@
  T void panorama::DispatchEventAsync<panorama::CheckChildrenScrolledIntoView>(panorama::CheckChildrenScrolledIntoView, panorama::IUIPanel const*)
  T void panorama::DispatchEventAsync<panorama::ImageFailedLoad, panorama::CImageProxySource*>(panorama::ImageFailedLoad, panorama::IUIPanel const*, panorama::CImageProxySource*)
  T void panorama::DispatchEventAsync<panorama::ImageLoaded, panorama::CImageProxySource*>(panorama::ImageLoaded, panorama::IUIPanel const*, panorama::CImageProxySource*)
- T void panorama::DispatchEventAsync<panorama::JSScheduledFunction, panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(float, panorama::JSScheduledFunction, panorama::IUIPanel const*, panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
+ T void panorama::DispatchEventAsync<panorama::JSScheduledFunction, panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>(float, panorama::JSScheduledFunction, panorama::IUIPanel const*, panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int)
  T void panorama::DispatchEventAsync<panorama::LoadAsyncComplete, bool, panorama::ELoadLayoutAsyncDetails, bool>(panorama::LoadAsyncComplete, panorama::IUIPanel const*, bool, panorama::ELoadLayoutAsyncDetails, bool)
  T void panorama::DispatchEventAsync<panorama::LoadLayoutFileAsync, char const*, bool>(float, panorama::LoadLayoutFileAsync, panorama::IUIPanel const*, char const*, bool)
  T void panorama::DispatchEventAsync<panorama::PanelLoaded>(panorama::PanelLoaded, panorama::IUIPanel const*)
  T void panorama::DispatchEventAsync<panorama::PanelStyleChanged>(float, panorama::PanelStyleChanged, panorama::IUIPanel const*)
- T void panorama::DispatchEventAsync<panorama::QuitApp>(panorama::QuitApp, panorama::IUIPanelClient const*)
  T void panorama::DispatchEventAsync<panorama::ReloadChangedUIFiles>(float, panorama::ReloadChangedUIFiles, panorama::IUIPanel const*)
  T void panorama::DispatchEventAsync<panorama::RetryStyleReload, panorama::CReloadStyleFile*>(float, panorama::RetryStyleReload, panorama::IUIPanel const*, panorama::CReloadStyleFile*)
- T void panorama::DispatchEventAsync<panorama::ScrollPanelIntoView, bool>(float, panorama::ScrollPanelIntoView, panorama::IUIPanel const*, bool)
+ T void panorama::DispatchEventAsync<panorama::ScrollPanelIntoView, panorama::ScrollBehavior_t, bool>(float, panorama::ScrollPanelIntoView, panorama::IUIPanel const*, panorama::ScrollBehavior_t, bool)
  T void panorama::DispatchEventAsync<panorama::StyleClassesChanged>(panorama::StyleClassesChanged, panorama::IUIPanel const*)
  T void panorama::DispatchEventAsync<panorama::StyleFlagsChanged>(panorama::StyleFlagsChanged, panorama::IUIPanel const*)
  T void panorama::DispatchEventAsync<panorama::TimeoutFastScrollSound>(float, panorama::TimeoutFastScrollSound, panorama::IUIPanel const*)
@@ -12998,12 +13214,12 @@
  T void panorama::JSMethodCallTuple<panorama::CImageProxySource, unsigned int>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<panorama::CUIPanel, void, panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::PanoramaTypeToV8Param<char const>(char const*, v8::Handle<v8::Value>*)
- T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, int>(char const*, panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, int, void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&))
- T void panorama::RegisterJSMethod<panorama::CImageProxySource, bool>(char const*, bool (panorama::CImageProxySource::*)())
- T void panorama::RegisterJSMethod<panorama::CImageProxySource, int>(char const*, int (panorama::CImageProxySource::*)())
- T void panorama::RegisterJSMethod<panorama::CImageProxySource, panorama::EImageFormat>(char const*, panorama::EImageFormat (panorama::CImageProxySource::*)())
- T void panorama::RegisterJSMethod<panorama::CImageProxySource, unsigned int>(char const*, unsigned int (panorama::CImageProxySource::*)())
- T void panorama::RegisterJSMethod<panorama::CUIPanel, void, panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(char const*, void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*))
+ T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, int>(char const*, panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, int, void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), char const*, panorama::RegisterJSType_t)
+ T void panorama::RegisterJSMethod<panorama::CImageProxySource, bool>(char const*, bool (panorama::CImageProxySource::*)(), char const*)
+ T void panorama::RegisterJSMethod<panorama::CImageProxySource, int>(char const*, int (panorama::CImageProxySource::*)(), char const*)
+ T void panorama::RegisterJSMethod<panorama::CImageProxySource, panorama::EImageFormat>(char const*, panorama::EImageFormat (panorama::CImageProxySource::*)(), char const*)
+ T void panorama::RegisterJSMethod<panorama::CImageProxySource, unsigned int>(char const*, unsigned int (panorama::CImageProxySource::*)(), char const*)
+ T void panorama::RegisterJSMethod<panorama::CUIPanel, void, panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(char const*, void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*), char const*)
  T void panorama::RestoreFuncPtr<bool (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<bool (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<int (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<int (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const>&, v8::Local<v8::Array>&, int)
@@ -13611,6 +13827,7 @@
  b OSXHelpers::BIsNSWindowOnActiveSpace(void*)::supported
  b PretifyFloat(float)::s_rgchBuffer
  b _ZZN6google8protobuf55protobuf_AddDesc_google_2fprotobuf_2fdescriptor_2eprotoEvE12already_here.b
+ b dump_panorama_css_properties_command
  b g_AllLanguagesCmdLine
  b g_BreakSet
  b g_BreakSetIncludingColons
@@ -13706,6 +13923,7 @@
  b guard variable for panorama::CSSHelpers::BParseNamedColor(Color*, char const*, char const**)::s_namedColors
  b guard variable for panorama::CTopLevelWindowSDL::PumpMessageLoop()::s_rtimeLastActiveSpaceCheck
  b guard variable for panorama::CUIFontLoaderLinux::GetInstance()::s_loader
+ b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symAcceptsFocus
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symAcceptsInput
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symAnalogStickScroll
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symChildFocusOnHover
@@ -13765,6 +13983,7 @@
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyTextOverflow()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyTextShadow()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyTextTransform()::s_pool
+ b guard variable for panorama::GetPropertyMemPool_CStylePropertyTextureSampleMode()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyTooltipArrowPosition()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyTooltipBodyPosition()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyTooltipPosition()::s_pool
@@ -13816,6 +14035,7 @@
  b panorama::CTopLevelWindowSDL::PumpMessageLoop()::s_rtimeLastActiveSpaceCheck
  b panorama::CUIEngine::RunFrame()::fAsserted
  b panorama::CUIFontLoaderLinux::GetInstance()::s_loader
+ b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symAcceptsFocus
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symAcceptsInput
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symAnalogStickScroll
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symChildFocusOnHover
@@ -13875,6 +14095,7 @@
  b panorama::GetPropertyMemPool_CStylePropertyTextOverflow()::s_pool
  b panorama::GetPropertyMemPool_CStylePropertyTextShadow()::s_pool
  b panorama::GetPropertyMemPool_CStylePropertyTextTransform()::s_pool
+ b panorama::GetPropertyMemPool_CStylePropertyTextureSampleMode()::s_pool
  b panorama::GetPropertyMemPool_CStylePropertyTooltipArrowPosition()::s_pool
  b panorama::GetPropertyMemPool_CStylePropertyTooltipBodyPosition()::s_pool
  b panorama::GetPropertyMemPool_CStylePropertyTooltipPosition()::s_pool
@@ -13985,6 +14206,7 @@
  b panorama::g_CStylePropertyTextOverflow_Helper
  b panorama::g_CStylePropertyTextShadow_Helper
  b panorama::g_CStylePropertyTextTransform_Helper
+ b panorama::g_CStylePropertyTextureSampleMode_Helper
  b panorama::g_CStylePropertyTooltipArrowPosition_Helper
  b panorama::g_CStylePropertyTooltipBodyPosition_Helper
  b panorama::g_CStylePropertyTooltipPosition_Helper
@@ -14029,7 +14251,6 @@
  b protobuf_AddDesc_renderer_2frendermessages_2eproto()::already_here
  b protobuf_AddDesc_steammessages_5fbase_2eproto()::already_here
  b protobuf_AddDesc_uifontfile_5fformat_2eproto()::already_here
- b quit_command
  b reference temporary #0 for CryptoPP::BufferedTransformation::NULL_CHANNEL
  b s_ClientTenfoot720p
  b s_CurrentRoutingIDPtr
@@ -14179,6 +14400,7 @@
  glTexImage1D
  glTexImage2D
  glTexParameteri
+ glTexParameteriv
  glTexSubImage2D
  glUniform1f
  glUniform1i
@@ -14320,6 +14542,7 @@
  pthread_mutex_unlock
  pthread_mutexattr_destroy$UNIX2003
  pthread_mutexattr_init
+ pthread_mutexattr_settype
  pthread_once
  pthread_self
  qsort
@@ -14371,6 +14594,11 @@
  r panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_rgchIfFocused
  r panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_rgchIfParentFocused
  r panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_rgchUnfocused
+ r panorama::k_rgchCSSAtRuleNameTerm
+ r panorama::k_rgchCSSDefaultTerm
+ r panorama::k_rgchCSSSelectorTerm
+ r panorama::k_rgchCSSValueTerm
+ r panorama::k_rgchCSSValueTermOrEndOfString
  r png_convert_to_rfc1123.short_months
  r png_digit
  r png_read_finish_row.png_pass_yinc
@@ -14630,6 +14858,7 @@
  r tinfl_decompress::s_min_table_sizes
  r twobppswaptable
  r utf8_lead_bits
+ r v8::base::(anonymous namespace)::kNoThread
  r whitespace
  read$UNIX2003
  readdir$INODE64
@@ -14788,7 +15017,7 @@
  t TrieTok
  t TryTok
  t __cxx_global_array_dtor
- t __cxx_global_var_init192
+ t __cxx_global_var_init193
  t __cxx_global_var_init49
  t __cxx_global_var_init50
  t __cxx_global_var_init51
@@ -14814,16 +15043,16 @@
  t __cxx_global_var_init71
  t __cxx_global_var_init72
  t __cxx_global_var_init73
- t __cxx_global_var_init74
- t __cxx_global_var_init75
- t __cxx_global_var_init76
- t __cxx_global_var_init77
- t __cxx_global_var_init78
  t __cxx_global_var_init79
  t __cxx_global_var_init80
  t __cxx_global_var_init81
  t __cxx_global_var_init82
  t __cxx_global_var_init83
+ t __cxx_global_var_init84
+ t __cxx_global_var_init85
+ t __cxx_global_var_init86
+ t __cxx_global_var_init87
+ t __cxx_global_var_init88
  t __static_initialization_and_destruction_0(int, int)
  t __tcf_0
  t __tcf_2
@@ -14860,6 +15089,7 @@
  t do_barray_io
  t do_sarray_io
  t dummy_consume_data
+ t dump_panorama_css_properties(void*, ConParams&, ConCommand&)
  t emit_bits_e
  t emit_bits_s
  t emit_dht
@@ -14973,6 +15203,7 @@
  t panorama::Create_CStylePropertyTextOverflow()
  t panorama::Create_CStylePropertyTextShadow()
  t panorama::Create_CStylePropertyTextTransform()
+ t panorama::Create_CStylePropertyTextureSampleMode()
  t panorama::Create_CStylePropertyTooltipArrowPosition()
  t panorama::Create_CStylePropertyTooltipBodyPosition()
  t panorama::Create_CStylePropertyTooltipPosition()
@@ -15026,6 +15257,7 @@
  t panorama::Free_CStylePropertyTextOverflow(panorama::CStyleProperty*)
  t panorama::Free_CStylePropertyTextShadow(panorama::CStyleProperty*)
  t panorama::Free_CStylePropertyTextTransform(panorama::CStyleProperty*)
+ t panorama::Free_CStylePropertyTextureSampleMode(panorama::CStyleProperty*)
  t panorama::Free_CStylePropertyTooltipArrowPosition(panorama::CStyleProperty*)
  t panorama::Free_CStylePropertyTooltipBodyPosition(panorama::CStyleProperty*)
  t panorama::Free_CStylePropertyTooltipPosition(panorama::CStyleProperty*)
@@ -15079,6 +15311,7 @@
  t panorama::GetPropertyMemPool_CStylePropertyTextOverflow()
  t panorama::GetPropertyMemPool_CStylePropertyTextShadow()
  t panorama::GetPropertyMemPool_CStylePropertyTextTransform()
+ t panorama::GetPropertyMemPool_CStylePropertyTextureSampleMode()
  t panorama::GetPropertyMemPool_CStylePropertyTooltipArrowPosition()
  t panorama::GetPropertyMemPool_CStylePropertyTooltipBodyPosition()
  t panorama::GetPropertyMemPool_CStylePropertyTooltipPosition()
@@ -15132,6 +15365,7 @@
  t panorama::ValidateMemPool_CStylePropertyTextOverflow(CValidator&)
  t panorama::ValidateMemPool_CStylePropertyTextShadow(CValidator&)
  t panorama::ValidateMemPool_CStylePropertyTextTransform(CValidator&)
+ t panorama::ValidateMemPool_CStylePropertyTextureSampleMode(CValidator&)
  t panorama::ValidateMemPool_CStylePropertyTooltipArrowPosition(CValidator&)
  t panorama::ValidateMemPool_CStylePropertyTooltipBodyPosition(CValidator&)
  t panorama::ValidateMemPool_CStylePropertyTooltipPosition(CValidator&)
@@ -15171,7 +15405,6 @@
  t quantize3_ord_dither
  t quantize_fs_dither
  t quantize_ord_dither
- t quit(void*, ConParams&, ConCommand&)
  t read_markers
  t read_restart_marker
  t realize_virt_arrays
@@ -15208,7 +15441,12 @@
  t start_pass_upsample
  t update_box
  t use_merged_upsample
+ t v8::base::DestroyNativeHandle(_opaque_pthread_mutex_t*)
+ t v8::base::InitializeNativeHandle(_opaque_pthread_mutex_t*)
+ t v8::base::LockNativeHandle(_opaque_pthread_mutex_t*)
+ t v8::base::SetThreadName(char const*)
  t v8::base::ThreadEntry(void*)
+ t v8::base::UnlockNativeHandle(_opaque_pthread_mutex_t*)
  t write_file_header
  t write_file_trailer
  t write_frame_header

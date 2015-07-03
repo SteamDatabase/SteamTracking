@@ -37,6 +37,7 @@
 					textinputid="CheckoutFormTextEntry"
 					textinputclass="HalfWidth DockRight AppearFromBottomCenter"
 					textinputdoneactionstring="#UI_Next"
+          multiline="true"
 					oninputsubmit="NavigateToNextField();"
 				/>
 

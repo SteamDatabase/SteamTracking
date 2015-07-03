@@ -18,8 +18,19 @@ CreateAccountWizard .ShowingLoginProgress
 }
 
 //
-// Credentials Child
+// Credentials Children
 //
+
+.CredentialsError
+{
+	color: #dd4400;
+	visibility: collapse;
+}
+
+.CredentialsValidationError .CredentialsError
+{
+	visibility: visible;
+}
 
 #CredentialsContainer
 {
@@ -49,6 +60,7 @@ CreateAccountWizard .ShowingLoginProgress
 {
 	margin-top: 50px;
 	margin-bottom: 20px;
+	width: 100%;
 }
 
 
@@ -133,7 +145,7 @@ CreateAccountWizard .ShowingLoginProgress
 // Creating Account child
 //
 
-CreatingAccountWizardChild #ThrobberContainer
+AccountNameValidatorWizardChild #ThrobberContainer, PasswordValidatorWizardChild #ThrobberContainer
 {
 	margin-top: 260px;
 	horizontal-align: center;

@@ -199,8 +199,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.3.0/src/google/protobuf/unknown_field_set.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.3.0/src/google/protobuf/wire_format_lite.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.3.0/src/google/protobuf/wire_format_lite_inl.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_base.a(task-queue.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_base.a(worker-thread.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_libbase.a(logging.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_libbase.a(mutex.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_libbase.a(platform-posix.o)
@@ -208,6 +206,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_libbase.a(sys-info.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_libbase.a(time.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_libplatform.a(default-platform.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_libplatform.a(task-queue.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libv8_libplatform.a(worker-thread.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(algparam.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(basecode.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(cpu.o)
@@ -365,7 +365,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/uifontfileloaderlinux.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/text/uitextlayoutpango.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/transformations.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uicommands.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uiengine.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uiengine.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uienginesdl.cpp
@@ -409,6 +408,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuifilesystem.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuipanelstyle.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuirenderengine.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/iuistylefactory.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/../iuipanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/backgroundimage.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/csshelpers.h
@@ -417,6 +417,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/stylesymbol.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/layout/uilength.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/panoramasymbol.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/panoramatypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/renderer/styleproperties.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/transformations.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uievent.h
@@ -495,6 +496,3 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
-/Users/buildbot/buildslave_steam/v8_osx/build/out_osx/../src/libplatform/
-/Users/buildbot/buildslave_steam/v8_osx/build/src/libplatform/
-/Users/buildbot/buildslave_steam/v8_osx/build/src/libplatform/default-platform.cc

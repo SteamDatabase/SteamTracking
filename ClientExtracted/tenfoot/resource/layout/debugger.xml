@@ -11,6 +11,9 @@
 			<ToggleButton id="DevInfo">
 				<Label text="#Debugger_DevInfo" />
 			</ToggleButton>
+			<Button id="PaintInfo">
+				<Label text="#Debugger_PaintInfo" />
+			</Button>
 			<Panel id="InMemoryButtons">
 				<Button id="RevertButton">
 					<Label text="#Debugger_Revert" />

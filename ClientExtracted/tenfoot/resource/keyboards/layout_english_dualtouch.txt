@@ -1,4 +1,4 @@
-1234567890_
+﻿1234567890=
 qwertyuiop
 asdfghjkl
 ?zxcvbnm,.
@@ -6,8 +6,8 @@ asdfghjkl
 QWERTYUIOP
 ASDFGHJKL
 'ZXCVBNM:;
-1234567890=
+!@#$%^&*()-
 +£€$`"~|#\
 {}%^<>[]"
-/\{}()`~/?
+/\{}()`~/|
 

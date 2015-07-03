@@ -14,7 +14,7 @@
 			<Panel id="TopRow" class="TopRowBase" tabindex="0" selectionpos="5,0" onmovedown="SetInputFocus( MenuRow )">
 				<Panel id="AvatarInfoRow" tabindex="0" selectionpos="0,0">
 					<Panel id="Avatar">
-						<AvatarImage id="SelfAvatar" onmouseactivate="BrowseToSteamURL( SteamIDMyProfile );" />
+						<AvatarImage id="SelfAvatar" onmouseactivate="CloseModalDialog(); OpenProfileMenu( false );" />
 					</Panel>
 					<Button id="DownloadsButton" tabindex="0" selectionpos="0,0" onfocus="DownloadsButtonFocused();" onactivate="ShowDownloads();" >
 						<Image src="file://{images}/downloads.png" />
@@ -112,7 +112,9 @@
 			<Panel id="MainRowContents" hittest="false">
 
 				<StorePanel id="Store" />
-				<LibraryPanel id="Library" class="LibraryPanel"/>
+				<LibraryPanel id="Library" class="LibraryPanel">
+					<MusicPanel id="MusicPanel" />
+				</LibraryPanel>
 				<CommunityWrapper id="CommunityWrapper" class="CommunityWrapper" />
 				<ProfileWrapper id="ProfileWrapper" class="ProfileWrapper" />
 				<!-- <Image class="ExitButton" src="file://{images}/steam_exit.tga" onmouseactivate="QuitApp();" /> -->

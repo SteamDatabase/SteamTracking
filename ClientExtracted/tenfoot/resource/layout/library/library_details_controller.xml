@@ -42,72 +42,14 @@
 					<Button id="Controller1" class="ControllerDetail" tabindex="1" selectionpos="1,1" onactivate="ViewControllerDetails( 1 );">
 						<Image id="ControllerDetailImage1" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels1" class="ControllerLabels">
-							<Label id="ControllerLabelTitle1" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller1" />
-							<Label id="ControllerLabelHeader1" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
+							<Label id="ControllerLabelTitle1" class="ControllerLabelTitle" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription1" class="ControllerLabelDescription" />
-						</Panel>
-					</Button>
-					<Button id="Controller2" class="ControllerDetail" tabindex="2" selectionpos="1,2" onactivate="ViewControllerDetails( 2 );">
-						<Image id="ControllerDetailImage2" class="ControllerDetailImage" />
-						<Panel id="ControllerLabels2" class="ControllerLabels">
-							<Label id="ControllerLabelTitle2" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller2" />
-							<Label id="ControllerLabelHeader2" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
-							<Label id="ControllerLabelDescription2" class="ControllerLabelDescription" />
-						</Panel>
-					</Button>
-					<Button id="Controller3" class="ControllerDetail" tabindex="3" selectionpos="1,3" onactivate="ViewControllerDetails( 3 );">
-						<Image id="ControllerDetailImage3" class="ControllerDetailImage" />
-						<Panel id="ControllerLabels3" class="ControllerLabels">
-							<Label id="ControllerLabelTitle3" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller3" />
-							<Label id="ControllerLabelHeader3" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
-							<Label id="ControllerLabelDescription3" class="ControllerLabelDescription" />
-						</Panel>
-					</Button>
-					<Button id="Controller4" class="ControllerDetail" tabindex="4" selectionpos="1,4" onactivate="ViewControllerDetails( 4 );">
-						<Image id="ControllerDetailImage4" class="ControllerDetailImage" />
-						<Panel id="ControllerLabels4" class="ControllerLabels">
-							<Label id="ControllerLabelTitle4" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller4" />
-							<Label id="ControllerLabelHeader4" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
-							<Label id="ControllerLabelDescription4" class="ControllerLabelDescription" />
-						</Panel>
-					</Button>
-					<Button id="Controller5" class="ControllerDetail" tabindex="5" selectionpos="1,5" onactivate="ViewControllerDetails( 5 );">
-						<Image id="ControllerDetailImage5" class="ControllerDetailImage" />
-						<Panel id="ControllerLabels5" class="ControllerLabels">
-							<Label id="ControllerLabelTitle5" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller5" />
-							<Label id="ControllerLabelHeader5" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
-							<Label id="ControllerLabelDescription5" class="ControllerLabelDescription" />
-						</Panel>
-					</Button>
-					<Button id="Controller6" class="ControllerDetail" tabindex="6" selectionpos="1,6" onactivate="ViewControllerDetails( 6 );">
-						<Image id="ControllerDetailImage6" class="ControllerDetailImage" />
-						<Panel id="ControllerLabels6" class="ControllerLabels">
-							<Label id="ControllerLabelTitle6" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller6" />
-							<Label id="ControllerLabelHeader6" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
-							<Label id="ControllerLabelDescription6" class="ControllerLabelDescription" />
-						</Panel>
-					</Button>
-					<Button id="Controller7" class="ControllerDetail" tabindex="7" selectionpos="1,7" onactivate="ViewControllerDetails( 7 );">
-						<Image id="ControllerDetailImage7" class="ControllerDetailImage" />
-						<Panel id="ControllerLabels7" class="ControllerLabels">
-							<Label id="ControllerLabelTitle7" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller7" />
-							<Label id="ControllerLabelHeader7" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
-							<Label id="ControllerLabelDescription7" class="ControllerLabelDescription" />
-						</Panel>
-					</Button>
-					<Button id="Controller8" class="ControllerDetail" tabindex="8" selectionpos="1,8" onactivate="ViewControllerDetails( 8 );">
-						<Image id="ControllerDetailImage8" class="ControllerDetailImage" />
-						<Panel id="ControllerLabels8" class="ControllerLabels">
-							<Label id="ControllerLabelTitle8" class="ControllerLabelTitle" text="#Library_Details_Controller_Controller8" />
-							<Label id="ControllerLabelHeader8" class="ControllerLabelHeader" text="#Library_Details_Controller_Hint" />
-							<Label id="ControllerLabelDescription8" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
 					<Button id="AddController" class="ControllerDetail" tabindex="9" selectionpos="1,9" onactivate="AddWirelessController();">
 						<Image id="AddControllerDetailImage" class="AddControllerDetailImage" />
 						<Panel id="ControllerAddLabels" class="ControllerLabels">
 							<Label id="ControllerAddLabelTitle" class="ControllerLabelTitle" text="#Library_Details_Controller_Add" />
-							<Label id="ControllerAddLabelHeader" class="ControllerLabelHeader" text="#Library_Details_Controller_AddSub" />
 							<Label id="ControllerAddLabelDescription" class="ControllerLabelDescription" />
 						</Panel>					
 					</Button>

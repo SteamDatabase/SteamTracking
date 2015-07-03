@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/webpanel.css" />
+	</styles>
+
+	<Panel defaultfocus="HTML" tabindex="auto" selectionpos="auto">
+		<Panel class="Container" selectionpos="auto">
+			<HTML id="HTML" />
+		</Panel>
+		<Image class="Reticule" id="ReticuleMiddle" src="file://{images}/browser/ReticuleLoading_00039.png" />
+		<LoadingThrobber id="Throbber" />
+	</Panel>
+
+</root>

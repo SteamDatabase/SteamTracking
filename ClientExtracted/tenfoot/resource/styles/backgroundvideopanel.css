@@ -27,7 +27,7 @@ BackgroundVideoPanel.IngameOverlayBackground
 	background-image: none;
 }
 
-BackgroundVideoPanel.ScreenSaverMode, BackgroundVideoPanel.GamesRunning
+BackgroundVideoPanel.ScreenSaverMode, BackgroundVideoPanel.GamesRunning, Welcome_NoController
 {
 	background-image: url( "file://{images}/mainmenu_bg_2.png" );
 	background-size: 100% 100%;

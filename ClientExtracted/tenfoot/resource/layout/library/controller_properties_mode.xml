@@ -70,7 +70,7 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
           <DropDown id="OutputJoystick" />
         </Panel>
-        <Panel class="FieldWrapper JoystickMoveMode">
+        <Panel class="FieldWrapper JoystickMoveMode NoGyro">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
           <ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClick" />
         </Panel>
@@ -80,7 +80,7 @@
         </Panel>
 
         <!-- Joystick Move Mode Advanced -->
-        <Panel class="FieldWrapper JoystickMoveMode Advanced">
+        <Panel class="FieldWrapper JoystickMoveMode Advanced NoGyro">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
           <DropDown id="AdaptiveCentering" />
         </Panel>
@@ -288,18 +288,22 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Acceleration" />
 					<DropDown id="Acceleration" />
 				</Panel>
-				<Panel class="FieldWrapper MouseMode Advanced">
+				<Panel class="FieldWrapper MouseMode Advanced NoGyro">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTap" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="DoubleTap" />
 				</Panel>
-				<Panel class="FieldWrapper MouseMode Advanced">
+				<Panel class="FieldWrapper MouseMode Advanced NoGyro">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTapDuration" />
 					<Slider id="DoubleTapDuration" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper MouseMode Advanced">
+				</Panel>		
+				<Panel class="FieldWrapper MouseMode Advanced NoGyro">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTapBeep" />
 					<DropDown id="DoubleTapBeep" />
 				</Panel>
+				<Panel class="FieldWrapper MouseMode Advanced Gyro">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
+					<DropDown id="GyroButton" />
+				</Panel>				
 				
 				<!-- Relative Mouse Mode -->
 				<Panel id="CenterImageRelMouse" class="CenterImage RelMouseMode" />
@@ -352,7 +356,7 @@
 				<Panel id="RightColumn" class="Column">
 					<Panel class="FieldWrapper TabHeader" id="ModeShiftButtonTab" >
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ModeShifting" />
-						<ControllerBindingButton id="ModeShiftButton" descriptive="true" onactivate="ShowModeShift( true );" />
+						<ControllerBindingButton id="ModeShiftButton" describebutton="true" onactivate="ShowModeShift( true );" />
 					</Panel>
 
 					<Panel class="FieldWrapper TabHeader" id="ModeShiftPulldownTab" >
@@ -427,10 +431,10 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityAbsMouse" />
 					</Panel>
-					<Panel class="FieldWrapper MouseMode">
+					<Panel class="FieldWrapper MouseMode NoGyro">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseClick" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseClick" />
-					</Panel>
+					</Panel>	
 
 					<!-- Mouse Mode Advanced -->
 					<Panel class="FieldWrapper MouseMode Advanced">
@@ -445,7 +449,7 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
 						<DropDown id="InvertMouseY" />
 					</Panel>
-					
+
 					<!-- Relative Mouse Mode -->
 					<Panel class="FieldWrapper RelMouseMode">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />

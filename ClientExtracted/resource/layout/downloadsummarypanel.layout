@@ -6,7 +6,6 @@
 		{
 			style=CDownloadSummaryPanel
 			tall="130"
-		
 		}
 		
 		"header"
@@ -57,12 +56,19 @@
 			style="bigtext"
 		}
 		
+		"disk_status_value"
+		{
+			"ControlName"	    "Label"
+			"labelText"	    "%DiskUsage%"
+			style="bigtext"
+		}
+		
 		"disk_status_label"
 		{
 			"ControlName"	    "Label"
-			"labelText"	    "#steam_downloads_diskstatus_idle"
+			"labelText"	    "#steam_downloads_diskusage"
 			style="bigtextlabel"
-		}		
+		}
 		
 		"pauseresumeallbutton"
 		{
@@ -104,13 +110,18 @@
 			group = "ShowWhenAutoUpdateWindow"
 		}			
 	    
-		graphpanel {	controlname="GraphPanel"	 style="infoGraphic" group="HideOnCompletion"  zpos="-1" }		   
+		net_graphpanel { controlname="GraphPanel" style="NetGraphPanel" group="HideOnCompletion"  zpos="-2" }
+		disc_graphpanel { controlname="GraphPanel" style="DiscGraphPanel" group="HideOnCompletion"  zpos="-1" }		 
+		
+		"disk_legend_label" { ControlName="Label" labelText="#steam_downloads_legenddisk" style="throttleLabel" }
+		"net_legend_label" { ControlName="Label" labelText="#steam_downloads_legendnet" style="throttleLabel" }
+		"disk_legend_panel" { ControlName="Panel" style="diskLegendPanel" }
+		"net_legend_panel" { ControlName="Panel" style="netLegendPanel" }
 	}
     
     
 	colors
 	{
-		//panelBackground="16 16 16 255"
 		panelBackground = "12 27 38 255"
 		panelBackgroundTransparent = "12 27 38 0"
 	}
@@ -127,7 +138,7 @@
 		{
 			bgcolor	   none
 			font-size   "15"
-			textcolor   "propertysheetbg"
+			textcolor   "label2"
 			padding-top	"0"
 			font-style="uppercase"
 	    } 
@@ -158,7 +169,7 @@
 		 font-family=basefont
 		 font-size=17
 		 font-style="uppercase"
-		 textcolor="propertysheetbg"
+		 textcolor="label2"
 		}
 		
 		bigtextHeader 
@@ -177,8 +188,6 @@
 		 textcolor="text"
 		 font-style="uppercase"
 		}
-	
-	
 		
 		PauseButton
 		{   
@@ -263,23 +272,56 @@
 			{
 				// background fill
 		 		0="gradient( x0 + 1, y0	+ 1,	x1 -	1, y1 - 1, buttonfaceactive, propertysheetbg	)"
-
-			   }	   
-		   }
+			}	   
+		}
 		  
-		infoGraphic
+		NetGraphPanel
 		{
 			bgcolor   "none"	
 			textcolor "highlight5"
 			render_bg
 			{
 				// no background
+				// 0="fill( x0, y0, x1,	y1, red	)"
 			}
 			render
 			{
-				0="fill( x0, y0, x0+40,	y1, panelBackground	)"
-				1="gradient_horizontal( x0+40, y0, x0+80, y1, panelBackground,	panelBackgroundTransparent )"
-				
+				0="fill( x0, y0, x0+50,	y1, panelBackground	)"
+				1="gradient_horizontal( x0+50, y0, x0+100, y1, panelBackground,	panelBackgroundTransparent )"
+			}
+		}
+		
+		DiscGraphPanel
+		{
+			bgcolor   "none"	
+			textcolor="green7"
+			render_bg
+			{
+				// no background
+				// 0="fill( x0, y0, x1,	y1, red	)"
+			}
+			render
+			{
+				0="fill( x0, y0, x0+50,	y1, panelBackground	)"
+				1="gradient_horizontal( x0+50, y0, x0+100, y1, panelBackground,	panelBackgroundTransparent )"
+			}
+		}
+		
+		DiskLegendPanel
+		{
+			render_bg
+			{
+				// background fill
+				0="fill( x0, y0, x1,y1, green7 )"
+			}
+		}
+		
+		NetLegendPanel
+		{
+			render_bg
+			{
+				// background fill
+				0="fill( x0, y0, x1,y1, highlight5 )"
 			}
 		}
 	}
@@ -288,28 +330,41 @@
 	{
 		
 		//set aside some room for the	header section
-		region {	name=head	dir=down x=10 y=10 height=124	width=max	margin-right=0	}
-		region  {	name=graph width=1262 y=12 height=170 }			  
+		region { name=head	dir=down x=10 y=10 height=max	width=max	margin-right=0	}
+		
+		region { name=legend align=right width=90 margin-top=60	}
+		
 		region { name=left_column x=0	y=21	 width=max  region=head }
 		region { name=middle_column x=200 y=0 width=max  region=head }
 		
-		place { control="GraphPanel" region="head" x=180 width="max"	height="75" margin-top=27 margin-right=14 }				   
+		// graph
+		place { control="net_graphpanel" region=head x=182 y=0 width="max" height="104" margin-right=112 }				   
+		place { control="disc_graphpanel" region=head x=182 y=0 width="max" height="104" margin-right=112 }
 		
+		// graph legend
+		place { control="net_legend_panel" region=legend y=3 x=0 width=9 height=9 }
+		place { control="net_legend_label" region=legend y=0 x=12 }
+		
+		place { control="disk_legend_panel" region=legend y=16 x=0  width=9 height=9 }
+		place { control="disk_legend_label" region=legend y=13 x=12 }
+					
 		// put NETWORK	USAGE in the top left
 		place { control="header"	region=head dir=down x=0	y=0	}
 		
 		// top right
-		place { control="pauseresumeallbutton" region=head align=right x=490 margin-right=10	margin-top=0 }
+		place { control="pauseresumeallbutton" region=head align=right margin-right=10	margin-top=0 }
 		
 		// three rows of network	usage underneath the header
 		place { region=left_column  control="download_rate_value,download_rate" spacing=4 }
 		place { region=left_column  control="peak_download_rate_value, peak_download_rate" spacing=4 y=22 align=top }
-		place { region=left_column  control="total_downloaded_value, total_downloaded" spacing= 4	y=44	align=top	}
-		place { region=left_column  control="disk_status_label" spacing= 4	y=66	align=top	}
+		place { region=left_column  control="total_downloaded_value, total_downloaded" spacing=4 y=44	align=top	}
+		place { region=left_column  control="disk_status_value, disk_status_label" spacing=4 y=66 align=top	}
 		
 		// throttling info
 		place { region=middle_column controls="blackout_label, blackout_value" spacing=4 }
 		place { region=middle_column control="throttling_label" start=blackout_label dir=down margin-top=4 }
 		place { region=middle_column control="throttling_value" start=throttling_label dir=right margin-left=4 }
+		
+		
 	}
 }

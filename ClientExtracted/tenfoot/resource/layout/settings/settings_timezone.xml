@@ -2,6 +2,7 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/settings.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
 		
 	</styles>
 
@@ -19,14 +20,10 @@
 				</Panel>
 
 				<Panel class="VertContainer">					
-					<Label class="SettingsLabel" text="#SettingsTimeZone_Continent" />
-					<DropDown id="Continents" class="TimeZoneDropDown" />
-
-					<Label class="SettingsLabel" text="#SettingsTimeZone_Country" />
-					<DropDown id="Countries" class="TimeZoneDropDown" />
-
 					<Label class="SettingsLabel" text="#SettingsTimeZone_Region" />
-					<DropDown id="Regions" class="TimeZoneDropDown" />
+					<Panel id="RegionsList" class="VertContainer" childfocusonhover="false">
+						<!-- region instances added here -->
+					</Panel>
 				</Panel>
 		</Panel>
 	</SettingsPanel_TimeZone>

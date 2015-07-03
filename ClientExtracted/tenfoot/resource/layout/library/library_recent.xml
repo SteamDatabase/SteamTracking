@@ -11,7 +11,7 @@
 				<Panel id="CarouselGlow" zpos="-1" hittest="false" />
 				<Carousel id="MostRecentCarousel" hittest="false"  class="MostRecentCarousel" tabindex="auto" selectionpos="auto"
 					title="#Library_RecentlyPlayed" focus="Center" wrap="false" z-offset="0px" x-offset="15px" focus-z-offset="-500px" focus-x-offset="-105px,-10px"
-					onmoveup="CloseLibrary();" selectionposboundary="vertical" ondescendantfocus="AddStyle( CarouselGlow, Visible )" ondescendantblur="RemoveStyle( CarouselGlow, Visible )" />
+					selectionposboundary="vertical" ondescendantfocus="AddStyle( CarouselGlow, Visible )" ondescendantblur="RemoveStyle( CarouselGlow, Visible )" />
 			</Panel>
 		</Panel>
 		<Panel id="LibraryMenuRowWrapper" tabindex="1" selectionpos="0,1" onmoveup="FocusRecent()">

@@ -550,7 +550,7 @@ DropDown:focus
 	color: #333333;
 }
 
-VerticalScrollBar
+VerticalScrollBar, HTMLVerticalScrollBar
 {
 	width: 6px;
 	margin: 3px, 6px, 3px 6px;
@@ -563,14 +563,14 @@ VerticalScrollBar
 	transition-property: transform;
 }
 
-VerticalScrollBar .ScrollThumb
+VerticalScrollBar .ScrollThumb, HTMLVerticalScrollBar .ScrollThumb
 {
 	background-color: #f2f2f2dd;
 
 	transition-property: position;
 }
 
-HorizontalScrollBar
+HorizontalScrollBar, HTMLHorizontalScrollBar
 {
 	height: 6px;
 	margin: 3px;
@@ -583,14 +583,23 @@ HorizontalScrollBar
 	transition-property: transform;
 }
 
-HorizontalScrollBar .ScrollThumb
+HorizontalScrollBar .ScrollThumb, HTMLHorizontalScrollBar .ScrollThumb
 {
 	background-color: #f2f2f2dd;
 
 	transition-property: position;
 }
 
-VerticalScrollBar, VerticalScrollBar .ScrollThumb, HorizontalScrollBar, HorizontalScrollBar .ScrollThumb
+// HTML* scrollbars intentionally disabled because the HTML panel doesn't use these constants for transitions
+
+// HTMLVerticalScrollBar,
+// HTMLVerticalScrollBar .ScrollThumb,
+// HTMLHorizontalScrollBar,
+// HTMLHorizontalScrollBar .ScrollThumb,
+VerticalScrollBar,
+VerticalScrollBar .ScrollThumb,
+HorizontalScrollBar,
+HorizontalScrollBar .ScrollThumb
 {
 	// The transition duration and timing function must match constants used in code:
 	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
@@ -598,7 +607,17 @@ VerticalScrollBar, VerticalScrollBar .ScrollThumb, HorizontalScrollBar, Horizont
 	transition-timing-function: ease-in-out;
 }
 
-VerticalScrollBar.MouseDown, VerticalScrollBar.MouseDown .ScrollThumb, HorizontalScrollBar.MouseDown, HorizontalScrollBar.MouseDown .ScrollThumb
+// HTML* scrollbars intentionally disabled because the HTML panel doesn't use these constants for transitions
+
+// HTMLVerticalScrollBar.MouseDown,
+// HTMLVerticalScrollBar.MouseDown .ScrollThumb,
+// HTMLHorizontalScrollBar.MouseDown,
+// HTMLHorizontalScrollBar.MouseDown .ScrollThumb,
+VerticalScrollBar.MouseDown,
+VerticalScrollBar.MouseDown .ScrollThumb,
+HorizontalScrollBar.MouseDown,
+HorizontalScrollBar.MouseDown .ScrollThumb
+
 {
     // Disable the transition when the mouse is dragging the scroll thumb. Note that this must match
     // when IUIScrollBar::IsMouseDown returns true, or else the content will be out of sync
@@ -617,6 +636,13 @@ TextTooltip
 	font-size: 12px;
 
 	color: #111111ff;
+
+    visibility: collapse;
+}
+
+TextTooltip.TooltipVisible
+{
+    visibility: visible;
 }
 
 .HorizontalRule
@@ -1006,51 +1032,67 @@ FriendsChatDialog .VoiceBarContainer
 
 #HomeButton
 {
+	z-index: 1000;
+	width: 300px;
+	height: 150px;
+	transform: translateX( 1698px );
+	padding: 10px;
+}
+
+#ActualHomeButton,
+#MouseBackButton
+{
 	opacity: 0.0;
 
 	background-image: url( "file://{images}/steam_home_os.png" );
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
-
 	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE30 ), to( #00000000 ) );
-	z-index: 1000;
 
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
 	border-radius: 50%;
-	box-shadow: fill #00000055 -4px -4px 6px 8px;
+	box-shadow: fill #00000055 -3px -3px 4.5px 6px;
 	width: 67px;
 	height: 67px;
-	margin-left: 1767px;
-	margin-top: 41px;
+	transform: translateX( 58px );
+	margin-top: 31px;
 
 	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, wash-color, transform;
 	transition-timing-function: ease-in-out;
 	transition-duration: 0.23s;
 }
 
-#HomeButton.CursorVisible
+#MouseBackButton
 {
-	opacity: 0.8;
+	background-image: url( "file://{images}/mouse/arrowLdefault.png" );
+	background-position: -10px -10px;
+	transform: translateX( 0px );
+	width: 47px;
+	height: 47px;
+	margin-top: 41px;
 }
 
-#HomeButton:hover,
+.CursorVisible #ActualHomeButton,
+.CursorVisible #MouseBackButton
+{
+	opacity: 0.7;
+}
+
+#ActualHomeButton:hover,
+#MouseBackButton:hover
 {
 	opacity: 1.0;
 	pre-transform-scale2d: 1.04;
 
-	box-shadow: fill box_shadow_on_color -4px -4px 6px 8px;
+	box-shadow: fill box_shadow_on_color -3px -3px 4.5px 6px;
 	wash-color: #FFFFFFFF;
 }
-
 
 #HomeButton.ForceHidden
 {
 	opacity: 0.0;
 	transform: translatey( -250px );
 }
+
 
 .ExitButton
 {
@@ -1600,5 +1642,8 @@ LoadingThrobber.Large .Bar3
 	margin-right: 0px;
 }
 
-
+HTMLSimpleNavigationWrapper
+{
+	width: 100%;
+}
 

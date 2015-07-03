@@ -3,8 +3,8 @@
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
-	
-	<LibraryAllGames onmoveup="CloseAllGames();" defaultfocus="ShortcutsGrid" selectionposboundary="vertical">
+
+  <AddShortcutPanel defaultfocus="ShortcutsGrid" selectionposboundary="vertical">
 		<Image id="GridBackground" class="GridBackground" />
         <Panel id="GridUpperRow" class="GridUpperRow" tabindex="auto" selectionpos="0,0">
         </Panel>
@@ -15,5 +15,5 @@
 		</Panel>
 		<Grid id="ShortcutsGrid" class="GamesGrid" scrolldirection="horizontal" verticalcount="3" horizontalcount="4" selectionpos="0,3" selectionposboundary="vertical" tabindex="auto">
 		</Grid>
-	</LibraryAllGames>
+	</AddShortcutPanel>
 </root>

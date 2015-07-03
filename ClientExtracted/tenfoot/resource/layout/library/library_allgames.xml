@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/store/filterselector.css" />
 	</styles>
 	
-	<LibraryAllGames onmoveup="CloseAllGames();" defaultfocus="GamesGrid" selectionposboundary="vertical">
+	<LibraryAllGames defaultfocus="GamesGrid" selectionposboundary="vertical">
 		<Image id="GridBackground" class="GridBackground" />
 		<Panel id="GridUpperRow" class="GridUpperRow" tabindex="auto" selectionpos="0,0">
 			<Label id="SectionLabel" class="SectionLabel" text="#Library_AllGames_Header" />

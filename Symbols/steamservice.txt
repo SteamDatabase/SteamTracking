@@ -1830,6 +1830,8 @@
  T CMsgProtobufWrapped::~CMsgProtobufWrapped()
  T CMsgSpewThrottle::CMsgSpewThrottle()
  T CMsgSpewThrottle::~CMsgSpewThrottle()
+ T CNumStr::CNumStr(double)
+ T CNumStr::CNumStr(unsigned char)
  T CONF_dump_bio
  T CONF_dump_fp
  T CONF_free

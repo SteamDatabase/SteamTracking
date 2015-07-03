@@ -1,20 +1,4 @@
-
-.StreamingActive .StreamingVisible
-{
-	visibility: visible;
-}
-
-.StreamingActive .StreamingHidden
-{
-	visibility: collapse;
-}
-
-.StreamingVisible
-{
-	visibility: collapse;
-}
-
-.StreamingHidden
+.AlwaysVisible
 {
 	visibility: visible;
 }
@@ -84,6 +68,12 @@
 	visibility: visible;
 }
 
+.DisableOfflineShortcut #QuitGoOffline,
+.DisableOfflineShortcut #QuitGoOnline
+{
+	visibility: collapse;
+}
+
 .SteamOS .ExitButtons
 {
 	visibility: collapse;
@@ -105,7 +95,24 @@
 	visibility: collapse;
 }
 
+// Unfortunate but we have to specialize all the other selectors for this usecase
+.SystemButton .QuitDialogInOverlay,
+.QuitDialogInOverlay #QuitBigPicture,
+.QuitDialogInOverlay .SteamOS.SteamOS_EnableDesktop #QuitBigPicture,
+.QuitDialogInOverlay #QuitExitSteam,
+.QuitDialogInOverlay .HasHDMIInput #SwitchToHDMIInput,
+.QuitDialogInOverlay #QuitChangeUser,
+.QuitDialogInOverlay .HorizontalRule,
+{
+	visibility: collapse;
+}
 
+.QuitDialogInOverlay #QuitExitGame,
+.QuitDialogInOverlay #TurnControllerOff,
+.QuitDialogInOverlay #QuitShutdown
+{
+	visibility: visible;
+}
 
 #SwitchToHDMIInput
 {
@@ -117,12 +124,38 @@
 	visibility: visible;
 }
 
+.SteamOS #QuitRestart,
+.SteamOS #QuitSleep
+{
+	visibility: collapse;
+}
+
 #ZeroTracker
 {
 	visibility: collapse;
 }
 
 .VRModeActive #ZeroTracker
+{
+	visibility: visible;
+}
+
+.StreamingActive .StreamingVisible
+{
+	visibility: visible;
+}
+
+.StreamingActive .StreamingHidden
+{
+	visibility: collapse;
+}
+
+.StreamingVisible
+{
+	visibility: collapse;
+}
+
+.StreamingHidden
 {
 	visibility: visible;
 }

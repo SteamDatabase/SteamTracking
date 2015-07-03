@@ -302,15 +302,6 @@ TextInputDaisy
 	background-image: url( "file://{images}/footer/back_xinput.png" );
 }
 
-
-.D0gPad .LangImage,
-.SteamPad .LangImage
-{
-	background-position: 12.5px 50%;
-	background-image: url( "file://{images}/footer/back_d0g.png" );
-}
-
-
 #Lang_txt
 {
 	margin-left: 60px;
@@ -332,10 +323,13 @@ TextInputDaisy
 {
 	vertical-align: bottom;
 	horizontal-align: center;
-	margin-bottom: 170px;
+	margin-bottom: 183px;
 	font-size: 21px;
 	line-height: 30px;
+	flow-children: right;
+	visibility: collapse;
 }
+
 
 .DaisyInputTypeRS #DPadLegend
 {
@@ -355,8 +349,9 @@ TextInputDaisy
 	transition-timing-function: ease-in;
 }
 
+
 .SteamPad #DPadLegend Image.SteamPad,
-.D0gPad #DPadLegend Image.SteamPad
+Image.SteamPadIcon
 {
 	width: 64px;
 	height: 64px;
@@ -365,22 +360,57 @@ TextInputDaisy
 	opacity: 0.5;
 }
 
+Image.SteamPadIcon
+{
+	margin-top: -12px;
+	margin-left: -15px;
+}
+
+.SteamPad #LeftLegend,.SteamPad #RightLegend
+{
+	margin-bottom: 120px;
+}
+
+.SteamPad #RightLegend
+{
+	margin-right: 85px;
+}
+
+#RightLegend Image.SteamPadIcon
+{
+	margin-left: 108px;
+}
+
 .XInputPad #DPadLegend Image.XInputPad
 {
 	opacity: 0.7;
 }
 
-.D0gPad #DPadLegend Image.XInputPad
+.SteamPad #DPadLegend Image.XInputPad
 {
 	opacity: 0.0;
+	width: 0px;
 }
 
+.XInputPad #DPadLegend
+{
+	visibility: collapse;
+}
 
-#DPad_txt
+.SteamPadIcon, .XInputPadIcon
+{
+	visibility: collapse;
+}
+
+.SteamPad .SteamPadIcon,
+.XInputPad .XInputPadIcon
+{
+	visibility: visible;
+}
+
+#DPad_txt_left,#DPad_txt_right
 {
 	margin-top: 0px;
-	margin-left: 55px;
-	margin-bottom: 32px;
 	font-family: "Motiva Sans";
 	font-weight: normal;
 	color: tclegendlabel;
@@ -447,6 +477,26 @@ TextInputDaisy
 	margin-right: 60px;
 }
 
+#RG_btn
+{
+	visibility: collapse;
+	margin-top: 2px;
+	margin-Left: 123px;	
+}
+
+#LG_btn
+{
+	visibility: collapse;
+	margin-top: 2px;
+	margin-Left: 10px;
+}
+
+.SteamPad #RG_btn,.SteamPad #LG_btn
+{
+	visibility: visible;
+}
+
+
 #LBLegend .TriggerButtonBox
 {
 	padding-left: 20px;
@@ -511,12 +561,6 @@ TextInputDaisy
 	opacity: 1.0;
 }
 
-.SteamPad	#MiddleLegendRS
-{
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-}
-
 
 .AButtonBox,
 .BButtonBox,
@@ -532,64 +576,19 @@ TextInputDaisy
 	font-weight: light;
 }
 
-#ABXY_Footer_Wrapper,
-#SteamPad_ABXY_Footer_Wrapper
-{
-	visibility: collapse;
-}
-
-.SteamPad #SteamPad_ABXY_Footer_Wrapper
-{
-	visibility: visible;
-	height: 120px;
-	width: 600px;
-}
-
-.XInputPad #ABXY_Footer_Wrapper
+#ABXY_Footer_Wrapper
 {
 	visibility: visible;
 	flow-children: right;
 }
 
 
-#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowRight
-{
-	flow-children: right;
-	height: 120px;
-}
-
-#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowXY
-{
-	margin-top: 8px;
-	margin-bottom: 8px;
-	width: fill-parent-flow( 1.0 );
-	height: 100%;
-	flow-children: none;
-}
-
-#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowCenter
-{
-	height: 76px;
-	width: 76px;
-	margin-top: 20px;
-	background-image: url( "file://{images}/footer/grid.png" );
-}
-
-#SteamPad_ABXY_Footer_Wrapper #SteamPadFlowAB
-{
-	margin-top: 8px;
-	margin-bottom: 8px;
-	width: fill-parent-flow( 1.0 );
-	height: 100%;
-	flow-children: none;
-}
-
-.XInputPad .AButtonBox,
-.XInputPad .BButtonBox,
-.XInputPad .XButtonBox,
-.XInputPad .YButtonBox,
-.XInputPad .BkspButtonBox,
-.SteamPad .BkspButtonBox
+.AButtonBox,
+.BButtonBox,
+.XButtonBox,
+.YButtonBox,
+.BkspButtonBox,
+.BkspButtonBox
 {
 	border-radius: 50%;
 	border: 2px solid #00000000;
@@ -600,109 +599,6 @@ TextInputDaisy
 
 }	
 
-.SteamPad .A_Wrapper,
-.SteamPad .B_Wrapper,
-.SteamPad .X_Wrapper,
-.SteamPad .Y_Wrapper
-{
-	flow-children: right;
-}
-
-.SteamPad .X_Wrapper,
-.SteamPad .Y_Wrapper
-{
-	horizontal-align: right;
-}
-
-.SteamPad .A_Wrapper,
-.SteamPad .B_Wrapper
-{
-	horizontal-align: left;
-}
-
-.SteamPad .A_Wrapper .AButtonBox,
-.SteamPad .B_Wrapper .BButtonBox,
-.SteamPad .X_Wrapper .XButtonBox,
-.SteamPad .Y_Wrapper .YButtonBox
-{
-	margin-left: 0px;
-	margin-right: 0px;
-	min-width: 48px;
-	width: 48px;
-	height: 48px;
-	border-radius: 0px;
-	box-shadow: none;
-
-	font-size: 20px;
-} 
-
-.SteamPad .A_Wrapper
-{
-	vertical-align: bottom;
-}
- 
-.SteamPad .A_Wrapper .AButtonBox
-{
-	padding-left: -14px;
-	padding-top: 16px;
-	background-image: url( "file://{images}/footer/a_button.png" );
-}
-
-
-.SteamPad .B_Wrapper
-{
-	vertical-align: top;
-} 
-
-.SteamPad .BButtonBox
-{
-	padding-top: 6px;
-	padding-left: -18px;
-	background-image: url( "file://{images}/footer/b_button.png" );
-}
-
-.SteamPad .Y_Wrapper .YButtonBox
-{
-	background-image: url( "file://{images}/footer/y_button.png" );
-	padding-top: 6px;
-	padding-right: 8px;
-	text-align: right;
-}
-
-.SteamPad .X_Wrapper .XButtonBox
-{
-	background-image: url( "file://{images}/footer/y_button.png" );
-	padding-top: 4px;
-	padding-right: 7px;
-	text-align: right;
-}
-
-#SteamPad_ABXY_Footer_Wrapper .LegendText
-{
-	margin-left: 8px;
-	margin-right: 8px;
-	vertical-align: center;
-	font-size: 24;
-	font-family: "Motiva Sans";
-	color: tclegendlabel; 
-}
-
-.XInputPad .YButtonBox
-{
-	background-color: #b38e1f00;
-}
-.XInputPad .XButtonBox
-{
-	background-color: #19427f00;
-}
-.XInputPad .AButtonBox
-{
-	background-color: #6b900c00;
-}
-.XInputPad .BButtonBox
-{
-	background-color: #a51c0c00;
-}
 
 .AButtonText,
 .BButtonText,
@@ -1041,10 +937,10 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	transition-timing-function: linear;
 }
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_N.Picked,
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_S.Picked,
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_E.Picked,
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_W.Picked
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_N.Picked,
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_S.Picked,
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_E.Picked,
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_W.Picked
 {
 	background-color: #00000011;
 	border-radius: borderradius;
@@ -1088,10 +984,10 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	color: #999999FF;
 }
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_N.Picked .ItemLabel,
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_S.Picked .ItemLabel,
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_E.Picked .ItemLabel,
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_W.Picked .ItemLabel
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_N.Picked .ItemLabel,
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_S.Picked .ItemLabel,
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_E.Picked .ItemLabel,
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_W.Picked .ItemLabel
 {
 	color: #333333FF;
 	
@@ -1132,12 +1028,12 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	border-radius: borderradius;
 }
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_N
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_N
 {
 	background-color: #222222ff;
 }
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_N .ItemLabel
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_N .ItemLabel
 {
 	color: #b38e1fff;
 }
@@ -1190,12 +1086,12 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 }
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_S
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_S
 {
 	background-color: #222222ff;
 }
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_S .ItemLabel
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_S .ItemLabel
 {
 	color: #6b900cff;
 }
@@ -1248,12 +1144,12 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 }
 
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_W
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_W
 {
 	background-color: #222222ff;
 }
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_W .ItemLabel
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_W .ItemLabel
 {
 	color: #2056a5ff;
 }
@@ -1306,12 +1202,12 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	border-radius: borderradius;
 }
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_E
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_E
 {
 	background-color: #222222ff;
 }
 
-.DaisyInputTypeABXY.D0gPad .Group.SelectionGroup #Item_E .ItemLabel
+.DaisyInputTypeABXY.SteamPad .Group.SelectionGroup #Item_E .ItemLabel
 {
 	color: #a51c0cff;
 }
@@ -1397,7 +1293,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 .XButtonBox , .XButtonText
 {
-	visibility: collapse;
+	visibility: visible;
 }
 
 .WebEntry .AButtonText, .WebEntry  .AButtonBox

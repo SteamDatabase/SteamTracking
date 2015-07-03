@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+		<include src="file://{resources}/styles/wizardstyles.css" />
+		
+	</styles>
+
+	<TimeZoneRegionPanel class="VertContainer">
+    <Button id ="TimeZoneRegionFocusElement" onactivate="RegionSelected();">
+      <Label text="#TimeZoneRegionFormat" />
+    </Button>
+	</TimeZoneRegionPanel>
+
+</root>

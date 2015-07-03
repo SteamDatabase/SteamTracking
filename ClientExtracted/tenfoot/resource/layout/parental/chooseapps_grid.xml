@@ -9,7 +9,7 @@
 	<Panel defaultfocus="GamesGrid">
 		<Panel id="GridUpperRow" class="GridUpperRow" tabindex="auto" selectionpos="0,0">
 			<Label id="SectionLabel" class="SectionLabel" text="#Parental_Choose_Apps" />
-			<DropDown id="GamesFilter" class="GamesFilter">
+			<DropDown id="GamesFilter" class="GamesFilter" initialselection="FilterAllGames" >
 				<FilterSelectorItem id="FilterGamesICanPlay" />
 				<Label id="FilterAllGames" text="#Library_AllGames" />
 				<Label id="FilterRecentlyPlayed" text="#Library_RecentlyPlayedFilter" />

@@ -2618,6 +2618,7 @@
  T utrie_unserializeDummy_52
  T utrie_unserialize_52
  _DefaultRuneLocale
+ __cxa_bad_typeid
  __cxa_pure_virtual
  __dynamic_cast
  __maskrune
@@ -3418,6 +3419,7 @@
  t _set_add(USet*, int)
  t _set_addRange(USet*, int, int)
  t _set_addString(USet*, unsigned short const*, int)
+ t _shapeToArabicDigitsWithContext(unsigned short*, int, unsigned short, signed char, signed char)
  t _toUnicodeWithCallback
  t _uhash_put
  t _uhash_rehash
@@ -3480,6 +3482,7 @@
  t getFoldingOffset(unsigned int)
  t getGeneralCategory(IntProperty const&, int, UProperty)
  t getHangulSyllableType(IntProperty const&, int, UProperty)
+ t getHostID
  t getJoiningGroup(IntProperty const&, int, UProperty)
  t getJoiningType(IntProperty const&, int, UProperty)
  t getLeadCombiningClass(IntProperty const&, int, UProperty)

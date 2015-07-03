@@ -234,9 +234,9 @@ LibraryPanel
 
 #MostRecentBackgroundWrapper
 {
-	transition-property: transform, position, opacity !immediate; 
-	transition-duration: shortmedduration;
-	transition-timing-function: linear;
+	transition-property: transform, position, opacity, background-color; 
+	transition-duration: 0.35s;
+	transition-timing-function: ease-in;
 	transition-delay: 0s;
 
 	height: 100%;
@@ -245,7 +245,15 @@ LibraryPanel
 
 .LibraryPanel:descendantfocus #MostRecentBackgroundWrapper
 {
+	y: 130px;
+	background-color: gradient( radial, 0% 0%, -100px -40px, 320% 270%, from( #11496dff ), color-stop( 0.36, #07304b99 ) );
 }
+
+.LibraryPanel:descendantfocus #MostRecentBackground
+{
+	transform: translatey( -130px );
+}
+
 
 .AboveLibraryDetailsView .MostRecentBaseVisible,
 
@@ -537,12 +545,17 @@ LibraryMostRecent #CarouselTitle
 }
 
 
+.LibraryPanel .AboveLibraryDetailsView #MostRecentBackgroundWrapper,
+.LibraryPanel .AboveMusicLibraryPanel #MostRecentBackgroundWrapper
+{
+	transform: translatey( -60px );
+}
+
 .LibraryPanel .AboveLibraryDetailsView #MostRecentBackground,
 .LibraryPanel .AboveMusicLibraryPanel #MostRecentBackground
 {
-	transform: translatey( 0px );
+	transform: translatey( -70px ) translatex( -100px );
 }
-
 
 .LibraryAppDetailsSlideOff
 {
@@ -3528,19 +3541,28 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 
 #LibraryMenuRowWrapper
 {
-	transition-property: transform, blur, position, opacity-mask, opacity !immediate;
+	transition-property: transform, blur, position, opacity-mask, opacity, pre-transform-scale2d;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
-	transform: translate3d( 50px, -150px, -200px );
-	pre-transform-scale2d: 1.0;
+	transform: translate3d( 25px, -85px, 0px );
+	pre-transform-scale2d: 0.8;
 	opacity-mask: url( "file://{images}/lower_row_sharp_mask.tga" ) 0.75;
 	position: 0px 620px 0px;
 	z-index: 10;
 	width: 100%;
 	height: 350px;
-
 }
+
+.LibraryMostRecent:descendantfocus #LibraryMenuRowWrapper:descendantfocus
+{
+	transform: translate3d( 0px, -200px, 0px );
+	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;
+	pre-transform-scale2d: 1.0;
+	animation-duration: 2.0s;
+	animation-timing-function: ease-in-out;
+}
+
 
 .LibraryMenuRow
 {
@@ -3564,7 +3586,7 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 .LibraryMostRecent:descendantfocus .LibraryMenuRow
 {
 	opacity: 1.0;
-	transform: translate3d( 3px, 0px, -100px );
+	transform: translate3d( 3px, 0px, 0px );
 	blur: none;
 }
 
@@ -3573,14 +3595,6 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	transform: translateX( 8px );
 }
 
-.LibraryMostRecent:descendantfocus #LibraryMenuRowWrapper:descendantfocus
-{
-	transform: translate3d( 0px, -200px, 0px );
-	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;
-	transition-property: transform, blur, position, opacity !immediate;
-	animation-duration: 2.0s;
-	animation-timing-function: ease-in-out;
-}
 
 .AboveLibraryDetailsView .LibraryMenuRow
 {
@@ -5175,11 +5189,11 @@ KeyboardShortcut Image
 
 #LibraryMostRecent:descendantfocus .LibraryHomeGlow
 {
-	opacity: 0.75;
+	opacity: 0.9;
 	width: 1750px;
 	height: 350px;
 	z-index: -500;
-	transform: translateY( 20px ) translateZ(-105px );
+	transform: translateY( 20px );
 
 	margin-bottom: 0px;
 	horizontal-align: center;

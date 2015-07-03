@@ -83,6 +83,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(udphost.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(udpsocket.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(vaccom.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(vrapi.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(workthreadpool.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(zip_external_unity.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(zip_helpers.o)
@@ -257,6 +258,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/subscribedfilelistcache.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/subscribedfilemanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/symlink.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/systeminfo.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/tgaloader.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/ugcmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/unified_messages_client.o
@@ -438,6 +440,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/subscribedfilelistcache.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/subscribedfilemanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/symlink.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/systeminfo.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/tgaloader.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/ugcmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/unified_messages_client.o
@@ -864,6 +867,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/symlink.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/sysid.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/systeminfo.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/systeminfo.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/tcpconnection.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/tcpconnection.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/tcphost.cpp
@@ -895,7 +900,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/iterhash.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/misc.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/osrng.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/pkcspad.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/pubkey.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/pwdbased.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/rsa.h
@@ -1077,7 +1081,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(filters.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(fips140.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(gf2n.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(gfpcrypt.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(gzip.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(hex.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(hmac.o)
@@ -1344,6 +1347,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/math_pfns.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/mathlib.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector4d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_endian.h

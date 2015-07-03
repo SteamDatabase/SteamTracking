@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/webbrowser/webfavorites.css" />
 	</styles>
 
-  <WebFavorites tabindex="auto" selectionpos="auto" oncancel="NavigateTenfootBack()">
+  <WebFavorites tabindex="auto" selectionpos="auto" oncancel="BringMainMenuToTop();">
 
   	<Panel class="TopBar" >
 	  	<Panel id="ControlBar" >

@@ -8,7 +8,7 @@
 	<StorePanel defaultfocus="FeaturedCapsules" hittest="false">
 		<Panel id="FrontPage" hittest="false">
 			<Panel id="FilteredStoreWrapper" tabindex="0" selectionpos="0,0" hittest="false">
-				<StoreFilterSelector id="StoreFilter" onmoveup="ShowMainMenu();" tabindex="0" selectionpos="0,0" />
+				<StoreFilterSelector id="StoreFilter" tabindex="0" selectionpos="0,0" />
 				<Panel id="StoreBackgroundWrapper" tabindex="1" selectionpos="0,1" hittest="false">
 					<Panel id="StoreBackground" class="StoreBackgroundBaseVisible" hittest="false">
 						<Carousel id="FeaturedCapsules" focus="center" wrap="true" onmoveup="FeaturedCapsulesMoveUp()" selectionposboundary="vertical"

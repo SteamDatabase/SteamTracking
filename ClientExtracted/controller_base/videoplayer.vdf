@@ -1,0 +1,125 @@
+"controller_mappings"
+{
+    "version" "2"
+    "game" "Steam Video Player"
+
+	"group"
+	{
+		"id"		"0"
+		"mode"		"four_buttons"
+		"bindings"
+		{
+			"button_A"		"key_press A"
+			"button_B"		"key_press B"
+			"button_X"		"key_press X"
+			"button_Y"		"key_press Y"
+		}
+	}
+
+	"group"
+	{
+		"id"		"1"
+		"mode"		"dpad"
+		"bindings"
+		{
+			"dpad_north"		"key_press UP_ARROW"
+			"dpad_south"		"key_press DOWN_ARROW"
+			"dpad_east"		"key_press RIGHT_ARROW"
+			"dpad_west"		"key_press LEFT_ARROW"
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+			"overlap"		"0"
+			"hold_repeats"		"1"
+			"hold_repeat_inverval"		"500"
+			"deadzone"		"24000"
+			"edge_binding_radius"		"24999"
+		}
+	}
+	"group"
+	{
+		"id"		"2"
+		"mode"		"dpad"
+		"bindings"
+		{
+			"dpad_north"		"key_press UP_ARROW"
+			"dpad_south"		"key_press DOWN_ARROW"
+			"dpad_east"		"key_press RIGHT_ARROW"
+			"dpad_west"		"key_press LEFT_ARROW"
+		}
+		"settings"
+		{
+			"requires_click"		"1"
+			"overlap"		"0"
+			"hold_repeats"		"1"
+			"hold_repeat_inverval"		"500"
+			"edge_binding_radius"		"24999"
+		}
+	}
+	"group"
+	{
+		"id"		"3"
+		"mode"		"scrollwheel"
+		"bindings"
+		{
+			"scroll_clockwise"		"mouse_wheel SCROLL_UP"
+			"scroll_counterclockwise"	"mouse_wheel SCROLL_DOWN"
+		}
+	}
+	"group"
+	{
+		"id"		"4"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"key_press J, Skip -15s"
+		}
+		"settings"
+		{
+			"output_trigger"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"5"
+		"mode"		"trigger"
+		"bindings"
+		{
+			"click"		"key_press K, Skip +15s"
+		}
+		"settings"
+		{
+			"output_trigger"		"2"
+		}
+	}
+
+	"group_source_bindings"
+	{
+		"0"		"button_diamond active"
+		"1"		"joystick active"
+		"2"		"left_trackpad active"
+		"3"		"right_trackpad active"
+		"4"		"left_trigger active"
+		"5"		"right_trigger active"
+	}
+	"switch_bindings"
+	{
+		"bindings"
+		{
+			"button_menu"		"key_press Q, Stop"
+			"button_escape"		"key_press SPACE, Play / Pause"
+			"button_back_left"	"key_press H, Skip -5m"
+			"button_back_right"	"key_press L, Skip +5m"
+			"left_bumper"		"key_press J, Skip -15s"
+			"right_bumper"		"key_press K, Skip +15s"
+			
+
+		}
+	}
+	"settings"
+	{
+		"left_trackpad_mode"		"0"
+		"right_trackpad_mode"		"0"
+	}
+}

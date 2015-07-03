@@ -2546,6 +2546,7 @@
  T CNetPacket::Release()
  T CNetPacket::ReplaceData(unsigned char*, unsigned int)
  T CNetPacket::~CNetPacket()
+ T CNumStr::CNumStr(double)
  T CONF_dump_bio
  T CONF_dump_fp
  T CONF_free
@@ -3143,7 +3144,6 @@
  T CUniformRandomStream::RandomInt(int, int)
  T CUniformRandomStream::SetSeed(int)
  T CUtlAllocation::Copy(void const*, int)
- T CUtlAllocation::Purge()
  T CUtlAllocation::~CUtlAllocation()
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
@@ -3591,6 +3591,7 @@
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
+ T CUtlStringBuilder::Truncate(unsigned long)
  T CUtlStringWrap::CUtlStringWrap(char const*)
  T CUtlSymbolTable::RemoveAll()
  T CUtlSymbolTable::~CUtlSymbolTable()
@@ -3869,10 +3870,10 @@
  T CVideoDecoder::CQueuedOutput::YPlane() const
  T CVideoDecoder::CQueuedOutput::YStride() const
  T CVideoDecoder::CQueuedOutput::~CQueuedOutput()
+ T CVideoDecoder::CVideoDecoder()
  T CVideoDecoder::FlushDecoder()
  T CVideoDecoder::FreeDecodedFrame(IVideoYUVFrame*)
- T CVideoDecoder::GetDecodedFrame(IVideoYUVFrame**, long long*)
- T CVideoDecoder::IsDecodedFrameAvailable()
+ T CVideoDecoder::GetDecodedFrame(long long*)
  T CVideoDecoder::~CVideoDecoder()
  T CVideoDecoderLibav::BAtEndOfStream()
  T CVideoDecoderLibav::BDecodeAudio(CUtlBuffer*, long long*, AVPacket&)

@@ -4,7 +4,8 @@
 		<include src="file://{resources}/styles/library/screenshotbrowser.css" />
 	</styles>
 	
-	<ScreenshotBrowser onmoveup="CloseScreenshotBrowser( true )" oncancel="CloseScreenshotBrowser( false )">
+	<ScreenshotBrowser oncancel="CloseScreenshotBrowser( false )">
+		<Panel id="AppDetailsClose" onmouseactivate="NavigateTenfootBack();" />
 		<Panel id="Contents">
 			<Panel id="NoScreenshots">
 				<Label text="#Screenshots_NoScreenshots" />

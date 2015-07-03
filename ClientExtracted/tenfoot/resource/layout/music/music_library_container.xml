@@ -16,7 +16,6 @@
 		<Panel id="ContentPanel">		
 			<Carousel id="GridTabs" tabindex="0" selectionpos="0,0" focus="edge" focus-offset="100px" wrap="false" selectionposboundary="vertical" >
 				<Button id="AlbumTitleButton" 
-						onmoveup="ShowLibraryMostRecent();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryAlbumTitlePanel );"
 						onfocus="MusicLibraryActivateAlbumTitleView();"
 						onmouseactivate="MusicLibraryActivateFirstAlbum();"
@@ -25,7 +24,6 @@
 					<Label  text="#Music_Library_AlbumsTitle_Sort" />
 				</Button>
 				<Button id="AlbumButton" 
-						onmoveup="ShowLibraryMostRecent();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryAlbumPanel );"
 						onfocus="MusicLibraryActivateAlbumView();"
 						onmouseactivate="MusicLibraryActivateFirstAlbum();"
@@ -34,7 +32,6 @@
 					<Label  text="#Music_Library_Albums_Sort" />
 				</Button>
 				<Button id="ArtistButton" 
-						onmoveup="ShowLibraryMostRecent();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryArtistPanel );"
 						onfocus="MusicLibraryActivateArtistView();"
 						onmouseactivate="MusicLibraryActivateFirstArtist();"
@@ -43,7 +40,6 @@
 					<Label text="#Music_Library_Artists_Sort" />
 				</Button>
 				<Button id="PlaylistButton" 
-						onmoveup="ShowLibraryMostRecent();"	
 						onmovedown="MusicLibraryActivateGridTabs( MusicLibraryPlaylistPanel );"
 						onfocus="MusicLibraryActivatePlaylistView();"
 						onmouseactivate="MusicLibraryActivateFirstPlaylist();"

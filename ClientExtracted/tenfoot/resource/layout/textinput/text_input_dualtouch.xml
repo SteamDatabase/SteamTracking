@@ -8,7 +8,7 @@
 	<TextInputDualTouch>
 		<Panel id="BodyContainer">
 			
-			<Panel id="Legends" class="DaisyInputTypeABXY ColdLS D0gPad XInputPad">
+			<Panel id="Legends" class="DaisyInputTypeABXY ColdLS">
 				
 				<Label id="ConfigName"/>
 				
@@ -22,20 +22,25 @@
 					<Label id="RB_txt_RS" class="LegendText TriggerButtonText RB_txt" text="#UI_MoveCaretRight" />
 					<Label id="RB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightBumper_Short" />
 				</Panel>
-				<Panel id="LeftLegend" class="LegendButton HiddenFooter">
-					<Label id="LT_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_LeftTrigger_Short" />
-					<Label id="LT_txt" class="LegendText TriggerButtonText" />
+				<Panel id="LeftLegend" class="LegendButton">
+					<Label id="LT_btn" class="LegendButtonBox TriggerButtonBox XInputPadIcon" text="#UI_LeftTrigger_Short" />
+					<Image class="SteamPadIcon" src="file://{images}/controller_legend_left_grip.png" />
+					<Label id="LT_txt" class="LegendText TriggerButtonText" text="#UI_Shift" />
+					<Label id="LG_btn" class="LegendText TriggerButtonText" text="#UI_LeftGrip_Short" />
 				</Panel>
-				<Panel id="RightLegend" class="LegendButton HiddenFooter">
-					<Label id="RT_txt" class="LegendText TriggerButtonText" />
-					<Label id="RT_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightTrigger_Short" />
+				<Panel id="RightLegend" class="LegendButton">
+					<Label id="RT_txt" class="LegendText TriggerButtonText" text="#UI_Alt" />
+					<Image class="SteamPadIcon" src="file://{images}/controller_legend_right_grip.png" />
+					<Label id="RT_btn" class="LegendButtonBox TriggerButtonBox XInputPadIcon" text="#UI_RightTrigger_Short" />
+					<Label id="RG_btn" class="LegendText TriggerButtonText" text="#UI_RightGrip_Short" />
 				</Panel>
 				<Panel id="DPadLegend" class="LegendButton">
+					<Label id="DPad_txt_left" class="LegendText TriggerButtonText" text="#UI_Shift" />
 					<Image class="XInputPad" src="file://{images}/textinput/gamepad_digital_blank.tga" />
 					<Image class="SteamPad" src="file://{images}/textinput/textinput_paddles.png" />
-					<Label id="DPad_txt" class="LegendText TriggerButtonText" text="SHIFT / ALT" />
+					<Label id="DPad_txt_right" class="LegendText TriggerButtonText" text="#UI_Alt" />
 				</Panel>
-				<Panel id="LangLegend" class="LegendButton HiddenFooter">
+				<Panel id="LangLegend" class="LegendButton">
 					<Panel class="LangImage"/>
 					<Label id="Lang_txt" class="LegendText TriggerButtonText" text="#UI_Languages" />
 				</Panel>
@@ -48,38 +53,12 @@
 					<Panel id="ABXY_Footer_Wrapper">
 						<Label id="A_btn" class="LegendButtonBox AButtonBox HiddenFooter" text="#UI_AButton" />
 						<Label id="A_txt" class="LegendText AButtonText HiddenFooter" text="#UI_InputDone" />
-						<Label id="B_btn" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
-						<Label id="B_txt" class="LegendText BButtonText" text="#UI_Dismiss" />
 						<Label id="X_btn" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
-						<Label id="X_txt" class="LegendText XButtonText" text="" />
+						<Label id="X_txt" class="LegendText XButtonText" text="#UI_Submit_Caps" />
 						<Label id="Y_btn" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
 						<Label id="Y_txt" class="LegendText YButtonText" text="" />
 					</Panel>
-					<Panel id="SteamPad_ABXY_Footer_Wrapper">
-						<Panel id="SteamPadFlowRight">
-							<Panel id="SteamPadFlowXY">
-								<Panel id="X_Wrapper" class="X_Wrapper">
-									<Label id="X_txt_s" class="LegendText XButtonText" padevent="pad_x" />
-									<Label id="X_btn_s" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
-								</Panel>
-								<Panel id="Y_Wrapper" class="Y_Wrapper">
-									<Label id="Y_txt_s" class="LegendText YButtonText" padevent="pad_y" />
-									<Label id="Y_btn_s" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
-								</Panel>
-							</Panel>
-							<Panel id="SteamPadFlowCenter" />
-							<Panel id="SteamPadFlowAB">
-								<Panel id="B_Wrapper" class="B_Wrapper">
-									<Label id="B_btn_s" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
-									<Label id="B_txt" class="LegendText BButtonText" text="#UI_Dismiss" />
-								</Panel>
-								<Panel id="A_Wrapper" class="A_Wrapper">
-									<Label id="A_btn_s" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
-									<Label id="A_txt" class="LegendText AButtonText" text="#UI_InputDone" />
-								</Panel>
-							</Panel>
-						</Panel>
-					</Panel>
+
 					
 				</Panel>
 				

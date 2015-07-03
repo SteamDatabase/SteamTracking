@@ -7311,6 +7311,8 @@
  T CNewsItemPanel::GetPanelTopClassName() const
  T CNewsItemPanel::KB_ChainToMap()
  T CNewsItemPanel::~CNewsItemPanel()
+ T CNumStr::CNumStr(double)
+ T CNumStr::CNumStr(unsigned char)
  T COverlayAsyncNotificationsRequestedDialog::COverlayAsyncNotificationsRequestedDialog(unsigned int)
  T COverlayAsyncNotificationsRequestedDialog::ChainToAnimationMap()
  T COverlayAsyncNotificationsRequestedDialog::ChainToMap()

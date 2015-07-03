@@ -1,3 +1,6 @@
+
+@define clientupdatecheckinitialwaittime: 3.0;
+
 OOBEProgress
 {
 	z-index: 1000;
@@ -59,14 +62,14 @@ OOBEProgress
 }
 
 
-#EulaHTML VerticalScrollBar
+#EulaHTML HTMLVerticalScrollBar
 {
 	margin-right: 7px;
 	margin-top: 7px;
 	margin-bottom: 7px;
 }
 
-#EulaHTML:descendantfocus
+HTMLSimpleNavigationWrapper:descendantfocus #EulaHTML
 {
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
@@ -78,35 +81,28 @@ OOBEProgress
 	border-color: white;
 }
 
-#EulaScrollHintXInput,
-#EulaScrollHintSteam
-{
-	visibility: collapse;
-	margin-top: 20px;
-	font-size: 27px;
-	color: white;
-	opacity: 0.8;
-	text-align: right;
-	width: 100%;
-
-	font-family: platformfont;
-}
-
-.XInputPad #EulaScrollHintXInput
-{
-	visibility: visible;
-}
-
-.SteamPad #EulaScrollHintSteam
-{
-	visibility: visible;
-}
-
-
 OOBEDisplayWizardChild.Underscan
 {
 	background-image: url( "file://{images}/settings/underscan1.png" ), url( "file://{images}/settings/underscan2.png" ), url( "file://{images}/settings/underscan3.png" ), url( "file://{images}/settings/underscan4.png" );
 	background-repeat: no-repeat;
 	background-position: left top, right top, right bottom, left bottom;
 	background-size: 100px 100px;
+}
+
+OOBEControllerWelcomeWizardChild.WizardChild
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+OOBECompleteAndCheckForUpdate.UpdateStatusUnknown .UpdateStatusUnknown,
+OOBECompleteAndCheckForUpdate.ClientUpdateAvailable .UpdateAvailable,
+OOBECompleteAndCheckForUpdate.ClientIsCurrent .UpdateCurrent
+{
+	visibility: visible;
+}
+
+.ClientUpdateCheckVisibility
+{
+	visibility: collapse;
 }

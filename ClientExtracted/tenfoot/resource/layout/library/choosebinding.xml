@@ -172,6 +172,22 @@
 
 		<Panel id="VirtualGamepad" tabindex="auto" selectionpos="100,0">
 			<Panel id="GamepadBoundLayer" />
+			<Panel id="GamepadBoundLayerLT" />
+			<Panel id="GamepadBoundLayerRT" />
+			<Panel id="GamepadBoundLayerLB" />
+			<Panel id="GamepadBoundLayerRB" />
+			<Panel id="GamepadBoundLayerLS" />
+			<Panel id="GamepadBoundLayerRS" />
+			<Panel id="GamepadBoundLayerBK" />
+			<Panel id="GamepadBoundLayerST" />
+			<Panel id="GamepadBoundLayerA" />
+			<Panel id="GamepadBoundLayerB" />
+			<Panel id="GamepadBoundLayerX" />
+			<Panel id="GamepadBoundLayerY" />
+			<Panel id="GamepadBoundLayerDPDN" />
+			<Panel id="GamepadBoundLayerDPUP" />
+			<Panel id="GamepadBoundLayerDPLT" />
+			<Panel id="GamepadBoundLayerDPRT" />			
 			<Panel id="GamepadFocusLayer" />
 
 			<Panel id="GamepadRowWrapper">

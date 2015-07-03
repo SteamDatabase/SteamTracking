@@ -2623,6 +2623,7 @@
  T icu_52::NumberingSystem::setName(char const*)
  T icu_52::NumberingSystem::setRadix(int)
  T icu_52::NumberingSystem::~NumberingSystem()
+ T icu_52::NumeratorSubstitution::NumeratorSubstitution(int, double, icu_52::NFRuleSet const*, icu_52::RuleBasedNumberFormat const*, icu_52::UnicodeString const&, UErrorCode&)
  T icu_52::NumeratorSubstitution::calcUpperBound(double) const
  T icu_52::NumeratorSubstitution::composeRuleValue(double, double) const
  T icu_52::NumeratorSubstitution::doParse(icu_52::UnicodeString const&, icu_52::ParsePosition&, double, double, signed char, icu_52::Formattable&) const
@@ -4800,6 +4801,7 @@
  T_CString_integerToString_52
  T_CString_toUpperCase_52
  _DefaultRuneLocale
+ __cxa_bad_typeid
  __cxa_pure_virtual
  __divdi3
  __dynamic_cast
@@ -5934,6 +5936,7 @@
  t icu_52::smpdtfmt_cleanup()
  t icu_52::timeZoneNames_cleanup()
  t icu_52::tmutfmtHashTableValueComparator(UElement, UElement)
+ t icu_52::tokenString(icu_52::tokenType)
  t icu_52::tryGetByKeyWithFallback(UResourceBundle const*, char const*, UResourceBundle**, icu_52::FallbackFlags, UErrorCode&)
  t icu_52::tzfmt_cleanup()
  t icu_52::tzgnCore_cleanup()

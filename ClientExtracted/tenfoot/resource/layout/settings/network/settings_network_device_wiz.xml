@@ -36,6 +36,9 @@
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="Label" text="#WizardButton_Next" />
 			</Button>
+      <Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+				<Label id="Label" text="#WizardButton_Back" />
+			</Button>
 			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
 				<Label id="Label" text="#WizardButton_Cancel" />
 			</Button>

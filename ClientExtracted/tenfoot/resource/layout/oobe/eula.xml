@@ -5,14 +5,14 @@
 		<include src="file://{resources}/styles/oobe/oobe.css" />
 	</styles>
 
-	<OOBEEulaWizardChild class="WizardChild" defaultfocus="EulaHTML" tabindex="auto" selectionpos="auto">
+	<OOBEEulaWizardChild class="WizardChild" defaultfocus="HTMLWrapperInputFocus" tabindex="auto" selectionpos="auto">
 
 		<Label class="WizardChildTitle" id="EulaTitle" text="#OOBE_Eula_Title" />
 
 		<Panel class="InputContainerDown GapDown">
-			<HTML id="EulaHTML" embedded="true" />
-			<Label id="EulaScrollHintXInput" text="#Steam_Html_ScrollHintXInput" />
-			<Label id="EulaScrollHintSteam" text="#Steam_Html_ScrollHintSteamPad" />
+      <HTMLSimpleNavigationWrapper id="HTMLWrapperInputFocus" wrappedhtmlid="EulaHTML">
+			  <HTML id="EulaHTML" embedded="true" />
+      </HTMLSimpleNavigationWrapper>
 		</Panel>
 		
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">

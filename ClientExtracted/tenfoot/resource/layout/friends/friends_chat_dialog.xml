@@ -6,8 +6,11 @@
 	</styles>
 	<FriendsChatDialog>
 		<Panel id="FriendsMainBodyRightHeader">
-			<AvatarImage id="FriendPanelImage" class="ChatItemAvatar" />
-			<Label id="ChatWithXLabel" text="#Friends_ChatWith_X" class="FriendsMainBodyRightHeaderText" />
+			<Panel id="AvatarContainer" >
+				<AvatarImage id="FriendPanelImage1" class="ChatItemAvatar" />
+				<AvatarImage id="FriendPanelImage2" class="ChatItemAvatar" />
+			</Panel>
+			<Label id="ChatWithXLabel" text="#Friends_ChatWith_X" class="FriendsMainBodyRightHeaderText ChatWithXLabel" />
 			<Panel id="FriendsMainBodyStatusGroup">
 				<Label id="FriendsMainBodyStatusGroupLeft" text="#Friends_Chat_X_IsTyping" />
 				<Label id="FriendsMainBodyStatusGroupRight" text="#Friends_Chat_LastMessage" />
@@ -32,6 +35,7 @@
 				textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 				textinputautocaps="true"
 				textinputdoublespace="true"
+				multiline="true"        
 			/>
 			<Button id="FriendsMainBodyInputSendButton" onactivate="FriendsSendChatMessage();">
 				<Label id="FriendsChatSendButtonLabel" text="#Friends_Chat_Send" />

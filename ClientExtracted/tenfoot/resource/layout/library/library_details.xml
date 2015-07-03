@@ -20,7 +20,7 @@
 				<Label id="GameRequiresLabel" text="#Library_Details_GameRequiresController" />
 			</Panel>
 		</Panel>
-		<Carousel id="ContentsRow" class="ContentsRow" tabindex="0" selectionpos="0,0" focus="center" wrap="false" onmoveup="CloseAppDetails( true );">
+		<Carousel id="ContentsRow" class="ContentsRow" tabindex="0" selectionpos="0,0" focus="center" wrap="false">
 			<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore DetailsDataPanel" tabindex="0" selectionpos="0,0" mousecanactivate="iffocused" />
 			<LibraryController id="Controller" class="Controller DetailsDataPanel" tabindex="1" selectionpos="1,0" mousecanactivate="iffocused" /> 
 			<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel" tabindex="2" selectionpos="2,0" mousecanactivate="iffocused" />

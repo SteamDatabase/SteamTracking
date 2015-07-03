@@ -12,10 +12,9 @@
 				<Label id="Title" class="Title" text="#SteamUI_AddController_Title" />
 			</Panel>
 
-			<Label id="AddController0" class="StdLabelMedBlue" text="#SteamUI_AddController_HowToConnect" />	          
-			<Label id="AddController1" class="StdLabelMedBlue" text="#SteamUI_AddController_HowToPair1" />	          
-			<Label id="AddController2" class="StdLabelMedBlue" text="#SteamUI_AddController_HowToPair2" />
-	
+			<Label id="AddController0" class="StdLabelMedBlue" text="#SteamUI_AddController_HowToPair" />	          
+			   
+				
 			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
 				<Panel id="MsgBoxButtons">
 					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton" onactivate="ButtonCancel();">

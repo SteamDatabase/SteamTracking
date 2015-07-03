@@ -7,7 +7,7 @@
 @define friendsitemsecondaryfocus: gradient( linear, 0% 0%, 100% 100%, from( #caccccff  ), to( #aaacacce ) );
 @define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696aa ), to( #365b7866 ) );
 /* below this number suppress the search box on friends */
-@define friendslisthidesearch: 10;
+@define friendslisthidesearch: 1;
 
 Friends
 {
@@ -85,7 +85,6 @@ Friends.FriendsProfileDetailsVisible #BodyWrapper
 
 Friends.BehindMessageBox.FriendsInputTextEntry #FriendsMainBodyColumnLeft
 {
-
 	transition-property: opacity;
 	transition-duration: 0.5s !immediate;
 	transition-timing-function: ease-in-out;
@@ -104,6 +103,9 @@ FriendsChatDialog
 	margin-left: 5px;
 	height: fit-children;
 	flow-children: down;
+	transition-duration: 0.28s;
+	transition-property: opacity;
+	opacity: 1.0;
 }
 
 FriendsChatDialog.ZeroFriends
@@ -111,106 +113,23 @@ FriendsChatDialog.ZeroFriends
 	opacity: 0.0;
 }
 
-FriendsChatDialog.AnimationRightColumn
+FriendsChatDialog AvatarImage
 {
-	animation-duration: 0.28s;
-	animation-timing-function: linear;
-	animation-iteration-count: 1;
-
+	transition-duration: 0.28s;
 	transition-property: opacity;
-	transition-duration: 0.0s;
-	transition-delay: 0.28s;
-	transition-timing-function: linear;
+	opacity: 0.0;
 }
 
-FriendsChatDialog.AnimationRightColumn.Top
+FriendsChatDialog AvatarImage.AvatarVisible
 {
-	animation-name: right-column-animation-show-from-top;
-}
-
-FriendsChatDialog.AnimationRightColumn.Bottom
-{
-	animation-name: right-column-animation-show-from-bottom;
-}
-
-FriendsChatDialog.AnimationRightColumn.Normal
-{
-	animation-direction: normal;
 	opacity: 1.0;
 }
 
-FriendsChatDialog.AnimationRightColumn.Reverse
-{
-	animation-direction: reverse;
-	opacity: 0.0;
-}
 
 FriendsChatDialog.ClanChatDisabled
 {
+	visibility: collapse;
 	opacity: 0.0;
-}
-
-FriendsChatDialog.ClanChatDisabled.AnimationRightColumn
-{
-	animation-name: none;
-	animation-duration: 0.0s;
-	opacity: 0.0;
-}
-
-@keyframes 'right-column-animation-show-from-top'
-{
-	from
-	{
-		opacity: 0.0;
-// 	transform: translatex( -30px ) translatez( -1000px ) translatey( -300px );
-		blur: gaussian( 7, 7, 2 );
-	}
-
-	50%
-	{
-		opacity: 0.5;
-// 	transform: translatex( -15px ) translatez( -700px ) translatey( -150px );
-		blur: gaussian( 7, 7, 2 );
-	}
-
-	to
-	{
-		opacity: 1.0;
-//	transform: ;
-		blur: none;
-	}
-}
-
-@keyframes 'right-column-animation-show-from-bottom'
-{
-	from
-	{
-		opacity: 0.0;
-		transform: translatex( -30px ) translatey( 930px );
-		blur: gaussian( 7, 7, 2 );
-	}
-
-	10%
-	{
-		opacity: 0.0;
-		transform: translatex( -30px ) translatey( 930px );
-		blur: gaussian( 7, 7, 2 );
-	}
-
-	50%
-	{
-		opacity: 0.5;
-		transform: translatex( -15px ) translatey( 420px );
-		blur: gaussian( 3.5, 3.5, 1 );
-	}
-
-	to
-	{
-		opacity: 1.0;
-		transform-origin: 0% 0% parent-relative;
-		transform: rotatex( 0deg );
-		blur: none;
-	}
 }
 
 #FriendsMainBodyLeftHeader
@@ -599,7 +518,7 @@ FriendsSelfHeader.Golden Label
 	margin-left: 14px;
 	margin-right: 14px;
 	margin-bottom: 4px;
-	width: 280px;
+	width: 260px;
 	opacity-mask: url( "file://{images}/friends/friends_list_item_panel_labels_mask.tga" );
 	vertical-align: bottom;
 	flow-children: down;
@@ -979,14 +898,13 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 #FriendsMainBodyLeftHeaderButtons:descendantfocus .FriendsMainBodyHeaderButton.CurrentSelection
 {
 	background-color: friendstabcurrentselection;
-	border-color: #ffffff00;	
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	border-color: #ffffff00;
 	
 	transition-duration: 0.23s;
 	transition-timing-function: linear;
-	animation-name: main-button-glow-movement-no-fill;
+
+	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
-	animation-delay: 0.4s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
@@ -1002,44 +920,21 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	background-color: friendstab;
 	margin-left: 15px;
 
-	transition-property: background-color, color, box-shadow;
+	transition-property: background-color, color;
 	transition-timing-function: ease-out;
-	transition-duration: 0.23s !immediate;
-}
-
-.FriendsMainBodyHeaderButton.CurrentSelection
-{
-	color: #f2f2f2ff;
-	background-color: friendstabcurrentselection;
-	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
-}
-
-.FriendsMainBodyHeaderButton.CurrentSelection:hover
-{
-	color: #f2f2f2ff;
-	background-color: friendstabcurrentselection;
-	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
-	
 	transition-duration: 0.23s;
-	transition-timing-function: linear;
+}
 
+.FriendsMainBodyHeaderButton.CurrentSelection, .FriendsMainBodyHeaderButton:active
+{
+	color: #f2f2f2ff;
+	background-color: friendstabcurrentselection;
 }
 
 .FriendsMainBodyHeaderButton:hover
 {
-	transition-duration: 0.23s !immediate;
 	color: #f2f2f2ff;
-	background-color: friendstabcurrenthover;
-	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
-	
-}
-
-.FriendsMainBodyHeaderButton:active
-{
-	transition-duration: 0.23s !immediate;
-	color: #f2f2f2ff;
-	background-color: friendstabcurrentselection;
-	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
+	background-color: friendstabcurrenthover;	
 }
 
 .FriendsMainBodyHeaderButton Label
@@ -1079,12 +974,6 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
 }
-
-#FriendsMainBodyGroupsList
-{
-	padding-top: 6px;
-}
-
 
 .MainBodyLeftList
 {
@@ -1730,6 +1619,7 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 {
 	margin-left: 4px;
 	width: 100%;
+	
 }
 
 /* the search text entry in the friends ui */
@@ -1915,6 +1805,7 @@ TextEntry.CurrentSelection Label
 .LeftMainListItem.CommunitySearchEntry #FriendPanelLabels
 {
 	height: 100%;
+	opacity-mask: none;
 }
 
 .LeftMainListItem.CommunitySearchEntry
@@ -1931,8 +1822,11 @@ TextEntry.CurrentSelection Label
 {
 	margin-top: 30px;
 	margin-left: 0px;
-	color: friendsoffline_darkbg;
-	text-overflow: clip;
+	vertical-align: center;
+	color: friendsoffline_solid;
+	text-overflow: ellipsis;
+	white-space: normal;
+	height: 100%;
 }
 
 .LeftMainListItem.CommunitySearchEntry:descendantfocus #FriendPersonaName
@@ -1977,8 +1871,8 @@ LoadingThrobber
 }
 
 
-#Offline,
-#Error
+Friends #Offline,
+Friends #Error
 {
 	opacity: 0.0;
 	width: 100%;
@@ -2004,9 +1898,9 @@ LoadingThrobber
 	opacity: 0.0;
 }
 
-.Offline #Offline,
-.LoadError #Error,
-.LoadError #Error,
+Friends .Offline #Offline,
+Friends .LoadError #Error,
+Friends .LoadError #Error,
 {
 	opacity: 1.0;
 }

@@ -8,6 +8,10 @@
 		<EventBackground id="EventBackground" />
 		<Panel id="BackgroundMovie" />
 		<LoadingThrobber id="BackgroundThrobber" class="Large"/>
-		<Panel id="HomeButton" onmouseactivate="ShowMainMenu();" />
+		<Panel id="HomeButton" >
+			<Panel id="ActualHomeButton" onmouseactivate="GuideButton();" />
+			<Panel id="MouseBackButton" onmouseactivate="NavigateTenfootBack();" />
+		</Panel>
+		
 	</BackgroundVideoPanel>
 </root>

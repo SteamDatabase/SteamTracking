@@ -47,7 +47,8 @@
 	visibility: collapse;
 }
 
-StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible
+StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible,
+.WebBrowserActive #StoreBackground.StoreBackgroundBaseVisible,
 {
 	transition-property: transform, opacity, position, opacity-mask;
 	transition-duration: 0.4s;

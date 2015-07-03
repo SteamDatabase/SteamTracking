@@ -1,0 +1,27 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/library/nocontrollerconfig.css" />
+	</styles>
+
+	<NoControllerConfigSelectedPopup defaultfocus="ButtonGo" tabindex="auto" selectionpos="auto">
+		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion">
+			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
+				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_NoControllerConfigHeader" />
+			</Panel>
+			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
+				<Panel id="MsgBoxDescriptionArea" class="MsgBoxDescriptionArea">
+					<Label id="MsgBoxContents" class="MsgBoxContents" text="#Library_NoControllerConfigDesc" />
+				</Panel>
+			
+				<Panel id="MsgBoxButtons">	
+					<Button id="ButtonGo" class="ButtonOK MsgBoxButton" onactivate="ShowTemplateSelector();">
+						<Label id="OKButtonText" text="#Library_NoControllerConfigLetsGo" />
+					</Button>
+				</Panel>
+			</Panel>
+		</Panel>
+	</NoControllerConfigSelectedPopup>
+</root>

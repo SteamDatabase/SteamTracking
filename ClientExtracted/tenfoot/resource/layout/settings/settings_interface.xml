@@ -18,6 +18,7 @@
 					<ToggleButton class="CheckBox SteamOSButton" id="SettingsSteamOS_EnableDesktop" text="#SettingsSteamOS_EnableDesktop" onactivate="ToggleInterfaceSetting()"/>
 					<ToggleButton class="CheckBox NonSteamOSButton" id="SettingsAccount_BPM" text="#SettingsAccount_StartBPM"  onactivate="ToggleInterfaceSetting()" />
 					<ToggleButton class="CheckBox" id="SettingsInterface_EnableScreenSaver" text="#SettingsInterface_EnableScreenSaver"  onactivate="ToggleInterfaceSetting()" />
+					<ToggleButton class="CheckBox" id="Settings_OfflineModeShortcutsEnable" text="#SettingsInterface_OfflineModeShortcutsEnable"  onactivate="ToggleInterfaceSetting()" />
 				
 					<Panel id="SearchProviderContainer">
 						<Label class="SettingsCallout LongDesc" text="#SettingsInterface_SearchProvider" />

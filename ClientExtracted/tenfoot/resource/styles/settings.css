@@ -98,7 +98,7 @@ SettingsPanel
 	margin: 14px 0px 7px 16px;
 }
 
-#Settings:descendantfocus
+#Settings:descendantfocus, .WebBrowserActive #Settings.SectionVisible
 {
 	opacity: 1.0;
 	pre-transform-scale2d: 1.0;
@@ -581,6 +581,8 @@ RadioButton Label
 	flow-children: right;
 	margin-bottom: 12px;
 	margin-top: 8px;
+	width: 100%;
+	margin-right: 10px;
 }
 
 AvatarImage
@@ -717,11 +719,6 @@ DropDown Label
 #ContinentsDropDownMenu,#CountriesDropDownMenu,#RegionsDropDownMenu
 {
 	height: fit-children;
-}
-
-.TimeZoneDropDown
-{
-	margin-bottom: 20px;
 }
 
 .OOBE #ApplyButton
@@ -1082,7 +1079,11 @@ NetworkSettings_AvailableSSID:hover .NetworkName
 	horizontal-align: right;
 }
 
-.NetworkThrobberHide,
+.NetworkConnectionComplete .NetworkThrobber
+{
+	opacity: 0.0;
+}
+
 .NetworkCustomIPSettings_disabled
 {
 	opacity: 0.0;
@@ -1096,7 +1097,7 @@ NetworkSettings_AvailableSSID:hover .NetworkName
 {	
 }
 
- .NetworkName
+.NetworkName
 {
 	font-size: 24px;
 	font-family: platformfont;
@@ -3275,7 +3276,8 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	margin-left: 75px;
 }
 
-#LanguageList
+#LanguageList,
+#RegionsList
 {
 	padding-left: 5px;
 	padding-right: 5px;
@@ -3291,17 +3293,26 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
 }
 
-.SettingsContained #LanguageList
+#RegionsList
+{
+	min-width: 500px;
+	width: fit-children;
+}
+
+.SettingsContained #LanguageList,
+.SettingsContained #RegionsList
 {
 	height: 500px;
 }
 
-#LanguageList:descendantfocus
+#LanguageList:descendantfocus,
+#RegionsList:descendantfocus
 {
 	opacity: 1.0;
 }
 
-#LanguageList Button
+#LanguageList Button,
+TimeZoneRegionPanel Button
 {
 	background-color: none;
 	margin-top: 0px;
@@ -3313,8 +3324,17 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	height: 50px;
 }
 
+TimeZoneRegionPanel Button
+{
+	min-width: 475px;
+	width: fit-children;
+	height: fit-children;
+}
+
 #LanguageList Button:focus,
-#LanguageList Button.SelectedLanguage:focus
+#LanguageList Button.SelectedLanguage:focus,
+TimeZoneRegionPanel Button:focus,
+TimeZoneRegionPanel Button.SelectedRegion:focus
 {
 	border-width: 5px;
 	border-style: solid;
@@ -3330,12 +3350,14 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	animation-direction: normal;
 }
 
-#LanguageList Button.SelectedLanguage
+#LanguageList Button.SelectedLanguage,
+TimeZoneRegionPanel Button.SelectedRegion
 {
 	background-color: blue;
 }
 
-#LanguageList Button Label
+#LanguageList Button Label,
+TimeZoneRegionPanel Button Label
 {
 	vertical-align: center;
 	font-size: 24px;
@@ -3348,19 +3370,23 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	transition-timing-function: ease-in-out;
 }
 
-#LanguageList Button:hover Label
+#LanguageList Button:hover Label,
+TimeZoneRegionPanel Button:hover Label
 {
 	transform: translateX( 5px );
 }
 	
 #LanguageList Button:focus Label,
-#LanguageList Button:selected Label
+#LanguageList Button:selected Label,
+TimeZoneRegionPanel Button:focus Label,
+TimeZoneRegionPanel Button:selected Label
 {
 	color: applabelselectedsolid;	
 	transform: translateX( 5px );
 }
 
-#LanguageList Button.SelectedLanguage Label
+#LanguageList Button.SelectedLanguage Label,
+TimeZoneRegionPanel Button.SelectedRegion Label
 {
 	transform: translateX( 5px );
 }
@@ -3618,9 +3644,22 @@ SettingsPanelDiskManagementAppListing.Deleting Button
 	padding-right: 10px;
 }
 
-OOBENetworkSettingsWizardChild .SettingsBottomPanel
+.OOBE #NetworkForget
 {
-	margin-left: 0px;
-	padding-left: 0px;
-	margin-top: 10px;
+ 	visibility: collapse;
+}
+
+OOBEWizard SettingsPanelNetwork_Device #ButtonBack,
+OOBEWizard SettingsPanelNetwork_Connect #ButtonNext
+{
+	visibility: visible;
+}
+
+SettingsPanelNetwork_Device #ButtonBack,
+OOBEWizard #ButtonCancel,
+OOBEWizard SettingsPanelNetwork_Connect.NetworkConnectionComplete #ButtonBack,
+SettingsPanelNetwork_Connect #ButtonNext,
+OOBEWizard SettingsPanelNetwork_Connect #ButtonDone
+{
+	visibility: collapse;
 }

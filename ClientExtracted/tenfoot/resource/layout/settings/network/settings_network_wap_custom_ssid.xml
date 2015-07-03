@@ -18,7 +18,8 @@
 				class="WizardTextEntry"
 				textinputid="SSID_Other"
 				textinputdoneactionstring="#SettingsNetwork_SSID_Other_DAC"
-				textinputclass="HalfWidth DockRight AppearFromBottomCenter NoCancel"
+				textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads"
+        textinputhidesuggestions="1"
 			/>
 		</Panel>
 

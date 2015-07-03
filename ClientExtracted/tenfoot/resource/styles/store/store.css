@@ -309,7 +309,8 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	animation-direction: normal;
 }
 
-StorePanel:descendantfocus #FeaturedCapsules
+StorePanel:descendantfocus #FeaturedCapsules,
+.WebBrowserActive #FeaturedCapsules
 {
 	perspective-origin: 50% 50%;
 	padding-bottom: 0px;
@@ -738,7 +739,8 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 	desaturation: 0.0;
 }
 
-StorePanel:descendantfocus .StoreImage
+StorePanel:descendantfocus .StoreImage,
+.WebBrowserActive .StoreImage,
 {
 	pre-transform-scale2d: 1.0;
 	margin: -4px -8px;
@@ -1112,7 +1114,8 @@ StoreFeaturedCategory Image
 	desaturation: 0.0;
 }
 
-.Stackable:descendantfocus
+.Stackable:descendantfocus,
+.WebBrowserActive .Stackable
 {
 	transform: translate3d( 0px, 0px, 0px );
 	opacity: 1.0;

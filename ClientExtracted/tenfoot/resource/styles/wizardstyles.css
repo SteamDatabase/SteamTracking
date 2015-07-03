@@ -96,21 +96,6 @@
 	color: white;
 }
 
-.SteamPad .OOBEControllerHintImage
-{
-	background-image: url("file://{images}/steampad_navigationtip.png");
-	background-repeat: no-repeat no-repeat;
-	background-position: left 900px top 220px;
-}
-
-.OOBEControllerHintTitle
-{
-	position: 760px 572px 0px;
-	width: 675px;
-	transform: translateY( 40px );
-	text-align: left;
-}
-
 .OOBEControllerHintBody
 {
 	position: 760px 612px 0px;
@@ -560,11 +545,6 @@ ToggleButton .WizardLabel
 	background-image: url( "file://{images}/browser/reticle_80_80.webm" );
 	background-repeat: no-repeat no-repeat;
 	background-size: 100% 100%;
-}
-
-OOBENetworkSettingsWizardChild SettingsPanel_Network.SettingsSection
-{
-	margin-top: 0px;
 }
 
 

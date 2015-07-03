@@ -7,7 +7,7 @@
 	</styles>
 	
 	<ProfileWrapper defaultfocus="FriendActivityButton">
-		<ProfilePanel id="ProfileMenu" class="ProfilePanel" onmoveup="CloseProfile();" />
+		<ProfilePanel id="ProfileMenu" class="ProfilePanel" />
 		<Label id="SpoofNotice" text="#Community_SpoofNotice" />
 		<ProfilePanel id="Profile" class="ProfilePanel" />
 		<ProfilePanel id="FriendActivity" class="ProfilePanel" />

@@ -79,7 +79,7 @@ ControllerBindingsGordon.ScreenSaverMode
 
 #TopHalfContainer
 {
-	height: 621px;
+	height: 625px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -107,6 +107,12 @@ ControllerBindingsGordon.ScreenSaverMode
 }
 
 .EditJoystickSource #BackgroundController
+{
+	background-position: 535px 79px;
+	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s2.png");
+}
+
+.EditGyroSource #BackgroundController
 {
 	background-position: 535px 79px;
 	background-image: url("file://{images}/library/controller/cropped_controller_config_controller_s2.png");
@@ -174,6 +180,17 @@ ControllerBindingsGordon.ScreenSaverMode
 	flow-children: right;
 }
 
+#GyroModeContainer
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	margin-bottom: 32px;
+	width: 256px;
+	height: 128px;
+	flow-children: down;
+}
+
+
 .ModeWrapper
 {
 	border-radius: 2px;
@@ -184,6 +201,36 @@ ControllerBindingsGordon.ScreenSaverMode
 
 	width: 417px;
 	height: 228px;
+}
+
+.ModeWrapper.Gyro
+{
+	border-radius: 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #0f99bc;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0b2142 ), to( #1e5a78 ) );
+	width: 256px;
+	height: 128px;
+
+}
+
+.ModeWrapper.Gyro #SourceModeBackground
+{
+	background-position: 0px 0px;
+
+    background-size: contain;
+}
+
+.ModeWrapper.Gyro #SourceModeLines
+{
+	background-image: none;
+    visibility: collapse;
+}
+
+.ModeWrapper.Gyro #BindingLabel
+{
+	visibility: collapse;
 }
 
 .ModeWrapper:focus
@@ -493,14 +540,14 @@ ControllerPropertiesMode
 	transform: translatey( 0px );
 }
 
-#ModeContainer
+#ModeContainer, #GyroModeContainer
 {
 	transition-property: opacity;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
 }
 
-.BottomPanelVisible #ModeContainer
+.BottomPanelVisible #ModeContainer, #GyroModeContrainer
 {
 	transition-duration: 0.1s;
 	opacity: 0.0;
@@ -904,6 +951,14 @@ ControllerBindingButton.Glyph.HomeBindingGlyph #BindingLabel
 	background-image: url("file://{images}/library/controller/glyph_input_kb_home.png");
 }
 
+ControllerBindingButton.Glyph.MultiBindingGlyph #BindingLabel
+{
+	width: 100%;
+	height: 100%;
+	background-image: url("file://{images}/library/controller/glyph_input_multi.png");
+}
+
+
 Slider:Selected
 {
 	//temporary until we decide how to visually handle focus
@@ -1067,6 +1122,56 @@ Slider:Selected
 	visibility: visible;
 }
 
+.ModeJoystickMoveVisible .JoystickMoveMode.Gyro
+{
+	visibility: collapse;
+}
+
+.ModeJoystickMoveVisible .JoystickMoveMode.Gyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickMoveVisible.GyroSource .JoystickMoveMode.Gyro
+{
+	visibility: collapse;
+}
+
+.ModeJoystickMoveVisible.GyroSource.AdvancedPropertiesVisible .JoystickMoveMode.Gyro.Advanced
+{
+	visibility: visible;
+}
+
+.ModeJoystickMoveVisible .JoystickMoveMode.NoGyro
+{
+	visibility: visible;
+}
+
+.ModeJoystickMoveVisible.GyroSource .JoystickMoveMode.NoGyro
+{
+	visibility: collapse;
+}
+
+.ModeJoystickMoveVisible .JoystickMoveMode.NoGyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode.NoGyro.Advanced
+{
+	visibility: visible;
+}
+
+.ModeJoystickMoveVisible.AdvancedPropertiesVisible.GyroSource .JoystickMoveMode.NoGyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickMoveVisible.AdvancedPropertiesVisible .JoystickMoveMode.NoGyro
+{
+	visibility: collapse;
+}
+
 .JoystickCameraMode
 {
 	visibility: collapse;
@@ -1115,6 +1220,57 @@ Slider:Selected
 .ModeAbsMouseVisible.AdvancedPropertiesVisible .MouseMode.Advanced
 {
 	visibility: visible;
+}
+
+.ModeAbsMouseVisible .MouseMode.Gyro
+{
+	visibility: collapse;
+}
+
+.ModeAbsMouseVisible .MouseMode.Gyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeAbsMouseVisible.GyroSource .MouseMode.Gyro
+{
+	visibility: collapse;
+}
+
+.ModeAbsMouseVisible.GyroSource.AdvancedPropertiesVisible .MouseMode.Gyro.Advanced
+{
+	visibility: visible;
+}
+
+
+.ModeAbsMouseVisible .MouseMode.NoGyro
+{
+	visibility: visible;
+}
+
+.ModeAbsMouseVisible.GyroSource .MouseMode.NoGyro
+{
+	visibility: collapse;
+}
+
+.ModeAbsMouseVisible .MouseMode.NoGyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeAbsMouseVisible.AdvancedPropertiesVisible .MouseMode.NoGyro.Advanced
+{
+	visibility: visible;
+}
+
+.ModeAbsMouseVisible.AdvancedPropertiesVisible.GyroSource .MouseMode.NoGyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeAbsMouseVisible.AdvancedPropertiesVisible .MouseMode.NoGyro
+{
+	visibility: collapse;
 }
 
 .RelMouseMode
@@ -1859,7 +2015,11 @@ ChooseBinding #VirtualGamepad
 	margin-left: -88px;
 }
 
-ChooseBinding #GamepadBoundLayer, ChooseBinding #GamepadFocusLayer
+ChooseBinding #GamepadBoundLayer, ChooseBinding #GamepadFocusLayer,
+ChooseBinding #GamepadBoundLayerLT, ChooseBinding #GamepadBoundLayerRT, ChooseBinding #GamepadBoundLayerLB, ChooseBinding #GamepadBoundLayerRB,
+ChooseBinding #GamepadBoundLayerLS, ChooseBinding #GamepadBoundLayerRS, ChooseBinding #GamepadBoundLayerBK, ChooseBinding #GamepadBoundLayerST,
+ChooseBinding #GamepadBoundLayerA, ChooseBinding #GamepadBoundLayerB, ChooseBinding #GamepadBoundLayerX, ChooseBinding #GamepadBoundLayerY,
+ChooseBinding #GamepadBoundLayerDPUP, ChooseBinding #GamepadBoundLayerDPDN, ChooseBinding #GamepadBoundLayerDPLT, ChooseBinding #GamepadBoundLayerDPRT
 {
 	width: 100%;
 	height: 100%;
@@ -1963,6 +2123,103 @@ ChooseBinding.DpadRightBound #GamepadBoundLayer
 	background-position: 197px 265px;
 	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_active_dp_rt.png" ); 
 }
+
+ChooseBinding.LeftTriggerMultiBound #GamepadBoundLayerLT
+{
+	background-position: 103px 22px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_lt.png" ); 
+}
+
+ChooseBinding.RightTriggerMultiBound #GamepadBoundLayerRT
+{
+	background-position: 345px 22px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_rt.png" ); 
+}
+
+ChooseBinding.LeftShoulderMultiBound #GamepadBoundLayerLB
+{
+	background-position: 98px 29px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_lb.png" ); 
+}
+
+ChooseBinding.RightShoulderMultiBound #GamepadBoundLayerRB
+{
+	background-position: 321px 29px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_rb.png" ); 
+}
+
+ChooseBinding.LeftJoystickMultiBound #GamepadBoundLayerLS
+{
+	background-position: 110px 91px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_ls.png" ); 
+}
+
+ChooseBinding.RightJoystickMultiBound #GamepadBoundLayerRS
+{
+	background-position: 284px 162px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_rs.png" ); 
+}
+
+ChooseBinding.SelectButtonMultiBound #GamepadBoundLayerBK
+{
+	background-position: 186px 106px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_back.png" ); 
+}
+
+ChooseBinding.StartButtonMultiBound #GamepadBoundLayerST
+{
+	background-position: 259px 106px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_start.png" ); 
+}
+
+ChooseBinding.AButtonMultiBound #GamepadBoundLayerA
+{
+	background-position: 339px 127px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_a.png" ); 
+}
+
+ChooseBinding.BButtonMultiBound #GamepadBoundLayerB
+{
+	background-position: 364px 103px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_b.png" ); 
+}
+
+ChooseBinding.XButtonMultiBound #GamepadBoundLayerX
+{
+	background-position: 314px 102px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_x.png" ); 
+}
+
+ChooseBinding.YButtonMultiBound #GamepadBoundLayerY
+{
+	background-position: 339px 78px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_y.png" ); 
+}
+
+ChooseBinding.DpadUpMultiBound #GamepadBoundLayerDPUP
+{
+	background-position: 184px 250px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_dp_up.png" ); 
+}
+
+ChooseBinding.DpadDownMultiBound #GamepadBoundLayerDPDN
+{
+	background-position: 184px 278px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_dp_dn.png" ); 
+}
+
+ChooseBinding.DpadLeftMultiBound #GamepadBoundLayerDPLT
+{
+	background-position: 169px 265px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_dp_lt.png" ); 
+}
+
+ChooseBinding.DpadRightMultiBound #GamepadBoundLayerDPRT
+{
+	background-position: 197px 265px;
+	background-image: url( "file://{images}/library/controller/cropped_binding_gamepad_multi_dp_rt.png" ); 
+}
+
 
 ChooseBinding.LeftTriggerFocus #GamepadFocusLayer
 {

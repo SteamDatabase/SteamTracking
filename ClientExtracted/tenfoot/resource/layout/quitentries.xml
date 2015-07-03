@@ -10,50 +10,50 @@
 		<Button class="StreamingVisible SystemButton" onactivate="StopStreaming()" selectionpos="10,0">
 			<Label text="#Quit_StopStreaming" />
 		</Button>
-		<Button id="SwitchToHDMIInput" class="SystemButton StreamingHidden ExitButtons" onactivate="SwitchToHDMIInput()" selectionpos="10,1">
+		<Button id="QuitExitGame" class="SystemButton" onactivate="AskAboutAppKill()" selectionpos="10,1">
+			<Label text="#Quit_ExitGame" />
+		</Button>
+		<Button id="SwitchToHDMIInput" class="SystemButton StreamingHidden ExitButtons" onactivate="SwitchToHDMIInput()" selectionpos="10,2">
 			<Label text="#Quit_SwitchToHDMIInput" />
 		</Button>
-		<Button id="QuitBigPicture" class="SystemButton NotLoggedInHidden StreamingHidden ExitButtons" onactivate="QuitApp()" selectionpos="10,2">
+		<Button id="QuitBigPicture" class="SystemButton NotLoggedInHidden ExitButtons" onactivate="QuitApp()" selectionpos="10,3">
 			<Label id="QuitBigPictureLabel" text="#Quit_ExitBigPicture" />
 		</Button>
-		<Button class="SystemButton StreamingHidden ExitButtons" onactivate="ExitSteam()" selectionpos="10,3">
+		<Button id="QuitExitSteam" class="SystemButton StreamingHidden ExitButtons" onactivate="ExitSteam()" selectionpos="10,4">
 			<Label text="#Quit_ExitSteam" />
 		</Button>
-		<Button id="TurnControllerOff" class="ControllerActiveVisible SystemButton" onactivate="TurnOffActiveController()" selectionpos="10,4">
+		<Button id="TurnControllerOff" class="ControllerActiveVisible SystemButton" onactivate="TurnOffActiveController()" selectionpos="10,5">
 			<Label text="#Quit_TurnOffController" />
 		</Button>
 		
-		<Panel class="HorizontalRule" />
+		<Panel class="HorizontalRule StreamingHidden" />
 
-		<Button id="ZeroTracker" class="SystemButton ExitButtons" onactivate="ZeroTracker()" selectionpos="10,5">
+		<Button id="ZeroTracker" class="SystemButton ExitButtons" onactivate="ZeroTracker()" selectionpos="10,6">
 			<Label text="#Quit_ZeroTracker" />
 		</Button>
 
-		<Button class="SystemButton NotLoggedInHidden" onactivate="ShowSettingsFromQuitEntries();" selectionpos="10,6">
-			<Label text="#Quit_Settings" />
-		</Button>
-		
-		<Button class="SystemButton NotLoggedInHidden" onactivate="ChangeUser()" selectionpos="10,7">
+		<!-- Changing user restarts Steam and we don't allow streaming until you're logged in, so don't show this option while streaming -->
+		<Button id="QuitChangeUser" class="SystemButton NotLoggedInHidden StreamingHidden" onactivate="ChangeUser()" selectionpos="10,7">
 			<Label text="#Quit_ChangeUser" />
 		</Button>
 		
-		<Button class="SystemButton OfflineMode GoOffline" onactivate="GoOffline()" selectionpos="10,8">
+		<Button id="QuitGoOffline" class="SystemButton OfflineMode GoOffline" onactivate="GoOffline()" selectionpos="10,8">
 			<Label text="#Quit_GoOffline" />
 		</Button>
 
-		<Button class="SystemButton OfflineMode GoOnline" onactivate="GoOnline()" selectionpos="10,9">
+		<Button id="QuitGoOnline" class="SystemButton OfflineMode GoOnline" onactivate="GoOnline()" selectionpos="10,9">
 			<Label text="#Quit_GoOnline" />
 		</Button>
 
-		<Panel class="HorizontalRule StreamingHidden NotLoggedInHidden" />
+		<Panel class="HorizontalRule NotLoggedInHidden" />
 
-		<Button class="SystemButton System SystemCanShutdown StreamingHidden" onactivate="CloseModalDialog(); AsyncEvent( 0.5, ShutdownMachine() )" selectionpos="10,10">
+		<Button id="QuitShutdown" class="SystemButton System SystemCanShutdown" onactivate="CloseModalDialog(); AsyncEvent( 0.5, ShutdownMachine() )" selectionpos="10,10">
 			<Label text="#Quit_Shutdown" />
 		</Button>
-		<Button class="SystemButton System SystemCanRestart StreamingHidden" onactivate="CloseModalDialog(); AsyncEvent( 0.5, RestartMachine() )" selectionpos="10,11">
+		<Button id="QuitRestart" class="SystemButton System SystemCanRestart" onactivate="CloseModalDialog(); AsyncEvent( 0.5, RestartMachine() )" selectionpos="10,11">
 			<Label text="#Quit_Restart" />
 		</Button>
-		<Button class="SystemButton System SystemCanSuspend StreamingHidden" onactivate="CloseModalDialog(); AsyncEvent( 0.5, SuspendMachine() )" selectionpos="10,12">
+		<Button id="QuitSleep" class="SystemButton System SystemCanSuspend" onactivate="CloseModalDialog(); AsyncEvent( 0.5, SuspendMachine() )" selectionpos="10,12">
 			<Label text="#Quit_Sleep" />
 		</Button>
 	</QuitEntriesPanel>

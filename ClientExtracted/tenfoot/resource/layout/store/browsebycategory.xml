@@ -10,7 +10,7 @@
 		</Panel>
 		<Panel id="Contents" tabindex="0" selectionpos="0,1">
 			<Panel class="TitleRow" tabindex="0" selectionpos="0,0" >
-				<StoreFilterSelector id="Filter" onmoveup="StoreRemoveFromStack();" tabindex="0" selectionpos="0,0" />
+				<StoreFilterSelector id="Filter" tabindex="0" selectionpos="0,0" />
 				<Label id="CategoryTitle" text="#Store_BrowseByCategory_Title" />
 			</Panel>
 			<Carousel id="Tabs" tabindex="1" selectionpos="0,1" focus="edge" focus-offset="105px" wrap="false" selectionposboundary="vertical" onmoveup="BrowseByCategoryTabMoveUp();"/>

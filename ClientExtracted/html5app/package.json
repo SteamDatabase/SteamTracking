@@ -1,0 +1,14 @@
+{
+  "name": "Steam Video Player",
+  "useragent": "VideoPlayer",
+  "main": "steamvideo.html",
+    "window": {
+        "width": 1280,
+        "height": 720,
+        "max_x_res": 1920,
+        "toast_position": "topright",
+        "toast_x_inset": 0,
+        "toast_y_inset": 0
+    },
+    "keybinds" : "keybinds.cfg"
+}

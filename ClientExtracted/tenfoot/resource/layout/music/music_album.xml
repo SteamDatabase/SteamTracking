@@ -7,7 +7,7 @@
 		<include src="file://{resources}/styles/music/music_album.css" />
 	</styles>
 	
-	<MusicAlbumPanel onmoveup="AlbumClose();" hittest="false" >
+	<MusicAlbumPanel hittest="false" >
 		<Image id="GridBackground" class="GridBackground" />
 		<Panel id="UpperRow" class="UpperRow">
 			<Label id="AlbumLabel" class="AlbumLabel" text="#MusicAlbum_Album" />
