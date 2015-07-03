@@ -116,7 +116,7 @@ body
 .loading_throbber
 {
     flow-children: right;
-    margin: 0px auto 40px auto;
+    margin: 0px 337px -20px auto;
     width: 62px;
     height: 62px;
 }
@@ -162,7 +162,7 @@ body
     right: 20px;
     top: 0px;
     bottom: 100px;
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0,0,0,1);
     box-shadow: none;
 
         display: inline-flex;
@@ -180,7 +180,7 @@ body
     right: 0px;
     top: 0px;
     bottom: 0px;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,1);
     z-index: 2;
     display: none;
 }

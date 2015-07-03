@@ -25,6 +25,7 @@ var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, view
 	this.m_strLanguage = strLanguage;
 	this.m_nVideoRestarts = 0;
 	this.m_nViewerSteamID = viewerSteamID;
+	this.m_eUIMode = CDASHPlayerUI.eUIModeDesktop;
 }
 
 CVideoWatch.k_InBrowser = 1;
@@ -32,6 +33,7 @@ CVideoWatch.k_InClient = 2;
 CVideoWatch.k_InOverlay = 3;
 CVideoWatch.k_InOldClient = 4;
 CVideoWatch.k_InHTML5AppWrapper = 5;
+CVideoWatch.k_InHTML5AppWrapperTenFoot = 6;
 
 CVideoWatch.k_MaximumVideoRestarts = 3;
 
@@ -55,6 +57,7 @@ CVideoWatch.prototype.ShowVideoError = function( strError )
 		$J( '#page_loading_text' ).html( strError );
 		$J( '#page_loading_text' ).addClass( 'error' );
 		$J( '#loading_content' ).addClass( 'hide_throbber' );
+		$J( '#loading_content' ).css( 'z-index', '2' );
 	}
 }
 
@@ -133,7 +136,8 @@ CVideoWatch.prototype.Start = function()
 		CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
 
 	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
-	this.m_playerUI = new CDASHPlayerUI( this.m_player );
+	this.m_eUIMode = ( this.m_eClientType == CVideoWatch.k_InHTML5AppWrapperTenFoot ) ? CDASHPlayerUI.eUIModeTenFoot : CDASHPlayerUI.eUIModeDesktop;
+	this.m_playerUI = new CDASHPlayerUI( this.m_player, this.m_eUIMode );
 	this.m_playerUI.SetUniqueSettingsID( this.m_nAppId );
    	this.m_playerUI.Init();
 
@@ -166,7 +170,10 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 	this.m_nVideoRestarts++;
 	if ( this.m_nVideoRestarts > CVideoWatch.k_MaximumVideoRestarts )
 	{
-		this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
+		if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
+		else
+			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br>Press Q or the Back button to Exit.' );
 	}
 	else
 	{
@@ -185,6 +192,7 @@ CVideoWatch.prototype.OnPlayerPlaybackError = function()
 CVideoWatch.prototype.GetVideoDetails = function()
 {
 	$J( '#page_contents' ).addClass( 'loading_video' );
+	$J( '#loading_content' ).css( 'z-index', '0' );
 
 	var _watch = this;
 
@@ -216,13 +224,20 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					_watch.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
 					break;
 				default:
-					_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
+					if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
+					else
+						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' + '<br><br>Error Code: ' + data.error_code );
+					break;
 			}
 		}
 	})
 	.fail( function()
 	{
-		_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a %s>Visit the FAQ</a> for troubleshooting information.' );
+		if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
+		else
+			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' + '<br><br>Error Code: ' + data.error_code );
 	});
 }
 
@@ -269,7 +284,7 @@ CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
 			{
 				if ( this.m_player.GetLanguageForAudioTrack() == strCode )
-					strClosedCaptionCode = CDASHPlayerUI.s_ClosedCaptionsNone;
+					strClosedCaptionCode = CDASHPlayerUI.CLOSED_CAPTIONS_NONE;
 				else
 					strClosedCaptionCode = strCode;
 
@@ -280,9 +295,9 @@ CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 
 	if ( strClosedCaptionCode )
 	{
-		CDASHPlayerUI.SetClosedCaptionLanguageInUI( strClosedCaptionCode );
-		ccRole = endsWith( strClosedCaptionCode, CDASHPlayerUI.s_ClosedCaptionsSelectExt ) ? CVTTCaptionLoader.s_Caption : CVTTCaptionLoader.s_Subtitle;
-		this.m_player.UpdateClosedCaption( strClosedCaptionCode.replace( CDASHPlayerUI.s_ClosedCaptionsSelectExt, '' ), ccRole );
+		this.m_playerUI.SetClosedCaptionLanguageInUI( strClosedCaptionCode );
+		this.m_playerUI.SwitchClosedCaptionLanguageInPlayer( strClosedCaptionCode );
+		this.m_playerUI.SaveClosedCaptionLanguage();
 	}
 }
 
