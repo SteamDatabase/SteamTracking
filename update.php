@@ -247,6 +247,20 @@
 			{
 				$Data = preg_replace( '/\?v=[0-9]+/', '?v=ayyvalve', $Data );
 			}
+			else if( SubStr( $File, 0, 13 ) === 'ItemSchemaURL' )
+			{
+				$Data = JSON_Decode( $Data, true );
+				
+				if( isset( $Data[ 'result' ][ 'items_game_url' ] ) )
+				{
+					$this->URLsToFetch[ ] = Array(
+						'URL'  => $Data[ 'result' ][ 'items_game_url' ],
+						'File' => str_replace( 'ItemSchemaURL', 'ItemSchema', $File )
+					);
+				}
+				
+				return true;
+			}
 			// Unzip it
 			else if( SubStr( $File, -4 ) === '.zip' )
 			{

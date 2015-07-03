@@ -1,0 +1,104 @@
+
+.dmca_notice
+{
+	background-color: #404041;
+	padding: 10px;
+	margin-bottom: 2px;
+	cursor: pointer;
+}
+
+.dmca_notice:hover
+{
+	background-color: #555555;
+}
+
+.dmca_notice_id
+{
+	float: left;
+	min-width: 50px;
+	color: white;
+	font-size: 1.25em;
+	float: left;
+	padding-top: 5px;
+}
+	
+.dmca_notice_legal_name
+{
+	float: left;
+	width: 250px;
+	color: white;
+	font-size: 1.25em;
+	float: left;
+	padding-top: 5px;
+}
+
+.dmca_notice_date_created
+{
+	color: #aaaaaa;
+	float: left;
+	width: 200px;
+	font-size: 12px;
+}
+
+.dmca_notice_status
+{
+	float: left;
+	width: 300px;
+	color: #ca6a0c;
+	font-size: 12px;
+}
+
+.dmca_notice_last_actor
+{
+	float: left;
+}
+
+.dmca_browse_search_parameters
+{
+	position: relative;
+	padding: 4px;
+	color: #d2ff96;
+	background-color: #68932f;
+	border: 2px solid #68932f;
+	margin-bottom: 10px;
+}
+
+.dmca_browse_remove_search_parameter
+{
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.dmca_browse_option
+{
+	position: relative;
+	height: 37px;
+	line-height: 37px;
+}
+
+.dmca_browse_option_content
+{
+	position: relative;
+}
+
+.dmca_browse_option_selected_background {
+	position: absolute;
+	left: -27px;
+	top: 0px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_option_selected.png' );
+	width: 306px;
+	height: 37px;
+	z-index: 0;
+}
+
+.dmca_search_text
+{
+	width: 230px;
+}
+
+.dmca_paging_controls
+{
+	margin-top: 10px;
+}

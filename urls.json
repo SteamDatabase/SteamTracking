@@ -80,6 +80,7 @@
 "Styles/Community/communityhome.css"             : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/communityhome.css?__TIME__",
 "Styles/Community/discussions.css"               : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/discussions.css?__TIME__",
 "Styles/Community/dmca.css"                      : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/dmca.css?__TIME__",
+"Styles/Community/dmca_browse.css"               : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/dmca_browse.css?__TIME__",
 "Styles/Community/dmca_view.css"                 : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/dmca_view.css?__TIME__",
 "Styles/Community/economy.css"                   : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/economy.css?__TIME__",
 "Styles/Community/economy_history.css"           : "https://steamcommunity-a.akamaihd.net/public/css/skin_1/economy_history.css?__TIME__",
@@ -177,7 +178,6 @@
 "Scripts/Store/modal.js"                         : "https://steamstore-a.akamaihd.net/public/javascript/modal.js?__TIME__&l=english",
 "Scripts/Store/news.js"                          : "https://steamstore-a.akamaihd.net/public/javascript/news.js?__TIME__&l=english",
 "Scripts/Store/redeemwalletcode.js"              : "https://steamstore-a.akamaihd.net/public/javascript/redeemwalletcode.js?__TIME__&l=english",
-"Scripts/Store/refundpurchase.js"                : "https://steamstore-a.akamaihd.net/public/javascript/refundpurchase.js?__TIME__&l=english",
 "Scripts/Store/salefunctions.js"                 : "https://steamstore-a.akamaihd.net/public/javascript/promo/salefunctions.js?__TIME__&l=english",
 "Scripts/Store/search.js"                        : "https://steamstore-a.akamaihd.net/public/javascript/search.js?__TIME__&l=english",
 "Scripts/Store/searchpage.js"                    : "https://steamstore-a.akamaihd.net/public/javascript/searchpage.js?__TIME__&l=english",
@@ -327,11 +327,12 @@
 //
 "ItemSchema/CounterStrikeGlobalOffensive.json"   : "https://api.steampowered.com/IEconItems_730/GetSchema/v2/?__KEY__&language=english",
 "ItemSchema/Dota2.json"                          : "https://api.steampowered.com/IEconItems_570/GetSchema/v1/?__KEY__&language=english",
-
-// Disabled while broken
-//"ItemSchema/Dota2Test.json"                      : "https://api.steampowered.com/IEconItems_205790/GetSchema/v1/?__KEY__&language=english",
 "ItemSchema/Portal2.json"                        : "https://api.steampowered.com/IEconItems_620/GetSchema/v1/?__KEY__&language=english",
 "ItemSchema/TeamFortress2.json"                  : "https://api.steampowered.com/IEconItems_440/GetSchema/v1/?__KEY__&language=english",
+
+"ItemSchemaURL/CounterStrikeGlobalOffensive.vdf" : "https://api.steampowered.com/IEconItems_730/GetSchemaURL/v2/?__KEY__&language=english",
+"ItemSchemaURL/Dota2.vdf"                        : "https://api.steampowered.com/IEconItems_570/GetSchemaURL/v1/?__KEY__&language=english",
+"ItemSchemaURL/TeamFortress2.vdf"                : "https://api.steampowered.com/IEconItems_440/GetSchemaURL/v1/?__KEY__&language=english",
 
 //
 // Other
@@ -339,8 +340,6 @@
 "Random/BPEventBackground.xml"                   : "https://store.steampowered.com/api/bpeventbackground/",
 "Random/ControllerFirmware.vdf"                  : "https://steamcdn-a.akamaihd.net/controller_config/firmware/firmware.vdf",
 "Random/NetworkDatagramConfig.json"              : "https://steamcdn-a.akamaihd.net/apps/sdr/network_config.json",
-"Random/Alchemist.txt"                           : "http://repo.steampowered.com/steamos/lists/default_alchemist_main_amd64_Packages",
-"Random/AlchemistNotes.txt"                      : "http://repo.steampowered.com/steamos/log/relnotes.txt",
 "Random/JobPostings.html"                        : "http://valvesoftware.com/jobs/job_postings.html",
 "Random/Publications.html"                       : "http://www.valvesoftware.com/company/publications.html",
 "Random/Security.html"                           : "http://valvesoftware.com/security/",
