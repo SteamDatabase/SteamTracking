@@ -58263,6 +58263,8 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_pistol"
 			"prefab"	"weapon_pistol"
+			"craft_class"	""
+			"craft_material_type"		""
 			"capabilities"
 			{
 				"nameable"		"1"
@@ -59562,6 +59564,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_bat"
 			"prefab"	"weapon_bat"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -59600,6 +59603,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_bottle"
 			"prefab"	"weapon_bottle"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -59638,6 +59642,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_fireaxe"
 			"prefab"	"weapon_fireaxe"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -59675,6 +59680,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_club"
 			"prefab"	"weapon_club"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -59712,6 +59718,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_knife"
 			"prefab"	"weapon_knife"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -59778,6 +59785,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_fists"
 			"prefab"	"weapon_fists"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -59844,6 +59852,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_shovel"
 			"prefab"	"weapon_shovel"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -59882,6 +59891,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_wrench"
 			"prefab"	"weapon_wrench"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -59940,6 +59950,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_bonesaw"
 			"prefab"	"weapon_bonesaw"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -59977,6 +59988,9 @@
 			"name"	"Upgradeable TF_WEAPON_SHOTGUN_PRIMARY"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_shotgun_multiclass"
+			"craft_class"	""
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"xifier_class_remap"	"weapon_shotgun"
@@ -59986,6 +60000,8 @@
 			"name"	"Upgradeable TF_WEAPON_SCATTERGUN"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_scattergun"
+			"craft_class"	""
+			"item_quality"		"unique"
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"visuals"
@@ -60014,6 +60030,8 @@
 			"name"	"Upgradeable TF_WEAPON_SNIPERRIFLE"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_sniperrifle"
+			"craft_class"	""
+			"item_quality"		"unique"
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"visuals"
@@ -60044,6 +60062,8 @@
 			"name"	"Upgradeable TF_WEAPON_MINIGUN"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_minigun"
+			"craft_class"	""
+			"item_quality"		"unique"
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"visuals"
@@ -60072,6 +60092,7 @@
 			"name"	"Upgradeable TF_WEAPON_SMG"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_smg"
+			"craft_class"	""
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"visuals"
@@ -60101,6 +60122,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_syringegun_medic"
 			"prefab"	"weapon_syringegun"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -60139,6 +60161,7 @@
 			"name"	"Upgradeable TF_WEAPON_ROCKETLAUNCHER"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_rocketlauncher"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -60176,6 +60199,8 @@
 			"name"	"Upgradeable TF_WEAPON_GRENADELAUNCHER"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_grenade_launcher"
+			"craft_class"	""
+			"item_quality"		"unique"
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"visuals"
@@ -60204,6 +60229,8 @@
 			"name"	"Upgradeable TF_WEAPON_PIPEBOMBLAUNCHER"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_stickybomb_launcher"
+			"craft_class"	""
+			"item_quality"		"unique"
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"visuals"
@@ -60234,6 +60261,8 @@
 			"name"	"Upgradeable TF_WEAPON_FLAMETHROWER"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_flamethrower"
+			"craft_class"	""
+			"item_quality"		"unique"
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"visuals"
@@ -60262,6 +60291,7 @@
 			"name"	"Upgradeable TF_WEAPON_PISTOL"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_pistol"
+			"craft_class"	""
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 		}
@@ -60270,6 +60300,9 @@
 			"name"	"Upgradeable TF_WEAPON_REVOLVER"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_revolver"
+			"craft_class"	""
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"xifier_class_remap"	"weapon_revolver"
@@ -60279,6 +60312,8 @@
 			"name"	"Upgradeable TF_WEAPON_MEDIGUN"
 			"first_sale_date"	"2010/09/29"
 			"prefab"	"weapon_medigun"
+			"craft_class"	""
+			"item_quality"		"unique"
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
 			"visuals"
@@ -60308,6 +60343,7 @@
 			"first_sale_date"	"2010/09/29"
 			"item_class"	"tf_weapon_invis"
 			"prefab"	"weapon_invis"
+			"craft_class"	""
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -64230,6 +64266,8 @@
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
+			"craft_class"	""
+			"craft_material_type"		""
 			"image_inventory"	"backpack/weapons/c_models/c_ttg_watch/c_ttg_watch"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -64266,6 +64304,8 @@
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
+			"craft_class"	""
+			"craft_material_type"		""
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Minigun"
 			"item_name"	"#TF_Iron_Curtain"
@@ -76649,6 +76689,7 @@
 			"first_sale_date"	"2011/09/07"
 			"prefab"	"weapon_demoman_boots"
 			"show_in_armory"	"1"
+			"propername"	"1"
 			"item_name"		"#TF_Bootlegger"
 			"item_description"	"#TF_Bootlegger_Desc"
 			"min_ilevel"		"10"
@@ -79847,6 +79888,7 @@
 			"first_sale_date"	"2012/02/16"
 			"item_class"	"tf_weapon_knife"
 			"prefab"	"weapon_knife"
+			"craft_class"	""				
 			"craft_material_type"	"weapon"
 			"capabilities"
 			{
@@ -83512,6 +83554,10 @@
 		{
 			"name"			"Deflector"
 			"prefab"		"weapon_minigun"
+			"capabilities"
+			{
+				"can_gift_wrap" 	"0"
+			}
 			"craft_class"	""
 			"baseitem"		"0"
 			"show_in_armory"	"0"
@@ -86635,6 +86681,8 @@
 				"can_craft_count"	"1"
 			}
 			"show_in_armory"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
 			"item_type_name"	"#TF_Weapon_Watch"
 			"item_name"	"#TF_HM_Watch"
 			"item_description"	"#TF_HM_Watch_Desc"
@@ -131257,6 +131305,8 @@
 			"armory_remap"		"Supply Crate"
 			"show_in_armory"	"0"
 			"item_name"		"#TF_SupplyCrate"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"item_description"	"#TF_SupplyCrate_Desc"
 			"image_inventory"	"backpack/player/items/crafting/crate"
 			"attributes"
@@ -131387,6 +131437,8 @@
 			"show_in_armory"	"0"
 			"armory_remap"		"Supply Crate"
 			"item_name"		"#TF_SupplyCrate"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"item_description"	"#TF_SupplyCrate_Desc"
 			"image_inventory"	"backpack/player/items/crafting/crate"
 			"attributes"
@@ -131867,6 +131919,8 @@
 			"armory_remap"		"Supply Crate"
 			"show_in_armory"	"0"
 			"item_name"		"#TF_SupplyCrateRare"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"item_description"	"#TF_SupplyCrateRare_Desc"
 			"image_inventory"	"backpack/player/items/crafting/crate_salvage"
 			"attributes"
@@ -133432,6 +133486,8 @@
 			"item_name"		"#TF_Jul2013Crate_early"
 			"item_description"	"#TF_Jul2013Crate_early_Desc"
 			"image_inventory"	"backpack/crafting/summer_appetizer_crate"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133466,6 +133522,8 @@
 			"item_name"		"#TF_Jul2013Crate_01"
 			"item_description"	"#TF_Jul2013Crate_01_Desc"
 			"image_inventory"	"backpack\player\items\crafting\crate_summer_cooler_01"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133499,6 +133557,8 @@
 			"item_name"		"#TF_Jul2013Crate_02"
 			"item_description"	"#TF_Jul2013Crate_02_Desc"
 			"image_inventory"	"backpack\player\items\crafting\crate_summer_cooler_02"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133532,6 +133592,8 @@
 			"item_name"		"#TF_Jul2013Crate_03"
 			"item_description"	"#TF_Jul2013Crate_03_Desc"
 			"image_inventory"	"backpack\player\items\crafting\crate_summer_cooler_03"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133565,6 +133627,8 @@
 			"item_name"		"#TF_Jul2013Crate_04"
 			"item_description"	"#TF_Jul2013Crate_04_Desc"
 			"image_inventory"	"backpack\player\items\crafting\crate_summer_cooler_04"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133598,6 +133662,8 @@
 			"item_name"		"#TF_Jul2013Crate_05"
 			"item_description"	"#TF_Jul2013Crate_05_Desc"
 			"image_inventory"	"backpack\player\items\crafting\crate_summer_cooler_05"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133631,6 +133697,8 @@
 			"item_name"		"#TF_Jul2013Crate_06"
 			"item_description"	"#TF_Jul2013Crate_06_Desc"
 			"image_inventory"	"backpack\player\items\crafting\crate_summer_cooler_06"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133664,6 +133732,8 @@
 			"item_name"		"#TF_Jul2013Crate_07"
 			"item_description"	"#TF_Jul2013Crate_07_Desc"
 			"image_inventory"	"backpack\player\items\crafting\crate_summer_cooler_07"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133697,6 +133767,8 @@
 			"item_name"		"#TF_Jul2013Crate_08"
 			"item_description"	"#TF_Jul2013Crate_08_Desc"
 			"image_inventory"	"backpack\player\items\crafting\crate_summer_cooler_08"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133897,6 +133969,8 @@
 			"item_name"		"#TF_Fall2013Crate_Acorns"
 			"item_description"	"#TF_Fall2013Crate_Acorns_Desc"
 			"image_inventory"	"backpack/crafting/fall_crate_acorns"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133917,6 +133991,8 @@
 			"item_name"		"#TF_Fall2013Crate_Gourd"
 			"item_description"	"#TF_Fall2013Crate_Gourd_Desc"
 			"image_inventory"	"backpack/crafting/fall_crate_gourd"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -133966,6 +134042,8 @@
 			"item_name"		"#TF_Halloween2013_Crate"
 			"item_description"	"#TF_Halloween2013_Crate_Desc"
 			"image_inventory"	"backpack/player/items/crafting/crate_halloween_02"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 			}
@@ -133995,6 +134073,8 @@
 			"item_name"		"#TF_WinterCrate2013_Naughty"
 			"item_description"	"#TF_WinterCrate2013_Naughty_Desc"
 			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_naughty_2013"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 			}
@@ -134013,6 +134093,8 @@
 			"item_name"		"#TF_WinterCrate2013_Nice"
 			"item_description"	"#TF_WinterCrate2013_Nice_Desc"
 			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_2013"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 			}
@@ -134084,6 +134166,8 @@
 			"item_name"		"#TF_StrongboxCrate"
 			"item_description"	"#TF_StrongboxCrate_Desc"
 			"image_inventory"	"backpack/crafting/strongbox_crate"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -134657,6 +134741,8 @@
 			"item_name"			"#TF_LimitedSummerCrate2014"
 			"item_description"	"#TF_WinterCrate2013_Nice_Desc"
 			"image_inventory"	"backpack/crafting/wading_crate_2"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 			}
@@ -134964,6 +135050,8 @@
 			"item_name"		"#TF_EOTL_Crate"
 			"item_description"	"#TF_EOTL_Crate_Desc"
 			"image_inventory"	"backpack/player/items/crafting/eotl_crate"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 				"decoded by itemdefindex"
@@ -135293,6 +135381,8 @@
 			"item_name"		"#TF_WinterCrate2014_Naughty"
 			"item_description"	"#TF_Crate_MomentoNote_Desc"
 			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_naughty_2014"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 			}
@@ -135310,6 +135400,8 @@
 			"item_name"		"#TF_WinterCrate2014_Nice"
 			"item_description"	"#TF_Crate_MomentoNote_Desc"
 			"image_inventory"	"backpack/player/items/crafting/smissmas_crate_2014"
+			"min_ilevel"	"13"
+			"max_ilevel"	"13"
 			"attributes"
 			{
 			}
