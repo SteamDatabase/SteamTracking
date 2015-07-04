@@ -58347,6 +58347,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"xifier_class_remap"	"TTG Sam Revolver"
 		}
 		"162"
 		{
@@ -62624,6 +62625,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"xifier_class_remap"	"Horseman's Headtaker"
 		}
 
 		"267"
@@ -72244,6 +72246,7 @@
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"xifier_class_remap"	"Nessie's Nine Iron"
 		}
 		"483"
 		{
