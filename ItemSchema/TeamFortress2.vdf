@@ -58323,6 +58323,8 @@
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_name"	"#TF_TTG_SamRevolver"
 			"item_description"	"#TF_TTG_SamRevolver_Desc"
+			"craft_class"	""
+			"craft_material_type"		""
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"item_logname"	"samrevolver"
@@ -60668,6 +60670,11 @@
 					"attribute_class"	"provide_on_active"
 					"value" "1"
 				}
+				"reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time_hidden"
+					"value"	"1.5"
+				}
 				"disable fancy class select anim"
 				{
 					"attribute_class"	"disable_fancy_class_select_anim"
@@ -61521,7 +61528,6 @@
 			"name"	"Duel MiniGame"
 			"prefab"	"valve"
 			"first_sale_date"	"2010/09/29"
-			"loadondemand"	"1"
 			"item_class"	"tf_wearable"
 			"tool"
 			{
@@ -64162,6 +64168,8 @@
 			"model_world"	"models/weapons/w_models/w_ttg_max_gun.mdl"
 			"attach_to_hands"	"1"
 			"item_quality"	"unique"
+			"craft_class"	""
+			"craft_material_type"		""
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
