@@ -1778,11 +1778,13 @@ KeyboardShortcut .Graphic
 .SettingsControllerBindingButton
 {
 	opacity: 0.0;
+	max-height: 0px;
 }
 
 .Joystick .SettingsControllerBindingButton, .Controller .SettingsControllerBindingButton
 {
 	opacity: 1.0;
+	max-height: 100px;
 }
 
 #SettingsControllerLeft

@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
-	<SettingsPanel_GameController class="SettingsSection" defaultfocus="ConfigureButton" >
+	<SettingsPanel_GameController class="SettingsSection" defaultfocus="AddController" >
 		<!-- top header panel -->
 		<Panel class="SettingsHeader">
 			<Label class="SettingsHeaderLegend" text="#Settings_Controller" />
@@ -23,6 +23,9 @@
 					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamControllerVersion" />
 					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamDongleVersion" />
 				</Panel>
+				<Button id="ConfigureButton" class="Button SettingsControllerBindingButton" onactivate="ShowBindingDialog();">
+					<Label class="LongDesc" text="#SettingsController_ConfigureController" />
+				</Button>
 				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();">
 					<Label class="LongDesc" text="#Library_Details_Controller_Add" />
 				</Button>

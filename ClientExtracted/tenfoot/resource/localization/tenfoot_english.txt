@@ -2340,10 +2340,6 @@
 	"Quit_ZeroTracker"			"Center View"
 
 	"OOBE_WelcomeTitle"				"Welcome to Steam"
-	"OOBE_WelcomeNavTutorialSteamPadTitle"	"NAVIGATION TIP"
-	"OOBE_WelcomeNavTutorialSteamPadBody"	"Use the analog stick to navigate and the A button to confirm"
-	"OOBE_WelcomeNavTutorialXInputPadTitle"	"NAVIGATION TIP"
-	"OOBE_WelcomeNavTutorialXInputPadBody"	"Use the left analog stick to navigate and the A button to confirm"
 	"OOBE_LanguageSelect"			"What language should we use?"
 	"OOBE_NetworkSettings_Title"		"Network Settings"
 	"OOBE_NetworkSettings_Description"	"View your basic network information and set up connections"

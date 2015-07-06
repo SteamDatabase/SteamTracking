@@ -30512,7 +30512,6 @@
  T COOBECompleteAndCheckForUpdate::GetPanelType() const
  T COOBECompleteAndCheckForUpdate::OnNavigateTo()
  T COOBECompleteAndCheckForUpdate::OnPollingForSteamClientUpdate(panorama::CPanelPtr<panorama::IUIPanel> const&)
- T COOBECompleteAndCheckForUpdate::OnRestartForClientUpdate()
  T COOBECompleteAndCheckForUpdate::~COOBECompleteAndCheckForUpdate()
  T COOBEControllerWelcomeWizardChild::COOBEControllerWelcomeWizardChild(panorama::CPanel2D*, char const*, CTenfootWizardPanel*)
  T COOBEControllerWelcomeWizardChild::GetPanelType() const
