@@ -176,7 +176,7 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 	if ( bEnableVideo )
 	{
 		this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
-		this.m_playerUI = new CDASHPlayerUI( this.m_player );
+		this.m_playerUI = new CDASHPlayerUI( this.m_player, CDASHPlayerUI.eUIModeDesktop );
 		this.m_playerUI.Init();
 
 		this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_ulViewerSteamID );

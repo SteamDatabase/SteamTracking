@@ -149,7 +149,7 @@
 }
 
 
-.dash_overlay .time {
+.dash_overlay .right_time {
 	color: #9d9d9d;
 	font-size: 12px;
 	line-height: 20px;
@@ -180,7 +180,7 @@
 
 }
 
-.dash_overlay .representation_select
+.modal_panel_wrapper .representation_select
 {
 	margin-right: 10px;
 	font-size: 12px;
@@ -229,17 +229,26 @@
 	background-position: center;
 }
 
-.dash_overlay .settings_panel
+.settings_panel
 {
-	background: rgba(44,43,40,0.95);
-	bottom: 40px;
+	min-width: 230px;
+	min-height: 100px;
+
 	position: absolute;
-	right: 7px;
-	padding: 20px 10px 10px 20px;
-	display: none;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+
+	padding: 20px;
+	background: rgba(44,43,40,0.95);
+
+	font-family: 'Motiva Sans', Arial, sans-serif;
+	text-align: left;
 }
 
-.dash_overlay .settings_label
+.settings_label
 {
 	color: #9d9d9d;
 	font-size: 13px;
@@ -285,10 +294,15 @@
 	opacity: 0.0;
 }
 
-.dash_overlay .representation_video,
-.dash_overlay .representation_audio,
-.dash_overlay .representation_playbackRate,
-.dash_overlay .representation_captions
+.modal_panel_wrapper
+{
+	display: none;
+}
+
+.modal_panel_wrapper .representation_video,
+.modal_panel_wrapper .representation_audio,
+.modal_panel_wrapper .representation_playbackRate,
+.modal_panel_wrapper .representation_captions
 {
 	clear: both;
 	padding-bottom: 10px;
@@ -298,16 +312,15 @@
 
 .dash_overlay .customize_captions
 {
-	color: #9d9d9d;
-	font-size: 12px;
-	text-decoration: underline;
-	margin-right: 10px;
 	cursor: pointer;
-}
-
-.dash_overlay .customize_captions_wrap
-{
-	margin-top: 4px;
+	float: right;
+	font-size: 12px;
+	color: #9d9d9d;
+	border: 0px;
+	padding-top: 2px;
+	line-height: 16px;
+	display: inline-block;
+	width: 28px;
 }
 
 .dash_overlay .customize_captions:hover
@@ -330,17 +343,23 @@
 	padding: 20px;
 	background: rgba(44,43,40,0.95);
 
-	font-family: 'Motiva Sans', Arial, sans-serfif;
+	font-family: 'Motiva Sans', Arial, sans-serif;
 	text-align: left;
-
-	display: none;
 }
 
-.dash_closed_captions_customization .cc_title
+.dash_closed_captions_customization .panel_title
 {
 	font-size: 14px;
 	color: #CCC;
 	padding-bottom: 10px;
+}
+
+.settings_panel .panel_title
+{
+	font-size: 14px;
+	color: #CCC;
+	font-family: 'Motiva Sans', Arial, sans-serif;
+	padding-bottom: 20px;
 }
 
 .dash_closed_captions_customization span
@@ -370,8 +389,8 @@
 	text-align: right;
 }
 
-.dash_closed_captions_customization .cc_done,
-.dash_closed_captions_customization .cc_cancel
+.dash_closed_captions_customization .panel_done,
+.dash_closed_captions_customization .panel_cancel
 {
 	float: right;
 	color: #9d9d9d;
@@ -383,7 +402,17 @@
 	text-align: right;
 }
 
-.dash_closed_captions_customization .cc_cancel
+#settings_panel_wrapper .settings_done
+{
+	float: right;
+	color: #9d9d9d;
+	text-decoration: underline;
+	cursor: pointer;
+	text-align: right;
+	margin-top: 10px;
+}
+
+.dash_closed_captions_customization .panel_cancel
 {
 	float: left;
 	text-align: left;
@@ -391,16 +420,16 @@
 
 .dash_closed_captions_customization .cc_style_instructions
 {
-    padding-left: 2px;
+	padding-left: 2px;
 }
 
 .dash_closed_captions_customization .cc_style_instructions ol
 {
-    padding-left: 19px;
+	padding-left: 19px;
 }
 
-.dash_closed_captions_customization .cc_done:hover,
-.dash_closed_captions_customization .cc_cancel:hover
+.dash_closed_captions_customization .panel_done:hover,
+.dash_closed_captions_customization .panel_cancel:hover
 {
 	color: #CCCCCC;
 }
@@ -479,13 +508,12 @@
 	padding: 2px 5px 1px 5px;
 	position: relative;
 	top: -21px;
-	left: -100px;
 	display: inline-block;
 	pointer: default;
 	font-size: 12px;
 	text-transform: uppercase;
 	white-space: nowrap;
-
+	visibility: hidden;
 }
 
 .dash_overlay .progress_time_info .time_display
@@ -523,6 +551,7 @@
 	top: 0px;
 	pointer: default;
 	display: block;
+	visibility: hidden;
 }
 
 #dash_video_title_banner
@@ -549,24 +578,33 @@
 #dash_video_buffering_message
 {
 	position: absolute;
+	width: 108px;
+	height: 60px;
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
 	-webkit-transform: translateX(-50%) translateY(-50%);
-
-	margin-top: 1px;
-	padding: 20px;
 	background: rgba(44,43,40,0.8);
-	min-width: 150px;
+	border: 1px solid #6f9fc8;
+	padding: 40px;
+	display: none;
 
+	z-index: 100;
+}
+
+#dash_video_buffering_message .loading_text
+{
 	font-family: 'Motiva Sans Light', Arial, Helvetica, sans-serif;
 	font-size: 20px;
-	color: #CCC;
 	line-height: 14px;
 	text-align: center;
-	z-index: 5;
-	display: none;
+	margin-top: 25px;
+}
+
+#dash_video_buffering_message .loading_throbber
+{
+	margin: -20px 17px 0px auto;
 }
 
 .dash_video_live_banner
@@ -603,7 +641,7 @@
 	border: 1px solid #6f9fc8;
 
 	opacity: 0;
-	z-index: 0;
+	z-index: -1;
 }
 
 .dash_big_playpause_indicator.show
@@ -729,4 +767,703 @@
 	padding: 10px;
 	font-size: 12px;
 	line-height: 14px;
+}
+
+
+/* Big Picture / Controller UI */
+
+.tenfoot_dash_overlay
+{
+	position: absolute;
+	height: 200px;
+	width: 768px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_BG_Panel.png' );
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.2s;
+
+	top: 85%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-85%);
+	-ms-transform: translateX(-50%) translateY(-85%);
+	-webkit-transform: translateX(-50%) translateY(-85%);
+
+	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+
+	display: none;
+}
+
+
+.dash_show_player_ui .tenfoot_dash_overlay
+{
+	opacity: 1.0;
+	display: block;
+}
+
+.tenfoot_dash_overlay #dash_video_title_banner
+{
+	position: relative;
+	font-size: 36px;
+	color: #FFF;
+	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	cursor: default;
+	top: 15px;
+	left: 17px;
+	width: 538px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float: left;
+	letter-spacing: -0.4px;
+	text-shadow: inherit;
+}
+
+.tenfoot_dash_overlay .shuttle_controls
+{
+	position: absolute;
+	top: 123px;
+	width: 768px;
+}
+.tenfoot_dash_overlay .play_button
+{
+	width: 92px;
+	height: 91px;
+	cursor: pointer;
+	position: absolute;
+	left: 395px;
+	top: -21px;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.tenfoot_dash_overlay .play_button.play {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Play.png' );
+}
+
+.tenfoot_dash_overlay .play_button.play:hover,
+.tenfoot_dash_overlay .play_button.tenfoot_focus.play {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Play_Over.png' );
+}
+
+.tenfoot_dash_overlay .play_button.pause {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Pause.png' );
+}
+
+.tenfoot_dash_overlay .play_button.pause:hover,
+.tenfoot_dash_overlay .play_button.tenfoot_focus.pause {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Pause_Over.png' );
+}
+
+.tenfoot_dash_overlay .stop_button
+{
+	width: 92px;
+	height: 91px;
+	cursor: pointer;
+	position: absolute;
+	left: 279px;
+	top: -21px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Stop.png' );
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.tenfoot_dash_overlay .stop_button:hover,
+.tenfoot_dash_overlay .stop_button.tenfoot_focus {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Stop_Over.png' );
+}
+
+.tenfoot_dash_overlay .skip_back
+{
+	width: 81px;
+	height: 80px;
+	cursor: pointer;
+	position: absolute;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_SkipBack.png' );
+	background-repeat: no-repeat;
+	background-position: 0;
+	left: 185px;
+	top: -15px;
+	float: left;
+}
+
+.tenfoot_dash_overlay .skip_back:hover,
+.tenfoot_dash_overlay .skip_back.tenfoot_focus
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_SkipBack_Over.png' );
+}
+
+.tenfoot_dash_overlay .skip_fwd
+{
+	width: 81px;
+	height: 80px;
+	cursor: pointer;
+	position: absolute;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_SkipForward.png' );
+	background-repeat: no-repeat;
+	background-position: 0;
+	left: 501px;
+	top: -15px;
+	float: left;
+}
+
+.tenfoot_dash_overlay .skip_fwd:hover,
+.tenfoot_dash_overlay .skip_fwd.tenfoot_focus
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_SkipForward_Over.png' );
+}
+
+.tenfoot_dash_overlay .customize_captions
+{
+	width: 73px;
+	height: 58px;
+	cursor: pointer;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_CC.png' );
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	right: 135px;
+	top: 8px;
+	float: left;
+}
+
+.tenfoot_dash_overlay .customize_captions:hover,
+.tenfoot_dash_overlay .customize_captions.tenfoot_focus
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_CC_Over.png' );
+}
+
+.tenfoot_dash_overlay .player_settings
+{
+	width: 768px;
+	height: 72px;
+}
+
+.tenfoot_dash_overlay .volume_container
+{
+	position: relative;
+	right: 70px;
+	float: right;
+	top: -230px;
+	height: 250px;
+	width: 73px;
+}
+
+.tenfoot_dash_overlay .volume_icon
+{
+	width: 73px;
+	height: 58px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Volume.png' );
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	cursor: pointer;
+	position: absolute;
+	right: 0px;
+	top: 238px;
+	float: left;
+}
+
+.tenfoot_dash_overlay .volume_icon.muted
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_VolumeMute.png' );
+}
+
+.tenfoot_dash_overlay .no_audio_track .volume_icon
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Volume_False.png' );
+	cursor: default;
+}
+
+.tenfoot_dash_overlay .volume_container.tenfoot_focus .volume_icon
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Volume_Over.png' );
+}
+
+.tenfoot_dash_overlay .volume_container.tenfoot_focus .volume_icon.muted
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_VolumeMute_Over.png' );
+}
+
+.tenfoot_dash_overlay .volume_slider {
+	width: 73px;
+	height: 226px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Volume_Well_Focus.png' );
+	position: absolute;
+	display: none;
+}
+
+.tenfoot_dash_overlay .no_audio_track .volume_slider
+{
+	display: none;
+}
+
+.tenfoot_dash_overlay .volume_slider .volume_handle
+{
+	position: relative;
+	width: 31px;
+	height: 30px;
+	left: 20px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Volume_Button.png' );
+	cursor: pointer;
+}
+
+.tenfoot_dash_overlay .settings_icon
+{
+	width: 73px;
+	height: 58px;
+	cursor: pointer;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Settings.png' );
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	right: 5px;
+	top: 8px;
+	float: left;
+}
+
+.tenfoot_dash_overlay .settings_icon:hover,
+.tenfoot_dash_overlay .settings_icon.tenfoot_focus
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Settings_Over.png' );
+}
+
+.tenfoot_dash_overlay .progress_bar_wrapper
+{
+	position: relative;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Timeline_Well.png' );
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 749px;
+	height: 34px;
+	left: 8px;
+}
+
+.tenfoot_dash_overlay .progress_bar_wrapper:hover,
+.tenfoot_dash_overlay .progress_bar_wrapper.tenfoot_focus
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Timeline_Well_Focus.png' );
+}
+
+.tenfoot_dash_overlay .progress_bar_container
+{
+	position: relative;
+	width: 718px;
+	height: 10px;
+	top: 14px;
+	left: 15px;
+}
+
+.tenfoot_dash_overlay .progress_bar_background
+{
+	background-color: #6f9fc8;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	height: 6px;
+}
+
+.tenfoot_dash_overlay .progress_bar
+{
+	background-color: #FFFFFF;
+	position: relative;
+	left: 0px;
+	top: -6px;
+	height: 6px;
+}
+
+.tenfoot_dash_overlay .progress_bar_wrapper:hover .progress_bar,
+.tenfoot_dash_overlay .progress_bar_wrapper.tenfoot_focus .progress_bar
+{
+	background-color: #000000;
+}
+
+.tenfoot_dash_overlay .progress_time_info
+{
+	background-color: #1877a2;
+	position: relative;
+	left: 235px;
+}
+
+.tenfoot_dash_overlay .progress_time_info .time_display
+{
+	position: relative;
+	text-align: center;
+	cursor: default;
+}
+
+.tenfoot_dash_overlay .progress_time_info.thumbnails
+{
+	width: 240px;
+	height: 135px;
+	top: -240px;
+	background-repeat: no-repeat;
+	background-size: auto 134px;
+	border: #1284a9 5px solid;
+	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+	visibility: hidden;
+}
+
+.tenfoot_dash_overlay .progress_time_info.thumbnails .time_display
+{
+	position: absolute;
+	bottom: 5px;
+	left: 65px;
+	right: 65px;
+	padding: 0 5px;
+	font-family: 'Motiva Sans', Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #FFFFFF;
+	background-color: #1284a9;
+}
+
+.tenfoot_dash_overlay .progress_time_bar
+{
+	left: -2000px;
+	width: 3px;
+	height: 20px;
+	background-color: white;
+	box-shadow: 2px 2px 7px #333;
+	position: absolute;
+	top: -7px;
+	cursor: pointer;
+	visibility: hidden;
+}
+
+.tenfoot_dash_overlay .left_time {
+	color: #FFFFFF;
+	font-family: 'Motiva Sans', Arial, sans-serif;
+	font-size: 22px;
+	top: 27px;
+	position: absolute;
+	left: 15px;
+	cursor: default;
+}
+
+.tenfoot_dash_overlay .right_time {
+	color: #FFFFFF;
+	font-family: 'Motiva Sans', Arial, sans-serif;
+	font-size: 22px;
+	top: 27px;
+	position: absolute;
+	right: 15px;
+	cursor: default;
+}
+
+.tenfoot_dash_overlay .video_quality_label
+{
+	float: right;
+	font-family: 'Motiva Sans Light', times, Helvetica, Arial, sans-serif;
+	color: #1877a2;
+	position: absolute;
+	top: 165px;
+	right: 28px;
+	font-size: 18px;
+	cursor: default;
+	text-align: right;
+}
+
+.tenfoot_modal_panel_wrapper
+{
+	min-width: 756px;
+	overflow: hidden;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+
+	display: none;
+}
+
+.tenfoot_modal_panel_wrapper .panel_buttons
+{
+	text-align: center;
+	font-family: 'Motiva Sans Medium', times, Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	text-transform: uppercase;
+	text-shadow: black 2px 2px 4px;
+	margin-top: 15px;
+}
+
+.tenfoot_modal_panel_wrapper .panel_buttons .panel_button
+{
+	margin: 0 auto;
+	display: inline;
+}
+
+.tenfoot_modal_panel_wrapper .panel_buttons .panel_button .button
+{
+	border-radius: 50%;
+	border: 3px solid #FFF;
+	width: 40px;
+	display: inline-block;
+	margin-right: 5px;
+	box-shadow: black 0px 0px 12px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	padding-left: 1px;
+	padding-bottom: 2px;
+}
+
+.tenfoot_modal_panel_wrapper .panel_buttons .panel_button .buttonAction
+{
+	display: inline-block;
+	cursor: default;
+}
+
+.tenfoot_modal_panel_wrapper .panel_buttons .panel_button #buttonA
+{
+	background-color: #008000;
+}
+
+.tenfoot_modal_panel_wrapper .panel_buttons .panel_button #buttonB
+{
+	background-color: red;
+	margin-left: 5px;
+}
+
+.tenfoot_modal_panel_wrapper .panel_buttons .panel_button #buttonX
+{
+	background-color: blue;
+}
+
+.tenfoot_modal_panel_wrapper .panel_buttons .panel_button #buttonY
+{
+	background-color: orange;
+}
+
+.tenfoot_settings_panel
+{
+	border: #1284a9 5px solid;
+	background: -webkit-linear-gradient(-45deg, #126487 0%,#133959 100%);
+	background: linear-gradient(135deg, #126487 0%,#133959 100%); /* W3C */
+	padding: 15px 15px 20px 15px;
+	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+	z-index: 100;
+
+	max-height: 430px;
+}
+
+.tenfoot_settings_panel .panel_title
+{
+	text-transform: uppercase;
+	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-size: 44px;
+}
+
+.tenfoot_settings_panel .settings_label
+{
+	text-transform: uppercase;
+	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	color: #16B9E5;
+	text-align: center;
+	margin: 20px 0 0 0;
+	width: 100%;
+}
+
+.tenfoot_settings_panel .representation_video,
+.tenfoot_settings_panel .representation_audio,
+.tenfoot_settings_panel .representation_playbackRate,
+.tenfoot_settings_panel .representation_captions
+{
+	display: none;
+	clear: both;
+}
+
+.tenfoot_modal_panel_wrapper .panel_select
+ {
+	height: 51px;
+	border: 5px solid transparent;
+ }
+
+.tenfoot_modal_panel_wrapper .panel_select:hover,
+.tenfoot_modal_panel_wrapper .panel_select.tenfoot_focus
+{
+	background-color: #c3c6c9;
+	border: 5px solid #FFFFFF;
+
+}
+
+.tenfoot_modal_panel_wrapper .panel_select.selected
+{
+	display: inline-block;
+}
+
+.tenfoot_modal_panel_wrapper .panel_select .notselected
+{
+	display: none;
+}
+
+.tenfoot_modal_panel_wrapper .panel_select .left_arrow
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Arrow_Left.png' );
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 48px;
+	height: 51px;
+	float: left;
+	cursor: pointer;
+}
+
+.tenfoot_modal_panel_wrapper .panel_select .left_arrow:hover,
+.tenfoot_modal_panel_wrapper .panel_select .left_arrow.tenfoot_focus
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Arrow_Left_Over.png' );
+}
+
+.tenfoot_modal_panel_wrapper .panel_select #representation_select
+{
+	float: left;
+	width: 610px;
+
+	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	color: #FFF;
+	text-align: center;
+	padding-top: 4px;
+}
+
+.tenfoot_dash_closed_captions_customization .panel_select #representation_select
+{
+	width: 600px;
+}
+
+.tenfoot_modal_panel_wrapper .panel_select:hover #representation_select,
+.tenfoot_modal_panel_wrapper .panel_select.tenfoot_focus #representation_select
+{
+	color: #221f20;
+}
+
+.tenfoot_modal_panel_wrapper .panel_select .right_arrow
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Arrow_Right.png' );
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 48px;
+	height: 51px;
+	float: left;
+	cursor: pointer;
+}
+
+.tenfoot_modal_panel_wrapper .panel_select .right_arrow:hover,
+.tenfoot_modal_panel_wrapper .panel_select .right_arrow.tenfoot_focus
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Arrow_Right_Over.png' );
+}
+
+.tenfoot_dash_closed_captions_customization
+{
+	border: #1284a9 5px solid;
+	background: -webkit-linear-gradient(-45deg, #126487 0%,#133959 100%);
+	background: linear-gradient(135deg, #126487 0%,#133959 100%); /* W3C */
+	padding: 15px 15px 20px 15px;
+	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+	z-index: 100;
+
+	max-height: 420px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.tenfoot_dash_closed_captions_customization .panel_title
+{
+	text-transform: uppercase;
+	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-size: 44px;
+}
+
+.tenfoot_dash_closed_captions_customization .settings_label
+{
+	text-transform: uppercase;
+	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	color: #16B9E5;
+	text-align: center;
+	margin: 20px 0 0 0;
+	width: 100%;
+}
+
+.tenfoot_dash_closed_captions_customization .cc_select_wrapper
+{
+	clear: both;
+	padding-bottom: 10px;
+	text-align: right;
+}
+
+.tenfoot_dash_closed_captions_customization .panel_done,
+.tenfoot_dash_closed_captions_customization .panel_cancel
+{
+	float: right;
+	color: #9d9d9d;
+	font-size: 13px;
+	margin-top: 6px;
+	padding: 2px;
+	text-decoration: underline;
+	cursor: pointer;
+	text-align: right;
+}
+
+.tenfoot_dash_closed_captions_customization .panel_cancel
+{
+	float: left;
+	text-align: left;
+}
+
+.tenfoot_dash_closed_captions_customization .cc_style_instructions
+{
+	padding-left: 2px;
+}
+
+.tenfoot_dash_closed_captions_customization .cc_style_instructions ol
+{
+	padding-left: 19px;
+}
+
+.tenfoot_dash_closed_captions_customization .panel_done:hover,
+.tenfoot_dash_closed_captions_customization .panel_cancel:hover
+{
+	color: #CCCCCC;
+}
+
+#tenfoot_dash_video_buffering_message
+{
+	position: absolute;
+	width: 110px;
+	height: 100px;
+
+	top: 45%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+
+
+	border: #1284a9 5px solid;
+	background: -webkit-linear-gradient(-45deg, #126487 0%,#133959 100%);
+	background: linear-gradient(135deg, #126487 0%,#133959 100%); /* W3C */
+	padding: 40px;
+	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+
+	z-index: 100;
+
+	display: none;
+}
+
+#tenfoot_dash_video_buffering_message .loading_text
+{
+	font-family: 'Motiva Sans', Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	text-align: center;
+	margin-top: -20px;
+
+}
+
+#tenfoot_dash_video_buffering_message .loading_throbber
+{
+	margin: 0px 17px 40px auto;
 }
