@@ -306,6 +306,7 @@
  B CInboxMsgBox::m_symbol
  B CInputControllerAttachedMsg::default_instance_
  B CInputControllerDetachedMsg::default_instance_
+ B CInputControllerStateHIDMsg::_default_report_bytes_
  B CInputControllerStateHIDMsg::_default_state_payload_
  B CInputControllerStateHIDMsg::_default_status_payload_
  B CInputControllerStateHIDMsg::default_instance_
@@ -24780,7 +24781,7 @@
  T CGameStreamSession::GetCaptureSliceCount()
  T CGameStreamSession::GetCaptureType()
  T CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
- T CGameStreamSession::OnControllerAttached(unsigned int)
+ T CGameStreamSession::OnControllerAttached(unsigned int, bool, bool)
  T CGameStreamSession::OnControllerDetached(unsigned int)
  T CGameStreamSession::OnControllerHIDReport(unsigned short, unsigned int, unsigned int, unsigned char const*, unsigned int)
  T CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)
@@ -45664,7 +45665,7 @@
  T non-virtual thunk to CGameStreamSession::GetCaptureSliceCount()
  T non-virtual thunk to CGameStreamSession::GetCaptureType()
  T non-virtual thunk to CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
- T non-virtual thunk to CGameStreamSession::OnControllerAttached(unsigned int)
+ T non-virtual thunk to CGameStreamSession::OnControllerAttached(unsigned int, bool, bool)
  T non-virtual thunk to CGameStreamSession::OnControllerDetached(unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerHIDReport(unsigned short, unsigned int, unsigned int, unsigned char const*, unsigned int)
  T non-virtual thunk to CGameStreamSession::OnControllerState(unsigned short, unsigned int, unsigned long long, short, short, short, short, short, short, unsigned short, unsigned short, short, short, short, short, short, short, short, short, short, short, short, unsigned short)

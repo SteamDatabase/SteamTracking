@@ -6,8 +6,8 @@ asdfghjkl
 QWERTYUIOP
 ASDFGHJKL
 'ZXCVBNM:;
-!@#$%^&*()-
-+£€$`"~|#\
+!@#$%^&*()_
++£€$'"~|#\
 {}%^<>[]"
 /\{}()`~/|
 

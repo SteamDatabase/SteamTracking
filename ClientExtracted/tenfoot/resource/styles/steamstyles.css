@@ -1183,18 +1183,10 @@ FriendsChatDialog .VoiceBarContainer
 .ContextMenuBody
 {
 	padding: 20px 5px 20px 5px;
-
 	flow-children: down;
 	width: 350px;
-
 	opacity: 1.0;
-
-	position: 41% 30% 0px;
-
-
-
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
 	color: #000000ff;
 	background-color: dialog_bg_color;
 }
