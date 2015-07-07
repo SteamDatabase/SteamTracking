@@ -2616,7 +2616,7 @@ CDASHPlayerUI.BUTTON_Y = 89;
 
 CDASHPlayerUI.LEFT_GRIP = 72;
 CDASHPlayerUI.LEFT_BUMPER = 74;
-CDASHPlayerUI.QUIT = 81;
+CDASHPlayerUI.BACK = 81;
 CDASHPlayerUI.START = 32;
 CDASHPlayerUI.RIGHT_BUMPER = 75;
 CDASHPlayerUI.RIGHT_GRIP = 76;
@@ -3270,10 +3270,8 @@ CDASHPlayerUI.prototype.TogglePlayPause = function()
 
 CDASHPlayerUI.prototype.StopVideo = function()
 {
-	if ( this.BInTenFoot() )
-	{
+	if ( !this.m_player.BIsLiveContent() )
 		window.close();
-	}
 }
 
 CDASHPlayerUI.prototype.ShowBigPlayPauseIndicator = function( playing )
@@ -3510,6 +3508,9 @@ CDASHPlayerUI.prototype.OnKeyDown = function( e )
 			case 39:	// right arrow - skip forward
 				$J( '.skip_fwd' ).click();
 				break;
+			case 81:	// q - stop / quit / close
+				this.StopVideo();
+				break;
 			default:
 				bHandled = false;
 				break;
@@ -3587,7 +3588,7 @@ CDASHPlayerUI.prototype.OnKeyDownTenFoot = function( e )
 			this.OnSkipTime( CDASHPlayerUI.SKIP_LONG_TIME_SECS );
 			break;
 
-		case CDASHPlayerUI.QUIT:
+		case CDASHPlayerUI.BACK:
 			this.ClickUIElementOnKeyDown( $J( '.stop_button') );
 			break;
 
@@ -3683,7 +3684,15 @@ CDASHPlayerUI.prototype.OnPressButtonB = function ()
 	if ( !this.BInTenFoot() )
 		return;
 
-	if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelCaptions )
+	if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelMain )
+	{
+		this.Hide(0);
+	}
+	else if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelSettings )
+	{
+		this.CloseSettingsPanel( true );
+	}
+	else if ( this.m_eFocusedUIPanel == CDASHPlayerUI.eUIPanelCaptions )
 	{
 		this.CloseCaptionsPanel( true, false );
 	}

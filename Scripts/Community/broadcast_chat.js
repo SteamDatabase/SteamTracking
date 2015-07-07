@@ -104,7 +104,14 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 	})
 	.done( function( rgResult )
 	{
-		_chat.m_strChatURL = rgResult.view_url;
+		if ( rgResult.view_url_template != undefined )
+		{
+			_chat.m_strChatURL = rgResult.view_url_template;
+		}
+		else
+		{
+			_chat.m_strChatURL = rgResult.view_url;
+		}
 		_chat.m_ulChatID = rgResult.chat_id;
 
 				if ( rgResult.persona_name )
@@ -145,12 +152,17 @@ CBroadcastChat.prototype.RequestLoop = function()
 {
 	var _chat = this;
 	var rgRequest = {};
-	if( _chat.m_nNextChatTS > 0 )
-		rgRequest.t = _chat.m_nNextChatTS;
+	var strChatURL = this.m_strChatURL.replace( "{0}", _chat.m_nNextChatTS );
+
+	if ( strChatURL == this.m_strChatURL )
+	{
+		if( _chat.m_nNextChatTS > 0 )
+			rgRequest.t = _chat.m_nNextChatTS;
+	}
 
 	$J.ajax(
 	{
-		url: this.m_strChatURL,
+		url: strChatURL,
 		type: 'GET',
 		data: rgRequest,
 		dataType: 'json'

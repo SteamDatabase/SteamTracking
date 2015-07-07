@@ -303,7 +303,7 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 	$Header.append( $CloseButton );
 	$Header = $J('<div/>', {'class': 'newmodal_header_border'}).append( $Header );
 	$Dialog.append( $Header );
-	var $Content = $J('<div/>', {'class': 'newmodal_content' } );
+	var $Content = $J('<div/>', {'class': 'newmodal_content responsive_body_text' } );
 	$Content.append( $J('<div/>').append( strDescription ) );
 
 	if ( rgButtons.length > 0 )
@@ -426,6 +426,8 @@ CModal.prototype.SetDismissOnBackgroundClick = function ( bDismissOnBackgroundCl
 
 CModal.prototype.AdjustSizing = function( duration )
 {
+	if ( window.UseResponsiveMode && UseResponsiveMode() )
+		return;
 
 	var nViewportWidth = $J(window).width();
 	var nViewportHeight = $J(window).height();
@@ -822,7 +824,7 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 		if ( key && !$Target.data( strBoundDataName ) )
 		{
 			$Target.mouseenter( $J.proxy( fnOnHover, null, $Target, key ) );
-			$Target.mouseleave( fnCancelHover );
+			$Target.on( 'click.AjaxHover mouseleave.AjaxHover', fnCancelHover );
 			$Target.data( strBoundDataName, true );
 		}
 	};
@@ -1036,6 +1038,11 @@ function InitEmoticonHovers()
 function V_EscapeRegExp( str )
 {
 	return str.replace( /[.*+?^${}()|[\]\\]/g, '\\$&' );
+}
+
+function V_EscapeHTML( str )
+{
+	return str.replace( /&/g, '&amp;' ).replace( /["']/g, '&quot;' ).replace( /</g, '&lt;').replace( />/g, '&gt;');
 }
 
 function v_trim( str )

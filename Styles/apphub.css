@@ -1,9 +1,8 @@
 
 body
 {
-    background:  url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center top repeat-y #000000;
+    background: #1b2838;
     color: #acb2b8;
-    background-color: #000000;
 }
 
 center
@@ -324,7 +323,7 @@ center
 	float: left;
 	color: #dadada;
 	/*background-color: #3A3A3A;*/
-	height: 30px;
+	height: 28px;
 	line-height: 31px;
 	padding: 0px 10px;
 	margin-right: 2px;
@@ -852,7 +851,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_Card.pinned .apphub_CardContentAuthorBlock
 {
-	background-color: #1b1b1b;
+
 }
 
 .apphub_CardContentAuthorBlock.tall

@@ -42,20 +42,14 @@ function UpdateAddVideoControls()
 	}
 }
 
-function OnVideoClicked( event, id, itemLink, itemLinkText, itemLinkNotModal ) {
-	if ( !event )
-		event = window.event;
-	event = $(event);
+function OnVideoClicked( id )
+{
 	if ( g_bManaging ) {
 		SelectVideo( id );
-	} else {
-		event = $(event);
-		if ( event.isLeftClick && !event.isLeftClick() )
-			return true;
-		ShowModalContent( itemLink, itemLinkText, itemLinkNotModal, false );
 		return false;
 	}
-	return false;
+
+	return true;
 }
 
 function SelectVideo( id )

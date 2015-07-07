@@ -306,12 +306,20 @@ function ToggleManageFriends()
 		$J('#manage_friends_btn').find( '.btn_details_arrow').removeClass( 'down').addClass( 'up' );
 		$J('#manage_friends_actions_ctn').slideDown( 'fast' );
 		$J('div.manage_friend_checkbox').show();
+		$J('a.friendBlockLinkOverlay' ).on( 'click.manage_friends', function( event ) {
+			if ( !event.which || event.which == 1 )
+			{
+				event.preventDefault();
+				$J(this ).siblings('.manage_friend_checkbox' ).find('input[type=checkbox]' ).prop( 'checked', function( i, v ) { return !v; } );
+			}
+		});
 	}
 	else
 	{
 		$J('#manage_friends_btn').find( '.btn_details_arrow').removeClass( 'up').addClass( 'down' );
 		$J('#manage_friends_actions_ctn').slideUp( 'fast' );
 		$J('div.manage_friend_checkbox').hide();
+		$J('a.friendBlockLinkOverlay' ).off( 'click.manage_friends' );
 	}
 }
 

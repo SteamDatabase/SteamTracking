@@ -103,12 +103,17 @@ function Blotter_SelectScreenshot( galleryid, screenshotid, spoiler )
 	// update the big image
 	var ssid = 'ss_' + galleryid;
 	$(ssid).setAttribute( 'src', ss.m_img ? ss.m_img : ss.m_src );
+
+	//TODO: fix this
 	$(ssid).onload = (function(galleryid, effect){
 		return function() {
 			effect.cancel();
 			$('ssfs_overlay_' + galleryid).hide();
 		}
 	})(galleryid, effect);
+
+
+	$(ssid ).up('a' ).href= ss.m_modalContentLink;
 
 	// caption
 	$('title_' + galleryid).innerHTML = ss.m_caption;
@@ -136,13 +141,6 @@ function Blotter_SelectScreenshot( galleryid, screenshotid, spoiler )
 	// turn on the border for the selected image
 	ssid = 'ss_' + galleryid + '_' + screenshotid;
 	$(ssid).setAttribute( 'class', 'blotter_screenshot_gallery_image_selected' );
-}
-
-function Blotter_ShowLargeScreenshot( galleryid, showComments )
-{
-	var gallery = g_BlotterGalleries[galleryid];
-	var ss = gallery.shots[gallery.m_screenshotActive];
-	ShowModalContent( ss.m_modalContentLink + '&insideModal=1&showComments=' + showComments, ss.m_modalContentLinkText, ss.m_modalContentLink, true );
 }
 
 function Blotter_ScreenshotLoaded( galleryid )

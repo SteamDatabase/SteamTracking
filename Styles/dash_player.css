@@ -402,7 +402,7 @@
 	text-align: right;
 }
 
-#settings_panel_wrapper .settings_done
+#settings_panel_wrapper .settings_done 
 {
 	float: right;
 	color: #9d9d9d;
@@ -410,6 +410,7 @@
 	cursor: pointer;
 	text-align: right;
 	margin-top: 10px;
+	font-size: 13px;
 }
 
 .dash_closed_captions_customization .panel_cancel

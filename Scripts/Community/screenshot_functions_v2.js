@@ -17,9 +17,12 @@ function SetManagementMode( bManaging ) {
 				e.show();
 			}
 		);
+		$J('.profile_media_item' ).removeClass( 'modalContentLink' );
 		$('ScreenshotManagementControls').show();
 		$('ScreenshotManagementToggle').addClassName( 'screenshotManagementToggleUp' );
 	} else {
+		$J('.profile_media_item' ).addClass( 'modalContentLink' );
+
 		$$('.screenshot_checkbox').each(
 			function (e) {
 				e.hide();
@@ -37,18 +40,13 @@ function ToggleManagementMode(){
 	SetManagementMode(!g_bManaging);
 }
 
-function OnScreenshotClicked( event, id, itemLink, itemLinkText, itemLinkNotModal ) {
-	if ( !event )
-		event = window.event;
-	event = $(event);
+function OnScreenshotClicked( id ) {
 	if ( g_bManaging ) {
 		SelectScreenshot( id );
-	} else {
-		if ( event.isLeftClick && !event.isLeftClick() )
-			return true;
-		ShowModalContent( itemLink, itemLinkText, itemLinkNotModal, true );
+		return false;
 	}
-	return false;
+
+	return true;
 }
 
 function SelectScreenshot( id )

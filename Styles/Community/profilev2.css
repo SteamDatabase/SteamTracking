@@ -70,6 +70,7 @@ div.profile_page.has_profile_background {
 	width: 166px;
 	height: 166px;
 }
+
 .playerAvatar.profile_header_size img {
 	width: 164px;
 	height: 164px;
@@ -831,6 +832,7 @@ img.workshop_showcase_item_image {
 .screenshot_showcase_screenshot {
 	cursor: pointer;
 	border: 1px solid #000000;
+	display: block;
 }
 
 .screenshot_showcase_screenshot:hover {
@@ -1295,16 +1297,6 @@ img.workshop_showcase_item_image {
 	color: white;
 }
 
-.profile_small_header_avatar .playerAvatar.medium img {
-	width: 64px;
-	height: 64px;
-}
-
-.profile_small_header_avatar .playerAvatar.medium {
-	width: 66px;
-	height: 66px;
-}
-
 .profile_small_header_arrow {
 	font-size: 16px;
 	color: #828282;
@@ -1715,8 +1707,8 @@ a.graytab:hover {
 	position: absolute;
 	right: 0;
 	top: 0;
+	bottom: 0;
 	width: 30px;
-	height: 48px;
 	line-height: 48px;
 	background-color: #434343;
 	text-align: center;
@@ -1878,3 +1870,70 @@ body.profile_page #footer {
     margin-bottom:12px
 }
 
+@media screen and (max-device-width: 940px )
+{
+	html.responsive div.profile_page {
+		min-width: 0;
+	}
+
+	html.responsive .profile_header_bg {
+		min-width: 0;
+		overflow: auto;
+	}
+
+
+	html.responsive .profile_header_bg_texture {
+		width: 976px;
+	}
+
+	html.responsive .profile_header {
+		width: auto;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	html.responsive .profile_content {
+		width: auto;
+		font-size: inherit;
+	}
+
+	html.responsive .profile_count_link {
+		font-size: inherit;
+	}
+
+	html.responsive .profile_content.has_profile_background {
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	html.responsive .profile_background_holder_content {
+		min-width: 0;
+	}
+
+	html.responsive .profile_leftcol, html.responsive .profile_rightcol {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .profile_summary_modal {
+		line-height: normal;
+	}
+
+
+	/* friends page */
+	html.responsive .profile_subpage_column .maincontent,
+	html.responsive body.migrated_profile_page #BG_bottom.maincontent {
+		width: auto;
+	}
+
+	html.responsive .graytab_body_wrapper {
+		width: auto;
+	}
+
+	html.responsive .profile_friends .friendBlock:nth-child(3n) {
+		margin-right: 8px;
+	}
+	html.responsive .profile_friends .friendBlock:nth-child(2n) {
+		margin-right: 0;
+	}
+}

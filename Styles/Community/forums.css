@@ -106,7 +106,7 @@ textarea.forumtopic_reply_textarea {
 .forum_topic {
 	position: relative;
 	height: 48px;
-	background-color: rgba( 84, 133, 183, 0.2);
+	background-color: rgba( 84, 133, 183, 0.4);
 	margin-bottom: 2px;
 	padding-right: 15px;
 	padding-left: 5px;
@@ -157,7 +157,7 @@ textarea.forumtopic_reply_textarea {
 
 
 .forum_topic:hover {
-	background-color: rgba( 117, 204, 255, 0.3);
+	background-color: rgba( 117, 204, 255, 0.5);
 }
 
 .forum_topic:hover .forum_topic_name {
@@ -198,6 +198,10 @@ textarea.forumtopic_reply_textarea {
 	font-size: 11px;
 	float: right;
 	padding-right: 28px;
+	color: #518aad;
+}
+.forum_topic:hover .forum_topic_lastpost {
+	color: #70beed;
 }
 
 .forum_topic_name {
@@ -236,8 +240,11 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forum_topic_op {
-	color: #61686d;
+	color: #518aad;
 	font-size: 11px;
+}
+.forum_topic:hover .forum_topic_op {
+	color: #70beed;
 }
 
 .forum_paging
@@ -247,7 +254,7 @@ textarea.forumtopic_reply_textarea {
 	height: 25px;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
-	color: #747474;
+	color: #61696d;
 	padding: 0px 6px;
 	margin: 8px 0px;
 }
@@ -545,6 +552,11 @@ a.commentthread_author_officer {
 	color: #b33b32;
 }
 
+.forum_comment_action_trigger {
+	display: none;
+	float: right;
+}
+
 .forum_comment_actions {
 	float: right;
 
@@ -569,6 +581,52 @@ a.forum_comment_action {
 
 .commentthread_comment:hover .forum_comment_actions, .forum_op:hover .forum_comment_actions {
 	visibility: visible;
+}
+
+@media screen and ( max-device-width: 950px )
+{
+	html.responsive .forum_comment_action_trigger {
+		display: block;
+	}
+
+	html.responsive .forum_comment_actions {
+		visibility: visible;
+		display: none;
+
+		position: absolute;
+		z-index: 2;
+		top: 4px;
+		right: 4px;
+		background: #182433;
+		padding: 4px;
+
+		box-shadow: 0 0 4px 0 #000000;
+	}
+
+	html.responsive .forum_comment_actions_expanded .forum_comment_actions {
+		display: block;
+	}
+
+	html.responsive .forum_comment_actions_expanded .forum_comment_action_trigger {
+		display: none;
+	}
+
+	html.responsive .forumtopic_comments .commentthread_comment .commentthread_comment_author {
+		opacity: 1;
+	}
+
+	html.responsive .forum_comment_action {
+		margin-left: 8px;
+	}
+
+	html.responsive .forum_comment_action:first-child {
+		margin-left: 0;
+	}
+
+	html.responsive .forum_comment_actions .actionlink {
+		display: inline;
+		visibility: visible;
+	}
 }
 
 
@@ -1439,7 +1497,7 @@ select.subforum_select_control {
 }
 .rightbox .rule {
 	height: 1px;
-	background-color: #333333;
+	background-color: #1e323f;
 	border-top: 1px solid #000000;
 }
 
@@ -1474,4 +1532,54 @@ select.subforum_select_control {
 
 .topic_cannotreply_reason {
 	text-align: center;
+}
+
+@media screen and (max-width: 480px )
+{
+	html.responsive .forum_topic_details {
+		float: right;
+		line-height: 24px;
+		text-align: right;
+	}
+
+	html.responsive .forum_topic_details .forum_topic_reply_count,
+	html.responsive .forum_topic_details .forum_topic_lastpost
+	{
+		float: none;
+		line-height: 24px;
+		padding: 0;
+	}
+}
+
+@media screen and (max-device-width: 940px )
+{
+	html.responsive_legacy .forum_op .content
+	{
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	html.responsive_legacy .forum_paging
+	{
+		line-height: 33px;
+		height: 33px;
+		font-size: 18px;
+	}
+
+	html.responsive_legacy .forum_paging_controls .pagebtn
+	{
+		height: 32px;
+		line-height: 32px;
+	}
+
+
+}
+
+@media screen and (max-device-width: 480px )
+{
+	html.responsive_legacy .forum_op .content
+	{
+		font-size: 24px;
+		line-height: 32px;
+	}
 }

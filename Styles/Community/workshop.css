@@ -481,8 +481,9 @@ a.general_btn:hover {
 }
 
 .rightSectionDivider {
-	height: 10px;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rightWorkshopBlockDIV.gif');
+	height: 1px;
+	background-color: #1e323f;
+	border-top: 1px solid #000000;
 }
 
 .rightSectionFooter {
@@ -1924,7 +1925,7 @@ textarea {
 
 .workshopItemCollection .fileRating
 {
-	margin-top: 0px;
+	margin-top: 2px;
 	float: right;
 }
 
@@ -1932,16 +1933,16 @@ textarea {
 {
 	padding-top: 10px;
 	word-wrap: break-word;
-    color: #8F98A0;
+    color: #518aad;
 }
 .workshopItemCollection .workshopItemAuthorLine {
-	color: #8F98A0;
+	color: #518aad;
 	padding-top: 2px;
 }
 
 .workshopItemCollection .workshopItemAuthorName
 {
-	color: #ffffff;
+	color: #70beed;
 }
 
 .workshopItemCollectionLink:hover{

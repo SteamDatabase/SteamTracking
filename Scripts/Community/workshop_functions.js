@@ -1072,27 +1072,6 @@ function ShowExternalTagSelectorDialog( url, formID, submitFuncCB )
 	)
 }
 
-function EditPublishedFileChangeLog( publishedFileID, changeLog, language )
-{
-	var dialog = ShowPromptWithTextAreaDialog( 'Edit Change Note', changeLog['change_description' ], null, null, 8000 );
-
-	dialog.done( function( data ) {
-		changeLog['change_description'] = data;
-
-		$J.post( 'https://steamcommunity.com/sharedfiles/ajaxsetchangehistoryentry', {
-				'id' : publishedFileID,
-				'timestamp' : changeLog['timestamp'],
-				'change_description' : data,
-				'language' : language,
-				'sessionid' : g_sessionID
-			}
-		).done( function( json ) {
-			var $changeEntry = $J( "#" + changeLog['timestamp'] );
-			$changeEntry.html( json['formatted_change_description'] );
-		} );
-	} );
-}
-
 /**
  * Service Provider Revenue Sharing
  */

@@ -52,7 +52,8 @@ function Forum_InitTooltips()
 		'tooltipClass': 'forum_topic_tooltip',
 		offsetY: 6,
 		fadeSpeed: 0,
-		trackMouseCentered: false
+		trackMouseCentered: false,
+		disableOnTouchDevice: true
 	});
 }
 
@@ -1180,12 +1181,8 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 		var fnOnConfirm = $super.bind( this, gidComment, bUndelete );
 		if ( !bUndelete )
 		{
-			Forum_ConfirmAction(
-				'Are you sure you want to delete this post?',
-				'',
-				fnOnConfirm,
-				'Delete'
-			);
+			ShowConfirmDialog( '', 'Are you sure you want to delete this post?', 'Delete' )
+				.done( function() { fnOnConfirm(); } );
 		}
 		else
 		{
@@ -1982,4 +1979,15 @@ function Forum_BanUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget 
 		ShowAlertDialog( 'Ban User', 'You may not have permission to ban users.  Please verify your account\'s permissions or try again later.' );
 	})
 }
+
+$J( function($) {
+	$(document ).on( 'click.ForumCommentActions', 'div.forum_comment_action_trigger', function(e) {
+		var $Comment = $( e.currentTarget ).parents( '.forum_op, .commentthread_comment');
+		$Comment.toggleClass( 'forum_comment_actions_expanded' );
+
+		$(document ).one( 'click', function(e) {
+			$Comment.toggleClass( 'forum_comment_actions_expanded');
+		});
+	});
+});
 

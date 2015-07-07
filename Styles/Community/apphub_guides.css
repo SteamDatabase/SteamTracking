@@ -67,13 +67,13 @@
 
 .apphub_ContentGuides .workshopItemCollection
 {
-	background-color: rgba( 84, 133, 183, 0.2);
+	background-color: rgba( 84, 133, 183, 0.4);
 	margin-bottom: 0px;
 }
 
 .apphub_ContentGuides .workshopItemCollection:hover
 {
-	background-color: rgba( 117, 204, 255, 0.3);
+	background-color: rgba( 117, 204, 255, 0.5);
 }
 
 .apphub_ContentGuides .workshopItemCollection .workshopItem

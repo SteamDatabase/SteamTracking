@@ -40,7 +40,6 @@
 
 
 .commentnotifications_top_content {
-	width: 907px;
 	padding-top: 12px;
 
 }
@@ -48,7 +47,7 @@
 .commentnotifications_header {
 	/* 907 x 51 */
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_header.png?v=1' );
-	width: 871px;
+	max-width: 871px;
 	height: 51px;
 	padding-left: 36px;
 
@@ -68,6 +67,7 @@
 
 .commentnotifications_header_content {
 	padding-top: 13px;
+	padding-right: 20px;
 	font-size: 11px;
 	line-height: 13px;
 	color: #7f7f7f;
@@ -174,15 +174,17 @@
 
 .commentnotification_click_overlay {
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 .commentnotification_click_overlay a {
 	outline: none;
 }
-.commentnotification_click_overlay, .commentnotification_click_overlay img {
-	height: 48px;
-	width: 622px;
+.commentnotification_click_overlay img {
+	width: 100%;
+	height: 100%;
 }
 
 .commentnotification_browseoption .browseOptionImage {
@@ -263,4 +265,49 @@
 
 .body_content_box p {
 	margin: 0 0 16px 0;
+}
+
+
+@media screen and (max-device-width: 940px )
+{
+	html.responsive #mainContents {
+		width: auto;
+	}
+
+	html.responsive #rightContents {
+		float: none;
+	}
+
+	html.responsive .comment_notification_filtering_options {
+		display: none;
+	}
+}
+
+@media screen and ( max-device-width: 480px )
+{
+	html.responsive .commentnotification_details {
+		float: right;
+		margin-left: 8px;
+		padding-right: 8px;
+	}
+	html.responsive .commentnotification_details > .commentnotification_col {
+		float: none;
+		line-height: 24px;
+		height: 24px;
+		text-align: right;
+		margin: 0;
+		padding: 0;
+	}
+
+	html.responsive .commentnotification_details > .commentnotification_newposts {
+		font-size: 12px;
+	}
+
+	html.responsive .commentnotifications_header_content br {
+		display: none;
+	}
+
+	html.responsive .notification_paging_summary {
+		display: none;
+	}
 }

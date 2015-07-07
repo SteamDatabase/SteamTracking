@@ -91,8 +91,8 @@
 .friend_activity .friend_block_avatar img {
 	width: 32px;
 	height: 32px;
-	border-radius: 0px;
 	padding: 1px;
+	border-radius: 0;
 	border: none;
 }
 
@@ -100,6 +100,7 @@
 	width: 66px;
 	height: 66px;
 }
+
 .playerAvatar.medium img {
 	width: 64px;
 	height: 64px;
@@ -109,20 +110,20 @@
 	width: 186px;
 	height: 186px;
 }
+
 .playerAvatar.full img {
 	width: 184px;
 	height: 184px;
 }
 
 .playerAvatar.tiny {
-	width: 22px;
-	height: 22px;
-	padding: 2px;
+	width: 24px;
+	height: 24px;
 }
+
 .playerAvatar.tiny img {
 	width: 22px;
 	height: 22px;
-	border: none;
 }
 
 .playerAvatar_friendindicator {
@@ -135,6 +136,37 @@
 	z-index: 2;
 
 	cursor: pointer;
+}
+
+
+@media all and (max-device-width: 940px )
+{
+	html.responsive div.friendBlock {
+
+	}
+
+	html.responsive_legacy .playerAvatar.responsive_enlarge {
+		width: 68px;
+		height: 68px;
+		padding: 2px;
+	}
+	html.responsive_legacy .playerAvatar.responsive_enlarge img {
+		width: 64px;
+		height: 64px;
+		padding: 2px;
+	}
+
+	html.responsive_legacy .playerAvatar_friendindicator {
+		position: absolute;
+		left: 26px;
+		top: 23px;
+		background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/friendindicator_small.png' );
+		width: 20px;
+		height: 20px;
+		z-index: 2;
+
+		cursor: pointer;
+	}
 }
 
 .persona, a.persona, .persona a,
@@ -1060,6 +1092,11 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	white-space: nowrap;
 }
 
+#global_header .supernav_container {
+	position: absolute;
+	left: 200px
+}
+
 .supernav_content {
 	max-width: 132px;
 	background: #000 url(https://steamcommunity-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
@@ -1069,14 +1106,14 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	z-index: 500;
 }
 
-.supernav_content > a {
+.supernav_content a.submenuitem {
 	display: block;
 	padding: 6px 0;
 	text-transform: uppercase;
 	font-size: 12px;
 }
 
-.supernav_content > a:hover {
+.supernav_content a.submenuitem:hover {
 	color: #4897cf;
 	text-decoration: none;
 }
@@ -1277,6 +1314,11 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	box-shadow: 0 0 3px 0 #000000;
 
 	cursor: pointer;
+}
+
+a.dynamiclink_box {
+	display: block;
+	text-decoration: none !important;
 }
 
 .dynamiclink_box.noPopup
@@ -1487,14 +1529,14 @@ blockquote.bb_blockquote {
 	padding: 12px;
 	margin: 8px;
 
-	font-size: 12px;
+	font-size: 92%;
 }
 
 blockquote.bb_blockquote.with_author {
 }
 
 div.bb_quoteauthor {
-	font-size: 12px;
+	font-size: 92%;
 	font-style: italic;
 }
 
@@ -1631,4 +1673,16 @@ body.v6 #footer_nav .popup_menu .hr{
 
 .ds_collapse_flag_tiny.ds_flagged:hover .ds_flag {
 	padding-left: 18px;
+}
+
+
+@media screen and (max-device-width: 940px )
+{
+	html.responsive .newmodal {
+		position: fixed;
+		top: 12px;
+		left: 12px;
+		right: 12px;
+		min-width: auto;
+	}
 }

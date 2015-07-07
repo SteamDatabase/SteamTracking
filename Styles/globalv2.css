@@ -4,8 +4,8 @@ html {
 }
 
 body {
-	background:  url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/blue_body_darker_repeat.jpg?v=1' ) center top repeat-y #000000;
-	background-color: #000000;
+	background:  #1b2838;
+	background-color: #1b2838;
 
 	text-align: left;
 
@@ -22,7 +22,6 @@ body.flat_page {
 }
 
 body.flat_page.blue {
-	background:  url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/blue_body_darker_repeat.jpg?v=2' ) center top repeat-y #000000;
 	color: #636363;
 }
 
@@ -139,7 +138,7 @@ body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
 #footer .footer_content {
 	position: relative;
 	width: 958px;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 #footer a {
@@ -152,16 +151,16 @@ body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
 }
 
 #footerText {
-	padding: 2px 0 0 0;
+	padding: 2px 0 0 123px;
 	line-height: 14px;
 	display: block;
 	color: #8F98A0;
 }
 
 #footerLogo {
-	float: left;
-	margin: 4px 11px 0 16px;
-	padding: 0;
+	position: absolute;
+	left: 16px;
+	top: 4px;
 }
 
 
@@ -244,6 +243,88 @@ a.friendBlock {
 	margin: 4px 4px 0 0;
 }
 
+@media screen and (max-device-width: 940px )
+{
+	html.responsive_legacy div.friendBlock {
+		height: 72px;
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	html.responsive_legacy div.friendBlock .friendPlayerLevel {
+		transform: scale( 2 );
+		margin: 16px 24px 0 0;
+	}
+
+	html.responsive .commentthread_pagelinks {
+		display: none;
+	}
+
+	html.responsive .commentthread_pagedropdown {
+		display: inline;
+	}
+
+
+	html.responsive_legacy .commentthread_pagedropdown select {
+		line-height: 32px;
+		font-size: 24px;
+	}
+
+	html.responsive_legacy .pagebtn, html.responsive_legacy a.pagebtn {
+		line-height: 32px;
+		font-size: 24px;
+		padding: 0 32px;
+	}
+
+	html.responsive_legacy .commentthread_comment {
+		padding-left: 84px;
+		font-size: 15px;
+		min-height: 74px;
+	}
+
+	html.responsive .commentthread_comment_author .actionlink {
+		display: none;
+	}
+
+	html.responsive_legacy .commentthread_comment_author a,
+	html.responsive_legacy .commentthread_comment_text
+	{
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	html.responsive_legacy .responsive_body_text .emoticon {
+		width: 20px;
+		height: 20px;
+	}
+
+	html.responsive_legacy .commentthread_comment_text
+	{
+		max-height: 600px;
+	}
+}
+
+@media all and (max-device-width: 480px )
+{
+	html.responsive_legacy .commentthread_comment_author a,
+	html.responsive_legacy .commentthread_comment_text
+	{
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	html.responsive_legacy .responsive_body_text .emoticon {
+		width: 32px;
+		height: 32px;
+	}
+
+	html.responsive_legacy .commentthread_comment_text
+	{
+		max-height: 800px;
+	}
+
+}
+
 /* used to display the " - public" next to a group name */
 .pubGroup {
 	font-size:11px;
@@ -281,25 +362,25 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 .pagebtn, a.pagebtn {
 	display: inline-block;
 	line-height: 24px;
-	background-color: #000000;
-	border: 1px solid #000000;
+	background-color: rgba( 103, 193, 245, 0.2 );
+	border: 1px transparent;
 	border-radius: 3px;
 	cursor: pointer;
 	padding: 0px 16px;
-	color: #939393;
+	color: #66c0f4;
 }
 
 .pagebtn:hover, a.pagebtn:hover {
-	background-color: #97C0E3;
-	border-color: #97C0E3;
-	color: #3C3D3E;
+	background-color: #66c0f4;
+	border-color: #66c0f4;
+	color: #fff;
 	text-decoration: none;
 }
 
 .pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
-	border: 1px solid #333333;
+	border: 1px solid #253e4c;
 	background-color: transparent;
-	color: #333333;
+	color: #253e4c;
 	cursor: default;
 }
 
@@ -362,6 +443,10 @@ a.pagelink:hover {
 	color: #ffffff;
 }
 
+.commentthread_pagedropdown {
+	display: none;
+}
+
 .commentthread_pagelink:hover {
 	text-decoration: underline;
 }
@@ -407,7 +492,6 @@ a.commentthread_allcommentslink:hover {
 	top: 13px;
 	width: 17px;
 	height: 18px;
-	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNBMkQxOENENDY3QTExRTM4RkY3ODIzQkI0RTYyMTM0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNBMkQxOENFNDY3QTExRTM4RkY3ODIzQkI0RTYyMTM0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0EyRDE4Q0I0NjdBMTFFMzhGRjc4MjNCQjRFNjIxMzQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0EyRDE4Q0M0NjdBMTFFMzhGRjc4MjNCQjRFNjIxMzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4doN6kAAAAnElEQVR42qTTgQ1AMBAF0JIOYBSr1AS3kgnKBjbABkYwghFck09ESq/Xn/yo0IfkVM51piCeS3UpEBZahC5AixDewmiR9g3kIgGYYxekSAOg0SK/gBSZ8SlGi/gUkEL8cxY0CEmBL4Ris5CDtELg4A5cF06sZJiQnTtxVxzv2MQsbNyFO2IdjY0AGzZNeHoyFkC4ucfGI/e3PgUYAAQTHwWliw0pAAAAAElFTkSuQmCC );
 }
 
 .commentthread_entry_quotebox {
@@ -471,7 +555,7 @@ a.commentthread_allcommentslink:hover {
 }
 
 .valve_links {
-	margin: 15px 0 0 123px;
+	margin: 15px 0 0 0;
 	display: block;
 }
 
@@ -1046,4 +1130,13 @@ img.emoticon {
 	max-width: 225px;
 	white-space: normal;
 	box-shadow: 0 0 3px #000000;
+}
+
+
+@media screen and (max-device-width: 940px )
+{
+	html.responsive .maincontent {
+		width: auto;
+		margin: 0 auto;
+	}
 }

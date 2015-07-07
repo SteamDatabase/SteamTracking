@@ -116,6 +116,12 @@
                     "description": "Language to search in and also what gets returned. Defaults to English."
                 },
                 {
+                    "name": "required_kv_tags",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "Required key-value tags to match on."
+                },
+                {
                     "name": "totalonly",
                     "type": "bool",
                     "optional": false,

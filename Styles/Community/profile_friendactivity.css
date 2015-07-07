@@ -35,6 +35,12 @@ div#headerSearch.friend_activity_header_search {
 	border-right: 1px solid #354357;
 	border-bottom: 1px solid #354357;
 	background-image: none;
+	float: right;
+}
+
+.responsive_page_menu div#headerSearch.friend_activity_header_search {
+	float: none;
+	width: auto;
 }
 
 div#headerSearch.friend_activity_header_search #searchInputBoxNew {
@@ -363,7 +369,12 @@ a.nohover, a.nohover:hover
 	margin-bottom: 25px;
 	padding-top:10px;
 	padding-right:12px;
+	padding-left: 12px;
 	/*border-bottom: 1px solid #333333;*/
+}
+
+.blotter_status_entry .commentthread_entry .commentthread_entry_quotebox {
+	margin-left: 40px;
 }
 
 .blotter_status_entry .commentthread_entry_quotebox {
@@ -606,7 +617,6 @@ a.nohover, a.nohover:hover
 }
 
 .blotter_userstatus_content {
-	font-size: 14px;
 	padding: 10px;
 	text-align: left;
 	font-family: font-family: Arial, Helvetica, Verdana, sans-serif;
@@ -619,7 +629,7 @@ a.nohover, a.nohover:hover
 .blotter_user_status_delete {
 	background-color: #2c2c2c;
 	margin-left: 8px;
-	font-size: 12px;
+	font-size: 0.85em;
 	line-height: 16px;
 	padding: 5px 16px 2px 12px;
 }
@@ -637,13 +647,25 @@ a.nohover, a.nohover:hover
 	height: 40px;
 }
 
+@media screen and ( max-width: 600px ) {
+	.blotter_userstatus_game {
+		display: none;
+	}
+}
+
 /* group announcements */
-.blotter_group_announcement_headline, .blotter_group_announcement_headline a, .blotter_group_announcement_headline a:visited, .blotter_group_announcement_headline a:active
+.blotter_group_announcement_headline
 {
-	font-size: 24px;
-	color: #66C0F4;
+	font-size: 1.75em;
+	line-height: 110%;
 	margin-bottom: 10px;
-	line-height: 26px;
+}
+.blotter_group_announcement_headline,
+.blotter_group_announcement_headline a,
+.blotter_group_announcement_headline a:visited,
+.blotter_group_announcement_headline a:active
+{
+	color: #66C0F4;
 }
 
 .blotter_group_announcement_header
@@ -677,7 +699,6 @@ a.nohover, a.nohover:hover
 
 .blotter_group_announcement_content
 {
-	font-size: 14px;
 	line-height: 18px;
 	padding: 8px;
 	padding-left: 12px;
@@ -842,7 +863,6 @@ a.nohover, a.nohover:hover
 .blotter_screenshot_title
 {
 	padding: 4px 6px 8px 6px;
-	font-size: 14px;
 	color: #7cc5fb;
 
 }
@@ -897,12 +917,13 @@ a.nohover, a.nohover:hover
 }
 
 .blotter_voters_names {
-	font-size: 12px;
+	font-size: 0.85em;
 	padding-left: 6px;
 }
 
 .blotter_voters_names a {
 	color: #ffffff;
+	white-space: nowrap;
 }
 
 .blotter_viewallcomments_container {
@@ -983,18 +1004,19 @@ img.movie_thumb {
 }*/
 
 .blotter_gamepurchase_content {
-	height: 88px;
 	padding: 10px 0px 2px 6px;
 	overflow: hidden;
 	position: relative; /* since we are overlapping it with extras */
 }
 
+.blotter_gamepurchase_logo.single_item {
+	float: left;
+	margin-right: 8px;
+}
 
 .blotter_gamepurchase_text {
 	margin: 8px;
-	height: 62px;
 	overflow: hidden;
-	position: absolute;
 }
 
 .blotter_gamepurchase_content .plus_block {
@@ -1012,13 +1034,23 @@ img.movie_thumb {
 	font-size: 24px;
 }
 
+/* 231 x 87 */
 .blotter_gamepurchase_content img {
 	width: 212px;
 	height: 80px;
 }
 
+@media screen and ( max-width: 636px ) {
+
+	.blotter_gamepurchase_content img {
+		width: 115px;
+		height: 43px;
+	}
+}
+
+
 .blotter_gamepurchase_details {
-	font-size: 12px;
+	font-size: 0.85em;
 	padding: 0 6px 6px 10px;
 	color: #8b8b8a;
 }
@@ -1117,7 +1149,6 @@ img.movie_thumb {
 	padding-top: 6px;
 	padding-bottom: 4px;
 	padding-right: 14px;
-	font-size: 14px;
 	color: #c6d4df;
 	overflow: hidden;
 	
@@ -1467,9 +1498,10 @@ div.slider div.handle:hover {
 	background: #000;
 	background: rgba(0,0,0,0.8);
 	position: absolute;
-	top: 0px;
-	width: 660px;
-	bottom: 0px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 
@@ -1632,7 +1664,6 @@ div.slider div.handle:hover {
 /* recommendations block */
 .blotter_recommendation_content
 {
-	font-size: 14px;
 	padding: 8px;
 	text-align: left;
 	padding-top: 4px;
@@ -1728,3 +1759,37 @@ div.slider div.handle:hover {
 	min-width: 250px;
 }
 
+
+@media screen and (max-device-width: 940px )
+{
+	html.responsive #blotter_page, html.responsive #blotter_content {
+		width: auto;
+		float: none;
+	}
+
+	html.responsive #friendactivity_right_column {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive_legacy .blotter_avatar_holder {
+		margin-right: 12px;
+	}
+
+	html.responsive_legacy .blotter_author_block,
+	html.responsive_legacy .blotter_group_announcement_header_text {
+		min-height: 74px;
+		font-size: 24px;
+		line-height: 32px;
+	}
+	html.responsive_legacy .blotter_group_announcement_header_text {
+		padding-top: 12px;
+	}
+	html.responsive_legacy .blotter_block .apphub_CardTextContent {
+		line-height: 30px;
+		font-size: 24px;
+	}
+	html.responsive_legacy .blotter_voters_names {
+		line-height: 30px;
+	}
+}

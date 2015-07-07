@@ -747,7 +747,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_button {
 	display: block;
-	width: 640px;
+	width: 740px;
 
 	margin-top: 10px;
 	border: solid 1px;
@@ -807,7 +807,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 	/* additional padding so contents do not render over arrow */
 	padding-right: 28px;
-	width: 612px;
+	width: 712px;
 }
 
 .help_wizard_button_dark {
@@ -984,13 +984,13 @@ body.v6 .page_content_ctn.dark:last-child {
 .help_divider {
 	background-color: #3b718d;
 	height: 1px;
-	width: 640px;
+	width: 740px;
 	margin: 14px 0 8px 0;
 }
 
 #help_search_support_input {
 	height: 44px;
-	width: 620px;
+	width: 720px;
 	font-family: "Motiva Sans Light Italic", "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	font-size: 24px;
 	padding: 10px;
