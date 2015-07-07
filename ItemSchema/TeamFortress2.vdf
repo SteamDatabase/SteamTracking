@@ -53446,9 +53446,6 @@
 				"weapon_allow_inspect"					"1"
 				"is marketable"							"1"
 			}
-			"attributes"
-			{
-			}
 		}
 		"paintkit_weapon_flamethrower"
 		{
@@ -53488,12 +53485,12 @@
 		"paintkit_weapon_shotgun"
 		{
 			"prefab"	"paintkit_weapon weapon_shotgun_multiclass"
-			"xifier_class_remap"	"shotgun"
+			"xifier_class_remap"	"weapon_shotgun"
 		}
 		"paintkit_weapon_smg"
 		{
 			"prefab"	"paintkit_weapon weapon_smg"
-			"xifier_class_remap"	"smg"
+			"xifier_class_remap"	"weapon_smg"
 		}
 		"paintkit_weapon_sniperrifle"
 		{
@@ -80455,7 +80452,12 @@
 				"hidden secondary max ammo penalty"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
-					"value"	"0.5"
+					"value"		"0.5"
+				}
+				"self dmg push force decreased"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value"		"0.65"
 				}
 				"minicrit vs burning player"
 				{
@@ -94380,240 +94382,6 @@
 		
 
 
-
-		"16000"
-		{
-			"name"			"template_civilian_flamethrower"
-			"prefab"		"paintkit_weapon_flamethrower"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_flamethrower"
-		}
-		"16001"
-		{
-			"name"			"template_civilian_medigun"
-			"prefab"		"paintkit_weapon_medigun"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_medigun"
-		}
-		"16002"
-		{
-			"name"			"template_civilian_minigun"
-			"prefab"		"paintkit_weapon_minigun"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_minigun"
-		}
-		"16003"
-		{
-			"name"			"template_civilian_pistol"
-			"prefab"		"paintkit_weapon_pistol"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_pistol"
-		}
-		"16004"
-		{
-			"name"			"template_civilian_revolver"
-			"prefab"		"paintkit_weapon_revolver"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_revolver"
-		}
-		"16005"
-		{
-			"name"			"template_civilian_rocketlauncher"
-			"prefab"		"paintkit_weapon_rocketlauncher"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_rocketlauncher"
-		}
-		"16006"
-		{
-			"name"			"template_civilian_scattergun"
-			"prefab"		"paintkit_weapon_scattergun"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_scattergun"
-		}
-		"16007"
-		{
-			"name"			"template_civilian_shotgun"
-			"prefab"		"paintkit_weapon_shotgun"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_shotgun"
-		}
-		"16008"
-		{
-			"name"			"template_civilian_sniperrifle"
-			"prefab"		"paintkit_weapon_sniperrifle"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_sniperrifle"
-		}
-		"16009"
-		{
-			"name"			"template_civilian_smg"
-			"prefab"		"paintkit_weapon_smg"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_smg"
-		}
-		"16010"
-		{
-			"name"			"template_civilian_stickybomb_launcher"
-			"prefab"		"paintkit_weapon_stickybomb_launcher"
-			"item_rarity"	"common"
-			"item_paintkit" "template_civilian_stickybomb_launcher"
-		}
-
-		"16012"
-		{
-			"name"			"template_commando_flamethrower"
-			"prefab"		"paintkit_weapon_flamethrower"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_flamethrower"
-		}
-		"16013"
-		{
-			"name"			"template_commando_medigun"
-			"prefab"		"paintkit_weapon_medigun"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_medigun"
-		}
-		"16014"
-		{
-			"name"			"template_commando_minigun"
-			"prefab"		"paintkit_weapon_minigun"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_minigun"
-		}
-		"16015"
-		{
-			"name"			"template_commando_pistol"
-			"prefab"		"paintkit_weapon_pistol"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_pistol"
-		}
-		"16016"
-		{
-			"name"			"template_commando_revolver"
-			"prefab"		"paintkit_weapon_revolver"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_revolver"
-		}
-		"16017"
-		{
-			"name"			"template_commando_rocketlauncher"
-			"prefab"		"paintkit_weapon_rocketlauncher"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_rocketlauncher"
-		}
-		"16018"
-		{
-			"name"			"template_commando_scattergun"
-			"prefab"		"paintkit_weapon_scattergun"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_scattergun"
-		}
-		"16019"
-		{
-			"name"			"template_commando_shotgun"
-			"prefab"		"paintkit_weapon_shotgun"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_shotgun"
-		}
-		"16020"
-		{
-			"name"			"template_commando_sniperrifle"
-			"prefab"		"paintkit_weapon_sniperrifle"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_sniperrifle"
-		}
-		"16021"
-		{
-			"name"			"template_commando_smg"
-			"prefab"		"paintkit_weapon_smg"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_smg"
-		}
-		"16022"
-		{
-			"name"			"template_commando_stickybomb_launcher"
-			"prefab"		"paintkit_weapon_stickybomb_launcher"
-			"item_rarity"	"mythical"
-			"item_paintkit" "template_commando_stickybomb_launcher"
-		}
-
-		"16023"
-		{
-			"name"			"template_elite_flamethrower"
-			"prefab"		"paintkit_weapon_flamethrower"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_flamethrower"
-		}
-		"16024"
-		{
-			"name"			"template_elite_medigun"
-			"prefab"		"paintkit_weapon_medigun"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_medigun"
-		}
-		"16025"
-		{
-			"name"			"template_elite_minigun"
-			"prefab"		"paintkit_weapon_minigun"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_minigun"
-		}
-		"16026"
-		{
-			"name"			"template_elite_pistol"
-			"prefab"		"paintkit_weapon_pistol"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_pistol"
-		}
-		"16027"
-		{
-			"name"			"template_elite_revolver"
-			"prefab"		"paintkit_weapon_revolver"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_revolver"
-		}
-		"16028"
-		{
-			"name"			"template_elite_rocketlauncher"
-			"prefab"		"paintkit_weapon_rocketlauncher"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_rocketlauncher"
-		}
-		"16029"
-		{
-			"name"			"template_elite_scattergun"
-			"prefab"		"paintkit_weapon_scattergun"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_scattergun"
-		}
-		"16030"
-		{
-			"name"			"template_elite_shotgun"
-			"prefab"		"paintkit_weapon_shotgun"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_shotgun"
-		}
-		"16031"
-		{
-			"name"			"template_elite_sniperrifle"
-			"prefab"		"paintkit_weapon_sniperrifle"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_sniperrifle"
-		}
-		"16032"
-		{
-			"name"			"template_elite_smg"
-			"prefab"		"paintkit_weapon_smg"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_smg"
-		}
-		"16033"
-		{
-			"name"			"template_elite_stickybomb_launcher"
-			"prefab"		"paintkit_weapon_stickybomb_launcher"
-			"item_rarity"	"ancient"
-			"item_paintkit" "template_elite_stickybomb_launcher"
-		}
 
 
 
@@ -111943,6 +111711,18 @@
 			{
 				"token"		"#quest25009desc0"
 			}
+			"1"
+			{
+				"token"		"#quest25009desc1"
+			}
+			"2"
+			{
+				"token"		"#quest25009desc2"
+			}
+			"3"
+			{
+				"token"		"#quest25009desc3"
+			}
 		}
 		"objectives"
 		{
@@ -111974,6 +111754,7 @@
 									"jumping_state"		"0"
 									"disguise_target"		"0"
 									"min_stickies"		"0"
+									"alive_state"		"0"
 									"is_owner"		"1"
 								}
 								"1"
@@ -111984,6 +111765,7 @@
 									"jumping_state"		"0"
 									"disguise_target"		"0"
 									"min_stickies"		"0"
+									"alive_state"		"0"
 									"is_owner"		"1"
 								}
 							}
@@ -112021,6 +111803,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 							}
 							"1"
@@ -112060,6 +111843,7 @@
 									"jumping_state"		"0"
 									"disguise_target"		"0"
 									"min_stickies"		"0"
+									"alive_state"		"0"
 									"is_owner"		"1"
 								}
 								"1"
@@ -112070,6 +111854,7 @@
 									"jumping_state"		"0"
 									"disguise_target"		"0"
 									"min_stickies"		"0"
+									"alive_state"		"0"
 									"is_owner"		"1"
 								}
 							}
@@ -112086,6 +111871,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"0"
 							}
 						}
@@ -112149,6 +111935,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 							}
 							"1"
