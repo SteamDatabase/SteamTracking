@@ -38,6 +38,8 @@ GDynamicStore = {
 	s_rgIgnoredApps: {},
 	s_rgIgnoredPackages: {},
 
+	s_rgPlaytestData: {},
+
 	s_rgfnOnReadyCallbacks: [],
 
 	s_bUserOnMacOS: false,
@@ -95,6 +97,14 @@ GDynamicStore = {
 				GDynamicStore.s_rgRecommendedTags = data.rgRecommendedTags || [];
 				GDynamicStore.s_rgIgnoredApps = fnConvertToMap( data.rgIgnoredApps );
 				GDynamicStore.s_rgIgnoredPackages = fnConvertToMap( data.rgIgnoredPackages );
+				if( data.rgPlaytestData )
+				{
+					GDynamicStore.s_rgPlaytestData = data.rgPlaytestData;
+
+					GDynamicStore.s_rgPlaytestData.available_tests = GDynamicStore.s_rgPlaytestData.available_tests;
+					GDynamicStore.s_rgPlaytestData.previous_active_tests = fnConvertToMap( GDynamicStore.s_rgPlaytestData.previous_active_tests );
+				}
+
 			}).always( function() { $J(fnRunOnLoadCallbacks); } );
 		}
 		else
@@ -393,6 +403,25 @@ GDynamicStore = {
 	BIsPackageIgnored: function( packageid )
 	{
 		return GDynamicStore.s_rgIgnoredPackages[packageid] ? true: false;
+	},
+
+	GetAvailablePlaytestForApp: function( appid )
+	{
+		if( !GDynamicStore.s_rgPlaytestData )
+			return false;
+
+		for( var i=0; i<GDynamicStore.s_rgPlaytestData.available_tests.length; i++)
+		{
+			if( GDynamicStore.s_rgPlaytestData.available_tests[i].appid == appid )
+				return GDynamicStore.s_rgPlaytestData.available_tests[i].testid;
+		}
+
+		return false;
+	},
+
+	BIsPlaytesting: function( testid )
+	{
+		return GDynamicStore.s_rgPlaytestData.current_test == testid ? true: false;
 	}
 };
 

@@ -113,10 +113,19 @@ body.v6.login .rightcol .spotlight_block {
 }
 
 .checkout_error {
-	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(162,77,0,1)), color-stop(95%,rgba(255,123,0,1)));background: -moz-linear-gradient( left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -webkit-linear-gradient( left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -o-linear-gradient( left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: -ms-linear-gradient( left, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);background: linear-gradient( to right, rgba(162,77,0,1) 5%,rgba(255,123,0,1) 95%);	color: #D5D6D8;
+	background-color: rgba(162,77,0,1);
+	color: #ffffff;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, tahoma, sans-serif;
 	margin: 15px 0px 15px 0px;
-	padding: 11px 15px;
-	padding-left: 19px;
+	padding: 11px 15px 11px 19px;
+}
+
+.checkout_form_error {
+	margin-top: 56px;
+}
+
+#cancel_pending_verification {
+	margin-bottom: 60px;
 }
 
 .checkout_payment_method_specific_note {

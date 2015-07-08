@@ -57,7 +57,7 @@
 }
 
 .game_background_glow {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/app/game_page_background_shadow.png?v=1' );
+	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/app/game_page_background_shadow.png?v=2' );
 	background-position: bottom;
 	padding-bottom: 1px;
 	background-repeat: no-repeat;
@@ -1007,7 +1007,7 @@ img.game_header_image_full {
 }
 
 #game_area_legal {
-	color: #61686d;
+	color: #566168;
 	font-size: 11px;
 	margin-bottom: 10px;
 	margin-top: 20px;
@@ -3224,23 +3224,48 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 	top: 0;
 }
 
+.game_area_purchase_game_wrapper.playtest {
+	background: -moz-linear-gradient(-15deg,  rgba(152,128,60,0.3) 0%, rgba(226,244,255,0.3) 70%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(152,128,60,0.3)), color-stop(70%,rgba(226,244,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-15deg,  rgba(152,128,60,0.3) 0%,rgba(226,244,255,0.3) 70%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-15deg,  rgba(152,128,60,0.3) 0%,rgba(226,244,255,0.3) 70%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-15deg,  rgba(152,128,60,0.3) 0%,rgba(226,244,255,0.3) 70%); /* IE10+ */
+	background: linear-gradient(165deg,  rgba(152,128,60,0.3) 0%,rgba(226,244,255,0.3) 70%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41433a', endColorstr='#4de2f4ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.game_area_purchase_game_wrapper.playtest .game_area_purchase_game {
+	background: none;
+	border-top: 2px solid #1b2838;
+}
 .game_pt_info {
-	background-color: #000;
+
 	padding: 15px;
 	color: #c7d5e0;
+}
+.game_pt_info a {
+	text-decoration: underline;
 }
 
 .game_pt_info h1 {
 	font-family: "Motiva Sans Thin", "Motiva Sans Light",  Arial, Helvetica, sans-serif;
 	font-size: 30px;
 	font-weight: normal;
-	color: #fff;
+	color: #ffe8a3;
 }
 
 .game_pt_info p {
-	margin: 8px 0;
+	font-family: "Motiva Sans Light", "Motiva Sans Light",  Arial, Helvetica, sans-serif;
+
+	color: #c6d4df;
+	font-size: 15px;
 }
 
 .game_pt_info .game_pt_note {
-	color: #a4d007;
+	font-family: "Motiva Sans Light", "Motiva Sans Light",  Arial, Helvetica, sans-serif;
+	color: #e8d59b;
+	margin: 2px 0 12px 0;
+}
+
+#pt_block, #pt_active, #pt_join {
+	display: none;
 }

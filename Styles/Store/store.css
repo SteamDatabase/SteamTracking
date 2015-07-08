@@ -52,12 +52,12 @@ body.v6.in_client {
 }
 
 body.v6 {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_top.jpg?v=2' ) center top no-repeat,
-    url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_repeat.jpg?v=2' ) center top repeat-y #000000;
+	 background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
+	 /* background: #1b2838; */
 }
 
 body.v6.game_bg {
-    background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/blue_body_darker_repeat.jpg' ) center top repeat-y #000000;
+    background: #1b2838;
 }
 
 body.v6 > div#global_header {
@@ -65,7 +65,7 @@ body.v6 > div#global_header {
 }
 
 .v6_bg {
-	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_browse_header_bg.png' ) no-repeat center top;
+	/* background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/tag_browse_header_bg.png' ) no-repeat center top; */
 }
 
 body.blue .v6_bg {

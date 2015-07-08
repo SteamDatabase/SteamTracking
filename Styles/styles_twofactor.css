@@ -25,6 +25,14 @@
 	margin-top: 15px;
 }
 
+.deauthorize_box
+{
+	background: rgb( 29, 47, 69 );
+	line-height: 18px;
+	padding: 15px;
+	margin-top: 15px;
+}
+
 .twofactor_settings_form
 {
 }
@@ -33,13 +41,13 @@
 {
 }
 
-.twofactor_settings_choice_header
+.twofactor_settings_choice_header,  .twofactor_deauthorize_header
 {
 	font-size: 16px;
 	font-weight: bold;
 }
 
-.twofactor_settings_choice_description
+.twofactor_settings_choice_description, .twofactor_deauthorize_description
 {
 	font-size: 14px;
 	margin: 15px;

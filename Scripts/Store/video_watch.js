@@ -211,11 +211,17 @@ CVideoWatch.prototype.GetVideoDetails = function()
 		{
 			switch ( data.error_code )
 			{
+				case 8:
+					_watch.ShowVideoError( 'This application is not a video and cannot be streamed.' );
+					break;
+				case 9:
+					_watch.ShowVideoError( 'This video has not been processed for streaming.' );
+					break;
 				case 15:
 					_watch.ShowVideoError( 'The video could not be accessed. <br><br>Please ensure you are logged in and own this video.' );
 					break;
 				case 16:
-					_watch.ShowVideoError( 'The video is not currently available.' );
+					_watch.ShowVideoError( 'This video is not currently available to stream.' );
 					break;
 				case 20:
 					_watch.ShowVideoError( 'The video service is not available.' );
@@ -224,7 +230,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					_watch.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
 					break;
 				default:
-					if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+					if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
 					else
 						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' + '<br><br>Error Code: ' + data.error_code );
@@ -234,7 +240,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 	})
 	.fail( function()
 	{
-		if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+		if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
 		else
 			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' + '<br><br>Error Code: ' + data.error_code );
