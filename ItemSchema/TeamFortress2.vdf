@@ -53465,12 +53465,12 @@
 		"paintkit_weapon_pistol"
 		{
 			"prefab"	"paintkit_weapon weapon_pistol"
-			"xifier_class_remap"	"pistol"
+			"xifier_class_remap"	"weapon_pistol"
 		}
 		"paintkit_weapon_revolver"
 		{
 			"prefab"	"paintkit_weapon weapon_revolver"
-			"xifier_class_remap"	"revolver"
+			"xifier_class_remap"	"weapon_revolver"
 		}
 		"paintkit_weapon_rocketlauncher"
 		{
@@ -60294,6 +60294,7 @@
 			"craft_class"	""
 			"show_in_armory"	"1"
 			"armory_desc"	"stockitem"
+			"xifier_class_remap"	"weapon_pistol"
 		}
 		"210"
 		{
@@ -142642,7 +142643,6 @@
 		{
 			"name"	"attach particle effect static"
 			"attribute_class"	"set_attached_particle_static"
-			"description_string"	"#Attrib_AttachedParticle"
 			"description_format"	"value_is_particle_index"
 			"hidden"	"0"
 			"effect_type"	"neutral"
