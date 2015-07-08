@@ -3242,3 +3242,21 @@ div.hover {
 .publishedfile_popup_screenshot.banned img {
 	opacity: 0.125;
 }
+
+
+@media screen and (max-device-width: 940px )
+{
+	html.responsive #mainContents {
+		width: auto;
+		padding: 0 8px;
+	}
+
+	html.responsive #rightContents {
+		float: none;
+	}
+
+	html.responsive #profileBlock {
+		width: auto;
+		float: none;
+	}
+}
