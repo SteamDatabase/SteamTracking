@@ -492,6 +492,11 @@ body.flat_page.SteamClientMinimized
 	border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
+.ChatBoxViewers[data-insideiframe="1"]
+{
+	display: none;
+}
+
 .ChatButtons
 {
 	padding: 0px 1px;
@@ -535,13 +540,22 @@ body.flat_page.SteamClientMinimized
 .ChatBox
 {
 	position: absolute;
-	top: 27px;
 	left: 0;
 	bottom: 44px;
 	margin-top: 4px;
 	padding: 0px 0px 4px 2px;
 	overflow: hidden;
 	right: 0px;
+}
+
+.ChatBox[data-insideiframe="0"]
+{
+	top: 27px;
+}
+
+.ChatBox[data-insideiframe="1"]
+{
+	top: 0;
 }
 
 .ChatWarning
@@ -571,6 +585,11 @@ body.flat_page.SteamClientMinimized
 	cursor: ew-resize;
 	right: 3px;
 	z-index: 1000;
+}
+
+#ChatDragHandle[data-insideiframe="1"]
+{
+	display: none;
 }
 
 .ChatDate
