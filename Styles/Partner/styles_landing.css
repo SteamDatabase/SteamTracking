@@ -2030,3 +2030,10 @@ div#appAutoHeader_list
 .bundleModal .enter_bundle_discount {
 	width: 30px;
 }
+
+#global_action_menu {
+	float: right;
+	text-align: right;
+	margin-right: 25px;
+	white-space: nowrap;
+}

@@ -358,8 +358,7 @@ function MapTypeToText( type )
 		case 1073741824: return "Shortcut";
 		case 2147483648: return "Depot";
 		case 256: return "Config";
-		case 512: return "Movie";
-		case 1024: return "TV Series";
+		case 512: return "Hardware";
 		case 2048: return "Video";
 		case 4096: return "Plugin";
 		case 8192: return "Music";
@@ -1238,4 +1237,25 @@ function LoadPageClusterArchive( pageid, $Element, fnOnSuccess )
 			$Element.html( '<div style="color: red;">Failed to load history data</div>' );
 		});
 }
+
+function ChangeLanguage( strTargetLanguage, bStayOnPage )
+{
+	var Modal = ShowBlockingWaitDialog( 'Change language', '' );
+	$J.post( 'https://partner.steamgames.com/actions/setlanguage/', {language: strTargetLanguage, sessionid: g_sessionID })
+	.done( function() {
+		if ( bStayOnPage )
+			Modal.Dismiss();
+		else
+		{
+			if ( window.location.href.match( /[?&]l=/ ) )
+				window.location = window.location.href.replace( /([?&])l=[^&]*&?/, '$1' );
+			else
+				window.location.reload();
+		}
+	}).fail( function() {
+		Modal.Dismiss();
+		ShowAlertDialog( 'Change language', '#text_game_error_generic' );
+	});
+}
+
 
