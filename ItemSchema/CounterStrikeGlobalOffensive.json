@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.3e61d3819c7671de526d62257a677ef8461438b9.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.f337a84576c7a8273bb533f9a5619c0f47ab8f0e.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -5300,6 +5300,27 @@
 						"usable_out_of_game": true
 					}
 				}
+			},
+			{
+				"name": "prestige coin 2015",
+				"defindex": 1331,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "2015 Service Medal",
+				"item_description": "Awarded for outstanding service and achievement in 2015.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/service_medal_2015",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2015.3ca7bf6f40edbae511a8ea595a0054736b397140.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/service_medal_2015_large.3b8d6cddfd113b0b20bafa2bbee76a976c198e55.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+
+				]
+				
 			},
 			{
 				"name": "crate_valve_1",
@@ -14595,6 +14616,24 @@
 				"attribute_class": "operation_bonus_points",
 				"description_string": "Operation Bonus Earned: +%s1 XP",
 				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "prestige year",
+				"defindex": 221,
+				"attribute_class": "prestige_year",
+				"effect_type": "neutral",
+				"hidden": true,
+				"stored_as_integer": true
+			},
+			{
+				"name": "issue date",
+				"defindex": 222,
+				"attribute_class": "issue_date",
+				"description_string": "Date of Issue: %s1",
+				"description_format": "value_is_date",
 				"effect_type": "positive",
 				"hidden": false,
 				"stored_as_integer": true
