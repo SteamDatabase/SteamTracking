@@ -320,6 +320,12 @@ function CategorizeCard( card )
 		}
 	}
 
+	if ( $J( card ).hasClass( 'Announcement_Card' ) )
+	{
+		card.category |= SMALL | MEDIUM_RESIZABLE;
+		card.preferredCategory |= SMALL | MEDIUM_RESIZABLE;
+	}
+
 	if ( gDebugging )
 	{
 		var contentType = card.down( '.apphub_CardContentType' );
