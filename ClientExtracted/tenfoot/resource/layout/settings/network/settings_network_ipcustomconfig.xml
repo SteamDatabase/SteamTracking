@@ -17,7 +17,7 @@
 						id="SettingsNetwork_CustomIP"
 						class="WizardTextEntry"
 						textinputid="CustomIP"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 
@@ -26,7 +26,7 @@
 						id="SettingsNetwork_CustomMask"
 						class="WizardTextEntry"
 						textinputid="CustomMask"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 
@@ -35,7 +35,7 @@
 						id="SettingsNetwork_CustomGateway"
 						class="WizardTextEntry"
 						textinputid="CustomGateway"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 
@@ -44,7 +44,7 @@
 						id="SettingsNetwork_CustomPrimaryDNS"
 						class="WizardTextEntry"
 						textinputid="CustomPrimaryDNS"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 
@@ -53,7 +53,7 @@
 						id="SettingsNetwork_CustomSecondaryDNS"
 						class="WizardTextEntry"
 						textinputid="CustomSecondaryDNS"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 

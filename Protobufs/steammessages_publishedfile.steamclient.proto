@@ -304,6 +304,11 @@ message CPublishedFile_RefreshVotingQueue_Response {
 }
 
 message CPublishedFile_QueryFiles_Request {
+	message KVTag {
+		optional string key = 1;
+		optional string value = 2;
+	}
+
 	optional uint32 query_type = 1 [(description) = "enumeration EPublishedFileQueryType in clientenums.h"];
 	optional uint32 page = 2 [(description) = "Current page"];
 	optional uint32 numperpage = 3 [default = 1, (description) = "(Optional) The number of results, per page to return."];
@@ -321,6 +326,7 @@ message CPublishedFile_QueryFiles_Request {
 	optional bool include_recent_votes_only = 15 [(description) = "If query_type is k_PublishedFileQueryType_RankedByTrend, then limit result set just to items that have votes within the day range given"];
 	optional uint32 cache_max_age_seconds = 31 [default = 0, (description) = "Allow stale data to be returned for the specified number of seconds."];
 	optional int32 language = 33 [default = 0, (description) = "Language to search in and also what gets returned. Defaults to English."];
+	repeated .CPublishedFile_QueryFiles_Request.KVTag required_kv_tags = 34 [(description) = "Required key-value tags to match on."];
 	optional bool totalonly = 16 [(description) = "(Optional) If true, only return the total number of files that satisfy this query."];
 	optional bool return_vote_data = 17 [(description) = "Return vote data"];
 	optional bool return_tags = 18 [(description) = "Return tags in the file details"];
