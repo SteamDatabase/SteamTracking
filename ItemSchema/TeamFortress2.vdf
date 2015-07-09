@@ -111071,6 +111071,7 @@
 							"jumping_state"		"0"
 							"disguise_target"		"0"
 							"min_stickies"		"0"
+							"alive_state"		"0"
 							"is_owner"		"1"
 							"value"		"sniper"
 						}
@@ -111102,6 +111103,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"sniper"
 							}
@@ -111113,17 +111115,28 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"TF_COND_ZOOMED"
 							}
-							"2"
+							"3"
 							{
 								"type"		"NOT"
 								"0"
 								{
-									"type"		"custom_damage"
-									"custom_damage_key"		"customkill"
-									"value"		"TF_DMG_CUSTOM_HEADSHOT"
+									"type"		"OR"
+									"0"
+									{
+										"type"		"custom_damage"
+										"custom_damage_key"		"customkill"
+										"value"		"TF_DMG_CUSTOM_HEADSHOT"
+									}
+									"1"
+									{
+										"type"		"custom_damage"
+										"custom_damage_key"		"customkill"
+										"value"		"TF_DMG_CUSTOM_HEADSHOT_DECAPITATION"
+									}
 								}
 							}
 						}
@@ -111155,14 +111168,25 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"sniper"
 							}
 							"1"
 							{
-								"type"		"custom_damage"
-								"custom_damage_key"		"customkill"
-								"value"		"TF_DMG_CUSTOM_HEADSHOT"
+								"type"		"OR"
+								"0"
+								{
+									"type"		"custom_damage"
+									"custom_damage_key"		"customkill"
+									"value"		"TF_DMG_CUSTOM_HEADSHOT"
+								}
+								"1"
+								{
+									"type"		"custom_damage"
+									"custom_damage_key"		"customkill"
+									"value"		"TF_DMG_CUSTOM_HEADSHOT_DECAPITATION"
+								}
 							}
 						}
 					}
@@ -111193,6 +111217,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"sniper"
 							}
@@ -111204,6 +111229,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"0"
 								"value"		"medic"
 							}
@@ -111236,6 +111262,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"sniper"
 							}
@@ -111247,6 +111274,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"0"
 								"value"		"heavy"
 							}
@@ -111279,6 +111307,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"sniper"
 							}
@@ -111290,6 +111319,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"0"
 								"value"		"sniper"
 							}
@@ -111325,6 +111355,7 @@
 									"jumping_state"		"0"
 									"disguise_target"		"0"
 									"min_stickies"		"0"
+									"alive_state"		"0"
 									"is_owner"		"1"
 									"value"		"sniper"
 								}
@@ -111336,6 +111367,7 @@
 									"jumping_state"		"0"
 									"disguise_target"		"0"
 									"min_stickies"		"0"
+									"alive_state"		"0"
 									"is_owner"		"1"
 									"value"		"sniper"
 								}
@@ -111348,6 +111380,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"0"
 							}
 						}
@@ -111774,6 +111807,17 @@
 							{
 								"type"		"map"
 								"value"		"cp_powerhouse"
+							}
+							"2"
+							{
+								"type"		"player"
+								"player_key"		"userid"
+								"get_player"		"by_id"
+								"jumping_state"		"0"
+								"disguise_target"		"0"
+								"min_stickies"		"0"
+								"alive_state"		"0"
+								"is_owner"		"0"
 							}
 						}
 					}
