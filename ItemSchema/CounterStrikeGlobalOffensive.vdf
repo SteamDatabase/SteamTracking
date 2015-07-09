@@ -8282,6 +8282,11 @@
 			"prefab"		"collectible_untradable"
 			"item_type"		"operation_coin"
 		}
+		"prestige_coin"
+		{
+			"prefab"		"collectible_untradable"
+			"item_type"		"prestige_coin"
+		}
 		"attendance_pin"
 		{
 			"prefab"		"collectible_untradable"
@@ -8822,6 +8827,14 @@
 					"value"		"0"
 					"force_gc_to_generate"		"1"
 				}
+			}
+		}
+		"prestige_2015"
+		{
+			"prefab"		"prestige_coin"
+			"attributes"
+			{
+				"prestige year"		"2015"
 			}
 		}
 		"map_token"
@@ -14397,6 +14410,18 @@
 			"tool"
 			{
 				"restriction"		"community_case_8"
+			}
+		}
+		"1331"
+		{
+			"name"		"prestige coin 2015"
+			"prefab"		"prestige_2015"
+			"item_name"		"#CSGO_Collectible_GlobalGeneral2015"
+			"item_description"		"#CSGO_Collectible_Desc_GlobalGeneral2015"
+			"image_inventory"		"econ/status_icons/service_medal_2015"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/service_medal_2015.mdl"
 			}
 		}
 		"4001"
@@ -20159,6 +20184,25 @@
 			"attribute_class"		"operation_bonus_points"
 			"description_format"		"value_is_additive"
 			"description_string"		"#Attrib_OperationBonusXP"
+			"hidden"		"0"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
+		"221"
+		{
+			"name"		"prestige year"
+			"attribute_class"		"prestige_year"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"neutral"
+			"stored_as_integer"		"1"
+		}
+		"222"
+		{
+			"name"		"issue date"
+			"attribute_class"		"issue_date"
+			"description_format"		"value_is_date"
+			"description_string"		"#Attrib_IssueDate"
 			"hidden"		"0"
 			"effect_type"		"positive"
 			"stored_as_integer"		"1"

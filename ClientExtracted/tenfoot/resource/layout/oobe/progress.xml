@@ -6,7 +6,7 @@
 
 	<OOBEProgress tabindex="auto" selectionpos="auto">
 		<Panel id="CenterWrapper">
-			<Panel class="Throbber" />
+			<LoadingThrobber id="Throbber" />
 		</Panel>
 	</OOBEProgress>
 </root>

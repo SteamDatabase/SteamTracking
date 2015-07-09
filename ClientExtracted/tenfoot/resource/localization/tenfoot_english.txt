@@ -2346,7 +2346,7 @@
 	"OOBE_Eula_Title"				"End User License Agreement"
 	"OOBE_Eula_IAgree"				"I AGREE"
 	"OOBE_DisplaySettings_Title"	"Display"
-	"OOBE_DisplaySettings_Description" "Please adjust image size and brightness to fit your display."
+	"OOBE_DisplaySettings_Description" "Please adjust image size to fit your display."
 	"OOBE_CheckForUpdates_Title"	"Almost done..."
 	"OOBE_CheckForUpdates"			"Setup is almost complete! As a final step, we're checking to make sure your system is up-to-date."
 
