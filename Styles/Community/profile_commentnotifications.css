@@ -268,7 +268,7 @@
 }
 
 
-@media screen and (max-device-width: 940px )
+@media screen and (max-width: 940px )
 {
 	html.responsive #mainContents {
 		width: auto;
@@ -283,7 +283,7 @@
 	}
 }
 
-@media screen and ( max-device-width: 480px )
+@media screen and ( max-width: 480px )
 {
 	html.responsive .commentnotification_details {
 		float: right;

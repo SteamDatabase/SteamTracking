@@ -1870,7 +1870,7 @@ body.profile_page #footer {
     margin-bottom:12px
 }
 
-@media screen and (max-device-width: 940px )
+@media screen and (max-width: 940px )
 {
 	html.responsive div.profile_page {
 		min-width: 0;
@@ -1902,7 +1902,8 @@ body.profile_page #footer {
 	}
 
 	html.responsive .profile_content.has_profile_background {
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 		padding: 0;
 	}
 
@@ -1924,6 +1925,7 @@ body.profile_page #footer {
 	html.responsive .profile_subpage_column .maincontent,
 	html.responsive body.migrated_profile_page #BG_bottom.maincontent {
 		width: auto;
+		margin: 0 1%;
 	}
 
 	html.responsive .graytab_body_wrapper {
@@ -1935,5 +1937,27 @@ body.profile_page #footer {
 	}
 	html.responsive .profile_friends .friendBlock:nth-child(2n) {
 		margin-right: 0;
+	}
+
+	html.responsive_legacy .profile_background_image_content {
+		background-position: center top;
+		background-size: 115% auto;
+	}
+
+	html.responsive_legacy .profile_background_overlay_content {
+		opacity: .65;
+		filter: alpha(opacity=65);
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+	}
+
+	html.responsive_legacy .profile_content.has_profile_background .profile_content_inner {
+		padding-top: 128px;
+	}
+}
+
+@media screen and (max-width: 600px )
+{
+	html.responsive .profile_small_header_additional {
+		display: none;
 	}
 }

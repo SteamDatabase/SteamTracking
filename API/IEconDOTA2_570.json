@@ -2,25 +2,6 @@
     "name": "IEconDOTA2_570",
     "methods": [
         {
-            "name": "GetEmoticonAccessForUser",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "steamid",
-                    "type": "uint64",
-                    "optional": false,
-                    "description": "Steam ID of user."
-                }
-            ]
-        },
-        {
-            "name": "GetEmoticons",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": []
-        },
-        {
             "name": "GetEventStatsForAccount",
             "version": 1,
             "httpmethod": "GET",

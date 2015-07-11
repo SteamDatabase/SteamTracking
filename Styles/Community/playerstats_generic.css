@@ -36,12 +36,10 @@
 	padding-left:12px;
 }
 #mainContents {
-	width:936px;
+	width:924px;
 	margin:0;
-	padding:0;
 	text-align:left;
-	padding-left:12px;
-	padding-top:8px;
+	padding: 8px 12px;
 }
 #logo {
 	position:absolute;
@@ -57,16 +55,13 @@
 	padding:10px 8px 0px 12px;
 }
 
-#topSummaryBox {
-	width:921px;
-}
-
 #topSummaryBoxContent {
+	position: relative;
 	background-color:#000000;
-	padding:6px 0px 6px 10px;
-	width:911px;
+	padding:6px 10px 6px 10px;
 	color:#747474;
 	border-radius: 3px;
+	min-height: 69px;
 }
 
 #tsblTitle {
@@ -87,21 +82,33 @@
 }
 
 #topSummaryLeft {
-	float:left;
-	width:585px;
+	float: left;
 }
 
 #topSummaryVBreak {
-	float:left;
+	position: absolute;
+	top: 5px;
+	bottom: 5px;
+	left: 50%;
 	width:1px;
-	height:69px;
 }
 
 #topSummaryAchievements {
-	float:left;
-	width:309px;
-	padding:5px 0px 0px 6px;
+	float:right;
+	max-width:309px;
+	padding: 5px 6px 0 0;
 	line-height:18px;
+}
+
+.achieveBar {
+	background: #3a3a3a;
+	padding: 1px;
+	border: 1px solid #aeaeae;
+}
+
+.achieveBarProgress {
+	height: 8px;
+	background-color: #aeaeae;
 }
 
 .compareVal {
@@ -111,10 +118,8 @@
 #tabs {
 	margin:0;
 	padding-left:16px;
-	width:728px;
 }
 #subtabs {
-	width:918px;
 	height:43px;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/statsSubtabsBG.gif?v=1');
 	padding-left:14px;
@@ -167,7 +172,7 @@
 	padding-left:92px;
 }
 #personalAchieve {
-	padding-left:16px;
+	padding: 0 16px;
 }
 .achieveHeader {
 	font-weight:normal;
@@ -178,44 +183,55 @@
 
 .topAvatarsLeft {
 	float:left;
-	margin-left:-4px;
-	width:72px;
-	height:72px;
 }
 
 .topAvatarsRight {
 	float:right;
-	padding-right:23px;
+}
+
+.achieveRow {
+	position: relative;
+	padding-left: 71px;
+	min-height: 66px;
+	margin-bottom: 12px;
+}
+
+.achieveUnlockTime {
+	float: right;
+	text-align: right;
+	color: #898989;
+	font-size: 12px;
+}
+
+.achievements_list.compare_view .achieveRow {
+	padding-right: 71px;
 }
 
 .achieveImgHolder {
-	float:left;
-	width:64px;
-	height:64px;
-	padding:1px 9px 1px 0px;
+	position: absolute;
+	left: 0;
+	top: 1px;
+}
+
+.achieveImgHolder img, .CachieveImgHolder img {
+	width: 64px;
+	height: 64px;
 }
 
 .CachieveImgHolder {
-	float:left;
-	width:64px;
-	height:64px;
-	padding:1px 0px 1px 9px;
+	position: absolute;
+	right: 0;
+	top: 1px;
 }
 
 .achieveTxtHolder {
-	float:left;
+	min-height: 66px;
 	position:relative;
-	width:747px;
-	height:66px;
-	padding:0px;
 	background: rgba( 0, 0, 0, 0.5 );
 }
 
 .achieveTxt {
-	position:absolute;
-	top:17px;
-	left:6px;
-	width:730px;
+	padding: 17px 6px;
 }
 
 .achieveTxt h3 {
@@ -377,4 +393,35 @@ select {
 }
 .withProgress {
 	top:8px;
+}
+
+
+@media screen and (max-width: 940px )
+{
+	html.responsive #mainContents {
+		width: auto;
+		padding: 8px 12px;
+	}
+
+}
+
+@media screen and (max-width: 529px )
+{
+	html.responsive .achievements_list .achieveUnlockTime {
+		display: none;
+	}
+
+	html.responsive #topSummaryAchievements {
+		float: none;
+		clear: left;
+		padding-bottom: 18px;
+	}
+}
+
+/* compare view needs 71 extra pixels for right achievement display */
+@media screen and (max-width: 600px )
+{
+	html.responsive .achievements_list.compare_view .achieveUnlockTime {
+		display: none;
+	}
 }

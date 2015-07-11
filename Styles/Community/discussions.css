@@ -573,7 +573,7 @@ a.recent_game_discussion.quasi_official_group
 	margin-right: 0;
 }
 
-@media screen and (max-device-width: 940px )
+@media screen and (max-width: 940px )
 {
 	html.responsive .discussions_page {
 		padding: 0 4px;
@@ -607,13 +607,13 @@ a.recent_game_discussion.quasi_official_group
 	}
 }
 
-@media screen and (max-device-width: 480px )
+@media screen and (max-width: 480px )
 {
-	.discussions_game_discussioncount {
+	html.responsive .discussions_game_discussioncount {
 		display: none;
 	}
 
-	.discussions_game_browseoption {
+	html.responsive .discussions_game_browseoption {
 		display: none;
 	}
 }

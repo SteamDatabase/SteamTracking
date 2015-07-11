@@ -1,21 +1,6 @@
 
 g_BlotterNextLoadURL = null;
-g_BlotterSeenEvents = [];
 
-function Blotter_RemoveDuplicates(newDiv)
-{
-	$J('.blotter_block:not([data-event-id=""])', newDiv ).each(function(i,j){
-		var strEventID = $J(j).data('event-id');
-		if( g_BlotterSeenEvents.indexOf( strEventID ) != -1 )
-		{
-			$J(j).hide();
-		}
-		else
-		{
-			g_BlotterSeenEvents.push(strEventID);
-		}
-	});
-}
 
 function StartLoadingBlotter( url )
 {
@@ -42,12 +27,12 @@ function StartLoadingBlotter( url )
 				var newDiv = new Element ( 'div' );
 				newDiv.update( html );
 				newDiv.setOpacity(0);
-				Blotter_RemoveDuplicates(newDiv);
 				$('blotter_content').appendChild( newDiv );
 				new Effect.Appear( newDiv, { duration: .75 }  );
 
 				g_BlotterNextLoadURL = response.next_request;
 				Blotter_InfiniteScrollingCheckForMoreContent();
+				Blotter_AddHighlightSliders();
 			}
 			else if ( !response )
 			{
@@ -483,9 +468,47 @@ function LogUpvote()
 	}
 }
 
+function Blotter_InitHighlightSliders()
+{
+	Blotter_AddHighlightSliders();
+	var fnUseResponsiveMode = function() {
+		if ( typeof window.UseResponsiveMode != 'undefined' )
+			return window.UseResponsiveMode();
+		else
+			return false;
+	};
+
+	var bResponsiveMode = fnUseResponsiveMode();
+	$J(window).on('resize.HighlightSliders', function() {
+		if ( fnUseResponsiveMode() || bResponsiveMode )
+		{
+			$J('div.highlight_strip_scroll' ).each( function() {
+				var Slider = $J(this ).data('slider');
+				if ( Slider )
+					Slider.UpdateRanges();
+			});
+			bResponsiveMode = fnUseResponsiveMode();
+		}
+	});
+}
+
+function Blotter_AddHighlightSliders()
+{
+	var $HighlightStrips = $J('div.highlight_strip_scroll' );
+	$HighlightStrips.each( function() {
+		var $Strip = $J(this);
+		if ( !$Strip.data('slider') )
+		{
+			var nGalleryID = $Strip.data('galleryid');
+			var $Slider = $J('#highlight_slider_' + nGalleryID);
+			$Strip.data( 'slider', new CScrollSlider( $Strip, $Slider, $Slider.children( '.handle') ) );
+		}
+	});
+}
+
 // Do the intial replace
 $J(function() {
-	var html = Blotter_RemoveDuplicates($J('#blotter_content'));
+	Blotter_InitHighlightSliders();
 });
 
 

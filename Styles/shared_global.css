@@ -139,11 +139,8 @@
 }
 
 
-@media all and (max-device-width: 940px )
+@media screen and (max-device-width: 940px )
 {
-	html.responsive div.friendBlock {
-
-	}
 
 	html.responsive_legacy .playerAvatar.responsive_enlarge {
 		width: 68px;
@@ -1676,13 +1673,15 @@ body.v6 #footer_nav .popup_menu .hr{
 }
 
 
-@media screen and (max-device-width: 940px )
+@media screen and (max-width: 940px )
 {
 	html.responsive .newmodal {
 		position: fixed;
 		top: 12px;
 		left: 12px;
 		right: 12px;
+		bottom: 12px;
+		overflow: auto;
 		min-width: auto;
 	}
 }

@@ -242,6 +242,10 @@ textarea.forumtopic_reply_textarea {
 .forum_topic_op {
 	color: #518aad;
 	font-size: 11px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .forum_topic:hover .forum_topic_op {
 	color: #70beed;
@@ -319,6 +323,9 @@ textarea.forumtopic_reply_textarea {
 	position: relative;
 	padding: 7px 12px 21px 63px;
 	margin-bottom: 8px;
+
+
+	max-width: 565px;
 
 	background-color: #212f43;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//skin_1/forum_op_gradient.png?v=3' );
@@ -583,7 +590,7 @@ a.forum_comment_action {
 	visibility: visible;
 }
 
-@media screen and ( max-device-width: 950px )
+@media screen and ( max-width: 950px )
 {
 	html.responsive .forum_comment_action_trigger {
 		display: block;
@@ -1548,38 +1555,5 @@ select.subforum_select_control {
 		float: none;
 		line-height: 24px;
 		padding: 0;
-	}
-}
-
-@media screen and (max-device-width: 940px )
-{
-	html.responsive_legacy .forum_op .content
-	{
-		font-size: 15px;
-		line-height: 20px;
-	}
-
-	html.responsive_legacy .forum_paging
-	{
-		line-height: 33px;
-		height: 33px;
-		font-size: 18px;
-	}
-
-	html.responsive_legacy .forum_paging_controls .pagebtn
-	{
-		height: 32px;
-		line-height: 32px;
-	}
-
-
-}
-
-@media screen and (max-device-width: 480px )
-{
-	html.responsive_legacy .forum_op .content
-	{
-		font-size: 24px;
-		line-height: 32px;
 	}
 }

@@ -97,7 +97,7 @@ function ReceiveInviteProcessResponse()
 				el = document.getElementById( 'invite_' + data.id.replace( "[", "_" ).replace( "]", "_" ) );
 				if ( el )
 				{
-					el.style.display = 'none';
+					$J(el ).slideUp();
 				}
 
 				if ( data.itype == 'friend' )

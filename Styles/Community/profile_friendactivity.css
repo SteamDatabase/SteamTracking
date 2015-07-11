@@ -840,7 +840,6 @@ a.nohover, a.nohover:hover
 .blotter_screenshot_image
 {
 	position: relative; /* since we are overlapping it with extras */
-	min-height: 200px;
 	background-color: rgba( 0, 0, 0, 0.5 );
 	padding-left: 1px;
 	padding-top: 2px;
@@ -987,12 +986,20 @@ img.movie_thumb {
 	padding-top: 2px;
 }
 
+.blotter_video_player_sizing_ctn {
+	/*max-width: 656px;*/
+	margin: 0 2px;
+	position: relative;
+}
+
 .blotter_videopublished .movieFrame
 {
-	width: 656px;
-	height: 369px;
-	padding-left: 2px;
-	padding-right: 2px;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* blotter game purchase 
@@ -1363,16 +1370,18 @@ color: #8c8885;
 
 .highlight_strip_bg {
 	position: relative;
-	margin: 5px;
+	margin: 5px 5px 0 5px;
 	z-index: 4;
+	height: 96px;
+	overflow: hidden;
 }
 
 .highlight_strip {
 	margin: 2px 0 2px 0;
 	position: relative;
-	height: 93px;
+	height: 112px;
 	z-index: 40;
-	overflow: hidden;
+	overflow-x: scroll;
 }
 
 .highlight_strip_scroll {
@@ -1429,11 +1438,12 @@ div.slider {
 	height: 13px;
 	position: relative;
 	background-color: rgba( 0, 0, 0, 0.2 );
+	margin: 2px 5px 5px 5px;
 }
 
 div.slider div.handle {
 	position: absolute;
-	top: 0px;
+	top: 0;
 
 	width: 60px;
 	height: 13px;
@@ -1550,16 +1560,19 @@ div.slider div.handle:hover {
 	background-color: black;
 	position: absolute;
 	top: 30px;
-	width: 660px;
+	right: 0;
 	bottom: 30px;
+	left: 0;
 	cursor: pointer;
+	z-index: 5;
 }
 
 .ss_spoiler_text
 {
 	position: absolute;
 	top:50%;
-	width: 660px;
+	left: 0;
+	right: 0;
 	text-align: center;
 }
 
@@ -1568,7 +1581,8 @@ div.slider div.handle:hover {
 	position: absolute;
 	top: 10%;
 	bottom: 10%;
-	width: 100%;
+	left: 0;
+	right: 0;
 	pointer-events: none;
 	background-color: black;
 	z-index: 2;
@@ -1760,11 +1774,12 @@ div.slider div.handle:hover {
 }
 
 
-@media screen and (max-device-width: 940px )
+@media screen and (max-width: 940px )
 {
 	html.responsive #blotter_page, html.responsive #blotter_content {
 		width: auto;
 		float: none;
+		margin: 0 1%;
 	}
 
 	html.responsive #friendactivity_right_column {
@@ -1772,24 +1787,9 @@ div.slider div.handle:hover {
 		width: auto;
 	}
 
-	html.responsive_legacy .blotter_avatar_holder {
-		margin-right: 12px;
+	/* these elements end up getting moved, but hide them in the main page while content is loading */
+	html.responsive .responsive_page_content .responsive_local_menu {
+		display: none;
 	}
 
-	html.responsive_legacy .blotter_author_block,
-	html.responsive_legacy .blotter_group_announcement_header_text {
-		min-height: 74px;
-		font-size: 24px;
-		line-height: 32px;
-	}
-	html.responsive_legacy .blotter_group_announcement_header_text {
-		padding-top: 12px;
-	}
-	html.responsive_legacy .blotter_block .apphub_CardTextContent {
-		line-height: 30px;
-		font-size: 24px;
-	}
-	html.responsive_legacy .blotter_voters_names {
-		line-height: 30px;
-	}
 }

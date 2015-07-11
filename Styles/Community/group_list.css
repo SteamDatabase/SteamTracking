@@ -1,6 +1,6 @@
   
 
-#BG_top, #GCL_top {
+#BG_top {
 	position:relative;
 	z-index:10;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
@@ -10,7 +10,7 @@
 	text-align: left;
 	margin: 0 auto;
 }
-#BG_bottom, #GCL_bottom {
+#BG_bottom {
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
@@ -41,24 +41,6 @@
 	margin:0;
 	padding:0;
 	padding-top:5px;
-	padding-bottom:13px;
-	padding-left:5px;
-}
-#GCL_top h2 {
-	padding-top:20px;
-	font-weight:normal;
-	margin:0;
-	padding:0;
-	font-size: 26px;
-	color: #898989;
-	padding-left:5px;
-}
-#GCL_top h1 {
-	font-weight:normal;
-	font-size: 26px;
-	color: #e1e1e1;
-	margin:0;
-	padding:0;
 	padding-bottom:13px;
 	padding-left:5px;
 }
@@ -179,7 +161,6 @@
 
 .infoBar {
 	position:relative;
-	width:900px;
 	height:32px;
 	line-height: 28px;
 	background-color:#000000;
@@ -214,19 +195,15 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 .sectionDesc {
 	color: #8c8c8c;
 	font-size: 11px;
-	margin:0;
-	padding:0;
-	margin-top:-2px;
-	margin-bottom:12px;
+	line-height: 30px;
 }
 
 .left17 {
-	margin-left:25px;
+	margin: 0 25px;
 }
 
 .groupBlock, .groupBlockHi {
-	width:900px;
-	height:72px;
+	min-height:72px;
 	margin:0;
 	padding:0;
 	margin-bottom:4px;
@@ -246,15 +223,13 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 	line-height:16px;
 }
 
+/* ironically on the right */
 .groupLeftBlock {
 	margin:0;
-	padding:0;
-	width:136px;
-	height:36px;
 	float:right;
-	padding-top: 18px;
-	padding-left:16px;
+	padding: 0 8px;
 	font-size: 11px;
+	line-height: 20px;
 }
 
 .groupLeftBlockDouble {
@@ -270,10 +245,10 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 }
 
 #primaryGroupBreak {
-	margin:0;
-	padding:0;
-	padding-top:8px;
-	padding-bottom:8px
+	margin: 8px 0;
+	background-position: center top;
+	background-repeat: no-repeat;
+	height: 10px;
 }
 
 .mainSectionHeader {
@@ -288,13 +263,13 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 	padding-left:8px;
 }
 
-
+.groupBlock .groupTitle {
+	margin-top: 11px;
+}
 
 .groupBlock a.linkTitle {
 	font-size: 17px;
 	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	margin-top: 11px;
-	display: inline-block;
 }
 
 .membersInGame {
@@ -306,4 +281,33 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 .memberRow {
 	margin-top: 5px;
 	font-size: 11px;
+}
+.memberRow .groupMemberStat {
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 940px )
+{
+	html.responsive .left17 {
+		margin: 0 2%;
+	}
+
+	/* this is an image with text baked into it, and just to make it worse it's off-center.
+		the 10% helps it stay visible on smaller devices */
+	html.responsive #primaryGroupBreak {
+		background-position: 10% top;
+	}
+}
+
+
+@media screen and (max-width: 400px )
+{
+	html.responsive .groupLeftBlock {
+		display: none;
+	}
+
+	/* hide stats that are 0 to keep things clean (eg "0 users in chat" ) */
+	html.responsive .groupMemberStatZero {
+		display: none;
+	}
 }

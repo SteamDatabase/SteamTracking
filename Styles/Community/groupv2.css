@@ -29,6 +29,10 @@
 	background-repeat: no-repeat;
 }
 
+.grouppage_member_tiles .member_tile_row {
+	width: 935px;
+}
+
 body.nodatauri .grouppage_membertiles_overlay {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_membertile_overlay.png' );
 }
@@ -98,6 +102,12 @@ body.nodatauri .grouppage_membertiles_overlay {
 
 	color: #9d9d9d;
 	font-size: 13px;
+}
+
+html.responsive .responsive_local_menu .grouppage_join_area {
+	position: static;
+	top: 0;
+	right: 0;
 }
 
 .grouppage_join_area .btn_medium {
@@ -271,6 +281,7 @@ a.group_tab:hover {
 	padding-top: 10px;
 }
 .group_content {
+	position: relative;
 
 	padding-left: 5px;
 
@@ -280,6 +291,8 @@ a.group_tab:hover {
 	padding-right: 9px;
 
 	margin-bottom: 22px;
+
+	max-width: 626px;	/* backgrounds don't look good beyond this */
 }
 
 /* group summary does not have the top background */
@@ -315,7 +328,7 @@ a.group_tab:hover {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png?v=1');
 	background-position: bottom left;
 	background-repeat: no-repeat;
-	width: 645px;
+	max-width: 645px;
 	height: 8px;
 }
 
@@ -1064,7 +1077,7 @@ a.headlineLink:hover {
 }
 
 .member_block.last {
-	margin-right: 0px;
+	margin-right: 0;
 }
 .member_block .playerAvatar {
 	position: absolute;
@@ -1261,7 +1274,8 @@ a.headlineLink:hover {
 }
 
 .curation_app_form textarea {
-	width: 630px;
+	max-width: 630px;
+	width: 95%;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 4px;
 	border-radius: 3px;
@@ -1271,7 +1285,8 @@ a.headlineLink:hover {
 
 
 .curation_app_form input {
-	width: 630px;
+	max-width: 630px;
+	width: 95%;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 4px 0px 4px 4px;
 	border-radius: 3px;
@@ -1329,6 +1344,10 @@ a.headlineLink:hover {
     max-width: 184px;
 }
 
+.leftcol.bare_content {
+	padding: 0 8px;
+}
+
 .curation_app_block_content {
 	padding-left: 200px;
 }
@@ -1381,12 +1400,11 @@ a.headlineLink:hover {
 }
 
 .curation_warning_box {
-	width: 930px;
 	background-color: #918c6c;
 	border: solid 1px #ddd598;
 	color: #f0e8aa;
 	padding: 8px;
-	margin-bottom: 16px;
+	margin: 0 8px 16px 8px;
 }
 
 .curation_tagline {
@@ -1397,7 +1415,8 @@ a.headlineLink:hover {
 }
 
 #curationTaglineInput {
-	width: 626px;
+	max-width: 626px;
+	width: 95%;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
 	border: 1px solid #000;
@@ -1529,13 +1548,52 @@ a.headlineLink:hover {
     margin: 10px 0 10px;
 }
 
+.responsive_group_stats {
+	display: none;
+}
 
-@media screen and (max-device-width: 940px )
+.responsive_membercounts_placeholder {
+	float: right;
+	width: 300px;
+	height: 80px;
+	width: 300px;
+}
+
+.responsive_membercounts {
+	position: absolute;
+	right: 0;
+	top: 32px;
+}
+
+.responsive_group_stats .groupstat {
+	white-space: nowrap;
+}
+
+.responsive_membercounts .membercount {
+	display: inline-block;
+
+	margin-right: 20px;
+	width: auto;
+}
+
+@media screen and (max-width: 940px )
 {
 	html.responsive .leftcol,
 	html.responsive .rightcol {
 		width: auto;
 		float: none;
+	}
+
+	html.responsive .leftcol {
+		max-width: 640px;
+	}
+
+	html.responsive .rightcol {
+		padding: 16px 8px 0 8px;
+	}
+
+	html.responsive .responsive_group_stats {
+		display: block;
 	}
 
 	html.responsive .grouppage_friendsingroup .friendavatar_link {
@@ -1549,5 +1607,29 @@ a.headlineLink:hover {
 	html.responsive .group_tabs_scroll {
 		white-space: nowrap;
 		width: 1024px;
+	}
+
+	html.responsive .member_block.last {
+		margin-right: 4px;
+	}
+
+	html.responsive .grouppage_friendsingroup {
+		right: 0;
+	}
+
+	html.responsive .grouppage_header {
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 500px )
+{
+	html.responsive .responsive_membercounts {
+		position: static;
+		padding-top: 18px;
+	}
+
+	html.responsive .responsive_membercounts_placeholder {
+		display: none;
 	}
 }

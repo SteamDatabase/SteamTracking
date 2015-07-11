@@ -2153,6 +2153,42 @@ CSlider.prototype.SetIncrement = function( nIncrement )
 	this.m_nIncrement = nIncrement;
 }
 
+function CScrollSlider( $Scroll, $Container, $Grabber, args )
+{
+	this.m_$Scroll = $Scroll;
+	this.m_$SliderCtn = $Container;
+	this.m_Slider = new CSlider( $Container, $Grabber, { fnOnChange: $J.proxy( this.OnSliderChange, this )} );
+
+	this.m_$Scroll.parent().css('overflowX', 'scroll');
+
+	var _this = this;
+	this.m_$Scroll.parent().on( 'scroll.ScrollSlider', function() {
+		_this.m_Slider.SetValue( _this.m_$Scroll.parent().scrollLeft() );
+	});
+
+	this.UpdateRanges();
+};
+
+CScrollSlider.prototype.UpdateRanges = function()
+{
+	var nParentWidth = this.m_$Scroll.parent().width();
+	var nScrollWidth = this.m_$Scroll.width();
+
+	if ( nScrollWidth <= nParentWidth )
+	{
+		this.m_$SliderCtn.hide();
+	}
+	else
+	{
+		this.m_Slider.SetRange( 0, nScrollWidth - nParentWidth, this.m_$Scroll.parent().scrollLeft() );
+		this.m_$SliderCtn.show();
+	}
+};
+
+CScrollSlider.prototype.OnSliderChange = function( value, bInDrag )
+{
+	this.m_$Scroll.parent().scrollLeft( value );
+};
 
 function IsValidEmailAddress( email )
 {

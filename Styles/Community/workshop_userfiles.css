@@ -3244,7 +3244,7 @@ div.hover {
 }
 
 
-@media screen and (max-device-width: 940px )
+@media screen and (max-width: 940px )
 {
 	html.responsive #mainContents {
 		width: auto;

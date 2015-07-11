@@ -243,6 +243,25 @@ a.friendBlock {
 	margin: 4px 4px 0 0;
 }
 
+@media screen and (max-width: 940px )
+{
+
+	html.responsive .commentthread_pagelinks {
+		display: none;
+	}
+
+	html.responsive .commentthread_pagedropdown {
+		display: inline;
+	}
+
+	html.responsive .commentthread_comment_author .actionlink {
+		display: none;
+	}
+
+}
+
+/* todo - get rid of this ? */
+
 @media screen and (max-device-width: 940px )
 {
 	html.responsive_legacy div.friendBlock {
@@ -254,14 +273,6 @@ a.friendBlock {
 	html.responsive_legacy div.friendBlock .friendPlayerLevel {
 		transform: scale( 2 );
 		margin: 16px 24px 0 0;
-	}
-
-	html.responsive .commentthread_pagelinks {
-		display: none;
-	}
-
-	html.responsive .commentthread_pagedropdown {
-		display: inline;
 	}
 
 
@@ -280,10 +291,6 @@ a.friendBlock {
 		padding-left: 84px;
 		font-size: 15px;
 		min-height: 74px;
-	}
-
-	html.responsive .commentthread_comment_author .actionlink {
-		display: none;
 	}
 
 	html.responsive_legacy .commentthread_comment_author a,
@@ -1133,10 +1140,10 @@ img.emoticon {
 }
 
 
-@media screen and (max-device-width: 940px )
+@media screen and (max-width: 940px )
 {
 	html.responsive .maincontent {
 		width: auto;
-		margin: 0 auto;
+		margin: 0 1%;
 	}
 }
