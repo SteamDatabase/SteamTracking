@@ -3653,11 +3653,11 @@ function ShowProgressDialog( strTitle, strDescription )
 	return Modal;
 }
 
-function UpgradeGreenlightItem( publishedfileid, name )
+function UpgradeGreenlightItem( item )
 {
 	var prompt = ShowPromptDialog( "Import Application", 'You can choose to rename your application if you wish.' );
 	var input = prompt.m_$Content.find( 'input' );
-	input.val( name );
+	input.val( item['title'] );
 	input.select();
 
 	input.after(
@@ -3674,7 +3674,7 @@ function UpgradeGreenlightItem( publishedfileid, name )
 				{
 					type: "POST",
 					url: 'https://partner.steamgames.com/apps/ajaxupgradegreenlightentry/',
-					data: { 'publishedfileid' : publishedfileid, 'name' : appName, 'type' : appType, 'sessionid' : g_sessionID },
+					data: { 'publishedfileid' : item['publishedfileid'], 'name' : appName, 'type' : appType, 'sessionid' : g_sessionID },
 					success: function ( response ) {
 						if ( response.success == 1 )
 						{
