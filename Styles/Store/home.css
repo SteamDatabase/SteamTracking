@@ -975,11 +975,14 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 }
 
 .recommended_spotlight_desc {
-	margin-bottom: 2px;
+	margin-top: 5px;
+	float: right;
+	text-align: right;
+	max-width: 140px;
 }
 
 .recommended_spotlight .recommended_spotlight_price {
-	text-align: right;
+	text-align: left;
 }
 
 /* Sign-in Prompt */
