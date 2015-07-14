@@ -7,8 +7,9 @@
 	</styles>
 
 	<TimeZoneRegionPanel class="VertContainer">
-    <Button id ="TimeZoneRegionFocusElement" onactivate="RegionSelected();">
+    <Button class="FlowDown" id ="TimeZoneRegionFocusElement" onactivate="RegionSelected();">
       <Label text="#TimeZoneRegionFormat" />
+      <Label class="TimeZoneRegionDetailText" text="#TimeZoneRegionFormatDetail" />
     </Button>
 	</TimeZoneRegionPanel>
 

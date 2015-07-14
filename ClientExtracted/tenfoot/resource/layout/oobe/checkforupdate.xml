@@ -28,8 +28,8 @@
       <Button class="WizardButton GapRight" id="RestartAndInstallUpdateButton" onactivate="RestartForClientUpdate()">
         <Label text="#OOBE_CheckForUpdates_RestartInstallNow" />
       </Button>
-      <Button class="WizardButton">
-        <Label text="#OOBE_CheckForUpdates_Shutdown" onactivate="ShutdownMachine()"/>
+      <Button class="WizardButton" onactivate="ShutdownMachine()">
+        <Label text="#OOBE_CheckForUpdates_Shutdown" />
       </Button>
     </Panel>
 	</OOBECompleteAndCheckForUpdate>

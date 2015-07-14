@@ -3665,3 +3665,8 @@ OOBEWizard SettingsPanelNetwork_Connect #ButtonDone
 {
 	visibility: collapse;
 }
+
+.TimeZoneRegionDetailText
+{
+	color: tcstatictext;
+}

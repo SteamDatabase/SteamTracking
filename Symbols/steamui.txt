@@ -41233,7 +41233,6 @@
  T CWelcome_NoController::OnGamePadDown(panorama::GamePadData_t const&)
  T CWelcome_NoController::OnInputFocusTopLevelChanged(panorama::CPanelPtr<panorama::CPanel2D>)
  T CWelcome_NoController::OnKeyDown(panorama::KeyData_t const&)
- T CWelcome_NoController::OnMouseMove(float, float)
  T CWelcome_NoController::SetPanelBehavior(WELCOME_NO_CONTROLLER_BEHAVIOR)
  T CWelcome_NoController::TogglePairingPanel()
  T CWelcome_NoController::~CWelcome_NoController()

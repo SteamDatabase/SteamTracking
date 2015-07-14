@@ -543,6 +543,7 @@
 	"Settings_Downloads"		"Downloads"
 	"Settings_Cloud"				"Downloads & Cloud"
 	"Settings_RemoteClients"		"In-Home Streaming"
+	"Settings_Keyboard"			"On-Screen Keyboard"
 
 	"Settings_Select"				"SELECT"
 	"Settings_Back"					"BACK"
@@ -653,7 +654,7 @@
 	"SettingsDisplay_Brightness"				"Adjust brightness"
 
 	// Settings, language
-	"SettingsLanguage_Intro"				"Select the language you wish Steam to use"
+	"SettingsLanguage_Intro"				"Select the language you wish Steam to use:"
 	"SettingsLanguage_Change_Title"			"Change Language"
 	"SettingsLanguage_Change_Description"	"Restart Steam with this language?"
 
@@ -707,20 +708,20 @@
 	"SettingsNetwork_Device_PluggedIn"		"Cable detected"
 	"SettingsNetwork_Device_Unplugged"		"No cable detected"
 
-	"SettingsNetwork_Device_Choose"			"Select how you want to connect to the internet."
+	"SettingsNetwork_Device_Choose"			"How do you want to connect to the Internet?"
 	"SettingsNetwork_Wireless_Choice"		"Use a Wi-Fi connection"
 	"SettingsNetwork_Wired_Choice"			"Use a wired connection"
 	"SettingsNetwork_Wireless_Found"		"Wireless card found"
 	"SettingsNetwork_Wireless_NotFound"		"No wireless card found"
 
-	"SettingsNetwork_WAP_OtherSSID"			"Enter the custom SSID you wish to connect to"
-	"SettingsNetwork_WAP_Credentials"		"Enter the password required to access {s:ssid}"
+	"SettingsNetwork_WAP_OtherSSID"			"What is the network name to connect to?"
+	"SettingsNetwork_WAP_Credentials"		"What is the password required to access {s:ssid}?"
 	"SettingsNetwork_Credentials_C"			"Finished entering password"
 	"SettingsNetwork_ShowPassword"			"Show password"
-	"SettingsNetwork_WAP_Choose"			"Select the wireless network you want to connect to"
+	"SettingsNetwork_WAP_Choose"			"Which wireless network do you want to connect to?"
 	"SettingsNetwork_WAP_Refresh"			"REFRESH LIST"
 	"SettingsNetwork_OtherSSID"				"Other"
-	"SettingsNetwork_WAP_OtherSSID_Security"	"Select which security mechanism to use"
+	"SettingsNetwork_WAP_OtherSSID_Security"	"Which security mechanism does this network use?"
 	"SettingsNetwork_SSID_Other_DAC"		"Finished entering SSID"
 	"SettingsNetwork_WAP_Security_None"		"None"
 	"SettingsNetwork_WAP_Security_WPA2"		"WPA2"
@@ -728,10 +729,10 @@
 	"SettingsNetwork_WAP_Security_WEP"		"WEP"
 	"SettingsNetwork_Forget"				"FORGET THIS NETWORK"
 
-	"SettingsNetwork_IPSettings"			"Select how you would like your IP settings to be determined"
-	"SettingsNetwork_Automatic"				"Automatically"
-	"SettingsNetwork_Manual"				"Manually"
-	"SettingsNetwork_Manual_Instructions"	"Please enter the following fields with IPv4 addresses"
+	"SettingsNetwork_IPSettings"			"How should we determine your network settings?"
+	"SettingsNetwork_Automatic"				"Obtain network settings automatically"
+	"SettingsNetwork_Manual"				"Configure network settings manually (Expert)"
+	"SettingsNetwork_Manual_Instructions"	"Please complete the following fields."
 	"SettingsNetwork_CustomSecondaryDNS"	"Secondary DNS (Optional)"
 	"SettingsNetwork_CustomSecondaryDNS_C"	"Finished entering Secondary DNS"
 	"SettingsNetwork_CustomPrimaryDNS"		"Primary DNS"
@@ -773,6 +774,13 @@
 	"SettingsVoice_InputDevice"				"Voice recording device"
 	"SettingsVoice_Microphone"				"{s:microphone}"
 	"SettingsVoice_NoneDetected"			"(None detected)"
+
+	// Settings, Keyboard input
+	"SettingsKeyboard_Description1"	"Select the default on-screen keyboard input type to use"
+	"SettingsKeyboard_Description2"	"Select the default input language for the on-screen keyboard"
+	"SettingsKeyboard_UseDualTouch" "Use the Standard On-Screen Keyboard"
+	"SettingsKeyboard_UseDaisyWheel" "Use the Daisy Wheel On-Screen Keyboard"
+	"SettingsKeyboard_UILanguage"	"Use a custom input language"
 
 //Controller Pairing
 	"ControllerPairing_Header"			"Enter Validation Code"
@@ -1250,6 +1258,7 @@
 	"Library_Details_Achievements"	"ACHIEVEMENTS"
 	"Library_Details_Guides"	"GUIDES"
 	"Library_Details_Play"		"PLAY"
+	"Library_Details_Watch"		"WATCH"
 	"Library_Details_PlayVR"		"PLAY IN VR"
 	"Library_Details_Play2D"		"PLAY IN 2D"
 	"Library_Details_Stream"		"STREAM"
@@ -1284,6 +1293,8 @@
 	"Library_Details_YouvePlayed"	"YOU'VE PLAYED"
 	"Library_Details_LastPlayed"	"LAST PLAYED"
 	"Library_Details_LastPlayedValue"	"{t:r:t:lastplayed}"
+	"Library_Details_YouveWatched"	"YOU'VE WATCHED"
+	"Library_Details_LastWatched"	"LAST WATCHED"	
 	"Library_Details_SteamCloud"	"STEAM CLOUD"
 	"Library_Details_Minutes"	"{i:minutes} Minutes"
 	"Library_Details_Hours"		"{i:hours} Hours"
@@ -1636,6 +1647,9 @@
 	"Library_Details_FieldLabel_ButtonRadius"		"Button Radius"
 	"Library_Details_FieldLabel_ButtonDistance"		"Button Distance"
 	"Library_Details_FieldLabel_GyroButton"			"Gyro Enable Button"
+	"Library_Details_FieldLabel_GyroAxis"			"Gyro Steering Axis"
+	"Library_Details_FieldLabel_GyroNeutralAngle"	"Gyro Pitch Neutral Angle"
+	"Library_Details_FieldLabel_GyroPointerMode"	"Gyro Mouse Mode"
 
 	"Library_Details_SourceMode_Title_None"				"None"
 	"Library_Details_SourceMode_Title_Dpad"				"Directional Pad"
@@ -1684,6 +1698,10 @@
 	"Library_Controller_Property_Value_GyroBumperLeft"	"Left Bumper"
 	"Library_Controller_Property_Value_GyroGripRight"	"Right Grip"
 	"Library_Controller_Property_Value_GyroGripLeft"	"Left Grip"
+	"Library_Controller_Property_Value_Gyro_Yaw"		"Yaw"
+	"Library_Controller_Property_Value_Gyro_Roll"		"Roll"
+	"Library_Controller_Property_Value_Gyro_Pointer"	"Pointer Mode"
+	"Library_Controller_Property_Value_Gyro_Camera"		"Camera Mode"
 
 	"Library_Details_Controller_Personal"				"PERSONAL"
 	"Library_Details_Controller_Community"				"COMMUNITY"
@@ -2574,12 +2592,12 @@
 	"GoOffline_Prompt_YesButton"	"RESTART OFFLINE"
 
 	"Settings_TimeZone"	"Time Zone"
-	"SettingsTimeZone_Intro"	"Set the current time zone for this device"
+	"SettingsTimeZone_Intro"	"What is the current time zone for this device?"
 	"SettingsTimeZone_Region"	"Region"
 	"SettingsTimeZone_Apply"	"APPLY"
 
 	"OOBE_TimeZoneSettings_Title"	"Time Zone"
-	"OOBE_TimeZoneSettings_Description"	"Set the current time zone for this device"
+	"OOBE_TimeZoneSettings_Description"	"What is the current time zone for this device?"
 
 	"Settings_Interface"	"Interface"
 	"SettingsSteamOS_EnableDesktop" "Enable access to the Linux desktop"
@@ -3517,7 +3535,8 @@
 	"CDNLoc_Russia___Kazan"		"Russia - Kazan"
 	"CDNLoc_Russia___Vladivostok"		"Russia - Vladivostok"
 
-	"TimeZoneRegionFormat"				"UTC{s:utcoffset} {s:timezonename}\n{s:timezoneregionsamples}"
+	"TimeZoneRegionFormat"				"(UTC{s:utcoffset}) {s:timezonename}"
+	"TimeZoneRegionFormatDetail"		"{s:timezoneregionsamples}"
 	"TimeZoneRegion_Samoa"				"Samoa Standard Time"
 	"TimeZoneCities_Samoa"				"American Samoa, Midway Islands"
 	"TimeZoneRegion_Hawaii"				"Hawaiian Standard Time"
