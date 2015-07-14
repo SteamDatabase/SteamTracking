@@ -243,7 +243,7 @@ a.friendBlock {
 	margin: 4px 4px 0 0;
 }
 
-@media screen and (max-width: 940px )
+@media screen and (max-width: 910px)
 {
 
 	html.responsive .commentthread_pagelinks {
@@ -262,7 +262,7 @@ a.friendBlock {
 
 /* todo - get rid of this ? */
 
-@media screen and (max-device-width: 940px )
+@media screen and (max-device-width: 910px )
 {
 	html.responsive_legacy div.friendBlock {
 		height: 72px;
@@ -1140,7 +1140,7 @@ img.emoticon {
 }
 
 
-@media screen and (max-width: 940px )
+@media screen and (max-width: 910px)
 {
 	html.responsive .maincontent {
 		width: auto;

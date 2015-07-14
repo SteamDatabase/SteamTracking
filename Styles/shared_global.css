@@ -139,7 +139,7 @@
 }
 
 
-@media screen and (max-device-width: 940px )
+@media screen and (max-device-width: 910px )
 {
 
 	html.responsive_legacy .playerAvatar.responsive_enlarge {
@@ -1311,6 +1311,7 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	box-shadow: 0 0 3px 0 #000000;
 
 	cursor: pointer;
+	overflow: hidden;
 }
 
 a.dynamiclink_box {
@@ -1350,9 +1351,10 @@ a.dynamiclink_box {
 }
 
 img.dynamiclink_preview {
-	height: 88px;
 	float: left;
 	margin-right: 14px;
+	max-height: 88px;
+	max-width: 75%;
 }
 .dynamiclink_content {
 	overflow: hidden;
@@ -1673,7 +1675,7 @@ body.v6 #footer_nav .popup_menu .hr{
 }
 
 
-@media screen and (max-width: 940px )
+@media screen and (max-width: 910px)
 {
 	html.responsive .newmodal {
 		position: fixed;

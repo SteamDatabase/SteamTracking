@@ -1009,7 +1009,7 @@ html.responsive.mobile .badge_title_playgame {
 	display: none;
 }
 
-@media screen and ( max-width: 940px )
+@media screen and ( max-width: 910px )
 {
 	html.responsive .badge_progress_card_ctn  {
 		width: 18%;
@@ -1044,7 +1044,7 @@ html.responsive.mobile .badge_title_playgame {
 
 /* responsive in-progress card display */
 
-@media screen and ( max-width: 760px ) and ( min-width: 701px )
+@media screen and ( max-width: 800px ) and ( min-width: 741px )
 {
 	html.responsive .badge_progress_card_ctn  {
 		width: 23%;
@@ -1056,7 +1056,7 @@ html.responsive.mobile .badge_title_playgame {
 	}
 }
 
-@media screen and ( max-width: 700px ) and ( min-width: 621px )
+@media screen and ( max-width: 740px ) and ( min-width: 661px )
 {
 	html.responsive .badge_progress_card_ctn  {
 		width: 31%;
@@ -1067,7 +1067,7 @@ html.responsive.mobile .badge_title_playgame {
 	}
 }
 
-@media screen and ( max-width: 620px )
+@media screen and ( max-width: 660px )
 {
 	html.responsive .badge_progress_tasks {
 		clear: both;

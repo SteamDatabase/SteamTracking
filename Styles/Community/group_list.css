@@ -286,7 +286,7 @@ a.chatLink,a.chatLink:hover,a.chatLink:active,a.chatLink:visited {
 	white-space: nowrap;
 }
 
-@media screen and (max-width: 940px )
+@media screen and (max-width: 910px)
 {
 	html.responsive .left17 {
 		margin: 0 2%;

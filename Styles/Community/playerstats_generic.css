@@ -396,7 +396,7 @@ select {
 }
 
 
-@media screen and (max-width: 940px )
+@media screen and (max-width: 910px)
 {
 	html.responsive #mainContents {
 		width: auto;

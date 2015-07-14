@@ -516,3 +516,6 @@ a.chat_ban_admin {
 .forum_bandetails .forum_banuser_data {
 	line-height: 24px;
 }
+.textarea.gray_bevel, .gray_bevel textarea {
+	resize: vertical;
+}

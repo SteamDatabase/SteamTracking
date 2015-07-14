@@ -313,6 +313,10 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3c597
 	color: #5491cf;
 	font-size: 20px;
 	line-height: 30px;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .profile_customization_editlink {
@@ -337,35 +341,71 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3c597
 	border-radius: 3px;
 
 	margin-bottom: 9px;
+
+	overflow: hidden;
 }
 
 .showcase_content_bg:last-child {
 	margin-bottom: 0;
 }
 
-.showcase_stats_row .showcase_stat {
-	float: left;
-	margin-left: 42px;
-	display: block;
+.showcase_stats_row {
+	white-space: nowrap;
 }
 
-.showcase_stats_row .showcase_stat:first-child {
+.showcase_stats_row .showcase_stat {
+	margin-left: 42px;
+	display: inline-block;
+}
+
+.showcase_stat {
+	font-size: 34px;
+}
+
+.showcase_stats_row .showcase_stat:first-child, html.responsive .showcase_stats_row .showcase_stat:first-child {
 	margin-left: 0;
 }
 
 .showcase_stat .value {
-	font-size: 34px;
+	font-size: 1em;
 	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
 	color: #ffffff;
 }
 .showcase_stat .label {
-	font-size: 17px;
+	font-size: 0.5em;
 	color: #9b9b9b;
 }
 
 a.showcase_stat:hover .label {
 	color: #ffffff;
 }
+
+@media screen and ( max-width: 600px )
+{
+	html.responsive .showcase_stats_row .showcase_stat {
+		margin-left: 6%;
+	}
+
+	html.responsive .showcase_stat {
+		font-size: 30px;
+	}
+}
+
+@media screen and ( max-width: 500px )
+{
+	html.responsive .showcase_stat {
+		font-size: 26px;
+	}
+}
+
+
+@media screen and ( max-width: 400px )
+{
+	html.responsive .showcase_stat {
+		font-size: 22px;
+	}
+}
+
 
 .showcase_bodylabel {
 	font-size: 13px;
@@ -387,8 +427,8 @@ a.showcase_stat:hover .label {
 	height: 64px;
 }
 
-.showcase_achievement:first-child {
-	margin-left: 0px;
+.showcase_achievement:first-child, html.responsive .showcase_achievement:first-child {
+	margin-left: 0;
 }
 
 .showcase_achievement.openslot {
@@ -423,7 +463,7 @@ a.showcase_stat:hover .label {
 	height: 80px;
 }
 
-.showcase_badges_icons .showcase_badge:first-child {
+.showcase_badges_icons .showcase_badge:first-child, html.responsive .showcase_badges_icons .showcase_badge:first-child {
 	margin-left: 0;
 }
 
@@ -440,7 +480,8 @@ a.showcase_stat:hover .label {
 	line-height: 56px;
 }
 
-.showcase_gamecollector_games .showcase_gamecollector_game:first-child {
+.showcase_gamecollector_games .showcase_gamecollector_game:first-child,
+html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first-child {
 	margin-left: 0;
 }
 
@@ -453,6 +494,72 @@ a.showcase_stat:hover .label {
 	width: 144px;
 	height: 52px;
 	line-height: 52px;
+}
+
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .showcase_badges_icons .showcase_badge
+	{
+		width: 12%;
+		height: auto;
+	}
+
+	html.responsive .showcase_badges_icons .showcase_badge img
+	{
+		width: 100%;
+		height: auto;
+	}
+
+	html.responsive .showcase_badges_icons .showcase_badge
+	{
+		margin-left: 4%;
+	}
+
+	html.responsive .showcase_badges_icons .showcase_badge.openslot
+	{
+		margin-left: 3%;
+	}
+
+	html.responsive .showcase_gamecollector_game {
+		width: 24%;
+		height: auto;
+		margin-left: 1%;
+		line-height: 100%;
+	}
+
+	html.responsive .showcase_gamecollector_game img.game_capsule {
+		width: 100%;
+		height: auto;
+	}
+
+	html.responsive .item_showcase_item {
+		width: 15%;
+		margin-left: 0.9%;
+		line-height: 100%;
+		height: auto;
+	}
+
+	html.responsive .item_showcase_item img.item_image {
+		width: 100%;
+		height: auto;
+	}
+
+
+
+	html.responsive .showcase_achievement {
+		width: 10%;
+		height: auto;
+		line-height: 100%;
+		float: left;
+
+		margin-left: 4.5%;
+	}
+
+	html.responsive .showcase_achievement img {
+		width: 100%;
+		height: auto;
+	}
 }
 
 .item_showcase .item_count_stat {
@@ -521,6 +628,10 @@ a.showcase_stat:hover .label {
 	font-size: 24px;
 	padding-top: 10px;
 	color: #ffffff;
+
+	line-height: 29px;
+	max-height: 58px;
+	overflow: hidden;
 }
 
 .favoritegame_showcase_game .showcase_openslot_placeholder {
@@ -573,6 +684,30 @@ a.showcase_stat:hover .label {
 	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
 }
 
+@media screen and (max-width: 480px)
+{
+	html.responsive .favoritegroup_showcase_group .favoritegroup_avatar {
+		position: static;
+		float: left;
+		margin: 0 12px 12px 0;
+	}
+
+	html.responsive	.favoritegroup_showcase_group {
+		padding-left: 0;
+	}
+
+	html.responsive .favoritegroup_showcase_group .favoritegroup_avatar,
+	html.responsive .favoritegroup_showcase_group .favoritegroup_avatar img {
+		width: 92px;
+		height: 92px;
+	}
+
+	html.responsive .favoritegroup_description {
+		max-height: 58px;
+		overflow: hidden;
+	}
+}
+
 .recommendation_showcase .showcase_slot {
 	float: none;
 }
@@ -587,7 +722,6 @@ a.showcase_stat:hover .label {
 }
 
 .showcase_stats_row.favoritegroup_stats {
-	width: 600px;
 }
 
 .showcase_stats_row.favoritegroup_stats .showcase_stat {
@@ -601,7 +735,7 @@ a.showcase_stat:hover .label {
 }
 
 .showcase_stats_row.favoritegroup_stats .showcase_stat .value {
-	font-size: 22px;
+	font-size: 0.64em;
 }
 
 .showcase_stat.favoritegroup_ingame .value {
@@ -624,6 +758,7 @@ a.showcase_stat:hover .label {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	right: 0;
 }
 
 .workshop_showcase_item {
@@ -723,7 +858,12 @@ img.workshop_showcase_item_image {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+}
 
+.workshop_showcase_app {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .workshop_showcase_app_details {
@@ -933,12 +1073,15 @@ img.workshop_showcase_item_image {
 .recent_game .game_info {
 	position: relative;
 	height: 69px;
-	padding-left: 192px;
 }
 .recent_game .game_info .game_info_cap {
-	position: absolute;
-	left: 0;
-	top: 0;
+	float: left;
+	margin-right: 8px;
+	width: 184px;
+	max-width: 33%;
+}
+.recent_game .game_info .game_info_cap img {
+	width: 100%;
 }
 .recent_game .game_info .game_info_details {
 	position: absolute;
@@ -970,7 +1113,6 @@ img.workshop_showcase_item_image {
 
 .game_info_achievements_only_ctn {
 	line-height: 32px;
-	height: 32px;
 	position: relative;
 }
 
@@ -1010,6 +1152,11 @@ img.workshop_showcase_item_image {
 	height: 8px;
 	border-radius: 4px;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#516179), color-stop(95%,#2a3547));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#516179', endColorstr='#2a3547',GradientType=0 );background: -moz-linear-gradient( top, #516179 5%, #2a3547 95%);background: -webkit-linear-gradient( top, #516179 5%, #2a3547 95%);background: -o-linear-gradient( top, #516179 5%, #2a3547 95%);background: -ms-linear-gradient( top, #516179 5%, #2a3547 95%);background: linear-gradient( to bottom, #516179 5%, #2a3547 95%);}
+
+.achievement_icons {
+	white-space: nowrap;
+}
+
 .game_info_achievements_only_ctn .achievement_icons {
 	position: absolute;
 	left: 366px;
@@ -1017,7 +1164,7 @@ img.workshop_showcase_item_image {
 }
 
 .game_info_achievement {
-	float: left;
+	display: inline-block;
 	margin-left: 6px;
 }
 
@@ -1060,6 +1207,10 @@ img.workshop_showcase_item_image {
 	box-shadow: 1px 1px 0 #343944;
 }
 
+.game_info_achievements_badge .game_info_badge_border {
+	float: left;
+}
+
 
 
 .game_info_badge {
@@ -1098,7 +1249,35 @@ img.workshop_showcase_item_image {
 	width: 62px;
 
 	line-height: 62px;
+}
 
+@media screen and ( max-width: 640px )
+{
+	html.responsive .game_info_achievements_badge .game_info_badge_border {
+		float: none;
+		margin-bottom: 8px;
+		width: auto;
+		max-width: 282px;
+	}
+	html.responsive .game_info_achievements_badge .game_info_achievements {
+		float: none;
+		clear: left;
+		margin-top: 8px;
+		width: auto;
+		position: relative;
+	}
+	html.responsive .game_info_achievements_badge .achievement_progress_bar_ctn,
+	html.responsive .game_info_achievements_badge .game_info_achievement_summary {
+		width: 49%;
+	}
+
+	html.responsive .game_info_achievements_badge .achievement_icons {
+		position: absolute;
+		right: 0;
+		top: 0;
+		max-width: 49%;
+		overflow: hidden;
+	}
 }
 
 .game_info_stats_publishedfilecounts .published_file_count_ctn {
@@ -1870,7 +2049,7 @@ body.profile_page #footer {
     margin-bottom:12px
 }
 
-@media screen and (max-width: 940px )
+@media screen and (max-width: 910px)
 {
 	html.responsive div.profile_page {
 		min-width: 0;
@@ -1916,6 +2095,10 @@ body.profile_page #footer {
 		width: auto;
 	}
 
+	html.responsive .profile_leftcol {
+		padding: 1%;
+	}
+
 	html.responsive .profile_summary_modal {
 		line-height: normal;
 	}
@@ -1939,18 +2122,18 @@ body.profile_page #footer {
 		margin-right: 0;
 	}
 
-	html.responsive_legacy .profile_background_image_content {
+	html.responsive .profile_background_image_content {
 		background-position: center top;
 		background-size: 115% auto;
 	}
 
-	html.responsive_legacy .profile_background_overlay_content {
+	html.responsive .profile_background_overlay_content {
 		opacity: .65;
 		filter: alpha(opacity=65);
 		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
 	}
 
-	html.responsive_legacy .profile_content.has_profile_background .profile_content_inner {
+	html.responsive .profile_content.has_profile_background .profile_content_inner {
 		padding-top: 128px;
 	}
 }
@@ -1958,6 +2141,13 @@ body.profile_page #footer {
 @media screen and (max-width: 600px )
 {
 	html.responsive .profile_small_header_additional {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+	html.responsive .recentgame_recentplaytime {
 		display: none;
 	}
 }

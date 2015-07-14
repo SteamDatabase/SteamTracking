@@ -485,6 +485,12 @@ a.large_title:hover {
 	float: right;
 	width: 295px;
 }
+.thread .rightcol {
+	margin-top: 21px;
+}
+.discussions_page .thread .rightcol {
+	margin-top: 0px;
+}
 
 .rightbox {
 	background-color: rgba( 0, 0, 0, 0.2 );
@@ -852,9 +858,14 @@ fieldset.editRow_textarea label {
 }
 
 .group_breadcrumbs, .group_breadcrumbs a {
-	color: #9b9b9b;
+	color: #8f98a0;
+	font-size: 12px;
+	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	margin-bottom: 12px;
+}
+.group_breadcrumbs a {
+	color: #c6d4df;
 }
 
 .group_breadcrumbs a:hover {
@@ -1576,7 +1587,7 @@ a.headlineLink:hover {
 	width: auto;
 }
 
-@media screen and (max-width: 940px )
+@media screen and (max-width: 910px)
 {
 	html.responsive .leftcol,
 	html.responsive .rightcol {

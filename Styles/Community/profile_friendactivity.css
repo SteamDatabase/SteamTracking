@@ -179,6 +179,10 @@ div#headerSearch.friend_activity_header_search #searchInputBoxNew {
 	font-size: 12px;
 }
 
+html.responsive .localmenu_content .friends_launch_area {
+	padding: 0;
+}
+
 .friends_launch_area h1
 {
 	color: #ffffff;
@@ -1774,7 +1778,7 @@ div.slider div.handle:hover {
 }
 
 
-@media screen and (max-width: 940px )
+@media screen and (max-width: 910px)
 {
 	html.responsive #blotter_page, html.responsive #blotter_content {
 		width: auto;

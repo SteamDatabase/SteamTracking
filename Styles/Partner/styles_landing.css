@@ -1373,7 +1373,8 @@ span.icon_actual_authority { display: inline-block;}
 		font-weight: normal;
 	}
 
-.success {
+.success,
+.landingInfoTable p.success {
     color: #a3cf06;
 }
 
@@ -2036,4 +2037,8 @@ div#appAutoHeader_list
 	text-align: right;
 	margin-right: 25px;
 	white-space: normal;
+}
+
+.publishNowWarningOMG {
+	color: #ff7b00;
 }

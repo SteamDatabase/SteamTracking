@@ -9,10 +9,13 @@ input {
 }
 
 .forum_newtopic_header {
-	color: #8a8a8a;
+	color: #8f98a0;
 	font-size: 11px;
 	text-transform: uppercase;
-	margin-bottom: 8px;
+	margin-bottom: 1px;
+	background-color: rgba( 0, 0, 0, 0.2);
+	padding: 8px;
+	margin-top: 8px;
 }
 
 .forum_newtopic_area {
@@ -23,7 +26,7 @@ input {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	padding: 14px 11px 14px 11px;
 	margin-bottom: 8px;
-	margin-top: 25px;
+	margin-top: 0px;
 }
 
 .forum_newtopic_textcontrols {
@@ -136,7 +139,7 @@ textarea.forumtopic_reply_textarea {
 
 .forum_topic.deleted {
 	background-image: none;
-	background-color: rgba( 0, 0, 0, 0.2);
+	background-color: rgba( 23, 34, 48, 0.7);
 }
 
 .forum_topic .forum_topic_label {
@@ -198,7 +201,7 @@ textarea.forumtopic_reply_textarea {
 	font-size: 11px;
 	float: right;
 	padding-right: 28px;
-	color: #518aad;
+	color: #8ED1F9;
 }
 .forum_topic:hover .forum_topic_lastpost {
 	color: #70beed;
@@ -240,7 +243,7 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forum_topic_op {
-	color: #518aad;
+	color: #8ED1F9;
 	font-size: 11px;
 
 	overflow: hidden;
@@ -256,11 +259,11 @@ textarea.forumtopic_reply_textarea {
 	position: relative;
 	line-height: 25px;
 	height: 25px;
-	background-color: rgba( 0, 0, 0, 0.2 );
+	background-color: rgba( 21, 31, 44, 0.7 );
 	border-radius: 3px;
 	color: #61696d;
 	padding: 0px 6px;
-	margin: 8px 0px;
+	margin: 2px 0px;
 }
 
 .forum_paging_header
@@ -324,13 +327,18 @@ textarea.forumtopic_reply_textarea {
 	padding: 7px 12px 21px 63px;
 	margin-bottom: 8px;
 
-
 	max-width: 565px;
 
 	background-color: #212f43;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//skin_1/forum_op_gradient.png?v=3' );
 	background-repeat: no-repeat;
 	background-position: top left;
+
+	border: 1px solid #26384f;
+	box-shadow: 0 0 5px #000;
+}
+.forum_op.locked {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images//skin_1/forum_op_gradient_locked.png?v=3' );
 }
 
 .forum_op_avatar {
@@ -451,11 +459,12 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forumtopic_comments .commentthread_comment {
-	background-color: rgba( 80, 121, 173, 0.1);
-	color: #898989;
-	border: 1px solid rgba( 0, 0, 0, 0.4);
+	background-color: rgba( 32, 47, 67, 0.8);
+	color: #acb2b8;
 	margin-bottom: 2px;
 	padding: 12px 8px 20px 60px;
+	border: 1px solid #26384f;
+	box-shadow: 0 0 5px #000;
 
 	overflow: hidden;
 }
@@ -467,7 +476,9 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forumtopic_comments .commentthread_comment.commentthread_deleted_comment, .forumtopic_comments .commentthread_comment.commentthread_deleted_expanded {
-	background-color: rgba( 0, 0, 0, 0.1 );
+	background-color: #172230;
+	border: 1px solid #172230;
+	box-shadow: none;
 }
 
 .commentthread_deleted_comment_audit {
@@ -678,11 +689,11 @@ a.forum_comment_action:hover {
 }
 
 .forumtopic_comments .commentthread_comment.permlinked {
-	border-color: #689ee0;
+	border-color: #66c0f4;
 }
 
 .forumtopic_comments .commentthread_comment.permlinked .forum_comment_permlink a {
-	color: #689ee0;
+	color: #66c0f4;
 }
 
 .forum_report_instructions {
@@ -871,11 +882,11 @@ a.forum_comment_action:hover {
 }
 
 .topicstats_label {
-	color: #494947;
+	color: #61686d;
 }
 
 .topicstats_value {
-	color: #82827e;
+	color: #8f98a0;
 }
 
 .forum_audit {
@@ -901,7 +912,9 @@ a.forum_comment_action:hover {
 	margin-right: 10px;
 }
 
-
+.bottom_breadcrumbs {
+	margin-top: 16px;
+}
 
 .forum_breadcrumbs, .forum_breadcrumbs a {
 	color: #8f98a0;
@@ -909,13 +922,19 @@ a.forum_comment_action:hover {
 	text-decoration: none;
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 	margin-bottom: 12px;
+	margin-top: 8px;
 }
-
+.forum_breadcrumbs a {
+	color: #c6d4df;
+}
 .forum_breadcrumbs a:hover {
 	text-decoration: none;
 	color: #ffffff;
 }
 
+.thread .rightcol {
+	margin-top: 29px;
+}
 
 .discussion_search_pagingcontrols {
 	background-color: rgba( 0, 0, 0, 0.2 );
@@ -1035,17 +1054,29 @@ input.discussionSearchText:-moz-placeholder {
 .forum_pagesize_options {
 	color: #828282;
 	padding: 0px 6px;
-	margin-top: 4px;
+	margin-top: 1px;
 	font-size: 12px;
+	margin-bottom: 15px;
 }
 
 .forum_pagesize_options.topic_replies {
 
 }
 
-.forum_topic_deleted_notice {
+.forum_topic_deleted_notice,
+.forum_topic_locked_notice,
+.forum_topic_pinned_notice {
 	margin-bottom: 12px;
 	padding: 14px 11px;
+	margin-top: 4px;
+}
+.forum_topic_locked_notice {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_topic_locked_alt.png?v=1' );
+}
+.forum_topic_pinned_notice {
+	background-image: none;
+	color: #AEDD08;
+	background-color: #364a2e;
 }
 
 table.forum_auditlog {

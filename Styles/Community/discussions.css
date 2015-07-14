@@ -573,7 +573,7 @@ a.recent_game_discussion.quasi_official_group
 	margin-right: 0;
 }
 
-@media screen and (max-width: 940px )
+@media screen and (max-width: 910px)
 {
 	html.responsive .discussions_page {
 		padding: 0 4px;
