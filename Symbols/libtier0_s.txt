@@ -640,6 +640,8 @@
  pthread_cond_timedwait$UNIX2003
  pthread_cond_wait
  pthread_cond_wait$UNIX2003
+ pthread_condattr_destroy
+ pthread_condattr_init
  pthread_create
  pthread_exit
  pthread_getschedparam

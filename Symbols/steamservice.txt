@@ -7679,6 +7679,8 @@
  pthread_cond_signal
  pthread_cond_timedwait$UNIX2003
  pthread_cond_wait$UNIX2003
+ pthread_condattr_destroy
+ pthread_condattr_init
  pthread_create
  pthread_getschedparam
  pthread_getspecific
