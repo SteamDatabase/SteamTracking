@@ -1685,6 +1685,6 @@ body.v6 #footer_nav .popup_menu .hr{
 		right: 12px;
 		bottom: 12px;
 		overflow: auto;
-		min-width: auto;
+		min-width: 0;
 	}
 }

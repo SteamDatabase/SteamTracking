@@ -327,6 +327,15 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 		Modal.OnDismiss( fnOnCancel );
 		$CloseButton.click( fnOnCancel );
 	}
+
+	// on responsive pages, the 'newmodal' element covers the whole viewable area (so that we can control scrolling
+	// if the modal is very tall).  If the modal doesn't cover the whole area, we dismiss on clicks to this background
+	//	area
+	if ( Modal.m_fnBackgroundClick )
+	{
+		$Dialog.click( function(e) { if ( e.target == this ) Modal.m_fnBackgroundClick(); } );
+	}
+
 	Modal.SetRemoveContentOnDismissal( true );
 
 	return Modal;
