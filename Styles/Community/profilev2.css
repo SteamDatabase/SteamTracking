@@ -1880,6 +1880,7 @@ a.graytab:hover {
 
 .manage_actions_buttons .btn_medium {
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .manage_friend_checkbox {
@@ -1943,6 +1944,17 @@ body.profile_page #footer {
 .player_list_results.cols .friendBlock {
 	float: left;
 	margin-right: 6px;
+}
+
+@media screen and (max-width: 910px)
+{
+	.player_list_results.cols {
+		width: auto;
+	}
+
+	.player_list_results .friendBlock {
+		float: left;
+	}
 }
 
 .namehistory_link {
@@ -2105,21 +2117,23 @@ body.profile_page #footer {
 
 
 	/* friends page */
-	html.responsive .profile_subpage_column .maincontent,
 	html.responsive body.migrated_profile_page #BG_bottom.maincontent {
 		width: auto;
 		margin: 0 1%;
 	}
 
-	html.responsive .graytab_body_wrapper {
+	html.responsive .profile_subpage_column .maincontent {
 		width: auto;
+		margin: 0;
+		padding: 0 1%;
 	}
 
-	html.responsive .profile_friends .friendBlock:nth-child(3n) {
-		margin-right: 8px;
+	html.responsive .profile_manage_friends {
+		padding: 0;
 	}
-	html.responsive .profile_friends .friendBlock:nth-child(2n) {
-		margin-right: 0;
+
+	html.responsive .graytab_body_wrapper {
+		width: auto;
 	}
 
 	html.responsive .profile_background_image_content {

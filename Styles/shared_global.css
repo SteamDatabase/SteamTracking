@@ -138,34 +138,6 @@
 	cursor: pointer;
 }
 
-
-@media screen and (max-device-width: 910px )
-{
-
-	html.responsive_legacy .playerAvatar.responsive_enlarge {
-		width: 68px;
-		height: 68px;
-		padding: 2px;
-	}
-	html.responsive_legacy .playerAvatar.responsive_enlarge img {
-		width: 64px;
-		height: 64px;
-		padding: 2px;
-	}
-
-	html.responsive_legacy .playerAvatar_friendindicator {
-		position: absolute;
-		left: 26px;
-		top: 23px;
-		background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/friendindicator_small.png' );
-		width: 20px;
-		height: 20px;
-		z-index: 2;
-
-		cursor: pointer;
-	}
-}
-
 .persona, a.persona, .persona a,
 .friend_status_offline, .friend_status_offline div, .friend_status_offline a {
 	color:#898989;

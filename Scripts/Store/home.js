@@ -649,25 +649,6 @@ GHomepage = {
 			}
 		}
 
-		if ( rgGamesShown.length < 2 && GHomepage.rgFriendRecommendations )
-		{
-			for ( var i = 0; i < GHomepage.rgFriendRecommendations.length; i++ )
-			{
-				var unAppID = GHomepage.rgFriendRecommendations[i].appid;
-				if ( rgGamesShown.indexOf( unAppID ) == -1 )
-				{
-					$Spotlight = GHomepage.RenderRecommendedSpotlight( unAppID, 'Recommended by friends' );
-					if ( $Spotlight )
-					{
-						$Element.append( $Spotlight );
-						rgGamesShown.push( unAppID );
-						GHomepage.rgFriendRecommendations.splice( i, 1 );
-						break;
-					}
-				}
-			}
-		}
-
 		if ( rgGamesShown.length < 2 )
 		{
 			// try and find something onsale from wishlist that we have data for
@@ -690,6 +671,25 @@ GHomepage = {
 					$Element.append( $Spotlight );
 					rgGamesShown.push( rgWishlistItemsOnSale[i] );
 					break;
+				}
+			}
+		}
+
+		if ( rgGamesShown.length < 2 && GHomepage.rgFriendRecommendations )
+		{
+			for ( var i = 0; i < GHomepage.rgFriendRecommendations.length; i++ )
+			{
+				var unAppID = GHomepage.rgFriendRecommendations[i].appid;
+				if ( rgGamesShown.indexOf( unAppID ) == -1 )
+				{
+					$Spotlight = GHomepage.RenderRecommendedSpotlight( unAppID, 'Recommended by friends' );
+					if ( $Spotlight )
+					{
+						$Element.append( $Spotlight );
+						rgGamesShown.push( unAppID );
+						GHomepage.rgFriendRecommendations.splice( i, 1 );
+						break;
+					}
 				}
 			}
 		}
