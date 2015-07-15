@@ -29,17 +29,18 @@ div.profile_page.has_profile_background {
 .profile_header_bg {
 	position: relative;
 	max-width: 1018px;
-	height: 240px;
+	min-height: 224px;
+	padding-bottom: 16px;
 	margin: 0 auto;
 
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_bg.png' );
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center bottom;
 }
 
 .profile_header_bg_texture {
 	max-width: 976px;
-	height: 224px;
+	min-height: 224px;
 	margin: 0 auto;
 
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_bg_texture.jpg' );
@@ -49,44 +50,101 @@ div.profile_page.has_profile_background {
 
 .profile_header {
 	position: relative;
-	width: 926px;
+	max-width: 926px;
 	margin: 0 auto;
 
 	padding-top: 24px;
-	height: 200px;
+
 }
 
 .profile_header_content {
 	position: relative;
-	padding-left: 192px;
-	padding-right: 286px;
 	padding-top: 8px;
 
 	color: #898989;
 	font-size: 13px;
 }
 
-.playerAvatar.profile_header_size {
-	width: 166px;
-	height: 166px;
+.profile_header_summary {
+	overflow: hidden;
+	padding-right: 18px;
 }
 
-.playerAvatar.profile_header_size img {
-	width: 164px;
-	height: 164px;
+.playerAvatar.profile_header_size {
+	width: 166px;
+	height: auto;
 }
 
 .profile_header .playerAvatar.profile_header_size {
-	position: absolute;
-	left: 0;
-	top: 0;
+	float: left;
+	margin-right: 18px;
 }
 
 .profile_header_badgeinfo {
-	position: absolute;
-	right: 0;
-	top: 8px;
+	float: right;
+}
+
+.profile_header_badgeinfo_badge_area {
 	width: 268px;
+}
+
+@media screen and ( max-width: 700px )
+{
+	html.responsive .profile_header_summary {
+		clear: both;
+		padding: 8px;
+	}
+
+	html.responsive .profile_header .playerAvatar.profile_header_size {
+		max-width: 40%;
+		margin-right: 2%;
+	}
+
+	html.responsive .profile_header .profile_header_centered_persona {
+		position: static;
+		padding-bottom: 8px;
+	}
+
+	html.responsive .profile_header .profile_header_summary .persona_name_spacer,
+	html.responsive .profile_header .profile_header_summary .header_real_name_spacer {
+		display: none;
+	}
+
+	html.responsive .profile_header .header_real_name {
+		height: auto;
+		line-height: 24px;
+	}
+
+	html.responsive .profile_header_content {
+		padding-top: 0;
+	}
+
+	html.responsive .profile_header {
+		padding-top: 8px;
+	}
+
+	html.responsive .profile_header_bg_texture {
+		background-size: cover;
+	}
+}
+
+@media screen and ( max-width: 460px )
+{
+
+	html.responsive .profile_header_badgeinfo {
+		float: none;
+	}
+
+	html.responsive .profile_header_badgeinfo_badge_area {
+		float: right;
+		max-width: 55%;
+	}
+
+	html.responsive .profile_header_actions {
+		clear: both;
+		padding-top: 8px;
+		text-align: center;
+	}
 }
 
 .profile_header_actions {
@@ -100,11 +158,18 @@ div.profile_page.has_profile_background {
 	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
 }
 
+.profile_header .profile_header_centered_persona {
+	position: absolute;
+	left: 186px;
+	right: 268px;
+	white-space: nowrap;
+}
+
 .profile_header .persona_name .nickname {
 	color: #9b9b9b;
 }
 
-.header_real_name {
+.header_real_name_spacer {
 	height: 52px;
 }
 
@@ -1395,6 +1460,19 @@ img.workshop_showcase_item_image {
 	margin-bottom: 40px;
 }
 
+html.responsive .localmenu_content .profile_badges_badge {
+	width: 19%;
+	margin-right: 7%;
+}
+
+html.responsive .localmenu_content .profile_badges_badge.last {
+	margin-right: 0;
+}
+html.responsive .localmenu_content .profile_badges_badge img {
+	width: 100%;
+	height: auto;
+}
+
 .profile_in_common {
 	margin-bottom: 6px;
 }
@@ -2069,12 +2147,6 @@ body.profile_page #footer {
 
 	html.responsive .profile_header_bg {
 		min-width: 0;
-		overflow: auto;
-	}
-
-
-	html.responsive .profile_header_bg_texture {
-		width: 976px;
 	}
 
 	html.responsive .profile_header {
