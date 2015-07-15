@@ -95,7 +95,7 @@ a.gutter_item:hover {
 }
 
 @media all and (min-width: 1208px) {
-	.home_page_content, .footer_content {
+	.home_page_content, .footer_content, .hardware_ctn {
 		padding-left: 204px;
 	}
 	.home_page_gutter {
