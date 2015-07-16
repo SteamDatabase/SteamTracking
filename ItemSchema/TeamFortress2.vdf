@@ -124893,6 +124893,386 @@
 				"engineer"		"models/workshop/player/items/all_class/tf2connexion_medal_participant/tf2connexion_medal_participant_engineer.mdl"
 			}
 		}
+		"8812"
+		{		
+			"name"				"ETF2L 6v6 Premiership Gold Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Gold"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_engineer.mdl"
+			}
+		}
+		"8813"
+		{		
+			"name"				"ETF2L 6v6 Premiership Silver Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Silver"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_engineer.mdl"
+			}
+		}
+		"8814"
+		{		
+			"name"				"ETF2L 6v6 Premiership Bronze Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_engineer.mdl"
+			}
+		}
+		"8815"
+		{		
+			"name"				"ETF2L 6v6 Premiership Participation Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Participation"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_engineer.mdl"
+			}
+		}
+  		"8816"
+		{		
+			"name"				"ETF2L 6v6 High Gold Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Gold"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_engineer.mdl"
+			}
+		}
+		"8817"
+		{		
+			"name"				"ETF2L 6v6 High Silver Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Silver"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_engineer.mdl"
+			}
+		}
+		"8818"
+		{		
+			"name"				"ETF2L 6v6 High Bronze Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_engineer.mdl"
+			}
+		}
+		"8819"
+		{		
+			"name"				"ETF2L 6v6 High Playoff Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_engineer.mdl"
+			}
+		}
+		"8820"
+		{		
+			"name"				"ETF2L 6v6 High Participation Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_High_Participation"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_engineer.mdl"
+			}
+		}
+  		"8821"
+		{		
+			"name"				"ETF2L 6v6 Mid Gold Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Gold"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_engineer.mdl"
+			}
+		}
+		"8822"
+		{		
+			"name"				"ETF2L 6v6 Mid Silver Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Silver"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_engineer.mdl"
+			}
+		}
+		"8823"
+		{		
+			"name"				"ETF2L 6v6 Mid Bronze Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_engineer.mdl"
+			}
+		}
+		"8824"
+		{		
+			"name"				"ETF2L 6v6 Mid Playoff Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_engineer.mdl"
+			}
+		}
+		"8825"
+		{		
+			"name"				"ETF2L 6v6 Mid Participation Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Participation"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_engineer.mdl"
+			}
+		}
+  		"8826"
+		{		
+			"name"				"ETF2L 6v6 Open Gold Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Gold"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_engineer.mdl"
+			}
+		}
+		"8827"
+		{		
+			"name"				"ETF2L 6v6 Open Silver Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Silver"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_engineer.mdl"
+			}
+		}
+		"8828"
+		{		
+			"name"				"ETF2L 6v6 Open Bronze Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_engineer.mdl"
+			}
+		}
+		"8829"
+		{		
+			"name"				"ETF2L 6v6 Open Playoff Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_engineer.mdl"
+			}
+		}
+		"8830"
+		{		
+			"name"				"ETF2L 6v6 Open Participation Medal Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Participation"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_engineer.mdl"
+			}
+		}
 
 
 
