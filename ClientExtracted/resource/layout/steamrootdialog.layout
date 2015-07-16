@@ -93,7 +93,7 @@
 			"ControlName"	"URLLabel"
 			"fieldName"		"account_balance"
 			"labelText"		""
-			"URLText"		"steam://url/StoreAccount/"
+			"URLText"		"steam://url/StoreWallet/"
 			style="AccountBalanceStyle"
 		}
 		

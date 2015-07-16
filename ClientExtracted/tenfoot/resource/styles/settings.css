@@ -880,7 +880,7 @@ NetworkSettings_AvailableSSID:hover .NetworkName
 	text-align: right;
 	horizontal-align: right;
 	margin-right: 10px;
-	font-size: 24px;
+	font-size: 22px;
 	padding-left: 10px;
 	padding-right: 50px;
 	padding-top: 2px;
@@ -1106,7 +1106,7 @@ NetworkSettings_AvailableSSID:hover .NetworkName
 
 .DeviceName
 {
-	font-size: 24px;
+	font-size: 22px;
 	max-width: 560px;
 	padding-left: 5px;
 	padding-top: 2px;
@@ -1164,7 +1164,7 @@ NetworkSettings_AvailableSSID:hover .NetworkName
 #ShowPasswordLabel
 {
 	margin: 10px 0px;
-	width: 200px;
+	width: 420px;
 }
 
 SettingsPanelNetwork_Credentials #ShowPasswordLabel
@@ -3341,7 +3341,8 @@ TimeZoneRegionPanel Button.SelectedRegion:focus
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
-
+	padding-right: 10px;
+	
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
 
 	animation-name: main-button-glow-movement;

@@ -452,6 +452,14 @@ StoreAccount
 	filter	"profile"
 }
 
+StoreWallet
+{
+	//link from client chrome to user's store account info
+	url		"%storehttps%/account/store_transactions/"
+	method	"internal"
+	filter	"profile"
+}
+
 CommunityGroupSearch
 {
 	url		"%community%/search/groups/?text=%p1%"
