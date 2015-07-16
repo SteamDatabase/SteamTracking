@@ -51090,7 +51090,7 @@
 			"recipe_complete_sound"			"weapons/drg_wrench_teleport.wav"
 		}
 		
-		"weapon_red-tape_recorder"
+		"weapon_red_tape_recorder"
 		{
 			"first_sale_date"	"2012/08/02"
 			"capabilities"
@@ -82841,7 +82841,7 @@
 		"810"
 		{
 			"name"	"The Red-Tape Recorder"
-			"prefab"		"weapon_red-tape_recorder"
+			"prefab"		"weapon_red_tape_recorder"
 		}
 		"811"
 		{
@@ -83249,7 +83249,7 @@
 		"831"
 		{
 			"name"	"Promo Red-Tape Recorder"
-			"prefab"		"weapon_red-tape_recorder"
+			"prefab"		"weapon_red_tape_recorder"
 			"show_in_armory"	"0"
 			"craft_class"	""			
 		}
@@ -111449,6 +111449,7 @@
 							"jumping_state"		"0"
 							"disguise_target"		"0"
 							"min_stickies"		"0"
+							"alive_state"		"0"
 							"is_owner"		"1"
 							"value"		"spy"
 						}
@@ -111480,14 +111481,37 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"spy"
 							}
 							"1"
 							{
-								"type"		"weapon_name"
-								"key_to_lookup"		"weapon"
-								"value"		"OBJ_ATTACHMENT_SAPPER"
+								"type"		"OR"
+								"0"
+								{
+									"type"		"weapon_name"
+									"key_to_lookup"		"weapon"
+									"value"		"OBJ_ATTACHMENT_SAPPER"
+								}
+								"1"
+								{
+									"type"		"weapon_name"
+									"key_to_lookup"		"weapon"
+									"value"		"recorder"
+								}
+								"2"
+								{
+									"type"		"weapon_name"
+									"key_to_lookup"		"weapon"
+									"value"		"psapper"
+								}
+								"3"
+								{
+									"type"		"weapon_name"
+									"key_to_lookup"		"weapon"
+									"value"		"snack_attack"
+								}
 							}
 						}
 					}
@@ -111518,6 +111542,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"spy"
 							}
@@ -111556,6 +111581,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"spy"
 							}
@@ -111567,6 +111593,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"0"
 								"value"		"medic"
 							}
@@ -111599,6 +111626,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"spy"
 							}
@@ -111610,6 +111638,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"0"
 								"value"		"engineer"
 							}
@@ -111642,6 +111671,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"1"
 								"value"		"spy"
 							}
@@ -111653,6 +111683,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"0"
 								"value"		"sniper"
 							}
@@ -111688,6 +111719,7 @@
 									"jumping_state"		"0"
 									"disguise_target"		"0"
 									"min_stickies"		"0"
+									"alive_state"		"0"
 									"is_owner"		"1"
 									"value"		"spy"
 								}
@@ -111699,6 +111731,7 @@
 									"jumping_state"		"0"
 									"disguise_target"		"0"
 									"min_stickies"		"0"
+									"alive_state"		"0"
 									"is_owner"		"1"
 									"value"		"spy"
 								}
@@ -111711,6 +111744,7 @@
 								"jumping_state"		"0"
 								"disguise_target"		"0"
 								"min_stickies"		"0"
+								"alive_state"		"0"
 								"is_owner"		"0"
 							}
 						}
