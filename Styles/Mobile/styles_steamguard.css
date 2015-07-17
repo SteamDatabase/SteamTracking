@@ -170,6 +170,15 @@
 	color: #ffffff;
 }
 
+.steamguard_by_email_link {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	font-size: 18px;
+	text-shadow: none;
+	color: #0000ff;
+}
+
 input#activationcode_entry {
 	background-color: #1e1e1e;
 	border-radius: 2px;

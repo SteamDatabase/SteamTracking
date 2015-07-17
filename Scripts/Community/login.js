@@ -67,6 +67,9 @@ var g_bTwoFactorAuthSuccessful = false;
 var g_bTwoFactorAuthSuccessfulWantToLeave = false;
 var g_sOAuthRedirectURI = 'steammobile://mobileloginsucceeded';
 var g_sAuthCode = "";
+var g_nRecoveryCodeAttemptCount = 0;
+var g_nTwoFactorCodeAttemptCount = 0;
+
 
 function DoLogin()
 {
@@ -161,6 +164,31 @@ function OnRSAKeyResponse( transport )
 	}
 }
 
+
+function CheckForTwoFactorConfusion()
+{
+	var twoFactorEntry = $('twofactorcode_entry').value;
+
+	if ( twoFactorEntry && twoFactorEntry.match( /\s*[rR]\d{5}\s*/ ) )
+	{
+		++g_nRecoveryCodeAttemptCount;
+	}
+	else
+	{
+		g_nRecoveryCodeAttemptCount = 0;
+	}
+
+	return g_nRecoveryCodeAttemptCount >= 2;
+}
+
+	
+function CheckForTwoFactorFailure()
+{
+	++g_nTwoFactorCodeAttemptCount;
+	return g_nTwoFactorCodeAttemptCount >= 3;
+}
+
+
 function OnLoginResponse( transport )
 {
 	var results = transport.responseJSON;
@@ -203,7 +231,10 @@ function OnLoginResponse( transport )
 			if ( !g_bInTwoFactorAuthProcess )
 				StartTwoFactorAuthProcess();
 			else
+			{
+								
 				SetTwoFactorAuthModalState( 'incorrectcode' );
+			}
 		}
 		else if ( results.captcha_needed && results.captcha_gid )
 		{
