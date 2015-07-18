@@ -41,7 +41,7 @@ img {
 }
 #centerColContainer {
 	z-index:2;
-	width:938px;
+	width:100%;
 	padding:10px 23px;
 	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/heropedia/centercolbox_repeat.png');
 	background-repeat:repeat-y;

@@ -71,6 +71,10 @@ a:active {  /* selected link */
 	display: none;
 }
 
+.navItem {
+	margin-top: 20px !important;
+}
+
 body {
 	padding: 0;
 	margin: 0;
