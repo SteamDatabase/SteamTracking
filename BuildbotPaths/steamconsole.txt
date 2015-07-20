@@ -27,6 +27,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamconsole.build/Objects-normal/i386/client_api.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamconsole.build/Objects-normal/i386/clientuser.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamconsole.build/Objects-normal/i386/constants.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamconsole.build/Objects-normal/i386/controllerconfig.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamconsole.build/Objects-normal/i386/depotbuilder.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamconsole.build/Objects-normal/i386/globals.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamconsole.build/Objects-normal/i386/main.o
@@ -83,6 +84,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steam_api/callbackmgr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/appupdater.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/clientuser.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/controllerconfig.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/depotbuilder.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/main.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/predepot.cpp

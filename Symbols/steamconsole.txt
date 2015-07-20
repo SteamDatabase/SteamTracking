@@ -105,6 +105,8 @@
  D typeinfo for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
+ D typeinfo for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>
+ D typeinfo for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>
  D typeinfo for CCallback<CSteamUser, LicensesUpdated_t, false>
  D typeinfo for CCallback<CSteamUser, SteamServerConnectFailure_t, false>
  D typeinfo for CCallback<CSteamUser, SteamServersConnected_t, false>
@@ -115,9 +117,14 @@
  D typeinfo for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  D typeinfo for CCallbackBase
  D typeinfo for CConsoleInputThread
+ D typeinfo for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient
+ D typeinfo for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer
  D typeinfo for CFileWriter
  D typeinfo for CFileWriterThread
  D typeinfo for CFileWriterThread::FileWriterItem_t
+ D typeinfo for CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>
+ D typeinfo for CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>
+ D typeinfo for CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>
  D typeinfo for CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>
  D typeinfo for CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>
  D typeinfo for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
@@ -146,6 +153,8 @@
  D vtable for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
+ D vtable for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>
+ D vtable for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>
  D vtable for CCallback<CSteamUser, LicensesUpdated_t, false>
  D vtable for CCallback<CSteamUser, SteamServerConnectFailure_t, false>
  D vtable for CCallback<CSteamUser, SteamServersConnected_t, false>
@@ -155,9 +164,14 @@
  D vtable for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  D vtable for CConsoleInputThread
+ D vtable for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient
+ D vtable for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer
  D vtable for CFileWriter
  D vtable for CFileWriterThread
  D vtable for CFileWriterThread::FileWriterItem_t
+ D vtable for CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>
+ D vtable for CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>
+ D vtable for CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>
  D vtable for CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>
  D vtable for CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>
  D vtable for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
@@ -199,6 +213,8 @@
  R typeinfo name for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
+ R typeinfo name for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>
+ R typeinfo name for CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>
  R typeinfo name for CCallback<CSteamUser, LicensesUpdated_t, false>
  R typeinfo name for CCallback<CSteamUser, SteamServerConnectFailure_t, false>
  R typeinfo name for CCallback<CSteamUser, SteamServersConnected_t, false>
@@ -209,9 +225,14 @@
  R typeinfo name for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  R typeinfo name for CCallbackBase
  R typeinfo name for CConsoleInputThread
+ R typeinfo name for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient
+ R typeinfo name for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer
  R typeinfo name for CFileWriter
  R typeinfo name for CFileWriterThread
  R typeinfo name for CFileWriterThread::FileWriterItem_t
+ R typeinfo name for CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>
+ R typeinfo name for CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>
+ R typeinfo name for CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>
  R typeinfo name for CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>
  R typeinfo name for CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>
  R typeinfo name for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
@@ -225,6 +246,7 @@
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >
  R typeinfo name for CWorkshopItemBuilder::CCallbackOnAppInfoUpdate
  R typeinfo name for CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate
  R typeinfo name for CWorkshopItemDownloader::CCallbackOnAppInfoUpdate
@@ -268,6 +290,7 @@
  T BDeleteFileIfExists(char const*)
  T BFileExists(char const*)
  T BIsValidDirectory(char const*)
+ T BRenameFile(char const*, char const*)
  T BWaitForAppUpdate(IClientAppManager*, unsigned int, bool)
  T CAppContentBuilder::BInit(unsigned int, char const*, char const*, char const*, char const*, unsigned int)
  T CAppContentBuilder::BRunBuild()
@@ -321,6 +344,18 @@
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*, bool, unsigned long long)
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallback()
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::CCallback(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedClient_t*))
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::GetCallbackSizeBytes()
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::Register(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedClient_t*))
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::Run(void*)
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::Run(void*, bool, unsigned long long)
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::~CCallback()
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::CCallback(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedServer_t*))
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::GetCallbackSizeBytes()
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Register(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedServer_t*))
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Run(void*)
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Run(void*, bool, unsigned long long)
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::~CCallback()
  T CCallback<CSteamUser, LicensesUpdated_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(LicensesUpdated_t*))
  T CCallback<CSteamUser, LicensesUpdated_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamUser, LicensesUpdated_t, false>::Register(CSteamUser*, void (CSteamUser::*)(LicensesUpdated_t*))
@@ -383,6 +418,17 @@
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CConsoleInputThread::Run()
  T CConsoleInputThread::~CConsoleInputThread()
+ T CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient::Run(void*)
+ T CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient::Run(void*, bool, unsigned long long)
+ T CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer::Run(void*)
+ T CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer::Run(void*, bool, unsigned long long)
+ T CControllerConfigUploader::CControllerConfigUploader()
+ T CControllerConfigUploader::OnPublishFileResult(RemoteStoragePublishFileResult_t*, bool)
+ T CControllerConfigUploader::OnRemoteStorageAppSyncedClient(RemoteStorageAppSyncedClient_t*)
+ T CControllerConfigUploader::OnRemoteStorageAppSyncedServer(RemoteStorageAppSyncedServer_t*)
+ T CControllerConfigUploader::OnRemoteStorageUpdateResult(RemoteStorageUpdatePublishedFileResult_t*, bool)
+ T CControllerConfigUploader::OnSendQueryUGCRequestResult(SteamUGCQueryCompleted_t*, bool)
+ T CControllerConfigUploader::Upload(unsigned int, char const*)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDefOps<unsigned long long>::LessFunc(unsigned long long const&, unsigned long long const&)
  T CDirIterator::BNextFile()
@@ -405,6 +451,7 @@
  T CFileWriterThread::BWriteAsync(CFileWriter*, void const*, int)
  T CFileWriterThread::CFileWriterThread()
  T CFileWriterThread::FileWriterItem_t::Validate(CValidator&, char const*)
+ T CFileWriterThread::RegisterWriter(CFileWriter const*)
  T CFileWriterThread::Run()
  T CFileWriterThread::StartThreadIfNecessary()
  T CFileWriterThread::UnregisterWriter(CFileWriter const*)
@@ -412,6 +459,7 @@
  T CFileWriterThread::~CFileWriterThread()
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
+ T CFmtStrN<32, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<4096, true, false>::CFmtStrN(char const*, ...)
  T CKeyErrorContext::~CKeyErrorContext()
  T CLogEvent::CLogEvent()
@@ -444,6 +492,24 @@
  T CLogger::_EmitEvent(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool)
  T CMsgSpewThrottle::CMsgSpewThrottle()
  T CMsgSpewThrottle::~CMsgSpewThrottle()
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::CMultipleCallResults(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStoragePublishFileResult_t*, bool))
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::GetCallbackSizeBytes()
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::Run(void*)
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::Run(void*, bool, unsigned long long)
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::Validate(CValidator&, char const*)
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::~CMultipleCallResults()
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::CMultipleCallResults(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageUpdatePublishedFileResult_t*, bool))
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::GetCallbackSizeBytes()
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::Run(void*)
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::Run(void*, bool, unsigned long long)
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::Validate(CValidator&, char const*)
+ T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::~CMultipleCallResults()
+ T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::CMultipleCallResults(CControllerConfigUploader*, void (CControllerConfigUploader::*)(SteamUGCQueryCompleted_t*, bool))
+ T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::GetCallbackSizeBytes()
+ T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::Run(void*)
+ T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::Run(void*, bool, unsigned long long)
+ T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::Validate(CValidator&, char const*)
+ T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::~CMultipleCallResults()
  T CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>::CMultipleCallResults(CPreDepotOperations*, void (CPreDepotOperations::*)(CEGWrapResponse_t*, bool))
  T CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>::Run(void*)
@@ -462,6 +528,7 @@
  T CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>::~CMultipleCallResults()
+ T CNumStr::CNumStr(double)
  T CPackedStore::BuildHashTables()
  T CPackedStore::CPackedStore(char const*, char*, bool)
  T CPackedStore::FindFileEntry(char const*, char const*, char const*, unsigned char**, unsigned char**)
@@ -678,13 +745,18 @@
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
+ T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
  T CUtlString::FormatV(char const*, char*)
+ T CUtlString::Replace(char const*, char const*)
+ T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
+ T CUtlString::VAppendFormat(char const*, char*)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
+ T CUtlStringBuilder::Truncate(unsigned long)
  T CUtlStringList::SortFunc(char* const*, char* const*)
  T CUtlSymbolTable::RemoveAll()
  T CUtlSymbolTable::~CUtlSymbolTable()
@@ -700,6 +772,7 @@
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::InsertBefore(int, CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsLeft(int, int)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Validate(CValidator&, char const*)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
@@ -730,6 +803,10 @@
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::RemoveAll()
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::~CUtlVector()
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
@@ -806,6 +883,7 @@
  T ClientAppManager()
  T ClientApps()
  T ClientBilling()
+ T ClientController()
  T ClientDepotBuilder()
  T ClientFriends()
  T ClientProductBuilder()
@@ -813,13 +891,13 @@
  T ClientUGC()
  T ClientUser()
  T ClientUtils()
- T ConCommand::AutoCompleteSuggest(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&)
+ T ConCommand::AutoCompleteSuggest(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T ConCommand::CanAutoComplete()
- T ConCommand::ConCommand(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&), void (*)(void*, CRemoteCmd*))
- T ConCommand::Create(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&), void (*)(void*, CRemoteCmd*))
+ T ConCommand::ConCommand(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
+ T ConCommand::Create(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
  T ConCommand::Dispatch(void*, ConParams&)
  T ConCommand::IsCommand() const
- T ConCommand::SetCompletionFunc(int (*)(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&))
+ T ConCommand::SetCompletionFunc(int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&))
  T ConCommand::~ConCommand()
  T ConCommandBase::AddFlags(unsigned int)
  T ConCommandBase::AddToList(ConCommandBase*)
@@ -841,6 +919,7 @@
  T ConParams::PchCmd() const
  T ConParams::Set(char const*)
  T ConParams::UArg(int) const
+ T ConVar::AddOnChangeCallback(void (*)(void*, ConVar*, char const*), void*, bool)
  T ConVar::ApplyReplicatedValue(char const*)
  T ConVar::BLocalOverride()
  T ConVar::BReplicated()
@@ -852,11 +931,13 @@
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
  T ConVar::Init()
+ T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
+ T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetValue(char const*)
@@ -866,7 +947,7 @@
  T CreateDirRecursive(char const*)
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
- T DefaultCompletionFunc(char const*, CUtlVector<CUtlStringConst, CUtlMemory<CUtlStringConst> >&)
+ T DefaultCompletionFunc(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T DeserializeVaArgs(char const*, char const*, char*, int)
  T DoLogin(ConParams&)
  T ECommitAppBuild(unsigned int, unsigned int, unsigned int const*, unsigned long long const*, char const*, char const*, unsigned int&)
@@ -996,6 +1077,7 @@
  T TimeCompare(unsigned int const*, unsigned int const*)
  T UnlinkFile(char const*)
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T V_strstr(char const*, char const*)
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
@@ -1063,6 +1145,7 @@
  V_wcstoui64
  Warning
  WeakRandomInt
+ WeakRandomUint32
  _DMsg
  _DefaultRuneLocale
  _SpewMessageType
@@ -1145,7 +1228,6 @@
  b g_pClientParentalSettings
  b g_pClientProductBuilder
  b g_pClientRemoteClientManager
- b g_pClientRemoteControlManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots
  b g_pClientShortcuts
@@ -1191,6 +1273,7 @@
  b set_spew_level_command
  b set_steam_guard_code_command
  b sign_install_script_command
+ b upload_controller_config_command
  b verify_chunk_store_command
  b verify_vpk_command
  b workshop_build_item_command
@@ -1305,7 +1388,6 @@
  t exit(void*, ConParams&, ConCommand&)
  t find(void*, ConParams&, ConCommand&)
  t force_install_dir(void*, ConParams&, ConCommand&)
- t global constructors keyed to a
  t help(void*, ConParams&, ConCommand&)
  t info(void*, ConParams&, ConCommand&)
  t login(void*, ConParams&, ConCommand&)
@@ -1320,6 +1402,7 @@
  t set_spew_level(void*, ConParams&, ConCommand&)
  t set_steam_guard_code(void*, ConParams&, ConCommand&)
  t sign_install_script(void*, ConParams&, ConCommand&)
+ t upload_controller_config(void*, ConParams&, ConCommand&)
  t verify_chunk_store(void*, ConParams&, ConCommand&)
  t verify_vpk(void*, ConParams&, ConCommand&)
  t workshop_build_item(void*, ConParams&, ConCommand&)
