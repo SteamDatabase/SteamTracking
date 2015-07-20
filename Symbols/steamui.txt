@@ -9029,7 +9029,6 @@
  D typeinfo for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
  D typeinfo for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  D typeinfo for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
- D typeinfo for CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>
  D typeinfo for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  D typeinfo for CCallback<CSteamCacheWorkDialog, AppValidationComplete_t, false>
  D typeinfo for CCallback<CSteamDoc, AppEventStateChange_t, false>
@@ -9046,6 +9045,7 @@
  D typeinfo for CCallback<CSteamDoc, SteamServerConnectFailure_t, false>
  D typeinfo for CCallback<CSteamDoc, SteamServersConnected_t, false>
  D typeinfo for CCallback<CSteamDoc, SteamServersDisconnected_t, false>
+ D typeinfo for CCallback<CSteamDoc, UnlockH264Result_t, false>
  D typeinfo for CCallback<CSteamDoc, UpdateGuestPasses_t, false>
  D typeinfo for CCallback<CSteamDoc, VRModeChanged_t, false>
  D typeinfo for CCallback<CSteamDoc, VanityURLChangedNotification_t, false>
@@ -10305,7 +10305,6 @@
  D typeinfo for CSteamAuthedHTML
  D typeinfo for CSteamAuthedHTML::CCallbackOnCredentialsChanged
  D typeinfo for CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged
- D typeinfo for CSteamAuthedHTML::CCallbackOnUnlockH264Result
  D typeinfo for CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync
  D typeinfo for CSteamCacheWorkDialog
  D typeinfo for CSteamCacheWorkDialog::CCallbackOnAppValidationComplete
@@ -10324,6 +10323,7 @@
  D typeinfo for CSteamDoc::CCallbackOnShortcutChanged
  D typeinfo for CSteamDoc::CCallbackOnShortcutRemoved
  D typeinfo for CSteamDoc::CCallbackOnSteamLogon
+ D typeinfo for CSteamDoc::CCallbackOnUnlockH264Result
  D typeinfo for CSteamDoc::CCallbackOnUpdateGuestPassList
  D typeinfo for CSteamDoc::CCallbackOnVRModeChanged
  D typeinfo for CSteamDoc::CCallbackOnVanityURLChanged
@@ -12352,7 +12352,6 @@
  D vtable for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
  D vtable for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  D vtable for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
- D vtable for CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>
  D vtable for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  D vtable for CCallback<CSteamCacheWorkDialog, AppValidationComplete_t, false>
  D vtable for CCallback<CSteamDoc, AppEventStateChange_t, false>
@@ -12369,6 +12368,7 @@
  D vtable for CCallback<CSteamDoc, SteamServerConnectFailure_t, false>
  D vtable for CCallback<CSteamDoc, SteamServersConnected_t, false>
  D vtable for CCallback<CSteamDoc, SteamServersDisconnected_t, false>
+ D vtable for CCallback<CSteamDoc, UnlockH264Result_t, false>
  D vtable for CCallback<CSteamDoc, UpdateGuestPasses_t, false>
  D vtable for CCallback<CSteamDoc, VRModeChanged_t, false>
  D vtable for CCallback<CSteamDoc, VanityURLChangedNotification_t, false>
@@ -13616,7 +13616,6 @@
  D vtable for CSteamAuthedHTML
  D vtable for CSteamAuthedHTML::CCallbackOnCredentialsChanged
  D vtable for CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged
- D vtable for CSteamAuthedHTML::CCallbackOnUnlockH264Result
  D vtable for CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync
  D vtable for CSteamCacheWorkDialog
  D vtable for CSteamCacheWorkDialog::CCallbackOnAppValidationComplete
@@ -13635,6 +13634,7 @@
  D vtable for CSteamDoc::CCallbackOnShortcutChanged
  D vtable for CSteamDoc::CCallbackOnShortcutRemoved
  D vtable for CSteamDoc::CCallbackOnSteamLogon
+ D vtable for CSteamDoc::CCallbackOnUnlockH264Result
  D vtable for CSteamDoc::CCallbackOnUpdateGuestPassList
  D vtable for CSteamDoc::CCallbackOnVRModeChanged
  D vtable for CSteamDoc::CCallbackOnVanityURLChanged
@@ -15059,7 +15059,6 @@
  R typeinfo name for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
  R typeinfo name for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  R typeinfo name for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
- R typeinfo name for CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>
  R typeinfo name for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  R typeinfo name for CCallback<CSteamCacheWorkDialog, AppValidationComplete_t, false>
  R typeinfo name for CCallback<CSteamDoc, AppEventStateChange_t, false>
@@ -15076,6 +15075,7 @@
  R typeinfo name for CCallback<CSteamDoc, SteamServerConnectFailure_t, false>
  R typeinfo name for CCallback<CSteamDoc, SteamServersConnected_t, false>
  R typeinfo name for CCallback<CSteamDoc, SteamServersDisconnected_t, false>
+ R typeinfo name for CCallback<CSteamDoc, UnlockH264Result_t, false>
  R typeinfo name for CCallback<CSteamDoc, UpdateGuestPasses_t, false>
  R typeinfo name for CCallback<CSteamDoc, VRModeChanged_t, false>
  R typeinfo name for CCallback<CSteamDoc, VanityURLChangedNotification_t, false>
@@ -16344,7 +16344,6 @@
  R typeinfo name for CSteamAuthedHTML
  R typeinfo name for CSteamAuthedHTML::CCallbackOnCredentialsChanged
  R typeinfo name for CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged
- R typeinfo name for CSteamAuthedHTML::CCallbackOnUnlockH264Result
  R typeinfo name for CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync
  R typeinfo name for CSteamCacheWorkDialog
  R typeinfo name for CSteamCacheWorkDialog::CCallbackOnAppValidationComplete
@@ -16363,6 +16362,7 @@
  R typeinfo name for CSteamDoc::CCallbackOnShortcutChanged
  R typeinfo name for CSteamDoc::CCallbackOnShortcutRemoved
  R typeinfo name for CSteamDoc::CCallbackOnSteamLogon
+ R typeinfo name for CSteamDoc::CCallbackOnUnlockH264Result
  R typeinfo name for CSteamDoc::CCallbackOnUpdateGuestPassList
  R typeinfo name for CSteamDoc::CCallbackOnVRModeChanged
  R typeinfo name for CSteamDoc::CCallbackOnVanityURLChanged
@@ -21210,12 +21210,6 @@
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::Run(void*)
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::Run(void*, bool, unsigned long long)
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::~CCallback()
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(UnlockH264Result_t*))
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::GetCallbackSizeBytes()
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(UnlockH264Result_t*))
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::Run(void*)
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::~CCallback()
  T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*))
  T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*))
@@ -21312,6 +21306,12 @@
  T CCallback<CSteamDoc, SteamServersDisconnected_t, false>::Run(void*)
  T CCallback<CSteamDoc, SteamServersDisconnected_t, false>::Run(void*, bool, unsigned long long)
  T CCallback<CSteamDoc, SteamServersDisconnected_t, false>::~CCallback()
+ T CCallback<CSteamDoc, UnlockH264Result_t, false>::CCallback(CSteamDoc*, void (CSteamDoc::*)(UnlockH264Result_t*))
+ T CCallback<CSteamDoc, UnlockH264Result_t, false>::GetCallbackSizeBytes()
+ T CCallback<CSteamDoc, UnlockH264Result_t, false>::Register(CSteamDoc*, void (CSteamDoc::*)(UnlockH264Result_t*))
+ T CCallback<CSteamDoc, UnlockH264Result_t, false>::Run(void*)
+ T CCallback<CSteamDoc, UnlockH264Result_t, false>::Run(void*, bool, unsigned long long)
+ T CCallback<CSteamDoc, UnlockH264Result_t, false>::~CCallback()
  T CCallback<CSteamDoc, UpdateGuestPasses_t, false>::CCallback(CSteamDoc*, void (CSteamDoc::*)(UpdateGuestPasses_t*))
  T CCallback<CSteamDoc, UpdateGuestPasses_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamDoc, UpdateGuestPasses_t, false>::Register(CSteamDoc*, void (CSteamDoc::*)(UpdateGuestPasses_t*))
@@ -33807,8 +33807,6 @@
  T CSteamAuthedHTML::CCallbackOnCredentialsChanged::Run(void*, bool, unsigned long long)
  T CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged::Run(void*)
  T CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged::Run(void*, bool, unsigned long long)
- T CSteamAuthedHTML::CCallbackOnUnlockH264Result::Run(void*)
- T CSteamAuthedHTML::CCallbackOnUnlockH264Result::Run(void*, bool, unsigned long long)
  T CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync::Run(void*)
  T CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync::Run(void*, bool, unsigned long long)
  T CSteamAuthedHTML::CSteamAuthedHTML(vgui::Panel*, char const*, bool)
@@ -33826,7 +33824,6 @@
  T CSteamAuthedHTML::OnPageLoaded(char const*, char const*, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)> const&)
  T CSteamAuthedHTML::OnParentalWebTokenChanged(ParentalWebTokenChanged_t*)
  T CSteamAuthedHTML::OnStartRequest(char const*, char const*, char const*, bool)
- T CSteamAuthedHTML::OnUnlockH264Result(UnlockH264Result_t*)
  T CSteamAuthedHTML::OnWebAuthRequestAsync(WebAuthRequestCallback_t*)
  T CSteamAuthedHTML::OnWebAuthRequestCompleted(WebAuthRequestCallback_t*, bool)
  T CSteamAuthedHTML::OpenURL(char const*, char const*, bool, bool)
@@ -33897,6 +33894,8 @@
  T CSteamDoc::CCallbackOnShortcutRemoved::Run(void*, bool, unsigned long long)
  T CSteamDoc::CCallbackOnSteamLogon::Run(void*)
  T CSteamDoc::CCallbackOnSteamLogon::Run(void*, bool, unsigned long long)
+ T CSteamDoc::CCallbackOnUnlockH264Result::Run(void*)
+ T CSteamDoc::CCallbackOnUnlockH264Result::Run(void*, bool, unsigned long long)
  T CSteamDoc::CCallbackOnUpdateGuestPassList::Run(void*)
  T CSteamDoc::CCallbackOnUpdateGuestPassList::Run(void*, bool, unsigned long long)
  T CSteamDoc::CCallbackOnVRModeChanged::Run(void*)
@@ -33996,6 +33995,7 @@
  T CSteamDoc::OnShortcutChanged(ShortcutChanged_t*)
  T CSteamDoc::OnShortcutRemoved(ShortcutRemoved_t*)
  T CSteamDoc::OnSteamLogon(SteamServersConnected_t*)
+ T CSteamDoc::OnUnlockH264Result(UnlockH264Result_t*)
  T CSteamDoc::OnUpdateGuestPassList(UpdateGuestPasses_t*)
  T CSteamDoc::OnVRModeChanged(VRModeChanged_t*)
  T CSteamDoc::OnVanityURLChanged(VanityURLChangedNotification_t*)

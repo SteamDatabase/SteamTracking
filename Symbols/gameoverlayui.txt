@@ -1965,7 +1965,6 @@
  D typeinfo for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
  D typeinfo for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  D typeinfo for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
- D typeinfo for CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>
  D typeinfo for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  D typeinfo for CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>
  D typeinfo for CCallbackBase
@@ -2251,7 +2250,6 @@
  D typeinfo for CSteamAuthedHTML
  D typeinfo for CSteamAuthedHTML::CCallbackOnCredentialsChanged
  D typeinfo for CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged
- D typeinfo for CSteamAuthedHTML::CCallbackOnUnlockH264Result
  D typeinfo for CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
@@ -3182,7 +3180,6 @@
  D vtable for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
  D vtable for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  D vtable for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
- D vtable for CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>
  D vtable for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  D vtable for CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>
  D vtable for CColorProperty
@@ -3466,7 +3463,6 @@
  D vtable for CSteamAuthedHTML
  D vtable for CSteamAuthedHTML::CCallbackOnCredentialsChanged
  D vtable for CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged
- D vtable for CSteamAuthedHTML::CCallbackOnUnlockH264Result
  D vtable for CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
@@ -3810,7 +3806,6 @@
  R typeinfo name for CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>
  R typeinfo name for CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>
  R typeinfo name for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
- R typeinfo name for CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>
  R typeinfo name for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  R typeinfo name for CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>
  R typeinfo name for CCallbackBase
@@ -4096,7 +4091,6 @@
  R typeinfo name for CSteamAuthedHTML
  R typeinfo name for CSteamAuthedHTML::CCallbackOnCredentialsChanged
  R typeinfo name for CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged
- R typeinfo name for CSteamAuthedHTML::CCallbackOnUnlockH264Result
  R typeinfo name for CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
@@ -5433,12 +5427,6 @@
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::Run(void*)
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::Run(void*, bool, unsigned long long)
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::~CCallback()
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(UnlockH264Result_t*))
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::GetCallbackSizeBytes()
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(UnlockH264Result_t*))
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::Run(void*)
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamAuthedHTML, UnlockH264Result_t, false>::~CCallback()
  T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*))
  T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*))
@@ -8308,8 +8296,6 @@
  T CSteamAuthedHTML::CCallbackOnCredentialsChanged::Run(void*, bool, unsigned long long)
  T CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged::Run(void*)
  T CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged::Run(void*, bool, unsigned long long)
- T CSteamAuthedHTML::CCallbackOnUnlockH264Result::Run(void*)
- T CSteamAuthedHTML::CCallbackOnUnlockH264Result::Run(void*, bool, unsigned long long)
  T CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync::Run(void*)
  T CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync::Run(void*, bool, unsigned long long)
  T CSteamAuthedHTML::CSteamAuthedHTML(vgui::Panel*, char const*, bool)
@@ -8327,7 +8313,6 @@
  T CSteamAuthedHTML::OnPageLoaded(char const*, char const*, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)> const&)
  T CSteamAuthedHTML::OnParentalWebTokenChanged(ParentalWebTokenChanged_t*)
  T CSteamAuthedHTML::OnStartRequest(char const*, char const*, char const*, bool)
- T CSteamAuthedHTML::OnUnlockH264Result(UnlockH264Result_t*)
  T CSteamAuthedHTML::OnWebAuthRequestAsync(WebAuthRequestCallback_t*)
  T CSteamAuthedHTML::OnWebAuthRequestCompleted(WebAuthRequestCallback_t*, bool)
  T CSteamAuthedHTML::OpenURL(char const*, char const*, bool, bool)
