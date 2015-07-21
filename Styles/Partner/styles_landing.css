@@ -1811,6 +1811,18 @@ a.pagelink:hover {
 	background-color: #550000 !important;
 }
 
+.clonedth {
+	font-size: 9px;
+	text-transform: uppercase;
+	background-color: #1f1f1f;
+	padding: 6px;
+	font-weight: normal;
+	color: #808285;
+	display: inline-block;
+	vertical-align: top;
+	white-space: normal;
+}
+
 .outofmatrixlower {
 	border: 1px dashed #8bb006 !important;
 }
