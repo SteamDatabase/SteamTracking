@@ -758,7 +758,6 @@ div.youraccount_history_home>div.account_wallet {
 }
 
 .wallet_history_table td {
-	vertical-align: text-top;
 	padding: 6px;
 }
 
@@ -784,20 +783,23 @@ div.youraccount_history_home>div.account_wallet {
 td.wht_date {
 	text-align: right;
 	padding: 6px;
-	width: 100px;
+	width: 10%;
 	font-size: 10px;
 	color: #717c84;
 }
 
 .wht_items {
 	text-align: left;
-	width: 400px;
+	width: 60%;
 	padding-left: 20px;
 }
 
+.wht_item_refunded {
+}
+
 .wht_type {
-	text-align: center;
-	width: 250px;
+	text-align: left;
+	min-width: 130px;
 }
 
 .wht_wallet {
@@ -806,7 +808,7 @@ td.wht_date {
 
 th.wht_wallet_change {
 	text-align: right;
-	padding-right: 2px;
+	padding-right: 8px;
 }
 
 th.wht_wallet_balance {
@@ -814,18 +816,28 @@ th.wht_wallet_balance {
 	padding-right: 16px;
 }
 
+.wth_item_refunded {
+	color: #808080;
+	font-size: 80%;
+}
+
 td.wht_wallet_change {
 	color: #9f9f9f;
 	text-align: right;
-	width: 60px;
+	width: 5%;
 	border-left: solid 1px #2c405b;
 }
 
 td.wht_wallet_balance {
 	color: #9f9f9f;
 	text-align: right;
-	width: 60px;
+	width: 5%;
 	padding-right: 20px;
+}
+
+td.wht_wallet_pending {
+	text-align: center;
+	color: #9f9f9f;
 }
 
 .wallet_entry_highlight {
@@ -833,16 +845,26 @@ td.wht_wallet_balance {
 }
 
 td.wht_wallet_balance.wallet_entry_highlight {
-	color: #ffff00;
+	color: #fdfdfd;
 }
 
 td.wht_wallet_change.wallet_entry_highlight {
-	color: #ffff00;
+	color: #fdfdfd;
 }
 
 .wth_payment {
-	color: grey;
-	font-size: 10px;
+	color: #808080;
+	font-size: 80%;
+}
+
+.wht_refunded {
+	text-decoration: line-through;
+}
+
+td.wht_total {
+	width: 5%;
+	padding-right: 2em;
+	text-align: right;
 }
 
 #load_more_button {
@@ -870,6 +892,10 @@ td.wht_wallet_change.wallet_entry_highlight {
 .help_purchase_img img {
 	float: left;
 	margin: 0 3px 0 0;
-	width: 16px;
+	width: 10px;
 }
 
+.wallet_history_click_hint {
+	padding: 0 0 6px 0;
+	color: #68c1f5;
+}

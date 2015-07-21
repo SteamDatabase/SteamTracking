@@ -31,7 +31,7 @@
 	background: rgb( 29, 47, 69 );
 	line-height: 18px;
 	padding: 15px;
-	margin-top: 15px;
+	margin-top: 35px;
 }
 
 .twofactor_settings_form
@@ -81,12 +81,12 @@
 .twofactor_settings_choice_rule
 {
 	border-top: 1px solid rgba(42, 63, 90, 0.5 );
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .twofactor_settings_right_button
 {
-	margin-top:10px;
 	display: inline-block;
 	float: right;
 }
