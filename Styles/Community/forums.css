@@ -1065,7 +1065,8 @@ input.discussionSearchText:-moz-placeholder {
 
 .forum_topic_deleted_notice,
 .forum_topic_locked_notice,
-.forum_topic_pinned_notice {
+.forum_topic_pinned_notice,
+.forum_topic_reported_notice {
 	margin-bottom: 12px;
 	padding: 14px 11px;
 	margin-top: 4px;
@@ -1077,6 +1078,10 @@ input.discussionSearchText:-moz-placeholder {
 	background-image: none;
 	color: #AEDD08;
 	background-color: #364a2e;
+}
+.forum_topic_reported_notice {
+	color: #c38a4c;
+	background-color: #4A3E2E;
 }
 
 table.forum_auditlog {

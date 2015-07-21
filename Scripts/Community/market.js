@@ -1101,7 +1101,7 @@ function MarketCheckHash()
 	else if ( window.location.hash.length > 5 && window.location.hash.substr(0,5) == "#sell" )
 	{
 		var strAsset = window.location.hash.substr(5);
-		ShowModalContent('https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, 'Choose an item from your inventory', 'https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, true);
+		ShowModalContent('https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, 'Choose an item from your inventory', 'https://steamcommunity.com/my/inventory/?modal=1&market=1&sellOnLoad=1#' + strAsset, false);
 	}
 	else if ( window.location.hash == "#myhistory" )
 	{

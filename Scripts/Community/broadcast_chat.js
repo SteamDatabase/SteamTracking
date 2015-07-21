@@ -317,7 +317,7 @@ CBroadcastChat.prototype.AddLinks = function( strHTML )
 
 CBroadcastChat.prototype.AddEmoticons = function( strHTML, steamID, bLocal )
 {
-	var regexEmoticons = CBroadcastChat.s_regexEmoticons
+	var regexEmoticons = CBroadcastChat.s_regexEmoticons;
 	if( bLocal )
 		regexEmoticons = this.m_regexUserEmoticons;
 
@@ -347,8 +347,8 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 	var elText = $J( '.tmplChatMessage', elMessage ).text( strMessage );
 
 		var strHTML = elText.html();
-	strHTML = this.AddLinks( strHTML );
 	strHTML = this.AddEmoticons( strHTML, steamID, bLocal );
+	strHTML = this.AddLinks( strHTML );
 
 	elText.html( strHTML );
 	elText.find( 'img.emoticon' ).each( function() { BindEmoticonHover( this ) } );

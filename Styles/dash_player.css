@@ -778,9 +778,9 @@
 	position: absolute;
 	height: 200px;
 	width: 768px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_BG_Panel.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: -2px -2px;
 
 	opacity: 0.0;
 	transition-property: opacity;
@@ -832,6 +832,7 @@
 {
 	width: 92px;
 	height: 91px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	cursor: pointer;
 	position: absolute;
 	left: 395px;
@@ -841,21 +842,21 @@
 }
 
 .tenfoot_dash_overlay .play_button.play {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Play.png' );
+	background-position: -960px -38px;
 }
 
 .tenfoot_dash_overlay .play_button.play:hover,
 .tenfoot_dash_overlay .play_button.tenfoot_focus.play {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Play_Over.png' );
+	background-position: -1054px -38px;
 }
 
 .tenfoot_dash_overlay .play_button.pause {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Pause.png' );
+	background-position: -772px -38px;
 }
 
 .tenfoot_dash_overlay .play_button.pause:hover,
 .tenfoot_dash_overlay .play_button.tenfoot_focus.pause {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Pause_Over.png' );
+	background-position: -866px -38px;
 }
 
 .tenfoot_dash_overlay .stop_button
@@ -866,14 +867,15 @@
 	position: absolute;
 	left: 279px;
 	top: -21px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Stop.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
+	background-position: -1148px -38px;
 	background-repeat: no-repeat;
 	float: left;
 }
 
 .tenfoot_dash_overlay .stop_button:hover,
 .tenfoot_dash_overlay .stop_button.tenfoot_focus {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Stop_Over.png' );
+	background-position: -1242px -38px;
 }
 
 .tenfoot_dash_overlay .skip_back
@@ -882,9 +884,9 @@
 	height: 80px;
 	cursor: pointer;
 	position: absolute;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_SkipBack.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	background-repeat: no-repeat;
-	background-position: 0;
+	background-position: -1336px -38px;
 	left: 185px;
 	top: -15px;
 	float: left;
@@ -893,7 +895,7 @@
 .tenfoot_dash_overlay .skip_back:hover,
 .tenfoot_dash_overlay .skip_back.tenfoot_focus
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_SkipBack_Over.png' );
+	background-position: -1419px -38px;
 }
 
 .tenfoot_dash_overlay .skip_fwd
@@ -902,9 +904,9 @@
 	height: 80px;
 	cursor: pointer;
 	position: absolute;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_SkipForward.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	background-repeat: no-repeat;
-	background-position: 0;
+	background-position: -1172px -131px;
 	left: 501px;
 	top: -15px;
 	float: left;
@@ -913,7 +915,7 @@
 .tenfoot_dash_overlay .skip_fwd:hover,
 .tenfoot_dash_overlay .skip_fwd.tenfoot_focus
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_SkipForward_Over.png' );
+	background-position: -1255px -131px;
 }
 
 .tenfoot_dash_overlay .customize_captions
@@ -921,9 +923,9 @@
 	width: 73px;
 	height: 58px;
 	cursor: pointer;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_CC.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
+	background-position: -772px -191px;
 	position: absolute;
 	right: 135px;
 	top: 8px;
@@ -933,7 +935,7 @@
 .tenfoot_dash_overlay .customize_captions:hover,
 .tenfoot_dash_overlay .customize_captions.tenfoot_focus
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_CC_Over.png' );
+	background-position: -847px -191px;
 }
 
 .tenfoot_dash_overlay .player_settings
@@ -956,9 +958,9 @@
 {
 	width: 73px;
 	height: 58px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Volume.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
+	background-position: -947px -131px;
 	cursor: pointer;
 	position: absolute;
 	right: 0px;
@@ -968,29 +970,30 @@
 
 .tenfoot_dash_overlay .volume_icon.muted
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_VolumeMute.png' );
+	background-position: -997px -191px;
 }
 
 .tenfoot_dash_overlay .no_audio_track .volume_icon
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Volume_False.png' );
+	background-position: -1072px -191px;
 	cursor: default;
 }
 
 .tenfoot_dash_overlay .volume_container.tenfoot_focus .volume_icon
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Volume_Over.png' );
+	background-position: -1097px -131px;
 }
 
 .tenfoot_dash_overlay .volume_container.tenfoot_focus .volume_icon.muted
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_VolumeMute_Over.png' );
+	background-position: -1022px -131px;
 }
 
 .tenfoot_dash_overlay .volume_slider {
 	width: 73px;
 	height: 226px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Volume_Well_Focus.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
+	background-position: -1523px -2px;
 	position: absolute;
 	display: none;
 }
@@ -1006,7 +1009,8 @@
 	width: 31px;
 	height: 30px;
 	left: 20px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Volume_Button.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
+	background-position: -1448px -173px;
 	cursor: pointer;
 }
 
@@ -1015,9 +1019,9 @@
 	width: 73px;
 	height: 58px;
 	cursor: pointer;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Settings.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
+	background-position: -872px -131px;
 	position: absolute;
 	right: 5px;
 	top: 8px;
@@ -1027,15 +1031,15 @@
 .tenfoot_dash_overlay .settings_icon:hover,
 .tenfoot_dash_overlay .settings_icon.tenfoot_focus
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Settings_Over.png' );
+	background-position: -922px -191px;
 }
 
 .tenfoot_dash_overlay .progress_bar_wrapper
 {
 	position: relative;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Timeline_Well.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
+	background-position: -2px -204px;
 	width: 749px;
 	height: 34px;
 	left: 8px;
@@ -1044,7 +1048,7 @@
 .tenfoot_dash_overlay .progress_bar_wrapper:hover,
 .tenfoot_dash_overlay .progress_bar_wrapper.tenfoot_focus
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Timeline_Well_Focus.png' );
+	background-position: -772px -2px;
 }
 
 .tenfoot_dash_overlay .progress_bar_container
@@ -1302,9 +1306,9 @@
 
 .tenfoot_modal_panel_wrapper .panel_select .left_arrow
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Arrow_Left.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
+	background-position: -1338px -120px;
 	width: 48px;
 	height: 51px;
 	float: left;
@@ -1314,7 +1318,7 @@
 .tenfoot_modal_panel_wrapper .panel_select .left_arrow:hover,
 .tenfoot_modal_panel_wrapper .panel_select .left_arrow.tenfoot_focus
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Arrow_Left_Over.png' );
+	background-position: -1388px -120px;
 }
 
 .tenfoot_modal_panel_wrapper .panel_select #representation_select
@@ -1342,9 +1346,9 @@
 
 .tenfoot_modal_panel_wrapper .panel_select .right_arrow
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Arrow_Right.png' );
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/dash_player_tenfoot_art.png' );
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
+	background-position: -1438px -120px;
 	width: 48px;
 	height: 51px;
 	float: left;
@@ -1354,7 +1358,7 @@
 .tenfoot_modal_panel_wrapper .panel_select .right_arrow:hover,
 .tenfoot_modal_panel_wrapper .panel_select .right_arrow.tenfoot_focus
 {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/dashplayer/MoviePlayer_Button_Arrow_Right_Over.png' );
+	background-position: -1338px -173px;
 }
 
 .tenfoot_dash_closed_captions_customization
@@ -1468,3 +1472,7 @@
 {
 	margin: 0px 17px 40px auto;
 }
+
+/*.MoviePlayer_Button_LiveBroadcast_Off {width:58px; height:13px; background-position: -1388px -173px}*/
+/*.MoviePlayer_Button_LiveBroadcast_On {width:58px; height:13px; background-position: -1388px -188px}*/
+/*.MoviePlayer_Button_LiveBroadcast_Over {width:98px; height:58px; background-position: -772px -131px}*/

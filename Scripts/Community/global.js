@@ -372,7 +372,10 @@ function IsCurrencyWholeUnits( currencyCode )
 		case 'VND':
 		case 'KRW':
 		case 'UAH':
+		case 'CNY':
+		case 'INR':
 		case 'CLP':
+		case 'COP':
 		case 'RMB':
 		case 'NXP':
 			return true;
