@@ -191,6 +191,12 @@
                     "type": "uint64",
                     "optional": true,
                     "description": ""
+                },
+                {
+                    "name": "phase_id",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": ""
                 }
             ]
         }
