@@ -826,6 +826,7 @@ td.wht_wallet_change {
 	color: #9f9f9f;
 	text-align: right;
 	width: 5%;
+	white-space: nowrap;
 	border-left: solid 1px #2c405b;
 }
 
@@ -834,6 +835,7 @@ td.wht_wallet_balance {
 	text-align: right;
 	width: 5%;
 	padding-right: 20px;
+	white-space: nowrap;
 }
 
 td.wht_wallet_pending {
@@ -867,6 +869,7 @@ td.wht_total {
 	width: 5%;
 	padding-right: 2em;
 	text-align: right;
+	white-space: nowrap;
 }
 
 .load_more_history_area {
