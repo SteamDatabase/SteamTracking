@@ -105,6 +105,10 @@ Label
 	transition-duration: 0.3s;
 }
 
+.Button.Locked
+{
+	wash-color: parental_locked_wash;
+}
 
 .MenuButton
 {

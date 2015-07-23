@@ -14559,6 +14559,7 @@
  R k_rgchSSAFileTemplate
  R k_rgchSSAFileTemplateNexon
  R k_rgchSSAFileTemplatePerfectWorld
+ R panorama::CHTML::s_fScrollDeadzoneScale
  R silk_CB_lags_stage2
  R silk_CB_lags_stage2_10_ms
  R silk_CB_lags_stage3
@@ -26554,12 +26555,10 @@
  T CLibraryDetailsPanel::SetStreamingClientToDefault()
  T CLibraryDetailsPanel::UpdateScreenshot()
  T CLibraryDetailsPanel::~CLibraryDetailsPanel()
- T CLibraryEULAPanel::CLibraryEULAPanel(panorama::IUIWindow*, char const*)
+ T CLibraryEULAPanel::CLibraryEULAPanel(panorama::IUIWindow*, char const*, ELibraryEULAPanelPurpose, CGameID, KeyValues*)
  T CLibraryEULAPanel::Close()
  T CLibraryEULAPanel::GetPanelType() const
- T CLibraryEULAPanel::InitDialog(ELibraryEULAPanelPurpose, CGameID, KeyValues*)
  T CLibraryEULAPanel::OnGamePadAnalog(panorama::GamePadData_t const&)
- T CLibraryEULAPanel::OnGamePadDown(panorama::GamePadData_t const&)
  T CLibraryEULAPanel::OnKeyDown(panorama::KeyData_t const&)
  T CLibraryEULAPanel::OnLaunchEULAAccepted(ELibraryEULAPanelPurpose, unsigned int, KeyValues*)
  T CLibraryEULAPanel::OnLaunchEULADeclined(ELibraryEULAPanelPurpose, KeyValues*)
@@ -30764,6 +30763,7 @@
  T CParentalEventFilter::FilterProfile(panorama::IUIEvent*, bool)
  T CParentalEventFilter::FilterSettings(panorama::IUIEvent*, bool)
  T CParentalEventFilter::FilterStore(panorama::IUIEvent*, bool)
+ T CParentalEventFilter::FilterSystemMenuNavigate(panorama::IUIEvent*, bool)
  T CParentalEventFilter::FilterURL(panorama::IUIEvent*, bool)
  T CParentalEventFilter::OnParentalLockChanged(ParentalLockChanged_t*)
  T CParentalEventFilter::RegisterParentalFilter(panorama::CPanoramaSymbol, CUtlAbstractDelegate)
