@@ -3652,6 +3652,15 @@ function ShowProgressDialog( strTitle, strDescription )
 
 	return Modal;
 }
+function OnChangeControllerTemplate(appid)
+{
+	SetAppField( 'config', appid, 'steamcontrollertemplateindex', $('SteamControllerTemplate').value );
+
+	if( $('SteamControllerTemplate').value == 1 )
+		$J('#SteamControllerDefaultConfig').show();
+	else
+		$J('#SteamControllerDefaultConfig').hide();
+}
 
 function UpgradeGreenlightItem( item )
 {
