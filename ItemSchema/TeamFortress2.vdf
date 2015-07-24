@@ -125307,7 +125307,174 @@
 				"engineer"		"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_engineer.mdl"
 			}
 		}
-
+		"8831"
+		{		
+			"name"				"Arms Race I 1st Place"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_first"
+			"item_description"	"#TF_TournamentMedal_armsrace1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_engineer.mdl"
+			}
+		}
+		"8832"
+		{		
+			"name"				"Arms Race I 2nd Place"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_second"
+			"item_description"	"#TF_TournamentMedal_armsrace1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_engineer.mdl"
+			}
+		}
+		"8833"
+		{		
+			"name"				"Arms Race I 3rd Place"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_third"
+			"item_description"	"#TF_TournamentMedal_armsrace1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_engineer.mdl"
+			}
+		}
+  		"8834"
+		{		
+			"name"				"Arms Race I Participant"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_participant"
+			"item_description"	"#TF_TournamentMedal_armsrace1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_engineer.mdl"
+			}
+		}
+		"8835"
+		{		
+			"name"				"Arms Race II 1st Place"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_first"
+			"item_description"	"#TF_TournamentMedal_armsrace2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/armsrace_medal_first/armsrace_medal_first_engineer.mdl"
+			}
+		}
+		"8836"
+		{		
+			"name"				"Arms Race II 2nd Place"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_second"
+			"item_description"	"#TF_TournamentMedal_armsrace2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/armsrace_medal_second/armsrace_medal_second_engineer.mdl"
+			}
+		}
+		"8837"
+		{		
+			"name"				"Arms Race II 3rd Place"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_third"
+			"item_description"	"#TF_TournamentMedal_armsrace2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/armsrace_medal_third/armsrace_medal_third_engineer.mdl"
+			}
+		}
+  		"8838"
+		{		
+			"name"				"Arms Race II Participant"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_armsrace_participant"
+			"item_description"	"#TF_TournamentMedal_armsrace2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_engineer.mdl"
+			}
+		}
 
 
 

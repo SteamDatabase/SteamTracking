@@ -11764,16 +11764,13 @@
 		{
 			"prefab"		"weapon_case_base"
 			"item_type"		"coupon_crate"
-			"attributes"
-			{
-				"cannot trade"		"1"
-			}
 			"capabilities"
 			{
 				"can_delete"		"0"
 			}
 			"attributes"
 			{
+				"cannot trade"		"1"
 				"expiration date"
 				{
 					"attribute_class"		"expiration_date"
