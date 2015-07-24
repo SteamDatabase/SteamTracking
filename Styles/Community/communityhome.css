@@ -10,11 +10,11 @@ body
 .community_home_header
 {
 	position: relative;
-	max-width: 948px;
+	max-width: 1280px;
 	margin: 0px auto;
 	padding: 20px 1% 0 1%;
 	text-align: left;
-    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 }
 
 .community_home_title
@@ -179,8 +179,7 @@ body
 {
 	margin-top: 15px;
 	width: 33%;
-	max-width: 306px;
-    background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.4);
 	border: 1px solid transparent;
 	float: right;
 }

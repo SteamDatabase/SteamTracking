@@ -67,7 +67,6 @@ CBroadcastWatch.s_UpdateTimeoutSec = 60;
 CBroadcastWatch.k_InBrowser = 1;
 CBroadcastWatch.k_InClient = 2;
 CBroadcastWatch.k_InOverlay = 3;
-CBroadcastWatch.k_InOldClient = 4;
 
 CBroadcastWatch.prototype.ToggleStats = function()
 {
@@ -186,9 +185,9 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 		$J( this.m_elVideoPlayer ).on( 'playbackerror.BroadcastWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
 
 		$J( this.m_elVideoPlayer ).on( 'gamedataupdate', function( e, pts, Data ) { _watch.OnGameFrameReceived( pts, Data ); } );
-	}
 
-	this.GetBroadcastMPD();
+		this.GetBroadcastMPD();
+	}
 }
 
 CBroadcastWatch.prototype.SetGameDataUpdateFrequency = function( flFreq )
@@ -241,6 +240,9 @@ function LocalizeCount( strSingular, strPlural, nValue )
 
 CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 {
+	if ( !this.m_bVideoEnabled )
+		return;
+
 	$J( '#PageContents' ).addClass( 'LoadingVideo' );
 
 	var _watch = this;
@@ -296,12 +298,19 @@ CBroadcastWatch.prototype.GetBroadcastMPD = function( rtStartRequest )
 
 			_watch.UpdateBroadcastInfo();
 
-			if ( _watch.m_chat )
+			if ( _watch.m_chat && _watch.m_bChatEnabled )
 			{
-				_watch.m_chat.RequestChatInfo(data.broadcastid);
+				_watch.m_chat.RequestChatInfo( data.broadcastid );
+			}
+			// If we're in an IFrame and are video-only, send a message over the fence to plumb the new broadcastid into the
+			// other chat iframe, so it can call RequestChatInfo.
+			else if ( _watch.m_IFrameHelper )
+			{
+				_watch.PostMessageToIFrameParent( 'OnBroadcastIDChanged', { broadcastid: data.broadcastid } );
 			}
 
-			$J( '#PageContents' ).addClass( 'ShowPlayer' );
+			// Hide the loading panel
+			_watch.HideLoadingPanel();
 		}
 		else if ( data.success == 'end' )
 		{
@@ -350,6 +359,20 @@ CBroadcastWatch.prototype.LoadBroadcastMPD = function( url )
 	this.m_player.Close();
 	this.m_DASHPlayerStats.Reset();
 	this.m_player.PlayMPD( url );
+}
+
+CBroadcastWatch.prototype.OnVideoIFrameBroadcastIDChanged = function( ulBroadcastID )
+{
+	if ( !this.m_bChatEnabled )
+		return;
+
+	this.m_chat.RequestChatInfo( ulBroadcastID );
+	this.HideLoadingPanel();
+}
+
+CBroadcastWatch.prototype.HideLoadingPanel = function()
+{
+	$J( '#PageContents' ).addClass( 'ShowPlayer' );
 }
 
 CBroadcastWatch.prototype.UpdateBroadcastInfo = function()

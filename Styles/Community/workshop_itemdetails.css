@@ -1627,6 +1627,11 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	width: 100%;
 	max-width: 100%;
 }
+.movieFrame.modal.panorama
+{
+	width: 100%;
+	height: 475px;
+}
 
 .screenshotApp
 {
