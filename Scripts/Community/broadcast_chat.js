@@ -213,6 +213,14 @@ CBroadcastChat.prototype.RequestLoop = function()
 			}
 		}
 
+		if ( rgResponse.remove_msgs )
+		{
+			for ( var i = 0; i < rgResponse.remove_msgs.length; i++ )
+			{
+				_chat.RemoveUserMessages( rgResponse.remove_msgs[i].steamid );
+			}
+		}
+
 		// check if first request or we received initial_delay which will allow us to resync time
 		var nSleepMS = 0;
 		if( _chat.m_rtFirstRequest == 0 || _chat.m_nNextChatTS == 0 || rgResponse.initial_delay )
@@ -329,8 +337,9 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 {
 	var _chat = this;
 
-		var elMessage = $J('#ChatMessagetemplate').clone();
-	elMessage.data( 'steamid', steamID );
+		var elMessage = $J('#ChatMessageTemplate').clone();
+	elMessage.attr( 'id', '' );
+	elMessage.attr( 'data-steamid', steamID );
 
 	var elChatName = $J( '.tmplChatName', elMessage );
 	elChatName.text( strPersonaName );
@@ -355,7 +364,8 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 
 	elMessage.show();
 
-	$J('#ChatBox').append(elMessage);
+	$J('#ChatMessages').append(elMessage);
+	this.TrimChat();
 
 	// if text is too long, add expand button
 	var elText = $J( '.tmplChatMessage', elMessage );
@@ -368,6 +378,15 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 	}
 
 	this.UpdateScroll();
+}
+
+CBroadcastChat.prototype.TrimChat = function()
+{
+	var $messages = $J('#ChatMessages');
+	while ( $messages.children().length > 500 )
+	{
+		$messages.children( 0 ).remove();
+	}
 }
 
 CBroadcastChat.prototype.UpdateScroll = function()
@@ -391,7 +410,7 @@ CBroadcastChat.prototype.DisplayChatError = function( strError )
 	var eleMessage = $J( '#ChatErrorTemplate' ).clone();
 	$J('.tmplChatError',eleMessage ).text( strError );
 	eleMessage.show();
-	$J('#ChatBox').append( eleMessage );
+	$J('#ChatMessages').append( eleMessage );
 	$J('#ChatBox').scrollTop( $J( '#ChatBox' ).prop( "scrollHeight" ) );
 }
 
@@ -400,7 +419,7 @@ CBroadcastChat.prototype.DisplayChatNotification = function( strNotification )
 	var eleMessage = $J( '#ChatNotificationTemplate' ).clone();
 	$J('.tmplChatNotification',eleMessage ).text( strNotification );
 	eleMessage.show();
-	$J('#ChatBox').append( eleMessage );
+	$J('#ChatMessages').append( eleMessage );
 	$J('#ChatBox').scrollTop( $J( '#ChatBox' ).prop( "scrollHeight" ) );
 }
 
@@ -450,7 +469,7 @@ CBroadcastChat.prototype.ShowChatMessageMenu = function( elButton )
 	var elMenu = $J( '#ChatMessageMenuBackground' );
 	elMenu.show();
 
-	var elMessage = $J( elButton ).closest( '#ChatMessagetemplate ' );
+	var elMessage = $J( elButton ).closest( '.ChatMessage' );
 	elMenu.data( 'elMessage', elMessage );
 	elMessage.addClass( 'ShowingMenu' );
 
@@ -612,4 +631,48 @@ CBroadcastChat.prototype.GetMutedUsers = function()
 	});
 
 	return rgSteamID;
+}
+
+CBroadcastChat.prototype.RemoveUserMessages = function( steamID )
+{
+	var str = ".ChatMessage[data-steamid='" + steamID + "']";
+	$J( '#ChatMessages' ).find( str ).remove();
+
+	if ( this.m_bAutoScroll )
+	{
+				$J('#ChatBox').scrollTop( 0 );
+		this.ScrollToBottom();
+	}
+}
+
+CBroadcastChat.prototype.OnRemoveUserMessages = function()
+{
+	var elMessage = $J( '#ChatMessageMenuBackground' ).data( 'elMessage' );
+	var steamID = elMessage.data( 'steamid' );
+	var strPersonaName = $J( '.tmplChatName', elMessage ).text();
+
+	if ( steamID == this.m_steamID )
+		return;
+
+	// send request
+	var rgParams =
+	{
+		chat_id: this.m_ulChatID,
+		user_steamid: steamID,
+	};
+
+	var _chat = this;
+	this.m_webapi.ExecJSONP( 'IBroadcastService', 'RemoveUserChatText', rgParams, true, null, 15 )
+	.done( function( response )
+	{
+			})
+	.fail( function()
+	{
+		_chat.DisplayChatError( 'Failed to remove messages for %s. Please try again.'.replace( /%s/, strPersonaName ) );
+	});
+
+	// close menu
+	this.HideChatMessageMenu();
+	this.ScrollToBottom();
+	this.UpdateScroll();
 }
