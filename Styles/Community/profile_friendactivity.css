@@ -1051,11 +1051,18 @@ img.movie_thumb {
 	height: 80px;
 }
 
-@media screen and ( max-width: 636px ) {
+@media screen and (max-width: 910px) {
 
-	.blotter_gamepurchase_content img {
-		width: 115px;
-		height: 43px;
+	.blotter_gamepurchase_content .blotter_gamepurchase_logo:not(.single_item) img {
+		width: 32%;
+		height: auto;
+	}
+	.blotter_gamepurchase_content a.blotter_gamepurchase_logo.single_item {
+		max-width: 40%;
+	}
+	.blotter_gamepurchase_content .blotter_gamepurchase_logo.single_item img {
+		width: 100%;
+		height: auto;
 	}
 }
 

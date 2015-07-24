@@ -1158,7 +1158,7 @@ CCommentThreadForumTopic = Class.create( CCommentThread, {
 		{
 			elContainer.style.height = '';
 			if ( eRenderReason != CCommentThread.RENDER_GOTOPOST && eRenderReason != CCommentThread.RENDER_DELETEDPOST )
-				ScrollToIfNotInView.defer( elArea, 80 );
+				ScrollToIfNotInView.defer( elArea, 80, 40 );
 		}
 
 		if ( this.m_iCurrentPage == this.m_cMaxPages - 1 )

@@ -571,6 +571,10 @@ div.youraccount_history_home
 	overflow: hidden;
 }
 
+.account .breadcrumbs {
+	padding-top: 24px;
+}
+
 div.youraccount_history_home>div.breadcrumbs_nav
 {
 	float: left;
@@ -623,17 +627,14 @@ div.youraccount_history_home>div.account_wallet {
 .accountTable {
 	width: 100%;
 	border-collapse: collapse;
-	border: 1px solid #4d4b49;
 
 }
 .accountTable > thead > tr {
-	background-color: #2a3f5a;
-	border-left: 1px solid #4d4b49;
-	border-right: 1px solid #4d4b49;
+	background-color: #2c405b;
 }
 
 .accountTable th {
-	color: #82807c;
+	color: #808891;
 	font-size: 11px;
 	text-transform: uppercase;
 	font-weight: normal;
@@ -641,16 +642,13 @@ div.youraccount_history_home>div.account_wallet {
 	padding: 4px 14px;
 }
 
-.accountTable > tbody > tr {
-	border-top: 1px solid #000;
-	border-left: 1px solid #4d4b49;
-	border-right: 1px solid #4d4b49;
+.accountTable > tbody > tr:nth-child(even) {
+	background-color: rgba(42, 63, 90, 0.4);
 }
 
-.accountTable > tbody > tr:last-child {
-	border-bottom: 1px solid #4d4b49;
+.accountTable > tbody > tr:nth-child(odd) {
+	background-color: rgba(0, 0, 0, 0.4);
 }
-
 
 .accountTable td {
 	padding: 5px 14px;
@@ -907,21 +905,27 @@ td.wht_total {
 
 .account_header_line {
 	background-color: #2c405b;
-	padding: 4px 0 4px 12px;
+	padding: 0 0 2px 4px;
 	color: #c7d5e0;
 	font-size: 16px;
+	line-height: 30px;
 }
 
 .account_header_line img {
 	height: 100%;
-	vertical-align: middle;
+	vertical-align: top;
 	padding: 0 6px 0 0;
+}
+
+.account_header_title {
+	padding-top: 4px;
 }
 
 .account_setting_block {
 	background: rgba( 0, 0, 0, 0.2 );
 	min-height: 100px;
-	margin-bottom: 16px;
+	margin-bottom: 24px;
+	padding-bottom: 10px;
 }
 
 .account_setting_sub_block {
@@ -937,6 +941,11 @@ td.wht_total {
 	color: #67c1f5;
 }
 
+.account_manage_link:hover{
+
+	color: #ffffff;
+}
+
 .account_manage_label {
 	line-height: 20px;
 	padding: 0 6px 0 0;
@@ -946,19 +955,25 @@ td.wht_total {
 	color: #ffffff;
 }
 
+.accountData.price a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+
 .account_data_field {
 	color: #c6d4df;
 }
 
 .account_security_block {
-	margin-bottom: 10px;
-	margin-right: 10px;
+	margin: 3px 10px 10px 0;
 }
 
 .account_security_block img {
 	height: 100%;
 	vertical-align: middle;
 	float: left;
+	padding: 0 4px 0 4px;
 }
 
 .account_setting_sub_block .payment_method_box {
@@ -970,7 +985,29 @@ td.wht_total {
 	color: #67c1f5;
 }
 
+.account_setting_sub_block .payment_method_box a:hover {
+	color: #ffffff;
+}
+
 .account_setting_sub_block .cached_payment_method_description {
 	font-size: inherit;
 	color: #d6d7d8;
+}
+
+.spacer {
+	height:100px;
+}
+
+.account .page_header_ctn {
+	background: rgba(0, 0, 0, 0) url("https://emilyk.valvesoftware.com/store/public/images//v6/temp/cluster_bg_40.png") no-repeat scroll center bottom;
+}
+
+.phone_header_description img{
+	padding: 0 4px 0 4px;
+	vertical-align: top;
+	margin-top: 1px;
+}
+
+.account .inner_rule{
+	margin: 20px 0 20px 0;
 }

@@ -381,15 +381,32 @@ select {
 	padding:0;
 }
 .achievementProgressBar {
-	width:500px;
 	height:14px;
 	margin:0;
 	padding:0;
 	background-color:#3a3a3a;
+	max-width: 500px;
+	line-height: 14px;
 }
-.progressFloatRight {
-	float:right;
-	width:220px;
+.achievementProgressBar .progress {
+	background-color: #9dc34c;
+	height: 14px;
+	display: inline-block;
+	text-align: center;
+}
+.progressText {
+	color: #e1e1e1;
+}
+.progressText.inBar {
+	color: #000000;
+}
+.progressText.inBar .compareVal {
+	color: #8f723b;
+}
+.progressText.nextToBar {
+	display: inline-block;
+	margin-left: 8px;
+	vertical-align: text-top;
 }
 .withProgress {
 	top:8px;

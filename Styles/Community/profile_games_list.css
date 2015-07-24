@@ -35,7 +35,7 @@
 	padding-left:17px;
 }
 #mainContents {
-	width:936px;
+	max-width:936px;
 	margin:0;
 	padding:0;
 	text-align:left;
@@ -125,23 +125,32 @@ a.games_list_tab:hover {
 }
 
 .gameListRow {
-	padding-left: 208px;
-	height: 77px;
+	min-height: 69px;
 	margin-bottom: 4px;
 	background: rgba( 0, 0, 0, 0.2 );
-	padding: 5px;
+	padding: 8px;
 }
 
 .gameListRowLogo {
-	position: absolute;
-	left: 5px;
+	float: left;
+	max-width: 30%;
+	width: 184px;
+	margin-right: 8px;
+	position: relative;
 }
+
+.gameListRowLogo img {
+	width: 100%;
+	height: auto;
+}
+
 .gameListRowLogo .gameLogo, .gameLogoHolder_default .gameLogo {
 	background: transparent;
 }
 
 .gameListRowLogo.ds_flagged .ds_flag {
-	left: 4px;
+	top: auto;
+	bottom: 20%;
 }
 .gameListRowLogo.ds_flagged .gameLogo a {
 	display: block;
@@ -150,17 +159,15 @@ a.games_list_tab:hover {
 	height: 69px;
 }
 
-.gameListRowLogo.ds_flagged .gameLogo img {
+.gameListRowLogo.ds_flagged img {
 	opacity: 0.3;
 }
 
 .gameListRowItem {
-	height: 60px;
-	padding:8px;
 	font-size: 11px;
 	color: #939393;
 	position: relative;
-	margin-left: 192px;
+	overflow: hidden;
 }
 
 .gameListItemActive {
@@ -422,6 +429,7 @@ div.hover {
 
 .menuarrow {
 	padding-left:8px;
+	vertical-align: middle;
 }
 
 .popup_block2 {
@@ -472,13 +480,14 @@ a.popup_menu_item2:hover h5 {
 }
 
 .pullup_item {
-	float:left;
-	display: block;
+	display: inline-block;
 	background-color: rgba( 0, 0, 0, 0.4 );
 	padding:3px 8px 3px 0px;
 	border-radius: 2px;
 	margin-right:6px;
+	margin-bottom: 6px;
 	cursor: pointer;
+	line-height: 18px;
 }
 .pullup_item:hover, a.pullup_item:hover {
 	background-color: rgba( 102, 192, 244, 0.4 );
@@ -490,14 +499,13 @@ a.pullup_item {
 }
 
 .menu_ico {
-	float:left;
-	padding:0px 7px 0px 6px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 1px 7px 0 6px;
 }
 
 .bottom_controls {
-	position: absolute;
-	bottom: 8px;
-	left: 8px;
+	padding-top: 4px;
 }
 
 /* recommendations */
@@ -593,9 +601,9 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 
 .wishlistRow {
 	position: relative;
-	padding-left: 248px;
-	height: 85px;
+	min-height: 85px;
 	margin-bottom: 15px;
+	padding: 8px 1%;
 
 	font-size: 11px;
 	color: #939393;
@@ -606,13 +614,15 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 }
 
 .wishlistRow .bottom_controls {
-	left: 0px;
+	left: 0;
 }
 
 .wishlistRankCtn {
-	position: absolute;
-	left: 202px;
-	top: 10px;
+	float: left;
+	min-height: 50px;
+	margin-right: 8px;
+	overflow: hidden;
+	padding-top: 10px;
 }
 
 div.wishlist_rank_ro, input.wishlist_rank {
@@ -637,13 +647,9 @@ input.wishlist_rank {
 
 
 .wishlistRowLogo {
-	position: absolute;
-	left: 4px;
-	top: 4px;
-}
-
-.wishlistRowItem {
-	height: 85px;
+	float: left;
+	width: 189px;
+	max-width: 40%;
 }
 
 .wishlistRow h4 {
@@ -658,14 +664,37 @@ input.wishlist_rank {
 .wishlist_rank.userEdited {
 }
 
+.wishlistRowItem {
+	overflow: hidden;
+	position: relative;
+}
 
 
 .gameListPriceData {
-	position: absolute;
+	float: right;
 	text-align: right;
-	
-	right: 16px;
-	top: 19px;
+
+	padding-right: 4%;
+	padding-top: 19px;
+}
+
+.storepage_btn_alt {
+	display: none;
+}
+
+@media screen and (max-width: 600px )
+{
+	html.responsive .storepage_btn_ctn {
+		display: none;
+	}
+
+	html.responsive .storepage_btn_alt {
+		display: inline-block;
+	}
+
+	html.responsive .wishlistRankCtn {
+		min-height: 0;
+	}
 }
 
 a.btn_visit_store
@@ -740,6 +769,12 @@ a.btn_visit_store:hover
 
 body.migrated_profile_page #wishlist_comic {
 	top: -121px;
+}
+
+@media screen and ( max-width: 910px ) {
+	html.responsive #wishlist_comic {
+		display: none;
+	}
 }
 
 .wishlist_empty_notice {
@@ -1040,11 +1075,10 @@ body.migrated_profile_page #wishlist_comic {
 
 .changingGameListRow {
     padding-left: 160px;
-    height: 62px;
+    min-height: 62px;
 }
 
 .changingGameListRowItem {
-    height: 48px;
     border: 1px solid #454545;
     padding: 4px;
     font-size: 11px;
@@ -1079,4 +1113,25 @@ body.migrated_profile_page #wishlist_comic {
 
 .followed_game_actions {
 	padding-top: 18px;
+}
+
+@media screen and ( max-width: 500px ) {
+	html.responsive .bottom_controls {
+		clear: left;
+		padding-top: 8px;
+	}
+
+	html.responsive .gameListRowItem, html.responsive .wishlistRowItem {
+		overflow: visible;
+	}
+
+	html.responsive .gameListRow {
+		padding: 8px 1%;
+	}
+}
+
+@media screen and ( max-width: 730px ) {
+	html.responsive .recentAchievements {
+		display: none;
+	}
 }

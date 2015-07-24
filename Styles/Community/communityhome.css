@@ -10,22 +10,11 @@ body
 .community_home_header
 {
 	position: relative;
-	width: 948px;
+	max-width: 948px;
 	margin: 0px auto;
-	padding-top: 20px;
+	padding: 20px 1% 0 1%;
 	text-align: left;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
-}
-
-.community_home_header_bg
-{
-	position: absolute;
-	z-index: -1;
-	top: 205px;
-	height: 300px;
-	width: 948px;
-	/*background-image:url('https://steamcommunity-a.akamaihd.net/public/images/home/bg_home.png');
-	background-repeat: no-repeat; */
 }
 
 .community_home_title
@@ -35,7 +24,6 @@ body
 	color: #FFFFFF;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	text-align: left;
-    padding-top: 20px;
 }
 
 .community_home_subtitle
@@ -88,25 +76,16 @@ body
 .community_home_tabs
 {
 	position: relative;
-	width: 948px;
+	max-width: 1280px;
+	padding: 0 1%;
 	margin: 0px auto;
 	padding-top: 5px;
 	padding-bottom: 10px;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 }
 
-.community_home_tabs_shadow
-{
-	position: absolute;
-	height: 18px;
-	width: 948px;
-	/*background-image:url('https://steamcommunity-a.akamaihd.net/public/images/home/divider_shadow.png'); */
-	background-repeat: no-repeat;
-}
-
-.apphub_sectionTabs
-{
-	height: 30px;
+.appHubShortcutText {
+	overflow: hidden;
 }
 
 .community_home_header .appHubShortcut, .community_home_header .appHubShortcut a, .community_home_header .appHubShortcut a:visited
@@ -123,7 +102,6 @@ body
 .appHubShortcut_Title
 {
 	line-height: 15px;
-	max-width: 260px;
     font-size: 13px;
 }
 
@@ -142,12 +120,20 @@ body
 .community_home_app_shortcuts
 {
 	margin-top: 15px;
-	padding: 10px;
-	width: 608px;
-	height: 200px;
+	width: 66%;
 	background: rgba(0, 0, 0, 0.4);
 	border: 1px solid transparent;
 	float: left;
+}
+
+.community_home_shortcut_content {
+	padding: 10px;
+	min-height: 200px;
+}
+
+.community_home_app_shortcuts .community_home_shortcut_content {
+	padding-bottom: 0;
+	min-height: 210px;
 }
 
 .community_home_login
@@ -186,29 +172,35 @@ body
 .community_home_app_shortcuts_list
 {
 	float: left;
-	width: 294px;
-	margin-right: 10px;
+	width: 50%;
 }
 
 .community_home_search_box
 {
 	margin-top: 15px;
-	padding: 10px;
-	width: 286px;
-	height: 200px;
-	margin-left: 10px;
+	width: 33%;
+	max-width: 306px;
     background: rgba(0, 0, 0, 0.4);
 	border: 1px solid transparent;
-	float: left;
+	float: right;
 }
 
-.community_home_search_box .divider
+html.responsive .responsive_page_menu .community_home_app_shortcuts_list {
+	float: none;
+	width: auto;
+}
+
+.community_home_search_divider
 {
 	width: 100%;
 	height: 1px;
 	border-top: 1px solid #000000;
 	background-color: #333333;
-	margin: 35px 0px;
+	margin: 35px 0;
+}
+
+html.responsive .responsive_page_menu .community_home_search_divider {
+	margin: 15px 0;
 }
 
 .community_home_search_title
@@ -242,7 +234,7 @@ input.community_home_search_app_input
 	box-shadow: none;
 	top: 6px;
 	left: 6px;
-	width: 250px;
+	width: 90%;
 	font-style: italic;
 	background-color: #2a3f5a;
 }
@@ -283,7 +275,7 @@ input.community_home_search_players_input
 	box-shadow: none;
 	top: 6px;
 	left: 6px;
-	width: 250px;
+	width: 90%;
 	background-color: #2a3f5a;
 	font-style: italic;
 }
@@ -303,11 +295,10 @@ input.community_home_search_players_input
 
 .community_home_sort_options
 {
-	width: 948px;
-    height: 25px;
-	margin: 0px auto;
+	max-width: 1280px;
+	padding: 0 1% 20px 1%;
+	margin: 0 auto;
 	text-align: left;
-	padding-bottom: 20px;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 }
 

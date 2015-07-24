@@ -5,112 +5,53 @@
 .apphub_HomeHeader
 {
 	margin: 0 auto 8px auto;
-	width: 948px;
+	max-width: 948px;
 }
 .apphub_HomeHeaderContent
 {
-	width: 948px;
-	padding-top: 10px;
+	max-width: 948px;
+	padding: 10px 0 0 0;
 }
 body.apphub_blue
 {
 	background: #1b2838;
 	color: #636363;
 }
-
-.apphub_HomeHeaderContent
-{
-	width: 948px;
-}
-
 .apphub_Cards
 {
 	position: relative;
 }
 
-.apphub_GetMoreContent
-{
-	width: 948px;
-	height: 300px;
-	line-height: 300px;
-	margin: 0px auto;
-	border:  1px solid transparent;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	font-size: 20px;
-}
-
-.apphub_GetMoreContentWait
-{
-	position: relative;
-	width: 948px;
-	height: 300px;
-	line-height: 300px;
-	margin: 0px auto;
-	border:  1px solid transparent;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	font-size: 20px;
-	text-align: center;
-}
-
-.apphub_GetMoreContentWait img
-{
-	vertical-align: middle;
-	padding-right: 10px;
-}
-
-.apphub_ProgressBarBG
-{
-	position: absolute;
-	top: 200px;
-	left: 179px;
-	width: 600px;
-	height: 25px;
-	background-color: #000000;
-	border: 2px solid #cccccc;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-}
-
-.apphub_ProgressBar
-{
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 0px;
-	height: 25px;
-	background-color: #cccccc;
-}
-
 .apphub_NoMoreContent
 {
-	min-width: 948px;
+	max-width: 1100px;
 	height: 229px;
 	color: #c4c4c4;
 	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_hubbottom.png' ) no-repeat center top;
+	text-align: center;
 }
 
 .apphub_NoMoreContentText1
 {
-	width: 410px;
+	max-width: 410px;
 	font-size: 18px;
 	padding-top: 100px;
+	margin: 0 auto;
 }
 
 .apphub_NoMoreContentText2
 {
-	width: 410px;
+	max-width: 410px;
 	font-size: 23px;
+	margin: 0 auto;
 }
 
 .apphub_NoMoreArtwork
 {
-	width: 550px;
+	max-width: 550px;
 	font-size: 14px;
 	padding-top: 10px;
+	margin: 0 auto;
 }
 
 
@@ -200,11 +141,11 @@ body.apphub_blue
 .apphub_SectionFilter
 {
 	position: relative;
-	margin: 0px auto;
+	margin: 0 auto;
 	background-color: #2a2d33;
 	background-color: rgba( 0, 0, 0, 0.4 );
-	height: 46px;
-	width: 946px;
+	min-height: 46px;
+	max-width: 946px;
 }
 
 .apphub_SectionFilterLabel
@@ -238,13 +179,24 @@ body.apphub_blue
 	color: #fff;
 }
 
+@media screen and (max-width: 750px)
+{
+	html.responsive .apphub_SectionFilter .learnMore {
+		display: none;
+	}
+
+	html.responsive .apphub_SectionFilterLabel.language {
+		clear: left;
+		padding-left: 12px;
+	}
+}
+
 .apphub_AllContentText
 {
 	position: relative;
 	color: #d1d1d1;
 	text-align: center;
 	line-height: 32px;
-	height: 32px;
 	font-size: 12px;
 	padding-top: 10px;
 }
@@ -253,14 +205,7 @@ body.apphub_blue
 {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/hub_divider.png?v=1' );
 	height: 4px;
-	width: 948px;
-}
-
-.apphub_HubDividerShadow
-{
-	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/hub_divider_shadow.png' );*/
-	height: 20px;
-	width: 948px;
+	max-width: 948px;
 }
 
 .apphub_MostPopularLink
@@ -278,27 +223,6 @@ body.apphub_blue
 	padding-right: 2px;
 }
 
-.apphub_MostPopularExplanation
-{
-	position: absolute;
-	display: inline;
-	padding: 10px;
-	border: 1px solid #82807C;
-	background-color: #3b3938;
-	color: #b0aeac;
-	text-align: left;
-	width: 300px;
-	z-index: 1000;
-	visibility: hidden;
-	top: 50px;
-	line-height: 20px;
-}
-
-.apphub_MostPopularLink:hover .apphub_MostPopularExplanation
-{
-	visibility: visible;
-}
-
 .apphub_MostPopularExplanationTitle
 {
 	font-size: 16px;
@@ -313,8 +237,12 @@ body.apphub_blue
 .apphub_UploadImageLink
 {
 	float: right;
-	margin-top: 5px;
-	margin-right: 10px;
+	margin: 5px 10px 5px 0;
+}
+
+.responsive_page_menu .apphub_UploadImageLink
+{
+	float: none;
 }
 
 /* filter */
@@ -494,7 +422,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 {
 	float: left;
 	padding-left: 8px;
-	margin-top: 9px;
+	margin: 9px 0;
 }
 
 .appHubSearchTextInput
@@ -529,19 +457,19 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_gameinfo.png' );*/
     border-top: 1px solid #272f38;
     background-color: rgba( 0, 0, 0, 0.8 );
-	width: 948px;
-	height: 212px;
+	max-width: 904px;
+	min-height: 182px;
 	text-align: left;
+	padding: 15px 22px;
 }
 
 .apphub_StoreAppLogo
 {
 	width: 374px;
-	height: 175px;
+	height: auto;
 	float: left;
-	padding-top: 15px;
-	padding-left: 22px;
-	margin-right: 20px;
+	margin-right: 2%;
+	max-width: 45%;
 }
 
 .apphub_StoreAppText
@@ -549,8 +477,6 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	color: #8c8b8a;
     font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 	font-size: 14px;
-	padding-top: 22px;
-	padding-right: 25px;
 	text-align: left;
 }
 
@@ -781,4 +707,18 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	width: 100%;
 	position: absolute;
 	bottom: 0px;
+}
+
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .leftcol,
+	html.responsive .rightcol {
+		width: auto;
+		float: none;
+	}
+
+	html.responsive .leftcol {
+		max-width: 640px;
+	}
 }

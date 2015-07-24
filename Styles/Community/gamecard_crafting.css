@@ -26,7 +26,7 @@
 		width: 360px;
 		height: 414px;
 		/*transform: rotate(45deg);*/
-		left: 240px;
+		left: -31px;
 		top: -160px;
 		opacity: 0;
 	}
@@ -34,7 +34,7 @@
 		width: 180px;
 		height: 207px;
 		/*transform: rotate(0deg);*/
-		left: 119px;
+		left: -121px;
 		top: 0;
 		opacity: 1;
 	}
@@ -50,14 +50,14 @@
 	from {
 		width: 360px;
 		height: 414px;
-		left: 240px;
+		left: -31px;
 		top: -160px;
 		opacity: 0;
 	}
 	16% {
 		width: 180px;
 		height: 207px;
-		left: 119px;
+		left: -121px;
 		top: 0;
 		opacity: 1;
 	}
@@ -111,15 +111,14 @@
 	width: 180px;
 	height: 207px;
 
-	left: 119px;
+	left: -121px;
 	top: 0;
 
 	opacity: 0;
 }
 
 .newmodal.badge_craft_modal {
-	max-width: none;
-	width: 900px;
+	max-width: 900px;
 }
 
 .newmodal.badge_craft_modal .newmodal_content {
@@ -134,9 +133,12 @@
 	text-align: center;
 	position: relative;
 }
+.badge_craft_loop_stretch {
+	width: 418px;
+}
 .badge_craft_loop {
 	position: relative;
-	width: 418px;
+	width: 0;
 	margin: 0 auto;
 }
 
@@ -165,7 +167,7 @@
 }
 
 #badge_completed {
-	width: 414px;
+	max-width: 414px;
 	margin: 0 auto 30px auto;
 }
 
@@ -173,10 +175,16 @@
 	box-shadow: 9px 9px 16px #000000;
 	border-radius: 3px;
 	overflow: hidden;
+	max-width: 0;
+	transition: max-width 0.5s;
+}
+
+.completed_badge_animation_ctn.show {
+	max-width: 414px;
 }
 
 .completed_badge_ctn {
-	width: 388px;
+	max-width: 388px;
 	padding: 13px;
 	border-top: 1px solid #7d7c7a;
 	border-radius: 3px;
@@ -263,7 +271,7 @@
 	/*border: 1px solid #5e8aca; */
 	border-radius: 3px;
 	padding: 1px;
-	width: 343px;
+	max-width: 343px;
 	margin: 0 auto 14px auto;
 }
 
@@ -303,7 +311,7 @@
 }
 
 .badge_rewards_actions {
-	width: 264px;
+	max-width: 264px;
 	margin: 0 auto 32px auto;
 }
 

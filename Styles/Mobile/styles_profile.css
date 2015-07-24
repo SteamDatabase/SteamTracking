@@ -1398,10 +1398,10 @@ a#postLink, a#blotterLink {
 
 .singleInventoryItemView {
 	position: fixed;
-	left: 0px;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
 	z-index: 10;
 	background-color: rgba( 0, 0, 0, .80 );
 
@@ -1409,11 +1409,15 @@ a#postLink, a#blotterLink {
 	-webkit-user-select: none;
 }
 
+html.responsive .singleInventoryItemView {
+	top: 62px;
+}
+
 .singleInventoryItemViewContent {
 	background-image: -webkit-radial-gradient(50% 30%, 50% 50%, #404040 0%, #202020 100%);
 	background-image: radial-gradient(ellipse 50% 50% at 50% 30%, #404040 0%, #202020 100%);
 
-	position: fixed;
+	position: absolute;
 	left: 15px;
 	top: 15px;
 	right: 15px;
@@ -1428,7 +1432,7 @@ a#postLink, a#blotterLink {
 
 .singleInventoryItemDismiss {
 	background-image: url( https://steamcommunity-a.akamaihd.net/public/shared/images/mobile/close_icon.png );
-	position: fixed;
+	position: absolute;
 	width: 36px;
 	height: 36px;
 	background-size: 36px 36px;

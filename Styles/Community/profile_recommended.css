@@ -247,3 +247,27 @@ a.trigger, a.activetrigger {
 .dropcontainer{
 	position:relative;
 }
+
+
+.review_page_content {
+	max-width: 918px;
+	padding: 0 16px;
+	position: relative;
+}
+
+.review_page_content #rightContents {
+	padding: 0;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive #leftContents {
+		width: auto;
+		float: none;
+	}
+
+	html.responsive #rightContents {
+		float: none;
+		width: auto;
+	}
+}

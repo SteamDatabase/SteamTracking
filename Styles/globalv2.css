@@ -1116,3 +1116,12 @@ img.emoticon {
 		margin: 0 1%;
 	}
 }
+
+/* styles that hide things on non-migrated pages */
+.responsive_menu_only {
+	display: none;
+}
+
+.nonresponsive_hidden {
+	display: none;
+}

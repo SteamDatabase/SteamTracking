@@ -92,7 +92,7 @@
 #tabs_baseline {
 	clear:left;
 	background-color: #417B9C;
-	width:958px;
+	max-width: 958px;
 	height: 5px;
 
 }
@@ -104,8 +104,8 @@
 }
 
 #tabs_basebg {
-	padding: 0px;
-	width:958px;
+	padding: 0;
+	max-width:958px;
 	min-height: 441px;
 }
 

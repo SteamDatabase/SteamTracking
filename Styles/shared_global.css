@@ -1445,14 +1445,18 @@ img.dynamiclink_preview {
 }
 
 .adult_content_age_gate {
-	padding-top: 88px;
 	text-align: center;
-	width: 460px;
+	max-width: 460px;
 	margin: 0 auto;
 
 	color: #ffffff;
 	font-size: 14px;
 	line-height: 20px;
+	padding: 88px 5% 0 5%;
+}
+
+.adult_content_age_gate img {
+	max-width: 100%;
 }
 
 .adult_content_age_gate p {

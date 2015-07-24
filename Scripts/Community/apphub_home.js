@@ -171,8 +171,7 @@ function InfiniteScrollingCheckForMoreContent()
 
 function SetLoadMoreContentProgressBar( progress, numSegments )
 {
-	var maxWidth = $('LoadingProgressBarContainer').getWidth();
-	$('LoadingProgressBar').style.width = ( ( progress / numSegments ) * maxWidth ) + 'px';
+	$('LoadingProgressBar').style.width = ( ( progress / numSegments ) * 100 ) + '%';
 }
 
 function WaitForContentToLoad( page )
@@ -220,15 +219,21 @@ function WaitForContentToLoad( page )
 	}
 }
 
+function ConstructTemplates()
+{
+	$J(document.body).css('overflowY','scroll');
+	var pageWidth = $J('#AppHubContent').width();
+	$J(document.body).css('overflowY','');
+	var cardMargins = 1 * 2 + 2 * 5 + 1;
+	return ConstructDefaultRowTemplates( pageWidth, cardMargins );
+}
+
 function ShowContent( page )
 {
-	var pageWidth = $('AppHubContent').getStyle('width');
-	pageWidth = parseInt( pageWidth.substring( 0, pageWidth.length - 2 ) );
-	var cardMargins = 1 * 2 + 2 * 5;
 	var ogCards = $$( '#page' + page + ' div.apphub_Card' );
 
-	var templates = ConstructDefaultRowTemplates( pageWidth, cardMargins );
-	ShowAppHubCards( 'page' + page, ogCards, templates.rowTemplates, templates.fallbackTemplates, page, pageWidth, cardMargins, Number.MAX_VALUE );
+	var templates = ConstructTemplates();
+	ShowAppHubCards( 'page' + page, ogCards, templates.rowTemplates, templates.fallbackTemplates, page, $J('#AppHubContent').width(), Number.MAX_VALUE );
 
 	if ( hasAdminPrivileges )
 	{
@@ -391,3 +396,21 @@ function PublishedFileBan( id, appid )
 		options
 	);
 }
+
+$J( function() {
+	var nLastWidth = $J('#AppHubCards' ).width();
+	$J(window ).on('resize.appHub', function() {
+		var nNewWidth = $J('#AppHubCards' ).width();
+		if ( nNewWidth != nLastWidth )
+		{
+			ConstructTemplates();
+			$J('.apphub_CardRow' ).each( function() {
+				this.cardData.template = g_rgTemplateData[ this.cardData.template.name ];
+				// the cards copy data from the template
+				SizeCards( this.cardData, nNewWidth );
+			});
+
+			nLastWidth = nNewWidth;
+		}
+	});
+});

@@ -1534,11 +1534,11 @@ html.responsive .localmenu_content .profile_badges_badge img {
 	position: absolute;
 	left: 120px;
 	right: 30px;
-	top: 40px;
+	bottom: 31px;
+	max-height: 65px;
 	color: white;
 	font-size: 14px;
 
-	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }

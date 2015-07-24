@@ -297,21 +297,20 @@ function relayoutCategoryFilters()
 function updateLocalInventory( responseData )
 {
 	var merged = mergeInventoryWithDescriptions( responseData.rgInventory, responseData.rgCurrency, responseData.rgDescriptions );
-	g_rgContextInventory = { };
+	g_rgContextInventory = [];
 	g_rgContextCategories = { };
-	var itemBaseIndex = 0;
 
 	for ( var itemid in merged.currency )
 	{
 		var rgItem = merged.currency[itemid];
-		g_rgContextInventory[itemBaseIndex ++] = rgItem;
+		g_rgContextInventory.push( rgItem );
 		updateItemCategories( rgItem );
 	}
 
 	for ( var itemid in merged.inventory )
 	{
 		var rgItem = merged.inventory[itemid];
-		g_rgContextInventory[itemBaseIndex + rgItem.pos] = rgItem;
+		g_rgContextInventory.push( rgItem );
 		updateItemCategories( rgItem );
 	}
 
@@ -349,7 +348,7 @@ function relayoutInventory()
 	var itemCount = 0;
 	g_nTotalItemCount = 0;
 
-	for ( itemIndex in g_rgContextInventory )
+	for ( var itemIndex = 0 ; itemIndex <  g_rgContextInventory.length; itemIndex++ )
 	{
 		if ( bInventoryItemMatchesFilter( g_rgContextInventory[itemIndex] ) )
 			g_nTotalItemCount ++;
@@ -363,7 +362,7 @@ function relayoutInventory()
 
 	var currentItemColumnContainer;
 
-	for ( itemIndex in g_rgContextInventory )
+	for ( var itemIndex = 0 ; itemIndex <  g_rgContextInventory.length; itemIndex++ )
 	{
 		var item = g_rgContextInventory[itemIndex];
 
@@ -544,7 +543,7 @@ function mergeInventoryWithDescriptions( rgInventory, rgCurrency, rgDescriptions
 	}
 	else
 	{
-		rgMergedInventory = rgInventory;
+		rgMergedInventory = {};
 	}
 
 	if ( rgCurrency && !( rgCurrency instanceof Array ) )
@@ -567,7 +566,7 @@ function mergeInventoryWithDescriptions( rgInventory, rgCurrency, rgDescriptions
 	}
 	else
 	{
-		rgMergedCurrency = rgCurrency;
+		rgMergedCurrency = {};
 	}
 
 	return { inventory: rgMergedInventory, currency: rgMergedCurrency };

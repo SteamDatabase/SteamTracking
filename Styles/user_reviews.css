@@ -63,7 +63,7 @@ select {
 
 .gameLogoHolder_default img {
 	width: 292px;
-	height: 136px;
+	height: auto;
 	padding: 1px;
 }
 
@@ -71,10 +71,6 @@ select {
 	margin-bottom: 16px;
 	background-color: rgba(0, 0, 0, 0.4);
 	padding-bottom: 6px;
-}
-
-.review_area {
-	width: 600px;
 }
 
 #leftContents {
@@ -305,4 +301,34 @@ select {
 .review_report_data.description
 {
 	width: 300px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .gameLogoHolder_default img {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+.responsive_review_gameinfo {
+	margin-bottom: 16px;
+}
+
+.responsive_review_gameinfo .gameLogoHolder_default {
+	overflow: hidden;
+	max-width: 184px;
+}
+
+.responsive_review_gameoptions {
+	overflow: hidden;
+	float: right;
+	padding-left: 8px;
+}
+
+.responsive_review_gameoptions .general_btn {
+	padding: 0;
+	line-height: 27px;
+	margin: 0;
+	border-radius: none;
 }

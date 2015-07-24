@@ -104,12 +104,6 @@ body.nodatauri .grouppage_membertiles_overlay {
 	font-size: 13px;
 }
 
-html.responsive .responsive_local_menu .grouppage_join_area {
-	position: static;
-	top: 0;
-	right: 0;
-}
-
 .grouppage_join_area .btn_medium {
 	margin-bottom: 1px;
 }
@@ -1601,6 +1595,12 @@ a.headlineLink:hover {
 
 	html.responsive .rightcol {
 		padding: 16px 8px 0 8px;
+	}
+
+	html.responsive .responsive_local_menu .grouppage_join_area {
+		position: static;
+		top: 0;
+		right: 0;
 	}
 
 	html.responsive .responsive_group_stats {

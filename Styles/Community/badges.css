@@ -148,7 +148,7 @@ a.badge_row:hover .badge_view_details {
 .gamecard_details .badge_info {
 	border: 1px solid #2d2b2b;
 	border-radius: 3px;
-	width: 320px;
+	max-width: 320px;
 
 	padding-left: 12px;
 }
@@ -488,7 +488,7 @@ a.badge_row:hover .badge_view_details {
 }
 
 .gamecard_badge_craftbtn_ctn.wide {
-	width: 444px;
+	max-width: 444px;
 }
 
 .gamecard_badge_craftbtn_ctn .badge_info {
@@ -501,16 +501,33 @@ a.badge_row:hover .badge_view_details {
 	width: 166px;
 }
 
+@media screen and (max-width: 890px )
+{
+	html.responsive .gamecard_badge_progress {
+		position: static;
+		clear: both;
+		padding-top: 8px;
+	}
+
+	html.responsive .gamecard_badge_craftbtn_ctn .badge_craft_button {
+		width: 40%;
+		max-width: 166px;
+	}
+
+	html.responsive .gamecard_badge_craftbtn_ctn .badge_info {
+		margin-right: 2%;
+	}
+
+	html.responsive .gamecard_badge_progress .badge_info {
+		width: 50%;
+		max-width: 250px;
+	}
+}
+
 .badge_card_set_section {
 	padding: 2px;
 	border-top: solid 1px #33485d;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#282c2f), color-stop(95%,#1d1e20));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282c2f', endColorstr='#1d1e20',GradientType=0 );background: -moz-linear-gradient( top, #282c2f 5%, #1d1e20 95%);background: -webkit-linear-gradient( top, #282c2f 5%, #1d1e20 95%);background: -o-linear-gradient( top, #282c2f 5%, #1d1e20 95%);background: -ms-linear-gradient( top, #282c2f 5%, #1d1e20 95%);background: linear-gradient( to bottom, #282c2f 5%, #1d1e20 95%);}
-
-.badge_card_set_card {
-	float: left;
-	margin-left: 9px;
-	margin-bottom: 18px;
-}
 
 .game_card_unowned_border {
 	position: absolute;
@@ -543,10 +560,13 @@ a.badge_row:hover .badge_view_details {
 .badge_card_to_collect {
 	min-height: 130px;
 	padding: 6px;
+	position: relative;
 }
 
 .badge_card_set_unowned.small {
-	float: left;
+	position: absolute;
+	left: 6px;
+	top: 6px;
 	width: 98px;
 	height: 110px;
 	margin-right: 20px;
@@ -565,21 +585,46 @@ a.badge_row:hover .badge_view_details {
 }
 
 .badge_card_to_collect_info {
+	padding-left: 114px;
+}
+
+.badge_card_collect_text {
+	float: left;
+	padding-bottom: 10px;
+	max-width: 30%;
 }
 
 .badge_card_to_collect_links {
 	float: right;
+	max-width: 67%;
+}
+
+.badge_card_to_collect_links > a {
+	margin-bottom: 8px;
+	margin-right: 8px;
+}
+
+@media screen and (max-width: 640px)
+{
+	html.responsive .badge_card_collect_text {
+		float: none;
+		max-width: none;
+	}
+
+	html.responsive .badge_card_to_collect_links {
+		float: none;
+		max-width: none;
+	}
 }
 
 .badge_friendswithgamecards_section {
 	padding-top: 8px;
-	margin-left: 120px;
 }
 
 .badge_friendwithgamecard {
 	float: left;
-	width: 190px;
-	margin-right: 10px;
+	width: 23%;
+	margin-right: 1%;
 	margin-bottom: 8px;
 
 	white-space: nowrap;
@@ -587,8 +632,40 @@ a.badge_row:hover .badge_view_details {
 	text-overflow: ellipsis;
 }
 
+@media screen and ( max-width: 700px )
+{
+	html.responsive .badge_friendwithgamecard {
+		width: 31%;
+	}
+}
+
+@media screen and ( max-width: 600px )
+{
+	html.responsive .badge_card_set_unowned.small {
+		position: static;
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	html.responsive .badge_card_to_collect_info {
+		padding-left: 0;
+	}
+}
+
+@media screen and ( max-width: 450px )
+{
+	html.responsive .badge_friendwithgamecard {
+		width: 48%;
+	}
+}
+
 .badge_friendwithgamecard .playerAvatar {
 	margin-right: 10px
+}
+
+.badge_friendwithgamecard .persona {
+	line-height: 16px;
 }
 
 .badge_friendwithgamecard_msg {
@@ -621,8 +698,19 @@ a.badge_row:hover .badge_view_details {
 	background-position: center;
 }
 
+
+.badge_card_set_card {
+	float: left;
+	margin-left: 9px;
+	margin-bottom: 18px;
+
+	width: 224px;
+}
+
 .game_card_ctn {
 	position: relative;
+	width: auto;
+	height: 261px;
 }
 
 
@@ -632,8 +720,38 @@ a.badge_row:hover .badge_view_details {
 }
 
 img.gamecard {
-	width: 224px;
-	height: 261px;
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .game_card_ctn {
+		height: auto;
+	}
+
+	html.responsive .badge_card_set_card {
+		margin-left: 1%;
+		margin-bottom: 2%;
+		width: 23%;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 660px)
+{
+	html.responsive .badge_card_set_card {
+		margin-left: 1%;
+		width: 31%;
+	}
+}
+
+@media screen and (max-width: 490px)
+{
+	html.responsive .badge_card_set_card {
+		margin-left: 1%;
+		width: 48%;
+	}
 }
 
 .gamecards_inventorylink {
@@ -700,7 +818,11 @@ img.gamecard {
 .badge_details_set_favorite {
 	text-align: right;
 	padding-right: 4px;
-	margin-bottom: 12px;
+	margin-bottom: 4px;
+}
+
+.badge_details_set_favorite .btn_small_thin {
+	margin-bottom: 8px;
 }
 
 
@@ -1075,7 +1197,12 @@ html.responsive.mobile .badge_title_playgame {
 		text-align: center;
 	}
 
-	html.responsive .how_to_get_card_drops_ctn {
+	/* hide playtime and bump the "how do I earn drops?" link below */
+	html.responsive .badge_title_stats_playtime {
 		display: none;
+	}
+
+	html.responsive .how_to_get_card_drops_ctn {
+		display: block;
 	}
 }

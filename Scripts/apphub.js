@@ -48,12 +48,16 @@ function GetCardCategoryString( category )
 	return categoryString;
 }
 
+var g_rgTemplateData = {};
 function ConstructDefaultRowTemplates( pageWidth, cardMargins )
 {
 	var fullWidth = pageWidth - cardMargins;
 	var halfWidth = ( pageWidth / 2 ) - cardMargins;
 	var thirdWidth = ( pageWidth / 3 ) - cardMargins;
 	var twoThirdsWidth = ( pageWidth - pageWidth / 3 ) - cardMargins;
+
+	var nTallHeight = Math.max( 400, Math.floor( 628 / 960 * pageWidth ) );
+	var nTallHalfHeight = Math.floor( ( nTallHeight - 108 ) / 2 );
 
 	var largeSmall = {
 		name: 'largeSmall',
@@ -95,13 +99,13 @@ function ConstructDefaultRowTemplates( pageWidth, cardMargins )
 		name: 'tallLeft',
 		fixedHeight: true,
 		category: TALL,
-		cardTemplates: [ { width: twoThirdsWidth, height: 628, category: TALL }, { width: thirdWidth, height: 260, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }, { width: thirdWidth, height: 261, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }  ]
+		cardTemplates: [ { width: twoThirdsWidth, height: nTallHeight, category: TALL }, { width: thirdWidth, height: nTallHalfHeight, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }, { width: thirdWidth, height: nTallHalfHeight + 1, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }  ]
 	};
 	var tallRight = {
 		name: 'tallRight',
 		fixedHeight: true,
 		category: TALL,
-		cardTemplates: [ { width: twoThirdsWidth, height: 628, category: TALL, float: 'right' }, { width: thirdWidth, height: 260, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }, { width: thirdWidth, height: 261, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }  ]
+		cardTemplates: [ { width: twoThirdsWidth, height: nTallHeight, category: TALL, float: 'right' }, { width: thirdWidth, height: nTallHalfHeight, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }, { width: thirdWidth, height: nTallHalfHeight + 1, category: SMALL | MEDIUM_RESIZABLE | LARGE_RESIZABLE | TALL_RESIZABLE }  ]
 	};
 	var tallLarge = {
 		name: 'tallLarge',
@@ -114,7 +118,7 @@ function ConstructDefaultRowTemplates( pageWidth, cardMargins )
 		fixedHeight: true,
 		category: WIDE,
 		cardTemplates: [ { width: fullWidth, category: WIDE }  ]
-	}
+	};
 	// fallbacks
 	var fallback = {
 		name: 'fallback',
@@ -155,10 +159,16 @@ function ConstructDefaultRowTemplates( pageWidth, cardMargins )
 
 	var rowTemplates = [ tallLeft, superWide, twoSmall, largeSmall, tallRight, threeSmall, twoLarge, smallLarge ];
 	var fallbackTemplates = [ twoTall, tallLarge, threeLarge, smallFallback, mediumFallback, largeFallback, tallFallback, fallback ];
+
+	for ( var i = 0; i < rowTemplates.length; i++ )
+		g_rgTemplateData[ rowTemplates[i].name ] = rowTemplates[i];
+	for ( var i = 0; i < fallbackTemplates.length; i++ )
+		g_rgTemplateData[ fallbackTemplates[i].name ] = fallbackTemplates[i];
+
 	return { rowTemplates : rowTemplates, fallbackTemplates : fallbackTemplates };
 }
 
-function ShowAppHubCards( parentID, ogCards, rowTemplates, fallbackRowTemplates, page, pageWidth, cardMargins, maxRows )
+function ShowAppHubCards( parentID, ogCards, rowTemplates, fallbackRowTemplates, page, pageWidth, maxRows )
 {
 	// categorize cards
 	var cards = [];
@@ -248,6 +258,7 @@ function ShowAppHubCards( parentID, ogCards, rowTemplates, fallbackRowTemplates,
 		currentRow++;
 		if ( currentRow <= maxRows )
 		{
+			SizeCards( row, pageWidth );
 			AddRow( parentID, row, page, currentRow );
 		}
 	}
@@ -405,9 +416,6 @@ function FillRow( template, cards, row )
 			}
 			return false;
 		}
-		card.definedWidth = cardTemplate.width;
-		card.definedHeight = typeof cardTemplate.height != "undefined" ? cardTemplate.height : 0;
-		card.style.float = typeof cardTemplate.float != "undefined" ? cardTemplate.float : "left";
 		row.push( card );
 	}
 	row.template = template;
@@ -419,11 +427,10 @@ function AddRow( parentID, row, page, currentRow )
 	var fadeSec = 0.2;
 	var fadeSecInc = 0.5;
 	var maxFadeSec = 2.0;
-	SizeCards ( row );
 	var rowDiv = new Element( 'div', { 'class' : 'apphub_CardRow', 'id': "page_" + page + "_row_" + currentRow + "_template_" + ( typeof row.template != "undefined" ? row.template.name : "undefined" ) } );
 	var rowDivClear = new Element( 'div', { 'style' : 'clear: left' } );
+	rowDiv.appendChild( rowDivClear );
 	$( parentID ).appendChild( rowDiv );
-	$( parentID ).appendChild( rowDivClear );
 	for ( var i = 0; i < row.length; ++i )
 	{
 		var card = row[i];
@@ -432,9 +439,10 @@ function AddRow( parentID, row, page, currentRow )
 		ShowWithFade( card, fadeSec );
 		fadeSec = Math.min( fadeSecInc + fadeSecInc, maxFadeSec );
 	}
+	rowDiv.cardData = row;
 }
 
-function SizeCards( cards, imageMargins )
+function SizeCards( cards, nMaxWidth )
 {
 	var template = cards.template;
 	// 5px of padding on each side
@@ -442,21 +450,43 @@ function SizeCards( cards, imageMargins )
 	var minContentHeight = 250;
 	var minHeight = 0;
 
+	var bUseSmallMode = nMaxWidth && nMaxWidth < 600;
+	var nMaxCardHeightThisRow = 0;
+	if ( bUseSmallMode )
+	{
+		for ( var i = 0; i < template.cardTemplates.length; i++ )
+			if ( template.cardTemplates[i].height )
+				nMaxCardHeightThisRow = Math.max( nMaxCardHeightThisRow, template.cardTemplates[i].height );
+	}
+
 	for ( var i = 0; i < cards.length; ++i )
 	{
 		var card = cards[i];
-		var width = card.definedWidth;
-		var height = card.definedHeight;
+		var cardTemplate = template.cardTemplates[i];
+		var width = cardTemplate.width;
+		var height = cardTemplate.height || 0;
+
+		if ( bUseSmallMode )
+		{
+			// in small mode we display a single column.  we fit to page width, and height will use
+			//	the tallest for the row
+			width = nMaxWidth;
+			if ( nMaxCardHeightThisRow )
+				height = nMaxCardHeightThisRow;
+		}
+
+		card.style.float = bUseSmallMode ? 'none' : ( cardTemplate.float || 'left' );
+		card.tryForHeight = height;
 
 		// set the card width
-		card.style.width = width + 'px';
+		card.style.width = bUseSmallMode ? 'auto' : ( width + 'px' );
 
 		var image = card.down('img.apphub_CardContentPreviewImage');
 		if ( image )
 		{
 			var newWidth = width - imageMargins;
 			var newHeight = Math.floor( newWidth / image.aspectRatio );
-			image.style.width = newWidth + 'px';
+			image.style.width = bUseSmallMode ? '100%' : newWidth + 'px';
 
 			if ( card.forceYouTubeThumbnailHeight == true )
 			{
@@ -472,7 +502,7 @@ function SizeCards( cards, imageMargins )
 			}
 			else
 			{
-				image.style.height = newHeight + 'px';
+				image.style.height = 'auto';
 				height = newHeight + imageMargins;
 			}
 		}
@@ -481,18 +511,18 @@ function SizeCards( cards, imageMargins )
 			height = minContentHeight;
 		}
 
-		if ( card.definedHeight == 0 )
+		if ( card.tryForHeight == 0 )
 		{
-			card.definedHeight = height;
+			card.tryForHeight = height;
 		}
 
 		if ( minHeight == 0 )
 		{
-			minHeight = card.definedHeight;
+			minHeight = card.tryForHeight;
 		}
 		else
 		{
-			minHeight = Math.min( minHeight, card.definedHeight );
+			minHeight = Math.min( minHeight, card.tryForHeight );
 		}
 	}
 
@@ -500,6 +530,7 @@ function SizeCards( cards, imageMargins )
 	for ( var i = 0; i < cards.length; ++i )
 	{
 		var card = cards[i];
+		var templateCardHeight = card.tryForHeight;
 		var contentArea = card.down( 'div.apphub_CardContentMain' );
 		var image = card.down('img.apphub_CardContentPreviewImage');
 
@@ -508,13 +539,13 @@ function SizeCards( cards, imageMargins )
 		{
 			if ( image )
 			{
-				contentArea.style.height = card.definedHeight + 'px';
+				contentArea.style.height = templateCardHeight + 'px';
 			}
 			else
 			{
-				contentArea.style.height = ( card.definedHeight + 37 ) + 'px';
+				contentArea.style.height = ( templateCardHeight + 37 ) + 'px';
 			}
-			card.style.height = ( card.definedHeight + 95 ) + 'px';
+			card.style.height = ( templateCardHeight + 95 ) + 'px';
 			continue;
 		}
 
@@ -522,9 +553,9 @@ function SizeCards( cards, imageMargins )
 
 		if ( image )
 		{
-			if ( minHeight < card.definedHeight )
+			if ( minHeight < templateCardHeight )
 			{
-				var halfHeight = Math.floor( ( card.definedHeight  - minHeight ) / 2 );
+				var halfHeight = Math.floor( ( templateCardHeight  - minHeight ) / 2 );
 				image.style.top = '-' + halfHeight + 'px';
 			}
 			contentArea.style.height = minHeight + 'px';

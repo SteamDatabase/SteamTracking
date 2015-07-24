@@ -33,7 +33,7 @@ function Profile_CraftGameBadge( profileUrl, appid, series, border_color )
 	$Crafter.show();
 	g_CraftModal.GetContent().addClass( 'badge_craft_modal' );
 	g_CraftModal.GetContent().find('.newmodal_content').css( 'overflow', 'visible' );
-	g_CraftModal.GetContent().css( 'overflow', 'hidden' );
+	g_CraftModal.GetContent().css( 'overflowX', 'hidden' );
 
 	g_CraftModal.AdjustSizing();
 	g_CraftModal.SetRemoveContentOnDismissal( false );
@@ -46,6 +46,8 @@ function Profile_CraftGameBadge( profileUrl, appid, series, border_color )
 	$J('#badge_craft_header_crafted').hide();
 	$J('#badge_completed').hide();
 
+	var nAnimationTiming = 500;
+
 	// start the animation for each card, staggered
 	var iCard = 0;
 	$J('#card_image_set').children().each( function() {
@@ -56,11 +58,11 @@ function Profile_CraftGameBadge( profileUrl, appid, series, border_color )
 		window.setTimeout( function() {
 			$Card.show();
 			$Card.addClass( 'card_craft_combined' );
-		}, iCard++ * 500 );
+		}, iCard++ * nAnimationTiming );
 	} );
 
 	// we start the next phase half a second before the animation would end, so we can animate the badge appearing on top.
-	var nAnimationTimeMS = ( ( iCard - 1 ) * 500 ) + (4000 - 500);
+	var nAnimationTimeMS = ( ( iCard - 1 ) * nAnimationTiming ) + (4000 - 500);
 	window.setTimeout( function() {
 		$Throbber.removeClass( 'loop_throbber_hide' );
 		g_bBadgeCraftAnimationReady = true;
@@ -103,9 +105,9 @@ function FinishCraft()
 		}
 	}
 
-	$BadgeAnimation.css( 'width', '0' );
 	$Badge.show();
-	$BadgeAnimation.animate( { width: 414 }, function() {
+	$BadgeAnimation.addClass('show');
+	window.setTimeout( function() {
 		$BadgeRewards.show();
 		var nMSToWait = 500;
 
@@ -128,7 +130,7 @@ function FinishCraft()
 			g_CraftModal.AdjustSizing( 'slow' );
 		}, nMSToWait );
 
-	} );
+	}, 500 );
 }
 
 function BuildBadgeDisplay( $BadgeCtn, Badge )

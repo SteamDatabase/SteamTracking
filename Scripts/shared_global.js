@@ -1532,6 +1532,14 @@ function ScrollToIfNotInView( elem, nRequiredPixelsToShow, nSpacingBefore )
 {
 	var $Elem = $JFromIDOrElement(elem);
 
+	if ( typeof nSpacingBefore == 'undefined' )
+		nSpacingBefore = 0;
+
+	// for responsive pages - we need to adjust for the menu
+	var $ResponsiveHeader = $J('.responsive_header:visible');
+	if ( $ResponsiveHeader.length && $ResponsiveHeader.css('position') == 'fixed' )
+		nSpacingBefore += $ResponsiveHeader.height();
+
 	var elemTop = $Elem.offset().top;
 	var nViewportOffsetTop = elemTop - $J(window).scrollTop();
 	var bNeedToScroll = false;

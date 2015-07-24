@@ -66,13 +66,6 @@ h2 {
 .pageLinks>a,.pageLinks>a:hover,.pageLinks>a:visisted,.pageLinks>a:active {
 	font-size:10px;
 }
-
-#memberList {
-	margin:0;
-	padding:0;
-	margin-left:26px;
-}
-
 #bottomLinks {
 	position:relative;
 	width:766px;
@@ -118,9 +111,6 @@ h2 {
 
 .friendListSectionHeader {
 	margin-bottom: 8px;
-	height:17px;
-	width:669px;
-	font-size:11px;
 	padding-top:2px;
 }
 

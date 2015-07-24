@@ -27,14 +27,11 @@ center
 /* header */
 .apphub_HeaderTop
 {
-	width: 948px;
-	height: 78px;
+	max-width: 948px;
 	position: relative;
-	margin: 0px auto;
+	margin: 0 auto;
 	text-align: left;
 	padding-top: 12px;
-/*	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_hub_header.png');
-	background-repeat: no-repeat;*/
 }
 
 
@@ -93,8 +90,9 @@ center
 	color: white;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	font-size: 26px;
-	float: left;
-	max-width: 700px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .apphub_CommunitySubSectionArrows
@@ -201,7 +199,6 @@ center
 .apphub_HeaderBottomBG_ctn
 {
 	position: relative;
-	min-width: 948px;
 }
 
 .apphub_HeaderBottomBG
@@ -223,7 +220,7 @@ center
 .apphub_HeaderBottom
 {
 	position: relative;
-	height: 68px;
+	min-height: 68px;
 	background-color: rgba( 0, 0, 0, 0.4 );
 }
 
@@ -300,27 +297,27 @@ center
 	margin-left: 10px;
 	font-size: 13px;
 	z-index: 10;
+	white-space: nowrap;
+	overflow: hidden;
+	overflow-x: auto;
 }
 
 .apphub_sectionTabsHR
 {
 	background-color: #0d121a;
 	height: 5px;
-	width: 948px;
 	margin: 0px auto;
 }
 
 .apphub_sectionTabNewWrapper
 {
 	position: relative;
-	display: block;
-	float: left;
+	display: inline-block;
 }
 
 .apphub_sectionTab, a.apphub_sectionTab
 {
-	display: block;
-	float: left;
+	display: inline-block;
 	color: #dadada;
 	/*background-color: #3A3A3A;*/
 	height: 28px;
@@ -412,8 +409,9 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(1
 
 .apphub_sectionTab.admin
 {
-	float: right;
-	margin-right: 20px;
+	position: absolute;
+	right: 0;
+	top: 20px;
 }
 
 .apphub_sectionTab:hover
@@ -424,17 +422,20 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#67c1f
 
 /* friends who played recently */
 
+.apphub_recentFriendsArea {
+	overflow: hidden;
+	white-space: nowrap;
+	padding-top: 22px;
+	padding-left: 14px;
+}
+
 .apphub_friends_who_played_recently_title
 {
 	text-align: center;
-	float: left;
-	display: block;
 	color: #8F98A0;
 	line-height: 22px;
 	min-width: 22px;
 	max-width: 600px;
-	margin-left: 14px;
-	margin-top: 22px;
 }
 
 .appHubIconHolder
@@ -538,9 +539,21 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#67c1f
 
 .apphub_friend_block_row
 {
+	display: inline-block;
+	vertical-align: middle;
 	padding-left: 8px;
-	padding-top: 18px;
-	float: left;
+}
+
+.apphub_friend_block_row .playerAvatar {
+	display: inline-block;
+	margin-right: 8px;
+	width: 26px;
+	height: 26px;
+}
+
+.apphub_friend_block_row .playerAvatar img {
+	width: 24px;
+	height: 24px;
 }
 
 .apphub_friend_block_container
@@ -595,16 +608,16 @@ a.apphub_more_friends_who_play:hover
 .apphub_Content
 {
 	position: relative;
-	width:960px;
-	margin: 0px auto;
-	text-align: left;
+	max-width: 1280px;
+	padding: 0 1%;
+	margin: 0 auto;
 }
 
 .apphub_Discussion_Content
 {
 	position: relative;
-	width:948px;
-	margin: 16px auto 0px auto;
+	max-width:948px;
+	margin: 16px auto 0 auto;
 	text-align: left;
 }
 
@@ -618,15 +631,13 @@ a.apphub_more_friends_who_play:hover
 {
 	position: relative;
 	float: left;
+	text-align: left;
 	background-color: #0d131b;
 	border: 1px solid transparent;
 	margin-left: 5px;
 	margin-right: 5px;
 	margin-bottom: 10px;
 	padding: 0px;
-	/*-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
-	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
-	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);*/
 }
 
 .apphub_Card.interactable
@@ -838,9 +849,9 @@ a.apphub_more_friends_who_play:hover
 	padding: 5px;
 	/*background-color: #3e3d3d;*/
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
+	bottom: 0;
+	left: 0;
+	right: 0;
     border-top: 1px solid #272f38;
 }
 
@@ -881,6 +892,11 @@ a.apphub_more_friends_who_play:hover
 	font-size: 13px;
 	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	color: #636363;
+
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .apphub_Card.interactable:hover .apphub_CardContentAppName
@@ -1351,4 +1367,31 @@ a.apphub_more_friends_who_play:hover
 
 .btn_ico_thumbs_down.has_text {
 	padding-left: 20px;
+}
+
+/* responsive menu contents */
+h3.apphub_responsive_menu_title {
+	color: #ffffff;
+	margin: 16px 0;
+}
+
+.apphub_responsive_menu .apphub_ResponsiveMenuItem {
+	line-height: 30px;
+}
+
+.apphub_responsive_menu .apphub_ResponsiveMenuCtn {
+	margin-bottom: 16px;
+}
+
+.apphub_ResponsiveMenuItemDesc {
+	line-height: 125%;
+	margin-bottom: 8px;
+}
+
+.responsive_page_menu .appHubSearchTextForm {
+	float: none;
+	padding: 0;
+}
+.responsive_page_menu .appHubSearchTextForm .appHubSearchTextInput {
+	width: 97%;
 }

@@ -40,18 +40,24 @@
 .review_box .leftcol {
 	width: 184px;
 	float: left;
-	padding: 8px;
+	max-width: 35%;
+	margin: 8px;
+}
+
+.review_box .leftcol img {
+	width: 100%;
 }
 
 .review_box .rightcol {
-	float: left;
-	width: 450px;
+	overflow: hidden;
 	position: relative;
 }
 
 .review_box .vote_header {
-	height: 44px;
-	margin: 8px 0 13px;
+	min-height: 44px;
+	margin: 0 8px 13px 8px;
+	overflow: hidden;
+	padding-top: 8px;
 }
 
 .review_box .vote_header .title {
@@ -73,18 +79,20 @@
 }
 
 .review_box .content {
-	margin-right: 8px;
+	margin: 0 8px;
 	font-family: 'Motiva Sans', arial, tahoma;
 	font-size: 13px;
 	color: #cdcac1;
 	overflow-wrap: break-word;
+
+	clear: left;	/* in responsive mode, will drop below the game logo */
 }
 
 .review_box .posted {
 	font-size: 10px;
 	font-style: italic;
 	color: #626366;
-	margin: 19px 0 8px;
+	margin: 19px 8px 8px 8px;
 }
 
 .review_box .hr {
@@ -93,7 +101,7 @@
 }
 
 .review_box .control_block {
-	margin: 8px 0;
+	padding: 8px;
 	line-height: 22px;
 }
 
@@ -112,14 +120,14 @@
 	width:295px;
 	margin:0;
 	padding:0;
-	padding-left:10px;
-	padding-top:0px;
-	z-index: 20;
+	padding-top:0;
 	margin-top: 20px;
 }
 
-#leftContents {
-	width: 650px;
+.review_list #leftContents {
+	max-width: 640px;
+	width: auto;
+	float: none;
 }
 
 #rightContents .box {
@@ -279,4 +287,30 @@ a.trigger, a.activetrigger {
 }
 .dropcontainer{
 	position:relative;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .review_list #rightContents {
+		float: none;
+		width: auto;
+	}
+	html.responsive .review_list #rightContents .box {
+		display: block;
+	}
+
+	html.responsive .box .review_stat {
+		float: left;
+		margin-right: 24px;
+	}
+	html.responsive .box .review_stat:last-child {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 600px)
+{
+	html.responsive .review_box .rightcol {
+		overflow: visible;
+	}
 }
