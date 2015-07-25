@@ -188,9 +188,12 @@ center
 {
 }
 
+/* sometimes but not always wrapped in a apphub_HomeHeader */
 .apphub_HomeHeaderContent
 {
     padding-top: 10px;
+	max-width: 948px;
+	margin: 0 auto;
 }
 .page_title_area.game_title_area.page_content .apphub_HomeHeaderContent {
 	padding-top: 0px;
