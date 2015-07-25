@@ -76,7 +76,7 @@ body
 .community_home_tabs
 {
 	position: relative;
-	max-width: 1280px;
+	max-width: 948px;
 	padding: 0 1%;
 	margin: 0px auto;
 	padding-top: 5px;
@@ -294,7 +294,7 @@ input.community_home_search_players_input
 
 .community_home_sort_options
 {
-	max-width: 1280px;
+	max-width: 948px;
 	padding: 0 1% 20px 1%;
 	margin: 0 auto;
 	text-align: left;

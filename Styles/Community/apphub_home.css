@@ -9,7 +9,6 @@
 }
 .apphub_HomeHeaderContent
 {
-	max-width: 948px;
 	padding: 10px 0 0 0;
 }
 body.apphub_blue
@@ -205,7 +204,6 @@ body.apphub_blue
 {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/hub_divider.png?v=1' );
 	height: 4px;
-	max-width: 948px;
 }
 
 .apphub_MostPopularLink
@@ -461,6 +459,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	min-height: 182px;
 	text-align: left;
 	padding: 15px 22px;
+	margin: 0 auto;
 }
 
 .apphub_StoreAppLogo
@@ -553,9 +552,10 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .apphub_EarlyAccess
 {
 	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/early_access_banner.jpg' );
-	width: 948px;
+	max-width: 948px;
 	height: 38px;
 	line-height: 38px;
+	margin: 0 auto;
 }
 
 .apphub_EarlyAccess_Title
@@ -569,9 +569,12 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 
 .apphub_EarlyAccess_Desc
 {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	padding-left: 10px;
 	padding-top: 1px;
-	float: left;
 	font-size: 14px;
 	color: #a1b8cc;
 }

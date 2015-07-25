@@ -27,7 +27,6 @@ center
 /* header */
 .apphub_HeaderTop
 {
-	max-width: 948px;
 	position: relative;
 	margin: 0 auto;
 	text-align: left;
@@ -608,7 +607,7 @@ a.apphub_more_friends_who_play:hover
 .apphub_Content
 {
 	position: relative;
-	max-width: 1280px;
+	max-width: 948px;
 	padding: 0 1%;
 	margin: 0 auto;
 }
