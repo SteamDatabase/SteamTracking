@@ -6,15 +6,15 @@
 
 #parental_notice
 {
-	border: 1px solid #4A4945;
 	width: 656px;
 	height: 220px;
 	padding: 20px;
-	margin: 0 auto;
+	margin: 20px auto;
 
 	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/keybg.png' );
 	background-repeat: no-repeat;
 	background-position: 80% 50%;
+	background-color: rgba(0, 0, 0, 0.3);
 
 	text-align: center;
 }
@@ -42,10 +42,15 @@
 
 #parental_notice input
 {
-	background-color:#4d4b49;
-	border:solid #82807c 1px;
-	padding:2px;
-	color:#ffffff;
+	background-color: #2a3f5a;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0 #45556c;
+	color: #fff;
+	height: 20px;
+	height: 24px;
+	padding-left: 5px;
+	margin-right: 10px;
 }
 
 .mobileBody #parental_notice input
@@ -95,23 +100,22 @@
 .parental_settings_description
 {
 	margin-top: 10px;
+	margin-bottom: 20px;
 	font-size: 14px;
 	font-weight: normal;
-	color: #b0aeac;
 }
 
 .parental_settings_box
 {
 	position: relative;
-	background-color: #262626;
-	border: 1px solid #4d4b49;
-	color: #b0aeac;
-	line-height: 18px;
+	background-color: rgba(0, 0, 0, 0.3);
+	margin-top: 15px;
+	padding: 25px 15px 15px 25px;
 }
 
 .parental_settings_content
 {
-	margin: 14px;
+
 }
 
 .parental_settings_header
@@ -124,13 +128,13 @@
 .parental_settings_subinstructions
 {
 	font-size: 12px;
-	margin-top: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .parental_settings_instructions
 {
 	font-size: 14px;
-	color: white;
 	font-weight: normal;
 	margin-top: 4px;
 }
@@ -159,24 +163,38 @@
 
 .parental_settings_form input
 {
-	border:solid #82807c 1px;
-	padding:2px;
-	color:#ffffff;
+	background-color: #2a3f5a;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0 #45556c;
+	color: #fff;
+	height: 20px;
+	width: 253px;
+	height: 24px;
+	padding-left: 5px;
+}
+
+.parental_settings_form .feature_row input
+{
+	border: none;
+	box-shadow: none;
 }
 
 .parental_settings_form button
 {
 	border: none;
 	float: right;
+	margin-top: 40px;
 }
 
 .parental_searchbox
 {
-	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/parental_search.png' );
-	margin-right: 12px;
-	border: none;
-
-	color: #a6a5a2;
+	background-color: #2a3f5a;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0 #45556c;
+	color: #fff;
+	height: 20px;
 	width: 253px;
 	height: 27px;
 
@@ -186,18 +204,19 @@
 
 .parental_searchbox input
 {
+	background-color: #2a3f5a;
+	color: #fff;
 	border: none;
-	background-color: #82807c;
-	color: #cdcac1;
 	margin-top: 5px;
 	margin-left: 8px;
 	width: 216px;
-	outline: none;
+	font-style: italic;
 }
 
 #set_features_form .parental_settings_instructions
 {
 	margin-bottom: 5px;
+	font-size: 16px;
 }
 
 .feature_row
@@ -207,9 +226,11 @@
 
 .feature_row input
 {
-	width: 10%;
 	vertical-align: middle;
+	margin-right: 4px;
+	width: 10px;
 }
+
 .feature_row label
 {
 	width: 85%;
@@ -235,7 +256,9 @@
 
 .parental_app_list_controls_buttons
 {
-	margin-top: 8px;
+	line-height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .parental_app_list_controls_buttons div
@@ -245,9 +268,7 @@
 
 .parental_app_list_controls a
 {
-	margin-left: 4px;
-	margin-right: 4px;
-	color: #b0aeac;
+	color: #fff;
 }
 
 .parental_app_list_form
@@ -268,18 +289,19 @@
 
 .parental_app_row
 {
-	height: 20px;
+	line-height: 24px;
 }
 
 .parental_app_row.light
 {
-	background-color: rgba(77, 75, 73, 0.62);
+	background-color: rgba(42, 63, 90, 0.4);
 }
 
 .parental_app_list_col1
 {
 	vertical-align: middle;
 	margin-right: 4px;
+	margin-left: 4px;
 }
 
 .parental_app_list_col2
@@ -298,42 +320,35 @@
 	background-image: url( 'https://steamstore-a.akamaihd.net/public/images/parental/keybg.png' );
 	background-repeat: no-repeat;
 	background-position: 300px 50%;
-	height: 400px;
+	min-height: 300px;
 	position: relative;
 }
 
 #set_formpin
 {
-	position: absolute;
 	top: 150px;
 	width: 90%;
 }
 
 #set_formpin button
 {
-	margin-top: 100px;
+	margin-top: 40px;
 }
 
 #parental_setpin_entries
 {
-	margin-left: 30px;
-	margin-top: 6px;
+	margin: auto;
 }
+
 
 #parental_setpin_entries input
 {
-	background-color:#4d4b49;
-}
+	margin: auto;
+	width: 100px;
 
 #parental_setrecoveryemail_entries
 {
-	margin-left: 30px;
-	margin-top: 6px;
-}
-
-#parental_setrecoveryemail_entries input
-{
-	background-color:#4d4b49;
+	margin: auto;
 }
 
 #parental_setrecoveryemail_entries label
@@ -427,3 +442,19 @@
 {
 	margin: 0px;
 }
+
+.parental_settings_current_status
+{
+	color: #67c1f5;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.account .page_header_ctn {
+	background: rgba(0, 0, 0, 0) url( 'https://steamstore-a.akamaihd.net/public/images//v6/temp/cluster_bg_40.png') no-repeat scroll center bottom;
+}
+
+.account .breadcrumbs {
+	padding-top: 24px;
+}
+
