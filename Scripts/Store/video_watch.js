@@ -14,11 +14,12 @@ function BMediaSourceExtensionsSupported()
 }
 
 
-var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, viewerSteamID )
+var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, viewerSteamID, strVideoId )
 {
 	this.m_eClientType = eClientType;
 	this.m_elVideoPlayer = document.getElementById( 'videoplayer' );
 	this.m_nAppId = appId;
+	this.m_strVideoId = strVideoId;
 	this.m_strVideoTitle = appId;
 	this.m_DASHPlayerStats = null;
 	this.m_rtRestartTime = rtRestartTime;
@@ -197,7 +198,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 	var _watch = this;
 
 	$J.ajax( {
-		url: 'https://store.steampowered.com/video/details/' + _watch.m_nAppId,
+		url: 'https://store.steampowered.com/video/details/' + _watch.m_nAppId + '/' + _watch.m_strVideoId,
 		type: 'GET'
 	})
 	.done( function( data )
@@ -241,9 +242,9 @@ CVideoWatch.prototype.GetVideoDetails = function()
 	.fail( function()
 	{
 		if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
-			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
+			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
-			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' + '<br><br>Error Code: ' + data.error_code );
+			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' );
 	});
 }
 
