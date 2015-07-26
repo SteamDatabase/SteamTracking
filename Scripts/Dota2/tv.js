@@ -38,6 +38,8 @@
 
 	var DOTA_CONSTS =
 	{
+		LEAGUE_ID_TI5: 2733,
+
 		TEAM_RADIANT: 2,
 		TEAM_DIRE: 3,
 
@@ -380,7 +382,7 @@
 		
 		if ( g_bIsDev )
 		{
-			Data.league_id = 3000;
+			Data.league_id = DOTA_CONSTS.LEAGUE_ID_TI5;
 
 			// For now, only do this in Dev
 			if ( null === g_Tournament && undefined !== Data.league_id && Data.league_id > 0 )
