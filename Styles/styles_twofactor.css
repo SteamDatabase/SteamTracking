@@ -23,6 +23,7 @@
 	line-height: 18px;
 	padding: 15px;
 	margin-top: 15px;
+	margin-bottom: 20px;
 }
 
 .deauthorize_box
@@ -30,7 +31,7 @@
 	background: rgb( 29, 47, 69 );
 	line-height: 18px;
 	padding: 15px;
-	margin-top: 15px;
+	margin-top: 35px;
 }
 
 .twofactor_settings_form
@@ -43,21 +44,32 @@
 
 .twofactor_settings_choice_header,  .twofactor_deauthorize_header
 {
-	font-size: 16px;
-	font-weight: bold;
+	color: #67c1f5;
+	font-family: "Motiva Sans Light", Arial, sans-serif;
+	font-size: 18px;
+	margin: 10px 10px 15px 0;
 }
+
+.twofactor_settings_radiobtn_header
+{
+	color: #67c1f5;
+	font-family: "Motiva Sans Light", Arial, sans-serif;
+	font-size: 18px;
+	margin: 10px 10px 15px 20px;
+}
+
 
 .twofactor_settings_choice_description, .twofactor_deauthorize_description
 {
 	font-size: 14px;
-	margin: 15px;
+	margin: 15px 20px 20px 20px;
 }
 
 .twofactor_settings_choice_warning
 {
-	font-size: 16px;
+	font-size: 14px;
 	color: #a94847;
-	margin: 10px;
+	margin: 10px 25px 10px 10px;
 }
 
 .twofactor_manual_entry_body
@@ -69,12 +81,12 @@
 .twofactor_settings_choice_rule
 {
 	border-top: 1px solid rgba(42, 63, 90, 0.5 );
-	margin: 30px 0;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .twofactor_settings_right_button
 {
-	margin-top:10px;
 	display: inline-block;
 	float: right;
 }
@@ -129,11 +141,11 @@
 .twofactor_choice_check
 {
 	float: left;
+	margin-top: 3px;
 }
 
 .twofactor_settings_choice_body
 {
-	margin-left: 20px;
 	display: block;
 }
 
@@ -247,6 +259,7 @@
 
 .twofactor_contactsupport {
 	margin-top: 20px;
+	margin-bottom: 40px;
 }
 
 a.twofactor_contactsupport {
@@ -265,4 +278,50 @@ a.twofactor_contactsupport:hover {
 .twofactor_done {
 	float:right;
 	margin-top:20px;
+}
+
+
+
+.get_app_content {
+	margin-top: 20px;
+	margin: 0 auto;
+	width: 570px;
+	position: relative;
+
+}
+
+.image_devices {
+	margin: 30px 25px 10px 0;
+	float: left;
+}
+
+a.img_link {
+	display: inline-block;
+	margin: 10px 5px 0px 0px;
+}
+
+.app_links{
+	padding-top: 120px;
+}
+
+.app_links p{
+	font-size: 16px;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+}
+
+.phone_left_col{
+	width: 616px;
+	margin-bottom: 60px;
+}
+
+.phone_box {
+	background: rgba( 0, 0, 0, 0.3 );
+	padding: 15px 15px 15px 25px;
+	margin-top: 15px;
+
+}
+
+.button {
+	margin: 10px;
+	text-align: center;
 }
