@@ -3360,7 +3360,8 @@
 
 		this.$m_LoadingContainer = $( '<div>' ).addClass( 'LoadingContainer' );
 		this.$m_LoadingContainer.insertBefore( this.$m_LoadedContent );
-		this.$m_WaitingPanel = $( '<div>' ).addClass( 'WaitingPanel' ).addClass( 'FadeAnimation' ).append( $( '<div>' ).addClass( 'TinySpinner' ) );
+		//this.$m_WaitingPanel = $( '<div>' ).addClass( 'WaitingPanel' ).addClass( 'FadeAnimation' ).append( $( '<div>' ).addClass( 'TinySpinner' ) );
+		this.$m_WaitingPanel = $( '<div>' ).addClass( 'WaitingPanel' ).addClass( 'FadeAnimation' ).append( $( '<div>' ) );
 		this.$m_LoadingContainer.append( this.$m_WaitingPanel );	// This needs to go first.
 
 		this.m_bHaveWaitPanel = !this.$m_Panel.data( 'nowaitpanel' );
