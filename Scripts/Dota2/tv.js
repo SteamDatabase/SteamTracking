@@ -380,15 +380,9 @@
 			g_GraphData.SetKills( Data.kills );
 		}
 		
-		if ( g_bIsDev )
+		if ( null === g_Tournament && undefined !== Data.league_id && Data.league_id > 0 )
 		{
-			Data.league_id = DOTA_CONSTS.LEAGUE_ID_TI5;
-
-			// For now, only do this in Dev
-			if ( null === g_Tournament && undefined !== Data.league_id && Data.league_id > 0 )
-			{
-				InitTournament( Data.league_id );
-			}
+			InitTournament( Data.league_id );
 		}
 	}
 
@@ -5360,7 +5354,7 @@
 		var nBaseKeyHeight = this.$m_Block.actual( 'width' );	// NOTE: 1:1 aspect on this element
 		var flBaseKeyEm = nBaseKeyHeight / 16;
 
-		var strHeaderFontSize = ( 2 * flBaseKeyEm ) + 'em';
+		var strHeaderFontSize = ( 1.5 * flBaseKeyEm ) + 'em';
 
 		this.$m_BansHeader.css( 'font-size', strHeaderFontSize );
 		this.$m_PicksHeader.css( 'font-size', strHeaderFontSize );
@@ -5369,11 +5363,11 @@
 		this.$m_RadiantTeamName.css( 'font-size', strHeaderFontSize );
 		this.$m_DireTeamName.css( 'font-size', strHeaderFontSize );
 
-		var strBansPicksSize = ( 1.2 * flBaseKeyEm ) + 'em';
+		var strBansPicksSize = ( 0.8 * flBaseKeyEm ) + 'em';
 		this.$m_BanItems.css( 'font-size', strBansPicksSize );
 		this.$m_PickItems.css( 'font-size', strBansPicksSize );
 
-		var strRadiantDireLabelFontSize = flBaseKeyEm * 1 + 'em';
+		var strRadiantDireLabelFontSize = flBaseKeyEm * 1.3 + 'em';
 		this.$m_RadiantLabel.css( 'font-size', strRadiantDireLabelFontSize );
 		this.$m_DireLabel.css( 'font-size', strRadiantDireLabelFontSize );
 	};
@@ -5572,7 +5566,16 @@
 
 			if ( bShow )
 			{
-				$TournamentOnlyElements.attr( 'data-istournamentgame', '1' );
+				$TournamentOnlyElements.each(
+					function()
+					{
+						var $Panel = $( this );
+						if ( undefined === $Panel.attr( 'data-isdevonly' ) || g_bIsDev )
+						{
+							$Panel.attr( 'data-istournamentgame', '1' );
+						}
+					}
+				);
 			}
 			else
 			{
