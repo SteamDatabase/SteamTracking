@@ -2202,9 +2202,9 @@
 			return this.m_nLevel;
 		},
 
-		SetName: function( nName )
+		SetName: function( strName )
 		{
-			this.m_strName = nName;
+			this.m_strName = strName;
 		},
 
 		GetName: function()
@@ -4316,7 +4316,7 @@
 					continue;
 				}
 
-				this.$m_PlayerNames[nTeam][iPlayer].html( Player.GetName() );
+				this.$m_PlayerNames[nTeam][iPlayer].text( Player.GetName() );
 
 				// Update the hero image if it's changed
 				var nPlayerHeroID = Player.GetHeroID();
