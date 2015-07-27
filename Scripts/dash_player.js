@@ -726,18 +726,16 @@ CDASHPlayer.prototype.GetRepresentationsArray = function ( bVideo )
 					var representation = {
 						height: 0,
 						bandwidth: 0,
+						frameRate: 0,
 					};
 
 					if (this.m_loaders[i].m_adaptation.representations[b].height != null)
 					{
 						representation.height = this.m_loaders[i].m_adaptation.representations[b].height;
 					}
-					else
-					{
-						representation.bandwidth = b;
-					}
 
 					representation.bandwidth = this.m_loaders[i].m_adaptation.representations[b].bandwidth;
+					representation.frameRate = this.m_loaders[i].m_adaptation.representations[b].frameRate;
 
 					rgRespresentations.push( representation );
 				}
@@ -1434,12 +1432,11 @@ CSegmentLoader.prototype.BeginPlayback = function( unStartTime )
 		if ( this.m_player.m_nVideoRepresentationIndex == -1 )
 		{
 			// start at the highest resolution greater than video player height
-			var nRepIndex = 0;
-			for ( r = 0; r < nRepCounts; r++ )
+			var nRepIndex = nRepCounts - 1;
+			for ( nRepIndex; nRepIndex > 0; nRepIndex-- )
 			{
-				if ( this.m_player.StatsGetVideoPlayerHeight() >= this.m_adaptation.representations[r].height )
+				if ( this.m_player.StatsGetVideoPlayerHeight() <= this.m_adaptation.representations[nRepIndex].height )
 				{
-					nRepIndex = r;
 					break;
 				}
 			}
@@ -2268,7 +2265,8 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 				{
 					representation.width = _mpd.ParseInt( xmlRepresentation, 'width');
 					representation.height = _mpd.ParseInt( xmlRepresentation, 'height');
-					representation.frameRate = $J( xmlRepresentation ).attr( 'frameRate' );
+					representation.frameRate = _mpd.ParseFramerate( xmlRepresentation, 'frameRate' );
+					
 					if ( !representation.id || !representation.mimeType || !representation.codecs || !representation.bandwidth  )
 					{
 						bError = true;
@@ -2487,6 +2485,15 @@ CMPDParser.prototype.ParseInt = function( xml, strAttr )
 		return null;
 
 	return parseInt( val );
+}
+
+CMPDParser.prototype.ParseFramerate = function( xml, strAttr )
+{
+	var val = $J( xml ).attr( strAttr );
+	if ( !val )
+		return null;
+
+	return eval( val );
 }
 
 CMPDParser.ReplaceTemplateTokens = function( template, representationID, number )
@@ -2835,7 +2842,13 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 		if ( rgRepresentation[r].height.toString().length > 1 )
 		{
 			var strResolution = rgRepresentation[r].height + 'p';
-			$J('#representation_select_video').append('<option value="' + r + '">' + strResolution + ' (' + ( rgRepresentation[r].bandwidth / 1000000 ).toFixed(1) + 'Mbps)</option>');
+			var strBandwidth = ( rgRepresentation[r].bandwidth / 1000000 ).toFixed(1) + 'Mbps';
+			var strFPS = '';
+			
+			if ( this.m_player.BIsLiveContent() && rgRepresentation[r].frameRate > 30 )
+				strFPS = '@' + rgRepresentation[r].frameRate + 'fps'; // advertise high FPS
+				
+			$J('#representation_select_video').append('<option value="' + r + '">' + strResolution + strFPS + ' (' + strBandwidth + ') </option>');
 		}
 	}
 

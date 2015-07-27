@@ -376,6 +376,7 @@ body.flat_page
 .BroadcastPlayer
 {
 	width: 100%;
+	display: block;
 }
 
 .BroadcastPlayer[data-insideiframe="0"]
