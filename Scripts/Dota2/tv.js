@@ -4903,17 +4903,17 @@
 		this.$m_Deaths.html( Player.GetDeathCount() );
 		this.$m_Assists.html( Player.GetAssistsCount() );
 
-		this.$m_GoldPerMin.html( AbbreviateNumber( Player.GetGoldPerMinute() ) );
-		this.$m_XPPerMin.html( AbbreviateNumber( Player.GetXPPerMinute() ) );
+		this.$m_GoldPerMin.html( VUtils.AbbreviateNumber( Player.GetGoldPerMinute() ) );
+		this.$m_XPPerMin.html( VUtils.AbbreviateNumber( Player.GetXPPerMinute() ) );
 
 		this.$m_LastHits.html( Player.GetLastHitsCount() );
 		this.$m_Denies.html( Player.GetDeniesCount() );
 
-		this.$m_NetGold.html( AbbreviateNumber( Player.GetNetGold() ) );
-		this.$m_HeroDamage.html( AbbreviateNumber( Player.GetHeroDamage() ) );
+		this.$m_NetGold.html( VUtils.AbbreviateNumber( Player.GetNetGold() ) );
+		this.$m_HeroDamage.html( VUtils.AbbreviateNumber( Player.GetHeroDamage() ) );
 
-		this.$m_TowerDamage.html( AbbreviateNumber( Player.GetTowerDamage() ) );
-		this.$m_HealingProvided.html( AbbreviateNumber( Player.GetHealingProvided() ) );
+		this.$m_TowerDamage.html( VUtils.AbbreviateNumber( Player.GetTowerDamage() ) );
+		this.$m_HealingProvided.html( VUtils.AbbreviateNumber( Player.GetHealingProvided() ) );
 
 		// NOTE: We're not using these currently.
 		// Update second row, which includes kills and assists on enemies, as well as their kills/assists on the display player
