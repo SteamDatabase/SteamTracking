@@ -5104,6 +5104,9 @@
 
 	CMatchStatsPanel.prototype.RenderGraph = function()
 	{
+		if ( !g_Match )
+			return;
+
 		// Send a message across the fence to render.
 		var Data = g_GraphData.ComposeObjectForGraphSystem();
 		this.SendMessageToIFrame( 'RenderGraph', Data );
