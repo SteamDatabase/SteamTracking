@@ -580,8 +580,8 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#67c1f
 a.apphub_more_friends_who_play
 {
 	text-align: center;
-	float: left;
-	display: block;
+	display: inline-block;
+	vertical-align: top;
 	text-decoration: none;
 	font-size: 10px;
 	font-weight: bold;

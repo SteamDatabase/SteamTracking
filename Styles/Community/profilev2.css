@@ -1229,8 +1229,9 @@ img.workshop_showcase_item_image {
 }
 
 .game_info_achievement {
+	vertical-align: top;
 	display: inline-block;
-	margin-left: 6px;
+	margin-left: 4px;
 }
 
 .game_info_achievement:first-child {

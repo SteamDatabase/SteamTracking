@@ -10,7 +10,7 @@ body
 .community_home_header
 {
 	position: relative;
-	max-width: 1280px;
+	max-width: 948px;
 	margin: 0px auto;
 	padding: 20px 1% 0 1%;
 	text-align: left;
@@ -139,11 +139,14 @@ body
 .community_home_login
 {
 	float: left;
-	width: 294px;
-	margin-right: 10px;
+	width: 50%;
 	font-size: 12px;
 	line-height: 17px;
 	color: #c6d4df;
+}
+
+.community_home_login_content {
+	padding: 0 10px 0 0;
 }
 
 .community_home_join_steam
