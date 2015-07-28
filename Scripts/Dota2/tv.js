@@ -5,6 +5,7 @@
 	//--------------------------------------------------------------------------------------------
 
 	var g_bIsDev = null;
+	var g_bIsMobile = null;
 	var g_bIsSimulation = null;
 	var g_Localization = null;
 	var g_Chat = null;
@@ -5332,9 +5333,6 @@
 			var strBaseKey = BansOrPicksMetaData.label_base_key;
 			var cLen = rgPicksOrBansData.length;	// # of picks or bans
 
-			var rgCounts = {};
-			rgCounts[DOTA_CONSTS.TEAM_RADIANT] = rgCounts[DOTA_CONSTS.TEAM_DIRE] = 1;
-
 			// Only add the ones we care about.
 			for ( var i = BansOrPicksMetaData.count; i < cLen; ++i )
 			{
@@ -5344,10 +5342,8 @@
 
 				$Item.find( '.ImageBackground' ).append( CreateImage( strHeroImageURL ) );
 				$Item.find( '.TeamGradiant' ).addClass( 'TeamGradiant' + GetRadiantDireFromTeam( nTeam ) );
-				$Item.find( '.Label' ).html( g_Localization.Localize( strBaseKey + rgCounts[nTeam] ) );
+				$Item.find( '.Label' ).html( g_Localization.Localize( strBaseKey + String( i + 1 ) ) );
 				$Panel.append( $Item );
-
-				++rgCounts[nTeam];
 			}
 
 			BansOrPicksMetaData.count = cLen;
@@ -5950,6 +5946,7 @@
 	{
 		// Initialize a bunch of data/vars handed down from the controller and piped through.
 		g_bIsDev = Data.is_dev;
+		g_bIsMobile = Data.is_mobile;
 		g_bIsSimulation = Data.simulation;
 		g_Localization = Data.localization;
 		g_strDotaIFrameOriginURL = Data.dota_iframe_origin_url;
