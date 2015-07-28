@@ -622,6 +622,16 @@ GHomepage = {
 
 		var rgRecommendedSpotlightOptions = [];
 
+		// prefer recommended things that have a discount and passes filter
+		for ( var i = 0; i < GHomepage.rgRecommendedGames.length && rgRecommendedSpotlightOptions.length < 2; i++ )
+		{
+			var unAppID = GHomepage.rgRecommendedGames[i].appid;
+			if ( GStoreItemData.BAppPassesFilters( unAppID, GHomepage.oSettings.main_cluster, GHomepage.oApplicableSettings.main_cluster ) &&
+				 GStoreItemData.rgAppData[unAppID] && GStoreItemData.rgAppData[unAppID].discount )
+				rgRecommendedSpotlightOptions.push( unAppID );
+		}
+
+		// then recommended items that pass the filter
 		for ( var i = 0; i < GHomepage.rgRecommendedGames.length && rgRecommendedSpotlightOptions.length < 2; i++ )
 		{
 			var unAppID = GHomepage.rgRecommendedGames[i].appid;
@@ -636,25 +646,6 @@ GHomepage = {
 			{
 				$Element.append( $Spotlight );
 				rgGamesShown.push( rgRecommendedSpotlightOptions[0] );
-			}
-		}
-
-		if ( rgGamesShown.length < 2 && GHomepage.rgFriendRecommendations )
-		{
-			for ( var i = 0; i < GHomepage.rgFriendRecommendations.length; i++ )
-			{
-				var unAppID = GHomepage.rgFriendRecommendations[i].appid;
-				if ( rgGamesShown.indexOf( unAppID ) == -1 )
-				{
-					$Spotlight = GHomepage.RenderRecommendedSpotlight( unAppID, 'Recommended by friends' );
-					if ( $Spotlight )
-					{
-						$Element.append( $Spotlight );
-						rgGamesShown.push( unAppID );
-						GHomepage.rgFriendRecommendations.splice( i, 1 );
-						break;
-					}
-				}
 			}
 		}
 
@@ -680,6 +671,25 @@ GHomepage = {
 					$Element.append( $Spotlight );
 					rgGamesShown.push( rgWishlistItemsOnSale[i] );
 					break;
+				}
+			}
+		}
+
+		if ( rgGamesShown.length < 2 && GHomepage.rgFriendRecommendations )
+		{
+			for ( var i = 0; i < GHomepage.rgFriendRecommendations.length; i++ )
+			{
+				var unAppID = GHomepage.rgFriendRecommendations[i].appid;
+				if ( rgGamesShown.indexOf( unAppID ) == -1 )
+				{
+					$Spotlight = GHomepage.RenderRecommendedSpotlight( unAppID, 'Recommended by friends' );
+					if ( $Spotlight )
+					{
+						$Element.append( $Spotlight );
+						rgGamesShown.push( unAppID );
+						GHomepage.rgFriendRecommendations.splice( i, 1 );
+						break;
+					}
 				}
 			}
 		}
@@ -723,10 +733,10 @@ GHomepage = {
 		var $Spotlight = $J('<a/>', params );
 		GStoreItemData.BindHoverEvents( $Spotlight, unAppID );
 		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_cap'}).append( $J('<img/>', {src: strHeaderURL } ) ) );
-		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_price' }).html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;' ) );
+		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_desc'} ).text( strDescription ) );
+		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_price' }).html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_spotlight discount_block_large') : '&nbsp;' ) );
 
 		$SpotlightCtn.append(
-			$J('<div/>', {'class': 'recommended_spotlight_desc'} ).text( strDescription ),
 			$Spotlight
 		);
 		return $SpotlightCtn;
