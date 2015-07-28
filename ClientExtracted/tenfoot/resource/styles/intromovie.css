@@ -33,7 +33,7 @@ IntroMoviePanel
 	animation-name: intro-fade-in; 
 	animation-delay: 0.0s;
 	animation-duration: 1.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
@@ -47,7 +47,7 @@ IntroMoviePanel.IntroMovieFadeOut
 	animation-name: intro-fade-out; 
 	animation-delay: 0.0s;
 	animation-duration: 1.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }
@@ -59,7 +59,7 @@ IntroMoviePanel.IntroMovieFadeOutFast
 	animation-name: intro-fade-out; 
 	animation-delay: 0.0s;
 	animation-duration: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }

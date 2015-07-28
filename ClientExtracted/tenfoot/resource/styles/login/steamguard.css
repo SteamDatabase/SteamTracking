@@ -31,7 +31,7 @@
 
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 // tickbox to turn togglebuttons into checkboxes

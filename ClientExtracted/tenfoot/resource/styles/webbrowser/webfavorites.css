@@ -9,7 +9,7 @@ WebFavorites
 	opacity: 1.0;
 	transition-property: opacity, transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	background-color: carousel_bg_color2;
 }
 
@@ -39,7 +39,7 @@ WebFavorites.Hidden
 
 	transition-property: opacity, transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	perspective-origin: 50% 50%;
 }
 
@@ -79,7 +79,7 @@ WebFavorites.Hidden
 	padding: 24px;
 	transition-property: position;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 }
 
@@ -173,7 +173,7 @@ FavoriteGridItem:descendantfocus #AltTitle
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.30s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 }
 
@@ -196,7 +196,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	animation-name: main-button-glow-movement-no-fill; 
 	animation-duration: 1.7s;
 	animation-delay: 0.30s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 }
 
@@ -301,7 +301,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -373,7 +373,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	
 	transition-property: opacity;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .FavoriteRow .WebImage:hover .CloseImage, .GridItemImage:hover .CloseButton, .AltTitle:hover .CloseButton
@@ -393,7 +393,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 
 	transition-property: wash-color, opacity;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -439,7 +439,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	transition-property: pre-transform-scale2d;
 	animation-delay: 0.30s;
 	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }	
 
 .TopRow, .SecondRow
@@ -465,7 +465,7 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 	transition-property: opacity, background-color;
 	transition-duration: 0.4s;
 	transition-delay: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .FavoritesGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
@@ -550,7 +550,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	background-color: #00000000;
 	text-align: left;
 	text-overflow: ellipsis;
-	opacity: 1.0;
+	opacity: 0.5;
 	z-index: 10;
 	max-height: 300px;
 	max-width: 550px;
@@ -560,5 +560,5 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 	transition-property: opacity, color, pre-transform-scale2d;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }

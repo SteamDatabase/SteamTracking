@@ -66,7 +66,7 @@ TextInputDaisy
 
 	animation-name: textinputdaisy-appear-from-bottom-center;
 	animation-duration: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
@@ -548,7 +548,7 @@ Image.SteamPadIcon
 	opacity: 0.0;
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DaisyInputTypeRS #MiddleLegendRS
@@ -714,7 +714,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	transform: translatez(0px);
 	transition-property: transform, pre-transform-scale2d, border, background-color;
 	transition-duration: 0.15s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	background-color: daisy_petal_color;
 }
 
@@ -900,7 +900,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	
 	transition-property: background-color, box-shadow;
 	transition-duration: picked_item_transition_time;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	
 	box-shadow: fill #00000022 0px 0px 6px 0px;
 	border-radius: borderradius;
@@ -919,7 +919,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	
 	transition-property: background-color, transform !immediate;
 	transition-duration: picked_item_transition_time;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	
 }
 
@@ -1012,7 +1012,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	
 	transition-property: box-shadow;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DaisyInputTypeABXY.SteamPad #Item_N
@@ -1068,7 +1068,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	
 	transition-property: box-shadow;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DaisyInputTypeABXY.SteamPad #Item_S
@@ -1127,7 +1127,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	
 	transition-property: box-shadow;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DaisyInputTypeABXY.SteamPad #Item_W
@@ -1186,7 +1186,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	
 	transition-property: box-shadow;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DaisyInputTypeABXY.SteamPad #Item_E
@@ -1243,7 +1243,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 	transition-property: opacity;
 	transition-duration: settings_transition_time;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DockLeft #TextInputDaisySettings
@@ -1527,4 +1527,14 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 #PINFooter .LegendText
 {
 	vertical-align: center;
+}
+
+.XInputPad #SteamPad_ABXY_Footer_Wrapper
+{
+	visibility: collapse;
+}
+
+.HiddenFooter
+{
+	visibility: collapse;
 }

@@ -43,7 +43,7 @@
 
 	transition-property: transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #PairingCodesPanel

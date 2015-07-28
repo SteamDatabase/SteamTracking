@@ -101,7 +101,7 @@ JoinItem
 
 	transition-property: pre-transform-scale2d, transform, position;
 	transition-duration: shortmedduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 

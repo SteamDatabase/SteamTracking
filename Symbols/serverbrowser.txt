@@ -835,7 +835,7 @@
  D servernetadr_t::ToString(unsigned int, unsigned short) const::s
  D typeinfo for BlankImage
  D typeinfo for CBaseGamesPage
- D typeinfo for CBaseGamesPage::CCallbackOnFavoritesMsg
+ D typeinfo for CBaseGamesPage::CCallback_OnFavoritesMsg
  D typeinfo for CBoolProperty
  D typeinfo for CCallback<CBaseGamesPage, FavoritesListChanged_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
@@ -844,13 +844,17 @@
  D typeinfo for CCallback<CDialogGameInfo, PersonaStateChange_t, false>
  D typeinfo for CCallback<CModList, AppInfoChanged_t, false>
  D typeinfo for CCallbackBase
+ D typeinfo for CCallbackImpl<12>
+ D typeinfo for CCallbackImpl<28>
+ D typeinfo for CCallbackImpl<4>
+ D typeinfo for CCallbackImpl<8>
  D typeinfo for CColorProperty
  D typeinfo for CCookie
  D typeinfo for CDLLValidate
  D typeinfo for CDialogAddServer
  D typeinfo for CDialogGameInfo
- D typeinfo for CDialogGameInfo::CCallbackOnPersonaStateChange
- D typeinfo for CDialogGameInfo::CCallbackOnRichPresenceChange
+ D typeinfo for CDialogGameInfo::CCallback_OnPersonaStateChange
+ D typeinfo for CDialogGameInfo::CCallback_OnRichPresenceChange
  D typeinfo for CDialogServerPassword
  D typeinfo for CFavoriteGames
  D typeinfo for CFloatProperty
@@ -899,7 +903,7 @@
  D typeinfo for CInternetGames
  D typeinfo for CLanGames
  D typeinfo for CModList
- D typeinfo for CModList::CCallbackOnAppDataChanged
+ D typeinfo for CModList::CCallback_OnAppDataChanged
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgBrowserCreate
  D typeinfo for CMsgBrowserCreateResponse
@@ -1626,7 +1630,7 @@
  D vgui::URLLabel::PanelMessageFunc_SetURL::InitVar()::bAdded
  D vtable for BlankImage
  D vtable for CBaseGamesPage
- D vtable for CBaseGamesPage::CCallbackOnFavoritesMsg
+ D vtable for CBaseGamesPage::CCallback_OnFavoritesMsg
  D vtable for CBoolProperty
  D vtable for CCallback<CBaseGamesPage, FavoritesListChanged_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
@@ -1634,13 +1638,17 @@
  D vtable for CCallback<CDialogGameInfo, FriendRichPresenceUpdate_t, false>
  D vtable for CCallback<CDialogGameInfo, PersonaStateChange_t, false>
  D vtable for CCallback<CModList, AppInfoChanged_t, false>
+ D vtable for CCallbackImpl<12>
+ D vtable for CCallbackImpl<28>
+ D vtable for CCallbackImpl<4>
+ D vtable for CCallbackImpl<8>
  D vtable for CColorProperty
  D vtable for CCookie
  D vtable for CDLLValidate
  D vtable for CDialogAddServer
  D vtable for CDialogGameInfo
- D vtable for CDialogGameInfo::CCallbackOnPersonaStateChange
- D vtable for CDialogGameInfo::CCallbackOnRichPresenceChange
+ D vtable for CDialogGameInfo::CCallback_OnPersonaStateChange
+ D vtable for CDialogGameInfo::CCallback_OnRichPresenceChange
  D vtable for CDialogServerPassword
  D vtable for CFavoriteGames
  D vtable for CFloatProperty
@@ -1688,7 +1696,7 @@
  D vtable for CInternetGames
  D vtable for CLanGames
  D vtable for CModList
- D vtable for CModList::CCallbackOnAppDataChanged
+ D vtable for CModList::CCallback_OnAppDataChanged
  D vtable for CMsgAddHeader
  D vtable for CMsgBrowserCreate
  D vtable for CMsgBrowserCreateResponse
@@ -1903,7 +1911,7 @@
  R std::tr1::__detail::_Primes<4>::__primes
  R typeinfo name for BlankImage
  R typeinfo name for CBaseGamesPage
- R typeinfo name for CBaseGamesPage::CCallbackOnFavoritesMsg
+ R typeinfo name for CBaseGamesPage::CCallback_OnFavoritesMsg
  R typeinfo name for CBoolProperty
  R typeinfo name for CCallback<CBaseGamesPage, FavoritesListChanged_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
@@ -1912,13 +1920,17 @@
  R typeinfo name for CCallback<CDialogGameInfo, PersonaStateChange_t, false>
  R typeinfo name for CCallback<CModList, AppInfoChanged_t, false>
  R typeinfo name for CCallbackBase
+ R typeinfo name for CCallbackImpl<12>
+ R typeinfo name for CCallbackImpl<28>
+ R typeinfo name for CCallbackImpl<4>
+ R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CColorProperty
  R typeinfo name for CCookie
  R typeinfo name for CDLLValidate
  R typeinfo name for CDialogAddServer
  R typeinfo name for CDialogGameInfo
- R typeinfo name for CDialogGameInfo::CCallbackOnPersonaStateChange
- R typeinfo name for CDialogGameInfo::CCallbackOnRichPresenceChange
+ R typeinfo name for CDialogGameInfo::CCallback_OnPersonaStateChange
+ R typeinfo name for CDialogGameInfo::CCallback_OnRichPresenceChange
  R typeinfo name for CDialogServerPassword
  R typeinfo name for CFavoriteGames
  R typeinfo name for CFloatProperty
@@ -1967,7 +1979,7 @@
  R typeinfo name for CInternetGames
  R typeinfo name for CLanGames
  R typeinfo name for CModList
- R typeinfo name for CModList::CCallbackOnAppDataChanged
+ R typeinfo name for CModList::CCallback_OnAppDataChanged
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgBrowserCreate
  R typeinfo name for CMsgBrowserCreateResponse
@@ -2313,8 +2325,7 @@
  T CBaseGamesPage::ApplySchemeSettings(vgui::IScheme*)
  T CBaseGamesPage::BShowServer(serverdisplay_t&)
  T CBaseGamesPage::CBaseGamesPage(vgui::Panel*, char const*, CBaseGamesPage::EPageType, char const*)
- T CBaseGamesPage::CCallbackOnFavoritesMsg::Run(void*)
- T CBaseGamesPage::CCallbackOnFavoritesMsg::Run(void*, bool, unsigned long long)
+ T CBaseGamesPage::CCallback_OnFavoritesMsg::Run(void*)
  T CBaseGamesPage::ChainToAnimationMap()
  T CBaseGamesPage::ChainToMap()
  T CBaseGamesPage::CheckPrimaryFilters(gameserveritem_t&)
@@ -2383,39 +2394,35 @@
  T CBuildGroupFileCache::Validate(CValidator&, char const*)
  T CBuildGroupFileCache::~CBuildGroupFileCache()
  T CCallback<CBaseGamesPage, FavoritesListChanged_t, false>::CCallback(CBaseGamesPage*, void (CBaseGamesPage::*)(FavoritesListChanged_t*))
- T CCallback<CBaseGamesPage, FavoritesListChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CBaseGamesPage, FavoritesListChanged_t, false>::Register(CBaseGamesPage*, void (CBaseGamesPage::*)(FavoritesListChanged_t*))
  T CCallback<CBaseGamesPage, FavoritesListChanged_t, false>::Run(void*)
- T CCallback<CBaseGamesPage, FavoritesListChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBaseGamesPage, FavoritesListChanged_t, false>::~CCallback()
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::GetCallbackSizeBytes()
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::~CCallback()
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::GetCallbackSizeBytes()
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*, bool, unsigned long long)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallback()
  T CCallback<CDialogGameInfo, FriendRichPresenceUpdate_t, false>::CCallback(CDialogGameInfo*, void (CDialogGameInfo::*)(FriendRichPresenceUpdate_t*))
- T CCallback<CDialogGameInfo, FriendRichPresenceUpdate_t, false>::GetCallbackSizeBytes()
  T CCallback<CDialogGameInfo, FriendRichPresenceUpdate_t, false>::Register(CDialogGameInfo*, void (CDialogGameInfo::*)(FriendRichPresenceUpdate_t*))
  T CCallback<CDialogGameInfo, FriendRichPresenceUpdate_t, false>::Run(void*)
- T CCallback<CDialogGameInfo, FriendRichPresenceUpdate_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CDialogGameInfo, FriendRichPresenceUpdate_t, false>::~CCallback()
  T CCallback<CDialogGameInfo, PersonaStateChange_t, false>::CCallback(CDialogGameInfo*, void (CDialogGameInfo::*)(PersonaStateChange_t*))
- T CCallback<CDialogGameInfo, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CDialogGameInfo, PersonaStateChange_t, false>::Register(CDialogGameInfo*, void (CDialogGameInfo::*)(PersonaStateChange_t*))
  T CCallback<CDialogGameInfo, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CDialogGameInfo, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CDialogGameInfo, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CModList, AppInfoChanged_t, false>::CCallback(CModList*, void (CModList::*)(AppInfoChanged_t*))
- T CCallback<CModList, AppInfoChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CModList, AppInfoChanged_t, false>::Register(CModList*, void (CModList::*)(AppInfoChanged_t*))
  T CCallback<CModList, AppInfoChanged_t, false>::Run(void*)
- T CCallback<CModList, AppInfoChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CModList, AppInfoChanged_t, false>::~CCallback()
+ T CCallbackImpl<12>::GetCallbackSizeBytes()
+ T CCallbackImpl<12>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<12>::~CCallbackImpl()
+ T CCallbackImpl<28>::GetCallbackSizeBytes()
+ T CCallbackImpl<28>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<28>::~CCallbackImpl()
+ T CCallbackImpl<4>::GetCallbackSizeBytes()
+ T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<4>::~CCallbackImpl()
+ T CCallbackImpl<8>::GetCallbackSizeBytes()
+ T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<8>::~CCallbackImpl()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
@@ -2480,10 +2487,8 @@
  T CDialogAddServer::~CDialogAddServer()
  T CDialogGameInfo::AddPlayerToList(char const*, int, float)
  T CDialogGameInfo::ApplyConnectCommand(gameserveritem_t const&)
- T CDialogGameInfo::CCallbackOnPersonaStateChange::Run(void*)
- T CDialogGameInfo::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
- T CDialogGameInfo::CCallbackOnRichPresenceChange::Run(void*)
- T CDialogGameInfo::CCallbackOnRichPresenceChange::Run(void*, bool, unsigned long long)
+ T CDialogGameInfo::CCallback_OnPersonaStateChange::Run(void*)
+ T CDialogGameInfo::CCallback_OnRichPresenceChange::Run(void*)
  T CDialogGameInfo::CDialogGameInfo(vgui::Panel*, int, int, unsigned short, CSteamID const&)
  T CDialogGameInfo::ChainToAnimationMap()
  T CDialogGameInfo::ChainToMap()
@@ -2795,8 +2800,7 @@
  T CMemoryPool::~CMemoryPool()
  T CModList::AddVGUIListener(unsigned int)
  T CModList::BHasAppID(unsigned int) const
- T CModList::CCallbackOnAppDataChanged::Run(void*)
- T CModList::CCallbackOnAppDataChanged::Run(void*, bool, unsigned long long)
+ T CModList::CCallback_OnAppDataChanged::Run(void*)
  T CModList::CModList()
  T CModList::GetAppID(int) const
  T CModList::GetIndex(CGameID const&) const

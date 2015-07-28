@@ -37,7 +37,7 @@
 {
 	animation-name: library-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
@@ -142,7 +142,7 @@
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }

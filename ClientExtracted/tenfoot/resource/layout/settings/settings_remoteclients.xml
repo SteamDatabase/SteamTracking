@@ -13,8 +13,9 @@
 
 		<!-- main panel -->
 		<Panel class="SettingsContent SettingsCenterContentWide">
-			<Label text="#Settings_RemoteClients_Description" />
-			<Panel id="SettingsRemoteClientTable">
+
+			<Label text="#Settings_RemoteClients_Description" class="ShowIfNotStreamingUI" />
+			<Panel id="SettingsRemoteClientTable" class="ShowIfNotStreamingUI">
 				<Panel class="SettingsRemoteClientsHeader">
 					<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_DeviceName" hittest="false" />
 					<Label class="SettingsManageDevices_ColumnName" text="#Settings_RemoteClients_Status" hittest="false" />
@@ -27,12 +28,21 @@
 				</Panel>
 			</Panel>
 			
-			<Panel class="SettingsContent SettingsContentStreaming">	
+			<Panel class="SettingsContent SettingsContentStreaming ShowIfNotStreamingUI">	
 				<ToggleButton class="CheckBox" id="EnableStreaming" onactivate="ToggleEnableStreaming();" text="#Settings_RemoteClients_EnableStreaming" />
 				<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617);">
 						<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
 				</Button>
 			</Panel>
+
+			<Panel class="SettingsContent SettingsContentStreaming ShowIfStreamingUI" id="SettingsRemoteClientsStreamActiveContainer">
+				<Label text="#Settings_RemoteClients_StreamActiveIntro" />
+				<Label id="SettingsRemoteClientsStreamActiveDeviceLabel" text="#Settings_RemoteClients_StreamActiveDeviceName" />
+				<Button class="Button" onactivate="StopStreaming()"><Label class="LongDesc" text="#Quit_StopStreaming" /></Button>
+				<Panel id="SettingsRemoteClientsStreamActiveSpacefiller" />
+				<Label text="#Settings_RemoteClients_StreamActiveSettings" />
+			</Panel>
+
 			<Panel class="SettingsContentFlowRight">
 				<Panel class="SettingsContent SettingsColumnarContent" >
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_HostLabel" />
@@ -46,7 +56,7 @@
 					</Button>
 				</Panel>
 	
-				<Panel class="SettingsContent SettingsColumnarContent">
+				<Panel class="SettingsContent SettingsColumnarContent ShowIfNotStreamingUI">
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_ClientLabel" />
 					<RadioButton group="QUALITY" class="Button RadioButton Wide" id="RadioQualityFast" tabindex="auto" onactivate="UpdateStreamingQuality();" text="#Settings_RemoteClients_QualityFast" selectionpos="auto" />
 					<RadioButton group="QUALITY" class="Button RadioButton Wide" id="RadioQualityBalanced" tabindex="auto" onactivate="UpdateStreamingQuality();" text="#Settings_RemoteClients_QualityBalanced" selectionpos="auto" />

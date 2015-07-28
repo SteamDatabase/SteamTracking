@@ -1837,37 +1837,37 @@
  D typeinfo for AppModalQueryBox
  D typeinfo for BlankImage
  D typeinfo for CAchievementImagePanel
- D typeinfo for CAchievementImagePanel::CCallbackOnAchievementIconReady
+ D typeinfo for CAchievementImagePanel::CCallback_OnAchievementIconReady
  D typeinfo for CAchievementInfoPanel
  D typeinfo for CBaseDashboardPanel
  D typeinfo for CBaseDesktopPanel
  D typeinfo for CBasePanel
- D typeinfo for CBasePanel::CCallbackOnAsyncNotificationsRequested
- D typeinfo for CBasePanel::CCallbackOnBroadcastRecorderError
- D typeinfo for CBasePanel::CCallbackOnBroadcastSettingsLoaded
- D typeinfo for CBasePanel::CCallbackOnBroadcastShowFirstTimeDlg
- D typeinfo for CBasePanel::CCallbackOnBroadcastStatus
- D typeinfo for CBasePanel::CCallbackOnBroadcastUploadsDisabled
- D typeinfo for CBasePanel::CCallbackOnFilePublished
- D typeinfo for CBasePanel::CCallbackOnGameOverlayActivateRequested
- D typeinfo for CBasePanel::CCallbackOnLegacyCDKeyRegistered
- D typeinfo for CBasePanel::CCallbackOnLoggedOff
- D typeinfo for CBasePanel::CCallbackOnLowBattery
- D typeinfo for CBasePanel::CCallbackOnMicroTxnAuthRequest
- D typeinfo for CBasePanel::CCallbackOnParentalLockChanged
- D typeinfo for CBasePanel::CCallbackOnPersonaStateChange
- D typeinfo for CBasePanel::CCallbackOnPublishedFileUpdated
- D typeinfo for CBasePanel::CCallbackOnScreenshotWritten
+ D typeinfo for CBasePanel::CCallback_OnAsyncNotificationsRequested
+ D typeinfo for CBasePanel::CCallback_OnBroadcastRecorderError
+ D typeinfo for CBasePanel::CCallback_OnBroadcastSettingsLoaded
+ D typeinfo for CBasePanel::CCallback_OnBroadcastShowFirstTimeDlg
+ D typeinfo for CBasePanel::CCallback_OnBroadcastStatus
+ D typeinfo for CBasePanel::CCallback_OnBroadcastUploadsDisabled
+ D typeinfo for CBasePanel::CCallback_OnFilePublished
+ D typeinfo for CBasePanel::CCallback_OnGameOverlayActivateRequested
+ D typeinfo for CBasePanel::CCallback_OnLegacyCDKeyRegistered
+ D typeinfo for CBasePanel::CCallback_OnLoggedOff
+ D typeinfo for CBasePanel::CCallback_OnLowBattery
+ D typeinfo for CBasePanel::CCallback_OnMicroTxnAuthRequest
+ D typeinfo for CBasePanel::CCallback_OnParentalLockChanged
+ D typeinfo for CBasePanel::CCallback_OnPersonaStateChange
+ D typeinfo for CBasePanel::CCallback_OnPublishedFileUpdated
+ D typeinfo for CBasePanel::CCallback_OnScreenshotWritten
  D typeinfo for CBoolProperty
  D typeinfo for CBroadcastAvailableToWatch
  D typeinfo for CBroadcastChatBanner
- D typeinfo for CBroadcastChatBanner::CCallbackOnBroadcastChatMessage
+ D typeinfo for CBroadcastChatBanner::CCallback_OnBroadcastChatMessage
  D typeinfo for CBroadcastFirstTimeDialog
  D typeinfo for CBroadcastLiveBanner
- D typeinfo for CBroadcastLiveBanner::CCallbackOnBroadcastMicrophoneStatus
- D typeinfo for CBroadcastLiveBanner::CCallbackOnBroadcastSettingsLoaded
- D typeinfo for CBroadcastLiveBanner::CCallbackOnBroadcastStatus
- D typeinfo for CBroadcastLiveBanner::CCallbackOnBroadcastUploadStatus
+ D typeinfo for CBroadcastLiveBanner::CCallback_OnBroadcastMicrophoneStatus
+ D typeinfo for CBroadcastLiveBanner::CCallback_OnBroadcastSettingsLoaded
+ D typeinfo for CBroadcastLiveBanner::CCallback_OnBroadcastStatus
+ D typeinfo for CBroadcastLiveBanner::CCallback_OnBroadcastUploadStatus
  D typeinfo for CBroadcastUploadErrorNotification
  D typeinfo for CCallResult<CGuideItemPanel, RemoteStorageDownloadUGCResult_t>
  D typeinfo for CCallResult<CHTTPImage, HTTPRequestCompleted_t>
@@ -1968,6 +1968,27 @@
  D typeinfo for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  D typeinfo for CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>
  D typeinfo for CCallbackBase
+ D typeinfo for CCallbackImpl<1025>
+ D typeinfo for CCallbackImpl<1028>
+ D typeinfo for CCallbackImpl<12>
+ D typeinfo for CCallbackImpl<144>
+ D typeinfo for CCallbackImpl<148>
+ D typeinfo for CCallbackImpl<16>
+ D typeinfo for CCallbackImpl<1>
+ D typeinfo for CCallbackImpl<2056>
+ D typeinfo for CCallbackImpl<2068>
+ D typeinfo for CCallbackImpl<2080>
+ D typeinfo for CCallbackImpl<20>
+ D typeinfo for CCallbackImpl<24>
+ D typeinfo for CCallbackImpl<292>
+ D typeinfo for CCallbackImpl<2>
+ D typeinfo for CCallbackImpl<3092>
+ D typeinfo for CCallbackImpl<3096>
+ D typeinfo for CCallbackImpl<4120>
+ D typeinfo for CCallbackImpl<4>
+ D typeinfo for CCallbackImpl<520>
+ D typeinfo for CCallbackImpl<600>
+ D typeinfo for CCallbackImpl<8>
  D typeinfo for CColorProperty
  D typeinfo for CConVarAccessor
  D typeinfo for CCookie
@@ -2022,7 +2043,7 @@
  D typeinfo for CItemImageManager
  D typeinfo for CMainOverlay
  D typeinfo for CMicroTxnAuthorizeDialog
- D typeinfo for CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss
+ D typeinfo for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgBrowserCreate
  D typeinfo for CMsgBrowserCreateResponse
@@ -2128,50 +2149,50 @@
  D typeinfo for CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>
  D typeinfo for CMusicLibraryPanel
  D typeinfo for CMusicPage_Details_Album
- D typeinfo for CMusicPage_Details_Album::CCallbackOnAlbumCoverLoaded
- D typeinfo for CMusicPage_Details_Album::CCallbackOnTrackListDataEntryForAlbumID
+ D typeinfo for CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded
+ D typeinfo for CMusicPage_Details_Album::CCallback_OnTrackListDataEntryForAlbumID
  D typeinfo for CMusicPage_Details_Content
- D typeinfo for CMusicPage_Details_Content::CCallbackOnAlbumListDataEntry
- D typeinfo for CMusicPage_Details_Content::CCallbackOnArtistListDataEntry
- D typeinfo for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingFinished
- D typeinfo for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingInterrupted
- D typeinfo for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingMessage
- D typeinfo for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingWillStart
- D typeinfo for CMusicPage_Details_Content::CCallbackOnLocalLibraryDatabaseHasBeenReset
- D typeinfo for CMusicPage_Details_Content::CCallbackOnPlaylistAdded
- D typeinfo for CMusicPage_Details_Content::CCallbackOnPlaylistDeleted
- D typeinfo for CMusicPage_Details_Content::CCallbackOnPlaylistListDataEntry
- D typeinfo for CMusicPage_Details_Content::CCallbackOnPlaylistMoved
- D typeinfo for CMusicPage_Details_Content::CCallbackOnPlaylistNameHasChanged
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnAlbumListDataEntry
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnArtistListDataEntry
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingFinished
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingInterrupted
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingMessage
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingWillStart
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnLocalLibraryDatabaseHasBeenReset
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnPlaylistAdded
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnPlaylistDeleted
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnPlaylistListDataEntry
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnPlaylistMoved
+ D typeinfo for CMusicPage_Details_Content::CCallback_OnPlaylistNameHasChanged
  D typeinfo for CMusicPage_Details_Playlist
- D typeinfo for CMusicPage_Details_Playlist::CCallbackOnAlbumCoverLoaded
- D typeinfo for CMusicPage_Details_Playlist::CCallbackOnPlaylistAllEntriesDeleted
- D typeinfo for CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesDeleted
- D typeinfo for CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveChanged
- D typeinfo for CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveMoved
- D typeinfo for CMusicPage_Details_Playlist::CCallbackOnPlaylistNameHasChanged
- D typeinfo for CMusicPage_Details_Playlist::CCallbackOnTrackListDataEntryForPlaylistID
+ D typeinfo for CMusicPage_Details_Playlist::CCallback_OnAlbumCoverLoaded
+ D typeinfo for CMusicPage_Details_Playlist::CCallback_OnPlaylistAllEntriesDeleted
+ D typeinfo for CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesDeleted
+ D typeinfo for CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesHaveChanged
+ D typeinfo for CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesHaveMoved
+ D typeinfo for CMusicPage_Details_Playlist::CCallback_OnPlaylistNameHasChanged
+ D typeinfo for CMusicPage_Details_Playlist::CCallback_OnTrackListDataEntryForPlaylistID
  D typeinfo for CMusicPlayerLabel
  D typeinfo for CMusicPlayerPanel
- D typeinfo for CMusicPlayerPanel::CCallbackOnAlbumCoverLoaded
- D typeinfo for CMusicPlayerPanel::CCallbackOnCurrentQueueEntryHasChanged
- D typeinfo for CMusicPlayerPanel::CCallbackOnCurrentQueueEntrySecondsElapsedChanged
- D typeinfo for CMusicPlayerPanel::CCallbackOnGameOverlayActivated
- D typeinfo for CMusicPlayerPanel::CCallbackOnPlaybackStatusHasChanged
- D typeinfo for CMusicPlayerPanel::CCallbackOnPlayingRepeatStatusHasChanged
- D typeinfo for CMusicPlayerPanel::CCallbackOnPlayingShuffledHasChanged
- D typeinfo for CMusicPlayerPanel::CCallbackOnQueueEntriesHaveChanged
- D typeinfo for CMusicPlayerPanel::CCallbackOnVolumeHasChanged
+ D typeinfo for CMusicPlayerPanel::CCallback_OnAlbumCoverLoaded
+ D typeinfo for CMusicPlayerPanel::CCallback_OnCurrentQueueEntryHasChanged
+ D typeinfo for CMusicPlayerPanel::CCallback_OnCurrentQueueEntrySecondsElapsedChanged
+ D typeinfo for CMusicPlayerPanel::CCallback_OnGameOverlayActivated
+ D typeinfo for CMusicPlayerPanel::CCallback_OnPlaybackStatusHasChanged
+ D typeinfo for CMusicPlayerPanel::CCallback_OnPlayingRepeatStatusHasChanged
+ D typeinfo for CMusicPlayerPanel::CCallback_OnPlayingShuffledHasChanged
+ D typeinfo for CMusicPlayerPanel::CCallback_OnQueueEntriesHaveChanged
+ D typeinfo for CMusicPlayerPanel::CCallback_OnVolumeHasChanged
  D typeinfo for CMusicPlayerVolumePanel
  D typeinfo for CNewsItemPanel
  D typeinfo for COverlayAsyncNotificationsRequestedDialog
  D typeinfo for COverlayBroadcastChatDialog
- D typeinfo for COverlayBroadcastChatDialog::CCallbackOnBroadcastChatMessage
- D typeinfo for COverlayBroadcastChatDialog::CCallbackOnBroadcastStatus
+ D typeinfo for COverlayBroadcastChatDialog::CCallback_OnBroadcastChatMessage
+ D typeinfo for COverlayBroadcastChatDialog::CCallback_OnBroadcastStatus
  D typeinfo for COverlayCDKeyDialog
  D typeinfo for COverlayCDKeyNotification
  D typeinfo for COverlayDetailsBroadcastPanel
- D typeinfo for COverlayDetailsBroadcastPanel::CCallbackOnBroadcastStatus
+ D typeinfo for COverlayDetailsBroadcastPanel::CCallback_OnBroadcastStatus
  D typeinfo for COverlayFriendChangeConfirmationDialog
  D typeinfo for COverlayInGameVoiceSettingsDialog
  D typeinfo for COverlayLoggedInElsewhereNotification
@@ -2181,11 +2202,11 @@
  D typeinfo for COverlaySplash
  D typeinfo for COverlayStateInfo
  D typeinfo for COverlayWebBrowser
- D typeinfo for COverlayWebBrowser::CCallbackOnParentalLockChanged
+ D typeinfo for COverlayWebBrowser::CCallback_OnParentalLockChanged
  D typeinfo for COverlayWebBrowserHTML
  D typeinfo for COverlay_Details_Achievements
- D typeinfo for COverlay_Details_Achievements::CCallbackOnUserAchievement
- D typeinfo for COverlay_Details_Achievements::CCallbackOnUserStatsReceived
+ D typeinfo for COverlay_Details_Achievements::CCallback_OnUserAchievement
+ D typeinfo for COverlay_Details_Achievements::CCallback_OnUserStatsReceived
  D typeinfo for COverlay_Details_CommunityDiscussions_Panel
  D typeinfo for COverlay_Details_CommunityHub_Panel
  D typeinfo for COverlay_Details_Friends
@@ -2194,38 +2215,38 @@
  D typeinfo for COverlay_Details_Screenshots_Panel
  D typeinfo for CPanelAnimationDictionary
  D typeinfo for CPanelHideWrapper<COverlayDetailsBroadcastPanel>
- D typeinfo for CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<COverlay_Details_Achievements>
- D typeinfo for CPanelHideWrapper<COverlay_Details_Achievements>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<COverlay_Details_Achievements>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>
- D typeinfo for CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>
- D typeinfo for CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<COverlay_Details_Friends>
- D typeinfo for CPanelHideWrapper<COverlay_Details_Friends>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<COverlay_Details_Friends>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<COverlay_Details_Guides_Panel>
- D typeinfo for CPanelHideWrapper<COverlay_Details_Guides_Panel>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<COverlay_Details_Guides_Panel>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<COverlay_Details_News>
- D typeinfo for CPanelHideWrapper<COverlay_Details_News>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<COverlay_Details_News>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<COverlay_Details_Screenshots_Panel>
- D typeinfo for CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<vgui::ImagePanel>
- D typeinfo for CPanelHideWrapper<vgui::ImagePanel>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<vgui::ImagePanel>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<vgui::Label>
- D typeinfo for CPanelHideWrapper<vgui::Label>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<vgui::Label>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelHideWrapper<vgui::URLLabel>
- D typeinfo for CPanelHideWrapper<vgui::URLLabel>::CCallbackOnParentalLockChanged
+ D typeinfo for CPanelHideWrapper<vgui::URLLabel>::CCallback_OnParentalLockChanged
  D typeinfo for CPanelMessageMapDictionary
  D typeinfo for CParentalCache
- D typeinfo for CParentalCache::CCallbackOnParentalLockChangeBegin
+ D typeinfo for CParentalCache::CCallback_OnParentalLockChangeBegin
  D typeinfo for CPathString
  D typeinfo for CPlaylistItemLabel
  D typeinfo for CPlaylistItemPanel
  D typeinfo for CProportionalFloatProperty
  D typeinfo for CProportionalIntProperty
  D typeinfo for CRefreshLoginDialog
- D typeinfo for CRefreshLoginDialog::CCallbackOnLogonFailure
- D typeinfo for CRefreshLoginDialog::CCallbackOnLogonSuccess
+ D typeinfo for CRefreshLoginDialog::CCallback_OnLogonFailure
+ D typeinfo for CRefreshLoginDialog::CCallback_OnLogonSuccess
  D typeinfo for CRunGameEngine
  D typeinfo for CSavedMemStream
  D typeinfo for CScreenshotCaptionEntry
@@ -2238,19 +2259,19 @@
  D typeinfo for CScreenshotThread
  D typeinfo for CScreenshotUploadDialog
  D typeinfo for CSettingsSubBroadcast
- D typeinfo for CSettingsSubBroadcast::CCallbackOnBroadcastStatus
+ D typeinfo for CSettingsSubBroadcast::CCallback_OnBroadcastStatus
  D typeinfo for CSettingsSubBrowser
  D typeinfo for CSettingsSubFriends
- D typeinfo for CSettingsSubFriends::CCallbackOnPersonaStateChange
+ D typeinfo for CSettingsSubFriends::CCallback_OnPersonaStateChange
  D typeinfo for CSettingsSubInGame
  D typeinfo for CSettingsSubVoice
- D typeinfo for CSettingsSubVoice::CCallbackOnVoiceInputDeviceChanged
+ D typeinfo for CSettingsSubVoice::CCallback_OnVoiceInputDeviceChanged
  D typeinfo for CSharedMemStream
  D typeinfo for CSoundSystemSelect
  D typeinfo for CSteamAuthedHTML
- D typeinfo for CSteamAuthedHTML::CCallbackOnCredentialsChanged
- D typeinfo for CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged
- D typeinfo for CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync
+ D typeinfo for CSteamAuthedHTML::CCallback_OnCredentialsChanged
+ D typeinfo for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
+ D typeinfo for CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
  D typeinfo for CTrackItemPanel
@@ -3052,37 +3073,37 @@
  D vtable for AppModalQueryBox
  D vtable for BlankImage
  D vtable for CAchievementImagePanel
- D vtable for CAchievementImagePanel::CCallbackOnAchievementIconReady
+ D vtable for CAchievementImagePanel::CCallback_OnAchievementIconReady
  D vtable for CAchievementInfoPanel
  D vtable for CBaseDashboardPanel
  D vtable for CBaseDesktopPanel
  D vtable for CBasePanel
- D vtable for CBasePanel::CCallbackOnAsyncNotificationsRequested
- D vtable for CBasePanel::CCallbackOnBroadcastRecorderError
- D vtable for CBasePanel::CCallbackOnBroadcastSettingsLoaded
- D vtable for CBasePanel::CCallbackOnBroadcastShowFirstTimeDlg
- D vtable for CBasePanel::CCallbackOnBroadcastStatus
- D vtable for CBasePanel::CCallbackOnBroadcastUploadsDisabled
- D vtable for CBasePanel::CCallbackOnFilePublished
- D vtable for CBasePanel::CCallbackOnGameOverlayActivateRequested
- D vtable for CBasePanel::CCallbackOnLegacyCDKeyRegistered
- D vtable for CBasePanel::CCallbackOnLoggedOff
- D vtable for CBasePanel::CCallbackOnLowBattery
- D vtable for CBasePanel::CCallbackOnMicroTxnAuthRequest
- D vtable for CBasePanel::CCallbackOnParentalLockChanged
- D vtable for CBasePanel::CCallbackOnPersonaStateChange
- D vtable for CBasePanel::CCallbackOnPublishedFileUpdated
- D vtable for CBasePanel::CCallbackOnScreenshotWritten
+ D vtable for CBasePanel::CCallback_OnAsyncNotificationsRequested
+ D vtable for CBasePanel::CCallback_OnBroadcastRecorderError
+ D vtable for CBasePanel::CCallback_OnBroadcastSettingsLoaded
+ D vtable for CBasePanel::CCallback_OnBroadcastShowFirstTimeDlg
+ D vtable for CBasePanel::CCallback_OnBroadcastStatus
+ D vtable for CBasePanel::CCallback_OnBroadcastUploadsDisabled
+ D vtable for CBasePanel::CCallback_OnFilePublished
+ D vtable for CBasePanel::CCallback_OnGameOverlayActivateRequested
+ D vtable for CBasePanel::CCallback_OnLegacyCDKeyRegistered
+ D vtable for CBasePanel::CCallback_OnLoggedOff
+ D vtable for CBasePanel::CCallback_OnLowBattery
+ D vtable for CBasePanel::CCallback_OnMicroTxnAuthRequest
+ D vtable for CBasePanel::CCallback_OnParentalLockChanged
+ D vtable for CBasePanel::CCallback_OnPersonaStateChange
+ D vtable for CBasePanel::CCallback_OnPublishedFileUpdated
+ D vtable for CBasePanel::CCallback_OnScreenshotWritten
  D vtable for CBoolProperty
  D vtable for CBroadcastAvailableToWatch
  D vtable for CBroadcastChatBanner
- D vtable for CBroadcastChatBanner::CCallbackOnBroadcastChatMessage
+ D vtable for CBroadcastChatBanner::CCallback_OnBroadcastChatMessage
  D vtable for CBroadcastFirstTimeDialog
  D vtable for CBroadcastLiveBanner
- D vtable for CBroadcastLiveBanner::CCallbackOnBroadcastMicrophoneStatus
- D vtable for CBroadcastLiveBanner::CCallbackOnBroadcastSettingsLoaded
- D vtable for CBroadcastLiveBanner::CCallbackOnBroadcastStatus
- D vtable for CBroadcastLiveBanner::CCallbackOnBroadcastUploadStatus
+ D vtable for CBroadcastLiveBanner::CCallback_OnBroadcastMicrophoneStatus
+ D vtable for CBroadcastLiveBanner::CCallback_OnBroadcastSettingsLoaded
+ D vtable for CBroadcastLiveBanner::CCallback_OnBroadcastStatus
+ D vtable for CBroadcastLiveBanner::CCallback_OnBroadcastUploadStatus
  D vtable for CBroadcastUploadErrorNotification
  D vtable for CCallResult<CGuideItemPanel, RemoteStorageDownloadUGCResult_t>
  D vtable for CCallResult<CHTTPImage, HTTPRequestCompleted_t>
@@ -3182,6 +3203,27 @@
  D vtable for CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>
  D vtable for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  D vtable for CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>
+ D vtable for CCallbackImpl<1025>
+ D vtable for CCallbackImpl<1028>
+ D vtable for CCallbackImpl<12>
+ D vtable for CCallbackImpl<144>
+ D vtable for CCallbackImpl<148>
+ D vtable for CCallbackImpl<16>
+ D vtable for CCallbackImpl<1>
+ D vtable for CCallbackImpl<2056>
+ D vtable for CCallbackImpl<2068>
+ D vtable for CCallbackImpl<2080>
+ D vtable for CCallbackImpl<20>
+ D vtable for CCallbackImpl<24>
+ D vtable for CCallbackImpl<292>
+ D vtable for CCallbackImpl<2>
+ D vtable for CCallbackImpl<3092>
+ D vtable for CCallbackImpl<3096>
+ D vtable for CCallbackImpl<4120>
+ D vtable for CCallbackImpl<4>
+ D vtable for CCallbackImpl<520>
+ D vtable for CCallbackImpl<600>
+ D vtable for CCallbackImpl<8>
  D vtable for CColorProperty
  D vtable for CConVarAccessor
  D vtable for CCookie
@@ -3235,7 +3277,7 @@
  D vtable for CItemImageManager
  D vtable for CMainOverlay
  D vtable for CMicroTxnAuthorizeDialog
- D vtable for CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss
+ D vtable for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
  D vtable for CMsgAddHeader
  D vtable for CMsgBrowserCreate
  D vtable for CMsgBrowserCreateResponse
@@ -3341,50 +3383,50 @@
  D vtable for CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>
  D vtable for CMusicLibraryPanel
  D vtable for CMusicPage_Details_Album
- D vtable for CMusicPage_Details_Album::CCallbackOnAlbumCoverLoaded
- D vtable for CMusicPage_Details_Album::CCallbackOnTrackListDataEntryForAlbumID
+ D vtable for CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded
+ D vtable for CMusicPage_Details_Album::CCallback_OnTrackListDataEntryForAlbumID
  D vtable for CMusicPage_Details_Content
- D vtable for CMusicPage_Details_Content::CCallbackOnAlbumListDataEntry
- D vtable for CMusicPage_Details_Content::CCallbackOnArtistListDataEntry
- D vtable for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingFinished
- D vtable for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingInterrupted
- D vtable for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingMessage
- D vtable for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingWillStart
- D vtable for CMusicPage_Details_Content::CCallbackOnLocalLibraryDatabaseHasBeenReset
- D vtable for CMusicPage_Details_Content::CCallbackOnPlaylistAdded
- D vtable for CMusicPage_Details_Content::CCallbackOnPlaylistDeleted
- D vtable for CMusicPage_Details_Content::CCallbackOnPlaylistListDataEntry
- D vtable for CMusicPage_Details_Content::CCallbackOnPlaylistMoved
- D vtable for CMusicPage_Details_Content::CCallbackOnPlaylistNameHasChanged
+ D vtable for CMusicPage_Details_Content::CCallback_OnAlbumListDataEntry
+ D vtable for CMusicPage_Details_Content::CCallback_OnArtistListDataEntry
+ D vtable for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingFinished
+ D vtable for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingInterrupted
+ D vtable for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingMessage
+ D vtable for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingWillStart
+ D vtable for CMusicPage_Details_Content::CCallback_OnLocalLibraryDatabaseHasBeenReset
+ D vtable for CMusicPage_Details_Content::CCallback_OnPlaylistAdded
+ D vtable for CMusicPage_Details_Content::CCallback_OnPlaylistDeleted
+ D vtable for CMusicPage_Details_Content::CCallback_OnPlaylistListDataEntry
+ D vtable for CMusicPage_Details_Content::CCallback_OnPlaylistMoved
+ D vtable for CMusicPage_Details_Content::CCallback_OnPlaylistNameHasChanged
  D vtable for CMusicPage_Details_Playlist
- D vtable for CMusicPage_Details_Playlist::CCallbackOnAlbumCoverLoaded
- D vtable for CMusicPage_Details_Playlist::CCallbackOnPlaylistAllEntriesDeleted
- D vtable for CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesDeleted
- D vtable for CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveChanged
- D vtable for CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveMoved
- D vtable for CMusicPage_Details_Playlist::CCallbackOnPlaylistNameHasChanged
- D vtable for CMusicPage_Details_Playlist::CCallbackOnTrackListDataEntryForPlaylistID
+ D vtable for CMusicPage_Details_Playlist::CCallback_OnAlbumCoverLoaded
+ D vtable for CMusicPage_Details_Playlist::CCallback_OnPlaylistAllEntriesDeleted
+ D vtable for CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesDeleted
+ D vtable for CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesHaveChanged
+ D vtable for CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesHaveMoved
+ D vtable for CMusicPage_Details_Playlist::CCallback_OnPlaylistNameHasChanged
+ D vtable for CMusicPage_Details_Playlist::CCallback_OnTrackListDataEntryForPlaylistID
  D vtable for CMusicPlayerLabel
  D vtable for CMusicPlayerPanel
- D vtable for CMusicPlayerPanel::CCallbackOnAlbumCoverLoaded
- D vtable for CMusicPlayerPanel::CCallbackOnCurrentQueueEntryHasChanged
- D vtable for CMusicPlayerPanel::CCallbackOnCurrentQueueEntrySecondsElapsedChanged
- D vtable for CMusicPlayerPanel::CCallbackOnGameOverlayActivated
- D vtable for CMusicPlayerPanel::CCallbackOnPlaybackStatusHasChanged
- D vtable for CMusicPlayerPanel::CCallbackOnPlayingRepeatStatusHasChanged
- D vtable for CMusicPlayerPanel::CCallbackOnPlayingShuffledHasChanged
- D vtable for CMusicPlayerPanel::CCallbackOnQueueEntriesHaveChanged
- D vtable for CMusicPlayerPanel::CCallbackOnVolumeHasChanged
+ D vtable for CMusicPlayerPanel::CCallback_OnAlbumCoverLoaded
+ D vtable for CMusicPlayerPanel::CCallback_OnCurrentQueueEntryHasChanged
+ D vtable for CMusicPlayerPanel::CCallback_OnCurrentQueueEntrySecondsElapsedChanged
+ D vtable for CMusicPlayerPanel::CCallback_OnGameOverlayActivated
+ D vtable for CMusicPlayerPanel::CCallback_OnPlaybackStatusHasChanged
+ D vtable for CMusicPlayerPanel::CCallback_OnPlayingRepeatStatusHasChanged
+ D vtable for CMusicPlayerPanel::CCallback_OnPlayingShuffledHasChanged
+ D vtable for CMusicPlayerPanel::CCallback_OnQueueEntriesHaveChanged
+ D vtable for CMusicPlayerPanel::CCallback_OnVolumeHasChanged
  D vtable for CMusicPlayerVolumePanel
  D vtable for CNewsItemPanel
  D vtable for COverlayAsyncNotificationsRequestedDialog
  D vtable for COverlayBroadcastChatDialog
- D vtable for COverlayBroadcastChatDialog::CCallbackOnBroadcastChatMessage
- D vtable for COverlayBroadcastChatDialog::CCallbackOnBroadcastStatus
+ D vtable for COverlayBroadcastChatDialog::CCallback_OnBroadcastChatMessage
+ D vtable for COverlayBroadcastChatDialog::CCallback_OnBroadcastStatus
  D vtable for COverlayCDKeyDialog
  D vtable for COverlayCDKeyNotification
  D vtable for COverlayDetailsBroadcastPanel
- D vtable for COverlayDetailsBroadcastPanel::CCallbackOnBroadcastStatus
+ D vtable for COverlayDetailsBroadcastPanel::CCallback_OnBroadcastStatus
  D vtable for COverlayFriendChangeConfirmationDialog
  D vtable for COverlayInGameVoiceSettingsDialog
  D vtable for COverlayLoggedInElsewhereNotification
@@ -3394,11 +3436,11 @@
  D vtable for COverlaySplash
  D vtable for COverlayStateInfo
  D vtable for COverlayWebBrowser
- D vtable for COverlayWebBrowser::CCallbackOnParentalLockChanged
+ D vtable for COverlayWebBrowser::CCallback_OnParentalLockChanged
  D vtable for COverlayWebBrowserHTML
  D vtable for COverlay_Details_Achievements
- D vtable for COverlay_Details_Achievements::CCallbackOnUserAchievement
- D vtable for COverlay_Details_Achievements::CCallbackOnUserStatsReceived
+ D vtable for COverlay_Details_Achievements::CCallback_OnUserAchievement
+ D vtable for COverlay_Details_Achievements::CCallback_OnUserStatsReceived
  D vtable for COverlay_Details_CommunityDiscussions_Panel
  D vtable for COverlay_Details_CommunityHub_Panel
  D vtable for COverlay_Details_Friends
@@ -3407,38 +3449,38 @@
  D vtable for COverlay_Details_Screenshots_Panel
  D vtable for CPanelAnimationDictionary
  D vtable for CPanelHideWrapper<COverlayDetailsBroadcastPanel>
- D vtable for CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<COverlay_Details_Achievements>
- D vtable for CPanelHideWrapper<COverlay_Details_Achievements>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<COverlay_Details_Achievements>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>
- D vtable for CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>
- D vtable for CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<COverlay_Details_Friends>
- D vtable for CPanelHideWrapper<COverlay_Details_Friends>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<COverlay_Details_Friends>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<COverlay_Details_Guides_Panel>
- D vtable for CPanelHideWrapper<COverlay_Details_Guides_Panel>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<COverlay_Details_Guides_Panel>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<COverlay_Details_News>
- D vtable for CPanelHideWrapper<COverlay_Details_News>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<COverlay_Details_News>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<COverlay_Details_Screenshots_Panel>
- D vtable for CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<vgui::ImagePanel>
- D vtable for CPanelHideWrapper<vgui::ImagePanel>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<vgui::ImagePanel>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<vgui::Label>
- D vtable for CPanelHideWrapper<vgui::Label>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<vgui::Label>::CCallback_OnParentalLockChanged
  D vtable for CPanelHideWrapper<vgui::URLLabel>
- D vtable for CPanelHideWrapper<vgui::URLLabel>::CCallbackOnParentalLockChanged
+ D vtable for CPanelHideWrapper<vgui::URLLabel>::CCallback_OnParentalLockChanged
  D vtable for CPanelMessageMapDictionary
  D vtable for CParentalCache
- D vtable for CParentalCache::CCallbackOnParentalLockChangeBegin
+ D vtable for CParentalCache::CCallback_OnParentalLockChangeBegin
  D vtable for CPathString
  D vtable for CPlaylistItemLabel
  D vtable for CPlaylistItemPanel
  D vtable for CProportionalFloatProperty
  D vtable for CProportionalIntProperty
  D vtable for CRefreshLoginDialog
- D vtable for CRefreshLoginDialog::CCallbackOnLogonFailure
- D vtable for CRefreshLoginDialog::CCallbackOnLogonSuccess
+ D vtable for CRefreshLoginDialog::CCallback_OnLogonFailure
+ D vtable for CRefreshLoginDialog::CCallback_OnLogonSuccess
  D vtable for CRunGameEngine
  D vtable for CSavedMemStream
  D vtable for CScreenshotCaptionEntry
@@ -3451,19 +3493,19 @@
  D vtable for CScreenshotThread
  D vtable for CScreenshotUploadDialog
  D vtable for CSettingsSubBroadcast
- D vtable for CSettingsSubBroadcast::CCallbackOnBroadcastStatus
+ D vtable for CSettingsSubBroadcast::CCallback_OnBroadcastStatus
  D vtable for CSettingsSubBrowser
  D vtable for CSettingsSubFriends
- D vtable for CSettingsSubFriends::CCallbackOnPersonaStateChange
+ D vtable for CSettingsSubFriends::CCallback_OnPersonaStateChange
  D vtable for CSettingsSubInGame
  D vtable for CSettingsSubVoice
- D vtable for CSettingsSubVoice::CCallbackOnVoiceInputDeviceChanged
+ D vtable for CSettingsSubVoice::CCallback_OnVoiceInputDeviceChanged
  D vtable for CSharedMemStream
  D vtable for CSoundSystemSelect
  D vtable for CSteamAuthedHTML
- D vtable for CSteamAuthedHTML::CCallbackOnCredentialsChanged
- D vtable for CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged
- D vtable for CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync
+ D vtable for CSteamAuthedHTML::CCallback_OnCredentialsChanged
+ D vtable for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
+ D vtable for CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
  D vtable for CTrackItemPanel
@@ -3678,37 +3720,37 @@
  R typeinfo name for AppModalQueryBox
  R typeinfo name for BlankImage
  R typeinfo name for CAchievementImagePanel
- R typeinfo name for CAchievementImagePanel::CCallbackOnAchievementIconReady
+ R typeinfo name for CAchievementImagePanel::CCallback_OnAchievementIconReady
  R typeinfo name for CAchievementInfoPanel
  R typeinfo name for CBaseDashboardPanel
  R typeinfo name for CBaseDesktopPanel
  R typeinfo name for CBasePanel
- R typeinfo name for CBasePanel::CCallbackOnAsyncNotificationsRequested
- R typeinfo name for CBasePanel::CCallbackOnBroadcastRecorderError
- R typeinfo name for CBasePanel::CCallbackOnBroadcastSettingsLoaded
- R typeinfo name for CBasePanel::CCallbackOnBroadcastShowFirstTimeDlg
- R typeinfo name for CBasePanel::CCallbackOnBroadcastStatus
- R typeinfo name for CBasePanel::CCallbackOnBroadcastUploadsDisabled
- R typeinfo name for CBasePanel::CCallbackOnFilePublished
- R typeinfo name for CBasePanel::CCallbackOnGameOverlayActivateRequested
- R typeinfo name for CBasePanel::CCallbackOnLegacyCDKeyRegistered
- R typeinfo name for CBasePanel::CCallbackOnLoggedOff
- R typeinfo name for CBasePanel::CCallbackOnLowBattery
- R typeinfo name for CBasePanel::CCallbackOnMicroTxnAuthRequest
- R typeinfo name for CBasePanel::CCallbackOnParentalLockChanged
- R typeinfo name for CBasePanel::CCallbackOnPersonaStateChange
- R typeinfo name for CBasePanel::CCallbackOnPublishedFileUpdated
- R typeinfo name for CBasePanel::CCallbackOnScreenshotWritten
+ R typeinfo name for CBasePanel::CCallback_OnAsyncNotificationsRequested
+ R typeinfo name for CBasePanel::CCallback_OnBroadcastRecorderError
+ R typeinfo name for CBasePanel::CCallback_OnBroadcastSettingsLoaded
+ R typeinfo name for CBasePanel::CCallback_OnBroadcastShowFirstTimeDlg
+ R typeinfo name for CBasePanel::CCallback_OnBroadcastStatus
+ R typeinfo name for CBasePanel::CCallback_OnBroadcastUploadsDisabled
+ R typeinfo name for CBasePanel::CCallback_OnFilePublished
+ R typeinfo name for CBasePanel::CCallback_OnGameOverlayActivateRequested
+ R typeinfo name for CBasePanel::CCallback_OnLegacyCDKeyRegistered
+ R typeinfo name for CBasePanel::CCallback_OnLoggedOff
+ R typeinfo name for CBasePanel::CCallback_OnLowBattery
+ R typeinfo name for CBasePanel::CCallback_OnMicroTxnAuthRequest
+ R typeinfo name for CBasePanel::CCallback_OnParentalLockChanged
+ R typeinfo name for CBasePanel::CCallback_OnPersonaStateChange
+ R typeinfo name for CBasePanel::CCallback_OnPublishedFileUpdated
+ R typeinfo name for CBasePanel::CCallback_OnScreenshotWritten
  R typeinfo name for CBoolProperty
  R typeinfo name for CBroadcastAvailableToWatch
  R typeinfo name for CBroadcastChatBanner
- R typeinfo name for CBroadcastChatBanner::CCallbackOnBroadcastChatMessage
+ R typeinfo name for CBroadcastChatBanner::CCallback_OnBroadcastChatMessage
  R typeinfo name for CBroadcastFirstTimeDialog
  R typeinfo name for CBroadcastLiveBanner
- R typeinfo name for CBroadcastLiveBanner::CCallbackOnBroadcastMicrophoneStatus
- R typeinfo name for CBroadcastLiveBanner::CCallbackOnBroadcastSettingsLoaded
- R typeinfo name for CBroadcastLiveBanner::CCallbackOnBroadcastStatus
- R typeinfo name for CBroadcastLiveBanner::CCallbackOnBroadcastUploadStatus
+ R typeinfo name for CBroadcastLiveBanner::CCallback_OnBroadcastMicrophoneStatus
+ R typeinfo name for CBroadcastLiveBanner::CCallback_OnBroadcastSettingsLoaded
+ R typeinfo name for CBroadcastLiveBanner::CCallback_OnBroadcastStatus
+ R typeinfo name for CBroadcastLiveBanner::CCallback_OnBroadcastUploadStatus
  R typeinfo name for CBroadcastUploadErrorNotification
  R typeinfo name for CCallResult<CGuideItemPanel, RemoteStorageDownloadUGCResult_t>
  R typeinfo name for CCallResult<CHTTPImage, HTTPRequestCompleted_t>
@@ -3809,6 +3851,27 @@
  R typeinfo name for CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>
  R typeinfo name for CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>
  R typeinfo name for CCallbackBase
+ R typeinfo name for CCallbackImpl<1025>
+ R typeinfo name for CCallbackImpl<1028>
+ R typeinfo name for CCallbackImpl<12>
+ R typeinfo name for CCallbackImpl<144>
+ R typeinfo name for CCallbackImpl<148>
+ R typeinfo name for CCallbackImpl<16>
+ R typeinfo name for CCallbackImpl<1>
+ R typeinfo name for CCallbackImpl<2056>
+ R typeinfo name for CCallbackImpl<2068>
+ R typeinfo name for CCallbackImpl<2080>
+ R typeinfo name for CCallbackImpl<20>
+ R typeinfo name for CCallbackImpl<24>
+ R typeinfo name for CCallbackImpl<292>
+ R typeinfo name for CCallbackImpl<2>
+ R typeinfo name for CCallbackImpl<3092>
+ R typeinfo name for CCallbackImpl<3096>
+ R typeinfo name for CCallbackImpl<4120>
+ R typeinfo name for CCallbackImpl<4>
+ R typeinfo name for CCallbackImpl<520>
+ R typeinfo name for CCallbackImpl<600>
+ R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CColorProperty
  R typeinfo name for CConVarAccessor
  R typeinfo name for CCookie
@@ -3863,7 +3926,7 @@
  R typeinfo name for CItemImageManager
  R typeinfo name for CMainOverlay
  R typeinfo name for CMicroTxnAuthorizeDialog
- R typeinfo name for CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss
+ R typeinfo name for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgBrowserCreate
  R typeinfo name for CMsgBrowserCreateResponse
@@ -3969,50 +4032,50 @@
  R typeinfo name for CMultipleCallResults<CSteamAuthedHTML, WebAuthRequestCallback_t>
  R typeinfo name for CMusicLibraryPanel
  R typeinfo name for CMusicPage_Details_Album
- R typeinfo name for CMusicPage_Details_Album::CCallbackOnAlbumCoverLoaded
- R typeinfo name for CMusicPage_Details_Album::CCallbackOnTrackListDataEntryForAlbumID
+ R typeinfo name for CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded
+ R typeinfo name for CMusicPage_Details_Album::CCallback_OnTrackListDataEntryForAlbumID
  R typeinfo name for CMusicPage_Details_Content
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnAlbumListDataEntry
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnArtistListDataEntry
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingFinished
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingInterrupted
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingMessage
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingWillStart
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnLocalLibraryDatabaseHasBeenReset
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnPlaylistAdded
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnPlaylistDeleted
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnPlaylistListDataEntry
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnPlaylistMoved
- R typeinfo name for CMusicPage_Details_Content::CCallbackOnPlaylistNameHasChanged
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnAlbumListDataEntry
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnArtistListDataEntry
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingFinished
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingInterrupted
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingMessage
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingWillStart
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnLocalLibraryDatabaseHasBeenReset
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnPlaylistAdded
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnPlaylistDeleted
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnPlaylistListDataEntry
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnPlaylistMoved
+ R typeinfo name for CMusicPage_Details_Content::CCallback_OnPlaylistNameHasChanged
  R typeinfo name for CMusicPage_Details_Playlist
- R typeinfo name for CMusicPage_Details_Playlist::CCallbackOnAlbumCoverLoaded
- R typeinfo name for CMusicPage_Details_Playlist::CCallbackOnPlaylistAllEntriesDeleted
- R typeinfo name for CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesDeleted
- R typeinfo name for CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveChanged
- R typeinfo name for CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveMoved
- R typeinfo name for CMusicPage_Details_Playlist::CCallbackOnPlaylistNameHasChanged
- R typeinfo name for CMusicPage_Details_Playlist::CCallbackOnTrackListDataEntryForPlaylistID
+ R typeinfo name for CMusicPage_Details_Playlist::CCallback_OnAlbumCoverLoaded
+ R typeinfo name for CMusicPage_Details_Playlist::CCallback_OnPlaylistAllEntriesDeleted
+ R typeinfo name for CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesDeleted
+ R typeinfo name for CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesHaveChanged
+ R typeinfo name for CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesHaveMoved
+ R typeinfo name for CMusicPage_Details_Playlist::CCallback_OnPlaylistNameHasChanged
+ R typeinfo name for CMusicPage_Details_Playlist::CCallback_OnTrackListDataEntryForPlaylistID
  R typeinfo name for CMusicPlayerLabel
  R typeinfo name for CMusicPlayerPanel
- R typeinfo name for CMusicPlayerPanel::CCallbackOnAlbumCoverLoaded
- R typeinfo name for CMusicPlayerPanel::CCallbackOnCurrentQueueEntryHasChanged
- R typeinfo name for CMusicPlayerPanel::CCallbackOnCurrentQueueEntrySecondsElapsedChanged
- R typeinfo name for CMusicPlayerPanel::CCallbackOnGameOverlayActivated
- R typeinfo name for CMusicPlayerPanel::CCallbackOnPlaybackStatusHasChanged
- R typeinfo name for CMusicPlayerPanel::CCallbackOnPlayingRepeatStatusHasChanged
- R typeinfo name for CMusicPlayerPanel::CCallbackOnPlayingShuffledHasChanged
- R typeinfo name for CMusicPlayerPanel::CCallbackOnQueueEntriesHaveChanged
- R typeinfo name for CMusicPlayerPanel::CCallbackOnVolumeHasChanged
+ R typeinfo name for CMusicPlayerPanel::CCallback_OnAlbumCoverLoaded
+ R typeinfo name for CMusicPlayerPanel::CCallback_OnCurrentQueueEntryHasChanged
+ R typeinfo name for CMusicPlayerPanel::CCallback_OnCurrentQueueEntrySecondsElapsedChanged
+ R typeinfo name for CMusicPlayerPanel::CCallback_OnGameOverlayActivated
+ R typeinfo name for CMusicPlayerPanel::CCallback_OnPlaybackStatusHasChanged
+ R typeinfo name for CMusicPlayerPanel::CCallback_OnPlayingRepeatStatusHasChanged
+ R typeinfo name for CMusicPlayerPanel::CCallback_OnPlayingShuffledHasChanged
+ R typeinfo name for CMusicPlayerPanel::CCallback_OnQueueEntriesHaveChanged
+ R typeinfo name for CMusicPlayerPanel::CCallback_OnVolumeHasChanged
  R typeinfo name for CMusicPlayerVolumePanel
  R typeinfo name for CNewsItemPanel
  R typeinfo name for COverlayAsyncNotificationsRequestedDialog
  R typeinfo name for COverlayBroadcastChatDialog
- R typeinfo name for COverlayBroadcastChatDialog::CCallbackOnBroadcastChatMessage
- R typeinfo name for COverlayBroadcastChatDialog::CCallbackOnBroadcastStatus
+ R typeinfo name for COverlayBroadcastChatDialog::CCallback_OnBroadcastChatMessage
+ R typeinfo name for COverlayBroadcastChatDialog::CCallback_OnBroadcastStatus
  R typeinfo name for COverlayCDKeyDialog
  R typeinfo name for COverlayCDKeyNotification
  R typeinfo name for COverlayDetailsBroadcastPanel
- R typeinfo name for COverlayDetailsBroadcastPanel::CCallbackOnBroadcastStatus
+ R typeinfo name for COverlayDetailsBroadcastPanel::CCallback_OnBroadcastStatus
  R typeinfo name for COverlayFriendChangeConfirmationDialog
  R typeinfo name for COverlayInGameVoiceSettingsDialog
  R typeinfo name for COverlayLoggedInElsewhereNotification
@@ -4022,11 +4085,11 @@
  R typeinfo name for COverlaySplash
  R typeinfo name for COverlayStateInfo
  R typeinfo name for COverlayWebBrowser
- R typeinfo name for COverlayWebBrowser::CCallbackOnParentalLockChanged
+ R typeinfo name for COverlayWebBrowser::CCallback_OnParentalLockChanged
  R typeinfo name for COverlayWebBrowserHTML
  R typeinfo name for COverlay_Details_Achievements
- R typeinfo name for COverlay_Details_Achievements::CCallbackOnUserAchievement
- R typeinfo name for COverlay_Details_Achievements::CCallbackOnUserStatsReceived
+ R typeinfo name for COverlay_Details_Achievements::CCallback_OnUserAchievement
+ R typeinfo name for COverlay_Details_Achievements::CCallback_OnUserStatsReceived
  R typeinfo name for COverlay_Details_CommunityDiscussions_Panel
  R typeinfo name for COverlay_Details_CommunityHub_Panel
  R typeinfo name for COverlay_Details_Friends
@@ -4035,38 +4098,38 @@
  R typeinfo name for COverlay_Details_Screenshots_Panel
  R typeinfo name for CPanelAnimationDictionary
  R typeinfo name for CPanelHideWrapper<COverlayDetailsBroadcastPanel>
- R typeinfo name for CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<COverlay_Details_Achievements>
- R typeinfo name for CPanelHideWrapper<COverlay_Details_Achievements>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<COverlay_Details_Achievements>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>
- R typeinfo name for CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>
- R typeinfo name for CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<COverlay_Details_Friends>
- R typeinfo name for CPanelHideWrapper<COverlay_Details_Friends>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<COverlay_Details_Friends>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<COverlay_Details_Guides_Panel>
- R typeinfo name for CPanelHideWrapper<COverlay_Details_Guides_Panel>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<COverlay_Details_Guides_Panel>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<COverlay_Details_News>
- R typeinfo name for CPanelHideWrapper<COverlay_Details_News>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<COverlay_Details_News>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<COverlay_Details_Screenshots_Panel>
- R typeinfo name for CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<vgui::ImagePanel>
- R typeinfo name for CPanelHideWrapper<vgui::ImagePanel>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<vgui::ImagePanel>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<vgui::Label>
- R typeinfo name for CPanelHideWrapper<vgui::Label>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<vgui::Label>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelHideWrapper<vgui::URLLabel>
- R typeinfo name for CPanelHideWrapper<vgui::URLLabel>::CCallbackOnParentalLockChanged
+ R typeinfo name for CPanelHideWrapper<vgui::URLLabel>::CCallback_OnParentalLockChanged
  R typeinfo name for CPanelMessageMapDictionary
  R typeinfo name for CParentalCache
- R typeinfo name for CParentalCache::CCallbackOnParentalLockChangeBegin
+ R typeinfo name for CParentalCache::CCallback_OnParentalLockChangeBegin
  R typeinfo name for CPathString
  R typeinfo name for CPlaylistItemLabel
  R typeinfo name for CPlaylistItemPanel
  R typeinfo name for CProportionalFloatProperty
  R typeinfo name for CProportionalIntProperty
  R typeinfo name for CRefreshLoginDialog
- R typeinfo name for CRefreshLoginDialog::CCallbackOnLogonFailure
- R typeinfo name for CRefreshLoginDialog::CCallbackOnLogonSuccess
+ R typeinfo name for CRefreshLoginDialog::CCallback_OnLogonFailure
+ R typeinfo name for CRefreshLoginDialog::CCallback_OnLogonSuccess
  R typeinfo name for CRunGameEngine
  R typeinfo name for CSavedMemStream
  R typeinfo name for CScreenshotCaptionEntry
@@ -4079,19 +4142,19 @@
  R typeinfo name for CScreenshotThread
  R typeinfo name for CScreenshotUploadDialog
  R typeinfo name for CSettingsSubBroadcast
- R typeinfo name for CSettingsSubBroadcast::CCallbackOnBroadcastStatus
+ R typeinfo name for CSettingsSubBroadcast::CCallback_OnBroadcastStatus
  R typeinfo name for CSettingsSubBrowser
  R typeinfo name for CSettingsSubFriends
- R typeinfo name for CSettingsSubFriends::CCallbackOnPersonaStateChange
+ R typeinfo name for CSettingsSubFriends::CCallback_OnPersonaStateChange
  R typeinfo name for CSettingsSubInGame
  R typeinfo name for CSettingsSubVoice
- R typeinfo name for CSettingsSubVoice::CCallbackOnVoiceInputDeviceChanged
+ R typeinfo name for CSettingsSubVoice::CCallback_OnVoiceInputDeviceChanged
  R typeinfo name for CSharedMemStream
  R typeinfo name for CSoundSystemSelect
  R typeinfo name for CSteamAuthedHTML
- R typeinfo name for CSteamAuthedHTML::CCallbackOnCredentialsChanged
- R typeinfo name for CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged
- R typeinfo name for CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync
+ R typeinfo name for CSteamAuthedHTML::CCallback_OnCredentialsChanged
+ R typeinfo name for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
+ R typeinfo name for CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
  R typeinfo name for CTrackItemPanel
@@ -4581,8 +4644,7 @@
  T BlankImage::SetSize(int, int)
  T BlankImage::~BlankImage()
  T CAchievementImagePanel::CAchievementImagePanel(vgui::Panel*, char const*)
- T CAchievementImagePanel::CCallbackOnAchievementIconReady::Run(void*)
- T CAchievementImagePanel::CCallbackOnAchievementIconReady::Run(void*, bool, unsigned long long)
+ T CAchievementImagePanel::CCallback_OnAchievementIconReady::Run(void*)
  T CAchievementImagePanel::ChainToAnimationMap()
  T CAchievementImagePanel::ChainToMap()
  T CAchievementImagePanel::GetAnimMap()
@@ -4637,38 +4699,22 @@
  T CBasePanel::AddNotificationPanel(vgui::NotificationFrame*, float, bool)
  T CBasePanel::AppDrivenFriendChange(CBasePanel::EFriendChangeType, CSteamID const&)
  T CBasePanel::CBasePanel()
- T CBasePanel::CCallbackOnAsyncNotificationsRequested::Run(void*)
- T CBasePanel::CCallbackOnAsyncNotificationsRequested::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnBroadcastRecorderError::Run(void*)
- T CBasePanel::CCallbackOnBroadcastRecorderError::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnBroadcastSettingsLoaded::Run(void*)
- T CBasePanel::CCallbackOnBroadcastSettingsLoaded::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnBroadcastShowFirstTimeDlg::Run(void*)
- T CBasePanel::CCallbackOnBroadcastShowFirstTimeDlg::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnBroadcastStatus::Run(void*)
- T CBasePanel::CCallbackOnBroadcastStatus::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnBroadcastUploadsDisabled::Run(void*)
- T CBasePanel::CCallbackOnBroadcastUploadsDisabled::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnFilePublished::Run(void*)
- T CBasePanel::CCallbackOnFilePublished::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnGameOverlayActivateRequested::Run(void*)
- T CBasePanel::CCallbackOnGameOverlayActivateRequested::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnLegacyCDKeyRegistered::Run(void*)
- T CBasePanel::CCallbackOnLegacyCDKeyRegistered::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnLoggedOff::Run(void*)
- T CBasePanel::CCallbackOnLoggedOff::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnLowBattery::Run(void*)
- T CBasePanel::CCallbackOnLowBattery::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnMicroTxnAuthRequest::Run(void*)
- T CBasePanel::CCallbackOnMicroTxnAuthRequest::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnParentalLockChanged::Run(void*)
- T CBasePanel::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnPersonaStateChange::Run(void*)
- T CBasePanel::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnPublishedFileUpdated::Run(void*)
- T CBasePanel::CCallbackOnPublishedFileUpdated::Run(void*, bool, unsigned long long)
- T CBasePanel::CCallbackOnScreenshotWritten::Run(void*)
- T CBasePanel::CCallbackOnScreenshotWritten::Run(void*, bool, unsigned long long)
+ T CBasePanel::CCallback_OnAsyncNotificationsRequested::Run(void*)
+ T CBasePanel::CCallback_OnBroadcastRecorderError::Run(void*)
+ T CBasePanel::CCallback_OnBroadcastSettingsLoaded::Run(void*)
+ T CBasePanel::CCallback_OnBroadcastShowFirstTimeDlg::Run(void*)
+ T CBasePanel::CCallback_OnBroadcastStatus::Run(void*)
+ T CBasePanel::CCallback_OnBroadcastUploadsDisabled::Run(void*)
+ T CBasePanel::CCallback_OnFilePublished::Run(void*)
+ T CBasePanel::CCallback_OnGameOverlayActivateRequested::Run(void*)
+ T CBasePanel::CCallback_OnLegacyCDKeyRegistered::Run(void*)
+ T CBasePanel::CCallback_OnLoggedOff::Run(void*)
+ T CBasePanel::CCallback_OnLowBattery::Run(void*)
+ T CBasePanel::CCallback_OnMicroTxnAuthRequest::Run(void*)
+ T CBasePanel::CCallback_OnParentalLockChanged::Run(void*)
+ T CBasePanel::CCallback_OnPersonaStateChange::Run(void*)
+ T CBasePanel::CCallback_OnPublishedFileUpdated::Run(void*)
+ T CBasePanel::CCallback_OnScreenshotWritten::Run(void*)
  T CBasePanel::ChainToAnimationMap()
  T CBasePanel::ChainToMap()
  T CBasePanel::Close()
@@ -4785,8 +4831,7 @@
  T CBroadcastAvailableToWatch::KB_ChainToMap()
  T CBroadcastAvailableToWatch::~CBroadcastAvailableToWatch()
  T CBroadcastChatBanner::CBroadcastChatBanner(vgui::Panel*, unsigned long long)
- T CBroadcastChatBanner::CCallbackOnBroadcastChatMessage::Run(void*)
- T CBroadcastChatBanner::CCallbackOnBroadcastChatMessage::Run(void*, bool, unsigned long long)
+ T CBroadcastChatBanner::CCallback_OnBroadcastChatMessage::Run(void*)
  T CBroadcastChatBanner::ChainToAnimationMap()
  T CBroadcastChatBanner::ChainToMap()
  T CBroadcastChatBanner::GetAnimMap()
@@ -4819,14 +4864,10 @@
  T CBroadcastFirstTimeDialog::SetVisibleControls(char const*)
  T CBroadcastFirstTimeDialog::~CBroadcastFirstTimeDialog()
  T CBroadcastLiveBanner::CBroadcastLiveBanner(vgui::Panel*)
- T CBroadcastLiveBanner::CCallbackOnBroadcastMicrophoneStatus::Run(void*)
- T CBroadcastLiveBanner::CCallbackOnBroadcastMicrophoneStatus::Run(void*, bool, unsigned long long)
- T CBroadcastLiveBanner::CCallbackOnBroadcastSettingsLoaded::Run(void*)
- T CBroadcastLiveBanner::CCallbackOnBroadcastSettingsLoaded::Run(void*, bool, unsigned long long)
- T CBroadcastLiveBanner::CCallbackOnBroadcastStatus::Run(void*)
- T CBroadcastLiveBanner::CCallbackOnBroadcastStatus::Run(void*, bool, unsigned long long)
- T CBroadcastLiveBanner::CCallbackOnBroadcastUploadStatus::Run(void*)
- T CBroadcastLiveBanner::CCallbackOnBroadcastUploadStatus::Run(void*, bool, unsigned long long)
+ T CBroadcastLiveBanner::CCallback_OnBroadcastMicrophoneStatus::Run(void*)
+ T CBroadcastLiveBanner::CCallback_OnBroadcastSettingsLoaded::Run(void*)
+ T CBroadcastLiveBanner::CCallback_OnBroadcastStatus::Run(void*)
+ T CBroadcastLiveBanner::CCallback_OnBroadcastUploadStatus::Run(void*)
  T CBroadcastLiveBanner::ChainToAnimationMap()
  T CBroadcastLiveBanner::ChainToMap()
  T CBroadcastLiveBanner::GetAnimMap()
@@ -4914,531 +4955,332 @@
  T CCallResult<CSettingsSubFriends, SetPersonaNameResponse_t>::Set(unsigned long long, CSettingsSubFriends*, void (CSettingsSubFriends::*)(SetPersonaNameResponse_t*, bool))
  T CCallResult<CSettingsSubFriends, SetPersonaNameResponse_t>::~CCallResult()
  T CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>::CCallback(CAchievementImagePanel*, void (CAchievementImagePanel::*)(UserAchievementIconFetched_t*))
- T CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>::GetCallbackSizeBytes()
  T CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>::Register(CAchievementImagePanel*, void (CAchievementImagePanel::*)(UserAchievementIconFetched_t*))
  T CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>::Run(void*)
- T CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CAchievementImagePanel, UserAchievementIconFetched_t, false>::~CCallback()
  T CCallback<CBasePanel, BroadcastRecorderError_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(BroadcastRecorderError_t*))
- T CCallback<CBasePanel, BroadcastRecorderError_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, BroadcastRecorderError_t, false>::Register(CBasePanel*, void (CBasePanel::*)(BroadcastRecorderError_t*))
  T CCallback<CBasePanel, BroadcastRecorderError_t, false>::Run(void*)
- T CCallback<CBasePanel, BroadcastRecorderError_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, BroadcastRecorderError_t, false>::~CCallback()
  T CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(BroadcastSettingsLoaded_t*))
- T CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>::Register(CBasePanel*, void (CBasePanel::*)(BroadcastSettingsLoaded_t*))
  T CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>::Run(void*)
- T CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, BroadcastSettingsLoaded_t, false>::~CCallback()
  T CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(BroadcastShowFirstTimeDlg_t*))
- T CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>::Register(CBasePanel*, void (CBasePanel::*)(BroadcastShowFirstTimeDlg_t*))
  T CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>::Run(void*)
- T CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>::~CCallback()
  T CCallback<CBasePanel, BroadcastStatus_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(BroadcastStatus_t*))
- T CCallback<CBasePanel, BroadcastStatus_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, BroadcastStatus_t, false>::Register(CBasePanel*, void (CBasePanel::*)(BroadcastStatus_t*))
  T CCallback<CBasePanel, BroadcastStatus_t, false>::Run(void*)
- T CCallback<CBasePanel, BroadcastStatus_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, BroadcastStatus_t, false>::~CCallback()
  T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(BroadcastUploadsDisabled_t*))
- T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::Register(CBasePanel*, void (CBasePanel::*)(BroadcastUploadsDisabled_t*))
  T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::Run(void*)
- T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::~CCallback()
  T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(GameOverlayActivateRequested_t*))
- T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::Register(CBasePanel*, void (CBasePanel::*)(GameOverlayActivateRequested_t*))
  T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::Run(void*)
- T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::~CCallback()
  T CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(LegacyCDKeyRegistered_t*))
- T CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>::Register(CBasePanel*, void (CBasePanel::*)(LegacyCDKeyRegistered_t*))
  T CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>::Run(void*)
- T CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>::~CCallback()
  T CCallback<CBasePanel, LowBatteryPower_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(LowBatteryPower_t*))
- T CCallback<CBasePanel, LowBatteryPower_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, LowBatteryPower_t, false>::Register(CBasePanel*, void (CBasePanel::*)(LowBatteryPower_t*))
  T CCallback<CBasePanel, LowBatteryPower_t, false>::Run(void*)
- T CCallback<CBasePanel, LowBatteryPower_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, LowBatteryPower_t, false>::~CCallback()
  T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(MicroTxnAuthRequestCallback_t*))
- T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::Register(CBasePanel*, void (CBasePanel::*)(MicroTxnAuthRequestCallback_t*))
  T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::Run(void*)
- T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::~CCallback()
  T CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(NotifyAsyncNotificationsRequested_t*))
- T CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>::Register(CBasePanel*, void (CBasePanel::*)(NotifyAsyncNotificationsRequested_t*))
  T CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>::Run(void*)
- T CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>::~CCallback()
  T CCallback<CBasePanel, ParentalLockChanged_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(ParentalLockChanged_t*))
- T CCallback<CBasePanel, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, ParentalLockChanged_t, false>::Register(CBasePanel*, void (CBasePanel::*)(ParentalLockChanged_t*))
  T CCallback<CBasePanel, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CBasePanel, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CBasePanel, PersonaStateChange_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(PersonaStateChange_t*))
- T CCallback<CBasePanel, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, PersonaStateChange_t, false>::Register(CBasePanel*, void (CBasePanel::*)(PersonaStateChange_t*))
  T CCallback<CBasePanel, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CBasePanel, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(RemoteStoragePublishFileResult_t*))
- T CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>::Register(CBasePanel*, void (CBasePanel::*)(RemoteStoragePublishFileResult_t*))
  T CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>::Run(void*)
- T CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>::~CCallback()
  T CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(RemoteStorageUpdatePublishedFileResult_t*))
- T CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>::Register(CBasePanel*, void (CBasePanel::*)(RemoteStorageUpdatePublishedFileResult_t*))
  T CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>::Run(void*)
- T CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>::~CCallback()
  T CCallback<CBasePanel, ScreenshotWritten_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(ScreenshotWritten_t*))
- T CCallback<CBasePanel, ScreenshotWritten_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, ScreenshotWritten_t, false>::Register(CBasePanel*, void (CBasePanel::*)(ScreenshotWritten_t*))
  T CCallback<CBasePanel, ScreenshotWritten_t, false>::Run(void*)
- T CCallback<CBasePanel, ScreenshotWritten_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, ScreenshotWritten_t, false>::~CCallback()
  T CCallback<CBasePanel, SteamServersDisconnected_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(SteamServersDisconnected_t*))
- T CCallback<CBasePanel, SteamServersDisconnected_t, false>::GetCallbackSizeBytes()
  T CCallback<CBasePanel, SteamServersDisconnected_t, false>::Register(CBasePanel*, void (CBasePanel::*)(SteamServersDisconnected_t*))
  T CCallback<CBasePanel, SteamServersDisconnected_t, false>::Run(void*)
- T CCallback<CBasePanel, SteamServersDisconnected_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBasePanel, SteamServersDisconnected_t, false>::~CCallback()
  T CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>::CCallback(CBroadcastChatBanner*, void (CBroadcastChatBanner::*)(BroadcastChatMessage_t*))
- T CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>::GetCallbackSizeBytes()
  T CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>::Register(CBroadcastChatBanner*, void (CBroadcastChatBanner::*)(BroadcastChatMessage_t*))
  T CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>::Run(void*)
- T CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>::~CCallback()
  T CCallback<CBroadcastLiveBanner, BroadcastMicrophoneStatus_t, false>::CCallback(CBroadcastLiveBanner*, void (CBroadcastLiveBanner::*)(BroadcastMicrophoneStatus_t*))
- T CCallback<CBroadcastLiveBanner, BroadcastMicrophoneStatus_t, false>::GetCallbackSizeBytes()
  T CCallback<CBroadcastLiveBanner, BroadcastMicrophoneStatus_t, false>::Register(CBroadcastLiveBanner*, void (CBroadcastLiveBanner::*)(BroadcastMicrophoneStatus_t*))
  T CCallback<CBroadcastLiveBanner, BroadcastMicrophoneStatus_t, false>::Run(void*)
- T CCallback<CBroadcastLiveBanner, BroadcastMicrophoneStatus_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBroadcastLiveBanner, BroadcastMicrophoneStatus_t, false>::~CCallback()
  T CCallback<CBroadcastLiveBanner, BroadcastSettingsLoaded_t, false>::CCallback(CBroadcastLiveBanner*, void (CBroadcastLiveBanner::*)(BroadcastSettingsLoaded_t*))
- T CCallback<CBroadcastLiveBanner, BroadcastSettingsLoaded_t, false>::GetCallbackSizeBytes()
  T CCallback<CBroadcastLiveBanner, BroadcastSettingsLoaded_t, false>::Register(CBroadcastLiveBanner*, void (CBroadcastLiveBanner::*)(BroadcastSettingsLoaded_t*))
  T CCallback<CBroadcastLiveBanner, BroadcastSettingsLoaded_t, false>::Run(void*)
- T CCallback<CBroadcastLiveBanner, BroadcastSettingsLoaded_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBroadcastLiveBanner, BroadcastSettingsLoaded_t, false>::~CCallback()
  T CCallback<CBroadcastLiveBanner, BroadcastStatus_t, false>::CCallback(CBroadcastLiveBanner*, void (CBroadcastLiveBanner::*)(BroadcastStatus_t*))
- T CCallback<CBroadcastLiveBanner, BroadcastStatus_t, false>::GetCallbackSizeBytes()
  T CCallback<CBroadcastLiveBanner, BroadcastStatus_t, false>::Register(CBroadcastLiveBanner*, void (CBroadcastLiveBanner::*)(BroadcastStatus_t*))
  T CCallback<CBroadcastLiveBanner, BroadcastStatus_t, false>::Run(void*)
- T CCallback<CBroadcastLiveBanner, BroadcastStatus_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBroadcastLiveBanner, BroadcastStatus_t, false>::~CCallback()
  T CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>::CCallback(CBroadcastLiveBanner*, void (CBroadcastLiveBanner::*)(BroadcastUploadStatus_t*))
- T CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>::GetCallbackSizeBytes()
  T CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>::Register(CBroadcastLiveBanner*, void (CBroadcastLiveBanner::*)(BroadcastUploadStatus_t*))
  T CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>::Run(void*)
- T CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>::~CCallback()
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::GetCallbackSizeBytes()
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::~CCallback()
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::GetCallbackSizeBytes()
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*, bool, unsigned long long)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallback()
  T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::CCallback(CMicroTxnAuthorizeDialog*, void (CMicroTxnAuthorizeDialog::*)(MicroTxnAuthDismissCallback_t*))
- T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::GetCallbackSizeBytes()
  T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Register(CMicroTxnAuthorizeDialog*, void (CMicroTxnAuthorizeDialog::*)(MicroTxnAuthDismissCallback_t*))
  T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Run(void*)
- T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::CCallback(CMusicPage_Details_Album*, void (CMusicPage_Details_Album::*)(AlbumCoverLoaded_t*))
- T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::Register(CMusicPage_Details_Album*, void (CMusicPage_Details_Album::*)(AlbumCoverLoaded_t*))
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>::CCallback(CMusicPage_Details_Album*, void (CMusicPage_Details_Album::*)(TrackListDataEntryForAlbumID_t*))
- T CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>::Register(CMusicPage_Details_Album*, void (CMusicPage_Details_Album::*)(TrackListDataEntryForAlbumID_t*))
  T CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(AlbumListDataEntry_t*))
- T CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(AlbumListDataEntry_t*))
  T CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, ArtistListDataEntry_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(ArtistListDataEntry_t*))
- T CCallback<CMusicPage_Details_Content, ArtistListDataEntry_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, ArtistListDataEntry_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(ArtistListDataEntry_t*))
  T CCallback<CMusicPage_Details_Content, ArtistListDataEntry_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, ArtistListDataEntry_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, ArtistListDataEntry_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingFinished_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryCrawlingFinished_t*))
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingFinished_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingFinished_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryCrawlingFinished_t*))
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingFinished_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingFinished_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingFinished_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingInterrupted_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryCrawlingInterrupted_t*))
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingInterrupted_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingInterrupted_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryCrawlingInterrupted_t*))
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingInterrupted_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingInterrupted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingInterrupted_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingMessage_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryCrawlingMessage_t*))
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingMessage_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingMessage_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryCrawlingMessage_t*))
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingMessage_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingMessage_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingMessage_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingWillStart_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryCrawlingWillStart_t*))
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingWillStart_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingWillStart_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryCrawlingWillStart_t*))
  T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingWillStart_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingWillStart_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, LocalLibraryCrawlingWillStart_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, LocalLibraryDatabaseHasBeenReset_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryDatabaseHasBeenReset_t*))
- T CCallback<CMusicPage_Details_Content, LocalLibraryDatabaseHasBeenReset_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, LocalLibraryDatabaseHasBeenReset_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(LocalLibraryDatabaseHasBeenReset_t*))
  T CCallback<CMusicPage_Details_Content, LocalLibraryDatabaseHasBeenReset_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, LocalLibraryDatabaseHasBeenReset_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, LocalLibraryDatabaseHasBeenReset_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, PlaylistAdded_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistAdded_t*))
- T CCallback<CMusicPage_Details_Content, PlaylistAdded_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, PlaylistAdded_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistAdded_t*))
  T CCallback<CMusicPage_Details_Content, PlaylistAdded_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, PlaylistAdded_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, PlaylistAdded_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, PlaylistDeleted_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistDeleted_t*))
- T CCallback<CMusicPage_Details_Content, PlaylistDeleted_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, PlaylistDeleted_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistDeleted_t*))
  T CCallback<CMusicPage_Details_Content, PlaylistDeleted_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, PlaylistDeleted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, PlaylistDeleted_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, PlaylistListDataEntry_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistListDataEntry_t*))
- T CCallback<CMusicPage_Details_Content, PlaylistListDataEntry_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, PlaylistListDataEntry_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistListDataEntry_t*))
  T CCallback<CMusicPage_Details_Content, PlaylistListDataEntry_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, PlaylistListDataEntry_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, PlaylistListDataEntry_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, PlaylistMoved_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistMoved_t*))
- T CCallback<CMusicPage_Details_Content, PlaylistMoved_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, PlaylistMoved_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistMoved_t*))
  T CCallback<CMusicPage_Details_Content, PlaylistMoved_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, PlaylistMoved_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, PlaylistMoved_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Content, PlaylistNameHasChanged_t, false>::CCallback(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistNameHasChanged_t*))
- T CCallback<CMusicPage_Details_Content, PlaylistNameHasChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Content, PlaylistNameHasChanged_t, false>::Register(CMusicPage_Details_Content*, void (CMusicPage_Details_Content::*)(PlaylistNameHasChanged_t*))
  T CCallback<CMusicPage_Details_Content, PlaylistNameHasChanged_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Content, PlaylistNameHasChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Content, PlaylistNameHasChanged_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Playlist, AlbumCoverLoaded_t, false>::CCallback(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(AlbumCoverLoaded_t*))
- T CCallback<CMusicPage_Details_Playlist, AlbumCoverLoaded_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Playlist, AlbumCoverLoaded_t, false>::Register(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(AlbumCoverLoaded_t*))
  T CCallback<CMusicPage_Details_Playlist, AlbumCoverLoaded_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Playlist, AlbumCoverLoaded_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Playlist, AlbumCoverLoaded_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Playlist, PlaylistAllEntriesDeleted_t, false>::CCallback(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistAllEntriesDeleted_t*))
- T CCallback<CMusicPage_Details_Playlist, PlaylistAllEntriesDeleted_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Playlist, PlaylistAllEntriesDeleted_t, false>::Register(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistAllEntriesDeleted_t*))
  T CCallback<CMusicPage_Details_Playlist, PlaylistAllEntriesDeleted_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Playlist, PlaylistAllEntriesDeleted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Playlist, PlaylistAllEntriesDeleted_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesDeleted_t, false>::CCallback(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistEntriesDeleted_t*))
- T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesDeleted_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesDeleted_t, false>::Register(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistEntriesDeleted_t*))
  T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesDeleted_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesDeleted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesDeleted_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveChanged_t, false>::CCallback(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistEntriesHaveChanged_t*))
- T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveChanged_t, false>::Register(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistEntriesHaveChanged_t*))
  T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveChanged_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveChanged_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveMoved_t, false>::CCallback(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistEntriesHaveMoved_t*))
- T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveMoved_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveMoved_t, false>::Register(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistEntriesHaveMoved_t*))
  T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveMoved_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveMoved_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Playlist, PlaylistEntriesHaveMoved_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Playlist, PlaylistNameHasChanged_t, false>::CCallback(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistNameHasChanged_t*))
- T CCallback<CMusicPage_Details_Playlist, PlaylistNameHasChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Playlist, PlaylistNameHasChanged_t, false>::Register(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(PlaylistNameHasChanged_t*))
  T CCallback<CMusicPage_Details_Playlist, PlaylistNameHasChanged_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Playlist, PlaylistNameHasChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Playlist, PlaylistNameHasChanged_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Playlist, TrackListDataEntryForPlaylistID_t, false>::CCallback(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(TrackListDataEntryForPlaylistID_t*))
- T CCallback<CMusicPage_Details_Playlist, TrackListDataEntryForPlaylistID_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPage_Details_Playlist, TrackListDataEntryForPlaylistID_t, false>::Register(CMusicPage_Details_Playlist*, void (CMusicPage_Details_Playlist::*)(TrackListDataEntryForPlaylistID_t*))
  T CCallback<CMusicPage_Details_Playlist, TrackListDataEntryForPlaylistID_t, false>::Run(void*)
- T CCallback<CMusicPage_Details_Playlist, TrackListDataEntryForPlaylistID_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPage_Details_Playlist, TrackListDataEntryForPlaylistID_t, false>::~CCallback()
  T CCallback<CMusicPlayerPanel, AlbumCoverLoaded_t, false>::CCallback(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(AlbumCoverLoaded_t*))
- T CCallback<CMusicPlayerPanel, AlbumCoverLoaded_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPlayerPanel, AlbumCoverLoaded_t, false>::Register(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(AlbumCoverLoaded_t*))
  T CCallback<CMusicPlayerPanel, AlbumCoverLoaded_t, false>::Run(void*)
- T CCallback<CMusicPlayerPanel, AlbumCoverLoaded_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPlayerPanel, AlbumCoverLoaded_t, false>::~CCallback()
  T CCallback<CMusicPlayerPanel, CurrentQueueEntryHasChanged_t, false>::CCallback(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(CurrentQueueEntryHasChanged_t*))
- T CCallback<CMusicPlayerPanel, CurrentQueueEntryHasChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPlayerPanel, CurrentQueueEntryHasChanged_t, false>::Register(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(CurrentQueueEntryHasChanged_t*))
  T CCallback<CMusicPlayerPanel, CurrentQueueEntryHasChanged_t, false>::Run(void*)
- T CCallback<CMusicPlayerPanel, CurrentQueueEntryHasChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPlayerPanel, CurrentQueueEntryHasChanged_t, false>::~CCallback()
  T CCallback<CMusicPlayerPanel, CurrentQueueEntrySecondsElapsedChanged_t, false>::CCallback(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(CurrentQueueEntrySecondsElapsedChanged_t*))
- T CCallback<CMusicPlayerPanel, CurrentQueueEntrySecondsElapsedChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPlayerPanel, CurrentQueueEntrySecondsElapsedChanged_t, false>::Register(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(CurrentQueueEntrySecondsElapsedChanged_t*))
  T CCallback<CMusicPlayerPanel, CurrentQueueEntrySecondsElapsedChanged_t, false>::Run(void*)
- T CCallback<CMusicPlayerPanel, CurrentQueueEntrySecondsElapsedChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPlayerPanel, CurrentQueueEntrySecondsElapsedChanged_t, false>::~CCallback()
  T CCallback<CMusicPlayerPanel, GameOverlayActivated_t, false>::CCallback(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(GameOverlayActivated_t*))
- T CCallback<CMusicPlayerPanel, GameOverlayActivated_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPlayerPanel, GameOverlayActivated_t, false>::Register(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(GameOverlayActivated_t*))
  T CCallback<CMusicPlayerPanel, GameOverlayActivated_t, false>::Run(void*)
- T CCallback<CMusicPlayerPanel, GameOverlayActivated_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPlayerPanel, GameOverlayActivated_t, false>::~CCallback()
  T CCallback<CMusicPlayerPanel, PlaybackStatusHasChanged_t, false>::CCallback(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(PlaybackStatusHasChanged_t*))
- T CCallback<CMusicPlayerPanel, PlaybackStatusHasChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPlayerPanel, PlaybackStatusHasChanged_t, false>::Register(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(PlaybackStatusHasChanged_t*))
  T CCallback<CMusicPlayerPanel, PlaybackStatusHasChanged_t, false>::Run(void*)
- T CCallback<CMusicPlayerPanel, PlaybackStatusHasChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPlayerPanel, PlaybackStatusHasChanged_t, false>::~CCallback()
  T CCallback<CMusicPlayerPanel, PlayingRepeatStatusHasChanged_t, false>::CCallback(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(PlayingRepeatStatusHasChanged_t*))
- T CCallback<CMusicPlayerPanel, PlayingRepeatStatusHasChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPlayerPanel, PlayingRepeatStatusHasChanged_t, false>::Register(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(PlayingRepeatStatusHasChanged_t*))
  T CCallback<CMusicPlayerPanel, PlayingRepeatStatusHasChanged_t, false>::Run(void*)
- T CCallback<CMusicPlayerPanel, PlayingRepeatStatusHasChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPlayerPanel, PlayingRepeatStatusHasChanged_t, false>::~CCallback()
  T CCallback<CMusicPlayerPanel, PlayingShuffledHasChanged_t, false>::CCallback(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(PlayingShuffledHasChanged_t*))
- T CCallback<CMusicPlayerPanel, PlayingShuffledHasChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPlayerPanel, PlayingShuffledHasChanged_t, false>::Register(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(PlayingShuffledHasChanged_t*))
  T CCallback<CMusicPlayerPanel, PlayingShuffledHasChanged_t, false>::Run(void*)
- T CCallback<CMusicPlayerPanel, PlayingShuffledHasChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPlayerPanel, PlayingShuffledHasChanged_t, false>::~CCallback()
  T CCallback<CMusicPlayerPanel, QueueEntriesHaveChanged_t, false>::CCallback(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(QueueEntriesHaveChanged_t*))
- T CCallback<CMusicPlayerPanel, QueueEntriesHaveChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPlayerPanel, QueueEntriesHaveChanged_t, false>::Register(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(QueueEntriesHaveChanged_t*))
  T CCallback<CMusicPlayerPanel, QueueEntriesHaveChanged_t, false>::Run(void*)
- T CCallback<CMusicPlayerPanel, QueueEntriesHaveChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPlayerPanel, QueueEntriesHaveChanged_t, false>::~CCallback()
  T CCallback<CMusicPlayerPanel, VolumeHasChanged_t, false>::CCallback(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(VolumeHasChanged_t*))
- T CCallback<CMusicPlayerPanel, VolumeHasChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CMusicPlayerPanel, VolumeHasChanged_t, false>::Register(CMusicPlayerPanel*, void (CMusicPlayerPanel::*)(VolumeHasChanged_t*))
  T CCallback<CMusicPlayerPanel, VolumeHasChanged_t, false>::Run(void*)
- T CCallback<CMusicPlayerPanel, VolumeHasChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CMusicPlayerPanel, VolumeHasChanged_t, false>::~CCallback()
  T CCallback<COverlayBroadcastChatDialog, BroadcastChatMessage_t, false>::CCallback(COverlayBroadcastChatDialog*, void (COverlayBroadcastChatDialog::*)(BroadcastChatMessage_t*))
- T CCallback<COverlayBroadcastChatDialog, BroadcastChatMessage_t, false>::GetCallbackSizeBytes()
  T CCallback<COverlayBroadcastChatDialog, BroadcastChatMessage_t, false>::Register(COverlayBroadcastChatDialog*, void (COverlayBroadcastChatDialog::*)(BroadcastChatMessage_t*))
  T CCallback<COverlayBroadcastChatDialog, BroadcastChatMessage_t, false>::Run(void*)
- T CCallback<COverlayBroadcastChatDialog, BroadcastChatMessage_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<COverlayBroadcastChatDialog, BroadcastChatMessage_t, false>::~CCallback()
  T CCallback<COverlayBroadcastChatDialog, BroadcastStatus_t, false>::CCallback(COverlayBroadcastChatDialog*, void (COverlayBroadcastChatDialog::*)(BroadcastStatus_t*))
- T CCallback<COverlayBroadcastChatDialog, BroadcastStatus_t, false>::GetCallbackSizeBytes()
  T CCallback<COverlayBroadcastChatDialog, BroadcastStatus_t, false>::Register(COverlayBroadcastChatDialog*, void (COverlayBroadcastChatDialog::*)(BroadcastStatus_t*))
  T CCallback<COverlayBroadcastChatDialog, BroadcastStatus_t, false>::Run(void*)
- T CCallback<COverlayBroadcastChatDialog, BroadcastStatus_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<COverlayBroadcastChatDialog, BroadcastStatus_t, false>::~CCallback()
  T CCallback<COverlayDetailsBroadcastPanel, BroadcastStatus_t, false>::CCallback(COverlayDetailsBroadcastPanel*, void (COverlayDetailsBroadcastPanel::*)(BroadcastStatus_t*))
- T CCallback<COverlayDetailsBroadcastPanel, BroadcastStatus_t, false>::GetCallbackSizeBytes()
  T CCallback<COverlayDetailsBroadcastPanel, BroadcastStatus_t, false>::Register(COverlayDetailsBroadcastPanel*, void (COverlayDetailsBroadcastPanel::*)(BroadcastStatus_t*))
  T CCallback<COverlayDetailsBroadcastPanel, BroadcastStatus_t, false>::Run(void*)
- T CCallback<COverlayDetailsBroadcastPanel, BroadcastStatus_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<COverlayDetailsBroadcastPanel, BroadcastStatus_t, false>::~CCallback()
  T CCallback<COverlayFriendChangeConfirmationDialog, PersonaStateChange_t, false>::CCallback(COverlayFriendChangeConfirmationDialog*, void (COverlayFriendChangeConfirmationDialog::*)(PersonaStateChange_t*))
- T CCallback<COverlayFriendChangeConfirmationDialog, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<COverlayFriendChangeConfirmationDialog, PersonaStateChange_t, false>::Register(COverlayFriendChangeConfirmationDialog*, void (COverlayFriendChangeConfirmationDialog::*)(PersonaStateChange_t*))
  T CCallback<COverlayFriendChangeConfirmationDialog, PersonaStateChange_t, false>::Run(void*)
- T CCallback<COverlayFriendChangeConfirmationDialog, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<COverlayFriendChangeConfirmationDialog, PersonaStateChange_t, false>::~CCallback()
  T CCallback<COverlayWebBrowser, ParentalLockChanged_t, false>::CCallback(COverlayWebBrowser*, void (COverlayWebBrowser::*)(ParentalLockChanged_t*))
- T CCallback<COverlayWebBrowser, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<COverlayWebBrowser, ParentalLockChanged_t, false>::Register(COverlayWebBrowser*, void (COverlayWebBrowser::*)(ParentalLockChanged_t*))
  T CCallback<COverlayWebBrowser, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<COverlayWebBrowser, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<COverlayWebBrowser, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<COverlay_Details_Achievements, UserAchievementStored_t, false>::CCallback(COverlay_Details_Achievements*, void (COverlay_Details_Achievements::*)(UserAchievementStored_t*))
- T CCallback<COverlay_Details_Achievements, UserAchievementStored_t, false>::GetCallbackSizeBytes()
  T CCallback<COverlay_Details_Achievements, UserAchievementStored_t, false>::Register(COverlay_Details_Achievements*, void (COverlay_Details_Achievements::*)(UserAchievementStored_t*))
  T CCallback<COverlay_Details_Achievements, UserAchievementStored_t, false>::Run(void*)
- T CCallback<COverlay_Details_Achievements, UserAchievementStored_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<COverlay_Details_Achievements, UserAchievementStored_t, false>::~CCallback()
  T CCallback<COverlay_Details_Achievements, UserStatsReceived_t, false>::CCallback(COverlay_Details_Achievements*, void (COverlay_Details_Achievements::*)(UserStatsReceived_t*))
- T CCallback<COverlay_Details_Achievements, UserStatsReceived_t, false>::GetCallbackSizeBytes()
  T CCallback<COverlay_Details_Achievements, UserStatsReceived_t, false>::Register(COverlay_Details_Achievements*, void (COverlay_Details_Achievements::*)(UserStatsReceived_t*))
  T CCallback<COverlay_Details_Achievements, UserStatsReceived_t, false>::Run(void*)
- T CCallback<COverlay_Details_Achievements, UserStatsReceived_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<COverlay_Details_Achievements, UserStatsReceived_t, false>::~CCallback()
  T CCallback<COverlay_Details_Friends, PersonaStateChange_t, false>::CCallback(COverlay_Details_Friends*, void (COverlay_Details_Friends::*)(PersonaStateChange_t*))
- T CCallback<COverlay_Details_Friends, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<COverlay_Details_Friends, PersonaStateChange_t, false>::Register(COverlay_Details_Friends*, void (COverlay_Details_Friends::*)(PersonaStateChange_t*))
  T CCallback<COverlay_Details_Friends, PersonaStateChange_t, false>::Run(void*)
- T CCallback<COverlay_Details_Friends, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<COverlay_Details_Friends, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<COverlayDetailsBroadcastPanel>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<COverlayDetailsBroadcastPanel>*, void (CPanelHideWrapper<COverlayDetailsBroadcastPanel>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<COverlayDetailsBroadcastPanel>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<COverlayDetailsBroadcastPanel>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<COverlayDetailsBroadcastPanel>*, void (CPanelHideWrapper<COverlayDetailsBroadcastPanel>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<COverlayDetailsBroadcastPanel>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<COverlayDetailsBroadcastPanel>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<COverlayDetailsBroadcastPanel>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<COverlay_Details_Achievements>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<COverlay_Details_Achievements>*, void (CPanelHideWrapper<COverlay_Details_Achievements>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<COverlay_Details_Achievements>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<COverlay_Details_Achievements>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<COverlay_Details_Achievements>*, void (CPanelHideWrapper<COverlay_Details_Achievements>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<COverlay_Details_Achievements>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<COverlay_Details_Achievements>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<COverlay_Details_Achievements>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>*, void (CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>*, void (CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>*, void (CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>*, void (CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<COverlay_Details_Friends>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<COverlay_Details_Friends>*, void (CPanelHideWrapper<COverlay_Details_Friends>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<COverlay_Details_Friends>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<COverlay_Details_Friends>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<COverlay_Details_Friends>*, void (CPanelHideWrapper<COverlay_Details_Friends>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<COverlay_Details_Friends>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<COverlay_Details_Friends>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<COverlay_Details_Friends>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<COverlay_Details_Guides_Panel>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<COverlay_Details_Guides_Panel>*, void (CPanelHideWrapper<COverlay_Details_Guides_Panel>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<COverlay_Details_Guides_Panel>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<COverlay_Details_Guides_Panel>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<COverlay_Details_Guides_Panel>*, void (CPanelHideWrapper<COverlay_Details_Guides_Panel>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<COverlay_Details_Guides_Panel>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<COverlay_Details_Guides_Panel>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<COverlay_Details_Guides_Panel>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<COverlay_Details_News>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<COverlay_Details_News>*, void (CPanelHideWrapper<COverlay_Details_News>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<COverlay_Details_News>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<COverlay_Details_News>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<COverlay_Details_News>*, void (CPanelHideWrapper<COverlay_Details_News>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<COverlay_Details_News>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<COverlay_Details_News>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<COverlay_Details_News>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<COverlay_Details_Screenshots_Panel>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<COverlay_Details_Screenshots_Panel>*, void (CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<COverlay_Details_Screenshots_Panel>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<COverlay_Details_Screenshots_Panel>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<COverlay_Details_Screenshots_Panel>*, void (CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<COverlay_Details_Screenshots_Panel>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<COverlay_Details_Screenshots_Panel>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<COverlay_Details_Screenshots_Panel>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<vgui::ImagePanel>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<vgui::ImagePanel>*, void (CPanelHideWrapper<vgui::ImagePanel>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<vgui::ImagePanel>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<vgui::ImagePanel>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<vgui::ImagePanel>*, void (CPanelHideWrapper<vgui::ImagePanel>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<vgui::ImagePanel>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<vgui::ImagePanel>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<vgui::ImagePanel>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<vgui::Label>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<vgui::Label>*, void (CPanelHideWrapper<vgui::Label>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<vgui::Label>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<vgui::Label>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<vgui::Label>*, void (CPanelHideWrapper<vgui::Label>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<vgui::Label>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<vgui::Label>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<vgui::Label>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CPanelHideWrapper<vgui::URLLabel>, ParentalLockChanged_t, false>::CCallback(CPanelHideWrapper<vgui::URLLabel>*, void (CPanelHideWrapper<vgui::URLLabel>::*)(ParentalLockChanged_t*))
- T CCallback<CPanelHideWrapper<vgui::URLLabel>, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CPanelHideWrapper<vgui::URLLabel>, ParentalLockChanged_t, false>::Register(CPanelHideWrapper<vgui::URLLabel>*, void (CPanelHideWrapper<vgui::URLLabel>::*)(ParentalLockChanged_t*))
  T CCallback<CPanelHideWrapper<vgui::URLLabel>, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CPanelHideWrapper<vgui::URLLabel>, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPanelHideWrapper<vgui::URLLabel>, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::CCallback(CParentalCache*, void (CParentalCache::*)(ParentalLockChangeBegin_t*))
- T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::GetCallbackSizeBytes()
  T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::Register(CParentalCache*, void (CParentalCache::*)(ParentalLockChangeBegin_t*))
  T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::Run(void*)
- T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::~CCallback()
  T CCallback<CRefreshLoginDialog, SteamServerConnectFailure_t, false>::CCallback(CRefreshLoginDialog*, void (CRefreshLoginDialog::*)(SteamServerConnectFailure_t*))
- T CCallback<CRefreshLoginDialog, SteamServerConnectFailure_t, false>::GetCallbackSizeBytes()
  T CCallback<CRefreshLoginDialog, SteamServerConnectFailure_t, false>::Register(CRefreshLoginDialog*, void (CRefreshLoginDialog::*)(SteamServerConnectFailure_t*))
  T CCallback<CRefreshLoginDialog, SteamServerConnectFailure_t, false>::Run(void*)
- T CCallback<CRefreshLoginDialog, SteamServerConnectFailure_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CRefreshLoginDialog, SteamServerConnectFailure_t, false>::~CCallback()
  T CCallback<CRefreshLoginDialog, SteamServersConnected_t, false>::CCallback(CRefreshLoginDialog*, void (CRefreshLoginDialog::*)(SteamServersConnected_t*))
- T CCallback<CRefreshLoginDialog, SteamServersConnected_t, false>::GetCallbackSizeBytes()
  T CCallback<CRefreshLoginDialog, SteamServersConnected_t, false>::Register(CRefreshLoginDialog*, void (CRefreshLoginDialog::*)(SteamServersConnected_t*))
  T CCallback<CRefreshLoginDialog, SteamServersConnected_t, false>::Run(void*)
- T CCallback<CRefreshLoginDialog, SteamServersConnected_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CRefreshLoginDialog, SteamServersConnected_t, false>::~CCallback()
  T CCallback<CScreenshotManager, ScreenshotDeleted_t, false>::CCallback(CScreenshotManager*, void (CScreenshotManager::*)(ScreenshotDeleted_t*))
- T CCallback<CScreenshotManager, ScreenshotDeleted_t, false>::GetCallbackSizeBytes()
  T CCallback<CScreenshotManager, ScreenshotDeleted_t, false>::Register(CScreenshotManager*, void (CScreenshotManager::*)(ScreenshotDeleted_t*))
  T CCallback<CScreenshotManager, ScreenshotDeleted_t, false>::Run(void*)
- T CCallback<CScreenshotManager, ScreenshotDeleted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CScreenshotManager, ScreenshotDeleted_t, false>::~CCallback()
  T CCallback<CScreenshotManager, ScreenshotUploaded_t, false>::CCallback(CScreenshotManager*, void (CScreenshotManager::*)(ScreenshotUploaded_t*))
- T CCallback<CScreenshotManager, ScreenshotUploaded_t, false>::GetCallbackSizeBytes()
  T CCallback<CScreenshotManager, ScreenshotUploaded_t, false>::Register(CScreenshotManager*, void (CScreenshotManager::*)(ScreenshotUploaded_t*))
  T CCallback<CScreenshotManager, ScreenshotUploaded_t, false>::Run(void*)
- T CCallback<CScreenshotManager, ScreenshotUploaded_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CScreenshotManager, ScreenshotUploaded_t, false>::~CCallback()
  T CCallback<CScreenshotManager, ScreenshotWritten_t, false>::CCallback(CScreenshotManager*, void (CScreenshotManager::*)(ScreenshotWritten_t*))
- T CCallback<CScreenshotManager, ScreenshotWritten_t, false>::GetCallbackSizeBytes()
  T CCallback<CScreenshotManager, ScreenshotWritten_t, false>::Register(CScreenshotManager*, void (CScreenshotManager::*)(ScreenshotWritten_t*))
  T CCallback<CScreenshotManager, ScreenshotWritten_t, false>::Run(void*)
- T CCallback<CScreenshotManager, ScreenshotWritten_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CScreenshotManager, ScreenshotWritten_t, false>::~CCallback()
  T CCallback<CScreenshotUploadDialog, ScreenshotUploadProgress_t, false>::CCallback(CScreenshotUploadDialog*, void (CScreenshotUploadDialog::*)(ScreenshotUploadProgress_t*))
- T CCallback<CScreenshotUploadDialog, ScreenshotUploadProgress_t, false>::GetCallbackSizeBytes()
  T CCallback<CScreenshotUploadDialog, ScreenshotUploadProgress_t, false>::Register(CScreenshotUploadDialog*, void (CScreenshotUploadDialog::*)(ScreenshotUploadProgress_t*))
  T CCallback<CScreenshotUploadDialog, ScreenshotUploadProgress_t, false>::Run(void*)
- T CCallback<CScreenshotUploadDialog, ScreenshotUploadProgress_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CScreenshotUploadDialog, ScreenshotUploadProgress_t, false>::~CCallback()
  T CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>::CCallback(CSettingsSubBroadcast*, void (CSettingsSubBroadcast::*)(BroadcastStatus_t*))
- T CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>::GetCallbackSizeBytes()
  T CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>::Register(CSettingsSubBroadcast*, void (CSettingsSubBroadcast::*)(BroadcastStatus_t*))
  T CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>::Run(void*)
- T CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSettingsSubBroadcast, BroadcastStatus_t, false>::~CCallback()
  T CCallback<CSettingsSubFriends, PersonaStateChange_t, false>::CCallback(CSettingsSubFriends*, void (CSettingsSubFriends::*)(PersonaStateChange_t*))
- T CCallback<CSettingsSubFriends, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CSettingsSubFriends, PersonaStateChange_t, false>::Register(CSettingsSubFriends*, void (CSettingsSubFriends::*)(PersonaStateChange_t*))
  T CCallback<CSettingsSubFriends, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CSettingsSubFriends, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSettingsSubFriends, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::CCallback(CSettingsSubVoice*, void (CSettingsSubVoice::*)(VoiceInputDeviceChanged_t*))
- T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::Register(CSettingsSubVoice*, void (CSettingsSubVoice::*)(VoiceInputDeviceChanged_t*))
  T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::Run(void*)
- T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSettingsSubVoice, VoiceInputDeviceChanged_t, false>::~CCallback()
  T CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(LogOnCredentialsChanged_t*))
- T CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(LogOnCredentialsChanged_t*))
  T CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>::Run(void*)
- T CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamAuthedHTML, LogOnCredentialsChanged_t, false>::~CCallback()
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(ParentalWebTokenChanged_t*))
- T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(ParentalWebTokenChanged_t*))
  T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::Run(void*)
- T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamAuthedHTML, ParentalWebTokenChanged_t, false>::~CCallback()
  T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::CCallback(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*))
- T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::Register(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(WebAuthRequestCallback_t*))
  T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::Run(void*)
- T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamAuthedHTML, WebAuthRequestCallback_t, false>::~CCallback()
  T CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>::CCallback(SerializedOverlayPumps*, void (SerializedOverlayPumps::*)(ScreenshotTriggered_t*))
- T CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>::GetCallbackSizeBytes()
  T CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>::Register(SerializedOverlayPumps*, void (SerializedOverlayPumps::*)(ScreenshotTriggered_t*))
  T CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>::Run(void*)
- T CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<SerializedOverlayPumps, ScreenshotTriggered_t, false>::~CCallback()
+ T CCallbackImpl<1025>::GetCallbackSizeBytes()
+ T CCallbackImpl<1025>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<1025>::~CCallbackImpl()
+ T CCallbackImpl<1028>::GetCallbackSizeBytes()
+ T CCallbackImpl<1028>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<1028>::~CCallbackImpl()
+ T CCallbackImpl<12>::GetCallbackSizeBytes()
+ T CCallbackImpl<12>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<12>::~CCallbackImpl()
+ T CCallbackImpl<144>::GetCallbackSizeBytes()
+ T CCallbackImpl<144>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<144>::~CCallbackImpl()
+ T CCallbackImpl<148>::GetCallbackSizeBytes()
+ T CCallbackImpl<148>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<148>::~CCallbackImpl()
+ T CCallbackImpl<16>::GetCallbackSizeBytes()
+ T CCallbackImpl<16>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<16>::~CCallbackImpl()
+ T CCallbackImpl<1>::GetCallbackSizeBytes()
+ T CCallbackImpl<1>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<1>::~CCallbackImpl()
+ T CCallbackImpl<2056>::GetCallbackSizeBytes()
+ T CCallbackImpl<2056>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<2056>::~CCallbackImpl()
+ T CCallbackImpl<2068>::GetCallbackSizeBytes()
+ T CCallbackImpl<2068>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<2068>::~CCallbackImpl()
+ T CCallbackImpl<2080>::GetCallbackSizeBytes()
+ T CCallbackImpl<2080>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<2080>::~CCallbackImpl()
+ T CCallbackImpl<20>::GetCallbackSizeBytes()
+ T CCallbackImpl<20>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<20>::~CCallbackImpl()
+ T CCallbackImpl<24>::GetCallbackSizeBytes()
+ T CCallbackImpl<24>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<24>::~CCallbackImpl()
+ T CCallbackImpl<292>::GetCallbackSizeBytes()
+ T CCallbackImpl<292>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<292>::~CCallbackImpl()
+ T CCallbackImpl<2>::GetCallbackSizeBytes()
+ T CCallbackImpl<2>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<2>::~CCallbackImpl()
+ T CCallbackImpl<3092>::GetCallbackSizeBytes()
+ T CCallbackImpl<3092>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<3092>::~CCallbackImpl()
+ T CCallbackImpl<3096>::GetCallbackSizeBytes()
+ T CCallbackImpl<3096>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<3096>::~CCallbackImpl()
+ T CCallbackImpl<4120>::GetCallbackSizeBytes()
+ T CCallbackImpl<4120>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<4120>::~CCallbackImpl()
+ T CCallbackImpl<4>::GetCallbackSizeBytes()
+ T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<4>::~CCallbackImpl()
+ T CCallbackImpl<520>::GetCallbackSizeBytes()
+ T CCallbackImpl<520>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<520>::~CCallbackImpl()
+ T CCallbackImpl<600>::GetCallbackSizeBytes()
+ T CCallbackImpl<600>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<600>::~CCallbackImpl()
+ T CCallbackImpl<8>::GetCallbackSizeBytes()
+ T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<8>::~CCallbackImpl()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
@@ -5748,8 +5590,7 @@
  T CMicroTxnAuthorizeDialog::BAddFunds()
  T CMicroTxnAuthorizeDialog::BLoadTransaction()
  T CMicroTxnAuthorizeDialog::BUpdateWalletAmount()
- T CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss::Run(void*)
- T CMicroTxnAuthorizeDialog::CCallbackOnAuthDismiss::Run(void*, bool, unsigned long long)
+ T CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss::Run(void*)
  T CMicroTxnAuthorizeDialog::CMicroTxnAuthorizeDialog(unsigned long long)
  T CMicroTxnAuthorizeDialog::CancelTransaction()
  T CMicroTxnAuthorizeDialog::ChainToAnimationMap()
@@ -6951,10 +6792,8 @@
  T CMusicLibraryPanel::SetMusicNavDisplayMode(int)
  T CMusicLibraryPanel::Validate(CValidator&, char const*)
  T CMusicLibraryPanel::~CMusicLibraryPanel()
- T CMusicPage_Details_Album::CCallbackOnAlbumCoverLoaded::Run(void*)
- T CMusicPage_Details_Album::CCallbackOnAlbumCoverLoaded::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Album::CCallbackOnTrackListDataEntryForAlbumID::Run(void*)
- T CMusicPage_Details_Album::CCallbackOnTrackListDataEntryForAlbumID::Run(void*, bool, unsigned long long)
+ T CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded::Run(void*)
+ T CMusicPage_Details_Album::CCallback_OnTrackListDataEntryForAlbumID::Run(void*)
  T CMusicPage_Details_Album::CMusicPage_Details_Album(CMusicPage_Details_Content*, char const*)
  T CMusicPage_Details_Album::ChainToAnimationMap()
  T CMusicPage_Details_Album::ChainToMap()
@@ -6988,30 +6827,18 @@
  T CMusicPage_Details_Content::ApplyBackgroundImage(CUtlBuffer&, int, int)
  T CMusicPage_Details_Content::ApplyDefaultBackgroundImage(int)
  T CMusicPage_Details_Content::ApplyUserConfigSettings(KeyValues*)
- T CMusicPage_Details_Content::CCallbackOnAlbumListDataEntry::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnAlbumListDataEntry::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnArtistListDataEntry::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnArtistListDataEntry::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingFinished::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingFinished::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingInterrupted::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingInterrupted::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingMessage::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingMessage::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingWillStart::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryCrawlingWillStart::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryDatabaseHasBeenReset::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnLocalLibraryDatabaseHasBeenReset::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnPlaylistAdded::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnPlaylistAdded::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnPlaylistDeleted::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnPlaylistDeleted::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnPlaylistListDataEntry::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnPlaylistListDataEntry::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnPlaylistMoved::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnPlaylistMoved::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Content::CCallbackOnPlaylistNameHasChanged::Run(void*)
- T CMusicPage_Details_Content::CCallbackOnPlaylistNameHasChanged::Run(void*, bool, unsigned long long)
+ T CMusicPage_Details_Content::CCallback_OnAlbumListDataEntry::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnArtistListDataEntry::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingFinished::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingInterrupted::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingMessage::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnLocalLibraryCrawlingWillStart::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnLocalLibraryDatabaseHasBeenReset::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnPlaylistAdded::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnPlaylistDeleted::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnPlaylistListDataEntry::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnPlaylistMoved::Run(void*)
+ T CMusicPage_Details_Content::CCallback_OnPlaylistNameHasChanged::Run(void*)
  T CMusicPage_Details_Content::CMusicPage_Details_Content(vgui::Panel*, char const*, bool)
  T CMusicPage_Details_Content::ChainToAnimationMap()
  T CMusicPage_Details_Content::ChainToMap()
@@ -7122,20 +6949,13 @@
  T CMusicPage_Details_Content::UpdateDetailsData(bool)
  T CMusicPage_Details_Content::Validate(CValidator&, char const*)
  T CMusicPage_Details_Content::~CMusicPage_Details_Content()
- T CMusicPage_Details_Playlist::CCallbackOnAlbumCoverLoaded::Run(void*)
- T CMusicPage_Details_Playlist::CCallbackOnAlbumCoverLoaded::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistAllEntriesDeleted::Run(void*)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistAllEntriesDeleted::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesDeleted::Run(void*)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesDeleted::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveChanged::Run(void*)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveChanged::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveMoved::Run(void*)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistEntriesHaveMoved::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistNameHasChanged::Run(void*)
- T CMusicPage_Details_Playlist::CCallbackOnPlaylistNameHasChanged::Run(void*, bool, unsigned long long)
- T CMusicPage_Details_Playlist::CCallbackOnTrackListDataEntryForPlaylistID::Run(void*)
- T CMusicPage_Details_Playlist::CCallbackOnTrackListDataEntryForPlaylistID::Run(void*, bool, unsigned long long)
+ T CMusicPage_Details_Playlist::CCallback_OnAlbumCoverLoaded::Run(void*)
+ T CMusicPage_Details_Playlist::CCallback_OnPlaylistAllEntriesDeleted::Run(void*)
+ T CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesDeleted::Run(void*)
+ T CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesHaveChanged::Run(void*)
+ T CMusicPage_Details_Playlist::CCallback_OnPlaylistEntriesHaveMoved::Run(void*)
+ T CMusicPage_Details_Playlist::CCallback_OnPlaylistNameHasChanged::Run(void*)
+ T CMusicPage_Details_Playlist::CCallback_OnTrackListDataEntryForPlaylistID::Run(void*)
  T CMusicPage_Details_Playlist::CMusicPage_Details_Playlist(CMusicPage_Details_Content*, char const*)
  T CMusicPage_Details_Playlist::ChainToAnimationMap()
  T CMusicPage_Details_Playlist::ChainToMap()
@@ -7190,24 +7010,15 @@
  T CMusicPlayerLabel::OnMousePressed(vgui::MouseCode)
  T CMusicPlayerLabel::~CMusicPlayerLabel()
  T CMusicPlayerPanel::Activate()
- T CMusicPlayerPanel::CCallbackOnAlbumCoverLoaded::Run(void*)
- T CMusicPlayerPanel::CCallbackOnAlbumCoverLoaded::Run(void*, bool, unsigned long long)
- T CMusicPlayerPanel::CCallbackOnCurrentQueueEntryHasChanged::Run(void*)
- T CMusicPlayerPanel::CCallbackOnCurrentQueueEntryHasChanged::Run(void*, bool, unsigned long long)
- T CMusicPlayerPanel::CCallbackOnCurrentQueueEntrySecondsElapsedChanged::Run(void*)
- T CMusicPlayerPanel::CCallbackOnCurrentQueueEntrySecondsElapsedChanged::Run(void*, bool, unsigned long long)
- T CMusicPlayerPanel::CCallbackOnGameOverlayActivated::Run(void*)
- T CMusicPlayerPanel::CCallbackOnGameOverlayActivated::Run(void*, bool, unsigned long long)
- T CMusicPlayerPanel::CCallbackOnPlaybackStatusHasChanged::Run(void*)
- T CMusicPlayerPanel::CCallbackOnPlaybackStatusHasChanged::Run(void*, bool, unsigned long long)
- T CMusicPlayerPanel::CCallbackOnPlayingRepeatStatusHasChanged::Run(void*)
- T CMusicPlayerPanel::CCallbackOnPlayingRepeatStatusHasChanged::Run(void*, bool, unsigned long long)
- T CMusicPlayerPanel::CCallbackOnPlayingShuffledHasChanged::Run(void*)
- T CMusicPlayerPanel::CCallbackOnPlayingShuffledHasChanged::Run(void*, bool, unsigned long long)
- T CMusicPlayerPanel::CCallbackOnQueueEntriesHaveChanged::Run(void*)
- T CMusicPlayerPanel::CCallbackOnQueueEntriesHaveChanged::Run(void*, bool, unsigned long long)
- T CMusicPlayerPanel::CCallbackOnVolumeHasChanged::Run(void*)
- T CMusicPlayerPanel::CCallbackOnVolumeHasChanged::Run(void*, bool, unsigned long long)
+ T CMusicPlayerPanel::CCallback_OnAlbumCoverLoaded::Run(void*)
+ T CMusicPlayerPanel::CCallback_OnCurrentQueueEntryHasChanged::Run(void*)
+ T CMusicPlayerPanel::CCallback_OnCurrentQueueEntrySecondsElapsedChanged::Run(void*)
+ T CMusicPlayerPanel::CCallback_OnGameOverlayActivated::Run(void*)
+ T CMusicPlayerPanel::CCallback_OnPlaybackStatusHasChanged::Run(void*)
+ T CMusicPlayerPanel::CCallback_OnPlayingRepeatStatusHasChanged::Run(void*)
+ T CMusicPlayerPanel::CCallback_OnPlayingShuffledHasChanged::Run(void*)
+ T CMusicPlayerPanel::CCallback_OnQueueEntriesHaveChanged::Run(void*)
+ T CMusicPlayerPanel::CCallback_OnVolumeHasChanged::Run(void*)
  T CMusicPlayerPanel::CMusicPlayerPanel(vgui::Panel*, bool)
  T CMusicPlayerPanel::ChainToAnimationMap()
  T CMusicPlayerPanel::ChainToMap()
@@ -7316,10 +7127,8 @@
  T COverlayAsyncNotificationsRequestedDialog::PanelMessageFunc_DisableNotifications::InitVar()
  T COverlayAsyncNotificationsRequestedDialog::PanelMessageFunc_EnableNotifications::InitVar()
  T COverlayAsyncNotificationsRequestedDialog::~COverlayAsyncNotificationsRequestedDialog()
- T COverlayBroadcastChatDialog::CCallbackOnBroadcastChatMessage::Run(void*)
- T COverlayBroadcastChatDialog::CCallbackOnBroadcastChatMessage::Run(void*, bool, unsigned long long)
- T COverlayBroadcastChatDialog::CCallbackOnBroadcastStatus::Run(void*)
- T COverlayBroadcastChatDialog::CCallbackOnBroadcastStatus::Run(void*, bool, unsigned long long)
+ T COverlayBroadcastChatDialog::CCallback_OnBroadcastChatMessage::Run(void*)
+ T COverlayBroadcastChatDialog::CCallback_OnBroadcastStatus::Run(void*)
  T COverlayBroadcastChatDialog::COverlayBroadcastChatDialog(vgui::Panel*, unsigned long long)
  T COverlayBroadcastChatDialog::ChainToAnimationMap()
  T COverlayBroadcastChatDialog::ChainToMap()
@@ -7369,8 +7178,7 @@
  T COverlayCDKeyNotification::GetPanelTopClassName() const
  T COverlayCDKeyNotification::KB_ChainToMap()
  T COverlayCDKeyNotification::~COverlayCDKeyNotification()
- T COverlayDetailsBroadcastPanel::CCallbackOnBroadcastStatus::Run(void*)
- T COverlayDetailsBroadcastPanel::CCallbackOnBroadcastStatus::Run(void*, bool, unsigned long long)
+ T COverlayDetailsBroadcastPanel::CCallback_OnBroadcastStatus::Run(void*)
  T COverlayDetailsBroadcastPanel::COverlayDetailsBroadcastPanel(CBasePanel*, vgui::Panel*, char const*)
  T COverlayDetailsBroadcastPanel::ChainToAnimationMap()
  T COverlayDetailsBroadcastPanel::ChainToMap()
@@ -7517,8 +7325,7 @@
  T COverlayVRState::VRModeEnd()
  T COverlayVRState::~COverlayVRState()
  T COverlayWebBrowser::AddHeader(char const*, char const*)
- T COverlayWebBrowser::CCallbackOnParentalLockChanged::Run(void*)
- T COverlayWebBrowser::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T COverlayWebBrowser::CCallback_OnParentalLockChanged::Run(void*)
  T COverlayWebBrowser::COverlayWebBrowser(vgui::Panel*, char const*)
  T COverlayWebBrowser::ChainToAnimationMap()
  T COverlayWebBrowser::ChainToMap()
@@ -7598,10 +7405,8 @@
  T COverlayWebBrowserHTML::OnOpenNewTab(char const*, bool)
  T COverlayWebBrowserHTML::OnSetHTMLTitle(char const*)
  T COverlayWebBrowserHTML::~COverlayWebBrowserHTML()
- T COverlay_Details_Achievements::CCallbackOnUserAchievement::Run(void*)
- T COverlay_Details_Achievements::CCallbackOnUserAchievement::Run(void*, bool, unsigned long long)
- T COverlay_Details_Achievements::CCallbackOnUserStatsReceived::Run(void*)
- T COverlay_Details_Achievements::CCallbackOnUserStatsReceived::Run(void*, bool, unsigned long long)
+ T COverlay_Details_Achievements::CCallback_OnUserAchievement::Run(void*)
+ T COverlay_Details_Achievements::CCallback_OnUserStatsReceived::Run(void*)
  T COverlay_Details_Achievements::COverlay_Details_Achievements(CBasePanel*, vgui::Panel*, char const*)
  T COverlay_Details_Achievements::ChainToAnimationMap()
  T COverlay_Details_Achievements::ChainToMap()
@@ -7719,78 +7524,67 @@
  T CPanelAnimationDictionary::Validate(CValidator&, char const*)
  T CPanelAnimationDictionary::~CPanelAnimationDictionary()
  T CPanelHideWrapper<COverlayDetailsBroadcastPanel>::ApplyParentalSettings()
- T CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<COverlayDetailsBroadcastPanel>::CPanelHideWrapper(CBasePanel*, vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<COverlayDetailsBroadcastPanel>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<COverlayDetailsBroadcastPanel>::SetVisible(bool)
  T CPanelHideWrapper<COverlayDetailsBroadcastPanel>::~CPanelHideWrapper()
  T CPanelHideWrapper<COverlay_Details_Achievements>::ApplyParentalSettings()
- T CPanelHideWrapper<COverlay_Details_Achievements>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<COverlay_Details_Achievements>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<COverlay_Details_Achievements>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<COverlay_Details_Achievements>::CPanelHideWrapper(CBasePanel*, vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<COverlay_Details_Achievements>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<COverlay_Details_Achievements>::SetVisible(bool)
  T CPanelHideWrapper<COverlay_Details_Achievements>::~CPanelHideWrapper()
  T CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::ApplyParentalSettings()
- T CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::CPanelHideWrapper(CBasePanel*, vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::SetVisible(bool)
  T CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>::~CPanelHideWrapper()
  T CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::ApplyParentalSettings()
- T CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::CPanelHideWrapper(CBasePanel*, vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::SetVisible(bool)
  T CPanelHideWrapper<COverlay_Details_CommunityHub_Panel>::~CPanelHideWrapper()
  T CPanelHideWrapper<COverlay_Details_Friends>::ApplyParentalSettings()
- T CPanelHideWrapper<COverlay_Details_Friends>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<COverlay_Details_Friends>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<COverlay_Details_Friends>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<COverlay_Details_Friends>::CPanelHideWrapper(CBasePanel*, vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<COverlay_Details_Friends>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<COverlay_Details_Friends>::SetVisible(bool)
  T CPanelHideWrapper<COverlay_Details_Friends>::~CPanelHideWrapper()
  T CPanelHideWrapper<COverlay_Details_Guides_Panel>::ApplyParentalSettings()
- T CPanelHideWrapper<COverlay_Details_Guides_Panel>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<COverlay_Details_Guides_Panel>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<COverlay_Details_Guides_Panel>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<COverlay_Details_Guides_Panel>::CPanelHideWrapper(CBasePanel*, vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<COverlay_Details_Guides_Panel>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<COverlay_Details_Guides_Panel>::SetVisible(bool)
  T CPanelHideWrapper<COverlay_Details_Guides_Panel>::~CPanelHideWrapper()
  T CPanelHideWrapper<COverlay_Details_News>::ApplyParentalSettings()
- T CPanelHideWrapper<COverlay_Details_News>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<COverlay_Details_News>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<COverlay_Details_News>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<COverlay_Details_News>::CPanelHideWrapper(CBasePanel*, vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<COverlay_Details_News>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<COverlay_Details_News>::SetVisible(bool)
  T CPanelHideWrapper<COverlay_Details_News>::~CPanelHideWrapper()
  T CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::ApplyParentalSettings()
- T CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::CPanelHideWrapper(CBasePanel*, vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::SetVisible(bool)
  T CPanelHideWrapper<COverlay_Details_Screenshots_Panel>::~CPanelHideWrapper()
  T CPanelHideWrapper<vgui::ImagePanel>::ApplyParentalSettings()
- T CPanelHideWrapper<vgui::ImagePanel>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<vgui::ImagePanel>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<vgui::ImagePanel>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<vgui::ImagePanel>::CPanelHideWrapper(vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<vgui::ImagePanel>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<vgui::ImagePanel>::SetVisible(bool)
  T CPanelHideWrapper<vgui::ImagePanel>::~CPanelHideWrapper()
  T CPanelHideWrapper<vgui::Label>::ApplyParentalSettings()
- T CPanelHideWrapper<vgui::Label>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<vgui::Label>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<vgui::Label>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<vgui::Label>::CPanelHideWrapper(vgui::Panel*, char const*, char const*, EParentalFeature)
  T CPanelHideWrapper<vgui::Label>::OnParentalLockChanged(ParentalLockChanged_t*)
  T CPanelHideWrapper<vgui::Label>::SetVisible(bool)
  T CPanelHideWrapper<vgui::Label>::~CPanelHideWrapper()
  T CPanelHideWrapper<vgui::URLLabel>::ApplyParentalSettings()
- T CPanelHideWrapper<vgui::URLLabel>::CCallbackOnParentalLockChanged::Run(void*)
- T CPanelHideWrapper<vgui::URLLabel>::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
+ T CPanelHideWrapper<vgui::URLLabel>::CCallback_OnParentalLockChanged::Run(void*)
  T CPanelHideWrapper<vgui::URLLabel>::CPanelHideWrapper(vgui::Panel*, char const*, EParentalFeature)
  T CPanelHideWrapper<vgui::URLLabel>::CPanelHideWrapper(vgui::Panel*, char const*, char const*, EParentalFeature)
  T CPanelHideWrapper<vgui::URLLabel>::OnParentalLockChanged(ParentalLockChanged_t*)
@@ -7813,8 +7607,7 @@
  T CParentalCache::BIsFeatureInBlockList(EParentalFeature)
  T CParentalCache::BIsParentalLockEnabled()
  T CParentalCache::BIsParentalLockLocked()
- T CParentalCache::CCallbackOnParentalLockChangeBegin::Run(void*)
- T CParentalCache::CCallbackOnParentalLockChangeBegin::Run(void*, bool, unsigned long long)
+ T CParentalCache::CCallback_OnParentalLockChangeBegin::Run(void*)
  T CParentalCache::CParentalCache()
  T CParentalCache::OnParentalLockChangeBegin(ParentalLockChangeBegin_t*)
  T CParentalCache::~CParentalCache()
@@ -7950,10 +7743,8 @@
  T CRYPTO_strdup
  T CRYPTO_thread_id
  T CRefreshLoginDialog::Activate(EResult)
- T CRefreshLoginDialog::CCallbackOnLogonFailure::Run(void*)
- T CRefreshLoginDialog::CCallbackOnLogonFailure::Run(void*, bool, unsigned long long)
- T CRefreshLoginDialog::CCallbackOnLogonSuccess::Run(void*)
- T CRefreshLoginDialog::CCallbackOnLogonSuccess::Run(void*, bool, unsigned long long)
+ T CRefreshLoginDialog::CCallback_OnLogonFailure::Run(void*)
+ T CRefreshLoginDialog::CCallback_OnLogonSuccess::Run(void*)
  T CRefreshLoginDialog::CRefreshLoginDialog()
  T CRefreshLoginDialog::ChainToAnimationMap()
  T CRefreshLoginDialog::ChainToMap()
@@ -8154,8 +7945,7 @@
  T CScreenshotUploadDialog::UploadProgress(ScreenshotUploadProgress_t*)
  T CScreenshotUploadDialog::UploadScreenshotsComplete(ScreenshotBatchComplete_t*, bool)
  T CScreenshotUploadDialog::~CScreenshotUploadDialog()
- T CSettingsSubBroadcast::CCallbackOnBroadcastStatus::Run(void*)
- T CSettingsSubBroadcast::CCallbackOnBroadcastStatus::Run(void*, bool, unsigned long long)
+ T CSettingsSubBroadcast::CCallback_OnBroadcastStatus::Run(void*)
  T CSettingsSubBroadcast::CSettingsSubBroadcast(vgui::Panel*)
  T CSettingsSubBroadcast::ChainToAnimationMap()
  T CSettingsSubBroadcast::ChainToMap()
@@ -8191,8 +7981,7 @@
  T CSettingsSubBrowser::OnResetData()
  T CSettingsSubBrowser::~CSettingsSubBrowser()
  T CSettingsSubFriends::ApplySchemeSettings(vgui::IScheme*)
- T CSettingsSubFriends::CCallbackOnPersonaStateChange::Run(void*)
- T CSettingsSubFriends::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
+ T CSettingsSubFriends::CCallback_OnPersonaStateChange::Run(void*)
  T CSettingsSubFriends::CSettingsSubFriends(CSteamID const&)
  T CSettingsSubFriends::CanApplyChanges()
  T CSettingsSubFriends::ChainToAnimationMap()
@@ -8229,8 +8018,7 @@
  T CSettingsSubInGame::PanelMessageFunc_OnDirectorySelected::InitVar()
  T CSettingsSubInGame::WriteDefaultPingRateText()
  T CSettingsSubInGame::~CSettingsSubInGame()
- T CSettingsSubVoice::CCallbackOnVoiceInputDeviceChanged::Run(void*)
- T CSettingsSubVoice::CCallbackOnVoiceInputDeviceChanged::Run(void*, bool, unsigned long long)
+ T CSettingsSubVoice::CCallback_OnVoiceInputDeviceChanged::Run(void*)
  T CSettingsSubVoice::CSettingsSubVoice(vgui::Panel*, CSettingsSubVoice::EControls)
  T CSettingsSubVoice::ChainToAnimationMap()
  T CSettingsSubVoice::ChainToMap()
@@ -8292,12 +8080,9 @@
  T CSoundSystemSelect::KB_ChainToMap()
  T CSoundSystemSelect::OnCommand(char const*)
  T CSoundSystemSelect::~CSoundSystemSelect()
- T CSteamAuthedHTML::CCallbackOnCredentialsChanged::Run(void*)
- T CSteamAuthedHTML::CCallbackOnCredentialsChanged::Run(void*, bool, unsigned long long)
- T CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged::Run(void*)
- T CSteamAuthedHTML::CCallbackOnParentalWebTokenChanged::Run(void*, bool, unsigned long long)
- T CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync::Run(void*)
- T CSteamAuthedHTML::CCallbackOnWebAuthRequestAsync::Run(void*, bool, unsigned long long)
+ T CSteamAuthedHTML::CCallback_OnCredentialsChanged::Run(void*)
+ T CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged::Run(void*)
+ T CSteamAuthedHTML::CCallback_OnWebAuthRequestAsync::Run(void*)
  T CSteamAuthedHTML::CSteamAuthedHTML(vgui::Panel*, char const*, bool)
  T CSteamAuthedHTML::ChainToAnimationMap()
  T CSteamAuthedHTML::ChainToMap()

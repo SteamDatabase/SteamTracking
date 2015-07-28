@@ -10,11 +10,11 @@ MusicLibrarySetupPanel .MsgBoxBodyRegion
 {
 	transition-property: transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	padding-right: 20px;
 }
 
-MusicLibrarySetupPanel.DaisyWheelVisible .MsgBoxBodyRegion
+MusicLibrarySetupPanel.BehindTextInputHandler .MsgBoxBodyRegion
 {
 	transform: translatex( 480px );
 }
@@ -121,7 +121,7 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 	
 	transition-property: transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SingleLineLabel
@@ -136,7 +136,7 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 	
 	transition-property: transform, color;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .EntryContainer #AddDirectory:focus .SingleLineLabel

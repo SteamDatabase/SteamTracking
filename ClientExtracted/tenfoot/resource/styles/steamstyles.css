@@ -43,7 +43,7 @@
 @define tclegendlabel: gradient( linear, 0% 0%, 0% 100%, from( #878c8eff ), to( #abb0b2ff ) );
 @define tcstatictext: gradient( linear, 0% 0%, 100% 100%, from( #36b3d9ff ), to( #3a7ba6ff ) );
 @define legendbuttonborder: #878c8eff;
-@define detailsdatalabel: gradient( linear, 0% 0%, 100% 100%, from( #f2f2f2ef ), to( #f2f2f288 ) );
+@define detailsdatalabel: gradient( linear, 0% 0%, 100% 100%, from( #c6d4dfef ), to( #c6d4df88 ) );
 @define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #ffffffff ), to( #f2f2f2aa ) );
 @define detailsdatalabelfocus2: gradient( linear, 80% 0%, 92% 0%, from( #000000ce ), to( #00000000 ) );
 
@@ -79,6 +79,9 @@
 
 /* color used for account warnings - tint of A94847 value from 2' UI */
 @define accountwarning: #bf4343FF;
+
+@define bigpicture-ease-in-out: cubic-bezier( 0, 0.265, 0.265, 1.0);
+//@define bigpicture-ease-in-out: cubic-bezier( 0, 0.42, 0.58, 1.0);
 
 //
 // Blue UI colors for Bigfoot, all in one place to easily find and update them...
@@ -232,6 +235,9 @@
 // Parental - used for locked controls
 @define parental_locked_wash: #888888FF;
 
+//store
+@define StoreAutoActivateSearchDelayTime: 0.8;
+
 DropDown
 {
 	background-image: url( "file://{images}/store/Icon_DropDownArrowDefault.png" );
@@ -258,7 +264,7 @@ DropDown:focus
 	animation-name: main-button-glow-movement; 
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -314,7 +320,7 @@ DropDownMenu Label
 
 	transition-property: color, transform;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 DropDownMenu .DropDownChild:hover Label,
@@ -339,7 +345,7 @@ DropDownMenu .DropDownChild
 
 	transition-property: border, background-color, color, box-shadow, transform;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 DropDownMenu .DropDownChild:hover,
@@ -356,7 +362,7 @@ DropDownMenu .DropDownChild:focus
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -426,56 +432,119 @@ DropDown.DropDownMenuVisible:focus
 	transition-timing-function: linear;
 }
 
-
-TextEntry,
-DropDown,
-ToggleButton .TickBox
+// BUTTONS of all kinds
+Button:hover,
+ToggleButton:hover,
+RadioButton:hover
 {
-	padding: 4px 8px;
-	color: #e1e1e1;
-	height: 48px;
-	background-color: simplebuttonsolid_vertical;
-	border-color: none;
-
-	transition-property: background-color, border, box-shadow;
-	transition-duration: 0.4s;
-	transition-timing-function: linear;
+   z-index: 50;
+   transition-duration: 0.23s !immediate;
+   pre-transform-scale2d: 1.0;
 }
 
-TextEntry:focus
-{
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
 
-	color: applabelselectedsolid;
+Button,
+ToggleButton,
+.CheckBox,
+RadioButton
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+
+	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
 
 	border-style: solid;
-	border-color: #ffffffff;
+	border-width: 5px;
+	border-radius: 0px;
+	border-color: #3d414200;
+
+	pre-transform-scale2d: 1.0;
+
+	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
+	transition-timing-function: ease-out;
+}
+
+.Button {
+	horizontal-align: left;
+	background-color: ui_common_control;
+	border-color: none;
+	border-width: 5px;
+	border-style: solid;
+
+	font-size: 38px;
+
+	// Linux/Mac bug: border-radius != 0 results in no border - will fix
+	//border-radius: 2px;
+	border-radius: 0px;
+
+	margin: 4px 0px 15px 0px;
+	padding: 2px 7px 4px 0px;
+
+	transition-property: border, background-color, color, box-shadow;
+	transition-timing-function: ease-out;
+	transition-duration: 0.23s;
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
+}
+
+.Button:focus {
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
+	border-color: white;
 
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
-TextEntry,
-DropDown,
-ToggleButton .TickBox
+.Button:disabled Label,
+ToggleButton:disabled,
+ToggleButton:disabled .TickBox
 {
+	color: detailsdatalabel;
+}
 
-	padding: 8px 8px;
+TextEntry,
+DropDown
+{
+	padding: 6px 7px 8px 7px;
 	color: applabelsolid;
-	border-radius: 0px;
+	height: 48px;
+	background-color: simplebuttonsolid_vertical;
+	border-color: none;
 
 	transition-property: background-color, border, box-shadow, color;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+TextEntry {
+	font-size: 38px;
+	font-family: platformfont;
+	animation-name: none;
+	vertical-align: center;
+
+	border-color: #285c84f0;
+
+	background-color: #154167;
+
+	horizontal-align: center;
+	border-width: 5px;
+	border-style: solid;
+
+// Linux/Mac bug: border-radius != 0 results in no border - will fix
+//border-radius: 2px;
+	border-radius: 0px;
+
+	pre-transform-scale2d: 1.0;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 }
 
 TextEntry:focus,
-DropDown:focus,
-ToggleButton:descendantfocus .TickBox
+DropDown:focus
 {
 	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
 	color: applabelselectedsolid;
@@ -483,24 +552,52 @@ ToggleButton:descendantfocus .TickBox
 	white-space: nowrap;
 }
 
+TextEntry:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #8f98a0ee ), to( #c6d4dfe0 ) );
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+TextEntry.TextInputHandlerActive,
+TextEntry.TextInputHandlerActive:focus {
+	background-color: #8f98a0e0;
+	border-color: #c6d4dff0;
+	animation-name: none;
+}
+
 ToggleButton
 {
 	flow-children: right;
 	width: 100%;
+	font-size: 24px;
+	background-color: ui_common_control;
 }
 
 ToggleButton .TickBox
 {
-	width: 50px;
-	height: 49px;
-	vertical-align: center;
-
 
 	border-style: solid;
 	border-width: 5px;
 	border-radius: 0px;
-	background-color: blue;
+	background-color: #22495d;
 	border-color: none;
+
+	width: 38px;
+	height: 38px;
+	vertical-align: center;
+	transition-property: transform, background-color, border, box-shadow, color;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
 }
 
 ToggleButton:selected .TickBox
@@ -534,6 +631,97 @@ ToggleButton:descendantfocus .TickBox
 	transition-timing-function: ease-out;
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
 }
+
+// tickbox to turn togglebuttons into checkboxes
+
+ToggleButton.CheckBox:Focus .TickBox
+{
+	background-color: #cccccc;
+	border-color: #cccccc;
+}
+
+ToggleButton.CheckBox:Selected:Focus .TickBox
+{
+	background-color: #ccccccff;
+	border-color: #cccccc;
+	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+}
+
+// and make room for the tickbox
+   ToggleButton.CheckBox Label,
+   RadioButton Label
+   {
+	   padding-left: 14px;
+	   margin: 0px 10px 0px 0px;
+	   color: detailsdatalabel;
+	   width: fit-children;
+	   text-overflow: ellipsis;
+	   font-family: platformfont;
+	   white-space: nowrap;
+
+	   transform: translatex(-7px);
+	   transition-property: color, transform;
+	   transition-duration: 0.23s;
+	   transition-timing-function: ease-in;
+   }
+
+RadioButton Label
+{
+	padding-left: 50px;
+	padding-top: 5px;
+	font-size: 24px;
+}
+
+ToggleButton.CheckBox:hover Label,
+RadioButton:hover Label
+{
+	color: #ffffffff;
+	transform: translatex(0px);
+}
+
+ToggleButton.CheckBox:focus Label,
+RadioButton:focus Label
+{
+	color: #000000ff;
+	transform: translatex(0px);
+}
+
+RadioButton
+{
+	height: 48px;
+	margin-bottom: 4px;
+	margin-top: 0px;
+}
+	// circle for the radio
+	   RadioButton .RadioBox
+	   {
+		   width: 36px;
+		   height: 36px;
+		   border-radius: 50%;
+		   vertical-align: center;
+		   background-color: #22495d;
+	   }
+
+	RadioButton:Selected .RadioBox
+	{
+		background-image: url( "file://{images}/store/Icon_RadioDefault.png" );
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+
+	RadioButton:Selected:focus .RadioBox
+	{
+		background-image: url( "file://{images}/store/Icon_RadioSelected.png" );
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+	}
+
+	RadioButton:focus .RadioBox,
+	RadioButton:selected:focus .RadioBox
+	{
+		background-color: #ccccccff;
+	}
 
 DropDown Label
 {
@@ -604,7 +792,7 @@ HorizontalScrollBar .ScrollThumb
 	// The transition duration and timing function must match constants used in code:
 	// k_flScrollTransitionTime, k_flScrollTransitionFunc, so dont change without talking with a dev
 	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 // HTML* scrollbars intentionally disabled because the HTML panel doesn't use these constants for transitions
@@ -937,7 +1125,7 @@ FriendsChatDialog .VoiceBarContainer
 
 	transition-property: background-color;
 	transition-duration: 0.05s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SliderContainer
@@ -962,7 +1150,7 @@ FriendsChatDialog .VoiceBarContainer
 
 	transition-property: background-color;
 	transition-duration: 0.05s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SliderHalf
@@ -1020,7 +1208,7 @@ FriendsChatDialog .VoiceBarContainer
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1036,6 +1224,15 @@ FriendsChatDialog .VoiceBarContainer
 	width: 300px;
 	height: 150px;
 	transform: translateX( 1698px );
+	padding: 10px;
+}
+
+.VR #HomeButton
+{
+	width: 400px;
+	width: 300px;
+	height: 150px;
+	transform: translateX( 1598px );
 	padding: 10px;
 }
 
@@ -1057,9 +1254,32 @@ FriendsChatDialog .VoiceBarContainer
 	margin-top: 31px;
 
 	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, wash-color, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.23s;
 }
+
+.VR #ActualHomeButton,
+.VR #MouseBackButton
+{
+
+	background-image: url( "file://{images}/steam_home_vr.png" );
+	
+	width: 87px;
+	height: 87px;
+	transform: translateX( 108px );
+	margin-top: 21px;
+	
+	opacity: 0.0;
+
+
+	border-radius: 50%;
+	box-shadow: fill #00000055 -3px -3px 4.5px 6px;
+
+	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, wash-color, transform;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: 0.23s;
+}
+
 
 #MouseBackButton
 {
@@ -1070,6 +1290,17 @@ FriendsChatDialog .VoiceBarContainer
 	height: 47px;
 	margin-top: 41px;
 }
+
+.VR #MouseBackButton
+{
+	background-image: url( "file://{images}/mouse/arrowLdefaultVR.png" );
+	background-position: 0px 0px;
+	transform: translateX( 0px );
+	width: 87px;
+	height: 87px;
+	margin-top: 21px;
+}
+
 
 .CursorVisible #ActualHomeButton,
 .CursorVisible #MouseBackButton
@@ -1086,6 +1317,7 @@ FriendsChatDialog .VoiceBarContainer
 	box-shadow: fill box_shadow_on_color -3px -3px 4.5px 6px;
 	wash-color: #FFFFFFFF;
 }
+
 
 #HomeButton.ForceHidden
 {
@@ -1112,7 +1344,7 @@ FriendsChatDialog .VoiceBarContainer
 	margin-top: 41px;
 	
 	transition-property: opacity, box-shadow, background-color, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.4s;
 }
 
@@ -1164,7 +1396,7 @@ FriendsChatDialog .VoiceBarContainer
 	height: 100%;
 	transition-property: opacity, transform;
 	transition-duration: ContextMenuFadoutTime;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	opacity: 1.0;
 
 	z-index: contextmenu_zindex;
@@ -1245,7 +1477,7 @@ FriendsChatDialog .VoiceBarContainer
 	padding-left: 0px;
 	transition-property: color, position, transform;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	font-size: deffontsize;
 	font-family: platformfont;
 	text-overflow: ellipsis;
@@ -1293,7 +1525,7 @@ FriendsChatDialog .VoiceBarContainer
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1408,7 +1640,7 @@ FriendsChatDialog .VoiceBarContainer
 	padding-left: 0px;
 	transition-property: color, position, transform;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	font-size: deffontsize;
 	font-family: platformfont;
 	font-weight: bold;
@@ -1456,7 +1688,7 @@ FriendsChatDialog .VoiceBarContainer
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1595,7 +1827,7 @@ LoadingThrobber .Bar
 
 	animation-name: loading-throbber-bar;
 	animation-duration: 1s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 }
 

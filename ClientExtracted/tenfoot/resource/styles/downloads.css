@@ -36,7 +36,7 @@ DownloadsPanel
 
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, opacity-mask;
 	transition-duration: DownloadsPanelBackgroundTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #Downloads .GridItemImage
@@ -47,7 +47,7 @@ DownloadsPanel
 	margin: 10px;
 	transition-property: opacity, transform, box-shadow, desaturation;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #Downloads:descendantfocus DownloadsGridItem:hover .GridItemImage
@@ -104,7 +104,7 @@ DownloadsPanel
 	opacity: 1.0;
 	transition-property: opacity, position, pre-transform-scale2d;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #Downloads DownloadsGridItem:descendantfocus #AppButton
@@ -112,7 +112,7 @@ DownloadsPanel
 	opacity: 1.0;
 	transition-property: opacity, position, background-color, pre-transform-scale2d;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -120,7 +120,7 @@ DownloadsPanel
 {
 	transition-property: transform, opacity-mask, opacity;
 	transition-duration: DownloadsPanelBackgroundTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transform-origin: 0% 0% parent-relative;
 
 	position: 0px 25% 0px;
@@ -146,7 +146,7 @@ DownloadsPanel
 
 	animation-name: downloads-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -164,7 +164,7 @@ DownloadsPanel
 
 	animation-name: downloads-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -182,7 +182,7 @@ DownloadsPanel
 
 	animation-name: downloads-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -417,7 +417,7 @@ DownloadsPanel:descendantfocus #DownloadsWrapper
 
 	animation-name: downloads-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -429,7 +429,7 @@ DownloadsPanel:descendantfocus #DownloadsWrapper
 	transition-property: opacity, background-color;
 	transition-duration: 0.4s;
 	transition-delay: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DownloadsGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
@@ -578,7 +578,7 @@ DownloadsGridItem:descendantfocus Button
 	transition-property: opacity, transform !immediate;
 	transition-delay: 0.0s;
 	transition-duration: 0.45s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .HomeGlow
@@ -588,7 +588,7 @@ DownloadsGridItem:descendantfocus Button
 	transition-property: opacity, transform !immediate;
 	transition-delay: 0.0s;
 	transition-duration: 0.1s, 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DownloadsContent .Button,ToggleButton
@@ -604,7 +604,7 @@ DownloadsGridItem:descendantfocus Button
 
 	transition-property: opacity;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DownloadsSection.SectionVisible
@@ -620,7 +620,7 @@ DownloadsGridItem
 	margin-left: -25px;
 	margin-right: -25px;
 	transition-property: blur, transform, pre-transform-scale2d, opacity-mask, opacity, position;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: DownloadsPanelTransitionDuration;
 	opacity: 0.8;
 }
@@ -681,7 +681,7 @@ DownloadsGridItem Button
 	visibility: collapse;
 	opacity: 0.0;
 	transition-property: opacity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: DownloadsPanelTransitionDuration;
 }
 
@@ -702,7 +702,7 @@ DownloadsGridItem.CompletedDownload:descendantfocus #DownloadFinishedLabel
 	visibility: collapse;
 	opacity: 0.0;
 	transition-property: opacity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: DownloadsPanelTransitionDuration;
 }
 
@@ -774,7 +774,7 @@ DownloadsGridItem .DownloadLabels, DownloadsGridItem .DownloadQueuedLabels
 	
 	transition-property: opacity;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DownloadLabelRow, .DownloadValuesRow
@@ -897,7 +897,7 @@ DownloadsGridItem:descendantfocus .PercentDownload
 	margin-top: 2px;
 	transition-property: opacity;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 DownloadsGridItem:descendantfocus .PercentDownload Label
@@ -931,7 +931,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 	height: 38px;
 	transition-property: opacity;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DownloadGridHeader
@@ -944,7 +944,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 	margin-right: 40px;
 	transition-property: position, transform;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DownloadGridBody1
@@ -956,7 +956,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 
 	transition-property: position, transform;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DownloadGridBody2
@@ -969,7 +969,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 
 	transition-property: position, transform;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #DownloadStatusLabel
@@ -983,7 +983,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 
 	transition-property: opacity;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #DownloadDetailsLabel
@@ -998,7 +998,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 
 	transition-property: opacity;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .DownloadBarBackground
@@ -1007,7 +1007,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 
 	transition-property: opacity, position;
 	transition-duration: 0.15s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .Downloading .DownloadBarBackground
@@ -1025,7 +1025,7 @@ DownloadsGridItem:descendantfocus .PercentDownload Label
 	box-shadow: fill #00000044 -4px -4px 8px 8px;
 	z-index: 3010;
 	transition-duration: DownloadsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 DownloadsGridItem:descendantfocus .DownloadBarBackground
@@ -1049,13 +1049,13 @@ DownloadsGridItem:descendantfocus:hover
 
 	transition-property: opacity;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1083,7 +1083,7 @@ DownloadsGridItem.Downloading.Ready #TimeRemainHeader
 	
 	transition-property: opacity, position;
 	transition-duration: 0.15s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 DownloadsGridItem.Downloading.Ready.Queued #TimeRemainHeader

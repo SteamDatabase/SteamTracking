@@ -22,7 +22,7 @@ LibraryScreenshotsSlideshow.Destructing
 
 	animation-name: msg-box-disappear;
 	animation-duration: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -46,7 +46,7 @@ LibraryScreenshotsSlideshow #Contents
 
 	transition-property: transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SlideshowPanel.SlideShowLeftOfFocus
@@ -71,7 +71,7 @@ LibraryScreenshotsSlideshow #Contents
 	transform: translateY( 0px );
 	transition-property: transform;
 	transition-duration: 0.5s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .ShowDescription #SlideShowGlow
@@ -80,7 +80,7 @@ LibraryScreenshotsSlideshow #Contents
 	animation-name: SlideshowGlowDisappear;
 	animation-duration: 3.5s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -97,7 +97,7 @@ LibraryScreenshotsSlideshow #Contents
 	transition-property: transform;
 	transition-duration: 0.5s;
 	transition-delay: 0.5s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	color: #d2d2d2ff;
 	width: 100%;
@@ -115,7 +115,7 @@ LibraryScreenshotsSlideshow #Contents
 	animation-name: SlideshowDisappear;
 	animation-duration: 3.5s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -190,7 +190,7 @@ LibraryScreenshotsSlideshow #Contents
 	transition-property: background-color, opacity;
 	transition-duration: 0.3s;
 	transition-delay: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -278,7 +278,7 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 
 	transition-property: opacity, color;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	opacity: 0.7;
 }
@@ -314,10 +314,10 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 
 	transition-property: transform, opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.UploadScreenshotMsgBox.DaisyWheelVisible #MsgBoxBodyRegion
+.UploadScreenshotMsgBox.BehindTextInputHandler #MsgBoxBodyRegion
 {
 	transform: translatex( 480px );
 }
@@ -333,7 +333,7 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #ThrobberRow
@@ -387,7 +387,7 @@ SlideShow:hover .RightMouseScrollRegion.Disabled
 
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .UploadInProgress #MsgBoxButtonArea

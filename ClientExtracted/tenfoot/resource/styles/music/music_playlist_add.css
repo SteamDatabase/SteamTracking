@@ -48,7 +48,7 @@ MusicPlaylistRenameDialog
 
 	animation-name: msg-box-appear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -58,11 +58,11 @@ MusicPlaylistRenameDialog.Destructing
 
 	animation-name: msg-box-disappear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
-.DaisyWheelVisible .MsgBoxBodyRegion
+.BehindTextInputHandler .MsgBoxBodyRegion
 {
 	transform: translatex( 470px );
 }
@@ -89,7 +89,7 @@ MusicPlaylistRenameDialog.Destructing
 	background-color: #FFFFFFFF;
 }
 
-.DaisyWheelVisible #Input
+.BehindTextInputHandler #Input
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
 	border-color: #ffffffff;

@@ -12,5 +12,7 @@
 		<ProfilePanel id="Profile" class="ProfilePanel" />
 		<ProfilePanel id="FriendActivity" class="ProfilePanel" />
 		<ProfilePanel id="Inventory" class="ProfilePanel" />
+		<ProfilePanel id="Trade" class="ProfilePanel" />
+		<ProfilePanel id="TradeOffers" class="ProfilePanel" />
 	</ProfileWrapper>
 </root>

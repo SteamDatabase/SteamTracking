@@ -4682,6 +4682,7 @@
  T Plat_OutputDebugString
  T Plat_RelativeTickFrequency
  T Plat_RelativeTicks
+ T Plat_TickDiffMilliSec
  T Plat_localtime
  T PosixRegistryManager()
  T RAND_SSLeay
@@ -6603,6 +6604,7 @@
  T ssl_replace_hash
  T ssl_sess_cert_free
  T ssl_sess_cert_new
+ T ssl_session_dup
  T ssl_set_cert_masks
  T ssl_set_peer_cert_type
  T ssl_undefined_const_function
@@ -7677,7 +7679,7 @@
  pthread_cond_destroy
  pthread_cond_init$UNIX2003
  pthread_cond_signal
- pthread_cond_timedwait$UNIX2003
+ pthread_cond_timedwait_relative_np
  pthread_cond_wait$UNIX2003
  pthread_condattr_destroy
  pthread_condattr_init
@@ -8346,6 +8348,7 @@
  t freelist_insert
  t general_allocate_boolean
  t generate_key
+ t generate_v3
  t get_attribute
  t get_cert_by_subject
  t get_crl_sk

@@ -544,6 +544,14 @@ JoinTrade
 	method		"trade"
 	filter		"trading"
 }
+
+NewTradeOffer
+{
+	url		"%community%/tradeoffer/new?partner=%p1%"
+	method		"trade"
+	filter		"trading"
+}
+
 CommunityInventory
 {
 	url			"%community%/%mystuff%/inventory/"

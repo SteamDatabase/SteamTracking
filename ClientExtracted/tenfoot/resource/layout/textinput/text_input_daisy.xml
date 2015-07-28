@@ -125,12 +125,10 @@
 
 				<Panel id="MiddleLegendRS" class="LegendButton">
 					<Panel id="ABXY_Footer_Wrapper">
-						<Label id="A_btn" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
-						<Label id="A_txt" class="LegendText AButtonText" text="#UI_InputDone" />
-						<Label id="B_btn" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
-						<Label id="B_txt" class="LegendText BButtonText" text="#UI_Dismiss" />
+						<Label id="A_btn" class="LegendButtonBox AButtonBox HiddenFooter" text="#UI_AButton" />
+						<Label id="A_txt" class="LegendText AButtonText HiddenFooter" text="#UI_InputDone" />
 						<Label id="X_btn" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
-						<Label id="X_txt" class="LegendText XButtonText" text="" />
+						<Label id="X_txt" class="LegendText XButtonText" text="#UI_Submit_Caps" />
 						<Label id="Y_btn" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
 						<Label id="Y_txt" class="LegendText YButtonText" text="" />
 					</Panel>

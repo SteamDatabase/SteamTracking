@@ -74,7 +74,7 @@ TenfootFileSelector, .TenfootFileSelector
 
 	animation-name: msg-box-appear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -198,7 +198,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 }
 
 
-.DaisyWheelVisible #FileSelectorBodyRegion, .DaisyWheelVisible .FileSelectorBodyRegion
+.BehindTextInputHandler #FileSelectorBodyRegion, .BehindTextInputHandler .FileSelectorBodyRegion
 {
 	transform: translateX( 460px );	
 }
@@ -247,7 +247,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 
 	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
 	transition-duration: 0.25s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .UpFolder
@@ -274,7 +274,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	padding-right: 5px;
 	transition-property: color, transform;
 	transition-duration: 0.23s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FileSelectorButtonTopRow Button:hover
@@ -297,14 +297,14 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	animation-name: msgbox-button-focus; 
 	animation-duration: 1.7s;
 	animation-delay: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 
 }
@@ -341,7 +341,7 @@ TenfootFileSelector.BehindAnotherMsgBox, .TenfootFileSelector.BehindAnotherMsgBo
 	
 	transition-property: color, transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	
 }
 
@@ -417,7 +417,7 @@ FileSelectorEntry:focus
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -435,7 +435,7 @@ FileSelectorEntry Label
 
 	transition-property: transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 FileSelectorEntry:hover Label,
@@ -491,7 +491,7 @@ DropDownMenu.DropDownMenuVisible
 	transform: translateX( 7px );
 	transition-property: transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FileSelectorLocationDropDown:hover Label

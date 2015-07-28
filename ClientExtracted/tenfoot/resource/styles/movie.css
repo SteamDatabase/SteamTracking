@@ -84,7 +84,7 @@ MoviePanel
 
 	transition-property: opacity;
 	transition-duration: 0.75s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -128,7 +128,7 @@ LoadingThrobber
 
 	animation-name: loading-throbber-appear;
 	animation-duration: 1.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 }
 
 LoadingThrobber .Bar
@@ -155,7 +155,7 @@ LoadingThrobber .Bar
 
 	transition-property: opacity;
 	transition-duration: 0.75s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .MovieError #ErrorMessage
@@ -181,7 +181,7 @@ LoadingThrobber .Bar
 
 	transition-property: transform;
 	transition-duration: 0.5s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .ShowTitle #PlaybackTitleAndControls
@@ -240,7 +240,7 @@ LoadingThrobber .Bar
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .PlaybackControl.Visible
@@ -323,7 +323,7 @@ LoadingThrobber .Bar
 	animation-name: movie-button-focus, main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }

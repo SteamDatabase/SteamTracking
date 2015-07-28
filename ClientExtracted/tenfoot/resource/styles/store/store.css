@@ -75,7 +75,7 @@
 
 	animation-name: throbber-appear-delay;
 	animation-duration: 1.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 }
 
 //
@@ -129,7 +129,7 @@ StorePanel Carousel
 	transition-property: background-color, opacity;
 	transition-duration: 0.3s;
 	transition-delay: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -236,7 +236,7 @@ Carousel:descendantfocus .RightMouseScrollRegion
 	transition-property: opacity, background-color;
 	transition-duration: mediumduration;
 	transition-delay: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
@@ -299,12 +299,12 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 	transition-property: opacity, transform, desaturation, wash-color, pre-transform-scale2d, opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	overflow: noclip noclip;
 
 	animation-name: store-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -426,7 +426,7 @@ StorePanel:descendantfocus #FeaturedCapsules,
 
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 	wash-color: #00000039;
@@ -448,7 +448,7 @@ StorePanel:descendantfocus #FeaturedCapsules,
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 	wash-color: #00000000;
@@ -474,7 +474,7 @@ StorePanel:descendantfocus #FeaturedCapsules,
 
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 	background-image: url( "file://{images}/store/shadow.png" );
@@ -499,7 +499,7 @@ StorePanel:descendantfocus #FeaturedCapsules,
 }
 
 
-.CapsuleControllerSupport, .MacSupport, .WindowsSupport, .SteamOSSupport
+.CapsuleControllerSupport, .MacSupport, .WindowsSupport, .SteamOSSupport, .StreamingVideoSupport
 {
 	width: 50px;
 	height: 50px;
@@ -510,7 +510,7 @@ StorePanel:descendantfocus #FeaturedCapsules,
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StorePackageAppOverview.Focused:descendantfocus .CapsuleControllerSupport
@@ -559,6 +559,22 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.SteamOSAvailable .St
 }
 
 StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.WindowsAvailable .WindowsSupport
+{
+	margin: 0px;
+}
+
+
+.CapsuleControllerSupportContainer.StreamingVideoAvailable .StreamingVideoSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_streamingvideo_storefront.png" );
+	background-size: contain;
+	background-repeat: no-repeat;
+	horizontal-align: right;
+	vertical-align: center;
+}
+
+StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.StreamingVideoAvailable .StreamingVideoSupport
 {
 	margin: 0px;
 }
@@ -701,7 +717,7 @@ StoreBrowseByCategoryItem.CapsuleControllerSupportContainer.FullController .Caps
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FeaturedCapsules .StoreImage:descendantfocus #StoreImageDiscount
@@ -770,11 +786,11 @@ StorePanel:descendantfocus .StoreImage,
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	animation-name: store-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -823,7 +839,7 @@ StorePanel:descendantfocus #FeaturedPlatform
 
 	transition-property: opacity, transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -873,7 +889,7 @@ StorePanel:descendantfocus #FeaturedPlatform
 
 	transition-property: transform, pre-transform-scale2d, opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transform: translateY( 50% ) translateZ( -100px );
 }
 
@@ -985,7 +1001,7 @@ StoreFeaturedCategory:focus
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.5s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1103,7 +1119,7 @@ StoreFeaturedCategory Image
 
 	transition-property: transform, opacity, desaturation;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1299,7 +1315,7 @@ StoreSlideshow #Contents
 
 	transition-property: transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SlideshowPanel.SlideShowLeftOfFocus
@@ -1418,7 +1434,7 @@ StoreGenrePreview
 
 	transition-property: pre-transform-scale2d, box-shadow, desaturation, position, background-color, wash-color;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StoreGenrePreview:hover
@@ -1437,7 +1453,7 @@ StoreGenrePreview:focus
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1450,7 +1466,7 @@ StoreGenrePreview:focus:hover
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1498,7 +1514,7 @@ StoreGenrePreview #GenreName
 
 	transition-property: color, pre-transform-scale2d, transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StoreGenrePreview:focus #GenreName
@@ -1531,7 +1547,7 @@ StoreGenrePreview Image
 
 	transition-property: desaturation, opacity, position;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StoreGenrePreview:focus Image

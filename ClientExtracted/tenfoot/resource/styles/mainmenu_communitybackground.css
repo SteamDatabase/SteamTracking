@@ -32,7 +32,7 @@ OverlayBasePanel #CommunityFriendsStrip
 	
 	transition-property: transform;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #OverlayDashboard:descendantfocus #CommunityFriendsStrip:descendantfocus
@@ -73,7 +73,7 @@ OverlayBasePanel #CommunityFriendsStrip
 
 	transition-property: transform, opacity, position, desaturation;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #CommunityFeedStripWrapperBackground
@@ -87,7 +87,7 @@ OverlayBasePanel #CommunityFriendsStrip
 {
 	animation-name: communityfriends-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal; 
 	
@@ -95,7 +95,7 @@ OverlayBasePanel #CommunityFriendsStrip
 	
 	transition-property: transform, pre-transform-scale2d, blur, opacity, desaturation;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 }
@@ -111,7 +111,7 @@ OverlayBasePanel #CommunityFriendsStrip
 	desaturation: 0.3;
 	transition-property: desaturation, opacity, position, blur, transform, opacity-mask, pre-transform-scale2d;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
 	pre-transform-scale2d: 1.0;
@@ -166,7 +166,7 @@ ProfileWrapper #CommunityFriendsStripWrapper
 {
 	transition-property: opacity, transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -286,7 +286,7 @@ CommunityMainPanel.CommunityFriendsTransitionRightAndOff,
 
 	transition-property: opacity, box-shadow, transform, opacity-mask, background-color, position, border, opacity, blur, pre-transform-scale2d;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 

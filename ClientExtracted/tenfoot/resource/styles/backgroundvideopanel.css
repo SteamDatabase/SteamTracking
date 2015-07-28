@@ -16,6 +16,12 @@ BackgroundVideoPanel
 
 }
 
+BackgroundVideoPanel.VR 
+{
+	background-color: #0b2c38dd;
+}
+
+
 BackgroundVideoPanel.IngameOverlayBackground
 {
 	width: 1920px;
@@ -36,7 +42,7 @@ BackgroundVideoPanel.ScreenSaverMode, BackgroundVideoPanel.GamesRunning, Welcome
 
 	animation-name: background-gradient-anim;
 	animation-duration: 20.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	
 }
@@ -68,7 +74,7 @@ BackgroundVideoPanel.ScreenSaverMode, BackgroundVideoPanel.GamesRunning, Welcome
 
 	animation-name: particle-system-anim;
 	animation-duration: 15.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 
 	
@@ -203,7 +209,7 @@ BackgroundVideoPanel.IngameOverlayBackground #BackgroundMovie
 
 	animation-name: particle-system-anim-screensaver;
 	animation-duration: 40.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 
 	
@@ -348,7 +354,7 @@ BackgroundVideoPanel #BackgroundThrobber
 	opacity: 0.0;
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 BackgroundVideoPanel.SteamOS.GamesRunning #BackgroundThrobber

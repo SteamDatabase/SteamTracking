@@ -14,6 +14,7 @@
 				<Panel class="WindowsSupport" />
 				<Panel class="MacSupport" />
 				<Panel class="SteamOSSupport" />
+				<Panel class="StreamingVideoSupport" />
 				<Image id="ControllerSupport" />
 			</Panel>
 		</Panel>

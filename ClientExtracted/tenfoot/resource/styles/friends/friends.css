@@ -87,7 +87,7 @@ Friends.BehindMessageBox.FriendsInputTextEntry #FriendsMainBodyColumnLeft
 {
 	transition-property: opacity;
 	transition-duration: 0.5s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FriendsChatDialogContainer
@@ -315,7 +315,7 @@ FriendsChatDialog.ClanChatDisabled
 
 	transition-property: opacity;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FriendsMainBodyInputTextArea:hover
@@ -335,13 +335,13 @@ FriendsChatDialog.ClanChatDisabled
 	animation-name: main-button-glow-movement-no-fill;
 	//animation-name: links-and-more-button-focus;
 	animation-duration: 1.7s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
 	transition-property: background-color, border;
 	transition-duration: 0.3s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FriendsMainBodyInputTextArea:hover:disabled
@@ -372,7 +372,7 @@ FriendsChatDialog.ClanChatDisabled
 
 	transition-property: background-color;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 }
 
@@ -470,7 +470,7 @@ FriendsSelfHeader.Golden Label
 
 	transition-property: box-shadow;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FriendsMyItem
@@ -478,7 +478,7 @@ FriendsSelfHeader.Golden Label
 	transform: translateX( 0px );
 	transition-property: transform;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #FriendsMyItem:hover
@@ -566,7 +566,7 @@ FriendsSelfHeader.Golden Label
 {
 	transition-property: transform, color;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	margin-left: 10px;
 	transform: translatex(  0px );
@@ -597,7 +597,7 @@ FriendsSelfHeader.Golden Label
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -641,7 +641,7 @@ FriendsSelfHeader.Golden Label
 	white-space: nowrap;
 	transition-property: pre-transform-scale2d, transform;
 	transition-duration: 0.2s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .FriendsListItemStatus
@@ -655,7 +655,7 @@ FriendsSelfHeader.Golden Label
 
 	transition-property: pre-transform-scale2d, transform;
 	transition-duration: 0.2s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .FriendsListItemStatusDetail
@@ -668,7 +668,7 @@ FriendsSelfHeader.Golden Label
 	white-space: nowrap;
 	transition-property: pre-transform-scale2d, transform;
 	transition-duration: 0.2s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .LeftMainListItem
@@ -691,7 +691,7 @@ FriendsSelfHeader.Golden Label
 
 	transition-property: background-color, border, box-shadow, pre-transform-scale2d, transform, opacity, height;
 	transition-duration: 0.2s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .LeftMainListItem:hover
@@ -748,13 +748,13 @@ FriendsSelfHeader.Golden Label
 	animation-name: main-button-glow-movement-no-fill;
 	//animation-name: links-and-more-button-focus;
 	animation-duration: 1.7s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
 	transition-property: background-color, transform, border;
 	transition-duration: 0.3s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .LeftMainListItem.CurrentSelection:descendantfocus
@@ -772,7 +772,7 @@ FriendsSelfHeader.Golden Label
 	transform: translateX( 0px );
 	transition-property: background-color, transform, border;
 	transition-duration: 0.3s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .LeftMainListItem.Offline Label
@@ -786,7 +786,7 @@ GroupListItem.LeftMainListItem.Offline Label
 
 	transition-property: color, pre-transform-scale2d, transform;
 	transition-duration: 0.2s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
@@ -890,7 +890,7 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -905,7 +905,7 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -981,7 +981,7 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .MainBodyLeftList.CurrentSelection
@@ -1287,7 +1287,7 @@ FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
 }
 
 .AddFriendMsgBox TextEntry:focus,
-.DaisyWheelVisible TextEntry
+.BehindTextInputHandler TextEntry
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
 
@@ -1306,11 +1306,11 @@ FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
 
 	transition-property: transform;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	box-shadow: fill #00000044 -4px -4px 8px 8px;
 }
 
-.AddFriendMsgBox.DaisyWheelVisible #MsgBoxBodyRegion
+.AddFriendMsgBox.BehindTextInputHandler #MsgBoxBodyRegion
 {
 	transform: translatex( 480px );
 }
@@ -1477,7 +1477,7 @@ DropDownMenu
 
 	transition-property: opacity; 
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 }
 
@@ -1541,13 +1541,13 @@ FriendInvitePanel:descendantfocus:hover,
 	animation-name: main-button-glow-movement-no-fill;
 	//animation-name: links-and-more-button-focus;
 	animation-duration: 1.7s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
 	transition-property: background-color, border;
 	transition-duration: 0.3s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 FriendInvitePanel Button
@@ -1562,7 +1562,7 @@ FriendInvitePanel Button
 
 	transition-property: pre-transform-scale2d;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	background-color: simplebuttonsolid_vertical;
 }
 
@@ -1580,7 +1580,7 @@ FriendInvitePanel Button:focus
 
 	transition-property: background-color, border;
 	transition-duration: 0.3s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 FriendInvitePanel.Disabled Button
@@ -1662,7 +1662,7 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 	color: friendsoffline_darkbg;
 	transition-property: opacity;
 	transition-duration: 0.1s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #SearchEntry:descendantfocus Label
@@ -1755,7 +1755,7 @@ TextEntry.CurrentSelection Label
 
 	transition-property: box-shadow;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .LeftMainListItem.SearchEntry:descendantfocus,
@@ -1777,7 +1777,7 @@ TextEntry.CurrentSelection Label
 	transform: translateX( 8px );
 	transition-duration: 0.2s;
 	transition-property: transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 

@@ -11,7 +11,7 @@
 
 		<Label class="SettingsCallout LongDesc" text="#SettingsNetwork_Manual_Instructions" />
 
-
+			<Panel id="WrapperPanel" >
 				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomIP" />
 					<TextEntry
 						id="SettingsNetwork_CustomIP"
@@ -57,6 +57,7 @@
 						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
 					</TextEntry>
 
+			</Panel>
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="Label" text="#SettingsNetwork_Connect" />

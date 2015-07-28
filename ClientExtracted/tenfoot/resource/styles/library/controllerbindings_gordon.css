@@ -14,7 +14,7 @@ ControllerBindingsGordon
 
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	width: 100%;
 	height: 100%;
 }
@@ -41,8 +41,8 @@ ControllerBindingsGordon.BehindAnotherMsgBox:descendantfocus
 	wash-color: #00000066;
 }
 
-ControllerBindingsGordon.BehindMessageBox.BehindDaisyWheel:descendantfocus,
-ControllerBindingsGordon.BehindAnotherMsgBox.BehindDaisyWheel:descendantfocus
+ControllerBindingsGordon.BehindMessageBox.BehindTextInputHandler:descendantfocus,
+ControllerBindingsGordon.BehindAnotherMsgBox.BehindTextInputHandler:descendantfocus
 {
 	blur: none;
 	desaturation: 0.0;
@@ -92,6 +92,84 @@ ControllerBindingsGordon.ScreenSaverMode
 
 	width: 1800px;
 	height: 100%;
+}
+
+.HelperImage
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#HelperImageBG
+{
+	margin-top: 53px;
+	horizontal-align: left;
+	background-color: #102f4b;
+	
+	width: 50%;
+	height: 90%;
+	
+	visibility: collapse;
+}
+
+#HelperDescription
+{
+	margin-top: 53px;
+	horizontal-align: right;
+	background-color: #13354c; 
+	
+	width: 50%;
+	height: 90%;
+	
+	visibility: collapse;
+}
+
+#HelperDescriptionHeader
+{
+	font-size: 60px;
+	font-family: platformfont;
+	color: #01caef;
+	margin-top: 40px;
+	text-align: center;
+	
+	horizontal-align: center;
+	vertical-align: top;
+	width: 100%;
+	height: 15%;
+	
+	visibility: visible;
+}
+
+#HelperDescriptionText
+{
+	font-size: 22px;
+	font-family: platformfont;
+	color: #01caef;
+	margin-top: 140px;
+	text-align: left;
+	
+	horizontal-align: center;
+	vertical-align: top;
+	width: 85%;
+	height: 90%;
+	
+	visibility: visible;
+}
+
+.ShowBackgroundHelper #HelperDescription
+{
+	visibility: visible;
+}
+
+.ShowBackgroundHelper #HelperImageBG
+{
+	visibility: visible;
+}
+
+
+.ShowBackgroundHelper #BackgroundController
+{
+	background-image: url( "" );
 }
 
 #BackgroundController
@@ -241,7 +319,7 @@ ControllerBindingsGordon.ScreenSaverMode
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -303,7 +381,7 @@ ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -486,7 +564,7 @@ ControllerBindingButton.BindingButton.Right
 {
 	transition-property: transform, opacity;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .BottomPanelVisible #Right.BindingSlotStrip
@@ -505,7 +583,7 @@ ControllerBindingButton.BindingButton.Right
 {
 	transition-property: pre-transform-scale2d, transform, opacity;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .BottomPanelVisible #BackgroundLines
@@ -517,7 +595,7 @@ ControllerBindingButton.BindingButton.Right
 {
 	transition-property: opacity, transform, pre-transform-scale2d;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .BottomPanelVisible #TopHalfContainer #BackgroundController
@@ -530,7 +608,7 @@ ControllerPropertiesMode
 {
 	transition-property: transform;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	transform: translatey( propertiesheight );
 }
@@ -544,7 +622,7 @@ ControllerPropertiesMode
 {
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .BottomPanelVisible #ModeContainer, #GyroModeContrainer
@@ -1132,7 +1210,17 @@ Slider:Selected
 	visibility: collapse;
 }
 
+.ModeJoystickMoveVisible.GyroSource .JoystickMoveMode.Gyro.Advanced
+{
+	visibility: collapse;
+}
+
 .ModeJoystickMoveVisible.GyroSource .JoystickMoveMode.Gyro
+{
+	visibility: visible;
+}
+
+.ModeJoystickMoveVisible.GyroSource.AdvancedPropertiesVisible .JoystickMoveMode.Gyro
 {
 	visibility: collapse;
 }
@@ -1197,6 +1285,66 @@ Slider:Selected
 	visibility: visible;
 }
 
+.ModeJoystickCameraVisible .JoystickCameraMode.Gyro
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible .JoystickCameraMode.Gyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible.GyroSource .JoystickCameraMode.Gyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible.GyroSource .JoystickCameraMode.Gyro
+{
+	visibility: visible;
+}
+
+.ModeJoystickCameraVisible.GyroSource.AdvancedPropertiesVisible .JoystickCameraMode.Gyro
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible.GyroSource.AdvancedPropertiesVisible .JoystickCameraMode.Gyro.Advanced
+{
+	visibility: visible;
+}
+
+.ModeJoystickCameraVisible .JoystickCameraMode.NoGyro
+{
+	visibility: visible;
+}
+
+.ModeJoystickCameraVisible.GyroSource .JoystickCameraMode.NoGyro
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible .JoystickCameraMode.NoGyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode.NoGyro.Advanced
+{
+	visibility: visible;
+}
+
+.ModeJoystickCameraVisible.AdvancedPropertiesVisible.GyroSource .JoystickCameraMode.NoGyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeJoystickCameraVisible.AdvancedPropertiesVisible .JoystickCameraMode.NoGyro
+{
+	visibility: collapse;
+}
+
 .MouseMode
 {
 	visibility: collapse;
@@ -1232,15 +1380,27 @@ Slider:Selected
 	visibility: collapse;
 }
 
-.ModeAbsMouseVisible.GyroSource .MouseMode.Gyro
+.ModeAbsMouseVisible.GyroSource .MouseMode.Gyro.Advanced
 {
 	visibility: collapse;
+}
+
+
+.ModeAbsMouseVisible.GyroSource .MouseMode.Gyro
+{
+	visibility: visible;
 }
 
 .ModeAbsMouseVisible.GyroSource.AdvancedPropertiesVisible .MouseMode.Gyro.Advanced
 {
 	visibility: visible;
 }
+
+.ModeAbsMouseVisible.GyroSource.AdvancedPropertiesVisible .MouseMode.Gyro
+{
+	visibility: collapse;
+}
+
 
 
 .ModeAbsMouseVisible .MouseMode.NoGyro
@@ -1471,7 +1631,7 @@ Slider:Selected
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 	z-index: 100;
@@ -1723,10 +1883,10 @@ ChooseBinding
 
 	transition-property: opacity, opacity-mask;
 	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.DaisyWheelVisible #ChooseBinding
+.BehindTextInputHandler #ChooseBinding
 {
 	opacity-mask: url( "file://{images}/library/keyboardfade.png" ) 0.9;
 	opacity: 0.35;
@@ -1795,7 +1955,7 @@ ChooseBinding Button.GamepadButton
 	box-shadow: none;
 }
 
-.DaisyWheelVisible ChooseBinding Button:hover
+.BehindTextInputHandler ChooseBinding Button:hover
 {
 	box-shadow: none;
 }
@@ -1827,7 +1987,7 @@ ChooseBinding Button.GamepadButton
 	box-shadow: none;
 }
 
-.DaisyWheelVisible ChooseBinding Button:hover
+.BehindTextInputHandler ChooseBinding Button:hover
 {
 	box-shadow: none;
 }
@@ -1854,7 +2014,7 @@ ChooseBinding Button.OriginalBinding:focus
 	animation-name: main-button-glow-movement-small;
 	animation-duration: longduration;
 	animation-delay: shortduration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
@@ -2652,6 +2812,25 @@ ControllerConfigButton #ControllerImage
 	height: 100%;
 }
 
+
+ControllerConfigButton #RecommendedConfig
+{
+	font-size: 15px;
+	font-family: platformfont;
+	
+	align: left bottom;
+	color: white;
+	margin-bottom: 2px;
+	margin-left: 5px;
+	visibility: collapse;
+	font-weight: bold;
+}
+
+ControllerConfigButton.Recommended #RecommendedConfig
+{
+	visibility: visible;
+}
+
 ControllerConfigButton #ConfigContentWrapper
 {
 	flow-children: down;
@@ -2675,6 +2854,7 @@ ControllerConfigButton #Author
 	font-weight: thin;
 	color: #75c7fdff;
 }
+
 
 ControllerConfigButton #Description
 {
@@ -2777,7 +2957,7 @@ ControllerConfigBrowser #ConfigCategoriesColumn Button:focus, ControllerConfigBu
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }

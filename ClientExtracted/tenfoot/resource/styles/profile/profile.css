@@ -64,10 +64,20 @@
 	opacity: 1.0;
 }
 
+#ProfileWrapper ProfilePanel
+{
+	opacity: 0.0;
+}
+
 #ProfileWrapper .ProfileInvisible
 {
 	opacity: 0.0;
 	transform: translate3d( 0px, 1280px, 1000px );
+}
+
+#ProfileWrapper:descendantfocus .ProfileVisible
+{
+	 opacity: 1.0;
 }
 
 .StackDepth2 #ProfileWrapper.ProfileInvisible,
@@ -76,12 +86,6 @@
 	transform: translatey( 1080px );
 	opacity: 0.0;
 }
-
-#ProfileWrapper ProfilePanel
-{
-	opacity: 1.0;
-}
-
 
 .StackDepth2 #ProfileWrapper.ActivityFocused ProfilePanel#FriendActivity,
 .StackDepth3 #ProfileWrapper.ActivityFocused ProfilePanel#FriendActivity
@@ -147,7 +151,7 @@
 	transition-property: opacity, color;
 	transition-duration: 0.3s;
 	transition-delay: 0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 }
 
@@ -158,7 +162,7 @@
 	transition-property: opacity, color, pre-transform-scale2d;
 	transition-duration: 0.3s;
 	transition-delay: 0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #ProfileNavBar Button:Focus Label
@@ -176,7 +180,7 @@
 	transition-property: opacity, color, pre-transform-scale2d;
 	transition-duration: 0.3s;
 	transition-delay: 0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #ProfileNavBar Button:hover Label
@@ -229,7 +233,7 @@
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.3s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -290,7 +294,7 @@ ProfilePanel #ContentRow
 	perspective: 1000;
 	animation-name: profilecontent-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
@@ -302,7 +306,7 @@ ProfilePanel #ContentRow
 
 	transition-property: transform, position;
 	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 }
 
@@ -368,7 +372,7 @@ ProfilePanel .ProfileBackground
 {
 	animation-duration: mediumduration;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
@@ -506,4 +510,13 @@ ProfilePanel LoadingThrobber
 {
 	transform: translatey( 122px );
 	height: 958px;
+}
+
+ProfilePanel.ProfileLoaded, 
+ProfilePanel.ProfileVisible,
+ProfilePanel #ProfileBackground.ProfileBackground,
+ProfilePanel #FriendActivity,
+ProfilePanel #Inventory,
+{
+	opacity: 1.0;
 }

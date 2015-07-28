@@ -1616,8 +1616,8 @@
  D typeinfo for BlankImage
  D typeinfo for CAchievementNotification
  D typeinfo for CAppDownloadNotificationManager
- D typeinfo for CAppDownloadNotificationManager::CCallbackOnAppEventStateChange
- D typeinfo for CAppDownloadNotificationManager::CCallbackOnDlcInstalled
+ D typeinfo for CAppDownloadNotificationManager::CCallback_OnAppEventStateChange
+ D typeinfo for CAppDownloadNotificationManager::CCallback_OnDlcInstalled
  D typeinfo for CAppDownloadedNotification
  D typeinfo for CAvatarOverlayImage
  D typeinfo for CBoolProperty
@@ -1717,35 +1717,56 @@
  D typeinfo for CCallback<CVoiceBar, GameUsingVoice_t, false>
  D typeinfo for CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>
  D typeinfo for CCallbackBase
+ D typeinfo for CCallbackImpl<1032>
+ D typeinfo for CCallbackImpl<12>
+ D typeinfo for CCallbackImpl<148>
+ D typeinfo for CCallbackImpl<156>
+ D typeinfo for CCallbackImpl<16>
+ D typeinfo for CCallbackImpl<176>
+ D typeinfo for CCallbackImpl<1>
+ D typeinfo for CCallbackImpl<20>
+ D typeinfo for CCallbackImpl<24>
+ D typeinfo for CCallbackImpl<268>
+ D typeinfo for CCallbackImpl<284>
+ D typeinfo for CCallbackImpl<28>
+ D typeinfo for CCallbackImpl<2>
+ D typeinfo for CCallbackImpl<4>
+ D typeinfo for CCallbackImpl<524>
+ D typeinfo for CCallbackImpl<72>
+ D typeinfo for CCallbackImpl<76>
+ D typeinfo for CCallbackImpl<80>
+ D typeinfo for CCallbackImpl<84>
+ D typeinfo for CCallbackImpl<8>
+ D typeinfo for CCallbackImpl<9>
  D typeinfo for CChatActionsButton
  D typeinfo for CChatIntroductionDialog
  D typeinfo for CChatInviteNotification
  D typeinfo for CChatMsgNotification
  D typeinfo for CChatRoomDlg
- D typeinfo for CChatRoomDlg::CCallbackOnChatMemberInfoChanged
- D typeinfo for CChatRoomDlg::CCallbackOnChatMemberStateChange
- D typeinfo for CChatRoomDlg::CCallbackOnChatRoomActionResult
- D typeinfo for CChatRoomDlg::CCallbackOnChatRoomBanning
- D typeinfo for CChatRoomDlg::CCallbackOnChatRoomClosing
- D typeinfo for CChatRoomDlg::CCallbackOnChatRoomDlgClose
- D typeinfo for CChatRoomDlg::CCallbackOnChatRoomDlgUIChange
- D typeinfo for CChatRoomDlg::CCallbackOnChatRoomInfoChanged
- D typeinfo for CChatRoomDlg::CCallbackOnChatRoomKicking
- D typeinfo for CChatRoomDlg::CCallbackOnFriendChatMsg
- D typeinfo for CChatRoomDlg::CCallbackOnHangUp
- D typeinfo for CChatRoomDlg::CCallbackOnIncomingVoiceCall
- D typeinfo for CChatRoomDlg::CCallbackOnLoggedOff
- D typeinfo for CChatRoomDlg::CCallbackOnLogonFailure
- D typeinfo for CChatRoomDlg::CCallbackOnLogonSuccess
- D typeinfo for CChatRoomDlg::CCallbackOnParentalLockChanged
- D typeinfo for CChatRoomDlg::CCallbackOnPersonaStateChange
- D typeinfo for CChatRoomDlg::CCallbackOnRequestResume
- D typeinfo for CChatRoomDlg::CCallbackOnSteamRackBouncing
+ D typeinfo for CChatRoomDlg::CCallback_OnChatMemberInfoChanged
+ D typeinfo for CChatRoomDlg::CCallback_OnChatMemberStateChange
+ D typeinfo for CChatRoomDlg::CCallback_OnChatRoomActionResult
+ D typeinfo for CChatRoomDlg::CCallback_OnChatRoomBanning
+ D typeinfo for CChatRoomDlg::CCallback_OnChatRoomClosing
+ D typeinfo for CChatRoomDlg::CCallback_OnChatRoomDlgClose
+ D typeinfo for CChatRoomDlg::CCallback_OnChatRoomDlgUIChange
+ D typeinfo for CChatRoomDlg::CCallback_OnChatRoomInfoChanged
+ D typeinfo for CChatRoomDlg::CCallback_OnChatRoomKicking
+ D typeinfo for CChatRoomDlg::CCallback_OnFriendChatMsg
+ D typeinfo for CChatRoomDlg::CCallback_OnHangUp
+ D typeinfo for CChatRoomDlg::CCallback_OnIncomingVoiceCall
+ D typeinfo for CChatRoomDlg::CCallback_OnLoggedOff
+ D typeinfo for CChatRoomDlg::CCallback_OnLogonFailure
+ D typeinfo for CChatRoomDlg::CCallback_OnLogonSuccess
+ D typeinfo for CChatRoomDlg::CCallback_OnParentalLockChanged
+ D typeinfo for CChatRoomDlg::CCallback_OnPersonaStateChange
+ D typeinfo for CChatRoomDlg::CCallback_OnRequestResume
+ D typeinfo for CChatRoomDlg::CCallback_OnSteamRackBouncing
  D typeinfo for CChatRoomDlgState
  D typeinfo for CChatSplitter
  D typeinfo for CChatTabPanel
  D typeinfo for CChatTitlePanel
- D typeinfo for CChatTitlePanel::CCallbackOnClanInfoChanged
+ D typeinfo for CChatTitlePanel::CCallback_OnClanInfoChanged
  D typeinfo for CChatTitlePanelAffordance
  D typeinfo for CClanEventDialog
  D typeinfo for CClanEventNotification
@@ -1756,12 +1777,12 @@
  D typeinfo for CDLLValidate
  D typeinfo for CEditFriendsGroupsDialog
  D typeinfo for CEditFriendsGroupsPage
- D typeinfo for CEditFriendsGroupsPage::CCallbackOnGroupCreated
+ D typeinfo for CEditFriendsGroupsPage::CCallback_OnGroupCreated
  D typeinfo for CEmoticonButton
  D typeinfo for CEmptySectionHeader
  D typeinfo for CFloatProperty
  D typeinfo for CFriendAliasesDialog
- D typeinfo for CFriendAliasesDialog::CCallbackOnPersonaStateChange
+ D typeinfo for CFriendAliasesDialog::CCallback_OnPersonaStateChange
  D typeinfo for CFriendGameInviteDialog
  D typeinfo for CFriendInGameNotification
  D typeinfo for CFriendInvitationNotification
@@ -1769,62 +1790,62 @@
  D typeinfo for CFriendNotificationOptionsDialog
  D typeinfo for CFriendOnlineNotification
  D typeinfo for CFriendPanel
- D typeinfo for CFriendPanel::CCallbackOnChatRoomVoiceStateChanged
- D typeinfo for CFriendPanel::CCallbackOnPersonaStateChange
+ D typeinfo for CFriendPanel::CCallback_OnChatRoomVoiceStateChanged
+ D typeinfo for CFriendPanel::CCallback_OnPersonaStateChange
  D typeinfo for CFriendPanel::ImagePanelMouseDelegate
  D typeinfo for CFriendPanelAffordance
  D typeinfo for CFriendPanelLabel
  D typeinfo for CFriendsClansPage
  D typeinfo for CFriendsDialog
- D typeinfo for CFriendsDialog::CCallbackOnBroadcastCantStart
- D typeinfo for CFriendsDialog::CCallbackOnBroadcastInvitedToView
- D typeinfo for CFriendsDialog::CCallbackOnBroadcastRecorderError
- D typeinfo for CFriendsDialog::CCallbackOnBroadcastViewerState
- D typeinfo for CFriendsDialog::CCallbackOnChatRoomCreate
- D typeinfo for CFriendsDialog::CCallbackOnChatRoomDlgSerialized
- D typeinfo for CFriendsDialog::CCallbackOnChatRoomEnter
- D typeinfo for CFriendsDialog::CCallbackOnChatRoomInvite
- D typeinfo for CFriendsDialog::CCallbackOnChatRoomMsg
- D typeinfo for CFriendsDialog::CCallbackOnClanEventReceived
- D typeinfo for CFriendsDialog::CCallbackOnFriendAdded
- D typeinfo for CFriendsDialog::CCallbackOnFriendChatMsg
- D typeinfo for CFriendsDialog::CCallbackOnFriendIgnored
- D typeinfo for CFriendsDialog::CCallbackOnFriendMessageHistoryReceived
- D typeinfo for CFriendsDialog::CCallbackOnFriendPublishedStatusUpdate
- D typeinfo for CFriendsDialog::CCallbackOnIncomingVoiceCall
- D typeinfo for CFriendsDialog::CCallbackOnLobbyInvite
- D typeinfo for CFriendsDialog::CCallbackOnLoggedOff
- D typeinfo for CFriendsDialog::CCallbackOnLogonFailure
- D typeinfo for CFriendsDialog::CCallbackOnLogonSuccess
- D typeinfo for CFriendsDialog::CCallbackOnOpenChatDialog
- D typeinfo for CFriendsDialog::CCallbackOnParentalLockChanged
- D typeinfo for CFriendsDialog::CCallbackOnPersonaStateChange
- D typeinfo for CFriendsDialog::CCallbackOnPrimaryChatDestinationSet
- D typeinfo for CFriendsDialog::CCallbackOnRichInviteReceived
- D typeinfo for CFriendsDialog::CCallbackOnTableGameWatch
- D typeinfo for CFriendsDialog::CCallbackOnUIMenuChange
- D typeinfo for CFriendsDialog::CCallbackOnUserAchievement
- D typeinfo for CFriendsDialog::CCallbackOnUserRequestingFriendship
- D typeinfo for CFriendsDialog::CCallbackOnViewerApprovalResult
- D typeinfo for CFriendsDialog::CCallbackOnViewerNeedsApproval
- D typeinfo for CFriendsDialog::CCallbackOnVoiceCallInitiated
- D typeinfo for CFriendsDialog::CCallbackTradeInviteReceived
+ D typeinfo for CFriendsDialog::CCallback_OnBroadcastCantStart
+ D typeinfo for CFriendsDialog::CCallback_OnBroadcastInvitedToView
+ D typeinfo for CFriendsDialog::CCallback_OnBroadcastRecorderError
+ D typeinfo for CFriendsDialog::CCallback_OnBroadcastViewerState
+ D typeinfo for CFriendsDialog::CCallback_OnChatRoomCreate
+ D typeinfo for CFriendsDialog::CCallback_OnChatRoomDlgSerialized
+ D typeinfo for CFriendsDialog::CCallback_OnChatRoomEnter
+ D typeinfo for CFriendsDialog::CCallback_OnChatRoomInvite
+ D typeinfo for CFriendsDialog::CCallback_OnChatRoomMsg
+ D typeinfo for CFriendsDialog::CCallback_OnClanEventReceived
+ D typeinfo for CFriendsDialog::CCallback_OnFriendAdded
+ D typeinfo for CFriendsDialog::CCallback_OnFriendChatMsg
+ D typeinfo for CFriendsDialog::CCallback_OnFriendIgnored
+ D typeinfo for CFriendsDialog::CCallback_OnFriendMessageHistoryReceived
+ D typeinfo for CFriendsDialog::CCallback_OnFriendPublishedStatusUpdate
+ D typeinfo for CFriendsDialog::CCallback_OnIncomingVoiceCall
+ D typeinfo for CFriendsDialog::CCallback_OnLobbyInvite
+ D typeinfo for CFriendsDialog::CCallback_OnLoggedOff
+ D typeinfo for CFriendsDialog::CCallback_OnLogonFailure
+ D typeinfo for CFriendsDialog::CCallback_OnLogonSuccess
+ D typeinfo for CFriendsDialog::CCallback_OnOpenChatDialog
+ D typeinfo for CFriendsDialog::CCallback_OnParentalLockChanged
+ D typeinfo for CFriendsDialog::CCallback_OnPersonaStateChange
+ D typeinfo for CFriendsDialog::CCallback_OnPrimaryChatDestinationSet
+ D typeinfo for CFriendsDialog::CCallback_OnRichInviteReceived
+ D typeinfo for CFriendsDialog::CCallback_OnTableGameWatch
+ D typeinfo for CFriendsDialog::CCallback_OnUIMenuChange
+ D typeinfo for CFriendsDialog::CCallback_OnUserAchievement
+ D typeinfo for CFriendsDialog::CCallback_OnUserRequestingFriendship
+ D typeinfo for CFriendsDialog::CCallback_OnViewerApprovalResult
+ D typeinfo for CFriendsDialog::CCallback_OnViewerNeedsApproval
+ D typeinfo for CFriendsDialog::CCallback_OnVoiceCallInitiated
+ D typeinfo for CFriendsDialog::CCallback_TradeInviteReceived
  D typeinfo for CFriendsFriendsPage
  D typeinfo for CFriendsImageManager
  D typeinfo for CFriendsListSectionAffordance
  D typeinfo for CFriendsListSectionHeader
- D typeinfo for CFriendsListSectionHeader::CCallbackOnClanInfoChanged
- D typeinfo for CFriendsListSectionHeader::CCallbackOnPersonaStateChange
+ D typeinfo for CFriendsListSectionHeader::CCallback_OnClanInfoChanged
+ D typeinfo for CFriendsListSectionHeader::CCallback_OnPersonaStateChange
  D typeinfo for CFriendsListSubPanel
- D typeinfo for CFriendsListSubPanel::CCallbackOnChatMemberStateChange
- D typeinfo for CFriendsListSubPanel::CCallbackOnClanInfoChanged
- D typeinfo for CFriendsListSubPanel::CCallbackOnFriendsGroupCreated
- D typeinfo for CFriendsListSubPanel::CCallbackOnFriendsGroupDeleted
- D typeinfo for CFriendsListSubPanel::CCallbackOnFriendsGroupMemberAdded
- D typeinfo for CFriendsListSubPanel::CCallbackOnFriendsGroupMemberRemoved
- D typeinfo for CFriendsListSubPanel::CCallbackOnFriendsGroupRenamed
- D typeinfo for CFriendsListSubPanel::CCallbackOnLoggedOff
- D typeinfo for CFriendsListSubPanel::CCallbackOnPersonaStateChange
+ D typeinfo for CFriendsListSubPanel::CCallback_OnChatMemberStateChange
+ D typeinfo for CFriendsListSubPanel::CCallback_OnClanInfoChanged
+ D typeinfo for CFriendsListSubPanel::CCallback_OnFriendsGroupCreated
+ D typeinfo for CFriendsListSubPanel::CCallback_OnFriendsGroupDeleted
+ D typeinfo for CFriendsListSubPanel::CCallback_OnFriendsGroupMemberAdded
+ D typeinfo for CFriendsListSubPanel::CCallback_OnFriendsGroupMemberRemoved
+ D typeinfo for CFriendsListSubPanel::CCallback_OnFriendsGroupRenamed
+ D typeinfo for CFriendsListSubPanel::CCallback_OnLoggedOff
+ D typeinfo for CFriendsListSubPanel::CCallback_OnPersonaStateChange
  D typeinfo for CFriendsNotification
  D typeinfo for CFriendsUIModule
  D typeinfo for CFriendsUIModule::CFriendPanelContainerGeneric
@@ -1980,36 +2001,36 @@
  D typeinfo for CPanelAnimationDictionary
  D typeinfo for CPanelMessageMapDictionary
  D typeinfo for CParentalCache
- D typeinfo for CParentalCache::CCallbackOnParentalLockChangeBegin
+ D typeinfo for CParentalCache::CCallback_OnParentalLockChangeBegin
  D typeinfo for CPathString
  D typeinfo for CPlayersDialog
  D typeinfo for CPlayersSubCurrentPlayers
  D typeinfo for CPlayersSubRecentPlayers
- D typeinfo for CPlayersSubRecentPlayers::CCallbackOnPersonaStateChange
+ D typeinfo for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  D typeinfo for CProportionalFloatProperty
  D typeinfo for CProportionalIntProperty
  D typeinfo for CSetNicknameDialog
  D typeinfo for CSharedLibraryNotifications
- D typeinfo for CSharedLibraryNotifications::CCallbackOnAuthorizeDevice
- D typeinfo for CSharedLibraryNotifications::CCallbackOnDeauthorizeDevice
- D typeinfo for CSharedLibraryNotifications::CCallbackOnSharedLibraryChanged
- D typeinfo for CSharedLibraryNotifications::CCallbackOnStopPlaying
+ D typeinfo for CSharedLibraryNotifications::CCallback_OnAuthorizeDevice
+ D typeinfo for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
+ D typeinfo for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
+ D typeinfo for CSharedLibraryNotifications::CCallback_OnStopPlaying
  D typeinfo for CSteamFriends_Test
  D typeinfo for CSteamTableChallengeOptions
- D typeinfo for CSteamTableChallengeOptions::CCallbackOnTableGameStarted
+ D typeinfo for CSteamTableChallengeOptions::CCallback_OnTableGameStarted
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
  D typeinfo for CTradeInviteBar
- D typeinfo for CTradeInviteBar::CCallbackOnTradeInviteCanceled
- D typeinfo for CTradeInviteBar::CCallbackOnTradeStartSession
+ D typeinfo for CTradeInviteBar::CCallback_OnTradeInviteCanceled
+ D typeinfo for CTradeInviteBar::CCallback_OnTradeStartSession
  D typeinfo for CTradeInviteNotification
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlHandleTable<vgui::BuildGroup, 20>
  D typeinfo for CUtlNoEscConversion
  D typeinfo for CVoiceBar
- D typeinfo for CVoiceBar::CCallbackOnGameUsingVoice
- D typeinfo for CVoiceBar::CCallbackOnVoiceEnabledStateChanged
+ D typeinfo for CVoiceBar::CCallback_OnGameUsingVoice
+ D typeinfo for CVoiceBar::CCallback_OnVoiceEnabledStateChanged
  D typeinfo for CVoiceChatInviteNotification
  D typeinfo for CVoiceTraffic
  D typeinfo for ConCommandBase
@@ -2863,8 +2884,8 @@
  D vtable for BlankImage
  D vtable for CAchievementNotification
  D vtable for CAppDownloadNotificationManager
- D vtable for CAppDownloadNotificationManager::CCallbackOnAppEventStateChange
- D vtable for CAppDownloadNotificationManager::CCallbackOnDlcInstalled
+ D vtable for CAppDownloadNotificationManager::CCallback_OnAppEventStateChange
+ D vtable for CAppDownloadNotificationManager::CCallback_OnDlcInstalled
  D vtable for CAppDownloadedNotification
  D vtable for CAvatarOverlayImage
  D vtable for CBoolProperty
@@ -2963,35 +2984,56 @@
  D vtable for CCallback<CTradeInviteBar, TradeStartSession_t, false>
  D vtable for CCallback<CVoiceBar, GameUsingVoice_t, false>
  D vtable for CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>
+ D vtable for CCallbackImpl<1032>
+ D vtable for CCallbackImpl<12>
+ D vtable for CCallbackImpl<148>
+ D vtable for CCallbackImpl<156>
+ D vtable for CCallbackImpl<16>
+ D vtable for CCallbackImpl<176>
+ D vtable for CCallbackImpl<1>
+ D vtable for CCallbackImpl<20>
+ D vtable for CCallbackImpl<24>
+ D vtable for CCallbackImpl<268>
+ D vtable for CCallbackImpl<284>
+ D vtable for CCallbackImpl<28>
+ D vtable for CCallbackImpl<2>
+ D vtable for CCallbackImpl<4>
+ D vtable for CCallbackImpl<524>
+ D vtable for CCallbackImpl<72>
+ D vtable for CCallbackImpl<76>
+ D vtable for CCallbackImpl<80>
+ D vtable for CCallbackImpl<84>
+ D vtable for CCallbackImpl<8>
+ D vtable for CCallbackImpl<9>
  D vtable for CChatActionsButton
  D vtable for CChatIntroductionDialog
  D vtable for CChatInviteNotification
  D vtable for CChatMsgNotification
  D vtable for CChatRoomDlg
- D vtable for CChatRoomDlg::CCallbackOnChatMemberInfoChanged
- D vtable for CChatRoomDlg::CCallbackOnChatMemberStateChange
- D vtable for CChatRoomDlg::CCallbackOnChatRoomActionResult
- D vtable for CChatRoomDlg::CCallbackOnChatRoomBanning
- D vtable for CChatRoomDlg::CCallbackOnChatRoomClosing
- D vtable for CChatRoomDlg::CCallbackOnChatRoomDlgClose
- D vtable for CChatRoomDlg::CCallbackOnChatRoomDlgUIChange
- D vtable for CChatRoomDlg::CCallbackOnChatRoomInfoChanged
- D vtable for CChatRoomDlg::CCallbackOnChatRoomKicking
- D vtable for CChatRoomDlg::CCallbackOnFriendChatMsg
- D vtable for CChatRoomDlg::CCallbackOnHangUp
- D vtable for CChatRoomDlg::CCallbackOnIncomingVoiceCall
- D vtable for CChatRoomDlg::CCallbackOnLoggedOff
- D vtable for CChatRoomDlg::CCallbackOnLogonFailure
- D vtable for CChatRoomDlg::CCallbackOnLogonSuccess
- D vtable for CChatRoomDlg::CCallbackOnParentalLockChanged
- D vtable for CChatRoomDlg::CCallbackOnPersonaStateChange
- D vtable for CChatRoomDlg::CCallbackOnRequestResume
- D vtable for CChatRoomDlg::CCallbackOnSteamRackBouncing
+ D vtable for CChatRoomDlg::CCallback_OnChatMemberInfoChanged
+ D vtable for CChatRoomDlg::CCallback_OnChatMemberStateChange
+ D vtable for CChatRoomDlg::CCallback_OnChatRoomActionResult
+ D vtable for CChatRoomDlg::CCallback_OnChatRoomBanning
+ D vtable for CChatRoomDlg::CCallback_OnChatRoomClosing
+ D vtable for CChatRoomDlg::CCallback_OnChatRoomDlgClose
+ D vtable for CChatRoomDlg::CCallback_OnChatRoomDlgUIChange
+ D vtable for CChatRoomDlg::CCallback_OnChatRoomInfoChanged
+ D vtable for CChatRoomDlg::CCallback_OnChatRoomKicking
+ D vtable for CChatRoomDlg::CCallback_OnFriendChatMsg
+ D vtable for CChatRoomDlg::CCallback_OnHangUp
+ D vtable for CChatRoomDlg::CCallback_OnIncomingVoiceCall
+ D vtable for CChatRoomDlg::CCallback_OnLoggedOff
+ D vtable for CChatRoomDlg::CCallback_OnLogonFailure
+ D vtable for CChatRoomDlg::CCallback_OnLogonSuccess
+ D vtable for CChatRoomDlg::CCallback_OnParentalLockChanged
+ D vtable for CChatRoomDlg::CCallback_OnPersonaStateChange
+ D vtable for CChatRoomDlg::CCallback_OnRequestResume
+ D vtable for CChatRoomDlg::CCallback_OnSteamRackBouncing
  D vtable for CChatRoomDlgState
  D vtable for CChatSplitter
  D vtable for CChatTabPanel
  D vtable for CChatTitlePanel
- D vtable for CChatTitlePanel::CCallbackOnClanInfoChanged
+ D vtable for CChatTitlePanel::CCallback_OnClanInfoChanged
  D vtable for CChatTitlePanelAffordance
  D vtable for CClanEventDialog
  D vtable for CClanEventNotification
@@ -3002,12 +3044,12 @@
  D vtable for CDLLValidate
  D vtable for CEditFriendsGroupsDialog
  D vtable for CEditFriendsGroupsPage
- D vtable for CEditFriendsGroupsPage::CCallbackOnGroupCreated
+ D vtable for CEditFriendsGroupsPage::CCallback_OnGroupCreated
  D vtable for CEmoticonButton
  D vtable for CEmptySectionHeader
  D vtable for CFloatProperty
  D vtable for CFriendAliasesDialog
- D vtable for CFriendAliasesDialog::CCallbackOnPersonaStateChange
+ D vtable for CFriendAliasesDialog::CCallback_OnPersonaStateChange
  D vtable for CFriendGameInviteDialog
  D vtable for CFriendInGameNotification
  D vtable for CFriendInvitationNotification
@@ -3015,62 +3057,62 @@
  D vtable for CFriendNotificationOptionsDialog
  D vtable for CFriendOnlineNotification
  D vtable for CFriendPanel
- D vtable for CFriendPanel::CCallbackOnChatRoomVoiceStateChanged
- D vtable for CFriendPanel::CCallbackOnPersonaStateChange
+ D vtable for CFriendPanel::CCallback_OnChatRoomVoiceStateChanged
+ D vtable for CFriendPanel::CCallback_OnPersonaStateChange
  D vtable for CFriendPanel::ImagePanelMouseDelegate
  D vtable for CFriendPanelAffordance
  D vtable for CFriendPanelLabel
  D vtable for CFriendsClansPage
  D vtable for CFriendsDialog
- D vtable for CFriendsDialog::CCallbackOnBroadcastCantStart
- D vtable for CFriendsDialog::CCallbackOnBroadcastInvitedToView
- D vtable for CFriendsDialog::CCallbackOnBroadcastRecorderError
- D vtable for CFriendsDialog::CCallbackOnBroadcastViewerState
- D vtable for CFriendsDialog::CCallbackOnChatRoomCreate
- D vtable for CFriendsDialog::CCallbackOnChatRoomDlgSerialized
- D vtable for CFriendsDialog::CCallbackOnChatRoomEnter
- D vtable for CFriendsDialog::CCallbackOnChatRoomInvite
- D vtable for CFriendsDialog::CCallbackOnChatRoomMsg
- D vtable for CFriendsDialog::CCallbackOnClanEventReceived
- D vtable for CFriendsDialog::CCallbackOnFriendAdded
- D vtable for CFriendsDialog::CCallbackOnFriendChatMsg
- D vtable for CFriendsDialog::CCallbackOnFriendIgnored
- D vtable for CFriendsDialog::CCallbackOnFriendMessageHistoryReceived
- D vtable for CFriendsDialog::CCallbackOnFriendPublishedStatusUpdate
- D vtable for CFriendsDialog::CCallbackOnIncomingVoiceCall
- D vtable for CFriendsDialog::CCallbackOnLobbyInvite
- D vtable for CFriendsDialog::CCallbackOnLoggedOff
- D vtable for CFriendsDialog::CCallbackOnLogonFailure
- D vtable for CFriendsDialog::CCallbackOnLogonSuccess
- D vtable for CFriendsDialog::CCallbackOnOpenChatDialog
- D vtable for CFriendsDialog::CCallbackOnParentalLockChanged
- D vtable for CFriendsDialog::CCallbackOnPersonaStateChange
- D vtable for CFriendsDialog::CCallbackOnPrimaryChatDestinationSet
- D vtable for CFriendsDialog::CCallbackOnRichInviteReceived
- D vtable for CFriendsDialog::CCallbackOnTableGameWatch
- D vtable for CFriendsDialog::CCallbackOnUIMenuChange
- D vtable for CFriendsDialog::CCallbackOnUserAchievement
- D vtable for CFriendsDialog::CCallbackOnUserRequestingFriendship
- D vtable for CFriendsDialog::CCallbackOnViewerApprovalResult
- D vtable for CFriendsDialog::CCallbackOnViewerNeedsApproval
- D vtable for CFriendsDialog::CCallbackOnVoiceCallInitiated
- D vtable for CFriendsDialog::CCallbackTradeInviteReceived
+ D vtable for CFriendsDialog::CCallback_OnBroadcastCantStart
+ D vtable for CFriendsDialog::CCallback_OnBroadcastInvitedToView
+ D vtable for CFriendsDialog::CCallback_OnBroadcastRecorderError
+ D vtable for CFriendsDialog::CCallback_OnBroadcastViewerState
+ D vtable for CFriendsDialog::CCallback_OnChatRoomCreate
+ D vtable for CFriendsDialog::CCallback_OnChatRoomDlgSerialized
+ D vtable for CFriendsDialog::CCallback_OnChatRoomEnter
+ D vtable for CFriendsDialog::CCallback_OnChatRoomInvite
+ D vtable for CFriendsDialog::CCallback_OnChatRoomMsg
+ D vtable for CFriendsDialog::CCallback_OnClanEventReceived
+ D vtable for CFriendsDialog::CCallback_OnFriendAdded
+ D vtable for CFriendsDialog::CCallback_OnFriendChatMsg
+ D vtable for CFriendsDialog::CCallback_OnFriendIgnored
+ D vtable for CFriendsDialog::CCallback_OnFriendMessageHistoryReceived
+ D vtable for CFriendsDialog::CCallback_OnFriendPublishedStatusUpdate
+ D vtable for CFriendsDialog::CCallback_OnIncomingVoiceCall
+ D vtable for CFriendsDialog::CCallback_OnLobbyInvite
+ D vtable for CFriendsDialog::CCallback_OnLoggedOff
+ D vtable for CFriendsDialog::CCallback_OnLogonFailure
+ D vtable for CFriendsDialog::CCallback_OnLogonSuccess
+ D vtable for CFriendsDialog::CCallback_OnOpenChatDialog
+ D vtable for CFriendsDialog::CCallback_OnParentalLockChanged
+ D vtable for CFriendsDialog::CCallback_OnPersonaStateChange
+ D vtable for CFriendsDialog::CCallback_OnPrimaryChatDestinationSet
+ D vtable for CFriendsDialog::CCallback_OnRichInviteReceived
+ D vtable for CFriendsDialog::CCallback_OnTableGameWatch
+ D vtable for CFriendsDialog::CCallback_OnUIMenuChange
+ D vtable for CFriendsDialog::CCallback_OnUserAchievement
+ D vtable for CFriendsDialog::CCallback_OnUserRequestingFriendship
+ D vtable for CFriendsDialog::CCallback_OnViewerApprovalResult
+ D vtable for CFriendsDialog::CCallback_OnViewerNeedsApproval
+ D vtable for CFriendsDialog::CCallback_OnVoiceCallInitiated
+ D vtable for CFriendsDialog::CCallback_TradeInviteReceived
  D vtable for CFriendsFriendsPage
  D vtable for CFriendsImageManager
  D vtable for CFriendsListSectionAffordance
  D vtable for CFriendsListSectionHeader
- D vtable for CFriendsListSectionHeader::CCallbackOnClanInfoChanged
- D vtable for CFriendsListSectionHeader::CCallbackOnPersonaStateChange
+ D vtable for CFriendsListSectionHeader::CCallback_OnClanInfoChanged
+ D vtable for CFriendsListSectionHeader::CCallback_OnPersonaStateChange
  D vtable for CFriendsListSubPanel
- D vtable for CFriendsListSubPanel::CCallbackOnChatMemberStateChange
- D vtable for CFriendsListSubPanel::CCallbackOnClanInfoChanged
- D vtable for CFriendsListSubPanel::CCallbackOnFriendsGroupCreated
- D vtable for CFriendsListSubPanel::CCallbackOnFriendsGroupDeleted
- D vtable for CFriendsListSubPanel::CCallbackOnFriendsGroupMemberAdded
- D vtable for CFriendsListSubPanel::CCallbackOnFriendsGroupMemberRemoved
- D vtable for CFriendsListSubPanel::CCallbackOnFriendsGroupRenamed
- D vtable for CFriendsListSubPanel::CCallbackOnLoggedOff
- D vtable for CFriendsListSubPanel::CCallbackOnPersonaStateChange
+ D vtable for CFriendsListSubPanel::CCallback_OnChatMemberStateChange
+ D vtable for CFriendsListSubPanel::CCallback_OnClanInfoChanged
+ D vtable for CFriendsListSubPanel::CCallback_OnFriendsGroupCreated
+ D vtable for CFriendsListSubPanel::CCallback_OnFriendsGroupDeleted
+ D vtable for CFriendsListSubPanel::CCallback_OnFriendsGroupMemberAdded
+ D vtable for CFriendsListSubPanel::CCallback_OnFriendsGroupMemberRemoved
+ D vtable for CFriendsListSubPanel::CCallback_OnFriendsGroupRenamed
+ D vtable for CFriendsListSubPanel::CCallback_OnLoggedOff
+ D vtable for CFriendsListSubPanel::CCallback_OnPersonaStateChange
  D vtable for CFriendsNotification
  D vtable for CFriendsUIModule
  D vtable for CFriendsUIModule::CFriendPanelContainerGeneric
@@ -3225,36 +3267,36 @@
  D vtable for CPanelAnimationDictionary
  D vtable for CPanelMessageMapDictionary
  D vtable for CParentalCache
- D vtable for CParentalCache::CCallbackOnParentalLockChangeBegin
+ D vtable for CParentalCache::CCallback_OnParentalLockChangeBegin
  D vtable for CPathString
  D vtable for CPlayersDialog
  D vtable for CPlayersSubCurrentPlayers
  D vtable for CPlayersSubRecentPlayers
- D vtable for CPlayersSubRecentPlayers::CCallbackOnPersonaStateChange
+ D vtable for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  D vtable for CProportionalFloatProperty
  D vtable for CProportionalIntProperty
  D vtable for CSetNicknameDialog
  D vtable for CSharedLibraryNotifications
- D vtable for CSharedLibraryNotifications::CCallbackOnAuthorizeDevice
- D vtable for CSharedLibraryNotifications::CCallbackOnDeauthorizeDevice
- D vtable for CSharedLibraryNotifications::CCallbackOnSharedLibraryChanged
- D vtable for CSharedLibraryNotifications::CCallbackOnStopPlaying
+ D vtable for CSharedLibraryNotifications::CCallback_OnAuthorizeDevice
+ D vtable for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
+ D vtable for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
+ D vtable for CSharedLibraryNotifications::CCallback_OnStopPlaying
  D vtable for CSteamFriends_Test
  D vtable for CSteamTableChallengeOptions
- D vtable for CSteamTableChallengeOptions::CCallbackOnTableGameStarted
+ D vtable for CSteamTableChallengeOptions::CCallback_OnTableGameStarted
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
  D vtable for CTradeInviteBar
- D vtable for CTradeInviteBar::CCallbackOnTradeInviteCanceled
- D vtable for CTradeInviteBar::CCallbackOnTradeStartSession
+ D vtable for CTradeInviteBar::CCallback_OnTradeInviteCanceled
+ D vtable for CTradeInviteBar::CCallback_OnTradeStartSession
  D vtable for CTradeInviteNotification
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlHandleTable<vgui::BuildGroup, 20>
  D vtable for CUtlNoEscConversion
  D vtable for CVoiceBar
- D vtable for CVoiceBar::CCallbackOnGameUsingVoice
- D vtable for CVoiceBar::CCallbackOnVoiceEnabledStateChanged
+ D vtable for CVoiceBar::CCallback_OnGameUsingVoice
+ D vtable for CVoiceBar::CCallback_OnVoiceEnabledStateChanged
  D vtable for CVoiceChatInviteNotification
  D vtable for CVoiceTraffic
  D vtable for ConVar
@@ -3499,8 +3541,8 @@
  R typeinfo name for BlankImage
  R typeinfo name for CAchievementNotification
  R typeinfo name for CAppDownloadNotificationManager
- R typeinfo name for CAppDownloadNotificationManager::CCallbackOnAppEventStateChange
- R typeinfo name for CAppDownloadNotificationManager::CCallbackOnDlcInstalled
+ R typeinfo name for CAppDownloadNotificationManager::CCallback_OnAppEventStateChange
+ R typeinfo name for CAppDownloadNotificationManager::CCallback_OnDlcInstalled
  R typeinfo name for CAppDownloadedNotification
  R typeinfo name for CAvatarOverlayImage
  R typeinfo name for CBoolProperty
@@ -3600,35 +3642,56 @@
  R typeinfo name for CCallback<CVoiceBar, GameUsingVoice_t, false>
  R typeinfo name for CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>
  R typeinfo name for CCallbackBase
+ R typeinfo name for CCallbackImpl<1032>
+ R typeinfo name for CCallbackImpl<12>
+ R typeinfo name for CCallbackImpl<148>
+ R typeinfo name for CCallbackImpl<156>
+ R typeinfo name for CCallbackImpl<16>
+ R typeinfo name for CCallbackImpl<176>
+ R typeinfo name for CCallbackImpl<1>
+ R typeinfo name for CCallbackImpl<20>
+ R typeinfo name for CCallbackImpl<24>
+ R typeinfo name for CCallbackImpl<268>
+ R typeinfo name for CCallbackImpl<284>
+ R typeinfo name for CCallbackImpl<28>
+ R typeinfo name for CCallbackImpl<2>
+ R typeinfo name for CCallbackImpl<4>
+ R typeinfo name for CCallbackImpl<524>
+ R typeinfo name for CCallbackImpl<72>
+ R typeinfo name for CCallbackImpl<76>
+ R typeinfo name for CCallbackImpl<80>
+ R typeinfo name for CCallbackImpl<84>
+ R typeinfo name for CCallbackImpl<8>
+ R typeinfo name for CCallbackImpl<9>
  R typeinfo name for CChatActionsButton
  R typeinfo name for CChatIntroductionDialog
  R typeinfo name for CChatInviteNotification
  R typeinfo name for CChatMsgNotification
  R typeinfo name for CChatRoomDlg
- R typeinfo name for CChatRoomDlg::CCallbackOnChatMemberInfoChanged
- R typeinfo name for CChatRoomDlg::CCallbackOnChatMemberStateChange
- R typeinfo name for CChatRoomDlg::CCallbackOnChatRoomActionResult
- R typeinfo name for CChatRoomDlg::CCallbackOnChatRoomBanning
- R typeinfo name for CChatRoomDlg::CCallbackOnChatRoomClosing
- R typeinfo name for CChatRoomDlg::CCallbackOnChatRoomDlgClose
- R typeinfo name for CChatRoomDlg::CCallbackOnChatRoomDlgUIChange
- R typeinfo name for CChatRoomDlg::CCallbackOnChatRoomInfoChanged
- R typeinfo name for CChatRoomDlg::CCallbackOnChatRoomKicking
- R typeinfo name for CChatRoomDlg::CCallbackOnFriendChatMsg
- R typeinfo name for CChatRoomDlg::CCallbackOnHangUp
- R typeinfo name for CChatRoomDlg::CCallbackOnIncomingVoiceCall
- R typeinfo name for CChatRoomDlg::CCallbackOnLoggedOff
- R typeinfo name for CChatRoomDlg::CCallbackOnLogonFailure
- R typeinfo name for CChatRoomDlg::CCallbackOnLogonSuccess
- R typeinfo name for CChatRoomDlg::CCallbackOnParentalLockChanged
- R typeinfo name for CChatRoomDlg::CCallbackOnPersonaStateChange
- R typeinfo name for CChatRoomDlg::CCallbackOnRequestResume
- R typeinfo name for CChatRoomDlg::CCallbackOnSteamRackBouncing
+ R typeinfo name for CChatRoomDlg::CCallback_OnChatMemberInfoChanged
+ R typeinfo name for CChatRoomDlg::CCallback_OnChatMemberStateChange
+ R typeinfo name for CChatRoomDlg::CCallback_OnChatRoomActionResult
+ R typeinfo name for CChatRoomDlg::CCallback_OnChatRoomBanning
+ R typeinfo name for CChatRoomDlg::CCallback_OnChatRoomClosing
+ R typeinfo name for CChatRoomDlg::CCallback_OnChatRoomDlgClose
+ R typeinfo name for CChatRoomDlg::CCallback_OnChatRoomDlgUIChange
+ R typeinfo name for CChatRoomDlg::CCallback_OnChatRoomInfoChanged
+ R typeinfo name for CChatRoomDlg::CCallback_OnChatRoomKicking
+ R typeinfo name for CChatRoomDlg::CCallback_OnFriendChatMsg
+ R typeinfo name for CChatRoomDlg::CCallback_OnHangUp
+ R typeinfo name for CChatRoomDlg::CCallback_OnIncomingVoiceCall
+ R typeinfo name for CChatRoomDlg::CCallback_OnLoggedOff
+ R typeinfo name for CChatRoomDlg::CCallback_OnLogonFailure
+ R typeinfo name for CChatRoomDlg::CCallback_OnLogonSuccess
+ R typeinfo name for CChatRoomDlg::CCallback_OnParentalLockChanged
+ R typeinfo name for CChatRoomDlg::CCallback_OnPersonaStateChange
+ R typeinfo name for CChatRoomDlg::CCallback_OnRequestResume
+ R typeinfo name for CChatRoomDlg::CCallback_OnSteamRackBouncing
  R typeinfo name for CChatRoomDlgState
  R typeinfo name for CChatSplitter
  R typeinfo name for CChatTabPanel
  R typeinfo name for CChatTitlePanel
- R typeinfo name for CChatTitlePanel::CCallbackOnClanInfoChanged
+ R typeinfo name for CChatTitlePanel::CCallback_OnClanInfoChanged
  R typeinfo name for CChatTitlePanelAffordance
  R typeinfo name for CClanEventDialog
  R typeinfo name for CClanEventNotification
@@ -3639,12 +3702,12 @@
  R typeinfo name for CDLLValidate
  R typeinfo name for CEditFriendsGroupsDialog
  R typeinfo name for CEditFriendsGroupsPage
- R typeinfo name for CEditFriendsGroupsPage::CCallbackOnGroupCreated
+ R typeinfo name for CEditFriendsGroupsPage::CCallback_OnGroupCreated
  R typeinfo name for CEmoticonButton
  R typeinfo name for CEmptySectionHeader
  R typeinfo name for CFloatProperty
  R typeinfo name for CFriendAliasesDialog
- R typeinfo name for CFriendAliasesDialog::CCallbackOnPersonaStateChange
+ R typeinfo name for CFriendAliasesDialog::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendGameInviteDialog
  R typeinfo name for CFriendInGameNotification
  R typeinfo name for CFriendInvitationNotification
@@ -3652,62 +3715,62 @@
  R typeinfo name for CFriendNotificationOptionsDialog
  R typeinfo name for CFriendOnlineNotification
  R typeinfo name for CFriendPanel
- R typeinfo name for CFriendPanel::CCallbackOnChatRoomVoiceStateChanged
- R typeinfo name for CFriendPanel::CCallbackOnPersonaStateChange
+ R typeinfo name for CFriendPanel::CCallback_OnChatRoomVoiceStateChanged
+ R typeinfo name for CFriendPanel::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendPanel::ImagePanelMouseDelegate
  R typeinfo name for CFriendPanelAffordance
  R typeinfo name for CFriendPanelLabel
  R typeinfo name for CFriendsClansPage
  R typeinfo name for CFriendsDialog
- R typeinfo name for CFriendsDialog::CCallbackOnBroadcastCantStart
- R typeinfo name for CFriendsDialog::CCallbackOnBroadcastInvitedToView
- R typeinfo name for CFriendsDialog::CCallbackOnBroadcastRecorderError
- R typeinfo name for CFriendsDialog::CCallbackOnBroadcastViewerState
- R typeinfo name for CFriendsDialog::CCallbackOnChatRoomCreate
- R typeinfo name for CFriendsDialog::CCallbackOnChatRoomDlgSerialized
- R typeinfo name for CFriendsDialog::CCallbackOnChatRoomEnter
- R typeinfo name for CFriendsDialog::CCallbackOnChatRoomInvite
- R typeinfo name for CFriendsDialog::CCallbackOnChatRoomMsg
- R typeinfo name for CFriendsDialog::CCallbackOnClanEventReceived
- R typeinfo name for CFriendsDialog::CCallbackOnFriendAdded
- R typeinfo name for CFriendsDialog::CCallbackOnFriendChatMsg
- R typeinfo name for CFriendsDialog::CCallbackOnFriendIgnored
- R typeinfo name for CFriendsDialog::CCallbackOnFriendMessageHistoryReceived
- R typeinfo name for CFriendsDialog::CCallbackOnFriendPublishedStatusUpdate
- R typeinfo name for CFriendsDialog::CCallbackOnIncomingVoiceCall
- R typeinfo name for CFriendsDialog::CCallbackOnLobbyInvite
- R typeinfo name for CFriendsDialog::CCallbackOnLoggedOff
- R typeinfo name for CFriendsDialog::CCallbackOnLogonFailure
- R typeinfo name for CFriendsDialog::CCallbackOnLogonSuccess
- R typeinfo name for CFriendsDialog::CCallbackOnOpenChatDialog
- R typeinfo name for CFriendsDialog::CCallbackOnParentalLockChanged
- R typeinfo name for CFriendsDialog::CCallbackOnPersonaStateChange
- R typeinfo name for CFriendsDialog::CCallbackOnPrimaryChatDestinationSet
- R typeinfo name for CFriendsDialog::CCallbackOnRichInviteReceived
- R typeinfo name for CFriendsDialog::CCallbackOnTableGameWatch
- R typeinfo name for CFriendsDialog::CCallbackOnUIMenuChange
- R typeinfo name for CFriendsDialog::CCallbackOnUserAchievement
- R typeinfo name for CFriendsDialog::CCallbackOnUserRequestingFriendship
- R typeinfo name for CFriendsDialog::CCallbackOnViewerApprovalResult
- R typeinfo name for CFriendsDialog::CCallbackOnViewerNeedsApproval
- R typeinfo name for CFriendsDialog::CCallbackOnVoiceCallInitiated
- R typeinfo name for CFriendsDialog::CCallbackTradeInviteReceived
+ R typeinfo name for CFriendsDialog::CCallback_OnBroadcastCantStart
+ R typeinfo name for CFriendsDialog::CCallback_OnBroadcastInvitedToView
+ R typeinfo name for CFriendsDialog::CCallback_OnBroadcastRecorderError
+ R typeinfo name for CFriendsDialog::CCallback_OnBroadcastViewerState
+ R typeinfo name for CFriendsDialog::CCallback_OnChatRoomCreate
+ R typeinfo name for CFriendsDialog::CCallback_OnChatRoomDlgSerialized
+ R typeinfo name for CFriendsDialog::CCallback_OnChatRoomEnter
+ R typeinfo name for CFriendsDialog::CCallback_OnChatRoomInvite
+ R typeinfo name for CFriendsDialog::CCallback_OnChatRoomMsg
+ R typeinfo name for CFriendsDialog::CCallback_OnClanEventReceived
+ R typeinfo name for CFriendsDialog::CCallback_OnFriendAdded
+ R typeinfo name for CFriendsDialog::CCallback_OnFriendChatMsg
+ R typeinfo name for CFriendsDialog::CCallback_OnFriendIgnored
+ R typeinfo name for CFriendsDialog::CCallback_OnFriendMessageHistoryReceived
+ R typeinfo name for CFriendsDialog::CCallback_OnFriendPublishedStatusUpdate
+ R typeinfo name for CFriendsDialog::CCallback_OnIncomingVoiceCall
+ R typeinfo name for CFriendsDialog::CCallback_OnLobbyInvite
+ R typeinfo name for CFriendsDialog::CCallback_OnLoggedOff
+ R typeinfo name for CFriendsDialog::CCallback_OnLogonFailure
+ R typeinfo name for CFriendsDialog::CCallback_OnLogonSuccess
+ R typeinfo name for CFriendsDialog::CCallback_OnOpenChatDialog
+ R typeinfo name for CFriendsDialog::CCallback_OnParentalLockChanged
+ R typeinfo name for CFriendsDialog::CCallback_OnPersonaStateChange
+ R typeinfo name for CFriendsDialog::CCallback_OnPrimaryChatDestinationSet
+ R typeinfo name for CFriendsDialog::CCallback_OnRichInviteReceived
+ R typeinfo name for CFriendsDialog::CCallback_OnTableGameWatch
+ R typeinfo name for CFriendsDialog::CCallback_OnUIMenuChange
+ R typeinfo name for CFriendsDialog::CCallback_OnUserAchievement
+ R typeinfo name for CFriendsDialog::CCallback_OnUserRequestingFriendship
+ R typeinfo name for CFriendsDialog::CCallback_OnViewerApprovalResult
+ R typeinfo name for CFriendsDialog::CCallback_OnViewerNeedsApproval
+ R typeinfo name for CFriendsDialog::CCallback_OnVoiceCallInitiated
+ R typeinfo name for CFriendsDialog::CCallback_TradeInviteReceived
  R typeinfo name for CFriendsFriendsPage
  R typeinfo name for CFriendsImageManager
  R typeinfo name for CFriendsListSectionAffordance
  R typeinfo name for CFriendsListSectionHeader
- R typeinfo name for CFriendsListSectionHeader::CCallbackOnClanInfoChanged
- R typeinfo name for CFriendsListSectionHeader::CCallbackOnPersonaStateChange
+ R typeinfo name for CFriendsListSectionHeader::CCallback_OnClanInfoChanged
+ R typeinfo name for CFriendsListSectionHeader::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendsListSubPanel
- R typeinfo name for CFriendsListSubPanel::CCallbackOnChatMemberStateChange
- R typeinfo name for CFriendsListSubPanel::CCallbackOnClanInfoChanged
- R typeinfo name for CFriendsListSubPanel::CCallbackOnFriendsGroupCreated
- R typeinfo name for CFriendsListSubPanel::CCallbackOnFriendsGroupDeleted
- R typeinfo name for CFriendsListSubPanel::CCallbackOnFriendsGroupMemberAdded
- R typeinfo name for CFriendsListSubPanel::CCallbackOnFriendsGroupMemberRemoved
- R typeinfo name for CFriendsListSubPanel::CCallbackOnFriendsGroupRenamed
- R typeinfo name for CFriendsListSubPanel::CCallbackOnLoggedOff
- R typeinfo name for CFriendsListSubPanel::CCallbackOnPersonaStateChange
+ R typeinfo name for CFriendsListSubPanel::CCallback_OnChatMemberStateChange
+ R typeinfo name for CFriendsListSubPanel::CCallback_OnClanInfoChanged
+ R typeinfo name for CFriendsListSubPanel::CCallback_OnFriendsGroupCreated
+ R typeinfo name for CFriendsListSubPanel::CCallback_OnFriendsGroupDeleted
+ R typeinfo name for CFriendsListSubPanel::CCallback_OnFriendsGroupMemberAdded
+ R typeinfo name for CFriendsListSubPanel::CCallback_OnFriendsGroupMemberRemoved
+ R typeinfo name for CFriendsListSubPanel::CCallback_OnFriendsGroupRenamed
+ R typeinfo name for CFriendsListSubPanel::CCallback_OnLoggedOff
+ R typeinfo name for CFriendsListSubPanel::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendsNotification
  R typeinfo name for CFriendsUIModule
  R typeinfo name for CFriendsUIModule::CFriendPanelContainerGeneric
@@ -3863,28 +3926,28 @@
  R typeinfo name for CPanelAnimationDictionary
  R typeinfo name for CPanelMessageMapDictionary
  R typeinfo name for CParentalCache
- R typeinfo name for CParentalCache::CCallbackOnParentalLockChangeBegin
+ R typeinfo name for CParentalCache::CCallback_OnParentalLockChangeBegin
  R typeinfo name for CPathString
  R typeinfo name for CPlayersDialog
  R typeinfo name for CPlayersSubCurrentPlayers
  R typeinfo name for CPlayersSubRecentPlayers
- R typeinfo name for CPlayersSubRecentPlayers::CCallbackOnPersonaStateChange
+ R typeinfo name for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  R typeinfo name for CProportionalFloatProperty
  R typeinfo name for CProportionalIntProperty
  R typeinfo name for CSetNicknameDialog
  R typeinfo name for CSharedLibraryNotifications
- R typeinfo name for CSharedLibraryNotifications::CCallbackOnAuthorizeDevice
- R typeinfo name for CSharedLibraryNotifications::CCallbackOnDeauthorizeDevice
- R typeinfo name for CSharedLibraryNotifications::CCallbackOnSharedLibraryChanged
- R typeinfo name for CSharedLibraryNotifications::CCallbackOnStopPlaying
+ R typeinfo name for CSharedLibraryNotifications::CCallback_OnAuthorizeDevice
+ R typeinfo name for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
+ R typeinfo name for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
+ R typeinfo name for CSharedLibraryNotifications::CCallback_OnStopPlaying
  R typeinfo name for CSteamFriends_Test
  R typeinfo name for CSteamTableChallengeOptions
- R typeinfo name for CSteamTableChallengeOptions::CCallbackOnTableGameStarted
+ R typeinfo name for CSteamTableChallengeOptions::CCallback_OnTableGameStarted
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
  R typeinfo name for CTradeInviteBar
- R typeinfo name for CTradeInviteBar::CCallbackOnTradeInviteCanceled
- R typeinfo name for CTradeInviteBar::CCallbackOnTradeStartSession
+ R typeinfo name for CTradeInviteBar::CCallback_OnTradeInviteCanceled
+ R typeinfo name for CTradeInviteBar::CCallback_OnTradeStartSession
  R typeinfo name for CTradeInviteNotification
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
@@ -3995,8 +4058,8 @@
  R typeinfo name for CUtlVector<wchar_t*, CUtlMemory<wchar_t*> >
  R typeinfo name for CUtlVector<wchar_t, CUtlMemory<wchar_t> >
  R typeinfo name for CVoiceBar
- R typeinfo name for CVoiceBar::CCallbackOnGameUsingVoice
- R typeinfo name for CVoiceBar::CCallbackOnVoiceEnabledStateChanged
+ R typeinfo name for CVoiceBar::CCallback_OnGameUsingVoice
+ R typeinfo name for CVoiceBar::CCallback_OnVoiceEnabledStateChanged
  R typeinfo name for CVoiceChatInviteNotification
  R typeinfo name for CVoiceTraffic
  R typeinfo name for ConCommandBase
@@ -4440,10 +4503,8 @@
  T CAchievementNotification::~CAchievementNotification()
  T CAppDownloadNotificationManager::AddDownloadCompletePanel(unsigned int, CUtlBuffer&, int, int)
  T CAppDownloadNotificationManager::CAppDownloadNotificationManager()
- T CAppDownloadNotificationManager::CCallbackOnAppEventStateChange::Run(void*)
- T CAppDownloadNotificationManager::CCallbackOnAppEventStateChange::Run(void*, bool, unsigned long long)
- T CAppDownloadNotificationManager::CCallbackOnDlcInstalled::Run(void*)
- T CAppDownloadNotificationManager::CCallbackOnDlcInstalled::Run(void*, bool, unsigned long long)
+ T CAppDownloadNotificationManager::CCallback_OnAppEventStateChange::Run(void*)
+ T CAppDownloadNotificationManager::CCallback_OnDlcInstalled::Run(void*)
  T CAppDownloadNotificationManager::OnAppEventStateChange(AppEventStateChange_t*)
  T CAppDownloadNotificationManager::OnDlcInstalled(DlcInstalled_t*)
  T CAppDownloadNotificationManager::OnHTTPRequestCompleted(HTTPRequestCompleted_t*, bool)
@@ -4604,501 +4665,317 @@
  T CCallResult<CTradeInviteBar, TradeInviteResponse_t>::Set(unsigned long long, CTradeInviteBar*, void (CTradeInviteBar::*)(TradeInviteResponse_t*, bool))
  T CCallResult<CTradeInviteBar, TradeInviteResponse_t>::~CCallResult()
  T CCallback<CAppDownloadNotificationManager, AppEventStateChange_t, false>::CCallback(CAppDownloadNotificationManager*, void (CAppDownloadNotificationManager::*)(AppEventStateChange_t*))
- T CCallback<CAppDownloadNotificationManager, AppEventStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CAppDownloadNotificationManager, AppEventStateChange_t, false>::Register(CAppDownloadNotificationManager*, void (CAppDownloadNotificationManager::*)(AppEventStateChange_t*))
  T CCallback<CAppDownloadNotificationManager, AppEventStateChange_t, false>::Run(void*)
- T CCallback<CAppDownloadNotificationManager, AppEventStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CAppDownloadNotificationManager, AppEventStateChange_t, false>::~CCallback()
  T CCallback<CAppDownloadNotificationManager, DlcInstalled_t, false>::CCallback(CAppDownloadNotificationManager*, void (CAppDownloadNotificationManager::*)(DlcInstalled_t*))
- T CCallback<CAppDownloadNotificationManager, DlcInstalled_t, false>::GetCallbackSizeBytes()
  T CCallback<CAppDownloadNotificationManager, DlcInstalled_t, false>::Register(CAppDownloadNotificationManager*, void (CAppDownloadNotificationManager::*)(DlcInstalled_t*))
  T CCallback<CAppDownloadNotificationManager, DlcInstalled_t, false>::Run(void*)
- T CCallback<CAppDownloadNotificationManager, DlcInstalled_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CAppDownloadNotificationManager, DlcInstalled_t, false>::~CCallback()
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::GetCallbackSizeBytes()
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::~CCallback()
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::GetCallbackSizeBytes()
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*, bool, unsigned long long)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallback()
  T CCallback<CChatRoomDlg, ChatMemberInfoChanged_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatMemberInfoChanged_t*))
- T CCallback<CChatRoomDlg, ChatMemberInfoChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ChatMemberInfoChanged_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatMemberInfoChanged_t*))
  T CCallback<CChatRoomDlg, ChatMemberInfoChanged_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ChatMemberInfoChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ChatMemberInfoChanged_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, ChatMemberStateChange_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatMemberStateChange_t*))
- T CCallback<CChatRoomDlg, ChatMemberStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ChatMemberStateChange_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatMemberStateChange_t*))
  T CCallback<CChatRoomDlg, ChatMemberStateChange_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ChatMemberStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ChatMemberStateChange_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, ChatRoomActionResult_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomActionResult_t*))
- T CCallback<CChatRoomDlg, ChatRoomActionResult_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ChatRoomActionResult_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomActionResult_t*))
  T CCallback<CChatRoomDlg, ChatRoomActionResult_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ChatRoomActionResult_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ChatRoomActionResult_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, ChatRoomBanning_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomBanning_t*))
- T CCallback<CChatRoomDlg, ChatRoomBanning_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ChatRoomBanning_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomBanning_t*))
  T CCallback<CChatRoomDlg, ChatRoomBanning_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ChatRoomBanning_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ChatRoomBanning_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, ChatRoomClosing_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomClosing_t*))
- T CCallback<CChatRoomDlg, ChatRoomClosing_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ChatRoomClosing_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomClosing_t*))
  T CCallback<CChatRoomDlg, ChatRoomClosing_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ChatRoomClosing_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ChatRoomClosing_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, ChatRoomDlgClose_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomDlgClose_t*))
- T CCallback<CChatRoomDlg, ChatRoomDlgClose_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ChatRoomDlgClose_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomDlgClose_t*))
  T CCallback<CChatRoomDlg, ChatRoomDlgClose_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ChatRoomDlgClose_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ChatRoomDlgClose_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, ChatRoomDlgUIChange_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomDlgUIChange_t*))
- T CCallback<CChatRoomDlg, ChatRoomDlgUIChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ChatRoomDlgUIChange_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomDlgUIChange_t*))
  T CCallback<CChatRoomDlg, ChatRoomDlgUIChange_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ChatRoomDlgUIChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ChatRoomDlgUIChange_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, ChatRoomInfoChanged_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomInfoChanged_t*))
- T CCallback<CChatRoomDlg, ChatRoomInfoChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ChatRoomInfoChanged_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomInfoChanged_t*))
  T CCallback<CChatRoomDlg, ChatRoomInfoChanged_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ChatRoomInfoChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ChatRoomInfoChanged_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, ChatRoomKicking_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomKicking_t*))
- T CCallback<CChatRoomDlg, ChatRoomKicking_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ChatRoomKicking_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ChatRoomKicking_t*))
  T CCallback<CChatRoomDlg, ChatRoomKicking_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ChatRoomKicking_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ChatRoomKicking_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, FriendChatMsg_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(FriendChatMsg_t*))
- T CCallback<CChatRoomDlg, FriendChatMsg_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, FriendChatMsg_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(FriendChatMsg_t*))
  T CCallback<CChatRoomDlg, FriendChatMsg_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, FriendChatMsg_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, FriendChatMsg_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, NotifyHangup_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(NotifyHangup_t*))
- T CCallback<CChatRoomDlg, NotifyHangup_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, NotifyHangup_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(NotifyHangup_t*))
  T CCallback<CChatRoomDlg, NotifyHangup_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, NotifyHangup_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, NotifyHangup_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, NotifyIncomingCall_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(NotifyIncomingCall_t*))
- T CCallback<CChatRoomDlg, NotifyIncomingCall_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, NotifyIncomingCall_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(NotifyIncomingCall_t*))
  T CCallback<CChatRoomDlg, NotifyIncomingCall_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, NotifyIncomingCall_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, NotifyIncomingCall_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, NotifyRequestResume_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(NotifyRequestResume_t*))
- T CCallback<CChatRoomDlg, NotifyRequestResume_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, NotifyRequestResume_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(NotifyRequestResume_t*))
  T CCallback<CChatRoomDlg, NotifyRequestResume_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, NotifyRequestResume_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, NotifyRequestResume_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, ParentalLockChanged_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(ParentalLockChanged_t*))
- T CCallback<CChatRoomDlg, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, ParentalLockChanged_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(ParentalLockChanged_t*))
  T CCallback<CChatRoomDlg, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, PersonaStateChange_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(PersonaStateChange_t*))
- T CCallback<CChatRoomDlg, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, PersonaStateChange_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(PersonaStateChange_t*))
  T CCallback<CChatRoomDlg, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, SteamRackBouncing_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(SteamRackBouncing_t*))
- T CCallback<CChatRoomDlg, SteamRackBouncing_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, SteamRackBouncing_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(SteamRackBouncing_t*))
  T CCallback<CChatRoomDlg, SteamRackBouncing_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, SteamRackBouncing_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, SteamRackBouncing_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, SteamServerConnectFailure_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(SteamServerConnectFailure_t*))
- T CCallback<CChatRoomDlg, SteamServerConnectFailure_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, SteamServerConnectFailure_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(SteamServerConnectFailure_t*))
  T CCallback<CChatRoomDlg, SteamServerConnectFailure_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, SteamServerConnectFailure_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, SteamServerConnectFailure_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, SteamServersConnected_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(SteamServersConnected_t*))
- T CCallback<CChatRoomDlg, SteamServersConnected_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, SteamServersConnected_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(SteamServersConnected_t*))
  T CCallback<CChatRoomDlg, SteamServersConnected_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, SteamServersConnected_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, SteamServersConnected_t, false>::~CCallback()
  T CCallback<CChatRoomDlg, SteamServersDisconnected_t, false>::CCallback(CChatRoomDlg*, void (CChatRoomDlg::*)(SteamServersDisconnected_t*))
- T CCallback<CChatRoomDlg, SteamServersDisconnected_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatRoomDlg, SteamServersDisconnected_t, false>::Register(CChatRoomDlg*, void (CChatRoomDlg::*)(SteamServersDisconnected_t*))
  T CCallback<CChatRoomDlg, SteamServersDisconnected_t, false>::Run(void*)
- T CCallback<CChatRoomDlg, SteamServersDisconnected_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatRoomDlg, SteamServersDisconnected_t, false>::~CCallback()
  T CCallback<CChatTitlePanel, ClanInfoChanged_t, false>::CCallback(CChatTitlePanel*, void (CChatTitlePanel::*)(ClanInfoChanged_t*))
- T CCallback<CChatTitlePanel, ClanInfoChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CChatTitlePanel, ClanInfoChanged_t, false>::Register(CChatTitlePanel*, void (CChatTitlePanel::*)(ClanInfoChanged_t*))
  T CCallback<CChatTitlePanel, ClanInfoChanged_t, false>::Run(void*)
- T CCallback<CChatTitlePanel, ClanInfoChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CChatTitlePanel, ClanInfoChanged_t, false>::~CCallback()
  T CCallback<CEditFriendsGroupsPage, FriendsGroupCreated_t, false>::CCallback(CEditFriendsGroupsPage*, void (CEditFriendsGroupsPage::*)(FriendsGroupCreated_t*))
- T CCallback<CEditFriendsGroupsPage, FriendsGroupCreated_t, false>::GetCallbackSizeBytes()
  T CCallback<CEditFriendsGroupsPage, FriendsGroupCreated_t, false>::Register(CEditFriendsGroupsPage*, void (CEditFriendsGroupsPage::*)(FriendsGroupCreated_t*))
  T CCallback<CEditFriendsGroupsPage, FriendsGroupCreated_t, false>::Run(void*)
- T CCallback<CEditFriendsGroupsPage, FriendsGroupCreated_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CEditFriendsGroupsPage, FriendsGroupCreated_t, false>::~CCallback()
  T CCallback<CFriendAliasesDialog, PersonaStateChange_t, false>::CCallback(CFriendAliasesDialog*, void (CFriendAliasesDialog::*)(PersonaStateChange_t*))
- T CCallback<CFriendAliasesDialog, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendAliasesDialog, PersonaStateChange_t, false>::Register(CFriendAliasesDialog*, void (CFriendAliasesDialog::*)(PersonaStateChange_t*))
  T CCallback<CFriendAliasesDialog, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CFriendAliasesDialog, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendAliasesDialog, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CFriendPanel, NotifyChatRoomVoiceStateChanged_t, false>::CCallback(CFriendPanel*, void (CFriendPanel::*)(NotifyChatRoomVoiceStateChanged_t*))
- T CCallback<CFriendPanel, NotifyChatRoomVoiceStateChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendPanel, NotifyChatRoomVoiceStateChanged_t, false>::Register(CFriendPanel*, void (CFriendPanel::*)(NotifyChatRoomVoiceStateChanged_t*))
  T CCallback<CFriendPanel, NotifyChatRoomVoiceStateChanged_t, false>::Run(void*)
- T CCallback<CFriendPanel, NotifyChatRoomVoiceStateChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendPanel, NotifyChatRoomVoiceStateChanged_t, false>::~CCallback()
  T CCallback<CFriendPanel, PersonaStateChange_t, false>::CCallback(CFriendPanel*, void (CFriendPanel::*)(PersonaStateChange_t*))
- T CCallback<CFriendPanel, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendPanel, PersonaStateChange_t, false>::Register(CFriendPanel*, void (CFriendPanel::*)(PersonaStateChange_t*))
  T CCallback<CFriendPanel, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CFriendPanel, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendPanel, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CFriendsDialog, BroadcastCantStart_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(BroadcastCantStart_t*))
- T CCallback<CFriendsDialog, BroadcastCantStart_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, BroadcastCantStart_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(BroadcastCantStart_t*))
  T CCallback<CFriendsDialog, BroadcastCantStart_t, false>::Run(void*)
- T CCallback<CFriendsDialog, BroadcastCantStart_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, BroadcastCantStart_t, false>::~CCallback()
  T CCallback<CFriendsDialog, BroadcastInvitedToView_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(BroadcastInvitedToView_t*))
- T CCallback<CFriendsDialog, BroadcastInvitedToView_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, BroadcastInvitedToView_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(BroadcastInvitedToView_t*))
  T CCallback<CFriendsDialog, BroadcastInvitedToView_t, false>::Run(void*)
- T CCallback<CFriendsDialog, BroadcastInvitedToView_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, BroadcastInvitedToView_t, false>::~CCallback()
  T CCallback<CFriendsDialog, BroadcastRecorderError_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(BroadcastRecorderError_t*))
- T CCallback<CFriendsDialog, BroadcastRecorderError_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, BroadcastRecorderError_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(BroadcastRecorderError_t*))
  T CCallback<CFriendsDialog, BroadcastRecorderError_t, false>::Run(void*)
- T CCallback<CFriendsDialog, BroadcastRecorderError_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, BroadcastRecorderError_t, false>::~CCallback()
  T CCallback<CFriendsDialog, BroadcastViewerState_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(BroadcastViewerState_t*))
- T CCallback<CFriendsDialog, BroadcastViewerState_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, BroadcastViewerState_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(BroadcastViewerState_t*))
  T CCallback<CFriendsDialog, BroadcastViewerState_t, false>::Run(void*)
- T CCallback<CFriendsDialog, BroadcastViewerState_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, BroadcastViewerState_t, false>::~CCallback()
  T CCallback<CFriendsDialog, ChatRoomCreate_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomCreate_t*))
- T CCallback<CFriendsDialog, ChatRoomCreate_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, ChatRoomCreate_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomCreate_t*))
  T CCallback<CFriendsDialog, ChatRoomCreate_t, false>::Run(void*)
- T CCallback<CFriendsDialog, ChatRoomCreate_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, ChatRoomCreate_t, false>::~CCallback()
  T CCallback<CFriendsDialog, ChatRoomDlgSerialized_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomDlgSerialized_t*))
- T CCallback<CFriendsDialog, ChatRoomDlgSerialized_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, ChatRoomDlgSerialized_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomDlgSerialized_t*))
  T CCallback<CFriendsDialog, ChatRoomDlgSerialized_t, false>::Run(void*)
- T CCallback<CFriendsDialog, ChatRoomDlgSerialized_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, ChatRoomDlgSerialized_t, false>::~CCallback()
  T CCallback<CFriendsDialog, ChatRoomEnter_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomEnter_t*))
- T CCallback<CFriendsDialog, ChatRoomEnter_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, ChatRoomEnter_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomEnter_t*))
  T CCallback<CFriendsDialog, ChatRoomEnter_t, false>::Run(void*)
- T CCallback<CFriendsDialog, ChatRoomEnter_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, ChatRoomEnter_t, false>::~CCallback()
  T CCallback<CFriendsDialog, ChatRoomInvite_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomInvite_t*))
- T CCallback<CFriendsDialog, ChatRoomInvite_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, ChatRoomInvite_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomInvite_t*))
  T CCallback<CFriendsDialog, ChatRoomInvite_t, false>::Run(void*)
- T CCallback<CFriendsDialog, ChatRoomInvite_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, ChatRoomInvite_t, false>::~CCallback()
  T CCallback<CFriendsDialog, ChatRoomMsg_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomMsg_t*))
- T CCallback<CFriendsDialog, ChatRoomMsg_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, ChatRoomMsg_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ChatRoomMsg_t*))
  T CCallback<CFriendsDialog, ChatRoomMsg_t, false>::Run(void*)
- T CCallback<CFriendsDialog, ChatRoomMsg_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, ChatRoomMsg_t, false>::~CCallback()
  T CCallback<CFriendsDialog, ClanEventReceived_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ClanEventReceived_t*))
- T CCallback<CFriendsDialog, ClanEventReceived_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, ClanEventReceived_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ClanEventReceived_t*))
  T CCallback<CFriendsDialog, ClanEventReceived_t, false>::Run(void*)
- T CCallback<CFriendsDialog, ClanEventReceived_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, ClanEventReceived_t, false>::~CCallback()
  T CCallback<CFriendsDialog, FriendAdded_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(FriendAdded_t*))
- T CCallback<CFriendsDialog, FriendAdded_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, FriendAdded_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(FriendAdded_t*))
  T CCallback<CFriendsDialog, FriendAdded_t, false>::Run(void*)
- T CCallback<CFriendsDialog, FriendAdded_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, FriendAdded_t, false>::~CCallback()
  T CCallback<CFriendsDialog, FriendChatMsg_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(FriendChatMsg_t*))
- T CCallback<CFriendsDialog, FriendChatMsg_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, FriendChatMsg_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(FriendChatMsg_t*))
  T CCallback<CFriendsDialog, FriendChatMsg_t, false>::Run(void*)
- T CCallback<CFriendsDialog, FriendChatMsg_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, FriendChatMsg_t, false>::~CCallback()
  T CCallback<CFriendsDialog, FriendIgnored_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(FriendIgnored_t*))
- T CCallback<CFriendsDialog, FriendIgnored_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, FriendIgnored_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(FriendIgnored_t*))
  T CCallback<CFriendsDialog, FriendIgnored_t, false>::Run(void*)
- T CCallback<CFriendsDialog, FriendIgnored_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, FriendIgnored_t, false>::~CCallback()
  T CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(FriendMessageHistoryChatLog_t*))
- T CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(FriendMessageHistoryChatLog_t*))
  T CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>::Run(void*)
- T CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>::~CCallback()
  T CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(FriendPublishedStatusUpdate_t*))
- T CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(FriendPublishedStatusUpdate_t*))
  T CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>::Run(void*)
- T CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>::~CCallback()
  T CCallback<CFriendsDialog, FriendsMenuChange_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(FriendsMenuChange_t*))
- T CCallback<CFriendsDialog, FriendsMenuChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, FriendsMenuChange_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(FriendsMenuChange_t*))
  T CCallback<CFriendsDialog, FriendsMenuChange_t, false>::Run(void*)
- T CCallback<CFriendsDialog, FriendsMenuChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, FriendsMenuChange_t, false>::~CCallback()
  T CCallback<CFriendsDialog, LobbyInvite_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(LobbyInvite_t*))
- T CCallback<CFriendsDialog, LobbyInvite_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, LobbyInvite_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(LobbyInvite_t*))
  T CCallback<CFriendsDialog, LobbyInvite_t, false>::Run(void*)
- T CCallback<CFriendsDialog, LobbyInvite_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, LobbyInvite_t, false>::~CCallback()
  T CCallback<CFriendsDialog, NotifyIncomingCall_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(NotifyIncomingCall_t*))
- T CCallback<CFriendsDialog, NotifyIncomingCall_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, NotifyIncomingCall_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(NotifyIncomingCall_t*))
  T CCallback<CFriendsDialog, NotifyIncomingCall_t, false>::Run(void*)
- T CCallback<CFriendsDialog, NotifyIncomingCall_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, NotifyIncomingCall_t, false>::~CCallback()
  T CCallback<CFriendsDialog, OpenChatDialog_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(OpenChatDialog_t*))
- T CCallback<CFriendsDialog, OpenChatDialog_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, OpenChatDialog_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(OpenChatDialog_t*))
  T CCallback<CFriendsDialog, OpenChatDialog_t, false>::Run(void*)
- T CCallback<CFriendsDialog, OpenChatDialog_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, OpenChatDialog_t, false>::~CCallback()
  T CCallback<CFriendsDialog, ParentalLockChanged_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ParentalLockChanged_t*))
- T CCallback<CFriendsDialog, ParentalLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, ParentalLockChanged_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ParentalLockChanged_t*))
  T CCallback<CFriendsDialog, ParentalLockChanged_t, false>::Run(void*)
- T CCallback<CFriendsDialog, ParentalLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, ParentalLockChanged_t, false>::~CCallback()
  T CCallback<CFriendsDialog, PersonaStateChange_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(PersonaStateChange_t*))
- T CCallback<CFriendsDialog, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, PersonaStateChange_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(PersonaStateChange_t*))
  T CCallback<CFriendsDialog, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CFriendsDialog, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CFriendsDialog, PrimaryChatDestinationSet_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(PrimaryChatDestinationSet_t*))
- T CCallback<CFriendsDialog, PrimaryChatDestinationSet_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, PrimaryChatDestinationSet_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(PrimaryChatDestinationSet_t*))
  T CCallback<CFriendsDialog, PrimaryChatDestinationSet_t, false>::Run(void*)
- T CCallback<CFriendsDialog, PrimaryChatDestinationSet_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, PrimaryChatDestinationSet_t, false>::~CCallback()
  T CCallback<CFriendsDialog, RichInviteReceived_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(RichInviteReceived_t*))
- T CCallback<CFriendsDialog, RichInviteReceived_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, RichInviteReceived_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(RichInviteReceived_t*))
  T CCallback<CFriendsDialog, RichInviteReceived_t, false>::Run(void*)
- T CCallback<CFriendsDialog, RichInviteReceived_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, RichInviteReceived_t, false>::~CCallback()
  T CCallback<CFriendsDialog, SteamServerConnectFailure_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(SteamServerConnectFailure_t*))
- T CCallback<CFriendsDialog, SteamServerConnectFailure_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, SteamServerConnectFailure_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(SteamServerConnectFailure_t*))
  T CCallback<CFriendsDialog, SteamServerConnectFailure_t, false>::Run(void*)
- T CCallback<CFriendsDialog, SteamServerConnectFailure_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, SteamServerConnectFailure_t, false>::~CCallback()
  T CCallback<CFriendsDialog, SteamServersConnected_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(SteamServersConnected_t*))
- T CCallback<CFriendsDialog, SteamServersConnected_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, SteamServersConnected_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(SteamServersConnected_t*))
  T CCallback<CFriendsDialog, SteamServersConnected_t, false>::Run(void*)
- T CCallback<CFriendsDialog, SteamServersConnected_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, SteamServersConnected_t, false>::~CCallback()
  T CCallback<CFriendsDialog, SteamServersDisconnected_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(SteamServersDisconnected_t*))
- T CCallback<CFriendsDialog, SteamServersDisconnected_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, SteamServersDisconnected_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(SteamServersDisconnected_t*))
  T CCallback<CFriendsDialog, SteamServersDisconnected_t, false>::Run(void*)
- T CCallback<CFriendsDialog, SteamServersDisconnected_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, SteamServersDisconnected_t, false>::~CCallback()
  T CCallback<CFriendsDialog, TableGameWatch_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(TableGameWatch_t*))
- T CCallback<CFriendsDialog, TableGameWatch_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, TableGameWatch_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(TableGameWatch_t*))
  T CCallback<CFriendsDialog, TableGameWatch_t, false>::Run(void*)
- T CCallback<CFriendsDialog, TableGameWatch_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, TableGameWatch_t, false>::~CCallback()
  T CCallback<CFriendsDialog, TradeInviteReceived_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(TradeInviteReceived_t*))
- T CCallback<CFriendsDialog, TradeInviteReceived_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, TradeInviteReceived_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(TradeInviteReceived_t*))
  T CCallback<CFriendsDialog, TradeInviteReceived_t, false>::Run(void*)
- T CCallback<CFriendsDialog, TradeInviteReceived_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, TradeInviteReceived_t, false>::~CCallback()
  T CCallback<CFriendsDialog, UserAchievementStored_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(UserAchievementStored_t*))
- T CCallback<CFriendsDialog, UserAchievementStored_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, UserAchievementStored_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(UserAchievementStored_t*))
  T CCallback<CFriendsDialog, UserAchievementStored_t, false>::Run(void*)
- T CCallback<CFriendsDialog, UserAchievementStored_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, UserAchievementStored_t, false>::~CCallback()
  T CCallback<CFriendsDialog, UserRequestingFriendship_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(UserRequestingFriendship_t*))
- T CCallback<CFriendsDialog, UserRequestingFriendship_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, UserRequestingFriendship_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(UserRequestingFriendship_t*))
  T CCallback<CFriendsDialog, UserRequestingFriendship_t, false>::Run(void*)
- T CCallback<CFriendsDialog, UserRequestingFriendship_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, UserRequestingFriendship_t, false>::~CCallback()
  T CCallback<CFriendsDialog, ViewerApprovalResult_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ViewerApprovalResult_t*))
- T CCallback<CFriendsDialog, ViewerApprovalResult_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, ViewerApprovalResult_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ViewerApprovalResult_t*))
  T CCallback<CFriendsDialog, ViewerApprovalResult_t, false>::Run(void*)
- T CCallback<CFriendsDialog, ViewerApprovalResult_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, ViewerApprovalResult_t, false>::~CCallback()
  T CCallback<CFriendsDialog, ViewerNeedsApproval_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ViewerNeedsApproval_t*))
- T CCallback<CFriendsDialog, ViewerNeedsApproval_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, ViewerNeedsApproval_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ViewerNeedsApproval_t*))
  T CCallback<CFriendsDialog, ViewerNeedsApproval_t, false>::Run(void*)
- T CCallback<CFriendsDialog, ViewerNeedsApproval_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, ViewerNeedsApproval_t, false>::~CCallback()
  T CCallback<CFriendsDialog, VoiceCallInitiated_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(VoiceCallInitiated_t*))
- T CCallback<CFriendsDialog, VoiceCallInitiated_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsDialog, VoiceCallInitiated_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(VoiceCallInitiated_t*))
  T CCallback<CFriendsDialog, VoiceCallInitiated_t, false>::Run(void*)
- T CCallback<CFriendsDialog, VoiceCallInitiated_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsDialog, VoiceCallInitiated_t, false>::~CCallback()
  T CCallback<CFriendsListSectionHeader, ClanInfoChanged_t, false>::CCallback(CFriendsListSectionHeader*, void (CFriendsListSectionHeader::*)(ClanInfoChanged_t*))
- T CCallback<CFriendsListSectionHeader, ClanInfoChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSectionHeader, ClanInfoChanged_t, false>::Register(CFriendsListSectionHeader*, void (CFriendsListSectionHeader::*)(ClanInfoChanged_t*))
  T CCallback<CFriendsListSectionHeader, ClanInfoChanged_t, false>::Run(void*)
- T CCallback<CFriendsListSectionHeader, ClanInfoChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSectionHeader, ClanInfoChanged_t, false>::~CCallback()
  T CCallback<CFriendsListSectionHeader, PersonaStateChange_t, false>::CCallback(CFriendsListSectionHeader*, void (CFriendsListSectionHeader::*)(PersonaStateChange_t*))
- T CCallback<CFriendsListSectionHeader, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSectionHeader, PersonaStateChange_t, false>::Register(CFriendsListSectionHeader*, void (CFriendsListSectionHeader::*)(PersonaStateChange_t*))
  T CCallback<CFriendsListSectionHeader, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CFriendsListSectionHeader, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSectionHeader, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CFriendsListSubPanel, ChatMemberStateChange_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(ChatMemberStateChange_t*))
- T CCallback<CFriendsListSubPanel, ChatMemberStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSubPanel, ChatMemberStateChange_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(ChatMemberStateChange_t*))
  T CCallback<CFriendsListSubPanel, ChatMemberStateChange_t, false>::Run(void*)
- T CCallback<CFriendsListSubPanel, ChatMemberStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSubPanel, ChatMemberStateChange_t, false>::~CCallback()
  T CCallback<CFriendsListSubPanel, ClanInfoChanged_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(ClanInfoChanged_t*))
- T CCallback<CFriendsListSubPanel, ClanInfoChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSubPanel, ClanInfoChanged_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(ClanInfoChanged_t*))
  T CCallback<CFriendsListSubPanel, ClanInfoChanged_t, false>::Run(void*)
- T CCallback<CFriendsListSubPanel, ClanInfoChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSubPanel, ClanInfoChanged_t, false>::~CCallback()
  T CCallback<CFriendsListSubPanel, FriendsGroupCreated_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupCreated_t*))
- T CCallback<CFriendsListSubPanel, FriendsGroupCreated_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSubPanel, FriendsGroupCreated_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupCreated_t*))
  T CCallback<CFriendsListSubPanel, FriendsGroupCreated_t, false>::Run(void*)
- T CCallback<CFriendsListSubPanel, FriendsGroupCreated_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSubPanel, FriendsGroupCreated_t, false>::~CCallback()
  T CCallback<CFriendsListSubPanel, FriendsGroupDeleted_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupDeleted_t*))
- T CCallback<CFriendsListSubPanel, FriendsGroupDeleted_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSubPanel, FriendsGroupDeleted_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupDeleted_t*))
  T CCallback<CFriendsListSubPanel, FriendsGroupDeleted_t, false>::Run(void*)
- T CCallback<CFriendsListSubPanel, FriendsGroupDeleted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSubPanel, FriendsGroupDeleted_t, false>::~CCallback()
  T CCallback<CFriendsListSubPanel, FriendsGroupMemberAdded_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupMemberAdded_t*))
- T CCallback<CFriendsListSubPanel, FriendsGroupMemberAdded_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSubPanel, FriendsGroupMemberAdded_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupMemberAdded_t*))
  T CCallback<CFriendsListSubPanel, FriendsGroupMemberAdded_t, false>::Run(void*)
- T CCallback<CFriendsListSubPanel, FriendsGroupMemberAdded_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSubPanel, FriendsGroupMemberAdded_t, false>::~CCallback()
  T CCallback<CFriendsListSubPanel, FriendsGroupMemberRemoved_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupMemberRemoved_t*))
- T CCallback<CFriendsListSubPanel, FriendsGroupMemberRemoved_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSubPanel, FriendsGroupMemberRemoved_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupMemberRemoved_t*))
  T CCallback<CFriendsListSubPanel, FriendsGroupMemberRemoved_t, false>::Run(void*)
- T CCallback<CFriendsListSubPanel, FriendsGroupMemberRemoved_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSubPanel, FriendsGroupMemberRemoved_t, false>::~CCallback()
  T CCallback<CFriendsListSubPanel, FriendsGroupRenamed_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupRenamed_t*))
- T CCallback<CFriendsListSubPanel, FriendsGroupRenamed_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSubPanel, FriendsGroupRenamed_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(FriendsGroupRenamed_t*))
  T CCallback<CFriendsListSubPanel, FriendsGroupRenamed_t, false>::Run(void*)
- T CCallback<CFriendsListSubPanel, FriendsGroupRenamed_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSubPanel, FriendsGroupRenamed_t, false>::~CCallback()
  T CCallback<CFriendsListSubPanel, PersonaStateChange_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(PersonaStateChange_t*))
- T CCallback<CFriendsListSubPanel, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSubPanel, PersonaStateChange_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(PersonaStateChange_t*))
  T CCallback<CFriendsListSubPanel, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CFriendsListSubPanel, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSubPanel, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(SteamServersDisconnected_t*))
- T CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>::GetCallbackSizeBytes()
  T CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(SteamServersDisconnected_t*))
  T CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>::Run(void*)
- T CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>::~CCallback()
  T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::CCallback(CParentalCache*, void (CParentalCache::*)(ParentalLockChangeBegin_t*))
- T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::GetCallbackSizeBytes()
  T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::Register(CParentalCache*, void (CParentalCache::*)(ParentalLockChangeBegin_t*))
  T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::Run(void*)
- T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::~CCallback()
  T CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>::CCallback(CPlayersSubRecentPlayers*, void (CPlayersSubRecentPlayers::*)(PersonaStateChange_t*))
- T CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>::GetCallbackSizeBytes()
  T CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>::Register(CPlayersSubRecentPlayers*, void (CPlayersSubRecentPlayers::*)(PersonaStateChange_t*))
  T CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>::Run(void*)
- T CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>::~CCallback()
  T CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>::CCallback(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(AuthorizeDeviceResult_t*))
- T CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>::GetCallbackSizeBytes()
  T CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>::Register(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(AuthorizeDeviceResult_t*))
  T CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>::Run(void*)
- T CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSharedLibraryNotifications, AuthorizeDeviceResult_t, false>::~CCallback()
  T CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>::CCallback(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(DeauthorizeDeviceResult_t*))
- T CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>::GetCallbackSizeBytes()
  T CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>::Register(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(DeauthorizeDeviceResult_t*))
  T CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>::Run(void*)
- T CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSharedLibraryNotifications, DeauthorizeDeviceResult_t, false>::~CCallback()
  T CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>::CCallback(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(SharedLibraryLockChanged_t*))
- T CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>::Register(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(SharedLibraryLockChanged_t*))
  T CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>::Run(void*)
- T CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>::~CCallback()
  T CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>::CCallback(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(StopPlayingBorrowedApp_t*))
- T CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>::GetCallbackSizeBytes()
  T CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>::Register(CSharedLibraryNotifications*, void (CSharedLibraryNotifications::*)(StopPlayingBorrowedApp_t*))
  T CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>::Run(void*)
- T CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>::~CCallback()
  T CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>::CCallback(CSteamTableChallengeOptions*, void (CSteamTableChallengeOptions::*)(TableGameStarted_t*))
- T CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>::Register(CSteamTableChallengeOptions*, void (CSteamTableChallengeOptions::*)(TableGameStarted_t*))
  T CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>::Run(void*)
- T CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamTableChallengeOptions, TableGameStarted_t, false>::~CCallback()
  T CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>::CCallback(CTradeInviteBar*, void (CTradeInviteBar::*)(TradeInviteCanceled_t*))
- T CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>::GetCallbackSizeBytes()
  T CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>::Register(CTradeInviteBar*, void (CTradeInviteBar::*)(TradeInviteCanceled_t*))
  T CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>::Run(void*)
- T CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CTradeInviteBar, TradeInviteCanceled_t, false>::~CCallback()
  T CCallback<CTradeInviteBar, TradeStartSession_t, false>::CCallback(CTradeInviteBar*, void (CTradeInviteBar::*)(TradeStartSession_t*))
- T CCallback<CTradeInviteBar, TradeStartSession_t, false>::GetCallbackSizeBytes()
  T CCallback<CTradeInviteBar, TradeStartSession_t, false>::Register(CTradeInviteBar*, void (CTradeInviteBar::*)(TradeStartSession_t*))
  T CCallback<CTradeInviteBar, TradeStartSession_t, false>::Run(void*)
- T CCallback<CTradeInviteBar, TradeStartSession_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CTradeInviteBar, TradeStartSession_t, false>::~CCallback()
  T CCallback<CVoiceBar, GameUsingVoice_t, false>::CCallback(CVoiceBar*, void (CVoiceBar::*)(GameUsingVoice_t*))
- T CCallback<CVoiceBar, GameUsingVoice_t, false>::GetCallbackSizeBytes()
  T CCallback<CVoiceBar, GameUsingVoice_t, false>::Register(CVoiceBar*, void (CVoiceBar::*)(GameUsingVoice_t*))
  T CCallback<CVoiceBar, GameUsingVoice_t, false>::Run(void*)
- T CCallback<CVoiceBar, GameUsingVoice_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CVoiceBar, GameUsingVoice_t, false>::~CCallback()
  T CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>::CCallback(CVoiceBar*, void (CVoiceBar::*)(VoiceEnabledStateChanged_t*))
- T CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>::GetCallbackSizeBytes()
  T CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>::Register(CVoiceBar*, void (CVoiceBar::*)(VoiceEnabledStateChanged_t*))
  T CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>::Run(void*)
- T CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CVoiceBar, VoiceEnabledStateChanged_t, false>::~CCallback()
+ T CCallbackImpl<1032>::GetCallbackSizeBytes()
+ T CCallbackImpl<1032>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<1032>::~CCallbackImpl()
+ T CCallbackImpl<12>::GetCallbackSizeBytes()
+ T CCallbackImpl<12>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<12>::~CCallbackImpl()
+ T CCallbackImpl<148>::GetCallbackSizeBytes()
+ T CCallbackImpl<148>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<148>::~CCallbackImpl()
+ T CCallbackImpl<156>::GetCallbackSizeBytes()
+ T CCallbackImpl<156>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<156>::~CCallbackImpl()
+ T CCallbackImpl<16>::GetCallbackSizeBytes()
+ T CCallbackImpl<16>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<16>::~CCallbackImpl()
+ T CCallbackImpl<176>::GetCallbackSizeBytes()
+ T CCallbackImpl<176>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<176>::~CCallbackImpl()
+ T CCallbackImpl<1>::GetCallbackSizeBytes()
+ T CCallbackImpl<1>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<1>::~CCallbackImpl()
+ T CCallbackImpl<20>::GetCallbackSizeBytes()
+ T CCallbackImpl<20>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<20>::~CCallbackImpl()
+ T CCallbackImpl<24>::GetCallbackSizeBytes()
+ T CCallbackImpl<24>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<24>::~CCallbackImpl()
+ T CCallbackImpl<268>::GetCallbackSizeBytes()
+ T CCallbackImpl<268>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<268>::~CCallbackImpl()
+ T CCallbackImpl<284>::GetCallbackSizeBytes()
+ T CCallbackImpl<284>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<284>::~CCallbackImpl()
+ T CCallbackImpl<28>::GetCallbackSizeBytes()
+ T CCallbackImpl<28>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<28>::~CCallbackImpl()
+ T CCallbackImpl<2>::GetCallbackSizeBytes()
+ T CCallbackImpl<2>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<2>::~CCallbackImpl()
+ T CCallbackImpl<4>::GetCallbackSizeBytes()
+ T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<4>::~CCallbackImpl()
+ T CCallbackImpl<524>::GetCallbackSizeBytes()
+ T CCallbackImpl<524>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<524>::~CCallbackImpl()
+ T CCallbackImpl<72>::GetCallbackSizeBytes()
+ T CCallbackImpl<72>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<72>::~CCallbackImpl()
+ T CCallbackImpl<76>::GetCallbackSizeBytes()
+ T CCallbackImpl<76>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<76>::~CCallbackImpl()
+ T CCallbackImpl<80>::GetCallbackSizeBytes()
+ T CCallbackImpl<80>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<80>::~CCallbackImpl()
+ T CCallbackImpl<84>::GetCallbackSizeBytes()
+ T CCallbackImpl<84>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<84>::~CCallbackImpl()
+ T CCallbackImpl<8>::GetCallbackSizeBytes()
+ T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<8>::~CCallbackImpl()
+ T CCallbackImpl<9>::GetCallbackSizeBytes()
+ T CCallbackImpl<9>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<9>::~CCallbackImpl()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
@@ -5189,44 +5066,25 @@
  T CChatRoomDlg::BShowTimestampOnNewMsg()
  T CChatRoomDlg::BUserCanSendMessages(CSteamID const&) const
  T CChatRoomDlg::BanFromChatRoom(unsigned long long, unsigned long long)
- T CChatRoomDlg::CCallbackOnChatMemberInfoChanged::Run(void*)
- T CChatRoomDlg::CCallbackOnChatMemberInfoChanged::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnChatMemberStateChange::Run(void*)
- T CChatRoomDlg::CCallbackOnChatMemberStateChange::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnChatRoomActionResult::Run(void*)
- T CChatRoomDlg::CCallbackOnChatRoomActionResult::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnChatRoomBanning::Run(void*)
- T CChatRoomDlg::CCallbackOnChatRoomBanning::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnChatRoomClosing::Run(void*)
- T CChatRoomDlg::CCallbackOnChatRoomClosing::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnChatRoomDlgClose::Run(void*)
- T CChatRoomDlg::CCallbackOnChatRoomDlgClose::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnChatRoomDlgUIChange::Run(void*)
- T CChatRoomDlg::CCallbackOnChatRoomDlgUIChange::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnChatRoomInfoChanged::Run(void*)
- T CChatRoomDlg::CCallbackOnChatRoomInfoChanged::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnChatRoomKicking::Run(void*)
- T CChatRoomDlg::CCallbackOnChatRoomKicking::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnFriendChatMsg::Run(void*)
- T CChatRoomDlg::CCallbackOnFriendChatMsg::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnHangUp::Run(void*)
- T CChatRoomDlg::CCallbackOnHangUp::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnIncomingVoiceCall::Run(void*)
- T CChatRoomDlg::CCallbackOnIncomingVoiceCall::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnLoggedOff::Run(void*)
- T CChatRoomDlg::CCallbackOnLoggedOff::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnLogonFailure::Run(void*)
- T CChatRoomDlg::CCallbackOnLogonFailure::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnLogonSuccess::Run(void*)
- T CChatRoomDlg::CCallbackOnLogonSuccess::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnParentalLockChanged::Run(void*)
- T CChatRoomDlg::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnPersonaStateChange::Run(void*)
- T CChatRoomDlg::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnRequestResume::Run(void*)
- T CChatRoomDlg::CCallbackOnRequestResume::Run(void*, bool, unsigned long long)
- T CChatRoomDlg::CCallbackOnSteamRackBouncing::Run(void*)
- T CChatRoomDlg::CCallbackOnSteamRackBouncing::Run(void*, bool, unsigned long long)
+ T CChatRoomDlg::CCallback_OnChatMemberInfoChanged::Run(void*)
+ T CChatRoomDlg::CCallback_OnChatMemberStateChange::Run(void*)
+ T CChatRoomDlg::CCallback_OnChatRoomActionResult::Run(void*)
+ T CChatRoomDlg::CCallback_OnChatRoomBanning::Run(void*)
+ T CChatRoomDlg::CCallback_OnChatRoomClosing::Run(void*)
+ T CChatRoomDlg::CCallback_OnChatRoomDlgClose::Run(void*)
+ T CChatRoomDlg::CCallback_OnChatRoomDlgUIChange::Run(void*)
+ T CChatRoomDlg::CCallback_OnChatRoomInfoChanged::Run(void*)
+ T CChatRoomDlg::CCallback_OnChatRoomKicking::Run(void*)
+ T CChatRoomDlg::CCallback_OnFriendChatMsg::Run(void*)
+ T CChatRoomDlg::CCallback_OnHangUp::Run(void*)
+ T CChatRoomDlg::CCallback_OnIncomingVoiceCall::Run(void*)
+ T CChatRoomDlg::CCallback_OnLoggedOff::Run(void*)
+ T CChatRoomDlg::CCallback_OnLogonFailure::Run(void*)
+ T CChatRoomDlg::CCallback_OnLogonSuccess::Run(void*)
+ T CChatRoomDlg::CCallback_OnParentalLockChanged::Run(void*)
+ T CChatRoomDlg::CCallback_OnPersonaStateChange::Run(void*)
+ T CChatRoomDlg::CCallback_OnRequestResume::Run(void*)
+ T CChatRoomDlg::CCallback_OnSteamRackBouncing::Run(void*)
  T CChatRoomDlg::CChatRoomDlg(vgui::Panel*, CSteamID&, EChatRoomType)
  T CChatRoomDlg::ChainToAnimationMap()
  T CChatRoomDlg::ChainToMap()
@@ -5386,8 +5244,7 @@
  T CChatTabPanel::OnMouseReleased(vgui::MouseCode)
  T CChatTabPanel::~CChatTabPanel()
  T CChatTitlePanel::ApplySchemeSettings(vgui::IScheme*)
- T CChatTitlePanel::CCallbackOnClanInfoChanged::Run(void*)
- T CChatTitlePanel::CCallbackOnClanInfoChanged::Run(void*, bool, unsigned long long)
+ T CChatTitlePanel::CCallback_OnClanInfoChanged::Run(void*)
  T CChatTitlePanel::CChatTitlePanel(vgui::Panel*, char const*, char const*, IFriendPanelContainer*, CSteamID const&, CSteamID const&, CSteamID const&, bool)
  T CChatTitlePanel::ChainToAnimationMap()
  T CChatTitlePanel::ChainToMap()
@@ -5528,8 +5385,7 @@
  T CEditFriendsGroupsDialog::~CEditFriendsGroupsDialog()
  T CEditFriendsGroupsPage::AddTag()
  T CEditFriendsGroupsPage::ApplyChanges()
- T CEditFriendsGroupsPage::CCallbackOnGroupCreated::Run(void*)
- T CEditFriendsGroupsPage::CCallbackOnGroupCreated::Run(void*, bool, unsigned long long)
+ T CEditFriendsGroupsPage::CCallback_OnGroupCreated::Run(void*)
  T CEditFriendsGroupsPage::CEditFriendsGroupsPage(vgui::Panel*, char const*, CSteamID)
  T CEditFriendsGroupsPage::ChainToAnimationMap()
  T CEditFriendsGroupsPage::ChainToMap()
@@ -5581,8 +5437,7 @@
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<256, true, true>::Format(char const*, ...)
  T CFmtStrN<8192, true, false>::CFmtStrN(char const*, ...)
- T CFriendAliasesDialog::CCallbackOnPersonaStateChange::Run(void*)
- T CFriendAliasesDialog::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
+ T CFriendAliasesDialog::CCallback_OnPersonaStateChange::Run(void*)
  T CFriendAliasesDialog::CFriendAliasesDialog(vgui::Panel*, CSteamID)
  T CFriendAliasesDialog::ChainToAnimationMap()
  T CFriendAliasesDialog::ChainToMap()
@@ -5695,10 +5550,8 @@
  T CFriendOnlineNotification::~CFriendOnlineNotification()
  T CFriendPanel::ApplySchemeSettings(vgui::IScheme*)
  T CFriendPanel::BInGame()
- T CFriendPanel::CCallbackOnChatRoomVoiceStateChanged::Run(void*)
- T CFriendPanel::CCallbackOnChatRoomVoiceStateChanged::Run(void*, bool, unsigned long long)
- T CFriendPanel::CCallbackOnPersonaStateChange::Run(void*)
- T CFriendPanel::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
+ T CFriendPanel::CCallback_OnChatRoomVoiceStateChanged::Run(void*)
+ T CFriendPanel::CCallback_OnPersonaStateChange::Run(void*)
  T CFriendPanel::CFriendPanel(vgui::Panel*, char const*, vgui::SectionedListPanel*, CSteamID const&, IFriendPanelContainer*, CSteamID const&, int)
  T CFriendPanel::ChainToAnimationMap()
  T CFriendPanel::ChainToMap()
@@ -5817,72 +5670,39 @@
  T CFriendsDialog::BShowInviteButton(CSteamID const&)
  T CFriendsDialog::BShowSelf()
  T CFriendsDialog::BShowSelfPanel()
- T CFriendsDialog::CCallbackOnBroadcastCantStart::Run(void*)
- T CFriendsDialog::CCallbackOnBroadcastCantStart::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnBroadcastInvitedToView::Run(void*)
- T CFriendsDialog::CCallbackOnBroadcastInvitedToView::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnBroadcastRecorderError::Run(void*)
- T CFriendsDialog::CCallbackOnBroadcastRecorderError::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnBroadcastViewerState::Run(void*)
- T CFriendsDialog::CCallbackOnBroadcastViewerState::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnChatRoomCreate::Run(void*)
- T CFriendsDialog::CCallbackOnChatRoomCreate::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnChatRoomDlgSerialized::Run(void*)
- T CFriendsDialog::CCallbackOnChatRoomDlgSerialized::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnChatRoomEnter::Run(void*)
- T CFriendsDialog::CCallbackOnChatRoomEnter::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnChatRoomInvite::Run(void*)
- T CFriendsDialog::CCallbackOnChatRoomInvite::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnChatRoomMsg::Run(void*)
- T CFriendsDialog::CCallbackOnChatRoomMsg::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnClanEventReceived::Run(void*)
- T CFriendsDialog::CCallbackOnClanEventReceived::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnFriendAdded::Run(void*)
- T CFriendsDialog::CCallbackOnFriendAdded::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnFriendChatMsg::Run(void*)
- T CFriendsDialog::CCallbackOnFriendChatMsg::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnFriendIgnored::Run(void*)
- T CFriendsDialog::CCallbackOnFriendIgnored::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnFriendMessageHistoryReceived::Run(void*)
- T CFriendsDialog::CCallbackOnFriendMessageHistoryReceived::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnFriendPublishedStatusUpdate::Run(void*)
- T CFriendsDialog::CCallbackOnFriendPublishedStatusUpdate::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnIncomingVoiceCall::Run(void*)
- T CFriendsDialog::CCallbackOnIncomingVoiceCall::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnLobbyInvite::Run(void*)
- T CFriendsDialog::CCallbackOnLobbyInvite::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnLoggedOff::Run(void*)
- T CFriendsDialog::CCallbackOnLoggedOff::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnLogonFailure::Run(void*)
- T CFriendsDialog::CCallbackOnLogonFailure::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnLogonSuccess::Run(void*)
- T CFriendsDialog::CCallbackOnLogonSuccess::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnOpenChatDialog::Run(void*)
- T CFriendsDialog::CCallbackOnOpenChatDialog::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnParentalLockChanged::Run(void*)
- T CFriendsDialog::CCallbackOnParentalLockChanged::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnPersonaStateChange::Run(void*)
- T CFriendsDialog::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnPrimaryChatDestinationSet::Run(void*)
- T CFriendsDialog::CCallbackOnPrimaryChatDestinationSet::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnRichInviteReceived::Run(void*)
- T CFriendsDialog::CCallbackOnRichInviteReceived::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnTableGameWatch::Run(void*)
- T CFriendsDialog::CCallbackOnTableGameWatch::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnUIMenuChange::Run(void*)
- T CFriendsDialog::CCallbackOnUIMenuChange::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnUserAchievement::Run(void*)
- T CFriendsDialog::CCallbackOnUserAchievement::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnUserRequestingFriendship::Run(void*)
- T CFriendsDialog::CCallbackOnUserRequestingFriendship::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnViewerApprovalResult::Run(void*)
- T CFriendsDialog::CCallbackOnViewerApprovalResult::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnViewerNeedsApproval::Run(void*)
- T CFriendsDialog::CCallbackOnViewerNeedsApproval::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackOnVoiceCallInitiated::Run(void*)
- T CFriendsDialog::CCallbackOnVoiceCallInitiated::Run(void*, bool, unsigned long long)
- T CFriendsDialog::CCallbackTradeInviteReceived::Run(void*)
- T CFriendsDialog::CCallbackTradeInviteReceived::Run(void*, bool, unsigned long long)
+ T CFriendsDialog::CCallback_OnBroadcastCantStart::Run(void*)
+ T CFriendsDialog::CCallback_OnBroadcastInvitedToView::Run(void*)
+ T CFriendsDialog::CCallback_OnBroadcastRecorderError::Run(void*)
+ T CFriendsDialog::CCallback_OnBroadcastViewerState::Run(void*)
+ T CFriendsDialog::CCallback_OnChatRoomCreate::Run(void*)
+ T CFriendsDialog::CCallback_OnChatRoomDlgSerialized::Run(void*)
+ T CFriendsDialog::CCallback_OnChatRoomEnter::Run(void*)
+ T CFriendsDialog::CCallback_OnChatRoomInvite::Run(void*)
+ T CFriendsDialog::CCallback_OnChatRoomMsg::Run(void*)
+ T CFriendsDialog::CCallback_OnClanEventReceived::Run(void*)
+ T CFriendsDialog::CCallback_OnFriendAdded::Run(void*)
+ T CFriendsDialog::CCallback_OnFriendChatMsg::Run(void*)
+ T CFriendsDialog::CCallback_OnFriendIgnored::Run(void*)
+ T CFriendsDialog::CCallback_OnFriendMessageHistoryReceived::Run(void*)
+ T CFriendsDialog::CCallback_OnFriendPublishedStatusUpdate::Run(void*)
+ T CFriendsDialog::CCallback_OnIncomingVoiceCall::Run(void*)
+ T CFriendsDialog::CCallback_OnLobbyInvite::Run(void*)
+ T CFriendsDialog::CCallback_OnLoggedOff::Run(void*)
+ T CFriendsDialog::CCallback_OnLogonFailure::Run(void*)
+ T CFriendsDialog::CCallback_OnLogonSuccess::Run(void*)
+ T CFriendsDialog::CCallback_OnOpenChatDialog::Run(void*)
+ T CFriendsDialog::CCallback_OnParentalLockChanged::Run(void*)
+ T CFriendsDialog::CCallback_OnPersonaStateChange::Run(void*)
+ T CFriendsDialog::CCallback_OnPrimaryChatDestinationSet::Run(void*)
+ T CFriendsDialog::CCallback_OnRichInviteReceived::Run(void*)
+ T CFriendsDialog::CCallback_OnTableGameWatch::Run(void*)
+ T CFriendsDialog::CCallback_OnUIMenuChange::Run(void*)
+ T CFriendsDialog::CCallback_OnUserAchievement::Run(void*)
+ T CFriendsDialog::CCallback_OnUserRequestingFriendship::Run(void*)
+ T CFriendsDialog::CCallback_OnViewerApprovalResult::Run(void*)
+ T CFriendsDialog::CCallback_OnViewerNeedsApproval::Run(void*)
+ T CFriendsDialog::CCallback_OnVoiceCallInitiated::Run(void*)
+ T CFriendsDialog::CCallback_TradeInviteReceived::Run(void*)
  T CFriendsDialog::CFriendsDialog()
  T CFriendsDialog::ChainToAnimationMap()
  T CFriendsDialog::ChainToMap()
@@ -6160,10 +5980,8 @@
  T CFriendsListSectionHeader::BMatchesNormalizedFilter(char const*)
  T CFriendsListSectionHeader::BShowCollapser()
  T CFriendsListSectionHeader::BuildInfoText(int, int, int)
- T CFriendsListSectionHeader::CCallbackOnClanInfoChanged::Run(void*)
- T CFriendsListSectionHeader::CCallbackOnClanInfoChanged::Run(void*, bool, unsigned long long)
- T CFriendsListSectionHeader::CCallbackOnPersonaStateChange::Run(void*)
- T CFriendsListSectionHeader::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
+ T CFriendsListSectionHeader::CCallback_OnClanInfoChanged::Run(void*)
+ T CFriendsListSectionHeader::CCallback_OnPersonaStateChange::Run(void*)
  T CFriendsListSectionHeader::CFriendsListSectionHeader(vgui::SectionedListPanel*, char const*, int, CSteamID const&, char const*, bool)
  T CFriendsListSectionHeader::CFriendsListSectionHeader(vgui::SectionedListPanel*, char const*, int, char const*, bool, short)
  T CFriendsListSectionHeader::ChainToAnimationMap()
@@ -6193,24 +6011,15 @@
  T CFriendsListSectionHeader::~CFriendsListSectionHeader()
  T CFriendsListSubPanel::AddFriendToList(CSteamID const&, int, CSteamID const&)
  T CFriendsListSubPanel::ApplyUserConfigSettings(KeyValues*)
- T CFriendsListSubPanel::CCallbackOnChatMemberStateChange::Run(void*)
- T CFriendsListSubPanel::CCallbackOnChatMemberStateChange::Run(void*, bool, unsigned long long)
- T CFriendsListSubPanel::CCallbackOnClanInfoChanged::Run(void*)
- T CFriendsListSubPanel::CCallbackOnClanInfoChanged::Run(void*, bool, unsigned long long)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupCreated::Run(void*)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupCreated::Run(void*, bool, unsigned long long)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupDeleted::Run(void*)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupDeleted::Run(void*, bool, unsigned long long)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupMemberAdded::Run(void*)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupMemberAdded::Run(void*, bool, unsigned long long)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupMemberRemoved::Run(void*)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupMemberRemoved::Run(void*, bool, unsigned long long)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupRenamed::Run(void*)
- T CFriendsListSubPanel::CCallbackOnFriendsGroupRenamed::Run(void*, bool, unsigned long long)
- T CFriendsListSubPanel::CCallbackOnLoggedOff::Run(void*)
- T CFriendsListSubPanel::CCallbackOnLoggedOff::Run(void*, bool, unsigned long long)
- T CFriendsListSubPanel::CCallbackOnPersonaStateChange::Run(void*)
- T CFriendsListSubPanel::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
+ T CFriendsListSubPanel::CCallback_OnChatMemberStateChange::Run(void*)
+ T CFriendsListSubPanel::CCallback_OnClanInfoChanged::Run(void*)
+ T CFriendsListSubPanel::CCallback_OnFriendsGroupCreated::Run(void*)
+ T CFriendsListSubPanel::CCallback_OnFriendsGroupDeleted::Run(void*)
+ T CFriendsListSubPanel::CCallback_OnFriendsGroupMemberAdded::Run(void*)
+ T CFriendsListSubPanel::CCallback_OnFriendsGroupMemberRemoved::Run(void*)
+ T CFriendsListSubPanel::CCallback_OnFriendsGroupRenamed::Run(void*)
+ T CFriendsListSubPanel::CCallback_OnLoggedOff::Run(void*)
+ T CFriendsListSubPanel::CCallback_OnPersonaStateChange::Run(void*)
  T CFriendsListSubPanel::CFriendsListSubPanel(int, vgui::Panel*, char const*, IFriendPanelContainer*)
  T CFriendsListSubPanel::ChainToAnimationMap()
  T CFriendsListSubPanel::ChainToMap()
@@ -7698,8 +7507,7 @@
  T CParentalCache::BIsFeatureInBlockList(EParentalFeature)
  T CParentalCache::BIsParentalLockEnabled()
  T CParentalCache::BIsParentalLockLocked()
- T CParentalCache::CCallbackOnParentalLockChangeBegin::Run(void*)
- T CParentalCache::CCallbackOnParentalLockChangeBegin::Run(void*, bool, unsigned long long)
+ T CParentalCache::CCallback_OnParentalLockChangeBegin::Run(void*)
  T CParentalCache::CParentalCache()
  T CParentalCache::OnParentalLockChangeBegin(ParentalLockChangeBegin_t*)
  T CParentalCache::~CParentalCache()
@@ -7747,8 +7555,7 @@
  T CPlayersSubCurrentPlayers::~CPlayersSubCurrentPlayers()
  T CPlayersSubRecentPlayers::AddFriend()
  T CPlayersSubRecentPlayers::AddPlayerToList(CSteamID const&)
- T CPlayersSubRecentPlayers::CCallbackOnPersonaStateChange::Run(void*)
- T CPlayersSubRecentPlayers::CCallbackOnPersonaStateChange::Run(void*, bool, unsigned long long)
+ T CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange::Run(void*)
  T CPlayersSubRecentPlayers::CPlayersSubRecentPlayers()
  T CPlayersSubRecentPlayers::ChainToAnimationMap()
  T CPlayersSubRecentPlayers::ChainToMap()
@@ -7864,14 +7671,10 @@
  T CSetNicknameDialog::PanelMessageFunc_OnApply::InitVar()
  T CSetNicknameDialog::PanelMessageFunc_OnCancel::InitVar()
  T CSetNicknameDialog::~CSetNicknameDialog()
- T CSharedLibraryNotifications::CCallbackOnAuthorizeDevice::Run(void*)
- T CSharedLibraryNotifications::CCallbackOnAuthorizeDevice::Run(void*, bool, unsigned long long)
- T CSharedLibraryNotifications::CCallbackOnDeauthorizeDevice::Run(void*)
- T CSharedLibraryNotifications::CCallbackOnDeauthorizeDevice::Run(void*, bool, unsigned long long)
- T CSharedLibraryNotifications::CCallbackOnSharedLibraryChanged::Run(void*)
- T CSharedLibraryNotifications::CCallbackOnSharedLibraryChanged::Run(void*, bool, unsigned long long)
- T CSharedLibraryNotifications::CCallbackOnStopPlaying::Run(void*)
- T CSharedLibraryNotifications::CCallbackOnStopPlaying::Run(void*, bool, unsigned long long)
+ T CSharedLibraryNotifications::CCallback_OnAuthorizeDevice::Run(void*)
+ T CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice::Run(void*)
+ T CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged::Run(void*)
+ T CSharedLibraryNotifications::CCallback_OnStopPlaying::Run(void*)
  T CSharedLibraryNotifications::CSharedLibraryNotifications()
  T CSharedLibraryNotifications::OnAuthorizeDevice(AuthorizeDeviceResult_t*)
  T CSharedLibraryNotifications::OnDeauthorizeDevice(DeauthorizeDeviceResult_t*)
@@ -7885,8 +7688,7 @@
  T CSteamFriends_Test::GetSteamID(int)
  T CSteamFriends_Test::Init()
  T CSteamID::SetFromStringStrict(char const*, EUniverse)
- T CSteamTableChallengeOptions::CCallbackOnTableGameStarted::Run(void*)
- T CSteamTableChallengeOptions::CCallbackOnTableGameStarted::Run(void*, bool, unsigned long long)
+ T CSteamTableChallengeOptions::CCallback_OnTableGameStarted::Run(void*)
  T CSteamTableChallengeOptions::CSteamTableChallengeOptions(vgui::Panel*, char const*)
  T CSteamTableChallengeOptions::ChainToAnimationMap()
  T CSteamTableChallengeOptions::ChainToMap()
@@ -7927,10 +7729,8 @@
  T CTextureIdProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CTradeInviteBar::ActiveInviteRecv(CSteamID, unsigned int)
  T CTradeInviteBar::ActiveInviteSend(CSteamID)
- T CTradeInviteBar::CCallbackOnTradeInviteCanceled::Run(void*)
- T CTradeInviteBar::CCallbackOnTradeInviteCanceled::Run(void*, bool, unsigned long long)
- T CTradeInviteBar::CCallbackOnTradeStartSession::Run(void*)
- T CTradeInviteBar::CCallbackOnTradeStartSession::Run(void*, bool, unsigned long long)
+ T CTradeInviteBar::CCallback_OnTradeInviteCanceled::Run(void*)
+ T CTradeInviteBar::CCallback_OnTradeStartSession::Run(void*)
  T CTradeInviteBar::CTradeInviteBar(CChatRoomDlg*, char const*)
  T CTradeInviteBar::ChainToAnimationMap()
  T CTradeInviteBar::ChainToMap()
@@ -8845,10 +8645,8 @@
  T CVariableBitStringBase::Resize(int)
  T CVariableBitStringBase::Validate(CValidator&, char const*)
  T CVoiceBar::ApplySchemeSettings(vgui::IScheme*)
- T CVoiceBar::CCallbackOnGameUsingVoice::Run(void*)
- T CVoiceBar::CCallbackOnGameUsingVoice::Run(void*, bool, unsigned long long)
- T CVoiceBar::CCallbackOnVoiceEnabledStateChanged::Run(void*)
- T CVoiceBar::CCallbackOnVoiceEnabledStateChanged::Run(void*, bool, unsigned long long)
+ T CVoiceBar::CCallback_OnGameUsingVoice::Run(void*)
+ T CVoiceBar::CCallback_OnVoiceEnabledStateChanged::Run(void*)
  T CVoiceBar::CVoiceBar(vgui::Panel*, char const*, CChatRoomDlg*)
  T CVoiceBar::ChainToAnimationMap()
  T CVoiceBar::ChainToMap()

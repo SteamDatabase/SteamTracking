@@ -9,7 +9,15 @@
 		<Button id="VDFDump" onactivate="DumpVDF()" />
 		<Panel id="BindingsContainer" tabindex="auto" selectionpos="auto">
 			<Panel id="TopHalfContainer">
-				<Panel class="Background" id="BackgroundController" />
+				<Panel class="Background" id="BackgroundController" >
+						<Panel id="HelperDescription" >
+									<Label id="HelperDescriptionHeader" text="#SettingsController_HelperDescriptionHeader" />
+									<Label id="HelperDescriptionText" text="#SettingsController_HelperDescriptionText"/>
+						</Panel>
+						<Panel id="HelperImageBG" >
+								<Image id="HelperImage" class="HelperImage" src="file://{images}/library/controller/cropped_controller_config_controller_i_blank.png" />
+						</Panel>
+				</Panel>
 				<Panel class="Background" id="BackgroundLines" />
 				<Panel class="BindingSlotStrip" id="Left">
 					<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetInputFocus( RightTrigger );" />

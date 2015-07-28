@@ -24,7 +24,7 @@ MainMenu
 
 	animation-name: fade-in;
 	animation-duration: 1.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }
@@ -87,7 +87,7 @@ MainMenu.SlideAwayToRight
 	transition-timing-function: ease-out;
 }
 
-.BehindDaisyWheel #BodyWrapper
+.BehindTextInputHandler #BodyWrapper
 {
 	desaturation: 0.0;
 	opacity: 1.0;
@@ -111,7 +111,7 @@ MainMenu.SlideAwayToRight
 	wash-color: #00000066;
 }
 
-.FriendsInputTextEntry.BehindDaisyWheel #BodyWrapper
+.FriendsInputTextEntry.BehindTextInputHandler #BodyWrapper
 {
 	desaturation: 0.0;
 	opacity: 1.0;
@@ -146,7 +146,7 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 
 	transition-property: opacity-mask !immediate;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #BodyHittestBlocker
@@ -170,7 +170,7 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 	transition-property: opacity, transform !immediate;
 	transition-delay: 0.1s, 0.0s;
 	transition-duration: 0.35s, 0.35s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .MenuRowUnfocused.HomeGlow
@@ -180,7 +180,7 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 	transition-property: opacity, transform !immediate;
 	transition-delay: 0.08s;
 	transition-duration: 0.1s, 0.35s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 MainMenu.StackDepth2 .HomeGlow
@@ -359,7 +359,7 @@ MainMenu.StackDepth3 #TopRow
 	animation-name: beta-image-wash-pulse; 
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -440,6 +440,7 @@ Button:hover .ShortDesc
 	transition-property: opacity, max-width;
 	transition-delay: 0.08s;
 	transition-duration: 0.3s;
+	transition-timing-function: ease-in;
 }
 
 .LongDescSm
@@ -462,7 +463,7 @@ Button:hover .ShortDesc
 	animation-name: image-wash-pulse;
 	animation-duration: 1.7s;
 	animation-delay: 0.08s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -475,7 +476,7 @@ Button:hover .ShortDesc
 	animation-name: image-wash-pulse;
 	animation-duration: 3.4s;
 	animation-delay: 0.08s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -488,7 +489,7 @@ Button:hover .ShortDesc
 	animation-name: image-wash-pulse;
 	animation-duration: 3.4s;
 	animation-delay: 0.08s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -536,7 +537,7 @@ Button:hover .ShortDesc
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.3s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -552,7 +553,7 @@ Button:hover .ShortDesc
 
 	transition-duration: 0.3s;
 	transition-property: wash-color;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .TopRowBase Button:hover Image, InboxMenu Button:hover Image, ParentalButton:hover Image
@@ -570,7 +571,7 @@ Button:hover .ShortDesc
 	animation-name: image-wash-pulse;
 	animation-duration: 1.7s;
 	animation-delay: 0.08s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -878,6 +879,13 @@ Button:hover .ShortDesc
 	padding: 6px;
 }
 
+/*
+// this hides the steam controller battery status UI when in VR mode*/ 
+.VR #BatteryPanel
+{
+	visibility: collapse;
+}
+
 #Exit
 {
 	flow-children: right;
@@ -920,7 +928,7 @@ Button:hover .ShortDesc
 	transform-origin: 0% 0% parent-relative;
 	transition-property: blur, desaturation, opacity, transform, opacity;
 	transition-duration: 0.35s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #TopRowContents:descendantfocus
@@ -1038,16 +1046,6 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	transform: translatez( -100px );
 }
 
-.ButtonLeft:hover
-{
-	transform: translatex( 5px ) translatez( -100px );
-}
-
-.ButtonRight:hover
-{
-	transform: translatex( -5px ) translatez( -100px );
-}
-
 .Button:parentdisabled:hover
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
@@ -1071,7 +1069,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	animation-name: main-button-glow-movement, quick-blur;
 	animation-duration: 1.7s, 0.45s;
 	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
+	animation-timing-function: bigpicture-ease-in-out, ease-out;
 	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 
@@ -1106,9 +1104,29 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	transform: translatex( 42px ) translatez( 0px );
 }
 
+.ButtonLeft:hover
+{
+	transform: translatex( 5px ) translatez( -100px );
+}
+
 .ButtonLeft:focus:hover
 {
 	transform: translateX( 48px ) translateZ( 25px );
+}
+
+.ButtonLeftCenter:focus
+{
+	transform: translatex( 21px ) translatez( 0px );
+}
+
+.ButtonLeftCenter:hover
+{
+	transform: translatex( 2px ) translatez( -100px );
+}
+
+.ButtonLeftCenter:focus:hover
+{
+	transform: translateX( 24px ) translateZ( 25px );
 }
 
 .ButtonRight:focus
@@ -1116,10 +1134,31 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	transform: translatex( -42px ) translatez( 0px );
 }
 
+.ButtonRight:hover
+{
+	transform: translatex( -5px ) translatez( -100px );
+}
+
 .ButtonRight:focus:hover
 {
 	transform: translateX( -48px ) translateZ( 25px );
 }
+
+.ButtonRightCenter:focus
+{
+	transform: translatex( -21px ) translatez( 0px );
+}
+
+.ButtonRightCenter:hover
+{
+	transform: translatex( -2px ) translatez( -100px );
+}
+
+.ButtonRightCenter:focus:hover
+{
+	transform: translateX( -24px ) translateZ( 25px );
+}
+
 
 .ButtonLabel
 {
@@ -1272,7 +1311,7 @@ InboxMenu.Destructing
 	animation-name: unlocked-image-wash-pulse;
 	animation-duration: 1.7s;
 	animation-delay: 0.3s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }

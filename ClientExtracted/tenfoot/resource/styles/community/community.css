@@ -48,7 +48,7 @@ CommunityPanel
 	transition-property: transform, position, opacity;
 	transition-duration: mediumduration;
 	transition-delay: 0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #CommunityWrapper:descendantfocus .CommunityVisible
@@ -79,7 +79,7 @@ CommunityPanel #ContentRow
 	transition-property: transform, position, opacity, pre-transform-scale2d, opacity-mask;
 	transition-duration: mediumduration;
 	transition-delay: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .StackDepth1 #CommunityMenu #CommunityContent
@@ -133,7 +133,7 @@ CommunityPanel .CommunityBackground
 	animation-name: background-visible;
 	animation-duration: mediumduration;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
@@ -341,7 +341,7 @@ CommunityPanel
 
 	transition-property: pre-transform-scale2d, transform;
 	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #CommunityAppHubPopup LoadingThrobber
@@ -384,6 +384,34 @@ CommunityPanel
 	width: 100%;
 	background-color: transparent;
 	y: 70px;
+}
+
+
+#WebFatalError
+{
+	height: 100%;
+	width: 100%;
+	padding-bottom: 50px;
+}
+
+#WebFatalError #ErrorMessage
+{
+	height: 100%;
+	width: 100%;
+}
+
+#WebFatalError #ErrorMessage Label
+{
+	max-width: 75%;
+	height: 20%;
+
+	vertical-align: center;
+	horizontal-align: center;
+
+	color: tcstatictext;
+	text-align: center;
+
+	font-size: largefontsize;
 }
 
 

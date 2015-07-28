@@ -35,7 +35,7 @@ ParentalUnlockPopup
 
 	transition-property: transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -69,7 +69,7 @@ ParentalUnlockPopup
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -77,7 +77,7 @@ ParentalUnlockPopup
 
 
 
-.DaisyWheelVisible .ParentalUnlockPopupBody
+.BehindTextInputHandler .ParentalUnlockPopupBody
 {
 	transform: translatex( 400px );
 }
@@ -149,7 +149,7 @@ TextEntry:disabled,.Button:disabled
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -181,7 +181,7 @@ ParentalReplacementPanel Label
 	width: 100%;
 	transition-duration: shortduration;
 	transition-property: transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transform: translatex( 22px );
 	font-weight: light;
 }
@@ -196,7 +196,7 @@ ParentalReplacementPanel Image
 	opacity: 0.3;
 	transition-property: opacity;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 ParentalReplacementPanel Button
@@ -240,7 +240,7 @@ ParentalReplacementPanel:descendantfocus Image
 {
 	transition-property: wash-color !immediate;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	opacity: 0.5;
 }
 
@@ -263,7 +263,7 @@ ParentalReplacementPanel Button:focus
 	animation-name: links-and-more-button-focus; 
 	animation-duration: longduration;
 	animation-delay: mediumduration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -274,7 +274,7 @@ ParentalReplacementPanel Button:focus
 	
 	transition-property: opacity, opacity-mask !immediate;
 	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -326,7 +326,7 @@ ParentalReplacementPanel Button:focus
 
 	transition-property: color, opacity;
 	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -526,7 +526,7 @@ ParentalAppOverlayImage
 
 	transition-property: box-shadow, opacity, desaturation;
 	transition-duration: shortmedduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -600,7 +600,7 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 
 	transition-property: transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .ParentalRecoveryEmailEntry,
@@ -628,9 +628,9 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 	width: 450px;
 }
 
-.DaisyWheelVisible .ParentalSetPINDialog,
-.DaisyWheelVisible .ParentalSetEnableCodeDialog,
-.DaisyWheelVisible .ParentalSetRecoveryDialog
+.BehindTextInputHandler .ParentalSetPINDialog,
+.BehindTextInputHandler .ParentalSetEnableCodeDialog,
+.BehindTextInputHandler .ParentalSetRecoveryDialog
 {
 	transform: translatex( 400px );
 }
@@ -873,7 +873,7 @@ ParentalSetSuccessChild .email
 
 	transition-property: transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .ParentalDisablePopupBody #ParentalDisableButtonLabel

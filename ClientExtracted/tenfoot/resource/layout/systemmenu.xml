@@ -14,9 +14,9 @@
 					<Label id="Clock" class="ClockLabel" text="#SystemMenu_Clock" />
 					<Label id="ClockSuffix" class="ClockLabel" text="#SystemMenu_ClockSuffix" />
 					<Panel id="SettingsWrapper" class="ButtonWrapper" tabindex="5" selectionpos="1,0" >
-						<Button id="Settings" class="Button TopButton"   onactivate="SystemMenuNavigate( mainmenu ); ShowSettings(); ">
+						<ParentalButton id="Settings" class="Button TopButton"   onactivate="SystemMenuNavigate( mainmenu ); ShowSettings(); ">
 							<Image src="file://{images}/settings.png" />
-						</Button>
+						</ParentalButton>
 						<Label class="LongDesc" text="#MainMenu_Settings" />
 					</Panel>
 					<Panel class="ButtonWrapper" tabindex="6" selectionpos="2,0" >

@@ -46,7 +46,7 @@
 
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #ThrobberRow
@@ -89,7 +89,7 @@
 	
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .Working #Throbber
@@ -103,7 +103,7 @@
 
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .Working #MsgBoxButtonArea
@@ -173,7 +173,7 @@ ToggleButton:focus
 	animation-name: main-button-glow-movement, quick-blur; 
 	animation-duration: 1.7s, 0.45s;
 	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
+	animation-timing-function: bigpicture-ease-in-out, ease-out;
 	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }

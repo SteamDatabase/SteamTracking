@@ -10,7 +10,7 @@ StoreTextDialog
 
 	animation-name: msg-box-appear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -30,7 +30,7 @@ StoreTextDialog.Destructing
 
 	animation-name: msg-box-disappear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 

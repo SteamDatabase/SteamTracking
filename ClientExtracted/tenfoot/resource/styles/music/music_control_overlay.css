@@ -23,7 +23,7 @@ MusicControlOverlay
 
 	transition-property: transform, position, border, background-color, opacity, pre-transform-scale2d, box-shadow !immediate;
 	transition-duration: shortduration !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	
 	pre-transform-scale2d: 1.0;
@@ -52,7 +52,7 @@ MusicControlOverlay
 
 	transition-property: transform, position, border, background-color, opacity, pre-transform-scale2d, box-shadow !immediate;
 	transition-duration: shortduration !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	
 	pre-transform-scale2d: 1.0;
@@ -60,7 +60,7 @@ MusicControlOverlay
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.3s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -88,7 +88,7 @@ MusicControlOverlay
 	width: 100%;
 	transition-duration: shortduration;
 	transition-property: transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transform: translatex( 10px );
 	font-weight: light;
 	opacity: 1.0;

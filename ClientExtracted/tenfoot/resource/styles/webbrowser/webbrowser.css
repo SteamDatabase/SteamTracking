@@ -12,7 +12,7 @@ WebBrowser
 	opacity: 1.0;
 	transition-property: opacity, transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 WebBrowser.Hidden
@@ -40,7 +40,7 @@ HTMLVerticalScrollBar, VerticalScrollBar
 
 	transition-property: transform;
 	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 HTMLHorizontalScrollBar, HorizontalScrollBar 
@@ -64,7 +64,7 @@ HTMLVerticalScrollBar .ScrollThumb, VerticalScrollBar .ScrollThumb
 	background-color: #ffffffff;
 	transition-property: position;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 HTMLHorizontalScrollBar .ScrollThumb, HorizontalScrollBar .ScrollThumb
@@ -72,7 +72,7 @@ HTMLHorizontalScrollBar .ScrollThumb, HorizontalScrollBar .ScrollThumb
 	background-color: #ffffffff;
 	transition-property: position;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 HTMLHorizontalScrollBar, HTMLVerticalScrollBar, HorizontalScrollBar, VerticalScrollBar
@@ -115,7 +115,7 @@ WebController.UrlBarTextEntry .Html
 
 	transition-property: opacity, transform, position;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -135,6 +135,11 @@ WebController.UrlBarTextEntry .Html
 	opacity-mask: url( "file://{images}/browser/browser_mask.png" );
 	color: gradient( linear, 0% 0%, 0% 100%, from( #68686880 ), to( #686868ff ) );
 	opacity: 0.4;
+}
+
+.ContextMenuVisible .TopBar
+{
+	blur: gaussian( 1.5 );	
 }
 
 .HTML.HTMLContentLoaded:descendantfocus
@@ -193,7 +198,7 @@ SlideShow
 	horizontal-align: center;
 	transition-property: opacity, wash-color;
 	transition-duration: 1.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	visibility: collapse;
 	wash-color: reticule_color;
 }
@@ -240,6 +245,10 @@ SlideShow
 	padding: 5px;
 	vertical-align: center;
 	box-shadow: fill #00000033 -2px -2px 4px 4px;
+
+	transition-property: opacity, transform, blur;
+	transition-duration: 0.25s;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .FullScreen .TopBar
@@ -395,7 +404,7 @@ SlideShow
 	animation-name: control-button-glow-movement; 
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -486,7 +495,7 @@ SlideShow
 {
 	animation-name: ThrobFavoriteAdded;
 	animation-duration: 1.5s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }
@@ -607,7 +616,7 @@ SlideShow
 	opacity: 0.0;
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .MousePanning #MousePanningImage
@@ -650,7 +659,7 @@ SlideShow
 
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SpinnerMovie.ShowControllerLoadingSpinner #ReticuleLoadingContainer, .SpinnerMovie.ShowMouseLoadingSpinner #Spinner

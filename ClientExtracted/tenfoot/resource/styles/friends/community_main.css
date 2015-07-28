@@ -15,7 +15,7 @@ CommunityMainPanel
 	transition-property: transform, position, opacity;
 	transition-duration: 0.3s;
 	transition-delay: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 	opacity: 0.0;
@@ -48,7 +48,7 @@ CommunityMainPanel
 	transition-property: background-color, opacity, transform;
 	transition-duration: 0.3s, 0.3s, transition_duration_FriendsFriendListItemCommunity;
 	transition-delay: 0.3s, 0.3s, 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	background-color: #ff0000ff;
 
 	background-position: center center;
@@ -227,7 +227,7 @@ Carousel:hover .RightMouseScrollRegion:hover
 {
 	transition-property: transform, pre-transform-scale2d, position, opacity !immediate; 
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	
 	pre-transform-scale2d: 1.0;
@@ -247,7 +247,7 @@ Carousel:hover .RightMouseScrollRegion:hover
 
 	transition-property: pre-transform-scale2d, blur, opacity, desaturation, opacity-mask;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -264,7 +264,7 @@ Carousel:hover .RightMouseScrollRegion:hover
 
 	transition-property: pre-transform-scale2d, opacity-mask, blur, opacity, desaturation;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 }
@@ -296,7 +296,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 
 	transition-property: transform, pre-transform-scale2d, blur, opacity;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	transform: translateY( 260px ) translateZ( -150px );
 	opacity: 1.0;
@@ -311,7 +311,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	transform: translatey( 350px ) translateZ( 0px );
 	height: 600px;
@@ -333,7 +333,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 
 	transition-property: transform, pre-transform-scale2d, blur, opacity;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	opacity: 0.9;
 	desaturation: 0.2;
@@ -371,7 +371,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 
 	transition-property: pre-transform-scale2d, blur, opacity, desaturation;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -520,7 +520,7 @@ OverlayBasePanel .CommunityVisible:descendantfocus .CommunityFriendsCarousel
 
 	transition-property: opacity;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -629,7 +629,7 @@ OverlayBasePanel .CommunityFriendsCarousel:descendantfocus #CarouselTitleContain
 
 	transition-property: transform, position, blur, opacity !immediate;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	margin-top: 280px;
 	height: 200px;
@@ -660,7 +660,7 @@ OverlayBasePanel #CarouselTitleContainer
 
 	transition-property: opacity;
 	transition-duration: 0.0s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -696,7 +696,7 @@ FriendsFriendListItemCommunity
 {
 	transition-property: transform, opacity-mask, background-color, position, border, opacity, blur, pre-transform-scale2d;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 	flow-children: none;
@@ -720,7 +720,7 @@ FriendsFriendListItemCommunity
 {
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
 	transition-delay: 0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	pre-transform-scale2d: 1.0;
 }
@@ -742,7 +742,7 @@ FriendsFriendListItemCommunity .FriendsFriendListItemCommunityContainer
 
 	transition-property: pre-transform-scale2d, transform;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -756,7 +756,7 @@ FriendsFriendListItemCommunity .FriendsFriendListItemCommunityContainer
 
 	transition-property: border, transform, background-color, position, opacity, blur, pre-transform-scale2d, box-shadow;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 }
@@ -771,7 +771,7 @@ FriendsFriendListItemCommunity .FriendsFriendListItemCommunityContainer
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.2s;
 	animation-delay: transition_duration_FriendsFriendListItemCommunity;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
@@ -793,7 +793,7 @@ FriendsFriendListItemCommunity .FriendsFriendListItemCommunityContainer
 	max-height: 570px;
 	pre-transform-scale2d: 1.0;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 }
 
@@ -859,7 +859,7 @@ FriendsFriendListItemCommunity.Golden:descendantfocus  Label
 
 	transition-property: transform, background-color, position, border, opacity, blur, pre-transform-scale2d, box-shadow;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	pre-transform-scale2d: 0.9;
 
@@ -917,7 +917,7 @@ FriendsFriendListItemCommunity.Golden:descendantfocus  Label
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite; 
 
 	pre-transform-scale2d: 1.1;
@@ -956,7 +956,7 @@ FriendsFriendListItemCommunity.Golden:descendantfocus  Label
 
 	transition-property: opacity, transform, position, box-shadow, pre-transform-scale2d;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -989,7 +989,7 @@ FriendsFeedListItemCommunity.SteamidGroupIsOGG .FriendsFeedItemCommunityAvatar
 
 	transition-property: opacity, transform, position, box-shadow, pre-transform-scale2d, box-shadow;
 	transition-duration: 0.1s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1034,7 +1034,7 @@ FriendsFeedListItemCommunity:descendantfocus #FriendsFeedItemIcon
 	transition-property: opacity, transform, position, box-shadow, pre-transform-scale2d;
 	transition-duration: 0.2s;
 	//transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1065,7 +1065,7 @@ FriendsFriendListItemCommunity Label
 
 	transition-property: opacity;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1075,7 +1075,7 @@ FriendsFriendListItemCommunity Label
 
 	transition-property: opacity;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1102,7 +1102,7 @@ FriendsFriendListItemCommunity Label.FriendsFriendListItemCommunityPersonaName
 
 	transition-property: transform;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1143,7 +1143,7 @@ FriendsFeedListItemCommunity
 	transition-property: opacity, desaturation, transform, position, pre-transform-scale2d;
 	//transition-duration: transition_duration_FriendsFriendListItemCommunity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1158,7 +1158,7 @@ MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails FriendsFeedListItemCommunit
 	opacity: 0.7;
 	
 	transition-property: opacity, desaturation; 
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.5s;
 }
 
@@ -1178,7 +1178,7 @@ MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails FriendsFeedListItemCommunit
 	opacity: 1.0;
 	
 	transition-property: opacity, desaturation, transform; 
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.3s;
 }
 
@@ -1189,7 +1189,7 @@ MainMenu.BehindMessageBox.FriendsFeedItemMenuDetails #CommunityFriendsStrip
 	opacity: 0.7;
 	
 	transition-property: opacity, desaturation; 
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.5s;
 } 
 
@@ -1218,7 +1218,7 @@ FriendsFeedListItemCommunity Label.FeedItemDescription
 
 	transition-property: opacity, transform, position, pre-transform-scale2d;
 	transition-duration: 0.1s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1246,7 +1246,7 @@ FriendsFeedListItemCommunity Label.FeedItemTimestring
 
 	transition-property: opacity;
 	transition-duration: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1270,7 +1270,7 @@ FriendsFeedListItemCommunity .SecondaryItemFrame
 	opacity: 0.0;
 
 	transition-property: opacity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
 }
@@ -1331,7 +1331,7 @@ FriendsFeedListItemCommunity:descendantfocus .SecondaryItemFrame.Visible
 	transform: translatex( 0px );
 
 	transition-property: opacity, border, transform, background-color, position, opacity, blur, pre-transform-scale2d, box-shadow;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: transition_duration_FriendsFriendListItemCommunity;
 }
 
@@ -1361,7 +1361,7 @@ FriendsFeedListItemCommunity:descendantfocus .SecondaryItemFrame.Visible
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.2s;
 	animation-delay: transition_duration_FriendsFriendListItemCommunity;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1374,7 +1374,7 @@ FriendsFeedItemMenuDetails
 	
 	animation-name: friends-feeditemmenu-details-appear;
 	animation-duration: FeedDetailsMenuFadoutTime;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -1384,7 +1384,7 @@ FriendsFeedItemMenuDetails.Destructing
 
 	animation-name: friends-feeditemmenu-details-appear;
 	animation-duration: FeedDetailsMenuFadoutTime;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: reverse;
 }
@@ -1428,7 +1428,7 @@ FriendsFeedItemMenuDetails #FriendsFeedItemMenuDetailsActionsList
 	/*	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite; */
 }
 
@@ -1457,7 +1457,7 @@ FriendsFeedItemMenuActionButton
 
 	transition-property: background-color, color, border, box-shadow, pre-transform-scale2d;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 FriendsFeedItemMenuActionButton Label
@@ -1468,7 +1468,7 @@ FriendsFeedItemMenuActionButton Label
 	padding: 7px;
 	transition-property: color, position, transform;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	opacity-mask: url( "file://{images}/friends/friends_list_item_panel_labels_mask.tga" );
 	width: 100%;
 	white-space: nowrap;
@@ -1504,7 +1504,7 @@ FriendsFeedItemMenuActionButton:focus
 	animation-name: friends-feeditemmenu-details-button-focus;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 

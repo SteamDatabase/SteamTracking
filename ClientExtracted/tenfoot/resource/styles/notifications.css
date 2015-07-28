@@ -30,7 +30,7 @@
 
 	transition-property: opacity, transform, pre-transform-scale2d;
 	transition-duration: fade_in_out_time, fade_in_out_time, 0.23s;
-	transition-timing-function: ease-in-out, ease-in-out, ease-in;
+	transition-timing-function: bigpicture-ease-in-out, bigpicture-ease-in-out, ease-in;
 	
 }
 

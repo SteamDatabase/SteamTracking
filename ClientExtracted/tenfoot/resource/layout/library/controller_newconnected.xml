@@ -6,7 +6,7 @@
 
 	<Panel class="NotificationRoot">
 		<Panel class="NotificationFrame" />
-		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
+		<Image class="HintButton" src="file://{images}/settings/steam_controller_icon_64.png" />
 		<Label id="Line0" class="ControllerBindingNotificationMessageLine1" text="" />
     <Label id="Line1" class="ControllerBindingNotificationMessageLine1" text="#Controller_NewController_ConnectedToast1" />
     <Label id="Line2" class="ControllerBindingNotificationMessageLine2" text="#Controller_NewController_ConnectedToast2" />

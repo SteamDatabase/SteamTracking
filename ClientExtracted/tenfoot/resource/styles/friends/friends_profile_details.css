@@ -22,7 +22,7 @@ FriendsProfileDetails, ProfileOptions
 
        animation-name: friends-profile-details-appear;
        animation-duration: FriendsProfileDetailsMenuFadoutTime;
-       animation-timing-function: ease-in-out;
+       animation-timing-function: bigpicture-ease-in-out;
        animation-iteration-count: 1;
        
        opacity: 1.0;
@@ -45,7 +45,7 @@ ProfileOptions.Destructing
 
 	animation-name: friends-profile-details-disappear;
 	animation-duration: FriendsProfileDetailsMenuFadoutTime;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 
 }
@@ -102,7 +102,7 @@ ProfileOptions.Destructing
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 }
 
@@ -338,7 +338,7 @@ FriendsProfileDetailsActionButton,
 
 	transition-property: background-color, color, border, box-shadow, pre-transform-scale2d;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 FriendsProfileDetailsActionButton Label,
@@ -351,7 +351,7 @@ FriendsProfileDetailsActionButton Label,
 	padding: 7px;
 	transition-property: color, position, transform;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	text-overflow: clip;
 	white-space: nowrap;
 }
@@ -390,7 +390,7 @@ FriendsProfileDetailsActionButton:focus,
 	animation-name: friends-profile-details-button-focus;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 

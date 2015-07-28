@@ -74,7 +74,7 @@ TenfootMsgBox, .TenfootMsgBox
 
 	animation-name: msg-box-appear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -110,7 +110,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	border-radius: 0px;
 }
 
-.DaisyWheelVisible .MsgBoxBodyRegion
+.BehindTextInputHandler .MsgBoxBodyRegion
 {
 	transform: translateX( 470px );
 }
@@ -126,8 +126,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
     width: 65%;
 }
 
- EditAppLaunchOptions.DaisyWheelVisible .MsgBOxBodyRegion
-
+EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 {
 	transform: translateX( 460px );	
 }
@@ -194,7 +193,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	flow-children: right;
 	margin-left: 10px;
 	margin-right: 10px;
-	padding: 8px 8px 8px 8px;
+	padding: 0px 8px 0px 8px;
 	margin-top: 8px;
 	margin-bottom: 8px;
 	min-width: 100px;
@@ -207,7 +206,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 
 	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
 	transition-duration: 0.25s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #MsgBoxButtonsVertical Button
@@ -226,7 +225,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	padding-right: 5px;
 	transition-property: color;
 	transition-duration: 0.25s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #MsgBoxButtonsVertical Button Label
@@ -254,14 +253,14 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	animation-name: msgbox-button-focus;
 	animation-duration: 1.7s;
 	animation-delay: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.1s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 
 }
@@ -315,7 +314,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;	
 }

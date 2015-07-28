@@ -37,7 +37,7 @@ TenfootFooterPanel
 {
 	animation-name: footer-fade-in; 
 	animation-duration: 0.3s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }
@@ -135,7 +135,7 @@ TenfootFooterPanel
 {
 	animation-name: footer-fade-in; 
 	animation-duration: 0.3s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: reverse;
 }
@@ -159,7 +159,7 @@ TenfootFooterPanel
 
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	z-index: 20;
 }
 
@@ -475,7 +475,7 @@ TenfootFooterPanel
 	box-shadow: none;
 	
 	transition-property: color, background-color, border, box-shadow;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.3s;
 }
 

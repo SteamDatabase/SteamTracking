@@ -1,0 +1,151 @@
+//
+// Styles
+//<Label id="PressButtonToStart" class="PressButtonLabel StdLabelMedBlue" text="#SteamUI_AddController_HowToPair" />	          
+//			
+
+AddController
+{
+	width: 860px;
+	height: 500px;
+	padding: 50px 40px 40px 40px;
+	background-color: message_box_bg;
+	box-shadow: fill #00000044 -4px -4px 8px 8px;
+	transform: translateX( 0px );
+	transition-property: transform;
+	transition-duration: 0.3s;
+
+	vertical-align: center;
+	horizontal-align: center;
+	flow-children: down;
+	border-radius: 0px;
+}
+
+.ControllerPanelContainer
+{
+	width: 100%;
+	height: 60%;
+	
+	align: center center;
+	
+	visibility: visible;
+	
+	padding-top: 10px;
+}
+
+#ControllerPairingHelperPanel
+{
+	align: center top;
+	height: 100%;
+	width: 80%;
+	padding-left: 220px;
+	
+	flow-children: down;
+}
+
+#ControllerPairingHelperTimerBG
+{
+	align: center top;
+	height: 20%;
+	width: 100%;
+	
+	visibility: collapse;
+	margin-top: 20px;
+	
+	background-color: linkbright;
+}
+
+.ControllerPairingHelperTimerVisible
+{
+	visibility: visible;
+}
+
+#ControllerPairingHelperTimerFG
+{
+	align: center center;
+	height: 100%;
+	width: 100%;
+	
+	visibility: visible;
+	margin: 5px 5px 5px 5px;
+	
+	background-color: #12203d;
+}
+
+#ControllerPairingHelperTimerProgressBar
+{
+	align: left center;
+	height: 100%;
+	width: 0%;
+	
+	visibility: visible;
+
+	background-color: linkbright;
+}
+
+#ControllerImagePanel
+{
+	opacity: 1.0;
+ 	align: left top;
+ 	
+ 	width: 35%;
+ 	height: 85%;
+ 	 	
+ 	visibility: visible;
+}
+
+.AddControllerHowTo
+{
+	align: center top;
+	width: 100%;
+	
+	font-size: 28px;
+	padding-top: 10px;
+//	padding-left: 250px;
+	font-family: platformfont;
+	color: white;
+}
+
+.ControllerImage
+{
+	opacity: 1.0;
+ 	align: center center;
+ 	
+ 	visibility: visible;
+}
+
+.ControllerImageBlink
+{
+	align: center center;
+	opacity: 0.0;
+	
+	animation-name: pairing-controller-anim;
+	animation-duration: 4.0s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	
+	visibility: visible;
+}
+
+@keyframes 'pairing-controller-anim'
+{
+	0%
+	{
+		opacity: 0.0;
+	}
+	
+	15%
+	{
+		opacity: 1.0;
+	}
+	
+	95%
+	{
+		opacity: 1.0;
+	}
+	
+	100%
+	{
+		opacity: 0.0;
+	}
+}

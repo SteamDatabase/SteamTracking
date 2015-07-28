@@ -19,7 +19,7 @@
 	transform-origin: 0% 0% parent-relative;
 	transition-duration: 0.3s;
 	transition-property: transform, opacity, opacity-mask, position;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .StoreBlocked #SystemIMBackground
@@ -36,7 +36,7 @@
 {
 	transition-property: transform, position, opacity !immediate;
 	transition-duration: 0.3s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 	position: -37.0px 0.0px -500.0px;
 	font-family: platformfont;
@@ -88,7 +88,7 @@
 
 	transition-property: transform, opacity !immediate; 
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	transform-origin: 0% 0% parent-relative;
 	transform: translateY( -2800px ) translateZ( -420px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
@@ -97,7 +97,7 @@
 
 	animation-name: message-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -108,7 +108,7 @@
 
 	transition-property: transform, opacity !immediate; 
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	transform-origin: 0% 0% parent-relative;
 	transform: translateX( -1000px ) translateY( 200px ) translateZ( 180px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
@@ -117,7 +117,7 @@
 
 	animation-name: message-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -128,7 +128,7 @@
 
 	transition-property: transform, opacity !immediate; 
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	transform-origin: 0% 0% parent-relative;
 	transform: translateX( 1000px ) translateY( -200px ) translateZ( -180px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
@@ -137,7 +137,7 @@
 
 	animation-name: message-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -152,7 +152,7 @@
 
 	animation-name: message-perspective;
 	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -239,10 +239,10 @@
 	transition-property: transform, position, opacity, blur, box-shadow, wash-color, desaturation, opacity-mask !immediate;
 	transition-duration: 0.3s;
 	transition-delay: 0.1s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }
@@ -297,7 +297,7 @@
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.1s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 }
 
@@ -325,7 +325,7 @@
 	opacity: 0.0;
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SystemIMImage:focus #SystemIMDisclaimer
@@ -351,7 +351,7 @@
 
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 	background-image: url( "file://{images}/store/shadow.png" );
@@ -381,7 +381,7 @@
 
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	background-size: contain;
 	background-repeat: no-repeat;
 
@@ -491,11 +491,11 @@
 	transition-property: opacity, blur, box-shadow, wash-color, desaturation !immediate;
 	transition-duration: 0.3s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	animation-duration: 0.3s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }

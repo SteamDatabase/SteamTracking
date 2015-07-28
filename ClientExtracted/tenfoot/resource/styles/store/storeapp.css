@@ -104,7 +104,7 @@ StoreApp:descendantfocus
 
 	animation-name: bg-screenshot-ambient;
 	animation-duration: 10s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 }
@@ -134,7 +134,7 @@ StoreApp:descendantfocus
 	10%	
 	{
 		transform: translatez( 2px );
-		animation-timing-function: ease-in-out;
+		animation-timing-function: bigpicture-ease-in-out;
 	}
 
 	88%
@@ -206,7 +206,7 @@ LoadingThrobber
 
 	animation-name: loading-throbber-appear;
 	animation-duration: 1.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 }
 
 LoadingThrobber .Bar
@@ -327,7 +327,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 
 	border-radius: 5px;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0.0s;
 	transition-property: box-shadow, color;
 
@@ -366,7 +366,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 
 	transition-property: position, pre-transform-scale2d, desaturation, wash-color, opacity, opacity-mask;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 }
@@ -413,7 +413,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 
 	transition-property: position, pre-transform-scale2d, desaturation, border, wash-color, blur, transform;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -441,7 +441,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -473,7 +473,7 @@ StoreApp.Loaded #Loaded, StorePackage.Loaded #Loaded, StoreAppPurchaseOptions.Lo
 
 	transition-property: position, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -511,7 +511,7 @@ Button
 	border-color: none;
 
 	transition-property: border, background-color, color, box-shadow, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 Button Label
@@ -557,7 +557,7 @@ Button:focus
 	animation-name: links-and-more-button-focus;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -589,7 +589,7 @@ Button:focus
 
 	transition-property: position, pre-transform-scale2d, transform, border;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -602,7 +602,7 @@ Button:focus
 
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -625,7 +625,7 @@ Button:focus
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .AppSection:descendantfocus .HeaderLabel
@@ -695,7 +695,7 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 
 	transition-property: position, transform;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -741,11 +741,11 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 	overflow: clip clip;
 	flow-children: down;
 	pre-transform-scale2d: 1.4875, 2.740553;
-	transform: translate3d( 114px, 444px, 0px );
+	transform: translate3d( 114px, 655px, 0px );
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -762,7 +762,7 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 
 	transition-property: transform, opacity, desaturation, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .AppSection:descendantfocus #HeaderImage
@@ -783,7 +783,7 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 	transform: translate3d( -16px, 84px, 0px );
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -797,7 +797,7 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 
 	transition-property: opacity;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .StoreAppPurchaseSection .AppSectionLargeBody
@@ -811,7 +811,7 @@ StoreAppPurchaseSection, StorePackagePurchaseSection
 	opacity: 0.0;
 	transition-property: opacity, transform;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -931,7 +931,7 @@ StorePrice
 	opacity: 1.0;
 	transition-property: opacity, transform;
 	transition-duration: 0.1s, AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -963,7 +963,7 @@ StorePackagePurchaseSection:descendantfocus #PriceOverview
 	
 	transition-property: opacity;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1017,7 +1017,7 @@ StorePackagePurchaseSection:descendantfocus #PriceOverview
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1038,7 +1038,7 @@ StorePackagePurchaseSection:descendantfocus #PriceOverview
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1050,7 +1050,7 @@ StorePackagePurchaseSection:descendantfocus #PriceOverview
 
 	transition-property: opacity;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .StoreAppDescriptionSection .AppSectionLargeBody
@@ -1064,7 +1064,7 @@ StorePackagePurchaseSection:descendantfocus #PriceOverview
 	opacity: 0.0;
 	transition-property: opacity, transform;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1144,7 +1144,7 @@ h1, h2
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1166,7 +1166,7 @@ h1, h2
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1178,7 +1178,7 @@ h1, h2
 
 	transition-property: opacity;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .StoreAppNoteSection .AppSectionLargeBody
@@ -1193,7 +1193,7 @@ h1, h2
 	opacity: 0.0;
 	transition-property: opacity, transform;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1439,7 +1439,7 @@ Label.NoteLabel
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1460,7 +1460,7 @@ Label.NoteLabel
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1473,7 +1473,7 @@ Label.NoteLabel
 	width: 100%;
 	transition-property: opacity;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .StoreAppDetailsSection .AppSectionLargeBody
@@ -1487,7 +1487,7 @@ Label.NoteLabel
 	opacity: 0.0;
 	transition-property: opacity, transform;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1635,7 +1635,7 @@ Label.NoteLabel
 	visibility: collapse;
 
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1882,7 +1882,7 @@ Label.NoteLabel
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1903,7 +1903,7 @@ Label.NoteLabel
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1915,7 +1915,7 @@ Label.NoteLabel
 
 	transition-property: opacity;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .StoreAppFriendsSection .AppSectionLargeBody
@@ -1930,7 +1930,7 @@ Label.NoteLabel
 	opacity: 0.0;
 	transition-property: opacity, transform;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -1996,7 +1996,7 @@ Label.NoteLabel
 
 	transition-property: transform;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #AppSections Button.AvatarImageBtn:focus .FriendsSectionAvatarPanels
@@ -2073,7 +2073,7 @@ Label.NoteLabel
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -2094,7 +2094,7 @@ Label.NoteLabel
 	transform: translate3d( -16px, 84px, 0px );
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -2106,7 +2106,7 @@ Label.NoteLabel
 
 	transition-property: opacity;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .StoreAppReviewsSection .AppSectionLargeBody
@@ -2119,7 +2119,7 @@ Label.NoteLabel
 	opacity: 0.0;
 	transition-property: opacity, transform;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -2180,7 +2180,7 @@ StoreAppPackage, StoreAppPackageGroup, .StoreAppPackage
 
 	transition-property: position, transform, border, opacity, background-color, pre-transform-scale2d;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -2197,7 +2197,7 @@ StoreAppPackage:descendantfocus, StoreAppPackageGroup:descendantfocus, .StoreApp
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -2399,7 +2399,7 @@ StoreAppDLCItem
 
 	transition-property: pre-transform-scale2d, opacity,  position;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StoreAppDLCItem:descendantfocus
@@ -2473,7 +2473,7 @@ StoreAppDLCItem:descendantfocus #DlcImageWrapper
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -2490,7 +2490,7 @@ StoreAppDLCItem:descendantfocus #DlcImageWrapper
 
 	transition-property: opacity, transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -2506,7 +2506,7 @@ StoreAppDLCItem:descendantfocus #PlatformSupport
 
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -2547,7 +2547,7 @@ StorePackage
 
 	transition-property: transform, opacity, desaturation;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -2574,7 +2574,7 @@ StorePackage:focus, StorePackage:descendantfocus
 
 	transition-property: position, pre-transform-scale2d, desaturation, wash-color, opacity;
 	transition-duration: AppSectionTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 }
@@ -2618,7 +2618,7 @@ StorePackageAppOverview
 	transform: translateX( -20px ) translateY( -15px );
 	transition-property: pre-transform-scale2d, transform, position;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -2666,7 +2666,7 @@ StorePackageAppOverview #CategoryKeyboardImage
 
 	transition-property: pre-transform-scale2d, transform, box-shadow;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -2688,7 +2688,7 @@ StorePackageAppOverview:descendantfocus:hover .HeaderImageWrapper:hover
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -2703,7 +2703,7 @@ StorePackageAppOverview:descendantfocus:hover .HeaderImageWrapper:hover
 
 	transition-property: border;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StorePackageAppOverview:descendantfocus .ImageBorder
@@ -2720,7 +2720,7 @@ StorePackageAppOverview:descendantfocus .ImageBorder
 	opacity: 0.85;
 	transition-property: desaturation, opacity, box-shadow;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StorePackageAppOverview:descendantfocus #HeaderImage
@@ -2736,7 +2736,7 @@ StorePackageAppOverview:descendantfocus #HeaderImage
 
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StorePackageAppOverview:descendantfocus .OnlyVisibleOnCarouselFocus
@@ -2843,7 +2843,7 @@ StoreAgeGate
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 StoreAgeGate.Loaded .AgeGateLoaded
@@ -2973,7 +2973,7 @@ DropDownMenu
 	animation-name: main-button-glow-movement-no-fill, quick-blur;
 	animation-duration: 1.7s, 0.45s;
 	animation-delay: 0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }
@@ -2992,7 +2992,7 @@ DropDown#Year:selected
 	animation-name: main-button-glow-movement-no-fill, quick-blur;
 	animation-duration: 1.7s, 0.45s;
 	animation-delay: 0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 }
@@ -3052,6 +3052,50 @@ DropDown.DropDownMenuVisible:focus Label
 }
 
 #ImageCarousel:descendantfocus:hover .LeftMouseScrollRegion
+{
+	opacity: 1.0;
+	background-color: mouse_hover_bg_left;
+}
+
+#PackageCarousel:descendantfocus .LeftMouseScrollRegion
+{
+	position: 0px 0px 0px;
+	width: 80px;
+	height: 350px;
+
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: mouse_off_bg_left;
+	opacity: 0.0;
+	
+	transition-property: opacity, background-color;
+	transition-duration: 0.23s;
+}
+
+#PackageCarousel:descendantfocus .RightMouseScrollRegion
+{
+	position: 0px 0px 0px;
+	width: 80px;
+	height: 350px;
+	horizontal-align: right;
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: mouse_off_bg_right;
+	opacity: 0.0;
+	
+	transition-property: opacity, background-color;
+	transition-duration: 0.23s;
+}
+
+#PackageCarousel:descendantfocus:hover .RightMouseScrollRegion
+{
+	opacity: 1.0;
+	background-color: mouse_hover_bg_right;
+}
+
+#PackageCarousel:descendantfocus:hover .LeftMouseScrollRegion
 {
 	opacity: 1.0;
 	background-color: mouse_hover_bg_left;

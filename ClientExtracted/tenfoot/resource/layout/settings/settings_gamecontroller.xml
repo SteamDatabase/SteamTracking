@@ -13,23 +13,92 @@
 		<!-- main panel -->
 		<Panel id="GameControllerContent" class="SettingsContent" tabindex="auto" selectionpos="auto">
 			<Panel id="ControllerSub" class="FlowDown" defaultfocus="AddController">
-				<Panel class="HorzSub SettingsRight SettingsController">
-					<Panel class="SettingsCallout SettingsGameControllerIcon"  />
-				</Panel>
-				<Panel class="HorzSub SettingsRight SettingsController">
-					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
-				</Panel>
+				
 				<Panel id="SteamControllerVersion" class="SettingsController FlowDown">
 					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamControllerVersion" />
 					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamDongleVersion" />
 				</Panel>
+				
+				<Label class="SettingsLabel" text="#SettingsController_TurnOffOnQuit" />
+					<DropDown id="SettingsBroadcast_Permissions" class="Filter" />			
+					
+				<Panel class="Spacer" />
+				
+				<!-- <ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" />	-->			
 				<Button id="ConfigureButton" class="Button SettingsControllerBindingButton" onactivate="ShowBindingDialog();">
 					<Label class="LongDesc" text="#SettingsController_ConfigureController" />
 				</Button>
 				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();">
 					<Label class="LongDesc" text="#Library_Details_Controller_Add" />
 				</Button>
-				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" />
+				
+			
+				<Panel class="HorzSub SettingsRight SettingsController">
+						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
+						<Panel class="HorzSub SettingsRight SettingsController">
+							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
+							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
+						</Panel>
+				</Panel>
+				
+				<Panel class="HorzSub SettingsRight SettingsController">
+						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
+						<Panel class="HorzSub SettingsRight SettingsController">
+							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
+							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
+						</Panel>
+				</Panel>
+				
+				<Panel class="HorzSub SettingsRight SettingsController">
+						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
+						<Panel class="HorzSub SettingsRight SettingsController">
+							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
+							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
+						</Panel>
+				</Panel>
+				
+				<Panel class="HorzSub SettingsRight SettingsController">
+						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
+						<Panel class="HorzSub SettingsRight SettingsController">
+							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
+							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
+						</Panel>
+				</Panel>
+				
+				<Panel class="HorzSub SettingsRight SettingsController">
+						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
+						<Panel class="HorzSub SettingsRight SettingsController">
+							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
+							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
+						</Panel>
+				</Panel>
+				
+				<Panel class="HorzSub SettingsRight SettingsController">
+						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
+						<Panel class="HorzSub SettingsRight SettingsController">
+							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
+							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
+						</Panel>
+				</Panel>
+				
+				<Panel class="HorzSub SettingsRight SettingsController">
+						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
+						<Panel class="HorzSub SettingsRight SettingsController">
+							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
+							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
+						</Panel>
+				</Panel>
+				
+				<Panel class="HorzSub SettingsRight SettingsController">
+						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
+						<Panel class="HorzSub SettingsRight SettingsController">
+							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
+							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
+						</Panel>
+				</Panel>
+		
+						
+				
 				
 			</Panel>
 		</Panel>

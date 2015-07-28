@@ -38,7 +38,7 @@ Button
 	border-color: none;
 
 	transition-property: border, background-color, color, box-shadow, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 Button Label
@@ -86,7 +86,7 @@ Button:focus
 	animation-name: links-and-more-button-focus; 
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -102,7 +102,7 @@ StoreCartSetCoupon
 
 	animation-name: msg-box-appear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -112,7 +112,7 @@ StoreCartSetCoupon.Destructing
 
 	animation-name: msg-box-disappear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 

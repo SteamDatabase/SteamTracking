@@ -6,7 +6,7 @@
 	transform: translatey( 1500px );
 	transition-property: opacity, transform;
 	transition-duration: 0.40s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	background-color: #000000ff;
 
 	background-image: url( "file://{images}/store/store_app_bg.png" );
@@ -56,7 +56,7 @@ Button Label
 	text-overflow: clip;
 	transition-property: opacity;
 	transition-duration: 0.15s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 Button:focus Label
@@ -113,7 +113,7 @@ Button:focus
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -129,7 +129,7 @@ HTML #MousePanningImage
 	horizontal-align: center;
 	transition-property: opacity, wash-color;
 	transition-duration: 1.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	wash-color: reticule_color;
 	opacity : 0.0;
 
@@ -167,7 +167,7 @@ HTML #MousePanningImage
 
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 

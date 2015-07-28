@@ -32,6 +32,9 @@
 				<Button id="LanguageSettingsButton" class="Button" onactivate="ShowSettings( Language );">
 					<Label class="LongDesc" text="#Settings_Language" />
 				</Button>
+				<Button id="KeyboardSettingsButton" class="Button" onactivate="ShowSettings( Keyboard );">
+					<Label class="LongDesc" text="#Settings_Keyboard" />
+				</Button>
 				<Button id="InterfaceSettingsButton" class="Button" onactivate="ShowSettings( Interface );">
 					<Label class="LongDesc" text="#Settings_Interface" />
 				</Button>

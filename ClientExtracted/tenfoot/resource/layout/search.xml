@@ -7,6 +7,8 @@
 	
 	<SearchDialog class="TenfootMsgBox" defaultfocus="Body" oncancel="ButtonCancel()" >
 		<Panel class="DialogRegion" tabindex="auto" selectionpos="auto">
+            <Label class="Header" id="SearchHeaderTitle" text="#Search_Header" />
+
 			<Panel class="InputRow">
 				<TextEntry id="Input"
 				   	textinputid="CheckoutFormTextEntry"
@@ -35,6 +37,7 @@
 						<Panel class="SearchResultsIcon" id="OSIconWindows" />
 						<Panel class="SearchResultsIcon" id="OSIconLinux" />
 						<Panel class="SearchResultsIcon" id="OSIconOSX" />
+            					<Panel class="SearchResultsIcon" id="OSIconStreamingVideo" />
 						<Panel class="SearchResultsIcon" id="ControllerIcon" />
 					</Panel>
 				</Panel>

@@ -37,7 +37,7 @@
 	wash-color: #00000066;
 
 	transition-property: opacity, wash-color; 
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.5s;
 }
 
@@ -81,7 +81,7 @@
 	opacity: 0.0;
 
 	transition-property: opacity; 
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.5s;
 
 
@@ -233,7 +233,7 @@
 
 	transition-property: transform, opacity-mask, opacity, desaturation;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #ContentsRow:descendantfocus

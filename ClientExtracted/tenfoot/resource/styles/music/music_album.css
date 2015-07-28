@@ -16,7 +16,7 @@ MusicAlbumPanel
 	
 	transition-property: transform, blur, position, opacity, desaturation;
 	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -101,7 +101,7 @@ MusicAlbumPanel
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #BigLabels
@@ -130,7 +130,7 @@ MusicAlbumPanel
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #AlbumCoverLowerLabel
@@ -142,7 +142,7 @@ MusicAlbumPanel
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .NoCover #AlbumCoverLowerLabel
@@ -161,7 +161,7 @@ MusicAlbumPanel
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .UpperRow
@@ -275,7 +275,7 @@ MusicAlbumPanel
 //	transform: translatey( 0px );
 //	transition-property: transform;
 //	transition-duration: 0.4s;
-//	transition-timing-function: ease-in-out;
+//	transition-timing-function: bigpicture-ease-in-out;
 //	transition-delay: 0s;
 // }
 
@@ -327,7 +327,7 @@ MusicAlbumPanel
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -402,7 +402,7 @@ MusicAlbumPanel
 	color: #999999ff;
 	width: fit-children;
 	transition-property: transform, color;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.15s;
 }
 

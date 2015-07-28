@@ -37,7 +37,7 @@
 
 	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
 	transition-duration: 0.25s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .MsgBoxButtons Button Label
@@ -49,7 +49,7 @@
 	padding-right: 5px;
 	transition-property: color;
 	transition-duration: 0.25s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 }
 
@@ -78,14 +78,14 @@
 	animation-name: msgbox-button-focus; 
 	animation-duration: 1.7s;
 	animation-delay: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 	
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
 	animation-delay: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	
 }

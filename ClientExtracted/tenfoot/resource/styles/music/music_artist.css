@@ -15,7 +15,7 @@ MusicArtistPanel
 
 	transition-property: transform, blur, position, opacity, desaturation;
 	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 

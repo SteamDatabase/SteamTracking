@@ -16,6 +16,7 @@
 						<Image id="IconWindows" src="file://{images}/store/icon_platform_win.png" />
 						<Image id="IconMac" src="file://{images}/store/icon_platform_mac.png" />
 						<Image id="IconLinux" src="file://{images}/store/icon_platform_linux.png" />
+						<Image id="IconStreamingVideo" src="file://{images}/store/icon_platform_streamingvideo.png" />
 						<Panel id="IconController" />
 						<Image id="IconSingleplayer" src="file://{images}/store/icon_singleplayer.png" />
 						<Image id="IconCloud" src="file://{images}/store/icon_steam_cloud.png" />
@@ -45,6 +46,10 @@
 							<Panel id="PlatformLinux" class="CategoryExpanded">
 								<Image src="file://{images}/store/icon_platform_linux.png" />
 								<Label text="#Store_Platform_Linux" />
+							</Panel>
+							<Panel id="PlatformStreamingVideo" class="CategoryExpanded">
+								<Image src="file://{images}/store/icon_platform_streamingvideo.png" />
+								<Label text="#Store_Platform_StreamingVideo" />
 							</Panel>
 							<Panel id="CategoryController" class="CategoryExpanded">
 								<Panel id="CategoryControllerImage" />

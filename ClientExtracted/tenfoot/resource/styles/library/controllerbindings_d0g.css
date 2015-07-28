@@ -14,7 +14,7 @@
 }
 
 
-.DaisyWheelVisible .MsgBoxBodyRegion
+.BehindTextInputHandler .MsgBoxBodyRegion
 {
 	transform: translateX( 0px );
 }
@@ -37,7 +37,7 @@
 
 	transition-property: pre-transform-scale2d, transform, opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SelectMode #BindingRegion
@@ -147,7 +147,7 @@
 
 	transition-property: opacity, transform;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SelectMode #LeftColumn
@@ -160,7 +160,7 @@
 {
 	transition-property: opacity, transform;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	opacity: 1.0;
 	width: 100%;
@@ -195,7 +195,7 @@
 {
 	transition-property: opacity, transform;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -204,7 +204,7 @@
 {
 	transition-property: opacity, transform;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	opacity: 1.0;
 	width: 100%;
@@ -287,10 +287,10 @@
 
 	transition-property: opacity, opacity-mask;
 	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.DaisyWheelVisible #KeyboardAndMouse
+.BehindTextInputHandler #KeyboardAndMouse
 {
 	opacity-mask: url( "file://{images}/library/keyboardfade.png" ) 0.9;
 	opacity: 0.35;
@@ -334,7 +334,7 @@
 	box-shadow: #eeeeee60 -3px -3px 6px 6px;
 }
 
-.DaisyWheelVisible #KeyboardAndMouse Button:hover
+.BehindTextInputHandler #KeyboardAndMouse Button:hover
 {
 	box-shadow: none;
 }
@@ -362,7 +362,7 @@
 	animation-name: main-button-glow-movement-small;
 	animation-duration: longduration;
 	animation-delay: shortduration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
@@ -658,7 +658,7 @@
 	animation-name: main-button-glow-movement;
 	animation-duration: longduration;
 	animation-delay: shortduration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -729,7 +729,7 @@
 	animation-name: links-and-more-button-focus; 
 	animation-duration: longduration;
 	animation-delay: shortduration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -755,7 +755,7 @@
 	
 	transition-property: opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SelectMode .MsgBoxHeader
@@ -1566,10 +1566,10 @@ Button:focus .PActionMappingWrapper Image
 {
 	transition-property: transform;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.SaveBindingsMsgBox.DaisyWheelVisible .MsgBoxBodyRegion,
+.SaveBindingsMsgBox.BehindTextInputHandler .MsgBoxBodyRegion,
 {
 	transform: translatex( 470px );
 }
@@ -1608,7 +1608,7 @@ Button:focus .PActionMappingWrapper Image
 
 	transition-property: opacity, color;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	opacity: 0.7;
 }
@@ -1649,10 +1649,10 @@ Button:focus .PActionMappingWrapper Image
 
 	transition-property: transform, opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.UploadScreenshotMsgBox.DaisyWheelVisible .MsgBoxBodyRegion
+.UploadScreenshotMsgBox.BehindTextInputHandler .MsgBoxBodyRegion
 {
 	transform: translatex( 480px );
 }
@@ -1668,7 +1668,7 @@ Button:focus .PActionMappingWrapper Image
 
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #ThrobberRow
@@ -1725,7 +1725,7 @@ Button:focus .PActionMappingWrapper Image
 	flow-children: none;
 	transition-property: opacity;
 	transition-duration: 0.25s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SaveBindingsMsgBox #MsgBoxButtonArea
@@ -2027,7 +2027,7 @@ DropDownMenu Label:disabled
 {
 	transition-property: desaturation, blur, opacity;
 	transition-duration: .3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -2064,7 +2064,7 @@ DropDownMenu Label:disabled
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
@@ -2127,7 +2127,7 @@ DropDownMenu Label:disabled
 	animation-name: main-button-glow-movement-small;
 	animation-duration: longduration;
 	animation-delay: shortduration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
@@ -2438,7 +2438,7 @@ DropDownMenu Label:disabled
 	animation-name: links-and-more-button-focus; 
 	animation-duration: longduration;
 	animation-delay: shortduration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }

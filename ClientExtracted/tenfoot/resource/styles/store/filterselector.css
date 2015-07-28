@@ -23,7 +23,7 @@ DropDown.DropDownMenuVisible Label
 	opacity: 0.0;
 	transform: translateY( 80px );
 	transition-property: opacity, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.2s;
 	transition-delay: 0.2s;
 }
@@ -33,7 +33,7 @@ DropDown.DropDownMenuVisible Label
 	opacity: 0.0;
 	transform: translateY( 80px );
 	transition-property: opacity, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.2s;
 	transition-delay: 0.1s;
 }
@@ -52,7 +52,7 @@ DropDown.DropDownMenuVisible Label
 	margin-top: 176px;
 
 	transition-property: opacity, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.25s;
 }
 
@@ -69,7 +69,7 @@ DropDown.DropDownMenuVisible Label
 	margin-top: 176px;
 
 	transition-property: opacity, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.23s;
 
 }
@@ -97,7 +97,7 @@ FilterSelectorItem #IconWrapper
 	padding-bottom: -2px;
 
 	transition-property: background-color;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.20s;
 }
 
@@ -123,7 +123,7 @@ FilterSelectorItem .ItemIcon
 	wash-color: iconcolor;
 	
 	transition-property: wash-color;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.15s;
 }
 

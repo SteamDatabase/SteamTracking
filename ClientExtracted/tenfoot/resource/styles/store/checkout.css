@@ -43,7 +43,7 @@ CartLineItem, CheckoutGiftRecipientFriend, CheckoutAddFundsButton, Button
 	border-color: none;
 	transition-duration: 0.23s;
 	transition-property: border, background-color, color, box-shadow, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 CheckoutAddFundsButton Label, Button Label
@@ -96,7 +96,7 @@ CartLineItem:focus, CheckoutGiftRecipientFriend:focus, CheckoutAddFundsButton:fo
 	animation-name: links-and-more-button-focus;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -130,7 +130,7 @@ CartLineItem:descendantfocus #FinalPrice
 	border-color: #3d414200;
 
 	transition-property: border, background-color, color, box-shadow, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .ProminentButton Label
@@ -202,7 +202,7 @@ CartLineItem:descendantfocus #FinalPrice
 
 	transition-property: border, background-color, color, box-shadow, transform;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	background-color: none;
 	border-style: solid;
@@ -225,7 +225,7 @@ CartLineItem:descendantfocus #FinalPrice
 	animation-name: links-and-more-button-focus; 
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -244,7 +244,7 @@ CartLineItem:descendantfocus #FinalPrice
 	
 	transition-property: transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;	
+	transition-timing-function: bigpicture-ease-in-out;	
 }
 
 #AgreeTerms:hover
@@ -272,7 +272,7 @@ CartLineItem:descendantfocus #FinalPrice
 
 	transition-property: transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #AgreeTerms:focus .TickBox,
@@ -324,7 +324,7 @@ CheckoutController
 
 	transition-property: transform, opacity;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -351,7 +351,7 @@ CheckoutController.Visible
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #Status.Waiting, #Status.Error
@@ -365,7 +365,7 @@ CheckoutController.Visible
 	opacity: 0.0;
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #Status.Waiting .CartThrobber
@@ -488,7 +488,7 @@ CheckoutController.Visible
 
 	transition-property: opacity;
 	transition-duration: 0.5s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .CheckoutBodyLeftColumn:descendantfocus
@@ -511,7 +511,7 @@ CheckoutController.Visible
 
 	transition-property: opacity;
 	transition-duration: 0.5s !immediate;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .CheckoutBodyRightColumn:descendantfocus
@@ -546,7 +546,7 @@ CheckoutController.Visible
 
 	transition-property: transform, opacity, desaturation, wash-color;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -792,7 +792,7 @@ CartNoteItem, CartNoteItem:hover
 	margin-left: 12px;
 	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
 	transition-property: box-shadow;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.23s;
 }
 
@@ -897,7 +897,7 @@ CartNoteItem.WarningNote:descendantfocus #CartNoteItemIcon
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .EmailVerified #CheckEmail

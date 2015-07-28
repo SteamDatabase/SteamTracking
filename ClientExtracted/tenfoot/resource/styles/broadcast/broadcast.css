@@ -16,7 +16,7 @@ BroadcastViewer
 	transition-property: transform, opacity, desaturation;
 	transition-duration: 0.4s;
 	transition-delay: 0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 BroadcastViewer.Fullscreen

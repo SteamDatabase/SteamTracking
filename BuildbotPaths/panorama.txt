@@ -46,6 +46,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(udphost.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(udpsocket.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(uifontfile_format.pb.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(vrapi.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(workthreadpool.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(zip_external_unity.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(zip_helpers.o)
@@ -123,9 +124,11 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uisoundsystem.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitextlayoutpango.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitoplevelwindow.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitoplevelwindowopenvroverlay.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitoplevelwindowoverlay.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uitoplevelwindowsdl.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/uiwebapiclient.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/panorama.build/Objects-normal/i386/vrevents.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../external/miniz/miniz.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.h
@@ -378,6 +381,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uisoundsystem.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uisoundsystem.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindow.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowopenvroverlay.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowoverlay.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowsdl.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/uitoplevelwindowsdl.h
@@ -425,7 +429,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uijsregistration.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uipbmsgbase.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindow.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindowopenvroverlay.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindowoverlay.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/vrevents.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/rtime.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/rtime.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/stat.cpp
@@ -449,6 +455,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/fileio.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/generichash.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/interface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/keyvalues.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/mempool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h

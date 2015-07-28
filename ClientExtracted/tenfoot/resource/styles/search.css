@@ -29,16 +29,18 @@ SearchStoreResult
 {
 	width: 100%;
 	padding: 4px 0px 4px 0px;
-	margin: 0px 0px; 
+	margin: 0px 14px 2px 0px;
+
+	flow-children: right;
 
 	color: applabelselected;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
+	background-color: ui_common_control;
 	border-style: solid;
 	border-width: 5px;
 	border-color: none;
 
 	transition-property: border, background-color, color, box-shadow, transform;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 SearchStoreResult Label
@@ -76,21 +78,23 @@ SearchStoreResult:focus
 	animation-name: links-and-more-button-focus; 
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
 #PlatformWindows,
 #PlatformMac,
-#PlatformLinux
+#PlatformLinux,
+#PlatformStreamingVideo
 {
 	visibility: collapse;
 }
 
 .AvailableWindows #PlatformWindows,
 .AvailableMac #PlatformMac,
-.AvailableLinux #PlatformLinux
+.AvailableLinux #PlatformLinux,
+.AvailableStreamingVideo #PlatformStreamingVideo
 {
 	visibility: visible;
 }
@@ -106,7 +110,7 @@ SearchDialog
 
 	animation-name: msg-box-appear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -116,7 +120,7 @@ SearchDialog.Destructing
 
 	animation-name: msg-box-disappear;
 	animation-duration: MessageBoxAnimationDuration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -125,13 +129,13 @@ SearchDialog.Destructing
 	width: 708px;
 	height: 524px;
 	align: center center;
-	padding: 0px;
+	padding: 30px;
 	background-color: message_box_bg;
 	flow-children: down;
 
 	transition-property: transform;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 
 	box-shadow: fill box_shadow_off_color 0px 0px 0px 0px;
@@ -139,12 +143,12 @@ SearchDialog.Destructing
 
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: 1.7s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
-.DaisyWheelVisible .DialogRegion
+.BehindTextInputHandler .DialogRegion
 {
 	transform: translatex( 470px );
 }
@@ -152,6 +156,13 @@ SearchDialog.Destructing
 .InputRow
 {
 	width: 100%;
+}
+
+.Header {
+	font-size: 48px;
+	font-family: platformfont;
+	color: #ffffff66;
+	margin-bottom: 8px;
 }
 
 LoadingThrobber
@@ -170,26 +181,15 @@ LoadingThrobber
 
 #Input
 {
-	height: 50px;
-	width: 96.5%;
-	horizontal-align: center;
-	margin: 16px 0px 16px 0px;
-	font-size: 27px;
-	font-family: platformfont;
-	background-color: #FFFFFF44;
+	height: 70px;
+	width: 100%;
 }
 
 #Input:descendantfocus
 {
-	background-color: #FFFFFFFF;
+
 }
-.DaisyWheelVisible #Input
-{
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
-	border-color: #ffffffff;
-	color: applabelselectedsolid;
-	box-shadow: none;
-}
+
 
 .SearchDivider
 {
@@ -216,7 +216,7 @@ LoadingThrobber
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .ShowSearchDivider #SearchResults
@@ -240,7 +240,7 @@ LoadingThrobber
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #UnfilterSearchWrapper
@@ -253,7 +253,7 @@ LoadingThrobber
 
 	transition-property: opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .ShowSearchResultsMessage #SearchResultsMessageWrapper
@@ -320,6 +320,12 @@ LoadingThrobber
 	visibility: visible;
 }
 
+.ShowStreamingVideoIcon #OSIcon
+{
+	background-image: url( "file://{images}/store/icon_streamingvideo_storefront.png" );
+	visibility: visible;
+}
+
 .ShowWindowsIcon #OSIconWindows
 {
 	background-image: url( "file://{images}/store/icon_windows_storefront.png" );
@@ -335,6 +341,12 @@ LoadingThrobber
 .ShowLinuxIcon #OSIconLinux
 {
 	background-image: url( "file://{images}/store/icon_steamos_storefront.png" );
+	visibility: visible;
+}
+
+.ShowStreamingVideoIcon #OSIconStreamingVideo
+{
+	background-image: url( "file://{images}/store/icon_streamingvideo_storefront.png" );
 	visibility: visible;
 }
 
@@ -422,13 +434,6 @@ LoadingThrobber
 //
 // Store Result
 //
-SearchStoreResult
-{
-	margin: 0px 14px 0px 6px;
-	width: 100%;
-	flow-children: right;
-}
-
 #StoreHeader
 {
 	margin: 8px;
@@ -455,7 +460,7 @@ SearchStoreResult
 	margin: 0px 10px;
 	vertical-align: center;
 	wash-color: #171717f5;
-	opacity: 0.0;
+	visibility: collapse;
 	transition-property: opacity;
 	transition-delay: 0.0s;
 	transition-duration: 0.0s;
@@ -463,18 +468,7 @@ SearchStoreResult
 
 SearchStoreResult:focus .DetailsIconRow
 {
-	opacity: 1.0;
-}
-
-TextEntry:focus
-{
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
-
-	color: applabelselectedsolid;
-
-	border-style: solid;
-	border-color: #ffffffff;
-	animation-name: none;
+	visibility: visible;
 }
 
 SearchStoreSection
@@ -530,7 +524,7 @@ SearchStoreSection .ItemIcon
 	wash-color: #a6afb9;
 	
 	transition-property: wash-color;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.15s;
 }
 
@@ -549,6 +543,12 @@ SearchStoreSection.OSXIcon #OSXIcon
 SearchStoreSection.LinuxIcon #LinuxIcon
 {
 	background-image: url( "file://{images}/store/icon_platform_linux.png" );
+	visibility: visible;
+}
+
+SearchStoreSection.StreamingVideo #StreamingVideoIcon
+{
+	background-image: url( "file://{images}/store/icon_platform_streamingvideo.png" );
 	visibility: visible;
 }
 

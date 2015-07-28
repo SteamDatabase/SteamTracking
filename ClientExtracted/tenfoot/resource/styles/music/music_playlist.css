@@ -16,7 +16,7 @@ MusicPlaylistPanel
 	
 	transition-property: transform, blur, position, opacity, desaturation;
 	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -71,7 +71,7 @@ MusicPlaylistPanel
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #BigLabels
@@ -100,7 +100,7 @@ MusicPlaylistPanel
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #AlbumCoverLowerLabel
@@ -112,7 +112,7 @@ MusicPlaylistPanel
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .NoCover #AlbumCoverLowerLabel
@@ -131,7 +131,7 @@ MusicPlaylistPanel
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .UpperRow
@@ -246,7 +246,7 @@ MusicPlaylistPanel
 //	transform: translatey( 0px );
 //	transition-property: transform;
 //	transition-duration: 0.4s;
-//	transition-timing-function: ease-in-out;
+//	transition-timing-function: bigpicture-ease-in-out;
 //	transition-delay: 0s;
 // }
 
@@ -306,7 +306,7 @@ MusicPlaylistPanel
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }

@@ -53,13 +53,9 @@
 					<Panel id="ABXY_Footer_Wrapper">
 						<Label id="A_btn" class="LegendButtonBox AButtonBox HiddenFooter" text="#UI_AButton" />
 						<Label id="A_txt" class="LegendText AButtonText HiddenFooter" text="#UI_InputDone" />
-						<Label id="X_btn" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
-						<Label id="X_txt" class="LegendText XButtonText" text="#UI_Submit_Caps" />
 						<Label id="Y_btn" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
 						<Label id="Y_txt" class="LegendText YButtonText" text="" />
 					</Panel>
-
-					
 				</Panel>
 				
 			</Panel>
@@ -68,122 +64,117 @@
 				<TextEntry id="TextPreview" />
 			</Panel>
 			<Panel id="BackDrop">
-				<Panel id="TouchPadLeft" class="TouchPad Left">
-					<Panel id="RowContainer">
-						<Panel id="TopRow" class="TouchRow">
-							<Panel id="TouchKey_Suggest_0" class="TouchKey">
-								<Label id="TouchKey_Suggest_0_text" class="TouchKeyLabel" />
-							</Panel>
-							<Panel id="TouchKey_Suggest_1" class="TouchKey">
-								<Label id="TouchKey_Suggest_1_text" class="TouchKeyLabel" />
-							</Panel>
-						</Panel>
-						<Panel id="Row0" class="TouchRow">
-							<Panel id="TouchKey_0_0" class="TouchKey" />
-							<Panel id="TouchKey_1_0" class="TouchKey" />
-							<Panel id="TouchKey_2_0" class="TouchKey" />
-							<Panel id="TouchKey_3_0" class="TouchKey" />
-							<Panel id="TouchKey_4_0" class="TouchKey" />
-							<Panel id="TouchKey_5_0" class="TouchKey RightQuadrant" />
-						</Panel>
-						<Panel id="Row1" class="TouchRow">
-							<Panel id="TouchKey_LeftArrow" class="TouchKey">
-								<Image class="TouchKeyLabel" src="file://{images}/textinput/back.tga" />
-							</Panel>
-							<Panel id="TouchKey_0_1" class="TouchKey" />
-							<Panel id="TouchKey_1_1" class="TouchKey" />
-							<Panel id="TouchKey_2_1" class="TouchKey" />
-							<Panel id="TouchKey_3_1" class="TouchKey" />
-							<Panel id="TouchKey_4_1" class="TouchKey RightQuadrant" />
-						</Panel>
-						<Panel id="Row2" class="TouchRow">
-							<Panel id="TouchKey_Alt" class="TouchKey">
-								<Label class="TouchKeyLabel" text="Alt" />
-							</Panel>
-							<Panel id="TouchKey_0_2" class="TouchKey" />
-							<Panel id="TouchKey_1_2" class="TouchKey" />
-							<Panel id="TouchKey_2_2" class="TouchKey" />
-							<Panel id="TouchKey_3_2" class="TouchKey" />
-							<Panel id="TouchKey_4_2" class="TouchKey RightQuadrant" />
-						</Panel>
-						<Panel id="Row3" class="TouchRow">
-							<Panel id="TouchKey_Shift" class="TouchKey">
-								<Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
-							</Panel>
-							<Panel id="TouchKey_0_3" class="TouchKey" />
-							<Panel id="TouchKey_1_3" class="TouchKey" />
-							<Panel id="TouchKey_2_3" class="TouchKey" />
-							<Panel id="TouchKey_3_3" class="TouchKey" />
-							<Panel id="TouchKey_4_3" class="TouchKey RightQuadrant" />
-						</Panel>
-						<Panel id="LastRow" class="TouchRow">
-							<Panel id="TouchKey_Space" class="TouchKey BottomQuadrant" />
-						</Panel>
-					</Panel>
-					<Panel id="LeftPointer" class="TouchPointer DualTouchHidden">
-						<Image src="file://{images}/textinput/textinput_touchpointer.tga" />
-					</Panel>
-					<Panel id="TouchKey_LeftArrow" class="TouchKey LeftArrowFill LeftQuadrant"/>
-				</Panel>
-				<Panel id="TouchPadRight" class="TouchPad Right">
-					<Panel id="RowContainer">
-						<Panel id="TopRow" class="TouchRow">
-							<Panel id="TouchKey_Suggest_2" class="TouchKey">
-								<Label id="TouchKey_Suggest_2_text" class="TouchKeyLabel" />
-							</Panel>
-							<Panel id="TouchKey_Suggest_3" class="TouchKey">
-								<Label id="TouchKey_Suggest_3_text" class="TouchKeyLabel" />
-							</Panel>
-						</Panel>
-						<Panel id="Row0" class="TouchRow">
-							<Panel id="TouchKey_6_0" class="TouchKey LeftQuadrant" />
-							<Panel id="TouchKey_7_0" class="TouchKey" />
-							<Panel id="TouchKey_8_0" class="TouchKey" />
-							<Panel id="TouchKey_9_0" class="TouchKey" />
-							<Panel id="TouchKey_10_0" class="TouchKey" />
-							<Panel id="TouchKey_Backspace" class="TouchKey">
-								<Image class="TouchKeyLabel" src="file://{images}/textinput/del.tga" />
-							</Panel>
-						</Panel>
-						<Panel id="Row1" class="TouchRow">
-							<Panel id="TouchKey_5_1" class="TouchKey LeftQuadrant" />
-							<Panel id="TouchKey_6_1" class="TouchKey" />
-							<Panel id="TouchKey_7_1" class="TouchKey" />
-							<Panel id="TouchKey_8_1" class="TouchKey" />
-							<Panel id="TouchKey_9_1" class="TouchKey" />
-							<Panel id="TouchKey_RightArrow" class="TouchKey">
-								<Image class="TouchKeyLabel" src="file://{images}/textinput/forward.tga" />
-							</Panel>
-						</Panel>
-						<Panel id="Row2" class="TouchRow">
-							<Panel id="TouchKey_5_2" class="TouchKey LeftQuadrant" />
-							<Panel id="TouchKey_6_2" class="TouchKey" />
-							<Panel id="TouchKey_7_2" class="TouchKey" />
-							<Panel id="TouchKey_8_2" class="TouchKey" />
-							<Panel id="TouchKey_Enter" class="TouchKey">
-								<Image class="TouchKeyLabel" src="file://{images}/textinput/return.tga" />
-							</Panel>
-						</Panel>
-						<Panel id="Row3" class="TouchRow">
-							<Panel id="TouchKey_5_3" class="TouchKey LeftQuadrant" />
-							<Panel id="TouchKey_6_3" class="TouchKey" />
-							<Panel id="TouchKey_7_3" class="TouchKey" />
-							<Panel id="TouchKey_8_3" class="TouchKey" />
-							<Panel id="TouchKey_9_3" class="TouchKey" />
-							<Panel id="TouchKey_Shift" class="TouchKey">
-								<Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
-							</Panel>
-						</Panel>
-						<Panel id="LastRow" class="TouchRow">
-							<Panel id="TouchKey_Space" class="TouchKey BottomQuadrant" />
-						</Panel>
-					</Panel>
-					<Panel id="RightPointer" class="TouchPointer DualTouchHidden">
-						<Image src="file://{images}/textinput/textinput_touchpointer.tga" />
-					</Panel>
-					<Panel id="TouchKey_RightArrow" class="TouchKey RightArrowFill RightQuadrant" />
-				</Panel>
-			</Panel>
-		</Panel>
+          <Panel id="TouchPadLeft" class="TouchPad Left">
+					  <Panel id="RowContainer">
+						  <Panel id="TopRow" class="TouchRow">
+							  <Panel id="TouchKey_Suggest_0" class="TouchKey TopQuadrant">
+								  <Label id="TouchKey_Suggest_0_text" class="TouchKeyLabel" />
+							  </Panel>
+							  <Panel id="TouchKey_Suggest_1" class="TouchKey TopQuadrant">
+								  <Label id="TouchKey_Suggest_1_text" class="TouchKeyLabel" />
+							  </Panel>
+						  </Panel>
+						  <Panel id="Row0" class="TouchRow">
+							  <Panel id="TouchKey_0_0" class="TouchKey LeftQuadrant" />
+							  <Panel id="TouchKey_1_0" class="TouchKey" />
+							  <Panel id="TouchKey_2_0" class="TouchKey" />
+							  <Panel id="TouchKey_3_0" class="TouchKey" />
+							  <Panel id="TouchKey_4_0" class="TouchKey" />
+							  <Panel id="TouchKey_5_0" class="TouchKey RightQuadrant" />
+						  </Panel>
+						  <Panel id="Row1" class="TouchRow">
+							  <Panel id="TouchKey_0_1" class="TouchKey LeftQuadrant" />
+							  <Panel id="TouchKey_1_1" class="TouchKey" />
+							  <Panel id="TouchKey_2_1" class="TouchKey" />
+							  <Panel id="TouchKey_3_1" class="TouchKey" />
+							  <Panel id="TouchKey_4_1" class="TouchKey RightQuadrant" />
+						  </Panel>
+						  <Panel id="Row2" class="TouchRow">
+							  <Panel id="TouchKey_Alt" class="TouchKey LeftQuadrant">
+								  <Label class="TouchKeyLabel" text="Alt" />
+							  </Panel>
+							  <Panel id="TouchKey_0_2" class="TouchKey" />
+							  <Panel id="TouchKey_1_2" class="TouchKey" />
+							  <Panel id="TouchKey_2_2" class="TouchKey" />
+							  <Panel id="TouchKey_3_2" class="TouchKey" />
+							  <Panel id="TouchKey_4_2" class="TouchKey RightQuadrant" />
+						  </Panel>
+						  <Panel id="Row3" class="TouchRow">
+							  <Panel id="TouchKey_Shift" class="TouchKey LeftQuadrant">
+								  <Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
+							  </Panel>
+							  <Panel id="TouchKey_0_3" class="TouchKey" />
+							  <Panel id="TouchKey_1_3" class="TouchKey" />
+							  <Panel id="TouchKey_2_3" class="TouchKey" />
+							  <Panel id="TouchKey_3_3" class="TouchKey" />
+							  <Panel id="TouchKey_4_3" class="TouchKey RightQuadrant" />
+						  </Panel>
+						  <Panel id="LastRow" class="TouchRow">
+							  <Panel id="TouchKey_Space" class="TouchKey BottomQuadrant" />
+						  </Panel>
+					  </Panel>
+					  <Panel id="LeftPointer" class="TouchPointer DualTouchHidden">
+						  <Image src="file://{images}/textinput/textinput_touchpointer.tga" />
+					  </Panel>
+				  </Panel>
+				  <Panel id="TouchPadRight" class="TouchPad Right">
+					  <Panel id="RowContainer">
+						  <Panel id="TopRow" class="TouchRow">
+							  <Panel id="TouchKey_Suggest_2" class="TouchKey TopQuadrant">
+								  <Label id="TouchKey_Suggest_2_text" class="TouchKeyLabel" />
+							  </Panel>
+							  <Panel id="TouchKey_Suggest_3" class="TouchKey TopQuadrant">
+								  <Label id="TouchKey_Suggest_3_text" class="TouchKeyLabel" />
+							  </Panel>
+						  </Panel>
+						  <Panel id="Row0" class="TouchRow">
+							  <Panel id="TouchKey_6_0" class="TouchKey LeftQuadrant" />
+							  <Panel id="TouchKey_7_0" class="TouchKey" />
+							  <Panel id="TouchKey_8_0" class="TouchKey" />
+							  <Panel id="TouchKey_9_0" class="TouchKey" />
+							  <Panel id="TouchKey_10_0" class="TouchKey" />
+							  <Panel id="TouchKey_Backspace" class="TouchKey RightQuadrant">
+								  <Image class="TouchKeyLabel" src="file://{images}/textinput/del.tga" />
+							  </Panel>
+						  </Panel>
+						  <Panel id="Row1" class="TouchRow">
+							  <Panel id="TouchKey_5_1" class="TouchKey LeftQuadrant" />
+							  <Panel id="TouchKey_6_1" class="TouchKey" />
+							  <Panel id="TouchKey_7_1" class="TouchKey" />
+							  <Panel id="TouchKey_8_1" class="TouchKey" />
+							  <Panel id="TouchKey_9_1" class="TouchKey RightQuadrant" />
+						  </Panel>
+						  <Panel id="Row2" class="TouchRow">
+							  <Panel id="TouchKey_5_2" class="TouchKey LeftQuadrant" />
+							  <Panel id="TouchKey_6_2" class="TouchKey" />
+							  <Panel id="TouchKey_7_2" class="TouchKey" />
+							  <Panel id="TouchKey_8_2" class="TouchKey" />
+							  <Panel id="TouchKey_Enter" class="TouchKey RightQuadrant">
+								  <Image class="TouchKeyLabel" src="file://{images}/textinput/return.tga" />
+							  </Panel>
+						  </Panel>
+						  <Panel id="Row3" class="TouchRow">
+							  <Panel id="TouchKey_5_3" class="TouchKey LeftQuadrant" />
+							  <Panel id="TouchKey_6_3" class="TouchKey" />
+							  <Panel id="TouchKey_7_3" class="TouchKey" />
+							  <Panel id="TouchKey_8_3" class="TouchKey" />
+							  <Panel id="TouchKey_9_3" class="TouchKey" />
+							  <Panel id="TouchKey_Shift" class="TouchKey RightQuadrant">
+								  <Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
+							  </Panel>
+						  </Panel>
+						  <Panel id="LastRow" class="TouchRow">
+							  <Panel id="TouchKey_Space" class="TouchKey BottomQuadrant" />
+							  <Panel id="TouchKey_Submit" class="TouchKey BottomQuadrant">
+								  <Label id="TouchKey_Submit_Label" class="TouchKeyLabel" text="Done" />
+							  </Panel>
+						  </Panel>
+					  </Panel>
+					  <Panel id="RightPointer" class="TouchPointer DualTouchHidden">
+						  <Image src="file://{images}/textinput/textinput_touchpointer.tga" />
+					  </Panel>
+				  </Panel>
+			  </Panel>
+      </Panel>
 	</TextInputDualTouch>
 </root>

@@ -1,9 +1,9 @@
 /Users/buildbot/buildslave/../.ccache/tmp/
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/lib/engines
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/ssl
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/ssl/cert.pem
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/ssl/certs
-/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1m/.i386/ssl/private
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/lib/engines
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/ssl
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/ssl/cert.pem
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/ssl/certs
+/Users/buildbot/buildslave/openssl_osx/build/openssl-1.0.1p/.i386/ssl/private
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(completionportmanager.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(completionportmanager_posix.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(constants.o)

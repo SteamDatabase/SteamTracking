@@ -14,13 +14,13 @@ LoginUser
 	opacity: 0.0;
 	animation-name: fade-in;
 	animation-duration: 0.20s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
 	transition-property: opacity;
 	transition-duration: 0.20s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	width: 100%;
 	height: 100%;
 }
@@ -69,12 +69,12 @@ LoginUser:descendantfocus .LoginHidden
 
 	transition-property: pre-transform-scale2d, transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
 
-.DaisyWheelVisible .Card
+.BehindTextInputHandler .Card
 {
 
 	transform: translatex(220px);
@@ -306,42 +306,12 @@ LoginUser:descendantfocus .LoginHidden
 	opacity: 0.0;
 }
 
-TextEntry
-{
-	font-size: 38px;
-	font-family: platformfont;
-	animation-name: none;
-	vertical-align: center;
- 	background-color: #173a4c;
-
-	// Linux/Mac bug: border-radius != 0 results in no border - will fix
-	//border-radius: 2px;
-	border-radius: 0px;
-}
-
 .LoginPromptContainer
 {
 	width: 100%;
 	height: 70px;
-	horizontal-align: center;
-	background-color: ui_common_control;
-	border-color: none;
-	border-width: 5px;
-	border-style: solid;
-
-	// Linux/Mac bug: border-radius != 0 results in no border - will fix
-	//border-radius: 2px;
-	border-radius: 0px;
 
 	margin: 4px 0px 15px 0px;
-	padding: 4px 7px 8px 7px;
-
-	transition-property: border, background-color, color, box-shadow;
-	transition-timing-function: ease-out;
-	transition-duration: 0.23s;
-
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 }
 
 
@@ -353,20 +323,7 @@ TextEntry
 .LoginPromptContainer:focus, .LoginPromptContainer:selected:focus, .LoginPromptContainer:hover:selected
 {
 
-	transition-duration: 0.4s !immediate;
 
-	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) ); 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	
-  animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
 }
 
 .LoginPromptContainer:disabled:hover
@@ -376,15 +333,14 @@ TextEntry
 
 .LoginPromptContainer Label
 {
-	text-transform: uppercase;
+
 	margin-bottom: 4px;
 	padding-top: 5px;
 	color: detailsdatalabel;
 
 	vertical-align: center;
-
-	font-family: platformfont;
 	font-size: 28px;
+	font-family: platformfont;
 	font-weight: normal;
 	padding-left: 10px;
 	padding-top: 6px;
@@ -410,7 +366,7 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 {
 	horizontal-align: right;
 	vertical-align: center;
-	color: #888888;
+	color: #1b2838;
 	font-size: 27px;
 	font-family: platformfont;
 	padding-right: 6px;
@@ -440,18 +396,16 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 	transition-duration: steamguard_message_transition_time;
 }
 
-#PasswordTextEntry
-{
-	font-size: 34px;
-	padding-top: 6px;
-}
-
 
 // This class gets added when the progress dialog is visible
 .ShowingLoginProgress LoginUser
 {
 	opacity: 0.0;
 	transition-duration: 0.4s;
+}
+
+ToggleButton {
+	font-size: 28px;
 }
 
 // tickbox to turn togglebuttons into checkboxes
@@ -481,7 +435,7 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -506,7 +460,6 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 	padding-left: 15px;
 	width: 100%;
 	color: detailsdatalabel;
-	font-size: 27px;
 	font-family: platformfont;
 	border-width: 0px;
 
@@ -581,11 +534,6 @@ TextEntry:disabled,.Button:disabled,ToggleButton:disabled
 	border-color: none;
 	box-shadow: none;
 	animation-name: none;
-}
-
-.Button:disabled Label,ToggleButton:disabled,ToggleButton:disabled .TickBox
-{
-	color: #9B9B9B;
 }
 
 #TestPanelTextEntry

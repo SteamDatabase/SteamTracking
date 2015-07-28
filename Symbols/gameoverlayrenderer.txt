@@ -797,7 +797,6 @@
  getpid
  getrlimit
  getrlimit$UNIX2003
- gettimeofday
  glBegin
  glBindTexture
  glColorMask
@@ -871,8 +870,7 @@
  pthread_cond_init
  pthread_cond_init$UNIX2003
  pthread_cond_signal
- pthread_cond_timedwait
- pthread_cond_timedwait$UNIX2003
+ pthread_cond_timedwait_relative_np
  pthread_cond_wait
  pthread_cond_wait$UNIX2003
  pthread_condattr_destroy

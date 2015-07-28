@@ -20,10 +20,10 @@
 				<Panel class="NetworkSettingsRightPane" tabindex="auto" selectionpos="auto">
 
 						<Button id="RefreshWAPList" class="SettingsNetwork_LeftButton Button " onactivate="NetworkWizardRefreshSSIDs()">
-							<Label class="LongDesc" text="#SettingsNetwork_WAP_Refresh" />
+							<Label class="NetworkSettingsButtonLabel" text="#SettingsNetwork_WAP_Refresh" />
 						</Button>
 						<Button id="NetworkForget" class="SettingsNetwork_RightButton Button " onactivate="ForgetNetwork()">
-							<Label class="LongDesc" text="#SettingsNetwork_Forget" />
+							<Label class="NetworkSettingsButtonLabel" text="#SettingsNetwork_Forget" />
 						</Button>
 				</Panel>
 			</Panel>

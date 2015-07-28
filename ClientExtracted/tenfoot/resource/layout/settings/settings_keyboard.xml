@@ -1,0 +1,42 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+		
+	</styles>
+
+	<SettingsPanel_Keyboard class="SettingsSection" defaultfocus="Continents">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label class="SettingsHeaderLegend" text="#Settings_Keyboard" />
+		</Panel>
+		
+		<!-- main panel -->
+		<Panel class="SettingsContent SettingsCenterContentWide" tabindex="auto" selectionpos="auto">
+
+				<Panel class="VertContainer">	
+					<Label class="PaddedLabel" text="#SettingsKeyboard_Description1" />
+					
+					<Panel id="RadioButtonContainer" class="HorzContainer" >
+						<Panel class="InputContainerDown GapDown">
+							<RadioButton group="OPT" class="Button RadioButton" id="RadioUseDualTouch" text="#SettingsKeyboard_UseDualTouch" selectionpos="auto" />
+						</Panel>
+						<Panel class="InputContainerDown GapDown">
+							<RadioButton group="OPT" class="Button RadioButton" id="RadioUseDaisywheel" text="#SettingsKeyboard_UseDaisyWheel" selectionpos="auto" />
+						</Panel>
+					</Panel>
+
+					<Label class="PaddedLabel" text="#SettingsKeyboard_Description2" />
+					<ToggleButton class="CheckBox" id="CustomInputLanguage" text="#SettingsKeyboard_UILanguage" selectionpos="auto" onactivate="SettingsKeyboard_LanguageToggle();" />
+					<Panel class="HorzContainer">
+
+						<Panel id="LanguageList" class="VertContainer" childfocusonhover="false" >
+							<!-- label instances added here -->
+						</Panel>
+					</Panel>
+
+				</Panel>
+		</Panel>
+	</SettingsPanel_Keyboard>
+
+</root>

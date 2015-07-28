@@ -16,6 +16,13 @@
 @define GameControllerAnimationDuration: 0.1;
 
 
+/* visibility rules */
+.ShowIfStreamingUI { visibility: collapse; }
+.ShowIfNotStreamingUI { visibility: visible; }
+.StreamingUI .ShowIfStreamingUI { visibility: visible; }
+.StreamingUI .ShowIfNotStreamingUI { visibility: collapse; }
+
+
 Image
 {
 	wash-color: messagecolorwash;
@@ -45,7 +52,7 @@ SettingsPanel
 
 	transition-property: opacity, opacity-mask;
 	transition-duration: SettingsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	opacity: 0.0;
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
@@ -59,7 +66,7 @@ SettingsPanel
 
 	transition-property: opacity, pre-transform-scale2d, transform;
 	transition-duration: .3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SettingsModal
@@ -113,7 +120,7 @@ SettingsPanel
 	padding-left: 300px;
 	transition-property: opacity;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	flow-children: right;
 }
 
@@ -189,20 +196,34 @@ SettingsPanel.SectionVisible #SettingsContent
 	font-size: 24px;
 }
 
+.NetworkSettingsButtonLabel
+{
+		transform: translateX( 4px );
+	padding-right: 10px;
+	color: detailsdatalabel;
+	font-family: platformfont;
+	transform: translateX( 7px );
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: 0.23s;
+	padding-top: 4px;
+	font-size: 24px;
+}
+
 .Highlight_Error
 {
 	padding-top: 8px;
 	color: red;
 }
 
-.Button:hover .LongDesc
+.Button:hover .LongDesc,.Button:hover .NetworkSettingsButtonLabel
 {
 	transform: translateX( 11px );	
 	color: #ffffffff;
 	
 }
 
-.Button:focus .LongDesc
+.Button:focus .LongDesc, .Button:focus .NetworkSettingsButtonLabel
 {
 	transform: translateX( 11px );	
 	color: black;
@@ -279,6 +300,15 @@ ToggleButton .TickBox
 	opacity: 1.0;
 }
 
+Button,
+ToggleButton,
+.CheckBox,
+RadioButton
+{
+	width: 475px;
+	height: 48px;
+}
+
 // legend of textual item in settings RHS
 .SettingsLegend
 {
@@ -312,77 +342,12 @@ ToggleButton .TickBox
 	width: 1200px;
 }
 
-// all these button styles are cribbed from librarybutton in library.css.
-// i have modified them a bit here... cc
-// they should be refactored into steamstyles perhaps
-Button,ToggleButton,.CheckBox,RadioButton
-{
-	horizontal-align: left;
-
-	width: 475px;
-	height: 48px;
-	margin-top: 8px;
-	margin-bottom: 8px;
-
-	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
-
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 0px;
-	border-color: #3d414200;
-
-	background-color: simplebutton;
-
-	pre-transform-scale2d: 1.0;
-
-	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
-	transition-timing-function: ease-out;
-}
-
-RadioButton
-{
-	background-color: none;
-}
-
-
-.CheckBox
-{
-	background-color: simplebutton;
-}
-
 #SettingsSteamOS_EnableDesktop
 {
 	width: 475px;
 }
 
-Button:hover,ToggleButton:hover,RadioButton:hover
-{
-	z-index: 50;
-	transition-duration: 0.23s !immediate;
-	pre-transform-scale2d: 1.0;
-}
 
-Button:focus,ToggleButton:focus,RadioButton:focus
-{
-	transition-duration: 0.25s !immediate;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	z-index: 1000;
-
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.1s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
 
 Label.SettingsStatic
 {
@@ -481,70 +446,7 @@ Label.SettingsStatic
 	margin-top: 0px;
 }
 
-// tickbox to turn togglebuttons into checkboxes
-.CheckBox .TickBox
-{
-	width: 38px;
-	height: 38px;
-	vertical-align: center;
-	background-color: blue;
-	transition-property: transform, background-color, border, box-shadow, color;
-	transition-timing-function: ease-out;
-	transition-duration: 0.3s;
-}
 
-.CheckBox:Selected .TickBox
-{
-	background-color: blue;
-}
-
-.CheckBox:Focus .TickBox
-{
-	background-color: #cccccc;
-	border-color: #cccccc;
-}
-
-.CheckBox:Selected:Focus .TickBox
-{
-	background-color: #ccccccff;
-	border-color: #cccccc;
-	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
-}
-
-// and make room for the tickbox
-.CheckBox Label, RadioButton Label
-{
-	padding-left: 14px;
-	margin: 0px 10px 0px 0px;
-	color: detailsdatalabel;
-	width: fit-children;
-	text-overflow: ellipsis;
-	font-family: platformfont;
-	white-space: nowrap;
-
-	transform: translatex(-7px);
-	transition-property: color, transform;
-	transition-duration: 0.23s;
-	transition-timing-function: ease-in;
-}
-
-RadioButton Label
-{
-	padding-left: 50px;
-	padding-top: 5px;
-	}
-
-.CheckBox:hover Label, RadioButton:hover Label
-{
-	color: #ffffffff;
-	transform: translatex(0px);
-}
-
-.CheckBox:focus Label, RadioButton:focus Label
-{
-	color: #000000ff;
-	transform: translatex(0px);
-}
 
 .SettingsSection
 {
@@ -554,7 +456,7 @@ RadioButton Label
 
 	transition-property: opacity;
 	transition-duration: SettingsPanelTransitionDuration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	flow-children: down;
 	background-color: settingsbackgroundgradient;
 }
@@ -635,7 +537,7 @@ TextEntry:focus
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -784,7 +686,7 @@ DropDown Label
 	transform: translateX( 0px );
 	transition-property: transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	color: applabelsolid;
 }
 
@@ -863,7 +765,7 @@ NetworkSettings_AvailableSSID:hover .NetworkName
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1090,7 +992,7 @@ NetworkSettings_AvailableSSID:hover .NetworkName
 	
 	transition-property: opacity;
 	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #NetworkDeviceStatus
@@ -1557,46 +1459,6 @@ DropDownMenu
 	visibility: collapse;
 }
 
-// radio button settings - these can be made global if we grab the focus/hover styles too
-.RadioButton
-{
-	height: 48px;
-	margin-bottom: 4px;
-	margin-top: 0px;
-}
-
-// circle for the radio
-.RadioButton .RadioBox
-{
-	width: 36px;
-	height: 36px;
-	border-radius: 50%;
-	vertical-align: center;
-	background-color: blue;
-}
-
-.RadioButton:Selected .RadioBox
-{
-	background-image: url( "file://{images}/store/Icon_RadioDefault.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-}
-
-.RadioButton:Selected:focus .RadioBox
-{
-	background-image: url( "file://{images}/store/Icon_RadioSelected.png" );
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-
-}
-
-.RadioButton:focus .RadioBox,
-.RadioButton:selected:focus .RadioBox
-{
-	background-color: #ccccccff;
-}
-
-
 KeyboardShortcut,.KeyboardShortcut
 {
 	flow-children: right;
@@ -1647,7 +1509,7 @@ KeyboardShortcut:focus
 	animation-name: main-button-glow-movement; 
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1716,12 +1578,12 @@ KeyboardShortcut .Graphic
 
 .SettingsGameControllerIcon
 {
-	width: 128px;
-	height: 128px;
-	margin: 80px 0px 0px 0px;
+	width: 64px;
+	height: 64px;
+	margin: 0px 0px 0px 0px;
 	background-repeat: space;
 	wash-color: #999999;
-	background-image: url("file://{images}/settings/controller_icon.png");
+	background-image: url("file://{images}/settings/steam_controller_icon_64.png");
 	horizontal-align: left;
 	vertical-align: center;
 }
@@ -1760,7 +1622,8 @@ KeyboardShortcut .Graphic
 {
 	horizontal-align: left;
 	vertical-align: center;
-	//margin-bottom: 5px;
+	margin-bottom: 10px;
+	padding-left: 10px;
 }
 
 .SteamController #SteamControllerVersion
@@ -1833,7 +1696,7 @@ KeyboardShortcut .Graphic
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1888,7 +1751,7 @@ KeyboardShortcut .Graphic
 	animation-name: links-and-more-button-focus, quick-blur; 
 	animation-duration: 1.7s;
 	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 	
@@ -1959,7 +1822,7 @@ SettingsPanel_GameController_Binding
 	animation-name: links-and-more-button-focus, quick-blur; 
 	animation-duration: 1.7s;
 	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite, 1;
 	animation-direction: normal;
 	
@@ -2012,7 +1875,7 @@ SettingsPanelGameController_NameAndCommitBinding, .SettingsPanelGameController_N
 
 	animation-name: msg-box-appear;
 	animation-duration: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -2023,7 +1886,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 
 	animation-name: msg-box-disappear;
 	animation-duration: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 }
 
@@ -2282,7 +2145,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -2338,7 +2201,7 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 	background-color: #cccccc;
@@ -2521,6 +2384,25 @@ color: black;
 	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
 }
 
+#SettingsRemoteClientsStreamActiveContainer
+{
+    flow-children: down;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#SettingsRemoteClientsStreamActiveDeviceLabel
+{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#SettingsRemoteClientsStreamActiveSpaceFiller
+{
+    height: fill-parent-flow( 1.0 );
+}
+
 #SettingsDiskManagementTable
 {
 	height: 500px;	
@@ -2538,7 +2420,7 @@ color: black;
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -2602,7 +2484,7 @@ color: black;
 	
 	transition-property: opacity;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0.0s;
 }
 
@@ -2613,7 +2495,7 @@ SettingsPanel_RemoteClients.Loading #RemoteClientThrobber
 	animation-name: loading-throbber-appear;
 	animation-duration: 0.23s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }
@@ -2711,7 +2593,7 @@ SettingsPanelRemoteClientListing:descendantfocus, SettingsPanelDiskManagementApp
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -2722,7 +2604,7 @@ SettingsPanelDiskManagementAppListing Button Label
 	transform: translateX( -7px );
 	transition-property: transform;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 SettingsPanelDiskManagementAppListing Button:descendantfocus Label
@@ -2730,7 +2612,7 @@ SettingsPanelDiskManagementAppListing Button:descendantfocus Label
 	transform: translateX( 7px );
 	transition-property: transform;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .SettingsDiskManagementSize
@@ -2744,7 +2626,7 @@ SettingsPanelDiskManagementAppListing Button:descendantfocus .SettingsDiskManage
 	transform: translateX( -7px );
 	transition-property: transform;
 	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	
 }
 
@@ -3014,7 +2896,7 @@ SettingsPanel_Display.Underscan
 
 	transition-property: background-color;
 	transition-duration: 0.05s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 .CtlrBarContainer:focus .CtlrBar
@@ -3307,6 +3189,38 @@ SettingsPanel_AlienFX .SettingsCenterContent
 	height: 500px;
 }
 
+SettingsPanel_Keyboard #LanguageList
+{
+	height: 400px;
+	width: 100%;	
+}
+
+SettingsPanel_Keyboard #RadioButtonContainer
+{
+	flow-children: down;
+	height: fit-children;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+SettingsPanel_Keyboard #RadioButtonContainer .InputContainerDown,
+SettingsPanel_Keyboard #RadioButtonContainer .RadioButton,
+SettingsPanel_Keyboard .HorzContainer,
+SettingsPanel_Keyboard .HorzContainer Button
+{
+	width: 100%;	
+}
+
+SettingsPanel_Keyboard .HorzContainer Button
+{
+	margin-right: 10px;
+}
+
+SettingsPanel_Keyboard .VertContainer
+{
+	width: 800px;
+}
+
 #LanguageList:descendantfocus,
 #RegionsList:descendantfocus
 {
@@ -3348,7 +3262,7 @@ TimeZoneRegionPanel Button.SelectedRegion:focus
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -3370,7 +3284,7 @@ TimeZoneRegionPanel Button Label
 
 	transition-property: color, transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #LanguageList Button:hover Label,
@@ -3670,4 +3584,20 @@ OOBEWizard SettingsPanelNetwork_Connect #ButtonDone
 .TimeZoneRegionDetailText
 {
 	color: tcstatictext;
+}
+
+SettingsPanelNetwork_IPSettings .RadioButton 
+{
+	width: fit-children;
+}
+
+SettingsPanelNetwork_IPSettings .RadioButton Label
+{
+	width: fit-children;
+}
+
+SettingsPanelNetwork_IPCustomSettings #WrapperPanel
+{
+	flow-children: down;
+	margin-left: 7px;
 }

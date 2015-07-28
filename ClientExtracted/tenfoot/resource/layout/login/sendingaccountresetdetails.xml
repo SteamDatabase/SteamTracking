@@ -9,9 +9,7 @@
 		<Label class="WizardChildTitle" text="#ChangePassword_RecoverAccount_Title" />
 		<Label class="WizardChildDescription" text="#ChangePassword_Working_Description" />
 
-		<Panel id="ThrobberContainer">
-			<Panel class="Throbber" />
-		</Panel>
+		<LoadingThrobber id="Throbber" />
 
 	</ChangingPasswordWizardChild>
 

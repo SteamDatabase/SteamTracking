@@ -20,6 +20,7 @@
 				<Label id="FilterUnblocked" text="#Library_UnblockedFilter" />
 				<Label id="FilterInstalledLocally" text="#Library_InstalledLocally" />
 				<Label id="FilterHidden" text="#Library_Hidden" />
+				<Label id="FilterStreamingVideos" text="#Library_StreamingVideos" />
 			</DropDown>
 		</Panel>
 		<Panel hittest="false" id="FastScrollWrapper">

@@ -16,7 +16,7 @@ MusicLibraryContainerPanel
 
 	transition-property: transform, blur, position, opacity, desaturation;
 	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -175,7 +175,7 @@ MusicLibraryCrawlingPanel
 
 	transition-property: transform, opacity;
 	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
 
@@ -285,7 +285,7 @@ MusicLibraryCrawlingPanel
 	font-weight: light;
 	align: center center;
 	transition-property: color, opacity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.4s;
 }
 
@@ -381,7 +381,7 @@ MusicLibraryCrawlingPanel
 	transform: translateX( -220px );
 	transition-property: transform;
 	transition-duration: 0.23s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	width: 100%;
 	height: 100%;
@@ -410,7 +410,7 @@ AlbumGridItem
 	transition-property: pre-transform-scale2d, position, transform, box-shadow;
 	transition-duration: 0.23s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	
 	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
 }
@@ -425,7 +425,7 @@ AlbumGridItem:focus
 
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -538,7 +538,7 @@ AlbumGridItem Label
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	font-family: platformfont;
 	z-index: 5;
 
@@ -682,7 +682,7 @@ AlbumGridItem:focus Label
 	transition-property: opacity, background-color;
 	transition-duration: mediumduration;
 	transition-delay: 0.2s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transform: translateY( -80px );
 }
 
@@ -790,7 +790,7 @@ AlbumGridItem:focus Label
 
 	transition-property: opacity;
 	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
 }
@@ -814,7 +814,7 @@ AlbumGridItem:focus Label
 	
 	transition-property: opacity;
 	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
@@ -930,7 +930,7 @@ ArtistGridItem
 	transition-property: pre-transform-scale2d, position, transform;
 	transition-duration: 0.3s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
 }
@@ -992,7 +992,7 @@ ArtistGridItem:focus #FocusBorderPanel
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1023,7 +1023,7 @@ ArtistGridItem Label
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	font-family: platformfont;
 	z-index: 5;
 }
@@ -1204,7 +1204,7 @@ MusicArtistPanel AlbumGridItem Label
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	font-family: platformfont;
 	z-index: 5;
 
@@ -1289,7 +1289,7 @@ PlaylistGridItem
 	transition-property: pre-transform-scale2d, position, transform;
 	transition-duration: 0.3s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	box-shadow: box_shadow_off_color 0px 0px 16px 0px;
 }
@@ -1351,7 +1351,7 @@ PlaylistGridItem:focus #FocusBorderPanel
 	animation-name: main-button-glow-movement;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
@@ -1382,7 +1382,7 @@ PlaylistGridItem Label
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-delay: 0.0s;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	font-family: platformfont;
 	z-index: 5;
 }

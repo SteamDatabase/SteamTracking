@@ -1,3 +1,6 @@
+
+@define touchkeyclickedactivetime: 0.13;
+
 TextInputDualTouch
 {
 	width: 100%;
@@ -28,12 +31,19 @@ TextInputDualTouch
 #TextPreviewBackground
 {
 	y: 8%;
-	background-color: daisy_bg_color;
+	background-color: #ffffff;
 	horizontal-align: center;
 	width: 720px;
 	height: 88px;
 	box-shadow: fill #00000022 -4px -4px 8px 12px;
 	border-radius: 10px;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 #TextPreview
@@ -41,14 +51,13 @@ TextInputDualTouch
 	horizontal-align: center;
 	width: 700px;
 	height: 68px;
-	background-color: daisy_petal_color;
+	background-color: gradient(linear, 0% 0%, 100% 0%, from(#cccccc), to(#bdbdbd) );
 	overflow: clip;
-	color: #ccccccff;
+	color: #222222ff;
 	font-size: 38px;
 	font-family: platformfont;
 	animation-name: none;
 	vertical-align: center;
-	background-color: #173a4c;
 	
 	text-overflow: clip;
 	white-space: nowrap;
@@ -61,16 +70,10 @@ TextInputDualTouch
 	visibility: collapse;
 }
 
-.HiddenFooter
-{
-	visibility: collapse;
-}
-
-
 .TouchPad
 {
 	y: 6px;
-	width: 500px;
+	width: 492px;
 	height: 510px;
 	background-repeat: no-repeat;
 	margin-left: -35px;
@@ -139,9 +142,17 @@ TextInputDualTouch
 }
 
 
-#Row1
+#Row0,
+#Row1,
+#Row2,
+#Row3
 {
-	width: 89%;
+	width: 88%;
+}
+
+#Row0.TouchRow
+{
+	height: 28%;
 }
 
 #Row1 .TouchKey
@@ -149,14 +160,24 @@ TextInputDualTouch
 	width: 15.5%;
 }
 
-#Row2
+#Row1.TouchRow
 {
-	width: 86%;
+	height: 19.3%;
+}
+
+#Row2.TouchRow
+{
+	height: 16.6%;
 }
 
 #Row2 .TouchKey
 {
 	width: 16.05%;
+}
+
+#Row3.TouchRow
+{
+	height: 19.3%;
 }
 
 .NoSuggest .TouchRow,
@@ -196,6 +217,15 @@ TextInputDualTouch
 	width: 19.9%;
 }
 
+// Q, R, U, P
+#TouchKey_0_1.TouchKey,
+#TouchKey_3_1.TouchKey,
+#TouchKey_6_1.TouchKey,
+#TouchKey_9_1.TouchKey
+{
+	width: 22.05%;
+}
+
 // T, Y
 #TouchKey_4_1.TouchKey,
 #TouchKey_5_1.TouchKey
@@ -214,17 +244,25 @@ TextInputDualTouch
 {
 	border-right-width: 0px;
 	border-left-width: 0px;
+	width: 100%;
 }
 
 .Right #TouchKey_Space
 {
 	border-left-width: 0px;
 	border-right-width: 0px;
+	width: 50%;
 }
 
-#TouchKey_Space
+#TouchKey_Submit
 {
-	width: 100%;
+	background-color: #3f643a;
+	width: 50%;
+}
+
+#TouchKey_Submit.TouchKeyHover
+{
+	background-color: #88b51c;
 }
 
 #TouchKey_Suggest_0.TouchKey,
