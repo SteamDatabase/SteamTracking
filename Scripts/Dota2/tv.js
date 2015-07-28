@@ -5291,6 +5291,11 @@
 
 		this.$m_RadiantLabel = $( this.$m_Legend.find( '.RadiantDireLabel' )[0] );
 		this.$m_DireLabel = $( this.$m_Legend.find( '.RadiantDireLabel' )[1] );
+
+		this.m_PicksBansData = {
+			bans: { label_base_key: 'DotaTV_Ban', get_data_func: function() { return g_Match.GetBans() }, panel: this.$m_BanItems, count: 0 },
+			picks: { label_base_key: 'DotaTV_Pick', get_data_func: function() { return g_Match.GetPicks() }, panel: this.$m_PickItems, count: 0 }
+		};
 	};
 
 	CDraftStatsPanel.prototype = Object.create( CBasePanel.prototype );
@@ -5298,27 +5303,44 @@
 
 	CDraftStatsPanel.prototype.BPreShow = function()
 	{
-		var rgBansPicks = {
-			bans: { label_base_key: 'DotaTV_Ban', data: g_Match.GetBans(), panel: this.$m_BanItems },
-			picks: { label_base_key: 'DotaTV_Pick', data: g_Match.GetPicks(), panel: this.$m_PickItems }
-		};
+		if ( !g_Match )
+			return false;
 
+		VUtils.AssertMsg( g_Tournament, "User should never be able to show this panel unless we are in a tournament game." );
+
+		// Emtpy everything out
+		var rgBansPicks = this.m_rgPicksBansData;
 		for ( var strBansPicks in rgBansPicks )
 		{
-			var $Panel = rgBansPicks[strBansPicks].panel;
-			var rgBansOrPicksData = rgBansPicks[strBansPicks].data;
-			var strBaseKey = rgBansPicks[strBansPicks].label_base_key;
+			rgBansPicks[strBansPicks].panel.empty();
+			rgBansPicks[strBansPicks].count = 0;
+		}
 
-			$Panel.empty();
+		// Update with fresh data
+		this.UpdatePicksBans();
+
+		return true;
+	};
+
+	CDraftStatsPanel.prototype.UpdatePicksBans = function()
+	{
+		for ( var strBansPicks in this.m_PicksBansData )
+		{
+			var BansOrPicksMetaData = this.m_PicksBansData[strBansPicks];
+			var $Panel = BansOrPicksMetaData.panel;
+			var rgPicksOrBansData = BansOrPicksMetaData.get_data_func();	// Assumes g_Match is valid.
+			var strBaseKey = BansOrPicksMetaData.label_base_key;
+			var cLen = rgPicksOrBansData.length;	// # of picks or bans
 
 			var rgCounts = {};
 			rgCounts[DOTA_CONSTS.TEAM_RADIANT] = rgCounts[DOTA_CONSTS.TEAM_DIRE] = 1;
 
-			for ( var i = 0; i < rgBansOrPicksData.length; ++i )
+			// Only add the ones we care about.
+			for ( var i = BansOrPicksMetaData.count; i < cLen; ++i )
 			{
 				var $Item = this.$m_DummyItem.clone().removeAttr( 'id' ).addClass( 'PickBanItem ' );
-				var strHeroImageURL = GetHeroImageURL_LargeWide( rgBansOrPicksData[i].GetHeroID() );
-				var nTeam = rgBansOrPicksData[i].GetTeam();
+				var strHeroImageURL = GetHeroImageURL_LargeWide( rgPicksOrBansData[i].GetHeroID() );
+				var nTeam = rgPicksOrBansData[i].GetTeam();
 
 				$Item.find( '.ImageBackground' ).append( CreateImage( strHeroImageURL ) );
 				$Item.find( '.TeamGradiant' ).addClass( 'TeamGradiant' + GetRadiantDireFromTeam( nTeam ) );
@@ -5327,14 +5349,17 @@
 
 				++rgCounts[nTeam];
 			}
+
+			BansOrPicksMetaData.count = cLen;
 		}
 
-		return true;
 	};
 
 	CDraftStatsPanel.prototype.OnDataReceived = function()
 	{
 		CBasePanel.prototype.OnDataReceived.apply( this, arguments );
+
+		this.UpdatePicksBans();
 	};
 
 	CDraftStatsPanel.prototype.Think = function( flCurTime, flElapsed )
@@ -5347,12 +5372,21 @@
 		CBasePanel.prototype.UpdateFromData.apply( this, arguments );
 	};
 
+	CDraftStatsPanel.prototype.OnPrePop = function( bPopped )
+	{
+		CBasePanel.prototype.OnPrePop.apply( this, arguments );
+
+		this.ResizeFonts();
+	};
+
 	CDraftStatsPanel.prototype.ResizeFonts = function()
 	{
 		CBasePanel.prototype.ResizeFonts.apply( this, arguments );
 
 		var nBaseKeyHeight = this.$m_Block.actual( 'width' );	// NOTE: 1:1 aspect on this element
 		var flBaseKeyEm = nBaseKeyHeight / 16;
+
+		// NOTE: The font size is automatically increased in 'popped' mode, since the .Block style's size is increased, and the font size is based on that.
 
 		var strHeaderFontSize = ( 1.5 * flBaseKeyEm ) + 'em';
 
