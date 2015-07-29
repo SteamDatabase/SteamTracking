@@ -1088,6 +1088,11 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	margin-bottom: 4px;
 }
 
+
+.screenshot_showcase_screenshot img {
+    display: block;
+}
+
 .screenshot_showcase_itemname {
 	word-wrap: break-word;
 }
