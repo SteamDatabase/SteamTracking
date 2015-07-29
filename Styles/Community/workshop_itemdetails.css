@@ -331,8 +331,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .workshopItemControls {
 	position: relative;
-	padding: 12px 0px 2px 0px;
-	height: 30px;
+	padding: 6px 0;
+	line-height: 40px;
 }
 .collectionControls .workshopItemControls {
 	background: rgba( 42, 60, 83, 0.8 );
@@ -349,7 +349,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .workshopItemControls .vertical_divider_container
 {
 	position: relative;
-	float: left;
+	display: inline-block;
 	padding: 8px;
 	padding-left: 20px;
 }
@@ -398,12 +398,31 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	bottom: 8px;
 }
 
+.workshopItemControlCtn {
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.workshopItemControlCtn.right {
+	float: right;
+}
+
 .rateUpCount
 {
 	float: left;
 	color: #7CC5FB;
 	padding-right: 10px;
 	line-height: 30px;
+}
+
+.workshopItemControlCtn .rateUpCount,
+.workshopItemControls .workshopItemControlCtn .general_btn,
+.workshopItemControls .workshopItemControlCtn .share_controls,
+.workshopItemControls .workshopItemControlCtn .settings_controls {
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .rateUpCount img
@@ -472,14 +491,12 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .general_btn.report
 {
 	height: 30px;
-	padding: 0px;
+	padding: 0;
 	padding-left: 32px;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/report_ico_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
-	display: inline-block;
 	line-height: 30px;
-	float: right;
 }
 
 .general_btn.report.toggled
@@ -1432,8 +1449,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 }
 
 	.mediaTop.modal {
-		margin-right: 324px;
-		padding-right: 10px;
+		border: none;
 	}
 
 		.mediaTop.modal > .img {
@@ -1446,18 +1462,31 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	.mediaTop .mediaSidebar {
 		position: absolute;
 		overflow: hidden;
-		right: -324px;
-		top: 0px;
-		width: 324px;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 33%;
 		background-color: #262627;
 		height: 100%;
 		padding: 0 5px 0 5px;
 	}
 
+	.mediaTop.withRightCol .actualmediactn {
+		width: 66%;
+	}
+
+	.mediaTop.mediaOnly {
+		text-align: center;
+	}
+
+	.mediaTop.mediaOnly .actualmediactn {
+		max-height: 475px;
+	}
+
 	.mediaTop .workshopItemControls
 	{
 		background-color: transparent;
-		width: 640px;
+		max-width: 640px;
 		margin-left: 8px;
 	}
 
@@ -1472,12 +1501,6 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	text-align: left;
 	position: relative;
 	margin: 0px auto;
-}
-
-.mediaBody.modal
-{
-	min-width: 480px;
-	width: 100% !important;
 }
 
 .mediaBody.modalVideo
@@ -1538,6 +1561,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	padding-left: 0px;
 	width: auto;
+}
+
+#ig_bottom.in_modal,
+#ig_bottom.modal.mediaBody
+{
+	width: auto;
+	min-width: 0;
+	max-width: none;
 }
 
 #ig_bottom .modalDetails #rightContents .sidebar {
@@ -1612,43 +1643,63 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	width: 100%;
 }
 
-.movieFrame
-{
-	display: block;
-	width: 930px;
-	height: 536px;
-	margin-left: auto;
-	margin-right: auto;
+.actualmediactn.video_ctn {
 	position: relative;
 }
 
-.movieFrame.modal
-{
+.actualmediactn.video_ctn img.video_spacer {
 	width: 100%;
-	max-width: 100%;
+	visibility: hidden;
 }
-.movieFrame.modal.panorama
+
+.actualmediactn.video_ctn iframe.movieFrame
 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	width: 100%;
-	height: 475px;
+	height: 100%;
+	border: none;
 }
 
 .screenshotApp
 {
 	float: right;
+	height: 40px;
+	max-width: 80%;
 }
 
 .screenshotAppBlock
 {
-	width: 220px;
 	padding-right: 20px;
 	padding-top: 6px;
 	cursor: pointer;
+	white-space: nowrap;
 }
 
 .screenshotAppBlock.shortcut
 {
 	cursor: default;
+}
+
+.screenshotAppBlock .linkedAppSmallLogo
+{
+	float: none;
+}
+
+.screenshotAppText{
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 6px;
+	max-width: 240px;
+}
+
+.screenshotAppName, .screenshotAppDesc {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .screenshotAppName, .screenshotAppName > a
@@ -3079,7 +3130,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 /* preview images from BBCode */
 .sharedFilePreviewImage
 {
-	max-width: 638px;
+	max-width: 100%;
 }
 
 /* size */
@@ -3114,6 +3165,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	margin-bottom: 4px;
 }
 
+@media screen and (max-width: 480px)
+{
+	/* don't let the floating guys cram text into a small corner */
+	html.responsive .sharedFilePreviewImage.floatLeft, html.responsive .sharedFilePreviewImage.floatRight {
+		max-width: 60%;
+	}
+}
+
 .sharedFilePreviewImage.inline
 {
 }
@@ -3124,10 +3183,25 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	/* recommended YouTube diemnsion is 640x385 for 16:9 content */
 	display: block;
 	width: 638px;
-	height: 384px;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+}
+
+.sharedFilePreviewYouTubeVideo img {
+	width: 100%;
+	display: block;
+}
+
+.sharedFilePreviewYouTubeVideo iframe {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* size */

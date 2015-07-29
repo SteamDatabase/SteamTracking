@@ -392,10 +392,10 @@ a.pagelink:hover {
 	padding-bottom: 2px;
 }
 .commentthread_header {
-	border-bottom: 1px solid #515152;
+	border-bottom: 1px solid #363f4c;
 }
 .commentthread_footer {
-	border-top: 1px solid #515152;
+	border-top: 1px solid #363f4c;
 }
 
 .commentthread_header .commentthread_count, .commentthread_footer .commentthread_count {
@@ -421,6 +421,11 @@ a.pagelink:hover {
 
 .commentthread_pagedropdown {
 	display: none;
+}
+
+/* fix some bad workshop.css styles */
+.commentthread_pagedropdown select {
+	width: auto;
 }
 
 .commentthread_pagelink:hover {
@@ -1106,6 +1111,44 @@ img.emoticon {
 	max-width: 225px;
 	white-space: normal;
 	box-shadow: 0 0 3px #000000;
+}
+
+/* formatting help dialog */
+.tagrow {
+	margin-bottom: 8px;
+	padding: 0 4px;
+	position: relative;
+	font-size: 12px;
+}
+
+.tagrow.tagrow_header {
+	background-color: #1E1E1F;
+	color: #626467;
+	line-height: 18px;
+}
+
+.tagrow .tag {
+	color: #cccccc;
+}
+
+.tagsyntax {
+	float: left;
+	width: 57%;
+	margin-left: 1%;
+	margin-right: 3%;
+}
+
+.tagexample {
+	float: left;
+	width: 38%;
+}
+
+.tagexample a {
+	text-decoration: underline;
+}
+
+.tagexample a:hover {
+	color: #ffffff;
 }
 
 

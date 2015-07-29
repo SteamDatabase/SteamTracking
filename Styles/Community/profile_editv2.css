@@ -9,6 +9,14 @@
 	margin-bottom: 32px;
 }
 
+.formRow.PrivacySettings .formRowFields {
+	line-height: 125%;
+}
+
+.formRow.PrivacySettings .formRowFields > div {
+	margin-bottom: 4px;
+}
+
 .privacy_setting_name {
 	color: #ffffff;
 }
@@ -19,7 +27,7 @@
 
 	/* to match the width of the profile page left column */
 .profile_showcase_selector {
-	width: 636px;
+	max-width: 636px;
 }
 
 .customization_edit_area {
@@ -27,8 +35,8 @@
 }
 
 .customization_controls {
-	line-height: 27px;
 	padding-top: 10px;
+	margin-bottom: 7px;
 }
 
 .customization_controls .btn_grey_black.btn_medium > span {
@@ -92,15 +100,22 @@
 
 .profile_background_select_option {
 	float: left;
-	width: 252px;
-	margin-left: 24px;
+	width: 47%;
+	margin-left: 5%;
 
 	color: #6d6d6b;
 	font-size: 13px;
-	padding: 3px;
 	border-radius: 3px;
 
 	cursor: pointer;
+}
+
+.profile_background_select_option_inner {
+	padding: 3px;
+}
+
+.profile_background_select_image {
+	width: 100%;
 }
 
 .profile_background_select_option:hover {
@@ -116,14 +131,13 @@
 .profile_background_blank {
 	background-color: #262627;
 	border: 1px solid #797272;
-	width: 238px;
+	width: auto;
 	height: 138px;
 	margin-bottom: 4px;
 }
 
 .profile_background_select_row {
 	margin-bottom: 33px;
-	width: 540px;
 }
 
 .profile_background_select_row:last-child {
@@ -198,6 +212,10 @@
 	height: 54px;
 }
 
+.profile_background_current_image_ctn.favorite_badge img {
+	width: 100%;
+}
+
 .profile_background_current_image_ctn.favorite_badge .showcase_openslot_placeholder {
 	line-height: 70px;
 }
@@ -269,4 +287,17 @@
 
 .achievement_list_item .achievement_list_desc b {
 	color: #ffffff;
+}
+
+.avatar_previews {
+	margin-bottom: 12px;
+}
+
+.edit_subpage_selector {
+	padding-left: 4%;
+	margin-bottom: 16px;
+}
+
+.edit_subpage_selector .subpage_selector_label {
+	color: #61696D;
 }

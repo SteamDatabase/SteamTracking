@@ -40,17 +40,42 @@
 	color: #61696d;
 }
 
+.guideTop .workshopItemControlsCtn
+{
+	z-index: 21;
+}
+
 .guideTop .workshopItemControls
 {
 	background-color: #223349;
 
-	width: 930px;
-	z-index: 21;
+	max-width: 930px;
+	margin: 0 auto;
 	-moz-box-shadow: 0px 0px 7px #000000;
 	-webkit-box-shadow: 0px 0px 7px #000000;
 	box-shadow: 0px 0px 7px #000000;
 	padding: 10px;
-	
+}
+
+.guideTop .workshopItemControlsCtn.fixed_in_scroll
+{
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+/* don't float the controls down at small widths (they wrap poorly) or small heights */
+@media screen and ( max-width: 450px ), screen and ( max-height: 360px )
+{
+	html.responsive .guideTop .workshopItemControlsCtn.fixed_in_scroll
+	{
+		position: static;
+	}
+
+	html.responsive .guideTop #ScrollWrapperPadding_ScrollingItemControls
+	{
+		display: none;
+	}
 }
 
 .editGuideEmptyDetailBox .guidePreviewImagesToUpload
@@ -106,6 +131,26 @@
 #GuideTableOfContents
 {
 	width: 272px;
+}
+
+#GuideTableOfContents.fixed_in_scroll
+{
+	position: fixed;
+}
+
+html.responsive .responsive_page_menu #GuideTableOfContents
+{
+	width: auto;
+}
+
+html.responsive .responsive_page_menu #GuideTableOfContents.fixed_in_scroll
+{
+	position: static;
+}
+
+html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
+{
+	display: none;
 }
 
 .guideSubSectionSelection

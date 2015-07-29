@@ -22,9 +22,10 @@ function CheckForVisibleYouTubeVideos()
 		{
 			if ( video.embeddedVideo == null || typeof video.embeddedVideo == "undefined" )
 			{
+				var videoSizeImg = $J('<img/>', {src: 'https://steamcommunity-a.akamaihd.net/public/shared/images/responsive/youtube_16x9_placeholder.gif', 'class': 'placeholder_img'});
 				var videoSrc = "http://www.youtube.com/embed/" + video.id + "?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct";
 				video.embeddedVideo = new Element( 'iframe', { 'class' : video.classNames().toString(), 'src' : videoSrc, 'frameborder' : 0, 'allowfullscreen' : '1' } );
-				video.appendChild( video.embeddedVideo );
+				$J(video).append( videoSizeImg, video.embeddedVideo );
 			}
 			video.embeddedVideo.show();
 		}
@@ -104,17 +105,17 @@ function SelectGuideSection( sectionID, scrollType )
 			}
 			else
 			{
-				window.scrollTo( 0, $J('#' + sectionID).offset().top - 60 );
+				ScrollToIfNotInView( sectionID, 0, 60 );
 			}
 			break;
 		case 'scrollTo':
 			if ( sectionID == '0' )
 			{
-				$J('html, body').animate({scrollTop: $J('#' + sectionID).offset().top - 60 }, 'fast');
+				$J('html, body').animate({scrollTop: 0 }, 'fast');
 			}
 			else
 			{
-				$J('html, body').animate({scrollTop: $J('#' + sectionID).offset().top - 60 }, 'fast');
+				ScrollToIfNotInView( sectionID, 0, 60, 'fast' );
 			}
 			break;
 	}

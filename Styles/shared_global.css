@@ -1691,4 +1691,8 @@ body.v6 #footer_nav .popup_menu .hr{
 		overflow: auto;
 		min-width: 0;
 	}
+
+	html.responsive .newmodal_content {
+		padding: 8px 2%;
+	}
 }

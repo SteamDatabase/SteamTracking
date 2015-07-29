@@ -1,10 +1,17 @@
 
 
 .imageWallRow {
-	width: 958px;
-	min-width: 958px;
-	margin: 0px 0 6px 0;
+	margin: 0;
 	padding: 0;
+}
+
+.imageWallRow a.profile_media_item, .video_item a.profile_media_item {
+	display: block;
+	position: relative;
+}
+
+.imageWallRow a.profile_media_item.fill_height {
+	height: 100%;
 }
 
 .imageWall4Floaters {
@@ -19,20 +26,111 @@
 	margin-top: -2px;
 }
 
+.imageWall5Floaters .floatHelp {
+	width: 20%;
+	float: left;
+}
+
+.imageWall2Floaters {
+	position: relative;
+}
+
+.imageWall2Floaters .floatHelp:first-child {
+	width: 50%;
+}
+
+.imageWall2Floaters .floatHelp:nth-child(2) {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	right: 0;
+}
+
+.imageWall4Split {
+	position: relative;
+}
+
+.imageWall4Split .splitMain {
+	width: 60%;
+}
+
+.imageWall4Split.left .splitMain {
+	float: left;
+}
+.imageWall4Split.right .splitMain {
+	float: right;
+}
+
+.imageWall4Split .splitSubs {
+	width: 40%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+.imageWall4Split.left .splitSubs {
+	right: 0;
+}
+.imageWall4Split.right .splitSubs {
+	left: 0;
+}
+
+.imageWall4Split .splitSubs .splitSubMain {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 40%;
+}
+
+.imageWall4Split .splitSubs .splitSubSubs {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 60%;
+	bottom: 0;
+}
+
+.imageWall4Split .splitSubs .splitSubSubs .splitSubSub {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
 .imgWallHover {
 	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
 	margin: 0;
 	padding: 0;
 	z-index: 2;
 }
 
 .imgWallItem {
-	margin: 0;
-	padding: 0;
 	border: 1px solid black;
 	background-color: black;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
+
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	bottom: 3px;
+	left: 3px;
+	overflow: hidden;
+}
+
+a.profile_media_item.auto_height .imgWallItem {
+	position: static;
+	margin: 3px;
+}
+
+.imgWall5050 {
+	float: left;
+	width: 50%;
 }
 
 .imgWallItem.loadError {
@@ -57,8 +155,18 @@
 
 
 .imgWallHoverBottom {
+	position: absolute;
 	opacity: 0.75;
 	filter:alpha(opacity=75);
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+a.profile_media_item.auto_height .imgWallHoverBottom {
+	left: 4px;
+	bottom: 1px;
+	right: 4px;
 }
 
 .imgWallHoverDescription {
@@ -111,7 +219,7 @@
 .imgWall_GetMoreContentWait
 {
 	position: relative;
-	width: 948px;
+	max-width: 948px;
 	height: 50px;
 	line-height: 50px;
 	margin: 0px auto;
@@ -182,30 +290,25 @@
 .imgWall_BackToTop
 {
 	position: fixed;
-	margin-left: -480px;
 	left: 50%;
-	bottom: 0px;
-	height: 53px;
-	width: 960px;
+	bottom: 0;
+	right: 10%;
 	z-index: 800;
+
+	box-shadow: 0 0 10px 2px #000000;
 }
 
-.imgWall_BackTopTopShadow
-{
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_back_top_shadow.png' );
-	margin-left: 5px;
-	width: 949px;
-	height: 20px;
+.imgWall_BackToTop > a {
+	position: relative;
+	display: block;
+	height: 33px;
 }
 
 .imgWall_BackToTopButton
 {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_back_top_active.png' );
-	width: 3px;
 	height: 33px;
 	line-height: 33px;
-	float: left;
-	display: inline-block;
 }
 
 .imgWall_BackToTop:hover .imgWall_BackToTopButton
@@ -215,23 +318,30 @@
 
 .imgWall_BackToTopButton.middle
 {
-	left: 3px;
-	width: 954px;
-	background-position: 0px -33px;
+	margin: 0 3px;
+	background-position: 0 -33px;
 	background-repeat: repeat-x;
 	text-align: center;
 }
 
 .imgWall_BackToTopButton.leftcap
 {
-	left: 0px;
-	background-position: 0px 0px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	background-position: 0 0;
 }
 
 .imgWall_BackToTopButton.rightcap
 {
-	right: 0px;
-	background-position: 0px -66px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	background-position: 0 -66px;
 }
 
 .imgWall_BackToTopBody a
@@ -263,7 +373,8 @@
 .image_wall_spoiler_cover
 {
 	position: absolute;
-	width: 100%;
+	left: 0;
+	right: 0;
 	top: 10%;
 	bottom: 10%;
 	cursor: pointer;
@@ -277,4 +388,23 @@
 	top:40%;
 	width: 100%;
 	text-align: center;
+}
+
+@media screen and (max-width: 400px)
+{
+	html.responsive .imageWall5Floaters .imgWallHoverBottom,
+	html.responsive .splitSubSub .imgWallHoverBottom {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	html.responsive .imageWall5Floaters .floatHelp {
+		width: 33%;
+	}
+	html.responsive .imageWall5Floaters .floatHelp:nth-child(4),
+	html.responsive .imageWall5Floaters .floatHelp:nth-child(5) {
+		width: 50%;
+	}
 }

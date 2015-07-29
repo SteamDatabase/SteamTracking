@@ -3,8 +3,7 @@
 #BG_top_sharedfiles {
 	position:relative;
 	background-repeat:no-repeat;
-	width:958px;
-	height:70px;
+	min-height:70px;
 	text-align: left;
 	margin: 10px auto 0px auto;
 }
@@ -35,13 +34,12 @@
 }
 
 #BG_bottom_sharedfiles {
-	width:958px;
+	max-width:958px;
 	text-align:left;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 #mainContents_sharedfiles {
-	width:958px;
 	padding:0;
 	text-align:left;
 	padding-top: 10px;
@@ -52,7 +50,7 @@
 }
 
 #HeaderUserInfo {
-	float: left;
+	overflow: hidden;
 }
 
 #HeaderUserBreadcrumbs {
@@ -249,14 +247,17 @@ a.general_btn:hover {
 #FilterContainer {
 	color: #58759f;
 	padding-left: 15px;
-	height: 35px;
+}
+
+.sharedfiles_usercontrol_ctn {
+	display: inline-block;
 }
 
 .sharedfiles_usercontrols_label {
-	display: inline;
-	float: left;
-	margin-top: 5px;
+	display: inline-block;
 	color: #939393;
+	vertical-align: top;
+	line-height: 26px;
 }
 
 div.sharedfiles_filterselect {
@@ -266,7 +267,7 @@ div.sharedfiles_filterselect {
 	line-height: 26px;
 	color: white;
 	font-size: 12px;
-	float: left;
+	display: inline-block;
 	text-align: left;
 	border: 1px solid transparent;
 	user-select: none;
@@ -526,9 +527,8 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	padding: 0px;
 	padding-left: 12px;
 	padding-right: 12px;
-	margin-top: -7px;
 	margin-right: 5px;
-	float: left;
+	margin-bottom: 5px;
 	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/groups/tab_blue_active.png);
 	background-repeat: repeat-x;
 	border-radius: 3px;
@@ -862,4 +862,28 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 .searchedForTermImage
 {
 	margin-left: 10px;
+}
+
+.video_items_ctn {
+
+}
+
+.video_items_ctn .video_item {
+	float: left;
+	width: 33%;
+}
+
+@media screen and (max-width: 600px )
+{
+	.video_items_ctn .video_item {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 400px )
+{
+	.video_items_ctn .video_item {
+		float: none;
+		width: auto;
+	}
 }

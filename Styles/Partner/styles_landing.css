@@ -441,6 +441,9 @@ p.notice {
 	font-size: 14px;
 	margin-left: 0;
 }
+.bank_info p.notice {
+	font-size: 12px;
+}
 
 #UANotice {
 	background-color: #6b8705;
@@ -801,6 +804,9 @@ h2.incomplete {
 	width: auto;
 	margin-left: auto;
 	margin-right: auto;
+}
+.AdminPageContent.directory a.contentsLink {
+	line-height: 20px;
 }
 
 .tinyGreyArrow {

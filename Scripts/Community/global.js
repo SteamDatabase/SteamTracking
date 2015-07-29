@@ -310,6 +310,10 @@ function SetCookie( strCookieName, strValue, expiryInDays, path )
 	document.cookie = strCookieName + '=' + strValue + '; expires=' + dateExpires.toGMTString() + ';path=' + path;
 }
 
+// included data: strCode, eCurrencyCode, strSymbol, bSymbolIsPrefix, bWholeUnitsOnly
+g_rgCurrencyData = {"USD":{"strCode":"USD","eCurrencyCode":1,"strSymbol":"$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"GBP":{"strCode":"GBP","eCurrencyCode":2,"strSymbol":"\u00a3","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"EUR":{"strCode":"EUR","eCurrencyCode":3,"strSymbol":"\u20ac","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CHF":{"strCode":"CHF","eCurrencyCode":4,"strSymbol":"Fr.","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"RUB":{"strCode":"RUB","eCurrencyCode":5,"strSymbol":"p\u0443\u0431.","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"BRL":{"strCode":"BRL","eCurrencyCode":7,"strSymbol":"R$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"JPY":{"strCode":"JPY","eCurrencyCode":8,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"NOK":{"strCode":"NOK","eCurrencyCode":9,"strSymbol":"kr","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"IDR":{"strCode":"IDR","eCurrencyCode":10,"strSymbol":"Rp","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"MYR":{"strCode":"MYR","eCurrencyCode":11,"strSymbol":"RM","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PHP":{"strCode":"PHP","eCurrencyCode":12,"strSymbol":"P","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"SGD":{"strCode":"SGD","eCurrencyCode":13,"strSymbol":"S$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"THB":{"strCode":"THB","eCurrencyCode":14,"strSymbol":"\u0e3f","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"VND":{"strCode":"VND","eCurrencyCode":15,"strSymbol":"\u20ab","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"KRW":{"strCode":"KRW","eCurrencyCode":16,"strSymbol":"\u20a9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"TRY":{"strCode":"TRY","eCurrencyCode":17,"strSymbol":"TL","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"UAH":{"strCode":"UAH","eCurrencyCode":18,"strSymbol":"\u20b4","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"MXN":{"strCode":"MXN","eCurrencyCode":19,"strSymbol":"Mex$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"CAD":{"strCode":"CAD","eCurrencyCode":20,"strSymbol":"CDN$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"AUD":{"strCode":"AUD","eCurrencyCode":21,"strSymbol":"A$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"NZD":{"strCode":"NZD","eCurrencyCode":22,"strSymbol":"NZ$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"PLN":{"strCode":"PLN","eCurrencyCode":6,"strSymbol":"z\u0142","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"CNY":{"strCode":"CNY","eCurrencyCode":23,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"INR":{"strCode":"INR","eCurrencyCode":24,"strSymbol":"\u20b9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"CLP":{"strCode":"CLP","eCurrencyCode":25,"strSymbol":"CLP$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"PEN":{"strCode":"PEN","eCurrencyCode":26,"strSymbol":"S\/.","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"COP":{"strCode":"COP","eCurrencyCode":27,"strSymbol":"COL$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true},"ZAR":{"strCode":"ZAR","eCurrencyCode":28,"strSymbol":"R","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"HKD":{"strCode":"HKD","eCurrencyCode":29,"strSymbol":"HK$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"TWD":{"strCode":"TWD","eCurrencyCode":30,"strSymbol":"NT$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false},"SAR":{"strCode":"SAR","eCurrencyCode":31,"strSymbol":"SR","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"AED":{"strCode":"AED","eCurrencyCode":32,"strSymbol":"DH","bSymbolIsPrefix":false,"bWholeUnitsOnly":false},"RMB":{"strCode":"RMB","eCurrencyCode":9000,"strSymbol":"\u5200\u5e01","bSymbolIsPrefix":false,"bWholeUnitsOnly":true},"NXP":{"strCode":"NXP","eCurrencyCode":9001,"strSymbol":"\uc6d0","bSymbolIsPrefix":false,"bWholeUnitsOnly":true}};
+
+
 // takes an integer
 function v_currencyformat( valueInCents, currencyCode, countryCode )
 {
@@ -352,136 +356,31 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 	}
 }
 
+
 function IsCurrencySymbolBeforeValue( currencyCode )
 {
-	if ( currencyCode == 'GBP' || currencyCode == 'USD' || currencyCode == 'BRL' || currencyCode == 'JPY'
-		|| currencyCode == 'IDR' || currencyCode == 'MYR' || currencyCode == 'PHP' || currencyCode == 'SGD'
-		|| currencyCode == 'THB' || currencyCode == 'KRW' || currencyCode == 'MXN' || currencyCode == 'CAD' 
-		|| currencyCode == 'AUD' || currencyCode == 'NZD' )
-		return true;
-
-	return false;
+	return g_rgCurrencyData[currencyCode] && g_rgCurrencyData[currencyCode].bSymbolIsPrefix;
 }
 
 function IsCurrencyWholeUnits( currencyCode )
 {
-	switch ( currencyCode )
-	{
-				case 'JPY':
-		case 'IDR':
-		case 'VND':
-		case 'KRW':
-		case 'UAH':
-		case 'CNY':
-		case 'INR':
-		case 'CLP':
-		case 'COP':
-		case 'RMB':
-		case 'NXP':
-			return true;
-		
-		default:
-			return false;
-	}
+		return g_rgCurrencyData[currencyCode] && g_rgCurrencyData[currencyCode].bWholeUnitsOnly && currencyCode != 'RUB';
 }
 
 // Return the symbol to use for a currency
 function GetCurrencySymbol( currencyCode )
 {
-	switch( currencyCode )
-	{
-		case 'EUR':
-			return '€';
-		case 'GBP':
-			return '£';
-		case 'USD':
-			return '$';
-		case 'RUB':
-			return 'pуб.';
-		case 'BRL':
-			return 'R$';
-		case 'JPY':
-			return '¥';
-		case 'NOK':
-			return 'kr';
-		case 'IDR':
-			return 'Rp';
-		case 'MYR':
-			return 'RM';
-		case 'PHP':
-			return '₱';
-		case 'SGD':
-			return 'S$';
-		case 'THB':
-			return '฿';
-		case 'VND':
-			return '₫';
-		case 'KRW':
-			return '₩';
-		case 'TRY':
-			return 'TL';
-		case 'UAH':
-			return '₴';
-		case 'MXN':
-			return 'Mex$';
-		case 'CAD':
-			return 'CDN$';
-		case 'AUD':
-			return 'A$';
-		case 'NZD':			
-			return 'NZ$';
-		default:
-			return currencyCode + ' ';
-	}
+	return g_rgCurrencyData[currencyCode] ? g_rgCurrencyData[currencyCode].strSymbol : currencyCode + ' ';
 }
 
 function GetCurrencyCode( currencyId )
 {
-	switch( currencyId )
+	for ( var code in g_rgCurrencyData )
 	{
-		case 1:
-			return 'USD';
-		case 2:
-			return 'GBP';
-		case 3:
-			return 'EUR';
-		case 5:
-			return 'RUB';
-		case 7:
-			return 'BRL';
-		case 8:
-			return 'JPY';
-		case 9:
-			return 'NOK';
-		case 10:
-			return 'IDR';
-		case 11:
-			return 'MYR';
-		case 12:
-			return 'PHP';
-		case 13:
-			return 'SGD';
-		case 14:
-			return 'THB';
-		case 15:
-			return 'VND';
-		case 16:
-			return 'KRW';
-		case 17:
-			return 'TRY';
-		case 18:
-			return 'UAH';
-		case 19:
-			return 'MXN';
-		case 20:
-			return 'CAD';
-		case 21:
-			return 'AUD';
-		case 22:
-			return 'NZD';
-		default:
-			return 'Unknown';
+		if ( g_rgCurrencyData[code].eCurrencyCode = currencyId )
+			return code;
 	}
+	return 'Unknown';
 }
 
 function GetAvatarURLFromHash( hash, size )
@@ -1044,6 +943,7 @@ var CCommentThread = Class.create( {
 	m_cTotalCount: 0,
 	m_iCurrentPage: 0,
 	m_cMaxPages: 0,
+	m_cDropdownPages: 0,
 	m_bLoading: false,
 	m_bLoadingUserHasUpVoted : false,
 	m_cUpVotes: 0,
@@ -1628,7 +1528,35 @@ var CCommentThread = Class.create( {
 					elPageLinks.insert( ' ... ' );
 				this.AddPageLink( elPageLinks, this.m_cMaxPages - 1 );
 			}
+
+			// update the dropdown list with the total.
+			var $DropdownCtn = $J( '#' + strPagePrefix + 'dropdown');
+			var $Select = $DropdownCtn.children( 'select' );
+
+			if ( this.m_cDropdownPages != this.m_cMaxPages || !$Select.length )
+			{
+				if ( !$Select.length )
+				{
+					$Select = $J('<select/>');
+					var _this = this;
+					$Select.change( function() {
+						var $Select = $J(this);
+						console.log( 'GoToPage', $Select.val() );
+						_this.GoToPage( $Select.val() );
+					});
+					$DropdownCtn.append( $Select );
+				}
+
+				for ( var iDropdownPage = 0; iDropdownPage < this.m_cMaxPages; iDropdownPage++ )
+				{
+					$Select.append( $J('<option/>', { 'value' : iDropdownPage } ).text( iDropdownPage >= 999 ? v_numberformat( iDropdownPage + 1 ) : iDropdownPage + 1) );
+				}
+			}
+
+			$Select.val( this.m_iCurrentPage );
 		}
+
+		this.m_cDropdownPages = this.m_cMaxPages;
 	},
 
 	AddPageLink: function( elPageLinks, iPage )
@@ -1787,14 +1715,9 @@ CCommentThread.VoteUp = function( id )
 };
 CCommentThread.FormattingHelpPopup = function( strCommentThreadType )
 {
-	if ( strCommentThreadType == 'Guide' )
-	{
-		window.open( 'https://steamcommunity.com/comment/' + strCommentThreadType + '/formattinghelp','formattinghelp','height=975,width=640,resize=yes,scrollbars=yes');
-	}
-	else
-	{
-		window.open( 'https://steamcommunity.com/comment/' + strCommentThreadType + '/formattinghelp','formattinghelp','height=640,width=640,resize=yes,scrollbars=yes');
-	}
+	$J.get( 'https://steamcommunity.com/comment/' + strCommentThreadType + '/formattinghelp', {ajax:1} ).done( function(data) {
+		ShowAlertDialog( 'Text Formatting', data );
+	});
 };
 CCommentThread.ShowDeletedComment = function( id, gidcomment )
 {
@@ -2405,36 +2328,61 @@ function GetCurrentScrollPercentage()
 // @bScrollWithPageIfTooTall if the element is taller than the page, then it will "scroll" with the page if this is true
 // @docHeightOffset if bScrollWithPageIfTooTall is set to true, then this is how much the document height is reduced by (recommend this to be 130 for the typical footer)
 FixedElementOnScrollWrapper = Class.create({
-	initialize: function initialize( elemID, fixedOffsetTop, bScrollWithPageIfTooTall, docHeightOffset )
+	initialize: function initialize( elemID, fixedOffsetTop, bScrollWithPageIfTooTall, docHeightOffset, params )
 	{
+		params = $J.extend( {
+			fixedClass: null
+		}, params );
+
 		this.fixedElement = $( elemID );
+		this.$FixedElement = $JFromIDOrElement( elemID );
 		this.fixedOffsetTop = typeof fixedOffsetTop != "undefined" ? fixedOffsetTop : 0;
 		this.bScrollWithPageIfTooTall = typeof bScrollWithPageIfTooTall != "undefined" ? bScrollWithPageIfTooTall : false;
 		this.docHeightOffset = typeof docHeightOffset != "undefined" ? docHeightOffset : 0;
 		this.homePosn = { x: this.fixedElement.cumulativeOffset()[0], y: this.fixedElement.cumulativeOffset()[1] };
+		this.fixedClass = params.fixedClass;
 
 
-		this.fixedElementPadding = new Element( 'div' );
-		this.fixedElementPadding.hide();
-		this.fixedElement.insert( { before: this.fixedElementPadding } );
+		this.$FixedElementPadding = $J('<div/>', {'class': 'FixedElementOnScrollWrapper_padding', 'id': 'ScrollWrapperPadding_' + elemID } ).hide();
+		this.fixedElement.insert( { before: this.$FixedElementPadding[0] } );
 
-		Event.observe(document, 'scroll', this.handleScroll.bind(this));
-		BindOnHashChange( this.handleScroll.bind(this) );
+		var _this = this;
+		$J(window).on( 'scroll.FixedElementOnScrollWrapper hashchange.FixedElementOnScrollWrapper', function() { _this.handleScroll() } );
+		$J(window).on( 'resize.FixedElementOnScrollWrapper', function() { _this.handleScroll( true /* force recalc */ ) } );
 		this.handleScroll();
 	},
-	handleScroll: function handleScroll()
+
+	BIsFixed: function()
+	{
+		if ( this.fixedClass )
+			return this.$FixedElement.hasClass( this.fixedClass );
+		else
+			return this.$FixedElement.css( 'position' ) == 'fixed';
+	},
+
+	handleScroll: function( bForceRecalc )
 	{
 		this.scrollOffset = document.viewport.getScrollOffsets().top;
-		var offsetTop = this.fixedOffsetTop;
+		var offsetTop = this.fixedOffsetTop + GetResponsiveHeaderFixedOffsetAdjustment();
+
+		if ( bForceRecalc && !this.BIsFixed() )
+			this.homePosn = { x: this.fixedElement.cumulativeOffset()[0], y: this.fixedElement.cumulativeOffset()[1] };
+
 		if ( this.scrollOffset > ( this.homePosn.y - offsetTop ) )
 		{
-			if ( this.fixedElement.style.position != 'fixed' )
+			if ( !this.BIsFixed() || bForceRecalc )
 			{
-				this.fixedElement.style.position = 'fixed';
+				if ( this.fixedClass )
+					this.$FixedElement.addClass( this.fixedClass );
+				else
+					this.$FixedElement.css( 'position', 'fixed' );
+
 				this.fixedElement.style.top = offsetTop + 'px';
 				this.fixedElement.style.left = this.homePosn.x;
-				this.fixedElementPadding.show();
-				this.fixedElementPadding.style.height = this.fixedElement.getHeight() + 'px';
+
+				// jquery show() sets display to block, which prevents css from hiding this element if needed.
+				this.$FixedElementPadding.css( 'display', '' );
+				this.$FixedElementPadding.css( 'height', this.fixedElement.getHeight() + 'px' );
 			}
 
 			if ( this.bScrollWithPageIfTooTall )
@@ -2452,12 +2400,15 @@ FixedElementOnScrollWrapper = Class.create({
 		}
 		else
 		{
-			if ( this.fixedElement.style.position != 'relative' )
+			if ( this.BIsFixed() )
 			{
-				this.fixedElement.style.position = 'relative';
-				this.fixedElement.style.top = null;
-				this.fixedElement.style.left = null;
-				this.fixedElementPadding.hide();
+				if ( this.fixedClass )
+					this.$FixedElement.removeClass( this.fixedClass );
+				else
+					this.$FixedElement.css( 'position', '' );
+
+				this.$FixedElement.css( 'top', '' ).css( 'left', '' );
+				this.$FixedElementPadding.css( 'display', 'none' );
 			}
 		}
 	}

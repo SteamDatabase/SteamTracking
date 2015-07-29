@@ -1217,8 +1217,9 @@ function ReplaceDynamicLink( id, strHTML )
 
 function CScrollOffsetWatcher( el, fnCallback )
 {
-	this.nOffsetTop = $J(el).offset().top;
-	this.nBufferHeight = 200;
+	this.m_$Element = $J(el);
+	this.nOffsetTop = this.m_$Element.offset().top;
+	this.nBufferHeight = 500;
 
 	this.nOffsetTopTrigger = this.nOffsetTop - this.nBufferHeight;
 
@@ -1226,6 +1227,12 @@ function CScrollOffsetWatcher( el, fnCallback )
 
 
 	CScrollOffsetWatcher.RegisterWatcher( this );
+}
+
+CScrollOffsetWatcher.prototype.Recalc = function()
+{
+	this.nOffsetTop = this.m_$Element.offset().top;
+	this.nOffsetTopTrigger = this.nOffsetTop - this.nBufferHeight;
 }
 
 CScrollOffsetWatcher.sm_rgWatchers = [];
@@ -1246,12 +1253,28 @@ CScrollOffsetWatcher.RegisterWatcher = function( Watcher )
 	if ( !bHadWatchers )
 	{
 		$J(window).on( 'scroll.ScrollOffsetWatcher', CScrollOffsetWatcher.OnScroll );
-		$J(window).on( 'resize.ScrollOffsetWatcher', CScrollOffsetWatcher.OnScroll );
+
+		var nRecalcTimer = 0;
+		$J(window).on( 'resize.ScrollOffsetWatcher', function() {
+			if ( nRecalcTimer )
+				window.clearTimeout( nRecalcTimer );
+			nRecalcTimer = window.setTimeout( CScrollOffsetWatcher.ForceRecalc, 500 );
+		} );
 	}
 
 	// use a 1ms timeout to roll these together as much as possible on page load
 	if ( !CScrollOffsetWatcher.m_nTimeoutInitialLoad )
 		CScrollOffsetWatcher.m_nTimeoutInitialLoad = window.setTimeout( function() { CScrollOffsetWatcher.OnScroll(); CScrollOffsetWatcher.m_nTimeoutInitialLoad = 0; }, 1 );
+}
+
+CScrollOffsetWatcher.ForceRecalc = function()
+{
+	for ( var i = 0; i < CScrollOffsetWatcher.sm_rgWatchers.length; i++ )
+	{
+		CScrollOffsetWatcher.sm_rgWatchers[i].Recalc();
+	}
+
+	CScrollOffsetWatcher.OnScroll();
 }
 
 CScrollOffsetWatcher.OnScroll = function()
@@ -1523,12 +1546,20 @@ function RateAnnouncement( rateURL, gid, bVoteUp )
 	return false;
 }
 
-
+function GetResponsiveHeaderFixedOffsetAdjustment()
+{
+	// for responsive pages - we need to adjust for the menu
+	var $ResponsiveHeader = $J('.responsive_header:visible');
+	if ( $ResponsiveHeader.length && $ResponsiveHeader.css('position') == 'fixed' )
+		return $ResponsiveHeader.outerHeight();
+	else
+		return 0;
+}
 
 /* Scroll to an element if it's not already in view.  If it's at the bottom of the viewport, then it will be
  scrolled to the top if less than nRequiredPixelsToShow are visible (defaults to the height of the element)
  */
-function ScrollToIfNotInView( elem, nRequiredPixelsToShow, nSpacingBefore )
+function ScrollToIfNotInView( elem, nRequiredPixelsToShow, nSpacingBefore, nAnimationSpeed )
 {
 	var $Elem = $JFromIDOrElement(elem);
 
@@ -1536,9 +1567,7 @@ function ScrollToIfNotInView( elem, nRequiredPixelsToShow, nSpacingBefore )
 		nSpacingBefore = 0;
 
 	// for responsive pages - we need to adjust for the menu
-	var $ResponsiveHeader = $J('.responsive_header:visible');
-	if ( $ResponsiveHeader.length && $ResponsiveHeader.css('position') == 'fixed' )
-		nSpacingBefore += $ResponsiveHeader.height();
+	nSpacingBefore += GetResponsiveHeaderFixedOffsetAdjustment();
 
 	var elemTop = $Elem.offset().top;
 	var nViewportOffsetTop = elemTop - $J(window).scrollTop();
@@ -1561,7 +1590,10 @@ function ScrollToIfNotInView( elem, nRequiredPixelsToShow, nSpacingBefore )
 	if ( bNeedToScroll )
 	{
 		if ( nSpacingBefore )
-			window.scrollBy( 0, nViewportOffsetTop - nSpacingBefore );
+			nViewportOffsetTop -= nSpacingBefore;
+
+		if ( typeof nAnimationSpeed != 'undefined' )
+			$J('html, body' ).animate( {scrollTop: nViewportOffsetTop}, nAnimationSpeed );
 		else
 			window.scrollBy( 0, nViewportOffsetTop );
 	}

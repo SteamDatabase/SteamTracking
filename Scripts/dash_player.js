@@ -25,6 +25,9 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nPlayerHeight = 0;
 	this.m_nCurrentDownloadBitRate = 0;
 	this.m_nSavedPlaybackRate = 1.0;
+	this.m_nLastDecodedFrames = 0;
+	this.m_nLastDecodedFrameTime = 0;
+	this.m_nCurrentFramerate = 0;
 
 	// player states
 	this.m_bIsBuffering = true;
@@ -71,6 +74,8 @@ CDASHPlayer.HAVE_METADATA = 1;
 CDASHPlayer.HAVE_CURRENT_DATA = 2;
 CDASHPlayer.HAVE_FUTURE_DATA = 3;
 CDASHPlayer.HAVE_ENOUGH_DATA = 4;
+
+CDASHPlayer.MAX_STANDARD_FRAMERATE = 30;
 
 CDASHPlayer.prototype.StopDownloads = function()
 {
@@ -447,6 +452,7 @@ CDASHPlayer.prototype.BeginPlayback = function()
 	}
 
 	$J( this.m_elVideoPlayer ).trigger( 'initialized' );
+	this.m_nLastDecodedFrameTime = performance.now();
 }
 
 CDASHPlayer.prototype.OnVideoBufferProgress = function()
@@ -798,12 +804,24 @@ CDASHPlayer.prototype.UpdateRepresentation = function ( representationIndex, bVi
 							// player height needs to be more than the video height of the smaller representation (e.g. 800 height should use 1080, not 720)
 							if ( this.m_nPlayerHeight > this.m_loaders[i].m_adaptation.representations[ Math.min( b+1, nMaxRepresentations ) ].height )
 							{
-								newRepresentationIndex = b;
+								// for broadcasts that may have 60FPS reps, only switch up to it if the player is keeping up with 30FPS
+								if ( this.BIsLiveContent() && this.m_loaders[i].m_adaptation.representations[b].frameRate > CDASHPlayer.MAX_STANDARD_FRAMERATE )
+								{
+									if ( Math.ceil( this.m_nCurrentFramerate ) >= CDASHPlayer.MAX_STANDARD_FRAMERATE )
+									{
+										newRepresentationIndex = b;
+									}
+								}
+								else
+								{
+									// VOD or framerate less than 30
+									newRepresentationIndex = b;
+								}
 							}
 						}
 						else
 						{
-							// no defined height, then ok
+							// no defined height so can only use bandwidth
 							newRepresentationIndex = b;
 						}
 					}
@@ -939,6 +957,8 @@ CDASHPlayer.prototype.UpdateStats = function()
 			this.m_nPlayerHeight = this.StatsGetVideoPlayerHeight();
 			this.m_nCurrentDownloadBitRate += this.m_loaders[i].GetBandwidthRate();
 			nBandwidthCount++;
+
+			this.m_nCurrentFramerate = this.StatsAverageFramerate();
 		}
 
 		if (this.m_loaders[i].ContainsAudio())
@@ -1248,6 +1268,27 @@ CDASHPlayer.prototype.StatsLastGameDataEventTriggerFrame = function()
 	return this.m_nLastGameDataEventArrayIndex + 1;
 }
 
+CDASHPlayer.prototype.StatsAverageFramerate = function()
+{
+	if ( this.m_elVideoPlayer.paused )
+		return this.m_nCurrentFramerate;
+
+	var ele = this.m_elVideoPlayer;
+
+	var nTotalFrames = ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount );
+	var nDeltaFrames = nTotalFrames - this.m_nLastDecodedFrames;
+
+	var fDeltaTime = ( performance.now() - this.m_nLastDecodedFrameTime ) / 1000;
+	if ( fDeltaTime == 0 )
+		return this.m_nCurrentFramerate;
+
+	this.m_nLastDecodedFrames = nTotalFrames;
+	this.m_nLastDecodedFrameTime = performance.now();
+
+	var nAvgFramerate = nDeltaFrames / fDeltaTime;
+	return ( nAvgFramerate != 0 ? nAvgFramerate : this.m_nCurrentFramerate );
+}
+
 CDASHPlayer.prototype.BLogVideoVerbose = function()
 {
 	return this.m_bVideoLogVerbose;
@@ -1544,7 +1585,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 					return;
 
 				var now = Date.now();
-				var nDownloadMS = now - rtDownloadStart;
+				var nDownloadMS = performance.now() - rtDownloadStart;
 
 				_loader.m_xhr = null;
 				_loader.m_nLastSegmentDownloadStatus = xhr.status;
@@ -2845,8 +2886,8 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 			var strBandwidth = ( rgRepresentation[r].bandwidth / 1000000 ).toFixed(1) + 'Mbps';
 			var strFPS = '';
 			
-			if ( this.m_player.BIsLiveContent() && rgRepresentation[r].frameRate > 30 )
-				strFPS = '@' + rgRepresentation[r].frameRate + 'fps'; // advertise high FPS
+			if ( this.m_player.BIsLiveContent() && rgRepresentation[r].frameRate > CDASHPlayer.MAX_STANDARD_FRAMERATE )
+				strFPS = rgRepresentation[r].frameRate; // advertise high FPS
 				
 			$J('#representation_select_video').append('<option value="' + r + '">' + strResolution + strFPS + ' (' + strBandwidth + ') </option>');
 		}

@@ -629,8 +629,16 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .item_showcase .item_count_stat {
 	float: left;
-	margin-left: 12px;
 	padding-top: 14px;
+	max-width: 30%;
+}
+
+.item_showcase .item_count_stat > div {
+	padding-left: 12px;
+}
+
+.item_showcase .showcase_slot_row {
+	margin-left: -5px;
 }
 
 .item_showcase_item {
@@ -640,10 +648,6 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	margin-left: 5px;
 	margin-bottom: 5px;
 	border: 1px solid #3a3a3a;
-}
-
-.item_showcase_item:first-child {
-	margin-left: 0;
 }
 
 .item_showcase_item img.item_image {
@@ -829,7 +833,6 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 .workshop_showcase_item {
 	height: 160px;
 	position: relative;
-	padding-left: 170px;
 
 	overflow: hidden;
 }
@@ -847,23 +850,38 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	line-height: 160px;
 }
 
-.workshop_showcase_multiitem {
-	height: 150px;
-	width: 150px;
-	margin: 2px;
+.workshop_showcase_mutiitem_ctn {
+	float: left;
+	max-width: 25%;
+	width: 154px;
+}
+
+.workshop_showcase_multiitem.showcase_slot {
 	position: relative;
+	float: none;
+	margin: 2px;
+}
+
+.workshop_showcase_multiitem img.workshop_showcase_item_image {
+	width: 100%;
 }
 
 .workshop_showcase_multiitem.openslot {
 	margin: 0;
 }
 
-img.workshop_showcase_item_image {
-	position: absolute;
-	top: 0;
-	left: 0;
+.workshop_showcase_item img.workshop_showcase_item_image {
+	float: left;
 	width: 160px;
-	height: 160px;
+	max-width: 40%;
+	margin-right: 8px;
+	display: block;
+}
+
+.workshop_showcase_right_col {
+	overflow: hidden;
+	position: relative;
+	height: 100%;
 }
 
 .myworkshop_showcase_header {
@@ -888,11 +906,6 @@ img.workshop_showcase_item_image {
 	color: #ffffff;
 }
 
-.workshop_showcase_multiitem img.workshop_showcase_item_image {
-	width: 150px;
-	height: 150px;
-}
-
 .workshop_showcase_mini_app {
 	position: absolute;
 	right: 0;
@@ -906,7 +919,7 @@ img.workshop_showcase_item_image {
 
 .workshop_showcase_details_row {
 	position: absolute;
-	left: 170px;
+	left: 0;
 	bottom: 0;
 	right: 0;
 
@@ -970,11 +983,9 @@ img.workshop_showcase_item_image {
 
 	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#000000), color-stop(95%,#282828));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#282828',GradientType=1 );background: -moz-linear-gradient( left, #000000 5%,#282828 95%);background: -webkit-linear-gradient( left, #000000 5%,#282828 95%);background: -o-linear-gradient( left, #000000 5%,#282828 95%);background: -ms-linear-gradient( left, #000000 5%,#282828 95%);background: linear-gradient( to right, #000000 5%,#282828 95%);}
 
-.myguide_showcase_item {
-	width: 280px;
-	height: 68px;
+.myguide_showcase_item_ctn {
+	width: 48%;
 	overflow: hidden;
-	padding: 10px;
 
 	background-color: #101214;
 	background-color: rgba( 0, 0, 0, 0.3 );
@@ -982,6 +993,15 @@ img.workshop_showcase_item_image {
 	border: 1px solid transparent;
 	border-radius: 3px;
 	margin-bottom: 7px;
+}
+
+.myguide_showcase_item_ctn.openslot {
+	height: 88px;
+}
+
+.myguide_showcase_item {
+	padding: 10px;
+	height: 68px;
 }
 
 .myguide_showcase_item_overlay {
@@ -994,7 +1014,7 @@ img.workshop_showcase_item_image {
 }
 
 .myguide_showcase_item.left {
-	margin-right: 7px;
+	margin-right: 2%;
 }
 
 .myguide_showcase_item:hover {
@@ -1004,10 +1024,28 @@ img.workshop_showcase_item_image {
 .guide_showcase_img_ctn {
 	float: left;
 	position: relative;
-	width: 68px;
-	height: 68px;
+	width: 66px;
+	max-width: 25%;
 
 	margin-right: 8px;
+}
+
+.guide_showcase_img_ctn img.guide_showcase_image {
+	width: 100%;
+	display: block;
+}
+
+.guide_showcase_item_content {
+	overflow: hidden;	/* prevents wrapping below image */
+}
+
+@media screen and (max-width: 460px) {
+	html.responsive .myguide_showcase_item_ctn.left,
+	html.responsive .myguide_showcase_item_ctn {
+		margin-right: 0;
+		width: auto;
+		float: none;
+	}
 }
 
 .guide_showcase_img_ctn .workshop_showcase_mini_app, .guide_showcase_img_ctn .workshop_showcase_mini_app img {
@@ -1015,7 +1053,7 @@ img.workshop_showcase_item_image {
 	height: 18px;
 }
 
-.myguide_showcase_item.showcase_slot .showcase_openslot_placeholder {
+.myguide_showcase_item_ctn.showcase_slot .showcase_openslot_placeholder {
 	line-height: 88px;
 }
 
@@ -1030,14 +1068,16 @@ img.workshop_showcase_item_image {
 
 .screenshot_showcase_primary {
 	width: 508px;
+	max-width: 83%;
 	float: left;
-	min-height: 268px;
 }
 
 .screenshot_showcase_screenshot {
 	cursor: pointer;
 	border: 1px solid #000000;
 	display: block;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .screenshot_showcase_screenshot:hover {
@@ -1048,8 +1088,13 @@ img.workshop_showcase_item_image {
 	margin-bottom: 4px;
 }
 
+.screenshot_showcase_itemname {
+	word-wrap: break-word;
+}
+
 .screenshot_showcase_rightcol {
 	float: right;
+	max-width: 17%;
 	width: 102px;
 	text-align: center;
 }
@@ -1065,6 +1110,10 @@ img.workshop_showcase_item_image {
 	line-height: 57px;
 	background-color: #222223;
 	color: #ffffff;
+}
+
+.screenshot_showcase_smallscreenshot.openslot {
+	height: 79px;
 }
 
 .screenshot_showcase_stats {

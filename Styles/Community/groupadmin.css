@@ -85,14 +85,13 @@
 
 .groupadmin_content .group_content {
 	padding-bottom: 6px;
-	padding-right: 13px;
+	padding-right: 2%;
 }
 
 .formRow {
 	position: relative;
 	min-height: 34px;
 	margin-bottom: 7px;
-	/* padding-left: 120px; */
 	padding-left: 146px;
 }
 
@@ -118,6 +117,21 @@
 	cursor: default;
 }
 
+html.responsive .formRow {
+	padding-left: 0;
+}
+
+html.responsive .formRow .formRowTitle {
+	position: static;
+	float: left;
+	margin-right: 10px;
+	max-width: 20%;
+}
+
+html.responsive .formRow .formRowFields {
+	overflow: hidden;
+}
+
 .formRowDesc {
 	display: none;
 }
@@ -136,19 +150,25 @@
 	max-width: 475px;
 }
 
+html.responsive .formRowFields .gray_bevel {
+	max-width: 97%;
+}
+
 .formRowFields .avatar_edit_block {
-	float: left;
+	display: inline-block;
+	vertical-align: bottom;
 	font-size: 9px;
 	line-height: 11px;
-	margin-right: 12px;
+	margin-right: 2%;
+}
+.formRowFields .avatar_edit_block:last-child {
+	margin-right: 0;
 }
 
 .avatar_edit_block.medium {
-	padding-top: 120px;
 }
 
 .avatar_edit_block.icon {
-	padding-top: 152px;
 }
 
 .formRow.websiteLink {
@@ -518,4 +538,65 @@ a.chat_ban_admin {
 }
 .textarea.gray_bevel, .gray_bevel textarea {
 	resize: vertical;
+}
+
+.avatar_upload_ctn {
+	max-width: 302px;
+}
+
+.avatar_upload_ctn .avatar_upload_throbber {
+	display: none;
+	text-align: center;
+}
+
+.avatar_upload_ctn.uploading .avatar_upload_throbber {
+	display: block;
+}
+
+.avatar_upload_ctn.uploading .upload_controls {
+	display: none;
+}
+
+.avatar_upload_throbber > img {
+	height: 16px;
+}
+
+.upload_controls .upload_btn {
+	float: right;
+	margin-top: 2px;
+}
+
+.avatar_upload_input_ctn {
+	overflow: hidden;
+}
+
+.avatar_upload_ctn input[type="file"] {
+	width: 95%;
+}
+
+@media screen and (max-width: 500px)
+{
+	html.responsive .formRow .formRowTitle {
+		text-align: left;
+		width: auto;
+		max-width: none;
+		float: none;
+	}
+
+	html.responsive .formRow .formRowTitle::after {
+		content: ':';
+	}
+
+	html.responsive .formRow .formRowFields {
+		padding-left: 4%;
+	}
+
+}
+
+
+@media screen and (max-width: 400px)
+{
+	html.responsive .formRowFields .avatar_edit_block:not(:last-child) {
+		margin-right: 1%;
+	}
 }

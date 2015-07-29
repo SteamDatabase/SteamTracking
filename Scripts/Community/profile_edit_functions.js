@@ -1,5 +1,47 @@
 
 
+function BindAvatarUploadControls()
+{
+	var $UploadInput = $J('#avatar_upload_input');
+	if ( !$UploadInput.length )
+		return;
+
+	// make sure it doesn't get submitted with the main form
+	$J('#editForm' ).on('submit', function() { $UploadInput.remove(); } );
+
+	$J('#avatar_upload_button' ).click( function() {
+		var $UploadForm = $J('#avatar_upload_form');
+		var $UploadInputParent = $UploadInput.parent();
+		var $UploadCtn = $J('#avatar_upload_ctn' );
+
+		var $IFrame = $J('#avatar_upload_iframe');
+		$IFrame.one( 'load', function() {
+			$UploadInputParent.append( $UploadInput );
+			$UploadCtn.removeClass('uploading');
+
+			var rgJSON = V_ParseJSON( $IFrame.contents().text() );
+			if ( !rgJSON || !rgJSON.success )
+			{
+				ShowAlertDialog( 'Upload your avatar' ,
+					rgJSON && rgJSON.message ? rgJSON.message : 'There was an error processing your upload.  There may be an issue with the image file you selected.' );
+			}
+			else
+			{
+				if ( rgJSON.images && rgJSON.images[0] )
+					$J('#avatar_icon_img' ).attr( 'src', rgJSON.images[0] );
+				if ( rgJSON.images && rgJSON.images['medium'] )
+					$J('#avatar_medium_img' ).attr( 'src', rgJSON.images['medium'] );
+				if ( rgJSON.images && rgJSON.images['full'] )
+					$J('#avatar_full_img' ).attr( 'src', rgJSON.images['full'] );
+			}
+		});
+
+		$UploadCtn.addClass('uploading');
+		$UploadForm.append( $UploadInput );
+		$UploadForm.submit();
+	});
+}
+
 g_rgShowcasePreviews = {};
 g_rgShowcaseSelects = [];
 function InitShowcaseEditors( cSlots )
@@ -494,7 +536,7 @@ function PresentBackgroundSelectDialog()
 			$Content.append( $Row );
 		}
 
-		var $BackgroundOption = $J('<div/>', {'class': 'profile_background_select_option'} );
+		var $BackgroundOption = $J('<div/>', {'class': 'profile_background_select_option_inner'} );
 
 		if ( Background.is_blank_background )
 		{
@@ -511,6 +553,8 @@ function PresentBackgroundSelectDialog()
 		// use a factory here so we get the present value of Background, but capture the local Modal (not set yet)
 		$BackgroundOption.click( (function( _Background ) { return function() {SelectBackground( Modal, _Background );}; } )(Background) );
 		$Row.append( $BackgroundOption );
+
+		$BackgroundOption.wrap( $J('<div/>', {'class': 'profile_background_select_option'} ) );
 
 		if ( i % 2 == 1 )
 		{

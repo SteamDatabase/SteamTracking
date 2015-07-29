@@ -239,18 +239,38 @@ function DisplayReadyRows() {
 		var elid = 'imgWallRow_' + rowsToDisplay[i];
 		var el = $(elid);
 		if ( el )
+		{
 			ShowWithFade( elid, 0.02 );
+
+			var $Row = $J(el);
+			$Row.find( 'a.profile_media_item.auto_height' ).each( function() {
+				var $Item = $J(this);
+				var nHeight = $Item.width() / $Item.data('desiredAspect');
+				$Item.css('height', nHeight + 'px' );
+				$Item.children('.imgWallItem' ).css('height', ( nHeight - 6 ) + 'px' );
+			});
+			AdjustRowSizes( el );
+		}
 	}
 }
 
-function DisplayRowOrWait( rowid, shots ) {
-	for( var i = 0; i < shots.length; ++i ) {
-		if ( !g_loadedScreenshots[shots[i]] ) {
-			WaitForRow( rowid, shots );
-			return;
-		}
-	}
+function AdjustRowSizes( elRow )
+{
+	var $Row = $J(elRow);
+	var nMaxHeight = 0;
+	var $ResizableElements = $Row.find( 'a.profile_media_item:not(.auto_height):not(.fill_height)' );
+	$ResizableElements.each( function() {
+		var $Element = $J(this);
+		var nDesiredHeight = $Element.width() / $Element.data('desiredAspect');
+		if ( nDesiredHeight )
+			nMaxHeight = Math.max( nDesiredHeight, nMaxHeight );
+	});
 
+	if ( nMaxHeight )
+		$ResizableElements.css( 'height', nMaxHeight );
+}
+
+function DisplayRowOrWait( rowid, shots ) {
 	g_rowsWaiting.unset(rowid);
 	g_rowsReady.set(rowid,true);
 

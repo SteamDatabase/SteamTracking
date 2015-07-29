@@ -1703,6 +1703,14 @@ textarea {
 	background-repeat:no-repeat;
 }
 
+@media screen and (max-width: 500px)
+{
+	html.responsive .guideTop .workshopItemTitle {
+		clear: both;
+		font-size: 24px;
+	}
+}
+
 .workshopBrowseRow {
 	min-height: 100px;
 	position: relative;
@@ -2730,7 +2738,7 @@ a.commentsTab:hover {
 .creatorsBlock .friendBlock_offline, .creatorsBlock .friendBlock_online, .creatorsBlock .friendBlock_in-game, .creatorsBlock .friendBlock_ignored
 {
 	background-image: none;
-	width: 264px;
+	max-width: 264px;
 	height: 40px;
 	padding: 0;
 	margin: 0;
@@ -3183,11 +3191,11 @@ input.searchText
 
 .breadcrumbs
 {
-	padding-top: 20px;
 	text-decoration: none;
 	text-align: left;
-	width: 948px;
-	margin: 0px 0 0 0px !important;
+	max-width: 948px;
+	margin: 0 auto;
+	padding: 20px 1% 0 1%;
 }
 .breadcrumbs, .breadcrumbs a {
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -3911,6 +3919,11 @@ div.hover {
 	margin: 0 auto 0 auto;
 }
 
+html.responsive #ig_bottom {
+	max-width: 950px;
+	width: auto;
+}
+
 #ig_bottom.nobg {
 	background: transparent;
 }
@@ -4307,20 +4320,21 @@ div.hover {
 }
 
 .panel .hr {
-	position: relative;
-	left: -10px;
+	margin-left: -10px;
+	margin-right: -10px;
 	height: 1px;
 	background-color: #000;
 	border-bottom: 1px solid #17212e;
-	width: 290px;
 }
 
 .panel .hr.padded {
-	margin: 10px 0 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .panel .hr.smallpadded {
-	margin: 3px 0 3px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
 
 #ig_collection_header {
@@ -4904,4 +4918,22 @@ a.readmore_link
 	max-width: 300px;
 	float: left;
 	margin-right: 10px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive #profileBlock {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive #rightContents {
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+
+	html.responsive #ig_bottom {
+		padding: 0 1%;
+	}
 }
