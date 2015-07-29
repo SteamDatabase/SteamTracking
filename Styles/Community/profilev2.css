@@ -637,7 +637,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	padding-left: 12px;
 }
 
-.item_showcase .showcase_slot_row {
+.item_showcase .showcase_slot_row, .trade_showcase .showcase_slot_row {
 	margin-left: -5px;
 }
 
@@ -1086,6 +1086,10 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .screenshot_showcase_primary .screenshot_showcase_screenshot {
 	margin-bottom: 4px;
+}
+
+.screenshot_showcase_screenshot img {
+	display: block;
 }
 
 .screenshot_showcase_itemname {
