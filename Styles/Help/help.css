@@ -1791,7 +1791,7 @@ a.guide_row {
 	margin-top: 2px;
 }
 
-#password_reset, #password_reset_confirm, #password_twofactor, #twofactor_password, #twofactor_resetcode
+#password_reset, #password_reset_confirm, #password_twofactor, #twofactor_password, #twofactor_resetcode, #twofactor_smscode
 {
 	color: #ffffff;
 	background-color: #324965;
@@ -1807,6 +1807,12 @@ a.guide_row {
 #password_twofactor, #twofactor_resetcode
 {
 	width: 50px;
+}
+
+#twofactor_smscode
+{
+	width: 50px;
+	margin-right: 20px;
 }
 
 .password_tag {
@@ -1870,6 +1876,26 @@ a.guide_row {
 .reset_twofactor_instr
 {
 	margin-bottom: 20px;
+}
+
+.reset_twofactor_field
+{
+	margin-top: 20px;
+}
+
+#reset_twofactor_resend
+{
+	margin-top: 4px;
+}
+
+.start_hidden
+{
+	display: none;
+}
+
+.loading #twofactor_smscode, .loading #reset_twofactor_resend
+{
+	display: none;
 }
 
 .help_section_small_header {
@@ -2119,4 +2145,8 @@ img.category_icon {
 	{
 		transform: scale( 1.0, 0.6 );
 	}
+}
+
+.help_dialog_text {
+	max-width: 540px;
 }

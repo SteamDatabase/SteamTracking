@@ -734,7 +734,7 @@ HelpWizard = {
 
 	ResetTwoFactor: function( strSessionID, strCode, nAccountID, strLogin )
 	{
-		$J( '#reset_twofactor_form' ).addClass( 'loading' );
+		$J( '#reset_twofactor_submit' ).addClass( 'loading' );
 		$J( '#form_submit_error' ).hide();
 		$J.ajax({
 			type: "POST",
@@ -745,7 +745,7 @@ HelpWizard = {
 			}
 		}).fail( function( xhr ) {
 			$J( '#form_submit_error' ).text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
-			$J( '#reset_twofactor_form' ).removeClass( 'loading' );
+			$J( '#reset_twofactor_submit' ).removeClass( 'loading' );
 		}).done( function( data ) {
 			HelpWizard.ResetTwoFactorRSA( strSessionID, strCode, nAccountID, data );
 		});
@@ -756,13 +756,18 @@ HelpWizard = {
 		var elError = $J( '#form_submit_error' );
 		if ( !rsa.publickey_mod || !rsa.publickey_exp || !rsa.timestamp )
 		{
-			$J( '#reset_twofactor_form' ).removeClass( 'loading' );
+			$J( '#reset_twofactor_submit' ).removeClass( 'loading' );
 			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
 			return;
 		}
 
 		var strPassword = $J( '#twofactor_password' ).val();
 		var strTwoFactorCode = $J( '#twofactor_resetcode' ).val();
+		var strSMSCode = $J( '#twofactor_smscode' ).val();
+		if ( $J( 'input:radio[name="verify_with"]:checked' ).val() == 'sms' )
+			strTwoFactorCode = '';
+		else
+			strSMSCode = '';
 
 		var pubKey = RSA.getPublicKey( rsa.publickey_mod, rsa.publickey_exp );
 		var strPasswordEncrypted = RSA.encrypt( strPassword, pubKey );
@@ -785,7 +790,8 @@ HelpWizard = {
 				accountid: nAccountID,
 				password: strPasswordEncrypted,
 				rsatimestamp: rsa.timestamp,
-				twofactor: strTwoFactorCode
+				twofactor: strTwoFactorCode,
+				smscode: strSMSCode
 			}
 		}).fail( function( xhr ) {
 			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
@@ -804,7 +810,7 @@ HelpWizard = {
 				elError.text( data.errorMsg ).show();
 			}
 		}).always( function( data ) {
-			$J( '#reset_twofactor_form' ).removeClass( 'loading' );
+			$J( '#reset_twofactor_submit' ).removeClass( 'loading' );
 		});
 	},
 
@@ -840,8 +846,8 @@ HelpWizard = {
 		return false;
 	},
 
-	SendAccountRecoveryCode: function( strSessionID, eMethod, bFirstAttempt ) {
-		var elError = $J( '#form_submit_error' );
+		SendAccountRecoveryCode: function( strSessionID, eMethod, strErrorID, strLoadingID, strCodeResentID ) {
+		var elError = $J( strErrorID );
 
 		try
 		{
@@ -851,8 +857,8 @@ HelpWizard = {
 		{
 		}
 
-		if ( !bFirstAttempt )
-			$J( '#resend_recovery_code' ).addClass( 'loading' );
+		if ( strLoadingID )
+			$J( strLoadingID ).addClass( 'loading' );
 
 		$J( '#recovery_code_resent' ).hide();
 		elError.hide();
@@ -868,8 +874,8 @@ HelpWizard = {
 		}).done( function( data ) {
 			if ( data.success )
 			{
-				if ( !bFirstAttempt )
-					$J( '#recovery_code_resent' ).slideDown();
+				if ( strCodeResentID )
+					$J( strCodeResentID ).slideDown();
 
 				return;
 			}
@@ -882,7 +888,8 @@ HelpWizard = {
 
 			elError.text( data.errorMsg ).slideDown();
 		}).always( function() {
-			$J( '#resend_recovery_code' ).removeClass( 'loading' );
+			if ( strLoadingID )
+				$J( strLoadingID ).removeClass( 'loading' );
 		});
 	},
 
@@ -983,4 +990,39 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 			Modal.Dismiss();
 			ShowAlertDialog( 'Change language', 'There was a problem communicating with the Steam servers.  Please try again later.' );
 		});
+}
+
+
+function ShowCancelPurchaseDialog(transid)
+{
+	var Modal = ShowConfirmDialog( 'Cancel this pending purchase?',
+		'<div class="help_dialog_text">' + 'This purchase is still pending. Your payment provider has not yet told us if they will charge you for this transaction.<br><br>Please contact your payment provider and verify the status of this purchase. If this purchase was not completed through your payment provider, you may cancel the purchase below.' + '</div>',
+	 	'This purchase was never completed',
+	 	'Close'
+	 );
+
+	Modal.SetRemoveContentOnDismissal( false );
+	Modal.done( function() {
+		CancelPendingPurchase( transid );
+	} );
+}
+
+function CancelPendingPurchase( transid )
+{
+	$J.ajax( {
+		url: 'https://help.steampowered.com/wizard/AjaxCancelPendingPurchase/',
+		type: 'POST',
+		data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+			transid: transid
+		} )
+	} ).fail( function( jqxhr ) {
+		ShowAlertDialog( 'Cancel pending purchase', 'Could not contact the servers to cancel this pending purchase. Please try again later.' );
+	} ).done( function( data ) {
+		if ( data.success != 1 )
+		{
+			ShowAlertDialog( 'Cancel pending purchase', 'The Steam Servers failed to cancel this pending purchase. Please try again later. Error code: ' + data.success );
+		}
+
+		window.location.reload();
+	} );
 }
