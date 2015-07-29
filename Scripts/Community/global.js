@@ -377,7 +377,7 @@ function GetCurrencyCode( currencyId )
 {
 	for ( var code in g_rgCurrencyData )
 	{
-		if ( g_rgCurrencyData[code].eCurrencyCode = currencyId )
+		if ( g_rgCurrencyData[code].eCurrencyCode == currencyId )
 			return code;
 	}
 	return 'Unknown';
