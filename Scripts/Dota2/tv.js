@@ -4076,6 +4076,7 @@
 		this.$m_DummyGameListing = $( '#DummyGameListing' ).clone();
 		this.$m_GamesInProgressList = this.$m_Panel.find( '.GamesInProgress' ).find( '.GameList' );
 		this.$m_GamesComingUpList = this.$m_Panel.find( '.GamesComingUp' ).find( '.GameList' );
+		this.$m_HeaderText = this.$m_Panel.find( 'h1' );
 		this.m_flNextPollTime = null;
 	};
 
@@ -4095,6 +4096,8 @@
 		this.$m_Image.append( CreateImage( g_strBaseImageURL + 'tv/tournamentbox_bg.jpg' ) );
 
 		this.m_flNextPollTime = VUtils.GetTime();
+
+		this.ResizeFonts();
 	};
 
 	CTournamentBox.prototype.ScheduleNextPoll = function()
@@ -4190,6 +4193,14 @@
 	CTournamentBox.prototype.OnWindowResize = function()
 	{
 		CBasePanel.prototype.OnWindowResize.apply( this, arguments );
+	};
+
+	CTournamentBox.prototype.ResizeFonts = function()
+	{
+		CBasePanel.prototype.ResizeFonts.apply( this, arguments );
+
+		var flBaseFontSize = this.$m_Panel.width() * .0037;
+		this.$m_HeaderText.css( 'font-size', flBaseFontSize + 'em' );
 	};
 
 	//--------------------------------------------------------------------------------------------
