@@ -6,6 +6,7 @@
 
 	var g_bIsDev = null;
 	var g_bIsMobile = null;
+	var g_strStreamLanguage = null;
 	var g_bIsSimulation = null;
 	var g_Localization = null;
 	var g_Chat = null;
@@ -16,6 +17,7 @@
 	var g_UIManager = null;
 	var g_StreamSimulator = null;
 	var g_rgHeroDataKeys = null;
+	var g_strLeaguesBaseURL = null;
 	var g_strDotaIFrameOriginURL = null
 	var g_strSteamBroadcastOrigin = null;
 	var g_strBaseImageURL = null;
@@ -75,7 +77,7 @@
 		PANELGROUP_ID_MAIN: 'PanelGroup_Main',
 
 		DIV_ID_SPECTATOR_STATS: 'Panel_SpectatorStats',
-		DIV_ID_TOURNAMENT_AD: 'Panel_TournamentAd',
+		DIV_ID_TOURNAMENT_AD: 'Panel_TournamentBox',
 		DIV_ID_TOURNAMENT_CHEER: 'Panel_TournamentCheer',
 		DIV_ID_OVERVIEW_HEADER: 'Panel_OverviewHeader',
 		DIV_ID_STATSPANEL_PLAYERS: 'Panel_Players',
@@ -102,6 +104,8 @@
 		HEALTHBAR_REFRESH_INTERVAL: 1/3,
 		GRAPH_REFRESH_INTERVAL: 10.0,	// Seconds
 		POP_ANIMATION_DURATION: 200,	// In milliseconds -- NOTE: This must match $sPopAnimationDuration in tv.vcss.
+
+		TOURNAMENT_SCHEDULE_UPDATE_INTERVAL: 60.0, // Seconds
 
 		STATS_SORTING_DEFAULT: 'kda',
 
@@ -2891,7 +2895,7 @@
 	var CTournament = function()
 	{
 		this.m_unPrizePool = null;
-		this.m_unTournamentID = null;
+		this.m_unLeagueID = null;
 		this.m_strTournamentName = null;
 		this.m_rgLogoImageURLs = null;
 	};
@@ -2904,14 +2908,19 @@
 	{
 		constructor: CTournament,
 
-		Init: function( Data )
+		Init: function( unLeagueID, Data )
 		{
-			this.m_unTournamentID = Data.id;
+			this.m_unLeagueID = unLeagueID;
 			this.m_strTournamentName = Data.name;
 			this.m_rgLogoImageURLs = Data.logos;
 			this.m_rgTeamData = Data.teams;
 
 			g_UIManager.ShowTournamentPanels( true );
+		},
+
+		GetLeagueID: function()
+		{
+			return this.m_unLeagueID;
 		},
 
 		GetTeamLogoURL: function( nTeamID )
@@ -3390,7 +3399,7 @@
 		{
 		},
 
-		OnInitTournament: function()
+		OnInitTournament: function( unLeagueID )
 		{
 		},
 
@@ -4060,33 +4069,109 @@
 
 	//--------------------------------------------------------------------------------------------
 
-	var CTournamentAd = function( PanelGroup )
+	var CTournamentBox = function( PanelGroup )
 	{
 		CBasePanel.call( this, '#' + DOTA_CONSTS.DIV_ID_TOURNAMENT_AD, PanelGroup );
+
+		this.$m_DummyGameListing = $( '#DummyGameListing' ).clone();
+		this.$m_GamesInProgressList = this.$m_Panel.find( '.GamesInProgress' ).find( '.GameList' );
+		this.$m_GamesComingUpList = this.$m_Panel.find( '.GamesComingUp' ).find( '.GameList' );
+		this.m_flNextPollTime = null;
 	};
 
-	CTournamentAd.prototype = Object.create( CBasePanel.prototype );
-	CTournamentAd.prototype.constructor = CTournamentAd;
+	CTournamentBox.prototype = Object.create( CBasePanel.prototype );
+	CTournamentBox.prototype.constructor = CTournamentBox;
 
-	CTournamentAd.prototype.OnDataReceived = function()
+	CTournamentBox.prototype.OnDataReceived = function()
 	{
 		CBasePanel.prototype.OnDataReceived.apply( this, arguments );
 	};
 
-	CTournamentAd.prototype.OnInitTournament = function()
+	CTournamentBox.prototype.OnInitTournament = function( unLeagueID )
 	{
 		CBasePanel.prototype.OnInitTournament.apply( this, arguments );
 
-		this.$m_Image = this.$m_Panel.find( '.Image' ).find( '.ImageBackground' );
-		this.$m_Image.append( CreateImage( g_Tournament.GetLogoImageURLs().logo_square_large ) );
+		this.$m_Image = this.$m_Panel.find( '.Background' ).find( '.ImageBackground' );
+		this.$m_Image.append( CreateImage( g_strBaseImageURL + 'tv/tournamentbox_bg.jpg' ) );
+
+		this.m_flNextPollTime = VUtils.GetTime();
 	};
 
-	CTournamentAd.prototype.Think = function( flCurTime, flElapsed )
+	CTournamentBox.prototype.ScheduleNextPoll = function()
+	{
+		this.m_flNextPollTime = VUtils.GetTime() + DOTA_CONSTS.TOURNAMENT_SCHEDULE_UPDATE_INTERVAL;
+	};
+
+	CTournamentBox.prototype.Think = function( flCurTime, flElapsed )
 	{
 		CBasePanel.prototype.Think.apply( this, arguments );
+
+		if ( null !== this.m_flNextPollTime && this.m_flNextPollTime <= VUtils.GetTime() )
+		{
+			this.UpdateData();
+		}
 	};
 
-	CTournamentAd.prototype.OnWindowResize = function()
+	CTournamentBox.prototype.UpdateData = function()
+	{
+		var This = this;
+		$.get(
+			g_strLeaguesBaseURL + "getliveandupcominggames",
+			{
+				league_id: g_Tournament.GetLeagueID(),
+				stream_language: g_strStreamLanguage
+			},
+			function( json )
+			{
+				console.log(json);
+				if ( !json.success )
+					return;
+
+				This.$m_GamesInProgressList.empty();
+				This.$m_GamesComingUpList.empty();
+
+				var cLiveGamesAdded = 0;
+				for ( var i = 0, cLen = Math.min( 2, json.live_games.length ); i < cLen; ++i )
+				{
+					This.$m_GamesInProgressList.append( This.CreateGameListElement( json.live_games[i] ) );
+					++cLiveGamesAdded;
+				}
+
+				This.$m_GamesInProgressList.find( 'li' ).click(
+					function()
+					{
+						var strURL = $( this ).attr( 'data-linkurl' );
+						window.location.href = strURL;
+					}
+				);
+
+				for ( var i = 0, cLen = Math.min( 3 - cLiveGamesAdded, json.upcoming_series.length ); i < cLen; ++i )
+				{
+					This.$m_GamesComingUpList.append( This.CreateGameListElement( json.upcoming_series[i] ) );
+				}
+
+				This.SetWaitingForData( false );
+			}
+		);
+
+		this.ScheduleNextPoll();
+	};
+
+	CTournamentBox.prototype.CreateGameListElement = function( GameData )
+	{
+		var $LI = this.$m_DummyGameListing.clone().removeAttr( 'id' );
+
+		if ( undefined !== GameData.watch_url )
+		{
+			$LI.attr( 'data-linkurl', GameData.watch_url );
+		}
+		$LI.find( '.Team1' ).append( CreateImage( GameData.team1_logo_url_large ) );
+		$LI.find( '.Team2' ).append( CreateImage( GameData.team2_logo_url_large ) );
+
+		return $LI;
+	}
+
+	CTournamentBox.prototype.OnWindowResize = function()
 	{
 		CBasePanel.prototype.OnWindowResize.apply( this, arguments );
 	};
@@ -5450,7 +5535,7 @@
 		this.m_PanelMap = {};
 		this.m_PanelMap[DOTA_CONSTS.DIV_ID_SPECTATOR_STATS] = new CSpectatorStatsPanel();
 
-		this.m_PanelMap[DOTA_CONSTS.DIV_ID_TOURNAMENT_AD] = new CTournamentAd( MainPanelGroup );
+		this.m_PanelMap[DOTA_CONSTS.DIV_ID_TOURNAMENT_AD] = new CTournamentBox( MainPanelGroup );
 		this.m_PanelMap[DOTA_CONSTS.DIV_ID_TOURNAMENT_CHEER] = new CCheerPanel( MainPanelGroup );
 
 		this.m_PanelMap[DOTA_CONSTS.DIV_ID_OVERVIEW_HEADER] = new COverviewHeaderPanel( MainPanelGroup );
@@ -5651,11 +5736,11 @@
 			this.m_bShouldProcessNewMatch = false;
 		},
 
-		OnInitTournament: function()
+		OnInitTournament: function( unLeagueID )
 		{
 			for ( var strPanelID in this.m_PanelMap )
 			{
-				this.m_PanelMap[strPanelID].OnInitTournament();
+				this.m_PanelMap[strPanelID].OnInitTournament( unLeagueID );
 			}
 		},
 
@@ -5903,7 +5988,7 @@
 		g_UIManager.OnNewMatch();
 	}
 
-	function InitTournament( nLeagueID )
+	function InitTournament( unLeagueID )
 	{
 		VUtils.Assert( null === g_Tournament );
 
@@ -5912,10 +5997,10 @@
 			function( json )
 			{
 				g_Tournament = new CTournament();
-				g_Tournament.Init( json );
+				g_Tournament.Init( unLeagueID, json );
 
 				// Let any panels update based on the newly initialized tournament data
-				g_UIManager.OnInitTournament();
+				g_UIManager.OnInitTournament( unLeagueID );
 
 				// Go through and let anyone who wants to know that tournament data is now ready
 				for ( var i = 0, cLen = g_rgTournamentDataReadyCallbacks.length; i < cLen; ++i )
@@ -5947,6 +6032,7 @@
 		// Initialize a bunch of data/vars handed down from the controller and piped through.
 		g_bIsDev = Data.is_dev;
 		g_bIsMobile = Data.is_mobile;
+		g_strStreamLanguage = Data.stream_language;
 		g_bIsSimulation = Data.simulation;
 		g_Localization = Data.localization;
 		g_strDotaIFrameOriginURL = Data.dota_iframe_origin_url;
@@ -5961,6 +6047,7 @@
 		g_strLoginURL = Data.login_url;
 		g_strPostCheersWebAPIURL = Data.post_cheers_webapi_url;
 		g_strGetTournamentDataURL = Data.get_tournament_data_url;
+		g_strLeaguesBaseURL = Data.leagues_base_url;
 		g_Noise = Data.noise;
 		g_Localization = Data.localization;
 		g_strCurrency = Data.currency;
