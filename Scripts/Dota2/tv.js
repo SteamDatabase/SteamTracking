@@ -4127,6 +4127,7 @@
 			function( json )
 			{
 				console.log(json);
+
 				if ( !json.success )
 					return;
 
@@ -4138,7 +4139,7 @@
 				for ( var i = 0, cLen = json.live_games.length; i < cLen; ++i )
 				{
 					var bIsMatchBeingViewed = false;
-					for ( var iMatch = 0, cMatches = iMatch < json.live_games[i].matches.length; iMatch < cMatches; ++iMatch )
+					for ( var iMatch = 0, cMatches = json.live_games[i].matches.length; iMatch < cMatches; ++iMatch )
 					{
 						if ( g_Match.GetMatchID() == json.live_games[i].matches[iMatch].match_id )
 						{
