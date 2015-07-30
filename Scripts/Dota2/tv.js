@@ -4131,10 +4131,26 @@
 				This.$m_GamesComingUpList.empty();
 
 				var cLiveGamesAdded = 0;
-				for ( var i = 0, cLen = Math.min( 2, json.live_games.length ); i < cLen; ++i )
+				var nMaxInProgress = 2;
+				for ( var i = 0, cLen = json.live_games.length; i < cLen; ++i )
 				{
+					var bIsMatchBeingViewed = false;
+					for ( var iMatch = 0, cMatches = iMatch < json.live_games[i].matches.length; iMatch < cMatches; ++iMatch )
+					{
+						if ( g_Match.GetMatchID() == json.live_games[i].matches[iMatch].match_id )
+						{
+							bIsMatchBeingViewed = true;
+							break;
+						}
+					}
+
+					if ( bIsMatchBeingViewed )
+						continue;
+
 					This.$m_GamesInProgressList.append( This.CreateGameListElement( json.live_games[i] ) );
-					++cLiveGamesAdded;
+
+					if ( ++cLiveGamesAdded >= nMaxInProgress )
+						break;
 				}
 
 				This.$m_GamesInProgressList.find( 'li' ).click(
