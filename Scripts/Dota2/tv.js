@@ -4094,11 +4094,10 @@
 	{
 		CBasePanel.prototype.OnInitTournament.apply( this, arguments );
 
-		this.$m_Image = this.$m_Panel.find( '.Background' ).find( '.ImageBackground' );
-		this.$m_Image.append( CreateImage( g_strBaseImageURL + 'tv/tournamentbox_bg.jpg' ) );
-
+		// Get data on next Think().
 		this.m_flNextPollTime = VUtils.GetTime();
 
+		// Do an initial font sizing based on panel width.
 		this.ResizeFonts();
 	};
 
@@ -5701,6 +5700,48 @@
 				{
 					e.preventDefault();
 					return false;
+				}
+			);
+
+			var $FullscreenButtons = $( '.BrowserFullscreenToggle' );
+			var $FullscreenButton_Enter = $FullscreenButtons.find( '.EnterButton' );
+			var $FullscreenButton_Exit = $FullscreenButtons.find( '.ExitButton' );
+
+			function UpdateFullscreenIcons()
+			{
+				if ( VUtils.BIsInFullscreen() )
+				{
+					$FullscreenButton_Enter.addClass( 'Hidden' );
+					$FullscreenButton_Exit.removeClass( 'Hidden' );
+				}
+				else
+				{
+					$FullscreenButton_Enter.removeClass( 'Hidden' );
+					$FullscreenButton_Exit.addClass( 'Hidden' );
+				}
+			}
+
+			UpdateFullscreenIcons();
+
+			$( document ).on(
+				'webkitfullscreenchange mozfullscreenchange fullscreenchange MSFullscreenChange',
+				function()
+				{
+					UpdateFullscreenIcons();
+				}
+			);
+
+			$( '.BrowserFullscreenToggle' ).click(
+				function()
+				{
+					if ( VUtils.BIsInFullscreen() )
+					{
+						VUtils.ExitFullscreen();
+					}
+					else
+					{
+						VUtils.RequestFullscreen();
+					}
 				}
 			);
 
