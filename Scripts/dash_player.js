@@ -14,7 +14,7 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_strMPD = '';
 	this.m_loaders = [];
 	this.m_mediaSource = null;
-	this.m_rtLiveContentStarted = 0;
+	this.m_tsLiveContentStarted = 0;
 	this.m_rtVODResumeAtTime = 0;
 	this.m_schUpdateMPD = null;
 	this.m_xhrUpdateMPD = null;
@@ -115,7 +115,7 @@ CDASHPlayer.prototype.Close = function()
 	$J( this.m_elVideoPlayer ).off( '.DASHPlayerEvents' );
 
 	this.m_strMPD = '';
-	this.m_rtLiveContentStarted = 0;
+	this.m_tsLiveContentStarted = 0;
 	this.m_rtVODResumeAtTime = 0;
 	this.m_bIsBuffering = true;
 	this.m_bIsPlayingInUI = true;
@@ -191,8 +191,8 @@ CDASHPlayer.prototype.PlayMPD = function( strURL )
 
 			// calculate when the video started relative to system clock
 			var strServerTime = xhr.getResponseHeader( 'date' );
-			var unServerTime = strServerTime ? new Date( strServerTime ).getTime() : Date.now();
-			_player.m_rtLiveContentStarted = Date.now() - (unServerTime - _player.m_mpd.availabilityStartTime.getTime());
+			var nServerTimeMS = strServerTime ? new Date( strServerTime ).getTime() : Date.now();
+			_player.m_tsLiveContentStarted = performance.now() - (nServerTimeMS - _player.m_mpd.availabilityStartTime.getTime());
 			PlayerLog( 'server time: ' + strServerTime );
 		}
 
@@ -435,7 +435,7 @@ CDASHPlayer.prototype.BeginPlayback = function()
 
 	if ( this.BIsLiveContent() )
 	{
-		unStartTime = Date.now() - this.m_rtLiveContentStarted;
+		unStartTime = Math.floor( performance.now() - this.m_tsLiveContentStarted );
 	}
 	else
 	{
@@ -1552,11 +1552,11 @@ CSegmentLoader.prototype.BIsEndVOD = function( bCheckCurrentSegment )
 	return false;
 }
 
-CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAttemptStarted )
+CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAttemptStarted )
 {
 	this.m_schRetryDownload = null;
-	if ( !rtAttemptStarted )
-		rtAttemptStarted = Date.now();
+	if ( !tsAttemptStarted )
+		tsAttemptStarted = performance.now();
 
 	if ( this.BIsEndVOD( true ) )
 		return;
@@ -1567,6 +1567,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 	var xhr = new XMLHttpRequest();
 	this.m_xhr = xhr;
 	xhr.open( 'GET', url );
+	xhr.timeout = 15000;
 	xhr.send();
 
 	if ( !this.ContainsGame() )
@@ -1574,7 +1575,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 	else
 		xhr.responseType = 'json';
 
-	var rtDownloadStart = performance.now();
+	var tsDownloadStart = performance.now();
 	try
 	{
 		xhr.addEventListener( 'readystatechange', function ()
@@ -1584,8 +1585,8 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 				if ( _loader.m_xhr == null )
 					return;
 
-				var now = Date.now();
-				var nDownloadMS = performance.now() - rtDownloadStart;
+				var now = performance.now();
+				var nDownloadMS =  Math.floor(performance.now() - tsDownloadStart);
 
 				_loader.m_xhr = null;
 				_loader.m_nLastSegmentDownloadStatus = xhr.status;
@@ -1598,20 +1599,20 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 
 					_loader.m_nFailedSegmentDownloads++;
 
-					PlayerLog( '[video] HTTP ' + xhr.status + ' (' + nDownloadMS + 'ms, ' + + '0k): ' + url );
+					PlayerLog( '[video] HTTP ' + xhr.status + ' (' +  nDownloadMS + 'ms, ' + + '0k): ' + url );
 					var nTimeToRetry = CDASHPlayer.DOWNLOAD_RETRY_MS;
 					if ( _loader.m_player.BIsLiveContent() )
 						nTimeToRetry += CDASHPlayer.TRACK_BUFFER_MS;
 					else
 						nTimeToRetry += CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS;
 
-					if ( now - rtAttemptStarted > nTimeToRetry )
+					if ( now - tsAttemptStarted > nTimeToRetry )
 					{
 						_loader.DownloadFailed();
 						return;
 					}
 
-					_loader.m_schRetryDownload = setTimeout( function() { _loader.DownloadSegment( url, nSegmentDuration, rtAttemptStarted ); }, CDASHPlayer.DOWNLOAD_RETRY_MS );
+					_loader.m_schRetryDownload = setTimeout( function() { _loader.DownloadSegment( url, nSegmentDuration, tsAttemptStarted ); }, CDASHPlayer.DOWNLOAD_RETRY_MS );
 					return;
 				}
 
@@ -1625,7 +1626,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, rtAt
 						segment.data = arr;
 						_loader.m_bufSegments.push(segment);
 
-						_loader.LogDownload(xhr, rtDownloadStart, segment.data.length);
+						_loader.LogDownload(xhr, tsDownloadStart, segment.data.length);
 						_loader.UpdateBuffer();
 
 						if (_loader.m_player.BLogVideoVerbose()) {
@@ -1784,7 +1785,7 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 	}
 
 	// check if the next segment is available
-	var unDeltaMS = CMPDParser.GetSegmentAvailableFromNow( this.m_adaptation, this.m_nNextSegment, this.m_player.m_rtLiveContentStarted );
+	var unDeltaMS = this.m_player.m_mpd.GetSegmentAvailableFromNow( this.m_adaptation, this.m_nNextSegment, this.m_player.m_tsLiveContentStarted );
 	if ( unDeltaMS > 0 )
 	{
 		// not yet available
@@ -2003,7 +2004,7 @@ CSegmentLoader.prototype.ClearGameDataFramesBefore = function( nBeforeTime )
 	return spliceCount;
 }
 
-CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes )
+CSegmentLoader.prototype.LogDownload = function ( xhr, tsStartTime, dataSizeBytes )
 {
 	// remove the oldest log as needed
 	if ( this.m_rgDownloadLog.length > this.m_nDownloadLogSize )
@@ -2013,7 +2014,7 @@ CSegmentLoader.prototype.LogDownload = function ( xhr, startTime, dataSizeBytes 
 
 	// store the download
 	var logEntry = [];
-	logEntry.downloadTime = performance.now() - startTime;
+	logEntry.downloadTime = performance.now() - tsStartTime;
 
 	if ( logEntry.downloadTime > 0 )
 	{
@@ -2557,12 +2558,21 @@ CMPDParser.GetSegmentURL = function( adaptationSet, representation, nSegment )
 	return CMPDParser.ReplaceTemplateTokens( url, representation.id, nSegment );
 }
 
-CMPDParser.GetSegmentAvailableFromNow = function( adaptationSet, nSegment, rtMovieStart )
+CMPDParser.prototype.BIsDynamic = function()
 {
+	return ( this.type == 'dynamic' );
+}
+
+CMPDParser.prototype.GetSegmentAvailableFromNow = function( adaptationSet, nSegment, tsMovieStart )
+{
+	// video player and this parser don't currently handle availability start time for static content
+	if ( !this.BIsDynamic() )
+		return 0;
+
 	var unSegmentDurationMS = CMPDParser.GetSegmentDuration( adaptationSet );
 	var iSegment = nSegment - adaptationSet.segmentTemplate.startNumber;
 
-	var unAvailableMS = Date.now() - rtMovieStart;
+	var unAvailableMS = performance.now() - tsMovieStart;
 	var unSegmentReadyAt = iSegment * unSegmentDurationMS;
 
 	return unSegmentReadyAt - unAvailableMS;
@@ -2583,7 +2593,7 @@ CMPDParser.GetSegmentForTime = function( adaptationSet, unTime )
 
 CMPDParser.prototype.GetPeriodDuration = function( unPeriod )
 {
-	if ( this.type == 'dynamic' )
+	if ( this.BIsDynamic() )
 	{
 		PlayerLog( 'GetPeriodDuration is unknown for live content!' );
 		return 0;

@@ -11,7 +11,7 @@ var CBroadcastChat = function( broadcastSteamID )
 	this.m_webapi = null;
 
 	this.m_ulChatID = 0;
-	this.m_rtFirstRequest = 0;
+	this.m_tsFirstRequest = null;
 	this.m_nFromFirstRequestMS = 0;
 	this.m_nNextChatTS = 0;
 	this.m_cConsecutiveErrors = 0;
@@ -38,7 +38,10 @@ var CBroadcastChat = function( broadcastSteamID )
 		// If our viewport wasn't just resized, lets take a look at the new scrollheight and see
 		// if maybe the user doesn't want to be at the bottom
 		if( _chat.m_nLastHeight == this.offsetHeight )
-			_chat.m_bAutoScroll = this.scrollTop == (this.scrollHeight - this.offsetHeight);
+		{
+			var nDelta = this.scrollTop - (this.scrollHeight - this.offsetHeight);
+			_chat.m_bAutoScroll = Math.abs( nDelta ) < 6;
+		}
 	});
 };
 
@@ -223,7 +226,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 
 		// check if first request or we received initial_delay which will allow us to resync time
 		var nSleepMS = 0;
-		if( _chat.m_rtFirstRequest == 0 || _chat.m_nNextChatTS == 0 || rgResponse.initial_delay )
+		if( _chat.m_tsFirstRequest == null || _chat.m_nNextChatTS == 0 || rgResponse.initial_delay )
 		{
 			if ( rgResponse.initial_delay === 'undefined' )
 			{
@@ -231,7 +234,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 				return;
 			}
 
-			_chat.m_rtFirstRequest = Date.now() + rgResponse.initial_delay;
+			_chat.m_tsFirstRequest = performance.now() + rgResponse.initial_delay;
 			_chat.m_nFromFirstRequestMS = 0;
 			_chat.m_nNextChatTS = rgResponse.next_request;
 
@@ -248,7 +251,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 			_chat.m_nFromFirstRequestMS += rgResponse.next_request - _chat.m_nNextChatTS;
 			_chat.m_nNextChatTS = rgResponse.next_request;
 
-			nSleepMS = (_chat.m_rtFirstRequest + _chat.m_nFromFirstRequestMS) - Date.now();
+			nSleepMS = (_chat.m_tsFirstRequest + _chat.m_nFromFirstRequestMS) - performance.now();
 		}
 
 		if ( _chat.m_bReconnecting )
@@ -269,11 +272,11 @@ CBroadcastChat.prototype.RequestLoop = function()
 		_chat.m_cConsecutiveErrors++;
 		if ( _chat.m_cConsecutiveErrors >= CBroadcastChat.s_MessageRetryMax )
 		{
-			if ( _chat.m_rtFirstRequest == 0 )
+			if ( _chat.m_tsFirstRequest == null )
 			{
 								_chat.DisplayChatError( 'Unable to join chat' );
-			return;
-		}
+				return;
+			}
 
 			_chat.m_cConsecutiveErrors = 0;
 			_chat.m_bReconnecting = true;
@@ -286,7 +289,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 
 CBroadcastChat.prototype.SyncChat = function()
 {
-	this.m_rtFirstRequest = 0;
+	this.m_tsFirstRequest = null;
 	this.m_nFromFirstRequestMS = 0;
 	this.m_nNextChatTS = 0;
 }
@@ -385,8 +388,10 @@ CBroadcastChat.prototype.TrimChat = function()
 	var $messages = $J('#ChatMessages');
 	while ( $messages.children().length > 500 )
 	{
-		$messages.children( 0 ).remove();
+		$messages.children().first().remove();
 	}
+
+	$J('.scrollbar').perfectScrollbar('update');
 }
 
 CBroadcastChat.prototype.UpdateScroll = function()
@@ -638,11 +643,7 @@ CBroadcastChat.prototype.RemoveUserMessages = function( steamID )
 	var str = ".ChatMessage[data-steamid='" + steamID + "']";
 	$J( '#ChatMessages' ).find( str ).remove();
 
-	if ( this.m_bAutoScroll )
-	{
-				$J('#ChatBox').scrollTop( 0 );
-		this.ScrollToBottom();
-	}
+	$J('.scrollbar').perfectScrollbar('update');
 }
 
 CBroadcastChat.prototype.OnRemoveUserMessages = function()
