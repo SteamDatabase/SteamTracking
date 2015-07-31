@@ -4106,6 +4106,11 @@
 		this.m_flNextPollTime = VUtils.GetTime() + DOTA_CONSTS.TOURNAMENT_SCHEDULE_UPDATE_INTERVAL;
 	};
 
+	CTournamentBox.prototype.BShouldThink = function()
+	{
+		return null !== g_Tournament;
+	};
+
 	CTournamentBox.prototype.Think = function( flCurTime, flElapsed )
 	{
 		CBasePanel.prototype.Think.apply( this, arguments );
@@ -4192,6 +4197,15 @@
 				}
 
 				This.SetWaitingForData( false );
+
+				if ( 0 === cLiveGamesAdded && 0 === cUpcomingAdded )
+				{
+					This.$m_Panel.hide();
+				}
+				else
+				{
+					This.$m_Panel.show();
+				}
 			}
 		);
 
@@ -4221,7 +4235,7 @@
 	{
 		CBasePanel.prototype.ResizeFonts.apply( this, arguments );
 
-		var flBaseFontSize = this.$m_Panel.width() * .0037;
+		var flBaseFontSize = this.$m_Panel.actual( 'width' ) * .0037;
 		this.$m_HeaderText.css( 'font-size', flBaseFontSize + 'em' );
 	};
 
