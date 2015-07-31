@@ -786,6 +786,7 @@
  B CSendingConfCodeWizardChild::m_symbol
  B CSendingPasswordCodeWizardChild::m_symbol
  B CSendingPasswordResetSmsWizardChild::m_symbol
+ B CSetActivityMsg::default_instance_
  B CSetAppLanguage::m_symbol
  B CSetBurstBitrateMsg::default_instance_
  B CSetControllerPairingEnabledMsg::default_instance_
@@ -10244,6 +10245,7 @@
  D typeinfo for CSendingPasswordCodeWizardChild::CCallback_OnRequestEmailResult
  D typeinfo for CSendingPasswordResetSmsWizardChild
  D typeinfo for CSendingPasswordResetSmsWizardChild::CCallback_OnPasswordResetSmsResult
+ D typeinfo for CSetActivityMsg
  D typeinfo for CSetAppLanguage
  D typeinfo for CSetBurstBitrateMsg
  D typeinfo for CSetControllerPairingEnabledMsg
@@ -13613,6 +13615,7 @@
  D vtable for CSendingPasswordCodeWizardChild::CCallback_OnRequestEmailResult
  D vtable for CSendingPasswordResetSmsWizardChild
  D vtable for CSendingPasswordResetSmsWizardChild::CCallback_OnPasswordResetSmsResult
+ D vtable for CSetActivityMsg
  D vtable for CSetAppLanguage
  D vtable for CSetBurstBitrateMsg
  D vtable for CSetControllerPairingEnabledMsg
@@ -16397,6 +16400,7 @@
  R typeinfo name for CSendingPasswordCodeWizardChild::CCallback_OnRequestEmailResult
  R typeinfo name for CSendingPasswordResetSmsWizardChild
  R typeinfo name for CSendingPasswordResetSmsWizardChild::CCallback_OnPasswordResetSmsResult
+ R typeinfo name for CSetActivityMsg
  R typeinfo name for CSetAppLanguage
  R typeinfo name for CSetBurstBitrateMsg
  R typeinfo name for CSetControllerPairingEnabledMsg
@@ -18297,7 +18301,7 @@
  T BetaChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T BetaChanged::GetEventType()
  T BetaChanged::MakeEvent(panorama::IUIPanelClient const*, bool)
- T BezierEvaluateImpl<Vector, 3>::BezierEvaluate(Vector const*, float, Vector&)
+ T BezierEvaluateImpl<Vector2D, 3>::BezierEvaluate(Vector2D const*, float, Vector2D&)
  T BillingInfoComplete::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T BillingInfoComplete::GetEventType()
  T BillingInfoComplete::MakeEvent(panorama::IUIPanelClient const*)
@@ -19054,6 +19058,7 @@
  T CBaseFrameFunction::CBaseFrameFunction(char const*, EFrameType)
  T CBaseFrameFunction::SetName(char const*)
  T CBaseFrameFunction::~CBaseFrameFunction()
+ T CBezierCurve<Vector2D, 3>::SetControlPoints(Vector2D const*)
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CBoolProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -23671,6 +23676,7 @@
  T CGameStreamSession::GetCaptureQuality()
  T CGameStreamSession::GetCaptureSliceCount()
  T CGameStreamSession::GetCaptureType()
+ T CGameStreamSession::GetGameName()
  T CGameStreamSession::OnAudioDataLost(CUtlVector<unsigned short, CUtlMemory<unsigned short> > const&)
  T CGameStreamSession::OnControllerAttached(unsigned int, bool, bool)
  T CGameStreamSession::OnControllerDetached(unsigned int)
@@ -30991,6 +30997,17 @@
  T CSendingPasswordResetSmsWizardChild::OnTimeCheck()
  T CSendingPasswordResetSmsWizardChild::~CSendingPasswordResetSmsWizardChild()
  T CServerPipe::InitInProcessPipe(CClientPipe*)
+ T CSetActivityMsg::ByteSize() const
+ T CSetActivityMsg::CSetActivityMsg()
+ T CSetActivityMsg::Clear()
+ T CSetActivityMsg::GetCachedSize() const
+ T CSetActivityMsg::GetMetadata() const
+ T CSetActivityMsg::IsInitialized() const
+ T CSetActivityMsg::MergeFrom(CSetActivityMsg const&)
+ T CSetActivityMsg::New() const
+ T CSetActivityMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetActivityMsg::SetCachedSize(int) const
+ T CSetActivityMsg::~CSetActivityMsg()
  T CSetAppLanguage::CSetAppLanguage(panorama::IUIWindow*, char const*, unsigned int)
  T CSetAppLanguage::ClosePanel()
  T CSetAppLanguage::GetPanelType() const
@@ -33891,6 +33908,7 @@
  T CStreamServer::SendFrame(CStreamFrame*)
  T CStreamServer::SendHideCursor()
  T CStreamServer::SendOverlayEnabled(bool)
+ T CStreamServer::SendSetActivity(EStreamActivity)
  T CStreamServer::SendSetControllerPairingEnabled(bool, int)
  T CStreamServer::SendSetControllerPairingResult(int, bool)
  T CStreamServer::SendSetCursor(unsigned long long)
@@ -37914,10 +37932,10 @@
  T CUtlVector<CControllerPropertiesBase::BindingInfo_t, CUtlMemory<CControllerPropertiesBase::BindingInfo_t> >::InsertBefore(int, CControllerPropertiesBase::BindingInfo_t const&)
  T CUtlVector<CControllerPropertiesBase::BindingInfo_t, CUtlMemory<CControllerPropertiesBase::BindingInfo_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CControllerPropertiesBase::BindingInfo_t, CUtlMemory<CControllerPropertiesBase::BindingInfo_t> >::~CUtlVector()
- T CUtlVector<CCubicBezierCurve<Vector>, CUtlMemory<CCubicBezierCurve<Vector> > >::GrowVector(int)
- T CUtlVector<CCubicBezierCurve<Vector>, CUtlMemory<CCubicBezierCurve<Vector> > >::InsertBefore(int, CCubicBezierCurve<Vector> const&)
- T CUtlVector<CCubicBezierCurve<Vector>, CUtlMemory<CCubicBezierCurve<Vector> > >::ShiftElementsRight(int, int)
- T CUtlVector<CCubicBezierCurve<Vector>, CUtlMemory<CCubicBezierCurve<Vector> > >::~CUtlVector()
+ T CUtlVector<CCubicBezierCurve<Vector2D>, CUtlMemory<CCubicBezierCurve<Vector2D> > >::GrowVector(int)
+ T CUtlVector<CCubicBezierCurve<Vector2D>, CUtlMemory<CCubicBezierCurve<Vector2D> > >::InsertBefore(int, CCubicBezierCurve<Vector2D> const&)
+ T CUtlVector<CCubicBezierCurve<Vector2D>, CUtlMemory<CCubicBezierCurve<Vector2D> > >::ShiftElementsRight(int, int)
+ T CUtlVector<CCubicBezierCurve<Vector2D>, CUtlMemory<CCubicBezierCurve<Vector2D> > >::~CUtlVector()
  T CUtlVector<CDebugStatsPanel::StatsEntry_s, CUtlMemory<CDebugStatsPanel::StatsEntry_s> >::GrowVector(int)
  T CUtlVector<CDebugStatsPanel::StatsEntry_s, CUtlMemory<CDebugStatsPanel::StatsEntry_s> >::InsertBefore(int, CDebugStatsPanel::StatsEntry_s const&)
  T CUtlVector<CDebugStatsPanel::StatsEntry_s, CUtlMemory<CDebugStatsPanel::StatsEntry_s> >::ShiftElementsRight(int, int)
@@ -40919,6 +40937,7 @@
  T EFundWalletRelationshipToPchName(EFundWalletRelationship)
  T EOSTypeFromName(char const*)
  T EParentalFeatureFromName(char const*)
+ T EStreamActivity_descriptor()
  T EStreamAudioCodec_IsValid(int)
  T EStreamControlMessage_IsValid(int)
  T EStreamControlMessage_descriptor()
@@ -46114,7 +46133,7 @@
  T panorama::CSSHelpers::BParseBackgroundRepeat(panorama::CBackgroundRepeat*, char const*, char const**)
  T panorama::CSSHelpers::BParseBorderStyle(panorama::EBorderStyle*, char const*, char const**)
  T panorama::CSSHelpers::BParseColor(Color*, char const*, char const**)
- T panorama::CSSHelpers::BParseCommaSepList(CUtlVector<panorama::EAnimationTimingFunction, CUtlMemory<panorama::EAnimationTimingFunction> >*, CUtlVector<CCubicBezierCurve<Vector>, CUtlMemory<CCubicBezierCurve<Vector> > >*, bool (*)(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector>*, char const*, char const**), char const*)
+ T panorama::CSSHelpers::BParseCommaSepList(CUtlVector<panorama::EAnimationTimingFunction, CUtlMemory<panorama::EAnimationTimingFunction> >*, CUtlVector<CCubicBezierCurve<Vector2D>, CUtlMemory<CCubicBezierCurve<Vector2D> > >*, bool (*)(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector2D>*, char const*, char const**), char const*)
  T panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)
  T panorama::CSSHelpers::BParseFillBrushCollection(panorama::CFillBrushCollection*, char const*, char const**, float)
  T panorama::CSSHelpers::BParseFunctionName(panorama::CPanoramaSymbol&, char const*, char const**)
@@ -46134,7 +46153,7 @@
  T panorama::CSSHelpers::BParseQuotedString(CUtlString&, char const*, char const**)
  T panorama::CSSHelpers::BParseRect(panorama::CUILength*, panorama::CUILength*, panorama::CUILength*, panorama::CUILength*, char const*, char const**, float)
  T panorama::CSSHelpers::BParseTime(double*, char const*, char const**)
- T panorama::CSSHelpers::BParseTimingFunction(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector>*, char const*, char const**)
+ T panorama::CSSHelpers::BParseTimingFunction(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector2D>*, char const*, char const**)
  T panorama::CSSHelpers::BParseTransformFunction(panorama::CTransform3D**, char const*, char const**, float)
  T panorama::CSSHelpers::BParseTrueFalse(char const*, bool*)
  T panorama::CSSHelpers::BParseURL(CUtlString&, char const*, char const**)
@@ -46237,7 +46256,7 @@
  T panorama::CStylePropertyAnimationProperties::AddNewProperty()
  T panorama::CStylePropertyAnimationProperties::BCanTransition()
  T panorama::CStylePropertyAnimationProperties::BFullySet()
- T panorama::CStylePropertyAnimationProperties::BParseAndAddTimingFunction(bool (*)(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector>*, char const*, char const**), char const*)
+ T panorama::CStylePropertyAnimationProperties::BParseAndAddTimingFunction(bool (*)(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector2D>*, char const*, char const**), char const*)
  T panorama::CStylePropertyAnimationProperties::BParseIterationCount(float*, char const*, char const**)
  T panorama::CStylePropertyAnimationProperties::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyAnimationProperties::GetInvalidateLayout(panorama::CStyleProperty*) const
@@ -46724,7 +46743,7 @@
  T panorama::CStylePropertyTransitionProperties::BCanPropertyTransition(panorama::CStyleSymbol)
  T panorama::CStylePropertyTransitionProperties::BCanTransition()
  T panorama::CStylePropertyTransitionProperties::BFullySet()
- T panorama::CStylePropertyTransitionProperties::BParseAndAddTimingFunction(bool (*)(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector>*, char const*, char const**), char const*)
+ T panorama::CStylePropertyTransitionProperties::BParseAndAddTimingFunction(bool (*)(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector2D>*, char const*, char const**), char const*)
  T panorama::CStylePropertyTransitionProperties::BParseAndRemoveImmediate(bool*, char*)
  T panorama::CStylePropertyTransitionProperties::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTransitionProperties::GetDescription(panorama::CStyleSymbol)
@@ -47943,7 +47962,7 @@
  T panorama::GamepadRemoved::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::GamepadRemoved::GetEventType()
  T panorama::GamepadRemoved::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::GetAnimationCurveControlPoints(panorama::EAnimationTimingFunction, Vector*)
+ T panorama::GetAnimationCurveControlPoints(panorama::EAnimationTimingFunction, Vector2D*)
  T panorama::GetDebugPanelName(char*, unsigned int, panorama::IUIPanel*)
  T panorama::GetParentSizeAvailable(panorama::IUIPanel*, float&, float&, float&)
  T panorama::GoOffline::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -54868,6 +54887,8 @@
  b (anonymous namespace)::CRadiusData_CCornerRadius_reflection_
  b (anonymous namespace)::CRadiusData_descriptor_
  b (anonymous namespace)::CRadiusData_reflection_
+ b (anonymous namespace)::CSetActivityMsg_descriptor_
+ b (anonymous namespace)::CSetActivityMsg_reflection_
  b (anonymous namespace)::CSetBurstBitrateMsg_descriptor_
  b (anonymous namespace)::CSetBurstBitrateMsg_reflection_
  b (anonymous namespace)::CSetControllerPairingEnabledMsg_descriptor_
@@ -54937,6 +54958,7 @@
  b (anonymous namespace)::CaptionGripPanel::KB_ChainToMap()::chained
  b (anonymous namespace)::EAudioFormat_descriptor_
  b (anonymous namespace)::EFrameAccumulatedStat_descriptor_
+ b (anonymous namespace)::EStreamActivity_descriptor_
  b (anonymous namespace)::EStreamAudioCodec_descriptor_
  b (anonymous namespace)::EStreamBitrate_descriptor_
  b (anonymous namespace)::EStreamChannel_descriptor_
@@ -57000,6 +57022,7 @@
  r protobuf_AssignDesc_stream_2eproto()::CNegotiationSetConfigMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::COverlayEnabledMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CQuitRequest_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetActivityMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetBurstBitrateMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetControllerPairingEnabledMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetControllerPairingResultMsg_offsets_
