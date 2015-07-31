@@ -4074,8 +4074,10 @@
 		CBasePanel.call( this, '#' + DOTA_CONSTS.DIV_ID_TOURNAMENT_AD, PanelGroup );
 
 		this.$m_DummyGameListing = $( '#DummyGameListing' ).clone();
-		this.$m_GamesInProgressList = this.$m_Panel.find( '.GamesInProgress' ).find( '.GameList' );
-		this.$m_GamesComingUpList = this.$m_Panel.find( '.GamesComingUp' ).find( '.GameList' );
+		this.$m_GamesInProgress = this.$m_Panel.find( '.GamesInProgress' );
+		this.$m_GamesComingUp = this.$m_Panel.find( '.GamesComingUp' );
+		this.$m_GamesInProgressList = this.$m_GamesInProgress.find( '.GameList' );
+		this.$m_GamesComingUpList = this.$m_GamesComingUp.find( '.GameList' );
 		this.$m_HeaderText = this.$m_Panel.find( 'h1' );
 		this.m_flNextPollTime = null;
 	};
@@ -4157,6 +4159,15 @@
 						break;
 				}
 
+				if ( cLiveGamesAdded > 0 )
+				{
+					This.$m_GamesInProgress.show();
+				}
+				else
+				{
+					This.$m_GamesInProgress.hide();
+				}
+
 				This.$m_GamesInProgressList.find( 'li' ).click(
 					function()
 					{
@@ -4165,9 +4176,20 @@
 					}
 				);
 
+				var cUpcomingAdded = 0;
 				for ( var i = 0, cLen = Math.min( 3 - cLiveGamesAdded, json.upcoming_series.length ); i < cLen; ++i )
 				{
 					This.$m_GamesComingUpList.append( This.CreateGameListElement( json.upcoming_series[i] ) );
+					++cUpcomingAdded;
+				}
+
+				if ( cUpcomingAdded > 0 )
+				{
+					This.$m_GamesComingUp.show();
+				}
+				else
+				{
+					This.$m_GamesComingUp.hide();
 				}
 
 				This.SetWaitingForData( false );
