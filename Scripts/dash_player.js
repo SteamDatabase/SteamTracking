@@ -516,7 +516,7 @@ CDASHPlayer.prototype.OnVideoStalled = function()
 CDASHPlayer.prototype.OnSegmentDownloaded = function()
 {
 	this.UpdateStats();
-	this.UpdateRepresentation( this.m_nVideoRepresentationIndex, true );
+	this.UpdateVideoRepresentation( this.m_nVideoRepresentationIndex );
 	$J( this.m_elVideoPlayer ).trigger( 'bufferedupdate' );
 }
 
@@ -764,99 +764,137 @@ CDASHPlayer.prototype.GetRepresentationsArray = function ( bVideo )
 	return rgRespresentations;
 }
 
-CDASHPlayer.prototype.UpdateRepresentation = function ( representationIndex, bVideo )
+CDASHPlayer.prototype.GetVideoLoader = function()
 {
-	// if specific bit rate and no change will occur, short circuit and get out
-	if ( ( bVideo && representationIndex >= 0 && this.m_nVideoRepresentationIndex == representationIndex ) ||
-	   (  !bVideo && this.m_nAudioRepresentationIndex == representationIndex ) )
+	for ( var i = 0; i < this.m_loaders.length; i++ )
+	{
+		if ( this.m_loaders[i].ContainsVideo() )
+			return this.m_loaders[i];
+	}
+
+	return null;
+}
+
+CDASHPlayer.prototype.GetAudioLoader = function()
+{
+	for ( var i = 0; i < this.m_loaders.length; i++ )
+	{
+		if ( this.m_loaders[i].ContainsAudio() )
+			return this.m_loaders[i];
+	}
+
+	return null;
+}
+
+CDASHPlayer.prototype.UpdateAudioRepresentation = function( nRepresentationIndex )
+{
+	// skip if user selected representation and hasn't changed
+	if ( this.m_nAudioRepresentationIndex == nRepresentationIndex )
 		return;
 
-	if ( representationIndex == -1 )
+	// no auto for audio.. don't change anything
+	if ( nRepresentationIndex < 0 )
+		return;
+
+	var loader = this.GetAudioLoader();
+	if ( !loader )
+		return;
+
+	// user selected representation
+	this.m_nAudioRepresentationIndex = nRepresentationIndex;
+	loader.ChangeRepresentationByIndex( this.m_nAudioRepresentationIndex );
+	loader.SeekToSegment( this.m_elVideoPlayer.currentTime, !this.BIsLiveContent() );
+
+	if ( !this.BIsLiveContent() )
+		this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
+}
+
+CDASHPlayer.prototype.GetLiveDesiredBitrate = function( nHeight )
+{
+	if ( nHeight < 360 )
+		return 1000 * 1000;
+	if ( nHeight < 480 )
+		return 2000 * 1000;
+	if ( nHeight < 720 )
+		return 4000 * 1000;
+
+	return 12000 * 1000;
+}
+
+CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex )
+{
+	// skip if user selected representation and hasn't changed
+	if ( nRepresentationIndex >= 0 && this.m_nVideoRepresentationIndex == nRepresentationIndex )
+		return;
+
+	var loader = this.GetVideoLoader();
+	if ( !loader )
+		return;
+
+	// user selected representation
+	if ( nRepresentationIndex >= 0 )
 	{
-		// don't automatically shift bit rates while waiting on the player
-		if ( this.BIsBuffering() )
-			return;
-
-		// Adaptive Video Change
-		for (var i = 0; i < this.m_loaders.length; i++)
-		{
-			var newRepresentationIndex = this.m_loaders[i].GetRepresentationsCount() - 1;
-
-			if ( this.m_loaders[i].ContainsVideo() )
-			{
-				var nMaxRepresentations = this.m_loaders[i].GetRepresentationsCount() - 1;
-
-				// if we find there is only one representation, update to not-adaptive and get out
-				if (nMaxRepresentations == 0)
-				{
-					this.m_nVideoRepresentationIndex = newRepresentationIndex;
-					break;
-				}
-
-				for (var b = nMaxRepresentations; b >= 0; b--)
-				{
-					// proposed new video bit rate + current audio bit rate modified by playback rate, plus 20% overhead
-					var nRequiredBitRate = ( ( this.m_loaders[i].m_adaptation.representations[b].bandwidth + this.m_nAudioBitRate ) * this.m_elVideoPlayer.playbackRate ) * 1.2;
-					if ( this.m_nCurrentDownloadBitRate >= nRequiredBitRate )
-					{
-						if ( this.m_loaders[i].m_adaptation.representations[b].height != null )
-						{
-							// player height needs to be more than the video height of the smaller representation (e.g. 800 height should use 1080, not 720)
-							if ( this.m_nPlayerHeight > this.m_loaders[i].m_adaptation.representations[ Math.min( b+1, nMaxRepresentations ) ].height )
-							{
-								// for broadcasts that may have 60FPS reps, only switch up to it if the player is keeping up with 30FPS
-								if ( this.BIsLiveContent() && this.m_loaders[i].m_adaptation.representations[b].frameRate > CDASHPlayer.MAX_STANDARD_FRAMERATE )
-								{
-									if ( Math.ceil( this.m_nCurrentFramerate ) >= CDASHPlayer.MAX_STANDARD_FRAMERATE )
-									{
-										newRepresentationIndex = b;
-									}
-								}
-								else
-								{
-									// VOD or framerate less than 30
-									newRepresentationIndex = b;
-								}
-							}
-						}
-						else
-						{
-							// no defined height so can only use bandwidth
-							newRepresentationIndex = b;
-						}
-					}
-				}
-
-				// change representation, record now in adaptive rate.
-				this.m_nVideoRepresentationIndex = -1;
-				this.m_loaders[i].ChangeRepresentationByIndex(newRepresentationIndex);
-				break;
-			}
-		}
-	}
-	else
-	{
-		// Specific representation and bit rate
-		for (var i = 0; i < this.m_loaders.length; i++)
-		{
-			if ( bVideo && this.m_loaders[i].ContainsVideo() )
-			{
-				this.m_nVideoRepresentationIndex = representationIndex;
-				this.m_loaders[i].ChangeRepresentationByIndex( this.m_nVideoRepresentationIndex );
-				this.m_loaders[i].SeekToSegment( this.m_elVideoPlayer.currentTime, !this.BIsLiveContent() );
-				this.m_nRepChangeTargetHeight = this.m_loaders[i].m_adaptation.representations[this.m_nVideoRepresentationIndex].height;
-			}
-			else if (!bVideo && this.m_loaders[i].ContainsAudio())
-			{
-				this.m_nAudioRepresentationIndex = representationIndex;
-				this.m_loaders[i].ChangeRepresentationByIndex( this.m_nAudioRepresentationIndex );
-				this.m_loaders[i].SeekToSegment( this.m_elVideoPlayer.currentTime, !this.BIsLiveContent() );
-			}
-		}
+		this.m_nVideoRepresentationIndex = nRepresentationIndex;
+		loader.ChangeRepresentationByIndex( this.m_nVideoRepresentationIndex );
+		loader.SeekToSegment( this.m_elVideoPlayer.currentTime, !this.BIsLiveContent() );
+		this.m_nRepChangeTargetHeight = loader.m_adaptation.representations[this.m_nVideoRepresentationIndex].height;
 
 		if ( !this.BIsLiveContent() )
 			this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
+
+		return;
 	}
+
+	/////////////////////
+	// adaptive streaming
+
+	// don't automatically shift bit rates while waiting on the player
+	if ( this.BIsBuffering() )
+		return;
+
+	// check for only 1 representation
+	var iMaxRepresentation = loader.GetRepresentationsCount() - 1;
+	if ( iMaxRepresentation == 0 )
+	{
+		this.m_nVideoRepresentationIndex = iMaxRepresentation;
+		return;
+	}
+
+	// loop through sorted representations, lowest to highest
+	var iNewRepresentation = iMaxRepresentation;
+	for ( var i = iMaxRepresentation - 1; i >= 0; i-- )
+	{
+		// proposed new video bit rate + current audio bit rate modified by playback rate, plus 20% overhead
+		var nRequiredBitRate = ( ( loader.m_adaptation.representations[i].bandwidth + this.m_nAudioBitRate ) * this.m_elVideoPlayer.playbackRate ) * 1.2;
+		if ( this.m_nCurrentDownloadBitRate < nRequiredBitRate )
+			continue;
+
+		// for broadcasts that may have 60FPS reps, only switch up to it if the player is keeping up with 30FPS
+		var nRepFrameRate = loader.m_adaptation.representations[i].frameRate ? loader.m_adaptation.representations[i].frameRate : 0;
+		if ( this.BIsLiveContent() && nRepFrameRate > CDASHPlayer.MAX_STANDARD_FRAMERATE )
+		{
+			if ( Math.ceil( this.m_nCurrentFramerate ) < (CDASHPlayer.MAX_STANDARD_FRAMERATE - 1) )
+				continue;
+		}
+
+		// player height needs to be more than the video height of the smaller representation (e.g. 800 height should use 1080, not 720)
+		var nNewRepHeight = loader.m_adaptation.representations[ iNewRepresentation ].height ? loader.m_adaptation.representations[ iNewRepresentation ].height : 0;
+		var nRepHeight = loader.m_adaptation.representations[ i ].height ? loader.m_adaptation.representations[ i ].height : 0;
+		if ( nRepHeight != 0 && nRepHeight > nNewRepHeight && nNewRepHeight > this.m_nPlayerHeight )
+		{
+			// bigger than selected and selected filled player
+			var nNewRepBitRate = loader.m_adaptation.representations[ iNewRepresentation ].bandwidth;
+			if ( !this.BIsLiveContent() || nNewRepBitRate > this.GetLiveDesiredBitrate( this.m_nPlayerHeight ) )
+				break;
+		}
+
+		// this is best representation so far
+		iNewRepresentation = i;
+	}
+
+	// set
+	this.m_nVideoRepresentationIndex = -1;
+	loader.ChangeRepresentationByIndex( iNewRepresentation );
 }
 
 CDASHPlayer.prototype.BIsRepresentationChanging = function()
@@ -2905,7 +2943,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 
 	$J( '#representation_select_video').on('change', function()
 	{
-		_ui.m_player.UpdateRepresentation(this.value, true);
+		_ui.m_player.UpdateVideoRepresentation( this.value );
 		this.blur();
 	} );
 
@@ -2931,7 +2969,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 
 		$J( '#representation_select_audio').on('change', function()
 		{
-			_ui.m_player.UpdateRepresentation(this.value, false);
+			_ui.m_player.UpdateAudioRepresentation( this.value );
 			this.blur();
 		} );
 	}
@@ -3020,13 +3058,13 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 		$J( '#representation_audio .panel_select .left_arrow' ).on( 'click', function() {
 			var elSelect = $J( '#representation_audio #representation_select' );
 			var value = _ui.PanelSelectShift( elSelect, false );
-			_ui.m_player.UpdateRepresentation( value, false );
+			_ui.m_player.UpdateAudioRepresentation( value );
 		} );
 
 		$J( '#representation_audio .panel_select .right_arrow' ).on( 'click', function() {
 			var elSelect = $J( '#representation_audio #representation_select' );
 			var value = _ui.PanelSelectShift( elSelect, true );
-			_ui.m_player.UpdateRepresentation( value, false );
+			_ui.m_player.UpdateAudioRepresentation( value );
 		} );
 
 		$J( '#representation_audio' ).show();
@@ -3773,7 +3811,7 @@ CDASHPlayerUI.prototype.CloseSettingsPanel = function( bRestoreElementFocus )
 	this.ShowMainPanelUI();
 
 	var value = this.PanelSelectGetValue( $J( '#representation_video #representation_select' ) );
-	this.m_player.UpdateRepresentation( value, true );
+	this.m_player.UpdateVideoRepresentation( value );
 }
 
 CDASHPlayerUI.prototype.CloseCaptionsPanel = function( bRestoreElementFocus, bSaveChanges )
@@ -5349,36 +5387,39 @@ CDASHPlayerStats.prototype.CalculateTotals = function()
 	this.fGameDataTriggerPerf = this.m_videoPlayer.StatsLastGameDataEventTriggerPerf();
 }
 
-CDASHPlayerStats.prototype.FormattingBytesToHuman = function ( nBytes )
+CDASHPlayerStats.k_rgByteUnits = [ 'B', 'KB', 'MB', 'GB' ];
+CDASHPlayerStats.k_rgBpsUnits = [ 'bps', 'Kbps', 'Mbps', 'Gbps' ];
+CDASHPlayerStats.prototype.FormattingBytesToHuman = function ( nBytes, rgUnits )
 {
 	if( nBytes < 1000 )
-		return nBytes + " B";
+		return nBytes + ' ' + rgUnits[0];
 	if( nBytes < 1000000 )
-		return ( nBytes / 1000 ).toFixed(2) + ' KB';
+		return ( nBytes / 1000 ).toFixed(2) + ' ' + rgUnits[1];
 
 	if( nBytes < 1000000000)
-		return ( nBytes / 1000000 ).toFixed(2) + ' MB';
+		return ( nBytes / 1000000 ).toFixed(2) + ' ' + rgUnits[2];
 
-	return (nBytes / 1000000000 ).toFixed(2) + ' GB';
+	return (nBytes / 1000000000 ).toFixed(2) + ' ' + rgUnits[3];
 }
 
 CDASHPlayerStats.prototype.Tick = function()
 {
 	$ele = $J(this.m_elVideoPlayer);
 	ele = this.m_elVideoPlayer;
+	var _stats = this;
 	var rgStatsDefinitions = [
 		// Webkit
 		{
 			id: 'webkitAudioBytesDecoded',
 			label: 'Audio Bytes Decoded',
 			value: ele.webkitAudioBytesDecoded || ele.webkitAudioDecodedByteCount,
-			formatFunc: this.FormattingBytesToHuman
+			formatFunc: function( val ) { return _stats.FormattingBytesToHuman( val, CDASHPlayerStats.k_rgByteUnits ) }
 		},
 		{
 			id: 'webkitVideoBytesDecoded',
 			label: 'Video Bytes Decoded',
 			value: ele.webkitVideoBytesDecoded || ele.webkitVideoDecodedByteCount,
-			formatFunc: this.FormattingBytesToHuman
+			formatFunc: function( val ) { return _stats.FormattingBytesToHuman( val, CDASHPlayerStats.k_rgByteUnits ) }
 		},
 		{
 			id: 'webkitDecodedFrames',
@@ -5440,9 +5481,9 @@ CDASHPlayerStats.prototype.Tick = function()
 		},
 		{
 			id: 'downloadbandwidth',
-			label: 'Bandwidth (bits)',
+			label: 'Bandwidth',
 			value: this.strBandwidth,
-			formatFunc: this.FormattingBytesToHuman
+			formatFunc: function( val ) { return _stats.FormattingBytesToHuman( val, CDASHPlayerStats.k_rgBpsUnits ) }
 		},
 		{
 			id: 'dashbuffers',
@@ -5467,9 +5508,9 @@ CDASHPlayerStats.prototype.Tick = function()
 		},
 		{
 			id: 'bandwidthavg',
-			label: ' - Bandwidth Average (bits)',
+			label: ' - Bandwidth Average',
 			value: this.m_fBandwidthAverage,
-			formatFunc: this.FormattingBytesToHuman
+			formatFunc:  function( val ) { return _stats.FormattingBytesToHuman( val, CDASHPlayerStats.k_rgBpsUnits ) }
 		},
 		{
 			id: 'segmentfails',
