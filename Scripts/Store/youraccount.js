@@ -149,6 +149,102 @@ function OnUpdateSubscriptionFailure( agreementid, cancel )
 	}
 }
 
+
+function ShowCancelPurchaseDialog(transid)
+{
+	$('link_transaction_'+transid).style.display = 'none';
+	$('cancel_transaction_'+transid).style.display = 'block';
+	
+	new Effect.Highlight( 'cancel_transaction_'+transid, { endcolor : '#000000', startcolor : '#ff9900' } );	
+}
+
+function AbortCancelPendingPurchase(transid)
+{
+	$('link_transaction_'+transid).style.display = 'block';
+	$('cancel_transaction_'+transid).style.display = 'none';
+}
+
+var g_bCancelPendingTransactionRunning = false;
+function CancelPendingPurchase(transid)
+{
+		if( g_bCancelPendingTransactionRunning )
+		return;
+
+	try 
+	{
+				g_bCancelPendingTransactionRunning = true;
+
+		new Ajax.Request('https://store.steampowered.com/account/cancelpendingpurchase/',
+		{
+		    method:'post',
+		    parameters: { 
+				'transid' : transid
+			},
+		    onSuccess: function(transport){
+		    	g_bCancelPendingTransactionRunning = false;
+				if ( transport.responseText ){
+					try {
+						var result = transport.responseText.evalJSON(true);
+		      		} catch ( e ) {
+		      			// Failure
+		      			OnCancelPendingTransactionFailure( transid );
+		      		}
+		      	   	// Success...
+		      	   	if ( result.success == 1 )
+		      	   	{
+		      	   		OnCancelPendingTransactionSuccess( transid );
+		      	   		return;
+		      	   	}
+		      	   	else
+		      	   	{
+		      	   		OnCancelPendingTransactionFailure( transid );
+		      	   		return;
+		      	   	}
+			  	}
+			  	
+								OnCancelPendingTransactionFailure( transid );
+		    },
+		    onFailure: function(){
+								g_bCancelPendingTransactionRunning = false;
+				OnCancelPendingTransactionFailure( transid );
+			}
+		});
+	} 
+	catch(e) 
+	{
+		ReportYourAccountJSError( 'Failed making AJAX call to CancelPendingPurchase', e );
+	}
+}
+
+
+function OnCancelPendingTransactionSuccess( transid )
+{
+	try 
+	{
+		$('transaction_event_'+transid).innerHTML = 'Failed';
+		$('transaction_price_'+transid).innerHTML = 'N/A';
+		$('cancel_transaction_'+transid).innerHTML = 'This transaction is now cancelled.';
+		new Effect.Highlight( 'cancel_transaction_'+transid, { endcolor : '#000000', startcolor : '#ff9900' } );	
+	} 
+	catch( e ) 
+	{
+		ReportYourAccountJSError( 'Failed in OnCancelPendingTransactionSuccess()', e );
+	}
+}
+
+function OnCancelPendingTransactionFailure( transid )
+{
+	try 
+	{
+		$('cancel_transaction_'+transid).innerHTML = 'There was a problem cancelling this transaction.<br/>Please contact <a href="http://support.steampowered.com/">Steam Support</a>';
+		new Effect.Highlight( 'cancel_transaction_'+transid, { endcolor : '#000000', startcolor : '#ff9900' } );	
+	} 
+	catch (e) 
+	{
+		ReportYourAccountJSError( 'Failed in OnCancelPendingTransactionFailure()', e );
+	}
+}
+
 function ShowRenewSubscriptionDialog(agreementid)
 {
 	$('link_subscription_'+agreementid).style.visibility = 'hidden';
