@@ -69,13 +69,13 @@ function CloseSupportMessageWindow()
 {
 	if ( BAreAllMessagesAcked() )
 	{
-		new Ajax.Request( 'https://store.steampowered.com//supportmessages/ackmessages',
+		new Ajax.Request( 'https://store.steampowered.com/supportmessages/ackmessages',
 			{
 			method: 'post',
 			onSuccess: function( transport ) {
 				if ( transport.responseJSON )
 				{
-					if ( transport.responseJSON.success !== k_EResultOK )
+					if ( transport.responseJSON.success !== 1 )
 					{
 						alert( 'Could not get server to acknowledge your viewing of this message! (' + transport.responseJSON.success + '). Try again later.' );
 						window.location = window.location;
