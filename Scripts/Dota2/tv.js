@@ -6,6 +6,7 @@
 
 	var g_bIsDev = null;
 	var g_bIsMobile = null;
+	var g_bIsLoggedIn = null;
 	var g_strStreamLanguage = null;
 	var g_bIsSimulation = null;
 	var g_Localization = null;
@@ -28,7 +29,7 @@
 	var g_rgEmoticonData = null;
 	var g_strGetEmoticonsForUserURL = null;
 	var g_strLoginURL = null;
-	var g_strPostCheersWebAPIURL = null;
+	var g_strPostAndGetCheersWebAPIURL = null;
 	var g_strGetTournamentDataURL = null;
 	var g_Noise = null;
 	var g_Localization = null;
@@ -99,7 +100,12 @@
 		STATS_SORTING_BUYBACKSTATUS: 'bb',
 
 		CHEEER_SEND_INTERVAL: 5.0,	// Seconds
+		CHEEER_GET_INTERVAL: 5.0,
+
 		CHEER_SHRINK_DELAY: 5.0,	// Seconds
+		CHEER_BAR_COUNT: 20,
+		CHEER_STARTING_SCALE_MAX: 100,
+		CHEER_RENORMALIZE_FACTOR: 1.5,
 
 		HEALTHBAR_REFRESH_INTERVAL: 1/3,
 		GRAPH_REFRESH_INTERVAL: 10.0,	// Seconds
@@ -350,14 +356,21 @@
 		g_Match.SetBroadcastTime( Data.timestamp );
 		g_Match.SetMatchTime( Data.game_time );
 		g_Match.SetIsStreamerMode( Data.single_team );
+		g_Match.SetCheerPeak( Data.cheers_peak );
 
 		if ( Data.time_of_day )
 		{
 			g_Match.SetTimeOfDay( Data.time_of_day );
 		}
 
-		g_Match.SetTeamID( DOTA_CONSTS.TEAM_RADIANT, 0);//Data.teamid_radiant );
-		g_Match.SetTeamID( DOTA_CONSTS.TEAM_DIRE, 1);//Data.teamid_dire );
+		if ( g_bIsDev )
+		{
+			Data.teamid_radiant = 1838315;
+			Data.teamid_dire = 4;
+		}
+
+		g_Match.SetTeamID( DOTA_CONSTS.TEAM_RADIANT, Data.teamid_radiant );
+		g_Match.SetTeamID( DOTA_CONSTS.TEAM_DIRE, Data.teamid_dire );
 
 		g_Match.SetTeamName( DOTA_CONSTS.TEAM_RADIANT, Data.teamname_radiant );
 		g_Match.SetTeamName( DOTA_CONSTS.TEAM_DIRE, Data.teamname_dire );
@@ -385,6 +398,11 @@
 			g_GraphData.SetKills( Data.kills );
 		}
 		
+		if ( g_bIsDev )
+		{
+			Data.league_id = DOTA_CONSTS.LEAGUE_ID_TI5;
+		}
+
 		if ( null === g_Tournament && undefined !== Data.league_id && Data.league_id > 0 )
 		{
 			InitTournament( Data.league_id );
@@ -433,7 +451,12 @@
 			if ( CurTeam.team_number !== DOTA_CONSTS.TEAM_RADIANT && CurTeam.team_number != DOTA_CONSTS.TEAM_DIRE )
 				continue;
 
-			g_Match.SetTeamScore( CurTeam.team_number, CurTeam.score );
+			// In dev, we use the results of the WebAPI
+			if ( !g_bIsDev )
+			{
+				g_Match.SetTeamScore( CurTeam.team_number, CurTeam.score );
+				g_Match.SetTeamCheers( CurTeam.team_number, CurTeam.cheers );
+			}
 
 			if ( CurTeam.only_team )
 			{
@@ -2916,6 +2939,10 @@
 			this.m_rgTeamData = Data.teams;
 
 			g_UIManager.ShowTournamentPanels( true );
+
+			// Attempt to get all team info for the tournament
+
+
 		},
 
 		GetLeagueID: function()
@@ -2923,13 +2950,13 @@
 			return this.m_unLeagueID;
 		},
 
-		GetTeamLogoURL: function( nTeamID )
+		GetTeamLogoURL: function( nTeamID, bSmall )
 		{
 			VUtils.Assert( undefined !== this.m_rgTeamData[nTeamID] &&
-				       undefined !== this.m_rgTeamData[nTeamID].images &&
-				       undefined !== this.m_rgTeamData[nTeamID].images.logo_square_url );
+				       undefined !== this.m_rgTeamData[nTeamID].team_logo_small &&
+				       undefined !== this.m_rgTeamData[nTeamID].team_logo_large );
 
-			return this.m_rgTeamData[nTeamID].images.logo_square_url;
+			return bSmall ? this.m_rgTeamData[nTeamID].team_logo_small: this.m_rgTeamData[nTeamID].team_logo_large;
 		},
 
 		GetTeamName: function( nTeamID )
@@ -3001,8 +3028,14 @@
 		this.m_Players[DOTA_CONSTS.TEAM_RADIANT] = {};
 		this.m_Players[DOTA_CONSTS.TEAM_DIRE] = {};
 
+		this.m_TeamCheers = {};
+		this.m_cCheerPeak = null;
+		this.m_cCheerScaleMax = DOTA_CONSTS.CHEER_STARTING_SCALE_MAX;
+
 		for ( var nTeam = DOTA_CONSTS.TEAM_RADIANT; nTeam <= DOTA_CONSTS.TEAM_DIRE; ++nTeam )
 		{
+			this.m_TeamCheers[nTeam] = 0;
+
 			for ( var iPlayer = 0; iPlayer < DOTA_CONSTS.PLAYERS_PER_TEAM; ++iPlayer )
 			{
 				this.m_Players[nTeam][iPlayer] = new CPlayer( iPlayer );
@@ -3106,6 +3139,37 @@
 		SetTeamScore: function( nTeam, nScore )
 		{
 			this.m_TeamScores[nTeam] = nScore;
+		},
+
+		SetTeamCheers: function( nTeam, cCheers )
+		{
+			this.m_TeamCheers[nTeam] = cCheers;
+		},
+
+		GetTeamCheers: function( nTeam )
+		{
+			return this.m_TeamCheers[nTeam];
+		},
+
+		GetCheerPeak: function()
+		{
+			return this.m_cCheerPeak;
+		},
+
+		SetCheerPeak: function( cPeak )
+		{
+			this.m_cCheerPeak = cPeak;
+
+			if ( cPeak >= this.m_cCheerScaleMax )
+			{
+				// Rescale based on new peak
+				this.m_cCheerScaleMax = DOTA_CONSTS.CHEER_RENORMALIZE_FACTOR * cPeak;
+			}
+		},
+
+		GetCheerScaleMax: function()
+		{
+			return this.m_cCheerScaleMax;
 		},
 
 		GetServerSteamID: function()
@@ -3897,34 +3961,101 @@
 	{
 		CBasePanel.call( this, '#' + DOTA_CONSTS.DIV_ID_TOURNAMENT_CHEER, PanelGroup );
 
-		this.m_flNextCheerSendTime = null;
+		this.m_flNextCheerRequestTime = null;
 
-		this.m_rgCheers = {};
+		this.m_CheerCounts = {};
 		this.$m_TeamRows = {};
 		this.$m_CheerButtons = {};
-		this.$m_CheerButtonImageBGs = {};
-		this.m_rgButtonWidths = {};
-		this.m_rgBars = {};
-		this.m_rgLastCheerTimes = {};
+		this.$m_rgBarContainers = {};
+		this.$m_ColoredSubBars = {};
+		this.$m_PeakBars = {};
+		this.m_TeamPeaks = {};
+
+		this.m_bSendCheersRequestInFlight = false;
+
+		this.m_flPercentOfPeak = {};
+		this.m_cPeak = g_bIsDev ? 10 : 1000;	// Starting peak
 
 		// Initialize all the DOM elements
 		for ( var nTeam = DOTA_CONSTS.TEAM_RADIANT; nTeam <= DOTA_CONSTS.TEAM_DIRE; ++nTeam )
 		{
-			this.m_rgLastCheerTimes[nTeam] = 0.0;
 			this.$m_TeamRows[nTeam] = $( '.TeamRow_' + GetRadiantDireFromTeam( nTeam ) + '_js' );
-			this.$m_CheerButtons[nTeam] = this.$m_TeamRows[nTeam].find( '.CheerButton' );
-			this.$m_CheerButtonImageBGs[nTeam] = this.$m_CheerButtons[nTeam].find( '.ImageBackground' );
-			this.m_rgButtonWidths[nTeam] = [ 0, 0 ];
-			this.m_rgBars[nTeam] = this.$m_TeamRows[nTeam].find( '.Bar' );
+			this.$m_CheerButtons[nTeam] = this.$m_TeamRows[nTeam].find( '.Button' );
+			this.$m_rgBarContainers[nTeam] = this.$m_TeamRows[nTeam].find( '.BarContainer' );
+			this.$m_ColoredSubBars[nTeam] = [];
+			this.$m_PeakBars[nTeam] = [];
+			this.m_flPercentOfPeak[nTeam] = [ 0, 0 ];
+			this.m_TeamPeaks[nTeam] = 0;
+
+			var strTeam = GetRadiantDireFromTeam( nTeam );
+			for ( var i = 0; i < DOTA_CONSTS.CHEER_BAR_COUNT; ++i )
+			{
+				var $Bar = $( '<span>' ).addClass( 'Bar' );
+				var $ColoredSubBar = $( '<span>' ).addClass( 'Active_' + strTeam + '_' + ( i + 1 ) );
+				var $PeakIndicator = $( '<span>' ).addClass( 'PeakIndicator' ).addClass( strTeam + 'Peak' );
+
+				$Bar.append( $ColoredSubBar ).append( $PeakIndicator );
+				//$ColoredSubBar.css( 'opacity', Math.random() );
+
+				this.$m_rgBarContainers[nTeam].append( $Bar );
+				this.$m_ColoredSubBars[nTeam].push( $ColoredSubBar );
+				this.$m_PeakBars[nTeam].push( $PeakIndicator );
+			}
 		}
 
 		var This = this;
-		$( '.CheerButton' ).click(
+
+		this.$m_MessagePanel = this.$m_Panel.find( '.MessagePanel' );
+		this.$m_LoginContainer = this.$m_MessagePanel.find( '.LoginContainer' );
+		this.$m_NotLiveMsg = this.$m_MessagePanel.find( '.NotLiveMsgContainer' );
+
+		// Hook up close button for overlay
+		this.$m_MessagePanel.find( '.CloseButton' ).click(
 			function()
 			{
-				This.Cheer( GetTeamFromString( $( this ).attr( 'data-team' ) ) );
+				This.$m_MessagePanel.hide();
 			}
 		);
+
+		this.$m_LoginContainer.find( '.Button' ).click(
+			function()
+			{
+				RedirectToLogin();
+			}
+		);
+
+		// Handle cheer/login
+		this.$m_Panel.find( '.Button' ).click(
+			function()
+			{
+				if ( !g_bIsLoggedIn )
+				{
+					This.DisplayMessageOverlay_( This.$m_LoginContainer );
+				}
+				else
+				{
+					This.Cheer( GetTeamFromString( $( this ).attr( 'data-team' ) ) );
+				}
+			}
+		);
+
+		// Setup hide/show buttons
+		var $HideContainer = this.$m_Panel.find( '.Container' );
+		var $HideShowButtons = this.$m_Panel.find( '.HideShowButtons' );
+		$HideShowButtons.find( '.HideButton' ).click(
+			function()
+			{
+				This.$m_Panel.addClass( 'MinimalMode' );
+			}
+		);
+
+		$HideShowButtons.find( '.ShowButton' ).click(
+			function()
+			{
+				This.$m_Panel.removeClass( 'MinimalMode' );
+			}
+		);
+
 	};
 
 	CCheerPanel.prototype = Object.create( CBasePanel.prototype );
@@ -3937,17 +4068,49 @@
 		this.ClearCheers_();
 	};
 
+	CCheerPanel.prototype.OnInitTournament = function( unLeagueID )
+	{
+		CBasePanel.prototype.OnInitTournament.apply( this, arguments );
+
+		// Get initial values now.
+		this.m_flNextCheerRequestTime = VUtils.GetTime();
+	};
+
+	CCheerPanel.prototype.OnNewMatch = function()
+	{
+		CBasePanel.prototype.OnNewMatch.apply( this, arguments );
+
+		if ( !g_Tournament )
+			return;
+
+		this.ClearCheers_();
+	};
+
+	CCheerPanel.prototype.DisplayMessageOverlay_ = function( $Container )
+	{
+		this.$m_LoginContainer.hide();
+		this.$m_NotLiveMsg.hide();
+
+		$Container.show();
+
+		this.$m_MessagePanel.show();
+	};
+
 	CCheerPanel.prototype.ClearCheers_ = function()
 	{
 		for ( var nTeam = DOTA_CONSTS.TEAM_RADIANT; nTeam <= DOTA_CONSTS.TEAM_DIRE; ++nTeam )
 		{
-			this.m_rgCheers[nTeam] = 0;
+			this.m_CheerCounts[nTeam] = 0;
 		}
 	};
 
-	CCheerPanel.prototype.ScheduleNextCheerSendTime_ = function()
+	CCheerPanel.prototype.ScheduleNextCheerRequestTime_ = function()
 	{
-		this.m_flNextCheerSendTime = VUtils.GetTime() + DOTA_CONSTS.CHEEER_SEND_INTERVAL;
+		// Already scheduled?
+		if ( this.m_flNextCheerRequestTime > VUtils.GetTime() )
+			return;
+
+		this.m_flNextCheerRequestTime = VUtils.GetTime() + ( g_bIsDev ? 2 : DOTA_CONSTS.CHEEER_SEND_INTERVAL );
 	};
 
 	CCheerPanel.prototype.OnDataReceived = function()
@@ -3957,17 +4120,12 @@
 
 	CCheerPanel.prototype.Cheer = function( nTeam )
 	{
-		this.$m_CheerButtonImageBGs[nTeam] = this.$m_CheerButtons[nTeam].find( '.ImageBackground' );
-		this.m_rgButtonWidths[nTeam][1] += 1;
+		++this.m_CheerCounts[nTeam];
 
-		++this.m_rgCheers[nTeam];
+//		this.m_cPeak = Math.max( this.m_cPeak, this.m_CheerCounts[DOTA_CONSTS.TEAM_RADIANT], this.m_CheerCounts[DOTA_CONSTS.TEAM_DIRE] );
 
-		this.m_rgLastCheerTimes[nTeam] = VUtils.GetTime();
-
-		if ( null === this.m_flNextCheerSendTime )
-		{
-			this.ScheduleNextCheerSendTime_();
-		}
+		// Only schedule if we don't have one already
+		this.ScheduleNextCheerRequestTime_();
 	};
 
 	CCheerPanel.prototype.OnTeamIDChanged = function( nTeam, nTeamID )
@@ -3975,7 +4133,7 @@
 		CBasePanel.prototype.OnTeamIDChanged.apply( this, arguments );
 
 		// Update all logos for the given team
-		var strLogoURL = g_Tournament.GetTeamLogoURL( nTeamID );
+		var strLogoURL = g_Tournament.GetTeamLogoURL( nTeamID, false );
 		var $ImageContainer = this.$m_CheerButtons[nTeam].find( '.ImageBackground' );
 		$ImageContainer.empty();
 		$ImageContainer.append( CreateImage( strLogoURL ) );
@@ -3984,82 +4142,150 @@
 		ProcessWhenTournamentDataReady(
 			function()
 			{
-				This.m_rgBars[nTeam].css( 'background', g_Tournament.GetTeamPrimaryColor( nTeamID ) );
+				//This.m_rgBarContainers[nTeam].css( 'background', g_Tournament.GetTeamPrimaryColor( nTeamID ) );
 			}
 		);
 	};
 
-	CCheerPanel.prototype.SendCheers = function( flCurTime )
+	CCheerPanel.prototype.GetUpdateInterval = function()
 	{
+		return 0.1;
+	};
+
+	CCheerPanel.prototype.SendCheers = function()
+	{
+		if ( this.m_bSendCheersRequestInFlight )
+		{
+			// Post is already in flight, but we can schedule the next send, if one has not been already scheduled.
+			this.ScheduleNextCheerRequestTime_();
+
+			return;
+		}
+
 		VUtils.Assert( g_Match );
 
+		var This = this;
+
+		// Don't allow multiple simultaneous posts.
+		this.m_bSendCheersRequestInFlight = true;
+
+		// Send cheers now
 		$.post(
-			g_strPostCheersWebAPIURL,
+			g_strPostAndGetCheersWebAPIURL,
 			{
 				matchid: g_Match.GetMatchID(),
 				serversteamid: g_Match.GetServerSteamID(),
 				teamid_radiant: g_Match.GetTeamID( DOTA_CONSTS.TEAM_RADIANT ),
-				cheers_radiant: this.m_rgCheers[DOTA_CONSTS.TEAM_RADIANT],
+				cheers_radiant: this.m_CheerCounts[DOTA_CONSTS.TEAM_RADIANT],
 				teamid_dire: g_Match.GetTeamID( DOTA_CONSTS.TEAM_DIRE ),
-				cheers_dire: this.m_rgCheers[DOTA_CONSTS.TEAM_DIRE] 
+				cheers_dire: this.m_CheerCounts[DOTA_CONSTS.TEAM_DIRE] 
 			},
 			function( json )
 			{
-				if ( !json.success && json.error != undefined )
+				// In dev, get results from the WebAPI -- otherwise get them from the Stream itself
+				if ( g_bIsDev )
 				{
-					console.log( json.error );
+					var bFailed = undefined == json.result || undefined === json.result.team_1 || undefined === json.result.team_2 || undefined === json.result.team_2;
+					if ( !bFailed )
+					{
+						var bFake = false;
+						if ( bFake )
+						{
+							var cCheers = Math.floor( ( 0.5 + 0.5 * Math.sin( VUtils.GetTime() * .2 ) ) * 1000 );
+							console.log( cCheers );
+
+							g_Match.SetTeamCheers( DOTA_CONSTS.TEAM_RADIANT, cCheers );
+							g_Match.SetTeamCheers( DOTA_CONSTS.TEAM_DIRE, cCheers );
+							g_Match.SetCheerPeak( Math.max( cCheers, g_Match.GetCheerPeak() ) );
+						}
+						else
+						{
+							g_Match.SetTeamCheers( DOTA_CONSTS.TEAM_RADIANT, json.result.team_1 );
+							g_Match.SetTeamCheers( DOTA_CONSTS.TEAM_DIRE, json.result.team_2 );
+							g_Match.SetCheerPeak( json.result.peak );
+						}
+					}
 				}
+
+				This.m_bSendCheersRequestInFlight = false;
+
+				This.ScheduleNextCheerRequestTime_();
 			}
 		);
 
-		// Clear cheers right away -- no need to wait for a response
+		// Clear cheers right away
 		this.ClearCheers_();
 	};
 
-	CCheerPanel.prototype.BHaveCheers = function()
+	CCheerPanel.prototype.MapCheerCountToScale = function( n )
 	{
-		return this.m_rgCheers[DOTA_CONSTS.TEAM_RADIANT] > 0 || this.m_rgCheers[DOTA_CONSTS.TEAM_RADIANT] > 0;
+		return VUtils.Clamp( n / g_Match.GetCheerScaleMax(), 0, 1 );
+	};
+
+	CCheerPanel.prototype.MapPercentToBarIndex = function( t )
+	{
+		return Math.floor( VUtils.Clamp( t * ( DOTA_CONSTS.CHEER_BAR_COUNT - 1 ), 0, DOTA_CONSTS.CHEER_BAR_COUNT - 1 ) );
+	};
+
+	CCheerPanel.prototype.UpdateCheerMeters = function( flElapsed )
+	{
+		var flWeightPerBar = DOTA_CONSTS.CHEER_BAR_COUNT / 100;
+
+		for ( var nTeam = DOTA_CONSTS.TEAM_RADIANT; nTeam <= DOTA_CONSTS.TEAM_DIRE; ++nTeam )
+		{
+			var cCheers = g_Match.GetTeamCheers( nTeam );
+
+			// Update peaks for team
+			this.m_TeamPeaks[nTeam] = Math.max( this.m_TeamPeaks[nTeam], cCheers );
+
+			// Set a new target
+			this.m_flPercentOfPeak[nTeam][1] = this.MapCheerCountToScale( cCheers );
+
+			// Move towards the target
+			this.m_flPercentOfPeak[nTeam][0] = VUtils.LerpClamped( flElapsed * 5.0, this.m_flPercentOfPeak[nTeam][0], this.m_flPercentOfPeak[nTeam][1] );
+
+			var cActiveBars = Math.floor( this.m_flPercentOfPeak[nTeam][0] * DOTA_CONSTS.CHEER_BAR_COUNT );
+			var flRemainder = Math.max( 0, this.m_flPercentOfPeak[nTeam][0] * DOTA_CONSTS.CHEER_BAR_COUNT - cActiveBars );
+
+			for ( var i = 0; i < cActiveBars - 1; ++i )
+			{
+				this.$m_ColoredSubBars[nTeam][i].css( 'opacity', '1.0' );
+				this.$m_PeakBars[nTeam][i].css( 'opacity', '0.0' );
+			}
+
+			// Manually calculate the bar on the cusp
+			if ( cActiveBars > 0 )
+			{
+				this.$m_ColoredSubBars[nTeam][cActiveBars - 1].css( 'opacity', VUtils.Clamp( flRemainder / flWeightPerBar, 0, 1 ) );
+				this.$m_PeakBars[nTeam][cActiveBars - 1].css( 'opacity', '0.0' );
+			}
+
+			for ( var i = cActiveBars; i < DOTA_CONSTS.CHEER_BAR_COUNT; ++i )
+			{
+				this.$m_ColoredSubBars[nTeam][i].css( 'opacity', '0.0' );
+				this.$m_PeakBars[nTeam][i].css( 'opacity', '0.0' );
+			}
+
+			// Show peak bar
+			var cPeakForTeam = this.m_TeamPeaks[nTeam];
+			if ( cPeakForTeam > 0 )
+			{
+				var iPeakBar = this.MapPercentToBarIndex( this.MapCheerCountToScale( cPeakForTeam ) );
+				this.$m_PeakBars[nTeam][iPeakBar].css( 'opacity', '1.0' );
+			}
+		}
 	};
 
 	CCheerPanel.prototype.Think = function( flCurTime, flElapsed )
 	{
 		CBasePanel.prototype.Think.apply( this, arguments );
 
-		if ( null !== this.m_flNextCheerSendTime && this.m_flNextCheerSendTime <= flCurTime && this.BHaveCheers() )
+		if ( null !== this.m_flNextCheerRequestTime && this.m_flNextCheerRequestTime <= flCurTime )
 		{
 			this.SendCheers();
-			this.ScheduleNextCheerSendTime_();
 		}
 
-		for ( var nTeam = DOTA_CONSTS.TEAM_RADIANT; nTeam <= DOTA_CONSTS.TEAM_DIRE; ++nTeam )
-		{
-			// If enough time has passed since the user clicked, begin shrinking the logo
-			var flCheerShrinkTime = this.m_rgLastCheerTimes[nTeam] + DOTA_CONSTS.CHEER_SHRINK_DELAY;
-			if ( flCheerShrinkTime <= flCurTime )
-			{
-				this.m_rgButtonWidths[nTeam][1] = Math.max( 0, this.m_rgButtonWidths[nTeam][1] - flElapsed * 10 );
-			}
-
-			var $Img = this.$m_CheerButtonImageBGs[nTeam].find( 'img' );
-			if ( !$Img.length )
-				continue;
-
-			this.m_rgButtonWidths[nTeam][0] = VUtils.LerpClamped(
-				flElapsed,
-				this.m_rgButtonWidths[nTeam][0],
-				this.m_rgButtonWidths[nTeam][1]
-			); 
-
-			var nWidth = 50 + VUtils.Clamp( this.m_rgButtonWidths[nTeam][0], 0, 50 );
-			var nHeight = nWidth;
-			$Img.css(
-				{
-					'width': nWidth + '%',
-					'top': ( -( nHeight - 50 ) ) + '%',
-					'left': ( ( nWidth - 50 ) / 2 ) + '%'
-				}
-			);
-		}
+		this.UpdateCheerMeters( flElapsed );
 	};
 
 	CCheerPanel.prototype.OnWindowResize = function()
@@ -4132,7 +4358,7 @@
 			},
 			function( json )
 			{
-				console.log(json);
+//				console.log(json);
 
 				if ( !json.success )
 					return;
@@ -6099,6 +6325,7 @@
 
 		$.get(
 			g_strGetTournamentDataURL,
+			{ league_id: unLeagueID },
 			function( json )
 			{
 				g_Tournament = new CTournament();
@@ -6137,6 +6364,7 @@
 		// Initialize a bunch of data/vars handed down from the controller and piped through.
 		g_bIsDev = Data.is_dev;
 		g_bIsMobile = Data.is_mobile;
+		g_bIsLoggedIn = Data.is_logged_in;
 		g_strStreamLanguage = Data.stream_language;
 		g_bIsSimulation = Data.simulation;
 		g_Localization = Data.localization;
@@ -6150,7 +6378,7 @@
 		g_rgEmoticonData = Data.emoticon_data;
 		g_strGetEmoticonsForUserURL = Data.emoticon_url_for_userdata;
 		g_strLoginURL = Data.login_url;
-		g_strPostCheersWebAPIURL = Data.post_cheers_webapi_url;
+		g_strPostAndGetCheersWebAPIURL = Data.post_and_get_cheers_webapi_url;
 		g_strGetTournamentDataURL = Data.get_tournament_data_url;
 		g_strLeaguesBaseURL = Data.leagues_base_url;
 		g_Noise = Data.noise;
