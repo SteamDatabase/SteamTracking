@@ -3643,6 +3643,7 @@
 		this.$m_RespawnTimePanel = {};
 		this.$m_Label_PlayerName = {};
 		this.$m_Label_Stat = {};
+		this.m_bUpdatePlayerNames = null;
 
 		for ( var nTeam = DOTA_CONSTS.TEAM_RADIANT; nTeam <= DOTA_CONSTS.TEAM_DIRE; ++nTeam )
 		{
@@ -3723,6 +3724,11 @@
 	CSpectatorStatsPanel.prototype.Init = function()
 	{
 		CBasePanel.prototype.Init.apply( this, arguments );
+	};
+
+	CSpectatorStatsPanel.prototype.OnNewMatch = function()
+	{
+		this.m_bUpdatePlayerNames = true;
 	};
 
 	CSpectatorStatsPanel.prototype.OnDataReceived = function()
@@ -3942,9 +3948,15 @@
 				$Panel.removeClass( 'BorderBottom' );
 			}
 
-			this.$m_Label_PlayerName[nTeam][iPlayer].text( Player.GetName() );
+			if ( this.m_bUpdatePlayerNames )
+			{
+				this.$m_Label_PlayerName[nTeam][iPlayer].text( Player.GetName() );
+			}
+
 			this.$m_Label_Stat[nTeam][iPlayer].text( fnFormat( CurStat ) );
 		}
+
+		this.m_bUpdatePlayerNames = false;
 	};
 
 	CSpectatorStatsPanel.prototype.OnWindowResize = function()
