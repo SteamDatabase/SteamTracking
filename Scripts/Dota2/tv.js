@@ -38,7 +38,11 @@
 	var g_ErrorSound = null;
 	var g_rgTournamentDataReadyCallbacks = [];
 	
-	var g_DevConfig = { cheer_use_stream_values: true, force_teams: false };
+	var g_DevConfig = {
+		cheer_use_stream_values: true,
+		force_teams: false,
+		spew_events: false
+	};
 
 	//--------------------------------------------------------------------------------------------
 
@@ -3099,6 +3103,21 @@
 			return this.m_Players[nTeam][iPlayer];
 		},
 
+		BAllPlayersHaveHeroes: function()
+		{
+			for ( var nTeam = DOTA_CONSTS.TEAM_RADIANT; nTeam <= DOTA_CONSTS.TEAM_DIRE; ++nTeam )
+			{
+				for ( var iPlayer = 0; iPlayer < DOTA_CONSTS.PLAYERS_PER_TEAM; ++iPlayer )
+				{
+					var Player = this.GetPlayer( nTeam, iPlayer );
+					if ( !Player || !Player.BHasHero() )
+						return false;
+				}
+			}
+
+			return true;
+		},
+
 		ClearBuildings: function()
 		{
 			this.m_rgBuildings = [];
@@ -4210,7 +4229,6 @@
 						if ( bFake )
 						{
 							var cCheers = Math.floor( ( 0.5 + 0.5 * Math.sin( VUtils.GetTime() * .2 ) ) * 1000 );
-							console.log( cCheers );
 
 							g_Match.SetTeamCheers( DOTA_CONSTS.TEAM_RADIANT, cCheers );
 							g_Match.SetTeamCheers( DOTA_CONSTS.TEAM_DIRE, cCheers );
@@ -4260,7 +4278,7 @@
 			this.m_flPercentOfPeak[nTeam][1] = this.MapCheerCountToScale( cCheers );
 
 			// Move towards the target
-			this.m_flPercentOfPeak[nTeam][0] = VUtils.LerpClamped( flElapsed * 100.0, this.m_flPercentOfPeak[nTeam][0], this.m_flPercentOfPeak[nTeam][1] );
+			this.m_flPercentOfPeak[nTeam][0] = VUtils.LerpClamped( flElapsed * 10.0, this.m_flPercentOfPeak[nTeam][0], this.m_flPercentOfPeak[nTeam][1] );
 
 			var cActiveBars = Math.floor( this.m_flPercentOfPeak[nTeam][0] * DOTA_CONSTS.CHEER_BAR_COUNT );
 			var flRemainder = Math.max( 0, this.m_flPercentOfPeak[nTeam][0] * DOTA_CONSTS.CHEER_BAR_COUNT - cActiveBars );
@@ -4650,13 +4668,14 @@
 				var nTeam = $( this ).data( 'team' );
 				var iPlayer = $( this ).data( 'playerindex' );
 
-				if ( g_Match && g_Match.BIsStreamerMode() && !g_Match.BIsStreamerTeam( nTeam ) )
+				if ( !g_Match || ( g_Match && g_Match.BIsStreamerMode() && !g_Match.BIsStreamerTeam( nTeam ) ) )
 				{
 					PlayErrorSound();
 					return;
 				}
 		
-				if ( !g_Match.GetPlayer( nTeam, iPlayer ).BHasHero() )
+				// Since player details require all players to have assigned heroes, we only allow you to click through if all players have heroes
+				if ( !g_Match.BAllPlayersHaveHeroes() )
 				{
 					PlayErrorSound();
 					return;
@@ -6528,7 +6547,7 @@
 						break;
 				}
 
-				if ( g_bIsDev )
+				if ( g_bIsDev && g_DevConfig['spew_events'] )
 				{
 					console.log( e.originalEvent.data );
 				}
