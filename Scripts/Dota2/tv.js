@@ -40,7 +40,7 @@
 	
 	var g_DevConfig = {
 		cheer_use_stream_values: true,
-		force_teams: false,
+		force_teams: true,
 		spew_events: false
 	};
 
@@ -375,11 +375,17 @@
 			Data.teamid_dire = 4;
 		}
 
-		g_Match.SetTeamID( DOTA_CONSTS.TEAM_RADIANT, Data.teamid_radiant );
-		g_Match.SetTeamID( DOTA_CONSTS.TEAM_DIRE, Data.teamid_dire );
+		if ( undefined !== Data.teamid_radiant && undefined !== Data.teamid_dire )
+		{
+			g_Match.SetTeamID( DOTA_CONSTS.TEAM_RADIANT, Data.teamid_radiant );
+			g_Match.SetTeamID( DOTA_CONSTS.TEAM_DIRE, Data.teamid_dire );
+		}
 
-		g_Match.SetTeamName( DOTA_CONSTS.TEAM_RADIANT, Data.teamname_radiant );
-		g_Match.SetTeamName( DOTA_CONSTS.TEAM_DIRE, Data.teamname_dire );
+		if ( undefined !== Data.teamname_radiant && undefined !== Data.teamname_dire )
+		{
+			g_Match.SetTeamName( DOTA_CONSTS.TEAM_RADIANT, Data.teamname_radiant );
+			g_Match.SetTeamName( DOTA_CONSTS.TEAM_DIRE, Data.teamname_dire );
+		}
 
 		if ( undefined !== Data.picks )
 		{
@@ -4745,7 +4751,10 @@
 
 					this.m_HeroIDs[nTeam][iPlayer] = nPlayerHeroID;
 
-					console.log( "Loading new hero image, " + strHeroImageURL );
+					if ( g_bIsDev )
+					{
+						console.log( "Loading new hero image, " + strHeroImageURL );
+					}
 				}
 
 				this.$m_Levels[nTeam][iPlayer].html( Player.GetLevel() );
@@ -5500,6 +5509,15 @@
 
 	CMatchStatsPanel.prototype = Object.create( CBasePanel.prototype );
 	CMatchStatsPanel.prototype.constructor = CMatchStatsPanel;
+
+	CMatchStatsPanel.prototype.OnTeamIDChanged = function( nTeam, nTeamID )
+	{
+		CBasePanel.prototype.OnTeamIDChanged.apply( this, arguments );
+
+		// Update all logo for the given team
+		var strLogoURL = g_Tournament.GetTeamLogoURL( nTeamID, false );
+		this.SendMessageToIFrame( 'UpdateTeamLogo', { team: GetRadiantDireFromTeam( nTeam ), url: strLogoURL } );
+	};
 
 	CMatchStatsPanel.prototype.BPreShow = function()
 	{
