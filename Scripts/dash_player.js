@@ -1033,7 +1033,7 @@ CDASHPlayer.prototype.UpdateStats = function()
 
 CDASHPlayer.prototype.StatsGetVideoPlayerHeight = function()
 {
-	return $J( this.m_elVideoPlayer ).innerHeight();
+	return this.m_elVideoPlayer.clientHeight;
 }
 
 CDASHPlayer.prototype.StatsVideoBuffer = function()
