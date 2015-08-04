@@ -4983,6 +4983,9 @@
 
 	CPlayerDetailsStatsPanel.prototype.BPreShow = function()
 	{
+		if ( !g_Match )
+			return false;
+
 		// This is stuff we only need to once, when the player's been selected
 		var Player = g_Match.GetPlayer( this.m_nTeam, this.m_iPlayer );
 		if ( !Player || !Player.BIsValid() )
