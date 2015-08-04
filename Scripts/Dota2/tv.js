@@ -37,6 +37,8 @@
 	var g_nViewerCount = null;
 	var g_ErrorSound = null;
 	var g_rgTournamentDataReadyCallbacks = [];
+	
+	var g_DevConfig = { cheer_use_stream_values: true, force_teams: false };
 
 	//--------------------------------------------------------------------------------------------
 
@@ -121,7 +123,7 @@
 
 		BROWSER_WIDTH_SLIM: 1200,
 
-		MINIMAP_UPDATE_INTERVAL: 1/24,
+		MINIMAP_UPDATE_INTERVAL: 1/10,
 
 		DATA_CHUNK_TYPES: [ 'match', 'teams', 'buildings', 'graph_data' ],	// NOTE: Processed in this order
 
@@ -363,7 +365,7 @@
 			g_Match.SetTimeOfDay( Data.time_of_day );
 		}
 
-		if ( g_bIsDev )
+		if ( g_bIsDev && g_DevConfig['force_teams'] )
 		{
 			Data.teamid_radiant = 1838315;
 			Data.teamid_dire = 4;
@@ -452,7 +454,7 @@
 				continue;
 
 			// In dev, we use the results of the WebAPI
-			if ( !g_bIsDev )
+			if ( !g_bIsDev || g_DevConfig['cheer_use_stream_values'] )
 			{
 				g_Match.SetTeamScore( CurTeam.team_number, CurTeam.score );
 				g_Match.SetTeamCheers( CurTeam.team_number, CurTeam.cheers );
@@ -2359,6 +2361,11 @@
 			return this.m_nHeroID;
 		},
 
+		BHasHero: function()
+		{
+			return BIsValidHero( this.m_nHeroID );
+		},
+
 		SetHeroID: function( nHeroID )
 		{
 			VUtils.Assert( nHeroID > 0 );
@@ -3428,7 +3435,6 @@
 
 		this.$m_LoadingContainer = $( '<div>' ).addClass( 'LoadingContainer' );
 		this.$m_LoadingContainer.insertBefore( this.$m_LoadedContent );
-		//this.$m_WaitingPanel = $( '<div>' ).addClass( 'WaitingPanel' ).addClass( 'FadeAnimation' ).append( $( '<div>' ).addClass( 'TinySpinner' ) );
 		this.$m_WaitingPanel = $( '<div>' ).addClass( 'WaitingPanel' ).addClass( 'FadeAnimation' ).append( $( '<div>' ) );
 		this.$m_LoadingContainer.append( this.$m_WaitingPanel );	// This needs to go first.
 
@@ -3578,8 +3584,8 @@
 			// Get the panel we'll use as a reference for dimensions
 			var $WaitingPanelReferencePanel = this.GetWaitingPanelReferencePanel();
 
-			this.$m_WaitingPanel.css( 'width', $WaitingPanelReferencePanel.actual( 'width' ) + 'px' );
-			this.$m_WaitingPanel.css( 'height', $WaitingPanelReferencePanel.actual( 'height' ) + 'px' );
+			//this.$m_WaitingPanel.css( 'width', $WaitingPanelReferencePanel.actual( 'width' ) + 'px' );
+			//this.$m_WaitingPanel.css( 'height', $WaitingPanelReferencePanel.actual( 'height' ) + 'px' );
 		},
 
 		GetWaitingPanelReferencePanel: function()
@@ -3974,7 +3980,7 @@
 		this.m_bSendCheersRequestInFlight = false;
 
 		this.m_flPercentOfPeak = {};
-		this.m_cPeak = g_bIsDev ? 10 : 1000;	// Starting peak
+		this.m_cPeak = 1000;	// Starting peak
 
 		// Initialize all the DOM elements
 		for ( var nTeam = DOTA_CONSTS.TEAM_RADIANT; nTeam <= DOTA_CONSTS.TEAM_DIRE; ++nTeam )
@@ -4110,7 +4116,7 @@
 		if ( this.m_flNextCheerRequestTime > VUtils.GetTime() )
 			return;
 
-		this.m_flNextCheerRequestTime = VUtils.GetTime() + ( g_bIsDev ? 2 : DOTA_CONSTS.CHEEER_SEND_INTERVAL );
+		this.m_flNextCheerRequestTime = VUtils.GetTime() + DOTA_CONSTS.CHEEER_SEND_INTERVAL;
 	};
 
 	CCheerPanel.prototype.OnDataReceived = function()
@@ -4183,7 +4189,7 @@
 			function( json )
 			{
 				// In dev, get results from the WebAPI -- otherwise get them from the Stream itself
-				if ( g_bIsDev )
+				if ( g_bIsDev && !g_DevConfig['cheer_use_stream_values'] )
 				{
 					var bFailed = undefined == json.result || undefined === json.result.team_1 || undefined === json.result.team_2 || undefined === json.result.team_2;
 					if ( !bFailed )
@@ -4242,7 +4248,7 @@
 			this.m_flPercentOfPeak[nTeam][1] = this.MapCheerCountToScale( cCheers );
 
 			// Move towards the target
-			this.m_flPercentOfPeak[nTeam][0] = VUtils.LerpClamped( flElapsed * 5.0, this.m_flPercentOfPeak[nTeam][0], this.m_flPercentOfPeak[nTeam][1] );
+			this.m_flPercentOfPeak[nTeam][0] = VUtils.LerpClamped( flElapsed * 100.0, this.m_flPercentOfPeak[nTeam][0], this.m_flPercentOfPeak[nTeam][1] );
 
 			var cActiveBars = Math.floor( this.m_flPercentOfPeak[nTeam][0] * DOTA_CONSTS.CHEER_BAR_COUNT );
 			var flRemainder = Math.max( 0, this.m_flPercentOfPeak[nTeam][0] * DOTA_CONSTS.CHEER_BAR_COUNT - cActiveBars );
@@ -4637,6 +4643,12 @@
 					PlayErrorSound();
 					return;
 				}
+		
+				if ( !g_Match.GetPlayer( nTeam, iPlayer ).BHasHero() )
+				{
+					PlayErrorSound();
+					return;
+				}
 
 				g_UIManager.ShowPlayerDetailsPanel( nTeam, iPlayer );
 			}
@@ -4741,8 +4753,6 @@
 				}
 
 				// Update their items
-				this.m_ItemContainers[nTeam][iPlayer].ClearItemImages();
-
 				for ( var iSlot = 0; iSlot < DOTA_CONSTS.NUM_ITEM_SLOTS; ++iSlot )
 				{
 					this.m_ItemContainers[nTeam][iPlayer].SetSlotToItem( iSlot, Player.GetItem( iSlot ) );
@@ -4841,7 +4851,11 @@
 
 			var $ImageBackground = this.$m_ImageBackgrounds[iSlot];
 
-			if ( null !== strKey )
+			if ( null === strKey )
+			{
+				this.ClearItemImageForSlot( iSlot );
+			}
+			else
 			{
 				// If we don't have an image yet, create it now
 				var strImageURL = GetItemImageURL( strKey, false );
@@ -4863,16 +4877,21 @@
 			this.m_ItemKeys[iSlot] = strKey;
 		},
 
+		ClearItemImageForSlot: function( iSlot )
+		{
+			if ( !this.$m_Images[iSlot] )
+				return;
+
+			this.$m_Images[iSlot].remove();
+			this.$m_Images[iSlot] = null;
+			this.m_ItemKeys[iSlot] = null;
+		},
+
 		ClearItemImages: function()
 		{
 			for ( var iSlot = 0; iSlot < DOTA_CONSTS.NUM_ITEM_SLOTS; ++iSlot )
 			{
-				if ( !this.$m_Images[iSlot] )
-					continue;
-
-				this.$m_Images[iSlot].remove();
-				this.$m_Images[iSlot] = null;
-				this.m_ItemKeys[iSlot] = null;
+				this.ClearItemImageForSlot( iSlot );
 			}
 		}
 	};
@@ -5003,9 +5022,6 @@
 		this.$m_Level.html( Player.GetLevel() );
 		this.$m_HeroName.html( Player.GetHeroName() );
 		
-		// TODO:
-		//this.$m_BuybackStatus.stuff();
-
 		// Create 25 blocks for each ability and their containers
 		this.$m_AbilityDetails.empty();
 
@@ -5230,9 +5246,6 @@
 		if ( !Player || !Player.BIsValid() )
 			return;
 
-		this.m_ItemContainer.ClearItemImages();
-		this.m_StashItemContainer.ClearItemImages();
-
 		for ( var iSlot = 0; iSlot < DOTA_CONSTS.NUM_ITEM_SLOTS; ++iSlot )
 		{
 			this.m_ItemContainer.SetSlotToItem( iSlot, Player.GetItem( iSlot ) );
@@ -5250,6 +5263,9 @@
 	CPlayerDetailsStatsPanel.prototype.Think = function( flCurTime, flElapsed )
 	{
 		CBasePanel.prototype.Think.apply( this, arguments );
+
+		if ( !g_Match )
+			return;
 
 		// These have their own internal render framerate applied
 		var Player = g_Match.GetPlayer( this.m_nTeam, this.m_iPlayer );
