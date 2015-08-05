@@ -249,8 +249,6 @@ function InitProfileSummary( strSummary )
 	else
 	{
 		var $ModalSummary = $J('<div/>', {'class': 'profile_summary_modal'}).html( strSummary );
-		if ( window.BindAllEmoticonHovers )
-			BindAllEmoticonHovers( $ModalSummary );
 		$SummaryFooter.find( 'span' ).click( function() {
 			var Modal = ShowDialog( 'Info', $ModalSummary );
 			window.setTimeout( function() { Modal.AdjustSizing(); }, 1 );

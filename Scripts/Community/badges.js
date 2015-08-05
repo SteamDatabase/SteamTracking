@@ -170,10 +170,9 @@ function BuildBadgeReward( rgRewardData )
 	{
 		$Icon.append( $J('<img/>', {src: rgRewardData.image } ) );
 	}
-	if ( rgRewardData.economy_hover_data && typeof BindSingleEconomyHover != 'undefined' )
+	if ( rgRewardData.economy_hover_data )
 	{
 		$Icon.attr( 'data-economy-item', rgRewardData.economy_hover_data );
-		BindSingleEconomyHover( $Icon );
 	}
 	var $Content = $J('<div/>', {'class': 'badge_reward_content' } );
 	var $Title = $J('<div/>', {'class': 'badge_reward_title'}).text( rgRewardData.title );

@@ -589,7 +589,7 @@ CBroadcastWatch.prototype.UpdateBroadcastViewerUI = function()
 
 				if ( !_watch.m_bDisableChatTooltips )
 				{
-					BindSingleMiniprofileHover( elUser.children( 'a' ).data( 'miniprofile', 's' + viewer.id ) );
+					elUser.children( 'a' ).attr( 'data-miniprofile', 's' + viewer.id );
 				}
 
 				$J( '#ViewerModalUsers' ).append( elUser );

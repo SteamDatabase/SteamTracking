@@ -531,11 +531,8 @@ CEmoticonPopup.prototype.BuildPopup = function()
 		var strEmoticonURL = 'https://steamcommunity-a.akamaihd.net/economy/emoticon/' + strEmoticonName;
 
 		var $Emoticon = $J('<div/>', {'class': 'emoticon_option', 'data-emoticon': strEmoticonName } );
-		var $Img = $J('<img/>', {'src': strEmoticonURL } );
+		var $Img = $J('<img/>', {'src': strEmoticonURL, 'class': 'emoticon' } );
 		$Emoticon.append( $Img );
-
-		if ( window.BindEmoticonHover )
-			BindEmoticonHover( $Emoticon );
 
 		$Emoticon.click( this.GetEmoticonClickClosure( strEmoticonName ) );
 
@@ -721,8 +718,6 @@ function InitEconomyHovers( strEconomyCSSURL, strEconomyCommonJSURL, strEconomyJ
 		strDataName: 'economy-item',
 		strURLMatch: 'itemhover'
 	} );
-
-	window.BindSingleEconomyHover = rgCallbacks.fnBindSingleHover;
 }
 
 function ShowTradeOffer( tradeOfferID, rgParams )

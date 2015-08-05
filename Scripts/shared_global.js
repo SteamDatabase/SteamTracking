@@ -709,9 +709,6 @@ function InitMiniprofileHovers()
 		strDataName: 'miniprofile',
 		strURLMatch: 'miniprofile'
 	}  );
-
-	window.BindMiniprofileHovers = rgCallbacks.fnBindAllHoverElements;
-	window.BindSingleMiniprofileHover = rgCallbacks.fnBindSingleHover;
 }
 
 function _RegisterAJAXHoverHideFunction( fnHide )
@@ -825,51 +822,17 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 		}
 	}
 
-	var strAttributeName = 'data-' + strDataName;
-	var strBoundDataName = strDataName + '_bound';
-	var fnBindSingleHover = function( target ) {
-		var $Target = $J(target);
-		var key = fnReadKey( $Target );
-		if ( key && !$Target.data( strBoundDataName ) )
-		{
-			$Target.mouseenter( $J.proxy( fnOnHover, null, $Target, key ) );
-			$Target.on( 'click.AjaxHover mouseleave.AjaxHover', fnCancelHover );
-			$Target.data( strBoundDataName, true );
-		}
-	};
-	var fnBindAllHoverElements = function( $Element ) {
-		var $Target;
-		if ( !$Element )
-			$Target = $J(strSelector);
-		else
-			$Target = $Element.find(strSelector);
-
-		$Target.each( function() { fnBindSingleHover( this ); } );
-	};
-
-	fnBindAllHoverElements();
+	var strEventNamespace = 'AjaxHover' + strDataName;
+	$J(document ).on('mouseenter.' + strEventNamespace, strSelector, function() {
+		var $Target = $J(this);
+		fnOnHover( $Target, fnReadKey( $Target) );
+	} );
+	$J(document ).on('click.' + strEventNamespace + ' mouseleave.' + strEventNamespace, strSelector, fnCancelHover );
 
 	// register this hover so HideAJAXHovers() can hide it when invoked
 	_RegisterAJAXHoverHideFunction( fnCancelHover );
 
-	$J(document).ajaxComplete( function( event, xhr, settings ) {
-		// skip any ajax calls we generated ourselves
-		if ( settings && settings.url && settings.url.match( strURLMatch ) )
-			return;
-
-		fnBindAllHoverElements();
-	} );
-	if ( typeof Ajax != 'undefined' )
-	{
-		//prototype AJAX
-		Ajax.Responders.register({
-			onComplete: function() { fnBindAllHoverElements(); }
-		});
-	}
-
 	return {
-		fnBindAllHoverElements: fnBindAllHoverElements,
-		fnBindSingleHover: fnBindSingleHover,
 		fnCancelHover: fnCancelHover
 	};
 }
@@ -1039,8 +1002,6 @@ function InitEmoticonHovers()
 		nDelayBeforeShow: 50
 	} );
 
-	window.BindEmoticonHover = rgCallbacks.fnBindSingleHover;
-	window.BindAllEmoticonHovers = rgCallbacks.fnBindAllHoverElements;
 	window.DismissEmoticonHover = rgCallbacks.fnCancelHover;
 }
 

@@ -137,9 +137,6 @@ CChatFriend.prototype.Render = function( target, bCurrentUser )
 	if ( target )
 		target.append( elFriend );
 
-	if ( typeof window.BindSingleMiniprofileHover != 'undefined' )
-		window.BindSingleMiniprofileHover( elFriend );
-
 	return elFriend;
 };
 
@@ -193,9 +190,6 @@ CChatFriend.prototype.RenderChatDialog = function()
 	elHeader.append( elChatDialogAvatar, $J('<h2/>').append( elChatDialogName ), '<div style="clear: left;"></div>' );
 
 	this.UpdateDisplayForPersonaState();	//set the right styles on avatar and name
-
-	if ( typeof window.BindSingleMiniprofileHover != 'undefined' )
-		window.BindSingleMiniprofileHover( elHeader );
 
 	return elHeader;
 };
@@ -741,7 +735,6 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 	strHTML = strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' )
 
 	elText.html( strHTML );
-	elText.find( 'img.emoticon' ).each( function() { BindEmoticonHover( this ) } );
 
 	elMessage.append( elText );
 

@@ -1290,7 +1290,7 @@ CDASHPlayer.prototype.StatsLastGameDataBuffer = function()
 	for (var i = 0; i < this.m_loaders.length; i++)
 	{
 		if ( this.m_loaders[i].ContainsGame() )
-			return this.m_loaders[i].m_rgLastGameFrame;
+			return this.m_loaders[i].m_statsGameData;
 	}
 
 	return null;
@@ -1373,7 +1373,7 @@ function CSegmentLoader( player, adaptationSet )
 
 	// game data storage
 	this.m_rgGameDataFrames = [];
-	this.m_rgLastGameFrame = {};
+	this.m_statsGameData = {};
 }
 
 CSegmentLoader.s_BufferUpdateNone = 0;
@@ -1447,7 +1447,7 @@ CSegmentLoader.prototype.Close = function()
 
 	// game data storage
 	this.m_rgGameDataFrames = [];
-	this.m_rgLastGameFrame = {};
+	this.m_statsGameData = {};
 }
 
 CSegmentLoader.prototype.ContainsVideo = function()
@@ -1678,16 +1678,16 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 				}
 				else
 				{
-					for ( var f = 0; f < xhr.response.frames.length; f++ )
+					var responseData = xhr.response;
+					var rgFrames = responseData.frames;
+					var cFrames = rgFrames.length;
+					for ( var i = 0; i < cFrames; i++ )
 					{
-						_loader.m_rgGameDataFrames.push( xhr.response.frames[f] );
+						_loader.m_rgGameDataFrames.push( rgFrames[i] );
 					}
 
-					_loader.m_rgLastGameFrame = xhr.response;
-
-					//if ( xhr.response.frames.length > 0 )
-					//	PlayerLog( 'Received Frame with PTS: ' + ( _loader.m_rgLastGameFrame.frames[_loader.m_rgLastGameFrame.frames.length-1].pts / 1000 ) );
-
+					var gameData = {appid: responseData.appid, broadcastrelayid: responseData.broadcastrelayid, segmentid: responseData.segmentid };
+					_loader.m_statsGameData = gameData;					
 				}
 
 				_loader.ScheduleNextDownload();

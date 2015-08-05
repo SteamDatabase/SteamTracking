@@ -224,6 +224,8 @@ CBroadcastChat.prototype.RequestLoop = function()
 			}
 		}
 
+		_chat.TrimChat();
+
 		// check if first request or we received initial_delay which will allow us to resync time
 		var nSleepMS = 0;
 		if( _chat.m_tsFirstRequest == null || _chat.m_nNextChatTS == 0 || rgResponse.initial_delay )
@@ -347,8 +349,7 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 	var elChatName = $J( '.tmplChatName', elMessage );
 	elChatName.text( strPersonaName );
 	elChatName.attr( 'href', 'http://steamcommunity.com/profiles/' + steamID );
-	elChatName.data( 'miniprofile', 's' + steamID );
-	BindSingleMiniprofileHover( elChatName );
+	elChatName.attr( 'data-miniprofile', 's' + steamID );
 
 	if ( bInGame )
 		elChatName.parent().addClass( 'InGame' );
@@ -363,12 +364,10 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 	strHTML = this.AddLinks( strHTML );
 
 	elText.html( strHTML );
-	elText.find( 'img.emoticon' ).each( function() { BindEmoticonHover( this ) } );
 
 	elMessage.show();
 
 	$J('#ChatMessages').append(elMessage);
-	this.TrimChat();
 
 	// if text is too long, add expand button
 	var elText = $J( '.tmplChatMessage', elMessage );
