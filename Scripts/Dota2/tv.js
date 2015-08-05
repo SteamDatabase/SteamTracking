@@ -6243,6 +6243,9 @@
 			if ( !g_Tournament )
 				return;
 
+			if ( nTeamID <= 0 || null == nTeamID )
+				return;
+
 			// Update all panels
 			for ( var strPanelID in this.m_PanelMap )
 			{
