@@ -5546,7 +5546,7 @@
 
 	CMatchStatsPanel.prototype.RenderGraph = function()
 	{
-		if ( !g_Match )
+		if ( !g_Match || !g_Match.BAllPlayersHaveHeroes() )
 			return;
 
 		// Send a message across the fence to render.
