@@ -40,7 +40,7 @@
 	
 	var g_DevConfig = {
 		cheer_use_stream_values: true,
-		force_teams: true,
+		force_teams: false,
 		spew_events: false
 	};
 
@@ -5861,7 +5861,7 @@
 	{
 		BIsActivePanel: function( Panel )
 		{
-			return Panel && ( m_ActivePanel == Panel );
+			return Panel && ( this.m_ActivePanel == Panel );
 		},
 
 		SetActivePanel: function( Panel )
@@ -6227,6 +6227,10 @@
 			{
 				var CurPanel = this.m_PanelMap[strPanelID];
 				if ( CurPanel.BIsHidden() )
+					continue;
+
+				var CurPanelGroup = CurPanel.GetPanelGroup();
+				if ( CurPanelGroup && !CurPanelGroup.BIsActivePanel( CurPanel ) )
 					continue;
 
 				CurPanel.OnDataReceived();
