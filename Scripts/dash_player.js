@@ -67,6 +67,7 @@ CDASHPlayer.TRACK_BUFFER_MS = 5000;
 CDASHPlayer.TRACK_BUFFER_MAX_SEC = 30 * 60;
 CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 30 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
+CDASHPlayer.MANIFEST_RETRY_MS = 2000;
 CDASHPlayer.GAMEDATA_TRIGGER_MS = 200;
 
 CDASHPlayer.HAVE_NOTHING = 0;
@@ -251,7 +252,7 @@ CDASHPlayer.prototype.UpdateMPD = function()
 	{
 		_player.m_xhrUpdateMPD = null;
 		PlayerLog( 'Failed to download: ' + _player.m_strMPD );
-		_player.CloseWithError();
+		_player.m_schUpdateMPD = setTimeout( function() { _player.UpdateMPD(); }, CDASHPlayer.MANIFEST_RETRY_MS );
 	});
 }
 
