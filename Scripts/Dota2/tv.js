@@ -291,6 +291,11 @@
 		window.location.href = g_strLoginURL;
 	}
 
+	function GetLocalizedHeroName( nHeroID )
+	{
+		return g_rgLocalizedHeroData[ nHeroID ].name;
+	}
+
 	function BIsValidAbilityName( strAbilityName )
 	{
 		return [ 'empty' ].indexOf( strAbilityName ) !== -1;
@@ -2792,7 +2797,7 @@
 		//
 		GetHeroName: function()
 		{
-			return g_rgLocalizedHeroData[ this.m_nHeroID ].name;
+			return GetLocalizedHeroName( this.m_nHeroID );
 		},
 
 		GetAbilityCount: function()
@@ -5744,6 +5749,26 @@
 	CDraftStatsPanel.prototype = Object.create( CBasePanel.prototype );
 	CDraftStatsPanel.prototype.constructor = CDraftStatsPanel;
 
+	CDraftStatsPanel.prototype.OnNewMatch = function()
+	{
+		CBasePanel.prototype.OnNewMatch.apply( this, arguments );
+
+		this.Clear_();
+	};
+
+	CDraftStatsPanel.prototype.Clear_ = function()
+	{
+		for ( var strBansPicks in this.m_PicksBansData )
+		{
+			var BansOrPicksMetaData = this.m_PicksBansData[strBansPicks];
+
+			// Emtpy everything out
+			BansOrPicksMetaData.panel.empty();
+			BansOrPicksMetaData.count = 0;
+			BansOrPicksMetaData.items = [];
+		}
+	};
+
 	CDraftStatsPanel.prototype.BPreShow = function()
 	{
 		if ( !g_Match )
@@ -5751,12 +5776,26 @@
 
 		VUtils.AssertMsg( g_Tournament, "User should never be able to show this panel unless we are in a tournament game." );
 
-		// Emtpy everything out
-		var rgBansPicks = this.m_rgPicksBansData;
-		for ( var strBansPicks in rgBansPicks )
+		this.Clear_();
+
+		for ( var strBansPicks in this.m_PicksBansData )
 		{
-			rgBansPicks[strBansPicks].panel.empty();
-			rgBansPicks[strBansPicks].count = 0;
+			var BansOrPicksMetaData = this.m_PicksBansData[strBansPicks];
+
+			// Create all elements
+			var $Panel = BansOrPicksMetaData.panel;
+			var rgPicksOrBansData = BansOrPicksMetaData.get_data_func();	// Assumes g_Match is valid.
+			var strBaseKey = BansOrPicksMetaData.label_base_key;
+			var cLen = rgPicksOrBansData.length;	// # of picks or bans
+
+			// Only add the ones we care about.
+			for ( var i = 0; i < 10; ++i )
+			{
+				var $Item = this.$m_DummyItem.clone().removeAttr( 'id' ).addClass( 'PickBanItem ' ).addClass( 'Transparent' );
+				$Item.find( '.PickBanLabel' ).html( g_Localization.Localize( strBaseKey + String( i + 1 ) ) );
+				$Panel.append( $Item );
+				BansOrPicksMetaData.items.push( $Item );
+			}
 		}
 
 		// Update with fresh data
@@ -5770,27 +5809,33 @@
 		for ( var strBansPicks in this.m_PicksBansData )
 		{
 			var BansOrPicksMetaData = this.m_PicksBansData[strBansPicks];
-			var $Panel = BansOrPicksMetaData.panel;
 			var rgPicksOrBansData = BansOrPicksMetaData.get_data_func();	// Assumes g_Match is valid.
-			var strBaseKey = BansOrPicksMetaData.label_base_key;
 			var cLen = rgPicksOrBansData.length;	// # of picks or bans
 
 			// Only add the ones we care about.
 			for ( var i = BansOrPicksMetaData.count; i < cLen; ++i )
 			{
-				var $Item = this.$m_DummyItem.clone().removeAttr( 'id' ).addClass( 'PickBanItem ' );
-				var strHeroImageURL = GetHeroImageURL_LargeWide( rgPicksOrBansData[i].GetHeroID() );
+				var $Item = BansOrPicksMetaData.items[i];
+				var nHeroID = rgPicksOrBansData[i].GetHeroID();
+				var strHeroImageURL = GetHeroImageURL_LargeWide( nHeroID );
 				var nTeam = rgPicksOrBansData[i].GetTeam();
 
-				$Item.find( '.ImageBackground' ).append( CreateImage( strHeroImageURL ) );
+				// Update with hero image
+				var $ImageBg = $Item.find( '.ImageBackground' );
+				$ImageBg.empty();
+				$ImageBg.append( CreateImage( strHeroImageURL ) );
+
+				$Item.find( '.HeroNameLabel' ).text( GetLocalizedHeroName( nHeroID ) );
+
+				// Set the correct team
 				$Item.find( '.TeamGradiant' ).addClass( 'TeamGradiant' + GetRadiantDireFromTeam( nTeam ) );
-				$Item.find( '.Label' ).html( g_Localization.Localize( strBaseKey + String( i + 1 ) ) );
-				$Panel.append( $Item );
+
+				// Show it
+				$Item.removeClass( 'Transparent' );
 			}
 
 			BansOrPicksMetaData.count = cLen;
 		}
-
 	};
 
 	CDraftStatsPanel.prototype.OnDataReceived = function()
@@ -5835,7 +5880,7 @@
 		this.$m_RadiantTeamName.css( 'font-size', strHeaderFontSize );
 		this.$m_DireTeamName.css( 'font-size', strHeaderFontSize );
 
-		var strBansPicksSize = ( 0.8 * flBaseKeyEm ) + 'em';
+		var strBansPicksSize = ( 0.70 * flBaseKeyEm ) + 'em';
 		this.$m_BanItems.css( 'font-size', strBansPicksSize );
 		this.$m_PickItems.css( 'font-size', strBansPicksSize );
 
