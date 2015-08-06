@@ -410,7 +410,6 @@ CDASHPlayer.prototype.InitVideoControl = function()
 	$J( mediaSource ).on( 'sourceended.DASHPlayerEvents', function( e ) { _player.OnMediaSourceEnded( e ); });
 	$J( mediaSource ).on( 'sourceclose.DASHPlayerEvents', function( e ) { _player.OnMediaSourceClose( e ); });
 
-	$J( this.m_elVideoPlayer ).on( 'progress.DASHPlayerEvents', function() { _player.OnVideoBufferProgress(); });
 	$J( this.m_elVideoPlayer ).on( 'stalled.DASHPlayerEvents', function() { _player.OnVideoStalled(); });
 
 	$J( this.m_elVideoPlayer ).on( 'changeuiplayingstate.DASHPlayerEvents', function( e, playing ) { _player.SavePlaybackStateFromUI( playing ); } );
@@ -531,6 +530,7 @@ CDASHPlayer.prototype.OnSegmentDownloaded = function()
 	this.UpdateStats();
 	this.UpdateVideoRepresentation( this.m_nVideoRepresentationIndex );
 	$J( this.m_elVideoPlayer ).trigger( 'bufferedupdate' );
+	this.OnVideoBufferProgress();
 }
 
 CDASHPlayer.prototype.OnSegmentDownloadFailed = function()
@@ -1637,7 +1637,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 					return;
 
 				var now = performance.now();
-				var nDownloadMS =  Math.floor(performance.now() - tsDownloadStart);
+				var nDownloadMS = Math.floor(performance.now() - tsDownloadStart);
 
 				_loader.m_xhr = null;
 				_loader.m_nLastSegmentDownloadStatus = xhr.status;
@@ -1650,7 +1650,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 
 					_loader.m_nFailedSegmentDownloads++;
 
-					PlayerLog( '[video] HTTP ' + xhr.status + ' (' +  nDownloadMS + 'ms, ' + + '0k): ' + url );
+					PlayerLog( '[video] HTTP ' + xhr.status + ' (' +  nDownloadMS + 'ms): ' + url );
 					var nTimeToRetry = CDASHPlayer.DOWNLOAD_RETRY_MS;
 					if ( _loader.m_player.BIsLiveContent() )
 						nTimeToRetry += CDASHPlayer.TRACK_BUFFER_MS;
