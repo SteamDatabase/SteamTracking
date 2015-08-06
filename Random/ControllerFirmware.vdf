@@ -72,5 +72,13 @@
             "crc128"        "cc65c2a12cffd6e6cc615e9e3d73573c"
             "bootloadertimestamp"   "55776ede"
         }
+    	"8"
+        {
+            "firmwarebinary"	"/firmware/vcf_wired_controller_d0g_55c18226.bin"
+            "firmwaretimestamp"	"55c18226"
+            "minclientpackage"	"1437173913"
+            "crc128"	"fd4991fb09e574e918263b206e906cd7"
+            "bootloadertimestamp"	"55776ede"
+        }
     }
 }
