@@ -37,11 +37,13 @@
 	var g_nViewerCount = null;
 	var g_ErrorSound = null;
 	var g_rgTournamentDataReadyCallbacks = [];
+	var g_flPageStartTime = null;
 	
 	var g_DevConfig = {
 		cheer_use_stream_values: true,
 		force_teams: false,
-		spew_events: false
+		spew_events: false,
+		shuffle_teams: false
 	};
 
 	//--------------------------------------------------------------------------------------------
@@ -301,6 +303,17 @@
 		return [ 'empty' ].indexOf( strAbilityName ) !== -1;
 	}
 
+	function GetFakeTeamID( nTeam )
+	{
+		var flRelTime = VUtils.GetTime() - g_flPageStartTime;
+		if ( g_DevConfig['shuffle_teams'] && flRelTime % 10 < 5 )
+		{
+			return nTeam == DOTA_CONSTS.TEAM_RADIANT ? 1838315 : 4;
+		}
+
+		return nTeam == DOTA_CONSTS.TEAM_RADIANT ? 3 : 5;
+	}
+
 	function SendMessageToIFrame( $IFrame, strTargetOrigin, Msg )
 	{
 		VUtils.Assert( $IFrame.length );
@@ -376,8 +389,8 @@
 
 		if ( g_bIsDev && g_DevConfig['force_teams'] )
 		{
-			Data.teamid_radiant = 1838315;
-			Data.teamid_dire = 4;
+			Data.teamid_radiant = GetFakeTeamID( DOTA_CONSTS.TEAM_RADIANT );
+			Data.teamid_dire = GetFakeTeamID( DOTA_CONSTS.TEAM_DIRE );
 		}
 
 		if ( undefined !== Data.teamid_radiant && undefined !== Data.teamid_dire )
@@ -6504,6 +6517,8 @@
 		g_Noise = Data.noise;
 		g_Localization = Data.localization;
 		g_strCurrency = Data.currency;
+
+		g_flPageStartTime = VUtils.GetTime();
 
 		var g_flPrevTime = VUtils.GetTime();
 
