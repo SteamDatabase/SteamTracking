@@ -4508,7 +4508,7 @@
 	{
 		CBasePanel.prototype.ResizeFonts.apply( this, arguments );
 
-		var flBaseFontSize = this.$m_Panel.actual( 'width' ) * .0037;
+		var flBaseFontSize = 1;//this.$m_Panel.actual( 'width' ) * .0037;
 		this.$m_HeaderText.css( 'font-size', flBaseFontSize + 'em' );
 	};
 
