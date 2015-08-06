@@ -68,6 +68,7 @@ CDASHPlayer.TRACK_BUFFER_MAX_SEC = 30 * 60;
 CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 30 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
 CDASHPlayer.MANIFEST_RETRY_MS = 2000;
+CDASHPlayer.MANIFEST_MAX_RETRY_MS = 30 * 1000;
 CDASHPlayer.GAMEDATA_TRIGGER_MS = 200;
 
 CDASHPlayer.HAVE_NOTHING = 0;
@@ -155,9 +156,12 @@ CDASHPlayer.prototype.CloseWithError = function()
 	$J( this.m_elVideoPlayer ).trigger( 'playbackerror' );
 }
 
-CDASHPlayer.prototype.PlayMPD = function( strURL )
+CDASHPlayer.prototype.PlayMPD = function( strURL, tsFirstAttempt )
 {
 	this.m_strMPD = strURL;
+
+	if ( !tsFirstAttempt )
+		tsFirstAttempt = performance.now();
 
 	// load video player then init & parse
 	var _player = this;
@@ -211,8 +215,16 @@ CDASHPlayer.prototype.PlayMPD = function( strURL )
 	.fail( function()
 	{
 		_player.m_xhrUpdateMPD = null;
-		PlayerLog( 'Failed to download: ' + _player.m_strMPD );
-		_player.CloseWithError();
+		if ( performance.now() - tsFirstAttempt > CDASHPlayer.MANIFEST_MAX_RETRY_MS )
+		{
+			PlayerLog( 'Failed to download: ' + _player.m_strMPD );
+			_player.CloseWithError();
+			return;
+		}
+
+		// retry
+		PlayerLog( 'Failed to download, will retry: ' + _player.m_strMPD );
+		_player.m_schUpdateMPD = setTimeout( function() { _player.PlayMPD( strURL, tsFirstAttempt ); }, CDASHPlayer.MANIFEST_RETRY_MS );
 	});
 }
 
