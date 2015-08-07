@@ -61,10 +61,18 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nLastGameDataEventArrayIndex = 0;
 	this.m_schGameDataEventTimer = null;
 	this.m_fGameDataEventTriggerPerf = 0;
+
+	// dropped frames
+	this.m_schDroppedFrames = null;
+	this.m_nPrevDroppedFrames = 0;
+	this.m_rgDroppedFrames = [];
+	this.m_bDroppingFrames = false;
+	this.m_tsDropFramesDetected = 0;
+	this.m_tsLastWindowResize = 0;
 }
 
-CDASHPlayer.TRACK_BUFFER_MS = 5000;
-CDASHPlayer.TRACK_BUFFER_MAX_SEC = 30 * 60;
+CDASHPlayer.TRACK_BUFFER_MS = 8000;
+CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
 CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS = 30 * 1000;
 CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
 CDASHPlayer.MANIFEST_RETRY_MS = 2000;
@@ -142,12 +150,22 @@ CDASHPlayer.prototype.Close = function()
 	this.m_fLastGameDataEventTriggerTime = 0;
 	this.m_nLastGameDataEventArrayIndex = 0;
 
-	
 	if ( this.m_VTTCaptionLoader )
 	{
 		this.m_VTTCaptionLoader.Close();
 		this.m_VTTCaptionLoader = null;
 	}
+
+	if ( this.m_schDroppedFrames )
+	{
+		clearTimeout( this.m_schDroppedFrames );
+		this.m_schDroppedFrames = null;
+	}
+	this.m_nPrevDroppedFrames = 0;
+	this.m_rgDroppedFrames = [];
+	this.m_bDroppingFrames = false;
+	this.m_tsDropFramesDetected = 0;
+	this.m_tsLastWindowResize = 0;
 }
 
 CDASHPlayer.prototype.CloseWithError = function()
@@ -411,6 +429,7 @@ CDASHPlayer.prototype.InitVideoControl = function()
 	$J( mediaSource ).on( 'sourceclose.DASHPlayerEvents', function( e ) { _player.OnMediaSourceClose( e ); });
 
 	$J( this.m_elVideoPlayer ).on( 'stalled.DASHPlayerEvents', function() { _player.OnVideoStalled(); });
+	$J( window ).on( 'resize.DASHPlayerEvents', function() { _player.OnWindowResize(); });
 
 	$J( this.m_elVideoPlayer ).on( 'changeuiplayingstate.DASHPlayerEvents', function( e, playing ) { _player.SavePlaybackStateFromUI( playing ); } );
 }
@@ -502,7 +521,60 @@ CDASHPlayer.prototype.OnVideoBufferProgress = function()
 		this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate;
 
 		$J( this.m_elVideoPlayer ).trigger( 'bufferingcomplete' );
+
+		if ( !this.m_schDroppedFrames )
+		{
+			var _player = this;
+			m_schDroppedFrames = setTimeout( function() { _player.MeasureDroppedFrames(); }, 1000 );
+		}
 	}
+}
+
+CDASHPlayer.prototype.MeasureDroppedFrames = function()
+{
+	var _player = this;
+	m_schDroppedFrames = setTimeout( function() { _player.MeasureDroppedFrames(); }, 1000 );
+	var tsNow = performance.now();
+
+	var nDroppedTotal = ( this.m_elVideoPlayer.webkitDroppedFrames || this.m_elVideoPlayer.webkitDroppedFrameCount );
+	var bExceededLimit = false;
+	var nDropped = nDroppedTotal - this.m_nPrevDroppedFrames;
+	if ( this.m_nPrevDroppedFrames > 0 && nDropped > 1 && (tsNow - this.m_tsLastWindowResize) > 2000 )
+		bExceededLimit = true;
+
+	this.m_nPrevDroppedFrames = nDroppedTotal;
+	this.m_rgDroppedFrames.push( bExceededLimit );
+	if ( this.m_rgDroppedFrames.length <= 6 )
+		return;
+
+	this.m_rgDroppedFrames.splice(0, this.m_rgDroppedFrames.length - 6 );
+	if ( this.m_bDroppingFrames && tsNow - this.m_tsDropFramesDetected < 5 * 60 * 1000 )
+		return;
+
+	var cRecentDrops = 0;
+	for ( var i = 0; i < this.m_rgDroppedFrames.length; i++ )
+	{
+		if ( this.m_rgDroppedFrames[i] )
+			cRecentDrops++;
+	}
+
+	//console.log( 'Dropped - total=' + nDroppedTotal + ' new=' + nDropped + ' exceed=' + bExceededLimit + ' length=' + this.m_rgDroppedFrames.length + ' recentdrops=' + cRecentDrops );
+
+	if ( cRecentDrops >= 3 )
+	{
+		this.m_bDroppingFrames = true;
+		this.m_tsDropFramesDetected = tsNow;
+		console.log( 'dropped too many' );
+	}
+	else
+	{
+		this.m_bDroppingFrames = false;
+	}
+}
+
+CDASHPlayer.prototype.OnWindowResize = function()
+{
+	this.m_tsLastWindowResize = performance.now();
 }
 
 CDASHPlayer.prototype.OnVideoStalled = function()
@@ -522,6 +594,31 @@ CDASHPlayer.prototype.OnVideoStalled = function()
 				break;
 			}
 		}
+	}
+}
+
+CDASHPlayer.prototype.OnTimeUpdate = function()
+{
+	if ( this.BIsBuffering() )
+		return;
+
+	if ( this.m_elVideoPlayer.paused )
+		return;
+
+	var nCurrentTime = this.m_elVideoPlayer.currentTime;
+	var nPrevTime = nCurrentTime;
+	var loader = this.GetVideoLoader();
+	if ( loader && loader.GetNumBuffers() > 1 )
+		nCurrentTime = loader.GetNextBufferedTime( nCurrentTime );
+
+	loader = this.GetAudioLoader();
+	if ( loader && loader.GetNumBuffers() > 1 )
+		nCurrentTime = loader.GetNextBufferedTime( nCurrentTime );
+
+	if ( nCurrentTime != nPrevTime )
+	{
+		console.log('not in buffered range, advance time: ' + nCurrentTime );
+		this.SeekTo( nCurrentTime );
 	}
 }
 
@@ -886,7 +983,7 @@ CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex
 		var nRepFrameRate = loader.m_adaptation.representations[i].frameRate ? loader.m_adaptation.representations[i].frameRate : 0;
 		if ( this.BIsLiveContent() && nRepFrameRate > CDASHPlayer.MAX_STANDARD_FRAMERATE )
 		{
-			if ( Math.ceil( this.m_nCurrentFramerate ) < (CDASHPlayer.MAX_STANDARD_FRAMERATE - 1) )
+			if ( this.m_bDroppingFrames || Math.ceil( this.m_nCurrentFramerate ) < (CDASHPlayer.MAX_STANDARD_FRAMERATE - 1) )
 				continue;
 		}
 
@@ -1924,6 +2021,27 @@ CSegmentLoader.prototype.GetAmountBuffered = function()
 		nBuffered += this.m_bufSegments[i].duration;
 	}
 	return nBuffered;
+}
+
+CSegmentLoader.prototype.GetNumBuffers = function()
+{
+	var buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : [];
+	return buffered.length;
+}
+
+CSegmentLoader.prototype.GetNextBufferedTime = function ( nTime )
+{
+	var buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : [];
+	for ( var i = 0; i < buffered.length; i++ )
+	{
+		if ( nTime < buffered.start( i ) )
+			nTime = buffered.start( i );
+
+		if ( nTime < buffered.end( i ) )
+			return nTime;
+	}
+
+	return nTime;
 }
 
 CSegmentLoader.prototype.GetBufferedStart = function()
