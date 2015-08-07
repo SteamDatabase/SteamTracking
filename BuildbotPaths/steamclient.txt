@@ -265,6 +265,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/symlink.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/systeminfo.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/tgaloader.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/trackpad_kalman.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/ugcmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/unified_messages_client.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/urlhelper.o
@@ -447,6 +448,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/symlink.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/systeminfo.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/tgaloader.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/trackpad_kalman.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/ugcmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/unified_messages_client.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/urlhelper.o
@@ -543,6 +545,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_mapping.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_mode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_mode.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_modes/filter/trackpad_kalman.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_modes/filter/trackpad_kalman.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_modes/vthumbstick.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_source.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_source.h
@@ -1324,6 +1328,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/mathlib/color_conversion.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/mathlib/mathlib_base.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/mathlib/randsse.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/mathlib/vmatrix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/imemstream.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/ipcposix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemdrop.h
@@ -1358,6 +1363,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector4d.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vmatrix.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_endian.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_macros.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_securezeromemory_impl.h
