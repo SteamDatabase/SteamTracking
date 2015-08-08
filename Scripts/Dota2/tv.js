@@ -6370,13 +6370,13 @@
 			$Panel.SetTeam( nTeam );
 			$Panel.SetPlayer( iPlayer );
 
-			this._ShowPanelInternal( $Panel );
+			this.ShowPanelInternal_( $Panel );
 		},
 
 		ShowSpectatorStatsPanel: function()
 		{
 			var $Panel = this.m_PanelMap[DOTA_CONSTS.DIV_ID_SPECTATOR_STATS];
-			this._ShowPanelInternal( $Panel );
+			this.ShowPanelInternal_( $Panel );
 		},
 
 		ActivateMiniNavLink: function( strDivName )
@@ -6399,7 +6399,7 @@
 		ShowStatsPanelByDivName: function( strDivName )
 		{
 			this.ActivateMiniNavLink( strDivName );	// Styling only
-			this._ShowPanelInternal( this.m_PanelMap[strDivName] );
+			this.ShowPanelInternal_( this.m_PanelMap[strDivName] );
 		},
 
 		OnWindowResize: function()
@@ -6421,8 +6421,14 @@
 			this.m_bIsSlimMode = this.$m_Window.width() < DOTA_CONSTS.BROWSER_WIDTH_SLIM;
 		},
 
+		DoMobileScrollHack: function()
+		{
+			var nTop = $( '#VideoContainer' ).offset().top;
+			$( 'html, body' ).animate( { scrollTop: nTop }, 0 );
+		},
+
 		// PRIVATE:
-		_ShowPanelInternal: function( Panel )
+		ShowPanelInternal_: function( Panel )
 		{
 			if ( !Panel )
 				return;
@@ -6669,23 +6675,29 @@
 		);
 
 		// Support orientation change on mobile devices.
-		if ( g_bIsMobile && undefined !== windowo.orientationchange )
+		if ( g_bIsMobile )
 		{
-			$( window ).on(
-				'orientationchange',
-				function( e )
-				{
-					if ( window.orientation == 0 )	// Portrait
+			g_UIManager.DoMobileScrollHack();
+
+			if ( undefined !== window.orientationchange )
+			{
+				$( window ).on(
+					'orientationchange',
+					function( e )
 					{
-						VUtils.ExitFullscreen();
+						if ( window.orientation == 0 )	// Portrait
+						{
+							VUtils.RequestFullscreen();
+							g_UIManager.DoMobileScrollHack();
+						}
+						else	// Landscape
+						{
+							VUtils.ExitFullscreen();
+							g_UIManager.DoMobileScrollHack();
+						}
 					}
-					else
-					{
-						// Attempt to go fullscreen to hide the address bar.
-						VUtils.RequestFullscreen();
-					}
-				}
-			);
+				);
+			}
 		}
 
 		function Think()
