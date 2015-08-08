@@ -6639,9 +6639,6 @@
 
 					case 'Mobile_OnInitialUserAction':
 
-						// Attempt to go fullscreen right away to hide the address bar.
-						//VUtils.RequestFullscreen();
-
 						break;
 				}
 
@@ -6670,6 +6667,26 @@
 				FadeInLoadedContent( $( this ) );
 			}
 		);
+
+		// Support orientation change on mobile devices.
+		if ( g_bIsMobile && undefined !== windowo.orientationchange )
+		{
+			$( window ).on(
+				'orientationchange',
+				function( e )
+				{
+					if ( window.orientation == 0 )	// Portrait
+					{
+						VUtils.ExitFullscreen();
+					}
+					else
+					{
+						// Attempt to go fullscreen to hide the address bar.
+						VUtils.RequestFullscreen();
+					}
+				}
+			);
+		}
 
 		function Think()
 		{
