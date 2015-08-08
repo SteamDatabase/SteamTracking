@@ -4511,8 +4511,16 @@
 		{
 			$LI.attr( 'data-linkurl', GameData.watch_url );
 		}
-		$LI.find( '.Team1' ).append( CreateImage( GameData.team1_logo_url_large ) );
-		$LI.find( '.Team2' ).append( CreateImage( GameData.team2_logo_url_large ) );
+
+		if ( GameData.team1_logo_url_large )
+		{
+			$LI.find( '.Team1' ).append( CreateImage( GameData.team1_logo_url_large ) );
+		}
+
+		if ( GameData.team2_logo_url_large )
+		{
+			$LI.find( '.Team2' ).append( CreateImage( GameData.team2_logo_url_large ) );
+		}
 
 		return $LI;
 	}
