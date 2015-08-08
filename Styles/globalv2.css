@@ -1081,7 +1081,7 @@ img.emoticon {
 	width: 18px;
 }
 
-.large img.emoticon {
+.large img.emoticon, img.emoticon.large {
 	height: 60px;
 	width: 60px;
 }

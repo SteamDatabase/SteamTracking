@@ -10,6 +10,8 @@ var CBroadcastChat = function( broadcastSteamID )
 	this.m_unInstanceID = Math.floor( Math.random() * 4294967296 );
 	this.m_webapi = null;
 
+	this.m_bUseLargeEmoticons = false;
+
 	this.m_ulChatID = 0;
 	this.m_tsFirstRequest = null;
 	this.m_nFromFirstRequestMS = 0;
@@ -71,6 +73,11 @@ CBroadcastChat.prototype.SetOwnedEmoticons = function( rgEmoticons )
 	}
 	var strRegex = ':(' + rgEmoticonsStripped.join( '|' ) + '):';
 	this.m_regexUserEmoticons = new RegExp( strRegex, 'g' );
+}
+
+CBroadcastChat.prototype.UseLargeEmoticons = function()
+{
+	this.m_bUseLargeEmoticons = true;
 }
 
 CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
@@ -334,7 +341,8 @@ CBroadcastChat.prototype.AddEmoticons = function( strHTML, steamID, bLocal )
 	if( bLocal )
 		regexEmoticons = this.m_regexUserEmoticons;
 
-	return strHTML.replace( regexEmoticons, '<img class="emoticon" src="https://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' );
+	var strAdditionalStyle = this.m_bUseLargeEmoticons ? 'large' : 'small';
+	return strHTML.replace( regexEmoticons, '<img class="emoticon ' + strAdditionalStyle + '" src="https://steamcommunity-a.akamaihd.net/economy/emoticon/$1">' );
 }
 
 
