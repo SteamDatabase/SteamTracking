@@ -1002,12 +1002,6 @@ select.gray_bevel {
 	width: 560px;
 }
 
-img.emoticon {
-	vertical-align: text-bottom;
-	height: 18px;
-	width: 18px;
-}
-
 
 .migrated_profile_page_old .pagecontent {
 	padding-bottom: 0;
@@ -1068,6 +1062,28 @@ img.emoticon {
 	max-height: 96px;
 	max-width: 352px;
 	overflow-y: auto;
+}
+
+.large .emoticon_popup_content {
+	max-height: 200px;
+	max-width: 352px;
+}
+
+.large .emoticon_popup_content .emoticon_option {
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+}
+
+img.emoticon {
+	vertical-align: text-bottom;
+	height: 18px;
+	width: 18px;
+}
+
+.large img.emoticon {
+	height: 60px;
+	width: 60px;
 }
 
 .emoticon_popup_content .emoticon_option {

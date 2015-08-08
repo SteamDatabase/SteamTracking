@@ -466,11 +466,12 @@ function StandardCommunityBan( steamid, elemLink )
 
 
 
-function CEmoticonPopup( rgEmoticons, $EmoticonButton, $Textarea )
+function CEmoticonPopup( rgEmoticons, $EmoticonButton, $Textarea, strExtraClass )
 {
 	this.m_rgEmoticons = rgEmoticons;
 	this.m_$EmoticonButton = $EmoticonButton;
 	this.m_$TextArea = $Textarea;
+	this.m_strExtraClass = strExtraClass;
 
 	this.m_bVisible = false;
 	this.m_$Popup = null;
@@ -518,7 +519,10 @@ CEmoticonPopup.prototype.DismissPopup = function()
 CEmoticonPopup.prototype.BuildPopup = function()
 {
 	this.m_$Popup = $J('<div/>', {'class': 'emoticon_popup_ctn' } );
-
+	if ( this.m_strExtraClass )
+	{
+		this.m_$Popup.addClass( this.m_strExtraClass );
+	}
 
 	var $PopupInner = $J('<div/>', {'class': 'emoticon_popup' } );
 	this.m_$Popup.append( $PopupInner );
