@@ -6421,12 +6421,6 @@
 			this.m_bIsSlimMode = this.$m_Window.width() < DOTA_CONSTS.BROWSER_WIDTH_SLIM;
 		},
 
-		DoMobileScrollHack: function()
-		{
-			var nTop = $( '#VideoContainer' ).offset().top;
-			$( 'html, body' ).animate( { scrollTop: nTop }, 0 );
-		},
-
 		// PRIVATE:
 		ShowPanelInternal_: function( Panel )
 		{
@@ -6677,8 +6671,6 @@
 		// Support orientation change on mobile devices.
 		if ( g_bIsMobile )
 		{
-			g_UIManager.DoMobileScrollHack();
-
 			if ( undefined !== window.orientationchange )
 			{
 				$( window ).on(
@@ -6687,13 +6679,9 @@
 					{
 						if ( window.orientation == 0 )	// Portrait
 						{
-							VUtils.RequestFullscreen();
-							g_UIManager.DoMobileScrollHack();
 						}
 						else	// Landscape
 						{
-							VUtils.ExitFullscreen();
-							g_UIManager.DoMobileScrollHack();
 						}
 					}
 				);
