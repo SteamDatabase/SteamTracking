@@ -6640,7 +6640,7 @@
 					case 'Mobile_OnInitialUserAction':
 
 						// Attempt to go fullscreen right away to hide the address bar.
-						VUtils.RequestFullscreen();
+						//VUtils.RequestFullscreen();
 
 						break;
 				}
