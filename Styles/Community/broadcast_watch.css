@@ -808,15 +808,19 @@ body.flat_page.SteamClientMinimized
 
 .EmoticonContainer
 {
-	-webkit-flex: 0 0 22px;
-	-ms-flex: 0 0 22px;
-	flex: 0 0 22px;
-	height: 22px;
+	-webkit-flex: 0 0 32px;
+	-ms-flex: 0 0 32px;
+	flex: 0 0 32px;
+	height: 38px;
 	margin-left: 4px;
 	background-color: #292929;
 	border: 1px solid #4c4c4c;
-	padding: 8px;
 	vertical-align: top;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .emoticon_popup_ctn
@@ -1021,6 +1025,7 @@ body.flat_page.SteamClientMinimized
 #LoadingViewerModal .LoadingThrobber
 {
 	margin: 0px auto;
+	overflow: hidden;
 }
 
 #LoadedViewerModal
@@ -1326,3 +1331,23 @@ body.flat_page.SteamClientMinimized
     margin-top: 40px;
     margin-left: 0px;
 }
+
+/* Mobile-specific styling */
+.Mobile .LoadingText
+{
+	font-size: 5em;
+}
+
+.Mobile .LoadingThrobber
+{
+    margin: 0px auto 40px auto;
+    width: 130px;
+    height: 204px;
+}
+
+.Mobile .LoadingThrobber .Bar
+{
+	width: 37px;
+	height: 198px;
+}
+
