@@ -1480,6 +1480,11 @@
 			this.AddChannel( this.m_nActiveChannelID, "All Chat" );
 		},
 
+		Show: function()
+		{
+			this.$m_Chat.removeClass( 'Transparent' );
+		},
+
 		OnBroadcastIDChanged: function( strBroadcastID )
 		{
 			SendMessageToIFrame( this.$m_Chat, g_strSteamBroadcastOrigin, { msg: 'OnVideoIFrameBroadcastIDChanged', broadcastid: strBroadcastID } );
@@ -6590,6 +6595,7 @@
 					case 'OnBroadcastIDChanged':
 
 						g_Chat.OnBroadcastIDChanged( Msg.broadcastid );
+						g_Chat.Show();
 
 						break;
 
@@ -6628,6 +6634,13 @@
 
 						// The graph has been created in the IFrame and it's reporting back with what UI it needs on our end
 						g_UIManager.GetMatchStatsPanel().OnIFrameGraphSystemUIInit( Msg.graph_options );
+
+						break;
+
+					case 'Mobile_OnInitialUserAction':
+
+						// Attempt to go fullscreen right away to hide the address bar.
+						VUtils.RequestFullscreen();
 
 						break;
 				}
