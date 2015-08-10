@@ -97,9 +97,9 @@
  D k_pszSteamClientModuleName
  D pModuleExtension
  D s_LogWatchesAllWithType
- D typeinfo for CAppDepotsUpdater::CCallbackOnAppInfoUpdate
- D typeinfo for CAppInstallerBuilder::CCallbackOnAppBackupStatus
- D typeinfo for CAppUpdater::CCallbackOnAppInfoUpdate
+ D typeinfo for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
+ D typeinfo for CAppInstallerBuilder::CCallback_OnAppBackupStatus
+ D typeinfo for CAppUpdater::CCallback_OnAppInfoUpdate
  D typeinfo for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
  D typeinfo for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
@@ -116,9 +116,15 @@
  D typeinfo for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  D typeinfo for CCallbackBase
+ D typeinfo for CCallbackImpl<12>
+ D typeinfo for CCallbackImpl<16>
+ D typeinfo for CCallbackImpl<1>
+ D typeinfo for CCallbackImpl<40>
+ D typeinfo for CCallbackImpl<4>
+ D typeinfo for CCallbackImpl<8>
  D typeinfo for CConsoleInputThread
- D typeinfo for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient
- D typeinfo for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer
+ D typeinfo for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
+ D typeinfo for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedServer
  D typeinfo for CFileWriter
  D typeinfo for CFileWriterThread
  D typeinfo for CFileWriterThread::FileWriterItem_t
@@ -129,25 +135,25 @@
  D typeinfo for CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>
  D typeinfo for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  D typeinfo for CPathString
- D typeinfo for CSteamUser::CCallbackOnLicensesUpdated
- D typeinfo for CSteamUser::CCallbackOnLoggedOff
- D typeinfo for CSteamUser::CCallbackOnLogonFailure
- D typeinfo for CSteamUser::CCallbackOnSteamLogon
+ D typeinfo for CSteamUser::CCallback_OnLicensesUpdated
+ D typeinfo for CSteamUser::CCallback_OnLoggedOff
+ D typeinfo for CSteamUser::CCallback_OnLogonFailure
+ D typeinfo for CSteamUser::CCallback_OnSteamLogon
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
- D typeinfo for CWorkshopItemBuilder::CCallbackOnAppInfoUpdate
- D typeinfo for CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate
- D typeinfo for CWorkshopItemDownloader::CCallbackOnAppInfoUpdate
- D typeinfo for CWorkshopItemDownloader::CCallbackOnDownloadItemResult
+ D typeinfo for CWorkshopItemBuilder::CCallback_OnAppInfoUpdate
+ D typeinfo for CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate
+ D typeinfo for CWorkshopItemDownloader::CCallback_OnAppInfoUpdate
+ D typeinfo for CWorkshopItemDownloader::CCallback_OnDownloadItemResult
  D typeinfo for ConCommand
  D typeinfo for ConCommandBase
  D typeinfo for ConVar
  D typeinfo for IConCommandBaseAccessor
  D typeinfo for SteamClientConVarAccessor
- D vtable for CAppDepotsUpdater::CCallbackOnAppInfoUpdate
- D vtable for CAppInstallerBuilder::CCallbackOnAppBackupStatus
- D vtable for CAppUpdater::CCallbackOnAppInfoUpdate
+ D vtable for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
+ D vtable for CAppInstallerBuilder::CCallback_OnAppBackupStatus
+ D vtable for CAppUpdater::CCallback_OnAppInfoUpdate
  D vtable for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
  D vtable for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
@@ -163,9 +169,15 @@
  D vtable for CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
+ D vtable for CCallbackImpl<12>
+ D vtable for CCallbackImpl<16>
+ D vtable for CCallbackImpl<1>
+ D vtable for CCallbackImpl<40>
+ D vtable for CCallbackImpl<4>
+ D vtable for CCallbackImpl<8>
  D vtable for CConsoleInputThread
- D vtable for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient
- D vtable for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer
+ D vtable for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
+ D vtable for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedServer
  D vtable for CFileWriter
  D vtable for CFileWriterThread
  D vtable for CFileWriterThread::FileWriterItem_t
@@ -176,17 +188,17 @@
  D vtable for CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>
  D vtable for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  D vtable for CPathString
- D vtable for CSteamUser::CCallbackOnLicensesUpdated
- D vtable for CSteamUser::CCallbackOnLoggedOff
- D vtable for CSteamUser::CCallbackOnLogonFailure
- D vtable for CSteamUser::CCallbackOnSteamLogon
+ D vtable for CSteamUser::CCallback_OnLicensesUpdated
+ D vtable for CSteamUser::CCallback_OnLoggedOff
+ D vtable for CSteamUser::CCallback_OnLogonFailure
+ D vtable for CSteamUser::CCallback_OnSteamLogon
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
- D vtable for CWorkshopItemBuilder::CCallbackOnAppInfoUpdate
- D vtable for CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate
- D vtable for CWorkshopItemDownloader::CCallbackOnAppInfoUpdate
- D vtable for CWorkshopItemDownloader::CCallbackOnDownloadItemResult
+ D vtable for CWorkshopItemBuilder::CCallback_OnAppInfoUpdate
+ D vtable for CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate
+ D vtable for CWorkshopItemDownloader::CCallback_OnAppInfoUpdate
+ D vtable for CWorkshopItemDownloader::CCallback_OnDownloadItemResult
  D vtable for ConCommand
  D vtable for ConVar
  D vtable for SteamClientConVarAccessor
@@ -205,9 +217,9 @@
  R k_rgchAnonymousUser
  R k_rgchLocalManifest
  R k_rgchPublicManifest
- R typeinfo name for CAppDepotsUpdater::CCallbackOnAppInfoUpdate
- R typeinfo name for CAppInstallerBuilder::CCallbackOnAppBackupStatus
- R typeinfo name for CAppUpdater::CCallbackOnAppInfoUpdate
+ R typeinfo name for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
+ R typeinfo name for CAppInstallerBuilder::CCallback_OnAppBackupStatus
+ R typeinfo name for CAppUpdater::CCallback_OnAppInfoUpdate
  R typeinfo name for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
  R typeinfo name for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
@@ -224,9 +236,15 @@
  R typeinfo name for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  R typeinfo name for CCallbackBase
+ R typeinfo name for CCallbackImpl<12>
+ R typeinfo name for CCallbackImpl<16>
+ R typeinfo name for CCallbackImpl<1>
+ R typeinfo name for CCallbackImpl<40>
+ R typeinfo name for CCallbackImpl<4>
+ R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CConsoleInputThread
- R typeinfo name for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient
- R typeinfo name for CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer
+ R typeinfo name for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
+ R typeinfo name for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedServer
  R typeinfo name for CFileWriter
  R typeinfo name for CFileWriterThread
  R typeinfo name for CFileWriterThread::FileWriterItem_t
@@ -237,20 +255,20 @@
  R typeinfo name for CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>
  R typeinfo name for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  R typeinfo name for CPathString
- R typeinfo name for CSteamUser::CCallbackOnLicensesUpdated
- R typeinfo name for CSteamUser::CCallbackOnLoggedOff
- R typeinfo name for CSteamUser::CCallbackOnLogonFailure
- R typeinfo name for CSteamUser::CCallbackOnSteamLogon
+ R typeinfo name for CSteamUser::CCallback_OnLicensesUpdated
+ R typeinfo name for CSteamUser::CCallback_OnLoggedOff
+ R typeinfo name for CSteamUser::CCallback_OnLogonFailure
+ R typeinfo name for CSteamUser::CCallback_OnSteamLogon
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >
- R typeinfo name for CWorkshopItemBuilder::CCallbackOnAppInfoUpdate
- R typeinfo name for CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate
- R typeinfo name for CWorkshopItemDownloader::CCallbackOnAppInfoUpdate
- R typeinfo name for CWorkshopItemDownloader::CCallbackOnDownloadItemResult
+ R typeinfo name for CWorkshopItemBuilder::CCallback_OnAppInfoUpdate
+ R typeinfo name for CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate
+ R typeinfo name for CWorkshopItemDownloader::CCallback_OnAppInfoUpdate
+ R typeinfo name for CWorkshopItemDownloader::CCallback_OnDownloadItemResult
  R typeinfo name for ConCommand
  R typeinfo name for ConCommandBase
  R typeinfo name for ConVar
@@ -300,110 +318,82 @@
  T CAppDepotBuilderHttp::CAppDepotBuilderHttp()
  T CAppDepotsUpdater::BRunUpdate(unsigned int)
  T CAppDepotsUpdater::CAppDepotsUpdater()
- T CAppDepotsUpdater::CCallbackOnAppInfoUpdate::Run(void*)
- T CAppDepotsUpdater::CCallbackOnAppInfoUpdate::Run(void*, bool, unsigned long long)
+ T CAppDepotsUpdater::CCallback_OnAppInfoUpdate::Run(void*)
  T CAppDepotsUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CAppInstallerBuilder::BRunBuild(char const*, char const*, char const*, char const*)
- T CAppInstallerBuilder::CCallbackOnAppBackupStatus::Run(void*)
- T CAppInstallerBuilder::CCallbackOnAppBackupStatus::Run(void*, bool, unsigned long long)
+ T CAppInstallerBuilder::CCallback_OnAppBackupStatus::Run(void*)
  T CAppInstallerBuilder::OnAppBackupStatus(AppBackupStatus_t*)
  T CAppUpdater::BInit(KeyValues*)
  T CAppUpdater::BRunContentUpdate()
  T CAppUpdater::BRunWorkshopUpdate()
  T CAppUpdater::CAppUpdater()
- T CAppUpdater::CCallbackOnAppInfoUpdate::Run(void*)
- T CAppUpdater::CCallbackOnAppInfoUpdate::Run(void*, bool, unsigned long long)
+ T CAppUpdater::CCallback_OnAppInfoUpdate::Run(void*)
  T CAppUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppDepotsUpdater*, void (CAppDepotsUpdater::*)(AppInfoUpdateComplete_t*))
- T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::GetCallbackSizeBytes()
  T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::Register(CAppDepotsUpdater*, void (CAppDepotsUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::CCallback(CAppInstallerBuilder*, void (CAppInstallerBuilder::*)(AppBackupStatus_t*))
- T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::GetCallbackSizeBytes()
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::Register(CAppInstallerBuilder*, void (CAppInstallerBuilder::*)(AppBackupStatus_t*))
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::Run(void*)
- T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::~CCallback()
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
- T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::GetCallbackSizeBytes()
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Register(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::~CCallback()
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::GetCallbackSizeBytes()
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::~CCallback()
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::GetCallbackSizeBytes()
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*, bool, unsigned long long)
- T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallback()
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::CCallback(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedClient_t*))
- T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::GetCallbackSizeBytes()
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::Register(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedClient_t*))
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::Run(void*)
- T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::~CCallback()
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::CCallback(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedServer_t*))
- T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::GetCallbackSizeBytes()
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Register(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedServer_t*))
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Run(void*)
- T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::~CCallback()
  T CCallback<CSteamUser, LicensesUpdated_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(LicensesUpdated_t*))
- T CCallback<CSteamUser, LicensesUpdated_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamUser, LicensesUpdated_t, false>::Register(CSteamUser*, void (CSteamUser::*)(LicensesUpdated_t*))
  T CCallback<CSteamUser, LicensesUpdated_t, false>::Run(void*)
- T CCallback<CSteamUser, LicensesUpdated_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamUser, LicensesUpdated_t, false>::~CCallback()
  T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(SteamServerConnectFailure_t*))
- T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::Register(CSteamUser*, void (CSteamUser::*)(SteamServerConnectFailure_t*))
  T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::Run(void*)
- T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::~CCallback()
  T CCallback<CSteamUser, SteamServersConnected_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(SteamServersConnected_t*))
- T CCallback<CSteamUser, SteamServersConnected_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamUser, SteamServersConnected_t, false>::Register(CSteamUser*, void (CSteamUser::*)(SteamServersConnected_t*))
  T CCallback<CSteamUser, SteamServersConnected_t, false>::Run(void*)
- T CCallback<CSteamUser, SteamServersConnected_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamUser, SteamServersConnected_t, false>::~CCallback()
  T CCallback<CSteamUser, SteamServersDisconnected_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(SteamServersDisconnected_t*))
- T CCallback<CSteamUser, SteamServersDisconnected_t, false>::GetCallbackSizeBytes()
  T CCallback<CSteamUser, SteamServersDisconnected_t, false>::Register(CSteamUser*, void (CSteamUser::*)(SteamServersDisconnected_t*))
  T CCallback<CSteamUser, SteamServersDisconnected_t, false>::Run(void*)
- T CCallback<CSteamUser, SteamServersDisconnected_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CSteamUser, SteamServersDisconnected_t, false>::~CCallback()
  T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemBuilder*, void (CWorkshopItemBuilder::*)(AppInfoUpdateComplete_t*))
- T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::GetCallbackSizeBytes()
  T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemBuilder*, void (CWorkshopItemBuilder::*)(AppInfoUpdateComplete_t*))
  T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemBuilderLegacy*, void (CWorkshopItemBuilderLegacy::*)(AppInfoUpdateComplete_t*))
- T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::GetCallbackSizeBytes()
  T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemBuilderLegacy*, void (CWorkshopItemBuilderLegacy::*)(AppInfoUpdateComplete_t*))
  T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(AppInfoUpdateComplete_t*))
- T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::GetCallbackSizeBytes()
  T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(AppInfoUpdateComplete_t*))
  T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::CCallback(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(DownloadItemResult_t*))
- T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::GetCallbackSizeBytes()
  T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Register(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(DownloadItemResult_t*))
  T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Run(void*)
- T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Run(void*, bool, unsigned long long)
- T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::~CCallback()
+ T CCallbackImpl<12>::GetCallbackSizeBytes()
+ T CCallbackImpl<12>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<12>::~CCallbackImpl()
+ T CCallbackImpl<16>::GetCallbackSizeBytes()
+ T CCallbackImpl<16>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<16>::~CCallbackImpl()
+ T CCallbackImpl<1>::GetCallbackSizeBytes()
+ T CCallbackImpl<1>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<1>::~CCallbackImpl()
+ T CCallbackImpl<40>::GetCallbackSizeBytes()
+ T CCallbackImpl<40>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<40>::~CCallbackImpl()
+ T CCallbackImpl<4>::GetCallbackSizeBytes()
+ T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<4>::~CCallbackImpl()
+ T CCallbackImpl<8>::GetCallbackSizeBytes()
+ T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<8>::~CCallbackImpl()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
@@ -418,10 +408,8 @@
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CConsoleInputThread::Run()
  T CConsoleInputThread::~CConsoleInputThread()
- T CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient::Run(void*)
- T CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedClient::Run(void*, bool, unsigned long long)
- T CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer::Run(void*)
- T CControllerConfigUploader::CCallbackOnRemoteStorageAppSyncedServer::Run(void*, bool, unsigned long long)
+ T CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient::Run(void*)
+ T CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedServer::Run(void*)
  T CControllerConfigUploader::CControllerConfigUploader()
  T CControllerConfigUploader::OnPublishFileResult(RemoteStoragePublishFileResult_t*, bool)
  T CControllerConfigUploader::OnRemoteStorageAppSyncedClient(RemoteStorageAppSyncedClient_t*)
@@ -564,14 +552,10 @@
  T CSTime::SetCurrentServerTime(unsigned long long)
  T CSteamID::Render() const
  T CSteamUser::AnonymousLogonBlocking()
- T CSteamUser::CCallbackOnLicensesUpdated::Run(void*)
- T CSteamUser::CCallbackOnLicensesUpdated::Run(void*, bool, unsigned long long)
- T CSteamUser::CCallbackOnLoggedOff::Run(void*)
- T CSteamUser::CCallbackOnLoggedOff::Run(void*, bool, unsigned long long)
- T CSteamUser::CCallbackOnLogonFailure::Run(void*)
- T CSteamUser::CCallbackOnLogonFailure::Run(void*, bool, unsigned long long)
- T CSteamUser::CCallbackOnSteamLogon::Run(void*)
- T CSteamUser::CCallbackOnSteamLogon::Run(void*, bool, unsigned long long)
+ T CSteamUser::CCallback_OnLicensesUpdated::Run(void*)
+ T CSteamUser::CCallback_OnLoggedOff::Run(void*)
+ T CSteamUser::CCallback_OnLogonFailure::Run(void*)
+ T CSteamUser::CCallback_OnSteamLogon::Run(void*)
  T CSteamUser::CSteamUser()
  T CSteamUser::LogonBlocking(char const*, char const*, char const*)
  T CSteamUser::OnLicensesUpdated(LicensesUpdated_t*)
@@ -851,20 +835,16 @@
  T CWatchingLog::~CWatchingLog()
  T CWorkshopItemBuilder::BInit(char const*)
  T CWorkshopItemBuilder::BRunBuild()
- T CWorkshopItemBuilder::CCallbackOnAppInfoUpdate::Run(void*)
- T CWorkshopItemBuilder::CCallbackOnAppInfoUpdate::Run(void*, bool, unsigned long long)
+ T CWorkshopItemBuilder::CCallback_OnAppInfoUpdate::Run(void*)
  T CWorkshopItemBuilder::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemBuilderLegacy::BInit(unsigned int, char const*)
  T CWorkshopItemBuilderLegacy::BRunBuild()
- T CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate::Run(void*)
- T CWorkshopItemBuilderLegacy::CCallbackOnAppInfoUpdate::Run(void*, bool, unsigned long long)
+ T CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate::Run(void*)
  T CWorkshopItemBuilderLegacy::CWorkshopItemBuilderLegacy()
  T CWorkshopItemBuilderLegacy::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemDownloader::BDownloadItem()
- T CWorkshopItemDownloader::CCallbackOnAppInfoUpdate::Run(void*)
- T CWorkshopItemDownloader::CCallbackOnAppInfoUpdate::Run(void*, bool, unsigned long long)
- T CWorkshopItemDownloader::CCallbackOnDownloadItemResult::Run(void*)
- T CWorkshopItemDownloader::CCallbackOnDownloadItemResult::Run(void*, bool, unsigned long long)
+ T CWorkshopItemDownloader::CCallback_OnAppInfoUpdate::Run(void*)
+ T CWorkshopItemDownloader::CCallback_OnDownloadItemResult::Run(void*)
  T CWorkshopItemDownloader::CWorkshopItemDownloader()
  T CWorkshopItemDownloader::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemDownloader::OnDownloadItemResult(DownloadItemResult_t*)
@@ -1157,6 +1137,7 @@
  __cxa_guard_abort
  __cxa_guard_acquire
  __cxa_guard_release
+ __cxa_pure_virtual
  __error
  __fixunsdfdi
  __gxx_personality_v0
