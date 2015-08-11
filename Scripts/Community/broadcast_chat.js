@@ -381,7 +381,6 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 	var elText = $J( '.tmplChatMessage', elMessage );
 	if ( elText.height() > elMessage[0].clientHeight )
 	{
-		console.log( 'added' );
 		var elExpand = $J( '<div class="ChatExpand">+</div>' );
 		elMessage.append( elExpand );
 		elExpand.on( 'click', function() { elMessage.addClass( 'Expand' ); _chat.UpdateScroll(); } );

@@ -1,45 +1,12 @@
 
 #mainBody {
-	width:958px;
-	margin:0;
+	max-width:958px;
+	margin:0 auto;
 	padding:0;
 	text-align:left;
 }
 
-#mainBodyHeader {
-	width:958px;
-	height:163px;
-	margin:0;
-	padding:0;
-	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/homeBoxTopper.gif');
-}
-
-#mainBodyHeader h1 {
-	margin:0;
-	padding:0;
-	font-size:26px;
-	font-weight:normal;
-	color:#e1e1e1;
-	padding-left:24px;
-	padding-bottom:4px;
-	padding-top:24px;
-}
-
-#mainBodyHeader p {
-	margin:0;
-	padding:0;
-	padding-right:140px;
-	font-size:15px;
-	font-weight:bold;
-	color:#6a6a6a;
-	line-height:18px;
-	padding-left:24px;
-	padding-bottom:4px;
-}
-
 #userNumbers {
-	padding-left:24px;
-	font-size:15px;
 	font-weight:bold;
 	padding-top:13px;
 	color:#4d4d4d;
@@ -589,4 +556,316 @@ a.linkBlue,a.linkBlue:Hover,a.linkBlue:visited,a.linkBlue:active {
 
 #login_btn_wait {
 	margin-left: 12px;
+}
+
+
+.mainLoginPanel {
+
+	margin-top: 17px;
+
+	padding: 10px 15px;
+	margin-bottom: 10px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba( 64, 128, 183, 0.4)), color-stop(95%,rgba( 64, 128, 183, 0.2)));background: -moz-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: -webkit-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: -o-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: -ms-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: linear-gradient( to bottom, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);
+
+	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
+
+}
+
+.mainLoginPanel_china {
+	width: 100%;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	margin-top: 17px;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#000), color-stop(95%,#111));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#111',GradientType=0 );background: -moz-linear-gradient( top, #000 5%, #111 95%);background: -webkit-linear-gradient( top, #000 5%, #111 95%);background: -o-linear-gradient( top, #000 5%, #111 95%);background: -ms-linear-gradient( top, #000 5%, #111 95%);background: linear-gradient( to bottom, #000 5%, #111 95%);}
+
+.mainLoginPanelDivider {
+	width: 2px;
+	height: 150px;
+	margin: 10px;
+	float: left;
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/skin_1/signin_divider.jpg );
+}
+
+.mainLoginLeftPanel {
+	min-width: 350px;
+	max-width: 520px;
+	float: left;
+	padding: 17px 20px;
+}
+.mainLoginLeftPanel>p {
+	font-size: 14px;
+}
+
+.mainLoginRightPanel {
+	width: 314px;
+	float: left;
+	padding: 17px 20px;
+}
+.mainLoginRightPanel>p {
+	font-size: 14px;
+}
+.mainLoginRightPanel>.createInfo {
+	height: 202px;
+}
+.mainLoginRightPanel>.createInfo>p {
+	font-size: 14px;
+}
+
+.mainLoginLeftPanel>h1, .mainLoginRightPanel>.createInfo>h1 {
+	color: #ffffff;
+	font-size: 22px;
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+.mainLoginLeftPanel>p, .mainLoginRightPanel>.createInfo>p {
+	margin-top: 0px;
+}
+
+.PSNLink {
+	margin-top: 30px;
+}
+.PSNLink>a {
+	color: #dddddd;
+	text-decoration: underline;
+}
+
+.PSNTitle {
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+
+input.textField {
+	margin: 0px;
+
+
+	color: #BFBFBF;
+	outline: none;
+	padding: 4px 6px;
+
+	background-color: rgba( 0, 0, 0, 0.4 );
+
+}
+
+.checkboxRow {
+	margin: 0px;
+	padding-top: 4px;
+}
+
+.checkboxContainer {
+	margin-bottom: 15px;
+	height: 31px;
+}
+
+
+.forgotHelper {
+	float: left;
+	height: 18px;
+	padding-top: 15px;
+}
+
+#login_btn_signin, #login_btn_wait {
+}
+
+.mainLoginLeftPanel_signin {
+	width: 250px;
+	float: left;
+}
+.mainLoginLeftPanel_signin>label {
+	font-size: 13px;
+	color: #2f89bc;
+}
+
+.mainLoginLeftPanel_captcha {
+	float: left;
+	width: 210px;
+}
+
+#error_display {
+	float: left;
+	width: 124px;
+}
+.smallLabel {
+	padding-top: 4px;
+	font-size: 11px;
+}
+
+#captchaRefresh {
+	padding-right: 5px;
+	padding-top: 0px;
+	margin-bottom: 7px;
+}
+#captchaImg {
+	margin-left: 0px;
+	margin-bottom: 2px;
+}
+#CaptchaFormArea>label {
+	font-size: 14px;
+}
+
+.whyJoinLeft {
+	float: left;
+	width: 315px;
+	padding-top: 65px;
+	padding-left: 20px;
+}
+.whyJoinLeft>h1 {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight:bold;
+}
+
+.whyJoinLeft>ul {
+	line-height: 22px;
+	font-size: 14px;
+	color: #b0aeac;
+}
+
+.whyJoinRight {
+	float: left;
+	width: 616px;
+	padding-top: 0;
+	position: relative;
+}
+
+.whyJoinRight img {
+	width: 100%;
+}
+.whyJoinRight>#userNumbers {
+	position: absolute;
+	top: 65px;
+	left: 0;
+	right: 0;
+	font-size: 18px;
+	padding: 0;
+	text-align: center;
+}
+
+.whyJoin_china {
+	width: 100%;
+	padding-top: 65px;
+	margin-left: -340px;
+}
+
+
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .mainLoginPanel,
+	html.responsive .whyJoinLeft {
+		padding-left: 2%;
+		padding-right: 2%;
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+	html.responsive .mainLoginLeftPanel,
+	html.responsive .mainLoginRightPanel {
+		padding: 0;
+		min-width: 0;
+	}
+	/* why is every element floated? */
+	html.responsive .mainLoginLeftPanel_signin,
+	html.responsive .mainLoginLeftPanel_captcha,
+	html.responsive #captchaRefresh,
+	html.responsive .forgotHelper,
+	html.responsive .whyJoinRight,
+	html.responsive .mainLoginRightPanel {
+		width: auto;
+		float: none;
+
+	}
+	html.responsive .mainLoginLeftPanel
+	{
+		overflow: hidden;
+		min-width: 48%;
+	}
+	html.responsive .mainLoginRightPanel
+	{
+		overflow: hidden;
+		padding-left: 20px;
+	}
+
+	html.responsive .mainLoginLeftPanel_captcha {
+		margin-bottom: 12px;
+	}
+
+	html.responsive input[type=text],
+	html.responsive input[type=password] {
+		font-size: 16px;
+	}
+
+	html.responsive #captchaExplanation {
+		display: none;
+	}
+
+	html.responsive .mainLoginRightPanel>.createInfo {
+		height: auto;
+	}
+
+	html.responsive .whyJoinLeft {
+		padding-right: 0;
+		margin-right: -40px;
+		width: auto;
+	}
+
+	html.responsive .whyJoinRight {
+		padding-top: 20px;
+		height: auto;
+		width: auto;
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 730px)
+{
+	html.responsive .whyJoinRight>#userNumbers {
+		font-size: 16px;
+		top: 13%;
+	}
+}
+
+@media screen and (max-width: 641px)
+{
+	html.responsive .whyJoinLeft {
+		float: none;
+		width: auto;
+		padding: 0;
+		margin-right: 0;
+	}
+	html.responsive .whyJoinRight {
+		padding: 0;
+	}
+}
+
+
+@media screen and (max-width: 500px )
+{
+	html.responsive .mainLoginLeftPanel,
+	html.responsive .mainLoginRightPanel
+	{
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+	html.responsive .mainLoginPanelDivider {
+		float: none;
+		background: #000000;
+		width: 95%;
+		margin: 20px auto;
+		height: 1px;
+	}
+}
+
+
+@media screen and (max-width: 400px)
+{
+	html.responsive .whyJoinRight>#userNumbers {
+		font-size: 14px;
+	}
 }

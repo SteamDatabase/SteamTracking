@@ -316,8 +316,15 @@ center
 	position: relative;
 	display: inline-block;
 }
+.responsive_tab_ctn.apphub_responsive_tab {
+	text-align: center;
+}
 
-.apphub_sectionTab, a.apphub_sectionTab
+.responsive_tab_ctn.apphub_responsive_tab .responsive_tab_control {
+	display: inline-block;
+}
+
+.apphub_sectionTab, a.apphub_sectionTab, .apphub_responsive_tab .responsive_tab_control
 {
 	display: inline-block;
 	color: #dadada;
@@ -335,7 +342,7 @@ center
 	-moz-border-radius-bottomright: 0px;
 }
 
-.apphub_sectionTab.active, .apphub_sectionTab.active:hover
+.apphub_sectionTab.active, .apphub_sectionTab.active:hover, .apphub_responsive_tab .responsive_tab_control
 {
 	padding: 1px;
 	text-decoration: none;
@@ -356,7 +363,7 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(1
 	border-bottom: none;
 }
 
-.apphub_sectionTab.active > span
+.apphub_sectionTab.active > span, .apphub_responsive_tab .responsive_tab_control .responsive_tab_control_inner
 {
 	padding: 0 17px;
 	border-radius: 2px;

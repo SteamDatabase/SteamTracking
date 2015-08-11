@@ -1733,10 +1733,18 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 				if ( _loader.m_xhr == null )
 					return;
 
+				_loader.m_xhr = null;
+				if ( _loader.m_bSeekInProgress )
+				{
+					// most likely canceled. Either way, we are seeking so throw this data out as we don't want to add it to
+					// our buffers because playback time will change
+					_loader.ContinueSeek();
+					return;
+				}
+
 				var now = performance.now();
 				var nDownloadMS = Math.floor(performance.now() - tsDownloadStart);
 
-				_loader.m_xhr = null;
 				_loader.m_nLastSegmentDownloadStatus = xhr.status;
 
 				if ( xhr.status != 200 || !xhr.response )
@@ -1851,6 +1859,7 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 	if ( this.m_bRemoveBufferState )
 	{
 		this.RemoveAllBuffers();
+		return;
 	}
 
 	// first add any queued buffers
@@ -1860,11 +1869,15 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 		var segment = this.m_bufSegments[0];
 		this.m_bufSegments.splice( 0, 1 );
 		this.m_sourceBuffer.appendBuffer( segment.data );
+
+		return;
 	}
-	else
+
+	// check to see if we should remove any data
+	// while buffering, player time might not be where we are seeking to so don't clear data
+	if ( !this.m_player.BIsBuffering() )
 	{
-		// check to see if we should remove any data
-		buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : [];
+		var buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : [];
 		if ( buffered.length > 0 && (buffered.end( 0 ) - buffered.start( 0 )) > CDASHPlayer.TRACK_BUFFER_MAX_SEC )
 		{
 			var nStart = Math.max( 0, buffered.start(0) - 1 );
@@ -1885,6 +1898,7 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 			{
 				this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateRemove;
 				this.m_sourceBuffer.remove( nStart, nEnd );
+				return;
 			}
 		}
 	}
@@ -1892,12 +1906,15 @@ CSegmentLoader.prototype.UpdateBuffer = function()
 
 CSegmentLoader.prototype.OnSourceBufferUpdateEnd = function()
 {
-	this.m_bSeekInProgress = false;
+	var nCompletedUpdate = this.m_nBufferUpdate;
+	this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateNone;
 
-	if ( this.m_nBufferUpdate == CSegmentLoader.s_BufferUpdateAppend )
+	if ( nCompletedUpdate == CSegmentLoader.s_BufferUpdateAppend )
 		this.m_player.OnSegmentDownloaded();
 
-	this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateNone;
+	if ( this.m_bSeekInProgress && nCompletedUpdate == CSegmentLoader.s_BufferUpdateRemove && !this.m_bRemoveBufferState )
+		this.ContinueSeek();
+
 	this.UpdateBuffer();
 }
 
@@ -2062,20 +2079,34 @@ CSegmentLoader.prototype.GetBufferedEnd = function()
 	return this.m_sourceBuffer.buffered.end(0);
 }
 
+CSegmentLoader.prototype.ContinueSeek = function()
+{
+	if ( !this.m_bSeekInProgress )
+		return;
+
+	// need download to abort
+	if ( this.m_xhr )
+	{
+		return;
+	}
+
+	// check if removal is done
+	if ( this.m_nBufferUpdate == CSegmentLoader.s_BufferUpdateRemove || this.m_bRemoveBufferState )
+	{
+		return;
+	}
+
+	// done seeking
+	this.m_bSeekInProgress = false;
+	this.ScheduleNextDownload();
+}
+
 CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear )
 {
 	// if seeking outside of the main buffer or forced override
-	if ( !this.ContainsGame() && ( nSeekTime < this.GetBufferedStart() || nSeekTime > this.GetBufferedEnd() || bForceBufferClear ) )
+	var bUnbufferedSeek = ( nSeekTime < this.GetBufferedStart() || nSeekTime > this.GetBufferedEnd() || bForceBufferClear );
+	if ( this.m_bSeekInProgress || (!this.ContainsGame() && bUnbufferedSeek) )
 	{
-		// Allow any current download to complete
-		if ( this.m_xhr )
-		{
-			// use download timeout handler to block new downloads from starting
-			var _loader = this;
-			this.m_schNextDownload = setTimeout( function() { _loader.SeekToSegment( nSeekTime, bForceBufferClear ) }, CDASHPlayer.DOWNLOAD_RETRY_MS );
-			return;
-		}
-
 		this.m_bSeekInProgress = true;
 
 		// stop download timeouts
@@ -2097,18 +2128,21 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 			this.m_schWaitForBuffer = null;
 		}
 
-		// Set the next segment based on nSeekTime, -1 for start of the segment for the time.
-		var nSegmentTime = CMPDParser.GetSegmentForTime( this.m_adaptation, nSeekTime * 1000 ) - 1;
-		this.m_nNextSegment = Math.max( nSegmentTime, this.m_adaptation.segmentTemplate.startNumber );
+		// Set the next segment based on nSeekTime
+		var nSegmentForTime = CMPDParser.GetSegmentForTime( this.m_adaptation, nSeekTime * 1000 );
+		this.m_nNextSegment = Math.min( Math.max( nSegmentForTime, this.m_adaptation.segmentTemplate.startNumber ), this.m_nTotalSegments - 1 );
 
 		// PlayerLog("Set Next Segment: " + this.m_nNextSegment + " at approx. " + SecondsToTime(this.m_nNextSegment * CMPDParser.GetSegmentDuration(this.m_adaptation) / 1000) + " seconds.");
 
-		// flag an unused buffer cleanup
+		// start deleting all data in buffers
 		this.m_bRemoveBufferState = true;
 		this.UpdateBuffer();
 
-		this.DownloadNextSegment();
+		// abort any download; will wait for this to complete
+		if ( this.m_xhr )
+			this.m_xhr.abort();
 
+		this.ContinueSeek();
 		return false; // can't shift time just yet
 	}
 	else
@@ -2131,8 +2165,8 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 
 CSegmentLoader.prototype.RemoveAllBuffers = function()
 {
-	if ( !this.m_bRemoveBufferState )
-		return;
+	// clear anything that hasn't been added to the player yet
+	this.m_bufSegments = [];
 
 	// clears all buffer data from the player
 	buffered = (this.m_sourceBuffer != null) ? this.m_sourceBuffer.buffered : {};
@@ -2143,13 +2177,16 @@ CSegmentLoader.prototype.RemoveAllBuffers = function()
 			nMaxBuffered = buffered.end( i );
 	}
 
+	this.m_bRemoveBufferState = false;
 	if ( nMaxBuffered != 0 )
 	{
 		this.m_nBufferUpdate = CSegmentLoader.s_BufferUpdateRemove;
 		this.m_sourceBuffer.remove( 0, nMaxBuffered + 1 );
 	}
-
-	this.m_bRemoveBufferState = false;
+	else
+	{
+		this.OnSourceBufferUpdateEnd();
+	}
 }
 
 CSegmentLoader.prototype.GetGameDataFrames = function()

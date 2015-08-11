@@ -42,11 +42,11 @@
 }
 
 #mainContents {
-	width:926px;
+	max-width:926px;
 	padding:0;
 	text-align:left;
 	padding-top:10px;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 .inventory_rightnav {

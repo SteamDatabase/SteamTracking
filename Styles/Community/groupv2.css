@@ -528,14 +528,14 @@ a.large_title:hover {
 	text-decoration: underline;
 }
 .membercount .count {
-	font-size: 30px;
+	font-size: 2.1em;
 	line-height: 30px;
 }
 .membercount .count.oversized {
-	font-size: 22px;
+	font-size: 1.57em;
 }
 .membercount .label {
-	font-size: 12px;
+	font-size: 0.86em;
 }
 
 .joinchat_bg {
@@ -1352,6 +1352,10 @@ a.headlineLink:hover {
 .leftcol.bare_content {
 	padding: 0 8px;
 }
+#group_tab_content_curation .leftcol.bare_content {
+	padding: 0;
+}
+
 
 .curation_app_block_content {
 	padding-left: 200px;
@@ -1554,20 +1558,7 @@ a.headlineLink:hover {
 }
 
 .responsive_group_stats {
-	display: none;
-}
-
-.responsive_membercounts_placeholder {
-	float: right;
-	width: 300px;
-	height: 80px;
-	width: 300px;
-}
-
-.responsive_membercounts {
-	position: absolute;
-	right: 0;
-	top: 32px;
+	white-space: nowrap;
 }
 
 .responsive_group_stats .groupstat {
@@ -1576,13 +1567,63 @@ a.headlineLink:hover {
 
 .responsive_membercounts .membercount {
 	display: inline-block;
+	float: none;
 
 	margin-right: 20px;
 	width: auto;
 }
 
+.grouppage_resp_header {
+	padding: 8px 1% 0 1%;
+	/* background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png?v=1') bottom left no-repeat, url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) top left no-repeat; */
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,#2b3b4c), color-stop(95%,#111923));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3b4c', endColorstr='#111923',GradientType=1 );background: -moz-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: -webkit-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: -o-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: -ms-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););}
+
+.grouppage_resp_logo {
+	float: left;
+	width: 184px;
+	max-width: 30%;
+}
+
+.grouppage_resp_logo img {
+	width: 100%;
+}
+
+.grouppage_resp_stats {
+	overflow: hidden;
+	padding-bottom: 41px;
+	padding-left: 2%;
+}
+
+.grouppage_resp_title_ctn {
+	margin: 8px 0;
+	overflow: hidden;
+}
+
+.grouppage_resp_title {
+	display: inline-block;
+	color: #ffffff;
+	font-size: 2.5em;
+	background: #000000;
+	padding: 4px 8px 4px 16px;
+}
+
+.grouppage_resp_title_ctn .grouppage_header_label {
+	position: static;
+	padding: 0 8px 0 16px;
+	display: inline-block;
+}
+
+.grouppage_resp_title_ctn .grouppage_header_abbrev {
+	font-size: 0.75em;
+}
+
+.responsive_group_stats.membercounts {
+	margin-bottom: 8px;
+}
+
 @media screen and (max-width: 910px)
 {
+
 	html.responsive .leftcol,
 	html.responsive .rightcol {
 		width: auto;
@@ -1603,12 +1644,8 @@ a.headlineLink:hover {
 		right: 0;
 	}
 
-	html.responsive .responsive_group_stats {
-		display: block;
-	}
-
-	html.responsive .grouppage_friendsingroup .friendavatar_link {
-		display: none;
+	html.responsive .grouppage_header {
+		height: auto;
 	}
 
 	html.responsive .group_tabs {
@@ -1624,23 +1661,72 @@ a.headlineLink:hover {
 		margin-right: 4px;
 	}
 
-	html.responsive .grouppage_friendsingroup {
-		right: 0;
-	}
-
 	html.responsive .grouppage_header {
 		overflow: hidden;
 	}
+
+	html.responsive .maincontent.grouppage_header_content {
+		padding: 0;
+		margin: 0;
+	}
 }
 
-@media screen and (max-width: 500px )
+@media screen and (max-width: 580px)
 {
-	html.responsive .responsive_membercounts {
-		position: static;
-		padding-top: 18px;
+	html.responsive .grouppage_resp_title {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 520px)
+{
+	html.responsive .grouppage_resp_title {
+		font-size: 1.75em;
+	}
+}
+
+@media screen and (max-width: 460px)
+{
+	html.responsive .grouppage_resp_title {
+		font-size: 1.5em;
 	}
 
-	html.responsive .responsive_membercounts_placeholder {
+	html.responsive .responsive_membercounts {
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (max-width: 400px)
+{
+	html.responsive .grouppage_resp_title {
+		font-size: 1.25em;
+	}
+}
+
+@media screen and (max-width: 340px)
+{
+	html.responsive .grouppage_resp_title {
+		font-size: 1.0em;
+	}
+
+	html.responsive .responsive_membercounts {
+		font-size: 0.75em;
+	}
+
+	html.responsive .grouppage_resp_stats .groupstat {
 		display: none;
 	}
 }
+
+.responsive_tab_ctn.sharedfiles_responsive_tab {
+	text-align: center;
+}
+
+.responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control {
+	display: inline-block;
+	padding: 6px 8px;
+	font-size: 18px;
+	color: #ffffff;
+
+	background: #57749e; /* Old browsers */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}

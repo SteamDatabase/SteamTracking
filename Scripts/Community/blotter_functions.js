@@ -472,8 +472,8 @@ function Blotter_InitHighlightSliders()
 {
 	Blotter_AddHighlightSliders();
 	var fnUseResponsiveMode = function() {
-		if ( typeof window.UseResponsiveMode != 'undefined' )
-			return window.UseResponsiveMode();
+		if ( typeof window.UseSmallScreenMode != 'undefined' )
+			return window.UseSmallScreenMode();
 		else
 			return false;
 	};

@@ -84,6 +84,10 @@
 	position: relative;
 }
 
+.tradeoffer_items .trade_item img {
+	width: 100%;
+}
+
 .tradeoffer_items.primary .trade_item {
 	width: 96px;
 	height: 96px;
@@ -96,6 +100,45 @@
 	height: 73px;
 	margin-right: 5px;
 	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .tradeoffer {
+		padding: 0 2%;
+	}
+
+	html.responsive .tradeoffer_partner {
+		position: static;
+		float: left;
+		margin-top: -12px;
+		margin-bottom: 16px;
+		margin-right: 8px;
+	}
+
+	html.responsive .tradeoffer_items {
+		clear: both;
+	}
+
+	html.responsive .tradeoffer_items .trade_item {
+		height: auto;
+		margin-right: 1%;
+		max-width: 18%;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+	html.responsive .tradeoffer_items .trade_item {
+		max-width: 23%;
+	}
+}
+
+@media screen and (max-width: 424px)
+{
+	html.responsive .tradeoffer_items .trade_item {
+		max-width: 31%;
+	}
 }
 
 .tradeoffer_items.secondary .trade_item .item_currency_amount {
@@ -117,9 +160,8 @@
 
 .tradeoffer_items_banner {
 	position: relative;
-	top: -12px;
-	left: -12px;
-	width: 592px;
+	clear: left;
+	margin: -12px -12px 12px -12px;
 
 	box-shadow: 1px 1px 1px #000000;
 
@@ -130,6 +172,10 @@
 	text-align: center;
 	font-size: 14px;
 	color: #ffffff;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .tradeoffer_items_banner.accepted {
@@ -137,7 +183,7 @@
 }
 
 .tradeoffer_items_rule {
-	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/tradeoffer_rule.png' ) no-repeat top right;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/tradeoffer_rule.png' ) no-repeat top center;
 	height: 25px;
 	margin-bottom: -3px;
 }

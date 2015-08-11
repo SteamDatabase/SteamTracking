@@ -494,16 +494,20 @@ CEmoticonPopup.prototype.OnButtonClick = function()
 		else
 			PositionEmoticonHover( this.m_$Popup, this.m_$EmoticonButton );
 
-		// make sure we aren't listening to this
-		$J(document).off( 'click', this.m_fnOnDocumentclick );
-
 		this.m_$EmoticonButton.addClass( 'focus' );
 		this.m_$Popup.stop();
 		this.m_$Popup.fadeIn( 'fast' );
 		this.m_bVisible = true;
 
+		if ( window.UseSmallScreenMode && window.UseSmallScreenMode() )
+		{
+			// scroll such that the emoticon button is just above the popup window we're showing at the bottom of the screen
+			// 	the 10 pixels represents the popup being positioned 5px from the bottom of the screen, and 5px between the popup and button
+			$J(window).scrollTop( this.m_$EmoticonButton.offset().top - $J(window).height() + this.m_$Popup.height() + this.m_$EmoticonButton.height() + 10 );
+		}
+
 		var _this = this;
-		window.setTimeout( function() { $J(document).on( 'click', _this.m_fnOnDocumentClick ) }, 0 );
+		window.setTimeout( function() { $J(document).one( 'click.EmoticonPopup', _this.m_fnOnDocumentClick ) }, 0 );
 	}
 }
 
@@ -513,7 +517,7 @@ CEmoticonPopup.prototype.DismissPopup = function()
 	this.m_$EmoticonButton.removeClass( 'focus' );
 	this.m_bVisible = false;
 
-	$J(document).off( 'click', this.m_fnOnDocumentclick );
+	$J(document).off( 'click.EmoticonPopup' );
 }
 
 CEmoticonPopup.prototype.BuildPopup = function()
@@ -565,12 +569,19 @@ CEmoticonPopup.prototype.GetEmoticonClickClosure = function ( strEmoticonName )
 		_this.DismissPopup();
 
 		if ( window.DismissEmoticonHover )
-			DismissEmoticonHover();
+			window.setTimeout( DismissEmoticonHover, 1 );
 	};
 }
 
 function PositionEmoticonHover( $Hover, $Target )
 {
+	// we position fixed in CSS for responsive mode
+	if ( window.UseSmallScreenMode && window.UseSmallScreenMode() )
+	{
+		$Hover.css( 'left', '' ).css('top', '' );
+		return;
+	}
+
 		$Hover.css( 'visibility', 'hidden' );
 	$Hover.show();
 

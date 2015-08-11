@@ -332,7 +332,7 @@ div.filterselect div.option img, div.filterselect_options div.option img {
 /* stats filter */
 div.statsselect
 {
-	float: right;
+	display: inline-block;
 	position: relative;
 	cursor: pointer;
 	height: 12px;

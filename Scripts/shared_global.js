@@ -303,7 +303,7 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 	$Header.append( $CloseButton );
 	$Header = $J('<div/>', {'class': 'newmodal_header_border'}).append( $Header );
 	$Dialog.append( $Header );
-	var $Content = $J('<div/>', {'class': 'newmodal_content responsive_body_text' } );
+	var $Content = $J('<div/>', {'class': 'newmodal_content' } );
 	$Content.append( $J('<div/>').append( strDescription ) );
 
 	if ( rgButtons.length > 0 )
@@ -435,7 +435,7 @@ CModal.prototype.SetDismissOnBackgroundClick = function ( bDismissOnBackgroundCl
 
 CModal.prototype.AdjustSizing = function( duration )
 {
-	if ( window.UseResponsiveMode && UseResponsiveMode() )
+	if ( window.UseTouchFriendlyMode && UseTouchFriendlyMode() )
 		return;
 
 	var nViewportWidth = $J(window).width();
@@ -1076,7 +1076,7 @@ function V_SetCookie( strCookieName, strValue, expiryInDays, path )
 
 	var strDate = '';
 
-	if( expiryInDays != null )
+	if( typeof expiryInDays != 'undefined' && expiryInDays )
 	{
 		var dateExpires = new Date();
 		dateExpires.setTime( dateExpires.getTime() + 1000 * 60 * 60 * 24 * expiryInDays );
@@ -1104,9 +1104,21 @@ function _GetStorageFromCookie()
 	return oStorage;
 }
 
+function BInsideIFrame()
+{
+	try
+	{
+		return window.self !== window.top;
+	}
+	catch( e )
+	{
+		return true;
+	}
+}
+
 function SetValueLocalStorage( strPreferenceName, value )
 {
-	if ( window.localStorage )
+	if ( !BInsideIFrame() && window.localStorage )
 	{
 		window.localStorage[strPreferenceName] = value;
 	}
@@ -1122,7 +1134,7 @@ function SetValueLocalStorage( strPreferenceName, value )
 
 function UnsetValueLocalStorage( strPreferenceName )
 {
-	if ( window.localStorage )
+	if ( !BInsideIFrame() && window.localStorage )
 	{
 		delete window.localStorage[strPreferenceName];
 	}
@@ -1138,7 +1150,7 @@ function UnsetValueLocalStorage( strPreferenceName )
 
 function GetValueLocalStorage( strPreferenceName, defaultValue )
 {
-	if ( window.localStorage )
+	if ( !BInsideIFrame() && window.localStorage )
 	{
 		return window.localStorage[strPreferenceName] || defaultValue;
 	}

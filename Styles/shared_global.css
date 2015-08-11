@@ -691,11 +691,11 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 
 .newmodal_buttons {
 	text-align: right;
-	margin-top: 12px;
 }
 
 .newmodal_buttons .btn_medium {
 	margin-left: 12px;
+	margin-top: 12px;
 }
 
 .newmodal_prompt_description {
@@ -1695,4 +1695,18 @@ body.v6 #footer_nav .popup_menu .hr{
 	html.responsive .newmodal_content {
 		padding: 8px 2%;
 	}
+
 }
+	html.responsive.touch .newmodal {
+		position: fixed;
+		top: 12px;
+		left: 12px;
+		right: 12px;
+		bottom: 12px;
+		overflow: auto;
+		min-width: 0;
+	}
+
+	html.responsive.touch .newmodal_content {
+		padding: 8px 2%;
+	}

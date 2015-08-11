@@ -386,13 +386,13 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#3c597
 
 .profile_customization_editlink {
 	float: right;
-	visibility: hidden;
+	display: none;
 
 	line-height: 30px;
 }
 
 .profile_customization:hover .profile_customization_editlink {
-	visibility: visible;
+	display: block;
 }
 
 .profile_customization_editlink:hover .profile_customization_editlink_text {
@@ -1273,18 +1273,17 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .achievement_icons {
 	white-space: nowrap;
+	overflow: hidden;
 }
-
-.game_info_achievements_only_ctn .achievement_icons {
-	position: absolute;
-	left: 366px;
-	top: 0;
-}
-
 .game_info_achievement {
 	vertical-align: top;
 	display: inline-block;
 	margin-left: 4px;
+}
+.game_info_achievements_only_ctn .game_info_achievements_summary_area {
+	float: left;
+	width: 361px;
+	white-space: nowrap;
 }
 
 .game_info_achievement:first-child {
@@ -1378,24 +1377,56 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 		width: auto;
 		max-width: 282px;
 	}
-	html.responsive .game_info_achievements_badge .game_info_achievements {
+	html.responsive .game_info_achievements {
 		float: none;
 		clear: left;
 		margin-top: 8px;
 		width: auto;
 		position: relative;
 	}
-	html.responsive .game_info_achievements_badge .achievement_progress_bar_ctn,
-	html.responsive .game_info_achievements_badge .game_info_achievement_summary {
-		width: 49%;
+
+	html.responsive .game_info_achievements_only_ctn {
+		line-height: normal;
 	}
 
-	html.responsive .game_info_achievements_badge .achievement_icons {
-		position: absolute;
-		right: 0;
-		top: 0;
-		max-width: 49%;
+	html.responsive .game_info_achievement_summary a.whiteLink {
+		white-space: nowrap;
+	}
+
+	html.responsive .game_info_achievements_summary_area {
+		float: left;
+		margin-right: 1%;
+		max-width: 54%;
+		white-space: normal;
+	}
+	html.responsive .game_info_achievements_summary_area .game_info_achievement_summary {
+		display: block;
+		text-align: center;
+
+	}
+
+	html.responsive .game_info_achievements_only_ctn .game_info_achievements_summary_area .achievement_progress_bar_ctn {
+		width: auto;
+		display: block;
+	}
+
+	html.responsive .game_info_achievements_only_ctn .achievement_icons {
 		overflow: hidden;
+	}
+
+	html.responsive .achievement_icons {
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 480px )
+{
+	html.responsive .achievement_icons {
+		padding-top: 6px;
+	}
+
+	html.responsive .game_info_achievements_only_ctn .game_info_achievements {
+		margin-top: 0;
 	}
 }
 
@@ -1752,7 +1783,6 @@ body.migrated_profile_page #BG_bottom.maincontent {
 
 .profile_comment_area .commentthread_entry {
 	background-color: transparent;
-	padding-left: 54px;
 }
 
 .profile_comment_area .commentthread_entry_quotebox_quote {
@@ -1893,71 +1923,39 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	margin-bottom: 18px;
 }
 
-.graytab_ctn {
-	padding-top: 4px;
-	padding-left: 9px;
-	overflow: hidden;
-}
-
-.graytab {
-	display: inline-block;
-	line-height: 26px;
-	padding: 0 11px;
-	margin-right: 8px;
-	background-color: #3a3a3a;
-
-	font-size: 13px;
-	color: #ffffff;
-
-	border-top: 1px solid #3a3a3a;
-	border-left: 1px solid #3a3a3a;
-	border-right: 1px solid #3a3a3a;
-
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-
-	box-shadow: 0 0 4px #2a2a2a;
-}
-
-.graytab.active {
-	background-color: #6a6a6a;
-	cursor: default;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#7d7d7d), color-stop(95%,#4d4d4d));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7d7d', endColorstr='#4d4d4d',GradientType=0 );background: -moz-linear-gradient( top, #7d7d7d 5%, #4d4d4d 95%);background: -webkit-linear-gradient( top, #7d7d7d 5%, #4d4d4d 95%);background: -o-linear-gradient( top, #7d7d7d 5%, #4d4d4d 95%);background: -ms-linear-gradient( top, #7d7d7d 5%, #4d4d4d 95%);background: linear-gradient( to bottom, #7d7d7d 5%, #4d4d4d 95%);}
-
-a.graytab:hover {
-	text-decoration: none;
-}
-
-.graytab_body_wrapper {
-	width: 934px;
-	margin: 0 auto;
-	padding: 1px 1px 0 1px;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-
-	background-color: #272728;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(19px,#4e4e4d), color-stop(45px,#252526));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e4e4d', endColorstr='#252526',GradientType=0 );background: -moz-linear-gradient( top, #4e4e4d 19px, #252526 45px);background: -webkit-linear-gradient( top, #4e4e4d 19px, #252526 45px);background: -o-linear-gradient( top, #4e4e4d 19px, #252526 45px);background: -ms-linear-gradient( top, #4e4e4d 19px, #252526 45px);background: linear-gradient( to bottom, #4e4e4d 19px, #252526 45px);	background-repeat: repeat-x;
-	background-position: top;
-}
-
-.graytab_body {
-	background-color: #252526;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#4f4f4e), color-stop(42px,#252526));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4e', endColorstr='#252526',GradientType=0 );background: -moz-linear-gradient( top, #4f4f4e 0, #252526 42px);background: -webkit-linear-gradient( top, #4f4f4e 0, #252526 42px);background: -o-linear-gradient( top, #4f4f4e 0, #252526 42px);background: -ms-linear-gradient( top, #4f4f4e 0, #252526 42px);background: linear-gradient( to bottom, #4f4f4e 0, #252526 42px);	background-repeat: repeat-x;
-	background-position: top;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-
-	padding: 24px 13px;
-
-}
-
-.profile_manage_friends {
-	padding: 0 5px;
-}
-
 .manage_friends_btn_ctn {
 	float: right;
+}
 
+.bulk_action_ctn {
+	white-space: nowrap;
+}
+
+
+.coplayGroup {
+	border-bottom: 1px solid;
+	margin-bottom: 25px;
+	padding-bottom: 10px;
+}
+.gameListRow {
+	height: 77px;
+	margin-bottom: 15px;
+	padding-left: 208px;
+	position: relative;
+}
+
+.gameListRowItem {
+
+	color: #939393;
+	font-size: 11px;
+	height: 66px;
+	padding: 9px;
+	position: relative;
+}
+
+.gameListRowLogo {
+	left: 0;
+	position: absolute;
 }
 
 .friends_limit_details {
@@ -2158,6 +2156,125 @@ body.profile_page #footer {
 }
 
 
+
+.responsive_tab_ctn.sharedfiles_responsive_tab {
+	text-align: center;
+}
+
+.responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control {
+	display: inline-block;
+	padding: 6px 8px;
+	font-size: 18px;
+	color: #ffffff;
+
+	background: #57749e; /* Old browsers */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+
+.sectionTabs
+{
+	position: relative;
+	padding-top: 3px;
+	margin-left: -5px;
+	font-size: 14px;
+	z-index: 10;
+}
+
+.sectionTab, a.sectionTab
+{
+	margin-top: 7px;
+	display: block;
+	float: left;
+	color: #dadada;
+	background-color: rgba( 0, 0, 0, 0.4 );
+	line-height: 29px;
+	height: 29px;
+	padding: 0px 12px;
+	margin-left: 5px;
+	text-decoration: none;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	-moz-border-radius: 2px;
+	-moz-border-radius-bottomleft: 0px;
+	-moz-border-radius-bottomright: 0px;
+}
+
+.sectionTab:hover
+{
+	background-color: rgba( 102, 192, 244, 0.4 );
+	color: #ffffff;
+}
+
+.sectionTabActive
+{
+	position: relative;
+	margin-top: 0px;
+	margin-left: 5px;
+	font-size: 14px;
+	color: white;
+	float: left;
+}
+
+.sectionTabActive .sectionTab
+{
+	margin-top: 0px;
+	display: inline-block;
+	padding-left: 12px;
+	padding-right: 8px;
+	margin-right: 12px;
+	height: 36px;
+	line-height: 36px;
+	background-position: 0 0px;
+	background-repeat: repeat-x;
+	text-decoration: none;
+}
+
+.sectionTabActive .sectionTab:hover
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.sectionTabInactive, .sectionTabInactive .sectionTab_leftcap, .sectionTabInactive .sectionTab_rightcap
+{
+	display: inline;
+}
+
+.sectionTab.active
+{
+	margin-top: 0px;
+	height: 34px;
+	padding: 1px;
+	text-decoration: none;
+	border: none;
+
+	background: #57749e; /* Old browsers */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+
+.sectionTab.active > span
+{
+	height: 35px;
+	line-height: 36px;
+	padding: 0 19px;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	color: #ffffff;
+
+	display: block;
+	background: #417B9C; /* Old browsers */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D6), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AA9D6', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -o-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -ms-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);}
+
+
+
+#tabs_baseline {
+	clear:left;
+	background-color: #417B9C;
+	max-width: 958px;
+	height: 5px;
+}
+
+
 .profile_paging {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border-radius: 3px;
@@ -2254,8 +2371,10 @@ body.profile_page #footer {
 		padding: 0 1%;
 	}
 
-	html.responsive .profile_manage_friends {
-		padding: 0;
+	html.responsive .profile_subpage_general .maincontent {
+		width: auto;
+		padding-left: 1%;
+		padding-right: 1%;
 	}
 
 	html.responsive .graytab_body_wrapper {
@@ -2265,6 +2384,7 @@ body.profile_page #footer {
 	html.responsive .profile_background_image_content {
 		background-position: center top;
 		background-size: 115% auto;
+		background-attachment: fixed;
 	}
 
 	html.responsive .profile_background_overlay_content {
@@ -2273,9 +2393,11 @@ body.profile_page #footer {
 		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
 	}
 
+	/*
 	html.responsive .profile_content.has_profile_background .profile_content_inner {
 		padding-top: 128px;
 	}
+	*/
 }
 
 @media screen and (max-width: 600px )
@@ -2291,3 +2413,17 @@ body.profile_page #footer {
 		display: none;
 	}
 }
+
+
+.responsive_tab_ctn.sharedfiles_responsive_tab {
+	text-align: center;
+}
+
+.responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control {
+	display: inline-block;
+	padding: 6px 8px;
+	font-size: 18px;
+	color: #ffffff;
+
+	background: #57749e; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}

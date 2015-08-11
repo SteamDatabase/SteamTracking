@@ -1,6 +1,6 @@
 
 #mainContents {
-	width: 894px;
+	max-width: 894px;
 	padding-left: 0px;
 }
 
@@ -25,7 +25,7 @@
 	
 	background-color: #1f1f1f;
 
-	padding-left: 132px;
+	padding-left: 0;
 	padding-top: 19px;
 	padding-bottom: 7px;
 
@@ -43,14 +43,18 @@
 }
 
 .tradehistory_date {
-	position: absolute;
+	float: left;
 	width: 116px;
-	top: 20px;
-	left: 0px;
 	text-align: right;
 	font-weight: bold;
 	font-size: 11px;
 	color: #8a8a8a;
+	max-width: 20%;
+	margin-right: 2%;
+}
+
+.tradehistory_content {
+	overflow: hidden;
 }
 
 .tradehistory_event_description {
@@ -63,25 +67,38 @@
 
 .tradehistory_items {
 	position: relative;
-	padding-left: 49px;
+	padding-left: 2%;
 	margin-bottom: 8px;
 }
 
 .tradehistory_items_plusminus {
-	position: absolute;
-	left: 0px;
-	top: 0px;
+	float: left;
 	width: 38px;
-	text-align: right;
+	margin-right: 2%;
+	text-align: center;
 	
 	font-size: 16px;
 	font-weight: bold;
 	color: #8a8a8a;
+	max-width: 5%;
 }
 
 .tradehistory_items_received {
+	overflow: hidden;
 	line-height: 52px;
 	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px)
+{
+	html.responsive .tradehistory_content {
+		overflow: visible;
+	}
+
+	html.responsive .tradehistory_items {
+		clear: left;
+		padding-left: 10%;
+	}
 }
 
 .tradehistory_items_given {

@@ -37,17 +37,19 @@ input {
 
 .forum_newtopic_box {
 	position: relative;
-	padding-left: 60px;
 }
 
 .forum_newtopic_currentuser {
-	position: absolute;
-	left: 11px;
-	top: 14px;
+	float: left;
+	margin-right: 8px;
+}
+
+.forum_newtopic_input_area {
+	overflow: hidden;
 }
 
 .forum_newtopic_box input.gray_bevel, .forum_newtopic_box textarea.gray_bevel {
-	width: 536px;
+
 }
 
 .forum_newtopic_box textarea.gray_bevel {
@@ -271,10 +273,12 @@ textarea.forumtopic_reply_textarea {
 	margin-top: 0px;
 }
 
+.forum_paging_summary {
+	overflow: hidden;
+}
+
 .forum_paging_controls {
-	position: absolute;
-	top: 0px;
-	right: 6px;
+	float: right;
 }
 
 .forum_paging_controls .pagebtn {
@@ -446,8 +450,6 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forumtopic_comments .commentthread_user_avatar {
-	left: 9px;
-	top: 12px;
 }
 
 .forumtopic_comments .commentthread_comment_container {
@@ -558,7 +560,7 @@ a.commentthread_author_officer {
 }
 
 .forumtopic_reply_entry {
-
+	overflow: hidden;
 }
 
 .forumtopic_reply_textarea {
@@ -601,8 +603,9 @@ a.forum_comment_action {
 	visibility: visible;
 }
 
-@media screen and ( max-width: 950px )
+@media screen and (max-width: 910px)
 {
+
 	html.responsive .forum_comment_action_trigger {
 		display: block;
 	}
@@ -645,7 +648,51 @@ a.forum_comment_action {
 		display: inline;
 		visibility: visible;
 	}
+
 }
+
+	html.responsive.touch .forum_comment_action_trigger {
+		display: block;
+	}
+
+	html.responsive.touch .forum_comment_actions {
+		visibility: visible;
+		display: none;
+
+		position: absolute;
+		z-index: 2;
+		top: 4px;
+		right: 4px;
+		background: #182433;
+		padding: 4px;
+
+		box-shadow: 0 0 4px 0 #000000;
+	}
+
+	html.responsive.touch .forum_comment_actions_expanded .forum_comment_actions {
+		display: block;
+	}
+
+	html.responsive.touch .forum_comment_actions_expanded .forum_comment_action_trigger {
+		display: none;
+	}
+
+	html.responsive.touch .forumtopic_comments .commentthread_comment .commentthread_comment_author {
+		opacity: 1;
+	}
+
+	html.responsive.touch .forum_comment_action {
+		margin-left: 8px;
+	}
+
+	html.responsive.touch .forum_comment_action:first-child {
+		margin-left: 0;
+	}
+
+	html.responsive.touch .forum_comment_actions .actionlink {
+		display: inline;
+		visibility: visible;
+	}
 
 
 a.forum_comment_action img {
@@ -1592,4 +1639,51 @@ select.subforum_select_control {
 		line-height: 24px;
 		padding: 0;
 	}
+
+	html.responsive .forumtopic_comments .commentthread_comment .commentthread_comment_avatar,
+	html.responsive .forum_op_avatar  {
+		position: static;
+		float: left;
+		margin-right: 12px;
+		margin-bottom: 8px;
+	}
+
+	html.responsive .forumtopic_comments .commentthread_comment .commentthread_comment_author,
+	html.responsive .forum_op .authorline {
+		overflow: hidden;
+		margin-bottom: 2px;
+		line-height: normal;
+		padding-top: 8px;
+	}
+
+	html.responsive .forumtopic_comments .commentthread_comment,
+	html.responsive .forum_op {
+		padding-left: 11px;
+	}
+
+	html.responsive .forumtopic_comments .commentthread_comment_text,
+	html.responsive .forum_op .topic,
+	html.responsive .forum_op .content {
+		clear: left;
+		padding: 0 8px;
+	}
+}
+
+.responsive_tab_ctn.forumselector {
+	margin-bottom: 8px;
+}
+
+.responsive_tab_ctn.forumselector label {
+	display: block;
+	float: left;
+	margin-right: 4px;
+	line-height: 25px;
+}
+
+.responsive_tab_ctn.forumselector .formselector_select_ctn {
+	overflow: hidden;
+}
+
+.responsive_tab_ctn.forumselector .formselector_select_ctn select {
+	max-width: 99%;
 }

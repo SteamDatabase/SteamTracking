@@ -403,6 +403,12 @@ function ManageFollowingRemove( $Form )
 		'Are you sure you want to stop following %s people?');
 }
 
+function ManageFriendsAddFriends( $Form )
+{
+	ManageFriendsConfirmBulkAction( $Form, 'addfriend', 'Add to friends list',
+		'Are you sure you want to send a friend invite to the selected players? ',
+		'Are you sure you want to send a friend invite to the selected players? '	);
+}
 
 
 

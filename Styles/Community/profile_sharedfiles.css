@@ -87,14 +87,6 @@
 	font-size: 18px;
 }
 
-#tabs_baseline {
-	clear:left;
-	background-color: #417B9C;
-	max-width: 958px;
-	height: 5px;
-
-}
-
 #tabs_basebg_workshop {
 	padding: 0px;
 	width:958px;
@@ -629,120 +621,6 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 }
 
 
-.sectionTabs
-{
-	position: relative;
-	padding-top: 3px;
-	margin-left: -5px;
-	font-size: 14px;
-	z-index: 10;
-}
-
-.sectionTab, a.sectionTab
-{
-	margin-top: 7px;
-	display: block;
-	float: left;
-	color: #dadada;
-	background-color: rgba( 0, 0, 0, 0.4 );
-	line-height: 29px;
-	height: 29px;
-	padding: 0px 12px;
-	margin-left: 5px;
-	text-decoration: none;
-	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	-moz-border-radius: 2px;
-	-moz-border-radius-bottomleft: 0px;
-	-moz-border-radius-bottomright: 0px;
-}
-
-.sectionTab:hover
-{
-	background-color: rgba( 102, 192, 244, 0.4 );
-	color: #ffffff;
-}
-
-.sectionTabActive
-{
-	position: relative;
-	margin-top: 0px;
-	margin-left: 5px;
-	font-size: 14px;
-	color: white;
-	float: left;
-}
-
-.sectionTabActive .sectionTab_leftcap, .sectionTabActive .sectionTab_rightcap, .sectionTabActive .sectionTab
-{
-	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/tab_active_blue.png );
-}
-
-.sectionTab_leftcap
-{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 12px;
-	height: 36px;
-	background-position: 0 0;
-}
-
-.sectionTab_rightcap
-{
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 13px;
-	height: 36px;
-	background-repeat: no-repeat;
-	background-position: top right;
-}
-
-.sectionTabActive .sectionTab
-{
-	margin-top: 0px;
-	display: inline-block;
-	padding-left: 12px;
-	padding-right: 8px;
-	margin-right: 12px;
-	height: 36px;
-	line-height: 36px;
-	background-position: 0 0px;
-	background-repeat: repeat-x;
-	text-decoration: none;
-}
-
-.sectionTabActive .sectionTab:hover
-{
-	text-decoration: none;
-	color: #ffffff;
-}
-
-.sectionTabInactive, .sectionTabInactive .sectionTab_leftcap, .sectionTabInactive .sectionTab_rightcap
-{
-	display: inline;
-}
-
-.sectionTabsHR
-{
-	position: absolute;
-	top: 38px;
-	left: 5px;
-	width: 948px;
-	background-color:#4d4d4e;
-	height:1px;
-	margin:0;
-	padding:0;
-	margin-top:0px;
-	margin-bottom:8px;
-}
-
-#profileBlock .sectionTabsHR
-{
-	top: 114px;
-}
 
 /* --------------[ pagination block ] ----------------- */
 .pagingBar {
@@ -787,33 +665,6 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 	color:#c9c9c9;
 	padding:0px 3px;
 }
-
-.sectionTab.active
-{
-	margin-top: 0px;
-	height: 34px;
-	padding: 1px;
-	text-decoration: none;
-	border: none;
-
-	background: #57749e; /* Old browsers */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
-
-.sectionTab.active > span
-{
-	height: 35px;
-	line-height: 36px;
-	padding: 0 19px;
-	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	color: #ffffff;
-
-	display: block;
-	background: #417B9C; /* Old browsers */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D6), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AA9D6', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -o-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -ms-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);}
-
-
 .searchedForText
 {
 	background-color: #68932f;

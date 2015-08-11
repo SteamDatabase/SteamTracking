@@ -1030,9 +1030,11 @@ CForumTopic = Class.create( {
 	ShowAudits: function ( gidObject )
 	{
 		var strURL = this.GetActionURL( 'auditlog' );
-		var rgParams = { gidforumtopic: this.m_gidForumTopic, gidobject: gidObject };
+		var rgParams = { gidforumtopic: this.m_gidForumTopic, gidobject: gidObject, ajax: 1 };
 
-		window.open( strURL + '?' + Object.toQueryString( rgParams ), 'auditlog', 'height=540,width=640,resize=yes,scrollbars=yes');
+		$J.get( strURL, rgParams ).done( function(data) {
+			ShowAlertDialog( 'Post history', data );
+		});
 	},
 
 	GetSearchURL: function( rgSearchParams )

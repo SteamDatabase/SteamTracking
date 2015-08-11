@@ -1547,11 +1547,6 @@ div.slider div.handle:hover {
 	margin: auto;
 }
 
-.blotter_block .commentthread_user_avatar {
-	top: 0px;
-	left: 6px;
-}
-
 .rollup_plus {
 	min-width: 26px;
 	height: 32px;
@@ -1801,6 +1796,12 @@ div.slider div.handle:hover {
 	/* these elements end up getting moved, but hide them in the main page while content is loading */
 	html.responsive .responsive_page_content .responsive_local_menu {
 		display: none;
+	}
+
+	html.responsive .blotter_comment_thread .commentthread_entry_quotebox,
+	html.responsive .blotter_comment_thread .commentthread_textarea,
+	html.responsive .blotter_status_entry .commentthread_entry_quotebox .commentthread_textarea {
+		font-size: 16px;
 	}
 
 }

@@ -129,6 +129,11 @@ function FlipToTab( strTab )
 	$('group_tab_' + g_strActiveTab).removeClassName( 'active' );
 	$('group_tab_' + strTab).addClassName( 'active' );
 
+	$J('.responsive_tab_select > option').each( function() {
+		if ( $J(this).data('tabName') == strTab )
+			$J(this).parent().val( $J(this).attr('value') );
+	} );
+
 	if ( strTab != 'overview' )
 	{
 		$('group_tab_content_overview').hide();
@@ -543,6 +548,50 @@ function ConfirmDeleteAnnouncement( deleteURL )
 		top.location.href = deleteURL;
 	});
 }
+
+function SetGroupState( groupid, action )
+{
+    ShowPromptDialog( "Change Group State", "Please enter a reason:"
+    ).done(	function( note ) {
+            if ( !note )
+                return;
+
+            $J.post( 'https://steamcommunity.com/actions/SetGroupState', {
+                'sessionID' : g_sessionID,
+                'steamid' : groupid,
+                'note' : note,
+                'action' : action
+            }).done( function( data ) {
+                window.location.reload();
+            }).fail( function( jqxhr ) {
+                // jquery doesn't parse json on fail
+                var data = V_ParseJSON( jqxhr.responseText );
+                ShowAlertDialog( 'Change Group State', 'Failed to change group state.  Message: ' + data.success );
+            });
+        });
+}
+
+jQuery( function($) {
+	var $MemberTiles = $('.grouppage_member_tiles');
+	if ( $MemberTiles.length )
+	{
+		if ( $MemberTiles.is(':visible') )
+		{
+			LoadDelayedImages( 'member_tiles' );
+		}
+		else
+		{
+			// load the member tiles if the page resizes
+			$(window ).on('resize.GroupMemberTiles', function() {
+				if ( $MemberTiles.is(':visible') )
+				{
+					LoadDelayedImages( 'member_tiles' );
+					$(window ).off('resize.GroupMemberTiles');
+				}
+			});
+		}
+	}
+});
 
 
 
