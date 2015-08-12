@@ -200,6 +200,16 @@
 	text-decoration: none;
 	color: #EBEBEB;
 }
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .commentnotification.moderatormessage .commentnotification_newposts {
+		display: none;
+	}
+	html.responsive .commentnotification.moderatormessage .commentnotification_date {
+		padding-right: 8px;
+	}
+}
 	
 
 .notification_paging {

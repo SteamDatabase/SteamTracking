@@ -25,6 +25,11 @@ body.flat_page.blue {
 	color: #636363;
 }
 
+/* this makes the footer appear at the bottom of the window on short pages */
+body.flat_page .responsive_page_frame {
+	position: static;
+}
+
 body.standard_page {
 	min-width: 958px;
 }
@@ -1207,6 +1212,18 @@ img.emoticon {
 		font-size: 16px;
 	}
 }
+
+
+@media screen and (max-width: 910px)
+{
+	html.responsive textarea.commentthread_textarea {
+		font-size: 16px;
+	}
+
+}
+	html.responsive.touch textarea.commentthread_textarea {
+		font-size: 16px;
+	}
 
 /* styles that hide things on non-migrated pages */
 .responsive_menu_only {
