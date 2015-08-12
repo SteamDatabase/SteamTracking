@@ -66,6 +66,10 @@
 			"scroll_clockwise"		"mouse_wheel SCROLL_UP"
 			"scroll_counterclockwise"	"mouse_wheel SCROLL_DOWN"
 		}
+		"settings"
+		{
+			"scroll_angle"		"163"
+		}
 	}
 	"group"
 	{
