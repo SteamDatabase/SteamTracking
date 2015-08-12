@@ -846,6 +846,42 @@ HelpWizard = {
 		return false;
 	},
 
+	LoginInfoSearch: function( form ) {
+		var form = $J( form );
+		var elError = $J( '#form_submit_error' );
+		form.addClass( 'loading' );
+		elError.hide();
+
+		$J.ajax({
+			type: form.attr( 'method' ),
+			url: form.attr( 'action' ),
+			data: form.serialize() + "&" + $J.param( g_rgDefaultWizardPageParams )
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+		}).done( function( data ) {
+			if ( data.hash )
+			{
+				window.location.hash = data.hash;
+			}
+			else if ( data.html )
+			{
+				$J('#wizard_contents').html( data.html );
+			}
+			else
+			{
+				elError.text( data.errorMsg ).slideDown();
+				if ( data.needCaptcha )
+					HelpWizard.RefreshCaptcha();
+				else
+					HelpWizard.UpdateCaptcha( -1 );
+			}
+		}).always( function() {
+			form.removeClass( 'loading' );
+		});
+
+		return false;
+	},
+
 		SendAccountRecoveryCode: function( strSessionID, eMethod, strErrorID, strLoadingID, strCodeResentID ) {
 		var elError = $J( strErrorID );
 
@@ -891,6 +927,35 @@ HelpWizard = {
 			if ( strLoadingID )
 				$J( strLoadingID ).removeClass( 'loading' );
 		});
+	},
+
+	RefreshCaptcha: function()
+	{
+		var _wizard = this;
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/RefreshCaptcha",
+			data: g_rgDefaultWizardPageParams
+		}).done( function( data ) {
+			_wizard.UpdateCaptcha( data.gid );
+		});
+	},
+
+	UpdateCaptcha: function( gid )
+	{
+		if ( gid != -1 )
+		{
+			$J( '#captcha_entry' ).show();
+			$J( '#captchaImg' ).attr( 'src', 'https://help.steampowered.com/login/rendercaptcha/?gid='+gid );
+			$J( '#input_captcha' ).val( '' );
+			$J( '#input_captcha_gid' ).val( gid );
+		}
+		else
+		{
+			$J( '#captcha_entry' ).hide();
+			$J( '#input_captcha' ).val( '' );
+			$J( '#input_captcha_gid' ).val( '' );
+		}
 	},
 
 	UpdateMenuGlobalActions: function()

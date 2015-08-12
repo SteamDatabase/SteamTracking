@@ -1930,6 +1930,28 @@ a.guide_row {
 	line-height: 20px;
 }
 
+.captcha_section {
+	margin-top: 20px;
+}
+
+.captcha_section #captchaRefresh {
+	height: 40px;
+	line-height: 40px;
+	margin-left: 220px;
+}
+
+.captcha_section #input_captcha {
+	color: #ffffff;
+	background-color: #324965;
+	border-top: solid 1px #182636;
+	border-left: solid 1px #182636;
+	border-right: solid 1px #45566a;
+	border-bottom: solid 1px #45566a;
+	padding: 4px;
+	width: 100px;
+	margin-top: 4px;
+}
+
 /* store category_icon class */
 img.category_icon {
 	width: 26px;
