@@ -851,9 +851,6 @@ function OnInitializeTransactionFailure( detail, result )
 				case 56:
 					error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'http://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
 					break;
-				case 53:
-					error_text = 'It looks like you\'ve been attempting a lot of purchases in the last few hours.  Please wait a while before trying again.';
-					break;
 				default:
 					break;
 			}
