@@ -742,10 +742,15 @@ function ShowTradeOffer( tradeOfferID, rgParams )
 	winOffer.focus();
 }
 
-function PostToURLWithSession( url )
+function PostToURLWithSession( url, rgParams )
 {
 	var $Form = $J('<form/>', {'action': url, 'method': 'POST' } );
 	$Form.append( $J('<input/>', {'type': 'hidden', 'name': 'sessionid', 'value': g_sessionID } ) );
+	if ( rgParams )
+	{
+		for ( var name in rgParams )
+			$Form.append( $J('<input/>', {'type': 'hidden', 'name': name, 'value': rgParams[name] } ) );
+	}
 	$Form.appendTo( 'body' );
 	$Form.submit();
 }

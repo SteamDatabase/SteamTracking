@@ -1700,6 +1700,8 @@ body.v6 #footer_nav .popup_menu .hr{
 		bottom: 12px;
 		overflow: auto;
 		min-width: 0;
+		max-width: 600px;
+		margin: 0 auto;
 	}
 
 	html.responsive .newmodal_content {
@@ -1715,6 +1717,8 @@ body.v6 #footer_nav .popup_menu .hr{
 		bottom: 12px;
 		overflow: auto;
 		min-width: 0;
+		max-width: 600px;
+		margin: 0 auto;
 	}
 
 	html.responsive.touch .newmodal_content {

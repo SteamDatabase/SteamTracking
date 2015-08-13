@@ -648,6 +648,11 @@ a.commentthread_allcommentslink:hover {
 	background-color: #AC966A;
 }
 
+.commentthread_prepopulate_prompt {
+	margin-bottom: 8px;
+	color: #67c1f5;
+}
+
 /** Styles for modal popup */
 
 .modal_top_band {

@@ -586,23 +586,41 @@ a.recent_game_discussion.quasi_official_group
 	html.responsive .forum_list_ctn .forum_list_left {
 		width: auto;
 		float: none;
-	}
-
-	html.responsive .discussions_forumlist_lastpost {
-		display: none;
-	}
-
-	html.responsive .discussions_forumlist_topiccount {
-		width: auto;
+		max-width: 608px;
 	}
 
 	html.responsive .forum_list_ctn .forum_list_right {
 		float: none;
 		width: auto;
 		margin-top: 16px;
+		max-width: 289px;
 	}
 
 	html.responsive a.recent_game_discussion.quasi_official_group {
+		width: auto;
+	}
+
+	html.responsive .discussions_page .group_content.bottomless {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	html.responsive .recent_game_discussion {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 720px )
+{
+	html.responsive .recent_game_discussion {
+		width: 47.5%;
+	}
+}
+
+@media screen and (max-width: 430px )
+{
+	html.responsive .recent_game_discussion {
+		display: block;
 		width: auto;
 	}
 }
@@ -615,5 +633,13 @@ a.recent_game_discussion.quasi_official_group
 
 	html.responsive .discussions_game_browseoption {
 		display: none;
+	}
+
+	html.responsive .discussions_forumlist_lastpost {
+		display: none;
+	}
+
+	html.responsive .discussions_forumlist_topiccount {
+		width: auto;
 	}
 }
