@@ -1334,6 +1334,10 @@ span.platform_img.streamingvideo {
 	background-position-x: 2px;
 }
 
+.promo_item_list .item .info .OS span.platform_img.streamingvideo {
+	background-position: 0px 1px;
+}
+
 /* GLOBAL TAG STYLES */
 
 .app_tag {
