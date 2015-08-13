@@ -827,7 +827,7 @@ var CAutoSizingTextArea = Class.create( {
 	m_nMaxHeight: 500,
 	m_cCurrentSize: Number.MAX_VALUE,
 	m_fnChangeCallback: null,
-	m_nTextAreaPadding: 0,
+	m_nTextAreaPadding: null,
 
 	initialize: function( elTextArea, nMinHeight, fnChangeCallback )
 	{
@@ -843,14 +843,19 @@ var CAutoSizingTextArea = Class.create( {
 		this.m_nMinHeight = nMinHeight || 20;
 		this.m_fnChangeCallback = fnChangeCallback || null;
 
+		this.m_elTextArea.style.height = this.m_nMinHeight + 'px';
+
+		this.OnTextInput();
+	},
+
+	CalculatePadding: function()
+	{
 		// briefly empty the text area and set the height so we can see how much padding there is
 		var strContents = this.m_elTextArea.value;
 		this.m_elTextArea.value = '';
 		this.m_elTextArea.style.height = this.m_nMinHeight + 'px';
 		this.m_nTextAreaPadding = this.m_elTextArea.scrollHeight - this.m_nMinHeight;
 		this.m_elTextArea.value = strContents;
-
-		this.OnTextInput();
 	},
 
 	OnPasteText: function()
@@ -862,6 +867,11 @@ var CAutoSizingTextArea = Class.create( {
 	{
 		var iScrollOffset = undefined;
 		var cNewLength = this.m_elTextArea.value.length;
+
+		// we delay this until first input as some values get reported incorrectly if the element isn't visible.
+		if ( this.m_nTextAreaPadding === null && $J(this.m_elTextArea ).is(':visible') )
+			this.CalculatePadding();
+
 		// force a resize
 		if ( cNewLength < this.m_cEntryLength )
 		{

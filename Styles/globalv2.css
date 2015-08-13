@@ -1235,6 +1235,9 @@ img.emoticon {
 }
 
 
+#tabs_baseline {
+	clear:left;
+}
 
 .responsive_tab_baseline {
 	background-color: #417B9C;
