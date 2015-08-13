@@ -607,7 +607,7 @@ function GetDefaultCommunityAJAXParams( path, method )
 		rgParams.type = method;
 
 	// if this js file was hosted off the store, add CORS request headers
-	if ( window.location.href.indexOf( 'http://steamcommunity.com/' ) != 0 && window.location.href.indexOf( 'https://steamcommunity.com/' ) != 0 )
+	if ( window.location.href.indexOf( 'https://steamcommunity.com/' ) != 0 )
 	{
 		rgParams.crossDomain = true;
 		rgParams.xhrFields = { withCredentials: true };
@@ -2619,6 +2619,89 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 		// restore visibility
 		$Popup.hide();
 		$Popup.css( 'visibility', 'visible' );
+	}
+}
+
+
+var DELAY_BETWEEN_NOTIFICATION_COUNT_POLLS_MS = 15 * 1000;
+function EnableNotificationCountPolling()
+{
+	var $NotificationItems = $J('.notification_ctn');
+	var $NotificationTotalCounts = $J('.notification_count_total_ctn');
+	if ( $NotificationItems.length || $NotificationTotalCounts.length )
+	{
+		var bNotificationCountRequested = false;
+		var fnRequestNotificationOnNextUserAction;
+		fnRequestNotificationOnNextUserAction = function() {
+			window.setTimeout( function() {
+				bNotificationCountRequested = false;
+				$J(window).on('touchstart.NotificationPoll mousemove.NotificationPoll focus.NotificationPoll scroll.NotificationPoll', function() {
+					if ( !bNotificationCountRequested )
+						UpdateNotificationCounts();
+					$J(window ).off('.NotificationPoll');
+					bNotificationCountRequested = true;
+					fnRequestNotificationOnNextUserAction();
+				});
+			}, DELAY_BETWEEN_NOTIFICATION_COUNT_POLLS_MS );
+		};
+
+		fnRequestNotificationOnNextUserAction();
+	}
+}
+
+function UpdateNotificationCounts()
+{
+	var $NotificationItems = $J('.notification_ctn');
+	var $NotificationTotalCounts = $J('.notification_count_total_ctn');
+	if ( $NotificationItems.length || $NotificationTotalCounts.length )
+	{
+		$J.ajax( GetDefaultCommunityAJAXParams( 'actions/GetNotificationCounts', 'GET' ), function( data ) {
+			var notifications = data && data.notifications;
+			if ( notifications )
+			{
+				$NotificationItems.each( function() {
+					var $NotificationItem = $J(this);
+					var nNotificationType = $NotificationItem.data('notification-type');
+					var cNotifications = notifications[nNotificationType] || 0;
+					$NotificationItem.find('.notification_count' ).text( v_numberformat( cNotifications ) );
+
+					if ( cNotifications > 0 )
+						$NotificationItem.addClass('active_inbox_item');
+					else
+						$NotificationItem.removeClass('active_inbox_item');
+
+					var $CountStrings = $NotificationItem.find( '.notification_count_string' );
+					if ( $CountStrings.length )
+					{
+						if ( cNotifications == 1 )
+						{
+							$CountStrings.filter('.plural' ).hide();
+							$CountStrings.filter('.singular' ).show();
+						}
+						else
+						{
+							$CountStrings.filter('.singular' ).hide();
+							$CountStrings.filter('.plural' ).show();
+						}
+					}
+
+				});
+
+				var cTotalNotifications = 0;
+				for ( var type in notifications )
+					cTotalNotifications += ( notifications[type] || 0 );
+				$NotificationTotalCounts.find('.notification_count' ).text( v_numberformat( cTotalNotifications ) );
+
+				if ( cTotalNotifications > 0 )
+				{
+					$NotificationTotalCounts.removeClass('no_notifications' ).addClass('has_notifications');
+				}
+				else
+				{
+					$NotificationTotalCounts.removeClass('has_notifications' ).addClass('no_notifications');
+				}
+			}
+		});
 	}
 }
 

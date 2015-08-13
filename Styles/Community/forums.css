@@ -1669,21 +1669,53 @@ select.subforum_select_control {
 	}
 }
 
-.responsive_tab_ctn.forumselector {
+.responsive_tab_ctn.forumselector:not(.sharedfiles_responsive_tab) {
 	margin-bottom: 8px;
+	text-align: center;
 }
 
 .responsive_tab_ctn.forumselector label {
-	display: block;
-	float: left;
 	margin-right: 4px;
 	line-height: 25px;
+	color: #ffffff;
 }
 
 .responsive_tab_ctn.forumselector .formselector_select_ctn {
 	overflow: hidden;
+	display: inline;
+	padding-bottom: 1px;
 }
 
-.responsive_tab_ctn.forumselector .formselector_select_ctn select {
+.responsive_tab_ctn.forumselector:not(.sharedfiles_responsive_tab) .formselector_select_ctn select {
 	max-width: 99%;
+	background: #1f3345;
+	box-shadow: 1px 2px 0 0 rgba( 255, 255, 255, 0.3 );
+}
+
+.discussions_page .responsive_tab_baseline {
+	margin-bottom: 8px;
+}
+
+@media screen and (max-width: 480px)
+{
+	.responsive_tab_ctn.forumselector {
+		text-align: left;
+		margin-bottom: 8px;
+	}
+
+	.responsive_tab_ctn.forumselector label {
+		float: left;
+	}
+
+	.responsive_tab_ctn.forumselector:not(.sharedfiles_responsive_tab) {
+		padding: 0 2%;
+	}
+
+	.responsive_tab_ctn.forumselector .formselector_select_ctn {
+		display: block;
+	}
+
+	.responsive_tab_ctn.forumselector .formselector_select_ctn select {
+		width: 99%;
+	}
 }

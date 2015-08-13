@@ -1233,3 +1233,40 @@ img.emoticon {
 .nonresponsive_hidden {
 	display: none;
 }
+
+
+
+.responsive_tab_baseline {
+	background-color: #417B9C;
+	max-width: 958px;
+	height: 5px;
+}
+
+.responsive_tab_ctn.sharedfiles_responsive_tab {
+	text-align: center;
+}
+
+.responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control {
+	display: inline-block;
+	padding: 6px 8px;
+	font-size: 16px;
+	color: #ffffff;
+
+	background: #57749e; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control
+	{
+		display: block;
+		text-align: center;
+	}
+	html.responsive .responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control select {
+		width: 98%;
+	}
+	html.responsive div.responsive_tab_baseline,
+	html.responsive div.responsive_tab_baseline.nonresponsive_hidden {
+		display: none;
+	}
+}

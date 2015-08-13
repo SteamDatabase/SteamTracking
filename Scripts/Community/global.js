@@ -33,23 +33,8 @@ function RegisterSteamOnWebPanelHiddenHandler( f )
 
 function RefreshNotificationArea()
 {
-	if ( typeof $J != 'undefined' )
-	{
-		if ( $J('#header_notification_area' ) )
-		{
-			$J.ajax({
-				url: 'https://steamcommunity.com/actions/RefreshNotificationArea',
-				success: function ( data ) { $J('#header_notification_area').html( data ); }
-			});
-		}
-	}
-	else if ( typeof $ != 'undefined' )
-	{
-		if ( $('header_notification_area' ) )
-		{
-			new Ajax.Updater( 'header_notification_area', 'https://steamcommunity.com/actions/RefreshNotificationArea' );
-		}
-	}
+	// the new way - updates both the old envelope and responsive menu
+	UpdateNotificationCounts();
 }
 
 function vIE()

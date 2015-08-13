@@ -1203,12 +1203,7 @@ input, select {
 	border: 1px #777777 solid;
 }
 
-select {
-	width:362px;
-}
-
 textarea {
-	width:360px;
 	background-color:#1d1d1d;
 	border:solid 1px #777777;
 	color:#e1e1e1;
@@ -1364,31 +1359,21 @@ textarea {
 .workshopItem {
 	position: relative;
 	float: left;
-	width: 200px;
 	min-height: 200px;
-	margin-right: 0px;
 	margin-bottom: 10px;
+	width: 200px;
+	max-width: 31%;
+	margin-right: 2%;
+}
+
+.workshopItem.right
+{
+	margin-right: 0;
 }
 
 .workshopItem .workshopItemAuthorName
 {
 	font-size: 12px;
-}
-
-.workshopItem.left
-{
-
-}
-
-.workshopItem.middle
-{
-	margin-left: 24px;
-	margin-right: 24px;
-}
-
-.workshopItem.right
-{
-
 }
 
 .workshopItem .workshop_checkmark
@@ -1703,6 +1688,25 @@ textarea {
 	max-height: 150px;
 }
 
+@media screen and (max-width: 910px)
+{
+
+	html.responsive .workshopItemPreviewImage {
+		width: 100%;
+		height: auto;
+	}
+
+	html.responsive .workshopItemPreviewHolder {
+		width: 100%;
+		height: auto;
+	}
+
+	html.responsive .workshopBrowseRow,
+	html.responsive .workshopItem {
+		min-height: 0;
+	}
+}
+
 .workshopItemPreviewHolder:hover {
 	border-color: #97c0e3;
 }
@@ -1759,7 +1763,6 @@ textarea {
 .workshopItem .workshopItemTitle {
 	font-size:14px;
 	font-weight: bold;
-	width: 200px;
 }
 
 .workshopItemApp {
@@ -3266,9 +3269,11 @@ div.hover {
 
 	html.responsive #rightContents {
 		float: none;
+		width: auto;
 	}
 
-	html.responsive #profileBlock {
+	html.responsive #profileBlock,
+	html.responsive #leftContents {
 		width: auto;
 		float: none;
 	}

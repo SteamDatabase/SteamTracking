@@ -1136,18 +1136,24 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	cursor: pointer;
 }
 
-.header_notification_empty {
+.header_notification_btn.no_notifications {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_notification_grey.png' );
 	background-repeat: no-repeat;
 	background-position: center top;
 	width: 29px;
 }
 
-.header_notification_empty:hover, .header_notification_empty.focus {
+.header_notification_btn.no_notifications:hover, .header_notification_btn.no_notifications.focus {
 	background-position: center bottom;
 }
 
-.header_notification_green {
+.header_notification_btn.no_notifications .leftcap,
+.header_notification_btn.no_notifications .rightcap,
+.header_notification_btn.no_notifications .notification_count {
+	display: none;
+}
+
+.header_notification_btn.has_notifications {
 	padding: 0 28px 0 10px;
 
 	background-repeat: repeat-x;
@@ -1158,22 +1164,22 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	color: #ffffff;
 }
 
-.header_notification_green, .header_notification_green .leftcap, .header_notification_green .rightcap {
+.header_notification_btn.has_notifications, .header_notification_btn.has_notifications .leftcap, .header_notification_btn.has_notifications .rightcap {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_notification_green.png?=1' );
 }
 
-.header_notification_green:hover, .header_notification_green.focus {
+.header_notification_btn.has_notifications:hover, .header_notification_btn.has_notifications.focus {
 	background-position: 0 -87px;
 }
 
-.header_notification_green:hover .leftcap, .header_notification_green.focus .leftcap {
+.header_notification_btn.has_notifications:hover .leftcap, .header_notification_btn.has_notifications.focus .leftcap {
 	background-position: 0 -58px;
 }
-.header_notification_green:hover .rightcap, .header_notification_green.focus .rightcap {
+.header_notification_btn.has_notifications:hover .rightcap, .header_notification_btn.has_notifications.focus .rightcap {
 	background-position: right -58px;
 }
 
-.header_notification_green .leftcap {
+.header_notification_btn.has_notifications .leftcap {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -1182,7 +1188,7 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	background-position: left top;
 }
 
-.header_notification_green .rightcap {
+.header_notification_btn.has_notifications .rightcap {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -1201,6 +1207,10 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 
 #header_notification_dropdown .popup_menu_item.active_inbox_item {
 	color: #70ba24;
+}
+
+.notification_ctn.hide_when_empty:not(.active_inbox_item) {
+	display: none;
 }
 
 .header_notification_dropdown_seperator {

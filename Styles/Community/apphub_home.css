@@ -7,6 +7,9 @@
 	margin: 0 auto 8px auto;
 	max-width: 948px;
 }
+.apphub_HomeHeader .responsive_tab_ctn {
+	margin-top: 8px;
+}
 .apphub_HomeHeaderContent
 {
 	padding: 10px 0 0 0;

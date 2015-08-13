@@ -2155,21 +2155,6 @@ body.profile_page #footer {
 	text-decoration: underline;
 }
 
-
-
-.responsive_tab_ctn.sharedfiles_responsive_tab {
-	text-align: center;
-}
-
-.responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control {
-	display: inline-block;
-	padding: 6px 8px;
-	font-size: 18px;
-	color: #ffffff;
-
-	background: #57749e; /* Old browsers */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
-
 .sectionTabs
 {
 	position: relative;
@@ -2266,13 +2251,6 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F
 background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D6), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AA9D6', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -o-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: -ms-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);}
 
 
-
-#tabs_baseline {
-	clear:left;
-	background-color: #417B9C;
-	max-width: 958px;
-	height: 5px;
-}
 
 
 .profile_paging {
@@ -2413,17 +2391,3 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
 		display: none;
 	}
 }
-
-
-.responsive_tab_ctn.sharedfiles_responsive_tab {
-	text-align: center;
-}
-
-.responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control {
-	display: inline-block;
-	padding: 6px 8px;
-	font-size: 18px;
-	color: #ffffff;
-
-	background: #57749e; /* Old browsers */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#66C0F4), color-stop(95%,#417B9C));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66C0F4', endColorstr='#417B9C',GradientType=0 );background: -moz-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -o-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: -ms-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}

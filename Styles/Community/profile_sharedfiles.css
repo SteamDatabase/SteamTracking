@@ -724,6 +724,14 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 	width: 33%;
 }
 
+@media screen and (max-width: 910px)
+{
+	html.responsive #tabs_basebg_workshop {
+		width: auto;
+		padding: 0 1%;
+	}
+}
+
 @media screen and (max-width: 600px )
 {
 	.video_items_ctn .video_item {
