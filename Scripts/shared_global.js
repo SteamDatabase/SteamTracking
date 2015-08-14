@@ -2655,7 +2655,7 @@ function UpdateNotificationCounts()
 	var $NotificationTotalCounts = $J('.notification_count_total_ctn');
 	if ( $NotificationItems.length || $NotificationTotalCounts.length )
 	{
-		$J.ajax( GetDefaultCommunityAJAXParams( 'actions/GetNotificationCounts', 'GET' ), function( data ) {
+		$J.ajax( GetDefaultCommunityAJAXParams( 'actions/GetNotificationCounts', 'GET' ) ).done( function( data ) {
 			var notifications = data && data.notifications;
 			if ( notifications )
 			{
