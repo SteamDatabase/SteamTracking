@@ -899,7 +899,18 @@ CForumTopic = Class.create( {
 		form.elements['gidcomment'].value = gidcomment;
 		form.elements['gidtopic'].value = this.m_gidForumTopic;
 
-		showContentAsModal( 'forum_modal', $('report_modal_content') );
+		var _this = this;
+		var $ReportModalContent = $J('#report_modal_content');
+		ShowConfirmDialog(
+			'Report this post',
+			$ReportModalContent.show(),
+			'Report'
+		).done( function() {
+			$J(document.body ).append( $ReportModalContent.hide() );
+			_this.SubmitReportPost();
+		} ).fail( function() {
+			$J(document.body ).append( $ReportModalContent.hide() );
+		});
 
 		form.elements['report_reason'].focus();
 	},
@@ -922,7 +933,6 @@ CForumTopic = Class.create( {
 			});
 		}
 
-		hideModal( 'forum_modal' );
 		form.elements['report_reason'].value='';
 	},
 

@@ -426,6 +426,19 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	text-align: left;
 }
 
+@media screen and (max-width: 910px)
+{
+	html.responsive .popup_menu .popup_menu_item {
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+}
+	html.responsivetouch .popup_menu .popup_menu_item {
+		font-size: 14px;
+		line-height: 18px;
+	}
+
 .popup_menu a.popup_menu_item {
 	text-decoration: none;
 }
