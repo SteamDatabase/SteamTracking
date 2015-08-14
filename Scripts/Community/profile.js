@@ -243,7 +243,7 @@ function InitProfileSummary( strSummary )
 
 	if ( $Summary[0].scrollHeight <= 76 )
 	{
-		$Summary.css( 'height', 76 );
+		$Summary.addClass( 'noexpand' );
 		$SummaryFooter.hide();
 	}
 	else

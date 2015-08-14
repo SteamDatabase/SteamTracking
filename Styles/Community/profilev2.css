@@ -94,10 +94,12 @@ div.profile_page.has_profile_background {
 		clear: both;
 		padding: 8px;
 	}
+	html.responsive .profile_header .profile_summary.noexpand {
+		height: auto;
+	}
 
 	html.responsive .profile_header .playerAvatar.profile_header_size {
 		max-width: 40%;
-		margin-right: 2%;
 	}
 
 	html.responsive .profile_header .profile_header_centered_persona {
@@ -126,6 +128,11 @@ div.profile_page.has_profile_background {
 	html.responsive .profile_header_bg_texture {
 		background-size: cover;
 	}
+
+	html.responsive .profile_header_badgeinfo {
+		float: none;
+		overflow: hidden;
+	}
 }
 
 @media screen and ( max-width: 460px )
@@ -133,17 +140,29 @@ div.profile_page.has_profile_background {
 
 	html.responsive .profile_header_badgeinfo {
 		float: none;
+		overflow: visible;
 	}
 
 	html.responsive .profile_header_badgeinfo_badge_area {
-		float: right;
-		max-width: 55%;
+		float: none;
+		overflow: hidden;
+		max-width: 50%;
+		max-width: calc( 100% - 125px - 20px );
+	}
+
+	html.responsive .profile_header_badgeinfo_badge_area .profile_header_badge {
+		margin-bottom: 0;
 	}
 
 	html.responsive .profile_header_actions {
 		clear: both;
 		padding-top: 8px;
 		text-align: center;
+	}
+
+	html.responsive .profile_header .playerAvatar.profile_header_size {
+		max-width: none;
+		width: 125px;
 	}
 }
 
@@ -184,6 +203,10 @@ div.profile_page.has_profile_background {
 	height: 57px;
 	overflow: hidden;
 	margin-bottom: 8px;
+}
+
+.profile_header .profile_summary.noexpand {
+	height: 76px;
 }
 
 .profile_summary_modal {
@@ -1512,6 +1535,11 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	margin-bottom: 12px;
 }
 
+.profile_in_game_broadcastpreview {
+	color: #9b9b9b;
+	margin-bottom: 12px;
+}
+
 .profile_private_info {
 
 	padding: 12px 0;
@@ -1755,10 +1783,13 @@ body.migrated_profile_page #BG_bottom.maincontent {
 .profile_comment_area .commentthread_header, .profile_leftcol_header {
 	border-bottom: none;
 	padding: 6px 10px;
-	height: 26px;
 	line-height: 26px;
 	border-radius: 3px;
 	background-color: #141414;
+}
+
+.profile_leftcol_header h2 {
+	float: left;
 }
 
 .profile_comment_area .commentthread_header .commentthread_count {
@@ -2288,6 +2319,26 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
     margin-bottom:12px
 }
 
+.responsive_status_info {
+	padding: 8px;
+	background: rgba( 0, 0, 0, 0.5 );
+	margin: 12px 0;
+}
+
+.responsive_status_info .profile_in_game {
+	margin: 0;
+}
+.responsive_status_info .profile_in_game_name,
+.responsive_status_info .profile_ban_status,
+.responsive_status_info .profile_in_game_broadcastpreview,
+.responsive_status_info .profile_in_game_joingame {
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+.responsive_status_info .profile_ban_status {
+	margin-top: 12px;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive div.profile_page {
@@ -2329,7 +2380,7 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
 	}
 
 	html.responsive .profile_leftcol {
-		padding: 1%;
+		padding: 0 1%;
 	}
 
 	html.responsive .profile_summary_modal {
@@ -2371,6 +2422,10 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
 		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
 	}
 
+	html.responsive .profile_comment_area .commentthread_header .commentthread_count {
+		display: none;
+	}
+
 	/*
 	html.responsive .profile_content.has_profile_background .profile_content_inner {
 		padding-top: 128px;
@@ -2387,7 +2442,17 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
 
 @media screen and (max-width: 500px)
 {
+	html.responsive .profile_leftcol_header > h2 {
+		display: inline-block;
+		margin-right: 8px;
+		float: none;
+	}
 	html.responsive .recentgame_recentplaytime {
-		display: none;
+		display: inline-block;
+		float: none;
+		vertical-align: bottom;
+	}
+	html.responsive .recentgame_recentplaytime > h2 {
+		font-size: 16px;
 	}
 }

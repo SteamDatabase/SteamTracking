@@ -549,7 +549,7 @@ a.recent_game_discussion.quasi_official_group
 }
 
 .moderator_list_group {
-	width: 898px;
+	max-width: 898px;
 	margin-bottom: 18px;
 }
 
