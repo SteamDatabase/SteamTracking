@@ -1385,7 +1385,15 @@ function v_numberformat( n, decimals )
 			options.maximumFractionDigits = decimals;
 		}
 
-		return new Number(n).toLocaleString( false, options );
+		var num = new Number(n);
+		try
+		{
+			return num.toLocaleString( false, options );
+		}
+		catch( e )
+		{
+			return num.toString();
+		}
 	}
 
 	var str = '' + ( n ? n : 0 );
