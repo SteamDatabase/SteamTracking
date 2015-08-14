@@ -1,0 +1,516 @@
+
+.responsive_page_frame {
+	position: relative;
+}
+
+.responsive_page_content {
+}
+
+.responsive_page_menu_ctn {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+
+	background: black;
+
+	z-index: 30;
+	width: 280px;
+}
+
+.responsive_page_frame:not(.in_menu_drag) .responsive_page_menu_ctn {
+	transition: left 0.5s, right 0.5s;
+}
+
+.responsive_page_menu_ctn.mainmenu {
+	left: -280px;
+}
+
+.responsive_page_menu_ctn.localmenu {
+	right: -280px;
+}
+
+.responsive_page_frame.mainmenu_active .responsive_page_menu_ctn.mainmenu,
+.responsive_page_frame.localmenu_active .responsive_page_menu_ctn.localmenu
+{
+	box-shadow: 0 0 7px 0 rgba( 0, 0, 0, 0.75 );
+}
+
+.responsive_page_frame.mainmenu_active .responsive_page_menu_ctn.mainmenu {
+	left: 0;
+}
+
+.responsive_page_frame.localmenu_active .responsive_page_menu_ctn.localmenu {
+	right: 0;
+}
+
+.responsive_page_content_overlay {
+	visibility: hidden;
+	opacity: 0;
+	background: rgba( 0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 25;	/* on top of page and header */
+
+	transition: visibility 0.5s, opacity 0.5s;
+}
+
+.responsive_page_frame.mainmenu_active .responsive_page_content_overlay,
+.responsive_page_frame.localmenu_active .responsive_page_content_overlay {
+	visibility: visible;
+	opacity: 1.0;
+	transition: visibility 0s, opacity 0.5s;
+}
+
+.responsive_page_menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.mainmenu_contents {
+	background: #171a21;
+	font-size: 24px;
+	position: relative;
+	min-height: 100%;
+}
+
+.mainmenu_contents_items {
+
+	font-family: "Motiva Sans Thin", Helvetica, Arial, sans-serif;
+}
+
+.responsive_page_menu_ctn.localmenu .responsive_page_menu {
+	background: #171a21;
+}
+
+.responsive_page_menu_ctn.localmenu .localmenu_subarea {
+	background: #192533;
+	border-radius: 3px;
+	padding: 10px;
+	color: #bdbdbd;
+	margin-bottom: 16px;
+}
+
+.responsive_page_menu_ctn.localmenu .localmenu_subarea .subheader {
+	font-size: 1.2em;
+	margin-bottom: 8px;
+}
+
+.mainmenu_contents .menuitem,
+.mainmenu_contents .submenuitem,
+.notification_submenu .popup_menu_item {
+	text-transform: capitalize;
+	display: block;
+	padding: 0 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2.5em;
+
+	text-decoration: none;
+
+	cursor: pointer;
+}
+
+.mainmenu_contents .menuitem {
+	color: #bdbdbd;
+	background: #171a21;
+	transition: background 0.25s;
+}
+
+.mainmenu_contents .menuitem,
+.menuitem_submenu_wrapper .inner_borders,
+.mainmenu .minor_menu_items {
+	border-top: 1px solid #2f3138;
+	border-bottom: 1px solid #000000;
+}
+.mainmenu .minor_menu_items {
+	border-bottom: none;
+}
+
+.mainmenu_contents .menuitem.submenu_active {
+	background: #192533;
+	color: #ffffff;
+}
+
+.menuitem_submenu_wrapper {
+	overflow: hidden;
+	background: #171a21;
+
+	transition: height 0.5s, background 0.25s, color 0.25s;
+}
+
+.menuitem_submenu_wrapper.active {
+	background: #192533;
+}
+
+.menuitem_submenu_wrapper .submenuitem, .notification_submenu .popup_menu_item {
+	display: block;
+	font-size: 0.7em;
+	color: #ffffff;
+	padding-left: 28px;
+}
+
+.notifications_item .notification_count_total_ctn {
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	line-height: 150%;
+	padding: 0 8px;
+	font-size: 0.7em;
+	margin-left: 1em;
+}
+
+.notifications_item .notification_count_total_ctn.has_notifications {
+	color: #ffffff;
+	background-color: #5c7e10;
+}
+
+.mainmenu .notification_submenu .notification_icon,
+.mainmenu .notification_submenu .header_notification_dropdown_seperator {
+	display: none;
+}
+
+.mainmenu .minor_menu_items .menuitem {
+	color: #8a8a8a;
+	border: none;
+	font-size: 0.75em;
+}
+
+.mainmenu_footer_spacer {
+	height: 160px;
+}
+
+.mainmenu_footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 10px;
+	white-space: normal;
+	color: #8a8a8a;
+	padding: 0 12px 24px 12px;
+}
+
+.mainmenu_footer .mainmenu_valve_links > a {
+	color: #8a8a8a;
+}
+
+.responsive_menu_notifications .popup_menu_item {
+	font-size: 16px;
+}
+
+.responsive_menu_notifications .popup_menu_item.active_inbox_item {
+	color: #70ba24;
+}
+
+.responsive_local_menu_tab {
+	background-color: rgba( 104, 157, 221, 0.6 );
+	position: fixed;
+	right: 0;
+	top: 6px;
+	border-top-left-radius: 80px;
+	border-bottom-left-radius: 80px;
+	width: 30px;
+	height: 50px;
+	z-index: 12; /* behind overlay, on top of page content */
+
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/responsive/local_menu_hamburger.png' );
+	background-repeat: no-repeat;
+	background-position: 2px center;
+	background-size: 110%;
+
+	transition: opacity 0.5s;
+	box-shadow: 0 0 30px 0 #6799e2;
+
+	cursor: pointer;
+}
+
+.responsive_page_frame.with_header .responsive_local_menu_tab {
+	top: 68px;
+}
+
+.responsive_page_frame.mainmenu_active .responsive_local_menu_tab,
+.responsive_page_frame.localmenu_active .responsive_local_menu_tab
+{
+	opacity: 0;
+}
+
+.responsive_header {
+	display: none;
+	background: #171a21;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 20;
+	box-shadow: 0 0 7px 0 rgba( 0, 0, 0, 0.75 );
+
+	overflow: hidden;
+
+	padding: 13px 8px;
+}
+
+@media screen and ( max-height: 360px )
+{
+	.responsive_header {
+		position: absolute;
+	}
+}
+
+#responsive_menu_logo,
+#responsive_beta_logo {
+	position: absolute;
+	top: 9px;
+	cursor: pointer;
+	width: 36px;
+	height: 31px;
+}
+
+#responsive_menu_logo {
+	left: 8px;
+}
+
+#responsive_beta_logo {
+	right: 8px;
+}
+
+.responsive_header_notification_badge_ctn {
+	position: absolute;
+	text-align: center;
+	right: -26px;
+	width: 60px;
+	top: -4px;
+}
+
+.responsive_header_notification_badge {
+	display: inline-block;
+	background: #ca2842;
+	color: #ffffff;
+	padding: 0 4px;
+	font-size: 11px;
+	line-height: 17px;
+	border-radius: 8px;
+}
+
+.responsive_header_notification_badge.no_notifications {
+	display: none;
+}
+
+.responsive_header .responsive_header_logo img {
+	vertical-align: middle;
+}
+
+.localmenu_content {
+	padding: 16px;
+}
+
+/*
+.responsive_page_frame:not(.in_menu_drag) .responsive_header_content {
+	transition: left 0.5s, right 0.5s;
+
+}
+
+.responsive_page_frame.mainmenu_active .responsive_header_content {
+	left: 280px;
+	right: -280px;
+}
+*/
+
+.responsive_menu_user_area {
+	padding: 25px 20px;
+	box-shadow: inset 0 -4px 8px 0 #000000;
+
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#24313f), color-stop(33%,#171a21));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24313f', endColorstr='#171a21',GradientType=1 );background: -moz-linear-gradient( 107deg, #24313f 0%,#171a21 33%););background: -webkit-linear-gradient( 107deg, #24313f 0%,#171a21 33%););background: -o-linear-gradient( 107deg, #24313f 0%,#171a21 33%););background: -ms-linear-gradient( 107deg, #24313f 0%,#171a21 33%););background: linear-gradient( 107deg, #24313f 0%,#171a21 33%););}
+
+.responsive_menu_user_persona {
+	line-height: 36px;
+}
+
+.responsive_menu_user_persona .playerAvatar {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+
+.responsive_change_language_select {
+	font-size: 24px;
+}
+
+
+@media screen and (max-width: 910px)
+{
+
+	html.responsive div#global_header {
+		display: none;
+	}
+
+	html.responsive div.responsive_header {
+		display: block;
+	}
+
+	html.responsive div.responsive_page_content {
+		position: relative;
+		z-index: 10;
+	}
+
+	html.responsive .responsive_page_frame.with_header div.responsive_page_content {
+		padding-top: 62px;	/* the header overlaps this area */
+	}
+
+	/* we show a footer in the menu itself */
+	html.responsive div#footer, html.responsive div#footer_spacer {
+		display: none;
+	}
+
+
+}
+
+	html.responsive.touch div#global_header {
+		display: none;
+	}
+
+	html.responsive.touch div.responsive_header {
+		display: block;
+	}
+
+	html.responsive.touch div.responsive_page_content {
+		position: relative;
+		z-index: 10;
+	}
+
+	html.responsive.touch .responsive_page_frame.with_header div.responsive_page_content {
+		padding-top: 62px;	/* the header overlaps this area */
+	}
+
+	/* we show a footer in the menu itself */
+	html.responsive.touch div#footer, html.responsive.touch div#footer_spacer {
+		display: none;
+	}
+
+
+.perf_timing_area {
+	display: none;
+}
+
+.perf_timing_data {
+	width: auto;
+}
+
+.responsive_page_menu div.responsive_menu_only {
+	display: block;
+}
+
+.responsive_page_menu span.responsive_menu_only {
+	display: inline;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive div.nonresponsive_hidden {
+		display: block;
+	}
+
+	html.responsive span.nonresponsive_hidden {
+		display: inline;
+	}
+
+	html.responsive .responsive_hidden {
+		display: none;
+	}
+}
+
+.responsive_tab_control select {
+	color: #ffffff;
+	/*background: rgba(0,0,0,0.3);*/
+	background: #3a6d8b;
+	border: none;
+	font-size: 16px;
+	height: 24px;
+	max-width: 98%;
+	min-width: 250px;
+	font-family: "Motiva Sans Thin", Helvetica, Arial, sans-serif;
+}
+
+.responsive_tab_control select option {
+	background: #3a6d8b;
+}
+
+/* If the user has opted to "view desktop site", we add a button to the bottom of the footer
+	to opt back in to the mobile site.  This is button repsonds to device width
+	so that it's bigger on smaller screens and easier to tap when zoomed out */
+
+html.force_desktop body #footer .responsive_optin_link {
+	display: block;
+	text-align: center;
+	padding: 20px 0;
+}
+
+html.force_desktop body #footer_responsive_optin_spacer {
+	height: 64px;
+}
+
+.responsive_optin_link .btn_medium > span {
+	line-height: 150%;
+}
+
+@media screen and ( max-device-width: 640px )
+{
+	.responsive_optin_link .btn_medium > span {
+		font-size: 22px;
+	}
+
+	html.force_desktop body #footer_responsive_optin_spacer {
+		height: 75px;
+	}
+}
+
+@media screen and ( max-device-width: 500px )
+{
+	.responsive_optin_link .btn_medium > span {
+		font-size: 26px;
+	}
+
+	html.force_desktop body #footer .responsive_optin_link {
+		padding: 25px 0;
+	}
+
+	html.force_desktop body #footer_responsive_optin_spacer {
+		height: 91px;
+	}
+}
+
+@media screen and ( max-device-width: 400px )
+{
+	.responsive_optin_link .btn_medium > span {
+		font-size: 34px;
+	}
+
+	html.force_desktop body #footer .responsive_optin_link {
+		padding: 40px 0;
+	}
+
+	html.force_desktop body #footer_responsive_optin_spacer {
+		height: 133px;
+	}
+
+}
+
+.responsive_fixonscroll_ctn  {
+	position: fixed;
+	left: 0;
+	right: 0;
+	background: #171a21;
+	box-shadow: 0 2px 4px 0 #000000;
+	z-index: 15;
+}

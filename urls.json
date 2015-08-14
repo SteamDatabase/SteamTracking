@@ -142,6 +142,7 @@
 "Styles/globalv2.css"                            : "https://steamcommunity-a.akamaihd.net/public/css/globalv2.css?__TIME__",
 "Styles/shared_global.css"                       : "https://steamcommunity-a.akamaihd.net/public/shared/css/shared_global.css?__TIME__",
 "Styles/user_reviews.css"                        : "https://steamcommunity-a.akamaihd.net/public/shared/css/user_reviews.css?__TIME__",
+"Styles/shared_responsive.css"                   : "https://steamcommunity-a.akamaihd.net/public/shared/css/shared_responsive.css?__TIME__",
 
 //
 // Holiday CSS
@@ -242,6 +243,7 @@
 "Scripts/user_reviews.js"                        : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/user_reviews.js?__TIME__&l=english",
 "Scripts/dash_player.js"                         : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/dash_player.js?__TIME__&l=english",
 "Scripts/login.js"                               : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/login.js?__TIME__&l=english",
+"Scripts/shared_responsive_adapter.js"           : "https://steamcommunity-a.akamaihd.net/public/shared/javascript/shared_responsive_adapter.js?__TIME__&l=english",
 
 //
 // Mini game
