@@ -702,6 +702,57 @@ input.market_dialog_input:focus {
 	border-color: #85BC3C;
 }
 
+@media screen and (max-width: 910px)
+{
+	html.responsive input.market_dialog_input {
+		/* so iOS doesn't zoom */
+		font-size: 16px;
+	}
+
+ 	html.responsive #market_sell_dialog_confirm_buttons .market_dialog_bottom_buttons {
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	html.responsive #marker_sell_dialog_terms {
+		line-height: 16px;
+	}
+
+	html.responsive #marker_sell_dialog_terms input[type=checkbox] {
+		float: left;
+		margin: 0 6px 0 0;
+	}
+
+	html.responsive #marker_sell_dialog_terms label {
+		overflow: hidden;
+		display: block;
+    }
+
+}
+	html.responsive.touch input.market_dialog_input {
+		/* so iOS doesn't zoom */
+		font-size: 16px;
+	}
+
+ 	html.responsive.touch #market_sell_dialog_confirm_buttons .market_dialog_bottom_buttons {
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	html.responsive.touch #marker_sell_dialog_terms {
+		line-height: 16px;
+	}
+
+	html.responsive.touch #marker_sell_dialog_terms input[type=checkbox] {
+		float: left;
+		margin: 0 6px 0 0;
+	}
+
+	html.responsive.touch #marker_sell_dialog_terms label {
+		overflow: hidden;
+		display: block;
+    }
+
 .market_dialog_bottom_buttons {
 	margin-top: 33px;
 }

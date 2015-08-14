@@ -434,7 +434,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	}
 
 }
-	html.responsivetouch .popup_menu .popup_menu_item {
+	html.responsive.touch .popup_menu .popup_menu_item {
 		font-size: 14px;
 		line-height: 18px;
 	}
@@ -1711,12 +1711,16 @@ body.v6 #footer_nav .popup_menu .hr{
 		left: 12px;
 		right: 12px;
 		bottom: 12px;
-		overflow: auto;
 		min-width: 0;
 		max-width: 600px;
 		margin: 0 auto;
 	}
 
+	html.responsive .newmodal_content_border {
+		max-height: 90%;
+		max-height: calc( 100% - 46px );
+		overflow: auto;
+	}
 	html.responsive .newmodal_content {
 		padding: 8px 2%;
 	}
@@ -1728,12 +1732,16 @@ body.v6 #footer_nav .popup_menu .hr{
 		left: 12px;
 		right: 12px;
 		bottom: 12px;
-		overflow: auto;
 		min-width: 0;
 		max-width: 600px;
 		margin: 0 auto;
 	}
 
+	html.responsive.touch .newmodal_content_border {
+		max-height: 90%;
+		max-height: calc( 100% - 46px );
+		overflow: auto;
+	}
 	html.responsive.touch .newmodal_content {
 		padding: 8px 2%;
 	}

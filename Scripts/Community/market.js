@@ -1268,12 +1268,6 @@ Event.observe( document, 'dom:loaded', function() {
 	}
 } );
 
-function SSAPopup()
-{
-		var win = window.open( 'http://store.steampowered.com/checkout/ssapopup','steam_ssa','width=536,height=546,resize=yes,scrollbars=yes');
-	win.focus();
-}
-
 AdvancedSearchDialog = {
 	m_bOKClicked: false,
 	m_bInitialized: false,

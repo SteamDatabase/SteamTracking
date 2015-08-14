@@ -12,6 +12,7 @@ var g_bShowTradableItemsOnly = false;
 
 var g_bEnableDynamicSizing = false;
 var g_bAllowHighDPIItemImages = false;	// true if the page is responsive, otherwise we assume page is not updated to allow high dpi images
+var g_ActiveItemPopupModal = null;
 
 var g_ActiveUser = null;
 var ITEM_HOVER_DELAY = 500;
@@ -1165,6 +1166,9 @@ var CInventory = Class.create( {
 			// event indicates the user tapped an item, otherwise they may have just switched inventories
 			if ( bShowItemPopup )
 			{
+				if ( g_ActiveItemPopupModal )
+					g_ActiveItemPopupModal.Dismiss();
+
 				var $Info = $J(elNewInfo);
 				$Info.show();
 				$Info.css('opacity',1);
@@ -1178,19 +1182,20 @@ var CInventory = Class.create( {
 				$PopupCtn.append( $DismissBtn );
 
 				$J(document.body).css('overflow','hidden');
-				var Modal = new CModal( $Modal.append( $PopupCtn ) );
-				Modal.SetRemoveContentOnDismissal( true );
-				Modal.Show();
-				$DismissBtn.click( function() { Modal.Dismiss(); } );
+				g_ActiveItemPopupModal = new CModal( $Modal.append( $PopupCtn ) );
+				g_ActiveItemPopupModal.SetRemoveContentOnDismissal( true );
+				g_ActiveItemPopupModal.Show();
+				$DismissBtn.click( function() { g_ActiveItemPopupModal.Dismiss(); } );
 
-				if ( Modal.m_fnBackgroundClick )
+				if ( g_ActiveItemPopupModal.m_fnBackgroundClick )
 				{
-					$Modal.add($Scroll).click( function(e) { if ( e.target == this ) Modal.m_fnBackgroundClick(); } );
+					$Modal.add($Scroll).click( function(e) { if ( e.target == this && g_ActiveItemPopupModal ) g_ActiveItemPopupModal.m_fnBackgroundClick(); } );
 
 				}
-				Modal.OnDismiss( function() {
+				g_ActiveItemPopupModal.OnDismiss( function() {
 					$J(document.body).css('overflow','');
 					$J('.inventory_page_right' ).append( $Info );
+					g_ActiveItemPopupModal = null;
 				} );
 			}
 		}
@@ -2053,6 +2058,8 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 	{
 		$('iteminfo0').hide();
 		$('iteminfo1').hide();
+		if ( g_ActiveItemPopupModal )
+			g_ActiveItemPopupModal.Dismiss();
 
 		if ( g_ActiveUser.GetActiveAppId() != appid )
 		{
@@ -2862,6 +2869,12 @@ MessageDialog = {
 		event.stop();
 		this.Dismiss(); 
 	}
+}
+
+function SSAPopup()
+{
+		var win = window.open( 'http://store.steampowered.com/checkout/ssapopup','steam_ssa','width=536,height=546,resize=yes,scrollbars=yes');
+	win.focus();
 }
 
 SellItemDialog = {
