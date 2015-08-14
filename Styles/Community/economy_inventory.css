@@ -178,6 +178,10 @@ a.games_list_tab:hover {
 	margin-bottom: 20px;
 }
 
+.view_inventory_logo img {
+	max-width: 100%;
+}
+
 .games_list_tab.active {
 	background-color: #1F1F1F;
 	border-top: 1px solid transparent;
@@ -279,6 +283,16 @@ a.games_list_tab:hover {
 #context_selector {
 	margin-left: 12px;
 	margin-bottom: 12px;
+}
+
+html.responsive .responsive_fixonscroll_ctn #context_selector {
+	margin: 8px 1% 2px 1%;
+}
+
+html.responsive .responsive_fixonscroll_ctn #contextselect {
+	max-width: 430px;
+	width: auto;
+	margin: 0 auto;
 }
 
 #contextselect {
@@ -659,8 +673,6 @@ p.pending_gifts_none {
 }
 
 #newitems {
-	margin-left: -6px;
-	width: 936px;
 }
 
 .alertbox {
@@ -717,8 +729,10 @@ p.pending_gifts_none {
 	box-shadow: inset 0 0 5px #151515;
 	-webkit-box-shadow: inset 0 0 5px #1A1A1A;
 
-	border-bottom_right-radius: 3px;
+	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
+
+	overflow: hidden;
 }
 
 .alertbox_scrollcontrol {
@@ -768,7 +782,8 @@ p.pending_gifts_none {
 	padding: 7px;
 	position: relative;
 	overflow: hidden;
-	height: 85px;
+	overflow-x: auto;
+	height: 105px;
 	z-index: 1;
 }
 
@@ -851,4 +866,82 @@ body.migrated_profile_page .inventory_rightnav {
 
 .item_scrap_value {
 	color: #5b9ace;
+}
+
+@media screen and (max-width: 910px) {
+
+	html.responsive .view_inventory_page {
+		width: auto;
+		margin-left: 0;
+		padding: 5px 1%;
+	}
+
+	html.responsive .view_inventory_page .inventory_page_right {
+		display: none;
+	}
+
+	html.responsive .view_inventory_page .inventory_page_left,
+	html.responsive .view_inventory_logo
+	{
+		width: auto;
+		height: auto;
+	}
+
+	html.responsive #contextselect,
+	html.responsive #contextselect_options_contexts {
+		max-width: 88vw;
+	}
+
+
+
+	html.responsive .view_inventory_page #inventories {
+		width: auto;
+		padding: 0;
+		height: auto;
+	}
+
+
+	/* TODO: This stuff */
+	html.responsive .games_list_tab_row_separator {
+		display: none;
+	}
+
+	html.responsive .games_list_tabs {
+		width: 5000px;
+	}
+
+	html.responsive .games_list_tabs_ctn {
+		overflow-x: auto;
+	}
+
+	html.responsive .filter_ctn .filter_control_ctn {
+		overflow: hidden;
+		float: none;
+	}
+
+	html.responsive .filter_ctn.inventory_filters #filter_control {
+		width: 96%;
+		max-width: 363px;
+	}
+
+	html.responsive #iteminfo0,
+	html.responsive #iteminfo1 {
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 475px )
+{
+
+	html.responsive .filter_ctn .filter_control_ctn {
+		clear: left;
+	}
+}
+
+html.responsive .responsive_inventory_fixed_ctn {
+	position: fixed;
+	left: 0;
+	right: 0;
+	background: #000000;
+	top: 62px;
 }

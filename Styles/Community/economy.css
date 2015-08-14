@@ -48,7 +48,7 @@ h2 {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 62px;
+	top: 65%;
 
 	text-align: center;
 	font-size: 18px;
@@ -73,6 +73,10 @@ h2 {
 	text-align: center;
 }
 
+.item img:not(.item_throbber) {
+	width: 96px;
+}
+
 .item.unknownItem img {
 	margin-top: 32px;
 }
@@ -82,6 +86,29 @@ h2 {
 	background-color: #292929;
 	width: 96px;
 	height: 96px;
+}
+
+html.responsive .trade_item_box.dynamicSizing .item,
+html.responsive .market_dialog_contents.dynamicSizing  .item {
+	width: auto;
+	height: 98%;
+	height: calc( 100% - 2px );
+}
+
+html.responsive .dynamicSizing .item img {
+	width: 100%;
+	display: block;
+}
+
+html.responsive .dynamicSizing .inventory_ctn .inventory_page {
+	float: none;
+	height: auto;
+}
+
+html.responsive .dynamicSizing .inventory_ctn
+{
+	width: 100%;
+	height: auto;
 }
 
 .trade_area .item .item_image {
@@ -94,9 +121,9 @@ a.inventory_item_link {
 	position: absolute;
 	top: 0;
 	left: 0;
+	right: 0;
+	bottom: 0;
 	display: block;
-	width: 96px;
-	height: 96px;
 	z-index: 2;
 }
 
@@ -618,6 +645,9 @@ a.market_dialog_title_cancel:hover .market_dialog_title_cancel_X {
 }
 
 #market_sell_dialog_input_boxes {
+}
+
+.market_sell_dialog_input_group {
 	white-space: nowrap;
 }
 
@@ -658,8 +688,9 @@ a.market_dialog_title_cancel:hover .market_dialog_title_cancel_X {
 	color: #FFFFFF;
 }
 
-#market_buyerprice_label {
-	margin-left: 50px;
+.market_input_spacer {
+	display: inline-block;
+	width: 50px;
 }
 
 input.market_dialog_input {
@@ -724,6 +755,7 @@ input.market_dialog_input:focus {
 }
 
 #marker_sell_dialog_terms {
+	float: left;
 	text-align: left;
 }
 
@@ -1188,4 +1220,47 @@ a.game_button {
 
 .goo_exchange_slider_ctn .slider .handle.active {
 	background-position: right;
+}
+
+
+.economy_item_popup {
+	position: relative;
+	height: 96%;
+	height: calc( 100% - 16px );
+	max-width: 346px;
+	margin: 16px auto 0 auto;
+}
+
+.economy_item_popup_scroll {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.economy_item_popup_dismiss {
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	height: 30px;
+	width: 30px;
+	border: 3px solid #cccccc;
+	color: #cccccc;
+	text-align: center;
+	line-height: 30px;
+	background: #000000;
+	border-radius: 20px;
+	font-size: 20px;
+
+	cursor: pointer;
+}
+
+html.responsive .newmodal.economy_modal_ctn {
+	overflow: visible;
+}
+
+
+@media screen and (max-width: 650px )
+{
+	html.responsive .market_sell_dialog_input_area {
+		text-align: left;
+	}
 }
