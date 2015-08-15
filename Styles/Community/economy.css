@@ -1283,7 +1283,8 @@ a.game_button {
 }
 
 .economy_item_popup_scroll {
-	overflow-y: auto;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 	height: 100%;
 }
 

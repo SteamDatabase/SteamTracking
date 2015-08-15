@@ -376,6 +376,8 @@ function CModal( $Content, rgParams )
 	this.m_fnOnDismiss = null;
 	this.m_bRemoveContentOnDismissal = false;
 
+	this.m_nInitialOffsetTop = $J(document.body).scrollTop();
+	this.m_nInitialOffsetLeft = $J(document.body).scrollLeft();
 	this.m_$Content.css( 'position', 'fixed' );
 	this.m_$Content.css( 'z-index', 1000 );
 
@@ -435,13 +437,15 @@ CModal.prototype.SetDismissOnBackgroundClick = function ( bDismissOnBackgroundCl
 
 CModal.prototype.AdjustSizing = function( duration )
 {
-	if ( window.UseTouchFriendlyMode && UseTouchFriendlyMode() )
+	if ( !this.m_$Content )
 		return;
+
+	var bResponsiveScreen = window.UseTouchFriendlyMode && UseTouchFriendlyMode();
 
 	var nViewportWidth = $J(window).width();
 	var nViewportHeight = $J(window).height();
 
-	var nMaxWidth = Math.max( nViewportWidth - 80, 500 );
+	var nMaxWidth = Math.max( nViewportWidth - ( bResponsiveScreen? 24 : 80 ), bResponsiveScreen ? 200 : 500 );
 	var nMaxHeight = Math.floor( nViewportHeight - 120 );
 
 	// if the modal has a 'newmodal_sized_content' div, it wants to be the max height, so set it now
@@ -456,13 +460,31 @@ CModal.prototype.AdjustSizing = function( duration )
 	{
 		// set sizes right away so we can calculate a good left and top
 		this.m_$Content.css( 'max-width',  nMaxWidth + 'px' );
-		this.m_$StandardContent.css( 'max-height',  nMaxHeight + 'px' );
+		if ( !bResponsiveScreen )
+		{
+			this.m_$StandardContent.css( 'max-height',  nMaxHeight + 'px' );
+		}
+		else
+		{
+			this.m_$StandardContent.css( 'max-height', '' );
+		}
 	}
 
 	var nContentWidth = this.m_$Content.width();
 	var nContentHeight = this.m_$Content.height();
-	var nLeft = Math.floor( ( nViewportWidth - nContentWidth ) / 2 );
-	var nTop = Math.floor( ( nViewportHeight - nContentHeight ) / 2 );
+	var nLeft = Math.max( Math.floor( ( nViewportWidth - nContentWidth ) / 2 ), 12 );
+	var nTop = Math.max( Math.floor( ( nViewportHeight - nContentHeight ) / 2 ), 12 );
+
+	if ( bResponsiveScreen )
+	{
+		nLeft += this.m_nInitialOffsetLeft;
+		nTop += this.m_nInitialOffsetTop;
+		this.m_$Content.css( 'position', 'absolute' );
+	}
+	else
+	{
+		this.m_$Content.css( 'position', 'fixed' );
+	}
 
 	if ( duration )
 	{

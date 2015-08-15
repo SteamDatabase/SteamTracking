@@ -1706,42 +1706,10 @@ body.v6 #footer_nav .popup_menu .hr{
 @media screen and (max-width: 910px)
 {
 	html.responsive .newmodal {
-		position: fixed;
-		top: 12px;
-		left: 12px;
-		right: 12px;
-		bottom: 12px;
 		min-width: 0;
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	html.responsive .newmodal_content_border {
-		max-height: 90%;
-		max-height: calc( 100% - 46px );
-		overflow: auto;
-	}
-	html.responsive .newmodal_content {
-		padding: 8px 2%;
 	}
 
 }
-	html.responsive.touch .newmodal {
-		position: fixed;
-		top: 12px;
-		left: 12px;
-		right: 12px;
-		bottom: 12px;
+	html.responsive .newmodal {
 		min-width: 0;
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	html.responsive.touch .newmodal_content_border {
-		max-height: 90%;
-		max-height: calc( 100% - 46px );
-		overflow: auto;
-	}
-	html.responsive.touch .newmodal_content {
-		padding: 8px 2%;
 	}

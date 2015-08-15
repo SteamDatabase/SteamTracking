@@ -1181,7 +1181,6 @@ var CInventory = Class.create( {
 				$PopupCtn.append( $Scroll.append( $Info ) );
 				$PopupCtn.append( $DismissBtn );
 
-				$J(document.body).css('overflow','hidden');
 				g_ActiveItemPopupModal = new CModal( $Modal.append( $PopupCtn ) );
 				g_ActiveItemPopupModal.SetRemoveContentOnDismissal( true );
 				g_ActiveItemPopupModal.Show();
@@ -1193,7 +1192,6 @@ var CInventory = Class.create( {
 
 				}
 				g_ActiveItemPopupModal.OnDismiss( function() {
-					$J(document.body).css('overflow','');
 					$J('.inventory_page_right' ).append( $Info );
 					g_ActiveItemPopupModal = null;
 				} );
@@ -2947,10 +2945,10 @@ SellItemDialog = {
 		$('market_sell_buyercurrency_input').style.borderColor = '';
 		$('market_sell_buyercurrency_input').style.backgroundColor = '';
 
-		$('market_sell_quantity_input').enable();
-		$('market_sell_currency_input').enable();
-		$('market_sell_buyercurrency_input').enable();
-		$('market_sell_dialog_accept_ssa').enable();
+		//$('market_sell_quantity_input').enable();
+		//$('market_sell_currency_input').enable();
+		//$('market_sell_buyercurrency_input').enable();
+		//$('market_sell_dialog_accept_ssa').enable();
 
 		$('market_sell_dialog_ok').show();
 		$('market_sell_dialog_ok').style.cursor = '';
@@ -3033,33 +3031,36 @@ SellItemDialog = {
 		var _this = this;
 		$J(this.m_elDialogContent).find('.newmodal_close' ).click( function() { _this.m_modal.m_fnBackgroundClick(); } );
 
+
+		$J('#market_sell_currency_input' ).one( 'focus', function() {
+			// move the caret to the correct spot
+			var oPriceInput = $('market_sell_currency_input');
+			if ( oPriceInput.setSelectionRange )
+			{
+				if ( IsCurrencySymbolBeforeValue( currencyCode ) )
+				{
+					// move the caret to the end
+					var length = oPriceInput.value.length;
+					oPriceInput.setSelectionRange( length, length );
+				}
+				else
+				{
+					// caret to the beginning
+					oPriceInput.setSelectionRange( 0, 0 );
+				}
+			}
+			else
+			{
+				var oldval = oPriceInput.value;
+				oPriceInput.value = '';
+				oPriceInput.value = oldval;
+			}
+		} );
+
 		// don't give focus on touch devices - the keyboard appears and will either
 		//	overlap the actual box with focus or scroll the dialog off screen
 		if ( !window.UseTouchFriendlyMode || !window.UseTouchFriendlyMode() )
 			$('market_sell_currency_input').focus();
-
-		// move the caret to the correct spot
-		var oPriceInput = $('market_sell_currency_input');
-		if ( oPriceInput.setSelectionRange )
-		{
-			if ( IsCurrencySymbolBeforeValue( currencyCode ) )
-			{
-				// move the caret to the end
-				var length = oPriceInput.value.length;
-				oPriceInput.setSelectionRange( length, length );
-			}
-			else
-			{
-				// caret to the beginning
-				oPriceInput.setSelectionRange( 0, 0 );
-			}
-		}
-		else
-		{
-			var oldval = oPriceInput.value;
-			oPriceInput.value = '';
-			oPriceInput.value = oldval;
-		}
 
 		// Load price history
 		$J('#pricehistory_container').show();

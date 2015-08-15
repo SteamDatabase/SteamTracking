@@ -3,6 +3,12 @@
 	position: relative;
 }
 
+body.overflow_hidden,
+body.overflow_hidden .responsive_page_frame {
+	overflow: hidden;
+	position: relative;
+}
+
 .responsive_page_content {
 }
 
@@ -72,7 +78,8 @@
 	bottom: 0;
 	right: 0;
 	overflow: hidden;
-	overflow-y: auto;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 .mainmenu_contents {

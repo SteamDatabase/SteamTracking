@@ -25,7 +25,7 @@ jQuery( function($) {
 	var fnResetMenuState = function() {
 		$Frame.removeClass( 'mainmenu_active');
 		$Frame.removeClass('localmenu_active');
-		$J(document.body).css('overflow', '' );
+		$J(document.body).removeClass( 'overflow_hidden' );
 
 		$ContentOverlay.off( 'click.ReponsiveMenuDismiss');
 	};
@@ -99,7 +99,7 @@ jQuery( function($) {
 		var fnDismissMenu = function() {
 			$ContentCtn.off( 'click.ReponsiveMenuDismiss');
 			$Frame.removeClass(strActiveClass);
-			$J(document.body).css('overflow', '' );
+			$J(document.body).removeClass('overflow_hidden' );
 
 			window.setTimeout( function() {
 				if ( !$Frame.hasClass('mainmenu_active') && !$Frame.hasClass('localmenu_active') )
@@ -116,7 +116,7 @@ jQuery( function($) {
 			}
 			else
 			{
-				$J(document.body).css('overflow', 'hidden' );
+				$J(document.body).addClass('overflow_hidden' );
 				$Menu.removeClass('secondary_active');
 				$Frame.addClass( strActiveClass );
 				$ContentOverlay.one( 'click.ResponsiveMenuDismiss', function() {
