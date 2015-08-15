@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.67239948bc4a5ffebcce96ff1a97d3502f6da1db.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.ab55464c6312bbd0c07f1fe3c3ee64e358fc1048.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -2186,6 +2186,181 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2015 CS:GO Champion",
+				"defindex": 904,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Champion at ESL One Cologne 2015",
+				"item_description": "This championship trophy was awarded to the Champion at The ESL One Cologne 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/col_2015_champion",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_champion.9a53984e7eb98fef797d16a9703ceadd7b140de8.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_champion_large.8bc88fbd2f73f61c9a0afbb5b6221542793ada5d.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2015 CS:GO Finalist",
+				"defindex": 905,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Finalist at ESL One Cologne 2015",
+				"item_description": "This championship trophy was awarded to the Finalist at The ESL One Cologne 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/col_2015_finalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_finalist.ad27198ff449ceabafc629e2eb5f200a7e2497da.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_finalist_large.507c4440ad457da4802ebc4eccd01b854f3781ee.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2015 CS:GO Semifinalist",
+				"defindex": 906,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Semifinalist at ESL One Cologne 2015",
+				"item_description": "This championship trophy was awarded to the Semifinalist at The ESL One Cologne 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/col_2015_semifinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_semifinalist.1827467b8c09d69e697e9869b61d743b33556bc1.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_semifinalist_large.5e434d8956fa32b7d597aad5d28bab52cecd8dfe.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2015 CS:GO Quarterfinalist",
+				"defindex": 907,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Quarterfinalist at ESL One Cologne 2015",
+				"item_description": "This championship trophy was awarded to the Quarterfinalist at The ESL One Cologne 2015 CS:GO Championship.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/col_2015_quarterfinalist",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_quarterfinalist.43289576aa03fdad7e9d881d18ad48360f045f3b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_quarterfinalist_large.e97caa5038e0deacc8604acb1632e86115b6dcd2.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2015 Pick 'Em Challenge Bronze",
+				"defindex": 908,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Bronze ESL One Cologne 2015 Pick'Em Challenge Trophy",
+				"item_description": "This bronze trophy was awarded during the ESL One Cologne 2015 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/col_2015_prediction_bronze",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_prediction_bronze.81a926141f1ac7ab84a52a1ff25bf0700a4dee25.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_prediction_bronze_large.165a82bab538997ee6a50efee9d112190b4fe323.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2015 Pick 'Em Challenge Silver",
+				"defindex": 909,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Silver ESL One Cologne 2015 Pick'Em Challenge Trophy",
+				"item_description": "This silver trophy was awarded during the ESL One Cologne 2015 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/col_2015_prediction_silver",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_prediction_silver.c4710e514a82f6d3e43469a9bf332321462e3833.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_prediction_silver_large.59486d939b7ddc2ebef4f12d068db0040f618d92.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "ESL One Cologne 2015 Pick 'Em Challenge Gold",
+				"defindex": 910,
+				"item_class": "collectible_item",
+				"item_type_name": "Collectible",
+				"item_name": "Gold ESL One Cologne 2015 Pick'Em Challenge Trophy",
+				"item_description": "This gold trophy was awarded during the ESL One Cologne 2015 Pick'Em Challenge.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/status_icons/col_2015_prediction_gold",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_prediction_gold.0d7e0fca7006f233357adf793d3ee9adeabc85e9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/col_2015_prediction_gold_large.da514b1dfcc2a2f7c4ef29f96f6d9359123ba89c.png",
+				"craft_class": "collectable",
+				"craft_material_type": "tool",
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
 					}
 				]
 				
@@ -8279,6 +8454,1696 @@
 						"name": "set supply crate series",
 						"class": "supply_crate_series",
 						"value": 50
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_fnatic",
+				"defindex": 4092,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Fnatic | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/fnatic",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/fnatic.d3d7096212ae149d70d077ddab7f4e2ce13af3ea.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/fnatic_large.5f6803ac084a927d453022c16ff67052cc144021.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_virtuspro",
+				"defindex": 4093,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Virtus.Pro | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/virtuspro",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/virtuspro.1907301b9e226a7e9d049219745627aaaab71688.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/virtuspro_large.a290bf9f9422982da08fd9b6c3544df1965667f3.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_mousesports",
+				"defindex": 4094,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "mousesports | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/mousesports",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/mousesports.3e75da497d9f75fa56f463c22db25f29992561ce.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/mousesports_large.54488625d33c89870c8331e1f45bad59331667cc.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_navi",
+				"defindex": 4095,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Natus Vincere | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/navi.38eaac16dd03c9491c37e400a65380b9d8112735.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/navi_large.2afcea86a9066e5cfc6e8430bad366cdf7e5becc.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_renegades",
+				"defindex": 4096,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Renegades | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/renegades",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/renegades.f423ae9e2da9445eb5eccabf89ad7229d9fdefcc.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/renegades_large.1835cf469efad2dbb3ef7ac5ead0f2c757363e8d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_kinguin",
+				"defindex": 4097,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team Kinguin | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/kinguin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/kinguin.8ac2845fdef90419820256cee06c634a0f25c95f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/kinguin_large.181c1613682020d27f0cfd90924ebdc5a88960cb.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_ebettle",
+				"defindex": 4098,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team eBettle | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/ebettle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/ebettle.004edab3669e4ffba2304385fd4abdd827a56145.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/ebettle_large.610f9297822c9f88522d691a56d9b0c51cbe2e0d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_cloud9",
+				"defindex": 4099,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Cloud9 G2A | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/cloud9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/cloud9.5bbc7086b3c2c528546452a32b50a2a769942066.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/cloud9_large.1dc18f936c3860f2c8a781fc6da37256cad7720d.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_ninjasinpyjamas",
+				"defindex": 4100,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Ninjas in Pyjamas | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/ninjasinpyjamas",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/ninjasinpyjamas.688fe5ef66bbf1e61cbdfeff495666091f9b01ee.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/ninjasinpyjamas_large.0fdbd3a405937e33ace895250ee9cb2659784edf.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_envyus",
+				"defindex": 4101,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team EnVyUs | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/envyus",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/envyus.89a88946df01bd6eb9a7e9dc02885ec043671702.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/envyus_large.d784e189d585254bf8bf4d617d73a3944bf9aa8a.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_luminositygaming",
+				"defindex": 4102,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Luminosity Gaming | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/luminositygaming",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/luminositygaming.8f72e622a54c32d3f706e73de0be2f9a44bb86f9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/luminositygaming_large.54fe6da5a2e6c438c3d5b22d66509d27426deb16.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_solomid",
+				"defindex": 4103,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team SoloMid | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/solomid",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/solomid.eb9fe3cd2d2d377f065973f6c05d2e92ff37cc10.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/solomid_large.8b69bbb85d51887dd0e83a68581ddbf3c78e3f8f.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_teamimmunity",
+				"defindex": 4104,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Team Immunity | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/teamimmunity",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/teamimmunity.161950e378400ecc695cf42f45f30dd3e647560f.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/teamimmunity_large.b828628533c691ce5a8ba6efc5da876bf0bee974.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_flipside",
+				"defindex": 4105,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Flipsid3 Tactics | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/flipside",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/flipside.8d441e7ab7fae15a36b261c9fbc8ea4d66be352b.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/flipside_large.b1c24dd5a42f192a4f07e63398eb662de8580da3.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_titan",
+				"defindex": 4106,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Titan | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/titan",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/titan.5059cc4785d26ba50eb5abd39a7c6f35fa4e0ab9.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/titan_large.b0e0885602d786d4f0763541a303d45b16fcf194.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_clg",
+				"defindex": 4107,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Counter Logic Gaming | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/clg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/clg.dd63e11b139ad10c965fa7fbec9a5d5d34bead78.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/clg_large.716d4b3d442f088ccf9987607d3eb63f07bc799c.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_esl",
+				"defindex": 4108,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL | Cologne 2015",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/cologne2015/esl",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/esl.39ca47899dbbe67d8ed074d37a4551ce525abfb1.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2015/esl_large.5e2c2a30caee9d5a14c714671e6cd935d17615ca.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_legends",
+				"defindex": 4109,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2015 Legends (Foil)",
+				"item_description": "This capsule contains a single ESL One Cologne 2015 participant Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_eslcologne2015_01",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_eslcologne2015_01.37874785affc9556f9985f26a8d28dcb23795130.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 51
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_eslcologne2015_challengers",
+				"defindex": 4110,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2015 Challengers (Foil)",
+				"item_description": "This capsule contains a single ESL One Cologne 2015 participant Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_eslcologne2015_02",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_eslcologne2015_02.1912c6b817b404791c8a3d1b4a90acebe003b0b5.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 52
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_group_1",
+				"defindex": 4111,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Group A (Foil) | Cologne 2015",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Group A teams at ESL One Cologne 2015: Ninjas in Pyjamas, Team SoloMid, Renegades, Counter Logic Gaming.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_1",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_1.ef77b4921d3213981ea7c21866a59e33bd2cf755.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 53
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_group_2",
+				"defindex": 4112,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Group B (Foil) | Cologne 2015",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Group B teams at ESL One Cologne 2015: Team EnVyUs, Luminosity Gaming, Team Kinguin, Flipsid3 Tactics.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_2.9a96ebf86e6600672545512b35281213e610a466.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 54
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_group_3",
+				"defindex": 4113,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Group C (Foil) | Cologne 2015",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Group C teams at ESL One Cologne 2015: Fnatic, Natus Vincere, Titan, Team eBettle.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_3.a427cd0396dadefccbb8f3f3180efbfa32af86e0.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 55
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_group_4",
+				"defindex": 4114,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Group D (Foil) | Cologne 2015",
+				"item_description": "This capsule contains a single Foil sticker autographed by one of the players from Group D teams at ESL One Cologne 2015: Virtus.Pro, mousesports, Cloud9 G2A, Team Immunity.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_4",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_4.7ca048d7415dfabe2012e743d7aa150b5d0f57fd.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 56
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_fnatic",
+				"defindex": 4115,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Fnatic | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Fnatic at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_fnatic",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_fnatic.131fb6a9a7430729425c723e70a85fe05a790509.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 57
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 6
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_luminositygaming",
+				"defindex": 4116,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Luminosity Gaming | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Luminosity Gaming at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_luminositygaming",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_luminositygaming.a3153f54ff1ce257e1b8e5271476c55852d3e0c0.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 58
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 57
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_navi",
+				"defindex": 4117,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Natus Vincere | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Natus Vincere at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_navi",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_navi.a455c3031fe2ed9e26ff976fd0e4729e58747997.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 59
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 12
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_ninjasinpyjamas",
+				"defindex": 4118,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Ninjas in Pyjamas | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Ninjas in Pyjamas at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_ninjasinpyjamas",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_ninjasinpyjamas.08186b200f886664121acc544115020f4e7274b9.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 60
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 1
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_envyus",
+				"defindex": 4119,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team EnVyUs | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team EnVyUs at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_envyus",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_envyus.86e41aa7099e2c68982d1d997a9f1578e535969f.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 61
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 46
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_titan",
+				"defindex": 4120,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Titan | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Titan at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_titan",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_titan.2f4f27af898409a628153ffbc991d3581c3a89e2.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 62
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 27
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_solomid",
+				"defindex": 4121,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team SoloMid | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team SoloMid at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_solomid",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_solomid.0cf93bb22c101d93f96584ee1ac875766cd7f731.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 63
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 58
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_virtuspro",
+				"defindex": 4122,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Virtus.Pro | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Virtus.Pro at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_virtuspro",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_virtuspro.fd1d9f7a7f03458b317d0b4e39351c5a60da0519.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 64
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 31
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_mousesports",
+				"defindex": 4123,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | mousesports | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from mousesports at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_mousesports",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_mousesports.8c95e4941107ce30cbeb51f52c1861f726278d2f.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 65
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 29
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_renegades",
+				"defindex": 4124,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Renegades | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Renegades at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_renegades",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_renegades.8ac632d013c90cd6f29c6efc9093ea93840858db.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 66
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 53
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_teamimmunity",
+				"defindex": 4125,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team Immunity | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team Immunity at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_teamimmunity",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_teamimmunity.0130e27679add9a8ab9c959c770312d76a394bc1.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 67
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 54
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_ebettle",
+				"defindex": 4126,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team eBettle | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team eBettle at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_ebettle",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_ebettle.eb534ef07f786022c07609deffe293450e759d2d.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 68
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 56
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_kinguin",
+				"defindex": 4127,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Team Kinguin | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Team Kinguin at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_kinguin",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_kinguin.2b65e6cc0d8dba62d677aa25895ccf80b030b2aa.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 69
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 55
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_flipside",
+				"defindex": 4128,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Flipsid3 Tactics | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Flipsid3 Tactics at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_flipside",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_flipside.01a3a5bfb385f3e1d5ebfd4b233436c8b0788538.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 70
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 43
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_clg",
+				"defindex": 4129,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Counter Logic Gaming | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Counter Logic Gaming at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_clg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_clg.40faf67598c471ef0db25cb039755631ff14fb4f.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 71
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 49
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_eslcologne2015_cloud9",
+				"defindex": 4130,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Autograph Capsule | Cloud9 G2A | Cologne 2015",
+				"item_description": "This capsule contains a single sticker autographed by one of the players from Cloud9 G2A at ESL One Cologne 2015.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/cologne2015_cloud9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/cologne2015_cloud9.1ae20ce78cf35bc6e8d16d22c936bfe50a3d9e33.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 72
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					},
+					{
+						"name": "tournament event team0 id",
+						"class": "tournament_event_team_id",
+						"value": 52
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslcologne2015_promo_de_dust2",
+				"defindex": 4131,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2015 Dust II Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslcologne2015_promo_de_dust2",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_eslcologne2015_promo_de_dust2.ecdaa935c5df5e374878003893bb4ffec789aed3.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 73
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslcologne2015_promo_de_mirage",
+				"defindex": 4132,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2015 Mirage Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslcologne2015_promo_de_mirage",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_eslcologne2015_promo_de_mirage.cd633c421896f165a2575204d9d5f908499a918a.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 74
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslcologne2015_promo_de_inferno",
+				"defindex": 4133,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2015 Inferno Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslcologne2015_promo_de_inferno",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_eslcologne2015_promo_de_inferno.a0929e27c262e59b5b1198743bc2194d92aa2ff6.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 75
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslcologne2015_promo_de_cbble",
+				"defindex": 4134,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2015 Cobblestone Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslcologne2015_promo_de_cbble",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_eslcologne2015_promo_de_cbble.62138434ebaeb6ebdc4ddf09647bf9d173929048.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 76
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslcologne2015_promo_de_overpass",
+				"defindex": 4135,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2015 Overpass Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslcologne2015_promo_de_overpass",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_eslcologne2015_promo_de_overpass.cadbf695630fb527e72f6e2df689aa186fc3dba0.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 77
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslcologne2015_promo_de_cache",
+				"defindex": 4136,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2015 Cache Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslcologne2015_promo_de_cache",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_eslcologne2015_promo_de_cache.c9cea9d03c09a923524379c6706f3851ccc750df.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 78
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_eslcologne2015_promo_de_train",
+				"defindex": 4137,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "ESL One Cologne 2015 Train Souvenir Package",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_eslcologne2015_promo_de_train",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_eslcologne2015_promo_de_train.a7f35dc2af6523bae268f2d289f8e2401cc93418.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 79
+					},
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 7
 					}
 				]
 				
@@ -14636,6 +16501,14 @@
 				"description_format": "value_is_date",
 				"effect_type": "positive",
 				"hidden": false,
+				"stored_as_integer": true
+			},
+			{
+				"name": "tournament mvp account id",
+				"defindex": 223,
+				"attribute_class": "tournament_mvp_account_id",
+				"effect_type": "positive",
+				"hidden": true,
 				"stored_as_integer": true
 			}
 		]

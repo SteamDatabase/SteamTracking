@@ -9715,6 +9715,13 @@
 					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_tec9_decal_c.mdl"
 					"worldmodel_decal_pos"		"3.56948 -1.44876 4.78239"
 				}
+				"3"
+				{
+					"viewmodel_material"		"materials/models/weapons/customization/pist_tec9/pist_tec9_decal_d.vmt"
+					"viewmodel_geometry"		"models/weapons/stickers/v_models/pist_tec9_decal_d.mdl"
+					"worldmodel_decal_pos"		"-1.37183 -1.05785 -4.82885"
+					"worldmodel_decal_end"		"-1.37183 -1.05785 0.557401"
+				}
 			}
 			"used_by_classes"
 			{
@@ -11824,6 +11831,20 @@
 				}
 			}
 		}
+		"eslcologne2015_sticker_capsule_prefab"
+		{
+			"first_sale_date"		"2015/8/10"
+			"prefab"		"weapon_case_base"
+			"item_type"		"self_opening_purchase"
+			"attributes"
+			{
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+		}
 		"campaign_prefab"
 		{
 			"image_inventory"		"econ/tools/campaign"
@@ -13185,6 +13206,125 @@
 				{
 					"attribute_class"		"tournament_event_id"
 					"value"		"6"
+				}
+			}
+		}
+		"904"
+		{
+			"name"		"ESL One Cologne 2015 CS:GO Champion"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2015_Champion"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2015_Champion_Desc"
+			"image_inventory"		"econ/status_icons/col_2015_champion"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/col2015_trophy_champion.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+		}
+		"905"
+		{
+			"name"		"ESL One Cologne 2015 CS:GO Finalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2015_Finalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2015_Finalist_Desc"
+			"image_inventory"		"econ/status_icons/col_2015_finalist"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/col2015_trophy_finalist.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+		}
+		"906"
+		{
+			"name"		"ESL One Cologne 2015 CS:GO Semifinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2015_SemiFinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2015_SemiFinalist_Desc"
+			"image_inventory"		"econ/status_icons/col_2015_semifinalist"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/col2015_trophy_semifinalist.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+		}
+		"907"
+		{
+			"name"		"ESL One Cologne 2015 CS:GO Quarterfinalist"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2015_QuarterFinalist"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2015_QuarterFinalist_Desc"
+			"image_inventory"		"econ/status_icons/col_2015_quarterfinalist"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/col2015_trophy_quarterfinalist.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+		}
+		"908"
+		{
+			"name"		"ESL One Cologne 2015 Pick 'Em Challenge Bronze"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2015_PickEmBronze"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2015_PickEmBronze_Desc"
+			"image_inventory"		"econ/status_icons/col_2015_prediction_bronze"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/cologne_pickem_2015_bronze.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+		}
+		"909"
+		{
+			"name"		"ESL One Cologne 2015 Pick 'Em Challenge Silver"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2015_PickEmSilver"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2015_PickEmSilver_Desc"
+			"image_inventory"		"econ/status_icons/col_2015_prediction_silver"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/cologne_pickem_2015_silver.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+		}
+		"910"
+		{
+			"name"		"ESL One Cologne 2015 Pick 'Em Challenge Gold"
+			"prefab"		"collectible_untradable"
+			"item_name"		"#CSGO_CollectibleCoin_Cologne2015_PickEmGold"
+			"item_description"		"#CSGO_CollectibleCoin_Cologne2015_PickEmGold_Desc"
+			"image_inventory"		"econ/status_icons/col_2015_prediction_gold"
+			"attributes"
+			{
+				"pedestal display model"		"models/inventory_items/cologne_pickem_2015_gold.mdl"
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
 				}
 			}
 		}
@@ -16308,6 +16448,993 @@
 			"loot_list_rare_item_footer"		"#crate_community_8_unusual_lootlist"
 			"loot_list_rare_item_name"		"#crate_community_8_unusual_itemname"
 			"image_unusual_item"		"econ/weapon_cases/crate_community_8_rare_item"
+		}
+		"4092"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_fnatic"
+			"name"		"crate_sticker_pack_eslcologne2015_fnatic"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_fnatic"
+			"image_inventory"		"econ/stickers/cologne2015/fnatic"
+			"loot_list_name"		"eslcologne2015_rare_fnatic"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4093"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_virtuspro"
+			"name"		"crate_sticker_pack_eslcologne2015_virtuspro"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_virtuspro"
+			"image_inventory"		"econ/stickers/cologne2015/virtuspro"
+			"loot_list_name"		"eslcologne2015_rare_virtuspro"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4094"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_mousesports"
+			"name"		"crate_sticker_pack_eslcologne2015_mousesports"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_mousesports"
+			"image_inventory"		"econ/stickers/cologne2015/mousesports"
+			"loot_list_name"		"eslcologne2015_rare_mousesports"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4095"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_navi"
+			"name"		"crate_sticker_pack_eslcologne2015_navi"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_navi"
+			"image_inventory"		"econ/stickers/cologne2015/navi"
+			"loot_list_name"		"eslcologne2015_rare_navi"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4096"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_renegades"
+			"name"		"crate_sticker_pack_eslcologne2015_renegades"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_renegades"
+			"image_inventory"		"econ/stickers/cologne2015/renegades"
+			"loot_list_name"		"eslcologne2015_rare_renegades"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4097"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_kinguin"
+			"name"		"crate_sticker_pack_eslcologne2015_kinguin"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_kinguin"
+			"image_inventory"		"econ/stickers/cologne2015/kinguin"
+			"loot_list_name"		"eslcologne2015_rare_kinguin"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4098"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_ebettle"
+			"name"		"crate_sticker_pack_eslcologne2015_ebettle"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_ebettle"
+			"image_inventory"		"econ/stickers/cologne2015/ebettle"
+			"loot_list_name"		"eslcologne2015_rare_ebettle"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4099"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_cloud9"
+			"name"		"crate_sticker_pack_eslcologne2015_cloud9"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_cloud9"
+			"image_inventory"		"econ/stickers/cologne2015/cloud9"
+			"loot_list_name"		"eslcologne2015_rare_cloud9"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4100"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_ninjasinpyjamas"
+			"name"		"crate_sticker_pack_eslcologne2015_ninjasinpyjamas"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_ninjasinpyjamas"
+			"image_inventory"		"econ/stickers/cologne2015/ninjasinpyjamas"
+			"loot_list_name"		"eslcologne2015_rare_ninjasinpyjamas"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4101"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_envyus"
+			"name"		"crate_sticker_pack_eslcologne2015_envyus"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_envyus"
+			"image_inventory"		"econ/stickers/cologne2015/envyus"
+			"loot_list_name"		"eslcologne2015_rare_envyus"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4102"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_luminositygaming"
+			"name"		"crate_sticker_pack_eslcologne2015_luminositygaming"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_luminositygaming"
+			"image_inventory"		"econ/stickers/cologne2015/luminositygaming"
+			"loot_list_name"		"eslcologne2015_rare_luminositygaming"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4103"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_solomid"
+			"name"		"crate_sticker_pack_eslcologne2015_solomid"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_solomid"
+			"image_inventory"		"econ/stickers/cologne2015/solomid"
+			"loot_list_name"		"eslcologne2015_rare_solomid"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4104"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_teamimmunity"
+			"name"		"crate_sticker_pack_eslcologne2015_teamimmunity"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_teamimmunity"
+			"image_inventory"		"econ/stickers/cologne2015/teamimmunity"
+			"loot_list_name"		"eslcologne2015_rare_teamimmunity"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4105"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_flipside"
+			"name"		"crate_sticker_pack_eslcologne2015_flipside"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_flipside"
+			"image_inventory"		"econ/stickers/cologne2015/flipside"
+			"loot_list_name"		"eslcologne2015_rare_flipside"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4106"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_titan"
+			"name"		"crate_sticker_pack_eslcologne2015_titan"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_titan"
+			"image_inventory"		"econ/stickers/cologne2015/titan"
+			"loot_list_name"		"eslcologne2015_rare_titan"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4107"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_clg"
+			"name"		"crate_sticker_pack_eslcologne2015_clg"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_clg"
+			"image_inventory"		"econ/stickers/cologne2015/clg"
+			"loot_list_name"		"eslcologne2015_rare_clg"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4108"
+		{
+			"item_name"		"#StickerKit_eslcologne2015_team_esl"
+			"name"		"crate_sticker_pack_eslcologne2015_esl"
+			"item_description"		"#StickerKit_desc_eslcologne2015_team_esl"
+			"image_inventory"		"econ/stickers/cologne2015/esl"
+			"loot_list_name"		"eslcologne2015_rare_esl"
+			"prefab"		"eslcologne2015_sticker_capsule_prefab"
+		}
+		"4109"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_eslcologne2015_legends"
+			"name"		"crate_sticker_pack_eslcologne2015_legends"
+			"item_description"		"#CSGO_crate_sticker_pack_eslcologne2015_legends_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_eslcologne2015_01"
+			"first_sale_date"		"2015/8/10"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"51"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_eslcologne2015_legends_collection"
+					"tag_text"		"#CSGO_crate_sticker_pack_eslcologne2015_legends_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+		"4110"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_eslcologne2015_challengers"
+			"name"		"crate_sticker_pack_eslcologne2015_challengers"
+			"item_description"		"#CSGO_crate_sticker_pack_eslcologne2015_challengers_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_eslcologne2015_02"
+			"first_sale_date"		"2015/8/10"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"52"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_eslcologne2015_challengers_collection"
+					"tag_text"		"#CSGO_crate_sticker_pack_eslcologne2015_challengers_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+		"4111"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_group_1"
+			"name"		"crate_signature_pack_eslcologne2015_group_1"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_group_1_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_1"
+			"first_sale_date"		"2015/8/10"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"53"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_signature_pack_eslcologne2015_group_players_collection"
+					"tag_text"		"#CSGO_crate_signature_pack_eslcologne2015_group_players_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+		"4112"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_group_2"
+			"name"		"crate_signature_pack_eslcologne2015_group_2"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_group_2_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_2"
+			"first_sale_date"		"2015/8/10"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"54"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_signature_pack_eslcologne2015_group_players_collection"
+					"tag_text"		"#CSGO_crate_signature_pack_eslcologne2015_group_players_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+		"4113"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_group_3"
+			"name"		"crate_signature_pack_eslcologne2015_group_3"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_group_3_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_3"
+			"first_sale_date"		"2015/8/10"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"55"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_signature_pack_eslcologne2015_group_players_collection"
+					"tag_text"		"#CSGO_crate_signature_pack_eslcologne2015_group_players_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+		"4114"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_group_4"
+			"name"		"crate_signature_pack_eslcologne2015_group_4"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_group_4_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_eslcologne2015_group_4"
+			"first_sale_date"		"2015/8/10"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"56"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_signature_pack_eslcologne2015_group_players_collection"
+					"tag_text"		"#CSGO_crate_signature_pack_eslcologne2015_group_players_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+		"4115"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_fnatic"
+			"name"		"crate_signature_pack_eslcologne2015_fnatic"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_fnatic_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_fnatic"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"57"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"6"
+				}
+			}
+		}
+		"4116"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_luminositygaming"
+			"name"		"crate_signature_pack_eslcologne2015_luminositygaming"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_luminositygaming_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_luminositygaming"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"58"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"57"
+				}
+			}
+		}
+		"4117"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_navi"
+			"name"		"crate_signature_pack_eslcologne2015_navi"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_navi_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_navi"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"59"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"12"
+				}
+			}
+		}
+		"4118"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_ninjasinpyjamas"
+			"name"		"crate_signature_pack_eslcologne2015_ninjasinpyjamas"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_ninjasinpyjamas_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_ninjasinpyjamas"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"60"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"1"
+				}
+			}
+		}
+		"4119"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_envyus"
+			"name"		"crate_signature_pack_eslcologne2015_envyus"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_envyus_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_envyus"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"61"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"46"
+				}
+			}
+		}
+		"4120"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_titan"
+			"name"		"crate_signature_pack_eslcologne2015_titan"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_titan_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_titan"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"62"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"27"
+				}
+			}
+		}
+		"4121"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_solomid"
+			"name"		"crate_signature_pack_eslcologne2015_solomid"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_solomid_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_solomid"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"63"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"58"
+				}
+			}
+		}
+		"4122"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_virtuspro"
+			"name"		"crate_signature_pack_eslcologne2015_virtuspro"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_virtuspro_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_virtuspro"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"64"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"31"
+				}
+			}
+		}
+		"4123"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_mousesports"
+			"name"		"crate_signature_pack_eslcologne2015_mousesports"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_mousesports_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_mousesports"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"65"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"29"
+				}
+			}
+		}
+		"4124"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_renegades"
+			"name"		"crate_signature_pack_eslcologne2015_renegades"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_renegades_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_renegades"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"66"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"53"
+				}
+			}
+		}
+		"4125"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_teamimmunity"
+			"name"		"crate_signature_pack_eslcologne2015_teamimmunity"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_teamimmunity_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_teamimmunity"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"67"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"54"
+				}
+			}
+		}
+		"4126"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_ebettle"
+			"name"		"crate_signature_pack_eslcologne2015_ebettle"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_ebettle_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_ebettle"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"68"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"56"
+				}
+			}
+		}
+		"4127"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_kinguin"
+			"name"		"crate_signature_pack_eslcologne2015_kinguin"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_kinguin_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_kinguin"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"69"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"55"
+				}
+			}
+		}
+		"4128"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_flipside"
+			"name"		"crate_signature_pack_eslcologne2015_flipside"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_flipside_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_flipside"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"70"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"43"
+				}
+			}
+		}
+		"4129"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_clg"
+			"name"		"crate_signature_pack_eslcologne2015_clg"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_clg_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_clg"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"71"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"49"
+				}
+			}
+		}
+		"4130"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_eslcologne2015_cloud9"
+			"name"		"crate_signature_pack_eslcologne2015_cloud9"
+			"item_description"		"#CSGO_crate_signature_pack_eslcologne2015_cloud9_desc"
+			"image_inventory"		"econ/weapon_cases/cologne2015_cloud9"
+			"prefab"		"weapon_case_base"
+			"first_sale_date"		"2015/8/10"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"72"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+				"tournament event team0 id"
+				{
+					"attribute_class"		"tournament_event_team_id"
+					"value"		"52"
+				}
+			}
+		}
+		"4131"
+		{
+			"item_name"		"#CSGO_crate_eslcologne2015_promo_de_dust2"
+			"name"		"crate_eslcologne2015_promo_de_dust2"
+			"image_inventory"		"econ/weapon_cases/crate_eslcologne2015_promo_de_dust2"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"73"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_dust_2"
+					"tag_text"		"#CSGO_set_dust_2"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4132"
+		{
+			"item_name"		"#CSGO_crate_eslcologne2015_promo_de_mirage"
+			"name"		"crate_eslcologne2015_promo_de_mirage"
+			"image_inventory"		"econ/weapon_cases/crate_eslcologne2015_promo_de_mirage"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"74"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_mirage"
+					"tag_text"		"#CSGO_set_mirage"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4133"
+		{
+			"item_name"		"#CSGO_crate_eslcologne2015_promo_de_inferno"
+			"name"		"crate_eslcologne2015_promo_de_inferno"
+			"image_inventory"		"econ/weapon_cases/crate_eslcologne2015_promo_de_inferno"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"75"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_inferno"
+					"tag_text"		"#CSGO_set_inferno"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4134"
+		{
+			"item_name"		"#CSGO_crate_eslcologne2015_promo_de_cbble"
+			"name"		"crate_eslcologne2015_promo_de_cbble"
+			"image_inventory"		"econ/weapon_cases/crate_eslcologne2015_promo_de_cbble"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"76"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_cobblestone"
+					"tag_text"		"#CSGO_set_cobblestone"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4135"
+		{
+			"item_name"		"#CSGO_crate_eslcologne2015_promo_de_overpass"
+			"name"		"crate_eslcologne2015_promo_de_overpass"
+			"image_inventory"		"econ/weapon_cases/crate_eslcologne2015_promo_de_overpass"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"77"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_overpass"
+					"tag_text"		"#CSGO_set_overpass"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4136"
+		{
+			"item_name"		"#CSGO_crate_eslcologne2015_promo_de_cache"
+			"name"		"crate_eslcologne2015_promo_de_cache"
+			"image_inventory"		"econ/weapon_cases/crate_eslcologne2015_promo_de_cache"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"78"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_cache"
+					"tag_text"		"#CSGO_set_cache"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+		}
+		"4137"
+		{
+			"item_name"		"#CSGO_crate_eslcologne2015_promo_de_train"
+			"name"		"crate_eslcologne2015_promo_de_train"
+			"image_inventory"		"econ/weapon_cases/crate_eslcologne2015_promo_de_train"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"79"
+				}
+				"tournament event id"
+				{
+					"attribute_class"		"tournament_event_id"
+					"value"		"7"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_train"
+					"tag_text"		"#CSGO_set_train"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
 		}
 		"6001"
 		{
@@ -20204,6 +21331,15 @@
 			"effect_type"		"positive"
 			"stored_as_integer"		"1"
 		}
+		"223"
+		{
+			"name"		"tournament mvp account id"
+			"attribute_class"		"tournament_mvp_account_id"
+			"description_format"		"value_is_additive"
+			"hidden"		"1"
+			"effect_type"		"positive"
+			"stored_as_integer"		"1"
+		}
 	}
 	"sticker_kits"
 	{
@@ -23568,6 +24704,3153 @@
 			"description_string"		"#StickerKit_desc_comm02_delicious_tears"
 			"sticker_material"		"community02/delicious_tears"
 			"item_rarity"		"rare"
+		}
+		"380"
+		{
+			"name"		"eslcologne2015_signature_pronax"
+			"item_name"		"#StickerKit_eslcologne2015_signature_pronax"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_pronax"
+			"sticker_material"		"cologne2015/sig_pronax"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"9419182"
+		}
+		"381"
+		{
+			"name"		"eslcologne2015_signature_pronax_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_pronax_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_pronax_foil"
+			"sticker_material"		"cologne2015/sig_pronax_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"9419182"
+		}
+		"382"
+		{
+			"name"		"eslcologne2015_signature_pronax_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_pronax_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_pronax_gold"
+			"sticker_material"		"cologne2015/sig_pronax_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"9419182"
+		}
+		"383"
+		{
+			"name"		"eslcologne2015_signature_flusha"
+			"item_name"		"#StickerKit_eslcologne2015_signature_flusha"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_flusha"
+			"sticker_material"		"cologne2015/sig_flusha"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"31082355"
+		}
+		"384"
+		{
+			"name"		"eslcologne2015_signature_flusha_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_flusha_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_flusha_foil"
+			"sticker_material"		"cologne2015/sig_flusha_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"31082355"
+		}
+		"385"
+		{
+			"name"		"eslcologne2015_signature_flusha_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_flusha_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_flusha_gold"
+			"sticker_material"		"cologne2015/sig_flusha_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"31082355"
+		}
+		"386"
+		{
+			"name"		"eslcologne2015_signature_jw"
+			"item_name"		"#StickerKit_eslcologne2015_signature_jw"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_jw"
+			"sticker_material"		"cologne2015/sig_jw"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71288472"
+		}
+		"387"
+		{
+			"name"		"eslcologne2015_signature_jw_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_jw_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_jw_foil"
+			"sticker_material"		"cologne2015/sig_jw_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71288472"
+		}
+		"388"
+		{
+			"name"		"eslcologne2015_signature_jw_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_jw_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_jw_gold"
+			"sticker_material"		"cologne2015/sig_jw_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71288472"
+		}
+		"389"
+		{
+			"name"		"eslcologne2015_signature_krimz"
+			"item_name"		"#StickerKit_eslcologne2015_signature_krimz"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_krimz"
+			"sticker_material"		"cologne2015/sig_krimz"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71385856"
+		}
+		"390"
+		{
+			"name"		"eslcologne2015_signature_krimz_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_krimz_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_krimz_foil"
+			"sticker_material"		"cologne2015/sig_krimz_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71385856"
+		}
+		"391"
+		{
+			"name"		"eslcologne2015_signature_krimz_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_krimz_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_krimz_gold"
+			"sticker_material"		"cologne2015/sig_krimz_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"71385856"
+		}
+		"392"
+		{
+			"name"		"eslcologne2015_signature_olofmeister"
+			"item_name"		"#StickerKit_eslcologne2015_signature_olofmeister"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_olofmeister"
+			"sticker_material"		"cologne2015/sig_olofmeister"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"28361465"
+		}
+		"393"
+		{
+			"name"		"eslcologne2015_signature_olofmeister_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_olofmeister_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_olofmeister_foil"
+			"sticker_material"		"cologne2015/sig_olofmeister_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"28361465"
+		}
+		"394"
+		{
+			"name"		"eslcologne2015_signature_olofmeister_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_olofmeister_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_olofmeister_gold"
+			"sticker_material"		"cologne2015/sig_olofmeister_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+			"tournament_player_id"		"28361465"
+		}
+		"395"
+		{
+			"name"		"eslcologne2015_signature_fallen"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fallen"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fallen"
+			"sticker_material"		"cologne2015/sig_fallen"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"424467"
+		}
+		"396"
+		{
+			"name"		"eslcologne2015_signature_fallen_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fallen_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fallen_foil"
+			"sticker_material"		"cologne2015/sig_fallen_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"424467"
+		}
+		"397"
+		{
+			"name"		"eslcologne2015_signature_fallen_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fallen_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fallen_gold"
+			"sticker_material"		"cologne2015/sig_fallen_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"424467"
+		}
+		"398"
+		{
+			"name"		"eslcologne2015_signature_steel"
+			"item_name"		"#StickerKit_eslcologne2015_signature_steel"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_steel"
+			"sticker_material"		"cologne2015/sig_steel"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"54512474"
+		}
+		"399"
+		{
+			"name"		"eslcologne2015_signature_steel_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_steel_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_steel_foil"
+			"sticker_material"		"cologne2015/sig_steel_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"54512474"
+		}
+		"400"
+		{
+			"name"		"eslcologne2015_signature_steel_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_steel_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_steel_gold"
+			"sticker_material"		"cologne2015/sig_steel_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"54512474"
+		}
+		"401"
+		{
+			"name"		"eslcologne2015_signature_fer"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fer"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fer"
+			"sticker_material"		"cologne2015/sig_fer"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"38921219"
+		}
+		"402"
+		{
+			"name"		"eslcologne2015_signature_fer_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fer_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fer_foil"
+			"sticker_material"		"cologne2015/sig_fer_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"38921219"
+		}
+		"403"
+		{
+			"name"		"eslcologne2015_signature_fer_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fer_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fer_gold"
+			"sticker_material"		"cologne2015/sig_fer_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"38921219"
+		}
+		"404"
+		{
+			"name"		"eslcologne2015_signature_boltz"
+			"item_name"		"#StickerKit_eslcologne2015_signature_boltz"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_boltz"
+			"sticker_material"		"cologne2015/sig_boltz"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"58113672"
+		}
+		"405"
+		{
+			"name"		"eslcologne2015_signature_boltz_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_boltz_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_boltz_foil"
+			"sticker_material"		"cologne2015/sig_boltz_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"58113672"
+		}
+		"406"
+		{
+			"name"		"eslcologne2015_signature_boltz_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_boltz_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_boltz_gold"
+			"sticker_material"		"cologne2015/sig_boltz_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"58113672"
+		}
+		"407"
+		{
+			"name"		"eslcologne2015_signature_coldzera"
+			"item_name"		"#StickerKit_eslcologne2015_signature_coldzera"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_coldzera"
+			"sticker_material"		"cologne2015/sig_coldzera"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"79720871"
+		}
+		"408"
+		{
+			"name"		"eslcologne2015_signature_coldzera_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_coldzera_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_coldzera_foil"
+			"sticker_material"		"cologne2015/sig_coldzera_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"79720871"
+		}
+		"409"
+		{
+			"name"		"eslcologne2015_signature_coldzera_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_coldzera_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_coldzera_gold"
+			"sticker_material"		"cologne2015/sig_coldzera_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+			"tournament_player_id"		"79720871"
+		}
+		"410"
+		{
+			"name"		"eslcologne2015_signature_guardian"
+			"item_name"		"#StickerKit_eslcologne2015_signature_guardian"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_guardian"
+			"sticker_material"		"cologne2015/sig_guardian"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"12065295"
+		}
+		"411"
+		{
+			"name"		"eslcologne2015_signature_guardian_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_guardian_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_guardian_foil"
+			"sticker_material"		"cologne2015/sig_guardian_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"12065295"
+		}
+		"412"
+		{
+			"name"		"eslcologne2015_signature_guardian_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_guardian_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_guardian_gold"
+			"sticker_material"		"cologne2015/sig_guardian_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"12065295"
+		}
+		"413"
+		{
+			"name"		"eslcologne2015_signature_zeus"
+			"item_name"		"#StickerKit_eslcologne2015_signature_zeus"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_zeus"
+			"sticker_material"		"cologne2015/sig_zeus"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"59062744"
+		}
+		"414"
+		{
+			"name"		"eslcologne2015_signature_zeus_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_zeus_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_zeus_foil"
+			"sticker_material"		"cologne2015/sig_zeus_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"59062744"
+		}
+		"415"
+		{
+			"name"		"eslcologne2015_signature_zeus_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_zeus_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_zeus_gold"
+			"sticker_material"		"cologne2015/sig_zeus_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"59062744"
+		}
+		"416"
+		{
+			"name"		"eslcologne2015_signature_seized"
+			"item_name"		"#StickerKit_eslcologne2015_signature_seized"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_seized"
+			"sticker_material"		"cologne2015/sig_seized"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"3648428"
+		}
+		"417"
+		{
+			"name"		"eslcologne2015_signature_seized_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_seized_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_seized_foil"
+			"sticker_material"		"cologne2015/sig_seized_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"3648428"
+		}
+		"418"
+		{
+			"name"		"eslcologne2015_signature_seized_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_seized_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_seized_gold"
+			"sticker_material"		"cologne2015/sig_seized_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"3648428"
+		}
+		"419"
+		{
+			"name"		"eslcologne2015_signature_edward"
+			"item_name"		"#StickerKit_eslcologne2015_signature_edward"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_edward"
+			"sticker_material"		"cologne2015/sig_edward"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"23429534"
+		}
+		"420"
+		{
+			"name"		"eslcologne2015_signature_edward_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_edward_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_edward_foil"
+			"sticker_material"		"cologne2015/sig_edward_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"23429534"
+		}
+		"421"
+		{
+			"name"		"eslcologne2015_signature_edward_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_edward_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_edward_gold"
+			"sticker_material"		"cologne2015/sig_edward_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"23429534"
+		}
+		"422"
+		{
+			"name"		"eslcologne2015_signature_flamie"
+			"item_name"		"#StickerKit_eslcologne2015_signature_flamie"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_flamie"
+			"sticker_material"		"cologne2015/sig_flamie"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"156257548"
+		}
+		"423"
+		{
+			"name"		"eslcologne2015_signature_flamie_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_flamie_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_flamie_foil"
+			"sticker_material"		"cologne2015/sig_flamie_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"156257548"
+		}
+		"424"
+		{
+			"name"		"eslcologne2015_signature_flamie_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_flamie_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_flamie_gold"
+			"sticker_material"		"cologne2015/sig_flamie_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+			"tournament_player_id"		"156257548"
+		}
+		"425"
+		{
+			"name"		"eslcologne2015_signature_xizt"
+			"item_name"		"#StickerKit_eslcologne2015_signature_xizt"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_xizt"
+			"sticker_material"		"cologne2015/sig_xizt"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"26224992"
+		}
+		"426"
+		{
+			"name"		"eslcologne2015_signature_xizt_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_xizt_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_xizt_foil"
+			"sticker_material"		"cologne2015/sig_xizt_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"26224992"
+		}
+		"427"
+		{
+			"name"		"eslcologne2015_signature_xizt_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_xizt_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_xizt_gold"
+			"sticker_material"		"cologne2015/sig_xizt_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"26224992"
+		}
+		"428"
+		{
+			"name"		"eslcologne2015_signature_forest"
+			"item_name"		"#StickerKit_eslcologne2015_signature_forest"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_forest"
+			"sticker_material"		"cologne2015/sig_forest"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"93724"
+		}
+		"429"
+		{
+			"name"		"eslcologne2015_signature_forest_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_forest_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_forest_foil"
+			"sticker_material"		"cologne2015/sig_forest_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"93724"
+		}
+		"430"
+		{
+			"name"		"eslcologne2015_signature_forest_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_forest_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_forest_gold"
+			"sticker_material"		"cologne2015/sig_forest_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"93724"
+		}
+		"431"
+		{
+			"name"		"eslcologne2015_signature_getright"
+			"item_name"		"#StickerKit_eslcologne2015_signature_getright"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_getright"
+			"sticker_material"		"cologne2015/sig_getright"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"21771190"
+		}
+		"432"
+		{
+			"name"		"eslcologne2015_signature_getright_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_getright_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_getright_foil"
+			"sticker_material"		"cologne2015/sig_getright_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"21771190"
+		}
+		"433"
+		{
+			"name"		"eslcologne2015_signature_getright_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_getright_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_getright_gold"
+			"sticker_material"		"cologne2015/sig_getright_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"21771190"
+		}
+		"434"
+		{
+			"name"		"eslcologne2015_signature_friberg"
+			"item_name"		"#StickerKit_eslcologne2015_signature_friberg"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_friberg"
+			"sticker_material"		"cologne2015/sig_friberg"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"24295201"
+		}
+		"435"
+		{
+			"name"		"eslcologne2015_signature_friberg_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_friberg_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_friberg_foil"
+			"sticker_material"		"cologne2015/sig_friberg_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"24295201"
+		}
+		"436"
+		{
+			"name"		"eslcologne2015_signature_friberg_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_friberg_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_friberg_gold"
+			"sticker_material"		"cologne2015/sig_friberg_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"24295201"
+		}
+		"437"
+		{
+			"name"		"eslcologne2015_signature_allu"
+			"item_name"		"#StickerKit_eslcologne2015_signature_allu"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_allu"
+			"sticker_material"		"cologne2015/sig_allu"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"1345246"
+		}
+		"438"
+		{
+			"name"		"eslcologne2015_signature_allu_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_allu_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_allu_foil"
+			"sticker_material"		"cologne2015/sig_allu_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"1345246"
+		}
+		"439"
+		{
+			"name"		"eslcologne2015_signature_allu_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_allu_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_allu_gold"
+			"sticker_material"		"cologne2015/sig_allu_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+			"tournament_player_id"		"1345246"
+		}
+		"440"
+		{
+			"name"		"eslcologne2015_signature_kennys"
+			"item_name"		"#StickerKit_eslcologne2015_signature_kennys"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_kennys"
+			"sticker_material"		"cologne2015/sig_kennys"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"64640068"
+		}
+		"441"
+		{
+			"name"		"eslcologne2015_signature_kennys_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_kennys_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_kennys_foil"
+			"sticker_material"		"cologne2015/sig_kennys_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"64640068"
+		}
+		"442"
+		{
+			"name"		"eslcologne2015_signature_kennys_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_kennys_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_kennys_gold"
+			"sticker_material"		"cologne2015/sig_kennys_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"64640068"
+		}
+		"443"
+		{
+			"name"		"eslcologne2015_signature_kioshima"
+			"item_name"		"#StickerKit_eslcologne2015_signature_kioshima"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_kioshima"
+			"sticker_material"		"cologne2015/sig_kioshima"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"40517167"
+		}
+		"444"
+		{
+			"name"		"eslcologne2015_signature_kioshima_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_kioshima_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_kioshima_foil"
+			"sticker_material"		"cologne2015/sig_kioshima_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"40517167"
+		}
+		"445"
+		{
+			"name"		"eslcologne2015_signature_kioshima_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_kioshima_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_kioshima_gold"
+			"sticker_material"		"cologne2015/sig_kioshima_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"40517167"
+		}
+		"446"
+		{
+			"name"		"eslcologne2015_signature_happy"
+			"item_name"		"#StickerKit_eslcologne2015_signature_happy"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_happy"
+			"sticker_material"		"cologne2015/sig_happy"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"17975624"
+		}
+		"447"
+		{
+			"name"		"eslcologne2015_signature_happy_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_happy_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_happy_foil"
+			"sticker_material"		"cologne2015/sig_happy_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"17975624"
+		}
+		"448"
+		{
+			"name"		"eslcologne2015_signature_happy_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_happy_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_happy_gold"
+			"sticker_material"		"cologne2015/sig_happy_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"17975624"
+		}
+		"449"
+		{
+			"name"		"eslcologne2015_signature_apex"
+			"item_name"		"#StickerKit_eslcologne2015_signature_apex"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_apex"
+			"sticker_material"		"cologne2015/sig_apex"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"29478439"
+		}
+		"450"
+		{
+			"name"		"eslcologne2015_signature_apex_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_apex_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_apex_foil"
+			"sticker_material"		"cologne2015/sig_apex_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"29478439"
+		}
+		"451"
+		{
+			"name"		"eslcologne2015_signature_apex_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_apex_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_apex_gold"
+			"sticker_material"		"cologne2015/sig_apex_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"29478439"
+		}
+		"452"
+		{
+			"name"		"eslcologne2015_signature_nbk"
+			"item_name"		"#StickerKit_eslcologne2015_signature_nbk"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_nbk"
+			"sticker_material"		"cologne2015/sig_nbk"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"444845"
+		}
+		"453"
+		{
+			"name"		"eslcologne2015_signature_nbk_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_nbk_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_nbk_foil"
+			"sticker_material"		"cologne2015/sig_nbk_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"444845"
+		}
+		"454"
+		{
+			"name"		"eslcologne2015_signature_nbk_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_nbk_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_nbk_gold"
+			"sticker_material"		"cologne2015/sig_nbk_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+			"tournament_player_id"		"444845"
+		}
+		"455"
+		{
+			"name"		"eslcologne2015_signature_karrigan"
+			"item_name"		"#StickerKit_eslcologne2015_signature_karrigan"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_karrigan"
+			"sticker_material"		"cologne2015/sig_karrigan"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"29164525"
+		}
+		"456"
+		{
+			"name"		"eslcologne2015_signature_karrigan_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_karrigan_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_karrigan_foil"
+			"sticker_material"		"cologne2015/sig_karrigan_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"29164525"
+		}
+		"457"
+		{
+			"name"		"eslcologne2015_signature_karrigan_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_karrigan_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_karrigan_gold"
+			"sticker_material"		"cologne2015/sig_karrigan_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"29164525"
+		}
+		"458"
+		{
+			"name"		"eslcologne2015_signature_device"
+			"item_name"		"#StickerKit_eslcologne2015_signature_device"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_device"
+			"sticker_material"		"cologne2015/sig_device"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"27447936"
+		}
+		"459"
+		{
+			"name"		"eslcologne2015_signature_device_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_device_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_device_foil"
+			"sticker_material"		"cologne2015/sig_device_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"27447936"
+		}
+		"460"
+		{
+			"name"		"eslcologne2015_signature_device_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_device_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_device_gold"
+			"sticker_material"		"cologne2015/sig_device_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"27447936"
+		}
+		"461"
+		{
+			"name"		"eslcologne2015_signature_dupreeh"
+			"item_name"		"#StickerKit_eslcologne2015_signature_dupreeh"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_dupreeh"
+			"sticker_material"		"cologne2015/sig_dupreeh"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"44589228"
+		}
+		"462"
+		{
+			"name"		"eslcologne2015_signature_dupreeh_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_dupreeh_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_dupreeh_foil"
+			"sticker_material"		"cologne2015/sig_dupreeh_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"44589228"
+		}
+		"463"
+		{
+			"name"		"eslcologne2015_signature_dupreeh_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_dupreeh_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_dupreeh_gold"
+			"sticker_material"		"cologne2015/sig_dupreeh_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"44589228"
+		}
+		"464"
+		{
+			"name"		"eslcologne2015_signature_xyp9x"
+			"item_name"		"#StickerKit_eslcologne2015_signature_xyp9x"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_xyp9x"
+			"sticker_material"		"cologne2015/sig_xyp9x"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"30416534"
+		}
+		"465"
+		{
+			"name"		"eslcologne2015_signature_xyp9x_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_xyp9x_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_xyp9x_foil"
+			"sticker_material"		"cologne2015/sig_xyp9x_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"30416534"
+		}
+		"466"
+		{
+			"name"		"eslcologne2015_signature_xyp9x_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_xyp9x_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_xyp9x_gold"
+			"sticker_material"		"cologne2015/sig_xyp9x_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"30416534"
+		}
+		"467"
+		{
+			"name"		"eslcologne2015_signature_cajunb"
+			"item_name"		"#StickerKit_eslcologne2015_signature_cajunb"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_cajunb"
+			"sticker_material"		"cologne2015/sig_cajunb"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"18062315"
+		}
+		"468"
+		{
+			"name"		"eslcologne2015_signature_cajunb_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_cajunb_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_cajunb_foil"
+			"sticker_material"		"cologne2015/sig_cajunb_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"18062315"
+		}
+		"469"
+		{
+			"name"		"eslcologne2015_signature_cajunb_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_cajunb_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_cajunb_gold"
+			"sticker_material"		"cologne2015/sig_cajunb_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+			"tournament_player_id"		"18062315"
+		}
+		"470"
+		{
+			"name"		"eslcologne2015_signature_neo"
+			"item_name"		"#StickerKit_eslcologne2015_signature_neo"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_neo"
+			"sticker_material"		"cologne2015/sig_neo"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"460206"
+		}
+		"471"
+		{
+			"name"		"eslcologne2015_signature_neo_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_neo_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_neo_foil"
+			"sticker_material"		"cologne2015/sig_neo_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"460206"
+		}
+		"472"
+		{
+			"name"		"eslcologne2015_signature_neo_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_neo_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_neo_gold"
+			"sticker_material"		"cologne2015/sig_neo_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"460206"
+		}
+		"473"
+		{
+			"name"		"eslcologne2015_signature_pasha"
+			"item_name"		"#StickerKit_eslcologne2015_signature_pasha"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_pasha"
+			"sticker_material"		"cologne2015/sig_pasha"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"13580090"
+		}
+		"474"
+		{
+			"name"		"eslcologne2015_signature_pasha_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_pasha_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_pasha_foil"
+			"sticker_material"		"cologne2015/sig_pasha_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"13580090"
+		}
+		"475"
+		{
+			"name"		"eslcologne2015_signature_pasha_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_pasha_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_pasha_gold"
+			"sticker_material"		"cologne2015/sig_pasha_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"13580090"
+		}
+		"476"
+		{
+			"name"		"eslcologne2015_signature_taz"
+			"item_name"		"#StickerKit_eslcologne2015_signature_taz"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_taz"
+			"sticker_material"		"cologne2015/sig_taz"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"234052"
+		}
+		"477"
+		{
+			"name"		"eslcologne2015_signature_taz_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_taz_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_taz_foil"
+			"sticker_material"		"cologne2015/sig_taz_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"234052"
+		}
+		"478"
+		{
+			"name"		"eslcologne2015_signature_taz_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_taz_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_taz_gold"
+			"sticker_material"		"cologne2015/sig_taz_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"234052"
+		}
+		"479"
+		{
+			"name"		"eslcologne2015_signature_snax"
+			"item_name"		"#StickerKit_eslcologne2015_signature_snax"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_snax"
+			"sticker_material"		"cologne2015/sig_snax"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"21875845"
+		}
+		"480"
+		{
+			"name"		"eslcologne2015_signature_snax_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_snax_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_snax_foil"
+			"sticker_material"		"cologne2015/sig_snax_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"21875845"
+		}
+		"481"
+		{
+			"name"		"eslcologne2015_signature_snax_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_snax_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_snax_gold"
+			"sticker_material"		"cologne2015/sig_snax_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"21875845"
+		}
+		"482"
+		{
+			"name"		"eslcologne2015_signature_byali"
+			"item_name"		"#StickerKit_eslcologne2015_signature_byali"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_byali"
+			"sticker_material"		"cologne2015/sig_byali"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"18860354"
+		}
+		"483"
+		{
+			"name"		"eslcologne2015_signature_byali_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_byali_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_byali_foil"
+			"sticker_material"		"cologne2015/sig_byali_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"18860354"
+		}
+		"484"
+		{
+			"name"		"eslcologne2015_signature_byali_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_byali_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_byali_gold"
+			"sticker_material"		"cologne2015/sig_byali_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+			"tournament_player_id"		"18860354"
+		}
+		"485"
+		{
+			"name"		"eslcologne2015_signature_chrisj"
+			"item_name"		"#StickerKit_eslcologne2015_signature_chrisj"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_chrisj"
+			"sticker_material"		"cologne2015/sig_chrisj"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"28273376"
+		}
+		"486"
+		{
+			"name"		"eslcologne2015_signature_chrisj_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_chrisj_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_chrisj_foil"
+			"sticker_material"		"cologne2015/sig_chrisj_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"28273376"
+		}
+		"487"
+		{
+			"name"		"eslcologne2015_signature_chrisj_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_chrisj_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_chrisj_gold"
+			"sticker_material"		"cologne2015/sig_chrisj_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"28273376"
+		}
+		"488"
+		{
+			"name"		"eslcologne2015_signature_gobb"
+			"item_name"		"#StickerKit_eslcologne2015_signature_gobb"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_gobb"
+			"sticker_material"		"cologne2015/sig_gobb"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"1162165"
+		}
+		"489"
+		{
+			"name"		"eslcologne2015_signature_gobb_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_gobb_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_gobb_foil"
+			"sticker_material"		"cologne2015/sig_gobb_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"1162165"
+		}
+		"490"
+		{
+			"name"		"eslcologne2015_signature_gobb_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_gobb_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_gobb_gold"
+			"sticker_material"		"cologne2015/sig_gobb_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"1162165"
+		}
+		"491"
+		{
+			"name"		"eslcologne2015_signature_denis"
+			"item_name"		"#StickerKit_eslcologne2015_signature_denis"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_denis"
+			"sticker_material"		"cologne2015/sig_denis"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"31185376"
+		}
+		"492"
+		{
+			"name"		"eslcologne2015_signature_denis_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_denis_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_denis_foil"
+			"sticker_material"		"cologne2015/sig_denis_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"31185376"
+		}
+		"493"
+		{
+			"name"		"eslcologne2015_signature_denis_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_denis_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_denis_gold"
+			"sticker_material"		"cologne2015/sig_denis_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"31185376"
+		}
+		"494"
+		{
+			"name"		"eslcologne2015_signature_nex"
+			"item_name"		"#StickerKit_eslcologne2015_signature_nex"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_nex"
+			"sticker_material"		"cologne2015/sig_nex"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"90378773"
+		}
+		"495"
+		{
+			"name"		"eslcologne2015_signature_nex_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_nex_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_nex_foil"
+			"sticker_material"		"cologne2015/sig_nex_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"90378773"
+		}
+		"496"
+		{
+			"name"		"eslcologne2015_signature_nex_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_nex_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_nex_gold"
+			"sticker_material"		"cologne2015/sig_nex_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"90378773"
+		}
+		"497"
+		{
+			"name"		"eslcologne2015_signature_spiidi"
+			"item_name"		"#StickerKit_eslcologne2015_signature_spiidi"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_spiidi"
+			"sticker_material"		"cologne2015/sig_spiidi"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"13465075"
+		}
+		"498"
+		{
+			"name"		"eslcologne2015_signature_spiidi_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_spiidi_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_spiidi_foil"
+			"sticker_material"		"cologne2015/sig_spiidi_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"13465075"
+		}
+		"499"
+		{
+			"name"		"eslcologne2015_signature_spiidi_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_spiidi_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_spiidi_gold"
+			"sticker_material"		"cologne2015/sig_spiidi_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+			"tournament_player_id"		"13465075"
+		}
+		"500"
+		{
+			"name"		"eslcologne2015_signature_azr"
+			"item_name"		"#StickerKit_eslcologne2015_signature_azr"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_azr"
+			"sticker_material"		"cologne2015/sig_azr"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"24832266"
+		}
+		"501"
+		{
+			"name"		"eslcologne2015_signature_azr_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_azr_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_azr_foil"
+			"sticker_material"		"cologne2015/sig_azr_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"24832266"
+		}
+		"502"
+		{
+			"name"		"eslcologne2015_signature_azr_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_azr_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_azr_gold"
+			"sticker_material"		"cologne2015/sig_azr_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"24832266"
+		}
+		"503"
+		{
+			"name"		"eslcologne2015_signature_havoc"
+			"item_name"		"#StickerKit_eslcologne2015_signature_havoc"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_havoc"
+			"sticker_material"		"cologne2015/sig_havoc"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"10025211"
+		}
+		"504"
+		{
+			"name"		"eslcologne2015_signature_havoc_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_havoc_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_havoc_foil"
+			"sticker_material"		"cologne2015/sig_havoc_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"10025211"
+		}
+		"505"
+		{
+			"name"		"eslcologne2015_signature_havoc_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_havoc_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_havoc_gold"
+			"sticker_material"		"cologne2015/sig_havoc_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"10025211"
+		}
+		"506"
+		{
+			"name"		"eslcologne2015_signature_jks"
+			"item_name"		"#StickerKit_eslcologne2015_signature_jks"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_jks"
+			"sticker_material"		"cologne2015/sig_jks"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"16839456"
+		}
+		"507"
+		{
+			"name"		"eslcologne2015_signature_jks_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_jks_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_jks_foil"
+			"sticker_material"		"cologne2015/sig_jks_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"16839456"
+		}
+		"508"
+		{
+			"name"		"eslcologne2015_signature_jks_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_jks_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_jks_gold"
+			"sticker_material"		"cologne2015/sig_jks_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"16839456"
+		}
+		"509"
+		{
+			"name"		"eslcologne2015_signature_spunj"
+			"item_name"		"#StickerKit_eslcologne2015_signature_spunj"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_spunj"
+			"sticker_material"		"cologne2015/sig_spunj"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"34303888"
+		}
+		"510"
+		{
+			"name"		"eslcologne2015_signature_spunj_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_spunj_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_spunj_foil"
+			"sticker_material"		"cologne2015/sig_spunj_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"34303888"
+		}
+		"511"
+		{
+			"name"		"eslcologne2015_signature_spunj_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_spunj_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_spunj_gold"
+			"sticker_material"		"cologne2015/sig_spunj_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"34303888"
+		}
+		"512"
+		{
+			"name"		"eslcologne2015_signature_yam"
+			"item_name"		"#StickerKit_eslcologne2015_signature_yam"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_yam"
+			"sticker_material"		"cologne2015/sig_yam"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"30659"
+		}
+		"513"
+		{
+			"name"		"eslcologne2015_signature_yam_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_yam_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_yam_foil"
+			"sticker_material"		"cologne2015/sig_yam_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"30659"
+		}
+		"514"
+		{
+			"name"		"eslcologne2015_signature_yam_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_yam_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_yam_gold"
+			"sticker_material"		"cologne2015/sig_yam_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+			"tournament_player_id"		"30659"
+		}
+		"515"
+		{
+			"name"		"eslcologne2015_signature_ustilo"
+			"item_name"		"#StickerKit_eslcologne2015_signature_ustilo"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_ustilo"
+			"sticker_material"		"cologne2015/sig_ustilo"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"18903255"
+		}
+		"516"
+		{
+			"name"		"eslcologne2015_signature_ustilo_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_ustilo_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_ustilo_foil"
+			"sticker_material"		"cologne2015/sig_ustilo_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"18903255"
+		}
+		"517"
+		{
+			"name"		"eslcologne2015_signature_ustilo_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_ustilo_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_ustilo_gold"
+			"sticker_material"		"cologne2015/sig_ustilo_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"18903255"
+		}
+		"518"
+		{
+			"name"		"eslcologne2015_signature_rickeh"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rickeh"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rickeh"
+			"sticker_material"		"cologne2015/sig_rickeh"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"3215921"
+		}
+		"519"
+		{
+			"name"		"eslcologne2015_signature_rickeh_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rickeh_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rickeh_foil"
+			"sticker_material"		"cologne2015/sig_rickeh_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"3215921"
+		}
+		"520"
+		{
+			"name"		"eslcologne2015_signature_rickeh_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rickeh_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rickeh_gold"
+			"sticker_material"		"cologne2015/sig_rickeh_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"3215921"
+		}
+		"521"
+		{
+			"name"		"eslcologne2015_signature_emagine"
+			"item_name"		"#StickerKit_eslcologne2015_signature_emagine"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_emagine"
+			"sticker_material"		"cologne2015/sig_emagine"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"19633654"
+		}
+		"522"
+		{
+			"name"		"eslcologne2015_signature_emagine_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_emagine_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_emagine_foil"
+			"sticker_material"		"cologne2015/sig_emagine_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"19633654"
+		}
+		"523"
+		{
+			"name"		"eslcologne2015_signature_emagine_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_emagine_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_emagine_gold"
+			"sticker_material"		"cologne2015/sig_emagine_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"19633654"
+		}
+		"524"
+		{
+			"name"		"eslcologne2015_signature_snyper"
+			"item_name"		"#StickerKit_eslcologne2015_signature_snyper"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_snyper"
+			"sticker_material"		"cologne2015/sig_snyper"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"7436549"
+		}
+		"525"
+		{
+			"name"		"eslcologne2015_signature_snyper_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_snyper_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_snyper_foil"
+			"sticker_material"		"cologne2015/sig_snyper_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"7436549"
+		}
+		"526"
+		{
+			"name"		"eslcologne2015_signature_snyper_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_snyper_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_snyper_gold"
+			"sticker_material"		"cologne2015/sig_snyper_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"7436549"
+		}
+		"527"
+		{
+			"name"		"eslcologne2015_signature_james"
+			"item_name"		"#StickerKit_eslcologne2015_signature_james"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_james"
+			"sticker_material"		"cologne2015/sig_james"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"35336006"
+		}
+		"528"
+		{
+			"name"		"eslcologne2015_signature_james_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_james_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_james_foil"
+			"sticker_material"		"cologne2015/sig_james_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"35336006"
+		}
+		"529"
+		{
+			"name"		"eslcologne2015_signature_james_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_james_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_james_gold"
+			"sticker_material"		"cologne2015/sig_james_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+			"tournament_player_id"		"35336006"
+		}
+		"530"
+		{
+			"name"		"eslcologne2015_signature_markeloff"
+			"item_name"		"#StickerKit_eslcologne2015_signature_markeloff"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_markeloff"
+			"sticker_material"		"cologne2015/sig_markeloff"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"5667261"
+		}
+		"531"
+		{
+			"name"		"eslcologne2015_signature_markeloff_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_markeloff_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_markeloff_foil"
+			"sticker_material"		"cologne2015/sig_markeloff_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"5667261"
+		}
+		"532"
+		{
+			"name"		"eslcologne2015_signature_markeloff_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_markeloff_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_markeloff_gold"
+			"sticker_material"		"cologne2015/sig_markeloff_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"5667261"
+		}
+		"533"
+		{
+			"name"		"eslcologne2015_signature_b1ad3"
+			"item_name"		"#StickerKit_eslcologne2015_signature_b1ad3"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_b1ad3"
+			"sticker_material"		"cologne2015/sig_b1ad3"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"53258137"
+		}
+		"534"
+		{
+			"name"		"eslcologne2015_signature_b1ad3_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_b1ad3_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_b1ad3_foil"
+			"sticker_material"		"cologne2015/sig_b1ad3_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"53258137"
+		}
+		"535"
+		{
+			"name"		"eslcologne2015_signature_b1ad3_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_b1ad3_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_b1ad3_gold"
+			"sticker_material"		"cologne2015/sig_b1ad3_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"53258137"
+		}
+		"536"
+		{
+			"name"		"eslcologne2015_signature_bondik"
+			"item_name"		"#StickerKit_eslcologne2015_signature_bondik"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_bondik"
+			"sticker_material"		"cologne2015/sig_bondik"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"46918643"
+		}
+		"537"
+		{
+			"name"		"eslcologne2015_signature_bondik_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_bondik_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_bondik_foil"
+			"sticker_material"		"cologne2015/sig_bondik_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"46918643"
+		}
+		"538"
+		{
+			"name"		"eslcologne2015_signature_bondik_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_bondik_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_bondik_gold"
+			"sticker_material"		"cologne2015/sig_bondik_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"46918643"
+		}
+		"539"
+		{
+			"name"		"eslcologne2015_signature_worldedit"
+			"item_name"		"#StickerKit_eslcologne2015_signature_worldedit"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_worldedit"
+			"sticker_material"		"cologne2015/sig_worldedit"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"36732188"
+		}
+		"540"
+		{
+			"name"		"eslcologne2015_signature_worldedit_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_worldedit_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_worldedit_foil"
+			"sticker_material"		"cologne2015/sig_worldedit_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"36732188"
+		}
+		"541"
+		{
+			"name"		"eslcologne2015_signature_worldedit_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_worldedit_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_worldedit_gold"
+			"sticker_material"		"cologne2015/sig_worldedit_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"36732188"
+		}
+		"542"
+		{
+			"name"		"eslcologne2015_signature_davcost"
+			"item_name"		"#StickerKit_eslcologne2015_signature_davcost"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_davcost"
+			"sticker_material"		"cologne2015/sig_davcost"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"20273529"
+		}
+		"543"
+		{
+			"name"		"eslcologne2015_signature_davcost_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_davcost_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_davcost_foil"
+			"sticker_material"		"cologne2015/sig_davcost_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"20273529"
+		}
+		"544"
+		{
+			"name"		"eslcologne2015_signature_davcost_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_davcost_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_davcost_gold"
+			"sticker_material"		"cologne2015/sig_davcost_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+			"tournament_player_id"		"20273529"
+		}
+		"545"
+		{
+			"name"		"eslcologne2015_signature_dennis"
+			"item_name"		"#StickerKit_eslcologne2015_signature_dennis"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_dennis"
+			"sticker_material"		"cologne2015/sig_dennis"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"108076825"
+		}
+		"546"
+		{
+			"name"		"eslcologne2015_signature_dennis_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_dennis_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_dennis_foil"
+			"sticker_material"		"cologne2015/sig_dennis_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"108076825"
+		}
+		"547"
+		{
+			"name"		"eslcologne2015_signature_dennis_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_dennis_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_dennis_gold"
+			"sticker_material"		"cologne2015/sig_dennis_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"108076825"
+		}
+		"548"
+		{
+			"name"		"eslcologne2015_signature_scream"
+			"item_name"		"#StickerKit_eslcologne2015_signature_scream"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_scream"
+			"sticker_material"		"cologne2015/sig_scream"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"28502520"
+		}
+		"549"
+		{
+			"name"		"eslcologne2015_signature_scream_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_scream_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_scream_foil"
+			"sticker_material"		"cologne2015/sig_scream_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"28502520"
+		}
+		"550"
+		{
+			"name"		"eslcologne2015_signature_scream_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_scream_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_scream_gold"
+			"sticker_material"		"cologne2015/sig_scream_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"28502520"
+		}
+		"551"
+		{
+			"name"		"eslcologne2015_signature_rain"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rain"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rain"
+			"sticker_material"		"cologne2015/sig_rain"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"37085479"
+		}
+		"552"
+		{
+			"name"		"eslcologne2015_signature_rain_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rain_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rain_foil"
+			"sticker_material"		"cologne2015/sig_rain_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"37085479"
+		}
+		"553"
+		{
+			"name"		"eslcologne2015_signature_rain_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rain_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rain_gold"
+			"sticker_material"		"cologne2015/sig_rain_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"37085479"
+		}
+		"554"
+		{
+			"name"		"eslcologne2015_signature_maikelele"
+			"item_name"		"#StickerKit_eslcologne2015_signature_maikelele"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_maikelele"
+			"sticker_material"		"cologne2015/sig_maikelele"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"925972"
+		}
+		"555"
+		{
+			"name"		"eslcologne2015_signature_maikelele_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_maikelele_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_maikelele_foil"
+			"sticker_material"		"cologne2015/sig_maikelele_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"925972"
+		}
+		"556"
+		{
+			"name"		"eslcologne2015_signature_maikelele_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_maikelele_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_maikelele_gold"
+			"sticker_material"		"cologne2015/sig_maikelele_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"925972"
+		}
+		"557"
+		{
+			"name"		"eslcologne2015_signature_fox"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fox"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fox"
+			"sticker_material"		"cologne2015/sig_fox"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"1939536"
+		}
+		"558"
+		{
+			"name"		"eslcologne2015_signature_fox_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fox_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fox_foil"
+			"sticker_material"		"cologne2015/sig_fox_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"1939536"
+		}
+		"559"
+		{
+			"name"		"eslcologne2015_signature_fox_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fox_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fox_gold"
+			"sticker_material"		"cologne2015/sig_fox_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+			"tournament_player_id"		"1939536"
+		}
+		"560"
+		{
+			"name"		"eslcologne2015_signature_rallen"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rallen"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rallen"
+			"sticker_material"		"cologne2015/sig_rallen"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"31166738"
+		}
+		"561"
+		{
+			"name"		"eslcologne2015_signature_rallen_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rallen_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rallen_foil"
+			"sticker_material"		"cologne2015/sig_rallen_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"31166738"
+		}
+		"562"
+		{
+			"name"		"eslcologne2015_signature_rallen_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rallen_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rallen_gold"
+			"sticker_material"		"cologne2015/sig_rallen_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"31166738"
+		}
+		"563"
+		{
+			"name"		"eslcologne2015_signature_hyper"
+			"item_name"		"#StickerKit_eslcologne2015_signature_hyper"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_hyper"
+			"sticker_material"		"cologne2015/sig_hyper"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"10357481"
+		}
+		"564"
+		{
+			"name"		"eslcologne2015_signature_hyper_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_hyper_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_hyper_foil"
+			"sticker_material"		"cologne2015/sig_hyper_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"10357481"
+		}
+		"565"
+		{
+			"name"		"eslcologne2015_signature_hyper_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_hyper_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_hyper_gold"
+			"sticker_material"		"cologne2015/sig_hyper_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"10357481"
+		}
+		"566"
+		{
+			"name"		"eslcologne2015_signature_peet"
+			"item_name"		"#StickerKit_eslcologne2015_signature_peet"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_peet"
+			"sticker_material"		"cologne2015/sig_peet"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"104340617"
+		}
+		"567"
+		{
+			"name"		"eslcologne2015_signature_peet_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_peet_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_peet_foil"
+			"sticker_material"		"cologne2015/sig_peet_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"104340617"
+		}
+		"568"
+		{
+			"name"		"eslcologne2015_signature_peet_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_peet_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_peet_gold"
+			"sticker_material"		"cologne2015/sig_peet_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"104340617"
+		}
+		"569"
+		{
+			"name"		"eslcologne2015_signature_furlan"
+			"item_name"		"#StickerKit_eslcologne2015_signature_furlan"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_furlan"
+			"sticker_material"		"cologne2015/sig_furlan"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"177495873"
+		}
+		"570"
+		{
+			"name"		"eslcologne2015_signature_furlan_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_furlan_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_furlan_foil"
+			"sticker_material"		"cologne2015/sig_furlan_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"177495873"
+		}
+		"571"
+		{
+			"name"		"eslcologne2015_signature_furlan_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_furlan_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_furlan_gold"
+			"sticker_material"		"cologne2015/sig_furlan_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"177495873"
+		}
+		"572"
+		{
+			"name"		"eslcologne2015_signature_gruby"
+			"item_name"		"#StickerKit_eslcologne2015_signature_gruby"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_gruby"
+			"sticker_material"		"cologne2015/sig_gruby"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"44752530"
+		}
+		"573"
+		{
+			"name"		"eslcologne2015_signature_gruby_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_gruby_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_gruby_foil"
+			"sticker_material"		"cologne2015/sig_gruby_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"44752530"
+		}
+		"574"
+		{
+			"name"		"eslcologne2015_signature_gruby_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_gruby_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_gruby_gold"
+			"sticker_material"		"cologne2015/sig_gruby_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+			"tournament_player_id"		"44752530"
+		}
+		"575"
+		{
+			"name"		"eslcologne2015_signature_maniac"
+			"item_name"		"#StickerKit_eslcologne2015_signature_maniac"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_maniac"
+			"sticker_material"		"cologne2015/sig_maniac"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"35761"
+		}
+		"576"
+		{
+			"name"		"eslcologne2015_signature_maniac_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_maniac_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_maniac_foil"
+			"sticker_material"		"cologne2015/sig_maniac_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"35761"
+		}
+		"577"
+		{
+			"name"		"eslcologne2015_signature_maniac_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_maniac_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_maniac_gold"
+			"sticker_material"		"cologne2015/sig_maniac_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"35761"
+		}
+		"578"
+		{
+			"name"		"eslcologne2015_signature_ex6tenz"
+			"item_name"		"#StickerKit_eslcologne2015_signature_ex6tenz"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_ex6tenz"
+			"sticker_material"		"cologne2015/sig_ex6tenz"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"11737333"
+		}
+		"579"
+		{
+			"name"		"eslcologne2015_signature_ex6tenz_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_ex6tenz_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_ex6tenz_foil"
+			"sticker_material"		"cologne2015/sig_ex6tenz_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"11737333"
+		}
+		"580"
+		{
+			"name"		"eslcologne2015_signature_ex6tenz_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_ex6tenz_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_ex6tenz_gold"
+			"sticker_material"		"cologne2015/sig_ex6tenz_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"11737333"
+		}
+		"581"
+		{
+			"name"		"eslcologne2015_signature_shox"
+			"item_name"		"#StickerKit_eslcologne2015_signature_shox"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_shox"
+			"sticker_material"		"cologne2015/sig_shox"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"46654567"
+		}
+		"582"
+		{
+			"name"		"eslcologne2015_signature_shox_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_shox_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_shox_foil"
+			"sticker_material"		"cologne2015/sig_shox_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"46654567"
+		}
+		"583"
+		{
+			"name"		"eslcologne2015_signature_shox_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_shox_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_shox_gold"
+			"sticker_material"		"cologne2015/sig_shox_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"46654567"
+		}
+		"584"
+		{
+			"name"		"eslcologne2015_signature_smithzz"
+			"item_name"		"#StickerKit_eslcologne2015_signature_smithzz"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_smithzz"
+			"sticker_material"		"cologne2015/sig_smithzz"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"14321919"
+		}
+		"585"
+		{
+			"name"		"eslcologne2015_signature_smithzz_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_smithzz_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_smithzz_foil"
+			"sticker_material"		"cologne2015/sig_smithzz_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"14321919"
+		}
+		"586"
+		{
+			"name"		"eslcologne2015_signature_smithzz_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_smithzz_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_smithzz_gold"
+			"sticker_material"		"cologne2015/sig_smithzz_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"14321919"
+		}
+		"587"
+		{
+			"name"		"eslcologne2015_signature_rpk"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rpk"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rpk"
+			"sticker_material"		"cologne2015/sig_rpk"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"53985773"
+		}
+		"588"
+		{
+			"name"		"eslcologne2015_signature_rpk_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rpk_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rpk_foil"
+			"sticker_material"		"cologne2015/sig_rpk_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"53985773"
+		}
+		"589"
+		{
+			"name"		"eslcologne2015_signature_rpk_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_rpk_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_rpk_gold"
+			"sticker_material"		"cologne2015/sig_rpk_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+			"tournament_player_id"		"53985773"
+		}
+		"590"
+		{
+			"name"		"eslcologne2015_signature_hazed"
+			"item_name"		"#StickerKit_eslcologne2015_signature_hazed"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_hazed"
+			"sticker_material"		"cologne2015/sig_hazed"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"30305781"
+		}
+		"591"
+		{
+			"name"		"eslcologne2015_signature_hazed_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_hazed_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_hazed_foil"
+			"sticker_material"		"cologne2015/sig_hazed_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"30305781"
+		}
+		"592"
+		{
+			"name"		"eslcologne2015_signature_hazed_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_hazed_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_hazed_gold"
+			"sticker_material"		"cologne2015/sig_hazed_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"30305781"
+		}
+		"593"
+		{
+			"name"		"eslcologne2015_signature_fns"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fns"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fns"
+			"sticker_material"		"cologne2015/sig_fns"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"17564706"
+		}
+		"594"
+		{
+			"name"		"eslcologne2015_signature_fns_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fns_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fns_foil"
+			"sticker_material"		"cologne2015/sig_fns_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"17564706"
+		}
+		"595"
+		{
+			"name"		"eslcologne2015_signature_fns_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_fns_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_fns_gold"
+			"sticker_material"		"cologne2015/sig_fns_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"17564706"
+		}
+		"596"
+		{
+			"name"		"eslcologne2015_signature_jdm64"
+			"item_name"		"#StickerKit_eslcologne2015_signature_jdm64"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_jdm64"
+			"sticker_material"		"cologne2015/sig_jdm64"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"7223652"
+		}
+		"597"
+		{
+			"name"		"eslcologne2015_signature_jdm64_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_jdm64_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_jdm64_foil"
+			"sticker_material"		"cologne2015/sig_jdm64_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"7223652"
+		}
+		"598"
+		{
+			"name"		"eslcologne2015_signature_jdm64_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_jdm64_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_jdm64_gold"
+			"sticker_material"		"cologne2015/sig_jdm64_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"7223652"
+		}
+		"599"
+		{
+			"name"		"eslcologne2015_signature_reltuc"
+			"item_name"		"#StickerKit_eslcologne2015_signature_reltuc"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_reltuc"
+			"sticker_material"		"cologne2015/sig_reltuc"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"518760"
+		}
+		"600"
+		{
+			"name"		"eslcologne2015_signature_reltuc_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_reltuc_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_reltuc_foil"
+			"sticker_material"		"cologne2015/sig_reltuc_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"518760"
+		}
+		"601"
+		{
+			"name"		"eslcologne2015_signature_reltuc_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_reltuc_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_reltuc_gold"
+			"sticker_material"		"cologne2015/sig_reltuc_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"518760"
+		}
+		"602"
+		{
+			"name"		"eslcologne2015_signature_tarik"
+			"item_name"		"#StickerKit_eslcologne2015_signature_tarik"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_tarik"
+			"sticker_material"		"cologne2015/sig_tarik"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"18216247"
+		}
+		"603"
+		{
+			"name"		"eslcologne2015_signature_tarik_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_tarik_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_tarik_foil"
+			"sticker_material"		"cologne2015/sig_tarik_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"18216247"
+		}
+		"604"
+		{
+			"name"		"eslcologne2015_signature_tarik_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_tarik_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_tarik_gold"
+			"sticker_material"		"cologne2015/sig_tarik_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+			"tournament_player_id"		"18216247"
+		}
+		"605"
+		{
+			"name"		"eslcologne2015_signature_nothing"
+			"item_name"		"#StickerKit_eslcologne2015_signature_nothing"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_nothing"
+			"sticker_material"		"cologne2015/sig_nothing"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"755286"
+		}
+		"606"
+		{
+			"name"		"eslcologne2015_signature_nothing_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_nothing_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_nothing_foil"
+			"sticker_material"		"cologne2015/sig_nothing_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"755286"
+		}
+		"607"
+		{
+			"name"		"eslcologne2015_signature_nothing_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_nothing_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_nothing_gold"
+			"sticker_material"		"cologne2015/sig_nothing_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"755286"
+		}
+		"608"
+		{
+			"name"		"eslcologne2015_signature_sgares"
+			"item_name"		"#StickerKit_eslcologne2015_signature_sgares"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_sgares"
+			"sticker_material"		"cologne2015/sig_sgares"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"164004"
+		}
+		"609"
+		{
+			"name"		"eslcologne2015_signature_sgares_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_sgares_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_sgares_foil"
+			"sticker_material"		"cologne2015/sig_sgares_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"164004"
+		}
+		"610"
+		{
+			"name"		"eslcologne2015_signature_sgares_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_sgares_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_sgares_gold"
+			"sticker_material"		"cologne2015/sig_sgares_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"164004"
+		}
+		"611"
+		{
+			"name"		"eslcologne2015_signature_shroud"
+			"item_name"		"#StickerKit_eslcologne2015_signature_shroud"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_shroud"
+			"sticker_material"		"cologne2015/sig_shroud"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"4515926"
+		}
+		"612"
+		{
+			"name"		"eslcologne2015_signature_shroud_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_shroud_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_shroud_foil"
+			"sticker_material"		"cologne2015/sig_shroud_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"4515926"
+		}
+		"613"
+		{
+			"name"		"eslcologne2015_signature_shroud_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_shroud_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_shroud_gold"
+			"sticker_material"		"cologne2015/sig_shroud_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"4515926"
+		}
+		"614"
+		{
+			"name"		"eslcologne2015_signature_freakazoid"
+			"item_name"		"#StickerKit_eslcologne2015_signature_freakazoid"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_freakazoid"
+			"sticker_material"		"cologne2015/sig_freakazoid"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"16883071"
+		}
+		"615"
+		{
+			"name"		"eslcologne2015_signature_freakazoid_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_freakazoid_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_freakazoid_foil"
+			"sticker_material"		"cologne2015/sig_freakazoid_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"16883071"
+		}
+		"616"
+		{
+			"name"		"eslcologne2015_signature_freakazoid_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_freakazoid_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_freakazoid_gold"
+			"sticker_material"		"cologne2015/sig_freakazoid_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"16883071"
+		}
+		"617"
+		{
+			"name"		"eslcologne2015_signature_skadoodle"
+			"item_name"		"#StickerKit_eslcologne2015_signature_skadoodle"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_skadoodle"
+			"sticker_material"		"cologne2015/sig_skadoodle"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"21075725"
+		}
+		"618"
+		{
+			"name"		"eslcologne2015_signature_skadoodle_foil"
+			"item_name"		"#StickerKit_eslcologne2015_signature_skadoodle_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_skadoodle_foil"
+			"sticker_material"		"cologne2015/sig_skadoodle_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"21075725"
+		}
+		"619"
+		{
+			"name"		"eslcologne2015_signature_skadoodle_gold"
+			"item_name"		"#StickerKit_eslcologne2015_signature_skadoodle_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_signature_skadoodle_gold"
+			"sticker_material"		"cologne2015/sig_skadoodle_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+			"tournament_player_id"		"21075725"
+		}
+		"620"
+		{
+			"name"		"eslcologne2015_team_fnatic"
+			"item_name"		"#StickerKit_eslcologne2015_team_fnatic"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_fnatic"
+			"sticker_material"		"cologne2015/fnatic"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+		}
+		"621"
+		{
+			"name"		"eslcologne2015_team_fnatic_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_fnatic_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_fnatic_foil"
+			"sticker_material"		"cologne2015/fnatic_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+		}
+		"622"
+		{
+			"name"		"eslcologne2015_team_fnatic_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_fnatic_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_fnatic_gold"
+			"sticker_material"		"cologne2015/fnatic_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"6"
+		}
+		"623"
+		{
+			"name"		"eslcologne2015_team_virtuspro"
+			"item_name"		"#StickerKit_eslcologne2015_team_virtuspro"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_virtuspro"
+			"sticker_material"		"cologne2015/virtuspro"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+		}
+		"624"
+		{
+			"name"		"eslcologne2015_team_virtuspro_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_virtuspro_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_virtuspro_foil"
+			"sticker_material"		"cologne2015/virtuspro_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+		}
+		"625"
+		{
+			"name"		"eslcologne2015_team_virtuspro_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_virtuspro_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_virtuspro_gold"
+			"sticker_material"		"cologne2015/virtuspro_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"31"
+		}
+		"626"
+		{
+			"name"		"eslcologne2015_team_mousesports"
+			"item_name"		"#StickerKit_eslcologne2015_team_mousesports"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_mousesports"
+			"sticker_material"		"cologne2015/mousesports"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+		}
+		"627"
+		{
+			"name"		"eslcologne2015_team_mousesports_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_mousesports_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_mousesports_foil"
+			"sticker_material"		"cologne2015/mousesports_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+		}
+		"628"
+		{
+			"name"		"eslcologne2015_team_mousesports_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_mousesports_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_mousesports_gold"
+			"sticker_material"		"cologne2015/mousesports_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"29"
+		}
+		"629"
+		{
+			"name"		"eslcologne2015_team_navi"
+			"item_name"		"#StickerKit_eslcologne2015_team_navi"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_navi"
+			"sticker_material"		"cologne2015/navi"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+		}
+		"630"
+		{
+			"name"		"eslcologne2015_team_navi_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_navi_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_navi_foil"
+			"sticker_material"		"cologne2015/navi_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+		}
+		"631"
+		{
+			"name"		"eslcologne2015_team_navi_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_navi_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_navi_gold"
+			"sticker_material"		"cologne2015/navi_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"12"
+		}
+		"632"
+		{
+			"name"		"eslcologne2015_team_renegades"
+			"item_name"		"#StickerKit_eslcologne2015_team_renegades"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_renegades"
+			"sticker_material"		"cologne2015/renegades"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+		}
+		"633"
+		{
+			"name"		"eslcologne2015_team_renegades_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_renegades_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_renegades_foil"
+			"sticker_material"		"cologne2015/renegades_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+		}
+		"634"
+		{
+			"name"		"eslcologne2015_team_renegades_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_renegades_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_renegades_gold"
+			"sticker_material"		"cologne2015/renegades_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"53"
+		}
+		"635"
+		{
+			"name"		"eslcologne2015_team_kinguin"
+			"item_name"		"#StickerKit_eslcologne2015_team_kinguin"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_kinguin"
+			"sticker_material"		"cologne2015/kinguin"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+		}
+		"636"
+		{
+			"name"		"eslcologne2015_team_kinguin_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_kinguin_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_kinguin_foil"
+			"sticker_material"		"cologne2015/kinguin_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+		}
+		"637"
+		{
+			"name"		"eslcologne2015_team_kinguin_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_kinguin_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_kinguin_gold"
+			"sticker_material"		"cologne2015/kinguin_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"55"
+		}
+		"638"
+		{
+			"name"		"eslcologne2015_team_ebettle"
+			"item_name"		"#StickerKit_eslcologne2015_team_ebettle"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_ebettle"
+			"sticker_material"		"cologne2015/ebettle"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+		}
+		"639"
+		{
+			"name"		"eslcologne2015_team_ebettle_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_ebettle_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_ebettle_foil"
+			"sticker_material"		"cologne2015/ebettle_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+		}
+		"640"
+		{
+			"name"		"eslcologne2015_team_ebettle_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_ebettle_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_ebettle_gold"
+			"sticker_material"		"cologne2015/ebettle_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"56"
+		}
+		"641"
+		{
+			"name"		"eslcologne2015_team_cloud9"
+			"item_name"		"#StickerKit_eslcologne2015_team_cloud9"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_cloud9"
+			"sticker_material"		"cologne2015/cloud9"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+		}
+		"642"
+		{
+			"name"		"eslcologne2015_team_cloud9_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_cloud9_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_cloud9_foil"
+			"sticker_material"		"cologne2015/cloud9_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+		}
+		"643"
+		{
+			"name"		"eslcologne2015_team_cloud9_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_cloud9_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_cloud9_gold"
+			"sticker_material"		"cologne2015/cloud9_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"52"
+		}
+		"644"
+		{
+			"name"		"eslcologne2015_team_ninjasinpyjamas"
+			"item_name"		"#StickerKit_eslcologne2015_team_ninjasinpyjamas"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_ninjasinpyjamas"
+			"sticker_material"		"cologne2015/ninjasinpyjamas"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+		}
+		"645"
+		{
+			"name"		"eslcologne2015_team_ninjasinpyjamas_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_ninjasinpyjamas_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_ninjasinpyjamas_foil"
+			"sticker_material"		"cologne2015/ninjasinpyjamas_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+		}
+		"646"
+		{
+			"name"		"eslcologne2015_team_ninjasinpyjamas_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_ninjasinpyjamas_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_ninjasinpyjamas_gold"
+			"sticker_material"		"cologne2015/ninjasinpyjamas_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"1"
+		}
+		"647"
+		{
+			"name"		"eslcologne2015_team_envyus"
+			"item_name"		"#StickerKit_eslcologne2015_team_envyus"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_envyus"
+			"sticker_material"		"cologne2015/envyus"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+		}
+		"648"
+		{
+			"name"		"eslcologne2015_team_envyus_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_envyus_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_envyus_foil"
+			"sticker_material"		"cologne2015/envyus_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+		}
+		"649"
+		{
+			"name"		"eslcologne2015_team_envyus_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_envyus_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_envyus_gold"
+			"sticker_material"		"cologne2015/envyus_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"46"
+		}
+		"650"
+		{
+			"name"		"eslcologne2015_team_luminositygaming"
+			"item_name"		"#StickerKit_eslcologne2015_team_luminositygaming"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_luminositygaming"
+			"sticker_material"		"cologne2015/luminositygaming"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+		}
+		"651"
+		{
+			"name"		"eslcologne2015_team_luminositygaming_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_luminositygaming_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_luminositygaming_foil"
+			"sticker_material"		"cologne2015/luminositygaming_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+		}
+		"652"
+		{
+			"name"		"eslcologne2015_team_luminositygaming_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_luminositygaming_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_luminositygaming_gold"
+			"sticker_material"		"cologne2015/luminositygaming_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"57"
+		}
+		"653"
+		{
+			"name"		"eslcologne2015_team_solomid"
+			"item_name"		"#StickerKit_eslcologne2015_team_solomid"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_solomid"
+			"sticker_material"		"cologne2015/solomid"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+		}
+		"654"
+		{
+			"name"		"eslcologne2015_team_solomid_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_solomid_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_solomid_foil"
+			"sticker_material"		"cologne2015/solomid_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+		}
+		"655"
+		{
+			"name"		"eslcologne2015_team_solomid_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_solomid_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_solomid_gold"
+			"sticker_material"		"cologne2015/solomid_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"58"
+		}
+		"656"
+		{
+			"name"		"eslcologne2015_team_teamimmunity"
+			"item_name"		"#StickerKit_eslcologne2015_team_teamimmunity"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_teamimmunity"
+			"sticker_material"		"cologne2015/teamimmunity"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+		}
+		"657"
+		{
+			"name"		"eslcologne2015_team_teamimmunity_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_teamimmunity_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_teamimmunity_foil"
+			"sticker_material"		"cologne2015/teamimmunity_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+		}
+		"658"
+		{
+			"name"		"eslcologne2015_team_teamimmunity_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_teamimmunity_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_teamimmunity_gold"
+			"sticker_material"		"cologne2015/teamimmunity_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"54"
+		}
+		"659"
+		{
+			"name"		"eslcologne2015_team_flipside"
+			"item_name"		"#StickerKit_eslcologne2015_team_flipside"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_flipside"
+			"sticker_material"		"cologne2015/flipside"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+		}
+		"660"
+		{
+			"name"		"eslcologne2015_team_flipside_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_flipside_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_flipside_foil"
+			"sticker_material"		"cologne2015/flipside_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+		}
+		"661"
+		{
+			"name"		"eslcologne2015_team_flipside_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_flipside_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_flipside_gold"
+			"sticker_material"		"cologne2015/flipside_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"43"
+		}
+		"662"
+		{
+			"name"		"eslcologne2015_team_titan"
+			"item_name"		"#StickerKit_eslcologne2015_team_titan"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_titan"
+			"sticker_material"		"cologne2015/titan"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+		}
+		"663"
+		{
+			"name"		"eslcologne2015_team_titan_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_titan_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_titan_foil"
+			"sticker_material"		"cologne2015/titan_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+		}
+		"664"
+		{
+			"name"		"eslcologne2015_team_titan_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_titan_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_titan_gold"
+			"sticker_material"		"cologne2015/titan_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"27"
+		}
+		"665"
+		{
+			"name"		"eslcologne2015_team_clg"
+			"item_name"		"#StickerKit_eslcologne2015_team_clg"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_clg"
+			"sticker_material"		"cologne2015/clg"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+		}
+		"666"
+		{
+			"name"		"eslcologne2015_team_clg_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_clg_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_clg_foil"
+			"sticker_material"		"cologne2015/clg_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+		}
+		"667"
+		{
+			"name"		"eslcologne2015_team_clg_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_clg_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_clg_gold"
+			"sticker_material"		"cologne2015/clg_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+			"tournament_team_id"		"49"
+		}
+		"668"
+		{
+			"name"		"eslcologne2015_team_esl"
+			"item_name"		"#StickerKit_eslcologne2015_team_esl"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_esl"
+			"sticker_material"		"cologne2015/esl"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"7"
+		}
+		"669"
+		{
+			"name"		"eslcologne2015_team_esl_foil"
+			"item_name"		"#StickerKit_eslcologne2015_team_esl_foil"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_esl_foil"
+			"sticker_material"		"cologne2015/esl_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
+		}
+		"670"
+		{
+			"name"		"eslcologne2015_team_esl_gold"
+			"item_name"		"#StickerKit_eslcologne2015_team_esl_gold"
+			"description_string"		"#StickerKit_desc_eslcologne2015_team_esl_gold"
+			"sticker_material"		"cologne2015/esl_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"7"
 		}
 	}
 	"paint_kits"
@@ -35553,6 +39836,469 @@
 		{
 			"[eslkatowice2015_esl_a]sticker"		"1"
 		}
+		"eslcologne2015_rare_fnatic"
+		{
+			"[eslcologne2015_team_fnatic]sticker"		"1"
+		}
+		"eslcologne2015_rare_virtuspro"
+		{
+			"[eslcologne2015_team_virtuspro]sticker"		"1"
+		}
+		"eslcologne2015_rare_mousesports"
+		{
+			"[eslcologne2015_team_mousesports]sticker"		"1"
+		}
+		"eslcologne2015_rare_navi"
+		{
+			"[eslcologne2015_team_navi]sticker"		"1"
+		}
+		"eslcologne2015_rare_renegades"
+		{
+			"[eslcologne2015_team_renegades]sticker"		"1"
+		}
+		"eslcologne2015_rare_kinguin"
+		{
+			"[eslcologne2015_team_kinguin]sticker"		"1"
+		}
+		"eslcologne2015_rare_ebettle"
+		{
+			"[eslcologne2015_team_ebettle]sticker"		"1"
+		}
+		"eslcologne2015_rare_cloud9"
+		{
+			"[eslcologne2015_team_cloud9]sticker"		"1"
+		}
+		"eslcologne2015_rare_ninjasinpyjamas"
+		{
+			"[eslcologne2015_team_ninjasinpyjamas]sticker"		"1"
+		}
+		"eslcologne2015_rare_envyus"
+		{
+			"[eslcologne2015_team_envyus]sticker"		"1"
+		}
+		"eslcologne2015_rare_luminositygaming"
+		{
+			"[eslcologne2015_team_luminositygaming]sticker"		"1"
+		}
+		"eslcologne2015_rare_solomid"
+		{
+			"[eslcologne2015_team_solomid]sticker"		"1"
+		}
+		"eslcologne2015_rare_teamimmunity"
+		{
+			"[eslcologne2015_team_teamimmunity]sticker"		"1"
+		}
+		"eslcologne2015_rare_flipside"
+		{
+			"[eslcologne2015_team_flipside]sticker"		"1"
+		}
+		"eslcologne2015_rare_titan"
+		{
+			"[eslcologne2015_team_titan]sticker"		"1"
+		}
+		"eslcologne2015_rare_clg"
+		{
+			"[eslcologne2015_team_clg]sticker"		"1"
+		}
+		"eslcologne2015_rare_esl"
+		{
+			"[eslcologne2015_team_esl]sticker"		"1"
+		}
+		"crate_sticker_pack_eslcologne2015_legends_rare"
+		{
+			"[eslcologne2015_team_fnatic]sticker"		"1"
+			"[eslcologne2015_team_virtuspro]sticker"		"1"
+			"[eslcologne2015_team_mousesports]sticker"		"1"
+			"[eslcologne2015_team_navi]sticker"		"1"
+			"[eslcologne2015_team_ninjasinpyjamas]sticker"		"1"
+			"[eslcologne2015_team_envyus]sticker"		"1"
+			"[eslcologne2015_team_luminositygaming]sticker"		"1"
+			"[eslcologne2015_team_solomid]sticker"		"1"
+			"[eslcologne2015_team_esl]sticker"		"1"
+		}
+		"crate_sticker_pack_eslcologne2015_legends_legendary"
+		{
+			"[eslcologne2015_team_fnatic_foil]sticker"		"1"
+			"[eslcologne2015_team_virtuspro_foil]sticker"		"1"
+			"[eslcologne2015_team_mousesports_foil]sticker"		"1"
+			"[eslcologne2015_team_navi_foil]sticker"		"1"
+			"[eslcologne2015_team_ninjasinpyjamas_foil]sticker"		"1"
+			"[eslcologne2015_team_envyus_foil]sticker"		"1"
+			"[eslcologne2015_team_luminositygaming_foil]sticker"		"1"
+			"[eslcologne2015_team_solomid_foil]sticker"		"1"
+			"[eslcologne2015_team_esl_foil]sticker"		"1"
+		}
+		"crate_sticker_pack_eslcologne2015_legends"
+		{
+			"crate_sticker_pack_eslcologne2015_legends_legendary"		"1"
+		}
+		"crate_sticker_pack_eslcologne2015_challengers_rare"
+		{
+			"[eslcologne2015_team_renegades]sticker"		"1"
+			"[eslcologne2015_team_kinguin]sticker"		"1"
+			"[eslcologne2015_team_ebettle]sticker"		"1"
+			"[eslcologne2015_team_cloud9]sticker"		"1"
+			"[eslcologne2015_team_teamimmunity]sticker"		"1"
+			"[eslcologne2015_team_flipside]sticker"		"1"
+			"[eslcologne2015_team_titan]sticker"		"1"
+			"[eslcologne2015_team_clg]sticker"		"1"
+		}
+		"crate_sticker_pack_eslcologne2015_challengers_legendary"
+		{
+			"[eslcologne2015_team_renegades_foil]sticker"		"1"
+			"[eslcologne2015_team_kinguin_foil]sticker"		"1"
+			"[eslcologne2015_team_ebettle_foil]sticker"		"1"
+			"[eslcologne2015_team_cloud9_foil]sticker"		"1"
+			"[eslcologne2015_team_teamimmunity_foil]sticker"		"1"
+			"[eslcologne2015_team_flipside_foil]sticker"		"1"
+			"[eslcologne2015_team_titan_foil]sticker"		"1"
+			"[eslcologne2015_team_clg_foil]sticker"		"1"
+			"[eslcologne2015_team_esl_foil]sticker"		"1"
+		}
+		"crate_sticker_pack_eslcologne2015_challengers"
+		{
+			"crate_sticker_pack_eslcologne2015_challengers_legendary"		"1"
+		}
+		"eslcologne2015_signatures_fnatic"
+		{
+			"[eslcologne2015_signature_pronax]sticker"		"1"
+			"[eslcologne2015_signature_flusha]sticker"		"1"
+			"[eslcologne2015_signature_jw]sticker"		"1"
+			"[eslcologne2015_signature_krimz]sticker"		"1"
+			"[eslcologne2015_signature_olofmeister]sticker"		"1"
+		}
+		"eslcologne2015_signatures_luminositygaming"
+		{
+			"[eslcologne2015_signature_fallen]sticker"		"1"
+			"[eslcologne2015_signature_steel]sticker"		"1"
+			"[eslcologne2015_signature_fer]sticker"		"1"
+			"[eslcologne2015_signature_boltz]sticker"		"1"
+			"[eslcologne2015_signature_coldzera]sticker"		"1"
+		}
+		"eslcologne2015_signatures_navi"
+		{
+			"[eslcologne2015_signature_guardian]sticker"		"1"
+			"[eslcologne2015_signature_zeus]sticker"		"1"
+			"[eslcologne2015_signature_seized]sticker"		"1"
+			"[eslcologne2015_signature_edward]sticker"		"1"
+			"[eslcologne2015_signature_flamie]sticker"		"1"
+		}
+		"eslcologne2015_signatures_ninjasinpyjamas"
+		{
+			"[eslcologne2015_signature_xizt]sticker"		"1"
+			"[eslcologne2015_signature_forest]sticker"		"1"
+			"[eslcologne2015_signature_getright]sticker"		"1"
+			"[eslcologne2015_signature_friberg]sticker"		"1"
+			"[eslcologne2015_signature_allu]sticker"		"1"
+		}
+		"eslcologne2015_signatures_envyus"
+		{
+			"[eslcologne2015_signature_kennys]sticker"		"1"
+			"[eslcologne2015_signature_kioshima]sticker"		"1"
+			"[eslcologne2015_signature_happy]sticker"		"1"
+			"[eslcologne2015_signature_apex]sticker"		"1"
+			"[eslcologne2015_signature_nbk]sticker"		"1"
+		}
+		"eslcologne2015_signatures_titan"
+		{
+			"[eslcologne2015_signature_maniac]sticker"		"1"
+			"[eslcologne2015_signature_ex6tenz]sticker"		"1"
+			"[eslcologne2015_signature_shox]sticker"		"1"
+			"[eslcologne2015_signature_smithzz]sticker"		"1"
+			"[eslcologne2015_signature_rpk]sticker"		"1"
+		}
+		"eslcologne2015_signatures_solomid"
+		{
+			"[eslcologne2015_signature_karrigan]sticker"		"1"
+			"[eslcologne2015_signature_device]sticker"		"1"
+			"[eslcologne2015_signature_dupreeh]sticker"		"1"
+			"[eslcologne2015_signature_xyp9x]sticker"		"1"
+			"[eslcologne2015_signature_cajunb]sticker"		"1"
+		}
+		"eslcologne2015_signatures_virtuspro"
+		{
+			"[eslcologne2015_signature_neo]sticker"		"1"
+			"[eslcologne2015_signature_pasha]sticker"		"1"
+			"[eslcologne2015_signature_taz]sticker"		"1"
+			"[eslcologne2015_signature_snax]sticker"		"1"
+			"[eslcologne2015_signature_byali]sticker"		"1"
+		}
+		"eslcologne2015_signatures_mousesports"
+		{
+			"[eslcologne2015_signature_chrisj]sticker"		"1"
+			"[eslcologne2015_signature_gobb]sticker"		"1"
+			"[eslcologne2015_signature_denis]sticker"		"1"
+			"[eslcologne2015_signature_nex]sticker"		"1"
+			"[eslcologne2015_signature_spiidi]sticker"		"1"
+		}
+		"eslcologne2015_signatures_renegades"
+		{
+			"[eslcologne2015_signature_azr]sticker"		"1"
+			"[eslcologne2015_signature_havoc]sticker"		"1"
+			"[eslcologne2015_signature_jks]sticker"		"1"
+			"[eslcologne2015_signature_spunj]sticker"		"1"
+			"[eslcologne2015_signature_yam]sticker"		"1"
+		}
+		"eslcologne2015_signatures_teamimmunity"
+		{
+			"[eslcologne2015_signature_ustilo]sticker"		"1"
+			"[eslcologne2015_signature_rickeh]sticker"		"1"
+			"[eslcologne2015_signature_emagine]sticker"		"1"
+			"[eslcologne2015_signature_snyper]sticker"		"1"
+			"[eslcologne2015_signature_james]sticker"		"1"
+		}
+		"eslcologne2015_signatures_ebettle"
+		{
+			"[eslcologne2015_signature_rallen]sticker"		"1"
+			"[eslcologne2015_signature_hyper]sticker"		"1"
+			"[eslcologne2015_signature_peet]sticker"		"1"
+			"[eslcologne2015_signature_furlan]sticker"		"1"
+			"[eslcologne2015_signature_gruby]sticker"		"1"
+		}
+		"eslcologne2015_signatures_kinguin"
+		{
+			"[eslcologne2015_signature_dennis]sticker"		"1"
+			"[eslcologne2015_signature_scream]sticker"		"1"
+			"[eslcologne2015_signature_rain]sticker"		"1"
+			"[eslcologne2015_signature_maikelele]sticker"		"1"
+			"[eslcologne2015_signature_fox]sticker"		"1"
+		}
+		"eslcologne2015_signatures_flipside"
+		{
+			"[eslcologne2015_signature_markeloff]sticker"		"1"
+			"[eslcologne2015_signature_b1ad3]sticker"		"1"
+			"[eslcologne2015_signature_bondik]sticker"		"1"
+			"[eslcologne2015_signature_worldedit]sticker"		"1"
+			"[eslcologne2015_signature_davcost]sticker"		"1"
+		}
+		"eslcologne2015_signatures_clg"
+		{
+			"[eslcologne2015_signature_hazed]sticker"		"1"
+			"[eslcologne2015_signature_fns]sticker"		"1"
+			"[eslcologne2015_signature_jdm64]sticker"		"1"
+			"[eslcologne2015_signature_reltuc]sticker"		"1"
+			"[eslcologne2015_signature_tarik]sticker"		"1"
+		}
+		"eslcologne2015_signatures_cloud9"
+		{
+			"[eslcologne2015_signature_nothing]sticker"		"1"
+			"[eslcologne2015_signature_sgares]sticker"		"1"
+			"[eslcologne2015_signature_shroud]sticker"		"1"
+			"[eslcologne2015_signature_freakazoid]sticker"		"1"
+			"[eslcologne2015_signature_skadoodle]sticker"		"1"
+		}
+		"crate_signature_pack_eslcologne2015_group_1_rare"
+		{
+			"[eslcologne2015_signature_xizt]sticker"		"1"
+			"[eslcologne2015_signature_forest]sticker"		"1"
+			"[eslcologne2015_signature_getright]sticker"		"1"
+			"[eslcologne2015_signature_friberg]sticker"		"1"
+			"[eslcologne2015_signature_allu]sticker"		"1"
+			"[eslcologne2015_signature_karrigan]sticker"		"1"
+			"[eslcologne2015_signature_device]sticker"		"1"
+			"[eslcologne2015_signature_dupreeh]sticker"		"1"
+			"[eslcologne2015_signature_xyp9x]sticker"		"1"
+			"[eslcologne2015_signature_cajunb]sticker"		"1"
+			"[eslcologne2015_signature_azr]sticker"		"1"
+			"[eslcologne2015_signature_havoc]sticker"		"1"
+			"[eslcologne2015_signature_jks]sticker"		"1"
+			"[eslcologne2015_signature_spunj]sticker"		"1"
+			"[eslcologne2015_signature_yam]sticker"		"1"
+			"[eslcologne2015_signature_hazed]sticker"		"1"
+			"[eslcologne2015_signature_fns]sticker"		"1"
+			"[eslcologne2015_signature_jdm64]sticker"		"1"
+			"[eslcologne2015_signature_reltuc]sticker"		"1"
+			"[eslcologne2015_signature_tarik]sticker"		"1"
+		}
+		"crate_signature_pack_eslcologne2015_group_1_legendary"
+		{
+			"[eslcologne2015_signature_xizt_foil]sticker"		"1"
+			"[eslcologne2015_signature_forest_foil]sticker"		"1"
+			"[eslcologne2015_signature_getright_foil]sticker"		"1"
+			"[eslcologne2015_signature_friberg_foil]sticker"		"1"
+			"[eslcologne2015_signature_allu_foil]sticker"		"1"
+			"[eslcologne2015_signature_karrigan_foil]sticker"		"1"
+			"[eslcologne2015_signature_device_foil]sticker"		"1"
+			"[eslcologne2015_signature_dupreeh_foil]sticker"		"1"
+			"[eslcologne2015_signature_xyp9x_foil]sticker"		"1"
+			"[eslcologne2015_signature_cajunb_foil]sticker"		"1"
+			"[eslcologne2015_signature_azr_foil]sticker"		"1"
+			"[eslcologne2015_signature_havoc_foil]sticker"		"1"
+			"[eslcologne2015_signature_jks_foil]sticker"		"1"
+			"[eslcologne2015_signature_spunj_foil]sticker"		"1"
+			"[eslcologne2015_signature_yam_foil]sticker"		"1"
+			"[eslcologne2015_signature_hazed_foil]sticker"		"1"
+			"[eslcologne2015_signature_fns_foil]sticker"		"1"
+			"[eslcologne2015_signature_jdm64_foil]sticker"		"1"
+			"[eslcologne2015_signature_reltuc_foil]sticker"		"1"
+			"[eslcologne2015_signature_tarik_foil]sticker"		"1"
+		}
+		"crate_signature_pack_eslcologne2015_group_2_rare"
+		{
+			"[eslcologne2015_signature_fallen]sticker"		"1"
+			"[eslcologne2015_signature_steel]sticker"		"1"
+			"[eslcologne2015_signature_fer]sticker"		"1"
+			"[eslcologne2015_signature_boltz]sticker"		"1"
+			"[eslcologne2015_signature_coldzera]sticker"		"1"
+			"[eslcologne2015_signature_kennys]sticker"		"1"
+			"[eslcologne2015_signature_kioshima]sticker"		"1"
+			"[eslcologne2015_signature_happy]sticker"		"1"
+			"[eslcologne2015_signature_apex]sticker"		"1"
+			"[eslcologne2015_signature_nbk]sticker"		"1"
+			"[eslcologne2015_signature_dennis]sticker"		"1"
+			"[eslcologne2015_signature_scream]sticker"		"1"
+			"[eslcologne2015_signature_rain]sticker"		"1"
+			"[eslcologne2015_signature_maikelele]sticker"		"1"
+			"[eslcologne2015_signature_fox]sticker"		"1"
+			"[eslcologne2015_signature_markeloff]sticker"		"1"
+			"[eslcologne2015_signature_b1ad3]sticker"		"1"
+			"[eslcologne2015_signature_bondik]sticker"		"1"
+			"[eslcologne2015_signature_worldedit]sticker"		"1"
+			"[eslcologne2015_signature_davcost]sticker"		"1"
+		}
+		"crate_signature_pack_eslcologne2015_group_2_legendary"
+		{
+			"[eslcologne2015_signature_fallen_foil]sticker"		"1"
+			"[eslcologne2015_signature_steel_foil]sticker"		"1"
+			"[eslcologne2015_signature_fer_foil]sticker"		"1"
+			"[eslcologne2015_signature_boltz_foil]sticker"		"1"
+			"[eslcologne2015_signature_coldzera_foil]sticker"		"1"
+			"[eslcologne2015_signature_kennys_foil]sticker"		"1"
+			"[eslcologne2015_signature_kioshima_foil]sticker"		"1"
+			"[eslcologne2015_signature_happy_foil]sticker"		"1"
+			"[eslcologne2015_signature_apex_foil]sticker"		"1"
+			"[eslcologne2015_signature_nbk_foil]sticker"		"1"
+			"[eslcologne2015_signature_dennis_foil]sticker"		"1"
+			"[eslcologne2015_signature_scream_foil]sticker"		"1"
+			"[eslcologne2015_signature_rain_foil]sticker"		"1"
+			"[eslcologne2015_signature_maikelele_foil]sticker"		"1"
+			"[eslcologne2015_signature_fox_foil]sticker"		"1"
+			"[eslcologne2015_signature_markeloff_foil]sticker"		"1"
+			"[eslcologne2015_signature_b1ad3_foil]sticker"		"1"
+			"[eslcologne2015_signature_bondik_foil]sticker"		"1"
+			"[eslcologne2015_signature_worldedit_foil]sticker"		"1"
+			"[eslcologne2015_signature_davcost_foil]sticker"		"1"
+		}
+		"crate_signature_pack_eslcologne2015_group_3_rare"
+		{
+			"[eslcologne2015_signature_pronax]sticker"		"1"
+			"[eslcologne2015_signature_flusha]sticker"		"1"
+			"[eslcologne2015_signature_jw]sticker"		"1"
+			"[eslcologne2015_signature_krimz]sticker"		"1"
+			"[eslcologne2015_signature_olofmeister]sticker"		"1"
+			"[eslcologne2015_signature_guardian]sticker"		"1"
+			"[eslcologne2015_signature_zeus]sticker"		"1"
+			"[eslcologne2015_signature_seized]sticker"		"1"
+			"[eslcologne2015_signature_edward]sticker"		"1"
+			"[eslcologne2015_signature_flamie]sticker"		"1"
+			"[eslcologne2015_signature_maniac]sticker"		"1"
+			"[eslcologne2015_signature_ex6tenz]sticker"		"1"
+			"[eslcologne2015_signature_shox]sticker"		"1"
+			"[eslcologne2015_signature_smithzz]sticker"		"1"
+			"[eslcologne2015_signature_rpk]sticker"		"1"
+			"[eslcologne2015_signature_rallen]sticker"		"1"
+			"[eslcologne2015_signature_hyper]sticker"		"1"
+			"[eslcologne2015_signature_peet]sticker"		"1"
+			"[eslcologne2015_signature_furlan]sticker"		"1"
+			"[eslcologne2015_signature_gruby]sticker"		"1"
+		}
+		"crate_signature_pack_eslcologne2015_group_3_legendary"
+		{
+			"[eslcologne2015_signature_pronax_foil]sticker"		"1"
+			"[eslcologne2015_signature_flusha_foil]sticker"		"1"
+			"[eslcologne2015_signature_jw_foil]sticker"		"1"
+			"[eslcologne2015_signature_krimz_foil]sticker"		"1"
+			"[eslcologne2015_signature_olofmeister_foil]sticker"		"1"
+			"[eslcologne2015_signature_guardian_foil]sticker"		"1"
+			"[eslcologne2015_signature_zeus_foil]sticker"		"1"
+			"[eslcologne2015_signature_seized_foil]sticker"		"1"
+			"[eslcologne2015_signature_edward_foil]sticker"		"1"
+			"[eslcologne2015_signature_flamie_foil]sticker"		"1"
+			"[eslcologne2015_signature_maniac_foil]sticker"		"1"
+			"[eslcologne2015_signature_ex6tenz_foil]sticker"		"1"
+			"[eslcologne2015_signature_shox_foil]sticker"		"1"
+			"[eslcologne2015_signature_smithzz_foil]sticker"		"1"
+			"[eslcologne2015_signature_rpk_foil]sticker"		"1"
+			"[eslcologne2015_signature_rallen_foil]sticker"		"1"
+			"[eslcologne2015_signature_hyper_foil]sticker"		"1"
+			"[eslcologne2015_signature_peet_foil]sticker"		"1"
+			"[eslcologne2015_signature_furlan_foil]sticker"		"1"
+			"[eslcologne2015_signature_gruby_foil]sticker"		"1"
+		}
+		"crate_signature_pack_eslcologne2015_group_4_rare"
+		{
+			"[eslcologne2015_signature_neo]sticker"		"1"
+			"[eslcologne2015_signature_pasha]sticker"		"1"
+			"[eslcologne2015_signature_taz]sticker"		"1"
+			"[eslcologne2015_signature_snax]sticker"		"1"
+			"[eslcologne2015_signature_byali]sticker"		"1"
+			"[eslcologne2015_signature_chrisj]sticker"		"1"
+			"[eslcologne2015_signature_gobb]sticker"		"1"
+			"[eslcologne2015_signature_denis]sticker"		"1"
+			"[eslcologne2015_signature_nex]sticker"		"1"
+			"[eslcologne2015_signature_spiidi]sticker"		"1"
+			"[eslcologne2015_signature_ustilo]sticker"		"1"
+			"[eslcologne2015_signature_rickeh]sticker"		"1"
+			"[eslcologne2015_signature_emagine]sticker"		"1"
+			"[eslcologne2015_signature_snyper]sticker"		"1"
+			"[eslcologne2015_signature_james]sticker"		"1"
+			"[eslcologne2015_signature_nothing]sticker"		"1"
+			"[eslcologne2015_signature_sgares]sticker"		"1"
+			"[eslcologne2015_signature_shroud]sticker"		"1"
+			"[eslcologne2015_signature_freakazoid]sticker"		"1"
+			"[eslcologne2015_signature_skadoodle]sticker"		"1"
+		}
+		"crate_signature_pack_eslcologne2015_group_4_legendary"
+		{
+			"[eslcologne2015_signature_neo_foil]sticker"		"1"
+			"[eslcologne2015_signature_pasha_foil]sticker"		"1"
+			"[eslcologne2015_signature_taz_foil]sticker"		"1"
+			"[eslcologne2015_signature_snax_foil]sticker"		"1"
+			"[eslcologne2015_signature_byali_foil]sticker"		"1"
+			"[eslcologne2015_signature_chrisj_foil]sticker"		"1"
+			"[eslcologne2015_signature_gobb_foil]sticker"		"1"
+			"[eslcologne2015_signature_denis_foil]sticker"		"1"
+			"[eslcologne2015_signature_nex_foil]sticker"		"1"
+			"[eslcologne2015_signature_spiidi_foil]sticker"		"1"
+			"[eslcologne2015_signature_ustilo_foil]sticker"		"1"
+			"[eslcologne2015_signature_rickeh_foil]sticker"		"1"
+			"[eslcologne2015_signature_emagine_foil]sticker"		"1"
+			"[eslcologne2015_signature_snyper_foil]sticker"		"1"
+			"[eslcologne2015_signature_james_foil]sticker"		"1"
+			"[eslcologne2015_signature_nothing_foil]sticker"		"1"
+			"[eslcologne2015_signature_sgares_foil]sticker"		"1"
+			"[eslcologne2015_signature_shroud_foil]sticker"		"1"
+			"[eslcologne2015_signature_freakazoid_foil]sticker"		"1"
+			"[eslcologne2015_signature_skadoodle_foil]sticker"		"1"
+		}
+		"crate_eslcologne2015_promo_de_dust2"
+		{
+			"set_dust_2"		"1"
+		}
+		"crate_eslcologne2015_promo_de_mirage"
+		{
+			"set_mirage"		"1"
+		}
+		"crate_eslcologne2015_promo_de_inferno"
+		{
+			"set_inferno"		"1"
+		}
+		"crate_eslcologne2015_promo_de_cbble"
+		{
+			"set_cobblestone"		"1"
+		}
+		"crate_eslcologne2015_promo_de_overpass"
+		{
+			"set_overpass"		"1"
+		}
+		"crate_eslcologne2015_promo_de_cache"
+		{
+			"set_cache"		"1"
+		}
+		"crate_eslcologne2015_promo_de_train"
+		{
+			"set_train"		"1"
+		}
 		"coupon loot list - bossyburger"
 		{
 			"public_list_contents"		"1"
@@ -35996,6 +40742,35 @@
 		"48"		"crate_community_7"
 		"49"		"crate_sticker_pack_enfu_capsule_lootlist"
 		"50"		"crate_community_8"
+		"51"		"crate_sticker_pack_eslcologne2015_legends"
+		"52"		"crate_sticker_pack_eslcologne2015_challengers"
+		"53"		"crate_signature_pack_eslcologne2015_group_1_legendary"
+		"54"		"crate_signature_pack_eslcologne2015_group_2_legendary"
+		"55"		"crate_signature_pack_eslcologne2015_group_3_legendary"
+		"56"		"crate_signature_pack_eslcologne2015_group_4_legendary"
+		"57"		"eslcologne2015_signatures_fnatic"
+		"58"		"eslcologne2015_signatures_luminositygaming"
+		"59"		"eslcologne2015_signatures_navi"
+		"60"		"eslcologne2015_signatures_ninjasinpyjamas"
+		"61"		"eslcologne2015_signatures_envyus"
+		"62"		"eslcologne2015_signatures_titan"
+		"63"		"eslcologne2015_signatures_solomid"
+		"64"		"eslcologne2015_signatures_virtuspro"
+		"65"		"eslcologne2015_signatures_mousesports"
+		"66"		"eslcologne2015_signatures_renegades"
+		"67"		"eslcologne2015_signatures_teamimmunity"
+		"68"		"eslcologne2015_signatures_ebettle"
+		"69"		"eslcologne2015_signatures_kinguin"
+		"70"		"eslcologne2015_signatures_flipside"
+		"71"		"eslcologne2015_signatures_clg"
+		"72"		"eslcologne2015_signatures_cloud9"
+		"73"		"crate_eslcologne2015_promo_de_dust2"
+		"74"		"crate_eslcologne2015_promo_de_mirage"
+		"75"		"crate_eslcologne2015_promo_de_inferno"
+		"76"		"crate_eslcologne2015_promo_de_cbble"
+		"77"		"crate_eslcologne2015_promo_de_overpass"
+		"78"		"crate_eslcologne2015_promo_de_cache"
+		"79"		"crate_eslcologne2015_promo_de_train"
 	}
 	"quest_reward_loot_lists"
 	{
@@ -40952,6 +45727,1129 @@
 			"category"		"crafting"
 			"filter"		"-3"
 			"requires_tool"		"0"
+		}
+	}
+	"pro_players"
+	{
+		"9419182"
+		{
+			"name"		"pronax"
+			"code"		"pronax"
+			"dob"		"1991-06-24"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"6"
+				}
+			}
+		}
+		"31082355"
+		{
+			"name"		"flusha"
+			"code"		"flusha"
+			"dob"		"1993-08-12"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"6"
+				}
+			}
+		}
+		"71288472"
+		{
+			"name"		"JW"
+			"code"		"jw"
+			"dob"		"1995-02-23"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"6"
+				}
+			}
+		}
+		"71385856"
+		{
+			"name"		"KRIMZ"
+			"code"		"krimz"
+			"dob"		"1994-04-25"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"6"
+				}
+			}
+		}
+		"28361465"
+		{
+			"name"		"olofmeister"
+			"code"		"olofmeister"
+			"dob"		"1992-01-31"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"6"
+				}
+			}
+		}
+		"424467"
+		{
+			"name"		"FalleN"
+			"code"		"fallen"
+			"dob"		"1991-05-30"
+			"geo"		"BR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"57"
+				}
+			}
+		}
+		"54512474"
+		{
+			"name"		"steel"
+			"code"		"steel"
+			"dob"		"1992-03-08"
+			"geo"		"BR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"57"
+				}
+			}
+		}
+		"38921219"
+		{
+			"name"		"fer"
+			"code"		"fer"
+			"dob"		"1991-10-30"
+			"geo"		"BR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"57"
+				}
+			}
+		}
+		"58113672"
+		{
+			"name"		"boltz"
+			"code"		"boltz"
+			"dob"		"1997-04-10"
+			"geo"		"BR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"57"
+				}
+			}
+		}
+		"79720871"
+		{
+			"name"		"coldzera"
+			"code"		"coldzera"
+			"dob"		"1994-10-31"
+			"geo"		"BR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"57"
+				}
+			}
+		}
+		"12065295"
+		{
+			"name"		"GuardiaN"
+			"code"		"guardian"
+			"dob"		"1991-07-19"
+			"geo"		"SK"
+			"events"
+			{
+				"7"
+				{
+					"team"		"12"
+				}
+			}
+		}
+		"59062744"
+		{
+			"name"		"Zeus"
+			"code"		"zeus"
+			"dob"		"1987-08-10"
+			"geo"		"UA"
+			"events"
+			{
+				"7"
+				{
+					"team"		"12"
+				}
+			}
+		}
+		"3648428"
+		{
+			"name"		"seized"
+			"code"		"seized"
+			"dob"		"1994-09-09"
+			"geo"		"RU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"12"
+				}
+			}
+		}
+		"23429534"
+		{
+			"name"		"Edward"
+			"code"		"edward"
+			"dob"		"1987-12-28"
+			"geo"		"UA"
+			"events"
+			{
+				"7"
+				{
+					"team"		"12"
+				}
+			}
+		}
+		"156257548"
+		{
+			"name"		"flamie"
+			"code"		"flamie"
+			"dob"		"1997-04-05"
+			"geo"		"RU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"12"
+				}
+			}
+		}
+		"26224992"
+		{
+			"name"		"Xizt"
+			"code"		"xizt"
+			"dob"		"1991-02-22"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"1"
+				}
+			}
+		}
+		"93724"
+		{
+			"name"		"f0rest"
+			"code"		"forest"
+			"dob"		"1988-06-10"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"1"
+				}
+			}
+		}
+		"21771190"
+		{
+			"name"		"GeT_RiGhT"
+			"code"		"getright"
+			"dob"		"1990-05-29"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"1"
+				}
+			}
+		}
+		"24295201"
+		{
+			"name"		"friberg"
+			"code"		"friberg"
+			"dob"		"1991-10-19"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"1"
+				}
+			}
+		}
+		"1345246"
+		{
+			"name"		"allu"
+			"code"		"allu"
+			"dob"		"1992-05-20"
+			"geo"		"FI"
+			"events"
+			{
+				"7"
+				{
+					"team"		"1"
+				}
+			}
+		}
+		"64640068"
+		{
+			"name"		"kennyS"
+			"code"		"kennys"
+			"dob"		"1995-05-19"
+			"geo"		"FR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"46"
+				}
+			}
+		}
+		"40517167"
+		{
+			"name"		"kioShiMa"
+			"code"		"kioshima"
+			"dob"		"1994-07-26"
+			"geo"		"FR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"46"
+				}
+			}
+		}
+		"17975624"
+		{
+			"name"		"Happy"
+			"code"		"happy"
+			"dob"		"1991-11-23"
+			"geo"		"FR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"46"
+				}
+			}
+		}
+		"29478439"
+		{
+			"name"		"apEX"
+			"code"		"apex"
+			"dob"		"1993-02-22"
+			"geo"		"FR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"46"
+				}
+			}
+		}
+		"444845"
+		{
+			"name"		"NBK-"
+			"code"		"nbk"
+			"dob"		"1994-06-05"
+			"geo"		"FR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"46"
+				}
+			}
+		}
+		"29164525"
+		{
+			"name"		"karrigan"
+			"code"		"karrigan"
+			"dob"		"1990-04-14"
+			"geo"		"DK"
+			"events"
+			{
+				"7"
+				{
+					"team"		"58"
+				}
+			}
+		}
+		"27447936"
+		{
+			"name"		"device"
+			"code"		"device"
+			"dob"		"1995-08-09"
+			"geo"		"DK"
+			"events"
+			{
+				"7"
+				{
+					"team"		"58"
+				}
+			}
+		}
+		"44589228"
+		{
+			"name"		"dupreeh"
+			"code"		"dupreeh"
+			"dob"		"1993-03-26"
+			"geo"		"DK"
+			"events"
+			{
+				"7"
+				{
+					"team"		"58"
+				}
+			}
+		}
+		"30416534"
+		{
+			"name"		"Xyp9x"
+			"code"		"xyp9x"
+			"dob"		"1995-09-11"
+			"geo"		"DK"
+			"events"
+			{
+				"7"
+				{
+					"team"		"58"
+				}
+			}
+		}
+		"18062315"
+		{
+			"name"		"cajunb"
+			"code"		"cajunb"
+			"dob"		"1989-12-13"
+			"geo"		"DK"
+			"events"
+			{
+				"7"
+				{
+					"team"		"58"
+				}
+			}
+		}
+		"460206"
+		{
+			"name"		"NEO"
+			"code"		"neo"
+			"dob"		"1987-06-15"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"31"
+				}
+			}
+		}
+		"13580090"
+		{
+			"name"		"pashaBiceps"
+			"code"		"pasha"
+			"dob"		"1988-04-11"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"31"
+				}
+			}
+		}
+		"234052"
+		{
+			"name"		"TaZ"
+			"code"		"taz"
+			"dob"		"1986-06-06"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"31"
+				}
+			}
+		}
+		"21875845"
+		{
+			"name"		"Snax"
+			"code"		"snax"
+			"dob"		"1993-07-05"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"31"
+				}
+			}
+		}
+		"18860354"
+		{
+			"name"		"byali"
+			"code"		"byali"
+			"dob"		"1994-04-30"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"31"
+				}
+			}
+		}
+		"28273376"
+		{
+			"name"		"chrisJ"
+			"code"		"chrisj"
+			"dob"		"1990-05-25"
+			"geo"		"NL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"29"
+				}
+			}
+		}
+		"1162165"
+		{
+			"name"		"gob b"
+			"code"		"gobb"
+			"dob"		"1987-07-10"
+			"geo"		"DE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"29"
+				}
+			}
+		}
+		"31185376"
+		{
+			"name"		"denis"
+			"code"		"denis"
+			"dob"		"1994-08-18"
+			"geo"		"DE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"29"
+				}
+			}
+		}
+		"90378773"
+		{
+			"name"		"nex"
+			"code"		"nex"
+			"dob"		"1992-06-20"
+			"geo"		"DE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"29"
+				}
+			}
+		}
+		"13465075"
+		{
+			"name"		"Spiidi"
+			"code"		"spiidi"
+			"dob"		"1995-09-13"
+			"geo"		"DE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"29"
+				}
+			}
+		}
+		"24832266"
+		{
+			"name"		"AZR"
+			"code"		"azr"
+			"dob"		"1992-10-02"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"53"
+				}
+			}
+		}
+		"10025211"
+		{
+			"name"		"Havoc"
+			"code"		"havoc"
+			"dob"		"1990-06-25"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"53"
+				}
+			}
+		}
+		"16839456"
+		{
+			"name"		"jks"
+			"code"		"jks"
+			"dob"		"1995-12-12"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"53"
+				}
+			}
+		}
+		"34303888"
+		{
+			"name"		"SPUNJ"
+			"code"		"spunj"
+			"dob"		"1989-07-24"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"53"
+				}
+			}
+		}
+		"30659"
+		{
+			"name"		"yam"
+			"code"		"yam"
+			"dob"		"1988-12-07"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"53"
+				}
+			}
+		}
+		"18903255"
+		{
+			"name"		"USTILO"
+			"code"		"ustilo"
+			"dob"		"1993-08-10"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"54"
+				}
+			}
+		}
+		"3215921"
+		{
+			"name"		"Rickeh"
+			"code"		"rickeh"
+			"dob"		"1991-11-22"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"54"
+				}
+			}
+		}
+		"19633654"
+		{
+			"name"		"emagine"
+			"code"		"emagine"
+			"dob"		"1991-04-16"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"54"
+				}
+			}
+		}
+		"7436549"
+		{
+			"name"		"Snyper"
+			"code"		"snyper"
+			"dob"		"1986-09-12"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"54"
+				}
+			}
+		}
+		"35336006"
+		{
+			"name"		"James"
+			"code"		"james"
+			"dob"		"1994-03-22"
+			"geo"		"AU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"54"
+				}
+			}
+		}
+		"5667261"
+		{
+			"name"		"markeloff"
+			"code"		"markeloff"
+			"dob"		"1988-02-12"
+			"geo"		"UA"
+			"events"
+			{
+				"7"
+				{
+					"team"		"43"
+				}
+			}
+		}
+		"53258137"
+		{
+			"name"		"B1ad3"
+			"code"		"b1ad3"
+			"dob"		"1986-11-11"
+			"geo"		"UA"
+			"events"
+			{
+				"7"
+				{
+					"team"		"43"
+				}
+			}
+		}
+		"46918643"
+		{
+			"name"		"bondik"
+			"code"		"bondik"
+			"dob"		"1993-07-02"
+			"geo"		"UA"
+			"events"
+			{
+				"7"
+				{
+					"team"		"43"
+				}
+			}
+		}
+		"36732188"
+		{
+			"name"		"WorldEdit"
+			"code"		"worldedit"
+			"dob"		"1991-10-16"
+			"geo"		"RU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"43"
+				}
+			}
+		}
+		"20273529"
+		{
+			"name"		"DavCost"
+			"code"		"davcost"
+			"dob"		"1996-05-18"
+			"geo"		"RU"
+			"events"
+			{
+				"7"
+				{
+					"team"		"43"
+				}
+			}
+		}
+		"108076825"
+		{
+			"name"		"dennis"
+			"code"		"dennis"
+			"dob"		"1991-07-01"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"55"
+				}
+			}
+		}
+		"28502520"
+		{
+			"name"		"ScreaM"
+			"code"		"scream"
+			"dob"		"1993-07-02"
+			"geo"		"BE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"55"
+				}
+			}
+		}
+		"37085479"
+		{
+			"name"		"rain"
+			"code"		"rain"
+			"dob"		"1994-08-27"
+			"geo"		"NO"
+			"events"
+			{
+				"7"
+				{
+					"team"		"55"
+				}
+			}
+		}
+		"925972"
+		{
+			"name"		"Maikelele"
+			"code"		"maikelele"
+			"dob"		"1991-03-05"
+			"geo"		"SE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"55"
+				}
+			}
+		}
+		"1939536"
+		{
+			"name"		"fox"
+			"code"		"fox"
+			"dob"		"1986-11-15"
+			"geo"		"PT"
+			"events"
+			{
+				"7"
+				{
+					"team"		"55"
+				}
+			}
+		}
+		"31166738"
+		{
+			"name"		"rallen"
+			"code"		"rallen"
+			"dob"		"1994-06-08"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"56"
+				}
+			}
+		}
+		"10357481"
+		{
+			"name"		"Hyper"
+			"code"		"hyper"
+			"dob"		"1990-01-01"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"56"
+				}
+			}
+		}
+		"104340617"
+		{
+			"name"		"peet"
+			"code"		"peet"
+			"dob"		"1990-11-14"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"56"
+				}
+			}
+		}
+		"177495873"
+		{
+			"name"		"Furlan"
+			"code"		"furlan"
+			"dob"		"1994-12-29"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"56"
+				}
+			}
+		}
+		"44752530"
+		{
+			"name"		"GruBy"
+			"code"		"gruby"
+			"dob"		"1995-02-28"
+			"geo"		"PL"
+			"events"
+			{
+				"7"
+				{
+					"team"		"56"
+				}
+			}
+		}
+		"35761"
+		{
+			"name"		"Maniac"
+			"code"		"maniac"
+			"dob"		"1990-06-29"
+			"geo"		"CH"
+			"events"
+			{
+				"7"
+				{
+					"team"		"27"
+				}
+			}
+		}
+		"11737333"
+		{
+			"name"		"Ex6TenZ"
+			"code"		"ex6tenz"
+			"dob"		"1990-04-30"
+			"geo"		"BE"
+			"events"
+			{
+				"7"
+				{
+					"team"		"27"
+				}
+			}
+		}
+		"46654567"
+		{
+			"name"		"shox"
+			"code"		"shox"
+			"dob"		"1992-05-27"
+			"geo"		"FR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"27"
+				}
+			}
+		}
+		"14321919"
+		{
+			"name"		"SmithZz"
+			"code"		"smithzz"
+			"dob"		"1988-12-17"
+			"geo"		"FR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"27"
+				}
+			}
+		}
+		"53985773"
+		{
+			"name"		"RpK"
+			"code"		"rpk"
+			"dob"		"1989-08-12"
+			"geo"		"FR"
+			"events"
+			{
+				"7"
+				{
+					"team"		"27"
+				}
+			}
+		}
+		"30305781"
+		{
+			"name"		"hazed"
+			"code"		"hazed"
+			"dob"		"1989-05-22"
+			"geo"		"US"
+			"events"
+			{
+				"7"
+				{
+					"team"		"49"
+				}
+			}
+		}
+		"17564706"
+		{
+			"name"		"FNS"
+			"code"		"fns"
+			"dob"		"1992-03-19"
+			"geo"		"CA"
+			"events"
+			{
+				"7"
+				{
+					"team"		"49"
+				}
+			}
+		}
+		"7223652"
+		{
+			"name"		"jdm64"
+			"code"		"jdm64"
+			"dob"		"1990-05-20"
+			"geo"		"US"
+			"events"
+			{
+				"7"
+				{
+					"team"		"49"
+				}
+			}
+		}
+		"518760"
+		{
+			"name"		"reltuC"
+			"code"		"reltuc"
+			"dob"		"1988-11-27"
+			"geo"		"US"
+			"events"
+			{
+				"7"
+				{
+					"team"		"49"
+				}
+			}
+		}
+		"18216247"
+		{
+			"name"		"tarik"
+			"code"		"tarik"
+			"dob"		"1996-02-18"
+			"geo"		"US"
+			"events"
+			{
+				"7"
+				{
+					"team"		"49"
+				}
+			}
+		}
+		"755286"
+		{
+			"name"		"n0thing"
+			"code"		"nothing"
+			"dob"		"1990-10-25"
+			"geo"		"US"
+			"events"
+			{
+				"7"
+				{
+					"team"		"52"
+				}
+			}
+		}
+		"164004"
+		{
+			"name"		"seang@res"
+			"code"		"sgares"
+			"dob"		"1988-06-10"
+			"geo"		"US"
+			"events"
+			{
+				"7"
+				{
+					"team"		"52"
+				}
+			}
+		}
+		"4515926"
+		{
+			"name"		"shroud"
+			"code"		"shroud"
+			"dob"		"1994-06-02"
+			"geo"		"CA"
+			"events"
+			{
+				"7"
+				{
+					"team"		"52"
+				}
+			}
+		}
+		"16883071"
+		{
+			"name"		"freakazoid"
+			"code"		"freakazoid"
+			"dob"		"1992-11-25"
+			"geo"		"US"
+			"events"
+			{
+				"7"
+				{
+					"team"		"52"
+				}
+			}
+		}
+		"21075725"
+		{
+			"name"		"Skadoodle"
+			"code"		"skadoodle"
+			"dob"		"1993-07-21"
+			"geo"		"US"
+			"events"
+			{
+				"7"
+				{
+					"team"		"52"
+				}
+			}
 		}
 	}
 }
