@@ -2945,10 +2945,10 @@ SellItemDialog = {
 		$('market_sell_buyercurrency_input').style.borderColor = '';
 		$('market_sell_buyercurrency_input').style.backgroundColor = '';
 
-		//$('market_sell_quantity_input').enable();
-		//$('market_sell_currency_input').enable();
-		//$('market_sell_buyercurrency_input').enable();
-		//$('market_sell_dialog_accept_ssa').enable();
+		$('market_sell_quantity_input').enable();
+		$('market_sell_currency_input').enable();
+		$('market_sell_buyercurrency_input').enable();
+		$('market_sell_dialog_accept_ssa').enable();
 
 		$('market_sell_dialog_ok').show();
 		$('market_sell_dialog_ok').style.cursor = '';

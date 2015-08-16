@@ -27,12 +27,9 @@
 	padding-left:12px;
 }
 #mainContents {
-	width:936px;
 	margin:0;
-	padding:0;
+	padding: 8px 12px;
 	text-align:left;
-	padding-left:12px;
-	padding-top:8px;
 }
 #logo {
 	position:absolute;
@@ -78,21 +75,25 @@
 	padding:1px 0px 1px 9px;
 }
 
+.achieveRow {
+	margin-bottom: 11px;
+}
+
 .achieveTxtHolder {
-	float:left;
 	position:relative;
-	width:768px;
-	height:66px;
-	padding:0px;
+	min-height:60px;
+	border: 1px solid #17435c;
+	padding: 1px;
+	overflow: hidden;
 }
 
 .achieveFill {
 	position:absolute;
 	top:2px;
 	left:2px;
-	width:764px;
-	height:62px;
+	bottom: 2px;
 	z-index:10;
+	background: #17435c;
 }
 
 .achieveFillCover {
@@ -114,16 +115,16 @@
 }
 
 .achieveTxt {
-	position:absolute;
-	top:17px;
-	left:6px;
+	position:relative;
+	padding: 17px 6px 6px 6px;
 	z-index:40;
 }
 
 .achievePercent {
-	position:absolute;
-	top:27px;
-	left:720px;
+	float: right;
+	position: relative;
+	margin-top:27px;
+	margin-right: 20px;
 	color:#66C0F4;
 	font-size:13px;
 	z-index:40;
@@ -155,9 +156,9 @@
 	margin-left:3px;
 	background-color: rgba( 0, 0, 0, 0.4 );
 	padding: 12px;
-	width:817px;
 	color:#898989;
 	margin-bottom: 20px;
+	overflow: hidden;
 }
 
 #headerContentLeft {
@@ -174,20 +175,18 @@
 
 #compareAvatar {
 	float:right;
-	padding:5px 26px 0px 0px;
+	padding: 5px 26px;
 }
 
 .compareImg {
-	float:left;
+	float:right;
 	padding:1px 0px 0px 17px;
 }
 #tabs {
 	margin:0;
 	padding-left:16px;
-	width:728px;
 }
 #subtabs {
-	width:918px;
 	height:43px;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/statsSubtabsBG.gif?v=1');
 	padding-left:14px;
@@ -228,4 +227,19 @@
 }
 .tabOnR,.tabOffR {
 	margin-right:6px;
+}
+
+@media screen and (max-width: 600px)
+{
+	html.responsive .compare_rightcol_element {
+		display: none;
+	}
+
+	html.responsive .achieveRow.unlocked .achieveTxtHolder {
+		border-color: #ffffff;
+	}
+	html.responsive .achieveRow.unlocked .achieveTxt h3,
+	html.responsive .achieveRow.unlocked .achievePercent {
+		color: #ffffff;
+	}
 }

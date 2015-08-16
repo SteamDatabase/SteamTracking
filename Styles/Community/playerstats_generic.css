@@ -225,13 +225,13 @@
 }
 
 .achieveTxtHolder {
-	min-height: 66px;
+	min-height: 64px;
 	position:relative;
 	background: rgba( 0, 0, 0, 0.5 );
 }
 
 .achieveTxt {
-	padding: 17px 6px;
+	padding: 17px 6px 6px 6px;
 }
 
 .achieveTxt h3 {
@@ -387,6 +387,7 @@ select {
 	background-color:#3a3a3a;
 	max-width: 500px;
 	line-height: 14px;
+	margin-top: 4px;
 }
 .achievementProgressBar .progress {
 	background-color: #9dc34c;
@@ -426,6 +427,9 @@ select {
 {
 	html.responsive .achievements_list .achieveUnlockTime {
 		display: none;
+	}
+	html.responsive .achieveTxt {
+		padding: 7px;
 	}
 
 	html.responsive #topSummaryAchievements {
