@@ -3623,60 +3623,74 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 		}
 		
-		$('review_address_body').innerHTML = $('first_name').value+' '+$('last_name').value;
-		$('review_address_body').innerHTML += '<br>'+$('billing_address').value;
+		$('review_address_body').innerText = $('first_name').value+' '+$('last_name').value;
+		$('review_address_body').innerHTML += '<br>';
+		$('review_address_body').innerText += $('billing_address').value;
 		if ( $('billing_address_two').value.length > 0 )
-			$('review_address_body').innerHTML += '<br>'+$('billing_address_two').value;
+		{
+			$('review_address_body').innerHTML += '<br>';
+			$('review_address_body').innerText += $('billing_address_two').value;
+		}
 			
 		if ( $('billing_country').value == 'US' )
 		{
-			$('review_address_body').innerHTML += '<br>'+$('billing_city').value+','+$('billing_state_select').value;
+			$('review_address_body').innerHTML += '<br>';
+			$('review_address_body').innerText += $('billing_city').value+','+$('billing_state_select').value;
 		}
 		else
 		{
-			$('review_address_body').innerHTML += '<br>'+$('billing_city').value+','+$('billing_state_text').value;
+			$('review_address_body').innerHTML += '<br>';
+			$('review_address_body').innerText += $('billing_city').value+','+$('billing_state_text').value;
 		}
 		
-		$('review_address_body').innerHTML += '<br>'+$('billing_postal_code').value;
-		$('review_address_body').innerHTML += '<br>'+$('billing_country').value;
+		$('review_address_body').innerHTML += '<br>';
+		$('review_address_body').innerText += $('billing_country').value;
 
 		if ( g_bRequiresShipping )
 		{
-			$('review_shipping_address_body').innerHTML = $('shipping_first_name').value+' '+$('shipping_last_name').value;
+			$('review_shipping_address_body').innerText = $('shipping_first_name').value+' '+$('shipping_last_name').value;
 			$('review_shipping_address_body').innerHTML += ' (<a href="javascript:SetTabEnabled(\'shipping_info\');">Change</a>)';
-			$('review_shipping_address_body').innerHTML += '<br>'+$('shipping_address').value;
+			$('review_shipping_address_body').innerHTML += '<br>';
+			$('review_shipping_address_body').innerText += $('shipping_address').value;
 			if ( $('shipping_address_two').value.length > 0 )
-				$('review_shipping_address_body').innerHTML += '<br>'+$('shipping_address_two').value;
+			{
+				$('review_shipping_address_body').innerHTML += '<br>';
+				$('review_shipping_address_body').innerText += $('shipping_address_two').value;
+			}
 			
 			if ( $('shipping_country').value == 'US' )
 			{
-				$('review_shipping_address_body').innerHTML += '<br>'+$('shipping_city').value+','+$('shipping_state_select').value;
+				$('review_shipping_address_body').innerHTML += '<br>';
+				$('review_shipping_address_body').innerText += $('shipping_city').value+','+$('shipping_state_select').value;
 			}
 			else
 			{
-				$('review_shipping_address_body').innerHTML += '<br>'+$('shipping_city').value+','+$('shipping_state_text').value;
+				$('review_shipping_address_body').innerHTML += '<br>';
+				$('review_shipping_address_body').innerText += $('shipping_city').value+','+$('shipping_state_text').value;
 			}
 		
-			$('review_shipping_address_body').innerHTML += '<br>'+$('shipping_postal_code').value;
-			$('review_shipping_address_body').innerHTML += '<br>'+$('shipping_country').value;
+			$('review_shipping_address_body').innerHTML += '<br>';
+			$('review_shipping_address_body').innerText += $('shipping_postal_code').value;
+			$('review_shipping_address_body').innerHTML += '<br>';
+			$('review_shipping_address_body').innerText += $('shipping_country').value;
 		}
 		else
 		{
 			$('checkout_review_shipping_address_area').style.display = 'none';
 		}
 
-		$('review_phone_body').innerHTML = $('billing_phone').value;
+		$('review_phone_body').innerText = $('billing_phone').value;
 		
 		var giftee_name_review = $('giftee_name_review');
 		if ( giftee_name_review )
 		{
 			if ( $( 'send_via_email' ).checked )
 			{
-				giftee_name_review.innerHTML = $( 'email_input' ).value;
+				giftee_name_review.innerText = $( 'email_input' ).value;
 			}
 			else
 			{
-				giftee_name_review.innerHTML = currently_selected_friend_name;
+				giftee_name_review.innerText = currently_selected_friend_name;
 			}
 		}
 
