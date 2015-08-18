@@ -189,6 +189,7 @@
 	padding-top: 1px;
 	border: 1px solid #9d9d9d;
 	min-width: 150px;
+	font-family: 'Motiva Sans', Arial, sans-serif;
 }
 
 .dash_overlay .settings_icon
@@ -379,7 +380,8 @@
 	color: #CCC;
 	padding-top: 1px;
 	border: 1px solid #9d9d9d;
-	width: 170px
+	width: 170px;
+	font-family: 'Motiva Sans', Arial, sans-serif;
 }
 
 .dash_closed_captions_customization .cc_select_wrapper
@@ -792,7 +794,7 @@
 	-ms-transform: translateX(-50%) translateY(-85%);
 	-webkit-transform: translateX(-50%) translateY(-85%);
 
-	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
 
 	display: none;
 }
@@ -1106,7 +1108,7 @@
 	background-repeat: no-repeat;
 	background-size: auto 134px;
 	border: #1284a9 5px solid;
-	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
 	visibility: hidden;
 }
 
@@ -1171,7 +1173,7 @@
 
 .tenfoot_modal_panel_wrapper
 {
-	min-width: 756px;
+	min-width: 782px;
 	overflow: hidden;
 
 	position: absolute;
@@ -1188,9 +1190,9 @@
 {
 	text-align: center;
 	font-family: 'Motiva Sans Medium', times, Helvetica, Arial, sans-serif;
-	font-size: 32px;
+	font-size: 28px;
 	text-transform: uppercase;
-	text-shadow: black 2px 2px 4px;
+	text-shadow: black 2px 2px 8px;
 	margin-top: 15px;
 }
 
@@ -1198,20 +1200,20 @@
 {
 	margin: 0 auto;
 	display: inline;
+	margin-right: 5px;
 }
 
 .tenfoot_modal_panel_wrapper .panel_buttons .panel_button .button
 {
 	border-radius: 50%;
-	border: 3px solid #FFF;
 	width: 40px;
 	display: inline-block;
-	margin-right: 5px;
-	box-shadow: black 0px 0px 12px;
+	margin-right: 8px;
 	margin-bottom: 10px;
 	cursor: pointer;
-	padding-left: 1px;
-	padding-bottom: 2px;
+	padding: 5px 3px 6px 3px;
+	box-shadow: 0px 0px 9px 3px rgba(200,200,200,1);
+	background-color: #051a26;
 }
 
 .tenfoot_modal_panel_wrapper .panel_buttons .panel_button .buttonAction
@@ -1222,35 +1224,36 @@
 
 .tenfoot_modal_panel_wrapper .panel_buttons .panel_button #buttonA
 {
-	background-color: #008000;
+	color: #6fd025;
 }
 
 .tenfoot_modal_panel_wrapper .panel_buttons .panel_button #buttonB
 {
-	background-color: red;
-	margin-left: 5px;
+	color: #ce422b;
+	padding-left: 5px;
 }
 
 .tenfoot_modal_panel_wrapper .panel_buttons .panel_button #buttonX
 {
-	background-color: blue;
+	color: #2b87ce;
+	padding-left: 4px;
 }
 
 .tenfoot_modal_panel_wrapper .panel_buttons .panel_button #buttonY
 {
-	background-color: orange;
+	color: #fff100;
 }
 
 .tenfoot_settings_panel
 {
 	border: #1284a9 5px solid;
 	background: -webkit-linear-gradient(-45deg, #126487 0%,#133959 100%);
-	background: linear-gradient(135deg, #126487 0%,#133959 100%); /* W3C */
+	background: linear-gradient(135deg, #126487 0%,#133959 100%);
 	padding: 15px 15px 20px 15px;
-	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
 	z-index: 100;
-
 	max-height: 430px;
+	margin: 13px;
 }
 
 .tenfoot_settings_panel .panel_title
@@ -1367,12 +1370,13 @@
 	background: -webkit-linear-gradient(-45deg, #126487 0%,#133959 100%);
 	background: linear-gradient(135deg, #126487 0%,#133959 100%); /* W3C */
 	padding: 15px 15px 20px 15px;
-	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
 	z-index: 100;
 
 	max-height: 420px;
 	overflow: scroll;
 	overflow-x: hidden;
+	margin: 13px;
 }
 
 .tenfoot_dash_closed_captions_customization .panel_title
@@ -1452,7 +1456,7 @@
 	background: -webkit-linear-gradient(-45deg, #126487 0%,#133959 100%);
 	background: linear-gradient(135deg, #126487 0%,#133959 100%); /* W3C */
 	padding: 40px;
-	box-shadow: 0px 0px 10px 0px rgba(62,151,181,0.9);
+	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
 
 	z-index: 100;
 

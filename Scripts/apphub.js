@@ -331,7 +331,7 @@ function CategorizeCard( card )
 		}
 	}
 
-	if ( $J( card ).hasClass( 'Announcement_Card' ) )
+	if ( $J( card ).hasClass( 'Announcement_Card' ) || $J( card).hasClass( 'News_Card' ) )
 	{
 		card.category |= SMALL | MEDIUM_RESIZABLE;
 		card.preferredCategory |= SMALL | MEDIUM_RESIZABLE;

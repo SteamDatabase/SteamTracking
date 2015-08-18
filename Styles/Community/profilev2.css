@@ -2426,6 +2426,16 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
 		display: none;
 	}
 
+	html.responsive .profile_small_header_avatar {
+		left: 3%;
+	}
+
+	html.responsive .profile_small_header_text {
+		left: 3%;
+		padding-left: calc( 68px + 3% );
+		right: 32px;	/* need to avoid right menu hamburger on profile subpages */
+	}
+
 	/*
 	html.responsive .profile_content.has_profile_background .profile_content_inner {
 		padding-top: 128px;

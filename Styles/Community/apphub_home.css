@@ -235,6 +235,21 @@ body.apphub_blue
 {
 }
 
+.apphub_FollowGame
+{
+	line-height: 46px;
+	float: right;
+	padding-right: 10px;
+}
+.apphub_FollowGameTooltip
+{
+	font-size: 12px;
+	color: #6ca1d5;
+	cursor: pointer;
+	padding-left: 10px;
+	padding-right: 2px;
+}
+
 .apphub_UploadImageLink
 {
 	float: right;
