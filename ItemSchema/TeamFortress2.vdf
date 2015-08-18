@@ -50991,6 +50991,11 @@
 					"attribute_class"	"never_craftable"
 					"value"				"1"
 				}
+				"cannot restore"
+				{
+					"attribute_class"	"cannot_restore"
+					"value"				"1"
+				}
 			}
 			"show_in_armory"	"0"
 			"item_name"			"#TF_KillStreakifier_Name"
@@ -51169,6 +51174,7 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_mvm_penetration_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
+				"can_deal_posthumous_damage"	"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_Minigun"
@@ -93690,7 +93696,47 @@
 			"item_description"		"#TF_Powerup_Knockout_Desc"
 			"image_inventory"		"Effects/powerup_knockout_hud"
 		}
- 		
+		"1155"
+		{
+			"name"	"TF_WEAPON_PASSTIME_GUN"
+			"capabilities"
+			{
+			}
+			"tags"
+			{
+			}
+			"item_class"	"tf_weapon_passtime_gun"
+			"craft_class"	""	
+			"craft_material_type"	"" 
+			"item_type_name"	"#Weapon_Passtime_Gun"
+			"item_name"	"#Weapon_Passtime_Gun"
+			"item_slot"	"utility"
+			"anim_slot"	"MELEE_ALLCLASS"
+			"attach_to_hands"	"1"
+			"hidden"	"1"
+			"item_quality"	"normal"
+			"baseitem"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"1"
+			"image_inventory"	"backpack/weapons/w_models/w_wrench"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player" "models/passtime/ball/passtime_ball.mdl"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+				"heavy"	"1"
+				"engineer" "1"
+				"medic"	"1"
+				"sniper" "1"
+				"spy" "1"
+				"pyro" "1"
+				"soldier"	"1"
+				"scout"	"1"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
 		"1156"
 		{
 			"name"	"Competitive Matchmaking Beta Pass"
@@ -93723,7 +93769,6 @@
 				}
 			}
 		}
-		
 		"1157"
 		{
 			"name"	"Taunt: Kazotsky Kick"
@@ -93797,6 +93842,80 @@
 			{
 				"custom_sound0"		"music.russian"
 			}
+		}
+		"1158"
+		{
+			"name"	"The Finder's Fee"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	""		
+			"craft_material_type"	""	
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"propername"	"1"
+			"item_type_name" "#TF_Wearable_Hat"
+			"item_name"	"#TF_FindersFee"
+			"item_description"	"#TF_FindersFee_Desc"
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"image_inventory"	"backpack/player/items/all_class/all_bug_hat_demo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"
+			{
+				"scout"		"models/player/items/all_class/all_bug_hat_scout.mdl"
+				"sniper"	"models/player/items/all_class/all_bug_hat_sniper.mdl"
+				"soldier"	"models/player/items/all_class/all_bug_hat_soldier.mdl"
+				"demoman"	"models/player/items/all_class/all_bug_hat_demo.mdl"
+				"medic"		"models/player/items/all_class/all_bug_hat_medic.mdl"
+				"heavy"		"models/player/items/all_class/all_bug_hat_heavy.mdl"
+				"spy"		"models/player/items/all_class/all_bug_hat_spy.mdl"
+				"engineer"	"models/player/items/all_class/all_bug_hat_engineer.mdl"
+				"pyro"		"models/player/items/all_class/all_bug_hat_pyro.mdl"
+			}
+			"drop_type"	"drop"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+			}
+			"static_attrs"
+			{
+				"limited quantity item"		"1"
+			}
+			"mouse_pressed_sound"	"ui/item_helmet_pickup.wav"
+			"drop_sound"		"ui/item_helmet_drop.wav"
 		}
 
 
@@ -136125,7 +136244,7 @@
 			"model_player"		"models/player/items/crafting/coin_summer2015_gravel.mdl"
 			"item_quality"		"unique"
 			"is_tool"			"1"
-			"inspect_panel_dist" "14"
+			"inspect_panel_dist" "10"
 			"collection_reference"		"Operation_gun_mettle_master_collection"
 			"visuals"
 			{
@@ -160050,6 +160169,19 @@
 				"tags"
 				{
 					"map_has_deep_water"			"1"
+				}
+			}
+		}
+
+		"passtime"
+		{
+			"0"
+			{
+				"name"					"pass_warehouse"
+				"localizedname"			"#TF_Map_pass_warehouse"
+				"tags"
+				{
+					"beta"				"1"
 				}
 			}
 		}
