@@ -31,7 +31,7 @@
 		"enabled"		"1"
 		"tabPosition"		"1"
 		"paintbackground"		"1"
-		"labelText"		"#Steam_Install_AutoLaunchGamesList"
+		"labelText"		"#Steam_Install_AutoLaunchGameStart"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"
@@ -55,25 +55,7 @@
 		"textAlignment"		"west"
 		"wrap"		"1"
 	}
-	"ManualURL"
-	{
-		"ControlName"		"URLLabel"
-		"fieldName"		"ManualURL"
-		"xpos"		"30"
-		"ypos"		"160"
-		"wide"		"340"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"0"
-		"enabled"		"1"
-		"tabPosition"		"3"
-		"paintbackground"		"1"
-		"labelText"		"View [unknown] manual"
-		"textAlignment"		"west"
-		"wrap"		"0"
-		"URLText"		"http://www.half-life2.com/manual/HL2_quickrefcard.pdf"
-	}
+
 	"Label1"
 	{
 		"ControlName"		"Label"
