@@ -106,12 +106,13 @@
 {
 	html.responsive .tradeoffer {
 		padding: 0 2%;
+		padding-top: 16px;	/* we negatively position the partner avatar, so we need some extra space at the top */
 	}
 
 	html.responsive .tradeoffer_partner {
 		position: static;
 		float: left;
-		margin-top: -12px;
+		margin-top: -8px;
 		margin-bottom: 16px;
 		margin-right: 8px;
 	}
@@ -124,6 +125,12 @@
 		height: auto;
 		margin-right: 1%;
 		max-width: 18%;
+	}
+
+	html.responsive .right_controls_large_block_active_bg,
+	html.responsive .right_controls_secondary_active_bg {
+		max-width: 110%;
+		background-size: 100% 100%;
 	}
 }
 

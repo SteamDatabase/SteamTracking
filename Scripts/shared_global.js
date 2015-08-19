@@ -565,7 +565,7 @@ CModal.ShowModalBackground = function()
 {
 	if ( !CModal.s_$Background )
 	{
-		CModal.s_$Background = $J('<div/>', {style: 'position: fixed; z-index: 900; background-color: #000000; top: 0; right: 0; bottom: 0; left: 0;'});
+		CModal.s_$Background = $J('<div/>', {'class': 'newmodal_background'});
 		CModal.s_$Background.css( 'opacity', 0 );
 		$J(document.body).append( CModal.s_$Background );
 	}
@@ -2121,14 +2121,30 @@ function CSlider( $Container, $Grabber, args )
 	this.m_$Grabber.css( 'position', 'absolute' );
 	this.SetValue( this.m_nValue );
 
+	var fnGetPageX = function( event )
+	{
+		if ( event.type.indexOf( 'touch' ) == 0 )
+		{
+			var TouchEvent = event.originalEvent;
+			var rgTouches = TouchEvent ? TouchEvent.touches : null;
+			if ( !rgTouches || rgTouches.length < 1 )
+				return event.pageX || 0;	//probably wrong
+			return rgTouches[0].pageX || 0;
+		}
+		else
+		{
+			return event.pageX || 0;
+		}
+	}
+
 	var _this = this;
-	this.m_$Container.on( 'mousedown', function( event ) {
+	this.m_$Container.on( 'mousedown touchstart', function( event ) {
 		_this.CalcRatios();
 
 		if ( !_this.m_$Grabber.is( event.target ) )
 		{
 			// jump the grabber to this position and start the drag
-			var nPosition = event.pageX - _this.m_$Container.offset().left;
+			var nPosition = fnGetPageX( event ) - _this.m_$Container.offset().left;
 			// we want the grabber centered under the mosue if possible
 			nPosition -= Math.floor( _this.m_$Grabber.width() / 2 );
 			var nNewPosition = Math.min( Math.max( nPosition, 0 ), _this.m_nWidth );
@@ -2143,10 +2159,10 @@ function CSlider( $Container, $Grabber, args )
 			_this.m_fnOnChange( _this.m_nValue, true );
 		}
 		var nInitialPosition = parseInt( _this.m_$Grabber.css('left') );
-		var nStartDragX = event.pageX;
+		var nStartDragX = fnGetPageX( event );
 
-		$J(document).on( 'mousemove.CSlider', function( event ) {
-			var nDelta = event.pageX - nStartDragX;
+		$J(document).on( 'mousemove.CSlider touchmove.CSlider', function( event ) {
+			var nDelta = fnGetPageX( event ) - nStartDragX;
 
 			var nNewPosition = Math.min( Math.max( nInitialPosition + nDelta, 0 ), _this.m_nWidth );
 
@@ -2159,7 +2175,7 @@ function CSlider( $Container, $Grabber, args )
 
 			_this.m_fnOnChange( _this.m_nValue, true );
 		});
-		$J(document).on( 'mouseup.CSlider', function( event ) {
+		$J(document).on( 'mouseup.CSlider touchend.CSlider', function( event ) {
 			$J(document).off('.CSlider');
 			_this.m_fnOnChange( _this.m_nValue, false );
 		});

@@ -65,6 +65,7 @@ $J( function() {
 			g_ActiveUser = UserYou;
 			TradePageSelectNoInventory( g_ActiveUser );
 		}
+		$J('#inventory_box' ).removeClass('their_inventory_active' ).addClass('your_inventory_active');
 
 		UpdateDisplayForActiveUser();
 
@@ -79,6 +80,7 @@ $J( function() {
 			g_ActiveUser = UserThem;
 			TradePageSelectNoInventory( g_ActiveUser );
 		}
+		$J('#inventory_box' ).removeClass('your_inventory_active' ).addClass('their_inventory_active');
 
 		UpdateDisplayForActiveUser();
 

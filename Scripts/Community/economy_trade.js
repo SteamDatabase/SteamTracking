@@ -11,7 +11,7 @@ var g_bWarnOnReady = false;
 
 function BeginTrading( bShowTutorial )
 {
-	SizeWindow();
+	g_bAllowHighDPIItemImages = $J('html').hasClass('responsive');
 
 	if ( !GTradeStateManager )
 		GTradeStateManager = CTradeStateManager;
@@ -19,7 +19,7 @@ function BeginTrading( bShowTutorial )
 	if ( !Tutorial )
 		Tutorial = new CTradeTutorial();
 
-	if ( bShowTutorial )
+	if ( bShowTutorial && !Economy_UseResponsiveLayout() )
 		Tutorial.Init();
 
 	INVENTORY_PAGE_ITEMS = 16;	//4 x 4 grid
@@ -27,6 +27,8 @@ function BeginTrading( bShowTutorial )
 	g_bIsTrading = true;
 	g_bShowTradableItemsOnly = true;
 	g_ActiveUser = UserYou;
+
+	SizeWindow();
 
 	
 	if ( g_bTradePartnerProbation )
@@ -46,6 +48,7 @@ function BeginTrading( bShowTutorial )
 	if ( g_bTradeOffer )
 		Droppables.add( $('trade_theirs'), {hoverclass: 'readyForDrop', onDrop: OnDropItemInTrade } );
 
+	InitResponsiveTradeControls();
 	// set up the filter control
 	Filter.InitFilter( $('filter_control') );
 
@@ -75,6 +78,127 @@ function BeginTrading( bShowTutorial )
 		TradePageSelectInventory( UserYou, oCookieParams.appid, oCookieParams.contextid );
 }
 
+function InitResponsiveTradeControls()
+{
+	var $ItemArea = $J('.trade_left');
+	var $OfferArea = $J('.trade_right');
+
+
+	var TRADE_MODE_OFFER = 0, TRADE_MODE_YOUR_ITEMS = 1, TRADE_MODE_THEIR_ITEMS = 2;
+	var nCurrentTradeMode = TRADE_MODE_OFFER;
+	var rgScrollTopByMode = [ 0, 0, 0 ];
+
+	window.ResponsiveTrade_SwitchMode = function( nTargetTradeMode )
+	{
+		if ( nCurrentTradeMode != nTargetTradeMode )
+			rgScrollTopByMode[nCurrentTradeMode] = $J(window).scrollTop();
+
+		if ( nTargetTradeMode == TRADE_MODE_OFFER )
+		{
+			$OfferArea.show();
+			$ItemArea.hide();
+		}
+		else
+		{
+			$OfferArea.hide();
+			$ItemArea.show();
+			if ( nTargetTradeMode == TRADE_MODE_YOUR_ITEMS )
+				$J('#inventory_select_your_inventory').click();
+			else
+				$J('#inventory_select_their_inventory').click();
+		}
+		nCurrentTradeMode = nTargetTradeMode;
+		$J(window).scrollTop( rgScrollTopByMode[nCurrentTradeMode] );
+
+		// even if we didn't scroll, we want to update fixed position stuff based on current displayed elements
+		// and also dynamic sizing
+		$J(window).trigger('resize');
+	};
+
+	InitDynamicInventoryItemAutosizing( $J('.trade_offer .trade_item_box'), '.trade_offer .trade_item_box' );
+	InitDynamicInventoryItemAutosizing( $J('#inventories'), '#inventories' );
+
+	var $ResponsiveTradeOfferItems = $J('.responsive_trade_offersection');
+	var bResponsiveMode;
+	$J(window ).on('resize.TradeWindow', function() {
+		var bNewResponsiveMode = Economy_UseResponsiveLayout();
+		if ( bNewResponsiveMode == bResponsiveMode )
+			return;
+
+		bResponsiveMode = bNewResponsiveMode;
+
+		if ( bResponsiveMode )
+		{
+			// enable the current mode again
+			$J('#responsivetrade_itemfilters').append( $J('#nonresponsivetrade_itemfilters').children() );
+			ResponsiveTrade_SwitchMode(nCurrentTradeMode);
+		}
+		else
+		{
+			$J('#nonresponsivetrade_itemfilters').append( $J('#responsivetrade_itemfilters').children() );
+			$ItemArea.show();
+			$OfferArea.show();
+		}
+
+		RedrawCurrentTradeStatus();
+
+		$ResponsiveTradeOfferItems.each( function() {
+			var $Item = $J(this);
+			if ( !$Item.data('originalPositionWrapper') )
+			{
+				$Item.wrap('<div/>', {'class': 'responsive_element_placeholder'} );
+				$Item.data( 'originalPositionWrapper', $Item.parent() );
+			}
+
+			if ( bResponsiveMode )
+			{
+				if ( $Item.hasClass('top') )
+					$OfferArea.prepend( $Item );
+				else
+					$OfferArea.append( $Item );
+			}
+			else
+			{
+				var $Wrapper = $Item.data('originalPositionWrapper');
+				$Wrapper && $Wrapper.append( $Item );
+			}
+		});
+	} ).trigger('resize.TradeWindow');
+
+
+	$J('#trade_yours').on( 'click', '.trade_slot:not(.has_item)', function() {
+		if ( Economy_UseResponsiveLayout() && !$J('#trade_yours').hasClass('ready') )
+			ResponsiveTrade_SwitchMode( TRADE_MODE_YOUR_ITEMS );
+	});
+
+	if ( g_bTradeOffer )
+	{
+		$J('#trade_theirs' ).on( 'click', '.trade_slot:not(.has_item)', function() {
+			if ( Economy_UseResponsiveLayout() && !$J('#trade_theirs' ).hasClass('ready') )
+				ResponsiveTrade_SwitchMode( TRADE_MODE_THEIR_ITEMS );
+		});
+	}
+
+	$J('#responsivetrade_backtooffer' ).click( function() { ResponsiveTrade_SwitchMode( TRADE_MODE_OFFER ); } );
+
+	$J('#responsive_tab_select_yourinventory select' ).on('change', function() {
+		if ( $J(this ).val() )
+			TradePageSelectInventory( UserYou, $J(this ).val() );
+	});
+	$J('#responsive_tab_select_yourcontexts select' ).on('change', function() {
+		TradePageSelectInventory( UserYou, $J(this ).data('appid'), $J(this ).val() );
+	});
+	if ( g_bTradeOffer )
+	{
+		$J('#responsive_tab_select_theirinventory select' ).on('change', function() {
+			if ( $J(this ).val() )
+				TradePageSelectInventory( UserThem, $J(this ).val() );
+		});
+		$J('#responsive_tab_select_theircontexts select' ).on('change', function() {
+			TradePageSelectInventory( UserThem, $J(this ).data('appid'), $J(this ).val() );
+		});
+	}
+}
 
 CUserThem = Class.create( CUser, {
 
@@ -201,6 +325,14 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 		HideMenu( $('appselect'), $('appselect_options') );
 	}
 
+	if ( !contextid )
+	{
+		if ( user.BIsSingleContextApp( appid ) )
+			contextid = user.GetFirstContextForApp( appid ).id;
+		else
+			contextid = APPWIDE_CONTEXT;
+	}
+
 	Filter.ApplyFilter( '' );
 
 	if ( SelectInventoryFromUser( user, appid, contextid, bLoadCompleted ) )
@@ -212,16 +344,49 @@ function TradePageSelectInventory( user, appid, contextid, bLoadCompleted )
 		var rgAppData = user.GetAppData( appid );
 
 		var displayName = rgAppData ? rgAppData.name : '';
-		if ( contextid == 0 )
-		{
-			//displayName = templAllContextName.evaluate( { appname: rgAppData.name } );
-		}
-		else if ( !user.BIsSingleContextApp( appid ) )
+
+		var $ResponsiveInventorySelect = ( user == UserYou ) ?  $J('#responsive_tab_select_yourinventory select') : $J('#responsive_tab_select_theirinventory select');
+		var $ResponsiveContextSelectCtn = ( user == UserYou ) ?  $J('#responsive_tab_select_yourcontexts') : $J('#responsive_tab_select_theircontexts');
+
+		if ( !user.BIsSingleContextApp( appid ) )
 		{
 			displayName = displayName + ' ' + user.GetContext( appid, contextid ).name;
+			var $ContextSelect = $ResponsiveContextSelectCtn.find('select');
+			$ContextSelect.empty();
+			$ContextSelect.data('appid', appid);
+
+			var rgContextIDs = user.GetContextIdsForApp( appid );
+			for ( var i = 0; i < rgContextIDs.length; i++ )
+			{
+				var rgContext = user.GetContext( appid, rgContextIDs[i] );
+				var strName = rgContext.name;
+				if ( rgContext.id != APPWIDE_CONTEXT )
+					strName += ' (' + v_numberformat( rgContext.asset_count ) + ')';
+				$ContextSelect.append( $J('<option/>', {value: rgContext.id} ).text( strName ) );
+			}
+			$ContextSelect.val( contextid );
+
+			$ResponsiveContextSelectCtn.show();
+		}
+		else
+		{
+			$ResponsiveContextSelectCtn.hide();
 		}
 
+		// update the height of the spacer div based on which dropdowns are shown
+		var nFixedCtnHeight = $ResponsiveInventorySelect.parents('.responsive_trade_fixedcontents' ).height();
+		$ResponsiveInventorySelect.parents('.trade_nonresponsive_hidden' ).children('.responsive_trade_fixedcontents_spacer' ).css('height', nFixedCtnHeight ? nFixedCtnHeight + 'px' : '' );
+
 		$('appselect_activeapp').update( templActiveApp.evaluate( { icon: rgAppData ? rgAppData.icon : 'https://steamcommunity-a.akamaihd.net/public/images/economy/blank_gameicon.gif', name: displayName.escapeHTML() /* prototype! */ } ) );
+
+		if ( user == UserYou )
+		{
+			$J('#responsive_tab_select_yourinventory select').val( appid );
+		}
+		else
+		{
+			$J('#responsive_tab_select_theirinventory select').val( appid );
+		}
 
 		$('trade_inventory_unavailable').hide();
 		$('trade_inventory_failed').hide();
@@ -530,6 +695,9 @@ function FindSlotAndSetItem( item, xferAmount )
 
 	if ( !BIsInTradeSlot( elItem ) || bStackable )
 	{
+		if ( Economy_UseResponsiveLayout() && window.ResponsiveTrade_SwitchMode )
+			ResponsiveTrade_SwitchMode(0);
+
 		// commit the update
 		GTradeStateManager.SetItemInTrade( item, iSlot, xferAmount );
 	}
@@ -779,12 +947,23 @@ function EnsureSufficientTradeSlots( bYourSlots, cSlotsInUse, cCurrencySlotsInUs
 {
 	var elSlotContainer = bYourSlots ? $('your_slots') : $('their_slots');
 
-	var cDesiredSlots = Math.max( Math.floor( ( cSlotsInUse + cCurrencySlotsInUse + 5 ) / 4 ) * 4, 8 );
+
+	var cTotalSlotsInUse = cSlotsInUse + cCurrencySlotsInUse;
+
+	var cDesiredSlots;
+	if ( Economy_UseResponsiveLayout() )
+		cDesiredSlots = cTotalSlotsInUse + 1;
+	else
+		cDesiredSlots = Math.max( Math.floor( ( cTotalSlotsInUse + 5 ) / 4 ) * 4, 8 );
+
 	var cDesiredItemSlots = cDesiredSlots - cCurrencySlotsInUse;
 
 	var cCurrentItemSlots = elSlotContainer.childElements().length;
 	var cCurrentSlots = cCurrentItemSlots + cCurrencySlotsInUse;
 
+	var $ContainerParent = $J( elSlotContainer.parentNode );
+	$ContainerParent.css( 'height', $ContainerParent.height() + 'px' );
+	$ContainerParent.css('overflow','hidden');
 
 	var bElementsChanged = false;
 	var fnOnAnimComplete = null;
@@ -811,26 +990,37 @@ function EnsureSufficientTradeSlots( bYourSlots, cSlotsInUse, cCurrencySlotsInUs
 		fnOnAnimComplete = function() { rgElementsToRemove.invoke('remove') };
 		bElementsChanged = true;
 	}
+
 	if ( bElementsChanged )
 	{
-		var iNewHeight = 104 * Math.floor( cDesiredSlots / 4 );
-		var elAnim = elSlotContainer.parentNode;
 		if ( cCurrentSlots )
 		{
-			elAnim.style.overflow = 'hidden';
-			if ( elAnim.effect )
-				elAnim.effect.cancel();
-			elAnim.effect = new Effect.Morph( $(elAnim), { style: 'height:' + iNewHeight + 'px;', duration: 0.25, afterFinish: function() { if ( fnOnAnimComplete ) { fnOnAnimComplete(); } elAnim.style.overflow='visible'; } } );
+			var iNewHeight = $ContainerParent[0].scrollHeight - parseInt( $ContainerParent.css('paddingTop') );
+
+			$ContainerParent.stop();
+			$ContainerParent.animate( { height: iNewHeight + 'px' }, 250, 'swing', function() {
+				if ( fnOnAnimComplete )
+				{
+					fnOnAnimComplete();
+				}
+				$ContainerParent.css( 'height', '' ).css( 'overflow', '' );
+			} );
 		}
 		else
 		{
-			elAnim.style.height = iNewHeight + 'px';
+			$ContainerParent.css( 'height', '' ).css( 'overflow', '' );
+			fnOnAnimComplete && fnOnAnimComplete();
 		}
+	}
+	else
+	{
+		$ContainerParent.css( 'height', '' ).css( 'overflow', '' );
 	}
 }
 
 function ReserveSlot( elSlot )
 {
+	$J(elSlot).addClass('has_item');
 	elSlot.hasItem = true;
 }
 
@@ -871,6 +1061,7 @@ function PutItemInSlot( elItem, elSlot )
 		HandleTradeActionMenu( elActionMenuButton, item, item.is_their_item ? UserThem : UserYou )
 	} );
 
+	$J(elSlot).addClass('has_item');
 	elSlot.hasItem = true;
 }
 
@@ -881,6 +1072,7 @@ function CleanupSlot( elSlot )
 	elSlot.down('.slot_applogo').hide();
 	elSlot.down('.slot_actionmenu_button').hide();
 	elSlot.down('.slot_app_fraudwarning').hide();
+	$J(elSlot).removeClass('has_item');
 	elSlot.hasItem = false;
 }
 
@@ -1846,26 +2038,17 @@ CurrencyDialog = {
 	m_bIgnoreSlider: false,
 	m_bIsWallet: false,
 
+	m_$Dialog: null,
+	m_Modal: null,
+
 	Initialize: function() {
-		$('trade_currency_dialog_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
-		$('trade_currency_dialog_cancel').observe( 'click', this.OnCancel.bindAsEventListener(this) );
-		$('trade_currency_input').observe( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
-		$('trade_currency_input').observe( 'keyup', this.OnInputKeyUp.bindAsEventListener(this) );
 
-		$('trade_currency_dialog').style.visibility = 'hidden';
-		$('trade_currency_dialog').show();
+		this.m_$Dialog = $J('#trade_currency_dialog');
 
-		this.m_elSliderHandle = $('trade_currency_slider').down('.handle');
-		this.m_slider = new Control.Slider( this.m_elSliderHandle, $('trade_currency_slider'), {
-			range: $R(0, 1 ),
-			sliderValue: 0,
-			onSlide: this.OnSliderSlide.bind( this ),
-			onChange: this.OnSliderChange.bind( this )
-		});
-		this.m_elSliderProgress = $('trade_currency_slider_ctn').down('.slider_progress');
-		this.m_elSliderCount = $('trade_currency_slider_count');
-		$('trade_currency_dialog').hide();
-		$('trade_currency_dialog').style.visibility = '';
+		this.m_elSliderProgress = this.m_$Dialog.find('#trade_currency_slider_ctn').find('.slider_progress');
+		this.m_elSliderCount = this.m_$Dialog.find('#trade_currency_slider_count');
+
+
 		this.m_bInitialized = true;
 	},
 
@@ -1881,51 +2064,54 @@ CurrencyDialog = {
 		var stack = currency.trade_stack;
 
 		if ( this.m_bIsWallet )
-			$('trade_currency_dialog').addClassName('trade_wallet');
+			this.m_$Dialog.addClass('trade_wallet');
 		else
-			$('trade_currency_dialog').removeClassName('trade_wallet');
+			this.m_$Dialog.removeClass('trade_wallet');
 
 		if ( !this.m_bIsWallet )
 		{
-			$('trade_currency_dialog_currencyname1').update( currency.name.escapeHTML() );
-			$('trade_currency_dialog_currencyname2').update( currency.name.escapeHTML() );
+			this.m_$Dialog.find('#trade_currency_dialog_currencyname1').text( currency.name );
+			this.m_$Dialog.find('#trade_currency_dialog_currencyname2').text( currency.name );
 		}
 
 		var rgContext = UserYou.GetContext( currency.appid, currency.contextid );
-		$('trade_currency_dialog_contextname').update( rgContext ? rgContext.name.escapeHTML() : '' );
+		this.m_$Dialog.find('#trade_currency_dialog_contextname').text( rgContext ? rgContext.name : '' );
 
 		var amount = stack && stack.amount > 0 ? stack.amount : 1;
 
-		$('trade_currency_input').value = amount;
+		this.m_$Dialog.find('#trade_currency_input').val( amount );
 
 		var iconUrl = ImageURL( currency.icon_url, 42, '42f' );
-		$('trade_currency_dialog_symbol1').src = iconUrl;
-		$('trade_currency_dialog_symbol2').src = iconUrl;
+		this.m_$Dialog.find('#trade_currency_dialog_symbol1').attr( 'src', iconUrl );
+		this.m_$Dialog.find('#trade_currency_dialog_symbol2').attr( 'src', iconUrl );
 
-		$('trade_currency_input').style.color = currency.name_color ? '#' + currency.name_color : '';
-		$('trade_currency_dialog_remaining_display').style.color = currency.name_color ? '#' + currency.name_color : '';
+		this.m_$Dialog.find('#trade_currency_input').css( 'color', currency.name_color ? '#' + currency.name_color : '' );
+		this.m_$Dialog.find('#trade_currency_dialog_remaining_display').css( 'color', currency.name_color ? '#' + currency.name_color : '' );
 
-		$('trade_currency_dialog_error').update('');
-
-		this.m_fnDocumentKeyHandler = this.OnDocumentKeyPress.bindAsEventListener( this );
-		$(document).observe( 'keydown', this.m_fnDocumentKeyHandler );
+		this.m_$Dialog.find('#trade_currency_dialog_error').text('');
 
 		var maximum = this.m_currency.original_amount;
 		if ( this.m_bIsWallet && g_rgWalletInfo['wallet_fee'] )
 		{
-			$('trade_currency_fee_amount_percent').update( ( g_rgWalletInfo['wallet_fee_percent'] * 100).toFixed(1) );
+			this.m_$Dialog.find('#trade_currency_fee_amount_percent').text( ( g_rgWalletInfo['wallet_fee_percent'] * 100).toFixed(1) );
 			var feeInfo = CalculateFeeAmount( maximum )
 			maximum = maximum - feeInfo.fees;
 		}
 
-		this.m_slider.range = $R( 0, maximum );
-		this.m_slider.maximum = this.m_currency.original_amount;
-		this.m_slider.setValue( amount );
+		this.m_$Dialog.find('#trade_currency_input').on( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
+		this.m_$Dialog.find('#trade_currency_input').on( 'keyup', this.OnInputKeyUp.bindAsEventListener(this) );
 
-		this.UpdateRemainingCurrencyDisplay();
+		this.m_Modal = ShowConfirmDialog( '', this.m_$Dialog.show() ).done( $J.proxy( this.OnAccept, this ) ).fail( $J.proxy( this.OnCancel, this ) );
+		this.m_$Dialog.find('#trade_currency_input').focus();
 
-		showModal( 'trade_currency_dialog', true );
-		$('trade_currency_input').focus();
+		this.m_elSliderHandle = this.m_$Dialog.find('#trade_currency_slider').children('.handle');
+		this.m_slider = new CSlider( this.m_$Dialog.find('#trade_currency_slider'), this.m_elSliderHandle, {
+			min: 0,
+			max: maximum,
+			value: amount,
+			fnOnChange: this.OnSliderSlide.bind( this ),
+		});
+		this.OnSliderSlide( amount );
 	},
 
 	UpdateRemainingCurrencyDisplay: function() {
@@ -1938,14 +2124,14 @@ CurrencyDialog = {
 			if ( inputValue > 0 )
 			{
 				var feeInfo = CalculateAmountToSendForDesiredReceivedAmount( nAmount );
-				$('trade_currency_fee_amount_dollars').update( v_currencyformat( feeInfo.fees, this.m_currency.name.escapeHTML() ) );
+				this.m_$Dialog.find('#trade_currency_fee_amount_dollars').text( v_currencyformat( feeInfo.fees, this.m_currency.name ) );
 			}
 			else
 			{
-				$('trade_currency_fee_amount_dollars').update( v_currencyformat( 0, this.m_currency.name.escapeHTML() ) );
+				this.m_$Dialog.find('#trade_currency_fee_amount_dollars').text( v_currencyformat( 0, this.m_currency.name ) );
 			}
-			
-			$('trade_currency_fee_total_dollars').update( v_currencyformat( nAmount, this.m_currency.name.escapeHTML() ) );
+
+			this.m_$Dialog.find('#trade_currency_fee_total_dollars').text( v_currencyformat( nAmount, this.m_currency.name ) );
 		}
 
 		var nDisplayAmount = this.m_currency.original_amount;
@@ -1954,28 +2140,28 @@ CurrencyDialog = {
 
 		if ( this.m_bIsWallet )
 		{
-			$('trade_currency_dialog_remaining_display').update( v_currencyformat( nDisplayAmount, this.m_currency.name.escapeHTML() ) );
+			this.m_$Dialog.find('#trade_currency_dialog_remaining_display').text( v_currencyformat( nDisplayAmount, this.m_currency.name ) );
 		}
 		else
 		{
-			$('trade_currency_dialog_remaining_display').update( v_numberformat( nDisplayAmount ) );
+			this.m_$Dialog.find('#trade_currency_dialog_remaining_display').text( v_numberformat( nDisplayAmount ) );
 		}
 	},
 
 	DisplayError: function( error ) {
-		$('trade_currency_dialog_error').update( error.escapeHTML() );
-		$('trade_currency_dialog_error').style.color = '#ffffff';
-		new Effect.Morph( $('trade_currency_dialog_error'), { style: {color: '#ff0000'}, duration: 0.25 } );
+		this.m_$Dialog.find('#trade_currency_dialog_error').text( error );
+		this.m_$Dialog.find('#trade_currency_dialog_error').css( 'color', '#ffffff' );
+		new Effect.Morph( this.m_$Dialog.find('#trade_currency_dialog_error')[0], { style: {color: '#ff0000'}, duration: 0.25 } );
 	},
 
 	Dismiss: function() {
-		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
-		hideModal( 'trade_currency_dialog' );
+		this.m_Modal && this.m_Modal.Dismiss();
+		this.m_Modal = null;
 	},
 
 	GetInputValueAsInt: function() {
 		var nAmount;
-		var strAmount = $('trade_currency_input').value;
+		var strAmount = this.m_$Dialog.find('#trade_currency_input').val();
 
 		if ( !strAmount )
 		{
@@ -1999,9 +2185,9 @@ CurrencyDialog = {
 		return nAmount;
 	},
 
-	OnAccept: function( event ) {
+	OnAccept: function() {
 
-		var inputValue = (this.m_bIsWallet ? $('trade_currency_input').value.replace( GetCurrencySymbol( this.m_currency.name.escapeHTML() ), '' ).replace( ',', '.' ).replace( '.--', '.00') : $('trade_currency_input').value );
+		var inputValue = (this.m_bIsWallet ? this.m_$Dialog.find('#trade_currency_input').val().replace( GetCurrencySymbol( this.m_currency.name.escapeHTML() ), '' ).replace( ',', '.' ).replace( '.--', '.00') : this.m_$Dialog.find('#trade_currency_input').val() );
 		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
 		{
 			this.DisplayError( 'Please enter a valid amount above.' );
@@ -2025,20 +2211,9 @@ CurrencyDialog = {
 		SetStackableItemInTrade( this.m_currency, xferAmount );
 
 		this.Dismiss();
-		event.stop();
 	},
 
-	OnCancel: function( event ) {
-		this.Dismiss();
-		event.stop();
-	},
-
-	OnDocumentKeyPress: function( event ) {
-		if ( event.keyCode == Event.KEY_ESC )
-		{
-			this.Dismiss();
-			event.stop();
-		}
+	OnCancel: function() {
 	},
 
 	OnInputKeyPress: function( event ) {
@@ -2055,7 +2230,7 @@ CurrencyDialog = {
 		this.UpdateRemainingCurrencyDisplay();
 
 		this.m_bIgnoreSlider = true;
-		this.m_slider.setValue( value );
+		this.m_slider.SetValue( value );
 		this.m_bIgnoreSlider = false;
 		this.UpdateSliderNumberDisplays( value );
 	},
@@ -2065,53 +2240,34 @@ CurrencyDialog = {
 		var flooredValue = Math.floor( value );
 		var strValue = ( this.m_bIsWallet ? v_currencyformat( flooredValue, this.m_currency.name ) : v_numberformat( flooredValue ) );
 
-		this.m_elSliderProgress.style.width = this.m_slider.handles[0].style.left;
+		this.m_elSliderProgress.css( 'width', this.m_elSliderHandle.css('left') );
 
-		this.m_elSliderCount.style.left = ( parseInt( this.m_slider.handles[0].style.left ) - 40 ) + 'px';
-		this.m_elSliderCount.update( strValue.escapeHTML() );
+		this.m_elSliderCount.text( strValue );
+		this.m_elSliderCount.css( 'left', ( parseInt( this.m_elSliderHandle.css('left') ) - ( this.m_elSliderCount.width() / 2 ) + 12 ) + 'px' );
 	},
 
 	SetInputValuesFromSlider: function( value )
 	{
 		var flooredValue = Math.floor( value );
 		var strValue = ( this.m_bIsWallet ? v_currencyformat( flooredValue, this.m_currency.name ) : v_numberformat( flooredValue ) );
-		$('trade_currency_input').value = strValue.escapeHTML();
+		this.m_$Dialog.find('#trade_currency_input').val( strValue );
 		this.UpdateRemainingCurrencyDisplay();
 	},
 
-	OnSliderSlide: function( value )
+	OnSliderSlide: function( value, bInDrag )
 	{
 		this.UpdateSliderNumberDisplays( value );
-		if ( this.m_slider.active && !this.m_elSliderHandle.active )
+
+		if ( bInDrag )
 		{
-			this.m_elSliderHandle.active = true;
-			this.m_elSliderHandle.addClassName('active');
+			this.m_elSliderHandle.addClass('active');
+		}
+		else
+		{
+			this.m_elSliderHandle.removeClass('active');
 		}
 
-		if ( this.m_bIgnoreSlider )
-			return;
-
 		this.SetInputValuesFromSlider( value );
-	},
-
-	OnSliderChange: function( value )
-	{
-		if ( this.m_elSliderHandle.active )
-		{
-			this.m_elSliderHandle.active = false;
-			this.m_elSliderHandle.removeClassName('active');
-		}
-
-		if ( this.m_bIgnoreSlider )
-			return;
-		this.m_bIgnoreSlider = true;
-
-		this.UpdateSliderNumberDisplays( value );
-		this.m_slider.setValue( value );
-
-		this.SetInputValuesFromSlider( value );
-
-		this.m_bIgnoreSlider = false;
 	}
 };
 
@@ -2776,23 +2932,27 @@ function SeenSteamGuardWarning() {
 
 function SizeWindow()
 {
-
 	if ( !Prototype.Browser.WebKit )
 	{
 		return;
 	}
-	
-	var widthZoom = document.viewport.getWidth() / 976;
-	var heightZoom = document.viewport.getHeight() / Math.min( $(document.body).getHeight() + 16, 1012 );
-	var flSetZoom = flZoom > 0.55 ? flZoom : 0.55;
-	if ( widthZoom <= 0.99 || heightZoom <= 0.99 )
+
+	var flSetZoom = '';
+
+	if ( !Economy_UseResponsiveLayout() )
 	{
-		var flZoom = widthZoom < heightZoom ? widthZoom : heightZoom;
-		flSetZoom = flZoom > 0.55 ? flZoom : 0.55;
-	}
-	else
-	{
-		flSetZoom = 1.0;
+		var widthZoom = document.viewport.getWidth() / 976;
+		var heightZoom = document.viewport.getHeight() / Math.min( $(document.body).getHeight() + 16, 1012 );
+		var flSetZoom = flZoom > 0.55 ? flZoom : 0.55;
+		if ( widthZoom <= 0.99 || heightZoom <= 0.99 )
+		{
+			var flZoom = widthZoom < heightZoom ? widthZoom : heightZoom;
+			flSetZoom = flZoom > 0.55 ? flZoom : 0.55;
+		}
+		else
+		{
+			flSetZoom = 1.0;
+		}
 	}
 
 	$J('#mainContent' ).css( 'zoom', flSetZoom );
@@ -2801,7 +2961,7 @@ function SizeWindow()
 	if ( !g_bTradeOffer )
 		$('log').scrollTop = 10000;
 
-		$J('#trade_recaptcha').css( 'zoom', 1.0 / flSetZoom );
+		$J('#trade_recaptcha').css( 'zoom', flSetZoom ? ( 1.0 / flSetZoom ) : '' );
 }
 
 function TradingUnloaded( e )

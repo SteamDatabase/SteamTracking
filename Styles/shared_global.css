@@ -637,6 +637,16 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	min-width: 500px;
 }
 
+.newmodal_background {
+	position: fixed;
+	z-index: 900;
+	background: #000000;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
 .newmodal_header_border {
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
@@ -1709,7 +1719,15 @@ body.v6 #footer_nav .popup_menu .hr{
 		min-width: 0;
 	}
 
+	html.responsive .newmodal_background {
+		position: absolute;
+	}
+
 }
-	html.responsive .newmodal {
+	html.responsive.touch .newmodal {
 		min-width: 0;
+	}
+
+	html.responsive.touch .newmodal_background {
+		position: absolute;
 	}

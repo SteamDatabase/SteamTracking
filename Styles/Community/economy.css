@@ -95,7 +95,11 @@ html.responsive .market_dialog_contents.dynamicSizing  .item {
 	height: calc( 100% - 2px );
 }
 
-html.responsive .dynamicSizing .item img {
+html.responsive .trade_item_box.dynamicSizing .slot_inner {
+	height: 100%;
+}
+
+html.responsive .dynamicSizing .item img:not(.item_throbber) {
 	width: 100%;
 	display: block;
 }
@@ -136,6 +140,10 @@ a.inventory_item_link:focus {
 	background-color: #000000;
 	border: 1px solid #2c2c2d;
 	padding: 6px 0 0 6px;
+}
+
+.trade_item_box.dynamicSizing {
+	padding: 0;
 }
 
 
@@ -495,6 +503,33 @@ input.filter_search_box:-moz-placeholder {
 .inventory_iteminfo .item_desc_content {
 	padding: 238px 11px 11px 11px;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/inventory_hover_background.png')
+}
+
+
+#iteminfo0, #iteminfo1 {
+	width: 346px;
+	top: 0px;
+	left: 0px;
+}
+
+#iteminfo0 .item_desc_content, #iteminfo1 .item_desc_content {
+	min-height: 207px; /* this + computed height of .item_market_actions should equal 261 */
+}
+
+@media screen and (max-height: 639px)
+{
+	.economy_item_popup #iteminfo0 .item_desc_content,
+	.economy_item_popup #iteminfo1 .item_desc_content {
+		min-height: 0;
+	}
+}
+
+.item_market_actions {
+	padding: 11px;
+	min-height: 32px;
+}
+.item_market_action_button {
+	margin-right: 10px;
 }
 
 #iteminfo_clienthover {
@@ -1279,7 +1314,7 @@ a.game_button {
 	height: 96%;
 	height: calc( 100% - 16px );
 	max-width: 346px;
-	margin: 16px auto 0 auto;
+	margin: 16px auto 16px auto;
 }
 
 .economy_item_popup_scroll {
@@ -1290,7 +1325,7 @@ a.game_button {
 
 .economy_item_popup_dismiss {
 	position: absolute;
-	right: -15px;
+	right: -12px;
 	top: -15px;
 	height: 30px;
 	width: 30px;
@@ -1309,6 +1344,25 @@ html.responsive .newmodal.economy_modal_ctn {
 	overflow: visible;
 }
 
+.item_desc_addtotrade_ctn {
+}
+
+.item_desc_addtotrade, .item_desc_addtotrade > span {
+	display: block;
+	width: auto;
+}
+
+.item_desc_addtotrade > span {
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.economy_item_popup #iteminfo0,
+.economy_item_popup #iteminfo1 {
+	max-width: 95%;
+	max-width: calc( 100% - 4px );
+}
 
 @media screen and (max-width: 650px )
 {

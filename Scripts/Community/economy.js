@@ -17,6 +17,18 @@ var g_ActiveItemPopupModal = null;
 var g_ActiveUser = null;
 var ITEM_HOVER_DELAY = 500;
 
+function Economy_UseResponsiveLayout()
+{
+	if ( !window.UseSmallScreenMode || !window.UseSmallScreenMode() )
+		return false;
+
+	// trading has a special break point
+	if ( g_bIsTrading && $J(window).width() > 600 )
+		return false;
+
+	return true;
+}
+
 /*
  *		Initialization
  */
@@ -96,7 +108,17 @@ function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly 
 
 	}
 
-	InitDynamicSizing();
+	InitDynamicInventoryItemAutosizing( $J('#inventories'), '.trade_item_box', true );
+	$J(window).on('Responsive_SmallScreenModeToggled', function() {
+		if ( window.UseSmallScreenMode && window.UseSmallScreenMode() )
+		{
+			$J('#inventory_pagecontrols').hide();
+		}
+		else
+		{
+			$J('#inventory_pagecontrols').show();
+		}
+	});
 
 	// watch for incoming # urls
 	new LocationHashObserver( null, 0.2, OnLocationChange );
@@ -335,7 +357,7 @@ var CInventory = Class.create( {
 		this.contextid = contextid;
 		this.rgInventory = rgInventory;
 		this.rgCurrency = rgCurrency;
-		var strCompositeId = owner.GetSteamId() + '_' + appid + '_' + contextid;
+		var strCompositeId = this.getCompositeID();
 		this.elInventory = new Element( 'div', {id: 'inventory_' + strCompositeId, 'class': 'inventory_ctn' } );
 		this.rgItemElements = new Array();
 		this.elTagContainer = new Element( 'div', {id: 'tags_' + strCompositeId } );
@@ -469,8 +491,14 @@ var CInventory = Class.create( {
 		}
 	},
 
+	getCompositeID: function()
+	{
+		return this.owner.GetSteamId() + '_' + this.appid + '_' + this.contextid;
+	},
+
 	destroy: function()
 	{
+		$J(window).off('scroll.LazyLoad_' + this.getCompositeID() );
 		if ( this.elInventory )
 		{
 			if ( this.elInventory.parentNode )
@@ -498,6 +526,7 @@ var CInventory = Class.create( {
 
 	hide: function()
 	{
+		$J(window).off('scroll.LazyLoad_' + this.getCompositeID() );
 		if ( this.elInventory )
 			this.elInventory.hide();
 		if( this.elTagContainer )
@@ -507,6 +536,44 @@ var CInventory = Class.create( {
 	show: function()
 	{
 		this.elInventory.show();
+
+		var _this = this;
+
+		$J(window).on('scroll.LazyLoad_' + this.getCompositeID(), function() {
+			if ( !_this.m_rgLazyLoadImages || !_this.m_rgLazyLoadImages.length )
+				return;
+
+			var nPageHeight = $J(window).height();
+			var nStartOffset = $J(window).scrollTop() - ( nPageHeight * 0.5 );
+			var nEndOffset = $J(window).scrollTop() + ( nPageHeight * 1.5  );
+			rgLazyLoadImages = _this.m_rgLazyLoadImages;
+
+			var iStart, iEnd;
+			for ( iStart = 0; iStart < rgLazyLoadImages.length; iStart++ )
+			{
+				if ( rgLazyLoadImages[iStart].offset().top > nStartOffset )
+					break;
+			}
+			if ( iStart < rgLazyLoadImages.length )
+			{
+				for ( iEnd = iStart; iEnd < rgLazyLoadImages.length; iEnd++ )
+				{
+					if ( rgLazyLoadImages[iEnd].offset().top > nEndOffset )
+						break;
+				}
+
+				if ( iStart != iEnd )
+				{
+					// we could have loaded these in the loop above, but there is better
+					// perf doing it all at once rather than alternating between loading images and querying position()
+					for ( var i = iStart; i < iEnd; i++ )
+						_this.LoadItemImage( rgLazyLoadImages[i][0].firstChild );
+
+					rgLazyLoadImages.splice( iStart, iEnd - iStart );
+				}
+			}
+		});
+
 	},
 
 	BIsEmptyInventory: function()
@@ -887,10 +954,7 @@ var CInventory = Class.create( {
 			elLink.appendChild( new Element( 'img', {src: 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif', width: 96, height: 96 } ) );
 		}
 		elItem.appendChild( elLink );
-		if ( g_bIsInventoryPage )
-			Event.observe( elLink, 'click', this.SelectItem.bindAsEventListener( this, elItem, rgItem, true /*show popup*/ ) );
-		else
-			Event.observe( elLink, 'click', this.SelectItemNoOp ); // no need to bind
+		this.BindMouseEvents( elLink, elItem );
 
 		if ( rgItem.fraudwarnings )
 		{
@@ -906,7 +970,7 @@ var CInventory = Class.create( {
 		var elItem = new Element( 'div', {'class': 'item unknownItem' } );
 		elItem.identify();
 		elItem.update( '<img src="https://steamcommunity-a.akamaihd.net/public/images/' + ( g_bIsTrading ? 'login/throbber.gif' : 'trans.gif' ) + '" class="item_throbber">' );
-		elItem.rgItem = { unknown: true, id: itemid, appid: this.appid, contextid: this.contextid, name: 'Unknown Item ' + itemid, descriptions: [], fraudwarnings: [ 'Could not retrieve information about this item.' ] };
+		elItem.rgItem = { unknown: true, id: itemid, appid: this.appid, contextid: this.contextid, element: elItem, name: 'Unknown Item ' + itemid, descriptions: [], fraudwarnings: [ 'Could not retrieve information about this item.' ] };
 
 		if ( g_bIsTrading )
 		{
@@ -921,12 +985,31 @@ var CInventory = Class.create( {
 			elLink.appendChild( new Element( 'img', {src: 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif', width: 96, height: 96 } ) );
 		}
 		elItem.appendChild( elLink );
-		if ( g_bIsInventoryPage )
-			Event.observe( elLink, 'click', this.SelectItem.bindAsEventListener( this, elItem, elItem.rgItem, true /*show popup*/ ) );
-		else
-			Event.observe( elLink, 'click', this.SelectItemNoOp ); // no need to bind
+		this.BindMouseEvents( elLink, elItem );
 
 		return elItem;
+	},
+
+	BindMouseEvents: function( elLink, elItem )
+	{
+		// on trade UI, we only do "select item" for touches
+		var _this = this;
+		$J(elLink ).on( 'click', function( e ) {
+			_this.SelectItem( e, elItem, elItem.rgItem, true );
+			if ( elItem.rgItem.in_touch )
+			{
+				$J(elItem ).parents('.itemHolder').removeClass('in_touch');
+				delete elItem.rgItem.in_touch;
+			}
+		} );
+
+		if ( g_bIsTrading )
+		{
+			$J(elLink ).on( 'touchstart', function() {
+				elItem.rgItem.in_touch = true;
+				$J(elItem ).parents('.itemHolder').addClass('in_touch');
+			} );
+		}
 	},
 
 	MakeActive: function()
@@ -1134,9 +1217,24 @@ var CInventory = Class.create( {
 	},
 
 
-	SelectItem: function( event, elItem, rgItem, bShowItemPopup )
+	SelectItem: function( event, elItem, rgItem, bUserAction )
 	{
-		var bResponsiveMode = !$J('.inventory_page_right' ).is(':visible');
+		if ( event )
+			event.preventDefault();
+
+		var bShouldShowPopup = ( g_bIsInventoryPage && Economy_UseResponsiveLayout() );
+
+		 if ( g_bIsTrading )
+		 {
+			// in trading you can't "select" items, for the most part.  Only on touch, or in responsive mode (no hovers)
+			// parent_item indicates it's a stack of currency in a trade - clicking it presents a dialog instead of our popup
+		 	if ( ( rgItem.in_touch || ( Economy_UseResponsiveLayout() ) ) &&
+		 		!rgItem.parent_item )
+		 		bShouldShowPopup = true;
+			else
+				return;
+		 }
+
 		var iNewSelect = ( iActiveSelectView == 0 ) ? 1 : 0;
 		var sOldInfo = 'iteminfo' + iActiveSelectView;
 		var sNewInfo = 'iteminfo' + iNewSelect;
@@ -1148,7 +1246,7 @@ var CInventory = Class.create( {
 		elOldInfo.style.position = 'absolute';
 		elNewInfo.style.position = '';
 
-		if ( elNewInfo.visible && !bResponsiveMode )
+		if ( elNewInfo.visible && !bShouldShowPopup )
 		{
 			elNewInfo.effect && elNewInfo.effect.cancel();
 			elNewInfo.hide();
@@ -1161,13 +1259,12 @@ var CInventory = Class.create( {
 		BuildHover( sNewInfo, rgItem, UserYou );
 
 
-		if ( bResponsiveMode )
+		if ( bShouldShowPopup )
 		{
 			// event indicates the user tapped an item, otherwise they may have just switched inventories
-			if ( bShowItemPopup )
+			if ( bUserAction )
 			{
-				if ( g_ActiveItemPopupModal )
-					g_ActiveItemPopupModal.Dismiss();
+				g_ActiveItemPopupModal && g_ActiveItemPopupModal.Dismiss();
 
 				var $Info = $J(elNewInfo);
 				$Info.show();
@@ -1186,12 +1283,40 @@ var CInventory = Class.create( {
 				g_ActiveItemPopupModal.Show();
 				$DismissBtn.click( function() { g_ActiveItemPopupModal.Dismiss(); } );
 
+				var $BtnAddToTrade = $Info.find('.item_desc_addtotrade');
+				if ( $BtnAddToTrade.length && typeof OnDoubleClickItem != 'undefined' )
+				{
+					var bInTrade = $J(elItem).parents('.itemHolder').hasClass('trade_slot');
+
+					if ( bInTrade )
+					{
+						$BtnAddToTrade.removeClass('btn_green_white_innerfade' ).addClass('btn_grey_white_innerfade');
+						$BtnAddToTrade.children('span' ).text( 'Remove from trade' );
+					}
+					else
+					{
+						$BtnAddToTrade.removeClass('btn_grey_white_innerfade' ).addClass('btn_green_white_innerfade');
+						$BtnAddToTrade.children('span' ).text( 'Add to trade' );
+					}
+
+					$BtnAddToTrade.on('click', function() {
+						g_ActiveItemPopupModal && g_ActiveItemPopupModal.Dismiss();
+						OnDoubleClickItem( null, elItem );
+					} );
+
+					if ( typeof g_bReadOnly != 'undefined' && g_bReadOnly )
+						$BtnAddToTrade.hide();
+					else
+						$BtnAddToTrade.show();
+				}
+
 				if ( g_ActiveItemPopupModal.m_fnBackgroundClick )
 				{
 					$Modal.add($Scroll).click( function(e) { if ( e.target == this && g_ActiveItemPopupModal ) g_ActiveItemPopupModal.m_fnBackgroundClick(); } );
 
 				}
 				g_ActiveItemPopupModal.OnDismiss( function() {
+					$BtnAddToTrade.off('click');
 					$J('.inventory_page_right' ).append( $Info );
 					g_ActiveItemPopupModal = null;
 				} );
@@ -1219,9 +1344,6 @@ var CInventory = Class.create( {
 		elOldInfo.blankTimeout = window.setTimeout( function() { $(sOldInfo+'_item_icon').src = 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif'; }, 200 );
 
 		iActiveSelectView = iNewSelect;
-
-		if ( event )
-			event.preventDefault();
 	},
 
 	SelectItemNoOp: function( event )
@@ -2315,7 +2437,7 @@ function ImageURL( imageName, x, y, bEnableHighDPI )
 function MouseOverItem( event, owner, elItem, rgItem )
 {
 	// no hovers while the user is moving items around
-	if ( g_bIsTrading && g_bInDrag )
+	if ( g_bEnableDynamicSizing || ( g_bIsTrading && g_bInDrag ) || ( rgItem.in_touch ) )
 		return;
 
 	elItem.addClassName( 'hover' );
@@ -2746,17 +2868,25 @@ function PopulateMarketActions( elActions, item )
 		return;
 	}
 
-	if ( typeof(g_bViewingOwnProfile) != 'undefined' && g_bViewingOwnProfile )
+	var bIsTrading = typeof( g_bIsTrading ) != 'undefined' && g_bIsTrading;
+
+	if ( ( typeof(g_bViewingOwnProfile) != 'undefined' && g_bViewingOwnProfile ) || bIsTrading )
 	{
 		var strMarketName = GetMarketHashName( item );
 
 		var elPriceInfo = new Element( 'div' );
 		var elPriceInfoHeader = new Element ( 'div', { 'style': 'height: 24px;' } );
+
 		var elMarketLink = new Element( 'a', {
 			'href': 'https://steamcommunity.com/market/listings/' + item.appid + '/' + encodeURIComponent( strMarketName )
 		} );
 		elMarketLink.update( 'View in Community Market' );
+
+		if ( bIsTrading )
+			Steam.LinkInNewWindow( $J(elMarketLink) );
+
 		elPriceInfoHeader.appendChild( elMarketLink );
+
 		elPriceInfo.appendChild( elPriceInfoHeader );
 
 		var elPriceInfoContent = new Element( 'div', { 'style': 'min-height: 3em; margin-left: 1em;' } );
@@ -2800,8 +2930,11 @@ function PopulateMarketActions( elActions, item )
 
 		elActions.appendChild( elPriceInfo );
 
-		var elSellButton = CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', 'Sell' );
-		elActions.appendChild( elSellButton );
+		if ( !bIsTrading )
+		{
+			var elSellButton = CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', 'Sell' );
+			elActions.appendChild( elSellButton );
+		}
 
 		if ( !g_bMarketAllowed )
 		{
@@ -4525,27 +4658,31 @@ function RequestFullInventory( strURL, oParams, fOnSuccess, fOnFailure, fOnCompl
 	} );
 }
 
-function EnableDynamicSizing()
-{
-	var $InventoryCtn = $J('#inventories');
-	$InventoryCtn.addClass('dynamicSizing');
-	g_bEnableDynamicSizing = true;
-	$J('#inventory_pagecontrols' ).hide();
-	UserYou.InvalidatePaging();
-}
 
-function DisableDynamicSizing()
-{
-	var $InventoryCtn = $J('#inventories');
-	$InventoryCtn.removeClass('dynamicSizing');
-	g_bEnableDynamicSizing = false;
-	$J('#inventory_pagecontrols' ).show();
-	UserYou.InvalidatePaging();
-}
+$J(window).on('resize', function() {
+	var bWasEnabled = g_bEnableDynamicSizing;
 
-function InitDynamicSizing()
-{
+	// this flag is used by inventories in a few places
+	if ( Economy_UseResponsiveLayout() )
+	{
+		g_bEnableDynamicSizing = true;
+	}
+	else
+	{
+		g_bEnableDynamicSizing = false;
+	}
 
+	if ( bWasEnabled != g_bEnableDynamicSizing )
+	{
+		if ( typeof UserYou != 'undefined' && UserYou )
+			UserYou.InvalidatePaging();
+		if ( typeof UserThem != 'undefined' && UserThem )
+			UserThem.InvalidatePaging();
+	}
+} );
+
+function InitDynamicInventoryItemAutosizing( $InventoryCtn, strCSSClass, bAutoRetryIfNotVisible )
+{
 	var elStyle = document.createElement('style');
 	$J(document.head ).append(elStyle);
 
@@ -4553,34 +4690,26 @@ function InitDynamicSizing()
 
 	var bAddedRules = false;
 
-	var $InventoryCtn = $J('#inventories');
-
 	$J(window ).on('resize.DynamicInventorySizing', function() {
-		var bShouldBeEnabled = window.UseSmallScreenMode && window.UseSmallScreenMode();
 
-		if ( bShouldBeEnabled != g_bEnableDynamicSizing )
+		if ( !Economy_UseResponsiveLayout() )
 		{
-			if ( bShouldBeEnabled )
-				EnableDynamicSizing();
-			else
+			$InventoryCtn.removeClass('dynamicSizing');
+			if ( bAddedRules )
 			{
-				DisableDynamicSizing();
-				if ( bAddedRules )
-				{
-					bAddedRules = false;
-					while ( styles.rules.length )
-						styles.deleteRule(0);
-				}
+				bAddedRules = false;
+				while ( styles.rules.length )
+					styles.deleteRule(0);
 			}
-		}
-
-		if ( !g_bEnableDynamicSizing )
 			return;
+		}
 
 		if ( $InventoryCtn.width() == 0 )
 		{
 			//too soon
-			window.setTimeout( function() {$J(window).trigger('resize.DynamicInventorySizing')}, 50 );
+			if ( bAutoRetryIfNotVisible )
+				window.setTimeout( function() {$J(window).trigger('resize.DynamicInventorySizing')}, 50 );
+
 			return;
 		}
 
@@ -4588,22 +4717,24 @@ function InitDynamicSizing()
 		var flMarginPct = 0.0625;
 		var flDesiredItemCtnWidthWithMargin = nDesiredItemCtnWidth + ( ( nDesiredItemCtnWidth - 2 ) * flMarginPct );
 
-		var nRowWidth = Math.max( $InventoryCtn.width(), nDesiredItemCtnWidth );
+		var nRowWidth = Math.max( $InventoryCtn.width() - 1, nDesiredItemCtnWidth );
 		// the -0.3 here creates a window where we'll use the smaller number of items but at pixel-perfect size
 		var cDesiredItemsPerRow = Math.max( Math.ceil( nRowWidth / flDesiredItemCtnWidthWithMargin - 0.3 ), 3 );
 
 		// now re-do the math at that rate
 		var flItemWidthWithMargin = nRowWidth / cDesiredItemsPerRow;
 
-
+		var flMargin, flItemCtnWidth;
 		if ( flItemWidthWithMargin > flDesiredItemCtnWidthWithMargin )
 			flItemWidthWithMargin = flDesiredItemCtnWidthWithMargin;
 
 		var flMargin = Math.floor( ( flItemWidthWithMargin - 2 ) * flMarginPct / ( 1 + flMarginPct ) );
 		var flItemCtnWidth = flItemWidthWithMargin - flMargin;
 
-		styles.insertRule( 'html.responsive .dynamicSizing .itemHolder { width: ' + flItemCtnWidth + 'px; height: ' + flItemCtnWidth + 'px; margin: ' + ( flMargin / 2 ) + 'px; }', 0 );
-		styles.insertRule( 'html.responsive .dynamicSizing .inventory_ctn .inventory_page { width: ' + nRowWidth + 'px }', 0 );
+		$InventoryCtn.addClass('dynamicSizing');
+		styles.insertRule( 'html.responsive ' + strCSSClass + '.dynamicSizing .itemHolder { width: ' + flItemCtnWidth + 'px; height: ' + flItemCtnWidth + 'px; margin: ' + ( flMargin / 2 ) + 'px; }', 0 );
+		styles.insertRule( 'html.responsive ' + strCSSClass + '.dynamicSizing .inventory_page { width: ' + nRowWidth + 'px }', 0 );
+
 
 		if ( bAddedRules )
 		{
@@ -4614,41 +4745,6 @@ function InitDynamicSizing()
 		bAddedRules = true;
 	});
 	$J(window).trigger('resize.DynamicInventorySizing');
-
-	$J(window).on('scroll.LazyLoadItemImages', function() {
-		if ( !g_ActiveInventory || !g_ActiveInventory.m_rgLazyLoadImages || !g_ActiveInventory.m_rgLazyLoadImages.length )
-			return;
-
-		var nPageHeight = $J(window).height();
-		var nStartOffset = $J(window).scrollTop() - ( nPageHeight * 0.5 );
-		var nEndOffset = $J(window).scrollTop() + ( nPageHeight * 1.5  );
-		rgLazyLoadImages = g_ActiveInventory.m_rgLazyLoadImages;
-
-		var iStart, iEnd;
-		for ( iStart = 0; iStart < rgLazyLoadImages.length; iStart++ )
-		{
-			if ( rgLazyLoadImages[iStart].offset().top > nStartOffset )
-				break;
-		}
-		if ( iStart < rgLazyLoadImages.length )
-		{
-			for ( iEnd = iStart; iEnd < rgLazyLoadImages.length; iEnd++ )
-			{
-				if ( rgLazyLoadImages[iEnd].offset().top > nEndOffset )
-					break;
-			}
-
-			if ( iStart != iEnd )
-			{
-				// we could have loaded these in the loop above, but there is better
-				// perf doing it all at once rather than alternating between loading images and querying position()
-				for ( var i = iStart; i < iEnd; i++ )
-					g_ActiveInventory.LoadItemImage( rgLazyLoadImages[i][0].firstChild );
-
-				rgLazyLoadImages.splice( iStart, iEnd - iStart );
-			}
-		}
-	});
 
 }
 

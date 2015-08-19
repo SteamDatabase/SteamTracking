@@ -236,6 +236,8 @@ jQuery( function($) {
 	Responsive_InitTouchDetection( $ );
 
 	Responsive_InitTabSelect( $ );
+
+	Responsive_InitResponsiveToggleEvents( $ );
 });
 
 function Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalMenuEvents )
@@ -410,6 +412,18 @@ function Responsive_InitFixOnScroll($)
 			}
 			$Elements.each( function() {
 				var $Element = $J(this);
+				if ( !$Element.is(':visible') )
+				{
+					if ( $Element.hasClass('in_fixed_ctn') && $Element.data('originalContents') )
+					{
+						$Element.append( $Element.data('originalContents') );
+						$Element.removeClass('in_fixed_ctn');
+						$Element.css('height', '');
+						nCtnHeight = $Ctn.height();
+					}
+					return;
+				}
+
 				var nElementTop = $Element.offset().top;
 				if ( nElementTop > nScrollTop )
 				{
@@ -573,4 +587,24 @@ function Responsive_UpdateResponsivePrefs( strFlag, bEnabled )
 	{
 		V_SetCookie( "strResponsiveViewPrefs", null, -1 );
 	}
+}
+
+function Responsive_InitResponsiveToggleEvents( $ )
+{
+	// initially undefined, so we will fire the events at at start
+	var bTouchFriendly, bSmallScreen;
+
+	$(window).on('resize.ResponsiveToggle', function() {
+		if ( window.UseTouchFriendlyMode() !== bTouchFriendly )
+		{
+			bTouchFriendly = window.UseTouchFriendlyMode();
+			$(window).trigger('Responsive_TouchFriendlyModeToggled');
+		}
+
+		if ( window.UseSmallScreenMode() !== bSmallScreen )
+		{
+			bSmallScreen = window.UseSmallScreenMode();
+			$(window).trigger('Responsive_SmallScreenModeToggled');
+		}
+	} ).trigger( 'resize.ResponsiveToggle' );
 }

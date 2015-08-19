@@ -222,16 +222,6 @@ a.games_list_tab:hover {
 	padding-top: 200px;
 }
 
-#iteminfo0, #iteminfo1 {
-	width: 346px;
-	top: 0px;
-	left: 0px;
-}
-
-#iteminfo0 .item_desc_content, #iteminfo1 .item_desc_content {
-	min-height: 207px; /* this + computed height of .item_market_actions should equal 261 */
-}
-
 .view_inventory_page .item.activeInfo, .view_inventory_page .item:hover {
 	background-position: -1px -197px;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_itemholder.png' );
@@ -837,15 +827,6 @@ body.migrated_profile_page .inventory_rightnav {
 	text-align: center;
 }
 
-.item_market_actions {
-	padding: 11px;
-	min-height: 32px;
-}
-.item_market_action_button {
-	margin-right: 10px;
-}
-
-
 
 
 .item_scrap_actions {
@@ -922,11 +903,6 @@ body.migrated_profile_page .inventory_rightnav {
 	html.responsive .filter_ctn.inventory_filters #filter_control {
 		width: 96%;
 		max-width: 363px;
-	}
-
-	html.responsive #iteminfo0,
-	html.responsive #iteminfo1 {
-		width: auto;
 	}
 }
 
