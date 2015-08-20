@@ -262,17 +262,6 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 				case 'ptt':
 				case 'cashu':
 				case 'onecard':
-				case 'pse':
-				case 'exito':
-				case 'efecty':
-				case 'baloto':
-				case 'pinvalidda':
-				case 'mangirkart':
-				case 'bancocreditodeperu':
-				case 'bbvacontinental':
-				case 'safetypay':
-				case 'pagoefectivo':
-				case 'trustly':
 					displayPendingReceipt = true;
 					break;
 						
@@ -753,7 +742,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 17 
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
-					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 63					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77				)
+					|| result.paymentmethod == 47 || result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 63					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 41					|| result.paymentmethod == 42					|| result.paymentmethod == 43					|| result.paymentmethod == 44					|| result.paymentmethod == 35 )
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -932,17 +921,6 @@ function OnPayPalSuccess( gidTransID )
 					case 'konbini':
 					case 'bank_transfer_japan':
 					case 'payeasy':
-					case 'pse':
-					case 'exito':
-					case 'efecty':
-					case 'baloto':
-					case 'pinvalidda':
-					case 'mangirkart':
-					case 'bancocreditodeperu':
-					case 'bbvacontinental':
-					case 'safetypay':
-					case 'pagoefectivo':
-					case 'trustly':
 						DisplayPendingReceiptPage();
 						break;
 
@@ -1672,116 +1650,6 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the eClub Store website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
-				else if ( method.value == 'pse' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PSE transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PSE customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'exito' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Exito transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Exito customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'efecty' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Efecty transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Efecty customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your payment slip from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable payment slip.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'baloto' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Baloto transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Baloto customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Baloto from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable Baloto.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'pinvalidda' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PinValidda transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PinValidda customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'mangirkart' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'MangirKart transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MangirKart customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'bancocreditodeperu' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Credito de Peru transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Banco Credito de Peru customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'bbvacontinental' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'BBVA Continental transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for BBVA Continental customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'safetypay' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'SafetyPay transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for SafetyPay customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'pagoefectivo' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'PagoEfectivo transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PagoEfectivo customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your payment slip from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable payment slip.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
-					}
-				}
-				else if ( method.value == 'trustly' )
-				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Trustly transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
-					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Trustly customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
-					}
-				}
 			}
 			else
 			{
@@ -2381,17 +2249,6 @@ g_rgPaymentMethodsToToggle[31] = 'denizbank';
 g_rgPaymentMethodsToToggle[32] = 'ptt';
 g_rgPaymentMethodsToToggle[33] = 'cashu';
 g_rgPaymentMethodsToToggle[34] = 'onecard';
-g_rgPaymentMethodsToToggle[34] = 'pse';
-g_rgPaymentMethodsToToggle[34] = 'exito';
-g_rgPaymentMethodsToToggle[34] = 'efecty';
-g_rgPaymentMethodsToToggle[34] = 'baloto';
-g_rgPaymentMethodsToToggle[34] = 'pinvalidda';
-g_rgPaymentMethodsToToggle[34] = 'mangirkart';
-g_rgPaymentMethodsToToggle[34] = 'bancocreditodeperu';
-g_rgPaymentMethodsToToggle[34] = 'bbvacontinental';
-g_rgPaymentMethodsToToggle[34] = 'safetypay';
-g_rgPaymentMethodsToToggle[34] = 'pagoefectivo';
-g_rgPaymentMethodsToToggle[34] = 'trustly';
 
 function UpdatePaymentMethodList( bIsSplitTransaction )
 {
@@ -2529,15 +2386,12 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'halkbank' || method.value == 'bankasya' || method.value == 'finansbank'
 			|| method.value == 'denizbank' || method.value == 'ptt' || method.value == 'cashu'
 			|| method.value == 'onecard'
-			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'eclubpoints'
-			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'pse' || method.value == 'exito' || method.value == 'efecty'
-			|| method.value == 'baloto' || method.value == 'pinvalidda' || method.value == 'mangirkart' || method.value == 'bancocreditodeperu'  
-			|| method.value == 'bbvacontinental' || method.value == 'safetypay' || method.value == 'pagoefectivo' || method.value == 'trustly' )
+			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'eclubpoints' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 		}
-		else if ( method.value == 'boleto' || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' )
+		else if ( method.value == 'boleto' || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'oxxo' || method.value == 'toditocash' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -3129,11 +2983,7 @@ function SubmitPaymentInfoForm()
 			|| method.value == 'bank_transfer_japan' || method.value == 'payeasy' || method.value == 'webmoney_japan'
 			|| ( method.value == 'paypal' && g_bSkipAddressRequirementForPayPal ) || ( method.value == 'updatepaypal' && g_bSkipAddressRequirementForPayPal ) || method.value == 'storedpaypal'
 			|| method.value == 'zong' || method.value == 'culturevoucher' || method.value == 'bookvoucher' || method.value == 'happymoneyvoucher' || method.value == 'convenientstorevoucher'
-			|| method.value == 'gamevoucher'
-			|| method.value == 'pse'  || method.value == 'exito'  || method.value == 'efecty'  || method.value == 'baloto'  
-			|| method.value == 'pinvalidda'  || method.value == 'mangirkart'  || method.value == 'bancocreditodeperu'  || method.value == 'bbvacontinental'  
-			|| method.value == 'safetypay'  || method.value == 'pagoefectivo'  || method.value == 'trustly'  
-		 )
+			|| method.value == 'gamevoucher' )
 		{
 			if ( !$('verify_country_only').checked )
 			{
@@ -3771,61 +3621,6 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'eClub Points';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
-			else if ( method.value == 'pse' && providerPaymentMethod == 67 )
-			{
-				$('payment_method_review_text').innerHTML = 'PSE';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'exito' && providerPaymentMethod == 68 )
-			{
-				$('payment_method_review_text').innerHTML = 'Exito';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'efecty' && providerPaymentMethod == 69 )
-			{
-				$('payment_method_review_text').innerHTML = 'Efecty';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'baloto' && providerPaymentMethod == 70 )
-			{
-				$('payment_method_review_text').innerHTML = 'Baloto';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'pinvalidda' && providerPaymentMethod == 71 )
-			{
-				$('payment_method_review_text').innerHTML = 'PinValidda';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'mangirkart' && providerPaymentMethod == 72 )
-			{
-				$('payment_method_review_text').innerHTML = 'MangirKart';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'bancocreditodeperu' && providerPaymentMethod == 73 )
-			{
-				$('payment_method_review_text').innerHTML = 'Banco Credito de Peru';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'bbvacontinental' && providerPaymentMethod == 74 )
-			{
-				$('payment_method_review_text').innerHTML = 'BBVA Continental';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'safetypay' && providerPaymentMethod == 75 )
-			{
-				$('payment_method_review_text').innerHTML = 'SafetyPay';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'pagoefectivo' && providerPaymentMethod == 76 )
-			{
-				$('payment_method_review_text').innerHTML = 'PagoEfectivo';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
-			else if ( method.value == 'trustly' && providerPaymentMethod == 77 )
-			{
-				$('payment_method_review_text').innerHTML = 'Trustly';
-				$('checkout_review_payment_info_area').style.display = 'none';
-			}
 		}
 		
 		$('review_address_body').innerText = $('first_name').value+' '+$('last_name').value;
@@ -4225,17 +4020,6 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 				case 43:
 				case 44:
 				case 35:
-				case 67:
-				case 68:
-				case 69:
-				case 70:
-				case 71:
-				case 72:
-				case 73:
-				case 74:
-				case 75:
-				case 76:
-				case 77:
 				default:
 				{
 					switch ( eErrorDetail )
@@ -4459,9 +4243,6 @@ function DisplayPendingReceiptPage()
 		case 'ptt':
 		case 'cashu':
 		case 'onecard':
-		case 'efecty':
-		case 'baloto':
-		case 'pagoefectivo':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="http://www.boacompra.com/shop/info.php?contact">BoaCompra</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
