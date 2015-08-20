@@ -93772,7 +93772,7 @@
 		"1157"
 		{
 			"name"	"Taunt: Kazotsky Kick"
-			"prefab"	"taunt"
+			"prefab"	"valve taunt"
 			"item_name"	"#TF_TauntAllClassRussianDance"
 			"item_description"	"#TF_TauntAllClassRussianDance_Desc"
 			"ad_text"			"#TF_TauntAllClassRussianDance_AdText"
@@ -136112,7 +136112,7 @@
 		{
 			"name"	"Summer 2015 Operation Key" 
 			"first_sale_date"	"2015/06/26"
-			"prefab" "eventkey"
+			"prefab" "valve eventkey"
 			"item_name"			"#TF_Tool_OperationSummer2015Key"					
 			"item_description"	"#TF_Tool_OperationSummer2015Key_Desc"						
 			"ad_text"			"TF_Tool_OperationSummer2015Key_AdText"
