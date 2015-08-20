@@ -528,9 +528,6 @@ input.filter_search_box:-moz-placeholder {
 	padding: 11px;
 	min-height: 32px;
 }
-.item_market_action_button {
-	margin-right: 10px;
-}
 
 #iteminfo_clienthover {
 	width: 350px;
