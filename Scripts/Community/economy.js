@@ -3158,8 +3158,12 @@ SellItemDialog = {
 		$('market_sell_buyercurrency_input').value = GetCurrencySymbol( currencyCode );
 		$('market_sell_dialog_total_youreceive_amount').update( GetCurrencySymbol( currencyCode ) );
 
-		this.m_modal = new CModal( $J(this.m_elDialogContent) );
+		var $elDialogContent = $J(this.m_elDialogContent);
+		this.m_modal = new CModal( $elDialogContent );
 		this.m_modal.Show();
+
+		// Make sure the dialog doesn't get wider when the user presses OK.
+		this.m_modal.SetMaxWidth( $elDialogContent.width() );
 
 		var _this = this;
 		$J(this.m_elDialogContent).find('.newmodal_close' ).click( function() { _this.m_modal.m_fnBackgroundClick(); } );
@@ -3213,7 +3217,7 @@ SellItemDialog = {
 
 	OnPriceHistorySuccess: function( transport ) {
 		$J('#pricehistory_throbber').hide();
-		if ( transport.responseJSON && transport.responseJSON.success )
+		if ( transport.responseJSON && transport.responseJSON.success && transport.responseJSON.prices.length > 0 )
 		{
 			$J('#pricehistory').show();
 

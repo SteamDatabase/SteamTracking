@@ -24,9 +24,30 @@ body.apphub_blue
 	position: relative;
 }
 
+.apphub_GetMoreContent, .apphub_GetMoreContentWait
+{
+	max-width: 948px;
+	height: 300px;
+	line-height: 300px;
+	text-align: center;
+	margin: 0 auto;
+	border:  1px solid transparent;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.apphub_GetMoreContentWait img
+{
+	vertical-align: middle;
+	padding-right: 10px;
+}
+
 .apphub_NoMoreContent
 {
-	max-width: 1100px;
+	max-width: 948px;
+	margin: 0 auto;
 	height: 229px;
 	color: #c4c4c4;
 	background: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_hubbottom.png' ) no-repeat center top;

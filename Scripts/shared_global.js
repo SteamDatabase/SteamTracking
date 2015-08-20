@@ -372,6 +372,7 @@ function CModal( $Content, rgParams )
 	this.m_fnBackgroundClick = null;
 	this.m_fnOnResize = null;
 	this.m_bDismissOnBackgroundClick = !rgParams.bExplicitDismissalOnly;
+	this.m_nMaxWidth = 0;
 
 	this.m_fnOnDismiss = null;
 	this.m_bRemoveContentOnDismissal = false;
@@ -435,6 +436,11 @@ CModal.prototype.SetDismissOnBackgroundClick = function ( bDismissOnBackgroundCl
 	this.m_bDismissOnBackgroundClick = bDismissOnBackgroundClick;
 }
 
+CModal.prototype.SetMaxWidth = function ( nMaxWidth )
+{
+	this.m_nMaxWidth = nMaxWidth;
+}
+
 CModal.prototype.AdjustSizing = function( duration )
 {
 	if ( !this.m_$Content )
@@ -447,6 +453,11 @@ CModal.prototype.AdjustSizing = function( duration )
 
 	var nMaxWidth = Math.max( nViewportWidth - ( bResponsiveScreen? 24 : 80 ), bResponsiveScreen ? 200 : 500 );
 	var nMaxHeight = Math.floor( nViewportHeight - 120 );
+
+	if ( this.m_nMaxWidth && nMaxWidth > this.m_nMaxWidth )
+	{
+		nMaxWidth = this.m_nMaxWidth;
+	}
 
 	// if the modal has a 'newmodal_sized_content' div, it wants to be the max height, so set it now
 	//	before we compute height	( "- 18" is a fudge for a possible horizontal scrollbar )
