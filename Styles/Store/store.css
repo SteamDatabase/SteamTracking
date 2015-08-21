@@ -156,6 +156,10 @@ body.v6 #footer {
 
 
 
+body #footer .responsive_optin_link {
+	display: none;
+}
+
 body.v6.blue #footer {
 	background: #000000;
 }
@@ -2033,4 +2037,36 @@ body.v6.refund_policy .page_content_ctn {
 
 .refund_policy ul {
 	padding-left: 20px;
+}
+
+.nonresponsive_hidden {
+	display: none;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive body.v6 .page_content {
+		max-width: 940px;
+		width: auto;
+		margin: 0 2%;
+	}
+
+	html.responsive body.v6 h2.pageheader {
+		font-size: 30px;
+		word-wrap: break-word;
+	}
+
+	html.responsive .leftcol,
+	html.responsive .rightcol {
+		float: none;
+		width: auto;
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 600px)
+{
+	html.responsive body.v6 h2.pageheader {
+		font-size: 24px;
+	}
 }

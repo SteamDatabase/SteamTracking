@@ -94,7 +94,6 @@
 .addfunds_about {
 	color :#B0AEAC;
 	font-size: 14px;
-	width: 616px;
 	margin-bottom: 28px;
 }
 
@@ -105,7 +104,6 @@
 .addfunds_footer {
 	color :#B0AEAC;
 	font-size: 14px;
-	width: 616px;
 	margin-top: 28px;
 	margin-bottom: 28px;
 }
@@ -144,7 +142,7 @@
 
 .currency_change_option_ctn {
 	vertical-align: top;
-	margin: 0 40px;
+	margin: 0 6%;
 }
 .currency_change_option_ctn:first-child {
 	margin-bottom: 12px;

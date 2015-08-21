@@ -654,6 +654,15 @@ div.youraccount_history_home>div.account_wallet {
 	padding: 5px 14px;
 }
 
+th.license_date_col,
+td.license_date_col {
+	text-align: right;
+}
+
+.free_license_remove_link {
+	float: right;
+}
+
 .grey_overlay {
 	background-color:#000000;
 	opacity: 0.2;
@@ -710,7 +719,6 @@ div.youraccount_history_home>div.account_wallet {
 .account_table tr:nth-child(odd) {
 	background-color: rgba(0,0,0,0.1);
 }
-
 .cached_payment_method_name
 {
 	width: 100%;
@@ -923,16 +931,15 @@ td.wht_total {
 
 .account_setting_block {
 	background: rgba( 0, 0, 0, 0.2 );
-	min-height: 100px;
 	margin-bottom: 24px;
 	padding-bottom: 10px;
+	min-height: 124px;
 }
 
 .account_setting_sub_block {
 	width: 30%;
 	padding: 1em;
 	float: left;
-	min-height: 100px;
 	color: #808891;
 }
 
@@ -1015,4 +1022,49 @@ td.wht_total {
 .subscription_header_info {
 	margin: 4px 0 8px 0;
 	color: #808891;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive table.account_table {
+		table-layout: fixed;	/* this forces the table to stay within the screen, but disables some autosizing behavior */
+	}
+
+	html.responsive table.account_table td {
+		word-wrap: break-word;
+	}
+
+	html.responsive th.license_date_col,
+	html.responsive td.license_date_col {
+		width: 7em;
+	}
+
+	html.responsive th.license_acquisition_col,
+	html.responsive td.license_acquisition_col {
+		width: 8em;
+	}
+}
+
+@media screen and (max-width: 724px )
+{
+	html.responsive .account_setting_sub_block {
+		width: calc( 50% - 2em );
+	}
+}
+@media screen and (max-width: 500px )
+{
+	html.responsive .account_setting_sub_block {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .account_table td {
+		padding: 5px 1.5%;
+	}
+
+	html.responsive .account_table th.license_acquisition_col,
+	html.responsive .account_table td.license_acquisition_col {
+		display: none;
+	}
+
 }
