@@ -38,6 +38,7 @@ CVideoWatch.k_InHTML5AppWrapperTenFoot = 6;
 
 CVideoWatch.k_MaximumVideoRestarts = 3;
 
+
 CVideoWatch.prototype.ToggleStats = function()
 {
 	if ( this.m_DASHPlayerStats )
@@ -137,6 +138,7 @@ CVideoWatch.prototype.Start = function()
 		CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
 
 	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
+	this.m_player.SetUniqueId( this.m_nAppId + '/' + this.m_strVideoId );
 	this.m_eUIMode = ( this.m_eClientType == CVideoWatch.k_InHTML5AppWrapperTenFoot ) ? CDASHPlayerUI.eUIModeTenFoot : CDASHPlayerUI.eUIModeDesktop;
 	this.m_playerUI = new CDASHPlayerUI( this.m_player, this.m_eUIMode );
 	this.m_playerUI.SetUniqueSettingsID( this.m_nAppId );
@@ -147,6 +149,8 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 	$J( this.m_elVideoPlayer ).on( 'downloadfailed.VideoWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
 	$J( this.m_elVideoPlayer ).on( 'playbackerror.VideoWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
+	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function() { _watch.OnPlayerDRMError(); } );
+	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function() { _watch.OnPlayerHDCPError(); } );
 
 	this.GetVideoDetails();
 }
@@ -188,6 +192,16 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 CVideoWatch.prototype.OnPlayerPlaybackError = function()
 {
 	this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
+}
+
+CVideoWatch.prototype.OnPlayerDRMError = function()
+{
+	this.ShowVideoError( 'You must upgrade your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for additional requirements.' );
+}
+
+CVideoWatch.prototype.OnPlayerHDCPError = function()
+{
+	this.ShowVideoError( 'One or more of your displays does not support High-Bandwidth Digital Content Protection (HDCP).<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information.' );
 }
 
 CVideoWatch.prototype.GetVideoDetails = function()
@@ -253,7 +267,8 @@ CVideoWatch.prototype.LoadVideoMPD = function( url )
 	this.m_player.Close();
 	this.m_DASHPlayerStats.Reset();
 	this.SetResumeTimeForAppID();
-	this.m_player.PlayMPD( url );
+	var bUseMpdRelativePathForSegments = false;
+	this.m_player.PlayMPD( url, bUseMpdRelativePathForSegments );
 }
 
 CVideoWatch.prototype.SetResumeTimeForAppID = function()

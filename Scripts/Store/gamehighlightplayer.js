@@ -98,19 +98,30 @@ function HighlightPlayer( args )
 	this.m_elemSelector = this.m_elemStrip.find('.highlight_selector');
 
 	var elemSlider = $JFromIDOrElement(args.elemSlider);
-	var nSliderWidth = this.m_elemStripScroll.width() - this.m_elemStrip.width();
-	if ( nSliderWidth > 0 )
-	{
-		this.slider = new CSlider( elemSlider, elemSlider.find('.handle'), {
-			min: 0,
-			max: nSliderWidth,
-			fnOnChange: $J.proxy( this.SliderOnChange, this )
-		});
-	}
-	else
-	{
-		elemSlider.hide();
-	}
+
+	var _this = this;
+	$J(window ).on('resize.GameHighlightPlayer', function() {
+		var nSliderWidth = _this.m_elemStripScroll.width() - _this.m_elemStrip.width();
+		if ( nSliderWidth > 0 )
+		{
+			if ( !_this.slider )
+			{
+				_this.slider = new CSlider( elemSlider, elemSlider.find('.handle'), {
+					min: 0,
+					max: nSliderWidth,
+					fnOnChange: $J.proxy( _this.SliderOnChange, _this )
+				});
+			}
+			else
+				_this.slider.SetRange( 0, nSliderWidth );
+
+			elemSlider.show();
+		}
+		else
+		{
+			elemSlider.hide();
+		}
+	} ).trigger('resize.GameHighlightPlayer');
 
 	var cItems = this.m_elemPlayerArea.find( '.highlight_player_item' ).length;
 	if ( cItems == 1 )
@@ -720,7 +731,8 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 
 			var bIsDraggingVolume = false;
 
-			$(wrapper).css({'position': 'relative'});
+			if ( $(wrapper).css('position') == 'static' )
+				$(wrapper).css({'position': 'relative'});
 			var overlay = $(overlaySrc);
 			$(wrapper).append(overlay);
 

@@ -732,6 +732,105 @@ HelpWizard = {
 		});
 	},
 
+	SubmitEmailChange: function( strSessionID, strCode ) {
+		var elError = $J( '#changepw_error_msg' );
+		var strEmail = $J( '#email_reset' ).val();
+		elError.hide();
+
+		$J( '#change_password_form' ).addClass( 'loading' );
+		$J( "#email_reset" ).prop("readonly", true);
+
+		try
+		{
+			ga( 'send', 'pageview', '/wizard/AjaxAccountRecoveryChangeEmail/' );
+		}
+		catch ( e )
+		{
+		}
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryChangeEmail/",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				s: strSessionID,
+				code: strCode,
+				email: strEmail
+			} )
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+			$J( "#email_reset" ).prop("readonly", false);
+		}).done( function( data ) {
+			if ( data.show_confirmation )
+			{
+				$J('#change_email_area').hide();
+				$J('#confirm_email_form').show();
+			}
+			else if ( data.hash )
+			{
+				window.location.hash = data.hash;
+			}
+			else if ( data.html )
+			{
+				$J('#wizard_contents').html( data.html );
+				return;
+			}
+			else
+			{
+				elError.text( data.errorMsg ).show();
+				$J( "#email_reset" ).prop("readonly", false);
+			}
+		}).always( function() {
+			$J( '#change_password_form' ).removeClass( 'loading' );
+		});
+	},
+
+	ConfirmEmailChange: function( strSessionID, strCode ) {
+		var elError = $J( '#changepw_error_msg' );
+		var strEmail = $J( '#email_reset' ).val();
+		var strEmailChangeCode = v_trim( $J( '#email_change_code' ).val() );
+		elError.hide();
+
+		$J( '#change_password_form' ).addClass( 'loading' );
+
+		try
+		{
+			ga( 'send', 'pageview', '/wizard/AjaxAccountRecoveryConfirmChangeEmail/' );
+		}
+		catch ( e )
+		{
+		}
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/wizard/AjaxAccountRecoveryConfirmChangeEmail/",
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				s: strSessionID,
+				code: strCode,
+				email: strEmail,
+				email_change_code: strEmailChangeCode
+			} )
+		}).fail( function( xhr ) {
+			elError.text( 'An error occurred trying to handle that request. Please give us a few minutes and try again.' ).slideDown();
+		}).done( function( data ) {
+			if ( data.hash )
+			{
+				window.location.hash = data.hash;
+			}
+			else if ( data.html )
+			{
+				$J('#wizard_contents').html( data.html );
+				return;
+			}
+			else
+			{
+				elError.text( data.errorMsg ).show();
+			}
+		}).always( function() {
+			$J( '#change_password_form' ).removeClass( 'loading' );
+		});
+	},
+
+
 	ResetTwoFactor: function( strSessionID, strCode, nAccountID, strLogin )
 	{
 		$J( '#reset_twofactor_submit' ).addClass( 'loading' );

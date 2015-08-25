@@ -1349,7 +1349,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 
 #review_create {
-	width: 908px;
+    max-width: 908px;
     position: relative;
     overflow: visible;
     padding-top: 16px;
@@ -1861,4 +1861,17 @@ body.recommendgame #review_create {
 body.recommendgame #review_create h1  {
 	border-top: none;
 	padding-top: 0;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive #review_create .content {
+		width: auto;
+		float: none;
+		overflow: hidden;
+	}
+
+	html.responsive #review_create .input_box {
+		width: calc( 100% - 24px );
+	}
 }

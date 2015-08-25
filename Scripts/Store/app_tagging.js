@@ -514,8 +514,15 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 
 
-	AdjustVisibleAppTags( $J('.popular_tags[data-appid=' + appid + ']') );
+	var $PopularTagsOnPage = $J('.popular_tags[data-appid=' + appid + ']');
+	var $YourTagsOnPage = $J('.your_tags[data-appid=' + appid + ']');
+	AdjustVisibleAppTags( $PopularTagsOnPage );
 	fnUpdateUserTagsOnPage();
+
+	$J(window ).on('resize.VisibleAppTags', function() {
+		AdjustVisibleAppTags( $PopularTagsOnPage );
+		AdjustVisibleAppTags( $YourTagsOnPage );
+	});
 }
 
 function AdjustVisibleAppTags( $TagCtn )

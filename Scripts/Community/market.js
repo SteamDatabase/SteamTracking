@@ -5,23 +5,42 @@ RemoveListingDialog = {
 
 	m_oListingOriginalRow: null,
 	m_ulListingId: false,
+	m_bAwaitingConfirmation: false,
 	m_fnDocumentKeyHandler: null,
 	
 	Initialize: function() {
 		$('market_removelisting_dialog_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
 		$('market_removelisting_dialog_cancel').observe( 'click', this.OnCancel.bindAsEventListener(this) );
+		$('market_removelisting_dialog_cancelbtn').observe( 'click', this.OnCancel.bindAsEventListener(this) );
 	},
 
-	Show: function ( sElementPrefix, listingid, item ) {
+	Show: function ( sElementPrefix, listingid, item, bAwaitingConfirmation ) {
 		if ( !this.m_bInitialized )
 			this.Initialize();
 
 		this.m_bOKClicked = false;
 		this.m_oListingOriginalRow = $(sElementPrefix + '_' + listingid);
 		this.m_ulListingId = listingid;
+		this.m_bAwaitingConfirmation = bAwaitingConfirmation;
+
+		if ( bAwaitingConfirmation )
+		{
+			$J('#market_removelisting_dialog_title').text( 'Cancel listing' );
+			$J('#market_removelisting_dialog_confirmation_text').html( 'This listing is awaiting your confirmation and has not yet been posted on the Community Market.<br><br>Would you like to cancel your listing for <span id="market_removelisting_dialog_itemname"></span>?' );
+			$J('#market_removelisting_dialog_accept > span').text( 'Yes, cancel this listing' );
+		}
+		else
+		{
+			$J('#market_removelisting_dialog_title').text( 'Remove a listing' );
+			$J('#market_removelisting_dialog_confirmation_text').html( 'Would you like to remove the listing for <span id="market_removelisting_dialog_itemname"></span> and return the item to your inventory?' );
+			$J('#market_removelisting_dialog_accept > span').text( 'Yes, remove this listing' );
+		}
 
 		$('market_removelisting_dialog_error').hide();
 		$('market_removelisting_dialog_accept').show();
+		$('market_removelisting_dialog_accept').setOpacity('1');
+		$('market_removelisting_dialog_cancelbtn').show();
+		$('market_removelisting_dialog_cancelbtn').setOpacity('1');
 		$('market_removelisting_dialog_accept_throbber').hide();
 
 		var oItemName = Element.clone( $(sElementPrefix + '_' + listingid + '_name'), true );
@@ -60,9 +79,10 @@ RemoveListingDialog = {
 
 		$('market_removelisting_dialog_accept_throbber').clonePosition( $('market_removelisting_dialog_accept') );
 		$('market_removelisting_dialog_accept').fade({ duration: 0.25 });
+		$('market_removelisting_dialog_cancelbtn').fade({ duration: 0.25 });
 		$('market_removelisting_dialog_accept_throbber').show();
 		$('market_removelisting_dialog_accept_throbber').fade({ duration: 0.25, from: 0, to: 1 });
-		
+
 		var listingid = this.m_ulListingId;
 		new Ajax.Request( 'https://steamcommunity.com/market/removelisting/' + listingid, {
 			method: 'post',
@@ -81,10 +101,18 @@ RemoveListingDialog = {
 
 	OnSuccessEffects: function() {
 		// Decrement listing counters
-		if ( $('my_market_activelistings_number') )
-			$('my_market_activelistings_number').update( parseInt($('my_market_activelistings_number').innerHTML)-1 );
-		if ( $('my_market_selllistings_number') )
-			$('my_market_selllistings_number').update( parseInt($('my_market_selllistings_number').innerHTML)-1 );
+		if ( this.m_bAwaitingConfirmation )
+		{
+			if ( $( 'my_market_listingstoconfirm_number' ) )
+				$( 'my_market_listingstoconfirm_number' ).update( parseInt( $( 'my_market_listingstoconfirm_number' ).innerHTML ) - 1 );
+		}
+		else
+		{
+			if ( $( 'my_market_activelistings_number' ) )
+				$( 'my_market_activelistings_number' ).update( parseInt( $( 'my_market_activelistings_number' ).innerHTML ) - 1 );
+			if ( $( 'my_market_selllistings_number' ) )
+				$( 'my_market_selllistings_number' ).update( parseInt( $( 'my_market_selllistings_number' ).innerHTML ) - 1 );
+		}
 
 		// Remove any listing rows
 		$$('.listing_' + this.m_ulListingId).each( function( oListingRow ) {
@@ -95,6 +123,7 @@ RemoveListingDialog = {
 		queue.each(function(effect) { effect.cancel(); });
 
 		$('market_removelisting_dialog_accept').hide();
+		$('market_removelisting_dialog_cancelbtn').hide();
 		$('market_removelisting_dialog_accept_throbber').hide();
 		
 		this.Dismiss();
@@ -121,6 +150,9 @@ RemoveListingDialog = {
 		$('market_removelisting_dialog_accept').show();
 		$('market_removelisting_dialog_accept').setOpacity('0');
 		$('market_removelisting_dialog_accept').fade({ duration: 0.25, from: 0, to: 1 });
+		$('market_removelisting_dialog_cancelbtn').show();
+		$('market_removelisting_dialog_cancelbtn').setOpacity('0');
+		$('market_removelisting_dialog_cancelbtn').fade({ duration: 0.25, from: 0, to: 1 });
 		$('market_removelisting_dialog_accept_throbber').fade({ duration: 0.25 });
 	},
 	
@@ -140,7 +172,12 @@ RemoveListingDialog = {
 
 function RemoveMarketListing( sElementPrefix, listingid, appid, contextid, itemid )
 {
-	RemoveListingDialog.Show( sElementPrefix, listingid, g_rgAssets[appid][contextid][itemid] );
+	RemoveListingDialog.Show( sElementPrefix, listingid, g_rgAssets[appid][contextid][itemid], false );
+}
+
+function CancelMarketListingConfirmation( sElementPrefix, listingid, appid, contextid, itemid )
+{
+	RemoveListingDialog.Show( sElementPrefix, listingid, g_rgAssets[appid][contextid][itemid], true );
 }
 
 

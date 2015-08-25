@@ -238,6 +238,12 @@ ul.market_restrictions li {
 	margin-top: 6px;
 	height: 50px;
 }
+
+.my_listing_section .market_listing_justconfirmed {
+	background-color: #4A4A4A;
+	border-color: #67C1F5;
+}
+
 a.market_listing_row_link, a.market_listing_row_link:hover, a.market_listing_row_link:active, a.market_listing_row_link:visited {
 	color: inherit;
 	text-decoration: none;
@@ -1295,10 +1301,7 @@ input.filter_search_box:focus {
 
 #market_removelisting_dialog_buttons {
 	height: 32px;
-}
-
-#market_removelisting_dialog_accept {
-	float: right;
+	text-align: right;
 }
 
 #market_removelisting_dialog_accept_throbber {

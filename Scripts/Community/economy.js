@@ -3485,7 +3485,18 @@ SellItemDialog = {
 			}
 
 			new Effect.BlindDown( 'market_headertip_itemsold', { duration: 0.25 } );
-			UserYou.ReloadInventory( this.m_item.appid, this.m_item.contextid );
+
+			if ( transport.responseJSON.requires_confirmation )
+			{
+				ShowAlertDialog(
+						'Additional confirmation needed',
+						'In order to list this item on the Community Market, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.'.replace( /%s/, transport.responseJSON.email_domain )
+				);
+			}
+			else
+			{
+				UserYou.ReloadInventory( this.m_item.appid, this.m_item.contextid );
+			}
 		}
 		else
 		{

@@ -2062,6 +2062,10 @@ body.v6.refund_policy .page_content_ctn {
 		width: auto;
 		margin-left: 0;
 	}
+
+	html.responsive #store_header {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 600px)

@@ -407,7 +407,7 @@ GDynamicStore = {
 
 	GetAvailablePlaytestForApp: function( appid )
 	{
-		if( !GDynamicStore.s_rgPlaytestData )
+		if( !GDynamicStore.s_rgPlaytestData || !GDynamicStore.s_rgPlaytestData.available_tests )
 			return false;
 
 		for( var i=0; i<GDynamicStore.s_rgPlaytestData.available_tests.length; i++)

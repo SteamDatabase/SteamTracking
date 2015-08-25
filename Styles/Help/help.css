@@ -1791,7 +1791,7 @@ a.guide_row {
 	margin-top: 2px;
 }
 
-#password_reset, #password_reset_confirm, #password_twofactor, #twofactor_password, #twofactor_resetcode, #twofactor_smscode
+#password_reset, #password_reset_confirm, #password_twofactor, #twofactor_password, #twofactor_resetcode, #twofactor_smscode, #email_change_code, #email_reset
 {
 	color: #ffffff;
 	background-color: #324965;
@@ -1865,6 +1865,14 @@ a.guide_row {
 
 .password_tag.warning:before {
 	border-right: 11px solid #b78124;
+}
+
+.reset_complete_email {
+	font-size: 20px;
+}
+
+.reset_complete_email_box {
+	margin: 40px 0 0 0;
 }
 
 .reset_twofactor_area

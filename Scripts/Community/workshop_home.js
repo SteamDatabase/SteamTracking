@@ -16,7 +16,7 @@ function OnSelectGame( GameSelector, rgAppData )
 	top.location.href = 'https://steamcommunity.com/app/' + rgAppData.appid + '/workshop/';
 }
 
-function OnLoad()
+function WorkshopOnLoad()
 {
 	gSearchField_Apps = new SearchFieldWithText( 'workshopSearchText', "Search for a Workshop", ShowAppSuggestions, null );
 	InitWorkshopAppSearch();

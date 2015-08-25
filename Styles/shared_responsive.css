@@ -407,7 +407,7 @@ body.overflow_hidden .responsive_page_frame {
 
 
 .perf_timing_area {
-	display: none;
+	/*display: none;*/
 }
 
 .perf_timing_data {

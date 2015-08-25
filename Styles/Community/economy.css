@@ -638,6 +638,7 @@ input.filter_search_box:-moz-placeholder {
 .market_dialog_title_cancel {
 	float: right;
 	font-size: 12px;
+	cursor: pointer;
 }
 
 .market_dialog_title_cancel_X {
@@ -844,6 +845,10 @@ input.market_dialog_input:focus {
 
 #market_sell_quantity_available {
 	margin-right: 26px;
+}
+
+#market_removelisting_dialog_accept {
+	margin-right: 0.5em;
 }
 
 .item_market_action_button {

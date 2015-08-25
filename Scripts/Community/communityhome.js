@@ -16,7 +16,7 @@ function OnSelectGame( GameSelector, rgAppData )
 	top.location.href = 'https://steamcommunity.com/app/' + rgAppData.appid;
 }
 
-function OnLoad()
+function OnCommunityHomeLoad()
 {
 	gSearchField_Apps = new SearchFieldWithText( 'appHubsSearchText', "Search for products", ShowAppSuggestions, null );
 	gSearchField_Players = new SearchFieldWithText( 'SearchPlayers', "Search players and groups", null, null );

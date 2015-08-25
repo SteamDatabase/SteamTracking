@@ -53,7 +53,7 @@
     background: linear-gradient(to right,  rgba(0,0,0,0) 50%,rgba(0,0,0,0.4) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
 
-	height: 451px;
+	padding-bottom: 12px;
 }
 
 .game_background_glow {
@@ -79,41 +79,42 @@
 }
 
 .highlight_ctn {
-	height: 450px;
 }
 
 #highlight_player_area {
-	width: 600px;
-	height: 338px;
 	background-color: #000000;
 	overflow: hidden;
 	position: relative;
 }
 
-.highlight_player_item {
-	width: 600px;
-	height: 338px;
+.highlight_player_area_spacer img {
+	width: 100%;
+	display: block;
+}
 
+.highlight_player_item {
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .screenshot_holder {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-	width: 600px;
-	height: 338px;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .highlight_player_item img {
+	width: 100%;
+	display: block;
 }
 
 .highlight_overflow {
 	overflow: hidden;
-	width: 600px;
-	height: 434px;
+	margin-right: 16px;
 	position: relative;
 }
 
@@ -123,7 +124,6 @@
 	position: relative;
 	height: 69px;
 	margin-bottom: 4px;
-	width: 602px;
 	z-index: 40;
 }
 
@@ -1768,29 +1768,64 @@ img.package_header {
 	color: #A68C62;
 }
 
+.queue_overflow_ctn {
+	overflow: hidden;
+}
+
 .queue_ctn {
-    width: 908px;
-    padding: 16px;
+    width: 940px;
     background: rgba( 0, 0, 0, 0.2 );
 
 	margin: 0px auto;
 	margin-bottom: 16px;
 }
-.queue_ctn.in_queue {
-	background: url('https://steamstore-a.akamaihd.net/public/images/v6/app/queue_controls_bg.png') top left no-repeat;
-	height: 104px;
-	padding-top: 8px;
+
+.queue_ctn .queue_actions_ctn {
+	padding: 16px;
 }
+
+.queue_ctn.in_queue .queue_actions_ctn {
+	padding-top: 8px;
+	padding-bottom: 12px;
+}
+
+.queue_actions_ctn .btn_medium {
+	margin-bottom: 4px;
+}
+
 .btn_next_in_queue {
 	background: url('https://steamstore-a.akamaihd.net/public/images/v6/app/queue_next_btn.png') top left no-repeat;
-	width: 145px;
-	height: 27px;
+	width: 205px;
+	height: 75px;
 	float: right;
-	padding: 24px 30px;
 	cursor: pointer;
 	margin-top: -17px;
 	margin-right: -72px;
+	background-size: 100% 200%;
 }
+
+.btn_next_in_queue .next_in_queue_content {
+	padding: 24px 15% 0 15%;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .queue_ctn {
+		width: auto;
+	}
+	html.responsive .btn_next_in_queue {
+		margin-right: -26px;
+		max-width: 40%;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+	html.responsive .btn_next_in_queue .next_in_queue_content {
+		padding-top: 16px;
+	}
+}
+
 .btn_next_in_queue:hover {
 	background-position: bottom;
 }
@@ -1826,11 +1861,11 @@ img.package_header {
     text-decoration: none;
     color: #67c1f5;
 }
-.queue_ctn .queue_controls_description {
-	margin-top: 20px;
+.queue_controls_description {
 	color: #ffcc6a;
 	font-size: 12px;
-}
+	padding: 6px; 16px;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba( 196, 158, 82, 0.6 )), color-stop(60%,rgba( 196, 158, 82, 0.0 )));background: -moz-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: -webkit-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: -o-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: -ms-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: linear-gradient( to right, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);}
 
 .queue_control_button {
 	display: inline-block;
@@ -1885,7 +1920,7 @@ body.v6 .game_area_already_owned.page_content {
     padding: 0px 16px 16px 16px;
 	margin: 0px auto;
     margin-bottom: 40px;
-	width: 908px;
+	max-width: 908px;
 
 }
 
@@ -2286,7 +2321,7 @@ div.early_access_announcements .appeditor p {
 
 div.early_access_announcements .post {
 	display: inline-block;
-	width: 293px;
+	width: 47%;
 	overflow: hidden;
 }
 
@@ -2374,8 +2409,21 @@ div.early_access_announcements .post .comments {
 
 div.early_access_announcements .divider {
 	display: inline-block;
-	margin: 20px 10px 0 10px;
+	margin: 20px 0 0 0;
+	width: 4%;
 	height: 190px;
+}
+
+@media screen and (max-width: 420px)
+{
+	div.early_access_announcements .divider {
+		display: none;
+	}
+
+	div.early_access_announcements .post {
+		width: auto;
+		display: block;
+	}
 }
 
 .highlight_movie {
@@ -3036,12 +3084,11 @@ select.gray_bevel {
 
 .steam_curator_recommendation
 {
-	float: left;
+	overflow: hidden;
 	min-height: 75px;
 	max-width: 409px;
 	font-size: 13px;
 	color: #C6D4DF;
-	margin-top: -2px;
 }
 
 .steam_curator_recommendation_readmore
@@ -3268,4 +3315,112 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 
 #pt_block, #pt_active, #pt_join {
 	display: none;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .game_area_play_stats {
+		width: auto;
+		margin: 0 2%;
+	}
+}
+
+@media screen and (max-width: 910px )
+{
+
+	html.responsive #game_highlights,
+	html.responsive #game_highlights .rightcol {
+		width: auto;
+		height: auto;
+	}
+
+	html.responsive .highlight_overflow {
+		margin-right: 0;
+	}
+
+	html.responsive .glance_ctn {
+		padding: 4px 2%;
+	}
+
+	html.responsive .game_header_image_ctn
+	{
+		float: left;
+		width: 50%;
+		margin-right: 8px;
+	}
+
+	html.responsive .game_description_snippet {
+		overflow: hidden;
+		padding-right: 0;
+	}
+
+	html.responsive .game_header_image_ctn img.game_header_image_full {
+		width: 100%;
+		height: auto;
+	}
+
+	html.responsive .glance_ctn_responsive_left {
+		overflow: hidden;
+	}
+
+	html.responsive .glance_ctn_responsive_right {
+		clear: left;
+		padding-top: 10px;
+	}
+
+	html.responsive .glance_tags_ctn {
+		overflow: hidden;
+		margin-top: 0;
+	}
+
+	html.responsive .glance_ctn_responsive_right .glance_tags_ctn:first-child {
+		float: left;
+		width: 50%;
+		margin-right: 8px;
+	}
+}
+
+@media screen and (max-width: 560px)
+{
+	html.responsive .glance_ctn_responsive_left {
+		clear: left;
+		float: left;
+		width: 50%;
+		margin-right: 8px;
+	}
+
+	html.responsive .glance_ctn_responsive_right {
+		clear: none;
+		overflow: hidden;
+		padding-top: 0;
+	}
+
+	html.responsive .glance_ctn_responsive_right .glance_tags_ctn,
+	html.responsive .glance_ctn_responsive_right .glance_tags_ctn:first-child
+	{
+		float: none;
+		width: auto;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 470px )
+{
+	html.responsive .game_header_image_ctn {
+		float: none;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 380px)
+{
+	html.responsive .glance_ctn_responsive_left,
+	html.responsive .glance_ctn_responsive_right {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .glance_tags_ctn {
+		margin-top: 10px;
+	}
 }

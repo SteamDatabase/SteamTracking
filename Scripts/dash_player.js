@@ -1,8 +1,9 @@
 
 // Logs messages to the console
-function PlayerLog( s )
+function PlayerLog()
 {
-	console.log(s);
+	var args = [ '%c[video]%c', 'color: cornflowerblue;', '' ].concat( Array.prototype.slice.call(arguments) );
+	console.log.apply( console, args );
 };
 
 /////////////////////////////////////////////////////////////////
@@ -28,6 +29,8 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nLastDecodedFrames = 0;
 	this.m_nLastDecodedFrameTime = 0;
 	this.m_nCurrentFramerate = 0;
+	this.m_strUniqueId = "";
+	this.m_tsLastEncryptedEvent = 0;
 
 	// player states
 	this.m_bIsBuffering = true;
@@ -168,13 +171,18 @@ CDASHPlayer.prototype.Close = function()
 	this.m_tsLastWindowResize = 0;
 }
 
-CDASHPlayer.prototype.CloseWithError = function()
+CDASHPlayer.prototype.CloseWithError = function( errorToTrigger )
 {
 	this.Close();
-	$J( this.m_elVideoPlayer ).trigger( 'playbackerror' );
+	$J( this.m_elVideoPlayer ).trigger( errorToTrigger || 'playbackerror' );
 }
 
-CDASHPlayer.prototype.PlayMPD = function( strURL, tsFirstAttempt )
+CDASHPlayer.prototype.SetUniqueId = function( strUniqueId )
+{
+	this.m_strUniqueId = strUniqueId.toString();
+}
+
+CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments, tsFirstAttempt )
 {
 	this.m_strMPD = strURL;
 
@@ -196,7 +204,7 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, tsFirstAttempt )
 
 		// parse MPD file
 		_player.m_mpd = new CMPDParser();
-		if ( !_player.m_mpd.BParse( data ) )
+		if ( !_player.m_mpd.BParse( data, bUseMpdRelativePathForSegments, strURL ) )
 		{
 			PlayerLog( 'Failed to parse MPD file' );
 			_player.CloseWithError();
@@ -217,6 +225,66 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, tsFirstAttempt )
 			var nServerTimeMS = strServerTime ? new Date( strServerTime ).getTime() : Date.now();
 			_player.m_tsLiveContentStarted = performance.now() - (nServerTimeMS - _player.m_mpd.availabilityStartTime.getTime());
 			PlayerLog( 'server time: ' + strServerTime );
+		}
+		
+		// Initialize DRM if neccessary
+		if ( _player.m_mpd.hasProtectedRepresentations )
+		{
+			// Merge all configurations into a single array per system
+			var keySystemConfigurations = {};
+			for ( var i = 0; i < _player.m_mpd.periods.length; ++i )
+			{
+				var period = _player.m_mpd.periods[i];
+				for ( var j = 0; j < period.adaptationSets.length; ++j )
+				{
+					var adaptationSet = period.adaptationSets[j];
+					if ( adaptationSet.isCencEncrypted )
+					{
+						for ( var system in adaptationSet.keySystems )
+						{
+							if ( !( system in keySystemConfigurations ) )
+								keySystemConfigurations[ system ] = {
+									distinctiveIdentifier: 'optional',
+									persistentState: 'optional',
+									initDataTypes: [ 'cenc' ],
+									audioCapabilities: [],
+									videoCapabilities: [],
+								};
+
+							adaptationSet.representations.forEach( function( representation ) {
+								var capability = { contentType: representation.mimeType + '; codecs="' + representation.codecs + '"', robustness: '' };
+
+								if ( adaptationSet.containsAudio ) {
+									keySystemConfigurations[ system ].audioCapabilities.push( capability );
+								} else if ( adaptationSet.containsVideo ) {
+									keySystemConfigurations[ system ].videoCapabilities.push( capability );
+								}
+							});
+						}
+					}
+				}
+			}
+
+			// Attempt to initialize systems
+			for ( var system in keySystemConfigurations )
+			{
+				navigator.requestMediaKeySystemAccess( system, [ keySystemConfigurations[ system ] ] ).then(
+					function( keySystemAccess ) {
+						return keySystemAccess.createMediaKeys();
+					}
+				).then(
+					function( createdMediaKeys ) {
+						PlayerLog( 'Initialized media key system', system );
+						_player.m_elVideoPlayer.addEventListener( 'encrypted', function( event ) { _player.OnEncrypted( event ) }, false );
+						_player.m_elVideoPlayer.setMediaKeys( createdMediaKeys );
+					}
+				).catch(
+					function(error) {
+						PlayerLog( "Failed to set up MediaKeys: " + error );
+						_player.CloseWithError( 'drmerror' );
+					}
+				);
+			}
 		}
 
 		// select representation to play
@@ -242,7 +310,67 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, tsFirstAttempt )
 
 		// retry
 		PlayerLog( 'Failed to download, will retry: ' + _player.m_strMPD );
-		_player.m_schUpdateMPD = setTimeout( function() { _player.PlayMPD( strURL, tsFirstAttempt ); }, CDASHPlayer.MANIFEST_RETRY_MS );
+		_player.m_schUpdateMPD = setTimeout( function() { _player.PlayMPD( strURL, bUseMpdRelativePathForSegments, tsFirstAttempt ); }, CDASHPlayer.MANIFEST_RETRY_MS );
+	});
+}
+
+CDASHPlayer.prototype.OnEncrypted = function( event )
+{
+	var _player = this;
+	// We can get a dupicate event for the audio and video track starting, but we only want to send one license request.
+	if ( event.timestamp == _player.m_tsLastEncryptedEvent)
+	{
+		return;
+	}
+	_player.m_tsLastEncryptedEvent = event.timestamp;
+
+	PlayerLog( 'Found encrypted content.' );
+	var session = this.m_elVideoPlayer.mediaKeys.createSession();
+	session.addEventListener('message', function( event ) { _player.OnMessage ( session, event ) }, false);
+	session.generateRequest( event.initDataType, event.initData ).catch(
+		function(error) {
+			PlayerLog('Failed to generate a license request', error);
+			_player.CloseWithError( 'drmerror' );
+		}
+	);
+}
+
+CDASHPlayer.prototype.OnMessage = function( session, event )
+{
+	var _player = this;
+	PlayerLog( 'Requesting license.' );
+
+	var xhr = new XMLHttpRequest();
+	xhr.open( 'POST', 'https://store.steampowered.com/video/license/' + this.m_strUniqueId, true );
+	xhr.responseType = 'arraybuffer';
+	xhr.send( event.message );
+	xhr.addEventListener( 'readystatechange', function ()
+	{
+		if ( xhr.readyState == xhr.DONE )
+		{
+			PlayerLog( 'License request completed.' );
+			session.update( xhr.response ).then(function () {
+				// Check media key statuses
+				session.keyStatuses.forEach( function( keyId, status ) {
+					// Some implementations pass these parameters backwards, check for that.
+					if ( typeof keyId === 'string' )
+					{
+						var tmp = keyId;
+						keyId = status;
+						status = tmp;
+					}
+
+					if ( status !== 'usable' && status !== 'status-pending' && status !== 'output-downscaled' )
+					{
+						PlayerLog( "Couldn't use an encryption key.", btoa(String.fromCharCode.apply(null, new Uint8Array(keyId))), status );
+						_player.CloseWithError( status === 'output-restricted' || status === 'output-not-allowed' ? 'hdcperror' : 'drmerror' );
+					}
+				});
+			},function() {
+				PlayerLog( 'Failed to update DRM session', arguments );
+				_player.CloseWithError( 'drmerror' );
+			});
+		}
 	});
 }
 
@@ -263,7 +391,7 @@ CDASHPlayer.prototype.UpdateMPD = function()
 	{
 		_player.m_xhrUpdateMPD = null;
 		if ( _player.m_bExiting )
-        	return;
+			return;
 
 		// parse MPD file
 		if ( !_player.m_mpd.BUpdate( data ) )
@@ -1755,7 +1883,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 
 					_loader.m_nFailedSegmentDownloads++;
 
-					PlayerLog( '[video] HTTP ' + xhr.status + ' (' +  nDownloadMS + 'ms): ' + url );
+					PlayerLog( 'HTTP ' + xhr.status + ' (' +  nDownloadMS + 'ms): ' + url );
 					var nTimeToRetry = CDASHPlayer.DOWNLOAD_RETRY_MS;
 					if ( _loader.m_player.BIsLiveContent() )
 						nTimeToRetry += CDASHPlayer.TRACK_BUFFER_MS;
@@ -1787,7 +1915,7 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 
 						if (_loader.m_player.BLogVideoVerbose()) {
 							var nSize = segment.data.length / 1000;
-							PlayerLog('[video] HTTP ' + xhr.status + ' (' + nDownloadMS + 'ms, ' + Math.floor(nSize) + 'k): ' + url);
+							PlayerLog('HTTP ' + xhr.status + ' (' + nDownloadMS + 'ms, ' + Math.floor(nSize) + 'k): ' + url);
 						}
 					}
 					catch (e) {
@@ -2330,7 +2458,7 @@ CMPDParser.GetAnalyticsStalledLink = function()
 	return CMPDParser.strStalledLink;
 }
 
-CMPDParser.prototype.BParse = function( xmlDoc )
+CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, strURL )
 {
 	var _mpd = this;
 	xml = $J( xmlDoc );
@@ -2351,6 +2479,7 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 	xmlMPD = xmlMPD[0];
 	_mpd.type = $J( xmlMPD ).attr( 'type' );
 	_mpd.minBufferTime = _mpd.ParseDuration(xmlMPD, 'minBufferTime');
+	_mpd.hasProtectedRepresentations = false;
 	if (_mpd.type == 'dynamic')
 	{
 		_mpd.availabilityStartTime = _mpd.ParseDate(xmlMPD, 'availabilityStartTime');
@@ -2375,9 +2504,13 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 
 	// MPD BaseURL if set - Must be direct child of MPD
 	var baseUrl = $J( xmlMPD ).find('> BaseURL');
-	if ( baseUrl )
+	if ( baseUrl && baseUrl.length > 0 )
 	{
 		CMPDParser.strBaseURL = baseUrl.text();
+	}
+	else if ( bUseMpdRelativePathForSegments )
+	{
+		CMPDParser.strBaseURL = strURL.substr(0, strURL.lastIndexOf( '/' ) + 1 );
 	}
 
 	// stats reporting if Analytics set in MPD
@@ -2544,6 +2677,27 @@ CMPDParser.prototype.BParse = function( xmlDoc )
 
 				adaptationSet.representations.push( representation );
 			});
+			
+			// Parse DRM Configurations for adaptation set
+			adaptationSet.keySystems = {};
+			xmlAdaptation.find( 'ContentProtection' ).each( function()
+			{
+				var xmlContentProtection = $J( this );
+				_mpd.hasProtectedRepresentations = true;
+				switch ( xmlContentProtection.attr( 'schemeIdUri' ) )
+				{
+					case 'urn:mpeg:dash:mp4protection:2011':
+						if ( xmlContentProtection.attr( 'value' ) === 'cenc' )
+							adaptationSet.isCencEncrypted = true;
+						break;
+
+					// Widevine marker element
+					case 'urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed':
+						adaptationSet.keySystems[ 'com.widevine.alpha' ] = true;
+						break;
+				}
+			});
+
 		}
 		else
 		{
