@@ -349,18 +349,18 @@ GDynamicStore = {
 			if ( bOwned )
 			{
 				$El.addClass( 'ds_flagged ds_owned' );
-				$El.append( '<div class="ds_flag ds_owned_flag">#DynamicStore_InLibrary&nbsp;&nbsp;</div>');
+				$El.append( '<div class="ds_flag ds_owned_flag">IN LIBRARY&nbsp;&nbsp;</div>');
 			}
 			else if ( bWanted )
 			{
 				$El.addClass( 'ds_flagged ds_wishlist' );
-				$El.append( '<div class="ds_flag ds_wishlist_flag">#DynamicStore_OnWishlist&nbsp;&nbsp;</div>');
+				$El.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
 			}
 
 			if ( bInCart )
 			{
 				$El.addClass( 'ds_flagged ds_incart' );
-				$El.append( '<div class="ds_flag ds_incart_flag">#DynamicStore_InCart&nbsp;&nbsp;</div>');
+				$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
 			}
 		});
 
@@ -638,7 +638,7 @@ function ShowHowDoDiscoveryQueuesWorkDialog()
 		},
 		function( data )
 		{
-			ShowAlertDialog( '#explore_queue_how_does_this_work', data );
+			ShowAlertDialog( 'How does this work?', data );
 		}
 	);
 }

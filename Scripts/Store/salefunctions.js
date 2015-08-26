@@ -54,9 +54,9 @@ function OnVoteClick( voteid, appid )
 	if ( !g_AccountID )
 	{
 		// propmt for login
-		ShowConfirmDialog( '#Promo_Summer2013_CommunityChoice',
-			'#Promo_Summer2013_CommunityChoice_NeedToLogIn',
-			'#login'
+		ShowConfirmDialog( 'Community\'s Choice',
+			'You need to log in first before you can vote.',
+			'Login'
 		).done( function() {
 				window.location = 'https://store.steampowered.com/login/?redir=%23summersale_communitychoice';
 			});
@@ -80,12 +80,12 @@ function OnVoteClick( voteid, appid )
 				else
 				{
 					// show something generic
-					ShowAlertDialog( '#Promo_Summer2013_CommunityChoice', '#Promo_Summer2013_VoteProgress_Thanks' );
+					ShowAlertDialog( 'Community\'s Choice', 'Thanks for voting!' );
 				}
 			}).fail( function() {
 				ShowAlertDialog(
-					'#Promo_Summer2013_CommunityChoice',
-					'#Promo_Summer2013_CommunityChoice_VotingFailed'
+					'Community\'s Choice',
+					'There was a problem recording your vote.  Please try again later.'
 				).done( function() { window.location.reload(); } );
 			}).always( function() {
 				g_bVoteInFlight = false;
@@ -119,7 +119,7 @@ function ShowVoteDialog()
 		{
 			g_$VoteDialog.show();
 			window.location.replace( '#summersale_communitychoice' );
-			ShowDialog( '#Promo_Summer2013_CommunityChoice', g_$VoteDialog)
+			ShowDialog( 'Community\'s Choice', g_$VoteDialog)
 			.done( function() {
 				window.location.replace( '#z' );
 			} );
@@ -128,9 +128,9 @@ function ShowVoteDialog()
 	else
 	{
 		// propmt for login
-		ShowConfirmDialog( '#Promo_Summer2013_CommunityChoice',
-			'#Promo_Summer2013_CommunityChoice_NeedToLogIn',
-			'#login'
+		ShowConfirmDialog( 'Community\'s Choice',
+			'You need to log in first before you can vote.',
+			'Login'
 		).done( function() {
 				window.location = 'https://store.steampowered.com/login/?redir=%23summersale_communitychoice';
 		});

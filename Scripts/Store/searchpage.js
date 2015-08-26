@@ -36,7 +36,7 @@ function FillFormFromNavigation( querystring )
 	if ( rgLocationParams['term'] )
 		rgLocationParams['displayterm'] = rgLocationParams['term'];
 	else
-		rgLocationParams['displayterm'] = '#text_search_enter_term'
+		rgLocationParams['displayterm'] = 'enter search term or tag'
 
 	var form = $J('#advsearchform');
 	g_bPopulatingSearchControls = true;
@@ -254,7 +254,7 @@ function UpdateTags()
 	var strPublisher = $J("#publisher").val();
 	if( strPublisher )
 	{
-		AddSearchTag( 'publisher', strPublisher, "search_publisher" + ': '+strPublisher, function(tag) { $J("#publisher").val(""); AjaxSearchResults(); return false; } );
+		AddSearchTag( 'publisher', strPublisher, "Publisher" + ': '+strPublisher, function(tag) { $J("#publisher").val(""); AjaxSearchResults(); return false; } );
 		$J('#termsnone').hide();
 	}
 
@@ -262,7 +262,7 @@ function UpdateTags()
 	var strDeveloper = $J("#developer").val();
 	if( strDeveloper )
 	{
-		AddSearchTag( 'publisher', strDeveloper, "search_developer" + ': '+strDeveloper, function(tag) { $J("#developer").val(""); AjaxSearchResults(); return false; } );
+		AddSearchTag( 'publisher', strDeveloper, "Developer" + ': '+strDeveloper, function(tag) { $J("#developer").val(""); AjaxSearchResults(); return false; } );
 		$J('#termsnone').hide();
 	}
 

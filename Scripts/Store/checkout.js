@@ -61,7 +61,7 @@ function PerformPayPalAuthorization()
 			var paypal_url = encodeURIComponent( 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s'.replace( "%s", $('paypaltoken').value ) );
 			var transID = $('transaction_id').value;
 			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_sessionID );
-			$('external_payment_processor_notice').innerHTML = '#paypal_authorization_inprogress';
+			$('external_payment_processor_notice').innerHTML = 'A new window has been opened to the PayPal web site.  Please login or create an account there to review your purchase details and authorize the transaction.  If you do not see a new window check that your browser is not blocking it as a pop-up.';
 			g_bPayPalAuthInFlight = true;
 		}
 	} 
@@ -74,31 +74,31 @@ function PerformPayPalAuthorization()
 
 function OnCreateQiwiInvoiceFailure( eResult, resultDetail )
 {
-	var sErrorMessage = '#finalize_transaction_generic_error';
+	var sErrorMessage = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 	
 		switch ( resultDetail )
 	{
 		case 1:
-			sErrorMessage = '#finalize_transaction_provider_unavailable';
+			sErrorMessage = 'Your purchase has not been completed.<br>The payment processor is currently unavailable.  Please select a different payment method or try again later.';
 			break;
 			
 		case 2:
-			sErrorMessage = '#finalize_transaction_qiwi_invalid_phone_number';
+			sErrorMessage = 'Your purchase has not been completed.<br>The phone number entered was unrecognized by the payment provider.  Please correct the number and try again.';
 			break;
 			
 		case 3:
 		case 4:
 		case 5:
 		case 6:
-						sErrorMessage = '#finalize_transaction_generic_error';
+						sErrorMessage = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 			break;		
 			
 		case 7:
-			sErrorMessage = '#finalize_transaction_over_daily_limit';
+			sErrorMessage = 'Your purchase has not been completed.<br>The payment processor reported that your transaction amount will bring you over your allowable daily limit.  Please select a different payment method or try again later.';
 			break;
 			
 		default:
-			sErrorMessage = '#finalize_transaction_generic_error';
+			sErrorMessage = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 			break;
 	}
 	DisplayErrorMessage( sErrorMessage );
@@ -116,7 +116,7 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 		
 		if ( !$('accept_ssa') || !$('accept_ssa').checked )
 	{
-		DisplayErrorMessage( '#checkout_ssa_fail' );
+		DisplayErrorMessage( 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.' );
 		ValidationMarkFieldBad( $('purchase_confirm_ssa') );
 		return;
 	}
@@ -196,7 +196,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 {
 		if ( !$('accept_ssa') || !$('accept_ssa').checked )
 	{
-		DisplayErrorMessage( '#checkout_ssa_fail' );
+		DisplayErrorMessage( 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.' );
 		ValidationMarkFieldBad( $('purchase_confirm_ssa') );
 		return;
 	}
@@ -366,7 +366,7 @@ function AnimateSubmitPaymentInfoButton()
 			append = '...';
 		} 
 		
-		SetButtonInnerHtml( 'submit_payment_info_btn_in_progress', '#btn_checkout_payment_info_in_progress'+append );
+		SetButtonInnerHtml( 'submit_payment_info_btn_in_progress', 'Working'+append );
 		
 		setTimeout( AnimateSubmitPaymentInfoButton, 500 );
 	} 
@@ -406,7 +406,7 @@ function AnimateStoredCardProcessingLabel()
 			append = '...';
 		} 
 		
-		$('stored_card_processing_label').innerHTML = '#btn_checkout_payment_info_in_progress'+append;
+		$('stored_card_processing_label').innerHTML = 'Working'+append;
 
 		setTimeout( AnimateStoredCardProcessingLabel, 500 );
 	} 
@@ -449,7 +449,7 @@ function AnimateSubmitGiftNoteButton()
 			append = '...';
 		} 
 		
-		SetButtonInnerHtml('submit_gift_note_btn_in_progress', '#btn_checkout_payment_info_in_progress'+append );
+		SetButtonInnerHtml('submit_gift_note_btn_in_progress', 'Working'+append );
 		
 		setTimeout( AnimateSubmitGiftNoteButton, 500 );
 	} 
@@ -583,39 +583,39 @@ function InitializeTransaction()
 		{
 			if ( $('send_self') && $('send_self').checked )
 			{
-								$('checkout_receipt_description').innerHTML = '#checkout_receipt_gift_stored_in_inventory'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
 			}
 			else
 			{
-								$('checkout_receipt_description').innerHTML = '#checkout_receipt_gift_on_the_way';
+								$('checkout_receipt_description').innerHTML = 'Your gift is on its way! A receipt will be emailed to you soon.';
 				$('gift_tracking_description').show();
 			}
 		}
 		else if ( g_bMicroTxn )
 		{
-						$('checkout_receipt_description').innerHTML = '#checkout_receipt_purchase_available_microtxn';
+						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately, and a receipt will be emailed to you shortly.';
 		}
 		else if ( g_bWalletCreditOnly )
 		{
-						$('checkout_receipt_description').innerHTML = '#checkout_receipt_purchase_available_microtxn';
+						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately, and a receipt will be emailed to you shortly.';
 		}
 		else if ( g_bIsInOverlay )
 		{
-						 			$('checkout_receipt_description').innerHTML = '#checkout_receipt_purchase_available_v5';
+						 			$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
 					}		
 		else
 		{
 			if ( g_nItemsForSelf > 0 && g_nItemsForGifts > 0 )
 			{
-								$('checkout_receipt_description').innerHTML = '#checkout_receipt_extras_in_inventory'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>Your digitally delivered items are now registered to your account on Steam. To access your items, simply visit your library in Steam whenever you\'re ready.<br/><br/>Extra copies of items from this purchase have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending your extra copies as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
 			}
 			else if ( g_nItemsForSelf == 0 && g_nItemsForGifts > 0 )
 			{
-								$('checkout_receipt_description').innerHTML = '#checkout_receipt_gift_stored_in_inventory'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+								$('checkout_receipt_description').innerHTML = 'A receipt will be emailed to you shortly.<br/><br/>The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
 			}
 			else
 			{
-												$('checkout_receipt_description').innerHTML = '#checkout_receipt_purchase_available_v5';
+												$('checkout_receipt_description').innerHTML = 'An email confirmation has been sent to you.<br /><br/>Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
 							}
 		}
 
@@ -737,10 +737,10 @@ function OnInitializeTransactionSuccess( result )
 			$J('#card_number').hide();
 					
 			$('paypaltoken').value = result.paypaltoken;
-			$('external_payment_processor_notice').innerHTML = '#paypal_authorization_explanation';
+			$('external_payment_processor_notice').innerHTML = 'PayPal transactions are authorized through the PayPal web site. Click the button below to open a new web browser window to initiate the transaction.';
 			$('submit_payment_info_btn').href = "javascript:PerformPayPalAuthorization();";
 			$( 'payment_info_form' ).onsubmit = function() { PerformPayPalAuthorization(); return false; };
-			SetButtonInnerHtml('submit_payment_info_btn', '#paypal_authorization_btn' );
+			SetButtonInnerHtml('submit_payment_info_btn', 'Begin PayPal Purchase' );
 			
 			$J('#payment_method_previous_button').hide();
 			
@@ -782,7 +782,7 @@ function OnInitializeTransactionFailure( detail, result )
 	try 
 	{
 				SetTabEnabled( 'payment_info' );
-		var error_text = '#checkout_failed_inittransaction';
+		var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
 		if ( result && result.specificerrortext )
 		{
 			error_text = result.specificerrortext;
@@ -792,78 +792,78 @@ function OnInitializeTransactionFailure( detail, result )
 			switch ( detail )
 			{
 				case 1:
-					error_text = '#checkout_failed_inittransaction_avs';
+					error_text = 'Your billing information has failed address verification.  Please correct the error or contact support for assistance.';
 					break;
 				case 2:
-					error_text = '#checkout_failed_inittransaction_insufficientfunds';
+					error_text = 'Your billing information has reported insufficient funds are available. Please correct the error or contact support for assistance.';
 					break;
 				case 3:
-					error_text = '#checkout_failed_inittransaction_support';
+					error_text = 'There has been an internal error initializing your transaction.  Please contact support for assistance.';
 					break;
 				case 6:
-					error_text = '#checkout_failed_inittransaction_unavailable';
+					error_text = 'This payment method is currently unavailable for use.  We are working to resolve the issue.  Please select another payment method for your purchase and try again.';
 					break;
 				case 33:
-					error_text = '#checkout_failed_inittransaction_expiredcard';
+					error_text = 'Your purchase could not be completed because your credit card has expired. Please enter a new credit card and try again.';
 					break;
 				case 24:
-					error_text = '#checkout_failed_inittransaction_requiredapp';
+					error_text = 'Your transaction failed because you are trying to buy a game that requires ownership of another game you do not currently own.  Please correct the error and try again.';
 					break;
 				case 9:
-					error_text = '#checkout_failed_inittransaction_alreadyowned';
+					error_text = 'Your purchase could not be completed because it looks like you already own one of the games you are trying to buy.  Please check your account and your cart to verify you are buying an item you do not already own.';
 					break;
 				case 57:
-					error_text = '#checkout_failed_inittransaction_subscriptionexists';
+					error_text = 'Your purchase could not be completed because it looks like you already have an existing subscription for the same item.  Please manage your subscription details in your <a href=\'http://store.steampowered.com/account\'>account</a> page.';
 					break;
 				case 31:
-					error_text = '#checkout_failed_inittransaction_walletcurrencymismatch';
+					error_text = 'Your purchase could not be completed because it looks like the currency of funds in your Steam Wallet does not match the currency of this purchase.';
 					break;
 				case 35:
-					error_text = '#finalize_transaction_exceed_wallet_max';
+					error_text = 'Your purchase has not been completed.<br>The amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance.';
 					break;
 				case 39:
-					error_text = '#checkout_failed_inittransaction_cannotgift';
+					error_text = 'Your purchase could not be completed because your cart contains items that cannot be given as a gift.';
 					break;
 				case 40:
-					error_text = '#checkout_failed_inittransaction_cannot_ship_internationally';
+					error_text = 'Your purchase could not be completed because your cart contains items that cannot be shipped outside the United States.';
 					break;
 				case 38:
-					error_text = '#checkout_failed_inittransaction_out_of_inventory';
+					error_text = 'Your order cannot be completed because one or more items in your cart is currently out of stock.  Please try again later.';
 					break;
 				case 59:
-					error_text = '#checkout_failed_inittransaction_cannot_ship_to_country';
+					error_text = 'Your order cannot be completed because one or more items in your cart cannot be shipping to your shipping address.';
 					break;
 				case 44:
-					error_text = '#checkout_failed_account_locked';
+					error_text = 'Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details.';
 					break;
 				case 45:
-					error_text = '#checkout_failed_inittransaction_pending_transactions';
+					error_text = 'Warning!<br><br>Your last purchase with Steam is still pending. Your payment provider has not yet told us if they will charge you for that transaction.<br><br>Before continuing with this purchase, please contact your payment provider and verify that your previous purchase was not completed. If it was completed and you continue with this purchase, you could be charged twice for any items that are purchased for a second time.';
 					$J('#cancel_pending_verification').show();
 					ValidationMarkFieldBad( $('cancel_pending_label' ) );
 					break;
 				case 46:
-					error_text = '#checkout_failed_steam_limit_exceeded';
+					error_text = 'For the protection of the account holder, this purchase has been declined. Further purchasing will be temporarily limited - please contact Steam Support to resolve this issue.';
 					break;
 				case 47:
-					error_text = '#checkout_failed_overlapping_packages_in_cart';
+					error_text = 'You cannot complete your transaction because you are attempting to purchase an item that is already included in another packaged item in your cart.  Please check your cart to verify that you are not purchasing an item multiple times.  The most common cause would be purchasing DLC along with a deluxe version of a product that already includes the same DLC.';
 					break;
 				case 23:
-					error_text = '#checkout_failed_billing_country_mismatch';
+					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'http://store.steampowered.com/cart/country_changed\'>here</a>, or change your payment method below.';
 					break;
 				case 8:
-					error_text = '#checkout_failed_others_in_progress';
+					error_text = 'Your transaction cannot be completed because you have another pending transaction on your account.';
 					break;
 				case 52:
-					error_text = '#checkout_failed_others_in_progress_delayed';
+					error_text = 'Your transaction cannot be completed because you have another pending transaction for one or more items in your cart.';
 					break;
 				case 55:
-					error_text = '#checkout_error_bad_cardnumber';
+					error_text = 'This card number is not valid for the payment method you selected.';
 					break;
 				case 56:
-					error_text = '#checkout_failed_inittransaction_cart_amount_too_high';
+					error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'http://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
 					break;
 				case 53:
-					error_text = '#checkout_failed_inittransaction_ratelimited';
+					error_text = 'It looks like you\'ve been attempting a lot of purchases in the last few hours.  Please wait a while before trying again.';
 					break;
 				default:
 					break;
@@ -1091,121 +1091,121 @@ function OnGetFinalPriceSuccess( result )
 				
 				if ( method.value == 'giropay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#giropay_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#giropay_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'GiroPay transactions are authorized through your bank\'s web site.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to GiroPay Authorization';
 
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#giropay_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#giropay_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for GiroPay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'In order to complete the purchase via Giropay you will be transported to your bank’s website where you will be asked to enter your online banking PIN and a unique TAN.  If you don’t have both PIN and TAN available to you at the moment, please choose a different payment method.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the GiroPay window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'ideal' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#ideal_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#ideal_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'iDEAL transactions are authorized through iDEAL\'s website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to iDEAL Authorization';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#ideal_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#ideal_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for iDEAL customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the iDEAL website.  If you are not returned to Steam after 10 seconds, please click the "Back to Shop" button after you have finished filling in your billing information and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the iDEAL window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'paysafe' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#paysafe_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#paysafe_authorization_btn';					
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PaySafe Card transactions are authorized through PaySafe\'s website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PaySafe Card Authorization';					
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#paysafe_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#paysafe_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PaySafeCard customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the PaySafeCard website.  After filling in your code you will be automatically re-routed back to the Steam client which will confirm your purchase.  To avoid purchasing failures, please do not hit your back button or close the PaySafe window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'paypal' || method.value == 'storedpaypal' || method.value == 'updatepaypal' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#paypal_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#paypal_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PayPal transactions are authorized through the PayPal web site. Click the button below to open a new web browser window to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Begin PayPal Purchase';
 
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#paypal_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#paypal_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PayPal customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the PayPal website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the PayPal window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'sofort' )
 				{
 					if ( result.storeCountryCode == 'GB' || result.storeCountryCode == 'BE' )
 					{
-						$('purchase_bottom_note_paypalgc').innerHTML = '#directebanking_authorization_explanation';
-						$('purchase_button_bottom_text').innerHTML = '#directebanking_authorization_btn';
+						$('purchase_bottom_note_paypalgc').innerHTML = 'DIRECTebanking transactions are authorized through the DIRECTebanking.com website.  Click the button below to open a new web browser to initiate the transaction.';
+						$('purchase_button_bottom_text').innerHTML = 'Continue to DIRECTebanking.com';
 						
 						if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 						{
-							$('col_right_review_payment_tips_header_text').innerHTML = '#directebanking_payment_tips_header';
-							$('col_right_review_payment_tips_info_text').innerHTML = '#directebanking_payment_tips_text';
+							$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for DIRECTebanking customers';
+							$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the DIRECTebanking website. When using DIRECTebanking as your payment method, make sure that you hit the "NEXT" button after you have finished filling in your TAN/PIN number. You will be automatically re-routed back to the Steam client which will confirm your purchase.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the DIRECTebanking window before the process is complete.';
 						}
 					}
 					else
 					{
-						$('purchase_bottom_note_paypalgc').innerHTML = '#sofort_authorization_explanation';
-						$('purchase_button_bottom_text').innerHTML = '#sofort_authorization_btn';
+						$('purchase_bottom_note_paypalgc').innerHTML = 'Sofortüberweisung transactions are authorized through the sofortüberweisung.de website.  Click the button below to open a new web browser to initiate the transaction.';
+						$('purchase_button_bottom_text').innerHTML = 'Continue to sofortüberweisung.de';
 						if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 						{
-							$('col_right_review_payment_tips_header_text').innerHTML = '#sofort_payment_tips_header';
-							$('col_right_review_payment_tips_info_text').innerHTML = '#sofort_payment_tips_text';
+							$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Sofortüberweisung customers';
+							$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the sofortüberweisung.de website.  When using Sofortüberweisung as your payment method, make sure that you hit the "NEXT" button after you have finished filling in your TAN/PIN number. You will be automatically re-routed back to the Steam client which will confirm your purchase.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the Sofortüberweisung window before the process is complete.';
 						}
 					}
 				}
 				else if ( method.value == 'webmoney' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#webmoney_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#webmoney_authorization_btn';					
+					$('purchase_bottom_note_paypalgc').innerHTML = 'WebMoney transactions are authorized through the WebMoney website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to WebMoney';					
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#webmoney_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#webmoney_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for WebMoney customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the WebMoney website.  When using WebMoney as your payment method, after filling in your code you will be automatically re-routed back to the Steam client which will confirm your purchase.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the WebMoney window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'moneybookers' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#moneybookers_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#moneybookers_authorization_btn';					
+					$('purchase_bottom_note_paypalgc').innerHTML = 'MoneyBookers transactions are authorized through the MoneyBookers website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to MoneyBookers';					
 
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#moneybookers_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#moneybookers_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MoneyBookers customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the MoneyBookers website by clicking the “CONFIRM” button after you have selected your payment method.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the MoneyBookers window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'alipay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#alipay_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#alipay_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'AliPay transactions are authorized through the AliPay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to AliPay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#alipay_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#alipay_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for AliPay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the AliPay website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the AliPay window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'yandex' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#yandex_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#yandex_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Yandex transactions are authorized through the Yandex website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Yandex';
 
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#yandex_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#yandex_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Yandex customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the Yandex website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the Yandex window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'qiwi' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#qiwi_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#qiwi_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'QIWI Wallet transactions are authorized through the QIWI Wallet website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to QIWI Wallet';
 
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#qiwi_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#qiwi_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for QIWI Wallet customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the QIWI Wallet website by signing in and approving the order from Steam that shows up in your QIWI Wallet Inbox.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 					
 					// change the button to do something else
@@ -1213,573 +1213,573 @@ function OnGetFinalPriceSuccess( result )
 				}				
 				else if ( method.value == 'beeline' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#beeline_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#beeline_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Mobile transactions are authorized through the Xsolla website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Xsolla';
 
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#beeline_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#beeline_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Mobile Payment customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Xsolla website by entering your mobile phone number and email address.  You will receive an SMS text that you must respond to complete the transaction.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'mopay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#mopay_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#mopay_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'SMS transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#mopay_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#mopay_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for SMS customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your mobile phone number.  You will receive an SMS with a validation code to complete your transaction.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'boleto' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#boleto_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#boleto_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Boleto Bancario transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#boleto_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#boleto_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Boleto Bancario customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Boleto from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable Boleto.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Boleto.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'boacompragold' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#boacompragold_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#boacompragold_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'BoaCompra Gold transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#boacompragold_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#boacompragold_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for BoaCompra Gold customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bancodobrasilonline' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#bancodobrasilonline_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#bancodobrasilonline_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Do Brasil Online transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#bancodobrasilonline_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#bancodobrasilonline_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Banco Do Brasil Online customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'itauonline' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#itauonline_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#itauonline_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Itau Online transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#itauonline_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#itauonline_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Itau Online customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bradescoonline' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#bradescoonline_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#bradescoonline_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Bradesco Online transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#bradescoonline_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#bradescoonline_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Bradesco Online customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'pagseguro' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#pagseguro_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#pagseguro_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Pagseguro transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#pagseguro_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#pagseguro_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Pagseguro customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'visabrazil' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#visabrazil_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#visabrazil_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Visa (National) transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#visabrazil_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#visabrazil_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Visa (National) customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'amexbrazil' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#amexbrazil_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#amexbrazil_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'American Express (National) transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#amexbrazil_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#amexbrazil_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for American Express (National) customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'aura' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#aura_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#aura_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Aura transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#aura_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#aura_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Aura customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'hipercard' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#hipercard_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#hipercard_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Hipercard transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#hipercard_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#hipercard_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Hipercard customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'mastercardbrazil' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#mastercardbrazil_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#mastercardbrazil_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Mastercard (National) transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#mastercardbrazil_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#mastercardbrazil_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Mastercard (National) customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'dinerscardbrazil' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#dinerscardbrazil_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#dinerscardbrazil_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Diner\'s Club (National) transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#dinerscardbrazil_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#dinerscardbrazil_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Diner\'s Club (National) customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to several business days.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'multibanco' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#multibanco_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#multibanco_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Multibanco transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#multibanco_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#multibanco_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Multibanco customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'payshop' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#payshop_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#payshop_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Payshop transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#payshop_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#payshop_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Payshop customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'maestroboacompra' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#maestroboacompra_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#maestroboacompra_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Maestro transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#maestroboacompra_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#maestroboacompra_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Maestro customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'oxxo' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#oxxo_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#oxxo_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'OXXO transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#oxxo_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#oxxo_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for OXXO customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>An email from BoaCompra will also be sent to you with a link to the printable OXXO billing slip.<br/><br/>You will need to bring this billing slip to your nearest OXXO cashier, scan the barcode, and complete the transaction.  The payment will automatically be posted by 12:00pm the following business day.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'toditocash' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#toditocash_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#toditocash_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Todito Cash transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#toditocash_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#toditocash_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Todito Cash customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'carnet' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#carnet_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#carnet_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Carnet transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#carnet_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#carnet_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Carnet customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'spei' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#spei_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#spei_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'SPEI transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#spei_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#spei_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for SPEI customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == '3pay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#3pay_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#3pay_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Mobile transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#3pay_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#3pay_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for mobile customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'isbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#isbank_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#isbank_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Is Bank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#isbank_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#isbank_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Is Bank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'garanti' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#garanti_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#garanti_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Garanti transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#garanti_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#garanti_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Garanti customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'akbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#akbank_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#akbank_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Akbank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#akbank_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#akbank_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Akbank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'yapikredi' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#yapikredi_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#yapikredi_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Yapi Kredi transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#yapikredi_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#yapikredi_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Yapi Kredi customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'halkbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#halkbank_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#halkbank_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Halkbank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#halkbank_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#halkbank_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Halkbank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bankasya' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#bankasya_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#bankasya_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Bank Asya transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#bankasya_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#bankasya_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Bank Asya customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'finansbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#finansbank_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#finansbank_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Finansbank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#finansbank_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#finansbank_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Finansbank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'denizbank' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#denizbank_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#denizbank_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'DenizBank transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#denizbank_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#denizbank_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for DenizBank customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'ptt' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#ptt_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#ptt_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PTT transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#ptt_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#ptt_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PTT customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'cashu' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#cashu_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#cashu_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'CashU transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#cashu_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#cashu_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for CashU customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'onecard' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#onecard_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#onecard_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'OneCard transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#onecard_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#onecard_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for OneCard customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'molpoints' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#molpoints_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#molpoints_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'MOL Points transactions are authorized through the MOL website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to MOL';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#molpoints_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#molpoints_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MOL Points customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the MOL website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'konbini' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#konbini_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#konbini_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Konbini transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#konbini_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#konbini_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Konbini customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Konbini from the Degica website as you complete your transaction.  An email from Degica will also be sent to you with the details of your Konbini.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment of your Konbini.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'credit_card_japan' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#credit_card_japan_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#credit_card_japan_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Domestic Japanese Credit Card transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#credit_card_japan_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#credit_card_japan_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Domestic Credit Card customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'bank_transfer_japan' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#bank_transfer_japan_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#bank_transfer_japan_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Bank transfer transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#bank_transfer_japan_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#bank_transfer_japan_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Bank Transfer customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'payeasy' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#payeasy_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#payeasy_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Pay Easy transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#payeasy_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#payeasy_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Pay Easy customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'webmoney_japan' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#webmoney_japan_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#webmoney_japan_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'WebMoney transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#webmoney_japan_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#webmoney_japan_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for WebMoney customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'zong' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#zong_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#zong_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Zong transactions are authorized through the PayPal Payments Hub website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to PayPal Payments Hub';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#zong_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#zong_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Zong customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the PayPal Payments Hub website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'culturevoucher' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#culturevoucher_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#culturevoucher_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Culture Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#culturevoucher_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#culturevoucher_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Culture Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'bookvoucher' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#bookvoucher_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#bookvoucher_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Book Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#bookvoucher_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#bookvoucher_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Book Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'happymoneyvoucher' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#happymoneyvoucher_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#happymoneyvoucher_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Happymoney Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#happymoneyvoucher_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#happymoneyvoucher_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Happymoney Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'convenientstorevoucher' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#convenientstorevoucher_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#convenientstorevoucher_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Convenient Store Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#convenientstorevoucher_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#convenientstorevoucher_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Convenient Store Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'gamevoucher' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#gamevoucher_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#gamevoucher_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Game Voucher transactions are authorized through the mopay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to mopay';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#gamevoucher_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#gamevoucher_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Game Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the mopay website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'eclubpoints' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#eclubpoints_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#eclubpoints_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'eClub Points transactions are authorized through the eClub Store website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to eClub Store';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#eclubpoints_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#eclubpoints_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for eClub Points customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the eClub Store website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
 				else if ( method.value == 'pse' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#pse_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#pse_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PSE transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#pse_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#pse_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PSE customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'exito' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#exito_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#exito_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Exito transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#exito_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#exito_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Exito customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'efecty' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#efecty_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#efecty_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Efecty transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#efecty_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#efecty_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Efecty customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your payment slip from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable payment slip.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'baloto' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#baloto_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#baloto_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Baloto transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#baloto_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#baloto_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Baloto customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your Baloto from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable Baloto.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'pinvalidda' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#pinvalidda_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#pinvalidda_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PinValidda transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#pinvalidda_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#pinvalidda_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PinValidda customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'mangirkart' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#mangirkart_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#mangirkart_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'MangirKart transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#mangirkart_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#mangirkart_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for MangirKart customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bancocreditodeperu' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#bancocreditodeperu_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#bancocreditodeperu_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Banco Credito de Peru transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#bancocreditodeperu_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#bancocreditodeperu_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Banco Credito de Peru customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'bbvacontinental' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#bbvacontinental_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#bbvacontinental_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'BBVA Continental transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#bbvacontinental_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#bbvacontinental_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for BBVA Continental customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'safetypay' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#safetypay_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#safetypay_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'SafetyPay transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#safetypay_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#safetypay_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for SafetyPay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'pagoefectivo' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#pagoefectivo_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#pagoefectivo_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'PagoEfectivo transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#pagoefectivo_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#pagoefectivo_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PagoEfectivo customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure to save or print your payment slip from the Boacompra website as you complete your transaction.  An email from BoaCompra will also be sent to you with a link to the printable payment slip.<br/><br/>You will need to fund this billing slip before your transaction will be complete.  This process can take up to a few business days depending on when you complete payment.  Once the deposit of funds has been confirmed by your bank, you will receive an email receipt confirming your purchase.';
 					}
 				}
 				else if ( method.value == 'trustly' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = '#trustly_authorization_explanation';
-					$('purchase_button_bottom_text').innerHTML = '#trustly_authorization_btn';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Trustly transactions are authorized through the BoaCompra website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to BoaCompra';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = '#trustly_payment_tips_header';
-						$('col_right_review_payment_tips_info_text').innerHTML = '#trustly_payment_tips_text';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Trustly customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the BoaCompra website by signing in and completing your transaction.<br/><br/>This process can take up to five minutes.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}
 			}
@@ -1799,7 +1799,7 @@ function OnGetFinalPriceSuccess( result )
 			$('purchase_button_bottom').href = "javascript:FinalizeTransaction();";
 			$J('#purchase_bottom_note_paypalgc').hide();
 			$('purchase_top').hide();
-			$('purchase_button_bottom_text').innerHTML = '#btn_checkout_finalize_purchase';
+			$('purchase_button_bottom_text').innerHTML = 'Purchase';
 		}
 		
 				$J('#purchase_button_bottom').show();
@@ -1839,47 +1839,47 @@ function OnGetFinalPriceFailure( eErrorDetail )
 	try 
 	{
 		SetTabEnabled( 'payment_info' );
-		var error_text = '#finalize_transaction_generic_error';
+		var error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 		switch ( eErrorDetail )
 		{
 			default:
-				error_text = '#finalize_transaction_generic_error';
+				error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 				break;
 			case 23:
-				error_text = '#checkout_failed_getfinalprice_storecountry';
+				error_text = 'Your billing address doesn’t look like it matches up with your current country.  Please contact support for assistance or use a payment method registered to your current address.';
 				break;
 			case 51:
 				var method = $('payment_method');
 				switch (method.value)
 				{
 					case 'mopay':
-						error_text = '#checkout_failed_getfinalprice_invalid_provider_amount_mopay';
+						error_text = 'This purchase cannot be completed because the amount charged through mopay must be between 0,19 and 100,00 EUR.  Please select another payment method for your purchase and try again.';
 						break;
 
 					case 'sofort':
-						error_text = '#checkout_failed_getfinalprice_invalid_provider_amount_sofort';
+						error_text = 'This purchase cannot be completed because the amount charged through Sofort must be at least 0,10 EUR.  Please select another payment method for your purchase and try again.';
 						break;
 
 					case 'beeline':
-						error_text = '#checkout_failed_getfinalprice_invalid_provider_amount_beeline';
+						error_text = 'This purchase cannot be completed because the amount charged through mobile carriers must be at least 10 RUB.  Please select another payment method for your purchase and try again.';
 						break;
 
 					default:
-						error_text = '#checkout_failed_getfinalprice_invalid_provider_amount';
+						error_text = 'This purchase cannot be completed because the amount is not allowed by the payment method.  Please select another payment method for your purchase and try again.';
 						break;
 				}
 				break;
 			case 1:
-				error_text = '#checkout_failed_inittransaction_avs';
+				error_text = 'Your billing information has failed address verification.  Please correct the error or contact support for assistance.';
 				break;
 			case 56:
-				error_text = '#checkout_failed_inittransaction_cart_amount_too_high';
+				error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'http://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
 				break;
 			case 17:
 				var method = $('payment_method');
 				if ( method.value == 'giropay' )
 				{
-					error_text = '#checkout_failed_getfinalprice_giropay_bank_not_supported';
+					error_text = 'This purchase cannot be completed because your bank is not supported by the GiroPay network.  Please select another payment method for your purchase and try again.';
 				}
 				break;
 		}	
@@ -1907,7 +1907,7 @@ function SubmitSSA()
 		var ssa_check = $('i_agree');
 		if ( !ssa_check.checked )
 		{
-			errorString += "#joinsteam_error_ssa_not_agreed<br/>";
+			errorString += "You must agree to the Steam Subscriber Agreement to continue.<br/>";
 			rgBadFields.ssa_body = true;
 		}
 	
@@ -2014,7 +2014,7 @@ function SubmitGiftDeliveryForm()
 			var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
 			if ( email == '' || !email_regex.test(email) )
 			{
-				errorString += '#checkout_error_bad_gift_email<br/>';
+				errorString += 'Please enter a valid email address to deliver your gift by email.<br/>';
 				rgBadFields.email_input = true;
 			}
 		}
@@ -2030,7 +2030,7 @@ function SubmitGiftDeliveryForm()
 		{
 			if ( $('internal_giftee_accountid').value == '' )
 			{
-				errorString += '#checkout_error_no_friend_selected<br/>';
+				errorString += 'Please select a friend to deliver your gift directly through Steam.<br/>';
 				rgBadFields.internal_giftee_accountid = true;
 			}
 			else
@@ -2047,7 +2047,7 @@ function SubmitGiftDeliveryForm()
 			}
 			if ( !bIsSomethingChecked )
 			{
-				errorString += '#checkout_error_no_friend_selected<br/>';
+				errorString += 'Please select a friend to deliver your gift directly through Steam.<br/>';
 				rgBadFields.friends_chooser = true;
 			}
 		}
@@ -2122,21 +2122,21 @@ function SubmitGiftNoteForm()
 		var recipient_name = $('gift_recipient_name').value;
 		if ( recipient_name.length < 1 )
 		{
-			errorString += '#checkout_error_recipient_name_unset<br/>';
+			errorString += 'Please enter the recipients first name.<br/>';
 			rgBadFields.gift_recipient_name = true;
 		}
 		
 		var gift_message_text = $('gift_message_text').value;
 		if ( gift_message_text.length < 1 )
 		{
-			errorString += '#checkout_error_message_text_unset<br/>';
+			errorString += 'Please enter a message to the gift recipient.<br/>';
 			rgBadFields.gift_message_text = true;
 		}
 		
 		var gift_signature = $('gift_signature').value;
 		if ( gift_signature.length < 1 )
 		{
-			errorString += '#checkout_error_signature_unset<br/>';
+			errorString += 'Please enter a signature for your gift.<br/>';
 			rgBadFields.gift_signature = true;
 		}
 		
@@ -2416,17 +2416,17 @@ function UpdatePaymentInfoForm()
 		UpdatePaymentMethodList( g_nPaymentMethodStep == 2 );
 				if ( g_nPaymentMethodStep == 2 )
 		{
-						$('payment_header').innerHTML = '#checkout_payment_method_header_step2';
+						$('payment_header').innerHTML = 'Payment method, Step 2';
 			$J('#payment_row_step2').show();
 			$J('#payment_method_previous_button').show();
-			$('payment_info_method_label').innerHTML = '#checkout_payment_info_method_remaining_label' + ' ' + g_strProviderRemaining;
+			$('payment_info_method_label').innerHTML = 'Please select a payment method for the remaining' + ' ' + g_strProviderRemaining;
 		}
 		else
 		{
-			$('payment_header').innerHTML = '#checkout_payment_method_header';
+			$('payment_header').innerHTML = 'Payment method';
 			$J('#payment_row_step2').hide();
 			$J('#payment_method_previous_button').hide();
-			$('payment_info_method_label').innerHTML = '#checkout_payment_info_method_label';
+			$('payment_info_method_label').innerHTML = 'Please select a payment method';
 		}
 		
 		method = $('payment_method');
@@ -2459,22 +2459,22 @@ function UpdatePaymentInfoForm()
 		{
 						$('submit_payment_info_btn').href = "javascript:InitializeTransaction();";
 			$( 'payment_info_form' ).onsubmit = function() { InitializeTransaction(); return false; };
-			SetButtonInnerHtml('submit_payment_info_btn', '#btn_checkout_payment_info_save' );
-			$('payment_header').innerHTML = '#checkout_payment_method_header_update';
-			$('payment_info_method_label').innerHTML = '#checkout_payment_info_method_update_label';
+			SetButtonInnerHtml('submit_payment_info_btn', 'Save' );
+			$('payment_header').innerHTML = 'Update cached payment method';
+			$('payment_info_method_label').innerHTML = 'Select your existing cached payment method or enter a new payment method for future purchases and subscription renewals.';
 		}
 		else if ( g_bPurchaseContainsSubscription )
 		{
 						$('submit_payment_info_btn').href = "javascript:SubmitPaymentInfoForm();";
 			$( 'payment_info_form' ).onsubmit = function() { SubmitPaymentInfoForm(); return false; };
-			SetButtonInnerHtml('submit_payment_info_btn', '#btn_checkout_payment_info_continue' );
-			$('payment_info_method_label').innerHTML = '#checkout_payment_info_method_purchase_subscription_label';
+			SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
+			$('payment_info_method_label').innerHTML = 'Your purchase requires you to save a payment method that supports recurring billing.';
 		}		
 		else
 		{
 						$('submit_payment_info_btn').href = "javascript:SubmitPaymentInfoForm();";
 			$( 'payment_info_form' ).onsubmit = function() { SubmitPaymentInfoForm(); return false; };
-			SetButtonInnerHtml('submit_payment_info_btn', '#btn_checkout_payment_info_continue' );
+			SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
 		}
 
 		if ( BIsStoredCreditCard() )
@@ -2496,16 +2496,16 @@ function UpdatePaymentInfoForm()
 			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
 			bShowSaveMyAddress = g_bEnableCachedPayPalCredentials;
 			
-			$('external_payment_processor_notice').innerHTML = '#paypal_authorization_init_explanation';
+			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
 		}
 		else if ( method.value == 'updatepaypal' )
 		{
 						bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
 			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
 			
-			$('external_payment_processor_notice').innerHTML = '#paypal_authorization_init_explanation';
+			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '#paypal_require_verification';
+			$('payment_method_specific_note').innerHTML = 'For your security, you will be required to re-authorize your purchase with PayPal.';
 		}
 		else if ( method.value == 'storedpaypal' )
 		{
@@ -2542,7 +2542,7 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '#checkout_payment_method_specific_note_boacompra';
+			$('payment_method_specific_note').innerHTML = '* Note: Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
 		else if ( method.value == 'mopay' )
 		{
@@ -2571,7 +2571,7 @@ function UpdatePaymentInfoForm()
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '#checkout_payment_method_specific_note_degica';
+			$('payment_method_specific_note').innerHTML = '* Note: Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
 		else if ( method.value == 'steamaccount' )
 		{
@@ -2579,17 +2579,17 @@ function UpdatePaymentInfoForm()
 			$J('#payment_row_eight').show();
 			
 						
-			$('external_payment_processor_notice').innerHTML = '#steamaccount_authorization_init_explanation';
+			$('external_payment_processor_notice').innerHTML = 'In the event your Steam Wallet balance doesn’t cover the full cost of this transaction, you’ll be asked to cover the remaining balance due with a secondary payment method.';
 				
 						$('submit_payment_info_btn').href = "javascript:OnSteamAccountSelected();";
 			$( 'payment_info_form' ).onsubmit = function() { OnSteamAccountSelected(); return false; };
-			SetButtonInnerHtml('submit_payment_info_btn', '#btn_checkout_payment_info_continue' );
+			SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
 		}
 	
 				if ( g_bIsInOverlay && method.value == 'alipay' )
 		{
 			$J('#submit_payment_info_btn').hide();
-			$('cant_use_payment_method_in_overlay').innerHTML = '#cant_use_payment_method_in_overlay';
+			$('cant_use_payment_method_in_overlay').innerHTML = 'The selected payment method cannot be used from within the game to fund your Steam Wallet.<br><br>\n								To complete any item purchases with the selected payment method, you will need to add funds to your Steam Wallet through an internet browser first.<br><br>\n								You can fund your Wallet using this link in your web browser: <a href="http://store.steampowered.com/steamaccount/addfunds">http://store.steampowered.com/steamaccount/addfunds</a><br><br>\n								After adding funds to your Steam Wallet, you will then be able to complete your item transaction through the in game store using your Steam Wallet balance.';
 			$J('#cant_use_payment_method_in_overlay').show();
 
 			bShowCountryVerification = false;
@@ -2597,7 +2597,7 @@ function UpdatePaymentInfoForm()
 		else if ( g_bIsInClientOrOverlay && method.value == 'itauonline' )
 		{
 			$J('#submit_payment_info_btn').hide();
-			$('cant_use_payment_method_in_overlay').innerHTML = '#cant_use_payment_method_in_client';
+			$('cant_use_payment_method_in_overlay').innerHTML = 'Your purchase cannot be completed because the selected payment method is not compatible with the Steam client.<br><br>\n								To complete your purchase, please select a different payment method or visit <a href="steam://openurl_external/http://store.steampowered.com">http://store.steampowered.com</a> in an external web browser.';
 			$J('#cant_use_payment_method_in_overlay').show();
 
 			bShowCountryVerification = false;
@@ -2617,12 +2617,12 @@ function UpdatePaymentInfoForm()
 				if ( bShowCVV  )
 		{
 			$('security_code_section' ).show();
-			$('expiration_date_cvv_label').innerHTML = '#checkout_payment_info_expiration_date_cvv';
+			$('expiration_date_cvv_label').innerHTML = 'Expiration date and security code';
 		}
 		else
 		{
 			$('security_code_section' ).hide();
-			$('expiration_date_cvv_label').innerHTML = '#checkout_payment_info_expiration_date';
+			$('expiration_date_cvv_label').innerHTML = 'Expiration date';
 		}
 		
 		var strAddressDisplay = bShowAddressForm ? 'block' : 'none';
@@ -2758,32 +2758,32 @@ function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 	{
 		if ( $( 'shipping_first_name' ).value.length < 1 )
 		{
-			errorString += '#checkout_error_bad_shipping_firstname<br/>';
+			errorString += 'Please enter a first name for the shipping address.<br/>';
 			rgBadFields.first_name = true;
 		}
 			
 		if ( $( 'shipping_last_name' ).value.length < 1 )
 		{
-			errorString += '#checkout_error_bad_shipping_lastname<br/>';
+			errorString += 'Please enter a last name for the shipping address.<br/>';
 			rgBadFields.last_name = true;
 		}
 			
 		if ( $( 'shipping_address' ).value.length < 1 )
 		{
-			errorString += '#checkout_error_bad_shipping_address<br/>';
+			errorString += 'Please enter your shipping address.<br/>';
 			rgBadFields.shipping_address = true;
 		}
 		
 				var regExPOBox = /P\.?O\.?\s+Box\s+#?\d+/i;
 		if ( regExPOBox.test( $( 'shipping_address' ).value ) )
 		{
-			errorString += '#checkout_error_bad_shipping_address_po_box<br/>';
+			errorString += 'Delivery of your order cannot be sent to a P.O. Box address.<br/>';
 			rgBadFields.shipping_address = true;
 		}
 			
 		if ( $( 'shipping_city' ).value.length < 1 )
 		{
-			errorString += '#checkout_error_bad_shipping_city<br/>';
+			errorString += 'Please enter your shipping city.<br/>';
 			rgBadFields.shipping_city = true;
 		}
 			
@@ -2791,14 +2791,14 @@ function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 		{
 			if ( $('shipping_state_select').value.length < 1 )
 			{
-				errorString += '#checkout_error_bad_shipping_state<br/>';
+				errorString += 'Please enter a State or Province.<br/>';
 				rgBadFields.shipping_state_select_trigger = true;
 			}
 		}
 	
 		if ( $( 'shipping_phone' ).value.length < 3 )
 		{
-			errorString += '#checkout_error_bad_shipping_phone<br/>';
+			errorString += 'Please enter your shipping phone number, including area code.<br/>';
 			rgBadFields.shipping_phone = true;
 		}
 		else if  ( $( 'shipping_country' ).value == 'US' )
@@ -2814,7 +2814,7 @@ function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 			}
 			if ( digitsFound < 10 )
 			{
-				errorString += '#checkout_error_bad_shipping_phone<br/>';
+				errorString += 'Please enter your shipping phone number, including area code.<br/>';
 				rgBadFields.shipping_phone = true;
 			}
 		}
@@ -2823,13 +2823,13 @@ function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )
 		{
 			if ( $( 'shipping_postal_code' ).value.length < 5 )
 			{
-				errorString += '#checkout_error_bad_shipping_postal<br/>';
+				errorString += 'Please enter your zip or postal code.<br/>';
 				rgBadFields.shipping_postal_code = true;
 			}
 		}
 		else if ( $( 'shipping_postal_code' ).value.length < 1 )
 		{
-			errorString += '#checkout_error_bad_shipping_postal<br/>';
+			errorString += 'Please enter your zip or postal code.<br/>';
 			rgBadFields.shipping_postal_code = true;
 		}
 	} 
@@ -2973,7 +2973,7 @@ function OnVerifyShippingAddressSuccess( result )
 			$('shipping_info_confirm').show();
 			$('shipping_info_entry').hide();
 		
-						var error_text = '#checkout_shipping_found_correction_message';
+						var error_text = 'We\'ve found a suggestion for your shipping address.';
 			
 			DisplayErrorMessage( error_text );
 		}
@@ -3028,7 +3028,7 @@ function OnVerifyShippingAddressFailure()
 	try 
 	{
 				SetTabEnabled( 'shipping_info' );
-		var error_text = '#checkout_failed_inittransaction';
+		var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
 		
 		DisplayErrorMessage( error_text );
 	} 
@@ -3081,7 +3081,7 @@ function SubmitPaymentInfoForm()
 				var requiredLen = ( method.value == 'amex' ) ? 4 : 3;
 				if ( len != requiredLen )
 				{
-					errorString += '#checkout_error_bad_security_code<br/>';
+					errorString += 'Please enter your card security code.<br/>';
 					rgBadFields.security_code = true;
 				}
 				else if ( len > 0 )
@@ -3097,7 +3097,7 @@ function SubmitPaymentInfoForm()
 					}
 					if ( !bAllDigits )
 					{
-						errorString += '#checkout_error_bad_security_code<br/>';
+						errorString += 'Please enter your card security code.<br/>';
 						rgBadFields.security_code = true;
 					}
 				}
@@ -3108,7 +3108,7 @@ function SubmitPaymentInfoForm()
 			var year = dateNow.getFullYear();
 			if ( ( $( 'expiration_year' ).value == '' ) || ( $('expiration_month').value == '' ) || ( $( 'expiration_year' ).value < year ) || ( $('expiration_year').value == year && $('expiration_month').value < month ) )
 			{
-				errorString += '#checkout_error_bad_cc_expiration<br/>';
+				errorString += 'Please enter a valid expiration date.<br/>';
 				rgBadFields.expiration_month_trigger = true;
 				rgBadFields.expiration_year_trigger = true;
 			}
@@ -3137,7 +3137,7 @@ function SubmitPaymentInfoForm()
 		{
 			if ( !$('verify_country_only').checked )
 			{
-				errorString += '#checkout_error_verify_country<br/>';
+				errorString += 'Please verify your country selected below.<br/>';
 				rgBadFields.verify_country_only_label = true;
 			}
 		}
@@ -3152,7 +3152,7 @@ function SubmitPaymentInfoForm()
 		
 			if ( m == null )
 			{
-				errorString += '#checkout_error_mobile_number<br/>';
+				errorString += 'Please enter your 10 digit mobile account number.<br/>';
 				rgBadFields.mobile_number_label = true;
 			}
 			else
@@ -3169,14 +3169,14 @@ function SubmitPaymentInfoForm()
 				}
 				if ( digitsFound != 10 )
 				{
-					errorString += '#checkout_error_mobile_number<br/>';
+					errorString += 'Please enter your 10 digit mobile account number.<br/>';
 					rgBadFields.mobile_number_label = true;
 				}
 			}
 
 			if ( !$('verify_country_only').checked )
 			{
-				errorString += '#checkout_error_verify_country<br/>';
+				errorString += 'Please verify your country selected below.<br/>';
 				rgBadFields.verify_country_only_label = true;
 			}
 		}
@@ -3185,26 +3185,26 @@ function SubmitPaymentInfoForm()
 			
 			if ( $( 'first_name' ).value.length < 1 )
 			{
-				errorString += '#checkout_error_bad_firstname<br/>';
+				errorString += 'Please enter a first name for your billing information.<br/>';
 				rgBadFields.first_name = true;
 			}
 			
 			if ( $( 'last_name' ).value.length < 1 )
 			{
-				errorString += '#checkout_error_bad_lastname<br/>';
+				errorString += 'Please enter a last name for your billing information.<br/>';
 				rgBadFields.last_name = true;
 			}
 			
 			if ( $( 'billing_address' ).value.length < 1 )
 			{
-				errorString += '#checkout_error_bad_address<br/>';
+				errorString += 'Please enter your billing address.<br/>';
 				rgBadFields.billing_address = true;
 			}
 				
 			
 			if ( $( 'billing_city' ).value.length < 1 )
 			{
-				errorString += '#checkout_error_bad_city<br/>';
+				errorString += 'Please enter your billing city.<br/>';
 				rgBadFields.billing_city = true;
 			}
 			
@@ -3212,7 +3212,7 @@ function SubmitPaymentInfoForm()
 			{
 				if ( $('billing_state_select').value.length < 1 )
 				{
-					errorString += '#checkout_error_bad_state<br/>';
+					errorString += 'Please enter a State or Province.<br/>';
 					rgBadFields.billing_state_select_trigger = true;
 				}
 			}
@@ -3220,7 +3220,7 @@ function SubmitPaymentInfoForm()
 	
 			if ( $( 'billing_phone' ).value.length < 3 )
 			{
-				errorString += '#checkout_error_bad_phone<br/>';
+				errorString += 'Please enter your billing phone number, including area code.<br/>';
 				rgBadFields.billing_phone = true;
 			}
 			else if  ( $( 'billing_country' ).value == 'US' )
@@ -3236,7 +3236,7 @@ function SubmitPaymentInfoForm()
 				}
 				if ( digitsFound < 10 )
 				{
-					errorString += '#checkout_error_bad_phone<br/>';
+					errorString += 'Please enter your billing phone number, including area code.<br/>';
 					rgBadFields.billing_phone = true;
 				}
 			}
@@ -3245,19 +3245,19 @@ function SubmitPaymentInfoForm()
 			{
 				if ( $( 'billing_postal_code' ).value.length < 5 )
 				{
-					errorString += '#checkout_error_bad_postal<br/>';
+					errorString += 'Please enter your zip or postal code.<br/>';
 					rgBadFields.billing_postal_code = true;
 				}
 			}
 			else if ( $( 'billing_postal_code' ).value.length < 1 )
 			{
-				errorString += '#checkout_error_bad_postal<br/>';
+				errorString += 'Please enter your zip or postal code.<br/>';
 				rgBadFields.billing_postal_code = true;
 			}
 			
 			if ( !$( 'verify_country' ).checked )
 			{
-				errorString += '#checkout_error_verify_country<br/>';
+				errorString += 'Please verify your country selected below.<br/>';
 				rgBadFields.label_verify_country = true;
 			}
 		}
@@ -3268,12 +3268,12 @@ function SubmitPaymentInfoForm()
 			{
 				if ( isNaN( $('bank_account').value ) || $('bank_account').value.length < 1 || $('bank_account').value.length > 10 )
 				{
-					errorString += '#checkout_error_bad_bank_account<br/>';
+					errorString += 'Please enter your account number.<br/>';
 					rgBadFields.bank_account = true;
 				}
 				if ( isNaN( $('bank_code').value ) || $('bank_code').value.length < 1 || $('bank_code').value.length > 8 )
 				{
-					errorString += '#checkout_error_bad_bank_code<br/>';
+					errorString += 'Please enter your bank code.<br/>';
 					rgBadFields.bank_code = true;
 				}
 			}
@@ -3281,7 +3281,7 @@ function SubmitPaymentInfoForm()
 			{
 				if ( $('bank_iban').value.length < 15 || $('bank_iban').value.length > 50 )
 				{
-					errorString += '#checkout_error_bad_bank_iban<br/>';
+					errorString += 'Please verify and enter your IBAN (International Bank Account Number).<br/>';
 					rgBadFields.bank_iban = true;
 				}
 				else
@@ -3318,14 +3318,14 @@ function SubmitPaymentInfoForm()
 					
 					if ( ( parseInt( sCalculatedIBAN ) % 97 ) != 1 )
 					{
-						errorString += '#checkout_error_bad_bank_iban<br/>';
+						errorString += 'Please verify and enter your IBAN (International Bank Account Number).<br/>';
 						rgBadFields.bank_iban = true;
 					}
 				}
 				
 				if ( $('bank_bic').value.length != 8 && $('bank_bic').value.length != 11 && $('bank_bic').value.length != 12 )
 				{
-					errorString += '#checkout_error_bad_bank_bic<br/>';
+					errorString += 'Please verify and enter your SWIFT code.<br/>';
 					rgBadFields.bank_bic = true;
 				}
 			}
@@ -3356,7 +3356,7 @@ function SubmitPaymentInfoForm()
 			if ( rgErrors.length > 3 )
 			{
 				errorString = '';
-				errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + '#checkout_error_more_errors' + '<br/>';
+				errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + 'And find more errors highlighted below.' + '<br/>';
 			}		
 		
 			DisplayErrorMessage( errorString );
@@ -3443,31 +3443,31 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			
 						if ( method.value == 'visa' && providerPaymentMethod == 2 )
 			{	
-				$('payment_method_review_text').innerHTML = 'Visa'+'#checkout_card_ending_in'+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
+				$('payment_method_review_text').innerHTML = 'Visa'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
 			}
 			else if ( method.value == 'mastercard' && providerPaymentMethod == 2 )
 			{
-				$('payment_method_review_text').innerHTML = 'MasterCard'+'#checkout_card_ending_in'+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
+				$('payment_method_review_text').innerHTML = 'MasterCard'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
 			}
 			else if ( method.value == 'amex' && providerPaymentMethod == 2 )
 			{
-				$('payment_method_review_text').innerHTML = 'American Express'+'#checkout_card_ending_in'+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
+				$('payment_method_review_text').innerHTML = 'American Express'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
 			}
 			else if ( method.value == 'discover' && providerPaymentMethod == 2 )
 			{
-				$('payment_method_review_text').innerHTML = 'Discover'+'#checkout_card_ending_in'+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
+				$('payment_method_review_text').innerHTML = 'Discover'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
 			}
 			else if ( method.value == 'jcb' && providerPaymentMethod == 2 )
 			{
-				$('payment_method_review_text').innerHTML = 'JCB'+'#checkout_card_ending_in'+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
+				$('payment_method_review_text').innerHTML = 'JCB'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
 			}
 			else if ( method.value == 'cartebleue' && providerPaymentMethod == 2 )
 			{
-				$('payment_method_review_text').innerHTML = 'Carte Bleue'+'#checkout_card_ending_in'+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
+				$('payment_method_review_text').innerHTML = 'Carte Bleue'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
 			}
 			else if ( method.value == 'dankort' && providerPaymentMethod == 2 )
 			{
-				$('payment_method_review_text').innerHTML = 'Visa Dankort'+'#checkout_card_ending_in'+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
+				$('payment_method_review_text').innerHTML = 'Visa Dankort'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
 			}
 			else if ( method.value == 'steamaccount' && providerPaymentMethod == 0 )
 			{
@@ -3475,7 +3475,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'storedpaypal' && providerPaymentMethod == 4 )
 			{
-				$('payment_method_review_text').innerHTML = '#checkout_stored_paypal_payment_method (' + $('stored_paypal_email').value + ')';
+				$('payment_method_review_text').innerHTML = 'My PayPal Account (' + $('stored_paypal_email').value + ')';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'paypal' && providerPaymentMethod == 4 )
@@ -3854,7 +3854,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 		if ( g_bRequiresShipping )
 		{
 			$('review_shipping_address_body').innerText = $('shipping_first_name').value+' '+$('shipping_last_name').value;
-			$('review_shipping_address_body').innerHTML += ' (<a href="javascript:SetTabEnabled(\'shipping_info\');">#checkout_review_edit</a>)';
+			$('review_shipping_address_body').innerHTML += ' (<a href="javascript:SetTabEnabled(\'shipping_info\');">Change</a>)';
 			$('review_shipping_address_body').innerHTML += '<br>';
 			$('review_shipping_address_body').innerText += $('shipping_address').value;
 			if ( $('shipping_address_two').value.length > 0 )
@@ -4126,7 +4126,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 						)
 					)
 					{
-						error_text = '#finalize_transaction_cc_error_brazil';
+						error_text = 'Your credit card transaction was rejected.<br/><br/>Some Brazilian banks may reject purchases with international credit cards when purchasing in foreign stores that offer prices in Reais.  We suggest you try the transaction again, selecting the national version of your card type or another payment method of your preference.';
 					}
 					else
 					{
@@ -4139,31 +4139,31 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 							case 7:
 							case 11:
 							case 57:
-								error_text = '#finalize_transaction_generic_error';
+								error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 								break;
 							case 1:
-								error_text = '#finalize_transaction_cc_avs_error';
+								error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company due to an incorrect address being entered.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged. After correcting any errors in the information displayed below, please try your purchase again.';
 								break;
 							case 4:
-								error_text = '#finalize_transaction_cc_timeout_error';
+								error_text = 'Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later.';
 								break;
 							case 0:
-								error_text = '#finalize_transaction_cc_declined_error';
+								error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged. After correcting any errors in the information displayed below, please try your purchase again.';
 								break;
 							case 2:
-								error_text = '#finalize_transaction_cc_insufficientfunds_error';
+								error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company due to insufficient funds in the account.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged.';
 								break;
 							case 13:
-								error_text = '#finalize_transaction_cc_restrictedcountry_error';
+								error_text = 'Sorry, but one of the items you tried to purchase is not available for purchase in this country. Your purchase has been cancelled.';
 								break;
 							case 35:
-								error_text = '#finalize_transaction_exceed_wallet_max';
+								error_text = 'Your purchase has not been completed.<br>The amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance.';
 								break;
 							case 44:
-								error_text = '#finalize_transaction_account_locked';
+								error_text = 'Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details.';
 								break;
 							case 46:
-								error_text = '#checkout_failed_steam_limit_exceeded';
+								error_text = 'For the protection of the account holder, this purchase has been declined. Further purchasing will be temporarily limited - please contact Steam Support to resolve this issue.';
 								break;
 						}
 					}
@@ -4247,45 +4247,45 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 						case 7:
 						case 11:
 						case 57:
-							error_text = '#finalize_transaction_generic_error';
+							error_text = 'An unexpected error has occurred. Your purchase has not been completed.<br>Please contact <a href="http://support.steampowered.com">Steam Support</a>.';
 							break;
 						case 13:
-							error_text = '#finalize_transaction_cc_restrictedcountry_error';
+							error_text = 'Sorry, but one of the items you tried to purchase is not available for purchase in this country. Your purchase has been cancelled.';
 							break;
 						case 4:
-							error_text = '#finalize_transaction_cc_timeout_error';
+							error_text = 'Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later.';
 							break;
 						case 0:
 						case 22:
-							error_text = '#finalize_transaction_paypal_decline_error';
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported an authorization failure. Please select a different payment method.';
 							break;
 						case 16:
-							error_text = '#finalize_transaction_paypal_use_other_error';
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported an authorization failure. Please select a different payment method.';
 							break;
 						case 17:
 						case 2:
-							error_text = '#finalize_transaction_paypal_use_other_funding_error2';
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with the funding source associated with your account. Please <a href=\'javascript:SetTabEnabled("payment_info");\'>select a different payment method</a> or update your funding source with PayPal and try again.';
 							break;
 						case 18:
-							error_text = '#finalize_transaction_paypal_address_error';
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with the address associated with your account. You can either correct this problem through the processor, or select a different payment method.';
 							break;
 						case 19:
-							error_text = '#finalize_transaction_paypal_region_error';
+							error_text = 'Your purchase has not been completed.<br>Your chosen payment method is currently unavailable in your country. Please choose a different payment method.';
 							break;
 						case 20:
-							error_text = '#finalize_transaction_paypal_blocked_account_error';
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported a problem with your account. Please contact the processor or choose an alternate payment method.';
 							break;
 						case 21:
-							error_text = '#finalize_transaction_paypal_notverified_error';
+							error_text = 'Your purchase has not been completed.<br>The payment processor has reported that your account needs to be verified or funded to complete the purchase. Please contact the processor or choose an alternate payment method.';
 							break;
 						case 35:
-							error_text = '#finalize_transaction_exceed_wallet_max';
+							error_text = 'Your purchase has not been completed.<br>The amount being added to your Steam Wallet would exceed the maximum allowed Steam Wallet balance.';
 							break;
 						case 44:
-							error_text = '#finalize_transaction_account_locked';
+							error_text = 'Your purchase was not completed. Your account is currently locked from purchasing. Please contact Steam Support for details.';
 							break;
 						case 46:
-							error_text = '#checkout_failed_steam_limit_exceeded';
+							error_text = 'For the protection of the account holder, this purchase has been declined. Further purchasing will be temporarily limited - please contact Steam Support to resolve this issue.';
 							break;
 					}
 				}
@@ -4357,7 +4357,7 @@ function OnPurchaseSuccess( result )
 			$('purchase_summary_area').style.display = 'none';
 			$('receipt_error_display').style.display = 'block';
 			
-			$('receipt_error_display').innerHTML = '#finalize_transaction_needs_approval_error';
+			$('receipt_error_display').innerHTML = 'Your purchase is pending and will be reviewed shortly. You will be notified when it is completed.';
 			
 			Effect.ScrollTo( 'receipt_error_display' );
 			new Effect.Highlight( 'receipt_error_display', { endcolor : '#000000', startcolor : '#ff9900' } );				
@@ -4376,7 +4376,7 @@ function OnPurchaseSuccess( result )
 		NukeCartCookie();
 		var item_count = $('cart_item_count_value');
 		if ( item_count )
-			item_count.innerHTML = '0 '+'#cart_items_plural';
+			item_count.innerHTML = '0 '+'items in your cart';
 	}
 	catch ( e )
 	{
@@ -4462,28 +4462,28 @@ function DisplayPendingReceiptPage()
 		case 'efecty':
 		case 'baloto':
 		case 'pagoefectivo':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_boacompra_text';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="http://www.boacompra.com/shop/info.php?contact">BoaCompra</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 
 		case 'molpoints':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_mol_text';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://www.mol.com">MOL</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 			
 		case 'konbini':
 		case 'bank_transfer_japan':
 		case 'payeasy':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_degica_text';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="http://www.degica.com/contact">Degica</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 			
 		case 'eclubpoints':
-			$('pending_purchase_summary_payment_method_description').innerHTML = 'checkout_receipt_pending_long';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_eclub_text';
+			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is currently in progress and is waiting for payment delivery from your processor or bank.  This process can take a few days for confirmation.  Valve will send an email receipt to you when payment is received for this purchase.  During this time you may continue shopping for other games, though you will not be able to re-purchase any products that are pending in this transaction.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'For questions regarding your payment processing status, please contact <a href="https://www.eclubstore.com">eClub Store</a>.';
 			$('pending_purchase_summary_payment_method_notes').style.display = 'block';
 			break;
 						
@@ -4539,7 +4539,7 @@ function AnimateFinalizeWorkingButton()
 			append = '...';
 		} 
 		
-		SetButtonInnerHtml('purchase_button_inprogress_bottom', 'btn_checkout_finalize_in_progress'+append );
+		SetButtonInnerHtml('purchase_button_inprogress_bottom', 'Working'+append );
 		
 		setTimeout( AnimateFinalizeWorkingButton, 500 );
 	}
@@ -4555,7 +4555,7 @@ function HandlePollForTransactionStatusFailure()
 	try
 	{
 		var error_text = '';
-		error_text = '#check_purchase_status_error';
+		error_text = 'Your purchase may have been completed, but there was a problem checking on the status of this transaction.  Please check your <a href="http://store.valvesoftware.com/account/">account status page</a> or your email for a confirmation receipt.';
 	}
 	catch(e)
 	{
@@ -4681,14 +4681,14 @@ function FinalizeTransaction()
 
 		if ( BStoredCreditCardRequiresSecurityCode( method.value ) && $('security_code_cached').value == '' )
 	{
-		DisplayErrorMessage( '#checkout_error_bad_security_code' );
+		DisplayErrorMessage( 'Please enter your card security code.' );
 		ValidationMarkFieldBad( $('security_code_cached' ) );
 		return;
 	}
 
 		if ( !g_bIsUpdateBillingInfoForm && ( !$('accept_ssa') || !$('accept_ssa').checked ) )
 	{
-		DisplayErrorMessage( '#checkout_ssa_fail' );
+		DisplayErrorMessage( 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.' );
 		ValidationMarkFieldBad( $('purchase_confirm_ssa') );
 		return;
 	}
@@ -4954,7 +4954,7 @@ function OnSendGiftFailure( eresult )
 	try
 	{
 		SetTabEnabled( 'gift_recipient' );
-		var error_text = '#checkout_failed_inittransaction';
+		var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
 
 		DisplayErrorMessage( error_text );
 	}

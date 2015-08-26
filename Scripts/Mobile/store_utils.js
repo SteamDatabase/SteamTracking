@@ -83,7 +83,7 @@ function SearchSuggestClearDefaultSearchText( elem )
 	elem = $J( elem );
 	ShowSuggestionsAsNecessary();
 	var text = elem.val();
-	if ( text == '#text_search_the_store' )
+	if ( text == 'search the store' )
 	{
 		elem.val( '' );
 		elem.removeClass( 'default' );
@@ -97,14 +97,14 @@ function SearchSuggestSetDefaultSearchText( elem )
 	var text = elem.val();
 	if ( text == '' )
 	{
-		elem.val( '#text_search_the_store' );
+		elem.val( 'search the store' );
 		elem.addClass( 'default' );
 	}
 }
 
 function SearchSuggestCheckTerm( theform )
 {
-	if ( theform.term.value == '#text_search_the_store' )
+	if ( theform.term.value == 'search the store' )
 	{
 		theform.term.value = '';
 	}

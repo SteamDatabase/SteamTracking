@@ -80,12 +80,12 @@ CVideoWatch.prototype.UnlockH264 = function()
 {
 	if ( this.m_eClientType == CVideoWatch.k_InOldClient )
 	{
-		this.ShowVideoError( 'SteamVideo_UpdateClient' );
+		this.ShowVideoError( 'You must update your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information on resolving this issue.' );
 		return;
 	}
 
 	window.open( 'steam://unlockh264/' );
-	this.SetVideoLoadingText( 'SteamVideo_UpdatingSteam' );
+	this.SetVideoLoadingText( 'Updating Steam... One Moment Please.' );
 	this.WaitUnlockH264( Date.now() );
 }
 
@@ -99,7 +99,7 @@ CVideoWatch.prototype.WaitUnlockH264 = function( rtStart )
 
 	if ( Date.now() - rtStart > 30000 )
 	{
-		this.ShowVideoError( 'SteamVideo_FailedH264Unlock' );
+		this.ShowVideoError( 'Failed to apply a Steam update that is required to watch this video.<br><br>Please ensure your Steam client is connected to Steam and try again.' );
 		return;
 	}
 
@@ -109,7 +109,7 @@ CVideoWatch.prototype.WaitUnlockH264 = function( rtStart )
 
 CVideoWatch.prototype.BlockedPlaybackMessage = function()
 {
-	this.ShowVideoError( 'SteamVideo_MustUseSteam' );
+	this.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
 }
 
 CVideoWatch.prototype.Start = function()
@@ -118,7 +118,7 @@ CVideoWatch.prototype.Start = function()
 
 	if ( this.m_eClientType == CVideoWatch.k_InOldClient )
 	{
-		this.ShowVideoError( 'SteamVideo_UpdateClient' );
+		this.ShowVideoError( 'You must update your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information on resolving this issue.' );
 		return;
 	}
 
@@ -130,11 +130,11 @@ CVideoWatch.prototype.Start = function()
 			return;
 		}
 
-		this.ShowVideoError( 'SteamVideo_BrowserRequired' );
+		this.ShowVideoError( 'Your web browser does not support the minimum set of features required to watch this video.<br><br>Try again using the latest version of the Steam Client or <a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">visit the FAQ</a> for a list of supported browsers.' );
 		return;
 	}
 
-	this.SetVideoLoadingText( 'SteamVideo_PreparingStream' );
+	this.SetVideoLoadingText( 'Preparing to Stream Video... One Moment Please.' );
 
 		CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
 
@@ -163,7 +163,7 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 	$J( '#page_contents' ).addClass( 'show_player' );
 
 	this.m_playerUI.SetVideoTitle( this.m_strVideoTitle );
-	document.title = this.m_strVideoTitle + ' :: SteamVideo_WatchVideoPageTitle';
+	document.title = this.m_strVideoTitle + ' :: Steam';
 
 	// options that need setting on playback start
 	this.SetClosedCaptionLanguage();
@@ -178,16 +178,16 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 	if ( this.m_nVideoRestarts > CVideoWatch.k_MaximumVideoRestarts )
 	{
 		if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
-			this.ShowVideoError( 'SteamVideo_SegmentDownloadFailed' );
+			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
-			this.ShowVideoError( 'SteamVideo_SegmentDownloadFailed_Tenfoot' );
+			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br>Press Q or the Back button to Exit.' );
 
 		this.OnLogEventToServer( 'Download Failed', '' );
 	}
 	else
 	{
 		var _watch = this;
-		this.ShowVideoError( 'SteamVideo_LostConnectionRetrying' );
+		this.ShowVideoError( 'Reestablishing Stream... One Moment Please.' );
 		this.OnLogEventToServer( 'Reconnection', '' );
 		$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 		this.GetVideoDetails();
@@ -196,13 +196,13 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 
 CVideoWatch.prototype.OnPlayerPlaybackError = function()
 {
-	this.ShowVideoError( 'SteamVideo_UnexpectedError' );
+	this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 	this.OnLogEventToServer( 'Playback Error', '' );
 }
 
 CVideoWatch.prototype.OnPlayerDRMError = function()
 {
-	this.ShowVideoError( 'SteamVideo_DRMError' );
+	this.ShowVideoError( 'This video requires a license to play which cannot currently be retrieved. Please try again in a few minutes.<br><br>You may also need to update your Steam Client to watch this video.' );
 	this.OnLogEventToServer( 'DRM Error', '' );
 }
 
@@ -210,7 +210,7 @@ CVideoWatch.prototype.OnPlayerHDCPError = function()
 {
 	if ( !this.m_bHDCPErrorReported )
 	{
-		this.ShowVideoError( 'SteamVideo_HDCPError' );
+		this.ShowVideoError( 'This video cannot be played because one or more of your displays do not support High-Bandwidth Digital Content Protection (HDCP).<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information on resolving this issue.' );
 		this.OnLogEventToServer( 'HDCP Error', '' );
 		this.m_bHDCPErrorReported = true;
 	}
@@ -245,28 +245,28 @@ CVideoWatch.prototype.GetVideoDetails = function()
 			switch ( data.error_code )
 			{
 				case 8:
-					_watch.ShowVideoError( 'SteamVideo_NotAVideo' );
+					_watch.ShowVideoError( 'This application is not a video and cannot be streamed.' );
 					break;
 				case 9:
-					_watch.ShowVideoError( 'SteamVideo_VideoNotProcessed' );
+					_watch.ShowVideoError( 'This video has not been processed for streaming.' );
 					break;
 				case 15:
-					_watch.ShowVideoError( 'SteamVideo_AccessDenied' );
+					_watch.ShowVideoError( 'The video could not be accessed. <br><br>Please ensure you are logged in and own this video.' );
 					break;
 				case 16:
-					_watch.ShowVideoError( 'SteamVideo_VideoNotAvailable' );
+					_watch.ShowVideoError( 'This video is not currently available to stream.' );
 					break;
 				case 20:
-					_watch.ShowVideoError( 'SteamVideo_ServiceUnavailable' );
+					_watch.ShowVideoError( 'The video service is not available.' );
 					break;
 				case 82:
-					_watch.ShowVideoError( 'SteamVideo_MustUseSteam' );
+					_watch.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
 					break;
 				default:
 					if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
-						_watch.ShowVideoError( 'SteamVideo_UnexpectedError' + '<br><br>Error Code: ' + data.error_code );
+						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
 					else
-						_watch.ShowVideoError( 'SteamVideo_UnexpectedError_Tenfoot' + '<br><br>Error Code: ' + data.error_code );
+						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' + '<br><br>Error Code: ' + data.error_code );
 					break;
 			}
 		}
@@ -274,9 +274,9 @@ CVideoWatch.prototype.GetVideoDetails = function()
 	.fail( function()
 	{
 		if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
-			_watch.ShowVideoError( 'SteamVideo_UnexpectedError' );
+			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
-			_watch.ShowVideoError( 'SteamVideo_UnexpectedError_Tenfoot' );
+			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' );
 	});
 }
 
