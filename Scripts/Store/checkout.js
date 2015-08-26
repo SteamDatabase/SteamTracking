@@ -2532,12 +2532,12 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'eclubpoints'
 			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'pse' || method.value == 'exito' || method.value == 'efecty'
 			|| method.value == 'baloto' || method.value == 'pinvalidda' || method.value == 'mangirkart' || method.value == 'bancocreditodeperu'  
-			|| method.value == 'bbvacontinental' || method.value == 'safetypay' || method.value == 'pagoefectivo' || method.value == 'trustly' )
+			|| method.value == 'bbvacontinental' || method.value == 'pagoefectivo' || method.value == 'trustly' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
 		}
-		else if ( method.value == 'boleto' || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' )
+		else if ( method.value == 'boleto' || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'safetypay' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
