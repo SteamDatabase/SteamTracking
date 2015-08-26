@@ -604,7 +604,15 @@ function populateDescriptions( elDescriptions, rgDescriptions )
 				return date.toLocaleString();
 			});
 
-			elDescription.html( description.value.replace( /\n/g, '<br>' ) );
+			if ( description.type == 'html' )
+			{
+				elDescription.html( description.value );
+			}
+			else
+			{
+				elDescription.text( description.value );
+				elDescription.html( elDescription.html().replace( /\n/g, '<br>' ) );
+			}
 		}
 
 		if ( description.label )
