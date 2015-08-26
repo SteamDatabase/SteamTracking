@@ -237,6 +237,10 @@ ul.market_restrictions li {
 .my_listing_section .market_listing_row {
 	margin-top: 6px;
 	height: 50px;
+
+	transition-property: background-color, border-color;
+	transition-timing-function: linear;
+	transition-duration: 3s;
 }
 
 .my_listing_section .market_listing_justconfirmed {
