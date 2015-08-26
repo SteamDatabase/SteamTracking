@@ -27,6 +27,7 @@ var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, view
 	this.m_nVideoRestarts = 0;
 	this.m_nViewerSteamID = viewerSteamID;
 	this.m_eUIMode = CDASHPlayerUI.eUIModeDesktop;
+	this.m_bHDCPErrorReported = false;
 }
 
 CVideoWatch.k_InBrowser = 1;
@@ -79,7 +80,7 @@ CVideoWatch.prototype.UnlockH264 = function()
 {
 	if ( this.m_eClientType == CVideoWatch.k_InOldClient )
 	{
-		this.ShowVideoError( 'You must upgrade your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for additional requirements.' );
+		this.ShowVideoError( 'You must update your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information on resolving this issue.' );
 		return;
 	}
 
@@ -98,7 +99,7 @@ CVideoWatch.prototype.WaitUnlockH264 = function( rtStart )
 
 	if ( Date.now() - rtStart > 30000 )
 	{
-		this.ShowVideoError( 'Failed to apply a Steam update that is required to watch this video.<br><br>Please ensure your client is connected to Steam and try again.' );
+		this.ShowVideoError( 'Failed to apply a Steam update that is required to watch this video.<br><br>Please ensure your Steam client is connected to Steam and try again.' );
 		return;
 	}
 
@@ -117,7 +118,7 @@ CVideoWatch.prototype.Start = function()
 
 	if ( this.m_eClientType == CVideoWatch.k_InOldClient )
 	{
-		this.ShowVideoError( 'You must upgrade your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for additional requirements.' );
+		this.ShowVideoError( 'You must update your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information on resolving this issue.' );
 		return;
 	}
 
@@ -151,6 +152,7 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'playbackerror.VideoWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function() { _watch.OnPlayerDRMError(); } );
 	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function() { _watch.OnPlayerHDCPError(); } );
+	$J( this.m_elVideoPlayer ).on( 'logevent.VideoWatchEvents', function( e, strEventName, strEventDesc ) { _watch.OnLogEventToServer( strEventName, strEventDesc ); } );
 
 	this.GetVideoDetails();
 }
@@ -179,11 +181,14 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
 			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br>Press Q or the Back button to Exit.' );
+
+		this.OnLogEventToServer( 'Download Failed', '' );
 	}
 	else
 	{
 		var _watch = this;
 		this.ShowVideoError( 'Reestablishing Stream... One Moment Please.' );
+		this.OnLogEventToServer( 'Reconnection', '' );
 		$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 		this.GetVideoDetails();
 	}
@@ -192,16 +197,29 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 CVideoWatch.prototype.OnPlayerPlaybackError = function()
 {
 	this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
+	this.OnLogEventToServer( 'Playback Error', '' );
 }
 
 CVideoWatch.prototype.OnPlayerDRMError = function()
 {
-	this.ShowVideoError( 'You must upgrade your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for additional requirements.' );
+	this.ShowVideoError( 'This video requires a license to play which cannot currently be retrieved. Please try again in a few minutes.<br><br>You may also need to update your Steam Client to watch this video.' );
+	this.OnLogEventToServer( 'DRM Error', '' );
 }
 
 CVideoWatch.prototype.OnPlayerHDCPError = function()
 {
-	this.ShowVideoError( 'One or more of your displays does not support High-Bandwidth Digital Content Protection (HDCP).<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information.' );
+	if ( !this.m_bHDCPErrorReported )
+	{
+		this.ShowVideoError( 'This video cannot be played because one or more of your displays do not support High-Bandwidth Digital Content Protection (HDCP).<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information on resolving this issue.' );
+		this.OnLogEventToServer( 'HDCP Error', '' );
+		this.m_bHDCPErrorReported = true;
+	}
+}
+
+CVideoWatch.prototype.OnLogEventToServer = function( strEventName, strEventDesc )
+{
+	if ( this.m_DASHPlayerStats )
+		this.m_DASHPlayerStats.LogEventToServer( CDASHPlayerStats.LOGTYPE_EVENT, false, strEventName, strEventDesc );
 }
 
 CVideoWatch.prototype.GetVideoDetails = function()
