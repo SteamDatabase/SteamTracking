@@ -53478,6 +53478,9 @@
 				"weapon_allow_inspect"					"1"
 				"is marketable"							"1"
 			}
+			"attributes"
+			{
+			}
 		}
 		"paintkit_weapon_flamethrower"
 		{
