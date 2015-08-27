@@ -465,6 +465,7 @@
 				"Craftsmann Collection Dummy"			"10"
 				"Powerhouse Collection Dummy"			"10"
 				"Teufort Collection Dummy"				"10"
+				"Gun Mettle Cosmetics Collection Dummy" "10"
 			}
 		}
 		
@@ -573,6 +574,31 @@
 				"powerhouse_rocketlauncher_aquamarine"				"10"
 				"powerhouse_smg_lowprofile"							"10"
 				"powerhouse_sniperrifle_thunderbolt"				"10"
+			}
+		}
+		
+		"GunMettleCosmetics_collection"
+		{
+			"name"				"#GunMettleCosmetics_collection"
+			"description"		"#GunMettleCosmetics_collection_desc"
+			"items"
+			{
+				"The Rotation Sensation"				"10"
+				"The Physician's Protector"				"10"
+				"The Vascular Vestment"					"10"
+				"Bruce's Bonnet"						"10"
+				"Outta' Sight"							"10"
+				"Support Spurs"							"10"
+				"Lurker's Leathers"						"10"
+				"Commissar's Coat"						"10"
+				"Sheriff's Stetson"						"10"
+				"Wild West Waistcoat"					"10"
+				"Fortunate Son"							"10"
+				"Flak Jack"								"10"
+				"Captain Cardbeard Cutthroat"			"10"
+				"Potassium Bonnett"						"10"
+				"White Russian"							"10"
+				"El Duderino"							"10"
 			}
 		}
 	}
@@ -53547,6 +53573,22 @@
 			}
 		}
 
+		"inspectable_cosmetic"
+		{
+			"static_attrs"
+			{
+				"cosmetic_allow_inspect"				"1"
+			}
+		}
+		
+		"marketable"
+		{
+			"static_attrs"
+			{
+				"is marketable"							"1"
+			}
+		}
+
 
 	}
 	"items"
@@ -58214,6 +58256,10 @@
 			{
 				"nameable"		"1"
 				"can_gift_wrap" 	"1"
+			}
+			"tags"
+			{
+				"can_heal_allies"		"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_LunchBox"
@@ -108589,7 +108635,427 @@
 				}
 			}
 		}
-
+		"30623"
+		{
+			"name"		"The Rotation Sensation"
+			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_the_rotation_sensation"
+			"item_description"		"#TF_cc_summer2015_the_rotation_sensation_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/cc_summer2015_the_rotation_sensation/cc_summer2015_the_rotation_sensation_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30625"
+		{
+			"name"		"The Physician's Protector"
+			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_the_physicians_protector"
+			"item_description"		"#TF_cc_summer2015_the_physicians_protector_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/cc_summer2015_the_physicians_protector/cc_summer2015_the_physicians_protector"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/cc_summer2015_the_physicians_protector/cc_summer2015_the_physicians_protector.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30626"
+		{
+			"name"		"The Vascular Vestment"
+			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_the_vascular_vestment"
+			"item_description"		"#TF_cc_summer2015_the_vascular_vestment_Desc"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/medic/cc_summer2015_the_vascular_vestment/cc_summer2015_the_vascular_vestment"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/cc_summer2015_the_vascular_vestment/cc_summer2015_the_vascular_vestment.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30627"
+		{
+			"name"		"Bruce's Bonnet"
+			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_bruces_bonnet"
+			"item_description"		"#TF_cc_summer2015_bruces_bonnet_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/demo/cc_summer2015_bruces_bonnet/cc_summer2015_bruces_bonnet"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/cc_summer2015_bruces_bonnet/cc_summer2015_bruces_bonnet.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30628"
+		{
+			"name"		"Outta' Sight"
+			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_outta_sight"
+			"item_description"		"#TF_cc_summer2015_outta_sight_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/demo/cc_summer2015_outta_sight/cc_summer2015_outta_sight"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/cc_summer2015_outta_sight/cc_summer2015_outta_sight.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30629"
+		{
+			"name"		"Support Spurs"
+			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_support_spurs"
+			"item_description"		"#TF_cc_summer2015_support_spurs_Desc"
+			"equip_region"		"feet"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/cc_summer2015_support_spurs/cc_summer2015_support_spurs"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"sniper"		"models/workshop/player/items/all_class/cc_summer2015_support_spurs/cc_summer2015_support_spurs_sniper.mdl"
+				"engineer"		"models/workshop/player/items/all_class/cc_summer2015_support_spurs/cc_summer2015_support_spurs_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"sniper"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30631"
+		{
+			"name"		"Lurker's Leathers"
+			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_lurkers_leathers"
+			"item_description"		"#TF_cc_summer2015_lurkers_leathers_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/spy/cc_summer2015_lurkers_leathers/cc_summer2015_lurkers_leathers"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/cc_summer2015_lurkers_leathers/cc_summer2015_lurkers_leathers.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"model_player"		"models/workshop/player/items/spy/cc_summer2015_lurkers_leathers/cc_summer2015_lurkers_leathers.mdl"
+						"name"		"#TF_cc_summer2015_lurkers_leathers_style0"
+						"image_inventory"		"backpack/workshop/player/items/spy/cc_summer2015_lurkers_leathers/cc_summer2015_lurkers_leathers"
+					}
+					"1"
+					{
+						"model_player"		"models/workshop/player/items/spy/cc_summer2015_lurkers_leathers_2/cc_summer2015_lurkers_leathers_2.mdl"
+						"name"		"#TF_cc_summer2015_lurkers_leathers_style1"
+						"image_inventory"		"backpack/workshop/player/items/spy/cc_summer2015_lurkers_leathers_2/cc_summer2015_lurkers_leathers_2"
+					}
+				}
+			}
+		}
+		"30633"
+		{
+			"name"		"Commissar's Coat"
+			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_commissars_coat"
+			"item_description"		"#TF_cc_summer2015_commissars_coat_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/heavy/cc_summer2015_commissars_coat/cc_summer2015_commissars_coat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/cc_summer2015_commissars_coat/cc_summer2015_commissars_coat.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30634"
+		{
+			"name"		"Sheriff's Stetson"
+			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_sheriffs_stetson"
+			"item_description"		"#TF_cc_summer2015_sheriffs_stetson_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/engineer/cc_summer2015_sheriffs_stetson/cc_summer2015_sheriffs_stetson"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/cc_summer2015_sheriffs_stetson/cc_summer2015_sheriffs_stetson.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30635"
+		{
+			"name"		"Wild West Waistcoat"
+			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_wild_west_waistcoat"
+			"item_description"		"#TF_cc_summer2015_wild_west_waistcoat_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/engineer/cc_summer2015_wild_west_waistcoat/cc_summer2015_wild_west_waistcoat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/cc_summer2015_wild_west_waistcoat/cc_summer2015_wild_west_waistcoat.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30636"
+		{
+			"name"		"Fortunate Son"
+			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_fortunate_son"
+			"item_description"		"#TF_cc_summer2015_fortunate_son_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/cc_summer2015_fortunate_son/cc_summer2015_fortunate_son"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/cc_summer2015_fortunate_son/cc_summer2015_fortunate_son.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30637"
+		{
+			"name"		"Flak Jack"
+			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_flak_jack"
+			"item_description"		"#TF_cc_summer2015_flak_jack_Desc"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/scout/cc_summer2015_flak_jack/cc_summer2015_flak_jack"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/cc_summer2015_flak_jack/cc_summer2015_flak_jack.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30640"
+		{
+			"name"		"Captain Cardbeard Cutthroat"
+			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_captain_cardbeard_cutthroat"
+			"item_description"		"#TF_cc_summer2015_captain_cardbeard_cutthroat_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/cc_summer2015_captain_cardbeard_cutthroat/cc_summer2015_captain_cardbeard_cutthroat_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30643"
+		{
+			"name"		"Potassium Bonnett"
+			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_potassium_bonnett"
+			"item_description"		"#TF_cc_summer2015_potassium_bonnett_Desc"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/cc_summer2015_potassium_bonnett/cc_summer2015_potassium_bonnett_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30644"
+		{
+			"name"		"White Russian"
+			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_white_russian"
+			"item_description"		"#TF_cc_summer2015_white_russian_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/cc_summer2015_white_russian/cc_summer2015_white_russian"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/cc_summer2015_white_russian/cc_summer2015_white_russian.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30645"
+		{
+			"name"		"El Duderino"
+			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"item_name"		"#TF_cc_summer2015_el_duderino"
+			"item_description"		"#TF_cc_summer2015_el_duderino_Desc"
+			"equip_region"		"beard"
+			"image_inventory"		"backpack/workshop/player/items/heavy/cc_summer2015_el_duderino/cc_summer2015_el_duderino"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/cc_summer2015_el_duderino/cc_summer2015_el_duderino.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
 
 
 
@@ -125594,6 +126060,221 @@
 				"engineer"		"models/workshop/player/items/all_class/armsrace_medal_participant/armsrace_medal_participant_engineer.mdl"
 			}
 		}
+		"8839"
+		{		
+			"name"				"OWL 14 Premier First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Premier_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first_demo.mdl"
+		}
+		"8840"
+		{		
+			"name"				"OWL 14 Premier Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Premier_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second_demo.mdl"
+		}
+		"8841"
+		{		
+			"name"				"OWL 14 Premier Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Premier_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third_demo.mdl"
+		}
+		"8842"
+		{		
+			"name"				"OWL 14 Premier Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Premier_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant_demo.mdl"
+		}
+		"8843"
+		{		
+			"name"				"OWL 14 Division 2 First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division2_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"8844"
+		{		
+			"name"				"OWL 14 Division 2 Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division2_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"8845"
+		{		
+			"name"				"OWL 14 Division 2 Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division2_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"8846"
+		{		
+			"name"				"OWL 14 Division 2 Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division2_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"8847"
+		{		
+			"name"				"OWL 14 Division 3 First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division3_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"8848"
+		{		
+			"name"				"OWL 14 Division 3 Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division3_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"8849"
+		{		
+			"name"				"OWL 14 Division 3 Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division3_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"8850"
+		{		
+			"name"				"OWL 14 Division 3 Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division3_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"8851"
+		{		
+			"name"				"OWL 14 Division 4 First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division4_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"8852"
+		{		
+			"name"				"OWL 14 Division 4 Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division4_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"8853"
+		{		
+			"name"				"OWL 14 Division 4 Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division4_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"8854"
+		{		
+			"name"				"OWL 14 Division 4 Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division4_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"8855"
+		{		
+			"name"				"OWL 14 Division 5 First Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division5_First_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"8856"
+		{		
+			"name"				"OWL 14 Division 5 Second Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division5_Second_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"8857"
+		{		
+			"name"				"OWL 14 Division 5 Third Place"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division5_Third_Place"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"8858"
+		{		
+			"name"				"OWL 14 Division 5 Participant"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_OWL14_6v6_Division5_Participant"
+			"item_description"	""
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -126201,7 +126882,81 @@
 			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
 			"drop_sound"		"ui/item_paper_pickup.wav"
 		}
-
+		"1922"
+		{
+			"name" "Map Token Snowplow"
+			"first_sale_date"	"2015/08/27"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"item_class"	"map_token"
+			"item_type_name"	"#TF_MapToken"
+			"item_name"		"#TF_MapToken_Snowplow"
+			"item_description"	"#TF_MapToken_Snowplow_Desc"
+			"map_name"		"#TF_Map_Snowplow"
+			"ad_text"			"#TF_MapToken_Snowplow_AdText"
+			"show_in_armory"	"1"
+			"armory_desc"		"maptoken"
+			"image_inventory"	"backpack/player/items/all_class/stamp_snowplow"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"96"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"1923"
+		{
+			"name" "Map Token Borneo"
+			"first_sale_date"	"2015/08/27"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"item_class"	"map_token"
+			"item_type_name"	"#TF_MapToken"
+			"item_name"		"#TF_MapToken_Borneo"
+			"item_description"	"#TF_MapToken_Borneo_Desc"
+			"map_name"		"#TF_Map_Borneo"
+			"ad_text"			"#TF_MapToken_Borneo_AdText"
+			"show_in_armory"	"1"
+			"armory_desc"		"maptoken"
+			"image_inventory"	"backpack/player/items/all_class/stamp_borneo"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"96"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+		"1924"
+		{
+			"name" "Map Token Suijin"
+			"first_sale_date"	"2015/08/27"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"item_class"	"map_token"
+			"item_type_name"	"#TF_MapToken"
+			"item_name"		"#TF_MapToken_Suijin"
+			"item_description"	"#TF_MapToken_Suijin_Desc"
+			"map_name"		"#TF_Map_Suijin"
+			"ad_text"			"#TF_MapToken_Suijin_AdText"
+			"show_in_armory"	"1"
+			"armory_desc"		"maptoken"
+			"image_inventory"	"backpack/player/items/all_class/stamp_suijin"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"96"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
 
 
 
@@ -131054,6 +131809,57 @@
 				}
 			}
 		}
+		"2138"
+		{
+			"name" "Map Token Bundle 7"
+			"prefab"	"default_bundle_payment"
+			"first_sale_date"	"2015/08/26"
+			"item_class"	"bundle"
+			"capabilities"
+			{
+				"can_craft_if_purchased"	"1"
+			}
+			"bundle"
+			{
+				"Map Token Egypt"		"1"
+				"Map Token Coldfront"	"1"
+				"Map Token Fastlane"	"1"
+				"Map Token Turbine"		"1"
+				"Map Token Steel"		"1"
+				"Map Token Junction"	"1"
+				"Map Token Watchtower"	"1"
+				"Map Token Hoodoo"		"1"
+				"Map Token Offblast"	"1"
+				"Map Token Yukon"		"1"
+				"Map Token Harvest"		"1"
+				"Map Token Freight"		"1"
+				"Map Token Mountain Lab"		"1"
+				"Map Token Manor Event"			"1"
+				"Map Token Nightfall"			"1"
+				"Map Token Frontier"			"1"
+				"Map Token Lakeside"			"1"
+				"Map Token Gullywash"			"1"
+				"Map Token Kong King"			"1"
+				"Map Token Process"				"1"
+				"Map Token Standin"				"1"
+				"Map Token Snakewater"			"1"
+				"Map Token Snowplow"			"1"
+				"Map Token Borneo"				"1"
+				"Map Token Suijin"				"1"
+			}
+			"item_type_name"	"#TF_StoreBundle"
+			"item_name"		"#TF_Bundle_MapTokens"
+			"item_description"	"#TF_Bundle_MapTokens_Desc"
+			"image_inventory"	"backpack/player/items/all_class/stamp_collection"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"item_quality"		"unique"
+			"min_ilevel"	"50"
+			"max_ilevel"	"50"
+			"mouse_pressed_sound"	"ui/item_paper_pickup.wav"
+			"drop_sound"		"ui/item_paper_pickup.wav"
+		}
+
 
 
 
@@ -136337,6 +137143,70 @@
 			"collection_reference"		"Teufort_collection"
 			"item_rarity"	"common"
 		}
+		"5814"
+		{
+			"name"	"Gun Mettle Cosmetics Collection Dummy"
+			"prefab" "dummy_item"
+			"item_name"	"#GunMettleCosmetics_collection"
+			"collection_reference"		"GunMettleCosmetics_collection"
+			"item_rarity"	"mythical"
+		}
+		
+		"5816"
+		{
+			"name"	"Gun Mettle Cosmetic Key" 
+			"first_sale_date"	"2015/08/27"
+			"prefab" "eventkey"
+			"item_name"			"#TF_Tool_GunMettleCosmeticKey"					
+			"item_description"	"#TF_Tool_GunMettleCosmeticKey_Desc"						
+			"ad_text"			"#TF_Tool_GunMettleCosmeticKey_AdText" 
+			"image_inventory"	"backpack/crafting/cosmetic_case_key"
+			"tool"
+			{
+				"type"	"decoder_ring"
+				"usage_capabilities"
+				{
+					"decodable"	"1"
+				}
+				"restriction"	"gunmettlecosmetic2015"
+			}
+		}
+		"5817" 
+		{
+			"name"	"Gun Mettle Cosmetic Case"
+			"prefab" "eventcrate"
+			"tool"
+			{
+				"restriction"	"gunmettlecosmetic2015"
+			}
+			"item_name"		"#TF_GunMettleCosmeticCase"
+			"item_description"	"#TF_GunMettleCosmeticCase_Desc"
+			"ad_text"			"#TF_GunMettleCosmeticCase_AdText"
+			"image_inventory"	"backpack/player/items/crafting/cosmetic_case"
+			"model_player"		"models/player/items/crafting/cosmetic_case.mdl"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red" "1"
+						"skin_blu" "1"
+						"selectable"	"0"
+					}
+				}
+			}
+			"static_attrs"
+			{
+				"set supply crate series"		"95"		
+				"hide crate series number"		"1"
+				"decoded by itemdefindex"		"5816"
+				"weapon_allow_inspect"			"1"
+			}
+			"event_desc_footer"			"#Footer_GunMettleCosmetics"
+			"collection_reference"		"GunMettleCosmetics_collection"
+		}
+		
 		
 		"5999"				
 		{
@@ -138161,6 +139031,63 @@
 				}
 			}
 		}
+
+		"6528"
+		{
+			"name"	"Strange Filter: Snowplow (Community)"
+			"first_sale_date"	"2015/08/27"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"cp_snowplow"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_snowplow"
+			"item_name"	"#TF_StrangeFilter_CommunityMapSnowplow"
+			"item_description"	"#TF_StrangeFilter_CommunityMapSnowplow_Desc"
+			"ad_text"			"#TF_MapToken_Snowplow_AdText"
+		}
+
+		"6529"
+		{
+			"name"	"Strange Filter: Borneo (Community)"
+			"first_sale_date"	"2015/08/27"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"pl_borneo"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_borneo"
+			"item_name"	"#TF_StrangeFilter_CommunityMapBorneo"
+			"item_description"	"#TF_StrangeFilter_CommunityMapBorneo_Desc"
+			"ad_text"			"#TF_MapToken_Borneo_AdText"
+		}
+
+		"6530"
+		{
+			"name"	"Strange Filter: Suijin (Community)"
+			"first_sale_date"	"2015/08/27"
+			"prefab"	"strange_part_restriction"
+			"tool"
+			{
+				"usage"
+				{
+					"restriction_type"	"map"
+					"restriction_value"	"koth_suijin"
+				}
+			}
+			"image_inventory"	"backpack/crafting/strange_filter_suijin"
+			"item_name"	"#TF_StrangeFilter_CommunityMapSuijin"
+			"item_description"	"#TF_StrangeFilter_CommunityMapSuijin_Desc"
+			"ad_text"			"#TF_MapToken_Suijin_AdText"
+		}
 		
 		"8926"
 		{
@@ -138379,6 +139306,9 @@
 			"drop_sound"		"ui/item_paper_pickup.wav"
 		}
 		
+
+
+
 
 
 
@@ -145902,6 +146832,32 @@
 			"effect_type"			"neutral"
 			"stored_as_integer"		"1"
 		}
+		"746"
+		{
+			"name"	"cosmetic_allow_inspect"
+			"attribute_class"	"cosmetic_allow_inspect"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+		}
+		"747"
+		{
+			"name"	"hat only unusual effect"
+			"attribute_class"		"hat_only_unusual_effect"
+			"description_format"	"value_is_particle_index"
+			"hidden"	"1"
+			"effect_type"	"unusual"
+			"stored_as_integer"	"0"
+		}
+		"748"
+		{
+			"name"	"items traded in for"
+			"attribute_class"		"items_traded_in_for"
+			"description_string"	"#Attrib_ItemsTradedIn"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"1"
+		}
 		
 		"1000"
 		{
@@ -146366,6 +147322,11 @@
 			"description_format"	"value_is_additive"
 			"description_string"	"#Attrib_GunslingerPunchCombo"
 			"effect_type"			"positive"
+		}
+		"2050"
+		{
+			"name"	"cannot delete"
+			"hidden"			"1"
 		}
 
 		"3000"
@@ -148481,6 +149442,50 @@
 			"Righteous Bison Strangifier"		"1"
 			"supply_crate_loot_list_92_weapons_rare_strange"		"1"
 		}	
+		"gunmettle_cosmetics_ancient"
+		{
+			"loot_list_rarity"		"ancient"
+			"Captain Cardbeard Cutthroat"		"1"
+			"Potassium Bonnett"		"1"
+		}
+		"gunmettle_cosmetics_legendary"
+		{
+			"loot_list_rarity"		"legendary"
+			"Bruce's Bonnet"		"1"
+			"El Duderino"		"1"
+			"Sheriff's Stetson"		"1"
+		}
+		"gunmettle_cosmetics_mythical"
+		{
+			"loot_list_rarity"		"mythical"
+			"The Physician's Protector"		"1"
+			"Outta' Sight"		"1"
+			"Fortunate Son"		"1"
+			"White Russian"		"1"
+		}
+		"gunmettle_cosmetics_rare"
+		{
+			"loot_list_rarity"		"rare"
+			"The Rotation Sensation"		"1"
+			"The Vascular Vestment"		"1"
+			"Support Spurs"		"1"
+			"Lurker's Leathers"		"1"
+			"Commissar's Coat"		"1"
+			"Wild West Waistcoat"		"1"
+			"Flak Jack"		"1"
+		}
+		"gunmettle_cosmetics"
+		{
+			"gunmettle_cosmetics_ancient"		"1"
+			"gunmettle_cosmetics_legendary"		"1"
+			"gunmettle_cosmetics_mythical"		"1"
+			"gunmettle_cosmetics_rare"		"1"
+		}		
+		"gunmettle_cosmetic_loot_list_95"
+		{
+			"hide_lootlist"		"1"
+			"gunmettle_cosmetics"		"1"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -148575,6 +149580,7 @@
 		"supply_crate_loot_list_92"	"92"	
 		"concealedkiller_case_loot_list_93"	"93"	
 		"powerhouse_case_loot_list_94"	"94"	
+		"gunmettle_cosmetic_loot_list_95"	"95"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
@@ -160144,6 +161150,8 @@
 			{
 				"name"					"cp_snowplow"
 				"localizedname"			"#TF_Map_cp_snowplow"
+				"strangeprefixtoken"	"#TF_Map_Snowplow_StrangePrefix"
+				"maptoken"				"Map Token Snowplow"
 				"authors"				"#cp_snowplow_authors"
 				"quickplay_type"		"all_users"
 			}
@@ -160151,6 +161159,8 @@
 			{
 				"name"					"pl_borneo"
 				"localizedname"			"#TF_Map_pl_borneo"
+				"strangeprefixtoken"	"#TF_Map_Borneo_StrangePrefix"
+				"maptoken"				"Map Token Borneo"
 				"authors"				"#pl_borneo_authors"
 				"quickplay_type"		"all_users"
 			}
@@ -160158,6 +161168,8 @@
 			{
 				"name"					"koth_suijin"
 				"localizedname"			"#TF_Map_koth_suijin"
+				"strangeprefixtoken"	"#TF_Map_Suijin_StrangePrefix"
+				"maptoken"				"Map Token Suijin"
 				"authors"				"#koth_suijin_authors"
 				"quickplay_type"		"all_users"
 			}
