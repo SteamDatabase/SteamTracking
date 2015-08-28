@@ -151,9 +151,10 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'downloadfailed.VideoWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
 	$J( this.m_elVideoPlayer ).on( 'playbackerror.VideoWatchEvents', function() { _watch.OnPlayerPlaybackError(); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function() { _watch.OnPlayerDRMError(); } );
+	$J( this.m_elVideoPlayer ).on( 'drmerrordownload.VideoWatchEvents', function() { _watch.OnPlayerDRMDownloadError(); } );
 	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function() { _watch.OnPlayerHDCPError(); } );
 	$J( this.m_elVideoPlayer ).on( 'logevent.VideoWatchEvents', function( e, strEventName, strEventDesc ) { _watch.OnLogEventToServer( strEventName, strEventDesc ); } );
-	$J( this.m_elVideoPlayer ).on( 'waitingforwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Retrieving additional components required for playback.<br><br>This may take up to 60 seconds.' ); } );
+	$J( this.m_elVideoPlayer ).on( 'waitingforwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Retrieving additional components required for playback.<br><br>This is a one-time process and may take a few minutes to complete.' ); } );
 	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Preparing to Stream Video... One Moment Please.' ); } );
 
 	this.GetVideoDetails();
@@ -204,9 +205,15 @@ CVideoWatch.prototype.OnPlayerPlaybackError = function()
 
 CVideoWatch.prototype.OnPlayerDRMError = function()
 {
-	this.ShowVideoError( 'This video requires a license to play which cannot currently be retrieved. Please try again in a few minutes.<br><br>You may also need to update your Steam Client to watch this video.' );
-	this.OnLogEventToServer( 'DRM Error', '' );
+	this.ShowVideoError( 'This video requires a license to play which cannot be retrieved.<br><br>This may be a temporary network condition.<br><br>Please restart the video to try again.' );
+	this.OnLogEventToServer( 'DRM License Error', '' );
 }
+
+CVideoWatch.prototype.OnPlayerDRMDownloadError = function()
+{
+			this.ShowVideoError( 'The additional components required for playback could not be retrieved.<br><br>Please restart the video to try again.' );
+		this.OnLogEventToServer( 'DRM Download Error', '' );
+	}
 
 CVideoWatch.prototype.OnPlayerHDCPError = function()
 {
