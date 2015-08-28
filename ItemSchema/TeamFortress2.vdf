@@ -53477,6 +53477,7 @@
 				"weapon_uses_stattrak_module"			"models/weapons/c_models/stattrack.mdl"
 				"weapon_allow_inspect"					"1"
 				"is marketable"							"1"
+				"texture_wear_default"					"0.6"
 			}
 			"attributes"
 			{
@@ -55085,13 +55086,13 @@
 				{
 					"0"
 					{
-						"name"		"#TF_Scout_Hat_1_style0"
+						"name"		"#TF_HatAndHeadphones_Style"
 						"skin_red"		"0"
 						"skin_blu"		"1"
 					}
 					"1"
 					{
-						"name"		"#TF_Scout_Hat_1_style1"
+						"name"		"#TF_NoHat_NoHeadphones_Style"
 						"skin_red"		"0"
 						"skin_blu"		"1"
 						"additional_hidden_bodygroups"
@@ -55102,7 +55103,7 @@
 					}
 					"2"
 					{
-						"name"		"#TF_Scout_Hat_1_style2"
+						"name"		"#TF_NoHat_Style"
 						"skin_red"		"0"
 						"skin_blu"		"1"
 						"additional_hidden_bodygroups"
@@ -58263,6 +58264,7 @@
 			"tags"
 			{
 				"can_heal_allies"		"1"
+				"can_extinguish"		"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_LunchBox"
@@ -89084,6 +89086,29 @@
 				"heavy"	"1"
 				"engineer" "1"
 			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#TF_NoHat_Style"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+						}
+					}
+					"1"
+					{
+						"name"		"#TF_NoHat_NoHeadphones_Style"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+							"headphones"		"1"
+						}
+					}
+				}
+			}
 		}
 		"1013"
 		{
@@ -89178,6 +89203,29 @@
 				"spy" "1"
 				"engineer" "1"
 				"pyro" "1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#TF_NoHat_Style"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+						}
+					}
+					"1"
+					{
+						"name"		"#TF_NoHat_NoHeadphones_Style"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+							"headphones"		"1"
+						}
+					}
+				}
 			}
 		}
 		"1015"
@@ -96208,6 +96256,33 @@
 				"pyro"		"1"
 				"spy"		"1"
 				"engineer"		"1"
+			}
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"name"		"#TF_NoHat_Style"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+						}
+					}
+					"1"
+					{
+						"name"		"#TF_NoHat_NoHeadphones_Style"
+						"skin_red"		"0"
+						"skin_blu"		"1"
+						"additional_hidden_bodygroups"
+						{
+							"hat"		"1"
+							"headphones"		"1"
+						}
+					}
+				}
 			}
 		}
 		"30059"
@@ -108821,12 +108896,16 @@
 						"model_player"		"models/workshop/player/items/spy/cc_summer2015_lurkers_leathers/cc_summer2015_lurkers_leathers.mdl"
 						"name"		"#TF_cc_summer2015_lurkers_leathers_style0"
 						"image_inventory"		"backpack/workshop/player/items/spy/cc_summer2015_lurkers_leathers/cc_summer2015_lurkers_leathers"
+						"skin_red"	"0"
+						"skin_blu"	"1"
 					}
 					"1"
 					{
 						"model_player"		"models/workshop/player/items/spy/cc_summer2015_lurkers_leathers_2/cc_summer2015_lurkers_leathers_2.mdl"
 						"name"		"#TF_cc_summer2015_lurkers_leathers_style1"
 						"image_inventory"		"backpack/workshop/player/items/spy/cc_summer2015_lurkers_leathers_2/cc_summer2015_lurkers_leathers_2"
+						"skin_red"	"0"
+						"skin_blu"	"1"
 					}
 				}
 			}
@@ -146860,6 +146939,14 @@
 			"hidden"	"1"
 			"effect_type"	"neutral"
 			"stored_as_integer"	"1"
+		}
+		"749"
+		{
+			"name"	"texture_wear_default"
+			"attribute_class"	"texture_wear_default"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"stored_as_integer"	"0"
 		}
 		
 		"1000"
