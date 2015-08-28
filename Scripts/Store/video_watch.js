@@ -14,7 +14,7 @@ function BMediaSourceExtensionsSupported()
 }
 
 
-var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, viewerSteamID, strVideoId )
+var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, viewerSteamID, strVideoId, bEMECapable )
 {
 	this.m_eClientType = eClientType;
 	this.m_elVideoPlayer = document.getElementById( 'videoplayer' );
@@ -28,6 +28,7 @@ var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, view
 	this.m_nViewerSteamID = viewerSteamID;
 	this.m_eUIMode = CDASHPlayerUI.eUIModeDesktop;
 	this.m_bHDCPErrorReported = false;
+	this.m_bEMECapableHost = bEMECapable;
 }
 
 CVideoWatch.k_InBrowser = 1;
@@ -141,6 +142,8 @@ CVideoWatch.prototype.Start = function()
 	this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
 	this.m_player.SetUniqueId( this.m_nAppId + '/' + this.m_strVideoId );
 	this.m_eUIMode = ( this.m_eClientType == CVideoWatch.k_InHTML5AppWrapperTenFoot ) ? CDASHPlayerUI.eUIModeTenFoot : CDASHPlayerUI.eUIModeDesktop;
+	this.m_player.SetEMECapableHost( this.m_bEMECapableHost );
+
 	this.m_playerUI = new CDASHPlayerUI( this.m_player, this.m_eUIMode );
 	this.m_playerUI.SetUniqueSettingsID( this.m_nAppId );
    	this.m_playerUI.Init();
@@ -211,9 +214,16 @@ CVideoWatch.prototype.OnPlayerDRMError = function()
 
 CVideoWatch.prototype.OnPlayerDRMDownloadError = function()
 {
-			this.ShowVideoError( 'The additional components required for playback could not be retrieved.<br><br>Please restart the video to try again.' );
+	if ( this.m_bEMECapableHost )
+	{
+		this.ShowVideoError( 'The additional components required for playback could not be retrieved.<br><br>Please restart the video to try again.' );
 		this.OnLogEventToServer( 'DRM Download Error', '' );
 	}
+	else
+	{
+		this.ShowVideoError( 'You must update your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information on resolving this issue.' );
+	}
+}
 
 CVideoWatch.prototype.OnPlayerHDCPError = function()
 {
