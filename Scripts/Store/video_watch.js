@@ -153,6 +153,8 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function() { _watch.OnPlayerDRMError(); } );
 	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function() { _watch.OnPlayerHDCPError(); } );
 	$J( this.m_elVideoPlayer ).on( 'logevent.VideoWatchEvents', function( e, strEventName, strEventDesc ) { _watch.OnLogEventToServer( strEventName, strEventDesc ); } );
+	$J( this.m_elVideoPlayer ).on( 'waitingforwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Retrieving additional components required for playback.<br><br>This may take up to 60 seconds.' ); } );
+	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Preparing to Stream Video... One Moment Please.' ); } );
 
 	this.GetVideoDetails();
 }
