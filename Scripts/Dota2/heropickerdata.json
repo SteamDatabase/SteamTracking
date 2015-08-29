@@ -19,14 +19,14 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Initiator",
             "Durable",
+            "Initiator",
             "Disabler",
             "Jungler"
         ],
         "roles_l": [
-            "Initiator",
             "Durable",
+            "Initiator",
             "Disabler",
             "Jungler"
         ]
@@ -97,16 +97,16 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Support",
             "Initiator",
             "Disabler",
-            "Nuker"
+            "Support",
+            "LaneSupport"
         ],
         "roles_l": [
-            "Support",
             "Initiator",
             "Disabler",
-            "Nuker"
+            "Support",
+            "Lane Support"
         ]
     },
     "juggernaut": {
@@ -130,17 +130,15 @@
         "atk_l": "Ranged",
         "roles": [
             "Carry",
-            "Support",
-            "Escape",
             "Nuker",
-            "Disabler"
+            "Disabler",
+            "Escape"
         ],
         "roles_l": [
             "Carry",
-            "Support",
-            "Escape",
             "Nuker",
-            "Disabler"
+            "Disabler",
+            "Escape"
         ]
     },
     "nevermore": {
@@ -183,14 +181,12 @@
         "roles": [
             "Carry",
             "Escape",
-            "Pusher",
-            "Nuker"
+            "Pusher"
         ],
         "roles_l": [
             "Carry",
             "Escape",
-            "Pusher",
-            "Nuker"
+            "Pusher"
         ]
     },
     "puck": {
@@ -249,16 +245,12 @@
         "roles": [
             "Initiator",
             "Disabler",
-            "Nuker",
-            "Escape",
-            "Jungler"
+            "Nuker"
         ],
         "roles_l": [
             "Initiator",
             "Disabler",
-            "Nuker",
-            "Escape",
-            "Jungler"
+            "Nuker"
         ]
     },
     "storm_spirit": {
@@ -268,16 +260,14 @@
         "atk_l": "Ranged",
         "roles": [
             "Carry",
-            "Escape",
-            "Nuker",
             "Initiator",
+            "Escape",
             "Disabler"
         ],
         "roles_l": [
             "Carry",
-            "Escape",
-            "Nuker",
             "Initiator",
+            "Escape",
             "Disabler"
         ]
     },
@@ -324,17 +314,15 @@
         "atk_l": "Ranged",
         "roles": [
             "Support",
-            "Initiator",
             "Disabler",
-            "Nuker",
-            "Escape"
+            "LaneSupport",
+            "Initiator"
         ],
         "roles_l": [
             "Support",
-            "Initiator",
             "Disabler",
-            "Nuker",
-            "Escape"
+            "Lane Support",
+            "Initiator"
         ]
     },
     "windrunner": {
@@ -343,18 +331,16 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry",
-            "Support",
             "Disabler",
-            "Escape",
-            "Nuker"
+            "Nuker",
+            "Support",
+            "Escape"
         ],
         "roles_l": [
-            "Carry",
-            "Support",
             "Disabler",
-            "Escape",
-            "Nuker"
+            "Nuker",
+            "Support",
+            "Escape"
         ]
     },
     "zuus": {
@@ -363,10 +349,12 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Nuker"
+            "Nuker",
+            "Support"
         ],
         "roles_l": [
-            "Nuker"
+            "Nuker",
+            "Support"
         ]
     },
     "kunkka": {
@@ -375,18 +363,16 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Carry",
             "Disabler",
             "Initiator",
-            "Durable",
-            "Nuker"
+            "Carry",
+            "Durable"
         ],
         "roles_l": [
-            "Carry",
             "Disabler",
             "Initiator",
-            "Durable",
-            "Nuker"
+            "Carry",
+            "Durable"
         ]
     },
     "lina": {
@@ -395,16 +381,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Support",
-            "Carry",
             "Nuker",
-            "Disabler"
+            "Disabler",
+            "Support"
         ],
         "roles_l": [
-            "Support",
-            "Carry",
             "Nuker",
-            "Disabler"
+            "Disabler",
+            "Support"
         ]
     },
     "lich": {
@@ -486,13 +470,13 @@
             "Initiator",
             "Durable",
             "Disabler",
-            "Nuker"
+            "Support"
         ],
         "roles_l": [
             "Initiator",
             "Durable",
             "Disabler",
-            "Nuker"
+            "Support"
         ]
     },
     "witch_doctor": {
@@ -502,12 +486,10 @@
         "atk_l": "Ranged",
         "roles": [
             "Support",
-            "Nuker",
             "Disabler"
         ],
         "roles_l": [
             "Support",
-            "Nuker",
             "Disabler"
         ]
     },
@@ -549,12 +531,10 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry",
             "Nuker",
             "Pusher"
         ],
         "roles_l": [
-            "Carry",
             "Nuker",
             "Pusher"
         ]
@@ -611,14 +591,12 @@
         "roles": [
             "Initiator",
             "Disabler",
-            "Durable",
-            "Nuker"
+            "Durable"
         ],
         "roles_l": [
             "Initiator",
             "Disabler",
-            "Durable",
-            "Nuker"
+            "Durable"
         ]
     },
     "queenofpain": {
@@ -627,14 +605,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry",
             "Nuker",
-            "Escape"
+            "Escape",
+            "Carry"
         ],
         "roles_l": [
-            "Carry",
             "Nuker",
-            "Escape"
+            "Escape",
+            "Carry"
         ]
     },
     "venomancer": {
@@ -664,15 +642,13 @@
             "Carry",
             "Initiator",
             "Disabler",
-            "Escape",
-            "Durable"
+            "Escape"
         ],
         "roles_l": [
             "Carry",
             "Initiator",
             "Disabler",
-            "Escape",
-            "Durable"
+            "Escape"
         ]
     },
     "skeleton_king": {
@@ -758,15 +734,11 @@
         "atk_l": "Ranged",
         "roles": [
             "Carry",
-            "Durable",
-            "Initiator",
-            "Disabler"
+            "Durable"
         ],
         "roles_l": [
             "Carry",
-            "Durable",
-            "Initiator",
-            "Disabler"
+            "Durable"
         ]
     },
     "luna": {
@@ -776,13 +748,11 @@
         "atk_l": "Ranged",
         "roles": [
             "Carry",
-            "Nuker",
-            "Pusher"
+            "Nuker"
         ],
         "roles_l": [
             "Carry",
-            "Nuker",
-            "Pusher"
+            "Nuker"
         ]
     },
     "dragon_knight": {
@@ -792,19 +762,15 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Pusher",
             "Durable",
             "Disabler",
-            "Initiator",
-            "Nuker"
+            "Pusher"
         ],
         "roles_l": [
             "Carry",
-            "Pusher",
             "Durable",
             "Disabler",
-            "Initiator",
-            "Nuker"
+            "Pusher"
         ]
     },
     "dazzle": {
@@ -828,15 +794,11 @@
         "atk_l": "Melee",
         "roles": [
             "Initiator",
-            "Disabler",
-            "Durable",
-            "Nuker"
+            "Durable"
         ],
         "roles_l": [
             "Initiator",
-            "Disabler",
-            "Durable",
-            "Nuker"
+            "Durable"
         ]
     },
     "leshrac": {
@@ -863,18 +825,16 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry",
             "Jungler",
             "Pusher",
-            "Escape",
-            "Nuker"
+            "Carry",
+            "Escape"
         ],
         "roles_l": [
-            "Carry",
             "Jungler",
             "Pusher",
-            "Escape",
-            "Nuker"
+            "Carry",
+            "Escape"
         ]
     },
     "life_stealer": {
@@ -902,15 +862,13 @@
         "atk_l": "Melee",
         "roles": [
             "Initiator",
-            "Jungler",
-            "Escape",
-            "Disabler"
+            "Nuker",
+            "Escape"
         ],
         "roles_l": [
             "Initiator",
-            "Jungler",
-            "Escape",
-            "Disabler"
+            "Nuker",
+            "Escape"
         ]
     },
     "clinkz": {
@@ -950,17 +908,15 @@
         "atk_l": "Ranged",
         "roles": [
             "Support",
-            "Jungler",
             "Pusher",
             "Durable",
-            "Disabler"
+            "Jungler"
         ],
         "roles_l": [
             "Support",
-            "Jungler",
             "Pusher",
             "Durable",
-            "Disabler"
+            "Jungler"
         ]
     },
     "huskar": {
@@ -970,13 +926,13 @@
         "atk_l": "Ranged",
         "roles": [
             "Carry",
-            "Durable",
-            "Initiator"
+            "Initiator",
+            "Durable"
         ],
         "roles_l": [
             "Carry",
-            "Durable",
-            "Initiator"
+            "Initiator",
+            "Durable"
         ]
     },
     "night_stalker": {
@@ -1111,17 +1067,13 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Carry",
-            "Disabler",
-            "Initiator",
             "Durable",
+            "Carry",
             "Nuker"
         ],
         "roles_l": [
-            "Carry",
-            "Disabler",
-            "Initiator",
             "Durable",
+            "Carry",
             "Nuker"
         ]
     },
@@ -1132,13 +1084,11 @@
         "atk_l": "Ranged",
         "roles": [
             "Support",
-            "Disabler",
-            "Nuker"
+            "Disabler"
         ],
         "roles_l": [
             "Support",
-            "Disabler",
-            "Nuker"
+            "Disabler"
         ]
     },
     "ursa": {
@@ -1149,14 +1099,12 @@
         "roles": [
             "Carry",
             "Jungler",
-            "Durable",
-            "Disabler"
+            "Durable"
         ],
         "roles_l": [
             "Carry",
             "Jungler",
-            "Durable",
-            "Disabler"
+            "Durable"
         ]
     },
     "spirit_breaker": {
@@ -1217,16 +1165,14 @@
         "roles": [
             "Carry",
             "Nuker",
-            "Disabler",
-            "Escape",
-            "Pusher"
+            "Initiator",
+            "Escape"
         ],
         "roles_l": [
             "Carry",
             "Nuker",
-            "Disabler",
-            "Escape",
-            "Pusher"
+            "Initiator",
+            "Escape"
         ]
     },
     "silencer": {
@@ -1235,18 +1181,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry",
             "Support",
-            "Disabler",
-            "Initiator",
-            "Nuker"
+            "Carry",
+            "Initiator"
         ],
         "roles_l": [
-            "Carry",
             "Support",
-            "Disabler",
-            "Initiator",
-            "Nuker"
+            "Carry",
+            "Initiator"
         ]
     },
     "obsidian_destroyer": {
@@ -1255,14 +1197,10 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry",
-            "Nuker",
-            "Disabler"
+            "Carry"
         ],
         "roles_l": [
-            "Carry",
-            "Nuker",
-            "Disabler"
+            "Carry"
         ]
     },
     "lycan": {
@@ -1324,15 +1262,15 @@
         "atk_l": "Ranged",
         "roles": [
             "Carry",
+            "Durable",
             "Pusher",
-            "Jungler",
-            "Durable"
+            "Jungler"
         ],
         "roles_l": [
             "Carry",
+            "Durable",
             "Pusher",
-            "Jungler",
-            "Durable"
+            "Jungler"
         ]
     },
     "chaos_knight": {
@@ -1360,19 +1298,13 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Escape",
-            "Nuker",
             "Disabler",
-            "Initiator",
-            "Pusher"
+            "Initiator"
         ],
         "roles_l": [
             "Carry",
-            "Escape",
-            "Nuker",
             "Disabler",
-            "Initiator",
-            "Pusher"
+            "Initiator"
         ]
     },
     "treant": {
@@ -1415,16 +1347,16 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Support",
             "Durable",
+            "Pusher",
             "Disabler",
-            "Nuker"
+            "Initiator"
         ],
         "roles_l": [
-            "Support",
             "Durable",
+            "Pusher",
             "Disabler",
-            "Nuker"
+            "Initiator"
         ]
     },
     "rubick": {
@@ -1433,12 +1365,10 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Support",
             "Disabler",
             "Nuker"
         ],
         "roles_l": [
-            "Support",
             "Disabler",
             "Nuker"
         ]
@@ -1468,15 +1398,11 @@
         "atk_l": "Melee",
         "roles": [
             "Disabler",
-            "Nuker",
-            "Initiator",
-            "Escape"
+            "Nuker"
         ],
         "roles_l": [
             "Disabler",
-            "Nuker",
-            "Initiator",
-            "Escape"
+            "Nuker"
         ]
     },
     "naga_siren": {
@@ -1503,16 +1429,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Support",
             "Nuker",
-            "Disabler",
-            "Jungler"
+            "Support",
+            "LaneSupport"
         ],
         "roles_l": [
-            "Support",
             "Nuker",
-            "Disabler",
-            "Jungler"
+            "Support",
+            "Lane Support"
         ]
     },
     "wisp": {
@@ -1522,12 +1446,12 @@
         "atk_l": "Ranged",
         "roles": [
             "Support",
-            "Escape",
+            "LaneSupport",
             "Nuker"
         ],
         "roles_l": [
             "Support",
-            "Escape",
+            "Lane Support",
             "Nuker"
         ]
     },
@@ -1537,18 +1461,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Support",
             "Nuker",
             "Durable",
-            "Disabler",
-            "Pusher"
+            "Disabler"
         ],
         "roles_l": [
-            "Support",
             "Nuker",
             "Durable",
-            "Disabler",
-            "Pusher"
+            "Disabler"
         ]
     },
     "slark": {
@@ -1581,16 +1501,10 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry",
-            "Pusher",
-            "Disabler",
-            "Durable"
+            "Carry"
         ],
         "roles_l": [
-            "Carry",
-            "Pusher",
-            "Disabler",
-            "Durable"
+            "Carry"
         ]
     },
     "centaur": {
@@ -1618,13 +1532,13 @@
             "Initiator",
             "Disabler",
             "Nuker",
-            "Escape"
+            "Carry"
         ],
         "roles_l": [
             "Initiator",
             "Disabler",
             "Nuker",
-            "Escape"
+            "Carry"
         ]
     },
     "shredder": {
@@ -1633,13 +1547,13 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Nuker",
             "Durable",
+            "Nuker",
             "Escape"
         ],
         "roles_l": [
-            "Nuker",
             "Durable",
+            "Nuker",
             "Escape"
         ]
     },
@@ -1649,16 +1563,14 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Carry",
             "Durable",
             "Initiator",
-            "Nuker"
+            "Disabler"
         ],
         "roles_l": [
-            "Carry",
             "Durable",
             "Initiator",
-            "Nuker"
+            "Disabler"
         ]
     },
     "tusk": {
@@ -1668,13 +1580,11 @@
         "atk_l": "Melee",
         "roles": [
             "Initiator",
-            "Disabler",
-            "Nuker"
+            "Durable"
         ],
         "roles_l": [
             "Initiator",
-            "Disabler",
-            "Nuker"
+            "Durable"
         ]
     },
     "skywrath_mage": {
@@ -1714,14 +1624,10 @@
         "atk_l": "Melee",
         "roles": [
             "Initiator",
-            "Disabler",
-            "Nuker",
             "Durable"
         ],
         "roles_l": [
             "Initiator",
-            "Disabler",
-            "Nuker",
             "Durable"
         ]
     },
@@ -1732,17 +1638,11 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Disabler",
-            "Initiator",
-            "Durable",
-            "Nuker"
+            "Durable"
         ],
         "roles_l": [
             "Carry",
-            "Disabler",
-            "Initiator",
-            "Durable",
-            "Nuker"
+            "Durable"
         ]
     },
     "ember_spirit": {
@@ -1752,17 +1652,11 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Escape",
-            "Nuker",
-            "Disabler",
-            "Initiator"
+            "Nuker"
         ],
         "roles_l": [
             "Carry",
-            "Escape",
-            "Nuker",
-            "Disabler",
-            "Initiator"
+            "Nuker"
         ]
     },
     "earth_spirit": {
@@ -1771,18 +1665,12 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Nuker",
-            "Escape",
-            "Disabler",
-            "Initiator",
-            "Durable"
+            "Carry",
+            "Nuker"
         ],
         "roles_l": [
-            "Nuker",
-            "Escape",
-            "Disabler",
-            "Initiator",
-            "Durable"
+            "Carry",
+            "Nuker"
         ]
     },
     "terrorblade": {
@@ -1803,18 +1691,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Support",
-            "Nuker",
             "Initiator",
-            "Escape",
-            "Disabler"
+            "Disabler",
+            "Nuker"
         ],
         "roles_l": [
-            "Support",
-            "Nuker",
             "Initiator",
-            "Escape",
-            "Disabler"
+            "Disabler",
+            "Nuker"
         ]
     },
     "oracle": {
@@ -1838,14 +1722,8 @@
         "bio": "In the storied saga of Dredger's Bight, no business has ever been more reviled than Techies Demolitions. Then again, Dredger's Bight no longer exists. Nor does Toterin. Or even Trapper Town. In fact, if one were to track the history of Techies Demolitions they might notice that shortly after Techies appear, towns tend to disappear.\r\nLike every inevitable disaster surrounding Techies, the obliteration of Dredger's Bight began with an invention. Tasked with designing a safer way of detonating explosives in the mines beneath the city, pyrotechnic prodigies Squee, Spleen, and Spoon developed their most outlandish creation yet: a button which, when pressed, would trigger a distant device to spark a fuse.\r\nOvereager to test their invention, the trio stuffed barrel after barrel with flamesalt explosives, piling every corner of their tiny workshop high with the newly developed remote bombs. From this stockpile they plucked a single payload, burying it in a far away field. As they cowered in a ditch, Spleen pressed the detonator button. Yet after a moment, nothing happened. Confused, he stood up, pressing his button again and again until, finally, an explosion tore a hole in the field. Elated, Squee and Spleen turned toward home just as a massive wave of sound and force arrived to knock them over.\r\nBewildered, their ears ringing from the unexpected blast, they gathered in the dingy miasma to see a smoking ruin where their workshop once stood. Chunks of wood and stone continued to fall as the yawning crater before them slowly deepened into an expanding pit. The whole of Dredger's Bight shuddered, and then gradually started to slide into the mines below as its panicked residents fled.\r\nSitting at the edge of their sinking home they grinned and giggled, as giddy at the possibilities as they were oblivious to the scorn of their former neighbors. They wondered only one thing: how could they trigger an even bigger blast?",
         "atk": "ranged",
         "atk_l": "Ranged",
-        "roles": [
-            "Nuker",
-            "Disabler"
-        ],
-        "roles_l": [
-            "Nuker",
-            "Disabler"
-        ]
+        "roles": [],
+        "roles_l": []
     },
     "winter_wyvern": {
         "name": "Winter Wyvern",
