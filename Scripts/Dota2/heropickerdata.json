@@ -6,11 +6,13 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Escape"
+            "Escape",
+            "Nuker"
         ],
         "roles_l": [
             "Carry",
-            "Escape"
+            "Escape",
+            "Nuker"
         ]
     },
     "axe": {
@@ -37,14 +39,16 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
+            "Support",
             "Disabler",
             "Nuker",
-            "Support"
+            "Durable"
         ],
         "roles_l": [
+            "Support",
             "Disabler",
             "Nuker",
-            "Support"
+            "Durable"
         ]
     },
     "bloodseeker": {
@@ -54,11 +58,17 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Jungler"
+            "Disabler",
+            "Jungler",
+            "Nuker",
+            "Initiator"
         ],
         "roles_l": [
             "Carry",
-            "Jungler"
+            "Disabler",
+            "Jungler",
+            "Nuker",
+            "Initiator"
         ]
     },
     "crystal_maiden": {
@@ -70,13 +80,13 @@
             "Support",
             "Disabler",
             "Nuker",
-            "LaneSupport"
+            "Jungler"
         ],
         "roles_l": [
             "Support",
             "Disabler",
             "Nuker",
-            "Lane Support"
+            "Jungler"
         ]
     },
     "drow_ranger": {
@@ -85,10 +95,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry"
+            "Carry",
+            "Disabler",
+            "Pusher"
         ],
         "roles_l": [
-            "Carry"
+            "Carry",
+            "Disabler",
+            "Pusher"
         ]
     },
     "earthshaker": {
@@ -116,11 +130,13 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Pusher"
+            "Pusher",
+            "Escape"
         ],
         "roles_l": [
             "Carry",
-            "Pusher"
+            "Pusher",
+            "Escape"
         ]
     },
     "mirana": {
@@ -163,14 +179,16 @@
         "roles": [
             "Carry",
             "Escape",
-            "Initiator",
-            "Nuker"
+            "Durable",
+            "Nuker",
+            "Disabler"
         ],
         "roles_l": [
             "Carry",
             "Escape",
-            "Initiator",
-            "Nuker"
+            "Durable",
+            "Nuker",
+            "Disabler"
         ]
     },
     "phantom_lancer": {
@@ -196,15 +214,15 @@
         "atk_l": "Ranged",
         "roles": [
             "Initiator",
-            "Nuker",
             "Disabler",
-            "Escape"
+            "Escape",
+            "Nuker"
         ],
         "roles_l": [
             "Initiator",
-            "Nuker",
             "Disabler",
-            "Escape"
+            "Escape",
+            "Nuker"
         ]
     },
     "pudge": {
@@ -213,12 +231,16 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
+            "Disabler",
+            "Initiator",
             "Durable",
-            "Disabler"
+            "Nuker"
         ],
         "roles_l": [
+            "Disabler",
+            "Initiator",
             "Durable",
-            "Disabler"
+            "Nuker"
         ]
     },
     "razor": {
@@ -229,12 +251,14 @@
         "roles": [
             "Carry",
             "Durable",
-            "Nuker"
+            "Nuker",
+            "Pusher"
         ],
         "roles_l": [
             "Carry",
             "Durable",
-            "Nuker"
+            "Nuker",
+            "Pusher"
         ]
     },
     "sand_king": {
@@ -277,16 +301,18 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
+            "Carry",
             "Disabler",
             "Initiator",
-            "Carry",
-            "Support"
+            "Durable",
+            "Nuker"
         ],
         "roles_l": [
+            "Carry",
             "Disabler",
             "Initiator",
-            "Carry",
-            "Support"
+            "Durable",
+            "Nuker"
         ]
     },
     "tiny": {
@@ -295,16 +321,20 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Disabler",
+            "Carry",
             "Nuker",
+            "Pusher",
             "Initiator",
-            "Durable"
+            "Durable",
+            "Disabler"
         ],
         "roles_l": [
-            "Disabler",
+            "Carry",
             "Nuker",
+            "Pusher",
             "Initiator",
-            "Durable"
+            "Durable",
+            "Disabler"
         ]
     },
     "vengefulspirit": {
@@ -398,12 +428,10 @@
         "atk_l": "Ranged",
         "roles": [
             "Support",
-            "LaneSupport",
             "Nuker"
         ],
         "roles_l": [
             "Support",
-            "Lane Support",
             "Nuker"
         ]
     },
@@ -413,16 +441,16 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
+            "Support",
             "Disabler",
             "Nuker",
-            "LaneSupport",
-            "Support"
+            "Initiator"
         ],
         "roles_l": [
+            "Support",
             "Disabler",
             "Nuker",
-            "Lane Support",
-            "Support"
+            "Initiator"
         ]
     },
     "shadow_shaman": {
@@ -431,16 +459,18 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
+            "Support",
             "Pusher",
             "Disabler",
             "Nuker",
-            "Support"
+            "Initiator"
         ],
         "roles_l": [
+            "Support",
             "Pusher",
             "Disabler",
             "Nuker",
-            "Support"
+            "Initiator"
         ]
     },
     "slardar": {
@@ -451,14 +481,16 @@
         "roles": [
             "Carry",
             "Durable",
+            "Initiator",
             "Disabler",
-            "Initiator"
+            "Escape"
         ],
         "roles_l": [
             "Carry",
             "Durable",
+            "Initiator",
             "Disabler",
-            "Initiator"
+            "Escape"
         ]
     },
     "tidehunter": {
@@ -500,11 +532,13 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Escape"
+            "Escape",
+            "Disabler"
         ],
         "roles_l": [
             "Carry",
-            "Escape"
+            "Escape",
+            "Disabler"
         ]
     },
     "enigma": {
@@ -514,14 +548,14 @@
         "atk_l": "Ranged",
         "roles": [
             "Disabler",
-            "Initiator",
             "Jungler",
+            "Initiator",
             "Pusher"
         ],
         "roles_l": [
             "Disabler",
-            "Initiator",
             "Jungler",
+            "Initiator",
             "Pusher"
         ]
     },
@@ -545,10 +579,12 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry"
+            "Carry",
+            "Nuker"
         ],
         "roles_l": [
-            "Carry"
+            "Carry",
+            "Nuker"
         ]
     },
     "necrolyte": {
@@ -558,11 +594,15 @@
         "atk_l": "Ranged",
         "roles": [
             "Carry",
-            "Durable"
+            "Nuker",
+            "Durable",
+            "Disabler"
         ],
         "roles_l": [
             "Carry",
-            "Durable"
+            "Nuker",
+            "Durable",
+            "Disabler"
         ]
     },
     "warlock": {
@@ -571,15 +611,13 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Initiator",
             "Support",
-            "LaneSupport",
+            "Initiator",
             "Disabler"
         ],
         "roles_l": [
-            "Initiator",
             "Support",
-            "Lane Support",
+            "Initiator",
             "Disabler"
         ]
     },
@@ -624,13 +662,15 @@
             "Support",
             "Nuker",
             "Initiator",
-            "Pusher"
+            "Pusher",
+            "Disabler"
         ],
         "roles_l": [
             "Support",
             "Nuker",
             "Initiator",
-            "Pusher"
+            "Pusher",
+            "Disabler"
         ]
     },
     "faceless_void": {
@@ -657,14 +697,18 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Durable",
             "Carry",
-            "Disabler"
+            "Support",
+            "Durable",
+            "Disabler",
+            "Initiator"
         ],
         "roles_l": [
-            "Durable",
             "Carry",
-            "Disabler"
+            "Support",
+            "Durable",
+            "Disabler",
+            "Initiator"
         ]
     },
     "death_prophet": {
@@ -673,14 +717,16 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
+            "Carry",
             "Pusher",
             "Nuker",
-            "Durable"
+            "Disabler"
         ],
         "roles_l": [
+            "Carry",
             "Pusher",
             "Nuker",
-            "Durable"
+            "Disabler"
         ]
     },
     "phantom_assassin": {
@@ -704,13 +750,11 @@
         "atk_l": "Ranged",
         "roles": [
             "Nuker",
-            "Pusher",
-            "Support"
+            "Pusher"
         ],
         "roles_l": [
             "Nuker",
-            "Pusher",
-            "Support"
+            "Pusher"
         ]
     },
     "templar_assassin": {
@@ -780,11 +824,13 @@
         "atk_l": "Ranged",
         "roles": [
             "Support",
-            "LaneSupport"
+            "Nuker",
+            "Disabler"
         ],
         "roles_l": [
             "Support",
-            "Lane Support"
+            "Nuker",
+            "Disabler"
         ]
     },
     "rattletrap": {
@@ -807,16 +853,18 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
+            "Carry",
+            "Support",
             "Nuker",
             "Pusher",
-            "Disabler",
-            "Support"
+            "Disabler"
         ],
         "roles_l": [
+            "Carry",
+            "Support",
             "Nuker",
             "Pusher",
-            "Disabler",
-            "Support"
+            "Disabler"
         ]
     },
     "furion": {
@@ -846,13 +894,15 @@
             "Carry",
             "Durable",
             "Jungler",
-            "Escape"
+            "Escape",
+            "Disabler"
         ],
         "roles_l": [
             "Carry",
             "Durable",
             "Jungler",
-            "Escape"
+            "Escape",
+            "Disabler"
         ]
     },
     "dark_seer": {
@@ -878,11 +928,13 @@
         "atk_l": "Ranged",
         "roles": [
             "Carry",
-            "Escape"
+            "Escape",
+            "Pusher"
         ],
         "roles_l": [
             "Carry",
-            "Escape"
+            "Escape",
+            "Pusher"
         ]
     },
     "omniknight": {
@@ -891,14 +943,14 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
+            "Support",
             "Durable",
-            "LaneSupport",
-            "Support"
+            "Nuker"
         ],
         "roles_l": [
+            "Support",
             "Durable",
-            "Lane Support",
-            "Support"
+            "Nuker"
         ]
     },
     "enchantress": {
@@ -941,12 +993,18 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
+            "Carry",
+            "Initiator",
             "Durable",
-            "Initiator"
+            "Disabler",
+            "Nuker"
         ],
         "roles_l": [
+            "Carry",
+            "Initiator",
             "Durable",
-            "Initiator"
+            "Disabler",
+            "Nuker"
         ]
     },
     "broodmother": {
@@ -955,14 +1013,16 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Pusher",
             "Carry",
-            "Escape"
+            "Pusher",
+            "Escape",
+            "Nuker"
         ],
         "roles_l": [
-            "Pusher",
             "Carry",
-            "Escape"
+            "Pusher",
+            "Escape",
+            "Nuker"
         ]
     },
     "bounty_hunter": {
@@ -971,12 +1031,10 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Carry",
             "Escape",
             "Nuker"
         ],
         "roles_l": [
-            "Carry",
             "Escape",
             "Nuker"
         ]
@@ -1001,15 +1059,15 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
+            "Support",
             "Nuker",
             "Pusher",
-            "LaneSupport",
             "Disabler"
         ],
         "roles_l": [
+            "Support",
             "Nuker",
             "Pusher",
-            "Lane Support",
             "Disabler"
         ]
     },
@@ -1020,14 +1078,14 @@
         "atk_l": "Ranged",
         "roles": [
             "Initiator",
+            "Jungler",
             "Disabler",
-            "Nuker",
             "Escape"
         ],
         "roles_l": [
             "Initiator",
+            "Jungler",
             "Disabler",
-            "Nuker",
             "Escape"
         ]
     },
@@ -1054,11 +1112,13 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Durable"
+            "Durable",
+            "Escape"
         ],
         "roles_l": [
             "Carry",
-            "Durable"
+            "Durable",
+            "Escape"
         ]
     },
     "doom_bringer": {
@@ -1113,16 +1173,18 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Durable",
             "Carry",
             "Initiator",
-            "Disabler"
+            "Disabler",
+            "Durable",
+            "Escape"
         ],
         "roles_l": [
-            "Durable",
             "Carry",
             "Initiator",
-            "Disabler"
+            "Disabler",
+            "Durable",
+            "Escape"
         ]
     },
     "gyrocopter": {
@@ -1131,14 +1193,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Disabler",
-            "Initiator",
-            "Nuker"
+            "Carry",
+            "Nuker",
+            "Disabler"
         ],
         "roles_l": [
-            "Disabler",
-            "Initiator",
-            "Nuker"
+            "Carry",
+            "Nuker",
+            "Disabler"
         ]
     },
     "alchemist": {
@@ -1147,14 +1209,20 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Durable",
             "Carry",
-            "Disabler"
+            "Support",
+            "Durable",
+            "Disabler",
+            "Initiator",
+            "Nuker"
         ],
         "roles_l": [
-            "Durable",
             "Carry",
-            "Disabler"
+            "Support",
+            "Durable",
+            "Disabler",
+            "Initiator",
+            "Nuker"
         ]
     },
     "invoker": {
@@ -1210,15 +1278,17 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Jungler",
             "Pusher",
-            "Durable"
+            "Jungler",
+            "Durable",
+            "Escape"
         ],
         "roles_l": [
             "Carry",
-            "Jungler",
             "Pusher",
-            "Durable"
+            "Jungler",
+            "Durable",
+            "Escape"
         ]
     },
     "brewmaster": {
@@ -1228,15 +1298,17 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Durable",
             "Initiator",
-            "Pusher"
+            "Durable",
+            "Disabler",
+            "Nuker"
         ],
         "roles_l": [
             "Carry",
-            "Durable",
             "Initiator",
-            "Pusher"
+            "Durable",
+            "Disabler",
+            "Nuker"
         ]
     },
     "shadow_demon": {
@@ -1247,11 +1319,13 @@
         "roles": [
             "Support",
             "Disabler",
+            "Initiator",
             "Nuker"
         ],
         "roles_l": [
             "Support",
             "Disabler",
+            "Initiator",
             "Nuker"
         ]
     },
@@ -1282,13 +1356,15 @@
             "Carry",
             "Disabler",
             "Durable",
-            "Pusher"
+            "Pusher",
+            "Initiator"
         ],
         "roles_l": [
             "Carry",
             "Disabler",
             "Durable",
-            "Pusher"
+            "Pusher",
+            "Initiator"
         ]
     },
     "meepo": {
@@ -1313,16 +1389,18 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Durable",
+            "Support",
             "Initiator",
-            "LaneSupport",
-            "Disabler"
+            "Durable",
+            "Disabler",
+            "Escape"
         ],
         "roles_l": [
-            "Durable",
+            "Support",
             "Initiator",
-            "Lane Support",
-            "Disabler"
+            "Durable",
+            "Disabler",
+            "Escape"
         ]
     },
     "ogre_magi": {
@@ -1331,14 +1409,18 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
+            "Support",
             "Nuker",
             "Disabler",
-            "Durable"
+            "Durable",
+            "Initiator"
         ],
         "roles_l": [
+            "Support",
             "Nuker",
             "Disabler",
-            "Durable"
+            "Durable",
+            "Initiator"
         ]
     },
     "undying": {
@@ -1379,16 +1461,16 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Nuker",
             "Support",
-            "Initiator",
-            "Disabler"
+            "Disabler",
+            "Nuker",
+            "Initiator"
         ],
         "roles_l": [
-            "Nuker",
             "Support",
-            "Initiator",
-            "Disabler"
+            "Disabler",
+            "Nuker",
+            "Initiator"
         ]
     },
     "nyx_assassin": {
@@ -1412,14 +1494,18 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
-            "Disabler",
+            "Support",
             "Pusher",
+            "Disabler",
+            "Initiator",
             "Escape"
         ],
         "roles_l": [
             "Carry",
-            "Disabler",
+            "Support",
             "Pusher",
+            "Disabler",
+            "Initiator",
             "Escape"
         ]
     },
@@ -1477,10 +1563,16 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Escape"
+            "Carry",
+            "Escape",
+            "Disabler",
+            "Nuker"
         ],
         "roles_l": [
-            "Escape"
+            "Carry",
+            "Escape",
+            "Disabler",
+            "Nuker"
         ]
     },
     "medusa": {
@@ -1489,10 +1581,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
-            "Carry"
+            "Carry",
+            "Disabler",
+            "Durable"
         ],
         "roles_l": [
-            "Carry"
+            "Carry",
+            "Disabler",
+            "Durable"
         ]
     },
     "troll_warlord": {
@@ -1514,13 +1610,17 @@
         "atk_l": "Melee",
         "roles": [
             "Durable",
+            "Initiator",
             "Disabler",
-            "Initiator"
+            "Nuker",
+            "Escape"
         ],
         "roles_l": [
             "Durable",
+            "Initiator",
             "Disabler",
-            "Initiator"
+            "Nuker",
+            "Escape"
         ]
     },
     "magnataur": {
@@ -1593,12 +1693,14 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
+            "Support",
             "Nuker",
-            "Support"
+            "Disabler"
         ],
         "roles_l": [
+            "Support",
             "Nuker",
-            "Support"
+            "Disabler"
         ]
     },
     "abaddon": {
@@ -1607,14 +1709,14 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Durable",
             "Support",
-            "Carry"
+            "Carry",
+            "Durable"
         ],
         "roles_l": [
-            "Durable",
             "Support",
-            "Carry"
+            "Carry",
+            "Durable"
         ]
     },
     "elder_titan": {
@@ -1679,10 +1781,14 @@
         "atk": "melee",
         "atk_l": "Melee",
         "roles": [
-            "Carry"
+            "Carry",
+            "Pusher",
+            "Nuker"
         ],
         "roles_l": [
-            "Carry"
+            "Carry",
+            "Pusher",
+            "Nuker"
         ]
     },
     "phoenix": {
@@ -1708,13 +1814,15 @@
         "atk_l": "Ranged",
         "roles": [
             "Support",
-            "LaneSupport",
-            "Nuker"
+            "Nuker",
+            "Disabler",
+            "Escape"
         ],
         "roles_l": [
             "Support",
-            "Lane Support",
-            "Nuker"
+            "Nuker",
+            "Disabler",
+            "Escape"
         ]
     },
     "techies": {
@@ -1730,7 +1838,15 @@
         "bio": "Like many great poets, Auroth just wants time to write, but the Winter Wyvern's life is full of interruptions. The epics of the Eldwurms have a long and colorful history, but some fear that the remaining dragon scholars are not as prolific as they once were, with few lines added to the Eldwurm Eddas since the last age of greatness. Auroth laments: \"We forget that there is more to life than triumph and dominion over enemies. We must also live our lives in the pursuit of creative expression.\" She embarks on research expeditions, collecting books for inspiration. But all this research can be terribly distracting, and she spends less time writing than she should. Although she knows she should be lurking in her lair, adding to the Eddas, she finds herself engaged in epic battles against powerful enemies. She loots castles, raids ancient libraries ... and if she happens to heap glory on herself in the process, she tells herself that it's merely a side effect of her research. The fact is, while her skill and power on the battlefield are legendary, her scholarly travails have thus far hardly been the stuff of literary acclaim. But she is not content to stand as a protagonist of heroic lore. She wishes also to create it.",
         "atk": "ranged",
         "atk_l": "Ranged",
-        "roles": [],
-        "roles_l": []
+        "roles": [
+            "Support",
+            "Disabler",
+            "Nuker"
+        ],
+        "roles_l": [
+            "Support",
+            "Disabler",
+            "Nuker"
+        ]
     }
 }
