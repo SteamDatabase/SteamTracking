@@ -5,23 +5,16 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 	
-	<LibraryAchievements defaultfocus="AchievementsLargeBody" >
-		<Panel id="AchievementsFullWrapper" class="AchievementsFullWrapper">
+	<LibraryAchievements defaultfocus="AchievementsSmallBody" >
+		<Button id="AchievementsFullWrapper" class="AchievementsFullWrapper" onactivate="ViewAllAchievements();">
 			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_Achievements" />
 			<Panel id="ParentalOverlay">
 				<ParentalReplacementPanel id="ParentalLockedReplacementPanel" />
 				<Panel id="AchievementsBody" class="AchievementsBody HideWhileLocked">
 					<Panel id="AchievementsSmallBody" class="AchievementsSmallBody">
-						<Panel id="MostRecentContainer" class="MostRecentContainer">
-							<Panel id="MostRecentWrapper" class="AchievementIcon">
-								<Image id="MostRecentImage" class="MostRecentImage" />
-							</Panel>
-							<Panel id="MostRecentLabels" class="MostRecentLabels">
-								<Label id="MostRecentHeader" class="MostRecentHeader" text="#Library_Details_Achievements_MostRecent" />
-								<Label id="MostRecentTitle" class="MostRecentTitle" />
-								<Label id="MostRecentDescription" class="MostRecentDescription" />
-							</Panel>
-						</Panel>
+						<Panel id="ProgressBarContainer">			
+							<Panel id="ProgressBar" />			
+						</Panel>			
 						<Panel id="RemainingBody" class="RemainingBody">
 							<Panel id="RemainingRowOne" class="RemainingRow">
 								<Panel id="RemainingWrapper1" class="AchievementIcon">
@@ -36,81 +29,14 @@
 								<Panel id="RemainingWrapper4" class="AchievementIcon" >
 									<Image id="Remaining4" class="Remaining4" />
 								</Panel>
-							</Panel>
-							<Panel id="RemainingRowTwo" class="RemainingRow">
-								<Panel id="RemainingWrapper5" class="AchievementIcon">
+								<Panel id="RemainingWrapper5" class="AchievementIcon" >
 									<Image id="Remaining5" class="Remaining5" />
-								</Panel>
-								<Panel id="RemainingWrapper6" class="AchievementIcon">
-									<Image id="Remaining6" class="Remaining6" />
-								</Panel>
-								<Panel id="RemainingWrapper7" class="AchievementIcon">
-									<Image id="Remaining7" class="Remaining7" />
-								</Panel>
-								<Panel id="RemainingWrapper8" class="AchievementIcon" >
-									<Label id="MoreRemainingLabel" class="MoreRemainingLabel" />
 								</Panel>
 							</Panel>
 						</Panel>
 					</Panel>
-					<Panel id="AchievementsLargeBody" class="AchievementsLargeBody" childfocusonhover="true" selectionposboundary="vertical">
-						<Button id="MostRecentDetail" class="MostRecentDetail" tabindex="0" selectionpos="1,0" onactivate="ViewAllAchievements();">
-							<Image id="RemainingDetailImage0" class="AchievementDetailImage" />
-							<Panel id="AchievementLabels" class="AchievementLabels">
-								<Label id="AchievementLabelHeader0" class="AchievementLabelHeader" text="#Library_Details_Achievements_MostRecent" />
-								<Label id="AchievementLabelTitle0" class="AchievementLabelTitle" />
-								<Label id="AchievementLabelDescription0" class="AchievementLabelDescription" />
-							</Panel>
-						</Button>
-						<Panel id="hr1" class="HorizontalRule" />
-						<Button id="Remaining1" class="RemainingDetail" tabindex="1" selectionpos="1,1" onactivate="ViewAllAchievements();">
-							<Image id="RemainingDetailImage1" class="AchievementDetailImage" />
-							<Panel id="AchievementLabels1" class="AchievementLabels">
-								<Label id="AchievementLabelHeader1" class="AchievementLabelHeader" text="#Library_Details_Achievements_SoClose" />
-								<Label id="AchievementLabelTitle1" class="AchievementLabelTitle" />
-								<Label id="AchievementLabelDescription1" class="AchievementLabelDescription" />
-							</Panel>
-						</Button>
-						<Panel id="hr2" class="HorizontalRule" />
-						<Button id="Remaining2" class="RemainingDetail" tabindex="2" selectionpos="1,2" onactivate="ViewAllAchievements();">
-							<Image id="RemainingDetailImage2" class="AchievementDetailImage" />
-							<Panel id="AchievementLabels2" class="AchievementLabels">
-								<Label id="AchievementLabelHeader2" class="AchievementLabelHeader" text="#Library_Details_Achievements_MoreUnachieved" />
-								<Label id="AchievementLabelTitle2" class="AchievementLabelTitle" />
-								<Label id="AchievementLabelDescription2" class="AchievementLabelDescription" />
-							</Panel>
-						</Button>
-						<Button id="Remaining3" class="RemainingDetail" tabindex="3" selectionpos="1,3" onactivate="ViewAllAchievements();">
-							<Image id="RemainingDetailImage3" class="AchievementDetailImage" />
-							<Panel id="AchievementLabels3" class="AchievementLabels">
-								<Label id="AchievementLabelTitle3" class="AchievementLabelTitle" />
-								<Label id="AchievementLabelDescription3" class="AchievementLabelDescription" />
-							</Panel>
-						</Button>
-						<Button id="Remaining4" class="RemainingDetail" tabindex="4" selectionpos="1,4" onactivate="ViewAllAchievements();">
-							<Image id="RemainingDetailImage4" class="AchievementDetailImage" />
-							<Panel id="AchievementLabels4" class="AchievementLabels">
-								<Label id="AchievementLabelTitle4" class="AchievementLabelTitle" />
-								<Label id="AchievementLabelDescription4" class="AchievementLabelDescription" />
-							</Panel>
-						</Button>
-						<Button id="Remaining5" class="RemainingDetail" tabindex="5" selectionpos="1,5" onactivate="ViewAllAchievements();">
-							<Image id="RemainingDetailImage5" class="AchievementDetailImage" />
-							<Panel id="AchievementLabels5" class="AchievementLabels">
-								<Label id="AchievementLabelTitle5" class="AchievementLabelTitle" />
-								<Label id="AchievementLabelDescription5" class="AchievementLabelDescription" />
-							</Panel>
-						</Button>
-						<Button id="Remaining6" class="RemainingDetail" tabindex="6" selectionpos="1,6" onactivate="ViewAllAchievements();">
-							<Image id="RemainingDetailImage6" class="AchievementDetailImage" />
-							<Panel id="AchievementLabels6" class="AchievementLabels">
-								<Label id="AchievementLabelTitle6" class="AchievementLabelTitle" />
-								<Label id="AchievementLabelDescription6" class="AchievementLabelDescription" />
-							</Panel>
-						</Button>
-					</Panel>
 				</Panel>
 			</Panel>
-		</Panel>
+		</Button>
 	</LibraryAchievements>
 </root>

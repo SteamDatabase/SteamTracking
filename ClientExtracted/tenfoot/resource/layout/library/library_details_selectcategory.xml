@@ -2,7 +2,6 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
-		<include src="file://{resources}/styles/button.css" />
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 
@@ -15,10 +14,10 @@
 			<Panel id="CategoryStack" />
 
 			<Panel id="MsgBoxButtons">
-				<Button onactivate="ButtonCreateCategory()">
+				<Button class="Button" onactivate="ButtonCreateCategory()">
 					<Label text="#Library_SelectCategory_AddCategory" />
 				</Button>
-				<Button onactivate="ButtonCancel()">
+				<Button class="Button" onactivate="ButtonCancel()">
 					<Label text="#UI_Done" />
 				</Button>
 			</Panel>

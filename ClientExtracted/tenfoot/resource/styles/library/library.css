@@ -1,15 +1,15 @@
 
 @define achievementstitle: gradient( linear, 80% 0%, 92% 0%, from( #f2f2f2ff ), to( #ebebeb00 ) );
 @define achievementsdesc: gradient( linear, 0% 0%, 0% 100%, from( #ffffffcc ), to( #ffffff88 ) );
-@define newstitle: gradient( linear, 80% 0%, 92% 0%, from( #f2f2f2bb ), to( #ebebeb00 ) );
+@define newstitle: #8f98a0ff;
 @define largenewstitle: gradient( linear, 0% 0%, 0% 160%, from( #f2f2f2ef ), to( #abababee ) );
 @define largenewsbyline: gradient( linear, 0% 0%, 100% 0%, from( #ffffff77 ), color-stop( 0.8, #ffffff77 ), to( #ffffff00 ) );
 @define largenewsbody: gradient( linear, 82% 0%, 98% 0%, from( #d2d2d2ef ), to( #8b8b8bce ) ); 
 @define largenewstitle_dark: gradient( linear, 0% 0%, 0% 100%, from( #0e0e0eff ), to( #3b3b3bce ) );
 @define largenewsbyline_dark: gradient( linear, 0% 0%, 160% 0%, from( #222222ff ), color-stop( 0.8, #222222ff ), to( #33333300 ) );
 @define largenewsbody_dark: gradient( linear, 82% 0%, 98% 0%, from( #666666ff ), to( #66666600 ) );
-@define playtime: gradient( linear, 92% 0%, 0% 110%, from( #c4c4c4dd ), to( #f2f2f2dd) );
-@define playtimetitle: gradient( linear, 80% 0%, 0% 100%, from( #d2d2d2ef ), to( #8b8b8bce ) );  
+@define playtime: gradient( linear, 92% 0%, 0% 110%, from( #c6d4dfff ), to( #c6d4dfff) );
+@define playtimetitle: gradient( linear, 80% 0%, 0% 100%, from( #67c1f5ff ), to( #67c1f5ff ) );
 @define achievementdetailsheader: gradient( linear, 0% 0%, 0% 100%, from( #ddddddff ), to( #cecece99 ) );
 @define achievementdetailsheaderdark: gradient( linear, 0% 0%, 0% 100%, from( #525252ef ), to( #3b3b3bce ) );
 @define achievementstitledark: gradient( linear, 80% 0%, 92% 0%, from( #000000ce ), to( #00000000 ) );
@@ -21,11 +21,17 @@
 @define guidedetailsheader: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ef ), to( #8b8b8bce ) );
 @define guidedetailsheaderdark: gradient( linear, 0% 0%, 0% 100%, from( #525252ef ), to( #3b3b3bce ) );
 
+@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #265c7c ), to( #3b647e ) );
+
 @define shortduration: 0.25s;
 @define shortmedduration: 0.3s;
 @define mediumduration: 0.4s;
 @define longduration: 1.7s;
 
+@define readytoplaygreen: #A4D007;
+@define installedblue: blue;
+
+@define SettingsPanelTransitionDuration: 0.23s;
 
 .RecentApp
 {
@@ -303,7 +309,7 @@ LibraryPanel
 LibraryMostRecent:descendantfocus .RecentApp:descendantfocus
 {
 	desaturation: 0;
-	transform: translateY( 00px );
+	transform: translateY( 0px );
 
 	pre-transform-scale2d: 1.1;
 
@@ -331,101 +337,138 @@ LibraryMostRecent:descendantfocus .RecentApp:descendantfocus
 	opacity-mask: url( "file://{images}/focus_shadow_left.png" ) 0.0;
 }
 
-#PlatformSupport
+#LibraryGameStatus .AppGridItem.ReadyToPlay
 {
-	margin: 0px;
-	padding-left: 6px;
-	padding-right: 15px;
-	width: fit-children;
-	margin-top: 0px;
-	height: 50px;
 
-	flow-children: right;
-	horizontal-align: right;
+	opacity: 1.0;
+	background-color: #66c0f4;	
+
+}
+
+#PlatformSupport, #SuggestedStatusWrapper
+{
+	flow-children: down;
+	horizontal-align: center;
 	opacity: 0.0;
+	transform: translateY( 0px );
 
-	transition-property: opacity;
+	transition-property: height, transform, opacity;
 	transition-duration: 0.4s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
-.LibraryAllGames #PlatformSupport
+#SuggestedStatusWrapper
 {
-	margin-top: -2px;
-	margin-bottom: -16px;
-	padding-right: 0px;
-	margin-right: -10px;
+	width: 100%;
 }
 
-#LibraryMostRecent:descendantfocus #PlatformSupport
+#LibraryMostRecent:descendantfocus #PlatformSupport,
+.LibraryAllGames:descendantfocus #PlatformSupport,
+LibrarySuggestions:descendantfocus #SuggestedStatusWrapper
 {
 	opacity: 1.0;
 }
 
-.LibraryAllGames:descendantfocus #PlatformSupport
+.StreamingVideoSupport,
+.ReadyToPlay #ReadyToPlay, .ReadyToStream #ReadyToStream, #ReadyToDownload, .UnavailableOnPlatform #NotReadyToPlay,
+#GridControllerSupport
 {
+	width: 40px;
+	height: 36px;
+	visibility: collapse;
 	opacity: 1.0;
-}
+	
+	background-color: black;
+	margin-bottom: 2px;
 
-.CapsuleControllerSupport, .MacSupport, .WindowsSupport, .SteamOSSupport, .StreamingVideoSupport
-{
-	width: 50px;
-	height: 50px;
+	background-size: contain;
+	background-repeat: no-repeat;
 	horizontal-align: right;
 	vertical-align: bottom;
 
-	visibility: collapse;
-	opacity: 0.0;
+	background-position: center;
 
-	transition-property: wash-color, opacity;
+	transition-property: wash-color, opacity, transform;
 	transition-duration: 0.2s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-LibraryRecentApp:focus .CapsuleControllerSupport, LibraryRecentApp:focus .MacSupport, LibraryRecentApp:focus .WindowsSupport, LibraryRecentApp:focus .SteamOSSupport, LibraryRecentApp:focus .StreamingVideoSupport,
-AppGridItem:focus .CapsuleControllerSupport, AppGridItem:focus .MacSupport, AppGridItem:focus .WindowsSupport, AppGridItem:focus .SteamOSSupport, AppGridItem:focus .StreamingVideoSupport
+LibraryRecentApp:focus .StreamingVideoSupport,
+AppGridItem:focus .StreamingVideoSupport
 {
 	opacity: 1.0;
 	wash-color: applabelsolid;
 	margin: 0px;
 }
 
-.MacAvailable .MacSupport
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_mac_storefront.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
-.SteamOSAvailable .SteamOSSupport
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_steamos_storefront.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
-.WindowsAvailable .WindowsSupport
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_windows_storefront.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	horizontal-align: right;
-	vertical-align: bottom;
-}
-
 .StreamingVideoAvailable .StreamingVideoSupport
 {
-	visibility: visible;
 	background-image: url( "file://{images}/store/icon_streamingvideo_storefront.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	horizontal-align: right;
-	vertical-align: bottom;
 }
+
+#ReadyToDownload
+{
+	background-color: installedblue;
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_readytodownload.png" );
+}	
+
+.ReadyToPlay #ReadyToPlay
+{
+	background-color: readytoplaygreen;
+	opacity: 1.0;
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_readytoplay.png" );
+}
+
+.ReadyToStream #ReadyToStream
+{
+	background-color: readytoplaygreen;
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_readytostream.png" );
+}
+
+.ReadyToPlay.ReadyToStream #ReadyToStream
+{
+	visibility: collapse;
+}
+
+.UnavailableOnPlatform #NotReadyToPlay
+{
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_readytofail.png" );
+}
+
+#GridControllerSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
+}
+
+.SteamPad #GridControllerSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/controller_support_legacy.png" );
+}
+
+.FullController #GridControllerSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/controller_support_full.png" );
+}
+
+.SteamPad .FullController #GridControllerSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/controller_support_native.png" );
+}
+
+
+
+
+
+
 
 //A recent app's hover state... when not focused on its own carousel
 .LibraryPanel:descendantfocus .MostRecentBaseVisible .RecentApp:hover
@@ -580,7 +623,7 @@ LibraryAppDetails
 	desaturation: 1.0;
 	z-index: 3;
 	width: 100%;
-	height: 948px;
+	height: 1016px;
 
 	transform: translate3d( 0px, 1280px, 1000px );
 
@@ -592,7 +635,7 @@ LibraryAppDetails
 
 .LibraryAppDetailsVisible
 {
-	transform: translate3d( 0px, 132px, 0px );
+	transform: translate3d( 0px, 64px, 0px );
 	opacity: 1.0;
 	desaturation: 0.0;
 	box-shadow: #000000aa -2px -2px 4px 4px;
@@ -649,6 +692,7 @@ LibraryAppDetails
 	animation-duration: 14s;
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: 1;
+	desaturation: 0.8;
 }
 
 .DetailsBackground .BGScreenshotInvisible
@@ -668,14 +712,14 @@ LibraryAppDetails
 	
 	4%
 	{
-		opacity: 0.6;
+		opacity: 0.4;
 		transform: translate3D( -15px, -10px, 40px );
 		animation-timing-function: bigpicture-ease-in-out;
 	}
 	
 	96%
 	{
-		opacity: 0.6;
+		opacity: 0.4;
 		transform: translate3D( -60px, 0px, 80px );
 		animation-timing-function: ease-in;
 	}
@@ -712,7 +756,7 @@ LibraryAppDetails .UpperRow
 	height: fit-children;
 	flow-children: down;
 	width: 100%;
-	margin: 112px 106px;
+	margin: 20px 50px;
 	z-index: -1;
 }
 
@@ -723,7 +767,7 @@ LibraryAppDetails .GameName
 	color: applabel;
 	width: 1800px;
 	font-size: 56px;
-	margin-left: -3px;
+	margin-left: 10px;
 	white-space: nowrap;
 	font-weight: bold;
 }	
@@ -731,7 +775,7 @@ LibraryAppDetails .GameName
 LibraryAppDetails .GameStatus
 {
 	font-family: platformfont;
-	color: messagecolorwash;
+	color: playtimetitle;
 	opacity: 1.0;
 	width: fit-children;
 	font-size: 24px;
@@ -739,23 +783,26 @@ LibraryAppDetails .GameStatus
 	font-weight: normal;
 }
 
-#DescriptionArea
+.AppMiscHeader
 {
 	flow-children: right;
 	vertical-align: top;
 	width: 100%;
-	height: 50px;
+	height: fit-children;
+	padding: 5px 20px;
+}
+#PlayStatsArea.AppMiscHeader {
+	height: 70px;
+}
+
+
+.LibrarySpacer {
+	width: 100%;
+	height: 20px;
 }
 
 #GameRequires
 {
-	//background-color: #3486b0;
-	padding: 7px 12px;
-	flow-children: right;
-	width: 60%;
-	transform: translateY( -52px );
-	horizontal-align: center;
-	text-align: center;
 	visibility: collapse;
 }
 
@@ -775,7 +822,6 @@ LibraryAppDetails #GameRequiresLabel
 	font-family: platformfont;
 	font-style: italic;
 	font-size: 24px;
-	text-align: center;
 	font-weight: normal;
 	color: messagecolorwash;
 	opacity: 1.0;
@@ -805,70 +851,234 @@ LibraryAppDetails #GameRequiresLabel
 	background-image: url( "file://{images}/store/icon_keyboard_60px.png" );
 }
 
+
+#DesktopPanels
+{
+	width: 100%;
+	height: 100%;
+	flow-children: right;
+	margin-top: 125px;
+	margin-bottom: 120px;
+}
+
+#CommonControls
+{
+	width: fit-children;
+	height: 100%;
+	flow-children: down;
+	margin-left: 50px;
+	margin-right: 40px;
+}
+
+.AppMiscHeader .DataHeader
+{
+	font-size: 22px;
+	font-weight: normal;
+	color: moduledatalabel;
+	opacity: 1.0;
+	transition-property: opacity, border, color, color !immediate;
+	margin-right: 10px;
+}
+.AppMiscHeader .DataValue
+{
+	font-size: 22px;
+	font-weight: medium;
+	color: playtime;
+	width: 100%;
+	opacity: 1.0;
+}
+
+#PlayStatsArea
+{
+	visibility: collapse;
+}
+
+#PlayStatsArea .PlayTimeData
+{
+	min-width: 275px;
+	flow-children: down;
+}
+
+#PlayStatsArea.HasPlaytime,
+#PlayStatsArea.HasLastPlayedTime
+{
+	visibility: visible;
+}
+
+#PlayStatsArea #YouWatchedHeader, 
+#PlayStatsArea #LastWatchedHEader
+{
+	visibility: collapse;
+}
+
+#PlayStatsArea.IsVideo #YouWatchedHeader,
+#PlayStatsArea.IsVideo #LastWatchedHeader
+{
+	visibility: visible;
+}
+#PlayStatsArea.IsVideo #YouPlayedHeader,
+#PlayStatsArea.IsVideo #LastPlayedHeader
+{
+	visibility: collapse;
+}
+
+#PlayStatsArea #ForeverPlaytime
+{
+	visibility: collapse;
+}
+#PlayStatsArea.HasPlaytime #ForeverPlaytime
+{
+	visibility: visible;
+}
+
+#PlayStatsArea #LastPlayed
+{
+	visibility: collapse;
+}
+#PlayStatsArea.HasLastPlayedTime #LastPlayed
+{
+	visibility: visible;
+}
+
+#PlayStatsArea .YouPlayedValue
+{
+	visibility: collapse;
+}
+#PlayStatsArea.PlaytimeMinutesSingular #YouPlayedMinutesSingular
+{
+	visibility: visible;
+}
+#PlayStatsArea.PlaytimeMinutes #YouPlayedMinutes
+{
+	visibility: visible;
+}
+#PlayStatsArea.PlaytimeHoursSingular #YouPlayedHoursSingular
+{
+	visibility: visible;
+}
+#PlayStatsArea.PlaytimeHours #YouPlayedHours
+{
+	visibility: visible;
+}
+
+#PlayStatsArea #CloudStatus
+{
+	visibility: collapse;
+}
+#PlayStatsArea.HasCloudStatus #CloudStatus
+{
+	visibility: visible;
+}
+
+#SharingDetails
+{
+	visibility: collapse;
+}
+#SharingDetails.Shared
+{
+	visibility: visible;
+}
+
+
+
+
 LibraryAppDetails .ContentsRow
 {
 	horizontal-align: center;
-	width: 100%; 
-	height: 580px;
+	width: 100%;
+	height: 100%;
 	z-index: 0;
 	position: 0px 220px 0px;
-	flow-children: right;
+	flow-children: right-wrap;
 
 	transition-property: opacity, desaturation, pre-transform-scale2d, transform;
 	transition-duration: shortduration !immediate;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
+.ContentsRow .LibraryDetailsScrollableArea
+{
+	margin: -10px;
+	padding: 10px;
+	padding-bottom: 20px;
+	width: 1300px;
+	overflow: squish scroll;
+	flow-children: right-wrap;
+
+	transition-property: opacity, opacity-mask;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+}
+.ContentsRow .LibraryDetailsScrollableArea.Overlay
+{
+	width: 1350px;
+}
+
+.LibraryDetailsSectionRow
+{
+	width: 1300px;
+	height: fit-children;
+	flow-children: right-wrap;
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #66c0f433 ), to( #66c0f400 ) );
+	margin: -10px;
+	padding: 10px;
+	padding-bottom: 20px;
+}
+.LibraryDetailsSectionRow.PlayArea {
+	background-color: gradient( linear, 0% 0%, 1% 80%, from( #66c0f433 ), to( #66c0f400 ) );
+}
+.LibraryDetailsSectionRow.ShortArea {
+	background-color: gradient( linear, 0% 0%, 1% 70%, from( #66c0f433 ), to( #66c0f400 ) );
+}
+.LibraryDetailsSectionRow.TallArea {
+	background-color: gradient( linear, 0% 0%, 3% 67%, from( #66c0f433 ), to( #66c0f400 ) );
+	margin-top: 5px;
+}
+
+.LibraryPlayRow
+{
+	width: 100%;
+	height: fit-children;
+	flow-children: right;
+}
+.PlayHeaderDetails
+{
+	width: 100%;
+	height: fit-children;
+	flow-children: down;
+}
 
 .DetailsDataPanel
 {
-	margin: 8px;
-	width: 365px;
-	height: 260px;
+	width: 425px;
+	height: 300px;
+
 	background-color: transparent_module;
 	flow-children: down;
-
-	transform: translatey( 215px );
 
 	transition-property: transform, position, border, background-color, opacity, pre-transform-scale2d, box-shadow !immediate;
 	transition-duration: shortduration !immediate;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
-}
+	pre-transform-scale2d: 0.95;
 
+	box-shadow: fill #00000033 -3px -3px 6px 6px;
+}
+.DetailsDataPanel.Small
+{
+	height: 150px;
+}
 .DetailsDataPanel:hover
 {
-	z-index: 90;
-	transition-duration: shortduration !immediate;
-
+	pre-transform-scale2d: 1;
 }
-
-.DetailsDataPanel .HeaderLabel
+.DetailsDataPanel:focus, .DetailsDataPanel:descendantfocus
 {
-	font-family: platformfont;
-	margin: 30px 20px 6px 18px;
-	padding-right: 8px;
-	font-size: 38px;
-	color: detailsdatalabel;
-	opacity: 1.0;
-	horizontal-align: left;
-	width: 100%;
-	transition-duration: shortduration;
-	transition-property: transform;
-	transition-timing-function: bigpicture-ease-in-out;
-	transform: translatex( 22px );
-	font-weight: light;
-}
-
-.PlayActionFullWrapper .HeaderLabel
-{
-	transform: translatex( 0px );
-}
-
-.DetailsDataPanel:descendantfocus .HeaderLabel
-{
-	color: detailsdatalabelfocus;
-	transform: translatex( 4px );
+	pre-transform-scale2d: 1.0;
 }
 
 .DetailsDataPanel:descendantfocus, .DetailsDataPanel:focus
@@ -887,10 +1097,105 @@ LibraryAppDetails .ContentsRow
 	animation-direction: normal;
 }
 
+.DetailsDataPanel .HeaderLabel
+{
+	font-family: platformfont;
+	margin: 10px 10px 0px 10px;
+	padding-right: 8px;
+	font-size: 26px;
+	color: moduledatalabel;
+	opacity: 1.0;
+	horizontal-align: left;
+	width: 100%;
+	transition-duration: shortduration;
+	transition-property: transform;
+	transition-timing-function: bigpicture-ease-in-out;
+	font-weight: light;
+}
+
+.DetailsDataPanel:descendantfocus .HeaderLabel
+{
+	color: detailsdatalabelfocus;
+}
+
+LibrarySettings
+{
+	width: 100%;
+	height: 100%;
+}
+
+#LibrarySettings
+{
+	width: 100%;
+	height: 100%;
+
+	font-size: 24px;
+	font-family: platformfont;
+	margin-left: 0px;
+
+	transition-property: opacity, opacity-mask;
+	transition-duration: SettingsPanelTransitionDuration;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	background-color: settingsbackgroundgradient;
+	color: tcstatictext;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	background-color: settingsbackgroundgradient;
+
+	transition-property: opacity, pre-transform-scale2d, transform;
+	transition-duration: .3s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.LibrarySettingsVisible
+{
+	transform: translate3d( 0px, 64px, 0px );
+	opacity: 1.0;
+	desaturation: 0.0;
+	box-shadow: #000000aa -2px -2px 4px 4px;
+}
+
+.LibrarySettingsSlideOff
+{
+	opacity: 0.0;
+}
+
+
+
+ParentalButton.Locked
+{
+	wash-color: parental_locked_wash;
+	color: #ffffffff;
+}
+
+
+.LinksAndMore
+{
+	width: 425px;
+	height: 100%;
+	background-color: #00000000;
+	flow-children: down;
+}
+
 .LinksAndMoreFullWrapper .ContentsWrapper
 {
 	width: 100%;
 	height: 100%;
+}
+
+/* for some reason, it's not working to override this in overlay.css */
+#OverlayBasePanel #SmallHeaderImage
+{
+	visibility: collapse;
+}
+#OverlayBasePanel .LinksAndActionsWrapper
+{
+	margin-top: 0px;
+}
+#OverlayBasePanel #hr0
+{
+	visibility: collapse;
 }
 
 .LinksAndMoreFullWrapper .ShortcutOrMod .HorizontalRule
@@ -903,15 +1208,20 @@ LibraryAppDetails .ContentsRow
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	opacity: 0.0;
+	opacity: 1.0;
 	overflow: squish scroll;
 
-	margin-right: 6px;
-	margin-bottom: 6px;
+	margin-top: 190px;
 	transition-duration: shortduration;
 	transition-property: opacity;
 	transition-timing-function: ease-out;
 
+}
+
+.LinksAndMoreFullWrapper
+{
+	width: 100%;
+	height: 100%;
 }
 
 .LinksAndActionsWrapper VerticalScrollBar
@@ -932,7 +1242,6 @@ LibraryAppDetails .ContentsRow
 
 .LinksAndMore:focus .LinksAndActionsWrapper, .LinksAndMore:descendantfocus .LinksAndActionsWrapper
 {
-	opacity: 1.0;
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
 	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
@@ -941,46 +1250,32 @@ LibraryAppDetails .ContentsRow
 .LinksAndMoreButton
 {
 	width: 100%;
-	margin: 4px 20px 10px 26px;
-	height: 60px;
+	margin: 4px 10px 4px 10px;
+	height: 40px;
 	flow-children: right;
 	box-shadow: none;
 	color: detailsdatalabelfocus;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
+	background-color: #073050;
 	border-style: solid;
 	border-width: 5px;
 	border-color: #3d414200;
-
-	transition-property: border, background-color, color, box-shadow, wash-color;
-	transition-timing-function: ease-out;
 }
 
 .LinksAndMoreButton Label
 {
 	width: 100%;
 	font-family: platformfont;
-	font-size: 28px;
+	font-size: 24px;
 	font-weight: normal;
-	margin-top: 7px;
-	margin-left: 8px;
-	transform: translatex(-7px);
 	color: detailsdatalabelfocus;
-	transition-property: transform;
-	transition-duration: shortduration;
-	transition-timing-function: ease-in;
 }
 
 .LinksAndMoreButton:focus Label
 {
 	color: #161718f5;
-	transform: translatex(0px);
 }
 
-ParentalButton.Locked
-{
-	wash-color: parental_locked_wash;
-	color: #ffffffff;
-}
+
 
 .LinksAndMoreButton.Locked
 {
@@ -1001,8 +1296,8 @@ ParentalButton.Locked
 {
 	vertical-align: center;
 	horizontal-align: right;
-	height: 44px;
-	width: 44px;
+	height: 34px;
+	width: 34px;
 	margin-right: 4px;
 	wash-color: none;
 	opacity: 0.0;
@@ -1033,15 +1328,13 @@ ParentalButton.Locked
 
 .LinksAndMoreButton:focus
 {
-	transition-duration: mediumduration !immediate;
-
 	color: #161718f5;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
 	
-	animation-name: links-and-more-button-focus; 
+	animation-name: nx-button-focus; 
 	animation-duration: longduration;
 	animation-delay: mediumduration;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -1050,40 +1343,30 @@ ParentalButton.Locked
 }
 
 
-.DetailsDataPanel .SmallHeaderImage
+.LinksAndMore .SmallHeaderImage
 {
-	margin: 20px;
-	margin-left: 24px;
-	pre-transform-scale2d: 1.54;
-	transform: translatex(98px) translatey(30px);
-	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-	box-shadow: #00000033 -4px -4px 6px 8px;
-	width: 292px;
-	height: 136.5px;
+	margin: 0px 10px 0px 10px;
+	width: 100%;
 	background-color: dialog_bg_color;
 }
 
-.LinksAndMore,
-.Achievements,
-.FriendsWhoPlay,
-.Guides,
-.RecentNews,
-.Workshop,
-.Screenshots,
-.Controller,
-.DLC
+.LinksAndMore:descendantfocus, .LinksAndMore:focus
 {
-	margin-left: -36px;
-	margin-right: -36px;
-	margin-top: 12px;
-	margin-bottom: 12px;
-	width: 534px;
-	height: 606px;
-	pre-transform-scale2d: 0.818, 0.515;
-	transform: translatey( 92px );
+	z-index: 100;
+}
+
+.PlayAction
+{
+	height: 125px;
+}
+
+.DetailsDataPanel
+{
+	flow-children: down;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 0px;
+	border-color: #b6e1fa00;
 }
 
 .Offline .FriendsWhoPlay
@@ -1091,86 +1374,35 @@ ParentalButton.Locked
 	visibility: collapse;
 }
 
-.LinksAndMore:hover,
-.Achievements:hover,
-.FriendsWhoPlay:hover,
-.Guides:hover,
-.RecentNews:hover,
-.Workshop:hover,
-.Screenshots:hover,
-.Controller:hover,
-.DLC:hover
+.DetailsDataPanel:descendantfocus, .DetailsDataPanel:focus
 {
-	pre-transform-scale2d: 0.85072, 0.5356;
-}
-
-
-.LinksAndMore:descendantfocus, .LinksAndMore:focus,
-.Achievements:descendantfocus, .Achievements:focus,
-.FriendsWhoPlay:descendantfocus, .FriendsWhoPlay:focus,
-.Guides:descendantfocus, .Guides:focus,
-.RecentNews:descendantfocus, .RecentNews:focus,
-.PlayAction:descendantfocus, .PlayAction:focus,
-.Workshop:descendantfocus, .Workshop:focus,
-.Screenshots:descendantfocus, .Screenshots:focus,
-.Controller:descendantfocus, .Controller:focus,
-.DLC:descendantfocus, .DLC:focus,
-{
-	pre-transform-scale2d: 1.0, 1.0;
-	transform: translatey( 0px );
 	z-index: 100;
 	background-color: action_module;
-	flow-children: down;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 0px;
+	border-color: #b6e1faff;
 }
 
-.Workshop
-{
-	
-}
 
-.Workshop:descendantfocus
-{
-	
-}
 
 #Star1, #Star2, #Star3, #Star4, #Star5
 {
-	width: 34px;
-	height: 34px;
+	width: 28px;
+	height: 28px;
 	margin-right: 6px;
 	margin-top: 2px;
-
 }
 
-
-.LinksAndMore:descendantfocus:hover,
-.Achievements:descendantfocus:hover,
-.FriendsWhoPlay:descendantfocus:hover,
-.Guides:descendantfocus:hover,
-.RecentNews:descendantfocus:hover,
-.PlayAction:descendantfocus:hover,
-.Workshop:descendantfocus:hover,
-.Screenshots:descendantfocus:hover,
-.Controller:descendantfocus:hover,
-.DLC:descendantfocus:hover,
+.DetailsDataPanel:descendantfocus:hover,
 {
-	pre-transform-scale2d: 1.0, 1.0;
 	z-index: 100;
-	flow-children: down;
 }
 
-.LinksAndMore:descendantfocus .SmallHeaderImage, .LinksAndMore:focus .SmallHeaderImage
-{
-	pre-transform-scale2d: 1.54;
-	margin-left: 25px;
-	opacity: 0.0;
-}
-
-
-.LinksAndMoreFullWrapper, 
 .AchievementsFullWrapper,
 .FriendsWhoPlayFullWrapper,
 .GuidesFullWrapper,
+.CommunityHubFullWrapper,
 .RecentNewsFullWrapper,
 .WorkshopFullWrapper,
 .ScreenshotsFullWrapper,
@@ -1180,31 +1412,6 @@ ParentalButton.Locked
 	width: 100%;
 	height: 100%;
 	flow-children: down;
-	pre-transform-scale2d: 1.0597, 1.683202628646;
-	transform: translate3d( -7px, 179px, 0px );
-
-	transition-property: transform, position, width, height, border, background-color, opacity, pre-transform-scale2d !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-}
-
-.LinksAndMore:descendantfocus .LinksAndMoreFullWrapper, .LinksAndMore:focus .LinksAndMoreFullWrapper,
-.Achievements:descendantfocus .AchievementsFullWrapper, .Achievements:focus .AchievementsFullWrapper,
-.FriendsWhoPlay:descendantfocus .FriendsWhoPlayFullWrapper, .FriendsWhoPlay:focus .FriendsWhoPlayFullWrapper,
-.Guides:descendantfocus .GuidesFullWrapper, .Guides:focus .GuidesFullWrapper,
-.RecentNews:descendantfocus .RecentNewsFullWrapper, .RecentNews:focus .RecentNewsFullWrapper,
-.Workshop:descendantfocus .WorkshopFullWrapper, .Workshop:focus .WorkshopFullWrapper,
-.Screenshots:descendantfocus .ScreenshotsFullWrapper, .Screenshots:focus .ScreenshotsFullWrapper,
-.Controller:descendantfocus .ControllerFullWrapper, .Controller:focus .ControllerFullWrapper,
-.DLC:descendantfocus .DLCFullWrapper, .DLC:focus .DLCFullWrapper,
-{
-	width: 100%;
-	height: 100%;
-	flow-children: down;
-	pre-transform-scale2d: 1.0;
-	transform: translatey( 0px );
-
 }
 
 LibraryAchievements .AchievementsBody
@@ -1214,18 +1421,10 @@ LibraryAchievements .AchievementsBody
 
 	margin-top: 6px;
 
-	pre-transform-scale2d: 1.15254, 1.15254;
-	transform: translatex( 54px ) translatey( 34px );
 	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate; 
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
-}
-
-LibraryAchievements:focus .AchievementsBody, LibraryAchievements:descendantfocus .AchievementsBody
-{
-	pre-transform-scale2d: 1.0, 1.0;
-	transform: translatex( -3px );
 }
 
 LibraryAchievements .AchievementsSmallBody
@@ -1241,218 +1440,26 @@ LibraryAchievements .AchievementsSmallBody
 	transform: translatex( 3px );
 }
 
-LibraryAchievements:focus .AchievementsSmallBody, LibraryAchievements:descendantfocus .AchievementsSmallBody
+LibraryAchievements #ProgressBarContainer
 {
-	opacity: 0.0;
+	margin: 0px 10px 10px 10px;
+	width: 100%;
+	height: 20px;
+	background-color: #09334dFF;
 }
 
-LibraryAchievements .AchievementsLargeBody
+LibraryAchievements #ProgressBar
 {
-	width: 100%;
+	width: 0%;
+	background-color: moduledatalabel;
 	height: 100%;
-	flow-children: down;
-	overflow: squish scroll;
-
-	margin-right: 6px;
-	margin-bottom: 12px;
-	opacity: 0.0;
-	transition-property: opacity !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-LibraryAchievements:focus .AchievementsLargeBody, LibraryAchievements:descendantfocus .AchievementsLargeBody
-{
-	opacity: 1.0;
-	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
-}
-
-.MostRecentDetail, .RemainingDetail
-{
-	flow-children: right;
-	margin: 3px 22px 0px 28px;
-	height: 108px;
-	width: 100%;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #00000000;
-	color: detailsdatalabelfocus;
-
-	transition-property: opacity, border, background-color !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-.MostRecentDetail:focus, .RemainingDetail:focus
-{
-	transition-duration: shortduration !immediate;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	color: #161718f5;
-
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
-
-	animation-name: links-and-more-button-focus;
-	animation-duration: longduration;
-	animation-delay: mediumduration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-.MostRecentDetail Panel, .MostRecentDetail Image, .RemainingDetail Panel, .RemainingDetail Image
-{
-	transition-property: transform !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	transform: translatex( 0px );
-}
-
-.MostRecentDetail:focus Panel, .MostRecentDetail:focus Image, .RemainingDetail:focus Panel, .RemainingDetail:focus Image
-{
-	transform: translatex( 7px );
-}
-
-LibraryAchievements .AchievementDetailImage
-{
-	vertical-align: center;
-	width: 75px;
-	height: 75px;
-	margin: 0px 16px 0px 0px;
-	border-style: solid;
-	border-width: 4px;
-	border-radius: 0px;
-	border-color: #404040e0;
-	box-shadow: fill #00000060 0px 0px 6px 0px;
-}
-
-
-LibraryAchievements .AchievementLabels 
-{
-	flow-children: down;
-	height: 100%;
-	width: 100%;
-	margin-right: 7px;
-}
-
-LibraryAchievements .AchievementLabels Label
-{
-	white-space: nowrap;
-
-	transition-property: opacity, border, background-color, color !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	font-family: platformfont;
-}
-
-LibraryAchievements .AchievementLabels .AchievementLabelHeader
-{
-	font-weight: normal;
-	font-size: 20px;
-	max-height: 26px;
-	margin-top: 8px;
-	margin-bottom: -8px;
-	color: achievementdetailsheader;
-}
-
-LibraryAchievements .AchievementLabels .AchievementLabelTitle
-{
-	margin-top: 8px;
-	font-size: 24px;
-	margin-bottom: 2px;
-	max-height: 32px;
-	font-weight: bold;
-	width: 100%;
-	color: achievementstitle;
-}
-
-LibraryAchievements .AchievementLabels .AchievementLabelDescription
-{
-	width: 100%;
-	height: fill-parent-flow( 1.0 );
-	font-size: 20px;
-	margin-bottom: 2px;
-	margin-right: 8px;
-	white-space: normal;
-	color: achievementsdesc;
-}
-
-.MostRecentDetail:focus .AchievementLabelHeader, .RemainingDetail:focus .AchievementLabelHeader
-{
-	color: achievementdetailsheaderdark;
-}
-
-.MostRecentDetail:focus .AchievementLabelTitle, .RemainingDetail:focus .AchievementLabelTitle
-{
-	color: achievementstitledark;
-}
-
-.MostRecentDetail:focus .AchievementLabelDescription, .RemainingDetail:focus .AchievementLabelDescription
-{
-	color: achievementsdescdark;
-}
-
-LibraryAchievements .MostRecentContainer
-{
-	margin: 8px 20px;
-	width: 410px;
-	margin-top: 0px;
-	flow-children: right;
-}
-
-LibraryAchievements .MostRecentLabels
-{
-	flow-children: down;
-	font-size: 24px;
-	width: 100%;
-	color: detailsdatalabel;
-}
-
-
-LibraryAchievements .MostRecentLabels Label
-{
-	white-space: nowrap;
-	max-height: 30px;
-}
-
-LibraryAchievements .MostRecentLabels .MostRecentHeader
-{
-	font-weight: light;
-	font-size: 22px;
-	margin-top: -2px;
-	width: 100%;
-	opacity: 0.8;
-}
-
-LibraryAchievements .MostRecentLabels .MostRecentTitle
-{
-	font-weight: bold;
-	opacity: 0.8;
-	color: achievementstitle;
-	width: 100%;
-}
-
-LibraryAchievements .MostRecentLabels .MostRecentDescription
-{
-	font-size: 22px;
-	max-height: 34px;
-	white-space: normal;
-	color: achievementsdesc;
-	opacity: 0.8;
-	width: 100%;
 }
 
 LibraryAchievements .RemainingBody
 {
-	margin-left: 20px;
-	margin-right: 24px;
-	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
 	width: 100%;
 	height: 100%;
 	flow-children: down;
@@ -1464,23 +1471,14 @@ LibraryAchievements .RemainingRow
 	flow-children: right;
 }
 
-LibraryAchievements #RemainingRowTwo
-{
-	margin-top: 16px;
-}
-
 LibraryAchievements .AchievementIcon
 {
-	width: 80px;
-	height: 80px;
+	width: 50px;
+	height: 50px;
 	margin: 0px 24px 0px 0px;
-	border-style: solid;
-	border-width: 4px;
-	border-radius: 0px;
-	border-color: #636363e0;
 }
 
-#RemainingWrapper8.AchievementIcon, #RemainingWrapper4.AchievementIcon
+#RemainingWrapper5.AchievementIcon
 {
 	margin-right: 0px;
 }
@@ -1507,94 +1505,43 @@ LibraryGuides .GuidesBody
 
 	margin-top: 6px;
 
-	pre-transform-scale2d: 1.15254, 1.15254;
-	transform: translatex( 54px ) translatey( 34px );
-	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
+	transition-property: background-color, border, color, opacity, pre-transform-scale2d !immediate;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
-LibraryGuides:focus .GuidesBody, LibraryGuides:descendantfocus .GuidesBody
-{
-	pre-transform-scale2d: 1.0, 1.0;
-	transform: translatex( -3px );
-}
-
-LibraryGuides .GuidesSmallBody
-{
-	flow-children: down;
-	opacity: 0.8;
-	transition-property: opacity !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	width: 100%;
-	height: 100%;
-	transform: translatex( 3px );
-}
-
-LibraryGuides:focus .GuidesSmallBody, LibraryGuides:descendantfocus .GuidesSmallBody
-{
-	opacity: 0.0;
-}
-
 LibraryGuides .GuidesLargeBody
 {
 	width: 100%;
-	height: 100%;
+	height: fit-children;
+	flow-children: down;
+}
+
+ViewGuidesDialog .GuidesLargeBody
+{
+	width: 100%;
+	height: fit-children;
 	flow-children: down;
 	overflow: squish scroll;
 
-	margin-right: 6px;
-	margin-bottom: 12px;
-	opacity: 0.0;
-	transition-property: opacity !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-LibraryGuides:focus .GuidesLargeBody, LibraryGuides:descendantfocus .GuidesLargeBody
-{
-	opacity: 1.0;
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
 	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 }
 
+/* Guide modal panel buttons */
 .GuideDetail
 {
 	flow-children: right;
-	margin: 3px 22px 0px 28px;
+	margin: 4px 4px 4px 12px;
 	height: 108px;
 	width: 100%;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #00000000;
 	color: detailsdatalabelfocus;
-
-	transition-property: opacity, border, background-color !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
 }
-
-.GuideDetail:focus
-{
-	transition-duration: shortduration !immediate;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	color: #161718f5;
-
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
-	
-	animation-name: links-and-more-button-focus; 
-	animation-duration: longduration;
-	animation-delay: mediumduration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+.LibraryDetailsSectionRow .GuideDetail {
+	height: 72px;
 }
 
 .GuideDetail Panel, .GuideDetail Image
@@ -1602,16 +1549,9 @@ LibraryGuides:focus .GuidesLargeBody, LibraryGuides:descendantfocus .GuidesLarge
 	transition-property: transform !immediate;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
-
-	transform: translatex( 0px );
 }
 
-.GuideDetail:focus Panel, .GuideDetail:focus Image
-{
-	transform: translatex( 7px );
-}
-
-LibraryGuides .GuideDetailImage
+.GuideDetailImage
 {
 	vertical-align: center;
 	width: 75px;
@@ -1624,12 +1564,31 @@ LibraryGuides .GuideDetailImage
 	box-shadow: fill #00000060 0px 0px 6px 0px;
 }
 
-LibraryGuides .GuideLabels 
+LibraryGuides .GuideLabels
 {
 	flow-children: down;
 	height: 100%;
 	width: 100%;
 	margin-right: 7px;
+	width: 100%;
+	font-size: 20px;
+	margin-bottom: 2px;
+	margin-right: 8px;
+	white-space: normal;
+	color: guidesdesc;
+}
+ViewGuidesDialog .GuideLabels 
+{
+	flow-children: down;
+	height: 100%;
+	width: 100%;
+	margin-right: 7px;
+	width: 100%;
+	font-size: 20px;
+	margin-bottom: 2px;
+	margin-right: 8px;
+	white-space: normal;
+	color: guidesdesc;
 }
 
 LibraryGuides .GuideLabels Label
@@ -1641,8 +1600,26 @@ LibraryGuides .GuideLabels Label
 	transition-timing-function: bigpicture-ease-in-out;
 	font-family: platformfont;
 }
+ViewGuidesDialog .GuideLabels Label
+{
+	white-space: nowrap;
+	color: black;
+	transition-property: opacity, border, background-color, color !immediate;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	font-family: platformfont;
+}
 
 LibraryGuides .GuideLabels .GuideLabelHeader
+{
+	font-weight: normal;
+	font-size: 20px;
+	max-height: 26px;
+	margin-top: 8px;
+	margin-bottom: -8px;
+	color: guidedetailsheader;
+}
+ViewGuidesDialog .GuideLabels .GuideLabelHeader
 {
 	font-weight: normal;
 	font-size: 20px;
@@ -1663,15 +1640,21 @@ LibraryGuides .GuideLabels .GuideLabelTitle
 	color: white;
 	white-space: normal;
 }
-
-LibraryGuides .GuideLabels
+ViewGuidesDialog .GuideLabels .GuideLabelTitle
 {
-	width: 100%;
-	font-size: 20px;
+	margin-top: 8px;
+	font-size: 24px;
 	margin-bottom: 2px;
-	margin-right: 8px;
+	max-height: 64px;
+	font-weight: bold;
+	width: 355px;
+	color: white;
 	white-space: normal;
-	color: guidesdesc;
+}
+
+ViewGuidesDialog .HorizontalRule
+{
+	margin: 10px 22px;
 }
 
 .GuideDetail:focus .GuideLabelHeader
@@ -1684,56 +1667,27 @@ LibraryGuides .GuideLabels
 	color: applabelselectedsolid;
 }
 
-LibraryGuides .GuidesSmallRows
-{
-	margin-left: 20px;
-	margin-right: 24px;
-	margin-bottom: 20px;
-	width: 100%;
-	height: 100%;
-	flow-children: down;
-}
 
-LibraryGuides .GuideRow
+.ManageControllers
 {
 	width: 100%;
-	flow-children: right;
+	height: 450px;
 }
 
-LibraryGuides #GuideRowTwo
+.ManageControllers .HeaderLabel
 {
-	margin-top: 16px;
-}
-
-LibraryGuides .GuideIcon
-{
-	width: 80px;
-	height: 80px;
-	margin: 0px 24px 0px 0px;
-	border-style: solid;
-	border-width: 4px;
-	border-radius: 0px;
-	border-color: #636363e0;
-}
-
-#GuideWrapper7.GuideIcon, #GuideWrapper3.GuideIcon
-{
-	margin-right: 0px;
-}
-
-LibraryGuides .GuideIcon Image
-{
-	width: 100%;
-	height: 100%;
-}
-
-
-LibraryGuides .MoreRemainingLabel
-{
-	font-size: 18px;
+	font-family: platformfont;
+	margin: 5px 20px 6px 0px;
+	padding-right: 8px;
+	font-size: 38px;
 	color: detailsdatalabel;
-	horizontal-align: center;
-	vertical-align: center;
+	opacity: 1.0;
+	horizontal-align: left;
+	width: 100%;
+	transition-duration: shortduration;
+	transition-property: transform;
+	transition-timing-function: bigpicture-ease-in-out;
+	font-weight: light;
 }
 
 LibraryController .ControllerBody
@@ -1743,34 +1697,10 @@ LibraryController .ControllerBody
 
 	margin-top: 6px;
 
-	pre-transform-scale2d: 1.15254, 1.15254;
-	transform: translatex( 54px ) translatey( 34px );
 	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate; 
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
-}
-
-LibraryController:focus .ControllerBody, LibraryController:descendantfocus .ControllerBody
-{
-	pre-transform-scale2d: 1.0, 1.0;
-	transform: translatex( -3px );
-}
-
-LibraryController .ControllerSmallBody
-{
-	flow-children: down;
-	opacity: 0.8;
-	transition-property: opacity !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	transform: translatex( 3px );
-}
-
-LibraryController:focus .ControllerSmallBody, LibraryController:descendantfocus .ControllerSmallBody
-{
-	opacity: 0.0;
 }
 
 LibraryController .ControllerLargeBody
@@ -1782,14 +1712,8 @@ LibraryController .ControllerLargeBody
 
 	margin-right: 6px;
 	margin-bottom: 12px;
-	opacity: 0.0;
-	transition-property: opacity !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-}
+	padding-top: 10px;
 
-LibraryController:focus .ControllerLargeBody, LibraryController:descendantfocus .ControllerLargeBody
-{
 	opacity: 1.0;
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
@@ -1802,49 +1726,9 @@ LibraryController:focus .ControllerLargeBody, LibraryController:descendantfocus 
 	margin: 3px 22px 0px 28px;
 	height: 108px;
 	width: 100%;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #00000000;
-	color: detailsdatalabelfocus;
-
-	transition-property: opacity, border, background-color !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.ControllerDetail:focus
-{
-	transition-duration: shortduration !immediate;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	color: #161718f5;
-
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
-	
-	animation-name: links-and-more-button-focus; 
-	animation-duration: longduration;
-	animation-delay: mediumduration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-.ControllerDetail Panel, .ControllerDetail Image
-{
-	transition-property: transform !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	transform: translatex( 0px );
-}
-
-.ControllerDetail:focus Panel, .ControllerDetail:focus Image
-{
-	transform: translatex( 7px );
-}
 
 LibraryController .ControllerDetailImage, LibraryController .AddControllerDetailImage, LibraryController .TurnOffControllerDetailImage
 {
@@ -1905,7 +1789,7 @@ LibraryController .ControllerLabels .ControllerLabelHeader
 LibraryController .ControllerLabels .ControllerLabelTitle
 {
 	margin-top: 8px;
-	font-size: 24px;
+	font-size: 26px;
 	margin-bottom: 2px;
 	max-height: 32px;
 	font-weight: bold;
@@ -1941,7 +1825,7 @@ LibraryController .ControllerLabels .ControllerLabelDescription
 
 LibraryController .ControllerDetail
 {
-	margin: 8px 24px;
+	margin: 8px 10px;
 	margin-top: 0px;
 	flow-children: right;
 }
@@ -1959,16 +1843,6 @@ LibraryController .ControllerLabels Label
 {
 	white-space: nowrap;
 	max-height: 30px;
-}
-
-LibraryController .ControllerSmallBody
-{
-	margin-left: 20px;
-	margin-right: 24px;
-	margin-bottom: 20px;
-	width: 100%;
-	height: 100%;
-	flow-children: down;
 }
 
 LibraryController .ControllersRow
@@ -2056,28 +1930,17 @@ LibraryFriendsWhoPlay .FriendsWhoPlaySmallBody
 	flow-children: down;
 }
 
-LibraryFriendsWhoPlay:focus .FriendsWhoPlaySmallBody, LibraryFriendsWhoPlay:descendantfocus .FriendsWhoPlaySmallBody
+LibraryFriendsWhoPlay #HeaderLabel_FriendsPlayingNow
 {
-	opacity: 0.0;
+	visibility: collapse;	
 }
-
-LibraryFriendsWhoPlay .FriendsWhoPlayLargeBody
+LibraryFriendsWhoPlay.FriendsPlayingNow #HeaderLabel_FriendsWhoPlay
 {
-	transition-property: opacity, border, background-color, color !immediate; 
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	overflow: squish scroll;
-
-	opacity: 0.0;
-	flow-children: down;
+	visibility: collapse;
 }
-
-LibraryFriendsWhoPlay:focus .FriendsWhoPlayLargeBody, LibraryFriendsWhoPlay:descendantfocus .FriendsWhoPlayLargeBody
+LibraryFriendsWhoPlay.FriendsPlayingNow #HeaderLabel_FriendsPlayingNow
 {
-	opacity: 1.0;
-	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+	visibility: visible;
 }
 
 .FriendPanel
@@ -2255,22 +2118,13 @@ LibraryFriendsWhoPlay .FriendsWhoPlayBody
 {
 	width: 100%;
 	height: 100%;
-
-	pre-transform-scale2d: 1.15254, 1.15254;
-	transform: translatex( 59px ) translatey( 33px );
 	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
-LibraryFriendsWhoPlay:focus .FriendsWhoPlayBody, LibraryFriendsWhoPlay:descendantfocus .FriendsWhoPlayBody
-{
-	pre-transform-scale2d: 1.0, 1.0;
-	transform: translatex( -4px );
-}
-
-.FriendsWhoPlaySmallBody, .FriendsWhoPlayLargeBody
+.FriendsWhoPlaySmallBody
 {
 	margin-top: 8px;
 	margin-left: 21px;
@@ -2281,46 +2135,39 @@ LibraryFriendsWhoPlay:focus .FriendsWhoPlayBody, LibraryFriendsWhoPlay:descendan
 
 LibraryFriendsWhoPlay AvatarImage
 {
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	border-style: solid;
 	border-width: 4px;
 	border-radius: 0px;
 	box-shadow: #00000033 -3px -3px 4px 6px;
 }
 
-LibraryFriendsWhoPlay .FriendsWhoPlayRowOne, LibraryFriendsWhoPlay .FriendsWhoPlayRowTwo
+LibraryFriendsWhoPlay .FriendsWhoPlayRowOne
 {
 	width: 100%;
 	height: fit-children;
 	flow-children: right;
 }
 
-LibraryFriendsWhoPlay .FriendsWhoPlayRowOne
-{
-	margin-bottom: 24px;
-}
-
 LibraryFriendsWhoPlay .FriendWhoPlaysWrapper
 {
-	margin-right: 24px;
-	width: 80px;
-	height: 80px;
+	margin-right: 2px;
+	width: 60px;
+	height: 60px;
 }
 
-LibraryFriendsWhoPlay #FriendWhoPlaysWrapper8
+LibraryFriendsWhoPlay .MoreRemainingContainer
 {
-	border-style: solid;
-	border-width: 4px;
-	border-radius: 0px;
-	border-color: #404040e0;
+	margin-left: 5px;
+	width: 100px;
+	height: 60px;
 }
 
 LibraryFriendsWhoPlay .MoreRemainingLabel
 {
 	font-size: 28px;
-	color: detailsdatalabel;
-	horizontal-align: center;
+	color: moduledatalabel;
 	vertical-align: center;
 }
 
@@ -2328,6 +2175,7 @@ LibraryFriendsWhoPlay .MoreRemainingLabel
 {
 }
 
+/* to remove?
 LibraryRecentNews .RecentNewsBody
 {
 	width: 100%;
@@ -2337,22 +2185,6 @@ LibraryRecentNews .RecentNewsBody
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-LibraryRecentNews .RecentNewsSmallBody
-{
-	margin-left: 28px;
-	margin-right: 22px;
-	margin-top: 17px;
-	width: 410px;
-	height: 240px;
-	flow-children: down;
-	opacity: 1.0;
-	opacity-mask: url( "file://{images}/library/details_data_mask.tga" );
-
-	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-}
 
 LibraryRecentNews .RecentNewsLargeBody
 {
@@ -2371,49 +2203,45 @@ LibraryRecentNews .RecentNewsLargeBody
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-LibraryRecentNews:focus .RecentNewsSmallBody, LibraryRecentNews:descendantfocus .RecentNewsSmallBody
-{
-	opacity: 0.0;
-}
-
-LibraryRecentNews:focus .RecentNewsLargeBody, LibraryRecentNews:descendantfocus .RecentNewsLargeBody
-{
-	opacity: 1.0;
-	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
-}
-
-LibraryRecentNews .RecentNewsBody
-{
-	pre-transform-scale2d: 1.15254, 1.15254;
-	transform: translatex( 52px ) translatey( 19px );
-}
-
-LibraryRecentNews:focus .RecentNewsBody, LibraryRecentNews:descendantfocus .RecentNewsBody
-{
-	pre-transform-scale2d: 1.0;
-	transform: translatex( 0px ) translatey( 0px );
-}
 
 LibraryRecentNews .NewsWrapper
 {
 	width: 410px;
 	flow-children: down;
+	margin-bottom: 5px;
+}
+*/
+
+LibraryRecentNews .RecentNewsLargeBody {
+	opacity: 0.0;
+}
+LibraryRecentNews .RecentNewsSmallBody
+{
+	margin-left: 12px;
+	margin-right: 12px;
+	margin-top: 17px;
+	width: 410px;
+	height: 240px;
+	flow-children: down;
+	opacity: 1.0;
+	opacity-mask: url( "file://{images}/library/details_data_mask.tga" );
+
+	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+
 }
 
 LibraryRecentNews .NewsHeadline
 {
 	font-size: 22px;
-	font-weight: bold;
-	height: 40px;
-	width: 100%;
-	margin-bottom: 4px;
+	width: 325px;
+	margin-bottom: 8px;
 	color: newstitle;
-	opacity: 0.6;
-	white-space: nowrap;
 }
 
+
+/* to remove?
 LibraryRecentNews .LargeNewsWrapper
 {
 	width: 100%;
@@ -2457,6 +2285,7 @@ LibraryRecentNews .LargeNewsWrapper:focus
 	animation-direction: normal;
 
 }
+*/
 
 .LargeNewsWrapper Label
 {
@@ -2542,14 +2371,19 @@ LibraryRecentNews .LargeNewsByline
 	color: largenewsbyline_dark;
 }
 
+#ScreenshotsSmallBody
+{
+	flow-children: down;
+}
+
 #ScreenshotThumbs
 {
 	height: 220px;
 	width: 490px;
+	margin-left: 20px;
 
 	opacity: 1.0;
 	opacity-mask: url( "file://{images}/library/horizontal_mask.tga" ) 1.0;
-	transform: translatex( 38px ) translatey( 6px );
 
 	transition-property: opacity, transform;
 	transition-duration: shortduration;
@@ -2567,7 +2401,6 @@ LibraryRecentNews .LargeNewsByline
 	width: 490px;
 
 	opacity: 1.0;
-	transform: translatex( 38px ) translatey( 6px );
 
 	transition-property: opacity, transform;
 	transition-duration: shortduration;
@@ -2609,21 +2442,15 @@ LibraryRecentNews .LargeNewsByline
 	line-height: 30px;
 }
 
-LibraryScreenshots:descendantfocus #ScreenshotThumbs
-{
-	opacity: 0.0;
-	transform: translatex( 24px ) translatey( 10px );
-}
-
 .ScreenshotsSmallThumb
 {
 	margin-top: 2px;
-	min-height: 210px;
+	min-height: 150px;
 	margin-left: 10px;
 	margin-right: 10px;
 	margin-bottom: 4px;
 
-	max-height: 210px;
+	max-height: 180px;
 	vertical-align: center;
 	box-shadow: fill #101010ff  0px 0px 4px 8px;
 }
@@ -2656,7 +2483,7 @@ LibraryScreenshots:descendantfocus #ScreenshotThumbs
 
 	transform: translatex( 38px ) translatey( 6px );
 
-	opacity: 1.0;
+	opacity: 0.0;
 
 	opacity-mask: url( "file://{images}/library/horizontal_mask.tga" ) 1.0;
 
@@ -2665,19 +2492,13 @@ LibraryScreenshots:descendantfocus #ScreenshotThumbs
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-LibraryWorkshop:descendantfocus .WorkshopSmallBody
-{
-	transform: translatex( 24px ) translatey( 10px );
-	opacity: 0.0;
-
-}
 
 .WorkshopLargeBody
 {
 	width: 100%;
 	height: 100%;
 
-	opacity: 0.0;
+	opacity: 1.0;
 	flow-children: down;
 
 	transition-property: opacity, transform;
@@ -2685,18 +2506,13 @@ LibraryWorkshop:descendantfocus .WorkshopSmallBody
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-LibraryWorkshop:descendantfocus .WorkshopLargeBody
-{
-	opacity: 1.0;
-}
-
 #WorkshopWhatIsItLabel
 {
 	font-size: 20px;
 	line-height: 23px;
-	height: 46px;
+	height: 69px;
 
-	color: #ffffff66;
+	color: #66c0f4;
 	vertical-align: center;
 
 	width: 100%;
@@ -2732,8 +2548,8 @@ LibraryWorkshop:descendantfocus .WorkshopLargeBody
 	box-shadow: inset #00000033 4px 4px 4px 8px;
 
 
-	min-height: 210px;
-	max-height: 210px;
+	min-height: 100px;
+	max-height: 100px;
 
 	vertical-align: center;
 }
@@ -2782,8 +2598,8 @@ LibraryWorkshop:descendantfocus .WorkshopLargeBody
 
 #WorkshopBigThumb2, #WorkshopBigThumb3, #WorkshopBigThumb4, #WorkshopBigThumb5, #WorkshopBigThumb6, #WorkshopBigThumb7
 {
-	min-height: 101px;
-	max-height: 101px;
+	min-height: 50px;
+	max-height: 50px;
 	margin-bottom: 8px;
 }
 
@@ -2801,8 +2617,10 @@ LibraryWorkshop:descendantfocus .WorkshopLargeBody
 {
 	margin-left: 0px;
 	margin-right: 8px;
-	min-height: 210px;
-	max-height: 210px;
+	min-height: 107px;
+	max-height: 107px;
+	min-width: 191px;
+	background-color: #000000;
 }
 
 #StarsContainer
@@ -2810,7 +2628,7 @@ LibraryWorkshop:descendantfocus .WorkshopLargeBody
 	height: 44px;
 	padding: 2px;
 	padding-left: 6px;
-	width: 210px;
+	width: 100%;
 	horizontal-align: center;
 	vertical-align: bottom;
 
@@ -2910,24 +2728,6 @@ LibraryWorkshop:descendantfocus .WorkshopLargeBody
 }
 
 
-.ScreenshotsLargeBody
-{
-	width: 100%;
-	height: 100%;
-
-	opacity: 0.0;
-	flow-children: down;
-
-	transition-property: opacity, transform;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
-{
-	opacity: 1.0;
-}
-
 #HowToWrapper
 {
 	flow-children: right;
@@ -2968,172 +2768,52 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	padding: 4px;
 }
 
-#BigScreenshotPreview
-{
-	horizontal-align: center;
-
-	max-height: 240px;
-	min-height: 240px;
-
-}
-
-#OuterThumbWrapper
-{
-	// Force opacity layer to clip the noclip child within us...
-	opacity: 0.99;
-
-	horizontal-align: left;
-	width: 475px;
-	height: 74px;
-
-	margin-bottom: 8px;
-	margin-top: 0px;
-	margin-left: 24px;
-	
-	opacity-mask: url( "file://{images}/library/horizontal_mask.tga" ) 1.0;
-}
-
-#BigScreenshotThumbs
-{
-	horizontal-align: center;
-
-	flow-children: right;
-	min-width: 100%;
-
-	overflow: noclip clip;
-
-
-}
-
-.BigScreenshotThumb
-{
-	margin-left: 0px;
-	margin-right: 8px;
-	min-height: 74px;
-	max-height: 74px;
-}
-
-.ViewAllScreenshots
-{
-	width: 100%;
-	margin: 0px 24px 24px 24px;
-	padding: 8px 7px 8px 7px;
-
-	color: detailsdatalabelfocus;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414200;
-
-	transition-property: border, background-color, color, box-shadow;
-	transition-timing-function: ease-out;
-}
-
-.ViewAllScreenshots Label
-{
-	width: 100%;
-	font-family: platformfont;
-	font-size: 28px;
-	font-weight: normal;
-	transform: translatex(-7px);
-	color: detailsdatalabelfocus;
-	transition-property: transform;
-	transition-duration: shortduration;
-	transition-timing-function: ease-in;
-}
-
-.ViewAllScreenshots:focus Label
-{
-	color: #161718f5;
-	transform: translatex(0px);
-}
-
-.ViewAllScreenshots:hover
-{
-	transition-duration: 0.23s !immediate;
-	box-shadow: #eeeeee60 -3px -3px 6px 6px;
-}
-
-.ViewAllScreenshots:focus
-{
-	transition-duration: mediumduration !immediate;
-
-	color: #161718f5;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	
-	animation-name: links-and-more-button-focus; 
-	animation-duration: longduration;
-	animation-delay: mediumduration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-.PlayAction
-{
-	margin-left: -12px;
-	margin-right: -12px;
-	margin-top: 12px;
-	margin-bottom: 12px;
-	width: 467px;
-	height: 606px;
-	pre-transform-scale2d: 0.92, 0.515;
-	transform: translatey( 92px );
-}
-
-.PlayAction:hover
-{
-	pre-transform-scale2d: 0.9568, 0.5356;
-}
-
-.PlayAction:focus, .PlayAction:descendantfocus
-{
-	pre-transform-scale2d: 1.0, 1.0;
-}
-
-
-
 .PlayActionFullWrapper
 {
 	width: 100%;
 	height: 100%;
-	pre-transform-scale2d: 0.94222, 1.683202628646;
-	transform: translate3d( -7px, 179px, 0px );
-
-	transition-property: transform, position, width, height, border, background-color, opacity, pre-transform-scale2d !immediate; 
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
 }
 
-.PlayActionFullWrapper:descendantfocus
+.PlayActionFullWrapper .PlayActionHeaderLabel
 {
-	pre-transform-scale2d: 1.0;
-	transform: translatey( 0px );
+	opacity: 1.0;
+	vertical-align: center;
+	horizontal-align: left;
+	width: 100%;
+	transition-duration: shortduration;
+	transition-property: transform;
+	transition-timing-function: bigpicture-ease-in-out;
 
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+	color: #67c1f5ff;
+	margin-left: 10px;
 }
+
+.PlayActionFullWrapper:descendantfocus .PlayActionHeaderLabel,
+.PlayActionFullWrapper:hover .PlayActionHeaderLabel
+{
+	color: detailsdatalabelfocus;
+}
+
+
 
 #PlayActionContents
 {
 	width: 100%;
 	height: 100%;
-	flow-children: down;
-	
 }
-
-
 
 #ControllerSupportCorner
 {
 	width: fit-children;
-	height: 162px;
+	height: 60px;
+	vertical-align: center;
 	horizontal-align: right;
 	visibility: visible;
 	flow-children: right;
-	margin: 24px 30px 0px 0px;
+	margin: 0px 100px 0px 0px;
 }
 
 #ControllerSupportPlayAction
@@ -3146,7 +2826,7 @@ LibraryScreenshots:descendantfocus .ScreenshotsLargeBody
 	wash-color: white;
 	horizontal-align: right;
 
-	visibility: collapse;
+//	visibility: collapse;
 
 }
 
@@ -3174,24 +2854,6 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	visibility: visible;
 }
 
-.PlayTimeBody
-{
-	visibility: visible;
-}
-
-.PlayAction .PlayTimeBody
-{
-	margin: 20px 20px 0px 20px;
-	width: 100%;
-	height: 200px;
-	flow-children: down;
-}
-
-.Working .PlayTimeBody
-{
-	visibility: collapse;
-}
-
 .PlayAction .PlayTimeRow
 {
 	width: 100%;
@@ -3202,9 +2864,9 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 {
 	width: 200px;
 	text-align: right;
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: normal;
-	line-height: 40px;
+	line-height: 20px;
 	color: achievementdetailsheader;
 	opacity: 1.0;
 	transition-property: opacity, border, color, color !immediate;
@@ -3216,8 +2878,7 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	width: 100%;
 	height: 200px;
 	text-align: left;
-	margin: 20px 20px 0px 20px;
-	margin-left: 30px;
+	margin: 10px 0px 0px 10px;
 	font-size: 22px;
 	font-family: platformfont;
 	color: applabelsolid;
@@ -3241,21 +2902,28 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 .PlayAction .PlayTimeValue
 {
 	margin-left: 18px;
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: medium;
-	line-height: 40px;
+	line-height: 20px;
 	color: playtime;
 	width: 100%;
 	opacity: 1.0;
-} 
+}
+.PlayActionFullWrapper:descendantfocus .PlayTimeTitle, 
+.PlayActionFullWrapper:hover .PlayTimeTitle, 
+.PlayActionFullWrapper:descendantfocus .PlayTimeValue,
+.PlayActionFullWrapper:hover .PlayTimeValue
+{
+	color: #161718f5;
+}
 
 .PlayAction .ButtonBody
 {
 	horizontal-align: center;
 	vertical-align: center;
-	opacity: 0.0;
-	padding: 14px;
-	margin: 4px;
+	opacity: 1.0;
+	padding: 14px 14px;
+
 	wash-color: none;
 
 	transition-property: pre-transform-scale2d, wash-color;
@@ -3278,12 +2946,6 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	transition-duration: 0.18s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0.0s;
-}
-
-.PlayAction .ButtonBody:hover
-{
-	pre-transform-scale2d: 1.1;
-
 }
 
 .PlayAction .ButtonEdge:hover
@@ -3320,8 +2982,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 .PlayAction .ButtonGlow
 {
-	width: 110px;
-	height: 110px;
+	width: 50px;
+	height: 50px;
 	opacity: 0.54;
 	opacity-mask: url( "file://{images}/library/library_a_button_inner_mask.tga" );
 	
@@ -3341,12 +3003,15 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	animation-direction: normal, normal;
 }
 
-#StreamFromRow
+#StreamingData
 {
 	visibility: collapse;
+	margin-left: 300px;
+	vertical-align: bottom;
+	flow-children: right;
+	min-width: 300px;
 }
-
-.Streaming #StreamFromRow
+.Streaming #StreamingData
 {
 	visibility: visible;
 }
@@ -3775,8 +3440,8 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	desaturation: 1.0;
 	z-index: 3;
 	width: 100%;
-	height: 952px;
-	transform: translate3d( 0px, 1280px, 1000px );
+	height: 1010px;
+	transform: translate3d( 0px, 1200px, 1000px );
 
 	transition-property: transform, blur, position, opacity, desaturation;
 	transition-duration: mediumduration;
@@ -3786,69 +3451,113 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 
 .LibraryAllGamesVisible
 {
-	transform: translatey( 128px );
+	transform: translatey( 66px );
 	opacity: 1.0;
 	desaturation: 0.0;
 }
+.GamesGrid {
+	margin-top: 5px;
+}
 
-.GamesGrid
+.GamesGrid, .GamesSuggestion, LibraryAllGames #MusicPanel
 {
-	margin-top: 130px;
-	padding-left: 115px;
-	padding-right: 200px;
-	padding-top: 70px;
-	padding-bottom: 130px;
+	padding-top: 105px;
+	padding-left: 140px;
+	position: 390px 0px 0px;
 
-	width: 100%;
+	width: 1500px;
 	height: 100%;
+	
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+	transform: translateX( 0px );
+	transition-delay: 0s;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, width;
 }
 
-#ShortcutsGrid
+
+/* Transitions when grid is in focus */
+.ContentAreaFocus .GamesGrid {
+	transform: translateX( -200px );
+}
+.ContentAreaFocus .GamesSuggestion {
+	transform: translateX( -200px );
+}
+
+.EmptyLabel
 {
-	width: 100%;
-	height: 100%;
+	position: 0px -100px 0px;
+		
+	visibility: visible;
 
-	pre-transform-scale2d: 1.0, 1.0;
+	font-size: 34px;
+	height: 64px;
+	horizontal-align: center;
+	vertical-align: center;
+	color: #67c1f5ff;
+	white-space: nowrap;
+	font-weight: bold;
+	text-overflow: clip;
 
-	position: 0px 126px 0px;
-	padding-top: 150px;
-	padding-bottom: 300px;
-	margin-top: 00px;
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.GamesGrid .AppGridItem .AppImage
+.EmptyGrid #EmptyLibraryArea
 {
-	background-color: dialog_bg_color;
-	opacity: 0.85;
-	desaturation: 0.2;
-	box-shadow: fill #00000044 -4px -4px 8px 8px;
+	opacity: 1.0;
+
+	position: 500px 60px 0px;
+	background-color: #00000044;
+	height: 800px;
+	width: 1350px;
 }
 
-.AppGridItem:focus .AppImage
+.search.EmptyGrid #EmptySearchArea
 {
-	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
+	opacity: 1.0;
 
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: longduration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+	position: 500px 60px 0px;
+	background-color: #00000044;
+	height: 800px;
+	width: 1350px;
 }
+
+.search.EmptyGrid #EmptyLibraryArea,
+.music.EmptyGrid #EmptyLibraryArea
+{
+	opacity: 0.0;
+}
+
+.music #MusicPanel
+{
+	opacity: 1.0;
+	padding-top: 0px;
+	padding-left: 0px;
+}
+
 
 #FastScrollWrapper
 {
 	z-index: 100;
 	flow-children: right;
+	width: 100%;
 }
 
 #FastScrollLabel
 {
 	margin-top: 100px;
-	margin-left: 100px;
+	margin-left: 520px;
 	font-size: 600px;
 
 	height: 720px;
-
+	width: 100%;
+	
 	z-index: 100;
 
 	color: #f2f2f2ff;
@@ -3891,29 +3600,26 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	transition-duration: 0.5s;
 }
 
-.AppGridItem, .AppGridItem:focus
+.AppGridItem
 {
 	width: 624px;
 	height: 429px;
-
 	margin: -140px, -82px;
 	padding: 82px;
-
-
-	pre-transform-scale2d: 0.82;
-	flow-children: down;
-
+	pre-transform-scale2d: 0.88;
 	opacity: 0.0;
 
 	transition-property: transform, blur, position, opacity, desaturation, border, background-color, pre-transform-scale2d, box-shadow;
-	transition-duration: shortduration;
+	transition-duration: 0.2s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
 
 .AppGridItem.Ready
 {
-	opacity: 0.85;
+	opacity: 1;
+	pre-transform-scale2d: 0.9;
+	
 }
 
 .AppGridItem .AppImage
@@ -3921,36 +3627,114 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	width: 460px;
 	height: 215px;
 	opacity: 1.0;
-	desaturation: 0.10;
-	wash-color: #00000012;
 	margin-bottom: 0px;
 	transition-property: box-shadow, opacity, desaturation;
 	transition-duration: shortmedduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
+
+	box-shadow: fill #00000044 -4px -4px 8px 8px;
+	background-color: #000000;
+}
+/* For ready to play games: */
+.GamesGrid .AppGridItem.ReadyToPlay .AppImage
+{
+	background-color: dialog_bg_color;
+	opacity: 1;
+	desaturation: 0;
+	box-shadow: fill #00000044 -4px -4px 8px 8px;
+
+}
+
+/* For installed games: */
+.AppGridItem .GridItemNameRow, #SuggestedStatus {	
+	width: 50px;
+	height: 0px;
+
+	transform: translatey( -65px );
+	margin-right: 0px;
+	transition-property: height, transform;
+	transition-duration: shortmedduration;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	vertical-align: bottom;
+	horizontal-align: right;
+}
+
+#SuggestedStatus
+{
+	margin-right: 4px;
+}
+
+#RecentRow #SuggestedStatus
+{
+	margin-right: 206px;
+	transform: translatey( -16px );
+}
+
+.AppGridItem:focus .GridItemNameRow, Button:focus #SuggestedStatus
+ {
+	height: 75px;
 }
 
 
+.InstalledState
+{
+	width: 50px;
+	height: 13px;
+	background-color: installedblue;	
+	border: 4px solid #231f20ff;
+	vertical-align: bottom;
+	horizontal-align: right;
+	margin-bottom: 50px;
+	margin-right: 0px;
+}
+
+#RecentRow .InstalledState
+{
+	margin-bottom: 1px;	
+	margin-right: 201px;
+}
+
+.ReadyToPlay .InstalledState
+{
+	background-color: readytoplaygreen;	
+}
+
+.UnavailableOnPlatform .InstalledState
+{
+	background-color: black;	
+}
+
+.AppGridItem:focus .AppImage
+{
+	box-shadow: box_shadow_on_color -8px -8px 8px 8px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
 
 .AppGridItem Label
 {
-	height: 40px;
+	height: 64px;
 	width: fill-parent-flow( 1.0 );
 	font-size: 32px;
 	font-family: platformfont;
 	color: applabel;
 	opacity: 0.0;
 	vertical-align: center;
-	margin-left: 0px;
-	margin-top: 2px;
+  margin-left: 8px;
 	text-overflow: clip;
 	font-weight: bold;
 	white-space: nowrap;
+}
 
-	transition-property: color, opacity;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
+#AppLabel
+{
+	width: 100%;
 }
 
 #MissingImageLabel
@@ -3970,8 +3754,9 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.GamesGrid:descendantfocus .AppGridItem Image #MissingImageLabel,
-.LibraryPanel:descendantfocus .RecentApp Image #MissingImageLabel
+.AppGridItem.MissingAppImage Image #MissingImageLabel,
+.LibraryPanel:descendantfocus .RecentApp Image #MissingImageLabel,
+.AppGridItem.Shortcut Image #MissingImageLabel
 {
 	opacity: 0.5;
 }
@@ -3984,60 +3769,14 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 
 .AppGridItem:focus Label
 {
-	opacity: 1.0;
+	opacity: 0.0;
 	color: applabel;
 }
 
-AppGridItem #GridControllerSupport
-{
-	visibility: collapse;
-}
-
-AppGridItem:focus #GridControllerSupport
-{
-	width: 50px;
-	height: 50px;
-	margin-top: 4px;
-	margin-right: 6px;
-
-	vertical-align: center;
-
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-
-	visibility: visible;
-}
-
-AppGridItem:focus #GridControllerSupport
-{
-	margin-top: 0px;
-	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
-}
-
-.SteamPad AppGridItem:focus #GridControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_legacy.png" );
-}
-
-AppGridItem.FullController:focus #GridControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_full.png" );
-}
-
-.SteamPad AppGridItem.FullController:focus #GridControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_native.png" );
-}
-
-
 .AppGridItem:hover
 {
-	pre-transform-scale2d: 0.85;
-	//background-color: #ffffff00;
-
+	pre-transform-scale2d: 0.95;
 	opacity: 1.0;
-
 	z-index: 0;
 }
 
@@ -4045,13 +3784,11 @@ AppGridItem.FullController:focus #GridControllerSupport
 {
 	pre-transform-scale2d: 1.0;
 	background-image: url( "file://{images}/library/game_grid_shadow.png");
-	background-position: left 10px top 30px;
+	background-position: left 0px top 0px;
 	background-size: 100% 85%;
 	background-repeat: no-repeat;
 	opacity: 1.0;
-
 	z-index: 200;
-
 }
 
 .AppGridItem:focus:hover
@@ -4076,7 +3813,8 @@ AppGridItem.FullController:focus #GridControllerSupport
 	desaturation: 0.7;
 }
 
-.AppGridItem:focus .GridItemImage
+/* Focus on ready to play item */
+.AppGridItem.ReadyToPlay:focus .GridItemImage
 {
 	margin: 0px;
 	opacity: 1.0;
@@ -4084,98 +3822,58 @@ AppGridItem.FullController:focus #GridControllerSupport
 	wash-color: #00000000;
 }
 
+/* Focus on uninstalled item */
+.AppGridItem:focus .GridItemImage
+{
+
+}
+
 .AppGridItem:focus:hover .GridItemImage
 {
 	opacity: 1.0;
 	desaturation: 0.0;
-	z-index: 100;
 }
 
-.GridItemNameRow
+.GridItemNameRow, #SuggestedStatus
 {
+	position: 0px 0px 0px;
 	flow-children: right;
 	margin-top: 4px;
-}
-
-.GridItemImage
-{
-	opacity: 0.9;
-	desaturation: 0.1;
+	overflow: clip clip;
 }
 
 
-.GridUpperRow
+
+#ContentWrapper
 {
 	width: 100%;
-	height: 100px;
-	z-index: 5;
-	position: 0px 30px 0px;
+	height: 100%;
+	flow-children: right;
 }
 
-AddShortcutPanel
+.AllGamesContent
 {
-    width: 100%;
-    height: 100%;
-}
-
-#AddShortcutStripWrapper .GridBackground
-{
-	margin-top: 0px;
-	box-shadow: none;
-}
-
-#AddShortcutStripWrapper .GridUpperRow
-{
-	background-image: url("file://{images}/store/slideshow_glow.png");
-	background-repeat: no-repeat no-repeat;
-	background-position: left 0px top 75px;
-	background-size: 1920px 134px;
-	height: 180px;
 	width: 100%;
-	z-index: 0;
-	margin-top: -30px;
-	padding-top: -4px;
-
+	height: 100%;
 }
 
-#AddShortcutStripWrapper .GridUpperRow Label
+
+.GridButtonRow
 {
-	font-size: 78px;
-	font-family: platformfont;
-	margin-left: 100px;
-	height: 100px;
-	color: applabelsolid;
-	text-transform: none;
+	margin-top: 20px;
+	margin-left: 10px;
+	width: 400px;
+	height: 100%;
+	flow-children: down;
+	overflow: clip scroll;
 }
+
 
 .SectionLabel
 {
-	font-family: platformfont;
-	text-transform: uppercase;
-	font-weight: light;
-	color: carousel_title;
-	font-size: 56px;
-	height: 70px;
-	margin-left: -3px;
-	white-space: nowrap;
-
-	margin-left: 100px;
-	vertical-align: center;
-
-
+	visibility: collapse;
 }
 
-.AddSectionLabel
-{
-	vertical-align: top;
-	text-transform: none;
-	margin-top: 106px;
-	color: applabelsolid;
-	font-size: 78px;
-	font-family: platformfont;
-	margin-left: 300px;
-
-}
 .GamesFilter:hover
 {
 	horizontal-align: center;
@@ -4348,7 +4046,6 @@ DropDown Label
 
 Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
 Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
-
 {
 	width: 80px;
 	height: 100%;
@@ -4359,12 +4056,22 @@ Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
 	z-index: 200;
 	opacity: 1.0;
 	transition-delay: 0.2s;
-	background-color: mouse_hover_bg_left;
+	background-color: mouse_hover_bg_up;
+}
+
+Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+{
+	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
+}
+
+#GamesGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+{
+	width: 100%;
+	height: 80px;
 }
 
 Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
 Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
-#GamesGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion,
 {
 	width: 80px;
 	height: 100%;
@@ -4377,41 +4084,57 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
 	opacity: 1.0;
 	transition-delay: 0.2s;
 	transition-duration: 0.2s;
-	background-color: mouse_hover_bg_right;
+	background-color: mouse_hover_bg_bottom;
 }
+
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+{
+	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
+}
+
+#GamesGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
+{
+	width: 100%;
+	height: 80px;
+	align: center bottom;
+	margin-bottom: 100px;
+}
+
 
 #GamesGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion:hover,
 {
-		background-color: mouse_active_bg_right;
+		background-color: mouse_active_bg_bottom;
 }
 
 
-Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover,
+Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
+Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover,
+Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
 {
-	background-color: mouse_active_bg_left;
+	background-color: mouse_active_bg_up;
 }
 
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
 {
-	background-color: mouse_active_bg_right;
+	background-color: mouse_active_bg_bottom;
 
 }
 
 .LeftMouseScrollRegion
 {
 	position: 0px -10px 0px;
-	background-color: mouse_hover_bg_left;
-
-
+	background-color: mouse_hover_bg_up;
 	z-index: 100;
 }
 
 .RightMouseScrollRegion
 {
 	position: 0px -10px 0px;
-	background-color: mouse_hover_bg_right;
+	background-color: mouse_hover_bg_bottom;
 	z-index: 100;
 }
 
@@ -4419,7 +4142,7 @@ LibraryAppDetails #RightMouseScrollRegion
 {
 	position: 0px 95px 0px;
 	opacity: 0.0;
-	background-color: mouse_off_bg_right;
+	background-color: mouse_off_bg_bottom;
 	
 	transition-property: opacity;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -4430,38 +4153,38 @@ LibraryAppDetails #LeftMouseScrollRegion
 {
 	position: 0px 95px 0px;
 	opacity: 1.0;
-	background-color: mouse_off_bg_left;
+	background-color: mouse_off_bg_up;
 }
 
 LibraryAppDetails:descendantfocus:hover #RightMouseScrollRegion
 {
 	opacity: 1.0;
-	background-color: mouse_hover_bg_right;
+	background-color: mouse_hover_bg_bottom;
 }
 
 LibraryAppDetails:descendantfocus:hover #LeftMouseScrollRegion, 
 {
 	opacity: 1.0;
-	background-color: mouse_hover_bg_left;
+	background-color: mouse_hover_bg_up;
 }
 
 LibraryAppDetails:descendantfocus #RightMouseScrollRegion:hover:active
 {
 	opacity: 1.0;
-	background-color: mouse_active_bg_right;
+	background-color: mouse_active_bg_bottom;
 }
 
 LibraryAppDetails:descendantfocus #LeftMouseScrollRegion:hover:active
 {
 	opacity: 1.0;
-	background-color: mouse_active_bg_left;
+	background-color: mouse_active_bg_up;
 }
 
 
 OverlayBasePanel #LeftMouseScrollRegion, OverlayBasePanel #RightMouseScrollRegion
 {
 	opacity: 0.0;
-	background-color: mouse_off_bg_right;
+	background-color: mouse_off_bg_bottom;
 }
 
 
@@ -4469,14 +4192,14 @@ OverlayBasePanel #LeftMouseScrollRegion, OverlayBasePanel #RightMouseScrollRegio
 {
 	opacity: 1.0;
 	margin-left: 790px;
-	background-color: mouse_hover_bg_left;
+	background-color: mouse_hover_bg_up;
 }
 
 #LibraryMostRecent:descendantfocus:hover .RightMouseScrollRegion
 {
 	opacity: 1.0;
 	margin-right: 790px;
-	background-color: mouse_hover_bg_right;
+	background-color: mouse_hover_bg_bottom;
 }
 
 
@@ -4484,49 +4207,49 @@ OverlayBasePanel #LeftMouseScrollRegion, OverlayBasePanel #RightMouseScrollRegio
 {
 	opacity: 1.0;
 	margin-left: 790px;
-	background-color: mouse_hover_bg_left;
+	background-color: mouse_hover_bg_up;
 }
 
 #LibraryMostRecent:descendantfocus:hover .RightMouseScrollRegion:hover
 {
 	opacity: 1.0;
 	margin-right: 790px;
-	background-color: mouse_hover_bg_right;
+	background-color: mouse_hover_bg_bottom;
 }
 
 #LibraryMostRecent:descendantfocus .LeftMouseScrollRegion:hover:active
 {
 	opacity: 1.0;
 	margin-left: 790px;
-	background-color: mouse_active_bg_left;
+	background-color: mouse_active_bg_up;
 }
 
 #LibraryMostRecent:descendantfocus .RightMouseScrollRegion:hover:active
 {
 	opacity: 1.0;
 	margin-right: 790px;
-	background-color: mouse_active_bg_right;
+	background-color: mouse_active_bg_bottom;
 }
 
 
 Grid.CursorVisible:descendantfocus .LeftMouseScrollRegion:hover
 {
-	background-color: mouse_hover_bg_left;
+	background-color: mouse_hover_bg_up;
 }
 
 Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover
 {
-	background-color: mouse_hover_bg_right;
+	background-color: mouse_active_bg_bottom;
 }
 
 Grid.CursorVisible:descendantfocus .LeftMouseScrollRegion:hover:active
 {
-	background-color: mouse_active_bg_left;
+	background-color: mouse_active_bg_up;
 }
 
 Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover:active
 {
-	background-color: mouse_active_bg_right;
+	background-color: mouse_active_bg_bottom;
 }
 
 
@@ -4535,7 +4258,7 @@ Grid.CursorVisible:descendantfocus .RightMouseScrollRegion:hover:active
 Grid .LeftMouseScrollRegion
 {
 	position: 0px 0px 0px;
-	background-color: mouse_hover_bg_left;
+	background-color: mouse_hover_bg_up;
 
 	transition-property: background-color, opacity;
 	transition-duration: mediumduration;
@@ -4547,18 +4270,13 @@ Grid .LeftMouseScrollRegion
 Grid .RightMouseScrollRegion
 {
 	position: 0px 0px 0px;
-	background-color: mouse_hover_bg_right;
+	background-color: mouse_active_bg_bottom;
 
 	transition-property: background-color, opacity;
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
 
 	z-index: 100;
-}
-
-Grid .LeftMouseScrollRegion, Grid .RightMouseScrollRegion
-{
-	margin-top: -160px;
 }
 
 
@@ -4664,6 +4382,7 @@ KeyboardShortcut Image
 .PlayActionModal .Achievements,
 .PlayActionModal .FriendsWhoPlay,
 .PlayActionModal .Guides,
+.PlayActionModal .CommunityHub,
 .PlayActionModal .RecentNews,
 .PlayActionModal .Workshop,
 .PlayActionModal .Screenshots
@@ -4673,12 +4392,6 @@ KeyboardShortcut Image
 {
 	desaturation: 0.3;
 	opacity: 0.7;
-}
-
-.PlayActionModal .DetailsBackground
-{
-	opacity-mask: url( "file://{images}/library/play_action_modal_mask_background.png" );
-
 }
 
 .PlayActionModal #ButtonGlow
@@ -4713,20 +4426,6 @@ KeyboardShortcut Image
 
 }
 
-.PlayActionModal .ButtonBody, .PlayActionModal .ButtonBody:hover
-{
-	pre-transform-scale2d: 1.0;
-	// unccomment these to disable outer circle treatment
-	//border-color: #FFFFFF00;
-	//box-shadow: #00000000 -6px -6px 12px 12px;
-	//background-color: none;
-}
-
-.Validating .ButtonBody, .Validating .ButtonBody:hover
-{
-	pre-transform-scale2d: 1.0;
-}
-
 .ButtonBodyWrapper
 {
 	horizontal-align: center;
@@ -4735,9 +4434,10 @@ KeyboardShortcut Image
 
 .PlayWrapper
 {
-	width: 467px;
-	height: 220px;
-	vertical-align: bottom;
+	width: 80px;
+	height: 80px;
+	horizontal-align: right;
+	margin-top: 15px;
 }
 
 .PlayAction .StreamAnimator2, .PlayAction .StreamAnimator3
@@ -4834,27 +4534,25 @@ KeyboardShortcut Image
 	max-height: 140px;
 }
 
-.PrivateBeta
+.NoPrivateBetas #PrivateBetaLabel
 {
 	visibility: collapse;
-
 }
 
-.PrivateBetas #ShowPrivateBetas
+.NoPrivateBetas #PrivateBetaPanel
 {
-	visibility: visible;
-}
-
-.ShowPrivateBetas #PrivateBetaPW
-{
-	visibility: visible;
+	visibility: collapse;
 }
 
 
-.PrivateBeta
+#PrivateBetaPanel
 {
 	width: 770px;
 	margin-top: 0px;
+	flow-children: right;
+}
+#PrivateBetaPW {
+	margin-right: 10px;
 }
 
 #PrivateBetaPW Label
@@ -4864,6 +4562,7 @@ KeyboardShortcut Image
 	margin-top: 1px;
 	horizontal-align: right;
 	color: #888888ff;
+	width: 600px;
 
 	margin-right: 5px;
 }
@@ -5007,7 +4706,7 @@ KeyboardShortcut Image
 	width: 480px;
 }
 
-.CheckBox
+#GamesFilter ToggleButton.CheckBox
 {
 	transition-duration: 0.25s !immediate;
 
@@ -5015,50 +4714,48 @@ KeyboardShortcut Image
 
 	width: 475px;
 	height: 48px;
-	margin-top: 8px;
+	
+	margin-left: -16px;
+	margin-top: 0px;
 	margin-bottom: 8px;
-
-	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
-
-
-	background-color: simplebutton;
+	padding-left: 10px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #25a9df00 ), to( #082745ff) );
 
 	pre-transform-scale2d: 1.0;
-
-	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow;
+	
+	transition-property: color, transform, pre-transform-scale2d;
 	transition-timing-function: ease-out;
 
 }
 
-.CheckBox
+#GamesFilter ToggleButton.CheckBox:Focus
 {
-	background-color: simplebutton;
-}
+	box-shadow: none;
 
-.CheckBox:Focus
-{
-	animation-name: main-button-glow-movement, quick-blur;
-	animation-duration: longduration, 0.45s;
-	animation-delay: 0.0s;
-	animation-timing-function: bigpicture-ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
+	color: #082846FF;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	
+	animation-name: nx-filter-button-focus; 
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
-
-.CheckBox:descendantfocus
-{
+#GamesFilter ToggleButton.CheckBox:Focus Label {
+	color: #072e47;
 }
 
 
-// tickbox to turn togglebuttons into checkboxes
+/* tickbox to turn togglebuttons into checkboxes */
 .CheckBox .TickBox
 {
-	width: 50px;
-	height: 50px;
+	width: 34px;
+	height: 34px;
 	margin-left: 0px;
 	vertical-align: center;
-	background-color: blue;
-
+	background-color: #00000066;
+		border-width: 2px;
 	transition-property: transform, background-color, border, box-shadow, color;
 	transition-timing-function: ease-out;
 	transition-duration: 0.3s;
@@ -5069,60 +4766,33 @@ KeyboardShortcut Image
 	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	background-color: blue;
+	background-color: #00000066;
 
 }
 
-.CheckBox:Focus .TickBox
+ToggleButton.CheckBox:Focus .TickBox
 {
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	border-color: #ffffff;
+	background-color: #00000066;
+	//background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
+				border-color: #072e47;
+
 }
 
-.CheckBox:Selected:Focus .TickBox
+ToggleButton.CheckBox:Selected:Focus .TickBox
 {
-	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	border-color: #ffffff;
+	background-color: #00000066;
+	border-width: 2px;
+	border-color: #fdfdfdff;
+  color: #ffffffff;
 }
 
-// and make room for the tickbox
-.CheckBox Label
-{
-	padding-left: 52px;
-	padding-top: 6px;
-	color: detailsdatalabel;
-	width: 100%;
-	text-overflow: clip;
-	white-space: nowrap;
-
-	transform: translatex(-7px);
-	transition-property: color, transform;
-	transition-duration: 0.23s;
-	transition-timing-function: ease-in;
-}
-
-.Checkbox:focus Label
-{
-}
-
-.CheckBox:hover Label
-{
-	color: #ffffffff;
-	transform: translatex(0px);
-}
-
-.CheckBox:focus Label
-{
-	color: applabel;
-	transform: translatex(0px);
-}
 
 #AllowOtherDownloadsCheck
 {
-	width: 700px;
+	width: 600px;
 	height: 50px;
 	background-color: none;
 }
@@ -5205,37 +4875,30 @@ KeyboardShortcut Image
 #DLC
 {
 	visibility: collapse;
-	width: 534px;
 }
 
 #DLC.ShowDLC
 {
-		visibility: visible;
+	visibility: visible;
 }
 
 
-LibraryDLCItem .LeftColum, LibraryDLCItem .RightColum
+LibraryDLCItem .RightColumn
 {
 	flow-children: down;
+}
+LibraryDLCItem .RightColumn
+{
+	width: 100%;
 }
 
 LibraryDLCItem #Image
 {
 	width: 158px;
 	height: 74px;
-	margin: 4px;
-	margin-top: 8px;
-	margin-left: 8px;
-	transform: translateX( -7px );
-	
-	transition-property: transform;
-	transition-duration: shortduration;
+	vertical-align: center;
+	margin-right: 8px;
 }
-
-LibraryDLCItem:descendantfocus #Image
-{
-	transform: translateX( 0px );
-	}
 
 LibraryDLCItem Label
 {
@@ -5259,23 +4922,17 @@ LibraryDLCItem Button:focus Label
 {
 	height: 60px;
 	font-size: 24px;
-	color: achievementstitle;
-	transform: translateX( 0px );
-		
-	transition-property: color, transform;
-	transition-duration: shortduration;
+	color: #ffffff;
 }
 
 LibraryDLCItem Button:focus #DLCTitle
 {
-	color: achievementstitledark;
-	transform: translateX( 7px );
+	color: #000000;
 }
 
 #DLCInstalled
 {
 	color: gradient( linear, 0% 0%, 0% 100%, from( #fdfdfd9f ), to( #bdbfbfaf ) );
-	transform: translateX( 0px );
 	font-size: 20px;
 	font-weight: normal;
 	margin-top: 4px;
@@ -5287,7 +4944,6 @@ LibraryDLCItem Button:focus #DLCTitle
 LibraryDLCItem Button:focus #DLCInstalled
 {
 	color: achievementdetailsheaderdark;
-	transform: translateX( 7px );
 }
 
 LibraryDLCItem
@@ -5301,32 +4957,67 @@ LibraryDLCItem
 	margin-right: 20px;
 }
 
-LibraryDLC #DLCItems
+ManageDLCDialog #DLCItems
 {
 	overflow: squish scroll;
 	width: 100%;
-	height: 100%;
+	height: fit-children;
+	max-height: 500px;
 	margin-right: 18px;
-	margin-bottom: 20px;
 	padding-top: -5px;
 	padding-bottom: -4px;
 	flow-children: down;
-	opacity: 0.8;
-	transform: translateX( 20px );
-	transition-property: transform, opacity;
-	transition-duration: shortduration;
-	height: 240px;
-	opacity-mask: url( "file://{images}/library/details_data_mask.tga" );
+}
+ManageDLCDialog #ButtonCancel
+{
+	visibility: visible;
 }
 
-LibraryDLC:descendantfocus #DLCItems
+LibraryDLC #DLCItems
 {
-	height: 100%;
-	opacity: 1.0;
-	transform: translateX( 10px );
-	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+	overflow: clip clip;
+	width: 100%;
+	height: 180px;
+	padding: 10px;
+	flow-children: right-wrap;
+}
+LibraryDLC LibraryDLCItem
+{
+	width: fit-children;
+	margin: 0px;
+	padding: 0px;
+}
+LibraryDLCItem #Image.DLCPreviewImage
+{
+	width: 180px;
+	height: 84px;
+	margin: 8px 8px 0px 0px;
+	transform: translateX( 0px );
+}
+
+LibraryDLCItem .DLCInstallState
+{
+	padding: 4px;
+	vertical-align: bottom;
+	horizontal-align: right;
+	background-color: #00000055;
+	margin-right: 8px;
+}
+
+LibraryDLCItem .DLCInstallState.Installed
+{
+	visibility: collapse;
+}
+LibraryDLCItem.Installed .DLCInstallState.Installed
+{
+	visibility: visible;
+}
+LibraryDLCItem.Installed .DLCInstallState.NotInstalled
+{
+	visibility: collapse;
+}
+LibraryDLCItem .DLCInstallStateIcon
+{
 }
 
 LibraryDLCItem #WrapperButton
@@ -5350,7 +5041,6 @@ LibraryDLCItem Button
 
 LibraryDLCItem Button:focus
 {
-
 	transform: translatex( 10px ) translatez( 0px );
 	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 
@@ -5366,4 +5056,1218 @@ LibraryDLCItem Button:focus
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+}
+
+.GridButtonRow Button,
+{
+
+	transition-property: position, color, background-color, transform;
+	transition-duration: shortduration;
+	margin-right: 30px;
+	background-color: #073050;
+}
+
+.GridButtonRow Button:selected:focus
+{
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) ); //black;
+}
+
+.GridButtonRow Button:selected
+{
+	background-color: black;
+}
+
+.GridButtonRow Button Label
+{
+	transition-property: background-color, color;
+	transition-duration: shortduration;
+	margin-left: 10px;
+}
+
+
+
+
+.AddContentButton
+{
+	flow-children: right;
+}
+
+.GridButtonRow .LinksAndMoreButton Image
+{
+	color: white;
+	opacity: 1.0;
+	width: 24px;
+	height: 24px;
+}
+
+.GamesHorizRule
+{
+	width: 100%;
+	height: 20px;
+}
+
+#GamesFilter
+{
+	width: 420px;
+	height: fit-children;
+	max-height: 700px;
+	opacity: 1.0;
+	position: 1845px 120px 0px;
+	margin-top: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	background-color: black;
+	overflow: clip;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #1184baee ), to( #0e2744ee ) );
+
+	box-shadow: fill #00000066 -4px -4px 6px 6px;
+
+	flow-children: down;
+
+	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+
+}
+
+
+.suggested #GamesFilter
+{
+}
+.suggested #GamesFilter {
+	opacity: 0.0;
+}
+
+/* hide the filter UI if there are too few elements to bother with filtering in this view */
+.NoFilter #GamesFilter
+{
+	opacity: 0.0;
+}
+
+.ContentAreaFocus #GamesFilter
+{
+	position: 1650px 120px 0px;
+}
+
+#GamesFilter:descendantfocus
+{
+	opacity: 1.0;
+	desaturation: 0.0;
+	transform: translatez( 20px );
+	position: 1480px 120px 0px;
+}
+
+#GamesFilter ToggleButton.CheckBox,
+#GamesFilter .NxTagHeader,
+#GamesFilter Button,
+#GamesFilter.EmptyFilter Button.NxFilterButton
+{
+	height: 0px;
+
+	margin: 0px;
+}
+#GamesFilter:descendantfocus ToggleButton {
+	margin: 2px 10px 2px 0px;
+}
+
+#GamesFilter:descendantfocus ToggleButton, #GamesFilter ToggleButton:selected,
+#GamesFilter:descendantfocus .NxTagHeader,
+#GamesFilter:descendantfocus Button,
+#GamesFilter .AlwaysVisible
+{
+	height: fit-children;
+}
+#GamesFilter .NxTagHeader.FilterHeader {
+	height: 56px;
+	margin-left: 10px;
+}
+
+#GamesFilter .FilterHeader
+{
+	font-size: 34px;
+	color: #ffffff;
+
+}
+
+.GamesFilterWrapper
+{
+	position: 150px 0px 0px;
+	width: 400px;
+	height: fit-children;
+	padding: 0px;
+	margin-left: 10px;
+	z-index: 10;
+
+	overflow: clip scroll;
+
+	flow-children: down;
+
+	transition-property: position, color, background-color, transform, opacity, height, width;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+
+}
+
+.GamesFilterWrapper:descendantfocus
+{
+	position: 0px 0px 0px;
+	max-height: 600px;
+}
+
+LibraryFilterGames VerticalScrollBar
+{
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-delay: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.ContentAreaFocus LibraryFilterGames VerticalScrollBar
+{
+	opacity: 1.0;	
+}
+
+
+LibraryFilterGames Label, .GridButtonRow Label
+{
+	width: 100%;
+	font-family: platformfont;
+	font-weight: normal;
+	vertical-align: center;
+	
+	font-size: 24px;	
+	color: #2F89BDff;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	
+	
+}
+
+LibraryFilterGames .CloseButton
+{
+	visibility: collapse;
+}
+
+.NoCategories .CategoryHeader
+{
+	visibility: collapse;
+}
+
+
+Label.Header
+{
+	font-size: 18px;	
+	color: #2F89BDff;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+.GridArea, .TagContainer
+{
+	width: 100%;
+	height: fit-children;
+	flow-children: down;
+}
+
+LibraryFilterGames #HiddenGames, LibraryFilterGames #UnblockedGames
+{
+	visibility: collapse;
+}
+
+LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #UnblockedGames
+{
+	visibility: visible;
+}
+
+.GameSearchInput
+{
+	width: 100%;
+	margin-right: 20px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	margin-left: 14px;
+	height: 0px;
+}
+#GamesFilter #NxNarrowByName.NxTagHeader {
+	margin-bottom: -40px;
+}
+
+.GameSearchInput.HasInput, #GamesFilter:descendantfocus .GameSearchInput
+{
+	height: fit-children;
+}
+
+.GameSearchInputHint
+{
+	color: #2F89BDff;
+}
+
+.GameSearchInputHint
+{
+	opacity: 1.0;
+	transition-property: opacity;
+	transition-duration: shortduration;
+}
+
+.HasInput .GameSearchInputHint
+{
+	opacity: 0.0;
+}
+
+.NxLeftNav
+{
+	width: 425px;
+	height: 100%;
+	background-color: #00000000;
+	flow-children: down;
+}
+
+.NxLeftNavFullWrapper .ContentsWrapper
+{
+	width: 100%;
+	height: 100%;
+}
+
+.NxLeftNavFullWrapper .ShortcutOrMod .HorizontalRule
+{
+	visibility: collapse;
+}
+
+.NxLeftNavActionsWrapper
+{
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+	opacity: 1.0;
+	overflow: squish scroll;
+
+	margin-top: 190px;
+	transition-duration: shortduration;
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+
+}
+
+.NxLeftNavFullWrapper
+{
+	width: 100%;
+	height: 100%;
+}
+
+.NxLeftNavActionsWrapper VerticalScrollBar
+{
+	width: 6px;
+	margin: 3px;
+	border-radius: 0px;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c2c2c290 ), to( #d2d2d290 ) );
+	horizontal-align: right;
+	vertical-align: center;
+}
+
+.NxLeftNavActionsWrapper VerticalScrollBar .ScrollThumb
+{
+	background-color: #d2d2d2dd;
+}
+
+.NxLeftNav:focus .NxLeftNavActionsWrapper, .NxLeftNav:descendantfocus .NxLeftNavActionsWrapper
+{
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+}
+
+.NxLeftNavButton
+{
+	width: 100%;
+	margin: 2px 10px 2px 10px;
+	padding: 10px 0px 0px 20px;
+	height: 48px;
+	flow-children: right;
+	box-shadow: none;
+	color: #67c1f5FF;
+	background-color: gradient( linear, 85% 85%, 100% 100%, from( #09334dFF ), to( #09334d00 ) );
+
+}
+
+.NxLeftNavButton:selected {
+	background-color: #1579a0;
+}
+.NxLeftNavButton:selected Label {
+	color: #ffffff;
+}
+.NxLeftNavButton:selected Label .NumberElement {
+	color: #ffffff;
+}
+
+.NxLeftNavButtonAction
+{
+	width: 100%;
+	margin: 2px 10px 2px 10px;
+	padding: 10px 0px 0px 20px;
+	height: 48px;
+	flow-children: right;
+	box-shadow: none;
+	color: #67c1f5FF;
+	background-color: #09334dFF;
+}
+
+
+
+.NxLeftNavButton Label,
+.NxLeftNavButtonAction Label
+{
+	width: 100%;
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+	color: #67c1f5ff;
+}
+	.NxLeftNavButton Label .NumberElement,
+	.NxLeftNavButtonAction Label .NumberElement
+	{
+		color: #2976a3ff;
+	}
+
+.NxLeftNavButton:focus Label,
+.NxLeftNavButtonAction:focus Label
+{
+	color: #072e47;
+}
+	.NxLeftNavButton:focus Label .NumberElement,
+	.NxLeftNavButtonAction:focus Label .NumberElement
+	{
+		color: #072e47;
+	}
+
+
+.NxLeftNavButton.Locked
+{
+	wash-color: parental_locked_wash;
+}
+
+.NxLeftNavButton.Locked:focus
+{
+	wash-color: none;
+}
+
+.NxLeftNavButton.Locked Label
+{
+	width: fill-parent-flow(1.0);
+}
+
+.NxLeftNavButton Image,
+.NxLeftNavButtonAction Image
+{
+	vertical-align: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+	margin-left: -4px;
+  height: 32px;
+  width: 32px;
+  wash-color: #2976a3ff;
+	opacity: 1.0;
+}
+
+.NxLeftNavButton:focus Image,
+.NxLeftNavButtonAction:focus Image
+{
+	vertical-align: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  height: 32px;
+  width: 32px;
+  wash-color: #ffffffff;
+	opacity: 1.0;
+}
+
+.NxLeftNavButton.Locked Image
+{
+	opacity: 1.0;
+	wash-color: none;
+	
+	transition-property: wash-color;
+	transition-duration: 0.08s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.NxLeftNavButton.Locked:descendantfocus Image
+{
+	wash-color: #2f2f2fff;
+}
+
+
+
+.NxLeftNavButton:hover,
+.NxLeftNavButtonAction:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+}
+
+.NxLeftNavButton:focus,
+.NxLeftNavButtonAction:focus
+{
+	color: #082846FF;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	/*border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;*/
+
+	animation-name: nx-button-focus;
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+.NxLeftNav .SmallHeaderImage
+{
+	margin: 0px 10px 0px 10px;
+	width: 100%;
+	background-color: dialog_bg_color;
+}
+
+.NxLeftNav:descendantfocus, .NxLeftNav:focus
+{
+	z-index: 100;
+}
+
+.NxGridBackground
+{
+	width: 100%;
+	height: 100%;
+
+
+	margin-top: 4px;
+	box-shadow: #000000aa -2px -2px 4px 4px;
+
+	background-color: bgcolor;
+	background-image: url( "file://{images}/store/store_app_bg.png" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: 1920px 1080px;
+
+}
+
+.NxGridButtonRow
+{
+	margin-top: 20px;
+	margin-left: 70px;
+	width: 400px;
+	height: 100%;
+	flow-children: down;
+	overflow: clip scroll;
+
+	transform: translateX( -35px );
+	opacity: 0.5;
+	transition-delay: 0.08s;
+	transition-duration: 0.3s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
+	pre-transform-scale2d: 0.93;
+
+	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
+}
+
+.NxGridButtonRow:descendantfocus {
+	transform: translateX( 0px );
+	opacity: 1;
+	pre-transform-scale2d: 1;
+	opacity-mask: none;
+}
+
+
+
+@keyframes 'nx-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	}
+
+	50%
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #1483baff ) );
+	}
+
+	to
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	}
+}
+
+@keyframes 'nx-filter-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	}
+
+	50%
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #1484baff ) );
+	}
+
+	to
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	}
+}
+
+
+#ButtonNext,
+#ButtonBack,
+#ButtonCancel,
+#UnblockedFilter
+{
+	visibility: collapse;
+}
+
+.Parental #ButtonNext,
+.Parental #ButtonBack,
+.Parental #ButtonCancel,
+.Parental #UnblockedFilter
+ {
+	 visibility: visible;
+ }
+
+.Parental #GridBackground,
+.Parental #RecomendedFilter,
+.Parental #MusicFilter,
+.Parental #AddSteamContent,
+.Parental #AddSteamProduct
+ {
+	 visibility: collapse;
+ }
+
+.Parental #Options
+{
+	opacity: 0.0;
+}
+
+.Parental .AppGridItem.Ready
+{
+	pre-transform-scale2d: 0.8;
+}
+
+.Parental .AppGridItem.Ready:focus
+{
+	pre-transform-scale2d: 0.9;
+}
+
+.Parental.unblocked .AppGridItem
+{
+	visibility: collapse;
+}
+
+.Parental.unblocked .AppGridItem.UnlockedVisible
+{
+	visibility: visible;
+}
+
+.GamesSuggestion
+{
+	padding-top: 20px;
+	padding-left: 0px;
+	padding-right: 40px;
+	margin-left: 100px;
+	margin-top: 8px;
+	overflow: squish scroll;
+}
+
+
+.LibrarySuggested
+{
+	flow-children: down;
+}
+
+.SuggestedRow
+{
+	width: 100%;
+	flow-children: right;
+	padding: 4px;
+}
+
+.SuggestedRow Button
+{
+	opacity: 1.0;
+	visibility: visible;
+	height: 210px;
+}
+
+/* spread out the capsules when content area is in focus */
+#PopularRow .SuggestedRow #Game1,
+#PopularRow .SuggestedRow #Game2,
+#PopularRow .SuggestedRow #Game3,
+#UnPlayedRow .SuggestedRow #Game1,
+#UnPlayedRow .SuggestedRow #Game2,
+#UnPlayedRow .SuggestedRow #Game3{
+	transform: translatex(0px);
+	transition-property: border, background-color, color, box-shadow, transform;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+.ContentAreaFocus #PopularRow .SuggestedRow #Game1,
+.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game1 {
+	transform: translatex(20px);
+}
+.ContentAreaFocus #PopularRow .SuggestedRow #Game2,
+.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game2 {
+	transform: translatex(40px);
+}
+.ContentAreaFocus #PopularRow .SuggestedRow #Game3,
+.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game3 {
+	transform: translatex(60px);
+}
+
+#UnPlayedRow.EmptyRow, #PopularRow.EmptyRow
+{
+	visibility: collapse;
+}
+
+.EmptyLibraryHeader
+{
+	flow-children: down;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #66c0f433 ), to( #66c0f400 ) );
+	margin: 0 30px 10px 0;
+	width: 1320px;
+	padding-left: 10px;
+}
+
+.EmptyLibraryLabelWrapper
+{
+	horizontal-align: center;
+	vertical-align: center;
+	flow-children: down;
+}
+
+.EmptyLibraryLabelWrapper Label, .AppList Label
+{
+	text-align: center;
+	width: 600px;
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+	color: #8f98a0ff;
+	padding-left: 5px;
+}
+.EmptyLibraryLabelWrapper .Title {
+	color: #67C1F5ff;
+}
+.StoreList Button {
+	height: 205px;
+	padding: 20px;
+}
+.AppList {
+	flow-children: down;
+	height: 100%;
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #66c0f433 ), to( #66c0f400 ) );
+	margin: 0 30px 10px 0;
+	width: 1370px;
+	padding-left: 10px;
+}
+
+.AppList Label
+{
+	text-align: left;
+	color: detailsdatalabelfocus;
+}
+
+.EmptyLibraryLabelWrapper Label.Title
+{
+	font-size: 40px;
+}
+
+#GamesSuggestion
+{
+	visibility: collapse;	
+}
+
+.suggested #GamesSuggestion
+{
+	visibility: visible;	
+}
+
+.suggested #GamesGrid, .music #GamesGrid
+{
+	visibility: collapse;	
+}
+
+
+.RecentGamesList.AppList {
+	height: 350px;
+}
+#GamesSuggestion .RecentGamesList.AppList Button {
+	width: 500px;
+	height: 326px;
+}
+#GamesSuggestion .RecentGamesList.AppList Button Image {
+	width: 460px;
+	height: 215px;
+}
+
+
+.StoreList Button Label
+{
+	horizontal-align: center;
+	vertical-align: center;
+	text-align: center;
+	color: #67C1F5ff;
+}
+
+.suggested #GamesSuggestion Button {
+	pre-transform-scale2d: 0.98;
+
+	box-shadow: fill #00000033 -3px -3px 6px 6px;
+
+	transition-property: pre-transform-scale2d, transform;
+}
+.suggested #GamesSuggestion #RecentRow Button {
+	pre-transform-scale2d: 0.95;
+
+
+}
+.suggested #GamesSuggestion #RecentRow Button#Game0 {
+	transform: translatex(-15px);
+}
+.suggested #GamesSuggestion #RecentRow Button#Game1 {
+	transform: translatex(-44px);
+}
+.suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game0,
+.suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game1 {
+	pre-transform-scale2d: 0.98;
+	transform: translatex(0px);
+
+}
+#GamesSuggestion Button {
+	width: 320px;
+	padding: 0px;
+	margin: 0px;
+	background-color: transparent_module;
+
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+	transition-duration: shortmedduration;
+
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 0px;
+	border-color: #b6e1fa00;
+
+	transition-property: background-color, box-shadow, pre-transform-scale2d, border;
+}
+
+#GamesSuggestion Button .ImageWrapper
+{
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+}
+
+#RecentRow Button .ImageWrapper
+{
+	flow-children: right;
+}
+
+#GamesSuggestion Button:focus
+{
+	pre-transform-scale2d: 1;
+	color: #161718f5;
+	background-color: action_module;
+
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 0px;
+	border-color: #b6e1faff;
+
+	box-shadow: box_shadow_on_color -4px -4px 12px 8px;
+
+	animation-name: none;
+	animation-duration: mediumduration;
+	animation-delay: 0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+#GamesSuggestion .HeaderLabel {
+	margin-left: 14px;
+	margin-top: 12px;
+	padding-left: 0px;
+}
+
+.AppList Button:focus
+{
+	padding: 0px;
+
+}
+
+#GamesSuggestion Button Image
+{
+	width: 100%;
+	height: 150px;
+}
+
+.FreeGameDetails
+{
+	vertical-align: bottom;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+.FreeGameDetails Label
+{
+	color: #808184;
+	font-size: 18px;
+}
+
+.LastPlayedDate
+{
+	color: #67C1F5ff;
+}
+
+#GamesSuggestion Button .GameDetails
+{
+	padding-top: 10px;
+	height: 44px;
+
+}
+
+#RecentRow
+{
+	height: 320px;
+}
+#RecentRow #Game2,
+#RecentRow #Game3
+{
+	visibility: collapse;
+}
+
+#RecentRow Button
+{
+	width: 670px;
+	height: 240px;
+
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f400 ), to( #b6e1fa00 ) );
+
+	transition-property: width, height, background-color;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+	transition-duration: shortmedduration;
+}
+#RecentRow Button:focus
+{
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+}
+#RecentRow Button Image
+{
+	width: 460px;
+	height: 100%;
+}
+
+#GamesSuggestion #RecentRow Button .GameDetails
+{
+	border: 0px solid #00000000;
+	width: 210px;
+	height: 100%;
+	background-color: transparent_module;
+}
+
+#GamesSuggestion #RecentRow Button:focus .GameDetails
+{
+	background-color: action_module;
+}
+
+#RecentRow Button Label
+{
+	width: 210px;
+	height: 65px;
+	white-space: normal;
+	vertical-align: center;
+	text-align: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 0px;
+}
+
+
+.GameDetails Label
+{
+	font-size: 22px;
+}
+#GamesSuggestion Button .GameDetails #GameLabel_Expanded {
+	opacity: 0;
+
+	transition-property: opacity;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: shortmedduration;
+}
+#GamesSuggestion #PopularRow Button:focus .GameDetails #GameLabel {
+	opacity: 0;
+
+	transition-property: opacity;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: shortmedduration;
+}
+#GamesSuggestion #PopularRow Button:focus .GameDetails #GameLabel_Expanded {
+	opacity: 1;
+
+	transition-property: opacity;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: shortmedduration;
+}
+
+Button.NoContent
+{
+	visibility: collapse;
+}
+
+.NoFavorites #FavoritesFilter, .NoMusic #MusicFilter
+{
+		visibility: collapse;
+}
+
+.RadioButton
+{
+	width: 475px;
+}
+
+.MusicOption,
+.MusicMode .GameOption
+{
+		visibility: collapse;
+}
+
+.MusicMode .MusicOption
+{
+		visibility: visible;
+}
+
+.AllGamesFilterLabel
+{
+	margin-top: 10px;
+	position: 490px 0px 0px;
+
+	text-align: left;
+	width: 600px;
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+	color: #67C1F5ff;
+
+	width: 1500px;
+	height: 40px;
+	
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-duration: shortmedduration;
+
+}
+
+.search .AllGamesFilterLabel
+{
+	opacity: 1.0;
+}
+
+.search.NoFilter .AllGamesFilterLabel
+{
+	opacity: 0.0;
+}
+
+
+.AllGamesFilterResults
+{
+		color: #808184;
+}
+
+.FriendsPlaying
+{
+		color: #A4D007;
+}
+
+/* Filter Button */
+#GamesFilter:descendantfocus Button.NxFilterButton
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px 0px 0px 10px;
+	height: 45px;
+
+	flow-children: right;
+	box-shadow: none;
+	color: #67c1f5FF;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #25a9df00 ), to( #082745ff) );
+
+}
+
+
+.NxFilterButton:selected {
+	background-color: #1579a0;
+}
+
+LibrarySuggestionsRow
+{
+	height: 270px;
+	width: 100%;
+	visibility: collapse;
+}
+
+LibrarySuggestionsRow.Active
+{
+	visibility: visible;
+}
+
+.NxFilterButtonAction
+{
+	width: 100%;
+	margin: 2px 10px 2px 10px;
+	padding: 10px 0px 0px 24px;
+	height: 48px;
+	flow-children: right;
+	box-shadow: none;
+	color: #67c1f5FF;
+	background-color: #09334dFF;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #ffffff00;
+}
+
+
+.NxFilterButton Label
+{
+	width: 100%;
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+	color: #67c1f5ff;
+}
+
+.NxFilterButton:focus Label
+{
+	color: #FFFFFF;
+}
+
+
+.NxFilterButton.Locked
+{
+	wash-color: parental_locked_wash;
+}
+
+.NxFilterButton.Locked:focus
+{
+	wash-color: none;
+}
+
+.NxFilterButton.Locked Label
+{
+	width: fill-parent-flow(1.0);
+}
+
+.NxFilterButton Image
+{
+	vertical-align: center;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	height: 32px;
+	width: 32px;
+	wash-color: #67c1f5ff;
+	opacity: 1.0;
+}
+
+.NxFilterButton:focus Image
+{
+	vertical-align: center;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  height: 32px;
+  width: 32px;
+  wash-color: #ffffffff;
+
+	opacity: 1.0;
+}
+
+.NxFilterButton.Locked Image
+{
+	opacity: 1.0;
+	wash-color: none;
+	
+	transition-property: wash-color;
+	transition-duration: 0.08s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.NxFilterButton.Locked:descendantfocus Image
+{
+	wash-color: #2f2f2fff;
+}
+
+
+
+.NxFilterButton:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+}
+
+#GamesFilter Button.NxFilterButton:focus
+{
+	color: #082846FF;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+
+	
+	animation-name: nx-filter-button-focus;
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+.NxTagHeader
+{
+	height: 32px;
+	font-size: 24px;	
+	color: #66c0f4ff;
+
+	margin-bottom: 10px;
+	margin-left: -10px;
+	padding-left: 14px;
+	padding-top: 15px;
+}
+
+.FriendsPlayingIcon
+{
+	background-image: url( "file://{images}/library/icon_friend_green.png" );
+	width: 16px;
+	height: 16px;
+}
+
+#GameLabel
+{
+	vertical-align: center;
+	height: 32px;	
+}
+#GameLabel Image.InlineImage,
+#GameLabel_Expanded Image.InlineImage
+{
+	margin-top: 6px;
+	margin-bottom: -4px;
+	margin-left: 3px;
+	width: 20px;
+	height: 22px;
+}
+
+#LibraryGameStatus
+{
+	width: 100%;
 }

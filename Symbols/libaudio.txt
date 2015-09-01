@@ -4,6 +4,7 @@
  B InterfaceReg::s_pInterfaceRegs
  B __g_CreateCDLLValidateIValidate_reg
  B g_VecLoadedModules
+ B g_pFioAsyncFinalize
  B s_NoEscConversion
  B s_StringCharConversion
  B s_pAudioController
@@ -60,12 +61,15 @@
  D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>
  D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>
  D typeinfo for CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>
+ D typeinfo for CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned int*), void (*)(unsigned int), int (*)(unsigned int, int, unsigned int), unsigned int (*)(unsigned int, void*, unsigned int))>
+ D typeinfo for CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned long long*), void (*)(unsigned long long), int (*)(unsigned long long, int, unsigned int), unsigned int (*)(unsigned long long, void*, unsigned int))>
  D typeinfo for CDynamicFunc<void (*)(void*)>
  D typeinfo for CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>
  D typeinfo for CIAudioSinkListNull
  D typeinfo for CMilesAudioDevice
  D typeinfo for CMilesAudioOutputStream
  D typeinfo for CMilesAudioSound
+ D typeinfo for CPathString
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
@@ -120,12 +124,15 @@
  D vtable for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>
  D vtable for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>
  D vtable for CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>
+ D vtable for CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned int*), void (*)(unsigned int), int (*)(unsigned int, int, unsigned int), unsigned int (*)(unsigned int, void*, unsigned int))>
+ D vtable for CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned long long*), void (*)(unsigned long long), int (*)(unsigned long long, int, unsigned int), unsigned int (*)(unsigned long long, void*, unsigned int))>
  D vtable for CDynamicFunc<void (*)(void*)>
  D vtable for CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>
  D vtable for CIAudioSinkListNull
  D vtable for CMilesAudioDevice
  D vtable for CMilesAudioOutputStream
  D vtable for CMilesAudioSound
+ D vtable for CPathString
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
@@ -178,6 +185,8 @@
  R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, int)>
  R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, unsigned int, long long)>
  R typeinfo name for CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>
+ R typeinfo name for CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned int*), void (*)(unsigned int), int (*)(unsigned int, int, unsigned int), unsigned int (*)(unsigned int, void*, unsigned int))>
+ R typeinfo name for CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned long long*), void (*)(unsigned long long), int (*)(unsigned long long, int, unsigned int), unsigned int (*)(unsigned long long, void*, unsigned int))>
  R typeinfo name for CDynamicFunc<void (*)(void*)>
  R typeinfo name for CDynamicFunc<void* (*)(char const*, void*, char const*, unsigned int)>
  R typeinfo name for CIAudioSinkListNull
@@ -185,6 +194,7 @@
  R typeinfo name for CMilesAudioOutputStream
  R typeinfo name for CMilesAudioSound
  R typeinfo name for CMilesLibrary
+ R typeinfo name for CPathString
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >
@@ -398,6 +408,14 @@
  T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::Init(CSysModule*)
  T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::Release()
  T CDynamicFunc<void (*)(_SAMPLE*, void const*, unsigned int)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned int*), void (*)(unsigned int), int (*)(unsigned int, int, unsigned int), unsigned int (*)(unsigned int, void*, unsigned int))>::GetNextPointer()
+ T CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned int*), void (*)(unsigned int), int (*)(unsigned int, int, unsigned int), unsigned int (*)(unsigned int, void*, unsigned int))>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned int*), void (*)(unsigned int), int (*)(unsigned int, int, unsigned int), unsigned int (*)(unsigned int, void*, unsigned int))>::Release()
+ T CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned int*), void (*)(unsigned int), int (*)(unsigned int, int, unsigned int), unsigned int (*)(unsigned int, void*, unsigned int))>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned long long*), void (*)(unsigned long long), int (*)(unsigned long long, int, unsigned int), unsigned int (*)(unsigned long long, void*, unsigned int))>::GetNextPointer()
+ T CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned long long*), void (*)(unsigned long long), int (*)(unsigned long long, int, unsigned int), unsigned int (*)(unsigned long long, void*, unsigned int))>::Init(CSysModule*)
+ T CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned long long*), void (*)(unsigned long long), int (*)(unsigned long long, int, unsigned int), unsigned int (*)(unsigned long long, void*, unsigned int))>::Release()
+ T CDynamicFunc<void (*)(unsigned int (*)(char const*, unsigned long long*), void (*)(unsigned long long), int (*)(unsigned long long, int, unsigned int), unsigned int (*)(unsigned long long, void*, unsigned int))>::SetNextPointer(IDynamicFunction*)
  T CDynamicFunc<void (*)(void*)>::GetNextPointer()
  T CDynamicFunc<void (*)(void*)>::Init(CSysModule*)
  T CDynamicFunc<void (*)(void*)>::Release()
@@ -413,6 +431,7 @@
  T CIAudioSinkListNull::BHasInput(int) const
  T CIAudioSinkListNull::BHasOutput(int) const
  T CIAudioSinkListNull::BIsDigitalOutput(int) const
+ T CIAudioSinkListNull::BIsProfileValid(int, int) const
  T CIAudioSinkListNull::BIsSupported()
  T CIAudioSinkListNull::BStarted()
  T CIAudioSinkListNull::DetermineBestDefaultDevice()
@@ -454,6 +473,7 @@
  T CMilesAudioDevice::FreeAudioOutputStream(IAudioOutputStream*)
  T CMilesAudioDevice::FreeAudioSound(IAudioSound*)
  T CMilesAudioDevice::GetAudioType()
+ T CMilesAudioDevice::GetInternalMilesDIG()
  T CMilesAudioDevice::Init()
  T CMilesAudioDevice::Pause()
  T CMilesAudioDevice::PauseIfPossible()
@@ -467,7 +487,6 @@
  T CMilesAudioDevice::~CMilesAudioDevice()
  T CMilesAudioOutputStream::CMilesAudioOutputStream(_DIG_DRIVER*, int, int, int)
  T CMilesAudioOutputStream::CommitMixBuffer(void*, unsigned int)
- T CMilesAudioOutputStream::EnableStreamForDecoding()
  T CMilesAudioOutputStream::EnsureBufferSize(unsigned int)
  T CMilesAudioOutputStream::Flush()
  T CMilesAudioOutputStream::GetDigitalLatency()
@@ -485,7 +504,6 @@
  T CMilesAudioOutputStream::Play()
  T CMilesAudioOutputStream::SetStreamListener(IAudioOutputStreamListener*)
  T CMilesAudioOutputStream::SetVolume(float)
- T CMilesAudioOutputStream::StreamHasEnded(_SAMPLE*)
  T CMilesAudioOutputStream::Validate(CValidator&, char const*)
  T CMilesAudioOutputStream::~CMilesAudioOutputStream()
  T CMilesAudioSound::BaseInit(_DIG_DRIVER*)
@@ -516,6 +534,7 @@
  T CMilesLibrary::GetSingleton()
  T CMilesLibrary::OpenDriver(int, int, int, int)
  T CMilesLibrary::Shutdown()
+ T CMilesLibrary::Startup()
  T CMilesLibrary::Unload()
  T CMilesLibrary::~CMilesLibrary()
  T CMilesWrapper::AIL_allocate_sample_handle(_DIG_DRIVER*)
@@ -542,7 +561,6 @@
  T CMilesWrapper::AIL_set_named_sample_file(_SAMPLE*, char const*, void const*, unsigned int, int)
  T CMilesWrapper::AIL_set_preference(unsigned int, int)
  T CMilesWrapper::AIL_set_preference(unsigned int, long long)
- T CMilesWrapper::AIL_set_sample_address(_SAMPLE*, void const*, unsigned int)
  T CMilesWrapper::AIL_set_sample_buffer_count(_SAMPLE*, int)
  T CMilesWrapper::AIL_set_sample_file(_SAMPLE*, void const*, int)
  T CMilesWrapper::AIL_set_sample_loop_count(_SAMPLE*, int)
@@ -554,7 +572,9 @@
  T CMilesWrapper::AIL_set_sample_volume_pan(_SAMPLE*, float, float)
  T CMilesWrapper::AIL_start_sample(_SAMPLE*)
  T CMilesWrapper::AIL_stop_sample(_SAMPLE*)
- T CMilesWrapper::RIB_find_files_provider(char const*, char const*, char const*, char const*, char const*)
+ T CPathString::CPathString(char const*, char const*)
+ T CPathString::Clear()
+ T CPathString::Validate(CValidator&, char const*)
  T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
@@ -643,6 +663,11 @@
  T CreateMilesMusicAudioDevice
  T CreateMilesSoundAudioDevice
  T CreateMilesVoiceAudioDevice
+ T FioClose(int)
+ T FioCreateFile(char const*, EFioAccessFlags, EFioShareFlags, EFioCreateMode, unsigned int, int*)
+ T FioGetSize(int, unsigned long long*)
+ T FioRead(int, void*, int, int*)
+ T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
  T FreeAudioDevice
  T GetMilesFunctionsList()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
@@ -653,8 +678,10 @@
  T __CreateCDLLValidateIValidate_interface()
  T __clang_call_terminate
  T dyld_stub_binding_helper
+ V_FixDoubleSlashes
  V_FixSlashes
  V_IsAbsolutePath
+ V_MakeAbsolutePath
  V_UnqualifiedFileName
  V_snprintf
  V_stristr(char const*, char const*)
@@ -667,6 +694,7 @@
  __cxa_begin_catch
  __cxa_guard_acquire
  __cxa_guard_release
+ __error
  __gxx_personality_v0
  __stack_chk_fail
  __stack_chk_guard
@@ -702,6 +730,7 @@
  b df_AIL_sample_user_data
  b df_AIL_sample_volume_pan
  b df_AIL_serve
+ b df_AIL_set_file_callbacks
  b df_AIL_set_named_sample_file
  b df_AIL_set_preference
  b df_AIL_set_redist_directory
@@ -726,30 +755,49 @@
  b guard variable for GetMilesFunctionsList()::g_MilesFunctions
  b k_InvalidClientID
  b s_MilesLoader
+ close
+ close$UNIX2003
  d dyld__mach_header
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  dlclose
  dlopen
  dlsym
+ fcntl
+ fcntl$UNIX2003
  floor
  free
+ fstat$INODE64
  g_pMemAllocSteam
  getcwd
+ lseek
  memcpy
  memmove
  memset
+ open
+ open$UNIX2003
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
  pthread_mutex_lock
  pthread_mutex_unlock
+ read
+ read$UNIX2003
  std::terminate()
  strcmp
  strlen
  strncpy
  strrchr
+ t MilesIO_Close(unsigned int)
+ t MilesIO_Close(unsigned long long)
+ t MilesIO_Open(char const*, unsigned int*)
+ t MilesIO_Open(char const*, unsigned long long*)
+ t MilesIO_Read(unsigned int, void*, unsigned int)
+ t MilesIO_Read(unsigned long long, void*, unsigned int)
+ t MilesIO_Seek(unsigned int, int, unsigned int)
+ t MilesIO_Seek(unsigned long long, int, unsigned int)
+ unlink
  vasprintf
  vsnprintf
  vtable for __cxxabiv1::__class_type_info

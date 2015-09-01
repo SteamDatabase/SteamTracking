@@ -438,6 +438,7 @@
  T V_JoinNumbers
  T V_JoinNumbersUint
  T V_MakeAbsolutePath
+ T V_MakeFileSafeName
  T V_MakeRelativePath
  T V_MatchWildcardDNSName
  T V_MatchWildcardString
@@ -678,6 +679,7 @@
  pthread_mutex_unlock
  qsort_r
  r V_CP437CharsToUTF8::s_table
+ r V_MakeFileSafeName::k_rgchBadChars
  r V_Windows1252CharsToUTF8::s_table
  r V_binarytohex::k_rgchHexToASCII
  r rgentry

@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/library/launchoptions.css" />
 	</styles>
@@ -16,7 +15,7 @@
 				</Panel>
 
 				<Panel id="MsgBoxButtons">	
-					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton">
+					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button">
 						<Label id="CancelButtonText" text="#Library_LaunchOption_Cancel"/>
 					</Button>
 				</Panel>

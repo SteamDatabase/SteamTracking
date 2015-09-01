@@ -13,6 +13,7 @@ BackgroundVideoPanel
 	visibility: visible;
 	background-image: url( "file://{images}/mainmenu_bg_2.png" );
 	background-size: 100% 100%;
+	opacity: 0.99;
 
 }
 
@@ -26,7 +27,7 @@ BackgroundVideoPanel.IngameOverlayBackground
 {
 	width: 1920px;
 	height: 1080px;
-	background-color: #00000066;
+	background-color: #3f75a089;
 	background-repeat: no-repeat;
 	background-position: right 0px 50%;
 	z-index: -1000;
@@ -192,14 +193,6 @@ BackgroundVideoPanel.ScreenSaverMode, BackgroundVideoPanel.GamesRunning, Welcome
 							particle-flicker( 0.3 ), particle-flicker-variance( 0.2 )
                           );
 	}
-}
-
-BackgroundVideoPanel.IngameOverlayBackground #BackgroundMovie
-{
-	background-image: url( "file://{images}/overlay/overlay_bg_wash.png" );
-	desaturation: 0.3;
-	background-size: 100%;
-	opacity: 0.9;
 }
 
 

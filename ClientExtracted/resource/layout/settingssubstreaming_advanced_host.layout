@@ -11,8 +11,6 @@
 		}
 
 		"EnableHardwareEncoding" { ControlName="CheckButton" fieldName="EnableHardwareEncoding" labelText="#Steam_Settings_Streaming_EnableHardwareEncoding" }
-
-		"EnableDWMCapture" { ControlName="CheckButton" fieldName="EnableDWMCapture" labelText="#Steam_Settings_Streaming_EnableDWMCapture" }
 		
 		"EnableTrafficPriorityLabel"
 		{
@@ -44,7 +42,7 @@
 	
 		place
 		{
-			control="DescriptionLabel,EnableHardwareEncoding,EnableDWMCapture,EnableTrafficPriorityLabel,EnableTrafficPriority"
+			control="DescriptionLabel,EnableHardwareEncoding,EnableTrafficPriorityLabel,EnableTrafficPriority"
 			dir=down
 			align=top
 			width=max

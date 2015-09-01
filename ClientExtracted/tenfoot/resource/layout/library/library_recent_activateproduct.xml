@@ -2,7 +2,6 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
-		<include src="file://{resources}/styles/button.css" />
 		<include src="file://{resources}/styles/library/library_recent_activateproduct.css" />
 	</styles>
 
@@ -17,16 +16,13 @@
     			textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
 
     		<Label class="StdLabelLarge" text="#Library_ActivateProduct_AgreementDesc" />
-            <Button id="ViewAgreements" onactivate="ActivateViewAgreements()">
+            <Button class="Button" id="ViewAgreements" onactivate="ActivateViewAgreements()">
                 <Label text="#UI_ViewAgreements" />
             </Button>
 
             <Panel id="MsgBoxButtons">
-                <Button onactivate="ActivateAgree()">
+                <Button class="Button" onactivate="ActivateAgree()">
                     <Label text="#Library_ActivateProduct_Activate" />
-                </Button>
-                <Button onactivate="ActivateCancel()">
-                    <Label text="#UI_Cancel" />
                 </Button>
             </Panel>        
         </Panel>

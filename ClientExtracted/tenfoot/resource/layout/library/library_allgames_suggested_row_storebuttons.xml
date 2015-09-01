@@ -1,0 +1,20 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+	
+	<LibrarySuggestionsRow class="LibrarySuggestedRow" selectionpos="auto">
+		<Panel class="StoreList AppList" selectionpos="auto">
+			<Label class="HeaderLabel" text="#Library_Suggested_BrowseStore" />
+			<Panel class="SuggestedRow" selectionpos="auto">
+				<Button onactivate="StoreShowGenre(Free to Play);" selectionpos="auto" >
+					<Label  text="#Library_Suggested_BrowseStore_Free" />
+				</Button>
+				<Button onactivate="StoreShow();" selectionpos="auto" >
+					<Label  text="#Library_Suggested_BrowseStore_AllGames"  />
+				</Button>
+			</Panel>
+		</Panel>
+	</LibrarySuggestionsRow>
+</root>

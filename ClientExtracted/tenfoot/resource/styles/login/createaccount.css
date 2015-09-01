@@ -88,6 +88,11 @@ CreateAccountWizard .ShowingLoginProgress
 	margin-top: 50px;
 }
 
+#SSAButtonContainer .WizardButton
+{
+    margin-bottom: 10px;
+}
+
 #AgreementsLabel
 {
 	margin-bottom: 10px;
@@ -121,7 +126,8 @@ CreateAccountWizard .ShowingLoginProgress
 
 #AgreementsHTML
 {
-	height: 540px;
+    margin-top: 20px;
+	height: 610px;
 	width: 100%;
 	opacity: 1.0;
 }

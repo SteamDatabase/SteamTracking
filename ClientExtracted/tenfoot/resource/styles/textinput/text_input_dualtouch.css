@@ -6,17 +6,19 @@ TextInputDualTouch
 	width: 100%;
 	height: 100%;
 	flow-children: none;
+
+	background-color: #00000088;
 }
 
 #Backdrop
 {
 	width: 100%;
-	height: 512px;
+	height: 532px;
 	flow-children: none;
 	margin-bottom: 210px;
 	margin-right: 20px;
 	margin-left: 20px;
-	margin-top: 190px;
+	margin-top: 240px;
 	horizontal-align: center;
 	
 	background-color: daisy_bg_color;
@@ -27,14 +29,21 @@ TextInputDualTouch
 	box-shadow: fill #00000022 -4px -4px 8px 12px;
 	border-radius: 10px;
 }
+.SuggestionsCount4 #Backdrop
+{
+	height: 550px;
+}
 
 #TextPreviewBackground
 {
 	y: 8%;
 	background-color: #ffffff;
 	horizontal-align: center;
-	width: 720px;
+	width: 100%;
 	height: 88px;
+	margin-left: 20px;
+	margin-right: 20px;
+
 	box-shadow: fill #00000022 -4px -4px 8px 12px;
 	border-radius: 10px;
 
@@ -49,7 +58,9 @@ TextInputDualTouch
 #TextPreview
 {
 	horizontal-align: center;
-	width: 700px;
+	width: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
 	height: 68px;
 	background-color: gradient(linear, 0% 0%, 100% 0%, from(#cccccc), to(#bdbdbd) );
 	overflow: clip;
@@ -78,8 +89,13 @@ TextInputDualTouch
 	background-repeat: no-repeat;
 	margin-left: -35px;
 	margin-right: -35px;
-	margin-top: -10px;
+
 }
+.SuggestionsCount4 .TouchPad
+{
+	height: 532px;
+}
+
 
 #RowContainer
 {
@@ -111,28 +127,97 @@ TextInputDualTouch
 	horizontal-align: left;
 }
 
-.HidePointers .TouchPointer
-{
-	visibility: collapse;
-}
-
-.TouchPointer
-{
-	vertical-align: center;
-	horizontal-align: center;
-}
-
 #TopRow,
 #LastRow
 {
-	height: 14%;
+	height: 70px;
 	width: 88.8%;
+}
+.SuggestionsCount4 #TopRow
+{
+	height: 86px;
 }
 
 .NoSuggest #TopRow
 {
 	visibility: collapse;
 }
+
+#DefaultSuggestions4_WrapperLeft,
+#DefaultSuggestions4_WrapperRight
+{
+	width: 100%;
+	height: 100px;
+	flow-children: right;
+}
+
+// if we have custom suggestion panels, hide our default suggestion UI
+.SuggestionsCount3 #DefaultSuggestions4_WrapperLeft,
+.SuggestionsCount3 #DefaultSuggestions4_WrapperRight,
+.SuggestionsCount4 #DefaultSuggestions4_WrapperLeft,
+.SuggestionsCount4 #DefaultSuggestions4_WrapperRight
+{
+	visibility: collapse;
+}
+
+#CustomSuggestions_4_WrapperLeft,
+#CustomSuggestions_4_WrapperRight
+{
+	width: 440px;
+	height: 100px;
+	visibility: collapse;
+	flow-children: right;
+}
+
+#CustomSuggestions_4_WrapperLeft
+{
+	margin-left: 6px;
+}
+
+#CustomSuggestions_4_WrapperRight
+{
+	margin-left: 2px;
+}
+
+.SuggestionsCount4 #CustomSuggestions_4_WrapperLeft,
+.SuggestionsCount4 #CustomSuggestions_4_WrapperRight
+{
+	visibility: visible;
+}
+
+#Legends #HeaderText
+{
+	width: 100%;
+	height: 100px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+
+	color: #ffffff;
+	font-size: 45px;
+}
+
+#Legends #SubHeaderDetailText
+{
+	width: 400px;
+	height: 100px;
+	margin-left: 20px;
+	margin-top: 210px;
+
+	color: #66c0f4;
+	font-size: 22px;
+	
+	transition-property: opacity, desaturation;
+	transition-duration: 0.3s;
+
+}
+
+.SuggestionActive  #SubHeaderDetailText
+{
+	opacity: 0.2;
+	desaturation: 0.8;
+}
+
 
 .TouchRow
 {
@@ -150,10 +235,16 @@ TextInputDualTouch
 	width: 88%;
 }
 
-#Row0.TouchRow
+.NoSuggest #Row0.TouchRow
 {
 	height: 28%;
 }
+#Row0.TouchRow
+{
+	height: 80px;
+}
+
+
 
 #Row1 .TouchKey
 {
@@ -162,12 +253,12 @@ TextInputDualTouch
 
 #Row1.TouchRow
 {
-	height: 19.3%;
+	height: 99px;
 }
 
 #Row2.TouchRow
 {
-	height: 16.6%;
+	height: 84px;
 }
 
 #Row2 .TouchKey
@@ -177,25 +268,28 @@ TextInputDualTouch
 
 #Row3.TouchRow
 {
-	height: 19.3%;
+	height: 99px;
 }
 
 .NoSuggest .TouchRow,
 .NoSuggest #LastRow
 {
-	height: 20.8%;
+	height: 80px;
 }
 
 .Left #LastRow
 {
 	x: 0%;
 	horizontal-align: right;
+	width: 90%;
+	margin-right: -14px;
 }
 
 .Right #LastRow
 {
 	x: 0%;
 	horizontal-align: left;
+	margin-left: -5px;
 }
 
 .TouchKey
@@ -336,9 +430,21 @@ TextInputDualTouch
 	background-color: #ffffffff;
 }
 
-.DualTouchHidden
+// most of the time we're using "hardware" pointers that render through the D3D/OpenGL layers, so we don't show
+// our native Panorama elements unless we're specifically asked to (during transitions in/out) and we are actively
+// manipulating that pad
+#LeftPointer,
+#RightPointer
 {
 	visibility: collapse;
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+.ShowPanoramaPointers #LeftPointer.LeftTouchPadActive,
+.ShowPanoramaPointers #RightPointer.RightTouchPadActive
+{
+	visibility: visible;
 }
 
 #TouchKeyLabel,
@@ -364,3 +470,97 @@ TextInputDualTouch
 	text-overflow: clip;
 	white-space: nowrap;
 }*/
+
+
+#LoadingThrobber
+{
+	margin-left: 830px;
+	visibility: collapse;
+}
+
+.ShowLoadingThrobber #LoadingThrobber
+{
+	visibility: visible;
+}
+
+.SearchResultEmbedded
+{
+	width: 210px;
+	height: 82px;
+
+	margin-right: 2px;
+	margin-left: 2px;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #193e57;
+}
+
+.SearchResultEmbedded.TouchKeyHover
+{
+	border-width: 5px;
+	border-style: solid;
+	border-color: #256180;
+	background-color: none;
+}
+
+.SearchResultEmbedded#EmbeddedResultEmpty
+{
+	border-width: 0px;
+}
+
+.SearchResultEmbedded Image
+{
+	width: 100%;
+	height: 100%;
+}
+
+#SuggestionLabels
+{
+	width: 100%;
+	height: 60px;
+	margin-top: 180px;
+}
+
+.SuggestionTitleLabel
+{
+	font-size: 40px;
+	height: 60px;
+	margin-top: 10px;
+	opacity: 0.0;
+	color: #66c0f4;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+}
+
+.SuggestionTitleLabel.SuggestionActive
+{
+	opacity: 1.0;
+}
+
+#Suggest_0_text
+{
+	horizontal-align: left;
+	margin-left: 40px;
+}
+
+#Suggest_1_text
+{
+	horizontal-align: left;
+	margin-left: 250px;
+}
+
+#Suggest_2_text
+{
+	horizontal-align: right;
+	text-align: left;
+	min-width: 460px;
+}
+
+#Suggest_3_text
+{
+	horizontal-align: right;
+	text-align: left;
+	min-width: 100px;
+}

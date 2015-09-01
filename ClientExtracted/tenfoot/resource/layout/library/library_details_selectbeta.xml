@@ -2,7 +2,6 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
-		<include src="file://{resources}/styles/button.css" />
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 
@@ -14,18 +13,24 @@
 			<DropDown id="BetaDropDown" >
 			</DropDown>
 			
-			<ToggleButton 	class="CheckBox PrivateBeta" id="ShowPrivateBetas" text="#Library_SelectBeta_Private" onactivate="ToggleShowPrivateBetas()"/>
-			<TextEntry class="PrivateBeta StdLabelMed" id="PrivateBetaPW"
-					textinputid="PrivateBetaPWTextEntry"
-					textinputclass="HalfWidth DockLeft AppearFromBottomCenter" >
-					<Label class="StdLabelMed" text="#Library_SelectBeta_BetaPassword" />
-			</TextEntry>
+			<Label class="StdLabelMed" id="PrivateBetaLabel" text="#Library_SelectBeta_PrivateTitle" />
+			
+			<Panel id="PrivateBetaPanel" >
+				<TextEntry id="PrivateBetaPW"
+						textinputid="PrivateBetaPWTextEntry"
+						textinputclass="HalfWidth DockLeft AppearFromBottomCenter" >
+						<Label class="StdLabelMed" text="#Library_SelectBeta_BetaPassword" />
+				</TextEntry>
+				<Button class="Button" onactivate="CheckPassCode()">
+					<Label  text="#Library_SelectBeta_PrivateButton" />
+				</Button>
+			</Panel>        
 
 			<Panel id="MsgBoxButtons">
-				<Button onactivate="ButtonOK()" id="OK" >
+				<Button class="Button" onactivate="ButtonOK()" id="OK" >
 					<Label text="#UI_OK" />
 				</Button>
-				<Button onactivate="ButtonCancel()">
+				<Button class="Button" onactivate="ButtonCancel()">
 					<Label text="#UI_Cancel" />
 				</Button>
 			</Panel>        

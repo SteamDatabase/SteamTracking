@@ -15,13 +15,13 @@
 					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 					undohistory="enabled" />
 			<Panel id="MsgBoxButtons" >
-				<Button id="UnlockButton" onactivate="ParentalUnlock()">
+				<Button id="UnlockButton" class="Button" onactivate="ParentalUnlock()">
 					<Label id="ParentalUnlockButtonLabel" text="#Parental_Unlock2" />
 				</Button>
-				<Button id="CancelButton" onactivate="ButtonCancel()">
+				<Button id="CancelButton" class="Button" onactivate="ButtonCancel()">
 					<Label text="#UI_Cancel" />
 				</Button>
-				<Button id="RecoveryButton" onactivate="ParentalRecovery()">
+				<Button id="RecoveryButton" class="Button" onactivate="ParentalRecovery()">
 					<Label id="RecoveryButtonLabel" text="#Parental_Recovery" />
 				</Button>
 			</Panel>

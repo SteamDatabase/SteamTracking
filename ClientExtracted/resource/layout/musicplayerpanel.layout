@@ -20,6 +20,8 @@
 		NoTracksLabel { controlname=Label style="NoTracksLabelStyle" labeltext="" zpos="-1" }
 		InfoLabel { controlname=Label style="InfoLabelStyle" labeltext="1 OF 10"  zpos="-1" textalignment=center }
 		
+		SeekBar { ControlName="Slider" style="SeekBarStyle" showticks="0" showbar="1"}
+
 		frame_title
 		{
 			ControlName=Label
@@ -41,7 +43,7 @@
 			bgcolor=none
 			
 			minimum-width = 440
-			minimum-height = 92
+			minimum-height = 115
 			
 			render_bg
 			{
@@ -133,13 +135,13 @@
 		InfoLabelStyle	{ render_bg={} font-family=basefont font-size=14 textcolor="LabelDisabled" }
 		TrackListStyle { }
 		NoTracksLabelStyle	{	bgcolor=none render_bg={} image=graphics/music_background }
-		
+		SeekBarStyle	{ bgcolor=none font-family=basefont font-size=16	}
 	}
 	
 	
 	layout
 	{
-		region { name=transport y=20 width=271 height=50 align=right}
+		region { name=transport y=20 width=271 height=70 align=right}
 		region { name=currenttrack x=10 y=20 width=max height=50 margin-right=271 }
 		
 		place {	control="CurrentAlbumImage"	region=currenttrack x=0 y=4 width=56 height=56	}
@@ -150,6 +152,8 @@
 		place { control="RepeatButton,ShuffleButton,PreviousButton" region=transport x=0 y=16 spacing=8 margin=0 height=18 }
 		place { control="PlayPauseButton" region=transport x=100 y=0 width=56 height=50 }
 		place { control="NextButton,VolumeButton,BrowseButton" region=transport x=164 y=16 spacing=8 margin=0 height=18 }
+
+		place { control=SeekBar region=transport x=0 y=50 height=18 width=260 }
 
 		place { control="TrackList" x=10 y=94 width=max height=max margin-right=10 margin-bottom=40 }
 		place { control="NoTracksLabel" x=10 y=94 margin-right=10 margin-bottom=33 align="top-center" }

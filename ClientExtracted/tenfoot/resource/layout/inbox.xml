@@ -42,7 +42,7 @@
 					<Label id="NewGiftsLabel" class="LongDescSm" text="#MainMenu_NewGifts" />
 				</Panel>
 			</Button>
-			<Button id="NewTradeOffersButton" onactivate="ShowNewTradeOffers();" >
+			<Button id="NewTradeOffersButton" onactivate="ShowNewTradeOffers(true);" >
 				<Image src="file://{images}/trade_offer.png" />
 				<Panel class="ButtonLabelWrapper">
 					<Label id="NewTradeOffersLabel" class="LongDescSm" text="#MainMenu_NewTradeOffers" />

@@ -33,12 +33,9 @@ Button:focus, .Button:focus
 
 	horizontal-align: left;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
 	color: black;
 
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
 	transform: translatex(7px);
 
@@ -54,9 +51,9 @@ Button:focus, .Button:focus
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+
+
 }
-
-
 
 Button:focus .Checkbox, .Button:focus .Checkbox
 {

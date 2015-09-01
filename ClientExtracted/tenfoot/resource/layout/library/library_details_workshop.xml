@@ -7,7 +7,7 @@
 	</styles>
 
 	<LibraryWorkshop defaultfocus="BrowseWorkshop">
-		<Panel id="WorkshopFullWrapper" class="WorkshopFullWrapper">
+		<ParentalButton id="WorkshopFullWrapper" class="WorkshopFullWrapper" onactivate="BrowseWorkshop();" >
 			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_Workshop" html="true"/>
 			<Panel id="ParentalOverlay">
 				<ParentalReplacementPanel id="ParentalLockedReplacementPanel" />
@@ -20,8 +20,6 @@
 						<Image id="WorkshopThumb5" class="WorkshopThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
 						<Image id="WorkshopThumb6" class="WorkshopThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
 						<Image id="WorkshopThumb7" class="WorkshopThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
-
-
 					</Panel>
 					<Panel id="WorkshopLargeBody" class="WorkshopLargeBody">
 						<Label id="WorkshopWhatIsItLabel" text="#Library_Details_WorkshopWhatIsIt" />
@@ -44,14 +42,9 @@
 								</Panel>
 							</Panel>
 						</Panel>
-						<Label id="WorkshopCurTitle" />
-						<Label id="WorkshopCurSummary" />
-						<Button id="BrowseWorkshop" class="BrowseWorkshop" onactivate="BrowseWorkshop();" >
-							<Label id="BrowseWorkshopLabel" text="#Library_Details_BrowseWorkshop" />
-						</Button>
 					</Panel>
 				</Panel>
 			</Panel>
-		</Panel>
+		</ParentalButton>
 	</LibraryWorkshop>
 </root>

@@ -382,13 +382,6 @@ countrylist
 			launchcountries "CZ CS SK"
 			applydate "1214870400" // 7/01/08 RUSE - Czech only
 		}
-		59
-		{
-			gamecode	"115"
-			territory	"18"
-			launchcountries "BS PA BZ CR SV GT HN NI VE CO GY SR GF BR PE BO PY UY AR CL EC MX"
-			applydate "1214870400" // 7/01/08 Fallout: New Vegas - Latin America only
-		}
 		60
 		{
 			gamecode	"115"

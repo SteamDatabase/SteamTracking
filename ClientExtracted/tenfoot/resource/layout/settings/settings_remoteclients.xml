@@ -56,7 +56,7 @@
 					</Button>
 				</Panel>
 	
-				<Panel class="SettingsContent SettingsColumnarContent ShowIfNotStreamingUI">
+				<Panel class="SettingsContent SettingsColumnarContent">
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_ClientLabel" />
 					<RadioButton group="QUALITY" class="Button RadioButton Wide" id="RadioQualityFast" tabindex="auto" onactivate="UpdateStreamingQuality();" text="#Settings_RemoteClients_QualityFast" selectionpos="auto" />
 					<RadioButton group="QUALITY" class="Button RadioButton Wide" id="RadioQualityBalanced" tabindex="auto" onactivate="UpdateStreamingQuality();" text="#Settings_RemoteClients_QualityBalanced" selectionpos="auto" />

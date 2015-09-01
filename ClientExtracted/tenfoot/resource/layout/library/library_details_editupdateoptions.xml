@@ -2,7 +2,6 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
-		<include src="file://{resources}/styles/button.css" />
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 
@@ -16,7 +15,7 @@
 	    	<Label class="StdLabelMed" text="#Library_BackgroundUpdates_Label" />
 	    	<DropDown id="BackgroundUpdatesDropDown" class="OptionsDropDown" />
         <Panel id="MsgBoxButtons">
-            <Button onactivate="ButtonCancel()">
+            <Button class="Button" onactivate="ButtonCancel()">
                 <Label text="#UI_OK" />
             </Button>
         </Panel>        

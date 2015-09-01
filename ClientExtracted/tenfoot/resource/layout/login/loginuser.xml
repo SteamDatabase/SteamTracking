@@ -39,7 +39,8 @@
 						textinputid="InnerAccountNameTextEntry"
 						textinputdoneactionstring="#Login_NextField"
 						textinputhidesuggestions="1"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter"
+                        headerlabel="#KeyboardHeader_AccountName">
 					<Label class="TextEntryPrompt AccountName" text="#Login_AccountName" />
 				</TextEntry>
 
@@ -48,7 +49,8 @@
 						textinputid="InnerPasswordTextEntry"
 						textinputdoneactionstring="#Login_NextField"
 						textinputhidesuggestions="1"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter"
+                        headerlabel="#KeyboardHeader_Password">
 					<Label class="TextEntryPrompt Password" text="#Login_Password" />
 					<Label class="TextEntryPrompt PasswordCapsLock" text="#Login_Password_CapsLock" />
 				</TextEntry>
@@ -57,7 +59,8 @@
 						textinputid="InnerSteamGuardTextEntry"
 						textinputdoneactionstring="#Login_NextField"
 						textinputhidesuggestions="1"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+						textinputclass="HalfWidth DockRight AppearFromBottomCenter"
+                        headerlabel="#KeyboardHeader_SteamGuardCode">
 					<Label class="TextEntryPrompt SteamGuard" text="#Login_SteamGuardCode" />
 				 </TextEntry>
 

@@ -191,22 +191,11 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 #MsgBoxButtons Button, #MsgBoxButtonsVertical Button
 {
 	flow-children: right;
-	margin-left: 10px;
 	margin-right: 10px;
-	padding: 0px 8px 0px 8px;
-	margin-top: 8px;
-	margin-bottom: 8px;
-	min-width: 100px;
-	background-color: simplebuttonsolid_vertical;
-	color: detailsdatalabelfocus;
 
-	border-style: solid;
-	border-width: 5px;
-	border-color: #00000000;
-
-	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
-	transition-duration: 0.25s !immediate;
-	transition-timing-function: bigpicture-ease-in-out;
+	padding-top: 7px;
+	min-width: 350px;
+	width: fit-children;
 }
 
 #MsgBoxButtonsVertical Button
@@ -217,11 +206,10 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 
 #MsgBoxButtons Button Label, #MsgBoxButtonsVertical Button Label
 {
-	horizontal-align: center;
+	horizontal-align: left;
 	font-size: 28px;
 	text-overflow: clip;
 
-	padding-left: 5px;
 	padding-right: 5px;
 	transition-property: color;
 	transition-duration: 0.25s !immediate;
@@ -240,29 +228,9 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 
 }
 
-#MsgBoxButtons Button:focus, #MsgBoxButtonsVertical Button:focus
-{
-	background-color: #00000020;
-
+#MsgBoxButtons Button:focus Label,
+#MsgBoxButtonsVertical Button:focus Label {
 	color: #161718f5;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-
-	animation-name: msgbox-button-focus;
-	animation-duration: 1.7s;
-	animation-delay: MessageBoxAnimationDuration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: 1.7s;
-	animation-delay: 0.1s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-
 }
 
 #MsgBoxButtons Button:disabled
@@ -338,3 +306,15 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 	width: 100%;
 }
 
+LibraryRecentAddShortcutDialog#AddShortcut
+{
+	animation-name: none;
+	transition-property: opacity, blur, desaturation;
+	transition-duration: 0.3s;
+	opacity: 0.0;
+}
+
+LibraryRecentAddShortcutDialog#AddShortcut.TenfootMsgBox
+{
+	opacity: 1.0;
+}

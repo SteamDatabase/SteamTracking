@@ -28,22 +28,19 @@ LibraryRecentActivateProductDialog.BehindTextInputHandler .MsgBoxBodyRegion
 
 #ViewAgreements
 {
-	margin-bottom: 10px;
-	margin-top: 10px;
-	margin-left: 0px;
 	width: 700px;
 }
 
 #ViewAgreements:focus
 {
-	padding: 8px 8px;
+
 }
 
 TextEntry, Label
 {
 
 	font-size: 27px;
-	padding-top: 6px;
+
 	font-family: platformfont;
 	transform: translatex( 0px );
 }

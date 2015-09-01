@@ -11,98 +11,77 @@
 		</Panel>
 		
 		<!-- main panel -->
-		<Panel id="GameControllerContent" class="SettingsContent" tabindex="auto" selectionpos="auto">
-			<Panel id="ControllerSub" class="FlowDown" defaultfocus="AddController">
-				
-				<Panel id="SteamControllerVersion" class="SettingsController FlowDown">
-					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamControllerVersion" />
-					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamDongleVersion" />
-				</Panel>
-				
-				<Label class="SettingsLabel" text="#SettingsController_TurnOffOnQuit" />
-					<DropDown id="SettingsBroadcast_Permissions" class="Filter" />			
-					
-				<Panel class="Spacer" />
-				
-				<!-- <ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" />	-->			
-				<Button id="ConfigureButton" class="Button SettingsControllerBindingButton" onactivate="ShowBindingDialog();">
-					<Label class="LongDesc" text="#SettingsController_ConfigureController" />
-				</Button>
-				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();">
-					<Label class="LongDesc" text="#Library_Details_Controller_Add" />
-				</Button>
-				
-			
-				<Panel class="HorzSub SettingsRight SettingsController">
-						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
-						<Panel class="HorzSub SettingsRight SettingsController">
-							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
-							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
-						</Panel>
-				</Panel>
-				
-				<Panel class="HorzSub SettingsRight SettingsController">
-						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
-						<Panel class="HorzSub SettingsRight SettingsController">
-							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
-							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
-						</Panel>
-				</Panel>
-				
-				<Panel class="HorzSub SettingsRight SettingsController">
-						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
-						<Panel class="HorzSub SettingsRight SettingsController">
-							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
-							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
-						</Panel>
-				</Panel>
-				
-				<Panel class="HorzSub SettingsRight SettingsController">
-						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
-						<Panel class="HorzSub SettingsRight SettingsController">
-							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
-							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
-						</Panel>
-				</Panel>
-				
-				<Panel class="HorzSub SettingsRight SettingsController">
-						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
-						<Panel class="HorzSub SettingsRight SettingsController">
-							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
-							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
-						</Panel>
-				</Panel>
-				
-				<Panel class="HorzSub SettingsRight SettingsController">
-						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
-						<Panel class="HorzSub SettingsRight SettingsController">
-							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
-							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
-						</Panel>
-				</Panel>
-				
-				<Panel class="HorzSub SettingsRight SettingsController">
-						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
-						<Panel class="HorzSub SettingsRight SettingsController">
-							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
-							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
-						</Panel>
-				</Panel>
-				
-				<Panel class="HorzSub SettingsRight SettingsController">
-						<Panel class="SettingsCallout SettingsGameControllerIcon"  />
-						<Panel class="HorzSub SettingsRight SettingsController">
-							<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_ControllerName" />
-							<Panel class="SettingsCallout SettingsGameControllerConfigurable"  />
-						</Panel>
-				</Panel>
 		
-						
-				
-				
+		<Panel id="ControllerSettingsContainer">
+			<Panel id="SteamControllerVersion" class="SettingsController FlowDown SettingsContent">
+					<Label class="SettingsCallout SettingsControllerNameHeader" text="#SettingsController_SteamControllerVersion_Header" />
+					<Label class="SettingsCallout SettingsControllerBatteryLabel" text="#SettingsController_BatteryValue" />
+							
+					<Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamControllerVersion_Title" />
+					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamControllerVersion" />
+					<Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamDongleVersion_Title" />
+					<Label class="SettingsCallout SettingsControllerName" text="#SettingsController_SteamDongleVersion" />
 			</Panel>
-		</Panel>
-
+			
+			<Panel id="NoControllersFoundPanel" class="SettingsController FlowDown SettingsContent">
+				<Label id="NoControllersFoundLabel" class="SettingsLabel" text="#SettingsController_NoControllersDetected" />
+			</Panel>
+				
+			<Panel id="GameControllerContent" class="SettingsContent FlowDown" tabindex="auto" selectionpos="auto" defaultfocus="AddController">
+				
+					<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();">
+						<Label class="LongDesc" text="#Library_Details_Controller_Add" />
+					</Button>
+					
+					<Panel id="SettingsSteamController_ShutdownTime_Panel" class="SettingsController FlowDown">
+						<Label class="SettingsLabel" text="#SettingsController_ShutdowntimeHeader" />
+						<DropDown id="SettingsSteamController_ShutdownTime_Dropdown" class="Filter" />			
+					</Panel>
+						
+					<Label class="SettingsLabel DetectedControllers" text="#SettingsController_DetectedControllers" />
+					
+					<Panel id="DetectedController0" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(0);" onfocus="OnControllerButtonFocused(0)" >
+							<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
+							<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					</Panel>
+					
+					<Panel id="DetectedController1" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(1);" onfocus="OnControllerButtonFocused(1)" >
+							<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
+							<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					</Panel>
+					
+					<Panel id="DetectedController2" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(2);" onfocus="OnControllerButtonFocused(2)" >
+							<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
+							<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					</Panel>
+					
+					<Panel id="DetectedController3" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(3);" onfocus="OnControllerButtonFocused(3)" >
+							<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
+							<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					</Panel>
+					
+					<Panel id="DetectedController4" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(4);" onfocus="OnControllerButtonFocused(4)" >
+							<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
+							<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					</Panel>
+					
+					<Panel id="DetectedController5" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(5);" onfocus="OnControllerButtonFocused(5)" >
+							<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
+							<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					</Panel>
+					
+					<Panel id="DetectedController6" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(6);" onfocus="OnControllerButtonFocused(6)" >
+							<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
+							<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					</Panel>
+					
+					<Panel id="DetectedController7" class="Button ControllerSettingsButton" selectionpos="auto" onactivate="OnIdentifyController(7);" onfocus="OnControllerButtonFocused(7)" >
+							<Image id="Battery" class="SettingsGameControllerIcon" src="file://{images}/controller_battery_3.png" />
+							<Label id="ControllerName" class="LongDesc" text="#SettingsController_SteamController" />
+					</Panel>
+					
+				</Panel>
+			</Panel>
 	</SettingsPanel_GameController>
 
 </root>

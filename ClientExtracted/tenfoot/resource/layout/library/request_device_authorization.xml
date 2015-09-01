@@ -2,7 +2,6 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
-		<include src="file://{resources}/styles/button.css" />
 		<include src="file://{resources}/styles/library/request_device_authorization.css" />
 	</styles>
 
@@ -19,10 +18,10 @@
 
     	<Label class="StdLabelLarge" text="#DeviceAuth_RequestDialog_From" />
       <Panel id="MsgBoxButtons">
-      	<Button id="SendRequest" onactivate="RequestAuthorization()">
+      	<Button class="Button" id="SendRequest" onactivate="RequestAuthorization()">
         	<Label text="#DeviceAuth_RequestDialog_Send" />	
         </Button>
-        <Button onactivate="CancelDialog()">
+        <Button class="Button" onactivate="CancelDialog()">
         	<Label text="#WizardButton_Cancel" />
         </Button>
     	</Panel>        

@@ -6,18 +6,11 @@
 	</styles>
 
 	<ControllerConfigButton>
-		<Panel id="ConfigButtonWrapper">
-			<Panel id="ControllerImage" >
-				<Label id="RecommendedConfig" text="#ControllerBinding_RecommendedTemplate" />		
-			</Panel>
-			
-			<Panel id="ConfigContentWrapper">
+		<Label id="RecommendedConfig" text="#ControllerBinding_RecommendedTemplate" />
+		<Panel id="ConfigContentWrapper">
 				<Label id="Title" />
 				<Label id="Author" />
 				<Label id="Description" />
-			</Panel>
-			
-			
 		</Panel>
 	</ControllerConfigButton>
 </root>

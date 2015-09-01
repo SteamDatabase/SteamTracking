@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/login/createaccount.css" />
 	</styles>
 
-	<AgreementsSSAWizardChild class="WizardChild" defaultfocus="AgreementsHTML" tabindex="auto" selectionpos="auto">
+	<AgreementsSSAWizardChild class="WizardChild" defaultfocus="ButtonCancel" tabindex="auto" selectionpos="auto">
 
 		<Label class="WizardChildTitle" id="SSATitle" text="#CreateAccount_SSA_Title" />
 		<Label class="WizardChildTitle" id="PPATitle" text="#CreateAccount_PPA_Title" />
@@ -13,19 +13,9 @@
 		<Panel class="InputContainerDown GapDown">
 			<HTML id="AgreementsHTML" embedded="true" />
 		</Panel>
-		
-		<Panel class="SSAFlowRight">
-			<Button class="WizardButton" id="PPAButton" onactivate="WizardButtonBack()">
-				<Label id="Label" text="#CreateAccount_PPA_ViewSSA" />
-			</Button>
-			<Button class="WizardButton" id="SSAButton" onactivate="WizardButtonNext()">
-				<Label id="Label" text="#CreateAccount_SSA_ViewPPA" />
-			</Button>
-			<Label id="ScrollHintXInput" text="#Steam_Html_ScrollHintXInput" />
-			<Label id="ScrollHintSteam" text="#Steam_Html_ScrollHintSteamPad" />
-		</Panel>
+
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button class="WizardButton" onactivate="WizardButtonCancel()">
+			<Button id="ButtonCancel" class="WizardButton" onactivate="WizardButtonCancel()">
 				<Label id="Label" text="#WizardButton_Done" />
 			</Button>
 		</Panel>

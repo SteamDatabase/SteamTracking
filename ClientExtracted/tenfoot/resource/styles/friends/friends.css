@@ -1377,7 +1377,7 @@ FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
 	width: 252px;
 	font-size: 28px;
 	margin-top: 8px;
-	margin-left: 20px;
+	margin-left: -10px;
 }
 
 #MsgBoxButtonArea DropDown Label
@@ -1427,13 +1427,6 @@ DropDownMenu.DropDownMenuVisible
 #MsgBoxBodyRegion
 {
 	width: 700px;
-}
-
-#MsgBoxHeader
-
-{
-	margin-left: 10px;	
-	margin-top: 10px;
 }
 
 DropDownMenu
@@ -1654,6 +1647,10 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 }
 
 /* the help text inside the search entry */
+#SearchEntry {
+	border-width: 0px;
+}
+
 #SearchEntry Label
 {
 	width: 500px;
@@ -1663,6 +1660,7 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 	transition-property: opacity;
 	transition-duration: 0.1s;
 	transition-timing-function: bigpicture-ease-in-out;
+
 }
 
 #SearchEntry:descendantfocus Label
@@ -1691,6 +1689,7 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 {
 	height: 75px;
 	margin-top: 5px;
+
 	//background-color: #1a5e8022;
 	background-color: #1b405933;
 	opacity: 1.0;

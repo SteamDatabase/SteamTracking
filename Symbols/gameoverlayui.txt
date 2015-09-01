@@ -577,6 +577,7 @@
  D CMusicPlayerPanel::PanelMessageFunc_OnRemoveEntries::InitVar()::bAdded
  D CMusicPlayerPanel::PanelMessageFunc_OnRemoveEntry::InitVar()::bAdded
  D CMusicPlayerPanel::PanelMessageFunc_OnShowEntryInSystem::InitVar()::bAdded
+ D CMusicPlayerPanel::PanelMessageFunc_OnSliderMoved::InitVar()::bAdded
  D CMusicPlayerPanel::PanelMessageFunc_OnVolumePanelClosed::InitVar()::bAdded
  D CMusicPlayerPanel::PanelMessageFunc_OpenContextMenu::InitVar()::bAdded
  D CMusicPlayerVolumePanel::ChainToAnimationMap()::chained
@@ -7053,6 +7054,7 @@
  T CMusicPlayerPanel::OnRemoveEntries()
  T CMusicPlayerPanel::OnRemoveEntry(int)
  T CMusicPlayerPanel::OnShowEntryInSystem(int)
+ T CMusicPlayerPanel::OnSliderMoved(int)
  T CMusicPlayerPanel::OnToggleVolumePanel()
  T CMusicPlayerPanel::OnVolumeHasChanged(VolumeHasChanged_t*)
  T CMusicPlayerPanel::OnVolumePanelClosed()
@@ -7068,6 +7070,7 @@
  T CMusicPlayerPanel::PanelMessageFunc_OnRemoveEntries::InitVar()
  T CMusicPlayerPanel::PanelMessageFunc_OnRemoveEntry::InitVar()
  T CMusicPlayerPanel::PanelMessageFunc_OnShowEntryInSystem::InitVar()
+ T CMusicPlayerPanel::PanelMessageFunc_OnSliderMoved::InitVar()
  T CMusicPlayerPanel::PanelMessageFunc_OnVolumePanelClosed::InitVar()
  T CMusicPlayerPanel::PanelMessageFunc_OpenContextMenu::InitVar()
  T CMusicPlayerPanel::ShowContextMenu()
@@ -9467,6 +9470,7 @@
  T GetPanelKeyBindingMapDictionary()
  T GetPanelMessageMapDictionary()
  T GetPchTempTextBuffer_Harmful()
+ T GetSecureCommunityBaseURLForUniverse(EUniverse, CUtlString&)
  T GetSettingsHardwareEncodingState(bool)
  T GetTGADimensions(int, char*, int*, int*)
  T GlobalRNGList()
@@ -14289,6 +14293,7 @@
  b g_pClientBilling
  b g_pClientConfigStore
  b g_pClientController
+ b g_pClientControllerSerialized
  b g_pClientDepotBuilder
  b g_pClientEngine
  b g_pClientFriends

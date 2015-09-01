@@ -1,0 +1,77 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+	</styles>
+
+	<LibrarySettings oncancel="NavigateTenfootBack()">
+		<!-- top header panel -->
+		<Panel class="SettingsHeader">
+			<Label id="SettingsHeaderLegend" class="SettingsHeaderLegend" text="#Library_Details_Settings_Title" />
+		</Panel>
+		
+		<!-- main settings panel, a big container of buttons -->
+		<Panel id="SettingsContent" class="SettingsMainContent" tabindex="auto" selectionpos="auto" >
+
+			<!-- Column 1 -->
+
+			<Panel class="SettingsContent SettingsLeftContent">
+					<Button id="ValidateButton" class="Button">
+						<Label id="ValidateLabel" class="LongDesc" text="#Library_Details_ValidateLocalContent" />
+					</Button>					
+					<Button id="DeleteButton" class="Button">
+						<Label id="DeleteLabel" class="LongDesc" text="#Library_Details_DeleteLocalContent" />
+					</Button>
+                    <Button id="DeleteShortcutButton" class="Button">
+                        <Label id="DeleteShortcutLabel" class="LongDesc" text="#Library_Details_DeleteShortcut" />
+                    </Button>
+					<Button id="BetaButton" class="Button">
+						<Label id="BetaLabel" class="LongDesc" text="#Library_Details_OptIntoBeta" />
+					</Button>
+					<Button id="UpdateOptionsButton" class="Button">
+						<Label id="UpdateOptionsLabel" class="LongDesc" text="#Library_Details_EditUpdateOptions" />
+					</Button>					
+					<Button id="LaunchOptionsButton" class="Button">
+						<Label id="LaunchOptionsLabel" class="LongDesc" text="#Library_Details_EditLaunchCommandLine" />
+					</Button>
+					<Button id="SetLanguageButton" class="Button">
+						<Label id="SetLanguageLabel" class="LongDesc" text="#Library_Details_SetLanguage" />
+					</Button>
+                    <Button id="ChooseIconButton" class="Button">
+                        <Label id="ChooseIconLabel" class="LongDesc" text="#Library_Details_ChooseIcon"/>
+                    </Button>
+                    <Button id="RemoveIconButton" class="Button">
+                        <Label id="RemoveIconLabel" class="LongDesc" text="#Library_Details_RemoveIcon"/>
+                    </Button>
+
+					<Panel class="HorizontalSpace" />
+
+					<Button id="UnblockedGamesButton" class="UnblockedGamesButton Button">
+						<Label id="UnblockedGamesLabel" text="" />
+					</Button>
+
+					<Button id="FavoritesButton" class="Button">
+						<Label id="FavoritesLabel" class="LongDesc" text="#Library_Details_AddToFavorites" />
+					</Button>
+					<Button id="CategoryButton" class="Button">
+						<Label id="CategoryLabel" class="LongDesc" text="#Library_Details_SetCategory" />
+					</Button>
+
+			</Panel>	
+
+			<!-- Column 2 -->
+
+			<Panel class="SettingsContent SettingsMiddleContent">
+			</Panel>
+			
+			<!-- Column 3 -->
+
+			<Panel class="SettingsContent SettingsRightContent">
+			</Panel>
+
+
+		</Panel>
+
+	</LibrarySettings>
+
+</root>

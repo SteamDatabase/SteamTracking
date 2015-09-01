@@ -1,8 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
-		<include src="file://{resources}/styles/button.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/library/choose_purchase_or_authorization.css" />
 		
@@ -20,10 +18,10 @@
 				</Panel>
 				
 				<Panel class="MsgBoxButtons" >	
-					<Button id="ButtonRequestAuthorization" class="MsgBoxButton" onactivate="RequestAuthorization();">
+					<Button id="ButtonRequestAuthorization" class="MsgBoxButton Button" onactivate="RequestAuthorization();">
 						<Label text="#DeviceAuth_ChooseDialog_Request" />
 					</Button>					
-					<Button id="ButtonPurchaseGame" class="MsgBoxButton" onactivate="PurchaseGame();">
+					<Button id="ButtonPurchaseGame" class="MsgBoxButton Button" onactivate="PurchaseGame();">
 						<Label text="#DeviceAuth_ChooseDialog_Purchase" />
 					</Button>
 				</Panel>

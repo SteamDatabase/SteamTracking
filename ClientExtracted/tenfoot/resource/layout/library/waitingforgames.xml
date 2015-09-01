@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/library/waitingforgames.css" />
 	</styles>
@@ -17,7 +16,7 @@
 				</Panel>
 			
 				<Panel id="MsgBoxButtons">	
-					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton" onactivate="CancelWaitingForGames();">
+					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button" onactivate="CancelWaitingForGames();">
 						<Label id="CancelButtonText" text="#Library_WaitingOnGamesCancel" />
 					</Button>
 				</Panel>

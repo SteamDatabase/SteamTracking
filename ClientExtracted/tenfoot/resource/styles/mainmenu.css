@@ -877,6 +877,13 @@ Button:hover .ShortDesc
 	flow-children: right;
 	vertical-align: center;
 	padding: 6px;
+	
+	visibility: collapse;
+}
+
+.BatteryVisible #BatteryPanel
+{
+	visibility: visible;
 }
 
 /*
@@ -1026,6 +1033,8 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 	border-color: #3d414230;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #111414ff ), to( #070708ff ) );
 
+	padding: 0px;
+
 	transform: translatez( -120px );
 	transition-property: border, blur, background-color, color, transform, box-shadow;
 	transition-timing-function: ease-out;
@@ -1056,12 +1065,16 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 
 .Button:focus
 {
+	horizontal-align: center;
+	vertical-align: center;
 	transition-duration: 0.3s;
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fdfefef0;
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
 	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+
+	padding: 0px;
 
 	transform: translatez( 0px );
 	transition-duration: 0.3s;
@@ -1160,17 +1173,20 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 }
 
 
-.ButtonLabel
+.Button .ButtonLabel
 {
 	horizontal-align: center;
 	vertical-align: center;
 	color: applabel;
-	font-size: 56;
+	font-size: 56px;
 	font-weight: light;
 	height: 66px;
 	width: 460px;
 	text-align: center;
 	text-overflow: clip;
+	font-family: platformfont;
+
+	transform: none;
 
 	transition-property: color;
 }
@@ -1178,6 +1194,7 @@ MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
 .Button:focus .ButtonLabel
 {
 	color: tcmainbuttonselected;
+	transform: none;
 }
 
 .InsideLibrary #LibraryButton .ButtonLabel, .InsideStore #StoreButton .ButtonLabel, .InsideCommunity #CommunityButton .ButtonLabel, .InsideProfile #ProfileButton .ButtonLabel,

@@ -12,19 +12,19 @@
 		<Panel id="SSAButtonContainer">
 			<Label class="WizardLabel" id="AgreementsLabel" text="#CreateAccount_Agreements_Agreements" />
 			<Button class="WizardButton" onactivate="AgreementsShowSSA()">
-				<Label id="Label" text="#CreateAccount_Agreements_ViewSSAAndPPA" />
+				<Label id="Label" text="#CreateAccount_Agreements_ViewSSA" />
 			</Button>
+			<Button class="WizardButton" onactivate="AgreementsShowPPA()">
+				<Label id="Label" text="#CreateAccount_Agreements_ViewPPA" />
+			</Button>			
 		</Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
-				<Label id="Label" text="#CreateAccount_Agreements_IAgree" />
-			</Button>
 			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
 				<Label id="Label" text="#WizardButton_Back" />
 			</Button>
-			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
-				<Label id="Label" text="#WizardButton_Cancel" />
+			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+				<Label id="Label" text="#CreateAccount_Agreements_IAgree" />
 			</Button>
 		</Panel>
 

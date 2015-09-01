@@ -6,12 +6,20 @@
 	</styles>
 
 	<LibraryScreenshots defaultfocus="ViewAllScreenshots">
-		<Panel id="ScreenshotsFullWrapper" class="ScreenshotsFullWrapper">
+		<ParentalButton id="ScreenshotsFullWrapper" class="ScreenshotsFullWrapper" onactivate="OpenScreenshotManager()">
 			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_Screenshots" html="true" />
 			<Panel id="ParentalOverlay">
 				<ParentalReplacementPanel id="ParentalLockedReplacementPanel" />
 				<Panel id="ScreenshotsBody" class="ScreenshotsBody HideWhileLocked">
 					<Panel id="ScreenshotsSmallBody" class="ScreenshotsSmallBody">
+						<Panel id="HowToWrapper">
+							<Label id="ScreenshotHowToLabel1" class="HowToLabel" text="#Library_Details_ScreenshotHowTo1" />							
+							<Panel id="RightLegend" class="LegendButton">
+								<Image class="MiddleButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
+								<Label class="Plus" text="+" />
+								<KeyboardShortcut class="TriggerButtonBox" id="RT_btn" type="gamepad" />
+							</Panel>
+						</Panel>
 						<Panel id="ScreenshotThumbs">
 							<Image id="ScreenshotThumb1" class="ScreenshotsSmallThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
 							<Image id="ScreenshotThumb2" class="ScreenshotsSmallThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
@@ -29,34 +37,8 @@
 							</Panel>
 						</Panel>
 					</Panel>
-					<Panel id="ScreenshotsLargeBody" class="ScreenshotsLargeBody">
-						<Panel id="HowToWrapper">
-							<Label id="ScreenshotHowToLabel1" class="HowToLabel" text="#Library_Details_ScreenshotHowTo1" />
-							
-							<Panel id="RightLegend" class="LegendButton">
-								<Image class="MiddleButton" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
-								<Label class="Plus" text="+" />
-								<KeyboardShortcut class="TriggerButtonBox" id="RT_btn" type="gamepad" />
-							</Panel>
-						</Panel>
-						<Panel id="BigScreenshot">
-							<Image id="BigScreenshotPreview" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
-						</Panel>	
-						<Panel id="OuterThumbWrapper">
-							<Panel id="BigScreenshotThumbs">
-								<Image id="BigScreenshotThumb1" class="BigScreenshotThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
-								<Image id="BigScreenshotThumb2" class="BigScreenshotThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
-								<Image id="BigScreenshotThumb3" class="BigScreenshotThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
-								<Image id="BigScreenshotThumb4" class="BigScreenshotThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
-								<Image id="BigScreenshotThumb5" class="BigScreenshotThumb" scaling="stretch-to-fit-y-preserve-aspect" horizontalalign="center" verticalalign="center" />
-							</Panel>
-						</Panel>
-						<Button id="ViewAllScreenshots" class="ViewAllScreenshots" onactivate="OpenScreenshotManager();" >
-							<Label id="ViewAllScreenshotsLabel" text="#Library_Details_ViewAllScreenshots" />
-						</Button>
-					</Panel>
 				</Panel>
 			</Panel>
-		</Panel>
+		</ParentalButton>
 	</LibraryScreenshots>
 </root>

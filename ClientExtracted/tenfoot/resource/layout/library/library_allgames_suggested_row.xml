@@ -1,0 +1,94 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+	
+	<LibrarySuggestionsRow class="LibrarySuggestedRow" selectionpos="auto">
+		<Panel class="GamesList AppList" selectionpos="auto" >
+			<Label id="HeaderLabel" class="HeaderLabel" />
+			<Panel class="SuggestedRow" selectionpos="auto">
+				<Button id="Game0" class="Game" selectionpos="auto" >
+					<Panel class="ImageWrapper">
+						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+						<Panel class="GameDetails">
+							<Label id="GameLabel" html="true" />
+              <Label id="GameLabel_Expanded" html="true" text="" />
+						</Panel>
+					</Panel>
+					<Panel class="InstalledState" />
+					<Panel id="SuggestedStatus" >			
+						<Panel id="SuggestedStatusWrapper" >			
+							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport" />
+							<Panel id="GridControllerSupport" class="GridControllerSupport" />
+							<Panel id="ReadyToPlay" class="ReadyToPlay" />
+							<Panel id="ReadyToStream" class="ReadyToStream" />
+							<Panel id="ReadyToDownload" class="ReadyToDownload" />
+							<Panel id="NotReadyToPlay" class="NotReadyToPlay" />
+						</Panel>
+					</Panel>
+				</Button>
+				<Button id="Game1" class="Game"  selectionpos="auto" >
+					<Panel class="ImageWrapper">
+						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+						<Panel class="GameDetails">
+							<Label id="GameLabel" html="true" />
+              <Label id="GameLabel_Expanded" html="true" text="" />
+						</Panel>
+					</Panel>
+					<Panel class="InstalledState" />
+					<Panel id="SuggestedStatus" >			
+						<Panel id="SuggestedStatusWrapper" >			
+							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport" />
+							<Panel id="GridControllerSupport" class="GridControllerSupport" />
+							<Panel id="ReadyToPlay" class="ReadyToPlay" />
+							<Panel id="ReadyToStream" class="ReadyToStream" />
+							<Panel id="ReadyToDownload" class="ReadyToDownload" />
+							<Panel id="NotReadyToPlay" class="NotReadyToPlay" />
+						</Panel>
+					</Panel>
+				</Button>
+				<Button id="Game2" class="Game" selectionpos="auto" >
+					<Panel class="ImageWrapper">
+						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+						<Panel class="GameDetails">
+							<Label id="GameLabel" html="true" />
+              <Label id="GameLabel_Expanded" html="true" text="" />
+						</Panel>
+					</Panel>
+					<Panel class="InstalledState" />
+					<Panel id="SuggestedStatus" >			
+						<Panel id="SuggestedStatusWrapper" >			
+							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport" />
+							<Panel id="GridControllerSupport" class="GridControllerSupport" />
+							<Panel id="ReadyToPlay" class="ReadyToPlay" />
+							<Panel id="ReadyToStream" class="ReadyToStream" />
+							<Panel id="ReadyToDownload" class="ReadyToDownload" />
+							<Panel id="NotReadyToPlay" class="NotReadyToPlay" />
+						</Panel>
+					</Panel>
+				</Button>
+				<Button id="Game3" class="Game" selectionpos="auto" >
+					<Panel class="ImageWrapper">
+						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+						<Panel class="GameDetails">
+							<Label id="GameLabel" html="true" />
+              <Label id="GameLabel_Expanded" html="true" text="" />
+						</Panel>
+					</Panel>
+					<Panel class="InstalledState" />
+					<Panel id="SuggestedStatus" >			
+						<Panel id="SuggestedStatusWrapper" >			
+							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport" />
+							<Panel id="GridControllerSupport" class="GridControllerSupport" />
+							<Panel id="ReadyToPlay" class="ReadyToPlay" />
+							<Panel id="ReadyToStream" class="ReadyToStream" />
+							<Panel id="ReadyToDownload" class="ReadyToDownload" />
+							<Panel id="NotReadyToPlay" class="NotReadyToPlay" />
+						</Panel>
+					</Panel>
+				</Button>
+			</Panel>
+		</Panel>
+	</LibrarySuggestionsRow>
+</root>

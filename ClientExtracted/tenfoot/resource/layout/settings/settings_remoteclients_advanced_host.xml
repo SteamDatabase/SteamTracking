@@ -18,7 +18,6 @@
 			<Panel class="SettingsContentFlowRight">
 				<Panel class="SettingsLeftContentWide" >
 					<ToggleButton class="CheckBox" id="EnableHardwareEncoding" onactivate="ToggleHardwareEncoding()" text="#Settings_RemoteClients_EnableHardwareEncoding" />
-					<ToggleButton class="CheckBox" id="EnableDWMCapture" onactivate="ToggleDWMCapture()" text="#Settings_RemoteClients_EnableDWMCapture" />
 					
 					<Panel class="Spacer" />
 					<Label class="SettingsLabel" text="#Settings_RemoteClients_EnableTrafficPriority_Description" />

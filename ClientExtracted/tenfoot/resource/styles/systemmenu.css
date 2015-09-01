@@ -14,7 +14,7 @@
 	animation-duration: 0.3s;
 
 	transform:none;
-	opacity: 1.0;
+	opacity: 0.99;
 }
 
 #SystemMenu.BehindAnotherMsgBox
@@ -354,4 +354,15 @@ Label
 	height: 100px;
 	y: 350px;
 	letter-spacing: 6px;
+}
+
+#TopRowButtons Image
+{
+	width: 32px;
+	height: 32px;
+}
+
+#TopRowButtons Button, #TopRowButtons ParentalButton
+{
+	height: fit-children;
 }

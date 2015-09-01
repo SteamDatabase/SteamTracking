@@ -39,21 +39,21 @@
 					</Panel>
 				</Panel>
 				<Panel id="ControllerLargeBody" class="ControllerLargeBody" childfocusonhover="true" selectionposboundary="vertical">
-					<Button id="Controller1" class="ControllerDetail" tabindex="1" selectionpos="1,1" onactivate="ViewControllerDetails( 1 );">
+					<Button id="Controller1" class="ControllerDetail Button" tabindex="1" selectionpos="1,1" onactivate="ViewControllerDetails( 1 );">
 						<Image id="ControllerDetailImage1" class="ControllerDetailImage" />
 						<Panel id="ControllerLabels1" class="ControllerLabels">
 							<Label id="ControllerLabelTitle1" class="ControllerLabelTitle" text="#Library_Details_Controller_Hint" />
 							<Label id="ControllerLabelDescription1" class="ControllerLabelDescription" />
 						</Panel>
 					</Button>
-					<Button id="AddController" class="ControllerDetail" tabindex="9" selectionpos="1,9" onactivate="AddWirelessController();">
+					<Button id="AddController" class="ControllerDetail Button" tabindex="9" selectionpos="1,9" onactivate="AddWirelessController();">
 						<Image id="AddControllerDetailImage" class="AddControllerDetailImage" />
 						<Panel id="ControllerAddLabels" class="ControllerLabels">
 							<Label id="ControllerAddLabelTitle" class="ControllerLabelTitle" text="#Library_Details_Controller_Add" />
 							<Label id="ControllerAddLabelDescription" class="ControllerLabelDescription" />
 						</Panel>					
 					</Button>
-					<Button id="TurnOffController" class="ControllerDetail" tabindex="10" selectionpos="1,10" onactivate="TurnOffWirelessController();">
+					<Button id="TurnOffController" class="ControllerDetail Button" tabindex="10" selectionpos="1,10" onactivate="TurnOffWirelessController();">
 						<Image id="TurnOffControllerDetailImage" class="TurnOffControllerDetailImage" />
 						<Panel id="ControllerTurnOffLabel" class="ControllerLabels">
 							<Label id="ControllerTurnOffLabelTitle" class="ControllerLabelTitle" text="#Quit_TurnOffController" />

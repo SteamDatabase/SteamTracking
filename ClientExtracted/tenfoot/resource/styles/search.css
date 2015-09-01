@@ -83,6 +83,10 @@ SearchStoreResult:focus
 	animation-direction: normal;
 }
 
+TextEntry {
+	font-size: 38px;
+}
+
 #PlatformWindows,
 #PlatformMac,
 #PlatformLinux,
@@ -127,7 +131,7 @@ SearchDialog.Destructing
 .DialogRegion
 {
 	width: 708px;
-	height: 524px;
+	height: 804px;
 	align: center center;
 	padding: 30px;
 	background-color: message_box_bg;
@@ -151,6 +155,7 @@ SearchDialog.Destructing
 .BehindTextInputHandler .DialogRegion
 {
 	transform: translatex( 470px );
+	animation-name: none;
 }
 
 .InputRow

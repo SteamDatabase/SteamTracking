@@ -6,7 +6,7 @@
 	</styles>
 
 	<LibraryRecentNews defaultfocus="RecentNewsLargeBody">
-		<Panel id="RecentNewsFullWrapper" class="RecentNewsFullWrapper">
+		<ParentalButton id="RecentNewsFullWrapper" class="RecentNewsFullWrapper" onactivate="BrowseRecentNews();" >
 			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_RecentNews" />
 			<Panel id="ParentalOverlay">
 				<ParentalReplacementPanel id="ParentalLockedReplacementPanel" />
@@ -57,6 +57,6 @@
 					</Panel>
 				</Panel>
 			</Panel>
-		</Panel>
+		</ParentalButton>
 	</LibraryRecentNews>
 </root>

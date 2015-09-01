@@ -38,6 +38,9 @@
 				<Button id="InterfaceSettingsButton" class="Button" onactivate="ShowSettings( Interface );">
 					<Label class="LongDesc" text="#Settings_Interface" />
 				</Button>
+				<Button id="AddShortcutSettingsButton" class="Button" onactivate="AddLibraryShortcut();">
+					<Label class="LongDesc" text="#Settings_AddLibraryShortcut" />
+				</Button>
 				
 				<Button id="FamilySharingButton" class="Button" onactivate="ShowSettings( AuthorizeLocalDevice );" >
 					<Label class="LongDesc" text="#Settings_Family_Sharing_Title" />

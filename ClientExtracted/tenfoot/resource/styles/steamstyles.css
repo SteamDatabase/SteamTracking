@@ -33,10 +33,11 @@
 @define all_top_zindex:       100000000000;
 
 /* Legend button colors */
-@define legendbuttongrey: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #68686880 ), color-stop( 1.0, #686868ff ) );
-@define legendbuttongreen: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #0b7c2480 ), color-stop( 1.0, #0b7c24ff ) );
-@define legendbuttonyellow: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #ffe97f80 ), color-stop( 1.0, #ffe97fff ) );
-@define legendbuttonred: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #ff532880 ), color-stop( 1.0, #ff5328ff ) );
+@define legendbuttongrey: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #c6d4df88 ), color-stop( 1.0, #c6d4dfdd ) );
+@define legendbuttongreen: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #6fd025aa ), color-stop( 1.0, #6fd025cc ) );
+@define legendbuttonyellow: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #fff100aa ), color-stop( 1.0, #fff100cc ) );
+@define legendbuttonred: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #ce422baa ), color-stop( 1.0, #ce422bcc ) );
+@define legendbuttonblue: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #2b87ceaa ), color-stop( 1.0, #2b87cecc ) );
 
 /* Text colors */
 @define tclegendbutton: gradient( linear, 0% 0%, 0% 100%, from( #878c8eff ), to( #abb0b2ff ) );
@@ -44,8 +45,9 @@
 @define tcstatictext: gradient( linear, 0% 0%, 100% 100%, from( #36b3d9ff ), to( #3a7ba6ff ) );
 @define legendbuttonborder: #878c8eff;
 @define detailsdatalabel: gradient( linear, 0% 0%, 100% 100%, from( #c6d4dfef ), to( #c6d4df88 ) );
-@define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #ffffffff ), to( #f2f2f2aa ) );
+@define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #ffffffff ), to( #fefefeff ) );
 @define detailsdatalabelfocus2: gradient( linear, 80% 0%, 92% 0%, from( #000000ce ), to( #00000000 ) );
+@define moduledatalabel: gradient( linear, 0% 0%, 100% 100%, from( #67c1f5ff ), to( #67c1f5ff ) );
 
 /* Main menu colors */
 @define tcexitrow: gradient( linear, 0% 0%, 0% 100%, from( #808d91ff ), to( #9dadb3ff ) );
@@ -128,11 +130,21 @@
 @define mouse_off_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #1f445400 ), to( #0d1b2400 ) );
 @define mouse_hover_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #1f4454ff ), to( #0d1b2400 ) );
 @define mouse_active_bg_right: gradient( radial, 100% 50%, 0% 0%, 80px 180px, from( #3a809eff ), to( #0d1b2400 ) );
+
+@define mouse_off_bg_up: gradient( radial, 50% 0%, 0% 0%, 80px 180px, from( #1f445400 ), to( #0d1b2400 ) );
+@define mouse_hover_bg_up: gradient( radial, 50% 0%, 0% 0%, 80px 180px, from( #1f4454ff ), to( #0d1b2400 ) );
+@define mouse_active_bg_up: gradient( radial, 50% 0%, 0% 0%, 80px 180px, from( #3a809eff ), to( #0d1b2400 ) );
+
+@define mouse_off_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #1f445400 ), to( #0d1b2400 ) );
+@define mouse_hover_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #1f4454ff ), to( #0d1b2400 ) );
+@define mouse_active_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #1f4454ff ), to( #0d1b2400 ) );
+
 @define carousel_bg_color: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
 @define carousel_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
 @define mainmenu_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
 @define animated_icon_wash_color: #13a5d1ff;
 @define button_hover_color: #1d2f52ff;
+@define button_focus_color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
 //checkout
 @define rule_color: gradient( linear, 0% 0%, 100% 0%, from( #ffffff00 ), color-stop( 0.35, #ffffff33 ), color-stop( 0.85, #ffffff33 ), to( #ffffff00 ) );
@@ -164,7 +176,8 @@
 @define slideshow_bg3: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop( 0.7, #00000000 ), to( #000000ff ) );
 @define all_games_hover: gradient( linear, 0% 0%, 100% 100%, from( #309ebf ), to( #0b224d ) );
 @define action_module: gradient( linear, 0% 0%, 100% 100%, from( #1e5a78 ), to( #091b3d ) );
-@define transparent_module: #030a1ab1;
+@define state_panel: gradient( linear, 0% 0%, 100% 100%, from( #ffffff1A ), to( #ffffff1A ) );
+@define transparent_module: gradient( linear, 0% 0%, 100% 100%, from( #030a1a99 ), to( #00000099 ) );
 @define transparent_module2: gradient( linear, 0% 0%, 0% 100%, from( #1b3a59aa ), to( #121b2edd ) );
 
 //friends
@@ -236,7 +249,11 @@
 @define parental_locked_wash: #888888FF;
 
 //store
-@define StoreAutoActivateSearchDelayTime: 0.8;
+@define StoreAutoActivateSearchDelayTime: 0.0;
+
+// grid bumpers
+@define GridFocusBumperTimeout: 0.35s;
+
 
 DropDown
 {
@@ -245,9 +262,10 @@ DropDown
 	background-position: right 44px 50%;
 
 	font-size: 24px;
-	height: 50px;
+	height: 48px;
+
 	font-family: platformfont;
-	padding: 4px 8px;
+	padding: 10px;
 	z-index: 0;
 	vertical-align: center;
 
@@ -258,10 +276,7 @@ DropDown:focus
 {
 	background-image: url( "file://{images}/store/Icon_DropDownArrowFocus.png" );
 
-	border-style: solid;
-	border-color: #fdfefeff;
-
-	animation-name: main-button-glow-movement; 
+	animation-name: button-focus;
 	animation-duration: 1.7s;
 	animation-delay: 0.0s;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -332,14 +347,8 @@ DropDownMenu .DropDownChild:focus Label
 DropDownMenu .DropDownChild
 {
 	width: 100%;
-	padding: 4px 3px 4px 3px;
+	padding: 10px;
 	margin-right: 8px;
-
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414200;
-	box-shadow: box_shadow_off_color -4.5px -4.5px 18px 9px;
 
 	transform: translatex(-7px);
 
@@ -352,14 +361,10 @@ DropDownMenu .DropDownChild:hover,
 DropDownMenu .DropDownChild:focus
 {
 	color: applabelselected;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+
 	transform: translatex(0px);
 
-	animation-name: main-button-glow-movement;
+	animation-name: button-focus;
 	animation-duration: 1.7s;
 	animation-delay: 0.2s;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -443,19 +448,14 @@ RadioButton:hover
 }
 
 
-Button,
+.Button,
+.WizardButton,
 ToggleButton,
 .CheckBox,
 RadioButton
 {
-	margin-top: 8px;
-	margin-bottom: 8px;
+	height: 48px;
 
-	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
-
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 0px;
 	border-color: #3d414200;
 
 	pre-transform-scale2d: 1.0;
@@ -464,43 +464,94 @@ RadioButton
 	transition-timing-function: ease-out;
 }
 
-.Button {
-	horizontal-align: left;
-	background-color: ui_common_control;
-	border-color: none;
-	border-width: 5px;
-	border-style: solid;
+.Button,
+.WizardButton,
+.CheckBox {
+	padding: 10px 20px 0px 10px;
+	margin: 2px 0px 2px 0px;
 
-	font-size: 38px;
+	color: detailsdatalabel;
+	font-size: deffontsize;
+	font-family: platformfont;
+	background-color: simplebuttonsolid_vertical;
 
-	// Linux/Mac bug: border-radius != 0 results in no border - will fix
-	//border-radius: 2px;
-	border-radius: 0px;
-
-	margin: 4px 0px 15px 0px;
-	padding: 2px 7px 4px 0px;
-
-	transition-property: border, background-color, color, box-shadow;
+	transition-property: border, blur, background-color, color, transform, box-shadow;
+	transition-duration: 0.4s;
 	transition-timing-function: ease-out;
-	transition-duration: 0.23s;
-
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
 }
 
-.Button:focus {
-	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd) );
-	border-color: white;
+/* smaller padding on checkbox so the box itself aligns correctly */
+.CheckBox,
+.RadioButton {
+	padding: 2px 20px 0px 5px;
+}
 
-	animation-name: main-button-glow-movement;
+.Button:hover,
+.WizardButton:hover,
+.CheckBox:hover {
+	transition-duration: 0.23s !immediate;
+
+	color: #ffffffff;
+	box-shadow: #eeeeee60 -5px -5px 6px 10px;
+}
+
+.Button:focus,
+.WizardButton:focus,
+.CheckBox:focus {
+	transition-duration: 0.25s !immediate;
+
+	horizontal-align: left;
+
+	color: black;
+
+	background-color: button_focus_color;
+
+	transform: translatex(7px);
+
+	/* Remove border, so we dont transition border out on focus lost, that looks weird. */
+	transition-property: blur, background-color, color, transform;
+
+	transform: translatez( 0px );
+
+	animation-name: button-focus;
 	animation-duration: 1.7s;
-	animation-delay: 0.0s;
+	animation-delay: 0.4s;
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
+.Button Label,
+.WizardButton Label,
+.CheckBox Label,
+RadioButton Label,
+DropDown Label {
+
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+	color: #67c1f5;
+
+	transform: translatex( 0px );
+	transition-property: transform;
+	transition-duration: 0.25s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+.Button:focus Label,
+.WizardButton:focus Label,
+.CheckBox:focus Label,
+RadioButton:focus Label,
+DropDown:focus Label {
+	transform: translatex( 7px );
+	color: #072e47;
+}
+
+
+
+
+
 .Button:disabled Label,
+.WizardButton:disabled Label,
 ToggleButton:disabled,
 ToggleButton:disabled .TickBox
 {
@@ -510,9 +561,9 @@ ToggleButton:disabled .TickBox
 TextEntry,
 DropDown
 {
-	padding: 6px 7px 8px 7px;
+	padding: 8px 10px;
 	color: applabelsolid;
-	height: 48px;
+
 	background-color: simplebuttonsolid_vertical;
 	border-color: none;
 
@@ -522,21 +573,22 @@ DropDown
 }
 
 TextEntry {
-	font-size: 38px;
+	font-size: 28px;
 	font-family: platformfont;
 	animation-name: none;
 	vertical-align: center;
+	height: 56px;
 
-	border-color: #285c84f0;
+	border-color: #385671f0;
 
-	background-color: #154167;
+	background-color: #203e59;
 
-	horizontal-align: center;
+
 	border-width: 5px;
 	border-style: solid;
 
-// Linux/Mac bug: border-radius != 0 results in no border - will fix
-//border-radius: 2px;
+	// Linux/Mac bug: border-radius != 0 results in no border - will fix
+	//border-radius: 2px;
 	border-radius: 0px;
 
 	pre-transform-scale2d: 1.0;
@@ -575,7 +627,8 @@ TextEntry.TextInputHandlerActive:focus {
 	animation-name: none;
 }
 
-ToggleButton
+ToggleButton,
+RadioButton
 {
 	flow-children: right;
 	width: 100%;
@@ -637,13 +690,15 @@ ToggleButton:descendantfocus .TickBox
 ToggleButton.CheckBox:Focus .TickBox
 {
 	background-color: #cccccc;
-	border-color: #cccccc;
+
+	border-color: #284b7277;
+
 }
 
 ToggleButton.CheckBox:Selected:Focus .TickBox
 {
 	background-color: #ccccccff;
-	border-color: #cccccc;
+	border-color: #284b7277;
 	background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
 }
 
@@ -651,38 +706,20 @@ ToggleButton.CheckBox:Selected:Focus .TickBox
    ToggleButton.CheckBox Label,
    RadioButton Label
    {
-	   padding-left: 14px;
+	   padding: 6px 0 6px 10px;
 	   margin: 0px 10px 0px 0px;
-	   color: detailsdatalabel;
+
 	   width: fit-children;
 	   text-overflow: ellipsis;
 	   font-family: platformfont;
 	   white-space: nowrap;
-
-	   transform: translatex(-7px);
-	   transition-property: color, transform;
-	   transition-duration: 0.23s;
-	   transition-timing-function: ease-in;
    }
 
-RadioButton Label
-{
-	padding-left: 50px;
-	padding-top: 5px;
-	font-size: 24px;
-}
 
 ToggleButton.CheckBox:hover Label,
 RadioButton:hover Label
 {
 	color: #ffffffff;
-	transform: translatex(0px);
-}
-
-ToggleButton.CheckBox:focus Label,
-RadioButton:focus Label
-{
-	color: #000000ff;
 	transform: translatex(0px);
 }
 
@@ -842,6 +879,15 @@ TextTooltip.TooltipVisible
 	background-color: rule_color;
 }
 
+.HorizontalSpace
+{
+	height: 14px;
+	width: 100%;
+	margin: 1px 22px;
+
+	background-color: #ffffff00;
+}
+
 .VerticalRule
 {
 	height: 100%;
@@ -849,6 +895,24 @@ TextTooltip.TooltipVisible
 	margin: 22px 1px;
 
 	background-color: gradient( linear, 0% -10%, 0% 110%, from( #11111100 ), color-stop( 0.35, #999999d0 ), color-stop( 0.65, #999999d0 ), to( #11111100 ) );
+}
+
+@keyframes 'button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	}
+
+	50%
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #1483baff ) );
+	}
+
+	to
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	}
 }
 
 @keyframes 'main-button-glow-movement'
@@ -1869,5 +1933,13 @@ LoadingThrobber.Large .Bar3
 HTMLSimpleNavigationWrapper
 {
 	width: 100%;
+}
+
+#PromoVideosSlideShow
+{
+	width: 100%;
+	height: 100%;
+	
+	z-index: all_top_zindex;
 }
 

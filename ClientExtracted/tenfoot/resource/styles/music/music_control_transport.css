@@ -222,7 +222,7 @@ MusicControlTransport
 
 .QueueControlButtons
 {
-	flow-children: right;
+	flow-children: right-wrap;
 	vertical-align: center;
 	horizontal-align: center;
 	width: 100%;
@@ -681,4 +681,37 @@ MusicControlQueueEntry.IsPlaying:focus .TrackTime
 #MusicQueueEntriesContainer.RemotePlayerAvailable
 {
 	height: 370px;
+}
+
+SeekBar
+{
+	margin: 15px 10px 0px 0px;
+	width: 100%;
+	height: 10px;
+	background-color: message_box_bg;
+	padding: 2px;
+}
+SeekBar:focus
+{
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #f0f0f0 ), to( #c2c2c2 ) );
+	transition-timing-function: linear;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+SeekBar .SeekBarProgressBG
+{
+	width: 1000%;
+	height: 100%;
+	z-index: 1;
+	background-color: #000000;
+}
+SeekBar .SeekBarProgress
+{
+	width: 0%;
+	height: 100%;
+	background-color: messagecolorwash;
+	z-index: 2;
 }

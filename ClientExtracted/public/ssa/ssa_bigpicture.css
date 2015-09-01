@@ -5,24 +5,18 @@
 
 BODY	{
 	font-family: motiva sans bold,trebuchet ms,arial narrow,helvetica narrow,verdana,tahoma,helvetica;
-	font-size:18pt;
-	color:#a2a09b;
+	font-size:16pt;
+	line-height: 21pt;
+	color:#c6d4df;
 
 	margin:44px 36px 36px 36px;
- 	background: #2c2c2c;
-  
-	scrollbar-face-color: #4C5844;
-	scrollbar-shadow-color: #4C5844;
-	scrollbar-highlight-color: #4C5844;
-	scrollbar-3dlight-color: #818D7C;
-	scrollbar-darkshadow-color: #1C261E;
-	scrollbar-track-color: #5A6A50;
-	scrollbar-arrow-color: #969F8E;
+ 	background: #0f283d;
+
 	}
 HR	{
 	margin:8px 0px 12px 0px;
-	border-bottom: 1px solid #818D7C;
-	border-top: 1px solid #000000;
+	border-bottom: 1px solid #728e9e;
+	border-top: 1px solid #3b4952;
 	width:80%;
 	text-align:left;
 	}
@@ -48,7 +42,7 @@ H2	{
 	/* letter-spacing:0.1em; */
 	}
 H3	{
-	color:#cbbf57;
+	color:#ffffff;
 	font-size:28px;
 
 	line-height:30px;
@@ -64,15 +58,15 @@ P	{
 A {
 	}
 A.maize {
-	color:#cbbf57;
+	color:#a2cae1;
 	}
 
 A:visited {
-	color: #cbbf57; text-decoration:underline;
+	color: #a2cae1; text-decoration:underline;
 	}
 
 A:link {
-	color: #cbbf57; text-decoration:underline;
+	color: #a2cae1; text-decoration:underline;
 	}
 
 A:hover {
@@ -84,13 +78,13 @@ A:active {
 	}
 
 A:link.maize {
-	color: #cbbf57; text-decoration:none; font-weight:bold;
+	color: #a2cae1; text-decoration:none; font-weight:bold;
 	}
 
 A:hover.maize {
-	color: #cbbf57; text-decoration:none;
+	color: #a2cae1; text-decoration:none;
 	}
 
 A:visited.maize {
-	color: #cbbf57; text-decoration:none; font-weight:bold;
+	color: #a2cae1; text-decoration:none; font-weight:bold;
 	}

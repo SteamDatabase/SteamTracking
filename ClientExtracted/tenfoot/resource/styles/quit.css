@@ -124,7 +124,6 @@
 	visibility: visible;
 }
 
-.SteamOS #QuitRestart,
 .SteamOS #QuitSleep
 {
 	visibility: collapse;

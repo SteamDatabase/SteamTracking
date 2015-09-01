@@ -6,86 +6,82 @@
 
 	<LibraryLinksAndMore tabindex="auto" selectionpos="auto" defaultfocus="LinksAndActionsWrapper">
 		<Panel id="LinksAndMoreFullWrapper" class="LinksAndMoreFullWrapper">
-			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_LinksAndMore" />
 			<Panel id="ContentsWrapper" class="ContentsWrapper">
 				<Image id="SmallHeaderImage" class="SmallHeaderImage" scaling="stretch-to-fit-preserve-aspect" />
 				<Panel id="LinksAndActionsWrapper" class="LinksAndActionsWrapper" tabindex="auto" selectionpos="auto" selectionposboundary="vertical" childfocusonhover="true">
-					<ParentalButton id="DLCButton" class="DLCButton LinksAndMoreButton">
+
+                    <Panel id="hr0" class="HorizontalSpace" />
+
+					<Button id="ReturnToAppButton" class="NxLeftNavButtonAction">
+                        <Image src="file://{images}/icon_return.png" />
+						<Label id="ReturnToAppLabel" text="#Overlay_HowToClose" />
+					</Button>
+
+					<Button id="ManageControllersButton" class="ManageControllersButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/controller_support_full.png" />
+						 <Label id="ManageControllersLabel" text="#Library_Details_ManageControllers"/>
+					</Button>
+
+					<Button id="OpenKeyboardButton" class="NxLeftNavButtonAction">
+                        <Image src="file://{images}/icon_keyboard.png" />
+						<Label id="ReturnToAppLabel" text="#Overlay_OpenKeyboard" />
+					</Button>
+
+					<Button id="AppKillButton" class="AppKillButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/exit.png" />
+						<Label id="AppKillLabel" text="#Library_Details_KillApp" />
+					</Button>
+
+					<Panel id="hr1" class="HorizontalSpace" />
+
+					<Button id="CDKeyButton" class="CDKeyButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/library/icon_activate.png" />
+						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
+					</Button>
+
+					<ParentalButton id="DLCButton" class="DLCButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/downloads.png" />
 						<Label id="DLCLabel" text="#Library_Details_DownloadableContent" />
 						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
-					<ParentalButton id="StoreButton" class="StoreButton LinksAndMoreButton">
+
+					<ParentalButton id="StoreButton" class="StoreButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/icon_cart.png" />
 						<Label id="StoreLabel" text="#Library_Details_GameStorePage" />
 						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
-					<ParentalButton id="GameHubButton" class="GameHubButton LinksAndMoreButton">
-						<Label id="GameHubLabel" text="#Library_Details_GameHubPage" />
+
+					<ParentalButton id="CommunityHubButton" class="CommunityHubButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/icon_community_hub.png" />
+						<Label id="ForumsLabel" text="#Library_Details_GameHubPage" />
 						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
-					<Panel id="hr1" class="HorizontalRule" />
-					<ParentalButton id="ForumsButton" class="ForumsButton LinksAndMoreButton">
+
+					<ParentalButton id="ForumsButton" class="ForumsButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/icon_discussions.png" />
 						<Label id="ForumsLabel" text="#Library_Details_GameForums" />
 						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
-					<ParentalButton id="GroupsButton" class="GroupsButton LinksAndMoreButton">
-						<Label id="GroupsLabel" text="#Library_Details_RelatedGroups" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
-					</ParentalButton>
-					<Button id="CDKeyButton" class="CDKeyButton LinksAndMoreButton">
-						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
-					</Button>
-					<Button id="AppKillButton" class="AppKillButton LinksAndMoreButton">
-						<Label id="AppKillLabel" text="#Library_Details_KillApp" />
-					</Button>
-					<ParentalButton id="ManageAccountButton" class="ManageAccountButton LinksAndMoreButton">
+
+					<Panel id="hr2" class="HorizontalSpace" />
+
+					<ParentalButton id="ManageAccountButton" class="ManageAccountButton NxLeftNavButtonAction">
 						<Label id="ManageAccountLabel" text="#Library_Details_ManageAccount" />
 						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
-					<Panel id="hr2" class="HorizontalRule" />
-					<ParentalButton id="RecommendButton" class="RecomendButton LinksAndMoreButton">
-						<Label id="RecommendLabel" text="#Library_Details_RecommendThisGame" />
+
+					<ParentalButton id="SettingsButton" class="SettingsButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/icon_settings.png" />
+						<Label id="SettingsLabel" text="#Library_Details_Settings" />
 						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
-					<Button id="FavoritesButton" class="FavoritesButton LinksAndMoreButton">
-						<Label id="FavoritesLabel" text="#Library_Details_AddToFavorites" />
-					</Button>
-					<Button id="UnblockedGamesButton" class="UnblockedGamesButton LinksAndMoreButton">
-						<Label id="UnblockedGamesLabel" text="" />
-					</Button>
-					<Button id="CategoryButton" class="CategoryButton LinksAndMoreButton">
-						<Label id="CategoryLabel" text="#Library_Details_SetCategory" />
-					</Button>
-					<Panel id="hr3" class="HorizontalRule" />
-					<Button id="ValidateButton" class="ValidateButton LinksAndMoreButton">
-						<Label id="ValidateLabel" text="#Library_Details_ValidateLocalContent" />
-					</Button>					
-					<Button id="DeleteButton" class="DeleteButton LinksAndMoreButton">
-						<Label id="DeleteLabel" text="#Library_Details_DeleteLocalContent" />
-					</Button>
-                    <Button id="DeleteShortcutButton" class="DeleteShortcutButton LinksAndMoreButton">
-                        <Label id="DeleteShortcutLabel" text="#Library_Details_DeleteShortcut" />
-                    </Button>
-					<Button id="BetaButton" class="BetaButton LinksAndMoreButton">
-						<Label id="BetaLabel" text="#Library_Details_OptIntoBeta" />
-					</Button>
-					<Button id="UpdateOptionsButton" class="UpdateOptionsButton LinksAndMoreButton">
-						<Label id="UpdateOptionsLabel" text="#Library_Details_EditUpdateOptions" />
-					</Button>					
-					<Button id="LaunchOptionsButton" class="LaunchOptionsButton LinksAndMoreButton">
-						<Label id="LaunchOptionsLabel" text="#Library_Details_EditLaunchCommandLine" />
-					</Button>
-					<Button id="SetLanguageButton" class="SetLanguageButton LinksAndMoreButton">
-						<Label id="SetLanguageLabel" text="#Library_Details_SetLanguage" />
-					</Button>
-					<Button id="SupportButton" class="SupportButton LinksAndMoreButton">
+
+					<Button id="SupportButton" class="SupportButton NxLeftNavButtonAction">
+                        <Image src="file://{images}/support.png" />
 						<Label id="SupportLabel" text="#Library_Details_Support" />
 					</Button>
-                    <Button id="ChooseIconButton" class="ChooseIconButton LinksAndMoreButton">
-                        <Label id="ChooseIconLabel" text="#Library_Details_ChooseIcon"/>
-                    </Button>
-                    <Button id="RemoveIconButton" class="RemoveIconButton LinksAndMoreButton">
-                        <Label id="RemoveIconLabel" text="#Library_Details_RemoveIcon"/>
-                    </Button>
+
+
 				</Panel>
 			</Panel>
 		</Panel>

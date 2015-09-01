@@ -8,7 +8,8 @@
 	<LibraryPanel defaultfocus="LibraryMostRecent" hittest="false" >
 		<LibraryMostRecent id="LibraryMostRecent" class="LibraryMostRecent" hittest="false"/>
 		<Panel id="AppDetailsClose" onmouseactivate="NavigateTenfootBack();" />
-		<LibraryAppDetails id="LibraryAppDetails" class="LibraryAppDetailsSlidOff" />
+		<LibraryAppDetails id="LibraryAppDetails" class="LibraryAppDetailsSlideOff" />
 		<LibraryAllGames id="LibraryAllGames" class="LibraryAllGames" />
+		<LibrarySettings id="LibrarySettings" class="LibrarySettingsSlideOff" />
 	</LibraryPanel>
 </root>

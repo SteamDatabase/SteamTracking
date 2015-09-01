@@ -55,9 +55,11 @@ TextInputDaisy
 	width: 948px;
 	height: 100%;
 	flow-children: none;
-	margin-top: 75px;
+
 	opacity: 1.0;
 	background-color: #00000000;
+	box-shadow: fill #000000ff 0px 0px 10px 1px;
+
 	color: #d0d0d0ff;
 	font-weight: normal;
 	font-family: platformfont;
@@ -89,6 +91,17 @@ TextInputDaisy
 
 	width: 948px;
 	height: 1400px;
+}
+.FullWidth #BodyContainer
+{
+	box-shadow: none;
+}
+.FullWidth
+{
+
+	background-image: url("file://{images}/profile/profile_bg_wash.png");
+	background-size: 100% 100%;
+	background-position: 0px;
 }
 
 .DockLeft #BodyContainer
@@ -135,10 +148,11 @@ TextInputDaisy
 	height: 1080px;
 	flow-children: none;
 	padding-bottom: 40px;
-	background-color: daisy_bg_wash_color;
+	background-color: #20425f;
 }
 
-.NoBackground #Legends
+.NoBackground #Legends,
+.FullWidth #Legends
 {
 	background-color: none;
 }

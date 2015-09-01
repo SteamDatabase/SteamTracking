@@ -1,0 +1,40 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+	</styles>
+	
+	<LibraryFilterGames class="LibraryFilterGames" defaultfocus="GameSearchInput" ondescendantfocus="AsyncEvent( 0.1, GameFilterScrollChildIntoView() );" >
+    <Label class="NxTagHeader AlwaysVisible FilterHeader" text="#Library_FilterHeader" />
+    <Panel class="GamesHorizRule" />
+    <Panel class="GamesFilterWrapper" selectionpos="0,0" onmoveright="None();" onmoveleft="FocusGamesGrid();"
+																										 oncancel="FocusGamesGrid();" onmoveup="None();"
+																										 sendchildscrolledintoviewevents="true" >
+      <Button id="clearFiltersButton" class="NxFilterButton" onactivate="GameFilter(clear);" selectionpos="0,-1000" >
+          <Image src="file://{images}/library/icon_favorite.png" />
+          <Label text="#Library_ClearButton" />
+      </Button>
+
+			<Label id="NxNarrowByName" class="NxTagHeader" text="#Library_NameHeader" />
+			<TextEntry id="GameSearchInput" class="GameSearchInput"
+				textinputid="GameSearchTextEntry" selectionpos="auto"
+				textinputclass="FullWidth AppearFromBottomCenter" 
+				headerlabel="#KeyboardHeader_LibrarySearch"
+				headerdetaillabel="#KeyboardDetail_SearchResultCount" >
+					<Label class="TextEntryPrompt GameSearchInputHint" text="#Library_HintSearch" />
+			</TextEntry>
+			<Label class="NxTagHeader" text="#Library_TypeHeader" />
+
+			<ToggleButton id="ICanPlay" class="CheckBox GameOption" text="#Library_ReadyToPlay" tabindex="auto" onselect="GameFilter(icanplay);" ondeselect="GameFilter(icanplay);" selectionpos="auto" />
+			<ToggleButton id="ControllerSupported" class="CheckBox GameOption" text="#Library_ControllerSupported" tabindex="auto" onselect="GameFilter(controller);" ondeselect="GameFilter(controller);" selectionpos="auto" />
+			<ToggleButton id="InstalledLocally" class="CheckBox GameOption" text="#Library_InstalledLocally" tabindex="auto" onselect="GameFilter(installedlocally);" ondeselect="GameFilter(installedlocally);" selectionpos="auto" />
+			<ToggleButton id="HiddenGames" class="CheckBox GameOption" text="#Library_Hidden" tabindex="auto" onselect="GameFilter(hidden);" ondeselect="GameFilter(hidden);" selectionpos="auto" />
+			<ToggleButton id="UnblockedGames" class="CheckBox GameOption" text="#Library_Unblocked" tabindex="auto" onselect="GameFilter(unblocked);" ondeselect="GameFilter(unblocked);" selectionpos="auto" />
+			<RadioButton id="MusicFilterTitle" group="MusicFilter" class="Button RadioButton MusicOption" tabindex="auto" onactivate="GameFilter(music);" text="#Library_Filter_MusicByTitle" selectionpos="auto" />
+			<RadioButton id="MusicFilterArtist" group="MusicFilter" class="Button RadioButton MusicOption" tabindex="auto" onactivate="GameFilter(music);" text="#Library_Filter_MusicByArtist" selectionpos="auto" />
+			<Label class="NxTagHeader CategoryHeader" text="#Library_CategoryHeader" />
+			<Panel id="TagContainer" class="TagContainer" selectionpos="auto" />
+			<!-- tags go here -->
+		</Panel>
+	</LibraryFilterGames>
+</root>

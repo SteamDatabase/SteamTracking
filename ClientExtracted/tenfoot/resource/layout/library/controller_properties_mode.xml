@@ -109,6 +109,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_VirtualStickThrow" />
 					<Slider id="VirtualStickThrow" direction="horizontal" />
 				</Panel>
+				-->
 				<Panel class="FieldWrapper JoystickMoveMode Advanced">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZone" />
 					<Slider id="AntiDeadZone" direction="horizontal" />
@@ -117,7 +118,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZoneBuffer" />
 					<Slider id="AntiDeadZoneBuffer" direction="horizontal" />
 				</Panel>
-				-->
+
 
 				<!-- Joystick Camera Mode -->
 				<Panel class="FieldWrapper JoystickCameraMode">
@@ -293,6 +294,14 @@
 				<Panel id="CenterImageJoystick" class="CenterImage JoystickCameraMode" />
 
 				<!-- Joystick Camera Mode Advanced -->
+				<Panel class="FieldWrapper JoystickCameraMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZone" />
+					<Slider id="AntiDeadZoneJoystickCamera" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper JoystickCameraMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AntiDeadZoneBuffer" />
+					<Slider id="AntiDeadZoneBufferJoystickCamera" direction="horizontal" />
+				</Panel>
 				<Panel class="FieldWrapper JoystickCameraMode Advanced Gyro">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroAxis" />
 					<DropDown id="GyroAxisJoystickCamera" />
@@ -441,8 +450,12 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
 						<DropDown id="EdgeBindingInvertJoystick" />
 					</Panel>
+          <Panel class="FieldWrapper JoystickMoveMode Advanced">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
+            <Slider id="JoystickMoveMouseSensitivity" direction="horizontal" />
+          </Panel>
 
-					<!-- Joystick Camera Mode -->
+          <!-- Joystick Camera Mode -->
 					<Panel class="FieldWrapper JoystickCameraMode">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
 						<DropDown id="OutputJoystickCameraMode" />
@@ -453,8 +466,12 @@
 					</Panel>
 
 					<!-- Joystick Camera Mode Advanced -->
+          <Panel class="FieldWrapper JoystickCameraMode Advanced">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
+            <Slider id="JoystickCameraMouseSensitivity" direction="horizontal" />
+          </Panel>
 
-					<!-- Mouse Mode -->
+          <!-- Mouse Mode -->
 					<Panel class="FieldWrapper MouseMode">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityAbsMouse" />
@@ -481,7 +498,11 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
 						<DropDown id="InvertMouseY" />
 					</Panel>
-
+					<Panel class="FieldWrapper MouseMode Advanced">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseMoveThreshold" />
+						<Slider id="MouseMoveThreshold" direction="horizontal" />
+					</Panel>
+					
 					<!-- Relative Mouse Mode -->
 					<Panel class="FieldWrapper RelMouseMode">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />

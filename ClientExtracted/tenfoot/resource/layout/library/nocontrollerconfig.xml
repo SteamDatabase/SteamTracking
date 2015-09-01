@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/library/nocontrollerconfig.css" />
 	</styles>
@@ -17,7 +16,7 @@
 				</Panel>
 			
 				<Panel id="MsgBoxButtons">	
-					<Button id="ButtonGo" class="ButtonOK MsgBoxButton" onactivate="ShowTemplateSelector();">
+					<Button id="ButtonGo" class="ButtonOK MsgBoxButton Button" onactivate="ShowTemplateSelector();">
 						<Label id="OKButtonText" text="#Library_NoControllerConfigLetsGo" />
 					</Button>
 				</Panel>

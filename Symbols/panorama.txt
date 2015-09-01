@@ -732,13 +732,20 @@
  B panorama::TogglePanelSelected::symbol
  B panorama::ToggleStyle::symbol
  B panorama::TopLevelWindowClose::symbol
- B panorama::TopLevelWindowClosed::symbol
  B panorama::TurnOffActiveController::symbol
  B panorama::UserInputActive::symbol
  B panorama::VRDashboardRequested::symbol
  B panorama::VRDashboardThumbSelected::symbol
+ B panorama::VRNotificationBeginInteraction::symbol
+ B panorama::VRNotificationDismissed::symbol
+ B panorama::VRNotificationShow::symbol
+ B panorama::VROverlayHidden::symbol
+ B panorama::VROverlayImageLoaded::symbol
+ B panorama::VROverlayShown::symbol
  B panorama::VRRenderToast::symbol
  B panorama::VRResetDashboard::symbol
+ B panorama::VRStatusUpdate::symbol
+ B panorama::VRUnknownEvent::symbol
  B panorama::VideoPlayerChangedRepresentation::symbol
  B panorama::VideoPlayerEnded::symbol
  B panorama::VideoPlayerInitalized::symbol
@@ -793,6 +800,14 @@
  B vec3_angle
  B vec3_invalid
  B vec3_origin
+ B vrapi::g_VRApplications
+ B vrapi::g_VRChaperone
+ B vrapi::g_VRCompositor
+ B vrapi::g_VRControlPanel
+ B vrapi::g_VRDashboardManager
+ B vrapi::g_VROverlay
+ B vrapi::g_VRRenderModels
+ B vrapi::g_VRSystem
  CFArrayCreate
  CFDataGetBytePtr
  CFDataGetLength
@@ -1105,13 +1120,20 @@
  D panorama::TogglePanelSelected::pchEvent
  D panorama::ToggleStyle::pchEvent
  D panorama::TopLevelWindowClose::pchEvent
- D panorama::TopLevelWindowClosed::pchEvent
  D panorama::TurnOffActiveController::pchEvent
  D panorama::UserInputActive::pchEvent
  D panorama::VRDashboardRequested::pchEvent
  D panorama::VRDashboardThumbSelected::pchEvent
+ D panorama::VRNotificationBeginInteraction::pchEvent
+ D panorama::VRNotificationDismissed::pchEvent
+ D panorama::VRNotificationShow::pchEvent
+ D panorama::VROverlayHidden::pchEvent
+ D panorama::VROverlayImageLoaded::pchEvent
+ D panorama::VROverlayShown::pchEvent
  D panorama::VRRenderToast::pchEvent
  D panorama::VRResetDashboard::pchEvent
+ D panorama::VRStatusUpdate::pchEvent
+ D panorama::VRUnknownEvent::pchEvent
  D panorama::VideoPlayerChangedRepresentation::pchEvent
  D panorama::VideoPlayerEnded::pchEvent
  D panorama::VideoPlayerInitalized::pchEvent
@@ -1141,14 +1163,7 @@
  D typeinfo for CDynamicFunc<char const* (*)(vr::HmdError)>
  D typeinfo for CDynamicFunc<void (*)()>
  D typeinfo for CDynamicFunc<void* (*)(char const*, vr::HmdError*)>
- D typeinfo for CDynamicFunc<vr::IVRChaperone* (*)()>
- D typeinfo for CDynamicFunc<vr::IVRCompositor* (*)()>
- D typeinfo for CDynamicFunc<vr::IVRControlPanel* (*)()>
- D typeinfo for CDynamicFunc<vr::IVRDashboardManager* (*)()>
- D typeinfo for CDynamicFunc<vr::IVROverlay* (*)()>
- D typeinfo for CDynamicFunc<vr::IVRRenderModels* (*)()>
- D typeinfo for CDynamicFunc<vr::IVRSystem* (*)()>
- D typeinfo for CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*)>
+ D typeinfo for CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*, vr::EVRApplicationType)>
  D typeinfo for CHTMLHeader
  D typeinfo for CHTMLPageSecurityInfo
  D typeinfo for CMsg3DTransformMatrix
@@ -1631,6 +1646,8 @@
  D typeinfo for panorama::CUIEvent1<unsigned int>
  D typeinfo for panorama::CUIEvent1<unsigned long long>
  D typeinfo for panorama::CUIEvent1<void*>
+ D typeinfo for panorama::CUIEvent1<vr::VREvent_t>
+ D typeinfo for panorama::CUIEvent1<vr::VRStatusState_t>
  D typeinfo for panorama::CUIEvent2<char const*, void*>
  D typeinfo for panorama::CUIEvent2<float, panorama::IUIEvent*>
  D typeinfo for panorama::CUIEvent2<panorama::CPanelPtr<panorama::CPanel2D>, char const*>
@@ -1641,6 +1658,7 @@
  D typeinfo for panorama::CUIEvent2<unsigned int, unsigned long long>
  D typeinfo for panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>
  D typeinfo for panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
+ D typeinfo for panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>
  D typeinfo for panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>
  D typeinfo for panorama::CUIEventBase
  D typeinfo for panorama::CUIInputEngine
@@ -1769,14 +1787,7 @@
  D vtable for CDynamicFunc<char const* (*)(vr::HmdError)>
  D vtable for CDynamicFunc<void (*)()>
  D vtable for CDynamicFunc<void* (*)(char const*, vr::HmdError*)>
- D vtable for CDynamicFunc<vr::IVRChaperone* (*)()>
- D vtable for CDynamicFunc<vr::IVRCompositor* (*)()>
- D vtable for CDynamicFunc<vr::IVRControlPanel* (*)()>
- D vtable for CDynamicFunc<vr::IVRDashboardManager* (*)()>
- D vtable for CDynamicFunc<vr::IVROverlay* (*)()>
- D vtable for CDynamicFunc<vr::IVRRenderModels* (*)()>
- D vtable for CDynamicFunc<vr::IVRSystem* (*)()>
- D vtable for CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*)>
+ D vtable for CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*, vr::EVRApplicationType)>
  D vtable for CHTMLHeader
  D vtable for CHTMLPageSecurityInfo
  D vtable for CMsg3DTransformMatrix
@@ -2205,6 +2216,8 @@
  D vtable for panorama::CUIEvent1<unsigned int>
  D vtable for panorama::CUIEvent1<unsigned long long>
  D vtable for panorama::CUIEvent1<void*>
+ D vtable for panorama::CUIEvent1<vr::VREvent_t>
+ D vtable for panorama::CUIEvent1<vr::VRStatusState_t>
  D vtable for panorama::CUIEvent2<char const*, void*>
  D vtable for panorama::CUIEvent2<float, panorama::IUIEvent*>
  D vtable for panorama::CUIEvent2<panorama::CPanelPtr<panorama::CPanel2D>, char const*>
@@ -2215,6 +2228,7 @@
  D vtable for panorama::CUIEvent2<unsigned int, unsigned long long>
  D vtable for panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>
  D vtable for panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
+ D vtable for panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>
  D vtable for panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>
  D vtable for panorama::CUIEventBase
  D vtable for panorama::CUIInputEngine
@@ -2364,14 +2378,7 @@
  R typeinfo name for CDynamicFunc<char const* (*)(vr::HmdError)>
  R typeinfo name for CDynamicFunc<void (*)()>
  R typeinfo name for CDynamicFunc<void* (*)(char const*, vr::HmdError*)>
- R typeinfo name for CDynamicFunc<vr::IVRChaperone* (*)()>
- R typeinfo name for CDynamicFunc<vr::IVRCompositor* (*)()>
- R typeinfo name for CDynamicFunc<vr::IVRControlPanel* (*)()>
- R typeinfo name for CDynamicFunc<vr::IVRDashboardManager* (*)()>
- R typeinfo name for CDynamicFunc<vr::IVROverlay* (*)()>
- R typeinfo name for CDynamicFunc<vr::IVRRenderModels* (*)()>
- R typeinfo name for CDynamicFunc<vr::IVRSystem* (*)()>
- R typeinfo name for CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*)>
+ R typeinfo name for CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*, vr::EVRApplicationType)>
  R typeinfo name for CHTMLHeader
  R typeinfo name for CHTMLPageSecurityInfo
  R typeinfo name for CMsg3DTransformMatrix
@@ -3057,6 +3064,8 @@
  R typeinfo name for panorama::CUIEvent1<unsigned int>
  R typeinfo name for panorama::CUIEvent1<unsigned long long>
  R typeinfo name for panorama::CUIEvent1<void*>
+ R typeinfo name for panorama::CUIEvent1<vr::VREvent_t>
+ R typeinfo name for panorama::CUIEvent1<vr::VRStatusState_t>
  R typeinfo name for panorama::CUIEvent2<char const*, void*>
  R typeinfo name for panorama::CUIEvent2<float, panorama::IUIEvent*>
  R typeinfo name for panorama::CUIEvent2<panorama::CPanelPtr<panorama::CPanel2D>, char const*>
@@ -3067,6 +3076,7 @@
  R typeinfo name for panorama::CUIEvent2<unsigned int, unsigned long long>
  R typeinfo name for panorama::CUIEvent3<panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int>
  R typeinfo name for panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>
+ R typeinfo name for panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>
  R typeinfo name for panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>
  R typeinfo name for panorama::CUIEventBase
  R typeinfo name for panorama::CUIInputEngine
@@ -3219,10 +3229,17 @@
  SDL_GetWindowPosition
  SDL_GetWindowSize
  SDL_GetWindowWMInfo
+ SDL_HapticClose
+ SDL_HapticOpenFromJoystick
+ SDL_HapticRumbleInit
+ SDL_HapticRumblePlay
+ SDL_HapticRumbleStop
+ SDL_HapticRumbleSupported
  SDL_HideWindow
  SDL_Init
  SDL_InitSubSystem
  SDL_JoystickClose
+ SDL_JoystickCurrentPowerLevel
  SDL_JoystickGetAxis
  SDL_JoystickGetButton
  SDL_JoystickGetDeviceGUID
@@ -3554,38 +3571,10 @@
  T CDynamicFunc<void* (*)(char const*, vr::HmdError*)>::Init(CSysModule*)
  T CDynamicFunc<void* (*)(char const*, vr::HmdError*)>::Release()
  T CDynamicFunc<void* (*)(char const*, vr::HmdError*)>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<vr::IVRChaperone* (*)()>::GetNextPointer()
- T CDynamicFunc<vr::IVRChaperone* (*)()>::Init(CSysModule*)
- T CDynamicFunc<vr::IVRChaperone* (*)()>::Release()
- T CDynamicFunc<vr::IVRChaperone* (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<vr::IVRCompositor* (*)()>::GetNextPointer()
- T CDynamicFunc<vr::IVRCompositor* (*)()>::Init(CSysModule*)
- T CDynamicFunc<vr::IVRCompositor* (*)()>::Release()
- T CDynamicFunc<vr::IVRCompositor* (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<vr::IVRControlPanel* (*)()>::GetNextPointer()
- T CDynamicFunc<vr::IVRControlPanel* (*)()>::Init(CSysModule*)
- T CDynamicFunc<vr::IVRControlPanel* (*)()>::Release()
- T CDynamicFunc<vr::IVRControlPanel* (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<vr::IVRDashboardManager* (*)()>::GetNextPointer()
- T CDynamicFunc<vr::IVRDashboardManager* (*)()>::Init(CSysModule*)
- T CDynamicFunc<vr::IVRDashboardManager* (*)()>::Release()
- T CDynamicFunc<vr::IVRDashboardManager* (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<vr::IVROverlay* (*)()>::GetNextPointer()
- T CDynamicFunc<vr::IVROverlay* (*)()>::Init(CSysModule*)
- T CDynamicFunc<vr::IVROverlay* (*)()>::Release()
- T CDynamicFunc<vr::IVROverlay* (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<vr::IVRRenderModels* (*)()>::GetNextPointer()
- T CDynamicFunc<vr::IVRRenderModels* (*)()>::Init(CSysModule*)
- T CDynamicFunc<vr::IVRRenderModels* (*)()>::Release()
- T CDynamicFunc<vr::IVRRenderModels* (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<vr::IVRSystem* (*)()>::GetNextPointer()
- T CDynamicFunc<vr::IVRSystem* (*)()>::Init(CSysModule*)
- T CDynamicFunc<vr::IVRSystem* (*)()>::Release()
- T CDynamicFunc<vr::IVRSystem* (*)()>::SetNextPointer(IDynamicFunction*)
- T CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*)>::GetNextPointer()
- T CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*)>::Init(CSysModule*)
- T CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*)>::Release()
- T CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*, vr::EVRApplicationType)>::GetNextPointer()
+ T CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*, vr::EVRApplicationType)>::Init(CSysModule*)
+ T CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*, vr::EVRApplicationType)>::Release()
+ T CDynamicFunc<vr::IVRSystem* (*)(vr::HmdError*, vr::EVRApplicationType)>::SetNextPointer(IDynamicFunction*)
  T CDynamicFunctionList::InitFunctions(char const*)
  T CDynamicFunctionList::Shutdown()
  T CDynamicFunctionListUnloadOnDestruct::~CDynamicFunctionListUnloadOnDestruct()
@@ -7950,8 +7939,8 @@
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientController()
+ T ClientControllerLocal()
  T ClientHTTP()
- T ClientUser()
  T ClientUtils()
  T ClientVR()
  T ClosePlatformSocket(int)
@@ -8548,6 +8537,7 @@
  T ServiceAudio()
  T SetAudioMixFragmentMilliseconds(unsigned int)
  T SetIdentityMatrix(matrix3x4_t&)
+ T SetJSWebRequestParams(v8::FunctionCallbackInfo<v8::Value> const&, unsigned int, v8::Handle<v8::Value>, char const*)
  T SetupMatrixTranslation(Vector const&)
  T SkipCombinatorAndSpaces(char const*, char*)
  T SortStyleCascade(panorama::CascadeStyleFileInfo_t const*, panorama::CascadeStyleFileInfo_t const*)
@@ -8758,11 +8748,18 @@
  T bool panorama::DispatchEvent<panorama::SoundVolumeChanged, panorama::ESoundType, float>(panorama::SoundVolumeChanged, panorama::IUIPanel const*, panorama::ESoundType, float)
  T bool panorama::DispatchEvent<panorama::ToggleFullscreen, panorama::CTopLevelWindowSDL*, bool>(panorama::ToggleFullscreen, panorama::IUIPanel const*, panorama::CTopLevelWindowSDL*, bool)
  T bool panorama::DispatchEvent<panorama::TopLevelWindowClose, panorama::CTopLevelWindow*>(panorama::TopLevelWindowClose, panorama::IUIPanel const*, panorama::CTopLevelWindow*)
- T bool panorama::DispatchEvent<panorama::TopLevelWindowClosed, panorama::CTopLevelWindow*>(panorama::TopLevelWindowClosed, panorama::IUIPanel const*, panorama::CTopLevelWindow*)
  T bool panorama::DispatchEvent<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::VRDashboardRequested, panorama::IUIPanel const*, unsigned int, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::VRDashboardThumbSelected, panorama::IUIPanel const*, unsigned long long)
+ T bool panorama::DispatchEvent<panorama::VRNotificationBeginInteraction, unsigned long long, unsigned int, unsigned long long>(panorama::VRNotificationBeginInteraction, panorama::IUIPanel const*, unsigned long long, unsigned int, unsigned long long)
+ T bool panorama::DispatchEvent<panorama::VRNotificationDismissed, unsigned long long, unsigned int, unsigned long long>(panorama::VRNotificationDismissed, panorama::IUIPanel const*, unsigned long long, unsigned int, unsigned long long)
+ T bool panorama::DispatchEvent<panorama::VRNotificationShow, unsigned long long, unsigned int, unsigned long long>(panorama::VRNotificationShow, panorama::IUIPanel const*, unsigned long long, unsigned int, unsigned long long)
+ T bool panorama::DispatchEvent<panorama::VROverlayHidden, unsigned long long>(panorama::VROverlayHidden, panorama::IUIPanel const*, unsigned long long)
+ T bool panorama::DispatchEvent<panorama::VROverlayImageLoaded, unsigned long long>(panorama::VROverlayImageLoaded, panorama::IUIPanel const*, unsigned long long)
+ T bool panorama::DispatchEvent<panorama::VROverlayShown, unsigned long long>(panorama::VROverlayShown, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRRenderToast, unsigned int>(panorama::VRRenderToast, panorama::IUIPanel const*, unsigned int)
  T bool panorama::DispatchEvent<panorama::VRResetDashboard>(panorama::VRResetDashboard, panorama::IUIPanel const*)
+ T bool panorama::DispatchEvent<panorama::VRStatusUpdate, vr::VRStatusState_t>(panorama::VRStatusUpdate, panorama::IUIPanel const*, vr::VRStatusState_t)
+ T bool panorama::DispatchEvent<panorama::VRUnknownEvent, vr::VREvent_t>(panorama::VRUnknownEvent, panorama::IUIPanel const*, vr::VREvent_t)
  T bool panorama::DispatchEvent<panorama::VideoPlayerChangedRepresentation, panorama::CPanoramaVideoPlayer*>(panorama::VideoPlayerChangedRepresentation, panorama::IUIPanelClient const*, panorama::CPanoramaVideoPlayer*)
  T bool panorama::DispatchEvent<panorama::VideoPlayerEnded, panorama::CPanoramaVideoPlayer*>(panorama::VideoPlayerEnded, panorama::IUIPanelClient const*, panorama::CPanoramaVideoPlayer*)
  T bool panorama::DispatchEvent<panorama::VideoPlayerInitalized, panorama::CPanoramaVideoPlayer*>(panorama::VideoPlayerInitalized, panorama::IUIPanelClient const*, panorama::CPanoramaVideoPlayer*)
@@ -9144,6 +9141,7 @@
  T panorama::CGamepadController::CloseXDevice(int, bool)
  T panorama::CGamepadController::GetAxisValue(panorama::CGamepadController::xdevice_t*, SDL_GameControllerAxis)
  T panorama::CGamepadController::GetButtonValue(panorama::CGamepadController::xdevice_t*, SDL_GameControllerButton)
+ T panorama::CGamepadController::GetConnectGamePadPowerLevel(int)
  T panorama::CGamepadController::GetDeadZoneValue(panorama::GamePadCode)
  T panorama::CGamepadController::GetNumGamepadsConnected() const
  T panorama::CGamepadController::GetSDLGameControllerMappings(CUtlString*)
@@ -9155,6 +9153,7 @@
  T panorama::CGamepadController::PchGamePadName()
  T panorama::CGamepadController::PostXKeyEvent(panorama::CGamepadController::xdevice_t*, panorama::GamePadCode, int)
  T panorama::CGamepadController::ProcessRemoteInput()
+ T panorama::CGamepadController::PulseGamePadHaptics(int, float, int)
  T panorama::CGamepadController::ReadXDevice(panorama::CGamepadController::xdevice_t*)
  T panorama::CGamepadController::RemoteGamepadAttached(int)
  T panorama::CGamepadController::RemoteGamepadDetached(int)
@@ -9875,6 +9874,7 @@
  T panorama::CSSHelpers::BReadCSSComment(CUtlBuffer&, char*, unsigned int)
  T panorama::CSSHelpers::BReadCSSToken(CUtlBuffer&, char*, unsigned int)
  T panorama::CSSHelpers::BReadCSSToken(CUtlBuffer&, char*, unsigned int, char const*, unsigned int)
+ T panorama::CSSHelpers::BReadMatchingCSSToken(CUtlBuffer&, char)
  T panorama::CSSHelpers::BSkipComma(char const*, char const**)
  T panorama::CSSHelpers::BSkipLeftParen(char const*, char const**)
  T panorama::CSSHelpers::BSkipQuote(char const*, char const**)
@@ -11035,6 +11035,16 @@
  T panorama::CUIEvent1<void*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent1<void*>::Validate(CValidator&, char const*)
  T panorama::CUIEvent1<void*>::~CUIEvent1()
+ T panorama::CUIEvent1<vr::VREvent_t>::Copy() const
+ T panorama::CUIEvent1<vr::VREvent_t>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent1<vr::VREvent_t>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent1<vr::VREvent_t>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent1<vr::VREvent_t>::~CUIEvent1()
+ T panorama::CUIEvent1<vr::VRStatusState_t>::Copy() const
+ T panorama::CUIEvent1<vr::VRStatusState_t>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent1<vr::VRStatusState_t>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent1<vr::VRStatusState_t>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent1<vr::VRStatusState_t>::~CUIEvent1()
  T panorama::CUIEvent2<char const*, void*>::Copy() const
  T panorama::CUIEvent2<char const*, void*>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent2<char const*, void*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -11087,6 +11097,11 @@
  T panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>::Validate(CValidator&, char const*)
  T panorama::CUIEvent3<panorama::CVideoPlayerAudioRenderer*, int, int>::~CUIEvent3()
+ T panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>::Copy() const
+ T panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent3<unsigned long long, unsigned int, unsigned long long>::~CUIEvent3()
  T panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>::Copy() const
  T panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent4<panorama::CPanoramaSymbol, unsigned int, unsigned int, unsigned int>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -11108,6 +11123,7 @@
  T panorama::CUIFontLoaderLinux::~CUIFontLoaderLinux()
  T panorama::CUIInputEngine::BEmulatingGamePadWithJoystick()
  T panorama::CUIInputEngine::BIsCapsLockOn()
+ T panorama::CUIInputEngine::BIsFingerDownOnSteamControllerLeftPad() const
  T panorama::CUIInputEngine::BIsFingerDownOnSteamControllerRightPad() const
  T panorama::CUIInputEngine::BIsGamePadCodeEquivalentIgnoringVendor(panorama::GamePadCode, panorama::GamePadCode)
  T panorama::CUIInputEngine::BRegisterKeyBind(char const*, char const*, char const*, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
@@ -11117,6 +11133,7 @@
  T panorama::CUIInputEngine::CUIInputEngine()
  T panorama::CUIInputEngine::GamePadCodeFromName(char const*)
  T panorama::CUIInputEngine::GetActiveControllerType() const
+ T panorama::CUIInputEngine::GetConnectGamePadPowerLevel(int)
  T panorama::CUIInputEngine::GetDeadZoneValue(panorama::GamePadCode)
  T panorama::CUIInputEngine::GetGamePadBindForEvent(char const*, panorama::IUIPanel const*)
  T panorama::CUIInputEngine::GetInputCapture()
@@ -11134,6 +11151,7 @@
  T panorama::CUIInputEngine::ParseKeyConfig(char const*)
  T panorama::CUIInputEngine::PchGamePadName()
  T panorama::CUIInputEngine::PulseActiveControllerHaptic(panorama::IUIEngine::EHapticFeedbackPosition, panorama::IUIEngine::EHapticFeedbackStrength)
+ T panorama::CUIInputEngine::PulseGamePadHaptics(int, float, unsigned int)
  T panorama::CUIInputEngine::RegisterKeyBindingsFile(char const*)
  T panorama::CUIInputEngine::ReleaseInputCapture(panorama::IInputCapture*)
  T panorama::CUIInputEngine::ReloadChangedFile(char const*)
@@ -12322,6 +12340,12 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::UserInputActive>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRNotificationBeginInteraction, unsigned long long, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRNotificationDismissed, unsigned long long, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRNotificationShow, unsigned long long, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VROverlayHidden, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VROverlayImageLoaded, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VROverlayShown, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRRenderToast, unsigned int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRResetDashboard>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent::CanBubble() const
@@ -12594,8 +12618,6 @@
  T panorama::TopLevelWindowClose::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::TopLevelWindowClose::GetEventType()
  T panorama::TopLevelWindowClose::MakeEvent(panorama::IUIPanelClient const*, panorama::IUIWindow*)
- T panorama::TopLevelWindowClosed::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T panorama::TopLevelWindowClosed::MakeEvent(panorama::IUIPanelClient const*, panorama::IUIWindow*)
  T panorama::TransitionProperty_t::operator==(panorama::TransitionProperty_t const&) const
  T panorama::TurnOffActiveController::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::TurnOffActiveController::MakeEvent(panorama::IUIPanelClient const*)
@@ -12613,10 +12635,26 @@
  T panorama::VRDashboardRequested::MakeEvent(panorama::IUIPanelClient const*, unsigned int, unsigned long long)
  T panorama::VRDashboardThumbSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRDashboardThumbSelected::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
+ T panorama::VRNotificationBeginInteraction::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRNotificationBeginInteraction::MakeEvent(panorama::IUIPanelClient const*, unsigned long long, unsigned int, unsigned long long)
+ T panorama::VRNotificationDismissed::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRNotificationDismissed::MakeEvent(panorama::IUIPanelClient const*, unsigned long long, unsigned int, unsigned long long)
+ T panorama::VRNotificationShow::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRNotificationShow::MakeEvent(panorama::IUIPanelClient const*, unsigned long long, unsigned int, unsigned long long)
+ T panorama::VROverlayHidden::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VROverlayHidden::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
+ T panorama::VROverlayImageLoaded::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VROverlayImageLoaded::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
+ T panorama::VROverlayShown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VROverlayShown::MakeEvent(panorama::IUIPanelClient const*, unsigned long long)
  T panorama::VRRenderToast::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRRenderToast::MakeEvent(panorama::IUIPanelClient const*, unsigned int)
  T panorama::VRResetDashboard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRResetDashboard::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::VRStatusUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRStatusUpdate::MakeEvent(panorama::IUIPanelClient const*, vr::VRStatusState_t)
+ T panorama::VRUnknownEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRUnknownEvent::MakeEvent(panorama::IUIPanelClient const*, vr::VREvent_t)
  T panorama::ValidateGlobalEvents(CValidator&)
  T panorama::ValidatePanel2DFactory(CValidator&)
  T panorama::ValidateStylePropertyFactory(CValidator&)
@@ -13457,6 +13495,7 @@
  T void std::fill<unsigned long long*, unsigned long long>(unsigned long long*, unsigned long long*, unsigned long long const&)
  T void vr::utils::PopulateDistortionMap<unsigned short>(vr::IVRSystem*, vr::Hmd_Eye, int, int, unsigned short*, int)
  T vr::utils::CVRConstants::ComputeConstants(vr::IVRSystem*)
+ T vrapi::ClearInterfaces()
  T vrapi::EnsureOpenVRAPILoaded(char const*)
  T vrapi::VROverlay()
  T xmlMemdup
@@ -13516,6 +13555,7 @@
  V_isstrlower
  V_isvalidhex
  V_pretifymem
+ V_pretifynum
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)
@@ -14046,6 +14086,7 @@
  b g_pClientBilling
  b g_pClientConfigStore
  b g_pClientController
+ b g_pClientControllerSerialized
  b g_pClientDepotBuilder
  b g_pClientEngine
  b g_pClientFriends
@@ -14473,13 +14514,6 @@
  b vec2_origin
  b vec4_invalid
  b vec4_origin
- b vrapi::dfVRChaperone
- b vrapi::dfVRCompositor
- b vrapi::dfVRControlPanel
- b vrapi::dfVRDashboardManager
- b vrapi::dfVROverlay
- b vrapi::dfVRRenderModels
- b vrapi::dfVRSystem
  b vrapi::dfVR_GetGenericInterface
  b vrapi::dfVR_GetStringForHmdError
  b vrapi::dfVR_Init
@@ -14556,6 +14590,7 @@
  g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
+ g_free
  g_object_unref
  g_pMemAllocSteam
  getcwd
@@ -14687,6 +14722,7 @@
  pango_context_get_metrics
  pango_context_set_base_dir
  pango_context_set_language
+ pango_extents_to_pixels
  pango_font_description_free
  pango_font_description_from_string
  pango_font_description_set_size
@@ -14710,6 +14746,7 @@
  pango_layout_get_height
  pango_layout_get_iter
  pango_layout_get_line_count
+ pango_layout_get_line_readonly
  pango_layout_get_pixel_extents
  pango_layout_get_text
  pango_layout_get_width
@@ -14727,6 +14764,7 @@
  pango_layout_iter_get_run_readonly
  pango_layout_iter_next_line
  pango_layout_iter_next_run
+ pango_layout_line_get_x_ranges
  pango_layout_new
  pango_layout_set_alignment
  pango_layout_set_attributes

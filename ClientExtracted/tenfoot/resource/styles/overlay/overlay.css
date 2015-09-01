@@ -1,5 +1,10 @@
 @define letterboxcolor: #000000d0;
 
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+
 #OverlayBasePanel
 {
 	position: 0px 0px 0%;
@@ -41,22 +46,6 @@
 	transition-duration: 0.5s;
 }
 
-#OverlayClose
-{
-	flow-children: right;	
-	horizontal-align: right;
-	max-width: 800px;
-}
-
-#GuideIcon
-{
-	background-image: url( "file://{images}/settings/icon_middle.tga" );
-	height: 58px;
-	width:  69px;
-	horizontal-align: right;
-	margin-top: -16px;
-}
-
 .SteamPad #GuideIcon
 {
 	background-image: url( "file://{images}/settings/icon_middle.tga" );
@@ -64,16 +53,6 @@
 	width:  69px;
 	horizontal-align: right;
 	margin-top: -16px;
-}
-
-#HowToClose
-{
-	font-size: 24px;
-	text-align: right;
-	height: 30px;
-	margin-top: 6px;
-	margin-right: 10px;
-	color: messagecolorwash;
 }
 
 .KillInProgress #OverlayDashboard
@@ -102,12 +81,18 @@
 	visibility: visible;
 }
 
+#BodyWrapper
+{
+	height: 100%;
+	width: 100%;
+}
 
 #OverlayDashboard
 {
 	transition-property: blur, desaturation, opacity, wash-color, transform !immediate;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
+	flow-children: down;
 }
 
 .BehindMessageBox #OverlayDashboard
@@ -127,6 +112,8 @@
 {
 	width: 100%;
 	height: 100%;
+	flow-children: right;
+	margin-top: 25px;
 }
 
 #OverlayBG
@@ -135,27 +122,12 @@
 	height: 100%;
 }
 
-#OverlayDashboard AvatarImage
-{
-	width: 95px;
-	height: 95px;
-}
-
-#SelfAvatar
-{
-	border-style: solid;
-	border-width: 4px;
-	border-radius: 0px;
-	width: 95px;
-	height: 95px;
-}
-
 #HeaderLabels
 {
-	margin-left: 120px;
-	flow-children: down;
+	margin-left: 50px;
+	flow-children: right;
 	font-family: platformfont;
-	margin-right: 100px;
+	margin-right: 50px;
 
 	width: 100%;
 }
@@ -167,7 +139,7 @@
 	font-family: platformfont;
 	font-size: 56px;
 	font-weight: bold;
-	width: 100%;
+	width: 75%;
 	height: 70px;
 }
 
@@ -176,13 +148,13 @@
 	color: messagecolorwash;
 	margin-top: 0px;
 	flow-children: right;
-	width: 100%;
+	horizontal-align: right;
 }
 
 #Clock,
 #ClockSuffix
 {
-	color: messagecolorwash;
+	color: detailsdatalabelfocus;
 	text-align: left;
 	font-size: 36px;
 	line-height: 36px;
@@ -214,22 +186,24 @@
 
 #UpperRow
 {
-	margin-left: 90px;
-	margin-top: 60px;
+	margin-top: 40px;
 	width: 100%;
+}
+
+
+
+.LinksAndActionsWrapper
+{
+    margin-top: 0px;
 }
 
 #ContentsRow
 {
 	width: 100%;
-	height: 600px;
-	transform: translateY( 400px );
+	height: 100%;
 
-	flow-children: right;
-	opacity: 0.90;
-	desaturation: 0.1;
-	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.4;
-
+	flow-children: right-wrap;
+	opacity: 1.0;
 
 	transition-property: transform, opacity-mask, opacity, desaturation;
 	transition-duration: 0.25s;
@@ -238,44 +212,13 @@
 
 #ContentsRow:descendantfocus
 {
-	width: 100%;
-	height: 100%;
-
 	opacity: 1.0;
 	desaturation: 0.0;
 
 	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;
 
-	flow-children: right;
-	transform: translateY( 0px ) translateZ( 0px );
+	flow-children: right-wrap;
 }
-
-
-#ContentsRow:descendantfocus #LinksAndMore,
-#ContentsRow:descendantfocus #Controller,
-#ContentsRow:descendantfocus #Achievements,
-#ContentsRow:descendantfocus #Broadcast,
-#ContentsRow:descendantfocus #Notifications,
-#ContentsRow:descendantfocus #MusicControlOverlay,
-#ContentsRow:descendantfocus #FriendsWhoPlay,
-#ContentsRow:descendantfocus #Screenshots,
-#ContentsRow:descendantfocus #RecentNews,
-#ContentsRow:descendantfocus #Guides
-{
-	transform: translateY( 320px ) translateZ( 40px );	
-}
-
-#ContentsRow:descendantfocus #MusicControlOverlay
-{
-	transform: translateY( 471px ) translateZ( 40px );	
-
-}
-
-#ContentsRow:descendantfocus #MusicControlOverlay:descendantfocus
-{
-	transform: translateY( 320px ) translateZ( 40px );	
-}
-
 
 #BroadcastLabelText
 {
@@ -293,7 +236,7 @@
 {
 	margin: 0px;
 	width: 100%;
-	height: 70%;
+	height: 50%;
 	
 	overflow: squish scroll;
 

@@ -7,28 +7,11 @@
 	</styles>
 
 	<ParentalChooseAppsChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
 		<Panel class="SettingsHeader" hittest="false">
 			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
 		</Panel>
-
-		<Panel class="SettingsBottomPanel">
-			<!-- main panel -->
-			<ParentalLibraryGrid selectionposboundary="vertical" id="ParentalLibraryGrid" />
-		</Panel>
-
-		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
-				<Label id="Label" text="#WizardButton_Next" />
-			</Button>
-			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
-				<Label id="Label" text="#WizardButton_Back" />
-			</Button>			
-			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
-				<Label id="Label" text="#WizardButton_Cancel" />
-			</Button>
-		</Panel>
-
+		<Label id="ParentalSectionLabel" class="SectionLabel" text="#Parental_Choose_Apps" />
+		<ParentalLibraryGrid selectionposboundary="vertical" id="ParentalLibraryGrid" />
 	</ParentalChooseAppsChild>
 
 </root>

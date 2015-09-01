@@ -2,7 +2,6 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/mainmenu_librarybackground.css" />
-		<include src="file://{resources}/styles/button.css" />
 		<include src="file://{resources}/styles/music/music_library_setup.css" />
 	</styles>
 	

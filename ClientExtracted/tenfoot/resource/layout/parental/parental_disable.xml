@@ -11,10 +11,10 @@
 			<Label class="StdTitle" text="#Parental_DisableTitle" />
 			<Label id="MsgBoxDescriptionArea" text="#Parental_DisablePrompt" />
 			<Panel id="MsgBoxButtons" >
-				<Button id="DisableButton" onactivate="ParentalDisable()">
+				<Button id="DisableButton" class="Button" onactivate="ParentalDisable()">
 					<Label id="ParentalDisableButtonLabel" text="#Parental_Disable" />
 				</Button>
-				<Button id="CancelButton" onactivate="ParentalDisableCancel()">
+				<Button id="CancelButton" class="Button" onactivate="ParentalDisableCancel()">
 					<Label text="#Parental_Disable_Cancel" />
 				</Button>
 			</Panel>

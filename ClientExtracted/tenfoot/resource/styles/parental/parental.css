@@ -82,11 +82,6 @@ ParentalUnlockPopup
 	transform: translatex( 400px );
 }
 
-.Button:disabled Label
-{
-	color: detailsdatalabel;
-}
-
 ParentalUnlockPopup #MsgBoxButtons
 {
 	width: 100%;
@@ -95,63 +90,6 @@ ParentalUnlockPopup #MsgBoxButtons
 #RecoveryButton
 {
 	horizontal-align: right;
-}
-
-TextEntry:disabled,.Button:disabled
-{
-	desaturation: 0.0;
-	blur: gaussian( 0.7 );
-	opacity: 0.40;
-	border-color: none;
-	box-shadow: none;
-	animation-name: none;
-}
-
-.Button
-{
-	padding-left: 8px;
-	border-width: 5px;
-	border-style: solid;
-	height: 40px;
-	margin-top: 10px;
-	width: fit-children;
-	horizontal-align: right;
-
-	border-color: none;
-	background-color: ui_common_control2;
-
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
-}
-
-.Button:hover
-{
-	z-index: 50;
-	transition-duration: 0.23s !immediate;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-	pre-transform-scale2d: 1.0;
-}
-
-
-.Button:focus
-{
-	transition-duration: 0.25s !immediate;
-
-	border-color: #fdfefef0;
-	z-index: 1000;
-
-	color: #00000099;
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-
-	pre-transform-scale2d: 1.0;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.0s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
 }
 
 
@@ -469,20 +407,21 @@ ParentalFeaturesChild .SettingsBottomPanel
 	width: 700px;
 	height: 50px;
 	horizontal-align: left;
-	padding-right: 10px;
-	padding-left: 0px;
 }
 
 
-#ParentalChooseAppsChild .SettingsBottomPanel
+#ParentalChooseAppsChild ParentalLibraryGrid
 {
 	margin-left: 0px;
-	transform: translateY( -90px );
-	height: 770px;
-	width: 100%;
-	position: 0px -100px 0px;
+	transform: translatey( -26px );
+//	pre-transform-scale2d: 0.95;
+//	transform: translateY( -90px );
+//	height: 770px;
+//	width: 100%;
+//	position: 0px -100px 0px;
 }
 
+/*
 #ParentalLibraryGrid .GamesGrid
 {
 	width: 100%;
@@ -495,6 +434,7 @@ ParentalFeaturesChild .SettingsBottomPanel
 	padding-bottom: 100px;
 	margin-bottom: -60px;
 }
+*/
 
 #ParentalLibraryGrid .GridUpperRow
 {
@@ -698,6 +638,7 @@ ParentalSetInProgressChild .SettingsBottomPanel
 	position: 0px 0px 0px;
 	z-index: 50;
 	width: 100%;
+	height: 1100px;
 }
 
 #ParentalChooseAppsChild AppGridItem 
@@ -748,12 +689,12 @@ ParentalSetInProgressChild .SettingsBottomPanel
 }
 
 
-#ParentalChooseAppsChild #SectionLabel
+#ParentalChooseAppsChild #ParentalSectionLabel
 {
 	margin-left: 295px;
 	max-width: 900px;
 	vertical-align: top;
-	height: 70px;
+	height: 30px;
 	position: 0px 38px 0px;
 	font-size: 24px;
 	font-weight: light;
@@ -887,4 +828,8 @@ ParentalSetSuccessChild .email
 {
 	width: 100%;
 	height: 100%;
+}
+#ParentalOverlay ParentalReplacementPanel Image
+{
+	margin-top: 20px;
 }

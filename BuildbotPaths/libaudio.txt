@@ -30,6 +30,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/platform.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/validator.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/fileio.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/interface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
@@ -38,6 +39,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/strtools.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp

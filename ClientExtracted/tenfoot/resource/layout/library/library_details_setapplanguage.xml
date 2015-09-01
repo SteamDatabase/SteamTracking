@@ -2,7 +2,6 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
-		<include src="file://{resources}/styles/button.css" />
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 
@@ -14,10 +13,10 @@
 			<DropDown id="Language" />
 
 			<Panel id="MsgBoxButtons">
-				<Button onactivate="ButtonSetAppLanguage()">
+				<Button class="Button" onactivate="ButtonSetAppLanguage()">
 					<Label text="#UI_OK" />
 				</Button>
-				<Button onactivate="ButtonCancel()">
+				<Button class="Button" onactivate="ButtonCancel()">
 					<Label text="#UI_Cancel" />
 				</Button>
 			</Panel>

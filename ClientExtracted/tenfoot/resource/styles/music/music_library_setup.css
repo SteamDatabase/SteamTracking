@@ -41,6 +41,7 @@ MusicLibrarySetupPanel.BehindTextInputHandler .MsgBoxBodyRegion
 {
 	margin-bottom: 4px;
 	padding-right: 0px;
+	width: 100%;
 }
 
 .AddDirectory
@@ -83,14 +84,14 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 
 #ActionButton
 {
-	width: 52px;
-	height: 52px;
+	width: 42px;
+	height: 39px;
 	background-color: blue;
 	margin-left: 20px;
-	margin-top: 4px;
+	margin-top: -5px;
+	padding: 7px 8px;
+
 }
-
-
 
 
 #ActionButtonLabel
@@ -106,7 +107,6 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 .LabelColumn
 {
 	flow-children: down;
-	padding-left: 10px;
 	width: 670px;
 }
 
@@ -126,12 +126,10 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 
 .SingleLineLabel
 {
-	height: 28px;
 	font-weight: bold;
 	font-size: 24px;
 	width: 100%;
 	color: white;
-	margin-top: 15px;
 	transform: translateX( -4px );
 	
 	transition-property: transform, color;
@@ -139,11 +137,6 @@ MusicLibrarySetupEntry:Focus, MusicLibrarySetupAdd:Focus
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.EntryContainer #AddDirectory:focus .SingleLineLabel
-{
-	color: applabelselected;
-	transform: translateX( 3px );
-}
 
 
 MusicLibrarySetupEntry:Focus .SingleLineLabel, 

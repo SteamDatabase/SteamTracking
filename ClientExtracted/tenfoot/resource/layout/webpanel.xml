@@ -8,7 +8,6 @@
 		<Panel class="Container" selectionpos="auto">
 			<HTML id="HTML" />
 		</Panel>
-		<Image class="Reticule" id="ReticuleMiddle" src="file://{images}/browser/ReticuleLoading_00039.png" />
 		<LoadingThrobber id="Throbber" />
 	</Panel>
 

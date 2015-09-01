@@ -5,97 +5,49 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 	
-	<LibraryGuides defaultfocus="GuidesLargeBody" >
-		<Panel id="GuidesFullWrapper" class="GuidesFullWrapper">
-			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_Guides" />
+	<LibraryGuides>
+		<ParentalButton id="GuidesFullWrapper" class="GuidesFullWrapper" onactivate="ViewGuidesDialog()">
+			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_GuidesWithTotal" />
 			<Panel id="ParentalOverlay">
 				<ParentalReplacementPanel id="ParentalLockedReplacementPanel" />
 				<Panel id="GuidesBody" class="GuidesBody HideWhileLocked">
-					<Panel id="GuidesSmallBody" class="GuidesSmallBody">
-						<Panel id="GuidesSmallRows" class="GuidesSmallRows">
-							<Panel id="GuideRowOne" class="GuideRow">
-								<Panel id="GuideWrapper0" class="GuideIcon">
-									<Image id="GuideImage0" class="GuideImage0" />
-								</Panel>
-								<Panel id="GuideWrapper1" class="GuideIcon">
-									<Image id="GuideImage1" class="GuideImage1" />
-								</Panel>
-								<Panel id="GuideWrapper2" class="GuideIcon">
-									<Image id="GuideImage2" class="GuideImage2" />
-								</Panel>
-								<Panel id="GuideWrapper3" class="GuideIcon">
-									<Image id="GuideImage3" class="GuideImage3" />
+					<Panel id="GuidesLargeBody" class="GuidesLargeBody">
+
+							<Panel id="GuideItem0" class="GuideDetail">
+								<Image id="GuideDetailImage0" class="GuideDetailImage" />
+								<Panel id="GuideLabels0" class="GuideLabels">
+									<Label id="GuideHeader0" class="GuideLabelHeader" />
+									<Label id="GuideLabelTitle0" class="GuideLabelTitle" />
 								</Panel>
 							</Panel>
-							<Panel id="GuideRowTwo" class="GuideRow">
-								<Panel id="GuideWrapper4" class="GuideIcon" >
-									<Image id="GuideImage4" class="GuideImage4" />
-								</Panel>
-								<Panel id="GuideWrapper5" class="GuideIcon">
-									<Image id="GuideImage5" class="GuideImage5" />
-								</Panel>
-								<Panel id="GuideWrapper6" class="GuideIcon">
-									<Image id="GuideImage6" class="GuideImage6" />
-								</Panel>
-								<Panel id="GuideWrapper7" class="GuideIcon">
-									<Label id="MoreRemainingLabel" class="MoreRemainingLabel" />
+	
+							<Panel id="GuideItem1" class="GuideDetail">
+								<Image id="GuideDetailImage0" class="GuideDetailImage" />
+								<Panel id="GuideLabels1" class="GuideLabels">
+									<Label id="GuideHeader1" class="GuideLabelHeader" />
+									<Label id="GuideLabelTitle1" class="GuideLabelTitle" />
 								</Panel>
 							</Panel>
-						</Panel>
-					</Panel>
-					<Panel id="GuidesLargeBody" class="GuidesLargeBody" childfocusonhover="true" selectionposboundary="vertical">
-						<Button id="GuideItem0" class="GuideDetail" tabindex="0" selectionpos="1,0">
-							<Image id="GuideDetailImage0" class="GuideDetailImage" />
-							<Panel id="GuideLabels0" class="GuideLabels">
-								<Label id="GuideHeader0" class="GuideLabelHeader" />
-								<Label id="GuideLabelTitle0" class="GuideLabelTitle" />
+	
+							<Panel id="GuideItem2" class="GuideDetail">
+								<Image id="GuideDetailImage2" class="GuideDetailImage" />
+								<Panel id="GuideLabels2" class="GuideLabels">
+									<Label id="GuideHeader2" class="GuideLabelHeader" />
+									<Label id="GuideLabelTitle2" class="GuideLabelTitle" />
+								</Panel>
 							</Panel>
-						</Button>
-						<Button id="GuideItem1" class="GuideDetail" tabindex="1" selectionpos="1,1">
-							<Image id="GuideDetailImage1" class="GuideDetailImage" />
-							<Panel id="GuideLabels1" class="GuideLabels">
-								<Label id="GuideHeader1" class="GuideLabelHeader" />
-								<Label id="GuideLabelTitle1" class="GuideLabelTitle" />
+	
+							<Panel id="GuideItem3" class="GuideDetail">
+								<Image id="GuideDetailImage3" class="GuideDetailImage" />
+								<Panel id="GuideLabels3" class="GuideLabels">
+									<Label id="GuideHeader3" class="GuideLabelHeader" />
+									<Label id="GuideLabelTitle3" class="GuideLabelTitle" />
+								</Panel>
 							</Panel>
-						</Button>
-						<Button id="GuideItem2" class="GuideDetail" tabindex="2" selectionpos="1,2">
-							<Image id="GuideDetailImage2" class="GuideDetailImage" />
-							<Panel id="GuideLabels2" class="GuideLabels">
-								<Label id="GuideHeader2" class="GuideLabelHeader" />
-								<Label id="GuideLabelTitle2" class="GuideLabelTitle" />
-							</Panel>
-						</Button>
-						<Button id="GuideItem3" class="GuideDetail" tabindex="3" selectionpos="1,3">
-							<Image id="GuideDetailImage3" class="GuideDetailImage" />
-							<Panel id="GuideLabels3" class="GuideLabels">
-								<Label id="GuideHeader3" class="GuideLabelHeader" />
-								<Label id="GuideLabelTitle3" class="GuideLabelTitle" />
-							</Panel>
-						</Button>
-						<Button id="GuideItem4" class="GuideDetail" tabindex="4" selectionpos="1,4">
-							<Image id="GuideDetailImage4" class="GuideDetailImage" />
-							<Panel id="GuideLabels4" class="GuideLabels">
-								<Label id="GuideHeader4" class="GuideLabelHeader" />
-								<Label id="GuideLabelTitle4" class="GuideLabelTitle" />
-							</Panel>
-						</Button>
-						<Button id="GuideItem5" class="GuideDetail" tabindex="5" selectionpos="1,5">
-							<Image id="GuideDetailImage5" class="GuideDetailImage" />
-							<Panel id="GuideLabels5" class="GuideLabels">
-								<Label id="GuideHeader5" class="GuideLabelHeader" />
-								<Label id="GuideLabelTitle5" class="GuideLabelTitle" />
-							</Panel>
-						</Button>
-						<Button id="GuideItem6" class="GuideDetail" tabindex="6" selectionpos="1,6">
-							<Image id="GuideDetailImage6" class="GuideDetailImage" />
-							<Panel id="GuideLabels6" class="GuideLabels">
-								<Label id="GuideHeader6" class="GuideLabelHeader" />
-								<Label id="GuideLabelTitle6" class="GuideLabelTitle" />
-							</Panel>
-						</Button>
+
 					</Panel>
 				</Panel>
 			</Panel>
-		</Panel>
+		</ParentalButton>
 	</LibraryGuides>
 </root>

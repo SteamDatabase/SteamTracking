@@ -35,17 +35,4 @@ TextEntry
 	transform: translatex( 0px );
 }
 
-#MsgBoxButtons Button
-{
-	margin-right: 16px;
-	padding: 4px 8px 4px 8px;
-	margin-top: 8px;
-	margin-bottom: 8px;
-	width: 50%;
-	margin-left: 10px;
-}
 
-#MsgBoxButtons Button Label
-{
-	horizontal-align: left;
-}

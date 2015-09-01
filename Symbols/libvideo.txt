@@ -451,6 +451,7 @@
  D ssl3_undef_enc_method
  D typeinfo for CAlignedBufferBase
  D typeinfo for CAlignedYUV420Buffer
+ D typeinfo for CAudioFileDecoder
  D typeinfo for CAudioResampler
  D typeinfo for CBaseFrameFunction
  D typeinfo for CBaseScheduledFunction
@@ -702,6 +703,7 @@
  D typeinfo for CryptoPP::Waitable
  D typeinfo for CryptoPP::X509PublicKey
  D typeinfo for CryptoPP::X917RNG
+ D typeinfo for IAudioFileDecoder
  D typeinfo for IAudioResampler
  D typeinfo for IConnectionCallback
  D typeinfo for IDebugStatsSystem
@@ -760,6 +762,7 @@
  D v3_skey_id
  D v3_sxnet
  D vtable for CAlignedYUV420Buffer
+ D vtable for CAudioFileDecoder
  D vtable for CAudioResampler
  D vtable for CBaseFrameFunction
  D vtable for CBaseScheduledFunction
@@ -1018,6 +1021,7 @@
  R tls1_version_str
  R typeinfo name for CAlignedBufferBase
  R typeinfo name for CAlignedYUV420Buffer
+ R typeinfo name for CAudioFileDecoder
  R typeinfo name for CAudioResampler
  R typeinfo name for CBaseFrameFunction
  R typeinfo name for CBaseScheduledFunction
@@ -1338,6 +1342,7 @@
  R typeinfo name for CryptoPP::Waitable
  R typeinfo name for CryptoPP::X509PublicKey
  R typeinfo name for CryptoPP::X917RNG
+ R typeinfo name for IAudioFileDecoder
  R typeinfo name for IAudioResampler
  R typeinfo name for IConnectionCallback
  R typeinfo name for IDebugStatsSystem
@@ -1858,6 +1863,19 @@
  T CAlignedYUV420Buffer::YPlane() const
  T CAlignedYUV420Buffer::YStride() const
  T CAlignedYUV420Buffer::~CAlignedYUV420Buffer()
+ T CAudioFileDecoder::BInit(char const*)
+ T CAudioFileDecoder::Decode(unsigned char*, int*, long long*)
+ T CAudioFileDecoder::DecodeAudioFromPacket()
+ T CAudioFileDecoder::GetApproxSampleCount()
+ T CAudioFileDecoder::GetChannelMaskOut()
+ T CAudioFileDecoder::GetFormatOut()
+ T CAudioFileDecoder::GetInterleavedBytesPerSample()
+ T CAudioFileDecoder::GetSampleRateOut()
+ T CAudioFileDecoder::LoadNextPacket()
+ T CAudioFileDecoder::ReadFn(void*, unsigned char*, int)
+ T CAudioFileDecoder::SeekFn(void*, long long, int)
+ T CAudioFileDecoder::SeekToSample(long long)
+ T CAudioFileDecoder::~CAudioFileDecoder()
  T CAudioResampler::BInit(EAudioSampleFormat, int, unsigned int, EAudioSampleFormat, int, unsigned int)
  T CAudioResampler::Convert(unsigned char*, int*, unsigned char const*, int)
  T CAudioResampler::Flush()
@@ -1912,6 +1930,7 @@
  T CCDDBAppDetailCommon::SetCachedSize(int) const
  T CCDDBAppDetailCommon::SharedDtor()
  T CCDDBAppDetailCommon::~CCDDBAppDetailCommon()
+ T CCircularBuffer::CommitWrite(void*, int)
  T CCircularBuffer::Flush()
  T CCircularBuffer::GetReadAvailable()
  T CCircularBuffer::GetWriteAvailable()
@@ -2015,8 +2034,10 @@
  T CDummyCnxCallback::RecvPkt(CNetPacket*)
  T CERTIFICATEPOLICIES_free
  T CERTIFICATEPOLICIES_new
+ T CFileReader::BIsOpen() const
  T CFileReader::BOpenFile(char const*)
  T CFileReader::CFileReader(bool, unsigned int)
+ T CFileReader::GetSize() const
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
  T CFileReader::Validate(CValidator&, char const*)
@@ -2096,6 +2117,7 @@
  T CHTTPClientConnection::DelayedAbortConnection()
  T CHTTPClientConnection::DelayedSendMoreRequestData()
  T CHTTPClientConnection::HandleSSLFailure(EResult)
+ T CHTTPClientConnection::InitializeSSLConnection()
  T CHTTPClientConnection::RecvHTTPResponseData(unsigned char*, unsigned int)
  T CHTTPClientConnection::RecvPkt(CNetPacket*)
  T CHTTPClientConnection::RecvPlaintext(unsigned char*, unsigned int)
@@ -2577,7 +2599,8 @@
  T CONF_set_nconf
  T COpenSSLAD<bio_st, &(BIO_free_void(bio_st*))>::~COpenSSLAD()
  T COpenSSLCachedSession::BApplyToSSLConnection(ssl_st*) const
- T COpenSSLCachedSession::COpenSSLCachedSession(ssl_session_st*)
+ T COpenSSLCachedSession::BMatchesServerName(char const*) const
+ T COpenSSLCachedSession::COpenSSLCachedSession(ssl_session_st*, ssl_st*)
  T COpenSSLCachedSession::Validate(CValidator&, char const*)
  T COpenSSLCachedSession::~COpenSSLCachedSession()
  T COpenSSLCertificate::BGetIssuer(CUtlString&) const
@@ -2593,12 +2616,13 @@
  T COpenSSLCertificate::~COpenSSLCertificate()
  T COpenSSLConnection::BAsyncSend(CUtlBuffer&)
  T COpenSSLConnection::BAsyncSend(unsigned char const*, unsigned int)
+ T COpenSSLConnection::BCheckServerNameCompatibility(char const*) const
  T COpenSSLConnection::BYieldingWaitForSendsCompleted(CJobMgr*, unsigned long long)
  T COpenSSLConnection::BeginHandshake()
  T COpenSSLConnection::CBIOCallbacks::FnCtrl(bio_st*, int, long, void*)
  T COpenSSLConnection::CBIOCallbacks::FnRead(bio_st*, char*, int)
  T COpenSSLConnection::CBIOSinkCallbacks::FnWrite(bio_st*, char const*, int)
- T COpenSSLConnection::COpenSSLConnection(ISSLConnectionCallback*, ESSLConnectionType, COpenSSLContext*, CWorkThreadPool*, COpenSSLCachedSession*)
+ T COpenSSLConnection::COpenSSLConnection(ISSLConnectionCallback*, ESSLConnectionType, COpenSSLContext*, CWorkThreadPool*, COpenSSLCachedSession*, char const*)
  T COpenSSLConnection::GetClientSession() const
  T COpenSSLConnection::GetPeerCertificate()
  T COpenSSLConnection::OnThreadedWorkItemCompleted(unsigned long long)
@@ -2616,7 +2640,7 @@
  T COpenSSLConnection::WakeJobsWaitingOnSends()
  T COpenSSLConnection::~COpenSSLConnection()
  T COpenSSLContext::COpenSSLContext(ESSLConnectionType, ESSLCipherSuite, int, char const*, char const*, char const*, char const*)
- T COpenSSLContext::FindClientSession(netadr_t)
+ T COpenSSLContext::FindClientSession(netadr_t, char const*)
  T COpenSSLContext::PostInit(int)
  T COpenSSLContext::PreInit(ESSLConnectionType, ESSLCipherSuite, int, char const*)
  T COpenSSLContext::RegisterClientSession(netadr_t, COpenSSLCachedSession*)
@@ -2837,6 +2861,7 @@
  T CSmartPtr<CHTTPClientRequest, CRefCountAccessor>::CSmartPtr(ESmartPtrNoAddRef, CHTTPClientRequest*)
  T CSmartPtr<CHTTPClientResponse, CRefCountAccessor>::operator=(CSmartPtr<CHTTPClientResponse, CRefCountAccessor> const&)
  T CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>::CSmartPtr(CSmartPtr<COpenSSLCachedSession, CRefCountAccessor> const&)
+ T CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>::CSmartPtr(ESmartPtrAddRef, COpenSSLCachedSession*)
  T CStatT<SteamThreadTools::CThreadMutex>::AgeGracefully()
  T CStatT<SteamThreadTools::CThreadMutex>::CStatT(int, unsigned long long)
  T CStatT<SteamThreadTools::CThreadMutex>::Clear()
@@ -3207,9 +3232,10 @@
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::EnsureCapacity(int)
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Find(netadr_t const&) const
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::FindInBucket(int, netadr_t const&) const
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::FindOrInsert(netadr_t const&, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t const&)
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::IncrementalRehash()
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertUnconstructed(netadr_t const&, int*, bool)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t const&)
+ T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::NextSameKey(int) const
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Purge()
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RehashNodesInBucket(int)
  T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveAll()
@@ -3278,8 +3304,7 @@
  T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMapLRU()
  T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMapLRU()
  T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Element(int)
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::FindOrInsert(netadr_t const&)
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::FindOrInsert(netadr_t const&, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor> const&)
+ T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor> const&)
  T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession, CRefCountAccessor>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMapLRU()
  T CUtlLinkedList<AVPacket, int>::AllocInternal(bool)
  T CUtlLinkedList<AVPacket, int>::Free(int)
@@ -3425,6 +3450,7 @@
  T CUtlMemoryBase::EnsureCapacity(int)
  T CUtlMemoryBase::Grow(int)
  T CUtlMemoryBase::IsExternallyAllocated() const
+ T CUtlMemoryBase::IsIdxValid(int) const
  T CUtlMemoryBase::NumAllocated() const
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::Purge(int, bool)
@@ -3909,16 +3935,14 @@
  T CVideoDecoderLibav::~CVideoDecoderLibav()
  T CVideoEncoderH264::BEncodeFrame(IVideoYUVFrame*, long long, bool)
  T CVideoEncoderH264::BEncodeFrameInternal(x264_picture_t*)
- T CVideoEncoderH264::BInit(int, int, int, int)
- T CVideoEncoderH264::BShouldSkipFrame(long long, bool)
+ T CVideoEncoderH264::BInit(int, int, int)
  T CVideoEncoderH264::CVideoEncoderH264()
  T CVideoEncoderH264::Flush()
- T CVideoEncoderH264::GetEncodedFrame(VideoEncodedFrame_t**)
+ T CVideoEncoderH264::GetEncodedFrame()
  T CVideoEncoderH264::GetHeight()
  T CVideoEncoderH264::GetPPS(unsigned char**, int*)
  T CVideoEncoderH264::GetSPS(unsigned char**, int*)
  T CVideoEncoderH264::GetWidth()
- T CVideoEncoderH264::IsEncodedFrameAvailable()
  T CVideoEncoderH264::~CVideoEncoderH264()
  T CVideoFileStream::BHTTPDownloadFailed()
  T CVideoFileStream::BLoad(char const*, VideoByteRange_t*)
@@ -4233,6 +4257,7 @@
  T Coroutine_Launch(CCoroutine&)
  T Coroutine_YieldToMain
  T CrashOnPurpose()
+ T CreateAudioFileDecoder
  T CreateAudioResampler
  T CreateDirRecursive(char const*)
  T CreateInterface
@@ -5090,6 +5115,7 @@
  T DSO_up_ref
  T DebugStatsSystem
  T DefaultSpewFunc(SpewType_t, char const*)
+ T DeleteAudioFileDecoder
  T DeleteAudioResampler
  T DeleteThreadMutex(SteamThreadTools::CThreadMutex*)
  T DeleteVideoDecoder
@@ -6881,6 +6907,7 @@
  T V_ExtractDomainFromURL
  T V_FixDoubleSlashes
  T V_FixSlashes
+ T V_GetFileExtension
  T V_IsAbsolutePath
  T V_IsValidDomainNameCharacter
  T V_MakeAbsolutePath
@@ -7411,6 +7438,7 @@
  T __gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > > std::fill_n<__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, unsigned long, unsigned int>(__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, unsigned long, unsigned int const&)
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
+ T _strlwr
  T a2d_ASN1_OBJECT
  T a2i_ASN1_INTEGER
  T a2i_ASN1_STRING
@@ -8577,6 +8605,8 @@
  av_free_packet
  av_get_bytes_per_sample
  av_get_channel_layout_nb_channels
+ av_get_default_channel_layout
+ av_get_packed_sample_fmt
  av_gettime
  av_init_packet
  av_lockmgr_register
@@ -8588,6 +8618,7 @@
  av_register_malloc
  av_rescale
  av_rescale_q
+ av_sample_fmt_is_planar
  av_samples_get_buffer_size
  av_seek_frame
  avcodec_alloc_context3
@@ -8604,14 +8635,13 @@
  avformat_find_stream_info
  avformat_open_input
  avio_alloc_context
+ avio_seek
  avresample_alloc_context
- avresample_available
  avresample_close
  avresample_convert
  avresample_free
  avresample_get_out_samples
  avresample_open
- avresample_read
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
  b (anonymous namespace)::CMsgAppRights_descriptor_
@@ -9781,6 +9811,7 @@
  t RequireCh
  t ResolveExternalDTD
  t RestoreReaderPeRef
+ t SanitizeHostNameForSSL(char const*)
  t SetBlobCmp
  t SetEncoding
  t SigIllHandlerCPUID

@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/friends/friends.css" />
 	</styles>
@@ -43,17 +42,14 @@
 							<Label text="#Friends_ChangeProfileName" />
 						</Button>
 						-->
-						<Button id="ButtonEditProfile" class="MsgBoxButton" onactivate="EditCommunityProfile();">
+						<Button id="ButtonEditProfile" class="MsgBoxButton Button" onactivate="EditCommunityProfile();">
 							<Label text="#Friends_EditProfile" />
 						</Button>
 						
-						<Button id="ButtonAddAFriend" class="MsgBoxButton">
+						<Button id="ButtonAddAFriend" class="MsgBoxButton Button">
 							<Label text="#Friends_AddFriendAction" />
 						</Button>
 
-						<Button id="ButtonClose" class="MsgBoxButton" onactivate="CloseFriendsActions();">
-							<Label text="#UI_Done" />
-						</Button>
 
 					</Panel>
 				</Panel>

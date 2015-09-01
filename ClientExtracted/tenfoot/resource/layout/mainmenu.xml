@@ -42,21 +42,21 @@
 				<Panel id="SettingsExitRow" tabindex="1" selectionpos="10,0">
 					<Label id="Clock" />
 					<Label id="ClockSuffix" />
-					<Panel id="BatteryPanel" >
+					<Button id="BatteryPanel" onactivate="ShowSettings( GameController );" tabindex="0" selectionpos="10.1,0" >
 						<Image id="Battery" src="file://{images}/controller_battery_3.png" />
-					</Panel>
-					<Button id="MusicGuideButton" class="MusicGuideButton" tabindex="0" selectionpos="10.2,0"
+					</Button>
+					<Button id="MusicGuideButton" class="MusicGuideButton" tabindex="1" selectionpos="10.2,0"
 						onfocus="MusicGuideButtonFocused();" onactivate="ToggleMusicControlPanel( true );"		
 						>
 						<Image id="MusicGuideImage" src="file://{images}/music/musicguide_icon.png"/>
 						<Label id="MusicGuideLabel" class="LongDesc" text="#MainMenu_MusicGuideLabel"/>
 					</Button>
 					
-					<ParentalButton id="SettingsButton" tabindex="0" selectionpos="10.3,0" onfocus="SettingsButtonFocused();" onactivate="ShowSettings( Main );" >
+					<ParentalButton id="SettingsButton" tabindex="2" selectionpos="10.3,0" onfocus="SettingsButtonFocused();" onactivate="ShowSettings( Main );" >
 						<Image src="file://{images}/settings.png" />
 						<Label class="LongDesc" text="#MainMenu_Settings" />
 					</ParentalButton>
-					<ParentalButton id="ParentalLockButton" tabindex="2" selectionpos="10.5,0" onfocus="ParentalLockButtonFocused();" onactivate="ToggleParentalLock();" >
+					<ParentalButton id="ParentalLockButton" tabindex="3" selectionpos="10.5,0" onfocus="ParentalLockButtonFocused();" onactivate="ToggleParentalLock();" >
 						<Panel id="ParentalLockImageOverlay">
 							<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
 							<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
@@ -74,7 +74,7 @@
 							</Panel>
 						</Panel>
 					</ParentalButton>
-					<Button id="GoOnlineButton" tabindex="3" selectionpos="10.6,0" onfocus="GoOnlineButtonFocused();" onactivate="GoOnline();" >
+					<Button id="GoOnlineButton" tabindex="4" selectionpos="10.6,0" onfocus="GoOnlineButtonFocused();" onactivate="GoOnline();" >
 						<Image src="file://{images}/offline.png" />
 						<Panel class="GoOnlineButtonLabels">
 							<Label class="SmDesc" id="SmDesc1" text="#GoOnline_Header" />
@@ -82,11 +82,11 @@
 							<Label class="SmDesc" id="SmDesc2" text="#GoOnline_Footer" />
 						</Panel>
 					</Button>
-					<Button id="Exit" tabindex="4" selectionpos="10.7,0" onfocus="ExitButtonFocused();" onactivate="ShowQuitDialog();">
+					<Button id="Exit" tabindex="5" selectionpos="10.7,0" onfocus="ExitButtonFocused();" onactivate="ShowQuitDialog();">
 						<Image src="file://{images}/exit.png" />
 						<Label class="LongDesc" text="#MainMenu_Exit" />
 					</Button>
-					<Button id="BetaButton" tabindex="5" selectionpos="10.8,0" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" >
+					<Button id="BetaButton" tabindex="6" selectionpos="10.8,0" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" >
 						<Image src="file://{images}/betabutton4.tga" />
 					</Button>
 				</Panel>
@@ -123,16 +123,16 @@
 			<!-- The main row of menu buttons in the center of the screen -->
 			<Panel id="MenuRow" tabindex="3" selectionpos="5,5" ondescendantfocus="MainNavRowFocused();" ondescendantblur="MainNavRowBlur();" selectionposboundary="vertical" onmoveup="SetInputFocus( TopRow )">
 				<Panel id="MenuRowButtons">		
-					<ParentalButton id="StoreButton" class="Button ButtonLeft" tabindex="0" selectionpos="1,5" onfocus="StoreButtonFocused();" onactivate="StoreShow();"> 
+					<ParentalButton id="StoreButton" class="Button ButtonLeft" tabindex="0" selectionpos="1,5" onfocus="StoreButtonFocused();" onactivate="StoreShow();">
 						<Label id="StoreLabel" class="ButtonLabel" text="#MainMenu_Store" />
 					</ParentalButton>
-					<Button id="LibraryButton" class="Button ButtonMiddle" tabindex="1" selectionpos="1.1,5" onfocus="LibraryButtonFocused();" onactivate="$.DispatchEvent( 'ShowLibrary' );"> 
+					<Button id="LibraryButton" class="Button ButtonMiddle" tabindex="1" selectionpos="1.1,5" onfocus="LibraryButtonFocused();" onactivate="$.DispatchEvent( 'ShowLibrary' );">
 						<Label id="LibraryLabel" class="ButtonLabel" text="#MainMenu_Library" />
 					</Button>
-					<ParentalButton id="CommunityButton" class="Button ButtonMiddle" tabindex="2" selectionpos="1.2,5" onfocus="CommunityButtonFocused();" onactivate="OpenCommunityMenu( false );"> 
+					<ParentalButton id="CommunityButton" class="Button ButtonMiddle" tabindex="2" selectionpos="1.2,5" onfocus="CommunityButtonFocused();" onactivate="OpenCommunityMenu( false );">
 						<Label id="CommunityLabel" class="ButtonLabel" text="#MainMenu_Community" />
 					</ParentalButton>
-					<ParentalButton id="ProfileButton" class="Button ButtonRight" tabindex="3" selectionpos="1.3,5" onfocus="ProfileButtonFocused();" onactivate="OpenProfileMenu( false );"> 
+					<ParentalButton id="ProfileButton" class="Button ButtonRight" tabindex="3" selectionpos="1.3,5" onfocus="ProfileButtonFocused();" onactivate="OpenProfileMenu( false );">
 						<Label id="ProfileLabel" class="ButtonLabel" text="#MainMenu_Profile" />
 					</ParentalButton>
 				</Panel>					

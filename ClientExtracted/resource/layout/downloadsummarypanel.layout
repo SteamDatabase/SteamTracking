@@ -343,10 +343,10 @@
 		
 		// graph legend
 		place { control="net_legend_panel" region=legend y=3 x=0 width=9 height=9 }
-		place { control="net_legend_label" region=legend y=0 x=12 }
+		place { control="net_legend_label" region=legend y=1 x=12 }
 		
 		place { control="disk_legend_panel" region=legend y=16 x=0  width=9 height=9 }
-		place { control="disk_legend_label" region=legend y=13 x=12 }
+		place { control="disk_legend_label" region=legend y=14 x=12 }
 					
 		// put NETWORK	USAGE in the top left
 		place { control="header"	region=head dir=down x=0	y=0	}

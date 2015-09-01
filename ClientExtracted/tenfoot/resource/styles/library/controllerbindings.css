@@ -1754,6 +1754,7 @@ Button:focus .PActionMappingWrapper Image
 {
 	width: 100%;
 	white-space: normal;
+	height: 60px;
 }
 
 #AddDescriptionEntry

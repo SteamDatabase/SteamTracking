@@ -9,7 +9,6 @@
 
 MusicControlOverlay
 {
-	margin: 8px;
 	background-color: transparent_module;
 	flow-children: down;
 	height: 312px;
@@ -19,8 +18,6 @@ MusicControlOverlay
 	border-style: solid;
 	border-color: #00000000;
 	
-  	transform: translatey( 236px );
-
 	transition-property: transform, position, border, background-color, opacity, pre-transform-scale2d, box-shadow !immediate;
 	transition-duration: shortduration !immediate;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -37,34 +34,56 @@ MusicControlOverlay
 	box-shadow: box_shadow_on_color -6px -6px 12px 12px;
 }
 
-.MusicControlOverlay:descendantfocus, .MusicControlOverlay:focus,
+.MusicControlOverlay .ShowMusicControlButton
 {
-	margin: 8px;
-	background-color: action_module;
+	width: 100%;
+	height: 100%;
 	flow-children: down;
-	height: 600px;
-	width: 524px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
-	
-	transform: translatey( 0px );
-
-	transition-property: transform, position, border, background-color, opacity, pre-transform-scale2d, box-shadow !immediate;
-	transition-duration: shortduration !immediate;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-	
-	pre-transform-scale2d: 1.0;
-	
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: 1.7s;
-	animation-delay: 0.3s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+	background-color: action_module;
+	padding-top: 30px;
+	margin: 10px 10px 10px 10px;
 }
 
+.MusicControlOverlay .NowPlayingHeader,
+.MusicControlOverlay .NowPlayingTrackName,
+.MusicControlOverlay .NowPlayingAlbumName,
+.MusicControlOverlay .NoMusicSelected,
+{
+	font-family: platformfont;
+	margin: 0px 20px 6px 18px;
+	padding-right: 8px;
+	color: detailsdatalabel;
+	opacity: 1.0;
+	horizontal-align: left;
+	transition-duration: shortduration;
+	transition-property: transform;
+	transition-timing-function: bigpicture-ease-in-out;
+	font-weight: light;
+}
+
+.MusicControlOverlay .NowPlayingHeader
+{
+	font-size: 22px;
+}
+
+.MusicControlOverlay .NowPlayingTrackName
+{
+	font-size: 36px;
+	horizontal-align: center;
+}
+
+.MusicControlOverlay .NowPlayingAlbumName
+{
+	font-size: 30px;
+	horizontal-align: center;
+}
+
+.MusicControlOverlay .NoMusicSelected
+{
+	font-size: 18px;
+	horizontal-align: center;
+	vertical-align: center;
+}
 
 .MusicControlTransport
 {
@@ -94,13 +113,6 @@ MusicControlOverlay
 	opacity: 1.0;
 }
 
-
-.MusicControlOverlay:descendantfocus .HeaderLabel
-{
-	visibility: collapse;
-}
-
-
 .MusicControlOverlay #BrowseQueue
 {
 	visibility: collapse;
@@ -117,41 +129,10 @@ MusicControlOverlay
 	margin-bottom: -6px;
 }
 
-
-#MusicControlOverlay:descendantfocus #Volume
-{
-		pre-transform-scale2d: 0.9;
-		margin-left: -10px;
-		margin-right: -5px;
-		margin-top: 9px;
-		width: 151px;
-}
-
-#MusicControlOverlay:descendantfocus .VoiceBar
-{
-	margin-left: 2.5px;
-	margin-right: 2.5px;
-	width: 8px;
-	background-color: #ffffff22;
-	opacity: 1.0;
-}
-
 #MusicControlOverlay #MusicControlTransport .QueueControlButtons
 {
 	visibility: collapse;
 
-}
-
-#MusicControlOverlay:descendantfocus #MusicControlTransport:descendantfocus .QueueControlButtons
-{
-	visibility: visible;
-	background-size: 485px 60px;
-	background-position: 9px 28px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	margin-left: 7px;
-	margin-right: 5px;
-	padding-left: 15px;
 }
 
 #MusicControlOverlay #EntriesContainer
@@ -168,25 +149,6 @@ MusicControlOverlay
 {
 	opacity: 0.0;
 	margin-top: 10px;
-}
-
-#MusicControlOverlay:descendantfocus #EntriesContainer VerticalScrollBar
-{
-	opacity: 1.0;
-}
-
-
-#MusicControlOverlay:descendantfocus #EntriesContainer
-{
-	transform: translateY( 0px );
-	opacity: 1.0;
-	opacity-mask: none;
-}
-
-#MusicControlOverlay:descendantfocus #NoMusicQueueEntriesContainer.PanelVisible
-{
-	background-size: 208px 243px;
-	background-position: 130px 130px;
 }
 
 #MusicControlOverlay #NoMusicQueueEntriesContainer.PanelVisible

@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/add_controller.css" />
 	</styles>
@@ -31,7 +30,7 @@
 				
 			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
 				<Panel id="MsgBoxButtons">
-					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton" onactivate="ButtonCancel();">
+					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button" onactivate="ButtonCancel();">
 						<Label id="CancelButtonText" text="#UI_Cancel" />
 					</Button>
 				</Panel>

@@ -2758,7 +2758,7 @@ ControllerConfigBrowser#ConfigBrowser:descendantfocus
 
 ControllerConfigBrowser #ColumnContainer
 {
-	margin-top: 80px;
+	margin-top: 180px;
 	width: fit-children;
 	height: 837px;
 	flow-children: right;
@@ -2772,11 +2772,43 @@ ControllerConfigBrowser #ConfigCategoriesColumn
 	height: 100%;
 }
 
+ControllerConfigBrowser #ConfigBrowserHeader
+{
+	text-align: left;
+	margin-left: 55px;
+}
+
+ControllerConfigBrowser #CategoryExplanationBGPanel
+{
+	align: center top;
+	margin-top: 179px;
+	margin-left: 625px;
+	width: 1210px;
+	height: 73%;
+	background-color: #0b2231;
+}
+
+ControllerConfigBrowser #CategoryExplanation
+{
+	align: center top;
+	z-index: 100;
+	margin-top: 20px;
+	margin-left: 10px;
+	font-size: 25px;
+	height: 60px;
+	font-family: platformfont;
+	text-align: left;
+	width: 1160px;
+	
+	color: #75c7fdff;
+}
+
 ControllerConfigBrowser #ConfigsColumn
 {
+	margin-top: 100px;
 	margin-left: 65px;
 	width: 1160px;
-	height: 100%;
+	height: 82%;
 	flow-children: down;
 	overflow: squish scroll;
 	
@@ -2796,13 +2828,6 @@ ControllerConfigButton
 	border-color: #25364bff;
 }
 
-ControllerConfigButton #ConfigButtonWrapper
-{
-	width: 100%;
-	height: 100%;
-	flow-children: right;
-}
-
 ControllerConfigButton #ControllerImage
 {
 	background-image: url("file://{images}/library/controller/controller_small_config.png");
@@ -2818,12 +2843,15 @@ ControllerConfigButton #RecommendedConfig
 	font-size: 15px;
 	font-family: platformfont;
 	
-	align: left bottom;
+	align: right top;
 	color: white;
-	margin-bottom: 2px;
-	margin-left: 5px;
+	width: 200px;	
+	margin-top: 10px;
+	margin-right: 15px;
 	visibility: collapse;
 	font-weight: bold;
+	text-align: right;
+	z-index: 2;
 }
 
 ControllerConfigButton.Recommended #RecommendedConfig
@@ -2869,7 +2897,7 @@ ControllerConfigButton #Description
 ControllerConfigBrowser .ConfigCategory
 {
 	background-color: #25364bff;
-	height: 271px;
+	height: 196px;
 	width: 100%;
 	margin-bottom: 8px;
 }
@@ -2914,7 +2942,17 @@ ControllerConfigBrowser.HasTemplateBindings #TemplateCategory
 	visibility: visible;
 }
 
-ControllerConfigBrowser #PersonalBinding, ControllerConfigBrowser #CommunityBinding, ControllerConfigBrowser #TemplateBinding
+ControllerConfigBrowser #RecommendedCategory
+{
+	visibility: collapse;
+}
+
+ControllerConfigBrowser.HasRecommendedBindings #RecommendedCategory
+{
+	visibility: visible;
+}
+
+ControllerConfigBrowser #RecommendedBinding, ControllerConfigBrowser #PersonalBinding, ControllerConfigBrowser #CommunityBinding, ControllerConfigBrowser #TemplateBinding
 {
 	visibility: collapse;
 }
@@ -2934,6 +2972,11 @@ ControllerConfigBrowser.SelectTemplateBindings #TemplateBinding
 	visibility: visible;
 }
 
+ControllerConfigBrowser.SelectRecommendedBindings #RecommendedBinding
+{
+	visibility: visible;
+}
+
 ControllerConfigBrowser.SelectPersonalBindings #PersonalCategory
 {
 	background-color: #195174ff;
@@ -2949,7 +2992,12 @@ ControllerConfigBrowser.SelectTemplateBindings #TemplateCategory
 	background-color: #195174ff;
 }
 
-ControllerConfigBrowser #ConfigCategoriesColumn Button:focus, ControllerConfigButton:focus #ConfigButtonWrapper
+ControllerConfigBrowser.SelectRecommendedBindings #RecommendedCategory
+{
+	background-color: #195174ff;
+}
+
+ControllerConfigBrowser #ConfigCategoriesColumn Button:focus, ControllerConfigButton:focus #ConfigContentWrapper
 {
 	background-color: gradient(linear, 0% 0%, 100% 0%, from(#f2f2f2), to(#bdbdbd));
 	border-color: white;
@@ -2962,7 +3010,7 @@ ControllerConfigBrowser #ConfigCategoriesColumn Button:focus, ControllerConfigBu
 	animation-direction: normal;
 }
 
-ControllerConfigBrowser #ConfigCategoriesColumn Button:focus Label, ControllerConfigButton:focus #ConfigContentWrapper Label
+ControllerConfigBrowser #ConfigCategoriesColumn Button:focus Label, ControllerConfigButton:focus #ConfigContentWrapper Label, ControllerConfigButton:focus #RecommendedConfig
 {
 	color: black;
 }

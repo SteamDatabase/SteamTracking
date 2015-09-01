@@ -552,6 +552,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_source.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_vmouse.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controller_vmouse.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/controllerxinput_dummy.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/csinterface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/csinterface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/depotbuild.cpp
@@ -568,7 +569,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/htmlsurface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/ingamechat.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/ingamechat.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/inputgenerator.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/inputgenerator_osx.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/inputgenerator_osx.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/installscript.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/installscript_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/interfaceadapters.cpp
@@ -701,6 +704,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/constants.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/constants.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/content_manifest.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/content_manifest.pb.h
@@ -960,6 +964,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(attachedpictureframe.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(audioproperties.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(commentsframe.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(fileref.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(flacfile.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(flacmetadatablock.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(flacpicture.o)
@@ -977,8 +982,10 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(id3v2tag.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(infotag.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(itfile.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(itproperties.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(modfile.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(modfilebase.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(modproperties.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(modtag.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(mp4atom.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(mp4coverart.o)
@@ -1003,6 +1010,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(relativevolumeframe.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(rifffile.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(s3mfile.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(s3mproperties.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(speexfile.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(speexproperties.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/debug/libtag.a(tag.o)

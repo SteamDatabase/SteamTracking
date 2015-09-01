@@ -3569,6 +3569,8 @@
  b PosixRegistryManager()::s_PosixRegMgr
  b PosixRegistryManager()::s_bGetEUniverse
  b PosixRegistryManager()::s_pfnGetEUniverse
+ b ResetTextureParams_GL_TEXTURE_2D()::bHasAnisotropy
+ b ResetTextureParams_GL_TEXTURE_2D()::bHasLODBias
  b SHA224.m
  b SHA256.m
  b SYS_str_reasons
@@ -3613,6 +3615,8 @@
  b guard variable for CryptoPP::TheBitBucket()::bitBucket
  b guard variable for GlobalRNGList()::g_tslistPAutoSeededRNG
  b guard variable for PosixRegistryManager()::s_PosixRegMgr
+ b guard variable for ResetTextureParams_GL_TEXTURE_2D()::bHasAnisotropy
+ b guard variable for ResetTextureParams_GL_TEXTURE_2D()::bHasLODBias
  b id_callback
  b impl
  b int_error_hash
@@ -3766,6 +3770,7 @@
  glGenFramebuffersEXT
  glGenTextures
  glGetIntegerv
+ glGetString
  glIsTexture
  glLoadIdentity
  glMatrixMode
@@ -3956,6 +3961,7 @@
  t MakeTerm(ExprNode*&)
  t PNGErrorFunction(png_struct_def*, char const*)
  t PNGWarningFunction(png_struct_def*, char const*)
+ t ResetTextureParams_GL_TEXTURE_2D()
  t SigIllHandlerCPUID
  t SigIllHandlerSSE2
  t SimplifyNode(ExprNode*&)

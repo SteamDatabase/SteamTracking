@@ -3,40 +3,17 @@
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
-	<LibraryPlayAction defaultfocus="ButtonBody">
-		<Panel id="PlayActionFullWrapper" class="PlayActionFullWrapper">			
+	<LibraryPlayAction defaultfocus="PlayActionFullWrapper">
+		<Panel id="PlayActionFullWrapper" class="PlayActionFullWrapper" onactivate="LaunchGame( true );">			
 			<Panel id="PlayActionContents">
 
-				<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_Play" />
-				<Panel id="PlayTimeBody" class="PlayTimeBody">
-
-					<Panel id="PlayTimeRow1" class="PlayTimeRow">
-						<Label id="YouPlayed" class="YouPlayed PlayTimeTitle" text="#Library_Details_YouvePlayed" />
-						<Label id="YouPlayedValue" class="YouPlayedValue PlayTimeValue" />
-					</Panel> 
-					<Panel id="PlayTimeRo2" class="PlayTimeRow">
-						<Label id="LastPlayed" class="LastPlayed PlayTimeTitle" text="#Library_Details_LastPlayed" />
-						<Label id="LastPlayedValue" class="LastPlayedValue PlayTimeValue" text="#Library_Details_LastPlayedValue" />
-					</Panel> 
-					<Panel id="PlayTimeRow3" class="PlayTimeRow">
-						<Label id="SteamCloud" class="SteamCloud PlayTimeTitle" text="#Library_Details_SteamCloud" />
-						<Label id="SteamCloudValue" class="SteamCloudValue PlayTimeValue" />
-					</Panel>
-					<Panel id="SharingRow" class="PlayTimeRow">
-						<Label id="SharingHeader" class="PlayTimeTitle" />
-						<Label id="SharingValue" class="PlayTimeValue" />
-					</Panel>
-					<Panel id="StreamFromRow" class="PlayTimeRow">
-						<Label id="StreamFrom" class="LastPlayed PlayTimeTitle" text="#Library_Details_StreamFrom" />
-						<Label id="StreamFromValue" class="LastPlayedValue PlayTimeValue" />
-					</Panel> 
-				</Panel>
+				<Label id="HeaderLabel" class="PlayActionHeaderLabel" text="#Library_Details_Play" />
 				<Label id="LaunchingStatus" />
 				<Panel class="PlayWrapper">
 					<Panel class="ButtonBodyWrapper">
 						<Image id="Animator2" class="StreamAnimator2" />			
 						<Image id="Animator3" class="StreamAnimator3" />		
-						<Panel id="ButtonBody" class="ButtonBody" onactivate="LaunchGame( true );">
+						<Panel id="ButtonBody" class="ButtonBody">
 							<Panel class="ButtonEdge">
 								<Panel id="ButtonGlow" class="ButtonGlow" />
 								<Image id="ButtonImage" class="ButtonImage" src="file://{images}/library/library_play_button.tga" />

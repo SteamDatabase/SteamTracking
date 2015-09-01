@@ -1624,13 +1624,13 @@ StoreTrailerSlideshow.Stackable
 	transition-timing-function: linear;
 }
 
-StoreTrailerSlideshow.Loaded #Loaded,
+StoreTrailerSlideshow.Loaded #Loaded
 {
 	opacity: 1.0;
 	transition-duration: 0.0s;
 }
 
-StoreTrailerSlideshow.Loaded #Loading,
+StoreTrailerSlideshow.Loaded #Loading
 {
 	opacity: 0.0;
 	transition-duration: 0.0s;

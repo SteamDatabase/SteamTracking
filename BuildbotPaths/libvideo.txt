@@ -73,6 +73,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(strtools.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libvstdlib_static.a(strtools_unicode.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/KeyValues.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/audiodecoder.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/bitstring.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/checksum_crc.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/libvideo.build/Objects-normal/i386/checksum_sha1.o
@@ -169,6 +170,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpsocket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnpkt.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnudp.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/audiodecoder.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecode.cpp

@@ -60,11 +60,11 @@ SettingsPanel
 	background-color: settingsbackgroundgradient;
 	z-index: settingszindex;
 	color: tcstatictext;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 0px;
 	background-color: settingsbackgroundgradient;
 
-	transition-property: opacity, pre-transform-scale2d, transform;
+	transition-property: opacity, blur, pre-transform-scale2d, wash-color, transform;
 	transition-duration: .3s;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -184,28 +184,18 @@ SettingsPanel.SectionVisible #SettingsContent
 
 .LongDesc
 {
-	transform: translateX( 4px );
 	padding-right: 10px;
-	color: detailsdatalabel;
 	font-family: platformfont;
-	transform: translateX( 7px );
-	transition-property: transform;
-	transition-timing-function: ease-out;
-	transition-duration: 0.23s;
-	padding-top: 4px;
+
 	font-size: 24px;
 }
 
 .NetworkSettingsButtonLabel
 {
-		transform: translateX( 4px );
 	padding-right: 10px;
 	color: detailsdatalabel;
 	font-family: platformfont;
-	transform: translateX( 7px );
-	transition-property: transform;
-	transition-timing-function: ease-out;
-	transition-duration: 0.23s;
+
 	padding-top: 4px;
 	font-size: 24px;
 }
@@ -216,18 +206,7 @@ SettingsPanel.SectionVisible #SettingsContent
 	color: red;
 }
 
-.Button:hover .LongDesc,.Button:hover .NetworkSettingsButtonLabel
-{
-	transform: translateX( 11px );	
-	color: #ffffffff;
-	
-}
 
-.Button:focus .LongDesc, .Button:focus .NetworkSettingsButtonLabel
-{
-	transform: translateX( 11px );	
-	color: black;
-}
 
 // class for main settings panel
 .SettingsMainContent
@@ -283,16 +262,6 @@ SettingsPanel.SectionVisible #SettingsContent
 .SteamOS #SettingsInGame_Enable
 {
 	visibility: collapse;
-}
-
-.SettingsContent .Button,
-.SettingsContent .CheckBox,
-.SettingsContent ToggleButton
-{
-	// vcenter alignment is applied after the flow, causing the last item
-	// to stick in weird places.
-	vertical-align: top;
-	margin-left: 0px;
 }
 
 ToggleButton .TickBox
@@ -439,14 +408,6 @@ Label.SettingsStatic
 	flow-children: down;
 }
 
-.Button,.CheckBox
-{
-	height: 50px;
-	margin-bottom: 15px;
-	margin-top: 0px;
-}
-
-
 
 .SettingsSection
 {
@@ -506,41 +467,8 @@ AvatarImage
 	margin-left: 8px;
 }
 
-TextEntry
-{
-	background-color: simplebutton;
-	color: detailsdatalabel;
-	height: 48px;
-	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
-	border-radius: 0px;
-	border-width: 5px;
 
-	transition-property: transform, background-color, box-shadow, color;
-	transition-timing-function: ease-out;
-	transition-duration: 0.3s;
-}
 
-TextEntry:hover
-{
-
-	color: white;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-}
-
-TextEntry:focus
-{
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #FDFDFDFF ), to( #bdbfbfff ) );
-	color: black;
-	border-color: white;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
 
 DropDown
 {
@@ -562,10 +490,7 @@ DropDown Label
 	margin: 0px 0px 0px 10px;
 }
 
-#Resolution
-{
-	padding-bottom: 0px;
-}
+
 
 #Settings_About .SettingsContent
 {
@@ -1368,12 +1293,6 @@ SettingsPanelNetwork_Credentials #ShowPasswordLabel
 
 }
 
-.TimeRestrictionDropdown:hover, .TimeRestrictionDropdown:focus, .TimeRestrictionDropdown:focus:hover
-{
-
-	box-shadow: fill box_shadow_on_color -4.5px -4.5px 8px 8px;
-}
-
 DropDownMenu
 {
 	width: 475px;
@@ -1388,7 +1307,7 @@ DropDownMenu
 	padding-right: 0px;
 }
 
-.SettingsGroup .Button,.CheckBox,VUMeter
+VUMeter
 {
 	horizontal-align: left;
 	margin-left: 0px;
@@ -1396,7 +1315,7 @@ DropDownMenu
 	margin-top: 0px;
 }
 
-.SettingsGroup .CheckBox,VUMeter
+VUMeter
 {
 	margin: 10px;
 	margin-left: 0px;
@@ -1578,14 +1497,9 @@ KeyboardShortcut .Graphic
 
 .SettingsGameControllerIcon
 {
-	width: 64px;
-	height: 64px;
+	width: 55px;
+	height: 55px;
 	margin: 0px 0px 0px 0px;
-	background-repeat: space;
-	wash-color: #999999;
-	background-image: url("file://{images}/settings/steam_controller_icon_64.png");
-	horizontal-align: left;
-	vertical-align: center;
 }
 
 .SettingsGameControllerImage
@@ -1612,30 +1526,138 @@ KeyboardShortcut .Graphic
 
 }
 
+#ControllerSettingsContainer
+{
+	width: 100%;
+	height: 100%;
+	padding-top: 5px;
+}
+
+#SettingsSteamController_ShutdownTime_Panel
+{
+	width: 100%;
+	margin-top: 10px;
+	padding-bottom: 20px;
+	visibility: collapse;
+}
+#SettingsSteamController_ShutdownTime_Dropdown
+{
+	horizontal-align: left;
+}
+
+.SteamControllerConnected #SettingsSteamController_ShutdownTime_Panel
+{
+	visibility: visible;
+}
+
 #GameControllerContent
 {
-	width: 1400px;
+	width: 30%;
 	margin-left: 300px;
+	height: 90%;
+	visibility: visible;
 }
 
 .SettingsControllerName
 {
 	horizontal-align: left;
-	vertical-align: center;
-	margin-bottom: 10px;
-	padding-left: 10px;
+	padding-left: 15px;
+	width: 800px;
+	margin-bottom: 25px;
+	margin-top: 0px;
 }
 
-.SteamController #SteamControllerVersion
+.SettingsControllerNameTitle
+{
+	horizontal-align: left;
+	padding-left: 15px;
+	width: 800px;
+	margin: 0px;
+}
+
+.SettingsControllerNameHeader
+{
+	horizontal-align: left;
+	padding-left: 15px;
+	width: 800px;
+	margin: 0px;
+	font-size: 35px;
+	color: white;
+}
+
+.SettingsControllerBatteryLabel
+{
+	horizontal-align: left;
+	padding-left: 15px;
+	width: 800px;
+	margin: 0px;
+	font-size: 25px;
+	margin-bottom: 25px;
+	color: white;
+}
+
+#NoControllersFoundPanel
+{
+	horizontal-align: left;
+	vertical-align: center;
+	background-color: black;
+	padding-top: 15px;
+	margin-top: 25px;
+	visibility: visible;
+	width: 25%;
+	margin-left: 300px;
+	height: 40%;
+}
+
+.ControllerFound #NoControllersFoundPanel
+{
+	visibility: collapse;
+}
+
+#NoControllersFoundLabel
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.ControllerSettingsButton
+{
+	flow-children: right;
+	width: 475px;
+	visibility: collapse;
+}
+
+.DetectedControllers
+{
+	visibility: collapse;
+}
+
+.ControllerFound .DetectedControllers
+{
+	visibility: visible;
+}
+
+.ControllerAvailable
 {
 	visibility: visible;
 }
 
 #SteamControllerVersion
 {
-	horizontal-align: left;
-	vertical-align: center;
+	horizontal-align: center;
+	vertical-align: top;
+	width: 40%;
+	background-color: black;
+	margin-left: 650px;
+	padding-top: 15px;
+	margin-top: 25px;
 	visibility: collapse;
+	height: 80%;
+}
+
+#SteamControllerVersion.SteamControllerSelected 
+{
+	visibility: visible;
 }
 
 .SettingsControllerBindingButton
@@ -2066,56 +2088,20 @@ SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGame
 		position: 282px -15px 0px;
 }
 
-.NotLoggedIn #AccountSettingsButton
+.NotLoggedIn #AccountSettingsButton,
+.NotLoggedIn #FriendsSettingsButton,
+.NotLoggedIn #InGameSettingsButton,
+.NotLoggedIn #RemoteClientsButton,
+.NotLoggedIn #StoreSettingsButton,
+.NotLoggedIn #MusicSettingsButton,
+.NotLoggedIn #VoiceSettingsButton,
+.NotLoggedIn #BroadcastSettingsButton,
+.NotLoggedIn #DownloadsSettingsButton,
+.NotLoggedIn #DiskManagetmentButton,
+.NotLoggedIn #AddShortcutSettingsButton,
 {
 	visibility: collapse;
 }
-
-.NotLoggedIn #FriendsSettingsButton
-{
-	visibility: collapse;
-}
-
-.NotLoggedIn #InGameSettingsButton
-{
-	visibility: collapse;
-}
-
-.NotLoggedIn #RemoteClientsButton
-{
-	visibility: collapse;
-}
-
-.NotLoggedIn #StoreSettingsButton
-{
-	visibility: collapse;
-}
-
-.NotLoggedIn #MusicSettingsButton
-{
-	visibility: collapse;
-}
-
-.NotLoggedIn #VoiceSettingsButton
-{
-	visibility: collapse;
-}
-
-.NotLoggedIn #BroadcastSettingsButton
-{
-	visibility: collapse;
-}
-
-.NotLoggedIn #DownloadsSettingsButton
-{
-	visibility: collapse;
-}
-
-.NotLoggedIn #DiskManagetmentButton
-{
-	visibility: collapse;
-}
-
 
 .ClientUpdateMargin
 {
@@ -2507,21 +2493,9 @@ SettingsPanelRemoteClientListing
 	flow-children: right;
 	background-color: transparent;
 	width: fit-children;
-	color: white;
+
 	margin-right: 8px;
 	horizontal-align: center;
-
-	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
-
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 2px;
-	border-color: #3d414200;
-
-	pre-transform-scale2d: 1.0;
-
-	transition-property: border, blur, background-color,  transform, pre-transform-scale2d, box-shadow;
-	transition-timing-function: ease-out;
 }
 
 
@@ -2531,24 +2505,16 @@ SettingsPanelDiskManagementAppListing Button
 	flow-children: right;
 	background-color: transparent;
 	width: fit-children;
-	color: white;
+
+	padding: 10px 0px 0px 10px;
+
 	margin-right: 16px;
 	margin-left: 8px;
 	margin-bottom: 0px;
 	margin-top: 0px;
 	horizontal-align: center;
 
-	box-shadow: box_shadow_off_color -2px -2px 4px 4px;
 
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414200;
-
-	pre-transform-scale2d: 1.0;
-
-	transition-property: border, blur, background-color,  transform, pre-transform-scale2d, box-shadow, opacity, opacity-mask;
-	transition-timing-function: ease-out;
-	transition-duration: 1.0s;
 }
 
 SettingsPanel_RemoteClients.Loading SettingsPanelRemoteClientListing
@@ -2561,15 +2527,7 @@ SettingsPanelRemoteClientListing:focus, SettingsPanelDiskManagementAppListing Bu
 {
 	transition-duration: 0.25s !immediate;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-
 	z-index: 1000;
-
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) ); 
-
-	pre-transform-scale2d: 1.0;
 
 }
 
@@ -2587,10 +2545,8 @@ SettingsPanelRemoteClientListing:focus, SettingsPanelDiskManagementAppListing Bu
 SettingsPanelRemoteClientListing:descendantfocus, SettingsPanelDiskManagementAppListing Button:descendantfocus
 
 {
-	color: black;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-
-	animation-name: main-button-glow-movement;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	animation-name: button-focus;
 	animation-duration: 1.7s;
 	animation-delay: 0.4s;
 	animation-timing-function: bigpicture-ease-in-out;
@@ -2600,19 +2556,18 @@ SettingsPanelRemoteClientListing:descendantfocus, SettingsPanelDiskManagementApp
 
 SettingsPanelDiskManagementAppListing Button Label
 {
-	margin-top: 4px;
-	transform: translateX( -7px );
+	transform: translateX( 0px );
 	transition-property: transform;
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
+
 }
 
 SettingsPanelDiskManagementAppListing Button:descendantfocus Label
 {
 	transform: translateX( 7px );
-	transition-property: transform;
-	transition-duration: 0.3s;
-	transition-timing-function: bigpicture-ease-in-out;
+
+	color: #072e47;
 }
 
 .SettingsDiskManagementSize
@@ -2746,15 +2701,20 @@ SettingsPanelRemoteClientListing #Status
 	margin-bottom: 4px;
 }
 
-.SteamOS .ClientInfoSectionHeader
+.SteamOS .ClientInfoSectionHeader,
+.MainBetaVisible .ClientInfoSectionHeader
 {
 	margin-top: 12px;
 }
 
-
 .NotLoggedIn .ClientBetaOptIn
 {
 	visibility: collapse;
+}
+
+.SteamOS SettingsPanel_Display
+{
+	margin-bottom: -40px;
 }
 
 SettingsPanel_Display.Underscan
@@ -2814,30 +2774,14 @@ SettingsPanel_Display.Underscan
 	width: 230px;
 	max-height: 320px;
 }
-	
-#ParentalFeaturesChild RadioButton
-{
-	width: fit-children;
-	background-color: simplebutton;
-}
+
 #Settings_AuthorizeLocalDevice .Button
 
 {
 	margin-right: 20px;
 }
 
-#ParentalFeaturesChild RadioButton:focus, 
-#ParentalFeaturesChild RadioButton:focus:hover
-{
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
-}
 
- 
-#ParentalFeaturesChild RadioButton:focus Label, 
-#ParentalFeaturesChild RadioButton:focus:hover Label
-{
-	color: applabelselected;	
-}
 
 #SettingsAbout_LegalInformationButton
 {
@@ -3280,7 +3224,6 @@ TimeZoneRegionPanel Button Label
 	font-size: 24px;
 	font-family: platformfont;
 	color: applabelsolid;
-	transform: translateX( -7px );
 
 	transition-property: color, transform;
 	transition-duration: 0.23s;
@@ -3600,4 +3543,111 @@ SettingsPanelNetwork_IPCustomSettings #WrapperPanel
 {
 	flow-children: down;
 	margin-left: 7px;
+}
+
+
+AddShortcutPanel
+{
+    width: 100%;
+    height: 100%;
+}
+
+AddShortcutPanel.SettingsSection
+{
+	opacity: 1.0;
+	flow-children: none;
+}
+
+AddShortcutPanel #ShortcutsGrid
+{
+	width: 100%;
+	height: 100%;
+
+	pre-transform-scale2d: 1.0, 1.0;
+
+	position: 0px 126px 0px;
+	padding-top: 150px;
+	padding-bottom: 300px;
+	margin-top: 00px;
+}
+
+
+AddShortcutPanel #FastScrollWrapper
+{
+	z-index: 100;
+	flow-children: right;
+	width: 100%;
+}
+
+AddShortcutPanel #FastScrollLabel
+{
+	margin-top: 100px;
+	margin-left: 520px;
+	font-size: 600px;
+
+	height: 720px;
+	width: 100%;
+	
+	z-index: 100;
+
+	color: #f2f2f2ff;
+	opacity: 0.0;
+	
+	text-transform: uppercase;
+
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+
+}
+
+AddShortcutPanel #TypeToJumpLabel
+{
+	margin-top: 300px;
+	font-size: 300px;
+
+	z-index: 100;
+
+	color: #f2f2f2ff;
+	opacity: 0.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+}
+
+.Moving #FastScrollLabel
+{
+	opacity: 1.0;
+	transition-duration: 0.5s;
+}
+
+.Moving #TypeToJumpLabel
+{
+	opacity: 1.0;
+	transition-duration: 0.5s;
+}
+
+AddShortcutPanel .GamesGrid
+{
+	margin-top: 40px;
+	padding-top: 70px;
+	padding-left: 140px;
+	position: 390px 0px 0px;
+
+
+	width: 1500px;
+	height: 100%;
+	
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+	transform: translateX( 0px );
+	transition-delay: 0s;
+	transition-duration: 0.3s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, width;
 }

@@ -5,12 +5,22 @@
 	</styles>
 	
 	<AppGridItem class="AppGridItem">
-		<!-- The below will be created by code, when the panel is in view only! 
-		<Image id="AppImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-preserve-aspect" />
+		<Image id="AppImage" class="GridItemImage AppImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-preserve-aspect" >
+			<Label id="MissingImageLabel" text="" />
+		</Image>
+		<Panel class="InstalledState" />
 		<Panel class="GridItemNameRow">
+			<Panel id="LibraryGameStatus" class="LibraryGameStatus" >
 			<Label id="AppLabel" text="" />
-			<Panel id="GridControllerSupport" />
+				<Panel id="PlatformSupport" >			
+					<Panel id="StreamingVideoSupport" class="StreamingVideoSupport" />
+					<Panel id="GridControllerSupport" class="GridControllerSupport" />
+					<Panel id="ReadyToPlay" class="ReadyToPlay" />
+					<Panel id="ReadyToStream" class="ReadyToStream" />
+					<Panel id="ReadyToDownload" class="ReadyToDownload" />
+					<Panel id="NotReadyToPlay" class="NotReadyToPlay" />
+				</Panel>
 		</Panel>
-		!-->
+		</Panel>
 	</AppGridItem>
 </root>

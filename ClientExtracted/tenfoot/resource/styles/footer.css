@@ -3,10 +3,31 @@
 TenfootFooterPanel
 {
 	width: 100%;
+	height: 100px;
 	vertical-align: bottom;
+	opacity: 1.0;
 
 	z-index: footer_zindex;
+
+	background-color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #092941dd ), color-stop( 1.0, #0a304cdd ) );
+	box-shadow: fill #00000066 -4px -4px 6px 6px;
+	padding-top: 15px;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: bigpicture-ease-in-out;
 }
+
+TenfootFooterPanel.FooterEmpty, TenfootFooterPanel.Hide
+{
+	opacity: 0.0;
+}
+
+TenfootFooterPanel.WebFooter
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #0b3452ff ), color-stop( 1.0, #12547cff ) );
+}
+
 
 #A_btn_s.SemiTransparent,
 #B_btn_s.SemiTransparent,
@@ -198,8 +219,25 @@ TenfootFooterPanel
 {
 	horizontal-align: center;
 	vertical-align: center;
-	color: tclegendlabel; 
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
 	font-family: "Motiva Sans";
+}
+
+#LegendRow Label.LegendButtonBox.AButtonBox {
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttongreen;
+}
+#LegendRow Label.LegendButtonBox.BButtonBox {
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttonred;
+}
+#LegendRow Label.LegendButtonBox.XButtonBox {
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttonblue;
+}
+#LegendRow Label.LegendButtonBox.YButtonBox {
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttonyellow;
 }
 
 #LegendRow .TriggerButtonBox
@@ -283,7 +321,11 @@ TenfootFooterPanel
 	padding-right: 20px;
 	width: 63px;
 	border-top-right-radius: 35px 18px;
-	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttongrey;
+
+	box-shadow: #00000022 -3px -3px 4px 6px;
 }
 
 #LegendRow .LBButtonBox,
@@ -297,7 +339,11 @@ TenfootFooterPanel
 	padding-left: 20px;
 	width: 63px;
 	border-top-left-radius: 35px 18px;
-	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttongrey;
+
+	box-shadow: #00000022 -3px -3px 4px 6px;
 }
 
 #LegendRow .AButtonBox,
@@ -314,7 +360,7 @@ TenfootFooterPanel
 	margin-left: 16px;
 	margin-right: 2px;
 	margin-top: 3px;
-	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
+	box-shadow: #00000022 -3px -3px 4px 6px;
 }
 
 .OSX #LegendRow .AButtonBox,
@@ -502,7 +548,6 @@ TenfootFooterPanel
 
 .WebFooter #MiddleLegend, .WebFooter #RightLegend, .WebFooterMenu #MiddleLegend
 {
-	background-color: #000000bb;
 
 	padding: 20px;
 	margin: -20px;

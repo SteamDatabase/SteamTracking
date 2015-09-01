@@ -34,6 +34,12 @@ GameHubGuides
 	method		"internal"
 	filter		"community"
 }
+GameHubNews
+{
+	url			"%community%/app/%p1%/allnews/"
+	method		"internal"
+	filter		"community"
+}
 GameHubDiscussions
 {
 	url			"%community%/app/%p1%/discussions/"
@@ -393,6 +399,12 @@ SteamClientNewsPage
 	method		"internal"
 }
 
+SteamClientBetaGroup
+{
+	url			"http://steamcommunity.com/groups/SteamClientBeta"
+	method		"internal"
+}
+
 SteamClientBetaNewsPage
 {
 	url			"http://steamcommunity.com/groups/SteamClientBeta/announcements?client_view=1"
@@ -544,14 +556,18 @@ JoinTrade
 	method		"trade"
 	filter		"trading"
 }
-
 NewTradeOffer
 {
 	url		"%community%/tradeoffer/new?partner=%p1%"
 	method		"trade"
 	filter		"trading"
 }
-
+ShowTradeOffer
+{
+	url		"%community%/tradeoffer/%p1%"
+	method		"trade"
+	filter		"trading"
+}
 CommunityInventory
 {
 	url			"%community%/%mystuff%/inventory/"

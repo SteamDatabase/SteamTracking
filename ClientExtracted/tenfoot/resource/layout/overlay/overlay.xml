@@ -9,61 +9,44 @@
 	</styles>
 	
 	<OverlayBasePanel>
-	 	<Panel id="OverlayDashboard" defaultfocus="Achievements" >
-			<Panel id="UpperRow" class="UpperRow">
-				<Panel id="Avatar">
-					<AvatarImage id="SelfAvatar" />
-				</Panel>
-				<Panel id="HeaderLabels">
-					<Label id="GameName" class="GameName" text="" />
-					<Panel id="ClockWrapper">
-						<Label id="Clock" class="Clock" text="" />
-						<Label id="ClockSuffix" class="ClockSuffix" text="" />
-						<Panel id="OverlayClose" >
-							<Label id="HowToClose" class="HowToClose" text="#Overlay_HowToClose" />
-							<Image id="GuideIcon" />
+		<Panel id="BodyWrapper">
+	 		<Panel id="OverlayDashboard" defaultfocus="Achievements" >
+				<Panel id="UpperRow" class="UpperRow">
+					<Panel id="HeaderLabels">
+						<Label id="GameName" class="GameName" text="" />
+						<Panel id="ClockWrapper">
+							<Label id="Clock" class="Clock" text="" />
+							<Label id="ClockSuffix" class="ClockSuffix" text="" />
 						</Panel>
 					</Panel>
-
 				</Panel>
-			</Panel>
-			<Panel id="DesktopPanels">
-				<CommunityFriendsStrip id="CommunityFriendsStrip" class="CommunityFriendsStrip">
-					<Panel id="CommunityFriendsStripWrapper" tabindex="0" selectionpos="0,0" >
-						<Panel id="CommunityFriendsStripWrapperBackground" tabindex="0" selectionpos="0,0">
-							<Carousel id="Strip" class="CommunityFriendsCarousel" tabindex="auto" selectionpos="auto" selectionposboundary="vertical" 
-									  focus="Center" wrap="false" z-offset="0px" x-offset="100px" focus-x-offset="23px,100px"
-									  onmoveup="CloseCommunity();" onmovedown="GoDownFromFriendsStrip();">
-								<Panel id="CarouselTitleContainer">
-									<Panel id="CarouselTitleLarge">
-										<Label id="CarouselTitleInGame" text="#Community_Friends_InGame_Count"></Label>
-										<Label id="CarouselTitleJustOnline" text="#Community_Friends_JustOnline_Count"></Label>
-										<Label id="CarouselTitleOffline" text="#Community_Friends_Offline_Count"></Label>
-									</Panel>
-									<Panel id="CarouselTitleSmall">
-										<Label id="CarouselTitleMoreOnline" text="#Community_Friends_MoreOnline_Count"></Label>
-									</Panel>
-								</Panel>
-							</Carousel>
+				<Panel id="DesktopPanels">
+					<Panel id="CommonControls" tabindex="auto" selectionpos="auto">
+						<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore" />
+					</Panel>			  
+					<Panel id="ContentsRow" class="ContentsRow" tabindex="auto" selectionpos="auto">
+						<Panel class="LibraryDetailsScrollableArea Overlay">
+							<Panel class="LibraryDetailsSectionRow">
+								<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" />
+								<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" />
+								<OverlayNotificationPanel id="Notifications" class="Controller DetailsDataPanel Small" />
+								<BroadcastOverlay id="Broadcast" class="Controller DetailsDataPanel Small" />
+							</Panel>
+							<Panel class="LibraryDetailsSectionRow">
+								<LibraryGuides id="Guides" class="Guides DetailsDataPanel" />
+								<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" />
+								<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" />
+								<MusicControlOverlay id="MusicControlOverlay" class="MusicControlOverlay DetailsDataPanel" />
+								<LibraryWorkshop id="Workshop" class="Workshop DetailsDataPanel" />
+							</Panel>
 						</Panel>
 					</Panel>
-				</CommunityFriendsStrip>
-				<Carousel id="ContentsRow" class="ContentsRow" tabindex="auto" selectionpos="auto" focus="center" wrap="false" onmoveup="GoUpFromFeedStrip();">
-					<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore DetailsDataPanel" />
-					<OverlayNotificationPanel id="Notifications" class="Controller DetailsDataPanel" />
-					<BroadcastOverlay id="Broadcast" class="Controller DetailsDataPanel" />
-					<LibraryController id="Controller" class="Controller DetailsDataPanel" />
-					<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel" />
-					<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel" />
-					<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" />
-					<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" />
-					<LibraryGuides id="Guides" class="Guides DetailsDataPanel" />
-				</Carousel>
+				</Panel>
+				<Panel id="MinimalPanels" />
 			</Panel>
-			<Panel id="MinimalPanels" />
+			<LoadingThrobber id="KillSpinner" class="Large"/>
+			<CommunityWrapper id="CommunityWrapper" onmoveup="CloseGameHubOverlay();" />
+			<ProfileWrapper id="ProfileWrapper" onmoveup="CloseProfile();" />
 		</Panel>
-		<LoadingThrobber id="KillSpinner" class="Large"/>
-		<CommunityWrapper id="CommunityWrapper" onmoveup="CloseGameHubOverlay();" />
-		<ProfileWrapper id="ProfileWrapper" onmoveup="CloseProfile();" />
 	</OverlayBasePanel>
 </root>

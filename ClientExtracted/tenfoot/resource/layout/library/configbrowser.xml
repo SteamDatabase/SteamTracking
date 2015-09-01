@@ -3,13 +3,20 @@
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
+		<include src="file://{resources}/styles/settings.css" />
 	</styles>
 
-	<ControllerConfigBrowser defaultfocus="PersonalCategory" tabindex="auto" selectionpos="auto">
+	<ControllerConfigBrowser defaultfocus="RecommendedCategory" tabindex="auto" selectionpos="auto">
+		<Panel class="SettingsHeader">
+			<Label id="ConfigBrowserHeader" class="SettingsHeaderLegend" text="#ControllerBinding_Header" />
+		</Panel>
+		<Panel id="CategoryExplanationBGPanel" >
+			<Label id="CategoryExplanation" text="#ControllerBinding_Explanation_template" />
+		</Panel>
 		<Panel id="ColumnContainer">
 			<Panel class="ConfigColumn" id="ConfigCategoriesColumn">
-        <Button class="ConfigCategory" id="TemplateCategory" onactivate="SelectConfigCategory( template );">
-          <Label text="#Library_Details_Controller_Templates" />
+				<Button class="ConfigCategory" id="RecommendedCategory" onactivate="SelectConfigCategory( recommended );">
+          <Label text="#Library_Details_Controller_Recommended" />
         </Button>
         <Button class="ConfigCategory" id="PersonalCategory" onactivate="SelectConfigCategory( personal );">
 					<Label text="#Library_Details_Controller_Personal" />
@@ -17,8 +24,13 @@
         <Button class="ConfigCategory" id="CommunityCategory" onactivate="SelectConfigCategory( community );">
           <Label text="#Library_Details_Controller_Community" />
         </Button>
+        <Button class="ConfigCategory" id="TemplateCategory" onactivate="SelectConfigCategory( template );">
+          <Label text="#Library_Details_Controller_Templates" />
+        </Button>
       </Panel>
-			<Panel class="ConfigColumn" id="ConfigsColumn" childfocusonhover="true"/>
+            
+			<Panel class="ConfigColumn" id="ConfigsColumn" childfocusonhover="true">
+			</Panel>
 		</Panel>
 	</ControllerConfigBrowser>
 </root>

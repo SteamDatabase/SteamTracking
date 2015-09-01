@@ -14291,6 +14291,7 @@
  b g_pClientBilling
  b g_pClientConfigStore
  b g_pClientController
+ b g_pClientControllerSerialized
  b g_pClientDepotBuilder
  b g_pClientEngine
  b g_pClientFriends

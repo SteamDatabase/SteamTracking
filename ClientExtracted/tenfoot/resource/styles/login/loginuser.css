@@ -521,6 +521,10 @@ ToggleButton {
 	transform: translatex(0px);
 }
 
+TextEntry {
+	font-size: 38px;
+}
+
 #PasswordTextEntry:disabled, #LoginButton Label:disabled
 {
 	color: applabelsolid;

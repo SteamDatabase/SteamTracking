@@ -11,5 +11,6 @@
     {
         "left_trackpad_mode" "none"
         "right_trackpad_mode" "none"
+		"mouse_smoothing"	"1"
     }
 }

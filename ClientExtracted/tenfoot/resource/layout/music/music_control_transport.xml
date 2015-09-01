@@ -65,6 +65,12 @@
 					onactivate="MusicBrowseMusic();">
 				<Image src="file://{images}/music/icon_browse.png" />
 			</Button>
+
+			<SeekBar id="SeekControl" tabindex="auto" selectionpos="auto" 
+					 writable="true"
+					 onmouseactivate="VUMeterOnMouseActivate();"
+					 onmoveup="ControlButtonMoveUp();"
+					 onfocus="ControlButtonGotFocus();" />
 				
 		</Panel>
 
