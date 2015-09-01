@@ -187,7 +187,7 @@ CChatFriend.prototype.RenderChatDialog = function()
 	this.RegisterPersonaElement( elHeader, 'PersonaStatusElements', { 'class': 'persona', element: elChatDialogName } );
 	this.RegisterPersonaElement( elHeader, 'PersonaNameElements', elChatDialogName );
 
-	elHeader.append( elChatDialogAvatar, $J('<h2/>').append( elChatDialogName ), '<div style="clear: left;"></div>' );
+	elHeader.append( elChatDialogAvatar, $J('<h2/>', {'class': 'ellipsis'}).append( elChatDialogName ), '<div style="clear: left;"></div>' );
 
 	this.UpdateDisplayForPersonaState();	//set the right styles on avatar and name
 
@@ -760,6 +760,7 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 	var rgUngroupedFriends = {};
 	var rgRecentChatFriends = [];
 	var rgAllFriends = [];
+	var cRecentChatFriendLimit = 4;
 	for ( var i=0; i < rgFriendData.length; i++ )
 	{
 		var Friend = new CChatFriend( rgFriendData[i], ShowFriendChatClosure( this, rgFriendData[i].m_unAccountID ) );
@@ -771,9 +772,13 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 		// will be used to build the OFFLINE group which is all friends (the list itself filters to show only offline friends)
 		rgAllFriends.push( Friend );
 
-		// If there's some offline messages waiting, put them in the recent chat box
-		if ( rgFriendData[i].m_cUnreadMessages > 0 )
+		// If there's some offline messages waiting, put them in the recent chat box, or if they've chatted
+		//	recently and we haven't displayed many.
+		if ( rgFriendData[i].m_cUnreadMessages > 0 ||
+			( rgFriendData[i].m_tsLastMessage != 0 && rgRecentChatFriends.length < cRecentChatFriendLimit ) )
+		{
 			rgRecentChatFriends.push( Friend );
+		}
 	}
 
 
@@ -830,6 +835,20 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 	var _this = this;
 	$J(window).focus( function() { _this.OnWindowFocus() } );
 	$J(window).blur( function() { _this.OnWindowBlur() } );
+
+	if ( $J('html' ).hasClass('responsive') )
+	{
+		if ( this.GetPref('touch') )
+			$J('html' ).addClass('touch');
+
+		$J(window ).one('touchstart', function() {
+			if ( $J('html' ).hasClass('responsive') )
+			{
+				$J('html').addClass('touch');
+				_this.SetPref('touch', true );
+			}
+		});
+	}
 }
 CWebChat.CHATMESSAGE_TYPE_NORMAL = 0;
 CWebChat.CHATMESSAGE_TYPE_HISTORICAL = 1;
@@ -957,7 +976,7 @@ CWebChat.prototype.LogOn = function()
 		.fail( $J.proxy( this.OnConnectFail, this ) );
 }
 
-CWebChat.prototype.LogOff = function()
+CWebChat.prototype.LogOff = function( bSendAsBeacon )
 {
 	if ( !this.m_bOnline )
 		return;
@@ -967,7 +986,12 @@ CWebChat.prototype.LogOff = function()
 	var rgParams = {
 		umqid: this.m_umqid
 	};
-	this.m_WebAPI.ExecJSONP( 'ISteamWebUserPresenceOAuth', 'Logoff', rgParams, true ).done( $J.proxy( this.OnConnect, this ) );
+
+	// beacon indicates the page is unloading and we are trying to use the browser's ability to send a request post-unload
+	if ( bSendAsBeacon )
+		this.m_WebAPI.ExecBeacon( 'ISteamWebUserPresenceOAuth', 'Logoff', rgParams, true );
+	else
+		this.m_WebAPI.ExecJSONP( 'ISteamWebUserPresenceOAuth', 'Logoff', rgParams, true ).done( $J.proxy( this.OnConnect, this ) );
 };
 
 function ShowFriendChatClosure( _chat, unAccountID )
@@ -1177,7 +1201,6 @@ CWebChat.prototype.ShowFriendChat = function( unAccountID, bForce )
 
 	Friend.ResetUnreadMessageCount();
 	$J('#chat_msg_area').show();
-	$J('#chatmessage').focus();
 
 	if ( this.m_rgChatDialogs[ Friend.m_unAccountID ] )
 	{
@@ -1198,6 +1221,8 @@ CWebChat.prototype.ShowFriendChat = function( unAccountID, bForce )
 
 		this.LoadChatHistory( Friend, this.m_rgChatDialogs[ Friend.m_unAccountID ] );
 	}
+
+	$J('#chatmessage').focus();
 };
 
 CWebChat.prototype.LoadChatHistory = function( Friend, ChatDialog )
@@ -1462,28 +1487,27 @@ function InitializeChat()
 
 	CTitleManager.Initialize();
 
-	$J(window).resize( OnChatWindowResize );
-	$J(window).resize();
-
 	$J(window).unload( OnChatWindowUnload );
-}
-
-function OnChatWindowResize()
-{
-	var height = Math.max( $J(window).height() - 140, 400 );
-	$J('#chat_container').height( height );
 }
 
 function OnChatWindowUnload()
 {
 	if ( Chat.m_bOnline )
 	{
-		Chat.LogOff();
+		// beacon is a type of browser request that's sent after unload.  Browsers cancel AJAX
+		//	request on unload.
+		var bSupportsBeacon = typeof navigator.sendBeacon != 'undefined';
 
-		// "this is pretty wonky"
-		var iters = 0;
-		var start = new Date().getMilliseconds();
-		while ( iters < 10000000 && ( new Date().getMilliseconds() - start ) < 30 ) { iters++; }
+		Chat.LogOff( bSupportsBeacon );
+
+		if ( !bSupportsBeacon )
+		{
+			// if we couldn't send a beacon, we try to busy wait for a bit so the AJAX request has time
+			//	to reach the servers.
+			var iters = 0;
+			var start = new Date().getMilliseconds();
+			while ( iters < 10000000 && ( new Date().getMilliseconds() - start ) < 30 ) { iters++; }
+		}
 	}
 }
 

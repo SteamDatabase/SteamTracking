@@ -1,12 +1,17 @@
 
+html, body.flat_page {
+	height: auto;
+}
+
 body.chat_body {
 	background-color: #262627;
 	min-width: 0;
 }
 
 .chat_page {
-	min-width: 599px;	/* .maincontent min-width + .maincontent margins */
 	padding: 0 12px;
+	height: 100vh;
+	min-height: 440px;
 }
 
 .perf_timing_link {
@@ -15,8 +20,12 @@ body.chat_body {
 
 .maincontent {
 	max-width: 948px;
-	min-width: 575px;
 	width: auto;
+}
+
+.maincontent.chat_page_chat {
+	position: relative;
+	height: calc( 100% - 140px );
 }
 
 .chat_page_header {
@@ -44,19 +53,17 @@ body.chat_body {
 }
 
 .chat_page_header_logo_area {
-	position: relative;
-	float: right;
+	position: absolute;
+	right: 0;
 	width: 177px;
+	max-width: 50%;
 	padding-top: 4px;
 }
 
 .chat_page_steam_logo {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 177px;
-	height: 45px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/chat/steam_logo.png');
+	width: 100%;
+	height: auto;
+	display: block;
 }
 
 .chat_page_beta_logo {
@@ -77,15 +84,13 @@ body.chat_body {
 
 #chat_container {
 	position: relative;
-	height: 600px;
+	height: 100%;
 }
 
 #chat_msg_area {
-	position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	left: 288px;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
 
 	border: 1px solid #000000;
 	background-color: #383635;
@@ -124,14 +129,19 @@ body.chat_body {
 }
 
 #chat_friendslist_area {
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	width: 271px;
+	float: left;
+	position: relative;
 
-	overflow-y: auto;
+	width: 271px;
+	max-width: 33%;
+
+	height: 100%;
+	margin-right: 17px;
+
+	overflow-y: scroll;
 	overflow-x: hidden;
+
+	-webkit-overflow-scrolling: touch;
 
 	background-color: #171614;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#383635), color-stop(21%,#171614));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383635', endColorstr='#171614',GradientType=0 );background: -moz-linear-gradient( top, #383635 0%, #171614 21%);background: -webkit-linear-gradient( top, #383635 0%, #171614 21%);background: -o-linear-gradient( top, #383635 0%, #171614 21%);background: -ms-linear-gradient( top, #383635 0%, #171614 21%);background: linear-gradient( to bottom, #383635 0%, #171614 21%);	border: 1px solid #000000;
@@ -356,4 +366,30 @@ body.chat_body {
 .webchat_settings_notes {
 	padding-left: 21px;
 	color: #5491cf;
+}
+
+html.responsive.touch .chat_page {
+	height: calc( 100vh - 240px );
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .chat_page {
+	}
+
+	html.responsive .chatdialog_header h2 {
+		font-size: 1.2em;
+	}
+	html.responsive .chatdialog_header .playerAvatar.medium {
+		width: 34px;
+		height: 34px;
+	}
+	html.responsive .chatdialog_header .playerAvatar.medium img {
+		width: 32px;
+		height: 32px;
+	}
+
+	html.responsive .chat_dialog_content {
+		top: 60px;
+	}
 }

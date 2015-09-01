@@ -2102,7 +2102,16 @@ function ShowPendingGifts()
 	if ( !$('tabcontent_pendinggifts') )
 		return;
 
-	$('tabcontent_inventory').hide();
+	var elTabcontentInventory = $('tabcontent_inventory');
+	if ( elTabcontentInventory )
+	{
+		$('tabcontent_inventory').hide();
+	}
+	else
+	{
+		$('no_inventories')&& $('no_inventories').hide();
+	}
+
 	$('tabcontent_pendinggifts').show();
 
 
@@ -2110,7 +2119,10 @@ function ShowPendingGifts()
 	if ( elTab )
 		elTab.addClassName('active');
 
-	$$('.games_list_tabs').first().childElements().invoke( 'removeClassName', 'active')
+	if ( elTabcontentInventory )
+	{
+		$$( '.games_list_tabs' ).first().childElements().invoke( 'removeClassName', 'active' )
+	}
 
 	if ( g_ActiveInventory )
 		g_ActiveInventory.hide();
@@ -2127,7 +2139,7 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 		g_ActiveUser = UserYou;
 	}
 
-	$('tabcontent_inventory').show();
+	$('tabcontent_inventory') && $('tabcontent_inventory').show();
 	$('tabcontent_pendinggifts') && $('tabcontent_pendinggifts').hide();
 
 	if ( !g_ActiveUser.HasApp( appid ) )

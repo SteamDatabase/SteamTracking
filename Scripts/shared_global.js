@@ -2462,6 +2462,21 @@ CWebAPI.prototype.ExecJSONP = function( strInterface, strMethod, rgParams, bSecu
 	*/
 };
 
+// Send a "beacon", which is specifically intended for use in OnUnload events (as outsdanding AJAX/JSONP requests may be cancelled)
+// as of sept 2015, only chrome and firefox support this, no iOS or IE support.  Check for support before calling.
+// Beacons are (per spec) always a POST request, and always include CORS headers.  WebAPI respondes properly to CORS for Valve domains.
+CWebAPI.prototype.ExecBeacon = function( strInterface, strMethod, rgParams, bSecure, strVersion )
+{
+	rgParams.access_token = this.m_strOAuth2Token;
+
+	var fdParams = new FormData();
+	for ( key in rgParams )
+		fdParams.append( key, rgParams[key] );
+
+	navigator.sendBeacon( this.BuildURL( strInterface, strMethod, bSecure, strVersion ), fdParams );
+};
+
+
 CWebAPI.prototype.ExecPOST = function( strInterface, strMethod, rgParams, bSecure, strVersion )
 {
 	rgParams.access_token = this.m_strOAuth2Token;

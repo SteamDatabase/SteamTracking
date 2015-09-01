@@ -71,8 +71,31 @@ div.profile_page.has_profile_background {
 }
 
 .playerAvatar.profile_header_size {
+	position: relative;
 	width: 166px;
-	height: auto;
+	height: 166px;
+}
+
+.playerAvatar.profile_header_size .playerAvatarAutoSizeInner img {
+
+	/* override the gradient behind the image (it won't show anyway) */
+	background: none;
+	filter: none;
+
+	/* fix space appearing beneath image */
+	display: block;
+
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.playerAvatar.profile_header_size .playerAvatarAutoSizeInner {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	bottom: 2px;
+	left: 2px;
 }
 
 .profile_header .playerAvatar.profile_header_size {
@@ -163,6 +186,7 @@ div.profile_page.has_profile_background {
 	html.responsive .profile_header .playerAvatar.profile_header_size {
 		max-width: none;
 		width: 125px;
+		height: 125px;
 	}
 }
 

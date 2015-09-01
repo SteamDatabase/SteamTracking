@@ -25,7 +25,6 @@
 	filter: none;
 }
 .playerAvatar.offline img,
-.playerAvatar.playerAvatarAutoSize.offline .playerAvatarAutoSizeInner,
 .friend_status_offline .friend_block_avatar img,
 .appHubIconHolder.offline img,
 .avatar_block_status_offline img {
@@ -43,7 +42,6 @@
 	filter: none;
 }
 .playerAvatar.online img,
-.playerAvatar.playerAvatarAutoSize.online .playerAvatarAutoSizeInner,
 .friend_status_online .friend_block_avatar img,
 .appHubIconHolder.online img,
 .avatar_block_status_online img {
@@ -61,7 +59,6 @@
 	filter: none;
 }
 .playerAvatar.in-game img,
-.playerAvatar.playerAvatarAutoSize.in-game .playerAvatarAutoSizeInner,
 .friend_status_in-game .friend_block_avatar img,
 .appHubIconHolder.in-game img,
 .avatar_block_status_in-game img {
@@ -70,7 +67,6 @@
 
 /* Golden State */
 .playerAvatar.golden,
-.playerAvatar.playerAvatarAutoSize.golden .playerAvatarAutoSizeInner,
 .friend_block_holder.friend_status_golden .friend_block_avatar,
 .friend_activity.friend_status_golden .friend_block_avatar,
 .appHubIconHolder.golden,
@@ -78,25 +74,6 @@
 	background-color: #e4ca63;
 
 	background: -moz-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -webkit-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -o-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: -ms-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);}
-
-.playerAvatar.playerAvatarAutoSize .playerAvatarAutoSizeInner img {
-
-	/* override the gradient behind the image (it won't show anyway) */
-	background: none;
-	filter: none;
-
-	/* fix space appearing beneath image */
-	display: block;
-
-	padding: 0;
-	width: 100%;
-	height: auto;
-}
-
-.playerAvatar.playerAvatarAutoSize .playerAvatarAutoSizeInner {
-	padding: 1px;
-	position: relative;
-}
 
 /*
 .playerAvatar.golden img,
@@ -148,11 +125,6 @@
 .playerAvatar.tiny img {
 	width: 22px;
 	height: 22px;
-}
-
-.playerAvatar.playerAvatarAutoSize {
-	width: 100%;
-	height: auto;
 }
 
 .playerAvatar_friendindicator {

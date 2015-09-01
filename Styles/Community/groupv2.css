@@ -296,6 +296,12 @@ a.group_tab:hover {
 	background-repeat: no-repeat;
 }
 
+.formatted_group_summary {
+	overflow: hidden;
+	word-wrap: break-word;
+	margin: 1em 0;
+}
+
 .formatted_group_summary a {
 	text-decoration: underline;
 	color: #828282;

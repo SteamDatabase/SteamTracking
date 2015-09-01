@@ -30,7 +30,13 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nLastDecodedFrameTime = 0;
 	this.m_nCurrentFramerate = 0;
 	this.m_strUniqueId = "";
+
+	// EME-related
 	this.m_tsLastEncryptedEvent = 0;
+	this.m_bIsEmeActive = false;
+	this.m_sKeySystemInUse = "";
+	this.m_oActiveMediaKeysSession = null;
+	this.m_bEMECapableHost = false;
 
 	// player states
 	this.m_bIsBuffering = true;
@@ -169,6 +175,18 @@ CDASHPlayer.prototype.Close = function()
 	this.m_bDroppingFrames = false;
 	this.m_tsDropFramesDetected = 0;
 	this.m_tsLastWindowResize = 0;
+	
+	if ( this.m_bIsEmeActive )
+	{
+		this.m_tsLastEncryptedEvent = 0;
+		this.m_bIsEmeActive = false;
+		this.m_sKeySystemInUse = "";
+		if ( this.m_oActiveMediaKeysSession )
+		{
+			this.m_oActiveMediaKeysSession.close();
+		}
+		this.m_oActiveMediaKeysSession = null;
+	}
 }
 
 CDASHPlayer.prototype.CloseWithError = function( errorToTrigger )
@@ -226,77 +244,27 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments
 			_player.m_tsLiveContentStarted = performance.now() - (nServerTimeMS - _player.m_mpd.availabilityStartTime.getTime());
 			PlayerLog( 'server time: ' + strServerTime );
 		}
-		
+
 		// Initialize DRM if neccessary
 		if ( _player.m_mpd.hasProtectedRepresentations )
 		{
-			// Merge all configurations into a single array per system
-			var keySystemConfigurations = {};
-			for ( var i = 0; i < _player.m_mpd.periods.length; ++i )
-			{
-				var period = _player.m_mpd.periods[i];
-				for ( var j = 0; j < period.adaptationSets.length; ++j )
-				{
-					var adaptationSet = period.adaptationSets[j];
-					if ( adaptationSet.isCencEncrypted )
-					{
-						for ( var system in adaptationSet.keySystems )
-						{
-							if ( !( system in keySystemConfigurations ) )
-								keySystemConfigurations[ system ] = {
-									distinctiveIdentifier: 'optional',
-									persistentState: 'optional',
-									initDataTypes: [ 'cenc' ],
-									audioCapabilities: [],
-									videoCapabilities: [],
-								};
-
-							adaptationSet.representations.forEach( function( representation ) {
-								var capability = { contentType: representation.mimeType + '; codecs="' + representation.codecs + '"', robustness: '' };
-
-								if ( adaptationSet.containsAudio ) {
-									keySystemConfigurations[ system ].audioCapabilities.push( capability );
-								} else if ( adaptationSet.containsVideo ) {
-									keySystemConfigurations[ system ].videoCapabilities.push( capability );
-								}
-							});
-						}
-					}
-				}
-			}
-
-			// Attempt to initialize systems
-			for ( var system in keySystemConfigurations )
-			{
-				navigator.requestMediaKeySystemAccess( system, [ keySystemConfigurations[ system ] ] ).then(
-					function( keySystemAccess ) {
-						return keySystemAccess.createMediaKeys();
-					}
-				).then(
-					function( createdMediaKeys ) {
-						PlayerLog( 'Initialized media key system', system );
-						_player.m_elVideoPlayer.addEventListener( 'encrypted', function( event ) { _player.OnEncrypted( event ) }, false );
-						_player.m_elVideoPlayer.setMediaKeys( createdMediaKeys );
-					}
-				).catch(
-					function(error) {
-						PlayerLog( "Failed to set up MediaKeys: " + error );
-						_player.CloseWithError( 'drmerror' );
-					}
-				);
-			}
+			if ( _player.m_bEMECapableHost )
+				_player.InitializeEME();
+			else
+				_player.CloseWithError( 'drmerrordownload' );
 		}
-
-		// select representation to play
-		if ( !_player.BCreateLoaders() )
+		else
 		{
-			PlayerLog( 'Failed to create segment loaders' );
-			_player.CloseWithError();
-			return;
-		}
+			if ( !_player.BCreateLoaders() )
+			{
+				PlayerLog( 'Failed to create segment loaders' );
+				_player.CloseWithError();
+				return;
+			}
 
-		// can now init video controls and start playback
-		_player.InitVideoControl();
+			// can now init video controls and start playback
+			_player.InitVideoControl();
+		}
 	})
 	.fail( function()
 	{
@@ -314,9 +282,104 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments
 	});
 }
 
+CDASHPlayer.prototype.SetEMECapableHost = function ( bCapable )
+{
+	this.m_bEMECapableHost = bCapable;
+}
+
+CDASHPlayer.prototype.InitializeEME = function()
+{
+	var _player = this;
+	
+	// Merge all configurations into a single array per system
+	var keySystemConfigurations = {};
+	for ( var i = 0; i < _player.m_mpd.periods.length; ++i )
+	{
+		var period = _player.m_mpd.periods[i];
+		for ( var j = 0; j < period.adaptationSets.length; ++j )
+		{
+			var adaptationSet = period.adaptationSets[j];
+			if ( adaptationSet.isCencEncrypted )
+			{
+				for ( var system in adaptationSet.keySystems )
+				{
+					if ( !( system in keySystemConfigurations ) )
+						keySystemConfigurations[ system ] = {
+							distinctiveIdentifier: 'optional',
+							persistentState: 'optional',
+							initDataTypes: [ 'cenc' ],
+							audioCapabilities: [],
+							videoCapabilities: [],
+						};
+
+					adaptationSet.representations.forEach( function( representation ) {
+						var capability = { contentType: representation.mimeType + '; codecs="' + representation.codecs + '"', robustness: '' };
+
+						if ( adaptationSet.containsAudio ) {
+							keySystemConfigurations[ system ].audioCapabilities.push( capability );
+						} else if ( adaptationSet.containsVideo ) {
+							keySystemConfigurations[ system ].videoCapabilities.push( capability );
+						}
+					});
+				}
+			}
+		}
+	}
+	
+	var nTimeBetweenRetriesMs = 500;
+	var nMaxRetries = 360;
+	var nRetries = 0;
+	var _init = function() {
+		// Attempt to initialize systems
+		var nKeySystemsToTry = Object.keys( keySystemConfigurations ).length;
+		
+		for ( var system in keySystemConfigurations )
+		{
+			navigator.requestMediaKeySystemAccess( system, [ keySystemConfigurations[ system ] ] ).then(
+				function( keySystemAccess ) {
+					return keySystemAccess.createMediaKeys();
+				}
+			).then(
+				function( createdMediaKeys ) {
+					PlayerLog( 'Initialized media key system', system );
+					_player.m_elVideoPlayer.addEventListener( 'encrypted', function( event ) { _player.OnEncrypted( event ) }, false );
+					_player.m_elVideoPlayer.setMediaKeys( createdMediaKeys );
+					_player.m_bIsEmeActive = true;
+					_player.m_sKeySystemInUse = system;
+
+					$J( _player.m_elVideoPlayer ).trigger( 'completedwidevine' );
+					if ( !_player.BCreateLoaders() )
+					{
+						PlayerLog( 'Failed to create segment loaders' );
+						_player.CloseWithError();
+						return;
+					}
+
+					_player.InitVideoControl();
+				}
+			).catch(
+				function(error) {
+					$J( _player.m_elVideoPlayer ).trigger( 'waitingforwidevine' );
+					if ( --nKeySystemsToTry === 0 ) {
+						if ( ++nRetries >= nMaxRetries ) {
+							PlayerLog( 'Failed to initialize EME after ' + nMaxRetries + ' retries, giving up and erroring.' );
+							_player.CloseWithError( 'drmerrordownload' );
+						} else {
+							PlayerLog( 'Failed to initialize EME, retrying initialization in ' + nTimeBetweenRetriesMs + 'ms' );
+							setTimeout( _init, nTimeBetweenRetriesMs );
+						}
+					}
+				}
+			);
+		}
+	};
+	_init();
+}
+
 CDASHPlayer.prototype.OnEncrypted = function( event )
 {
 	var _player = this;
+	
 	// We can get a dupicate event for the audio and video track starting, but we only want to send one license request.
 	if ( event.timestamp == _player.m_tsLastEncryptedEvent)
 	{
@@ -326,6 +389,7 @@ CDASHPlayer.prototype.OnEncrypted = function( event )
 
 	PlayerLog( 'Found encrypted content.' );
 	var session = this.m_elVideoPlayer.mediaKeys.createSession();
+	_player.m_oActiveMediaKeysSession = session;
 	session.addEventListener('message', function( event ) { _player.OnMessage ( session, event ) }, false);
 	session.generateRequest( event.initDataType, event.initData ).catch(
 		function(error) {
@@ -1076,6 +1140,8 @@ CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex
 		loader.ChangeRepresentationByIndex( this.m_nVideoRepresentationIndex );
 		loader.SeekToSegment( this.m_elVideoPlayer.currentTime, !this.BIsLiveContent() );
 		this.m_nRepChangeTargetHeight = loader.m_adaptation.representations[this.m_nVideoRepresentationIndex].height;
+
+		$J( this.m_elVideoPlayer ).trigger( 'logevent', [ 'Video Quality', this.m_nRepChangeTargetHeight.toString() ] );
 
 		if ( !this.BIsLiveContent() )
 			this.SavePlaybackStateForBuffering( this.m_elVideoPlayer.currentTime );
@@ -2448,6 +2514,7 @@ CMPDParser.GetBaseURL = function()
 
 CMPDParser.strStatsLink = '';
 CMPDParser.strStalledLink = '';
+CMPDParser.strEventLogLink = '';
 CMPDParser.GetAnalyticsStatsLink = function()
 {
 	return CMPDParser.strStatsLink;
@@ -2456,6 +2523,11 @@ CMPDParser.GetAnalyticsStatsLink = function()
 CMPDParser.GetAnalyticsStalledLink = function()
 {
 	return CMPDParser.strStalledLink;
+}
+
+CMPDParser.GetEventLogLink = function()
+{
+	return CMPDParser.strEventLogLink;
 }
 
 CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, strURL )
@@ -2519,6 +2591,7 @@ CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, 
 	{
 		CMPDParser.strStatsLink = $J( analytics ).attr( 'statslink' );
 		CMPDParser.strStalledLink = $J( analytics ).attr( 'stalledlink' );
+		CMPDParser.strEventLogLink = $J( analytics ).attr( 'eventlink' );
 	}
 
 	// grab all periods.. only support 1
@@ -2758,6 +2831,7 @@ CMPDParser.prototype.BUpdate = function( xmlDoc )
 	{
 		CMPDParser.strStatsLink = $J( analytics ).attr( 'statslink' );
 		CMPDParser.strStalledLink = $J( analytics ).attr( 'stalledlink' );
+		CMPDParser.strEventLogLink = $J( analytics ).attr( 'eventlink' );
 	}
 
 	// find existing period
@@ -2987,6 +3061,7 @@ function CDASHPlayerUI( player, eUIMode )
 	this.m_schNotificationTimeout = null;
 	this.m_ThumbnailInfo = null;
 	this.m_bSettingsPanelInit = false;
+	this.m_bClosedCaptionPanelInit = false;
 
 	this.m_eUIMode = eUIMode;
 	this.m_strStylePrefix = this.BInTenFoot() ? 'tenfoot_' : '';
@@ -4625,7 +4700,7 @@ CDASHPlayerUI.prototype.DecrementProgressBarPreview = function( nAccelerate )
 
 CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 {
-	if ( this.BInTenFoot() )
+	if ( this.m_bClosedCaptionPanelInit || this.BInTenFoot() )
 		return;
 
 	var _ui = this;
@@ -4711,11 +4786,13 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanel = function()
 		_ui.m_elClosedCaptionsPanel.hide();
 		this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 	} );
+
+	this.m_bClosedCaptionPanelInit = true;
 }
 
 CDASHPlayerUI.prototype.InitClosedCaptionOptionPanelTenFoot = function()
 {
-	if ( !this.BInTenFoot() )
+	if ( this.m_bClosedCaptionPanelInit || !this.BInTenFoot() )
 		return;
 
 	var _ui = this;
@@ -4795,6 +4872,8 @@ CDASHPlayerUI.prototype.InitClosedCaptionOptionPanelTenFoot = function()
 	this.LoadClosedCaptionLanguage();
 	this.LoadClosedCaptionOptions();
 
+	this.m_bClosedCaptionPanelInit = true;
+
 }
 
 CDASHPlayerUI.prototype.SetClosedCaptionLanguageInUI = function( strCode )
@@ -4866,6 +4945,9 @@ CDASHPlayerUI.prototype.SaveClosedCaptionLanguage = function()
 		strCaptionCode = $J( '#representation_select_captions' ).find( ":selected" ).val();
 
 	WebStorage.SetLocal( "closed_caption_language_setting_" + this.m_strUniqueSettingsID, strCaptionCode );
+
+	if ( strCaptionCode != 'none' )
+		$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'Caption Language', strCaptionCode ] );
 }
 
 CDASHPlayerUI.prototype.LoadClosedCaptionOptions = function()
@@ -5499,20 +5581,24 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 	this.m_schNextLogEvent = null;
 	if ( this.m_bAutoLoggingEventsToServer )
 	{
-		$J( this.m_elVideoPlayer ).on( 'voddownloadcomplete.DASHPlayerStats', function() { _stats.LogEventToServer( false, false ); });
+		$J( this.m_elVideoPlayer ).on( 'voddownloadcomplete.DASHPlayerStats', function() { _stats.LogEventToServer( CDASHPlayerStats.LOGTYPE_STATS, false ); });
 
 		// set up for the first event logged
-		this.m_schNextLogEvent = window.setTimeout( function() { _stats.LogEventToServer( false, false ); }, CDASHPlayerStats.LOG_FIRST_EVENT );
+		this.m_schNextLogEvent = window.setTimeout( function() { _stats.LogEventToServer( CDASHPlayerStats.LOGTYPE_STATS, false ); }, CDASHPlayerStats.LOG_FIRST_EVENT );
 	}
 
 	// always log stalled events
-	$J( this.m_elVideoPlayer ).on( 'playbackstalled.DASHPlayerStats', function( e, bVideoStalled ) { _stats.LogEventToServer( true, bVideoStalled ); });
+	$J( this.m_elVideoPlayer ).on( 'playbackstalled.DASHPlayerStats', function( e, bVideoStalled ) { _stats.LogEventToServer( CDASHPlayerStats.LOGTYPE_STALLED, bVideoStalled ); });
 }
 
 CDASHPlayerStats.LOGGING_RATE_PERC = 100;
 CDASHPlayerStats.LOG_FIRST_EVENT = 1000 * 30; 	// 30 seconds
 CDASHPlayerStats.LOG_NEXT_EVENT = 1000 * 300; 	// 5 minutes
 CDASHPlayerStats.SEND_LOG_TO_SERVER = true;
+
+CDASHPlayerStats.LOGTYPE_STATS = 1;
+CDASHPlayerStats.LOGTYPE_STALLED = 2;
+CDASHPlayerStats.LOGTYPE_EVENT = 3;
 
 CDASHPlayerStats.prototype.Close = function()
 {
@@ -5538,19 +5624,44 @@ CDASHPlayerStats.prototype.Reset = function()
 	};
 }
 
-CDASHPlayerStats.prototype.LogEventToServer = function( bStalledEvent, bVideoStalled )
+CDASHPlayerStats.prototype.LogEventToServer = function( nLogType, bVideoStalled, strEventName, strEventDesc )
 {
 	var _stats = this;
 
-	var statsURL;
-	if ( bStalledEvent )
-		statsURL = CMPDParser.GetAnalyticsStalledLink();
-	else
-		statsURL = CMPDParser.GetAnalyticsStatsLink();
+	var statsURL = null;
+	switch ( nLogType )
+	{
+		case CDASHPlayerStats.LOGTYPE_STATS:
+			statsURL = CMPDParser.GetAnalyticsStatsLink();
+			break;
+
+		case CDASHPlayerStats.LOGTYPE_STALLED:
+			statsURL = CMPDParser.GetAnalyticsStalledLink();
+			break;
+
+		case CDASHPlayerStats.LOGTYPE_EVENT:
+			PlayerLog( strEventName, strEventDesc );
+			statsURL = CMPDParser.GetEventLogLink();
+			if ( !strEventName )
+				strEventName = 'Unknown';
+			if ( !strEventDesc )
+				strEventDesc = '';
+			break;
+
+		default:
+			break;
+	}
 
 	if ( statsURL )
 	{
-		var statsCollected = this.CollectStatsForEvent( bStalledEvent, bVideoStalled );
+		var statsCollected = this.CollectStatsForEvent( nLogType, bVideoStalled );
+
+		if ( nLogType == CDASHPlayerStats.LOGTYPE_EVENT )
+		{
+			statsCollected['event_name'] = strEventName;
+			statsCollected['event_description'] = strEventDesc;
+		}
+
 		if ( Object.keys( statsCollected ).length )
 		{
 			// PlayerLog( statsCollected );
@@ -5575,19 +5686,19 @@ CDASHPlayerStats.prototype.LogEventToServer = function( bStalledEvent, bVideoSta
 		}
 
 		// set up for the next log event
-		if ( _stats.m_bAutoLoggingEventsToServer && !bStalledEvent )
+		if ( _stats.m_bAutoLoggingEventsToServer && nLogType == CDASHPlayerStats.LOGTYPE_STATS )
 		{
 			clearTimeout( _stats.m_schNextLogEvent );
-			_stats.m_schNextLogEvent = window.setTimeout( function() { _stats.LogEventToServer( false, false ); }, CDASHPlayerStats.LOG_NEXT_EVENT );
+			_stats.m_schNextLogEvent = window.setTimeout( function() { _stats.LogEventToServer( CDASHPlayerStats.LOGTYPE_STATS, false ); }, CDASHPlayerStats.LOG_NEXT_EVENT );
 		}
 	}
 }
 
-CDASHPlayerStats.prototype.CollectStatsForEvent = function( bStalledEvent, bVideoStalled )
+CDASHPlayerStats.prototype.CollectStatsForEvent = function( nLogType, bVideoStalled )
 {
 	var statsCollected = {};
 
-	if ( bStalledEvent )
+	if ( nLogType == CDASHPlayerStats.LOGTYPE_STALLED )
 	{
 		statsCollected = this.m_videoPlayer.StatsRecentSegmentDownloads( bVideoStalled );
 
@@ -5600,7 +5711,7 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( bStalledEvent, bVide
 		statsCollected['audio_stalled'] = !bVideoStalled;
 		this.m_nCountStalls++;
 	}
-	else
+	else if ( nLogType == CDASHPlayerStats.LOGTYPE_STATS )
 	{
 		var statsSnapshot = {
 			'time': performance.now(),
@@ -5641,7 +5752,7 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( bStalledEvent, bVide
 		this.m_statsLastSnapshot = statsSnapshot;
 	}
 
-	// common for both log events
+	// common for all log events
 	statsCollected['steamid'] = this.m_steamID,
 	statsCollected['host'] = this.m_strVideoDownloadHost = this.m_videoPlayer.StatsDownloadHost();
 	statsCollected['playback_position'] = this.m_videoPlayer.GetPlaybackTimeInSeconds();
@@ -5728,6 +5839,7 @@ CDASHPlayerStats.prototype.Tick = function()
 {
 	$ele = $J(this.m_elVideoPlayer);
 	ele = this.m_elVideoPlayer;
+	videoPlayer = this.m_videoPlayer;
 	var _stats = this;
 	var rgStatsDefinitions = [
 		// Webkit
@@ -5811,6 +5923,11 @@ CDASHPlayerStats.prototype.Tick = function()
 			id: 'dashbuffers',
 			label: 'Buffers',
 			value: this.strBuffers
+		},
+		{
+			id: 'emestatus',
+			label: 'EME Active',
+			value: videoPlayer.m_bIsEmeActive ? 'Yes (' + videoPlayer.m_sKeySystemInUse + ')' : 'No'
 		},
 		// Report Stats
 		{
