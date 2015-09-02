@@ -6,16 +6,28 @@
 	</styles>
 
 	<ChooseBinding selectionpos="0,0" defaultfocus="BindingDescriptionTextEntry" onmoveleft="DoNothing();" onmoveright="DoNothing();" onmoveup="DoNothing();" onmovedown="DoNothing();">
+		
+		<Panel id="VirtualMouse" tabindex="auto" selectionpos="-15,0">
+			<Button id="mouse_left_button" selectionpos="200,1" onmoveup="DoNothing();" onmovedown="SetInputFocus( mouse_back_button );" onactivate="SetBinding( mouse_button, left );" onmoveleft="SetInputFocus( button_b );" ><Label text="L" /></Button>
+			<Button id="mouse_scroll_up" selectionpos="201,0" onactivate="SetBinding( mouse_button, scroll_up );"><Label text="^" /></Button>	
+			<Button id="mouse_middle_button" selectionpos="201,1" onactivate="SetBinding( mouse_button, middle );"><Label text="M" /></Button>
+			<Button id="mouse_scroll_down" selectionpos="201,2" onmoveright="SetInputFocus( mouse_right_button );" onmoveleft="SetInputFocus( mouse_left_button );" onmovedown="DoNothing();" onactivate="SetBinding( mouse_button, scroll_down );"><Label text="^" /></Button>	
+			<Button id="mouse_right_button" selectionpos="202,1" onmoveright="SetInputFocus( kb_key_esc );" onmoveup="DoNothing();" onmovedown="SetInputFocus( mouse_forward_button );" onactivate="SetBinding( mouse_button, right );"><Label text="R" /></Button>
+			<Button id="mouse_back_button" selectionpos="200,3" onmoveup="SetInputFocus( mouse_left_button );" onactivate="SetBinding( mouse_button, back );" onmoveright="SetInputFocus( mouse_forward_button );"><Label text="4" /></Button>	
+			<Button id="mouse_forward_button" selectionpos="202,3" onmoveup="SetInputFocus( mouse_right_button );" onmoveright="SetInputFocus( kb_key_tab );" onactivate="SetBinding( mouse_button, forward );" onmoveleft="SetInputFocus( mouse_back_button );"><Label text="5" /></Button>	
+		</Panel>
+		
 		<Panel id="KeyboardWrapper" selectionpos="0,1">
 			<Panel id="BindingDescriptionWrapper" selectionpos="0,0">
 				<Label id="SelectBindingHeader" text="#Library_Details_SelectYourBindingFor" class="SelectBindingHeader" />
 				<DropDown tabindex="-1" selectionpos="0,-1" id="BindingDescriptionDropDown" />
-				<TextEntry tabindex="-2" selectionpos="0,-2" id="BindingDescriptionTextEntry" textinputid="BindingDescriptionTextInput" textinputdoneactionstring="#Library_Details_SaveBindingDescription" textinputclass="HalfWidth DockRight AppearFromBottomCenter" onmovedown="SetInputFocus( kb_key_esc );" ontabforward="SetInputFocus( kb_key_esc );" />
+				<TextEntry tabindex="-2" selectionpos="0,-2" id="BindingDescriptionTextEntry" textinputid="BindingDescriptionTextInput" textinputdoneactionstring="#Library_Details_SaveBindingDescription" textinputclass="HalfWidth DockRight AppearFromBottomCenter" onmoveup="DoNothing();" onmoveleft="SetInputFocus( mouse_right_button );" onmoveright="SetInputFocus( left_trigger );" onmovedown="SetInputFocus( kb_key_esc );" ontabforward="SetInputFocus( kb_key_esc );" />
 			</Panel>
+				
 			<Panel id="VirtualKeyboard" tabindex="auto" selectionpos="0,1">
 				<Panel id="VKBRow1" selectionpos="0,0">
 					<Panel id="VKBCol1" selectionpos="15,0">
-						<Button id="kb_key_esc" selectionpos="-13,0" onactivate="SetBinding( key_press, esc );" ><Label text="esc" /></Button>
+						<Button id="kb_key_esc" selectionpos="-13,0" onmoveleft="SetInputFocus( mouse_right_button );" onactivate="SetBinding( key_press, esc );" ><Label text="esc" /></Button>
 						<Button id="kb_key_EMPTY" disabled="true" class="Empty" />
 						<Button id="kb_key_f1" selectionpos="-11,0" onactivate="SetBinding( key_press, f1 );"><Label text="F1" /></Button>
 						<Button id="kb_key_f2" selectionpos="-10,0" onactivate="SetBinding( key_press, f2 );"><Label text="F2" /></Button>
@@ -34,7 +46,7 @@
 					<Panel id="VKBCol2" selectionpos="30,0">
 						<Button id="kb_key_printscreen" selectionpos="-2,0" onactivate="SetBinding( key_press, printscreen );"><Label text="prt" /></Button>
 						<Button id="kb_key_scrolllock" selectionpos="-1,0" onactivate="SetBinding( key_press, scrolllock );"><Label text="scl" /></Button>
-						<Button id="kb_key_break" selectionpos="0,0" onactivate="SetBinding( key_press, break );"><Label text="brk" /></Button>
+						<Button id="kb_key_break" selectionpos="0,0" onmoveright="SetInputFocus( kb_key_numlock );" onactivate="SetBinding( key_press, break );"><Label text="brk" /></Button>
 					</Panel>
 				</Panel>
 				<Panel id="VKBRow2" selectionpos="0,1">
@@ -92,7 +104,7 @@
 						<Button id="kb_key_pad_7" selectionpos="-3,2" onactivate="SetBinding( key_press, pad_7 );"><Label text="7" /></Button>
 						<Button id="kb_key_pad_8" selectionpos="-2,2" onactivate="SetBinding( key_press, pad_8 );"><Label text="8" /></Button>
 						<Button id="kb_key_pad_9" selectionpos="-1,2" onactivate="SetBinding( key_press, pad_9 );"><Label text="9" /></Button>
-						<Button id="kb_key_pad_plus" selectionpos="0,2" onactivate="SetBinding( key_press, pad_plus );"><Label text="+" /></Button>
+						<Button id="kb_key_pad_plus" selectionpos="0,2" onmovedown="SetInputFocus( kb_key_pad_enter );" onmoveright="SetInputFocus( left_joystick );" onactivate="SetBinding( key_press, pad_plus );"><Label text="+" /></Button>
 					</Panel>
 				</Panel>
 				<Panel id="VKBRow4" selectionpos="0,3">
@@ -119,7 +131,7 @@
 					<Panel id="VKBCol3" selectionpos="45,0">
 						<Button id="kb_key_pad_4" selectionpos="-3,3" onactivate="SetBinding( key_press, pad_4 );" onmoveleft="SetInputFocus( kb_key_enter );" ontabbackward="SetInputFocus( kb_key_enter );"><Label text="4" /></Button>
 						<Button id="kb_key_pad_5" selectionpos="-2,3" onactivate="SetBinding( key_press, pad_5 );"><Label text="5" /></Button>
-						<Button id="kb_key_pad_6" selectionpos="-1,3" onactivate="SetBinding( key_press, pad_6 );"><Label text="6" /></Button>
+						<Button id="kb_key_pad_6" selectionpos="-1,3" onmoveright="SetInputFocus( left_joystick );"  onactivate="SetBinding( key_press, pad_6 );"><Label text="6" /></Button>
 					</Panel>
 				</Panel>
 				<Panel id="VKBRow5" selectionpos="0,4">
@@ -146,7 +158,7 @@
 						<Button id="kb_key_pad_1" selectionpos="-3,4" onactivate="SetBinding( key_press, pad_1 );"><Label text="1" /></Button>
 						<Button id="kb_key_pad_2" selectionpos="-2,4" onactivate="SetBinding( key_press, pad_2 );"><Label text="2" /></Button>
 						<Button id="kb_key_pad_3" selectionpos="-1,4" onactivate="SetBinding( key_press, pad_3 );"><Label text="3" /></Button>
-						<Button id="kb_key_pad_enter" selectionpos="0,4" onactivate="SetBinding( key_press, pad_enter );"><Label text="ent" /></Button>
+						<Button id="kb_key_pad_enter" selectionpos="0,4" onmoveup="SetInputFocus( kb_key_pad_plus );" onactivate="SetBinding( key_press, pad_enter );"><Label text="ent" /></Button>
 					</Panel>
 				</Panel>
 				<Panel id="VKBRow6" selectionpos="0,5">
@@ -193,12 +205,12 @@
 			<Panel id="GamepadRowWrapper">
 				<Panel id="GamepadTopRow" selectionpos="0,0">
 					<Panel id="LeftTriggerShoulderWrapper" selectionpos="15,0">
-						<Button class="GamepadButton" id="left_trigger" selectionpos="-1,0" onactivate="SetBinding( gamepad, trigger_left );" />
-						<Button class="GamepadButton" id="left_shoulder" selectionpos="-1,1" onactivate="SetBinding( gamepad, shoulder_left );" />
+						<Button class="GamepadButton" id="left_trigger" selectionpos="-1,0" onmoveleft="SetInputFocus( kb_key_pad_dash );" onactivate="SetBinding( gamepad, trigger_left );" />
+						<Button class="GamepadButton" id="left_shoulder" selectionpos="-1,1" onmoveleft="SetInputFocus( kb_key_pad_dash );" onactivate="SetBinding( gamepad, shoulder_left );" />
 					</Panel>
 					<Panel id="RightTriggerShoulderWrapper" selectionpos="75,0">
-						<Button class="GamepadButton" id="right_trigger" selectionpos="0,0" onactivate="SetBinding( gamepad, trigger_right );" />
-						<Button class="GamepadButton" id="right_shoulder" selectionpos="0,1" onactivate="SetBinding( gamepad, shoulder_right );" />
+						<Button class="GamepadButton" id="right_trigger" selectionpos="0,0" onmoveright="SetInputFocus( mouse_left_button );" onactivate="SetBinding( gamepad, trigger_right );" />
+						<Button class="GamepadButton" id="right_shoulder" selectionpos="0,1" onmoveright="SetInputFocus( mouse_left_button );" onactivate="SetBinding( gamepad, shoulder_right );" />
 					</Panel>
 				</Panel>
 				<Panel id="GamepadMiddleRow" selectionpos="0,1">
@@ -221,21 +233,11 @@
 							<Button class="GamepadButton" id="dpad_left" selectionpos="0,0" onactivate="SetBinding( gamepad, dpad_left );" onmoveleft="SetInputFocus( kb_key_pad_6 );" />
 							<Button class="GamepadButton" id="dpad_right" selectionpos="2,0" onactivate="SetBinding( gamepad, dpad_right );" onmoveright="SetInputFocus( right_joystick );" />
 						</Panel>
-						<Button class="GamepadButton" id="dpad_down" selectionpos="1,2" onactivate="SetBinding( gamepad, dpad_down );" />
+						<Button class="GamepadButton" id="dpad_down" selectionpos="1,2" onmoveright="SetInputFocus( dpad_right );" onactivate="SetBinding( gamepad, dpad_down );" />
 					</Panel>
 					<Button class="GamepadButton" id="right_joystick" selectionpos="60,2" onactivate="SetBinding( gamepad, joystick_right );" onmoveleft="SetInputFocus( dpad_right );" />
 				</Panel>
 			</Panel>
-		</Panel>
-
-		<Panel id="VirtualMouse" tabindex="auto" selectionpos="200,0">
-			<Button id="mouse_left_button" selectionpos="200,1" onactivate="SetBinding( mouse_button, left );" onmoveleft="SetInputFocus( button_b );" ><Label text="L" /></Button>
-			<Button id="mouse_scroll_up" selectionpos="201,0" onactivate="SetBinding( mouse_button, scroll_up );"><Label text="^" /></Button>	
-			<Button id="mouse_middle_button" selectionpos="201,1" onactivate="SetBinding( mouse_button, middle );"><Label text="M" /></Button>
-			<Button id="mouse_scroll_down" selectionpos="201,2" onactivate="SetBinding( mouse_button, scroll_down );"><Label text="^" /></Button>	
-			<Button id="mouse_right_button" selectionpos="202,1" onactivate="SetBinding( mouse_button, right );"><Label text="R" /></Button>
-			<Button id="mouse_back_button" selectionpos="200,3" onactivate="SetBinding( mouse_button, back );" onmoveright="SetInputFocus( mouse_forward_button );"><Label text="4" /></Button>	
-			<Button id="mouse_forward_button" selectionpos="202,3" onactivate="SetBinding( mouse_button, forward );" onmoveleft="SetInputFocus( mouse_back_button );"><Label text="5" /></Button>	
 		</Panel>
 
 	</ChooseBinding>

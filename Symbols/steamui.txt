@@ -25090,6 +25090,7 @@
  T CLibraryControllerBindingsGordonPanel::UpdateSavedButtonBinding(Voltroller::DigitalIO)
  T CLibraryControllerBindingsGordonPanel::UpdateSavedModeShiftButtonBinding(Voltroller::DigitalIO, EControllerSource)
  T CLibraryControllerBindingsGordonPanel::~CLibraryControllerBindingsGordonPanel()
+ T CLibraryControllerPanel::BCanManageControllers(unsigned int)
  T CLibraryControllerPanel::CCallback_OnControllerConnected::Run(void*)
  T CLibraryControllerPanel::CCallback_OnControllerDisconnected::Run(void*)
  T CLibraryControllerPanel::CCallback_OnControllerWirelessPresence::Run(void*)
@@ -55243,6 +55244,7 @@
  b guard variable for panorama::CDebugLayout::AppendElementOpenTag(panorama::CLabel*, panorama::CPanel2D*, bool)::reWWWLong
  b guard variable for panorama::CDebugLayout::AppendElementOpenTag(panorama::CLabel*, panorama::CPanel2D*, bool)::strBuilder
  b guard variable for panorama::CDropDown::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_pchInitialSelection
+ b guard variable for panorama::CGrid::BSetProperty(panorama::CPanoramaSymbol, char const*)::symFocusMargin
  b guard variable for panorama::CGrid::BSetProperty(panorama::CPanoramaSymbol, char const*)::symHorizontalCount
  b guard variable for panorama::CGrid::BSetProperty(panorama::CPanoramaSymbol, char const*)::symMovementWrap
  b guard variable for panorama::CGrid::BSetProperty(panorama::CPanoramaSymbol, char const*)::symScaleOffset
@@ -55543,6 +55545,7 @@
  b panorama::CDebugLayout::AppendElementOpenTag(panorama::CLabel*, panorama::CPanel2D*, bool)::reWWWLong
  b panorama::CDebugLayout::AppendElementOpenTag(panorama::CLabel*, panorama::CPanel2D*, bool)::strBuilder
  b panorama::CDropDown::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_pchInitialSelection
+ b panorama::CGrid::BSetProperty(panorama::CPanoramaSymbol, char const*)::symFocusMargin
  b panorama::CGrid::BSetProperty(panorama::CPanoramaSymbol, char const*)::symHorizontalCount
  b panorama::CGrid::BSetProperty(panorama::CPanoramaSymbol, char const*)::symMovementWrap
  b panorama::CGrid::BSetProperty(panorama::CPanoramaSymbol, char const*)::symScaleOffset
