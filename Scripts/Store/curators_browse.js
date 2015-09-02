@@ -44,7 +44,7 @@ function FollowCurator( clanID )
 		'json'
 	).fail( function()
 		{
-			ShowAlertDialog( 'Error', 'There was a problem trying to follow the Steam Curator.' );
+			ShowAlertDialog( '#title_error', '#steam_curators_failed_follow' );
 		}
 	);
 	return false;
