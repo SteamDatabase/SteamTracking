@@ -1896,6 +1896,7 @@
 	"Library_Suggested_UnplayedRandom" "Unplayed"
 	"Library_Suggested_PlayedRandom" "Randomly picked"
 	"Library_Suggested_UnplayedStore" "Popular on Steam"
+	"Library_Suggested_UnplayedMRU" "You just Purchased"
 	"Library_Suggested_FreeToPlay" "Play Now!"
 	
 	"Library_Filter_RecentlyPlayed" "Recently Played"
@@ -1913,7 +1914,7 @@
 	"Library_Filter_MusicByTitle" "Sort by Title"
 	"Library_Filter_MusicByArtist" "Sort by Artist"
 	"Library_AllGames_EmptyGrid" "We came up empty..."
-	"Library_AllGames_EmptySearchGrid" "Hit X to search"
+	"Library_AllGames_EmptySearchGrid" "Search your Steam library"
 	
 	
 	"Library_Details_EditUpdateOptions" "Set Update Options..."

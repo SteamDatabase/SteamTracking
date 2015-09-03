@@ -5,7 +5,7 @@
 	</styles>
 
 	<LibraryDLCItem>
-		<Button id="WrapperButton" mousecanactivate="iffocused" >
+		<Button id="WrapperButton" class="Button" mousecanactivate="iffocused" >
 			<Panel class="LeftColumn" >
 				<Image id="Image"  src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
 				<Panel class="DLCInstallState Installed">

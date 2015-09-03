@@ -9,7 +9,7 @@
 @define largenewsbyline_dark: gradient( linear, 0% 0%, 160% 0%, from( #222222ff ), color-stop( 0.8, #222222ff ), to( #33333300 ) );
 @define largenewsbody_dark: gradient( linear, 82% 0%, 98% 0%, from( #666666ff ), to( #66666600 ) );
 @define playtime: gradient( linear, 92% 0%, 0% 110%, from( #c6d4dfff ), to( #c6d4dfff) );
-@define playtimetitle: gradient( linear, 80% 0%, 0% 100%, from( #67c1f5ff ), to( #67c1f5ff ) );
+@define playtimetitle: gradient( linear, 80% 0%, 0% 100%, from( #2eb9ffff ), to( #66c0f4ff ) );
 @define achievementdetailsheader: gradient( linear, 0% 0%, 0% 100%, from( #ddddddff ), to( #cecece99 ) );
 @define achievementdetailsheaderdark: gradient( linear, 0% 0%, 0% 100%, from( #525252ef ), to( #3b3b3bce ) );
 @define achievementstitledark: gradient( linear, 80% 0%, 92% 0%, from( #000000ce ), to( #00000000 ) );
@@ -21,7 +21,7 @@
 @define guidedetailsheader: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ef ), to( #8b8b8bce ) );
 @define guidedetailsheaderdark: gradient( linear, 0% 0%, 0% 100%, from( #525252ef ), to( #3b3b3bce ) );
 
-@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #265c7c ), to( #3b647e ) );
+@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #205a7e ), to( #22648a ) );
 
 @define shortduration: 0.25s;
 @define shortmedduration: 0.3s;
@@ -769,7 +769,7 @@ LibraryAppDetails .GameName
 	font-size: 56px;
 	margin-left: 10px;
 	white-space: nowrap;
-	font-weight: bold;
+	font-weight: thin;
 }	
 
 LibraryAppDetails .GameStatus
@@ -778,7 +778,7 @@ LibraryAppDetails .GameStatus
 	color: playtimetitle;
 	opacity: 1.0;
 	width: fit-children;
-	font-size: 24px;
+	font-size: 30px;
 	margin-top: 4px;
 	font-weight: normal;
 }
@@ -872,9 +872,9 @@ LibraryAppDetails #GameRequiresLabel
 
 .AppMiscHeader .DataHeader
 {
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: normal;
-	color: moduledatalabel;
+	color: #4a8db3;
 	opacity: 1.0;
 	transition-property: opacity, border, color, color !immediate;
 	margin-right: 10px;
@@ -1023,20 +1023,8 @@ LibraryAppDetails .ContentsRow
 	width: 1300px;
 	height: fit-children;
 	flow-children: right-wrap;
-	background-color: gradient( linear, 0% 0%, 3% 80%, from( #66c0f433 ), to( #66c0f400 ) );
 	margin: -10px;
 	padding: 10px;
-	padding-bottom: 20px;
-}
-.LibraryDetailsSectionRow.PlayArea {
-	background-color: gradient( linear, 0% 0%, 1% 80%, from( #66c0f433 ), to( #66c0f400 ) );
-}
-.LibraryDetailsSectionRow.ShortArea {
-	background-color: gradient( linear, 0% 0%, 1% 70%, from( #66c0f433 ), to( #66c0f400 ) );
-}
-.LibraryDetailsSectionRow.TallArea {
-	background-color: gradient( linear, 0% 0%, 3% 67%, from( #66c0f433 ), to( #66c0f400 ) );
-	margin-top: 5px;
 }
 
 .LibraryPlayRow
@@ -1048,8 +1036,12 @@ LibraryAppDetails .ContentsRow
 .PlayHeaderDetails
 {
 	width: 100%;
-	height: fit-children;
+	height: 118px;
 	flow-children: down;
+	background-color: gradient( linear, 0% 0%, 100% 100%, color-stop( 0.0, #61696d4D ), color-stop( 1.0, #c6d4df1A ) );
+	margin-top: 3px;
+	margin-left: 12px;
+	/* background-color: #2f89bc33; */
 }
 
 .DetailsDataPanel
@@ -1066,7 +1058,7 @@ LibraryAppDetails .ContentsRow
 	transition-delay: 0s;
 	pre-transform-scale2d: 0.95;
 
-	box-shadow: fill #00000033 -3px -3px 6px 6px;
+
 }
 .DetailsDataPanel.Small
 {
@@ -1348,6 +1340,7 @@ ParentalButton.Locked
 	margin: 0px 10px 0px 10px;
 	width: 100%;
 	background-color: dialog_bg_color;
+	height: 190px;
 }
 
 .LinksAndMore:descendantfocus, .LinksAndMore:focus
@@ -1378,10 +1371,7 @@ ParentalButton.Locked
 {
 	z-index: 100;
 	background-color: action_module;
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 0px;
-	border-color: #b6e1faff;
+
 }
 
 
@@ -2785,7 +2775,7 @@ LibraryRecentNews .LargeNewsByline
 	transition-timing-function: bigpicture-ease-in-out;
 
 	font-family: platformfont;
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: normal;
 	color: #67c1f5ff;
 	margin-left: 10px;
@@ -3459,14 +3449,15 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	margin-top: 5px;
 }
 
-.GamesGrid, .GamesSuggestion, LibraryAllGames #MusicPanel
+.GamesGrid, .GamesSuggestion
 {
-	padding-top: 105px;
+	padding-top: 82px;
 	padding-left: 140px;
 	position: 390px 0px 0px;
+	padding-right: 40px;
 
 	width: 1500px;
-	height: 100%;
+	height: 1140px;
 	
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
@@ -3481,12 +3472,13 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 
 
 /* Transitions when grid is in focus */
-.ContentAreaFocus .GamesGrid {
-	transform: translateX( -200px );
-}
+.ContentAreaFocus .GamesGrid,
 .ContentAreaFocus .GamesSuggestion {
 	transform: translateX( -200px );
+	width: 1500px;
+	padding-right: 40px;
 }
+
 
 .EmptyLabel
 {
@@ -3526,6 +3518,14 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	background-color: #00000044;
 	height: 800px;
 	width: 1350px;
+
+	transition-property: transform;
+	transition-delay: 0s;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+.search.ContentAreaFocus.EmptyGrid #EmptySearchArea {
+	transform: translateX(-200px);
 }
 
 .search.EmptyGrid #EmptyLibraryArea,
@@ -3618,7 +3618,7 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 .AppGridItem.Ready
 {
 	opacity: 1;
-	pre-transform-scale2d: 0.9;
+	pre-transform-scale2d: 0.94;
 	
 }
 
@@ -3626,7 +3626,8 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 {
 	width: 460px;
 	height: 215px;
-	opacity: 1.0;
+	opacity: 0.9;
+	desaturation: 0.2;
 	margin-bottom: 0px;
 	transition-property: box-shadow, opacity, desaturation;
 	transition-duration: shortmedduration;
@@ -3635,15 +3636,6 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 
 	box-shadow: fill #00000044 -4px -4px 8px 8px;
 	background-color: #000000;
-}
-/* For ready to play games: */
-.GamesGrid .AppGridItem.ReadyToPlay .AppImage
-{
-	background-color: dialog_bg_color;
-	opacity: 1;
-	desaturation: 0;
-	box-shadow: fill #00000044 -4px -4px 8px 8px;
-
 }
 
 /* For installed games: */
@@ -3708,6 +3700,10 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 
 .AppGridItem:focus .AppImage
 {
+	opacity: 1.0;
+	desaturation: 0.0;
+	wash-color: #00000000;
+
 	box-shadow: box_shadow_on_color -8px -8px 8px 8px;
 
 	animation-name: main-button-glow-movement-no-fill;
@@ -3715,6 +3711,7 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+
 }
 
 .AppGridItem Label
@@ -3741,14 +3738,18 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 {
 	opacity: 0.0;
 	horizontal-align: left;
-	margin: 10px;
-	font-size: 54px;
+	margin-top: 130px;
+	padding-right: 60px;
+	padding-left: 60px;
+	font-size: 34px;
 	font-weight: light;
 	text-transform: uppercase;
 	color: #ffffff99;
+	background-color: black;
 	width: 100%;
 	height: 100%;
 	white-space: normal;
+	text-align: center;
 	transition-property: opacity, color;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -3758,7 +3759,12 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 .LibraryPanel:descendantfocus .RecentApp Image #MissingImageLabel,
 .AppGridItem.Shortcut Image #MissingImageLabel
 {
-	opacity: 0.5;
+	opacity: 0.8;
+}
+
+.AppGridItem.Shortcut.CustomAppImage #MissingImageLabel
+{
+	opacity: 0.0;
 }
 
 #ShortcutsGrid .AppGridItem Label
@@ -3813,20 +3819,6 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	desaturation: 0.7;
 }
 
-/* Focus on ready to play item */
-.AppGridItem.ReadyToPlay:focus .GridItemImage
-{
-	margin: 0px;
-	opacity: 1.0;
-	desaturation: 0.0;
-	wash-color: #00000000;
-}
-
-/* Focus on uninstalled item */
-.AppGridItem:focus .GridItemImage
-{
-
-}
 
 .AppGridItem:focus:hover .GridItemImage
 {
@@ -3855,6 +3847,7 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 {
 	width: 100%;
 	height: 100%;
+	overflow: clip;
 }
 
 
@@ -4044,8 +4037,8 @@ DropDown Label
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
-Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+Carousel.CursorVisible:hover .LeftMouseScrollRegion,
+.MouseActive Grid:hover .LeftMouseScrollRegion
 {
 	width: 80px;
 	height: 100%;
@@ -4059,19 +4052,19 @@ Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
 	background-color: mouse_hover_bg_up;
 }
 
-Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+.MouseActive Grid:hover .LeftMouseScrollRegion
 {
 	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
 }
 
-#GamesGrid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion
+.MouseActive #GamesGrid:hover .LeftMouseScrollRegion
 {
 	width: 100%;
 	height: 80px;
 }
 
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+Carousel.CursorVisible:hover .RightMouseScrollRegion,
+.MouseActive Grid:hover .RightMouseScrollRegion,
 {
 	width: 80px;
 	height: 100%;
@@ -4087,38 +4080,39 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
 	background-color: mouse_hover_bg_bottom;
 }
 
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+Grid.CursorVisible:hover .RightMouseScrollRegion,
 {
 	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
 }
 
-#GamesGrid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
+.MouseActive #GamesGrid:hover .RightMouseScrollRegion
 {
 	width: 100%;
 	height: 80px;
 	align: center bottom;
-	margin-bottom: 100px;
+	margin-bottom: 220px;
+	z-index: 300;
 }
 
 
-#GamesGrid.CursorVisible:descendantfocus:hover  .RightMouseScrollRegion:hover,
+.MouseActive #GamesGrid:hover  .RightMouseScrollRegion:hover,
 {
 		background-color: mouse_active_bg_bottom;
 }
 
 
-Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover,
-Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover,
-Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+Carousel.CursorVisible:hover  .LeftMouseScrollRegion:hover,
+Carousel.CursorVisible:hover  .LeftMouseScrollRegion:active,
+.MouseActive Grid:hover  .LeftMouseScrollRegion:hover,
+.MouseActive Grid:hover  .LeftMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_up;
 }
 
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
-Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
-Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+Carousel.CursorVisible:hover .RightMouseScrollRegion:hover,
+Carousel.CursorVisible:hover .RightMouseScrollRegion:active,
+.MouseActive Grid:hover .RightMouseScrollRegion:hover,
+.MouseActive Grid:hover .RightMouseScrollRegion:active
 {
 	background-color: mouse_active_bg_bottom;
 
@@ -4897,7 +4891,7 @@ LibraryDLCItem #Image
 	width: 158px;
 	height: 74px;
 	vertical-align: center;
-	margin-right: 8px;
+	margin-right: 6px;
 }
 
 LibraryDLCItem Label
@@ -4952,8 +4946,8 @@ LibraryDLCItem
 	margin-left: 4px;
 	margin-right: 10px;
 
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 	margin-right: 20px;
 }
 
@@ -4977,8 +4971,8 @@ LibraryDLC #DLCItems
 {
 	overflow: clip clip;
 	width: 100%;
-	height: 180px;
-	padding: 10px;
+	height: 200px;
+	padding: 10px 0px 10px 10px;
 	flow-children: right-wrap;
 }
 LibraryDLC LibraryDLCItem
@@ -4989,9 +4983,9 @@ LibraryDLC LibraryDLCItem
 }
 LibraryDLCItem #Image.DLCPreviewImage
 {
-	width: 180px;
-	height: 84px;
-	margin: 8px 8px 0px 0px;
+	width: 195px;
+	height: 91px;
+	margin: 8px 6px 0px 0px;
 	transform: translateX( 0px );
 }
 
@@ -5001,7 +4995,18 @@ LibraryDLCItem .DLCInstallState
 	vertical-align: bottom;
 	horizontal-align: right;
 	background-color: #00000055;
-	margin-right: 8px;
+	margin-right: 6px;
+}
+
+LibraryDLCItem .DLCInstallState.NotInstalled,
+LibraryDLCItem .DLCInstallState.Installed {
+	wash-color: #8f98a0;
+}
+.DetailsDataPanel:descendantfocus LibraryDLCItem .DLCInstallState.NotInstalled {
+	wash-color: installedblue;
+}
+.DetailsDataPanel:descendantfocus LibraryDLCItem .DLCInstallState.Installed {
+	wash-color: readytoplaygreen;
 }
 
 LibraryDLCItem .DLCInstallState.Installed
@@ -5030,32 +5035,17 @@ LibraryDLCItem.Deleting
 	visibility: collapse;
 }
 
-LibraryDLCItem Button
+LibraryDLCItem .Button
 {
-	padding: 2px;
-	margin-left: 0px;
+
 	margin-right: 10px;
 	width: 100%;
-	border-width: 5px;
+	height: 90px;
 }
 
-LibraryDLCItem Button:focus
+LibraryDLCItem .Button:focus
 {
-	transform: translatex( 10px ) translatez( 0px );
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 9px;
-
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #fdfdfd9f ), to( #bdbfbfaf ) );
-	border-style: solid;
-	border-width: 5px;
-	border-color: #ffffffff;
-	transition-property: transform;
-	transition-duration: shortduration;
-	animation-name: links-and-more-button-focus; 
-	animation-duration: longduration;
-	animation-delay: 0s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+	height: 90px;
 }
 
 .GridButtonRow Button,
@@ -5148,7 +5138,7 @@ LibraryDLCItem Button:focus
 
 .ContentAreaFocus #GamesFilter
 {
-	position: 1650px 120px 0px;
+	position: 1630px 120px 0px;
 }
 
 #GamesFilter:descendantfocus
@@ -5423,7 +5413,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 {
 	width: 100%;
 	font-family: platformfont;
-	font-size: 24px;
+	font-size: 26px;
 	font-weight: normal;
 	color: #67c1f5ff;
 }
@@ -5565,7 +5555,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	flow-children: down;
 	overflow: clip scroll;
 
-	transform: translateX( -35px );
+	transform: translateX( -35px ) translateY( -42px );
+
 	opacity: 0.5;
 	transition-delay: 0.08s;
 	transition-duration: 0.3s;
@@ -5577,7 +5568,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 }
 
 .NxGridButtonRow:descendantfocus {
-	transform: translateX( 0px );
+	transform: translateX( 0px ) translateY( -8px );
 	opacity: 1;
 	pre-transform-scale2d: 1;
 	opacity-mask: none;
@@ -5674,7 +5665,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 .GamesSuggestion
 {
-	padding-top: 20px;
+	padding-top: 25px;
 	padding-left: 0px;
 	padding-right: 40px;
 	margin-left: 100px;
@@ -5754,7 +5745,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	text-align: center;
 	width: 600px;
 	font-family: platformfont;
-	font-size: 24px;
+	font-size: 30px;
 	font-weight: normal;
 	color: #8f98a0ff;
 	padding-left: 5px;
@@ -6053,7 +6044,7 @@ Button.NoContent
 .AllGamesFilterLabel
 {
 	margin-top: 10px;
-	position: 490px 0px 0px;
+	position: 490px 10px 0px;
 
 	text-align: left;
 	width: 600px;

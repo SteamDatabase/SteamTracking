@@ -16,7 +16,6 @@
 			<Panel class="NxGridButtonRow" tabindex="auto" selectionpos="0,0" onfocus="FocusMenuRow();" onmoveright="FocusGamesGrid();" >
 
                 <Panel class="GamesHorizRule" />
-                <Panel class="GamesHorizRule" />
                 <Button id="SuggestedFilter" onfocus="GamesViewType(suggested);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
                     <Label text="#Library_HomeFilter" html="true" />
                 </Button>
@@ -72,12 +71,12 @@
 			<Label class="AllGamesFilterLabel" text="#Library_Filter_FilterStringDisplay" html="true" />
 			<LibraryFilterGames id="GamesFilter" selectionpos="500,200" />
 			<LibrarySuggestions id="GamesSuggestion"  class="GamesSuggestion" selectionpos="auto" oncancel="FocusMenuRow();" />
-			<MusicLibraryAlbumPanel id="MusicPanel" class="GamesGrid" scrolldirection="vertical" verticalcount="4" horizontalcount="3" 
+			<MusicLibraryAlbumPanel id="MusicPanel" class="GamesGrid" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" movementwrap="right" selectionposboundary="both"
 						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();"  />
-			<Grid id="GamesGrid" class="GamesGrid" scrolldirection="vertical" verticalcount="4" horizontalcount="3" 
+			<Grid id="GamesGrid" class="GamesGrid" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" selectionposboundary="both"
-						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();" />
+						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();" focusmargin="2" />
             <Panel id="EmptyLibraryArea" >
                 <Label id="EmptyLabel" class="EmptyLabel" text="#Library_AllGames_EmptyGrid" />
             </Panel>

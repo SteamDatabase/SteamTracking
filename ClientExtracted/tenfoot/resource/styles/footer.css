@@ -9,7 +9,7 @@ TenfootFooterPanel
 
 	z-index: footer_zindex;
 
-	background-color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #092941dd ), color-stop( 1.0, #0a304cdd ) );
+	background-color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #06192edd ), color-stop( 1.0, #051424dd ) );
 	box-shadow: fill #00000066 -4px -4px 6px 6px;
 	padding-top: 15px;
 

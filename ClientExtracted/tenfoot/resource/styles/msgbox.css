@@ -165,7 +165,7 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 {
 	horizontal-align: left;
 	vertical-align: bottom;
-	margin-left: -10px;
+	margin-left: 0px;
 	font-size: 42px;
 	font-family: platformfont;
 	color: #ffffffff;
@@ -194,7 +194,7 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 	margin-right: 10px;
 
 	padding-top: 7px;
-	min-width: 350px;
+
 	width: fit-children;
 }
 

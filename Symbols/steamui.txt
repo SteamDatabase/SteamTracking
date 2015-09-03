@@ -9448,6 +9448,7 @@
  D typeinfo for CLibrarySettingsPanel::CCallback_OnShortcutChanged
  D typeinfo for CLibrarySuggestions
  D typeinfo for CLibrarySuggestions::CCallbackInternal_OnFriendsWhoPlayData
+ D typeinfo for CLibrarySuggestions::CCallbackInternal_OnParentalLockChangeComplete
  D typeinfo for CLibrarySuggestions::CCallbackInternal_OnPersonaStateChange
  D typeinfo for CLibrarySuggestionsRow
  D typeinfo for CLibraryWorkshopPanel
@@ -12803,6 +12804,7 @@
  D vtable for CLibrarySettingsPanel::CCallback_OnShortcutChanged
  D vtable for CLibrarySuggestions
  D vtable for CLibrarySuggestions::CCallbackInternal_OnFriendsWhoPlayData
+ D vtable for CLibrarySuggestions::CCallbackInternal_OnParentalLockChangeComplete
  D vtable for CLibrarySuggestions::CCallbackInternal_OnPersonaStateChange
  D vtable for CLibrarySuggestionsRow
  D vtable for CLibraryWorkshopPanel
@@ -15562,6 +15564,7 @@
  R typeinfo name for CLibrarySettingsPanel::CCallback_OnShortcutChanged
  R typeinfo name for CLibrarySuggestions
  R typeinfo name for CLibrarySuggestions::CCallbackInternal_OnFriendsWhoPlayData
+ R typeinfo name for CLibrarySuggestions::CCallbackInternal_OnParentalLockChangeComplete
  R typeinfo name for CLibrarySuggestions::CCallbackInternal_OnPersonaStateChange
  R typeinfo name for CLibrarySuggestionsRow
  R typeinfo name for CLibraryWorkshopPanel
@@ -25393,6 +25396,8 @@
  T CLibrarySettingsPanel::~CLibrarySettingsPanel()
  T CLibrarySuggestions::CCallbackInternal_OnFriendsWhoPlayData::CCallbackInternal_OnFriendsWhoPlayData()
  T CLibrarySuggestions::CCallbackInternal_OnFriendsWhoPlayData::Run(void*)
+ T CLibrarySuggestions::CCallbackInternal_OnParentalLockChangeComplete::CCallbackInternal_OnParentalLockChangeComplete()
+ T CLibrarySuggestions::CCallbackInternal_OnParentalLockChangeComplete::Run(void*)
  T CLibrarySuggestions::CCallbackInternal_OnPersonaStateChange::CCallbackInternal_OnPersonaStateChange()
  T CLibrarySuggestions::CCallbackInternal_OnPersonaStateChange::Run(void*)
  T CLibrarySuggestions::CLibrarySuggestions(panorama::CPanel2D*, char const*)
@@ -25407,7 +25412,9 @@
  T CLibrarySuggestions::OnUpdateFriendsWhoPlay()
  T CLibrarySuggestions::PopulatePopularWithFriendsRow()
  T CLibrarySuggestions::PopulateRecentlyPlayedRow()
+ T CLibrarySuggestions::PopulateUnplayedRow()
  T CLibrarySuggestions::SetupViewType()
+ T CLibrarySuggestions::UpdatePlayedRow(unsigned int, int, CLibrarySuggestions::ESuggestionRow)
  T CLibrarySuggestions::~CLibrarySuggestions()
  T CLibrarySuggestionsRow::CLibrarySuggestionsRow(panorama::CPanel2D*, char const*)
  T CLibrarySuggestionsRow::GetPanelType() const
@@ -37484,10 +37491,10 @@
  T CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::GrowVector(int)
  T CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<CLibrarySuggestions::FriendsPlay_t, CUtlMemory<CLibrarySuggestions::FriendsPlay_t> >::~CUtlVector()
- T CUtlVector<CLibrarySuggestions::Unplayed_t, CUtlMemory<CLibrarySuggestions::Unplayed_t> >::AddToTail(CLibrarySuggestions::Unplayed_t&&)
- T CUtlVector<CLibrarySuggestions::Unplayed_t, CUtlMemory<CLibrarySuggestions::Unplayed_t> >::GrowVector(int)
- T CUtlVector<CLibrarySuggestions::Unplayed_t, CUtlMemory<CLibrarySuggestions::Unplayed_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<CLibrarySuggestions::Unplayed_t, CUtlMemory<CLibrarySuggestions::Unplayed_t> >::~CUtlVector()
+ T CUtlVector<CLibrarySuggestions::GameEntry_t, CUtlMemory<CLibrarySuggestions::GameEntry_t> >::AddToTail(CLibrarySuggestions::GameEntry_t&&)
+ T CUtlVector<CLibrarySuggestions::GameEntry_t, CUtlMemory<CLibrarySuggestions::GameEntry_t> >::GrowVector(int)
+ T CUtlVector<CLibrarySuggestions::GameEntry_t, CUtlMemory<CLibrarySuggestions::GameEntry_t> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CLibrarySuggestions::GameEntry_t, CUtlMemory<CLibrarySuggestions::GameEntry_t> >::~CUtlVector()
  T CUtlVector<CLoadFileToCacheThread::DepotChunk_t, CUtlMemory<CLoadFileToCacheThread::DepotChunk_t> >::GrowVector(int)
  T CUtlVector<CLoadFileToCacheThread::DepotChunk_t, CUtlMemory<CLoadFileToCacheThread::DepotChunk_t> >::InsertBefore(int)
  T CUtlVector<CLoadFileToCacheThread::DepotChunk_t, CUtlMemory<CLoadFileToCacheThread::DepotChunk_t> >::ShiftElementsLeft(int, int)
@@ -38127,6 +38134,10 @@
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
+ T CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::AddToTail(NotPlayedApp_t&&)
+ T CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::GrowVector(int)
+ T CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::ShiftElementsLeft(int, int)
+ T CUtlVector<NotPlayedApp_t, CUtlMemory<NotPlayedApp_t> >::~CUtlVector()
  T CUtlVector<OpenFormatTag_t, CUtlMemory<OpenFormatTag_t> >::GrowVector(int)
  T CUtlVector<OpenFormatTag_t, CUtlMemory<OpenFormatTag_t> >::InsertBefore(int, OpenFormatTag_t const&)
  T CUtlVector<OpenFormatTag_t, CUtlMemory<OpenFormatTag_t> >::RemoveAll()
@@ -56363,6 +56374,7 @@
  r CGameRecordSession::FrameUncompressed(VideoFrame_t const&, unsigned char*, int, unsigned char*, int)::k_szDesktopPlaceholder
  r CGameStreamSystemOSX::ResetInputState()::arrKeys
  r CLibrarySuggestions::EventStoreFeaturedItems(bool, unsigned int)::k_nDefaultButtonIndicies
+ r CLibrarySuggestions::OnUpdateFriendsWhoPlay()::k_nDefaultButtonIndicies
  r CParentalUINavButton::AddMenuItem(char const*, char const*)::pchUrlPrefix
  r CQOS::SetQOS(int, EStreamQOSType, netadr_t const*, unsigned long*)::s_arrDSCPValues
  r CSteamDoc::RefreshBetaInformation(KeyValues*)::rgchBetaFlag
@@ -57053,8 +57065,6 @@
  t CUtlHashMap<CUtlString, CGamesPage_Details_DLC::SetPanelData(unsigned int, bool)::ItemData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  t CUtlHashMap<CUtlString, CGamesPage_Details_DLC::SetPanelData(unsigned int, bool)::ItemData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveNodeFromBucket(int, int)
  t CUtlHashMap<CUtlString, CGamesPage_Details_DLC::SetPanelData(unsigned int, bool)::ItemData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
- t CUtlVector<CLibrarySuggestions::EventStoreFeaturedItems(bool, unsigned int)::NotPlayedApp_t, CUtlMemory<CLibrarySuggestions::EventStoreFeaturedItems(bool, unsigned int)::NotPlayedApp_t> >::AddToTail(CLibrarySuggestions::EventStoreFeaturedItems(bool, unsigned int)::NotPlayedApp_t&&)
- t CUtlVector<CLibrarySuggestions::EventStoreFeaturedItems(bool, unsigned int)::NotPlayedApp_t, CUtlMemory<CLibrarySuggestions::EventStoreFeaturedItems(bool, unsigned int)::NotPlayedApp_t> >::~CUtlVector()
  t CUtlVector<CUtlHashMap<CUtlString, CGamesPage_Details_DLC::SetPanelData(unsigned int, bool)::ItemData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CGamesPage_Details_DLC::SetPanelData(unsigned int, bool)::ItemData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  t ChangeTouchkeyStyleRecurse(char const*, panorama::CPanel2D*, char const*, bool)
  t ClearNodeClientData(SteamVProf::CVProfNode*)
@@ -57326,6 +57336,7 @@
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
+ t NotPlayedAppCompare(NotPlayedApp_t const*, NotPlayedApp_t const*)
  t NullSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t OverlapsTouchKey(float, float, float, float, panorama::IUIPanel*, EKeyOverlapTestBehavior)
  t PNGErrorFunction(png_struct_def*, char const*)
