@@ -25402,6 +25402,7 @@
  T CLibrarySuggestions::CCallbackInternal_OnPersonaStateChange::Run(void*)
  T CLibrarySuggestions::CLibrarySuggestions(panorama::CPanel2D*, char const*)
  T CLibrarySuggestions::EventAppChangeNotification(panorama::CPanelPtr<panorama::IUIPanel> const&)
+ T CLibrarySuggestions::EventImageFailedLoad(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::IImageSource*)
  T CLibrarySuggestions::EventReloadSuggestions()
  T CLibrarySuggestions::EventStoreFeaturedItems(bool, unsigned int)
  T CLibrarySuggestions::EventStoreGenreDataResponse(char const*, CSmartPtr<CBrowseByCategoryData const, CRefCountAccessor>, unsigned int)
