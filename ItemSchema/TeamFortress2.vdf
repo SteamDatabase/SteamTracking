@@ -110747,15 +110747,24 @@
 							"event_name"		"teamplay_flag_event"
 							"0"
 							{
-								"type"		"class"
-								"player_key"		"player"
-								"get_player"		"by_entindex"
-								"jumping_state"		"0"
-								"disguise_target"		"0"
-								"min_stickies"		"0"
-								"alive_state"		"0"
-								"is_owner"		"1"
-								"value"		"heavy"
+								"type"		"AND"
+								"0"
+								{
+									"type"		"class"
+									"player_key"		"player"
+									"get_player"		"by_entindex"
+									"jumping_state"		"0"
+									"disguise_target"		"0"
+									"min_stickies"		"0"
+									"alive_state"		"0"
+									"is_owner"		"1"
+									"value"		"heavy"
+								}
+								"1"
+								{
+									"type"		"flag_event_type"
+									"value"		"TF_FLAGEVENT_DEFEND"
+								}
 							}
 						}
 					}
