@@ -444,12 +444,10 @@
         "atk_l": "Ranged",
         "roles": [
             "Support",
-            "LaneSupport",
             "Nuker"
         ],
         "roles_l": [
             "Support",
-            "Lane Support",
             "Nuker"
         ]
     },
@@ -459,16 +457,16 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
+            "Support",
             "Disabler",
             "Nuker",
-            "LaneSupport",
-            "Support"
+            "Initiator"
         ],
         "roles_l": [
+            "Support",
             "Disabler",
             "Nuker",
-            "Lane Support",
-            "Support"
+            "Initiator"
         ]
     },
     "shadow_shaman": {
@@ -477,16 +475,18 @@
         "atk": "ranged",
         "atk_l": "Ranged",
         "roles": [
+            "Support",
             "Pusher",
             "Disabler",
             "Nuker",
-            "Support"
+            "Initiator"
         ],
         "roles_l": [
+            "Support",
             "Pusher",
             "Disabler",
             "Nuker",
-            "Support"
+            "Initiator"
         ]
     },
     "slardar": {
