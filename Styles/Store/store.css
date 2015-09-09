@@ -1759,6 +1759,7 @@ body.v6 .discover_queue_empty>h3 {
 .dq_item .dq_item_cap {
 	width: 100%;
 	height: auto;
+	display: block;
 }
 
 .dq_item_overlay {
