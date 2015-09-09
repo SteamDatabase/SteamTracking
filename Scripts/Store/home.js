@@ -24,6 +24,42 @@ GHomepage = {
 
 	MainCapCluster: null,
 
+	InitLayout: function()
+	{
+		var $Ctn = $J('.home_page_body_ctn');
+		if ( $Ctn.hasClass('has_takeover') )
+		{
+			var $Background = $Ctn.children( '.page_background_holder' );
+			var $Menu = $J('#store_header');
+
+			var $TakeoverLink = $J('.home_page_takeover_link' ).children('a');
+			var nInitialTakeoverLinkHeight = $TakeoverLink.height();
+
+			$J(window ).on('Responsive_SmallScreenModeToggled.StoreHomeLayout', function() {
+				if ( window.UseSmallScreenMode && window.UseSmallScreenMode() )
+				{
+					// the -5vw here accounts for the bit that would normally be overlapped by the menu, we use
+					//	viewport-relative units because the background is being scaled relative to the viewport.
+					$Background.css( 'background-position', 'center -3.5vw' );
+
+					// this is the link, which also allocates the space for the takeover to be visible above the cluster rotation.
+					//	we scale it based on the viewport width, assuming the initial width was 940px
+					if ( nInitialTakeoverLinkHeight )
+						$TakeoverLink.css( 'height', Math.floor( nInitialTakeoverLinkHeight / 940 * 100 ) + 'vw' );
+
+				}
+				else
+				{
+					$Background.css( 'top', '' ).css('background-position', '');
+					if ( nInitialTakeoverLinkHeight )
+						$TakeoverLink.css( 'height', nInitialTakeoverLinkHeight + 'px' );
+				}
+			} ).trigger('Responsive_SmallScreenModeToggled.StoreHomeLayout');
+		}
+
+		InitHorizontalAutoSliders();
+	},
+
 	InitUserData: function( rgParams )
 	{
 		try {
@@ -167,6 +203,13 @@ GHomepage = {
 
 		GHomepage.oDisplayListsRaw = null;
 
+		$J(window ).on('Responsive_SmallScreenModeToggled.StoreHome', function() {
+			// re-render the guys that adjust # of items in responsive mode
+			GHomepage.RenderNewOnSteam();
+			GHomepage.RenderRecentlyUpdated();
+			GSteamCurators.Render();
+		});
+
 		// More Content
 		if( bHaveUser )
 		{
@@ -293,6 +336,7 @@ GHomepage = {
 				onChangeCB: GDynamicStore.HandleClusterChange
 			} );
 
+		$MainCluster.append( $J('<div/>', {'style': 'clear: left;'} ) );
 		$MainCluster.InstrumentLinks();
 		GDynamicStore.DecorateDynamicItems( $MainCluster );
 	},
@@ -308,7 +352,7 @@ GHomepage = {
 		}
 
 		var rgFeaturedLaunchTitles = GHomepage.FilterItemsForDisplay(
-			rgNewOnSteamNoMainCap, 'new_on_steam', 0, 3
+			rgNewOnSteamNoMainCap, 'new_on_steam', 0, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
 		);
 
 		var $NewOnSteam = $J('.home_smallcap_area.new_on_steam .home_smallcaps' ).empty();
@@ -320,6 +364,7 @@ GHomepage = {
 			$NewOnSteam.append( $CapCtn );
 		}
 		$NewOnSteam.append( $J('<div/>', {'style': 'clear: left;' } ) );
+		$NewOnSteam.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
 
 		if ( rgFeaturedLaunchTitles.length )
 		{
@@ -337,7 +382,7 @@ GHomepage = {
 	RenderRecentlyUpdated: function()
 	{
 		var rgFeaturedUpdateTitles = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.recently_updated, 'recently_updated', 0, 3
+			GHomepage.oDisplayLists.recently_updated, 'recently_updated', 0, window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 3
 		);
 
 		var $RecentlyUpdated =  $J('.home_smallcap_area.recently_updated .home_smallcaps' ).empty();
@@ -360,6 +405,7 @@ GHomepage = {
 			$RecentlyUpdated.append( $CapCtn );
 		}
 		$RecentlyUpdated.append( $J('<div/>', {'style': 'clear: left;' } ) );
+		$RecentlyUpdated.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
 
 		if ( rgFeaturedUpdateTitles.length )
 		{
@@ -503,7 +549,7 @@ GHomepage = {
 
 		if ( rgItemData.main_capsule )
 		{
-			$CapCtn.append( $J('<img/>', {'class': 'cluster_capsule_image', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': rgItemData.main_capsule } ) );
+			$CapCtn.append( $J('<img/>', {'class': 'cluster_capsule_image', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif', 'data-image-url': rgItemData.main_capsule } ) );
 		}
 		else
 		{
@@ -512,6 +558,7 @@ GHomepage = {
 			{
 				$CapCtn.append( $J('<div/>', {'class': 'cluster_maincap_fill ' + (rgItemData.package_header ? 'package' : '') } )
 					.append(
+						$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
 						$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } ),
 						$J('<img/>', {'class': 'cluster_maincap_fill_header', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } )
 					)
@@ -529,7 +576,7 @@ GHomepage = {
 			$CapCtn.append( $J('<div/>', {'class': 'main_cap_desc'})
 			.append( $J('<div/>', {'class': 'main_cap_content'})
 				.append( $J('<div/>', {'class': 'main_cap_platform_area platform_area'}).html( GHomepage.BuildSupportedPlatformIcon( rgItemData ) ) )
-				.append( $J('<div/>', {'class': 'main_cap_status'}).text( strStatus ) )
+				.append( $J('<div/>', {'class': 'main_cap_status ellipsis'}).text( strStatus ) )
 			)
 		);
 
@@ -988,7 +1035,7 @@ GSteamCurators = {
 			var apps = GSteamCurators.rgAppsRecommendedByCurators.apps;
 
 			var rgRecommendedApps = GHomepage.FilterItemsForDisplay(
-				apps, 'curators', 4
+				apps, 'curators', window.UseSmallScreenMode && window.UseSmallScreenMode() ? 9 : 4
 			);
 
 			if ( rgRecommendedApps.length >= 4 )
@@ -1006,6 +1053,7 @@ GSteamCurators = {
 					}
 				}
 				$RecommendedApps.InstrumentLinks();
+				$RecommendedApps.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
 				GDynamicStore.DecorateDynamicItems( $RecommendedApps );
 				return;
 			}

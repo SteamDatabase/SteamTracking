@@ -1003,7 +1003,7 @@ function LaunchWebChat()
 
 	var iframe = $J( '<iframe/>', {id: 'webchat_launch_iframe' } );
 	iframe.hide();
-	iframe.attr( src, 'http://steamcommunity.com/chat/launch/' );
+	iframe.attr( 'src', 'http://steamcommunity.com/chat/launch/' );
 	$J(document.body).append( iframe );
 }
 
@@ -1837,5 +1837,51 @@ function AgeGateClear()
 {
 	WebStorage.SetCookie('birthtime', 0, -1);
 	window.location.reload();
+}
+
+function InitHorizontalAutoSliders()
+{
+	$J('.store_horizontal_autoslider' ).each( function() {
+		var $Scroll = $J(this);
+		var $Wrapper = $Scroll.wrap( $J('<div/>', {'class': 'store_horizontal_autoslider_ctn' } ) ).parent();
+		var $SliderCtn = $J('<div/>', {'class': 'slider_ctn store_autoslider'} );
+		var $SliderLeft = $J('<div/>', {'class': 'slider_left'} ).append($J('<span/>'));
+		var $SliderRight = $J('<div/>', {'class': 'slider_right'} ).append($J('<span/>'));
+		var $Slider = $J('<div/>', {'class': 'slider' } );
+		$SliderCtn.append(
+			$SliderLeft, $SliderRight,
+			$J('<div/>', {'class': 'slider_bg' } ),
+			$Slider.append( $J('<div/>', {'class': 'handle'} ) )
+		);
+		$Wrapper.after( $SliderCtn );
+		var fnFixHeight = function() { $Wrapper.height( $Scroll[0].scrollHeight ); };
+
+		$Wrapper.on('v_contentschanged', function() {
+			fnFixHeight();
+			$Wrapper.find('img' ).one('load', fnFixHeight );
+		} ).trigger('v_contentschanged');
+		var Slider = new CScrollSlider( $Scroll, $SliderCtn );
+
+		var fnGetScrollIncrement = function() {
+			var $TryChild = $Scroll;
+			do
+			{
+				$TryChild = $TryChild.children().first();
+				if ( $TryChild.width() && $TryChild.outerWidth() < $Scroll.width() )
+				{
+					return $TryChild.outerWidth();
+				}
+			} while ( $TryChild.length );
+
+			return $Wrapper.width() / 3;
+		}
+
+		$SliderLeft.click( function() {
+			Slider.SetValue( Slider.GetValue() - fnGetScrollIncrement(), 250 );
+		});
+		$SliderRight.click( function() {
+			Slider.SetValue( Slider.GetValue() + fnGetScrollIncrement(), 250 );
+		});
+	});
 }
 

@@ -2,6 +2,7 @@
 .game_page_background.game {
 	background-position: center top;
 	background-repeat: no-repeat;
+	min-width: 972px;
 }
 
 .game_icon {
@@ -216,7 +217,8 @@
     color: #61686d;
     margin-top: 10px;
 }
-.glance_ctn .release_date .date {
+.glance_ctn .release_date .date,
+.glance_ctn .responsive_reviewdesc {
 	color: #8f98a0;
 }
 
@@ -267,7 +269,7 @@ img.game_header_image_full {
 }
 
 .game_area_bubble {
-	width: 616px;
+	max-width: 616px;
 
 	margin-bottom: 2px;
 	font-size: 13px;
@@ -634,6 +636,10 @@ img.game_header_image_full {
 
 	right: 16px;
 	bottom: -17px;
+	left: 16px;
+	overflow-x: auto;
+	white-space: nowrap;
+	text-align: right;
 }
 
 .game_purchase_action_bg {
@@ -643,6 +649,7 @@ img.game_header_image_full {
 	padding: 2px 2px 2px 0px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
+	white-space: nowrap;
 }
 
 .game_purchase_action .game_purchase_price,
@@ -651,8 +658,9 @@ img.game_header_image_full {
 .game_purchase_action .btn_packageinfo,
 .game_purchase_action .game_purchase_action_bg
 {
-	float: left;
+	display: inline-block;
 	margin-left: 2px;
+	vertical-align: middle;
 }
 
 .game_purchase_action .game_purchase_price {
@@ -1457,6 +1465,7 @@ a.friend_block_holder:hover {
 
 .rightcol.game_meta_data {
     margin-top: 16px;
+	overflow: hidden;
 }
 
     .rightcol.game_meta_data .block {
@@ -1469,14 +1478,9 @@ a.friend_block_holder:hover {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#80000000',GradientType=1 ); /* IE6-9 */
 
         padding: 16px;
-        margin-bottom: 3px;
+		margin-bottom:8px;
+		margin-top: 0;
     }
-        .rightcol.game_meta_data .block#demo_block,
-        .rightcol.game_meta_data .block#friend_block,
-        .rightcol.game_meta_data .block#achievement_block,
-        .rightcol.game_meta_data .block#category_block {
-            margin-bottom:8px;
-        }
 
     .rightcol.game_meta_data .action_btn {
         display: inline-block;
@@ -1503,6 +1507,58 @@ a.friend_block_holder:hover {
         background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
+
+
+.block_responsive_horizontal_scroll.block_content {
+	white-space: nowrap;
+	width: auto;
+}
+.block_responsive_horizontal_scroll.block_content a.small_cap {
+	float: none;
+	display: inline-block;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .game_page_background.game {
+		min-width: 0;
+	}
+
+	html.responsive .rightcol.game_meta_data .block {
+		background: rgba( 0, 0, 0, 0.2 );
+		filter: none;
+	}
+
+	html.responsive #responsive_apppage_details_left_ctn {
+		float: left;
+		width: calc( 50% - 8px );
+		margin-right: 8px;
+	}
+
+	html.responsive #responsive_apppage_details_right_ctn {
+		overflow: hidden;
+	}
+
+	html.responsive .game_description_column img {
+		max-width: 100%;
+	}
+}
+
+@media screen and ( max-width: 680px )
+{
+	html.responsive .rightcol.game_meta_data .block {
+		padding: 12px;
+	}
+}
+
+@media screen and ( max-width: 625px )
+{
+	html.responsive #responsive_apppage_details_left_ctn
+	{
+		float: none;
+		width: auto;
+	}
+}
 
 
 .DRM_notice {
@@ -1894,14 +1950,16 @@ body.v6 .game_area_already_owned.page_content {
 }
 .game_area_already_owned .ds_flag {
 	position: relative;
-	display: inline-block;
-	top: -2px;
+	float: left;
+	top: 10px;
 	left: -8px;
     box-shadow: 1px 1px 2px #000000;
 	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC') no-repeat 4px 4px #a3cf06;
 }
 .game_area_already_owned .already_in_library {
-	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .already_owned_actions {
@@ -3077,7 +3135,6 @@ select.gray_bevel {
 .steam_curator_selected
 {
 	position: relative;
-	float: left;
 	margin-top: 6px;
 	min-height: 75px;
 }
@@ -3402,6 +3459,10 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 		width: auto;
 		margin-right: 0;
 	}
+
+	html.responsive .glance_tags_ctn.your_tags_ctn {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 470px )
@@ -3409,6 +3470,16 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 	html.responsive .game_header_image_ctn {
 		float: none;
 		width: auto;
+	}
+
+	html.responsive .steam_curators_grid {
+		width: auto;
+		float: none;
+	}
+
+	html.responsive .steam_curator_selected .steam_curator_icon.medium {
+		border: none;
+		padding-left: 0;
 	}
 }
 

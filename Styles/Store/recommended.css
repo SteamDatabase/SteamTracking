@@ -1383,8 +1383,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 #review_create .content {
-	float: left;
-	width: 790px
+	overflow: hidden;
 }
 
 #review_create .input_box {
@@ -1402,6 +1401,34 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
     -webkit-box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
     -moz-box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
     box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
+}
+
+.review_controls_left {
+	float: left;
+	margin-bottom: 8px;
+	margin-right: 8px;
+}
+
+.review_controls_right {
+	overflow: hidden;
+	text-align: right;
+}
+
+@media screen and (max-width: 500px)
+{
+	html.responsive .review_controls_right {
+		clear: left;
+	}
+	html.responsive #review_create .avatar {
+		width: 66px;
+		height: 66px;
+		margin-right: 8px;
+	}
+
+	html.responsive #review_create .avatar img {
+		width: 64px;
+		height: 64px;
+	}
 }
 
 .review_create_vote_controls {
@@ -1571,7 +1598,6 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .review_box .vote_header {
-	height: 44px;
 	margin: 8px 0 13px;
 }
 
@@ -1827,7 +1853,6 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .loading_more_reviews
 {
-	width: 616px;
 	height: 32px;
 	line-height: 32px;
 	text-align: center;
@@ -1873,5 +1898,26 @@ body.recommendgame #review_create h1  {
 
 	html.responsive #review_create .input_box {
 		width: calc( 100% - 24px );
+	}
+
+	html.responsive .review_box .leftcol {
+		float: left;
+		width: 184px;
+	}
+
+	html.responsive .review_box .rightcol {
+		padding: 8px;
+	}
+
+	html.responsive .review_box .rightcol .vote_header {
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 360px)
+{
+	html.responsive .review_box .leftcol {
+		float: none;
+		width: auto;
 	}
 }

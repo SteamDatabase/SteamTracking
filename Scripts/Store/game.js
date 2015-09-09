@@ -199,25 +199,23 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
 	}
 
 	var rgRecommendationsToShow = [];
-	var rgSkipped = [];
+	var nCurScore = 0;
 	for ( var i = 0; i < rgRecommendedAppIDs.length; i++ )
 	{
 		var unAppID = rgRecommendedAppIDs[i];
 		if ( GDynamicStore.BIsAppIgnored( unAppID ) )
 			continue;
 		else if ( GDynamicStore.BIsAppOwned( unAppID ) )
-			rgSkipped.push( unAppID );
+			rgRecommendationsToShow.push( { score: 3 + nCurScore++, appid: unAppID } );
 		else
-			rgRecommendationsToShow.push( unAppID );
+			rgRecommendationsToShow.push( { score: nCurScore++, appid: unAppID } );
 	}
 
-	var iSkipped = 0;
-	while ( rgRecommendationsToShow.length < 3 && iSkipped < rgSkipped.length )
-		rgRecommendationsToShow.push( rgSkipped[iSkipped++] );
+	rgRecommendationsToShow.sort( function( a, b ) { return a.score - b.score; } );
 
-	for ( var i = 0; i < rgRecommendationsToShow.length && i < 3; i++ )
+	for ( var i = 0; i < rgRecommendationsToShow.length; i++ )
 	{
-		var unAppID = rgRecommendationsToShow[i];
+		var unAppID = rgRecommendationsToShow[i].appid;
 		var rgItemData = GStoreItemData.rgAppData[ unAppID ];
 		if ( !rgItemData )
 			continue;
@@ -238,6 +236,7 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
 	}
 	GDynamicStore.DecorateDynamicItems( $J('#recommended_block_content') );
 	$J('#recommended_block_content').append( $J('<div/>', { style: 'clear: left;' } ) );
+	$J('#recommended_block_content').trigger('v_contentschanged');
 }
 
 function ShowEULA( elLink )

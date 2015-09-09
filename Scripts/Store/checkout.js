@@ -2693,49 +2693,6 @@ function IsDigitOrEditKeypress( e )
 	return false;
 }
 
-function CardLuhnCheck( card_number )
-{
-	try 
-	{
-		var sum = 0;
-		var j = 0;
-		var i = 0;
-		
-				for ( i = 0; i < card_number.length; ++i )
-		{
-			var c = card_number.charAt(i);
-			if ( c < '0' || c > '9' )
-				return false;  
-		}
-		
-		
-				i = card_number.length;
-		while ( i-- )
-		{
-			var c = parseInt( card_number.charAt(i) );
-			if ( j++ & 1 )
-			{
-				c = c * 2;
-				if ( c > 9 )
-				{
-					c -= 10;
-					sum++;
-				}
-			}
-			
-			sum += c;
-		}
-		
-		return ((sum % 10) == 0);
-	} 
-	catch( e ) 
-	{
-		ReportCheckoutJSError( 'Failed in CardLuhnCheck', e );
-	} 
-		
-	return false;
-}
-	
 
 var g_bAutoSubmitPaymentInfo = false;
 function SubmitShippingInfoForm( bAutoSubmitPaymentInfo )

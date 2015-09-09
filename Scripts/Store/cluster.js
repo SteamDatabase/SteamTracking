@@ -3,7 +3,7 @@ function Cluster( args )
 {
 	this.nCurCap = 0;
 	this.bInScroll = false;
-	this.bSuppressScrolling = false;
+	this.bSuppressScrolling = true;
 	this.bUseActiveClass = false;
 	this.rgCapsToLoad = [];
 	this.onChangeCB = null;
@@ -33,14 +33,79 @@ function Cluster( args )
 	this.elScrollLeftBtn.on( 'click', function( event ) { _this.scrollLeft( event ); } );
 	this.elScrollRightBtn.on( 'click', function( event ) { _this.scrollRight( event, false ); } );
 
-	this.elClusterArea.on( 'mouseover', function( event ) { _this.mouseOver( event ); } );
-	this.elClusterArea.on( 'mouseout', function( event ) { _this.mouseOut( event ); } );
+	this.elClusterArea.on( 'mouseenter', function( event ) { _this.mouseOver( event ); } );
+	this.elClusterArea.on( 'mouseleave', function( event ) { _this.mouseOut( event ); } );
 
 	this.rgCapsToLoad = $J(this.elScrollArea).find('.cluster_capsule');
 
 	this.initSlider();
 	this.ensureImagesLoaded();
 	this.onCapsuleFullyVisible();
+
+	if ( $J('html' ).hasClass('responsive') )
+	{
+		// need to listen for resize
+		$J(window ).on('resize.Cluster', function() {
+			var nNewCapWidth = Math.min( _this.elClusterArea.width(), 616 ) + 4;
+			if ( nNewCapWidth && nNewCapWidth != _this.nCapWidth )
+			{
+				var $Capsules = _this.elScrollArea.find('.cluster_capsule');
+				$Capsules.css('width', ( nNewCapWidth - 4 ) + 'px' );
+
+				_this.nCapWidth = nNewCapWidth;
+
+				_this.elScrollArea.stop();
+				_this.elScrollArea.css('width', _this.nCapWidth * ( _this.cCapCount + 1 ) + 2 /* to handle any rounding issues */);
+
+				window.setTimeout( function() { _this.elScrollArea.css('height', $Capsules.height() ); }, 1 );
+
+				var nNewOffset = _this.nCurCap * _this.nCapWidth;
+				_this.slider.SetRange( 0, _this.nCapWidth * (_this.cCapCount - 1 ), nNewOffset );
+				_this.sliderOnChange( nNewOffset, true );
+			}
+		} ).trigger('resize.Cluster');
+
+		// ideally we would use scrolling, but implementing our own touch/drag events
+		// 	requires rewriting less of this other stuff
+		this.elScrollArea.on('touchstart.Cluster', function(event) {
+
+			var fnGetPageX = function( event )
+			{
+				var TouchEvent = event.originalEvent;
+				var rgTouches = TouchEvent ? TouchEvent.touches : null;
+				if ( !rgTouches || rgTouches.length < 1 )
+					return event.pageX || 0;	//probably wrong
+				return rgTouches[0].pageX || 0;
+			}
+
+
+			var nSliderValue = _this.slider.GetValue();
+			var nStartDragX = fnGetPageX( event );
+			var tsDragStart = $J.now();
+			var nDelta = 0;
+
+			$J(document ).on('touchmove.ClusterDrag', function( event ) {
+				nDelta = fnGetPageX( event ) - nStartDragX;
+
+				_this.slider.SetValue( nSliderValue - nDelta );	// will clamp
+				_this.sliderOnChange( _this.slider.GetValue(), true );
+			});
+			$J(document ).on('touchend.ClusterDrag', function(event) {
+				$J(document ).off('.ClusterDrag');
+
+				// if the user swiped quickly, then we'll just jump to the next guy even if we'd normally stop.
+				var tsDragEnd = $J.now();
+				var nRatePerSecond = Math.abs( nDelta ) / ( tsDragEnd - tsDragStart ) * 1000;
+				if ( nRatePerSecond > _this.nCapWidth && Math.abs( nDelta ) < _this.nCapWidth / 2 )
+				{
+					// it was quick, so jump to the next guy
+					_this.slider.SetValue( nSliderValue + _this.nCapWidth * ( nDelta > 0 ? -1 : 1 ) );
+				}
+
+				_this.sliderOnChange( _this.slider.GetValue(), false );
+			});
+		});
+	}
 
 	$J( function() { _this.startTimer(); } );
 }
@@ -51,6 +116,9 @@ Cluster.prototype.setCaps = function( cCapCount, rgImageURLs )
 	this.rgCapsToLoad = $J(this.elScrollArea).find('.cluster_capsule');
 	this.slider.SetRange( 0, this.nCapWidth * ( this.cCapCount - 1 ), 0 );
 	this.sliderOnChange( 0, true );	// force back to the start
+
+	if ( $J('html').hasClass('responsive') )
+		$J(window).trigger('resize.Cluster');
 };
 
 Cluster.prototype.initSlider = function()
@@ -83,67 +151,10 @@ Cluster.prototype.clearInterval = function()
 Cluster.prototype.mouseOver = function( event )
 {
 	this.clearInterval();
-
-	if ( this.bUseActiveClass )
-	{
-		var bInDeadZone = false;
-
-		if ( event )
-		{
-			var ancestors = $J( event.toElement ).parents();
-
-			if ( $J( event.toElement ).hasClass( 'main_cap_content' ) )
-			{
-				bInDeadZone = true;
-			}
-		}
-		else
-		{
-			var ancestors = $J();
-		}
-
-		if ( !bInDeadZone && !ancestors.is( this.elScrollLeftBtn ) && !ancestors.is( '.main_cap_content' ) )
-		{
-			this.elScrollRightBtn.addClass('active');
-		}
-		else
-		{
-			this.elScrollRightBtn.removeClass('active');
-		}
-
-		if ( !bInDeadZone && !ancestors.is( this.elScrollRightBtn ) && !ancestors.is( '.main_cap_content' ) )
-		{
-			this.elScrollLeftBtn.addClass('active');
-		}
-		else
-		{
-			this.elScrollLeftBtn.removeClass('active');
-		}
-	}
-	else
-	{
-		ShowWithFade( this.elScrollLeftBtn );
-		ShowWithFade( this.elScrollRightBtn );
-	}
 }
 
 Cluster.prototype.mouseOut = function( event )
 {
-	var reltarget = $J( event.relatedTarget );
-	if ( reltarget.length && $J.contains( this.elClusterArea[0], reltarget[0] ) )
-		return;
-
-	if ( this.bUseActiveClass )
-	{
-		this.elScrollLeftBtn.removeClass('active');
-		this.elScrollRightBtn.removeClass('active');
-	}
-	else
-	{
-		HideWithFade( this.elScrollLeftBtn );
-		HideWithFade( this.elScrollRightBtn );
-	}
-
 	this.startTimer();
 }
 
