@@ -25,7 +25,7 @@ TenfootFooterPanel.FooterEmpty, TenfootFooterPanel.Hide
 
 TenfootFooterPanel.WebFooter
 {
-	background-color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #0b3452ff ), color-stop( 1.0, #12547cff ) );
+	background-color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #06192eff ), color-stop( 1.0, #051424ff ) );
 }
 
 

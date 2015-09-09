@@ -5,11 +5,10 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 	
-	<LibraryPanel defaultfocus="LibraryMostRecent" hittest="false" >
+	<LibraryPanel defaultfocus="LibraryMostRecent" hittest="false" content-title="#Library_ContentTitle" >
 		<LibraryMostRecent id="LibraryMostRecent" class="LibraryMostRecent" hittest="false"/>
 		<Panel id="AppDetailsClose" onmouseactivate="NavigateTenfootBack();" />
-		<LibraryAppDetails id="LibraryAppDetails" class="LibraryAppDetailsSlideOff" />
-		<LibraryAllGames id="LibraryAllGames" class="LibraryAllGames" />
 		<LibrarySettings id="LibrarySettings" class="LibrarySettingsSlideOff" />
+		<MusicPanel id="MusicPanel" />
 	</LibraryPanel>
 </root>

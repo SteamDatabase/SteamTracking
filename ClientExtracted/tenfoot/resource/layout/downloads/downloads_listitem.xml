@@ -1,0 +1,26 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/downloads.css" />
+	</styles>
+	
+	<DownloadsListItem class="DownloadsListItem" >
+		
+		<Panel class="DownloadsListItemLeft" >
+			<Button id="AppButton" mousecanactivate="iffocused" onmouseactivate="DownloadsActivate()" >
+				<Image id="DownloadImage" class="ListItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+			</Button>
+		</Panel>
+		
+		<Panel class="DownloadsListItemRight" >
+			<Label id="DownloadTitle" class="DownloadText" text="#Downloads_ItemTitle" />
+			<Label id="DownloadStatus" class="DownloadText"	text="#Downloads_ItemStatus" />
+						
+			<Panel class ="DownloadBarBackground">
+				<Panel id ="DownloadBarPercent" class="DownloadBarPercent" />
+			</Panel>
+			
+			<Label id="DownloadAmount" class="DownloadText" text="#Downloads_AmountValue" />
+		</Panel>
+	</DownloadsListItem>
+</root>

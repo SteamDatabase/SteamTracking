@@ -10,6 +10,11 @@ TextInputDualTouch
 	background-color: #00000088;
 }
 
+.MinimalKeyboard TextInputDualTouch
+{
+	background-color: #00000000;
+}
+
 #Backdrop
 {
 	width: 100%;
@@ -32,6 +37,17 @@ TextInputDualTouch
 .SuggestionsCount4 #Backdrop
 {
 	height: 550px;
+}
+
+.MinimalKeyboard #Backdrop
+{
+	margin-top: 20px;
+}
+
+.MinimalKeyboard .DockBottom #Backdrop
+{
+	margin-bottom: 20px;
+	margin-top: 520px;
 }
 
 #TextPreviewBackground
@@ -75,8 +91,8 @@ TextInputDualTouch
 	text-align: left;
 }
 
-.NoPreview #TextPreview,
-.NoPreview #TextPreviewBackground
+.MinimalKeyboard #TextPreview,
+.MinimalKeyboard #TextPreviewBackground
 {
 	visibility: collapse;
 }
@@ -127,12 +143,18 @@ TextInputDualTouch
 	horizontal-align: left;
 }
 
-#TopRow,
+#TopRow
+{
+	height: 70px;
+	width: 88%;
+}
+
 #LastRow
 {
 	height: 70px;
-	width: 88.8%;
+	width: 89%;
 }
+
 .SuggestionsCount4 #TopRow
 {
 	height: 86px;
@@ -348,13 +370,13 @@ TextInputDualTouch
 	width: 50%;
 }
 
-#TouchKey_Submit
+#TouchKey_Close
 {
 	background-color: #3f643a;
 	width: 50%;
 }
 
-#TouchKey_Submit.TouchKeyHover
+#TouchKey_Close.TouchKeyHover
 {
 	background-color: #88b51c;
 }
@@ -416,6 +438,11 @@ TextInputDualTouch
 }
 
 #TouchKey_Enter.TouchKey
+{
+	width: 29.07%;
+}
+
+#TouchKey_EnterNoClose.TouchKey
 {
 	width: 29.07%;
 }
@@ -563,4 +590,79 @@ TextInputDualTouch
 	horizontal-align: right;
 	text-align: left;
 	min-width: 100px;
+}
+
+.FriendsChat #Backdrop
+{
+	background-color: white;
+}
+
+.FriendsChat #HeaderText, .FriendsChat #Legends, .FriendsChat #TextPreviewBackground
+{
+	visibility: collapse;
+}
+
+.FriendsChat #BackDrop 
+{
+	box-shadow: none;
+	border-radius: 0px;
+	background-color: none;
+
+	margin-bottom: 0px;
+}
+
+ TextInputDualTouch.FriendsChat
+{
+	background-color: #00000000;
+	margin-top: 51%;
+}
+
+.FriendsChat #BodyContainer
+{
+	color: #00000000;
+	background-color: #00000000;
+	box-shadow: none;
+	horizontal-align: center;
+}
+
+.FriendsChat #BackDrop
+{
+	margin-top: 0px;
+}
+
+#TouchKey_Submit
+{
+	background-color: #3f643a;
+	width: 50%;
+	visibility: collapse;
+}
+
+#TouchKey_Submit.TouchKeyHover
+{
+	background-color: #88b51c;
+}
+
+.FriendsChat #TouchKey_Submit
+{
+	visibility: visible;
+}
+
+.FriendsChat #TouchKey_Close
+{
+	visibility: collapse;
+}
+
+.FriendsChat #TouchKey_Enter
+{
+	visibility: collapse;
+}
+
+#TouchKey_EnterNoClose
+{
+	visibility: collapse;
+}
+
+.FriendsChat #TouchKey_EnterNoClose
+{
+	visibility: visible;
 }

@@ -175,7 +175,7 @@
 @define slideshow_bg2: gradient( linear, 0% 0%, 0% 100%, from( #00000066 ), color-stop( 0.7, #00000066 ), to( #000000ff ) );
 @define slideshow_bg3: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop( 0.7, #00000000 ), to( #000000ff ) );
 @define all_games_hover: gradient( linear, 0% 0%, 100% 100%, from( #309ebf ), to( #0b224d ) );
-@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #1e5a78 ), to( #091b3d ) );
+@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #205a7e ), to( #22648a ) );
 @define state_panel: gradient( linear, 0% 0%, 100% 100%, from( #ffffff1A ), to( #ffffff1A ) );
 @define transparent_module: gradient( linear, 0% 0%, 100% 100%, from( #030a1a99 ), to( #00000099 ) );
 @define transparent_module2: gradient( linear, 0% 0%, 0% 100%, from( #1b3a59aa ), to( #121b2edd ) );

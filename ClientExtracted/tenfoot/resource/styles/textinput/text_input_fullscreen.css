@@ -10,12 +10,22 @@ TextInputFullscreen
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #274e66ff ), to( #1d3a4dff ) );
 }
 
+TextInputFullscreen.MinimalKeyboard
+{
+	background-color: #00000000;
+}
+
 #FullscreenColumnRight
 {
 	width: 50%;
 	horizontal-align: right;
 	vertical-align: center;
 	flow-children: down;
+}
+
+.MinimalKeyboard #FullscreenColumnRight
+{
+	visibility: collapse;
 }
 
 #InputDescription

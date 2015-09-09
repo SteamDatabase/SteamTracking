@@ -5,8 +5,7 @@
 		<include src="file://{resources}/styles/store/filterselector.css" />
 	</styles>
 	
-	<LibraryAllGames defaultfocus="SuggestedFilter" selectionposboundary="vertical">
-		<Image id="GridBackground" class="NxGridBackground" />
+	<LibraryAllGames defaultfocus="SuggestedFilter" selectionposboundary="vertical" content-title="#Library_ContentTitle">
 		<Label id="SectionLabel" class="SectionLabel" text="#Library_AllGames_Header" />
 		<Panel hittest="false" id="FastScrollWrapper">
 			<Label id="FastScrollLabel" />
@@ -14,63 +13,67 @@
 		</Panel>
 		<Panel class="AllGamesContent" >
 			<Panel class="NxGridButtonRow" tabindex="auto" selectionpos="0,0" onfocus="FocusMenuRow();" onmoveright="FocusGamesGrid();" >
-
-                <Panel class="GamesHorizRule" />
-                <Button id="SuggestedFilter" onfocus="GamesViewType(suggested);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
-                    <Label text="#Library_HomeFilter" html="true" />
-                </Button>
-
-                <Panel class="GamesHorizRule" />
-                <Label text="#Library_AllGamesPlay" class="Header" />
-
-
-
-				<Button id="RecentFilter" onfocus="GamesViewType(recent);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
-					<Label text="#Library_RecentlyPlayedFilter" html="true" />
-				</Button>
-				<Button id="InstalledFilter" onfocus="GamesViewType(installed);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
-					<Label text="#Library_Installed" html="true"/>
-				</Button>
-				<Button id="FavoritesFilter" onfocus="GamesViewType(favorites);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
-					<Label text="#Library_Favorites" html="true"/>
-				</Button>
-				<Panel class="GamesHorizRule" />
-				<Label text="#Library_AllGamesBrowse" class="Header" />
-				<Button id="AllGamesFilter" onfocus="GamesViewType(allgames);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
-					<Label text="#Library_AllGames" html="true"/>
-				</Button>
-				<Button id="VideosFilter" onfocus="GamesViewType(videos);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
-					<Label text="#Library_StreamingVideos" html="true"/>
-				</Button>
-				<Button id="MusicFilter" onfocus="GamesViewType(music);" onactivate="MoveRight(0);" class="NxLeftNavButton" selectionpos="auto">
-					<Label text="#Library_LocalMusicTitle" html="true"/>
-				</Button>
-				<Button id="UnblockedFilter" onfocus="GamesViewType(unblocked);" class="NxLeftNavButton" selectionpos="auto">
-					<Label text="#Library_AllGamesUnblocked"/>
-				</Button>
-				<Panel class="GamesHorizRule" />
-				<Label id="Options" text="#Library_AllGamesOptions" class="Header" />
-				<Button id="SearchFilter" onfocus="GamesViewType(search);"  onactivate="LibrarySearchButtonActivated();" class="NxLeftNavButton" selectionpos="auto">
-					<Image src="file://{images}/library/icon_search.png" />
-					<Label text="#Library_SearchGames"/>
-				</Button>
-				<Button id="AddSteamProduct" onactivate="ActivateProduct();" class="NxLeftNavButtonAction AddContentButton" selectionpos="0,101">
-					<Image src="file://{images}/library/icon_activate.png" />
-					<Label text="#Library_AddContent_Activate"/>
-				</Button>
-				<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()" selectionpos="0,102">
-					<Label id="Label" text="#WizardButton_Next" />
-				</Button>
-				<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()" selectionpos="0,103">
-					<Label id="Label" text="#WizardButton_Back" />
-				</Button>			
-				<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()" selectionpos="0,104">
-					<Label id="Label" text="#WizardButton_Cancel" />
-				</Button>
+				<Panel class="GamesButtonContainer">
+					<Panel class="GamesHorizRule" />
+					<Button id="SuggestedFilter" onfocus="GamesViewType(suggested);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
+						<Label text="#Library_HomeFilter" html="true" />
+					</Button>
+	
+					<Panel class="GamesHorizRule" />
+					<Label text="#Library_AllGamesPlay" class="Header" />
+	
+					<Button id="RecentFilter" onfocus="GamesViewType(recent);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
+						<Label text="#Library_RecentlyPlayedFilter" html="true" />
+					</Button>
+					<Button id="InstalledFilter" onfocus="GamesViewType(installed);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
+						<Label text="#Library_Installed" html="true"/>
+					</Button>
+					<Button id="FavoritesFilter" onfocus="GamesViewType(favorites);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
+						<Label text="#Library_Favorites" html="true"/>
+					</Button>
+					<Panel class="GamesHorizRule" />
+					<Label text="#Library_AllGamesBrowse" class="Header" />
+					<Button id="AllGamesFilter" onfocus="GamesViewType(allgames);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
+						<Label text="#Library_AllGames" html="true"/>
+					</Button>
+					<Button id="VideosFilter" onfocus="GamesViewType(videos);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);">
+						<Label text="#Library_StreamingVideos" html="true"/>
+					</Button>
+					<Button id="MusicFilter" onfocus="GamesViewType(music);" onactivate="MoveRight(0);" class="NxLeftNavButton" selectionpos="auto">
+						<Label text="#Library_LocalMusicTitle" html="true"/>
+					</Button>
+					<Button id="UnblockedFilter" onfocus="GamesViewType(unblocked);" class="NxLeftNavButton" selectionpos="auto">
+						<Label text="#Library_AllGamesUnblocked"/>
+					</Button>
+                    <Button id="SearchFilter" onfocus="GamesViewType(search);"  onactivate="LibrarySearchButtonActivated();" class="NxLeftNavButton" selectionpos="auto">
+                        <Image src="file://{images}/library/icon_search.png" />
+                        <Label text="#Library_SearchGames"/>
+                    </Button>
+					<Button id="DownloadsFilter" onfocus="GamesViewType(downloads);" onactivate="MoveRight(0);" class="NxLeftNavButton" selectionpos="auto">
+						<Label text="#Library_Downloads" html="true"/>
+					</Button>
+					<Panel class="GamesHorizRule" />
+					<Label id="Options" text="#Library_AllGamesOptions" class="Header" />
+					<Button id="AddSteamProduct" onactivate="ActivateProduct();" class="NxLeftNavButtonAction AddContentButton" selectionpos="0,101">
+						<Image src="file://{images}/library/icon_activate.png" />
+						<Label text="#Library_AddContent_Activate"/>
+					</Button>
+					<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()" selectionpos="0,102">
+						<Label id="Label" text="#WizardButton_Next" />
+					</Button>
+					<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()" selectionpos="0,103">
+						<Label id="Label" text="#WizardButton_Back" />
+					</Button>			
+					<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()" selectionpos="0,104">
+						<Label id="Label" text="#WizardButton_Cancel" />
+					</Button>
+				</Panel>
+				<Panel class="NxGridButtonWell" onactivate="NavigateTenfootBack();"></Panel>
 			</Panel>
 			<Label class="AllGamesFilterLabel" text="#Library_Filter_FilterStringDisplay" html="true" />
 			<LibraryFilterGames id="GamesFilter" selectionpos="500,200" />
 			<LibrarySuggestions id="GamesSuggestion"  class="GamesSuggestion" selectionpos="auto" oncancel="FocusMenuRow();" />
+			<DownloadsPanel id="GamesDownloads"  class="GamesDownloads" selectionpos="auto" oncancel="FocusMenuRow();" />
 			<MusicLibraryAlbumPanel id="MusicPanel" class="GamesGrid" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" movementwrap="right" selectionposboundary="both"
 						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();"  />

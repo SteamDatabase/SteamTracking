@@ -8,9 +8,7 @@
 		<Panel id="LinksAndMoreFullWrapper" class="LinksAndMoreFullWrapper">
 			<Panel id="ContentsWrapper" class="ContentsWrapper">
 				<Image id="SmallHeaderImage" class="SmallHeaderImage" scaling="stretch-to-fit-preserve-aspect" />
-				<Panel id="LinksAndActionsWrapper" class="LinksAndActionsWrapper" tabindex="auto" selectionpos="auto" selectionposboundary="vertical" childfocusonhover="true">
-
-                    <Panel id="hr0" class="HorizontalSpace" />
+				<Panel id="LinksAndActionsWrapper" class="LinksAndActionsWrapper" tabindex="auto" selectionpos="auto" selectionposboundary="vertical">
 
 					<Button id="ReturnToAppButton" class="NxLeftNavButtonAction">
                         <Image src="file://{images}/icon_return.png" />
@@ -32,55 +30,68 @@
 						<Label id="AppKillLabel" text="#Library_Details_KillApp" />
 					</Button>
 
-					<Panel id="hr1" class="HorizontalSpace" />
 
-					<Button id="CDKeyButton" class="CDKeyButton NxLeftNavButtonAction">
-                        <Image src="file://{images}/library/icon_activate.png" />
-						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
+					<Button id="LibraryDetailsButton" class="NxLeftNavButton">
+                        <Image src="file://{images}/library/library_play_button.png" />
+						<Label id="LibraryDetailsLabel" text="#Library_Details_LibraryDetails" />
 					</Button>
 
-					<ParentalButton id="DLCButton" class="DLCButton NxLeftNavButtonAction">
-                        <Image src="file://{images}/downloads.png" />
-						<Label id="DLCLabel" text="#Library_Details_DownloadableContent" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
-					</ParentalButton>
-
-					<ParentalButton id="StoreButton" class="StoreButton NxLeftNavButtonAction">
+					<Button id="StoreButton" class="NxLeftNavButton">
                         <Image src="file://{images}/icon_cart.png" />
 						<Label id="StoreLabel" text="#Library_Details_GameStorePage" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
-					</ParentalButton>
+					</Button>
 
-					<ParentalButton id="CommunityHubButton" class="CommunityHubButton NxLeftNavButtonAction">
-                        <Image src="file://{images}/icon_community_hub.png" />
-						<Label id="ForumsLabel" text="#Library_Details_GameHubPage" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
-					</ParentalButton>
-
-					<ParentalButton id="ForumsButton" class="ForumsButton NxLeftNavButtonAction">
-                        <Image src="file://{images}/icon_discussions.png" />
-						<Label id="ForumsLabel" text="#Library_Details_GameForums" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
-					</ParentalButton>
-
-					<Panel id="hr2" class="HorizontalSpace" />
-
-					<ParentalButton id="ManageAccountButton" class="ManageAccountButton NxLeftNavButtonAction">
-						<Label id="ManageAccountLabel" text="#Library_Details_ManageAccount" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
-					</ParentalButton>
-
-					<ParentalButton id="SettingsButton" class="SettingsButton NxLeftNavButtonAction">
+					<ParentalButton id="SettingsButton" class="NxLeftNavButton">
                         <Image src="file://{images}/icon_settings.png" />
 						<Label id="SettingsLabel" text="#Library_Details_Settings" />
 						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
 
-					<Button id="SupportButton" class="SupportButton NxLeftNavButtonAction">
-                        <Image src="file://{images}/support.png" />
-						<Label id="SupportLabel" text="#Library_Details_Support" />
+					<Button id="CDKeyButton" class="Button">
+                        <Image src="file://{images}/library/icon_activate.png" />
+						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
 					</Button>
 
+                    <Panel id="hr0" class="HorizontalSpace" />
+
+                    <Label id="CommunityContent" text="#Library_Details_CommunityContentHeadline" class="Header" />
+
+					<ParentalButton id="CommunityContentAllButton" class="NxLeftNavButton">
+						<Label text="#Library_Details_CommunityContent_All" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
+					<ParentalButton id="CommunityContentScreenshotsButton" class="NxLeftNavButton">
+						<Label text="#Library_Details_CommunityContent_Screenshots" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
+					<ParentalButton id="CommunityContentArtworkButton" class="NxLeftNavButton">
+						<Label text="#Library_Details_CommunityContent_Artwork" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
+					<ParentalButton id="CommunityContentVideosButton" class="NxLeftNavButton">
+						<Label text="#Library_Details_CommunityContent_Videos" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
+					<ParentalButton id="CommunityContentBroadcastsButton" class="NxLeftNavButton">
+						<Label text="#Library_Details_CommunityContent_Broadcasts" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
+					<ParentalButton id="CommunityContentWorkshopButton" class="NxLeftNavButton">
+						<Label text="#Library_Details_CommunityContent_Workshop" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
+					<ParentalButton id="CommunityContentNewsButton" class="NxLeftNavButton">
+						<Label text="#Library_Details_CommunityContent_News" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
+					<ParentalButton id="CommunityContentGuidesButton" class="NxLeftNavButton">
+						<Label text="#Library_Details_CommunityContent_Guides" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
+					<ParentalButton id="CommunityContentReviewsButton" class="NxLeftNavButton">
+						<Label text="#Library_Details_CommunityContent_Reviews" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
 
 				</Panel>
 			</Panel>

@@ -9,9 +9,14 @@
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto" >
 			<Label class="StdTitle" text="#Library_SelectBeta_Title" />
 
-			<Label class="StdLabelMed" text="#Library_SelectBeta_CodeLabel" />
-			<DropDown id="BetaDropDown" >
-			</DropDown>
+			<Panel id="BetaPanel">
+				<Label class="StdLabelMed" text="#Library_SelectBeta_CodeLabel" />
+				<DropDown id="BetaDropDown" >
+				</DropDown>
+			</Panel>
+			<Panel id="NoBetaPanel">
+				<Label class="StdLabelMed" text="#Library_SelectBeta_NoBeta" />
+			</Panel>
 			
 			<Label class="StdLabelMed" id="PrivateBetaLabel" text="#Library_SelectBeta_PrivateTitle" />
 			

@@ -395,7 +395,7 @@ MainMenu.StackDepth3 #TopRow
 	opacity: 1.0;
 }
 
-#Clock,#ClockSuffix
+#Clock
 {
 	transition-property: opacity;
 	transition-duration: 0.3s;
@@ -403,8 +403,7 @@ MainMenu.StackDepth3 #TopRow
 	transition-timing-function: linear, ease-out;
 }
 
-.TopRowFocused #Clock,
-.TopRowFocused #ClockSuffix
+.TopRowFocused #Clock
 {
 	opacity: 0.0;
 }
@@ -766,16 +765,17 @@ Button:hover .ShortDesc
 	wash-color: accountwarning;
 }
 
-#Clock, #ClockSuffix
+#Clock
 {
 	vertical-align: center;
 	font-size: 30px;
 	margin-right: 16px;
 	margin-bottom: 2px;
 	color: messagecolorwash;
+	flow-children: right;
 }
 
-#Clock
+#Clock #Time
 {
 	margin-right: 8px;	
 }
@@ -946,6 +946,8 @@ Button:hover .ShortDesc
 #MainRowContents:descendantfocus
 {
 	z-index: topmostzindex;
+	width: 100%;
+	height: 100%;
 }
 
 #MenuRowButtons

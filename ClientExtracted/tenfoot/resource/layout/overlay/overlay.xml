@@ -14,10 +14,7 @@
 				<Panel id="UpperRow" class="UpperRow">
 					<Panel id="HeaderLabels">
 						<Label id="GameName" class="GameName" text="" />
-						<Panel id="ClockWrapper">
-							<Label id="Clock" class="Clock" text="" />
-							<Label id="ClockSuffix" class="ClockSuffix" text="" />
-						</Panel>
+						<Clock id="Clock" />
 					</Panel>
 				</Panel>
 				<Panel id="DesktopPanels">
@@ -29,6 +26,7 @@
 							<Panel class="LibraryDetailsSectionRow">
 								<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" />
 								<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" />
+								<StreamingOverlay id="Streaming" class="DetailsDataPanel Small" />
 								<OverlayNotificationPanel id="Notifications" class="Controller DetailsDataPanel Small" />
 								<BroadcastOverlay id="Broadcast" class="Controller DetailsDataPanel Small" />
 							</Panel>

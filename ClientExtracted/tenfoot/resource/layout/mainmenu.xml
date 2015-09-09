@@ -40,8 +40,7 @@
 
 				</Panel>
 				<Panel id="SettingsExitRow" tabindex="1" selectionpos="10,0">
-					<Label id="Clock" />
-					<Label id="ClockSuffix" />
+					<Clock id="Clock" />
 					<Button id="BatteryPanel" onactivate="ShowSettings( GameController );" tabindex="0" selectionpos="10.1,0" >
 						<Image id="Battery" src="file://{images}/controller_battery_3.png" />
 					</Button>
@@ -100,10 +99,6 @@
 						onmoveup="ShowMainMenuFocusMarketingMessages();" />
 				</Panel>
 
-				<!-- The downloads panel, which is shown only when needed -->
-				<DownloadsPanel id="Downloads" class="DownloadBackgroundTransitionUpAndOff" />		
-					
-
 			</Panel>
 			
 
@@ -111,10 +106,7 @@
 			<!-- All the contents for backgrounds for the main nav row, and the real contents to drill into on activation -->
 			<Panel id="MainRowContents" hittest="false">
 
-				<StorePanel id="Store" />
-				<LibraryPanel id="Library" class="LibraryPanel">
-					<MusicPanel id="MusicPanel" />
-				</LibraryPanel>
+				<StorePanel id="Store" />				
 				<CommunityWrapper id="CommunityWrapper" class="CommunityWrapper" />
 				<ProfileWrapper id="ProfileWrapper" class="ProfileWrapper" />
 				<!-- <Image class="ExitButton" src="file://{images}/steam_exit.tga" onmouseactivate="QuitApp();" /> -->
@@ -138,6 +130,8 @@
 				</Panel>					
 			</Panel>
 			<Image id="HomeGlow" class="HomeGlow" src="file://{images}/homeglow.png" />
+
+			<ContentFrame id="ContentFrame" />
 		</Panel>
 	</MainMenu>	
 </root>

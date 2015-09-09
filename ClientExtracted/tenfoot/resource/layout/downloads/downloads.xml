@@ -1,23 +1,36 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
+        <include src="file://{resources}/styles/library/library.css" />
 		<include src="file://{resources}/styles/downloads.css" />
 	</styles>
 
-	<DownloadsPanel defaultfocus="DownloadsGrid" tabindex="auto" selectionpos="auto">
-		<Panel id="DownloadsWrapper" >
-			<Panel id="DownloadsContent" class="DownloadsContent" >
-				<Carousel id="DownloadsGrid" class="DownloadsGrid" focus="center" >
-					<Panel class="DownloadGridHeader" >
-						<Panel class="DownloadGridBody1" >
-							<Label id="DownloadStatusLabel" text="#Downloads_Downloading" />
-							<Label id="DownloadDetailsLabel" text="#Downloads_ItemsComplete" />
-						</Panel>
-					</Panel>					
-				</Carousel>	
-			</Panel>
+	<DownloadsPanel defaultfocus="DownloadsList" tabindex="auto" selectionpos="auto">
+		<Label id="DownloadsNone" class="DownloadText" text="#Downloads_None" />
+		<Panel id="DownloadsGraph" >
 		</Panel>
-
+		<Panel id="DownloadsList" >
+			<Panel id="DownloadsQueued" class="DownloadsSection" >
+				<Label class="DownloadText HeaderLabel" text="#Downloads_QueuedTitel" />
+				<Panel id="DownloadsQueuedList" class="DownloadsList" >
+				</Panel>
+			</Panel>
+			<Panel id="DownloadsDeferred" class="DownloadsSection" >
+				<Label class="DownloadText HeaderLabel" text="#Downloads_DeferredTitel" />
+				<Panel id="DownloadsDeferredList" class="DownloadsList" >
+				</Panel>
+			</Panel>
+			<Panel id="DownloadsPaused" class="DownloadsSection" >
+				<Label class="DownloadText HeaderLabel" text="#Downloads_PausedTitel" />
+				<Panel id="DownloadsPausedList" class="DownloadsList" >
+				</Panel>
+			</Panel>
+			<Panel id="DownloadsFinished" class="DownloadsSection" >
+				<Label class="DownloadText HeaderLabel" text="#Downloads_FinishedTitel" />
+				<Panel id="DownloadsFinishedList" class="DownloadsList" >
+				</Panel>
+			</Panel>
+		</Panel>	
 	</DownloadsPanel>
 
 </root>

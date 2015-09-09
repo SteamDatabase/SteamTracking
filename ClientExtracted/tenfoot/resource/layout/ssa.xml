@@ -1,7 +1,7 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/login.css" />
+		<include src="file://{resources}/styles/ssa.css" />
 	</styles>
 
 	<SSA defaultfocus="SSAHTML" tabindex="auto" selectionpos="auto">
@@ -13,10 +13,10 @@
             -->
 
             <Panel class="FlowRight HorzCenter" selectionpos="auto">
-                <Button id="SSAAccept" onactivate="AcceptSSA();" class="Button LittleRoomPlease">
+                <Button id="SSAAccept" onactivate="AcceptSSA();" class="Button">
                     <Label class="LongDesc" text="Accept" />
                 </Button>
-                <Button id="SSADecline" onactivate="DeclineSSA();" class="Button LittleRoomPlease">
+                <Button id="SSADecline" onactivate="DeclineSSA();" class="Button">
                     <Label class="LongDesc" text="Decline" />
                 </Button>
                 <!-- <Button id="SSARefresh" onactivate="RefreshSSA();" class="Button LittleRoomPlease">

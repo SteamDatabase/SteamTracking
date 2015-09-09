@@ -6,6 +6,7 @@
 @define friendsverticalscrollpad: 18px;
 @define friendsitemsecondaryfocus: gradient( linear, 0% 0%, 100% 100%, from( #caccccff  ), to( #aaacacce ) );
 @define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696aa ), to( #365b7866 ) );
+@define friendschatbackground: #0f283dCC;
 /* below this number suppress the search box on friends */
 @define friendslisthidesearch: 1;
 
@@ -71,7 +72,7 @@ Friends.FriendsProfileDetailsVisible #BodyWrapper
 	height: 932px;
 
 	transform: translatey( 41px );
-	flow-children: right;
+	flow-children: none;
 }
 
 #FriendsMainBodyColumnLeft
@@ -95,6 +96,20 @@ Friends.BehindMessageBox.FriendsInputTextEntry #FriendsMainBodyColumnLeft
 	width: 829px;
 	height: fit-children;
 	flow-children: none;
+	horizontal-align: right;
+
+	transform: translateX( 0px );
+
+	transition-property: transform;
+	transition-duration: 0.5s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+// when text input is active
+.BehindTextInputHandler #FriendsChatDialogContainer
+{
+	transform: translateX( -460px );
+	background-color: friendschatbackground;
 }
 
 FriendsChatDialog
@@ -221,6 +236,15 @@ FriendsChatDialog.ClanChatDisabled
 
 	background-color: #1a578023;
 
+	transition-property: height;
+	transition-duration: 0.5s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+// while text input is active
+.BehindTextInputHandler #FriendsMainBodyChatContainer
+{
+	height: 285px;
 }
 
 #FriendsMainBodyChatMessages
@@ -374,6 +398,12 @@ FriendsChatDialog.ClanChatDisabled
 	transition-duration: 0.2s;
 	transition-timing-function: bigpicture-ease-in-out;
 
+	visibility: collapse;
+}
+
+.CursorVisible #FriendsMainBodyInputSendButton
+{
+	visibility: visible;
 }
 
 #FriendsMainBodyInputSendButton:hover
@@ -518,7 +548,7 @@ FriendsSelfHeader.Golden Label
 	margin-left: 14px;
 	margin-right: 14px;
 	margin-bottom: 4px;
-	width: 260px;
+	width: 270px;
 	opacity-mask: url( "file://{images}/friends/friends_list_item_panel_labels_mask.tga" );
 	vertical-align: bottom;
 	flow-children: down;

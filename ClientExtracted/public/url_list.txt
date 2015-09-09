@@ -46,6 +46,30 @@ GameHubDiscussions
 	method		"internal"
 	filter		"community"
 }
+GameHubScreenshots
+{
+	url			"%community%/app/%p1%/screenshots/"
+	method		"internal"
+	filter		"community"
+}
+GameHubArtwork
+{
+	url			"%community%/app/%p1%/images/"
+	method		"internal"
+	filter		"community"
+}
+GameHubVideos
+{
+	url			"%community%/app/%p1%/videos/"
+	method		"internal"
+	filter		"community"
+}
+GameHubReviews
+{
+	url			"%community%/app/%p1%/reviews/"
+	method		"internal"
+	filter		"community"
+}
 SteamIDPage
 {
 	url			"%community%/profiles/%p1%/"
@@ -269,6 +293,13 @@ HelpWithLogin
 StoreFrontPage
 {
 	url			"%store%"
+	method		"internal"
+	filter		"store"
+}
+
+StoreFrontPageBigPicture
+{
+	url			"%store%/bigpicture/home"
 	method		"internal"
 	filter		"store"
 }

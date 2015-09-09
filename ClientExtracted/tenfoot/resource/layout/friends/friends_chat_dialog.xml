@@ -17,7 +17,7 @@
 			</Panel>
 		</Panel>
 		<Panel id="FriendsMainBodyChatContainer">
-			<Panel id="FriendsMainBodyChatMessages">
+			<Panel id="FriendsMainBodyChatMessages" keepscrolltobottom="true" >
 				<Label id="FriendsChatBody" text="#Friends_DontGiveOutPassword" html="true" />
 			</Panel>
 			<Panel id="FriendsVoiceChatControls">
@@ -32,15 +32,14 @@
 			<TextEntry id="FriendsMainBodyInputTextArea"
 				textinputid="FriendsInputTextEntry"
 				textinputdoneactionstring="#UI_SendMessage"
-				textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
+				textinputclass="HalfWidth DockLeft AppearFromBottomCenter FriendsChat"
 				textinputautocaps="true"
 				textinputdoublespace="true"
 				multiline="true"        
 			/>
-			<Button id="FriendsMainBodyInputSendButton" onactivate="FriendsSendChatMessage();">
+			<Button id="FriendsMainBodyInputSendButton" onactivate="FriendsSendChatMessage();SetInputFocus( FriendsMainBodyInputTextArea );" >
 				<Label id="FriendsChatSendButtonLabel" text="#Friends_Chat_Send" />
 			</Button>
 		</Panel>
-		<Label id="RightStickHint" text="#Friends_PressRightStickForURLs" />
 	</FriendsChatDialog>
 </root>

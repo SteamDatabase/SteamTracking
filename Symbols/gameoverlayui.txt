@@ -13386,6 +13386,7 @@
  T vgui::TextEntry::SendEscape(bool)
  T vgui::TextEntry::SendNewLine(bool)
  T vgui::TextEntry::SentenceModeChanged(unsigned long long)
+ T vgui::TextEntry::SetAllCaps(bool)
  T vgui::TextEntry::SetAllowNonAsciiCharacters(bool)
  T vgui::TextEntry::SetAutoProgressOnHittingCharLimit(bool)
  T vgui::TextEntry::SetCatchEnterKey(bool)

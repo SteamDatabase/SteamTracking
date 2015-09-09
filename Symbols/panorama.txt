@@ -719,6 +719,7 @@
  B panorama::SteamPadRightHighActivity::symbol
  B panorama::StopAudioSample::symbol
  B panorama::StopStreaming::symbol
+ B panorama::StopStreamingAndSuspendClient::symbol
  B panorama::StyleClassesChanged::symbol
  B panorama::StyleFlagsChanged::symbol
  B panorama::SuspendMachine::symbol
@@ -734,6 +735,8 @@
  B panorama::TopLevelWindowClose::symbol
  B panorama::TurnOffActiveController::symbol
  B panorama::UserInputActive::symbol
+ B panorama::VRApplicationMenuButtonDown::symbol
+ B panorama::VRApplicationMenuButtonUp::symbol
  B panorama::VRDashboardRequested::symbol
  B panorama::VRDashboardThumbSelected::symbol
  B panorama::VRNotificationBeginInteraction::symbol
@@ -1107,6 +1110,7 @@
  D panorama::SteamPadRightHighActivity::pchEvent
  D panorama::StopAudioSample::pchEvent
  D panorama::StopStreaming::pchEvent
+ D panorama::StopStreamingAndSuspendClient::pchEvent
  D panorama::StyleClassesChanged::pchEvent
  D panorama::StyleFlagsChanged::pchEvent
  D panorama::SuspendMachine::pchEvent
@@ -1122,6 +1126,8 @@
  D panorama::TopLevelWindowClose::pchEvent
  D panorama::TurnOffActiveController::pchEvent
  D panorama::UserInputActive::pchEvent
+ D panorama::VRApplicationMenuButtonDown::pchEvent
+ D panorama::VRApplicationMenuButtonUp::pchEvent
  D panorama::VRDashboardRequested::pchEvent
  D panorama::VRDashboardThumbSelected::pchEvent
  D panorama::VRNotificationBeginInteraction::pchEvent
@@ -3467,14 +3473,19 @@
  T CClassMemoryPool<panorama::CStylePropertyLineHeight>::~CClassMemoryPool()
  T CClassMemoryPool<panorama::CStylePropertyMargin>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyMargin>::~CClassMemoryPool()
+ T CClassMemoryPool<panorama::CStylePropertyMaxHeight>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyMaxHeight>::~CClassMemoryPool()
+ T CClassMemoryPool<panorama::CStylePropertyMaxWidth>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyMaxWidth>::~CClassMemoryPool()
+ T CClassMemoryPool<panorama::CStylePropertyMinHeight>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyMinHeight>::~CClassMemoryPool()
+ T CClassMemoryPool<panorama::CStylePropertyMinWidth>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyMinWidth>::~CClassMemoryPool()
  T CClassMemoryPool<panorama::CStylePropertyMixBlendMode>::~CClassMemoryPool()
  T CClassMemoryPool<panorama::CStylePropertyOpacity>::~CClassMemoryPool()
  T CClassMemoryPool<panorama::CStylePropertyOpacityMask>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyOpacityMask>::~CClassMemoryPool()
+ T CClassMemoryPool<panorama::CStylePropertyOverflow>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyOverflow>::~CClassMemoryPool()
  T CClassMemoryPool<panorama::CStylePropertyPadding>::Alloc()
  T CClassMemoryPool<panorama::CStylePropertyPadding>::~CClassMemoryPool()
@@ -8748,6 +8759,8 @@
  T bool panorama::DispatchEvent<panorama::SoundVolumeChanged, panorama::ESoundType, float>(panorama::SoundVolumeChanged, panorama::IUIPanel const*, panorama::ESoundType, float)
  T bool panorama::DispatchEvent<panorama::ToggleFullscreen, panorama::CTopLevelWindowSDL*, bool>(panorama::ToggleFullscreen, panorama::IUIPanel const*, panorama::CTopLevelWindowSDL*, bool)
  T bool panorama::DispatchEvent<panorama::TopLevelWindowClose, panorama::CTopLevelWindow*>(panorama::TopLevelWindowClose, panorama::IUIPanel const*, panorama::CTopLevelWindow*)
+ T bool panorama::DispatchEvent<panorama::VRApplicationMenuButtonDown>(panorama::VRApplicationMenuButtonDown, panorama::IUIPanel const*)
+ T bool panorama::DispatchEvent<panorama::VRApplicationMenuButtonUp>(panorama::VRApplicationMenuButtonUp, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::VRDashboardRequested, panorama::IUIPanel const*, unsigned int, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::VRDashboardThumbSelected, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRNotificationBeginInteraction, unsigned long long, unsigned int, unsigned long long>(panorama::VRNotificationBeginInteraction, panorama::IUIPanel const*, unsigned long long, unsigned int, unsigned long long)
@@ -9948,15 +9961,14 @@
  T panorama::CStyleKeyFrame::~CStyleKeyFrame()
  T panorama::CStyleProperty::ApplyUIScaleFactor(float)
  T panorama::CStyleProperty::BAffectsCompositionOnly()
- T panorama::CStyleProperty::BFullySet()
+ T panorama::CStyleProperty::BMergeToCommon(panorama::CStyleProperty*) const
  T panorama::CStyleProperty::GetDescription(panorama::CStyleSymbol)
  T panorama::CStyleProperty::GetSuggestedValues(panorama::CStyleSymbol, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T panorama::CStyleProperty::OnAppliedToPanel(panorama::IUIPanel*)
- T panorama::CStyleProperty::ResolveDefaultValues()
  T panorama::CStyleProperty::Validate(CValidator&, char const*)
  T panorama::CStyleProperty::operator delete(void*)
  T panorama::CStylePropertyAlign::BCanTransition()
- T panorama::CStylePropertyAlign::BFullySet()
+ T panorama::CStylePropertyAlign::BFullySet() const
  T panorama::CStylePropertyAlign::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyAlign::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyAlign::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
@@ -9967,7 +9979,7 @@
  T panorama::CStylePropertyAlign::~CStylePropertyAlign()
  T panorama::CStylePropertyAnimationProperties::AddNewProperty()
  T panorama::CStylePropertyAnimationProperties::BCanTransition()
- T panorama::CStylePropertyAnimationProperties::BFullySet()
+ T panorama::CStylePropertyAnimationProperties::BFullySet() const
  T panorama::CStylePropertyAnimationProperties::BParseAndAddTimingFunction(bool (*)(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector2D>*, char const*, char const**), char const*)
  T panorama::CStylePropertyAnimationProperties::BParseIterationCount(float*, char const*, char const**)
  T panorama::CStylePropertyAnimationProperties::BSetFromString(panorama::CStyleSymbol, char const*)
@@ -9985,7 +9997,7 @@
  T panorama::CStylePropertyBackgroundImage::AddLayer()
  T panorama::CStylePropertyBackgroundImage::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyBackgroundImage::BCanTransition()
- T panorama::CStylePropertyBackgroundImage::BFullySet()
+ T panorama::CStylePropertyBackgroundImage::BFullySet() const
  T panorama::CStylePropertyBackgroundImage::BHasActiveMovie()
  T panorama::CStylePropertyBackgroundImage::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyBackgroundImage::Clear()
@@ -10004,17 +10016,19 @@
  T panorama::CStylePropertyBackgroundImage::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyBackgroundImage::~CStylePropertyBackgroundImage()
  T panorama::CStylePropertyBlur::BCanTransition()
+ T panorama::CStylePropertyBlur::BFullySet() const
  T panorama::CStylePropertyBlur::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyBlur::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyBlur::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyBlur::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyBlur::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyBlur::ResolveDefaultValues()
  T panorama::CStylePropertyBlur::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyBlur::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyBlur::~CStylePropertyBlur()
  T panorama::CStylePropertyBorder::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyBorder::BCanTransition()
- T panorama::CStylePropertyBorder::BFullySet()
+ T panorama::CStylePropertyBorder::BFullySet() const
  T panorama::CStylePropertyBorder::BParseSingleEdgeShortcutProperty(int, char const*)
  T panorama::CStylePropertyBorder::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyBorder::CStylePropertyBorder()
@@ -10028,7 +10042,7 @@
  T panorama::CStylePropertyBorder::~CStylePropertyBorder()
  T panorama::CStylePropertyBorderImage::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyBorderImage::BCanTransition()
- T panorama::CStylePropertyBorderImage::BFullySet()
+ T panorama::CStylePropertyBorderImage::BFullySet() const
  T panorama::CStylePropertyBorderImage::BParseImageOutsets(char const*, char const**)
  T panorama::CStylePropertyBorderImage::BParseImageRepeats(char const*, char const**)
  T panorama::CStylePropertyBorderImage::BParseImageSlices(char const*, char const**)
@@ -10043,13 +10057,14 @@
  T panorama::CStylePropertyBorderImage::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyBorderImage::MergeTo(panorama::CStyleProperty*) const
  T panorama::CStylePropertyBorderImage::OnAppliedToPanel(panorama::IUIPanel*, float)
+ T panorama::CStylePropertyBorderImage::ResolveDefaultValues()
  T panorama::CStylePropertyBorderImage::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyBorderImage::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyBorderImage::~CStylePropertyBorderImage()
  T panorama::CStylePropertyBorderRadius::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyBorderRadius::BAffectsCompositionOnly()
  T panorama::CStylePropertyBorderRadius::BCanTransition()
- T panorama::CStylePropertyBorderRadius::BFullySet()
+ T panorama::CStylePropertyBorderRadius::BFullySet() const
  T panorama::CStylePropertyBorderRadius::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyBorderRadius::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyBorderRadius::GetInvalidateLayout(panorama::CStyleProperty*) const
@@ -10062,17 +10077,20 @@
  T panorama::CStylePropertyBoxShadow::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyBoxShadow::BAffectsCompositionOnly()
  T panorama::CStylePropertyBoxShadow::BCanTransition()
+ T panorama::CStylePropertyBoxShadow::BFullySet() const
  T panorama::CStylePropertyBoxShadow::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyBoxShadow::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyBoxShadow::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyBoxShadow::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyBoxShadow::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyBoxShadow::ResolveDefaultValues()
  T panorama::CStylePropertyBoxShadow::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyBoxShadow::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyBoxShadow::~CStylePropertyBoxShadow()
  T panorama::CStylePropertyClip::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyClip::BAffectsCompositionOnly()
  T panorama::CStylePropertyClip::BCanTransition()
+ T panorama::CStylePropertyClip::BFullySet() const
  T panorama::CStylePropertyClip::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyClip::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyClip::GetInvalidateLayout(panorama::CStyleProperty*) const
@@ -10091,7 +10109,7 @@
  T panorama::CStylePropertyContextUIArrowPosition::ResolveDefaultValues()
  T panorama::CStylePropertyContextUIBodyPosition::ResolveDefaultValues()
  T panorama::CStylePropertyContextUIComponentPosition::BCanTransition()
- T panorama::CStylePropertyContextUIComponentPosition::BFullySet()
+ T panorama::CStylePropertyContextUIComponentPosition::BFullySet() const
  T panorama::CStylePropertyContextUIComponentPosition::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyContextUIComponentPosition::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyContextUIComponentPosition::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
@@ -10099,7 +10117,7 @@
  T panorama::CStylePropertyContextUIComponentPosition::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyContextUIComponentPosition::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyContextUIPosition::BCanTransition()
- T panorama::CStylePropertyContextUIPosition::BFullySet()
+ T panorama::CStylePropertyContextUIPosition::BFullySet() const
  T panorama::CStylePropertyContextUIPosition::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyContextUIPosition::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyContextUIPosition::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
@@ -10110,17 +10128,19 @@
  T panorama::CStylePropertyContextUIPosition::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyDesaturation::BAffectsCompositionOnly()
  T panorama::CStylePropertyDesaturation::BCanTransition()
+ T panorama::CStylePropertyDesaturation::BFullySet() const
  T panorama::CStylePropertyDesaturation::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyDesaturation::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyDesaturation::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyDesaturation::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyDesaturation::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyDesaturation::ResolveDefaultValues()
  T panorama::CStylePropertyDesaturation::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyDesaturation::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyDesaturation::~CStylePropertyDesaturation()
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyMargin>::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyMargin>::BCanTransition()
- T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyMargin>::BFullySet()
+ T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyMargin>::BFullySet() const
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyMargin>::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyMargin>::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyMargin>::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
@@ -10130,7 +10150,7 @@
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyMargin>::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyPadding>::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyPadding>::BCanTransition()
- T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyPadding>::BFullySet()
+ T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyPadding>::BFullySet() const
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyPadding>::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyPadding>::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyDimensionsBase<panorama::CStylePropertyPadding>::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
@@ -10157,25 +10177,29 @@
  T panorama::CStylePropertyFactory::ValidateStatics(CValidator&)
  T panorama::CStylePropertyFillColor::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyFillColor::BCanTransition()
+ T panorama::CStylePropertyFillColor::BFullySet() const
  T panorama::CStylePropertyFillColor::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyFillColor::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyFillColor::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyFillColor::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyFillColor::ResolveDefaultValues()
  T panorama::CStylePropertyFillColor::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyFillColor::Validate(CValidator&, char const*)
  T panorama::CStylePropertyFillColor::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyFillColor::~CStylePropertyFillColor()
  T panorama::CStylePropertyFlowChildren::BCanTransition()
+ T panorama::CStylePropertyFlowChildren::BFullySet() const
  T panorama::CStylePropertyFlowChildren::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyFlowChildren::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyFlowChildren::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyFlowChildren::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyFlowChildren::ResolveDefaultValues()
  T panorama::CStylePropertyFlowChildren::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyFlowChildren::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyFlowChildren::~CStylePropertyFlowChildren()
  T panorama::CStylePropertyFont::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyFont::BCanTransition()
- T panorama::CStylePropertyFont::BFullySet()
+ T panorama::CStylePropertyFont::BFullySet() const
  T panorama::CStylePropertyFont::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyFont::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyFont::GetInvalidateLayout(panorama::CStyleProperty*) const
@@ -10192,17 +10216,19 @@
  T panorama::CStylePropertyForegroundColor::~CStylePropertyForegroundColor()
  T panorama::CStylePropertyHeight::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyHeight::BCanTransition()
+ T panorama::CStylePropertyHeight::BFullySet() const
  T panorama::CStylePropertyHeight::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyHeight::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyHeight::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyHeight::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyHeight::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyHeight::ResolveDefaultValues()
  T panorama::CStylePropertyHeight::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyHeight::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyHeight::~CStylePropertyHeight()
  T panorama::CStylePropertyLineHeight::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyLineHeight::BCanTransition()
- T panorama::CStylePropertyLineHeight::BFullySet()
+ T panorama::CStylePropertyLineHeight::BFullySet() const
  T panorama::CStylePropertyLineHeight::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyLineHeight::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyLineHeight::GetInvalidateLayout(panorama::CStyleProperty*) const
@@ -10215,61 +10241,74 @@
  T panorama::CStylePropertyMargin::~CStylePropertyMargin()
  T panorama::CStylePropertyMaxHeight::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyMaxHeight::BCanTransition()
+ T panorama::CStylePropertyMaxHeight::BFullySet() const
  T panorama::CStylePropertyMaxHeight::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyMaxHeight::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyMaxHeight::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyMaxHeight::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyMaxHeight::ResolveDefaultValues()
  T panorama::CStylePropertyMaxHeight::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyMaxHeight::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyMaxHeight::~CStylePropertyMaxHeight()
  T panorama::CStylePropertyMaxWidth::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyMaxWidth::BCanTransition()
+ T panorama::CStylePropertyMaxWidth::BFullySet() const
  T panorama::CStylePropertyMaxWidth::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyMaxWidth::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyMaxWidth::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyMaxWidth::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyMaxWidth::ResolveDefaultValues()
  T panorama::CStylePropertyMaxWidth::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyMaxWidth::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyMaxWidth::~CStylePropertyMaxWidth()
  T panorama::CStylePropertyMinHeight::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyMinHeight::BCanTransition()
+ T panorama::CStylePropertyMinHeight::BFullySet() const
  T panorama::CStylePropertyMinHeight::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyMinHeight::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyMinHeight::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyMinHeight::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyMinHeight::ResolveDefaultValues()
  T panorama::CStylePropertyMinHeight::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyMinHeight::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyMinHeight::~CStylePropertyMinHeight()
  T panorama::CStylePropertyMinWidth::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyMinWidth::BCanTransition()
+ T panorama::CStylePropertyMinWidth::BFullySet() const
  T panorama::CStylePropertyMinWidth::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyMinWidth::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyMinWidth::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyMinWidth::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyMinWidth::ResolveDefaultValues()
  T panorama::CStylePropertyMinWidth::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyMinWidth::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyMinWidth::~CStylePropertyMinWidth()
  T panorama::CStylePropertyMixBlendMode::BCanTransition()
+ T panorama::CStylePropertyMixBlendMode::BFullySet() const
  T panorama::CStylePropertyMixBlendMode::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyMixBlendMode::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyMixBlendMode::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyMixBlendMode::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyMixBlendMode::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyMixBlendMode::ResolveDefaultValues()
  T panorama::CStylePropertyMixBlendMode::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyMixBlendMode::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyMixBlendMode::~CStylePropertyMixBlendMode()
  T panorama::CStylePropertyOpacity::BAffectsCompositionOnly()
  T panorama::CStylePropertyOpacity::BCanTransition()
+ T panorama::CStylePropertyOpacity::BFullySet() const
  T panorama::CStylePropertyOpacity::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyOpacity::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyOpacity::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyOpacity::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyOpacity::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyOpacity::ResolveDefaultValues()
  T panorama::CStylePropertyOpacity::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyOpacity::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyOpacity::~CStylePropertyOpacity()
  T panorama::CStylePropertyOpacityMask::BAffectsCompositionOnly()
  T panorama::CStylePropertyOpacityMask::BCanTransition()
+ T panorama::CStylePropertyOpacityMask::BFullySet() const
  T panorama::CStylePropertyOpacityMask::BParseProperty(char const*, float&, panorama::IImageSource**, CUtlString&)
  T panorama::CStylePropertyOpacityMask::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyOpacityMask::GetDescription(panorama::CStyleSymbol)
@@ -10277,47 +10316,54 @@
  T panorama::CStylePropertyOpacityMask::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyOpacityMask::MergeTo(panorama::CStyleProperty*) const
  T panorama::CStylePropertyOpacityMask::OnAppliedToPanel(panorama::IUIPanel*)
+ T panorama::CStylePropertyOpacityMask::ResolveDefaultValues()
  T panorama::CStylePropertyOpacityMask::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyOpacityMask::Validate(CValidator&, char const*)
  T panorama::CStylePropertyOpacityMask::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyOpacityMask::~CStylePropertyOpacityMask()
  T panorama::CStylePropertyOverflow::BAppendOverflow(CFmtStrN<1024, true, true>*, panorama::EOverflowValue const&) const
  T panorama::CStylePropertyOverflow::BCanTransition()
+ T panorama::CStylePropertyOverflow::BFullySet() const
  T panorama::CStylePropertyOverflow::BParseOverflow(panorama::EOverflowValue*, char const*, char const**)
  T panorama::CStylePropertyOverflow::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyOverflow::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyOverflow::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyOverflow::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyOverflow::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyOverflow::ResolveDefaultValues()
  T panorama::CStylePropertyOverflow::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyOverflow::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyOverflow::~CStylePropertyOverflow()
  T panorama::CStylePropertyPadding::~CStylePropertyPadding()
  T panorama::CStylePropertyPerspective::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyPerspective::BCanTransition()
+ T panorama::CStylePropertyPerspective::BFullySet() const
  T panorama::CStylePropertyPerspective::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyPerspective::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyPerspective::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyPerspective::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyPerspective::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyPerspective::ResolveDefaultValues()
  T panorama::CStylePropertyPerspective::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyPerspective::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyPerspective::~CStylePropertyPerspective()
  T panorama::CStylePropertyPerspectiveOrigin::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyPerspectiveOrigin::BCanTransition()
+ T panorama::CStylePropertyPerspectiveOrigin::BFullySet() const
  T panorama::CStylePropertyPerspectiveOrigin::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyPerspectiveOrigin::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyPerspectiveOrigin::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyPerspectiveOrigin::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyPerspectiveOrigin::MergeTo(panorama::CStyleProperty*) const
  T panorama::CStylePropertyPerspectiveOrigin::OnAppliedToPanel(panorama::IUIPanel*)
+ T panorama::CStylePropertyPerspectiveOrigin::ResolveDefaultValues()
  T panorama::CStylePropertyPerspectiveOrigin::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyPerspectiveOrigin::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyPerspectiveOrigin::~CStylePropertyPerspectiveOrigin()
  T panorama::CStylePropertyPosition::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyPosition::BAffectsCompositionOnly()
  T panorama::CStylePropertyPosition::BCanTransition()
- T panorama::CStylePropertyPosition::BFullySet()
+ T panorama::CStylePropertyPosition::BFullySet() const
  T panorama::CStylePropertyPosition::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyPosition::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyPosition::GetInvalidateLayout(panorama::CStyleProperty*) const
@@ -10329,34 +10375,40 @@
  T panorama::CStylePropertyPosition::~CStylePropertyPosition()
  T panorama::CStylePropertyRotate2DCentered::BAffectsCompositionOnly()
  T panorama::CStylePropertyRotate2DCentered::BCanTransition()
+ T panorama::CStylePropertyRotate2DCentered::BFullySet() const
  T panorama::CStylePropertyRotate2DCentered::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyRotate2DCentered::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyRotate2DCentered::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyRotate2DCentered::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyRotate2DCentered::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyRotate2DCentered::ResolveDefaultValues()
  T panorama::CStylePropertyRotate2DCentered::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyRotate2DCentered::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyRotate2DCentered::~CStylePropertyRotate2DCentered()
  T panorama::CStylePropertyScale2DCentered::BAffectsCompositionOnly()
  T panorama::CStylePropertyScale2DCentered::BCanTransition()
+ T panorama::CStylePropertyScale2DCentered::BFullySet() const
  T panorama::CStylePropertyScale2DCentered::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyScale2DCentered::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyScale2DCentered::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyScale2DCentered::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyScale2DCentered::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyScale2DCentered::ResolveDefaultValues()
  T panorama::CStylePropertyScale2DCentered::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyScale2DCentered::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyScale2DCentered::~CStylePropertyScale2DCentered()
  T panorama::CStylePropertySearch::BCanTransition()
+ T panorama::CStylePropertySearch::BFullySet() const
  T panorama::CStylePropertySearch::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertySearch::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertySearch::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertySearch::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertySearch::ResolveDefaultValues()
  T panorama::CStylePropertySearch::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertySearch::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertySearch::~CStylePropertySearch()
  T panorama::CStylePropertySound::BCanTransition()
- T panorama::CStylePropertySound::BFullySet()
+ T panorama::CStylePropertySound::BFullySet() const
  T panorama::CStylePropertySound::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertySound::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertySound::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
@@ -10366,7 +10418,7 @@
  T panorama::CStylePropertySound::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertySound::~CStylePropertySound()
  T panorama::CStylePropertyTextAlign::BCanTransition()
- T panorama::CStylePropertyTextAlign::BFullySet()
+ T panorama::CStylePropertyTextAlign::BFullySet() const
  T panorama::CStylePropertyTextAlign::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTextAlign::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyTextAlign::GetInvalidateLayout(panorama::CStyleProperty*) const
@@ -10377,7 +10429,7 @@
  T panorama::CStylePropertyTextAlign::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTextAlign::~CStylePropertyTextAlign()
  T panorama::CStylePropertyTextDecoration::BCanTransition()
- T panorama::CStylePropertyTextDecoration::BFullySet()
+ T panorama::CStylePropertyTextDecoration::BFullySet() const
  T panorama::CStylePropertyTextDecoration::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTextDecoration::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyTextDecoration::GetInvalidateLayout(panorama::CStyleProperty*) const
@@ -10389,36 +10441,42 @@
  T panorama::CStylePropertyTextDecoration::~CStylePropertyTextDecoration()
  T panorama::CStylePropertyTextLetterSpacing::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyTextLetterSpacing::BCanTransition()
+ T panorama::CStylePropertyTextLetterSpacing::BFullySet() const
  T panorama::CStylePropertyTextLetterSpacing::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTextLetterSpacing::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyTextLetterSpacing::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyTextLetterSpacing::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyTextLetterSpacing::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyTextLetterSpacing::ResolveDefaultValues()
  T panorama::CStylePropertyTextLetterSpacing::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyTextLetterSpacing::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTextLetterSpacing::~CStylePropertyTextLetterSpacing()
  T panorama::CStylePropertyTextOverflow::BCanTransition()
+ T panorama::CStylePropertyTextOverflow::BFullySet() const
  T panorama::CStylePropertyTextOverflow::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTextOverflow::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyTextOverflow::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyTextOverflow::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyTextOverflow::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyTextOverflow::ResolveDefaultValues()
  T panorama::CStylePropertyTextOverflow::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyTextOverflow::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTextOverflow::~CStylePropertyTextOverflow()
  T panorama::CStylePropertyTextShadow::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyTextShadow::BAffectsCompositionOnly()
  T panorama::CStylePropertyTextShadow::BCanTransition()
+ T panorama::CStylePropertyTextShadow::BFullySet() const
  T panorama::CStylePropertyTextShadow::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTextShadow::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyTextShadow::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyTextShadow::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyTextShadow::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyTextShadow::ResolveDefaultValues()
  T panorama::CStylePropertyTextShadow::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyTextShadow::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTextShadow::~CStylePropertyTextShadow()
  T panorama::CStylePropertyTextTransform::BCanTransition()
- T panorama::CStylePropertyTextTransform::BFullySet()
+ T panorama::CStylePropertyTextTransform::BFullySet() const
  T panorama::CStylePropertyTextTransform::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTextTransform::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyTextTransform::GetInvalidateLayout(panorama::CStyleProperty*) const
@@ -10429,11 +10487,13 @@
  T panorama::CStylePropertyTextTransform::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTextTransform::~CStylePropertyTextTransform()
  T panorama::CStylePropertyTextureSampleMode::BCanTransition()
+ T panorama::CStylePropertyTextureSampleMode::BFullySet() const
  T panorama::CStylePropertyTextureSampleMode::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTextureSampleMode::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyTextureSampleMode::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyTextureSampleMode::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyTextureSampleMode::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyTextureSampleMode::ResolveDefaultValues()
  T panorama::CStylePropertyTextureSampleMode::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyTextureSampleMode::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTextureSampleMode::~CStylePropertyTextureSampleMode()
@@ -10447,6 +10507,7 @@
  T panorama::CStylePropertyTransform3D::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyTransform3D::BAffectsCompositionOnly()
  T panorama::CStylePropertyTransform3D::BCanTransition()
+ T panorama::CStylePropertyTransform3D::BFullySet() const
  T panorama::CStylePropertyTransform3D::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTransform3D::CStylePropertyTransform3D()
  T panorama::CStylePropertyTransform3D::GetDescription(panorama::CStyleSymbol)
@@ -10454,24 +10515,27 @@
  T panorama::CStylePropertyTransform3D::GetTransformMatrix(float, float) const
  T panorama::CStylePropertyTransform3D::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyTransform3D::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyTransform3D::ResolveDefaultValues()
  T panorama::CStylePropertyTransform3D::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyTransform3D::Validate(CValidator&, char const*)
  T panorama::CStylePropertyTransform3D::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTransform3D::~CStylePropertyTransform3D()
  T panorama::CStylePropertyTransformOrigin::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyTransformOrigin::BCanTransition()
+ T panorama::CStylePropertyTransformOrigin::BFullySet() const
  T panorama::CStylePropertyTransformOrigin::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTransformOrigin::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyTransformOrigin::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyTransformOrigin::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyTransformOrigin::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyTransformOrigin::ResolveDefaultValues()
  T panorama::CStylePropertyTransformOrigin::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyTransformOrigin::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTransformOrigin::~CStylePropertyTransformOrigin()
  T panorama::CStylePropertyTransitionProperties::AddNewProperty()
  T panorama::CStylePropertyTransitionProperties::BCanPropertyTransition(panorama::CStyleSymbol)
  T panorama::CStylePropertyTransitionProperties::BCanTransition()
- T panorama::CStylePropertyTransitionProperties::BFullySet()
+ T panorama::CStylePropertyTransitionProperties::BFullySet() const
  T panorama::CStylePropertyTransitionProperties::BParseAndAddTimingFunction(bool (*)(panorama::EAnimationTimingFunction*, CCubicBezierCurve<Vector2D>*, char const*, char const**), char const*)
  T panorama::CStylePropertyTransitionProperties::BParseAndRemoveImmediate(bool*, char*)
  T panorama::CStylePropertyTransitionProperties::BSetFromString(panorama::CStyleSymbol, char const*)
@@ -10485,49 +10549,59 @@
  T panorama::CStylePropertyTransitionProperties::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyTransitionProperties::~CStylePropertyTransitionProperties()
  T panorama::CStylePropertyVisible::BCanTransition()
+ T panorama::CStylePropertyVisible::BFullySet() const
  T panorama::CStylePropertyVisible::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyVisible::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyVisible::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyVisible::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyVisible::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyVisible::ResolveDefaultValues()
  T panorama::CStylePropertyVisible::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyVisible::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyVisible::~CStylePropertyVisible()
  T panorama::CStylePropertyWashColor::BAffectsCompositionOnly()
  T panorama::CStylePropertyWashColor::BCanTransition()
+ T panorama::CStylePropertyWashColor::BFullySet() const
  T panorama::CStylePropertyWashColor::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyWashColor::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyWashColor::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyWashColor::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyWashColor::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyWashColor::ResolveDefaultValues()
  T panorama::CStylePropertyWashColor::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyWashColor::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyWashColor::~CStylePropertyWashColor()
  T panorama::CStylePropertyWhiteSpace::BCanTransition()
+ T panorama::CStylePropertyWhiteSpace::BFullySet() const
  T panorama::CStylePropertyWhiteSpace::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyWhiteSpace::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyWhiteSpace::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyWhiteSpace::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyWhiteSpace::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyWhiteSpace::ResolveDefaultValues()
  T panorama::CStylePropertyWhiteSpace::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyWhiteSpace::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyWhiteSpace::~CStylePropertyWhiteSpace()
  T panorama::CStylePropertyWidth::ApplyUIScaleFactor(float)
  T panorama::CStylePropertyWidth::BCanTransition()
+ T panorama::CStylePropertyWidth::BFullySet() const
  T panorama::CStylePropertyWidth::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyWidth::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyWidth::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyWidth::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyWidth::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyWidth::ResolveDefaultValues()
  T panorama::CStylePropertyWidth::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyWidth::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyWidth::~CStylePropertyWidth()
  T panorama::CStylePropertyZIndex::BCanTransition()
+ T panorama::CStylePropertyZIndex::BFullySet() const
  T panorama::CStylePropertyZIndex::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyZIndex::GetDescription(panorama::CStyleSymbol)
  T panorama::CStylePropertyZIndex::GetInvalidateLayout(panorama::CStyleProperty*) const
  T panorama::CStylePropertyZIndex::Interpolate(panorama::IUIPanel*, panorama::CStyleProperty const&, float)
  T panorama::CStylePropertyZIndex::MergeTo(panorama::CStyleProperty*) const
+ T panorama::CStylePropertyZIndex::ResolveDefaultValues()
  T panorama::CStylePropertyZIndex::ToString(CFmtStrN<1024, true, true>*) const
  T panorama::CStylePropertyZIndex::operator==(panorama::CStyleProperty const&) const
  T panorama::CStylePropertyZIndex::~CStylePropertyZIndex()
@@ -11195,8 +11269,8 @@
  T panorama::CUIPanel::ApplyStyles(bool)
  T panorama::CUIPanel::BAcceptsFocus() const
  T panorama::CUIPanel::BAcceptsInput()
+ T panorama::CUIPanel::BApplyLayoutFile(panorama::CLayoutFile*, CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
  T panorama::CUIPanel::BApplyPanelDescription(panorama::CPanoramaSymbol, panorama::PanelDescription_t*, CUtlVector<panorama::PanelEventsToParse_t, CUtlMemory<panorama::PanelEventsToParse_t> >*, CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
- T panorama::CUIPanel::BAppyLayoutFile(panorama::CLayoutFile*, CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
  T panorama::CUIPanel::BAscendantHasClass(char const*)
  T panorama::CUIPanel::BAscendantHasClass(panorama::CPanoramaSymbol)
  T panorama::CUIPanel::BBuildMatchingStyleList(CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >*)
@@ -11246,6 +11320,7 @@
  T panorama::CUIPanel::DesiredLayoutSizeTraverse(float, float)
  T panorama::CUIPanel::DispatchPanelEvent(panorama::CPanoramaSymbol)
  T panorama::CUIPanel::EnableBackgroundMovies(bool)
+ T panorama::CUIPanel::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CUIPanel::EventLoadLayoutFileAsync(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, bool)
  T panorama::CUIPanel::EventLoadLayoutFromBase64XMLStringAsync(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, bool)
  T panorama::CUIPanel::EventLoadLayoutFromXMLStringAsync(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, bool)
@@ -11313,6 +11388,7 @@
  T panorama::CUIPanel::GetParentWindow() const
  T panorama::CUIPanel::GetRawActualXOffset() const
  T panorama::CUIPanel::GetRawActualYOffset() const
+ T panorama::CUIPanel::GetRememberChildFocus() const
  T panorama::CUIPanel::GetSelectionPositionX() const
  T panorama::CUIPanel::GetSelectionPositionX_Raw() const
  T panorama::CUIPanel::GetSelectionPositionY() const
@@ -11429,6 +11505,7 @@
  T panorama::CUIPanel::SetPanelEventJSFunction(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
  T panorama::CUIPanel::SetParent(panorama::IUIPanel*)
  T panorama::CUIPanel::SetPositionFromLayoutTraverse(panorama::CUILength, panorama::CUILength, panorama::CUILength)
+ T panorama::CUIPanel::SetRememberChildFocus(bool)
  T panorama::CUIPanel::SetRepaint(panorama::EPanelRepaint)
  T panorama::CUIPanel::SetRepaintRecursive(panorama::EPanelRepaint)
  T panorama::CUIPanel::SetSelected(bool)
@@ -12325,6 +12402,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SoundMuteChanged, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SteamPadRightHighActivity>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StopStreaming>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StopStreamingAndSuspendClient>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StyleClassesChanged>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::StyleFlagsChanged>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::SuspendMachine>(panorama::IUIPanel*, char const*, char const**)
@@ -12338,6 +12416,8 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ToggleStyle, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::TurnOffActiveController>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::UserInputActive>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationMenuButtonDown>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRApplicationMenuButtonUp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::VRNotificationBeginInteraction, unsigned long long, unsigned int, unsigned long long>(panorama::IUIPanel*, char const*, char const**)
@@ -12376,6 +12456,7 @@
  T panorama::InputFocusLost::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::InputFocusLost::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::InputFocusSet::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::InputFocusSet::GetEventType()
  T panorama::InputFocusSet::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::InputFocusTopLevelChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::InputFocusTopLevelChanged::MakeEvent(panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::CPanel2D>)
@@ -12584,6 +12665,8 @@
  T panorama::StopAudioSample::MakeEvent(panorama::IUIPanelClient const*, void*)
  T panorama::StopStreaming::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::StopStreaming::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::StopStreamingAndSuspendClient::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::StopStreamingAndSuspendClient::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::StyleClassesChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::StyleClassesChanged::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::StyleFlagsChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -12631,6 +12714,10 @@
  T panorama::V8ArrayBufferAllocator::AllocateUninitialized(unsigned long)
  T panorama::V8ArrayBufferAllocator::Free(void*, unsigned long)
  T panorama::V8ArrayBufferAllocator::~V8ArrayBufferAllocator()
+ T panorama::VRApplicationMenuButtonDown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRApplicationMenuButtonDown::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::VRApplicationMenuButtonUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::VRApplicationMenuButtonUp::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::VRDashboardRequested::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRDashboardRequested::MakeEvent(panorama::IUIPanelClient const*, unsigned int, unsigned long long)
  T panorama::VRDashboardThumbSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -14169,10 +14256,12 @@
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symDraggable
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symHitTestEnabled
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symInputNamespace
+ b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symKeepScrollToBottomOnResize
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symMouseCanActivate
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symOverscrollX
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symOverscrollY
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symPos
+ b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symRememberChildFocus
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symSelectionPosBoundary
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symSendChildScrolledIntoViewEvents
  b guard variable for panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symStyle
@@ -14281,10 +14370,12 @@
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symDraggable
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symHitTestEnabled
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symInputNamespace
+ b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symKeepScrollToBottomOnResize
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symMouseCanActivate
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symOverscrollX
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symOverscrollY
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symPos
+ b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symRememberChildFocus
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symSelectionPosBoundary
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symSendChildScrolledIntoViewEvents
  b panorama::CUIPanel::BSetProperty(panorama::CPanoramaSymbol, char const*)::k_symStyle
@@ -15264,7 +15355,7 @@
  t TrieTok
  t TryTok
  t __cxx_global_array_dtor
- t __cxx_global_var_init193
+ t __cxx_global_var_init195
  t __cxx_global_var_init49
  t __cxx_global_var_init50
  t __cxx_global_var_init51

@@ -70,7 +70,7 @@ ControllerBindingsGordon.ScreenSaverMode
 
 #BindingsContainer
 {
-	margin-top: 35px;
+	margin-top: 5px;
 	height: 100%;
 	width: 1767px;
 	horizontal-align: center;
@@ -121,6 +121,48 @@ ControllerBindingsGordon.ScreenSaverMode
 	width: 50%;
 	height: 90%;
 	
+	visibility: collapse;
+}
+
+#BindingsTitle
+{
+	font-size: 60px;
+	font-family: platformfont;
+	color: #01caef;
+	//margin-top: 20px;
+	text-align: center;
+	
+	horizontal-align: center;
+	vertical-align: top;
+	width: 100%;
+	height: 6.5%;
+	
+	visibility: visible;
+}
+
+#BindingsCreator
+{
+	font-size: 20px;
+	font-family: platformfont;
+	color: #01caef;
+	//margin-top: 20px;
+	text-align: center;
+	
+	horizontal-align: center;
+	vertical-align: top;
+	width: 40%;
+	height: 2.5%;
+	
+	visibility: visible;
+}
+
+.HideBindingsCreator #BindingsCreator 
+{
+	visibility: collapse;
+}
+
+.HideBindingsTitle #BindingsTitle 
+{
 	visibility: collapse;
 }
 

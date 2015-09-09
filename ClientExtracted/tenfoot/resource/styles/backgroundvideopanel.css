@@ -341,6 +341,16 @@ BackgroundVideoPanel.IngameOverlayBackground #BackgroundMovie
 	opacity: 0.95;
 }
 
+BackgroundVideoPanel.IngameOverlayBackground.MinimalKeyboard #BackgroundMovie,
+{
+	visibility: collapse;
+}
+
+BackgroundVideoPanel.IngameOverlayBackground.MinimalKeyboard
+{
+	background-color: #00000000;
+}
+
 BackgroundVideoPanel #BackgroundThrobber
 {
 	align: center center;

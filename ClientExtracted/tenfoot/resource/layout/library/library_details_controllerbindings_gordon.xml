@@ -8,6 +8,8 @@
 	<ControllerBindingsGordon defaultfocus="LeftTrackpad">
 		<Button id="VDFDump" onactivate="DumpVDF()" />
 		<Panel id="BindingsContainer" tabindex="auto" selectionpos="auto">
+			<Label id="BindingsTitle" text="#SettingsController_BindingTitle" />
+			<Label id="BindingsCreator" text="#SettingsController_BindingCreator" />
 			<Panel id="TopHalfContainer">
 				<Panel class="Background" id="BackgroundController" >
 						<Panel id="HelperDescription" >

@@ -1,38 +1,32 @@
 RemotePanel
 {
-	width: 2120px;
+	width: 100%;
 	height: 948px;
+	vertical-align: bottom;
 
-	margin: 0 -100px 0 -100px;
-	padding: 0 100px 0 100px;
-
-	perspective-origin:  62% 5% invert;
-
+	opacity: 0;
+	transform: translate3d( 0px, 1276px, 1000px );
+	
 	transition-property: transform, position, opacity;
 	transition-duration: mediumduration;
 	transition-delay: 0s;
 	transition-timing-function: ease-in-out;
-
-	vertical-align: bottom;
-
-	opacity: 0;
-
-	transform-origin: 0% 0% parent-relative;
-	transform: translate3d( 0px, 1276px, 1000px );
-
 }
 
-RemotePanel.LoadingVisible {
+RemotePanel.LoadingVisible
+{
 	transform: translate3d( 0px, 0px, 0px );
 	opacity: 1;
 }
 
-.LoadingPanel {
+.LoadingPanel
+{
 	width: 100%;
 	height: 100%;
 }
 
-.LoadingPanel #Loading {
+.LoadingPanel #Loading
+{
 	width: 100%;
 	height: 100%;
 }

@@ -12,6 +12,12 @@
 					<Label id="NewClientUpdateLabel" class="LongDescSm" text="#MainMenu_NewClientUpdate" />
 				</Panel>
 			</Button>
+			<Button id="UnreadChatMessagesButton" onactivate="ShowUnreadChatMessages();" >
+				<Image src="file://{images}/comments.png" />
+				<Panel class="ButtonLabelWrapper">
+					<Label id="UnreadChatLabel" class="LongDescSm" text="#MainMenu_UnreadChat" />
+				</Panel>
+			</Button>
 			<Button id="NewCommentsButton" onactivate="ShowNewComments();" >
 				<Image src="file://{images}/comments.png" />
 				<Panel class="ButtonLabelWrapper">

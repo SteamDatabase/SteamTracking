@@ -64,6 +64,8 @@
 	"UI_TextEntry_CopyToClipboard"	"Copy"
 	"UI_TextEntry_PasteClipboard"	"Paste"
 
+	"UI_ShowHidePassword"			"SHOW / HIDE PASSWORD"
+
 	"UI_Agreements"					"Agreements"
 	"UI_ViewAgreements"				"VIEW SSA & PRIVACY POLICY"
 	"UI_I_Agree"					"I agree"
@@ -213,6 +215,8 @@
 	"MainMenu_NewAsyncGameInvitesSingular"	"{d:asyncgameinvitescount} New Game Invite"
 	"MainMenu_NewModeratorMessages"		"{d:moderatormessagecount} Community Moderation Messages"
 	"MainMenu_NewModeratorMessagesSingular"	"{d:moderatormessagecount} Community Moderation Message"
+	"MainMenu_UnreadChatSingular"	"{d:unreadchatmessagecount} Unread Chat Message"
+	"MainMenu_UnreadChat"			"{d:unreadchatmessagecount} Unread Chat Messages"
 
 
 	"MainMenu_NewSupportMessages"	"1 message from Steam Support"
@@ -1256,6 +1260,7 @@
 
 	"Trailer_Slideshow_Error"					"Unable to load trailers at this time"
 
+	"Library_ContentTitle"	"Library"
 	"Library_RecentlyPlayed"	"RECENTLY PLAYED"
 	"Library_ViewAll"		"VIEW ALL"
 	"Library_Games"			"GAMES"
@@ -1263,6 +1268,7 @@
 	"Library_ViewAll_Screenshots"	"VIEW ALL"
 	"Library_Movies"		"MOVIES"
 	"Library_Music"			"MUSIC"
+	"Library_Downloads"	"Downloads"
 	"Library_ViewAll_Music"	"VIEW ALL"
 	"Library_Details_LinksAndMore"	"LINKS & MORE"
 	"Library_Details_Achievements"	"ACHIEVEMENTS {i:num_achievements_completed}/{i:num_achievements}"
@@ -1322,6 +1328,7 @@
 	"Library_Details_SyncingConflict"	"Conflict"
 	"Library_Details_CloudUnknown"	"Unknown"
 	"Library_Details_DownloadableContent"	"Shop for DLC"
+	"Library_Details_LibraryDetails"	"Your Game"
 	"Library_Details_GameStorePage"		"{s:apptype} Store Page"
 	"Library_Details_GameHubPage"		"{s:apptype} Hub Page"
 	"Library_Details_GameForums"		"Community Discussions"
@@ -1341,6 +1348,17 @@
 	"Library_Details_RemoveIcon_Confirm"	"YES"
 	"Library_Details_RemoveIcon_Cancel"	"CANCEL"
 	"Library_Details_Settings_Title"		"{s:appname} Settings"
+
+	"Library_Details_CommunityContent_All"				 "All"
+	"Library_Details_CommunityContent_Screenshots"		 "Screenshots"
+	"Library_Details_CommunityContent_Artwork"			 "Artwork"
+	"Library_Details_CommunityContent_Videos"			 "Videos"
+	"Library_Details_CommunityContent_Broadcasts"		 "Broadcasts"
+	"Library_Details_CommunityContent_Workshop"			 "Workshop"
+	"Library_Details_CommunityContent_News"				 "News"
+	"Library_Details_CommunityContent_Guides"			 "Guides"
+	"Library_Details_CommunityContent_Reviews"			 "Reviews"
+
 	"Controller_FirstTimeLaunch_String1"	"This is your first time playing this"
 	"Controller_FirstTimeLaunch_String2"	"game with a Steam Controller. Press"
 	"Controller_FirstTimeLaunch_String3"	"the Steam button to choose a mapping."
@@ -1358,6 +1376,7 @@
 	"Library_Details_ViewGuides"			"VIEW GUIDES"
 	"Library_Details_ViewAllWorkshopItems"		"VIEW ALL"
 	"Library_Details_ViewCommunityHub"			"VIEW COMMUNITY CONTENT"
+	"Library_Details_CommunityContentHeadline"			"COMMUNITY CONTENT"
 	"Library_Details_NotAvailablePlatform"			"NOT ON {s:currentos}"
 	"Library_Details_AvailableOnPlatforms"		"Available on {s:platformlist}"
 	"Library_Details_WorkshopWhatIsIt"	"Create, discover and play content contributed by the Steam Community ({d:wscount} items)."
@@ -1855,6 +1874,11 @@
 	"Library_StreamingSource_Installed"		"(Installed)"
 	"Library_StreamingSource_ThisMachine"	"This machine"
 	"Library_StreamSources"					"Local & Streaming Sources"
+
+	"Library_Settings_Organize"				"Organize"
+	"Library_Settings_Preferences"			"Preferences"
+	"Library_Settings_Support"				"Support"
+	"Library_Settings_Content"				"Content"
 	
 	"Library_TagHeader" "Narrow By Tag"
 	"Library_CategoryHeader" "Your Categories"
@@ -1863,11 +1887,12 @@
 	"Library_FilterHeader" "Filter {s:apptype}"
 	"Library_InstalledLocally" "Installed Locally"
 	"Library_GamesICanPlay" "Playable"
+	"Library_VRFilter" "Supports VR"
 	"Library_ReadyToPlay" "Ready to Play"
 	"Library_ControllerSupported" "Controller Supported"
 	"Library_Hidden" "Hidden Games"
 	"Library_Unblocked" "Family Games"
-	"Library_SearchGames" "Search Games..."
+	"Library_SearchGames" "Search Library..."
 	"Library_ClearButton" "Clear Filters"
 	"Library_HideFiltersButton" "Hide Filters"
 	"Library_AllGamesPlay" "PLAY"
@@ -1896,7 +1921,7 @@
 	"Library_Suggested_UnplayedRandom" "Unplayed"
 	"Library_Suggested_PlayedRandom" "Randomly picked"
 	"Library_Suggested_UnplayedStore" "Popular on Steam"
-	"Library_Suggested_UnplayedMRU" "You just Purchased"
+	"Library_Suggested_UnplayedMRU" "You just purchased"
 	"Library_Suggested_FreeToPlay" "Play Now!"
 	
 	"Library_Filter_RecentlyPlayed" "Recently Played"
@@ -2422,31 +2447,59 @@
 	"Downloads_CurrentRate2"				"Current rate"
 	"Downloads_PeakRate"				"Peak rate"
 	"Downloads_TotalDownload"				"Total"
+	
 	"Downloads_Pause"		"PAUSE"
 	"Downloads_Resume"		"RESUME"
-	"Downloads_PauseAll"		"PAUSE"
-	"Downloads_ResumeAll"		"RESUME"
+	"Downloads_PauseAll"		"PAUSE ALL"
+	"Downloads_ResumeAll"		"RESUME ALL"
 	"Downloads_ViewInLibrary"	"VIEW IN LIBRARY"
 	"Downloads_Remove"	"REMOVE"
 	"Downloads_MoveToTop" "DOWNLOAD NOW"
-	"Downloads_Finished"	"Download finished at {t:t:downloadfinished}"
-	"Downloads_QueuedAmount"	"Download queued"
-	"Downloads_Deferred"	"Will Auto-Update at {s:updatetime}"
-
+	
+	"Downloads_QueuedTitel" "{i:downloadsqueued} downloads queued"
+	"Downloads_DeferredTitel" "{i:downloadsdeferred} downloads scheduled"
+	"Downloads_PausedTitel" "{i:downloadspaused} downloads paused"
+	"Downloads_FinishedTitel" "{i:downloadscomplete} downloads finished"
+  
 	"Downloads_AmountValue"				"{s:downloadamount}"
 	"Downloads_TimeRemainValue"		"{t:r:s:downloadtime}"
 	"Downloads_CurrentRateValue"	"{s:downloadrate}/s"
 	"Downloads_Percent"						"{s:downloadpercent}"
 	"Downloads_Downloading"	"DOWNLOADING"
 	"Downloads_Paused"	"DOWNLOADS PAUSED"
-	"Downloads_ItemsPaused"				"{i:downloadpaused} ITEMS QUEUED"
+	
+	"Downloads_ItemTitle"				"{s:downloadtitle}"
+	"Downloads_ItemsPaused"				"{i:downloadspaused} ITEMS QUEUED"
 	"Downloads_ItemPaused"				"1 ITEM QUEUED"
-	"Downloads_ItemsComplete"				"{i:downloadcomplete} OF {i:downloadtotal} ITEMS COMPLETE"
+	"Downloads_ItemsComplete"				"{i:downloadscomplete} OF {i:downloadstotal} ITEMS COMPLETE"
 	"Downloads_ItemComplete"				"1 ITEM COMPLETE"	
-	"Downloads_TotalAmountValue"				"{s:downloadamount}"
-	"Downloads_PeakRateValue"		"{s:downloadpeakrate}/s"
-	"Downloads_QueuedAmountValue"	"{s:downloadamount}"
-
+	"Downloads_TotalAmountValue"				"{s:downloadsamount}"
+	"Downloads_PeakRateValue"		"{s:downloadspeakrate}/s"
+	"Downloads_QueuedAmountValue"	"{s:downloadsamount}"
+	"Downloads_None"	"No downloads in progress"
+	
+	"Downloads_Status_installing"	"Installing {s:downloadpercent}"
+	"Downloads_Status_starting"	"Starting"
+	"Downloads_Status_validating"	"Validating {s:downloadpercent}"
+	"Downloads_Status_preallocating" "Preallocating {s:downloadpercent}"
+	"Downloads_Status_stopping"	"Stopping"
+	"Downloads_Status_updating"	"Updating {s:downloadpercent}"
+	"Downloads_Status_downloading"	"Downloading {s:downloadpercent}"
+	"Downloads_Status_preloading"	"Preloading {s:downloadpercent}"
+	"Downloads_Status_unpacking"	"Unpacking {s:downloadpercent}"
+	"Downloads_Status_paused"	"Paused"
+	"Downloads_Status_suspended"	"In Queue"
+	"Downloads_Status_ready"	"Ready to Play"
+	"Downloads_Status_application_ready"	"Ready to Launch"
+	"Downloads_Status_preloaded"	"Pre-load complete"
+	"Downloads_Status_finished"	"Download finished at {t:t:downloadfinished}"
+	"Downloads_Status_queued"	"Download queued"
+	"Downloads_Status_deferred"	"Download scheduled at {t:t:downloadstart}"
+	
+	"Quit_LabelStreamingClient"	"{s:streamingclient}"
+	"Quit_LabelStreamingServer"	"{s:streamingserver}"
+	"Quit_StopStreaming"		"Stop Streaming"
+	"Quit_StopStreamingAndSuspendClient"		"Turn Off {s:streamingclient}"
 	"Quit_ExitBigPicture"		"Return to Desktop"
 	"Quit_EnterSteamOSDesktop"	"Switch to Desktop mode"
 	"Quit_ExitSteam"			"Exit Steam"
@@ -2458,7 +2511,6 @@
 	"Quit_Shutdown"				"Turn Off System"
 	"Quit_Restart"				"Restart System"
 	"Quit_Sleep"				"Suspend System"
-	"Quit_StopStreaming"		"Stop Streaming"
 	"Quit_TurnOffController"		"Turn Off Controller"
 	"Quit_SwitchToHDMIInput"	"Switch to HDMI Input"
 	"Quit_ZeroTracker"			"Center View"
@@ -2963,14 +3015,15 @@
 	"Library_Details_OptIntoBeta" "Select Beta..."
 	"Library_Details_EditLaunchCommandLine"	"Set Launch Options..."
 	
-	"Library_EditCommandLine_CodeLabel" "These options are for advanced users only"
+	"Library_EditCommandLine_CodeLabel" "Recommended for advanced users."
 	"Library_EditCommandLine_Title" "Launch Options for {s:gamename}"
 	
-	"Library_SelectBeta_CodeLabel" "Select the beta you would like to opt into"
+	"Library_SelectBeta_CodeLabel" "Select the beta you would like to opt into."
 	"Library_SelectBeta_Title"	"Select Beta"
-	"Library_SelectBeta_PrivateTitle"	"Enter passcode to unlock private betas"
+	"Library_SelectBeta_PrivateTitle"	"Enter a passcode to unlock private betas."
 	"Library_SelectBeta_BetaPassword"	"PASSCODE"
 	"Library_SelectBeta_PrivateButton"	"CHECK"
+	"Library_SelectBeta_NoBeta" "There are no public betas for this game."
 	
 	"Library_SelectBeta_None" "None"
 
@@ -3098,7 +3151,14 @@
 	"Broadcast_FirstTime_OK" "OK"
 	"Broadcast_FirstTime_Cancel" "Cancel"
 	"Broadcast_FirstTime_ViewerRequest" "{s:friend} would like to watch you play {s:gamename}"
-	
+
+	"StreamingOverlay_Title"		"IN-HOME STREAMING"
+	"StreamingOverlay_Status"		"Currently streaming from {s:hostname}\n\nActivate for more details"
+
+	"StreamingDetails_Title"		"In-Home Streaming Status"
+	"StreamingDetails_Status"		"Host: {s:hostname}\nClient: {s:clientname}\n{s:streamres} at {s:streamfps} FPS\n{s:streamrate} kilobit/sec\n\nEncoding delay: {s:latencyencode}\nNetwork delay: {s:latencynetwork} +/- {s:latencynetworkstddev}\nDecoding delay: {s:latencydecode}\n\nNetwork quality: {s:networkquality}"
+	"StreamingDetails_ButtonModifySettings"	"MODIFY SETTINGS"
+
 	"SettingsVoice_VoiceOutputtoInput"	"Use for voice output too"
 
 	"SettingsAudioConfig_BeginWizard"	"Reconfigure Audio"
@@ -3158,11 +3218,12 @@
 	"SteamUI_UpdateControllerFirmware_Title"	"Update Steam Controller Firmware"
 	"SteamUI_UpdateControllerFirmware_Intro"	"There is new firmware available for your Steam Controller. The update will take up to a minute."
 	"SteamUI_UpdateControllerFirmware_Install"	"New firmware is being installed on the controller.\nPlease do not disconnect the controller.\nThe update can take up to a minute."
+	"SteamUI_UpdateControllerFirmware_InstallW"	"New firmware is being installed on the controller.\nPlease do not power off the controller.\nThe update can take up to a minute."
 	"SteamUI_UpdateControllerFirmware_Finished"	"Your Steam Controller firmware has been updated."
 	"SteamUI_UpdateControllerFirmware_Fallback"	"Initiating firmware update."
 	"SteamUI_UpdateControllerFirmware_Fallback_Finished" "Your firmware has now been updated, unplug the USB cable to continue."
 	"SteamUI_UpdateControllerFirmware_Disconnect"	"The Steam Controller disconnected during the firmware upgrade process.  You will have another opportunity to upgrade the firmware when it is reconnected."
-	"SteamUI_UpdateControllerFirmware_WiredUpdate"	"A firmware update is available for your Steam Controller.  Your controller requires a one-time wired update.\nWhen you are ready, connect the controller via USB and the update process will start automatically."
+	"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Your controller requires a one-time wired update.\n\nConnect the controller with the USB cable, and the update will start automatically.\n"
 	"SteamUI_UpdateControllerFirmware_UpdateTitle" "Controller Firmware Update"
 	"SteamUI_UpdateControllerFirmware_HardFailure" "Warning: One of your Steam controllers has been disabled and will not be reconfigured or programmed for games because its firmware is out of date and Steam was unable to fetch updated firmware information."
 	"SteamUI_UpdateDongleFirmware_OutofDate"	"ERROR: You're using a Controller Dongle that is too old. Come get a new one from the Controller Team."
@@ -3774,8 +3835,6 @@
 	"TimeZoneCities_Iran"				"Tehran"
 
 	"WebPanel_OpenInFullBrowser" "OPEN IN BROWSER"
-	"SystemMenu_Clock" "{s:clock}"
-	"SystemMenu_ClockSuffix" "{s:clocksuffix}"
 	"MainMenu_MainMenu" "HOME"
 	"MainMenu_Quickmenu" "QUICK MENU"
 	
@@ -3783,6 +3842,9 @@
 	//HELPER STUFF FOR CONTROLLER CONFIG PANEL
 	"SettingsController_HelperDescriptionHeader"	"Cool Header"
 	"SettingsController_HelperDescriptionText"	"Cool Description"
+	"SettingsController_BindingTitle" "{s:bindingtitle}"
+	"SettingsController_BindingCreator" "By {s:bindingcreator}"
+	
 	//Generic
 	"ControllerBinding_ModeDropDown" "Style of Input"
 	"ControllerBinding_ModeDropDown_Description" "The physical inputs of the controller can be programmed to act like different types of devices."

@@ -387,6 +387,7 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 	visibility: collapse;
 	transition-property: height;
 	transition-duration: steamguard_message_transition_time;
+	text-transform: uppercase;
 }
 
 #TwoFactorTextEntry
@@ -394,6 +395,7 @@ Label.TextEntryPrompt, .LoginPromptContainer:descendantfocus Label.TextEntryProm
 	visibility: collapse;
 	transition-property: height;
 	transition-duration: steamguard_message_transition_time;
+	text-transform: uppercase;
 }
 
 

@@ -11,73 +11,95 @@
 				<Image id="BGScreenshot" class="BGScreenshot" onload="AddStyle( BGScreenshotVisible ); RemoveStyle( BGScreenshotInvisible ); AddStyle( BGOverlay, BGOverlayVisible ); RemoveStyle( BGOverlay, BGOverlayInvisible );" />
 			</Panel>
 		</Panel>
-		<Panel id="UpperRow" class="UpperRow" >
-			<Label id="GameName" class="GameName" text="" />
-		</Panel>
 		<Panel id="DesktopPanels">
 			<Panel id="CommonControls" tabindex="auto" selectionpos="auto">
-				<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore"/>
+				<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore" onmoveright="LibraryDetailsFocusFirstVisibleItem()" />
 			</Panel>
-			<Panel id="ContentsRow" class="ContentsRow" tabindex="auto" selectionpos="auto">
 
-				<Panel class="LibraryDetailsSectionRow PlayArea">
-					<Panel class="LibraryPlayRow">
-						<LibraryPlayAction id="PlayAction" class="PlayAction DetailsDataPanel" />
+			<Panel class="LibraryDetailsSectionsContainer" tabindex="auto" selectionpos="auto">
 
-						<Panel class="PlayHeaderDetails">
-							<Panel id="DescriptionArea" class="AppMiscHeader">
-								<Label id="GameStatus" class="GameStatus" text="" />
+				<LibrarySettings id="LibrarySettings" class="LibraryDetailsSectionPanel" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<Panel id="StorePanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" >
+					<ParentalButton id="GotoStoreButton" class="NxLeftNavButtonAction">
+						<Image src="file://{images}/icon_cart.png" />
+						<Label id="StoreLabel" text="#Library_Details_GameStorePage" />
+						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
+					</ParentalButton>
+				</Panel>
 	
-								<Panel id="StreamingData">
-									<Label id="StreamFrom" class="LastPlayed DataHeader" text="#Library_Details_StreamFrom" />
-									<Label id="StreamFromValue" class="LastPlayedValue DataValue" text="Library_Details_StreamFromMachine" />
-								</Panel> 
+				<CommunityHubContentPanel id="CommunityContentAllPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<CommunityHubContentPanel id="CommunityContentScreenshotsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<CommunityHubContentPanel id="CommunityContentArtworkPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<CommunityHubContentPanel id="CommunityContentVideosPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<CommunityHubContentPanel id="CommunityContentBroadcastsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<CommunityHubContentPanel id="CommunityContentWorkshopPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<CommunityHubContentPanel id="CommunityContentNewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<CommunityHubContentPanel id="CommunityContentGuidesPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<CommunityHubContentPanel id="CommunityContentReviewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+	
+				<Panel id="ContentsRow" class="ContentsRow LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()">
+	
+					<Panel class="LibraryDetailsSectionRow PlayArea">
+						<Panel class="LibraryPlayRow">
+							<LibraryPlayAction id="PlayAction" class="PlayAction DetailsDataPanel" />
+	
+							<Panel class="PlayHeaderDetails">
+								<Panel id="DescriptionArea" class="AppMiscHeader">
+									<Label id="GameStatus" class="GameStatus" text="" />
+		
+									<Panel id="StreamingData">
+										<Label id="StreamFrom" class="LastPlayed DataHeader" text="#Library_Details_StreamFrom" />
+										<Label id="StreamFromValue" class="LastPlayedValue DataValue" text="Library_Details_StreamFromMachine" />
+									</Panel> 
+								</Panel>
+		
+								<Panel id="PlayStatsArea" class="AppMiscHeader">
+									<Panel id="ForeverPlaytime" class="PlayTimeData">
+										<Label id="YouPlayedHeader" class="DataHeader" text="#Library_Details_YouvePlayed" />
+										<Label id="YouWatchedHeader" class="DataHeader" text="#Library_Details_YouveWatched" />
+				
+										<Label id="YouPlayedMinutesSingular" class="YouPlayedValue DataValue" text="#Library_Details_MinutesSingular" />
+										<Label id="YouPlayedMinutes" class="YouPlayedValue DataValue" text="#Library_Details_Minutes" />
+										<Label id="YouPlayedHoursSingular" class="YouPlayedValue DataValue" text="#Library_Details_HoursSingular" />
+										<Label id="YouPlayedHours" class="YouPlayedValue DataValue" text="#Library_Details_Hours" />
+									</Panel> 
+									<Panel id="LastPlayed" class="PlayTimeData">
+										<Label id="LastPlayedHeader" class="DataHeader" text="#Library_Details_LastPlayed" />
+										<Label id="LastWatchedHeader" class="DataHeader" text="#Library_Details_LastWatched" />
+										<Label id="LastPlayedValue" class="DataValue" text="#Library_Details_LastPlayedValue" />
+									</Panel>
+									<Panel id="CloudStatus" class="PlayTimeData">
+										<Label id="SteamCloud" class="SteamCloud DataHeader" text="#Library_Details_SteamCloud" />
+										<Label id="SteamCloudValue" class="SteamCloudValue DataValue" text="#Library_Details_SteamCloudValue" />
+									</Panel>
+								</Panel>
 							</Panel>
 	
-							<Panel id="PlayStatsArea" class="AppMiscHeader">
-								<Panel id="ForeverPlaytime" class="PlayTimeData">
-									<Label id="YouPlayedHeader" class="DataHeader" text="#Library_Details_YouvePlayed" />
-									<Label id="YouWatchedHeader" class="DataHeader" text="#Library_Details_YouveWatched" />
-			
-									<Label id="YouPlayedMinutesSingular" class="YouPlayedValue DataValue" text="#Library_Details_MinutesSingular" />
-									<Label id="YouPlayedMinutes" class="YouPlayedValue DataValue" text="#Library_Details_Minutes" />
-									<Label id="YouPlayedHoursSingular" class="YouPlayedValue DataValue" text="#Library_Details_HoursSingular" />
-									<Label id="YouPlayedHours" class="YouPlayedValue DataValue" text="#Library_Details_Hours" />
-								</Panel> 
-								<Panel id="LastPlayed" class="PlayTimeData">
-									<Label id="LastPlayedHeader" class="DataHeader" text="#Library_Details_LastPlayed" />
-									<Label id="LastWatchedHeader" class="DataHeader" text="#Library_Details_LastWatched" />
-									<Label id="LastPlayedValue" class="DataValue" text="#Library_Details_LastPlayedValue" />
-								</Panel>
-								<Panel id="CloudStatus" class="PlayTimeData">
-									<Label id="SteamCloud" class="SteamCloud DataHeader" text="#Library_Details_SteamCloud" />
-									<Label id="SteamCloudValue" class="SteamCloudValue DataValue" text="#Library_Details_SteamCloudValue" />
-								</Panel>
+							<Panel id="SharingDetails" class="AppMiscHeader">
+								<Label id="SharingHeader" class="DataHeader" text="#Library_Details_SharingHeader"/>
+								<Label id="SharingValue" class="DataValue" text="#Library_Details_SharingUser"/>
 							</Panel>
-						</Panel>
-
-						<Panel id="SharingDetails" class="AppMiscHeader">
-							<Label id="SharingHeader" class="DataHeader" text="#Library_Details_SharingHeader"/>
-							<Label id="SharingValue" class="DataValue" text="#Library_Details_SharingUser"/>
-						</Panel>
-	
-						<Panel id="GameRequires" class="AppMiscHeader">
-							<Label id="GameRequiresLabel" text="#Library_Details_GameRequiresController" />
+		
+							<Panel id="GameRequires" class="AppMiscHeader">
+								<Label id="GameRequiresLabel" text="#Library_Details_GameRequiresController" />
+							</Panel>
 						</Panel>
 					</Panel>
-				</Panel>
-
-				<Panel class="LibrarySpacer"></Panel>
-				<Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow ShortArea">
-					<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" mousecanactivate="iffocused" />
-					<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" mousecanactivate="iffocused" />
-                    </Panel>
-                <Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow TallArea">
-					<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" mousecanactivate="iffocused" />
-					<LibraryDLC id="DLC" class="DLC DetailsDataPanel" mousecanactivate="iffocused" />
-					<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" mousecanactivate="iffocused" />
+	
+					<Panel class="LibrarySpacer"></Panel>
+					<Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow ShortArea">
+						<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" mousecanactivate="iffocused" />
+						<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" mousecanactivate="iffocused" />
+					</Panel>
+					<Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow TallArea">
+						<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" mousecanactivate="iffocused" />
+						<LibraryDLC id="DLC" class="DLC DetailsDataPanel" mousecanactivate="iffocused" />
+						<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" mousecanactivate="iffocused" />
+					</Panel>
 				</Panel>
 			</Panel>
+
 		</Panel>
+
 	</LibraryAppDetails>
 </root>

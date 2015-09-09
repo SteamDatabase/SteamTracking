@@ -210,7 +210,6 @@ FavoriteGridItem:descendantfocus:hover #AltTitle
 
 .FavoriteRow Button .WebImage, .GridItemImage
 {
-	background-image: url( "file://{images}/browser/defaultfav.png" );
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2c2c2c ), to( #212121 ) );
 
 	opacity: 0.85;

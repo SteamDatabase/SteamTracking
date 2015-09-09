@@ -5,7 +5,7 @@
 		
 	</styles>
 
-	<SettingsPanel_AlienFX class="SettingsSection" defaultfocus="Continents">
+	<SettingsPanel_AlienFX class="SettingsSection">
 		<!-- top header panel -->
 		<Panel class="SettingsHeader">
 			<Label class="SettingsHeaderLegend" text="#Settings_AlienFXHeader" />

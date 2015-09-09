@@ -18,15 +18,15 @@
               <Label id="GameLabel_Expanded" html="true" text="" />
 						</Panel>
 					</Panel>
-					<Panel class="InstalledState" />
 					<Panel id="SuggestedStatus" >			
 						<Panel id="SuggestedStatusWrapper" >			
-							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport" />
-							<Panel id="GridControllerSupport" class="GridControllerSupport" />
-							<Panel id="ReadyToPlay" class="ReadyToPlay" />
-							<Panel id="ReadyToStream" class="ReadyToStream" />
-							<Panel id="ReadyToDownload" class="ReadyToDownload" />
-							<Panel id="NotReadyToPlay" class="NotReadyToPlay" />
+							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport StatusImage" />
+							<Panel id="GridControllerSupport" class="GridControllerSupport StatusImage" />
+							<Panel class="InstalledState" />
+							<Panel id="ReadyToPlay" class="ReadyToPlay StatusImage" />
+							<Panel id="ReadyToStream" class="ReadyToStream StatusImage" />
+							<Panel id="ReadyToDownload" class="ReadyToDownload StatusImage" />
+							<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
 						</Panel>
 					</Panel>
 				</Button>
@@ -40,15 +40,15 @@
               <Label id="GameLabel_Expanded" html="true" text="" />
 						</Panel>
 					</Panel>
-					<Panel class="InstalledState" />
 					<Panel id="SuggestedStatus" >			
 						<Panel id="SuggestedStatusWrapper" >			
-							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport" />
-							<Panel id="GridControllerSupport" class="GridControllerSupport" />
-							<Panel id="ReadyToPlay" class="ReadyToPlay" />
-							<Panel id="ReadyToStream" class="ReadyToStream" />
-							<Panel id="ReadyToDownload" class="ReadyToDownload" />
-							<Panel id="NotReadyToPlay" class="NotReadyToPlay" />
+							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport StatusImage" />
+							<Panel id="GridControllerSupport" class="GridControllerSupport StatusImage" />
+							<Panel class="InstalledState" />
+							<Panel id="ReadyToPlay" class="ReadyToPlay StatusImage" />
+							<Panel id="ReadyToStream" class="ReadyToStream StatusImage" />
+							<Panel id="ReadyToDownload" class="ReadyToDownload StatusImage" />
+							<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
 						</Panel>
 					</Panel>
 				</Button>
@@ -62,15 +62,15 @@
               <Label id="GameLabel_Expanded" html="true" text="" />
 						</Panel>
 					</Panel>
-					<Panel class="InstalledState" />
 					<Panel id="SuggestedStatus" >			
 						<Panel id="SuggestedStatusWrapper" >			
-							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport" />
-							<Panel id="GridControllerSupport" class="GridControllerSupport" />
-							<Panel id="ReadyToPlay" class="ReadyToPlay" />
-							<Panel id="ReadyToStream" class="ReadyToStream" />
-							<Panel id="ReadyToDownload" class="ReadyToDownload" />
-							<Panel id="NotReadyToPlay" class="NotReadyToPlay" />
+							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport StatusImage" />
+							<Panel id="GridControllerSupport" class="GridControllerSupport StatusImage" />
+							<Panel class="InstalledState" />
+							<Panel id="ReadyToPlay" class="ReadyToPlay StatusImage" />
+							<Panel id="ReadyToStream" class="ReadyToStream StatusImage" />
+							<Panel id="ReadyToDownload" class="ReadyToDownload StatusImage" />
+							<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
 						</Panel>
 					</Panel>
 				</Button>
@@ -84,15 +84,15 @@
               <Label id="GameLabel_Expanded" html="true" text="" />
 						</Panel>
 					</Panel>
-					<Panel class="InstalledState" />
 					<Panel id="SuggestedStatus" >			
 						<Panel id="SuggestedStatusWrapper" >			
-							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport" />
-							<Panel id="GridControllerSupport" class="GridControllerSupport" />
-							<Panel id="ReadyToPlay" class="ReadyToPlay" />
-							<Panel id="ReadyToStream" class="ReadyToStream" />
-							<Panel id="ReadyToDownload" class="ReadyToDownload" />
-							<Panel id="NotReadyToPlay" class="NotReadyToPlay" />
+							<Panel id="StreamingVideoSupport" class="StreamingVideoSupport StatusImage" />
+							<Panel id="GridControllerSupport" class="GridControllerSupport StatusImage" />
+							<Panel class="InstalledState" />
+							<Panel id="ReadyToPlay" class="ReadyToPlay StatusImage" />
+							<Panel id="ReadyToStream" class="ReadyToStream StatusImage" />
+							<Panel id="ReadyToDownload" class="ReadyToDownload StatusImage" />
+							<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
 						</Panel>
 					</Panel>
 				</Button>

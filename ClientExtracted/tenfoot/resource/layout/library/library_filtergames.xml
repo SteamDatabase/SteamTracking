@@ -28,6 +28,7 @@
 			<ToggleButton id="ICanPlay" class="CheckBox GameOption" text="#Library_ReadyToPlay" tabindex="auto" onselect="GameFilter(icanplay);" ondeselect="GameFilter(icanplay);" selectionpos="auto" />
 			<ToggleButton id="ControllerSupported" class="CheckBox GameOption" text="#Library_ControllerSupported" tabindex="auto" onselect="GameFilter(controller);" ondeselect="GameFilter(controller);" selectionpos="auto" />
 			<ToggleButton id="InstalledLocally" class="CheckBox GameOption" text="#Library_InstalledLocally" tabindex="auto" onselect="GameFilter(installedlocally);" ondeselect="GameFilter(installedlocally);" selectionpos="auto" />
+			<ToggleButton id="VR" class="CheckBox GameOption" text="#Library_VRFilter" tabindex="auto" onselect="GameFilter(vr);" ondeselect="GameFilter(vr);" selectionpos="auto" />
 			<ToggleButton id="HiddenGames" class="CheckBox GameOption" text="#Library_Hidden" tabindex="auto" onselect="GameFilter(hidden);" ondeselect="GameFilter(hidden);" selectionpos="auto" />
 			<ToggleButton id="UnblockedGames" class="CheckBox GameOption" text="#Library_Unblocked" tabindex="auto" onselect="GameFilter(unblocked);" ondeselect="GameFilter(unblocked);" selectionpos="auto" />
 			<RadioButton id="MusicFilterTitle" group="MusicFilter" class="Button RadioButton MusicOption" tabindex="auto" onactivate="GameFilter(music);" text="#Library_Filter_MusicByTitle" selectionpos="auto" />

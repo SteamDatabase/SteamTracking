@@ -77,6 +77,12 @@ TextInputDaisy
 
 }
 
+.MinimalKeyboard #BodyContainer
+{
+	color: #00000000;
+	box-shadow: none;
+}
+
 .Destructing #BodyContainer
 {
 	transition-duration: 0.2s !immediate;
@@ -149,6 +155,11 @@ TextInputDaisy
 	flow-children: none;
 	padding-bottom: 40px;
 	background-color: #20425f;
+}
+
+.MinimalKeyboard #Legends
+{
+	visibility: collapse;
 }
 
 .NoBackground #Legends,
@@ -1322,12 +1333,12 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 	background-color: #5c8d1c66;
 }
 
-.YButtonBox , .YButtonText
+.YButtonBox, .YButtonText
 {
 	visibility: collapse;
 }
 
-.CustomYButton .YButtonText, .CustomYButton .YButtonBox
+.IsPasswordEntry .YButtonText, .IsPasswordEntry .YButtonBox
 {
 	visibility: visible;
 }

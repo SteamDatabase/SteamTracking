@@ -1,0 +1,23 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/msgbox.css" />
+		<include src="file://{resources}/styles/parental/parental.css" />
+		<include src="file://{resources}/styles/streaming/streamingdetails.css" />
+	</styles>
+
+	<StreamingDetailsDialog class="TenfootMsgBox" >
+		<Panel id="StreamingDetailsContainer" class="ParentalUnlockPopupBody" tabindex="auto">
+			<Label id="MsgBoxHeader" text="#StreamingDetails_Title" />
+  		<Panel id="MsgBoxDescriptionArea" tabindex="auto" selectionpos="auto">
+				<Label text="#StreamingDetails_Status" />
+			</Panel>
+			<Panel id="MsgBoxButtons">
+				<Button onactivate="StreamingDetailsShowAdvancedOptions()"><Label text="#StreamingDetails_ButtonModifySettings" /></Button>
+				<Button onactivate="ButtonCancel()"><Label text="#UI_Done" /></Button>
+			</Panel>
+		</Panel>
+	</StreamingDetailsDialog>
+
+</root>

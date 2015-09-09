@@ -100,6 +100,19 @@
 			"doubetap_max_duration"		"324"
 		}
 	}
+	"group"
+	{
+		"id"		"7"
+		"mode"		"joystick_move"
+		"bindings"
+		{
+			"click"		"xinput_button JOYSTICK_RIGHT"
+		}
+		"settings"
+		{
+			"output_joystick"		"1"
+		}
+	}
 	"group_source_bindings"
 	{
 		"0"		"button_diamond active"
@@ -109,6 +122,7 @@
 		"3"		"joystick active"
 		"4"		"left_trigger active"
 		"5"		"right_trigger active"
+		"7"		"right_trackpad inactive"
 	}
 	"switch_bindings"
 	{

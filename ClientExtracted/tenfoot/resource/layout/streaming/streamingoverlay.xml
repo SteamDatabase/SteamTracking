@@ -1,0 +1,17 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/overlay/overlay.css" />
+	</styles>
+
+	<StreamingOverlay>
+		<ParentalButton class="DLCFullWrapper" onactivate="ShowStreamingDetails();">
+			<Label text="#StreamingOverlay_Title" class="HeaderLabel" /> 
+			<Panel>
+				<Label text="#StreamingOverlay_Status" /> 
+			</Panel>
+		</ParentalButton>
+	</StreamingOverlay>
+
+</root>

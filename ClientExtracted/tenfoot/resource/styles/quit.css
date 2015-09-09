@@ -1,3 +1,22 @@
+.ContainerPanelFlowDown
+{
+	width: 100%;
+	flow-children: down;
+}
+
+.ContextMenuBody Label.QuitSectionHeader
+{
+	font-size: 22px;	
+	color: #5FB9FDff;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+
+.QuitSectionSpacer
+{
+	height: 16px;
+}
+
 .AlwaysVisible
 {
 	visibility: visible;
@@ -157,6 +176,11 @@
 .StreamingHidden
 {
 	visibility: visible;
+}
+
+.StreamingClientCanSuspend
+{
+    visibility: visible;
 }
 
 #MusicControllerPanel:descendantfocus .SystemButton:hover

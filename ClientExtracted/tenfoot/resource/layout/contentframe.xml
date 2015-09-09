@@ -1,0 +1,22 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/contentframe.css" />
+	</styles>
+	
+	<ContentFrame>
+		<Panel id="ContentPanels">
+			<LibraryPanel id="Library" class="LibraryPanel ContentPanel" />
+			<LibraryAllGames id="LibraryAllGames" class="LibraryAllGames ContentPanel" />
+			<LibraryAppDetails id="LibraryAppDetails" class="ContentPanel" />
+		</Panel>
+		<Panel id="ContentFrameHeader">
+			<Image class="SteamLogo" src="file://{images}/steam_home_os.png" />
+			<Label class="ContentBreadcrumb" text="&gt;" />
+			<Panel id="ContentTitles">
+				<Label class="ContentTitle" text="The Witcher" />
+			</Panel>
+			<Clock id="Clock" />
+		</Panel>
+	</ContentFrame>	
+</root>

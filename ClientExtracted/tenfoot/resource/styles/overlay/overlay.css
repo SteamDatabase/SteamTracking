@@ -143,28 +143,19 @@
 	height: 70px;
 }
 
-#ClockWrapper
-{
-	color: messagecolorwash;
-	margin-top: 0px;
-	flow-children: right;
-	horizontal-align: right;
-}
-
-#Clock,
-#ClockSuffix
+#Clock
 {
 	color: detailsdatalabelfocus;
+	flow-children: right;
+	horizontal-align: right;
 	text-align: left;
 	font-size: 36px;
 	line-height: 36px;
-	max-width: 178px;
-	min-width: 168px;
 }
 
-#ClockSuffix
+#Clock #Time
 {
-	text-align: left;
+	margin-right: 8px;
 }
 
 #CommunityFriendsStrip

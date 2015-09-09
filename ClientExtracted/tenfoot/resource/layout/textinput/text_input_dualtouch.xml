@@ -45,17 +45,11 @@
 					<Panel class="LangImage"/>
 					<Label id="Lang_txt" class="LegendText TriggerButtonText" text="#UI_Languages" />
 				</Panel>
-				<Panel id="StartLegend" class="LegendButton HiddenFooter">
-					<Image src="file://{images}/textinput/textinput_footer_start.tga" />
-					<Label id="Start_txt" class="LegendText TriggerButtonText" text="#UI_InputDone" />
-				</Panel>
 				
 				<Panel id="MiddleLegendRS" class="LegendButton">
 					<Panel id="ABXY_Footer_Wrapper">
-						<Label id="A_btn" class="LegendButtonBox AButtonBox HiddenFooter" text="#UI_AButton" />
-						<Label id="A_txt" class="LegendText AButtonText HiddenFooter" text="#UI_InputDone" />
 						<Label id="Y_btn" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
-						<Label id="Y_txt" class="LegendText YButtonText" text="" />
+						<Label id="Y_txt" class="LegendText YButtonText" text="#UI_ShowHidePassword" />
 					</Panel>
 				</Panel>
 				
@@ -163,7 +157,10 @@
 							  <Panel id="TouchKey_6_2" class="TouchKey" />
 							  <Panel id="TouchKey_7_2" class="TouchKey" />
 							  <Panel id="TouchKey_8_2" class="TouchKey" />
-							  <Panel id="TouchKey_Enter" class="TouchKey RightQuadrant">
+							  <Panel id="TouchKey_Enter" class="TouchKey RightQuadrant EnterKey">
+								  <Image class="TouchKeyLabel" src="file://{images}/textinput/return.tga" />
+							  </Panel>
+							  <Panel id="TouchKey_EnterNoClose" class="TouchKey RightQuadrant EnterKey">
 								  <Image class="TouchKeyLabel" src="file://{images}/textinput/return.tga" />
 							  </Panel>
 						  </Panel>
@@ -180,7 +177,10 @@
 						  <Panel id="LastRow" class="TouchRow">
 							  <Panel id="TouchKey_Space" class="TouchKey BottomQuadrant" />
 							  <Panel id="TouchKey_Submit" class="TouchKey BottomQuadrant">
-								  <Label id="TouchKey_Submit_Label" class="TouchKeyLabel" text="Done" />
+								  <Label id="TouchKey_Submit_Label" class="TouchKeyLabel" text="Submit" />
+							  </Panel>
+							  <Panel id="TouchKey_Close" class="TouchKey BottomQuadrant">
+								  <Label id="TouchKey_Close_Label" class="TouchKeyLabel" text="Done" />
 							  </Panel>
 						  </Panel>
 					  </Panel>

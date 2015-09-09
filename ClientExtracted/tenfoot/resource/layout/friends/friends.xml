@@ -35,7 +35,7 @@
 					<Panel id="FriendsMainBodyLeftHeaderUnderline">
 					</Panel>
 					<Panel id="FriendsMainBodyListContainer">
-						<Panel id="FriendsMainBodyFriendsList" class="MainBodyLeftList CurrentSelection" tabindex="auto" selectionpos="auto" analogstickscroll="false" />
+						<Panel id="FriendsMainBodyFriendsList" class="MainBodyLeftList CurrentSelection" tabindex="auto" selectionpos="auto" analogstickscroll="true" />
 						<Panel id="FriendsMainBodyGroupsList" class="MainBodyLeftList" tabindex="auto" selectionpos="auto" analogstickscroll="false" />
 						<FriendsInvitePage id="FriendsMainBodyInviteList" class="MainBodyLeftList InviteList" tabindex="auto" selectionpos="auto" analogstickscroll="false" />
 					</Panel>
