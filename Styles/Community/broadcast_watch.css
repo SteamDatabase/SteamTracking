@@ -1296,12 +1296,6 @@ body.flat_page.SteamClientMinimized
     margin-left: 0px;
 }
 
-#BroadcastAdminPermissionSelect
-{
-    width: 230px;
-    height: 24px;
-}
-
 #BroadcasterAdminStopButton
 {
     position: absolute;

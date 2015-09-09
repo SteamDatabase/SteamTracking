@@ -335,13 +335,14 @@ body.overflow_hidden .responsive_page_frame {
 */
 
 .responsive_menu_user_area {
-	padding: 25px 20px;
+	padding: 24px 20px 12px 20px;
 	box-shadow: inset 0 -4px 8px 0 #000000;
 
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#24313f), color-stop(33%,#171a21));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24313f', endColorstr='#171a21',GradientType=1 );background: -moz-linear-gradient( 107deg, #24313f 0%,#171a21 33%););background: -webkit-linear-gradient( 107deg, #24313f 0%,#171a21 33%););background: -o-linear-gradient( 107deg, #24313f 0%,#171a21 33%););background: -ms-linear-gradient( 107deg, #24313f 0%,#171a21 33%););background: linear-gradient( 107deg, #24313f 0%,#171a21 33%););}
 
 .responsive_menu_user_persona {
 	line-height: 36px;
+	padding-bottom: 12px;
 }
 
 .responsive_menu_user_persona .playerAvatar {
@@ -352,6 +353,16 @@ body.overflow_hidden .responsive_page_frame {
 
 .responsive_change_language_select {
 	font-size: 24px;
+}
+
+.responsive_menu_cartwallet_area {
+	font-size: 16px;
+	line-height: normal;
+	margin-top: 12px;
+}
+
+.responsive_menu_cartwallet_area .responsive_menu_user_cart {
+	float: right;
 }
 
 
@@ -380,6 +391,10 @@ body.overflow_hidden .responsive_page_frame {
 		display: none;
 	}
 
+	html.responsive .responsive_page_template_content {
+		padding-bottom: 120px;
+	}
+
 
 }
 
@@ -403,6 +418,10 @@ body.overflow_hidden .responsive_page_frame {
 	/* we show a footer in the menu itself */
 	html.responsive.touch div#footer, html.responsive.touch div#footer_spacer {
 		display: none;
+	}
+
+	html.responsive.touch .responsive_page_template_content {
+		padding-bottom: 120px;
 	}
 
 

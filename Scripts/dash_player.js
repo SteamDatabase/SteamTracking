@@ -3072,6 +3072,8 @@ function CDASHPlayerUI( player, eUIMode )
 	this.m_eFocusedUIPanel = CDASHPlayerUI.eUIPanelMain;
 	this.m_nFocusedUIElementIndex = CDASHPlayerUI.PLAY_PAUSE_INDEX;
 	this.m_fLastProgressBarScrubPerc = 0.0;
+
+	this.m_fLastTenFootKeyDown = performance.now();
 }
 
 CDASHPlayerUI.CLOSED_CAPTIONS_NONE = "none";
@@ -3080,6 +3082,7 @@ CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT = "_CC";
 CDASHPlayerUI.SKIP_SHORT_TIME_SECS = 15;
 CDASHPlayerUI.SKIP_LONG_TIME_SECS = 300;
 CDASHPlayerUI.VOLUME_STEP_SIZE = 0.025;
+CDASHPlayerUI.TENFOOT_KEYDOWN_DELAY = 200;
 
 CDASHPlayerUI.eUIModeDesktop = 0;
 CDASHPlayerUI.eUIModeTenFoot = 1;
@@ -4041,6 +4044,11 @@ CDASHPlayerUI.prototype.OnKeyDownTenFoot = function( e )
 
 	var bHandled = true;
 
+	// slow down input for the left stick
+	if ( keycode >= CDASHPlayerUI.LEFT_PAD_LEFT && keycode <= CDASHPlayerUI.LEFT_PAD_DOWN )
+		if ( performance.now() - this.m_fLastTenFootKeyDown < CDASHPlayerUI.TENFOOT_KEYDOWN_DELAY )
+			return;
+
 	switch ( keycode )
 	{
 		case CDASHPlayerUI.START:
@@ -4049,16 +4057,28 @@ CDASHPlayerUI.prototype.OnKeyDownTenFoot = function( e )
 			break;
 
 		case CDASHPlayerUI.LEFT_PAD_LEFT:
-			this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_LEFT );
+			if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.PROGRESS_BAR_INDEX )
+				this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_LEFT );
+			else
+				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_LEFT );
 			break;
 		case CDASHPlayerUI.LEFT_PAD_UP:
-			this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_UP );
+			if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.VOLUME_CONTAINER_INDEX )
+				this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_UP );
+			else
+				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_UP );
 			break;
 		case CDASHPlayerUI.LEFT_PAD_RIGHT:
-			this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_RIGHT );
+			if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.PROGRESS_BAR_INDEX )
+				this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_RIGHT );
+			else
+				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_RIGHT );
 			break;
 		case CDASHPlayerUI.LEFT_PAD_DOWN:
-			this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_DOWN );
+			if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.VOLUME_CONTAINER_INDEX )
+				this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_DOWN );
+			else
+				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_DOWN );
 			break;
 
 		case CDASHPlayerUI.BUTTON_A:
@@ -4092,22 +4112,18 @@ CDASHPlayerUI.prototype.OnKeyDownTenFoot = function( e )
 			break;
 
 		case CDASHPlayerUI.RIGHT_PAD_LEFT:
-			this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_LEFT );
-			break;
 		case CDASHPlayerUI.RIGHT_PAD_UP:
-			this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_UP );
-			break;
 		case CDASHPlayerUI.RIGHT_PAD_RIGHT:
-			this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_RIGHT );
-			break;
 		case CDASHPlayerUI.RIGHT_PAD_DOWN:
-			this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_DOWN );
+			this.ScrubUIOnKeyDown( keycode );
 			break;
 
 		default:
 			bHandled = false;
 			break;
 	}
+
+	this.m_fLastTenFootKeyDown = performance.now();
 
 	// determine whether to bubble or not
 	return !bHandled;
@@ -4300,18 +4316,14 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 		{
 			case CDASHPlayerUI.LEFT_PAD_LEFT:
 				if ( this.m_nFocusedUIElementIndex == nTopRowIndex )
-					this.m_nFocusedUIElementIndex = CDASHPlayerUI.PROGRESS_BAR_INDEX;
-				else if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.PROGRESS_BAR_INDEX )
-					this.m_nFocusedUIElementIndex = CDASHPlayerUI.SKIP_FORWARD_INDEX;
+					this.m_nFocusedUIElementIndex = nTopRowIndex;
 				else if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.SKIP_BACK_INDEX )
 					this.m_nFocusedUIElementIndex--;
 				break;
 
 			case CDASHPlayerUI.LEFT_PAD_RIGHT:
 				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SKIP_FORWARD_INDEX )
-					this.m_nFocusedUIElementIndex = CDASHPlayerUI.PROGRESS_BAR_INDEX;
-				else if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.PROGRESS_BAR_INDEX )
-					this.m_nFocusedUIElementIndex = nTopRowIndex;
+					this.m_nFocusedUIElementIndex = CDASHPlayerUI.SKIP_FORWARD_INDEX;
 				else if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.SETTINGS_INDEX )
 					this.m_nFocusedUIElementIndex++;
 				break;
@@ -4654,7 +4666,7 @@ CDASHPlayerUI.prototype.SetProgressBarPreview = function( fPercent )
 	if ( !this.BInTenFoot() )
 	{
 		var timeWidth = $J('.progress_time_info').outerWidth();
-		var nTimeInfoLeft = Math.min( Math.max( relX - timeWidth / 2, -2 ), barWidth - timeWidth - 4 );
+		var nTimeInfoLeft = Math.min( Math.max( relX - timeWidth / 2, 4 ), barWidth - timeWidth );
 		$J('.progress_time_info').css( 'left', nTimeInfoLeft );
 	}
 

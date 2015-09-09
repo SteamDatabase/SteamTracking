@@ -299,8 +299,8 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 {
 	var $Dialog = $J('<div/>', {'class': 'newmodal'} );
 	var $CloseButton = $J('<div/>', {'class': 'newmodal_close' });
-	var $Header = ( $J('<div/>', {'class': 'newmodal_header' }).append( strTitle ) );
-	$Header.append( $CloseButton );
+	var $Header = ( $J('<div/>', {'class': 'newmodal_header' }) );
+	$Header.append( $CloseButton ).append( $J('<div/>', {'class': 'ellipsis' } ).text( strTitle ) );
 	$Header = $J('<div/>', {'class': 'newmodal_header_border'}).append( $Header );
 	$Dialog.append( $Header );
 	var $Content = $J('<div/>', {'class': 'newmodal_content' } );
@@ -2122,7 +2122,7 @@ CAjaxPagingControls.prototype.AddPageLink = function( elPageLinks, iPage )
 function CSlider( $Container, $Grabber, args )
 {
 	this.m_$Container = $Container;
-	this.m_$Grabber = $Grabber;
+	this.m_$Grabber = $Grabber || $Container.find('.handle');
 	this.m_nMinVal = args.min || 0;
 	this.m_nMaxVal = args.max || 100;
 	this.m_nIncrement = args.increment || 1;
@@ -2193,7 +2193,7 @@ function CSlider( $Container, $Grabber, args )
 
 		event.preventDefault();
 	});
-}
+};
 
 CSlider.prototype.CalcRatios = function()
 {
@@ -2201,7 +2201,7 @@ CSlider.prototype.CalcRatios = function()
 	this.m_nWidth = this.m_$Container.width() - nGrabberWidth;
 
 	this.m_flRatio = this.m_nWidth / ( this.m_nMaxVal - this.m_nMinVal );
-}
+};
 
 CSlider.prototype.SetValue = function( nValue, nAnimationSpeed )
 {
@@ -2216,7 +2216,22 @@ CSlider.prototype.SetValue = function( nValue, nAnimationSpeed )
 		this.m_$Grabber.animate( {left: nNewPosition }, nAnimationSpeed );
 	else
 		this.m_$Grabber.css( 'left',  nNewPosition + 'px' );
-}
+};
+
+CSlider.prototype.GetValue = function()
+{
+	return this.m_nValue;
+};
+
+CSlider.prototype.GetMin = function()
+{
+	return this.m_nMinVal;
+};
+
+CSlider.prototype.GetMax = function()
+{
+	return this.m_nMaxVal;
+};
 
 CSlider.prototype.SetRange = function( nMinVal, nMaxVal, nValue )
 {
@@ -2225,33 +2240,57 @@ CSlider.prototype.SetRange = function( nMinVal, nMaxVal, nValue )
 	if ( typeof nValue != 'undefined' )
 		this.m_nValue = nValue;
 	this.SetValue( this.m_nValue );
-}
+};
 
 CSlider.prototype.SetIncrement = function( nIncrement )
 {
 	this.m_nIncrement = nIncrement;
-}
+};
 
 function CScrollSlider( $Scroll, $Container, $Grabber, args )
 {
 	this.m_$Scroll = $Scroll;
 	this.m_$SliderCtn = $Container;
-	this.m_Slider = new CSlider( $Container, $Grabber, { fnOnChange: $J.proxy( this.OnSliderChange, this )} );
 
-	this.m_$Scroll.parent().css('overflowX', 'scroll');
+	var $Slider = $Container.children('.slider');
+
+	this.m_Slider = new CSlider( $Slider.length ? $Slider : $Container, $Grabber, { fnOnChange: $J.proxy( this.OnSliderChange, this )} );
+
+	this.m_$Scroll.css('overflowX', 'scroll');
 
 	var _this = this;
-	this.m_$Scroll.parent().on( 'scroll.ScrollSlider', function() {
-		_this.m_Slider.SetValue( _this.m_$Scroll.parent().scrollLeft() );
+	this.m_$Scroll.on( 'scroll.ScrollSlider', function() {
+		_this.m_Slider.SetValue( _this.m_$Scroll.scrollLeft() );
 	});
+	$J(window).on('resize.ScrollSlider', function() {
+		_this.UpdateRanges();
+	} );
+	this.m_$Scroll.on( 'v_contentschanged', function() {
+		_this.UpdateRanges();
+	} );
 
 	this.UpdateRanges();
 };
 
+CScrollSlider.prototype.SetValue = function( value, nAnimationSpeed ) {
+	if ( nAnimationSpeed )
+	{
+		this.m_$Scroll.stop().animate( {'scrollLeft': value }, nAnimationSpeed );
+	}
+	else
+	{
+		this.m_$Scroll.stop().scrollLeft( value );
+	}
+}
+
+CScrollSlider.prototype.GetValue = function() {
+	return this.m_Slider.GetValue();
+}
+
 CScrollSlider.prototype.UpdateRanges = function()
 {
-	var nParentWidth = this.m_$Scroll.parent().width();
-	var nScrollWidth = this.m_$Scroll.width();
+	var nParentWidth = this.m_$Scroll.width();
+	var nScrollWidth = this.m_$Scroll[0].scrollWidth;
 
 	if ( nScrollWidth <= nParentWidth )
 	{
@@ -2259,14 +2298,14 @@ CScrollSlider.prototype.UpdateRanges = function()
 	}
 	else
 	{
-		this.m_Slider.SetRange( 0, nScrollWidth - nParentWidth, this.m_$Scroll.parent().scrollLeft() );
+		this.m_Slider.SetRange( 0, nScrollWidth - nParentWidth, this.m_$Scroll.scrollLeft() );
 		this.m_$SliderCtn.show();
 	}
 };
 
 CScrollSlider.prototype.OnSliderChange = function( value, bInDrag )
 {
-	this.m_$Scroll.parent().scrollLeft( value );
+	this.m_$Scroll.stop().scrollLeft( value );
 };
 
 function IsValidEmailAddress( email )
@@ -2571,7 +2610,12 @@ function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	if ( !$Popup.is(':visible') || $Popup.css('opacity') < 1.0 )
 	{
 		AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder );
-		ShowWithFade( $Popup );
+
+		if ( $Popup.hasClass( 'responsive_slidedown') && window.UseSmallScreenMode && window.UseSmallScreenMode() )
+			$Popup.stop().slideDown();
+		else
+			ShowWithFade( $Popup );
+
 		$Link.addClass('focus');
 	}
 
@@ -2579,18 +2623,25 @@ function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 
 function HideFlyoutMenu( event, elemLink, elemPopup )
 {
-	var reltarget = $J( event.relatedTarget );
 	var $Link = $JFromIDOrElement(elemLink);
 	var $Popup = $JFromIDOrElement(elemPopup);
 
-	if ( !reltarget.length ||
-		( $Link.length && $J.contains( $Link[0], reltarget[0] ) ) ||
-		( $Popup.length && $J.contains( $Popup[0], reltarget[0] ) ) ||
-		$Link.is( reltarget ) )
-		return;
-
+	if ( event )
+	{
+		var reltarget = $J( event.relatedTarget );
+		if ( !reltarget.length ||
+			( $Link.length && $J.contains( $Link[0], reltarget[0] ) ) ||
+			( $Popup.length && $J.contains( $Popup[0], reltarget[0] ) ) ||
+			$Link.is( reltarget ) )
+			return;
+	}
 	// start hiding in a little bit, have to let the fade in animation start before we can cancel it
-	window.setTimeout( function() { HideWithFade( $Popup ); }, 33 );
+
+	if ( $Popup.hasClass( 'responsive_slidedown') && window.UseSmallScreenMode && window.UseSmallScreenMode() )
+		$Popup.stop().slideUp();
+	else
+		window.setTimeout( function() { HideWithFade( $Popup ); }, 33 );
+
 	$Link.removeClass('focus');
 }
 
@@ -2692,6 +2743,76 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 		$Popup.hide();
 		$Popup.css( 'visibility', 'visible' );
 	}
+}
+
+function BindAutoFlyoutEvents()
+{
+	$J(document).on( 'mouseenter.Flyout click.Flyout', '.flyout_tab', function(e) {
+		var $Tab = $J(this);
+		var $Content = $J('#' + $Tab.data('flyout') );
+		var bResponsiveSlidedownMenu = window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown');
+
+		if ( !$Content.length || $Content.data('flyout-event-running') ||
+			( e.type == 'mouseenter' && bResponsiveSlidedownMenu ) )
+			return;
+
+
+		$Content.data( 'flyout-event-running', true );
+		window.setTimeout( function() { $Content.data('flyout-event-running', false ); }, 1 );
+
+		if ( $Content.is(':visible') )
+		{
+			if ( e.type == 'click' )
+				HideFlyoutMenu( null, $Tab, $Content );
+
+			return;
+		}
+
+		if ( !$Content.data('flyout-mouseleave-bound') )
+		{
+			$Content.on('mouseleave.Flyout', function() {
+				if ( window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown') )
+					return;
+
+				HideFlyoutMenu( null, $Tab, $Content );
+			});
+			$Content.data('flyout-mouseleave-bound', true );
+		}
+
+
+		FlyoutMenu( $Tab, $Content, $Tab.data('flyout-align'), $Tab.data('flyout-valign') );
+
+		if ( window.UseTouchFriendlyMode && window.UseTouchFriendlyMode() )
+		{
+			window.setTimeout( function() {
+				$J(document).on('click.FlyoutDismiss', function(e) {
+					if ( $J.contains( $Content[0], this ) || $Content.is(this) )
+						return;
+
+					HideFlyoutMenu( null, $Tab, $Content );
+					$J(document).off('click.FlyoutDismiss');
+					e.preventDefault();
+				});
+			}, 1 );
+		}
+	});
+
+	$J(document).on('mouseleave.Flyout', '.flyout_tab', function(e) {
+
+		var $Tab = $J(this);
+		var $Content = $J('#' + $Tab.data('flyout') );
+		var bResponsiveSlidedownMenu = window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown');
+
+		if ( !$Content.length || $Content.data('flyout-event-running') || bResponsiveSlidedownMenu )
+			return;
+
+		if ( $Content.is(':visible') )
+		{
+			HideFlyoutMenu( null, $Tab, $Content );
+
+			return;
+		}
+	});
 }
 
 

@@ -456,17 +456,12 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 		$J( '#BroadcastInfo' ).hide();
 		$J( '#ViewStorePage' ).hide();
 		$J( '#ReportBroadcast' ).hide();
-
 		$J( '#BroadcastAdminTitleInput' ).val( strTitle );
-		$J( '#BroadcastAdminPermissionSelect' ).val( data.permission );
-		$J( '#BroadcastAdminGameIDInput' ).val( data.appid );
 
-		// allow to change GameID and permission for RTMP streams only
+		// allow to change MatchID RTMP streams only
 		if( !data.is_rtmp )
 		{
-			$J( '#BroadcastAdminFromRowPermission' ).hide();
-			$J( '#BroadcasterAdminFormRow3' ).hide();
-			$J( '#BroadcasterAdminFormRow4' ).hide();
+			$J( '#BroadcastAdminMatchID' ).hide();
 		}
 
 		$J( '#BroadcastAdminViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
@@ -689,8 +684,6 @@ CBroadcastWatch.prototype.UpdateBroadcast = function()
 	{
 		steamid: _watch.m_ulBroadcastSteamID,
 		title: $J( '#BroadcastAdminTitleInput' ).val(),
-		permission : $J( '#BroadcastAdminPermissionSelect' ).val(),
-		gameid : $J( '#BroadcastAdminGameIDInput' ).val(),
 		matchid : $J( '#BroadcastAdminMatchIDInput' ).val()
 	}
 

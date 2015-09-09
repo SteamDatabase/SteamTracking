@@ -949,7 +949,8 @@ a.nohover, a.nohover:hover
 	overflow-y: auto;
 }
 
-.blotter_screenshot_gallery_image
+.blotter_screenshot_gallery_image,
+.blotter_screenshot_gallery_image_selected
 {
 	float: left;
 	border: 3px solid #0d0d0d;
@@ -958,8 +959,14 @@ a.nohover, a.nohover:hover
 
 .blotter_screenshot_gallery_image_selected
 {
-	float: left;
-	border: 3px solid #c6d4df;
+	border-color: #c6d4df;
+}
+
+
+.blotter_screenshot_gallery_image img,
+.blotter_screenshot_gallery_image_selected img
+{
+	display: block;
 }
 
 img.movie_thumb {

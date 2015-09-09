@@ -43,7 +43,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pagecontent {
-
 	padding-bottom: 128px;
 }
 .pagecontent.in_client, .pagecontent.no_header {
@@ -52,6 +51,16 @@ h1, h2, h3, h4, h5, h6 {
 body.flat_page.blue .pagecontent {
 	background: none;
 }
+@media screen and (max-width: 910px)
+{
+	html.responsive .pagecontent {
+	   padding-bottom: 0;
+	}
+
+}
+	html.responsive.touch .pagecontent {
+	   padding-bottom: 0;
+	}
 
 .pagecontent.no_footerpad {
 	padding-bottom: 0;

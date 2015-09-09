@@ -372,6 +372,14 @@ span.popup_menu_pulldown_indicator {
 	box-shadow: 0 0 12px #000000;
 }
 
+@media screen and (max-width: 910px)
+{
+	html.responsive .popup_block_new.responsive_slidedown {
+		position: static;
+		box-shadow: none;
+	}
+}
+
 .popup_block_new .popup_body {
 	border: 1px solid #82807c;
 	position: relative;

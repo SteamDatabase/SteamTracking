@@ -55,7 +55,7 @@ center
 	margin: 0px auto;
 	text-align: left;
 	padding-top: 7px;
-	height: 46px;
+	min-height: 46px;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_header.png');
 	background-repeat: repeat-x;
 }
@@ -89,9 +89,8 @@ center
 	color: white;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif;
 	font-size: 26px;
-	overflow: hidden;
+	line-height: 32px;
 	text-overflow: ellipsis;
-	white-space: nowrap;
 }
 
 .apphub_CommunitySubSectionArrows

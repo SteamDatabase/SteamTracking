@@ -35,7 +35,6 @@ function RefreshCaptcha()
 	        try {
 	      	  var result = transport.responseText.evalJSON(true);
 	      	} catch ( e ) {
-			  //alert(e);
 	      	  return;
 	      	}
 	      	
@@ -67,8 +66,6 @@ var g_bTwoFactorAuthSuccessful = false;
 var g_bTwoFactorAuthSuccessfulWantToLeave = false;
 var g_sOAuthRedirectURI = 'steammobile://mobileloginsucceeded';
 var g_sAuthCode = "";
-var g_nRecoveryCodeAttemptCount = 0;
-var g_nTwoFactorCodeAttemptCount = 0;
 
 
 function DoLogin()
@@ -165,30 +162,6 @@ function OnRSAKeyResponse( transport )
 }
 
 
-function CheckForTwoFactorConfusion()
-{
-	var twoFactorEntry = $('twofactorcode_entry').value;
-
-	if ( twoFactorEntry && twoFactorEntry.match( /\s*[rR]\d{5}\s*/ ) )
-	{
-		++g_nRecoveryCodeAttemptCount;
-	}
-	else
-	{
-		g_nRecoveryCodeAttemptCount = 0;
-	}
-
-	return g_nRecoveryCodeAttemptCount >= 2;
-}
-
-	
-function CheckForTwoFactorFailure()
-{
-	++g_nTwoFactorCodeAttemptCount;
-	return g_nTwoFactorCodeAttemptCount >= 3;
-}
-
-
 function OnLoginResponse( transport )
 {
 	var results = transport.responseJSON;
@@ -229,10 +202,11 @@ function OnLoginResponse( transport )
 			$('captcha_entry').hide();
 
 			if ( !g_bInTwoFactorAuthProcess )
+			{
 				StartTwoFactorAuthProcess();
+			}
 			else
 			{
-								
 				SetTwoFactorAuthModalState( 'incorrectcode' );
 			}
 		}
@@ -253,11 +227,6 @@ function OnLoginResponse( transport )
 				StartEmailAuthProcess();
 			else
 				SetEmailAuthModalState( 'incorrectcode' );
-		}
-		else if ( results.denied_ipt )
-		{
-			$('loginIPTModal').OnModalDismissal = ClearLoginForm;
-			showModal( 'loginIPTModal' );
 		}
 		else
 		{
@@ -606,5 +575,10 @@ function OnTwoFactorCodeFocus( defaultText )
 
 function OnTwoFactorCodeBlur( defaultText )
 {
+}
+
+function HandleLoginHelp()
+{
+	window.location = "https://help.steampowered.com";
 }
 

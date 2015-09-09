@@ -1674,6 +1674,13 @@ var CUser = Class.create( {
 		{
 			g_ActiveInventory.LayoutPages();
 			g_ActiveInventory.SetActivePage(0);
+
+
+			var elControls = $('inventory_pagecontrols');
+			if ( g_ActiveInventory.pageTotal <= 1 )
+				elControls.style.visibility = 'hidden';
+			else
+				elControls.style.visibility = '';
 		}
 	},
 
@@ -4685,31 +4692,32 @@ function RequestFullInventory( strURL, oParams, fOnSuccess, fOnFailure, fOnCompl
 	} );
 }
 
-
-$J(window).on('resize', function() {
-	var bWasEnabled = g_bEnableDynamicSizing;
-
-	// this flag is used by inventories in a few places
-	if ( Economy_UseResponsiveLayout() )
-	{
-		g_bEnableDynamicSizing = true;
-	}
-	else
-	{
-		g_bEnableDynamicSizing = false;
-	}
-
-	if ( bWasEnabled != g_bEnableDynamicSizing )
-	{
-		if ( typeof UserYou != 'undefined' && UserYou )
-			UserYou.InvalidatePaging();
-		if ( typeof UserThem != 'undefined' && UserThem )
-			UserThem.InvalidatePaging();
-	}
-} );
-
 function InitDynamicInventoryItemAutosizing( $InventoryCtn, strCSSClass, bAutoRetryIfNotVisible )
 {
+	// a global event to toggle the pagination on inventory and a global that the CUser class uses to change some behaviors
+	var bDynamicWasSizingEnabled;
+	$J(window ).off('resize.EconomyRepaginateInventory' ).on('resize.EconomyRepaginateInventory', function() {
+		// this flag is used by inventories in a few places
+		if ( Economy_UseResponsiveLayout() )
+		{
+			g_bEnableDynamicSizing = true;
+		}
+		else
+		{
+			g_bEnableDynamicSizing = false;
+		}
+
+		if ( bDynamicWasSizingEnabled != g_bEnableDynamicSizing )
+		{
+			bDynamicWasSizingEnabled = g_bEnableDynamicSizing;
+			if ( typeof UserYou != 'undefined' && UserYou )
+				UserYou.InvalidatePaging();
+			if ( typeof UserThem != 'undefined' && UserThem )
+				UserThem.InvalidatePaging();
+		}
+	} ).trigger('resize.EconomyRepaginateInventory');
+
+
 	var elStyle = document.createElement('style');
 	$J(document.head ).append(elStyle);
 

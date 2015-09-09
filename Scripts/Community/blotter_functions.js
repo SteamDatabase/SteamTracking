@@ -501,7 +501,7 @@ function Blotter_AddHighlightSliders()
 		{
 			var nGalleryID = $Strip.data('galleryid');
 			var $Slider = $J('#highlight_slider_' + nGalleryID);
-			$Strip.data( 'slider', new CScrollSlider( $Strip, $Slider, $Slider.children( '.handle') ) );
+			$Strip.data( 'slider', new CScrollSlider( $Strip.parent(), $Slider, $Slider.children( '.handle') ) );
 		}
 	});
 }
