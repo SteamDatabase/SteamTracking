@@ -1019,7 +1019,7 @@ function OnMarketClosed()
 
 function DisplayPopup( id, url )
 {
-	var strStartingLayout =  "<root>\r\n\t\t\t\t\t<styles>\r\n\t\t\t\t\t\t<include src=\"file:\/\/{resources}\/styles\/steamstyles.css\" \/>\n\t\t<include src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/shared\/css\/bigpicture\/basestyles.css?v=.O7qIGXRQ0TKu\" \/>\n\r\n\t\t\t\t\t\t<include src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/css\/bigpicture\/market.css?v=.R0Uw4Caql-2o\" \/>\r\n\t\t\t\t\t<\/styles>\r\n\t\t\t\t\t<Button class=\"MarketPopupWrapper\" tabindex=\"auto\" selectionpos=\"auto\" onfocus=\"None();\">\r\n\t\t\t\t\t\t<LoadingThrobber \/>\r\n\t\t\t\t\t<\/Button>\r\n\t\t\t\t<\/root>";
+	var strStartingLayout =  "<root>\r\n\t\t\t\t\t<styles>\r\n\t\t\t\t\t\t<include src=\"file:\/\/{resources}\/styles\/steamstyles.css\" \/>\n\t\t<include src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/shared\/css\/bigpicture\/basestyles.css?v=valveisgoodatcaching\" \/>\n\r\n\t\t\t\t\t\t<include src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/css\/bigpicture\/market.css?v=valveisgoodatcaching\" \/>\r\n\t\t\t\t\t<\/styles>\r\n\t\t\t\t\t<Button class=\"MarketPopupWrapper\" tabindex=\"auto\" selectionpos=\"auto\" onfocus=\"None();\">\r\n\t\t\t\t\t\t<LoadingThrobber \/>\r\n\t\t\t\t\t<\/Button>\r\n\t\t\t\t<\/root>";
 	var popup = $.CreatePanel( 'Panel', $.TenfootController( $.GetContextPanel() ).AccessMainMenu(), id );
 	popup.BLoadLayoutFromString( strStartingLayout, true, false );
 	$.TenfootController( $.GetContextPanel() ).ShowModalDialog( popup, '' );

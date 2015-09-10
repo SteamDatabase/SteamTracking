@@ -287,7 +287,7 @@
 			}
 			else if( SubStr( $File, -4 ) === '.css' ||  SubStr( $File, -3 ) === '.js' )
 			{
-				$Data = preg_replace( '/\[&?]v=[a-zA-Z0-9\.\-\_]{3,}/', '?v=valveisgoodatcaching', $Data );
+				$Data = preg_replace( '/[&\?]v=[a-zA-Z0-9\.\-\_]{3,}/', '?v=valveisgoodatcaching', $Data );
 			}
 			
 			$File = __DIR__ . '/' . $File;
