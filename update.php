@@ -243,10 +243,6 @@
 				$Data = JSON_Decode( $Data, true );
 				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
 			}
-			else if( $File === 'Scripts/Dota2/heropedia.js' )
-			{
-				$Data = preg_replace( '/\?v=[0-9]+/', '?v=ayyvalve', $Data );
-			}
 			else if( SubStr( $File, 0, 13 ) === 'ItemSchemaURL' )
 			{
 				$Data = JSON_Decode( $Data, true );
@@ -288,6 +284,10 @@
 				{
 					return false;
 				}
+			}
+			else if( SubStr( $File, -4 ) === '.css' ||  SubStr( $File, -3 ) === '.js' )
+			{
+				$Data = preg_replace( '/\[&?]v=[a-zA-Z0-9\.\-\_]{3,}/', '?v=valveisgoodatcaching', $Data );
 			}
 			
 			$File = __DIR__ . '/' . $File;
