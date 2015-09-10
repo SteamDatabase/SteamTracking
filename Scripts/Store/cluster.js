@@ -83,6 +83,7 @@ function Cluster( args )
 			var nStartDragX = fnGetPageX( event );
 			var tsDragStart = $J.now();
 			var nDelta = 0;
+			_this.bSuppressScrolling = true;
 
 			$J(document ).on('touchmove.ClusterDrag', function( event ) {
 				nDelta = fnGetPageX( event ) - nStartDragX;
@@ -103,6 +104,9 @@ function Cluster( args )
 				}
 
 				_this.sliderOnChange( _this.slider.GetValue(), false );
+
+				_this.bSuppressScrolling = false;
+				_this.startTimer();
 			});
 		});
 	}
@@ -150,11 +154,13 @@ Cluster.prototype.clearInterval = function()
 
 Cluster.prototype.mouseOver = function( event )
 {
+	this.bSuppressScrolling = true;
 	this.clearInterval();
 }
 
 Cluster.prototype.mouseOut = function( event )
 {
+	this.bSuppressScrolling = false;
 	this.startTimer();
 }
 
