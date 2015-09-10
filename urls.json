@@ -263,6 +263,16 @@
 "Styles/BigPicture/eventbackground.css"          : "https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground.css?__TIME__",
 "Styles/BigPicture/eventbackground_empty.css"    : "https://steamstore-a.akamaihd.net/public/css/bigpicture/eventbackground_empty.css?__TIME__",
 
+"Styles/BigPicture/basestyles.css"               : "https://steamcommunity-a.akamaihd.net/public/shared/css/bigpicture/basestyles.css?__TIME__",
+
+"Styles/BigPicture/comments.css"                 : "https://steamcommunity-a.akamaihd.net/public/css/bigpicture/comments.css?__TIME__",
+"Styles/BigPicture/community.css"                : "https://steamcommunity-a.akamaihd.net/public/css/bigpicture/community.css?__TIME__",
+"Styles/BigPicture/economy.css"                  : "https://steamcommunity-a.akamaihd.net/public/css/bigpicture/economy.css?__TIME__",
+"Styles/BigPicture/inventory.css"                : "https://steamcommunity-a.akamaihd.net/public/css/bigpicture/inventory.css?__TIME__",
+"Styles/BigPicture/market.css"                   : "https://steamcommunity-a.akamaihd.net/public/css/bigpicture/market.css?__TIME__",
+"Styles/BigPicture/profile.css"                  : "https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?__TIME__",
+"Styles/BigPicture/profile_friendactivity.css"   : "https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile_friendactivity.css?__TIME__",
+
 //
 // Mobile CSS (mixed)
 //
@@ -279,6 +289,18 @@
 "Scripts/Mobile/mobileprofile.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/mobile/mobileprofile.js?__TIME__&l=english",
 "Scripts/Mobile/shared_mobile.js"                : "https://steamstore-a.akamaihd.net/public/shared/javascript/shared_mobile.js?__TIME__&l=english",
 "Scripts/Mobile/store_utils.js"                  : "https://steamstore-a.akamaihd.net/public/javascript/mobile/store_utils.js?__TIME__&l=english",
+
+//
+// Big Picture JS
+//
+"Scripts/BigPicture/base.js"                     : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/base.js?__TIME__&l=english",
+"Scripts/BigPicture/community.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/community.js?__TIME__&l=english",
+"Scripts/BigPicture/community_common.js"         : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/community_common.js?__TIME__&l=english",
+"Scripts/BigPicture/economy.js"                  : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/economy.js?__TIME__&l=english",
+"Scripts/BigPicture/inventory.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/inventory.js?__TIME__&l=english",
+"Scripts/BigPicture/market.js"                   : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/market.js?__TIME__&l=english",
+"Scripts/BigPicture/market_common.js"            : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/market_common.js?__TIME__&l=english",
+"Scripts/BigPicture/profile.js"                  : "https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/profile.js?__TIME__&l=english",
 
 //
 // Steamworks CSS

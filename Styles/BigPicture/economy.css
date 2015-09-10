@@ -1,0 +1,187 @@
+
+.FlowDown
+{
+	flow-children: down;
+}
+
+.FlowRight
+{
+	flow-children: right;
+}
+
+.Center
+{
+	horizontal-align: center;
+}
+
+.ItemDetailImage
+{
+	margin: 25px;
+	height: 384px;
+	width: 384px;
+}
+
+.ItemDetailInner
+{
+	margin-left: 20px;
+	padding-right: 30px;
+    padding-bottom: 20px;
+	width: 684px;
+	height: fit-children;
+	overflow: squish scroll;
+}
+
+.ItemDetailInner Label
+{
+	color: #888888ff;
+    font-weight: light;
+	font-size: 24px;
+	width: 100%;
+}
+
+.ItemDetailInner Panel
+{
+	width: 100%;
+}
+
+.ItemDetailInner .ItemDescriptions
+{
+	overflow: squish noclip;
+}
+
+.ItemDetailInner Label.ItemName
+{
+	margin-top: 25px;
+	margin-bottom: 12px;
+	font-size: 36px;
+	color: #eeeeeeff;
+	max-height: 90px;
+	width: 394px;
+}
+
+.ItemDetailInner .GameIcon
+{
+	width: 32px;
+	height: 32px;
+
+	margin-right: 8px;
+
+	background-color: #00000077;
+}
+
+.ItemDetailInner .ItemDescriptions
+{
+	margin-top: 20px;
+	width: 466px;
+	height: fit-children;
+	overflow: squish clip;
+}
+
+.ItemDetailInner .ItemDescriptions Label
+{
+	margin-bottom: 4px;
+	vertical-align: bottom;
+}
+
+.ItemDetailInner .FraudWarnings
+{
+	background-color: #1d1d1dff;
+	border: 2px solid #393939ff;
+	padding: 4px;
+	margin-bottom: 16px;
+}
+
+.ItemDetailInner .FraudWarnings
+{
+	padding-left: 30px;
+	background-image: url( "https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/icons/icon_warning.png" );
+	background-repeat: no-repeat no-repeat;
+	background-position: 8px center;
+	background-size: 20px 20px;
+}
+
+.ItemDetailInner .ItemTags
+{
+	margin-top: 20px;
+}
+
+.ItemDetailInner .CenterPanel
+{
+	width: fit-children;
+}
+
+.CenterPanel Label
+{
+	width: fit-children;
+}
+
+.ItemDescriptions .Span,
+.ItemDescriptions .Bold
+{
+	vertical-align: bottom;
+	flow-children: right;
+}
+
+
+
+.EconomySearchRegion
+{
+	flow-children: down;
+	width: 320px;
+	height: 100%;
+
+	z-index: 100;
+
+	margin-left: 86px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 140px;
+
+	padding: 12px;
+	background-color: #00000044;
+	opacity: 0.0;
+
+	transition-property: opacity, transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+
+	transform: translatex( -720px );
+
+	overflow: squish scroll;
+}
+
+.SearchVisible .EconomySearchRegion
+{
+	opacity: 1.0;
+	transform: translatex( 0px );
+}
+
+.EconomySearchWrapper
+{
+	flow-children: down;
+}
+
+.EconomyTagFilters
+{
+	flow-children: down;
+	width: 100%;
+}
+
+.EconomyTagFilters DropDown
+{
+	margin-bottom: 16px;
+	width: 100%;
+}
+
+DropDownMenu .Header,
+DropDownMenu #Header
+{
+	visibility: collapse;
+}
+
+DropDownMenu Label
+{
+	width: 100%;
+	padding-right: 20px;
+}

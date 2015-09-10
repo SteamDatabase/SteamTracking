@@ -1,0 +1,334 @@
+
+@define simplebuttonsolid_vertical: gradient( linear, 0% 0%, 0% 100%, from( #2f5c82 ), to( #24486d ) );
+.commentthread_comments
+{
+	flow-children: down;
+	width: 100%;
+}
+
+.commentthread_comment_container
+{
+	width: 100%;
+	margin-right: 0px;
+}
+
+.commentthread_comment
+{
+	flow-children: right;
+	margin-right: 15px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.commentthread_area
+{
+	width: 100%;
+	margin-right: 5px;
+}
+
+#CommentList
+{
+	width: 100%;
+	height: 100%;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+.commentthread_comment_avatar Image,
+.commentthread_user_avatar Image
+{
+	width: 72px;
+	height: 72px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+
+	vertical-align: center;
+
+	border-radius: 0px;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.commentthread_valve_icon
+{
+	vertical-align: center;
+	margin-left: 4px;
+	pre-transform-scale2d: 0.9;
+}
+
+.commentthread_comment_avatar Image.online,
+.commentthread_user_avatar Image.online
+{
+	border-color: friendsonline_solid;
+}
+
+.commentthread_comment_avatar Image.offline,
+.commentthread_user_avatar Image.offline
+{
+	border-color: friendsoffline_solid;
+}
+
+.commentthread_comment_avatar Image.ingame
+{
+	border-color: friendsingame_solid;
+}
+
+.commentthread_comment_content
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	flow-children: down;
+	vertical-align: top;
+	width: 100%;
+}
+
+.commentthread_comment_author
+{
+	flow-children: right;
+	width: 100%;
+}
+
+.commentthread_author_link Label
+{
+	font-size: 23px;
+	font-weight: bold;
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.commentthread_workshop_authorbadge
+{
+	font-size: 23px;
+}
+
+.commentthread_comment_timestamp Label
+{
+	margin-left: 6px;
+	margin-top: 5px;
+	vertical-align: center;
+	font-size: 18px;
+	color: #FFFFFF99;
+}
+
+.commentthread_comment:focus .commentthread_comment_timestamp Label
+{
+	color: #00000099;
+	}
+
+.commentthread_author_link Label.online
+{
+	color: friendsonline_solid;
+}
+
+.commentthread_comment:focus .commentthread_author_link Label.online
+{
+	color: friendsonline_lightbg;
+}
+
+.commentthread_author_link Label.offline
+{
+	color: friendsoffline_solid;
+}
+
+.commentthread_author_link Label.ingame
+{
+	color: friendsingame_darkbg;
+}
+
+.commentthread_comment:focus .commentthread_author_link Label.ingame
+{
+	color: friendsingame_lightbg;
+}
+
+.commentthread_comment_text
+{
+	margin-top: 4px;
+	font-size: 23px;
+
+	max-height: 55px;
+	color: #FFFFFF99;
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+Button:focus .commentthread_comment_text
+{
+	color: #333333FF;
+}
+
+.commentthread_comment
+{
+	border-width: 5px;
+	border-color: #00000000;
+	border-style: solid;
+	width: 100%;
+
+	padding: 10px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+
+	transition-property: opacity,border,background-color,transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.commentthread_comment:focus
+{
+	border-color: #fdfefef0;
+	color: #161718f5;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	animation-name: links-and-more-button-focus;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.commentthread_area
+{
+	flow-children: down;
+	margin-right: 5px;
+	overflow: squish scroll;
+
+	opacity-mask-scroll-up: url( "file://{images}/list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
+}
+
+.comment_form
+{
+	padding-bottom: 12px;
+}
+
+.commentthread_entry
+{
+	margin-top: 20px;
+	margin-left: 5px;
+	flow-children: right;
+}
+
+.commentthread_entry_quotebox
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 100%;
+	height: 98px;
+	flow-children: right;
+	opacity: 0.85;
+	
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.commentthread_entry_quotebox:hover
+.commentthread_entry_quotebox:descendantfocus
+{
+	opacity: 1.0;
+
+	transition-property: opacity, border;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.commentthread_entry_quotebox TextEntry
+{
+	font-size: 23px;
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	border: 5px solid #1b4059ff;
+	opacity: 0.85;
+	
+	transition-property: opacity, border;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.commentthread_entry_quotebox TextEntry:hover
+{
+	opacity: 1.0;
+}
+
+.commentthread_entry_quotebox TextEntry:descendantfocus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	border: 5px solid #fdfefef0;
+	opacity: 1.0;
+}
+
+.commentthread_entry TextEntry Label
+{
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.commentthread_entry_quotebox Button
+{
+	width: 100px;
+	height: 100%;
+}
+
+.commentthread_entry TextEntry.HasInput Label
+{
+	opacity: 0.0;
+}
+
+.commentthread_comment .commentthread_comment_avatar
+{
+	vertical-align: top;
+}
+
+Button Panel.commentthread_comment_avatar,
+Panel Panel.commentthread_user_avatar
+{
+	border-width: 0px;
+	border-style: none;
+	border-radius: 0px;
+}
+
+.commentthread_submit
+{
+	font-weight: light;
+	font-size: 23px;
+	color: tclegendlabel;
+	white-space: nowrap;
+	padding: 8px;
+	margin-left: 8px;
+	background-color: simplebuttonsolid_vertical;
+	color: #f2f2f2ff;
+	opacity: 0.85;
+	border: 5px solid;
+	border-color: none;
+
+	transition-property: background-color, opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+
+}
+
+.commentthread_submit:hover,
+.commentthread_submit:focus
+{
+	opacity: 1.0;
+}
+
+.commentthread_submit:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	border-color: #fdfefef0;
+	}
+
+.commentthread_submit Label
+{
+	vertical-align: center;
+	horizontal-align: center;
+}

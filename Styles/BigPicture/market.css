@@ -1,0 +1,1133 @@
+
+#CommunityMarket
+{
+	background-image: url("file://{images}/profile/activity_bg_wash.png");
+	background-size: 100% 100%;
+	box-shadow: #000000aa -4px -4px 8px 8px;
+}
+
+#CommunityMarketContent
+{
+	padding: 25px 110px;
+	flow-children: down;
+	width: 100%;
+}
+
+#MarketPageTitle
+{
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.PageTitle
+{
+	horizontal-align: left;
+	font-weight: thin;
+	color: #5c96be;
+	font-size: 32px;
+	margin-bottom: 25px;
+
+	font-family: platformfont;
+
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+#MarketTitle,
+.ItemGridSearchVisible #SearchTitle,
+.ItemGridSearchVisible #SearchTerms
+{
+	opacity: 1.0;
+}
+
+#SearchTitle,
+#SearchTerms,
+.ItemGridSearchVisible #MarketTitle,
+ .ItemGridSearchVisible #SearchTerms.NoSearchTerms
+ {
+	 opacity: 0.0;
+ }
+
+#MarketPageTitle #SearchTerms
+{
+	color: white;
+	margin-left: 20px;
+}
+
+#MarketPageTitle .PageTitle
+{
+	text-transform: uppercase;
+	color: carousel_title;
+	font-size: 56px;
+	line-height: 70px;
+	font-weight: light;
+	vertical-align: center;
+	margin-bottom: 0px;
+}
+
+.MarketDetailsOpen #MarketPageTitle
+{
+	transform: translatey( -20px );
+}
+
+#MarketMenuRow
+{
+	flow-children: down;
+
+	/*background-color: gradient( linear, 0% 0%, 100% 0%, from( #0f2c40 ), to( #051119 ) ); */
+	width: 100%;
+	/*padding: 20px; */
+}
+
+#MarketMenuRowButtons
+{
+	flow-children: right;
+}
+
+.ButtonLabel
+{
+
+	color: #72899e;
+	font-size: 28;
+	font-weight: thin;
+	text-overflow: clip;
+	flow-children: down;
+	transition-property: color;
+}
+#MarketMenuRowButtons .Button:focus .ButtonLabel {
+	color: #000000;
+}
+
+#MarketMenuRowButtons .ButtonSpacer
+{
+	margin-right: 20px;
+}
+
+#MarketMenuRowButtons #SearchSpacer
+{
+
+}
+
+.ButtonSpacer:hover .ButtonLabel
+{
+	color: #cccccc;
+}
+
+#MarketMenuRowButtons .Button
+{
+	padding-right: 20px;
+	padding-left: 5px;
+	background-color: transparent;
+}
+
+#MarketMenuRowButtons .Button:focus
+{
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+
+	animation-name: button-focus;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+
+.ItemGrid
+{
+	margin-top: -64px;
+	margin-left: -67px;
+
+	width: 106%;
+	height: 680px;
+
+	margin: 0px 0px 0px -110px;
+	padding: 40px 330px 40px 84px;
+
+	overflow: noclip squish;
+
+	transition-property: transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+}
+
+.MarketGridItem
+{
+	pre-transform-scale2d: 0.90;
+	z-index: 0;
+
+	wash-color: #00000012;
+	opacity: 0.85;
+	desaturation: 0.2;
+
+
+	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+	margin: 0px;
+	transform: none;
+}
+
+.MarketGridItemMainContent
+{
+	padding: 18px 18px 10px 18px;
+
+	flow-children: right;
+	background-color: gradient( linear, 0% 0%, 120% 150%, from( black ), to ( #010f19 ) );
+	horizontal-align: left;
+	vertical-align: center;
+
+	width: 502px;
+	height: width-percentage( 34.2% );
+
+	box-shadow: #00000022 -4px -4px 8px 8px;
+
+	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.MarketGridItemActionButton .MarketGridItemMainContent
+{
+	padding-bottom: 30px;
+}
+
+.MarketGridItemActionButton .MarketGridItemMainContent
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #22445f ), to( #112233 ) );
+}
+
+.MarketGridItemAction
+{
+	width: 100%;
+	margin: 30px;
+
+	vertical-align: center;
+}
+
+.MarketGridItemAction Label
+{
+	vertical-align: center;
+	color: #ffffffff;
+	width: 100%;
+
+	font-size: 42;
+	font-weight: thin;
+	text-overflow: clip;
+	transition-property: color;
+	text-align: center;
+}
+
+.MarketGridItemImage
+{
+	width: 27.7%;
+	height: width-percentage( 100% );
+	horizontal-align: left;
+	border: 3px solid #3A3A3A;
+}
+
+.MarketGridItemInfo
+{
+	flow-children: down;
+	width: 100%;
+	horizontal-align: right;
+	margin-left: 18px;
+}
+
+.MarketGridItemInfo Label
+{
+	margin-bottom: 8px;
+	color: #898989;
+	font-weight: normal;
+	font-size: 20;
+}
+
+Label.ItemName
+{
+	font-size: 24;
+	font-weight: lighter;
+	max-height: 60px;
+	width: 306px;
+    margin-bottom: 13px;
+}
+
+Panel.MyListingPrices
+{
+	flow-children: right;
+	text-align: center;
+}
+
+Label.SellingFor
+{
+	color: #688F3E;
+	margin-right: 8px;
+}
+
+Label.BuyingFor
+{
+	color: #6a8dcd;
+}
+
+Label.MyListingQuantity
+{
+	color: #898989;
+}
+
+Label.PurchasedFor
+{
+	color: #588EB4;
+	margin-right: 8px;
+}
+
+.MarketGridItem:hover
+{
+	pre-transform-scale2d: 0.95;
+	transform: none;
+	z-index: 1;
+	opacity: 1.0;
+}
+
+.MarketGridItem:focus,
+.MarketGridItem:hover:focus
+{
+	pre-transform-scale2d: 1.2;
+
+	z-index: 2;
+	opacity: 1.0;
+	wash-color: #00000000;
+	desaturation: 0.0;
+    background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfd ), to( #bdbfbf ));
+
+	transform: none;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+}
+
+.MarketGridItemSubContent
+{
+	margin-top: 10px;
+	width: 100%;
+	height: 90px;
+	opacity: 0.0;
+
+	flow-children: down;
+
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in-out;
+}
+
+.MarketGridItem:hover .MarketGridItemSubContent,
+.MarketGridItem:focus .MarketGridItemSubContent,
+.MarketGridItem:hover:focus .MarketGridItemSubContent
+{
+	opacity: 1.0;
+}
+
+.MarketGridItemSubContent .ItemName,
+.MarketGridItemSubContent .ItemPrice
+{
+	width: 330px;
+	max-height: 30px;
+}
+
+.MarketGridItemSubContent .ItemName
+{
+	font-size: 24;
+	color: #FFFFFF;
+}
+
+.MarketGridItemSubContent .ItemPrice
+{
+	font-size: 20;
+	color: #C2C2C2;
+}
+
+.BrightText
+{
+	color: #FFFFFF;
+}
+
+.MarketGridItem .AppImage
+{
+	width: 35px;
+	height: 35px;
+	align: right bottom;
+
+	transition-property: pre-transform-scale2d, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.HistorySash
+{
+	text-align: center;
+	width: 230px;
+	height: 36px;
+
+	transform: rotateZ( -45deg ) translateX( -50px ) translateY( 40px );
+}
+
+.HistorySash Label
+{
+	width: 100%;
+
+	text-align: center;
+	vertical-align: middle;
+	font-size: 26;
+	color: #FFFFFF;
+}
+
+.HistorySash.ListingSold
+{
+	background-color: #688F3E;
+}
+
+.HistorySash.ListingPurchased
+{
+	background-color: #588EB4;
+}
+
+.HistorySash.ListingCancelled
+{
+	background-color: #717578;
+}
+
+Label.HistoryEventDescription
+{
+	color: #545454;
+}
+
+.ActorInfo
+{
+	flow-children: right;
+}
+
+.ActorInfo Image
+{
+	margin-right: 12px;
+}
+
+.ActorInfo Label
+{
+	color: #BEBEBE;
+	margin-bottom: 0;
+	max-height: 40px;
+}
+
+
+.MarketPopupWrapper
+{
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+}
+
+.MarketPopupWrapper LoadingThrobber
+{
+	align: center center;
+}
+
+.MarketPopup
+{
+	height: 600px;
+	width: 1000px;
+	horizontal-align: center;
+	vertical-align: center;
+	background-color: message_box_bg;
+
+	padding: 15px;
+	
+	flow-children: down;
+}
+
+.MarketPopup Panel
+{
+	flow-children: down;
+}
+
+.MarketPopup Button,
+.MarketPopup #Warnings Button
+{
+	flow-children: right;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 8px 8px 8px 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	min-width: 100px;
+	background-color: simplebuttonsolid_vertical;
+	color: detailsdatalabelfocus;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: #00000000;
+
+	transition-property: background-color, border, box-shadow, pre-transform-scale2d;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;
+
+	vertical-align: bottom;
+	horizontal-align: center;
+
+}
+
+.MarketPopup #Warnings Button Image
+{
+	height: 100%;
+	width: 30px;
+	margin-right: 10px;
+}
+
+.MarketPopup #Warnings Button:focus Image
+{
+	color: black;
+}	
+.MarketPopup Button:focus,
+.MarketPopup #Warnings Button:focus
+{
+	background-color: #00000020;
+
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	animation-name: msgbox-button-focus;
+	animation-duration: 1.7s;
+	animation-delay: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.MarketPopup #Header
+{
+	flow-children: right;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.MarketPopup #Header Label
+{
+	font-size: 28px;
+	color: white;
+	font-weight: bold;
+	vertical-align: center;
+	margin-left: 5px;
+}
+
+.MarketPopup #Warnings
+{
+	width: 100%;
+	overflow: squish scroll;
+	height: fill-parent-flow( 1.0 );
+
+	border: 4px solid #ffffff33;
+}
+
+#Warnings
+{
+	padding: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.MarketPopup #Warnings Button
+{
+	width: 100%;
+	margin-top: -8px;
+	padding-top: 10px;
+	margin-bottom: -8px;
+	padding-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	min-height: 106px;
+}
+
+#Warnings Button:focus
+{
+//	background-color: transparent;
+}
+
+#Warnings .HorizontalRule
+{
+	z-index: -100;
+}
+
+.MarketPopup #Warnings Button
+{
+	horizontal-align: left;
+	background-color: transparent;
+}
+
+.MarketPopup Button Label
+{
+	horizontal-align: center;
+	font-size: 28px;
+	text-overflow: clip;
+
+	padding-left: 5px;
+	padding-right: 5px;
+	transition-property: color;
+	transition-duration: 0.25s !immediate;
+	transition-timing-function: ease-in-out;
+}
+
+.MarketPopup #Warnings Button Label
+{
+	horizontal-align: left;
+	vertical-align: center;
+}
+
+
+#WalletInfo
+{
+	horizontal-align: right;
+	vertical-align: center;
+	padding-right: 90px;
+	font-size: 24px;
+	color: #5c96be;
+	flow-children: right;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+#MarketPageTitle #WalletInfo
+{
+	padding-right: 0px;
+}
+
+.CommunityDepth1 .TopVisibleDepth1 #WalletInfo,
+.CommunityDepth2 .TopVisibleDepth2 #WalletInfo,
+.CommunityDepth3 .TopVisibleDepth3 #WalletInfo,
+.CommunityDepth4 .TopVisibleDepth4 #WalletInfo,
+.CommunityDepth5 .TopVisibleDepth5 #WalletInfo
+{
+	opacity: 1.0;
+}
+
+#NoWallet
+{
+	visibility: collapse;
+}
+
+.NoWallet #WalletLabel,
+.NoWallet #WalletAmount
+{
+	visibility: collapse;
+}
+
+.NoWallet #NoWallet
+{
+	visibility: visible;
+}
+
+#WalletLabel,
+#NoWallet
+{
+	color: #86be3e;
+	font-size: 34px;
+	line-height: 50px;
+	margin-right: 8px;
+	text-transform: none;
+}
+
+#WalletAmount
+{
+	color: checkout_title_bg;
+	font-size: 34px;
+	line-height: 50px;
+	font-weight: bold;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #78ab38 ), to( #5e852b ) );
+	border-radius: 8px;
+	padding: 0px 4px;
+}
+
+#MarketContentPanel
+{
+	margin: -10px -110px;
+	padding: 25px 110px;
+	width: 100%;
+}
+
+#MarketContentPanel #ThrobberPanel
+{
+	height: 100%;
+	width: 100%;
+	padding-bottom: 200px;
+	z-index: 20;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+}
+
+#MarketContentPanel.ContentLoading #ThrobberPanel
+{
+	opacity: 1.0;
+}
+
+#MarketContentPanel LoadingThrobber
+{
+	margin-top: 0px;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.BehindMessageBox #MarketContentPanel LoadingThrobber
+{
+	visibility: collapse;
+}
+
+#MarketContentPanel.ThrobberRight LoadingThrobber
+{
+	transform: translatex( 800px );
+}
+
+
+#MarketSearchPanel
+{
+	margin-left: 0px;
+	margin-top: 49px;
+	margin-bottom: 75px;
+	z-index: 10;
+	padding-right: 5px;
+
+	transition-property: transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transform: translatex( -2220px );
+}
+
+.ItemGridSearchVisible #MarketContentPanel.NoSearchRun #MarketSearchPanel
+{
+	transform: translatex( 610px );
+	width: 480px;
+}
+.BehindTextInputHandler .ItemGridSearchVisible #MarketContentPanel.NoSearchRun #MarketSearchPanel
+{
+	transform: translatex( 210px );
+	width: 480px;
+}
+
+
+.ItemGridSearchVisible #MarketContentPanel .EconomySearchRegion
+{
+	transform: translatex( -440px );
+}
+
+.ItemGridSearchVisible #MarketContentPanel.SearchVisible .EconomySearchRegion
+{
+	transform: translatex( 0px );
+}
+
+
+.FixedSearch #MarketSearchPanel
+{
+	opacity: 1.0;
+	transform: translatex( 0px );
+}
+
+#MarketSearchPanel .FlowRight
+{
+	flow-children: right;
+}
+
+
+#MarketSearchAppDropDownDropDownMenu #app_option_all
+{
+	padding-left: 41px;
+}
+
+#ItemGridMain
+{
+	transform: translatex( 1920px );
+}
+
+.ItemGridMainVisible #ItemGridMain
+{
+	transform: translatex( 0px );
+}
+
+#ItemGridSearch
+{
+	transform: translatex( -2220px );
+}
+
+.ItemGridSearchVisible #ItemGridSearch
+{
+	transform: translatex( 0px );
+}
+
+.ItemGridSearchVisible .SearchVisible #ItemGridSearch,
+.ItemGridSearchVisible .FixedSearch #ItemGridSearch
+{
+	transform: translatex( 388px );
+	margin-left: -68px;
+}
+
+
+#MarketSearchText
+{
+	width: 50%;
+	margin-right: 10px;
+	font-size: 24px;
+	margin-top: 10px;
+}
+
+#MarketSearchText #PlaceHolderText
+{
+	font-style: italics;
+	opacity: 0.5;
+	color: applabelsolid;
+}
+
+#MarketSearchText:focus #PlaceHolderText
+{
+	color: applabelselectedsolid;
+}
+
+#MarketSearchText.HasInput #PlaceHolderText
+{
+	opacity: 0.0;
+}
+
+#SearchOptions
+{
+	padding: 5px;
+	width: 100%;
+	height: 100%;
+}
+
+#SearchOptions DropDown:disabled
+{
+	opacity: 0.2;
+}
+
+#SearchOptions DropDown,
+#SearchOptions Label,
+#SearchOptions TextEntry
+{
+	margin-right: 15px;
+	width: 100%;
+}
+
+DropDown Button
+{
+	width: 100%;
+}
+
+DropDown .FlowRight,
+#MarketSearchAppDropDownDropDownMenu .FlowRight
+{
+	flow-children: right;
+}
+
+DropDown Label,
+DropDown Image,
+#MarketSearchAppDropDownDropDownMenu Label,
+#MarketSearchAppDropDownDropDownMenu Image
+{
+	vertical-align: center;
+	margin-right: 5px;
+}
+
+
+#MarketSearchAppDropDownDropDownMenu Button Label
+{
+	width: 100%;
+}
+
+#SearchThrobberPanel,
+#NoSearchOptions
+{
+	flow-children: down-wrap;
+	overflow: squish scroll;
+	padding-right: 10px;
+	opacity: 0.0;
+}
+
+.SearchOptionsLoading #SearchThrobberPanel
+{
+	opacity: 1.0;
+}
+
+#SearchContentPanel
+{
+	width: 100%;
+	height: fill-parent-flow( 1.0 );
+}
+
+#SearchOptions
+{
+	opacity: 1.0;
+	overflow: squish scroll;
+}
+
+.FacetHeader
+{
+	font-size: 24;
+	color: tcstatictext;
+	margin-bottom: 3px;
+}
+
+#NoSearchOptions
+{
+	visibility: collapse;
+}
+
+.NoSearchOptions #NoSearchOptions
+{
+	visibility: visible;
+	opacity: 1.0;
+}
+
+#NoSearchOptions
+{
+	padding-top: 30px;
+	padding-left: 20px;
+}
+
+#NoSearchOptions Label
+{
+	font-size: 22px;
+	color: #898989;
+}
+
+#MarketSearchPanel #SearchThrobberPanel
+{
+	horizontal-align: center;
+	vertical-align: center;
+	padding-right: 0px;
+}
+
+#SearchThrobberPanel LoadingThrobber
+{
+	horizontal-align: center;
+}
+
+#MarketSearchTerms
+{
+	opacity: 0.0;
+
+	color: applabelsolid;
+
+	padding-top: 5px;
+	
+	font-size: 24px;
+	height: 36px;
+	width: 100%;
+
+	text-align: left;
+}
+
+.ItemGridSearchVisible .SearchFilterVisible #MarketSearchTerms
+{
+	opacity: 1.0;
+}
+
+
+#NoItemsSearch
+{
+	font-size: 28px;
+	color: #898989;
+
+	transform: translatex( 190px );
+
+	horizontal-align: center;
+	text-align: center;
+	margin-top: 200px;
+	width: 700px;
+	opacity: 0.0;
+}
+
+#CommunityMarketDetails #NoItemsSearch
+{
+	transform: translatex( 0px );
+	width: 1000px;
+}
+
+.ItemGridSearchVisible .NoItemsSearch #NoItemsSearch,
+#CommunityMarketDetailsContent.NoItemsSearch #NoItemsSearch
+{
+	opacity: 1.0;
+}
+
+#MarketSearchText,
+#MarketSearchAppDropDown
+{
+	margin-bottom: 16px;
+	width: 100%;
+	margin-right: 10px;
+}
+
+
+#SearchOptions>Label
+{
+	visibility: collapse;
+}
+
+#MarketSearchPanel VerticalScrollBar .ScrollThumb
+{
+//	background-color: tcstatictext;
+}
+
+#MarketSearchPanel:descendantfocus DropDown,
+#MarketContentPanel.NoSearchRun DropDown
+{
+	background-image: url( "file://{images}/store/Icon_DropDownArrowDefault.png" );
+	background-repeat: no-repeat;
+	background-position: right 44px 50%;
+	background-color: simplebuttonsolid_vertical;
+}	
+
+#MarketSearchPanel:descendantfocus DropDown:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+}
+
+#MarketSearchPanel VerticalScrollBar
+{
+	opacity: 0.0;
+}
+
+#MarketSearchPanel:descendantfocus VerticalScrollBar
+{
+	opacity: 1.0;
+}
+
+#MarketSearchPanel DropDown
+{
+	background-image: none;
+	background-position: left 500px top 0px;
+	background-color: #00000000;
+
+	transition-property: background-color, border, box-shadow, color;
+}
+
+
+
+
+.LeftMouseScrollRegion,
+.RightMouseScrollRegion
+{
+	opacity: 0.0;
+	width: 80px;
+	height: 100%;
+	z-index: 200;
+
+	transition-property: opacity, background-color;
+	transition-duration: mediumduration;
+	transition-delay: 0.2s;
+	transition-timing-function: ease-in-out;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+}
+
+Carousel:descendantfocus .LeftMouseScrollRegion,
+Grid:descendantfocus .LeftMouseScrollRegion
+{
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	
+	background-color: mouse_off_bg_left;
+	opacity: 0.0;
+}
+
+Carousel:descendantfocus .RightMouseScrollRegion,
+Grid:descendantfocus .RightMouseScrollRegion
+{
+	align: right center;
+	
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+
+	background-color: mouse_active_bg_right;
+	opacity: 0.0;
+}
+
+
+Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
+Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
+{
+	transition-delay: 0.0s;
+	opacity: 1.0;
+	background-color: mouse_hover_bg_left;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+.CursorVisible #ItemGridMain:descendantfocus:hover  .RightMouseScrollRegion
+{
+	transition-delay: 0.0s;
+	opacity: 1.0;
+	background-color: mouse_hover_bg_right;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover,
+Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover,
+.CursorVisible #ItemGridMain:descendantfocus:hover  .LeftMouseScrollRegion:hover
+{
+	transition-delay: 0.0s;
+	background-color: mouse_active_bg_left;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
+.CursorVisible #ItemGridMain:descendantfocus:hover  .RightMouseScrollRegion:hover
+{
+	transition-delay: 0.0s;
+	background-color: mouse_active_bg_right;
+}
+
+Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
+Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_left;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_right;
+
+}
+
+.LeftMouseScrollRegion
+{
+	background-color: mouse_active_bg_left;
+	position: 0px -10px 0px;
+}
+
+.RightMouseScrollRegion
+{
+	background-color: mouse_active_bg_right;
+	horizontal-align: right;
+	position: -110px -10px 0px;
+}
+
+.SearchVisible #ItemGridSearch .RightMouseScrollRegion
+{
+	position: -544px -10px 0px;
+}
+

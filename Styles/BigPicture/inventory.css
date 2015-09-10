@@ -1,0 +1,837 @@
+
+.InventoryListingWrapper
+{
+	width: 100%;
+	height: 100%;
+}
+
+#InventoryBody
+{
+	opacity: 1.0;
+	flow-children: down;
+	width: 100%;
+	height: 100%;
+
+	transition-property: opacity, transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+
+	transform: translatey( 0px );
+
+    background-image: url( "file://{images}/profile/activity_bg_wash.png" );
+    background-size: 100% 100%;
+    box-shadow: #000000aa -2px -2px 4px 4px;
+}
+
+#InventoryHeading
+{
+	margin-left: 100px;
+	margin-top: 25px;
+	text-transform: uppercase;
+	width: 100%;
+	horizontal-align: left;
+    color: carousel_title;
+    font-size: 56px;
+    font-family: platformfont;
+    font-weight: light;
+    height: 70px;
+}
+
+
+.OldProfile #InventoryBody
+{
+	transform: none;
+}
+
+.ItemDetailView #InventoryBody
+{
+	transform: translatey( 1080px );
+	opacity: 0.0;
+}
+
+#ItemDetailWrapper
+{
+	transition-property: opacity, transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+	
+	width: 100%;
+	height: 100%;
+
+	transform: translatey( 1080px );
+	opacity: 0.0;
+}
+
+.ItemDetailView #ItemDetailWrapper
+{
+	opacity: 1.0;
+	transform: translatey( 0px );
+}
+
+#AppCarousel
+{
+	width: 100%;
+	flow-children: right;
+	padding: 10px;
+	padding-top: 20px;
+	padding-left: 50px;
+}
+
+.games_list_tab
+{
+	flow-children: right;
+	pre-transform-scale2d: 1.0;
+
+	transition-property: position, pre-transform-scale2d, blur, background-color, color, max-width, transform, border;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+
+	margin-right: 20px;
+	padding: 8px;
+}
+
+.games_list_tab:hover
+{
+	pre-transform-scale2d: 1.04;
+}
+
+.games_list_tab Image
+{
+	vertical-align: center;
+	margin: 4px;
+	
+	border-style: solid;
+	border-color: #00000001;
+	border-width: 1px;	
+	border-radius: 6px;
+}
+
+.games_list_tab Label
+{
+	pre-transform-scale2d: 1.0;
+	margin-left: 4px;
+	font-weight: light;
+	border-color: #00000000;
+	border-style: solid;
+	border-width: 1px;
+	font-size: 28px;
+	color: #677881;
+	vertical-align: center;
+
+	transition-property: opacity, color, pre-transform-scale2d;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+}
+
+.games_list_tab.Focused Label
+{
+	color: applabelsolid;
+}
+
+.games_list_tab:Focus Label
+{
+	color: applabelselectedsolid;
+}
+
+.games_list_tab:Focus
+{
+	opacity: 1.0;
+	color: black;
+	background-color: button_focus_color;
+
+	animation-name: button-focus;
+	animation-duration: 1.7s;
+	animation-delay: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}	
+
+.FilterOption
+{
+	flow-children: right;
+
+	width: 100%;
+	padding: 4px 3px 4px 3px;
+	margin: 2px 0px;
+	margin-right: 8px;
+
+	color: #ffffff99;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d212200 ), to( #12131300 ) );
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 18px 9px;
+
+	font-family: platformfont;
+	font-size: 24px;
+	font-weight: normal;
+	transform: translatex(-7px);
+
+	transition-property: border, background-color, color, box-shadow, transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	
+}
+
+.FilterOption:hover,
+.FilterOption:focus,
+.FilterOption:descendantfocus
+{
+	color: applabelselected;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+	transform: translatex(0px);
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+}
+
+#SearchRegion .FilterHeader
+{
+	font-size: 24;
+	color: tcstatictext;
+	margin-bottom: 3px;
+}
+
+#SearchRegion DropDown
+{
+	background-image: none;
+	background-position: left 500px top 0px;
+	background-color: #00000000;
+
+	transition-property: background-color, border, box-shadow, color;
+}
+
+#SearchRegion:descendantfocus DropDown,
+.NoSearch #SearchRegion DropDown
+{
+	background-image: url( "file://{images}/store/Icon_DropDownArrowDefault.png" );
+	background-repeat: no-repeat;
+	background-position: right 44px 50%;
+	background-color: simplebuttonsolid_vertical;
+}	
+
+
+DropDown.DropDownMenuVisible:focus .Header
+{
+	color: applabelselected;
+}
+
+DropDownMenu .FilterOption Label,
+DropDownMenu .FilterOption Label:hover,
+DropDownMenu .FilterOption Label:focus
+{
+	padding: 0px;
+	margin: 0px;
+	background-color: #00000000;
+	box-shadow: none;
+	transform: translatex( 0px );
+	border-style: none;
+	border-width: 0px;
+
+	animation-name: none;
+	vertical-align: center;
+}
+
+.FilterOption:descendantfocus Label,
+DropDownMenu .FilterOption Label:hover,
+DropDownMenu .FilterOption Label:focus
+{
+	color: applabelselected;
+}
+
+#ContextDropdown
+{
+	visibility: collapse;
+	opacity: 0.0;
+	width: 100%;
+	margin-bottom: 36px; 
+	vertical-align: top;
+}
+
+#ContextDropdown.Visible
+{
+	transition-property: opacity;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+
+	visibility: visible;
+	opacity: 1.0;
+}
+
+#SearchWrapper
+{
+	width: 100%;
+	font-size: 24px;
+	color: applabelsolid;
+	margin-bottom: 20px;
+}
+
+#SearchLabel
+{
+	margin-bottom: 12px;
+}
+	
+#SearchEntry
+{
+	width: 100%;
+}
+
+#ViewingLabel
+{
+	horizontal-align: right;
+	vertical-align: center;
+	font-size: 24px;
+	color: #555555ff;
+}
+
+#GridWrapper
+{
+	margin-top: -40px;
+	padding-top: 40px;
+	padding-left: 110px;
+	padding-right: 110px;
+	width: 100%;
+	height: 100%;
+}
+
+#ItemGrid
+{
+	margin-top: -24px;
+	margin-bottom: 120px;
+	margin-left: -110px;
+
+	width: 106%;
+	height: 100%;
+
+	overflow: noclip squish;
+
+	padding: 80px 330px 40px 104px;
+
+	transition-property: opacity, transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+}
+
+.FastMotion #ItemGrid
+{
+	opacity: 0.15;
+}
+
+.SearchVisible #ItemGrid
+{
+	transform: translatex( 388px );
+	margin-left: -68px;
+}
+
+#FastScrollWrapper
+{
+	z-index: 100;
+	opacity: 0.0;
+	height: 30px;
+	width: 100%;
+	vertical-align: center;
+
+	margin-left: 150px;
+	margin-right: 150px;
+
+	margin-bottom: 190px;
+
+	transition-property: opacity, transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+}
+
+.FastMotion #FastScrollWrapper
+{
+	opacity: 1.0;
+}
+
+#FastScrollWrapper #FastScrollBar
+{
+	width: 1620px;
+	height: 40%;
+	vertical-align:  center;
+	horizontal-align: center;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #15698e00 ), color-stop( 0.35, #15698eff ), color-stop( 0.65, #15698eff ), to( #15698e00 ) );
+}
+
+#FastScrollWrapper #FastScrollThumb
+{
+	height: 100%;
+	width: 400px;
+
+	background-color: #FFFFFFFF;
+
+	transition-property: opacity, transform;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+	transition-delay: 0.0s;
+}
+
+.InventoryItem
+{
+	margin: -116px;
+	padding: 20px 8px 8px 8px;
+	width: 441px;
+	height: 470px;
+	pre-transform-scale2d: 0.60;
+	z-index: 0;
+
+
+	wash-color: #00000012;
+	opacity: 0.00;
+	desaturation: 0.2;
+
+
+	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+	transform: translatex(-28px); 
+
+	flow-children: down;
+}
+
+.InventoryItem.Ready
+{
+	opacity: 0.85;
+}
+
+.InventoryItem.LosingFocus
+{
+	z-index: 1;
+}
+
+.InventoryItem:hover
+{
+	pre-transform-scale2d: 0.85;
+	transform: translatey( 15px ) translatex(-9px);
+	z-index: 1;
+}
+
+.InventoryItem:focus,
+.InventoryItem:hover:focus
+{
+	pre-transform-scale2d: 1.0;
+
+	z-index: 2;
+	opacity: 1.0;
+	wash-color: #00000000;
+	desaturation: 0.0;
+
+	transform: translatey( 26px ) translatex(4px);
+}
+
+.InventoryItem Image
+{
+	background-color: #222222ff;
+	vertical-align: center;
+	horizontal-align: left;
+	margin-left: 12px;
+	width: 240px;
+	height: 240px;
+
+	box-shadow: #00000022 -4px -4px 8px 8px;
+
+	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out; 
+
+}
+
+.InventoryItem:focus Image,
+.InventoryItem:hover:focus Image
+{
+	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.InventoryItem Label
+{
+	padding-top: 30px;
+	padding-left: 8px;
+	padding-right: 20px;
+	margin-top: -20px;
+	margin-left: 0px;
+	height: 46px;
+	max-width: 100%;
+	font-size: 32px;
+	height: 70px;
+	color: applabelsolid;
+	opacity: 0.0;
+	text-overflow: clip;
+	font-weight: bold;
+	white-space: nowrap;
+	transform: translateZ( -10px );
+
+	transition-property: color, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+}
+
+.InventoryItemName
+{
+	background-image: url( "file://{images}/library/title_grid_shadow.png");
+	background-position: left -4px top 24px;
+	background-size: 100% 48px;
+	background-repeat: no-repeat;
+}
+
+.InventoryItem #Amount
+{
+	background-color: transparent;
+	background-image: none;
+}
+
+.InventoryItem Image Label
+{
+	vertical-align: bottom;
+	horizontal-align: center;
+	background-color: transparent;
+	background-image: none;
+	opacity: 1.0;
+	box-shadow: none;
+}
+
+
+.InventoryItem:focus Label, .InventoryItem:hover Label
+{
+	opacity: 1.0;
+}
+
+.InventoryItem Label.Fade
+{
+	opacity-mask: url( "file://{images}/library/horizontal_mask.tga" );
+}
+
+#LeftDetail
+{
+	width: 400px;
+	margin: 90px;
+}	
+
+#LeftDetail Button
+{
+	width: 100%;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #00000000;
+	color: detailsdatalabelfocus;
+
+	transition-property: opacity,border,background-color,transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+}
+
+#LeftDetail Button:focus
+{
+	border-color: #fdfefef0;
+	color: #161718f5;
+	
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	animation-name: links-and-more-button-focus;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.VerticalCenter
+{
+	vertical-align: center;
+}
+
+#DetailBody
+{
+	height: 100%;
+	width: 100%;
+}
+
+#LeftDetail Button Label
+{
+	font-size: 24px;
+}
+
+#RightDetail
+{
+	width: 1160px;
+	height: 100%;
+
+	margin: 90px;
+	margin-bottom: 190px;
+
+	background-color: #00000055;
+
+	overflow: squish scroll;
+}
+
+#RightDetail VerticalScrollBar
+{
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#RightDetail:focus,
+#RightDetail:descendantfocus
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#RightInner
+{
+	height: fit-children;
+	width: 100%;
+	overflow: squish noclip;
+}
+
+
+.ItemDetailInner .ItemDescriptions,
+.ItemDetailInner Label.ItemName,
+.ItemDetailInner .ItemDescriptions Label
+{
+	width: 684px;
+}
+
+#CommunityMarketItemPicker #InventoryBody
+{
+	transform: none;
+}
+
+#CommunityMarketItemPicker #ItemGrid
+{
+	margin-bottom: 150px;
+}
+
+#SearchRegion
+{
+	margin-left: 0px;
+}
+
+#SearchRegion ToggleButton .TickBox
+{
+    width: 50px;
+    height: 49px;
+    vertical-align: center;
+    margin-right: 8px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 0px;
+    background-color: blue;
+    border-color: none;
+}
+
+#SearchRegion ToggleButton:selected .TickBox
+{
+    background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#SearchRegion ToggleButton:descendantfocus:selected .TickBox
+{
+    background-image: url( "file://{images}/store/Icon_CheckFocus.png" );
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: white;
+}
+
+#SearchRegion ToggleButton Label
+{
+    vertical-align: center;
+    margin-top: 10px;
+    padding-bottom: 0px;
+}
+
+#SearchRegion ToggleButton:descendantfocus .TickBox
+{
+    transition-property: border;
+    transition-duration: 0.23s;
+    transition-timing-function: ease-out;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #dbdcdd ), to( #fdfdfd ) );
+}
+
+#SearchRegion DropDown Label
+{
+    width: 100%;
+    margin-right: 29px;
+    margin-top: 2px;
+}
+
+
+#SearchRegion DropDown:focus
+{
+    background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
+    border-color: #ffffff;
+    color: #333333;
+}
+
+#ThrobberPanel
+{
+	transform: translate3d( 1000px, 200px, 0px );
+	opacity: 0.0;
+}
+
+#ThrobberPanel LoadingThrobber
+{
+	margin-top: 0px;
+}
+
+.InventoryLoading #ThrobberPanel
+{
+	opacity: 1.0;
+}
+
+.InventoryLoading #ItemGrid
+{
+	opacity: 0.0;
+}
+
+
+.LeftMouseScrollRegion,
+.RightMouseScrollRegion
+{
+	opacity: 0.0;
+	width: 80px;
+	height: 100%;
+	z-index: 200;
+
+	transition-property: opacity, background-color;
+	transition-duration: mediumduration;
+	transition-delay: 0.2s;
+	transition-timing-function: ease-in-out;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+}
+
+Carousel:descendantfocus .LeftMouseScrollRegion,
+Grid:descendantfocus .LeftMouseScrollRegion
+{
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	
+	background-color: mouse_off_bg_left;
+	opacity: 0.0;
+}
+
+Carousel:descendantfocus .RightMouseScrollRegion,
+Grid:descendantfocus .RightMouseScrollRegion
+{
+	align: right center;
+	
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+
+	background-color: mouse_active_bg_right;
+	opacity: 0.0;
+}
+
+
+Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
+Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
+{
+	transition-delay: 0.0s;
+	opacity: 1.0;
+	background-color: mouse_hover_bg_left;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
+{
+	transition-delay: 0.0s;
+	opacity: 1.0;
+	background-color: mouse_hover_bg_right;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover,
+Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover
+{
+	transition-delay: 0.0s;
+	background-color: mouse_active_bg_left;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover
+{
+	transition-delay: 0.0s;
+	background-color: mouse_active_bg_right;
+}
+
+Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
+Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_left;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_right;
+
+}
+
+.LeftMouseScrollRegion
+{
+	background-color: mouse_active_bg_left;
+	position: 0px -10px 0px;
+}
+
+.RightMouseScrollRegion
+{
+	background-color: mouse_active_bg_right;
+	horizontal-align: right;
+	position: -110px -10px 0px;
+}
+
+.SearchVisible #ItemGrid .RightMouseScrollRegion
+{
+	position: -544px -10px 0px;
+}
+
+
+#AppCarousel .LeftMouseScrollRegion
+{
+	position: 0px 0px 0px;
+}
+
+#AppCarousel .RightMouseScrollRegion
+{
+	position: 0px 0px 0px;
+}
+
+TextEntry {
+	font-size: 24px;
+}

@@ -1,0 +1,4324 @@
+
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+@define transparent_module: gradient( linear, 0% 0%, 100% 100%, from( #030a1ab1 ), to( #030a1ab1 ) );
+@define transparent_module2: gradient( linear, 0% 0%, 0% 100%, from( #1b3a59aa ), to( #121b2edd ) );
+@define simplebuttonsolid_vertical: gradient( linear, 0% 0%, 0% 100%, from( #2f5c82 ), to( #24486d ) );
+
+/* This style is also in steamstyles.css and should be removed from here after client has shipped to public for a while */
+@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #205a7e ), to( #22648a ) );
+
+
+@keyframes 'profilecontent-perspective'
+{
+	from
+	{
+		perspective-origin: 60% 50% invert;
+	}
+
+	10%
+	{
+		perspective-origin: 64% 52% invert;
+	}
+
+	15%
+	{
+		perspective-origin: 64% 52% invert;
+	}
+
+	25%
+	{
+		perspective-origin: 66% 55% invert;
+	}
+
+	50%
+	{
+		perspective-origin: 68% 60% invert;
+	}
+
+	75%
+	{
+		perspective-origin: 63% 52% invert;
+	}
+
+	80%
+	{
+		perspective-origin: 63% 52% invert;
+	}
+
+	to
+	{
+		perspective-origin: 60% 50% invert;
+	}
+}
+
+.Profile
+{
+	width: 2120px;
+	height: 948px;
+
+	margin-left: -100px;
+	padding-left: 100px;
+	margin-right: -100px;
+	padding-right: 100px;
+
+	perspective-origin: 62% 5% invert;
+
+	transition-property: transform, position, opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+}
+
+ProfilePanel.ProfileVisible
+{
+	opacity: 1.0;
+}
+
+#ProfileMenu.ProfileInvisible
+{
+	opacity: 1.0;
+	transform: none;
+}
+
+.StackDepth1 .ProfileVisible #ProfileMenu
+{
+	opacity: 1.0;
+}
+
+ProfilePanel.ProfileInvisible
+{
+	opacity: 0.0;
+}
+
+ProfilePanel #ProfileContent
+{
+	width: 100%;
+	height: 100%;
+
+	transform-origin: 0% 0% parent-relative;
+	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 0px, 1276px, 1000px );
+
+	transition-property: transform, position, opacity, opacity-mask;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+
+}
+
+
+#CommunityWrapper:descendantfocus #ProfileContent
+{
+	transform: translate3d( 0px, 1280px, 1000px );
+	animation-name: none;
+}
+
+
+#CommunityWrapper.ProfileVisible:descendantfocus,
+{
+	transform: translate3d( 0px, 0px, 0px );
+}
+
+ProfilePanel .ProfileBackground
+{
+	width: 75%;
+	height: 75%;
+	box-shadow: #000000aa -2px -2px 4px 4px;
+	position: 12.5% 12.5% 0%;
+
+	pre-transform-scale2d: 1.33333;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+}
+
+.ProfileVisible:descendantfocus .ProfileBackground
+{
+	opacity: 1.0;
+
+}
+
+#BgScreenshotWrapper
+{
+		opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
+}
+
+ProfilePanel #UpperRow
+{
+	width: 100%;
+	height: 122px;
+	margin-top: 23px;
+	margin-left: 100px;
+	margin-right: 70px;
+}
+
+.ProfileBackground .BGScreenshotVisible
+{
+	opacity: 0.0;
+	desaturation: 0.0;
+
+	animation-name: bg-screenshot-ambient;
+	animation-duration: 14s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.ProfileBackground .BGScreenshotInvisible
+{
+	opacity: 0.0;
+}
+
+@keyframes 'bg-screenshot-ambient'
+{
+	0%
+	{
+		opacity: 0.45;
+		transform: translate3D( -15px, -10px, 40px );
+		animation-timing-function: ease-in-out;
+	}
+
+	100%
+	{
+		opacity: 0.45;
+		transform: translate3D( -60px, 0px, 80px );
+		animation-timing-function: ease-in;
+	}
+}
+
+.ProfileBackground .BGOverlayInvisible
+{
+//	transform: translatez( 40px );
+	width: 100%;
+	height: 100%;
+}
+
+.ProfileBackground .BGOverlayVisible
+{
+	opacity: 1.0;
+	desaturation: 0.0;
+}
+
+
+#UpperRow #ProfileAvatar
+{
+	width: 90px;
+	height: 90px;
+	vertical-align: center;
+
+	border-radius: 0px;
+	border-width: 4px;
+	border-style: solid;
+}
+
+#UpperRow #ProfileAvatar.online
+{
+	border-color: friendsonline_solid;
+}
+
+#UpperRow #ProfileAvatar.offline
+{
+	border-color: friendsoffline_solid;
+}
+
+#UpperRow #ProfileAvatar.in-game, #UpperRow #ProfileAvatar.in-game 
+{
+	border-color: friendsingame_solid;
+}
+
+#UpperRow
+{
+	flow-children: right;
+}
+
+#UpperRowRight
+{
+	vertical-align: center;
+	flow-children: down;
+
+	width: 800px;
+	margin-left: 10px;
+}
+
+#UpperRowRight #PersonaNameWrapper
+{
+	flow-children: right;
+}
+
+#UpperRowRight #PersonaNameWrapper Label
+{
+
+}
+
+#PrivateButton
+{
+	margin-top: -460px;
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+#ProfilePrivate
+{
+	font-size: 28px;
+	color: #e94847ff;
+}
+
+
+#UpperRowRight #PersonaName
+{
+	font-size: 32px;
+	font-weight: bold;
+	color: friendsoffline_solid;
+}
+
+#UpperRowRight #PersonaName.online
+{
+	color: friendsonline_solid;
+}
+
+#UpperRowRight #PersonaName.in-game
+{
+	color: friendsingame_solid;
+}
+
+#UpperRowRight #NickName
+{
+	font-size: 32px;
+	font-weight: bold;
+	color: #9a9998ff;
+}
+
+#UpperRowRight #RealName
+{
+	margin-top: 4px;
+	font-size: 21px;
+	color: #9a9998a0;
+}
+
+
+
+.Profile #ProfileContent #ContentsRow
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	height: 100%;
+	width: 2600px;
+
+	overflow: noclip clip;
+
+	opacity-mask: none;
+	opacity: 0.999;
+	flow-children: right;
+
+	transform: translatex( -35px ) translatey( -136px );
+	pre-transform-scale2d: 1.0;
+
+	transition-property: position, pre-transform-scale2d, desaturation, border, wash-color, blur, transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.Profile.OldProfile #ProfileContent #ContentsRow
+{
+	transform: translatex( -40px ) translatey( -216px );
+}
+
+.Profile:descendantfocus #ProfileContent #ContentsRow:hover
+{
+	pre-transform-scale2d: 0.83;
+}
+
+.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus .ContentPanel:hover
+{
+		pre-transform-scale2d: 1.04;
+}
+
+.StackDepth1 #ContentsRow
+{
+	perspective: 1000;
+	animation-name: profilecontent-perspective;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+#ContentsRow .ContentPanel
+{
+	width: 560px;
+	height: 310px;
+	margin-right: 10px;
+	background-color: transparent_module;
+	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.8;
+	flow-children: down;
+
+	transition-property: position, pre-transform-scale2d, desaturation, wash-color, blur, transform, background-color, opacity, opacity-mask, background-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+
+	vertical-align: center;
+}
+
+.Profile:descendantfocus #ProfileContent #ContentsRow
+{
+	pre-transform-scale2d: 0.82;
+	transform: translatex( -248px ) translatey( -192px );
+}
+
+.Profile.OldProfile:descendantfocus #ProfileContent #ContentsRow
+{
+	transform: translatex( -248px ) translatey( -272px );
+}
+
+.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus,
+.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus:hover
+{
+	pre-transform-scale2d: 1.0;
+	transform: translatex( -40px ) translatey( -136px );	
+}
+
+.Profile.OldProfile:descendantfocus #ProfileContent #ContentsRow:descendantfocus,
+.Profile.OldProfile:descendantfocus #ProfileContent #ContentsRow:descendantfocus:hover
+{
+	transform: translatex( -40px ) translatey( -216px );
+}
+
+.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus .ContentPanel,
+.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus .ContentPanel:descendantfocus:hover
+{
+	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
+	pre-transform-scale2d: 1.0;
+}
+
+#ContentsRow .ContentPanel:focus,
+#ContentsRow .ContentPanel:descendantfocus
+{
+	background-color: action_module;
+	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+#ContentsRow .ContentPanel .SectionHeader
+{
+	color: detailsdatalabel;
+	font-size: 36px;
+	font-weight: light;
+	margin-top: 20px;
+	margin-bottom: 8px;
+	margin-left: 14px;
+}
+
+#ContentsRow .ContentPanel:descendantfocus  .SectionHeader
+{
+	color: detailsdatalabelfocus;
+}
+
+#CurrentlyPlaying
+{
+	flow-children: down;
+}
+
+#GamePlayedImage
+{
+	margin-top: 0px;
+	margin-left: 10px;
+
+}
+
+#CurrentlyPlaying .ProfileDetailButton 
+{
+	margin-top: 20px;
+	font-size: 28px;
+}
+	
+#FavGroupScrollRegion
+{
+	overflow: squish scroll;
+	margin-right: 5px;
+	padding-right: 5px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 600px;
+	flow-children: down;
+
+	opacity-mask-scroll-up: url( "file://{images}/list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
+}
+
+#FavGroupUpperRow
+{
+	flow-children: right;
+	width: 100%;
+}
+#FavGroupUpperRow #FavGroupAvatar {
+	height: 130px;
+	width: 130px;
+	margin-top: 8px;
+}
+
+#FavGroupUpperRowTopText
+{
+	margin-top: 8px;
+	flow-children: down;
+	margin-left: 12px;
+	max-height: 176px;
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	width: 100%;
+}
+
+#FavGroupName
+{
+	font-size: 24px;
+	height: 29px;
+	width: 100%;
+	color: detailsdatalabelfocus;
+}
+
+#FavGroupHeadline
+{
+	margin-top: 3px;
+	font-size: 21px;
+	width: 100%;
+	color: #FFFFFF99;
+	opacity: 0.8;
+	max-height: 170px;
+}
+
+#FavGroupStatsRow
+{
+	margin-top: 10px;
+	width: 100%;
+	height: 55px;
+
+	flow-children: right;
+}
+
+.FavGroupStatContainer
+{
+	flow-children: down;
+	margin-right: 20px;
+	width: 28%;
+}
+
+.FavGroupStatHeader
+{
+	min-width: 80px;
+	font-size: 24px;
+	color: detailsdatalabel;
+}
+
+.FavGroupStatHeader.ingame
+{
+	color: friendsingame_solid;
+}
+
+.FavGroupStatValue
+{
+	font-size: 21px;
+	width: 100%;
+	color: detailsdatalabel;
+	opacity: 0.8;
+}
+
+.FavGroupStatHeader.online
+{
+	color: friendsonline_solid;
+}
+
+#FavGroupDesc
+{
+	margin-top: 10px;
+	margin-bottom: 8px;
+	padding-right: 8px;
+	font-size: 21px;
+	color: #FFFFFF99;
+	opacity: 0.0;
+}
+
+#ContentsRow .ContentPanel:descendantfocus #FavGroupDesc
+{
+	opacity: 0.95;
+}
+
+#AchievementShowcaseSmallBody,
+#ItemShowcaseListSmall,
+#TradeShowcaseListSmall,
+#MyWorkshopShowcaseListSmall,
+{
+	margin-left: 10px;
+	flow-children: down;
+}
+
+#AchievementShowcaseSmallBody #Row1,
+#AchievementShowcaseSmallBody #Row2,
+#ItemShowCaseListSmall #Row1,
+#ItemShowCaseListSmall #Row2,
+#TradeShowCaseListSmall #Row1,
+#TradeShowCaseListSmall #Row2
+{
+	width: 100%;
+	flow-children: right;
+	margin-left: -10px;
+}
+
+#AchievementShowcaseSmallBody #Row1
+{
+	margin-top: 24px;
+}
+
+#AchievementShowcaseSmallBody #AchievementImage
+{
+	margin: 8px;
+}
+
+#AchievementShowcaseSmallBody #AchievementImage Image
+{
+	width: 75px;
+	height: 75px;
+
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 0px;
+	border-color: #404040e0;
+	box-shadow: fill #00000060 0px 0px 6px 0px;
+}
+
+#GuideShowcaseWrapper,
+#ItemShowcaseWrapper,
+#TradeShowcaseWrapper,
+#ScreenshotShowcaseWrapper,
+#FavGameShowcaseWrapper,
+#GameCollectorShowcaseWrapper,
+#BadgeCollectorShowcaseWrapper,
+#MyWorkshopShowcaseWrapper,
+#AchievementShowcaseWrapper
+{
+	width: 100%;
+	height: fill-parent-flow( 1.0 );
+}
+
+#AchievementShowcaseSmallBody #SummaryRow,
+#ItemShowCaseListSmall #SummaryRow,
+#TradeShowCaseListSmall #SummaryRow,
+#FavGameShowCaseListSmall #SummaryRow,
+#GameCollectorShowCaseListSmall #SummaryRow,
+#BadgeCollectorShowCaseListSmall #SummaryRow,
+#MyWorkshopShowCaseListSmall #SummaryRow,
+{
+	flow-children: right;
+}
+
+#AchievementShowcaseSmallBody #SummaryRow .showcase_stat,
+#ItemShowCaseListSmall #SummaryRow .showcase_stat,
+#TradeShowCaseListSmall #SummaryRow .showcase_stat,
+#FavGameShowCaseListSmall #SummaryRow .showcase_stat,
+#GameCollectorShowCaseListSmall #SummaryRow .showcase_stat,
+#BadgeCollectorShowCaseListSmall #SummaryRow .showcase_stat,
+#MyWorkshopShowCaseListSmall #SummaryRow .showcase_stat,
+{
+	color: #AAAAAAFF;
+	font-size: 21px;
+	height: 56px;
+
+	flow-children: down;
+
+	margin-right: 15px;
+}
+
+
+#AchievementShowcaseSmallBody #SummaryRow .showcase_stat .value,
+#ItemShowCaseListSmall #SummaryRow .showcase_stat .value,
+#TradeShowCaseListSmall #SummaryRow .showcase_stat .value,
+#FavGameShowCaseListSmall #SummaryRow .showcase_stat .value,
+#GameCollectorShowCaseListSmall #SummaryRow .showcase_stat .value,
+#BadgeCollectorShowCaseListSmall #SummaryRow .showcase_stat .value,
+#MyWorkshopShowCaseListSmall #SummaryRow .showcase_stat .value,
+{
+	font-size: 24px;
+	color: #ddddddee;
+	white-space: nowrap;
+}
+
+#AchievementShowcaseSmallBody #SummaryRow .showcase_stat .label,
+#ItemShowCaseListSmall #SummaryRow .showcase_stat .label,
+#TradeShowCaseListSmall #SummaryRow .showcase_stat .label,
+#FavGameShowCaseListSmall #SummaryRow .showcase_stat .label,
+#GameCollectorShowCaseListSmall #SummaryRow .showcase_stat .label,
+#BadgeCollectorShowCaseListSmall #SummaryRow .showcase_stat .label,
+#MyWorkshopShowCaseListSmall #SummaryRow .showcase_stat .label,
+{
+	white-space: nowrap;
+}
+
+
+#LowerContentsRow
+{
+	x: -20px;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	margin-right: 10px;
+	height: 100%;
+	width: 100%;
+
+	pre-transform-scale2d: 1.0;
+
+	opacity: 0.999;
+	flow-children: right;
+
+	transition-property: position, pre-transform-scale2d, desaturation, border, wash-color, blur, transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.OldProfile #LowerContentsRow
+{
+	transform: translatey( 70px );
+}
+
+.StackDepth1 #LowerContentsRow
+{
+	perspective: 1000;
+	animation-name: profilecontent-perspective;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#LowerContentsRow:hover
+{
+	pre-transform-scale2d: 1.03;
+}
+
+#LowerContentsRow:descendantfocus
+{
+	transform: translatey( 46px );
+	pre-transform-scale2d: 1.0;
+}
+
+.OldProfile #LowerContentsRow:descendantfocus
+{
+	transform: translatey( -34px );
+}
+
+.LowerContentPanel
+{
+	width: 514px;
+	height: 570px;
+	padding: 10px;
+
+	margin-left: -91px;
+	margin-right: -91px;
+
+	vertical-align: center;
+
+	flow-children: down;
+
+	transition-property: position, pre-transform-scale2d, desaturation, border, wash-color, blur, transform, background-color, opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.LowerContentPanel:focus,
+.LowerContentPanel:descendantfocus
+{
+
+}
+
+.LowerContentBody
+{
+	width: 494px;
+	height: 524px;
+
+	background-color: transparent_module;
+	box-shadow: fill #00000033 -4px -4px 12px 8px;
+	pre-transform-scale2d: 0.6477732, 0.2824427;
+	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.65;	
+
+	transition-property: position, pre-transform-scale2d, desaturation, wash-color, opacity-mask, blur, transform, background-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+#LowerContentsRow:descendantfocus .LowerContentBody:hover
+{
+	pre-transform-scale2d: 0.667206396, 0.290915981;
+}
+
+#LowerContentsRow:descendantfocus .LowerContentBody,
+
+{
+	opacity-mask: url( "file://{images}/lower_row_mask.tga" ) 0.0;	
+}
+
+#LowerContentsRow:descendantfocus .LowerContentBody:descendantfocus:hover
+{
+	pre-transform-scale2d: 1.00;
+}
+
+.LowerContentBody:descendantfocus
+{
+	background-color: action_module;	
+}
+
+.LowerContentPanel:focus .LowerContentBody,
+.LowerContentPanel:descendantfocus .LowerContentBody
+{
+	pre-transform-scale2d: 1.0, 1.0;
+
+	box-shadow: box_shadow_on_color -4px -4px 12px 8px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	opacity: 0.999999;
+}
+
+.LowerContentBodyInner
+{
+	pre-transform-scale2d: 1.54375, 3.540541;
+	transform: translate3d( 140px, 672px, 0px );
+
+	width: 100%;
+	height: 100%;
+
+	flow-children: down;
+
+	transition-property: position, pre-transform-scale2d, desaturation, border, wash-color, blur, transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.LowerContentPanel:focus .LowerContentBodyInner,
+.LowerContentPanel:descendantfocus .LowerContentBodyInner
+{
+	pre-transform-scale2d: 1.0, 1.0;
+	transform: translatex( 0px );
+}
+
+.LowerContentHeader
+{
+	margin-left: 12px;
+	margin-top: 12px;
+	font-size: 32px;
+	color: detailsdatalabel;
+	font-weight: light;
+}
+
+#AboutMe .LowerContentHeader
+{
+	margin-bottom: 12px;
+}
+
+#SteamLevelRow
+{
+	/*margin-top: 10px;*/
+
+	margin-left: 10px;
+	flow-children: right;
+}
+
+#SteamLevelRow Label
+{
+	font-size: 28px;
+	vertical-align: center;
+	margin-right: 8px;
+	color: #FFFFFF99;
+}
+
+#SteamLevelRow Image
+{
+	width: 52px;
+	height: 52px;
+	margin-left: 4px;
+	vertical-align: center;
+}
+
+#SteamLevelRow Label.friendPlayerLevel
+{
+	font-size: 20px;
+	vertical-align: center;
+	margin-top: 4px;
+	padding-top: 16px;
+	margin-right: 4px;
+}
+
+.friendPlayerLevel
+{
+	border-radius: 74px;
+	border-style: solid;
+	border-color: #ffffffff;
+	border-width: 3px;
+}
+
+.friendLevel
+{
+	text-overflow: clip;
+	font-size: 20px;
+	padding: 10px;
+	margin: 0px;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	color: #ffffffee;
+}
+
+.friendPlayerLevel .friendPlayerLevelNum {
+	color: #9b9b9bff;
+}
+
+.friendPlayerLevel.lvl_0 {
+	border-color: #9b9b9bff;
+}
+
+.friendPlayerLevel.lvl_10 {
+	border-color: #c02942ff;
+}
+
+.friendPlayerLevel.lvl_20 {
+	border-color: #d95b43ff;
+}
+
+.friendPlayerLevel.lvl_30 {
+	border-color: #fecc23ff;
+}
+
+.friendPlayerLevel.lvl_40 {
+	border-color: #467a3cff;
+}
+
+.friendPlayerLevel.lvl_50 {
+	border-color: #4e8ddbff;
+}
+
+.friendPlayerLevel.lvl_60 {
+	border-color: #7652c9ff;
+}
+
+.friendPlayerLevel.lvl_70 {
+	border-color: #c252c9ff;
+}
+
+.friendPlayerLevel.lvl_80 {
+	border-color: #542437ff;
+}
+
+.friendPlayerLevel.lvl_90 {
+	border-color: #997c52ff;
+}
+
+.friendPlayerLevel.lvl_100 {
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_hexagons.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
+.friendPlayerLevel.lvl_200 {
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_shields.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
+.friendPlayerLevel.lvl_300
+{
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 18px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_books.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
+.friendPlayerLevel.lvl_400
+{
+    border-style: none;
+    border-radius: 0px;
+
+    width: 68px;
+    height: 58px;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 18px;
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_chevrons.png' );
+    background-repeat: no-repeat;
+    background-position: 10px 0px;
+}
+
+.friendPlayerLevel.lvl_500
+{
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 18px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_circle2.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
+.friendPlayerLevel.lvl_600
+{
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 18px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_angle.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
+
+.friendPlayerLevel.lvl_700
+{
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 18px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_flag_bp.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
+
+
+.friendPlayerLevel.lvl_800
+{
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 18px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_wings_bp.png' );
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
+.friendPlayerLevel.lvl_plus_10 {
+	background-position: 10px -58px;
+}
+.friendPlayerLevel.lvl_plus_20 {
+	background-position: 10px -116px;
+}
+.friendPlayerLevel.lvl_plus_30 {
+	background-position: 10px -174px;
+}
+.friendPlayerLevel.lvl_plus_40 {
+	background-position: 10px -232px;
+}
+.friendPlayerLevel.lvl_plus_50 {
+	background-position: 10px -290px;
+}
+.friendPlayerLevel.lvl_plus_60 {
+	background-position: 10px -348px;
+}
+.friendPlayerLevel.lvl_plus_70 {
+	background-position: 10px -406px;
+}
+.friendPlayerLevel.lvl_plus_80 {
+	background-position: 10px -464px;
+}
+.friendPlayerLevel.lvl_plus_90 {
+	background-position: 10px -522px;
+}
+
+#ViewAllBadges
+{
+	font-size: 28px;
+	width: 100%;
+	vertical-align: center;
+	margin-right: 8px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.HorizontalRulePadded
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+#BadgeButtonAll
+{
+	height: 106px;
+	opacity: 0.0;
+}
+
+.LowerContentPanel:descendantfocus #BadgeButtonAll
+{
+	opacity: 1.0;
+}
+
+#BadgeButtons
+{
+	opacity: 0.0;
+	height: 100%;
+	width: 100%;
+
+	margin-top: 10px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+
+	overflow: squish scroll;
+	opacity-mask-scroll-up: url( "file://{images}/list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
+
+	padding-right: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+
+	flow-children: down;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+#SteamLevel:descendantfocus #BadgeButtons,
+#SteamLevel:focus #BadgeButtons
+{
+	opacity: 1.0;
+}
+
+.ProfileDetailButton
+{
+	width: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	padding-top: 8px;
+	padding-bottom: 8px;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #00000000;
+	color: detailsdatalabelfocus;
+
+	transition-property: opacity,border,background-color,transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.ProfileDetailButton:focus
+{
+	border-color: #fdfefef0;
+	color: #161718f5;
+	
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	animation-name: links-and-more-button-focus;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ProfileDetailButton .ButtonLabel
+{
+	width: 100%;
+	font-size: 28px;
+	vertical-align: center;
+	margin-left: 8px;
+
+/*	color: gradient( linear, 0% 0%, 70% 0%, from( #f2f2f2ff ), color-stop( 0.6, #f2f2f2ff ), to( #00000000 ) );*/
+
+	transform: translatex( -10px );
+
+	transition-property: color, opacity, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+
+.ProfileDetailButton .ButtonLabel
+{
+/*	color: gradient( linear, 0% 0%, 70% 0%, from( #f2f2f2ff ), color-stop( 0.6, #f2f2f2ff ), to( #00000000 ) );*/
+	color: #ffffff99;
+	opacity: 1.0;
+	transform: translatex( -8px );
+}
+
+.OuterCapsule:descendantfocus .ProfileDetailButton .ButtonLabel
+{
+	color: gradient( linear, 0% 0%, 70% 0%, from( #f2f2f2ff ), color-stop( 0.6, #f2f2f2ff ), to( #f2f2f2ff ) );
+	transform: translatex( 0px );
+}
+
+.OuterCapsule:descendantfocus .ProfileDetailButton:focus .ButtonLabel,
+.ProfileDetailButton:focus .ButtonLabel
+{
+	color: gradient( linear, 0% 0%, 70% 0%, from( #161718f5 ), color-stop( 0.6, #161718f5 ), to( #161718f5 ) );
+}
+
+.BadgeButton
+{
+	flow-children: right;
+}
+
+.BadgeButton:focus
+{
+
+}
+
+.BadgeButton .BadgeLabels
+{
+	vertical-align: center;
+	margin-left: 10px;
+	flow-children: down;
+	width: fill-parent-flow( 1.0 );
+}
+
+.BadgeButton .BadgeLabels Label
+{
+	width: 100%;
+	font-size: 28px;
+}
+
+.BadgeLabels #FavBadgeText
+{
+	margin-top: -2px;
+	font-size: 21px;
+	opacity: 0.65;
+}
+
+#AboutMe #RealName
+{
+	font-size: 28px;
+	color: #ffffff99;
+
+	/*margin-top: 12px;*/
+	margin-left: 10px;
+	margin-right: 8px;
+	padding-top: -1px;
+
+	width: 100%;
+
+	/*color: gradient( linear, 0% 0%, 70% 0%, from( #f2f2f2ff ), color-stop( 0.6, #f2f2f2ff ), to( #00000000 ) );
+*/
+	transition-property: color, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#AboutMe:focus #RealName,
+#AboutMe:descendantfocus #RealName
+{
+	color: gradient( linear, 0% 0%, 70% 0%, from( #f2f2f2ff ), color-stop( 0.6, #f2f2f2ff ), to( #f2f2f2ff ) );
+}
+
+#Location
+{
+	font-size: 28px;
+	margin-left: 10px;
+	margin-right: 8px;
+	margin-top: 6px;
+
+	width: 100%;
+
+	color: gradient( linear, 0% 0%, 70% 0%, from( #ffffff99 ), color-stop( 0.6, #ffffff99 ), to( #ffffff00 ) );
+
+	transition-property: color, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#AboutMe:focus #Location,
+#AboutMe:descendantfocus #Location
+{
+
+color: #FFFFFF99;
+
+}
+
+#AboutMe #AboutMeScrollOuter
+{
+	width: 100%;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	flow-children: down;
+	overflow: squish scroll;
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+}
+
+#Summary
+{
+	opacity: 0.0;
+
+	font-size: 24px;
+	margin-left: 10px;
+	padding-right: 12px;
+	margin-top: 16px;
+
+	width: 100%;
+	color: #AAAAAAFF;
+
+	transition-property: color, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#AboutMe:focus #Summary,
+#AboutMe:descendantfocus #Summary
+{
+	opacity: 1.0;
+}
+
+#AboutMeScroll
+{
+	width: 100%;
+	margin-right: 8px;
+	padding-right: 4px;
+	flow-children: down;
+}
+
+#FirstActionButton
+{
+	margin-top: 20px;
+	height: 80px;
+}
+
+.ActionButton
+{
+	height: 60px;
+}
+
+#Friends #FriendsLowerContentSmall,
+#Groups #GroupsLowerContentSmall
+{
+	opacity: 1.0;
+	flow-children: right;
+	margin-left: 8px;
+
+	transition-property: opacity, transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+#SmallFriend1,
+#SmallFriend2,
+#SmallFriend3,
+#SmallGroup1,
+#SmallGroup2,
+#SmallGroup3
+{
+	width: 72px;
+	height: 72px;
+}
+
+#Friends #FriendsButtons,
+#Groups #GroupsButtons
+{
+	flow-children: down;
+	overflow: squish scroll;
+	height: 100%;
+	width: 100%;
+	margin-right: 5px;
+
+	opacity-mask-scroll-up: url( "file://{images}/list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
+
+	margin-top: 12px;
+	margin-bottom: 10px;
+	padding-right: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#FriendsInCommonHeader,
+#GroupsInCommonHeader
+{
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	font-size: 24px;
+	color: #ffffff99;
+}
+
+#Friends .FriendRow,
+#Groups .GroupRow
+{
+	flow-children: right;
+}
+
+#Friends .FriendRow Image,
+#Friends #FriendsLowerContentSmall Image,
+#Groups .GroupRow Image,
+#Groups #GroupsLowerContentSmall Image
+{
+	margin-left: 8px;
+	vertical-align: center;
+
+	border-radius: 0px;
+	border-width: 4px;
+	border-style: solid;
+
+	width: 72px;
+	height: 72px;
+}
+
+#Friends #FriendsLowerContentSmall Image,
+#Groups #GroupsLowerContentSmall Image
+{
+	margin-right: 14px;
+	margin-top: 58px;
+	vertical-align: top;
+}
+
+#Friends .FriendRow Image.online,
+#Friends #FriendsLowerContentSmall Image.online,
+#Groups .GroupRow Image.online,
+#Groups #GroupsLowerContentSmall Image.online,
+{
+	border-color: friendsonline_solid;
+}
+
+#Friends .FriendRow Image.offline,
+#Friends #FriendsLowerContentSmall Image.offline,
+#Groups .GroupRow Image.offline,
+#Groups #GroupsLowerContentSmall Image.offline
+{
+	border-color: friendsoffline_solid;
+}
+
+#Friends .FriendRow Image.ingame,
+#Friends #FriendsLowerContentSmall Image.ingame,
+#Groups .GroupRow Image.ingame,
+#Groups #GroupsLowerContentSmall Image.ingame
+{
+	border-color: friendsingame_solid;
+}
+
+#Friends .FriendLabels,
+#Groups .GroupLabels
+{
+	width: fill-parent-flow( 1.0 );
+	flow-children: down;
+	vertical-align: center;
+	margin-right: 4px;
+	margin-left: 8px;
+}
+
+#Friends .FriendName,
+#Groups .GroupName
+{
+	font-size: 28px;
+	width: 100%;
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#Friends .FriendStatus,
+#Groups .GroupStatus
+{
+	font-size: 21px;
+	width: 100%;
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#Friends .FriendName.online,
+#Friends .FriendStatus.online,
+#Groups .GroupName.online,
+#Groups .GroupStatus.online
+{
+	color: friendsonline_darkbg;
+}
+
+#Friends .FriendName.offline,
+#Friends .FriendStatus.offline,
+#Groups .GroupName.offline,
+#Groups .GroupStatus.offline
+{
+	color: friendsoffline_darkbg;
+}
+
+#Friends .FriendName.ingame,
+#Friends .FriendStatus.ingame,
+#Groups .GroupName.ingame,
+#Groups .GroupStatus.ingame
+{
+	color: friendsingame_darkbg;
+}
+
+#Friends Button:focus .FriendName.online,
+#Friends Button:focus .FriendStatus.online,
+#Groups Button:focus .GroupName.online,
+#Groups Button:focus .GroupStatus.online
+{
+	color: friendsonline_lightbg;
+}
+
+#Friends Button:focus .FriendName.offline,
+#Friends Button:focus .FriendStatus.offline,
+#Groups Button:focus .GroupName.offline,
+#Groups Button:focus .GroupStatus.offline
+{
+	color: friendsoffline_lightbg;
+}
+
+#Friends Button:focus .FriendName.ingame,
+#Friends Button:focus .FriendStatus.ingame,
+#Groups Button:focus .GroupName.ingame,
+#Groups Button:focus .GroupStatus.ingame
+{
+	color: friendsingame_lightbg;
+}
+
+#Friends .friendLevel
+{
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+	margin-right: 8px;
+	color: #ffffff99;
+	font-size: 20px;
+	padding-top: 15px;
+	vertical-align: center;
+}
+
+#Friends Button:focus .friendLevel
+{
+	color: #161718e5;
+}
+
+#LibraryGameButton
+{
+	flow-children: down;
+}
+
+#RecentGamesHeader
+{
+	width: 100%;
+	height: 30px;
+}
+
+#RecentGamesList
+{
+	height: 100px;
+	width: 100%;
+	flow-children: right;
+}
+
+#RecentGamesList Image
+{
+	width: 240px;
+	height: 110.7px;
+	padding: 10px;
+	margin-left: -4px;
+	box-shadow: #00000033 fill 8px 8px 8px -16px;
+}
+
+#RecentGamesHeader Label
+{
+	font-size: 21px;
+}
+
+#RecentGameHours
+{
+	font-size: 18px;
+	margin-left: 245px;
+	margin-right: 10px;
+	horizontal-align: left;
+	color: #f2f2f2ee;
+}
+
+#RecentGameActivity
+{
+	margin-left: 10px;
+	horizontal-align: left;
+	color: #f2f2f2ee;
+}
+
+
+.ProfileDetailButton:focus #RecentGameHours,
+.ProfileDetailButton:focus #RecentGameActivity
+{
+	color: #161718f5;
+}
+
+
+
+#ContentsRow .ContentPanel:descendantfocus #ViewAllGames Label
+{
+	opacity: 1.0;
+	}
+
+
+#Content .ProfileDetailButton
+{
+	font-size: 28px;
+	height: 62px;
+	margin-right: 18px;
+	opacity: 0.6;
+}
+
+#ContentsRow .ContentPanel:descendantfocus .ProfileDetailButton
+{
+	opacity: 1.0;
+}
+
+#ViewAllInventory 
+{
+	margin-bottom: 9px;	
+}
+
+#Content .ProfileDetailButton Label
+{
+	width: 100%;
+	margin-left: 10px;
+}
+
+#Content #ContentButtons
+{
+	width: 100%;
+	height: 100%;
+
+	margin-top: 4px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+		
+	flow-children: down;
+	overflow: squish scroll;
+
+	opacity-mask-scroll-up: url( "file://{images}/list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/list_mask_fade_both.png" );
+
+}
+
+.StackDepth1 ProfilePanel #UpperRow
+{
+	opacity: 0.0;
+}
+
+.StackDepth1 ProfilePanel #ContentsRow .ContentPanel,
+.StackDepth1 ProfilePanel #LowerContentsRow .LowerContentPanel,
+.StackDepth1 ProfilePanel .LowerContentBody 
+{
+	background-color: #00000000;
+}
+
+.StackDepth1 ProfilePanel #FriendsActivity
+{
+	transform: translate3d( 316px, 49px, 150px );
+	desaturation: 0.6;
+	wash-color: none;
+	blur: none;
+	opacity: 0.6;
+}
+
+.StackDepth1 ProfilePanel #ShowCase
+{
+	transform: translate3d( -20px, -18px, 95px );
+	desaturation: 0.6;
+	wash-color: bgcolorwashlight; 
+	blur: none;
+	opacity: 0.6;
+}
+
+.StackDepth1 ProfilePanel #Comments
+{
+	transform: translate3d( -146px, 329px, -150px );
+	desaturation: 0.3;
+	wash-color: bgcolorwashmedium;
+	blur: none;
+	opacity: 0.0;
+}
+
+.StackDepth1 ProfilePanel #Library
+{
+	transform: translate3d( -1138px, 336px, -200px );
+	blur: gaussian( 1.1 );
+	visibility: visible;
+	opacity: 0.4;
+	wash-color: bgcolorwashmedium;
+}
+
+.StackDepth1 ProfilePanel #Content
+{
+	transform: translate3d( -1306px, 99px, -170px );
+	desaturation: 0.5;
+	wash-color: bgcolorwashmedium;
+	blur: none;
+	opacity: 0.8;
+}
+
+.StackDepth1 ProfilePanel #SteamLevel
+{
+	transform: translate3d( 146px, -89px, 80px );
+	desaturation: 0.5;
+	wash-color: bgcolorwashmedium;
+	blur: none;
+	opacity: 0.65;
+}
+
+.StackDepth1 ProfilePanel #AboutMe
+{
+	transform: translate3d( -46px, 29px, -50px );
+	desaturation: 0.8;
+	wash-color: bgcolorwashmedium;
+	blur: none;
+	opacity: 0.3;
+}
+
+.StackDepth1 ProfilePanel #Actions
+{
+	transform: translate3d( -246px, 129px, -90px );
+	desaturation: 0.8;
+	wash-color: bgcolorwashmedium;
+	blur: none;
+	opacity: 0.0;
+}
+
+.StackDepth1 ProfilePanel #Friends
+{
+	transform: translate3d( -446px, 55px, 45px );
+	desaturation: 0.8;
+	wash-color: bgcolorwashmedium;
+	blur: none;
+	opacity: 0.3;
+}
+
+.StackDepth1 ProfilePanel #Groups
+{
+	transform: translate3d( -496px, -100px, -20px );
+	desaturation: 0.8;
+	wash-color: bgcolorwashmedium;
+	blur: none;
+	opacity: 0.3;
+}
+
+#CustomTextBody
+{
+	width: 100%;
+	overflow: squish scroll;
+	padding-right: 14px;
+	margin-left: 10px;
+	margin-bottom: 8px;
+	margin-right: 5px;
+
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+	flow-children: down;
+}
+
+#CustomTextBodyLabel, #FavoriteGuideBodyDesc, #FavoriteWorkshopBodyDesc,
+{
+	font-size: 21px;
+	color: #FFFFFF99;
+	opacity: 0.9;
+	margin-bottom: 10px;
+}
+
+#CustomTextBodyLabel a, #FavoriteGuideBodyDesc a, #FavoriteWorkshopBodyDesc a,
+{
+	color: #f2f2ffff;
+	opacity: 1.0;
+}
+
+#FavoriteGuideBodyDesc, #FavoriteWorkshopBodyDesc
+{
+	margin-top: 8px;
+}
+
+#FavoriteGuideBodyContainer, #FavoriteWorkshopBodyContainer
+{
+	flow-children: down;
+	overflow: squish scroll;
+	margin-left: 10px;
+	padding-right: 14px;
+	margin-bottom: 8px;
+	margin-right: 5px;
+
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+}
+
+#FavoriteGuideScrollButton, #FavoriteWorkshopScrollButton
+{
+	flow-children: down;
+}
+
+#FavoriteGuideImageAndHeader,
+#FavoriteWorkshopImageAndHeader
+{
+	flow-children: right;
+}
+
+#FavoriteGuideHeaderLabels,
+#FavoriteWorkshopHeaderLabels
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-left: 15px;
+	width: fill-parent-flow( 1.0 );
+	flow-children: down;
+}
+
+#FavoriteGuideTitle,
+#FavoriteWorkshopTitle
+{
+	max-height: 50px;
+	font-size: 21px;
+	color: #f2f2ffff;
+}
+
+#FavoriteGuideContributors,
+#FavoriteWorkshopContributors
+{
+	margin-top: 2px;
+	font-size: 18px;
+	color: detailsdatalabel;
+	opacity: 0.85;
+}
+
+#FavoriteGuideContributors a,
+#FavoriteWorkshopContributors a
+{
+	color: #f0f0f0ff;
+}
+
+#FavoriteGuideRating, #FavoriteGuideApp,
+#FavoriteWorkshopRating, #FavoriteWorkshopApp
+{
+	margin-top: 4px;
+	flow-children: right;
+}
+
+#FavoriteGuideRating,
+#FavoriteWorkshopRating
+{
+	margin-top: 8px;
+}
+
+#FavoriteGuideRating Label,
+#FavoriteGuideApp Label,
+#FavoriteWorkshopRating Label,
+#FavoriteWorkshopApp Label,
+{
+	margin-left: 4px;
+	font-size: 18px;
+	color: detailsdatalabel;
+	opacity: 0.6;
+	vertical-align: center;
+}
+
+#FavoriteGuideRating Image,
+#FavoriteGuideApp Image,
+#FavoriteWorkshopRating Image,
+#FavoriteWorkshopApp Image,
+{
+	vertical-align: center;
+}
+
+#FavoriteGuideApp Image,
+#FavoriteWorkshopApp Image,
+{
+	// These have bad rounded corners backed into them, this makes the corners not wrong...
+	border-radius: 0px;
+}
+
+#GuideShowCaseSubHeader
+{
+	border-color: #414141ff;
+	border-width: 2px;
+	border-style: solid;
+	background-color: #222425aa;
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	width: 100%;
+
+	flow-children: right;
+}
+
+#GuideShowCaseSubHeader Image
+{
+	margin: 4px;
+	margin-left: 10px;
+	border-radius: 0px;
+	border-style: solid;
+	border-color: friendsoffline_solid;
+	border-width: 2px;
+}
+#GuideShowCaseSubHeader Label
+{
+	font-size: 18px;
+	color: #f2f2ffff;
+	width: 100%;
+	vertical-align: center;
+	margin-left: 6px;
+}
+
+#GuideShowCaseListSmall, #ItemShowCaseListSmall, #ScreenshotShowCaseListSmall, #FavGameShowCaseListSmall,
+#GameCollectorShowCaseListSmall, #TradeShowCaseListSmall, #BadgeCollectorShowCaseListSmall, #MyWorkshopShowCaseListSmall,
+#AchievementShowCaseListSmall
+{
+	width: 100%;
+	height: 100%;
+
+	margin-top: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	flow-children: down;
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+#GuideShowCaseListLarge, #ItemShowCaseListLarge, #ScreenshotShowCaseListLarge, #FavGameShowCaseListLarge,
+#GameCollectorShowCaseListLarge, #TradeShowCaseListLarge, #BadgeCollectorShowCaseListLarge, #MyWorkshopShowCaseListLarge,
+#AchievementShowCaseListLarge
+{
+	width: 100%;
+	height: 100%;
+
+	margin-right: 5px;
+	padding-right: 5px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+
+
+	flow-children: down;
+
+	opacity: 0.0;
+
+	overflow: squish scroll;
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+#GuideShowcaseWrapper:descendantfocus #GuideShowCaseListSmall,
+#ItemShowcaseWrapper:descendantfocus #ItemShowCaseListSmall,
+#TradeShowcaseWrapper:descendantfocus #TradeShowCaseListSmall,
+#ScreenshotShowcaseWrapper:descendantfocus #ScreenshotShowCaseListSmall,
+#FavGameShowcaseWrapper:descendantfocus #FavGameShowCaseListSmall,
+#GameCollectorShowcaseWrapper:descendantfocus #GameCollectorShowCaseListSmall,
+#BadgeCollectorShowcaseWrapper:descendantfocus #BadgeCollectorShowCaseListSmall,
+#MyWorkshopShowcaseWrapper:descendantfocus #MyWorkshopShowCaseListSmall,
+#AchievementShowcaseWrapper:descendantfocus #AchievementShowcaseSmallBody,
+{
+	opacity: 0.0;
+}
+
+#GuideShowcaseWrapper:descendantfocus #GuideShowCaseListLarge,
+#ItemShowcaseWrapper:descendantfocus #ItemShowCaseListLarge,
+#TradeShowcaseWrapper:descendantfocus #TradeShowCaseListLarge,
+#ScreenshotShowcaseWrapper:descendantfocus #ScreenshotShowCaseListLarge,
+#FavGameShowcaseWrapper:descendantfocus #FavGameShowCaseListLarge,
+#GameCollectorShowcaseWrapper:descendantfocus #GameCollectorShowCaseListLarge,
+#BadgeCollectorShowcaseWrapper:descendantfocus #BadgeCollectorShowCaseListLarge,
+#MyWorkshopShowcaseWrapper:descendantfocus #MyWorkshopShowCaseListLarge,
+#AchievementShowcaseWrapper:descendantfocus #AchievementShowCaseListLarge,
+{
+	opacity: 1.0;
+}
+
+.small_guide_row, .large_guide_row, .large_item_row
+{
+	flow-children: right;
+	width: 100%;
+}
+
+.small_guide
+{
+	width: 50%;
+	flow-children: right;
+	padding: 10px;
+	padding-left: 0px;
+}
+
+.large_guide,
+.large_item,
+.large_title
+{
+	width: 100%;
+	flow-children: right;
+	padding: 10px;
+	margin-right: 12px;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #00000000;
+	color: detailsdatalabelfocus;
+
+	transition-property: opacity,border,background-color,transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.large_guide:focus,
+.large_item:focus,
+.large_title:focus
+{
+	border-color: #fdfefef0;
+	color: #161718f5;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	animation-name: links-and-more-button-focus;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.small_guide_row Image Image,
+.large_guide Image Image
+{
+	max-width: 24px;
+	max-height: 24px;
+	border-radius: 0px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+
+	vertical-align: bottom;
+	horizontal-align: right;
+}
+
+.small_guide Label,
+.large_guide Label,
+.large_item Label,
+.large_title Label
+{
+
+	font-size: 24px;
+	line-height: 28px;
+	color: #ffffff99;
+	width: 100%;
+	max-height: 80px;
+	margin-left: 8px;
+
+	white-space: normal;
+
+	transition-property: color, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.large_guide:focus Label,
+.large_item:focus Label,
+.large_title:focus Label
+{
+	opacity: 1.0;
+	color: #161718f5;
+}
+
+.guide_labels, .item_labels
+{
+	flow-children: down;
+	width: 100%;
+}
+
+#ScreenshotShowCaseListLarge .large_guide
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+}
+
+.ViewAllGuides, .ViewAllItems, .ViewAllGames, .ViewAllTradeItems, #ScreenshotShowCaseListLarge .ViewAllGuides
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 9px;
+}
+
+.ViewAllTradeItems
+{
+	height: fit-children;
+	min-height: 96px;
+
+	flow-children: down;
+}
+
+#tradenotice
+{
+	font-size: 18px;
+	opacity: 0.8;
+}
+
+
+.ViewAllGuides Label, .ViewAllItems Label, .ViewAllGames Label
+{
+	vertical-align: center;
+	margin-left: 0px;
+}
+
+#SmallGuideRow0
+{
+	margin-bottom: 25px;
+}
+
+#ItemShowCaseListSmall, #TradeShowCaseListSmall, #MyWorkshopShowCaseListSmall
+{
+	opacity-mask: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	padding-left: 0px;
+}
+
+.item_showcase_image
+{
+	border: 1px solid #2a2a2a;
+}
+
+.item_showcase_image
+{
+	border: 1px solid #3a3a3a;
+}
+
+.small_item_row
+{
+	margin-top: 10px;
+	flow-children: right;
+	overflow: clip noclip;
+}
+
+.item_showcase_image
+{
+	margin-right: 8px;
+	width: 100px;
+	height: 100px;
+}
+
+.large_item .item_showcase_image
+{
+	width: 80px;
+	height: 80px;
+}
+
+.large_item:focus .item_showcase_app
+{
+	opacity: 0.8;
+}
+
+.large_item .item_showcase_title
+{
+	opacity: 1.0;
+}
+
+.screenshot_showcase_primary
+{
+	flow-children: down;
+}
+
+.screenshot_showcase_stats
+{
+	flow-children: right;
+}
+
+.screenshot_showcase_stat
+{
+	flow-children: right;
+}
+
+.screenshot_showcase_stat Label
+{
+	font-size: 18px;
+	color: detailsdatalabel;
+	opacity: 0.85;
+	margin: 4px;
+	margin-right: 12px;
+}
+
+.screenshot_showcase_stat Image
+{
+	vertical-align: center;
+}
+.screenshot_showcase_stat Image.favorite
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_fav_tiled.png' );
+	background-repeat: no-repeat;
+	background-position: 0px -65px;
+	width: 17px;
+	height: 17px;
+}
+
+.big_screenshot_preview
+{
+	width: 360px;
+	height: 202px;
+}
+
+.screenshot_labels Label
+{
+	max-height: 32px;
+}
+
+.screenshot_showcase_screenshot
+{
+	flow-children: right;
+}
+
+#big_screenshot_preview
+{
+	margin-right: 16px;
+	vertical-align: center;
+}
+
+
+
+#small_screenshot_previews
+{
+	flow-children: down;
+}
+
+#small_screenshot_previews #small_preview1
+{
+	margin-bottom: 14px;
+}
+
+.screenshot_labels
+{
+	flow-children: down;
+	width: 100%;
+}
+
+#ContentsRow .ContentPanel VerticalScrollBar
+{
+	opacity: 0.0;
+	margin-bottom: 9px;
+	margin-top: 0px;
+}
+
+#ContentsRow .ContentPanel:focus VerticalScrollBar,
+#ContentsRow .ContentPanel:descendantfocus VerticalScrollBar
+{
+	opacity: 1.0;
+}
+
+#FavGameSmallRow
+{
+	margin-top: 20px;
+	flow-children: right;
+}
+
+#FavGameSmallRow Label
+{
+	margin-left: 12px;
+	font-size: 21px;
+	color: #CCCCCCFF;
+	margin-right: 12px;
+	max-height: 80px;
+	vertical-align: center;
+}
+
+#FavGameSmallRow Image
+{
+	width: 220px;
+	height: 100px;
+}
+
+.game_collector_small_row
+{
+	margin-top: 10px;
+	flow-children: right;
+	width: 100%;
+	overflow: noclip noclip;
+}
+
+#GameCollectorSmallRow1
+{
+	margin-top: 6px;
+}
+
+.game_collector_small_row Image
+{
+	margin-right: 20px;
+	width: 210px;
+	height: 90px;
+	overflow: noclip noclip;
+}
+
+#GameCollectorShowCaseListSmall, #BadgeCollectorShowCaseListSmall
+{
+	opacity-mask: url( "file://{images}/library/scroll_data_mask_down.tga" );
+}
+
+.badge_collector_small_row
+{
+	flow-children: right;
+	width: 100%;
+	margin-top: 24px;
+	margin-right: 10px;
+	overflow: noclip clip;
+}
+
+.badge_collector_small_row Image
+{
+	width: 75px;
+	height: 75px;
+	margin-right: 16px;
+
+	overflow: noclip noclip;
+}
+
+.large_title .BadgeLabels
+{
+	flow-children: down;
+	width: 100%;
+	height: 100%;
+}
+
+.large_title Label.BadgeName
+{
+	font-size: 24px;
+	opacity: 0.9;
+	margin-bottom: 1px;
+}
+
+#MyWorkshopShowCaseListSmall #GuideShowCaseSubHeader
+{
+	margin-bottom: 10px;
+}
+
+#MyWorkshopShowCaseListSmall #IconRow
+{
+	margin-top: 8px;
+	flow-children: right;
+	width: 100%;
+}
+
+#MyWorkshopShowCaseListSmall #IconRow Image
+{
+	margin-right: 12px;
+	overflow: noclip noclip;
+}
+
+#MyWorkshopShowCaseListSmall #IconRow Image Image
+{
+	vertical-align: bottom;
+	horizontal-align: right;
+}
+
+#MyWorkshopShowCaseListLarge .guide_showcase_image
+{
+	min-height: 80px;
+	min-width: 80px;
+}
+
+#RecommendationHeaderRow
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 100%;
+	flow-children: right;
+}
+
+#RecommendationHeaderLabels
+{
+	flow-children: down;
+	margin-left: 12px;
+	width: 100%;
+}
+
+#RecommendationHeaderLabels Label
+{
+	font-size: 21px;
+	color: #DDDDDDEE;
+}
+
+#RecommendationHeaderLabels #RecommendationHoursPlayed
+{
+	font-size: 18px;
+	color: #CCCCCCFF;
+}
+
+#RecommendationBody
+{
+	margin-left: 10px;
+}
+
+#RecommendationBody Label
+{
+	font-size: 21px;
+	margin-top: 10px;
+	padding-right: 12px;
+	color: detailsdatalabel;
+	opacity: 0.95;
+}
+
+#RecommendationScrollWrapper
+{
+	width: 100%;
+	height: 100%;
+	overflow: squish scroll;
+	
+	margin-top: 4px;
+	margin-bottom: 10px;
+	margin-right: 5px;	
+
+	flow-children: down;
+
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+}
+
+#RecommendationScrollButton
+{
+	width: 100%;
+	flow-children: down;
+}
+
+.AchievementLabels
+{
+	flow-children: down;
+	width: 100%;
+}
+
+Label.AchievementPercent,
+{
+	font-size: 18px;
+	opacity: 0.5;
+}
+
+.large_title:focus Label.AchievementPercent
+{
+	opacity: 0.8;
+}
+
+#Comments.ContentPanel .comment_form
+{
+	visibility: collapse;
+	opacity: 0.0;
+}
+
+#FavGroupButton
+{
+	flow-children: down;
+	width: 100%;
+}
+
+#ViewAllComments
+{
+	margin-bottom: 10px;
+	margin-right: 12px;
+	opacity: 0.0;
+}
+
+#ContentsRow .ContentPanel:descendantfocus #ViewAllComments
+{
+	opacity: 1.0;
+}
+
+#ViewAllComments Label
+{
+	margin-left: 10px;
+	font-size: 24px;
+	width: 100%;
+}
+
+
+//
+// Profile menu
+//
+@define mainmenu_transform_duration: 0.4s;
+
+#ProfileMenu
+{
+	height: 100%;
+}
+
+.StackDepth3 #ProfileWrapper #ProfileMenu
+{
+	opacity: 1.0;
+	transform: translate3d( 0px, -135px, -100px );
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: 0.23s;
+}
+
+#ProfileWrapper .Button
+{
+	transition-property:	transform, border, blur, background-color, color, box-shadow, pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+}
+
+.StackDepth2 #ProfileWrapper .Button:hover
+{
+	background-color: all_games_hover;
+	box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
+	transform: translate3d( 0px, 70px, 35px );
+	transition-duration: 0.23s;
+}
+
+.StackDepth2 #ProfileWrapper .Button:focus
+{
+	transform: translate3d( 0px, 70px, 35px );
+	transition-duration: 0.23s;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
+}
+
+
+
+.StackDepth2 #ProfileWrapper .Button:focus:hover
+{
+	transform: translate3d( 0px, 75px, 60px );
+	transition-duration: 0.23s;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
+}
+
+#ProfileWrapper .Button.Locked
+{
+	wash-color: parental_locked_wash;
+}
+
+.FriendsBlocked FriendsFriendListItemCommunity
+{
+	visibility: collapse;
+}
+
+#ProfileMenu.ProfileLoading .ButtonStub
+{
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.6s;
+}
+
+#ProfileMenu.ProfileLoaded .ButtonStub
+{
+	opacity: 0.0;
+}
+
+.ProfileLoading .CommunityFriendStripItem
+{
+	opacity: 0.0;
+	transition-duration: 1.0s, mainmenu_transform_duration;
+	transition-delay: 0.2s, 0.0s;
+}
+
+#ShowProfileButton,
+#ShowProfileButtonStub
+{
+	position: 462px 215px 0%;
+	horizontal-align: left;
+	vertical-align: top;
+}
+
+.InventoryVisible #ShowProfileButton,
+.InventoryVisible #ShowProfileButtonStub
+{
+	position: 262px 215px 0%;
+}
+
+.StackDepth1 #ShowProfileButton,
+.StackDepth1 #ShowProfileButtonStub
+{
+	transform: translatey( -100px ) translatez( -100px );
+}
+
+.StackDepth1 .InventoryVisible #ShowProfileButton,
+.StackDepth1 .InventoryVisible #ShowProfileButtonStub
+{
+	transform: translatey( -220px ) translatez( -100px );
+}
+
+#FriendActivityButton,
+#FriendActivityButtonStub
+{
+	position: 1020px 215px 0%;
+	horizontal-align: left;
+	vertical-align: top;
+}
+
+.InventoryVisible #FriendActivityButton,
+.InventoryVisible #FriendActivityButtonStub
+{
+	position: 750px 215px 0%;
+}
+
+.StackDepth1 #FriendActivityButton,
+.StackDepth1 #FriendActivityButtonStub
+{
+	transform: translatex( -100px ) translatez( 121px );
+}
+
+.StackDepth1 .InventoryVisible #FriendActivityButton,
+.StackDepth1 .InventoryVisible #FriendActivityButtonStub
+{
+	transform: translatey( 0px ) translatez( 121px );
+}
+
+#InventoryButton,
+#InventoryButtonStub
+{
+	visibility: collapse;
+	position: 1238px 215px 0%;
+	horizontal-align: left;
+	vertical-align: top;
+}
+
+.InventoryVisible #InventoryButton,
+.InventoryVisible #InventoryButtonStub
+{
+	visibility: visible;
+}
+
+.StackDepth1 #InventoryButton,
+.StackDepth1 #InventoryButtonStub
+{
+	transform: translatey( 50px ) translatez( -50px );
+}
+
+
+#ShowProfileButton,
+#FriendActivityButton,
+#InventoryButton
+{
+	z-index: 1000;
+}
+
+.StackDepth1 #ShowProfileButton,
+.StackDepth1 #FriendActivityButton,
+.StackDepth1 #InventoryButton
+{
+	opacity: 0.0;
+}
+
+.StackDepth1 #ShowProfileButton
+{
+	transform: translatex( 39px) translatey( -82px );
+	pre-transform-scale2d: 0.8;
+}
+
+.StackDepth2 #ProfileMenu .ButtonStub,
+.StackDepth3 #ProfileMenu .ButtonStub
+{
+	pre-transform-scale2d: 0.64;
+	opacity: 0.0;
+}
+
+.StackDepth2 #ProfileMenu #ShowProfileButtonStub
+{
+	transform: translatex( -164px ) translatey( 22px );
+}
+
+.StackDepth2 .InventoryVisible #ProfileMenu #ShowProfileButtonStub
+{
+	transform: translatex( -106px ) translatey( 22px );
+}
+
+.StackDepth2 #ProfileMenu #FriendActivityButtonStub
+{
+	transform: translatex( -322px ) translatey( 22px );
+}
+
+.StackDepth2 .InventoryVisible #ProfileMenu #FriendActivityButtonStub
+{
+	transform: translatex( -245px ) translatey( 22px );
+}
+
+.StackDepth2 #ProfileMenu #InventoryButtonStub
+{
+	transform: translatex( -385px ) translatey( 22px );
+}
+
+#CarouselTitleContainer
+{
+	opacity: 0.0;
+}
+
+.StackDepth2 .CommunityFriendsCarousel,
+.StackDepth3 .CommunityFriendsCarousel
+{
+	opacity-mask: none;
+	transform: translatex( 400px ) translatey( 70px );
+	perspective: 900;
+	pre-transform-scale2d: 1.4;
+}
+
+.StackDepth3 .CommunityFriendStripItem
+{
+	opacity: 0.0;
+}
+
+#ProfileMenu.ProfileLoaded .CommunityFriendStripItem
+{
+	transition-duration: mainmenu_transform_duration;
+}
+
+
+#ShowProfileButton Label,
+#FriendActivityButton Label,
+#InventoryButton Label,
+#ShowProfileButtonStub Label,
+#FriendActivityButtonStub Label,
+#InventoryButtonStub Label
+{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: 0px;
+	background-color: none;
+}
+
+
+.StackDepth2 .CommunityFriendStripItem
+{
+	opacity: 0.3;
+}
+
+.StackDepth2 .CommunityFriendStripItemOverCount
+{
+	opacity: 0.0;
+}
+
+.CommunityFriendStripItem0,
+.StackDepth1 .CommunityFriendStripItem8
+{
+	transform: translate3d( 766px, -45px, 50px );
+	blur: none;
+	opacity: 1.0;
+}
+
+.StackDepth2 .CommunityFriendStripItem0,
+.StackDepth2 .CommunityFriendStripItem1,
+.StackDepth2 .CommunityFriendStripItem4,
+.StackDepth2 .CommunityFriendStripItem6
+{
+	blur: gaussian( 1.25 );
+	opacity: 0.3;
+}
+
+.CommunityFriendStripItem6,
+.StackDepth1 .CommunityFriendStripItem13
+{
+	transform: translate3d( 1010px, 142px, 30px );
+	desaturation: 0.0;
+	blur: none;
+	opacity: 1.0;
+
+}
+
+.CommunityFriendStripItem3,
+.StackDepth1 .CommunityFriendStripItem15
+{
+	transform: translate3d( 1258px, 55px, -350px );
+	blur: gaussian( 1.25 );
+	opacity: 0.7;
+	desaturation: 0.0;
+}
+
+.CommunityFriendStripItem10,
+.StackDepth1 .CommunityFriendStripItem3
+{
+	transform: translate3d( 908px, -246px, -350px );
+	blur: gaussian( 1.8 );
+	opacity: 0.7;
+	desaturation: 0.0;
+}
+
+.CommunityFriendStripItem4,
+.StackDepth1 .CommunityFriendStripItem9
+{
+	transform: translate3d( 380px, -25px, 100px );
+	blur: none;
+	opacity: 1.0;
+	desaturation: 0.0;
+}
+
+.CommunityFriendStripItem1,
+.StackDepth1 .CommunityFriendStripItem0
+{
+	transform: translate3d( 506px, 0px, -80px );
+	desaturation: 0.0;
+	blur: gaussian( 0.7 );
+	opacity: 1.0;
+}
+.CommunityFriendStripItem8,
+.StackDepth1 .CommunityFriendStripItem7
+{
+	transform: translate3d( 440px, -185px, -375px );
+	blur: gaussian( 1.3 );
+	opacity: 0.8;
+	desaturation: 0.0;
+}
+
+.CommunityFriendStripItem7,
+.StackDepth1 .CommunityFriendStripItem14
+{
+	transform: translate3d( 626px, -380px, -380px );
+	desaturation: 0.6;
+	blur: gaussian( 1.6 );
+	opacity: 0.4;
+}
+.CommunityFriendStripItem2,
+.StackDepth1 .CommunityFriendStripItem2
+{
+	pre-transform-scale2d: 0.9;
+	background-color: #00000000;
+	blur: gaussian( 8, 8, 2 );
+
+	desaturation: 0.3;
+	border-radius: 2px;
+}
+
+.CommunityFriendStripItem5,
+.StackDepth1 .CommunityFriendStripItem4
+{
+	transform: translate3d(626px, 246px, -600px );
+	blur: gaussian( 2.2 );
+	opacity: 0.3;
+	desaturation: 0.4;
+}
+
+.CommunityFriendStripItem15,
+.StackDepth1 .CommunityFriendStripItem6
+{
+	transform: translate3d( -28px, -20px, -186px );
+	blur: gaussian( 4 );
+	opacity: 0.5;
+	desaturation: 0.7;
+}
+
+.CommunityFriendStripItem9,
+.StackDepth1 .CommunityFriendStripItem5
+{
+	transform: translate3d( 324px, 250px, -200px );
+	desaturation: 0.5;
+	blur: gaussian( 1.5 );
+	opacity: 0.9;
+}
+
+.CommunityFriendStripItem11,
+.StackDepth1 .CommunityFriendStripItem12
+{
+	transform: translate3d( 270px, -200px, -270px );
+	desaturation: 0.7;
+	blur: gaussian( 1.2 );
+	opacity: 0.7;
+}
+
+.CommunityFriendStripItem12,
+.StackDepth1 .CommunityFriendStripItem1
+{
+	transform: translate3d( 122px, 100px, -50px );
+	desaturation: 0.5;
+	blur: gaussian( 3.2 );
+	opacity: 0.8;
+}
+
+.CommunityFriendStripItem13,
+.StackDepth1 .CommunityFriendStripItem11
+{
+	transform: translate3d( 300px, 105px, -120px );
+	blur: gaussian( 1.1 );
+	opacity: 0.8;
+	desaturation: 0.4;
+}
+
+.CommunityFriendStripItem14,
+.StackDepth1 .CommunityFriendStripItem10
+{
+	transform: translate3d( 938px, 25px, -550px );
+	blur: gaussian( 1.8 );
+	opacity: 0.3;
+	desaturation: 0.4;
+}
+
+.CommunityFriendStripItemOverCount
+{
+	transform: translate3d( 908px, 68px, 20px );
+	desaturation: 0.1;
+	blur: none;
+	opacity: 0.0;
+}
+
+
+
+
+#LowerContentsRow
+{
+	transform: translatex( 65px ) translatey( 370px );
+}
+
+#LowerContentsRow:descendantfocus
+{
+	transform: translatex( 100px ) translatey(  270px );
+}
+
+#LowerContentsRow:hover
+{
+	pre-transform-scale2d: 1.02;
+}
+
+#LowerContentsRow:descendantfocus:hover
+{
+	pre-transform-scale2d: 1.0;
+}
+
+/* Generic styles for workshop capsules */
+.OuterCapsule
+{
+	width: 534px;
+	height: 520px;
+
+	margin: -10px -100px -10px -100px;
+	padding: 10px 6px 10px 6px;
+}
+
+.WrapperButton
+{
+	width: 100%;
+	height: 100%;
+
+	margin: -4px;
+	padding: 4px;
+}
+
+.InnerCapsuleFixed
+{
+	width: 320px;
+	height: 150px;
+
+	transform: translate3d( 103px, 180px, 0px );
+	z-index: 10;
+
+	transition-property: transform, opacity, pre-transform-scale2d;
+	transition-duration: 0.25s;
+	transition-timing-function: linear;
+}
+
+.OuterCapsule:descendantfocus .InnerCapsuleFixed
+{
+	transform: translatex( 0px );
+}
+
+.InnerCapsuleLarge
+{
+	width: 100%;
+	height: 100%;
+
+	flow-children: down;
+	
+	padding-top: 170px;
+
+	background-color: transparent_module;
+	
+	pre-transform-scale2d: 0.6086, 0.2862;
+
+	transition-property: transform, opacity, pre-transform-scale2d;
+	transition-duration: 0.25s;
+	transition-timing-function: linear;
+}
+
+.OuterCapsule:descendantfocus .InnerCapsuleLarge
+{
+	background-color: action_module;
+	pre-transform-scale2d: 1.0, 1.0;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.25s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.InnerCapsuleLarge > Label,
+.InnerCapsuleLarge > Image,
+.InnerCapsuleLarge > Button,
+.InnerCapsuleLarge > Panel
+{
+	opacity: 0.0;
+
+	transition-property: transform, opacity, pre-transform-scale2d;
+	transition-duration: 0.35s;
+	transition-timing-function: linear;
+}
+
+.OuterCapsule:descendantfocus .InnerCapsuleLarge > Label,
+.OuterCapsule:descendantfocus .InnerCapsuleLarge > Image,
+.OuterCapsule:descendantfocus .InnerCapsuleLarge > Button,
+.OuterCapsule:descendantfocus .InnerCapsuleLarge > Panel
+{
+	opacity: 1.0;
+}
+
+.OuterCapsule:descendantfocus .InnerCapsuleFixed
+{
+	background-color: transparent;
+}
+
+.InvisibleLarge
+{
+}
+
+.OuterCapsule:descendantfocus .InvisibleLarge
+{
+	opacity: 0.0;
+}
+
+
+/* Capsule-specific individualizations */
+#SteamLevel .InnerCapsuleFixed
+{
+	flow-children: down;
+}
+
+#SteamLevel .InnerCapsuleLarge
+{
+	padding-top: 115px;
+}
+
+#SteamLevel.OuterCapsule
+{
+	transform: translatex( 75px );
+}
+
+#SteamLevel .InnerCapsuleLarge
+{
+	transform: translatex( -75px );
+}
+
+#SteamLevel .InnerCapsuleFixed
+{
+	transform: translate3d( 30px, 178px, 0px );
+}
+
+#SteamLevel:descendantfocus .InnerCapsuleLarge,
+#SteamLevel:descendantfocus .InnerCapsuleFixed
+{
+	transform: translatex( 0px );
+}
+
+
+#AboutMe .InnerCapsuleFixed
+{
+	flow-children: down;
+}
+
+#AboutMe .InnerCapsuleLarge
+{
+	padding-top: 60px;
+}
+
+
+#Actions .InnerCapsuleFixed
+{
+	flow-children: down;
+}
+
+#Actions .InnerCapsuleFixed .ProfileDetailButton
+{
+	transition-property: transform;
+	margin-top: -2px;
+	transition-duration: 0.25s;
+}
+
+#Actions:descendantfocus .InnerCapsuleFixed .ProfileDetailButton
+{
+	transform: translate3d( 8px, 43px, 0px );
+}
+
+#Actions .InnerCapsuleLarge
+{
+	padding-top: 0px;
+	flow-children: down;
+}
+
+#Actions .InnerCapsuleLarge .ProfileDetailButton
+{
+	transform: translatey( 200px );
+	transition-duration: 0.25s;
+}
+
+#Actions:descendantfocus .InnerCapsuleLarge .ProfileDetailButton
+{
+	transform: translatey( 70px );
+}
+
+#Actions:descendantfocus #FirstActionButton
+{
+	transition-property: transform;
+	transition-duration: 0.25s;
+}
+
+
+#Friends .InnerCapsuleLarge
+{
+	padding-top: 70px;
+}
+
+
+#Groups.OuterCapsule
+{
+	transform: translatex( -85px );
+}
+
+#Groups.OuterCapsule:descendantfocus
+{
+	transform: translatex( -65px );
+}
+
+#Groups .InnerCapsuleLarge
+{
+	transform: translatex( 85px );
+	padding-top: 70px;
+}
+
+#Groups .InnerCapsuleFixed
+{
+	transform: translate3d( 188px, 180px, 0px );
+}
+
+#Groups:descendantfocus .InnerCapsuleLarge,
+#Groups:descendantfocus .InnerCapsuleFixed
+{
+	transform: translatex( 0px );
+}
+
+.StackDepth3 #ProfileMenu .Button,
+.StackDepth3 #ProfileMenu .Button:focus
+{
+	transform: translatey( -40px );
+}
+
+
+.LeftMouseScrollRegion,
+.RightMouseScrollRegion
+{
+	opacity: 0.0;
+	width: 80px;
+	height: 100%;
+	z-index: 200;
+
+	transition-property: opacity, background-color;
+	transition-duration: mediumduration;
+	transition-delay: 0.2s;
+	transition-timing-function: ease-in-out;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80px 80px;
+}
+
+Carousel:descendantfocus .LeftMouseScrollRegion,
+Grid:descendantfocus .LeftMouseScrollRegion
+{
+	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
+	
+	background-color: mouse_off_bg_left;
+	opacity: 0.0;
+}
+
+Carousel:descendantfocus .RightMouseScrollRegion,
+Grid:descendantfocus .RightMouseScrollRegion
+{
+	align: right center;
+	
+	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+
+	background-color: mouse_active_bg_right;
+	opacity: 0.0;
+}
+
+
+Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
+Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
+{
+	transition-delay: 0.0s;
+	opacity: 1.0;
+	background-color: mouse_hover_bg_left;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
+{
+	transition-delay: 0.0s;
+	opacity: 1.0;
+	background-color: mouse_hover_bg_right;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover,
+Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover
+{
+	transition-delay: 0.0s;
+	background-color: mouse_active_bg_left;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover
+{
+	transition-delay: 0.0s;
+	background-color: mouse_active_bg_right;
+}
+
+Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
+Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_left;
+}
+
+Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
+Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
+{
+	background-color: mouse_active_bg_right;
+
+}
+
+.LeftMouseScrollRegion
+{
+	background-color: mouse_active_bg_left;
+}
+
+.RightMouseScrollRegion
+{
+	background-color: mouse_active_bg_right;
+	horizontal-align: right;
+}
+
+#ContentsRow .LeftMouseScrollRegion
+{
+	position: 40px -10px 0px;
+}
+
+#ContentsRow .RightMouseScrollRegion
+{
+	position: -640px -10px 0px;
+}
+
+#LowerContentsRow .LeftMouseScrollRegion,
+#LowerContentsRow .RightMouseScrollRegion
+{
+	visibility: collapse;
+}
+
+#PreviewImagePopup Button
+{
+	width: 100%;
+	height: 100%;
+}
+
+#PreviewImagePopup #PreviewImage
+{
+	min-width: 75%;
+	min-height: 75%;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#FullscreenImagePopup {
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+
+	transition-property: pre-transform-scale2d, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#CommunityAppHubPopup,
+#CommunityAppHubPopup.Destructing:descendantfocus,
+#CommunityAppHubPopupInner
+{
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+
+	transition-property: pre-transform-scale2d, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#FullscreenImagePopup Button {
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#FullscreenImagePopup #BackgroundImage {
+	width: 100%;
+	height: 100%;
+
+	desaturation: 0.5;
+	blur: gaussian( 2, 2, 2 );
+	wash-color: bgcolorwashmedium;
+
+}
+
+
+/* Styles for the new NX-style profile panel */
+#ProfileContentWrapper
+{
+	height: 100%;
+	width: 100%;
+	flow-children: down;
+}
+
+.UpperRow
+{
+	width: 100%;
+	height: 152px;
+	margin-top: 23px;
+	margin-left: 70px;
+	margin-right: 70px;
+	flow-children: right;
+}
+
+.UpperRowBlock
+{
+	flow-children: right;
+	margin-right: 5px;
+	background-color: #09334daa;
+	height: 100%;
+
+	padding: 5px;
+}
+
+.UpperRow .ProfileAvatar
+{
+	height: 100%;
+	vertical-align: center;
+
+	border-radius: 0px;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.UpperRow .ProfileAvatar.online
+{
+	border-color: friendsonline_solid;
+}
+
+.UpperRow .ProfileAvatar.offline
+{
+	border-color: friendsoffline_solid;
+}
+
+.UpperRow .ProfileAvatar.in-game, .UpperRow .ProfileAvatar.in-game 
+{
+	border-color: friendsingame_solid;
+}
+
+.FlowDown
+{
+	flow-children: down;
+}
+
+.FlowRight
+{
+	flow-children: right;
+}
+
+.SteamLevel .Header
+{
+	font-size: 22px;
+	color: white;
+	vertical-align: center;
+}
+
+.SteamLevel .friendLevel
+{
+	pre-transform-scale2d: 0.8;
+}
+
+#AvatarBlock
+{
+	width: 400px;
+	padding: 0px;
+}
+
+#AvatarBlock .RightColumn
+{
+	margin-left: 10px;
+	padding: 5px;
+}
+	
+
+#AvatarBlock .PersonaName,
+#AvatarBlock .NickName
+{
+	color: applabelsolid;
+	font-size: 28px;
+}
+
+#AvatarBlock .InGame Label
+{
+	font-size: 20px;
+	color: friendsingame_solid;
+}
+
+#AboutMeBlock
+{
+	flow-children: down;
+	width: 50%;
+	padding-left: 12px;
+}
+
+#AboutMeBlock Label
+{
+	font-size: 24px;
+	color: applabelsolid;
+}
+
+#AboutMeBlock .Divider
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#AboutMeBlock .Summary
+{
+	margin-top: 5px;
+	color: foregroundgray;
+}
+
+#BadgeBlock
+{
+	padding: 20px;
+}
+
+#BadgeBlock .BadgeStack
+{
+	width: fill-parent-flow( 1.0 );
+	vertical-align: center;
+	margin-left: 20px;
+}
+
+#BadgeBlock Image
+{
+	height: 80px;
+	width: 80px;
+	background-color: black;
+	vertical-align: center;
+}
+
+#BadgeBlock .BadgeName
+{
+	font-size: 30px;
+	color: applabelsolid;
+}
+
+#BadgeBlock .BadgeXP
+{
+	font-size: 24px;
+	color: foregroundgray;
+}
+
+
+#Bottom
+{
+	width: 100%;
+	height: 900px;
+	flow-children: right;
+	margin-top: 50px;
+	padding-left: 50px;
+	overflow: clip;
+}
+
+#LeftColumn
+{
+	width: 22%;
+	height: 100%;
+	flow-children: down;
+	margin-right: 30px;
+
+	transform: translateX( -35px );
+	opacity: 0.5;
+	transition-delay: 0.08s;
+	transition-duration: 0.3s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
+	pre-transform-scale2d: 1;
+
+	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
+}
+
+#LeftColumn:descendantfocus {
+	transform: translateX( 0px );
+	opacity: 1;
+	pre-transform-scale2d: 1;
+	opacity-mask: none;
+}
+
+
+
+#LeftColumn .Header
+{
+	font-size: 18px;	
+	color: #2F89BDff;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	text-transform: uppercase;
+}
+
+#ShowcaseGrid, #RightColumn
+{
+	width: fill-parent-flow( 1.0 );
+	height: 870px;
+	margin-bottom: 10px;
+
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 50px;
+	padding-bottom: 5px;
+
+
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+	transition-delay: 0s;
+	transition-duration: 0.3s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform;
+}
+
+#ShowcaseGrid:descendantfocus, #RightColumn:descendantfocus
+{
+	transform: translatex( -200px );
+}
+
+#ShowcaseGrid .ContentPanel, #RightColumn .ContentPanel
+{
+	background-color: transparent_module;
+	width: 448px;
+	height: 276px;
+	pre-transform-scale2d: 0.97;
+	padding: 15px;
+
+	flow-children: down;
+
+
+	transition-property: transform, blur, position, opacity, desaturation, border, background-color, pre-transform-scale2d, box-shadow;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+}
+
+#ShowcaseGrid .ContentPanel:focus, #RightColumn .ContentPanel:focus
+{
+
+	background-color: action_module;
+	
+	pre-transform-scale2d: 1.0;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ContentPanelTitle
+{
+	font-size: 28px;
+	color: #36b3d9ff;
+}
+
+.ContentPanelSubTitle
+{
+	font-size: 24px;
+	color: #36b3d9ff;
+}
+
+#RecentGames
+{
+	flow-children: down;
+}
+
+.GameThumbs
+{
+	margin-top: 10px;
+	width: 100%;
+	height: 100%;
+	horizontal-align: center;
+}
+
+.GameThumbs Image
+{
+	width: 50%;
+	height: 50%;
+	padding: 4px;
+}
+
+#Friends Grid
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Friends Grid Image
+{
+	margin: 2px;
+}
+
+#Groups #GroupsBottom
+{
+	width: 100%;
+	height: 100%;
+}
+
+#Groups #PrimaryGroup
+{
+	width: 50%;
+	height: 100%;
+	margin-right: 2px;
+}
+
+#Groups Grid
+{
+	width: 50%;
+	height: 100%;
+}
+
+#Groups Grid Image
+{
+	margin: 2px;
+}
+
+.ItemsGrid
+{
+	width: 100%;
+	height: 100%;
+}
+
+.ItemsGrid Image
+{
+	width: 72px;
+	height: 72px;
+	margin: 2px;
+}
+
+.ShowcaseStatsRow
+{
+	flow-children: right;
+	width: 100%;
+	height: 75px;
+}
+
+.ShowcaseStat
+{
+	flow-children: down;
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+}
+
+.ShowcaseStat .value
+{
+	font-size: 24px;
+	color: applabelsolid;
+}
+
+.ShowcaseStat .label
+{
+	font-size: 18px;
+	color: tcstatictext;
+	height: 100%;
+}
+
+.TradeShowcase .tradenotice
+{
+	font-size: 18px;
+	color: foregroundgray;
+}
+
+.ShowcaseAchievements
+{
+	margin-top: 4px;
+	flow-children: right;
+}
+
+.ShowcaseAchievements Image
+{
+	margin: 2px;
+}
+
+.FavoriteGameShowcase .GameImageAndTitle
+{
+	flow-children: right;
+	width: 100%;
+	height: fill-parent-flow( 1.0 );
+}
+
+.FavoriteGameShowcase .FlowRight Label
+{
+	font-size: 28px;
+	color: applabelsolid;
+	margin-left: 5px;
+	vertical-align: center;
+	height: 100%;
+}
+
+.FavoriteGameShowcase .ShowcaseStatsRow
+{
+	margin-top: 10px;
+}
+
+.FavoriteGameShowcase .value
+{
+	font-size: 32px;
+}
+
+.FavoriteGameShowcase .label
+{
+	font-size: 24px;
+}
+
+.BadgeIcons
+{
+	flow-children: right;
+}
+
+.BadgeIcons Image
+{
+	margin: 2px;
+}
+
+.ItemsGrid .WorkshopShowcaseItemAppImage
+{
+	width: 25%;
+	height: 25%;
+	horizontal-align: right;
+	vertical-align: bottom;
+}
+
+.MyWorkshopShowcase .ItemsGrid
+{
+	height: fill-parent-flow( 1.0 );
+}
+
+.MyWorkshopShowcase .WorkshopShowcaseItemImage
+{
+	width: 100px;
+	height: 100px;
+}
+
+.CustomTextShowcase #CustomTextBody
+{
+	overflow: squish clip;
+}
+
+.CustomTextPopup
+{
+	height: 100%;
+	width: 100%;
+}
+
+.CustomTextPopup .Wrapper
+{
+	width: 75%;
+	height: 65%;
+	align: center center;
+	background-image: url( "file://{images}/profile/activity_bg_wash.png" );
+	background-size: 100% 100%;
+	flow-children: down;
+	padding: 10px;
+}
+
+.CustomTextPopup .CustomTitle
+{
+	font-size: 32px;
+	color: #36b3d9ff;
+	horizontal-align: center;
+	margin-bottom: 20px;
+}
+
+.CustomTextPopup .TextWrapperButton
+{
+	height: fill-parent-flow( 1.0 );
+	overflow: squish scroll;
+	horizontal-align: center;
+	padding: 10px 20px;
+}
+
+.CustomTextPopup .TextWrapperButton:focus
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.CustomTextPopup .CustomText
+{
+	font-size: 32px;
+	color: #FFFFFF99;
+}
+
+.CustomTextPopup #CommunityAppHubPopupButton
+{
+	height: fit-children;
+	width: fit-children;
+	padding-left: 50px;
+	padding-right: 50px;
+	horizontal-align: center;
+	vertical-align: bottom;
+}
+
+.CustomTextPopup .Button Label
+{
+	color: applabel;
+}
+
+.CustomTextPopup .Button:focus Label
+{
+	color: tcmainbuttonselected;
+}
+
+
+#WatchGameButton
+{
+	flow-children: right;
+	height: fit-children;
+}
+
+#WatchGameButton Image
+{
+	height: 75px;
+	width: fit-children;
+}
+
+#WatchGameButton .RightColumn
+{
+	width: fill-parent-flow( 1.0 );
+	height: 100%;
+	flow-children: down;
+	margin-left: 10px;
+}
+
+#WatchGameButton .InGame
+{
+	font-size: 20px;
+	color: friendsingame_solid;
+}
+
+#WatchGameButton .Playtime
+{
+	font-size: 18px;
+	color: foregroundgray;
+}
+
+
+.ContentPanel #ScreenshowShowCaseListSmall
+{
+	height: fill-parent-flow( 1.0 );
+}
+
+.ContentPanel #big_screenshot_preview
+{
+	width: 288px;
+}
+
+.ContentPanel .small_screenshot_preview,
+.ContentPanel #small_screenshot_previews #small_preview1
+{
+	height: 60px;
+	margin-bottom: 0px;
+}
+
+#ShowcaseGrid .LeftMouseScrollRegion,
+#ShowcaseGrid .RightMouseScrollRegion
+{
+	opacity: 0.0;
+}
+#ScreenshotsContainer {
+	margin-top: -40px;
+	padding-top: 40px;
+	padding-left: 110px;
+	padding-right: 110px;
+	width: 100%;
+	height: 100%;
+
+	flow-children: down;
+}
+
+
+
+.FlowRightWrapper {
+	flow-children: right;
+	width: 100%;
+	height: 100%;
+}
+
+.ContentWrapper {
+	width: 100%;
+	height: 100%;
+	overflow: clip;
+}
+
+.ImageContainer {
+	margin: 5px;
+
+}
+
+.ImageContainer Image {
+	width: 640px;
+	height: 360px;
+}
+
+
+.ImageContainer
+{
+
+	padding: 5px;
+
+	pre-transform-scale2d: .8;
+
+
+
+	wash-color: #00000012;
+	desaturation: 0.2;
+
+
+	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+	margin: -25px;
+
+	opacity: 0;
+
+
+}
+
+.ImageContainer.Loaded
+{
+	opacity: 1;
+}
+
+
+.ImageContainer.Ready
+{
+	opacity: 0.85;
+}
+
+.ImageContainer.LosingFocus
+{
+	z-index: 1;
+}
+
+.ImageContainer:hover
+{
+	pre-transform-scale2d: .85;
+	transform: translatey( -2px ) translatex(-2px);
+	z-index: 1;
+}
+
+.ImageContainer:focus,
+.ImageContainer:hover:focus
+{
+	pre-transform-scale2d: 1;
+
+	z-index: 2;
+	opacity: 1.0;
+	wash-color: #00000000;
+	desaturation: 0.0;
+
+	transform: translatey( -2px ) translatex(-2px);
+}
+
+.ImageContainer Image
+{
+	background-color: #222222ff;
+	vertical-align: center;
+
+	box-shadow: #00000022 -4px -4px 8px 8px;
+
+	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+}
+
+.ImageContainer:focus Image,
+.ImageContainer:hover:focus Image
+{
+	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.ImageContainer.Deleted {
+	pre-transform-scale2d: 0;
+	opacity: 0;
+}
+
+.InfoText {
+	font-size: 28px;
+	color: detailsdatalabel;
+	margin-top: 100px;
+	width: 100%;
+	text-align: center;
+
+}
+
+.InfoButton {
+	width: 100%;
+	height: 100%;
+}
+
+
+#GridItemsNone {
+	visibility: collapse;
+}
+
+#GridItemsNone.visible {
+	visibility: visible;
+}
+
+.AchievementsContainer, .StatsContainer, .GamesContainer, .ContentGrid {
+
+	padding: 40px;
+	margin-top: -40px;
+	transition-delay: 0.0s;
+
+	flow-children: down;
+	width: 100%;
+	height: 950px;
+	transform: translatex(0px);
+
+
+	transition-property: opacity, transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+}
+
+.AchievementsContainer, .StatsContainer, .GamesContainer {
+	overflow: noclip scroll;
+
+}
+
+.GameRow {
+	flow-children: right;
+	height: 89px;
+	width: 100%;
+}
+
+
+.AchievementsContainer.Invisible {
+	opacity: 0;
+	transform: translatex(1000px);
+}
+
+.StatsContainer {
+	overflow: noclip scroll;
+	padding-right: 20px;
+}
+
+.StatsRow {
+	width: 98%;
+	flow-children: right;
+	padding: 5px;
+	margin: 5px;
+
+	background-color: #09334d99;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #00000000;
+	color: detailsdatalabelfocus;
+
+	transition-property: opacity,border,background-color,transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.StatsRow:focus {
+	border-color: #fdfefef0;
+	color: #161718f5;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	animation-name: links-and-more-button-focus;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.StatsRow .ImageCol {
+
+}
+
+.StatsRow .TextCol {
+	flow-children: down;
+
+}
+
+.StatsRow Label {
+	font-size: 24px;
+	color: #ffffff99;
+	margin-left: 8px;
+
+	white-space: normal;
+
+	transition-property: color, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.StatsRow .Playtime {
+	font-size: 20px;
+}
+
+.StatsRow:focus Label {
+	color: #161715f5;
+}
+
+.StatsRow .Title {
+
+}
+
+.StatsRow .LogoImage {
+	width:184px;
+	height:69px;
+	overflow: noclip noclip;
+}
+
+.StatsRow .TitleWrapper {
+	flow-children: right;
+}
+
+.StatsRow .AchievementUnlockTime {
+	text-align: right;
+	width: fit-children;
+	font-size: 18px;
+}
+
+
+.StatsRow .Desc {
+	font-size: 18px;
+}
+
+/* Leaderboard rows */
+.StatsRow.Leaderboard {
+	height: 84px;
+
+}
+
+.StatsRow.Leaderboard > Label {
+	vertical-align: center;
+}
+
+.StatsRow .Avatar {
+	width: 64px;
+	height: 64px;
+}
+
+.StatsRow .RelativeRank {
+	font-size: 36px;
+	width: 140px;
+	text-align: center;
+}
+
+.StatsRow .PlayerName {
+	font-size: 24px;
+	width: 400px;
+}
+
+.StatsRow .Score {
+	font-size: 24px;
+	width: 240px;
+}
+
+.StatsRow .GlobalRank {
+	font-size: 36px;
+	text-align: right;
+	width: 300px;
+}
+
+
+.LeaderboardHeader .LocalRank {
+	width: 160px;
+	text-align: center;
+}
+
+.LeaderboardHeader .PlayerName {
+	width: 480px;
+}
+
+.LeaderboardHeader .Score {
+	width: 370px;
+}
+
+.LeaderboardHeader .GlobalRank {
+	width: 180px;
+	text-align: right;
+}
+
+.LeaderboardHeader {
+	flow-children: right;
+}
+
+.LeaderboardHeader > Label {
+	font-size: 24px;
+	color: #fff;
+}
+
+
+
+.AchievementsContainer .Spacer {
+	height: 50px;
+	width: 100%;
+}
+
+.AchievementsContainer.Hidden {
+	visibility: collapse;
+}
+
+
+.LayoutContainer {
+	flow-children: right;
+	margin-top: 20px;
+	height: 100%;
+}
+
+.NavigationContainer {
+	width: 350px;
+	flow-children: down;
+	overflow: squish scroll;
+	height: 700px;
+}
+
+.NavigationContainer .Button {
+	width: 98%;
+	transform: translatex( -20px );
+	margin-left: 30px;
+	transition-property: border,background-color,color,box-shadow,transform;
+}
+
+
+.NavigationContainer .Button Label {
+	font-size: 24px;
+	line-height: 28px;
+	color: #ffffff99;
+	margin-left: 8px;
+
+	white-space: normal;
+
+	transition-property: color, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+
+}
+
+
+.NavigationContainer .Button:focus Label {
+	color: #161715f5;
+}
+
+.NavigationContainer .Button.Active {
+	transform: translatex( 0 );
+}
+
+.ThrobberFullContainer {
+	width: 100%;
+	height: 100%;
+	vertical-align: center;
+	visibility: collapse;
+}
+
+.ThrobberFullContainer.Visible {
+	visibility: visible;
+}
+
+.ContentGrid {
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+	opacity: 0;
+}
+
+.ContentGrid.Visible {
+	opacity: 1;
+}
+
+#LeaderboardsHeader.Hidden {
+	visibility: collapse;
+}

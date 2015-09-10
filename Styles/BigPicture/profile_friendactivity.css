@@ -1,0 +1,1139 @@
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+@define simplebuttonsolid_vertical: gradient( linear, 0% 0%, 0% 100%, from( #2f5c82 ), to( #24486d ) );
+@define right_content_bg: gradient( linear, 0% 100%, 100% 100%, from( #66c0f400 ), to( #07324700 ) );
+
+#FriendActivity
+{
+	background-image: url( "file://{images}/profile/activity_bg_wash.png" );
+	background-size: 100% 100%;
+	box-shadow: #000000aa -2px -2px 4px 4px;
+
+	padding-left: 100px;
+	padding-right: 0px;
+	flow-children: down;
+	padding-bottom: 20px;
+	height: 944px;
+}
+
+.blotter_userstatus_content
+{
+	flow-children: down;
+}
+
+#blotter_userstatuscontent_label
+{
+	visibility: collapse;
+}
+
+.dynamiclink_box
+{
+	flow-children: right;
+	background-color: #323235cc;
+	padding: 6px;
+	margin: 12px 6px;
+	margin-left: 0px;
+	height: 120px;
+	box-shadow: fill #00000033 -2px -2px 8px 4px;
+
+
+	transition-property: background-color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+	width: 100%;
+	overflow: clip noclip;
+}
+
+.dynamiclink_box Label
+{
+	width: 570px;
+	max-height: 28px;
+}
+
+.dynamiclink_box Label.dynamiclink_description
+{
+	max-height: 45px;
+}
+
+.dynamiclink_box Label.dynamiclink_storeitem_description {
+	max-height: 74px;
+}
+
+Button:focus .dynamiclink_box
+{
+	background-color: #323235ee;
+}
+
+Button:focus .dynamiclink_box Label
+{
+	color: applabelsolid;
+}
+
+
+.dynamiclink_box Image
+{
+	max-height: 115px;
+	margin-right: 12px;
+	vertical-align: center;
+	box-shadow: fill #00000033 -2px -2px 8px 4px;
+}
+
+.dynamiclink_content
+{
+	flow-children: down;
+	opacity-mask-scroll-down: url( "file://{images}/profile/sharp_scroll_data_mask_down.tga" );
+}
+
+
+.StackDepth2 #FriendActivity,
+.StackDepth3 #FriendActivity
+{
+	margin-top: 10px;
+}
+
+#FriendActivity.OldProfile
+{
+	padding-bottom: 326px;
+}
+
+
+.PageTitle
+{
+	text-transform: uppercase;
+	color: carousel_title;
+	font-size: 56px;
+	font-family: platformfont;
+	font-weight: light;
+	height: 70px;
+	margin-top: 37px;
+	margin-bottom: -23px;
+}
+
+.OldProfile .PageTitle
+{
+	visibility: collapse;
+}
+
+
+#ActivityHeaderLabel
+{
+	color: #5491cfff;
+	font-size: 36px;
+	text-transform: uppercase;
+}
+
+#FriendActivity #ContentRow
+{
+	height: 100%;
+	width: 100%;
+	overflow: clip;
+	flow-children: right;
+	transform: translatey( 40px );
+	box-shadow: none;
+}
+
+#FriendActivity.OldProfile #ContentRow
+{
+	transform: none;
+}
+
+#LeftActivityColumn
+{
+	width: 47%;
+	height: 720px;
+	overflow: squish scroll;
+
+	flow-children: down;
+	padding-right: 6px;
+
+	opacity-mask-scroll-up: url( "file://{images}/profile/sharp_scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/profile/sharp_scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/profile/sharp_scroll_data_mask_both.tga" );
+}
+
+#RightDetailsColumn
+{
+	margin-left: 10px;
+	margin-right: 0px;
+	width: 1360px;
+	height: 800px;
+	overflow: squish scroll;
+
+	//flow-children: down;
+
+	background-color: right_content_bg;
+	box-shadow: fill #00000000 0px 0px 20px 0px;
+
+	color: applabelsolid;
+
+	transform: translateX( 0px );
+
+	transition-property: transform, background-color, box-shadow;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+#RightDetailsColumn:descendantfocus {
+	transform: translateX( -400px );
+	/* background-color: gradient( linear, 0% 100%, 100% 100%, from( #073247ff ), color-stop( 0.5, #073247ff ), to( #07324700 ) ); */
+	background-color: gradient( linear, 0% 100%, 100% 100%, from( #073247ff ), to( #07324700 ) );
+	box-shadow: fill #000000bb 0px 0px 20px 0px;
+}
+
+#RightDetailsColumn VerticalScrollBar
+{
+	margin-right: 10px;
+}
+
+.blotter_block
+{
+	width: 100%;
+
+	margin-left: 10px;
+	margin-right: 10px;
+
+	padding-top: 14px;
+	padding-bottom: 14px;
+
+	padding-left: 4px;
+	padding-right: 8px;
+
+	color: #FFFFFF99;
+
+	transition-property: opacity,border,background-color,transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.blotter_block.current_selection
+{
+	background-color: gradient( linear, 0.0% 0.0%, 0.0% 100.0%, color-stop( 0.0, #4B7696AA ), color-stop( 1.0, #365B7866 ) );
+}
+
+.blotter_block:hover
+{
+	transform: translateX( 7px );
+}
+
+.blotter_block:focus
+{
+	color: #161718f5;
+
+	background-color: button_focus_color;
+}
+
+.blotter_block:focus:hover
+{
+	transform: translateX( 0px );
+}
+
+Panel.playerAvatar
+{
+	vertical-align: center;
+
+	border-radius: 0px;
+	border-width: 3px;
+	border-style: solid;
+}
+
+Panel.playerAvatar.online
+{
+	border-color: friendsonline_solid;
+}
+
+Panel.playerAvatar.offline
+{
+	border-color: friendsoffline_solid;
+}
+
+Panel.playerAvatar.ingame, .playerAvatar.in-game
+{
+	border-color: friendsingame_solid;
+}
+.blotter_day
+{
+	flow-children: down;
+	width: 100%;
+}
+
+.blotter_author_block
+{
+	flow-children: right;
+	width: 100%;
+	vertical-align: center;
+/*	padding-bottom: 8px;*/
+}
+
+.blotter_action_labels
+{
+	margin-top: 2px;
+	flow-children: down;
+}
+
+.blotter_action_labels Label
+{
+	margin-bottom: 4px;
+}
+
+.blotter_author_block Label
+{
+	font-size: 23px;
+	color: applabelsolid;
+	margin-left: 10px;
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.blotter_block:focus .blotter_author_block Label,
+.blotter_button_wrapper:focus .blotter_author_block Label
+{
+	color: #161718f5;
+}
+
+.blotter_author_block Label,
+.blotter_author_block Panel
+{
+	vertical-align: top;
+}
+
+.blotter_day_header
+{
+	width: 100%;
+	flow-children: down;
+	/*margin-bottom: 14px;*/
+	margin-top: 10px;
+}
+
+.blotter_day_header Label
+{
+	width: 97%;
+	margin-left: 10px;
+	margin-top: -10px;
+	padding-left: 14px;
+	padding-right: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 23px;
+	color: applabelsolid;
+	background-color: gradient( linear, -10% 0%, 100% 0%, from( #24384700 ), color-stop( 0.15, #243847d0 ), color-stop( 0.45, #243847d0 ), to( #24384700 ) );
+	vertical-align: top;
+	horizontal-align: left;
+}
+
+.blotter_day_header_divider
+{
+	height: 4px;
+	width: 99%;
+	background-color: rule_color;
+}
+
+.blotter_block_divider
+{
+	height: 6px;
+	width: 97%;
+	/*background-color: #529CDEee;*/
+	margin-top: 4px;
+}
+
+.blotter_author_block Label.personaname
+{
+	font-size: 27px;
+	font-weight: bold;
+	width: 100%;
+
+	color: friendsoffline_darkbg;
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+Button:focus .blotter_author_block Label.personaname
+{
+	color: friendsoffline_lightbg;
+}
+
+.blotter_author_block Label.personaname.online
+{
+	color: friendsonline_darkbg;
+}
+
+Button:focus .blotter_author_block Label.personaname.online
+{
+	color: friendsonline_lightbg;
+}
+
+.blotter_author_block Label.personaname.ingame,
+.blotter_author_block Label.personaname.in-game
+{
+	color: friendsingame_darkbg;
+}
+
+Button:focus .blotter_author_block Label.personaname.ingame,
+Button:focus .blotter_author_block Label.personaname.in-game
+{
+	color: friendsingame_lightbg;
+}
+
+.blotter_author_block Label .nickname_block,
+.blotter_author_block Label .nickname_name
+{
+	font-weight: thin;
+}
+
+Button#blotter_post_status
+{
+	margin-top: 6px;
+	height: 100px;
+}
+
+.blotter_poststatus
+{
+	flow-children: right;
+}
+.blotter_poststatus #poststatus_hint {
+	horizontal-align: right;
+	color: #61696d;
+}
+
+.blotter_poststatus TextEntry
+{
+	font-size: 27px;
+	margin-left: 8px;
+	width: fill-parent-flow( 1.0 );
+	height: 124px;
+	opacity: 0.85;
+	border: 5px solid #1b4059ff;
+	
+	transition-property: opacity, border;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+	
+}
+
+.blotter_poststatus TextEntry:hover,
+.blotter_poststatus TextEntry:descendantfocus
+{
+	opacity: 1.0;
+}
+
+.blotter_poststatus TextEntry:descendantfocus
+{
+	border-color: #fdfefef0;
+	}
+
+
+.blotter_poststatus Label
+{
+	margin-left: 10px;
+	margin-top: 14px;
+	font-size: 27px;
+	color: applabelsolid;
+	opacity: 1.0;
+
+	transition-property: opacity, color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.blotter_poststatus TextEntry Label
+{
+	margin-top: 0px;
+	margin-left: 0px;
+
+}
+
+.blotter_poststatus TextEntry:focus Label
+{
+	color: applabelselectedsolid;
+}
+
+.blotter_poststatus TextEntry.HasInput Label
+{
+	opacity: 0.0;
+}
+
+.post_status_row
+{
+	margin-top: 8px;
+	margin-right: 32px;
+	flow-children: right;
+	horizontal-align: right;
+}
+
+#post_status_button
+{
+	font-weight: light;
+	font-size: 23px;
+	text-transform: uppercase;
+	color: tclegendlabel;
+	white-space: nowrap;
+	padding: 8px;
+	margin-left: 8px;
+	background-color: simplebuttonsolid_vertical;
+	color: #f2f2f2ff;
+	border: 5px solid;
+	border-color: none;
+	opacity: 0.7;
+
+	transition-property: background-color, border, opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+
+#post_status_button:focus
+{
+	background-color: #00000020;
+	opacity: 1.0;
+	color: #161718f5;
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+
+	animation-name: msgbox-button-focus;
+	animation-duration: 1.7s;
+	animation-delay: 0.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+#poststatus_entry_error
+{
+	width: 100%;
+	max-height: 72px;
+	font-size: 27px;
+	margin-left: 80px;
+	color: #FF2222FF;
+}
+
+#RightDetailsColumn .blotter_poststatus
+{
+	margin-right: 32px;
+	margin-top: 23px;
+	margin-left: 9px;
+}
+
+#LeftActivityColumn .blotter_poststatus Label
+{
+	color: applabelsolid;
+}
+
+Button:descendantfocus .blotter_poststatus Label,
+#LeftActivityColumn Button:descendantfocus .blotter_poststatus Label
+{
+	color: applabelselectedsolid;
+}
+
+.blotter_userstatus
+{
+	flow-children: down;
+	width: 100%;
+}
+
+#LeftActivityColumn .blotter_userstatus
+{
+	max-height: 230px;
+	opacity-mask-scroll-down: url( "file://{images}/profile/sharp_scroll_data_mask_down.tga" );
+}
+
+.user_status_labels
+{
+	flow-children: down;
+	width: fill-parent-flow( 1.0 );
+}
+
+
+.user_status_labels Label.personaname .detail_text
+{
+	font-size: 23px;
+	color: applabelsolid;
+}
+
+Button:focus .user_status_labels Label.personaname .detail_text
+{
+	font-size: 23px;
+	color: #161718f5;
+}
+
+
+.blotter_userstatus_content
+{
+	margin-left: 80px;
+
+	font-size: 23px;
+	overflow: clip noclip;
+}
+
+.blotter_daily_rollup
+{
+	width: 100%;
+	flow-children: down;
+	margin-left: 16px;
+}
+
+.blotter_daily_rollup_line,
+.blotter_daily_rollup_line_groups
+{
+	flow-children: right;
+	overflow: clip clip;
+	width: 100%;
+	opacity-mask: url( "file://{images}/library/scroll_data_mask_right.tga" );
+}
+
+#RightDetailsColumn .blotter_daily_rollup_line,
+#RightDetailsColumn .blotter_daily_rollup_line_groups
+{
+	overflow: squish squish;
+	opacity-mask: none;
+}
+
+.blotter_gamepurchase
+{
+	flow-children: down;
+	width: 100%;
+}
+
+.blotter_gamepurchase_content
+{
+	flow-children: right;
+	margin-left: 80px;
+}
+
+.blotter_gamepurchase_content Label
+{
+	font-size: 23px;
+	max-height: 74px;
+	margin-left: 10px;
+
+	vertical-align: center;
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.blotter_gamepurchase_content Image
+{
+	width: 208px;
+	margin-right: 10px;
+	box-shadow: fill #00000033 -2px -2px 8px 4px;
+}
+
+.blotter_gamepurchase_details
+{
+	flow-children: right;
+	margin-left: 74px;
+}
+
+
+.blotter_gamepurchase_details Label
+{
+	margin-top: 3px;
+	padding-left: 4px;
+	font-size: 23px;
+	height: 28px;
+	text-overflow: clip;
+	width: 216px;
+	margin-right: 4px;
+}
+
+.blotter_gamepurchase_content Label.plus_block
+{
+	font-size: 27px;
+	margin-left: 0px;
+}
+
+.blotter_daily_rollup Image
+{
+	max-width: 48px;
+	max-height: 48px;
+}
+
+
+#RightDetailsColumn .blotter_daily_rollup Image
+{
+	max-width: 64px;
+	max-height: 64px;
+}
+
+.blotter_daily_rollup_line
+{
+	margin-bottom: 8px;
+}
+
+#RightDetailsColumn .blotter_daily_rollup_line
+{
+	margin-bottom: 12px;
+}
+
+.blotter_daily_rollup_line Label,
+.blotter_daily_rollup_line_groups Label
+{
+	font-size: 23px;
+	max-height: 30px;
+	margin-left: 10px;
+	margin-right: 6px;
+
+	vertical-align: center;
+
+	transition-property: color;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#RightDetailsColumn .blotter_daily_rollup_line Label,
+#RightDetailsColumn .blotter_daily_rollup_line_groups Label
+{
+	max-height: 90px;
+
+}
+
+.blotter_daily_rollup_line Image,
+.blotter_daily_rollup_line_groups Image
+{
+	margin-right: 4px;
+}
+
+.blotter_daily_rollup_line .blotter_rollup_avatar Image,
+.blotter_daily_rollup_line_groups .blotter_rollup_avatar Image
+{
+	margin-right: 0px;
+}
+
+.blotter_daily_rollup_line_groups Panel
+{
+	flow-children: right;
+}
+
+.blotter_daily_rollup_line_groups Label
+{
+	margin-right: 0px;
+}
+
+
+.blotter_group_announcement_header
+{
+	flow-children: right;
+	margin-bottom: 10px;
+}
+
+.blotter_group_announcement_header .avatarMedium
+{
+	border-radius: 0px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #666666FF;
+
+	margin-left: 4px;
+	margin-right: 10px;
+}
+
+.blotter_group_announcement_header_text {
+	flow-children: down;
+}
+.blotter_block:focus .blotter_group_announcement_header_text {
+	color: #2f89bc;
+}
+
+.blotter_group_announcement_content
+{
+	flow-children: down;
+	width: 100%;
+	margin-left: 79px;
+	margin-top: 4px;
+	font-size: 23px;
+
+	max-height: 155px;
+}
+.blotter_group_announcement_content_contents {
+	height: 100px;
+}
+
+.blotter_group_announcement_headline
+{
+	height: 40px;
+	font-size: 30px;
+	margin-bottom: 10px;
+	color:tcstatictext;
+}
+
+Button:focus .blotter_group_announcement_content .blotter_group_announcement_headline
+{
+	color: #161718;
+}
+
+
+.blotter_group_announcement_header_text Label
+{
+	font-size: 27px;
+	margin-bottom: 4px;
+}
+
+Label.blotter_group_announcement_header_contents
+{
+	font-size: 23px;
+	opacity: 0.8;
+}
+
+.blotter_workshopitempublished
+{
+	flow-children: down;
+	width: 100%;
+}
+
+.blotter_workshopcollection
+{
+	margin-left: 74px;
+	flow-children: right;
+}
+
+.blotter_workshopitem_collection_preview,
+.blotter_workshopitem_preview
+{
+	vertical-align: center;
+	margin-top: 8px;
+}
+
+.blotter_workshopitem_collection_preview Image,
+.blotter_workshopitem_preview Image
+{
+	max-width: 142px;
+	max-height: 92px;
+	box-shadow: #00000033 -2px -2px 8px 4px;
+}
+
+.blotter_workshopitem_metadata
+{
+	flow-children: down;
+}
+
+.blotter_workshopitem_title
+{
+	margin-top: 8px;
+	opacity: 0.95;
+	margin-left: 6px;
+	font-size: 23px;
+	margin-bottom: 4px;
+}
+
+.blotter_workshopitem_description
+{
+	opacity: 0.8;
+	margin-left: 6px;
+	font-size: 23px;
+	max-height: 160px;
+}
+
+.blotter_workshopitem
+{
+	flow-children: right;
+	margin-left: 80px;
+}
+
+.blotter_recommendation
+{
+	flow-children: down;
+}
+
+.apphub_CardContentMain
+{
+	opacity: 0.8;
+	font-size: 23px;
+	margin-left: 80px;
+	max-height: 140px;
+}
+
+#RightDetailsColumn .apphub_CardContentMain
+{
+	max-height: 6000px;
+}
+
+.blotter_userstats_game
+{
+	margin-left: 6px;
+}
+
+.blotter_group_announcement_header_ogg
+{
+	flow-children: right;
+}
+
+.blotter_group_announcement_header_ogg Image
+{
+	margin-right: 10px;
+	border-radius: 0px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #00000001;
+}
+
+.gameLogo Image
+{
+	margin-bottom: 14px;
+}
+
+.blotter_webguide_icon
+{
+	visibility: collapse;
+}
+
+.blotter_control_container
+{
+	margin-left: 16px;
+	flow-children: right;
+}
+
+.blotter_control_container Label
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 23px;
+	opacity: 0.6;
+	color: applabelsolid;
+}
+
+.blotter_control_container Label a
+{
+	color: #ffffffee;
+}
+
+#RightDetailsColumn .commentthread_comment
+{
+	margin-left: 0px;
+}
+
+.blotter_daily_rollup_line Label.blotter_morerollup
+{
+	width: 100%;
+	margin-left: 64px;
+	margin-top: 16px;
+	margin-right: 21px;
+	max-height: 80px;
+}
+
+.blotter_viewallcomments_container Label
+{
+	font-size: 23px;
+	opacity: 0.6;
+}
+
+.blotter_comment_thread
+{
+	flow-children: down;
+}
+
+.blotter_comment_thread .commentthread_comment_text
+{
+	max-height: 600px;
+	color: #FFFFFF99;
+}
+
+.blotter_comment_thread .commentthread_comments
+{
+	height: fit-children;
+}
+
+#RightDetailsColumn .blotter_group_announcement_content
+{
+	max-height: 800px;
+	width: 100%;
+}
+
+#RightDetailsColumn .blotter_userstatus_content
+{
+	max-height: 800px;
+}
+
+#LeftActivityColumn Button Label a,
+#RightDetailsColumn Label a
+{
+	color: #ffffffee;
+}
+
+#LeftActivityColumn Button:focus Label a,
+#RightDetailsColumn Button:focus Label a
+{
+	color: #000000ff;
+}
+
+
+.blotter_button_wrapper,
+.btn_small_thin
+{
+	width: 100%;
+	flow-children: down;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	margin-left: 10px;
+	margin-right: 42px;
+
+	padding-top: 8px;
+	padding-bottom: 8px;
+
+	padding-left: 4px;
+	padding-right: 4px;
+
+	border-width: 5px;
+	border-style: solid;
+	border-color: #00000000;
+	color: #FFFFFF99;
+
+	transition-property: opacity,border,background-color,transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+}
+
+.blotter_button_wrapper:hover,
+.btn_small_thin:hover
+{
+	transform: translateX( 7px );
+}
+
+.blotter_button_wrapper:focus,
+.btn_small_thin:focus
+{
+	border-color: #fdfefef0;
+	color: #161718f5;
+
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.btn_small_thin
+{
+	width: 100%;
+}
+
+.blotter_userstatus_appimage
+{
+	margin-left: 6px;
+	margin-right: 4px;
+	box-shadow: fill #00000033 -2px -2px 8px 4px;
+}
+
+
+Button .blotter_control_container
+{
+	opacity: 0.0;
+
+	transition-property: opacity,border,background-color,transform,position;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+Button:descendantfocus .blotter_control_container
+{
+	opacity: 1.0;
+}
+
+.blotter_rollup_wrapper
+{
+	margin-top: 10px;
+	flow-children: down;
+	width: 100%;
+}
+
+.blotter_rollup_wrapper .blotter_button_wrapper
+{
+	margin-top: 4px;
+}
+
+#RightDetailsColumn .blotter_rollup_wrapper .blotter_button_wrapper .blotter_daily_rollup_line,
+#RightDetailsColumn .blotter_rollup_wrapper .blotter_button_wrapper .blotter_daily_rollup_line_groups
+{
+	margin-bottom: 0px;
+}
+
+
+.blotter_workshopitem_preview_square {
+	width: 64px;
+	height: 64px;
+}
+
+.blotter_artwork_large {
+	margin: 8px;
+	margin-left: 18px;
+	max-width: 710px;
+	height: 400px;
+
+	box-shadow: fill #00000044 -4px -4px 8px 4px;
+
+	background-color: #000000ff;
+	color: applabelsolid;
+
+	transition-property: opacity,border,background-color,transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.ScreenshotEntry:focus .blotter_artwork_large
+{
+	color: #161718f5;
+
+	background-color: #000000ff;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#ThrobberContainer {
+	width: 100%;
+}
+
+LoadingThrobber.HorizontallyCenteredThrobber {
+	margin: 10px auto 10px auto;
+}
+
+.FriendActivityDayContainer {
+	height: fit-children;
+	width: 100%;
+}
+
+.RightColumnContentContainer {
+	transition-property: transform, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+
+	opacity: 0;
+	width: 100%;
+	height: fit-children;
+}
+
+.RightColumnContentContainer.Appearing {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.RightColumnContentContainer.Deleting {
+	opacity: 0;
+	transform: translateY(-200px);
+}
