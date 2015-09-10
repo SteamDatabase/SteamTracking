@@ -356,7 +356,7 @@ function DisplayFullscreenImage( parentpanelid, url )
 			'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=P09xFr-np6UC" />' +
 '</styles>' +
 '<scripts>' +
-'<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/base.js?v=b2958157&amp;l=english" />' +
+'<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/base.js?v=k8VvpZPSHllS&amp;l=english" />' +
 '<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/profile.js?v=b2958157&amp;l=english" />' +
 '</scripts>' +
 '<Panel defaultfocus="ImageButton" class="FullscreenImagePopup" oncancel="CloseFullscreenImage( \'FullscreenImagePopup\' );" >' +
