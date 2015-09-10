@@ -51886,6 +51886,7 @@
 			"tags"
 			{
 				"can_heal_allies"		"1"
+				"can_extinguish"		"1"
 			}
 			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_LunchBox"
@@ -108896,16 +108897,16 @@
 						"model_player"		"models/workshop/player/items/spy/cc_summer2015_lurkers_leathers/cc_summer2015_lurkers_leathers.mdl"
 						"name"		"#TF_cc_summer2015_lurkers_leathers_style0"
 						"image_inventory"		"backpack/workshop/player/items/spy/cc_summer2015_lurkers_leathers/cc_summer2015_lurkers_leathers"
-						"skin_red"	"0"
-						"skin_blu"	"1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 					}
 					"1"
 					{
 						"model_player"		"models/workshop/player/items/spy/cc_summer2015_lurkers_leathers_2/cc_summer2015_lurkers_leathers_2.mdl"
 						"name"		"#TF_cc_summer2015_lurkers_leathers_style1"
 						"image_inventory"		"backpack/workshop/player/items/spy/cc_summer2015_lurkers_leathers_2/cc_summer2015_lurkers_leathers_2"
-						"skin_red"	"0"
-						"skin_blu"	"1"
+						"skin_red"		"0"
+						"skin_blu"		"1"
 					}
 				}
 			}
@@ -126331,12 +126332,106 @@
 			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
 			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
 		}
-
-
-
-
-
-
+		"8859"
+		{		
+			"name"				"DeutschLAN 1st Place 2015"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_DeutschLAN_First_Place"
+			"item_description"	"#TF_TournamentMedal_2015"
+			"image_inventory"	"backpack/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/deutschlan_1st_place/deutschlan_1st_place_engineer.mdl"
+			}
+		}
+		"8860"
+		{		
+			"name"				"DeutschLAN 2nd Place 2015"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_DeutschLAN_Second_Place"
+			"item_description"	"#TF_TournamentMedal_2015"
+			"image_inventory"	"backpack/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/deutschlan_2nd_place/deutschlan_2nd_place_engineer.mdl"
+			}
+		}
+ 		"8861"
+		{		
+			"name"				"DeutschLAN 3rd Place 2015"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_DeutschLAN_Third_Place"
+			"item_description"	"#TF_TournamentMedal_2015"
+			"image_inventory"	"backpack/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/deutschlan_3rd_place/deutschlan_3rd_place_engineer.mdl"
+			}
+		}
+  		"8862"
+		{		
+			"name"				"DeutschLAN Participant 2015"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_DeutschLAN_Participant"
+			"item_description"	"#TF_TournamentMedal_2015"
+			"image_inventory"	"backpack/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/deutschlan_participant/deutschlan_participant_engineer.mdl"
+			}
+		}
+  		"8863"
+		{		
+			"name"				"DeutschLAN Supporter 2015"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_DeutschLAN_Supporter"
+			"item_description"	"#TF_TournamentMedal_2015"
+			"image_inventory"	"backpack/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_engineer.mdl"
+			}
+		}
 
 
 
