@@ -13,7 +13,7 @@ function GetElemSNR( $Elem )
 	for ( var i = 0; i < links.length; ++i )
 	{
 		var link = links[i];
-		var navinfo = link.href.match( /[\?&]snr=([a-zA-Z0-9\-\_ ]+)/ );
+		var navinfo = link.href.match( /[\?&]snr=([a-zA-Z0-9\- ]+)/ );
 		if ( navinfo )
 		{
 			snr = navinfo[1];
