@@ -2343,26 +2343,6 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
     margin-bottom:12px
 }
 
-.responsive_status_info {
-	padding: 8px;
-	background: rgba( 0, 0, 0, 0.5 );
-	margin: 12px 0;
-}
-
-.responsive_status_info .profile_in_game {
-	margin: 0;
-}
-.responsive_status_info .profile_in_game_name,
-.responsive_status_info .profile_ban_status,
-.responsive_status_info .profile_in_game_broadcastpreview,
-.responsive_status_info .profile_in_game_joingame {
-	margin-top: 8px;
-	margin-bottom: 0;
-}
-.responsive_status_info .profile_ban_status {
-	margin-top: 12px;
-}
-
 @media screen and (max-width: 910px)
 {
 	html.responsive div.profile_page {
@@ -2401,9 +2381,6 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
 	html.responsive .profile_leftcol, html.responsive .profile_rightcol {
 		float: none;
 		width: auto;
-	}
-
-	html.responsive .profile_leftcol {
 		padding: 0 1%;
 	}
 
@@ -2465,6 +2442,156 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#5AA9D
 		padding-top: 128px;
 	}
 	*/
+
+	html.responsive .responsive_status_info {
+		padding: 8px;
+		background: rgba( 0, 0, 0, 0.5 );
+		margin: 12px 0;
+	}
+
+	html.responsive .responsive_status_info .profile_in_game {
+		margin: 0;
+	}
+	html.responsive .responsive_status_info .profile_in_game_name,
+	html.responsive .responsive_status_info .profile_ban_status,
+	html.responsive .responsive_status_info .profile_in_game_broadcastpreview,
+	html.responsive .responsive_status_info .profile_in_game_joingame {
+		margin-top: 8px;
+		margin-bottom: 0;
+	}
+	html.responsive .responsive_status_info .profile_ban_status {
+		margin-top: 12px;
+	}
+
+	html.responsive .responsive_count_link_area {
+		margin: 0 -4px;
+	}
+
+	html.responsive .profile_count_link_preview {
+		overflow: hidden;
+		line-height: 44px;
+		height: 44px;
+	}
+
+	html.responsive .profile_count_link_preview > div {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	html.responsive .profile_count_link,
+	html.responsive .profile_count_link_preview_ctn {
+		background: rgba( 0, 0, 0, 0.5 );
+		display: block;
+		float: left;
+		padding: 8px;
+		margin: 0 4px 4px 4px;
+		height: 29px;
+	}
+
+	html.responsive .profile_count_link_total {
+		font-size: 20px;
+	}
+
+	html.responsive .profile_count_link_preview_ctn {
+		height: 78px;
+		overflow: hidden;
+	}
+
+	html.responsive .profile_count_link_preview_ctn .profile_count_link {
+		background: transparent;
+		margin: 0;
+	}
+
+	html.responsive .profile_badges_badge {
+		margin-right: 6px;
+	}
+
+	html.responsive .profile_badges_badge,
+	html.responsive .profile_badges_badge img {
+		width: 36px;
+		height: 36px;
+	}
+
+	html.responsive .profile_badges {
+		margin-bottom: 0;
+	}
+
+	html.responsive .profile_item_links {
+		margin-bottom: 12px;
+	}
+
+	html.responsive .profile_group > *:not(.profile_group_avatar),
+	html.responsive .profile_topfriends .friendBlock > div:not(.playerAvatar) {
+		display: none;
+	}
+
+	html.responsive .profile_count_link_preview_ctn .profile_count_link {
+		width: auto;
+		float: none;
+		padding: 0;
+		margin-bottom: 8px;
+	}
+
+	html.responsive .profile_group.profile_primary_group,
+	html.responsive .profile_group,
+	html.responsive .profile_topfriends .friendBlock {
+		padding: 0;
+		margin: 0;
+		height: auto;
+		width: auto;
+		margin-right: 6px;
+	}
+
+	html.responsive .profile_topfriends .friendBlock .playerAvatar {
+		margin: 0;
+		float: none;
+	}
+
+	html.responsive .profile_primary_group .profile_group_avatar,
+	html.responsive .profile_primary_group .profile_group_avatar img {
+		width: 32px;
+		height: 32px;
+	}
+	
+	html.responsive .profile_group_avatar {
+		position: static;
+	}
+}
+
+@media screen and (min-width: 661px) and (max-width: 910px) {
+	html.responsive .profile_count_link,
+	html.responsive .profile_count_link_preview_ctn {
+		width: calc( 25% - 16px - 8px );
+	}
+
+	html.responsive .profile_count_link:nth-child(4n) {
+		/* margin-right: 0; */
+	}
+}
+
+@media screen and (min-width: 521px) and ( max-width: 660px ) {
+
+	html.responsive .profile_count_link,
+	html.responsive .profile_count_link_preview_ctn  {
+		width: calc( 33% - 16px - 8px );
+	}
+
+	html.responsive .profile_count_link:nth-child(3n) {
+		/* margin-right: 0; */
+	}
+}
+
+@media screen and (max-width: 520px) {
+
+	html.responsive .profile_count_link,
+	html.responsive .profile_count_link_preview_ctn  {
+		width: calc( 50% - 16px - 8px );
+	}
+
+	html.responsive .profile_count_link:nth-child(2n) {
+		/* margin-right: 0; */
+	}
 }
 
 @media screen and (max-width: 910px)
