@@ -173,9 +173,19 @@ CChatFriend.prototype.UnregisterPersonaElements = function( elFriend )
 	}
 }
 
-CChatFriend.prototype.RenderChatDialog = function()
+CChatFriend.prototype.RenderChatDialog = function( WebChat )
 {
 	var elHeader = $J('<div/>', {'class': 'chatdialog_header', 'data-miniprofile': this.m_unAccountID } );
+
+	var elReturnToFriendslist = $J('<div/>', {'class': 'chatdialog_header_back btn_grey_grey_outer_bevel btn_medium' } ).append( $J('<span/>').text( '◀' ) );
+	elReturnToFriendslist.click( function() {
+		$J('#chat_container' ).removeClass('chat_active' ).addClass('friendslist_active');
+		document.body.scrollTop = WebChat.m_nFriendsListScrollTop;
+
+		if ( window.history.pushState )
+			window.history.back();
+	});
+	elHeader.append( elReturnToFriendslist );
 
 	// create an avatar element
 	var elChatDialogAvatar = $J('<div/>').append( '<a href="https://steamcommunity.com/profiles/' + this.m_ulSteamID + '" target="_blank"><img src="' + this.GetAvatarURL( 'medium' ) + '"></a>' );
@@ -636,8 +646,15 @@ CWebChatDialog.prototype.AppendChatMessage = function( Sender, timestamp, strMes
 {
 	// if we're no more than 10 pixels from the bottom, we will keep the scrollbar clamped to the bottom
 	var elScrollContainer = this.m_elContent[0].parentNode;
-	var bScrolledToBottom = ( elScrollContainer.scrollHeight - elScrollContainer.clientHeight - 10 < elScrollContainer.scrollTop );
+	var nClientHeight = elScrollContainer.clientHeight;
+	if ( this.m_elContent.css('position') == 'static' )
+	{
+		elScrollContainer = document.body;
+		nClientHeight = $J(window ).height();
+	}
 
+
+	var bScrolledToBottom = ( elScrollContainer.scrollHeight - nClientHeight - 10 < elScrollContainer.scrollTop );
 
 	if ( !this.m_dateLastMessage ||
 		( timestamp.getYear() != this.m_dateLastMessage.getYear() ||
@@ -656,9 +673,24 @@ CWebChatDialog.prototype.AppendChatMessage = function( Sender, timestamp, strMes
 
 	this.m_elContent.append( elChatMessage );
 
-	if ( bScrolledToBottom )
-		elScrollContainer.scrollTop = elScrollContainer.scrollHeight - elScrollContainer.clientHeight;
-}
+	if ( bScrolledToBottom || eMessageType == CWebChat.CHATMESSAGE_TYPE_SELF || eMessageType == CWebChat.CHATMESSAGE_TYPE_LOCALECHO )
+	{
+		this.ScrollToBottom();
+	}
+};
+
+CWebChatDialog.prototype.ScrollToBottom = function()
+{
+	var elScrollContainer = this.m_elContent[0].parentNode;
+	var nClientHeight = elScrollContainer.clientHeight;
+	if ( this.m_elContent.css('position') == 'static' )
+	{
+		elScrollContainer = document.body;
+		nClientHeight = $J(window ).height();
+	}
+
+	elScrollContainer.scrollTop = elScrollContainer.scrollHeight - nClientHeight;
+};
 
 CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMessage, eMessageType )
 {
@@ -754,6 +786,7 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 	this.m_cConsecutivePollFailures = 0;
 	this.m_nUserIdleTime = 0;
 	this.m_bWindowHasFocus = true;
+	this.m_nFriendsListScrollTop = 0;
 
 	this.m_rgPlayerCache = {};
 
@@ -848,6 +881,25 @@ function CWebChat( WebAPI, rgCurrentUser, rgFriendData, rgFriendGroupData )
 				_this.SetPref('touch', true );
 			}
 		});
+
+		if ( window.history.pushState )
+		{
+			window.history.replaceState( {mode: 'friendslist'}, '' );
+			$J(window ).on('popstate', function( e ) {
+
+				var state = e.originalEvent.state;
+				if( state.mode == 'friendslist' )
+				{
+					$J('#chat_container' ).removeClass('chat_active' ).addClass('friendslist_active');
+					document.body.scrollTop = _this.m_nFriendsListScrollTop;
+				}
+				else if ( state.mode == 'chat' )
+				{
+					//{ mode: 'chat', friend: unAccountID }
+					_this.ShowFriendChat( state.friend );
+				}
+			} );
+		}
 	}
 }
 CWebChat.CHATMESSAGE_TYPE_NORMAL = 0;
@@ -859,6 +911,12 @@ CWebChat.CHATMESSAGE_TYPE_LOCALECHO = 4;
 CWebChat.POLL_DEFAULT_TIMEOUT = 20;
 CWebChat.POLL_SUCCESS_INCREMENT = 5;
 CWebChat.POLL_MAX_TIMEOUT = 120;
+CWebChat.mq_MiniMode = window.matchMedia ? ( window.matchMedia("screen and (max-width: 640px), screen and (max-height: 480px)") ): {matches: false};
+
+CWebChat.prototype.BUseMiniMode = function()
+{
+	return CWebChat.mq_MiniMode.matches;
+};
 
 CWebChat.prototype.Initialize = function()
 {
@@ -996,7 +1054,11 @@ CWebChat.prototype.LogOff = function( bSendAsBeacon )
 
 function ShowFriendChatClosure( _chat, unAccountID )
 {
-	return function() { _chat.ShowFriendChat( unAccountID ); }
+	return function() {
+		_chat.ShowFriendChat( unAccountID );
+		if ( window.history.pushState )
+			window.history.pushState( { mode: 'chat', friend: unAccountID }, '' );
+	}
 }
 
 CWebChat.prototype.OnConnect = function( data )
@@ -1009,7 +1071,11 @@ CWebChat.prototype.OnConnect = function( data )
 
 	this.SetOnline( true );
 
-	this.Poll();
+	var _this = this;
+	// this delay is surprisingly important -
+	// 	* it fixes the page getting stuck forever in a "loading..." state in browsers
+	//	* it fixes onpopstate never firing in chrome
+	window.setTimeout( function() { _this.Poll(); }, 10 );
 };
 
 CWebChat.prototype.OnConnectFail = function()
@@ -1183,46 +1249,52 @@ CWebChat.prototype.RunStartupParam = function( rgChatStartupParam )
 		var unAccountID = rgChatStartupParam.friend;
 		if ( this.m_rgPlayerCache[unAccountID] && this.m_User.m_unAccountID != unAccountID )
 		{
-			this.ShowFriendChat( unAccountID );
+			ShowFriendChatClosure( this, unAccountID )();
 		}
 	}
 };
 
 CWebChat.prototype.ShowFriendChat = function( unAccountID, bForce )
 {
+	this.m_nFriendsListScrollTop = document.body.scrollTop;	/* used in minimode */
+
 	var Friend = this.m_rgPlayerCache[unAccountID];
-	if ( this.m_ActiveFriend == Friend && !bForce )
-		return;
-
-	if ( this.m_ActiveFriend && this.m_rgChatDialogs[ this.m_ActiveFriend.m_unAccountID ] )
-		this.m_rgChatDialogs[ this.m_ActiveFriend.m_unAccountID ].m_elDialog.hide();
-
-	this.m_ActiveFriend = Friend;
-
-	Friend.ResetUnreadMessageCount();
-	$J('#chat_msg_area').show();
-
-	if ( this.m_rgChatDialogs[ Friend.m_unAccountID ] )
+	var ChatDialog = this.m_rgChatDialogs[ Friend.m_unAccountID ];
+	if ( this.m_ActiveFriend != Friend || bForce )
 	{
-		this.m_rgChatDialogs[ Friend.m_unAccountID ].m_elDialog.show();
-	}
-	else if ( !Friend.m_bChatHistoryLoaded )
-	{
-		var elDialog = $J('<div/>', {'class': 'chat_dialog'} );
-		$J('#chatlog').append( elDialog )
-		var elHeader = Friend.RenderChatDialog();
-		var elContentWrapper = $J('<div/>', {'class': 'chat_dialog_content'} );
-		var elScrollWrapper = $J('<div/>', {'class': 'chat_dialog_scroll' } );
-		var elContent = $J('<div/>', {'class': 'chat_dialog_content_inner'} );
-		elContent.html('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">');
+		if ( this.m_ActiveFriend && this.m_rgChatDialogs[ this.m_ActiveFriend.m_unAccountID ] )
+			this.m_rgChatDialogs[ this.m_ActiveFriend.m_unAccountID ].m_elDialog.hide();
 
-		elDialog.append( elHeader, elContentWrapper.append( elScrollWrapper.append( elContent ) ) );
-		this.m_rgChatDialogs[ Friend.m_unAccountID ] = new CWebChatDialog( this, elDialog, elContent );
+		this.m_ActiveFriend = Friend;
 
-		this.LoadChatHistory( Friend, this.m_rgChatDialogs[ Friend.m_unAccountID ] );
+		Friend.ResetUnreadMessageCount();
+
+		if ( ChatDialog )
+		{
+			ChatDialog.m_elDialog.show();
+		}
+		else if ( !Friend.m_bChatHistoryLoaded )
+		{
+			var elDialog = $J('<div/>', {'class': 'chat_dialog'} );
+			$J('#chatlog').append( elDialog )
+			var elHeader = Friend.RenderChatDialog( this );
+			var elContentWrapper = $J('<div/>', {'class': 'chat_dialog_content'} );
+			var elScrollWrapper = $J('<div/>', {'class': 'chat_dialog_scroll' } );
+			var elContent = $J('<div/>', {'class': 'chat_dialog_content_inner'} );
+			elContent.html('<img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif">');
+
+			elDialog.append( elHeader, elContentWrapper.append( elScrollWrapper.append( elContent ) ) );
+
+			ChatDialog = new CWebChatDialog( this, elDialog, elContent );
+			this.m_rgChatDialogs[ Friend.m_unAccountID ] = ChatDialog;
+
+			this.LoadChatHistory( Friend, ChatDialog );
+		}
 	}
 
 	$J('#chatmessage').focus();
+	$J('#chat_container' ).removeClass('friendslist_active' ).addClass('chat_active' ).addClass('chat_activated');
+	ChatDialog.ScrollToBottom();
 };
 
 CWebChat.prototype.LoadChatHistory = function( Friend, ChatDialog )
