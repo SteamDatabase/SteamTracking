@@ -121,7 +121,7 @@
 					<Button id="LibraryButton" class="Button ButtonMiddle" tabindex="1" selectionpos="1.1,5" onfocus="LibraryButtonFocused();" onactivate="$.DispatchEvent( 'ShowLibrary' );">
 						<Label id="LibraryLabel" class="ButtonLabel" text="#MainMenu_Library" />
 					</Button>
-					<ParentalButton id="CommunityButton" class="Button ButtonMiddle" tabindex="2" selectionpos="1.2,5" onfocus="CommunityButtonFocused();" onactivate="OpenCommunityMenu( false );">
+					<ParentalButton id="CommunityButton" class="Button ButtonMiddle" tabindex="2" selectionpos="1.2,5" onactivate="OpenCommunityHome( true );">
 						<Label id="CommunityLabel" class="ButtonLabel" text="#MainMenu_Community" />
 					</ParentalButton>
 					<ParentalButton id="ProfileButton" class="Button ButtonRight" tabindex="3" selectionpos="1.3,5" onfocus="ProfileButtonFocused();" onactivate="OpenProfileMenu( false );">

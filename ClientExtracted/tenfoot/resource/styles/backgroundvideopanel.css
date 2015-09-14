@@ -341,12 +341,12 @@ BackgroundVideoPanel.IngameOverlayBackground #BackgroundMovie
 	opacity: 0.95;
 }
 
-BackgroundVideoPanel.IngameOverlayBackground.MinimalKeyboard #BackgroundMovie,
+BackgroundVideoPanel.IngameOverlayBackground.GhostMode #BackgroundMovie,
 {
 	visibility: collapse;
 }
 
-BackgroundVideoPanel.IngameOverlayBackground.MinimalKeyboard
+BackgroundVideoPanel.IngameOverlayBackground.GhostMode
 {
 	background-color: #00000000;
 }

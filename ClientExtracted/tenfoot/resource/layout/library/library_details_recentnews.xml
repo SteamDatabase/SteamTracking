@@ -15,45 +15,14 @@
 						<Panel id="NewsWrapper1" class="NewsWrapper">
 							<Label id="NewsHeadline1" class="NewsHeadline1 NewsHeadline" />
 						</Panel>
-						<Panel id="NewsWrapper2" class="NewsWrapper">
-							<Label id="NewsHeadline2" class="NewsHeadline2 NewsHeadline" />
-						</Panel>
-						<Panel id="NewsWrapper3" class="NewsWrapper">
-							<Label id="NewsHeadline3" class="NewsHeadline3 NewsHeadline" />
-						</Panel>
-						<Panel id="NewsWrapper4" class="NewsWrapper">
-							<Label id="NewsHeadline4" class="NewsHeadline4 NewsHeadline" />
-						</Panel>
-						<Panel id="NewsWrapper5" class="NewsWrapper">
-							<Label id="NewsHeadline5" class="NewsHeadline5 NewsHeadline" />
-						</Panel>
 					</Panel>
-					<Panel id="RecentNewsLargeBody" class="RecentNewsLargeBody" childfocusonhover="true" selectionposboundary="vertical">
-						<Button id="LargeNewsWrapper1" class="LargeNewsWrapper" tabindex="0" selectionpos="5,0">
+					<Panel id="RecentNewsLargeBody" class="RecentNewsLargeBody">
+						<Panel id="LargeNewsWrapper1" class="LargeNewsWrapper">
+							<Label id="LargeNewsDate1" class="LargeNewsDate" text="#Library_Details_NewsDate" />
 							<Label id="LargeNewsHeadline1" class="LargeNewsHeadline1 LargeNewsHeadline" html="true" />
-							<Label id="LargeNewsByline1" class="LargeNewsByline1 LargeNewsByline" />
+							<Label id="LargeNewsByline1" class="LargeNewsByline1 LargeNewsByline" text="#Library_Details_NewsByline" />
 							<Label id="LargeNewsBody1" class="LargeNewsBody1 LargeNewsBody" html="true" />
-						</Button>
-						<Button id="LargeNewsWrapper2" class="LargeNewsWrapper" tabindex="1" selectionpos="5,1">
-							<Label id="LargeNewsHeadline2" class="LargeNewsHeadline2 LargeNewsHeadline" html="true" />
-							<Label id="LargeNewsByline2" class="LargeNewsByline2 LargeNewsByline" />
-							<Label id="LargeNewsBody2" class="LargeNewsBody2 LargeNewsBody" html="true" />
-						</Button>
-						<Button id="LargeNewsWrapper3" class="LargeNewsWrapper" tabindex="2" selectionpos="5,2">
-							<Label id="LargeNewsHeadline3" class="LargeNewsHeadline3 LargeNewsHeadline" html="true" />
-							<Label id="LargeNewsByline3" class="LargeNewsByline3 LargeNewsByline" />
-							<Label id="LargeNewsBody3" class="LargeNewsBody3 LargeNewsBody" html="true" />
-						</Button>
-						<Button id="LargeNewsWrapper4" class="LargeNewsWrapper" tabindex="3" selectionpos="5,3">
-							<Label id="LargeNewsHeadline4" class="LargeNewsHeadline4 LargeNewsHeadline" html="true" />
-							<Label id="LargeNewsByline4" class="LargeNewsByline4 LargeNewsByline" />
-							<Label id="LargeNewsBody4" class="LargeNewsBody4 LargeNewsBody" html="true" />
-						</Button>
-						<Button id="LargeNewsWrapper5" class="LargeNewsWrapper" tabindex="4" selectionpos="5,4">
-							<Label id="LargeNewsHeadline5" class="LargeNewsHeadline5 LargeNewsHeadline" html="true" />
-							<Label id="LargeNewsByline5" class="LargeNewsByline5 LargeNewsByline" />
-							<Label id="LargeNewsBody5" class="LargeNewsBody5 LargeNewsBody" html="true" />
-						</Button>
+						</Panel>
 					</Panel>
 				</Panel>
 			</Panel>

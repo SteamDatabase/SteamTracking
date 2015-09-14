@@ -381,6 +381,11 @@ TextInputDualTouch
 	background-color: #88b51c;
 }
 
+#TouchKey_Suggest_0.TouchKey.PasteSuggestionPanel Label
+{
+	color: #888888;
+}
+
 #TouchKey_Suggest_0.TouchKey,
 #TouchKey_Suggest_1.TouchKey,
 #TouchKey_Suggest_2.TouchKey,

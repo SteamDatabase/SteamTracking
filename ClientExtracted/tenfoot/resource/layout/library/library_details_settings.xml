@@ -24,13 +24,9 @@
 					<Button id="CategoryButton" class="Button">
 						<Label id="CategoryLabel" class="LongDesc" text="#Library_Details_SetCategory" />
 					</Button>
-                    <Button id="ChooseIconButton" class="Button">
-                        <Label id="ChooseIconLabel" class="LongDesc" text="#Library_Details_ChooseIcon"/>
-                    </Button>
-                    <Button id="RemoveIconButton" class="Button">
-                        <Label id="RemoveIconLabel" class="LongDesc" text="#Library_Details_RemoveIcon"/>
-                    </Button>
-
+          <Button id="ChooseIconButton" class="Button">
+              <Label id="ChooseIconLabel" class="LongDesc" text="#Library_Details_ChooseIcon"/>
+          </Button>
 					<Panel class="HorizontalSpace" />
 					<Panel class="HorizontalSpace" />
 
@@ -71,7 +67,6 @@
 
 					<Label id="ContentLabel" class="LibrarySettingsHeader" text="#Library_Settings_Content" />
 					<Button id="CDKeyButton" class="Button">
-                        <Image src="file://{images}/library/icon_activate.png" />
 						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
 					</Button>
 					<Button id="ValidateButton" class="Button">

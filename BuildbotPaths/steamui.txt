@@ -74,7 +74,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(jobmgr.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(language.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(logger.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(messageobjects.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(misc.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(msg.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client_static_tier0.a(msgspewthrottle.o)
@@ -504,6 +503,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootwizardpanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/testpanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tgaloader.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/touchmenupanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/uibasepanel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/urlhelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/urlmanager.o
@@ -528,7 +528,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cellmap.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cellmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientsubscriptions.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/constants.cpp
@@ -1208,7 +1207,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/wrappanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/icommandline.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vstdlib/strtools.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/clientsubscriptions.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/debugstats_cmd.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/interfacemap.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/../common/ipcclient.cpp
@@ -1316,8 +1314,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamRootDialog.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamStartup.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamStartup.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamSubscription.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamSubscription.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamUI.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SteamUI.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/SubPanelOptionsInterface.cpp
@@ -1779,11 +1775,11 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaymanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaynotificationpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaynotificationpanel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../community/community.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../friends/friends.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_achievements.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_community_guides.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_recentnews.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/libraryrecent_addcontent.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_screenshots.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../mainmenu.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../profile/profile.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../store/storepanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../web/webbrowser.h
@@ -1974,6 +1970,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootwizardpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/testpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/testpanel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/touchmenupanel.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/touchmenupanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/uibasepanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/uibasepanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/web/../tenfootcontroller.h

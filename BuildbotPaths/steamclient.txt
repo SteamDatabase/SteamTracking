@@ -604,6 +604,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/musicqueue.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/musictag.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/playbackcontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/playbackcontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/spotifycontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/sqlitecontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/music/sqlitecontroller.h

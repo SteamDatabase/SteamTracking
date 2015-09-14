@@ -64,7 +64,8 @@
 	"UI_TextEntry_CopyToClipboard"	"Copy"
 	"UI_TextEntry_PasteClipboard"	"Paste"
 
-	"UI_ShowHidePassword"			"SHOW / HIDE PASSWORD"
+	"UI_ShowPassword"			"SHOW PASSWORD"
+	"UI_HidePassword"			"HIDE PASSWORD"
 
 	"UI_Agreements"					"Agreements"
 	"UI_ViewAgreements"				"VIEW SSA & PRIVACY POLICY"
@@ -1306,7 +1307,7 @@
 	"Library_Details_FriendsWhoPlay"	"FRIENDS WHO PLAY"
 	"Library_Details_FriendsPlayingNow"	"FRIENDS PLAYING NOW"
 	"Library_Details_Workshop"		"WORKSHOP"
-	"Library_Details_Screenshots"		"SCREENSHOTS"
+	"Library_Details_Screenshots"		"SCREENSHOTS ({i:sscount})"
 	"Library_Details_RecentNews"	"RECENT NEWS"
 	"Library_Details_Achievements_MostRecent" "MOST RECENT"
 	"Library_Details_Achievements_SoClose"	"SO CLOSE..."
@@ -1328,7 +1329,7 @@
 	"Library_Details_SyncingConflict"	"Conflict"
 	"Library_Details_CloudUnknown"	"Unknown"
 	"Library_Details_DownloadableContent"	"Shop for DLC"
-	"Library_Details_LibraryDetails"	"Your Game"
+	"Library_Details_LibraryDetails"	"Your {s:apptype}"
 	"Library_Details_GameStorePage"		"{s:apptype} Store Page"
 	"Library_Details_GameHubPage"		"{s:apptype} Hub Page"
 	"Library_Details_GameForums"		"Community Discussions"
@@ -1342,6 +1343,7 @@
 	"Library_Details_ChooseIcon"	"Change Icon..."
 	"Library_Details_ChooseIconHeader"	"Change Shortcut Icon"
 	"Library_Details_ChooseIconText"	"Select a new icon for the shortcut"
+	"Library_Details_DefaultIcon"	"Restore Default Icon"
 	"Library_Details_RemoveIcon"	"Remove Custom Icon..."
 	"Library_Details_Confirm_RemoveIconTitle" "Remove Icon?"
 	"Library_Details_Confirm_RemoveIconBody" "Remove the custom icon you have assigned?"
@@ -1367,7 +1369,8 @@
 
 	"Library_Details_ValidateLocalContent"	"Validate Content"
 	"Library_Details_KillApp"		"Exit {s:apptype}"
-	"Library_Details_NewsByline"	"{s:feed} | {t:l:date}"
+	"Library_Details_NewsDate"		"{t:l:date}"
+	"Library_Details_NewsByline"	"{s:feed}"
 	"Library_Details_ScreenshotHowTo1"	"In-game shortcut"
 	"Library_Details_ManageScreenshots"	"Manage Screenshots"
 	"Library_Details_ViewAllScreenshots"	"View all screenshots ({s:sscount})"
@@ -1850,12 +1853,12 @@
 	"Library_UploadScreenshotCancel"	"CANCEL"
 	"Library_Details_RemoveFromFavorites"	"Remove from Favorites"
 	"Library_Details_AddToFavorites"	"Add to Favorites"
-	"Library_CDKeyTitle"			"CD Key"
-	"Library_CDKey_Description"		"This is your activation key for {s:gamename}. You will need to enter this key after the game has launched. Please write the key down or copy it to the clipboard now."
+	"Library_CDKeyTitle"			"{s:gamename} CD Keys"
+	"Library_CDKey_Description"		"You may need to enter a key into the game. Select a key here to copy it, and paste it into the game via the Steam Onscreen Keyboard."
 	"Library_CDKey_DontShowAgain"		"Don't show me this again"
-	"Library_CopyToClipboardButton"		"COPY TO CLIPBOARD"
+	"Library_CopyToClipboardButton"		"COPY KEY"
 	"Library_CloseButton"			"CLOSE"
-	"Library_CopyToClipboardAndLaunchButton"		"COPY TO CLIPBOARD AND LAUNCH"
+	"Library_CopyToClipboardAndLaunchButton"		"COPY KEY AND LAUNCH"
 	"Library_LaunchButton"			"LAUNCH"
 	"Library_CDKeyFetchErrorTitle"		"Error"
 	"Library_CDKeyFetchError"		"Steam couldn't get data on your CD Key's at this time, please try again later."
@@ -1889,6 +1892,7 @@
 	"Library_GamesICanPlay" "Playable"
 	"Library_VRFilter" "Supports VR"
 	"Library_ReadyToPlay" "Ready to Play"
+	"Library_PlatformFilter" "{s:platformname} Games"
 	"Library_ControllerSupported" "Controller Supported"
 	"Library_Hidden" "Hidden Games"
 	"Library_Unblocked" "Family Games"
@@ -1998,6 +2002,10 @@
 	"Profile_OpenFriendActivity" "FRIEND ACTIVITY"
 	"Profile_OpenMyProfile"	     "PROFILE"
 	"Profile_OpenMyInventory"	"INVENTORY"
+
+	"Profile_Profile_Title"		"Profile"
+	"Profile_Inventory_Title"	"Inventory"
+	"Profile_TradeOffers_Title"	"Trade Offers"
 	
 	"SteamUI_JoinDialog_DataRequest_Text" "Completing installation... {d:progress}%"
 
@@ -2278,6 +2286,11 @@
 	
 	"Friends_InviteToWatchTitle"		"Invite To Watch"
 	"Friends_InviteToWatchSent"		"INVITE SENT"
+
+	"Community_Home_Title"				"Community"
+	"Community_Market_Title"			"Market"
+	"Community_Workshop_Title"			"Workshop"
+	"Friend_Activity_Title"				"Friend Activity"
 	
 	"Community_Friends_InGame_Count"	"{i:numfriendsingame} FRIENDS IN-GAME"
 	"Community_Friends_MoreOnline_Count"	"{i:numfriendsonline} MORE ONLINE"
@@ -4319,4 +4332,9 @@
 	"KeyboardHeader_Password"	"Enter your password"
 	"KeyboardHeader_SteamGuardCode"	"Enter Steam Guard code"
 	"KeyboardHeader_LibrarySearch" "Library search"
+
+	"UI_Paste_UnknownSource"	"[Paste]"
+	"UI_Paste_CDKey"			"[Paste CD Key]"
+	"UI_Paste_URL"				"[Paste URL]"
+	"UI_Paste_Selection"		"[Paste]"				// comes from a text entry selection; full string too long to fit in UI in English
 }

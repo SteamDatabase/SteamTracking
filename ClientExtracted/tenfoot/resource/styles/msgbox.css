@@ -1,4 +1,4 @@
-@define MessageBoxAnimationDuration: 0.4s;
+@define MessageBoxAnimationDuration: 0.2s;
 
 //
 // Styles for tenfoot msg box
@@ -15,13 +15,15 @@
 	from
 	{
 		opacity: 0.0;
-		transform: translatez( 600px ) translatey( 1080px );
+
+		pre-transform-scale2d: 0.4;
 	}
 
 	to
 	{
 		opacity: 1.0;
-		transform: translatez( 0px );
+
+		pre-transform-scale2d: 1.0;
 	}
 }
 
@@ -30,13 +32,14 @@
 	from
 	{
 		opacity: 1.0;
-		transform: translatez( 0px );
+
+		pre-transform-scale2d: 1.0;
 	}
 	
 	to
 	{
 		opacity: 0.0;
-		transform: translatez( 600px ) translatey( 1080px );
+		pre-transform-scale2d: 0.4;
 	}
 }
 
@@ -68,9 +71,9 @@ TenfootMsgBox, .TenfootMsgBox
 
 	z-index: msgbox_zindex;
 
-	transition-property: opacity, blur, desaturation, transform;
-	transition-duration: 0.3s, 0.3s, 0.3s, 0.4s !immediate;
-	transition-timing-function: linear;
+	transition-property: opacity, blur, desaturation, transform, pre-transform-scale2d;
+	transition-duration: 0.1s !immediate;
+	transition-timing-function: bigpicture-ease-in-out;
 
 	animation-name: msg-box-appear;
 	animation-duration: MessageBoxAnimationDuration;
@@ -90,7 +93,7 @@ TenfootMsgBox.Destructing, .TenfootMsgBox.Destructing,
 TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 {
 	opacity: 0.0;
-	transform: translatez( 600px ) translatey( 1080px );
+	pre-transform-scale2d: 0.4;
 }
 
 #MsgBoxBodyRegion, .MsgBoxBodyRegion

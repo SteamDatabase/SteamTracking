@@ -45,13 +45,14 @@
 					<Button id="UnblockedFilter" onfocus="GamesViewType(unblocked);" class="NxLeftNavButton" selectionpos="auto">
 						<Label text="#Library_AllGamesUnblocked"/>
 					</Button>
+                    <Button id="DownloadsFilter" onfocus="GamesViewType(downloads);" onactivate="MoveRight(0);" class="NxLeftNavButton" selectionpos="auto">
+                        <Label text="#Library_Downloads" html="true"/>
+                    </Button>
                     <Button id="SearchFilter" onfocus="GamesViewType(search);"  onactivate="LibrarySearchButtonActivated();" class="NxLeftNavButton" selectionpos="auto">
                         <Image src="file://{images}/library/icon_search.png" />
                         <Label text="#Library_SearchGames"/>
                     </Button>
-					<Button id="DownloadsFilter" onfocus="GamesViewType(downloads);" onactivate="MoveRight(0);" class="NxLeftNavButton" selectionpos="auto">
-						<Label text="#Library_Downloads" html="true"/>
-					</Button>
+
 					<Panel class="GamesHorizRule" />
 					<Label id="Options" text="#Library_AllGamesOptions" class="Header" />
 					<Button id="AddSteamProduct" onactivate="ActivateProduct();" class="NxLeftNavButtonAction AddContentButton" selectionpos="0,101">

@@ -23,7 +23,8 @@
 .StreamingUI .ShowIfNotStreamingUI { visibility: collapse; }
 
 
-Image
+/* Changed from a global image selector. You may need to add the class to some images now */
+Image.WashBlue
 {
 	wash-color: messagecolorwash;
 	horizontal-align: center;
@@ -2657,7 +2658,7 @@ SettingsPanelRemoteClientListing #Status
 #SettingsInterface_SteamClientPending
 {
 	visibility: collapse;
-	width: 100%;
+
 }
 
 .SteamClientPending #SettingsInterface_SteamClientPending

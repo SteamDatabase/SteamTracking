@@ -830,7 +830,7 @@ LibraryAppDetails #GameRequiresLabel
 	width: 100%;
 	height: 100%;
 	flow-children: right;
-	margin-top: 30px;
+	margin-top: 15px;
 	margin-bottom: 100px;
 }
 
@@ -841,8 +841,30 @@ LibraryAppDetails #GameRequiresLabel
 	height: 100%;
 	flow-children: down;
 	margin-left: 50px;
-	margin-right: 40px;
+	padding-top: 25px;
+	margin-right: 25px;
+
+	/* To transition on focus change
+	transform: translateX( -35px );
+	opacity: 0.5;
+	transition-delay: 0s;
+	transition-duration: 0.3s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
+	pre-transform-scale2d: 1;
+
+	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
+	*/
+
 }
+/* To transition on focus change
+#CommonControls:descendantfocus {
+transform: translateX( 0px );
+opacity: 1;
+pre-transform-scale2d: 1;
+opacity-mask: none;
+}
+*/
 
 .AppMiscHeader .DataHeader
 {
@@ -953,23 +975,34 @@ LibraryAppDetails #GameRequiresLabel
 	visibility: visible;
 }
 
-LibraryAppDetails .LibraryDetailsSectionsContainer
-{
+LibraryAppDetails .LibraryDetailsSectionsContainer {
 	width: 100%;
 	height: 100%;
 	vertical-align: top;
+	padding-top: 15px;
+	padding-left: 15px;
+
+	transition-property: opacity, transform;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-LibraryAppDetails .LibraryDetailsSectionPanel
-{
+/* to transition when focus changes
+LibraryAppDetails .LibraryDetailsSectionsContainer:descendantfocus {
+	transform: translateX( -200px );
+}
+*/
+
+
+LibraryAppDetails .LibraryDetailsSectionPanel {
 	width: 100%;
 	height: 100%;
 	opacity: 1;
-	transition-property: opacity;
+	transition-property: opacity, transform;
 	transition-duration: shortduration;
 }
-LibraryAppDetails .LibraryDetailsSectionPanel.Hidden
-{
+
+LibraryAppDetails .LibraryDetailsSectionPanel.Hidden {
 	opacity: 0;
 }
 
@@ -977,6 +1010,7 @@ LibraryAppDetails .ContentsRow
 {
 	width: 100%;
 	height: 100%;
+	margin-top: 7px;
 	z-index: 0;
 	flow-children: right-wrap;
 
@@ -1172,6 +1206,10 @@ ParentalButton.Locked
 	margin-top: 0px;
 }
 #OverlayBasePanel #hr0
+{
+	visibility: collapse;
+}
+#OverlayBasePanel .LinksAndActionsWrapper #CommunityContent
 {
 	visibility: collapse;
 }
@@ -1481,6 +1519,11 @@ ViewGuidesDialog .GuidesLargeBody
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
 	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+}
+
+ViewGuidesDialog.Overlay #MsgBoxButtons
+{
+	visibility: collapse;
 }
 
 /* Guide modal panel buttons */
@@ -2080,7 +2123,7 @@ LibraryFriendsWhoPlay .FriendsWhoPlayBody
 .FriendsWhoPlaySmallBody
 {
 	margin-top: 8px;
-	margin-left: 21px;
+	margin-left: 10px;
 	margin-right: 4px;
 	margin-bottom: 6px;
 	width: 100%;
@@ -2088,8 +2131,8 @@ LibraryFriendsWhoPlay .FriendsWhoPlayBody
 
 LibraryFriendsWhoPlay AvatarImage
 {
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	border-style: solid;
 	border-width: 4px;
 	border-radius: 0px;
@@ -2106,15 +2149,15 @@ LibraryFriendsWhoPlay .FriendsWhoPlayRowOne
 LibraryFriendsWhoPlay .FriendWhoPlaysWrapper
 {
 	margin-right: 2px;
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 }
 
 LibraryFriendsWhoPlay .MoreRemainingContainer
 {
 	margin-left: 5px;
 	width: 100px;
-	height: 60px;
+	height: 80px;
 }
 
 LibraryFriendsWhoPlay .MoreRemainingLabel
@@ -2128,16 +2171,6 @@ LibraryFriendsWhoPlay .MoreRemainingLabel
 {
 }
 
-/* to remove?
-LibraryRecentNews .RecentNewsBody
-{
-	width: 100%;
-	height: 100%;
-	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate; 
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
 
 LibraryRecentNews .RecentNewsLargeBody
 {
@@ -2147,13 +2180,9 @@ LibraryRecentNews .RecentNewsLargeBody
 	margin-right: 6px;
 	width: 100%;
 	height: 100%;
-	overflow: squish scroll;
+	overflow: squish squish;
 	flow-children: down;
-	opacity: 0.0;
-
-	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
+	opacity: 1.0;
 }
 
 
@@ -2163,11 +2192,7 @@ LibraryRecentNews .NewsWrapper
 	flow-children: down;
 	margin-bottom: 5px;
 }
-*/
 
-LibraryRecentNews .RecentNewsLargeBody {
-	opacity: 0.0;
-}
 LibraryRecentNews .RecentNewsSmallBody
 {
 	margin-left: 12px;
@@ -2176,7 +2201,7 @@ LibraryRecentNews .RecentNewsSmallBody
 	width: 410px;
 	height: 240px;
 	flow-children: down;
-	opacity: 1.0;
+	opacity: 0.0;
 	opacity-mask: url( "file://{images}/library/details_data_mask.tga" );
 
 	transition-property: transform, width, height, background-color, border, color, opacity, pre-transform-scale2d !immediate;
@@ -2194,10 +2219,10 @@ LibraryRecentNews .NewsHeadline
 }
 
 
-/* to remove?
 LibraryRecentNews .LargeNewsWrapper
 {
 	width: 100%;
+	height: 100%;
 	margin-bottom: 5px;
 	margin-top: 0px;
 	margin-right: 25px;
@@ -2209,53 +2234,11 @@ LibraryRecentNews .LargeNewsWrapper
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #00000000 ), to( #00000000 ) );
 }
 
-LibraryRecentNews .LargeNewsWrapper:focus
-{
-	width: 100%;
-	margin-bottom: 5px;
-	margin-top: 0px;
-	margin-right: 20px;
-	flow-children: down;
-	margin-left: 2px;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	color: #161718f5;
-
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
-
-	transition-property: transform, position, width, height, border, background-color, opacity, pre-transform-scale2d !immediate;
-	transition-duration: mediumduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-
-	animation-name: links-and-more-button-focus;
-	animation-duration: longduration;
-	animation-delay: mediumduration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-
-}
-*/
-
 .LargeNewsWrapper Label
 {
-	transition-property: transform !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
 	color: black;
-	transform: translatex( 0px );
 	font-family: platformfont;
 }
-
-.LargeNewsWrapper:focus Label
-{
-	transform: translatex( 7px );
-	margin-right: 14px;
-}
-
 
 LibraryRecentNews .LargeNewsHeadline
 {
@@ -2271,29 +2254,31 @@ LibraryRecentNews .LargeNewsHeadline
 	white-space: normal;
 }
 
+LibraryRecentNews .LargeNewsDate
+{
+	font-size: 24px;
+	line-height: 26px;
+	font-weight: bold;
+	max-height: 60px;
+	width: 100%;
+	margin-bottom: 7px;
+	margin-right: 7px;
+	margin-top: 4px;
+	color: #A4D007;
+	white-space: normal;
+}
+
 LibraryRecentNews .LargeNewsBody
 {
 	font-size: 20px;
-	max-height: 50px;
-	height: 0%;
+	height: 100%;
 	width: 100%;
 	margin-bottom: 5px;
 	margin-top: 2px;
 	margin-right: 18px;
 	color: largenewsbody;
 	white-space: normal;
-	opacity: 0.0;
-
-	transition-property: opacity;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-}
-
-.LargeNewsWrapper:focus .LargeNewsBody
-{
-	opacity: 1.0;	
-	height: 100%;
+	opacity: 1.0;
 }
 
 LibraryRecentNews .LargeNewsByline
@@ -2308,21 +2293,6 @@ LibraryRecentNews .LargeNewsByline
 	text-overflow: clip;
 }
 
-.LargeNewsWrapper:focus .LargeNewsHeadline
-{
-	color: largenewstitle_dark;
-}
-
-.LargeNewsWrapper:focus .LargeNewsBody
-{
-	color: largenewsbody_dark;
-	white-space: normal;
-}
-
-.LargeNewsWrapper:focus .LargeNewsByline
-{
-	color: largenewsbyline_dark;
-}
 
 #ScreenshotsSmallBody
 {
@@ -2695,6 +2665,16 @@ LibraryRecentNews .LargeNewsByline
 	width: 100%;
 	margin-left: 24px;
 	margin-right: 20px;
+}
+
+.NoScreenshots #HowToWrapper
+{
+	height: 100%;
+	vertical-align: center;
+}
+.NoScreenshots #HowToWrapper .HowToLabel
+{
+	vertical-align: center;
 }
 
 #HowToWrapper .Label
@@ -3467,11 +3447,12 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	width: 1350px;
 }
 
-.search.EmptyGrid #EmptySearchArea
+.search.EmptyGrid #EmptySearchArea,
+#DownloadsNone
 {
 	opacity: 1.0;
 
-	position: 500px 60px 0px;
+	position: 490px 25px 0px;
 	background-color: #00000044;
 	height: 800px;
 	width: 1350px;
@@ -3481,6 +3462,10 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
+#DownloadsNone {
+	position: 0px 0px 0px;
+}
+
 .search.ContentAreaFocus.EmptyGrid #EmptySearchArea {
 	transform: translateX(-200px);
 }
@@ -3708,6 +3693,10 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	transition-property: opacity, color;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
+}
+#PopularRow .MissingAppImage #GameImage #MissingImageLabel,
+#UnPlayedRow .MissingAppImage #GameImage #MissingImageLabel {
+	font-size: 24px;
 }
 
 .MissingAppImage #GameImage #MissingImageLabel
@@ -4697,6 +4686,7 @@ KeyboardShortcut Image
 	margin-top: 0px;
 	margin-bottom: 8px;
 	padding-left: 10px;
+	padding-bottom: 3px;
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #25a9df00 ), to( #082745ff) );
 
 	pre-transform-scale2d: 1.0;
@@ -5130,6 +5120,11 @@ LibraryDLCItem .Button:focus
 	opacity: 0.0;
 }
 
+.Windows #GamesFilter #Platform
+{
+	visibility: collapse;
+}
+
 .ContentAreaFocus #GamesFilter
 {
 	position: 1630px 120px 0px;
@@ -5397,6 +5392,9 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .NxLeftNavButton:selected Label .NumberElement {
 	color: #ffffff;
 }
+.NxLeftNavButton:selected Image {
+	wash-color: #ffffffff;
+}
 
 .NxLeftNavButtonAction
 {
@@ -5473,25 +5471,24 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .NxLeftNavButtonAction Image
 {
 	vertical-align: center;
-  margin-right: 8px;
-  margin-bottom: 8px;
+	margin-right: 8px;
+	margin-bottom: 8px;
 	margin-left: -4px;
-  height: 32px;
-  width: 32px;
-  wash-color: #2976a3ff;
+	height: 32px;
+	width: 32px;
+	wash-color: #2976a3ff;
 	opacity: 1.0;
+
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
 }
 
 .NxLeftNavButton:focus Image,
 .NxLeftNavButtonAction:focus Image
 {
-	vertical-align: center;
-  margin-right: 8px;
-  margin-bottom: 8px;
-  height: 32px;
-  width: 32px;
-  wash-color: #ffffffff;
-	opacity: 1.0;
+	wash-color: #ffffffff;
+	transform: translateX( 4px );
 }
 
 .NxLeftNavButton.Locked Image
@@ -5949,6 +5946,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 {
 	width: 100%;
 	height: 150px;
+	background-color: black;
 }
 
 .FreeGameDetails
@@ -5978,7 +5976,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 #RecentRow
 {
-	height: 320px;
+	height: 300px;
 }
 #RecentRow #Game2,
 #RecentRow #Game3
@@ -5989,7 +5987,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 #RecentRow Button
 {
 	width: 670px;
-	height: 240px;
+	height: 215px;
 
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f400 ), to( #b6e1fa00 ) );
 
@@ -6005,7 +6003,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 #RecentRow Button Image
 {
 	width: 460px;
-	height: 100%;
+	height: 215px;
 }
 
 #GamesSuggestion #RecentRow Button .GameDetails
@@ -6320,4 +6318,3 @@ LibrarySuggestionsRow.Active
 	color: #ffffff;
 	padding-bottom: 5px;
 }
-

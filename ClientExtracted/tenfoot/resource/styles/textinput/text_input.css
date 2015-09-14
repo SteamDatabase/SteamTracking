@@ -72,9 +72,8 @@ TextInputDaisy
 	animation-iteration-count: 1;
 	animation-direction: normal;
 
-	transition-property: opacity;
+	transition-property: opacity, blur, desaturation;
 	transition-duration: 0.8s !immediate;
-
 }
 
 .MinimalKeyboard #BodyContainer
@@ -1562,4 +1561,147 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 .HiddenFooter
 {
 	visibility: collapse;
+}
+
+#YButtonWrapper
+{
+	opacity: 0.0;
+	horizontal-align: right;
+	vertical-align: center;
+	margin-right: 20px;
+	padding: 5px;
+	flow-children: right;
+
+	transition-property: opacity;
+	transition-duration: 0.5s;
+
+	background-color: #aaaaaaff;
+}
+
+.IsLongString.IsPasswordEntry #YButtonWrapper
+{
+	opacity: 0.0;
+}
+
+.IsPasswordEntry #YButtonWrapper
+{
+	opacity: 1.0;
+}
+
+.IsPasswordVisible #YButtonWrapper .YButtonText.PasswordVisible,
+.IsPasswordHidden #YButtonWrapper .YButtonText.PasswordHidden
+{
+	visibility: visible;
+}
+
+#YButtonWrapper .YButtonText
+{
+	visibility: collapse;
+	color: #000000;
+	font-size: 21px;
+}
+
+#YButtonWrapper .YButtonBox
+{
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	background-color: legendbuttonyellow;
+}
+
+//
+// Dualtouch tutorial
+//
+
+@keyframes 'dualtouch-tutorial-click-overlay-fade'
+{
+	from
+	{
+		opacity: 0.0;
+	}
+
+	50%
+	{
+		opacity: 0.8;
+	}
+
+	to
+	{
+		opacity: 0.0;
+	}
+}
+
+#TutorialLeft, #TutorialRight, #TutorialLeftAlphaFade, #TutorialRightAlphaFade, #TutorialLeftPartialDisable, #TutorialRightPartialDisable
+{
+	opacity: 0.0;
+	width: 384px;
+	height: 640px;
+	background-size: 100% 100%;
+	background-position: 0px;
+	z-index: 1000;
+
+	transition-property: opacity;
+	transition-duration: 0.4s;
+}
+
+#ActualLegends
+{
+	width: 100%;
+	height: 100%;
+
+	transition-property: opacity;
+	transition-duration: 0.75s;
+}
+
+.LeftTutorialEnabled.RightTutorialEnabled #TutorialLeftPartialDisable,
+.LeftTutorialEnabled.RightTutorialEnabled #TutorialRightPartialDisable,
+.LeftTutorialEnabled #TutorialLeft,
+.RightTutorialEnabled #TutorialRight
+{
+	opacity: 0.0;
+}
+
+.LeftTutorialEnabled #TutorialLeftPartialDisable,
+.RightTutorialEnabled #TutorialRightPartialDisable,
+.LeftTutorialEnabled.RightTutorialEnabled #TutorialLeft,
+.LeftTutorialEnabled.RightTutorialEnabled #TutorialRight
+{
+	opacity: 1.0;
+}
+
+.LeftTutorialEnabled #TutorialLeftAlphaFade, .RightTutorialEnabled #TutorialRightAlphaFade
+{
+	opacity: 0.8;
+	z-index: 1001;
+
+	animation-name: dualtouch-tutorial-click-overlay-fade;
+	animation-duration: 5.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#TutorialLeft, #TutorialLeftAlphaFade, #TutorialLeftPartialDisable
+{
+	position: 98px 350px 0px;
+}
+
+#TutorialRight, #TutorialRightAlphaFade, #TutorialRightPartialDisable
+{
+	position: 482px 350px 0px;
+}
+
+#TouchPadLeft, #TouchPadRight
+{
+	transition-property: opacity, blur, desaturation;
+}
+
+.LeftTutorialEnabled #TouchPadLeft, .RightTutorialEnabled #TouchPadRight
+{
+	blur: gaussian( 1.8 );
+	desaturation: 0.55;
+	opacity: 0.3;
+}
+
+.LeftTutorialEnabled #ActualLegends, .RightTutorialEnabled #ActualLegends
+{
+	opacity: 0.0;
 }

@@ -940,6 +940,7 @@
  D VTT for CMusicPlayerLabel
  D VTT for CMusicPlayerPanel
  D VTT for CMusicPlayerVolumePanel
+ D VTT for CMusicSeekBarSlider
  D VTT for CNewsItemPanel
  D VTT for COverlayAsyncNotificationsRequestedDialog
  D VTT for COverlayBroadcastChatDialog
@@ -1333,6 +1334,7 @@
  D construction vtable for vgui::Panel-in-CMusicPlayerLabel
  D construction vtable for vgui::Panel-in-CMusicPlayerPanel
  D construction vtable for vgui::Panel-in-CMusicPlayerVolumePanel
+ D construction vtable for vgui::Panel-in-CMusicSeekBarSlider
  D construction vtable for vgui::Panel-in-CNewsItemPanel
  D construction vtable for vgui::Panel-in-COverlayAsyncNotificationsRequestedDialog
  D construction vtable for vgui::Panel-in-COverlayBroadcastChatDialog
@@ -1492,6 +1494,7 @@
  D construction vtable for vgui::QueryBox-in-AppModalQueryBox
  D construction vtable for vgui::SimpleDialog-in-COverlayAsyncNotificationsRequestedDialog
  D construction vtable for vgui::SimpleDialog-in-COverlayNeedWorkshopLegalAgreementAcceptanceDialog
+ D construction vtable for vgui::Slider-in-CMusicSeekBarSlider
  D construction vtable for vgui::Slider-in-CVolumeSlider
  D construction vtable for vgui::TextEntry-in-CScreenshotCaptionEntry
  D construction vtable for vgui::TextEntry-in-CScreenshotGameSelector
@@ -2185,6 +2188,7 @@
  D typeinfo for CMusicPlayerPanel::CCallback_OnQueueEntriesHaveChanged
  D typeinfo for CMusicPlayerPanel::CCallback_OnVolumeHasChanged
  D typeinfo for CMusicPlayerVolumePanel
+ D typeinfo for CMusicSeekBarSlider
  D typeinfo for CNewsItemPanel
  D typeinfo for COverlayAsyncNotificationsRequestedDialog
  D typeinfo for COverlayBroadcastChatDialog
@@ -3419,6 +3423,7 @@
  D vtable for CMusicPlayerPanel::CCallback_OnQueueEntriesHaveChanged
  D vtable for CMusicPlayerPanel::CCallback_OnVolumeHasChanged
  D vtable for CMusicPlayerVolumePanel
+ D vtable for CMusicSeekBarSlider
  D vtable for CNewsItemPanel
  D vtable for COverlayAsyncNotificationsRequestedDialog
  D vtable for COverlayBroadcastChatDialog
@@ -4068,6 +4073,7 @@
  R typeinfo name for CMusicPlayerPanel::CCallback_OnQueueEntriesHaveChanged
  R typeinfo name for CMusicPlayerPanel::CCallback_OnVolumeHasChanged
  R typeinfo name for CMusicPlayerVolumePanel
+ R typeinfo name for CMusicSeekBarSlider
  R typeinfo name for CNewsItemPanel
  R typeinfo name for COverlayAsyncNotificationsRequestedDialog
  R typeinfo name for COverlayBroadcastChatDialog
@@ -7102,6 +7108,9 @@
  T CMusicPlayerVolumePanel::UpdatePanelData()
  T CMusicPlayerVolumePanel::Validate(CValidator&, char const*)
  T CMusicPlayerVolumePanel::~CMusicPlayerVolumePanel()
+ T CMusicSeekBarSlider::OnMousePressed(vgui::MouseCode)
+ T CMusicSeekBarSlider::OnMouseReleased(vgui::MouseCode)
+ T CMusicSeekBarSlider::~CMusicSeekBarSlider()
  T CNewsItemPanel::CNewsItemPanel(vgui::Panel*, char const*)
  T CNewsItemPanel::ChainToAnimationMap()
  T CNewsItemPanel::ChainToMap()

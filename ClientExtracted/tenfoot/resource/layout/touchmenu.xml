@@ -1,0 +1,15 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/touchmenu.css" />
+	</styles>
+	
+	<TouchMenu tabindex="auto" selectionpos="auto">
+		<Label id="TouchMenuHoverKeyDescription" />
+		<Panel id="TouchMenuPad">
+			<Panel id="Pointer">
+				<Image src="file://{images}/textinput/textinput_touchpointer.tga" />
+			</Panel>
+		</Panel>
+	</TouchMenu>
+</root>

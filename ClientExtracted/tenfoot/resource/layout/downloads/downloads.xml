@@ -6,7 +6,9 @@
 	</styles>
 
 	<DownloadsPanel defaultfocus="DownloadsList" tabindex="auto" selectionpos="auto">
-		<Label id="DownloadsNone" class="DownloadText" text="#Downloads_None" />
+		<Panel id="DownloadsNone" >
+            <Label class="EmptyLabel" text="#Downloads_None" />
+        </Panel>
 		<Panel id="DownloadsGraph" >
 		</Panel>
 		<Panel id="DownloadsList" >

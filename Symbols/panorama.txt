@@ -9247,6 +9247,7 @@
  T panorama::CJSFile::LoadFromBuffer(panorama::CPanoramaSymbol, CUtlBuffer const&)
  T panorama::CJSFile::LoadFromFile(panorama::CPanoramaSymbol)
  T panorama::CJSFile::Validate(CValidator&, char const*)
+ T panorama::CJSFile::~CJSFile()
  T panorama::CJSPropGetter<panorama::CUIPanel, panorama::CPanoramaSymbol>::GetProp(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&)
  T panorama::CJSPropGetter<panorama::CUIPanel, panorama::CPanoramaSymbol>::SetProp(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&)
  T panorama::CLayoutFile::AddInlineJavascript(char const*, int, int)
@@ -9285,6 +9286,7 @@
  T panorama::CLayoutManager::BConvertHTTPPathToLocalP4Path(char const*, CUtlString&)
  T panorama::CLayoutManager::BHasFilesInMemory() const
  T panorama::CLayoutManager::BIsIncludeBufferCached(panorama::ELayoutIncludeFileType, char const*)
+ T panorama::CLayoutManager::BParsePartialLayout(panorama::PanelDescription_t**, char const*)
  T panorama::CLayoutManager::CLayoutManager()
  T panorama::CLayoutManager::ClearAsyncLoad(panorama::CLoadLayoutFileAsync*)
  T panorama::CLayoutManager::ClearAsyncReload(panorama::CReloadStyleFile*)
@@ -9297,6 +9299,7 @@
  T panorama::CLayoutManager::GetLayoutFileFromString(char const*, bool)
  T panorama::CLayoutManager::GetLayoutFileFromStringAsync(char const*, panorama::IUIPanel*, bool)
  T panorama::CLayoutManager::GetStyleFile(char const*, panorama::CStyleFileSet const&)
+ T panorama::CLayoutManager::InsertLocalToHTTP(CUtlString const&, panorama::CPanoramaSymbol)
  T panorama::CLayoutManager::LoadStyleIntoBuffer(panorama::CPanoramaSymbol, CUtlBuffer&)
  T panorama::CLayoutManager::OnLayoutFileBufferLoaded(CUtlBuffer&, panorama::CPanoramaSymbol, char const*, panorama::IUIPanel*, bool, bool, panorama::ELoadLayoutAsyncDetails, bool)
  T panorama::CLayoutManager::OnLoadRemoteCSSFileFromBuffer(CUtlBuffer&, CUtlString const&, bool)
@@ -9812,7 +9815,7 @@
  T panorama::CRadialGradient::ScaleLengthValues(float)
  T panorama::CRadialGradient::Validate(CValidator&, char const*)
  T panorama::CRadialGradient::operator==(panorama::CRadialGradient const&) const
- T panorama::CReloadStyleFile::CReloadStyleFile(panorama::CPanoramaSymbol)
+ T panorama::CReloadStyleFile::CReloadStyleFile(panorama::ELayoutIncludeFileType, panorama::CPanoramaSymbol)
  T panorama::CReloadStyleFile::OnIncludeRequestFinished(HTTPRequestCompleted_t*, bool)
  T panorama::CReloadStyleFile::StartReload(panorama::CReloadStyleFile*)
  T panorama::CReloadStyleFile::Validate(CValidator&, char const*)
@@ -10847,11 +10850,13 @@
  T panorama::CUIEngine::CancelAsyncJSONWebAPIRequest(unsigned int)
  T panorama::CUIEngine::CancelScheduledDelegate(int)
  T panorama::CUIEngine::ClearAsyncJSWebRequest(panorama::CJSAsyncWebRequest*)
+ T panorama::CUIEngine::ClearClipboard()
  T panorama::CUIEngine::ClearFileCache()
  T panorama::CUIEngine::ClearGlobalObjectForJavaScript(char const*, void*)
  T panorama::CUIEngine::CloseDebuggerWindow()
  T panorama::CUIEngine::CompileScript(panorama::IUIPanel*, char const*, char const*)
  T panorama::CUIEngine::ConCommandInit(IConCommandBaseAccessor*)
+ T panorama::CUIEngine::CopyToClipboard(char const*, char const*)
  T panorama::CUIEngine::CreateDebuggerWindow()
  T panorama::CUIEngine::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::CUIEngine::CreateInputEventFromSymbol(panorama::CPanoramaSymbol, panorama::IUIPanel*, panorama::EPanelEventSource_t, int)
@@ -10877,6 +10882,7 @@
  T panorama::CUIEngine::FreePanelStyle(panorama::IUIPanelStyle*)
  T panorama::CUIEngine::GetApplicationInstallPath()
  T panorama::CUIEngine::GetApplicationUserDataPath()
+ T panorama::CUIEngine::GetClipboardText(CUtlString&, CUtlString*) const
  T panorama::CUIEngine::GetConsoleHistory()
  T panorama::CUIEngine::GetContextForPanel(panorama::IUIPanel const*)
  T panorama::CUIEngine::GetCookieHeadersForNamedRemoteHost(char const*)
@@ -10927,7 +10933,7 @@
  T panorama::CUIEngine::MsgMemoryPoolMgr()
  T panorama::CUIEngine::NewRegisterJSEntry(char const*, unsigned int, char const*, panorama::RegisterJSType_t)
  T panorama::CUIEngine::OnAsyncEvent(float, panorama::IUIEvent*)
- T panorama::CUIEngine::OnCopyStringToClipboard(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
+ T panorama::CUIEngine::OnCopyStringToClipboard(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, char const*)
  T panorama::CUIEngine::OnDeletePanel(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T panorama::CUIEngine::OnFileCacheRemoved(panorama::CPanoramaSymbol)
  T panorama::CUIEngine::OnHTTPJSONWebAPIRequestFinished(HTTPRequestCompleted_t*, bool)
@@ -11019,12 +11025,12 @@
  T panorama::CUIEngineSDL::BHaveInputLocale(ELanguage)
  T panorama::CUIEngineSDL::BInitialize()
  T panorama::CUIEngineSDL::CUIEngineSDL()
- T panorama::CUIEngineSDL::CopyToClipboard(char const*)
+ T panorama::CUIEngineSDL::CopyToClipboardImpl(char const*)
  T panorama::CUIEngineSDL::CreateNewWindow(char const*, unsigned int, unsigned int, panorama::IUIEngine::ERenderTarget, bool, bool, bool, char const*)
  T panorama::CUIEngineSDL::CreateTextLayout(char const*, char const*, float, float, panorama::EFontWeight, panorama::EFontStyle, panorama::ETextAlign, bool, bool, int, float, float)
  T panorama::CUIEngineSDL::CreateTextLayout(wchar_t const*, char const*, float, float, panorama::EFontWeight, panorama::EFontStyle, panorama::ETextAlign, bool, bool, int, float, float)
  T panorama::CUIEngineSDL::FreeTextLayout(panorama::IUITextLayout*)
- T panorama::CUIEngineSDL::GetClipboardText(CUtlString&)
+ T panorama::CUIEngineSDL::GetClipboardTextImpl(CUtlString&) const
  T panorama::CUIEngineSDL::GetCurrentInputLocale()
  T panorama::CUIEngineSDL::GetSortedValidFontNames()
  T panorama::CUIEngineSDL::RunPlatformFrame()
@@ -11281,6 +11287,8 @@
  T panorama::CUIPanel::BCanScrollUp()
  T panorama::CUIPanel::BCanSeeInParentScroll()
  T panorama::CUIPanel::BChildStylesDirty()
+ T panorama::CUIPanel::BCreateChildren(char const*)
+ T panorama::CUIPanel::BCreateChildrenFromDescription(panorama::CPanoramaSymbol, panorama::PanelDescription_t*, CUtlVector<panorama::PanelEventsToParse_t, CUtlMemory<panorama::PanelEventsToParse_t> >*, CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
  T panorama::CUIPanel::BEnableAnalogStickScrolling()
  T panorama::CUIPanel::BFocusOnMouseDown()
  T panorama::CUIPanel::BHasBeenLayedOut() const
@@ -12079,6 +12087,7 @@
  T panorama::CUIRenderEngine::RenderCommandBuffer_t::Validate(CValidator&, char const*)
  T panorama::CUIRenderEngine::ResumeAnimationAndRenderThreadFromValidate()
  T panorama::CUIRenderEngine::StartNewPaintBuffer()
+ T panorama::CUIRenderEngine::UpdateSteamPadPointers(panorama::SteamPadPointer_t*, panorama::SteamPadPointer_t*)
  T panorama::CUIRenderEngine::Validate(CValidator&, char const*)
  T panorama::CUIRenderEngine::WakeThreads()
  T panorama::CUIRenderEngine::~CUIRenderEngine()
@@ -12246,7 +12255,7 @@
  T panorama::ConvertV8ArgsToTuple<2, std::tr1::tuple<panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass> >::Call(std::tr1::tuple<panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass, std::tr1::_NullClass>&, v8::FunctionCallbackInfo<v8::Value> const&, bool*)
  T panorama::CopyStringToClipboard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::CopyStringToClipboard::GetEventType()
- T panorama::CopyStringToClipboard::MakeEvent(panorama::IUIPanelClient const*, char const*)
+ T panorama::CopyStringToClipboard::MakeEvent(panorama::IUIPanelClient const*, char const*, char const*)
  T panorama::CountUIEventParams(char const*)
  T panorama::CreateDebuggerWindow::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::CreateDebuggerWindow::MakeEvent(panorama::IUIPanelClient const*)
@@ -12318,7 +12327,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CloseDebuggerWindow>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CloseModalDialog>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ContextMenu, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CopyStringToClipboard, char const*>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CopyStringToClipboard, char const*, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CreateDebuggerWindow>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::DeletePanel>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::DumpMemory>(panorama::IUIPanel*, char const*, char const**)
@@ -15355,7 +15364,7 @@
  t TrieTok
  t TryTok
  t __cxx_global_array_dtor
- t __cxx_global_var_init195
+ t __cxx_global_var_init196
  t __cxx_global_var_init49
  t __cxx_global_var_init50
  t __cxx_global_var_init51

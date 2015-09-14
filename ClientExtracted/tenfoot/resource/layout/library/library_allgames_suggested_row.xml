@@ -10,7 +10,7 @@
 			<Panel class="SuggestedRow" selectionpos="auto">
 				<Button id="Game0" class="Game" selectionpos="auto" >
 					<Panel class="ImageWrapper">
-						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" >
+						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 						</Image>
 						<Panel class="GameDetails">
@@ -32,7 +32,7 @@
 				</Button>
 				<Button id="Game1" class="Game"  selectionpos="auto" >
 					<Panel class="ImageWrapper">
-						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" >
+						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
 							<Label id="MissingImageLabel" text="" />
 						</Image>
 						<Panel class="GameDetails">
@@ -54,7 +54,7 @@
 				</Button>
 				<Button id="Game2" class="Game" selectionpos="auto" >
 					<Panel class="ImageWrapper">
-						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" >
+						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
 							<Label id="MissingImageLabel" text="" />
 						</Image>
 						<Panel class="GameDetails">
@@ -76,7 +76,7 @@
 				</Button>
 				<Button id="Game3" class="Game" selectionpos="auto" >
 					<Panel class="ImageWrapper">
-						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" >
+						<Image id="GameImage" class="GridItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
 							<Label id="MissingImageLabel" text="" />
 						</Image>
 						<Panel class="GameDetails">

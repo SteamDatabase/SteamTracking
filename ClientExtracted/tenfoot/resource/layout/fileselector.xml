@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/fileselector.css" />
 	</styles>
 
@@ -10,6 +9,12 @@
 
 			<Panel id="FileSelectorColumn" class="FileSelectorColumn">
 				<Label id="FileSelectorHeaderLabel" class="FileSelectorHeaderLabel" text="Header"/>
+	
+				<Panel id="DefaultOption">
+					<Button class="Button" onactivate="SelectDefaultOption()" onfocus="ShowPreviewForDefault()">
+						<Label id="DefaultButtonLabel" />
+					</Button>
+				</Panel>
 	
 				<Label id="FileSelectorTextLabel" class="FileSelectorBoxText" text="Description"/>			
 

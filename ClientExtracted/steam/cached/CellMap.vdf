@@ -18,8 +18,8 @@
 		"LocalCostAUSBetweenRegions"				1
 		"LocalCostAUSFromRegionToISP"				1
 		"LocalCostAUSFromISPToRegion"				2
-		"LocalCostToLeaveChina"							4
-		"LocalCostCanadaToUS"								2
+		"LocalCostToLeaveChina"							6.5
+		"LocalCostCanadaToUS"					1.5
 		"LocalCostIndiaToDubai"					2
 		"InwardCost"	0.2
 	}
@@ -92,7 +92,7 @@
 			"region"	"usa"
 			"edges"
 			{
-				0 { "dest"	 2  }
+				0 { "dest"	 63  }
 				1 
 				{ 
 					"dest"	13 
@@ -211,9 +211,9 @@
 			"longitude"	"120.992002"
 			"edges"
 			{
-				0 { "dest"	32 	"cost"	InwardCost}
-				1 { "dest"	33 }
-				2 { "dest"	35 	"cost"	InwardCost}
+				0 { "dest"	32 	"cost"	InwardCost }
+				1 { "dest"	33 	"cost"	InwardCost }
+				2 { "dest"	35 	"cost"	InwardCost }
 			}
 		}
 
@@ -262,7 +262,7 @@
 			"longitude"	"-80.233369"
 			"edges"
 			{
-				0 { "dest"	50  }
+				0 { "dest"	50  	"cost"	InwardCost }
 				1 
 				{ 
 					"dest"	23 
@@ -292,7 +292,7 @@
 				0 
 				{ 
 					"dest"	 3 
-					"cost"	LocalCostForCrossingAtlantic
+					"cost"	0
 				}
 				1 { "dest"	 4  }
 			}
@@ -427,6 +427,9 @@
 					"cost"	LocalCostCanadaToUS
 				}
 				2 { "dest"	 136  }
+				3 { "dest"	 134  }
+				4 { "dest"	 81  }
+				5 { "dest"	 94  }
 			}
 		}
 
@@ -491,7 +494,11 @@
 			"region"	"global"
 			"edges"
 			{
-				0 { "dest"	4  }
+				0 
+				{ 
+					"dest"	4  
+					"cost"  LocalCostBetweenEuropeAndAfrica
+				}
 				1 
 				{ 
 					"dest"	97 
@@ -513,7 +520,7 @@
 		// #25 .. Brazil
 		25
 		{
-			"name" "Brazil"
+			"name" "Brazil - Sao Paulo"
 			"region"	"brazil"
 			"latitude"	"-23.543845"
 			"longitude"	"-46.62941"
@@ -521,6 +528,10 @@
 			{
 				0 { "dest"	23 }
 				1 { "dest"	116 }
+				2 { "dest"	153 }
+				3 { "dest"	154 }
+				4 { "dest"	155 }
+				5 { "dest"	156 }
 			}
 		}
 
@@ -593,7 +604,6 @@
 			"edges"
 			{
 				0 { "dest"	 123	"cost"	InwardCost  }
-				1 { "dest"	 126  }
 			}
 		}
 
@@ -665,6 +675,11 @@
 				4
 				{ 
 					"dest"	47 
+					"cost"	LocalCostOneWayCellEdge
+				}
+				5 
+				{ 
+					"dest"	152
 					"cost"	LocalCostOneWayCellEdge
 				}
 			}
@@ -881,7 +896,7 @@
 			"edges"
 			{
 				0 { "dest"	5 	"cost"	InwardCost }
-				1 { "dest"	92  }
+				1 { "dest"	92 	"cost"	InwardCost   }
 				2 { "dest"	93  }
 			}
 		}
@@ -1500,7 +1515,8 @@
 			"longitude"	"-73.555183"
 			"edges"
 			{
-				0 { "dest"	136 }
+				0 { "dest"	20	"cost"	InwardCost }
+				1 { "dest"	136 }
 				1 
 				{ 
 					"dest"	2 
@@ -1691,7 +1707,7 @@
 					"dest"	31 
 					"cost"	1
 				}
-				1 { "dest"	133 }
+				1 { "dest"	20	"cost"	InwardCost }
 				2 { "dest"	134 }
 			}
 		}
@@ -2096,7 +2112,11 @@
 			"transit"	"1"
 			"edges"
 			{
-				0 { "dest"	96 }
+				0 
+				{ 
+					"dest"	96  
+					"cost"  LocalCostBetweenEuropeAndAfrica
+				}
 				1 
 				{ 
 					"dest"	124
@@ -2132,7 +2152,7 @@
 			"longitude"	"29.024162"
 			"edges"
 			{
-				0 { "dest"	92 }
+				0 { "dest"	92 	"cost"	InwardCost  }
 				1 { "dest"	123 }
 			}
 		}
@@ -2204,7 +2224,7 @@
 			"longitude"	"3.420868"
 			"edges"
 			{
-				0 { "dest"	24	"cost"	InwardCost }
+				0 { "dest"	24 }
 			}
 		}	
 		131
@@ -2215,7 +2235,7 @@
 			"longitude"	"36.835442"
 			"edges"
 			{
-				0 { "dest"	123	"cost"	InwardCost }
+				0 { "dest"	123 }
 			}
 		}			
 		132
@@ -2226,8 +2246,8 @@
 			"longitude"	"-7.584"
 			"edges"
 			{
-				0 { "dest"	24	"cost"	InwardCost }
-				1 { "dest"	123	"cost"	InwardCost }
+				0 { "dest"	24 }
+				1 { "dest"	123 }
 			}
 		}		
 		133
@@ -2238,9 +2258,7 @@
 			"longitude"	"-113.489628"
 			"edges"
 			{
-				0 { "dest"	94	"cost"	InwardCost }
 				1 { "dest"	134	"cost"	InwardCost }
-				2 { "dest"	135 }
 			}
 		}
 		134
@@ -2253,7 +2271,7 @@
 			{
 				0 { "dest"	94	"cost"	InwardCost }
 				1 { "dest"	133 }
-				2 { "dest"	135 }
+				2 { "dest"	20	"cost"	InwardCost }
 			}
 		}				
 		135
@@ -2264,9 +2282,7 @@
 			"longitude"	"-97.141972"
 			"edges"
 			{
-				0 { "dest"	133 }
-				1 { "dest"	134 }
-				2 { "dest"	20	"cost"	InwardCost }
+				0 { "dest"	20	"cost"	InwardCost }
 			}
 		}	
 		136
@@ -2465,12 +2481,57 @@
 		152
 		{
 			"name" "Russia - Vladivostok"
-			"region"	"russia"
+			"region"	"eastern_russia"
 			"latitude"	"43.133333"
 			"longitude"	"131.9"
 			"edges"
 			{
 				0 { "dest"	62	"cost"	InwardCost }
+				1 { "dest"	32 }
+			}		
+		}
+		153
+		{
+			"name" "Brazil - Recife"
+			"region"	"brazil"
+			"latitude"	"-8.053452"
+			"longitude"	"-34.931101"
+			"edges"
+			{
+				0 { "dest"	25	"cost"	InwardCost }
+			}		
+		}
+		154
+		{
+			"name" "Brazil - Brasilia"
+			"region"	"brazil"
+			"latitude"	"-15.79"
+			"longitude"	"-47.88"
+			"edges"
+			{
+				0 { "dest"	25	"cost"	InwardCost }
+			}		
+		}
+		155
+		{
+			"name" "Brazil - Rio de Janeiro"
+			"region"	"brazil"
+			"latitude"	"-22.9"
+			"longitude"	"-43.2"
+			"edges"
+			{
+				0 { "dest"	25	"cost"	InwardCost }
+			}		
+		}
+		156
+		{
+			"name" "Brazil - Porto Alegro"
+			"region"	"brazil"
+			"latitude"	"-30.03"
+			"longitude"	"-51.23"
+			"edges"
+			{
+				0 { "dest"	25	"cost"	InwardCost }
 			}		
 		}
 	}

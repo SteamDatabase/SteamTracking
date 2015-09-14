@@ -73,6 +73,7 @@ CommunityHubContentPanel
 	opacity: 0.0;
 }
 
+.ContentPanel .CommunityContent,
 CommunityPanel #CommunityContent,
 CommunityPanel #ContentRow
 {
@@ -86,6 +87,14 @@ CommunityPanel #ContentRow
 	transition-duration: mediumduration;
 	transition-delay: 0.2s;
 	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.ContentPanel .CommunityContent,
+.StackDepth1 .ContentPanel #CommunityContent
+{
+	opacity: 1.0;
+	opacity-mask: none;
+	transform: none;
 }
 
 CommunityHubContentPanel #CommunityContent,
@@ -163,25 +172,18 @@ CommunityPanel .CommunityBackground
 
 }
 
-CommunityPanel #Loading
+#Loading
 {
 	width: 100%;
 	height: 100%;
-}
 
-.StackDepth1 CommunityPanel #Loading
-{
-	opacity: 0.0;
-}
-
-#Loading
-{
 	opacity: 0.0;
 	transition-property: opacity;
 	transition-duration: 0.25s;
 	transition-delay: 1.0s;
 }
 
+.CommunityLoading #Loading,
 #Loading:focus
 {
 	opacity: 1.0;
@@ -198,6 +200,7 @@ CommunityPanel #Loading
 	font-size: 32px;
 }
 
+CommunityHubContentPanel LoadingThrobber,
 CommunityPanel LoadingThrobber
 {
 	horizontal-align: center;
@@ -227,7 +230,6 @@ CommunityPanel#CommunityMarketItemPicker
 	transition-timing-function: ease-out;
 	transition-duration: 0.23s;
 }
-
 
 #Offline,
 #Error

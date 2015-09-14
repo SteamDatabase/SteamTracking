@@ -7,57 +7,65 @@
 	
 	<TextInputDualTouch>
 		<Panel id="BodyContainer">
+      
+      <Image id="TutorialLeft" src="file://{images}/controller_pad_hands_left.png"/>
+      <Image id="TutorialRight" src="file://{images}/controller_pad_hands_right.png"/>
+      <Image id="TutorialLeftPartialDisable" src="file://{images}/controller_pad_hands_left_fade.png"/>
+      <Image id="TutorialRightPartialDisable" src="file://{images}/controller_pad_hands_right_fade.png"/>
+      <Image id="TutorialLeftAlphaFade" src="file://{images}/controller_pad_hands_left_click.png"/>
+      <Image id="TutorialRightAlphaFade" src="file://{images}/controller_pad_hands_right_click.png"/>
 			
-			<Panel id="Legends" class="DaisyInputTypeABXY ColdLS">
+      <Panel id="Legends" class="DaisyInputTypeABXY ColdLS">
 				
         <Label id="HeaderText" />             <!-- "Store search" -->
         <Label id="SubHeaderDetailText" />    <!-- "14 found" -->
         
-				<Panel id="LBLegend" class="LegendButton">
-					<Label id="LB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_LeftBumper_Short" />
-					<Label id="LB_txt_ABXY" class="LegendText TriggerButtonText LB_txt" text="#UI_Backspace" />
-					<Label id="LB_txt_RS" class="LegendText TriggerButtonText LB_txt" text="#UI_MoveCaretLeft" />
-				</Panel>
-				<Panel id="RBLegend" class="LegendButton">
-					<Label id="RB_txt_ABXY" class="LegendText TriggerButtonText RB_txt" text="#UI_Spacebar" />
-					<Label id="RB_txt_RS" class="LegendText TriggerButtonText RB_txt" text="#UI_MoveCaretRight" />
-					<Label id="RB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightBumper_Short" />
-				</Panel>
-				<Panel id="LeftLegend" class="LegendButton">
-					<Label id="LT_btn" class="LegendButtonBox TriggerButtonBox XInputPadIcon" text="#UI_LeftTrigger_Short" />
-					<Image class="SteamPadIcon" src="file://{images}/controller_legend_left_grip.png" />
-					<Label id="LT_txt" class="LegendText TriggerButtonText" text="#UI_Shift" />
-					<Label id="LG_btn" class="LegendText TriggerButtonText" text="#UI_LeftGrip_Short" />
-				</Panel>
-				<Panel id="RightLegend" class="LegendButton">
-					<Label id="RT_txt" class="LegendText TriggerButtonText" text="#UI_Alt" />
-					<Image class="SteamPadIcon" src="file://{images}/controller_legend_right_grip.png" />
-					<Label id="RT_btn" class="LegendButtonBox TriggerButtonBox XInputPadIcon" text="#UI_RightTrigger_Short" />
-					<Label id="RG_btn" class="LegendText TriggerButtonText" text="#UI_RightGrip_Short" />
-				</Panel>
-				<Panel id="DPadLegend" class="LegendButton">
-					<Label id="DPad_txt_left" class="LegendText TriggerButtonText" text="#UI_Shift" />
-					<Image class="XInputPad" src="file://{images}/textinput/gamepad_digital_blank.tga" />
-					<Image class="SteamPad" src="file://{images}/textinput/textinput_paddles.png" />
-					<Label id="DPad_txt_right" class="LegendText TriggerButtonText" text="#UI_Alt" />
-				</Panel>
-				<Panel id="LangLegend" class="LegendButton">
-					<Panel class="LangImage"/>
-					<Label id="Lang_txt" class="LegendText TriggerButtonText" text="#UI_Languages" />
-				</Panel>
-				
-				<Panel id="MiddleLegendRS" class="LegendButton">
-					<Panel id="ABXY_Footer_Wrapper">
-						<Label id="Y_btn" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
-						<Label id="Y_txt" class="LegendText YButtonText" text="#UI_ShowHidePassword" />
-					</Panel>
-				</Panel>
+        <Panel id="ActualLegends">
+				  <Panel id="LBLegend" class="LegendButton">
+					  <Label id="LB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_LeftBumper_Short" />
+					  <Label id="LB_txt_ABXY" class="LegendText TriggerButtonText LB_txt" text="#UI_Backspace" />
+					  <Label id="LB_txt_RS" class="LegendText TriggerButtonText LB_txt" text="#UI_MoveCaretLeft" />
+				  </Panel>
+				  <Panel id="RBLegend" class="LegendButton">
+					  <Label id="RB_txt_ABXY" class="LegendText TriggerButtonText RB_txt" text="#UI_Spacebar" />
+					  <Label id="RB_txt_RS" class="LegendText TriggerButtonText RB_txt" text="#UI_MoveCaretRight" />
+					  <Label id="RB_btn" class="LegendButtonBox TriggerButtonBox" text="#UI_RightBumper_Short" />
+				  </Panel>
+				  <Panel id="LeftLegend" class="LegendButton">
+					  <Label id="LT_btn" class="LegendButtonBox TriggerButtonBox XInputPadIcon" text="#UI_LeftTrigger_Short" />
+					  <Image class="SteamPadIcon" src="file://{images}/controller_legend_left_grip.png" />
+					  <Label id="LT_txt" class="LegendText TriggerButtonText" text="#UI_Shift" />
+					  <Label id="LG_btn" class="LegendText TriggerButtonText" text="#UI_LeftGrip_Short" />
+				  </Panel>
+				  <Panel id="RightLegend" class="LegendButton">
+					  <Label id="RT_txt" class="LegendText TriggerButtonText" text="#UI_Alt" />
+					  <Image class="SteamPadIcon" src="file://{images}/controller_legend_right_grip.png" />
+					  <Label id="RT_btn" class="LegendButtonBox TriggerButtonBox XInputPadIcon" text="#UI_RightTrigger_Short" />
+					  <Label id="RG_btn" class="LegendText TriggerButtonText" text="#UI_RightGrip_Short" />
+				  </Panel>
+				  <Panel id="DPadLegend" class="LegendButton">
+					  <Label id="DPad_txt_left" class="LegendText TriggerButtonText" text="#UI_Shift" />
+					  <Image class="XInputPad" src="file://{images}/textinput/gamepad_digital_blank.tga" />
+					  <Image class="SteamPad" src="file://{images}/textinput/textinput_paddles.png" />
+					  <Label id="DPad_txt_right" class="LegendText TriggerButtonText" text="#UI_Alt" />
+				  </Panel>
+				  <Panel id="LangLegend" class="LegendButton">
+					  <Panel class="LangImage"/>
+					  <Label id="Lang_txt" class="LegendText TriggerButtonText" text="#UI_Languages" />
+				  </Panel>
+        </Panel>
 				
 			</Panel>
 
 			<Panel id="TextPreviewBackground">
 				<TextEntry id="TextPreview" />
         <LoadingThrobber id="LoadingThrobber" />
+        
+        <Panel id="YButtonWrapper">
+					<Label class="LegendButtonBox YButtonBox" text="#UI_YButton" />
+					<Label class="LegendText YButtonText PasswordVisible" text="#UI_HidePassword" />
+          <Label class="LegendText YButtonText PasswordHidden" text="#UI_ShowPassword" />
+				</Panel>
 			</Panel>
 			<Panel id="SuggestionLabels">
 			    <Label id="Suggest_0_text" class="SuggestionTitleLabel" />

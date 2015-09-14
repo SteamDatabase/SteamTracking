@@ -108,7 +108,8 @@
 //system wide
 @define messagecolorwash: #14c6fcff;
 @define messagecolorwashfade: gradient( linear, 0% 96%, 96% 100%, from( #1c93b8ff ), color-stop( 0.90, #1c84b8ff ), to( #1c84b800 ) );
-@define horizontal_focus: gradient( linear, 0% 0%, 100% 100%, from( #2f7c8c ), to( #243f73 ) );
+@define horizontal_default: gradient( linear, 0% 0%, 100% 100%, from( #2f6682 ), to( #144066 ) );
+@define horizontal_focus: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
 //@define horizontal_focus: gradient( linear, -10% 0%, 110% 0%, from( #398999cc ), to( #395280ff ) );
 @define dialog_bg_color: gradient( radial, 0% -0%, 120px -40px, 420% 370%, from( #327794 ), color-stop( 0.26, #17304dff ) );
@@ -1287,8 +1288,7 @@ FriendsChatDialog .VoiceBarContainer
 	z-index: 1000;
 	width: 300px;
 	height: 150px;
-	transform: translateX( 1698px );
-	padding: 10px;
+	position: 0px 0px 0px;
 }
 
 .VR #HomeButton
@@ -1314,8 +1314,7 @@ FriendsChatDialog .VoiceBarContainer
 	box-shadow: fill #00000055 -3px -3px 4.5px 6px;
 	width: 67px;
 	height: 67px;
-	transform: translateX( 58px );
-	margin-top: 31px;
+	position: 84px 17px 0px;
 
 	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, wash-color, transform;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -1349,10 +1348,9 @@ FriendsChatDialog .VoiceBarContainer
 {
 	background-image: url( "file://{images}/mouse/arrowLdefault.png" );
 	background-position: -10px -10px;
-	transform: translateX( 0px );
+	position: 24px 26px 0px;
 	width: 47px;
 	height: 47px;
-	margin-top: 41px;
 }
 
 .VR #MouseBackButton
