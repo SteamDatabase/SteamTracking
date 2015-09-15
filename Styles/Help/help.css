@@ -869,7 +869,8 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .loginbox input.text_input {
 	width: 270px;
-	height: 18px;
+	font-size: 16px;
+	line-height: 125%;
 	padding: 2px 4px;
 	margin-top: 4px;
 	color: #ffffff;
@@ -1225,6 +1226,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 #refund_text_input
 {
 	width: 100%;
+	font-size: 16px;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
