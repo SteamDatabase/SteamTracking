@@ -112,6 +112,7 @@ Button:focus .dynamiclink_box Label
 	margin-bottom: -23px;
 }
 
+.ContentPanel .PageTitle,
 .OldProfile .PageTitle
 {
 	visibility: collapse;
@@ -125,6 +126,7 @@ Button:focus .dynamiclink_box Label
 	text-transform: uppercase;
 }
 
+.ContentPanel #ContentRow,
 #FriendActivity #ContentRow
 {
 	height: 100%;
@@ -152,6 +154,12 @@ Button:focus .dynamiclink_box Label
 	opacity-mask-scroll-up: url( "file://{images}/profile/sharp_scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/profile/sharp_scroll_data_mask_down.tga" );
 	opacity-mask-scroll-up-down: url( "file://{images}/profile/sharp_scroll_data_mask_both.tga" );
+}
+
+.ContentPanel #LeftActivityColumn,
+.ContentPanel #RightDetailsColumn
+{
+	height: 850px;
 }
 
 #RightDetailsColumn

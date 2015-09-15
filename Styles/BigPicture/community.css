@@ -1,985 +1,241 @@
 
-@define mainmenu_transform_duration: 0.7s;
-
-//
-// Community button background
-//
-.StackDepth1 #CommunityMenu
+#CommunityHomeContent
 {
-	perspective-origin: 62% 5% invert;
-
-	transition-property: perspective-origin, opacity;
-	transition-duration: 0.4s;
-}
-
-.StackDepth1 .CommunityLoaded,
-.StackDepth1 .CommunityVisible #CommunityMenu
-{
-	opacity: 1.0;
-}
-
-#CommunityBackground
-{
-	transform-origin: 0% 0% parent-relative;
-
-	transition-property: transform, position, opacity, pre-transform-scale2d;
-	transition-duration: 0.4s;
-	transition-timing-function: ease-in-out;
-}	
-
-.StackDepth1 .CommunityTransitionVisible #CommunityBackground
-{
-	perspective-origin: 50% 50%;
-	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 64px, 600px, 330px );
-	opacity: 1.0;
-}
-
-.CommunityTransitionRightAndOff #CommunityBackground
-{
-	transform:  translatex( 1200px ) translatey( -100px ) translatez( 0px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 0px, 580px, 230px );
-}
-
-.CommunityTransitionLeftAndOff #CommunityBackground
-{
-	transform: translatex( -1000px ) translatey( 200px ) translatez( 0px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 0px, 580px, 230px );
-	desaturation: 0.3;
-	opacity: 0.0;
-}
-
-.CommunityTransitionDownAndOff #CommunityBackground
-{
-	transform: translatey( 800px ) translatez( 0px ) translatez( 230px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 0px, 580px, 230px );
-	desaturation: 0.3;
-	opacity: 0.0;
-}
-
-
-#CommunityContent
-{
-	animation-name: communityfriends-perspective;
-	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-	perspective: 1000;
-	transform-origin: 50% 50%;
-	transition-property: opacity, pre-transform-scale2d, perspective;
-
-}
-
-.StackDepth1 #CommunityContent
-{
-	opacity-mask: url("file://{images}/background_alpha_mask.png") 1.0;
-}
-
-
-#CommunityMenu
-{
-	height: 100%;
-	perspective-origin: 62% 5% invert;
-}
-
-#CommunityMenu #CommunityContent
-{
-	height: 100%;
-	perspective: 1000;
-	transform-origin: 50% 50%;
-}
-
-
-.StackDepth1 #CommunityBackground.CommunityTransitionVisible #CommunityContent
-{
-	opacity: 1.0;
-}
-
-.StackDepth3 #CommunityWrapper #CommunityMenu
-{
-	transform: translate3d( 0px, -135px, -100px );
-	transition-property: transform;
-	transition-timing-function: ease-out;
-	transition-duration: 0.23s;
-}
-
-#CommunityWrapper.CommunityVisible #CommunityMenu:descendantfocus
-{
-	background-image: url( "file://{images}/carousel_bg.png" );
-	background-size: 100% 100%;
-}
-
-#CommunityBackgroundWrapper
-{
-	perspective-origin: 62% 5% invert;
-	perspective: 1000;
-	z-index: -1000;
-
 	height: 100%;
 	width: 100%;
 }
 
-
-#CommunityMenuRow
+.CommunityContentWrapper
 {
-	horizontal-align: center;
+	height: 100%;
+	width: 100%;
+	padding-top: 50px;
+	flow-children: right;
+}
+
+.CommunityContentSectionWrapper
+{
+	width: 150%;
+	height: 100%;
 	vertical-align: top;
-	font-size: 33;
-	background-color: #00000000;
-	position: 0px 0px 0%;
-
-	transform-origin: 0% 0% parent-relative;
-	transition-property: blur, desaturation, opacity, transform, opacity;
-	transition-duration: 0.35s;
-	transition-timing-function: ease-in-out;
 }
 
-#CommunityStatusPanel
+.CommunityContentSectionPanel
 {
 	width: 100%;
-	text-align: center;
+	height: 100%;
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: shortduration;
+}
+
+.CommunityContentSectionPanel.Selected
+{
+	opacity: 1.0;
+}
+
+.ContentAreaFocus .NxRightColumn
+{
+	transform: translatex( -200px );
+}
+
+#CommunityContentEmpty
+{
+	padding-bottom: 195px;
+}
+
+#CommunityContentEmptyLabel
+{
+	align: center center;
+	font-size: 34px;
+	height: 64px;
+	horizontal-align: center;
+	vertical-align: center;
+	color: #67c1f5ff;
+	white-space: nowrap;
+	font-weight: bold;
+	text-overflow: clip;
+}
+
+
+
+.NxFilterTab
+{
+	width: 420px;
+	height: fit-children;
+	max-height: 700px;
+	opacity: 1.0;
+	position: 1825px 120px 0px;
+	margin-top: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	background-color: black;
+	overflow: clip;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #1184baee ), to( #0e2744ee ) );
+
+	box-shadow: fill #00000066 -4px -4px 6px 6px;
+
 	flow-children: down;
 
-	vertical-align: bottom;
-	margin-bottom: 150px;
+	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
+	transition-duration: 0.3s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
 
-	transition-property: opacity;
-	transition-duration: shortmedduration;
+	z-index: 5;
+
 }
 
-.CommunityStatus, #CommunitySelectionInfo
+.ContentAreaFocus .NxFilterTab
 {
-	horizontal-align: center;
-	font-weight: thin;
-	color: #15cff9;
-	font-size: 32px;
-
-	opacity: 1.0;
-
-	transition-property: opacity;
-	transition-timing-function: ease-out;
-	transition-duration: shortmedduration;
+	position: 1630px 120px 0px;
 }
 
-#CommunitySelectionMarket,
-#CommunitySelectionGameHubs
+.NxFilterTab:descendantfocus
+{
+	opacity: 1.0;
+	desaturation: 0.0;
+	transform: translatez( 20px );
+	position: 1480px 120px 0px;
+}
+
+.NxFilterTab ToggleButton.CheckBox,
+.NxFilterTab RadioButton,
+.NxFilterTab .NxTagHeader,
+.NxFilterTab Button,
+.NxFilterTab.EmptyFilter Button.NxFilterButton
+{
+	height: 0px;
+
+	margin: 0px;
+}
+.NxFilterTab:descendantfocus ToggleButton,
+.NxFilterTab:descendantfocus RadioButton
+{
+	margin: 2px 10px 2px 0px;
+}
+
+.NxFilterTab:descendantfocus ToggleButton,
+.NxFilterTab ToggleButton:selected,
+.NxFilterTab:descendantfocus RadioButton,
+.NxFilterTab RadioButton:selected,
+.NxFilterTab:descendantfocus .NxTagHeader,
+.NxFilterTab:descendantfocus Button,
+.NxFilterTab .AlwaysVisible
+{
+	height: fit-children;
+}
+
+.NxFilterTab .NxTagHeader.FilterHeader {
+	height: 56px;
+	margin-left: 10px;
+}
+
+.NxFilterTab .FilterHeader
+{
+	font-size: 34px;
+	color: #ffffff;
+
+}
+
+.NxFilterWrapper
+{
+	position: 150px 0px 0px;
+	width: 400px;
+	height: fit-children;
+	padding: 0px;
+	margin-left: 10px;
+	z-index: 10;
+
+	overflow: clip scroll;
+
+	flow-children: down;
+
+	transition-property: position, color, background-color, transform, opacity, height, width;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+
+}
+
+.NxFilterWrapper:descendantfocus
+{
+	position: 0px 0px 0px;
+	max-height: 600px;
+}
+
+
+#ContentFilter
 {
 	opacity: 0.0;
+}
+
+.CommunityContentAllVisible #ContentFilter
+{
+	opacity: 1.0;
+}
+
+.NxFilterTab #FilterButton_11:selected,
+{
+	height: 0px;
+	margin: 0px;
+}
+
+.NxFilterTab:descendantfocus #FilterButton_11:selected
+{
+	height: fit-children;
+}
+
+.CommunityContentSearchWrapper
+{
+	height: 500px;
+	width: 700px;
+	align: center top;
+	margin-top: 100px;
+	flow-children: down;
+}
+
+#CommunityContentSearch Label
+{
+	font-size: 24px;
+	color: #67c1f5ff;
+	margin-right: 10px;
+	vertical-align: center;
+	horizontal-align: center;
 	margin-bottom: 10px;
 }
 
-.MarketFocused #CommunitySelectionMarket,
-.GameHubsFocused #CommunitySelectioNGameHubs
+#CommunityContentSearch .Header
 {
-	opacity: 1.0;
+	font-size: 32px;
 }
 
-.CommunityStatusHidden
+#CommunityContentSearch TextEntry
 {
-	opacity: 0.0;
+	font-size: 22px;
+	width: 100%;
+	margin-bottom: 10px;
 }
 
-#CommunityStatus3
+#AppHubSearchResults
 {
-	font-size: 28px;
-}
-
-.Button,
-.StackDepth3 .Button:focus,
-{
-	horizontal-align: center;
-	vertical-align: center;
-	width: 438px;
-	height: 200px;
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414230;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #111414ff ), to( #070708ff ) );
-
-	transform: translatez( 0px );
-	transition-property: border, blur, background-color, color, transform, box-shadow, pre-transform-scale2d;
-	transition-timing-function: ease-out;
-	transition-duration: 0.23s;
-
-	pre-transform-scale2d: 0.9;
-	animation-name: none;
-	box-shadow: none;
-}
-
-.StackDepth2 .Button
-{
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #1f2124ff ), to( #0f0f11ff ) );
-}
-
-.StackDepth3 .Button,
-.StackDepth3 .Button:focus
-{
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #111414ff ), to( #070708ff ) );
-	transform: translatey( -20px );
-	
-}
-
-.Button:active
-{
-	transition-duration: 0.3s;
-}
-
-#CommunityContent:descendantfocus .Button:hover
-{
-	transition-duration: 0.3s;
-	background-color: all_games_hover;
-	box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
-
-	transform: translatez( 25px );
-}
-
-.Button:focus
-{
-	transition-duration: 0.3s;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	transform: translatez( 50px );
-	transition-duration: 0.3s;
-	transition-property: transform, background-color, box-shadow, pre-transform-scale2d;
-
-	animation-name: main-button-glow-movement, quick-blur;
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
-	animation-direction: normal;
-
-}
-
-#CommunityContent:descendantfocus .Button:hover
-{
-	transform: translateZ( 105px );
-}
-
-#CommunityContent:descendantfocus .Button:descendantfocus:hover
-{
-	transform: translateZ( 105px );
-}
-
-
-.StackDepth2 .Button:active,
-.StackDepth3 .Button:active
-{
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-}
-
-
-.ButtonLabel,
-.StackDepth3 .Button:focus .ButtonLabel
-{
-	vertical-align: center;
-	color: applabel;
-	font-size: 48;
-	font-weight: light;
-	text-overflow: clip;
 	flow-children: down;
-	transition-property: color;
+	overflow: squish scroll;
+	width: 100%;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	opacity: 0.9999;
 }
 
-.ButtonLabel,
-.ButtonLabel Label
+#LeftColumn .Header
 {
-	width: 400px;
-	text-align: center;
-	horizontal-align: center;
 	text-transform: uppercase;
 }
 
-#CommunityMenu .Button Label,
-#ProfileMenu .Button Label {
-	font-size: 48;
-	padding-left: 0px;
-	padding-right: 0px;
-	margin-right: 15px;
-}
-
-.Button:focus .ButtonLabel
+#LeftColumn .TopHeader
 {
-	color: tcmainbuttonselected;
-}
-
-#CommunityMenu .Button:disabled
-{
-	padding-bottom: 40px;
-}
-
-#CommunityMenu .Button:disabled #CommunityGameHubsLabel2
-{
-	font-size: 36px;
-}
-
-.CommunityPanel
-{
-	opacity: 0.0;
-}
-
-.StackDepth2 #CommunityWrapper.MenuFocused .CommunityPanel#CommunityMenu,
-.StackDepth3 #CommunityWrapper.MenuFocused .CommunityPanel#CommunityMenu
-{
-	opacity: 1.0;
-}
-
-.StackDepth2 #CommunityWrapper.MarketFocused .CommunityPanel#CommunityMarket,
-.StackDepth3 #CommunityWrapper.MarketFocused .CommunityPanel#CommunityMarket
-{
-	opacity: 1.0;
-}
-
-.StackDepth2 #CommunityWrapper.GameHubsFocused .CommunityPanel#CommunityGameHubs,
-.StackDepth3 #CommunityWrapper.GameHubsFocused .CommunityPanel#CommunityGameHubs
-{
-	opacity: 1.0;
-}
-
-
-
-//
-// Main menu background
-//
-.StackDepth1 #CommunityMenu .Button
-{
-	pre-transform-scale2d: 0.7;
-
-	opacity: 0.9;
-}
-
-.StackDepth1 #CommunityMarketButton,
-.StackDepth1 #CommunityMarketButtonStub
-{
-	transform: translatey( -100px ) translatex( 100px ) translatez( 175px );
-}
-
-.StackDepth2 #CommunityMarketButton:hover,
-.StackDepth2 #CommunityGameHubsButton:hover
-{
-	background-color: all_games_hover;
-	box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
-	transform: translate3d( 0px, 70px, 35px );
-	transition-duration: 0.23s;
-}
-
-.StackDepth2 #CommunityMarketButton:focus,
-.StackDepth2 #CommunityGameHubsButton:focus
-{
-	transform: translatex( 0px ) translatey( 70px ) translatez( 30px );
-}
-
-.StackDepth2 #CommunityMarketButton:focus:hover,
-.StackDepth2 #CommunityGameHubsButton:focus:hover
-{
-	transform: translatex( 0px ) translatey( 75px ) translatez( 55px );
-	
-	background-color: all_games_hover;
-	box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-}
-
-
-.StackDepth1 #CommunityStatusPanel
-{
-	opacity: 0.0;
-}
-
-#CommunityGameHubsButton,
-#CommunityGameHubsButtonStub,
-#CommunityMarketButton,
-#CommunityMarketButtonStub
-{
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	flow-children: down;
-}
-
-.CommunityThumb
-{
-	vertical-align: center;
-	opacity: 0.0;
-
-	box-shadow: fill dark_box_shadow_color -6px 0px 12px 16px;
-//	background-color: black;
-	pre-transform-scale2d: 0.6;
-
-	transition-property: transform, opacity, blur, desaturation, pre-transform-scale2d, position;
-	transition-duration: mainmenu_transform_duration;
-	transition-timing-function: ease-in-out;
-
-	opacity-mask: url( "file://{images}/focus_shadow_left.png" ) 0.0;
-
-	flow-children: down;
-}
-
-.StackDepth2 .CommunityThumb,
-.StackDepth3 .CommunityThumb
-{
-	pre-transform-scale2d: 1.0;
-	x: 100px;
-	box-shadow: none;
-}
-
-.CommunityBlocked .CommunityThumb
-{
-	visibility: collapse;
-}
-
-.CommunityThumb.GameHubThumb
-{
-	/*
-	min-height: 297px;
-	max-width: 680px;
-	max-height: 350px;
-	*/
-	width: 438px;
-	height: 297px;
-}
-
-.Button:focus #CommunityGameHubsLabel1
-{
-	color: tcmainbuttonselected;
-}
-
-.CommunityThumb.MarketThumb
-{
-	height: 297px;
-	max-width: 438px;
-	min-width: 256px;
-}
-
-
-#CommunityMarketButton,
-#CommunityMarketButtonStub
-{
-	position: 462px 192px 0%;
-	horizontal-align: left;
-	vertical-align: top;
-}
-
-#CommunityGameHubsButton,
-#CommunityGameHubsButtonStub
-{
-	position: 1020px 192px 0%;
-	horizontal-align: left;
-	vertical-align: top;
-}
-
-.StackDepth1 #CommunityMenu #CommunityGameHubsButton
-{
-	transform: translatex( -172px ) translatey( 10px );
-	pre-transform-scale2d: 0.66;
-	opacity: 0.0;
-}
-
-.StackDepth1 #CommunityMenu #CommunityMarketButton
-{
-	transform: translatex( -67px ) translatey( -118px ) translatez( 0px );
-	pre-transform-scale2d: 0.75;
-	opacity: 0.0;
-}
-
-.StackDepth2 #CommunityMenu .ButtonStub,
-.StackDepth3 #CommunityMenu .ButtonStub
-{
-	opacity: 0.0;
-}
-
-#CommunityStatusPanel
-{
-	vertical-align: top;
-	transform: translatey( 852px );
-}
-
-
-.StackDepth3 .CommunityThumb
-{
-	opacity: 0.0;
-	transition-property: transform, opacity;
-	transition-duration: 0.1s;
-}
-
-
-.StackDepth1 #CommunityMenu .CommunityThumb.CommunityLoading,
-.StackDepth2 #CommunityMenu .CommunityThumb.CommunityLoading,
-.CommunityThumb.CommunityLoading
-{
-	opacity: 0.0;
-}
-
-
-
-
-#CommunityMenu
-{
-	perspective-origin: 62% 5% invert;
-}
-
-#CommunityBackgroundWrapper
-{
-	perspective: 1000;
-	z-index: -1000;
-	perspective-origin: 62% 5% invert;
-}
-
-#CommunityBackground
-{
-	perspective-origin: 50% 50%;
-	transform-origin: 0% 0% parent-relative;
-
-	desaturation: 0.0;
-	
-	height: 100%;
-	width: 100%;
-}
-
-
-#CommunityContent
-{
-	perspective: 1000;
-	pre-transform-scale2d: 0.9;
-	overflow: noclip squish;
-}
-
-.StackDepth1 #CommunityContent
-{
-	transform: translatex( -150px ) translatey( 0px );
-}
-
-//
-// Thumb positions
-//
-#MarketThumb0
-{
-	transform: translate3d( 192px, 110px, 26px );
-	desaturation: 0.6;
-	wash-color: bgcolorwashmedium;
-	blur: gaussian( 1.5 );
-	
-	opacity: 0.8;
-}
-
-#MarketThumb1
-{
-	transform: translate3d( 260px, -240px, -270px );
-	desaturation: 0.6;
-	opacity: 0.4;
-	wash-color: bgcolorwashmedium;
-	blur: gaussian( 1.2 );
-}
-
-#MarketThumb2
-{
-	transform: translate3d( 736px, -99px, 150px );
-	desaturation: 0.0;
-	wash-color: none;
-	blur: none;
-	opacity: 1.0;
-}
-
-#MarketThumb3
-{
-	transform: translate3d( 646px, 29px, -150px );
-	desaturation: 0.4;
-	wash-color: bgcolorwashmedium;
-	blur: gaussian( 0.9 );
-	opacity: 0.9;
-
-}
-
-#MarketThumb4
-{
-	transform: translate3d( 998px, 28px, 100px );
-	desaturation: 0.3;
-	wash-color: bgcolorwashmedium;
-	blur: none;
-	opacity: 1.0;
-}
-
-#MarketThumb5
-{
-	transform: translate3d( 566px, -296px, -230px );
-	blur: gaussian( 1.3 );
-	opacity: 0.9;
-	desaturation: 0.4;
-	wash-color: bgcolorwashmedium;
-}
-
-#MarketThumb6
-{
-	transform: translate3d( 848px, -176px, -380px );
-	blur: gaussian( 1.8 );
-	opacity: 0.9;
-	desaturation: 0.5;
-	wash-color: bgcolorwashmedium;
-}
-
-#MarketThumb7
-{
-	transform: translate3d( 696px, -300px, -440px );
-	desaturation: 0.8;
-	wash-color: bgcolorwashmedium;
-	blur: gaussian( 2.0 );
-	opacity: 0.3;
-}
-
-#MarketThumb8,
-#MarketThumb9,
-#MarketThumb10,
-#MarketThumb11
-{
-	visibility: collapse;
-}
-
-
-#GameHubThumb0
-{
-	transform: translate3d( 226px, 150px, -700px );
-	blur: gaussian( 2.5 );
-	opacity: 0.2;
-	desaturation: 0.9;
-	wash-color: bgcolorwashmedium;
-}
-
-#GameHubThumb1
-{
-	transform: translate3d( 424px, 50px, 56px );
-	blur: gaussian( 0.3 );
-	desaturation: 0.3;
-	
-	wash-color: bgcolorwashmedium;
-	opacity: 1.0;
-}
-
-#GameHubThumb2
-{
-	transform: translate3d( 0px, -200px, -600px );
-	blur: gaussian( 0.3 );
-	desaturation: 0.3;
-	
-	wash-color: bgcolorwashmedium;
-	opacity: 1.0;
-}
-
-#GameHubThumb3
-{
-	transform: translate3d( 446px, 270px, -600px );
-	blur: gaussian( 2.5 );
-	opacity: 0.2;
-	desaturation: 0.9;
-	wash-color: bgcolorwashmedium;
-}
-
-#GameHubThumb4
-{
-	transform: translate3d( 354px, -55px, 150px );
-	wash-color: bgcolorwash;
-	blur: gaussian( 1.2 );
-	
-	opacity: 1.0;
-	desaturation: 0.6;
-}
-
-#GameHubThumb5
-{
-	transform: translate3d( 908px, -58px, -200px );
-	blur: gaussian( 1.25 );
-	opacity: 0.9;
-	desaturation: 0.2;
-	wash-color: bgcolorwashmedium;
-}
-
-#GameHubThumb6
-{
-	transform: translate3d( 626px, 348px, -490px );
-	blur: gaussian( 1.6 );
-	opacity: 0.8;
-	wash-color: bgcolorwashmedium;
-}
-
-#GameHubThumb7
-{
-	transform: translate3d( 394px, 240px, -200px );
-	desaturation: 0.6;
-	opacity: 0.6;
-	wash-color: bgcolorwashmedium;
-	blur: gaussian( 0.5 );
-}
-
-#GameHubThumb8
-{
-	transform: translate3d( 938px, 176px, -200px );
-	blur: gaussian( 1.6 );
-	opacity: 0.8;
-	wash-color: bgcolorwashmedium;
-
-}
-
-#GameHubThumb9,
-#GameHubThumb10,
-#GameHubThumb11
-{
-	visibility: collapse;
-}
-
-
-//
-// Thumb positions stack depth 2 and deeper
-//
-.StackDepth2 #MarketThumb0,
-.StackDepth3 #MarketThumb0
-{
-	transform: translate3d( -98px, -220px, -186px );
-	blur: gaussian( 4 );
-	opacity: 0.5;
-	desaturation: 0.7;
-}
-
-.StackDepth2 #MarketThumb1,
-.StackDepth3 #MarketThumb1
-{
-	transform: translate3d( 22px, 150px, -50px );
-	desaturation: 0.5;
-	blur: gaussian( 3.2 );
-	opacity: 0.8;
-}
-
-.StackDepth2 #MarketThumb2,
-.StackDepth3 #MarketThumb2
-{
-	blur: gaussian( 8, 8, 2 );
-
-	opacity: 1.0;
-	transform: translate3d( 0px, 0px, -200px );
-	desaturation: 0.3;
-	border-radius: 2px;
-}
-
-.StackDepth2 #MarketThumb3,
-.StackDepth3 #MarketThumb3
-{
-	transform: translate3d( 0px, 355px, -350px );
-	blur: gaussian( 1.25 );
-	opacity: 0.7;
-	desaturation: 0.1;
-}
-
-.StackDepth2 #MarketThumb4,
-.StackDepth3 #MarketThumb4
-{
-	transform: translate3d( 650px, -105px, -120px );
-	blur: gaussian( 1.1 );
-	opacity: 0.8;
-	desaturation: 0.4;
-}
-
-.StackDepth2 #MarketThumb5,
-.StackDepth3 #MarketThumb5
-{
-	transform: translate3d( 324px, 250px, -200px );
-	desaturation: 0.5;
-	blur: gaussian( 1.5 );
-	opacity: 0.9;
-}
-
-.StackDepth2 #MarketThumb6,
-.StackDepth3 #MarketThumb6
-{
-	transform: translate3d( 170px, -300px, -270px );
-	desaturation: 0.7;
-	blur: gaussian( 1.2 );
-	opacity: 0.7;
-}
-
-.StackDepth2 #MarketThumb7,
-.StackDepth3 #MarketThumb7
-{
-	transform: translate3d( 440px, -485px, -375px );
-	blur: gaussian( 1.3 );
-	opacity: 0.8;
-	desaturation: 0.4;
-}
-
-.StackDepth2 #GameHubThumb0,
-.StackDepth3 #GameHubThumb0
-{
-	transform: translate3d( 826px, -530px, -580px );
-	desaturation: 0.6;
-	blur: gaussian( 1.6 );
-	opacity: 0.4;
-}
-
-.StackDepth2 #GameHubThumb1,
-.StackDepth3 #GameHubThumb1
-{
-	transform: translate3d( 1126px, -580px, -380px );
-	desaturation: 0.6;
-	blur: gaussian( 1.6 );
-	opacity: 0.4;
-}
-
-.StackDepth2 #GameHubThumb2,
-.StackDepth3 #GameHubThumb2
-{
-	transform: translate3d( 726px, 296px, -600px );
-	blur: gaussian( 2.2 );
-	opacity: 0.3;
-	desaturation: 0.4;
-}
-
-.StackDepth2 #GameHubThumb3,
-.StackDepth3 #GameHubThumb3
-{
-	transform: translate3d( 1008px, -246px, -350px );
-	blur: gaussian( 1.8 );
-	opacity: 0.7;
-	desaturation: 0.3;
-}
-
-.StackDepth2 #GameHubThumb4,
-.StackDepth3 #GameHubThumb4
-{
-	transform: translate3d( 880px, 125px, -200px );
-	blur: gaussian( 1.25 );
-	opacity: 1.0;
-	desaturation: 0.2;
-}
-
-.StackDepth2 #GameHubThumb5,
-.StackDepth3 #GameHubThumb5
-{
-	transform: translate3d( 1356px, 0px, -80px );
-	desaturation: 0.2;
-	blur: gaussian( 1.7 );
-	opacity: 1.0;
-}
-
-.StackDepth2 #GameHubThumb6,
-.StackDepth3 #GameHubThumb6
-{
-	transform: translate3d( 1360px, 322px, -230px );
-	desaturation: 0.2;
-	blur: gaussian( 1.25 );
-	opacity: 1.0;
-
-}
-
-.StackDepth2 #GameHubThumb7,
-.StackDepth3 #GameHubThumb7
-{
-	transform: translate3d( 1538px, -375px, -550px );
-	blur: gaussian( 1.8 );
-	opacity: 0.3;
-	desaturation: 0.4;
-
-}
-
-.StackDepth2 #GameHubThumb8,
-.StackDepth3 #GameHubThumb8
-{
-	transform: translate3d( 1416px, -345px, -150px );
-	blur: gaussian( 1.25 );
-	opacity: 1.0;
-}
-
-
-
-.StackDepth2 #CommunityMenu #CommunityContent
-{
-	perspective: 900;
-	opacity: 0.5;
-	desaturation: 0.6;
-	pre-transform-scale2d: 0.9;
-	transition-duration: 0.3s;
-}
-
-.StackDepth3 #CommunityMenu #CommunityContent
-{
-	opacity: 0.0;
-	desaturation: 0.23;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in-out;
-	transition-property: opacity, desaturation, pre-transform-scale2d;
-	pre-transform-scale2d: 0.8;	
-	perspective: 900;
-}
-
-
-// For debugging
-//
-// Change opacity for debugging
-//
-.CommunityThumb Label
-{
-	opacity: 0.0;
-	
-	vertical-align: center;
-	horizontal-align: center;
-
-	z-index: 100;
-	font-size: 56px;
-	color: white;
-}
-
-// Uncomment opacity to hide buttons in depth 2 
-.StackDepth2 .Button
-{
-//	opacity: 0.0;
-	transform: translate3d( 0px, 70px, 0px );
-}
-
-
-
-.CommunityHomeGlow
-{
-	transform: translate3d( 0px, 70px, 0px );
-	opacity: 0.1;
-	height: 800px;
-	
-	transition-property: opacity, transform;
-	transition-timing-function: ease-in-out;
-	transition-duration: 0.3s;
-
-}
-
-.StackDepth2 .CommunityHomeGlow,
-
-{
-	transform: translate3d( 0px, 70px, 0px );
-	opacity: 0.6;
-}
-
-.StackDepth3 .CommunityHomeGlow,
-
-{
-	transform: translate3d( 0px, -80px, 0px );
-	opacity: 0.5;
-}
-
-.CommunityHomeGlow2
-{
-	opacity: 0.0;
-}
-
-.StackDepth2 .CommunityHomeGlow2
-{
-	transform: translate3d( 0px, 0px, -500px );
-	height: 1000px;
-	width: 100%;
-	opacity: 0.7;
-}
-
-.StackDepth3 .CommunityHomeGlow2
-{
-	transform: translate3d( 0px, -400px, -500px );
-	height: 1000px;
-	opacity: 0.4;
+	margin-top: 0px;
 }

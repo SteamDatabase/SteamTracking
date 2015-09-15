@@ -319,15 +319,26 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 		case 'JPY':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.00', '' );
 		case 'BRL':
+		case 'COP':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.', ',' );
+		case 'CLP':
+			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.00', '' ).replace( '.', ',' );
 		case 'NOK':
+		case 'PLN':
 			return currencyFormat.replace( '.', ',' ) + ' ' + GetCurrencySymbol( currencyCode );
+		case 'SAR':
+		case 'AED':
+		case 'CHF':
+			return currencyFormat + ' ' + GetCurrencySymbol( currencyCode );
 		case 'IDR':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat;
 		case 'MYR':
 		case 'PHP':
 		case 'SGD':
 		case 'THB':
+		case 'CNY':
+		case 'INR':
+		case 'ZAR':
 			return GetCurrencySymbol( currencyCode ) + currencyFormat;
 		case 'KRW':
 			return GetCurrencySymbol( currencyCode ) + currencyFormat.replace( '.00', '' );
@@ -335,7 +346,12 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 		case 'CAD':
 		case 'AUD':
 		case 'NZD':
+		case 'PEN':
+		case 'HKD':
+		case 'TWD':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat;
+		case 'VND':
+			return currencyFormat.replace( '.00', '' ) + GetCurrencySymbol( currencyCode );
 		default:
 			return currencyFormat + ' ' + currencyCode;
 	}
@@ -740,19 +756,6 @@ function ShowTradeOffer( tradeOfferID, rgParams )
 	var winOffer = window.open( 'https://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strParams, strKey, 'height=' + winHeight + ',width=1028,resize=yes,scrollbars=yes' );
 
 	winOffer.focus();
-}
-
-function PostToURLWithSession( url, rgParams )
-{
-	var $Form = $J('<form/>', {'action': url, 'method': 'POST' } );
-	$Form.append( $J('<input/>', {'type': 'hidden', 'name': 'sessionid', 'value': g_sessionID } ) );
-	if ( rgParams )
-	{
-		for ( var name in rgParams )
-			$Form.append( $J('<input/>', {'type': 'hidden', 'name': name, 'value': rgParams[name] } ) );
-	}
-	$Form.appendTo( 'body' );
-	$Form.submit();
 }
 
 function Logout()

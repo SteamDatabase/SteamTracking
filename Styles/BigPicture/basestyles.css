@@ -211,12 +211,17 @@
 	box-shadow: none;
 	color: #67c1f5FF;
 	background-color: #09334dFF;
-	border-style: solid;
-	border-width: 5px;
-	border-color: #ffffff00;
 
+	border-left-style: solid;
+	border-left-width: 5px;
+	border-left-color: #67c1f5FF;
 }
 
+.NxLeftNavButtonAction:focus {
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-left-color: #ffffffFF;
+}
 
 
 .NxLeftNavButton Label
@@ -326,6 +331,14 @@
 	animation-direction: normal;
 }
 
+.NxLeftNavButtonSpacer
+{
+	width: 100%;
+	margin: 2px 10px 2px 10px;
+	padding: 10px 0px 0px 24px;
+	height: 48px;
+	background-color: transparent;
+}
 
 .NxLeftNav .SmallHeaderImage
 {
@@ -358,9 +371,13 @@
 
 .NxGridButtonRow
 {
-	width: 22%;
+	margin-top: 20px;
+	margin-left: 70px;
+	width: 400px;
 	height: 100%;
 	flow-children: down;
+	overflow: clip scroll;
+
 	margin-right: 30px;
 
 	transform: translateX( -35px );
@@ -369,7 +386,6 @@
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
-	pre-transform-scale2d: 0.93;
 
 	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
 }
@@ -378,7 +394,6 @@
 {
 	transform: translateX( 0px );
 	opacity: 1;
-	pre-transform-scale2d: 1;
 	opacity-mask: none;
 }
 

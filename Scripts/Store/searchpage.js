@@ -187,7 +187,7 @@ function SearchLinkClick( elem )
 		// ?? not sure
 		window.location = href;
 	}
-	window.scrollTo(0,0);
+	$J(window ).scrollTop( $J('.page_header_ctn.search' ).offset().top - GetResponsiveHeaderFixedOffsetAdjustment() );
 }
 
 LocationHashObserver = Class.create(Abstract.TimedObserver, {

@@ -2756,7 +2756,6 @@ function BindAutoFlyoutEvents()
 			( e.type == 'mouseenter' && bResponsiveSlidedownMenu ) )
 			return;
 
-
 		$Content.data( 'flyout-event-running', true );
 		window.setTimeout( function() { $Content.data('flyout-event-running', false ); }, 1 );
 
@@ -2770,8 +2769,11 @@ function BindAutoFlyoutEvents()
 
 		if ( !$Content.data('flyout-mouseleave-bound') )
 		{
-			$Content.on('mouseleave.Flyout', function() {
+			$Content.on('mouseleave.Flyout', function( e ) {
 				if ( window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown') )
+					return;
+
+				if ( $Tab.is( e.toElement ) || $J.contains( $Tab[0], e.toElement ) )
 					return;
 
 				HideFlyoutMenu( null, $Tab, $Content );
@@ -2786,7 +2788,7 @@ function BindAutoFlyoutEvents()
 		{
 			window.setTimeout( function() {
 				$J(document).on('click.FlyoutDismiss', function(e) {
-					if ( $J.contains( $Content[0], this ) || $Content.is(this) )
+					if ( $J.contains( $Content[0], e.target ) || $Content.is( e.target ) )
 						return;
 
 					HideFlyoutMenu( null, $Tab, $Content );
@@ -2798,12 +2800,12 @@ function BindAutoFlyoutEvents()
 	});
 
 	$J(document).on('mouseleave.Flyout', '.flyout_tab', function(e) {
-
 		var $Tab = $J(this);
 		var $Content = $J('#' + $Tab.data('flyout') );
 		var bResponsiveSlidedownMenu = window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown');
 
-		if ( !$Content.length || $Content.data('flyout-event-running') || bResponsiveSlidedownMenu )
+		if ( !$Content.length || $Content.data('flyout-event-running') || bResponsiveSlidedownMenu ||
+			$Content.is( e.toElement ) || $J.contains( $Content[0], e.toElement ) )
 			return;
 
 		if ( $Content.is(':visible') )
@@ -2899,6 +2901,22 @@ function UpdateNotificationCounts()
 }
 
 
+function PostToURLWithSession( url, rgParams )
+{
+	var $Form = $J('<form/>', {'action': url, 'method': 'POST' } );
+
+	// site must set this js var or pass to this function
+	if ( typeof g_sessionID != 'undefined' )
+		$Form.append( $J('<input/>', {'type': 'hidden', 'name': 'sessionid', 'value': g_sessionID } ) );
+
+	if ( rgParams )
+	{
+		for ( var name in rgParams )
+			$Form.append( $J('<input/>', {'type': 'hidden', 'name': name, 'value': rgParams[name] } ) );
+	}
+	$Form.appendTo( 'body' );
+	$Form.submit();
+}
 
 
 function ShowWithFade( elem, speed )

@@ -19,8 +19,20 @@
 }
 
 .tabbar {
-    margin-bottom: 10px;
+	white-space: nowrap;
+	margin-bottom: 10px;
+	overflow-x: auto;
+	overflow-y: hidden;
 }
+
+/* the preferred way is to wrap tabbar in tabbar_ctn, which helps handle horizontal scrolling on mobile */
+.tabbar_ctn {
+	margin-bottom: 10px;
+}
+.tabbar_ctn .tabbar {
+	margin-bottom: 0;
+}
+
 .tabarea_filler {
     height: 40px;
 }

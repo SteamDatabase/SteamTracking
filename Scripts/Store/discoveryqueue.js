@@ -1,15 +1,4 @@
 
-function GetFilteredDiscoveryQueue( rgAppIDs, Settings, ApplicableSettings, params )
-{
-	var rgItems = [];
-	for ( var i = 0; i < rgAppIDs.length; i++ )
-		rgItems.push( { appid: rgAppIDs[i] } );
-
-	var rgFiltered = GStoreItemData.FilterItemsForDisplay( rgItems, Settings, ApplicableSettings, 12 );
-
-	return new CDiscoveryQueue( 3, rgFiltered, null, params );
-}
-
 function CDiscoveryQueue( eQueueType, rgDiscoveryQueue, Settings, params )
 {
 	this.m_rgItems = [];

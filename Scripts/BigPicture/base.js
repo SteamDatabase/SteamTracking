@@ -416,15 +416,26 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 		case 'JPY':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.00', '' );
 		case 'BRL':
+		case 'COP':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.', ',' );
+		case 'CLP':
+			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat.replace( '.00', '' ).replace( '.', ',' );
 		case 'NOK':
+		case 'PLN':
 			return currencyFormat.replace( '.', ',' ) + ' ' + GetCurrencySymbol( currencyCode );
+		case 'SAR':
+		case 'AED':
+		case 'CHF':
+			return currencyFormat + ' ' + GetCurrencySymbol( currencyCode );
 		case 'IDR':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat;
 		case 'MYR':
 		case 'PHP':
 		case 'SGD':
 		case 'THB':
+		case 'CNY':
+		case 'INR':
+		case 'ZAR':
 			return GetCurrencySymbol( currencyCode ) + currencyFormat;
 		case 'KRW':
 			return GetCurrencySymbol( currencyCode ) + currencyFormat.replace( '.00', '' );
@@ -432,7 +443,12 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 		case 'CAD':
 		case 'AUD':
 		case 'NZD':
+		case 'PEN':
+		case 'HKD':
+		case 'TWD':
 			return GetCurrencySymbol( currencyCode ) + ' ' + currencyFormat;
+		case 'VND':
+			return currencyFormat.replace( '.00', '' ) + GetCurrencySymbol( currencyCode );
 		default:
 			return currencyFormat + ' ' + currencyCode;
 	}
@@ -664,6 +680,7 @@ function ShowPopupMenu( rgOptions )
 
 		var oLabel = $.CreatePanel( 'Label', oButton, 'MenuPopup_' + i );
 
+		oLabel.html = ( rgOptions[i].html == true );
 		oLabel.text =  rgOptions[i].label ;
 		$.RegisterEventHandler('Activated', oButton, rgOptions[i].onactivate);
 

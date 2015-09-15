@@ -78,6 +78,9 @@ HelpWizard = {
 			$J( '#page_content' ).addClass( 'page_loaded' );
 			$J('#wizard_contents').html( data.html );
 
+			// TODO: really only want this when navigating forward, back would remember where you left off otherwise
+			$J(window ).scrollTop( 0 );
+
 			if ( search_active && search_text.length > 0 )
 			{
 				$J('#help_home_block').hide();

@@ -1317,11 +1317,12 @@ a.friend_block_holder:hover {
 	color: inherit;
 }
 
-#agegate_box,#macbeta_box {
+#agegate_box,
+#macbeta_box {
 	background-color:rgba(0,0,0,0.2);
 
 	text-align:center;
-	padding:35px 0px 35px 0px;
+	padding: 35px 4%;
 }
 
 #macbeta_box .question {
@@ -2112,6 +2113,21 @@ img.agegate_img_package {
 	height: 233px;
 }
 
+@media screen and (max-width: 910px )
+{
+	img.agegate_img_app, img.agegate_img_package {
+		height: auto;
+		max-width: 100%;
+	}
+
+	.page_content_ctn.agegate_content {
+		min-height: 100vh;
+	}
+	html.responsive body.agecheck .responsive_page_template_content {
+		padding-bottom: 0;
+	}
+}
+
 .prepurchase_rewards_title {
 	font:Arial;
 	font-size:20pt;
@@ -2385,6 +2401,7 @@ div.early_access_announcements .post {
 
 div.early_access_announcements .post.wide {
 	width: auto;
+	display: block;
 }
 
 div.early_access_announcements .post h1 {
@@ -2433,6 +2450,7 @@ div.early_access_announcements .post .container {
 	height: 195px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	word-wrap: break-word;
 }
 
 div.early_access_announcements .post img {

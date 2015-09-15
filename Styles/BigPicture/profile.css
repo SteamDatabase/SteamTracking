@@ -93,6 +93,7 @@ ProfilePanel.ProfileInvisible
 	opacity: 0.0;
 }
 
+.ContentPanel #ProfileContent,
 ProfilePanel #ProfileContent
 {
 	width: 100%;
@@ -106,6 +107,11 @@ ProfilePanel #ProfileContent
 	transition-delay: 0s;
 	transition-timing-function: ease-in-out;
 
+}
+
+.ContentPanel #ProfileContent
+{
+	transform: none;
 }
 
 
@@ -144,10 +150,6 @@ ProfilePanel .ProfileBackground
 
 }
 
-#BgScreenshotWrapper
-{
-		opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
-}
 
 ProfilePanel #UpperRow
 {
@@ -161,7 +163,7 @@ ProfilePanel #UpperRow
 .ProfileBackground .BGScreenshotVisible
 {
 	opacity: 0.0;
-	desaturation: 0.0;
+	desaturation: 0.8;
 
 	animation-name: bg-screenshot-ambient;
 	animation-duration: 14s;
@@ -177,18 +179,32 @@ ProfilePanel #UpperRow
 
 @keyframes 'bg-screenshot-ambient'
 {
-	0%
+	from
 	{
-		opacity: 0.45;
-		transform: translate3D( -15px, -10px, 40px );
-		animation-timing-function: ease-in-out;
+		opacity: 0.0;
+		transform: translate3D( 0px, -20px, 20px );
+		animation-timing-function: ease-in;
 	}
 
-	100%
+	4%
 	{
-		opacity: 0.45;
+		opacity: 0.4;
+		transform: translate3D( -15px, -10px, 40px );
+		animation-timing-function: bigpicture-ease-in-out;
+	}
+
+	96%
+	{
+		opacity: 0.4;
 		transform: translate3D( -60px, 0px, 80px );
 		animation-timing-function: ease-in;
+	}
+
+	to
+	{
+		opacity: 0.0;
+		transform: translate3D( -120px, 60px, 160px );
+		animation-timing-function: ease-out;
 	}
 }
 
@@ -203,6 +219,9 @@ ProfilePanel #UpperRow
 {
 	opacity: 1.0;
 	desaturation: 0.0;
+
+	width: 100%;
+	height: 100%;
 }
 
 
@@ -3488,26 +3507,13 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	height: 900px;
 	flow-children: right;
 	margin-top: 50px;
-	padding-left: 50px;
 	overflow: clip;
 }
 
 #LeftColumn
 {
-	width: 22%;
-	height: 100%;
-	flow-children: down;
-	margin-right: 30px;
 
-	transform: translateX( -35px );
-	opacity: 0.5;
-	transition-delay: 0.08s;
-	transition-duration: 0.3s;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
-	pre-transform-scale2d: 1;
 
-	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
 }
 
 #LeftColumn:descendantfocus {
@@ -3902,10 +3908,9 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	opacity: 0.0;
 }
 #ScreenshotsContainer {
-	margin-top: -40px;
 	padding-top: 40px;
-	padding-left: 110px;
-	padding-right: 110px;
+	padding-left: 00px;
+	padding-right: 60px;
 	width: 100%;
 	height: 100%;
 
@@ -3937,18 +3942,13 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 
 
-.ImageContainer
-{
-
+.ImageContainer {
 	padding: 5px;
 
-	pre-transform-scale2d: .8;
-
-
+	pre-transform-scale2d: 0.86;
 
 	wash-color: #00000012;
 	desaturation: 0.2;
-
 
 	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation, transform;
 	transition-duration: shortduration;
@@ -4067,10 +4067,24 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	transition-duration: mediumduration;
 	transition-timing-function: ease-in-out;
 }
+#AchievementsContainer.AchievementsContainer,
+.AchievementsContainer .StatsContainer {
+	padding: 0px;
+	margin-top: 0px;
+	height: 780px;
+	padding-bottom: 0px;
+}
+.ContentGrid {
+	margin-left: -40px;
+	height: 900px;
+}
+.ImageContainer Image {
+	max-height: 230px;
+	max-width: 370px;
+}
 
 .AchievementsContainer, .StatsContainer, .GamesContainer {
 	overflow: noclip scroll;
-
 }
 
 .GameRow {
@@ -4096,11 +4110,8 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	padding: 5px;
 	margin: 5px;
 
-	background-color: #09334d99;
+	background-color: horizontal_default;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: #00000000;
 	color: detailsdatalabelfocus;
 
 	transition-property: opacity,border,background-color,transform;
@@ -4109,24 +4120,19 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 
 .StatsRow:focus {
-	border-color: #fdfefef0;
+
+	background-color: horizontal_focus;
 	color: #161718f5;
 
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
-	animation-name: links-and-more-button-focus;
-	animation-duration: longduration;
-	animation-delay: mediumduration;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
 }
 
-.StatsRow .ImageCol {
-
+.StatsRow .ImageCol Image {
+	max-width: 64px;
 }
 
 .StatsRow .TextCol {
 	flow-children: down;
+	width: 100%;
 
 }
 
@@ -4151,7 +4157,9 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 
 .StatsRow .Title {
-
+	width: 75%;
+	font-size: 28px;
+	color: detailsdatalabel;
 }
 
 .StatsRow .LogoImage {
@@ -4162,17 +4170,19 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 .StatsRow .TitleWrapper {
 	flow-children: right;
+	width: 100%;
 }
 
 .StatsRow .AchievementUnlockTime {
 	text-align: right;
-	width: fit-children;
+	padding-right: 12px;
+	width: 25%;
 	font-size: 18px;
 }
 
-
 .StatsRow .Desc {
-	font-size: 18px;
+	font-size: 24px;
+	color: detailsdatalabel;
 }
 
 /* Leaderboard rows */
@@ -4258,12 +4268,6 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	height: 100%;
 }
 
-.NavigationContainer {
-	width: 350px;
-	flow-children: down;
-	overflow: squish scroll;
-	height: 700px;
-}
 
 .NavigationContainer .Button {
 	width: 98%;

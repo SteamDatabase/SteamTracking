@@ -24,6 +24,11 @@
     box-shadow: #000000aa -2px -2px 4px 4px;
 }
 
+.NX #InventoryBody
+{
+	padding-top: 40px;
+}
+
 #InventoryHeading
 {
 	margin-left: 100px;

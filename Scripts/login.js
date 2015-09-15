@@ -228,10 +228,10 @@ CLoginPromptManager.prototype.GetValueFromLocalURL = function( url )
 
 	while ( true )
 	{
-		status = window.SGHandler.getResultStatus();
+		var status = window.SGHandler.getResultStatus();
 		if ( status && status != 'busy' )
 		{
-			value = window.SGHandler.getResultValue();
+			var value = window.SGHandler.getResultValue();
 			return [ status, value ];
 		}
 		if ( Date.now() > timeoutTime )
@@ -431,6 +431,7 @@ CLoginPromptManager.prototype.OnLoginResponse = function( results )
 				$J( '#passwordclearlabel' ).show();
 				$J( '#steamPassword' ).val('');
 				$J( '#steamPassword' ).attr( 'type', 'text' );
+				$J( '#steamPassword' ).attr( 'autocomplete', 'off' );
 			}
 		}
 	}
@@ -464,19 +465,16 @@ CLoginPromptManager.prototype.StartEmailAuthProcess = function()
 
 	this.SetEmailAuthModalState( 'entercode' );
 
-	if ( !this.m_bIsMobile )
-	{
-		var _this = this;
-		this.m_EmailAuthModal = ShowDialog( 'Steam Guard', this.m_$ModalAuthCode.show() )
-			.always( function() {
-				$J(document.body).append( _this.m_$ModalAuthCode.hide() );
-				_this.CancelEmailAuthProcess();
-				_this.m_EmailAuthModal = null;
-			} );
+	var _this = this;
+	this.m_EmailAuthModal = ShowDialog( 'Steam Guard', this.m_$ModalAuthCode.show() )
+		.always( function() {
+			$J(document.body).append( _this.m_$ModalAuthCode.hide() );
+			_this.CancelEmailAuthProcess();
+			_this.m_EmailAuthModal = null;
+		} );
 
-		this.m_EmailAuthModal.SetDismissOnBackgroundClick( false );
-		this.m_EmailAuthModal.SetRemoveContentOnDismissal( false );
-	}
+	this.m_EmailAuthModal.SetDismissOnBackgroundClick( false );
+	this.m_EmailAuthModal.SetRemoveContentOnDismissal( false );
 };
 
 CLoginPromptManager.prototype.CancelEmailAuthProcess = function()
@@ -536,11 +534,9 @@ CLoginPromptManager.prototype.OnTransferComplete = function()
 
 CLoginPromptManager.prototype.OnEmailAuthSuccessContinue = function()
 {
-	if ( !this.m_bIsMobile )
-	{
-				$J('#auth_buttonsets').children().hide();
-		$J('#auth_buttonset_waiting').show();
-	}
+		$J('#auth_buttonsets').children().hide();
+	$J('#auth_buttonset_waiting').show();
+
 	if ( this.m_bLoginTransferInProgress )
 	{
 		this.m_bEmailAuthSuccessfulWantToLeave = true;
@@ -578,11 +574,9 @@ CLoginPromptManager.prototype.SubmitAuthCode = function()
 	$J('#auth_buttonsets').children().hide();
 	$J('#auth_buttonset_waiting').show();
 
-	if ( !this.m_bIsMobile )
-	{
-		this.$LogonFormElement( 'loginfriendlyname' ).val( $J('#friendlyname').val() );
-		this.$LogonFormElement( 'emailauth' ).val( $J('#authcode').val() );
-	}
+	this.$LogonFormElement( 'loginfriendlyname' ).val( $J('#friendlyname').val() );
+	this.$LogonFormElement( 'emailauth' ).val( $J('#authcode').val() );
+
 	this.DoLogin();
 };
 
@@ -599,74 +593,58 @@ CLoginPromptManager.prototype.SetEmailAuthModalState = function( step )
 		return;
 	}
 
-	if ( this.m_bIsMobile )
+	$J('#auth_messages').children().hide();
+	$J('#auth_message_' + step ).show();
+
+	$J('#auth_details_messages').children().hide();
+	$J('#auth_details_' + step ).show();
+
+	$J('#auth_buttonsets').children().hide();
+	$J('#auth_buttonset_' + step ).show();
+
+	$J('#authcode_help_supportlink').hide();
+
+	var icon='key';
+	var bShowAuthcodeEntry = true;
+	if ( step == 'entercode' )
 	{
-		if ( step == 'entercode' )
-		{
-			$J('#emailauth').show();
-			$J('#emailauthlabel').show();
-		}
-		else if ( step == 'success' )
-		{
-			this.OnEmailAuthSuccessContinue();
-		}
+		icon = 'key';
+	}
+	else if ( step == 'checkspam' )
+	{
+		icon = 'trash';
+	}
+	else if ( step == 'success' )
+	{
+		icon = 'unlock';
+		bShowAuthcodeEntry = false;
+		$J('#success_continue_btn').focus();
+		this.m_EmailAuthModal.SetDismissOnBackgroundClick( true );
+		this.m_EmailAuthModal.always( $J.proxy( this.LoginComplete, this ) );
+	}
+	else if ( step == 'incorrectcode' )
+	{
+		icon = 'lock';
+	}
+	else if ( step == 'help' )
+	{
+		icon = 'steam';
+		bShowAuthcodeEntry = false;
+		$J('#authcode_help_supportlink').show();
+	}
+
+	if ( bShowAuthcodeEntry )
+	{
+		$J('#authcode_entry').show();
+		$J('#auth_details_computer_name').show();
 	}
 	else
 	{
-		$J('#auth_messages').children().hide();
-		$J('#auth_message_' + step ).show();
-
-		$J('#auth_details_messages').children().hide();
-		$J('#auth_details_' + step ).show();
-
-		$J('#auth_buttonsets').children().hide();
-		$J('#auth_buttonset_' + step ).show();
-
-		$J('#authcode_help_supportlink').hide();
-
-		var icon='key';
-		var bShowAuthcodeEntry = true;
-		if ( step == 'entercode' )
-		{
-			icon = 'key';
-		}
-		else if ( step == 'checkspam' )
-		{
-			icon = 'trash';
-		}
-		else if ( step == 'success' )
-		{
-			icon = 'unlock';
-			bShowAuthcodeEntry = false;
-			$J('#success_continue_btn').focus();
-			this.m_EmailAuthModal.SetDismissOnBackgroundClick( true );
-			this.m_EmailAuthModal.always( $J.proxy( this.LoginComplete, this ) );
-		}
-		else if ( step == 'incorrectcode' )
-		{
-			icon = 'lock';
-		}
-		else if ( step == 'help' )
-		{
-			icon = 'steam';
-			bShowAuthcodeEntry = false;
-			$J('#authcode_help_supportlink').show();
-		}
-
-		if ( bShowAuthcodeEntry )
-		{
-			$J('#authcode_entry').show();
-			$J('#auth_details_computer_name').show();
-		}
-		else
-		{
-			$J('#authcode_entry').hide();
-			$J('#auth_details_computer_name').hide();
-		}
-
-		$J('#auth_icon').attr('class', 'auth_icon auth_icon_' + icon );
-
+		$J('#authcode_entry').hide();
+		$J('#auth_details_computer_name').hide();
 	}
+
+	$J('#auth_icon').attr('class', 'auth_icon auth_icon_' + icon );
 };
 
 CLoginPromptManager.prototype.StartTwoFactorAuthProcess = function()
@@ -674,21 +652,18 @@ CLoginPromptManager.prototype.StartTwoFactorAuthProcess = function()
 	this.m_bInTwoFactorAuthProcess = true;
 	this.SetTwoFactorAuthModalState( 'entercode' );
 
-	if ( !this.m_bIsMobile )
-	{
+	var _this = this;
+	this.m_TwoFactorModal = ShowDialog( 'Two-Factor Authentication', this.m_$ModalTwoFactor.show() )
+		.fail( function() { _this.CancelTwoFactorAuthProcess(); } )
+		.always( function() {
+			$J(document.body).append( _this.m_$ModalTwoFactor.hide() );
+			_this.m_bInTwoFactorAuthProcess = false;
+			_this.m_TwoFactorModal = null;
+		} );
 
-		var _this = this;
-		this.m_TwoFactorModal = ShowDialog( 'Two-Factor Authentication', this.m_$ModalTwoFactor.show() )
-			.fail( function() { _this.CancelTwoFactorAuthProcess(); } )
-			.always( function() {
-				$J(document.body).append( _this.m_$ModalTwoFactor.hide() );
-				_this.m_bInTwoFactorAuthProcess = false;
-				_this.m_TwoFactorModal = null;
-			} );
+	this.m_TwoFactorModal.SetDismissOnBackgroundClick( false );
+	this.m_TwoFactorModal.SetRemoveContentOnDismissal( false );
 
-		this.m_TwoFactorModal.SetDismissOnBackgroundClick( false );
-		this.m_TwoFactorModal.SetRemoveContentOnDismissal( false );
-	}
 	$J('#twofactorcode_entry').focus();
 };
 
@@ -736,49 +711,37 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 		return;
 	}
 
-	if ( this.m_bIsMobile )
+	$J('#login_twofactorauth_messages').children().hide();
+	$J('#login_twofactorauth_message_' + step ).show();
+
+	$J('#login_twofactorauth_details_messages').children().hide();
+	$J('#login_twofactorauth_details_' + step ).show();
+
+	$J('#login_twofactorauth_buttonsets').children().hide();
+	$J('#login_twofactorauth_buttonset_' + step ).show();
+
+	$J('#login_twofactor_authcode_help_supportlink').hide();
+
+	var icon = 'key';
+	if ( step == 'entercode' )
 	{
-		// mobile, just show the field
-		if ( step == 'entercode' )
-		{
-			$J('#twofactorcode_entry').show();
-			$J('#twofactorauthlabel').show();
-		}
+		$J('#login_twofactor_authcode_entry').show();
+		$J('#twofactorcode_entry').focus();
 	}
-	else
+	else if ( step == 'incorrectcode' )
 	{
-		$J('#login_twofactorauth_messages').children().hide();
-		$J('#login_twofactorauth_message_' + step ).show();
-
-		$J('#login_twofactorauth_details_messages').children().hide();
-		$J('#login_twofactorauth_details_' + step ).show();
-
-		$J('#login_twofactorauth_buttonsets').children().hide();
-		$J('#login_twofactorauth_buttonset_' + step ).show();
-
-		$J('#login_twofactor_authcode_help_supportlink').hide();
-
-		var icon = 'key';
-		if ( step == 'entercode' )
-		{
-			$J('#login_twofactor_authcode_entry').show();
-			$J('#twofactorcode_entry').focus();
-		}
-		else if ( step == 'incorrectcode' )
-		{
-			icon = 'lock';
-			$J('#login_twofactor_authcode_entry').show();
-			$J('#twofactorcode_entry').focus();
-		}
-		else if ( step == 'help' )
-		{
-			icon = 'steam';
-			$J('#login_twofactor_authcode_entry').hide();
-			$J('#login_twofactor_authcode_help_supportlink').show();
-		}
-
-		$J('#login_twofactorauth_icon').attr( 'class', 'auth_icon auth_icon_' + icon );
+		icon = 'lock';
+		$J('#login_twofactor_authcode_entry').show();
+		$J('#twofactorcode_entry').focus();
 	}
+	else if ( step == 'help' )
+	{
+		icon = 'steam';
+		$J('#login_twofactor_authcode_entry').hide();
+		$J('#login_twofactor_authcode_help_supportlink').show();
+	}
+
+	$J('#login_twofactorauth_icon').attr( 'class', 'auth_icon auth_icon_' + icon );
 }
 
 CLoginPromptManager.prototype.SubmitTwoFactorCode = function()
@@ -808,7 +771,7 @@ CLoginPromptManager.prototype.GetModalContent = function( strModalType )
 	if ( this.m_bIsMobileSteamClient )
 	{
 		$ModalContent.find('a[data-externallink]' ).each( function() {
-			$J(this).attr( 'href', 'steammobile://openexternalurl?url=' + $J(this).data('href') );
+			$J(this).attr( 'href', 'steammobile://openexternalurl?url=' + $J(this).attr('href') );
 		});
 	}
 

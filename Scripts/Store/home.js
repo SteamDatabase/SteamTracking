@@ -58,6 +58,11 @@ GHomepage = {
 		}
 
 		InitHorizontalAutoSliders();
+
+		if ( window.Responsive_ReparentItemsInResponsiveMode )
+		{
+			window.Responsive_ReparentItemsInResponsiveMode( '.spotlight_block', $J('#home_responsive_spotlight_ctn') );
+		}
 	},
 
 	InitUserData: function( rgParams )
@@ -265,60 +270,13 @@ GHomepage = {
 		var rgMainCaps = GHomepage.FilterItemsForDisplay(
 			rgDisplayListCombined, 'main_cluster', 0, 15
 		);
-		var cMainCaps = rgMainCaps.length;	// record the real number before we add a dupe to the end
 
 		for ( var i = 0; i < rgMainCaps.length; i++ )
 		{
 			GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( rgMainCaps[i] ) ] = true;
 		}
 
-		var $MainCluster = $J('#main_cluster_scroll').empty();
-
-		var $FirstCap = null;
-		for ( var i = 0; i < rgMainCaps.length; i++ )
-		{
-			var oItem = rgMainCaps[i];
-			var rgData = GHomepage.GetStoreItemData( oItem );
-
-			var strStatus = '';
-			if ( oItem.recommended )
-				strStatus = 'Recommended For You';
-			else if ( oItem.status_string )
-				strStatus = oItem.status_string;
-			else if ( rgData && rgData.early_access )
-				strStatus = 'Early Access Now Available'
-			else if ( oItem.new_on_steam )
-				strStatus = 'New On Steam';
-			else if ( oItem.top_seller )
-				strStatus = 'Top Seller';
-			else if ( rgData && rgData.coming_soon )
-				strStatus = 'Pre-Purchase Now'
-			else if ( rgData && rgData.video )
-				strStatus = 'Now Available to Watch'
-			else
-				strStatus = 'Now Available'
-
-			var strFeature = 'main_cluster';
-			if ( oItem.recommended )
-				strFeature = 'main_cluster_recommended';
-			else if ( oItem.top_seller )
-				strFeature = 'main_cluster_topseller';
-			else if ( oItem.new_on_steam )
-				strFeature = 'main_cluster_newonsteam';
-
-			var $CapCtn = GHomepage.BuildHomePageMainCap( oItem.appid, oItem.packageid, strStatus, strFeature, i );
-			if ( $CapCtn )
-			{
-				$MainCluster.append( $CapCtn );
-				if ( !$FirstCap )
-					$FirstCap = $CapCtn;
-			}
-			else
-				cMainCaps--;
-		}
-
-		if ( $FirstCap )
-			$MainCluster.append( $FirstCap.clone( true ) );
+		var cMainCaps = Cluster.BuildClusterElements( $J('#main_cluster_scroll'), rgMainCaps );
 
 		// global
 		if ( GHomepage.MainCapCluster )
@@ -335,10 +293,6 @@ GHomepage = {
 				rgImageURLs: {},
 				onChangeCB: GDynamicStore.HandleClusterChange
 			} );
-
-		$MainCluster.append( $J('<div/>', {'style': 'clear: left;'} ) );
-		$MainCluster.InstrumentLinks();
-		GDynamicStore.DecorateDynamicItems( $MainCluster );
 	},
 
 	RenderNewOnSteam: function()
@@ -498,33 +452,10 @@ GHomepage = {
 		return rgItem.appid ? GStoreItemData.rgAppData[ rgItem.appid] : GStoreItemData.rgPackageData[ rgItem.packageid ];
 	},
 
-	GetCapParams: function( strFeatureContext, unAppID, unPackageID, params, nDepth )
-	{
-		var rgItemData = ( unAppID ? GStoreItemData.rgAppData[ unAppID] : GStoreItemData.rgPackageData[ unPackageID ] );
-
-		if ( !rgItemData )
-			return null;
-
-		if ( unAppID )
-		{
-			params['data-ds-appid'] = unAppID;
-			params['href'] = GStoreItemData.GetAppURL( unAppID, strFeatureContext, nDepth );
-		}
-		else
-		{
-			params['data-ds-packageid'] = unPackageID;
-			params['href'] = GStoreItemData.GetPackageURL( unPackageID, strFeatureContext, nDepth );
-			if ( rgItemData['appids'] )
-				params['data-ds-appid'] = rgItemData['appids'];
-		}
-
-		return rgItemData;
-	},
-
 	BuildHomePageSmallCap: function( strFeatureContext, unAppID, unPackageID )
 	{
 		var params = { 'class': 'home_smallcap' };
-		var rgItemData = GHomepage.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
 		if ( !rgItemData )
 			return null;
 
@@ -536,78 +467,6 @@ GHomepage = {
 		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;' ) );
 
 		return $CapCtn;
-	},
-
-	BuildHomePageMainCap: function( unAppID, unPackageID, strStatus, strFeature, nDepth )
-	{
-		var params = { 'class': 'cluster_capsule' };
-		var rgItemData = GHomepage.GetCapParams( strFeature, unAppID, unPackageID, params, nDepth );
-		if ( !rgItemData )
-			return null;
-
-		var $CapCtn = $J('<a/>', params );
-
-		if ( rgItemData.main_capsule )
-		{
-			$CapCtn.append( $J('<img/>', {'class': 'cluster_capsule_image', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif', 'data-image-url': rgItemData.main_capsule } ) );
-		}
-		else
-		{
-			var strImageURL = rgItemData.header ? rgItemData.header : rgItemData.package_header;
-			if ( strImageURL )
-			{
-				$CapCtn.append( $J('<div/>', {'class': 'cluster_maincap_fill ' + (rgItemData.package_header ? 'package' : '') } )
-					.append(
-						$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
-						$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } ),
-						$J('<img/>', {'class': 'cluster_maincap_fill_header', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } )
-					)
-				);
-			}
-			else
-			{
-				// no image to display!
-				return null;
-			}
-		}
-
-		if ( rgItemData.discount_block )
-			$CapCtn.append( $J(rgItemData.discount_block).addClass( 'discount_block_large main_cap_discount' ) );
-			$CapCtn.append( $J('<div/>', {'class': 'main_cap_desc'})
-			.append( $J('<div/>', {'class': 'main_cap_content'})
-				.append( $J('<div/>', {'class': 'main_cap_platform_area platform_area'}).html( GHomepage.BuildSupportedPlatformIcon( rgItemData ) ) )
-				.append( $J('<div/>', {'class': 'main_cap_status ellipsis'}).text( strStatus ) )
-			)
-		);
-
-		return $CapCtn;
-	},
-
-	BuildSupportedPlatformIcon: function( rgItemData )
-	{
-		var strHTML = '';
-		var nPlatforms = 0;
-
-		if ( rgItemData.video )
-			return '<span class="platform_img streamingvideo"></span>';
-
-		if ( rgItemData.os_windows )
-		{
-			strHTML += '<span class="platform_img win"></span>';
-			nPlatforms++;
-		}
-		if ( rgItemData.os_macos )
-		{
-			strHTML += '<span class="platform_img mac"></span>';
-			nPlatforms++;
-		}
-		if ( rgItemData.os_linux )
-		{
-			strHTML += '<span class="platform_img linux"></span>';
-			nPlatforms++;
-		}
-
-		return strHTML + ( nPlatforms > 1 ? '<span class="platform_img steamplay"></span>' : '' );
 	},
 
 	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay )
@@ -751,6 +610,8 @@ GHomepage = {
 			}
 		}
 
+		$Element.append( $J('<div/>', {'style': 'clear: both;' } ) );
+
 		// remove anything we showed here from the main cluster rotation
 		for ( var i = GHomepage.rgRecommendedGames.length - 1; i >= 0; i-- )
 		{
@@ -768,7 +629,7 @@ GHomepage = {
 		var $SpotlightCtn = $J('<div/>', {'class': 'recommended_spotlight_ctn' } );
 
 		var params = { 'class': 'recommended_spotlight' };
-		var rgItemData = GHomepage.GetCapParams( 'recommended_spotlight', unAppID, null, params );
+		var rgItemData = GStoreItemData.GetCapParams( 'recommended_spotlight', unAppID, null, params );
 
 		if ( !rgItemData )
 			return null;
@@ -782,6 +643,7 @@ GHomepage = {
 		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_cap'}).append( $J('<img/>', {src: strHeaderURL } ) ) );
 		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_desc'} ).text( strDescription ) );
 		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_price' }).html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_spotlight discount_block_large') : '&nbsp;' ) );
+		$Spotlight.append( $J('<div/>', {'style': 'clear: both;' } ) );
 
 		$SpotlightCtn.append(
 			$Spotlight
@@ -959,7 +821,7 @@ GSteamCurators = {
 		var unAppID = oItem.appid;
 		var unPackageID = 0;
 		var params = { 'class': 'curated_app_link' };
-		var rgItemData = GHomepage.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, params );
 		if ( !rgItemData )
 			return null;
 
@@ -1025,7 +887,7 @@ GSteamCurators = {
 		$J('.apps_recommended_by_curators_ctn').hide();
 
 		$J('#apps_recommended_by_curators').empty();
-		$J('#steam_curators').remove( ".steam_curator" );
+		$J('#steam_curators').children('.steam_curator' ).remove();
 
 		// if there are apps, then show them
 		var bShowApps = 1;

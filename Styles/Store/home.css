@@ -121,165 +121,12 @@ a.gutter_item:hover {
 	float: right;
 }
 
-.main_cluster_content {
-	width 616px;
-}
-
 .home_cluster_ctn {
 	background: url( 'https://steamstore-a.akamaihd.net/public/images/v6/home/cluster_bg.png?v=1' ) bottom center no-repeat;
 
 	padding-bottom: 22px;
 }
 
-.main_cluster_content {
-	width: 616px;
-	height: 395px;
-	overflow: hidden;
-	margin-bottom: 4px;
-	position: relative;
-}
-
-.cluster_scroll_area {
-	position: relative;
-	overflow: hidden;
-}
-
-.main_cluster_content a.cluster_capsule  {
-	display: block;
-	width: 616px;
-	height: 395px;
-	float: left;
-	margin-right: 4px;
-	position: relative;
-}
-
-a.cluster_capsule:hover {
-	text-decoration: none;
-}
-
-.main_cluster_content .cluster_capsule_image {
-	width: 616px;
-	height: 353px;
-	display: block;
-}
-
-.main_cluster_content .cluster_capsule .ds_flag {
-	box-shadow: 0 0 6px 0 #000000;
-}
-
-.main_cluster_content .cluster_maincap_fill {
-	width: auto;
-	display: block;
-
-	position: relative;
-	overflow: hidden;
-}
-
-.main_cluster_content img.cluster_maincap_fill_placeholder {
-	width: 100%;
-	height: auto;
-}
-
-.cluster_maincap_fill .cluster_maincap_fill_bg {
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	opacity: 0.5;
-	filter: blur(5px);
-	-webkit-filter: blur(5px);
-	overflow: hidden;
-}
-
-.cluster_maincap_fill .cluster_maincap_fill_header {
-	position: absolute;
-	left: 78px;
-	top: 69px;
-	z-index: 2;
-	box-shadow: 0 0 16px 6px #000000;
-}
-
-.cluster_maincap_fill.package .cluster_maincap_fill_header {
-	width: 530px;
-	height: 174px;
-
-	left: 43px;
-	top: 89px;
-}
-
-.cluster_maincap_fill.package .cluster_maincap_fill_bg.cluster_capsule_image  {
-	width: 1076px;
-	height: 353px;
-	left: -230px;
-}
-
-.main_cap_discount, .main_cap_price {
-	position: absolute;
-	right: 0;
-	bottom: 42px;
-	z-index: 3;
-}
-
-.main_cap_price {
-	background: #000000;
-	font-size: 13px;
-	color: #b0aeac;
-	line-height: 25px;
-	padding: 0 8px;
-}
-
-.main_cap_desc {
-	height: 42px;
-	line-height: 42px;
-	background: rgba( 0, 0, 0, 0.2 );
-	padding: 0 12px;
-	overflow: hidden;
-}
-
-.main_cap_platform_area {
-	float: right;
-    padding-top: 5px;
-}
-
-.main_cap_status {
-	color: #ffffff;
-	font-size: 21px;
-	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-	text-shadow: 1px 1px rgba( 0, 0, 0, 0.25 );
-    font-weight: normal;
-}
-
-.main_cluster_content .home_btn.home_customize_btn {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	display: none;
-    background: rgba( 44, 75, 100, 0.8 );
-	box-shadow: 0 0 12px #000000;
-}
-.main_cluster_content .home_btn.home_customize_btn:hover {
-    color: #ffffff;
-    background: #67c1f5; /* Old browsers */
-    background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
-    background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-.main_cluster_content:hover .home_customize_btn,
-.main_cluster_content .home_btn.home_customize_btn.active {
-	display: block;
-}
-.main_cluster_content .home_btn.home_customize_btn.active {
-	box-shadow: none;
-}
 
 .home_block_footer {
 	background: #212d3a;
@@ -340,6 +187,11 @@ a.home_block_footer_btn:hover {
 
 .home_tabs_row {
 	position: relative;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.home_tabs_row_ctn {
 	margin-bottom: 8px;
 }
 
@@ -429,6 +281,7 @@ a.home_block_footer_btn:hover {
 	float: left;
 	position: relative;
 	width: 120px;
+	height: 51px;
 	overflow: hidden;
 }
 
@@ -461,8 +314,8 @@ a.home_block_footer_btn:hover {
 	opacity: 0.3;
 }
 
-.home_specials_spacer {
-	height: 22px;
+.dailydeal_specials_ctn {
+	margin-bottom: 22px;
 }
 
 /*
@@ -882,7 +735,6 @@ a.home_smallcap:hover {
     line-height: 17px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 208px;
     overflow: hidden;
 }
 .steam_curator_desc
@@ -899,6 +751,53 @@ a.home_smallcap:hover {
 	color: #61686D;
 	font-size: 9px;
 }
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .steam_curator {
+		width: calc( 33% - 24px - 3px );
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	html.responsive .steam_curator {
+		width: calc( 50% - 24px - 4px );
+	}
+
+	html.responsive .steam_curators_ctn .steam_curator:nth-child(3n)
+	{
+		margin-right: 4px;
+	}
+
+	html.responsive .steam_curators_ctn .steam_curator:nth-child(2n)
+	{
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .steam_curator {
+		width: auto;
+		display: block;
+		margin-right: 0;
+		margin-bottom: 2px;
+	}
+
+	html.responsive .steam_curators_ctn .steam_curator:nth-child(3n),
+	html.responsive .steam_curators_ctn .steam_curator:nth-child(2n)
+	{
+		margin-right: 0;
+	}
+
+	html.responsive .steam_curators_ctn .steam_curator:nth-child(4),
+	html.responsive .steam_curators_ctn .steam_curator:nth-child(5),
+	html.responsive .steam_curators_ctn .steam_curator:nth-child(6) {
+		display: none;
+	}
+}
+
 /* STEAM APPS RECOMMENDED BY CURATORS */
 #apps_recommended_by_curators
 {
@@ -1610,47 +1509,16 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		float: none;
 	}
 
-	html.responsive div.main_cluster_content {
-		width: auto;
-		height: auto;
-	}
-
-	html.responsive .main_cluster_content a.cluster_capsule {
-		width: auto;	/* javascript will set */
-		height: auto;
-	}
-
-	html.responsive .main_cluster_content .cluster_capsule_image:not(.cluster_maincap_fill_bg) {
-		width: 100%;
-		height: auto;
-	}
-
-	html.responsive .home_cluster_ctn .spotlight_block {
-		display: none;
-	}
-
-	html.responsive .cluster_maincap_fill .cluster_maincap_fill_header {
-		left: 12%;
-		top: 19.5%;
-		width: 74%;
-		height: auto;
-	}
-
-	html.responsive #home_main_cluster {
-		max-width: 616px;
-		margin: 0 auto;
-	}
-
 	html.responsive .home_smallcaps,
 	html.responsive .apps_recommended_by_curators,
-	html.responsive .home_specials_grid {
+	html.responsive .underten .home_specials_grid {
 		white-space: nowrap;
 		overflow-x: auto;
 	}
 
 	html.responsive .home_smallcaps a.home_smallcap,
 	html.responsive .curated_app_item,
-	html.responsive .home_specials_grid .special {
+	html.responsive .underten .home_specials_grid .special {
 		float: none;
 		display: inline-block;
 		white-space: normal;	/* override the nowrap we set above */
@@ -1660,8 +1528,25 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		margin-bottom: 16px;
 	}
 
-	html.responsive .dailydeal_ctn {
+	html.responsive .dailydeal_specials_ctn {
+		margin: 0 auto 16px auto;
+		width: 624px;
+	}
+
+	html.responsive .dailydeal_specials_ctn .dailydeal_ctn {
+		float: left;
 		max-width: 276px;
+		margin-right: 8px;
+	}
+
+	html.responsive .dailydeal_specials_ctn .home_specials_grid {
+		float: left;
+		max-width: 308px;
+		padding-top: 14px;
+	}
+
+	html.responsive .dailydeal_specials_ctn .home_block_footer {
+		clear: left;
 	}
 
 	html.responsive .dailydeal_cap,
@@ -1674,11 +1559,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 		margin-bottom: 16px;
 	}
 
-	html.responsive .home_specials_spacer {
-		display: none;
-	}
-
-	html.responsive .home_specials_grid .special {
+	html.responsive .underten .home_specials_grid .special {
 		margin-right: 2px;
 		margin-bottom: 0;
 	}
@@ -1756,6 +1637,21 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	html.responsive .hardware_content .hardware_title b {
 		display: block;
 	}
+
+	html.responsive .responsive_spotlight_block.nonresponsive_hidden,
+	html.responsive .home_rightcol.recommended {
+		max-width: 308px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	html.responsive .responsive_spotlight_block {
+		margin-right: 16px;
+	}
+
+	html.responsive .responsive_home_spotlight_recommended {
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 700px)
@@ -1783,6 +1679,70 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 {
 	html.responsive .hardware_content {
 		font-size: 7px;
+	}
+}
+
+@media screen and (max-width: 680px)
+{
+	html.responsive .responsive_spotlight_block.nonresponsive_hidden {
+		display: block;
+		margin: 0 auto;
+	}
+
+	html.responsive .home_rightcol.recommended {
+		display: block;
+		width: auto;
+		max-width: none;
+	}
+
+	html.responsive .home_recommended_spotlight {
+		padding: 16px 3%;
+	}
+
+	html.responsive .recommended .recommended_spotlight_ctn {
+		float: left;
+		width: 48%;
+	}
+
+	html.responsive .recommended .recommended_spotlight_ctn:nth-child(2) {
+		margin-right: 4%;
+	}
+
+	html.responsive .recommended_spotlight_cap,
+	html.responsive a.recommended_spotlight {
+		height: auto;
+	}
+
+	html.responsive .recommended_spotlight_cap img {
+		height: auto;
+		width: 100%;
+	}
+
+	html.responsive .recommended_spotlight_desc {
+		max-width: 50%;
+	}
+
+	html.responsive .recommended_spotlight_price {
+		overflow: hidden;
+	}
+
+	html.responsive .dailydeal_specials_ctn {
+		width: auto;
+	}
+
+	html.responsive .dailydeal_specials_ctn .dailydeal_ctn {
+		margin: 0 auto;
+		float: none;
+	}
+
+	html.responsive .dailydeal_specials_ctn .home_specials_grid {
+		float: none;
+		padding: 0;
+	}
+
+	html.responsive .dailydeal_specials_ctn .home_specials_ctn {
+		margin: 0 auto;
+		width: 308px;
 	}
 }
 

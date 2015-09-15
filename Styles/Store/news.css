@@ -305,7 +305,7 @@ div#news_search {
 	float: left;
 	font-weight: normal;
 	font-size: 24px;
-	width: 562px;
+	max-width: 562px;
     font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
 }
 
@@ -359,12 +359,10 @@ div#news_search {
 	color: #c6d4df;
 	margin-top: 5px;
 	margin-bottom: 18px;
-	float: left;
 	font-size: 12px;
 	clear: both;
 	line-height: 14px;
     background: rgba( 0, 0, 0, 0.2 );
-    width: 100%;
     padding: 6px 8px 2px 8px;
 }
 
@@ -467,4 +465,28 @@ div.autocomplete ul li.selected {
 }
 .pcgamer .body h3 {
 	padding-top: 17px;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .newsmaincol,
+	html.responsive .newsrightcol {
+		float: none;
+		width: auto;
+		margin: 0;
+	}
+
+	html.responsive .newsmaincol {
+		max-width: 670px;
+	}
+
+	html.responsive .body img {
+		max-width: 100%;
+		height: auto !important;
+	}
+
+	html.responsive .newsHeadlineBlock .title {
+		max-width: 440px;
+		width: auto;
+	}
 }

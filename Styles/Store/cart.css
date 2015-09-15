@@ -670,6 +670,7 @@ body.v6.login .rightcol .spotlight_block {
 	position: relative;
 	min-height: 77px;
 	line-height: 16px;
+	padding: 0 2.5%;
 }
 .cart_item .package_contents {
 	padding-left: 12px;
@@ -682,16 +683,19 @@ body.v6.login .rightcol .spotlight_block {
 	color: #a4d7f5;
 }
 .cart_item_img {
-	position: absolute;
-	top: 16px;
-	left: 16px;
+	float: left;
+	padding-top: 16px;
+	width: 120px;
+}
+
+.cart_item_img img {
+	width: 100%;
 }
 
 .cart_item_desc {
-	margin-left: 151px;
-	margin-right: 108px;
-	padding-top: 23px;
 	color: #626366;
+	overflow: hidden;
+	padding: 23px 3% 0 3%;
 }
 
 .cart_item_desc_ext {
@@ -707,8 +711,7 @@ body.v6.login .rightcol .spotlight_block {
 }
 
 .cart_bodycopy_highlight_desc {
-	float:left;
-	width: 547px;
+	overflow: hidden;
 }
 
 .cart_duplicate_warning_dialog {
@@ -742,9 +745,8 @@ body.v6.login .rightcol .spotlight_block {
 }
 
 .cart_item_price {
-	position: absolute;
-	right: 14px;
-	top: 20px;
+	float: right;
+	padding-top: 20px;
 	text-align: right;
 }
 
@@ -963,6 +965,10 @@ body.v6.login .rightcol .spotlight_block {
 .cart_checkout_buttons
 {
 	text-align: right;
+}
+
+.cart_checkout_buttons .btn_medium  {
+	margin-bottom: 8px;
 }
 
 .cart_checkout_buttons .btnv6_blue_hoverfade:not(:last-child) {
@@ -1845,3 +1851,31 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 }
 .checkout_gotsteam_area a.btn_blue:hover {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -moz-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -o-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .continue_shopping_ctn {
+		text-align: center;
+		margin-bottom: 24px;
+	}
+
+	html.responsive .rightcol.cart_rightcol {
+		width: 308px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .cart_item_desc {
+		padding-top: 16px;
+	}
+
+	html.responsive .cart_item_desc .cart_item_platform {
+		float: none;
+	}
+
+	html.responsive .cart_item_img {
+		max-width: 30%;
+	}
+}

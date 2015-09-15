@@ -40,15 +40,13 @@
 }
 
 .searchbar {
-	height: 30px;
 	margin-bottom: 20px;
 	position: relative;
 }
 
 .searchbar .sortbox {
-	position: absolute;
-	right: 0;
-	top: 7px;
+	float: right;
+	margin-top: 7px;
 }
 
 .searchbar .label {
@@ -66,6 +64,8 @@
 	box-shadow: 1px 1px 0px #45556c;
 	width: 400px;
 	padding: 5px;
+
+	max-width: calc( 100% - 10px - 2px );
 }
 
 .sortbox .dselect_container {
@@ -77,7 +77,6 @@
 /* Search results */
 .search_result_row, .search_result_row:hover {
 	position: relative;
-	color: #67c1f5;
 	background: #000000;
 	background: rgba( 0, 0, 0, 0.2 );
 
@@ -88,12 +87,21 @@
 	font-family: "Motiva Sans Light", arial narrow, arial, tahoma;
 }
 
+#search_result_container {
+	max-width: 686px;
+}
+
 .search_result_row .ds_flag {
 	top: 12px;
 }
 
 .search_result_row .col {
 	height: 45px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.responsive_search_name_combined {
 	display: inline-block;
 	vertical-align: top;
 }
@@ -299,4 +307,112 @@ div.autocomplete ul li {
 
 #TagSuggest.blur {
 	color:#62696e;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .page_content {
+		padding-top: 0;
+	}
+}
+
+@media screen and (max-width: 720px)
+{
+
+	html.responsive .search_result_row .col.search_capsule img {
+		width: 100%;
+		height: auto;
+	}
+
+	html.responsive .search_result_row {
+		padding: 5px;
+	}
+
+	html.responsive .search_result_row .title {
+		margin-top: 0;
+	}
+
+	html.responsive .search_result_row .col {
+		float: left;
+		display: block;
+	}
+
+	html.responsive .search_result_row .responsive_search_name_combined {
+		overflow: hidden;
+		padding-left: 12px;
+		display: block;
+	}
+
+	html.responsive .search_result_row .responsive_search_name_combined .col {
+		height: auto;
+		line-height: normal;
+	}
+
+	html.responsive .search_result_row .col.responsive_secondrow {
+		line-height: 18px;
+		height: 18px;
+	}
+
+	html.responsive .search_result_row .col.search_name {
+		float: none;
+		width: auto;
+		margin: 0;
+	}
+
+	html.responsive .search_result_row .col.search_released {
+	}
+
+	html.responsive .search_result_row .col.search_reviewscore {
+		padding: 0;
+	}
+
+	html.responsive .search_result_row .col.search_price_discount_combined {
+		float: right;
+		padding-right: 8px;
+	}
+
+	html.responsive .search_result_row .col.responsive_secondrow.search_discount {
+		line-height: 18px;
+		vertical-align: middle;
+	}
+
+	html.responsive .col.search_discount span {
+		padding: 0 5px;
+		margin-top: 0;
+	}
+
+	html.responsive .col.search_price.discounted {
+		padding-top: 0;
+		min-width: 100px;
+		width: auto;
+	}
+
+	html.responsive .col.search_price.discounted > span {
+		display: inline-block;
+		margin-right: 4px;
+	}
+
+	html.responsive .col.search_price.discounted > br {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 460px )
+{
+	html.responsive .search_result_row .col.search_capsule {
+		width: 108px;
+	}
+
+	html.responsive .search_result_row .responsive_search_name_combined {
+		overflow: visible;
+		padding: 0;
+	}
+
+	html.responsive .search_result_row .col.search_name {
+		padding-left: 8px;
+	}
+
+	html.responsive .search_result_row .col.search_released {
+		clear: left;
+	}
 }

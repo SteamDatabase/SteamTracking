@@ -171,3 +171,148 @@ function OnGameHubsButtonFocused()
 	$.GetContextPanel().AddClass( "GameHubsFocused" );
 	$.GetContextPanel().RemoveClass( "MarketFocused" );
 }
+
+
+function ShowPanel( panel )
+{
+	var home = $("#CommunityHomeContent");
+	var sectionWrapper = $("#SectionWrapper");
+	$.Each( sectionWrapper.FindChildrenWithClassTraverse( "CommunityContentSectionPanel" ),
+		function( elChild )
+		{
+			elChild.RemoveClass( 'Selected' );
+			home.RemoveClass( elChild.id + "Visible" );
+		}
+	);
+
+	$("#" + panel).AddClass( 'Selected' );
+	home.AddClass( panel + "Visible" );
+}
+
+
+function SelectContentTab( panel, url )
+{
+	var p = $("#" + panel );
+	if ( !p.BHasClass( 'Selected' ) )
+	{
+		ShowPanel( panel );
+		$("#" + panel).LoadPanelAsyncWithWebAuth( url, false );
+	}
+}
+
+function ShowEmptyTab( msg )
+{
+	ShowPanel( 'CommunityContentEmpty' );
+	$("#CommunityContentEmptyLabel").text = msg;
+}
+
+function SelectFilterType( filter )
+{
+	$.DispatchEvent( 'AppHubSelectFilter', $('#CommunityContentAll'), filter );
+}
+
+function MoveToSelectedContentTab()
+{
+	var pSelectedSection = $("#SectionWrapper").FindChildrenWithClassTraverse( "Selected" )[0];
+	pSelectedSection.SetFocus();
+	return true;
+}
+
+
+function SetupSearchPanel()
+{
+	var textentry = $("#AppHubSearchText");
+	textentry.RaiseChangeEvents( true );
+
+	$.RegisterEventHandler( 'TextEntryChanged', textentry, function()
+	{
+		OnSearchTextChanged( textentry )
+	});
+
+	$.RegisterEventHandler( 'TextInputHandlerStateChange', textentry, function( bActivating )
+	{
+		return OnTextHandlerStateChange( bActivating );
+	});
+}
+
+function AddSearchResult( toppanel, panel, appdata )
+{
+	//
+	// This is creating the panel manually rather than loading
+	// a layout to avoid problems with javascript context, which
+	// gets reset when a layout file is loaded.
+	//
+	var result = $.CreatePanel( "Button", panel, "SearchResult_" + appdata.appid );
+	result.AddClass( "AppHubSearchResult" );
+	result.SetPanelEvent( "onactivate", function() { OnSelectSearchResult( appdata.appid ); } );
+	var image = $.CreatePanel( "Image", result, "" );
+	var label = $.CreatePanel( "Label", result, "" );
+
+	image.SetImage( appdata.icon );
+	image.SetScaling( "stretch-to-fit-y-preserve-aspect" );
+	label.text = appdata.name;
+}
+
+
+function OnSearchTextChanged( textentry )
+{
+	var panel = $("#CommunityContentSearch");
+	var results = panel.FindChildTraverse( "AppHubSearchResults" );
+	if ( textentry.text )
+	{
+		url = panel.GetAttributeString( "baseurl", "" ) + "/actions/SearchApps/" + encodeURIComponent( textentry.text );
+		DebugOut( url );
+		$.AsyncWebRequest( url,
+			{
+				type: 'GET',
+				success: function ( data )
+				{
+					results.RemoveAndDeleteChildren();
+					for ( app in data )
+					{
+						AddSearchResult( panel, results, data[app] );
+					}
+				},
+				failure: function() { DebugOut( "Failed to load " + url ); }
+			}
+		);
+	}
+	else
+	{
+		results.RemoveAndDeleteChildren();
+	}
+	return false;
+}
+
+
+function OnSelectSearchResult( appid )
+{
+	$.DispatchEvent( "OpenGameHub", appid, true );
+}
+
+
+function OnTextHandlerStateChange( bActivating )
+{
+	var panel = $("#CommunityContentSearch");
+	if ( bActivating )
+	{
+		panel.AddClass( "DaisyWheelVisible" );
+	}
+	else
+	{
+		panel.RemoveClass( "DaisyWheelVisible" );
+		$("#AppHubSearchText").SetFocus();
+	}
+
+	return false;
+}
+
+function ShowFriendActivity( url )
+{
+	var now = new Date();
+	var tzOffset = now.getTimezoneOffset() * -1 * 60;
+
+	var finalURL = url + "?timezoneOffset=" + tzOffset;
+
+	SelectContentTab( 'CommunityContentFriendActivity', finalURL );
+}

@@ -44,25 +44,26 @@ function Cluster( args )
 
 	if ( $J('html' ).hasClass('responsive') )
 	{
+		var nLastCapWidth;
 		// need to listen for resize
 		$J(window ).on('resize.Cluster', function() {
 			var nNewCapWidth = Math.min( _this.elClusterArea.width(), 616 ) + 4;
-			if ( nNewCapWidth && nNewCapWidth != _this.nCapWidth )
+			if ( nNewCapWidth && nNewCapWidth != nLastCapWidth )
 			{
 				var $Capsules = _this.elScrollArea.find('.cluster_capsule');
 				$Capsules.css('width', ( nNewCapWidth - 4 ) + 'px' );
 
-				_this.nCapWidth = nNewCapWidth;
+				_this.nCapWidth = nLastCapWidth = nNewCapWidth;
 
 				_this.elScrollArea.stop();
 				_this.elScrollArea.css('width', _this.nCapWidth * ( _this.cCapCount + 1 ) + 2 /* to handle any rounding issues */);
-
-				window.setTimeout( function() { _this.elScrollArea.css('height', $Capsules.height() ); }, 1 );
+				_this.elScrollArea.css('height', $Capsules.height() );
 
 				var nNewOffset = _this.nCurCap * _this.nCapWidth;
 				_this.slider.SetRange( 0, _this.nCapWidth * (_this.cCapCount - 1 ), nNewOffset );
 				_this.sliderOnChange( nNewOffset, true );
 			}
+
 		} ).trigger('resize.Cluster');
 
 		// ideally we would use scrolling, but implementing our own touch/drag events
@@ -258,8 +259,11 @@ Cluster.prototype.ensureImagesLoaded = function()
 		var elCap = this.rgCapsToLoad[i];
 		if ( elCap )
 		{
+			var _this = this;
 			$J(elCap).find( 'img[data-image-url]').each( function() {
-				$J(this).attr('src', $J(this).data('imageUrl' ) );
+				$J(this).on( 'load', function() {
+					_this.elScrollArea.css('height', _this.elScrollArea.find('.cluster_capsule').height() )
+				} ).attr('src', $J(this).data('imageUrl' ) );
 			});
 			this.rgCapsToLoad[i] = null;
 		}
@@ -274,151 +278,117 @@ Cluster.prototype.onCapsuleFullyVisible = function()
 	}
 }
 
-if ( typeof Class != 'undefined' ) {
-	var ButtonClusterControl = Class.create({
+Cluster.BuildClusterElements = function ( $ClusterCtn, rgMainCaps, strFeatureOverride )
+{
+	$ClusterCtn.empty();
 
-		nButtons: 0,
-		nIndex: 0,
-		nCapWidth: 0,
+	var cMainCaps = rgMainCaps.length;	// record the real number before we add a dupe to the end
 
-		elContainer: null,
-		Parent: null,
+	var $FirstCap = null;
+	for ( var i = 0; i < rgMainCaps.length; i++ )
+	{
+		var oItem = rgMainCaps[i];
+		var rgData =  oItem.appid ? GStoreItemData.rgAppData[ oItem.appid] : GStoreItemData.rgPackageData[ oItem.packageid ];
 
-		initialize: function (args) {
-			this.elContainer = args.elContainer;
-			this.nCapWidth = args.nCapWidth;
-		},
+		var strStatus = '';
+		if ( oItem.recommended )
+			strStatus = 'Recommended For You';
+		else if ( oItem.status_string )
+			strStatus = oItem.status_string;
+		else if ( rgData && rgData.early_access )
+			strStatus = 'Early Access Now Available'
+		else if ( oItem.new_on_steam )
+			strStatus = 'New On Steam';
+		else if ( oItem.top_seller )
+			strStatus = 'Top Seller';
+		else if ( rgData && rgData.coming_soon )
+			strStatus = 'Pre-Purchase Now'
+		else if ( rgData && rgData.video )
+			strStatus = 'Now Available to Watch'
+		else
+			strStatus = 'Now Available'
 
-		setValue: function (value) {
-			value /= this.nCapWidth;
-			this.elContainer.childElements().each(function (el, i) {
-				if (i == value) {
-					el.addClassName('active');
-				} else {
-					el.removeClassName('active');
-				}
-			});
-		},
-
-		getValue: function () {
-			this.elContainer.childElements().each(function (el, i) {
-				if (el.hasClassName('active'))
-					return i;
-			});
+		// navigation metrics feature
+		var strFeature = 'main_cluster';
+		if ( !strFeatureOverride )
+		{
+			if ( oItem.recommended )
+				strFeature = 'main_cluster_recommended';
+			else if ( oItem.top_seller )
+				strFeature = 'main_cluster_topseller';
+			else if ( oItem.new_on_steam )
+				strFeature = 'main_cluster_newonsteam';
+		}
+		else
+		{
+			strFeature = strFeatureOverride;
 		}
 
-
-	});
-
-	var ButtonCluster = Class.create(Cluster, {
-
-		slider: null,
-
-		initialize: function (args) {
-			this.cCapCount = args.cCapCount;
-			this.nCapWidth = args.nCapWidth;
-			this.nCapsulesToPreload = args.nCapsulesToPreload || 1;
-
-			this.elClusterArea = args.elClusterArea;
-			this.elScrollArea = args.elScrollArea || this.elClusterArea.down('.cluster_scroll_area');
-			this.elScrollLeftBtn = args.elScrollLeftBtn || this.elClusterArea.down('.cluster_control_left');
-			this.elScrollRightBtn = args.elScrollRightBtn || this.elClusterArea.down('.cluster_control_right');
-
-			this.elClusterArea.observe('mouseover', this.mouseOver.bindAsEventListener(this));
-			this.elClusterArea.observe('mouseout', this.mouseOut.bindAsEventListener(this));
-
-			this.rgImages = args.rgImages || this.elClusterArea.select('img.cluster_capsule_image');
-			this.rgImageURLs = args.rgImageURLs || {};
-
-			var elHandle = args.elHandle;
-
-			args.elButtonContainer.childElements().each(
-				(function (that) {
-					return (function (el, i) {
-
-						var callback = function (cluster, i) {
-							return (function () {
-								cluster.nCurCap = i;
-								cluster.scroll();
-							});
-						};
-
-						el.observe('click', callback(that, i));
-					});
-				})(this)
-			);
-
-
-			var obj = this;
-
-			this.slider = new ButtonClusterControl({
-				elContainer: args.elButtonContainer,
-				nCapWidth: args.nCapWidth
-			});
-
-			Event.observe(window, 'load', this.startTimer.bind(this));
-		},
-
-		scrollRight: function (event, bAutoScroll) {
-			this.nCurCap++;
-			this.scroll(event, bAutoScroll);
-		},
-
-		scrollLeft: function () {
-			this.nCurCap--;
-			this.scroll(null, false);
-		},
-
-		scroll: function (event, bAutoScroll) {
-			if (this.bSuppressScrolling && bAutoScroll)
-				return;
-
-			this.bInScroll = true;
-			var nDuration = bAutoScroll ? 0.2 : 0.2;
-
-			if (this.nCurCap > this.cCapCount)
-				this.nCurCap = 0;
-
-			if (this.nCurCap < 0)
-				this.nCurCap = this.cCapCount;
-
-			if (this.elScrollArea.effect) this.elScrollArea.effect.cancel();
-
-			this.elScrollArea.newPosition = '-' + (this.nCurCap * this.nCapWidth) + 'px';
-
-			this.elScrollArea.effect = new Effect.Fade(
-				this.elScrollArea, {
-					duration: nDuration,
-					fps: 60,
-					afterFinish: function (obj) {
-						obj.element.setStyle({left: obj.element.newPosition});
-						obj.element.effect = new Effect.Appear(
-							obj.element, {
-								duration: nDuration,
-								fps: 60
-							}
-						);
-					}
-				}
-			);
-
-			this.slider.setValue(this.nCurCap * this.nCapWidth);
-			this.ensureImagesLoaded();
-			this.bInScroll = false;
-			this.startTimer();
-		},
-
-		mouseOver: function () {
-			this.clearInterval();
-		},
-
-		mouseOut: function (event) {
-			var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
-			if (reltarget && $(reltarget).up('#' + this.elClusterArea.id))
-				return;
-
-			this.startTimer();
+		var $CapCtn = Cluster.BuildClusterCapsule( oItem.appid, oItem.packageid, strStatus, strFeature, i );
+		if ( $CapCtn )
+		{
+			$ClusterCtn.append( $CapCtn );
+			if ( !$FirstCap )
+				$FirstCap = $CapCtn;
 		}
-	});
-}
+		else
+			cMainCaps--;
+	}
+
+	if ( $FirstCap )
+		$ClusterCtn.append( $FirstCap.clone( true ) );
+
+
+	$ClusterCtn.append( $J('<div/>', {'style': 'clear: left;'} ) );
+	$ClusterCtn.InstrumentLinks();
+	GDynamicStore.DecorateDynamicItems( $ClusterCtn );
+
+	return cMainCaps;
+};
+
+Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeature, nDepth )
+{
+	var params = { 'class': 'cluster_capsule' };
+	var rgItemData = GStoreItemData.GetCapParams( strFeature, unAppID, unPackageID, params, nDepth );
+	if ( !rgItemData )
+		return null;
+
+	var $CapCtn = $J('<a/>', params );
+
+	if ( rgItemData.main_capsule )
+	{
+		$CapCtn.append( $J('<img/>', {'class': 'cluster_capsule_image', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif', 'data-image-url': rgItemData.main_capsule } ) );
+	}
+	else
+	{
+		var strImageURL = rgItemData.header ? rgItemData.header : rgItemData.package_header;
+		if ( strImageURL )
+		{
+			$CapCtn.append( $J('<div/>', {'class': 'cluster_maincap_fill ' + (rgItemData.package_header ? 'package' : '') } )
+					.append(
+					$J('<img/>', {'class': 'cluster_maincap_fill_placeholder', src: 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } ),
+					$J('<img/>', {'class': 'cluster_capsule_image cluster_maincap_fill_bg', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } ),
+					$J('<img/>', {'class': 'cluster_maincap_fill_header', src: 'https://steamstore-a.akamaihd.net/public/images/blank.gif', 'data-image-url': strImageURL } )
+				)
+			);
+		}
+		else
+		{
+			// no image to display!
+			return null;
+		}
+	}
+
+	if ( rgItemData.discount_block )
+		$CapCtn.append( $J(rgItemData.discount_block).addClass( 'discount_block_large main_cap_discount' ) );
+	$CapCtn.append( $J('<div/>', {'class': 'main_cap_desc'})
+			.append( $J('<div/>', {'class': 'main_cap_content'})
+				.append( $J('<div/>', {'class': 'main_cap_platform_area platform_area'}).html( GStoreItemData.BuildSupportedPlatformIcon( rgItemData ) ) )
+				.append( $J('<div/>', {'class': 'main_cap_status ellipsis'}).text( strStatus ) )
+		)
+	);
+
+	return $CapCtn;
+};
+
 

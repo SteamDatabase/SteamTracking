@@ -747,7 +747,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_button {
 	display: block;
-	width: 740px;
+	max-width: 740px;
 
 	margin-top: 10px;
 	border: solid 1px;
@@ -774,7 +774,8 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_button > span {
 	margin: 10px 14px 10px 14px;
-	display: inline-block;
+	display: block;
+	overflow: hidden;
 }
 
 .help_wizard_button_large > span {
@@ -807,7 +808,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 	/* additional padding so contents do not render over arrow */
 	padding-right: 28px;
-	width: 712px;
+	max-width: 712px;
 }
 
 .help_wizard_button_dark {
@@ -831,7 +832,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_button_notes {
 	background-color: #121a25;
-	width: 616px;
+	max-width: 616px;
 	padding: 12px;
 	margin: 10px 0 0 0;
 
@@ -877,6 +878,7 @@ body.v6 .page_content_ctn.dark:last-child {
 	border-left: solid 1px #182636;
 	border-right: solid 1px #45566a;
 	border-bottom: solid 1px #45566a;
+	max-width: calc( 100% - 8px );
 }
 
 .loginbox .captcha_image_row {
@@ -910,16 +912,49 @@ body.v6 .page_content_ctn.dark:last-child {
 	margin-top: 20px;
 }
 
+.loginbox {
+	float: left;
+	margin-right: 16px;
+}
+
 .login_signin_msg {
-	width: 352px;
-	height: 196px;
-	padding: 0px 34px;
+	max-width: 352px;
+	min-height: 128px;
+	overflow: hidden;
+	padding: 34px 34px;
 	background-color: #24445f;
-	position: absolute;
-	top: 40px;
-	right: 46px;
+	margin-top: 16px;
+	margin-right: 16px;
 	text-align: center;
 	display: table;
+	float: right;
+}
+
+@media screen and (max-width: 800px)
+{
+	html.responsive .login_signin_msg {
+		float: none;
+		overflow: hidden;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 580px)
+{
+	html.responsive .loginbox {
+		float: none;
+		margin-right: 0;
+	}
+
+	html.responsive .login_signin_msg {
+		padding: 12px;
+		min-height: 0;
+	}
+
+	html.responsive .login_signin_msg span {
+		font-size: 12px;
+		line-height: 20px;
+	}
 }
 
 .login_signin_msg span {
@@ -984,7 +1019,7 @@ body.v6 .page_content_ctn.dark:last-child {
 .help_divider {
 	background-color: #3b718d;
 	height: 1px;
-	width: 740px;
+	max-width: 740px;
 	margin: 14px 0 8px 0;
 }
 
@@ -1023,7 +1058,7 @@ body.v6 .page_content_ctn.dark:last-child {
 	background-color: rgba(0, 0, 0, 0.2);
 	min-height: 200px;
 	margin-top: 30px;
-	width: 910px;
+	max-width: 910px;
 	padding: 15px;
 }
 
@@ -1058,7 +1093,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 .refund_result_message
 {
 	margin-top: 20px;
-	width: 604px;
+	max-width: 604px;
 }
 
 .help_refund_request_area h1.failed
@@ -1091,8 +1126,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 }
 
 .refund_notes_right {
-	float: left;
-	width: 700px;
+	overflow: hidden;
 }
 
 .refund_notes_right > div {
@@ -1110,7 +1144,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 .refund_info_box {
 	padding: 10px;
 	background-color: #1d2a3b;
-	margin-right: 80px;
+	margin-right: 9%;
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
@@ -1118,7 +1152,15 @@ body.v6 .help_refund_request_area h2 a:hover {
 .refund_notes_box
 {
 	padding: 10px;
-	margin-right: 80px;
+	margin-right: 9%;
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .refund_info_box,
+	html.responsive .refund_notes_box {
+		margin-right: 0;
+	}
 }
 
 .refund_info_box_section {
@@ -1139,8 +1181,7 @@ body.v6 .help_refund_request_area h2 a:hover {
 }
 
 .refund_info_box_right {
-	float: left;
-	max-width: 700px;
+	overflow: hidden;
 }
 
 .refund_note {
@@ -1195,37 +1236,38 @@ body.v6 .help_refund_request_area h2 a:hover {
 .help_app_header_divider {
 	background-color: #3b718d;
 	height: 1px;
-	width: 940px;
+	max-width: 940px;
 	margin: 6px 0 2px 0;
 }
 
 .help_app_header {
 	background-color: rgba(0, 0, 0, 0.2);
-	width: 924px;
+	max-width: 924px;
 	padding: 8px;
 	margin-bottom: 10px;
 }
 
 .help_app_header .subbox_left {
-	width: 604px;
+	padding: 6px;
+	width: 592px;
+	max-width: calc( 66% - 12px );
 	float: left;
 }
 
 .help_app_header img {
 	float: left;
-	margin: 6px 12px 6px 6px;
+	margin-right: 12px;
+	max-width: 40%;
 }
 
 .help_app_header .game_name {
 	font-size: 24px;
 	color: #ffffff;
-	padding-top: 4px;
 	line-height: 28px;
 }
 
 .help_app_header .account_details {
-	float: right;
-	width: 276px;
+	overflow: hidden;
 	margin-top: 10px;
 }
 
@@ -1249,17 +1291,21 @@ a .help_highlight_text:hover {
 
 .help_whitelight_text {
 	color: #ffffff;
-	line-height: 28px;
 }
 
 .help_lowlight_text {
 	color: #b0b6c0;
 }
 
+div.help_official_support_row {
+	line-height: 20px;
+	margin-bottom: 8px;
+}
+
 .help_official_box {
 	background: rgba(0, 0, 0, 0) linear-gradient(135deg, rgba(78, 145, 187, 0.3) 0%, rgba(226, 244, 255, 0.3) 100%) repeat scroll 0 0;
 	min-height: 88px;
-	width: 912px;
+	max-width: 912px;
 	padding: 14px 14px 24px 14px;
 	margin-top: 6px;
 	margin-bottom: 14px;
@@ -1288,8 +1334,29 @@ a .help_highlight_text:hover {
 
 .help_header_right {
 	float: right;
-	width: 260px;
+	width: 34%;
 	margin-left: 24px;
+}
+
+@media screen and (max-width: 480px )
+{
+	html.responsive .help_app_header .subbox_left,
+	html.responsive .help_header_right {
+		float: none;
+		width: auto;
+		max-width: none;
+	}
+
+	html.responsive .help_app_header .account_details {
+		padding: 0 6px;
+	}
+
+	html.responsive .help_header_right {
+		margin: 0;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+		padding-bottom: 8px;
+		margin-bottom: 8px;
+	}
 }
 
 .help_text_block {
@@ -1398,6 +1465,44 @@ a.guide_row {
 	min-height: 800px;
 }
 
+@media screen and (max-width: 910px)
+{
+	html.responsive .help_game_content_left,
+	html.responsive .help_game_content_right {
+		float: none;
+		width: auto;
+		min-height: 0;
+		clear: both;
+	}
+
+	html.responsive .help_game_content_right .help_game_guides_box {
+		width: calc( 50% - 28px - 4px);
+		float: right;
+	}
+
+	html.responsive .help_game_content_right .help_game_guides_box:nth-child(2n + 1) {
+		clear: left;
+		float: left;
+		margin-right: 8px;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+
+	html.responsive .help_game_content_right .help_game_guides_box,
+	html.responsive .help_game_content_right .help_game_guides_box:nth-child(2n + 1) {
+		float: none;
+		clear: none;
+		width: auto;
+		margin-right: 0;
+	}
+
+	html.responsive .help_official_box .subbox {
+		width: 50%;
+	}
+}
+
 .help_game_refund_box {
 	background-color: #121a25;
 	padding: 14px;
@@ -1415,10 +1520,6 @@ a.guide_row {
 
 .help_game_request_refund_button:hover {
 	color: #ffffff;
-}
-
-.help_purchase_button {
-	width: 740px;
 }
 
 .help_purchases .help_purchase_button {
@@ -1588,11 +1689,6 @@ a.guide_row {
 	color: #949494;
 }
 
-.help_app_header img {
-	float: left;
-	margin: 6px 12px 6px 6px;
-}
-
 
 /*******************************************/
 /* Help with login info
@@ -1618,6 +1714,19 @@ a.guide_row {
 
 	color: #ffffff;
 	font-size: 12px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .account_recovery_box {
+		min-width: 0;
+		display: block; /* why table?*/
+	}
+
+	html.responsive #forgot_login_search,
+	html.responsive #forgot_login_code {
+		max-width: calc( 100% - 16px );
+	}
 }
 
 .account_recovery_box .help_page_title {
@@ -1743,21 +1852,29 @@ a.guide_row {
 	padding: 8px 12px;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	position: relative;
-	width: 576px;
+	max-width: 576px;
 }
 
 .pwreset_left_column
 {
-	width: 300px;
-	display: inline-block;
+	float: left;
+	width: 52%;
 }
 
 .pwreset_right_column
 {
-	width: 276px;
-	position: absolute;
-	top: 8px;
-	right: 12px;
+	overflow: hidden;
+	width: 46%;
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .pwreset_left_column,
+	html.responsive .pwreset_right_column {
+		float: none;
+		width: auto;
+		max-width: none;
+	}
 }
 
 .pwreset_right_column .player_avatar, .pwreset_right_column .player_name
@@ -1778,7 +1895,6 @@ a.guide_row {
 
 .password_fields
 {
-	display: inline-block;
 }
 
 .password_field
@@ -1802,6 +1918,7 @@ a.guide_row {
 	padding: 4px;
 	width: 300px;
 	margin-top: 2px;
+	max-width: calc( 100% - 8px );
 }
 
 #password_twofactor, #twofactor_resetcode
@@ -1914,13 +2031,16 @@ a.guide_row {
 }
 
 .help_section_content {
-	width: 700px;
+	max-width: 700px;
 	background-color: rgba(0, 0, 0, 0.2);
 	display: table;
 	font-size: 12px;
 	margin-top: 10px;
-	min-width: 500px;
 	padding: 10px 20px 30px 20px;
+}
+
+.help_section_content img {
+	max-width: 100%;
 }
 
 .help_section_body p {
@@ -2179,4 +2299,17 @@ img.category_icon {
 
 .help_dialog_text {
 	max-width: 540px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive body.v6 .page_content {
+		width: auto;
+		padding: 0 2%;
+		max-width: 950px;
+	}
+	html.responsive #help_search_support_input {
+		max-width: 720px;
+		width: calc( 100% - 20px - 2px );	/* 20px padding 2px border */
+	}
 }

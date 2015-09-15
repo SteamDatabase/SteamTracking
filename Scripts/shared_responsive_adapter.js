@@ -36,8 +36,10 @@ jQuery( function($) {
 
 	var fnMakeExpandableMenuItem = function( $MenuItem, $Submenu )
 	{
-		var $SubmenuWrapper = $J('<div/>', {'class': 'menuitem_submenu_wrapper' });
+		$MenuItem.append( $J('<div/>', {'class': 'chevron' } ) );
 
+
+		var $SubmenuWrapper = $J('<div/>', {'class': 'menuitem_submenu_wrapper' });
 		$MenuItem.after( $SubmenuWrapper.append( $Submenu ) );
 		$Submenu.wrap( $('<div/>', {'class': 'inner_borders' } ) );
 

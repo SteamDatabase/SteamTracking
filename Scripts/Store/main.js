@@ -436,6 +436,8 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 
 	$Target.siblings().hide();
 	$Target.show();
+
+	g_HoverState.target = $Elem[0];
 	
 	var $Toparea = $Target.find( '.hover_top_area' );
 	if ( params && params.top_area_content )
@@ -447,11 +449,9 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 	{
 		$Toparea.hide();
 	}
-	
 
 	// "show" the hover, but not "visible", letting us do some positioning
-	$Hover.css( 'visibility', 'hidden' );
-	$Hover.show();
+	$Hover.css( 'visibility', 'hidden' ).show();
 
 	var $HoverBox = $Hover.find( '.hover_box' );
 	var $HoverArrowLeft = $Hover.find( '.hover_arrow_left' );
@@ -469,7 +469,13 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 	var boxRightViewport = ( offset.left - nWindowScrollLeft ) + $Elem.outerWidth() + $HoverBox.width() + 14;
 	var nSpaceRight = nViewportWidth - boxRightViewport;
 	var nSpaceLeft = offset.left - $Hover.width();
-	if ( nSpaceRight < 14 && nSpaceLeft > nSpaceRight )
+	if( nSpaceLeft < -10 && nSpaceRight < -10 )
+	{
+		//no room at all
+		$Hover.hide().css('visibility','');
+		return;	//skip showing the hover
+	}
+	else if ( nSpaceRight < 14 && nSpaceLeft > nSpaceRight )
 	{
 				nHoverPositionLeft = offset.left - $Hover.outerWidth() + 8;
 		$HoverArrow = $HoverArrowRight;
@@ -508,8 +514,6 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 
 	$Hover.hide();
 	$Hover.css( 'visibility', '' );
-
-	g_HoverState.target = $Elem[0];
 	
 	ShowWithFade( $Hover, speed );
 }
@@ -1856,10 +1860,13 @@ function InitHorizontalAutoSliders()
 		$Wrapper.after( $SliderCtn );
 		var fnFixHeight = function() { $Wrapper.height( $Scroll[0].scrollHeight ); };
 
-		$Wrapper.on('v_contentschanged', function() {
+		$Wrapper.on('v_contentschanged.AutoSlider', function() {
 			fnFixHeight();
 			$Wrapper.find('img' ).one('load', fnFixHeight );
-		} ).trigger('v_contentschanged');
+		} ).trigger('v_contentschanged.AutoSlider');
+
+		$J(window ).on('resize.AutoSlider', fnFixHeight );
+
 		var Slider = new CScrollSlider( $Scroll, $SliderCtn );
 
 		var fnGetScrollIncrement = function() {
@@ -1882,6 +1889,44 @@ function InitHorizontalAutoSliders()
 		$SliderRight.click( function() {
 			Slider.SetValue( Slider.GetValue() + fnGetScrollIncrement(), 250 );
 		});
+	});
+
+	$J('.store_horizontal_minislider' ).each( function() {
+		var $Scroll = $J(this);
+		var $Wrapper = $Scroll.wrap( $J('<div/>', {'class': 'store_horizontal_minislider_ctn' } ) ).parent();
+		var $SliderLeft = $J('<div/>', {'class': 'slider_left'} ).append($J('<span/>'));
+		var $SliderRight = $J('<div/>', {'class': 'slider_right'} ).append($J('<span/>'));
+
+		$Wrapper.append( $SliderLeft, $SliderRight );
+
+		var fnShowHideButtons = function()
+		{
+			$Wrapper.css('height', $Scroll.children().outerHeight() );
+
+			if ( $Scroll.scrollLeft() <= 1 )
+				$SliderLeft.hide();
+			else
+				$SliderLeft.show();
+
+			if ( $Scroll.scrollLeft() + $Scroll.width() < $Scroll[0].scrollWidth - 1 )
+				$SliderRight.show();
+			else
+				$SliderRight.hide();
+		}
+
+		$Scroll.on( 'scroll.AutoSlider v_contentschagned.AutoSlider', fnShowHideButtons );
+		$J(window ).on('resize.AutoSlider', fnShowHideButtons );
+
+		$SliderLeft.click( function() {
+			$Scroll.animate( {scrollLeft: Math.max( 0, $Scroll.scrollLeft() - $Wrapper.width() ) } );
+			fnShowHideButtons();
+		} );
+		$SliderRight.click( function() {
+			$Scroll.animate( {scrollLeft: Math.min( $Scroll[0].scrollWidth - $Scroll.width(), $Scroll.scrollLeft() + $Wrapper.width() ) } );
+			fnShowHideButtons();
+		} );
+
+		fnShowHideButtons();
 	});
 }
 

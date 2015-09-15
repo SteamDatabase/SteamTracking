@@ -111,6 +111,27 @@
 	padding: 12px;
 }
 
+body.v6 .leftcol h2.pageheader {
+	margin-top: 0;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .responsive_explore_activity.left {
+		float: left;
+		width: calc( 50% - 4px );
+		margin-right: 8px;
+	}
+
+	html.responsive .responsive_explore_activity.right {
+		overflow: hidden;
+	}
+
+	html.responsive .explore_rightcol_box {
+		width: auto;
+	}
+}
+
 .explore_rightcol_header {
 	color: #61686d;
 }

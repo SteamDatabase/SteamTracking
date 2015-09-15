@@ -2176,7 +2176,7 @@ body.profile_page #footer {
 }
 
 .profile_fatalerror {
-	padding: 20px 80px 80px 80px;
+	padding: 20px 9% 80px 9%;
 }
 
 .profile_fatalerror h1 {
@@ -2194,7 +2194,7 @@ body.profile_page #footer {
 .profile_fatalerror_message {
 	background-color: #1d1d1d;
 	border-radius: 3px;
-	padding: 16px 24px;
+	padding: 16px 4.5%;
 	color: #d6d6d6;
 	margin-bottom: 32px;
 	line-height: 20px;

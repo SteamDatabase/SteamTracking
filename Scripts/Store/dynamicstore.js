@@ -510,6 +510,55 @@ GStoreItemData = {
 		});
 	},
 
+	GetCapParams: function( strFeatureContext, unAppID, unPackageID, params, nDepth )
+	{
+		var rgItemData = ( unAppID ? GStoreItemData.rgAppData[ unAppID] : GStoreItemData.rgPackageData[ unPackageID ] );
+
+		if ( !rgItemData )
+			return null;
+
+		if ( unAppID )
+		{
+			params['data-ds-appid'] = unAppID;
+			params['href'] = GStoreItemData.GetAppURL( unAppID, strFeatureContext, nDepth );
+		}
+		else
+		{
+			params['data-ds-packageid'] = unPackageID;
+			params['href'] = GStoreItemData.GetPackageURL( unPackageID, strFeatureContext, nDepth );
+			if ( rgItemData['appids'] )
+				params['data-ds-appid'] = rgItemData['appids'];
+		}
+
+		return rgItemData;
+	},
+
+	BuildSupportedPlatformIcon: function( rgItemData )
+	{
+		var strHTML = '';
+		var nPlatforms = 0;
+
+		if ( rgItemData.video )
+			return '<span class="platform_img streamingvideo"></span>';
+
+		if ( rgItemData.os_windows )
+		{
+			strHTML += '<span class="platform_img win"></span>';
+			nPlatforms++;
+		}
+		if ( rgItemData.os_macos )
+		{
+			strHTML += '<span class="platform_img mac"></span>';
+			nPlatforms++;
+		}
+		if ( rgItemData.os_linux )
+		{
+			strHTML += '<span class="platform_img linux"></span>';
+			nPlatforms++;
+		}
+
+		return strHTML + ( nPlatforms > 1 ? '<span class="platform_img steamplay"></span>' : '' );
+	},
 
 	// filtering
 	FilterItemsForDisplay: function( rgItems, Settings, ApplicableSettings, cMaxItemsToDisplay, cMinItemsToDisplay )

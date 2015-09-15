@@ -617,6 +617,7 @@ Label.HistoryEventDescription
 	padding-right: 0px;
 }
 
+.ContentPanel #WalletInfo,
 .CommunityDepth1 .TopVisibleDepth1 #WalletInfo,
 .CommunityDepth2 .TopVisibleDepth2 #WalletInfo,
 .CommunityDepth3 .TopVisibleDepth3 #WalletInfo,
