@@ -608,35 +608,3 @@ function Responsive_InitResponsiveToggleEvents( $ )
 		}
 	} ).trigger( 'resize.ResponsiveToggle' );
 }
-
-function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $Ctn )
-{
-	var fnReparentItems = function() {
-		var bSmallScreenMode = window.UseSmallScreenMode && window.UseSmallScreenMode();
-
-		var $MoveElements = $J(strItemSelector);
-		$MoveElements.each( function() {
-			var $Element = $J(this);
-			var $OriginalParent = $Element.data('originalParent');
-			if ( !$OriginalParent )
-			{
-				$Element.wrap( $J('<div/>') );
-				$OriginalParent = $Element.parent();
-				$Element.data('originalParent', $OriginalParent );
-			}
-
-			if ( bSmallScreenMode )
-			{
-				$Ctn.append( $Element );
-			}
-			else
-			{
-				$OriginalParent.append( $Element );
-			}
-		});
-
-	};
-
-	fnReparentItems();
-	$J(window ).on('Responsive_SmallScreenModeToggled', fnReparentItems );
-}
