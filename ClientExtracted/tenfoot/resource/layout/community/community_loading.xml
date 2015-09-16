@@ -6,24 +6,21 @@
 	
 	<CommunityPanel>
 		<Panel id="CommunityContent" class="CommunityLoading" onload="AsyncEvent( 0.0, AddStyle( LoadingVisible ) );" >
-			<Panel id="CommunityBackground" class="CommunityBackground">
-				<Image id="BGOverlay" class="BGOverlayInvisible" src="file://{images}/profile/profile_bg_wash.png" />
-			</Panel>
-			<Button id="Loading">
+			<Panel id="Loading">
 				<Label id="LoadingStatus" text="#Profile_Loading" />
 				<LoadingThrobber />
-			</Button>
+			</Panel>
 			<Panel id="Offline">
-				<Button id="OfflineMessage">
+				<Panel id="OfflineMessage">
 					<Label id="OfflineStatus1" text="#You_Are_Offline" />
 					<Label id="OfflineStatus2" text="#Community_Offline2" />
-				</Button>
+				</Panel>
 			</Panel>
 			<Panel id="Error">
-				<Button id="ErrorMessage">
+				<Panel id="ErrorMessage">
 					<Label id="ErrorStatus1" text="#Panel_Download_Error" />
 					<Label id="ErrorStatus2" text="#Panel_Download_Error2" />
-				</Button>
+				</Panel>
 			</Panel>
 		</Panel>
 	</CommunityPanel>

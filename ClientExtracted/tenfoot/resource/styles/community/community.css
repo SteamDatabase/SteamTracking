@@ -429,4 +429,8 @@ CommunityPanel
 	font-size: largefontsize;
 }
 
+CommunityHubContentPanel #Loading
+{
+	transform: translatey( -14px );
+}
 

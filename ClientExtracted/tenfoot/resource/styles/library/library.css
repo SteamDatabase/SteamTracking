@@ -6318,3 +6318,26 @@ LibrarySuggestionsRow.Active
 	color: #ffffff;
 	padding-bottom: 5px;
 }
+
+
+LibraryAppDetails #Loading
+{
+	opacity: 0.0;
+	width: 100%;
+	height: 100%;
+}
+
+LibraryAppDetails #Loading LoadingThrobber
+{
+	align: center center;
+}
+
+LibraryAppDetails.WaitingForApp #Loading
+{
+	opacity: 1.0;
+}
+
+LibraryAppDetails.WaitingForApp #DesktopPanels
+{
+	opacity: 0.0;
+}

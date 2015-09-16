@@ -4,22 +4,25 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 	
-	<LibraryAppDetails defaultfocus="PlayAction" >
+	<LibraryAppDetails class="ContentPanel WaitingForApp" content-delete-at-stack-depth="1">
 		<Panel id="DetailsBackground" class="DetailsBackground">
 			<Image id="BGOverlay" class="BGOverlayInvisible" src="file://{images}/library/library_app_details_bg_wash.png" />
 			<Panel id="BGScreenshotWrapper">
 				<Image id="BGScreenshot" class="BGScreenshot" onload="AddStyle( BGScreenshotVisible ); RemoveStyle( BGScreenshotInvisible ); AddStyle( BGOverlay, BGOverlayVisible ); RemoveStyle( BGOverlay, BGOverlayInvisible );" />
 			</Panel>
 		</Panel>
+		<Button id="Loading">
+			<LoadingThrobber />
+		</Button>
 		<Panel id="DesktopPanels">
-			<Panel id="CommonControls" tabindex="auto" selectionpos="auto">
-				<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore" onmoveright="LibraryDetailsFocusFirstVisibleItem()" />
+			<Panel id="CommonControls" tabindex="auto" selectionpos="auto" rememberchildfocus="true" >
+				<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore" />
 			</Panel>
 
-			<Panel class="LibraryDetailsSectionsContainer" tabindex="auto" selectionpos="auto">
+			<Panel class="LibraryDetailsSectionsContainer" tabindex="auto" selectionpos="auto" >
 
-				<LibrarySettings id="LibrarySettings" class="LibraryDetailsSectionPanel" onmoveleft="LibraryDetailsFocusSelectedItem()" />
-				<Panel id="StorePanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" >
+				<LibrarySettings id="LibrarySettings" class="LibraryDetailsSectionPanel" rememberchildfocus="true" />
+				<Panel id="StorePanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" >
 					<ParentalButton id="GotoStoreButton" class="NxLeftNavButtonAction">
 						<Image src="file://{images}/icon_cart.png" />
 						<Label id="StoreLabel" text="#Library_Details_GameStorePage" />
@@ -27,17 +30,17 @@
 					</ParentalButton>
 				</Panel>
 	
-				<CommunityHubContentPanel id="CommunityContentAllPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
-				<CommunityHubContentPanel id="CommunityContentScreenshotsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
-				<CommunityHubContentPanel id="CommunityContentArtworkPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
-				<CommunityHubContentPanel id="CommunityContentVideosPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
-				<CommunityHubContentPanel id="CommunityContentBroadcastsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
-				<CommunityHubContentPanel id="CommunityContentWorkshopPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
-				<CommunityHubContentPanel id="CommunityContentNewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
-				<CommunityHubContentPanel id="CommunityContentGuidesPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
-				<CommunityHubContentPanel id="CommunityContentReviewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()" />
+				<CommunityHubContentPanel id="CommunityContentAllPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
+				<CommunityHubContentPanel id="CommunityContentScreenshotsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
+				<CommunityHubContentPanel id="CommunityContentArtworkPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
+				<CommunityHubContentPanel id="CommunityContentVideosPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
+				<CommunityHubContentPanel id="CommunityContentBroadcastsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
+				<CommunityHubContentPanel id="CommunityContentWorkshopPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
+				<CommunityHubContentPanel id="CommunityContentNewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
+				<CommunityHubContentPanel id="CommunityContentGuidesPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
+				<CommunityHubContentPanel id="CommunityContentReviewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
 	
-				<Panel id="ContentsRow" class="ContentsRow LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" onmoveleft="LibraryDetailsFocusSelectedItem()">
+				<Panel id="ContentsRow" class="ContentsRow LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" >
 	
 					<Panel class="LibraryDetailsSectionRow PlayArea">
 						<Panel class="LibraryPlayRow">

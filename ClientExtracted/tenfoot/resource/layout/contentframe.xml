@@ -8,7 +8,6 @@
 		<Panel id="ContentPanels">
 			<LibraryPanel id="Library" class="LibraryPanel ContentPanel" />
 			<LibraryAllGames id="LibraryAllGames" class="LibraryAllGames ContentPanel" />
-			<LibraryAppDetails id="LibraryAppDetails" class="ContentPanel" />
 		</Panel>
 		<Panel id="ContentFrameHeader">
 			<Image class="SteamLogo" src="file://{images}/steam_home_os.png" />

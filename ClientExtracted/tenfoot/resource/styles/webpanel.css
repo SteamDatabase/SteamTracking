@@ -21,6 +21,11 @@
 	opacity: 1.0;
 }
 
+ContentFrame #webinlinepanel.Visible
+{
+	transform: translatey( 96px );
+}
+
 .Deleting
 {
 	opacity: 0.0;

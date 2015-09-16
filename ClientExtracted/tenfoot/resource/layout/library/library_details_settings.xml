@@ -5,7 +5,7 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 
-	<LibrarySettings defaultfocus="UnblockedGamesButton" tabindex="auto" selectionpos="auto">
+	<LibrarySettings tabindex="auto" selectionpos="auto">
 		
 		<!-- main settings panel, a big container of buttons -->
 		<Panel id="SettingsContent" class="SettingsMainContent LibraryDetailsSectionRow" tabindex="auto" selectionpos="auto" >

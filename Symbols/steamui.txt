@@ -1241,8 +1241,6 @@
  B LaunchOptionChosen::symbol
  B LaunchOptionChosenRemote::symbol
  B LibraryButtonFocused::symbol
- B LibraryDetailsFocusFirstVisibleItem::symbol
- B LibraryDetailsFocusSelectedItem::symbol
  B LibraryFilter::symbol
  B LibrarySearch::symbol
  B LibrarySearchButtonActivated::symbol
@@ -4401,6 +4399,13 @@
  D CPasswordEntryField::GetKBMap()::s_pMap
  D CPasswordEntryField::GetMessageMap()::s_pMap
  D CPasswordEntryField::KB_ChainToMap()::chained
+ D CPhoneReminderBar::ChainToAnimationMap()::chained
+ D CPhoneReminderBar::ChainToMap()::chained
+ D CPhoneReminderBar::GetKBMap()::s_pMap
+ D CPhoneReminderBar::GetMessageMap()::s_pMap
+ D CPhoneReminderBar::KB_ChainToMap()::chained
+ D CPhoneReminderBar::PanelMessageFunc_AddPhone::InitVar()::bAdded
+ D CPhoneReminderBar::PanelMessageFunc_Close::InitVar()::bAdded
  D CPlatformMainPanel::ChainToAnimationMap()::chained
  D CPlatformMainPanel::ChainToMap()::chained
  D CPlatformMainPanel::GetKBMap()::s_pMap
@@ -5490,8 +5495,6 @@
  D LayoutDebugDialog::PanelMessageFunc_OnURLClicked::InitVar()::bAdded
  D LayoutDebugDialog::PanelMessageFunc_OpenFileForEdit::InitVar()::bAdded
  D LibraryButtonFocused::pchEvent
- D LibraryDetailsFocusFirstVisibleItem::pchEvent
- D LibraryDetailsFocusSelectedItem::pchEvent
  D LibraryFilter::pchEvent
  D LibrarySearch::pchEvent
  D LibrarySearchButtonActivated::pchEvent
@@ -6133,6 +6136,7 @@
  D VTT for CParentalURLLabel
  D VTT for CParentalURLLabelBase
  D VTT for CPasswordEntryField
+ D VTT for CPhoneReminderBar
  D VTT for CPlatformMainPanel
  D VTT for CPlaylistItemLabel
  D VTT for CPlaylistItemPanel
@@ -6568,6 +6572,7 @@
  D construction vtable for vgui::EditablePanel-in-COSRequirementsdialog
  D construction vtable for vgui::EditablePanel-in-CPaginationPanel
  D construction vtable for vgui::EditablePanel-in-CParentalEditablePanel
+ D construction vtable for vgui::EditablePanel-in-CPhoneReminderBar
  D construction vtable for vgui::EditablePanel-in-CPlaylistItemPanel
  D construction vtable for vgui::EditablePanel-in-CPrintHTML
  D construction vtable for vgui::EditablePanel-in-CProductMarketingDialog
@@ -7001,6 +7006,7 @@
  D construction vtable for vgui::Panel-in-CParentalURLLabel
  D construction vtable for vgui::Panel-in-CParentalURLLabelBase
  D construction vtable for vgui::Panel-in-CPasswordEntryField
+ D construction vtable for vgui::Panel-in-CPhoneReminderBar
  D construction vtable for vgui::Panel-in-CPlatformMainPanel
  D construction vtable for vgui::Panel-in-CPlaylistItemLabel
  D construction vtable for vgui::Panel-in-CPlaylistItemPanel
@@ -7605,6 +7611,8 @@
  D guard variable for CParentalURLLabelBase::GetMessageMap()::s_pMap
  D guard variable for CPasswordEntryField::GetKBMap()::s_pMap
  D guard variable for CPasswordEntryField::GetMessageMap()::s_pMap
+ D guard variable for CPhoneReminderBar::GetKBMap()::s_pMap
+ D guard variable for CPhoneReminderBar::GetMessageMap()::s_pMap
  D guard variable for CPlatformMainPanel::GetKBMap()::s_pMap
  D guard variable for CPlatformMainPanel::GetMessageMap()::s_pMap
  D guard variable for CPlaylistItemLabel::GetKBMap()::s_pMap
@@ -8899,6 +8907,7 @@
  D typeinfo for CCallback<CSteamRootDialog, DRMFailureResponse_t, false>
  D typeinfo for CCallback<CSteamRootDialog, FriendAdded_t, false>
  D typeinfo for CCallback<CSteamRootDialog, FriendsMenuChange_t, false>
+ D typeinfo for CCallback<CSteamRootDialog, GetSteamGuardDetailsResponse_t, false>
  D typeinfo for CCallback<CSteamRootDialog, GuestPassAcked_t, false>
  D typeinfo for CCallback<CSteamRootDialog, ParentalLockChanged_t, false>
  D typeinfo for CCallback<CSteamRootDialog, PersonaStateChange_t, false>
@@ -8958,6 +8967,7 @@
  D typeinfo for CCallback<CTenfootConfirmPasswordDialog, VerifyPasswordResponse_t, false>
  D typeinfo for CCallback<CTenfootController, AppLifetimeNotice_t, false>
  D typeinfo for CCallback<CTenfootController, ClientMusicHasEnabled_t, false>
+ D typeinfo for CCallback<CTenfootController, GameOverlayActivateRequested_t, false>
  D typeinfo for CCallback<CTenfootController, GameStatsSessionClosed_t, false>
  D typeinfo for CCallback<CTenfootController, GameStatsSessionIssued_t, false>
  D typeinfo for CCallback<CTenfootController, NetworkDeviceStateChange_t, false>
@@ -9978,6 +9988,7 @@
  D typeinfo for CPasswordWizardChild
  D typeinfo for CPathString
  D typeinfo for CPendingVideoChange
+ D typeinfo for CPhoneReminderBar
  D typeinfo for CPickledRadixTrie
  D typeinfo for CPipeEvent
  D typeinfo for CPlatformMainPanel
@@ -10265,6 +10276,7 @@
  D typeinfo for CSteamRootDialog::CCallback_OnRemoteDeviceAuthRequest
  D typeinfo for CSteamRootDialog::CCallback_OnStartStreamingUI
  D typeinfo for CSteamRootDialog::CCallback_OnStartTenfoot
+ D typeinfo for CSteamRootDialog::CCallback_OnSteamGuardDetailsResponse
  D typeinfo for CSteamRootDialog::CCallback_OnSteamServersConnected
  D typeinfo for CSteamRootDialog::CCallback_OnSteamServersDisconnected
  D typeinfo for CSteamRootDialog::CCallback_OnStopPlayingBorrowedApp
@@ -10457,6 +10469,7 @@
  D typeinfo for CTenfootController::CCallback_OnAppLifetimeNotification
  D typeinfo for CTenfootController::CCallback_OnCallbackSystemIM
  D typeinfo for CTenfootController::CCallback_OnClientMusicHasEnabled
+ D typeinfo for CTenfootController::CCallback_OnGameOverlayActivateRequested
  D typeinfo for CTenfootController::CCallback_OnNetworkDeviceStateChange
  D typeinfo for CTenfootController::CCallback_OnRemoteClientStreamLifetimeNotification
  D typeinfo for CTenfootController::CCallback_OnStartStreamingUI
@@ -12278,6 +12291,7 @@
  D vtable for CCallback<CSteamRootDialog, DRMFailureResponse_t, false>
  D vtable for CCallback<CSteamRootDialog, FriendAdded_t, false>
  D vtable for CCallback<CSteamRootDialog, FriendsMenuChange_t, false>
+ D vtable for CCallback<CSteamRootDialog, GetSteamGuardDetailsResponse_t, false>
  D vtable for CCallback<CSteamRootDialog, GuestPassAcked_t, false>
  D vtable for CCallback<CSteamRootDialog, ParentalLockChanged_t, false>
  D vtable for CCallback<CSteamRootDialog, PersonaStateChange_t, false>
@@ -12337,6 +12351,7 @@
  D vtable for CCallback<CTenfootConfirmPasswordDialog, VerifyPasswordResponse_t, false>
  D vtable for CCallback<CTenfootController, AppLifetimeNotice_t, false>
  D vtable for CCallback<CTenfootController, ClientMusicHasEnabled_t, false>
+ D vtable for CCallback<CTenfootController, GameOverlayActivateRequested_t, false>
  D vtable for CCallback<CTenfootController, GameStatsSessionClosed_t, false>
  D vtable for CCallback<CTenfootController, GameStatsSessionIssued_t, false>
  D vtable for CCallback<CTenfootController, NetworkDeviceStateChange_t, false>
@@ -13351,6 +13366,7 @@
  D vtable for CPasswordWizardChild
  D vtable for CPathString
  D vtable for CPendingVideoChange
+ D vtable for CPhoneReminderBar
  D vtable for CPickledRadixTrie
  D vtable for CPipeEvent
  D vtable for CPlatformMainPanel
@@ -13632,6 +13648,7 @@
  D vtable for CSteamRootDialog::CCallback_OnRemoteDeviceAuthRequest
  D vtable for CSteamRootDialog::CCallback_OnStartStreamingUI
  D vtable for CSteamRootDialog::CCallback_OnStartTenfoot
+ D vtable for CSteamRootDialog::CCallback_OnSteamGuardDetailsResponse
  D vtable for CSteamRootDialog::CCallback_OnSteamServersConnected
  D vtable for CSteamRootDialog::CCallback_OnSteamServersDisconnected
  D vtable for CSteamRootDialog::CCallback_OnStopPlayingBorrowedApp
@@ -13824,6 +13841,7 @@
  D vtable for CTenfootController::CCallback_OnAppLifetimeNotification
  D vtable for CTenfootController::CCallback_OnCallbackSystemIM
  D vtable for CTenfootController::CCallback_OnClientMusicHasEnabled
+ D vtable for CTenfootController::CCallback_OnGameOverlayActivateRequested
  D vtable for CTenfootController::CCallback_OnNetworkDeviceStateChange
  D vtable for CTenfootController::CCallback_OnRemoteClientStreamLifetimeNotification
  D vtable for CTenfootController::CCallback_OnStartStreamingUI
@@ -15048,6 +15066,7 @@
  R typeinfo name for CCallback<CSteamRootDialog, DRMFailureResponse_t, false>
  R typeinfo name for CCallback<CSteamRootDialog, FriendAdded_t, false>
  R typeinfo name for CCallback<CSteamRootDialog, FriendsMenuChange_t, false>
+ R typeinfo name for CCallback<CSteamRootDialog, GetSteamGuardDetailsResponse_t, false>
  R typeinfo name for CCallback<CSteamRootDialog, GuestPassAcked_t, false>
  R typeinfo name for CCallback<CSteamRootDialog, ParentalLockChanged_t, false>
  R typeinfo name for CCallback<CSteamRootDialog, PersonaStateChange_t, false>
@@ -15107,6 +15126,7 @@
  R typeinfo name for CCallback<CTenfootConfirmPasswordDialog, VerifyPasswordResponse_t, false>
  R typeinfo name for CCallback<CTenfootController, AppLifetimeNotice_t, false>
  R typeinfo name for CCallback<CTenfootController, ClientMusicHasEnabled_t, false>
+ R typeinfo name for CCallback<CTenfootController, GameOverlayActivateRequested_t, false>
  R typeinfo name for CCallback<CTenfootController, GameStatsSessionClosed_t, false>
  R typeinfo name for CCallback<CTenfootController, GameStatsSessionIssued_t, false>
  R typeinfo name for CCallback<CTenfootController, NetworkDeviceStateChange_t, false>
@@ -16134,6 +16154,7 @@
  R typeinfo name for CPasswordWizardChild
  R typeinfo name for CPathString
  R typeinfo name for CPendingVideoChange
+ R typeinfo name for CPhoneReminderBar
  R typeinfo name for CPickledRadixTrie
  R typeinfo name for CPipeEvent
  R typeinfo name for CPlatformMainPanel
@@ -16423,6 +16444,7 @@
  R typeinfo name for CSteamRootDialog::CCallback_OnRemoteDeviceAuthRequest
  R typeinfo name for CSteamRootDialog::CCallback_OnStartStreamingUI
  R typeinfo name for CSteamRootDialog::CCallback_OnStartTenfoot
+ R typeinfo name for CSteamRootDialog::CCallback_OnSteamGuardDetailsResponse
  R typeinfo name for CSteamRootDialog::CCallback_OnSteamServersConnected
  R typeinfo name for CSteamRootDialog::CCallback_OnSteamServersDisconnected
  R typeinfo name for CSteamRootDialog::CCallback_OnStopPlayingBorrowedApp
@@ -16616,6 +16638,7 @@
  R typeinfo name for CTenfootController::CCallback_OnAppLifetimeNotification
  R typeinfo name for CTenfootController::CCallback_OnCallbackSystemIM
  R typeinfo name for CTenfootController::CCallback_OnClientMusicHasEnabled
+ R typeinfo name for CTenfootController::CCallback_OnGameOverlayActivateRequested
  R typeinfo name for CTenfootController::CCallback_OnNetworkDeviceStateChange
  R typeinfo name for CTenfootController::CCallback_OnRemoteClientStreamLifetimeNotification
  R typeinfo name for CTenfootController::CCallback_OnStartStreamingUI
@@ -20363,6 +20386,9 @@
  T CCallback<CSteamRootDialog, FriendsMenuChange_t, false>::CCallback(CSteamRootDialog*, void (CSteamRootDialog::*)(FriendsMenuChange_t*))
  T CCallback<CSteamRootDialog, FriendsMenuChange_t, false>::Register(CSteamRootDialog*, void (CSteamRootDialog::*)(FriendsMenuChange_t*))
  T CCallback<CSteamRootDialog, FriendsMenuChange_t, false>::Run(void*)
+ T CCallback<CSteamRootDialog, GetSteamGuardDetailsResponse_t, false>::CCallback(CSteamRootDialog*, void (CSteamRootDialog::*)(GetSteamGuardDetailsResponse_t*))
+ T CCallback<CSteamRootDialog, GetSteamGuardDetailsResponse_t, false>::Register(CSteamRootDialog*, void (CSteamRootDialog::*)(GetSteamGuardDetailsResponse_t*))
+ T CCallback<CSteamRootDialog, GetSteamGuardDetailsResponse_t, false>::Run(void*)
  T CCallback<CSteamRootDialog, GuestPassAcked_t, false>::CCallback(CSteamRootDialog*, void (CSteamRootDialog::*)(GuestPassAcked_t*))
  T CCallback<CSteamRootDialog, GuestPassAcked_t, false>::Register(CSteamRootDialog*, void (CSteamRootDialog::*)(GuestPassAcked_t*))
  T CCallback<CSteamRootDialog, GuestPassAcked_t, false>::Run(void*)
@@ -20540,6 +20566,9 @@
  T CCallback<CTenfootController, ClientMusicHasEnabled_t, false>::CCallback(CTenfootController*, void (CTenfootController::*)(ClientMusicHasEnabled_t*))
  T CCallback<CTenfootController, ClientMusicHasEnabled_t, false>::Register(CTenfootController*, void (CTenfootController::*)(ClientMusicHasEnabled_t*))
  T CCallback<CTenfootController, ClientMusicHasEnabled_t, false>::Run(void*)
+ T CCallback<CTenfootController, GameOverlayActivateRequested_t, false>::CCallback(CTenfootController*, void (CTenfootController::*)(GameOverlayActivateRequested_t*))
+ T CCallback<CTenfootController, GameOverlayActivateRequested_t, false>::Register(CTenfootController*, void (CTenfootController::*)(GameOverlayActivateRequested_t*))
+ T CCallback<CTenfootController, GameOverlayActivateRequested_t, false>::Run(void*)
  T CCallback<CTenfootController, GameStatsSessionClosed_t, false>::CCallback(CTenfootController*, void (CTenfootController::*)(GameStatsSessionClosed_t*))
  T CCallback<CTenfootController, GameStatsSessionClosed_t, false>::Register(CTenfootController*, void (CTenfootController::*)(GameStatsSessionClosed_t*))
  T CCallback<CTenfootController, GameStatsSessionClosed_t, false>::Run(void*)
@@ -21491,6 +21520,7 @@
  T CContentFrame::BStartNavigateBack(panorama::CPanel2D*)
  T CContentFrame::CContentFrame(panorama::CPanel2D*, char const*)
  T CContentFrame::EndNavigateBack()
+ T CContentFrame::EventBrowserGoToURL(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*)
  T CContentFrame::EventInputFocusLost(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CContentFrame::EventInputFocusSet(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CContentFrame::EventPropertyTransitionEnd(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CStyleSymbol)
@@ -25300,8 +25330,6 @@
  T CLibraryDetailsPanel::OnCloudSyncServer(RemoteStorageAppSyncedServer_t*)
  T CLibraryDetailsPanel::OnCloudSyncStateEvaluated(RemoteStorageAppSyncStatusCheck_t*)
  T CLibraryDetailsPanel::OnDoneWithLaunchTimeout(panorama::CPanelPtr<panorama::CPanel2D>)
- T CLibraryDetailsPanel::OnFocusFirstVisibleItem()
- T CLibraryDetailsPanel::OnFocusSelectedItem()
  T CLibraryDetailsPanel::OnParentalSettingsChanged()
  T CLibraryDetailsPanel::OnSetPlayActionModal(bool)
  T CLibraryDetailsPanel::OnShowLibraryDetailsSection(ELibraryDetailsSection)
@@ -25404,7 +25432,6 @@
  T CLibraryLinksAndMorePanel::GetPanelType() const
  T CLibraryLinksAndMorePanel::OnAddToUnblockedGames(unsigned int)
  T CLibraryLinksAndMorePanel::OnFirstTimeGameLaunchControllerPresets(KeyValues*)
- T CLibraryLinksAndMorePanel::OnFocusSelectedItem()
  T CLibraryLinksAndMorePanel::OnParentalSettingsChanged()
  T CLibraryLinksAndMorePanel::OnRemoveFromUnblockedGames(unsigned int)
  T CLibraryLinksAndMorePanel::OnSelectAppCategory(unsigned int)
@@ -29688,6 +29715,21 @@
  T CPathString::~CPathString()
  T CPendingVideoChange::SetPending(char const*, unsigned int)
  T CPendingVideoChange::Validate(CValidator&, char const*)
+ T CPhoneReminderBar::AddPhone()
+ T CPhoneReminderBar::CPhoneReminderBar(vgui::Panel*, char const*)
+ T CPhoneReminderBar::ChainToAnimationMap()
+ T CPhoneReminderBar::ChainToMap()
+ T CPhoneReminderBar::Close()
+ T CPhoneReminderBar::GetAnimMap()
+ T CPhoneReminderBar::GetClassSize() const
+ T CPhoneReminderBar::GetKBMap()
+ T CPhoneReminderBar::GetMessageMap()
+ T CPhoneReminderBar::GetPanelClassName()
+ T CPhoneReminderBar::GetPanelTopClassName() const
+ T CPhoneReminderBar::KB_ChainToMap()
+ T CPhoneReminderBar::PanelMessageFunc_AddPhone::InitVar()
+ T CPhoneReminderBar::PanelMessageFunc_Close::InitVar()
+ T CPhoneReminderBar::~CPhoneReminderBar()
  T CPickledRadixTrie::BLoad(CUtlBuffer&)
  T CPickledRadixTrie::CChildren(CPickledRadixTrieNode const&) const
  T CPickledRadixTrie::CPickledRadixTrie()
@@ -32852,6 +32894,7 @@
  T CSteamRootDialog::CCallback_OnRemoteDeviceAuthRequest::Run(void*)
  T CSteamRootDialog::CCallback_OnStartStreamingUI::Run(void*)
  T CSteamRootDialog::CCallback_OnStartTenfoot::Run(void*)
+ T CSteamRootDialog::CCallback_OnSteamGuardDetailsResponse::Run(void*)
  T CSteamRootDialog::CCallback_OnSteamServersConnected::Run(void*)
  T CSteamRootDialog::CCallback_OnSteamServersDisconnected::Run(void*)
  T CSteamRootDialog::CCallback_OnStopPlayingBorrowedApp::Run(void*)
@@ -32933,6 +32976,7 @@
  T CSteamRootDialog::OnSetOfflineMode(KeyValues*)
  T CSteamRootDialog::OnStartStreamingUI(StartStreamingUI_t*)
  T CSteamRootDialog::OnStartTenfoot(StartTenfoot_t*)
+ T CSteamRootDialog::OnSteamGuardDetailsResponse(GetSteamGuardDetailsResponse_t*)
  T CSteamRootDialog::OnSteamServersConnected(SteamServersConnected_t*)
  T CSteamRootDialog::OnSteamServersDisconnected(SteamServersDisconnected_t*)
  T CSteamRootDialog::OnStopPlayingBorrowedApp(StopPlayingBorrowedApp_t*)
@@ -34955,6 +34999,7 @@
  T CTenfootController::CCallback_OnAppLifetimeNotification::Run(void*)
  T CTenfootController::CCallback_OnCallbackSystemIM::Run(void*)
  T CTenfootController::CCallback_OnClientMusicHasEnabled::Run(void*)
+ T CTenfootController::CCallback_OnGameOverlayActivateRequested::Run(void*)
  T CTenfootController::CCallback_OnNetworkDeviceStateChange::Run(void*)
  T CTenfootController::CCallback_OnRemoteClientStreamLifetimeNotification::Run(void*)
  T CTenfootController::CCallback_OnStartStreamingUI::Run(void*)
@@ -34989,6 +35034,7 @@
  T CTenfootController::OnCheckDemoSystemInactive()
  T CTenfootController::OnClientMusicHasEnabled(ClientMusicHasEnabled_t*)
  T CTenfootController::OnExitSteam()
+ T CTenfootController::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t*)
  T CTenfootController::OnGoOffline()
  T CTenfootController::OnGoOnline()
  T CTenfootController::OnIntroMovieDone()
@@ -35054,6 +35100,7 @@
  T CTenfootController::ShowRefreshLoginDialog(EResult)
  T CTenfootController::ShowSSA(bool, bool, char const*)
  T CTenfootController::ShowSteamGuardAuthDialog(EResult)
+ T CTenfootController::ShowSteamInVRDashboard()
  T CTenfootController::Shutdown()
  T CTenfootController::StartPromoVideoLoop()
  T CTenfootController::TrySetSoundVolume()
@@ -35876,6 +35923,7 @@
  T CUINavigatorPanel::SetMusicNavDisplayMode(int)
  T CUINavigatorPanel::ShowBroadcast(CSteamID)
  T CUINavigatorPanel::ShowBroadcast(char const*)
+ T CUINavigatorPanel::ShowPhoneReminderBar()
  T CUINavigatorPanel::UpdateControlsState(bool)
  T CUINavigatorPanel::UpdateGameFiltersMenu(CUINavButton*, vgui::MenuButton*, CUINavigatorPanel::EUIPanel, vgui::Panel*, bool, EAppFilter)
  T CUINavigatorPanel::UpdateMeMenuText()
@@ -39446,6 +39494,7 @@
  T CWebInlinePanel::OnHTMLOpenPopupTab(panorama::CPanelPtr<panorama::IUIPanel> const&, panorama::CHTML*, char const*)
  T CWebInlinePanel::OnHTMLStartRequest(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, bool*)
  T CWebInlinePanel::OnURLChanged(panorama::CPanelPtr<panorama::IUIPanel> const&, char const*, char const*)
+ T CWebInlinePanel::OpenURL(char const*)
  T CWebInlinePanel::~CWebInlinePanel()
  T CWebLoadedPanel* panorama::GetThisPtrForJSCall<CWebLoadedPanel>(v8::Local<v8::Object>)
  T CWebLoadedPanel::BNeedsLoad(bool)
@@ -41319,12 +41368,6 @@
  T LibraryButtonFocused::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T LibraryButtonFocused::GetEventType()
  T LibraryButtonFocused::MakeEvent(panorama::IUIPanelClient const*)
- T LibraryDetailsFocusFirstVisibleItem::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T LibraryDetailsFocusFirstVisibleItem::GetEventType()
- T LibraryDetailsFocusFirstVisibleItem::MakeEvent(panorama::IUIPanelClient const*)
- T LibraryDetailsFocusSelectedItem::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T LibraryDetailsFocusSelectedItem::GetEventType()
- T LibraryDetailsFocusSelectedItem::MakeEvent(panorama::IUIPanelClient const*)
  T LibraryFilter::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T LibraryFilter::GetEventType()
  T LibraryFilter::MakeEvent(panorama::IUIPanelClient const*)
@@ -43129,6 +43172,7 @@
  T UpdateDownloadCounts::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T UpdateDownloadCounts::GetEventType()
  T UpdateDownloadCounts::MakeEvent(panorama::IUIPanelClient const*, int, int, int)
+ T UpdateDownloadStatus(unsigned int, int*, bool*, bool*, bool*, CUtlString&, CUtlString&, CUtlString&, CUtlString&, CRTime*)
  T UpdateFocusAndDirtyChildStyles::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T UpdateFocusAndDirtyChildStyles::GetEventType()
  T UpdateFocusAndDirtyChildStyles::MakeEvent(panorama::IUIPanelClient const*)
@@ -48311,8 +48355,6 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LaunchGame, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LaunchOptionChosenRemote, unsigned long long, unsigned int, int>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibraryButtonFocused>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibraryDetailsFocusFirstVisibleItem>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibraryDetailsFocusSelectedItem>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibraryFilter>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibrarySearch>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<LibrarySearchButtonActivated>(panorama::IUIPanel*, char const*, char const**)
@@ -54244,6 +54286,10 @@
  T void std::fill<unsigned long long*, unsigned long long>(unsigned long long*, unsigned long long*, unsigned long long const&)
  T vrapi::ClearInterfaces()
  T vrapi::EnsureOpenVRAPILoaded(char const*)
+ T vrapi::VRApplications()
+ T vrapi::VRCompositor()
+ T vrapi::VROverlay()
+ T vrapi::VRSystem()
  T wrap_blocking_send(int, char const*, int, int)
  TSListBase_Init
  TSListBase_Pop
@@ -56558,6 +56604,7 @@
  d s_rgPropValuesOffLeftRight
  d s_rgPropValuesOnOff
  d s_rgPropValuesShape
+ d s_rgPropValuesTriggerAdaptiveThreshold
  d s_rgSourceInfos
  d s_rgSourceModeInfos
  d s_rgchWGAuthedURLs

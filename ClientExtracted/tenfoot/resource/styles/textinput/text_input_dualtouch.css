@@ -536,7 +536,10 @@ TextInputDualTouch
 	background-color: none;
 }
 
-.SearchResultEmbedded#EmbeddedResultEmpty
+.SearchResultEmbedded#EmbeddedResultEmpty0,
+.SearchResultEmbedded#EmbeddedResultEmpty1,
+.SearchResultEmbedded#EmbeddedResultEmpty2,
+.SearchResultEmbedded#EmbeddedResultEmpty3
 {
 	border-width: 0px;
 }

@@ -1574,8 +1574,6 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 
 	transition-property: opacity;
 	transition-duration: 0.5s;
-
-	background-color: #aaaaaaff;
 }
 
 .IsLongString.IsPasswordEntry #YButtonWrapper

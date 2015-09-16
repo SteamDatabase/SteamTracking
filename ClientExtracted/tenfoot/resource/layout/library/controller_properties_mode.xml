@@ -543,12 +543,12 @@
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerAnalogThresholdBinding" />
 					</Panel>
 					<Panel class="FieldWrapper TriggerMode">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
-						<Slider id="TriggerThreshold" direction="horizontal" />
-					</Panel>
-					<Panel class="FieldWrapper TriggerMode">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerAdaptiveThreshold" />
 						<DropDown id="AdaptiveThreshold" />
+					</Panel>
+					<Panel class="FieldWrapper TriggerMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
+						<Slider id="TriggerThreshold" direction="horizontal" />
 					</Panel>					
 					<Panel class="FieldWrapper TriggerMode">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerHapticIntensity" />

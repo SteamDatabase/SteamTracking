@@ -9152,6 +9152,7 @@
  T ClientUser()
  T ClientUserStats()
  T ClientUtils()
+ T ClientVR()
  T ClientVideo()
  T ComboBox_Factory()
  T ConCommandBase::AddFlags(unsigned int)
