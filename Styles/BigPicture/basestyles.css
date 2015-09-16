@@ -9,6 +9,9 @@
 @define longduration: 1.7s;
 @define button_focus_color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 
+@define horizontal_default: gradient( linear, 0% 0%, 100% 100%, from( #2f6682 ), to( #144066 ) );
+@define horizontal_focus: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+
 /* Popup menus */
 .MenuPopup {
 	width: 100%;
