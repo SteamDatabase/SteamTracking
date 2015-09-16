@@ -813,6 +813,8 @@
  B CSetAppLanguage::m_symbol
  B CSetControllerPairingEnabledMsg::default_instance_
  B CSetControllerPairingResultMsg::default_instance_
+ B CSetControllerSettingsMsg::_default_raw_settings_
+ B CSetControllerSettingsMsg::default_instance_
  B CSetCursorImageMsg::_default_image_
  B CSetCursorImageMsg::default_instance_
  B CSetCursorMsg::default_instance_
@@ -8999,15 +9001,6 @@
  D typeinfo for CCallback<CUpdateManager, SharedLibraryLockChanged_t, false>
  D typeinfo for CCallback<CUpdateManager, UninstallClientApp_t, false>
  D typeinfo for CCallback<CUploadScreenshotMsgBox, ScreenshotUploaded_t, false>
- D typeinfo for CCallback<CValveControllerManager, AppLifetimeNotice_t, false>
- D typeinfo for CCallback<CValveControllerManager, ControllerConnected_t, false>
- D typeinfo for CCallback<CValveControllerManager, ControllerDisconnected_t, false>
- D typeinfo for CCallback<CValveControllerManager, FocusedSteamWindowChanged_t, false>
- D typeinfo for CCallback<CValveControllerManager, RemoteClientRequestControllerConfig_t, false>
- D typeinfo for CCallback<CValveControllerManager, RemoteStorageAppSyncedClient_t, false>
- D typeinfo for CCallback<CValveControllerManager, RemoteStorageAppSyncedServer_t, false>
- D typeinfo for CCallback<CValveControllerManager, SetControllerOverrideModeForApp_t, false>
- D typeinfo for CCallback<CValveControllerManager, SteamServersConnected_t, false>
  D typeinfo for CCallback<CVerifyingEmailWizardChild, ValidateEmailResponse_t, false>
  D typeinfo for CCallback<CWelcome_NoController, ControllerConnected_t, false>
  D typeinfo for CCallback<CWelcome_NoController, ControllerPaired_t, false>
@@ -9763,7 +9756,6 @@
  D typeinfo for CMultipleCallResults<CValveControllerManager, DongleDetails_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, HTTPRequestCompleted_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, LoadControllerConfigResult_t>
- D typeinfo for CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, RemoteStorageEnumerateWorkshopFilesResult_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, RemoteStorageGetPublishedFileDetailsResult_t>
  D typeinfo for CMultipleCallResults<CValveControllerManager, RemoteStoragePublishFileResult_t>
@@ -10101,6 +10093,7 @@
  D typeinfo for CSetAppLanguage
  D typeinfo for CSetControllerPairingEnabledMsg
  D typeinfo for CSetControllerPairingResultMsg
+ D typeinfo for CSetControllerSettingsMsg
  D typeinfo for CSetCursorImageMsg
  D typeinfo for CSetCursorMsg
  D typeinfo for CSetCustomImageDialog
@@ -10556,15 +10549,14 @@
  D typeinfo for CVProfPanel
  D typeinfo for CValidateContactEmailWizard
  D typeinfo for CValveControllerManager
- D typeinfo for CValveControllerManager::CCallback_OnAppLifetimeNotification
- D typeinfo for CValveControllerManager::CCallback_OnControllerConnected
- D typeinfo for CValveControllerManager::CCallback_OnControllerDisconnected
- D typeinfo for CValveControllerManager::CCallback_OnFocusWindowChanged
- D typeinfo for CValveControllerManager::CCallback_OnRemoteClientRequestControllerConfig
- D typeinfo for CValveControllerManager::CCallback_OnRemoteStorageAppSyncedClient
- D typeinfo for CValveControllerManager::CCallback_OnRemoteStorageAppSyncedServer
- D typeinfo for CValveControllerManager::CCallback_OnSetControllerOverrideMode
- D typeinfo for CValveControllerManager::CCallback_OnSteamLogon
+ D typeinfo for CValveControllerManager::CCallbackInternal_OnAppLifetimeNotification
+ D typeinfo for CValveControllerManager::CCallbackInternal_OnControllerConnected
+ D typeinfo for CValveControllerManager::CCallbackInternal_OnControllerDisconnected
+ D typeinfo for CValveControllerManager::CCallbackInternal_OnFocusWindowChanged
+ D typeinfo for CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedClient
+ D typeinfo for CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedServer
+ D typeinfo for CValveControllerManager::CCallbackInternal_OnSetControllerOverrideMode
+ D typeinfo for CValveControllerManager::CCallbackInternal_OnSteamLogon
  D typeinfo for CValveSpecialSurveyWizard
  D typeinfo for CValveSurveyWizard
  D typeinfo for CVerifyEmailWizard
@@ -12383,15 +12375,6 @@
  D vtable for CCallback<CUpdateManager, SharedLibraryLockChanged_t, false>
  D vtable for CCallback<CUpdateManager, UninstallClientApp_t, false>
  D vtable for CCallback<CUploadScreenshotMsgBox, ScreenshotUploaded_t, false>
- D vtable for CCallback<CValveControllerManager, AppLifetimeNotice_t, false>
- D vtable for CCallback<CValveControllerManager, ControllerConnected_t, false>
- D vtable for CCallback<CValveControllerManager, ControllerDisconnected_t, false>
- D vtable for CCallback<CValveControllerManager, FocusedSteamWindowChanged_t, false>
- D vtable for CCallback<CValveControllerManager, RemoteClientRequestControllerConfig_t, false>
- D vtable for CCallback<CValveControllerManager, RemoteStorageAppSyncedClient_t, false>
- D vtable for CCallback<CValveControllerManager, RemoteStorageAppSyncedServer_t, false>
- D vtable for CCallback<CValveControllerManager, SetControllerOverrideModeForApp_t, false>
- D vtable for CCallback<CValveControllerManager, SteamServersConnected_t, false>
  D vtable for CCallback<CVerifyingEmailWizardChild, ValidateEmailResponse_t, false>
  D vtable for CCallback<CWelcome_NoController, ControllerConnected_t, false>
  D vtable for CCallback<CWelcome_NoController, ControllerPaired_t, false>
@@ -13142,7 +13125,6 @@
  D vtable for CMultipleCallResults<CValveControllerManager, DongleDetails_t>
  D vtable for CMultipleCallResults<CValveControllerManager, HTTPRequestCompleted_t>
  D vtable for CMultipleCallResults<CValveControllerManager, LoadControllerConfigResult_t>
- D vtable for CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>
  D vtable for CMultipleCallResults<CValveControllerManager, RemoteStorageEnumerateWorkshopFilesResult_t>
  D vtable for CMultipleCallResults<CValveControllerManager, RemoteStorageGetPublishedFileDetailsResult_t>
  D vtable for CMultipleCallResults<CValveControllerManager, RemoteStoragePublishFileResult_t>
@@ -13474,6 +13456,7 @@
  D vtable for CSetAppLanguage
  D vtable for CSetControllerPairingEnabledMsg
  D vtable for CSetControllerPairingResultMsg
+ D vtable for CSetControllerSettingsMsg
  D vtable for CSetCursorImageMsg
  D vtable for CSetCursorMsg
  D vtable for CSetCustomImageDialog
@@ -13926,15 +13909,14 @@
  D vtable for CVProfPanel
  D vtable for CValidateContactEmailWizard
  D vtable for CValveControllerManager
- D vtable for CValveControllerManager::CCallback_OnAppLifetimeNotification
- D vtable for CValveControllerManager::CCallback_OnControllerConnected
- D vtable for CValveControllerManager::CCallback_OnControllerDisconnected
- D vtable for CValveControllerManager::CCallback_OnFocusWindowChanged
- D vtable for CValveControllerManager::CCallback_OnRemoteClientRequestControllerConfig
- D vtable for CValveControllerManager::CCallback_OnRemoteStorageAppSyncedClient
- D vtable for CValveControllerManager::CCallback_OnRemoteStorageAppSyncedServer
- D vtable for CValveControllerManager::CCallback_OnSetControllerOverrideMode
- D vtable for CValveControllerManager::CCallback_OnSteamLogon
+ D vtable for CValveControllerManager::CCallbackInternal_OnAppLifetimeNotification
+ D vtable for CValveControllerManager::CCallbackInternal_OnControllerConnected
+ D vtable for CValveControllerManager::CCallbackInternal_OnControllerDisconnected
+ D vtable for CValveControllerManager::CCallbackInternal_OnFocusWindowChanged
+ D vtable for CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedClient
+ D vtable for CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedServer
+ D vtable for CValveControllerManager::CCallbackInternal_OnSetControllerOverrideMode
+ D vtable for CValveControllerManager::CCallbackInternal_OnSteamLogon
  D vtable for CValveSpecialSurveyWizard
  D vtable for CValveSurveyWizard
  D vtable for CVerifyEmailWizard
@@ -15158,15 +15140,6 @@
  R typeinfo name for CCallback<CUpdateManager, SharedLibraryLockChanged_t, false>
  R typeinfo name for CCallback<CUpdateManager, UninstallClientApp_t, false>
  R typeinfo name for CCallback<CUploadScreenshotMsgBox, ScreenshotUploaded_t, false>
- R typeinfo name for CCallback<CValveControllerManager, AppLifetimeNotice_t, false>
- R typeinfo name for CCallback<CValveControllerManager, ControllerConnected_t, false>
- R typeinfo name for CCallback<CValveControllerManager, ControllerDisconnected_t, false>
- R typeinfo name for CCallback<CValveControllerManager, FocusedSteamWindowChanged_t, false>
- R typeinfo name for CCallback<CValveControllerManager, RemoteClientRequestControllerConfig_t, false>
- R typeinfo name for CCallback<CValveControllerManager, RemoteStorageAppSyncedClient_t, false>
- R typeinfo name for CCallback<CValveControllerManager, RemoteStorageAppSyncedServer_t, false>
- R typeinfo name for CCallback<CValveControllerManager, SetControllerOverrideModeForApp_t, false>
- R typeinfo name for CCallback<CValveControllerManager, SteamServersConnected_t, false>
  R typeinfo name for CCallback<CVerifyingEmailWizardChild, ValidateEmailResponse_t, false>
  R typeinfo name for CCallback<CWelcome_NoController, ControllerConnected_t, false>
  R typeinfo name for CCallback<CWelcome_NoController, ControllerPaired_t, false>
@@ -15927,7 +15900,6 @@
  R typeinfo name for CMultipleCallResults<CValveControllerManager, DongleDetails_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, HTTPRequestCompleted_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, LoadControllerConfigResult_t>
- R typeinfo name for CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, RemoteStorageEnumerateWorkshopFilesResult_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, RemoteStorageGetPublishedFileDetailsResult_t>
  R typeinfo name for CMultipleCallResults<CValveControllerManager, RemoteStoragePublishFileResult_t>
@@ -16268,6 +16240,7 @@
  R typeinfo name for CSetAppLanguage
  R typeinfo name for CSetControllerPairingEnabledMsg
  R typeinfo name for CSetControllerPairingResultMsg
+ R typeinfo name for CSetControllerSettingsMsg
  R typeinfo name for CSetCursorImageMsg
  R typeinfo name for CSetCursorMsg
  R typeinfo name for CSetCustomImageDialog
@@ -17033,15 +17006,14 @@
  R typeinfo name for CVProfPanel
  R typeinfo name for CValidateContactEmailWizard
  R typeinfo name for CValveControllerManager
- R typeinfo name for CValveControllerManager::CCallback_OnAppLifetimeNotification
- R typeinfo name for CValveControllerManager::CCallback_OnControllerConnected
- R typeinfo name for CValveControllerManager::CCallback_OnControllerDisconnected
- R typeinfo name for CValveControllerManager::CCallback_OnFocusWindowChanged
- R typeinfo name for CValveControllerManager::CCallback_OnRemoteClientRequestControllerConfig
- R typeinfo name for CValveControllerManager::CCallback_OnRemoteStorageAppSyncedClient
- R typeinfo name for CValveControllerManager::CCallback_OnRemoteStorageAppSyncedServer
- R typeinfo name for CValveControllerManager::CCallback_OnSetControllerOverrideMode
- R typeinfo name for CValveControllerManager::CCallback_OnSteamLogon
+ R typeinfo name for CValveControllerManager::CCallbackInternal_OnAppLifetimeNotification
+ R typeinfo name for CValveControllerManager::CCallbackInternal_OnControllerConnected
+ R typeinfo name for CValveControllerManager::CCallbackInternal_OnControllerDisconnected
+ R typeinfo name for CValveControllerManager::CCallbackInternal_OnFocusWindowChanged
+ R typeinfo name for CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedClient
+ R typeinfo name for CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedServer
+ R typeinfo name for CValveControllerManager::CCallbackInternal_OnSetControllerOverrideMode
+ R typeinfo name for CValveControllerManager::CCallbackInternal_OnSteamLogon
  R typeinfo name for CValveSpecialSurveyWizard
  R typeinfo name for CValveSurveyWizard
  R typeinfo name for CVerifyEmailWizard
@@ -20662,33 +20634,6 @@
  T CCallback<CUploadScreenshotMsgBox, ScreenshotUploaded_t, false>::CCallback(CUploadScreenshotMsgBox*, void (CUploadScreenshotMsgBox::*)(ScreenshotUploaded_t*))
  T CCallback<CUploadScreenshotMsgBox, ScreenshotUploaded_t, false>::Register(CUploadScreenshotMsgBox*, void (CUploadScreenshotMsgBox::*)(ScreenshotUploaded_t*))
  T CCallback<CUploadScreenshotMsgBox, ScreenshotUploaded_t, false>::Run(void*)
- T CCallback<CValveControllerManager, AppLifetimeNotice_t, false>::CCallback(CValveControllerManager*, void (CValveControllerManager::*)(AppLifetimeNotice_t*))
- T CCallback<CValveControllerManager, AppLifetimeNotice_t, false>::Register(CValveControllerManager*, void (CValveControllerManager::*)(AppLifetimeNotice_t*))
- T CCallback<CValveControllerManager, AppLifetimeNotice_t, false>::Run(void*)
- T CCallback<CValveControllerManager, ControllerConnected_t, false>::CCallback(CValveControllerManager*, void (CValveControllerManager::*)(ControllerConnected_t*))
- T CCallback<CValveControllerManager, ControllerConnected_t, false>::Register(CValveControllerManager*, void (CValveControllerManager::*)(ControllerConnected_t*))
- T CCallback<CValveControllerManager, ControllerConnected_t, false>::Run(void*)
- T CCallback<CValveControllerManager, ControllerDisconnected_t, false>::CCallback(CValveControllerManager*, void (CValveControllerManager::*)(ControllerDisconnected_t*))
- T CCallback<CValveControllerManager, ControllerDisconnected_t, false>::Register(CValveControllerManager*, void (CValveControllerManager::*)(ControllerDisconnected_t*))
- T CCallback<CValveControllerManager, ControllerDisconnected_t, false>::Run(void*)
- T CCallback<CValveControllerManager, FocusedSteamWindowChanged_t, false>::CCallback(CValveControllerManager*, void (CValveControllerManager::*)(FocusedSteamWindowChanged_t*))
- T CCallback<CValveControllerManager, FocusedSteamWindowChanged_t, false>::Register(CValveControllerManager*, void (CValveControllerManager::*)(FocusedSteamWindowChanged_t*))
- T CCallback<CValveControllerManager, FocusedSteamWindowChanged_t, false>::Run(void*)
- T CCallback<CValveControllerManager, RemoteClientRequestControllerConfig_t, false>::CCallback(CValveControllerManager*, void (CValveControllerManager::*)(RemoteClientRequestControllerConfig_t*))
- T CCallback<CValveControllerManager, RemoteClientRequestControllerConfig_t, false>::Register(CValveControllerManager*, void (CValveControllerManager::*)(RemoteClientRequestControllerConfig_t*))
- T CCallback<CValveControllerManager, RemoteClientRequestControllerConfig_t, false>::Run(void*)
- T CCallback<CValveControllerManager, RemoteStorageAppSyncedClient_t, false>::CCallback(CValveControllerManager*, void (CValveControllerManager::*)(RemoteStorageAppSyncedClient_t*))
- T CCallback<CValveControllerManager, RemoteStorageAppSyncedClient_t, false>::Register(CValveControllerManager*, void (CValveControllerManager::*)(RemoteStorageAppSyncedClient_t*))
- T CCallback<CValveControllerManager, RemoteStorageAppSyncedClient_t, false>::Run(void*)
- T CCallback<CValveControllerManager, RemoteStorageAppSyncedServer_t, false>::CCallback(CValveControllerManager*, void (CValveControllerManager::*)(RemoteStorageAppSyncedServer_t*))
- T CCallback<CValveControllerManager, RemoteStorageAppSyncedServer_t, false>::Register(CValveControllerManager*, void (CValveControllerManager::*)(RemoteStorageAppSyncedServer_t*))
- T CCallback<CValveControllerManager, RemoteStorageAppSyncedServer_t, false>::Run(void*)
- T CCallback<CValveControllerManager, SetControllerOverrideModeForApp_t, false>::CCallback(CValveControllerManager*, void (CValveControllerManager::*)(SetControllerOverrideModeForApp_t*))
- T CCallback<CValveControllerManager, SetControllerOverrideModeForApp_t, false>::Register(CValveControllerManager*, void (CValveControllerManager::*)(SetControllerOverrideModeForApp_t*))
- T CCallback<CValveControllerManager, SetControllerOverrideModeForApp_t, false>::Run(void*)
- T CCallback<CValveControllerManager, SteamServersConnected_t, false>::CCallback(CValveControllerManager*, void (CValveControllerManager::*)(SteamServersConnected_t*))
- T CCallback<CValveControllerManager, SteamServersConnected_t, false>::Register(CValveControllerManager*, void (CValveControllerManager::*)(SteamServersConnected_t*))
- T CCallback<CValveControllerManager, SteamServersConnected_t, false>::Run(void*)
  T CCallback<CVerifyingEmailWizardChild, ValidateEmailResponse_t, false>::CCallback(CVerifyingEmailWizardChild*, void (CVerifyingEmailWizardChild::*)(ValidateEmailResponse_t*))
  T CCallback<CVerifyingEmailWizardChild, ValidateEmailResponse_t, false>::Register(CVerifyingEmailWizardChild*, void (CVerifyingEmailWizardChild::*)(ValidateEmailResponse_t*))
  T CCallback<CVerifyingEmailWizardChild, ValidateEmailResponse_t, false>::Run(void*)
@@ -23631,11 +23576,10 @@
  T CGameStreamSystem::BGetRumbleRequest(int*, int*, int*)
  T CGameStreamSystem::BHandleMouseModeEvent(int, EStreamGamepadInputType, float)
  T CGameStreamSystem::CGameStreamSystem()
+ T CGameStreamSystem::CGamepadMouseModeThread::CGamepadMouseModeThread(CGameStreamSystem*)
  T CGameStreamSystem::CGamepadMouseModeThread::Run()
  T CGameStreamSystem::CGamepadMouseModeThread::~CGamepadMouseModeThread()
  T CGameStreamSystem::ConvertMouseVelocity(Vector2D&)
- T CGameStreamSystem::DisableGamepadMouseMode()
- T CGameStreamSystem::EnableGamepadMouseMode()
  T CGameStreamSystem::FinishGamepadReservation()
  T CGameStreamSystem::GetApplicationState(CGameID)
  T CGameStreamSystem::GetApplicationWindowCount(CGameID, bool)
@@ -23674,6 +23618,7 @@
  T CGameStreamSystem::SetCaptureMaximumResolution(int, int)
  T CGameStreamSystem::SetFocusWindow(unsigned long)
  T CGameStreamSystem::SetInputEnabled(bool)
+ T CGameStreamSystem::SetStreamingDesktop(bool)
  T CGameStreamSystem::StartAudioProcessRecording()
  T CGameStreamSystem::StartGamepadReservation()
  T CGameStreamSystem::StartVideoCapture()
@@ -23689,6 +23634,7 @@
  T CGameStreamSystem::~CGameStreamSystem()
  T CGameStreamSystemOSX::AddProcess(CGameID, unsigned int)
  T CGameStreamSystemOSX::BGetCursorImage(unsigned long long, int*, int*, int*, int*, CUtlBuffer*)
+ T CGameStreamSystemOSX::BShouldHandleKeyEvent(int)
  T CGameStreamSystemOSX::CGameStreamSystemOSX()
  T CGameStreamSystemOSX::OnGamepadAttached(int, unsigned char, unsigned char)
  T CGameStreamSystemOSX::OnGamepadDetached(int)
@@ -28196,12 +28142,6 @@
  T CMultipleCallResults<CValveControllerManager, LoadControllerConfigResult_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CValveControllerManager, LoadControllerConfigResult_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CValveControllerManager, LoadControllerConfigResult_t>::~CMultipleCallResults()
- T CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>::CMultipleCallResults(CValveControllerManager*, void (CValveControllerManager::*)(RemoteClientGotControllerConfig_t*, bool))
- T CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>::GetCallbackSizeBytes()
- T CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>::Run(void*)
- T CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>::Run(void*, bool, unsigned long long)
- T CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>::Validate(CValidator&, char const*)
- T CMultipleCallResults<CValveControllerManager, RemoteClientGotControllerConfig_t>::~CMultipleCallResults()
  T CMultipleCallResults<CValveControllerManager, RemoteStorageEnumerateWorkshopFilesResult_t>::CMultipleCallResults(CValveControllerManager*, void (CValveControllerManager::*)(RemoteStorageEnumerateWorkshopFilesResult_t*, bool))
  T CMultipleCallResults<CValveControllerManager, RemoteStorageEnumerateWorkshopFilesResult_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CValveControllerManager, RemoteStorageEnumerateWorkshopFilesResult_t>::Run(void*)
@@ -31039,6 +30979,18 @@
  T CSetControllerPairingResultMsg::SerializeWithCachedSizesToArray(unsigned char*) const
  T CSetControllerPairingResultMsg::SetCachedSize(int) const
  T CSetControllerPairingResultMsg::~CSetControllerPairingResultMsg()
+ T CSetControllerSettingsMsg::ByteSize() const
+ T CSetControllerSettingsMsg::CSetControllerSettingsMsg()
+ T CSetControllerSettingsMsg::Clear()
+ T CSetControllerSettingsMsg::GetCachedSize() const
+ T CSetControllerSettingsMsg::GetMetadata() const
+ T CSetControllerSettingsMsg::IsInitialized() const
+ T CSetControllerSettingsMsg::MergeFrom(CSetControllerSettingsMsg const&)
+ T CSetControllerSettingsMsg::New() const
+ T CSetControllerSettingsMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetControllerSettingsMsg::SetCachedSize(int) const
+ T CSetControllerSettingsMsg::SharedDtor()
+ T CSetControllerSettingsMsg::~CSetControllerSettingsMsg()
  T CSetCursorImageMsg::ByteSize() const
  T CSetCursorImageMsg::CSetCursorImageMsg()
  T CSetCursorImageMsg::Clear()
@@ -33863,6 +33815,7 @@
  T CStreamServer::SendSetActivity(EStreamActivity)
  T CStreamServer::SendSetControllerPairingEnabled(bool, int)
  T CStreamServer::SendSetControllerPairingResult(int, bool)
+ T CStreamServer::SendSetControllerSettings(int, int, unsigned char const*)
  T CStreamServer::SendSetCursor(unsigned long long)
  T CStreamServer::SendSetCursorImage(unsigned long long, int, int, int, int, unsigned char const*)
  T CStreamServer::SendSetGamepadRumble(int, int, int)
@@ -36290,6 +36243,7 @@
  T CUtlHashMap<int, CGameStreamSystem::Gamepad_t, CDefEquals<int>, HashFunctor<int> >::~CUtlHashMap()
  T CUtlHashMap<int, bool, CDefEquals<int>, HashFunctor<int> >::CUtlHashMap()
  T CUtlHashMap<int, bool, CDefEquals<int>, HashFunctor<int> >::EnsureCapacity(int)
+ T CUtlHashMap<int, bool, CDefEquals<int>, HashFunctor<int> >::Find(int const&) const
  T CUtlHashMap<int, bool, CDefEquals<int>, HashFunctor<int> >::IncrementalRehash()
  T CUtlHashMap<int, bool, CDefEquals<int>, HashFunctor<int> >::InsertOrReplace(int const&, bool const&)
  T CUtlHashMap<int, bool, CDefEquals<int>, HashFunctor<int> >::InsertUnconstructed(int const&, int*, bool)
@@ -38181,10 +38135,6 @@
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
- T CUtlVector<CValveControllerManager::RemoteClientRequestTarget_t, CUtlMemory<CValveControllerManager::RemoteClientRequestTarget_t> >::GrowVector(int)
- T CUtlVector<CValveControllerManager::RemoteClientRequestTarget_t, CUtlMemory<CValveControllerManager::RemoteClientRequestTarget_t> >::InsertBefore(int, CValveControllerManager::RemoteClientRequestTarget_t const&)
- T CUtlVector<CValveControllerManager::RemoteClientRequestTarget_t, CUtlMemory<CValveControllerManager::RemoteClientRequestTarget_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<CValveControllerManager::RemoteClientRequestTarget_t, CUtlMemory<CValveControllerManager::RemoteClientRequestTarget_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CValveControllerManager::RemoteClientRequestTarget_t, CUtlMemory<CValveControllerManager::RemoteClientRequestTarget_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CValveControllerManager::RemoteClientRequestTarget_t, CUtlMemory<CValveControllerManager::RemoteClientRequestTarget_t> >::~CUtlVector()
  T CUtlVector<CValveControllerManager::UserCallbackTarget_t, CUtlMemory<CValveControllerManager::UserCallbackTarget_t> >::GrowVector(int)
@@ -39130,15 +39080,22 @@
  T CValidateContactEmailWizard::~CValidateContactEmailWizard()
  T CValveControllerManager::ActivateControllerConfig(EWindowType, unsigned int, char const*, unsigned int)
  T CValveControllerManager::BDeleteBinding(char const*, unsigned long long)
- T CValveControllerManager::CCallback_OnAppLifetimeNotification::Run(void*)
- T CValveControllerManager::CCallback_OnControllerConnected::Run(void*)
- T CValveControllerManager::CCallback_OnControllerDisconnected::Run(void*)
- T CValveControllerManager::CCallback_OnFocusWindowChanged::Run(void*)
- T CValveControllerManager::CCallback_OnRemoteClientRequestControllerConfig::Run(void*)
- T CValveControllerManager::CCallback_OnRemoteStorageAppSyncedClient::Run(void*)
- T CValveControllerManager::CCallback_OnRemoteStorageAppSyncedServer::Run(void*)
- T CValveControllerManager::CCallback_OnSetControllerOverrideMode::Run(void*)
- T CValveControllerManager::CCallback_OnSteamLogon::Run(void*)
+ T CValveControllerManager::CCallbackInternal_OnAppLifetimeNotification::CCallbackInternal_OnAppLifetimeNotification()
+ T CValveControllerManager::CCallbackInternal_OnAppLifetimeNotification::Run(void*)
+ T CValveControllerManager::CCallbackInternal_OnControllerConnected::CCallbackInternal_OnControllerConnected()
+ T CValveControllerManager::CCallbackInternal_OnControllerConnected::Run(void*)
+ T CValveControllerManager::CCallbackInternal_OnControllerDisconnected::CCallbackInternal_OnControllerDisconnected()
+ T CValveControllerManager::CCallbackInternal_OnControllerDisconnected::Run(void*)
+ T CValveControllerManager::CCallbackInternal_OnFocusWindowChanged::CCallbackInternal_OnFocusWindowChanged()
+ T CValveControllerManager::CCallbackInternal_OnFocusWindowChanged::Run(void*)
+ T CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedClient::CCallbackInternal_OnRemoteStorageAppSyncedClient()
+ T CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedClient::Run(void*)
+ T CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedServer::CCallbackInternal_OnRemoteStorageAppSyncedServer()
+ T CValveControllerManager::CCallbackInternal_OnRemoteStorageAppSyncedServer::Run(void*)
+ T CValveControllerManager::CCallbackInternal_OnSetControllerOverrideMode::CCallbackInternal_OnSetControllerOverrideMode()
+ T CValveControllerManager::CCallbackInternal_OnSetControllerOverrideMode::Run(void*)
+ T CValveControllerManager::CCallbackInternal_OnSteamLogon::CCallbackInternal_OnSteamLogon()
+ T CValveControllerManager::CCallbackInternal_OnSteamLogon::Run(void*)
  T CValveControllerManager::CValveControllerManager()
  T CValveControllerManager::EnumerateCommunityBindingsAsync(panorama::CPanel2D*, unsigned int)
  T CValveControllerManager::EnumerateLocalBindingsAsync(panorama::CPanel2D*, unsigned int)
@@ -39151,8 +39108,6 @@
  T CValveControllerManager::GetRecommendedTemplateForApp(unsigned int, CUtlString&)
  T CValveControllerManager::GetSelectedBindingURLForApp(unsigned int, CUtlString&, bool)
  T CValveControllerManager::GetShortcutOrAppIDString(unsigned int)
- T CValveControllerManager::LoadConfigFromVDFString(unsigned int, char const*, EWindowType, unsigned int)
- T CValveControllerManager::LoadConfigFromVDFString(unsigned int, char const*, char const*, unsigned int)
  T CValveControllerManager::OnAppLifetimeNotification(AppLifetimeNotice_t*)
  T CValveControllerManager::OnControllerConnected(ControllerConnected_t*)
  T CValveControllerManager::OnControllerDetails(ControllerDetails_t*, bool)
@@ -39164,17 +39119,13 @@
  T CValveControllerManager::OnHTTPFirmwareManifestFetched(HTTPRequestCompleted_t*, bool)
  T CValveControllerManager::OnLoadControllerConfig(LoadControllerConfigResult_t*, bool)
  T CValveControllerManager::OnPublishFileResult(RemoteStoragePublishFileResult_t*, bool)
- T CValveControllerManager::OnRemoteClientGotControllerConfig(RemoteClientGotControllerConfig_t*, bool)
- T CValveControllerManager::OnRemoteClientRequestControllerConfig(RemoteClientRequestControllerConfig_t*)
  T CValveControllerManager::OnRemoteStorageAppSyncedClient(RemoteStorageAppSyncedClient_t*)
  T CValveControllerManager::OnRemoteStorageAppSyncedServer(RemoteStorageAppSyncedServer_t*)
  T CValveControllerManager::OnRemoteStorageUpdateResult(RemoteStorageUpdatePublishedFileResult_t*, bool)
  T CValveControllerManager::OnSendQueryUGCRequest(SteamUGCQueryCompleted_t*, bool)
  T CValveControllerManager::OnSendQueryUGCResponseMostPopular(SteamUGCQueryCompleted_t*, bool)
  T CValveControllerManager::OnSetControllerOverrideMode(SetControllerOverrideModeForApp_t*)
- T CValveControllerManager::OnSteamLogon(SteamServersConnected_t*)
  T CValveControllerManager::PostLocalBindingsAsync()
- T CValveControllerManager::RequestRemoteClientControllerConfig(unsigned long long, unsigned int, EWindowType, unsigned int)
  T CValveControllerManager::RunFrame()
  T CValveControllerManager::SaveControllerConfigAsync(unsigned int, unsigned int, ERemoteStoragePublishedFileVisibility, panorama::CPanel2D*)
  T CValveControllerManager::SendBindingSaveResult(unsigned int, panorama::CPanel2D*, bool, bool, char const*, char const*)
@@ -54951,6 +54902,8 @@
  b (anonymous namespace)::CSetControllerPairingEnabledMsg_reflection_
  b (anonymous namespace)::CSetControllerPairingResultMsg_descriptor_
  b (anonymous namespace)::CSetControllerPairingResultMsg_reflection_
+ b (anonymous namespace)::CSetControllerSettingsMsg_descriptor_
+ b (anonymous namespace)::CSetControllerSettingsMsg_reflection_
  b (anonymous namespace)::CSetCursorImageMsg_descriptor_
  b (anonymous namespace)::CSetCursorImageMsg_reflection_
  b (anonymous namespace)::CSetCursorMsg_descriptor_
@@ -57157,6 +57110,7 @@
  r protobuf_AssignDesc_stream_2eproto()::CSetActivityMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetControllerPairingEnabledMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetControllerPairingResultMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetControllerSettingsMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetCursorImageMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetCursorMsg_offsets_
  r protobuf_AssignDesc_stream_2eproto()::CSetGammaRampMsg_offsets_
