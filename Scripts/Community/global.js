@@ -840,11 +840,13 @@ var CAutoSizingTextArea = Class.create( {
 	initialize: function( elTextArea, nMinHeight, fnChangeCallback )
 	{
 		this.m_elTextArea = elTextArea;
-		this.m_elTextArea.observe( 'keyup', this.OnTextInput.bind( this ) );
-		this.m_elTextArea.observe( 'blur', this.OnTextInput.bind( this ) );
-		this.m_elTextArea.observe( 'click', this.OnTextInput.bind( this ) );
-		this.m_elTextArea.observe( 'paste', this.OnPasteText.bind( this ) );
-		this.m_elTextArea.observe( 'cut', this.OnPasteText.bind( this ) );
+		var _this = this;
+		$J(this.m_elTextArea ).on( 'keyup blur click paste cut', function( e ) {
+			if ( e.type == 'paste' || e.type == 'blur' )
+				_this.OnPasteText();
+			else
+				_this.OnTextInput();
+		});
 		this.m_elTextArea.style.overflow = 'hidden';
 
 		this.m_cEntryLength = Number.MAX_VALUE;
@@ -1072,7 +1074,22 @@ var CCommentThread = Class.create( {
 	{
 		if ( elSaveButton )
 		{
-			if ( elTextArea.value.length > 0 )
+			var strPrepoulatedText = $J(this.m_elTextArea ).data('prepopulated-text');
+			var bEnteredText = elTextArea.value.length > 0;
+
+			if ( bEnteredText && strPrepoulatedText && !$J(this.m_elTextArea ).data('replaced-prepopulated-text') )
+			{
+				strPrepoulatedText = v_trim( strPrepoulatedText ).replace( /[\n\r]/g, '' );
+				var strEnteredText = v_trim( elTextArea.value ).replace( /[\n\r]/g, '' );
+
+				bEnteredText = strPrepoulatedText != strEnteredText;
+
+				// save so we don't have to keep doing this check as they enter more text.
+				if ( bEnteredText )
+					$J(this.m_elTextArea ).data('replaced-prepopulated-text', true );
+			}
+
+			if ( bEnteredText )
 				elSaveButton.show();
 			else
 				elSaveButton.hide();
@@ -1121,6 +1138,13 @@ var CCommentThread = Class.create( {
 	{
 		if ( this.m_bLoading )
 			return;
+
+		var strPrepoulatedText = $J(this.m_elTextArea ).data('prepopulated-text');
+		if ( strPrepoulatedText && v_trim( strPrepoulatedText ).replace( /[\n\r]/g, '' ) == v_trim( elTextArea.value ).replace( /[\n\r]/g, '' ) )
+		{
+			ShowAlertDialog( '', 'Please enter a comment to post.' );
+			return;
+		}
 
 		var params = this.ParametersWithDefaults( {
 			comment: this.m_elTextArea.value
