@@ -32311,6 +32311,7 @@
  T CSteamApp::GetLaunchOptionByIndex(int)
  T CSteamApp::GetLaunchOptionByType(ELaunchOptionType)
  T CSteamApp::GetLaunchOptionCount()
+ T CSteamApp::GetLaunchOptionCountForType(ELaunchOptionType)
  T CSteamApp::GetLaunchOptionLocalization(LaunchOption_t const*, CUtlString&, CUtlString&)
  T CSteamApp::GetManualURL() const
  T CSteamApp::GetMediaFileType() const
