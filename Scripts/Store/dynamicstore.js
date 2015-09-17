@@ -114,11 +114,11 @@ GDynamicStore = {
 		}
 	},
 
+	s_strAppearSelector: '[data-ds-appid], [data-ds-packageid]',
+
 	InitAppearHandler: function()
 	{
-		var strSelector = '[data-ds-appid], [data-ds-packageid]';
-
-		$J(document.body).on( 'appear', strSelector, function(event) {
+		$J(document.body).on( 'appear', GDynamicStore.s_strAppearSelector, function(event) {
 			var $Elem = $J( this );
 
 			// scriptaculous adds Effect.Appear as appear() to the HTMLElement prototype.  jquery's trigger
@@ -153,6 +153,9 @@ GDynamicStore = {
 
 			GDynamicStore.AddImpressionFromDynamicItem( $Elem );
 		} );
+
+		// find our horizontal scrollers and add tracking to them
+		$J.force_appear_on_scroll( '.store_horizontal_autoslider' );
 
 
 		$J.force_appear();

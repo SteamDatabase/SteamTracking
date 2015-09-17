@@ -1863,32 +1863,36 @@ function InitHorizontalAutoSliders()
 		$Wrapper.on('v_contentschanged.AutoSlider', function() {
 			fnFixHeight();
 			$Wrapper.find('img' ).one('load', fnFixHeight );
-		} ).trigger('v_contentschanged.AutoSlider');
-
+		} );
 		$J(window ).on('resize.AutoSlider', fnFixHeight );
 
-		var Slider = new CScrollSlider( $Scroll, $SliderCtn );
+		window.setTimeout( function() {
+			$Wrapper.trigger('v_contentschanged.AutoSlider');
 
-		var fnGetScrollIncrement = function() {
-			var $TryChild = $Scroll;
-			do
-			{
-				$TryChild = $TryChild.children().first();
-				if ( $TryChild.width() && $TryChild.outerWidth() < $Scroll.width() )
+			var Slider = new CScrollSlider( $Scroll, $SliderCtn );
+
+			var fnGetScrollIncrement = function() {
+				var $TryChild = $Scroll;
+				do
 				{
-					return $TryChild.outerWidth();
-				}
-			} while ( $TryChild.length );
+					$TryChild = $TryChild.children().first();
+					if ( $TryChild.width() && $TryChild.outerWidth() < $Scroll.width() )
+					{
+						return $TryChild.outerWidth();
+					}
+				} while ( $TryChild.length );
 
-			return $Wrapper.width() / 3;
-		}
+				return $Wrapper.width() / 3;
+			}
 
-		$SliderLeft.click( function() {
-			Slider.SetValue( Slider.GetValue() - fnGetScrollIncrement(), 250 );
-		});
-		$SliderRight.click( function() {
-			Slider.SetValue( Slider.GetValue() + fnGetScrollIncrement(), 250 );
-		});
+			$SliderLeft.click( function() {
+				Slider.SetValue( Slider.GetValue() - fnGetScrollIncrement(), 250 );
+			});
+			$SliderRight.click( function() {
+				Slider.SetValue( Slider.GetValue() + fnGetScrollIncrement(), 250 );
+			});
+
+		}, 1 );
 	});
 
 	$J('.store_horizontal_minislider' ).each( function() {
@@ -1926,7 +1930,7 @@ function InitHorizontalAutoSliders()
 			fnShowHideButtons();
 		} );
 
-		fnShowHideButtons();
+		window.setTimeout( fnShowHideButtons, 1 );
 	});
 }
 

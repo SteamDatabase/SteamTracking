@@ -23,9 +23,6 @@ function Cluster( args )
 	this.elScrollRightBtn = args.elScrollRightBtn ? $JFromIDOrElement( args.elScrollRightBtn ) : this.elClusterArea.find('.cluster_control_right');
 	this.onChangeCB = args.onChangeCB;
 
-	if ( !this.elScrollArea.css( 'left' ) )
-		this.elScrollArea.css( 'left', '0px' );
-
 	this.elSlider = $JFromIDOrElement( args.elSlider );
 	this.elHandle = args.elHandle ? $JFromIDOrElement( args.elHandle ) : this.elSlider.find('.handle');
 
@@ -165,6 +162,19 @@ Cluster.prototype.mouseOut = function( event )
 	this.startTimer();
 }
 
+Cluster.prototype.scrollToOffset = function( nXOffset, nDuration, fnOnComplete )
+{
+	if ( nDuration )
+	{
+		this.elScrollArea.animate( { left: '-' + nXOffset + 'px' }, nDuration, null, fnOnComplete );
+	}
+	else
+	{
+		this.elScrollArea.css( 'left', '-' + nXOffset + 'px' );
+		fnOnComplete && fnOnComplete();
+	}
+},
+
 Cluster.prototype.scrollRight = function( event, bAutoScroll )
 {
 	if ( this.bSuppressScrolling && bAutoScroll )
@@ -179,14 +189,14 @@ Cluster.prototype.scrollRight = function( event, bAutoScroll )
 	if ( this.nCurCap < this.cCapCount )
 	{
 		var cb = function() { _this.onCapsuleFullyVisible() };
-		this.elScrollArea.animate( { left: '-' + (this.nCurCap * this.nCapWidth) + 'px' }, nDuration, null, cb );
+		this.scrollToOffset( this.nCurCap * this.nCapWidth, nDuration, cb );
 	}
 	else
 	{
 		this.nCurCap = 0;
 		bWrappedAround = true;
-		var cb = function() { _this.elScrollArea.css( 'left', '0px' ); _this.onCapsuleFullyVisible() };
-		this.elScrollArea.animate( { left: '-' + ( (this.cCapCount ) * this.nCapWidth) + 'px' }, nDuration, null, cb );
+		var cb = function() { _this.scrollToOffset(0); _this.onCapsuleFullyVisible() };
+		this.scrollToOffset( this.cCapCount * this.nCapWidth, nDuration, cb );
 	}
 	this.slider.SetValue( this.nCurCap * this.nCapWidth, bWrappedAround ? 0 : nDuration );
 	this.ensureImagesLoaded();
@@ -205,15 +215,15 @@ Cluster.prototype.scrollLeft = function()
 	if ( this.nCurCap >= 0 )
 	{
 		var cb = function() { _this.onCapsuleFullyVisible() };
-		this.elScrollArea.animate( { left: '-' + (this.nCurCap * this.nCapWidth) + 'px' }, nDuration, null, cb );
+		this.scrollToOffset( this.nCurCap * this.nCapWidth, nDuration, cb );
 	}
 	else
 	{
 		this.nCurCap = this.cCapCount - 1;
 		bWrappedAround = true;
-		this.elScrollArea.css( 'left', '-' + ( ( this.cCapCount ) * this.nCapWidth ) + 'px' );
+		this.scrollToOffset( this.cCapCount * this.nCapWidth );
 		var cb = function() { _this.onCapsuleFullyVisible() };
-		this.elScrollArea.animate( { left: '-' + ( ( this.cCapCount - 1 ) * this.nCapWidth) + 'px' }, nDuration, null, cb );
+		this.scrollToOffset(  ( this.cCapCount - 1 ) * this.nCapWidth, nDuration, cb );
 	}
 	this.slider.SetValue( this.nCurCap * this.nCapWidth, bWrappedAround ? 0 : nDuration );
 	this.ensureImagesLoaded();
@@ -228,7 +238,7 @@ Cluster.prototype.sliderOnChange = function( value, bInDrag )
 		this.ensureImagesLoaded();
 
 		this.elScrollArea.stop();
-		this.elScrollArea.css( 'left', '-' + Math.round( value ) + 'px' );
+		this.scrollToOffset( Math.round(value) );
 	}
 	else if ( !this.bInScroll )
 	{

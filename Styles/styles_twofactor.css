@@ -52,6 +52,7 @@
 
 .twofactor_settings_radiobtn_header
 {
+	display: block;
 	color: #67c1f5;
 	font-family: "Motiva Sans Light", Arial, sans-serif;
 	font-size: 18px;
@@ -283,9 +284,8 @@ a.twofactor_contactsupport:hover {
 
 
 .get_app_content {
-	margin-top: 20px;
 	margin: 0 auto;
-	width: 570px;
+	max-width: 570px;
 	position: relative;
 
 }
@@ -293,6 +293,24 @@ a.twofactor_contactsupport:hover {
 .image_devices {
 	margin: 30px 25px 10px 0;
 	float: left;
+}
+
+.image_devices img {
+	max-width: 100%;
+}
+
+@media screen and (max-width:600px)
+{
+	html.responsive .image_devices {
+		float: none;
+		margin: 0;
+		text-align: center;
+	}
+
+	html.responsive .app_links {
+		padding-top: 12px;
+		text-align: center;
+	}
 }
 
 a.img_link {
@@ -310,13 +328,13 @@ a.img_link {
 }
 
 .phone_left_col{
-	width: 616px;
+	max-width: 616px;
 	margin-bottom: 60px;
 }
 
 .phone_box {
 	background: rgba( 0, 0, 0, 0.3 );
-	padding: 15px 15px 15px 25px;
+	padding: 15px 3%;
 	margin-top: 15px;
 
 }

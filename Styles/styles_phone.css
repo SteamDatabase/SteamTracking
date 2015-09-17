@@ -1,7 +1,7 @@
 
 .phone_box {
 	background: rgba( 0, 0, 0, 0.3 );
-	padding: 15px 15px 15px 25px;
+	padding: 15px 3%;
 	margin-top: 15px;
 
 }
@@ -17,6 +17,8 @@ input.phone_input_number {
 	margin: 20px 0 10px 0;
 	text-transform: uppercase;
 	text-align: center;
+
+	max-width: calc( 100% - 10px);
 }
 
 .phone_header_description {
@@ -49,7 +51,7 @@ input.phone_input_number {
 .phonebox_content_description {
 	font-size: 14px;
 	float: left;
-	width:400px;
+	max-width:400px;
 }
 
 .phone_box_subtext {
@@ -160,7 +162,7 @@ input.phone_input_number {
 
 .phone_left_col
 {
-	width: 616px;
+	max-width: 616px;
 	margin-bottom: 60px;
 }
 
