@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.e7fde096c45143c14def2f8f301d6b9d7ff738b5.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.9a1493c2eced51e843f98efed75a9bf97a91c32b.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -1431,6 +1431,32 @@
 				"min_ilevel": 1,
 				"max_ilevel": 1,
 				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_knife_butterfly.794147e84a4e9426202d45145910cbb007797ce5.png",
+				"image_url_large": "",
+				"craft_class": "weapon",
+				"craft_material_type": "weapon",
+				"capabilities": {
+					"paintable": true,
+					"nameable": true,
+					"can_stattrack_swap": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "weapon_knife_push",
+				"defindex": 516,
+				"item_class": "weapon_knife",
+				"item_type_name": "Knife",
+				"item_name": "Shadow Daggers",
+				"item_description": "Designed for efficient brutality, using a push dagger is as simple as throwing a punch or two.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapons/base_weapons/weapon_knife_push",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapons/base_weapons/weapon_knife_push.13f409f23e653107c90711e5ab258b52b187ff6a.png",
 				"image_url_large": "",
 				"craft_class": "weapon",
 				"craft_material_type": "weapon",
@@ -5496,6 +5522,31 @@
 
 				]
 				
+			},
+			{
+				"name": "Community Case Key 9",
+				"defindex": 1333,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Shadow Case Key",
+				"item_description": "This key only opens Shadow Cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_community_9.c908521108c5cf99bdc5162c6c9ba8d46529a6a5.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "community_case_9",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
 			},
 			{
 				"name": "crate_valve_1",
@@ -10144,6 +10195,40 @@
 						"name": "tournament event id",
 						"class": "tournament_event_id",
 						"value": 7
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_9",
+				"defindex": 4138,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Shadow Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_9",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_9.e8303075e1a0969497a4502140ea47ecc65b4c50.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "community_case_9",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 80
 					}
 				]
 				
@@ -16867,6 +16952,29 @@
 					"weapon_sg556",
 					"weapon_ak47",
 					"weapon_awp"
+				]
+				
+			},
+			{
+				"item_set": "set_community_9",
+				"name": "The Shadow Collection",
+				"items": [
+					"weapon_elite",
+					"weapon_famas",
+					"weapon_glock",
+					"weapon_mac10",
+					"weapon_mag7",
+					"weapon_scar20",
+					"weapon_xm1014",
+					"weapon_galilar",
+					"weapon_m249",
+					"weapon_mp7",
+					"weapon_p250",
+					"weapon_ak47",
+					"weapon_g3sg1",
+					"weapon_ssg08",
+					"weapon_m4a1_silencer",
+					"weapon_usp_silencer"
 				]
 				
 			},
