@@ -1883,6 +1883,7 @@
  B g_ConVarNetEncryptionHandshakeWorkMax_LowPri
  B g_ConVarNetEncryptionHandshakeWorkMax_MedPri
  B g_ConVarPanoramaDebugMovies
+ B g_ConVarPhoneNotNowDays
  B g_ConVarRedeemWalletVoucherEnabled
  B g_ConVarUDPPktLossPct
  B g_ConVarUDPSendRetries
@@ -9504,6 +9505,10 @@
  D typeinfo for CLibraryGuidesPanel::CCallback_OnGameOverlayActivated
  D typeinfo for CLibraryLaunchOptionsPanel
  D typeinfo for CLibraryLinksAndMorePanel
+ D typeinfo for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerConnected
+ D typeinfo for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerDisconnected
+ D typeinfo for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerPaired
+ D typeinfo for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerWirelessPresence
  D typeinfo for CLibraryPanel
  D typeinfo for CLibraryPlayActionPanel
  D typeinfo for CLibraryRecentActivateProductDialog
@@ -12873,6 +12878,10 @@
  D vtable for CLibraryGuidesPanel::CCallback_OnGameOverlayActivated
  D vtable for CLibraryLaunchOptionsPanel
  D vtable for CLibraryLinksAndMorePanel
+ D vtable for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerConnected
+ D vtable for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerDisconnected
+ D vtable for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerPaired
+ D vtable for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerWirelessPresence
  D vtable for CLibraryPanel
  D vtable for CLibraryPlayActionPanel
  D vtable for CLibraryRecentActivateProductDialog
@@ -15646,6 +15655,10 @@
  R typeinfo name for CLibraryGuidesPanel::CCallback_OnGameOverlayActivated
  R typeinfo name for CLibraryLaunchOptionsPanel
  R typeinfo name for CLibraryLinksAndMorePanel
+ R typeinfo name for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerConnected
+ R typeinfo name for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerDisconnected
+ R typeinfo name for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerPaired
+ R typeinfo name for CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerWirelessPresence
  R typeinfo name for CLibraryPanel
  R typeinfo name for CLibraryPlayActionPanel
  R typeinfo name for CLibraryRecentActivateProductDialog
@@ -25373,6 +25386,14 @@
  T CLibraryLaunchOptionsPanel::OnLaunchOptionChosenRemote(unsigned long long, unsigned int, int)
  T CLibraryLaunchOptionsPanel::SetAppId(unsigned int)
  T CLibraryLaunchOptionsPanel::~CLibraryLaunchOptionsPanel()
+ T CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerConnected::CCallbackInternal_OnControllerConnected()
+ T CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerConnected::Run(void*)
+ T CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerDisconnected::CCallbackInternal_OnControllerDisconnected()
+ T CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerDisconnected::Run(void*)
+ T CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerPaired::CCallbackInternal_OnControllerPaired()
+ T CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerPaired::Run(void*)
+ T CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerWirelessPresence::CCallbackInternal_OnControllerWirelessPresence()
+ T CLibraryLinksAndMorePanel::CCallbackInternal_OnControllerWirelessPresence::Run(void*)
  T CLibraryLinksAndMorePanel::CLibraryLinksAndMorePanel(panorama::CPanel2D*, char const*)
  T CLibraryLinksAndMorePanel::GetManageControllersDialog()
  T CLibraryLinksAndMorePanel::GetPanelType() const
@@ -25384,6 +25405,7 @@
  T CLibraryLinksAndMorePanel::OnShowManageControllersDialog(unsigned int)
  T CLibraryLinksAndMorePanel::OnViewCDKeysforApp(unsigned int, KeyValues*)
  T CLibraryLinksAndMorePanel::OnViewControllerPresets(unsigned int)
+ T CLibraryLinksAndMorePanel::RebuildAfterControllerChange()
  T CLibraryLinksAndMorePanel::SetAppID(unsigned int, bool, unsigned int)
  T CLibraryLinksAndMorePanel::UpdateAppImage()
  T CLibraryLinksAndMorePanel::~CLibraryLinksAndMorePanel()

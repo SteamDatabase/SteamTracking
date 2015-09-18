@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1442447313"
+	"version"		"1442534650"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.bdfe2d0ce5d4ff49d7a1cc21cecdfabc3cac25ca"
@@ -104,10 +104,10 @@
 	}
 	"bins_misc_win32"
 	{
-		"file"		"bins_misc_win32.zip.58522d38f2d8fd12b62d3603ea86a78430ec39c4"
-		"checksum"		"58522d38f2d8fd12b62d3603ea86a78430ec39c4"
-		"size"		"12982626"
-		"zipvz"		"bins_misc_win32.zip.vz.63d93f3ea92d0957a4a58d54c5ec4e7a343bc63a_9057238"
+		"file"		"bins_misc_win32.zip.dd920cab5cad5c5fc79850776c9d6d99eb670d79"
+		"checksum"		"dd920cab5cad5c5fc79850776c9d6d99eb670d79"
+		"size"		"13014747"
+		"zipvz"		"bins_misc_win32.zip.vz.143acb48e756cb2d49bce978f28e68c5e66f8ec5_9084501"
 	}
 	"bins_cef_win32"
 	{
@@ -118,21 +118,21 @@
 	}
 	"bins_win32"
 	{
-		"file"		"bins_win32.zip.5d3aae15dd576e2b756f9245b9bc4a4d6316f8c8"
-		"checksum"		"5d3aae15dd576e2b756f9245b9bc4a4d6316f8c8"
-		"size"		"30203939"
-		"zipvz"		"bins_win32.zip.vz.e3305c644620021dbefe49744a5669e8d496b4c0_16295663"
+		"file"		"bins_win32.zip.6a7b005c0b9af8f07a6d0a5d124b2ede4166cd5e"
+		"checksum"		"6a7b005c0b9af8f07a6d0a5d124b2ede4166cd5e"
+		"size"		"30203710"
+		"zipvz"		"bins_win32.zip.vz.f23c748a94aaf9b2efb203950269576aa42c2510_16285973"
 	}
 	"steam_win32"
 	{
-		"file"		"steam_win32.zip.bab7a65dc797b18f094b85fc0fd768c59d64ae1b"
-		"checksum"		"bab7a65dc797b18f094b85fc0fd768c59d64ae1b"
-		"size"		"1250696"
-		"zipvz"		"steam_win32.zip.vz.9cf70149d467852c96d8ff70ea151c4e4ff97054_1011607"
+		"file"		"steam_win32.zip.c4148faf5b7f75e24880e4609cbf1f130b553f71"
+		"checksum"		"c4148faf5b7f75e24880e4609cbf1f130b553f71"
+		"size"		"1250705"
+		"zipvz"		"steam_win32.zip.vz.7f620e59d1e78cf643daca6068227118da758e42_1011189"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsignatures"
 {
-	"win32"		"2c8e8b25cba43c6f88fb6bf260ab758356755e3bd13588718994f10a4db6787ac0cab246cfb5f79286dace96544766bc391be08bb26b3ee4740d47bf444672393083b30c0dd9749195b5cc3423a1135f23a2f4e14fb00d11d2c13848e4a684da3887f08a3d8205ac1d662641ae453b7faf50ae2e193ad0266b22c91634953f2b"
+	"win32"		"baf27c385c9a2344674267eb4bbcc11d9aa5a97a2c27b03e191e1964a40c4cc21d020ca46a0178e6ed15f608dd57ebf8db9a2dc8e84e639f45366ad558ce735308a9cece71d483840c0c0aed147951d9d47fa0201d040e6f1c81475ae1d8646b0a0316735a0781a5f3321c9b75ee7275b90fabdc1265ea94cd50488da86b484f"
 }
