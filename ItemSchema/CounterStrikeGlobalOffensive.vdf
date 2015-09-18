@@ -744,6 +744,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_elite_hy_zodiac1_heavy"
 			}
+			"133036"
+			{
+				"icon_path"		"econ/default_generated/weapon_elite_cu_dualberretta_dragons_light"
+			}
+			"133037"
+			{
+				"icon_path"		"econ/default_generated/weapon_elite_cu_dualberretta_dragons_medium"
+			}
+			"133038"
+			{
+				"icon_path"		"econ/default_generated/weapon_elite_cu_dualberretta_dragons_heavy"
+			}
 			"196620"
 			{
 				"icon_path"		"econ/default_generated/weapon_fiveseven_so_red_light"
@@ -1140,6 +1152,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_aq_glock18_flames_blue_heavy"
 			}
+			"264124"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_gs_glock18_wrathys_light"
+			}
+			"264125"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_gs_glock18_wrathys_medium"
+			}
+			"264126"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_gs_glock18_wrathys_heavy"
+			}
 			"458808"
 			{
 				"icon_path"		"econ/default_generated/weapon_ak47_hy_ak47lam_light"
@@ -1367,6 +1391,18 @@
 			"460650"
 			{
 				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_courage_alt_heavy"
+			}
+			"460712"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_winter_sport_light"
+			}
+			"460713"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_winter_sport_medium"
+			}
+			"460714"
+			{
+				"icon_path"		"econ/default_generated/weapon_ak47_cu_ak47_winter_sport_heavy"
 			}
 			"524324"
 			{
@@ -1896,6 +1932,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_famas_am_famas_dots_heavy"
 			}
+			"657328"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_cu_famas_lenta_light"
+			}
+			"657329"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_cu_famas_lenta_medium"
+			}
+			"657330"
+			{
+				"icon_path"		"econ/default_generated/weapon_famas_cu_famas_lenta_heavy"
+			}
 			"720920"
 			{
 				"icon_path"		"econ/default_generated/weapon_g3sg1_hy_arctic_light"
@@ -2051,6 +2099,18 @@
 			"722758"
 			{
 				"icon_path"		"econ/default_generated/weapon_g3sg1_hy_kimono_diamonds_orange_heavy"
+			}
+			"722868"
+			{
+				"icon_path"		"econ/default_generated/weapon_g3sg1_gs_g3sg1_flux_purple_light"
+			}
+			"722869"
+			{
+				"icon_path"		"econ/default_generated/weapon_g3sg1_gs_g3sg1_flux_purple_medium"
+			}
+			"722870"
+			{
+				"icon_path"		"econ/default_generated/weapon_g3sg1_gs_g3sg1_flux_purple_heavy"
 			}
 			"852272"
 			{
@@ -2244,6 +2304,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_galilar_cu_galilar_particles_heavy"
 			}
+			"853944"
+			{
+				"icon_path"		"econ/default_generated/weapon_galilar_gs_galil_nightwing_light"
+			}
+			"853945"
+			{
+				"icon_path"		"econ/default_generated/weapon_galilar_gs_galil_nightwing_medium"
+			}
+			"853946"
+			{
+				"icon_path"		"econ/default_generated/weapon_galilar_gs_galil_nightwing_heavy"
+			}
 			"917592"
 			{
 				"icon_path"		"econ/default_generated/weapon_m249_sp_spray_light"
@@ -2339,6 +2411,18 @@
 			"919394"
 			{
 				"icon_path"		"econ/default_generated/weapon_m249_so_keycolors_heavy"
+			}
+			"919488"
+			{
+				"icon_path"		"econ/default_generated/weapon_m249_gs_m249_nebula_crusader_light"
+			}
+			"919489"
+			{
+				"icon_path"		"econ/default_generated/weapon_m249_gs_m249_nebula_crusader_medium"
+			}
+			"919490"
+			{
+				"icon_path"		"econ/default_generated/weapon_m249_gs_m249_nebula_crusader_heavy"
 			}
 			"1048608"
 			{
@@ -2759,6 +2843,18 @@
 			"1115846"
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_cu_mac10_neonrider_heavy"
+			}
+			"1116104"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_cu_mac10_alekhya_duo_light"
+			}
+			"1116105"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_cu_mac10_alekhya_duo_medium"
+			}
+			"1116106"
+			{
+				"icon_path"		"econ/default_generated/weapon_mac10_cu_mac10_alekhya_duo_heavy"
 			}
 			"1245264"
 			{
@@ -3336,6 +3432,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_xm1014_aq_xm1014_sigla_heavy"
 			}
+			"1640420"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_aq_xm1014_scumbria_light"
+			}
+			"1640421"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_aq_xm1014_scumbria_medium"
+			}
+			"1640422"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_aq_xm1014_scumbria_heavy"
+			}
 			"1703988"
 			{
 				"icon_path"		"econ/default_generated/weapon_bizon_hy_splatter_light"
@@ -3683,6 +3791,18 @@
 			"1771366"
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_so_aqua_heavy"
+			}
+			"1771468"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_myrcene_light"
+			}
+			"1771469"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_myrcene_medium"
+			}
+			"1771470"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_cu_mag7_myrcene_heavy"
 			}
 			"1835120"
 			{
@@ -4572,6 +4692,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mp7_cu_mp7_nemsis_heavy"
 			}
+			"2164688"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp7_cu_mp7_classified_light"
+			}
+			"2164689"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp7_cu_mp7_classified_medium"
+			}
+			"2164690"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp7_cu_mp7_classified_heavy"
+			}
 			"2228356"
 			{
 				"icon_path"		"econ/default_generated/weapon_mp9_an_red_light"
@@ -5244,6 +5376,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_p250_sp_kimono_diamonds_heavy"
 			}
+			"2361300"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_hy_p250_crackshot_light"
+			}
+			"2361301"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_hy_p250_crackshot_medium"
+			}
+			"2361302"
+			{
+				"icon_path"		"econ/default_generated/weapon_p250_hy_p250_crackshot_heavy"
+			}
 			"2490552"
 			{
 				"icon_path"		"econ/default_generated/weapon_scar20_so_pmc_light"
@@ -5387,6 +5531,18 @@
 			"2491994"
 			{
 				"icon_path"		"econ/default_generated/weapon_scar20_aq_scar20_leak_heavy"
+			}
+			"2492376"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_peacemaker03_light"
+			}
+			"2492377"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_peacemaker03_medium"
+			}
+			"2492378"
+			{
+				"icon_path"		"econ/default_generated/weapon_scar20_gs_scar20_peacemaker03_heavy"
 			}
 			"2556016"
 			{
@@ -5676,6 +5832,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_ssg08_aq_leviathan_heavy"
 			}
+			"2623452"
+			{
+				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_technicality_light"
+			}
+			"2623453"
+			{
+				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_technicality_medium"
+			}
+			"2623454"
+			{
+				"icon_path"		"econ/default_generated/weapon_ssg08_cu_ssg08_technicality_heavy"
+			}
 			"3932400"
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_am_zebra_dark_light"
@@ -5856,6 +6024,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_an_red_m4a1s_heavy"
 			}
+			"3934148"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_gs_m4a1s_snakebite_gold_light"
+			}
+			"3934149"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_gs_m4a1s_snakebite_gold_medium"
+			}
+			"3934150"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_silencer_gs_m4a1s_snakebite_gold_heavy"
+			}
 			"3997796"
 			{
 				"icon_path"		"econ/default_generated/weapon_usp_silencer_sp_leaves_light"
@@ -6035,6 +6215,18 @@
 			"3999654"
 			{
 				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_progressiv_heavy"
+			}
+			"3999712"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_kill_confirmed_light"
+			}
+			"3999713"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_kill_confirmed_medium"
+			}
+			"3999714"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_kill_confirmed_heavy"
 			}
 			"4128816"
 			{
