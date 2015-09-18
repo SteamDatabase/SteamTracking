@@ -774,7 +774,7 @@ CGameGooExchangeDialog = {
 		if ( $J('#goo_exchange_dialog').length == 0 )
 		{
 			$J.get( 'https://steamcommunity.com/tradingcards/gooexchangedialog', function( data ) {
-				$J(data).insertAfter( '#modalBG' );
+				$J(document.body).append(data);
 
 				CGameGooExchangeDialog.Show( appid,
 						UserYou.findAsset( 753, 6, itemid ),
@@ -800,7 +800,7 @@ CGameGooExchangeDialog = {
 		if ( $J('#goo_exchange_dialog').length == 0 )
 		{
 			$J.get( 'https://steamcommunity.com/tradingcards/gooexchangedialog', function( data ) {
-				$J(data).insertAfter( '#modalBG' );
+				$J(document.body).append(data);
 
 				CGameGooExchangeDialog.Show( appid,
 						UserYou.findAsset( 753, 6, itemid ),
