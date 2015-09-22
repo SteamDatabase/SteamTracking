@@ -406,13 +406,14 @@ var CBigPictureInventory = (function()
 		searchEntry.RaiseChangeEvents( true );
 		$.RegisterEventHandler( 'TextEntryChanged', searchEntry, function( g )
 		{
+			searchEntry.GetParent().SetHasClass( 'AlwaysVisible', searchEntry.text != '' );
 			that.UpdateGridForFilters();
 			return true;
 		} );
 
 		var inventoryBody = this.m_pInventoryBody;
 		var itemGrid = this.m_pItemGrid;
-		$.RegisterEventHandler( 'ChildIndexSelected', itemGrid, function( strGrid, iChild ) { that.GridChildIndexSelected( strGrid, iChild ); } );
+		$.RegisterEventHandler( 'ChildIndexSelected', itemGrid, function( pTarget, iChild ) { that.GridChildIndexSelected( ToPanel( pTarget ).id, iChild ); } );
 		$.RegisterEventHandler( 'GridInFastMotion', itemGrid, function( g )
 		{
 			inventoryBody.AddClass( 'FastMotion' );
@@ -485,7 +486,7 @@ var CBigPictureInventory = (function()
 		var data = this.m_rgAppContextData[appid];
 
 		if ( data.rgContexts.length > 0 )
-			cDropdown.AddClass( 'Visible' );
+			cDropdown.GetParent().AddClass( 'Visible' );
 
 		if ( Object.keys(data.rgContexts).length > 1 )
 		{
@@ -515,8 +516,8 @@ var CBigPictureInventory = (function()
 
 			var cDropdown = this.m_pContextDropdown;
 			//$.Msg( cDropdown.id );
-			cDropdown.AddClass( 'Building' );
-			cDropdown.RemoveClass( 'Visible' );
+			cDropdown.GetParent().AddClass( 'Building' );
+			cDropdown.GetParent().RemoveClass( 'Visible' );
 			cDropdown.RemoveAllOptions();
 
 			this.m_pItemGrid.RemoveAndDeleteChildren();
@@ -526,7 +527,7 @@ var CBigPictureInventory = (function()
 				var data = this.m_rgAppContextData[appid];
 
 				if ( data.rgContexts.length > 0 )
-					cDropdown.AddClass( 'Visible' );
+					cDropdown.GetParent().AddClass( 'Visible' );
 
 				this.m_rgContextIds = this.GetContextsForAppId( appid );
 
@@ -545,10 +546,10 @@ var CBigPictureInventory = (function()
 
 					++count;
 					if ( count == 2 )
-						cDropdown.AddClass( 'Visible' );
+						cDropdown.GetParent().AddClass( 'Visible' );
 				}
 
-				cDropdown.RemoveClass( 'Building' );
+				cDropdown.GetParent().RemoveClass( 'Building' );
 				cDropdown.SetSelected( initialSelection ); // This will trigger the load of the data
 
 				if ( count == 0 )
@@ -586,7 +587,7 @@ var CBigPictureInventory = (function()
 		// $.Msg( "UpdateItemInventoryContext " + JSON.stringify( this.m_rgContextIds ) );
 
 		var s = this.m_pContextDropdown.GetSelected();
-		if ( !this.m_pContextDropdown.BHasClass( "Building" ) && ( this.m_curShownAppID != this.m_curAppID || (s && this.m_curShownContext != s.id ) ) )
+		if ( !this.m_pContextDropdown.GetParent().BHasClass( "Building" ) && ( this.m_curShownAppID != this.m_curAppID || (s && this.m_curShownContext != s.id ) ) )
 		{
 			var context = 0;
 			if ( s )
@@ -602,6 +603,7 @@ var CBigPictureInventory = (function()
 			{
 				rgContexts = this.m_rgContextIds;
 			}
+			this.m_pContextDropdown.GetParent().SetHasClass( "AlwaysVisible", context != APPWIDE_CONTEXT );
 
 			this.ShowItemInventoryContext( this.m_curAppID, rgContexts, 0, null );
 		}
@@ -616,7 +618,7 @@ var CBigPictureInventory = (function()
 		this.m_grid_item_tags = { };
 		var that = this;
 		//$.Schedule( 0.0, function() { that.m_pItemGrid.RemoveAndDeleteChildren(); that.m_pGridWrapper.AddClass("SearchVisible"); } );
-		this.m_pSearchWrapper.text = '';
+		this.m_pSearchEntry.text = '';
 		this.m_pItemGrid.defaultfocus = "";
 	};
 
@@ -670,7 +672,7 @@ var CBigPictureInventory = (function()
 		}
 
 		var cDropdown = this.m_pContextDropdown;
-		if ( cDropdown.BHasClass( "Visible" ) )
+		if ( cDropdown.GetParent().BHasClass( "Visible" ) )
 		{
 			cDropdown.SetSelected( cDropdown.AccessDropDownMenu().GetChild(0).id );
 			this.UpdateItemInventoryContext();
@@ -690,8 +692,7 @@ var CBigPictureInventory = (function()
 				var category = this.m_tags[id];
 				if ( category.dirty )
 				{
-					var header = this.m_pTagFilters.FindChild( 'Header_' + id );
-					var dropdown = this.m_pTagFilters.FindChild( id );
+					var dropdown = this.m_pTagFilters.FindChildTraverse( id );
 					var menu = dropdown.AccessDropDownMenu();
 
 					for ( var tag in category.tags )
@@ -761,8 +762,7 @@ var CBigPictureInventory = (function()
 							option.visible = true;
 						}
 					}
-					dropdown.visible = bAnyVisible;
-					header.visible = bAnyVisible;
+					dropdown.GetParent().visible = bAnyVisible;
 				}
 			}
 		}
@@ -916,12 +916,14 @@ var CBigPictureInventory = (function()
 		for( var t in this.m_tags )
 		{
 			var category = this.m_tags[t];
+			var wrapper = $.CreatePanel( 'Panel', filters, '' );
+			wrapper.AddClass( "DropDownWrapper" );
 
-			var header = $.CreatePanel( 'Label', filters, 'Header_' + t );
+			var header = $.CreatePanel( 'Label', wrapper, '' );
 			header.text = category.name;
-			header.AddClass( "FilterHeader" );
+			header.AddClass( "DropDownHeader" );
 
-			var filter = $.CreatePanel( 'DropDown', filters, t );
+			var filter = $.CreatePanel( 'DropDown', wrapper, t );
 
 			var option = $.CreatePanel( 'Label', filter, 'any' );
 			option.text = 'Any';
@@ -977,7 +979,7 @@ var CBigPictureInventory = (function()
 		for ( var t in this.m_tags )
 		{
 			var category = this.m_tags[t];
-			var dropdown = filters.FindChild( t );
+			var dropdown = filters.FindChildTraverse( t );
 
 			if ( ALLOW_MULTISELECT )
 			{
@@ -1136,6 +1138,11 @@ var CBigPictureInventory = (function()
 			if ( selection.id != 'any' )
 			{
 				strSelection = obj.m_tags[t].tags[selection.id].name;
+				dropdown.GetParent().AddClass( "AlwaysVisible" );
+			}
+			else
+			{
+				dropdown.GetParent().RemoveClass( "AlwaysVisible" );
 			}
 			dropdown.GetChild(0).text = strSelection;
 			obj.UpdateGridForFilters();

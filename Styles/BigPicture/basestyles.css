@@ -3,6 +3,7 @@
 @define bigpicture-ease-in-out: cubic-bezier( 0, 0.265, 0.265, 1.0);
 //@define bigpicture-ease-in-out: cubic-bezier( 0, 0.42, 0.58, 1.0);
 
+@define supershortduration: 0.15s;
 @define shortduration: 0.25s;
 @define shortmedduration: 0.3s;
 @define mediumduration: 0.4s;
@@ -21,14 +22,16 @@
 }
 
 
-.MenuPopupButtonContainer Button {
-	width: 100%;
-}
-
 .MenuPopupButtonContainer
 {
-	width: 370px;
+	width: fit-children;
+	min-width: 370px;
+	max-width: 800px;
+
 	height: fit-children;
+
+	max-height: 800px;
+
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 10px;
@@ -76,79 +79,14 @@
 }
 
 
-.MenuPopupButtonContainer Button
+.MenuPopupButtonContainer > Button
 {
-	flow-children: right;
-	margin-left: 20px;
-	margin-right: 20px;
-	padding-right: 12px;
-	width: 100%;
-	white-space: nowrap;
-	box-shadow: none;
-
-	border-style: solid;
-	border-width: 5px;
-	border-color: #00000000;
-
-	font-size: 22px;
-	font-family: platformfont;
-	color: #d0d0d0ff;
-
-	transition-property: background-color, color, border, box-shadow, pre-transform-scale2d;
-	transition-duration: 0.25s;
-	transition-timing-function: bigpicture-ease-in-out;
+	min-width: 350px;
+	margin-left: 10px;
 }
 
-.MenuPopupButtonContainer Button Label
-{
-	horizontal-align: left;
-	width: 100%;
-	color: applabel;
-	transform: translatex(0px);
-	padding: 7px;
-	transition-property: color, position, transform;
-	transition-duration: 0.25s;
-	transition-timing-function: bigpicture-ease-in-out;
-	text-overflow: clip;
-	white-space: nowrap;
-}
-.MenuPopupButtonContainer Button:focus Label
-{
-	horizontal-align: left;
-	color: applabelselected;
-	transform: translatex(7px);
-	padding: 7px;
-}
 
-.MenuPopupButtonContainer Button:hover
-{
-	background-color: #00000020;
-//pre-transform-scale2d: 1.05;
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-	margin-left: 16px;
-	margin-right: 16px;
-	padding-right: 12px;
-}
 
-.MenuPopupButtonContainer Button:focus
-{
-	background-color: #00000020;
-
-	color: #161718f5;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
-	border-color: #fdfefef0;
-	margin-left: 20px;
-	margin-right: 20px;
-	padding-right: 12px;
-
-	animation-name: friends-profile-details-button-focus;
-	animation-duration: 1.7s;
-	animation-delay: 0.4s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-
-}
 
 @keyframes 'button-focus'
 {
@@ -374,7 +312,7 @@
 
 .NxGridButtonRow
 {
-	margin-top: 20px;
+	margin-top: 38px;
 	margin-left: 70px;
 	width: 400px;
 	height: 100%;
@@ -383,10 +321,11 @@
 
 	margin-right: 30px;
 
-	transform: translateX( -35px );
+	transform: translateX( -35px ) translateY( -8px );
+
 	opacity: 0.5;
 	transition-delay: 0.08s;
-	transition-duration: 0.3s;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
 
@@ -395,7 +334,7 @@
 
 .NxGridButtonRow:descendantfocus
 {
-	transform: translateX( 0px );
+	transform: translateX( 0px ) translateY( -8px );
 	opacity: 1;
 	opacity-mask: none;
 }
@@ -412,6 +351,16 @@
 	color: #2F89BDff;
 	margin: 20px 0px 5px 10px;
 }
+
+#NxPageContainer {
+	margin-top: -40px;
+	padding-top: 40px;
+	width: 100%;
+	height: 100%;
+
+	flow-children: right;
+}
+
 
 @keyframes 'nx-button-focus'
 {
@@ -435,13 +384,260 @@
 {
 	width: fill-parent-flow( 1.0 );
 	height: 100%;
+	width: 100%;
+	padding-top: 0px;
+	padding-left: 0px;
 
 	transition-property: transform;
-	transition-duration: 0.3s;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.NxRightColumn > Panel {
+	width: 2000px;
+	height: 100%;
 }
 
 .NxRightColumn:descendantfocus
 {
 	transform: translatex( -200px );
+}
+
+.NxRightContentContainer
+{
+	opacity: 0;
+}
+
+.NxRightContentContainer.Animating {
+	transition-property: transform, opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+.NxRightContentContainer.Visible {
+	opacity: 1;
+	transform: translateY(0px);
+
+	padding: 40px 0px 0px 40px;
+	margin: -40px 0px 0px -40px;
+}
+
+.NxRightContentContainer.Up {
+	transform: translateY(-200px);
+}
+
+.NxRightContentContainer.Down {
+	transform: translateY(200px);
+}
+
+.FlowDownContainer {
+	flow-children: down;
+	overflow: clip scroll;
+}
+
+.NxNavigationLoadingThrobber
+{
+	height: 700px;
+	width: 1000px;
+	opacity: 0;
+	visibility: collapse;
+}
+
+.Loading .NxNavigationLoadingThrobber {
+	opacity: 1;
+	visibility: visible;
+}
+
+.Loading .NxNavigationLoadingThrobber > Panel {
+	vertical-align: center;
+	horizontal-align: center;
+	flow-children: down;
+}
+
+.Loading .NxNavigationLoadingThrobber > Panel LoadingThrobber {
+	horizontal-align: center;
+}
+
+.NxNavigationLoadingError {
+	height: 700px;
+	width: 1000px;
+}
+
+.NxNavigationLoadingError Label {
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+/* Right hand filter tab */
+
+.NxFilterTab
+{
+	width: 420px;
+	height: fit-children;
+	max-height: 700px;
+	opacity: 1.0;
+	position: 1825px 120px 0px;
+	margin-top: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	background-color: black;
+	overflow: clip;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #1184baee ), to( #0e2744ee ) );
+
+	box-shadow: fill #00000066 -4px -4px 6px 6px;
+
+	flow-children: down;
+
+	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+
+	z-index: 5;
+
+}
+
+.ContentAreaFocus .NxFilterTab
+{
+	position: 1630px 120px 0px;
+}
+
+.NxFilterTab:descendantfocus
+{
+	opacity: 1.0;
+	desaturation: 0.0;
+	transform: translatez( 20px );
+	position: 1480px 120px 0px;
+}
+
+.NxFilterTab ToggleButton.CheckBox,
+.NxFilterTab RadioButton,
+.NxFilterTab .NxTagHeader,
+.NxFilterTab Button,
+.NxFilterTab.EmptyFilter Button.NxFilterButton
+{
+	height: 0px;
+
+	margin: 0px;
+}
+.NxFilterTab:descendantfocus ToggleButton,
+.NxFilterTab:descendantfocus RadioButton
+{
+	margin: 2px 10px 2px 0px;
+}
+
+.NxFilterTab:descendantfocus ToggleButton,
+.NxFilterTab ToggleButton:selected,
+.NxFilterTab:descendantfocus RadioButton,
+.NxFilterTab RadioButton:selected,
+.NxFilterTab:descendantfocus .NxTagHeader,
+.NxFilterTab:descendantfocus Button,
+.NxFilterTab .AlwaysVisible
+{
+	height: fit-children;
+}
+
+.NxFilterTab .NxTagHeader.FilterHeader {
+	height: 56px;
+	margin-left: 10px;
+}
+
+.NxFilterTab .FilterHeader
+{
+	font-size: 34px;
+	color: #ffffff;
+
+}
+
+.NxFilterWrapper
+{
+	position: 150px 0px 0px;
+	width: 400px;
+	height: fit-children;
+	padding: 0px;
+	margin-left: 10px;
+	z-index: 10;
+
+	overflow: clip scroll;
+
+	flow-children: down;
+
+	transition-property: position, color, background-color, transform, opacity, height, width;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+
+}
+
+.NxFilterWrapper:descendantfocus
+{
+	position: 0px 0px 0px;
+	max-height: 600px;
+}
+
+/* Panel background */
+
+#PanelBackgroundWrapper {
+	transition-property: opacity;
+	transition-duration: mediumduration;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+
+	opacity: 1.0;
+
+	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
+}
+
+#PanelBackground Image {
+
+
+	desaturation: 0.0;
+
+	animation-name: bg-screenshot-ambient;
+	animation-duration: 14s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#PanelBackgroundWrapper.Invisible
+{
+	opacity: 0.0;
+}
+
+#PanelBackgroundWrapper, #PanelBackground, #PanelBackground Image  {
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes 'bg-screenshot-ambient'
+{
+	from
+	{
+		opacity: 0.0;
+		transform: translate3D( 0px, -20px, 20px );
+		animation-timing-function: ease-in;
+	}
+
+	4%
+	{
+		opacity: 0.4;
+		transform: translate3D( -15px, -10px, 40px );
+		animation-timing-function: bigpicture-ease-in-out;
+	}
+
+	96%
+	{
+		opacity: 0.4;
+		transform: translate3D( -60px, 0px, 80px );
+		animation-timing-function: ease-in;
+	}
+
+	to
+	{
+		opacity: 0.0;
+		transform: translate3D( -120px, 60px, 160px );
+		animation-timing-function: ease-out;
+	}
 }

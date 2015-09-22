@@ -29,6 +29,7 @@ var CVideoWatch = function( eClientType, appId, rtRestartTime, strLanguage, view
 	this.m_eUIMode = CDASHPlayerUI.eUIModeDesktop;
 	this.m_bHDCPErrorReported = false;
 	this.m_bEMECapableHost = bEMECapable;
+	this.m_bEnabledAudioDubTrack = false;
 }
 
 CVideoWatch.k_InBrowser = 1;
@@ -172,6 +173,7 @@ CVideoWatch.prototype.OnPlayerBufferingComplete = function()
 	document.title = this.m_strVideoTitle + ' :: Steam';
 
 	// options that need setting on playback start
+	this.SetAudioTrack();
 	this.SetClosedCaptionLanguage();
 	this.m_playerUI.SetPlayerPlaybackRate();
 
@@ -278,6 +280,9 @@ CVideoWatch.prototype.GetVideoDetails = function()
 				case 20:
 					_watch.ShowVideoError( 'The video service is not available.' );
 					break;
+				case 27:
+					_watch.ShowVideoError( 'The viewing period for this video rental has expired.' );
+					break;
 				case 82:
 					_watch.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
 					break;
@@ -305,6 +310,9 @@ CVideoWatch.prototype.LoadVideoMPD = function( url )
 	this.m_DASHPlayerStats.Reset();
 	this.SetResumeTimeForAppID();
 	var bUseMpdRelativePathForSegments = false;
+	this.m_player.SetAudioAdaptationIndex ( CDASHPlayerUI.GetSavedAudioTrackSelected( this.m_nAppId ) );
+
+
 	this.m_player.PlayMPD( url, bUseMpdRelativePathForSegments );
 }
 
@@ -336,13 +344,13 @@ CVideoWatch.prototype.OnTimeUpdatePlayer = function()
 CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 {
 	var strClosedCaptionCode = CDASHPlayerUI.GetSavedClosedCaptionLanguage( this.m_nAppId );
-	if ( !strClosedCaptionCode )
+	if ( !strClosedCaptionCode && !this.m_bEnabledAudioDubTrack )
 	{
 		for ( strCode in CVTTCaptionLoader.LanguageCountryCodes )
 		{
 			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
 			{
-				if ( this.m_player.GetLanguageForAudioTrack() == strCode )
+				if ( this.m_player.GetLanguageForCurrentAudioTrack() == strCode )
 					strClosedCaptionCode = CDASHPlayerUI.CLOSED_CAPTIONS_NONE;
 				else
 					strClosedCaptionCode = strCode;
@@ -357,6 +365,32 @@ CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 		this.m_playerUI.SetClosedCaptionLanguageInUI( strClosedCaptionCode );
 		this.m_playerUI.SwitchClosedCaptionLanguageInPlayer( strClosedCaptionCode );
 		this.m_playerUI.SaveClosedCaptionLanguage();
+	}
+}
+
+CVideoWatch.prototype.SetAudioTrack = function()
+{
+	var strAudioTrackID = CDASHPlayerUI.GetSavedAudioTrackSelected( this.m_nAppId );
+
+	if ( !strAudioTrackID )
+	{
+		// determine the best main or dub audio track for the user
+		for ( strCode in CVTTCaptionLoader.LanguageCountryCodes )
+		{
+			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
+			{
+				strAudioTrackID = this.m_player.GetAudioTrackForLanguage( strCode );
+				break;
+			}
+		}
+	}
+
+	if ( strAudioTrackID && strAudioTrackID != -1 )
+	{
+		this.m_playerUI.SetAudioTrackSelectedInUI( strAudioTrackID );
+		this.m_playerUI.SwitchAudioTrackSelectedInPlayer( strAudioTrackID );
+		this.m_playerUI.SaveAudioTrackSelected();
+		this.m_bEnabledAudioDubTrack = true;
 	}
 }
 

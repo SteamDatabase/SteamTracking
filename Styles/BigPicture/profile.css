@@ -3484,7 +3484,6 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 {
 	height: 80px;
 	width: 80px;
-	background-color: black;
 	vertical-align: center;
 }
 
@@ -4325,4 +4324,138 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 #LeaderboardsHeader.Hidden {
 	visibility: collapse;
+}
+
+.EditProfileWrapper {
+
+	flow-children: down;
+
+	height: 700px;
+
+	width: 100%;
+	flow-children: down;
+
+	overflow: squish scroll;
+	padding: 5px;
+}
+
+.RowContainer {
+	flow-children: down;
+	margin-bottom: 25px;
+}
+
+
+.EditProfileWrapper TextEntry {
+	width: 600px;
+}
+
+.SettingsLabel {
+	font-size: 24px;
+}
+
+
+.CustomURLWrapper {
+	flow-children: right;
+}
+
+.CustomURLWrapper Label {
+	font-size: 28px;
+	line-height: 46px;
+	color: #fff;
+	margin-right: 15px;
+}
+
+.CustomURLWrapper TextEntry {
+	width: 400px;
+}
+
+.AvatarWrapper {
+	flow-children: right;
+}
+
+.AvatarWrapper Image {
+	margin-right: 25px;
+	vertical-align: bottom;
+}
+
+TextEntry.Multiline {
+	height: 250px;
+}
+
+.ProfileSelectionWrapper {
+	flow-children: right;
+	height: fit-children;
+	width: 600px;
+	padding-bottom: 10px;
+}
+
+.ProfileSelectionText {
+	flow-children: down;
+	width: 100%;
+	height: fit-children;
+}
+
+.ProfileSelectionWrapper Image {
+	margin-right: 25px;
+}
+
+.ProfileSelectionWrapper Label {
+	color: #fff;
+	font-size: 24px;
+}
+
+.CountryWrapper {
+	flow-children: right;
+}
+
+.CountryWrapper DropDown {
+	width: 350px;
+	margin-right: 15px;
+}
+
+.CountryWrapper > Panel {
+	flow-children: down;
+}
+
+Panel.AvatarOptionGame {
+	flow-children: down;
+	width: 600px;
+	height: fit-children;
+	padding: 5px;
+	margin: 5px 10px;
+}
+
+.AvatarOptions {
+	flow-children: right;
+}
+
+.AvatarOptions Button {
+	border: 3px solid transparent;
+	margin-right: 5px;
+	width: 110px;
+	height: 110px;
+}
+
+.AvatarOptions Button:focus {
+	border-color: white;
+}
+
+#SelectedBackgroundImage {
+	width: 160px;
+	height: 75px;
+}
+
+.RadioGroup {
+	flow-children: down;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.RadioGroup .RadioButton {
+	width: 100%;
+}
+
+.ImageSelectionButton {
+	height: fit-children;
+	flow-children: right;
 }

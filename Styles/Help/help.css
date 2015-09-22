@@ -354,6 +354,13 @@ body.v6 h3 {
 	font-weight: normal;
 }
 
+body.v6 h4 {
+	font-size: 16px;
+	color: white;
+
+	margin-bottom: 12px;
+}
+
 body.v6 .page_content {
 	width: 950px;
 	margin: 0 auto;
@@ -2313,5 +2320,120 @@ img.category_icon {
 	html.responsive #help_search_support_input {
 		max-width: 720px;
 		width: calc( 100% - 20px - 2px );	/* 20px padding 2px border */
+	}
+}
+
+.lock_code_section
+{
+	margin-top: 20px;
+	width: auto;
+	background-color: #51313A;
+	padding: 20px;
+}
+
+.code_text
+{
+	float: left;
+	color: #ffffff;
+	font-size: 38px;
+	padding-right: 18px;
+}
+
+.code_explanation
+{
+	color: #ffffff;
+	line-height: 18px;
+}
+
+.code_explanation .title
+{
+	padding-top: 3px;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.code_explanation .more
+{
+	padding-top: 4px;
+}
+
+@media screen and (max-width: 640px)
+{
+	.code_explanation
+	{
+		clear: both;
+	}
+
+	.code_explanation .title, .code_explanation .more
+	{
+		padding-top: 10px;
+	}
+}
+
+.lock_button_row .lock_button
+{
+	min-width: 170px;
+	background-color: #262D3D;
+	height: 70px;
+	float: left;
+	width: calc( (100% - 40px)/3 - 70px );
+	margin: 10px;
+
+	color: #71A7E8;
+	font-size: 14px;
+	font-weight: bold;
+
+	padding-left: 60px;
+	padding-right: 10px;
+
+	display: table;
+}
+
+.lock_button span
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.lock_button.ico_print
+{
+	background-image: url('https://help.steampowered.com/public/images//icon_print.png');
+	background-position: 14px 20px;
+	background-repeat: no-repeat;
+}
+
+.lock_button.ico_bookmark
+{
+	background-image: url('https://help.steampowered.com/public/images//icon_bookmark.png');
+	background-position: 14px 20px;
+	background-repeat: no-repeat;
+}
+
+.lock_button.ico_nothing
+{
+	background-image: url('https://help.steampowered.com/public/images//icon_writedown.png');
+	background-position: 14px 20px;
+	background-repeat: no-repeat;
+}
+
+.lock_button_row .lock_button:nth-child( 1 )
+{
+	margin-left: 0px;
+}
+
+.lock_button_row .lock_button:nth-last-child( 2 )
+{
+	margin-right: 0px;
+}
+
+@media screen and (max-width: 910px)
+{
+	.lock_button_row .lock_button
+	{
+		margin-left: 0px;
+		margin-right: 0px;
+		clear: both;
+		width: calc( 100% - 70px );
 	}
 }

@@ -9,15 +9,18 @@
 {
 	height: 100%;
 	width: 100%;
-	padding-top: 50px;
+	padding-top: 0px;
 	flow-children: right;
+	overflow: clip;
 }
 
 .CommunityContentSectionWrapper
 {
-	width: 150%;
+	width: 100%;
 	height: 100%;
 	vertical-align: top;
+	padding-left: 20px;
+	margin-left: -42px;
 }
 
 .CommunityContentSectionPanel
@@ -39,6 +42,12 @@
 	transform: translatex( -200px );
 }
 
+.NxRightColumn > Panel,
+.NxRightColumn > CommunityHubContentPanel
+{
+	width: 1350px;
+}
+
 #CommunityContentEmpty
 {
 	padding-bottom: 195px;
@@ -58,112 +67,6 @@
 }
 
 
-
-.NxFilterTab
-{
-	width: 420px;
-	height: fit-children;
-	max-height: 700px;
-	opacity: 1.0;
-	position: 1825px 120px 0px;
-	margin-top: 0px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-bottom: 20px;
-	background-color: black;
-	overflow: clip;
-	background-color: gradient( linear, 0% 0%, 100% 0%, from( #1184baee ), to( #0e2744ee ) );
-
-	box-shadow: fill #00000066 -4px -4px 6px 6px;
-
-	flow-children: down;
-
-	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
-	transition-duration: 0.3s;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-
-	z-index: 5;
-
-}
-
-.ContentAreaFocus .NxFilterTab
-{
-	position: 1630px 120px 0px;
-}
-
-.NxFilterTab:descendantfocus
-{
-	opacity: 1.0;
-	desaturation: 0.0;
-	transform: translatez( 20px );
-	position: 1480px 120px 0px;
-}
-
-.NxFilterTab ToggleButton.CheckBox,
-.NxFilterTab RadioButton,
-.NxFilterTab .NxTagHeader,
-.NxFilterTab Button,
-.NxFilterTab.EmptyFilter Button.NxFilterButton
-{
-	height: 0px;
-
-	margin: 0px;
-}
-.NxFilterTab:descendantfocus ToggleButton,
-.NxFilterTab:descendantfocus RadioButton
-{
-	margin: 2px 10px 2px 0px;
-}
-
-.NxFilterTab:descendantfocus ToggleButton,
-.NxFilterTab ToggleButton:selected,
-.NxFilterTab:descendantfocus RadioButton,
-.NxFilterTab RadioButton:selected,
-.NxFilterTab:descendantfocus .NxTagHeader,
-.NxFilterTab:descendantfocus Button,
-.NxFilterTab .AlwaysVisible
-{
-	height: fit-children;
-}
-
-.NxFilterTab .NxTagHeader.FilterHeader {
-	height: 56px;
-	margin-left: 10px;
-}
-
-.NxFilterTab .FilterHeader
-{
-	font-size: 34px;
-	color: #ffffff;
-
-}
-
-.NxFilterWrapper
-{
-	position: 150px 0px 0px;
-	width: 400px;
-	height: fit-children;
-	padding: 0px;
-	margin-left: 10px;
-	z-index: 10;
-
-	overflow: clip scroll;
-
-	flow-children: down;
-
-	transition-property: position, color, background-color, transform, opacity, height, width;
-	transition-duration: mediumduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-
-}
-
-.NxFilterWrapper:descendantfocus
-{
-	position: 0px 0px 0px;
-	max-height: 600px;
-}
 
 
 #ContentFilter

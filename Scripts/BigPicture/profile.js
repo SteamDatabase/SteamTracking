@@ -4,11 +4,11 @@ function SetTabButton( btnName )
 	// Need to escape context out into parent layout to set focus to a tab button
 	// First find inner panel, we may use this helper in various circumstances so
 	// check a bunch, then escape up a few parent levels.
-	pProfile = $.GetContextPanel();
+	var pProfile = $.GetContextPanel();
 	while ( pProfile && pProfile.id != 'ProfileWrapper' )
 		pProfile = pProfile.GetParent();
 
-	p = pProfile.FindChildTraverse( btnName );
+	var p = pProfile.FindChildTraverse( btnName );
 	if ( p )
 		p.SetFocus();
 }
@@ -16,9 +16,9 @@ function SetFocusProfileButton() { SetTabButton( 'ShowProfileButton' ); }
 function SetFocusFriendActivityButton() { SetTabButton( 'FriendActivityButton' ); }
 
 g_LastActivated = null;
-function UpdateRightColumn( strLayoutXMLBase64 )
+function OnBlotterItemFocused( buttonid, strLayoutXMLBase64 )
 {
-	pRightColumn = $('#RightDetailsColumn');
+	var pRightColumn = $('#RightDetailsColumn');
 
 	// Mark old panels for deletion
 	for( var i=0; i<pRightColumn.GetChildCount(); i++)
@@ -44,7 +44,8 @@ function UpdateRightColumn( strLayoutXMLBase64 )
 	CPanelUtils.MoveToTop(oContainer);
 
 
-	$.DispatchEvent( 'LoadLayoutFromBase64XMLStringAsync', oContainer, strLayoutXMLBase64, true );
+	var layout = $.base64.atob( strLayoutXMLBase64, true );
+	oContainer.BCreateChildren( layout );
 	pRightColumn.ScrollToTop();
 
 
@@ -52,55 +53,16 @@ function UpdateRightColumn( strLayoutXMLBase64 )
 	{
 		g_LastActivated.RemoveClass( 'current_selection' );
 	}
+
+	g_LastActivated = $("#"+buttonid);
+	g_LastActivated.AddClass( 'current_selection' );
 }
 
 function FocusRightColumn( panelActivated )
 {
-	pRightColumn = $('#RightDetailsColumn');
+	var pRightColumn = $('#RightDetailsColumn');
 	if ( pRightColumn )
 		pRightColumn.SetFocus();
-
-	pLastFocus = $( '#'+panelActivated );
-	if ( pLastFocus )
-	{
-		pLastFocus.AddClass( 'current_selection' );
-		g_LastActivated = pLastFocus;
-	}
-}
-
-function RestoreLeftColumnFocus()
-{
-	if  (g_LastActivated && g_LastActivated.IsValid() )
-		g_LastActivated.SetFocus()
-	else
-	{
-		$( '#RightDetailsColumn' ).GetParent().FindChildTraverse( 'LeftActivityColumn' ).SetFocus();
-	}
-}
-
-function UpdateLeftSelection( panelActivated )
-{
-	p = $( '#'+panelActivated );
-	if ( !p )
-		p = $( '#RightDetailsColumn' ).GetParent().FindChildTraverse( panelActivated );
-	
-	if ( p && g_LastActivated == p )
-	{
-		// Just make sure it's set anyway...
-		p.AddClass( 'current_selection' );
-		return;
-	}
-
-	if ( g_LastActivated && g_LastActivated.IsValid() )
-	{
-		g_LastActivated.RemoveClass( 'current_selection' );
-	}
-
-	if ( p )
-	{
-		p.AddClass( 'current_selection' );
-		g_LastActivated = p;
-	}
 }
 
 function LoadNextActivityFeedPage( strURL, oPanel )
@@ -126,7 +88,7 @@ function OnCommentPostComplete( bSuccess, name, data )
 {
 	if ( bSuccess && data.success )
 	{
-		textentry = $( '#commentthread_'+name+'_textarea' );
+		var textentry = $( '#commentthread_'+name+'_textarea' );
 		if ( textentry )
 			textentry.text = '';
 
@@ -161,7 +123,7 @@ function OnStatusPostComplete( bSuccess, data )
 {
 	if ( bSuccess && data.success )
 	{
-		textentry = $( '#poststatus_entry' );
+		var textentry = $( '#poststatus_entry' );
 		if ( textentry )
 			textentry.text = '';
 
@@ -170,7 +132,7 @@ function OnStatusPostComplete( bSuccess, data )
 	else
 	{
 
-		errorlabel = $( '#poststatus_entry_error' );
+		var errorlabel = $( '#poststatus_entry_error' );
 		if ( errorlabel )
 		{
 			if ( data.message )
@@ -191,8 +153,8 @@ function BAddCommonParamsToRequest( req_settings, panel )
 		req_settings.data = { };
 
 	var now = new Date();
-	tzOffset = now.getTimezoneOffset() * -1 * 60;
-	isDST = 0;
+	var tzOffset = now.getTimezoneOffset() * -1 * 60;
+	var isDST = 0;
 
 	req_settings.data.timezoneOffset = tzOffset+','+isDST;
 	req_settings.data.sessionid = panel.GetAttributeString( 'sessionid', '0' );
@@ -211,7 +173,7 @@ function BAddCommentThreadParamsToRequest( req_settings, panel )
 
 	req_settings.data.count = panel.GetAttributeString( "pagesize", "0" );
 	
-	extdata = panel.GetAttributeString( "extended_data", "" );
+	var extdata = panel.GetAttributeString( "extended_data", "" );
 	if ( extdata && extdata.length > 0 )
 		req_settings.data.extended_data = extdata;
 	
@@ -223,7 +185,7 @@ function BAddCommentThreadParamsToRequest( req_settings, panel )
 	if ( panel.GetAttributeInt( "newestfirstpagination", 0 ) )
 		req_settings.data.newestfirstpagination = 1;
 
-	lastvisit = panel.GetAttributeUInt32( "lastvisit", 0 ) ;
+	var lastvisit = panel.GetAttributeUInt32( "lastvisit", 0 ) ;
 	if ( lastvisit )
 		req_settings.data.lastvisit = lastvisit;
 
@@ -232,23 +194,23 @@ function BAddCommentThreadParamsToRequest( req_settings, panel )
 
 function PostComment( id, type, name, url )
 {
-	panel = $( '#'+id );
+	var panel = $( '#'+id );
 	if ( !panel )
 	{
 		$.Msg( 'Failed to find panel '+id );
 		return;
 	}
 
-	strFullURL = url+"post/"+panel.GetAttributeString( "owner", "0" )+"/"+panel.GetAttributeString( "feature", "0" )+"/";
+	var strFullURL = url+"post/"+panel.GetAttributeString( "owner", "0" )+"/"+panel.GetAttributeString( "feature", "0" )+"/";
 
-	textentry = $( '#commentthread_'+name+'_textarea' );
+	var textentry = $( '#commentthread_'+name+'_textarea' );
 	if ( !textentry )
 	{
 		$.Msg( 'Failed to find text entry for comment '+name );
 		return;
 	}
 
-	req_settings = 
+	var req_settings =
 	{ 
 		data: { comment: textentry.text },
 		type: 'POST',
@@ -263,16 +225,16 @@ function PostComment( id, type, name, url )
 
 function DeleteCommentFromThread( id, type, name, url, gid )
 {
-	panel = $( '#'+id );
+	var panel = $( '#'+id );
 	if ( !panel )
 	{
 		$.Msg( 'Failed to find panel '+id );
 		return;
 	}
 
-	strFullURL = url+"delete/"+panel.GetAttributeString( "owner", "0" )+"/"+panel.GetAttributeString( "feature", "0" )+"/";
+	var strFullURL = url+"delete/"+panel.GetAttributeString( "owner", "0" )+"/"+panel.GetAttributeString( "feature", "0" )+"/";
 	
-	req_settings = 
+	var req_settings =
 	{ 
 		data: { gidcomment: gid },
 		type: 'POST',
@@ -287,14 +249,14 @@ function DeleteCommentFromThread( id, type, name, url, gid )
 
 function PostUserStatus( url )
 {
-	textentry = $( '#poststatus_entry' );
+	var textentry = $( '#poststatus_entry' );
 	if ( !textentry )
 	{
 		$.Msg( 'Failed to find text entry for post status' );
 		return;
 	}
 
-	req_settings = 
+	var req_settings =
 	{ 
 		data: { status_text: textentry.text, appid: 0 },
 		type: 'POST',
@@ -309,16 +271,16 @@ function PostUserStatus( url )
 
 function VoteCommentThreadUp( id, type, pageid, url )
 {
-	panel = $( '#'+id );
+	var panel = $( '#'+id );
 	if ( !panel )
 	{
 		$.Msg( 'Failed to find panel for vote comment thread up' );
 		return;
 	}
 
-	strFullURL = url+"voteup/"+panel.GetAttributeString( "owner", "0" )+"/"+panel.GetAttributeString( "feature", "0" )+"/";
+	var strFullURL = url+"voteup/"+panel.GetAttributeString( "owner", "0" )+"/"+panel.GetAttributeString( "feature", "0" )+"/";
 	
-	req_settings = 
+	var req_settings =
 	{ 
 		data: { vote: 1 },
 		type: 'POST',
@@ -356,7 +318,7 @@ function DisplayFullscreenImage( parentpanelid, url )
 			'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching" />' +
 '</styles>' +
 '<scripts>' +
-'<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
+'<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
 '<include src="https://steamcommunity-a.akamaihd.net/public/javascript/bigpicture/profile.js?v=valveisgoodatcaching&amp;l=english" />' +
 '</scripts>' +
 '<Panel defaultfocus="ImageButton" class="FullscreenImagePopup" oncancel="CloseFullscreenImage( \'FullscreenImagePopup\' );" >' +
@@ -408,10 +370,10 @@ function DisplayFullscreenImage( parentpanelid, url )
 
 function ComputeXAndY( panel )
 {
-	mainwidth = 0;
-	mainheight = 0;
-	x = 0;
-	y = 0;
+	var mainwidth = 0;
+	var mainheight = 0;
+	var x = 0;
+	var y = 0;
 
 	while ( true )
 	{

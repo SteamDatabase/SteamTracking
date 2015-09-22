@@ -2130,6 +2130,7 @@ function CSlider( $Container, $Grabber, args )
 	this.m_fnOnChange = args.fnOnChange || function( value, bInDrag ) {};
 
 	this.m_$Grabber.css( 'position', 'absolute' );
+	this.CalcRatios();
 	this.SetValue( this.m_nValue );
 
 	var fnGetPageX = function( event )
@@ -2205,8 +2206,6 @@ CSlider.prototype.CalcRatios = function()
 
 CSlider.prototype.SetValue = function( nValue, nAnimationSpeed )
 {
-	this.CalcRatios();
-
 	this.m_nValue = Math.min( Math.max( nValue, this.m_nMinVal ), this.m_nMaxVal );
 
 	var nNewPosition = Math.floor( ( this.m_nValue - this.m_nMinVal ) * this.m_flRatio );
@@ -2239,6 +2238,7 @@ CSlider.prototype.SetRange = function( nMinVal, nMaxVal, nValue )
 	this.m_nMaxVal = nMaxVal;
 	if ( typeof nValue != 'undefined' )
 		this.m_nValue = nValue;
+	this.CalcRatios();
 	this.SetValue( this.m_nValue );
 };
 

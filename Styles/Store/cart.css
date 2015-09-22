@@ -75,7 +75,11 @@ body.v6.login .rightcol .spotlight_block {
 	color: #67c1f5;
 }
 
-.checkout_content_box input[type="text"], .checkout_content_box input[type="password"], .checkout_content_box select, .checkout_content_box textarea
+.checkout_content_box input[type="text"],
+.checkout_content_box input[type="password"],
+.checkout_content_box select,
+.checkout_content_box textarea,
+.checkout_main .dselect_container a.trigger
 {
 	background-color: #2a3f5a;
 	color: #fff;
@@ -83,9 +87,25 @@ body.v6.login .rightcol .spotlight_block {
 	border-radius: 3px;
 	box-shadow: 1px 1px 0px #45556c;
 	width: 500px;
+	max-width: calc( 100% - 12px );
 	padding: 5px;
 	margin-top: 3px;
+
+	font-size: 16px;
+	line-height: 21px;
 }
+
+.checkout_main .dselect_container a.trigger.activetrigger
+{
+	color: #ffffff;
+	background: #67c1f5;
+}
+
+img.payment_method_logo {
+	display: block;
+	float: left;
+}
+
 .checkout_content_box.method {
 	background: rgba( 0, 0, 0, 0.4 );
 	margin-bottom: 20px;
@@ -327,8 +347,8 @@ body.v6.login .rightcol .spotlight_block {
 
 .payment_method_review_row
 {
-	width: 440px;
 	position: relative;
+	overflow: hidden;
 }
 
 .payment_method_total
@@ -350,19 +370,23 @@ body.v6.login .rightcol .spotlight_block {
 	min-height: 77px;
 	line-height: 16px;
 	background: rgba(0,0,0,0.2);
+	padding: 0 2.5%;
 }
 
 
 .checkout_review_item_img {
-	position: absolute;
-	top: 16px;
-	left: 16px;
+	float: left;
+	padding-top: 16px;
+	width: 120px;
+}
+
+.checkout_review_item_img img {
+	width: 100%;
 }
 
 .checkout_review_item_desc {
-	margin-left: 151px;
-	margin-right: 90px;
-	padding-top: 23px;
+	overflow: hidden;
+	padding: 23px 3% 0 3%;
 	color: #c6d4df;
 }
 
@@ -398,9 +422,8 @@ body.v6.login .rightcol .spotlight_block {
 }
 
 .checkout_review_item_price {
-	position: absolute;
-	right: 14px;
-	top: 29px;
+	float: right;
+	padding-top: 20px;
 	text-align: right;
 }
 
@@ -484,18 +507,21 @@ body.v6.login .rightcol .spotlight_block {
 
 #checkout_header .content {
 	position: relative;
-	width: 940px;
-	height: 104px;
-	margin: 0px auto;
+	max-width: 940px;
+	min-height: 104px;
+	margin: 0 auto;
+	padding: 0 2%;
 }
 
 #checkout_pipeline, #receipt_pipeline {
 	padding-top: 33px;
+	padding-bottom: 12px;
 }
 
 .cart_tab,
 .cart_tab_spacer {
-	float: left;
+	display: inline-block;
+	vertical-align: middle;
 	color: #c6d4df;
 	font-size: 14px;
 	cursor: default;
@@ -552,31 +578,29 @@ body.v6.login .rightcol .spotlight_block {
 }
 
 #checkout_steam_logo {
-	position: absolute;
-	right: 0px;
-	top: 30px;
+	float: right;
+	right: 0;
+	padding-top: 30px;
 	width: 176px;
 	height: 44px;
+}
+
+#checkout_steam_logo img {
+	width: 100%;
 }
 
 
 /* checkout styles */
 
-.checkout_main input[type="text"], .checkout_main input[type="password"], .checkout_main select {
-	width: 212px;
-	padding: 2px 4px 3px 4px;
-}
-
-.checkout_main input[type="text"], .checkout_main input[type="password"] {
-	height: 18px;
-}
-
-.checkout_main textarea {
-	padding: 2px 4px 3px 4px;
+.checkout_main input[type="text"],
+.checkout_main input[type="password"],
+.checkout_main select {
+	width: 210px;
+	padding: 5px;
 }
 
 .rightcol p {
-	padding:5px 0px 5px 2px;
+	margin: 5px 0;
 	font-size: 13px;
 }
 
@@ -751,7 +775,7 @@ body.v6.login .rightcol .spotlight_block {
 }
 
 .cart_item_price.with_discount {
-	top: 15px;
+	padding-top: 15px;
 }
 
 .cart_item_price .price {
@@ -1047,7 +1071,7 @@ label.send_choice_txt {
 }
 
 #friends_chooser {
-	width: 560px;
+	max-width: 560px;
 	height: 189px;
 	border: 1px solid #4d4b49;
 	overflow: auto;
@@ -1192,7 +1216,6 @@ label.send_choice_txt {
 #what_is_this
 {
 	padding-left: 5px;
-	padding-right: 89px;
 	text-align: left;
 	padding-top:5px;
 }
@@ -1228,7 +1251,7 @@ label.send_choice_txt {
 	clear: both;
 }
 
-.checkout_tab .form_row_sizable, .checkout_tab .form_row#payment_row_save_my_address {
+.checkout_tab .form_row#payment_row_save_my_address {
 	margin-top: 50px;
 }
 
@@ -1265,7 +1288,6 @@ label.send_choice_txt {
 .checkout_tab .form_right label, .checkout_tab .form_left label, .checkout_tab .form_row_sizable label, .checkout_tab .form_row label
 {
 	display: block;
-	width: 292px;
 	text-align: left;
 	margin-bottom: 2px;
 	font-size: 12px;
@@ -1273,7 +1295,6 @@ label.send_choice_txt {
 
 #payment_info_method_label
 {
-	width: 584px;
 }
 
 #first_name_label
@@ -1334,10 +1355,10 @@ label.send_choice_txt {
 	clear: none;
 	display: block;
 	font-size: 12px;
-	width: 100%;
 	padding-left: 12px;
 	margin-left: 12px;
 	line-height: 12px;
+	overflow: hidden;
 }
 
 
@@ -1350,7 +1371,7 @@ label.send_choice_txt {
 
 #verify_country_notes
 {
-	float: left;
+	overflow: hidden;
 	padding-left: 4px;
 }
 
@@ -1377,7 +1398,7 @@ label.send_choice_txt {
 #stored_card_processing_label
 {
 	font-weight: bold;
-	margin-left: 180px;
+	text-align: center;
 	margin-top: 30px;
 }
 
@@ -1439,8 +1460,7 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 
 /* DSelect */
 .checkout_main .dselect_container {
-	width: 212px;
-	margin-top: 3px;
+	width: 222px;
 	padding: 0;
 	display: inline-block;
 }
@@ -1455,10 +1475,11 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 	background-color: #67c1f5; /* Old browsers */
 background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b), color-stop(95%,#67c1f5));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#417a9b', endColorstr='#67c1f5',GradientType=1 );background: -moz-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -o-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: -ms-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););}
 
-.checkout_main .dselect_container a, .checkout_main .dselect_container a:hover, .checkout_main .dselect_container a:active, .checkout_main .dselect_container a:visited
+.checkout_main .dselect_container a,
+.checkout_main .dselect_container a:hover,
+.checkout_main .dselect_container a:active,
+.checkout_main .dselect_container a:visited
 {
-	font-size: 12px;
-	line-height: 22px;
 	text-decoration: none;
 	font-weight: normal;
 }
@@ -1852,6 +1873,15 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 .checkout_gotsteam_area a.btn_blue:hover {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,rgba(102,192,244,1)), color-stop(95%,rgba(47,137,188,1)));background: -moz-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -o-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: -ms-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);}
 
+body.checkout .block .block_header {
+	padding: 0 12px;
+	line-height: 32px;
+}
+
+body.checkout .block .block_content {
+	padding: 12px;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .continue_shopping_ctn {
@@ -1863,19 +1893,97 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#417a9b)
 		width: 308px;
 		margin: 0 auto;
 	}
+
+	html.responsive body.checkout .leftcol,
+	html.responsive body.checkout .rightcol {
+		max-width: 616px;
+		margin: 0 auto;
+	}
+
+	html.responsive .checkout_tab .form_right {
+		max-width: 45%;
+	}
+
+	html.responsive .checkout_tab .form_right label,
+	html.responsive .checkout_tab .form_left label,
+	html.responsive .checkout_tab .form_row_sizable label,
+	html.responsive .checkout_tab .form_row label {
+		font-size: 15px;
+		line-height: 24px;
+	}
 }
+
+@media screen and (max-width: 600px)
+{
+	html.responsive #checkout_steam_logo {
+		float: none;
+		padding-top: 8px;
+		margin: 0 auto;
+	}
+
+	html.responsive #checkout_pipeline,
+	html.responsive #receipt_pipeline {
+		padding-top: 8px;
+	}
+
+	/* compress the pipeline a little too */
+	html.responsive .cart_tab_on,
+	html.responsive .cart_tab_off,
+	html.responsive .cart_tab_inactive {
+		padding: 7px;
+	}
+
+	html.responsive .cart_tab_spacer {
+		margin: 10px 4px;
+	}
+
+	/* this is the down arrow - looks weird if the pipeline wraps, so just rely on the other highlighting */
+	html.responsive .cart_tab_left_on {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 540px)
+{
+	html.responsive .checkout_tab .form_left,
+	html.responsive .checkout_tab .form_right {
+		float: none;
+		width: auto;
+		max-width: none;
+	}
+
+	html.responsive .checkout_tab .form_right {
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .dropcontainer ul {
+		font-size: 16px;
+		line-height: 28px;
+	}
+
+}
+	html.responsive.touch .dropcontainer ul {
+		font-size: 16px;
+		line-height: 28px;
+	}
 
 @media screen and (max-width: 480px)
 {
-	html.responsive .cart_item_desc {
+	html.responsive .cart_item_desc,
+	html.responsive .checkout_review_item_desc {
 		padding-top: 16px;
 	}
 
-	html.responsive .cart_item_desc .cart_item_platform {
+	html.responsive .cart_item_desc .cart_item_platform,
+	html.responsive .checkout_review_item_desc .checkout_review_item_platform {
 		float: none;
 	}
 
-	html.responsive .cart_item_img {
+	html.responsive .cart_item_img,
+	html.responsive .checkout_review_item_img {
 		max-width: 30%;
 	}
 }

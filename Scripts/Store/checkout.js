@@ -41,6 +41,11 @@ function OnLoadCheckoutForm()
 			}
 }
 
+function ScrollCheckoutFormIntoView()
+{
+	ScrollToIfNotInView( $J('.checkout_main'), null, 20 );
+}
+
 function OpenUrlInNewBlankWindow( newURL )
 {
 	return window.open( newURL, "_blank" );
@@ -721,11 +726,8 @@ function OnInitializeTransactionSuccess( result )
 		{
 									
 						$J('#payment_row_one').hide();
-			$J('#payment_row_two').hide();
-			$J('#payment_row_three').hide();
-			$J('#payment_row_four').hide();
-			$J('#payment_row_five').hide();
-			$J('#payment_row_six').hide();
+
+			$J('#payment_row_address, #payment_header_title' ).hide();
 			$J('#payment_header_title').hide();
 			$J('#payment_row_save_my_address').hide();
 			$J('#payment_row_country_verification').hide();
@@ -747,7 +749,7 @@ function OnInitializeTransactionSuccess( result )
 			return;
 		}
 		else if ( ( result.paymentmethod == 4 && method.value != 'storedpaypal' ) || result.paymentmethod == 3 
-					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11					|| result.paymentmethod == 12 
+					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11 || result.paymentmethod == 78					|| result.paymentmethod == 12 
 					|| result.paymentmethod == 14 
 					|| result.paymentmethod == 33 
 					|| result.paymentmethod == 17 
@@ -1184,6 +1186,16 @@ function OnGetFinalPriceSuccess( result )
 					{
 						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for AliPay customers';
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the AliPay website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the AliPay window before the process is complete.';
+					}
+				}
+				else if ( method.value == 'unionpay' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'UnionPay transactions are authorized through the UnionPay website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to UnionPay';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for UnionPay customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the UnionPay website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the UnionPay window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'yandex' )
@@ -2284,6 +2296,7 @@ function ShowFirstPaymentStep()
 	g_bUseRemainingSteamAccount = false;
 	
 	UpdatePaymentInfoForm();
+	ScrollCheckoutFormIntoView();
 }
 
 function ShowNextPaymentMethod()
@@ -2323,6 +2336,7 @@ function ShowNextPaymentMethod()
 	}
 	
 	UpdatePaymentInfoForm();
+	ScrollCheckoutFormIntoView();
 }
 
 function OnSteamAccountSelected()
@@ -2520,7 +2534,8 @@ function UpdatePaymentInfoForm()
 			bShowBankAccountForm = true;
 		}
 		else if ( method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
-			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
+			|| method.value == 'alipay' || method.value == 'unionpay' || method.value == 'yandex'
+			|| method.value == 'boacompragold' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil'
 			|| method.value == 'multibanco' || method.value == 'payshop' || method.value == 'maestroboacompra'
 			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'carnet'
@@ -2624,14 +2639,12 @@ function UpdatePaymentInfoForm()
 			$('security_code_section' ).hide();
 			$('expiration_date_cvv_label').innerHTML = 'Expiration date';
 		}
-		
-		var strAddressDisplay = bShowAddressForm ? 'block' : 'none';
-		$('payment_row_two').style.display = strAddressDisplay;
-		$('payment_row_three').style.display = strAddressDisplay;
-		$('payment_row_four').style.display = strAddressDisplay;
-		$('payment_row_five').style.display = strAddressDisplay;
-		$('payment_row_six').style.display = strAddressDisplay;
-		$('payment_header_title').style.display = strAddressDisplay;
+
+		var $AddressFields = $J('#payment_row_address, #payment_header_title');
+		if ( bShowAddressForm )
+			$AddressFields.show();
+		else
+			$AddressFields.hide();
 
 		var strSaveMyAddressDisplay = bShowSaveMyAddress ? 'block' : 'none';
 		$('payment_row_save_my_address').style.display = strSaveMyAddressDisplay;
@@ -3072,7 +3085,7 @@ function SubmitPaymentInfoForm()
 		}
 		
 		if ( method.value == 'giropay' || method.value == 'ideal' || method.value == 'paysafe' || method.value == 'sofort' || method.value == 'webmoney' || method.value == 'moneybookers'
-			|| method.value == 'alipay' || method.value == 'yandex' || method.value == 'mopay' || method.value == 'boleto' || method.value == 'boacompragold'
+			|| method.value == 'alipay' || method.value == 'unionpay' || method.value == 'yandex' || method.value == 'mopay' || method.value == 'boleto' || method.value == 'boacompragold'
  		  || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'pagseguro' || method.value == 'visabrazil'
 			|| method.value == 'amexbrazil' || method.value == 'aura' || method.value == 'hipercard' || method.value == 'mastercardbrazil' || method.value == 'dinerscardbrazil' 
 			|| method.value == 'multibanco' || method.value == 'payshop' || method.value == 'maestroboacompra'
@@ -4021,6 +4034,9 @@ function SetTabEnabled( tab_name, bResetTab )
 				}
 			}
 		}
+
+		// scroll back to the top (mostly for mobile devices)
+		ScrollToIfNotInView( $J('.checkout_main'), null, 20 );
 		
 				$('error_display').innerHTML = '';
 		$('error_display').style.display = 'none';
@@ -4193,6 +4209,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 				case 75:
 				case 76:
 				case 77:
+				case 78:
 				default:
 				{
 					switch ( eErrorDetail )

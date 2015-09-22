@@ -18,6 +18,7 @@
 	height: 944px;
 }
 
+
 .blotter_userstatus_content
 {
 	flow-children: down;
@@ -130,11 +131,15 @@ Button:focus .dynamiclink_box Label
 #FriendActivity #ContentRow
 {
 	height: 100%;
-	width: 100%;
+	width: 2000px;
 	overflow: clip;
 	flow-children: right;
-	transform: translatey( 40px );
 	box-shadow: none;
+}
+
+.ContentPanel #ContentRow
+{
+	padding-bottom: 0px;
 }
 
 #FriendActivity.OldProfile #ContentRow
@@ -144,7 +149,7 @@ Button:focus .dynamiclink_box Label
 
 #LeftActivityColumn
 {
-	width: 47%;
+	width: 800px;
 	height: 720px;
 	overflow: squish scroll;
 
@@ -159,14 +164,14 @@ Button:focus .dynamiclink_box Label
 .ContentPanel #LeftActivityColumn,
 .ContentPanel #RightDetailsColumn
 {
-	height: 850px;
+	height: 900px;
 }
 
 #RightDetailsColumn
 {
 	margin-left: 10px;
 	margin-right: 0px;
-	width: 1360px;
+	width: 2000px;
 	height: 800px;
 	overflow: squish scroll;
 
@@ -190,7 +195,7 @@ Button:focus .dynamiclink_box Label
 #RightDetailsColumn:descendantfocus {
 	transform: translateX( -400px );
 	/* background-color: gradient( linear, 0% 100%, 100% 100%, from( #073247ff ), color-stop( 0.5, #073247ff ), to( #07324700 ) ); */
-	background-color: gradient( linear, 0% 100%, 100% 100%, from( #073247ff ), to( #07324700 ) );
+	background-color: #073247;
 	box-shadow: fill #000000bb 0px 0px 20px 0px;
 }
 
@@ -198,19 +203,20 @@ Button:focus .dynamiclink_box Label
 {
 	margin-right: 10px;
 }
+#RightDetailsColumn .blotter_userstatus {
+	padding-top: 20px;
+	padding-left: 10px;
+}
 
 .blotter_block
 {
 	width: 100%;
 
-	margin-left: 10px;
 	margin-right: 10px;
 
-	padding-top: 14px;
-	padding-bottom: 14px;
+	padding: 14px;
 
-	padding-left: 4px;
-	padding-right: 8px;
+	background-color: transparent_module;
 
 	color: #FFFFFF99;
 
@@ -218,8 +224,12 @@ Button:focus .dynamiclink_box Label
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
 }
+.blotter_block .blotter_screenshot,
+.blotter_block .blotter_videopublished {
+	height: 70px;
+}
 
-.blotter_block.current_selection
+.ContentAreaFocus .blotter_block.current_selection
 {
 	background-color: gradient( linear, 0.0% 0.0%, 0.0% 100.0%, color-stop( 0.0, #4B7696AA ), color-stop( 1.0, #365B7866 ) );
 }
@@ -229,7 +239,8 @@ Button:focus .dynamiclink_box Label
 	transform: translateX( 7px );
 }
 
-.blotter_block:focus
+.blotter_block:focus,
+.ContentAreaFocus .blotter_block:focus
 {
 	color: #161718f5;
 
@@ -340,7 +351,7 @@ Panel.playerAvatar.ingame, .playerAvatar.in-game
 {
 	height: 4px;
 	width: 99%;
-	background-color: rule_color;
+
 }
 
 .blotter_block_divider
@@ -397,6 +408,11 @@ Button:focus .blotter_author_block Label.personaname.in-game
 	font-weight: thin;
 }
 
+.blotter_poststatus_container
+{
+	flow-children: down;
+}
+
 Button#blotter_post_status
 {
 	margin-top: 6px;
@@ -407,8 +423,11 @@ Button#blotter_post_status
 {
 	flow-children: right;
 }
-.blotter_poststatus #poststatus_hint {
-	horizontal-align: right;
+
+.blotter_poststatus #PlaceholderText
+{
+	margin-top: 0px;
+	margin-left: 0px;
 	color: #61696d;
 }
 
@@ -436,7 +455,7 @@ Button#blotter_post_status
 .blotter_poststatus TextEntry:descendantfocus
 {
 	border-color: #fdfefef0;
-	}
+}
 
 
 .blotter_poststatus Label
@@ -450,23 +469,6 @@ Button#blotter_post_status
 	transition-property: opacity, color;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
-}
-
-.blotter_poststatus TextEntry Label
-{
-	margin-top: 0px;
-	margin-left: 0px;
-
-}
-
-.blotter_poststatus TextEntry:focus Label
-{
-	color: applabelselectedsolid;
-}
-
-.blotter_poststatus TextEntry.HasInput Label
-{
-	opacity: 0.0;
 }
 
 .post_status_row
@@ -902,6 +904,11 @@ Label.blotter_group_announcement_header_contents
 	visibility: collapse;
 }
 
+.blotter_container
+{
+	width: 100%;
+}
+
 .blotter_control_container
 {
 	margin-left: 16px;
@@ -936,6 +943,11 @@ Label.blotter_group_announcement_header_contents
 	max-height: 80px;
 }
 
+.blotter_viewallcomments_container
+{
+	width: 100%;
+}
+
 .blotter_viewallcomments_container Label
 {
 	font-size: 23px;
@@ -945,6 +957,7 @@ Label.blotter_group_announcement_header_contents
 .blotter_comment_thread
 {
 	flow-children: down;
+	width: 100%;
 }
 
 .blotter_comment_thread .commentthread_comment_text
@@ -1112,8 +1125,17 @@ Button:descendantfocus .blotter_control_container
 	animation-direction: normal;
 }
 
-#ThrobberContainer {
-	width: 100%;
+#ThrobberContainer
+{
+	opacity: 0.0;
+	horizontal-align: center;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+}
+
+.ContentAreaFocus #ThrobberContainer
+{
+	opacity: 1.0;
 }
 
 LoadingThrobber.HorizontallyCenteredThrobber {

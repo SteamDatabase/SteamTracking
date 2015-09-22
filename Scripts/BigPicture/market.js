@@ -63,7 +63,7 @@ function SelectGrid( s )
 	if ( selected.id == "ItemGridSearch" )
 	{
 		selected.ScrollPanelToLeftEdge();
-		GridChildIndexSelected( selected.id, 0 );
+		GridChildIndexSelected( selected, 0 );
 		$("#MarketContentPanel").defaultfocus = "";
 		HideThrobber();
 		$("#MarketSearchPanel").enabled = true;
@@ -968,8 +968,9 @@ function OpenMarketSearch()
 
 }
 
-function GridChildIndexSelected( strGrid, iChild )
+function GridChildIndexSelected( oGrid, iChild )
 {
+	oGrid = ToPanel( oGrid );
 	if ( g_CurrentTab == "#MarketMyHistory" )
 	{
 		// Load more entries if we're approaching the end
@@ -1000,7 +1001,7 @@ function GridChildIndexSelected( strGrid, iChild )
 			$("#MarketContentPanel").RemoveClass("SearchVisible");
 		}
 	}
-	var oGrid = $( '#' + strGrid );
+
 	if ( oGrid.GetChildCount() > 0 )
 	{
 		$("#MarketContentPanel").defaultfocus = oGrid.GetChild(iChild).id;
@@ -1025,9 +1026,10 @@ function DisplayPopup( id, url )
 	$.TenfootController( $.GetContextPanel() ).ShowModalDialog( popup, '' );
 	popup.SetFocus();
 
-	$.RegisterEventHandler( 'LoadAsyncComplete', popup, function( panelid, bSuccess, eDetail, bPartial )
+	$.RegisterEventHandler( 'LoadAsyncComplete', popup, function( pTarget, bSuccess, eDetail, bPartial )
 	{
-		if ( panelid != popup.id )
+		pTarget = ToPanel( pTarget );
+		if ( pTarget.id != popup.id )
 		{
 			return;
 		}
@@ -1138,9 +1140,9 @@ function ClearSearchOptions()
 	$("#MarketSearchPanel").RemoveClass( "SearchOptions" );
 }
 
-function OnSearchButtonActivated( id )
+function OnSearchButtonActivated( button )
 {
-	var button = $("#" + id );
+	button = ToPanel( button );
 	button.checked = !button.checked;
 }
 

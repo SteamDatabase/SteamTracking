@@ -4,6 +4,7 @@
 {
 	flow-children: down;
 	width: 100%;
+	height: 100%;
 }
 
 .commentthread_comment_container
@@ -204,6 +205,8 @@ Button:focus .commentthread_comment_text
 .comment_form
 {
 	padding-bottom: 12px;
+	height: 200px;
+	width: 100%;
 }
 
 .commentthread_entry
@@ -211,6 +214,7 @@ Button:focus .commentthread_comment_text
 	margin-top: 20px;
 	margin-left: 5px;
 	flow-children: right;
+	width: 100%;
 }
 
 .commentthread_entry_quotebox
@@ -331,4 +335,15 @@ Panel Panel.commentthread_user_avatar
 {
 	vertical-align: center;
 	horizontal-align: center;
+}
+
+
+.comment_container_region
+{
+	width: 100%;
+}
+
+.comment_region
+{
+	width: 100%;
 }

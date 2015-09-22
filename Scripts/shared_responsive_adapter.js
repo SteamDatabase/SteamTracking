@@ -20,8 +20,6 @@ jQuery( function($) {
 	var $ContentCtn = $('.responsive_page_content' );
 	var $ContentOverlay = $('.responsive_page_content_overlay');
 
-	var $SupernavElements = $('.responsive_page_menu' ).find( '.supernav');
-
 	var fnResetMenuState = function() {
 		$Frame.removeClass( 'mainmenu_active');
 		$Frame.removeClass('localmenu_active');
@@ -77,25 +75,7 @@ jQuery( function($) {
 		});
 	};
 
-	$SupernavElements.each( function() {
-		var $Element = $(this);
-		$Element.attr('href','');
-		var strSubmenuSelector = $Element.data('tooltip-content');
-		var $Submenu = $Element.parent().find(strSubmenuSelector);
-		if ( $Submenu.length )
-		{
-			fnMakeExpandableMenuItem( $Element, $Submenu );
-		}
-	});
-
-	var $NotificationItem = $Menu.find( '.notifications_item' );
-	var $NotificationSubmenu = $Menu.find('.notification_submenu');
-	if ( $NotificationItem.length && $NotificationSubmenu.length )
-	{
-		fnMakeExpandableMenuItem( $NotificationItem, $NotificationSubmenu );
-	}
-
-	var fnBuildMenuEvents = function( $Menu, strMenuName )
+	var fnBuildMenuEvents = function( $Menu, strMenuName, fnFirstTimeInitialization )
 	{
 		var strActiveClass = strMenuName + '_active';
 		var fnDismissMenu = function() {
@@ -111,7 +91,14 @@ jQuery( function($) {
 			}, 500 );
 		};
 
+		var bInitialized = false;
 		var fnActivateMenu = function() {
+			if ( !bInitialized )
+			{
+				fnFirstTimeInitialization && fnFirstTimeInitialization();
+				bInitialized = true;
+			}
+
 			if ( $Frame.hasClass( strActiveClass ) )
 			{
 				fnDismissMenu();
@@ -130,9 +117,29 @@ jQuery( function($) {
 		return { fnActivateMenu: fnActivateMenu, fnDismissMenu: fnDismissMenu };
 	};
 
-	var MainMenuEvents = fnBuildMenuEvents( $Menu, 'mainmenu' );
+	var fnInitMainMenu = function() {
+		$('.responsive_page_menu' ).find( '.supernav').each( function() {
+			var $Element = $(this);
+			$Element.attr('href','');
+			var strSubmenuSelector = $Element.data('tooltip-content');
+			var $Submenu = $Element.parent().find(strSubmenuSelector);
+			if ( $Submenu.length )
+			{
+				fnMakeExpandableMenuItem( $Element, $Submenu );
+			}
+		});
 
-	Responsive_BuildChangeLanguageOption( $Menu.find( '.change_language_action' ) );
+		var $NotificationItem = $Menu.find( '.notifications_item' );
+		var $NotificationSubmenu = $Menu.find('.notification_submenu');
+		if ( $NotificationItem.length && $NotificationSubmenu.length )
+		{
+			fnMakeExpandableMenuItem( $NotificationItem, $NotificationSubmenu );
+		}
+		Responsive_BuildChangeLanguageOption( $Menu.find( '.change_language_action' ) );
+	};
+
+	var MainMenuEvents = fnBuildMenuEvents( $Menu, 'mainmenu', fnInitMainMenu );
+
 
 	$('#responsive_menu_logo' ).click( function( e ) {
 		MainMenuEvents.fnActivateMenu();
@@ -148,15 +155,21 @@ jQuery( function($) {
 	{
 		var bLocalMenuEnabed = false;
 		var rgMenuContents = [];
-		for ( var i = 0; i < $LocalMenuContent.length; i++ )
-		{
-			var $LocalMenuElement = $($LocalMenuContent[i] ).wrap( '<div/>' );
-			var $LocalMenuWrapper = $($LocalMenuContent[i]).parent();
-			rgMenuContents.push( {
-				wrapper: $LocalMenuWrapper,
-				content: $LocalMenuElement
-			});
-		}
+
+		var fnInitLocalMenu = function() {
+			if ( rgMenuContents.length )
+				return;
+
+			for ( var i = 0; i < $LocalMenuContent.length; i++ )
+			{
+				var $LocalMenuElement = $($LocalMenuContent[i] ).wrap( '<div/>' );
+				var $LocalMenuWrapper = $($LocalMenuContent[i]).parent();
+				rgMenuContents.push( {
+					wrapper: $LocalMenuWrapper,
+					content: $LocalMenuElement
+				});
+			}
+		};
 
 		$LocalMenu = $J('#responsive_page_local_menu');
 		var $Affordance = $J('.responsive_local_menu_tab');
@@ -167,13 +180,14 @@ jQuery( function($) {
 			LocalMenuEvents.fnActivateMenu();
 		});
 
-		$(window ).on( 'resize.ReponsiveLocalMenu', function() {
+		$(window ).on( 'Responsive_SmallScreenModeToggled.ReponsiveLocalMenu', function() {
 			var bShouldUseResponsiveMenu = UseSmallScreenMode();
 			if ( bLocalMenuEnabed != bShouldUseResponsiveMenu )
 			{
 				if ( bShouldUseResponsiveMenu )
 				{
 					$Affordance.show();
+					fnInitLocalMenu();
 					$LocalMenu.find('.localmenu_content' ).append( $LocalMenuContent );
 				}
 				else
@@ -187,7 +201,7 @@ jQuery( function($) {
 				}
 				bLocalMenuEnabed = bShouldUseResponsiveMenu;
 			}
-		} ).trigger( 'resize');
+		} ).trigger( 'Responsive_SmallScreenModeToggled.ReponsiveLocalMenu');
 	}
 
 	$('#responsive_beta_logo' ).click( function() {

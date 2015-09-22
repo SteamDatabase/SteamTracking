@@ -3,6 +3,19 @@
 {
 	width: 100%;
 	height: 100%;
+
+	transition-property: opacity, transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+
+	transform: translatey( 0px );
+}
+
+#InventoryContent
+{
+	width: 100%;
+	height: 100%;
 }
 
 #InventoryBody
@@ -12,13 +25,6 @@
 	width: 100%;
 	height: 100%;
 
-	transition-property: opacity, transform;
-	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0.0s;
-
-	transform: translatey( 0px );
-
     background-image: url( "file://{images}/profile/activity_bg_wash.png" );
     background-size: 100% 100%;
     box-shadow: #000000aa -2px -2px 4px 4px;
@@ -27,7 +33,14 @@
 .NX #InventoryBody
 {
 	padding-top: 40px;
+	flow-children: right;
 }
+
+.ContentAreaFocus .NxRightColumn
+{
+	transform: translatex( -200px );
+}
+
 
 #InventoryHeading
 {
@@ -49,7 +62,7 @@
 	transform: none;
 }
 
-.ItemDetailView #InventoryBody
+.ItemDetailView .InventoryListingWrapper
 {
 	transform: translatey( 1080px );
 	opacity: 0.0;
@@ -203,11 +216,10 @@
 
 }
 
-#SearchRegion .FilterHeader
+#SearchRegion .DropDownHeader
 {
 	font-size: 24;
-	color: tcstatictext;
-	margin-bottom: 3px;
+	color: #67c1f5;
 }
 
 #SearchRegion DropDown
@@ -257,16 +269,31 @@ DropDownMenu .FilterOption Label:focus
 	color: applabelselected;
 }
 
+.ContextDropdownWrapper
+{
+	visibility: collapse;
+	margin-bottom: 20px;
+}
+
+.NxFilterTab:descendantfocus .ContextDropdownWrapper
+{
+	margin-bottom: 36px;
+}
+
+.ContextDropdownWrapper.Visible
+{
+	visibility: visible;
+}
+
 #ContextDropdown
 {
 	visibility: collapse;
 	opacity: 0.0;
 	width: 100%;
-	margin-bottom: 36px; 
 	vertical-align: top;
 }
 
-#ContextDropdown.Visible
+.ContextDropdownWrapper.Visible #ContextDropdown
 {
 	transition-property: opacity;
 	transition-duration: mediumduration;
@@ -277,12 +304,17 @@ DropDownMenu .FilterOption Label:focus
 	opacity: 1.0;
 }
 
-#SearchWrapper
+.EconomySearchWrapper
 {
 	width: 100%;
 	font-size: 24px;
-	color: applabelsolid;
+	color: #67c1f5;
 	margin-bottom: 20px;
+}
+
+.NxFilterTab:descendantfocus .EconomySearchWrapper
+{
+	 color: applabelsolid;
 }
 
 #SearchLabel
@@ -316,20 +348,15 @@ DropDownMenu .FilterOption Label:focus
 #ItemGrid
 {
 	margin-top: -24px;
-	margin-bottom: 120px;
+	margin-bottom: 100px;
 	margin-left: -110px;
 
-	width: 106%;
+	width: fill-parent-flow( 1.0 );
 	height: 100%;
 
 	overflow: noclip squish;
 
-	padding: 80px 330px 40px 104px;
-
-	transition-property: opacity, transform;
-	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0.0s;
+	padding: 80px 370px 30px 104px;
 }
 
 .FastMotion #ItemGrid
@@ -339,8 +366,8 @@ DropDownMenu .FilterOption Label:focus
 
 .SearchVisible #ItemGrid
 {
-	transform: translatex( 388px );
-	margin-left: -68px;
+//	transform: translatex( 388px );
+//	margin-left: -68px;
 }
 
 #FastScrollWrapper
@@ -706,13 +733,16 @@ DropDownMenu .FilterOption Label:focus
 
 #ThrobberPanel
 {
-	transform: translate3d( 1000px, 200px, 0px );
 	opacity: 0.0;
+	transition-property: opacity;
+	transition-delay: 0.25s;
+	transition-duration: shortduration;
 }
 
 #ThrobberPanel LoadingThrobber
 {
-	margin-top: 0px;
+	align: center center;
+	transform: translatey( -100px );
 }
 
 .InventoryLoading #ThrobberPanel
@@ -730,9 +760,11 @@ DropDownMenu .FilterOption Label:focus
 .RightMouseScrollRegion
 {
 	opacity: 0.0;
-	width: 80px;
-	height: 100%;
+	height: 80px;
+	width: 100%;
 	z-index: 200;
+
+	transform: translatex( -110px );
 
 	transition-property: opacity, background-color;
 	transition-duration: mediumduration;
@@ -747,20 +779,20 @@ DropDownMenu .FilterOption Label:focus
 Carousel:descendantfocus .LeftMouseScrollRegion,
 Grid:descendantfocus .LeftMouseScrollRegion
 {
-	background-image: url( "file://{images}/mouse/arrowLdefault.tga" );
-	
-	background-color: mouse_off_bg_left;
+	background-image: url( "file://{images}/mouse/arrowUdefault.tga" );
+	align: center top;
+	background-color: mouse_off_bg_up;
 	opacity: 0.0;
 }
 
 Carousel:descendantfocus .RightMouseScrollRegion,
 Grid:descendantfocus .RightMouseScrollRegion
 {
-	align: right center;
+	align: center bottom;
 	
-	background-image: url( "file://{images}/mouse/arrowRdefault.tga" );
+	background-image: url( "file://{images}/mouse/arrowDdefault.tga" );
 
-	background-color: mouse_active_bg_right;
+	background-color: mouse_active_bg_bottom;
 	opacity: 0.0;
 }
 
@@ -770,7 +802,7 @@ Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion,
 {
 	transition-delay: 0.0s;
 	opacity: 1.0;
-	background-color: mouse_hover_bg_left;
+	background-color: mouse_hover_bg_up;
 }
 
 Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion,
@@ -778,54 +810,45 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion
 {
 	transition-delay: 0.0s;
 	opacity: 1.0;
-	background-color: mouse_hover_bg_right;
+	background-color: mouse_hover_bg_bottom;
 }
 
 Carousel.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover,
 Grid.CursorVisible:descendantfocus:hover .LeftMouseScrollRegion:hover
 {
 	transition-delay: 0.0s;
-	background-color: mouse_active_bg_left;
+	background-color: mouse_active_bg_up;
 }
 
 Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover,
 Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover
 {
 	transition-delay: 0.0s;
-	background-color: mouse_active_bg_right;
+	background-color: mouse_active_bg_bottom;
 }
 
 Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active,
 Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover  .LeftMouseScrollRegion:active
 {
-	background-color: mouse_active_bg_left;
+	background-color: mouse_active_bg_up;
 }
 
 Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Carousel.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active,
 Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:active
 {
-	background-color: mouse_active_bg_right;
+	background-color: mouse_active_bg_bottom;
 
 }
 
 .LeftMouseScrollRegion
 {
-	background-color: mouse_active_bg_left;
-	position: 0px -10px 0px;
+	background-color: mouse_active_bg_up;
 }
 
 .RightMouseScrollRegion
 {
-	background-color: mouse_active_bg_right;
-	horizontal-align: right;
-	position: -110px -10px 0px;
+	background-color: mouse_active_bg_bottom;
 }
-
-.SearchVisible #ItemGrid .RightMouseScrollRegion
-{
-	position: -544px -10px 0px;
-}
-
 
 #AppCarousel .LeftMouseScrollRegion
 {
@@ -840,3 +863,87 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 TextEntry {
 	font-size: 24px;
 }
+
+.NxFilterTab .EconomyTagFilters DropDown
+{
+	margin-bottom: 0px;
+}
+
+.NxFilterTab:descendantfocus .EconomyTagFilters DropDown
+{
+	margin-bottom: 16px;
+}
+
+.NxFilterTab .EconomySearchWrapper
+{
+	margin: 0px;
+}
+
+.NxFilterTab:descendantfocus .EconomySearchWrapper
+{
+	margin-bottom: 20px;
+}
+
+.DropDownHeader
+{
+	margin: 0px;
+}
+
+.NxFilterTab:descendantfocus .DropDownHeader
+{
+	margin-bottom: 3px;
+}
+
+#SearchRegion
+{
+	padding-left: 10px;
+}
+
+#SearchRegion .FilterHeader
+{
+	margin-left: 0px;
+}
+
+.DropDownWrapper
+{
+	flow-children: down;
+	width: 100%;
+	height: 0px;
+}
+
+.NxFilterTab:descendantfocus .DropDownWrapper
+{
+	 height: fit-children;
+}
+
+.EconomySearchWrapper
+{
+	height: 0px;
+}
+
+.NxFilterTab:descendantfocus .EconomySearchWrapper
+{
+	height: fit-children;
+}
+
+.NxFilterTab TextEntry
+{
+	border-color: transparent;
+	background-color: transparent;
+	color: #67c1f5;
+}
+
+.NxFilterTab:descendantfocus TextEntry
+{
+	border-color: #385671f0;
+	background-color: #203e59;
+	color: applabelsolid;
+}
+
+.NxFilterTab:descendantfocus TextEntry:focus
+{
+	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	color: applabelselectedsolid;
+}
+
+
