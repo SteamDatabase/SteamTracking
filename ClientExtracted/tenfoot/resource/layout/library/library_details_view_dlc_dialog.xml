@@ -8,7 +8,7 @@
 	<ManageDLCDialog class="TenfootMsgBox" defaultfocus="ControllerLargeBody" >
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
 			<Label class="StdTitle" text="#Library_Details_Manage_DLC" />
-			<Panel id="DLCItems" selectionposboundary="vertical" childfocusonhover="true" />
+			<Panel id="DLCItems" selectionposboundary="vertical" childfocusonhover="true" overscroll-y="120" />
 
 			<Panel id="MsgBoxButtons">
 				<Button id="ButtonCancel" class="Button" onactivate="ButtonCancel()">

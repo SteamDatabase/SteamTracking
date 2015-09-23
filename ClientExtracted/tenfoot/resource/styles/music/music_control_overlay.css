@@ -41,7 +41,6 @@ MusicControlOverlay
 	flow-children: down;
 	background-color: action_module;
 	padding-top: 30px;
-	margin: 10px 10px 10px 10px;
 }
 
 .MusicControlOverlay .NowPlayingHeader,
@@ -80,7 +79,7 @@ MusicControlOverlay
 
 .MusicControlOverlay .NoMusicSelected
 {
-	font-size: 18px;
+	font-size: 28px;
 	horizontal-align: center;
 	vertical-align: center;
 }

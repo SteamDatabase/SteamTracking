@@ -577,7 +577,6 @@
  T _strlwr
  T _strupr
  T cIntToHexDigit(int)
- T dyld_stub_binding_helper
  T int SplitNumbers<CUtlVector<int, CUtlMemory<int> > >(char const*, char, CUtlVector<int, CUtlMemory<int> >&)
  T int SplitNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char const*, char, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
  T void Destruct<CUtlString>(CUtlString*)
@@ -598,6 +597,7 @@
  _DMsg
  _DefaultRuneLocale
  _Unwind_Resume
+ __bzero
  __cxa_atexit
  __cxa_begin_catch
  __cxa_guard_abort
@@ -642,7 +642,6 @@
  d Coroutine_Launch(CCoroutine&)::sThisFunctionHasParentFramePointer
  d GetOSType::eOSVersion
  d TestForAppleGraphicsUpdateInstalled()::attribs
- d dyld__mach_header
  d g_BasicHTMLEntities
  d g_FullHTMLEntities
  d g_WhitespaceEntities
@@ -654,9 +653,11 @@
  dlclose
  dlopen
  dlsym
+ dyld_stub_binder
  fclose
  fgetc
  fopen
+ fopen$UNIX2003
  free
  g_VProfManager
  g_VProfProfilesRunningCount
@@ -669,7 +670,6 @@
  memcmp
  memcpy
  memmove
- memset
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)

@@ -6,6 +6,8 @@
 	</styles>
 
 	<Friends defaultfocus="FriendsMainBodyFriendsList" oncancel="BringMainMenuToTop();">
+		<Panel id="MouseBackButton" onmouseactivate="PageShiftLeft(0);" />
+		<Panel id="ActualHomeButton" onmouseactivate="BringMainMenuToTop();" />
 		<Panel id="BodyWrapper">
 			<Panel id="FriendsMainBodyColumnsContainer">
 				<Panel id="FriendsMainBodyColumnLeft">

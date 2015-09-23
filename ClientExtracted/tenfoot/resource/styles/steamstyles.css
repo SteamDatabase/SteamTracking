@@ -16,6 +16,13 @@
 @define medfontsize: 28px;
 @define largefontsize: 32px;
 
+/* Transition timing */
+@define supershortduration: 0.15s;
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+
 /* Z layers */
 @define top_non_popup_zindex:      	9999999;
 @define contextmenu_zindex:       	10000100;
@@ -44,10 +51,12 @@
 @define tclegendlabel: gradient( linear, 0% 0%, 0% 100%, from( #878c8eff ), to( #abb0b2ff ) );
 @define tcstatictext: gradient( linear, 0% 0%, 100% 100%, from( #36b3d9ff ), to( #3a7ba6ff ) );
 @define legendbuttonborder: #878c8eff;
-@define detailsdatalabel: gradient( linear, 0% 0%, 100% 100%, from( #c6d4dfef ), to( #c6d4df88 ) );
+@define detailsdatalabel: gradient( linear, 0% 0%, 100% 100%, from( #c6d4dfff ), to( #c6d4dfCC ) );
 @define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #ffffffff ), to( #fefefeff ) );
 @define detailsdatalabelfocus2: gradient( linear, 80% 0%, 92% 0%, from( #000000ce ), to( #00000000 ) );
 @define moduledatalabel: gradient( linear, 0% 0%, 100% 100%, from( #67c1f5ff ), to( #67c1f5ff ) );
+@define medgray: #8f98a0;
+@define darkblue: #0b1c3b;
 
 /* Main menu colors */
 @define tcexitrow: gradient( linear, 0% 0%, 0% 100%, from( #808d91ff ), to( #9dadb3ff ) );
@@ -138,7 +147,7 @@
 
 @define mouse_off_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #1f445400 ), to( #0d1b2400 ) );
 @define mouse_hover_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #1f4454ff ), to( #0d1b2400 ) );
-@define mouse_active_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #1f4454ff ), to( #0d1b2400 ) );
+@define mouse_active_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #4a809eff ), to( #0d1b2400 ) );
 
 @define carousel_bg_color: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
 @define carousel_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
@@ -176,10 +185,13 @@
 @define slideshow_bg2: gradient( linear, 0% 0%, 0% 100%, from( #00000066 ), color-stop( 0.7, #00000066 ), to( #000000ff ) );
 @define slideshow_bg3: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop( 0.7, #00000000 ), to( #000000ff ) );
 @define all_games_hover: gradient( linear, 0% 0%, 100% 100%, from( #309ebf ), to( #0b224d ) );
-@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #205a7e ), to( #22648a ) );
+@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #64bdf1bb ), to( #238bbebb ) );
 @define state_panel: gradient( linear, 0% 0%, 100% 100%, from( #ffffff1A ), to( #ffffff1A ) );
-@define transparent_module: gradient( linear, 0% 0%, 100% 100%, from( #030a1a99 ), to( #00000099 ) );
+@define transparent_module: gradient( linear, 0% 0%, 100% 100%, from( #2e648099 ), to( #15406699 ) );
 @define transparent_module2: gradient( linear, 0% 0%, 0% 100%, from( #1b3a59aa ), to( #121b2edd ) );
+@define nontransparent_module: gradient( linear, 0% 0%, 100% 100%, from( #1e4861 ), to( #103250 ) );
+@define readonly_module: gradient( linear, 0% 0%, 100% 100%, color-stop( 0.0, #0d131799 ), color-stop( 1.0, #0d13171A ) );
+@define module_shadow: #00000055 0px 0px 10px 0px;
 
 //friends
 @define friendstab: #1b4059ff;
@@ -243,6 +255,11 @@
 @define daisy_petal_selection_color: #256180ff;
 @define daisy_petal_action_color: #256180ff;
 
+// game installed status
+@define readytoplaygreen: #A4D007;
+@define installedblue: #66c0f4;
+
+
 // ContextMenu - used in code -- dont rename
 @define ContextMenuFadoutTime: 0.2s; 
 
@@ -254,6 +271,9 @@
 
 // grid bumpers
 @define GridFocusBumperTimeout: 0.35s;
+
+@define PageTransitionTimeOff: 0.35s;
+@define PageTransitionTimeOn: 0.35s;
 
 
 DropDown
@@ -1259,8 +1279,6 @@ FriendsChatDialog .VoiceBarContainer
 	pre-transform-scale2d: 1.0;
 	border-color: white;
 	box-shadow: box_shadow_on_color -3px -3px 6px 6px;
-
-
 }
 
 
@@ -1283,23 +1301,6 @@ FriendsChatDialog .VoiceBarContainer
 // Home & Exit Button styles
 //
 
-#HomeButton
-{
-	z-index: 1000;
-	width: 300px;
-	height: 150px;
-	position: 0px 0px 0px;
-}
-
-.VR #HomeButton
-{
-	width: 400px;
-	width: 300px;
-	height: 150px;
-	transform: translateX( 1598px );
-	padding: 10px;
-}
-
 #ActualHomeButton,
 #MouseBackButton
 {
@@ -1316,10 +1317,13 @@ FriendsChatDialog .VoiceBarContainer
 	height: 67px;
 	position: 84px 17px 0px;
 
+	z-index: 1000;
+
 	transition-property: opacity, box-shadow, background-color, pre-transform-scale2d, wash-color, transform;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.23s;
 }
+
 
 .VR #ActualHomeButton,
 .VR #MouseBackButton
@@ -1363,6 +1367,24 @@ FriendsChatDialog .VoiceBarContainer
 	margin-top: 21px;
 }
 
+WebController #ActualHomeButton
+{
+	background-size: contain;
+	width: 54px;
+	height: 54px;
+
+	position: 84px 8px 0px;
+}
+
+WebController #MouseBackButton
+{
+	background-size: contain;
+	background-position: 0px 0px;
+	width: 37px;
+	height: 37px;
+	position: 24px 16px 0px;
+}
+
 
 .CursorVisible #ActualHomeButton,
 .CursorVisible #MouseBackButton
@@ -1380,55 +1402,6 @@ FriendsChatDialog .VoiceBarContainer
 	wash-color: #FFFFFFFF;
 }
 
-
-#HomeButton.ForceHidden
-{
-	opacity: 0.0;
-	transform: translatey( -250px );
-}
-
-
-.ExitButton
-{
-	opacity: 0.0;
-	
-	horizontal-align: right;
-	background-color: gradient( linear, 0% 0%, 0% 80%, from( #EEEEEE30 ), to( #EEEEEE00 ) );
-	padding-left: 6px;
-	padding-right: 6px;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	border-radius: 3px;
-	border: 2px solid #4F647200;
-	width: 79px;
-	height: 79px;
-	margin-right: 104px;
-	margin-top: 41px;
-	
-	transition-property: opacity, box-shadow, background-color, transform;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-duration: 0.4s;
-}
-
-.CursorVisible .ExitButton
-{
-	opacity: 0.8;
-}
-
-
-.ExitButton:hover
-{
-	opacity: 1.0;
-	
-	background-color: gradient( linear, 0% 0%, 0% 80%, from( #EEEEEE00 ), to( #EEEEEE00 ) );
-	box-shadow: #EEEEEE60 -5px -5px 6px 10px;
-}
-
-.StackDepth1 .ExitButton
-{
-	opacity: 0.0;
-	transform: translatey( -250px );
-}
 
 @keyframes 'links-and-more-button-focus'
 {
@@ -1941,3 +1914,241 @@ HTMLSimpleNavigationWrapper
 	z-index: all_top_zindex;
 }
 
+
+#PlatformSupport, #SuggestedStatusWrapper
+{
+	flow-children: down;
+	horizontal-align: center;
+	width: 100%;
+
+	transition-property: height, transform, opacity;
+	transition-duration: 0.4s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-delay: 0s;
+}
+
+#SuggestedStatusWrapper
+{
+	width: 100%;
+}
+
+#LibraryMostRecent:descendantfocus #PlatformSupport,
+.LibraryAllGames:descendantfocus #PlatformSupport,
+LibrarySuggestions:descendantfocus #SuggestedStatusWrapper
+{
+	opacity: 1.0;
+}
+
+
+.StatusImage
+{
+	width: 36px;
+	height: 0px;
+	visibility: collapse;
+	opacity: 0.0;
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	horizontal-align: center;
+	vertical-align: center;
+	
+	overflow: clip clip;
+
+	transition-property: wash-color, opacity, transform, height;
+	transition-duration: 0.2s;
+	transition-delay: 0.0s;
+	transition-timing-function: linear;
+}
+
+.AppGridItem:focus #PlatformSupport .StatusImage,
+.Game:focus #SuggestedStatus .StatusImage,
+.GameButton:focus #SuggestedStatus .StatusImage,
+LibraryAppDetails .StatusImage
+{
+	opacity: 1.0;
+	height: 36px;
+	transition-delay: 0.05s;
+}
+
+AppGridItem:focus .StreamingVideoSupport
+{
+	opacity: 1.0;
+	wash-color: applabelsolid;
+	margin: 0px;
+}
+
+.StreamingVideoAvailable .StreamingVideoSupport
+{
+	background-image: url( "file://{images}/store/icon_streamingvideo_storefront.png" );
+}
+
+#ReadyToDownload
+{
+	wash-color: installedblue;
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_readytodownload.png" );
+}	
+
+LibraryAppDetails #ReadyToDownload
+{
+	visibility: collapse;
+}
+LibraryAppDetails.Installing #ReadyToDownload
+{
+	visibility: visible;
+}
+
+.ReadyToPlay #ReadyToDownload, .ReadyToStream #ReadyToDownload, .UnavailableOnPlatform #ReadyToDownload
+{
+	visibility: collapse;
+}
+
+.ReadyToPlay #ReadyToPlay
+{
+	wash-color: readytoplaygreen;
+	opacity: 1.0;
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_readytoplay.png" );
+}
+
+.ReadyToStream #ReadyToStream
+{
+	wash-color: readytoplaygreen;
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_readytostream.png" );
+}
+
+.ReadyToPlay.ReadyToStream #ReadyToStream
+{
+	visibility: collapse;
+}
+
+.UnavailableOnPlatform #NotReadyToPlay
+{
+	wash-color: #666666;
+	visibility: visible;
+	background-image: url( "file://{images}/library/icon_readytofail.png" );
+}
+
+#GridControllerSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
+}
+
+.SteamPad #GridControllerSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/controller_support_legacy.png" );
+}
+
+.FullController #GridControllerSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/controller_support_full.png" );
+}
+
+.SteamPad .FullController #GridControllerSupport
+{
+	visibility: visible;
+	background-image: url( "file://{images}/controller_support_native.png" );
+}
+
+
+
+/* For installed games: */
+.AppGridItem #AppGridItemSupportLabels, #SuggestedStatus {	
+	width: 50px;
+	height: 9px;
+
+	position: 0px 0px 0px;
+	flow-children: right;
+	overflow: clip clip;
+
+	transform: translatey( -50px );
+	margin-right: 0px;
+	transition-property: height, transform;
+	transition-duration: 0.3s;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	background-color: black;
+	vertical-align: bottom;
+	horizontal-align: right;
+}
+
+#ParentalLibraryGrid #AppGridItemSupportLabels
+{
+	opacity: 0.0;
+}
+
+#SuggestedStatus
+{
+	transform: translatey( -44px );
+}
+
+.GameButton #SuggestedStatus
+{
+	transform: translatey( 0px );
+}
+
+#RecentRow #SuggestedStatus
+{
+	margin-right: 210px;
+	transform: translatey( 0px );
+}
+
+.AppGridItem:focus #AppGridItemSupportLabels, Button:focus #SuggestedStatus
+ {
+	height: 76px;
+}
+
+.InstalledState
+{
+	width: 100%;
+	height: 3px;
+	background-color: installedblue;	
+	vertical-align: center;
+	horizontal-align: center;
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.ReadyToPlay .InstalledState
+{
+	background-color: readytoplaygreen;	
+}
+
+.UnavailableOnPlatform .InstalledState
+{
+	background-color: #666666;
+}
+
+#MissingImageLabel
+{
+	opacity: 0.0;
+	horizontal-align: left;
+	margin-top: 130px;
+	padding-right: 60px;
+	padding-left: 60px;
+	font-size: 34px;
+	font-weight: light;
+	text-transform: uppercase;
+	color: #ffffff99;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	white-space: normal;
+	text-align: center;
+	transition-property: opacity, color;
+	transition-duration: 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+/* Testing Styles Only */
+.zz_grid {
+	z-index: 50000;
+	opacity: 0;
+}

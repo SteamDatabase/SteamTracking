@@ -3,7 +3,7 @@
 @define newstitle: #8f98a0ff;
 @define largenewstitle: gradient( linear, 0% 0%, 0% 160%, from( #f2f2f2ef ), to( #abababee ) );
 @define largenewsbyline: gradient( linear, 0% 0%, 100% 0%, from( #ffffff77 ), color-stop( 0.8, #ffffff77 ), to( #ffffff00 ) );
-@define largenewsbody: gradient( linear, 82% 0%, 98% 0%, from( #d2d2d2ef ), to( #8b8b8bce ) ); 
+@define largenewsbody: gradient( linear, 82% 0%, 98% 0%, from( #c6d4dfef ), to( #c6d4dfce ) );
 @define largenewstitle_dark: gradient( linear, 0% 0%, 0% 100%, from( #0e0e0eff ), to( #3b3b3bce ) );
 @define largenewsbyline_dark: gradient( linear, 0% 0%, 160% 0%, from( #222222ff ), color-stop( 0.8, #222222ff ), to( #33333300 ) );
 @define largenewsbody_dark: gradient( linear, 82% 0%, 98% 0%, from( #666666ff ), to( #66666600 ) );
@@ -19,16 +19,6 @@
 @define guidesdesc: gradient( linear, 0% 0%, 0% 100%, from( #b3b3b3ee ), to( #b3b3b3ce ) );
 @define guidedetailsheader: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ef ), to( #8b8b8bce ) );
 @define guidedetailsheaderdark: gradient( linear, 0% 0%, 0% 100%, from( #525252ef ), to( #3b3b3bce ) );
-
-
-
-@define shortduration: 0.25s;
-@define shortmedduration: 0.3s;
-@define mediumduration: 0.4s;
-@define longduration: 1.7s;
-
-@define readytoplaygreen: #A4D007;
-@define installedblue: blue;
 
 @define SettingsPanelTransitionDuration: 0.23s;
 
@@ -96,22 +86,6 @@
 	//pre-transform-scale2d: 1.0;
 }
 	
-.LibraryPanel:descendantfocus .RecentApp:hover .AppImage
-{
-	box-shadow: inset #000000aa 0px 0px 4px 0px
-	opacity: 0.95;
-	desaturation: 0.1;
-
-}
-
-
-
-.LibraryPanel:descendantfocus .MostRecentBaseVisible .RecentApp .AppImage
-{
-	opacity: 1.0;
-	desaturation: 0.0;
-	box-shadow: fill #00000000 -4.5px -4.5px 18px 9px;
-}
 
 
 .RecentApp:descendantfocus .AppImage
@@ -121,53 +95,6 @@
 	desaturation: 0.0;
 }
 
-//The image of the item in focus
-LibraryPanel:descendantfocus .RecentApp:descendantfocus .AppImage
-{
-	box-shadow: inset #000000aa 0px 0px 4px 0px;
-
-	desaturation: 0.0;
-}
-
-//The image of the item in focus while also hovered
-LibraryPanel:descendantfocus .RecentApp:descendantfocus:hover .AppImage 
-{
-	box-shadow: inset #000000aa -4px -4px 4px 8px;
-
-	desaturation: 0.0;
-}
-
-//An image in the focused carousel *should* change when hovered
-LibraryPanel:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:hover .AppImage
-{
-	box-shadow: inset #000000aa -4px -4px 4px 8px;
-
-	desaturation: 0.0;
-	wash-color: none;
-	blur: none;
-}
-
-//But if it's in the item currently in focus, it shouldn't change when hovered
-LibraryPanel:descendantfocus .MostRecentCarousel:descendantfocus  .RecentApp:descendantfocus:hover .AppImage
-{
-	max-height: 260px;
-	box-shadow: inset #000000aa -4px -4px 4px 8px;
-
-
-	desaturation: 0.0;
-	
-}
-
-//And an image in the non-focused carousel *should not* change when hovered
-LibraryPanel:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:hover .AppImage
-
-{
-	box-shadow: box_shadow_off_color -4px -4px 4px 8px;
-
-	desaturation: 0.0;
-	wash-color: none;
-	blur: none;
-}
 
 #MostRecentBackground
 {
@@ -211,11 +138,6 @@ LibraryPanel:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:hove
 	pre-transform-scale2d: 0.6;
 }
 
-LibraryPanel
-{
-	width: 100%;
-	vertical-align: bottom;
-}
 
 .LibraryInvisible
 {
@@ -225,16 +147,6 @@ LibraryPanel
 	transition-delay: 0s;
 
 	opacity: 0.0;
-}
-
-.LibraryVisible
-{
-	transition-property: transform, position, opacity !immediate; 
-	transition-duration: mediumduration;
-	transition-timing-function: linear;
-	transition-delay: 0s;
-
-	opacity: 1.0;
 }
 
 #MostRecentBackgroundWrapper
@@ -262,7 +174,6 @@ LibraryPanel
 	transform: translatey( -130px );
 }
 
-
 .AboveLibraryDetailsView .MostRecentBaseVisible,
 
 {
@@ -274,68 +185,6 @@ LibraryPanel
 	pre-transform-scale2d: 1.0;
 }
 
-//Recent apps when in the recently played view
-.LibraryPanel:descendantfocus .MostRecentBaseVisible .RecentApp
-{
-	pre-transform-scale2d: 1.0;
-}
-
-//Recent apps when in the recently played view which has focus within it?
-//What is .MostRecentBaseVisible doing???
-.LibraryPanel:descendantfocus .MostRecentBaseVisible:descendantfocus .RecentApp
-{
-	pre-transform-scale2d: 1.0;
-
-}
-
-.LibraryPanel:descendantfocus .MostRecentBaseVisible:descendantfocus .RecentApp:focus
-{
-	pre-transform-scale2d: 1.0;
-
-}
-
-.LibraryPanel:descendantfocus .MostRecentBaseVisible:descendantfocus .RecentApp:focus:hover
-{
-	pre-transform-scale2d: 1.05;
-	desaturation: 0.0;
-	opacity: 1.0;
-
-}
-
-
-
-//A recent app when it has focus
-LibraryMostRecent:descendantfocus .RecentApp:descendantfocus
-{
-	desaturation: 0;
-	transform: translateY( 0px );
-
-	pre-transform-scale2d: 1.1;
-
-}
-
-#LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:hover .AppImage
-{
-	box-shadow: fill box_shadow_off_color -4.5px -4.5px 6px 9px;
-	opacity: 1.0;
-	desaturation: 0.0;
-}
-
-#LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:focus .AppImage
-{
-	box-shadow: #00000033 -4px -4px 8px 8px;
-}
-
-#LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp.PreviouslyRight:focus .AppImage
-{
-	opacity-mask: url( "file://{images}/focus_shadow_right.png" ) 0.0;
-}
-
-#LibraryMostRecent:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp.PreviouslyLeft:focus .AppImage
-{
-	opacity-mask: url( "file://{images}/focus_shadow_left.png" ) 0.0;
-}
-
 #LibraryGameStatus
 {
 	width: 100%;
@@ -344,291 +193,6 @@ LibraryMostRecent:descendantfocus .RecentApp:descendantfocus
 }
 
 
-#PlatformSupport, #SuggestedStatusWrapper
-{
-	flow-children: down;
-	horizontal-align: center;
-	width: 100%;
-
-	transition-property: height, transform, opacity;
-	transition-duration: 0.4s;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-}
-
-#SuggestedStatusWrapper
-{
-	width: 100%;
-}
-
-#LibraryMostRecent:descendantfocus #PlatformSupport,
-.LibraryAllGames:descendantfocus #PlatformSupport,
-LibrarySuggestions:descendantfocus #SuggestedStatusWrapper
-{
-	opacity: 1.0;
-}
-
-
-.StatusImage
-{
-	width: 36px;
-	height: 0px;
-	visibility: collapse;
-	opacity: 0.0;
-	
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-
-	horizontal-align: center;
-	vertical-align: center;
-	
-	overflow: clip clip;
-
-	transition-property: wash-color, opacity, transform, height;
-	transition-duration: 0.2s;
-	transition-delay: 0.0s;
-	transition-timing-function: linear;
-}
-
-.AppGridItem:focus #PlatformSupport .StatusImage,
-.Game:focus #SuggestedStatus .StatusImage
-
-{
-	opacity: 1.0;
-	height: 36px;
-	transition-delay: 0.05s;
-}
-
-
-LibraryRecentApp:focus .StreamingVideoSupport,
-AppGridItem:focus .StreamingVideoSupport
-{
-	opacity: 1.0;
-	wash-color: applabelsolid;
-	margin: 0px;
-}
-
-.StreamingVideoAvailable .StreamingVideoSupport
-{
-	background-image: url( "file://{images}/store/icon_streamingvideo_storefront.png" );
-}
-
-#ReadyToDownload
-{
-	wash-color: installedblue;
-	visibility: visible;
-	background-image: url( "file://{images}/library/icon_readytodownload.png" );
-}	
-
-.ReadyToPlay #ReadyToDownload, .ReadyToStream #ReadyToDownload, .UnavailableOnPlatform #ReadyToDownload
-{
-	visibility: collapse;
-}
-
-.ReadyToPlay #ReadyToPlay
-{
-	wash-color: readytoplaygreen;
-	opacity: 1.0;
-	visibility: visible;
-	background-image: url( "file://{images}/library/icon_readytoplay.png" );
-}
-
-.ReadyToStream #ReadyToStream
-{
-	wash-color: readytoplaygreen;
-	visibility: visible;
-	background-image: url( "file://{images}/library/icon_readytostream.png" );
-}
-
-.ReadyToPlay.ReadyToStream #ReadyToStream
-{
-	visibility: collapse;
-}
-
-.UnavailableOnPlatform #NotReadyToPlay
-{
-	wash-color: #666666;
-	visibility: visible;
-	background-image: url( "file://{images}/library/icon_readytofail.png" );
-}
-
-#GridControllerSupport
-{
-	visibility: visible;
-	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
-}
-
-.SteamPad #GridControllerSupport
-{
-	visibility: visible;
-	background-image: url( "file://{images}/controller_support_legacy.png" );
-}
-
-.FullController #GridControllerSupport
-{
-	visibility: visible;
-	background-image: url( "file://{images}/controller_support_full.png" );
-}
-
-.SteamPad .FullController #GridControllerSupport
-{
-	visibility: visible;
-	background-image: url( "file://{images}/controller_support_native.png" );
-}
-
-
-
-
-
-
-
-//A recent app's hover state... when not focused on its own carousel
-.LibraryPanel:descendantfocus .MostRecentBaseVisible .RecentApp:hover
-{
-	//border-color: #fdfefe00;
-	pre-transform-scale2d: 1.00;
-
-	z-index: 2;
-}
-
-//A recent app when it has focus and is also being hovered over
-.LibraryPanel:descendantfocus .MostRecentBaseVisible .RecentApp:descendantfocus:hover 
-{
-	//border-color: #fdfefe00;
-	pre-transform-scale2d: 1.03;
-	desaturation: 0.0;
-	opacity: 1.0;
-	z-index: 2;
-}
-
-//A recent app's hover state when focus *is* in the most recent carousel
-LibraryPanel:descendantfocus .MostRecentCarousel:descendantfocus .RecentApp:hover 
-
-{
-	pre-transform-scale2d: 1.03;
-	opacity: 1.0;
-	desaturation: 0.0;
-}
-
-
-
-
-.LibraryMostRecent:descendantfocus .MostRecentCarousel, .AboveLibraryDetailsView .MostRecentCarousel
-{
-	flow-children: right;
-	perspective-origin: 50% 50%;	
-	opacity-mask: none;
-}
-
-.LibraryPanel:descendantfocus .MostRecentCarousel
-{
-	transform: translatez( -600px ) translatey( -250px );
-	blur: gaussian (1);
-	opacity: 0.7;
-}
-
-.LibraryPanel:descendantfocus .MostRecentCarousel:descendantfocus
-{
-	transform: translatez( 0px );
-	blur: none;
-	wash-color: none;
-}
-
-.AboveLibraryDetailsView .MostRecentCarousel
-{
-	animation-name: none;
-}
-
-//An app's default state in the most recent carousel when that carousel is not in focus
-LibraryMostRecent:descendantfocus .MostRecentCarousel .RecentApp
-{
-	opacity: 0.85;
-	desaturation: 0.0;
-	pre-transform-scale2d: 1.00;
-
-}
-
-
-LibraryPanel:descendantfocus .RecentApp, .AboveLibraryDetailsView .RecentApp
-{
-	transform: translatex( 0px );
-}
-
-
-.MostRecentCarousel #CarouselTitle
-{
-	transition-property: transform, position, blur, opacity, opacity-mask !immediate;
-	transition-duration: shortmedduration;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-
-	color: carousel_title;
-	font-size: 96px;
-	opacity: 0.0;
-	padding-left: 0px;
-	vertical-align: center;
-}
-
-.MostRecentCarousel #CarouselTitle
-{
-	max-width: 800px;
-	opacity: 0.0;
-	padding-top: 0px;
-	padding-bottom: 36px;
-	padding-right: 30px;
-	text-transform: uppercase;
-	font-weight: light;
-	blur: gaussian ( 3, 3, 1 );
-	text-align: right;
-}
-
-.MostRecentCarousel:descendantfocus #CarouselTitle
-{
-	blur: none;
-	//pre-transform-scale2d: 1.0;
-}
-
-LibraryMostRecent:descendantfocus #CarouselTitle, .AboveLibraryDetailsView #CarouselTitle
-{
-	opacity: 1.0;
-	blur: none;
-}
-/*
-LibraryMostRecent #CarouselTitle
-{	
-	pre-transform-scale2d: 0.75;	
-}
-*/
-
-.LibraryPanel .AboveLibraryDetailsView .MostRecentCarousel,
-.LibraryPanel .AboveMusicLibraryPanel .MostRecentCarousel
-{
-	desaturation: 1.0;
-	opacity: 0.5;
-	transform: translate3d(-795px, -575px, -600px );
-	wash-color: bgcolorwash;
-	blur: gaussian (2.0);
-	transition-duration: mediumduration;
-}
-
-
-.LibraryPanel .AboveLibraryDetailsView #MostRecentBackgroundWrapper,
-.LibraryPanel .AboveMusicLibraryPanel #MostRecentBackgroundWrapper
-{
-	transform: translatey( -60px );
-}
-
-.LibraryPanel .AboveLibraryDetailsView #MostRecentBackground,
-.LibraryPanel .AboveMusicLibraryPanel #MostRecentBackground
-{
-	transform: translatey( -70px ) translatex( -100px );
-}
-
-.LibraryAppDetailsSlideOff
-{
-	opacity: 0.0;
-}
 
 LibraryAppDetails
 {
@@ -659,12 +223,6 @@ LibraryAppDetails
 	height: 100%;
 
 
-	width: 75%;
-	height: 75%;
-
-	position: 12.5% 12.5% 0%;
-
-	pre-transform-scale2d: 1.333333;
 
 }
 
@@ -710,7 +268,7 @@ LibraryAppDetails
 		transform: translate3D( 0px, -20px, 20px );
 		animation-timing-function: ease-in;
 	}
-	
+
 	4%
 	{
 		opacity: 0.4;
@@ -752,9 +310,60 @@ LibraryAppDetails .GameStatus
 	opacity: 1.0;
 	width: fit-children;
 	font-size: 30px;
-	margin-top: 4px;
 	font-weight: normal;
 }
+
+LibraryAppDetails .GameStatusHeader
+{
+	flow-children: down;
+	width: 100%;
+	min-height: 67px;
+	height: fit-children;
+	padding: 5px 5px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #00000000 ), color-stop( 1.0, #0000001A ) );
+	color: #67c1f5ff;
+}
+LibraryAppDetails .GameStatusHeaderLine
+{
+	flow-children: right;
+	margin-top: 12px;
+	margin-left: 4px;
+	width: 100%;
+	height: fit-children;
+}
+
+.DownloadBarPercent
+{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	height: 8px;
+	background-color: #ffffffff;
+	wash-color: ui_primary_color;
+	z-index: 3010;
+}
+.DownloadBarBackground
+{
+	width: 100%;
+	height: 12px;
+	position: 40px 190px 0px;
+	background-color: #00000099;
+	box-shadow: fill #00000044 -4px -4px 8px 8px;
+	z-index: 3010;
+	visibility: collapse;
+	margin: 5px 12px;
+}
+#DownloadAmount
+{
+	visibility: collapse;
+	padding-left: 20px;
+	color: #ffffff;
+}
+LibraryAppDetails.Downloading .DownloadBarBackground, LibraryAppDetails.Downloading #DownloadAmount
+{
+	visibility: visible;
+}
+
 
 .AppMiscHeader
 {
@@ -765,7 +374,7 @@ LibraryAppDetails .GameStatus
 	padding: 5px 20px;
 }
 #PlayStatsArea.AppMiscHeader {
-	height: 70px;
+	padding-top: 20px;
 }
 
 
@@ -830,7 +439,7 @@ LibraryAppDetails #GameRequiresLabel
 	width: 100%;
 	height: 100%;
 	flow-children: right;
-	margin-top: 15px;
+	margin-top: 0px;
 	margin-bottom: 100px;
 }
 
@@ -840,31 +449,32 @@ LibraryAppDetails #GameRequiresLabel
 	width: fit-children;
 	height: 100%;
 	flow-children: down;
-	margin-left: 50px;
-	padding-top: 25px;
-	margin-right: 25px;
+	margin-left: 70px;
 
-	/* To transition on focus change
+	margin-right: 25px;
+}
+#ContentPanels #CommonControls {
+	/* To transition on focus change */
+	padding-top: 32px;
+
 	transform: translateX( -35px );
 	opacity: 0.5;
 	transition-delay: 0s;
-	transition-duration: 0.3s;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
 	pre-transform-scale2d: 1;
 
 	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
-	*/
-
 }
-/* To transition on focus change
-#CommonControls:descendantfocus {
+/* To transition on focus change */
+#ContentPanels #CommonControls:descendantfocus {
 transform: translateX( 0px );
 opacity: 1;
 pre-transform-scale2d: 1;
 opacity-mask: none;
 }
-*/
+
 
 .AppMiscHeader .DataHeader
 {
@@ -896,7 +506,8 @@ opacity-mask: none;
 }
 
 #PlayStatsArea.HasPlaytime,
-#PlayStatsArea.HasLastPlayedTime
+#PlayStatsArea.HasLastPlayedTime,
+#PlayStatsArea.Purchased,
 {
 	visibility: visible;
 }
@@ -914,6 +525,20 @@ opacity-mask: none;
 }
 #PlayStatsArea.IsVideo #YouPlayedHeader,
 #PlayStatsArea.IsVideo #LastPlayedHeader
+{
+	visibility: collapse;
+}
+
+#PlayStatsArea #PurchaseTime
+{
+	visibility: collapse;
+}
+#PlayStatsArea.Purchased #PurchaseTime
+{
+	visibility: visible;
+}
+#PlayStatsArea.HasPlaytime #PurchaseTime,
+#PlayStatsArea.HasLastPlayedTime #PurchaseTime,
 {
 	visibility: collapse;
 }
@@ -979,19 +604,19 @@ LibraryAppDetails .LibraryDetailsSectionsContainer {
 	width: 100%;
 	height: 100%;
 	vertical-align: top;
-	padding-top: 15px;
+	padding-top: 0px;
 	padding-left: 15px;
 
 	transition-property: opacity, transform;
-	transition-duration: shortduration;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-/* to transition when focus changes
-LibraryAppDetails .LibraryDetailsSectionsContainer:descendantfocus {
+/* to transition when focus changes */
+#ContentPanels .LibraryDetailsSectionsContainer:descendantfocus {
 	transform: translateX( -200px );
 }
-*/
+
 
 
 LibraryAppDetails .LibraryDetailsSectionPanel {
@@ -1010,7 +635,7 @@ LibraryAppDetails .ContentsRow
 {
 	width: 100%;
 	height: 100%;
-	margin-top: 7px;
+	margin-top: 24px;
 	z-index: 0;
 	flow-children: right-wrap;
 
@@ -1032,9 +657,6 @@ LibraryAppDetails .ContentsRow
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 
-	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 }
 .ContentsRow .LibraryDetailsScrollableArea.Overlay
 {
@@ -1059,18 +681,46 @@ LibraryAppDetails .ContentsRow
 .PlayHeaderDetails
 {
 	width: 100%;
-	height: 118px;
+	height: 165px;
+	margin-top: 5px;
+	flow-children: down;
+	background-color: readonly_module;
+	margin-left: 12px;
+}
+.LaunchAppDetails
+{
+	width: 100%;
+	height: 165px;
+	margin-top: 5px;
 	flow-children: down;
 	background-color: gradient( linear, 0% 0%, 100% 100%, color-stop( 0.0, #61696d4D ), color-stop( 1.0, #c6d4df1A ) );
-	margin-top: 3px;
 	margin-left: 12px;
-	/* background-color: #2f89bc33; */
+	visibility: collapse;
+	padding: 30px;
+}
+.HasLaunchProgressText .PlayHeaderDetails
+{
+	visibility: collapse;
+}
+.HasLaunchProgressText .LaunchAppDetails
+{
+	visibility: visible;
+}
+#LaunchAppStatus
+{
+	font-family: platformfont;
+	color: playtimetitle;
+	opacity: 1.0;
+	width: 100%;
+	height: fit-children;
+	font-size: 30px;
+	vertical-align: center;
 }
 
 .DetailsDataPanel
 {
 	width: 425px;
-	height: 300px;
+	height: 450px;
 
 	background-color: transparent_module;
 	flow-children: down;
@@ -1081,11 +731,18 @@ LibraryAppDetails .ContentsRow
 	transition-delay: 0s;
 	pre-transform-scale2d: 0.95;
 
+	box-shadow: module_shadow;
+
+	padding: 18px;
 
 }
-.DetailsDataPanel.Small
+#OverlayDashboard .DetailsDataPanel {
+	height: 330px;
+}
+.DetailsDataPanel.Small,
+#OverlayDashboard .DetailsDataPanel.Small
 {
-	height: 150px;
+	height: 175px;
 }
 .DetailsDataPanel:hover
 {
@@ -1115,9 +772,9 @@ LibraryAppDetails .ContentsRow
 .DetailsDataPanel .HeaderLabel
 {
 	font-family: platformfont;
-	margin: 10px 10px 0px 10px;
+	margin: 0px;
 	padding-right: 8px;
-	font-size: 26px;
+	font-size: 28px;
 	color: moduledatalabel;
 	opacity: 1.0;
 	horizontal-align: left;
@@ -1127,10 +784,15 @@ LibraryAppDetails .ContentsRow
 	transition-timing-function: bigpicture-ease-in-out;
 	font-weight: light;
 }
+.DetailsDataPanel .HeaderLabel .NumberElement {
+	color: medgray;
+}
 
-.DetailsDataPanel:descendantfocus .HeaderLabel
-{
+.DetailsDataPanel:descendantfocus .HeaderLabel {
 	color: detailsdatalabelfocus;
+}
+.DetailsDataPanel:descendantfocus .HeaderLabel .NumberElement {
+	color: darkblue;
 }
 
 LibrarySettings
@@ -1349,19 +1011,41 @@ ParentalButton.Locked
 	z-index: 100;
 }
 
+.PlayOptions
+{
+	margin-top: 5px;
+	height: 165px;
+	flow-children: down;
+}
 .PlayAction
 {
-	height: 125px;
+	height: 100%;
+}
+#MoreWaysToPlayBtn
+{
+	width: 100%;
+	pre-transform-scale2d: 0.95;
+	visibility: collapse;
+	vertical-align: bottom;	
+}
+#MoreWaysToPlayBtn Label
+{
+	vertical-align: center;
+}
+#MoreWaysToPlayBtn:focus
+{
+	pre-transform-scale2d: 1.0;
+}
+.HasMoreWaysToPlay #MoreWaysToPlayBtn
+{
+	visibility: visible;
+}
+.HasMoreWaysToPlay .PlayAction
+{
+	height: 120px;
 }
 
-.DetailsDataPanel
-{
-	flow-children: down;
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 0px;
-	border-color: #b6e1fa00;
-}
+
 
 .Offline .FriendsWhoPlay
 {
@@ -1399,6 +1083,7 @@ ParentalButton.Locked
 .ScreenshotsFullWrapper,
 .ControllerFullWrapper,
 .DLCFullWrapper,
+.StreamingFullWrapper
 {
 	width: 100%;
 	height: 100%;
@@ -1424,19 +1109,14 @@ LibraryAchievements .AchievementsSmallBody
 	height: 100%;
 	flow-children: down;
 	opacity: 0.8;
-	transition-property: opacity !immediate;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	transform: translatex( 3px );
 }
 
 LibraryAchievements #ProgressBarContainer
 {
-	margin: 0px 10px 10px 10px;
+	margin: 0px 0px 10px 0px;
 	width: 100%;
 	height: 20px;
-	background-color: #09334dFF;
+	background-color: #062535FF;
 }
 
 LibraryAchievements #ProgressBar
@@ -1448,9 +1128,6 @@ LibraryAchievements #ProgressBar
 
 LibraryAchievements .RemainingBody
 {
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 5px;
 	width: 100%;
 	height: 100%;
 	flow-children: down;
@@ -1464,9 +1141,9 @@ LibraryAchievements .RemainingRow
 
 LibraryAchievements .AchievementIcon
 {
-	width: 50px;
-	height: 50px;
-	margin: 0px 24px 0px 0px;
+	width: 70px;
+	height: 70px;
+	margin: 0px 10px 0px 0px;
 }
 
 #RemainingWrapper5.AchievementIcon
@@ -1530,14 +1207,15 @@ ViewGuidesDialog.Overlay #MsgBoxButtons
 .GuideDetail
 {
 	flow-children: right;
-	margin: 4px 4px 4px 12px;
-	height: 108px;
+	margin: 10px 0px 0px 0px;
+	height: 107px;
 	width: 100%;
 
 	color: detailsdatalabelfocus;
 }
+
 .LibraryDetailsSectionRow .GuideDetail {
-	height: 72px;
+	height: 73px;
 }
 
 .GuideDetail Panel, .GuideDetail Image
@@ -1550,14 +1228,11 @@ ViewGuidesDialog.Overlay #MsgBoxButtons
 .GuideDetailImage
 {
 	vertical-align: center;
-	width: 75px;
-	height: 75px;
-	margin: 0px 16px 0px 0px;
-	border-style: solid;
-	border-width: 4px;
-	border-radius: 0px;
-	border-color: #404040e0;
+	width: 73px;
+	height: 73px;
+	margin: 0px 12px 0px 0px;
 	box-shadow: fill #00000060 0px 0px 6px 0px;
+	background-color: gradient( linear, 0% 0%, 60% 60%, from( #63bdf1 ), to( #2a8dbf ) );
 }
 
 LibraryGuides .GuideLabels
@@ -1631,7 +1306,6 @@ LibraryGuides .GuideLabels .GuideLabelTitle
 	font-size: 24px;
 	margin-bottom: 2px;
 	max-height: 64px;
-	font-weight: bold;
 	width: 355px;
 	color: white;
 	white-space: normal;
@@ -1922,6 +1596,7 @@ LibraryFriendsWhoPlay .FriendsWhoPlaySmallBody
 
 	width: 100%;
 	height: 100%;
+	margin-top: 8px;
 	opacity: 0.8;
 	flow-children: down;
 }
@@ -2120,15 +1795,6 @@ LibraryFriendsWhoPlay .FriendsWhoPlayBody
 	transition-delay: 0s;
 }
 
-.FriendsWhoPlaySmallBody
-{
-	margin-top: 8px;
-	margin-left: 10px;
-	margin-right: 4px;
-	margin-bottom: 6px;
-	width: 100%;
-}
-
 LibraryFriendsWhoPlay AvatarImage
 {
 	width: 80px;
@@ -2149,8 +1815,8 @@ LibraryFriendsWhoPlay .FriendsWhoPlayRowOne
 LibraryFriendsWhoPlay .FriendWhoPlaysWrapper
 {
 	margin-right: 2px;
-	width: 80px;
-	height: 80px;
+	width: 76px;
+	height: 76px;
 }
 
 LibraryFriendsWhoPlay .MoreRemainingContainer
@@ -2174,15 +1840,15 @@ LibraryFriendsWhoPlay .MoreRemainingLabel
 
 LibraryRecentNews .RecentNewsLargeBody
 {
-	margin-left: 24px;
 	margin-top: 8px;
-	margin-bottom: 6px;
-	margin-right: 6px;
 	width: 100%;
-	height: 100%;
+	height: 400px;
 	overflow: squish squish;
 	flow-children: down;
 	opacity: 1.0;
+}
+#OverlayDashboard LibraryRecentNews .RecentNewsLargeBody {
+	height: 200px;
 }
 
 
@@ -2223,15 +1889,8 @@ LibraryRecentNews .LargeNewsWrapper
 {
 	width: 100%;
 	height: 100%;
-	margin-bottom: 5px;
 	margin-top: 0px;
-	margin-right: 25px;
 	flow-children: down;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #00000000;
-
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #00000000 ), to( #00000000 ) );
 }
 
 .LargeNewsWrapper Label
@@ -2242,14 +1901,12 @@ LibraryRecentNews .LargeNewsWrapper
 
 LibraryRecentNews .LargeNewsHeadline
 {
-	font-size: 24px;
-	line-height: 26px;
-	font-weight: bold;
-	max-height: 60px;
+	font-size: 36px;
+	line-height: 40px;
+	max-height: 80px;
 	width: 100%;
-	margin-bottom: 7px;
+	margin-bottom: 20px;
 	margin-right: 7px;
-	margin-top: 4px;
 	color: largenewstitle;
 	white-space: normal;
 }
@@ -2258,7 +1915,6 @@ LibraryRecentNews .LargeNewsDate
 {
 	font-size: 24px;
 	line-height: 26px;
-	font-weight: bold;
 	max-height: 60px;
 	width: 100%;
 	margin-bottom: 7px;
@@ -2270,10 +1926,10 @@ LibraryRecentNews .LargeNewsDate
 
 LibraryRecentNews .LargeNewsBody
 {
-	font-size: 20px;
+	font-size: 26px;
+	line-height: 30px;
 	height: 100%;
 	width: 100%;
-	margin-bottom: 5px;
 	margin-top: 2px;
 	margin-right: 18px;
 	color: largenewsbody;
@@ -2285,50 +1941,84 @@ LibraryRecentNews .LargeNewsByline
 {
 	font-size: 20px;
 	line-height: 21px;
+	width: 100%;
 	max-height: 22px;
 	color: largenewsbyline;
 	margin-top: -4px;
 	margin-right: 7px;
 	white-space: normal;
 	text-overflow: clip;
+
+	visibility: collapse;
 }
 
-
+#ScreenshotsBody
+{
+	flow-children: down;
+	height: 100%;
+	width: 100%;
+}
 #ScreenshotsSmallBody
 {
 	flow-children: down;
+	height: 100%;
+	width: 100%;
 }
 
 #ScreenshotThumbs
 {
-	height: 220px;
-	width: 490px;
-	margin-left: 20px;
+	height: 300px;
+	width: 390px;
+	margin-left: 0px;
+	margin-top: 10px;
+
+	flow-children: down;
 
 	opacity: 1.0;
-	opacity-mask: url( "file://{images}/library/horizontal_mask.tga" ) 1.0;
+	opacity-mask: url( "file://{images}/library/bottom_mask.tga" ) 1.0;
 
 	transition-property: opacity, transform;
 	transition-duration: shortduration;
 	transition-timing-function: bigpicture-ease-in-out;
-}
+	}
+	#OverlayDashboard #ScreenshotThumbs {
+		height: 150px;
+		flow-children: right;
+	}
 
-.NoScreenshots #ScreenshotThumbs, #NoScreenshotsExplain 
-{
-	opacity: 0.0;
-}
+.ScreenshotsSmallThumb {
+	margin: 4px;
+	height: 210px;
+	width: 390px;
+	vertical-align: top;
+	box-shadow: fill #101010ff  0px 0px 14px 0px;
+	}
+	#OverlayDashboard .ScreenshotsSmallThumb {
+		height: 100px;
+		width: 200px;
+	}
 
-.NoScreenshots #NoScreenshotsExplain 
-{
-	height: 220px;
-	width: 490px;
-
+#ScreenshotThumb2 {
+	transform: translatey( -12px );
+	desaturation: 0.3;
 	opacity: 1.0;
+	z-index: -2;
+	}
+	#OverlayDashboard #ScreenshotThumb2 {
+		transform: translatey( 0px ) translatex( -20px );
+	}
 
-	transition-property: opacity, transform;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
+#ScreenshotThumb3 {
+	transform: translatey( -84px );
+	desaturation: 0.4;
+	opacity: 1.0;
+	z-index: -3;
+	}
+.NoScreenshots #ScreenshotThumbs
+{
+	visibility: collapse;
 }
+
 
 #ExplanationWrapper
 {
@@ -2365,34 +2055,7 @@ LibraryRecentNews .LargeNewsByline
 	line-height: 30px;
 }
 
-.ScreenshotsSmallThumb
-{
-	margin-top: 2px;
-	min-height: 150px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 4px;
 
-	max-height: 180px;
-	vertical-align: center;
-	box-shadow: fill #101010ff  0px 0px 4px 8px;
-}
-
-#ScreenshotThumb2
-{
-	transform: translatex( 42px );
-	desaturation: 0.3;
-	opacity: 1.0;
-	z-index: -2;
-}
-
-#ScreenshotThumb3
-{
-	transform: translatex( 84px );
-	desaturation: 0.4;
-	opacity: 1.0;
-	z-index: -3;
-}
 
 .WSCount, .SSCount
 {
@@ -2431,23 +2094,19 @@ LibraryRecentNews .LargeNewsByline
 
 #WorkshopWhatIsItLabel
 {
-	font-size: 20px;
-	line-height: 23px;
-	height: 69px;
+	font-size: 24px;
+	line-height: 27px;
+	height: 90px;
 
 	color: #66c0f4;
 	vertical-align: center;
 
 	width: 100%;
-	margin-left: 24px;
-	margin-right: 20px;
 }
 
 #WorkshopImageHorWrapper
 {
 	margin-top: 12px;
-	margin-left: 24px;
-	margin-right: 20px;
 	horizontal-align: center;
 	flow-children: right;
 
@@ -2653,41 +2312,39 @@ LibraryRecentNews .LargeNewsByline
 
 #HowToWrapper
 {
-	flow-children: right;
+	flow-children: down;
 
-	font-size: 20px;
-	line-height: 21px;
-	height: 54px;
+	font-size: 28px;
+	line-height: 30px;
+	height: fit-children;
 
-	color: #999999ff;
+	color: detailsdatalabel;
 	vertical-align: center;
 
 	width: 100%;
-	margin-left: 24px;
+}
+
+#HowToWrapper .HowToLabel
+{
+	vertical-align: top;
+	text-align: center;
 	margin-right: 20px;
+	width: 100%;
+}
+#HowToWrapper .Plus {
+	margin-top: 10px;
 }
 
-.NoScreenshots #HowToWrapper
-{
-	height: 100%;
-	vertical-align: center;
-}
-.NoScreenshots #HowToWrapper .HowToLabel
-{
-	vertical-align: center;
-}
-
-#HowToWrapper .Label
-{
-	vertical-align: center;
-	padding-top: 24px;
-	padding-bottom: 4px;
-}
-
-.HowToLabel
-{
-	margin-top: 20px;
-	margin-right: 20px;
+#HowToWrapper .ScreenshotLegendButtons {
+	horizontal-align: center;
+	flow-children: right;
+	margin-left: 6px;
+	margin-right: 6px;
+	margin-bottom: 0px;
+	font-size: 21px;
+	font-family: "Motiva Sans";
+	font-weight: normal;
+	color: #c8cbccca;
 }
 
 #ScreenshotHotKeyLabel
@@ -2707,7 +2364,12 @@ LibraryRecentNews .LargeNewsByline
 	height: 100%;
 }
 
-.PlayActionFullWrapper .PlayActionHeaderLabel
+.VR .PlayActionFullWrapper:active 
+{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+}
+
+.PlayAction .PlayActionHeaderLabel
 {
 	opacity: 1.0;
 	vertical-align: center;
@@ -2718,14 +2380,14 @@ LibraryRecentNews .LargeNewsByline
 	transition-timing-function: bigpicture-ease-in-out;
 
 	font-family: platformfont;
-	font-size: 30px;
+	font-size: 36px;
 	font-weight: normal;
 	color: #67c1f5ff;
-	margin-left: 10px;
+	margin-left: 16px;
 }
 
-.PlayActionFullWrapper:descendantfocus .PlayActionHeaderLabel,
-.PlayActionFullWrapper:hover .PlayActionHeaderLabel
+.PlayAction:descendantfocus .PlayActionHeaderLabel,
+.PlayAction:hover .PlayActionHeaderLabel
 {
 	color: detailsdatalabelfocus;
 }
@@ -2742,9 +2404,9 @@ LibraryRecentNews .LargeNewsByline
 {
 	width: fit-children;
 	height: 60px;
-	vertical-align: center;
-	horizontal-align: right;
-	visibility: visible;
+	vertical-align: bottom;
+	horizontal-align: left;
+	visibility: collapse;
 	flow-children: right;
 	margin: 0px 100px 0px 0px;
 }
@@ -2785,69 +2447,6 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 {
 	background-image: url( "file://{images}/store/icon_steamcontroller_storefront.png" );
 	visibility: visible;
-}
-
-.PlayAction .PlayTimeRow
-{
-	width: 100%;
-	flow-children: right;
-}
-
-.PlayAction .PlayTimeTitle
-{
-	width: 200px;
-	text-align: right;
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 20px;
-	color: achievementdetailsheader;
-	opacity: 1.0;
-	transition-property: opacity, border, color, color !immediate;
-} 
-
-#LaunchingStatus
-{
-	opacity: 0.0;
-	width: 100%;
-	height: 200px;
-	text-align: left;
-	margin: 10px 0px 0px 10px;
-	font-size: 22px;
-	font-family: platformfont;
-	color: applabelsolid;
-	z-index: 1000;
-	visibility: collapse;
-
-	transition-property: opacity;
-	transition-duration: 0.25s;
-}
-
-.Working #LaunchingStatus
-{
-	visibility: visible;
-}
-
-.PlayActionFullWrapper:descendantfocus #LaunchingStatus
-{
-	opacity: 1.0;
-}
-
-.PlayAction .PlayTimeValue
-{
-	margin-left: 18px;
-	font-size: 18px;
-	font-weight: medium;
-	line-height: 20px;
-	color: playtime;
-	width: 100%;
-	opacity: 1.0;
-}
-.PlayActionFullWrapper:descendantfocus .PlayTimeTitle, 
-.PlayActionFullWrapper:hover .PlayTimeTitle, 
-.PlayActionFullWrapper:descendantfocus .PlayTimeValue,
-.PlayActionFullWrapper:hover .PlayTimeValue
-{
-	color: #161718f5;
 }
 
 .PlayAction .ButtonBody
@@ -2939,14 +2538,22 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 #StreamingData
 {
 	visibility: collapse;
-	margin-left: 300px;
+	margin-left: 20px;
 	vertical-align: bottom;
 	flow-children: right;
-	min-width: 300px;
+	width: 100%;
+	height: 100%;
+	color: #ffffff;
+	font-size: 22px;
+	margin-top: 7px;
 }
 .Streaming #StreamingData
 {
 	visibility: visible;
+}
+.StreamingFullWrapper .textArea Label {
+	font-size: 24px;
+	color: detailsdatalabel;
 }
 
 @keyframes 'play-button-initialize'
@@ -3078,49 +2685,6 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	flow-children: right;
 }
 
-LibraryRecentApp #ControllerSupport
-{
-	visibility: collapse;
-}
-
-LibraryRecentApp:focus #ControllerSupport
-{
-	width: 50px;
-	height: 50px;
-	margin-right: -8px;
-	vertical-align: center;
-
-	background-size: contain;
-	background-repeat: no-repeat;
-	wash-color: applabelsolid;
-
-	visibility: visible;
-
-	transition-property: opacity;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-LibraryRecentApp:focus #ControllerSupport
-{
-	margin-top: 0px;
-	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
-}
-
-.SteamPad LibraryRecentApp:focus #ControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_legacy.png" );
-}
-
-LibraryRecentApp.FullController:focus #ControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_full.png" );
-}
-
-.SteamPad LibraryRecentApp.FullController:focus #ControllerSupport
-{
-	background-image: url( "file://{images}/controller_support_native.png" );
-}
 
 .LibraryMostRecent:descendantfocus .RecentApp:focus
 {
@@ -3139,10 +2703,7 @@ LibraryRecentApp.FullController:focus #ControllerSupport
 	pre-transform-scale2d: 1.0;
 } 
 
-LibraryMostRecent:descendantfocus .RecentApp:focus Label
-{
-	color: applabel;
-}
+
 
 .AboveLibraryDetailsView .RecentApp Label
 {
@@ -3245,67 +2806,6 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	blur: none;
 }
 
-#AddContent
-{
-	horizontal-align: left;
-	width: 90px;
-	height: 90px;
-	transition-duration: 0.2s;
-	transition-property: border, blur, background-color, color, transform, pre-transform-scale2d, box-shadow, opacity;
-	transition-timing-function: bigpicture-ease-in-out;
-	pre-transform-scale2d: 0.9;
-
-}
-
-#AddContent:hover
-{
-	z-index: 50;
-	transition-duration: 0.23s !immediate;
-	//background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
-	box-shadow: box_shadow_off_color -5px -5px 6px 10px;
-	pre-transform-scale2d: 0.96;
-}
-
-#AddContent:focus
-{
-	z-index: 50;
-	transition-duration: 0.23s !immediate;
-	//background-color: gradient( linear, 0% 0%, 0% 100%, from( #1c1f21ff ), to( #121313ff ) );
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-	pre-transform-scale2d: 1.0;
-}
-
-
-#AddContent:focus:hover
-{
-	z-index: 50;
-	transition-duration: 0.23s !immediate;
-	//background-color: gradient( linear, 0% 0%, 100% 100%, from( #1c1f21ff ), to( #121313ff ) );
-	box-shadow: box_shadow_on_color -5px -5px 6px 10px;
-	pre-transform-scale2d: 1.04;
-}
-
-#LibraryMenuRowWrapper:descendantfocus #AddContent, .CursorVisible .LibraryVisible:descendantfocus #LibraryMenuRowWrapper:hover #AddContent
-{
-	opacity: 1.0;
-}
-
-#AddContent Label
-{
-	margin: 0px;
-	margin-top: -6px;
-	vertical-align: center;
-	horizontal-align: center;
-	font-size: 70;
-	font-weight: light;
-	color: applabelnofade;
-}
-
-#AddContent:focus Label 
-{
-	color: applabelselected;
-}
-
 .LibraryButton:hover
 {
 	z-index: 50;
@@ -3401,7 +2901,7 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 
 	transform: translateX( 0px );
 	transition-delay: 0s;
-	transition-duration: mediumduration;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: transform, width;
 }
@@ -3429,7 +2929,6 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	vertical-align: center;
 	color: #67c1f5ff;
 	white-space: nowrap;
-	font-weight: bold;
 	text-overflow: clip;
 
 	transition-property: opacity;
@@ -3476,7 +2975,7 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	opacity: 0.0;
 }
 
-.music #MusicPanel
+.music #MusicPanelAllGames
 {
 	opacity: 1.0;
 	padding-top: 0px;
@@ -3580,64 +3079,6 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	background-color: #000000;
 }
 
-/* For installed games: */
-.AppGridItem .GridItemNameRow, #SuggestedStatus {	
-	width: 50px;
-	height: 9px;
-
-	position: 0px 0px 0px;
-	flow-children: right;
-	overflow: clip clip;
-
-	transform: translatey( -50px );
-	margin-right: 0px;
-	transition-property: height, transform;
-	transition-duration: shortmedduration;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	background-color: black;
-	vertical-align: bottom;
-	horizontal-align: right;
-}
-
-#SuggestedStatus
-{
-	transform: translatey( -44px );
-}
-
-#RecentRow #SuggestedStatus
-{
-	margin-right: 210px;
-	transform: translatey( 0px );
-}
-
-.AppGridItem:focus .GridItemNameRow, Button:focus #SuggestedStatus
- {
-	height: 76px;
-}
-
-.InstalledState
-{
-	width: 100%;
-	height: 3px;
-	background-color: installedblue;	
-	vertical-align: center;
-	horizontal-align: center;
-	margin-top: 3px;
-	margin-left: 5px;
-	margin-right: 5px;
-}
-
-.ReadyToPlay .InstalledState
-{
-	background-color: readytoplaygreen;	
-}
-
-.UnavailableOnPlatform .InstalledState
-{
-	background-color: #666666;
-}
-
 .AppGridItem:focus .AppImage
 {
 	opacity: 1.0;
@@ -3674,26 +3115,6 @@ LibraryMostRecent:descendantfocus .RecentApp:focus Label
 	width: 100%;
 }
 
-#MissingImageLabel
-{
-	opacity: 0.0;
-	horizontal-align: left;
-	margin-top: 130px;
-	padding-right: 60px;
-	padding-left: 60px;
-	font-size: 34px;
-	font-weight: light;
-	text-transform: uppercase;
-	color: #ffffff99;
-	background-color: black;
-	width: 100%;
-	height: 100%;
-	white-space: normal;
-	text-align: center;
-	transition-property: opacity, color;
-	transition-duration: shortduration;
-	transition-timing-function: bigpicture-ease-in-out;
-}
 #PopularRow .MissingAppImage #GameImage #MissingImageLabel,
 #UnPlayedRow .MissingAppImage #GameImage #MissingImageLabel {
 	font-size: 24px;
@@ -4252,7 +3673,7 @@ Grid .RightMouseScrollRegion
 	text-align: center;
 	border: 2px solid #00000000;
 	vertical-align: middle;
-	margin-top: 8px;
+	margin-top: 2px;
 	margin-left: 6px;
 }
 
@@ -4294,7 +3715,8 @@ Grid .RightMouseScrollRegion
 	visibility: visible;
 }
 
-KeyboardShortcut,.KeyboardShortcut
+KeyboardShortcut,
+.KeyboardShortcut
 {
 	horizontal-align: center;
 	flow-children: right;
@@ -4304,6 +3726,10 @@ KeyboardShortcut,.KeyboardShortcut
 	color: detailsdatalabel;
 	vertical-align: middle;
 	border-style: solid;
+}
+LibraryScreenshots:descendantfocus KeyboardShortcut,
+LibraryScreenshots:descendantfocus .KeyboardShortcut {
+	background-color: #000000;
 }
 
 KeyboardShortcut .Graphic
@@ -4329,17 +3755,7 @@ KeyboardShortcut Image
 	margin-top: 22px;
 }
 
-.PlayActionModal .LinksAndMore,
-.PlayActionModal .Achievements,
-.PlayActionModal .FriendsWhoPlay,
-.PlayActionModal .Guides,
-.PlayActionModal .CommunityHub,
-.PlayActionModal .RecentNews,
-.PlayActionModal .Workshop,
-.PlayActionModal .Screenshots
-.PlayActionModal .UpperRow,
-.PlayActionModal .Controller,
-.PlayActionModal .DLC
+.PlayActionModal #DesktopPanels
 {
 	desaturation: 0.3;
 	opacity: 0.7;
@@ -4388,7 +3804,7 @@ KeyboardShortcut Image
 	width: 80px;
 	height: 80px;
 	horizontal-align: right;
-	margin-top: 15px;
+	vertical-align: center;
 }
 
 .PlayAction .StreamAnimator2, .PlayAction .StreamAnimator3
@@ -4865,7 +4281,7 @@ LibraryDLCItem #Image
 	width: 158px;
 	height: 74px;
 	vertical-align: center;
-	margin-right: 6px;
+	margin-right: 4px;
 }
 
 LibraryDLCItem Label
@@ -4945,9 +4361,13 @@ LibraryDLC #DLCItems
 {
 	overflow: clip clip;
 	width: 100%;
-	height: 200px;
-	padding: 10px 0px 10px 10px;
+	height: 375px;
 	flow-children: right-wrap;
+	/* make this a composition layer to force clip (addressing current bug) */
+	opacity: 0.99;
+}
+#OverlayDashboard LibraryDLC #DLCItems {
+	height: 200px;
 }
 LibraryDLC LibraryDLCItem
 {
@@ -4957,9 +4377,9 @@ LibraryDLC LibraryDLCItem
 }
 LibraryDLCItem #Image.DLCPreviewImage
 {
-	width: 195px;
-	height: 91px;
-	margin: 8px 6px 0px 0px;
+	width: 190px;
+	height: 89px;
+	margin: 4px 4px 0px 0px;
 	transform: translateX( 0px );
 }
 
@@ -4968,8 +4388,8 @@ LibraryDLCItem .DLCInstallState
 	padding: 4px;
 	vertical-align: bottom;
 	horizontal-align: right;
-	background-color: #00000055;
-	margin-right: 6px;
+	background-color: #000000cc;
+	margin-right: 4px;
 }
 
 LibraryDLCItem .DLCInstallState.NotInstalled,
@@ -5564,7 +4984,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 .NxGridButtonRow
 {
-	margin-top: 20px;
+	margin-top: 37px;
 	margin-left: 70px;
 	width: 400px;
 	height: 100%;
@@ -5575,7 +4995,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 	opacity: 0.5;
 	transition-delay: 0.08s;
-	transition-duration: 0.3s;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
 	pre-transform-scale2d: 1;
@@ -5703,6 +5123,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	padding-right: 40px;
 	margin-left: 100px;
 	max-height: 900px;
+	flow-children: down;
 	overflow: squish scroll;
 }
 
@@ -5794,7 +5215,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .DownloadsSection {
 	flow-children: down;
 	height: 100%;
-	background-color: gradient( linear, 0% 0%, 3% 80%, from( #66c0f433 ), to( #66c0f400 ) );
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #051c2dff ), to( #051c2d00 ) );
 	margin: 0 30px 10px 0;
 	width: 1370px;
 	padding-left: 10px;
@@ -5867,7 +5288,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	pre-transform-scale2d: 0.95;
 
 	transition-property: transform, pre-transform-scale2d;
-	transition-duration: mediumduration;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 .suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button {
@@ -5897,7 +5318,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
-	transition-duration: mediumduration;
+	transition-duration: supershortduration;
 
 	transition-property: background-color, box-shadow, pre-transform-scale2d, border, transform;
 }
@@ -6299,6 +5720,7 @@ LibrarySuggestionsRow.Active
 	margin-left: 3px;
 	width: 20px;
 	height: 22px;
+	background-color: #00000000;
 }
 
 
@@ -6306,7 +5728,7 @@ LibrarySuggestionsRow.Active
 {
 	padding: 0px;
 	padding-left: 20px;
-	padding-top: 20px;
+	padding-top: 40px;
 	position: 0 0 0 0;
 }
 .SettingsContent

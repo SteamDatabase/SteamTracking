@@ -1,4 +1,4 @@
-@define MessageBoxAnimationDuration: 0.2s;
+@define MessageBoxAnimationDuration: 0.15s;
 
 //
 // Styles for tenfoot msg box
@@ -219,6 +219,11 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
+#MsgBoxButtons Button:focus Label
+{
+	transform: translatex( 0px );
+}
+
 #MsgBoxButtonsVertical Button Label
 {
 	horizontal-align: left;
@@ -226,13 +231,12 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 
 #MsgBoxButtons Button:hover, #MsgBoxButtonsVertical Button:hover
 {
-
 	pre-transform-scale2d: 1.03;
-
 }
 
 #MsgBoxButtons Button:focus Label,
-#MsgBoxButtonsVertical Button:focus Label {
+#MsgBoxButtonsVertical Button:focus Label
+{
 	color: #161718f5;
 }
 
@@ -307,17 +311,4 @@ EditAppLaunchOptions.BehindTextInputHandler .MsgBoxBodyRegion
 #MsgBoxHTMLContainer
 {
 	width: 100%;
-}
-
-LibraryRecentAddShortcutDialog#AddShortcut
-{
-	animation-name: none;
-	transition-property: opacity, blur, desaturation;
-	transition-duration: 0.3s;
-	opacity: 0.0;
-}
-
-LibraryRecentAddShortcutDialog#AddShortcut.TenfootMsgBox
-{
-	opacity: 1.0;
 }

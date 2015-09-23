@@ -1,0 +1,101 @@
+/*	welcome to steam main menu inline panel css style */
+
+WelcomeToSteam
+{
+	width:100%;
+}
+
+#WelcomeSection
+{
+	width:100%;
+	flow-children:down;
+}
+
+#WelcomeSection:Focus
+{
+	background-color: #2A5D7C;
+
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	animation-name: none;
+}
+
+
+#TitlePanel
+{
+	horizontal-align: center;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+#WelcomeTitle
+{
+	text-transform: uppercase;
+	font-size: 80px;
+	font-weight: light;
+	color: white;
+	text-align: center;
+	font-family: platformfont;
+}
+
+#UserHasNoProducts
+{
+	background-color: #0C2037;
+}
+
+.SubSection
+{
+	flow-children:down;
+	margin-bottom: 20px;
+}
+
+.SubPanel
+{
+	flow-children: right;
+	horizontal-align: center;
+}
+
+.SubPanel:focus
+{
+		box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
+}
+
+.SubPanel Image
+{
+	width: 400px;
+}
+
+.SubText
+{
+	flow-children: down;
+	
+	margin-left: 20px;
+	width: 1100px;
+}
+
+.SubHeader
+{
+	font-size: 40px;
+	color: white;
+	margin-top: 10px;
+}
+
+.SubDesc
+{
+	font-size: 25px;
+	color: white;
+	margin-top: 10px;
+	height: 120px;
+}
+
+.SubImages
+{
+	flow-children: down;
+}
+
+.Bulletpoints
+{
+	flow-children: down;
+	font-size: 30px;
+	color: white;
+	margin-top: 10px;
+}

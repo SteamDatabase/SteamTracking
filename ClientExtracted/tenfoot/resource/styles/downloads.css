@@ -166,3 +166,49 @@ DownloadsListItem:descendantfocus .DownloadBarBackground
 {
 	visibility: collapse;	
 }
+
+#DownloadsSummary
+{
+	visibility: visible;
+	height: 240px;
+	width: 100%;
+}
+
+#DownloadsSummaryLegend
+{
+	position:40px 40px 0px;
+	height: 200px;
+	width: 400px;
+	flow-children: down;
+}
+
+.DownloadsGraphPanel
+{
+	visibility: visible;
+	height: 200px;
+	width: 864px; // 48 samples * 18 width
+	position:420px 20px 0px;
+}
+
+.DownloadsGraphContainer
+{
+	visibility: visible;
+	height: 100%;
+	width: 100%;
+	flow-children: right;
+	horizontal-align:right;
+	overflow:clip clip;
+}
+
+.DownloadsGraphEntry
+{
+	visibility: visible;
+	width: 18px;
+	height: 0px;
+	background-color: #ffffffff;
+	
+	vertical-align:bottom;
+	transition-property:position;
+	transition-duration:0.2s;
+	transform:translatex(-18px);
+}

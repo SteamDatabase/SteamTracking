@@ -1,0 +1,56 @@
+<root>
+	<styles>		
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/welcometosteam.css" />
+	</styles>
+	
+	<WelcomeToSteam onactivate="OpenBelowTheFold();" oncancel="CloseBelowTheFold();" onmoveup="HandleWelcomeMoveUp();" selectionpos="auto">
+		<Panel id="WelcomeSection" defaultfocus="UserHasNoProducts" tabindex="auto">
+			<Panel id="TitlePanel"> 
+				<Label id="WelcomeTitle" text="#MainMenu_Welcome_Header" />
+			</Panel>
+			
+			<Panel id="UserHasNoProducts" class="SubSection">
+				<Panel class="SubPanel">
+					<Image class="SubImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" />
+					<Panel class="SubText"> 
+						<Label class="SubHeader" text="#MainMenu_Welcome_Sub_NoProd_H" />
+						<Label class="SubDesc" text="#MainMenu_Welcome_Sub_NoProd_D" />
+					</Panel>
+				</Panel>
+			</Panel>	
+			
+			<Panel id="UserHasNoFriends" class="SubSection">
+				<Panel class="SubPanel">
+					<Image class="SubImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" />
+					<Panel class="SubText"> 
+						<Label class="SubHeader" text="#MainMenu_Welcome_Sub_NoFriends_H" />
+						<Label class="SubDesc" text="#MainMenu_Welcome_Sub_NoFriends_D" />
+					</Panel>
+				</Panel>
+			</Panel>	
+			
+			<Panel id="UserHasSteamController" class="SubSection">
+				<Panel class="SubPanel">
+					<Panel class="SubImages">
+						<Image id="controller_image_1" class="SubImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" />
+						<Image id="controller_image_2" class="SubImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" />
+						<Image id="controller_image_3" class="SubImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" />
+						<Image id="controller_image_4" class="SubImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" />
+					</Panel>
+					<Panel class="SubText"> 
+						<Label class="SubHeader" text="#MainMenu_Welcome_Sub_Controller_H" />
+						<Label class="SubDesc" text="#MainMenu_Welcome_Sub_Controller_D" />
+						<Panel class="Bulletpoints">
+							<Label id="controller_section_1" class="SubSection" text="#MainMenu_Welcome_Sub_Controller_1" />
+							<Label id="controller_section_2" class="SubSection" text="#MainMenu_Welcome_Sub_Controller_2" />
+							<Label id="controller_section_3" class="SubSection" text="#MainMenu_Welcome_Sub_Controller_3" />
+							<Label id="controller_section_4" class="SubSection" text="#MainMenu_Welcome_Sub_Controller_4" />
+							<Label id="controller_section_5" class="SubSection" text="#MainMenu_Welcome_Sub_Controller_5" />
+						</Panel>
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+	</WelcomeToSteam>
+</root>

@@ -64,6 +64,8 @@ message CMsgRemoteClientBroadcastStatus {
 	repeated .CMsgRemoteClientBroadcastStatus.User users = 9;
 	optional int32 euniverse = 11;
 	optional uint32 timestamp = 12;
+	optional bool screen_locked = 13;
+	optional bool games_running = 14;
 }
 
 message CMsgRemoteClientBroadcastDiscovery {

@@ -4832,7 +4832,6 @@
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
  T char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
- T dyld_stub_binding_helper
  T netadr_t::BlockingResolveAndSetFromString(char const*)
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToString(char*, unsigned int, bool) const
@@ -7834,6 +7833,7 @@
  _Unwind_Resume
  __CFConstantStringClassReference
  __assert_rtn
+ __bzero
  __cxa_atexit
  __cxa_bad_typeid
  __cxa_begin_catch
@@ -8268,7 +8268,6 @@
  d construction vtable for (anonymous namespace)::GripPanel-in-(anonymous namespace)::CaptionGripPanel
  d construction vtable for vgui::Button-in-(anonymous namespace)::ScrollBarButton
  d construction vtable for vgui::Label-in-(anonymous namespace)::ScrollBarButton
- d dyld__mach_header
  d floatconverter
  d fontconverter
  d g_ColInfo
@@ -8296,6 +8295,7 @@
  dlopen
  dlsym
  dup
+ dyld_stub_binder
  fflush
  floor
  floorf

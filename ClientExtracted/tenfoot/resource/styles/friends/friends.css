@@ -14,13 +14,13 @@ Friends
 {
 	perspective: 1000;
 	perspective-origin: 50% 50%;
-	position: 0px 0px 0%;
+	position: 0px 40px 0%;
 	width: 1920px;
-	height: 1080px;
+	height: 1000px;
 	visibility: visible;
 
 	font-family: platformfont;
-
+background-color: gradient( linear, 0% 100%, 100% 100%, from( #0b2236ff ), color-stop( 0.5, #143451ff ), to( #0b2236ff ) );
 	animation-duration: 1.6s;
 	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
@@ -44,14 +44,14 @@ Friends.SlideAwayToLeft
 {
 	opacity: 0.0;
 	transform-origin: 0% 0% parent-relative;
-	transform: translateX( -1920px ) rotateX( 45deg ) translateZ( -1000px );
+	transform: translateX( -1920px ) rotateX( 0deg ) translateZ( 0px );
 }
 
 Friends.SlideAwayToRight
 {
 	opacity: 0.0;
 	transform-origin: 0% 0% parent-relative;
-	transform: translateX(  1920px ) rotateX( 45deg ) translateZ( -1000px );
+	transform: translateX(  1920px ) rotateX( 0deg ) translateZ( 0px );
 }
 
 Friends.FriendsProfileDetailsVisible #BodyWrapper

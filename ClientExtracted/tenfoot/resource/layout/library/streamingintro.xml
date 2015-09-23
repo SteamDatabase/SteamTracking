@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 
 	</styles>
@@ -26,10 +25,10 @@
 			<Panel id="MsgBoxHTMLContainer" />		
 		
 			<Panel id="MsgBoxButtons">	
-				<Button id="ButtonOK" class="ButtonOK MsgBoxButton" onactivate="ButtonOK();">
+				<Button id="ButtonOK" class="ButtonOK MsgBoxButton Button" onactivate="ButtonOK();">
 					<Label id="OKButtonText" />
 				</Button>
-				<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton" onactivate="ButtonCancel();">
+				<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button" onactivate="ButtonCancel();">
 					<Label id="CancelButtonText" />
 				</Button>
 			</Panel>

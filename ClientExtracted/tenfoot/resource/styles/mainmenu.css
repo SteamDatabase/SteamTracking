@@ -1,6 +1,12 @@
 /*	main menu screen css style */
 @define topmostzindex: 1000;
 
+@define mediumduration: 0.4s;
+
+@define MainMenuZIndex: 200;
+@define MainContentsZIndex: 300;
+@define MainContentsBGZIndex: 198;
+
 MainMenu
 {
 	perspective: 1000;
@@ -41,10 +47,10 @@ MainMenu
 
 MainMenu.SlideAwayToLeft
 {
-	opacity: 0.0;
+	opacity: 1.0;
 
 	transform-origin: 0% 0% parent-relative;
-	transform: translateX( -1920px ) rotateX( 45deg ) translateZ( -1000px );
+	transform: translateX( 0px ) rotateX( 0deg ) translateZ( 0px );
 }
 
 MainMenu.SlideAwayToRight
@@ -52,7 +58,7 @@ MainMenu.SlideAwayToRight
 	opacity: 0.0;
 
 	transform-origin: 0% 0% parent-relative;
-	transform: translateX(  1920px ) rotateX( 45deg ) translateZ( -1000px );
+	transform: translateX(  0px ) rotateX( 0deg ) translateZ( 0px );
 }
 
 .BehindMessageBox #BodyWrapper
@@ -60,11 +66,6 @@ MainMenu.SlideAwayToRight
 	desaturation: 0.2;
 	blur: gaussian( 1.5 );
 	wash-color: #00000066;
-}
-
-.SystemMenuVisible #TopRow
-{
-		opacity: 0.0;
 }
 
 .BehindMessageBox.SearchWheel #BodyWrapper
@@ -133,11 +134,45 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 	width: 100%;
 	height: 100%;
 	opacity-mask: none;
-	z-index: 100;
+  background-color: #1c486955;
 
-	transition-property: blur, desaturation, opacity, wash-color;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
+
+	transition-property: blur, desaturation, opacity, transform, wash-color;
+	transition-duration: PageTransitionTimeOff;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+MainMenu #BodyWrapper
+{
+	z-index: -1;
+	transform: translatey( -300px );
+}
+
+MainMenu #BodyWrapper.StoreVisible
+{
+	transform: translatey( -550px );
+}
+
+MainMenu #BodyWrapper:descendantfocus,
+MainMenu #BodyWrapper.StoreVisible:descendantfocus
+{
+	z-index: 100;
+	transform: translatey( 0px );
+}
+
+MainMenu.BelowTheFoldOpen #BodyWrapper:descendantfocus
+{
+	transform: translatey( -510px );
+}
+
+MainMenu #BodyWrapper:descendantfocus #GameRowContents
+{
+	opacity: 1.0;
+}
+
+MainMenu #BodyWrapper #GameRowContents
+{
+	opacity: 0.0;
 }
 
 .PlayActionModal #BodyWrapper
@@ -159,7 +194,7 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 
  .HomeGlow
 {
-	opacity: 0.8;
+	opacity: 0.0;
 	width: 100%;
 	height: 600px;
 	z-index: -1000;
@@ -221,30 +256,42 @@ MainMenu.StackDepth3 .HomeGlow
 		pre-transform-scale2d: 1.0;
 		blur: none;
 	}
-
 }
 
 #TopRow
 {
-	margin: 0px;
-	margin-right: 10px;
-	padding: 65px 66px;
+  margin-top: 96px;
 	vertical-align: top;
-	height: 263px;
-	width: 100%;
-	z-index: 2000;
-
-	transition-property: blur, desaturation, opacity, transform !immediate;
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-	transition-timing-function: linear, ease-out;
-}
-
-MainMenu.StackDepth2 #TopRow,
-MainMenu.StackDepth3 #TopRow
+	opacity:0.7;
+	width: 1920px;
+	horizontal-align: right;
+	z-index: MainMenuZIndex;
+	flow-children: right;
+	transition-property: blur, desaturation, opacity, transform;
+	transition-duration: PageTransitionTimeOff;
+	transition-timing-function: bigpicture-ease-in-out;
+ }
+ 
+#TopRowRight
 {
-	transform: translate3d( 0%, -50%, 0% );
+ 	horizontal-align: right;
+ 	flow-children: right;
+ 	margin-right:240px;
 }
+
+#TopRowLeft
+{
+ 	flow-children: right;
+ 	horizontal-align: left;
+ 	margin-left:240px;
+}
+
+.StackDepth2 #NavigationBar,
+.StackDepth3 #NavigationBar,
+{
+	position: 0px 0px 0px;
+}
+
 
 .TopRowBlurry
 {
@@ -268,204 +315,27 @@ MainMenu.StackDepth3 #TopRow
 	color: messagecolorwash;
 }
 
-.TopRowBase .ShortDesc
+.HR
 {
+	width: 1900px;
+	height: 2px;
+	horizontal-align: center;
+	margin-top: 236px;
 	opacity: 1.0;
-
-	transition-property: opacity, max-width;
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-	transition-timing-function: linear, ease-out;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #1c486900 ), color-stop( 0.5, #1c4869ff ), to( #1c486900 ) );
+	z-index: MainMenuZIndex;
+	
+	transition-property: opacity, position, transform;
+	transition-duration: PageTransitionTimeOff;
+	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.TopRowBase .LongDesc
+#HR2.HR
 {
-	max-width: 0px;
-	opacity: 0.0;
-
-	transition-property: max-width, color, opacity;
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-	transition-timing-function: linear, ease-out;
+	margin-top: 508px;
 }
 
-.CursorVisible .LongDesc
-{	
-	opacity: 0.0;
 
-	transition-property: max-width, opacity;
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-}
-
-.CursorVisible .ShortDesc
-{	
-	opacity: 1.0;
-}
-
-.TopRowFocused .LongDesc
-{
-	max-width: 310px;
-	opacity: 1.0;
-	text-overflow: ellipsis;
-
-	transition-property: opacity, max-width;
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-}
-
-.TopRowBase .SmDesc, .TopRowBase .SmDesc2
-{
-	opacity: 0.0;
-
-	transition-property: opacity, transform, max-width;
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-	transition-timing-function: ease-out;
-}
-
-.TopRowFocused .SmDesc, .TopRowBase .SmDesc2
-{
-	opacity: 1.0;
-
-	transition-property: opacity;
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-	transition-timing-function: ease-out;
-}
-
-#BetaButton Image
-{
-	wash-color: ui_primary_color;
-
-	transition-duration: 0.3s;
-	transition-property: wash-color;
-	transition-timing-function: ease-out;
-}
-
-#BetaButton:hover Image
-{
-	wash-color: ui_common_control_hover; 
-
-	transition-duration: 0.3s !immediate;
-}
-
-#BetaButton:Focus Image
-{
-	wash-color: #c4c4c4ff; 
-
-	transition-duration: 0.3s !immediate;
-
-	animation-name: beta-image-wash-pulse; 
-	animation-duration: 1.7s;
-	animation-delay: 0.2s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-#ParentalLockButton .SmDesc, #ParentalLockButton .SmDesc2, #GoOnlineButton .SmDesc
-{
-	height: 20px;
-	opacity: 0.0;
-	text-overflow: clip;
-	text-transform: uppercase;
-	font-size: 18px;
-	font-weight: medium;
-}
-
-.TopRowFocused  #ParentalLockButton .SmDesc,
-.TopRowFocused  #ParentalLockButton .LongDesc
-{
-	opacity: 1.0;
-}
-
-#ParentalLockButton:focus .SmDesc, #ParentalLockButton:focus .SmDesc2, #GoOnlineButton .SmDesc
-{
-	opacity: 1.0;
-	visibility: visible;
-}
-
-#ParentalLockImageOverlay
-{
-	width: 64px;
-	height: 64px;
-	margin-bottom: 2px;
-	vertical-align: center;
-	opacity: 1.0;
-}
-
-#Clock
-{
-	transition-property: opacity;
-	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
-	transition-timing-function: linear, ease-out;
-}
-
-.TopRowFocused #Clock
-{
-	opacity: 0.0;
-}
-
-.TopRowFocused .ShortDesc
-{
-	opacity: 0.0; 
-}
-
-Button:hover .LongDesc, ParentalButton:hover .LongDesc, #ParentalLockButton:hover .ParentalLockButtonLabels, #GoOnlineButton:hover .GoOnlineButtonLabels
-{
-	max-width: 310px;
-	opacity: 1.0;
-	visibility: visible;
-
-	transition-delay: 0.08s;
-	transition-duration: 0.3s;
-	transition-property: opacity, max-width;
-}
-
-Button:hover .ShortDesc
-{
-	opacity: 0.0;
-
-	transition-delay: 0.08s;
-}
-
-.TopRowBase:descendantfocus .LongDesc,
-{
-	opacity: 1.0;
-	visibility: visible;
-
-	transition-property: opacity, max-width;
-	transition-delay: 0.08s;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-in;
-}
-
-.LongDescSm
-{
-	font-size: 28px;
-}
-
-.InboxButtonImage
-{
-	background-image: url( "file://{images}/inbox.png" );
-	width: 44px;
-	height: 44px;
-	wash-color: messagecolorwash;
-}
-
-#Inbox:focus .InboxButtonImage
-{
-	wash-color: #1c2c5cff;
-
-	animation-name: image-wash-pulse;
-	animation-duration: 1.7s;
-	animation-delay: 0.08s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
 
 .SteamUpdated .InboxButtonImage
 {
@@ -494,87 +364,6 @@ Button:hover .ShortDesc
 }
 
 
-.TopRowBase Button, InboxMenu Button, ParentalButton
-{
-	box-shadow: box_shadow_off_color -4.5px -4.5px 16px 10px;
-	border: 5px solid #0d1c2200;
-	color: tcexitrow;
-	background-color: #0d192100;
-
-	transition-property: border, blur, background-color, color, transform, max-width, opacity, box-shadow;
-	transition-duration: 0.23s;
-	transition-timing-function: ease-out;
-}
-
-.TopRowBase Button, InboxMenu Button
-{
-	padding: 6px 6px;
-}
-
-.TopRowBase Button:hover, InboxMenu Button:hover, ParentalButton:hover
-{
-	color: tcexitrowhover;
-	box-shadow: box_shadow_mid_color -5px -5px 6px 10px;
-}
-
-.TopRowBase Button:focus, InboxMenu Button:focus, ParentalButton:focus
-{
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	color: tcexitrowfocus;
-	padding: 6px 6px;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	// Remove border, so we dont transition border out on focus lost, that looks weird.
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-	transition-property: blur, background-color, color, max-width, transform;
-	transform: translatez( 0px );
-
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.3s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-.TopRowBase Button:focus Label, InboxMenu Button:focus Label, ParentalButton:focus Label
-{
-	color: applabelselectedsolid;	
-}
-
-.TopRowBase Button Image, InboxMenu Button Image, ParentalButton Image, #BatteryPanel Image
-{
-	wash-color: ui_primary_color;
-
-	transition-duration: 0.3s;
-	transition-property: wash-color;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-.TopRowBase Button:hover Image, InboxMenu Button:hover Image, ParentalButton:hover Image
-{
-	wash-color: ui_common_control_hover; 
-
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-}
-
-.TopRowBase Button:Focus Image, InboxMenu Button:Focus Image, ParentalButton:Focus Image
-{
-	wash-color: #1c2c5cff;
-
-	animation-name: image-wash-pulse;
-	animation-duration: 1.7s;
-	animation-delay: 0.08s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
 .TopRowBase Button.SystemIMButtonFocusDisabled
 {
 	border-width: 5px;
@@ -599,7 +388,7 @@ Button:hover .ShortDesc
 
 .HiddenButton
 {
-	visibility: collapse;
+	//visibility: collapse;
 }
 
 .VisibleButton
@@ -715,45 +504,6 @@ Button:hover .ShortDesc
 
 }
 
-#AvatarInfoRow
-{
-	flow-children: right;
-	color: tcexitrow;
-	font-size: 30px;
-	margin-top: 4px;
-	padding: 10px;
-	vertical-align: center;
-}
-
-#AvatarInfoRow Button, ParentalButton
-{
-	vertical-align: center;
-}
-
-#DownloadsButton
-{
-	flow-children: right;
-}
-
-#TopRow #SystemIMs
-{
-	flow-children: right;
-	margin-left: 0px;
-	padding: 6px 6px;
-}
-
-#TopRow #Inbox
-{
-	flow-children: right;
-	margin-left: 0px;
-	padding: 6px;
-	opacity: 0.0;
-}
-
-.IncomingInboxItems #TopRow #Inbox
-{
-	opacity: 1.0;
-}
 
 .SupportMessage #Inbox
 {
@@ -768,36 +518,37 @@ Button:hover .ShortDesc
 #Clock
 {
 	vertical-align: center;
-	font-size: 30px;
+	font-size: 26px;
 	margin-right: 16px;
-	margin-bottom: 2px;
-	color: messagecolorwash;
+margin-bottom: 36px;
 	flow-children: right;
+	horizontal-align: center;
+				transform: translatex(0px) translatey(36px);
+
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	transition-delay: 0.0s !immediate;
+	transition-timing-function: linear, ease-out;
+	
 }
 
 #Clock #Time
 {
+	color: #0D79A0;
 	margin-right: 8px;	
+	horizontal-align: right;
 }
 
-#DownloadsButton Image, #SystemIMs Image, #Inbox Image
+#Clock #Suffix
 {
-	vertical-align: center;
+	color: #0D79A0;
+	horizontal-align: left;
+	margin-right: 0px;
 }
 
-#DownloadsButton Label, #SystemIMs Label, #Inbox Label, InboxMenu Button Label
-{
-	font-size: 30px;
-	margin-left: 6px;
-	margin-right: 6px;
-	vertical-align: center;
-}
 
 #BetaButton
 {
-	width: 110px;
-	height: 100px;
-	flow-children: right;
 	opacity: 0.0;
 	visibility: collapse;
 }
@@ -809,27 +560,17 @@ Button:hover .ShortDesc
 	visibility: visible;
 }*/
 
-#BetaButton Label
-{
-	margin-right: 12px;
-}
-
-#Avatar
-{
-	margin-right: 15px;
-	margin-left: 32px;
-}
-
 	
 #SelfAvatar
 {
 	border-style: solid;
 	border-width: 4px;
 	border-radius: 0px;
-	height: 91px;
-	width: 91px;
+	height: 128px;
+	width: 128px;
 	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;
 
+	
 	transition-property: pre-transform-scale2d;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-out;
@@ -837,27 +578,16 @@ Button:hover .ShortDesc
 
 #SelfAvatar:hover
 {
-	pre-transform-scale2d: 1.05;
+	//pre-transform-scale2d: 1.05;
 
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
 }
 
-#SettingsExitRow
-{
-	vertical-align: center;
-	horizontal-align: right;
-	flow-children: right;
-	color: tcexitrow;
-	font-size: 30px;
-	padding: 10px;
-}
 
 .MusicGuideButton
 {
-	flow-children: right;
-	vertical-align: center;
-	visibility: collapse;
+	//visibility: collapse;
 }
 
 .MusicGuideVisible .MusicGuideButton
@@ -865,12 +595,6 @@ Button:hover .ShortDesc
 	visibility: visible;
 }
 
-#SettingsButton
-{
-	flow-children: right;
-	vertical-align: center;
-	padding: 6px;
-}
 
 #BatteryPanel
 {
@@ -878,7 +602,7 @@ Button:hover .ShortDesc
 	vertical-align: center;
 	padding: 6px;
 	
-	visibility: collapse;
+	//visibility: collapse;
 }
 
 .BatteryVisible #BatteryPanel
@@ -893,25 +617,6 @@ Button:hover .ShortDesc
 	visibility: collapse;
 }
 
-#Exit
-{
-	flow-children: right;
-	vertical-align: center;
-}
-
-#BetaButton Image, #SettingsButton Image, #Exit Image, #ParentalLockButton Image, #GoOnlineButton Image, .MusicGuideButton Image, #BatteryPanel Image
-{
-	vertical-align: center;
-	horizontal-align: center;
-}
-
-#BetaButton Label, #SettingsButton Label, #Exit Label, #Settings Label, #ParentalLockButton Label, #ParentalLockButton, #GoOnlineButton Label, .MusicGuideButton Label
-{
-	vertical-align: center;
-	padding-left: 4px;
-	margin-top: 0px;
-}
-
 	
 .SteamLogo
 {
@@ -923,24 +628,41 @@ Button:hover .ShortDesc
 
 #MenuRow
 {
-	padding-top: 15px;
-	margin-bottom: 115px;
 	horizontal-align: center;
-	vertical-align: center;
+	//vertical-align: center;
+	margin-top: 256px;
+	margin-left: -64px;
 	font-size: 33;
 	background-color: #00000000;
-	height: 170px;
-	z-index: topmostzindex;
-
+	height: fit-children;
+	width: 2048px;
+	z-index: MainMenuZIndex;
+  overflow:noclip noclip;
 	transform-origin: 0% 0% parent-relative;
-	transition-property: blur, desaturation, opacity, transform, opacity;
-	transition-duration: 0.35s;
+	transform: translateY( -8px ) rotateX( 0deg ) translateZ( -64px );
+  opacity-mask: url( "file://{images}/systemmenu/menu_mask.png" );
+	transition-property: blur, desaturation, opacity, transform, opacity-mask;
+	transition-duration: PageTransitionTimeOff;
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
 #TopRowContents:descendantfocus
 {
 	z-index: topmostzindex;
+	width: 100%; 
+	height: 100%;
+}
+
+
+#TopRow:descendantfocus
+{
+	opacity:1.0;
+}
+
+
+#MainRowContents
+{
+	z-index: MainContentsBGZIndex;
 }
 
 #MainRowContents:descendantfocus
@@ -950,22 +672,37 @@ Button:hover .ShortDesc
 	height: 100%;
 }
 
+
 #MenuRowButtons
 {	
 	flow-children: right;
 	horizontal-align: center;
 	vertical-align: center;
+	opacity:0.7;
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.3s, 0.3s !immediate;
+	transition-timing-function: linear;
 }
 
-MainMenu.StackDepth2 #MenuRow
+#MenuRowButtons:descendantfocus
 {
-	blur: gaussian( 1.5 );
-	desaturation: 0.15;
-	opacity: 0.7;
-	wash-color: bgcolorwashmedium;
+	opacity:1.0;
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.5s, 0.5s !immediate;
+	transition-timing-function: linear;
+}
 
-	transform-origin: 0% 0% parent-relative;
-	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.72, 0.72, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -430px );
+
+#MenuRowLeftButton
+{
+	horizontal-align: left;
+	vertical-align: center;
+}
+
+#MenuRowRightButton
+{
+	horizontal-align: right;
+	vertical-align: center;
 }
 
 MainMenu.StackDepth2 .HomeGlow
@@ -981,17 +718,6 @@ MainMenu.StackDepth2 #MenuRow:hover
 	blur: gaussian( 0.2 );
 	desaturation: 0.02;
 	opacity: 0.85;
-}
-
-MainMenu.StackDepth3 #MenuRow
-{
-	blur: gaussian( 2.0 );
-	desaturation: 0.15;
-	opacity: 0.60;
-	wash-color: bgcolorwashmedium;
-
-	transform-origin: 0% 0% parent-relative;
-	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.52, 0.52, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( -475px );
 }
 
 
@@ -1010,200 +736,560 @@ MainMenu.StackDepth3 #MenuRow:hover
 	opacity: 0.75;
 }
 
-MainMenu #MenuRow.MenuRowHidden, MainMenu.ScreenshotSlideshowVisible #MenuRow
+MainMenu.ScreenshotSlideshowVisible #MenuRow
 {
 	opacity: 0.0;
 }
 
-MainMenu.StackDepth1 #MenuRow.MenuRowUnfocused.MenuRowHidden
-{
-	opacity: 0.0;
-
-	transform-origin: 0% 0% parent-relative;
-	transform: translate3d( -50%, -50%, 0% ) scale3d( 0.72, 0.72, 1.0 ) translate3d( 50%, 50%, 0% ) translateY( 220px );
-}
 
 .Button
 {
 	horizontal-align: center;
 	vertical-align: center;
-	width: 445px;
-	height: 106px;
-	margin: 10px 8px;
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414230;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #111414ff ), to( #070708ff ) );
+	width: 360px;
+	height: 160px;
+	margin: 10px 10px;
+	background-color: #1c4869;
 
-	padding: 0px;
-
-	transform: translatez( -120px );
 	transition-property: border, blur, background-color, color, transform, box-shadow;
 	transition-timing-function: ease-out;
-	transition-duration: 0.23s;
+	transition-duration: 0.3s;
 }
 
-.Button:active
+.Button.TopRowButton
 {
-	transition-duration: 0.3s;
+	background-color: #1c486900;
+	box-shadow: none;
 }
 
 .Button:hover
-{
-	transition-duration: 0.3s;
-	background-color: all_games_hover;
+{	
+	background-color: #15a4d5;
 	box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
-
-	transform: translatez( -100px );
 }
 
 .Button:parentdisabled:hover
 {
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
 	box-shadow: none;
-
-	transform: translatez( -150px );
 }
 
 .Button:focus
 {
+	border-style: solid;
+	border-width: 5px;
+
+	border-color: #b6e1faff;
+	background-color: #2A5D7C00 ;
+  box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	animation-name: none;
+	//shedding steamstyles animation timing, causes incorrect results here
+	transition-duration: 0.0s;
+}
+
+
+.MainMenuButton
+{
+	opacity: 1.0;
+	width: 460px;
+	height: 215px;
+	padding: 0px;
+	border-radius: 8px;
+	
+}
+
+.MainMenuButton .MainMenuCapsuleOver
+{
+	background-image: url( "file://{images}/systemmenu/capsule_glow.png" );
+	opacity: 0.0;
+	width: 460px;
+	height: 215px;
+	z-index: -1;
+	}
+
+.EdgeButtonLeft .MainMenuCapsuleOver
+{
+	background-image: url( "file://{images}/systemmenu/capsule_glow.png" );
+	opacity: 0.0;
+	width: 460px;
+	height: 215px;
+	padding: 0px;
+	margin: 0px;
+	margin-top: -4px;
+	}
+
+.EdgeButtonLeft .MainMenuCapsuleOver
+{
+		opacity-mask: url( "file://{images}/systemmenu/capsule_mask.png" );
+		opacity: 0.0;
+}
+
+.EdgeButtonLeft:focus .MainMenuCapsuleOver
+{
+	transform: translatey(0px);
+
+		opacity: 1.0;
+}
+
+.EdgeButtonRight .MainMenuCapsuleOver
+{
+	background-image: url( "file://{images}/systemmenu/capsule_glow.png" );
+	opacity: 0.0;
+	width: 460px;
+	height: 215px;
+	padding: 0px;
+	margin: 0px;
+	margin-top: -4px;
+	}
+
+.EdgeButtonRight .MainMenuCapsuleOver
+{
+		opacity-mask: url( "file://{images}/systemmenu/capsule_mask.png" );
+		opacity: 0.0;
+}
+
+.EdgeButtonRight:focus .MainMenuCapsuleOver
+{
+	transform: translatey(0px);
+
+		opacity: 1.0;
+}
+
+
+.MainMenuButton:focus
+{
+	border-radius: 8px;
+}
+
+
+#LibraryButton
+{
+		background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+
+}
+
+
+.MainMenuButton .MainMenuCapsuleOver
+{
+		opacity-mask: url( "file://{images}/systemmenu/capsule_mask.png" );
+		opacity: 0.0;
+}
+
+.MainMenuButton:focus .MainMenuCapsuleOver
+{
+	transform: translatey(0px);
+
+		opacity: 1.0;
+}
+
+#CommunityButton
+{
+	background-image: url( "file://{images}/systemmenu/capsule_02.jpg" );
+}
+
+#StoreButton
+{
+	background-image: url( "file://{images}/systemmenu/capsule_04.jpg" );
+}
+
+#WebButton
+{
+	background-image: url( "file://{images}/systemmenu/capsule_02.jpg" );
+}
+
+#FriendsButton
+{
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+}
+
+
+
+.TopRowButton
+{
+	flow-children: down;
+	width: 96px;
+	height: 96px;
+	margin-left: 16px;
+	margin-right: 16px;
+	vertical-align: center;
+	padding: 0px;
+}
+
+.EdgeButton
+{
+	width: 460px;	
+	opacity: 0.9;
+	height: 215px;
+	padding: 0px;
+	margin: 0px;
+
+	border-radius: 12px;
+	padding-top: 4px;
+	vertical-align: bottom;
+
+	box-shadow: none;
+
+	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+}
+
+.EdgeButton:focus
+{
+	height: 225px;
+	background-position: 0px 5px;
+}
+
+
+.Button.EdgeButton Label
+{
+	background-color: #0C203766;
+	height: 52px;
+	margin-bottom: 8px;
+	padding: -2px;
+	font-size: 48px;
+	transform: translatey(64px);
+	
+	transition-property: opacity, transform;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+}
+
+.EdgeButton Image
+{
+	width: 200px;
+	height: 200px;
 	horizontal-align: center;
 	vertical-align: center;
-	transition-duration: 0.3s;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+	margin: 10px;
+	wash-color: ui_primary_color;
+	color: #8bcdf2;
+	opacity: 1.0;
+	transform: translatey(0px);
 
-	padding: 0px;
-
-	transform: translatez( 0px );
-	transition-duration: 0.3s;
-
-	animation-name: main-button-glow-movement, quick-blur;
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: bigpicture-ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
-	animation-direction: normal;
-
+	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
 }
 
-.Button:descendantfocus:hover
+.EdgeButtonLeft
 {
-	transform: translateZ( 25px );
+	margin-left: -164px;
 }
 
+.EdgeButtonRight
+{
+	margin-right: -164px;
+}
+
+
+.EdgeButtonLeft Image
+{
+	margin-left: 230px;
+}
+
+.EdgeButtonRight Image
+{
+	margin-right: 230px;
+}
+
+.EdgeButtonLeft Label
+{
+	margin-left: 230px;
+}
+
+.EdgeButtonRight Label
+{
+	margin-right: 230px;
+}
+
+
+.EdgeButtonRight:focus,
+.EdgeButtonLeft:focus
+{
+	transform: translatex( 0px );
+}
+
+.EdgeButtonRight:focus Image,
+.EdgeButtonLeft:focus Image
+{
+		wash-color: #8bcdf2;
+		transform: translatex(0px) translatey(-10px);
+}
+
+
+.MainMenuButton .EdgeButtonLeft Image
+{
+		wash-color: #8bcdf2;
+		transform: translatex(32px) translatey(-10px);
+}
+
+.MainMenuButton .EdgeButtonRight Image
+
+{
+		wash-color: #8bcdf2;
+		transform: translatex(32px) translatey(-10px);
+}
+
+
+.MiddleTopWrapper
+{
+		flow-children: down;
+		width: 200px;
+		margin-top: 10px;
+}
+
+.MiddleTopWrapper Image
+{
+		horizontal-align: center;
+		wash-color: #1b81a9;
+			transform: translatex(0px) translatey(31px);
+		height: 96px;
+		width: 96px;
+}
+
+// make sure the random username fits in this label and is uppercase
 #ProfileLabel
 {
 	text-transform: uppercase;
 	padding-left: 10px;
 	padding-right: 10px;
 	text-overflow: clip;
-	color: applabel;
 }
 
-.InsideLibrary #LibraryButton, .InsideStore #StoreButton, .InsideCommunity #CommunityButton, .InsideProfile #ProfileButton,
-.StackDepth2 #LibraryButton:active, .StackDepth2 #StoreButton:active, .StackDepth2 #CommunityButton:active,
-.StackDepth3 #LibraryButton:active, .StackDepth3 #StoreButton:active, .StackDepth3 #CommunityButton:active
+.GameRowContents:descendantfocus
 {
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-}
+	 	wash-color: #ffffff;
+	}
 
-.ButtonLeft:focus
+.GameRowContents
 {
-	transform: translatex( 42px ) translatez( 0px );
+	margin-top: 620px;
+	width: 100%;
+	height: 512px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e203600 ), color-stop( 0.5, #0C3251ff ),to( #0e203600 ) );
+	flow-children: right;
+	wash-color: #8bcdf2;
+  opacity:0.7;
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.3s, 0.3s !immediate;
+	transition-timing-function: linear;
 }
 
-.ButtonLeft:hover
+.WelcomeNewAccount .GameRowContents
 {
-	transform: translatex( 5px ) translatez( -100px );
+	visibility:collapse;
 }
 
-.ButtonLeft:focus:hover
+.GameRowContents:descendantfocus
 {
-	transform: translateX( 48px ) translateZ( 25px );
+	transform: translatex(0px) translatey(-32px);
+  opacity:1.0;
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.2s, 0.2s !immediate;
+	transition-timing-function: linear;
 }
 
-.ButtonLeftCenter:focus
-{
-	transform: translatex( 21px ) translatez( 0px );
-}
-
-.ButtonLeftCenter:hover
-{
-	transform: translatex( 2px ) translatez( -100px );
-}
-
-.ButtonLeftCenter:focus:hover
-{
-	transform: translateX( 24px ) translateZ( 25px );
-}
-
-.ButtonRight:focus
-{
-	transform: translatex( -42px ) translatez( 0px );
-}
-
-.ButtonRight:hover
-{
-	transform: translatex( -5px ) translatez( -100px );
-}
-
-.ButtonRight:focus:hover
-{
-	transform: translateX( -48px ) translateZ( 25px );
-}
-
-.ButtonRightCenter:focus
-{
-	transform: translatex( -21px ) translatez( 0px );
-}
-
-.ButtonRightCenter:hover
-{
-	transform: translatex( -2px ) translatez( -100px );
-}
-
-.ButtonRightCenter:focus:hover
-{
-	transform: translateX( -24px ) translateZ( 25px );
-}
-
-
-.Button .ButtonLabel
+.GameItem
 {
 	horizontal-align: center;
-	vertical-align: center;
-	color: applabel;
-	font-size: 56px;
+	flow-children: down;
+	width: 500px;
+	padding-top: 10px;
+}
+
+.GameRowContentsWrapper
+{
+	horizontal-align: center;
+	flow-children: right;
+}
+
+.GameItemHeader
+{
+	width: 100%;
+	flow-children: right;
+}
+
+.GameItemHeader Image
+{
+	width: 40px;
+	height: 40px;
+	wash-color: #13C5FB;
+}
+
+.GameItemHeader .FriendsPlayingImage 
+{
+	width: 32px;
+	height: 32px;
+}
+
+.GameRowHeaderLabel
+{
+	horizontal-align: left;
+	vertical-align: bottom;
+	color: #15a4d5;
+	font-size: 26;
 	font-weight: light;
-	height: 66px;
-	width: 460px;
+	height: 50px;
 	text-align: center;
 	text-overflow: clip;
 	font-family: platformfont;
-
-	transform: none;
-
-	transition-property: color;
+	margin-left: 00px;
+	padding-top: 10px;
 }
 
-.Button:focus .ButtonLabel
+.GameButton
 {
-	color: tcmainbuttonselected;
-	transform: none;
+	horizontal-align: left;
+	width: 460px;
+	height: 215px;
+	margin: 0px;
+	padding: 0px;
+	margin-top:5px;
+	margin-left:5px;
 }
 
-.InsideLibrary #LibraryButton .ButtonLabel, .InsideStore #StoreButton .ButtonLabel, .InsideCommunity #CommunityButton .ButtonLabel, .InsideProfile #ProfileButton .ButtonLabel,
-.StackDepth2 #LibraryButton:active .ButtonLabel, .StackDepth2 #StoreButton:active .ButtonLabel, .StackDepth2 #CommunityButton:active .ButtonLabel,
-.StackDepth3 #LibraryButton:active .ButtonLabel, .StackDepth3 #StoreButton:active .ButtonLabel, .StackDepth3 #CommunityButton:active .ButtonLabel
+.GameButton:focus
 {
-	color: applabelselected;
+	width: 470px;
+	height: 225px;
+	margin-top: 0px;
+	margin-left:0px;
+}
+
+
+.Button .MainMenuRowLabel
+{
+	horizontal-align: center;
+	vertical-align: bottom;
+	height: 64px;
+	width: 100%;
+	
+	color: #15a4d5;
+	font-size: 50;
+	font-weight: light;
+	font-family: platformfont;
+	text-align: center;
+	text-overflow: clip;
+	
+	background-color: #0C203700;
+
+
+  opacity: 0.0;
+
+  transform: translatey(64px);
+	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.1s;
+	transition-timing-function: linear;
+
+}
+
+
+
+.Button:focus .MainMenuRowLabel
+{
+	color: #d6f5ffff;
+	opacity: 1.0;
+	transform: translatey(0px);
+	
+}
+.Button .TriggerRow
+{
+	width: 100px;
+	height: 60px;
+	border-radius: 12px;
+	padding-top: 4px;
+	opacity:0.0;
+	
+	transition-property: opacity;
+	transition-duration: 0.1s, 0.1s !immediate;
+	transition-timing-function: linear;
+	
+}
+
+.Button .TriggerRowName
+{
+	background-color: none;
+
+}
+
+.EdgeButtonRight.Button:focus .TriggerRow, 
+.EdgeButtonLeft.Button:focus .TriggerRow
+
+{
+
+	opacity:1.0;
+	transform: translatey(-1px) translatex(-1px);
+
+}
+
+
+.EdgeButtonRight.Button:focus .TriggerRowName
+{
+		transform: translatey(-1px) translatex(-2px);
+}
+
+.EdgeButtonLeft.Button:focus .TriggerRowName
+{
+		transform: translatey(-1px) translatex(2px);
+}
+
+.MainMenuButton Image
+{
+	width: 200px;
+	height: 200px;
+	horizontal-align: center;
+	vertical-align: center;
+	margin: 0px;
+	margin-top: 0px;
+	wash-color: ui_primary_color;
+	
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.3s, 0.3s !immediate;
+	transition-timing-function: linear;
+}
+
+.MainMenuButton:focus Image
+{
+	wash-color: #b6e1fa;	
+	transform: translatey(-15px);
+	opacity: 1.0;
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.2s, 0.2s !immediate;
+	transition-timing-function: linear;
+}
+
+.TopRowButton Image
+{
+	width: 64px;
+	height: 64px;
+	horizontal-align: center;
+	vertical-align: center;
+	wash-color: ui_primary_color;
+}
+
+.TopRowButton AvatarImage
+{
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.TopRowButton AvatarImage Image, .TopRowButton:focus AvatarImage Image
+{
+	wash-color: none;
+		width: 128px;
+	height: 128px;
+}
+
+.TopRowButton:focus Image
+{
+	wash-color: #8bcdf2;	
+}
+
+.TopRowButton Label
+{
+	font-size: 30px;
+	horizontal-align: center;
 }
 
 .ScreenSaverMode MainMenu, .GamesRunning MainMenu
@@ -1224,24 +1310,100 @@ InboxMenu
 {
 	width: 100%;
 	height: 100%;
-
 	transition-property: opacity;
 	transition-duration: 0.2s;
 }
 
-InboxMenu #Wrapper
+InboxMenu #Wrapper .Button
 {
-	flow-children: down;
-	margin-left: 56px;
-	padding: 10px;
-	margin-top: 170px;
+	height: 80px;
+	margin-top: 0px;
+	horizontal-align: center;
+	flow-children: right;
 }
 
-InboxMenu Button
+InboxMenu #Wrapper .Button Label
 {
-	margin: 0px;
-	flow-children: right;
-	min-width: 420px;
+	font-size: 30px;
+	margin-left: 6px;
+	margin-right: 6px;
+	vertical-align: center;
+}
+
+InboxMenu #Wrapper .Button:focus Label
+{
+	transform: translatex(0px) translatey(0px);
+	color: #ffffff;
+	
+}
+
+InboxMenu #Wrapper .Button:focus Image
+{
+	transform: translatex(0px) translatey(0px);
+	color: #ffffff;
+	wash-color: #ffffff;	
+}
+
+InboxMenu #Wrapper .Button Image
+{
+	transform: translatex(3px) translatey(4px);
+	color: #ffffff;
+	wash-color: #8bcdf2;	
+}
+
+InboxMenu #Wrapper .Button #ParentalLockImageUnlocked
+{
+	wash-color: red;	
+}
+
+
+InboxMenu #Wrapper, 
+InboxMenu #InboxItems,
+InboxMenu #OfflineItems,
+InboxMenu #FamilyModeItems,
+{
+	flow-children: down;
+	padding: 16px;
+	horizontal-align: center;
+	vertical-align: center;
+	width: 100%;
+	background-color: gradient( linear, 0% -100%, 90% 100%, from( #00000000 ), color-stop( 0.5, #00000055), to( #00000000 ) );
+	margin-bottom: 16px;
+	
+	visibility: collapse;
+}
+
+InboxMenu #ControllerBatteryButton,
+InboxMenu #SystemIMSButton
+{
+	visibility: collapse;
+}
+
+InboxMenu.ControllerPresent #ControllerBatteryButton,
+InboxMenu.SystemIMs #SystemIMSButton
+
+{
+	visibility: visible;
+}
+
+// make the appropriate sections visible based on your state
+.Offline #OfflineItems,
+.FamilyModeEnabled #FamilyModeItems,
+InboxMenu #InboxItems
+{
+	visibility: visible;
+}
+
+InboxMenu #Wrapper
+{
+	visibility: visible;
+	
+	background-color: message_box_bg;
+	transform: none;
+	max-height: 860px;
+	width: 600px;
+	min-height: 260px;
+	overflow: clip scroll;
 }
 
 InboxMenu Label
@@ -1249,93 +1411,424 @@ InboxMenu Label
 	font-family: platformfont;
 }
 
-InboxMenu Button Image, InboxMenu .ButtonLabelWrapper
-{
-	vertical-align: center;
-}
-
-.BehindMessageBox #MenuRow
-{
-	opacity: 0.0;
-}
-
-.BehindMessageBox .HomeGlow
-{
-	opacity: 0.0;
-}
-
 InboxMenu.Destructing
 {
 	opacity: 0.0;
 }
 
-#ParentalLockButton, #GoOnlineButton
+InboxMenu .Button
 {
+	width: 500px;
+}
+
+.InboxLabelTitle
+{
+	horizontal-align: left;
+	vertical-align: bottom;
+	color: #15a4d5;
+	font-size: 38;
+	font-weight: light;
+	height: 50px;
+	text-align: center;
+	text-overflow: clip;
+	font-family: platformfont;
+	margin-left: 16px;
+	padding-top: 0px;
+}
+
+.InboxEmpty .AlertsMainTitle,
+.AlertsEmpty,
+{
+	visibility: collapse;
+}
+
+.InboxEmpty .AlertsEmpty,
+{
+	visibility: visible;
+}
+
+ParentalButton.Locked
+{
+	wash-color: parental_locked_wash;
+	transition-property: wash-color, border, blur, background-color, color, transform, box-shadow;
+}
+
+
+#NavigationBar
+{
+	position: 0px 1136px 0px;
+	height: 75px;
+	width: 100%;
+	z-index: MainContentsZIndex;
+	flow-children: right;
+
+	background-color: #12243Cff;
+	opacity: 1.0;
+
+	transition-property: opacity, position;
+	transition-duration: PageTransitionTimeOn;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.LocationWrapper
+{
+	margin-left: 80px;
+	horizontal-align: left;
+}
+
+.StatusWrapper, .IconWrapper
+{
+	horizontal-align: right;
 	flow-children: right;
 	vertical-align: center;
-	padding: 6px;
-	padding-top: 8px;
-	margin-top: 2px;
-	padding-bottom: 8px;
-	height: 106px;
 }
 
-.ParentalLockButtonLabels, .GoOnlineButtonLabels
+.LocationWrapper
 {
-	flow-children: down;
+	flow-children: right;
+}
+
+.NavigationBar Label
+{
 	vertical-align: center;
-	horizontal-align: left;
-	height: 88px;
-	max-width: 0px;
-	opacity: 0.0;
-	margin-top: 0px;
-	margin-left: 4px;
-
-	transition-property: opacity, max-width;
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-	transition-timing-function: ease-out;
+	color: #E8FBFF;
+	font-size: 50;
+	font-weight: light;
+	text-align: center;
+	text-overflow: clip;
+	font-family: platformfont;
 }
 
-.TopRowFocused .ParentalLockButtonLabels, .TopRowFocused .GoOnlineButtonLabels
+.LocationWrapper Label
 {
-	opacity: 1.0;
-	visibility: visible;
-	transition-delay: 0.08s;
-	max-width: 300px;
+	margin-left: 20px;
+}
+
+.StatusWrapper Label
+{
+	font-size: 20;
+	margin-left: 5px;
+}
+
+Label.LocationStarter
+{
+	color: #5E7587;
+}
+
+.StatusWrapper Image
+{
+	width: 32px;
+	height: 32px;
+	vertical-align: center;
+}
+
+.StatusHome
+{
+	width: 48px;
+	height: 48px;
+	vertical-align: center;
+}
+
+.StatusBack
+{
+	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE30 ), to( #00000000 ) );
 	
-	transition-property: opacity, max-width;
-	transition-duration: 0.3s;
-	transition-delay: 0.08s;
-	transition-timing-function: ease-out;
+	border-radius: 50%;
+	box-shadow: fill #00000055 -3px -3px 4.5px 6px;
+	width: 32px;
+	height: 32px;
+	vertical-align: center;
+	margin-right: 20px;
 }
 
-#ParentalLockButton #ParentalLockImageLocked
+.IconWrapper
+{
+	margin-right: 20px;
+}
+
+.StatusWrapper .ClockWrapperText
+{
+	margin-right: 20px;
+	vertical-align: center;
+}
+
+#StatusBattery,
+#StatusFamilyMode,
+#StatusMusic,
+#StatusInbox,
+#StatusDownloads
+{
+	//visibility: collapse;
+}
+
+.IncomingInboxItems #StatusInbox,
+.DownloadsActive #StatusDownloads,
+.FamilyModeEnabled #StatusFamilyMode,
+.MusicPlaying #StatusMusic,
+.BatteryVisible #StatusBattery
+{
+	visibility: visible;
+}
+
+.FamilyModeLocked #StatusFamilyMode
+{
+	wash-color: #6fd025aa;
+}
+
+#StatusFamilyMode
+{
+	wash-color: red;
+}
+
+#TopRowContents
+{
+
+	opacity: 0.7;
+}
+
+.HiddenTopButton
+{
+	visibility: collapse;
+}
+.MissingAppImage #MissingImageLabel
+{
+	opacity: 0.8;
+}
+
+Button:focus #MissingImageLabel
+{
+	transform: translatex(0px);
+}
+
+#InboxImageWrapper,
+#ParentalLockImages,
+#BatteryImages
+{
+	width: 100%;
+	height: 100%;
+}
+
+InboxMenu #BatteryImages,
+InboxMenu #ParentalLockImages
+{
+	width: 64px;
+	height: 64px;
+}
+
+.BatteryLevelWired,
+.BatteryLevelEmpty,
+.BatteryLevelLow,
+.BatteryLevelHalf,
+.BatteryLevelFull
+{
+	visibility: collapse;
+}
+
+.BatteryLevel0 .BatteryLevelWired,
+.BatteryLevel1 .BatteryLevelEmpty,
+.BatteryLevel2 .BatteryLevelLow,
+.BatteryLevel3 .BatteryLevelHalf,
+.BatteryLevel4 .BatteryLevelFull,
+{
+	visibility: visible;
+}
+
+.InboxImage
+{
+	opacity: 0.0;
+
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.FamilyModeEnabled.FamilyModeLocked #ParentalLockImageLocked,
+.FamilyModeEnabled #ParentalLockImageUnlocked
+{
+	opacity: 1.0;
+}
+
+.FamilyModeEnabled.FamilyModeLocked #ParentalLockImageUnlocked,
+.FamilyModeEnabled #ParentalLockImageLocked
 {
 	opacity: 0.0;
 }
 
-#ParentalLockButton #ParentalLockImageUnlocked
+@keyframes 'inbox-2-active-animation'
 {
-	wash-color: red;
+	0%
+	{
+		opacity: 0;
+	}
+	
+	20%
+	{
+		opacity: 0;
+	}
+
+		
+	50%
+	{
+		opacity: 1.0;
+	}
+	
+	80%
+	{
+		opacity: 0;
+	}
+
+
+	100%
+	{
+		opacity: 0;
+	}
+}
+
+
+@keyframes 'inbox-3-active-animation'
+{
+	0%
+	{
+		opacity: 0;
+	}
+	
+	18%
+	{
+		opacity: 1.0;
+	}
+		
+	33%
+	{
+		opacity: 0;
+	}
+	
+	100%
+	{
+		opacity: 0;
+	}
+}
+
+@keyframes 'inbox-4-active-animation'
+{
+	0%
+	{
+		opacity: 0;
+	}
+		
+	15%
+	{
+		opacity: 1.0;
+	}
+	
+	25%
+	{
+		opacity: 0;
+	}
+
+
+	100%
+	{
+		opacity: 0;
+	}
+}
+
+@keyframes 'inbox-5-active-animation'
+{
+	0%
+	{
+		opacity: 0;
+	}
+		
+	10%
+	{
+		opacity: 1.0;
+	}
+	
+	20%
+	{
+		opacity: 0;
+	}
+
+	100%
+	{
+		opacity: 0;
+	}
+}
+
+.InboxItems1 .InboxImage.VisibleItem,
+.InboxItems0 #InboxImage
+{
 	opacity: 1.0;
 }
 
-#ParentalLockButton:focus #ParentalLockImageUnlocked
+// handle the case for 2 icons being visible
+.InboxItems2 .InboxImage.VisibleItem
+{
+	animation-name: inbox-2-active-animation;
+	animation-duration: 5.0s;
+}
+
+.InboxItems3 .InboxImage.VisibleItem
+{
+	animation-name: inbox-3-active-animation;
+	animation-duration: 7.5s;
+}
+
+.InboxItems4 .InboxImage.VisibleItem
+{
+	animation-name: inbox-4-active-animation;
+	animation-duration: 10.0s;
+}
+
+.InboxItems5 .InboxImage.VisibleItem
+{
+	animation-name: inbox-5-active-animation;
+	animation-duration: 12.5s;
+}
+
+.Item1.InboxImage.VisibleItem
+{
+	animation-delay: 2.5s;
+}
+
+.Item2.InboxImage.VisibleItem
+{
+	animation-delay: 5s;
+}
+
+.Item3.InboxImage.VisibleItem
+{
+	animation-delay: 7.5s;
+}
+
+.Item4.InboxImage.VisibleItem
+{
+	animation-delay: 10s;
+}
+
+.Item5.InboxImage.VisibleItem
+{
+	animation-delay: 12.5s;
+}
+
+#ParentalLockImageUnlocked
 {
 	wash-color: red;
+}
 
-	transition-duration: 0.3s;
+Button:focus #ParentalLockImageUnlocked
+{
+	transition-duration: 0.0s;
 
 	animation-name: unlocked-image-wash-pulse;
-	animation-duration: 1.7s;
-	animation-delay: 0.3s;
+	animation-duration: 0.0s;
+	animation-delay: 0.0s;
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
 
-#ParentalLockButton.Locked #ParentalLockImageLocked
+Button.Locked #ParentalLockImageLocked
 {
 	wash-color: ui_primary_color;
 	opacity: 1.0;
@@ -1344,170 +1837,76 @@ InboxMenu.Destructing
 	transition-delay: 0.08s;
 }
 
-#ParentalLockButton.Locked #ParentalLockImageUnlocked
+#WelcomePanel
 {
-	opacity: 0.0;
-}
-
-#ParentalLockImageLocked, #ParentalLockImageUnlocked
-{
-	margin-bottom: 4px;
-	margin-top: -4px;
-	margin-right: -3px;
-	margin-left: 3px;
-	width: 64px;
-	height: 64px;
-}
-
-ParentalButton.Locked
-{
-	wash-color: parental_locked_wash;
+	visibility: collapse;
 	
-	transition-property: wash-color, border, blur, background-color, color, transform, box-shadow;
+	margin-top: 0px;
+	width: 100%;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e203600 ), color-stop( 0.5, #0C3251ff ),to( #0e203600 ) );
+	flow-children: right;
+  opacity:0.7;
+  
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.3s, 0.3s !immediate;
+	transition-timing-function: linear;
+	
+	height:460px;
+	overflow: clip clip;
 }
 
-#ParentalLockButton.Locked
-{
-	wash-color: #ffffffff;
-}
-
-#ParentalLockButton:focus .ParentalLockButtonLabels, 
-#GoOnlineButton:focus .GoOnlineButtonLabels
-{
-	visibility: visible;
-	opacity: 1.0;
-	max-width: 300px;
-
-	transition-property: opacity, max-width;
-}
-
-.ParentalLockButtonLabels,
-{
-	margin-top: 1px;
-}
-
-/*
-// Handle lock state for parental button labels. There are
-// two panels occupying the same space, make sure that only
-// the correct one has opacity.
-//
-// Using visibility: collapse here instead of opacity results
-// in poor transition animations, so don't do that.
-*/
-#ParentalLockButton #ParentalLockButtonLabelsLocked
-{
-	opacity: 0.0;
-}
-
-#ParentalLockButton.Locked #ParentalLockButtonLabelsLocked,
-#ParentalLockButton #ParentalLockButtonLabelsUnlocked
-{
-	opacity: 1.0;
-}
-
-#ParentalLockButton.Locked #ParentalLockButtonLabelsUnlocked
-{
-	opacity: 0.0;
-}
-
-/*
-// Deal with the visibility of the bottom row label on the parental button
-//
-// The row needs to be collapsed if:
-// a) It is the wrong lock state or
-// b) The button is not focused or hovered
-//
-// Unlike above, we have to use collapse here or else the button
-// will be improperly sized when the button is expanded due to top
-// row focus but the button itself is not focused.
-*/
-#ParentalLockButton #LockedSuffix,
-#ParentalLockButton #UnlockedSuffix
-{
-	visibility: collapse;
-	opacity: 0.0;
-
-	transition-duration: 0.1s;
-	transition-delay: 0.08s;
-	transition-timing-function: ease-out;
-	transition-property: opacity, max-width;
-}
-
-#ParentalLockButton.Locked:focus #LockedSuffix,
-#ParentalLockButton.Locked:hover #LockedSuffix,
-#ParentalLockButton:focus #UnlockedSuffix,
-#ParentalLockButton:hover #UnlockedSuffix
+.WelcomeNewAccount #WelcomePanel
 {
 	visibility: visible;
+}
+
+.BelowTheFoldOpen #WelcomePanel
+{
+	height: 1080px;
+	overflow: clip scroll;
+}
+
+MainMenu.BelowTheFoldClosed #WelcomePanel
+{
+	transform: translatey( 600px );
+}
+
+MainMenu.BelowTheFoldClosed #WelcomePanel:descendantfocus
+{
+	transform: translatey( 570px );
+  opacity:1.0;
+	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+	transition-duration: 0.2s, 0.2s !immediate;
+	transition-timing-function: linear;
+}
+
+#ProfileNameWrapper
+{
+	flow-children: down;
+	vertical-align: center;
+}
+
+Label.ProfileLabel
+{
+	font-size: 26px;
+	margin-top: -4px;
+	color: #36ceff;
+}
+
+Label.ProfileNameLabel
+{
+	font-size: 42px;
+	margin-top: 0px;
+	color: #36ceff;
+}
+
+
+
+#MenuRow:descendantfocus 
+{
+	opacity-mask: none;
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX( 0px ) rotateX( 0deg ) translateZ( 0px );
 	opacity: 1.0;
 }
 
-#ParentalLockButton.Locked:focus #UnlockedSuffix,
-#ParentalLockButton.Locked:hover #UnlockedSuffix
-{
-	visibility: collapse;
-	opacity: 0.0;
-}
-
-#GoOnlineButton #SmDesc1, #GoOnlineButton #SmDesc2
-{
-	visibility: collapse;
-	opacity: 0.0;
-
-	transition-delay: 0.08s;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-	transition-property: max-width, opacity;
-}
-
-#GoOnlineButton #SmDesc1, #LockedSuffix, #UnlockedSuffix
-{
-	margin-bottom: 1px;
-}
-
-.GoOnlineButtonLabels
-{
-	color: tcexitrow;
-
-	transform: translateY( 21px );
-}
-
-#GoOnlineButton:focus .GoOnlineButtonLabels
-{
-	color: tcexitrowfocus;
-	visibility: visible;
-	opacity: 1.0;
-
-	transform: translateY( 0px );
-}
-
-#GoOnlineButton:hover .GoOnlineButtonLabels
-{
-	color: tcexitrowhover;
-
-	transform: translateY( 0px );	
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-	transition-delay: 0.08s;
-}
-
-#GoOnlineButton:hover #SmDesc1, #GoOnlineButton:hover #SmDesc2
-{
-	visibility: visible;
-	opacity: 1.0;
-
-	transform: translateY( 0px );	
-}
-
-#GoOnlineButton:focus .GoOnlineButtonLabels, #GoOnlineButton:focus #SmDesc1, #GoOnlineButton:focus #SmDesc2
-{
-	color: applabelselectedsolid;
-	visibility: visible;
-	opacity: 1.0;
-}
-
-#ParentalLockButton:hover .SmDesc, #GoOnlineButton:hover .SmDesc
-{
-	visibility: visible;
-	opacity: 1.0;
-}

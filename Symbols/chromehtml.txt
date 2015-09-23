@@ -2169,7 +2169,6 @@
  T __CreateCHTMLControllerIHTMLChromeController_interface()
  T __clang_call_terminate
  T char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
- T dyld_stub_binding_helper
  T int V_sprintf_safe<64ul>(char (&) [64ul], char const*, ...)
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AssignDesc_htmlmessages_2eproto()
@@ -2252,6 +2251,7 @@
  _DefaultRuneLocale
  _Unwind_Resume
  __assert_rtn
+ __bzero
  __cxa_atexit
  __cxa_bad_typeid
  __cxa_begin_catch
@@ -2485,9 +2485,9 @@
  close$UNIX2003
  connect$UNIX2003
  d (anonymous namespace)::protobuf_AssignDescriptors_once_
- d dyld__mach_header
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
+ dyld_stub_binder
  fflush
  fprintf
  free

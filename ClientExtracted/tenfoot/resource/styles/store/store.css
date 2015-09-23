@@ -290,14 +290,12 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 {
 	width: 2800px;
 	height: 100%;
-	perspective: 1000;
-	perspective-origin: 60% 50% invert;
 	pre-transform-scale2d: 1.0;
 
 	// make sure this is rendered after FeaturedPlatform
 	z-index: 1;
 
-	transition-property: opacity, transform, desaturation, wash-color, pre-transform-scale2d, opacity;
+	transition-property: position, transform, opacity, opacity-mask, pre-transform-scale2d, blur, wash-color, desaturation;
 	transition-duration: 0.3s;
 	transition-timing-function: bigpicture-ease-in-out;
 	overflow: noclip noclip;
@@ -308,6 +306,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
+
 
 StorePanel:descendantfocus #FeaturedCapsules,
 .WebBrowserActive #FeaturedCapsules

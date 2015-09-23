@@ -5,10 +5,12 @@
 
 #SystemMenu
 {
-	background-color: gradient( radial, 0% 0%, -100px -40px, 320% 270%, from( #11496dff ), color-stop( 0.36, #07304bbb ) );
-
+	font-family: platformfont;
+	
+	background-color: #00000099;
+	
 	transition-property: transform, border, blur, background-color, color, box-shadow, opacity, desaturation;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: bigpicture-ease-in-out;
 	transition-duration: 0.3s;
 	
 	animation-duration: 0.3s;
@@ -32,23 +34,18 @@
 
 #MenuRow
 {
-	y: 30%;
 	width: 100%;
-	height: 40%;
+	height: 600px;
+	vertical-align: center;
 	background-color: transparent;
 	flow-children: down;
+	background-image: url("file://{images}/homeglow.png");
 }
 
-#TopRow
-{
-	width: 100%;
-	height: 300px;
-	background-color: transparent;
-}
 
 #MenuRowButtons
 {
-	vertical-align: bottom;
+	vertical-align: center;
 	horizontal-align: center;
 	flow-children: right;
 
@@ -70,6 +67,12 @@
 
 }
 
+#TopRow
+{
+	margin-left: 0px;	
+	margin-right: 0px;
+}
+
 #TopRowButtons
 {
 	padding: 65px 66px;
@@ -88,21 +91,20 @@ Label
 	color: detailsdatalabel;
 }
 
-
-.Button, .TopButton
+#MenuRow
 {
-	horizontal-align: center;
-	vertical-align: center;
-	margin: 10px 8px;
-	border-style: solid;
-	border-width: 5px;
-	border-color: #3d414230;
-	flow-children: down;
+	transform: translateY( -10px );
+}
 
-	transform: translatez( buttonnormal );
-	transition-property: border, blur, background-color, color, transform, box-shadow;
-	transition-timing-function: ease-out;
-	transition-duration: 0.3s;
+#MenuRow .Button
+{
+	width: 325px;
+}
+
+#MenuRow .Button Label
+{
+	font-size: 40px;
+	margin-top: 16px;
 }
 
 .Button.Locked
@@ -110,20 +112,22 @@ Label
 	wash-color: parental_locked_wash;
 }
 
+
+
 .MenuButton
 {
 	width: 200px;
 	height: 200px;
 	margin-left: 40px;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #111414ff ), to( #070708ff ) );
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #1f2124ff ), to( #0f0f11ff ) );
 }
 
 .MenuButton Image
 {
 	horizontal-align: center;
 	vertical-align: center;
-	width: 100px;
-	height: 100px;
+	width: 125px;
+	height: 125px;
 	transition-property: wash-color;
 	transition-timing-function: ease-out;
 	transition-duration: 0.3s;
@@ -134,96 +138,10 @@ Label
 	wash-color: messagecolorwash;
 }
 
-.Button:hover
+.Button:focus #ProfileLabel
 {
-	background-color: all_games_hover;
-	box-shadow: fill box_shadow_mid_color -4px -4px 8px 8px;
-
-	transform: translatez( buttonhover );
-}
-
-.ButtonLeft:hover
-{
-	transform: translatex( 5px ) translatez( buttonhover );
-}
-
-.ButtonRight:hover
-{
-	transform: translatex( -5px ) translatez( buttonhover );
-}
-
-.Button:parentdisabled:hover
-{
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #1d2122ff ), to( #121313ff ) );
-	box-shadow: none;
-
-	transform: translatez( buttonnormal );
-}
-
-.Button:focus
-{
-	transition-duration: 0.3s;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #fdfefef0;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-
-	transition-property: wash-color, color;
-	transform: translatez( buttonfocus );
-	transition-duration: 0.3s;
-
-	animation-name: main-button-glow-movement, quick-blur;
-	animation-duration: 1.7s, 0.45s;
-	animation-delay: 0.4s, 0.0s;
-	animation-timing-function: ease-in-out, ease-out;
-	animation-iteration-count: infinite, 1;
-	animation-direction: normal;
-
-}
-
-.Button:descendantfocus:hover
-{
-	transform: translateZ( 25px );
-}
-
-.ButtonLeft:focus
-{
-	transform: translatex( 0px ) translatez( buttonfocus );
-}
-
-.ButtonLeft:focus:hover
-{
-	transform: translateX( 0px ) translateZ( buttonfocus );
-}
-
-.ButtonRight:focus
-{
-	transform: translatex( 0px ) translatez( buttonfocus );
-}
-
-.ButtonRight:focus:hover
-{
-	transform: translateX( 0px ) translateZ( buttonfocus );
-}
-
-.ButtonLabel
-{
-	horizontal-align: center;
-	vertical-align: center;
-	color: detailsdatalabel;
-	font-size: 26;
-	font-weight: light;
-	height: 66px;
-	width: 100%;
-	text-align: center;
-	text-overflow: clip;
-	margin: 10px 8px;
-	margin-left: 40px;
-	
-
-	transition-property: color;
-}
+	color: applabelselected;
+	}
 
 .ButtonWrapper
 {
@@ -236,29 +154,6 @@ Label
 }
 
 
-#TopRowButtons .TopButton
-{
-	flow-children: right;
-	padding: 20px 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-	background-color: #14c6fc33;
-}
-
-
-#TopRowButtons .TopButton:focus Image
-{
-	wash-color: messagecolorwash;
-}
-
-
-#TopRowButtons .TopButton:focus
-{
-	border-color: #fdfefef0;
-	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdff ), to( #bdbfbfff ) );
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;	
-	wash-color: none;
-}
 
 
 .LongDesc
@@ -275,74 +170,20 @@ Label
 	transition-timing-function: linear, ease-out;
 }
 
-#TopRowButtons:descendantfocus .LongDesc
+.TopRowBase:descendantfocus .LongDesc
 {
+	max-width: fit-children;
+	
 }
 
-#TopRowButtons Label
-{
-	horizontal-align: center;
-	vertical-align: center;
-	font-size: 20;
-	font-weight: light;
-	text-align: center;
-	text-overflow: clip;
-}
-
-#TopRowButtons .TopButton:focus Label
-{
-	color: messagecolorwash;
-}
-
-#TopRowButtons Label
-{
-	margin: 0px;
-}
 
 #SettingsWrapper
 {
 	margin-left: 50px;
 }
 
-#TopRowButtons Label.ClockLabel
-{
-	font-size: 30;
-	color: messagecolorwash;
-	margin-bottom: 22px;
-}
 
 
-
-#Avatar
-{
-	width: 300px;
-	height: 100%;
-	padding: 60px 66px;
-}
-
-#SelfAvatar
-{
-	margin-top: 5px;
-	horizontal-align: center;
-	border-style: solid;
-	border-width: 4px;
-	border-radius: 0px;
-	height: 91px;
-	width: 91px;
-	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;
-
-	transition-property: pre-transform-scale2d;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-out;
-}
-
-#SelfAvatar:hover
-{
-	pre-transform-scale2d: 1.05;
-
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-}
 
 .MainMenu
 {
@@ -365,4 +206,9 @@ Label
 #TopRowButtons Button, #TopRowButtons ParentalButton
 {
 	height: fit-children;
+}
+
+.MusicGuideButton
+{
+	visibility: visible;
 }

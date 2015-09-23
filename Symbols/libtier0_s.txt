@@ -468,7 +468,6 @@
  T _SpewMessage
  T _SpewMessageType
  T __clang_call_terminate
- T dyld_stub_binding_helper
  T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_erase(std::_Rb_tree_node<FileAndLine_t>*)
  T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, FileAndLine_t const&)
  T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert_unique(FileAndLine_t const&)
@@ -499,6 +498,7 @@
  _NSGetExecutablePath
  _Unwind_Resume
  __CFConstantStringClassReference
+ __bzero
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_begin_catch
@@ -582,13 +582,13 @@
  chdir
  ctime_r
  d CValidator::BExcludeAllocationFromTracking(char const*, int)::fileLineInfoExclude
- d dyld__mach_header
  d s_SpewOutputFunc
  daylight
  dladdr
  dlclose
  dlopen
  dlsym
+ dyld_stub_binder
  fork
  fprintf
  fputs
@@ -613,7 +613,6 @@
  malloc_size
  memcpy
  memmove
- memset
  mmap
  mmap$UNIX2003
  mprotect
@@ -676,7 +675,7 @@
  sigprocmask
  snprintf
  sscanf
- stat
+ stat$INODE64
  std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
  std::_Rb_tree_increment(std::_Rb_tree_node_base*)
  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)

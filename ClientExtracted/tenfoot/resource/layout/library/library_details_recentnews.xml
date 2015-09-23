@@ -5,8 +5,8 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 
-	<LibraryRecentNews defaultfocus="RecentNewsLargeBody">
-		<ParentalButton id="RecentNewsFullWrapper" class="RecentNewsFullWrapper" onactivate="BrowseRecentNews();" >
+	<LibraryRecentNews defaultfocus="RecentNewsFullWrapper">
+		<ParentalButton id="RecentNewsFullWrapper" class="RecentNewsFullWrapper" >
 			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_RecentNews" />
 			<Panel id="ParentalOverlay">
 				<ParentalReplacementPanel id="ParentalLockedReplacementPanel" />
@@ -16,14 +16,14 @@
 							<Label id="NewsHeadline1" class="NewsHeadline1 NewsHeadline" />
 						</Panel>
 					</Panel>
-					<Panel id="RecentNewsLargeBody" class="RecentNewsLargeBody">
+					<Button id="RecentNewsLargeBody" class="RecentNewsLargeBody">
 						<Panel id="LargeNewsWrapper1" class="LargeNewsWrapper">
 							<Label id="LargeNewsDate1" class="LargeNewsDate" text="#Library_Details_NewsDate" />
 							<Label id="LargeNewsHeadline1" class="LargeNewsHeadline1 LargeNewsHeadline" html="true" />
 							<Label id="LargeNewsByline1" class="LargeNewsByline1 LargeNewsByline" text="#Library_Details_NewsByline" />
 							<Label id="LargeNewsBody1" class="LargeNewsBody1 LargeNewsBody" html="true" />
 						</Panel>
-					</Panel>
+					</Button>
 				</Panel>
 			</Panel>
 		</ParentalButton>

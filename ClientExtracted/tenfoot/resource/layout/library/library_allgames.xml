@@ -14,7 +14,7 @@
 		<Panel class="AllGamesContent" >
 			<Panel class="NxGridButtonRow" tabindex="auto" selectionpos="0,0" onfocus="FocusMenuRow();" onmoveright="FocusGamesGrid();" >
 				<Panel class="GamesButtonContainer">
-					<Panel class="GamesHorizRule" />
+
 					<Button id="SuggestedFilter" onfocus="GamesViewType(suggested);" class="NxLeftNavButton" selectionpos="auto" onactivate="MoveRight(0);" >
 						<Label text="#Library_HomeFilter" html="true" />
 					</Button>
@@ -43,15 +43,15 @@
 						<Label text="#Library_LocalMusicTitle" html="true"/>
 					</Button>
 					<Button id="UnblockedFilter" onfocus="GamesViewType(unblocked);" class="NxLeftNavButton" selectionpos="auto">
-						<Label text="#Library_AllGamesUnblocked"/>
+						<Label text="#Library_AllGamesUnblocked" html="true"/>
 					</Button>
-                    <Button id="DownloadsFilter" onfocus="GamesViewType(downloads);" onactivate="MoveRight(0);" class="NxLeftNavButton" selectionpos="auto">
-                        <Label text="#Library_Downloads" html="true"/>
-                    </Button>
-                    <Button id="SearchFilter" onfocus="GamesViewType(search);"  onactivate="LibrarySearchButtonActivated();" class="NxLeftNavButton" selectionpos="auto">
-                        <Image src="file://{images}/library/icon_search.png" />
-                        <Label text="#Library_SearchGames"/>
-                    </Button>
+					<Button id="DownloadsFilter" onfocus="GamesViewType(downloads);" onactivate="MoveRight(0);" class="NxLeftNavButton" selectionpos="auto">
+						<Label text="#Library_DownloadsTitle" html="true"/>
+					</Button>
+					<Button id="SearchFilter" onfocus="GamesViewType(search);"  onactivate="LibrarySearchButtonActivated();" class="NxLeftNavButton" selectionpos="auto">
+						<Image src="file://{images}/library/icon_search.png" />
+						<Label text="#Library_SearchGames"/>
+					</Button>
 
 					<Panel class="GamesHorizRule" />
 					<Label id="Options" text="#Library_AllGamesOptions" class="Header" />
@@ -75,7 +75,7 @@
 			<LibraryFilterGames id="GamesFilter" selectionpos="500,200" />
 			<LibrarySuggestions id="GamesSuggestion"  class="GamesSuggestion" selectionpos="auto" oncancel="FocusMenuRow();" />
 			<DownloadsPanel id="GamesDownloads"  class="GamesDownloads" selectionpos="auto" oncancel="FocusMenuRow();" />
-			<MusicLibraryAlbumPanel id="MusicPanel" class="GamesGrid" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
+			<MusicLibraryAlbumPanel id="MusicPanelAllGames" class="GamesGrid" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" movementwrap="right" selectionposboundary="both"
 						onmoveleft="FocusMenuRow();" oncancel="FocusMenuRow();" onmovedown="None();"  />
 			<Grid id="GamesGrid" class="GamesGrid" scrolldirection="vertical" verticalcount="5" horizontalcount="3"

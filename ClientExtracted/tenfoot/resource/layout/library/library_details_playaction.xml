@@ -8,9 +8,8 @@
 			<Panel id="PlayActionContents">
 
 				<Label id="HeaderLabel" class="PlayActionHeaderLabel" text="#Library_Details_Play" />
-				<Label id="LaunchingStatus" />
 				<Panel class="PlayWrapper">
-					<Panel class="ButtonBodyWrapper">
+					<Panel class="ButtonBodyWrapper" childfocusonhover="true">
 						<Image id="Animator2" class="StreamAnimator2" />			
 						<Image id="Animator3" class="StreamAnimator3" />		
 						<Panel id="ButtonBody" class="ButtonBody">

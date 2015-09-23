@@ -6,7 +6,7 @@
 
 	<LibraryDLC tabindex="auto" selectionpos="auto" defaultfocus="DLCFullWrapper" >
 		<Button id="DLCFullWrapper" class="DLCFullWrapper" onactivate="ViewManageDLCDialog()">
-			<Label id="DLCHeaderTitle" class="HeaderLabel" text="Library_DLC_Title" />
+			<Label id="DLCHeaderTitle" class="HeaderLabel" text="Library_DLC_Title" html="true" />
 			<Panel id="DLCItems" selectionposboundary="vertical" />
 		</Button>
 	</LibraryDLC>	

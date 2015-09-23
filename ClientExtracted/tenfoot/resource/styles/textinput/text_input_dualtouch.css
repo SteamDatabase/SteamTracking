@@ -492,8 +492,8 @@ TextInputDualTouch
 .TouchKeyHover #TouchKeyLabel,
 .TouchKeyHover .TouchKeyLabel,
 {
-	color: #000000ff;
-	wash-color: #000000ff;
+	color: #ffffffff;
+	wash-color: #ffffffff;
 }
 
 /*#TextPreview

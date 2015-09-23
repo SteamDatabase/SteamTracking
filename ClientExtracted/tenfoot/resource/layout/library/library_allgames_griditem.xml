@@ -8,19 +8,5 @@
 		<Image id="AppImage" class="GridItemImage AppImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-preserve-aspect" >
 			<Label id="MissingImageLabel" text="" />
 		</Image>
-		<Panel class="GridItemNameRow">
-			<Panel id="LibraryGameStatus" class="LibraryGameStatus" >
-				<Label id="AppLabel" text="" />
-				<Panel id="PlatformSupport" >			
-					<Panel id="StreamingVideoSupport" class="StreamingVideoSupport StatusImage" />
-					<Panel id="GridControllerSupport" class="GridControllerSupport StatusImage" />
-					<Panel class="InstalledState" />
-					<Panel id="ReadyToPlay" class="ReadyToPlay StatusImage" />
-					<Panel id="ReadyToStream" class="ReadyToStream StatusImage" />
-					<Panel id="ReadyToDownload" class="ReadyToDownload StatusImage" />
-					<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
-				</Panel>
-			</Panel>
-		</Panel>
 	</AppGridItem>
 </root>

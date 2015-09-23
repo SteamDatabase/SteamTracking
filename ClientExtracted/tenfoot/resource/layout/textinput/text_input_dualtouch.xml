@@ -104,7 +104,7 @@
 						  </Panel>
 						  <Panel id="Row2" class="TouchRow">
 							  <Panel id="TouchKey_Alt" class="TouchKey LeftQuadrant">
-								  <Label class="TouchKeyLabel" text="Alt" />
+								  <Image class="TouchKeyLabel" src="file://{images}/textinput/symbols.tga" />
 							  </Panel>
 							  <Panel id="TouchKey_0_2" class="TouchKey" />
 							  <Panel id="TouchKey_1_2" class="TouchKey" />
@@ -123,7 +123,9 @@
 							  <Panel id="TouchKey_4_3" class="TouchKey RightQuadrant" />
 						  </Panel>
 						  <Panel id="LastRow" class="TouchRow">
-							  <Panel id="TouchKey_Space" class="TouchKey BottomQuadrant" />
+							  <Panel id="TouchKey_Space" class="TouchKey BottomQuadrant">
+							  	<Image class="TouchKeySpaceLabel" src="file://{images}/textinput/space.tga" />
+							  </Panel>
 						  </Panel>
 					  </Panel>
 					  <Panel id="LeftPointer">
@@ -178,12 +180,13 @@
 							  <Panel id="TouchKey_7_3" class="TouchKey" />
 							  <Panel id="TouchKey_8_3" class="TouchKey" />
 							  <Panel id="TouchKey_9_3" class="TouchKey" />
-							  <Panel id="TouchKey_Shift" class="TouchKey RightQuadrant">
+							  <Panel id="TouchKey_Symbols" class="TouchKey RightQuadrant">
 								  <Image class="TouchKeyLabel" src="file://{images}/textinput/shift.tga" />
 							  </Panel>
 						  </Panel>
 						  <Panel id="LastRow" class="TouchRow">
-							  <Panel id="TouchKey_Space" class="TouchKey BottomQuadrant" />
+							  <Panel id="TouchKey_Space" class="TouchKey BottomQuadrant">
+							  </Panel>
 							  <Panel id="TouchKey_Submit" class="TouchKey BottomQuadrant">
 								  <Label id="TouchKey_Submit_Label" class="TouchKeyLabel" text="Submit" />
 							  </Panel>

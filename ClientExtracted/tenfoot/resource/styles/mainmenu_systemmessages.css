@@ -1,27 +1,5 @@
 /* Styles for system im background on main menu */
 
-#SystemIMBackgroundWrapper
-{ 
-	perspective: 1000;
-	perspective-origin: 62% 5% invert;
-	z-index: -1000;
-}
-
-#SystemIMBackground
-{
-	perspective: 1000;
-	opacity-mask: url( "file://{images}/background_alpha_mask.png") 0.0;
-	perspective-origin: 10% 40% invert;
-	width: 1920px;
-	height: 1080px;
-	padding-bottom: 45px;
-	overflow: clip clip;
-	transform-origin: 0% 0% parent-relative;
-	transition-duration: 0.3s;
-	transition-property: transform, opacity, opacity-mask, position;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
 .StoreBlocked #SystemIMBackground
 {
 	visibility: collapse;
@@ -32,43 +10,6 @@
 	opacity: 0.0;
 }
 
-#SystemIMBackground #CarouselTitle
-{
-	transition-property: transform, position, opacity !immediate;
-	transition-duration: 0.3s !immediate;
-	transition-timing-function: bigpicture-ease-in-out;
-	transition-delay: 0s;
-	position: -37.0px 0.0px -500.0px;
-	font-family: platformfont;
-	font-weight: light;
-	color: carousel_title;
-	// bring it back in by 500 px so its in the screen plane, also undo the x-offset
-	transform: translate3d( 100px, 0px, 500px );
-	font-size: 121;
-	text-align: right;
-	opacity: 0.0;
-	padding-left: 0px;
-	vertical-align: center;
-	pre-transform-scale2d: 0.65;
-	text-transform: uppercase;
-
-}
-
-#SystemIMBackground:descendantfocus #CarouselTitle
-{
-	transition-duration: 0.25s !immediate;
-}
-
-
-#SystemIMBackground:descendantfocus #CarouselTitle
-{
-	transform: translate3d( 420px, 0px, 500px );
-}
-
-#SystemIMBackground:descendantfocus #CarouselTitle.LeftOfFocus1
-{
-	transform: translate3d( 220px, 0px, 500px );
-}
 
 #SystemIMBackground.SystemIMBackgroundBaseInvisible #CarouselTitle
 {
@@ -82,133 +23,15 @@
 	max-width: 600px;
 }
 
-#SystemIMBackground.SystemIMBackgroundTransitionUpAndOff
-{
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
-
-	transition-property: transform, opacity !immediate; 
-	transition-duration: 0.3s;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	transform-origin: 0% 0% parent-relative;
-	transform: translateY( -2800px ) translateZ( -420px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
-	desaturation: 0.3;
-	opacity: 0.0;
-
-	animation-name: message-perspective;
-	animation-duration: 20s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-#SystemIMBackground.SystemIMBackgroundTransitionLeftAndOff
-{
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
-
-	transition-property: transform, opacity !immediate; 
-	transition-duration: 0.3s;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	transform-origin: 0% 0% parent-relative;
-	transform: translateX( -1000px ) translateY( 200px ) translateZ( 180px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
-	desaturation: 0.3;
-	opacity: 0.0;
-
-	animation-name: message-perspective;
-	animation-duration: 20s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-#SystemIMBackground.SystemIMBackgroundTransitionRightAndOff
-{
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" );
-
-	transition-property: transform, opacity !immediate; 
-	transition-duration: 0.3s;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	transform-origin: 0% 0% parent-relative;
-	transform: translateX( 1000px ) translateY( -200px ) translateZ( -180px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
-	desaturation: 0.3;
-	opacity: 0.0;
-
-	animation-name: message-perspective;
-	animation-duration: 20s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
-
-#SystemIMBackground.SystemIMBackgroundTransitionDownAndOn
-{
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
-
-	transform-origin: 0% 0% parent-relative;
-	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 125px, 520px, 230px );
-	opacity: 1.0;
-
-	animation-name: message-perspective;
-	animation-duration: 20s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-}
 
 #SystemIMBackground:descendantfocus
 {
-	perspective-origin: 50% 50%;
 
 	animation-name: none;
 
 	opacity-mask: none;
 	flow-children: right;
 	overflow: clip;
-}
-
-@keyframes 'message-perspective'
-{
-	from
-	{
-		perspective-origin: 60% 50% invert;
-	}
-
-	10%
-	{
-		perspective-origin: 64% 52% invert;
-	}
-
-	15%
-	{
-		perspective-origin: 66% 54% invert;
-	}
-	
-	25%
-	{
-		perspective-origin: 68% 57% invert;
-	}
-
-	50%
-	{
-		perspective-origin: 72% 64% invert;
-	}
-
-	75%
-	{
-		perspective-origin: 66% 55% invert;
-	}
-
-	80%
-	{
-		perspective-origin: 63% 52% invert;
-	}
-
-	to	
-	{
-		perspective-origin: 60% 50% invert;
-	}
 }
 
 #SystemIMBackground:descendantfocus .SystemIMImage.DismissedMessage:descendantfocus,#SystemIMBackground:descendantfocus .SystemIMImage.DismissedMessage
@@ -220,25 +43,17 @@
 {
 	horizontal-align: left;
 	vertical-align: center;
-	opacity: 0.9;
-	desaturation: 0.85;
 	box-shadow: dark_box_shadow_color fill 2px 2px 12px -4px;
-	position: 2000px 0px 0px;
-	max-width: 600px;
-
+	max-width: 800px;
 	flow-children: down;
-
-	wash-color: store_main_wash;
 
 	// Trick to add transpaency around images which will get composition layers and then
 	// interpolate edges alpha, stops texture crawl as they transform as the effect is like
 	// antialiased edges even on a transform of the parent due to the fuzzy edges.
 	margin: -4px -8px;
 
-	//	transform-origin: 0% 0% parent-relative;
 	transition-property: transform, position, opacity, blur, box-shadow, wash-color, desaturation, opacity-mask !immediate;
 	transition-duration: 0.3s;
-	transition-delay: 0.1s;
 	transition-timing-function: bigpicture-ease-in-out;
 
 	animation-delay: 0.0s;
@@ -247,10 +62,6 @@
 	animation-direction: normal;
 }
 
-#SystemIMBackground:descendantfocus .SystemIMImage
-{
-	transition-duration: 0.3s !immediate;
-}
 
 #SystemIMBackground:descendantfocus .SystemIMImage:descendantfocus
 {
@@ -289,16 +100,19 @@
 #SystemIMBackground .SystemIMImage #SystemIMImage
 {
 	margin: 10px;
-	}
+	width: 684px; // 570*1.2 to scale up a little
+	height: 797px;
+}
 
 #SystemIMBackground:descendantfocus .SystemIMImage:focus #SystemIMImage
 {
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 0px;
+	border-color: #b6e1faff;
+	background-color: #2A5D7C ;
 
-	animation-name: main-button-glow-movement;
-	animation-duration: 1.7s;
-	animation-delay: 0.1s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
 }
 
 .SystemIMImage:focus Label
@@ -366,7 +180,6 @@
 
 #IMContents
 {
-
 }
 
 #GamePadControllerIcon, #WindowsIcon, #OSXIcon, #LinuxIcon
@@ -431,281 +244,6 @@
 	background-image: url( "file://{images}/store/icon_steamcontroller_storefront.png" );
 }
 
-
-
-
-.SystemIMCountThree .SystemIMImage1
-{
-	desaturation: 0.4;
-	transform: translate3d( 300px, -80px, -240px );
-	blur: gaussian( 0.2 );
-	position: 0px 0px 0px;
-}
-
-.SystemIMCountThree .SystemIMImage2
-{
-	transform: translate3d( -200px, 210px, -646px );
-	blur: gaussian( 1.8 );
-	opacity: 0.5;
-	position: 0px 0px 0px;
-}
-
-.SystemIMCountThree .SystemIMImage3
-{
-	transform: translate3d( 600px, 180px, -600px );
-	blur: gaussian( 2.0 );
-	opacity: 0.6;
-	position: 0px 0px 0px;
-}
-
-.SystemIMCountTwo .SystemIMImage1
-{
-	transform: translate3d( 200px, -20px, -100px );
-	desaturation: 0.4;
-	blur: gaussian( 0.2 );
-	position: 0px 0px 0px;
-}
-
-.SystemIMCountTwo .SystemIMImage2
-{
-	transform: translate3d( 550px, 130px, 0px ) translateZ( -306px );
-	desaturation: 0.7;
-	blur: gaussian( 1.5 );
-	position: 0px 0px 0px;
-}
-
-.SystemIMCountOne .SystemIMImage1
-{
-	transform: translate3d( 300px, 0px, 0px ) translateZ( 80px );
-	desaturation: 0.4;
-	blur: gaussian( 0.2 );
-	position: 0px 0px 0px;
-}
-
-.SystemIMBackgroundRevertCarousel .SystemIMImage
-{
-	border: 5px solid #ffffff00;
-	padding: 0px;
-	border-radius: 0px;
-
-	transition-property: opacity, blur, box-shadow, wash-color, desaturation !immediate;
-	transition-duration: 0.3s;
-	transition-delay: 0.0s;
-	transition-timing-function: bigpicture-ease-in-out;
-
-	animation-duration: 0.3s;
-	animation-delay: 0.0s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-}
-
-.SystemIMBackgroundRevertCarousel .SystemIMImage1
-{
-	animation-name: three_imageone_revert;
-	animation-direction: normal;
-}
-
-@keyframes 'three_imageone'
-{
-	0%
-	{
-		border: 5px solid #ffffff00;
-		position: -300px 0px 0px;
-		transform: translate3d( -90px, -130px, 0px ) translateZ( -140px );
-	}
-
-	20%
-	{
-		border: 5px solid #ffffffff;
-		position: -500px 0px 0px;
-		transform-origin: 0% 0% parent-relative;
-	transform: rotateX( 10deg ) rotateY( 5deg ) translate3d( -20px, -0px, 0px ) translateZ( 80px );
-	}
-
-
-	80%
-	{
-		border: 5px solid #ffffffff;
-		position: 0px 0px 0px;
-		transform: translate3d( 0px, 0px, 0px );
-
-	}
-}
-
-@keyframes 'three_imageone_revert'
-{
-
-	0%
-	{
-		border: 5px solid #ffffffff;
-		position: 0px 0px 0px;
-		transform: translate3d( 0px, 0px, 0px );
-
-	}
-
-	20%
-	{
-		border: 5px solid #ffffff00;
-		position: -300px 0px 0px;
-		transform-origin: 0% 0% parent-relative;
-	transform: rotateX( 10deg ) rotateY( 5deg ) translate3d( 100px, -140px, 0px ) translateZ( -100px );
-	}
-
-	80%
-	{
-		border: 5px solid #ffffff00;
-		position: -300px 0px 0px;
-		transform: translate3d( -90px, -130px, 0px ) translateZ( -240px );
-	}
-}
-
-
-#SystemIMBackground:descendantfocus .SystemIMImage2
-{
-	position: 0px 0px 0px;
-	transform: translate3d( 180px, 0px, 0px ) translateZ( -500px );
-	blur: gaussian( 0.8 );
-	desaturation: 0.1;
-	opacity: 0.8;
-
-	animation-name: three_imagetwo; 
-}
-
-.SystemIMBackgroundRevertCarousel .SystemIMImage2
-{
-	animation-name: three_imagetwo_revert;
-	animation-direction: normal;
-}
-
-
-@keyframes 'three_imagetwo'
-{
-	0%
-	{
-		desaturation: 0.3;
-		position: -300px 0px 0px;
-		transform: translate3d( -1100px, 210px, 0px ) translateZ( -800px );
-	}
-
-	20%
-	{
-		desaturation: 0.1;
-		position: 0px 0px 0px;
-		transform-origin: 0% 0% parent-relative;
-	transform: rotateX( 18deg ) rotateY( 8deg ) translate3d( 160px, 0px, 0px ) translateZ( -510px );
-	}
-
-
-	90%
-	{
-		desaturation: 0.1;
-		position: 0px 0px 0px;
-		transform: translate3d( 180px, 0px, 0px ) translateZ( -500px );
-
-	}
-}
-
-@keyframes 'three_imagetwo_revert'
-{
-
-	0%
-	{
-		desaturation: 0.1;
-		position: 0px 0px 0px;
-		transform: translate3d( 180px, 0px, 0px ) translateZ( -500px );
-
-	}
-
-	20%
-	{
-		desaturation: 0.1;
-		position: 0px 0px 0px;
-		transform-origin: 0% 0% parent-relative;
-	transform: rotateX( 18deg ) rotateY( 8deg ) translate3d( -940px, 120px, 0px ) translateZ( -810px );
-	}
-
-	100%
-	{
-		desaturation: 0.85;
-		position: -300px 0px 0px;
-		transform: translate3d( -1100px, 210px, 0px ) translateZ( -646px );
-	}
-
-
-
-}
-
-#SystemIMBackground:descendantfocus .SystemIMImage3
-{
-	position: 0px 0px 0px;
-	transform: translate3d( 180px, 0px, 0px ) translateZ( -500px );
-	blur: gaussian( 0.8 );
-	desaturation: 0.1;
-	opacity: 0.8;
-
-	animation-name: three_imagethree; 
-
-}
-
-.SystemIMBackgroundRevertCarousel .SystemIMImage3
-{
-	animation-name: three_imagethree_revert;
-	animation-direction: normal;
-}
-
-
-@keyframes 'three_imagethree'
-{
-	0%
-	{
-		desaturation: 0.3;
-		position: -300px 0px 0px;
-		transform: translate3d( -700px, 180px, 0px ) translateZ( -860px );
-	}
-
-	20%
-	{
-		desaturation: 0.1;
-		position: 0px 0px 0px;
-		transform-origin: 0% 0% parent-relative;
-	transform: rotateX( 24deg ) rotateY( 10deg ) translate3d( 160px, 100px, 0px ) translateZ( -510px );
-	}
-
-
-	100%
-	{
-		desaturation: 0.1;
-		position: 0px 0px 0px;
-		transform: translate3d( 180px, 0px, 0px ) translateZ( -500px );
-	}
-}
-
-@keyframes 'three_imagethree_revert'
-{
-	0%
-	{
-		desaturation: 0.1;
-		position: 0px 0px 0px;
-		transform: translate3d( 180px, 0px, 0px ) translateZ( -500px );
-	}
-
-	20%
-	{
-		desaturation: 0.1;
-		position: 0px 0px 0px;
-		transform-origin: 0% 0% parent-relative;
-	transform: rotateX( 24deg ) rotateY( 10deg ) translate3d( -500px, 20px, 0px ) translateZ( -700px );
-	}
-
-	100%
-	{
-		desaturation: 0.85;
-		position: -300px 0px 0px;
-		transform: translate3d( -700px, 180px, 0px ) translateZ( -600px );
-	}
-}
-
 #SystemIMBackground:descendantfocus .SystemIMImage
 {
 	blur: gaussian( 0.8 );
@@ -713,7 +251,7 @@
 	opacity: 0.8;
 
 	transform: none;
-	margin: 10px;
+	//margin: 10px;
 	wash-color: none;
 	box-shadow: none;
 	animation-name: none;
@@ -733,31 +271,5 @@
 	//	transform: scalex( 1.5 ) scaley( 1.5 );
 	wash-color: none;
 
-}
-
-#SystemIMBackground:descendantfocus .SystemIMImage.SystemIMImage1, #SystemIMBackground:descendantfocus .SystemIMImage.SystemIMImage2, #SystemIMBackground:descendantfocus .SystemIMImage.SystemIMImage3
-{
-	// we apply this animation instead of using transitions so we can leave position transitioning
-	// at the 0.3s when changing focus in the carousel
-	animation-name: IMToForeground;
-	animation-duration: 0.3s;
-	animation-delay: 0.0s;
-	animation-timing-function: linear;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-}
-
-@keyframes 'IMToForeground'
-{
-	0%
-	{
-		position: 0px 0px 0px;
-//		transform: translate3d( 300px, -130px, -240px );
-	}
-
-	100%
-	{	
-		transform: none;
-	}
 }
 

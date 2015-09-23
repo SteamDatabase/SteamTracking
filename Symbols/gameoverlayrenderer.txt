@@ -560,7 +560,6 @@
  T __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*)
  T __gxx_personality_v0
  T char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
- T dyld_stub_binding_helper
  T operator delete(void*)
  T operator delete[](void*)
  T operator new(unsigned long)
@@ -637,6 +636,7 @@
  _Unwind_Resume_or_Rethrow
  _Unwind_SetGR
  _Unwind_SetIP
+ __bzero
  __cxa_atexit
  __error
  __fixunsdfdi
@@ -708,7 +708,6 @@
  d _interpose_ShowCursor
  d cplus_demangle_builtin_types
  d cplus_demangle_operators
- d dyld__mach_header
  d s_eCaptureType
  d s_pchFragmentShader
  d s_pchVertexShader
@@ -716,8 +715,10 @@
  dlclose
  dlopen
  dlsym
+ dyld_stub_binder
  fclose
  fopen
+ fopen$UNIX2003
  fprintf
  fputc
  fputs

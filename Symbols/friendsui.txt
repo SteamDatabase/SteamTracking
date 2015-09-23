@@ -9765,7 +9765,6 @@
  T check_defer
  T d2i_ASN1_OBJECT
  T delete_JSON_parser
- T dyld_stub_binding_helper
  T i2a_ASN1_OBJECT
  T i2d_ASN1_OBJECT
  T i2t_ASN1_OBJECT
@@ -13931,6 +13930,7 @@
  _Unwind_Resume
  __CFConstantStringClassReference
  __assert_rtn
+ __bzero
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_bad_typeid
@@ -14464,7 +14464,6 @@
  d construction vtable for (anonymous namespace)::GripPanel-in-(anonymous namespace)::CaptionGripPanel
  d construction vtable for vgui::Button-in-(anonymous namespace)::ScrollBarButton
  d construction vtable for vgui::Label-in-(anonymous namespace)::ScrollBarButton
- d dyld__mach_header
  d err_defaults
  d ex_class
  d floatconverter
@@ -14517,6 +14516,7 @@
  dlopen
  dlsym
  dup
+ dyld_stub_binder
  exit
  fclose
  feof
@@ -14527,6 +14527,7 @@
  floorf
  fmod
  fopen
+ fopen$UNIX2003
  fprintf
  fputc
  fread

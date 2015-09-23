@@ -1,7 +1,6 @@
 <root>
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
-		<include src="file://{resources}/styles/mainmenu.css" />
 		<include src="file://{resources}/styles/msgbox.css" />
 		<include src="file://{resources}/styles/library/library_screenshots_slideshow.css" />
 	</styles>
@@ -41,10 +40,10 @@
 				</Panel>
 				
 				<Panel id="MsgBoxButtons">	
-					<Button id="ButtonOk" class="ButtonOK MsgBoxButton">
+					<Button id="ButtonOk" class="ButtonOK MsgBoxButton Button">
 						<Label id="OKButtonText" text="#Library_UploadScreenshotOK" />
 					</Button>
-					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton">
+					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button">
 						<Label id="CancelButtonText" text="#Library_UploadScreenshotCancel" />
 					</Button>
 				</Panel>

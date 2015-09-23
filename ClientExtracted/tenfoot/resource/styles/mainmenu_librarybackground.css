@@ -9,6 +9,7 @@
 {
 	width: 1920px;
 	height: 1080px;
+	opacity: 1.0;
 
 	perspective-origin: 62% 5% invert;
 
@@ -41,10 +42,6 @@
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 
-}
-
-.MostRecentCarousel
-{
 	perspective: 1000;
 	width: 3500px;
 	height: 1080px;

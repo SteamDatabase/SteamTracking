@@ -58,13 +58,13 @@
 
 			<Panel class="HorizontalRule NotLoggedInHidden" />
 
-			<Button id="QuitShutdown" class="SystemButton System SystemCanShutdown" onactivate="CloseModalDialog(); AsyncEvent( 0.5, ShutdownMachine() )" selectionpos="0,11">
+			<Button id="QuitShutdown" class="SystemButton System SystemCanShutdown" onactivate="CloseModalDialog(); StopStreamingAndSuspendClient(); AsyncEvent( 0.5, ShutdownMachine() )" selectionpos="0,11">
 				<Label text="#Quit_Shutdown" />
 			</Button>
-			<Button id="QuitRestart" class="SystemButton System SystemCanRestart" onactivate="CloseModalDialog(); AsyncEvent( 0.5, RestartMachine() )" selectionpos="0,12">
+			<Button id="QuitRestart" class="SystemButton System SystemCanRestart" onactivate="CloseModalDialog(); StopStreaming(); AsyncEvent( 0.5, RestartMachine() )" selectionpos="0,12">
 				<Label text="#Quit_Restart" />
 			</Button>
-			<Button id="QuitSleep" class="SystemButton System SystemCanSuspend" onactivate="CloseModalDialog(); AsyncEvent( 0.5, SuspendMachine() )" selectionpos="0,13">
+			<Button id="QuitSleep" class="SystemButton System SystemCanSuspend" onactivate="CloseModalDialog(); StopStreamingAndSuspendClient(); AsyncEvent( 0.5, SuspendMachine() )" selectionpos="0,13">
 				<Label text="#Quit_Sleep" />
 			</Button>
 		</Panel>

@@ -46,5 +46,6 @@
 			<CommunityWrapper id="CommunityWrapper" onmoveup="CloseGameHubOverlay();" />
 			<ProfileWrapper id="ProfileWrapper" onmoveup="CloseProfile();" />
 		</Panel>
+		<ContentFrame id="ContentFrame" />
 	</OverlayBasePanel>
 </root>

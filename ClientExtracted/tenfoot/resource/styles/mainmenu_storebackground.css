@@ -2,8 +2,6 @@
 
 #StoreBackgroundWrapper
 {
-	perspective: 1000;
-	perspective-origin: 62% 5% invert;
 	z-index: -1000.0;
 	opacity: 0.0;
 }
@@ -16,7 +14,6 @@
 #StoreBackground
 {
 	perspective: 1000;
-	perspective-origin: 62% 5% invert;
 	width: 1920px;
 	height: 1080px;
 	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
@@ -37,8 +34,6 @@
 .StoreBackgroundBaseVisible
 {
 	visibility: visible;
-	transform-origin: 0% 0% parent-relative;
-	transform: rotateZ( -32deg ) rotateX( 30deg ) translate3d( 0px, 580px, 230px ) ;
 	opacity: 1.0;	
 }
 
@@ -64,16 +59,12 @@ StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible,
 
 .StoreBackgroundTransitionDownAndOff
 {
-	transform-origin: 0% 0% parent-relative;
-	transform: translateY( 800px ) translateZ( 220px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 0px, 580px, 230px ) ;
 	desaturation: 0.3;
 	opacity: 0.0;
 }
 
 .StoreBackgroundTransitionLeftAndOff
 {
-	transform-origin: 0% 0% parent-relative;
-	transform: translateX( -1000px ) translateY( 200px ) translateZ( 0px ) rotateZ( -32deg ) rotateX( 30deg ) translate3d( 0px, 580px, 230px ) ;
 	desaturation: 0.3;
 	opacity: 0.0;
 }
@@ -136,7 +127,6 @@ StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible,
 
 	// Original image size without padding is 616x353, we squish down to fit more here,
 	// but use the full images so we can transition into large view in the store.
-	pre-transform-scale2d: 0.4805;
 
 	// Trick to add transparency around images which will get composition layers and then
 	// interpolate edges alpha, stops texture crawl as they transform as the effect is like
@@ -148,152 +138,6 @@ StorePanel:descendantfocus #StoreBackground.StoreBackgroundBaseVisible,
 	border-style: solid;
 	border-color: transparent;
 
-
 	transition-property: position, transform, opacity, opacity-mask, pre-transform-scale2d, blur, wash-color, desaturation;
 	transition-duration: 0.3s;
-}
-
-.StoreImage.FeaturedImageLoaded
-{
-	opacity: 0.9;
-	visibility: visible;
-}
-
-.StoreImage1
-{
-	transform: translate3d( 616px, -49px, 160px );
-	desaturation: 0.0;
-	wash-color: white;
-	blur: none;
-}
-
-.StoreImage2
-{
-	transform: translate3d( 908px, 68px, 20px );
-	desaturation: 0.4;
-	wash-color: bgcolorwashlight;
-	blur: none;
-}
-
-.StoreImage3
-{
-	transform: translate3d( 636px, 69px, -120px );
-	desaturation: 0.4;
-	wash-color: bgcolorwashmedium;
-	blur: gaussian( 0.9 );
-}
-
-.StoreImage4
-{
-	transform: translate3d( 938px, 176px, -200px );
-	blur: gaussian( 1.6 );
-}
-
-.StoreImage5
-{
-	transform: translate3d( 938px, -68px, -200px );
-	blur: gaussian( 1.25 );
-}
-
-.StoreImage6
-{
-	transform: translate3d( 646px, 368px, -490px );
-	blur: gaussian( 1.6 );
-}
-
-.StoreImage7
-{
-	transform: translate3d( 948px, -176px, -300px );
-	blur: gaussian( 1.8 );
-}
-
-.StoreImage8
-{
-	transform: translate3d( 616px, -216px, -230px );
-	blur: gaussian( 1.3 );
-}
-
-.StoreImage9
-{
-	transform: translate3d( 656px, -380px, -450px );
-	desaturation: 0.8;
-	wash-color: bgcolorwashmedium;
-	blur: gaussian( 2.0 );
-}
-
-.StoreImage9.FeaturedImageLoaded
-{
-	opacity: 0.2;
-}
-
-.StoreImage10
-{
-	transform: translate3d( 506px, 300px, -600px );
-	blur: gaussian( 2.5 );	
-	desaturation: 0.9;
-}
-
-.StoreImage10.FeaturedImageLoaded
-{
-	opacity: 0.2;
-}
-
-.StoreImage11
-{
-	transform: translate3d( -230px, 0px, -600px );
-	blur: gaussian( 2.5 );	
-	desaturation: 0.9;
-}
-
-.StoreImage11.FeaturedImageLoaded
-{
-	opacity: 0.4;
-}
-
-.StoreImage12
-{
-	transform: translate3d( 324px, 250px, -200px );
-	desaturation: 0.2;
-	wash-color: bgcolorwashlight;
-	blur: gaussian( 1.5 );
-}
-
-.StoreImage12.FeaturedImageLoaded
-{
-	opacity: 0.7;
-}
-
-.StoreImage13
-{
-	transform: translate3d( 120px, -240px, -500px );
-	desaturation: 0.6;
-	wash-color: bgcolorwashmedium;
-	blur: gaussian( 1.2 );
-}
-
-.StoreImage13.FeaturedImageLoaded
-{
-	opacity: 0.5;
-}
-
-.StoreImage14
-{
-	transform: translate3d( 374px, 80px, 56px );
-	blur: gaussian( 1.5 );
-	desaturation: 0.3;
-}
-
-.StoreImage15
-{
-	transform: translate3d( 122px, 100px, 146px );
-	desaturation: 0.6;
-	wash-color: bgcolorwashlight;
-	blur: gaussian( 2.0 );
-}
-
-.StoreImage16
-{
-	transform: translate3d( 374px, -35px, 150px );
-	wash-color: bgcolorwashmedium;
-	blur: gaussian( 0.7 );
 }

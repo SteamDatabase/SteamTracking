@@ -5,15 +5,13 @@
 	</styles>
 	
 	<ContentFrame>
-		<Panel id="ContentPanels">
-			<LibraryPanel id="Library" class="LibraryPanel ContentPanel" />
-			<LibraryAllGames id="LibraryAllGames" class="LibraryAllGames ContentPanel" />
-		</Panel>
+		<Panel id="ContentPanels" />
 		<Panel id="ContentFrameHeader">
-			<Image class="SteamLogo" src="file://{images}/steam_home_os.png" />
+			<Panel id="ContentMouseBackButton" onmouseactivate="NavigateTenfootBack();" />
+			<Panel id="ContentHomeButton" class="SteamLogo" onmouseactivate="ShowMainMenu();" />
 			<Label class="ContentBreadcrumb" text="&gt;" />
 			<Panel id="ContentTitles">
-				<Label class="ContentTitle" text="The Witcher" />
+				<Label class="ContentTitle" text="" />
 			</Panel>
 			<Clock id="Clock" />
 		</Panel>

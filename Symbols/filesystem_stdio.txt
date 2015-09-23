@@ -357,7 +357,6 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T dyld_stub_binding_helper
  T non-virtual thunk to CBaseFileSystem::Init()
  T non-virtual thunk to CBaseFileSystem::QueryInterface(char const*)
  T non-virtual thunk to CBaseFileSystem::Shutdown()
@@ -383,6 +382,7 @@
  V_strnicmp
  V_vsnprintf
  _Unwind_Resume
+ __bzero
  __cxa_atexit
  __cxa_begin_catch
  __cxa_pure_virtual
@@ -402,17 +402,17 @@
  b s_pScratchFileName
  b selectBuf
  chmod$UNIX2003
- d dyld__mach_header
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  dlclose
  dlopen
+ dyld_stub_binder
  fclose
  feof
  ferror
  fflush
  fgets
- fopen
+ fopen$UNIX2003
  fprintf
  fputs
  fread
@@ -430,7 +430,6 @@
  lstat$INODE64
  memcpy
  memmove
- memset
  mkdir
  operator delete(void*)
  operator delete[](void*)

@@ -9896,7 +9896,6 @@
  T check_defer
  T d2i_ASN1_OBJECT
  T delete_JSON_parser
- T dyld_stub_binding_helper
  T i2a_ASN1_OBJECT
  T i2d_ASN1_OBJECT
  T i2t_ASN1_OBJECT
@@ -10621,6 +10620,7 @@
  T std::_Vector_base<std::string, std::allocator<std::string> >::_M_allocate(unsigned long)
  T std::_Vector_base<void (*)(), std::allocator<void (*)()> >::_M_allocate(unsigned long)
  T std::_Vector_base<void*, std::allocator<void*> >::_M_allocate(unsigned long)
+ T std::basic_ostream<wchar_t, std::char_traits<wchar_t> >& std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::_M_insert<double>(double)
  T std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
  T std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
  T std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
@@ -13924,6 +13924,7 @@
  _Unwind_Resume
  __CFConstantStringClassReference
  __assert_rtn
+ __bzero
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_bad_typeid
@@ -14501,7 +14502,6 @@
  d construction vtable for (anonymous namespace)::GripPanel-in-(anonymous namespace)::CaptionGripPanel
  d construction vtable for vgui::Button-in-(anonymous namespace)::ScrollBarButton
  d construction vtable for vgui::Label-in-(anonymous namespace)::ScrollBarButton
- d dyld__mach_header
  d err_defaults
  d ex_class
  d floatconverter
@@ -14563,6 +14563,7 @@
  dlopen
  dlsym
  dup
+ dyld_stub_binder
  exit
  fclose
  feof
@@ -14573,6 +14574,7 @@
  floorf
  fmod
  fopen
+ fopen$UNIX2003
  fprintf
  fputc
  fread
@@ -14882,7 +14884,6 @@
  snprintf
  sprintf
  sscanf
- stat
  stat$INODE64
  std::_List_node_base::hook(std::_List_node_base*)
  std::_List_node_base::unhook()
@@ -14892,11 +14893,15 @@
  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
  std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
  std::__throw_bad_alloc()
+ std::__throw_bad_cast()
  std::__throw_length_error(char const*)
  std::__throw_logic_error(char const*)
  std::bad_alloc::~bad_alloc()
+ std::basic_ios<wchar_t, std::char_traits<wchar_t> >::clear(std::_Ios_Iostate)
  std::basic_ios<wchar_t, std::char_traits<wchar_t> >::imbue(std::locale const&)
- std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::operator<<(double)
+ std::basic_ios<wchar_t, std::char_traits<wchar_t> >::widen(char) const
+ std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::sentry::sentry(std::basic_ostream<wchar_t, std::char_traits<wchar_t> >&)
+ std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::sentry::~sentry()
  std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::basic_ostringstream(std::_Ios_Openmode)
  std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::~basic_ostringstream()
  std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)

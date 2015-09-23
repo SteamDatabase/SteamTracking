@@ -27,8 +27,6 @@
  CFRelease
  CFStringCompare
  CFStringCreateWithCString
- D OBJC_METACLASS_$___ARCLite__
- D _non_lazy_classes
  D g_ClockSpeed
  D g_ClockSpeedMicrosecondsMultiplier
  D g_ClockSpeedMillisecondsMultiplier
@@ -281,10 +279,6 @@
  T _SpewMessage
  T _SpewMessageType
  T __clang_call_terminate
- T dyld_stub_binding_helper
- T objc_retainedObject
- T objc_unretainedObject
- T objc_unretainedPointer
  T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_erase(std::_Rb_tree_node<FileAndLine_t>*)
  T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, FileAndLine_t const&)
  T std::_Rb_tree<FileAndLine_t, FileAndLine_t, std::_Identity<FileAndLine_t>, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::_M_insert_unique(FileAndLine_t const&)
@@ -292,11 +286,10 @@
  T std::_Rb_tree<SteamVProf::CVProfNode*, std::pair<SteamVProf::CVProfNode* const, double>, std::_Select1st<std::pair<SteamVProf::CVProfNode* const, double> >, std::less<SteamVProf::CVProfNode*>, std::allocator<std::pair<SteamVProf::CVProfNode* const, double> > >::_M_erase(std::_Rb_tree_node<std::pair<SteamVProf::CVProfNode* const, double> >*)
  T std::_Rb_tree<char const*, std::pair<char const* const, unsigned int>, std::_Select1st<std::pair<char const* const, unsigned int> >, std::less<char const*>, std::allocator<std::pair<char const* const, unsigned int> > >::_M_erase(std::_Rb_tree_node<std::pair<char const* const, unsigned int> >*)
  T std::set<FileAndLine_t, std::less<FileAndLine_t>, std::allocator<FileAndLine_t> >::~set()
- _Block_copy
- _DefaultRuneLocale
  _NSGetExecutablePath
  _Unwind_Resume
  __CFConstantStringClassReference
+ __bzero
  __cxa_atexit
  __cxa_begin_catch
  __cxa_call_unexpected
@@ -313,38 +306,23 @@
  __udivdi3
  __umoddi3
  _dyld_get_image_name
- _dyld_register_func_for_add_image
  _exit
- _objc_empty_cache
- _objc_empty_vtable
- asprintf
  atoi
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
- b CFStringGetCStringPtr_fn
  b CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::values
  b ClearWritingMiniDump::fAsserted
- b Demangled
  b GetCPUInformation()::pi
  b GetMemAlloc::s_StdMemAlloc
  b GetMiniDumpMutex()::ThreadMutexMiniDump
  b GetMinidumpsWritten()::MinidumpsWritten
  b GetProcessorDetailBlob(int*)::DetailBlob
  b GetProcessorVendorId()::VendorID
- b NSAutoreleasePool_class
- b NSConstantString_class
- b NSMutableDictionary_class
- b NSString_class
- b NSUndoManagerProxy_targetClass
  b SetWritingMiniDump(bool)::fAsserted
  b SteamThreadTools::g_ThreadMainThreadID
  b _SpewMessageType::autoMutex__
  b _ZL6g_Info.0
  b _ZL6g_Info.1
  b _ZL6g_Info.2
- b add_image_hook_ARC(mach_header const*, long)::patches
- b add_image_hook_GC(mach_header const*, long)::patches
- b add_image_hook_swiftV1(mach_header const*, long)::dlh
- b add_image_hook_swiftV1(mach_header const*, long)::patches
  b g_CmdLine
  b g_DumpHelper
  b g_bBreak
@@ -358,29 +336,6 @@
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
  b guard variable for GetMinidumpsWritten()::MinidumpsWritten
  b guard variable for _SpewMessageType::autoMutex__
- b guard variable for add_image_hook_ARC(mach_header const*, long)::patches
- b guard variable for add_image_hook_GC(mach_header const*, long)::patches
- b guard variable for add_image_hook_swiftV1(mach_header const*, long)::dlh
- b guard variable for add_image_hook_swiftV1(mach_header const*, long)::patches
- b original_NSKKMS_fastIndexForKnownKey
- b original_NSKKMS_indexForKey
- b original_NSKKsD_addEntriesFromDictionary
- b original_NSKKsD_objectForKey
- b original_NSKKsD_removeObjectForKey
- b original_NSKKsD_setObject_forKey
- b original_NSManagedObject_allocBatch
- b original_NSManagedObject_allocWithEntity
- b original_NSManagedObject_init
- b original_class_getName
- b original_objc_allocateClassPair
- b original_objc_copyClassNamesForImage
- b original_objc_getClass
- b original_objc_getMetaClass
- b original_objc_getProtocol
- b original_objc_getRequiredClass
- b original_objc_lookUpClass
- b original_object_getIndexedIvars
- b original_protocol_getName
  b s_AssertFailedNotifyFunc
  b s_DefaultLevel
  b s_FlushLogFunc
@@ -398,25 +353,7 @@
  backtrace_symbols
  bootstrap_look_up
  bootstrap_port
- bzero
- calloc
- class_addMethod
- class_addProperty
- class_addProtocol
- class_getInstanceMethod
- class_getInstanceSize
- class_getInstanceVariable
- class_getIvarLayout
- class_getSuperclass
- class_isMetaClass
- class_respondsToSelector
  d CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::keys
- d OBJC_$_CLASS_METHODS___ARCLite__
- d OBJC_CLASS_$___ARCLite__
- d OBJC_CLASS_RO_$___ARCLite__
- d OBJC_METACLASS_RO_$___ARCLite__
- d demangleLock
- d dyld__mach_header
  d g_CrashHandlerSingleton
  d s_SpewOutputFunc
  d s_pConversionArrays_NoEscConversion
@@ -425,16 +362,13 @@
  dlclose
  dlopen
  dlsym
+ dyld_stub_binder
  fprintf
  free
  fwrite
  getenv
  getpid
  gettimeofday
- hash_create
- hash_search
- ivar_getName
- ivar_getOffset
  kCFAllocatorDefault
  kCFTypeDictionaryKeyCallBacks
  kCFTypeDictionaryValueCallBacks
@@ -449,36 +383,16 @@
  mach_task_self_
  malloc
  malloc_size
- memcmp
  memcpy
  memmove
- memset
- method_setImplementation
  nanosleep
  nanosleep$UNIX2003
- objc_autoreleasePoolPush
- objc_collectingEnabled
- objc_constructInstance
- objc_getClass
- objc_getMetaClass
- objc_getProtocol
- objc_getRequiredClass
- objc_initializeClassPair
- objc_lookUpClass
  objc_msgSend
- objc_msgSend_fixup
- objc_registerClassPair
- objc_retain
- object_getClass
- object_getIvar
- object_setIvar
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
  printf
- property_copyAttributeList
- protocol_getMethodDescription
  pthread_cond_destroy
  pthread_cond_wait
  pthread_cond_wait$UNIX2003
@@ -501,11 +415,10 @@
  pthread_setspecific
  realloc
  sched_yield
- sel_getUid
  signal
  snprintf
  sscanf
- stat
+ stat$INODE64
  std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
  std::terminate()
@@ -515,7 +428,6 @@
  strcpy
  strlen
  strncasecmp
- strncmp
  strncpy
  strrchr
  strstr
@@ -526,68 +438,7 @@
  t ProcessRawStack(void**, int, int, CStack&)
  t SteamThreadTools::ThreadProcConvert(void*)
  t WriteMiniDumpThread(void*)
- t __ARCLite__load()
- t __arclite_NSArray_objectAtIndexedSubscript(NSArray*, objc_selector*, unsigned long)
- t __arclite_NSDictionary_objectForKeyedSubscript(NSDictionary*, objc_selector*, objc_object*)
- t __arclite_NSKKMS_fastIndexForKnownKey(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSKKMS_indexForKey(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSKKsD_addEntriesFromDictionary(objc_object*, objc_selector*, NSDictionary*)
- t __arclite_NSKKsD_objectForKey(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSKKsD_removeObjectForKey(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSKKsD_setObject_forKey(objc_object*, objc_selector*, objc_object*, objc_object*)
- t __arclite_NSManagedObject_allocBatch(objc_object*, objc_selector*, objc_object**, objc_object*, unsigned int)
- t __arclite_NSManagedObject_allocWithEntity(objc_object*, objc_selector*, objc_object*)
- t __arclite_NSManagedObject_init(objc_object*, objc_selector*)
- t __arclite_NSMutableArray_setObject_atIndexedSubscript(NSMutableArray*, objc_selector*, objc_object*, unsigned long)
- t __arclite_NSMutableDictionary__setObject_forKeyedSubscript(NSMutableDictionary*, objc_selector*, objc_object*, objc_object)
- t __arclite_NSMutableOrderedSet_setObject_atIndexedSubscript(NSMutableOrderedSet*, objc_selector*, objc_object*, unsigned long)
- t __arclite_NSOrderedSet_objectAtIndexedSubscript(NSOrderedSet*, objc_selector*, unsigned long)
- t __arclite_NSUndoManagerProxy_isKindOfClass(objc_object*, objc_selector*, objc_class*)
- t __arclite_class_getName(objc_class*)
- t __arclite_objc_allocateClassPair(glue_swift_class_t*, char const*, unsigned long)
- t __arclite_objc_autorelease(objc_object*)
- t __arclite_objc_autoreleasePoolPop(void*)
- t __arclite_objc_autoreleasePoolPush()
- t __arclite_objc_autoreleaseReturnValue(objc_object*)
- t __arclite_objc_copyClassNamesForImage(void*, unsigned int*)
- t __arclite_objc_getClass(char const*)
- t __arclite_objc_getMetaClass(char const*)
- t __arclite_objc_getProtocol(char const*)
- t __arclite_objc_getRequiredClass(char const*)
- t __arclite_objc_lookUpClass(char const*)
- t __arclite_objc_readClassPair(objc_class*, objc_image_info const*)
- t __arclite_objc_release(objc_object*)
- t __arclite_objc_retain(objc_object*)
- t __arclite_objc_retainAutorelease(objc_object*)
- t __arclite_objc_retainAutoreleaseReturnValue(objc_object*)
- t __arclite_objc_retainAutoreleasedReturnValue(objc_object*)
- t __arclite_objc_retainBlock(objc_object*)
- t __arclite_objc_storeStrong(objc_object**, objc_object*)
- t __arclite_object_copy(objc_object*, unsigned long)
- t __arclite_object_getIndexedIvars(objc_object*)
- t __arclite_object_setInstanceVariable(objc_object*, char const*, void*)
- t __arclite_object_setIvar(objc_object*, objc_ivar*, objc_object*)
- t __arclite_protocol_getName(Protocol*)
- t _class_name
- t _load_method_name
- t _load_method_type
- t add_image_hook_ARC(mach_header const*, long)
- t add_image_hook_GC(mach_header const*, long)
- t add_image_hook_swiftV1(mach_header const*, long)
- t allocateMaybeSwift(glue_swift_class_t*, unsigned long)
- t arclite_uninitialized_function()
- t copySwiftV1MangledName(char const*, bool)
- t cxxConstruct(objc_object*)
- t demangledName(char const*, bool)
- t fixStringForCoreData(objc_object*)
  t global constructors keyed to 000200
- t initialize_imp(objc_object*, objc_selector*)
- t patch_lazy_pointers(mach_header const*, patch_t*, unsigned long)
- t replaceMethod(objc_class*, objc_selector*, objc_object* (*)(objc_object, objc_selector, ...), objc_object* (*)(objc_object, objc_selector, ...))
- t scanMangledField(char const*&, char const*, char const*&, int&)
- t transcribeMethods(objc_class*, glue_class_ro_t*)
- t transcribeProperties(objc_class*, glue_class_ro_t*)
- t transcribeProtocols(objc_class*, glue_class_ro_t*)
  time
  usleep
  usleep$UNIX2003

@@ -9,12 +9,12 @@ BroadcastViewer
 	background-size: 100% 100%;
 	background-image: url( "file://{images}/mainmenu_bg_2.png" );
 	
-	transform: translate3d( 0px, 1000px, 1000px );
+	transform: translate3d( 0px, 1000px, 0px );
 	opacity: 0.0;
 	desaturation: 1.0;
 	
 	transition-property: transform, opacity, desaturation;
-	transition-duration: 0.4s;
+	transition-duration: 0.3s;
 	transition-delay: 0s;
 	transition-timing-function: bigpicture-ease-in-out;
 }

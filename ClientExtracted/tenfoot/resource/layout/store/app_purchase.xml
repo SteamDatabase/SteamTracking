@@ -11,7 +11,7 @@
 				<Panel class="AppSectionBody">
 					<Panel class="AppSectionSmallBody">
 					</Panel>
-					<Panel class="AppSectionLargeBody" childfocusonhover="true" tabindex="auto" selectionpos="auto">
+					<Panel id="AppSectionLargeBody" class="AppSectionLargeBody" childfocusonhover="true" tabindex="auto" selectionpos="auto">
 						<Label id="ComingSoon" text="#Store_Available_Date" />
 						<Panel id="DLCInfo">
 							<Label class="DLCLabel" text="#Store_AppPurchaseSection_DLC" />

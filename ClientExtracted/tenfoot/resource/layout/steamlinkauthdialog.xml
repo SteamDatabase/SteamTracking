@@ -14,10 +14,10 @@
 					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 					undohistory="enabled" />
   		<Panel id="MsgBoxButtons" >
-  		  <Button id="OKButton" onactivate="ButtonOK()">
+  		  <Button id="OKButton" class="Button" onactivate="ButtonOK()">
 	  		  <Label text="#UI_OK" />
 	  		</Button>
-	  		<Button id="CancelButton" onactivate="ButtonCancel()">
+	  		<Button id="CancelButton" class="Button" onactivate="ButtonCancel()">
 		  		<Label text="#UI_Cancel" />
         </Button>
 		  </Panel>

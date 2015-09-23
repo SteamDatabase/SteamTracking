@@ -1644,7 +1644,7 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 {
 	width: 100%;
 	height: 100%;
-
+opacity: 0.0;
 	transition-property: opacity;
 	transition-duration: 0.75s;
 }
@@ -1702,4 +1702,14 @@ TextInputDaisyGroup.SelectionGroup #Bkgnd
 .LeftTutorialEnabled #ActualLegends, .RightTutorialEnabled #ActualLegends
 {
 	opacity: 0.0;
+}
+
+
+.TouchKeySpaceLabel
+{
+	vertical-align: center;
+	horizontal-align: left;
+	font-size: 30px;
+	color: #ccccccff;
+	wash-color: #ccccccff;
 }

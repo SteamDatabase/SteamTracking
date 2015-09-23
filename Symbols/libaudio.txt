@@ -677,7 +677,6 @@
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T __CreateCDLLValidateIValidate_interface()
  T __clang_call_terminate
- T dyld_stub_binding_helper
  V_FixDoubleSlashes
  V_FixSlashes
  V_IsAbsolutePath
@@ -689,6 +688,7 @@
  V_strncpy
  V_strnicmp
  _Unwind_Resume
+ __bzero
  __cxa_atexit
  __cxa_bad_typeid
  __cxa_begin_catch
@@ -757,12 +757,12 @@
  b s_MilesLoader
  close
  close$UNIX2003
- d dyld__mach_header
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  dlclose
  dlopen
  dlsym
+ dyld_stub_binder
  fcntl
  fcntl$UNIX2003
  floor
@@ -773,7 +773,6 @@
  lseek
  memcpy
  memmove
- memset
  open
  open$UNIX2003
  operator delete(void*)

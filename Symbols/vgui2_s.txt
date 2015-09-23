@@ -2726,7 +2726,6 @@
  T check_defer
  T d2i_ASN1_OBJECT
  T drawVGUI(OpaqueWindowPtr*, CGContext*, CGRect*)
- T dyld_stub_binding_helper
  T hardwareListenerProc(unsigned long, void*)
  T i2a_ASN1_OBJECT
  T i2d_ASN1_OBJECT
@@ -3484,6 +3483,7 @@
  _NSConcreteGlobalBlock
  _Unwind_Resume
  __CFConstantStringClassReference
+ __bzero
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_bad_typeid
@@ -3691,7 +3691,6 @@
  d __block_literal_global537
  d __block_literal_global539
  d __block_literal_global541
- d dyld__mach_header
  d err_defaults
  d ex_class
  d free_func
@@ -3724,6 +3723,7 @@
  deflateInit2_
  deflateReset
  dlsym
+ dyld_stub_binder
  fclose
  feof
  ferror
@@ -3731,6 +3731,7 @@
  fgets
  floor
  fopen
+ fopen$UNIX2003
  fprintf
  fputc
  fread
@@ -3877,7 +3878,6 @@
  sleep$UNIX2003
  snprintf
  sscanf
- stat
  stat$INODE64
  statfs64
  std::bad_alloc::~bad_alloc()

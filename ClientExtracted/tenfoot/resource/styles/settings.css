@@ -400,6 +400,14 @@ Label.SettingsStatic
 	flow-children: down;
 }
 
+.SettingsCenterContentWideInterface
+{
+	width: 1125px;
+	horizontal-align: left;
+	margin-left: 300px;
+	flow-children: right;
+}
+
 
 .SettingsLeftContentWide
 {
@@ -1534,6 +1542,29 @@ KeyboardShortcut .Graphic
 	height: 100%;
 	padding-top: 5px;
 }
+
+.VertContainerScreensaver
+{
+	flow-children: down;
+	vertical-align: top;
+	horizontal-align: right;
+	width: 50%;
+}
+
+
+.SettingsScreensaverPanels
+{
+	width: 100%;
+	margin-top: 0px;
+	//padding-bottom: 20px;
+	visibility: visible;
+}
+
+.SettingsScreensaverPanels_Dropdown
+{
+	horizontal-align: left;
+}
+
 
 #SettingsSteamController_ShutdownTime_Panel
 {
@@ -3286,6 +3317,7 @@ TimeZoneRegionPanel Button.SelectedRegion Label
 {
 	margin-left: 44px;
 	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 #SearchProviderContainer, #SearchProvidersCustom
@@ -3296,6 +3328,7 @@ TimeZoneRegionPanel Button.SelectedRegion Label
 #SearchProvidersCustom
 {
 	height: 140px;
+	margin-top: 20px;
 }
 
 #SettingsStore_FilterToggle

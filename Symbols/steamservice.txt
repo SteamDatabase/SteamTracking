@@ -6032,7 +6032,6 @@
  T dtls1_stop_timer
  T dtls1_write_app_data_bytes
  T dtls1_write_bytes
- T dyld_stub_binding_helper
  T ec_GF2m_have_precompute_mult
  T ec_GF2m_precompute_mult
  T ec_GF2m_simple_add
@@ -6812,6 +6811,7 @@
  _NSGetExecutablePath
  _Unwind_Resume
  __assert_rtn
+ __bzero
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_bad_typeid
@@ -7509,7 +7509,6 @@
  d dsa_pub_internal_seq_tt
  d dso_meth_dlfcn
  d dss1_md
- d dyld__mach_header
  d ecdsa_md
  d err_defaults
  d ex_class
@@ -7606,6 +7605,7 @@
  dlerror
  dlopen
  dlsym
+ dyld_stub_binder
  fclose
  fcntl$UNIX2003
  feof
@@ -7615,6 +7615,7 @@
  fgets
  fileno
  fopen
+ fopen$UNIX2003
  fprintf
  fputc
  fputs$UNIX2003

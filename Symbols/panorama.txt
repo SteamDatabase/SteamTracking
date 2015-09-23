@@ -8793,7 +8793,6 @@
  T char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
  T delete_JSON_parser
  T double panorama::CUIAnimationEngine::lerp<double>(CMsgTransitionData const&, double, double)
- T dyld_stub_binding_helper
  T init_JSON_config
  T int const& std::max<int>(int const&, int const&)
  T int const& std::min<int>(int const&, int const&)
@@ -9248,6 +9247,8 @@
  T panorama::CJSFile::LoadFromFile(panorama::CPanoramaSymbol)
  T panorama::CJSFile::Validate(CValidator&, char const*)
  T panorama::CJSFile::~CJSFile()
+ T panorama::CJSPropGetter<panorama::CUIPanel, bool>::GetProp(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&)
+ T panorama::CJSPropGetter<panorama::CUIPanel, bool>::SetProp(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&)
  T panorama::CJSPropGetter<panorama::CUIPanel, panorama::CPanoramaSymbol>::GetProp(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&)
  T panorama::CJSPropGetter<panorama::CUIPanel, panorama::CPanoramaSymbol>::SetProp(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&)
  T panorama::CLayoutFile::AddInlineJavascript(char const*, int, int)
@@ -12545,7 +12546,7 @@
  T panorama::PanelLoaded::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::PanelStyleChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::PanelStyleChanged::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::PanoramaPanelTypeToV8Param(panorama::IUIPanel*&, v8::Handle<v8::Value>*)
+ T panorama::PanoramaPanelTypeToV8Param(panorama::IUIPanel*, v8::Handle<v8::Value>*)
  T panorama::PanoramaTypeToV8ParamJSObject(panorama::IUIJSObject*, void*, v8::Handle<v8::Value>*)
  T panorama::ParseUIEventParamHelper(CUtlBuffer&, char const*, char const**)
  T panorama::PchNameFromEAnimationTimingFunction(int)
@@ -12647,6 +12648,7 @@
  T panorama::SetInputFocus::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::SetPanelEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::SetPanelEvent::MakeEvent(panorama::IUIPanelClient const*, char const*, char const*)
+ T panorama::SetPanelEventJSArg(panorama::IUIPanel const*, v8::Handle<v8::Value>*)
  T panorama::SetPanelSelected::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::SetPanelSelected::GetEventType()
  T panorama::SetPanelSelected::MakeEvent(panorama::IUIPanelClient const*, bool)
@@ -13267,6 +13269,7 @@
  T std::allocator<v8::platform::WorkerThread*>::allocator()
  T std::allocator<v8::platform::WorkerThread*>::allocator(std::allocator<v8::platform::WorkerThread*> const&)
  T std::allocator<v8::platform::WorkerThread*>::~allocator()
+ T std::basic_ostream<wchar_t, std::char_traits<wchar_t> >& std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::_M_insert<double>(double)
  T std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
  T std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
  T std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
@@ -13531,6 +13534,7 @@
  T void panorama::DispatchEventAsync<panorama::TimeoutFastScrollSound>(float, panorama::TimeoutFastScrollSound, panorama::IUIPanel const*)
  T void panorama::FreeConvertedParam<v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)
  T void panorama::GetPtrToCallbackArray<bool (panorama::CImageProxySource::*)()>(bool (panorama::CImageProxySource::*)(), v8::Handle<v8::Array>&)
+ T void panorama::GetPtrToCallbackArray<bool (panorama::CUIPanel::*)() const>(bool (panorama::CUIPanel::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<int (panorama::CImageProxySource::*)()>(int (panorama::CImageProxySource::*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const>(panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<panorama::EImageFormat (panorama::CImageProxySource::*)()>(panorama::EImageFormat (panorama::CImageProxySource::*)(), v8::Handle<v8::Array>&)
@@ -13542,6 +13546,7 @@
  T void panorama::JSMethodCallTuple<panorama::CImageProxySource, unsigned int>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::JSMethodCallTuple<panorama::CUIPanel, void, panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(v8::FunctionCallbackInfo<v8::Value> const&)
  T void panorama::PanoramaTypeToV8Param<char const>(char const*, v8::Handle<v8::Value>*)
+ T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), bool (panorama::CUIPanel::*)() const, void (panorama::CUIPanel::*)(bool)>(char const*, bool (panorama::CUIPanel::*)() const, void (panorama::CUIPanel::*)(bool), void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), char const*, panorama::RegisterJSType_t)
  T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, int>(char const*, panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const, int, void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), char const*, panorama::RegisterJSType_t)
  T void panorama::RegisterJSMethod<panorama::CImageProxySource, bool>(char const*, bool (panorama::CImageProxySource::*)(), char const*)
  T void panorama::RegisterJSMethod<panorama::CImageProxySource, int>(char const*, int (panorama::CImageProxySource::*)(), char const*)
@@ -13549,13 +13554,16 @@
  T void panorama::RegisterJSMethod<panorama::CImageProxySource, unsigned int>(char const*, unsigned int (panorama::CImageProxySource::*)(), char const*)
  T void panorama::RegisterJSMethod<panorama::CUIPanel, void, panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(char const*, void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*), char const*)
  T void panorama::RestoreFuncPtr<bool (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<bool (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<bool (panorama::CUIPanel::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<bool (panorama::CUIPanel::*)() const>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<int (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<int (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const>(panorama::HACKY_FUNC_PTR_CASTER<panorama::CPanoramaSymbol (panorama::CUIPanel::*)() const>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<panorama::EImageFormat (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<panorama::EImageFormat (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<unsigned int (panorama::CImageProxySource::*)()>(panorama::HACKY_FUNC_PTR_CASTER<unsigned int (panorama::CImageProxySource::*)()>&, v8::Local<v8::Array>&, int)
+ T void panorama::RestoreFuncPtr<void (panorama::CUIPanel::*)(bool)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CUIPanel::*)(bool)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol)>&, v8::Local<v8::Array>&, int)
  T void panorama::RestoreFuncPtr<void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)>(panorama::HACKY_FUNC_PTR_CASTER<void (panorama::CUIPanel::*)(panorama::CPanoramaSymbol, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*)>&, v8::Local<v8::Array>&, int)
  T void panorama::SetPtrToCallbackArray<int>(int, v8::Handle<v8::Array>&)
+ T void panorama::SetPtrToCallbackArray<void (panorama::CUIPanel::*)(bool)>(void (panorama::CUIPanel::*)(bool), v8::Handle<v8::Array>&)
  T void panorama::UIEventFree<char const*>(char const*&)
  T void panorama::UIEventFree<panorama::IUIEvent*>(panorama::IUIEvent*&)
  T void panorama::UIEventFree<v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*&)
@@ -13565,6 +13573,7 @@
  T void panorama::UIEventValidate<char const*>(CValidator&, char const*&)
  T void panorama::UIEventValidate<panorama::IUIEvent*>(CValidator&, panorama::IUIEvent*&)
  T void panorama::UIEventValidate<v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*>(CValidator&, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*&)
+ T void panorama::V8ParamToPanoramaType<bool>(v8::Handle<v8::Value> const&, bool*)
  T void panorama::V8ParamToPanoramaType<panorama::CPanelStyle*>(v8::Handle<v8::Value> const&, panorama::CPanelStyle**)
  T void panorama::V8ParamToPanoramaType<panorama::CPanoramaSymbol>(v8::Handle<v8::Value> const&, panorama::CPanoramaSymbol*)
  T void panorama::V8ParamToPanoramaType<panorama::IUIPanelStyle*>(v8::Handle<v8::Value> const&, panorama::IUIPanelStyle**)
@@ -13680,6 +13689,7 @@
  _Unwind_Resume
  __CFConstantStringClassReference
  __assert_rtn
+ __bzero
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_bad_typeid
@@ -14640,7 +14650,6 @@
  d TRstdEnt
  d TRxmlDecl
  d TRxmlTok
- d dyld__mach_header
  d g_bCatchExceptionsInCallbacks
  d panorama::CUISoundSystem::PlaySound(char const*, panorama::ESoundType, float, float, float)::s_arrSuffixes
  d panorama::CUITextLayoutPango::MarkColorRangeForMeasurement(unsigned int, unsigned int)::klass
@@ -14669,13 +14678,14 @@
  dlclose
  dlopen
  dlsym
+ dyld_stub_binder
  exit
  fclose
  fflush
  floor
  floorf
  fontconfig_ft2_new_face_substitute
- fopen
+ fopen$UNIX2003
  fprintf
  fputc
  fread
@@ -15242,11 +15252,15 @@
  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
  std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
  std::__throw_bad_alloc()
+ std::__throw_bad_cast()
  std::__throw_length_error(char const*)
  std::__throw_logic_error(char const*)
  std::bad_alloc::~bad_alloc()
+ std::basic_ios<wchar_t, std::char_traits<wchar_t> >::clear(std::_Ios_Iostate)
  std::basic_ios<wchar_t, std::char_traits<wchar_t> >::imbue(std::locale const&)
- std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::operator<<(double)
+ std::basic_ios<wchar_t, std::char_traits<wchar_t> >::widen(char) const
+ std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::sentry::sentry(std::basic_ostream<wchar_t, std::char_traits<wchar_t> >&)
+ std::basic_ostream<wchar_t, std::char_traits<wchar_t> >::sentry::~sentry()
  std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::basic_ostringstream(std::_Ios_Openmode)
  std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::~basic_ostringstream()
  std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
@@ -15814,6 +15828,7 @@
  usleep$UNIX2003
  v8::Array::Length() const
  v8::Array::New(v8::Isolate*, int)
+ v8::Boolean::Value() const
  v8::Context::Enter()
  v8::Context::Exit()
  v8::Context::GetSecurityToken()
@@ -15888,6 +15903,7 @@
  v8::Value::IsArray() const
  v8::Value::IsBoolean() const
  v8::Value::IsFunction() const
+ v8::Value::IsNumber() const
  v8::Value::IsObject() const
  v8::Value::ToBoolean() const
  v8::Value::ToNumber() const

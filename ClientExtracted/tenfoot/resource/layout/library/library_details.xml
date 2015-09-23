@@ -21,7 +21,7 @@
 
 			<Panel class="LibraryDetailsSectionsContainer" tabindex="auto" selectionpos="auto" >
 
-				<LibrarySettings id="LibrarySettings" class="LibraryDetailsSectionPanel" rememberchildfocus="true" />
+				<LibrarySettings id="LibrarySettings" class="LibraryDetailsSectionPanel" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
 				<Panel id="StorePanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" >
 					<ParentalButton id="GotoStoreButton" class="NxLeftNavButtonAction">
 						<Image src="file://{images}/icon_cart.png" />
@@ -30,33 +30,62 @@
 					</ParentalButton>
 				</Panel>
 	
-				<CommunityHubContentPanel id="CommunityContentAllPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
-				<CommunityHubContentPanel id="CommunityContentScreenshotsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
-				<CommunityHubContentPanel id="CommunityContentArtworkPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
-				<CommunityHubContentPanel id="CommunityContentVideosPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
-				<CommunityHubContentPanel id="CommunityContentBroadcastsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
-				<CommunityHubContentPanel id="CommunityContentWorkshopPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
-				<CommunityHubContentPanel id="CommunityContentNewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
-				<CommunityHubContentPanel id="CommunityContentGuidesPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
-				<CommunityHubContentPanel id="CommunityContentReviewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" />
+				<CommunityHubContentPanel id="CommunityContentAllPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentScreenshotsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentArtworkPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentVideosPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentBroadcastsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentWorkshopPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentNewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentGuidesPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentReviewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
 	
-				<Panel id="ContentsRow" class="ContentsRow LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" >
+				<Panel id="ContentsRow" class="ContentsRow LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" >
 	
 					<Panel class="LibraryDetailsSectionRow PlayArea">
 						<Panel class="LibraryPlayRow">
-							<LibraryPlayAction id="PlayAction" class="PlayAction DetailsDataPanel" />
-	
+
+							<Panel class="PlayOptions">
+								<LibraryPlayAction id="PlayAction" class="PlayAction DetailsDataPanel" />
+								<Button id="MoreWaysToPlayBtn" class="Button">
+									<Label text="#Library_Details_MoreWaysToPlay" />
+								</Button>
+							</Panel>
+
+							<Panel class="LaunchAppDetails">
+								<Label id="LaunchAppStatus" />
+							</Panel>
+
 							<Panel class="PlayHeaderDetails">
-								<Panel id="DescriptionArea" class="AppMiscHeader">
-									<Label id="GameStatus" class="GameStatus" text="" />
-		
-									<Panel id="StreamingData">
-										<Label id="StreamFrom" class="LastPlayed DataHeader" text="#Library_Details_StreamFrom" />
-										<Label id="StreamFromValue" class="LastPlayedValue DataValue" text="Library_Details_StreamFromMachine" />
-									</Panel> 
+								<Panel id="DescriptionArea" class="GameStatusHeader">
+
+									<Panel class="GameStatusHeaderLine">
+										<Panel id="GameStatusIconHolder" >			
+											<Panel id="ReadyToPlay" class="ReadyToPlay StatusImage" />
+											<Panel id="ReadyToStream" class="ReadyToStream StatusImage" />
+											<Panel id="ReadyToDownload" class="ReadyToDownload StatusImage" />
+											<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
+										</Panel>
+
+										<Label id="GameStatus" class="GameStatus" text="" />
+										<Label id="DownloadAmount" class="GameStatus" text="#Downloads_AmountValue" />
+			
+										<Panel id="StreamingData" class="GameStatus">
+											<Label id="StreamFrom" text="#Library_Details_StreamFrom" />
+											<Label id="StreamFromValue" text="Library_Details_StreamFromMachine" />
+										</Panel>
+									</Panel>
+
+									<Panel class="DownloadBarBackground">
+										<Panel id="DownloadBarPercent" class="DownloadBarPercent" />
+									</Panel>
 								</Panel>
 		
 								<Panel id="PlayStatsArea" class="AppMiscHeader">
+									<Panel id="PurchaseTime" class="PlayTimeData">
+										<Label class="DataHeader" text="#Library_Details_Purchased" />
+										<Label class="DataValue" text="#Library_Details_PurchasedValue" />
+									</Panel>
 									<Panel id="ForeverPlaytime" class="PlayTimeData">
 										<Label id="YouPlayedHeader" class="DataHeader" text="#Library_Details_YouvePlayed" />
 										<Label id="YouWatchedHeader" class="DataHeader" text="#Library_Details_YouveWatched" />

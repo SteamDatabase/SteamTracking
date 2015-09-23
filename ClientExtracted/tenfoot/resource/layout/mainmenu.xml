@@ -7,131 +7,182 @@
 		<include src="file://{resources}/styles/mainmenu_communitybackground.css" />
 	</styles>
 	
-	<MainMenu defaultfocus="StoreButton" oncancel="NavigateTenfootBack()">
+	<MainMenu defaultfocus="LibraryButton" oncancel="NavigateTenfootBack()">
 		<Panel id="BodyWrapper">
 
 			<!-- Top row of menu buttons -->
-			<Panel id="TopRow" class="TopRowBase" tabindex="0" selectionpos="5,0" onmovedown="SetInputFocus( MenuRow )">
-				<Panel id="AvatarInfoRow" tabindex="0" selectionpos="0,0">
-					<Panel id="Avatar">
-						<AvatarImage id="SelfAvatar" onmouseactivate="CloseModalDialog(); OpenProfileMenu( false );" />
+			<Panel id="TopRow" class="TopRowBase" tabindex="0" selectionpos="0,0"  selectionposboundary="vertical" >
+				<Panel id="TopRowLeft" selectionpos="0,0">
+					<Button id="Avatar" class="Button TopRowButton" selectionpos="1,0" onactivate="CloseModalDialog(); OpenProfileMenu( false );" >
+						<AvatarImage id="SelfAvatar"  />
+					</Button>
+					<Panel id="ProfileNameWrapper" >
+							<Label  class="ProfileNameLabel" text="#MainMenu_Profile" />
+							<Label  class="ProfileLabel" text="#MainMenu_ProfileState" />
 					</Panel>
-					<Button id="DownloadsButton" tabindex="0" selectionpos="0,0" onfocus="DownloadsButtonFocused();" onactivate="ShowDownloads();" >
-						<Image src="file://{images}/downloads.png" />
-						<Panel class="ButtonLabelWrapper">
-							<Label class="ShortDesc" text="#MainMenu_ActiveDownloadsShort" />
-							<Label id="DownloadsLongLabel" class="LongDesc" text="#MainMenu_ActiveDownloadsLong" />
-						</Panel>
-					</Button>
-					<ParentalButton id="SystemIMs" tabindex="1" selectionpos="1,0" onactivate="DisplaySystemMessages();" onfocus="SystemMessagesButtonFocused();" >
-						<Image src="file://{images}/messages.png" />
-						<Panel class="ButtonLabelWrapper" >
-							<Label class="ShortDesc" text="#MainMenu_SystemIMsShort" />
-							<Label class="LongDesc" text="#MainMenu_SystemIMsLong" />
-						</Panel>
-					</ParentalButton>
-					<ParentalButton id="Inbox" tabindex="2" selectionpos="2,0" onactivate="DisplayInboxDropdown();" onfocus="InboxButtonFocused();" >
-						<Panel class="InboxButtonImage" />
-						<Panel class="ButtonLabelWrapper" >
-							<Label class="ShortDesc" text="#MainMenu_InboxShort" />
-							<Label class="LongDescSm" text="#MainMenu_InboxLong" />
-						</Panel>
-					</ParentalButton>
-
 				</Panel>
-				<Panel id="SettingsExitRow" tabindex="1" selectionpos="10,0">
-					<Clock id="Clock" />
-					<Button id="BatteryPanel" onactivate="ShowSettings( GameController );" tabindex="0" selectionpos="10.1,0" >
-						<Image id="Battery" src="file://{images}/controller_battery_3.png" />
-					</Button>
-					<Button id="MusicGuideButton" class="MusicGuideButton" tabindex="1" selectionpos="10.2,0"
-						onfocus="MusicGuideButtonFocused();" onactivate="ToggleMusicControlPanel( true );"		
-						>
+				<Panel id="TopRowRight" selectionpos="1,0" >
+						<Panel class="MiddleTopWrapper" >
+						<Clock id="Clock" class="Clock" />
+					</Panel>
+					<ParentalButton id="Inbox" class="Button TopRowButton" tabindex="2" selectionpos="2,0" onactivate="DisplayInboxDropdown();"  >
+								 
+						<Panel id="InboxImageWrapper">
+							<Image id="InboxImage" class="InboxImage" src="file://{images}/inbox.png" />
+							<Panel id="BatteryImages" class="InboxImage" >
+								<Image class="BatteryLevelWired" src="file://{images}/controller_generic_nobattery.png" />
+								<Image class="BatteryLevelEmpty" src="file://{images}/controller_battery_1.png" />
+								<Image class="BatteryLevelLow" src="file://{images}/controller_battery_2.png" />
+								<Image class="BatteryLevelHalf" src="file://{images}/controller_battery_3.png" />
+								<Image class="BatteryLevelFull" src="file://{images}/controller_battery_4.png" />
+							</Panel>
+							<Image id="OfflineImage" class="InboxImage" src="file://{images}/offline.png" />
+							<Panel id="ParentalLockImages" class="InboxImage" >
+								<Image id="ParentalLockImageLocked" class="InboxImage" src="file://{images}/locked_acct.png" />
+								<Image id="ParentalLockImageUnlocked" class="InboxImage" src="file://{images}/unlocked_acct.png" />
+							</Panel>
+							<Image id="MessagesImage" class="InboxImage" src="file://{images}/messages.png" />
+						</Panel>
+					</ParentalButton>
+					<Button id="MusicGuideButton" class="Button TopRowButton MusicGuideButton" tabindex="1" selectionpos="2.5,0"
+						onactivate="ToggleMusicControlPanel( true );">
 						<Image id="MusicGuideImage" src="file://{images}/music/musicguide_icon.png"/>
-						<Label id="MusicGuideLabel" class="LongDesc" text="#MainMenu_MusicGuideLabel"/>
 					</Button>
-					
-					<ParentalButton id="SettingsButton" tabindex="2" selectionpos="10.3,0" onfocus="SettingsButtonFocused();" onactivate="ShowSettings( Main );" >
+					<Button id="DownloadsButton" class="Button TopRowButton" tabindex="0" selectionpos="3.1,0"  onactivate="ShowDownloads();" >
+						<Image src="file://{images}/downloads.png" />
+					</Button>
+					<ParentalButton id="SettingsButton" class="Button TopRowButton" tabindex="2" selectionpos="3.9,0"  onactivate="ShowSettings( Main );" >
 						<Image src="file://{images}/settings.png" />
-						<Label class="LongDesc" text="#MainMenu_Settings" />
 					</ParentalButton>
-					<ParentalButton id="ParentalLockButton" tabindex="3" selectionpos="10.5,0" onfocus="ParentalLockButtonFocused();" onactivate="ToggleParentalLock();" >
-						<Panel id="ParentalLockImageOverlay">
-							<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
-							<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
-						</Panel>
-						<Panel id="ParentalLockButtonLabelsOverlay">
-							<Panel id="ParentalLockButtonLabelsLocked" class="ParentalLockButtonLabels">
-								<Label class="SmDesc" id="LockedPrefix" text="#Parental_CurrentMode" />
-								<Label class="LongDesc" id="LockedBody" text="#Parental_Locked" />	
-								<Label class="SmDesc2" id="LockedSuffix" text="#Parental_SelectToEnter" />
-							</Panel>
-							<Panel id="ParentalLockButtonLabelsUnlocked" class="ParentalLockButtonLabels">
-								<Label class="SmDesc" id="UnlockedPrefix" text="#Parental_CurrentMode_Unlocked" />
-								<Label class="LongDesc" id="UnlockedBody" text="#Parental_Unlocked" />
-								<Label class="SmDesc2" id="UnlockedSuffix" text="#Parental_SelectToLock" />
-							</Panel>
-						</Panel>
-					</ParentalButton>
-					<Button id="GoOnlineButton" tabindex="4" selectionpos="10.6,0" onfocus="GoOnlineButtonFocused();" onactivate="GoOnline();" >
-						<Image src="file://{images}/offline.png" />
-						<Panel class="GoOnlineButtonLabels">
-							<Label class="SmDesc" id="SmDesc1" text="#GoOnline_Header" />
-							<Label class="LongDesc" text="#GoOnline_CurrentMode" />	
-							<Label class="SmDesc" id="SmDesc2" text="#GoOnline_Footer" />
-						</Panel>
-					</Button>
-					<Button id="Exit" tabindex="5" selectionpos="10.7,0" onfocus="ExitButtonFocused();" onactivate="ShowQuitDialog();">
+					<Button id="Exit" class="Button TopRowButton" tabindex="5" selectionpos="4,0" onactivate="ShowQuitDialog();">
 						<Image src="file://{images}/exit.png" />
-						<Label class="LongDesc" text="#MainMenu_Exit" />
 					</Button>
-					<Button id="BetaButton" tabindex="6" selectionpos="10.8,0" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" >
+					<Button id="BetaButton" class="Button TopRowButton" tabindex="6" selectionpos="5,0" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" >
 						<Image src="file://{images}/betabutton4.tga" />
 					</Button>
 				</Panel>
-			</Panel>
+				
+			</Panel> <!-- Top Row -->
 			
-			<!-- All the contents for backgrounds for the top row, and the real contents to drill into on activation -->
-			<Panel id="TopRowContents" class="TopRowContentsBase" >
-				<Panel id="SystemIMBackgroundWrapper" hittest="false">
-					<Carousel id="SystemIMBackground" class="SystemIMBackgroundTransitionUpAndOff"
-						title="#MainMenu_NewForYouTitle" focus="center" wrap="false" z-offset="-500px" x-offset="-160px,-10px"
-						onmoveup="ShowMainMenuFocusMarketingMessages();" />
+			<Panel id="HR" class="HR" />
+					
+			<!-- The main row of menu buttons in the center of the screen -->
+			<Panel id="MenuRow" tabindex="1" selectionpos="0,20" selectionposboundary="vertical" >
+				<Panel id="MenuRowLeftButton"  selectionpos="-10,0">
+					<ParentalButton id="WebButton" class="Button EdgeButton EdgeButtonLeft" tabindex="0" selectionpos="1,20" onactivate="ShowWebBrowser();"> 
+						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_web.png" />
+						<Label  class="TriggerRow MainMenuRowLabel" text="#UI_LeftTrigger_Short" />
+						<Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
+					</ParentalButton>
 				</Panel>
 
+				<Panel id="MenuRowButtons" selectionpos="0,0">
+					<ParentalButton id="StoreButton" class="Button MainMenuButton" tabindex="1" selectionpos="2,20"  onactivate="ShowStoreClearBackstack();"> 
+						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_store.png" />
+						<Label id="StoreLabel" class="MainMenuRowLabel" text="#MainMenu_Store" />
+						<Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
+					</ParentalButton>
+					<Button id="LibraryButton" class="Button MainMenuButton" tabindex="2" selectionpos="3,20"  onactivate="ShowLibraryClearBackstack();"> 
+						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_library.png" />
+						<Label id="LibraryLabel" class="MainMenuRowLabel" text="#MainMenu_Library" />
+						<Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
+					</Button>
+					<ParentalButton id="CommunityButton" class="Button MainMenuButton" tabindex="3" selectionpos="4,20"  onactivate="ShowCommunityClearBackstack();"> 
+						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_community.png" />
+						<Label id="CommunityLabel" class="MainMenuRowLabel" text="#MainMenu_Community" />
+						<Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
+					</ParentalButton>
+				</Panel>
+				
+				<Panel id="MenuRowRightButton" selectionpos="10,0">
+					<ParentalButton id="FriendsButton" class="Button EdgeButton EdgeButtonRight" tabindex="4" selectionpos="5,20" onactivate="ShowFriends();"> 
+						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_friends.png" />
+						<Label  class="TriggerRow MainMenuRowLabel" text="#UI_RightTrigger_Short" />
+			      <Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
+					</ParentalButton>
+				</Panel>
 			</Panel>
 			
-
-	
-			<!-- All the contents for backgrounds for the main nav row, and the real contents to drill into on activation -->
-			<Panel id="MainRowContents" hittest="false">
-
-				<StorePanel id="Store" />				
-				<CommunityWrapper id="CommunityWrapper" class="CommunityWrapper" />
-				<ProfileWrapper id="ProfileWrapper" class="ProfileWrapper" />
-				<!-- <Image class="ExitButton" src="file://{images}/steam_exit.tga" onmouseactivate="QuitApp();" /> -->
-			</Panel>
-
-			<!-- The main row of menu buttons in the center of the screen -->
-			<Panel id="MenuRow" tabindex="3" selectionpos="5,5" ondescendantfocus="MainNavRowFocused();" ondescendantblur="MainNavRowBlur();" selectionposboundary="vertical" onmoveup="SetInputFocus( TopRow )">
-				<Panel id="MenuRowButtons">		
-					<ParentalButton id="StoreButton" class="Button ButtonLeft" tabindex="0" selectionpos="1,5" onfocus="StoreButtonFocused();" onactivate="StoreShow();">
-						<Label id="StoreLabel" class="ButtonLabel" text="#MainMenu_Store" />
-					</ParentalButton>
-					<Button id="LibraryButton" class="Button ButtonMiddle" tabindex="1" selectionpos="1.1,5" onfocus="LibraryButtonFocused();" onactivate="$.DispatchEvent( 'ShowLibrary' );">
-						<Label id="LibraryLabel" class="ButtonLabel" text="#MainMenu_Library" />
-					</Button>
-					<ParentalButton id="CommunityButton" class="Button ButtonMiddle" tabindex="2" selectionpos="1.2,5" onactivate="OpenCommunityHome( true );">
-						<Label id="CommunityLabel" class="ButtonLabel" text="#MainMenu_Community" />
-					</ParentalButton>
-					<ParentalButton id="ProfileButton" class="Button ButtonRight" tabindex="3" selectionpos="1.3,5" onfocus="ProfileButtonFocused();" onactivate="OpenProfileMenu( false );">
-						<Label id="ProfileLabel" class="ButtonLabel" text="#MainMenu_Profile" />
-					</ParentalButton>
-				</Panel>					
-			</Panel>
+			<Panel id="HR2" class="HR" />
 			<Image id="HomeGlow" class="HomeGlow" src="file://{images}/homeglow.png" />
 
-			<ContentFrame id="ContentFrame" />
+			<Panel id="GameRowContents" tabindex="2" class="GameRowContents" selectionpos="0,80" selectionposboundary="vertical" >
+				<Panel class="GameRowContentsWrapper" selectionpos="0,0" >
+					<Panel class="GameItem" selectionpos="1,0" >
+						<Panel class="GameItemHeader" >
+							<Label class="GameRowHeaderLabel" text="#MainMenu_FriendsArePlaying" />
+						</Panel>
+						<Button id="FriendsArePlayingGame" class="Button GameButton" tabindex="0"  selectionpos="0,0" > 
+							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
+								<Label id="MissingImageLabel" text="" />
+							</Image>
+							<Panel id="SuggestedStatus" >			
+								<Panel id="SuggestedStatusWrapper" >			
+									<Panel id="StreamingVideoSupport" class="StreamingVideoSupport StatusImage" />
+									<Panel id="GridControllerSupport" class="GridControllerSupport StatusImage" />
+									<Panel class="InstalledState" />
+									<Panel id="ReadyToPlay" class="ReadyToPlay StatusImage" />
+									<Panel id="ReadyToStream" class="ReadyToStream StatusImage" />
+									<Panel id="ReadyToDownload" class="ReadyToDownload StatusImage" />
+									<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
+								</Panel>
+							</Panel>
+						</Button>
+					</Panel>
+					<Panel class="GameItem" selectionpos="3,0" >
+						<Panel class="GameItemHeader" >
+							<Label class="GameRowHeaderLabel" text="#MainMenu_RecentPlaying" />
+						</Panel>
+						<Button id="ResumePlayingGame" class="Button GameButton" tabindex="1" selectionpos="0,0" > 
+							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
+								<Label id="MissingImageLabel" text="" />
+							</Image>
+							<Panel id="SuggestedStatus" >			
+								<Panel id="SuggestedStatusWrapper" >			
+									<Panel id="StreamingVideoSupport" class="StreamingVideoSupport StatusImage" />
+									<Panel id="GridControllerSupport" class="GridControllerSupport StatusImage" />
+									<Panel class="InstalledState" />
+									<Panel id="ReadyToPlay" class="ReadyToPlay StatusImage" />
+									<Panel id="ReadyToStream" class="ReadyToStream StatusImage" />
+									<Panel id="ReadyToDownload" class="ReadyToDownload StatusImage" />
+									<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
+								</Panel>
+							</Panel>
+						</Button>
+					</Panel>
+					<Panel class="GameItem"  selectionpos="4,0">
+						<Panel class="GameItemHeader" >
+							<Label class="GameRowHeaderLabel" text="#MainMenu_UnplayedPlaying" />
+						</Panel>
+						<Button id="UnplayedPlayingGame" class="Button GameButton" tabindex="2" selectionpos="0,0" > 
+							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
+								<Label id="MissingImageLabel" text="" />
+							</Image>
+							<Panel id="SuggestedStatus" >			
+								<Panel id="SuggestedStatusWrapper" >			
+									<Panel id="StreamingVideoSupport" class="StreamingVideoSupport StatusImage" />
+									<Panel id="GridControllerSupport" class="GridControllerSupport StatusImage" />
+									<Panel class="InstalledState" />
+									<Panel id="ReadyToPlay" class="ReadyToPlay StatusImage" />
+									<Panel id="ReadyToStream" class="ReadyToStream StatusImage" />
+									<Panel id="ReadyToDownload" class="ReadyToDownload StatusImage" />
+									<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
+								</Panel>
+							</Panel>
+						</Button>
+					</Panel>
+				</Panel>
+			</Panel>
+
+			<Panel id="WelcomePanel" selectionpos="0,160" overscroll-y="400"/>
+
 		</Panel>
+		<!-- All the contents for backgrounds for the main nav row, and the real contents to drill into on activation -->
+		<Panel id="MainRowContents" hittest="false">
+			<StorePanel id="Store" />				
+			<CommunityWrapper id="CommunityWrapper" class="CommunityWrapper" />
+			<ProfileWrapper id="ProfileWrapper" class="ProfileWrapper" />
+		</Panel>
+		<ContentFrame id="ContentFrame" />
 	</MainMenu>	
 </root>
