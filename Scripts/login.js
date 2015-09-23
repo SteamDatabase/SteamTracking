@@ -17,7 +17,7 @@ function CLoginPromptManager( strBaseURL, rgOptions )
 	this.m_fnOnFailure = rgOptions.fnOnFailure || null;
 	this.m_fnOnSuccess = rgOptions.fnOnSuccess || null;
 
-	this.m_strRedirectURL = rgOptions.strRedirectURL || strBaseURL ;
+	this.m_strRedirectURL = rgOptions.strRedirectURL || (this.m_bIsMobile ? '' : strBaseURL);
 	this.m_strSessionID = rgOptions.strSessionID || null;
 
 	this.m_strUsernameEntered = null;
@@ -588,16 +588,16 @@ CLoginPromptManager.prototype.LoginComplete = function()
 	{
 				$J('#openidForm').submit();
 	}
+	else if ( this.m_strRedirectURL != '' )
+	{
+		window.location = this.m_strRedirectURL;
+	}
 	else if ( this.m_bIsMobile )
 	{
 				if ( document.forms['logon'].elements['oauth'] && ( document.forms['logon'].elements['oauth'].value.length > 0 ) )
 		{
 			window.location = this.m_sOAuthRedirectURI + '?' + document.forms['logon'].elements['oauth'].value;
 		}
-	}
-	else
-	{
-		window.location = this.m_strRedirectURL;
 	}
 };
 

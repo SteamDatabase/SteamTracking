@@ -196,6 +196,9 @@ function RefreshMyMarketListings()
 						$.Each( data.buy_orders, function( order ) {
 							DelayAddBuyOrder( nLoadNumber, order, oGrid );
 						} );
+						$.Each( data.listings_to_confirm, function( order ) {
+							DelayAddListing( nLoadNumber, order, oGrid, true );
+						} );
 						$.Each( data.listings.reverse(), function( listing ) {
 							DelayAddListing( nLoadNumber, listing, oGrid );
 						} );
@@ -306,7 +309,7 @@ function DelayAddBuyOrder( nLoadNumber, order, oGrid )
 				} );
 }
 
-function DelayAddListing( nLoadNumber, listing, oGrid )
+function DelayAddListing( nLoadNumber, listing, oGrid, bWaitingForConfirmation )
 {
 	$.Schedule( 0.0, function()
 	{
@@ -380,9 +383,18 @@ function DelayAddListing( nLoadNumber, listing, oGrid )
 			oPrice.text = '(%1$s)'
 					.replace( '%1$s', v_currencyformat(listing.price, GetCurrencyCode( listing.currencyid - 2000 ) ) );
 
-			var oTimeListed = $.CreatePanel( 'Label', oInfo, '' );
-			oTimeListed.text = 'Listed on %1$s'
+			if ( bWaitingForConfirmation )
+			{
+				var oWaiting = $.CreatePanel( 'Label', oInfo, '' );
+				oWaiting.AddClass( "WaitingForConfirmation" );
+				oWaiting.text = 'Waiting for confirmation';
+			}
+			else
+			{
+				var oTimeListed = $.CreatePanel( 'Label', oInfo, '' );
+				oTimeListed.text = 'Listed on %1$s'
 					.replace( '%1$s', listing.time_created_str );
+			}
 
 			oItem.SetPanelEvent( 'onactivate', function()
 			{

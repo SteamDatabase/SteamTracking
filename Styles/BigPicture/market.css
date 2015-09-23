@@ -41,6 +41,11 @@
 	opacity: 1.0;
 }
 
+.NX #MarketPageTitle
+{
+	visibility: collapse;
+}
+
 #SearchTitle,
 #SearchTerms,
 .ItemGridSearchVisible #MarketTitle,
@@ -73,11 +78,7 @@
 
 #MarketMenuRow
 {
-	flow-children: down;
-
-	/*background-color: gradient( linear, 0% 0%, 100% 0%, from( #0f2c40 ), to( #051119 ) ); */
 	width: 100%;
-	/*padding: 20px; */
 }
 
 #MarketMenuRowButtons
@@ -133,6 +134,15 @@
 }
 
 
+#MarketMenuRow .WalletInfo
+{
+	visibility: collapse;
+}
+
+.NX #MarketMenuRow .WalletInfo
+{
+	visibility: visible;
+}
 
 .ItemGrid
 {
@@ -279,6 +289,11 @@ Label.PurchasedFor
 {
 	color: #588EB4;
 	margin-right: 8px;
+}
+
+Label.WaitingForConfirmation
+{
+	color: white;
 }
 
 .MarketGridItem:hover
@@ -596,7 +611,7 @@ Label.HistoryEventDescription
 }
 
 
-#WalletInfo
+.WalletInfo
 {
 	horizontal-align: right;
 	vertical-align: center;
@@ -612,39 +627,39 @@ Label.HistoryEventDescription
 	transition-timing-function: ease-in-out;
 }
 
-#MarketPageTitle #WalletInfo
+#MarketPageTitle .WalletInfo
 {
 	padding-right: 0px;
 }
 
-.ContentPanel #WalletInfo,
-.CommunityDepth1 .TopVisibleDepth1 #WalletInfo,
-.CommunityDepth2 .TopVisibleDepth2 #WalletInfo,
-.CommunityDepth3 .TopVisibleDepth3 #WalletInfo,
-.CommunityDepth4 .TopVisibleDepth4 #WalletInfo,
-.CommunityDepth5 .TopVisibleDepth5 #WalletInfo
+.ContentPanel .WalletInfo,
+.CommunityDepth1 .TopVisibleDepth1 .WalletInfo,
+.CommunityDepth2 .TopVisibleDepth2 .WalletInfo,
+.CommunityDepth3 .TopVisibleDepth3 .WalletInfo,
+.CommunityDepth4 .TopVisibleDepth4 .WalletInfo,
+.CommunityDepth5 .TopVisibleDepth5 .WalletInfo
 {
 	opacity: 1.0;
 }
 
-#NoWallet
+.NoWallet
 {
 	visibility: collapse;
 }
 
-.NoWallet #WalletLabel,
-.NoWallet #WalletAmount
+.NoWallet .WalletLabel,
+.NoWallet .WalletAmount
 {
 	visibility: collapse;
 }
 
-.NoWallet #NoWallet
+.NoWallet .NoWallet
 {
 	visibility: visible;
 }
 
-#WalletLabel,
-#NoWallet
+.WalletLabel,
+.NoWallet
 {
 	color: #86be3e;
 	font-size: 34px;
@@ -653,7 +668,7 @@ Label.HistoryEventDescription
 	text-transform: none;
 }
 
-#WalletAmount
+.WalletAmount
 {
 	color: checkout_title_bg;
 	font-size: 34px;

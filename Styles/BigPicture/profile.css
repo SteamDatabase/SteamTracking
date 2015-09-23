@@ -355,7 +355,7 @@ ProfilePanel #UpperRow
 	pre-transform-scale2d: 0.83;
 }
 
-.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus .ContentPanel:hover
+.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus .ProfileContentCard:hover
 {
 		pre-transform-scale2d: 1.04;
 }
@@ -371,7 +371,7 @@ ProfilePanel #UpperRow
 }
 
 
-#ContentsRow .ContentPanel
+#ContentsRow .ProfileContentCard
 {
 	width: 560px;
 	height: 310px;
@@ -412,15 +412,15 @@ ProfilePanel #UpperRow
 	transform: translatex( -40px ) translatey( -216px );
 }
 
-.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus .ContentPanel,
-.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus .ContentPanel:descendantfocus:hover
+.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus .ProfileContentCard,
+.Profile:descendantfocus #ProfileContent #ContentsRow:descendantfocus .ProfileContentCard:descendantfocus:hover
 {
 	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
 	pre-transform-scale2d: 1.0;
 }
 
-#ContentsRow .ContentPanel:focus,
-#ContentsRow .ContentPanel:descendantfocus
+#ContentsRow .ProfileContentCard:focus,
+#ContentsRow .ProfileContentCard:descendantfocus
 {
 	background-color: action_module;
 	opacity-mask: url( "file://{images}/store/store_browse_bg.png" ) 0.0;
@@ -432,7 +432,7 @@ ProfilePanel #UpperRow
 }
 
 
-#ContentsRow .ContentPanel .SectionHeader
+#ContentsRow .ProfileContentCard .SectionHeader
 {
 	color: detailsdatalabel;
 	font-size: 36px;
@@ -442,7 +442,7 @@ ProfilePanel #UpperRow
 	margin-left: 14px;
 }
 
-#ContentsRow .ContentPanel:descendantfocus  .SectionHeader
+#ContentsRow .ProfileContentCard:descendantfocus  .SectionHeader
 {
 	color: detailsdatalabelfocus;
 }
@@ -571,7 +571,7 @@ ProfilePanel #UpperRow
 	opacity: 0.0;
 }
 
-#ContentsRow .ContentPanel:descendantfocus #FavGroupDesc
+#ContentsRow .ProfileContentCard:descendantfocus #FavGroupDesc
 {
 	opacity: 0.95;
 }
@@ -740,7 +740,7 @@ ProfilePanel #UpperRow
 	transform: translatey( -34px );
 }
 
-.LowerContentPanel
+.LowerProfileContentCard
 {
 	width: 514px;
 	height: 570px;
@@ -759,8 +759,8 @@ ProfilePanel #UpperRow
 	transition-delay: 0s;
 }
 
-.LowerContentPanel:focus,
-.LowerContentPanel:descendantfocus
+.LowerProfileContentCard:focus,
+.LowerProfileContentCard:descendantfocus
 {
 
 }
@@ -801,8 +801,8 @@ ProfilePanel #UpperRow
 	background-color: action_module;	
 }
 
-.LowerContentPanel:focus .LowerContentBody,
-.LowerContentPanel:descendantfocus .LowerContentBody
+.LowerProfileContentCard:focus .LowerContentBody,
+.LowerProfileContentCard:descendantfocus .LowerContentBody
 {
 	pre-transform-scale2d: 1.0, 1.0;
 
@@ -834,8 +834,8 @@ ProfilePanel #UpperRow
 	transition-delay: 0s;
 }
 
-.LowerContentPanel:focus .LowerContentBodyInner,
-.LowerContentPanel:descendantfocus .LowerContentBodyInner
+.LowerProfileContentCard:focus .LowerContentBodyInner,
+.LowerProfileContentCard:descendantfocus .LowerContentBodyInner
 {
 	pre-transform-scale2d: 1.0, 1.0;
 	transform: translatex( 0px );
@@ -1124,7 +1124,7 @@ ProfilePanel #UpperRow
 	opacity: 0.0;
 }
 
-.LowerContentPanel:descendantfocus #BadgeButtonAll
+.LowerProfileContentCard:descendantfocus #BadgeButtonAll
 {
 	opacity: 1.0;
 }
@@ -1628,7 +1628,7 @@ color: #FFFFFF99;
 
 
 
-#ContentsRow .ContentPanel:descendantfocus #ViewAllGames Label
+#ContentsRow .ProfileContentCard:descendantfocus #ViewAllGames Label
 {
 	opacity: 1.0;
 	}
@@ -1642,7 +1642,7 @@ color: #FFFFFF99;
 	opacity: 0.6;
 }
 
-#ContentsRow .ContentPanel:descendantfocus .ProfileDetailButton
+#ContentsRow .ProfileContentCard:descendantfocus .ProfileDetailButton
 {
 	opacity: 1.0;
 }
@@ -1681,8 +1681,8 @@ color: #FFFFFF99;
 	opacity: 0.0;
 }
 
-.StackDepth1 ProfilePanel #ContentsRow .ContentPanel,
-.StackDepth1 ProfilePanel #LowerContentsRow .LowerContentPanel,
+.StackDepth1 ProfilePanel #ContentsRow .ProfileContentCard,
+.StackDepth1 ProfilePanel #LowerContentsRow .LowerProfileContentCard,
 .StackDepth1 ProfilePanel .LowerContentBody 
 {
 	background-color: #00000000;
@@ -2278,15 +2278,15 @@ color: #FFFFFF99;
 	width: 100%;
 }
 
-#ContentsRow .ContentPanel VerticalScrollBar
+#ContentsRow .ProfileContentCard VerticalScrollBar
 {
 	opacity: 0.0;
 	margin-bottom: 9px;
 	margin-top: 0px;
 }
 
-#ContentsRow .ContentPanel:focus VerticalScrollBar,
-#ContentsRow .ContentPanel:descendantfocus VerticalScrollBar
+#ContentsRow .ProfileContentCard:focus VerticalScrollBar,
+#ContentsRow .ProfileContentCard:descendantfocus VerticalScrollBar
 {
 	opacity: 1.0;
 }
@@ -2482,7 +2482,7 @@ Label.AchievementPercent,
 	opacity: 0.8;
 }
 
-#Comments.ContentPanel .comment_form
+#Comments.ProfileContentCard .comment_form
 {
 	visibility: collapse;
 	opacity: 0.0;
@@ -2501,7 +2501,7 @@ Label.AchievementPercent,
 	opacity: 0.0;
 }
 
-#ContentsRow .ContentPanel:descendantfocus #ViewAllComments
+#ContentsRow .ProfileContentCard:descendantfocus #ViewAllComments
 {
 	opacity: 1.0;
 }
@@ -3534,7 +3534,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	text-transform: uppercase;
 }
 
-#ShowcaseGrid, #RightColumn
+#RightColumn
 {
 	width: fill-parent-flow( 1.0 );
 	height: 870px;
@@ -3556,12 +3556,14 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	transition-property: transform;
 }
 
-#ShowcaseGrid:descendantfocus, #RightColumn:descendantfocus
+#ShowcaseGrid
 {
-	transform: translatex( -200px );
+	height: 100%;
+	width: 100%;
+	padding-top: 30px;
 }
 
-#ShowcaseGrid .ContentPanel, #RightColumn .ContentPanel
+#ShowcaseGrid .ProfileContentCard, #RightColumn .ProfileContentCard
 {
 	background-color: transparent_module;
 	width: 448px;
@@ -3578,7 +3580,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	transition-delay: 0s;
 }
 
-#ShowcaseGrid .ContentPanel:focus, #RightColumn .ContentPanel:focus
+#ShowcaseGrid .ProfileContentCard:focus, #RightColumn .ProfileContentCard:focus
 {
 
 	background-color: action_module;
@@ -3592,13 +3594,13 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	animation-direction: normal;
 }
 
-.ContentPanelTitle
+.ProfileContentCardTitle
 {
 	font-size: 28px;
 	color: #36b3d9ff;
 }
 
-.ContentPanelSubTitle
+.ProfileContentCardSubTitle
 {
 	font-size: 24px;
 	color: #36b3d9ff;
@@ -3884,18 +3886,18 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 
 
-.ContentPanel #ScreenshowShowCaseListSmall
+.ProfileContentCard #ScreenshowShowCaseListSmall
 {
 	height: fill-parent-flow( 1.0 );
 }
 
-.ContentPanel #big_screenshot_preview
+.ProfileContentCard #big_screenshot_preview
 {
 	width: 288px;
 }
 
-.ContentPanel .small_screenshot_preview,
-.ContentPanel #small_screenshot_previews #small_preview1
+.ProfileContentCard .small_screenshot_preview,
+.ProfileContentCard #small_screenshot_previews #small_preview1
 {
 	height: 60px;
 	margin-bottom: 0px;
@@ -3930,6 +3932,8 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	overflow: clip;
 }
 
+/* Content grid stuff */
+
 .ImageContainer {
 	margin: 5px;
 
@@ -3954,21 +3958,30 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	transition-timing-function: ease-in-out;
 
 	margin: -25px;
+}
 
+.ImageContainer Image {
 	opacity: 0;
+}
 
+.ImageContainer Image.Loaded
+{
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in;
 
 }
 
-.ImageContainer.Loaded
+.ImageContainer Image.Loaded > LoadingThrobber
+{
+	opacity: 0;
+}
+
+
+.ImageContainer Image.Visible
 {
 	opacity: 1;
-}
-
-
-.ImageContainer.Ready
-{
-	opacity: 0.85;
 }
 
 .ImageContainer.LosingFocus
@@ -3996,17 +4009,10 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	transform: translatey( -2px ) translatex(-2px);
 }
 
-.ImageContainer Image
-{
-	background-color: #222222ff;
-	vertical-align: center;
 
-	box-shadow: #00000022 -4px -4px 8px 8px;
-
-	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation;
-	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
-
+.ImageContainer LoadingThrobber {
+	vertical-align: middle;
+	horizontal-align: center;
 }
 
 .ImageContainer:focus Image,
@@ -4054,17 +4060,11 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 	padding: 40px;
 	margin-top: -40px;
-	transition-delay: 0.0s;
 
 	flow-children: down;
 	width: 100%;
 	height: 950px;
-	transform: translatex(0px);
 
-
-	transition-property: opacity, transform;
-	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
 }
 #AchievementsContainer.AchievementsContainer,
 .AchievementsContainer .StatsContainer {
@@ -4074,9 +4074,26 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	padding-bottom: 0px;
 }
 .ContentGrid {
-	margin-left: -40px;
+	margin-top: 40px;
 	height: 900px;
 }
+
+#ProfileContent .ContentGrid
+{
+	margin-top: 0px;
+	height: 100%;
+}
+
+#ProfileContent .NxNavigationLoadingThrobber
+{
+	width: 100%;
+	height: 650px;
+}
+
+.FullscreenImagePopup {
+	background-color: #000000FF;
+}
+
 .ImageContainer Image {
 	max-height: 230px;
 	max-width: 370px;
@@ -4311,16 +4328,6 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	visibility: visible;
 }
 
-.ContentGrid {
-	transition-property: opacity;
-	transition-duration: shortduration;
-	transition-timing-function: ease-in-out;
-	opacity: 0;
-}
-
-.ContentGrid.Visible {
-	opacity: 1;
-}
 
 #LeaderboardsHeader.Hidden {
 	visibility: collapse;
@@ -4458,4 +4465,9 @@ Panel.AvatarOptionGame {
 .ImageSelectionButton {
 	height: fit-children;
 	flow-children: right;
+}
+
+.ContentRoot {
+	width: 100%;
+	height: 100%;
 }
