@@ -921,14 +921,22 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 		$J('#login_twofactorauth_buttonsets').children().hide();
 		$J('#login_twofactorauth_buttonset_waiting').show();
 
-		var rgParameters = {
-			smscode: $J('#twofactorcode_entry').val(),
-			reset: this.m_bTwoFactorReset ? 1 : 0
+		// Immediately skip to incorrect code step without actually checking it if the user forgot to enter a code.
+		if ( $J('#twofactorcode_entry').val().length == 0 )
+		{
+			this.SetTwoFactorAuthModalState( 'selfhelp_sms_remove_incorrectcode' );
 		}
+		else
+		{
+			var rgParameters = {
+				smscode: $J( '#twofactorcode_entry' ).val(),
+				reset: this.m_bTwoFactorReset ? 1 : 0
+			}
 
-		$J.post( this.m_strBaseURL + 'removetwofactor/', this.GetParameters( rgParameters ) )
-				.done( $J.proxy( this.OnRemoveTwoFactorResponse, this ) )
-				.fail( $J.proxy( this.OnTwoFactorRecoveryFailure, this ) );
+			$J.post( this.m_strBaseURL + 'removetwofactor/', this.GetParameters( rgParameters ) )
+					.done( $J.proxy( this.OnRemoveTwoFactorResponse, this ) )
+					.fail( $J.proxy( this.OnTwoFactorRecoveryFailure, this ) );
+		}
 	}
 	else if ( step == 'selfhelp_sms_remove_incorrectcode' )
 	{
@@ -973,16 +981,19 @@ CLoginPromptManager.prototype.SetTwoFactorAuthModalState = function( step )
 		$J('#login_twofactorauth_buttonsets').children().hide();
 		$J('#login_twofactorauth_buttonset_waiting').show();
 
-		var rgParameters = { rcode: $J('#twofactorcode_entry').val() }
+		// Immediately skip to incorrect code step without actually checking it if the user forgot to enter a code.
+		if ( $J('#twofactorcode_entry').val().length == 0 )
+		{
+			this.SetTwoFactorAuthModalState( 'selfhelp_rcode_incorrectcode' );
+		}
+		else
+		{
+			var rgParameters = { rcode: $J( '#twofactorcode_entry' ).val() }
 
-		$J.post( this.m_strBaseURL + 'userecoverycode/', this.GetParameters( rgParameters ) )
-				.done( $J.proxy( this.OnUseTwoFactorRecoveryCodeResponse, this ) )
-				.fail( function() {
-					ShowAlertDialog( 'Error', 'There was a problem communicating with the Steam servers.  Please try again later.' );
-
-					$J('#login_btn_signin').show();
-					$J('#login_btn_wait').hide();
-				});
+			$J.post( this.m_strBaseURL + 'userecoverycode/', this.GetParameters( rgParameters ) )
+					.done( $J.proxy( this.OnUseTwoFactorRecoveryCodeResponse, this ) )
+					.fail( $J.proxy( this.OnTwoFactorRecoveryFailure, this ) );
+		}
 	}
 	else if ( step == 'selfhelp_rcode_incorrectcode' )
 	{
