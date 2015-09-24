@@ -8,7 +8,7 @@
 		
 		<Panel class="DownloadsListItemLeft" >
 			<Button id="AppButton" mousecanactivate="iffocused" onmouseactivate="DownloadsActivate()" >
-				<Image id="DownloadImage" class="ListItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
+				<Image id="DownloadImage" class="ListItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-preserve-aspect" />
 			</Button>
 		</Panel>
 		

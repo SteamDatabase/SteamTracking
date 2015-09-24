@@ -17,14 +17,11 @@
 						<AvatarImage id="SelfAvatar"  />
 					</Button>
 					<Panel id="ProfileNameWrapper" >
-							<Label  class="ProfileNameLabel" text="#MainMenu_Profile" />
 							<Label  class="ProfileLabel" text="#MainMenu_ProfileState" />
+							<Label  class="ProfileNameLabel" text="#MainMenu_Profile" />
 					</Panel>
 				</Panel>
 				<Panel id="TopRowRight" selectionpos="1,0" >
-						<Panel class="MiddleTopWrapper" >
-						<Clock id="Clock" class="Clock" />
-					</Panel>
 					<ParentalButton id="Inbox" class="Button TopRowButton" tabindex="2" selectionpos="2,0" onactivate="DisplayInboxDropdown();"  >
 								 
 						<Panel id="InboxImageWrapper">
@@ -60,6 +57,7 @@
 					<Button id="BetaButton" class="Button TopRowButton" tabindex="6" selectionpos="5,0" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" >
 						<Image src="file://{images}/betabutton4.tga" />
 					</Button>
+					<Clock id="Clock" class="Clock" />
 				</Panel>
 				
 			</Panel> <!-- Top Row -->
@@ -116,7 +114,7 @@
 							<Label class="GameRowHeaderLabel" text="#MainMenu_FriendsArePlaying" />
 						</Panel>
 						<Button id="FriendsArePlayingGame" class="Button GameButton" tabindex="0"  selectionpos="0,0" > 
-							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
+							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-y-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 							</Image>
 							<Panel id="SuggestedStatus" >			
@@ -137,7 +135,7 @@
 							<Label class="GameRowHeaderLabel" text="#MainMenu_RecentPlaying" />
 						</Panel>
 						<Button id="ResumePlayingGame" class="Button GameButton" tabindex="1" selectionpos="0,0" > 
-							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
+							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-y-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 							</Image>
 							<Panel id="SuggestedStatus" >			
@@ -158,7 +156,7 @@
 							<Label class="GameRowHeaderLabel" text="#MainMenu_UnplayedPlaying" />
 						</Panel>
 						<Button id="UnplayedPlayingGame" class="Button GameButton" tabindex="2" selectionpos="0,0" > 
-							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-x-preserve-aspect" >
+							<Image id="GameImage" class="GameArt" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-y-preserve-aspect" >
 								<Label id="MissingImageLabel" text="" />
 							</Image>
 							<Panel id="SuggestedStatus" >			

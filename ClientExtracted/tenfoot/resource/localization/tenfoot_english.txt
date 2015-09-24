@@ -180,6 +180,7 @@
 	"MainMenu_Exit"	"EXIT"
 	"MainMenu_Library"	"LIBRARY"
 	"MainMenu_Web"	"WEB"
+	"MainMenu_WebTitle" "Web Browser"
 	"MainMenu_Select"	"SELECT"
 	"MainMenu_Back"		"BACK"
 	"MainMenu_Friends"	"FRIENDS"
@@ -1396,6 +1397,10 @@
 	"Controller_FirstTimeLaunch_String3"	"the Steam button to choose a mapping."
 	"Controller_NewController_ConnectedToast1"	"A controller has been detected"
 	"Controller_NewController_ConnectedToast2"	"and is now ready for use."
+	"Controller_WirelessIssue1"	"Your Steam Controller appears to"
+	"Controller_WirelessIssue2"	"be having some connection issues."
+	"Controller_WirelessIssue3"	"Hit the Steam Button for help."
+	"Controller_WirelessIssue_Footer" "DISMISS"
 
 	"Library_Details_ValidateLocalContent"	"Validate Content"
 	"Library_Details_KillApp"		"Exit {s:apptype}"
@@ -3216,18 +3221,13 @@
 
 	"SettingsAudioConfig_BeginWizard"	"Reconfigure Audio"
 
-	"SettingsAudio_Card"				"Internal Sound Card "
-	"SettingsAudio_Card_Information"	"This setting determines which sound card in your PC or console will be used for sound processing. Typically there is a built-in sound card on the mother board, but some systems have an additional discrete sound card that can perform this function. "
+	"SettingsAudio_Card"				"Internal Sound Card and Port"
+	"SettingsAudio_Card_Information"	"This setting determines which sound card and physical port in your PC or console will be used for sound processing. Typically there is a built-in sound card on the mother board, but some systems have an additional discrete sound card that can perform this function. "
 	"SettingsAudio_Card_ToDo"			"Please choose which device you want to use: "
 
 	"SettingsAudio_Profile"				"Sound Presentation "
 	"SettingsAudio_Profile_Information"	"This setting allows you to choose how you want the sound presented. Typically, you may have your sound presented in mono, stereo, or various flavors of surround sound. "
 	"SettingsAudio_Profile_ToDo"		"Please choose an audio presentation from the list below: "
-
-	"SettingsAudio_Port"						"Sound Output Port "
-	"SettingsAudio_Port_Information"			"Ports are where your sound system is physically connect to your PC or Console.  Examples of such sound system devices are your TV, Speakers, or Headphones. "
-	"SettingsAudio_Port_ToDo"					"Please indicate which port your sound system is plugged in to: "
-	"SettingsAudio_Port_PleasePlugSomethingIn"	"Nothing is plugged into the output port you're attempting to send sound output to.  Please plug in an appropriate device to the correct port to get sound. "
 
 	"SettingsAudio_Codec"	"Digital Passthrough Codecs "
 	"SettingsAudio_Codec_Information"	"If your sound system can handle digital codecs natively, you may select the native codecs to not be transcoded.  The digital streams encoded in the formats you select below will not be transcoded by the system.  This is used by media applications.  You should consult the manual of your media applications to determine these settings. "
@@ -4390,4 +4390,6 @@
 	"ContentFrame_CommunityCount" "{i:communitycount}"
 	"ContentFrame_InboxCount" "{i:inboxcount}"
 	"ContentFrame_DownloadsCount" "{i:downloads}"
+	"SignalLossHelper_Title" "ENSURING GREAT PERFORMANCE"
+	"SignalLossHelper_Description" "For the best, low-latency controller performance, please ensure there is nothing between the controller and dongle. Also please ensure that the dongle is away from your computer by using the included extender." 
 }

@@ -314,6 +314,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_controllersourcemodes.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_dlc.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_friendswhoplay.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_gamebadge.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_linksandmore.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_playaction.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/librarydetails_recentnews.o
@@ -486,6 +487,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootchangepassword.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootconfirmpassworddialog.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootcontroller.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootcontroller_losshelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootcontroller_pairing.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootdebugwindow.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/tenfootfileselector.o
@@ -1517,6 +1519,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/../gamestream/gamestreammanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/../joingamecontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/library_launchoptions.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/./library/librarydetails.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/account/ssa.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/account/tenfootconfirmpassworddialog.cpp
@@ -1612,6 +1615,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_dlc.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_friendswhoplay.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_friendswhoplay.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_gamebadge.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_gamebadge.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_linksandmore.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_linksandmore.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_playaction.cpp
@@ -1936,6 +1941,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfoot.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_losshelper.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_losshelper.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_pairing.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootcontroller_pairing.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/tenfootdebugwindow.cpp

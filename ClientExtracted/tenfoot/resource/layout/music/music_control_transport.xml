@@ -13,6 +13,7 @@
 		<Panel class="QueueControlButtons" id="TransportControls" childfocusonhover="true" >
 			<Button id="QueueRepeat" class="ControlBarButton" tabindex="auto" selectionpos="auto"  
 					onmoveup="ControlButtonMoveUp();"
+					onmovedown="SetInputFocus( SeekControl );"
 					oncontextmenu="MusicControlMore();"
 					onfocus="ControlButtonGotFocus();"
 					onactivate="MusicToggleRepeat();">
@@ -20,6 +21,7 @@
 			</Button>
 			<Button id="QueueShuffle" class="ControlBarButton" tabindex="auto" selectionpos="auto" 
 					onmoveup="ControlButtonMoveUp();"	
+					onmovedown="SetInputFocus( SeekControl );"
 					oncontextmenu="MusicControlMore();"
 					onfocus="ControlButtonGotFocus();"
 					onactivate="MusicToggleShuffle();">
@@ -27,6 +29,7 @@
 			</Button>
 			<Button id="QueuePrevious" class="ControlBarButton" tabindex="auto" selectionpos="auto"
 					onmoveup="ControlButtonMoveUp();"
+					onmovedown="SetInputFocus( SeekControl );"
 					oncontextmenu="MusicControlMore();"
 					onfocus="ControlButtonGotFocus();"
 					onactivate="MusicQueuePrevious();">
@@ -34,6 +37,7 @@
 			</Button>
 			<Button id="QueueNext" class="ControlBarButton" tabindex="auto" selectionpos="auto"
 					onmoveup="ControlButtonMoveUp();"
+					onmovedown="SetInputFocus( SeekControl );"
 					oncontextmenu="MusicControlMore();"
 					onfocus="ControlButtonGotFocus();"
 					onactivate="MusicQueueNext();">
@@ -42,6 +46,7 @@
 				
 			<Button id="PlayPause" class="PlayPauseControlBarButton" tabindex="auto" selectionpos="auto" 
 					onmoveup="ControlButtonMoveUp();"
+					onmovedown="SetInputFocus( SeekControl );"
 					oncontextmenu="MusicControlMore();"
 					onfocus="ControlButtonGotFocus();"
 					onactivate="MusicTogglePlayPause();">
@@ -52,6 +57,7 @@
 					selectionposboundary="horizontal"
 					onmouseactivate="VUMeterOnMouseActivate();"
 					onmoveup="ControlButtonMoveUp();"
+					onmovedown="SetInputFocus( SeekControl );"
 					oncontextmenu="MusicControlMore();"
 					onfocus="ControlButtonGotFocus();"						
 					id="Volume" class="VoiceBarContainer" numbars="10" 
@@ -60,6 +66,7 @@
 						
 			<Button id="BrowseMusicControlButton" class="ControlBarButton" tabindex="auto" selectionpos="auto"
 					onmoveup="ControlButtonMoveUp();"
+					onmovedown="SetInputFocus( SeekControl );"
 					oncontextmenu="MusicControlMore();"
 					onfocus="ControlButtonGotFocus();"
 					onactivate="MusicBrowseMusic();">
@@ -68,8 +75,8 @@
 
 			<SeekBar id="SeekControl" tabindex="auto" selectionpos="auto" 
 					 writable="true"
+					 onmoveup="SetInputFocus( PlayPause );"
 					 onmouseactivate="VUMeterOnMouseActivate();"
-					 onmoveup="ControlButtonMoveUp();"
 					 onfocus="ControlButtonGotFocus();" />
 				
 		</Panel>
@@ -77,7 +84,7 @@
 		<Panel id="EntriesContainer" childfocusonhover="false">
 			<Panel id="NoMusicQueueEntriesContainer" >			
 				<Button id="BrowseMusic" class="SystemButton PanelVisible" tabindex="auto" selectionpos="auto"
-						onmoveup="SetInputFocus( PlayPause )"
+						onmoveup="SetInputFocus( SeekControl )"
 						oncontextmenu="MusicControlMore();"
 						onfocus="ControlButtonGotFocus()"
 						onactivate="MusicBrowseMusic();">
@@ -92,7 +99,7 @@
 			</Panel>	
 			
 			<Panel id="MusicQueueEntriesContainer" childfocusonhover="false">
-				<Panel id="MusicQueueEntriesList" onmoveup="SetInputFocus( PlayPause )"	>
+				<Panel id="MusicQueueEntriesList" onmoveup="SetInputFocus( SeekControl )" >
 				</Panel>
 			</Panel>
 			

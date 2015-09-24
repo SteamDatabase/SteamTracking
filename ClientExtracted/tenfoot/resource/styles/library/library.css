@@ -1090,6 +1090,11 @@ ParentalButton.Locked
 	flow-children: down;
 }
 
+LibraryGameBadge.Hidden, LibraryGameBadge.Loading, LibraryGameBadge.LoadFailed
+{
+	visibility: collapse;
+}
+
 LibraryAchievements .AchievementsBody
 {
 	width: 100%;
@@ -5239,6 +5244,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 #GamesSuggestion
 {
 	visibility: collapse;	
+	padding-bottom: 20px;
 }
 
 .suggested #GamesSuggestion

@@ -56,7 +56,7 @@
 					<Panel class="GamesHorizRule" />
 					<Label id="Options" text="#Library_AllGamesOptions" class="Header" />
 					<Button id="AddSteamProduct" onactivate="ActivateProduct();" class="NxLeftNavButtonAction AddContentButton" selectionpos="0,101">
-						<Image src="file://{images}/library/icon_activate.png" />
+						<Image src="file://{images}/library/icon_add.png" />
 						<Label text="#Library_AddContent_Activate"/>
 					</Button>
 					<Button class="NxLeftNavButton WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()" selectionpos="0,102">
@@ -73,7 +73,7 @@
 			</Panel>
 			<Label class="AllGamesFilterLabel" text="#Library_Filter_FilterStringDisplay" html="true" />
 			<LibraryFilterGames id="GamesFilter" selectionpos="500,200" />
-			<LibrarySuggestions id="GamesSuggestion"  class="GamesSuggestion" selectionpos="auto" oncancel="FocusMenuRow();" />
+			<LibrarySuggestions id="GamesSuggestion"  class="GamesSuggestion" selectionpos="auto" oncancel="FocusMenuRow();" overscroll-y="100" rememberchildfocus="true" />
 			<DownloadsPanel id="GamesDownloads"  class="GamesDownloads" selectionpos="auto" oncancel="FocusMenuRow();" />
 			<MusicLibraryAlbumPanel id="MusicPanelAllGames" class="GamesGrid" scrolldirection="vertical" verticalcount="5" horizontalcount="3"
 						selectionpos="50,0" tabindex="auto" movementwrap="right" selectionposboundary="both"

@@ -10,7 +10,7 @@
 	
 	<OverlayBasePanel>
 		<Panel id="BodyWrapper">
-	 		<Panel id="OverlayDashboard" defaultfocus="Achievements" >
+	 		<Panel id="OverlayDashboard" defaultfocus="LinksAndMore" >
 				<Panel id="UpperRow" class="UpperRow">
 					<Panel id="HeaderLabels">
 						<Label id="GameName" class="GameName" text="" />
@@ -19,9 +19,9 @@
 				</Panel>
 				<Panel id="DesktopPanels">
 					<Panel id="CommonControls" tabindex="auto" selectionpos="auto">
-						<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore" />
+						<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore" rememberchildfocus="true" />
 					</Panel>			  
-					<Panel id="ContentsRow" class="ContentsRow" tabindex="auto" selectionpos="auto">
+					<Panel id="ContentsRow" class="ContentsRow" tabindex="auto" selectionpos="auto" defaultfocus="FriendsWhoPlay" rememberchildfocus="true" >
 						<Panel class="LibraryDetailsScrollableArea Overlay">
 							<Panel class="LibraryDetailsSectionRow">
 								<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" />
@@ -35,7 +35,6 @@
 								<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" />
 								<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" />
 								<MusicControlOverlay id="MusicControlOverlay" class="MusicControlOverlay DetailsDataPanel" />
-								<LibraryWorkshop id="Workshop" class="Workshop DetailsDataPanel" />
 							</Panel>
 						</Panel>
 					</Panel>
@@ -46,6 +45,6 @@
 			<CommunityWrapper id="CommunityWrapper" onmoveup="CloseGameHubOverlay();" />
 			<ProfileWrapper id="ProfileWrapper" onmoveup="CloseProfile();" />
 		</Panel>
-		<ContentFrame id="ContentFrame" />
+		<ContentFrame id="ContentFrame" oncancel="NavigateTenfootBack()" />
 	</OverlayBasePanel>
 </root>

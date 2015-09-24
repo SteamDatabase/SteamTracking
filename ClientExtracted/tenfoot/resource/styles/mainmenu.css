@@ -276,7 +276,6 @@ MainMenu.StackDepth3 .HomeGlow
 {
  	horizontal-align: right;
  	flow-children: right;
- 	margin-right:240px;
 }
 
 #TopRowLeft
@@ -517,33 +516,40 @@ MainMenu.StackDepth3 .HomeGlow
 	wash-color: accountwarning;
 }
 
+
+.MiddleTopWrapper
+{
+}
+
+.MiddleTopWrapper Image
+{
+		wash-color: #1b81a9;
+			transform: translatex(0px) translatey(31px);
+		height: 96px;
+		width: 96px;
+}
+
 #Clock
 {
 	vertical-align: center;
-	font-size: 26px;
-	margin-right: 16px;
-margin-bottom: 36px;
-	flow-children: right;
 	horizontal-align: center;
-				transform: translatex(0px) translatey(36px);
-
-	transition-property: opacity;
-	transition-duration: 0.3s;
-	transition-delay: 0.0s !immediate;
-	transition-timing-function: linear, ease-out;
-	
+	font-size: 40px;
+	flow-children: right;
+	width: 215px;
+	padding-left: 10px;
+	opacity: 0.7;
 }
 
 #Clock #Time
 {
-	color: #0D79A0;
+	color: ui_primary_color;
 	margin-right: 8px;	
 	horizontal-align: right;
 }
 
 #Clock #Suffix
 {
-	color: #0D79A0;
+	color: ui_primary_color;
 	horizontal-align: left;
 	margin-right: 0px;
 }
@@ -875,12 +881,13 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 {
 		opacity-mask: url( "file://{images}/systemmenu/capsule_mask.png" );
 		opacity: 0.0;
+		transform: translatey(0px);
 }
 
 .MainMenuButton:focus .MainMenuCapsuleOver
 {
 	transform: translatey(0px);
-
+//margin-bottom:-25px;
 		opacity: 1.0;
 }
 
@@ -950,7 +957,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	margin-bottom: 8px;
 	padding: -2px;
 	font-size: 48px;
-	transform: translatey(64px);
+	//transform: translatey(-5px);
 	
 	transition-property: opacity, transform;
 	transition-duration: 0.2s;
@@ -963,11 +970,11 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	height: 200px;
 	horizontal-align: center;
 	vertical-align: center;
-	margin: 10px;
+	margin: 0px;
 	wash-color: ui_primary_color;
 	color: #8bcdf2;
 	opacity: 1.0;
-	transform: translatey(0px);
+	transform: translatey(-10px);
 
 	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.2s;
@@ -1016,14 +1023,14 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 .EdgeButtonLeft:focus Image
 {
 		wash-color: #8bcdf2;
-		transform: translatex(0px) translatey(-10px);
+	//	transform: translatex(0px) translatey(0px);
 }
 
 
 .MainMenuButton .EdgeButtonLeft Image
 {
 		wash-color: #8bcdf2;
-		transform: translatex(32px) translatey(-10px);
+		//transform: translatex(32px) translatey(-10px);
 }
 
 .MainMenuButton .EdgeButtonRight Image
@@ -1033,22 +1040,6 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 		transform: translatex(32px) translatey(-10px);
 }
 
-
-.MiddleTopWrapper
-{
-		flow-children: down;
-		width: 200px;
-		margin-top: 10px;
-}
-
-.MiddleTopWrapper Image
-{
-		horizontal-align: center;
-		wash-color: #1b81a9;
-			transform: translatex(0px) translatey(31px);
-		height: 96px;
-		width: 96px;
-}
 
 // make sure the random username fits in this label and is uppercase
 #ProfileLabel
@@ -1062,6 +1053,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 .GameRowContents:descendantfocus
 {
 	 	wash-color: #ffffff;
+	 		desaturation: 0.0;
 	 	transform-origin: 0% 0% parent-relative;
   	transform: translateX( 0px ) rotateX( 0deg ) translateZ( 0px );
 	}
@@ -1071,9 +1063,11 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	margin-top: 620px;
 	width: 100%;
 	height: 512px;
+	desaturation: 0.7;
+	wash-color: #8bcdf2;
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e203600 ), color-stop( 0.5, #0C3251ff ),to( #0e203600 ) );
 	flow-children: right;
-	wash-color: #8bcdf2;
+
   transform-origin: 0% 0% parent-relative;
 	transform: translateX( 0px ) rotateX( 0deg ) translateZ( -64px );
   opacity:0.7;
@@ -1157,16 +1151,18 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 
 .GameButton:focus
 {
+	horizontal-align: left;
 	width: 470px;
 	height: 225px;
 	margin-top: 0px;
-	margin-left:0px;
+	margin-left: 0px;
 }
 
 .GameButton Image
 {
-	width: 460px;
-	height: 215px;
+	horizontal-align: center;
+	height: 100%;
+	width: fit-children;
 }
 
 
@@ -1177,7 +1173,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	height: 64px;
 	width: 100%;
 	
-	color: #15a4d5;
+	color: ui_primary_color;
 	font-size: 50;
 	font-weight: light;
 	font-family: platformfont;
@@ -1185,12 +1181,12 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	text-overflow: clip;
 	
 	background-color: #0C203700;
+	transform: translatey(-5px);
 
+ // opacity: 0.0;
 
-  opacity: 0.0;
-
-  transform: translatey(64px);
-	transition-property: color, opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
+ // transform: translatey(64px);
+	transition-property: color, opacity, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.1s;
 	transition-timing-function: linear;
 
@@ -1211,7 +1207,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	height: 60px;
 	border-radius: 12px;
 	padding-top: 4px;
-	opacity:0.0;
+	opacity:1.0;
 	
 	transition-property: opacity;
 	transition-duration: 0.1s, 0.1s !immediate;
@@ -1222,7 +1218,6 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 .Button .TriggerRowName
 {
 	background-color: none;
-
 }
 
 .EdgeButtonRight.Button:focus .TriggerRow, 
@@ -1231,7 +1226,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 {
 
 	opacity:1.0;
-	transform: translatey(-1px) translatex(-1px);
+	  transform: translatey(-5px) translatex(0px);
 
 }
 
@@ -1253,7 +1248,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	horizontal-align: center;
 	vertical-align: center;
 	margin: 0px;
-	margin-top: 0px;
+  transform: translatey(-18px);
 	wash-color: ui_primary_color;
 	
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
@@ -1264,7 +1259,7 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 .MainMenuButton:focus Image
 {
 	wash-color: #b6e1fa;	
-	transform: translatey(-15px);
+	transform: translatey(-18px);
 	opacity: 1.0;
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.2s, 0.2s !immediate;
@@ -1901,14 +1896,14 @@ MainMenu.BelowTheFoldClosed #WelcomePanel:descendantfocus
 Label.ProfileLabel
 {
 	font-size: 26px;
-	margin-top: -4px;
+	margin-bottom: 0px;
 	color: #36ceff;
 }
 
 Label.ProfileNameLabel
 {
 	font-size: 42px;
-	margin-top: 0px;
+	margin-top: -4px;
 	color: #36ceff;
 }
 

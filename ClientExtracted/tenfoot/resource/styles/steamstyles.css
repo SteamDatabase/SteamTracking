@@ -57,6 +57,7 @@
 @define moduledatalabel: gradient( linear, 0% 0%, 100% 100%, from( #67c1f5ff ), to( #67c1f5ff ) );
 @define medgray: #8f98a0;
 @define darkblue: #0b1c3b;
+@define brightblue: #66c0f4;
 
 /* Main menu colors */
 @define tcexitrow: gradient( linear, 0% 0%, 0% 100%, from( #808d91ff ), to( #9dadb3ff ) );
@@ -146,8 +147,8 @@
 @define mouse_active_bg_up: gradient( radial, 50% 0%, 0% 0%, 80px 180px, from( #3a809eff ), to( #0d1b2400 ) );
 
 @define mouse_off_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #1f445400 ), to( #0d1b2400 ) );
-@define mouse_hover_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #1f4454ff ), to( #0d1b2400 ) );
-@define mouse_active_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 80px 110px, from( #4a809eff ), to( #0d1b2400 ) );
+@define mouse_hover_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 180px 210px, from( #1f4454ff ), to( #0d1b2400 ) );
+@define mouse_active_bg_bottom: gradient( radial, 50% 100%, 0% 0%, 180px 210px, from( #4a809eff ), to( #0d1b2400 ) );
 
 @define carousel_bg_color: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
 @define carousel_bg_color2: gradient( linear, 0% 0%, 0% 100%, from( #142a3300 ), color-stop( 0.5, #2e57733c ), to( #141f3300 ) );
@@ -185,7 +186,8 @@
 @define slideshow_bg2: gradient( linear, 0% 0%, 0% 100%, from( #00000066 ), color-stop( 0.7, #00000066 ), to( #000000ff ) );
 @define slideshow_bg3: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop( 0.7, #00000000 ), to( #000000ff ) );
 @define all_games_hover: gradient( linear, 0% 0%, 100% 100%, from( #309ebf ), to( #0b224d ) );
-@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #64bdf1bb ), to( #238bbebb ) );
+@define action_module: gradient( linear, 0% 0%, 100% 100%, from( #64bdf173 ), to( #238bbe73 ) );
+@define nontransparent_action_module: gradient( linear, 0% 0%, 100% 100%, from( #30668fff ), to( #144d70ff ) );
 @define state_panel: gradient( linear, 0% 0%, 100% 100%, from( #ffffff1A ), to( #ffffff1A ) );
 @define transparent_module: gradient( linear, 0% 0%, 100% 100%, from( #2e648099 ), to( #15406699 ) );
 @define transparent_module2: gradient( linear, 0% 0%, 0% 100%, from( #1b3a59aa ), to( #121b2edd ) );

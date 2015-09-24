@@ -212,3 +212,10 @@ DownloadsListItem:descendantfocus .DownloadBarBackground
 	transition-duration:0.2s;
 	transform:translatex(-18px);
 }
+
+.DownloadsListItem Button,
+.DownloadsListItem Button Image
+
+{
+	width: 100%;
+}

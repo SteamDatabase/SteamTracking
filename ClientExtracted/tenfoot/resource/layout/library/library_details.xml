@@ -122,6 +122,7 @@
 					<Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow ShortArea">
 						<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" mousecanactivate="iffocused" />
 						<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" mousecanactivate="iffocused" />
+						<LibraryGameBadge id="GameBadge" class="GameBadge DetailsDataPanel Small" mousecanactivate="iffocused" />
 					</Panel>
 					<Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow TallArea">
 						<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" mousecanactivate="iffocused" />

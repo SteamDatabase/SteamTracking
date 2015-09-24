@@ -354,6 +354,7 @@
  B CLibraryFilterGames::m_symbol
  B CLibraryFriend::m_symbol
  B CLibraryFriendsWhoPlayPanel::m_symbol
+ B CLibraryGameBadgePanel::m_symbol
  B CLibraryGridBase::m_symbol
  B CLibraryGuidesPanel::m_symbol
  B CLibraryLaunchOptionsPanel::m_symbol
@@ -834,7 +835,6 @@
  B CSettingsPanelAudioWiz::m_symbol
  B CSettingsPanelAudio_Card::m_symbol
  B CSettingsPanelAudio_Codec::m_symbol
- B CSettingsPanelAudio_Port::m_symbol
  B CSettingsPanelAudio_Profile::m_symbol
  B CSettingsPanelBorrowerEntry::m_symbol
  B CSettingsPanelBroadcast::m_symbol
@@ -948,6 +948,7 @@
  B CTenfootChangeEmailWizard::m_symbol
  B CTenfootChangePasswordWizard::m_symbol
  B CTenfootConfirmPasswordDialog::m_symbol
+ B CTenfootControllerLossHelper::m_symbol
  B CTenfootControllerPairing::m_symbol
  B CTenfootFileSelector::m_symbol
  B CTenfootFooterPanel::m_symbol
@@ -1481,6 +1482,7 @@
  B ShowClientUpdateNews::symbol
  B ShowCommunityClearBackstack::symbol
  B ShowControllerConfigPresetPanel::symbol
+ B ShowControllerPacketLossHelper::symbol
  B ShowCreateAccountWizard::symbol
  B ShowCurrentAlbumInSystem::symbol
  B ShowCurrentInSystem::symbol
@@ -1535,6 +1537,7 @@
  B ShowNewModeratorMessages::symbol
  B ShowNewSupportMessages::symbol
  B ShowNewTradeOffers::symbol
+ B ShowOverlayMainMenu::symbol
  B ShowParentalLockDialog::symbol
  B ShowParentalSettings::symbol
  B ShowParentalUnlockDialog::symbol
@@ -2000,6 +2003,7 @@
  B g_LibraryFilterGames_Helper
  B g_LibraryFriend_Helper
  B g_LibraryFriendsWhoPlay_Helper
+ B g_LibraryGameBadge_Helper
  B g_LibraryGridBase_Helper
  B g_LibraryGuides_Helper
  B g_LibraryLaunchOptionsPanel_Helper
@@ -2172,7 +2176,6 @@
  B g_SettingsPanelAudioWiz_Helper
  B g_SettingsPanelAudio_Card_Helper
  B g_SettingsPanelAudio_Codec_Helper
- B g_SettingsPanelAudio_Port_Helper
  B g_SettingsPanelAudio_Profile_Helper
  B g_SettingsPanelDiskManagementAppListing_Helper
  B g_SettingsPanelGameController_NameAndCommitBinding_Helper
@@ -2272,6 +2275,7 @@
  B g_SystemIM_Helper
  B g_TenfootConfirmPasswordDialog_Helper
  B g_TenfootControllerCallback
+ B g_TenfootControllerLossHelper_Helper
  B g_TenfootControllerPairing_Helper
  B g_TenfootFileSelector_Helper
  B g_TenfootFooterPanel_Helper
@@ -2991,6 +2995,7 @@
  B panorama::g_LibraryFilterGamesLinkerHack
  B panorama::g_LibraryFriendLinkerHack
  B panorama::g_LibraryFriendsWhoPlayLinkerHack
+ B panorama::g_LibraryGameBadgeLinkerHack
  B panorama::g_LibraryGridBaseLinkerHack
  B panorama::g_LibraryGuidesLinkerHack
  B panorama::g_LibraryLaunchOptionsPanelLinkerHack
@@ -3130,7 +3135,6 @@
  B panorama::g_SettingsPanelAudioWizLinkerHack
  B panorama::g_SettingsPanelAudio_CardLinkerHack
  B panorama::g_SettingsPanelAudio_CodecLinkerHack
- B panorama::g_SettingsPanelAudio_PortLinkerHack
  B panorama::g_SettingsPanelAudio_ProfileLinkerHack
  B panorama::g_SettingsPanelDiskManagementAppListingLinkerHack
  B panorama::g_SettingsPanelGameController_NameAndCommitBindingLinkerHack
@@ -3222,6 +3226,7 @@
  B panorama::g_SyncConflictDialogLinkerHack
  B panorama::g_SystemIMLinkerHack
  B panorama::g_TenfootConfirmPasswordDialogLinkerHack
+ B panorama::g_TenfootControllerLossHelperLinkerHack
  B panorama::g_TenfootControllerPairingLinkerHack
  B panorama::g_TenfootFileSelectorLinkerHack
  B panorama::g_TenfootFooterPanelLinkerHack
@@ -4626,7 +4631,6 @@
  D CSetJumplistOptions::KB_ChainToMap()::chained
  D CSetJumplistOptions::PanelMessageFunc_OnOK::InitVar()::bAdded
  D CSettingsPanelAudio_Card::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)::s_bInDropDownChange
- D CSettingsPanelAudio_Port::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)::s_bInDropDownChange
  D CSettingsPanelAudio_Profile::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)::s_bInDropDownChange
  D CSettingsPanelNetwork::BSetProperties(CUtlVector<panorama::ParsedPanelProperty_t, CUtlMemory<panorama::ParsedPanelProperty_t> > const&)::k_symOOBE
  D CSettingsPanelNetwork_Connect::UpdateState(ENetworkDeviceState, ENetworkDeviceManagerError, char*)::k_symNetworkConnectionComplete
@@ -5731,6 +5735,7 @@
  D ShowClientUpdateNews::pchEvent
  D ShowCommunityClearBackstack::pchEvent
  D ShowControllerConfigPresetPanel::pchEvent
+ D ShowControllerPacketLossHelper::pchEvent
  D ShowCreateAccountWizard::pchEvent
  D ShowCurrentAlbumInSystem::pchEvent
  D ShowCurrentInSystem::pchEvent
@@ -5785,6 +5790,7 @@
  D ShowNewModeratorMessages::pchEvent
  D ShowNewSupportMessages::pchEvent
  D ShowNewTradeOffers::pchEvent
+ D ShowOverlayMainMenu::pchEvent
  D ShowParentalLockDialog::pchEvent
  D ShowParentalSettings::pchEvent
  D ShowParentalUnlockDialog::pchEvent
@@ -8612,13 +8618,6 @@
  D typeinfo for CCallback<CGameRecordSession, BroadcastSettingsLoaded_t, false>
  D typeinfo for CCallback<CGameRecordSession, BroadcastUploadConfig_t, false>
  D typeinfo for CCallback<CGameRecordSession, BroadcastUploadStatus_t, false>
- D typeinfo for CCallback<CGameStreamManager, AppLifetimeNotice_t, false>
- D typeinfo for CCallback<CGameStreamManager, AppStartedProcess_t, false>
- D typeinfo for CCallback<CGameStreamManager, BroadcastUploadStart_t, false>
- D typeinfo for CCallback<CGameStreamManager, BroadcastUploadStop_t, false>
- D typeinfo for CCallback<CGameStreamManager, RemoteClientReserveGamepads_t, false>
- D typeinfo for CCallback<CGameStreamManager, RemoteClientStartStreamSession_t, false>
- D typeinfo for CCallback<CGameStreamManager, StopStreamingUI_t, false>
  D typeinfo for CCallback<CGamesPage_Details, AppMinutesPlayedDataNotice_t, false>
  D typeinfo for CCallback<CGamesPage_Details, FriendsWhoPlayGameUpdate_t, false>
  D typeinfo for CCallback<CGamesPage_Details, ParentalLockChanged_t, false>
@@ -8674,6 +8673,7 @@
  D typeinfo for CCallback<CLoginPanel, SteamServerConnectFailure_t, false>
  D typeinfo for CCallback<CLoginPanel, SteamServersConnected_t, false>
  D typeinfo for CCallback<CMainMenu, ClientMarketingMessageUpdate_t, false>
+ D typeinfo for CCallback<CMainMenu, ControllerPacketLossUI_t, false>
  D typeinfo for CCallback<CMainMenu, PersonaStateChange_t, false>
  D typeinfo for CCallback<CMarketingController, ClientMarketingMessageUpdate_t, false>
  D typeinfo for CCallback<CMusicAlbumMoreDialog, GameOverlayActivated_t, false>
@@ -9271,13 +9271,13 @@
  D typeinfo for CGameStreamBaseMemStream
  D typeinfo for CGameStreamControllerOutboundThread
  D typeinfo for CGameStreamManager
- D typeinfo for CGameStreamManager::CCallback_OnAppLifetimeNotification
- D typeinfo for CGameStreamManager::CCallback_OnAppStartedProcess
- D typeinfo for CGameStreamManager::CCallback_OnBroadcastUploadStart
- D typeinfo for CGameStreamManager::CCallback_OnBroadcastUploadStop
- D typeinfo for CGameStreamManager::CCallback_OnReserveGamepads
- D typeinfo for CGameStreamManager::CCallback_OnStartStreamSession
- D typeinfo for CGameStreamManager::CCallback_OnStopStreamingUI
+ D typeinfo for CGameStreamManager::CCallbackInternal_OnAppLifetimeNotification
+ D typeinfo for CGameStreamManager::CCallbackInternal_OnAppStartedProcess
+ D typeinfo for CGameStreamManager::CCallbackInternal_OnBroadcastUploadStart
+ D typeinfo for CGameStreamManager::CCallbackInternal_OnBroadcastUploadStop
+ D typeinfo for CGameStreamManager::CCallbackInternal_OnReserveGamepads
+ D typeinfo for CGameStreamManager::CCallbackInternal_OnStartStreamSession
+ D typeinfo for CGameStreamManager::CCallbackInternal_OnStopStreamSession
  D typeinfo for CGameStreamSession
  D typeinfo for CGameStreamSteamMemStream
  D typeinfo for CGameStreamSystem
@@ -9468,6 +9468,7 @@
  D typeinfo for CLibraryFriend
  D typeinfo for CLibraryFriendsWhoPlayPanel
  D typeinfo for CLibraryFriendsWhoPlayPanel::CCallback_OnFriendsWhoPlayData
+ D typeinfo for CLibraryGameBadgePanel
  D typeinfo for CLibraryGridBase
  D typeinfo for CLibraryGridItemBase
  D typeinfo for CLibraryGuidesPanel
@@ -9506,6 +9507,7 @@
  D typeinfo for CLoginProgressDialog
  D typeinfo for CLoginUsers
  D typeinfo for CMainMenu
+ D typeinfo for CMainMenu::CCallback_OnControllerPacketLossWarning
  D typeinfo for CMainMenu::CCallback_OnMarketingMessageUpdate
  D typeinfo for CMainMenu::CCallback_OnPersonaStateChange
  D typeinfo for CManageControllersDialog
@@ -10088,7 +10090,6 @@
  D typeinfo for CSettingsPanelAudioWiz
  D typeinfo for CSettingsPanelAudio_Card
  D typeinfo for CSettingsPanelAudio_Codec
- D typeinfo for CSettingsPanelAudio_Port
  D typeinfo for CSettingsPanelAudio_Profile
  D typeinfo for CSettingsPanelBorrowerEntry
  D typeinfo for CSettingsPanelBroadcast
@@ -10443,6 +10444,7 @@
  D typeinfo for CTenfootControllerBase::CCallback_OnRemoteDeviceAuthRequest
  D typeinfo for CTenfootControllerBase::CCallback_OnRemoveDeviceAuthCancelled
  D typeinfo for CTenfootControllerCallback
+ D typeinfo for CTenfootControllerLossHelper
  D typeinfo for CTenfootControllerPairing
  D typeinfo for CTenfootControllerPairing::CCallback_OnControllerConnected
  D typeinfo for CTenfootControllerPairing::CCallback_OnControllerDisconnected
@@ -11988,13 +11990,6 @@
  D vtable for CCallback<CGameRecordSession, BroadcastSettingsLoaded_t, false>
  D vtable for CCallback<CGameRecordSession, BroadcastUploadConfig_t, false>
  D vtable for CCallback<CGameRecordSession, BroadcastUploadStatus_t, false>
- D vtable for CCallback<CGameStreamManager, AppLifetimeNotice_t, false>
- D vtable for CCallback<CGameStreamManager, AppStartedProcess_t, false>
- D vtable for CCallback<CGameStreamManager, BroadcastUploadStart_t, false>
- D vtable for CCallback<CGameStreamManager, BroadcastUploadStop_t, false>
- D vtable for CCallback<CGameStreamManager, RemoteClientReserveGamepads_t, false>
- D vtable for CCallback<CGameStreamManager, RemoteClientStartStreamSession_t, false>
- D vtable for CCallback<CGameStreamManager, StopStreamingUI_t, false>
  D vtable for CCallback<CGamesPage_Details, AppMinutesPlayedDataNotice_t, false>
  D vtable for CCallback<CGamesPage_Details, FriendsWhoPlayGameUpdate_t, false>
  D vtable for CCallback<CGamesPage_Details, ParentalLockChanged_t, false>
@@ -12050,6 +12045,7 @@
  D vtable for CCallback<CLoginPanel, SteamServerConnectFailure_t, false>
  D vtable for CCallback<CLoginPanel, SteamServersConnected_t, false>
  D vtable for CCallback<CMainMenu, ClientMarketingMessageUpdate_t, false>
+ D vtable for CCallback<CMainMenu, ControllerPacketLossUI_t, false>
  D vtable for CCallback<CMainMenu, PersonaStateChange_t, false>
  D vtable for CCallback<CMarketingController, ClientMarketingMessageUpdate_t, false>
  D vtable for CCallback<CMusicAlbumMoreDialog, GameOverlayActivated_t, false>
@@ -12644,13 +12640,13 @@
  D vtable for CGameStreamBaseMemStream
  D vtable for CGameStreamControllerOutboundThread
  D vtable for CGameStreamManager
- D vtable for CGameStreamManager::CCallback_OnAppLifetimeNotification
- D vtable for CGameStreamManager::CCallback_OnAppStartedProcess
- D vtable for CGameStreamManager::CCallback_OnBroadcastUploadStart
- D vtable for CGameStreamManager::CCallback_OnBroadcastUploadStop
- D vtable for CGameStreamManager::CCallback_OnReserveGamepads
- D vtable for CGameStreamManager::CCallback_OnStartStreamSession
- D vtable for CGameStreamManager::CCallback_OnStopStreamingUI
+ D vtable for CGameStreamManager::CCallbackInternal_OnAppLifetimeNotification
+ D vtable for CGameStreamManager::CCallbackInternal_OnAppStartedProcess
+ D vtable for CGameStreamManager::CCallbackInternal_OnBroadcastUploadStart
+ D vtable for CGameStreamManager::CCallbackInternal_OnBroadcastUploadStop
+ D vtable for CGameStreamManager::CCallbackInternal_OnReserveGamepads
+ D vtable for CGameStreamManager::CCallbackInternal_OnStartStreamSession
+ D vtable for CGameStreamManager::CCallbackInternal_OnStopStreamSession
  D vtable for CGameStreamSession
  D vtable for CGameStreamSteamMemStream
  D vtable for CGameStreamSystem
@@ -12840,6 +12836,7 @@
  D vtable for CLibraryFriend
  D vtable for CLibraryFriendsWhoPlayPanel
  D vtable for CLibraryFriendsWhoPlayPanel::CCallback_OnFriendsWhoPlayData
+ D vtable for CLibraryGameBadgePanel
  D vtable for CLibraryGridBase
  D vtable for CLibraryGuidesPanel
  D vtable for CLibraryGuidesPanel::CCallback_OnGameOverlayActivated
@@ -12877,6 +12874,7 @@
  D vtable for CLoginProgressDialog
  D vtable for CLoginUsers
  D vtable for CMainMenu
+ D vtable for CMainMenu::CCallback_OnControllerPacketLossWarning
  D vtable for CMainMenu::CCallback_OnMarketingMessageUpdate
  D vtable for CMainMenu::CCallback_OnPersonaStateChange
  D vtable for CManageControllersDialog
@@ -13453,7 +13451,6 @@
  D vtable for CSettingsPanelAudioWiz
  D vtable for CSettingsPanelAudio_Card
  D vtable for CSettingsPanelAudio_Codec
- D vtable for CSettingsPanelAudio_Port
  D vtable for CSettingsPanelAudio_Profile
  D vtable for CSettingsPanelBorrowerEntry
  D vtable for CSettingsPanelBroadcast
@@ -13807,6 +13804,7 @@
  D vtable for CTenfootControllerBase::CCallback_OnRemoteDeviceAuthRequest
  D vtable for CTenfootControllerBase::CCallback_OnRemoveDeviceAuthCancelled
  D vtable for CTenfootControllerCallback
+ D vtable for CTenfootControllerLossHelper
  D vtable for CTenfootControllerPairing
  D vtable for CTenfootControllerPairing::CCallback_OnControllerConnected
  D vtable for CTenfootControllerPairing::CCallback_OnControllerDisconnected
@@ -14756,13 +14754,6 @@
  R typeinfo name for CCallback<CGameRecordSession, BroadcastSettingsLoaded_t, false>
  R typeinfo name for CCallback<CGameRecordSession, BroadcastUploadConfig_t, false>
  R typeinfo name for CCallback<CGameRecordSession, BroadcastUploadStatus_t, false>
- R typeinfo name for CCallback<CGameStreamManager, AppLifetimeNotice_t, false>
- R typeinfo name for CCallback<CGameStreamManager, AppStartedProcess_t, false>
- R typeinfo name for CCallback<CGameStreamManager, BroadcastUploadStart_t, false>
- R typeinfo name for CCallback<CGameStreamManager, BroadcastUploadStop_t, false>
- R typeinfo name for CCallback<CGameStreamManager, RemoteClientReserveGamepads_t, false>
- R typeinfo name for CCallback<CGameStreamManager, RemoteClientStartStreamSession_t, false>
- R typeinfo name for CCallback<CGameStreamManager, StopStreamingUI_t, false>
  R typeinfo name for CCallback<CGamesPage_Details, AppMinutesPlayedDataNotice_t, false>
  R typeinfo name for CCallback<CGamesPage_Details, FriendsWhoPlayGameUpdate_t, false>
  R typeinfo name for CCallback<CGamesPage_Details, ParentalLockChanged_t, false>
@@ -14818,6 +14809,7 @@
  R typeinfo name for CCallback<CLoginPanel, SteamServerConnectFailure_t, false>
  R typeinfo name for CCallback<CLoginPanel, SteamServersConnected_t, false>
  R typeinfo name for CCallback<CMainMenu, ClientMarketingMessageUpdate_t, false>
+ R typeinfo name for CCallback<CMainMenu, ControllerPacketLossUI_t, false>
  R typeinfo name for CCallback<CMainMenu, PersonaStateChange_t, false>
  R typeinfo name for CCallback<CMarketingController, ClientMarketingMessageUpdate_t, false>
  R typeinfo name for CCallback<CMusicAlbumMoreDialog, GameOverlayActivated_t, false>
@@ -15418,13 +15410,13 @@
  R typeinfo name for CGameStreamBaseMemStream
  R typeinfo name for CGameStreamControllerOutboundThread
  R typeinfo name for CGameStreamManager
- R typeinfo name for CGameStreamManager::CCallback_OnAppLifetimeNotification
- R typeinfo name for CGameStreamManager::CCallback_OnAppStartedProcess
- R typeinfo name for CGameStreamManager::CCallback_OnBroadcastUploadStart
- R typeinfo name for CGameStreamManager::CCallback_OnBroadcastUploadStop
- R typeinfo name for CGameStreamManager::CCallback_OnReserveGamepads
- R typeinfo name for CGameStreamManager::CCallback_OnStartStreamSession
- R typeinfo name for CGameStreamManager::CCallback_OnStopStreamingUI
+ R typeinfo name for CGameStreamManager::CCallbackInternal_OnAppLifetimeNotification
+ R typeinfo name for CGameStreamManager::CCallbackInternal_OnAppStartedProcess
+ R typeinfo name for CGameStreamManager::CCallbackInternal_OnBroadcastUploadStart
+ R typeinfo name for CGameStreamManager::CCallbackInternal_OnBroadcastUploadStop
+ R typeinfo name for CGameStreamManager::CCallbackInternal_OnReserveGamepads
+ R typeinfo name for CGameStreamManager::CCallbackInternal_OnStartStreamSession
+ R typeinfo name for CGameStreamManager::CCallbackInternal_OnStopStreamSession
  R typeinfo name for CGameStreamSession
  R typeinfo name for CGameStreamSteamMemStream
  R typeinfo name for CGameStreamSystem
@@ -15615,6 +15607,7 @@
  R typeinfo name for CLibraryFriend
  R typeinfo name for CLibraryFriendsWhoPlayPanel
  R typeinfo name for CLibraryFriendsWhoPlayPanel::CCallback_OnFriendsWhoPlayData
+ R typeinfo name for CLibraryGameBadgePanel
  R typeinfo name for CLibraryGridBase
  R typeinfo name for CLibraryGridItemBase
  R typeinfo name for CLibraryGuidesPanel
@@ -15653,6 +15646,7 @@
  R typeinfo name for CLoginProgressDialog
  R typeinfo name for CLoginUsers
  R typeinfo name for CMainMenu
+ R typeinfo name for CMainMenu::CCallback_OnControllerPacketLossWarning
  R typeinfo name for CMainMenu::CCallback_OnMarketingMessageUpdate
  R typeinfo name for CMainMenu::CCallback_OnPersonaStateChange
  R typeinfo name for CMainMenu::UIStateClassSetting_t
@@ -16240,7 +16234,6 @@
  R typeinfo name for CSettingsPanelAudioWiz
  R typeinfo name for CSettingsPanelAudio_Card
  R typeinfo name for CSettingsPanelAudio_Codec
- R typeinfo name for CSettingsPanelAudio_Port
  R typeinfo name for CSettingsPanelAudio_Profile
  R typeinfo name for CSettingsPanelBorrowerEntry
  R typeinfo name for CSettingsPanelBroadcast
@@ -16597,6 +16590,7 @@
  R typeinfo name for CTenfootControllerBase::CCallback_OnRemoteDeviceAuthRequest
  R typeinfo name for CTenfootControllerBase::CCallback_OnRemoveDeviceAuthCancelled
  R typeinfo name for CTenfootControllerCallback
+ R typeinfo name for CTenfootControllerLossHelper
  R typeinfo name for CTenfootControllerPairing
  R typeinfo name for CTenfootControllerPairing::CCallback_OnControllerConnected
  R typeinfo name for CTenfootControllerPairing::CCallback_OnControllerDisconnected
@@ -19528,27 +19522,6 @@
  T CCallback<CGameRecordSession, BroadcastUploadStatus_t, false>::CCallback(CGameRecordSession*, void (CGameRecordSession::*)(BroadcastUploadStatus_t*))
  T CCallback<CGameRecordSession, BroadcastUploadStatus_t, false>::Register(CGameRecordSession*, void (CGameRecordSession::*)(BroadcastUploadStatus_t*))
  T CCallback<CGameRecordSession, BroadcastUploadStatus_t, false>::Run(void*)
- T CCallback<CGameStreamManager, AppLifetimeNotice_t, false>::CCallback(CGameStreamManager*, void (CGameStreamManager::*)(AppLifetimeNotice_t*))
- T CCallback<CGameStreamManager, AppLifetimeNotice_t, false>::Register(CGameStreamManager*, void (CGameStreamManager::*)(AppLifetimeNotice_t*))
- T CCallback<CGameStreamManager, AppLifetimeNotice_t, false>::Run(void*)
- T CCallback<CGameStreamManager, AppStartedProcess_t, false>::CCallback(CGameStreamManager*, void (CGameStreamManager::*)(AppStartedProcess_t*))
- T CCallback<CGameStreamManager, AppStartedProcess_t, false>::Register(CGameStreamManager*, void (CGameStreamManager::*)(AppStartedProcess_t*))
- T CCallback<CGameStreamManager, AppStartedProcess_t, false>::Run(void*)
- T CCallback<CGameStreamManager, BroadcastUploadStart_t, false>::CCallback(CGameStreamManager*, void (CGameStreamManager::*)(BroadcastUploadStart_t*))
- T CCallback<CGameStreamManager, BroadcastUploadStart_t, false>::Register(CGameStreamManager*, void (CGameStreamManager::*)(BroadcastUploadStart_t*))
- T CCallback<CGameStreamManager, BroadcastUploadStart_t, false>::Run(void*)
- T CCallback<CGameStreamManager, BroadcastUploadStop_t, false>::CCallback(CGameStreamManager*, void (CGameStreamManager::*)(BroadcastUploadStop_t*))
- T CCallback<CGameStreamManager, BroadcastUploadStop_t, false>::Register(CGameStreamManager*, void (CGameStreamManager::*)(BroadcastUploadStop_t*))
- T CCallback<CGameStreamManager, BroadcastUploadStop_t, false>::Run(void*)
- T CCallback<CGameStreamManager, RemoteClientReserveGamepads_t, false>::CCallback(CGameStreamManager*, void (CGameStreamManager::*)(RemoteClientReserveGamepads_t*))
- T CCallback<CGameStreamManager, RemoteClientReserveGamepads_t, false>::Register(CGameStreamManager*, void (CGameStreamManager::*)(RemoteClientReserveGamepads_t*))
- T CCallback<CGameStreamManager, RemoteClientReserveGamepads_t, false>::Run(void*)
- T CCallback<CGameStreamManager, RemoteClientStartStreamSession_t, false>::CCallback(CGameStreamManager*, void (CGameStreamManager::*)(RemoteClientStartStreamSession_t*))
- T CCallback<CGameStreamManager, RemoteClientStartStreamSession_t, false>::Register(CGameStreamManager*, void (CGameStreamManager::*)(RemoteClientStartStreamSession_t*))
- T CCallback<CGameStreamManager, RemoteClientStartStreamSession_t, false>::Run(void*)
- T CCallback<CGameStreamManager, StopStreamingUI_t, false>::CCallback(CGameStreamManager*, void (CGameStreamManager::*)(StopStreamingUI_t*))
- T CCallback<CGameStreamManager, StopStreamingUI_t, false>::Register(CGameStreamManager*, void (CGameStreamManager::*)(StopStreamingUI_t*))
- T CCallback<CGameStreamManager, StopStreamingUI_t, false>::Run(void*)
  T CCallback<CGamesPage_Details, AppMinutesPlayedDataNotice_t, false>::CCallback(CGamesPage_Details*, void (CGamesPage_Details::*)(AppMinutesPlayedDataNotice_t*))
  T CCallback<CGamesPage_Details, AppMinutesPlayedDataNotice_t, false>::Register(CGamesPage_Details*, void (CGamesPage_Details::*)(AppMinutesPlayedDataNotice_t*))
  T CCallback<CGamesPage_Details, AppMinutesPlayedDataNotice_t, false>::Run(void*)
@@ -19714,6 +19687,9 @@
  T CCallback<CMainMenu, ClientMarketingMessageUpdate_t, false>::CCallback(CMainMenu*, void (CMainMenu::*)(ClientMarketingMessageUpdate_t*))
  T CCallback<CMainMenu, ClientMarketingMessageUpdate_t, false>::Register(CMainMenu*, void (CMainMenu::*)(ClientMarketingMessageUpdate_t*))
  T CCallback<CMainMenu, ClientMarketingMessageUpdate_t, false>::Run(void*)
+ T CCallback<CMainMenu, ControllerPacketLossUI_t, false>::CCallback(CMainMenu*, void (CMainMenu::*)(ControllerPacketLossUI_t*))
+ T CCallback<CMainMenu, ControllerPacketLossUI_t, false>::Register(CMainMenu*, void (CMainMenu::*)(ControllerPacketLossUI_t*))
+ T CCallback<CMainMenu, ControllerPacketLossUI_t, false>::Run(void*)
  T CCallback<CMainMenu, PersonaStateChange_t, false>::CCallback(CMainMenu*, void (CMainMenu::*)(PersonaStateChange_t*))
  T CCallback<CMainMenu, PersonaStateChange_t, false>::Register(CMainMenu*, void (CMainMenu::*)(PersonaStateChange_t*))
  T CCallback<CMainMenu, PersonaStateChange_t, false>::Run(void*)
@@ -23438,24 +23414,27 @@
  T CGameStreamManager::BChangeRecordingToFocusedWindow()
  T CGameStreamManager::BCompositeCursor()
  T CGameStreamManager::BStreamingClientCanSuspend()
- T CGameStreamManager::CCallback_OnAppLifetimeNotification::Run(void*)
- T CGameStreamManager::CCallback_OnAppStartedProcess::Run(void*)
- T CGameStreamManager::CCallback_OnBroadcastUploadStart::Run(void*)
- T CGameStreamManager::CCallback_OnBroadcastUploadStop::Run(void*)
- T CGameStreamManager::CCallback_OnReserveGamepads::Run(void*)
- T CGameStreamManager::CCallback_OnStartStreamSession::Run(void*)
- T CGameStreamManager::CCallback_OnStopStreamingUI::Run(void*)
+ T CGameStreamManager::CCallbackInternal_OnAppLifetimeNotification::CCallbackInternal_OnAppLifetimeNotification()
+ T CGameStreamManager::CCallbackInternal_OnAppLifetimeNotification::Run(void*)
+ T CGameStreamManager::CCallbackInternal_OnAppStartedProcess::CCallbackInternal_OnAppStartedProcess()
+ T CGameStreamManager::CCallbackInternal_OnAppStartedProcess::Run(void*)
+ T CGameStreamManager::CCallbackInternal_OnBroadcastUploadStart::CCallbackInternal_OnBroadcastUploadStart()
+ T CGameStreamManager::CCallbackInternal_OnBroadcastUploadStart::Run(void*)
+ T CGameStreamManager::CCallbackInternal_OnBroadcastUploadStop::CCallbackInternal_OnBroadcastUploadStop()
+ T CGameStreamManager::CCallbackInternal_OnBroadcastUploadStop::Run(void*)
+ T CGameStreamManager::CCallbackInternal_OnReserveGamepads::CCallbackInternal_OnReserveGamepads()
+ T CGameStreamManager::CCallbackInternal_OnReserveGamepads::Run(void*)
+ T CGameStreamManager::CCallbackInternal_OnStartStreamSession::CCallbackInternal_OnStartStreamSession()
+ T CGameStreamManager::CCallbackInternal_OnStartStreamSession::Run(void*)
+ T CGameStreamManager::CCallbackInternal_OnStopStreamSession::CCallbackInternal_OnStopStreamSession()
+ T CGameStreamManager::CCallbackInternal_OnStopStreamSession::Run(void*)
  T CGameStreamManager::CGameStreamManager()
  T CGameStreamManager::CalculateVideoSource()
  T CGameStreamManager::GetStreamingClientConfig(CStreamingClientConfig*, bool)
  T CGameStreamManager::GetStreamingServerConfig(CStreamingServerConfig*)
  T CGameStreamManager::OnAppLifetimeNotification(AppLifetimeNotice_t*)
- T CGameStreamManager::OnAppStartedProcess(AppStartedProcess_t*)
- T CGameStreamManager::OnBroadcastUploadStart(BroadcastUploadStart_t*)
- T CGameStreamManager::OnBroadcastUploadStop(BroadcastUploadStop_t*)
  T CGameStreamManager::OnReserveGamepads(RemoteClientReserveGamepads_t*)
  T CGameStreamManager::OnStartStreamSession(RemoteClientStartStreamSession_t*)
- T CGameStreamManager::OnStopStreamingUI(StopStreamingUI_t*)
  T CGameStreamManager::OnThink()
  T CGameStreamManager::RegisterForAudio(IGameStreamAudioCallback*, EStreamAudioCodec, bool)
  T CGameStreamManager::RegisterForVideo(IGameStreamVideoCallback*, EStreamVideoCodec)
@@ -23559,7 +23538,6 @@
  T CGameStreamSystem::CGamepadMouseModeThread::~CGamepadMouseModeThread()
  T CGameStreamSystem::ConvertMouseVelocity(Vector2D&)
  T CGameStreamSystem::FinishGamepadReservation()
- T CGameStreamSystem::GetApplicationState(CGameID)
  T CGameStreamSystem::GetApplicationWindowCount(CGameID, bool)
  T CGameStreamSystem::GetApplicationWindowCounts(CGameID, int*, int*, int*)
  T CGameStreamSystem::GetFocusedApplication()
@@ -25313,6 +25291,11 @@
  T CLibraryFriendsWhoPlayPanel::SetAppID(unsigned int, bool, unsigned int)
  T CLibraryFriendsWhoPlayPanel::UpdatePanelData()
  T CLibraryFriendsWhoPlayPanel::~CLibraryFriendsWhoPlayPanel()
+ T CLibraryGameBadgePanel::CLibraryGameBadgePanel(panorama::CPanel2D*, char const*)
+ T CLibraryGameBadgePanel::EventLoadedAsyncWithWebAuth(panorama::CPanelPtr<panorama::IUIPanel> const&, bool)
+ T CLibraryGameBadgePanel::GetPanelType() const
+ T CLibraryGameBadgePanel::SetAppID(unsigned int, bool, unsigned int)
+ T CLibraryGameBadgePanel::~CLibraryGameBadgePanel()
  T CLibraryGridBase::CLibraryGridBase(panorama::CPanel2D*, char const*, panorama::CPanoramaSymbol const&, char const*, char const*, char const*, char const*)
  T CLibraryGridBase::EventGridInFastMotion(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T CLibraryGridBase::EventGridStoppingFastMotion(panorama::CPanelPtr<panorama::IUIPanel> const&)
@@ -25642,6 +25625,7 @@
  T CMainMenu::ApplyParentalSettings()
  T CMainMenu::BHasUserAlreadySeenMessage(unsigned long long)
  T CMainMenu::BInboxImageActive(char const*)
+ T CMainMenu::CCallback_OnControllerPacketLossWarning::Run(void*)
  T CMainMenu::CCallback_OnMarketingMessageUpdate::Run(void*)
  T CMainMenu::CCallback_OnPersonaStateChange::Run(void*)
  T CMainMenu::CMainMenu(panorama::CPanel2D*, char const*)
@@ -25682,6 +25666,7 @@
  T CMainMenu::OnCloseCommunity()
  T CMainMenu::OnCloseProfile()
  T CMainMenu::OnCommunityShow()
+ T CMainMenu::OnControllerPacketLossWarning(ControllerPacketLossUI_t*)
  T CMainMenu::OnDisplaySystemMessages()
  T CMainMenu::OnMainNavRowBlur()
  T CMainMenu::OnMainNavRowFocused()
@@ -29194,6 +29179,7 @@
  T COverlayBasePanel::EventControllerDisableOverlay(CTenfootOverlayController*)
  T COverlayBasePanel::EventNavigateTenfootBack()
  T COverlayBasePanel::EventShowAppScreenshots(unsigned long long)
+ T COverlayBasePanel::EventShowOverlayMainMenu(panorama::CPanelPtr<panorama::IUIPanel> const&)
  T COverlayBasePanel::EventStoreCloseCheckout(bool)
  T COverlayBasePanel::GetPanelType() const
  T COverlayBasePanel::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
@@ -31206,16 +31192,6 @@
  T CSettingsPanelAudio_Codec::SinkRemoved(int)
  T CSettingsPanelAudio_Codec::UpdateCodecAvailability()
  T CSettingsPanelAudio_Codec::~CSettingsPanelAudio_Codec()
- T CSettingsPanelAudio_Port::AudioSinkAvailabilityChanged(bool)
- T CSettingsPanelAudio_Port::CSettingsPanelAudio_Port(panorama::CPanel2D*, char const*, CTenfootWizardPanel*)
- T CSettingsPanelAudio_Port::GetPanelType() const
- T CSettingsPanelAudio_Port::OnDropDownSelectionChanged(panorama::CPanelPtr<panorama::IUIPanel> const&)
- T CSettingsPanelAudio_Port::OnSinkAdded(int)
- T CSettingsPanelAudio_Port::OnSinkRemoved(int)
- T CSettingsPanelAudio_Port::SinkAdded(int)
- T CSettingsPanelAudio_Port::SinkRemoved(int)
- T CSettingsPanelAudio_Port::UpdatePortSelection()
- T CSettingsPanelAudio_Port::~CSettingsPanelAudio_Port()
  T CSettingsPanelAudio_Profile::AudioSinkAvailabilityChanged(bool)
  T CSettingsPanelAudio_Profile::CSettingsPanelAudio_Profile(panorama::CPanel2D*, char const*, CTenfootWizardPanel*)
  T CSettingsPanelAudio_Profile::GetPanelType() const
@@ -35072,6 +35048,7 @@
  T CTenfootControllerBase::OnShowFriendsInvites()
  T CTenfootControllerBase::OnShowInviteToLobby(CSteamID)
  T CTenfootControllerBase::OnShowMainMenu()
+ T CTenfootControllerBase::OnShowPacketLossHelper()
  T CTenfootControllerBase::OnShowParentalLockDialog()
  T CTenfootControllerBase::OnShowParentalUnlockDialog(panorama::IUIEvent*)
  T CTenfootControllerBase::OnShowQueuedClanInviteNotifications()
@@ -35098,6 +35075,13 @@
  T CTenfootControllerBase::~CTenfootControllerBase()
  T CTenfootControllerCallback::OnRequestRestart()
  T CTenfootControllerCallback::OnTenfootQuit()
+ T CTenfootControllerLossHelper::CTenfootControllerLossHelper(panorama::CPanel2D*, char const*)
+ T CTenfootControllerLossHelper::CTenfootControllerLossHelper(panorama::IUIWindow*, char const*)
+ T CTenfootControllerLossHelper::Close()
+ T CTenfootControllerLossHelper::GetPanelType() const
+ T CTenfootControllerLossHelper::HandleContributeToFooterPanel(panorama::CPanelPtr<panorama::IUIPanel> const&, CTenfootFooterPanel*)
+ T CTenfootControllerLossHelper::OnGamePadDown(panorama::GamePadData_t const&)
+ T CTenfootControllerLossHelper::~CTenfootControllerLossHelper()
  T CTenfootControllerPairing::CCallback_OnControllerConnected::Run(void*)
  T CTenfootControllerPairing::CCallback_OnControllerDisconnected::Run(void*)
  T CTenfootControllerPairing::CTenfootControllerPairing(panorama::CPanel2D*, char const*)
@@ -37391,6 +37375,7 @@
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
  T CUtlRBTreeBase<short, CDefRBTreeBalanceListener<short> >::_InsertRebalance(short, unsigned long, void*)
  T CUtlRBTreeBase<short, CDefRBTreeBalanceListener<short> >::_LinkToParent(short, short, bool, unsigned long, void*)
+ T CUtlRBTreeBase<short, CDefRBTreeBalanceListener<short> >::_NextInorder(short, unsigned long, void*) const
  T CUtlRBTreeBase<short, CDefRBTreeBalanceListener<short> >::_RemoveRebalance(short, unsigned long, void*)
  T CUtlRBTreeBase<short, CDefRBTreeBalanceListener<short> >::_RotateLeft(short, unsigned long, void*)
  T CUtlRBTreeBase<short, CDefRBTreeBalanceListener<short> >::_RotateRight(short, unsigned long, void*)
@@ -42226,6 +42211,9 @@
  T ShowCommunityClearBackstack::MakeEvent(panorama::IUIPanelClient const*)
  T ShowControllerConfigPresetPanel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowControllerConfigPresetPanel::GetEventType()
+ T ShowControllerPacketLossHelper::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ShowControllerPacketLossHelper::GetEventType()
+ T ShowControllerPacketLossHelper::MakeEvent(panorama::IUIPanelClient const*)
  T ShowCreateAccountWizard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowCreateAccountWizard::GetEventType()
  T ShowCreateAccountWizard::MakeEvent(panorama::IUIPanelClient const*)
@@ -42386,6 +42374,9 @@
  T ShowNewTradeOffers::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowNewTradeOffers::GetEventType()
  T ShowNewTradeOffers::MakeEvent(panorama::IUIPanelClient const*, bool)
+ T ShowOverlayMainMenu::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T ShowOverlayMainMenu::GetEventType()
+ T ShowOverlayMainMenu::MakeEvent(panorama::IUIPanelClient const*)
  T ShowParentalLockDialog::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ShowParentalLockDialog::GetEventType()
  T ShowParentalLockDialog::MakeEvent(panorama::IUIPanelClient const*)
@@ -44120,10 +44111,6 @@
  T non-virtual thunk to CSettingsPanelAudio_Codec::SinkAdded(int)
  T non-virtual thunk to CSettingsPanelAudio_Codec::SinkRemoved(int)
  T non-virtual thunk to CSettingsPanelAudio_Codec::~CSettingsPanelAudio_Codec()
- T non-virtual thunk to CSettingsPanelAudio_Port::AudioSinkAvailabilityChanged(bool)
- T non-virtual thunk to CSettingsPanelAudio_Port::SinkAdded(int)
- T non-virtual thunk to CSettingsPanelAudio_Port::SinkRemoved(int)
- T non-virtual thunk to CSettingsPanelAudio_Port::~CSettingsPanelAudio_Port()
  T non-virtual thunk to CSettingsPanelAudio_Profile::AudioSinkAvailabilityChanged(bool)
  T non-virtual thunk to CSettingsPanelAudio_Profile::SinkAdded(int)
  T non-virtual thunk to CSettingsPanelAudio_Profile::SinkRemoved(int)
@@ -48453,6 +48440,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowBroadcastViewer, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowClientUpdateNews>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowCommunityClearBackstack>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowControllerPacketLossHelper>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowCreateAccountWizard>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowCurrentAlbumInSystem>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowCurrentInSystem>(panorama::IUIPanel*, char const*, char const**)
@@ -48505,6 +48493,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowNewModeratorMessages>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowNewSupportMessages>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowNewTradeOffers, bool>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowOverlayMainMenu>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowParentalLockDialog>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowParentalSettings>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<ShowParentalUnlockDialog, panorama::IUIEvent*>(panorama::IUIPanel*, char const*, char const**)
@@ -57441,6 +57430,7 @@
  t Create_LibraryFilterGames(char const*, panorama::IUIPanel*)
  t Create_LibraryFriend(char const*, panorama::IUIPanel*)
  t Create_LibraryFriendsWhoPlay(char const*, panorama::IUIPanel*)
+ t Create_LibraryGameBadge(char const*, panorama::IUIPanel*)
  t Create_LibraryGuides(char const*, panorama::IUIPanel*)
  t Create_LibraryLinksAndMore(char const*, panorama::IUIPanel*)
  t Create_LibraryPlayAction(char const*, panorama::IUIPanel*)
@@ -57559,6 +57549,7 @@
  t Create_StoreStackable(char const*, panorama::IUIPanel*)
  t Create_StoreTrailerSlideshow(char const*, panorama::IUIPanel*)
  t Create_StreamingOverlay(char const*, panorama::IUIPanel*)
+ t Create_TenfootControllerLossHelper(char const*, panorama::IUIPanel*)
  t Create_TenfootControllerPairing(char const*, panorama::IUIPanel*)
  t Create_TextEntry()
  t Create_TextEntry(char const*, panorama::IUIPanel*)

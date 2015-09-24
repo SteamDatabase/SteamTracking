@@ -1,10 +1,9 @@
 #webinlinepanel
 {
 	width: 100%;
-	height: 100%;
+	height: 870px;
 	z-index: 5000;
-	transform: translatey( 1500px );
-	transition-property: opacity, transform;
+	transition-property: opacity;
 	transition-duration: 0.40s;
 	transition-timing-function: bigpicture-ease-in-out;
 	background-color: #000000ff;
@@ -17,13 +16,11 @@
 
 #webinlinepanel.Visible
 {
-	transform: translatey( 132px );
 	opacity: 1.0;
 }
 
 ContentFrame #webinlinepanel.Visible
 {
-	transform: translatey( 96px );
 }
 
 .Deleting
@@ -41,7 +38,7 @@ ContentFrame #webinlinepanel.Visible
 #HTML
 {
 	width: 100%;
-	height: 75%;
+	height: 100%;
 }
 
 Button Label
@@ -140,7 +137,6 @@ HTML #MousePanningImage
 
 	width: 66px;
 	height: 66px;
-	transform: translatey( -132px ); // needs to match the transform from #webpanel.Visible
 }
 
 .ReticuleVisible .Reticule
@@ -167,7 +163,6 @@ HTML #MousePanningImage
 	width: 54px;
 	height: 54px;
 	opacity: 0.0;
-	transform: translatey( -132px ); // needs to match the transform from #webpanel.Visible
 	//background-color: #000000aa;
 
 	transition-property: opacity;
