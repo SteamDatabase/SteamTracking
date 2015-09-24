@@ -126432,34 +126432,406 @@
 				"engineer"		"models/workshop/player/items/all_class/deutschlan_supporter/deutschlan_supporter_engineer.mdl"
 			}
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 		"8864"
+		{
+			"name"	"LBTF2 Highlander 1st Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_1st"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_engineer.mdl"
+			}
+		}
+  		"8865"
+		{
+			"name"	"LBTF2 Highlander 2nd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_2nd"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_engineer.mdl"
+			}
+		}
+  		"8866"
+		{
+			"name"	"LBTF2 Highlander 3rd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_3rd"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_engineer.mdl"
+			}
+		}
+  		"8867"
+		{
+			"name"	"LBTF2 Highlander Participant Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Participant"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_engineer.mdl"
+			}
+		}
+ 		"8868"
+		{
+			"name"	"LBTF2 6v6 Elite 1st Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_1st"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_engineer.mdl"
+			}
+		}
+  		"8869"
+		{
+			"name"	"LBTF2 6v6 Elite 2nd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_2nd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_engineer.mdl"
+			}
+		}
+   		"8870"
+		{
+			"name"	"LBTF2 6v6 Elite 3rd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_3rd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_engineer.mdl"
+			}
+		}
+ 		"8871"
+		{
+			"name"	"LBTF2 6v6 Elite Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Elite_Participant"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_engineer.mdl"
+			}
+		}
+ 		"8872"
+		{
+			"name"	"LBTF2 6v6 Central 1st Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Central_1st"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_engineer.mdl"
+			}
+		}
+  		"8873"
+		{
+			"name"	"LBTF2 6v6 Central 2nd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Central_2nd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_engineer.mdl"
+			}
+		}
+   		"8874"
+		{
+			"name"	"LBTF2 6v6 Central 3rd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Central_3rd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_engineer.mdl"
+			}
+		}
+ 		"8875"
+		{
+			"name"	"LBTF2 6v6 Central Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Central_Participant"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_engineer.mdl"
+			}
+		}
+ 		"8876"
+		{
+			"name"	"LBTF2 6v6 Access 1st Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_1st"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_engineer.mdl"
+			}
+		}
+  		"8877"
+		{
+			"name"	"LBTF2 6v6 Access 2nd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_2nd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_engineer.mdl"
+			}
+		}
+   		"8878"
+		{
+			"name"	"LBTF2 6v6 Access 3rd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_3rd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_engineer.mdl"
+			}
+		}
+ 		"8879"
+		{
+			"name"	"LBTF2 6v6 Access Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Access_Participant"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_engineer.mdl"
+			}
+		}
+ 		"8880"
+		{
+			"name"	"LBTF2 6v6 Open 1st Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_1st"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_1st/lbtf2_6v6_1st_engineer.mdl"
+			}
+		}
+  		"8881"
+		{
+			"name"	"LBTF2 6v6 Open 2nd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_2nd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_2nd/lbtf2_6v6_2nd_engineer.mdl"
+			}
+		}
+   		"8882"
+		{
+			"name"	"LBTF2 6v6 Open 3rd Place Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_3rd"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_3rd/lbtf2_6v6_3rd_engineer.mdl"
+			}
+		}
+ 		"8883"
+		{
+			"name"	"LBTF2 6v6 Open Participant Season 11"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_6v6_Open_Participant"
+			"item_description"	"#TF_TournamentMedal_Season11"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_engineer.mdl"
+			}
+		}
 
 
 
@@ -161385,6 +161757,15 @@
 			{
 				"name"					"pass_warehouse"
 				"localizedname"			"#TF_Map_pass_warehouse"
+				"tags"
+				{
+					"beta"				"1"
+				}
+			}
+			"1"
+			{
+				"name"					"pass_warehouse_goal2"
+				"localizedname"			"#TF_Map_pass_warehouse_goal2"
 				"tags"
 				{
 					"beta"				"1"
