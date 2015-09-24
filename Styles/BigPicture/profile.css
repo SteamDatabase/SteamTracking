@@ -4471,3 +4471,53 @@ Panel.AvatarOptionGame {
 	width: 100%;
 	height: 100%;
 }
+
+LibraryGameBadge
+{
+	flow-children: down;
+}
+LibraryGameBadge .HeaderArea
+{
+	width: 100%;
+	height: fit-children;
+	flow-children: right;
+}
+LibraryGameBadge .HeaderLabel
+{
+	font-family: platformfont;
+	margin: 0px;
+	padding-right: 8px;
+	font-size: 28px;
+	color: moduledatalabel;
+	opacity: 1.0;
+	horizontal-align: left;
+	transition-duration: shortduration;
+	transition-property: transform;
+	transition-timing-function: bigpicture-ease-in-out;
+	font-weight: light;
+}
+LibraryGameBadge .HeaderLabel.NumberElement {
+	color: medgray;
+}
+LibraryGameBadge:descendantfocus .HeaderLabel {
+	color: detailsdatalabelfocus;
+}
+LibraryGameBadge:descendantfocus .HeaderLabel.NumberElement {
+	color: darkblue;
+}
+LibraryGameBadge .badge_info
+{
+	flow-children: right;
+	padding-top: 20px;
+}
+LibraryGameBadge .badge_info_description
+{
+	flow-children: down;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+LibraryGameBadge .badge_info_description Label
+{
+	font-size: 18px;
+	color: #ffffff;
+}
