@@ -38,8 +38,8 @@
 							</Panel>
 							<Image id="OfflineImage" class="InboxImage" src="file://{images}/offline.png" />
 							<Panel id="ParentalLockImages" class="InboxImage" >
-								<Image id="ParentalLockImageLocked" class="InboxImage" src="file://{images}/locked_acct.png" />
-								<Image id="ParentalLockImageUnlocked" class="InboxImage" src="file://{images}/unlocked_acct.png" />
+								<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
+								<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
 							</Panel>
 							<Image id="MessagesImage" class="InboxImage" src="file://{images}/messages.png" />
 						</Panel>
@@ -103,13 +103,16 @@
 				</Panel>
 			</Panel>
 			
-			<Panel id="HR2" class="HR" />
-			<Image id="HomeGlow" class="HomeGlow" src="file://{images}/homeglow.png" />
 
+			<Image id="HomeGlow" class="HomeGlow" src="file://{images}/homeglow.png" />
+	<Panel id="HR2" class="HR" />
 			<Panel id="GameRowContents" tabindex="2" class="GameRowContents" selectionpos="0,80" selectionposboundary="vertical" >
+														
 				<Panel class="GameRowContentsWrapper" selectionpos="0,0" >
 					<Panel class="GameItem" selectionpos="1,0" >
+					
 						<Panel class="GameItemHeader" >
+
 							<Label class="GameRowHeaderLabel" text="#MainMenu_FriendsArePlaying" />
 						</Panel>
 						<Button id="FriendsArePlayingGame" class="Button GameButton" tabindex="0"  selectionpos="0,0" > 

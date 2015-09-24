@@ -26,9 +26,7 @@
 
 #SystemIMBackground:descendantfocus
 {
-
 	animation-name: none;
-
 	opacity-mask: none;
 	flow-children: right;
 	overflow: clip;
@@ -100,8 +98,8 @@
 #SystemIMBackground .SystemIMImage #SystemIMImage
 {
 	margin: 10px;
-	width: 684px; // 570*1.2 to scale up a little
-	height: 797px;
+	width: 741px; // 570*1.3 to scale up a little
+	height: fit-children;
 }
 
 #SystemIMBackground:descendantfocus .SystemIMImage:focus #SystemIMImage

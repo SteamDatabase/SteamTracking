@@ -56,25 +56,7 @@
 		"Default"		"0"
 		"selected"		"1"
 	}
-	"CreateShortcutCheck"
-	{
-		"ControlName"		"CheckButton"
-		"fieldName"		"CreateShortcutCheck"
-		"xpos"		"30"
-		"ypos"		"112"
-		"wide"		"320"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"#Steam_Install_CreateDesktopShortcut"
-		"textAlignment"		"west"
-		"wrap"		"0"
-		"Default"		"0"
-	}
+
 	"InstallCompleteLabel"
 	{
 		"ControlName"		"Label"

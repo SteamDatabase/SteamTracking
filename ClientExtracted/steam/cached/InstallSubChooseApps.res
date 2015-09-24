@@ -17,29 +17,15 @@
 		"WizardWide"		"0"
 		"WizardTall"		"0"
 	}
-	"GameCheckButtonList"
-	{
-		"ControlName"		"CheckButtonList"
-		"fieldName"		"GameCheckButtonList"
-		"xpos"		"9"
-		"ypos"		"48"
-		"wide"		"444"
-		"tall"		"159"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-	}
+	
 	"Label1"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"Label1"
-		"xpos"		"8"
-		"ypos"		"4"
+		"xpos"		"10"
+		"ypos"		"12"
 		"wide"		"340"
-		"tall"		"43"
+		"tall"		"24"
 		"AutoResize"		"0"
 		"PinCorner"		"0"
 		"visible"		"1"
@@ -50,12 +36,29 @@
 		"textAlignment"		"west"
 		"wrap"		"1"
 	}
+	
+	"GameCheckButtonList"
+	{
+		"ControlName"		"CheckButtonList"
+		"fieldName"		"GameCheckButtonList"
+		"xpos"		"16"
+		"ypos"		"32"
+		"wide"		"432"
+		"tall"		"120"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+	}
+	
 	"InstallSize"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"InstallSize"
 		"xpos"		"10"
-		"ypos"		"212"
+		"ypos"		"160"
 		"wide"		"186"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -68,12 +71,32 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
+	
+	"InstallSizeLabel"
+	{
+		"ControlName"		"Label"
+		"fieldName"		"InstallSizeLabel"
+		"xpos"		"200"
+		"ypos"		"160"
+		"wide"		"80"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"42 MB"
+		"textAlignment"		"west"
+		"wrap"		"0"
+	}
+	
 	"DriveSpace"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"DriveSpace"
 		"xpos"		"10"
-		"ypos"		"232"
+		"ypos"		"180"
 		"wide"		"186"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -86,12 +109,13 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
+	
 	"DriveSpaceLabel"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"DriveSpaceLabel"
-		"xpos"		"201"
-		"ypos"		"232"
+		"xpos"		"200"
+		"ypos"		"180"
 		"wide"		"80"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -104,31 +128,13 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-	"InstallSizeLabel"
-	{
-		"ControlName"		"Label"
-		"fieldName"		"InstallSizeLabel"
-		"xpos"		"201"
-		"ypos"		"212"
-		"wide"		"80"
-		"tall"		"24"
-		"AutoResize"		"0"
-		"PinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"tabPosition"		"0"
-		"paintbackground"		"1"
-		"labelText"		"4801 MB"
-		"textAlignment"		"west"
-		"wrap"		"0"
-	}
-		
+			
 	"InstallFolderLabel"
 	{
 		"ControlName"		"Label"
 		"fieldName"		"InstallFolderLabel"
 		"xpos"		"10"
-		"ypos"		"252"
+		"ypos"		"200"
 		"wide"		"200"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -147,7 +153,7 @@
 		"ControlName"		"ComboBox"
 		"fieldName"		"InstallFolderCombo"
 		"xpos"		"10"
-		"ypos"		"274"
+		"ypos"		"232"
 		"wide"		"432"
 		"tall"		"24"
 		"AutoResize"		"0"

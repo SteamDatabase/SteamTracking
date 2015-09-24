@@ -330,9 +330,11 @@ MainMenu.StackDepth3 .HomeGlow
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-#HR2.HR
+#HR2
 {
-	margin-top: 508px;
+	width: 1900px;
+	height: 2px;
+	margin-top: 588px;
 }
 
 
@@ -630,7 +632,7 @@ margin-bottom: 36px;
 {
 	horizontal-align: center;
 	//vertical-align: center;
-	margin-top: 256px;
+	margin-top: 300px;
 	margin-left: -64px;
 	font-size: 33;
 	background-color: #00000000;
@@ -1060,6 +1062,8 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 .GameRowContents:descendantfocus
 {
 	 	wash-color: #ffffff;
+	 	transform-origin: 0% 0% parent-relative;
+  	transform: translateX( 0px ) rotateX( 0deg ) translateZ( 0px );
 	}
 
 .GameRowContents
@@ -1070,6 +1074,8 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e203600 ), color-stop( 0.5, #0C3251ff ),to( #0e203600 ) );
 	flow-children: right;
 	wash-color: #8bcdf2;
+  transform-origin: 0% 0% parent-relative;
+	transform: translateX( 0px ) rotateX( 0deg ) translateZ( -64px );
   opacity:0.7;
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.3s, 0.3s !immediate;
@@ -1155,6 +1161,12 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	height: 225px;
 	margin-top: 0px;
 	margin-left:0px;
+}
+
+.GameButton Image
+{
+	width: 460px;
+	height: 215px;
 }
 
 

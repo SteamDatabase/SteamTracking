@@ -4431,15 +4431,15 @@ LibraryDLCItem.Deleting
 
 LibraryDLCItem .Button
 {
-
 	margin-right: 10px;
 	width: 100%;
 	height: 90px;
 }
 
-LibraryDLCItem .Button:focus
+LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 {
 	height: 90px;
+	background-color: button_focus_color;
 }
 
 .GridButtonRow Button,

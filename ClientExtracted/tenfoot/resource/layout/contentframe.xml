@@ -5,7 +5,7 @@
 	</styles>
 	
 	<ContentFrame>
-		<Panel id="ContentPanels" />
+		<ContentFramePanels id="ContentPanels" />
 		<Panel id="ContentFrameHeader">
 			<Panel id="ContentMouseBackButton" onmouseactivate="NavigateTenfootBack();" />
 			<Panel id="ContentHomeButton" class="SteamLogo" onmouseactivate="ShowMainMenu();" />
@@ -13,7 +13,33 @@
 			<Panel id="ContentTitles">
 				<Label class="ContentTitle" text="" />
 			</Panel>
-			<Clock id="Clock" />
+			<Panel id="ContentStatus" >
+				<Panel id="InboxStatus" class="StatusIcon" >
+					<Image src="file://{images}/inbox.png" />
+					<Label class="StatusLabel" text="#ContentFrame_InboxCount" />
+				</Panel>
+				<Panel id="DownloadsStatus" class="StatusIcon" >
+					<Image src="file://{images}/downloads.png" />
+					<Label class="StatusLabel" text="#ContentFrame_DownloadsCount" />
+				</Panel>
+				<Panel id="FriendsStatus" class="StatusIcon" >
+					<Image src="file://{images}/systemmenu/icon_chat.png" />
+					<Label class="StatusLabel" text="#ContentFrame_FriendsCount" />
+				</Panel>
+				<Panel id="CommunityStatus" class="StatusIcon" >
+					<Image src="file://{images}/systemmenu/icon_user.png" />
+					<Label class="StatusLabel" text="#ContentFrame_CommunityCount" />
+				</Panel>
+				<Panel id="ParentalStatus" class="StatusIcon" >
+					<Image id="ParentalLockImageLocked" src="file://{images}/locked_acct.png" />
+					<Image id="ParentalLockImageUnlocked" src="file://{images}/unlocked_acct.png" />
+				</Panel>
+				<Panel id="OfflineStatus" class="StatusIcon" >
+					<Image src="file://{images}/offline.png" />
+				</Panel>
+	
+				<Clock id="Clock" />
+			</Panel>
 		</Panel>
 	</ContentFrame>	
 </root>

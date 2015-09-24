@@ -1302,7 +1302,7 @@
 	"Library_Details_LinksAndMore"	"LINKS & MORE"
 	"Library_Details_Achievements"	"ACHIEVEMENTS <span class=\"NumberElement\">{i:num_achievements_completed}/{i:num_achievements}</span>"
 	"Library_Details_Guides"	"GUIDES"
-	"Library_Details_GuidesWithTotal"	"GUIDES {i:num_guides}"
+	"Library_Details_GuidesWithTotal"	"GUIDES <span class=\"NumberElement\">{i:num_guides}</span>"
 	"Library_Details_Play"		"PLAY"
 	"Library_Details_Watch"		"WATCH"
 	"Library_Details_PlayVR"		"PLAY IN VR"
@@ -1437,7 +1437,7 @@
 	"Library_Details_Controller_PlayerAssigned" "{s:controller_player}"
 	"Library_Details_Controller_Hint"        "Configure Controller"
 	"Library_Details_Controller_Add"         "Add a Steam Controller"
-	"Library_Details_Controller_HowToPair"   "Pair a new Steam Controller by holding X and pressing the Steam button."
+	"Library_Details_Controller_HowToPair"   "Pair a new Steam Controller by holding the X and Steam buttons."
 	"Library_Details_CancelControllerDetails" "CANCEL"
 	"Library_Details_CloseControllerDetails" "CLOSE"
 	"Library_ControllerBindingsTitle" "{s:gamename} Bindings"
@@ -1550,7 +1550,7 @@
 	"Library_Details_ControllerPad_OuterEdge_40pct" "40 %"
 
 	"Library_Details_ControllerBindingsGordon_Select"	"SELECT"
-	"Library_Details_ControllerBindingsGordon_Presets"	"PRESETS"
+	"Library_Details_ControllerBindingsGordon_Presets"	"BROWSE"
 	"Library_Details_ControllerBindingsGordon_Save"		"SAVE"
 	"Library_Details_ControllerBindingsGordon_Done"		"DONE"
 	"Library_Details_ControllerBindingsGordon_Back"		"BACK"
@@ -1794,7 +1794,7 @@
 	"Library_Details_Controller_Templates"				"TEMPLATES"
 	"Library_Details_Controller_Recommended"			"RECOMMENDED"
 	"Library_Details_Controller_AdvancedSettings"		"ADVANCED SETTINGS"
-	"Library_Details_ManageControllers"					"Manage Controllers"
+	"Library_Details_ManageControllers"					"Configure Controller"
 
 	"Library_Details_Remove_Binding_Title"				"Remove Controller Binding"
 	"Library_Details_Remove_Binding_Description"		"Would you like to remove this controller binding?"
@@ -3607,6 +3607,8 @@
 	"Library_DLC_Title"	"DLC installed <span class=\"NumberElement\">{i:num_installed}/{i:num_available}</span>"
 	"Library_Details_Manage_DLC"	"Manage DLC"
 	"Library_Details_Manage_DLC_Cancel"	"Done"
+	"Library_Details_Manage_DLC_Install"	"Install"
+	"Library_Details_Manage_DLC_Uninstall"	"Uninstall"
 
 	"CDNLoc_default"		"default"
 	"CDNLoc_US___Chicago"		"US - Chicago"
@@ -4383,4 +4385,9 @@
 	"UI_Paste_CDKey"			"[Paste CD Key]"
 	"UI_Paste_URL"				"[Paste URL]"
 	"UI_Paste_Selection"		"[Paste]"				// comes from a text entry selection; full string too long to fit in UI in English
+
+	"ContentFrame_FriendsCount" "{i:friendsitems}"
+	"ContentFrame_CommunityCount" "{i:communitycount}"
+	"ContentFrame_InboxCount" "{i:inboxcount}"
+	"ContentFrame_DownloadsCount" "{i:downloads}"
 }

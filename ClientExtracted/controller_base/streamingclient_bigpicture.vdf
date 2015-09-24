@@ -1,0 +1,16 @@
+"controller_mappings"
+{
+    "version" "2"
+    "game" "Streaming Client"
+
+    "group_source_bindings"
+    {
+    }
+
+    "settings"
+    {
+        "left_trackpad_mode" "none"
+        "right_trackpad_mode" "none"
+	"mouse_smoothing" "1"
+    }
+}

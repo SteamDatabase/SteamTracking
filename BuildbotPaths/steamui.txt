@@ -1565,7 +1565,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/jsclientaccess.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/../community/community.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/../controls/librarygridbase.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/../overlay/overlaymanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/../store/storepanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/../tenfootcontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/choosebinding.cpp
@@ -1708,6 +1707,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/mainmenu.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/mainmenu.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/../controls/librarygridbase.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/../mainmenu.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/musicalbum_more.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/musicalbum_more.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/musicalbumpanel.cpp

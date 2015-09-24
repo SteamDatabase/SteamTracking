@@ -65,6 +65,79 @@ ContentFrame:descendantfocus
 	opacity: 0.0;
 }
 
+#ContentStatus
+{
+	vertical-align: center;
+	flow-children: right;
+	horizontal-align: right;
+}
+
+.StatusIcon
+{
+	vertical-align: center;
+	flow-children: right;
+	background-color: none;
+	padding: 0px;
+	margin: 0px;
+	margin-right: 20px;
+	
+	visibility: collapse;
+}
+
+.StatusIcon Label
+{
+	vertical-align: center;
+	margin-left: 4px;
+	font-size: 28px;
+	color: ui_primary_color;
+	opacity: 0.6;
+}
+
+
+.StatusIcon Image
+{
+	opacity: 0.6;
+	wash-color: ui_primary_color;
+	width: 48px;
+	height: 48px;
+}
+
+#FriendsStatus Image,
+#CommunityStatus Image,
+{
+	width: 42px;
+	height: 42px;
+}
+
+
+.DownloadsActive #DownloadsStatus,
+.FriendsInboxItems #FriendsStatus,
+.IncomingItems #InboxStatus,
+.CommunityInboxItems #CommunityStatus,
+.Offline #OfflineStatus,
+.FamilyModeEnabled #ParentalStatus,
+{
+	visibility: visible;
+}
+
+.FamilyModeEnabled.FamilyModeLocked #ParentalLockImageLocked,
+.FamilyModeEnabled #ParentalLockImageUnlocked
+{
+	visibility: visible;
+}
+
+.FamilyModeEnabled.FamilyModeLocked #ParentalLockImageUnlocked,
+.FamilyModeEnabled #ParentalLockImageLocked
+{
+	visibility: collapse;
+}
+
+#ParentalLockImageUnlocked, #OfflineStatus Image
+{
+	wash-color: red;	
+}
+
+
 #Clock
 {
 	font-size: 30px;
