@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.48c444d4eaf3541e4a9b4c645bebfba6669eb334.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.e2aab95739cd6001c969f7cdfadc92dbbf49dd57.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -12676,6 +12676,171 @@
 				
 			},
 			{
+				"name": "coupon - proxy_01",
+				"defindex": 10069,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_proxy_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - kitheory_01",
+				"defindex": 10070,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_kitheory_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - troelsfolmann_01",
+				"defindex": 10071,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_troelsfolmann_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - kellybailey_01",
+				"defindex": 10072,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_kellybailey_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - skog_02",
+				"defindex": 10073,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_skog_02",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
 				"name": "coupon - enfu_sticker_capsule",
 				"defindex": 10074,
 				"item_class": "supply_crate",
@@ -13025,6 +13190,1260 @@
 				"tool": {
 					"type": "supply_crate",
 					"restriction": "coupon_delicious_tears",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - danielsadowski_03",
+				"defindex": 10085,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_danielsadowski_03",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - awolnation_01",
+				"defindex": 10086,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_awolnation_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - mordfustang_01",
+				"defindex": 10087,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_mordfustang_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - michaelbross_01",
+				"defindex": 10088,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_michaelbross_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - ianhultquist_01",
+				"defindex": 10089,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_ianhultquist_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - newbeatfund_01",
+				"defindex": 10090,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_newbeatfund_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - beartooth_01",
+				"defindex": 10091,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_beartooth_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - lenniemoore_01",
+				"defindex": 10092,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_lenniemoore_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - darude_01",
+				"defindex": 10093,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_darude_01",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - proxy_01_stattrak",
+				"defindex": 10094,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_proxy_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - kitheory_01_stattrak",
+				"defindex": 10095,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_kitheory_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - troelsfolmann_01_stattrak",
+				"defindex": 10096,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_troelsfolmann_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - kellybailey_01_stattrak",
+				"defindex": 10097,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_kellybailey_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - skog_02_stattrak",
+				"defindex": 10098,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_skog_02_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - danielsadowski_03_stattrak",
+				"defindex": 10099,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_danielsadowski_03_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - awolnation_01_stattrak",
+				"defindex": 10100,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_awolnation_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - mordfustang_01_stattrak",
+				"defindex": 10101,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_mordfustang_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - michaelbross_01_stattrak",
+				"defindex": 10102,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_michaelbross_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - ianhultquist_01_stattrak",
+				"defindex": 10103,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_ianhultquist_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - newbeatfund_01_stattrak",
+				"defindex": 10104,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_newbeatfund_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - beartooth_01_stattrak",
+				"defindex": 10105,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_beartooth_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - lenniemoore_01_stattrak",
+				"defindex": 10106,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_lenniemoore_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - darude_01_stattrak",
+				"defindex": 10107,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_darude_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - danielsadowski_01_stattrak",
+				"defindex": 10108,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_danielsadowski_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - noisia_01_stattrak",
+				"defindex": 10109,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_noisia_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - robertallaire_01_stattrak",
+				"defindex": 10110,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_robertallaire_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - seanmurray_01_stattrak",
+				"defindex": 10111,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_seanmurray_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - feedme_01_stattrak",
+				"defindex": 10112,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_feedme_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - dren_01_stattrak",
+				"defindex": 10113,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_dren_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - austinwintory_01_stattrak",
+				"defindex": 10114,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_austinwintory_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - sasha_01_stattrak",
+				"defindex": 10115,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_sasha_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - skog_01_stattrak",
+				"defindex": 10116,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_skog_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - midnightriders_01_stattrak",
+				"defindex": 10117,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_midnightriders_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - danielsadowski_02_stattrak",
+				"defindex": 10118,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_danielsadowski_02_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - hotlinemiami_01_stattrak",
+				"defindex": 10119,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_hotlinemiami_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - mattlange_01_stattrak",
+				"defindex": 10120,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_mattlange_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - mateomessina_01_stattrak",
+				"defindex": 10121,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_mateomessina_01_stattrak",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 2
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - damjanmravunac_01_stattrak",
+				"defindex": 10122,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Offer",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "coupon_damjanmravunac_01_stattrak",
 					"usage_capabilities": {
 						"usable_out_of_game": true
 					}
@@ -14982,6 +16401,151 @@
 				
 			},
 			{
+				"name": "coupon key - proxy_01",
+				"defindex": 20069,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Proxy, Battlepack",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_proxy_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - kitheory_01",
+				"defindex": 20070,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Ki:Theory, MOLOTOV",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_kitheory_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - troelsfolmann_01",
+				"defindex": 20071,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Troels Folmann, Uber Blasto Phone",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_troelsfolmann_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - kellybailey_01",
+				"defindex": 20072,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Kelly Bailey, Hazardous Environments",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_kellybailey_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - skog_02",
+				"defindex": 20073,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Skog, II-Headshot",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_skog_02",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
 				"name": "coupon key - enfu_sticker_capsule",
 				"defindex": 20074,
 				"item_class": "tool",
@@ -15290,6 +16854,1108 @@
 				"tool": {
 					"type": "decoder_ring",
 					"restriction": "coupon_delicious_tears",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - danielsadowski_03",
+				"defindex": 20085,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Daniel Sadowski, The 8-Bit Kit",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_danielsadowski_03",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - awolnation_01",
+				"defindex": 20086,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | AWOLNATION, I Am",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_awolnation_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - mordfustang_01",
+				"defindex": 20087,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Mord Fustang, Diamonds",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_mordfustang_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - michaelbross_01",
+				"defindex": 20088,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Michael Bross, Invasion!",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_michaelbross_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - ianhultquist_01",
+				"defindex": 20089,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Ian Hultquist, Lion's Mouth",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_ianhultquist_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - newbeatfund_01",
+				"defindex": 20090,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | New Beat Fund, Sponge Fingerz",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_newbeatfund_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - beartooth_01",
+				"defindex": 20091,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Beartooth, Disgusting",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_beartooth_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - lenniemoore_01",
+				"defindex": 20092,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Lennie Moore, Java Havana Funkaloo",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_lenniemoore_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - darude_01",
+				"defindex": 20093,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: MusicKit | Darude, Moments CS:GO",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_darude_01",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - proxy_01_stattrak",
+				"defindex": 20094,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Proxy, Battlepack",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_proxy_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - kitheory_01_stattrak",
+				"defindex": 20095,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Ki:Theory, MOLOTOV",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_kitheory_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - troelsfolmann_01_stattrak",
+				"defindex": 20096,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Troels Folmann, Uber Blasto Phone",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_troelsfolmann_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - kellybailey_01_stattrak",
+				"defindex": 20097,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Kelly Bailey, Hazardous Environments",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_kellybailey_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - skog_02_stattrak",
+				"defindex": 20098,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Skog, II-Headshot",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_skog_02_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - danielsadowski_03_stattrak",
+				"defindex": 20099,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Daniel Sadowski, The 8-Bit Kit",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_danielsadowski_03_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - awolnation_01_stattrak",
+				"defindex": 20100,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | AWOLNATION, I Am",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_awolnation_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - mordfustang_01_stattrak",
+				"defindex": 20101,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Mord Fustang, Diamonds",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_mordfustang_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - michaelbross_01_stattrak",
+				"defindex": 20102,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Michael Bross, Invasion!",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_michaelbross_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - ianhultquist_01_stattrak",
+				"defindex": 20103,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Ian Hultquist, Lion's Mouth",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_ianhultquist_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - newbeatfund_01_stattrak",
+				"defindex": 20104,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | New Beat Fund, Sponge Fingerz",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_newbeatfund_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - beartooth_01_stattrak",
+				"defindex": 20105,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Beartooth, Disgusting",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_beartooth_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - lenniemoore_01_stattrak",
+				"defindex": 20106,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Lennie Moore, Java Havana Funkaloo",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_lenniemoore_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - darude_01_stattrak",
+				"defindex": 20107,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Darude, Moments CS:GO",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_darude_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - danielsadowski_01_stattrak",
+				"defindex": 20108,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Daniel Sadowski, Crimson Assault",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_danielsadowski_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - noisia_01_stattrak",
+				"defindex": 20109,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Noisia, Sharpened",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_noisia_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - robertallaire_01_stattrak",
+				"defindex": 20110,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Robert Allaire, Insurgency",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_robertallaire_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - seanmurray_01_stattrak",
+				"defindex": 20111,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Sean Murray, A*D*8",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_seanmurray_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - feedme_01_stattrak",
+				"defindex": 20112,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Feed Me, High Noon",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_feedme_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - dren_01_stattrak",
+				"defindex": 20113,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Dren, Death's Head Demolition",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_dren_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - austinwintory_01_stattrak",
+				"defindex": 20114,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Austin Wintory, Desert Fire",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_austinwintory_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - sasha_01_stattrak",
+				"defindex": 20115,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Sasha, LNOE",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_sasha_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - skog_01_stattrak",
+				"defindex": 20116,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™  MusicKit | Skog, Metal",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_skog_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - midnightriders_01_stattrak",
+				"defindex": 20117,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Midnight Riders, All I Want for Christmas",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_midnightriders_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - danielsadowski_02_stattrak",
+				"defindex": 20118,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Daniel Sadowski, Total Domination",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_danielsadowski_02_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - hotlinemiami_01_stattrak",
+				"defindex": 20119,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Various Artists, Hotline Miami",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_hotlinemiami_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - mattlange_01_stattrak",
+				"defindex": 20120,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Matt Lange, IsoRhythm",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_mattlange_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - mateomessina_01_stattrak",
+				"defindex": 20121,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Mateo Messina, For No Mankind",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_mateomessina_01_stattrak",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "coupon key - damjanmravunac_01_stattrak",
+				"defindex": 20122,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Claim: StatTrak™ MusicKit | Damjan Mravunac, The Talos Principle",
+				"item_description": "You have claimed a limited time offer.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/coupon_key",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/coupon_key.e0e5230dfd76824c7168e9fb2ad37ae9968983c2.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "coupon_damjanmravunac_01_stattrak",
 					"usage_capabilities": {
 						"decodable": true,
 						"usable_out_of_game": true
@@ -17529,7 +20195,11 @@
 		"kill_eater_score_types": [
 			{
 				"type": 0,
-				"type_name": "StatTrak™ Confirmed Kills"
+				"type_name": "Kills"
+			},
+			{
+				"type": 1,
+				"type_name": "OCMVPs"
 			}
 		]
 		

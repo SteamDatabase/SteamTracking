@@ -19755,6 +19755,136 @@
 			}
 			"associated_item"		"10068"
 		}
+		"10069"
+		{
+			"name"		"coupon - proxy_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - proxy_01"
+			"tool"
+			{
+				"restriction"		"coupon_proxy_01"
+			}
+			"associated_item"		"20069"
+		}
+		"20069"
+		{
+			"name"		"coupon key - proxy_01"
+			"item_name"		"#coupon_key_proxy_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_proxy_01"
+			}
+			"associated_item"		"10069"
+		}
+		"10070"
+		{
+			"name"		"coupon - kitheory_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - kitheory_01"
+			"tool"
+			{
+				"restriction"		"coupon_kitheory_01"
+			}
+			"associated_item"		"20070"
+		}
+		"20070"
+		{
+			"name"		"coupon key - kitheory_01"
+			"item_name"		"#coupon_key_kitheory_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_kitheory_01"
+			}
+			"associated_item"		"10070"
+		}
+		"10071"
+		{
+			"name"		"coupon - troelsfolmann_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - troelsfolmann_01"
+			"tool"
+			{
+				"restriction"		"coupon_troelsfolmann_01"
+			}
+			"associated_item"		"20071"
+		}
+		"20071"
+		{
+			"name"		"coupon key - troelsfolmann_01"
+			"item_name"		"#coupon_key_troelsfolmann_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_troelsfolmann_01"
+			}
+			"associated_item"		"10071"
+		}
+		"10072"
+		{
+			"name"		"coupon - kellybailey_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - kellybailey_01"
+			"tool"
+			{
+				"restriction"		"coupon_kellybailey_01"
+			}
+			"associated_item"		"20072"
+		}
+		"20072"
+		{
+			"name"		"coupon key - kellybailey_01"
+			"item_name"		"#coupon_key_kellybailey_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_kellybailey_01"
+			}
+			"associated_item"		"10072"
+		}
+		"10073"
+		{
+			"name"		"coupon - skog_02"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - skog_02"
+			"tool"
+			{
+				"restriction"		"coupon_skog_02"
+			}
+			"associated_item"		"20073"
+		}
+		"20073"
+		{
+			"name"		"coupon key - skog_02"
+			"item_name"		"#coupon_key_skog_02"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_skog_02"
+			}
+			"associated_item"		"10073"
+		}
 		"10074"
 		{
 			"name"		"coupon - enfu_sticker_capsule"
@@ -20040,6 +20170,1023 @@
 				"restriction"		"coupon_delicious_tears"
 			}
 			"associated_item"		"10084"
+		}
+		"10085"
+		{
+			"name"		"coupon - danielsadowski_03"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - danielsadowski_03"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_03"
+			}
+			"associated_item"		"20085"
+		}
+		"20085"
+		{
+			"name"		"coupon key - danielsadowski_03"
+			"item_name"		"#coupon_key_danielsadowski_03"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_03"
+			}
+			"associated_item"		"10085"
+		}
+		"10086"
+		{
+			"name"		"coupon - awolnation_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - awolnation_01"
+			"tool"
+			{
+				"restriction"		"coupon_awolnation_01"
+			}
+			"associated_item"		"20086"
+		}
+		"20086"
+		{
+			"name"		"coupon key - awolnation_01"
+			"item_name"		"#coupon_key_awolnation_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_awolnation_01"
+			}
+			"associated_item"		"10086"
+		}
+		"10087"
+		{
+			"name"		"coupon - mordfustang_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - mordfustang_01"
+			"tool"
+			{
+				"restriction"		"coupon_mordfustang_01"
+			}
+			"associated_item"		"20087"
+		}
+		"20087"
+		{
+			"name"		"coupon key - mordfustang_01"
+			"item_name"		"#coupon_key_mordfustang_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_mordfustang_01"
+			}
+			"associated_item"		"10087"
+		}
+		"10088"
+		{
+			"name"		"coupon - michaelbross_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - michaelbross_01"
+			"tool"
+			{
+				"restriction"		"coupon_michaelbross_01"
+			}
+			"associated_item"		"20088"
+		}
+		"20088"
+		{
+			"name"		"coupon key - michaelbross_01"
+			"item_name"		"#coupon_key_michaelbross_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_michaelbross_01"
+			}
+			"associated_item"		"10088"
+		}
+		"10089"
+		{
+			"name"		"coupon - ianhultquist_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - ianhultquist_01"
+			"tool"
+			{
+				"restriction"		"coupon_ianhultquist_01"
+			}
+			"associated_item"		"20089"
+		}
+		"20089"
+		{
+			"name"		"coupon key - ianhultquist_01"
+			"item_name"		"#coupon_key_ianhultquist_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_ianhultquist_01"
+			}
+			"associated_item"		"10089"
+		}
+		"10090"
+		{
+			"name"		"coupon - newbeatfund_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - newbeatfund_01"
+			"tool"
+			{
+				"restriction"		"coupon_newbeatfund_01"
+			}
+			"associated_item"		"20090"
+		}
+		"20090"
+		{
+			"name"		"coupon key - newbeatfund_01"
+			"item_name"		"#coupon_key_newbeatfund_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_newbeatfund_01"
+			}
+			"associated_item"		"10090"
+		}
+		"10091"
+		{
+			"name"		"coupon - beartooth_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - beartooth_01"
+			"tool"
+			{
+				"restriction"		"coupon_beartooth_01"
+			}
+			"associated_item"		"20091"
+		}
+		"20091"
+		{
+			"name"		"coupon key - beartooth_01"
+			"item_name"		"#coupon_key_beartooth_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_beartooth_01"
+			}
+			"associated_item"		"10091"
+		}
+		"10092"
+		{
+			"name"		"coupon - lenniemoore_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - lenniemoore_01"
+			"tool"
+			{
+				"restriction"		"coupon_lenniemoore_01"
+			}
+			"associated_item"		"20092"
+		}
+		"20092"
+		{
+			"name"		"coupon key - lenniemoore_01"
+			"item_name"		"#coupon_key_lenniemoore_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_lenniemoore_01"
+			}
+			"associated_item"		"10092"
+		}
+		"10093"
+		{
+			"name"		"coupon - darude_01"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - darude_01"
+			"tool"
+			{
+				"restriction"		"coupon_darude_01"
+			}
+			"associated_item"		"20093"
+		}
+		"20093"
+		{
+			"name"		"coupon key - darude_01"
+			"item_name"		"#coupon_key_darude_01"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_darude_01"
+			}
+			"associated_item"		"10093"
+		}
+		"10094"
+		{
+			"name"		"coupon - proxy_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - proxy_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_proxy_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20094"
+		}
+		"20094"
+		{
+			"name"		"coupon key - proxy_01_stattrak"
+			"item_name"		"#coupon_key_proxy_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_proxy_01_stattrak"
+			}
+			"associated_item"		"10094"
+		}
+		"10095"
+		{
+			"name"		"coupon - kitheory_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - kitheory_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_kitheory_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20095"
+		}
+		"20095"
+		{
+			"name"		"coupon key - kitheory_01_stattrak"
+			"item_name"		"#coupon_key_kitheory_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_kitheory_01_stattrak"
+			}
+			"associated_item"		"10095"
+		}
+		"10096"
+		{
+			"name"		"coupon - troelsfolmann_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - troelsfolmann_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_troelsfolmann_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20096"
+		}
+		"20096"
+		{
+			"name"		"coupon key - troelsfolmann_01_stattrak"
+			"item_name"		"#coupon_key_troelsfolmann_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_troelsfolmann_01_stattrak"
+			}
+			"associated_item"		"10096"
+		}
+		"10097"
+		{
+			"name"		"coupon - kellybailey_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - kellybailey_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_kellybailey_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20097"
+		}
+		"20097"
+		{
+			"name"		"coupon key - kellybailey_01_stattrak"
+			"item_name"		"#coupon_key_kellybailey_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_kellybailey_01_stattrak"
+			}
+			"associated_item"		"10097"
+		}
+		"10098"
+		{
+			"name"		"coupon - skog_02_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - skog_02_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_skog_02_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20098"
+		}
+		"20098"
+		{
+			"name"		"coupon key - skog_02_stattrak"
+			"item_name"		"#coupon_key_skog_02_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_skog_02_stattrak"
+			}
+			"associated_item"		"10098"
+		}
+		"10099"
+		{
+			"name"		"coupon - danielsadowski_03_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - danielsadowski_03_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_03_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20099"
+		}
+		"20099"
+		{
+			"name"		"coupon key - danielsadowski_03_stattrak"
+			"item_name"		"#coupon_key_danielsadowski_03_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_03_stattrak"
+			}
+			"associated_item"		"10099"
+		}
+		"10100"
+		{
+			"name"		"coupon - awolnation_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - awolnation_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_awolnation_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20100"
+		}
+		"20100"
+		{
+			"name"		"coupon key - awolnation_01_stattrak"
+			"item_name"		"#coupon_key_awolnation_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_awolnation_01_stattrak"
+			}
+			"associated_item"		"10100"
+		}
+		"10101"
+		{
+			"name"		"coupon - mordfustang_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - mordfustang_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_mordfustang_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20101"
+		}
+		"20101"
+		{
+			"name"		"coupon key - mordfustang_01_stattrak"
+			"item_name"		"#coupon_key_mordfustang_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_mordfustang_01_stattrak"
+			}
+			"associated_item"		"10101"
+		}
+		"10102"
+		{
+			"name"		"coupon - michaelbross_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - michaelbross_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_michaelbross_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20102"
+		}
+		"20102"
+		{
+			"name"		"coupon key - michaelbross_01_stattrak"
+			"item_name"		"#coupon_key_michaelbross_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_michaelbross_01_stattrak"
+			}
+			"associated_item"		"10102"
+		}
+		"10103"
+		{
+			"name"		"coupon - ianhultquist_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - ianhultquist_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_ianhultquist_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20103"
+		}
+		"20103"
+		{
+			"name"		"coupon key - ianhultquist_01_stattrak"
+			"item_name"		"#coupon_key_ianhultquist_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_ianhultquist_01_stattrak"
+			}
+			"associated_item"		"10103"
+		}
+		"10104"
+		{
+			"name"		"coupon - newbeatfund_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - newbeatfund_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_newbeatfund_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20104"
+		}
+		"20104"
+		{
+			"name"		"coupon key - newbeatfund_01_stattrak"
+			"item_name"		"#coupon_key_newbeatfund_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_newbeatfund_01_stattrak"
+			}
+			"associated_item"		"10104"
+		}
+		"10105"
+		{
+			"name"		"coupon - beartooth_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - beartooth_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_beartooth_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20105"
+		}
+		"20105"
+		{
+			"name"		"coupon key - beartooth_01_stattrak"
+			"item_name"		"#coupon_key_beartooth_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_beartooth_01_stattrak"
+			}
+			"associated_item"		"10105"
+		}
+		"10106"
+		{
+			"name"		"coupon - lenniemoore_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - lenniemoore_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_lenniemoore_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20106"
+		}
+		"20106"
+		{
+			"name"		"coupon key - lenniemoore_01_stattrak"
+			"item_name"		"#coupon_key_lenniemoore_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_lenniemoore_01_stattrak"
+			}
+			"associated_item"		"10106"
+		}
+		"10107"
+		{
+			"name"		"coupon - darude_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - darude_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_darude_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20107"
+		}
+		"20107"
+		{
+			"name"		"coupon key - darude_01_stattrak"
+			"item_name"		"#coupon_key_darude_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_darude_01_stattrak"
+			}
+			"associated_item"		"10107"
+		}
+		"10108"
+		{
+			"name"		"coupon - danielsadowski_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - danielsadowski_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20108"
+		}
+		"20108"
+		{
+			"name"		"coupon key - danielsadowski_01_stattrak"
+			"item_name"		"#coupon_key_danielsadowski_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_01_stattrak"
+			}
+			"associated_item"		"10108"
+		}
+		"10109"
+		{
+			"name"		"coupon - noisia_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - noisia_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_noisia_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20109"
+		}
+		"20109"
+		{
+			"name"		"coupon key - noisia_01_stattrak"
+			"item_name"		"#coupon_key_noisia_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_noisia_01_stattrak"
+			}
+			"associated_item"		"10109"
+		}
+		"10110"
+		{
+			"name"		"coupon - robertallaire_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - robertallaire_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_robertallaire_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20110"
+		}
+		"20110"
+		{
+			"name"		"coupon key - robertallaire_01_stattrak"
+			"item_name"		"#coupon_key_robertallaire_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_robertallaire_01_stattrak"
+			}
+			"associated_item"		"10110"
+		}
+		"10111"
+		{
+			"name"		"coupon - seanmurray_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - seanmurray_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_seanmurray_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20111"
+		}
+		"20111"
+		{
+			"name"		"coupon key - seanmurray_01_stattrak"
+			"item_name"		"#coupon_key_seanmurray_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_seanmurray_01_stattrak"
+			}
+			"associated_item"		"10111"
+		}
+		"10112"
+		{
+			"name"		"coupon - feedme_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - feedme_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_feedme_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20112"
+		}
+		"20112"
+		{
+			"name"		"coupon key - feedme_01_stattrak"
+			"item_name"		"#coupon_key_feedme_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_feedme_01_stattrak"
+			}
+			"associated_item"		"10112"
+		}
+		"10113"
+		{
+			"name"		"coupon - dren_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - dren_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_dren_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20113"
+		}
+		"20113"
+		{
+			"name"		"coupon key - dren_01_stattrak"
+			"item_name"		"#coupon_key_dren_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_dren_01_stattrak"
+			}
+			"associated_item"		"10113"
+		}
+		"10114"
+		{
+			"name"		"coupon - austinwintory_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - austinwintory_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_austinwintory_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20114"
+		}
+		"20114"
+		{
+			"name"		"coupon key - austinwintory_01_stattrak"
+			"item_name"		"#coupon_key_austinwintory_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_austinwintory_01_stattrak"
+			}
+			"associated_item"		"10114"
+		}
+		"10115"
+		{
+			"name"		"coupon - sasha_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - sasha_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_sasha_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20115"
+		}
+		"20115"
+		{
+			"name"		"coupon key - sasha_01_stattrak"
+			"item_name"		"#coupon_key_sasha_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_sasha_01_stattrak"
+			}
+			"associated_item"		"10115"
+		}
+		"10116"
+		{
+			"name"		"coupon - skog_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - skog_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_skog_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20116"
+		}
+		"20116"
+		{
+			"name"		"coupon key - skog_01_stattrak"
+			"item_name"		"#coupon_key_skog_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_skog_01_stattrak"
+			}
+			"associated_item"		"10116"
+		}
+		"10117"
+		{
+			"name"		"coupon - midnightriders_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - midnightriders_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_midnightriders_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20117"
+		}
+		"20117"
+		{
+			"name"		"coupon key - midnightriders_01_stattrak"
+			"item_name"		"#coupon_key_midnightriders_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"valve coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_midnightriders_01_stattrak"
+			}
+			"associated_item"		"10117"
+		}
+		"10118"
+		{
+			"name"		"coupon - danielsadowski_02_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - danielsadowski_02_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_02_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20118"
+		}
+		"20118"
+		{
+			"name"		"coupon key - danielsadowski_02_stattrak"
+			"item_name"		"#coupon_key_danielsadowski_02_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_danielsadowski_02_stattrak"
+			}
+			"associated_item"		"10118"
+		}
+		"10119"
+		{
+			"name"		"coupon - hotlinemiami_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - hotlinemiami_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_hotlinemiami_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20119"
+		}
+		"20119"
+		{
+			"name"		"coupon key - hotlinemiami_01_stattrak"
+			"item_name"		"#coupon_key_hotlinemiami_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_hotlinemiami_01_stattrak"
+			}
+			"associated_item"		"10119"
+		}
+		"10120"
+		{
+			"name"		"coupon - mattlange_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - mattlange_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_mattlange_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20120"
+		}
+		"20120"
+		{
+			"name"		"coupon key - mattlange_01_stattrak"
+			"item_name"		"#coupon_key_mattlange_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_mattlange_01_stattrak"
+			}
+			"associated_item"		"10120"
+		}
+		"10121"
+		{
+			"name"		"coupon - mateomessina_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - mateomessina_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_mateomessina_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20121"
+		}
+		"20121"
+		{
+			"name"		"coupon key - mateomessina_01_stattrak"
+			"item_name"		"#coupon_key_mateomessina_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_mateomessina_01_stattrak"
+			}
+			"associated_item"		"10121"
+		}
+		"10122"
+		{
+			"name"		"coupon - damjanmravunac_01_stattrak"
+			"item_name"		"#coupon"
+			"item_description"		"#coupon_desc"
+			"image_inventory"		"econ/coupon/offer"
+			"prefab"		"coupon_crate_prefab"
+			"loot_list_name"		"coupon loot list - damjanmravunac_01_stattrak"
+			"tool"
+			{
+				"restriction"		"coupon_damjanmravunac_01_stattrak"
+			}
+			"will_produce_stattrak"		"1"
+			"associated_item"		"20122"
+		}
+		"20122"
+		{
+			"name"		"coupon key - damjanmravunac_01_stattrak"
+			"item_name"		"#coupon_key_damjanmravunac_01_stattrak"
+			"item_description"		"#coupon_key_desc"
+			"prefab"		"coupon_key_prefab"
+			"tool"
+			{
+				"restriction"		"coupon_damjanmravunac_01_stattrak"
+			}
+			"associated_item"		"10122"
 		}
 	}
 	"attributes"
@@ -41525,6 +42672,31 @@
 			"public_list_contents"		"1"
 			"[headless_chicken]sticker"		"1"
 		}
+		"coupon loot list - proxy_01"
+		{
+			"public_list_contents"		"1"
+			"[proxy_01]musickit"		"1"
+		}
+		"coupon loot list - kitheory_01"
+		{
+			"public_list_contents"		"1"
+			"[kitheory_01]musickit"		"1"
+		}
+		"coupon loot list - troelsfolmann_01"
+		{
+			"public_list_contents"		"1"
+			"[troelsfolmann_01]musickit"		"1"
+		}
+		"coupon loot list - kellybailey_01"
+		{
+			"public_list_contents"		"1"
+			"[kellybailey_01]musickit"		"1"
+		}
+		"coupon loot list - skog_02"
+		{
+			"public_list_contents"		"1"
+			"[skog_02]musickit"		"1"
+		}
 		"coupon loot list - enfu_sticker_capsule"
 		{
 			"public_list_contents"		"1"
@@ -41579,6 +42751,196 @@
 		{
 			"public_list_contents"		"1"
 			"[delicious_tears]sticker"		"1"
+		}
+		"coupon loot list - danielsadowski_03"
+		{
+			"public_list_contents"		"1"
+			"[danielsadowski_03]musickit"		"1"
+		}
+		"coupon loot list - awolnation_01"
+		{
+			"public_list_contents"		"1"
+			"[awolnation_01]musickit"		"1"
+		}
+		"coupon loot list - mordfustang_01"
+		{
+			"public_list_contents"		"1"
+			"[mordfustang_01]musickit"		"1"
+		}
+		"coupon loot list - michaelbross_01"
+		{
+			"public_list_contents"		"1"
+			"[michaelbross_01]musickit"		"1"
+		}
+		"coupon loot list - ianhultquist_01"
+		{
+			"public_list_contents"		"1"
+			"[ianhultquist_01]musickit"		"1"
+		}
+		"coupon loot list - newbeatfund_01"
+		{
+			"public_list_contents"		"1"
+			"[newbeatfund_01]musickit"		"1"
+		}
+		"coupon loot list - beartooth_01"
+		{
+			"public_list_contents"		"1"
+			"[beartooth_01]musickit"		"1"
+		}
+		"coupon loot list - lenniemoore_01"
+		{
+			"public_list_contents"		"1"
+			"[lenniemoore_01]musickit"		"1"
+		}
+		"coupon loot list - darude_01"
+		{
+			"public_list_contents"		"1"
+			"[darude_01]musickit"		"1"
+		}
+		"coupon loot list - proxy_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[proxy_01]musickit"		"1"
+		}
+		"coupon loot list - kitheory_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[kitheory_01]musickit"		"1"
+		}
+		"coupon loot list - troelsfolmann_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[troelsfolmann_01]musickit"		"1"
+		}
+		"coupon loot list - kellybailey_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[kellybailey_01]musickit"		"1"
+		}
+		"coupon loot list - skog_02_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[skog_02]musickit"		"1"
+		}
+		"coupon loot list - danielsadowski_03_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[danielsadowski_03]musickit"		"1"
+		}
+		"coupon loot list - awolnation_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[awolnation_01]musickit"		"1"
+		}
+		"coupon loot list - mordfustang_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[mordfustang_01]musickit"		"1"
+		}
+		"coupon loot list - michaelbross_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[michaelbross_01]musickit"		"1"
+		}
+		"coupon loot list - ianhultquist_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[ianhultquist_01]musickit"		"1"
+		}
+		"coupon loot list - newbeatfund_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[newbeatfund_01]musickit"		"1"
+		}
+		"coupon loot list - beartooth_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[beartooth_01]musickit"		"1"
+		}
+		"coupon loot list - lenniemoore_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[lenniemoore_01]musickit"		"1"
+		}
+		"coupon loot list - darude_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[darude_01]musickit"		"1"
+		}
+		"coupon loot list - danielsadowski_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[danielsadowski_01]musickit"		"1"
+		}
+		"coupon loot list - noisia_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[noisia_01]musickit"		"1"
+		}
+		"coupon loot list - robertallaire_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[robertallaire_01]musickit"		"1"
+		}
+		"coupon loot list - seanmurray_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[seanmurray_01]musickit"		"1"
+		}
+		"coupon loot list - feedme_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[feedme_01]musickit"		"1"
+		}
+		"coupon loot list - dren_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[dren_01]musickit"		"1"
+		}
+		"coupon loot list - austinwintory_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[austinwintory_01]musickit"		"1"
+		}
+		"coupon loot list - sasha_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[sasha_01]musickit"		"1"
+		}
+		"coupon loot list - skog_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[skog_01]musickit"		"1"
+		}
+		"coupon loot list - midnightriders_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[midnightriders_01]musickit"		"1"
+		}
+		"coupon loot list - danielsadowski_02_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[danielsadowski_02]musickit"		"1"
+		}
+		"coupon loot list - hotlinemiami_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[hotlinemiami_01]musickit"		"1"
+		}
+		"coupon loot list - mattlange_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[mattlange_01]musickit"		"1"
+		}
+		"coupon loot list - mateomessina_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[mateomessina_01]musickit"		"1"
+		}
+		"coupon loot list - damjanmravunac_01_stattrak"
+		{
+			"public_list_contents"		"1"
+			"[damjanmravunac_01]musickit"		"1"
 		}
 	}
 	"revolving_loot_lists"
@@ -41752,8 +43114,12 @@
 	{
 		"0"
 		{
-			"type_name"		"KillEaterEventType_Kills"
+			"type_name"		"Kills"
 			"model_attribute"		"stattrak model"
+		}
+		"1"
+		{
+			"type_name"		"OCMVPs"
 		}
 	}
 	"music_definitions"
@@ -41894,6 +43260,118 @@
 			"loc_description"		"#musickit_damjanmravunac_01_desc"
 			"image_inventory"		"econ/music_kits/damjanmravunac_01"
 			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_damjanmravunac_01.mdl"
+		}
+		"18"
+		{
+			"name"		"proxy_01"
+			"loc_name"		"#musickit_proxy_01"
+			"loc_description"		"#musickit_proxy_01_desc"
+			"image_inventory"		"econ/music_kits/proxy_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_proxy_01.mdl"
+		}
+		"19"
+		{
+			"name"		"kitheory_01"
+			"loc_name"		"#musickit_kitheory_01"
+			"loc_description"		"#musickit_kitheory_01_desc"
+			"image_inventory"		"econ/music_kits/kitheory_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_kitheory_01.mdl"
+		}
+		"20"
+		{
+			"name"		"troelsfolmann_01"
+			"loc_name"		"#musickit_troelsfolmann_01"
+			"loc_description"		"#musickit_troelsfolmann_01_desc"
+			"image_inventory"		"econ/music_kits/troelsfolmann_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_troelsfolmann_01.mdl"
+		}
+		"21"
+		{
+			"name"		"kellybailey_01"
+			"loc_name"		"#musickit_kellybailey_01"
+			"loc_description"		"#musickit_kellybailey_01_desc"
+			"image_inventory"		"econ/music_kits/kellybailey_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_kellybailey_01.mdl"
+		}
+		"22"
+		{
+			"name"		"skog_02"
+			"loc_name"		"#musickit_skog_02"
+			"loc_description"		"#musickit_skog_02_desc"
+			"image_inventory"		"econ/music_kits/skog_02"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_skog_02.mdl"
+		}
+		"23"
+		{
+			"name"		"danielsadowski_03"
+			"loc_name"		"#musickit_danielsadowski_03"
+			"loc_description"		"#musickit_danielsadowski_03_desc"
+			"image_inventory"		"econ/music_kits/danielsadowski_03"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_danielsadowski_03.mdl"
+		}
+		"24"
+		{
+			"name"		"awolnation_01"
+			"loc_name"		"#musickit_awolnation_01"
+			"loc_description"		"#musickit_awolnation_01_desc"
+			"image_inventory"		"econ/music_kits/awolnation_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_awolnation_01.mdl"
+		}
+		"25"
+		{
+			"name"		"mordfustang_01"
+			"loc_name"		"#musickit_mordfustang_01"
+			"loc_description"		"#musickit_mordfustang_01_desc"
+			"image_inventory"		"econ/music_kits/mordfustang_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_mordfustang_01.mdl"
+		}
+		"26"
+		{
+			"name"		"michaelbross_01"
+			"loc_name"		"#musickit_michaelbross_01"
+			"loc_description"		"#musickit_michaelbross_01_desc"
+			"image_inventory"		"econ/music_kits/michaelbross_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_michaelbross_01.mdl"
+		}
+		"27"
+		{
+			"name"		"ianhultquist_01"
+			"loc_name"		"#musickit_ianhultquist_01"
+			"loc_description"		"#musickit_ianhultquist_01_desc"
+			"image_inventory"		"econ/music_kits/ianhultquist_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_ianhultquist_01.mdl"
+		}
+		"28"
+		{
+			"name"		"newbeatfund_01"
+			"loc_name"		"#musickit_newbeatfund_01"
+			"loc_description"		"#musickit_newbeatfund_01_desc"
+			"image_inventory"		"econ/music_kits/newbeatfund_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_newbeatfund_01.mdl"
+		}
+		"29"
+		{
+			"name"		"beartooth_01"
+			"loc_name"		"#musickit_beartooth_01"
+			"loc_description"		"#musickit_beartooth_01_desc"
+			"image_inventory"		"econ/music_kits/beartooth_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_beartooth_01.mdl"
+		}
+		"30"
+		{
+			"name"		"lenniemoore_01"
+			"loc_name"		"#musickit_lenniemoore_01"
+			"loc_description"		"#musickit_lenniemoore_01_desc"
+			"image_inventory"		"econ/music_kits/lenniemoore_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_lenniemoore_01.mdl"
+		}
+		"31"
+		{
+			"name"		"darude_01"
+			"loc_name"		"#musickit_darude_01"
+			"loc_description"		"#musickit_darude_01_desc"
+			"image_inventory"		"econ/music_kits/darude_01"
+			"pedestal_display_model"		"models/inventory_items/music_kits/music_kit_darude_01.mdl"
 		}
 	}
 	"quest_definitions"
