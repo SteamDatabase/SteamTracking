@@ -158,6 +158,19 @@
             ]
         },
         {
+            "name": "GetTopLiveGame",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "partner",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "Which partner's games to use."
+                }
+            ]
+        },
+        {
             "name": "GetTournamentPlayerStats",
             "version": 2,
             "httpmethod": "GET",
