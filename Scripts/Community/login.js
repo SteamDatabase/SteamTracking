@@ -524,6 +524,7 @@ function SetTwoFactorAuthModalState( step )
 	if ( step == 'entercode' )
 	{
 		showModal( 'loginTwoFactorCodeModal', true );
+		$J('#login_twofactorauth_message_entercode_accountname').text( document.forms['logon'].elements['username'].value )
 		$('twofactorcode_entry').focus();
 	}
 	else if ( step == 'incorrectcode' )
