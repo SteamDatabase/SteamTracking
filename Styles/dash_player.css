@@ -540,6 +540,7 @@
 	left: -220px;
 	background-repeat: no-repeat;
 	box-shadow: 3px 3px 12px #000000;
+	background-color: black;
 }
 
 .dash_overlay .progress_time_info.thumbnails .time_display
@@ -548,7 +549,8 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 1px;
+	padding: 2px 1px 1px 1px;
+	background-color: #2c2b28;
 }
 
 .dash_overlay .progress_time_bar
@@ -606,10 +608,10 @@
 #dash_video_buffering_message .loading_text
 {
 	font-family: 'Motiva Sans Light', Arial, Helvetica, sans-serif;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 14px;
 	text-align: center;
-	margin-top: 25px;
+	margin-top: 28px;
 }
 
 #dash_video_buffering_message .loading_throbber
@@ -805,6 +807,11 @@
 	cursor: pointer;
 }
 
+.dash_overlay .video_representation_live_video span.selected
+{
+	color: #6f9fc8;
+	cursor: pointer;
+}
 
 /* Big Picture / Controller UI */
 
@@ -821,11 +828,11 @@
 	transition-property: opacity;
 	transition-duration: 0.2s;
 
-	top: 85%;
+	bottom: 5%;
 	left: 50%;
-	transform: translateX(-50%) translateY(-85%);
-	-ms-transform: translateX(-50%) translateY(-85%);
-	-webkit-transform: translateX(-50%) translateY(-85%);
+	transform:translateX(-50%) translateY(0%);
+	-ms-transform: translateX(-50%) translateY(0%);
+	-webkit-transform: translateX(-50%) translateY(0%);
 
 	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
 
@@ -1136,13 +1143,13 @@
 .tenfoot_dash_overlay .progress_time_info.thumbnails
 {
 	width: 240px;
-	height: 135px;
+	height: 136px;
 	top: -240px;
 	background-repeat: no-repeat;
-	background-size: auto 134px;
 	border: #1284a9 5px solid;
 	box-shadow: 0px 0px 13px 3px rgba(101,151,181,0.7);
 	visibility: hidden;
+	background-color: black;
 }
 
 .tenfoot_dash_overlay .progress_time_info.thumbnails .time_display
@@ -1364,8 +1371,8 @@
 .tenfoot_modal_panel_wrapper .panel_select #representation_select
 {
 	float: left;
-	width: 610px;
-
+	width: 600px;
+	overflow: hidden;
 	font-family: 'Motiva Sans', times, Helvetica, Arial, sans-serif;
 	font-size: 36px;
 	color: #FFF;
@@ -1503,15 +1510,19 @@
 #tenfoot_dash_video_buffering_message .loading_text
 {
 	font-family: 'Motiva Sans', Arial, Helvetica, sans-serif;
-	font-size: 28px;
+	font-size: 32px;
 	text-align: center;
-	margin-top: -20px;
-
+	margin-top: -18px;
 }
 
 #tenfoot_dash_video_buffering_message .loading_throbber
 {
-	margin: 0px 17px 40px auto;
+	margin: -20px 17px 70px auto;
+}
+
+#tenfoot_dash_video_buffering_message .loading_throbber .bar
+{
+	height: 100px;
 }
 
 /*.MoviePlayer_Button_LiveBroadcast_Off {width:58px; height:13px; background-position: -1388px -173px}*/

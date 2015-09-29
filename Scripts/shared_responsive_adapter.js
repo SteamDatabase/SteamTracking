@@ -162,7 +162,7 @@ jQuery( function($) {
 
 			for ( var i = 0; i < $LocalMenuContent.length; i++ )
 			{
-				var $LocalMenuElement = $($LocalMenuContent[i] ).wrap( '<div/>' );
+				var $LocalMenuElement = $($LocalMenuContent[i] ).wrap( $J('<div/>', {'class': 'responsive_local_menu_placeholder' } ) );
 				var $LocalMenuWrapper = $($LocalMenuContent[i]).parent();
 				rgMenuContents.push( {
 					wrapper: $LocalMenuWrapper,
@@ -254,6 +254,8 @@ jQuery( function($) {
 	Responsive_InitTabSelect( $ );
 
 	Responsive_InitResponsiveToggleEvents( $ );
+
+	Responsive_InitJQPlotHooks( $ );
 });
 
 function Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalMenuEvents )
@@ -655,4 +657,44 @@ function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $Ctn )
 
 	fnReparentItems();
 	$J(window ).on('Responsive_SmallScreenModeToggled', fnReparentItems );
+}
+
+function Responsive_InitJQPlotHooks( $ )
+{
+	if ( $.jqplot )
+	{
+		$.jqplot.postInitHooks.push( function( name, data, options ) {
+			var jqplot = this;
+			var bWasInResponsiveMode;
+
+			//replotting is very expensive, so we try to delay if the user is actively resizing
+			var iReplotInterval;
+			$J(window).resize( function() {
+				if ( ( UseSmallScreenMode() || bWasInResponsiveMode ) )
+				{
+					if ( iReplotInterval )
+					{
+						// we will reschedule for 100ms from now
+						window.clearInterval( iReplotInterval );
+					}
+					else
+					{
+						//interval hasn't been scheduled yet, must be the first resize.
+						// set overflow to hidden so the plot doesn't stretch the page while resizing
+						jqplot.target.css( 'overflow', 'hidden' );
+					}
+
+					iReplotInterval = window.setTimeout( function() {
+						iReplotInterval = null;
+
+						jqplot.replot();
+
+						jqplot.target.css( 'overflow', '' );
+					}, 100 );
+
+					bWasInResponsiveMode = UseSmallScreenMode();
+				}
+			});
+		});
+	}
 }

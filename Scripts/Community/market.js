@@ -7,10 +7,10 @@ RemoveListingDialog = {
 	m_ulListingId: false,
 	m_bAwaitingConfirmation: false,
 	m_fnDocumentKeyHandler: null,
+	m_modal: null,
 	
 	Initialize: function() {
 		$('market_removelisting_dialog_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
-		$('market_removelisting_dialog_cancel').observe( 'click', this.OnCancel.bindAsEventListener(this) );
 		$('market_removelisting_dialog_cancelbtn').observe( 'click', this.OnCancel.bindAsEventListener(this) );
 	},
 
@@ -50,7 +50,10 @@ RemoveListingDialog = {
 		this.m_fnDocumentKeyHandler = this.OnDocumentKeyPress.bindAsEventListener( this );
 		$(document).observe( 'keydown', this.m_fnDocumentKeyHandler );
 
-		showModal( 'market_removelisting_dialog', true );
+		var _this = this;
+		this.m_modal = new CModal( $J('#market_removelisting_dialog' ) );
+		this.m_modal.GetContent().find('.newmodal_close' ).click( function() { _this.Dismiss() } );
+		this.m_modal.Show();
 		$('market_removelisting_dialog').focus();
 	},
 
@@ -63,7 +66,11 @@ RemoveListingDialog = {
 
 	Dismiss: function() {
 		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
-		hideModal( 'market_removelisting_dialog' );
+		if ( this.m_modal )
+		{
+			this.m_modal.Dismiss();
+			this.m_modal = null;
+		}
 	},
 
 	OnAccept: function( event ) {
@@ -542,6 +549,7 @@ BuyItemDialog = {
 	m_nTotal: 0,
 
 	m_sAddFundsReturnURL: null,
+	m_modal: null,
 
 	Initialize: function() {
 		$('market_buynow_dialog_purchase').observe( 'click', this.OnAccept.bindAsEventListener(this) );
@@ -708,7 +716,10 @@ BuyItemDialog = {
 		this.m_fnDocumentKeyHandler = this.OnDocumentKeyPress.bindAsEventListener( this );
 		$(document).observe( 'keydown', this.m_fnDocumentKeyHandler );
 
-		showModal( 'market_buynow_dialog', true );
+		var _this = this;
+		this.m_modal = new CModal( $J('#market_buynow_dialog' ) );
+		this.m_modal.GetContent().find('.newmodal_close' ).click( function() { _this.Dismiss() } );
+		this.m_modal.Show();
 		$('market_buynow_dialog').focus();
 	},
 
@@ -721,7 +732,11 @@ BuyItemDialog = {
 
 	Dismiss: function() {
 		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
-		hideModal( 'market_buynow_dialog' );
+		if ( this.m_modal )
+		{
+			this.m_modal.Dismiss();
+			this.m_modal = null;
+		}
 	},
 
 	OnAddFunds: function( event ) {
@@ -1312,7 +1327,7 @@ AdvancedSearchDialog = {
 	m_oListingOriginalRow: null,
 	m_ulListingId: false,
 	m_fnDocumentKeyHandler: null,
-	m_fnModalBGClickHandler: null,
+	m_modal: null,
 
 	Initialize: function() {
 	},
@@ -1326,19 +1341,20 @@ AdvancedSearchDialog = {
 		this.m_fnDocumentKeyHandler = this.OnDocumentKeyPress.bindAsEventListener( this );
 		$(document).observe( 'keydown', this.m_fnDocumentKeyHandler );
 
-		this.m_fnModalBGClickHandler = this.OnCancel.bindAsEventListener(this);
-		$('modalBG').observe( 'click', this.m_fnModalBGClickHandler );
-
-		showModal( 'market_advancedsearch_dialog', true );
+		var _this = this;
+		this.m_modal = ShowDialog( '', $J('#market_advancedsearch_dialog' ).show() );
+		this.m_modal.SetRemoveContentOnDismissal( false );
+		this.m_modal.always( function() { _this.Dismiss(); } );
 		$('market_advancedsearch_dialog').focus();
-		$J("body").css( "overflow", "hidden" );
 	},
 
 	Dismiss: function() {
 		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
-		$('modalBG').stopObserving( 'click', this.m_fnModalBGClickHandler );
-		hideModal( 'market_advancedsearch_dialog' );
-		$J("body").css( "overflow", "auto" );
+		if ( this.m_modal )
+		{
+			this.m_modal.Dismiss();
+			this.m_modal = null;
+		}
 	},
 
 	SelectApp: function( unApp ) {

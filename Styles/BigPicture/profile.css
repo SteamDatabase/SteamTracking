@@ -447,23 +447,7 @@ ProfilePanel #UpperRow
 	color: detailsdatalabelfocus;
 }
 
-#CurrentlyPlaying
-{
-	flow-children: down;
-}
 
-#GamePlayedImage
-{
-	margin-top: 0px;
-	margin-left: 10px;
-
-}
-
-#CurrentlyPlaying .ProfileDetailButton 
-{
-	margin-top: 20px;
-	font-size: 28px;
-}
 	
 #FavGroupScrollRegion
 {
@@ -486,8 +470,8 @@ ProfilePanel #UpperRow
 	width: 100%;
 }
 #FavGroupUpperRow #FavGroupAvatar {
-	height: 130px;
-	width: 130px;
+	height: 120px;
+	width: 120px;
 	margin-top: 8px;
 }
 
@@ -1952,8 +1936,6 @@ color: #FFFFFF99;
 	height: 100%;
 
 	margin-top: 4px;
-	padding-left: 10px;
-	padding-right: 10px;
 
 	flow-children: down;
 	opacity: 1.0;
@@ -3354,8 +3336,8 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 {
 	width: 100%;
 	height: 152px;
-	margin-top: 23px;
-	margin-left: 70px;
+	margin-top: 32px;
+	margin-left: 80px;
 	margin-right: 70px;
 	flow-children: right;
 }
@@ -3364,7 +3346,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 {
 	flow-children: right;
 	margin-right: 5px;
-	background-color: #09334daa;
+	background-color: #0000004D;
 	height: 100%;
 
 	padding: 5px;
@@ -3505,7 +3487,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	width: 100%;
 	height: 900px;
 	flow-children: right;
-	margin-top: 50px;
+	margin-top: 0px;
 	overflow: clip;
 }
 
@@ -3536,14 +3518,10 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 #RightColumn
 {
-	width: fill-parent-flow( 1.0 );
+	width: 100%;
 	height: 870px;
 	margin-bottom: 10px;
-
-	padding-top: 5px;
-	padding-left: 5px;
-	padding-right: 50px;
-	padding-bottom: 5px;
+	overflow: clip;
 
 
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
@@ -3560,16 +3538,18 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 {
 	height: 100%;
 	width: 100%;
-	padding-top: 30px;
+	padding-top: 20px;
 }
 
 #ShowcaseGrid .ProfileContentCard, #RightColumn .ProfileContentCard
 {
-	background-color: transparent_module;
+	background-color: nontransparent_module;
 	width: 448px;
 	height: 276px;
 	pre-transform-scale2d: 0.97;
 	padding: 15px;
+
+	border-radius: 3px;
 
 	flow-children: down;
 
@@ -3580,7 +3560,10 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	transition-delay: 0s;
 }
 
-#ShowcaseGrid .ProfileContentCard:focus, #RightColumn .ProfileContentCard:focus
+#ShowcaseGrid .ProfileContentCard:focus,
+#ShowcaseGrid .ProfileContentCard:hover,
+#RightColumn .ProfileContentCard:focus,
+#RightColumn .ProfileContentCard:hover
 {
 
 	background-color: action_module;
@@ -3592,18 +3575,28 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.ProfileContentCardTitle
+.ProfileContentCard .ProfileContentCardTitle
 {
 	font-size: 28px;
-	color: #36b3d9ff;
+	font-weight: light;
+	color: brightblue;
+}
+.ProfileContentCard:focus .ProfileContentCardTitle
+{
+	color: white;
 }
 
 .ProfileContentCardSubTitle
 {
 	font-size: 24px;
-	color: #36b3d9ff;
+	color: medgray;
 }
 
 #RecentGames
@@ -3852,6 +3845,27 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	color: tcmainbuttonselected;
 }
 
+/* Currently pLaying Button */
+
+#CurrentlyPlaying
+{
+	flow-children: down;
+}
+
+#GamePlayedImage
+{
+	margin-top: 0px;
+	margin-left: 10px;
+	wash-color: none;
+	margin-left: -10px;
+
+}
+
+#CurrentlyPlaying .ProfileDetailButton
+{
+	margin-top: 20px;
+	font-size: 28px;
+}
 
 #WatchGameButton
 {
@@ -3870,19 +3884,26 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	width: fill-parent-flow( 1.0 );
 	height: 100%;
 	flow-children: down;
-	margin-left: 10px;
 }
 
 #WatchGameButton .InGame
 {
-	font-size: 20px;
+	font-size: 24px;
 	color: friendsingame_solid;
+}
+#WatchGameButton:focus .InGame
+{
+	color: #072e47;
 }
 
 #WatchGameButton .Playtime
 {
 	font-size: 18px;
 	color: foregroundgray;
+}
+#WatchGameButton:focus .Playtime
+{
+	color: #072e47;
 }
 
 
@@ -3893,7 +3914,9 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 .ProfileContentCard #big_screenshot_preview
 {
-	width: 288px;
+	height: 186px;
+	width: 290px;
+	margin-right: 0px;
 }
 
 .ProfileContentCard .small_screenshot_preview,
@@ -3934,26 +3957,26 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 /* Content grid stuff */
 
+#ProfileContent .NxRightContentContainer
+{
+	width: 1600px;
+	padding: 0px;
+	margin: 0px;
+}
+
 .ImageContainer {
 	margin: 5px;
+	z-index: 2;
 
-}
+	pre-transform-scale2d: 0.94;
 
-.ImageContainer Image {
-	width: 640px;
-	height: 360px;
-}
-
-
-.ImageContainer {
-	padding: 5px;
-
-	pre-transform-scale2d: 0.86;
+	background-color: transparent_module;
 
 	wash-color: #00000012;
 	desaturation: 0.2;
+	box-shadow: module_shadow;
 
-	transition-property: position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation, transform;
+	transition-property: z-index, position, pre-transform-scale2d, opacity, border, box-shadow, wash-color, desaturation, transform;
 	transition-duration: shortduration;
 	transition-timing-function: ease-in-out;
 
@@ -3961,7 +3984,10 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 
 .ImageContainer Image {
+	width: 390px;
+	height: 230px;
 	opacity: 0;
+
 }
 
 .ImageContainer Image.Loaded
@@ -3991,22 +4017,28 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 .ImageContainer:hover
 {
-	pre-transform-scale2d: .85;
-	transform: translatey( -2px ) translatex(-2px);
+	pre-transform-scale2d: 1;
+
 	z-index: 1;
 }
 
 .ImageContainer:focus,
+.ImageContainer:hover,
 .ImageContainer:hover:focus
 {
 	pre-transform-scale2d: 1;
 
-	z-index: 2;
+	z-index: 200;
 	opacity: 1.0;
 	wash-color: #00000000;
 	desaturation: 0.0;
 
-	transform: translatey( -2px ) translatex(-2px);
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
 }
 
 
@@ -4020,12 +4052,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 {
 	box-shadow: box_shadow_on_color 0px 0px 16px 0px;
 
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: 1.7s;
-	animation-delay: 0.3s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
+
 }
 
 .ImageContainer.Deleted {
@@ -4048,17 +4075,10 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 
 
-#GridItemsNone {
-	visibility: collapse;
-}
-
-#GridItemsNone.visible {
-	visibility: visible;
-}
-
 .AchievementsContainer, .StatsContainer, .GamesContainer, .ContentGrid {
 
 	padding: 40px;
+	margin: 0px -40px 0px 0px;
 	margin-top: -40px;
 
 	flow-children: down;
@@ -4068,10 +4088,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 }
 #AchievementsContainer.AchievementsContainer,
 .AchievementsContainer .StatsContainer {
-	padding: 0px;
-	margin-top: 0px;
-	height: 780px;
-	padding-bottom: 0px;
+
 }
 .ContentGrid {
 	margin-top: 40px;
@@ -4081,7 +4098,14 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 #ProfileContent .ContentGrid
 {
 	margin-top: 0px;
-	height: 100%;
+	padding-top: 57px;
+	height: 780px;
+}
+#ProfileContent #content_showcases .ContentGrid
+{
+	margin-top: 0px;
+	height: 900px;
+	width: 1400px;
 }
 
 #ProfileContent .NxNavigationLoadingThrobber
@@ -4090,14 +4114,17 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	height: 650px;
 }
 
+#ProfileContent .ThrobberFullContainer
+{
+	vertical-align: top;
+	height: 650px;
+}
+
 .FullscreenImagePopup {
 	background-color: #000000FF;
 }
 
-.ImageContainer Image {
-	max-height: 230px;
-	max-width: 370px;
-}
+
 
 .AchievementsContainer, .StatsContainer, .GamesContainer {
 	overflow: noclip scroll;
@@ -4105,7 +4132,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 .GameRow {
 	flow-children: right;
-	height: 89px;
+	height: 79px;
 	width: 100%;
 }
 
@@ -4472,6 +4499,43 @@ Panel.AvatarOptionGame {
 	height: 100%;
 }
 
+
+/* Friends list */
+
+.FriendRow {
+	height: 115px;
+	flow-children: right;
+	width: 45%;
+
+}
+
+.FriendRow .AvatarImage {
+	width: 96px;
+	height: 96px;
+	margin-right: 10px;
+}
+
+.FriendRow .TextContainer {
+	flow-children: down;
+	width: 100%;
+}
+
+.FriendRow.online .TextContainer Label {
+	color: friendsonline_solid;
+}
+
+.FriendRow.offline .TextContainer Label {
+	color: friendsoffline_solid;
+}
+
+.FriendRow.in-game .TextContainer Label {
+	color: friendsingame_solid;
+}
+
+.FriendRow.in-game:focus .TextContainer Label, .FriendRow.offline:focus .TextContainer Label, .FriendRow.online:focus .TextContainer Label {
+	color: #072e47;
+}
+
 LibraryGameBadge
 {
 	flow-children: down;
@@ -4518,6 +4582,56 @@ LibraryGameBadge .badge_info_description
 }
 LibraryGameBadge .badge_info_description Label
 {
-	font-size: 18px;
+	font-size: 26px;
+	color: detailsdatalabel;
+}
+#friends_list
+{
+	height: 1200px;
+}
+#friends_list .ContentGrid
+{
+	margin-top: 0px;
+}
+
+#friends_that_play_list
+{
+	height: 100%;
+	width: 100%;
+	margin-left: 80px;
+	margin-right: 80px;
+	margin-bottom: 100px;
+	padding-bottom: 40px;
+	overflow: squish scroll;
+}
+
+#friends_that_play_list .FriendsThatPlaySectionHeader
+{
+	width: 100%;
+	height: 40px;
+	font-size: 28px;
 	color: #ffffff;
+
+}
+#friends_that_play_list .FriendsSection
+{
+	width: 100%;
+	margin-top: 30px;
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #051c2dff ), to( #051c2d00 ) );
+	padding-top: 20px;
+	padding-left: 20px;
+	flow-children: down;
+}
+
+.FriendsThatPlayGrid
+{
+	width: 100%;
+	height: fit-children;
+	flow-children: right-wrap;
+}
+
+.FriendsThatPlayGrid .FriendRow
+{
+	width: 32%;
+	margin-right: 10px;
 }

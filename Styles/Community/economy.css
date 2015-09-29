@@ -533,6 +533,10 @@ input.filter_search_box:-moz-placeholder {
 	width: 350px;
 }
 
+.economy_item_popup #iteminfo_clienthover {
+	width: auto;
+}
+
 .hover_arrow_left, .hover_arrow_right {
 	position: absolute;
 	top: 48px;
@@ -761,6 +765,10 @@ input.market_dialog_input:focus {
 		display: block;
     }
 
+	html.responsive .economy_item_hoverable {
+		cursor: pointer;
+	}
+
 }
 	html.responsive.touch input.market_dialog_input {
 		/* so iOS doesn't zoom */
@@ -786,13 +794,17 @@ input.market_dialog_input:focus {
 		display: block;
     }
 
+	html.responsive.touch .economy_item_hoverable {
+		cursor: pointer;
+	}
+
 .market_dialog_bottom_buttons {
 	margin-top: 33px;
 }
 
 .market_dialog_bottom_buttons > a {
 	float: right;
-	margin-left: 10px;
+	margin: 0 0 10px 10px;
 	min-width: 100px;
 	text-align: center;
 }
@@ -848,7 +860,7 @@ input.market_dialog_input:focus {
 }
 
 #market_removelisting_dialog_accept {
-	margin-right: 0.5em;
+	margin: 0 0.5em 0.5em 0;
 }
 
 .item_market_action_button {
@@ -1319,12 +1331,6 @@ a.game_button {
 	margin: 16px auto 16px auto;
 }
 
-.economy_item_popup_scroll {
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-	height: 100%;
-}
-
 .economy_item_popup_dismiss {
 	position: absolute;
 	right: -12px;
@@ -1340,6 +1346,14 @@ a.game_button {
 	font-size: 20px;
 
 	cursor: pointer;
+}
+
+.economy_item_popup_only {
+	display: none;
+}
+
+.economy_item_popup .economy_item_popup_only {
+	display: block;
 }
 
 html.responsive .newmodal.economy_modal_ctn {

@@ -131,7 +131,7 @@ Button:focus .dynamiclink_box Label
 #FriendActivity #ContentRow
 {
 	height: 100%;
-	width: 2000px;
+	width: 1640px;
 	overflow: clip;
 	flow-children: right;
 	box-shadow: none;
@@ -171,13 +171,13 @@ Button:focus .dynamiclink_box Label
 {
 	margin-left: 10px;
 	margin-right: 0px;
-	width: 2000px;
+	width: 1230px;
 	height: 800px;
 	overflow: squish scroll;
 
 	//flow-children: down;
 
-	background-color: right_content_bg;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0f2b4900 ), to( #06102800 ) );
 	box-shadow: fill #00000000 0px 0px 20px 0px;
 
 	color: applabelsolid;
@@ -194,8 +194,8 @@ Button:focus .dynamiclink_box Label
 }
 #RightDetailsColumn:descendantfocus {
 	transform: translateX( -400px );
-	/* background-color: gradient( linear, 0% 100%, 100% 100%, from( #073247ff ), color-stop( 0.5, #073247ff ), to( #07324700 ) ); */
-	background-color: #073247;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0f2b49ff ), to( #061028ff ) );
+
 	box-shadow: fill #000000bb 0px 0px 20px 0px;
 }
 
@@ -415,7 +415,8 @@ Button:focus .blotter_author_block Label.personaname.in-game
 
 Button#blotter_post_status
 {
-	margin-top: 6px;
+	margin-top: 32px;
+	margin-bottom: 4px;
 	height: 100px;
 }
 
@@ -586,6 +587,7 @@ Button:focus .user_status_labels Label.personaname .detail_text
 .blotter_userstatus_content
 {
 	margin-left: 80px;
+	width: 100%;
 
 	font-size: 23px;
 	overflow: clip noclip;
@@ -775,6 +777,9 @@ Button:focus .user_status_labels Label.personaname .detail_text
 .blotter_group_announcement_content_contents {
 	height: 100px;
 }
+#LeftActivityColumn .blotter_group_announcement_content_contents {
+	visibility: collapse;
+}
 
 .blotter_group_announcement_headline
 {
@@ -907,6 +912,7 @@ Label.blotter_group_announcement_header_contents
 .blotter_container
 {
 	width: 100%;
+	padding-top: 20px;
 }
 
 .blotter_control_container
@@ -1007,16 +1013,10 @@ Label.blotter_group_announcement_header_contents
 	margin-left: 10px;
 	margin-right: 42px;
 
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding: 14px;
 
-	padding-left: 4px;
-	padding-right: 4px;
-
-	border-width: 5px;
-	border-style: solid;
-	border-color: #00000000;
 	color: #FFFFFF99;
+	background-color: transparent_module;
 
 	transition-property: opacity,border,background-color,transform;
 	transition-duration: shortduration;
@@ -1033,16 +1033,10 @@ Label.blotter_group_announcement_header_contents
 .blotter_button_wrapper:focus,
 .btn_small_thin:focus
 {
-	border-color: #fdfefef0;
+
 	color: #161718f5;
+	background-color: button_focus_color;
 
-	background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
-
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: 1.7s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
 }
 
 .btn_small_thin
@@ -1166,4 +1160,9 @@ LoadingThrobber.HorizontallyCenteredThrobber {
 .RightColumnContentContainer.Deleting {
 	opacity: 0;
 	transform: translateY(-200px);
+}
+
+#CommunityContentFriendActivity VerticalScrollBar {
+	margin-top: 30px;
+	opacity: 0;
 }

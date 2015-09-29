@@ -89,7 +89,6 @@ function CreateInventoryItemPanel( item, grid )
 	var p = $.CreatePanel( 'Button', grid, id );
 	p.AddClass( 'InventoryItem' );
 	p.hittest = false;
-	// Save off tags by id for later filtering
 
 	var img = $.CreatePanel( 'Image', p, '' );
 	img.SetScaling( 'stretch-to-fit-preserve-aspect' );
@@ -116,11 +115,6 @@ function CreateInventoryItemPanel( item, grid )
 
 
 	var	image_name = item.icon_url_large ? item.icon_url_large : item.icon_url;
-
-	//$.Msg( '<Button class="InventoryItem">' );
-	//$.Msg( '	<Image src="' + ImageURL( image_name, 256, 256 ) + '" hittest="false" />' );
-	//$.Msg( '	<Label class="InventoryItemName" text="' + name_row.text + '" />' );
-	//$.Msg( '</Button>' );
 
 	$.RegisterEventHandler( 'ReadyPanelForDisplay', p, function()
 	{
@@ -413,7 +407,6 @@ var CBigPictureInventory = (function()
 
 		var inventoryBody = this.m_pInventoryBody;
 		var itemGrid = this.m_pItemGrid;
-		$.RegisterEventHandler( 'ChildIndexSelected', itemGrid, function( pTarget, iChild ) { that.GridChildIndexSelected( ToPanel( pTarget ).id, iChild ); } );
 		$.RegisterEventHandler( 'GridInFastMotion', itemGrid, function( g )
 		{
 			inventoryBody.AddClass( 'FastMotion' );
@@ -619,29 +612,6 @@ var CBigPictureInventory = (function()
 		var that = this;
 		//$.Schedule( 0.0, function() { that.m_pItemGrid.RemoveAndDeleteChildren(); that.m_pGridWrapper.AddClass("SearchVisible"); } );
 		this.m_pSearchEntry.text = '';
-		this.m_pItemGrid.defaultfocus = "";
-	};
-
-	CBigPictureInventory.prototype.GridChildIndexSelected = function( strGrid, iChild )
-	{
-		var iVisible;
-		try
-		{
-			iVisible = this.m_pContainer.FindChildTraverse(strGrid ).GetFocusedChildVisibleIndex();
-		}
-		catch(err)
-		{
-			iVisible = iChild;
-		}
-
-		if ( iVisible < 3 )
-		{
-			this.m_pGridWrapper.AddClass( "SearchVisible" );
-		}
-		else if ( iVisible > 17 )
-		{
-			this.m_pGridWrapper.RemoveClass( "SearchVisible" );
-		}
 	};
 
 	CBigPictureInventory.prototype.FocusSearch = function()
@@ -721,7 +691,7 @@ var CBigPictureInventory = (function()
 						var bMatch = true;
 						for ( var j = 0; j < rgCategories.length; j++ )
 						{
-							if ( ! p.BHasClass( rgCategories[j] ) )
+							if ( !p.BHasClass( rgCategories[j] ) )
 							{
 								bMatch = false;
 								break;
@@ -791,7 +761,6 @@ var CBigPictureInventory = (function()
 			p.AddClass( "Cat_" + cat );
 		}
 
-		var itemGrid = this.m_pItemGrid;
 		var name_row = p.FindChildrenWithClassTraverse( "InventoryItemName" )[0];
 
 		p.SetPanelEvent( 'onfocus', function()
@@ -800,8 +769,6 @@ var CBigPictureInventory = (function()
 			if ( name_row.IsValid() )
 				if ( name_row.contentwidth > name_row.actuallayoutwidth )
 					name_row.AddClass( 'Fade' );
-
-			itemGrid.defaultfocus = p.id;
 		} );
 
 		this.m_funcSetupGridItem( item, p, this );
@@ -969,7 +936,6 @@ var CBigPictureInventory = (function()
 	CBigPictureInventory.prototype.UpdateGridForFilters = function()
 	{
 		this.m_pGridWrapper.RemoveClass( "NoSearch" );
-		this.m_pItemGrid.defaultfocus= "";
 		var textMatch = this.m_pSearchEntry.text;
 
 		var rgRequiredTags = {};

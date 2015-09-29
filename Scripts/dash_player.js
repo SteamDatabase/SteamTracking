@@ -23,7 +23,7 @@ function CDASHPlayer( elVideoPlayer )
 	// info used in playback
 	this.m_nVideoRepresentationIndex = -1;
 	this.m_nAudioRepresentationIndex = 0;
-	this.m_nAudioAdaptationIndex = -1;
+	this.m_strAudioAdaptationID = null;
 	this.m_nPlayerHeight = 0;
 	this.m_nCurrentDownloadBitRate = 0;
 	this.m_nSavedPlaybackRate = 1.0;
@@ -88,6 +88,7 @@ CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
 CDASHPlayer.MANIFEST_RETRY_MS = 2000;
 CDASHPlayer.MANIFEST_MAX_RETRY_MS = 30 * 1000;
 CDASHPlayer.GAMEDATA_TRIGGER_MS = 200;
+CDASHPlayer.DELAY_AGGRESIVE_LOAD_MS = 1000;
 
 CDASHPlayer.HAVE_NOTHING = 0;
 CDASHPlayer.HAVE_METADATA = 1;
@@ -489,6 +490,12 @@ CDASHPlayer.prototype.BCreateLoaders = function()
 
 	var bNeedVideo = true;
 	var bNeedAudio = true;
+
+	// validate saved audio track
+	var adaptation = this.GetAdaptationByTrackID( this.m_strAudioAdaptationID );
+	if ( !adaptation || !adaptation.containsAudio )
+		this.m_strAudioAdaptationID = null;
+
 	for ( var i = 0; i < period.adaptationSets.length; i++ )
 	{
 		var adaptation = period.adaptationSets[i];
@@ -505,22 +512,22 @@ CDASHPlayer.prototype.BCreateLoaders = function()
 			}
 		}
 
-		// restore audio adaptation if appropriate
-		if ( this.m_nAudioAdaptationIndex >= 0 && this.m_nAudioAdaptationIndex < period.adaptationSets.length )
+		if ( bNeedAudio && adaptation.containsAudio )
 		{
-			if ( this.m_nAudioAdaptationIndex == adaptation.mpdindex )
+			// restore audio adaptation if appropriate
+			if ( this.m_strAudioAdaptationID != null )
 			{
-				keep = adaptation;
-				bNeedAudio = false;
+				if ( this.m_strAudioAdaptationID == adaptation.id )
+				{
+					keep = adaptation;
+					bNeedAudio = false;
+				}
 			}
-		}
-		else if ( bNeedAudio && adaptation.containsAudio )
-		{
-			// if there are roles, find the first main audio track
-			if ( adaptation.roles.length == 0 || ( adaptation.roles.length > 0 && adaptation.roles[0] == 'main' ) )
+			else if ( adaptation.roles.length == 0 || ( adaptation.roles.length > 0 && adaptation.roles[0] == 'main' ) )
 			{
 				keep = adaptation;
 				bNeedAudio = false;
+				this.m_strAudioAdaptationID = adaptation.id;
 			}
 		}
 
@@ -1118,23 +1125,36 @@ CDASHPlayer.prototype.GetAudioLoader = function()
 	return null;
 }
 
-CDASHPlayer.prototype.SetAudioAdaptationIndex = function ( nAdaptationMPDIndex )
+CDASHPlayer.prototype.GetAdaptationByTrackID = function( strAdaptationID )
 {
-	if ( nAdaptationMPDIndex && nAdaptationMPDIndex >= 0 )
-		this.m_nAudioAdaptationIndex = nAdaptationMPDIndex;
+	var period = this.m_mpd.periods[0];
+	for ( var i = 0; i < period.adaptationSets.length; i++ )
+	{
+		if ( strAdaptationID == period.adaptationSets[i].id )
+			return period.adaptationSets[i];
+	}
+
+	return null;
 }
 
-CDASHPlayer.prototype.UpdateAudioAdaptationSet = function ( nAdaptationMPDIndex )
+CDASHPlayer.prototype.SetAudioAdaptationIndex = function ( strAdaptationID )
 {
-	// find the adaptation based on the index passed in
-	var period = this.m_mpd.periods[0];
-	if ( nAdaptationMPDIndex < 0 || nAdaptationMPDIndex >= period.adaptationSets.length || nAdaptationMPDIndex == this.m_nAudioAdaptationIndex )
+	if ( typeof this.m_mpd !== 'undefined' && this.GetAdaptationByTrackID( strAdaptationID ) != null )
+		this.m_strAudioAdaptationID = strAdaptationID;
+	else if ( strAdaptationID != null )
+		this.m_strAudioAdaptationID = strAdaptationID;
+}
+
+CDASHPlayer.prototype.UpdateAudioAdaptationSet = function ( strAdaptationID )
+{
+	if ( strAdaptationID == this.m_strAudioAdaptationID )
 		return;
 
-	var adaptation = period.adaptationSets[nAdaptationMPDIndex];
-	if ( adaptation.containsAudio )
+	// find the adaptation based on the track id passed in
+	var adaptation = this.GetAdaptationByTrackID( strAdaptationID );
+	if ( adaptation && adaptation.containsAudio )
 	{
-		this.m_nAudioAdaptationIndex = nAdaptationMPDIndex;
+		this.m_strAudioAdaptationID = strAdaptationID;
 		this.GetAudioLoader().ChangeAdaptationSet( adaptation );
 		this.UpdateAudioRepresentation( this.m_nAudioRepresentationIndex, true );
 	}
@@ -1300,7 +1320,7 @@ CDASHPlayer.prototype.GetLanguageForCurrentAudioTrack = function()
 	return null;
 }
 
-CDASHPlayer.prototype.GetAudioTrackForLanguage = function( strCode )
+CDASHPlayer.prototype.GetAudioTrackIDForLanguage = function( strCode )
 {
 	// find a main or dub audio track for language code passed in
 	var rgAudioAdaptations = this.GetAllAudioAdaptations();
@@ -1309,7 +1329,7 @@ CDASHPlayer.prototype.GetAudioTrackForLanguage = function( strCode )
 		if ( rgAudioAdaptations[ i ].roles[ 0 ] == 'main' || rgAudioAdaptations[ i ].roles[ 0 ] == 'dub' )
 			if ( rgAudioAdaptations[ i ].language == strCode )
 			{
-				return rgAudioAdaptations[ i ].mpdindex;
+				return rgAudioAdaptations[ i ].id;
 			}
 	}
 
@@ -2236,7 +2256,7 @@ CSegmentLoader.prototype.ScheduleNextDownload = function()
 	// if enough to play, but not fully buffered, download with delay to allow adaptive changes to occur
 	if ( unAmountBuffered < CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS )
 	{
-		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, CDASHPlayer.DOWNLOAD_RETRY_MS );
+		this.m_schNextDownload = setTimeout( function() { _loader.DownloadNextSegment() }, CDASHPlayer.DELAY_AGGRESIVE_LOAD_MS );
 		return;
 	}
 
@@ -2687,7 +2707,6 @@ CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, 
 
 	// parse adaptation sets for this period
 	var bError = false;
-	var adaptationSetCount = 0;
 	_mpd.periods = [];
 	_mpd.periods.push( period );
 	_mpd.periods[0].adaptationSets = [];
@@ -2703,7 +2722,7 @@ CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, 
 		adaptationSet.containsAudio = false;
 		adaptationSet.containsGame = false;
 		adaptationSet.description = ( typeof xmlAdaptation.attr( 'description' ) === 'undefined' || xmlAdaptation.attr( 'description' ) == '' ) ? adaptationSet.language : xmlAdaptation.attr( 'description' );
-		adaptationSet.mpdindex = adaptationSetCount++;
+		adaptationSet.id = ( typeof xmlAdaptation.attr( 'id' ) === 'undefined' ) ? null : xmlAdaptation.attr( 'id' );
 
 		if ( !adaptationSet.isClosedCaption )
 		{
@@ -2931,7 +2950,7 @@ CMPDParser.prototype.BUpdate = function( xmlDoc )
 	$J( xmlPeriod ).find( 'AdaptationSet' ).each( function()
 	{
 		var xmlAdaptation = $J( this );
-		var strAdaptationID = xmlAdaptation.attr( 'id ' );
+		var strAdaptationID = xmlAdaptation.attr( 'id' );
 		if ( !strAdaptationID )
 			return;
 
@@ -2939,7 +2958,7 @@ CMPDParser.prototype.BUpdate = function( xmlDoc )
 		var adaptationSet = null;
 		for ( var i = 0; i < _mpd.periods[0].adaptationSets; i++ )
 		{
-			if ( strAdaptationID == _mpd.periods[0].adaptationSets[i] )
+			if ( strAdaptationID == _mpd.periods[0].adaptationSets[i].id )
 			{
 				adaptationSet = _mpd.periods[0].adaptationSets[i];
 				break;
@@ -3150,13 +3169,18 @@ function CDASHPlayerUI( player, eUIMode )
 	this.m_fLastProgressBarScrubPerc = 0.0;
 
 	this.m_fLastTenFootKeyDown = performance.now();
+	this.m_schPrecacheTimeout = null;
+	this.m_nThumbnailHeight = 0;
+	this.m_nThumbnailOffset = 0;
 }
 
 CDASHPlayerUI.CLOSED_CAPTIONS_NONE = "none";
-CDASHPlayerUI.PRELOAD_THUMBNAILS = false;
+CDASHPlayerUI.PRELOAD_THUMBNAILS = true;
+CDASHPlayerUI.PRELOAD_THUMBNAILS_PRELOAD_DELAY_MS = 500;
 CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT = "_CC";
 CDASHPlayerUI.SKIP_SHORT_TIME_SECS = 15;
 CDASHPlayerUI.SKIP_LONG_TIME_SECS = 300;
+CDASHPlayerUI.SKIP_LEFT_PAD_SECS = 60;
 CDASHPlayerUI.VOLUME_STEP_SIZE = 0.025;
 CDASHPlayerUI.TENFOOT_KEYDOWN_DELAY = 200;
 
@@ -3204,6 +3228,7 @@ CDASHPlayerUI.CLOSED_CAPTION_INDEX = 21;
 CDASHPlayerUI.VOLUME_CONTAINER_INDEX = 22;
 CDASHPlayerUI.SETTINGS_INDEX = 23;
 CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX = 31;
+CDASHPlayerUI.SETTINGS_AUDIO_TRACK = 32;
 CDASHPlayerUI.SETTINGS_AUDIO_QUALITY = 33;
 CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX = 34;
 CDASHPlayerUI.CAPTIONS_PANEL_FIRST_INDEX = 41;
@@ -3339,17 +3364,10 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 		// update display
 		$J( '.progress_time_info' ).addClass( 'thumbnails' );
 
-		// precache images for VOD
+		// create thumbnail cache if it's to be used
 		if ( !this.m_player.BIsLiveContent() && CDASHPlayerUI.PRELOAD_THUMBNAILS )
 		{
-			var rgData = _ui.GetTimelineData();
-			var nThumbnailSheets = Math.ceil( ( rgData.nTimeEnd - _ui.m_ThumbnailInfo.period ) / _ui.m_ThumbnailInfo.sheetSeconds );
 			$J( '<div/>', { id: 'thumbnailcache' } ).appendTo( 'body' );
-			for ( var i = 0; i < nThumbnailSheets; i++ )
-			{
-				var image_url = this.m_ThumbnailInfo.template.replace( '$Seconds$', i * _ui.m_ThumbnailInfo.sheetSeconds );
-				$J('<img />').attr( 'src', image_url ).appendTo( '#thumbnailcache' ).hide();
-			}
 		}
 	}
 
@@ -3480,7 +3498,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUI = function()
 		{
 			for ( var r = 0; r < rgAudioAdaptations.length; r++ )
 			{
-				var val = rgAudioAdaptations[ r ].mpdindex;
+				var val = rgAudioAdaptations[ r ].id;
 				var display = '';
 				switch ( rgAudioAdaptations[ r ].roles[ 0 ].toLowerCase() )
 				{
@@ -3595,6 +3613,17 @@ CDASHPlayerUI.prototype.UpdateLiveResolutionSelector = function()
 	var paddingleft = parseInt( this.m_elLiveResSelectorPanel.css( 'padding-left' ) );
 	var videoplayeroffset = $J( this.m_elContainer ).offset().left;
 	this.m_elLiveResSelectorPanel.css( {'left': ( $J( '.video_quality_label' ).offset().left - paddingleft - videoplayeroffset ) + 'px'} );
+
+	var repVideo = $J( '.video_representation_live_video' );
+	var _ui = this;
+	$J( 'span[data-value]' ).each( function ( index, value )
+	{
+		var dataValue = $J( value ).attr('data-value');
+		if ( dataValue == _ui.m_player.m_nVideoRepresentationIndex )
+			$J( value ).addClass('selected');
+		else
+			$J( value ).removeClass('selected');
+	});
 }
 
 CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
@@ -3654,7 +3683,7 @@ CDASHPlayerUI.prototype.InitSettingsPanelInUITenFoot = function()
 
 		for (var r = 0; r < rgAudioAdaptations.length; r++)
 		{
-			var val = rgAudioAdaptations[r ].mpdindex;
+			var val = rgAudioAdaptations[r].id;
 			var display = '';
 			switch( rgAudioAdaptations[r].roles[0].toLowerCase() )
 			{
@@ -3929,11 +3958,11 @@ CDASHPlayerUI.prototype.OnTimeUpdatePlayer = function()
 		}
 	}
 
-	// show adaptive value when selected
+	// let the user know what resolution they are in now
 	if ( !this.BInTenFoot() )
 	{
 		var repVideo = $J( '#representation_select_video' );
-		if ( repVideo.find('option').length > 1 && !repVideo.is( ':focus' ) )
+		if ( repVideo.find( 'option' ).length > 1 && !repVideo.is( ':focus' ) )
 		{
 			if ( repVideo.val() == -1 && this.m_player.m_nPlaybackHeight > 0 )
 			{
@@ -3984,7 +4013,6 @@ CDASHPlayerUI.prototype.UpdateBufferingProgress = function()
 	if ( this.m_player.BIsLiveContent() )
 		return;
 
-	var _ui = this;
 	var elLoadingText = this.m_elBufferingMessage.find( '.loading_text' );
 	if ( this.m_player.BIsBuffering() && this.m_player.m_elVideoPlayer.readyState != CDASHPlayer.HAVE_NOTHING )
 	{
@@ -4358,25 +4386,25 @@ CDASHPlayerUI.prototype.OnKeyDownTenFoot = function( e )
 			if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.PROGRESS_BAR_INDEX )
 				this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_LEFT );
 			else
-				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_LEFT );
+				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_LEFT, true );
 			break;
 		case CDASHPlayerUI.LEFT_PAD_UP:
 			if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.VOLUME_CONTAINER_INDEX )
 				this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_UP );
 			else
-				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_UP );
+				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_UP, true );
 			break;
 		case CDASHPlayerUI.LEFT_PAD_RIGHT:
 			if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.PROGRESS_BAR_INDEX )
 				this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_RIGHT );
 			else
-				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_RIGHT );
+				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_RIGHT, true );
 			break;
 		case CDASHPlayerUI.LEFT_PAD_DOWN:
 			if ( this.m_nFocusedUIElementIndex != CDASHPlayerUI.VOLUME_CONTAINER_INDEX )
 				this.NavigateUIOnKeyDown( CDASHPlayerUI.LEFT_PAD_DOWN );
 			else
-				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_DOWN );
+				this.ScrubUIOnKeyDown( CDASHPlayerUI.RIGHT_PAD_DOWN, true );
 			break;
 
 		case CDASHPlayerUI.BUTTON_A:
@@ -4413,7 +4441,7 @@ CDASHPlayerUI.prototype.OnKeyDownTenFoot = function( e )
 		case CDASHPlayerUI.RIGHT_PAD_UP:
 		case CDASHPlayerUI.RIGHT_PAD_RIGHT:
 		case CDASHPlayerUI.RIGHT_PAD_DOWN:
-			this.ScrubUIOnKeyDown( keycode );
+			this.ScrubUIOnKeyDown( keycode, false );
 			break;
 
 		default:
@@ -4693,12 +4721,18 @@ CDASHPlayerUI.prototype.NavigateUIOnKeyDown = function ( nKeyDirection )
 				this.m_nFocusedUIElementIndex = Math.min( Math.max( --this.m_nFocusedUIElementIndex, CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX ), CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX );
 				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SETTINGS_AUDIO_QUALITY && !$J( "#representation_audio" ).is(":visible") )
 					this.m_nFocusedUIElementIndex--;
+				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SETTINGS_AUDIO_TRACK && !$J( "#representation_audio_track" ).is(":visible") )
+					this.m_nFocusedUIElementIndex--;
+
 				break;
 
 			case CDASHPlayerUI.LEFT_PAD_DOWN:
 				this.m_nFocusedUIElementIndex = Math.min( Math.max( ++this.m_nFocusedUIElementIndex, CDASHPlayerUI.SETTINGS_PANEL_FIRST_INDEX ), CDASHPlayerUI.SETTINGS_PANEL_LAST_INDEX );
+				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SETTINGS_AUDIO_TRACK && !$J( "#representation_audio_track" ).is(":visible") )
+					this.m_nFocusedUIElementIndex++;
 				if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.SETTINGS_AUDIO_QUALITY && !$J( "#representation_audio" ).is(":visible") )
 					this.m_nFocusedUIElementIndex++;
+
 				break;
 
 			case CDASHPlayerUI.NAVIGATE_INIT:
@@ -4784,7 +4818,7 @@ CDASHPlayerUI.prototype.ScrollToPanelSelectItem = function( nKeyDirection, elScr
 	}
 }
 
-CDASHPlayerUI.prototype.ScrubUIOnKeyDown = function ( nKeyDirection )
+CDASHPlayerUI.prototype.ScrubUIOnKeyDown = function ( nKeyDirection, bFromLeftPad )
 {
 	if ( !this.BInTenFoot() )
 		return;
@@ -4797,12 +4831,18 @@ CDASHPlayerUI.prototype.ScrubUIOnKeyDown = function ( nKeyDirection )
 	{
 		case CDASHPlayerUI.RIGHT_PAD_RIGHT:
 			if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.PROGRESS_BAR_INDEX )
-				this.IncrementProgressBarPreview(4);
+				if ( bFromLeftPad )
+					this.IncrementProgressBarPreview( CDASHPlayerUI.SKIP_LEFT_PAD_SECS / CDASHPlayerUI.SKIP_SHORT_TIME_SECS );
+				else
+					this.IncrementProgressBarPreview( CDASHPlayerUI.SKIP_LONG_TIME_SECS / CDASHPlayerUI.SKIP_SHORT_TIME_SECS );
 			break;
 
 		case CDASHPlayerUI.RIGHT_PAD_LEFT:
 			if ( this.m_nFocusedUIElementIndex == CDASHPlayerUI.PROGRESS_BAR_INDEX )
-				this.DecrementProgressBarPreview(4);
+				if ( bFromLeftPad )
+					this.DecrementProgressBarPreview( CDASHPlayerUI.SKIP_LEFT_PAD_SECS / CDASHPlayerUI.SKIP_SHORT_TIME_SECS );
+				else
+					this.DecrementProgressBarPreview( CDASHPlayerUI.SKIP_LONG_TIME_SECS / CDASHPlayerUI.SKIP_SHORT_TIME_SECS );
 			break;
 
 		case CDASHPlayerUI.RIGHT_PAD_UP:
@@ -4994,7 +5034,6 @@ CDASHPlayerUI.prototype.SetProgressBarPreview = function( fPercent )
 	$J( '.progress_time_info .time_display' ).text( strTime );
 	$J( '.progress_time_bar' ).css( 'left', relX );
 
-	$J('.progress_time_info').css('visibility', 'visible');
 	$J('.progress_time_bar').css('visibility', 'visible');
 
 	// if we have thumbnails to show
@@ -5010,13 +5049,71 @@ CDASHPlayerUI.prototype.SetProgressBarPreview = function( fPercent )
 		var nThumbnailWidth = $J('.progress_time_info.thumbnails').innerWidth();
 		var strThumbnailSheetURL = this.m_ThumbnailInfo.template.replace('$Seconds$', nThumbnailSheetSeconds);
 		var nXPosInSheet = -1 * nThumbnailWidth * nThumbnailIndexInSheet;
-
 		$J('.progress_time_info').css('background-image', 'url(\'' + strThumbnailSheetURL + '\')');
-		$J('.progress_time_info').css('background-position', nXPosInSheet + 'px 0px');
 
+		// calc the height and offset once, only once the first thumbnail is loaded
+		if ( this.m_nThumbnailHeight == 0 )
+		{
+			var img = new Image;
+			img.src = $J('.progress_time_info').css('background-image').replace(/url\(|\)$/ig, "");
+			this.m_nThumbnailHeight = img.height;
+
+			if ( this.m_nThumbnailHeight == 0 )
+			{
+				var _ui = this;
+				window.setTimeout( function() { _ui.SetProgressBarPreview( fPercent ); }, 100 );
+				return;
+			}
+
+			if ( this.BInTenFoot() )
+				this.m_nThumbnailHeight *= 2;
+
+			var nThumbContainerHeight = $J( '.progress_time_info.thumbnails' ).innerHeight();
+			if ( !this.BInTenFoot() )
+				nThumbContainerHeight -= $J( '.progress_time_info.thumbnails .time_display' ).innerHeight();
+
+			this.m_nThumbnailOffset = Math.floor( ( nThumbContainerHeight - this.m_nThumbnailHeight ) / 2 );
+			$J( '.progress_time_info' ).css( 'background-size', 'auto ' + this.m_nThumbnailHeight + 'px' );
+		}
+
+		// shift to the correct thumbnail in the strip and vertically center
+		$J('.progress_time_info').css('background-position', nXPosInSheet + 'px ' + this.m_nThumbnailOffset + 'px');
+
+		if ( !this.m_schPrecacheTimeout )
+		{
+			var _ui = this;
+			this.m_schPrecacheTimeout = window.setTimeout( function () { _ui.PrecacheThumbnail( nThumbnailSheetSeconds, nLastThumbnailTime ) }, CDASHPlayerUI.PRELOAD_THUMBNAILS_PRELOAD_DELAY_MS );
+		}
 	}
 
+	$J('.progress_time_info').css('visibility', 'visible');
+
 	this.m_fLastProgressBarScrubPerc = fPercent;
+}
+
+CDASHPlayerUI.prototype.PrecacheThumbnail = function( nTargetThumbnailSeconds, nMaxThumbnailTime )
+{
+	if ( !this.m_player.BIsLiveContent() && CDASHPlayerUI.PRELOAD_THUMBNAILS )
+	{
+		var nTargetSeconds = nTargetThumbnailSeconds + this.m_ThumbnailInfo.sheetSeconds;
+		if ( nTargetSeconds <= nMaxThumbnailTime )
+		{
+			var image_url_fwd = this.m_ThumbnailInfo.template.replace( '$Seconds$', nTargetSeconds );
+			var imageincache = $J( '#thumbnailcache img[src$="' + image_url_fwd + '"]' );
+			if ( imageincache.length == 0 )
+				$J( '<img />' ).attr( 'src', image_url_fwd ).appendTo( '#thumbnailcache' ).hide();
+		}
+
+		nTargetSeconds = nTargetThumbnailSeconds - this.m_ThumbnailInfo.sheetSeconds;
+		if ( nTargetSeconds >= 0 )
+		{
+			var image_url_rew = this.m_ThumbnailInfo.template.replace( '$Seconds$', nTargetSeconds );
+			var imageincache = $J( '#thumbnailcache img[src$="' + image_url_rew + '"]' );
+			if ( imageincache.length == 0 )
+				$J( '<img />' ).attr( 'src', image_url_rew ).appendTo( '#thumbnailcache' ).hide();
+		}
+	}
+	this.m_schPrecacheTimeout = null;
 }
 
 CDASHPlayerUI.prototype.IncrementProgressBarPreview = function( nAccelerate )
@@ -5282,7 +5379,7 @@ CDASHPlayerUI.prototype.SaveClosedCaptionLanguage = function()
 
 	WebStorage.SetLocal( "closed_caption_language_setting_" + this.m_strUniqueSettingsID, strCaptionCode );
 
-	if ( strCaptionCode != 'none' )
+	if ( strCaptionCode != CDASHPlayerUI.CLOSED_CAPTIONS_NONE )
 		$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'Caption Language', strCaptionCode ] );
 }
 
@@ -5373,9 +5470,9 @@ CDASHPlayerUI.GetSavedAudioTrackSelected = function( strUniqueSettingsID )
 		return null;
 }
 
-CDASHPlayerUI.prototype.SwitchAudioTrackSelectedInPlayer = function( nAudioAdaptationIndex )
+CDASHPlayerUI.prototype.SwitchAudioTrackSelectedInPlayer = function( strAudioAdaptationID )
 {
-	this.m_player.UpdateAudioAdaptationSet( nAudioAdaptationIndex );
+	this.m_player.UpdateAudioAdaptationSet( strAudioAdaptationID );
 }
 
 CDASHPlayerUI.prototype.LoadAudioTrackSelected = function()
@@ -5895,12 +5992,14 @@ CVTTCaptionLoader.SortClosedCaptionsByDisplayLanguage = function(a,b) {
 
 CVTTCaptionLoader.CleanDisplayName = function( displayName )
 {
-		if ( displayName.indexOf( String.fromCharCode( 0x28 ) ) != -1 )
-		return displayName.substring( 0, displayName.indexOf( String.fromCharCode( 0x28 ) ) - 1 );
-	else if ( displayName.indexOf( String.fromCharCode( 0xFF08 ) ) != -1 )
-		return displayName.substring( 0, displayName.indexOf( String.fromCharCode( 0xFF08 ) ) );
+		var regExName = /[\（\(]([^()]+)[\)\）]/g;
+	var name = regExName.exec( displayName );
+	if ( name == null )
+		name = displayName
 	else
-		return displayName;
+		name = name[ 1 ];
+
+	return name;
 }
 
 CVTTCaptionLoader.LanguageCountryCodes = {
@@ -6045,6 +6144,17 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 	this.strGameDataBuffers = '';
 	this.oLastGameDataFrame = {};
 	this.fGameDataTriggerPerf = 0;
+	this.m_nLastKeycode = 0;
+	var _stats = this;
+	$J( window ).on( 'keydown', function ( e ) {
+		var keycode;
+		if (window.event)
+			keycode = window.event.keyCode;
+		else if (e)
+			keycode = e.which;
+
+		_stats.m_nLastKeycode = keycode
+	} );
 
 	// For Server Event Logging
 	this.m_bAutoLoggingEventsToServer = ( Math.random() * 100 ) < CDASHPlayerStats.LOGGING_RATE_PERC;
@@ -6475,6 +6585,11 @@ CDASHPlayerStats.prototype.Tick = function()
 			id: 'gametriggerperf',
 			label: 'Game Frame Perf',
 			value: ( this.fGameDataTriggerPerf != 0 ) ? this.fGameDataTriggerPerf + ' ms' : null
+		},
+		{
+			id: 'lastkeydown',
+			label: 'Keycode',
+			value: this.m_nLastKeycode
 		},
 ];
 

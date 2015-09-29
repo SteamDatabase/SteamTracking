@@ -45,12 +45,14 @@
 .NxRightColumn > Panel,
 .NxRightColumn > CommunityHubContentPanel
 {
-	width: 1350px;
+	width: 100%;
+	overflow: clip;
 }
 
 #CommunityContentEmpty
 {
 	padding-bottom: 195px;
+	width: 1400px;
 }
 
 #CommunityContentEmptyLabel
@@ -62,7 +64,6 @@
 	vertical-align: center;
 	color: #67c1f5ff;
 	white-space: nowrap;
-	font-weight: bold;
 	text-overflow: clip;
 }
 
@@ -79,17 +80,12 @@
 	opacity: 1.0;
 }
 
-.NxFilterTab #FilterButton_11:selected,
-{
-	height: 0px;
-	margin: 0px;
-}
+/* Search game hubs */
 
-.NxFilterTab:descendantfocus #FilterButton_11:selected
+#CommunityContentSearch
 {
-	height: fit-children;
+	width: 1400px;
 }
-
 .CommunityContentSearchWrapper
 {
 	height: 500px;

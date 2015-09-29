@@ -1264,24 +1264,7 @@ var CInventory = Class.create( {
 			// event indicates the user tapped an item, otherwise they may have just switched inventories
 			if ( bUserAction )
 			{
-				g_ActiveItemPopupModal && g_ActiveItemPopupModal.Dismiss();
-
 				var $Info = $J(elNewInfo);
-				$Info.show();
-				$Info.css('opacity',1);
-
-				var $Modal = $J('<div/>',{'class': 'newmodal economy_modal_ctn'});
-				var $PopupCtn = $J('<div/>', {'class': 'economy_item_popup' } );
-				var $Scroll = $J('<div/>', {'class' : 'economy_item_popup_scroll'} );
-				var $DismissBtn = $J('<div/>', {'class': 'economy_item_popup_dismiss'} ).text('X');
-
-				$PopupCtn.append( $Scroll.append( $Info ) );
-				$PopupCtn.append( $DismissBtn );
-
-				g_ActiveItemPopupModal = new CModal( $Modal.append( $PopupCtn ) );
-				g_ActiveItemPopupModal.SetRemoveContentOnDismissal( true );
-				g_ActiveItemPopupModal.Show();
-				$DismissBtn.click( function() { g_ActiveItemPopupModal.Dismiss(); } );
 
 				var $BtnAddToTrade = $Info.find('.item_desc_addtotrade');
 				if ( $BtnAddToTrade.length && typeof OnDoubleClickItem != 'undefined' )
@@ -1310,13 +1293,9 @@ var CInventory = Class.create( {
 						$BtnAddToTrade.show();
 				}
 
-				if ( g_ActiveItemPopupModal.m_fnBackgroundClick )
-				{
-					$Modal.add($Scroll).click( function(e) { if ( e.target == this && g_ActiveItemPopupModal ) g_ActiveItemPopupModal.m_fnBackgroundClick(); } );
-
-				}
-				g_ActiveItemPopupModal.OnDismiss( function() {
+				ShowItemHoverAsPopup( $Info, function() {
 					$BtnAddToTrade.off('click');
+
 					$J('.inventory_page_right' ).append( $Info );
 					g_ActiveItemPopupModal = null;
 				} );
@@ -1365,6 +1344,7 @@ var CInventory = Class.create( {
 	}
 
 });
+
 
 var CAppwideInventory = Class.create( CInventory, {
 
@@ -2480,9 +2460,12 @@ function MouseOverItem( event, owner, elItem, rgItem )
 
 function MouseOutItem( event, owner, elItem, rgItem )
 {
-	var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
-	if ( reltarget && ( reltarget == elItem || ( $(reltarget).up( '#' + elItem.identify() ) ) ) )
-		return;
+	if ( event )
+	{
+		var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
+		if ( reltarget && ( reltarget == elItem || ( $(reltarget).up( '#' + elItem.identify() ) ) ) )
+			return;
+	}
 
 	CancelItemHover( elItem );
 }
@@ -2969,6 +2952,37 @@ function PopulateMarketActions( elActions, item )
 	
 		
 	elActions.show();
+}
+
+
+function ShowItemHoverAsPopup( elNewInfo, fnOnDismiss )
+{
+	g_ActiveItemPopupModal && g_ActiveItemPopupModal.Dismiss();
+
+	var $Info = $J(elNewInfo);
+	$Info.show();
+	$Info.css('opacity',1);
+
+	var $Modal = $J('<div/>',{'class': 'newmodal economy_modal_ctn'});
+	var $PopupCtn = $J('<div/>', {'class': 'economy_item_popup' } );
+	var $Scroll = $J('<div/>', {'class' : 'economy_item_popup_scroll'} );
+	var $DismissBtn = $J('<div/>', {'class': 'economy_item_popup_dismiss'} ).text('X');
+
+	$PopupCtn.append( $Scroll.append( $Info ) );
+	$PopupCtn.append( $DismissBtn );
+
+	g_ActiveItemPopupModal = new CModal( $Modal.append( $PopupCtn ) );
+	g_ActiveItemPopupModal.SetRemoveContentOnDismissal( true );
+	g_ActiveItemPopupModal.Show();
+	$DismissBtn.click( function() { g_ActiveItemPopupModal.Dismiss(); } );
+
+
+	if ( g_ActiveItemPopupModal.m_fnBackgroundClick )
+	{
+		$Modal.add($Scroll).click( function(e) { if ( e.target == this && g_ActiveItemPopupModal ) g_ActiveItemPopupModal.m_fnBackgroundClick(); } );
+
+	}
+	g_ActiveItemPopupModal.OnDismiss( fnOnDismiss );
 }
 
 
@@ -4065,9 +4079,40 @@ function CreateItemHoverFromContainer( container, id, appid, contextid, assetid,
 
 function AddItemHoverToElement( element, rgItem )
 {
-	element = $(element);
-	element.observe( 'mouseover', MouseOverItem.bindAsEventListener( null, UserYou, element, rgItem ) );
-	element.observe( 'mouseout', MouseOutItem.bindAsEventListener( null, UserYou, element, rgItem ) );
+	var $Element = $JFromIDOrElement( element );
+
+	$Element.addClass('economy_item_hoverable');
+
+	var bInTouch = false;
+	$Element.on('touchstart', function() {
+		bInTouch = true;
+	} );
+	$Element.on('click.ItemHover', function( e ) {
+
+		// if this is an actual link, we won't show a hover we'll just navigate
+		if ( e.target && $J(e.target ).is('a') )
+			return;
+
+		if ( bInTouch || ( window.UseSmallScreenMode && window.UseSmallScreenMode() ) )
+		{
+			BuildHover( 'hover', rgItem, UserYou );
+			var $Content = $JFromIDOrElement( 'iteminfo_clienthover' );
+			ShowItemHoverAsPopup( $Content, function() {
+				bInTouch = false;
+				$J('#hover').append( $Content );
+				$J('#hover_item_icon' ).attr('src', 'https://steamcommunity-a.akamaihd.net/public/images/trans.gif');
+			} );
+		}
+	});
+	$Element.on('mouseenter', function() {
+		if ( !bInTouch && ( !window.UseSmallScreenMode || !window.UseSmallScreenMode() ) )
+			MouseOverItem( null, UserYou, $(element), rgItem );
+	} );
+	$Element.on('mouseleave', function() {
+		if ( !bInTouch && ( !window.UseSmallScreenMode || !window.UseSmallScreenMode() ) )
+			MouseOutItem( null, UserYou, $(element), rgItem );
+	} );
+
 }
 
 /* trade history page */

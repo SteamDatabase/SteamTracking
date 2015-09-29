@@ -227,16 +227,15 @@ ul.market_restrictions li {
 
 .market_listing_row {
 	clear: left;
+	position: relative;
 	background-color: #333333;
 	border: 1px solid #414141;
 	margin-top: 10px;
-	height: 74px;
 	white-space: nowrap;
 }
 
 .my_listing_section .market_listing_row {
 	margin-top: 6px;
-	height: 50px;
 
 	transition-property: background-color, border-color;
 	transition-timing-function: linear;
@@ -294,7 +293,6 @@ a.market_listing_row_link:hover {
 	margin-top: 21px;
 	line-height: 16px;
 	padding-left: 7px;
-	min-width: 189px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -317,7 +315,7 @@ a.market_listing_item_name_link:hover {
 	text-decoration: underline;
 }
 
-.market_listing_game_name {
+.market_listing_game_name, .market_listing_listed_date_combined {
 	font-size: 85.7%;
 }
 
@@ -399,6 +397,19 @@ a.market_listing_item_name_link:hover {
 	float: right;
 }
 
+#popularItemsRows .market_listing_price_listings_block {
+	width: 172px;
+	float: right;
+}
+
+#popularItemsRows .market_listing_price_listings_block .market_listing_num_listings {
+	float: left;
+}
+
+.market_listing_price_listings_block .market_listing_price_listings_combined {
+	display: none;
+}
+
 .market_home_main_listing_table .market_listing_left_cell, .market_home_main_listing_table .market_listing_right_cell {
 	line-height: 73px;
 }
@@ -454,6 +465,10 @@ a.market_listing_item_name_link:hover {
 	width: 115px;
 }
 
+.market_listing_inline_buyorder_qty {
+	display: none;
+}
+
 .market_listing_their_price {
 	position: relative;
 	width: 90px;
@@ -490,6 +505,10 @@ a.market_listing_item_name_link:hover {
 	color: #AFAFAF;
 }
 
+.market_listing_listed_date_combined {
+	display: none;
+}
+
 .market_listing_seller {
 	float: right;
 	width: 89px;
@@ -524,8 +543,17 @@ a.market_listing_item_name_link:hover {
 	white-space: nowrap;
 }
 
-.market_listing_edit_buttons {
+.market_listing_edit_buttons.placeholder {
 	float: right;
+}
+
+.market_listing_edit_buttons.actual_content {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.market_listing_edit_buttons {
 	height: 50px;
 	width: 280px;
 	text-align: center;
@@ -569,12 +597,13 @@ a.item_market_action_button_disabled {
 
 .market_page_left {
 	padding-top: 2em;
-	width: 639px;
+	max-width: 639px;
+	overflow: hidden; /* used so that clears in the left column don't try to clear the right column */
 }
 
 .market_page_fullwidth {
 	padding-top: 2em;
-	width: 949px;
+	max-width: 949px;
 }
 
 .market_large_tab_well_sep {
@@ -585,23 +614,27 @@ a.item_market_action_button_disabled {
 
 .market_large_tab_well, .market_section_header {
 	height: 87px;
-	width: 605px; /* 639px minus the padding minus the 4px cap */
+	margin-right: 4px;
 	padding: 15px 15px 0;
+	border-top: 1px solid #777777;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#40403f), color-stop(95%,#333232));filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40403f', endColorstr='#333232',GradientType=0 );background: -moz-linear-gradient( top, #40403f 5%, #333232 95%);background: -webkit-linear-gradient( top, #40403f 5%, #333232 95%);background: -o-linear-gradient( top, #40403f 5%, #333232 95%);background: -ms-linear-gradient( top, #40403f 5%, #333232 95%);background: linear-gradient( to bottom, #40403f 5%, #333232 95%);;
 
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/market/bg_largetab.png');
 	position: relative;
 }
 
-.market_page_fullwidth .market_large_tab_well, .market_page_fullwidth .market_section_header {
-	width: 919px;
+.market_page_fullwidth .market_large_tab_well,
+.market_page_fullwidth .market_section_header {
+	max-width: 919px;
 }
 
 .market_large_tab_well_gradient {
 	position: absolute;
 	left: 0;
 	top: 0;
-	height: 102px;
-	width: 474px;
+	width: 100%;
+	height: 100%;
+	max-width: 474px;
+	max-height: 102px;
 	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/market/bg_largetab_gradient.png');
 	z-index: 1;
 }
@@ -641,13 +674,15 @@ a.item_market_action_button_disabled {
 
 .market_tab_well_tab {
 	display: inline-block;
-	height: 50px;
+	position: relative;
 }
 
 .market_tab_well_tab_left {
-	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
 	width: 9px;
-	height: 50px;
 
 	background-position: left top;
 }
@@ -657,16 +692,18 @@ a.item_market_action_button_disabled {
 	z-index: 2;
 	bottom: 0;
 	height: 50px;
-	font-size: 5px;}
+	font-size: 5px;
+	white-space: nowrap;
+}
 
 .market_tab_well_tab_contents {
-	float: left;
-	height: 50px;
+	display: block;
 	line-height: 50px;
 	padding: 0 4px;
+	margin: 0 5px;
 	min-width: 195px;
 	background-repeat: repeat-x;
-	background-position: left bottom;
+	background-position: left -100px;
 
 	font-size: 16px;
 }
@@ -688,11 +725,13 @@ a.market_tab_well_tab_inactive:hover {
 }
 
 .market_tab_well_tab_right {
-	float: left;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
 	width: 9px;
-	height: 50px;
 
-	background-position: left center;
+	background-position: left -50px;
 }
 
 .market_tab_well_tab_active > span {
@@ -855,9 +894,8 @@ input.filter_search_box:focus {
 }
 
 .market_paging_controls {
-	position: absolute;
-	top: 0;
-	right: 6px;
+	float: right;
+	padding-right: 6px;
 }
 
 .market_paging_controls .pagebtn {
@@ -934,8 +972,9 @@ input.filter_search_box:focus {
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 
-	width: 440px;
+	width: 360px;
 	height: 360px;
+	padding: 0 40px;
 	margin-right: 15px;
 	float: left;
 	text-align: center;
@@ -1005,7 +1044,7 @@ input.filter_search_box:focus {
 .market_commodity_orders_block {
 	position: relative;
 	float: left;
-	width: 428px;
+	width: calc( 50% - 2px - 20px );
 	min-height: 298px;
 	text-align: center;
 	border: 1px solid #303030;
@@ -1062,8 +1101,7 @@ input.filter_search_box:focus {
 
 .market_commodity_buy_button {
 	font-family: 'Motiva Sans Thin',Arial,Helvetica,Verdana,sans-serif;
-	min-width: 190px;
-	color: whitesmoke;
+	min-width: 45%;
 	margin: 16px;
 }
 
@@ -1074,11 +1112,11 @@ input.filter_search_box:focus {
 }
 
 #market_buy_commodity_popup {
-    width: 744px;
+	width: 744px;
+	max-width: 100%;
 }
 
 .market_buy_commodity_input_block {
-	width: 430px;
 	float: right;
 }
 
@@ -1096,13 +1134,21 @@ input.filter_search_box:focus {
 
 .market_buy_commodity_input_label {
 	text-align: right;
-	white-space: nowrap;
 	overflow: hidden;
+}
+
+.market_buy_commodity_input_row {
+	margin: 7px 0;
+}
+
+.market_buy_commodity_input {
+	float: right;
+	min-width: 148px;
+	margin-left: 10px;
 }
 
 .market_buy_commodity_item_display {
 	float: left;
-	width: 280px;
 	font-size: 100%;
 }
 
@@ -1135,7 +1181,9 @@ input.filter_search_box:focus {
 }
 
 #market_buy_commodity_order_total {
-	width: 60px;
+	width: 64px;
+	padding-right: 84px;
+	min-width: 0;
 	font-size: 16px;
 	text-align: right;
 	color: whitesmoke;
@@ -1160,7 +1208,7 @@ input.filter_search_box:focus {
 }
 
 #largeiteminfo {
-	display: inline-block;
+	overflow: hidden;
 	max-width: 444px;
 }
 
@@ -1226,20 +1274,23 @@ input.filter_search_box:focus {
 	padding-top: 1em;
 }
 
-.market_dialog_totals, .market_dialog_totals_cost, .market_dialog_totals_label_spacing, .market_dialog_totals_label {
+.market_dialog_totals_cost {
 	float: right;
 }
 
 .market_dialog_totals_label {
 	text-align: right;
 	font-size: 85.7%;
+	display: block;
+	overflow: hidden;
 }
 
 .market_dialog_totals_cost {
 	text-align: right;
 	font-size: 85.7%;
 
-	border-right: 1px solid transparent;	width: 157px;	color: white;
+	border-right: 1px solid transparent;	width: 157px;	max-width: 20%;
+	color: white;
 	padding-right: 24px;
 }
 
@@ -1259,7 +1310,21 @@ input.filter_search_box:focus {
 
 #market_buynow_dialog_paymentinfo {
 	position: relative;
-	padding: 18px;
+	padding: 18px 4%;
+}
+
+.market_buynow_paymentinfo_row {
+	margin-bottom: 8px;
+}
+
+.market_buynow_paymentinfo_label {
+	float: left;
+	width: 139px;
+	max-width: 40%;
+}
+
+.market_buynow_paymentinfo_content {
+	overflow: hidden;
 }
 
 #market_buynow_dialog_paymentinfo_option_labels {
@@ -1304,7 +1369,7 @@ input.filter_search_box:focus {
 }
 
 #market_removelisting_dialog_buttons {
-	height: 32px;
+	min-height: 32px;
 	text-align: right;
 }
 
@@ -1346,6 +1411,17 @@ input.filter_search_box:focus {
 .market_listing_row:hover .market_actionmenu_button {
 	display: block;
 }
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .market_listing_row:hover .market_actionmenu_button {
+		display: none;
+	}
+
+}
+	html.responsive.touch .market_listing_row:hover .market_actionmenu_button {
+		display: none;
+	}
 
 #market_action_popup {
 	z-index: 1000;
@@ -1447,21 +1523,18 @@ input.filter_search_box:focus {
 
 #market_advancedsearch_dialog {
 	width: 900px;
+	max-width: 100%;
 	}
 
-#market_advancedsearch_dialog > div {
-	margin-top: 24px;
-	margin-bottom: 24px;
-}
-
 #market_advancedsearch_dialog form > div {
-	margin: 0 24px;
 	position: relative;
 }
 
 #market_advancedsearch_left {
 	float: left;
 	width: 280px;
+	margin-right: 24px;
+	max-width: 32%;
 }
 
 #market_advancedsearch_dialog .market_search_sidebar_search_box {
@@ -1473,6 +1546,8 @@ input.filter_search_box:focus {
 	background-color: #333;
 	box-shadow: 1px 1px 2px black inset;
 	padding: 10px;
+
+	max-width: calc( 100% - 20px - 2px );
 }
 
 #market_advancedsearch_options {
@@ -1496,9 +1571,10 @@ input.filter_search_box:focus {
 .market_advancedsearch_bottombuttons {
 	text-align: right;
 	margin-right: 24px;
+	margin-top: 20px;
 }
 
-.market_advancedsearch_bottombuttons > a {
+.market_advancedsearch_bottombuttons > div {
 	vertical-align: middle;
 	margin-left: 30px;
 }
@@ -1577,8 +1653,302 @@ input.filter_search_box:focus {
 	background-color: #333;
 	box-shadow: 1px 1px 1px black inset;
 	overflow-y: auto;
+	max-height: 75vh;	/* don't make it more than 75% of the viewport height */
 }
 
 .econ_tag_filter_container {
 	margin-bottom: 2px;
+}
+
+
+@media screen and (max-width: 910px) {
+	html.responsive #sideBar {
+		float: none;
+	}
+
+	html.responsive #sideBar > div {
+		width: auto;
+		margin: 0 15px 1em 15px;
+
+		/* the right col version of these overrides border-right and associated corner radii, so we restore them here */
+		border: 1px solid #333;
+		border-radius: 3px;
+	}
+
+	html.responsive #sideBar > div.responsive_local_menu_placeholder {
+		display: none;
+	}
+
+	html.responsive .localmenu_content .market_search_sidebar_contents,
+	html.responsive .localmenu_content .market_search_game_button_group {
+		padding: 0;
+	}
+
+	html.responsive .market_search_sidebar_contents {
+		width: auto;
+	}
+
+	html.responsive form#market_search {
+		display: inline-block;
+	}
+
+	html.responsive #BG_top,
+	html.responsive #BG_bottom {
+		width: auto;
+		padding: 0;
+		margin: 0 1%;
+	}
+
+	html.responsive #BG_top {
+		height: auto;
+	}
+
+	html.responsive #BG_top > h1 {
+		overflow: hidden;
+	}
+
+	html.responsive #BG_top img.market_header_logo {
+		width: 200%;
+		max-width: 949px;
+		display: block;
+	}
+
+	html.responsive #BG_top > .user_info {
+		position: static;
+		width: auto;
+		max-width: none;
+		border: none;
+	}
+
+	html.responsive .market_listing_largeimage {
+		height: auto;
+		max-width: 45%;
+		padding: 0 5%;
+	}
+
+	html.responsive .market_listing_largeimage img {
+		width: 100%;
+	}
+
+	html.responsive .market_listing_iteminfo {
+		padding: 15px 1.6%;
+	}
+
+	html.responsive .market_content_block {
+		padding: 10px 1.6% 0;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	html.responsive .market_listing_whoactedwith {
+		display: none;
+	}
+
+	html.responsive .market_listing_edit_buttons.placeholder {
+		display: none;
+	}
+
+	html.responsive .market_listing_edit_buttons.actual_content {
+		position: static;
+		width: auto;
+		height: auto;
+		text-align: left;
+	}
+
+	html.responsive .market_listing_edit_buttons .market_listing_cancel_button,
+	html.responsive .market_listing_edit_buttons .market_listing_edit_button,
+	html.responsive .market_listing_edit_buttons .item_market_action_button,
+	html.responsive .market_listing_edit_buttons .item_market_action_button_edit {
+		margin: 0;
+		height: auto;
+	}
+}
+
+/* market left col max width */
+@media screen and (max-width: 639px)
+{
+	html.responsive #sellListings .market_tab_well_tab_contents,
+	html.responsive .market_tab_well_tab_contents {
+		min-width: 0;
+	}
+
+	html.responsive .market_listing_their_price {
+		width: 75px;
+	}
+
+	html.responsive .market_listing_listed_date.can_combine {
+		display: none;
+	}
+
+	html.responsive .market_listing_listed_date_combined {
+		display: block;
+	}
+
+	html.responsive .market_listing_inline_buyorder_qty {
+		display: inline;
+	}
+
+	html.responsive .market_listing_buyorder_qty {
+		display: none;
+	}
+
+	html.responsive .market_listing_largeimage {
+		margin: 0;
+		float: none;
+		max-width: 90%;
+	}
+
+	html.responsive #market_buynow_dialog_accept_ssa_container,
+	html.responsive .market_purchase_restrictions {
+		clear: right;	/* otherwise ugly collisions with the "PURCHASE" button */
+	}
+
+	html.responsive .market_buy_commodity_item_display {
+		float: none;
+		width: auto;
+	}
+	html.responsive .market_buy_commodity_input_block {
+		float: none;
+		width: auto;
+		max-width: 360px;
+	}
+}
+
+@media screen and (max-width: 600px)
+{
+	html.responsive #market_advancedsearch_left {
+		float: none;
+		width: auto;
+		max-width: none;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	html.responsive #market_advancedsearch_dialog .market_search_sidebar_search_box {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 560px)
+{
+	html.responsive #sellListingRows .market_listing_seller {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+	html.responsive .market_listing_price_listings_block {
+		float: right;
+		width: 100px;
+	}
+	html.responsive #popularItemsRows .market_listing_price_listings_block {
+		width: 80px;
+	}
+
+	html.responsive .market_listing_price_listings_block > .market_listing_right_cell,
+	html.responsive #popularItemsRows .market_listing_price_listings_block > .market_listing_right_cell {
+		float: none;
+		width: auto;
+		display: block;
+	}
+
+	html.responsive .market_listing_row .market_listing_price_listings_block > .market_listing_right_cell {
+		line-height: normal;
+		height: auto;
+	}
+
+	html.responsive #popularItemsRows .market_listing_table_header .market_listing_price_listings_block .market_listing_right_cell,
+	html.responsive #searchResultsRows .market_listing_table_header .market_listing_price_listings_block .market_listing_right_cell,
+	html.responsive #sellListingRows .market_listing_table_header .market_listing_price_listings_block .market_listing_action_buttons {
+		display: none;
+	}
+
+	html.responsive #popularItemsRows .market_listing_table_header .market_listing_price_listings_block .market_listing_right_cell.market_listing_price_listings_combined,
+	html.responsive #searchResultsRows .market_listing_table_header .market_listing_price_listings_block .market_listing_right_cell.market_listing_price_listings_combined {
+		display: block;
+	}
+
+	html.responsive .market_listing_their_price .market_arrow_up, 
+	html.responsive .market_listing_their_price .market_arrow_down {
+		position: static;
+	}
+
+	html.responsive .market_listing_price_listings_block .market_listing_their_price > span.market_table_value,
+	html.responsive .market_listing_price_listings_block .market_listing_my_price > span.market_table_value,
+	html.responsive .market_listing_price_listings_block .market_listing_num_listings > span.market_table_value {
+		display: block;
+		width: auto;
+	}
+
+	html.responsive #popularItemsRows .market_listing_price_listings_block span.market_table_value {
+		margin: 4px 0;
+	}
+
+	html.responsive #market_buynow_dialog_item .market_listing_price_listings_block .market_listing_their_price > span.market_table_value {
+		margin-top: 30px;
+	}
+
+	html.responsive .market_listing_searchresult .market_listing_their_price > span {
+		margin: 0 auto;
+	}
+
+	html.responsive .market_listing_price_listings_block .market_listing_action_buttons {
+		padding: 0;
+	}
+
+	html.responsive .market_listing_buy_button {
+		margin-top: 16px;
+	}
+
+	html.responsive .market_commodity_orders_block {
+		margin: 10px 0;
+		float: none;
+		width: auto;
+	}
+	html.responsive .market_commodity_order_summary {
+		min-height: 0;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .market_tab_well_tab_contents {
+		line-height: 36px;
+		font-size: 14px;
+	}
+
+	html.responsive .market_tab_well_tabs {
+		bottom: -2px;
+		height: auto;
+		left: 2%;
+		right: 2%;
+		overflow-x:auto;
+	}
+
+	html.responsive .market_listing_seller {
+		display: none;
+	}
+
+	html.responsive .pick_and_sell_button {
+		bottom: auto;
+		top: 8px;
+	}
+
+	html.responsive .market_buynow_paymentinfo_label,
+	html.responsive .market_buynow_paymentinfo_content {
+		display: inline;
+		float: none;
+		width: auto;
+		max-width: none;
+	}
+}
+
+@media screen and (max-width: 400px)
+{
+	html.responsive #market_buynow_dialog_item .market_listing_price_listings_block,
+	html.responsive #market_buynow_dialog_item .market_listing_table_header {
+		display: none;
+	}
+
 }

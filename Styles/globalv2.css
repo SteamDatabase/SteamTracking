@@ -1090,11 +1090,6 @@ img.emoticon {
 	width: 18px;
 }
 
-.large img.emoticon, img.emoticon.large {
-	height: 60px;
-	width: 60px;
-}
-
 .emoticon_popup_content .emoticon_option {
 	width: 28px;
 	margin: 2px;

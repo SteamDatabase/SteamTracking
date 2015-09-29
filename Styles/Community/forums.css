@@ -8,6 +8,11 @@ input {
 	color: #bfbfbf;
 }
 
+.forum_responsive_newtopic_action {
+	margin: 8px 0;
+	text-align: right;
+}
+
 .forum_newtopic_header {
 	color: #8f98a0;
 	font-size: 11px;

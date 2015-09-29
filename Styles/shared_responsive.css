@@ -361,6 +361,14 @@ body.overflow_hidden .responsive_page_frame {
 	padding: 16px;
 }
 
+@media screen and (max-width: 910px)
+{
+	/* these elements end up getting moved, but hide them in the main page while content is loading */
+	html.responsive .responsive_page_content .responsive_local_menu {
+		display: none;
+	}
+}
+
 /*
 .responsive_page_frame:not(.in_menu_drag) .responsive_header_content {
 	transition: left 0.5s, right 0.5s;
@@ -432,6 +440,7 @@ body.overflow_hidden .responsive_page_frame {
 
 	html.responsive .responsive_page_template_content {
 		padding-bottom: 120px;
+		min-height: calc( 100vh - 120px );
 	}
 
 
@@ -461,6 +470,7 @@ body.overflow_hidden .responsive_page_frame {
 
 	html.responsive.touch .responsive_page_template_content {
 		padding-bottom: 120px;
+		min-height: calc( 100vh - 120px );
 	}
 
 

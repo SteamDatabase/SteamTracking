@@ -16,13 +16,13 @@ function BMediaSourceExtensionsSupported()
 // called by steam client when going into minimized broadcast view
 function SteamClientMinimize()
 {
-	$J( '#body_base' ).addClass( 'SteamClientMinimized' );
+	$J( document.body ).addClass( 'SteamClientMinimized' );
 }
 
 // called by steam client when going into normal broadcast view
 function SteamClientMaximize()
 {
-	$J( '#body_base' ).removeClass( 'SteamClientMinimized' );
+	$J( document.body ).removeClass( 'SteamClientMinimized' );
 }
 
 // called by steam client when moved to popout
