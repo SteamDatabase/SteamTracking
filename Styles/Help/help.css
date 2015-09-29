@@ -1464,12 +1464,12 @@ a.guide_row {
 
 .help_game_content_left {
 	width: 600px;
-	margin-right: 20px;
 	float: left;
 }
 
 .help_game_content_right {
-	float: left;
+	float: right;
+	margin-right: 8px;
 	width: 320px;
 	min-height: 800px;
 }
@@ -1482,6 +1482,7 @@ a.guide_row {
 		width: auto;
 		min-height: 0;
 		clear: both;
+		margin: 0;
 	}
 
 	html.responsive .help_game_content_right .help_game_guides_box {
@@ -1493,6 +1494,10 @@ a.guide_row {
 		clear: left;
 		float: left;
 		margin-right: 8px;
+	}
+
+	html.responsive .help_game_refund_box {
+		margin-bottom: 20px;
 	}
 }
 
