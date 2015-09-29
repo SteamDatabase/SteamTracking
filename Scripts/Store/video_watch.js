@@ -188,7 +188,7 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 		if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
-			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br>Press Q or the Back button to Exit.' );
+			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br>Press the Back or Home controller button to exit the video.' );
 
 		this.OnLogEventToServer( 'Download Failed', '' );
 	}
@@ -204,7 +204,11 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 
 CVideoWatch.prototype.OnPlayerPlaybackError = function()
 {
-	this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
+	if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
+		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
+	else
+		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' );
+
 	this.OnLogEventToServer( 'Playback Error', '' );
 }
 
@@ -290,7 +294,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
 					else
-						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' + '<br><br>Error Code: ' + data.error_code );
+						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' + '<br><br>Error Code: ' + data.error_code );
 					break;
 			}
 		}
@@ -300,7 +304,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 		if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
-			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' );
+			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' );
 	});
 }
 
@@ -379,7 +383,7 @@ CVideoWatch.prototype.SetAudioTrack = function()
 		{
 			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
 			{
-				strAudioTrackID = this.m_player.GetAudioTrackForLanguage( strCode );
+				strAudioTrackID = this.m_player.GetAudioTrackIDForLanguage( strCode );
 				break;
 			}
 		}

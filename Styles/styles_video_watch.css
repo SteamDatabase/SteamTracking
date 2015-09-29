@@ -203,7 +203,7 @@ body
 .loading_text
 {
     color: #60acde;
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     font-family: Motiva Sans Light;
     margin-top: 40px;
@@ -245,3 +245,31 @@ body
     visibility: visible;
 }
 
+.loading_text.tenfoot
+{
+	font-size: 36px;
+}
+
+.loading_text.tenfoot.error
+{
+	font-size: 66px;
+	margin-top: 200px;
+}
+
+.loading_wrapper.tenfoot,
+.loaded_wrapper.tenfoot
+{
+	width: 960px;
+}
+
+.loading_throbber.tenfoot
+{
+	flow-children: right;
+	margin: 0px 440px -20px auto;
+	height: 120px;
+}
+
+.loading_throbber.tenfoot .bar
+{
+	height: 120px;
+}

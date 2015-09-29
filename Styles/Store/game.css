@@ -1,10 +1,4 @@
 
-.game_page_background.game {
-	background-position: center top;
-	background-repeat: no-repeat;
-	min-width: 972px;
-}
-
 .game_icon {
 	position: relative;
 	float: left;
@@ -644,7 +638,9 @@ img.game_header_image_full {
 
 .game_purchase_action_bg {
 	height: 32px;
+	font-size: 0;
 
+	display: inline-block;
 	background-color: rgba(0,0,0,0.5);
 	padding: 2px 2px 2px 0px;
 	border-radius: 2px;
@@ -655,8 +651,7 @@ img.game_header_image_full {
 .game_purchase_action .game_purchase_price,
 .game_purchase_action .game_purchase_discount,
 .game_purchase_action .btn_addtocart,
-.game_purchase_action .btn_packageinfo,
-.game_purchase_action .game_purchase_action_bg
+.game_purchase_action .btn_packageinfo
 {
 	display: inline-block;
 	margin-left: 2px;
@@ -1521,10 +1516,6 @@ a.friend_block_holder:hover {
 
 @media screen and (max-width: 910px )
 {
-	html.responsive .game_page_background.game {
-		min-width: 0;
-	}
-
 	html.responsive .rightcol.game_meta_data .block {
 		background: rgba( 0, 0, 0, 0.2 );
 		filter: none;
@@ -1542,6 +1533,10 @@ a.friend_block_holder:hover {
 
 	html.responsive .game_description_column img {
 		max-width: 100%;
+	}
+
+	html.responsive img.package_header {
+		height: auto;
 	}
 }
 
@@ -1805,7 +1800,7 @@ img.package_header {
     border-radius: 3px;
     color: #A3CF06;
     margin: 20px 0 5px 0;
-    height: 34px;
+    min-height: 34px;
 }
 
 #package_savings_bar > .savings {
@@ -1816,6 +1811,7 @@ img.package_header {
     font-size: 14px;
     padding: 8px;
     background: url('https://steamstore-a.akamaihd.net/public/images/v6/package_arrow.png') top left no-repeat;
+	max-width: 30%;
 }
 #package_savings_bar > .message {
     padding: 8px;
@@ -3140,6 +3136,7 @@ select.gray_bevel {
 	background: linear-gradient(to right,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#80000000',GradientType=1 ); /* IE6-9 */
 
+	text-align: center;
 
 	padding: 15px;
 }
@@ -3453,6 +3450,10 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 		width: 50%;
 		margin-right: 8px;
 	}
+
+	html.responsive #package_header_container {
+		padding: 2%;
+	}
 }
 
 @media screen and (max-width: 560px)
@@ -3498,6 +3499,11 @@ background: -webkit-gradient(linear, left top, right top, color-stop(5%,#356480)
 	html.responsive .steam_curator_selected .steam_curator_icon.medium {
 		border: none;
 		padding-left: 0;
+	}
+
+	html.responsive .game_purchase_action_bg .btn_medium > span {
+		padding: 0 10px;
+		font-size: 13px;
 	}
 }
 

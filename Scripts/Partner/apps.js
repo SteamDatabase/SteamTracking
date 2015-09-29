@@ -177,6 +177,19 @@ function SetAppUsesFrenemies( appid, frenemyState )
 		);
 }
 
+
+//
+// Set whether refunds ignore playtime for the app
+//
+function SetRefundsIgnorePlaytime( appid, ignorePlaytime )
+{
+	AppsAjaxRequest( g_szBaseURL + '/apps/setrefundsignoreplaytime/' + appid,
+		{ 'refundsignoreplaytime' : ignorePlaytime },
+		CommonSetHandler
+		);
+}
+
+
 //
 // Set the signing info
 //

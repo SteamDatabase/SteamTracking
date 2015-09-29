@@ -1,4 +1,9 @@
 
+body.sale_page_background {
+	background-attachment: fixed;
+	background-size: cover;
+}
+
 .page_content_ctn {
 	padding-top: 16px;
 }
@@ -6,38 +11,50 @@
 .sale_page_purchase_item {
 	padding: 15px;
 	position: relative;
-	height: 136px;
-	background-color: rgba(0,0,0,0.2);
-}
+
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(97,100,101,0.5)), color-stop(95%,rgba(226,244,255,0.5)));background: -moz-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -o-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -ms-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););}
 
 .sale_page_block {
 	margin-bottom: 28px;
+	font-family: "Motiva Sans Light", "Motiva Sans", arial, helvetica, sans-serif;
 }
 
 .sale_page_purchase_item .ds_flag {
 	left: 15px;
 }
 
-.sale_page_purchase_item.ds_flagged:not(.ds_wishlist) img.game_header_image {
+.sale_page_purchase_item.ds_flagged:not(.ds_wishlist) .sale_page_purchase_header img {
 	opacity: 0.3;
+	transition: opacity 0.25s;
+}
+
+.sale_page_purchase_item.ds_flagged:not(.ds_wishlist):hover .sale_page_purchase_header img {
+	opacity: 1.0;
 }
 
 .sale_page_purchase_header {
-	position: absolute;
-	left: 15px;
-	top: 15px;
+	float: left;
+	margin-right: 15px;
+	width: 292px;
+	height: 136px;
 }
 
-.sale_page_purchase_text_container {
-	padding-left: 309px;
+.sale_page_purchase_package .sale_page_purchase_header {
+	width: 415px;
+}
+
+.sale_page_purchase_header img {
+	width: 100%;
+	height: auto;
 }
 
 .sale_page_purchase_package .game_header_image {
 	width: 415px;
 }
 
-.sale_page_purchase_package .sale_page_purchase_text_container {
-	padding-left: 431px;
+.sale_page_purchase_content {
+	overflow: hidden;
+	padding-bottom: 43px;
 }
 
 .sale_page_purchase_price {
@@ -51,6 +68,10 @@
 	position: absolute;
 	right: 15px;
 	bottom: 15px;
+	left: 15px;
+	text-align: right;
+	overflow: hidden;
+	overflow-x: auto;
 }
 
 .sale_page_sticker_area {
@@ -60,28 +81,49 @@
 }
 
 .sale_page_name_link {
-	font-size: 14px;
+	font-size: 20px;
+	font-weight: normal;
 }
 
 .sale_page_release_date {
-	color: #626366;
+	color: #BBBBBB;
+	line-height: 22px;
+}
+
+.sale_page_release_date > .platform_img {
+	vertical-align: top;
+}
+
+.sale_page_release_date > .platform_img.steamplay {
+	margin-right: 4px;
 }
 
 .sale_page_package_contents {
 	margin-top: 2px;
 }
 
-.sale_page_package_contents .tab_item .tab_item_overlay img {
-	width: 940px;
-}
-
 .sale_page_package_contents .tab_item {
 	margin-bottom: 2px;
 	padding-left: 213px;
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(97,100,101,0.3)), color-stop(95%,rgba(226,244,255,0.3)));background: -moz-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: -o-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: -ms-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););}
+
+.sale_page_package_contents .tab_item:hover {
+	background: -webkit-gradient(linear, left top, right top, color-stop(5%,rgba(97,100,101,0.5)), color-stop(95%,rgba(226,244,255,0.5)));background: -moz-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -o-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: -ms-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););}
+
+.sale_page_package_contents .tab_item .tab_item_cap {
+	padding-left: 15px;
+}
+.sale_page_package_contents .tab_item.ds_flagged .ds_flag {
+	left: 15px;
 }
 
-.sale_page_package_contents .tab_item .tab_item_cap, .sale_page_package_contents .tab_item.ds_flagged .ds_flag {
-	left: 15px;
+.sale_page_package_contents .tab_item_details {
+	color: #888888;
+}
+
+.sale_package_contents_expander {
+	padding: 12px 0;
+	text-align: center;
 }
 
 #sale_page_purchase_all_area {
@@ -122,4 +164,61 @@
 .bundle_sale .discount_final_price
 {
 	font-size: 14px;
+}
+
+/* page admin block ended up with a bunch of random styles that are now copied/pasted everywhere- undo some of the damage here */
+html.responsive .btnv6_blue_blue_innerfade {
+	float: none;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .sale_page_purchase_header {
+		max-width: 50%;
+		height: auto;
+	}
+
+	html.responsive .sale_page_purchase_item {
+		padding: 15px 2%;
+	}
+
+	html.responsive .sale_page_purchase_item .ds_flag {
+		left: 2%;
+	}
+
+	html.responsive .sale_page_purchase_area {
+		left: 2%;
+		right: 2%;
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	/* allow text to wrap below header image */
+	html.responsive .sale_page_purchase_header {
+		max-width: 40%;
+		height: auto;
+	}
+
+	html.responsive .sale_page_purchase_content {
+		overflow: visible;
+	}
+
+	html.responsive .sale_page_name_link {
+		font-size: 18px;
+	}
+
+	html.responsive .sale_page_package_contents .tab_item .tab_item_cap {
+		padding-left: 0;
+	}
+	html.responsive .sale_page_package_contents .tab_item.ds_flagged .ds_flag {
+		left: 0;
+	}
+}
+
+@media screen and (max-width: 440px)
+{
+	html.responsive .sale_page_name_link {
+		font-size: 16px;
+	}
 }
