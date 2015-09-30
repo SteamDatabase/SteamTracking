@@ -1140,8 +1140,6 @@ a#store_search_link img {
 	top: 0;
 	z-index: 3;
 	line-height: 69px;
-
-	transition: opacity 0.25s;
 }
 
 .sub .tab_item_cap {
@@ -1191,14 +1189,8 @@ a#store_search_link img {
 	overflow: hidden;
 	text-overflow: ellipsis;
 
-	padding-top: 6px;
-	font-size: 12px;
-}
-
-.large .tab_item_content {
 	padding-top: 16px;
 }
-
 .home_tabs_content .tab_item_content {
 
 	padding-top: 7px;
@@ -1206,14 +1198,12 @@ a#store_search_link img {
 
 .tab_item_name {
 	color: #c7d5e0;
-	font-size: 1.25em;
+	font-size: 15px;
 	line-height: 18px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	display: block;
 	overflow: hidden;
-
-	transition: color 0.25s;
 }
 
 .tab_item_details {
@@ -1228,11 +1218,11 @@ a#store_search_link img {
 }
 
 
-.tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_cap {
+.tab_item.ds_flagged:not(.ds_wishlist) .tab_item_cap {
 	opacity: 0.3;
 }
 
-.tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_content .tab_item_name {
+.tab_item.ds_flagged:not(.ds_wishlist) .tab_item_content .tab_item_name {
 	color: #62696e;
 }
 
@@ -2425,23 +2415,5 @@ a.cluster_capsule:hover {
 	html.responsive .main_cluster_ctn {
 		max-width: 616px;
 		margin: 0 auto;
-	}
-}
-
-
-.game_page_background.game {
-	background-position: center top;
-	background-repeat: no-repeat;
-	min-width: 972px;
-}
-
-@media screen and (max-width: 910px )
-{
-	html.responsive .game_page_background.game {
-		min-width: 0;
-	}
-
-	html.responsive .game_page_background.sale_page_background {
-		background-position: center -66px;
 	}
 }
