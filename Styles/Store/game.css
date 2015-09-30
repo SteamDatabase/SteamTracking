@@ -638,8 +638,6 @@ img.game_header_image_full {
 
 .game_purchase_action_bg {
 	height: 32px;
-	font-size: 0;
-
 	display: inline-block;
 	background-color: rgba(0,0,0,0.5);
 	padding: 2px 2px 2px 0px;
