@@ -398,13 +398,13 @@ a.market_listing_item_name_link:hover {
 }
 
 #popularItemsRows .market_listing_price_listings_block,
-#searchResultsRows .market_listing_price_listings_block {
+#searchResults .market_listing_price_listings_block {
 	width: 172px;
 	float: right;
 }
 
 #popularItemsRows .market_listing_price_listings_block .market_listing_num_listings,
-#searchResultsRows .market_listing_price_listings_block .market_listing_num_listings {
+#searchResults .market_listing_price_listings_block .market_listing_num_listings {
 	float: left;
 }
 
@@ -1845,13 +1845,13 @@ input.filter_search_box:focus {
 		width: 100px;
 	}
 	html.responsive #popularItemsRows .market_listing_price_listings_block,
-	html.responsive #searchResultsRows .market_listing_price_listings_block{
+	html.responsive #searchResults .market_listing_price_listings_block{
 		width: 80px;
 	}
 
 	html.responsive .market_listing_price_listings_block > .market_listing_right_cell,
 	html.responsive #popularItemsRows .market_listing_price_listings_block > .market_listing_right_cell,
-	html.responsive #searchResultsRows .market_listing_price_listings_block > .market_listing_right_cell {
+	html.responsive #searchResults .market_listing_price_listings_block > .market_listing_right_cell {
 		float: none;
 		width: auto;
 		display: block;
