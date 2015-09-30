@@ -445,7 +445,9 @@
  T CIAudioSinkListNull::GetSinkDeviceName(int, CUtlString&) const
  T CIAudioSinkListNull::GetSinkName(int, CUtlString&) const
  T CIAudioSinkListNull::GetSinkPortList(int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
+ T CIAudioSinkListNull::GetSinkPortName(int, int, CUtlString&) const
  T CIAudioSinkListNull::GetSinkProfileList(int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
+ T CIAudioSinkListNull::GetSinkProfileName(int, int, CUtlString&) const
  T CIAudioSinkListNull::GetSourceActivePort(int) const
  T CIAudioSinkListNull::GetSourcePortList(int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
  T CIAudioSinkListNull::RemoveListener(IAudioSinkDeviceListener*)
@@ -456,7 +458,7 @@
  T CIAudioSinkListNull::SetActiveSink(int)
  T CIAudioSinkListNull::SetActiveSourcePortForSink(int, int)
  T CIAudioSinkListNull::SetActiveVoiceSink(int)
- T CIAudioSinkListNull::SetDefaultDevice(char const*)
+ T CIAudioSinkListNull::SetDefaultDevice(char const*, char const*, char const*)
  T CIAudioSinkListNull::SetDefaultVoiceDevice(char const*)
  T CIAudioSinkListNull::Start()
  T CIAudioSinkListNull::Stop()

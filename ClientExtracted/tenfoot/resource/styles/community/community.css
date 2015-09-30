@@ -434,5 +434,6 @@ CommunityPanel
 CommunityHubContentPanel #Loading
 {
 	transform: translatey( -14px );
+	width: 1400px;
 }
 

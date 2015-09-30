@@ -71,6 +71,7 @@ message CMsgRemoteClientBroadcastStatus {
 
 message CMsgRemoteClientBroadcastDiscovery {
 	optional uint32 seq_num = 1;
+	repeated uint64 client_ids = 2;
 }
 
 message CMsgRemoteDeviceAuthorizationRequest {

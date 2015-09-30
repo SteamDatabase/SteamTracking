@@ -29,6 +29,7 @@
 							<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
 						</Panel>
 					</Panel>
+                    <Panel class="GridItemBackground" />
 				</Button>
 				<Button id="Game1" class="Game"  selectionpos="auto" >
 					<Panel class="ImageWrapper">
@@ -51,6 +52,7 @@
 							<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
 						</Panel>
 					</Panel>
+                    <Panel class="GridItemBackground" />
 				</Button>
 				<Button id="Game2" class="Game" selectionpos="auto" >
 					<Panel class="ImageWrapper">
@@ -73,6 +75,7 @@
 							<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
 						</Panel>
 					</Panel>
+                    <Panel class="GridItemBackground" />
 				</Button>
 				<Button id="Game3" class="Game" selectionpos="auto" >
 					<Panel class="ImageWrapper">
@@ -95,6 +98,7 @@
 							<Panel id="NotReadyToPlay" class="NotReadyToPlay StatusImage" />
 						</Panel>
 					</Panel>
+                    <Panel class="GridItemBackground" />
 				</Button>
 			</Panel>
 		</Panel>

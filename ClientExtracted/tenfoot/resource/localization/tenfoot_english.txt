@@ -1307,7 +1307,7 @@
 	"Library_Details_Play"		"PLAY"
 	"Library_Details_Watch"		"WATCH"
 	"Library_Details_PlayVR"		"PLAY IN VR"
-	"Library_Details_Play2D"		"PLAY IN 2D"
+	"Library_Details_Play2D"		"PLAY"
 	"Library_Details_Stream"		"STREAM"
 	"Library_Details_Controller"	"STEAM CONTROLLERS"
 	"Library_Details_SharingStatus" "SHARED BY"
@@ -1335,6 +1335,7 @@
 	"Library_Details_Renew"			"RENEW"
 	"Library_Details_FriendsWhoPlay"	"FRIENDS WHO PLAY"
 	"Library_Details_FriendsPlayingNow"	"FRIENDS PLAYING NOW"
+	"Library_Details_ViewFriendsWhoPlay"	"VIEW ALL"
 	"Library_Details_Workshop"		"WORKSHOP"
 	"Library_Details_Screenshots"		"SCREENSHOTS <span class=\"NumberElement\">{i:sscount}</span>"
 	"Library_Details_RecentNews"	"RECENT NEWS"
@@ -1406,8 +1407,10 @@
 	"Library_Details_KillApp"		"Exit {s:apptype}"
 	"Library_Details_NewsDate"		"{t:l:date}"
 	"Library_Details_NewsByline"	"{s:feed}"
+	"Library_Details_ViewNewsPost"	"VIEW NEWS POST"
 	"Library_Details_ScreenshotHowTo1"	"In-game shortcut"
-	"Library_Details_ManageScreenshots"	"Manage Screenshots"
+	"Library_Details_ManageScreenshots"	"MANAGE SCREENSHOTS"
+	"Library_Details_ViewGameBadge"	"VIEW BADGE"
 	"Library_Details_ViewAllScreenshots"	"View all screenshots ({s:sscount})"
 	"Library_Details_ViewAllAchievements"	"VIEW ALL"
 	"Library_Details_ViewAllGuides"			"VIEW ALL GUIDES"
@@ -1417,6 +1420,8 @@
 	"Library_Details_CommunityContentHeadline"			"COMMUNITY CONTENT"
 	"Library_Details_NotAvailablePlatform"			"NOT ON {s:currentos}"
 	"Library_Details_AvailableOnPlatforms"		"Available on {s:platformlist}"
+	"Library_Details_UnavailableOnPlatform_HowToStream_Title"		"STREAM THIS GAME"
+	"Library_Details_UnavailableOnPlatform_HowToStream_Desc"		"This game doesn't run on {s:currentos}, but if you sign into Steam on a nearby machine running one of the supported platforms ({s:platformlist}), you can stream this game over your wired network."
 	"Library_Details_WorkshopWhatIsIt"	"Create, discover and play content contributed by the Steam Community ({d:wscount} items)."
 	"Library_Details_CommunityHubWhatIsIt"	"Community-made content ({d:ugccount} items)."
 	"Library_Details_ControllerSupport"	"CONTROLLER"
@@ -2515,6 +2520,7 @@
 	"Downloads_DeferredTitel" "{i:downloadsdeferred} downloads scheduled"
 	"Downloads_PausedTitel" "{i:downloadspaused} downloads paused"
 	"Downloads_FinishedTitel" "{i:downloadscomplete} downloads finished"
+	"Downloads_Summary" "Download Summary"
   
 	"Downloads_AmountValue"				"{s:downloadamount}"
 	"Downloads_TimeRemainValue"		"{t:r:s:downloadtime}"
@@ -2532,6 +2538,7 @@
 	"Downloads_Summary_TotalAmount"	"Total : {s:downloadamount}"
 	"Downloads_Summary_PeakRate"		"Peak : {s:downloadpeakrate}/s"
 	"Downloads_Summary_CurrentRate"	"Current : {s:downloadrate}/s"
+	"Downloads_Summary_Settings_btn"    "Downloads Settings"
 	
 	"Downloads_None"	"No downloads in progress"
 	
@@ -3098,6 +3105,11 @@
 
 	"Community_SpoofNotice"		"{s:userspoof}"
 
+	"HowToStream_Title"					"IN-HOME STREAMING"
+	"HowToStream_ToStream"				"To Stream your game"
+	"HowToStream_Step1"					"Sign in to Steam on your Windows PC using the same Steam account you are signed in with here (account \"{s:account}\")."
+	"HowToStream_Step2"					"If you experience trouble streaming via your wireless network, you may need to connect to your network with a cable for optimal streaming performance."
+
 	"SteamUI_StreamingIntro_Title"		"Welcome to In-Home Streaming"
 	"SteamUI_StreamingIntro"		"You are about to run this game on another computer and play it here using In-Home Streaming."
 	"SteamUI_StreamingIntro2"		"Your experience may vary depending on your hardware and home network. To improve performance, visit In-Home Streaming settings."
@@ -3221,6 +3233,8 @@
 
 	"SettingsAudioConfig_BeginWizard"	"Reconfigure Audio"
 
+	"SettingsAudio_Port"				"Sound Output Port"
+
 	"SettingsAudio_Card"				"Internal Sound Card and Port"
 	"SettingsAudio_Card_Information"	"This setting determines which sound card and physical port in your PC or console will be used for sound processing. Typically there is a built-in sound card on the mother board, but some systems have an additional discrete sound card that can perform this function. "
 	"SettingsAudio_Card_ToDo"			"Please choose which device you want to use: "
@@ -3248,9 +3262,12 @@
 	"Settings_AlienFXBrightness"	"Brightness"
 
 	"Community_PostStatusFailure"	"Sorry, there was an error posting your status."
+	"Community_Notifications"		"Comment Notifications"	
+	"Community_Achievements"		"Achievements"
+	"Community_FriendsWhoPlay"	"Friends Who Play"
 
 	"SteamUI_AddController_Title"					"Looking for Steam Controllers..."
-	"SteamUI_AddController_HowToPair"	"Pair a new Steam Controller by holding X and pressing the Steam button."
+	"SteamUI_AddController_HowToPair"	"Please press and hold the X button while powering on your Steam Controller."
 	
 	"BigPicture_YouHaveNPendingInvites"	"View {d:InviteCount} pending friend invites"
 	
@@ -3606,9 +3623,10 @@
 	"Library_DLC_ViewInStore"	"VIEW ALL IN STORE"
 	"Library_DLC_Title"	"DLC installed <span class=\"NumberElement\">{i:num_installed}/{i:num_available}</span>"
 	"Library_Details_Manage_DLC"	"Manage DLC"
+	"Library_Details_Manage_DLC_Footer"	"MANAGE DLC"
 	"Library_Details_Manage_DLC_Cancel"	"Done"
-	"Library_Details_Manage_DLC_Install"	"Install"
-	"Library_Details_Manage_DLC_Uninstall"	"Uninstall"
+	"Library_Details_Manage_DLC_Install"	"INSTALL"
+	"Library_Details_Manage_DLC_Uninstall"	"UNINSTALL"
 
 	"CDNLoc_default"		"default"
 	"CDNLoc_US___Chicago"		"US - Chicago"
@@ -4391,5 +4409,5 @@
 	"ContentFrame_InboxCount" "{i:inboxcount}"
 	"ContentFrame_DownloadsCount" "{i:downloads}"
 	"SignalLossHelper_Title" "ENSURING GREAT PERFORMANCE"
-	"SignalLossHelper_Description" "For the best, low-latency controller performance, please ensure there is nothing between the controller and dongle. Also please ensure that the dongle is away from your computer by using the included extender." 
+	"SignalLossHelper_Description" "For the best, low-latency controller performance, please ensure there is nothing between the controller and receiver. Also please ensure that the receiver is away from your computer by using the included extender." 
 }

@@ -189,6 +189,7 @@
 @define action_module: gradient( linear, 0% 0%, 100% 100%, from( #64bdf173 ), to( #238bbe73 ) );
 @define nontransparent_action_module: gradient( linear, 0% 0%, 100% 100%, from( #30668fff ), to( #144d70ff ) );
 @define state_panel: gradient( linear, 0% 0%, 100% 100%, from( #ffffff1A ), to( #ffffff1A ) );
+@define disabled_module: gradient( linear, 0% 0%, 100% 100%, from( #1c537366 ), to( #1c537366 ) );
 @define transparent_module: gradient( linear, 0% 0%, 100% 100%, from( #2e648099 ), to( #15406699 ) );
 @define transparent_module2: gradient( linear, 0% 0%, 0% 100%, from( #1b3a59aa ), to( #121b2edd ) );
 @define nontransparent_module: gradient( linear, 0% 0%, 100% 100%, from( #1e4861 ), to( #103250 ) );
@@ -1335,9 +1336,8 @@ FriendsChatDialog .VoiceBarContainer
 	
 	width: 87px;
 	height: 87px;
-	transform: translateX( 108px );
-	margin-top: 21px;
-	
+	margin-top: 11px;
+	position: 118px 0px 0px;	
 	opacity: 0.0;
 
 
@@ -1364,10 +1364,11 @@ FriendsChatDialog .VoiceBarContainer
 	background-image: url( "file://{images}/mouse/arrowLdefaultVR.png" );
 	background-position: 0px 0px;
 	transform: translateX( 0px );
-	width: 87px;
-	height: 87px;
-	margin-top: 21px;
+	position: 12px 0px 0px;
 }
+
+
+
 
 WebController #ActualHomeButton
 {
@@ -1388,11 +1389,37 @@ WebController #MouseBackButton
 }
 
 
+.VR WebController #ActualHomeButton
+{
+	background-size: contain;
+	width: 54px;
+	height: 54px;
+
+	position: 84px 8px 0px;
+}
+
+.VR WebController #MouseBackButton
+{
+	background-size: contain;
+	background-position: 0px 0px;
+	width: 37px;
+	height: 37px;
+	position: 24px 16px 0px;
+}
+
+
 .CursorVisible #ActualHomeButton,
 .CursorVisible #MouseBackButton
 {
 	opacity: 0.7;
 }
+
+.VR .CursorVisible #ActualHomeButton,
+.VR .CursorVisible #MouseBackButton
+{
+	opacity: 0.9;
+}
+
 
 #ActualHomeButton:hover,
 #MouseBackButton:hover
@@ -1403,6 +1430,8 @@ WebController #MouseBackButton
 	box-shadow: fill box_shadow_on_color -3px -3px 4.5px 6px;
 	wash-color: #FFFFFFFF;
 }
+
+
 
 
 @keyframes 'links-and-more-button-focus'
@@ -1965,8 +1994,11 @@ LibrarySuggestions:descendantfocus #SuggestedStatusWrapper
 }
 
 .AppGridItem:focus #PlatformSupport .StatusImage,
+.AppGridItem:hover #PlatformSupport .StatusImage,
 .Game:focus #SuggestedStatus .StatusImage,
+.Game:hover #SuggestedStatus .StatusImage,
 .GameButton:focus #SuggestedStatus .StatusImage,
+.GameButton:hover #SuggestedStatus .StatusImage,
 LibraryAppDetails .StatusImage
 {
 	opacity: 1.0;
@@ -2061,23 +2093,28 @@ LibraryAppDetails.Installing #ReadyToDownload
 
 
 /* For installed games: */
-.AppGridItem #AppGridItemSupportLabels, #SuggestedStatus {	
+.AppGridItem #AppGridItemSupportLabels,
+#SuggestedStatus
+{
 	width: 50px;
 	height: 9px;
+	margin-right: 5px;
+	margin-bottom: 5px;
 
 	position: 0px 0px 0px;
 	flow-children: right;
 	overflow: clip clip;
 
 	transform: translatey( -50px );
-	margin-right: 0px;
 	transition-property: height, transform;
-	transition-duration: 0.3s;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 
 	background-color: black;
 	vertical-align: bottom;
 	horizontal-align: right;
+
+	z-index: 101;
 }
 
 #ParentalLibraryGrid #AppGridItemSupportLabels
@@ -2088,6 +2125,7 @@ LibraryAppDetails.Installing #ReadyToDownload
 #SuggestedStatus
 {
 	transform: translatey( -44px );
+	margin-bottom: 1px;
 }
 
 .GameButton #SuggestedStatus
@@ -2097,11 +2135,15 @@ LibraryAppDetails.Installing #ReadyToDownload
 
 #RecentRow #SuggestedStatus
 {
-	margin-right: 210px;
+	margin-right: 215px;
+	margin-bottom: 5px;
 	transform: translatey( 0px );
 }
 
-.AppGridItem:focus #AppGridItemSupportLabels, Button:focus #SuggestedStatus
+.AppGridItem:focus #AppGridItemSupportLabels,
+.AppGridItem:hover #AppGridItemSupportLabels,
+Button:focus #SuggestedStatus,
+Button:hover #SuggestedStatus
  {
 	height: 76px;
 }

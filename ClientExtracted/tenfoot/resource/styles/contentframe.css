@@ -339,7 +339,7 @@ RemoteContent .LoadingPanel #ErrorStatus2
 	
 	width: 87px;
 	height: 87px;
-	margin-top: 21px;
+	margin-top: 11px;
 }
 
 
@@ -360,7 +360,7 @@ RemoteContent .LoadingPanel #ErrorStatus2
 	background-position: 0px 0px;
 	width: 87px;
 	height: 87px;
-	margin-top: 21px;
+	margin-top: 11px;
 }
 
 .CursorVisible #ContentMouseBackButton

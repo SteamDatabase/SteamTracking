@@ -239,6 +239,7 @@ MusicPlaylistPanel
 	background-color: transparent;
 	color: applabel;
 	width: 100%;
+	height: fit-children;
 }
 
 // .MusicAlbumAnimateTo .TrackButton

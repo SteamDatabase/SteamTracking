@@ -6,15 +6,15 @@
 	</styles>
 
 	<AddController defaultfocus="ButtonCancel" tabindex="auto" selectionpos="auto">
-			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
+			<Panel id="AddControllerHeader" class="AddControllerHeader">
 				<Label id="Title" class="Title" text="#SteamUI_AddController_Title" />
 			</Panel>
 
 			<Panel class="ControllerPanelContainer">
 				
 				<Panel id="ControllerImagePanel"> 
-					<Image class="ControllerImage" src="file://{images}/library/controller/cropped_controller_config_controller_i_blank.png" />
-					<Image class="ControllerImage ControllerImageBlink" src="file://{images}/library/controller/cropped_controller_config_controller_i_x_system.png" />
+					<Image class="ControllerImage" src="file://{images}/help/controller_pair_help.png" />
+					<Image class="ControllerImage ControllerImageBlink" src="file://{images}/help/controller_pair_help.png" />
 				</Panel>	
 				
 				<Panel id="ControllerPairingHelperPanel" >
@@ -25,15 +25,9 @@
 						</Panel>
 					</Panel>
 				</Panel>
+				
+				
 			</Panel>
 									   
-				
-			<Panel id="MsgBoxButtonArea" class="MsgBoxButtonArea">
-				<Panel id="MsgBoxButtons">
-					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button" onactivate="ButtonCancel();">
-						<Label id="CancelButtonText" text="#UI_Cancel" />
-					</Button>
-				</Panel>
-			</Panel>
 	</AddController>
 </root>

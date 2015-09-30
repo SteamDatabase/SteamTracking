@@ -616,6 +616,13 @@ LibraryAppDetails .LibraryDetailsSectionsContainer {
 #ContentPanels .LibraryDetailsSectionsContainer:descendantfocus {
 	transform: translateX( -200px );
 }
+/* test mouse left/right interaction
+#ContentPanels .LibraryDetailsSectionsContainer:descendantfocus,
+#ContentPanels .LibraryDetailsSectionsContainer:hover {
+	transform: translateX( -200px );
+}
+*/
+
 
 
 
@@ -722,6 +729,8 @@ LibraryAppDetails .ContentsRow
 	width: 425px;
 	height: 450px;
 
+	border-radius: 3px;
+
 	background-color: transparent_module;
 	flow-children: down;
 
@@ -739,8 +748,13 @@ LibraryAppDetails .ContentsRow
 #OverlayDashboard .DetailsDataPanel {
 	height: 330px;
 }
+LibraryAppDetails.UnavailableOnPlatform .DetailsDataPanel
+{
+	height: 290px;
+}
 .DetailsDataPanel.Small,
-#OverlayDashboard .DetailsDataPanel.Small
+#OverlayDashboard .DetailsDataPanel.Small,
+LibraryAppDetails.UnavailableOnPlatform .DetailsDataPanel.Small,
 {
 	height: 175px;
 }
@@ -2890,19 +2904,21 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 }
 
 
-.GamesGrid, .GamesSuggestion, .GamesDownloads
+.GamesGrid,
+.GamesSuggestion,
+.GamesDownloads
 {
-	padding-top: 82px;
-	padding-left: 140px;
+	padding-top: 77px;
+	padding-left: 135px;
 	position: 390px 0px 0px;
 	padding-right: 40px;
 
 	width: 1500px;
 	height: 1120px;
 	
-	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
-	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
-	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+	//opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	//opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	//opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
 
 	transform: translateX( 0px );
 	transition-delay: 0s;
@@ -2915,7 +2931,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 /* Transitions when grid is in focus */
 .ContentAreaFocus .GamesGrid,
 .ContentAreaFocus .GamesDownloads,
-.ContentAreaFocus .GamesSuggestion {
+.ContentAreaFocus .GamesSuggestion
+{
 	transform: translateX( -200px );
 	width: 1500px;
 	padding-right: 40px;
@@ -3048,15 +3065,17 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 .AppGridItem
 {
-	width: 624px;
-	height: 429px;
+	width: 634px;
+	height: 439px;
 	margin: -140px, -82px;
 	padding: 82px;
 	pre-transform-scale2d: 0.88;
 	opacity: 0.0;
 
+	overflow: noclip;
+
 	transition-property: transform, blur, position, opacity, desaturation, border, background-color, pre-transform-scale2d, box-shadow;
-	transition-duration: 0.2s;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 }
@@ -3074,30 +3093,28 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	height: 215px;
 	opacity: 0.9;
 	desaturation: 0.2;
+	margin-left: 5px;
+	margin-top: 5px;
 	margin-bottom: 0px;
 	transition-property: box-shadow, opacity, desaturation;
 	transition-duration: shortmedduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
-	box-shadow: fill #00000044 -4px -4px 8px 8px;
+	border-radius: 3px;
+
+
 	background-color: #000000;
+
+	z-index: 100;
 }
 
-.AppGridItem:focus .AppImage
+.AppGridItem:focus .AppImage,
+.AppGridItem:hover .AppImage
 {
 	opacity: 1.0;
 	desaturation: 0.0;
 	wash-color: #00000000;
-
-	box-shadow: box_shadow_on_color -8px -8px 8px 8px;
-
-	animation-name: main-button-glow-movement-no-fill;
-	animation-duration: longduration;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-
 }
 
 .AppGridItem Label
@@ -3113,6 +3130,32 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	text-overflow: clip;
 	font-weight: bold;
 	white-space: nowrap;
+}
+
+.AppGridItem .GridItemBackground {
+	width: 470px;
+	height: 225px;
+	opacity: 0;
+	background-color: #ffffff;
+	z-index: 99;
+}
+
+.AppGridItem:focus .GridItemBackground,
+.AppGridItem:hover .GridItemBackground {
+	width: 470px;
+	height: 225px;
+	opacity: 1;
+	background-color: #b4dff7;
+	z-index: 99;
+
+	box-shadow: box_shadow_on_color -8px -8px 8px 8px;
+	border-radius: 3px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 
 #AppLabel
@@ -3162,7 +3205,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	opacity: 1.0;
 }
 
-.AppGridItem:focus Label
+.AppGridItem:focus Label,
+.AppGridItem:hover Label
 {
 	opacity: 0.0;
 	color: applabel;
@@ -3179,7 +3223,8 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	desaturation: 0;
 }
 
-.AppGridItem:focus
+.AppGridItem:focus,
+.AppGridItem:hover
 {
 	pre-transform-scale2d: 1.0;
 	background-image: url( "file://{images}/library/game_grid_shadow.png");
@@ -5123,13 +5168,17 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .GamesSuggestion,
 .GamesDownloads
 {
-	padding-top: 25px;
+	padding-top: 32px;
 	padding-left: 0px;
 	padding-right: 40px;
-	margin-left: 100px;
+	margin-left: 95px;
 	max-height: 900px;
 	flow-children: down;
 	overflow: squish scroll;
+}
+.GamesDownloads
+{
+	max-height: 980px;
 }
 
 
@@ -5144,13 +5193,6 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	flow-children: right;
 	/* enough padding for scale and outer glow to render */
 	padding: 8px;
-}
-
-.SuggestedRow Button
-{
-	opacity: 1.0;
-	visibility: visible;
-	height: 194px;
 }
 
 /* spread out the capsules when content area is in focus */
@@ -5222,7 +5264,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	height: 100%;
 	background-color: gradient( linear, 0% 0%, 3% 80%, from( #051c2dff ), to( #051c2d00 ) );
 	margin: 0 30px 10px 0;
-	width: 1370px;
+	width: 1470px;
 	padding-left: 10px;
 }
 .DownloadsSection {
@@ -5309,18 +5351,19 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game0,
 .suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game1 {
 	transform: translatex(0px);
-
 }
+
 #GamesSuggestion Button {
 
-	pre-transform-scale2d: 0.95;
-
-	box-shadow: fill #00000033 -3px -3px 6px 6px;
-
-	width: 320px;
+	width: 330px;
+	height: 204px;
 	padding: 0px;
 	margin: 0px;
-	background-color: transparent_module;
+
+	visibility: visible;
+	opacity: 1;
+
+	pre-transform-scale2d: 0.95;
 
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
@@ -5334,6 +5377,15 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	width: 100%;
 	height: 100%;
 	flow-children: down;
+	z-index: 100;
+	margin: 5px;
+	background-color: transparent_module;
+	box-shadow: fill #00000033 -3px -3px 6px 6px;
+}
+#GamesSuggestion Button:focus .ImageWrapper,
+#GamesSuggestion Button:hover .ImageWrapper
+{
+	box-shadow: none;
 }
 
 #RecentRow Button .ImageWrapper
@@ -5342,8 +5394,10 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 }
 
 .suggested #GamesSuggestion #RecentRow Button:focus,
-.suggested #GamesSuggestion Button:focus {
+.suggested #GamesSuggestion #RecentRow Button:hover
+{
 	pre-transform-scale2d: 1;
+
 	color: #161718f5;
 	background-color: action_module;
 
@@ -5355,6 +5409,30 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+
+	z-index: 98;
+}
+
+.suggested #GamesSuggestion Button:focus,
+.suggested #GamesSuggestion Button:hover
+{
+	pre-transform-scale2d: 1;
+
+	background-color: #b4dff7;
+	border-radius: 3px;
+
+	color: #161718f5;
+
+	box-shadow: box_shadow_on_color -4px -4px 12px 8px;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	z-index: 98;
 }
 #GamesSuggestion .HeaderLabel,
 .DownloadText.HeaderLabel {
@@ -5413,8 +5491,8 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 #RecentRow Button
 {
-	width: 670px;
-	height: 215px;
+	width: 680px;
+	height: 225px;
 
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f400 ), to( #b6e1fa00 ) );
 
@@ -5427,10 +5505,29 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 {
 	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
 }
+#RecentRow Button:focus .GridItemBackground,
+#RecentRow Button:hover .GridItemBackground
+{
+	width: 680px;
+	height: 225px;
+
+	background-color: #b4dff7;
+	z-index: 99;
+	border-radius: 3px;
+
+	opacity: 1;
+}
 #RecentRow Button Image
 {
 	width: 460px;
 	height: 215px;
+}
+#PopularRow Button:focus .GridItemBackground
+{
+	width: 320px;
+	background-color: #b4dff7;
+	z-index: 99;
+	border-radius: 3px;
 }
 
 #GamesSuggestion #RecentRow Button .GameDetails
@@ -5441,9 +5538,10 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	background-color: transparent_module;
 }
 
-#GamesSuggestion #RecentRow Button:focus .GameDetails
+#GamesSuggestion #RecentRow Button:focus .GameDetails,
+#GamesSuggestion #RecentRow Button:hover .GameDetails
 {
-	background-color: action_module;
+	background-color: nontransparent_action_module;
 }
 
 #RecentRow Button Label
@@ -5768,4 +5866,59 @@ LibraryAppDetails.WaitingForApp #Loading
 LibraryAppDetails.WaitingForApp #DesktopPanels
 {
 	opacity: 0.0;
+}
+
+LibraryAppDetails.UnavailableOnPlatform .PlayActionHeaderLabel
+{
+	font-size: 30px;
+}
+
+LibraryAppDetails #UnavailableOnPlatformHowToStreamInfo
+{
+	visibility: collapse;
+}
+LibraryAppDetails.UnavailableOnPlatform #UnavailableOnPlatformHowToStreamInfo
+{
+	visibility: visible;
+}
+#UnavailableOnPlatformHowToStreamInfo
+{
+	flow-children: down;
+	width: 100%;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	height: fit-children;
+	padding: 15px;
+	background-color: #5f821c;
+}
+#UnavailableOnPlatformHowToStreamInfo:focus
+{
+	background-color: #5f821c;
+
+	box-shadow: box_shadow_on_color -4px -4px 12px 8px;
+
+	transition-duration: shortduration !immediate;
+
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: longduration;
+	animation-delay: mediumduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#UnavailableOnPlatformHowToStreamInfo .HowToStreamTitle
+{
+	color: #bafe37;
+	font-size: 28px;
+}
+#UnavailableOnPlatformHowToStreamInfo .HowToStreamDesc
+{
+	color: #ffffff;
+	font-size: 24px;
+}
+
+.Parental .HideIfParental
+{
+	visibility: collapse;
 }

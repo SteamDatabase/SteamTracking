@@ -92,7 +92,7 @@
 						<Label text="#Library_Details_CommunityContent_Reviews" />
 						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
 					</ParentalButton>
-
+					<LibraryController id="Controller" class="ManageControllers" /> 
 				</Panel>
 			</Panel>
 		</Panel>

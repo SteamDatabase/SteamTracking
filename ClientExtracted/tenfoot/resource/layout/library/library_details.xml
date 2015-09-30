@@ -119,15 +119,21 @@
 					</Panel>
 	
 					<Panel class="LibrarySpacer"></Panel>
+
 					<Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow ShortArea">
-						<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" mousecanactivate="iffocused" />
-						<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" mousecanactivate="iffocused" />
-						<LibraryGameBadge id="GameBadge" class="GameBadge DetailsDataPanel Small" mousecanactivate="iffocused" />
+						<Button id="UnavailableOnPlatformHowToStreamInfo" class="Button">
+							<Label class="HowToStreamTitle" text="#Library_Details_UnavailableOnPlatform_HowToStream_Title" />
+							<Label class="HowToStreamDesc" text="#Library_Details_UnavailableOnPlatform_HowToStream_Desc" />
+						</Button>
+
+						<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" />
+						<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" />
+						<LibraryGameBadge id="GameBadge" class="GameBadge DetailsDataPanel Small" />
 					</Panel>
 					<Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow TallArea">
-						<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" mousecanactivate="iffocused" />
-						<LibraryDLC id="DLC" class="DLC DetailsDataPanel" mousecanactivate="iffocused" />
-						<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" mousecanactivate="iffocused" />
+						<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" />
+						<LibraryDLC id="DLC" class="DLC DetailsDataPanel" />
+						<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" />
 					</Panel>
 				</Panel>
 			</Panel>

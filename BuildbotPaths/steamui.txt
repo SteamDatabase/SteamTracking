@@ -1712,7 +1712,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/mainmenu.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/mainmenu.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/../controls/librarygridbase.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/../mainmenu.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/musicalbum_more.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/musicalbum_more.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/music/musicalbumpanel.cpp

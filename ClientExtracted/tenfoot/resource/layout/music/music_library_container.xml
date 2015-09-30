@@ -9,10 +9,6 @@
 		
 		<Image id="GridBackground" class="GridBackground" />
 
-		<Panel id="HeaderRow" class="HeaderRow" tabindex="auto" selectionpos="0,0">
-			<Label class="SectionHeader" text="#Music_Library_Header" />
-		</Panel>
-
 		<Panel id="ContentPanel">		
 			<Carousel id="GridTabs" tabindex="0" selectionpos="0,0" focus="edge" focus-offset="100px" wrap="false" selectionposboundary="vertical" >
 				<Button id="AlbumTitleButton" 
