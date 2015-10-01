@@ -644,13 +644,11 @@ img.game_header_image_full {
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	white-space: nowrap;
+	font-size: 0;
 }
 
-.game_purchase_action .game_purchase_price,
-.game_purchase_action .game_purchase_discount,
-.game_purchase_action .btn_addtocart,
-.game_purchase_action .btn_packageinfo
-{
+.game_purchase_action_bg > * {
+	font-size: 12px;
 	display: inline-block;
 	margin-left: 2px;
 	vertical-align: middle;
@@ -1510,6 +1508,7 @@ a.friend_block_holder:hover {
 .block_responsive_horizontal_scroll.block_content a.small_cap {
 	float: none;
 	display: inline-block;
+	vertical-align: top;
 }
 
 @media screen and (max-width: 910px )
