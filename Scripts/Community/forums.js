@@ -1950,6 +1950,7 @@ function Forum_BanUser( clanid, gidForum, gidTopic, gidComment, accountIDTarget 
 	var Modal = ShowConfirmDialog( 'Ban User', $WaitElem, 'Ban User' );
 
 	Modal.GetContent().find('.newmodal_buttons').css( 'visibility', 'hidden' );
+	Modal.GetContent().css('width', '600px');
 
 	$J.get( 'https://steamcommunity.com/gid/' + clanid + '/banuserdialog', {
 		ajax: 1,

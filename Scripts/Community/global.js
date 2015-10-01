@@ -467,12 +467,11 @@ function StandardCommunityBan( steamid, elemLink )
 
 
 
-function CEmoticonPopup( rgEmoticons, $EmoticonButton, $Textarea, strExtraClass )
+function CEmoticonPopup( rgEmoticons, $EmoticonButton, $Textarea )
 {
 	this.m_rgEmoticons = rgEmoticons;
 	this.m_$EmoticonButton = $EmoticonButton;
 	this.m_$TextArea = $Textarea;
-	this.m_strExtraClass = strExtraClass;
 
 	this.m_bVisible = false;
 	this.m_$Popup = null;
@@ -524,10 +523,6 @@ CEmoticonPopup.prototype.DismissPopup = function()
 CEmoticonPopup.prototype.BuildPopup = function()
 {
 	this.m_$Popup = $J('<div/>', {'class': 'emoticon_popup_ctn' } );
-	if ( this.m_strExtraClass )
-	{
-		this.m_$Popup.addClass( this.m_strExtraClass );
-	}
 
 	var $PopupInner = $J('<div/>', {'class': 'emoticon_popup' } );
 	this.m_$Popup.append( $PopupInner );
@@ -1140,7 +1135,7 @@ var CCommentThread = Class.create( {
 			return;
 
 		var strPrepoulatedText = $J(this.m_elTextArea ).data('prepopulated-text');
-		if ( strPrepoulatedText && v_trim( strPrepoulatedText ).replace( /[\n\r]/g, '' ) == v_trim( elTextArea.value ).replace( /[\n\r]/g, '' ) )
+		if ( strPrepoulatedText && v_trim( strPrepoulatedText ).replace( /[\n\r]/g, '' ) == v_trim( this.m_elTextArea.value ).replace( /[\n\r]/g, '' ) )
 		{
 			ShowAlertDialog( '', 'Please enter a comment to post.' );
 			return;
