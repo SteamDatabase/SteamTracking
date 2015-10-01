@@ -138,12 +138,16 @@ jQuery( function($) {
 		Responsive_BuildChangeLanguageOption( $Menu.find( '.change_language_action' ) );
 	};
 
-	var MainMenuEvents = fnBuildMenuEvents( $Menu, 'mainmenu', fnInitMainMenu );
+	var MainMenuEvents = null;
+	if ( $Menu.length )
+	{
+		MainMenuEvents = fnBuildMenuEvents( $Menu, 'mainmenu', fnInitMainMenu );
 
 
-	$('#responsive_menu_logo' ).click( function( e ) {
-		MainMenuEvents.fnActivateMenu();
-	} );
+		$('#responsive_menu_logo' ).click( function( e ) {
+			MainMenuEvents.fnActivateMenu();
+		} );
+	}
 
 
 	// local (page-specific) menu
@@ -260,6 +264,9 @@ jQuery( function($) {
 
 function Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalMenuEvents )
 {
+	if ( !MainMenuEvents && !LocalMenuEvents )
+		return;
+
 	var $Frame = $('.responsive_page_frame');
 	// set up touch drag events
 	var bInMainMenuDrag = false;
@@ -324,9 +331,9 @@ function Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalM
 		{
 			var nClientXAsPct = 100 * Touch.clientX / window.innerWidth;
 			bInDismissMenuDrag = false;
-			if ( nClientXAsPct > 93 && $LocalMenu )
+			if ( nClientXAsPct > 93 && LocalMenuEvents )
 				bInLocalMenuDrag = true;
-			else if ( nClientXAsPct < 7 )
+			else if ( nClientXAsPct < 7 && MainMenuEvents )
 				bInMainMenuDrag = true;
 		}
 

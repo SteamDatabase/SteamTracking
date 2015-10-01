@@ -2560,11 +2560,17 @@ function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	var $Link = $JFromIDOrElement(elemLink);
 	var $Popup = $JFromIDOrElement(elemPopup);
 
+	if ( $Link.hasClass('focus') )
+	{
+		HideMenu( elemLink, elemPopup );
+		return;
+	}
+
 	AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder );
 
 	ShowWithFade( $Popup );
 	$Link.addClass('focus');
-	RegisterPopupDismissal( function() { HideWithFade( $Popup ); $Link.removeClass('focus'); }, $Popup );
+	RegisterPopupDismissal( function() { HideMenu( elemLink, elemPopup ); }, $Popup );
 }
 
 function HideMenu( elemLink, elemPopup )
@@ -2572,6 +2578,7 @@ function HideMenu( elemLink, elemPopup )
 	var $Link = $JFromIDOrElement(elemLink);
 	var $Popup = $JFromIDOrElement(elemPopup);
 
+	$Link.data( 'menu-active', false );
 	HideWithFade( $Popup );
 	$Link.removeClass( 'focus' );
 	$J(document).off('.RegisterPopupDismissal');
