@@ -2,6 +2,12 @@
 {
 	margin-top: 55px;
 	flow-children: down;
+	width: fit-children;
+}
+
+#EnableSteamGuardCheckbox
+{
+	width: fit-children;
 }
 
 #MachineNameInputContainer

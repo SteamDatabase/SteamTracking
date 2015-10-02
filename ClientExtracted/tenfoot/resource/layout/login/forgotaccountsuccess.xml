@@ -6,8 +6,9 @@
 	</styles>
 
 	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonNext">
-		<Label class="WizardChildTitle" text="#ForgotAccountName_Success_Title" />
-		<Label class="WizardChildDescription" text="#ForgotAccountName_Success_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#ForgotAccountName_Success_Description" />
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonDone" onactivate="WizardButtonDone()">

@@ -6,18 +6,19 @@
 	</styles>
 
 	<AgreementsWizardChild class="WizardChild" defaultfocus="ButtonNext" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#CreateAccount_Agreements_Title" />
-		<Label class="WizardChildDescription" text="#CreateAccount_Agreements_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#CreateAccount_Agreements_Description" />
 
-		<Panel id="SSAButtonContainer">
-			<Label class="WizardLabel" id="AgreementsLabel" text="#CreateAccount_Agreements_Agreements" />
-			<Button class="WizardButton" onactivate="AgreementsShowSSA()">
-				<Label id="Label" text="#CreateAccount_Agreements_ViewSSA" />
-			</Button>
-			<Button class="WizardButton" onactivate="AgreementsShowPPA()">
-				<Label id="Label" text="#CreateAccount_Agreements_ViewPPA" />
-			</Button>			
-		</Panel>
+		  <Panel id="SSAButtonContainer" class="FlowDown">
+			  <Label class="WizardLabel" id="AgreementsLabel" text="#CreateAccount_Agreements_Agreements" />
+			  <Button class="WizardButton" onactivate="AgreementsShowSSA()">
+				  <Label id="Label" text="#CreateAccount_Agreements_ViewSSA" />
+			  </Button>
+			  <Button class="WizardButton" onactivate="AgreementsShowPPA()">
+				  <Label id="Label" text="#CreateAccount_Agreements_ViewPPA" />
+			  </Button>			
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">

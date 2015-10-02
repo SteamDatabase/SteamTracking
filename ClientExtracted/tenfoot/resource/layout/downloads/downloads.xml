@@ -16,7 +16,7 @@
 				<Label class="ProgressLabel" text="#Downloads_Summary_CurrentRate" />
 				<Label class="ProgressLabel" text="#Downloads_Summary_PeakRate" />
 				<Label class="ProgressLabel" text="#Downloads_Summary_TotalAmount" />
-                <Button class="DownloadSettingsBtn Button" >
+                <Button class="DownloadSettingsBtn Button" onactivate="DownloadsActivate();">
                         <Label text="#Downloads_Summary_Settings_btn" />
                 </Button>
 			</Panel>

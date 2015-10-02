@@ -36,12 +36,6 @@
 	flow-children: right;
 }
 
-.ContentAreaFocus .NxRightColumn
-{
-	transform: translatex( -200px );
-}
-
-
 #InventoryHeading
 {
 	margin-left: 100px;
@@ -272,12 +266,6 @@ DropDownMenu .FilterOption Label:focus
 .ContextDropdownWrapper
 {
 	visibility: collapse;
-	margin-bottom: 20px;
-}
-
-.NxFilterTab:descendantfocus .ContextDropdownWrapper
-{
-	margin-bottom: 36px;
 }
 
 .ContextDropdownWrapper.Visible
@@ -310,11 +298,6 @@ DropDownMenu .FilterOption Label:focus
 	font-size: 24px;
 	color: #67c1f5;
 	margin-bottom: 20px;
-}
-
-.NxFilterTab:descendantfocus .EconomySearchWrapper
-{
-	 color: applabelsolid;
 }
 
 #SearchLabel
@@ -869,19 +852,35 @@ TextEntry {
 	margin-bottom: 0px;
 }
 
-.NxFilterTab:descendantfocus .EconomyTagFilters DropDown
+.NxFilterTab:descendantfocus .EconomyTagFilters DropDown,
+.NxFilterTab .AlwaysVisible DropDown
 {
+	height: 48px;
 	margin-bottom: 16px;
 }
 
+.NxFilterTab .EconomySearchWrapper.AlwaysVisible
+{
+	height: fit-children;
+}
+
+
 .NxFilterTab .EconomySearchWrapper
 {
+	height: 0px;
 	margin: 0px;
+}
+
+.NxFilterTab:descendantfocus .EconomySearchWrapper,
+.NxFilterTab .EconomySearchWrapper.AlwaysVisible
+{
+	margin-bottom: 20px;
+	height: fit-children;
 }
 
 .NxFilterTab:descendantfocus .EconomySearchWrapper
 {
-	margin-bottom: 20px;
+	color: applabelsolid;
 }
 
 .DropDownHeader
@@ -911,20 +910,12 @@ TextEntry {
 	height: 0px;
 }
 
-.NxFilterTab:descendantfocus .DropDownWrapper
+.NxFilterTab:descendantfocus .DropDownWrapper,
+.NxFilterTab .DropDownWrapper.AlwaysVisible
 {
 	 height: fit-children;
 }
 
-.EconomySearchWrapper
-{
-	height: 0px;
-}
-
-.NxFilterTab:descendantfocus .EconomySearchWrapper
-{
-	height: fit-children;
-}
 
 .NxFilterTab TextEntry
 {
@@ -946,4 +937,9 @@ TextEntry {
 	color: applabelselectedsolid;
 }
 
+.NxFilterTab:descendantfocus .ContextDropdownWrapper,
+.ContextDropdownWrapper.AlwaysVisible
+{
+	margin-bottom: 16px;
+}
 

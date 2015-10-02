@@ -4381,6 +4381,7 @@
  T ASN1_put_eoc
  T ASN1_put_object
  T BFileExists(char const*)
+ T BGetFriendGamePlayedName(CSteamID, CGameID, char*, unsigned int)
  T BGetFriendGamePlayedName(CSteamID, CGameID, wchar_t*, unsigned int)
  T BGetLocalFormattedDateAndTime(long, char*, int, char*, int, bool, bool)
  T BIO_callback_ctrl

@@ -7,12 +7,8 @@
 	</styles>
 
 	<ParentalSetRecoveryChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
-		</Panel>
-
 		<Panel class="SettingsBottomPanel">
+      <Panel class="SettingsContent">
 			<!-- main panel -->
 			<Label id="SetRecoveryLine1" text="#Parental_Set_Recovery1" class="SettingsBody" />
 			<Label id="SetRecoveryLine2" text="#Parental_Set_Recovery2" class="SettingsBody" />
@@ -21,11 +17,11 @@
 				<Panel class="ParentalRecoveryEmailEntry" >
 					<Label text="#Parental_Enter_RecoveryEmail" />
 					<TextEntry class="ParentalRecoveryEmailEntry" id="Email"
-							   textinputid="ParentalRecoveryEmailEntry"
 							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 							   undohistory="enabled" />
 				</Panel>
 			</Panel>
+      </Panel>
 					
 
 		</Panel>

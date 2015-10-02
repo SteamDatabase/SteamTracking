@@ -20,6 +20,13 @@ ContentFrame:descendantfocus
 	transform: none;
 }
 
+.BehindMessageBox ContentFrame
+{
+	desaturation: 0.2;
+	blur: gaussian( 1.5 );
+	wash-color: #00000066;
+}
+
 #ContentFrameHeader
 {
 	width: 100%;

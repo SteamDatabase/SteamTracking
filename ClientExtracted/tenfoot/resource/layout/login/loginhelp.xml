@@ -6,22 +6,23 @@
 	</styles>
 
 	<LoginHelpWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonNext">
-		<Label class="WizardChildTitle" text="#LoginHelp_Title" />
-		<Label class="WizardChildDescription" text="#LoginHelp_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#LoginHelp_Description" />
 
-		<Panel id="RadioButtonContainer">
-			<Panel class="InputContainerDown GapDown">
-				<RadioButton group="OPT" class="Button RadioButton" id="RadioHaveAccountName" tabindex="0.0" text="#LoginHelp_HaveAccountName" selectionpos="auto" />
-			</Panel>
-			<Panel class="InputContainerDown GapDown">
-				<RadioButton group="OPT" class="Button RadioButton" id="RadioForgotAccountName" tabindex="0.0" text="#LoginHelp_ForgotAccountName" selectionpos="auto" />
-			</Panel>
-			<!-- 
-			<Panel class="InputContainerDown GapDown">
-				<RadioButton group="OPT" class="Button RadioButton" id="RadioLostAuthenticator" tabindex="0.0" text="#LoginHelp_LostAuthenticator" selectionpos="auto" visible="0" />
-			</Panel>
-			 -->
-		</Panel>
+		  <Panel id="RadioButtonContainer">
+			  <Panel class="InputContainerDown GapDown">
+				  <RadioButton group="OPT" class="Button RadioButton" id="RadioHaveAccountName" tabindex="0.0" text="#LoginHelp_HaveAccountName" selectionpos="auto" />
+			  </Panel>
+			  <Panel class="InputContainerDown GapDown">
+				  <RadioButton group="OPT" class="Button RadioButton" id="RadioForgotAccountName" tabindex="0.0" text="#LoginHelp_ForgotAccountName" selectionpos="auto" />
+			  </Panel>
+			  <!-- 
+			  <Panel class="InputContainerDown GapDown">
+				  <RadioButton group="OPT" class="Button RadioButton" id="RadioLostAuthenticator" tabindex="0.0" text="#LoginHelp_LostAuthenticator" selectionpos="auto" visible="0" />
+			  </Panel>
+			   -->
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

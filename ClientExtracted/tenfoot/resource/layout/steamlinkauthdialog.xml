@@ -10,7 +10,6 @@
   		<Label class="StdTitle" text="#SteamUI_RemoteDeviceAuthorization_Title" />
   		<Label id="MsgBoxDescriptionArea" text="#SteamUI_RemoteDeviceAuthorization_Text" />
   		<TextEntry class="ParentalPINEntry" id="PINEntry"
-					textinputid="ParentalPINEntry"
 					textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 					undohistory="enabled" />
   		<Panel id="MsgBoxButtons" >

@@ -6,7 +6,7 @@
 	</styles>
 
 	<FriendListItemBase>
-		<AvatarImage id="FriendPanelImage" class="FriendsListItemAvatar" onmouseactivate="ShowFriendsProfileDetails();" oncontextmenu="ShowFriendsProfileDetails();" />
+		<AvatarImage id="FriendPanelImage" class="FriendsListItemAvatar" onmouseactivate="ShowFriendsProfileDetails();" oncontextmenu="ShowFriendsProfileDetails();" onactivate="FriendListItemBaseActivated()" />
 		<Panel id="FriendPanelLabels" class="FriendsListItemPanelLabels">
 			<Label id="FriendPersonaName" class="FriendsListItemPersonaName" />
 			<Label id="FriendStatus" class="FriendsListItemStatus" />

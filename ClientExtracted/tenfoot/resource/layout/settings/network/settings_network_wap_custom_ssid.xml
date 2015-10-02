@@ -6,25 +6,24 @@
 	</styles>
 
 	<SettingsPanelNetwork_OtherSSID class="WizardChild" defaultfocus="SettingsNetwork_SSID_Other_id" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Label class="WizardChildTitle" text="#Settings_Network" />
+		<Panel class="WizardContent">
+		  <Label class="SettingsCallout LongDesc" text="#SettingsNetwork_WAP_OtherSSID" />
+		  <Panel class="Spacer"/>
 
-		<Label class="SettingsCallout LongDesc" text="#SettingsNetwork_WAP_OtherSSID" />
-		<Panel class="Spacer"/>
+		  <Panel id="CustomSSID_Edit" class="NetworkWiFiCustomSSID" selectionpos="auto">
+			  <TextEntry
+				  id="SettingsNetwork_SSID_Other_id"
+				  class="WizardTextEntry"
+				  textinputid="SSID_Other"
+				  textinputdoneactionstring="#SettingsNetwork_SSID_Other_DAC"
+				  textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads"
+          textinputhidesuggestions="1"
+			  />
+		  </Panel>
 
-		<Panel id="CustomSSID_Edit" class="NetworkWiFiCustomSSID" selectionpos="auto">
-			<TextEntry
-				id="SettingsNetwork_SSID_Other_id"
-				class="WizardTextEntry"
-				textinputid="SSID_Other"
-				textinputdoneactionstring="#SettingsNetwork_SSID_Other_DAC"
-				textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads"
-        textinputhidesuggestions="1"
-			/>
-		</Panel>
-
-		<Label class="SettingsCallout LongDesc" text="#SettingsNetwork_WAP_OtherSSID_Security" />
-		<DropDown class="SettingsNetwork_Security_DropDown" id="SecurityOptions" />
+		  <Label class="SettingsCallout LongDesc" text="#SettingsNetwork_WAP_OtherSSID_Security" />
+		  <DropDown class="SettingsNetwork_Security_DropDown" id="SecurityOptions" />
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

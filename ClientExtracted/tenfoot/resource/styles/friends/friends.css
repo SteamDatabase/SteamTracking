@@ -106,7 +106,24 @@ Friends.BehindMessageBox.FriendsInputTextEntry #FriendsMainBodyColumnLeft
 }
 
 // when text input is active
-.BehindTextInputHandler #FriendsChatDialogContainer
+//.BehindTextInputHandler #FriendsChatDialogContainer
+//{
+//	transform: translateX( -460px );
+//	background-color: friendschatbackground;
+//}
+
+// while text input is active
+//.BehindTextInputHandler #FriendsMainBodyChatContainer
+//{
+//	height: 285px;
+//}
+
+FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
+{
+	height: 285px;
+}
+
+#FriendsChatDialogContainer:descendantfocus
 {
 	transform: translateX( -460px );
 	background-color: friendschatbackground;
@@ -141,7 +158,7 @@ FriendsChatDialog AvatarImage.AvatarVisible
 }
 
 
-FriendsChatDialog.ClanChatDisabled
+FriendsChatDialog.ClanChatDisabledX
 {
 	visibility: collapse;
 	opacity: 0.0;
@@ -241,12 +258,6 @@ FriendsChatDialog.ClanChatDisabled
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-// while text input is active
-.BehindTextInputHandler #FriendsMainBodyChatContainer
-{
-	height: 285px;
-}
-
 #FriendsMainBodyChatMessages
 {
 	width: 100%;
@@ -313,68 +324,6 @@ FriendsChatDialog.ClanChatDisabled
 	flow-children: right;
 	vertical-align: bottom;
 }
-
-#FriendsMainBodyInputTextArea
-{
-	width: fill-parent-flow(1.0);
-	height: 106px;
-	overflow: squish scroll;
-	white-space: normal;
-	opacity: 0.85;
-
-	padding-left: 8px;
-	padding-right: 10px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	font-size: 28px;
-	font-weight: normal;
-	text-overflow: clip;
-	color: friendsitemmainlistbkgnd_from;
-	background-color: friendschatinputbkgnd_text;
-
-	border-width: 5px;
-	border-color: friendstab;
-	border-style: solid;
-	border-radius: 0px;
-
-	transition-property: opacity;
-	transition-duration: 0.2s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-#FriendsMainBodyInputTextArea:hover
-{
-	opacity: 1.0;
-}
-
-#FriendsMainBodyInputTextArea:descendantfocus
-{
-	color: applabelselectedsolid;
-	
-	transition-duration: 0.4s !immediate;
-
-	border-color: #cececeff;
-	background-color: friendsitemmainlistbkgnd;
-
-	animation-name: main-button-glow-movement-no-fill;
-	//animation-name: links-and-more-button-focus;
-	animation-duration: 1.7s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-
-	transition-property: background-color, border;
-	transition-duration: 0.3s !immediate;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-#FriendsMainBodyInputTextArea:hover:disabled
-{
-	background-color: friendschatinputbkgnd_text;
-}
-
-
-
 
 #FriendsMainBodyInputSendButton
 {
@@ -631,7 +580,8 @@ FriendsSelfHeader.Golden Label
 }
 
 
-.LeftMainListItem.CurrentSelection AvatarImage, .LeftMainListItem.CurrentSelection #FriendPanelLabels
+.LeftMainListItem:focus AvatarImage,
+.LeftMainListItem:focus #FriendPanelLabels
 {
 	transform: translatex( 5px );
 }
@@ -719,7 +669,7 @@ FriendsSelfHeader.Golden Label
 	transform: translateX( 10px );
 	height: 114px;
 
-	transition-property: background-color, border, box-shadow, pre-transform-scale2d, transform, opacity, height;
+	transition-property: background-color, border, box-shadow, pre-transform-scale2d, transform, height;	//opacity, 
 	transition-duration: 0.2s !immediate;
 	transition-timing-function: bigpicture-ease-in-out;
 }
@@ -733,7 +683,7 @@ FriendsSelfHeader.Golden Label
 .LeftMainListItem:focus
 {
 	background-color: friendsitemmainlistbkgnd;
-	border-color: #ffffffff;
+	border-color: red;
 	transform: translateX( 0px );
 }
 
@@ -743,13 +693,11 @@ FriendsSelfHeader.Golden Label
  	transform: translatex( 0px );
 }
 
-.LeftMainListItem.CurrentSelection:hover 
+.LeftMainListItem:hover 
 {
  	pre-transform-scale2d: 1.0;	
  	transform: translatex( 10px );
 }
-
-
 
 .LeftMainListItem:focus:hover .FriendsListItemPersonaName, .LeftMainListItem:focus:hover .FriendsListItemStatus, .LeftMainListItem:focus:hover .FriendsListItemStatusDetail
 {
@@ -767,7 +715,7 @@ FriendsSelfHeader.Golden Label
 	box-shadow: inset #00000099 0px 0px 12px 0px;
 }
 
-#FriendsMainBodyListContainer:descendantfocus .LeftMainListItem.CurrentSelection
+#FriendsMainBodyListContainer:descendantfocus .LeftMainListItem:focus
 {
 	transition-duration: 0.4s !immediate;
 
@@ -787,13 +735,13 @@ FriendsSelfHeader.Golden Label
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
-.LeftMainListItem.CurrentSelection:descendantfocus
+.LeftMainListItem:descendantfocus
 {
 	animation-name: links-and-more-button-focus;
 }
 
 //secondary focus in the list
-.LeftMainListItem.CurrentSelection
+.LeftMainListItem:focus
 {
 	transition-duration: 0.2s;
 
@@ -846,12 +794,12 @@ GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
 	color: friendsgolden_darkbg;
 }
 
-.LeftMainListItem.CurrentSelection.Online Label
+.LeftMainListItem.Online:focus Label
 {
 	color: friendsonline_darkbg;
 }
 
-.LeftMainListItem.CurrentSelection.Online:descendantfocus Label
+.LeftMainListItem.Online:descendantfocus Label
 {
 	color: friendsonline_lightbg;
 }
@@ -861,32 +809,31 @@ GroupListItem.LeftMainListItem.Offline Label.FriendsListItemStatus
 	color: friendsingame_lightbg;
 }
 
-.LeftMainListItem.CurrentSelection.InGame Label
+.LeftMainListItem.InGame:focus Label
 {
 	color: friendsingame_darkbg;
 }
 
-.LeftMainListItem.CurrentSelection.InGame:descendantfocus Label
+.LeftMainListItem.InGame:descendantfocus Label
 {
 	color: friendsingame_lightbg;
 }
 
-.LeftMainListItem.CurrentSelection.Golden Label
+.LeftMainListItem.Golden:focus Label
 {
 	color: friendsgolden_darkbg;
 }
 
-.LeftMainListItem.CurrentSelection.Offline Label
+.LeftMainListItem.Offline:focus Label
 {
 	color: #99999999;
 }
 
-.LeftMainListItem.CurrentSelection.Offline:descendantfocus Label
+.LeftMainListItem.Offline:descendantfocus Label
 {
 	color: applabelselectedsolid;
 }
 
-// GroupListItem.LeftMainListItem.CurrentSelection.Offline Label
 GroupListItem.LeftMainListItem.Offline:focus Label
 {
 	color: applabelselectedsolid;
@@ -925,9 +872,8 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	animation-direction: normal;
 }
 
-#FriendsMainBodyLeftHeaderButtons:descendantfocus .FriendsMainBodyHeaderButton.CurrentSelection
+#FriendsMainBodyLeftHeaderButtons:descendantfocus .FriendsMainBodyHeaderButton
 {
-	background-color: friendstabcurrentselection;
 	border-color: #ffffff00;
 	
 	transition-duration: 0.23s;
@@ -955,7 +901,7 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	transition-duration: 0.23s;
 }
 
-.FriendsMainBodyHeaderButton.CurrentSelection, .FriendsMainBodyHeaderButton:active
+.FriendsMainBodyHeaderButton:focus, 
 {
 	color: #f2f2f2ff;
 	background-color: friendstabcurrentselection;
@@ -967,12 +913,29 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	background-color: friendstabcurrenthover;	
 }
 
+.FriendsMainBodyHeaderButton:selected
+{
+	color: #f2f2f2ff;
+	background-color: friendstabcurrenthover;	
+}
+
 .FriendsMainBodyHeaderButton Label
 {
 	margin-left: 15px;
 	margin-right: 15px;
 	margin-top: 5px;
 	margin-bottom: 10px;
+}
+
+.FriendsMainBodyHeaderButton Label.InviteCount
+{
+	color: white;
+	margin-left: 15px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	vertical-align: top;
+	horizontal-align: right;
 }
 
 #FriendsMainBodyLeftHeaderUnderline
@@ -1003,6 +966,36 @@ GroupListItem.LeftMainListItem.Offline:focus Label.FriendsListItemStatus
 	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+
+#GroupsSearchButton
+{
+	height: 70px;
+	width: 100%;
+	flow-children: right;
+	margin-left: 10px;
+
+	background-image: url( "file://{images}/friends/friends_search.png" );
+	background-repeat: no-repeat;
+	background-position: left 10px top 15px;
+}
+
+#GroupsSearchButton Label
+{
+	font-size: 30px;
+	color: white;
+	vertical-align: center;
+	margin-left: 70px;
+}
+
+#GroupsSearchButton:focus
+{
+	background-color: white;
+}
+
+#GroupsSearchButton:focus Label
+{
+	color: black;
 }
 
 .MainBodyLeftList
@@ -1142,8 +1135,8 @@ FriendsIndicatorContainer
 	visibility: collapse;
 }
 
-.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedText,
-.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
+.LeftMainListItem:focus FriendsIndicatorContainer Label.FriendIndicatorContainedText,
+.LeftMainListItem:focus FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
 {
 	color: #999999ff;
 }
@@ -1280,29 +1273,29 @@ FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
 }
 
 
-.LeftMainListItem.CurrentSelection:descendantfocus FriendsIndicatorContainer Label.FriendIndicatorContainedText
+.LeftMainListItem:descendantfocus FriendsIndicatorContainer Label.FriendIndicatorContainedText
 {
 	color: #303030ff;
 }
 
-.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedText
+.LeftMainListItem:focus FriendsIndicatorContainer Label.FriendIndicatorContainedText
 {
 	wash-color: #ffffffff;
 	background-color: none;
 }
 
 
-.LeftMainListItem.CurrentSelection:descendantfocus FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
+.LeftMainListItem:descendantfocus FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
 {
 	background-color: #303030ff;
 	color: friendsoffline_solid;
 }
 
-.LeftMainListItem.CurrentSelection FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
+.LeftMainListItem:focus FriendsIndicatorContainer Label.FriendIndicatorContainedImageWithText
 {
-
 	wash-color: #ffffffff;
 }
+
 .AddFriendMsgBox #MsgBoxDescriptionArea
 {
 	flow-children: down;
@@ -1345,8 +1338,6 @@ FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
 	transform: translatex( 480px );
 }
 
-
-
 .ScreenSaverMode #Friends
 {
 	opacity: 0.0;
@@ -1355,7 +1346,6 @@ FriendsIndicatorContainer.GroupRequest #FriendIndicatorContainedTextGroupRequest
 	transition-duration: 1.4s, 0.3s !immediate;
 	transition-timing-function: linear;
 }
-
 
 #FriendsMainBodyStatusGroupLeft
 {
@@ -1658,12 +1648,55 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 
 }
 
-#FriendsMainBodyListContainer:descendantfocus .LeftMainListItem.SearchEntry.CurrentSelection
+.LeftMainListItem.Header
+{
+	vertical-align: center;
+	width: 500px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 27px;
+	text-overflow: clip;
+	height: 50px;
+}
+
+.LeftMainListItem.Header:hover
+{
+ 	pre-transform-scale2d: 1.0;	
+ 	transform: translatex( 0px );
+}
+
+.LeftMainListItem.Header:focus
+{
+	background-color: friendsitemmainlistbkgnd;
+	border-color: #ffffffff;
+	transform: translateX( 0px );
+}
+
+
+.LeftMainListItem.Header #FriendPanelImage,
+.LeftMainListItem.Header #FriendPanelLabels,
+.LeftMainListItem.Header #AvatarImage
+{
+	visibility: collapse;
+}
+
+.LeftMainListItem.Header #CategoryLabel
+{
+	color: white;
+
+}
+
+.LeftMainListItem.Header_RecentChat
+{
+	background-color: red;
+}
+
+#FriendsMainBodyListContainer:descendantfocus .LeftMainListItem.SearchEntry:focus
 {
 	transform: translateX( 10px );
 }
-.LeftMainListItem.SearchEntry #FriendPanelLabels,
-.LeftMainListItem.SearchEntry.CurrentSelection #FriendPanelLabels
+
+.LeftMainListItem.SearchEntry #FriendPanelLabels
 {
 	transform: translateX( 0px );
 }
@@ -1672,8 +1705,7 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 /* friend entries hidden by a search */
 .LeftMainListItem.FilterInvisible
 {
-	opacity: 0.0;
-	height: 0px;
+	visibility: collapse;
 }
 
 /* the help text inside the search entry */
@@ -1737,15 +1769,11 @@ FriendInvitePanel #FriendPanelLabels #FriendPersonaName
 TextEntry:focus
 {
 	animation-name: none;
-	color: blue;
-}
-
-TextEntry.CurrentSelection Label
-{
 	color: white;
 }
 
-.LeftMainListItem.SearchEntry.descendantfocus, .LeftMainListItem.SearchEntry.CurrentSelection:hover, 
+.LeftMainListItem.SearchEntry.descendantfocus, .LeftMainListItem.SearchEntry:hover, 
+.LeftMainListItem.SearchEntry.descendantfocus, .LeftMainListItem.SearchEntry:focus
 {
 	background-color: friendsitemmainlistbkgnd;
 }
@@ -1978,12 +2006,93 @@ Friends .LoadError #Error,
 	padding-top: 10px;
 }
 
-.InviteButton
+.FriendsListHeader
+{
+	color: white;
+	font-size: 30px;
+
+	margin-top: 4px;
+	margin-left: 2px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.FriendsListHeader.EmptyList
 {
 	visibility: collapse;
 }
 
-.HasInvites .InviteButton
+.FriendCategory
+{
+	height: fit-children;
+	width: 100%;
+	flow-children: down;
+}
+
+.GroupsCategory
+{
+	height: fit-children;
+	width: 100%;
+	flow-children: down;
+}
+
+#FriendsSearchCommunityButton
 {
 	visibility: visible;
+	flow-children: right;
+	background-color: red;
+	padding: 5px;
+	width: 100%;
+}
+
+#FriendsSearchCommunityButton.SearchEmpty
+{
+	visibility: collapse;
+}
+
+#FriendsSearchCommunityButton Label
+{
+	color: white;
+	margin-left: 20px;
+	vertical-align: center;
+	font-size: 30px;
+}
+
+.SearchCommunityIcon
+{
+	background-image: url( "file://{images}/friends/friends_search.png" );
+	background-repeat: no-repeat;
+	background-position: left 25px top 25px;
+	height: 90px;
+	width: 90px;
+	border-width: 4px;
+	border-style: solid;
+	border-radius: 0px;
+	box-shadow: fill #eeeeee00 -4.5px -4.5px 6px 9px;
+	background-color: #111111ff;
+}
+
+.FriendsSearchIcon
+{
+	background-image: url( "file://{images}/friends/friends_search.png" );
+	background-repeat: no-repeat;
+	background-position: left 10px top 5px;
+	height: 70px;
+	width: 70px;
+}
+
+#FriendsSearchTextEntry
+{
+	width: 100%;
+	margin-right: 30px;
+}
+
+#FriendsSearchTextEntry.HasInput Label
+{
+	opacity: 0.0;
+}
+
+#FriendsSearchTextEntry:descendantfocus Label
+{
+	opacity: 0.0;
 }

@@ -5,12 +5,7 @@
 	</styles>
 
 	<SettingsPanel_Broadcast class="SettingsSection" defaultfocus="SettingsDownloads_Libraries">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Broadcast" />
-		</Panel>
-		
-		<Panel class="SettingsBottomPanel FlowDown">
+		<Panel class="SettingsBottomPanel">
 			<!-- main panel -->
 			<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
 

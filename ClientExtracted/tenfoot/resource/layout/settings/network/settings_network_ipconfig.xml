@@ -6,14 +6,14 @@
 	</styles>
 
 	<SettingsPanelNetwork_IPSettings class="WizardChild" defaultfocus="SettingsNetwork_Automatic" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Label class="WizardChildTitle" text="#Settings_Network" />
-
-		<Label class="SettingsCallout LongDesc" text="#SettingsNetwork_IPSettings" />
-		<Panel class="Radios" childfocusonhover="false">
-		<RadioButton group="IPChoice" class="Button RadioButton" id="SettingsNetwork_Automatic" tabindex="0.0" text="#SettingsNetwork_Automatic" selectionpos="auto" onactivate="Autoconfig( true );" />
-		<RadioButton group="IPChoice" class="Button RadioButton" id="SettingsNetwork_Manual" tabindex="1.0" text="#SettingsNetwork_Manual" selectionpos="auto" onactivate="Autoconfig( false );" />
-		</Panel>
+    <Panel class="WizardContent">
+		  <Label class="SettingsCallout LongDesc" text="#SettingsNetwork_IPSettings" />
+		  <Panel class="Radios" childfocusonhover="false">
+		  <RadioButton group="IPChoice" class="Button RadioButton" id="SettingsNetwork_Automatic" tabindex="0.0" text="#SettingsNetwork_Automatic" selectionpos="auto" onactivate="Autoconfig( true );" />
+		  <RadioButton group="IPChoice" class="Button RadioButton" id="SettingsNetwork_Manual" tabindex="1.0" text="#SettingsNetwork_Manual" selectionpos="auto" onactivate="Autoconfig( false );" />
+		  </Panel>
+    </Panel>
+    
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="NetworkSettings_LabelNext" />

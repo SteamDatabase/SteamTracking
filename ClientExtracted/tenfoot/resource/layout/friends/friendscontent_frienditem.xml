@@ -1,0 +1,20 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
+		<include src="file://{resources}/styles/friends/friendscontent_frienditem.css" />
+	</styles>
+
+	<FriendsContent_FriendItem  selectionpos="auto" oncontextmenu="FriendsMainViewMore();" >
+		<Panel class="GroupContent">
+			<AvatarImage id="Avatar"/>		
+			<Panel class="FriendItemLabelContainer">
+				<Label text="#friend_item_friendname" class="FriendName" />
+				<Label text="#friend_item_persona_state" class="FriendPersonaStatus"/>
+				<Label text="#friend_item_status_detail" class="FriendPersonaStatusDetail"/>
+				<Label text="#group_item_unread" class="FriendUnreadMessages" />
+				<Label text="#friend_item_lobby_invite" class="FriendHasLobbyInvite" />
+			</Panel>
+		</Panel>
+	</FriendsContent_FriendItem>
+</root>

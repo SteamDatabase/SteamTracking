@@ -6,12 +6,13 @@
 	</styles>
 
 	<ChangeEmailFailWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonNext">
-		<Label class="WizardChildTitle" text="#ChangeEmail_Fail_Title" />
-		<Label class="WizardChildDescription" text="#ChangeEmail_Fail_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#ChangeEmail_Fail_Description" />
 
-		<Panel id="ErrorContainer">
-			<Label class="WizardChildDescription" id="ErrorLabel" />
-		</Panel>
+		  <Panel id="ErrorContainer">
+			  <Label class="WizardChildDescription" id="ErrorLabel" />
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonTryAgain" onactivate="ChangeEmailFailTryAgain()">

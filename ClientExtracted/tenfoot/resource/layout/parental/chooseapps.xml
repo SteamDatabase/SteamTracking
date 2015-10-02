@@ -7,10 +7,6 @@
 	</styles>
 
 	<ParentalChooseAppsChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Panel class="SettingsHeader" hittest="false">
-			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
-		</Panel>
-		<Label id="ParentalSectionLabel" class="SectionLabel" text="#Parental_Choose_Apps" />
 		<ParentalLibraryGrid selectionposboundary="vertical" id="ParentalLibraryGrid" />
 	</ParentalChooseAppsChild>
 

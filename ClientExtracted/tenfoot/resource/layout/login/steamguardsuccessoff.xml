@@ -5,8 +5,9 @@
 	</styles>
 
 	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonDone">
-		<Label class="WizardChildTitle" text="#ManageSteamGuard_SuccessOff_Title" />
-		<Label class="WizardChildDescription" text="#ManageSteamGuard_SuccessOff_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#ManageSteamGuard_SuccessOff_Description" />
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonDone" onactivate="ManageSteamGuardDone()">

@@ -6,26 +6,27 @@
 	</styles>
 
 	<CreateAccountSuccessWizardChild class="WizardChild" defaultfocus="ButtonDone" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#CreateAccount_Success_Title" />
-		<Label class="WizardChildDescription" text="#CreateAccount_Success_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#CreateAccount_Success_Description" />
 
-		<Panel id="CredentialsWrapper">
-			<Panel class="InputContainerDown GapDown">
-				<Label class="WizardLabel" text="#CreateAccount_Credentials_AccountName" />
-				<Label class="BigWhiteLabel" id="AccountNameLabel" />
-			</Panel>
-			<Label class="WizardLabel" text="#CreateAccount_Credentials_Password" />
-			<Panel class="InputContainerRight GapDown">
-				<TextEntry class="WizardTextEntry" id="PasswordTextEntry" />
-				<Button class="WizardButton" id="ShowPasswordButton" onactivate="CreateAccount_ShowPassword()">
-					<Label id="ShowPasswordLabel" text="#CreateAccount_Success_Show" />
-				</Button>
-			</Panel>
-			<Panel class="InputContainerDown GapDown">
-				<Label class="WizardLabel" text="#CreateAccount_Success_ContactEmailAddress" />
-				<Label class="BigWhiteLabel" id="EmailLabel" />
-			</Panel>
-		</Panel>
+		  <Panel id="CredentialsWrapper">
+			  <Panel class="InputContainerDown GapDown">
+				  <Label class="WizardLabel" text="#CreateAccount_Credentials_AccountName" />
+				  <Label class="BigWhiteLabel" id="AccountNameLabel" />
+			  </Panel>
+			  <Label class="WizardLabel" text="#CreateAccount_Credentials_Password" />
+			  <Panel class="InputContainerRight GapDown">
+				  <TextEntry class="WizardTextEntry" id="PasswordTextEntry" />
+				  <Button class="WizardButton" id="ShowPasswordButton" onactivate="CreateAccount_ShowPassword()">
+					  <Label id="ShowPasswordLabel" text="#CreateAccount_Success_Show" />
+				  </Button>
+			  </Panel>
+			  <Panel class="InputContainerDown GapDown">
+				  <Label class="WizardLabel" text="#CreateAccount_Success_ContactEmailAddress" />
+				  <Label class="BigWhiteLabel" id="EmailLabel" />
+			  </Panel>
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton" id="ButtonDone" onactivate="CreateAccountSuccess()">

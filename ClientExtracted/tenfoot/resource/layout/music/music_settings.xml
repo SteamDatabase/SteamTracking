@@ -6,10 +6,6 @@
 	</styles>
 	
 	<MusicSettingsPanel class="SettingsSection" tabindex="auto" selectionpos="auto" defaultfocus="CrawlAtStartupCheckbox">
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Music_Settings_Header" />
-		</Panel>
-		
 		<Panel class="SettingsBottomPanel">
 
 			<Panel class="SettingsContent SettingsLeftContent" >

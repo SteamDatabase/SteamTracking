@@ -2,20 +2,17 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/settings.css" />
+		<include src="file://{resources}/styles/mainmenu.css" />
 	</styles>
 
 	<SettingsPanel_InGame class="SettingsSection" defaultfocus="SettingsInGame_Enable">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_InGame" />
-		</Panel>
-		
 		<Panel class="SettingsBottomPanel FlowDown">
 			<!-- main panel -->
 			<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
 				<Label class="SettingsCallout" text="#SettingsInGame_Intro" />
 				<ToggleButton id="SettingsInGame_Enable" class="CheckBox" text="#SettingsInGame_Enable" tabindex="0" selectionpos="0,0" onactivate="InGameSettingsControlSelected()"/>
 			</Panel>
+			<Panel id="HR3" class="HR" />
 			<!-- used for enable/disable CSS -->
 			<Panel id="SettingsInGame_SubControls" tabindex="auto" selectionpos="auto">
 				<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">

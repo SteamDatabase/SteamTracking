@@ -173,39 +173,6 @@ function OnGameHubsButtonFocused()
 }
 
 
-function ShowPanel( panel )
-{
-	var home = $("#CommunityHomeContent");
-	var sectionWrapper = $("#SectionWrapper");
-	$.Each( sectionWrapper.FindChildrenWithClassTraverse( "CommunityContentSectionPanel" ),
-		function( elChild )
-		{
-			elChild.RemoveClass( 'Selected' );
-			home.RemoveClass( elChild.id + "Visible" );
-		}
-	);
-
-	$("#" + panel).AddClass( 'Selected' );
-	home.AddClass( panel + "Visible" );
-}
-
-
-function SelectContentTab( panel, url )
-{
-	var p = $("#" + panel );
-	if ( !p.BHasClass( 'Selected' ) )
-	{
-		ShowPanel( panel );
-		$("#" + panel).LoadPanelAsyncWithWebAuth( url, false );
-	}
-}
-
-function ShowEmptyTab( msg )
-{
-	ShowPanel( 'CommunityContentEmpty' );
-	$("#CommunityContentEmptyLabel").text = msg;
-}
-
 function SelectFilterType( filter )
 {
 	$.DispatchEvent( 'AppHubSelectFilter', $('#CommunityContentAll'), filter );
@@ -306,7 +273,7 @@ function ShowFriendActivity( url )
 
 	var finalURL = url + "?timezoneOffset=" + tzOffset;
 
-	SelectContentTab( 'CommunityContentFriendActivity', finalURL );
+	$("#CommunityContentFriendActivity").LoadPanelAsyncWithWebAuth( finalURL, false );
 }
 
 

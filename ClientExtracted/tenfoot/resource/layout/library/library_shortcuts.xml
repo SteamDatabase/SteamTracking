@@ -2,16 +2,15 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/settings.css" />
+		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 
   <AddShortcutPanel class="SettingsSection" defaultfocus="ShortcutsGrid" selectionposboundary="vertical">
-    <Panel  class="SettingsHeader" tabindex="auto" selectionpos="0,0" />
-  	<Label class="SettingsHeaderLegend" text="#Library_AddShortcut_Title" />
 		<Panel hittest="false" id="FastScrollWrapper">
 			<Label id="FastScrollLabel" />
 			<Label id="TypeToJumpLabel" />
 		</Panel>
-		<Grid id="ShortcutsGrid" class="GamesGrid" scrolldirection="horizontal" verticalcount="3" horizontalcount="4" selectionpos="0,3" selectionposboundary="vertical" tabindex="auto">
+		<Grid id="ShortcutsGrid" class="GamesGrid" scrolldirection="vertical" verticalcount="3" horizontalcount="4" selectionposboundary="vertical" tabindex="auto">
 		</Grid>
 	</AddShortcutPanel>
 </root>

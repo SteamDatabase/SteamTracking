@@ -6,24 +6,22 @@
 	</styles>
 
 	<ForgotAccountNameTypeWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonNext">
-		<Label class="WizardChildTitle" text="#ForgotAccountName_Type_Title" />
-		<Label class="WizardChildDescription" text="#ForgotAccountName_Type_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#ForgotAccountName_Type_Description" />
 
-		<Panel id="RadioButtonContainer">
-			<Panel class="InputContainerDown GapDown">
-				<RadioButton group="TYPE" class="Button RadioButton" id="RadioEmail" tabindex="0.0" text="#ForgotAccountName_Type_Email" selectionpos="auto" />
-			</Panel>
-			<Panel class="InputContainerDown GapDown">
-				<RadioButton group="TYPE" class="Button RadioButton" id="RadioCDKey" tabindex="0.0" text="#ForgotAccountName_Type_CDKey" selectionpos="auto" />
-			</Panel>
-		</Panel>
+		  <Panel id="RadioButtonContainer">
+			  <Panel class="InputContainerDown GapDown">
+				  <RadioButton group="TYPE" class="Button RadioButton" id="RadioEmail" tabindex="0.0" text="#ForgotAccountName_Type_Email" selectionpos="auto" />
+			  </Panel>
+			  <Panel class="InputContainerDown GapDown">
+				  <RadioButton group="TYPE" class="Button RadioButton" id="RadioCDKey" tabindex="0.0" text="#ForgotAccountName_Type_CDKey" selectionpos="auto" />
+			  </Panel>
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="Label" text="#WizardButton_Next" />
-			</Button>
-			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
-				<Label id="Label" text="#WizardButton_Back" />
 			</Button>
 			<Button class="WizardButton GapRight" id="ButtonCancel" onactivate="WizardButtonCancel()">
 				<Label id="Label" text="#WizardButton_Cancel" />

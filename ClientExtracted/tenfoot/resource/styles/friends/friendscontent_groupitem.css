@@ -1,0 +1,158 @@
+FriendsContent_GroupItem
+{
+
+	margin: 4px;
+	width: 300px;
+	height: 110px;
+	flow-children: none;
+	//background-color: transparent_module;
+		background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
+	box-shadow: module_shadow;
+	//padding: 18px;
+	
+}
+
+FriendsContent_GroupItem:focus
+{
+	border: 3px solid ui_primary_color;
+
+	background-color: #14C6FC99;
+	background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #14C6FC99), color-stop(1.0,#2E6480FF));
+	    	
+}
+
+FriendsContent_GroupItem.ConnectedToChat
+{
+background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
+}
+
+FriendsContent_GroupItem.ConnectedToChat:focus
+{
+	border: 3px solid ui_primary_color;
+		background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #14C6FC99), color-stop(1.0,#2E6480FF));
+}
+
+.GroupContent
+{	
+	flow-children: right;
+	//overflow: clip;
+}
+
+AvatarImage
+{
+	margin: 5px;
+	width: 100px;
+	height: 100px;
+	border-radius: 4px;
+}
+
+
+FriendsContent_GroupItem:focus .GroupContent AvatarImage
+{
+	transform: translatey( 2px ) translatex( 2px );
+	margin: 0px;
+	vertical-align: center;
+}
+
+Label
+{
+	margin-left: 8px;
+	color: ui_primary_color;
+	font-size: 20px;
+}
+
+FriendsContent_GroupItem:focus Label
+{
+	margin-left: 8px;
+	//color: ui_primary_color;
+	font-size: 20px;
+	transform: translatey( 2px ) translatex( 7px );
+}
+
+
+.GroupItemLabelContainer
+{
+	flow-children: down;
+	vertical-align: center;
+}
+
+.GroupItemName
+{
+	color: white;
+	font-size: 20px;
+	margin-left: 8px;
+	white-space: nowrap;
+	//transform: translatey( 0px ) translatex( 4px );
+}
+
+FriendsContent_GroupItem:focus .GroupItemName
+{
+	color: white;
+	font-size: 20px;
+	margin-left: 8px;
+	white-space: nowrap;
+	transform: translatey( 2px ) translatex( 7px );
+}
+
+
+
+.GroupInChat,
+.GroupInGame,
+.GroupOnline
+{
+	visibility: collapse;
+}
+
+.GroupInChat
+{
+	color: #fcc814;
+}
+
+.GroupInGame
+{
+	color: friendsingame_solid;
+}
+
+.GroupOnline
+{
+	color: friendsonline_solid;
+}
+
+.StatusHasInChat .GroupInChat
+{
+	visibility: visible;
+}
+
+.StatusHasInGame .GroupInGame
+{
+	visibility: visible;
+}
+
+.StatusHasOnline .GroupOnline
+{
+	visibility: visible;
+}
+
+.GroupItemUnread
+{
+	visibility: collapse;
+	color: white;
+	font-size: 16px;
+	width: 28px;
+	height: 28px;
+	background-color: red;
+	border-radius: 4px;
+	
+	border-top-left-radius: 0px;
+border-bottom-right-radius: 0px;
+
+	padding: 3px;
+	margin-left: 77px;
+	margin-top: 4px;
+	text-align: center;
+}
+
+.HasUnreadChats .GroupItemUnread
+{
+	visibility: visible;
+}

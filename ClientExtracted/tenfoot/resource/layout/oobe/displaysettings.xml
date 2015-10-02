@@ -10,7 +10,7 @@
 		<Label class="WizardChildDescription" text="#OOBE_DisplaySettings_Description" />
 
 		<Panel id="SettingsContainer">
-			<SettingsPanel_Display id="SettingsPanel_Display" class="SettingsSection SectionVisible SettingsContained" defaultfocus="UnderscanAmount" />
+			<SettingsPanel_Display id="SettingsPanel_Display" class="SettingsSection SettingsContained" defaultfocus="UnderscanAmount" />
 		</Panel>
 		
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">

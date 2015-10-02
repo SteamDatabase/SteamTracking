@@ -5,8 +5,9 @@
 	</styles>
 
 	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#ManageSteamGuard_DeauthorizeComputers_Title" />
-		<Label class="WizardChildDescription" text="#ManageSteamGuard_DeauthorizeComputers_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#ManageSteamGuard_DeauthorizeComputers_Description" />
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

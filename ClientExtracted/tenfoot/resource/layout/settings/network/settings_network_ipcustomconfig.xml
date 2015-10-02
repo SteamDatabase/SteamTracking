@@ -6,58 +6,57 @@
 	</styles>
 
 	<SettingsPanelNetwork_IPCustomSettings class="WizardChild" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Label class="WizardChildTitle" text="#Settings_Network" />
+		<Panel class="WizardContent">
+		  <Label class="SettingsCallout LongDesc" text="#SettingsNetwork_Manual_Instructions" />
 
-		<Label class="SettingsCallout LongDesc" text="#SettingsNetwork_Manual_Instructions" />
+			  <Panel id="WrapperPanel" >
+				  <Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomIP" />
+					  <TextEntry
+						  id="SettingsNetwork_CustomIP"
+						  class="WizardTextEntry"
+						  textinputid="CustomIP"
+						  textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
+						  <Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
+					  </TextEntry>
 
-			<Panel id="WrapperPanel" >
-				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomIP" />
-					<TextEntry
-						id="SettingsNetwork_CustomIP"
-						class="WizardTextEntry"
-						textinputid="CustomIP"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
-						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
-					</TextEntry>
+				  <Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomMask" />
+					  <TextEntry
+						  id="SettingsNetwork_CustomMask"
+						  class="WizardTextEntry"
+						  textinputid="CustomMask"
+						  textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
+						  <Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
+					  </TextEntry>
 
-				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomMask" />
-					<TextEntry
-						id="SettingsNetwork_CustomMask"
-						class="WizardTextEntry"
-						textinputid="CustomMask"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
-						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
-					</TextEntry>
+				  <Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomGateway" />
+					  <TextEntry
+						  id="SettingsNetwork_CustomGateway"
+						  class="WizardTextEntry"
+						  textinputid="CustomGateway"
+						  textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
+						  <Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
+					  </TextEntry>
 
-				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomGateway" />
-					<TextEntry
-						id="SettingsNetwork_CustomGateway"
-						class="WizardTextEntry"
-						textinputid="CustomGateway"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
-						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
-					</TextEntry>
+				  <Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomPrimaryDNS" />
+					  <TextEntry
+						  id="SettingsNetwork_CustomPrimaryDNS"
+						  class="WizardTextEntry"
+						  textinputid="CustomPrimaryDNS"
+						  textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
+						  <Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
+					  </TextEntry>
 
-				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomPrimaryDNS" />
-					<TextEntry
-						id="SettingsNetwork_CustomPrimaryDNS"
-						class="WizardTextEntry"
-						textinputid="CustomPrimaryDNS"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
-						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
-					</TextEntry>
+				  <Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomSecondaryDNS" />
+					  <TextEntry
+						  id="SettingsNetwork_CustomSecondaryDNS"
+						  class="WizardTextEntry"
+						  textinputid="CustomSecondaryDNS"
+						  textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
+						  <Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
+					  </TextEntry>
 
-				<Label class="SettingsLegend NetworkSettingsIPSettingsLegend" text="#SettingsNetwork_CustomSecondaryDNS" />
-					<TextEntry
-						id="SettingsNetwork_CustomSecondaryDNS"
-						class="WizardTextEntry"
-						textinputid="CustomSecondaryDNS"
-						textinputclass="HalfWidth DockRight AppearFromBottomCenter NoTouchPads">
-						<Label class="TextEntryPrompt SettingsNetwork_IPv4Format" text="#SettingsNetwork_IPv4_Format" />
-					</TextEntry>
-
-			</Panel>
+			  </Panel>
+      </Panel>
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
 				<Label id="Label" text="#SettingsNetwork_Connect" />

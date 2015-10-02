@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/contentframe.css" />
 	</styles>
 	
-	<ContentFrame>
+	<ContentFrame oncancel="NavigateTenfootBack()">
 		<ContentFramePanels id="ContentPanels" />
 		<Panel id="ContentFrameHeader">
 			<Panel id="ContentMouseBackButton" onmouseactivate="NavigateTenfootBack();" />

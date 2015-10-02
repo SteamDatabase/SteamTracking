@@ -18,23 +18,32 @@
 			<Panel id="LeftColumn" class="Column">
 				<!-- Top tab -->
 				<Panel class="FieldWrapper TabHeader" id="ModeTab" >
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InputStyle" />
+					<Label class="FieldLabel HideInGameActions" text="#Library_Details_FieldLabel_InputStyle" />
+					<Label class="FieldLabel ShowInGameActions" text="#Library_Details_FieldLabel_InputStyle_GA" />
 					<DropDown id="ModeDropDown" />
 				</Panel>
 
 				<!-- Dpad Mode -->
-				<Panel class="FieldWrapper DpadMode">
+				<Panel class="FieldWrapper DpadMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
 					<DropDown id="RequiresClick" />
 				</Panel>
-				<Panel class="FieldWrapper DpadMode">
+				<Panel class="FieldWrapper DpadMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Chording" />
 					<DropDown id="Chording" />
 				</Panel>
-				<Panel class="FieldWrapper DpadMode">
+				<Panel class="FieldWrapper DpadMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
 				</Panel>
+				<Panel class="FieldWrapper DpadModeGA">
+					<Label class="FieldLabel" text="#Gamepad_Up" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadUpButtonGA" />
+				</Panel>				
+				<Panel class="FieldWrapper DpadModeGA">
+					<Label class="FieldLabel" text="#Gamepad_Left" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadLeftButtonGA" />
+				</Panel>				
 
 				<!-- Dpad Mode Advanced -->
 				<Panel class="FieldWrapper DpadMode Advanced">
@@ -55,15 +64,22 @@
         </Panel>
 
         <!-- ABXY Mode -->
-				<Panel class="FieldWrapper ABXYMode">
+				<Panel class="FieldWrapper ABXYMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
 					<DropDown id="HoldRepeatsFourButtons" />
 				</Panel>
-				<Panel class="FieldWrapper ABXYMode">
+				<Panel class="FieldWrapper ABXYMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
 					<Slider id="HoldRepeatIntervalFourButtons" direction="horizontal" />
 				</Panel>
-				
+				<Panel class="FieldWrapper ABXYModeGA">
+						<Label class="FieldLabel" text="Y" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="YButtonGA" />
+				</Panel>
+				<Panel class="FieldWrapper ABXYModeGA">
+					<Label class="FieldLabel" text="X" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="XButtonGA" />
+				</Panel>
 				<Panel class="FieldWrapper ABXYMode Advanced">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ButtonRadius" />
 					<Slider id="ButtonRadiusFourButtons" direction="horizontal" />
@@ -74,7 +90,7 @@
 				</Panel>
 
 				<!-- Joystick Move Mode -->
-				<Panel class="FieldWrapper JoystickMoveMode">
+				<Panel class="FieldWrapper JoystickMoveMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
 					<DropDown id="OutputJoystick" />
 				</Panel>
@@ -82,7 +98,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClick" />
 				</Panel>
-				<Panel class="FieldWrapper JoystickMoveMode">
+				<Panel class="FieldWrapper JoystickMoveMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingJoystick" />
 				</Panel>
@@ -122,8 +138,8 @@
 
 				<!-- Joystick Camera Mode -->
 				<Panel class="FieldWrapper JoystickCameraMode">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
-					<DropDown id="HapticIntensityJoystickCameraMode" />
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClickCameraMode" />
 				</Panel>
 				<Panel class="FieldWrapper JoystickCameraMode">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CurveExponent" />
@@ -149,6 +165,10 @@
 				</Panel>
 
 				<!-- Mouse Mode -->
+				<Panel class="FieldWrapper MouseMode NoGyro">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseClick" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseClick" />
+				</Panel>				
 				<Panel class="FieldWrapper MouseMode">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Trackball" />
 					<DropDown id="Trackball" />
@@ -156,10 +176,6 @@
 				<Panel class="FieldWrapper MouseMode">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
 					<Slider id="Sensitivity" direction="horizontal" />
-				</Panel>
-				<Panel class="FieldWrapper MouseMode">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
-					<Slider id="RotationAbsMouse" direction="horizontal" />
 				</Panel>
 
 				<!-- Mouse Mode Advanced -->
@@ -180,6 +196,38 @@
 					<Slider id="SmoothingAbsMouse" direction="horizontal" />
 				</Panel>
 
+				<!-- Touch Menu Mode -->
+				<Panel class="FieldWrapper TouchMenuMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButtonCount" />
+					<DropDown id="TouchMenuButtonCount" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuPosX" />
+					<Slider id="TouchMenuPosX" direction="horizontal" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuPosY" />
+					<Slider id="TouchMenuPosY" direction="horizontal" />
+				</Panel>
+				
+				<!-- Touch Menu Mode Advanced -->
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton4" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton4" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton5" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton5" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton6" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton6" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton7" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton7" />
+				</Panel>	
+				
 				<!-- Relative Mouse Mode -->
 				<Panel class="FieldWrapper RelMouseMode">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
@@ -226,18 +274,22 @@
 				</Panel>
 				
 				<!-- Trigger Mode -->
-				<Panel class="FieldWrapper TriggerMode">
+				<Panel class="FieldWrapper TriggerMode HideIfAnalogTriggersSetToOther">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerClick" />
 				</Panel>
-				<Panel class="FieldWrapper TriggerMode">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
-					<DropDown id="HoldRepeatsTrigger" />
+				<Panel class="FieldWrapper TriggerMode HideIfAnalogTriggersSetToOther">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThresholdBinding" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerAnalogThresholdBinding" />
 				</Panel>
-				<Panel class="FieldWrapper TriggerMode">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
-					<Slider id="HoldRepeatIntervalTrigger" direction="horizontal" />
+				<Panel class="FieldWrapper TriggerMode HideInGameActions">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerAdaptiveThreshold" />
+					<DropDown id="AdaptiveThreshold" />
 				</Panel>
+				<Panel class="FieldWrapper TriggerMode HideInGameActions">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
+					<Slider id="TriggerThreshold" direction="horizontal" />
+				</Panel>									
 				
 			</Panel>
 			
@@ -246,7 +298,7 @@
 			-->
 			<Panel id="MiddleColumn" class="Column">
 				<!-- Dpad Mode -->
-				<Panel id="CenterImageDpad" class="CenterImage DpadMode">
+				<Panel id="CenterImageDpad" class="CenterImageDpadPanel CenterImage DpadMode HideInGameActions">
 					<Panel id="DpadButtonContainer" class="FlowDown">
 						<ControllerBindingButton id="DpadUpButton" type="glyph" />
 						<Panel id="DpadButtonContainer" class="FlowRight">
@@ -256,9 +308,31 @@
 						<ControllerBindingButton id="DpadDownButton" type="glyph" />
 					</Panel>
 				</Panel>
+				<Panel id="CenterImageDpad_GA" class="CenterImageDpadPanel CenterImage DpadModeGA">
+					<Panel id="DpadButtonContainer" class="FlowDown">
+						<Panel id="DpadUpButton" class="FakeDpadButtonPanel" >
+							<Label class="FakeDpadButton" text="" />
+							<Panel class="FakeDpadShape" />
+						</Panel>
+						<Panel id="DpadButtonContainer" class="FlowRight">
+							<Panel id="DpadLeftButton" class="FakeDpadButtonPanel" >
+								<Label class="FakeDpadButton" text="" />
+								<Panel class="FakeDpadShape" />
+							</Panel>
+							<Panel id="DpadRightButton" class="FakeDpadButtonPanel" >
+								<Label class="FakeDpadButton" text="" />
+								<Panel class="FakeDpadShape" />
+							</Panel>
+						</Panel>
+						<Panel id="DpadDownButton" class="FakeDpadButtonPanel" >
+							<Label class="FakeDpadButton" text="" />
+							<Panel class="FakeDpadShape" />
+						</Panel>
+					</Panel>
+				</Panel>
 
 				<!-- ABXY Mode -->
-				<Panel id="CenterImageABXY" class="CenterImage ABXYMode">
+				<Panel id="CenterImageABXY" class="CenterImageABXYPanel CenterImage ABXYMode HideInGameActions">
 					<Panel id="DpadButtonContainer" class="FlowDown">
 						<ControllerBindingButton id="YButton" type="glyph" />
 						<Panel id="ABXYButtonContainer" class="FlowRight">
@@ -266,6 +340,28 @@
 							<ControllerBindingButton id="BButton" type="glyph" />
 						</Panel>
 						<ControllerBindingButton id="AButton" type="glyph" />
+					</Panel>
+				</Panel>
+				<Panel id="CenterImageABXY_GA" class="CenterImageABXYPanel CenterImage ABXYModeGA">
+					<Panel id="DpadButtonContainer" class="FlowDown">
+						<Panel id="YButton" class="FakeABXYButtonPanel" >
+							<Label class="FakeABXYButton" text="#Gamepad_Y" />
+							<Panel class="FakeABXYShape" />
+						</Panel>
+						<Panel id="ABXYButtonContainer" class="FlowRight">
+							<Panel id="XButton" class="FakeABXYButtonPanel" >
+								<Label class="FakeABXYButton" text="#Gamepad_X" />
+								<Panel class="FakeABXYShape" />
+							</Panel>
+							<Panel id="BButton" class="FakeABXYButtonPanel" >
+								<Label class="FakeABXYButton" text="#Gamepad_B" />
+								<Panel class="FakeABXYShape" />
+							</Panel>
+						</Panel>
+						<Panel id="AButton" class="FakeABXYButtonPanel" >
+							<Label class="FakeABXYButton" text="#Gamepad_A" />
+							<Panel class="FakeABXYShape" />
+						</Panel>
 					</Panel>
 				</Panel>
 
@@ -338,6 +434,42 @@
 					<DropDown id="GyroAxisAbsMouse" />
 				</Panel>	
 
+				<!-- Touch Menu Mode -->
+				<Panel class="FieldWrapper TouchMenuMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton0" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton0" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton1" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton1" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton2" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton2" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton3" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton3" />
+				</Panel>
+				
+				<!-- Touch Menu Mode Advanced -->
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton8" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton8" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton9" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton9" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton10" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton10" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton11" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton11" />
+				</Panel>					
+				
 				<!-- Relative Mouse Mode -->
 				<Panel id="CenterImageRelMouse" class="CenterImage RelMouseMode" />
 
@@ -362,19 +494,19 @@
 				</Panel>
 				
 				<!-- Trigger Mode -->
-				<Panel class="FieldWrapper TriggerMode">
+				<Panel class="FieldWrapper TriggerMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputTrigger" />
 					<DropDown id="OutputTrigger" />
 				</Panel>
-				<Panel class="FieldWrapper TriggerMode">
+				<Panel class="FieldWrapper TriggerMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneStart" />
 					<Slider id="TriggerDeadZoneStart" direction="horizontal" />
 				</Panel>
-				<Panel class="FieldWrapper TriggerMode">
+				<Panel class="FieldWrapper TriggerMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerDeadZoneEnd" />
 					<Slider id="TriggerDeadZoneEnd" direction="horizontal" />
 				</Panel>
-				<Panel class="FieldWrapper TriggerMode">
+				<Panel class="FieldWrapper TriggerMode HideInGameActions">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerCurveExponent" />
 					<DropDown id="TriggerCurveExponent" />
 				</Panel>
@@ -387,24 +519,32 @@
 			-->
 			<Panel id="RightColumnWrapper">
 				<Panel id="RightColumn" class="Column">
-					<Panel class="FieldWrapper TabHeader" id="ModeShiftButtonTab" >
+					<Panel class="FieldWrapper TabHeader HideInGameActions" id="ModeShiftButtonTab" >
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ModeShifting" />
 						<ControllerBindingButton id="ModeShiftButton" describebutton="true" onactivate="ShowModeShift( true );" />
 					</Panel>
 
-					<Panel class="FieldWrapper TabHeader" id="ModeShiftPulldownTab" >
+					<Panel class="FieldWrapper TabHeader HideInGameActions" id="ModeShiftPulldownTab" >
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_ModeShiftButton" />
 						<DropDown id="ModeShiftDropDown" />
 					</Panel>
 
 					<!-- Dpad Mode -->
-					<Panel class="FieldWrapper DpadMode">
+					<Panel class="FieldWrapper DpadMode HideInGameActions">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityDpad" />
 					</Panel>
-					<Panel class="FieldWrapper DpadMode">
+					<Panel class="FieldWrapper DpadMode HideInGameActions">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Deadzone" />
 						<Slider id="Deadzone" direction="horizontal" />
+					</Panel>
+					<Panel class="FieldWrapper DpadModeGA">
+						<Label class="FieldLabel" text="#Gamepad_Right" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadRightButtonGA" />
+					</Panel>
+					<Panel class="FieldWrapper DpadModeGA">
+						<Label class="FieldLabel" text="#Gamepad_Down" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadDownButtonGA" />
 					</Panel>
 
 					<!-- Dpad Mode Advanced -->
@@ -422,21 +562,29 @@
 					</Panel>
 
 					<!-- ABXY Mode -->
-					<Panel class="FieldWrapper ABXYMode">
+					<Panel class="FieldWrapper ABXYMode HideInGameActions">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityFourButtons" />
 					</Panel>
-					<Panel class="FieldWrapper ABXYMode">
+					<Panel class="FieldWrapper ABXYMode HideInGameActions">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
 						<DropDown id="RequiresClickFourButtons" />
 					</Panel>
+					<Panel class="FieldWrapper ABXYModeGA">
+						<Label class="FieldLabel" text="#Gamepad_B" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="BButtonGA" />
+					</Panel>
+					<Panel class="FieldWrapper ABXYModeGA">
+						<Label class="FieldLabel" text="#Gamepad_A" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="AButtonGA" />
+					</Panel>
 
 					<!-- Joystick Move Mode -->
-					<Panel class="FieldWrapper JoystickMoveMode">
+					<Panel class="FieldWrapper JoystickMoveMode HideInGameActions">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityJoystick" />
 					</Panel>
-					<Panel class="FieldWrapper JoystickMoveMode Gyro">
+					<Panel class="FieldWrapper JoystickMoveMode HideInGameActions Gyro">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
 						<DropDown id="GyroButtonJoystickMove" />
 					</Panel>					
@@ -457,12 +605,12 @@
 
           <!-- Joystick Camera Mode -->
 					<Panel class="FieldWrapper JoystickCameraMode">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
-						<DropDown id="OutputJoystickCameraMode" />
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+						<DropDown id="HapticIntensityJoystickCameraMode" />
 					</Panel>
 					<Panel class="FieldWrapper JoystickCameraMode">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
-						<ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClickCameraMode" />
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
+						<DropDown id="OutputJoystickCameraMode" />
 					</Panel>
 
 					<!-- Joystick Camera Mode Advanced -->
@@ -472,13 +620,13 @@
           </Panel>
 
           <!-- Mouse Mode -->
-					<Panel class="FieldWrapper MouseMode">
+					<Panel class="FieldWrapper MouseMode HideInGameActions">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityAbsMouse" />
 					</Panel>
-					<Panel class="FieldWrapper MouseMode NoGyro">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseClick" />
-						<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseClick" />
+					<Panel class="FieldWrapper MouseMode HideInGameActions">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
+						<Slider id="RotationAbsMouse" direction="horizontal" />
 					</Panel>
 					<Panel class="FieldWrapper MouseMode Gyro">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
@@ -502,6 +650,34 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseMoveThreshold" />
 						<Slider id="MouseMoveThreshold" direction="horizontal" />
 					</Panel>
+					
+          <!-- Touch Menu Mode -->
+					<Panel class="FieldWrapper TouchMenuMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+						<DropDown id="HapticIntensityTouchMenu" />					
+					</Panel>
+					<Panel class="FieldWrapper TouchMenuMode">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuOpacity" />
+						<Slider id="TouchMenuOpacity" direction="horizontal" />
+					</Panel>
+
+					<!-- Touch Menu Mode Advanced -->
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton12" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton12" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton13" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton13" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton14" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton14" />
+				</Panel>
+				<Panel class="FieldWrapper TouchMenuMode Advanced">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButton15" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="TouchMenuButton15" />
+				</Panel>				
 					
 					<!-- Relative Mouse Mode -->
 					<Panel class="FieldWrapper RelMouseMode">
@@ -538,33 +714,29 @@
 					
 
 					<!-- Trigger Mode -->
-					<Panel class="FieldWrapper TriggerMode">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThresholdBinding" />
-						<ControllerBindingButton class="BindingButtonPropertiesMode" id="TriggerAnalogThresholdBinding" />
+					<Panel class="FieldWrapper TriggerMode HideInGameActions">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
+						<DropDown id="HoldRepeatsTrigger" />
 					</Panel>
-					<Panel class="FieldWrapper TriggerMode">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerAdaptiveThreshold" />
-						<DropDown id="AdaptiveThreshold" />
-					</Panel>
-					<Panel class="FieldWrapper TriggerMode">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerThreshold" />
-						<Slider id="TriggerThreshold" direction="horizontal" />
-					</Panel>					
-					<Panel class="FieldWrapper TriggerMode">
+					<Panel class="FieldWrapper TriggerMode HideInGameActions">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeatInterval" />
+						<Slider id="HoldRepeatIntervalTrigger" direction="horizontal" />
+					</Panel>				
+					<Panel class="FieldWrapper TriggerMode HideInGameActions">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TriggerHapticIntensity" />
 						<DropDown id="HapticIntensityTriggerThreshold" />
 					</Panel>
 				</Panel>
 				
 				<!-- Show advanced properties button -->
-				<Panel class="FieldWrapper AdvancedPropertiesWrapper" id="ShowAdvancedProperties">
+				<Panel class="FieldWrapper AdvancedPropertiesWrapper HideInGameActions" id="ShowAdvancedProperties">
 					<Button id="Advanced" onactivate="ShowAdvancedProperties( true );">
 						<Label text="#Library_Details_Controller_AdvancedSettings" />
 					</Button>
 				</Panel>
 
 				<!-- Hide advanced properties button -->
-				<Panel class="FieldWrapper AdvancedPropertiesWrapper" id="HideAdvancedProperties">
+				<Panel class="FieldWrapper AdvancedPropertiesWrapper HideInGameActions" id="HideAdvancedProperties">
 					<Button id="Advanced" onactivate="ShowAdvancedProperties( false );">
 						<Label text="#UI_Back" />
 					</Button>

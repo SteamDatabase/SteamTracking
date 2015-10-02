@@ -5,47 +5,35 @@
 	</styles>
 
 	<SettingsPanel_Downloads class="SettingsSection" defaultfocus="SettingsDownloads_Libraries">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Downloads" />
-		</Panel>
-		
-		<Panel class="SettingsBottomPanel FlowDown">
-			<!-- main panel -->
-			<Panel class="SettingsSubhead" tabindex="auto" selectionpos="auto">
-
-			</Panel>
-			<!-- used for enable/disable CSS -->
-			<Panel id="SettingsDownloads_SubControls" tabindex="auto" selectionpos="auto">
-				
-				<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">
-					<Label class="SettingsLabel" text="#SettingsDownloads_RegionLabel" />
-					<DropDown id="SettingsDownloads_Region" class="Filter" />			
-						<Panel class="Spacer" />
-					<Label class="SettingsLabel" text="#SettingsDownloads_Throttling" />
-					<DropDown id="SettingsDownloads_ThrottleRates" class="Filter" />	
-						<Panel class="Spacer" />
+		<Panel class="SettingsBottomPanel">
+      
+      <Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">
+				<Label class="SettingsLabel" text="#SettingsDownloads_RegionLabel" />
+				<DropDown id="SettingsDownloads_Region" class="Filter" />			
+				<Panel class="Spacer" />
+            
+				<Label class="SettingsLabel" text="#SettingsDownloads_Throttling" />
+				<DropDown id="SettingsDownloads_ThrottleRates" class="Filter" />	
+				<Panel class="Spacer" />
 						
-					<Label class="SettingsLabel" text="#SettingsDownloads_ScheduleLabel" />
-					<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleTimeLimits" text="#SettingsDownloads_TimeLimits" onactivate="ToggleTimeLimits()"/>
-					<Panel class="HorzLabelDropdown" tabindex="auto" selectionpos="auto">
-						<Label class="SettingsCallout SettingsCalloutSnugRight" text="#SettingsDownloads_TimeLimitFrom" />
-						<DropDown id="SettingsDownloads_TimeLimitFrom" class="Filter TimeRestrictionDropdown" />
-					</Panel>
-					<Panel class="HorzLabelDropdown" tabindex="auto" selectionpos="auto">
-						<Label class="SettingsCallout SettingsCalloutSnugRight" text="#SettingsDownloads_TimeLimitTo" />
-						<DropDown id="SettingsDownloads_TimeLimitTo" class="Filter TimeRestrictionDropdown" />
-					</Panel>	
-														
+				<Label class="SettingsLabel" text="#SettingsDownloads_ScheduleLabel" />
+				<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleTimeLimits" text="#SettingsDownloads_TimeLimits" onactivate="ToggleTimeLimits()"/>
+				<Panel class="HorzLabelDropdown" tabindex="auto" selectionpos="auto">
+					<Label class="SettingsCallout SettingsCalloutSnugRight" text="#SettingsDownloads_TimeLimitFrom" />
+					<DropDown id="SettingsDownloads_TimeLimitFrom" class="Filter TimeRestrictionDropdown" />
 				</Panel>
-				<Panel class="SettingsContent SettingsRightContent" tabindex="auto" selectionpos="auto">
-					<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleDownloadsDuringGameplay" text="#SettingsDownloads_AllowDownloadsDuringGameplay" onactivate="ToggleBackgroundUpdates()"/>
-					<Label class="SettingsLabel" text="#SettingsDownloads_AllowDownloadsDuringGameplayDetails" />
-					
-				</Panel>
+				<Panel class="HorzLabelDropdown" tabindex="auto" selectionpos="auto">
+					<Label class="SettingsCallout SettingsCalloutSnugRight" text="#SettingsDownloads_TimeLimitTo" />
+					<DropDown id="SettingsDownloads_TimeLimitTo" class="Filter TimeRestrictionDropdown" />
+				</Panel>					
 			</Panel>
-		</Panel>
-	
+          
+			<Panel class="SettingsContent SettingsRightContent" tabindex="auto" selectionpos="auto">
+				<ToggleButton class="CheckBox" id="SettingsDownloads_ToggleDownloadsDuringGameplay" text="#SettingsDownloads_AllowDownloadsDuringGameplay" onactivate="ToggleBackgroundUpdates()"/>
+				<Label class="SettingsLabel" text="#SettingsDownloads_AllowDownloadsDuringGameplayDetails" />
+			</Panel>
+          
+		</Panel>	
 	</SettingsPanel_Downloads>
 
 </root>

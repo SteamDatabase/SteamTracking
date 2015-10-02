@@ -3,7 +3,8 @@
 @define white: #ffffff;
 @define red: #ad4543;
 @define darkred: #712d2c;
-@define green: #00ff00;
+@define green: #a3cf06;
+@define discountgreen: #4e7a03;
 @define blue: #2f6682;
 @define black: #000000;
 @define yellow: #ffff00;
@@ -51,7 +52,7 @@
 @define tclegendlabel: gradient( linear, 0% 0%, 0% 100%, from( #878c8eff ), to( #abb0b2ff ) );
 @define tcstatictext: gradient( linear, 0% 0%, 100% 100%, from( #36b3d9ff ), to( #3a7ba6ff ) );
 @define legendbuttonborder: #878c8eff;
-@define detailsdatalabel: gradient( linear, 0% 0%, 100% 100%, from( #c6d4dfff ), to( #c6d4dfCC ) );
+@define detailsdatalabel: gradient( linear, 0% 0%, 100% 100%, from( #ffffffff ), to( #c6d4dfCC ) );
 @define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #ffffffff ), to( #fefefeff ) );
 @define detailsdatalabelfocus2: gradient( linear, 80% 0%, 92% 0%, from( #000000ce ), to( #00000000 ) );
 @define moduledatalabel: gradient( linear, 0% 0%, 100% 100%, from( #67c1f5ff ), to( #67c1f5ff ) );
@@ -186,6 +187,7 @@
 @define slideshow_bg2: gradient( linear, 0% 0%, 0% 100%, from( #00000066 ), color-stop( 0.7, #00000066 ), to( #000000ff ) );
 @define slideshow_bg3: gradient( linear, 0% 0%, 0% 100%, from( #00000000 ), color-stop( 0.7, #00000000 ), to( #000000ff ) );
 @define all_games_hover: gradient( linear, 0% 0%, 100% 100%, from( #309ebf ), to( #0b224d ) );
+
 @define action_module: gradient( linear, 0% 0%, 100% 100%, from( #64bdf173 ), to( #238bbe73 ) );
 @define nontransparent_action_module: gradient( linear, 0% 0%, 100% 100%, from( #30668fff ), to( #144d70ff ) );
 @define state_panel: gradient( linear, 0% 0%, 100% 100%, from( #ffffff1A ), to( #ffffff1A ) );
@@ -235,6 +237,7 @@
 @define store_details_wash: #163057aa;
 @define store_main_wash: #4eaedea0;
 @define store_module: gradient( linear, 0% 0%, 0% 100%, from( #30778c ), to( #12213d ) );
+@define store_transparent_module: gradient( linear, 0% 0%, 30% 100%, from( #2e8071CC ), to( #143f65CC ) );
 
 //browser
 @define topbarbuttonbackground:  gradient( linear, 0% 0%, 0% 100%, from( #1b2629ff ), to( #13161aff ) );
@@ -814,7 +817,7 @@ VerticalScrollBar, HTMLVerticalScrollBar
 
 VerticalScrollBar .ScrollThumb, HTMLVerticalScrollBar .ScrollThumb
 {
-	background-color: #f2f2f2dd;
+	background-color: #66bff3ff;
 
 	transition-property: position;
 }
@@ -834,7 +837,7 @@ HorizontalScrollBar, HTMLHorizontalScrollBar
 
 HorizontalScrollBar .ScrollThumb, HTMLHorizontalScrollBar .ScrollThumb
 {
-	background-color: #f2f2f2dd;
+	background-color: #66bff3ff;
 
 	transition-property: position;
 }
@@ -2029,7 +2032,7 @@ LibraryAppDetails #ReadyToDownload
 {
 	visibility: collapse;
 }
-LibraryAppDetails.Installing #ReadyToDownload
+LibraryAppDetails.ReadyToDownload #ReadyToDownload
 {
 	visibility: visible;
 }
@@ -2066,28 +2069,18 @@ LibraryAppDetails.Installing #ReadyToDownload
 	background-image: url( "file://{images}/library/icon_readytofail.png" );
 }
 
-#GridControllerSupport
+#GridControllerSupport,
+.SteamPad #GridControllerSupport
 {
 	visibility: visible;
 	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
 }
 
-.SteamPad #GridControllerSupport
-{
-	visibility: visible;
-	background-image: url( "file://{images}/controller_support_legacy.png" );
-}
-
-.FullController #GridControllerSupport
-{
-	visibility: visible;
-	background-image: url( "file://{images}/controller_support_full.png" );
-}
-
+.FullController #GridControllerSupport,
 .SteamPad .FullController #GridControllerSupport
 {
 	visibility: visible;
-	background-image: url( "file://{images}/controller_support_native.png" );
+	background-image: url( "file://{images}/controller_support_full.png" );
 }
 
 

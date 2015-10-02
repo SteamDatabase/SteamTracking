@@ -7,11 +7,6 @@
 	</styles>
 
 	<ParentalSetEnableCodeChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
-		</Panel>
-
 		<Panel class="SettingsBottomPanel">
 			<!-- main panel -->
 			<Label id="SetEnableCode" text="#Parental_Set_EnableCode" class="SettingsBody" />
@@ -20,7 +15,6 @@
 				<Panel class="ParentalEnableCodeEntry" >
 					<Label text="#Parental_Enter_EnableCode" />
 					<TextEntry class="ParentalEnableCodeEntry" id="EnableCode"
-							   textinputid="ParentalEnableCodeEntry"
 							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 							   undohistory="enabled" />
 				</Panel>

@@ -10,7 +10,7 @@
 		<Label class="WizardChildDescription" text="#OOBE_TimeZoneSettings_Description" />
 
 		<Panel id="SettingsContainer">
-			<SettingsPanel_TimeZone id="SettingsPanel_TimeZone" class="SettingsSection SectionVisible SettingsContained" defaultfocus="Continents" />
+			<SettingsPanel_TimeZone id="SettingsPanel_TimeZone" class="SettingsSection SettingsContained" defaultfocus="Continents" />
 		</Panel>
 		
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">

@@ -5,65 +5,42 @@
 	</styles>
 
 	<SettingsPanel_RemoteClients_AdvancedClient class="SettingsModal" defaultfocus="BandwidthLimitKBit" tabindex="auto" selectionpos="auto">
-
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_RemoteClients_AdvancedClientOptions_Title" />
-		</Panel>
-
-		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContentWide">
-			<Label text="#Settings_RemoteClients_AdvancedClientOptions_Description" />
-			
-			<Panel class="SettingsContentFlowRight">
-				<Panel class="SettingsContent SettingsColumnarContent" >
-					<Label class="SettingsLabel" text="#Settings_RemoteClients_Bandwidth" />
-					<DropDown id="BandwidthLimitKBit" class="Filter" tabindex="auto">
-						<Label id="-1" text="#Settings_RemoteClients_BandwidthAuto" />
-						<Label id="3000" text="#Settings_RemoteClients_Bandwidth3000" />
-						<Label id="5000" text="#Settings_RemoteClients_Bandwidth5000" />
-						<Label id="10000" text="#Settings_RemoteClients_Bandwidth10000" />
-						<Label id="15000" text="#Settings_RemoteClients_Bandwidth15000" />
-						<Label id="20000" text="#Settings_RemoteClients_Bandwidth20000" />
-						<Label id="30000" text="#Settings_RemoteClients_Bandwidth30000" />
-						<Label id="0" text="#Settings_RemoteClients_BandwidthUnlimited" />
-					</DropDown>
-
+		<Panel class="SettingsBottomPanel">
+			<Panel class="SettingsContent FlowDown">
+				<Label text="#Settings_RemoteClients_AdvancedClientOptions_Description" />
+				<Panel class="FlowDown">
+					<Panel class="VertContainer">
+						<Label class="SettingsLabel" text="#Settings_RemoteClients_Bandwidth" />
+						<DropDown id="BandwidthLimitKBit" class="Filter" tabindex="auto">
+							<Label id="-1" text="#Settings_RemoteClients_BandwidthAuto" />
+							<Label id="3000" text="#Settings_RemoteClients_Bandwidth3000" />
+							<Label id="5000" text="#Settings_RemoteClients_Bandwidth5000" />
+							<Label id="10000" text="#Settings_RemoteClients_Bandwidth10000" />
+							<Label id="15000" text="#Settings_RemoteClients_Bandwidth15000" />
+							<Label id="20000" text="#Settings_RemoteClients_Bandwidth20000" />
+							<Label id="30000" text="#Settings_RemoteClients_Bandwidth30000" />
+							<Label id="0" text="#Settings_RemoteClients_BandwidthUnlimited" />
+						</DropDown>
+					</Panel>	
 					<Panel class="Spacer" />
-					<Label class="SettingsLabel" text="#Settings_RemoteClients_Resolution" />
-					<DropDown id="ResolutionLimit" class="Filter" tabindex="auto">
-						<Label id="0x0" text="#Settings_RemoteClients_ResolutionDesktop" />
-						<Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
-						<Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />
-						<Label id="852x480" text="#Settings_RemoteClients_Resolution480p" />
-					</DropDown>
-
+					<Panel class="VertContainer">
+						<Label class="SettingsLabel" text="#Settings_RemoteClients_Resolution" />
+						<DropDown id="ResolutionLimit" class="Filter" tabindex="auto">
+							<Label id="0x0" text="#Settings_RemoteClients_ResolutionDesktop" />
+							<Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
+							<Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />
+							<Label id="852x480" text="#Settings_RemoteClients_Resolution480p" />
+						</DropDown>
+					</Panel>
 					<Panel class="Spacer" />
 					<Panel class="Spacer" />
 					<ToggleButton class="CheckBox" id="EnableHardwareDecoding" onactivate="ToggleHardwareDecoding()" text="#Settings_RemoteClients_EnableHardwareDecoding" />
-					
-					<Panel class="Spacer" />
 					<ToggleButton class="CheckBox" id="EnableDebugOverlay" onactivate="ToggleDebugOverlay()" text="#Settings_RemoteClients_EnableDebugOverlay" />
-					
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					<Panel class="Spacer" />
-					
-					<!-- Because this dialog is modal, we can't launch the browser
-					<Button id="SettingsRemoteClients_Help" class="Button" onactivate="BrowserGoToURL(https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617);">
+					<Button class="Button" onactivate="BrowserGoToURL(https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617);">
 						<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
 					</Button>
-					-->
 				</Panel>
 			</Panel>
 		</Panel>
-		
 	</SettingsPanel_RemoteClients_AdvancedClient>
 </root>

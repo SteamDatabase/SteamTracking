@@ -6,13 +6,9 @@
 	</styles>
 
 	<SettingsPanel_Language class="SettingsSection">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Language" />
-		</Panel>
-		
-		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContent" tabindex="auto" selectionpos="auto">
+    <Panel class="SettingsBottomPanel">
+		  <!-- main panel -->
+		  <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">
 
 				<Panel class="HorzContainer">
 					<Label class="SettingsCallout" text="#SettingsLanguage_Intro" />
@@ -24,7 +20,8 @@
 					</Panel>
 				</Panel>
 
-		</Panel>
+		  </Panel>
+    </Panel>
 	</SettingsPanel_Language>
 
 </root>

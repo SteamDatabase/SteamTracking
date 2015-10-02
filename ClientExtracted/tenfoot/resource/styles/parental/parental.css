@@ -74,14 +74,6 @@ ParentalUnlockPopup
 	animation-direction: normal;
 }
 
-
-
-
-.BehindTextInputHandler .ParentalUnlockPopupBody
-{
-	transform: translatex( 400px );
-}
-
 ParentalUnlockPopup #MsgBoxButtons
 {
 	width: 100%;
@@ -324,27 +316,9 @@ ParentalReplacementPanel Button:focus
 	padding-right: 0px;
 }
 
-#Settings_Parental #WizardButtons
-{
-	padding-left: 300px;
-	padding-right: 110px;
-}
-
 #ParentalChooseAppsChild #WizardButtons
 {
 	margin-top: -70px;
-}
-
-#ParentalIntroChild .SettingsBottomPanel
-{
-	flow-children: down;
-	margin-right: 300px;
-	padding-top: 0px;
-	height: 700px;
-	background-image: url( "file://{images}/settings/keybg.png" );
-	background-repeat: no-repeat no-repeat;
-	background-position: left 900px top 400px;
-
 }
 
 #ParentalIntroChild #Instructions
@@ -362,12 +336,6 @@ ParentalReplacementPanel Button:focus
 #ParentalIntroChild ToggleButton
 {
 	width: fit-children;
-}
-
-ParentalFeaturesChild .SettingsBottomPanel
-{
-	flow-children: down;
-	height: 700px;
 }
 
 .ParentalFeatureLabel
@@ -489,31 +457,6 @@ AppGridItem.Unlocked .AppImageOverlay
 	background-size: 100% 100%;
 }
 
-
-ParentalSetRecoveryChild .SettingsBottomPanel,
-ParentalSetPINChild .SettingsBottomPanel,
-ParentalSetEnableCodeChild .SettingsBottomPanel
-{
-	flow-children: down;
-	horizontal-align: center;
-	vertical-align: center;
-	margin-left: 0px;
-	height: 700px;
-	width: 100%;
-}
-
-#SetRecoveryLine1,
-#SetRecoveryLine2,
-#SetPIN,
-#SetEnableCode
-{
-	horizontal-align: left;
-	margin-left: 295px;
-	margin-top: 0px;
-	width: 80%;
-	text-align: left;
-}
-
 #SetRecoveryLine2
 {
 	margin-top: 10px;
@@ -568,12 +511,6 @@ ParentalSetEnableCodeChild .SettingsBottomPanel
 	width: 450px;
 }
 
-.BehindTextInputHandler .ParentalSetPINDialog,
-.BehindTextInputHandler .ParentalSetEnableCodeDialog,
-.BehindTextInputHandler .ParentalSetRecoveryDialog
-{
-	transform: translatex( 400px );
-}
 
 ParentalSetRecoveryChild TextEntry,
 ParentalSetPINChild TextEntry,
@@ -708,29 +645,10 @@ ParentalSetInProgressChild .SettingsBottomPanel
 	width: 450px;
 }
 
-ParentalSetFailChild .SettingsBottomPanel
-{
-	height: 700px;
-}
-
-ParentalSetSuccessChild .SettingsBottomPanel
-{
-	flow-children: down;
-	margin-left: 295px;
-	margin-right: 150px;
-	width: 900px;
-	height: 700px;
-}
-
 ParentalSetSuccessChild #ParentalLockImageUnlocked
 {
 	wash-color: red;
 	horizontal-align: center;
-}
-
-ParentalSetSuccessChild .SettingsSuccessTitle
-{
-	font-size: 54px;
 }
 
 ParentalSetSuccessChild .SettingsSuccessSubtitle

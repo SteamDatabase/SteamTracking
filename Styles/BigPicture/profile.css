@@ -3491,21 +3491,6 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	overflow: clip;
 }
 
-#LeftColumn
-{
-
-
-}
-
-#LeftColumn:descendantfocus {
-	transform: translateX( 0px );
-	opacity: 1;
-	pre-transform-scale2d: 1;
-	opacity-mask: none;
-}
-
-
-
 #LeftColumn .Header
 {
 	font-size: 18px;	
@@ -3519,7 +3504,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 #RightColumn
 {
 	width: 100%;
-	height: 870px;
+	height: 100%;
 	margin-bottom: 10px;
 	overflow: clip;
 
@@ -4086,6 +4071,11 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	height: 950px;
 
 }
+
+.AchievementsContainer {
+	padding-top: 75px;
+}
+
 #AchievementsContainer.AchievementsContainer,
 .AchievementsContainer .StatsContainer {
 
@@ -4128,12 +4118,21 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 .AchievementsContainer, .StatsContainer, .GamesContainer {
 	overflow: noclip scroll;
+	padding: 0px;
+	margin: 32px 40px 0px 0px;
 }
 
 .GameRow {
 	flow-children: right;
 	height: 79px;
 	width: 100%;
+}
+
+.GameRow.Deleted {
+	opacity: 0;
+	transition-property: opacity,border,background-color,transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
 }
 
 
@@ -4151,7 +4150,7 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 	width: 98%;
 	flow-children: right;
 	padding: 5px;
-	margin: 5px;
+	margin-bottom: 5px;
 
 	background-color: horizontal_default;
 
@@ -4364,13 +4363,14 @@ Grid.CursorVisible:descendantfocus:hover .RightMouseScrollRegion:hover, Grid.Cur
 
 	flow-children: down;
 
-	height: 700px;
+	height: 800px;
 
 	width: 100%;
 	flow-children: down;
 
 	overflow: squish scroll;
-	padding: 5px;
+	padding-top: 80px;
+	padding-bottom: 140px;
 }
 
 .RowContainer {
@@ -4502,10 +4502,20 @@ Panel.AvatarOptionGame {
 
 /* Friends list */
 
+.FriendsGrid
+{
+	height: 1100px;
+	padding: 70px 40px 40px 0px;
+	margin: 0px;
+	flow-children: down;
+	width: 100%;
+}
+
 .FriendRow {
 	height: 115px;
 	flow-children: right;
-	width: 45%;
+	width: 50%;
+	margin-right: 10px;
 
 }
 

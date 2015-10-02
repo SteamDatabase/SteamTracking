@@ -15073,6 +15073,7 @@
  t SigIllHandlerCPUID
  t SigIllHandlerSSE2
  t SimplifyNode(ExprNode*&)
+ t SuppressNotificationsForVideoCallback(unsigned int)
  t __cxx_global_array_dtor
  t __static_initialization_and_destruction_0(int, int)
  t __tcf_0

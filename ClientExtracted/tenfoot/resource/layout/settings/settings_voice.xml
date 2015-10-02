@@ -5,14 +5,9 @@
 	</styles>
 
 	<SettingsPanel_InGame class="SettingsSection" defaultfocus="SettingsVoice_AutoXmit">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Voice" />
-		</Panel>
-		
 		<Panel class="SettingsBottomPanel" selectionpos="auto">
 			<!-- main panel -->
-			<Panel class="SettingsContent SettingsLeftContent" tabindex="0.0" >
+			<Panel class="SettingsContent" tabindex="0.0" >
 				<Label class="SettingsLabel" text="#SettingsVoice_WhenActive" />
 				<RadioButton group="PTT" class="Button RadioButton" id="SettingsVoice_AutoXmit" tabindex="0.0" text="#SettingsVoice_AutoXmit" onactivate="PushToTalk( false )"/>
 				<RadioButton group="PTT" class="Button RadioButton" id="SettingsVoice_PTT" tabindex="1.0" text="#SettingsVoice_PTT" onactivate="PushToTalk( true )"/>

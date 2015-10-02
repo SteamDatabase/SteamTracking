@@ -6,13 +6,9 @@
 	</styles>
 
 	<SettingsPanel_DiskManagement class="SettingsSection">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_DiskManagement" />
-		</Panel>
-		
-		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContentWide" tabindex="auto" selectionpos="auto">
+    <Panel class="SettingsBottomPanel">
+		  <!-- main panel -->
+		  <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">
 				<Panel id="SettingsDiskSpaceManagement_IntroBlock" class="HorzContainer">
 					<Label class="SettingsCallout" text="#Settings_DiskManagementIntro" />
 					<Label class="SettingsCallout" text="#SettingsDiskManagement_AvailableDisk" />
@@ -29,7 +25,7 @@
 						</Panel>
 					</Panel>
 				</Panel>
-
+      </Panel>
 		</Panel>
 	</SettingsPanel_DiskManagement>
 

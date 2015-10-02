@@ -7,11 +7,7 @@
 	</styles>
 
 	<ParentalIntroChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Panel class="SettingsHeader" hittest="false">
-			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" hittest="false"/>
-		</Panel>
-
-		<Panel class="SettingsBottomPanel">
+		<Panel class="SettingsBottomPanel FlowDown">
 			<!-- main panel -->
 
 			<Panel id="Instructions">

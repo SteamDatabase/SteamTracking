@@ -78,52 +78,6 @@ CreateAccountWizard .ShowingLoginProgress
 	horizontal-align: right;
 }
 
-//
-// Agreements child
-//
-
-#SSAButtonContainer
-{
-	flow-children: down;
-	margin-top: 50px;
-}
-
-#SSAButtonContainer .WizardButton
-{
-    margin-bottom: 10px;
-}
-
-#AgreementsLabel
-{
-	margin-bottom: 10px;
-}
-
-//
-// Agreements SSA
-//
-
-#ppa #SSATitle,#ppa #SSAButton,#ssa #PPATitle,#ssa #PPAButton
-{
-	visibility: collapse;
-	opacity: 0.0;
-}
-
-#ssa #SSATitle,#ssa #SSAButton,#ppa #PPATitle,#ppa #PPAButton
-{
-	visibility: visible;
-	opacity: 1.0;
-}
-
-#ppa 
-{
-	width: buttonwidth;
-}
-
-#PPAButton, #SSAButton
-{
-	width: fit-children;
-}
-
 #AgreementsHTML
 {
     margin-top: 20px;
@@ -214,23 +168,6 @@ CreateAccountSuccessWizardChild #PasswordTextEntry
 RadioButton.Wide
 {
 	width: 1000px;
-}
-
-#ssa, #ppa
-{
-	background-color: gradient(linear, 0% 0%, 100% 0%, from(#111f2c), color-stop( 0.35, #142332 ), color-stop( 0.70, #0a131a ), to(#000000) );
-	background-image: url("file://{images}/store/slideshow_glow.png");
-	background-repeat: no-repeat no-repeat;
-	background-position: left 0px top 75px;
-	width: 100%;
-	
-	transition-property: background-color, opacity;
-}
-
-#SSAButtonContainer .WizardButton
-{
-	width: fit-children;
-	min-width: 475px;
 }
 
 #ScrollHintXInput,

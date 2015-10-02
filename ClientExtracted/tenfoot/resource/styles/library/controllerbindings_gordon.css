@@ -87,11 +87,70 @@ ControllerBindingsGordon.ScreenSaverMode
 #TopHalfContainer .Background
 {
 	background-repeat: no-repeat;
-
 	horizontal-align: center;
-
 	width: 1800px;
 	height: 100%;
+}
+
+.HasMultipleActionSets #Left,
+.HasMultipleActionSets #Right
+{
+	margin-top: 44px;
+}
+
+.HasMultipleActionSets #GameActionSets
+{
+	visibility: visible;
+}
+
+.HasMultipleActionSets #TopHalfContainer
+{
+		height: 575px;
+}
+
+#GameActionSets
+{
+	visibility: collapse;
+	flow-children: right;
+	horizontal-align: middle;
+}
+
+.GameActionButton
+{
+	height: 50px;
+}
+
+.GameActionButton Label
+{
+	horizontal-align: middle;
+	text-transform: uppercase;
+}
+
+.GameActionButton:focus
+{
+	padding-top: 5px;
+	background-color: simplebuttonsolid_vertical;
+}
+
+.GameActionButton:hover Label
+{
+	color: #f2f2f2ff;
+}
+
+.GameActionButton:focus Label
+{
+	color: #f2f2f2ff;
+	transform: none;
+}
+
+.GameActionButton:selected
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0e86abff ), to( #1a5e80ff ) );
+}
+
+.GameActionButton:selected Label
+{
+	color: white;
 }
 
 .HelperImage
@@ -292,6 +351,16 @@ ControllerBindingsGordon.ScreenSaverMode
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines.png");
 }
 
+.HasMultipleActionSets #BackgroundController
+{
+	margin-top: 0px;	
+}
+
+.HasMultipleActionSets #BackgroundLines
+{
+	margin-top: 0px;	
+}
+
 #ModeContainer
 {
 	horizontal-align: center;
@@ -299,7 +368,6 @@ ControllerBindingsGordon.ScreenSaverMode
 	height: 228px;
 	flow-children: right;
 }
-
 #GyroModeContainer
 {
 	horizontal-align: center;
@@ -310,6 +378,10 @@ ControllerBindingsGordon.ScreenSaverMode
 	flow-children: down;
 }
 
+.HasMultipleActionSets #GyroModeContainer
+{
+	margin-bottom: 8px;	
+}
 
 .ModeWrapper
 {
@@ -1130,6 +1202,7 @@ Slider:Selected
 .ColumnContainer
 {
 	width: 1676px;
+	margin-top: 10px;
 	horizontal-align: center;
 	flow-children: right;
 }
@@ -1138,7 +1211,7 @@ Slider:Selected
 {
 	flow-children: down;
 	width: fieldwidth;
-        height: 500px;
+  height: 500px;
 }
 
 #MiddleColumn
@@ -1475,6 +1548,95 @@ Slider:Selected
 	visibility: collapse;
 }
 
+
+.TouchMenuMode
+{
+	visibility: collapse;
+}
+
+.ModeTouchMenuVisible .TouchMenuMode
+{
+	visibility: visible;
+}
+
+.ModeTouchMenuVisible .TouchMenuMode.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeTouchMenuVisible.AdvancedPropertiesVisible .TouchMenuMode
+{
+	visibility: collapse;
+}
+
+.ModeTouchMenuVisible.AdvancedPropertiesVisible .TouchMenuMode.Advanced
+{
+	visibility: visible;
+}
+
+.ModeTouchMenuVisible .TouchMenuMode.Gyro
+{
+	visibility: collapse;
+}
+
+.ModeTouchMenuVisible .TouchMenuMode.Gyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeTouchMenuVisible.GyroSource .TouchMenuMode.Gyro.Advanced
+{
+	visibility: collapse;
+}
+
+
+.ModeTouchMenuVisible.GyroSource .TouchMenuMode.Gyro
+{
+	visibility: visible;
+}
+
+.ModeTouchMenuVisible.GyroSource.AdvancedPropertiesVisible .TouchMenuMode.Gyro.Advanced
+{
+	visibility: visible;
+}
+
+.ModeTouchMenuVisible.GyroSource.AdvancedPropertiesVisible .TouchMenuMode.Gyro
+{
+	visibility: collapse;
+}
+
+
+
+.ModeTouchMenuVisible .TouchMenuMode.NoGyro
+{
+	visibility: visible;
+}
+
+.ModeTouchMenuVisible.GyroSource .TouchMenuMode.NoGyro
+{
+	visibility: collapse;
+}
+
+.ModeTouchMenuVisible .TouchMenuMode.NoGyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeTouchMenuVisible.AdvancedPropertiesVisible .TouchMenuMode.NoGyro.Advanced
+{
+	visibility: visible;
+}
+
+.ModeTouchMenuVisible.AdvancedPropertiesVisible.GyroSource .TouchMenuMode.NoGyro.Advanced
+{
+	visibility: collapse;
+}
+
+.ModeTouchMenuVisible.AdvancedPropertiesVisible .TouchMenuMode.NoGyro
+{
+	visibility: collapse;
+}
+
 .RelMouseMode
 {
 	visibility: collapse;
@@ -1563,7 +1725,7 @@ Slider:Selected
 
 .ModeTriggerVisible #ModeTab
 {
-	visibility: collapse;
+	visibility:collapse;
 }
 
 .ModeTriggerVisible #ModeShiftButtonTab
@@ -1744,7 +1906,7 @@ Slider:Selected
 	visibility: collapse;
 }
 
-#CenterImageDpad.CenterImage
+.CenterImageDpadPanel.CenterImage
 {
 	background-image: url("file://{images}/library/controller/controller_config_inspector_dpad_bg.png");
 }
@@ -1754,7 +1916,7 @@ Slider:Selected
 	background-image: url("file://{images}/library/controller/controller_config_inspector_stick_bg.png");
 }
 
-#CenterImageABXY.CenterImage
+.CenterImageABXYPanel.CenterImage,
 {
 	background-image: url("file://{images}/library/controller/controller_config_inspector_bpad_bg.png");
 }
@@ -1865,6 +2027,7 @@ DropDownMenu.DropDownMenuVisible
 {
 	flow-children: down;
 	height: 100%;
+	visibility: visible;
 }
 
 #BindingDescriptionWrapper
@@ -1928,6 +2091,90 @@ ChooseBinding
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
+ChooseBinding #GameActions
+{
+	visibility: collapse;
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+}
+
+ChooseBinding.GameActionsModeActive #GameActions
+{
+	visibility: visible;
+}
+
+ChooseBinding.GameActionsModeActive #VirtualMouse,
+ChooseBinding.GameActionsModeActive #VirtualGamepad,
+ChooseBinding.GameActionsModeActive #KeyboardWrapper
+{
+	visibility: collapse;
+}
+
+ChooseBinding #GameActionsHeader
+{
+	vertical-align: top;
+	font-size: 40px;
+}
+
+ChooseBinding #GameActionsContainer
+{
+	margin-top: 25px;
+	flow-children: right-wrap;
+	horizontal-align: center;
+}
+
+ChooseBinding .GameActionSelectButton
+{
+	vertical-align: top;
+	horizontal-align: left;
+	height: 70px;
+	width: 300px;
+	padding-top: 0px;
+}
+
+ChooseBinding .GameActionSelectButton Label
+{
+	font-size: 22px;
+}
+
+ChooseBinding .GameActionSelectButton:focus
+{
+	padding-top: 0px;
+	background-color: simplebuttonsolid_vertical;
+}
+
+ChooseBinding .GameActionSelectButton:hover Label
+{
+	color: #f2f2f2ff;
+}
+
+ChooseBinding .GameActionSelectButton:focus Label
+{
+	color: #f2f2f2ff;
+	transform: none;
+}
+
+ChooseBinding .GameActionSelectButton:selected
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0e86abff ), to( #1a5e80ff ) );
+}
+
+ChooseBinding .GameActionSelectButton:selected Label
+{
+	color: white;
+}
+
+ChooseBinding .GameActionSelectButton.OriginalBinding
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0e86abff ), to( #1a5e80ff ) );
+}
+
+ChooseBinding .GameActionSelectButton.OriginalBinding Label
+{
+	color: white;
+}
+
 .BehindTextInputHandler #ChooseBinding
 {
 	opacity-mask: url( "file://{images}/library/keyboardfade.png" ) 0.9;
@@ -1941,6 +2188,7 @@ ChooseBinding #VirtualMouse
 	background-image: url( "file://{images}/library/mouse.png" );
 	background-position: left 20px top 2px;
 	background-repeat: no-repeat;
+	visibility: visible;
 }
 
 ChooseBinding #VirtualMouse 
@@ -2215,6 +2463,7 @@ ChooseBinding #VirtualGamepad
 	background-repeat: no-repeat;
 
 	margin-left: -88px;
+	visibility: visible;
 }
 
 ChooseBinding #GamepadBoundLayer, ChooseBinding #GamepadFocusLayer,
@@ -3060,4 +3309,143 @@ ControllerConfigBrowser #ConfigCategoriesColumn Button:focus Label, ControllerCo
 ControllerConfigButton:focus #ControllerImage
 {
 	wash-color: #dfdfdfff;
+}
+
+.InGameActionsMode .HideInGameActions
+{
+	visibility: collapse;
+}
+
+.ShowInGameActions
+{
+	visibility: collapse;
+}
+.InGameActionsMode .ShowInGameActions
+{
+	visibility: visible;
+}
+
+.AnalogTriggerGameActionsFound.ModeTriggerVisible #ModeTab
+{
+	visibility:visible;
+}
+
+.HideIfAnalogTriggersSetToOther .TriggerMode
+{
+	visibility: visible;
+}
+
+.AnalogTriggersActingAsGameAction .HideIfAnalogTriggersSetToOther
+{
+	visibility: collapse;
+}
+
+.FakeABXYButtonPanel
+{
+	width: 72px;
+	height: 72px;
+	background-repeat: no-repeat;
+	background-image: url("file://{images}/library/controller/glyph_input_wrapper_gamepad_offset.png");
+}
+
+.FakeABXYShape
+{
+	width: 100%;
+	height: 100%;
+
+	background-image: url("file://{images}/library/controller/glyph_input_wrapper_gamepad.png");
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+}
+
+.FakeABXYButtonPanel Label
+{
+	font-size: 30px;
+	font-family: platformfont;
+	font-weight: light;
+	text-overflow: ellipsis;
+	color: #00ccff;
+	margin-left: -1px;
+	margin-top: -1px;
+	font-size: 20px;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.InGameActionsMode.ModeABXYVisible #ModeTab
+{
+	visibility:collapse;
+}
+
+.InGameActionsMode .ABXYMode .ShowInGameActions
+{
+	visibility: collapse;
+}
+
+.ModeABXYVisible .ABXYModeGA
+{
+	visibility: collapse;
+}
+
+.ABXYModeGA
+{
+	visibility: collapse;
+}
+
+.InGameActionsMode.ModeABXYVisible .ABXYModeGA
+{
+	visibility: visible;
+}
+
+.DpadModeGA
+{
+	visibility: collapse;
+}
+
+.InGameActionsMode.ModeDpadVisible .DpadModeGA
+{
+	visibility: visible;
+}
+
+.FakeDpadButtonPanel
+{
+	width: 72px;
+	height: 72px;
+	background-repeat: no-repeat;
+}
+
+.FakeDpadShape
+{
+	width: 100%;
+	height: 100%;
+
+	background-image: url("file://{images}/library/controller/glyph_input_wrapper_keyboard.png");
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+}
+
+.FakeDpadButton
+{
+	width: 100%;
+	height: 100%;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+
+#DpadUpButton .FakeDpadButton
+{
+	background-image: url("file://{images}/library/controller/glyph_input_kb_up.png");
+}
+#DpadDownButton .FakeDpadButton
+{
+	background-image: url("file://{images}/library/controller/glyph_input_kb_down.png");
+}
+#DpadLeftButton .FakeDpadButton
+{
+	background-image: url("file://{images}/library/controller/glyph_input_kb_left.png");
+}
+#DpadRightButton .FakeDpadButton
+{
+	background-image: url("file://{images}/library/controller/glyph_input_kb_right.png");
 }

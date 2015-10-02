@@ -31,6 +31,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libpanorama_client.a(progressbar.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libpanorama_client.a(randsse.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libpanorama_client.a(rendermessages.pb.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libpanorama_client.a(scrollforwarding.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libpanorama_client.a(slider.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libpanorama_client.a(slideshow.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libpanorama_client.a(sseconst.o)
@@ -270,7 +271,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/forgotaccountnamewizard.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/forgotpasswordwizardchild.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friends.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friends_new.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendschatdialog.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendscontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/friendsprofiledetails.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamerecordsession.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamaudioencoder.o
@@ -288,6 +291,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideostagequeuethread.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideostagex264.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/gamestreamvideostageyv12.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/groupscontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/imageloadwrapper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/installer_build.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/intromovie.o
@@ -412,6 +416,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_remoteclients.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_remoteclients_advanced_client.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_remoteclients_advanced_host.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_steamcontroller_support.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_store.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_timezone.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamui.build/Objects-normal/i386/settings_voice.o
@@ -584,6 +589,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientApps.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientcontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/parentalcache.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/parentalcache.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
@@ -630,21 +636,16 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/JSON_parser/JSON_parser.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/SDL2/SDL_rect.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/algparam.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/cryptlib.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/filters.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/hmac.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/hrtimer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/iterhash.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/misc.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/modes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/osrng.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/pwdbased.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/rijndael.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/secblock.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/seckey.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/sha.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/simple.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/crypto++-5.61/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.3.0/src/google/protobuf/descriptor.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.3.0/src/google/protobuf/extension_set.h
@@ -658,7 +659,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.3.0/src/google/protobuf/wire_format_lite_inl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/include/osx32/pcre_stringpiece.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/include/osx32/pcrecpp.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(algparam.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(basecode.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(cpu.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(cryptlib.o)
@@ -673,11 +673,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(integer.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(iterhash.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(misc.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(modes.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(mqueue.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(nbtheory.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(osrng.o)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(queue.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(randpool.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(rdtables.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libcryptopp.a(rijndael.o)
@@ -966,6 +963,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/controls/movieplayer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/controls/panel2d.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/controls/progressbar.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/controls/scrollforwarding.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/controls/slider.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/controls/slideshow.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/panorama/controls/textentry.cpp
@@ -1036,6 +1034,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/panelhandle.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/panelptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/progressbar.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/scrollforwarding.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/slider.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/slideshow.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/textentry.h
@@ -1558,10 +1557,16 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/communitymainpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends_new.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friends_new.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendschatdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendschatdialog.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendscontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendscontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsprofiledetails.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsprofiledetails.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/groupscontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/groupscontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/intromovie.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/intromovie.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/jsclientaccess.cpp
@@ -1770,9 +1775,10 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaynotificationpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/overlay/overlaynotificationpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../community/community.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../friends/friends.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_achievements.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_community_guides.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_recentnews.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../library/librarydetails_workshop.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../mainmenu.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../profile/profile.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/parental/../store/storepanel.h
@@ -1824,6 +1830,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_remoteclients_advanced_client.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_remoteclients_advanced_host.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_remoteclients_advanced_host.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_steamcontroller_support.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_store.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_store.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/settings/settings_timezone.cpp

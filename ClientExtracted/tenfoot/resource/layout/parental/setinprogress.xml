@@ -7,11 +7,6 @@
 	</styles>
 
 	<ParentalSetInProgressChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
-		</Panel>
-
 		<Panel class="SettingsBottomPanel">
 			<Panel class="ParentalThrobber" />
 		</Panel>

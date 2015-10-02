@@ -5,14 +5,8 @@
 		
 	</styles>
 
-	<SettingsPanel_Interface class="SettingsSection" defaultfocus="Continents">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Interface" />
-		</Panel>
-		
-		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContentWideInterface" tabindex="auto" selectionpos="auto">
+	<SettingsPanel_Interface class="SettingsSection" defaultfocus="Continents" tabindex="auto" selectionpos="auto">
+		<Panel class="SettingsBottomPanel FlowRight" tabindex="auto" selectionpos="auto">
 
 				<Panel class="VertContainer">
 					<ToggleButton class="CheckBox SteamOSButton" id="SettingsSteamOS_EnableDesktop" text="#SettingsSteamOS_EnableDesktop" onactivate="ToggleInterfaceSetting()"/>
@@ -41,7 +35,7 @@
 
 				</Panel>
 				
-				<Panel class="VertContainerScreensaver">
+				<Panel class="VertContainerScreensaver FlowDown">
 					<Panel id="SettingsEnableScreenSaverTimePanel" class="SettingsScreensaverPanels SettingsController FlowDown">
 						<Label class="SettingsLabel" text="#SettingsInterface_ScreensaverTimeout" />
 						<DropDown id="SettingsEnableScreenSaverTimePanel_Dropdown" class="SettingsScreensaverPanels_Dropdown" />			

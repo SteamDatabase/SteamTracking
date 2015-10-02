@@ -1,0 +1,86 @@
+FriendsContent_Groups
+{
+	flow-children: down;
+	overflow: clip scroll;
+}
+
+Label
+{
+	padding-top: 32px;
+	margin-bottom: 8px;
+	color: white;
+	font-size: 32px;
+}
+
+.GroupsContainer
+{
+	padding-bottom: -32px;
+	flow-children: right-wrap;
+}
+
+.GroupButton
+{
+	background-color: #1B2838ff;
+	margin: 20px;
+	width: 260px;
+	height: 140px;
+	padding: 5px;
+}
+
+.GroupButton:focus
+{
+	border: 3px solid #3D6286;
+}
+
+#GroupsContainer_RecentChats
+{
+	margin-bottom: 30px;
+}
+
+.GroupsContainer
+{
+	flow-children: right-wrap;
+}
+
+.GroupsHeader
+{
+	visibility: collapse;
+}
+
+.HasGroups .GroupsHeader
+{
+	visibility: visible;
+}
+
+.RecentChatsHeader
+{
+	visibility: collapse;
+}
+
+#GroupsContainer_RecentChats
+{
+	visibility: collapse;
+}
+
+.HasRecentChats .RecentChatsHeader
+{
+	visibility: visible;
+}
+
+.HasRecentChats #GroupsContainer_RecentChats
+{
+	visibility: visible;
+}
+
+.ZeroGroupsLabel
+{
+	width: 100%;
+	margin-top: 400px;
+	text-align: center;
+	vertical-align: center;
+}
+
+.HasGroups .ZeroGroupsLabel
+{
+	visibility: collapse;
+}

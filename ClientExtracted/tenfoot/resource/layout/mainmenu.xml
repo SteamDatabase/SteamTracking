@@ -48,7 +48,7 @@
 					<Button id="DownloadsButton" class="Button TopRowButton" tabindex="0" selectionpos="3.1,0"  onactivate="ShowDownloads();" >
 						<Image src="file://{images}/downloads.png" />
 					</Button>
-					<ParentalButton id="SettingsButton" class="Button TopRowButton" tabindex="2" selectionpos="3.9,0"  onactivate="ShowSettings( Main );" >
+					<ParentalButton id="SettingsButton" class="Button TopRowButton" tabindex="2" selectionpos="3.9,0"  onactivate="ShowSettingsMenu();" >
 						<Image src="file://{images}/settings.png" />
 					</ParentalButton>
 					<Button id="Exit" class="Button TopRowButton" tabindex="5" selectionpos="4,0" onactivate="ShowQuitDialog();">

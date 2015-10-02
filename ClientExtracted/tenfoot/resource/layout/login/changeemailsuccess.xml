@@ -6,11 +6,12 @@
 	</styles>
 
 	<SimpleWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ButtonDone">
-		<Label class="WizardChildTitle" text="#ChangeEmail_Success_Title" />
-		<Label class="WizardChildDescription" text="#ChangeEmail_Success_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#ChangeEmail_Success_Description" />
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button class="WizardButton" id="ButtonDone" onactivate="ChangeEmailDone()">
+			<Button class="WizardButton" id="ButtonDone" onactivate="WizardButtonDone()">
 				<Label id="Label" text="#WizardButton_Done" />
 			</Button>
 		</Panel>

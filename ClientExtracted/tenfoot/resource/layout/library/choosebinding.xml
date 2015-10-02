@@ -7,6 +7,11 @@
 
 	<ChooseBinding selectionpos="0,0" defaultfocus="BindingDescriptionTextEntry" onmoveleft="DoNothing();" onmoveright="DoNothing();" onmoveup="DoNothing();" onmovedown="DoNothing();">
 		
+		<Panel id="GameActions" selectionpos="auto"> 
+			<Label id="GameActionsHeader" text="#Library_Details_GameActionsHeader" />
+			<Panel id="GameActionsContainer" selectionpos="auto"/>
+		</Panel>
+		
 		<Panel id="VirtualMouse" tabindex="auto" selectionpos="-15,0">
 			<Button id="mouse_left_button" selectionpos="200,1" onmoveup="DoNothing();" onmovedown="SetInputFocus( mouse_back_button );" onactivate="SetBinding( mouse_button, left );" onmoveleft="SetInputFocus( button_b );" ><Label text="L" /></Button>
 			<Button id="mouse_scroll_up" selectionpos="201,0" onactivate="SetBinding( mouse_button, scroll_up );"><Label text="^" /></Button>	

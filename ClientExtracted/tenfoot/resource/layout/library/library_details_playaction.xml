@@ -4,7 +4,7 @@
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
 	<LibraryPlayAction defaultfocus="PlayActionFullWrapper">
-		<Panel id="PlayActionFullWrapper" class="PlayActionFullWrapper" onactivate="LaunchGame( true );">			
+		<Panel id="PlayActionFullWrapper" class="PlayActionFullWrapper" onactivate="LaunchGame( true );" >			
 			<Panel id="PlayActionContents">
 
 				<Label id="HeaderLabel" class="PlayActionHeaderLabel" text="#Library_Details_Play" />

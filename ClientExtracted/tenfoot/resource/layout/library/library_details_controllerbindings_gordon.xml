@@ -7,10 +7,11 @@
 
 	<ControllerBindingsGordon defaultfocus="LeftTrackpad">
 		<Button id="VDFDump" onactivate="DumpVDF()" />
-		<Panel id="BindingsContainer" tabindex="auto" selectionpos="auto">
+		<Panel id="BindingsContainer" tabindex="auto" selectionpos="0,0">
 			<Label id="BindingsTitle" text="#SettingsController_BindingTitle" />
 			<Label id="BindingsCreator" text="#SettingsController_BindingCreator" />
-			<Panel id="TopHalfContainer">
+			<Panel id="GameActionSets" selectionpos="0,1"/>
+			<Panel id="TopHalfContainer" selectionpos="0,2">
 				<Panel class="Background" id="BackgroundController" >
 						<Panel id="HelperDescription" >
 									<Label id="HelperDescriptionHeader" text="#SettingsController_HelperDescriptionHeader" />
@@ -21,27 +22,27 @@
 						</Panel>
 				</Panel>
 				<Panel class="Background" id="BackgroundLines" />
-				<Panel class="BindingSlotStrip" id="Left">
-					<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetInputFocus( RightTrigger );" />
-					<ControllerBindingButton class="BindingButton Gradient1" describesource="true" id="LeftBumperButton" onmoveright="SetInputFocus( RightBumperButton );" />
-					<ControllerBindingButton class="BindingButton Gradient2" describesource="true" id="LeftGripButton" onmoveright="SetInputFocus( RightGripButton );" />
-					<ControllerBindingButton class="BindingButton Gradient3" id="BackButton" onmoveright="SetInputFocus( StartButton );" onmovedown="SetInputFocus( LeftTrackpad );" />
+				<Panel class="BindingSlotStrip" id="Left" selectionpos="0,2">
+					<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetInputFocus( RightTrigger );" selectionpos="0,0"/>
+					<ControllerBindingButton class="BindingButton Gradient1" describesource="true" id="LeftBumperButton" onmoveright="SetInputFocus( RightBumperButton );" selectionpos="0,1"/>
+					<ControllerBindingButton class="BindingButton Gradient2" describesource="true" id="LeftGripButton" onmoveright="SetInputFocus( RightGripButton );" selectionpos="0,2"/>
+					<ControllerBindingButton class="BindingButton Gradient3" id="BackButton" onmoveright="SetInputFocus( Gyro );" onmovedown="SetInputFocus( LeftTrackpad );" selectionpos="0,3"/>
 				</Panel>
-				<Panel class="BindingSlotStrip" id="Right">
-					<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetInputFocus( LeftTrigger );" />
-					<ControllerBindingButton class="BindingButton Right Gradient1" describesource="true" id="RightBumperButton" onmoveleft="SetInputFocus( LeftBumperButton );" />
-					<ControllerBindingButton class="BindingButton Right Gradient2" describesource="true" id="RightGripButton" onmoveleft="SetInputFocus( LeftGripButton );" />
-					<ControllerBindingButton class="BindingButton Right Gradient3" id="StartButton" onmoveleft="SetInputFocus( BackButton );" onmovedown="SetInputFocus( RightTrackpad );" />
+				<Panel class="BindingSlotStrip" id="Right" selectionpos="4,2">
+					<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetInputFocus( LeftTrigger );" selectionpos="0,0"/>
+					<ControllerBindingButton class="BindingButton Right Gradient1" describesource="true" id="RightBumperButton" onmoveleft="SetInputFocus( LeftBumperButton );" selectionpos="0,1"/>
+					<ControllerBindingButton class="BindingButton Right Gradient2" describesource="true" id="RightGripButton" onmoveleft="SetInputFocus( LeftGripButton );" selectionpos="0,2"/>
+					<ControllerBindingButton class="BindingButton Right Gradient3" id="StartButton" onmoveleft="SetInputFocus( Gyro );" onmovedown="SetInputFocus( RightTrackpad );" selectionpos="0,3"/>
 				</Panel>
 				<Panel id="GyroModeContainer">
-					<Button class="ModeWrapper Gyro" id="Gyro" onmoveleft="SetInputFocus( BackButton );" onmoveright="SetInputFocus( StartButton );" onmovedown="SetInputFocus( ABXYButtons );" />
+					<Button class="ModeWrapper Gyro" id="Gyro" onmoveleft="SetInputFocus( BackButton );" onmoveright="SetInputFocus( StartButton );" onmovedown="SetInputFocus( ABXYButtons );"/>
 				</Panel>
 			</Panel>
 			<Panel id="ModeContainer">
-				<Button class="ModeWrapper GapRight" id="LeftTrackpad" onmoveup="SetInputFocus( BackButton );"/>
-				<Button class="ModeWrapper GapRight" id="Joystick" />
-				<Button class="ModeWrapper GapRight" id="ABXYButtons" />
-				<Button class="ModeWrapper" id="RightTrackpad" onmoveup="SetInputFocus( StartButton );" />
+				<Button class="ModeWrapper GapRight" id="LeftTrackpad" onmoveup="SetInputFocus( BackButton );" selectionpos="0,7"/>
+				<Button class="ModeWrapper GapRight" id="Joystick" onmoveup="SetInputFocus( Gyro );" selectionpos="1,7"/>
+				<Button class="ModeWrapper GapRight" id="ABXYButtons" onmoveup="SetInputFocus( Gyro );" selectionpos="3,7"/>
+				<Button class="ModeWrapper" id="RightTrackpad" onmoveup="SetInputFocus( StartButton );" selectionpos="4,7"/>
 			</Panel>
 		</Panel>
 

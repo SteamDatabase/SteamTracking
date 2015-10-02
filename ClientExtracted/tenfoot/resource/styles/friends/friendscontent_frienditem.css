@@ -1,0 +1,172 @@
+FriendsContent_FriendItem
+{
+	margin: 4px;
+	width: 300px;
+	height: 110px;
+	flow-children: none;
+  background-color: gradient(linear, 0.0% 0.0%, 100.0% 100.0%, color-stop(0.0, #2E6480FF), color-stop(1.0,#154066FF));
+	box-shadow: module_shadow;
+	opacity: 1.0;
+}
+
+FriendsContent_FriendItem:focus
+{
+	border: 3px solid ui_primary_color;
+	//pre-transform-scale2d: 1.1;
+	//z-index: 10;
+	background-color: #14C6FC99;	    	
+}
+
+FriendsContent_FriendItem.ConnectedToChat
+{
+	background-color: #14C6FC66;
+}
+
+FriendsContent_FriendItem.ConnectedToChat:focus
+{
+	border: 2px solid white;
+}
+
+FriendsContent_FriendItem.InGame
+{
+	//border: 2px solid friendsingame_darkbg;
+}
+
+FriendsContent_FriendItem.Online
+{
+	//border: 2px solid #53A4C4;
+}
+
+FriendsContent_FriendItem.Offline
+{
+	//border: 2px solid #6F6F6F;
+}
+
+.GroupContent
+{	
+	flow-children: right;
+	//overflow: clip;
+}
+
+AvatarImage
+{
+	margin: 5px;
+	width: 100px;
+	height: 100px;
+	border-radius: 4px;
+}
+
+.InGame AvatarImage
+{
+	border: 2px solid friendsingame_darkbg;
+}
+
+.Online AvatarImage
+{
+	border: 2px solid friendsonline_darkbg;
+}
+
+.Offline AvatarImage
+{
+	border: 2px solid friendsoffline_darkbg;
+}
+
+Label
+{
+	margin-left: 4px;
+	color: ui_primary_color;
+	font-size: 22px;
+}
+
+FriendsContent_FriendItem:focus Label
+{
+	//padding-top: 4px;
+	//margin-left: 8px;
+	//color: ui_primary_color;
+	transform: translatey( -3px ) translatex( -3px );
+}
+
+
+FriendsContent_FriendItem:focus AvatarImage
+{
+	margin-left:5px;
+	margin-bottom: -1px;
+		width: 100px;
+	height: 100px;
+	//color: ui_primary_color;
+	transform: translatey( -3px ) translatex( -3px );
+}
+.FriendItemLabelContainer
+{
+	flow-children: down;
+}
+
+.FriendName
+{
+  height: 30px;
+  width: 176px;
+  margin-left: 4px;
+	margin-top: 14px;
+	color: white;
+	font-size: 24px;
+	text-overflow: ellipsis;
+}
+
+.FriendPersonaStatus
+{
+
+}
+
+.Offline .FriendPersonaStatus
+{
+	color: #888888;
+}
+
+.InGame .FriendPersonaStatus
+{	
+
+	font-size: 20px;
+	color: friendsingame_darkbg;
+}
+
+.FriendPersonaStatusDetail
+{
+	font-size: 20px;
+	//color: friendsingame_darkbg;
+}
+
+.FriendUnreadMessages
+{
+	visibility: collapse;
+
+	visibility: collapse;
+	color: white;
+	font-size: 16px;
+	width: 28px;
+	height: 28px;
+	background-color: red;
+	border-radius: 4px;
+
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+	padding: 3px;
+	margin-left: 77px;
+	margin-top: 4px;
+	text-align: center;
+}
+
+.HasUnreadChats .FriendUnreadMessages
+{
+	visibility: visible;
+}
+
+.FriendHasLobbyInvite
+{
+	visibility: collapse;
+}
+
+.HasLobbyInvite .FriendHasLobbyInvite
+{
+	visibility: visible;
+}

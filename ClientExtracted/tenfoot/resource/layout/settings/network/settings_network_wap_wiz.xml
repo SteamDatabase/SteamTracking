@@ -6,28 +6,27 @@
 	</styles>
 
 	<SettingsPanelNetwork_WAP class="WizardChild" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Label class="WizardChildTitle" text="#Settings_Network" />
+		<Panel class="WizardContent">
+		  <Label class="SettingsCallout LongDesc" text="#SettingsNetwork_WAP_Choose" />
 
-		<Label class="SettingsCallout LongDesc" text="#SettingsNetwork_WAP_Choose" />
+		  <Panel class="SettingsBottomPanel SettingsBottomPanel_NetworkSettings" tabindex="auto" selectionpos="auto">
+			  <Panel class="SettingsContent SettingsLeftContent SettingsNetwork_SSIDList" tabindex="auto" selectionpos="auto">
+				  <Panel id="AvailableNetworksList" class="VertContainer">
+					  <!--  Add all the SSID instances here -->
+				  </Panel>
 
-		<Panel class="SettingsBottomPanel SettingsBottomPanel_NetworkSettings" tabindex="auto" selectionpos="auto">
-			<Panel class="SettingsContent SettingsLeftContent SettingsNetwork_SSIDList" tabindex="auto" selectionpos="auto">
-				<Panel id="AvailableNetworksList" class="VertContainer">
-					<!--  Add all the SSID instances here -->
-				</Panel>
+				  <Panel class="NetworkSettingsRightPane" tabindex="auto" selectionpos="auto">
 
-				<Panel class="NetworkSettingsRightPane" tabindex="auto" selectionpos="auto">
-
-						<Button id="RefreshWAPList" class="SettingsNetwork_LeftButton Button " onactivate="NetworkWizardRefreshSSIDs()">
-							<Label class="NetworkSettingsButtonLabel" text="#SettingsNetwork_WAP_Refresh" />
-						</Button>
-						<Button id="NetworkForget" class="SettingsNetwork_RightButton Button " onactivate="ForgetNetwork()">
-							<Label class="NetworkSettingsButtonLabel" text="#SettingsNetwork_Forget" />
-						</Button>
-				</Panel>
-			</Panel>
-		</Panel>
+						  <Button id="RefreshWAPList" class="SettingsNetwork_LeftButton Button " onactivate="NetworkWizardRefreshSSIDs()">
+							  <Label class="NetworkSettingsButtonLabel" text="#SettingsNetwork_WAP_Refresh" />
+						  </Button>
+						  <Button id="NetworkForget" class="SettingsNetwork_RightButton Button " onactivate="ForgetNetwork()">
+							  <Label class="NetworkSettingsButtonLabel" text="#SettingsNetwork_Forget" />
+						  </Button>
+				  </Panel>
+			  </Panel>
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

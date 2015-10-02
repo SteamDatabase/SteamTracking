@@ -135,7 +135,7 @@ MainMenu.BehindMessageBox.CheckoutFormTextEntryLeft
 	height: 100%;
 	opacity-mask: none;
   background-color: #1c486955;
-
+	
 
 	transition-property: blur, desaturation, opacity, transform, wash-color;
 	transition-duration: PageTransitionTimeOff;
@@ -162,13 +162,21 @@ MainMenu #BodyWrapper.StoreVisible:descendantfocus
 
 MainMenu.BelowTheFoldOpen #BodyWrapper:descendantfocus
 {
-	transform: translatey( -510px );
+	transform: none;
+	height: fit-children;
 }
 
 MainMenu #BodyWrapper:descendantfocus #GameRowContents
 {
+	opacity: 0.5;
+}
+
+MainMenu #BodyWrapper #GameRowContents:descendantfocus
+{
 	opacity: 1.0;
 }
+
+
 
 MainMenu #BodyWrapper #GameRowContents
 {
@@ -336,7 +344,13 @@ MainMenu.StackDepth3 .HomeGlow
 	margin-top: 588px;
 }
 
-
+#HR3
+{
+	width: 1200px;
+	horizontal-align: left;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
 
 .SteamUpdated .InboxButtonImage
 {
@@ -403,6 +417,11 @@ MainMenu.StackDepth3 .HomeGlow
 	animation-timing-function: ease-out;
 	animation-iteration-count: 1;
 	animation-direction: normal;
+}
+
+.VR #Exit
+{
+	visibility: collapse;
 }
 
 @keyframes 'button-fade-in'
@@ -790,8 +809,12 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	border-color: #b6e1faff;
 	background-color: #2A5D7C00 ;
   box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
-	animation-name: none;
-	//shedding steamstyles animation timing, causes incorrect results here
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 	transition-duration: 0.0s;
 }
 
@@ -1063,14 +1086,14 @@ MainMenu.ScreenshotSlideshowVisible #MenuRow
 	margin-top: 620px;
 	width: 100%;
 	height: 512px;
-	desaturation: 0.7;
-	wash-color: #8bcdf2;
-	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e203600 ), color-stop( 0.5, #0C3251ff ),to( #0e203600 ) );
+	//desaturation: 0.7;
+	//wash-color: #8bcdf2;
+	//background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e203600 ), color-stop( 0.5, #0C3251ff ),to( #0e203600 ) );
 	flow-children: right;
 
   transform-origin: 0% 0% parent-relative;
 	transform: translateX( 0px ) rotateX( 0deg ) translateZ( -64px );
-  opacity:0.7;
+
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.3s, 0.3s !immediate;
 	transition-timing-function: linear;
@@ -1847,6 +1870,7 @@ Button.Locked #ParentalLockImageLocked
 #WelcomePanel
 {
 	visibility: collapse;
+	z-index: MainContentsZIndex;
 	
 	margin-top: 0px;
 	width: 100%;
@@ -1858,7 +1882,7 @@ Button.Locked #ParentalLockImageLocked
 	transition-duration: 0.3s, 0.3s !immediate;
 	transition-timing-function: linear;
 	
-	height:460px;
+	height:520px;
 	overflow: clip clip;
 }
 
@@ -1867,10 +1891,11 @@ Button.Locked #ParentalLockImageLocked
 	visibility: visible;
 }
 
-.BelowTheFoldOpen #WelcomePanel
+MainMenu.DeletingWelcome #WelcomePanel
 {
-	height: 1080px;
-	overflow: clip scroll;
+	transform: translatey( 600px );
+	visibility: visible;
+	opacity: 0.0;
 }
 
 MainMenu.BelowTheFoldClosed #WelcomePanel
@@ -1885,6 +1910,17 @@ MainMenu.BelowTheFoldClosed #WelcomePanel:descendantfocus
 	transition-property: opacity, transform, pre-transform-scale2d, desaturation, wash-color, blur;
 	transition-duration: 0.2s, 0.2s !immediate;
 	transition-timing-function: linear;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e2036ff ), color-stop( 0.5, #0C3251ff ),to( #0e2036ff ) );	
+	box-shadow: #eeeeeeff -4.5px -4.5px 6px 9px;
+}
+
+MainMenu.BelowTheFoldOpen #WelcomePanel
+{
+	transform: none;
+	opacity:1.0;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #0e2036ff ), color-stop( 0.5, #0C3251ff ),to( #0e2036ff ) );	
+	overflow: clip scroll;
+	height: fit-children;
 }
 
 #ProfileNameWrapper
@@ -1906,8 +1942,6 @@ Label.ProfileNameLabel
 	margin-top: -4px;
 	color: #36ceff;
 }
-
-
 
 #MenuRow:descendantfocus 
 {

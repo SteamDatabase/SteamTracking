@@ -10,7 +10,7 @@
 			<Panel id="TopRow" class="TopRow" selectionpos="0,0">
 				<Image class="Logo" src="file://{images}/steam_logo.tga" />
 				<Panel id="SettingsExitRow" selectionpos="auto">
-					<Button id="SettingsButton" onactivate="ShowSettings( Main );" >
+					<Button id="SettingsButton" onactivate="ShowSettingsMenu();" >
 						<Image src="file://{images}/settings.png" />
 						<Label class="LongDesc" text="#MainMenu_Settings" />
 					</Button>

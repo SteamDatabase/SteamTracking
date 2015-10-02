@@ -449,11 +449,25 @@ LibraryAppDetails #GameRequiresLabel
 	width: fit-children;
 	height: 100%;
 	flow-children: down;
-	margin-left: 70px;
+	padding-left: 70px;
 
 	margin-right: 25px;
 }
-#ContentPanels #CommonControls {
+
+/* To transition on focus change or hover */
+LibraryAppDetails #CommonControls:descendantfocus,
+LibraryAppDetails.MenuHover #CommonControls
+{
+	transform: translateX( 0px );
+	opacity: 1;
+	pre-transform-scale2d: 1;
+	opacity-mask: none;
+}
+
+LibraryAppDetails #CommonControls,
+LibraryAppDetails.ContentHover #CommonControls,
+LibraryAppDetails.ContentHover #CommonControls:descendantfocus
+{
 	/* To transition on focus change */
 	padding-top: 32px;
 
@@ -467,14 +481,6 @@ LibraryAppDetails #GameRequiresLabel
 
 	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
 }
-/* To transition on focus change */
-#ContentPanels #CommonControls:descendantfocus {
-transform: translateX( 0px );
-opacity: 1;
-pre-transform-scale2d: 1;
-opacity-mask: none;
-}
-
 
 .AppMiscHeader .DataHeader
 {
@@ -600,30 +606,28 @@ opacity-mask: none;
 	visibility: visible;
 }
 
-LibraryAppDetails .LibraryDetailsSectionsContainer {
+/* to transition when focus changes */
+LibraryAppDetails .LibraryDetailsSectionsContainer:descendantfocus,
+LibraryAppDetails.ContentHover .LibraryDetailsSectionsContainer
+{
+	transform: translateX( -200px );
+}
+
+LibraryAppDetails .LibraryDetailsSectionsContainer,
+LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer,
+LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer:descendantfocus 
+{
 	width: 100%;
 	height: 100%;
 	vertical-align: top;
 	padding-top: 0px;
 	padding-left: 15px;
+	transform: translateX( 0px );
 
 	transition-property: opacity, transform;
 	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
-
-/* to transition when focus changes */
-#ContentPanels .LibraryDetailsSectionsContainer:descendantfocus {
-	transform: translateX( -200px );
-}
-/* test mouse left/right interaction
-#ContentPanels .LibraryDetailsSectionsContainer:descendantfocus,
-#ContentPanels .LibraryDetailsSectionsContainer:hover {
-	transform: translateX( -200px );
-}
-*/
-
-
 
 
 LibraryAppDetails .LibraryDetailsSectionPanel {
@@ -775,6 +779,11 @@ LibraryAppDetails.UnavailableOnPlatform .DetailsDataPanel.Small,
 
 	transition-duration: shortduration !immediate;
 
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
 	animation-delay: mediumduration;
@@ -806,7 +815,7 @@ LibraryAppDetails.UnavailableOnPlatform .DetailsDataPanel.Small,
 	color: detailsdatalabelfocus;
 }
 .DetailsDataPanel:descendantfocus .HeaderLabel .NumberElement {
-	color: darkblue;
+	color: #c6d4df;
 }
 
 LibrarySettings
@@ -2904,6 +2913,17 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 }
 
 
+/* Transitions when grid is in focus */
+#LibraryAllGames.ContentAreaFocus .GamesGrid, #LibraryAllGames.ContentHover .GamesGrid, 
+#LibraryAllGames.ContentAreaFocus .GamesDownloads, #LibraryAllGames.ContentHover .GamesDownloads,
+#LibraryAllGames.ContentAreaFocus .GamesSuggestion, #LibraryAllGames.ContentHover .GamesSuggestion,
+#ParentalLibraryGrid .GamesGrid
+{
+	transform: translateX( -200px );
+	width: 1500px;
+	padding-right: 40px;
+}
+
 .GamesGrid,
 .GamesSuggestion,
 .GamesDownloads
@@ -2927,17 +2947,12 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	transition-property: transform, width;
 }
 
-
-/* Transitions when grid is in focus */
-.ContentAreaFocus .GamesGrid,
-.ContentAreaFocus .GamesDownloads,
-.ContentAreaFocus .GamesSuggestion
+#LibraryAllGames.MenuHover .GamesGrid, 
+#LibraryAllGames.MenuHover .GamesSuggestion,
+#LibraryAllGames.MenuHover .GamesDownloads
 {
-	transform: translateX( -200px );
-	width: 1500px;
-	padding-right: 40px;
+	transform: translateX( 0px );
 }
-
 
 .EmptyLabel
 {
@@ -2989,6 +3004,10 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 .search.ContentAreaFocus.EmptyGrid #EmptySearchArea {
 	transform: translateX(-200px);
+}
+
+#LibraryAllGames.search.ContentAreaFocus.EmptyGrid.MenuHover #EmptySearchArea {
+	transform: translateX(0px);
 }
 
 .search.EmptyGrid #EmptyLibraryArea,
@@ -4595,10 +4614,17 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 	visibility: collapse;
 }
 
-.ContentAreaFocus #GamesFilter
+#LibraryAllGames.ContentAreaFocus #GamesFilter,
+#LibraryAllGames.ContentHover #GamesFilter
 {
 	position: 1630px 120px 0px;
 }
+
+#LibraryAllGames.MenuHover #GamesFilter
+{
+	position: 1825px 120px 0px;
+}
+
 
 #GamesFilter:descendantfocus
 {
@@ -4892,7 +4918,7 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .NxLeftNavButton Label,
 .NxLeftNavButtonAction Label
 {
-	width: 100%;
+	//width: 100%;
 	font-family: platformfont;
 	font-size: 26px;
 	font-weight: normal;
@@ -4905,8 +4931,48 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	.NxLeftNavButton Label .NumberElement,
 	.NxLeftNavButtonAction Label .NumberElement
 	{
-		color: #2976a3ff;
+
 	}
+
+.ButtonFlowRight
+{
+	width: 100%;
+	flow-children: right;
+}
+
+Label.ButtonCountCapsule
+{
+	horizontal-align: right;
+	margin-right: 16px;
+	margin-top: 1px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius: 8px;
+	height: 28px;
+	font-size: 24px;
+//	font-weight: bold;
+
+  background-color: #051e3388;
+  color: #5aadde99;
+	opacity: 1.0;
+}
+
+.NxLeftNavButton:focus .ButtonCountCapsule
+{
+	margin-left: 8px;
+	margin-top: 1px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-radius: 8px;
+	height: 28px;
+	font-size: 24px;
+//	font-weight: bold;
+
+  background-color: #072e4733;
+  color: #072e47;
+	opacity: 1.0;
+}
+
 
 .NxLeftNavButton:focus Label,
 .NxLeftNavButtonAction:focus Label
@@ -5032,11 +5098,14 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 
 }
 
-.NxGridButtonRow
+#ParentalLibraryGrid .NxGridButtonRow,
+LibraryAllGames .NxGridButtonRow,
+LibraryAllGames.ContentHover .NxGridButtonRow,
+LibraryAllGames.ContentHover .NxGridButtonRow:descendantfocus
 {
-	margin-top: 37px;
-	margin-left: 70px;
-	width: 400px;
+	padding-top: 37px;
+	padding-left: 70px;
+	width: 480px;
 	height: 100%;
 	flow-children: none;
 	overflow: clip scroll;
@@ -5053,11 +5122,11 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
 }
 
-.NxGridButtonRow:descendantfocus,
+LibraryAllGames .NxGridButtonRow:descendantfocus,
+LibraryAllGames.MenuHover .NxGridButtonRow,
 {
 	transform: translateX( 0px ) translateY( -8px );
 	opacity: 1;
-	pre-transform-scale2d: 1;
 	opacity-mask: none;
 }
 
@@ -5203,18 +5272,35 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	transition-duration: mediumduration;
 	transition-timing-function: bigpicture-ease-in-out;
 }
-.ContentAreaFocus #PopularRow .SuggestedRow #Game1,
-.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game1 {
+.ContentAreaFocus #PopularRow .SuggestedRow #Game1, 
+.ContentHover #PopularRow .SuggestedRow #Game1,
+.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game1, 
+.ContentHover #UnPlayedRow .SuggestedRow #Game1 {
 	transform: translatex(20px);
 }
 .ContentAreaFocus #PopularRow .SuggestedRow #Game2,
-.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game2 {
+.ContentHover #PopularRow .SuggestedRow #Game2,
+.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game2,
+.ContentHover #UnPlayedRow .SuggestedRow #Game2 {
 	transform: translatex(40px);
 }
 .ContentAreaFocus #PopularRow .SuggestedRow #Game3,
-.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game3 {
+.ContentHover #PopularRow .SuggestedRow #Game3,
+.ContentAreaFocus #UnPlayedRow .SuggestedRow #Game3,
+.ContentHover #UnPlayedRow .SuggestedRow #Game3 {
 	transform: translatex(60px);
 }
+
+.MenuHover #PopularRow .SuggestedRow #Game1, 
+.MenuHover #UnPlayedRow .SuggestedRow #Game1,
+.MenuHover #PopularRow .SuggestedRow #Game2, 
+.MenuHover #UnPlayedRow .SuggestedRow #Game2,
+.MenuHover #PopularRow .SuggestedRow #Game3,
+.MenuHover #UnPlayedRow .SuggestedRow #Game3
+{
+	transform: translatex(0px);
+}
+
 
 #UnPlayedRow.EmptyRow, #PopularRow.EmptyRow
 {
@@ -5911,6 +5997,7 @@ LibraryAppDetails.UnavailableOnPlatform #UnavailableOnPlatformHowToStreamInfo
 {
 	color: #bafe37;
 	font-size: 28px;
+	text-transform: uppercase;
 }
 #UnavailableOnPlatformHowToStreamInfo .HowToStreamDesc
 {
@@ -5921,4 +6008,41 @@ LibraryAppDetails.UnavailableOnPlatform #UnavailableOnPlatformHowToStreamInfo
 .Parental .HideIfParental
 {
 	visibility: collapse;
+}
+
+.GamesButtonContainer Button
+{
+	flow-children: none;
+}
+
+.GamesButtonContainer Button.FlowRight
+{
+	flow-children: right;
+}
+
+.NxLeftNavButton .FilterHelp
+{
+	height: 100%;
+	opacity: 0.0;
+	horizontal-align: right;
+	//vertical-align: top;
+	text-align: right;
+	color: ui_primary_color;
+	margin-right: 10px;
+	margin-top: 4px;
+	font-size: 20px;
+	transition-property: opacity;
+	transition-duration: shortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+
+.FilterActive.NxLeftNavButton .FilterHelp
+{
+	opacity: 0.5;
+}
+
+ParentalButton #ParentalLockImageLocked
+{
+	opacity: 0.0;
 }

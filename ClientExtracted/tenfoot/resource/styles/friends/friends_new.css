@@ -1,0 +1,451 @@
+/*	friends screen css style */
+
+
+/*
+@define friendsitemmainlistbkgnd_from: #f2f2f2ff;
+@define friendsitemmainlistbkgnd: gradient( linear, 0% 0%, 100% 100%, from( friendsitemmainlistbkgnd_from ), to( #cbcbcbde ) );
+
+@define friendschatmsgsbkgnd: gradient( linear, 10% 0%, 0% 100%, from( #10101040 ), to( #10101090 ) );
+@define friendsverticalscrollpad: 18px;
+@define friendsitemsecondaryfocus: gradient( linear, 0% 0%, 100% 100%, from( #caccccff  ), to( #aaacacce ) );
+@define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696aa ), to( #365b7866 ) );
+@define friendschatbackground: #0f283dCC;
+*/
+@define friendschatmsgsbkgnd: gradient( linear, 10% 0%, 0% 100%, from( #10101040 ), to( #10101090 ) );
+
+@define shortduration: 0.25s;
+@define shortmedduration: 0.3s;
+@define mediumduration: 0.4s;
+@define longduration: 1.7s;
+
+@keyframes 'nx-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	}
+
+	50%
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #1483baff ) );
+	}
+
+	to
+	{
+		background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	}
+}
+
+Friends
+{
+	perspective: 1000;
+	perspective-origin: 50% 50%;
+	position: 0px 0px 0%;
+	width: 1920px;
+	height: 1080px;
+	visibility: visible;
+
+	font-family: platformfont;
+
+	animation-duration: 1.6s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+
+	transition-property:  transform !immediate;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+
+	opacity: 1.0;
+	transform: translateX( 0px );
+  background-color: #031a3d;
+	background-image: url( "file://{images}/panel_background.png" );
+	//transform: translateY( 100% );		background-color: #000000ff;
+}
+
+Friends.BehindMessageBox.FriendsInputTextEntry
+{
+	opacity: 1.0;
+	blur: none;
+}
+
+Friends.SlideAwayToRight
+{
+	//opacity: 0.0;
+	transform-origin: 0% 0% parent-relative;
+	transform: translateX(  1920px );	// rotateX( 45deg ) translateZ( -1000px );
+}
+
+.TempTitle
+{	
+	margin-top: 20px;
+	margin-left: 60px;
+	height: 80px;
+
+	flow-children: right;
+
+	padding-left: 90px;
+
+	background-image: url( "file://{images}/steam_home_os.png" );
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-color: gradient( linear, 0% 0%, 0% 60%, from( #EEEEEE30 ), to( #00000000 ) );
+}
+
+.TempTitle Label.Breadcrumb
+{
+	color: #626a6e;
+	margin-right: 10px;
+}
+
+.TempTitle Label
+{
+	font-size: 48px;
+	color: white;
+}
+
+.AllContent
+{
+	width: 100%;
+	height: 100%;
+	overflow: clip;
+	margin-top: 80px;
+
+	flow-children: right;	//temp
+}
+
+
+.ButtonColumn
+{
+	margin-top: 20px;
+	margin-left: 70px;
+	width: 400px;
+	height: 100%;
+	flow-children: none;
+	overflow: clip scroll;
+
+	transform: translateX( -35px ) translateY( -8px );
+
+	opacity: 0.5;
+	transition-delay: 0.08s;
+	transition-duration: 0.3s;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
+	pre-transform-scale2d: 1;
+
+	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
+}
+
+
+
+.ChatFocus .ButtonColumn
+{
+	opacity:0.0;
+}
+
+
+
+
+.ButtonColumn:descendantfocus,
+{
+	transform: translateX( 0px ) translateY( -8px );
+	opacity: 1.0;
+	pre-transform-scale2d: 1;
+	opacity-mask: none;
+}
+
+.ButtonContainer
+{
+	width: 100%;
+	flow-children: down;
+}
+
+.GamesHorizRule
+{
+	width: 100%;
+	height: 20px;
+}
+
+Label.Header
+{
+	font-size: 18px;	
+	color: #2F89BDff;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+.NxLeftNavButton
+{
+	width: 100%;
+	margin: 2px 10px 2px 10px;
+	padding: 10px 0px 0px 20px;
+	height: 48px;
+	flow-children: right;
+	box-shadow: none;
+	color: #67c1f5FF;
+	background-color: gradient( linear, 85% 85%, 100% 100%, from( #09334dFF ), to( #09334d00 ) );
+}
+
+.NxLeftNavButton:selected {
+	background-color: #1579a0;
+}
+.NxLeftNavButton:selected Label {
+	color: #ffffff;
+}
+.NxLeftNavButton:selected Label .NumberElement {
+	color: #ffffff;
+}
+.NxLeftNavButton:selected Image {
+	wash-color: #ffffffff;
+}
+
+.NxLeftNavButtonAction
+{
+	width: 100%;
+	margin: 2px 10px 2px 10px;
+	padding: 10px 0px 0px 20px;
+	height: 48px;
+	flow-children: right;
+	box-shadow: none;
+	color: #67c1f5FF;
+	background-color: #09334dFF;
+
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-left-color: #67c1f5FF;
+}
+
+.NxLeftNavButtonAction:focus {
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-left-color: #ffffffFF;
+}
+
+.NxLeftNavButton Label,
+.NxLeftNavButtonAction Label
+{
+	width: 100%;
+	font-family: platformfont;
+	font-size: 26px;
+	font-weight: normal;
+	color: #67c1f5ff;
+
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
+}
+
+.NxLeftNavButton Label .NumberElement,
+.NxLeftNavButtonAction Label .NumberElement
+{
+	color: #2976a3ff;
+}
+
+.NxLeftNavButton:focus Label,
+.NxLeftNavButtonAction:focus Label
+{
+	color: #072e47;
+	transform: translateX( 7px );
+
+}
+
+.NxLeftNavButton:focus Label .NumberElement,
+.NxLeftNavButtonAction:focus Label .NumberElement
+{
+	color: #072e47;
+}
+
+.NxLeftNavButton.Locked
+{
+	wash-color: parental_locked_wash;
+}
+
+.NxLeftNavButton.Locked:focus
+{
+	wash-color: none;
+}
+
+.NxLeftNavButton.Locked Label
+{
+	width: fill-parent-flow(1.0);
+}
+
+.NxLeftNavButton Image,
+.NxLeftNavButtonAction Image
+{
+	vertical-align: center;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	margin-left: -4px;
+	height: 32px;
+	width: 32px;
+	wash-color: #2976a3ff;
+	opacity: 1.0;
+
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
+}
+
+.NxLeftNavButton:focus Image,
+.NxLeftNavButtonAction:focus Image
+{
+	wash-color: #ffffffff;
+	transform: translateX( 4px );
+}
+
+.NxLeftNavButton.Locked Image
+{
+	opacity: 1.0;
+	wash-color: none;
+	
+	transition-property: wash-color;
+	transition-duration: 0.08s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+.NxLeftNavButton.Locked:descendantfocus Image
+{
+	wash-color: #2f2f2fff;
+}
+
+.NxLeftNavButton:hover,
+.NxLeftNavButtonAction:hover
+{
+	transition-duration: 0.23s !immediate;
+	box-shadow: #eeeeee60 -3px -3px 6px 6px;
+}
+
+.NxLeftNavButton:focus,
+.NxLeftNavButtonAction:focus
+{
+	color: #082846FF;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #66c0f4ff ), to( #b6e1faff ) );
+	/*border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;*/
+
+	animation-name: nx-button-focus;
+	animation-duration: longduration;
+	animation-delay: shortduration;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.NxGridButtonWell
+{
+	width:100%;
+	height:840px;
+	color: red;
+}
+
+.ButtonColumn:descendantfocus .NxGridButtonWell,
+{
+	opacity: 0.0;
+}
+
+.ContentContainer
+{
+	width: 900px;
+	height: 1120px;
+	flow-children: none;
+}
+
+
+.ContentList
+{
+
+	//padding-left: 140px;
+	//padding-right: 40px;
+	padding: 20px;
+	padding-top: -24px;
+	//position: 390px 0px 0px;
+
+	width: 100%;
+	height: 1048px;
+
+	background-color: #2976a344;
+
+	
+	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
+	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
+	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
+
+	transform: translateX( 0px );
+	transition-delay: 0s;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, width;
+
+	opacity: 0.0;
+}
+
+Friends.friends #FriendsContent
+{
+	opacity: 1.0;
+}
+
+Friends.groups #GroupsContent
+{
+	opacity: 1.0;
+}
+
+Friends.invites #InvitesContent
+{
+	opacity: 1.0;
+}
+
+.ContentContainer
+{
+	width: 1000px;
+	transition-delay: 0s;
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, width, opacity, opacity-mask;
+}
+
+/* Transitions when grid is in focus */
+.ContentAreaFocus .ContentContainer
+{
+	transform: translateX( -200px );
+	width: 1000px;
+}
+
+.ContentAreaFocus FriendsChatDialog
+{
+	transform: translateX( -200px );
+	opacity:0.5;
+}
+
+/* Transitions when chat is in focus */
+.ChatFocus .ContentContainer
+{
+	transform: translateX( -900px );
+	opacity: 0.5;
+  opacity-mask: url( "file://{images}/library/horizontal_mask.tga" ) 1.0;
+}
+
+FriendsChatDialog:descendantfocus
+{
+	opacity: 1.0;
+	height: 485px;
+	transform: translateX( -950px );
+	background-color: friendschatmsgsbkgnd;
+}
+
+FriendsChatDialog AvatarImage.AvatarVisible
+{
+	opacity: 1.0;
+}
+
+FriendsChatDialog.ClanChatDisabledX
+{
+	visibility: collapse;
+	opacity: 0.5;
+}
+
+FriendsInvitePage
+{
+	flow-children: down;
+}

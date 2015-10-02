@@ -192,11 +192,19 @@ Button:focus .dynamiclink_box Label
 	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
 	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
 }
+.DetailsHover #RightDetailsColumn,
 #RightDetailsColumn:descendantfocus {
 	transform: translateX( -400px );
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0f2b49ff ), to( #061028ff ) );
 
 	box-shadow: fill #000000bb 0px 0px 20px 0px;
+}
+.ActivityHover #RightDetailsColumn:descendantfocus,
+.MenuHover #RightDetailsColumn:descendantfocus {
+	transform: translateX( 0px );
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #0f2b4900 ), to( #06102800 ) );
+
+	box-shadow: fill #00000000 0px 0px 20px 0px;
 }
 
 #RightDetailsColumn VerticalScrollBar

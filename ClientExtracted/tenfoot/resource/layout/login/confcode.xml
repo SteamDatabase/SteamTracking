@@ -6,30 +6,31 @@
 	</styles>
 
 	<ConfCodeWizardChild class="WizardChild" tabindex="auto" selectionpos="auto" defaultfocus="ConfCodeTextEntry">
-		<Label class="WizardChildTitle" text="#ChangeEmail_ConfCode_Title" />
-		<Label class="WizardChildDescription" text="#ChangeEmail_ConfCode_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#ChangeEmail_ConfCode_Description" />
 
-		<Label class="WizardErrorLabel" id="MessageLabel" />
+		  <Label class="WizardErrorLabel" id="MessageLabel" />
 
-		<Panel class="InputContainerDown GapDown">
-			<Label class="WizardLabel" text="#ChangeEmail_ConfCode_EnterConfCode" />
-			<TextEntry class="WizardTextEntry" id="ConfCodeTextEntry"
-					textinputid="InnerConfCodeTextEntry"
-					textinputdoneactionstring="#ButtonNext"
-					textinputhidesuggestions="1"
-					textinputclass="HalfWidth DockRight AppearFromBottomCenter">
-			</TextEntry>
-		</Panel>
+		  <Panel class="InputContainerDown GapDown">
+			  <Label class="WizardLabel" text="#ChangeEmail_ConfCode_EnterConfCode" />
+			  <TextEntry class="WizardTextEntry" id="ConfCodeTextEntry"
+					  textinputid="InnerConfCodeTextEntry"
+					  textinputdoneactionstring="#ButtonNext"
+					  textinputhidesuggestions="1"
+					  textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+			  </TextEntry>
+		  </Panel>
 
-		<Panel id="TwoFactorCodeContainer" class="InputContainerDown GapDown" visible="0">
-			<Label class="WizardLabel" text="#ChangeEmail_ConfCode_EnterTwoFactorCode" />
-			<TextEntry class="WizardTextEntry" id="ConfCodeTwoFactorCodeTextEntry"
-					textinputid="InnerConfCodeTwoFactorCodeTextEntry"
-					textinputdoneactionstring="#ButtonNext"
-					textinputhidesuggestions="1"
-					textinputclass="HalfWidth DockRight AppearFromBottomCenter">
-			</TextEntry>
-		</Panel>
+		  <Panel id="TwoFactorCodeContainer" class="InputContainerDown GapDown" visible="0">
+			  <Label id="ConfCodeTwoFactorEntryLabel" class="WizardLabel" text="#ChangeEmail_ConfCode_EnterTwoFactorCode" />
+			  <TextEntry class="WizardTextEntry" id="ConfCodeTwoFactorCodeTextEntry"
+					  textinputid="InnerConfCodeTwoFactorCodeTextEntry"
+					  textinputdoneactionstring="#ButtonNext"
+					  textinputhidesuggestions="1"
+					  textinputclass="HalfWidth DockRight AppearFromBottomCenter">
+			  </TextEntry>
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

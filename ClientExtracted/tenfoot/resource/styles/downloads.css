@@ -20,7 +20,8 @@
 	margin-right: 10px;
 }
 
-#DownloadTitle.DownloadText {
+#DownloadTitle.DownloadText 
+{
 	font-size: 32px;
 }
 
@@ -64,6 +65,7 @@
 .DownloadsListItem:descendantfocus .DownloadText {
 	color: detailsdatalabelfocus;
 }
+
 
 /* set all sections to collapse when not visible */
 #DownloadsQueued,
@@ -118,6 +120,7 @@
 	overflow: clip scroll;
 	flow-children: down;
 	width: 100%;
+	padding-bottom:100px;
 }
 
 .DownloadBarPercent
@@ -167,9 +170,14 @@ DownloadsListItem:descendantfocus .DownloadBarBackground
 	visibility: collapse;	
 }
 
-#DownloadsSummary
+.HasAny #DownloadsSummary
 {
 	visibility: visible;
+}
+
+#DownloadsSummary
+{
+	visibility: collapse;
 	height: 220px;
 	width: 100%;
 	background-color: gradient( linear, 0% 0%, 3% 80%, from( #051c2dff ), to( #051c2d00 ) );

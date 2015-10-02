@@ -6,20 +6,21 @@
 	</styles>
 
 	<EmailTakenWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#CreateAccount_EmailTaken_Title" />
-		<Label class="WizardChildDescription" text="#CreateAccount_EmailTaken_Description" />
+		<Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#CreateAccount_EmailTaken_Description" />
 
-		<Panel id="RadioButtonContainer">
-			<Panel class="InputContainerDown GapDown">
-				<RadioButton group="TAKEN" class="Button RadioButton Wide" id="RadioExistingAccount" tabindex="0.0" text="#CreateAccount_EmailTaken_ExistingAccount" selectionpos="auto" />
-			</Panel>
-			<Panel class="InputContainerDown GapDown">
-				<RadioButton group="TAKEN" class="Button RadioButton Wide" id="RadioNewAccount" tabindex="0.0" text="#CreateAccount_EmailTaken_NewAccount" selectionpos="auto" />
-			</Panel>
-			<Panel class="InputContainerDown GapDown">
-				<RadioButton group="TAKEN" class="Button RadioButton Wide" id="RadioNewEmail" tabindex="0.0" text="#CreateAccount_EmailTaken_NewEmail" selectionpos="auto" />
-			</Panel>
-		</Panel>
+		  <Panel id="RadioButtonContainer">
+			  <Panel class="InputContainerDown GapDown">
+				  <RadioButton group="TAKEN" class="Button RadioButton Wide" id="RadioExistingAccount" tabindex="0.0" text="#CreateAccount_EmailTaken_ExistingAccount" selectionpos="auto" />
+			  </Panel>
+			  <Panel class="InputContainerDown GapDown">
+				  <RadioButton group="TAKEN" class="Button RadioButton Wide" id="RadioNewAccount" tabindex="0.0" text="#CreateAccount_EmailTaken_NewAccount" selectionpos="auto" />
+			  </Panel>
+			  <Panel class="InputContainerDown GapDown">
+				  <RadioButton group="TAKEN" class="Button RadioButton Wide" id="RadioNewEmail" tabindex="0.0" text="#CreateAccount_EmailTaken_NewEmail" selectionpos="auto" />
+			  </Panel>
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">

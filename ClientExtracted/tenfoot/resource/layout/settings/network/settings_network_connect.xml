@@ -6,13 +6,13 @@
 	</styles>
 
 	<SettingsPanelNetwork_Connect class="WizardChild" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Label class="WizardChildTitle" text="#Settings_Network" />
-
-		<Panel class="CenteredContainer">
-			<LoadingThrobber class="NetworkThrobber" />
-			<Label id="ConnectionStatus" class="LongDesc" />
-		</Panel>
+		
+    <Panel class="WizardContent">
+		  <Panel class="CenteredContainer">
+			  <LoadingThrobber class="NetworkThrobber" />
+			  <Label id="ConnectionStatus" class="LongDesc" />
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
       <!-- the OOBE only shows "Next" (when connected) and "Back" (when not); intent is that it's impossible to go backwards once connected -->

@@ -4,12 +4,10 @@
 		<include src="file://{resources}/styles/downloads.css" />
 	</styles>
 	
-	<DownloadsListItem class="DownloadsListItem" >
+	<DownloadsListItem class="DownloadsListItem" mousecanactivate="iffocused" onmouseactivate="DownloadsActivate()" >
 		
 		<Panel class="DownloadsListItemLeft" >
-			<Button id="AppButton" mousecanactivate="iffocused" onmouseactivate="DownloadsActivate()" >
-				<Image id="DownloadImage" class="ListItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" scaling="stretch-to-fit-preserve-aspect" />
-			</Button>
+			<Image id="DownloadImage" class="ListItemImage" src="file://{images}/library_default.tga" defaultsrc="file://{images}/library_default.tga" />
 		</Panel>
 		
 		<Panel class="DownloadsListItemRight" >

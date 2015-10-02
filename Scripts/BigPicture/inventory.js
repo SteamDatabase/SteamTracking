@@ -153,11 +153,24 @@ var CBigPictureInventoryCache = (function()
 	function CBigPictureInventoryCache( loadURL )
 	{
 		this.m_strInventoryLoadURL = loadURL;
-		this.m_bTrading = false;
-		this.m_bMarket = false;
+
+		this.m_params = {
+			bTrading: false,
+			bMarket: false
+		};
 
 		this.m_inventory = {};
 	};
+
+	CBigPictureInventoryCache.prototype.SetInventoryParameter = function( strParam, strValue )
+	{
+		this.m_params[strParam] = strValue;
+	};
+
+	CBigPictureInventoryCache.prototype.GetInventoryParameter = function( strParam )
+	{
+		return this.m_params[strParam];
+	}
 
 	CBigPictureInventoryCache.prototype.BHasInventory = function( appid, rgContexts )
 	{
@@ -186,19 +199,19 @@ var CBigPictureInventoryCache = (function()
 		}
 		
 		var params = {
-			trading: Number( this.m_bTrading ),
-			market: Number( this.m_bMarket ),
+			trading: Number( this.GetInventoryParameter('bTrading') ),
+			market: Number( this.GetInventoryParameter('bMarket') ),
 			appid: appid,
 			contextid: lcontextid };
 
-		if ( this.m_steamIdPartner )
+		if ( this.GetInventoryParameter('steamIdPartner') )
 		{
-			params.partner = this.m_steamIdPartner;
+			params.partner = this.GetInventoryParameter('steamIdPartner');
 		}
 
-		if ( this.m_sessionId )
+		if ( this.GetInventoryParameter('sessionId') )
 		{
-			params.sessionid = this.m_sessionId;
+			params.sessionid = this.GetInventoryParameter('sessionId');
 		}
 
 		if ( continue_from )
@@ -353,6 +366,7 @@ var CBigPictureInventoryCache = (function()
 	return CBigPictureInventoryCache;
 })();
 
+
 var CBigPictureInventory = (function()
 {
 	function CBigPictureInventory( containerID, loadURL, rgAppContextData, funcSetupGridItem )
@@ -471,8 +485,13 @@ var CBigPictureInventory = (function()
 	CBigPictureInventory.prototype.SetInventoryParameter = function( strParam, strValue )
 	{
 		this[strParam] = strValue;
-		this.m_InventoryCache[strParam] = strValue;
+		this.m_InventoryCache.SetInventoryParameter( strParam, strValue );
 	};
+
+	CBigPictureInventory.prototype.GetInventoryParameter = function( strParam )
+	{
+		return this[strParam];
+	}
 
 	CBigPictureInventory.prototype.GetContextsForAppId = function( appid )
 	{

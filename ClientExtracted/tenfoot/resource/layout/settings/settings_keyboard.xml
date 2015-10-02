@@ -6,13 +6,9 @@
 	</styles>
 
 	<SettingsPanel_Keyboard class="SettingsSection" defaultfocus="Continents">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Keyboard" />
-		</Panel>
-		
-		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContentWide" tabindex="auto" selectionpos="auto">
+    <Panel class="SettingsBottomPanel">
+		  <!-- main panel -->
+		  <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">
 
 				<Panel class="VertContainer">	
 					<Label class="PaddedLabel" text="#SettingsKeyboard_Description1" />
@@ -34,8 +30,9 @@
 							<!-- label instances added here -->
 						</Panel>
 					</Panel>
-
-				</Panel>
+          
+        </Panel>
+			</Panel>
 		</Panel>
 	</SettingsPanel_Keyboard>
 

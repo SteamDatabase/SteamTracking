@@ -5,11 +5,6 @@
 	</styles>
 
 	<SettingsPanel_Friends class="SettingsSection" defaultfocus="SettingsFriends_PersonaName">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Friends" />
-		</Panel>
-		
 		<Panel class="SettingsBottomPanel">
 			<!-- main panel -->
 			<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="0,0">

@@ -6,13 +6,11 @@
 	</styles>
 
 	<AgreementsSSAWizardChild class="WizardChild" defaultfocus="ButtonCancel" tabindex="auto" selectionpos="auto">
-
-		<Label class="WizardChildTitle" id="SSATitle" text="#CreateAccount_SSA_Title" />
-		<Label class="WizardChildTitle" id="PPATitle" text="#CreateAccount_PPA_Title" />
-
-		<Panel class="InputContainerDown GapDown">
-			<HTML id="AgreementsHTML" embedded="true" />
-		</Panel>
+    <Panel class="WizardContent">
+		  <Panel class="InputContainerDown GapDown">
+			  <HTML id="AgreementsHTML" embedded="true" />
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button id="ButtonCancel" class="WizardButton" onactivate="WizardButtonCancel()">

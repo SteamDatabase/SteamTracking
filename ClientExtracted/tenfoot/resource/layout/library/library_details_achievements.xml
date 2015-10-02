@@ -6,7 +6,7 @@
 	</styles>
 	
 	<LibraryAchievements defaultfocus="AchievementsSmallBody" >
-		<Button id="AchievementsFullWrapper" class="AchievementsFullWrapper" onactivate="ViewAllAchievements();">
+		<Button id="AchievementsFullWrapper" class="AchievementsFullWrapper" onactivate="ViewAllAchievements();" >
 			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_Achievements" html="true" />
 			<Panel id="ParentalOverlay">
 				<ParentalReplacementPanel id="ParentalLockedReplacementPanel" />

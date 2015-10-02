@@ -1,0 +1,386 @@
+@define friendsitemmainlistbkgnd_from: #f2f2f2ff;
+@define friendsitemmainlistbkgnd: gradient( linear, 0% 0%, 100% 100%, from( friendsitemmainlistbkgnd_from ), to( #cbcbcbde ) );
+@define friendschatmsgsbkgnd: gradient( linear, 10% 0%, 0% 100%, from( #10101040 ), to( #10101090 ) );
+@define friendsverticalscrollpad: 18px;
+@define friendsitemsecondaryfocus: gradient( linear, 0% 0%, 100% 100%, from( #caccccff  ), to( #aaacacce ) );
+@define ui_common_control3: gradient( linear, 0% 0%, 0% 100%, from( #4b7696aa ), to( #365b7866 ) );
+@define friendschatbackground: #0f283dCC;
+
+FriendsChatDialog
+{
+	width: 880px;
+	margin-left: 0px;
+	height: fit-children;
+	flow-children: down;
+	opacity: 0.0;
+
+	transition-duration: mediumduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: transform, opacity;
+}
+
+FriendsChatDialog.FriendChatDisabled,
+FriendsChatDialog.ClanChatDisabled
+{
+	opacity: 0.0;
+}
+
+FriendsChatDialog.ZeroFriends
+{
+	opacity: 0.0;
+}
+
+FriendsChatDialog AvatarImage
+{
+	margin-left: 12px;
+	transition-duration: 0.28s;
+	transition-property: opacity;
+	opacity: 0.0;
+}
+
+#FriendsMainBodyInputTextArea
+{
+	width: fill-parent-flow(1.0);
+	height: 106px;
+	overflow: squish scroll;
+	white-space: normal;
+	opacity: 0.85;
+
+	padding-left: 8px;
+	padding-right: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 28px;
+	font-weight: normal;
+	text-overflow: clip;
+	color: friendsitemmainlistbkgnd_from;
+	background-color: friendschatinputbkgnd_text;
+
+	border-width: 5px;
+	border-color: friendstab;
+	border-style: solid;
+	border-radius: 0px;
+
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+#FriendsMainBodyInputTextArea:hover
+{
+	opacity: 1.0;
+}
+
+#FriendsMainBodyInputTextArea:descendantfocus
+{
+	color: applabelselectedsolid;
+	
+	transition-duration: 0.4s !immediate;
+
+	border-color: #cececeff;
+	background-color: friendsitemmainlistbkgnd;
+
+	animation-name: main-button-glow-movement-no-fill;
+	//animation-name: links-and-more-button-focus;
+	animation-duration: 1.7s;
+	animation-timing-function: bigpicture-ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	transition-property: background-color, border;
+	transition-duration: 0.3s !immediate;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+#FriendsMainBodyInputTextArea:hover:disabled
+{
+	background-color: friendschatinputbkgnd_text;
+}
+
+#FriendsMainBodyInputSendButton
+{
+	vertical-align: center;
+	horizontal-align: right;
+	height: 106px;
+	min-width: 106px;
+	font-weight: light;
+	font-size: 24px;
+	color: tclegendlabel;
+	white-space: nowrap;
+	padding: 8px;
+	margin-left: 8px;
+	background-color: friendstab;
+	// friendsonline_lightbg;
+	color: friendsitemmainlistbkgnd_from;
+
+	border-radius: 0px;
+
+	transition-property: background-color;
+	transition-duration: 0.2s;
+	transition-timing-function: bigpicture-ease-in-out;
+
+	visibility: collapse;
+}
+
+.CursorVisible #FriendsMainBodyInputSendButton
+{
+	visibility: visible;
+}
+
+#FriendsMainBodyInputSendButton:hover
+{
+	background-color: friendstabcurrentselection;
+}
+
+.FriendChatDisabled #FriendsMainBodyInputSendButton:hover
+{
+	background-color: friendschatinputbkgnd;
+}
+
+#FriendsMainBodyInputSendButton Label
+{
+	vertical-align: center;
+	horizontal-align: center;
+}
+
+// Header
+#FriendsMainBodyRightHeader
+{
+	height: 94px;
+	margin-bottom: 8px;
+	margin-top: 12px;
+	width: 92%;
+	flow-children: right;
+}
+
+.FriendsMainBodyRightHeaderText
+{
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	font-size: 27px;
+	margin-left: 16px;
+	margin-bottom: 1px;
+	margin-top: 12px;
+	color: #d8d8d8ff;
+	text-overflow: ellipsis;
+}
+
+#StartVoiceChatBtn
+{
+	vertical-align: bottom;
+	horizontal-align: right;
+	flow-children: right;
+}
+
+#FriendsMainBodyStatusGroup
+{
+	margin-top: 18px;
+	margin-bottom: -2px;
+	height: 18px;
+	font-weight: light;
+	font-size: 21px;
+	font-family: platformfont;
+	height: 60px;
+	transform: translateY( 00px );
+	color: tclegendlabel;
+	white-space: nowrap;
+	flow-children: down;
+	vertical-align: bottom;
+}
+
+#FriendsMainBodyStatusGroupLeft
+{
+	color: friendsitemmainlistbkgnd_from;
+	width: 70%;
+	horizontal-align: right;
+	vertical-align: bottom;
+	text-align: right;
+	transform: translateY( 0px );
+	visibility: collapse;
+	height: 30px;
+}
+
+#FriendsMainBodyStatusGroupRight
+{
+	text-align: right;
+	horizontal-align: right;
+	vertical-align: bottom;
+	width: 100%;
+	visibility: collapse;
+	transform: translateY( 0px );
+	height: 30px;
+}
+
+#ChatWithXLabel
+{
+	
+	width: 100%;
+}
+
+AvatarImage
+{
+	width: 100px;
+	height: 100px;
+	transition-duration: 0.28s;
+	transition-property: opacity;
+	opacity: 0.0;
+}
+
+AvatarImage.AvatarVisible
+{
+	opacity: 1.0;
+}
+
+
+#FriendsVoiceChatControls
+{
+	height: 78px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	flow-children: right;
+	visibility: collapse;
+}
+
+.VoiceChatActive #FriendsVoiceChatControls
+{
+	visibility: visible;
+}
+
+#FriendsVoiceChatControls Image
+{
+	vertical-align: center;
+}
+
+#FriendsMainBodyChatMessages
+{
+	font-size: 26px;
+	font-weight: normal;
+	color: #d0d0d0ff;
+
+	line-height: 33px;
+
+	width: 100%;
+	height: fill-parent-flow( 1.0 );
+	flow-children: down;
+	overflow: squish scroll;
+	padding-right: 16px;
+	margin-right: 2px;
+	padding-top: 4px;
+	margin-left: 8px;
+
+	opacity-mask-scroll-up: url( "file://{images}/friends/friends_list_mask_fade_top.png" );
+	opacity-mask-scroll-down: url( "file://{images}/friends/friends_list_mask_fade_bottom.png" );
+	opacity-mask-scroll-up-down: url( "file://{images}/friends/friends_list_mask_fade_both.png" );
+}
+
+#FriendsMainBodyChatMessages Label
+{
+	margin-top: 2px;
+	font-weight: medium;
+	font-size: 27px;
+	color: #999999ff;
+	width: 100%;
+}
+
+#FriendsMainBodyChatContainer
+{
+	width: 100%;
+	max-height: 674px;
+	flow-children: down;
+	margin-top: 4px;
+	margin-bottom: 9px;
+	border-radius: 0px;
+	padding-bottom: 0px;
+
+	background-color: #1a578023;
+
+	transition-property: height;
+	transition-duration: 0.5s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+FriendsChatDialog:descendantfocus #FriendsMainBodyChatContainer
+{
+	height: 250px;
+}
+
+#FriendsMainBodyInputGroup
+{
+	height: 106px;
+	width: 100%;
+	flow-children: right;
+	vertical-align: bottom;
+}
+
+#FriendsMainBodyGameInviteButton
+{
+	flow-children: down;
+	width: 100%;
+	height: fit-children;
+	background-color: #124b6b;
+
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+
+	visibility: collapse;
+}
+
+#FriendsMainBodyGameInviteButton:hover
+{
+	background-color: #196e9e;
+	border: 2px solid white;
+}
+
+.HasGameInvite #FriendsMainBodyGameInviteButton
+{
+	visibility: visible;
+}
+
+#FriendsGameInviteHint
+{
+	vertical-align: center;
+}
+
+#FriendsGameInviteHint, #FriendsGameInviteDetails
+{
+	font-size: 24px;
+	color: white;	
+}
+
+.LeftRightFlow
+{
+	flow-children: right;
+}
+
+#FriendsGameInviteButtonHintImage
+{
+	//color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #072e47ff ), color-stop( 1.0, #000000ff ) );
+	color: black;
+	font-size: 28px;
+	background-color: legendbuttonyellow;
+	border-radius: 50%;
+	border: 2px solid #00000000;
+	width: 38px;
+	height: 38px;
+	text-align: center;
+	margin: 0px;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-top: 3px;
+	box-shadow: #00000022 -3px -3px 4px 6px;
+	margin-bottom: 4px;
+}
+
+#FriendsGameInviteButtonHintImage Label
+{
+	color: black;
+}
+
+.CursorVisible #FriendsGameInviteButtonHintImage
+{
+	visibility: collapse;
+}

@@ -6,17 +6,18 @@
 	</styles>
 
 	<EmailWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#CreateAccount_Email_Title" />
-		<Label class="WizardChildDescription" text="#CreateAccount_Email_Description" />
-		<Label class="WizardErrorLabel" id="MessageLabel" />
-		<Panel class="InputContainerDown GapDown">
-			<Label class="WizardLabel" id="EmailAddressLabel" text="#CreateAccount_Email_EmailAddress" />
-			<TextEntry class="WizardTextEntry" id="EmailAddressTextEntry"
-					textinputid="InnerAccountNameTextEntry"
-					textinputdoneactionstring="#CreateAccount_NextField"
-					textinputhidesuggestions="1"
-					textinputclass="HalfWidth DockRight AppearFromBottomCenter" />
-		</Panel>
+    <Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#CreateAccount_Email_Description" />
+		  <Label class="WizardErrorLabel" id="MessageLabel" />
+		  <Panel class="InputContainerDown GapDown">
+			  <Label class="WizardLabel" id="EmailAddressLabel" text="#CreateAccount_Email_EmailAddress" />
+			  <TextEntry class="WizardTextEntry" id="EmailAddressTextEntry"
+					  textinputid="InnerAccountNameTextEntry"
+					  textinputdoneactionstring="#CreateAccount_NextField"
+					  textinputhidesuggestions="1"
+					  textinputclass="HalfWidth DockRight AppearFromBottomCenter" />
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">

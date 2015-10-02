@@ -5203,8 +5203,8 @@
  T ThreadInterlockedIncrement
  T ThreadIsProcessIdActive
  T ThreadIsThreadRunning
+ T ThreadSetBackgroundPriority
  T ThreadSetDebugName
- T ThreadSetPriority
  T ThreadSleep
  T ThreadTerminateProcessCode
  T TimeCompare(unsigned int const*, unsigned int const*)
@@ -7685,7 +7685,6 @@
  pthread_condattr_destroy
  pthread_condattr_init
  pthread_create
- pthread_getschedparam
  pthread_getspecific
  pthread_join$UNIX2003
  pthread_key_create
@@ -7702,7 +7701,6 @@
  pthread_mutexattr_settype
  pthread_once
  pthread_self
- pthread_setschedparam
  pthread_setspecific
  qsort
  r ASN1_GENERALIZEDTIME_check.max

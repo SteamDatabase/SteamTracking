@@ -2,9 +2,10 @@
 	<styles>
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/mainmenu.css" />
-		<include src="file://{resources}/styles/friends/friends.css" />
+		<include src="file://{resources}/styles/friends/friends_new.css" />
+		<include src="file://{resources}/styles/friends/friends_chat_dialog.css" />
 	</styles>
-	<FriendsChatDialog>
+	<FriendsChatDialog defaultfocus="FriendsMainBodyInputTextArea">
 		<Panel id="FriendsMainBodyRightHeader">
 			<Panel id="AvatarContainer" >
 				<AvatarImage id="FriendPanelImage1" class="ChatItemAvatar" />
@@ -17,6 +18,13 @@
 			</Panel>
 		</Panel>
 		<Panel id="FriendsMainBodyChatContainer">
+			<Button id="FriendsMainBodyGameInviteButton" onactivate="AcceptLobbyInvite()">
+				<Panel class="LeftRightFlow">
+					<Label id="FriendsGameInviteButtonHintImage" text="Y" />
+					<Label id="FriendsGameInviteHint" text="#friends_chat_accept_game_invite" />
+				</Panel>
+				<Label id="FriendsGameInviteDetails" text="#friend_chat_game_invite_details" />
+			</Button>
 			<Panel id="FriendsMainBodyChatMessages" keepscrolltobottom="true" >
 				<Label id="FriendsChatBody" text="#Friends_DontGiveOutPassword" html="true" />
 			</Panel>

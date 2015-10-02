@@ -20,6 +20,7 @@
 	height: 100%;
 	vertical-align: top;
 	padding-left: 20px;
+	padding-top: 32px;
 	margin-left: -42px;
 }
 
@@ -41,6 +42,16 @@
 {
 	transform: translatex( -200px );
 }
+.MenuHover .NxRightColumn
+{
+	transform: translatex( 0px );
+}
+
+.NxNavigationLoadingThrobber
+{
+	height: 756px;
+	width: 1400px;
+}
 
 .NxRightColumn > Panel,
 .NxRightColumn > CommunityHubContentPanel
@@ -49,14 +60,15 @@
 	overflow: clip;
 }
 
-#CommunityContentEmpty
+.CommunityContentEmpty
 {
 	padding-bottom: 195px;
 	width: 1400px;
 }
 
-#CommunityContentEmptyLabel
+.CommunityContentEmpty Label
 {
+	transform: translatex( -200px );
 	align: center center;
 	font-size: 34px;
 	height: 64px;
@@ -78,6 +90,16 @@
 .CommunityContentAllVisible #ContentFilter
 {
 	opacity: 1.0;
+}
+
+#ContentFilter #FilterButton_11
+{
+	height: 0px;
+}
+
+#ContentFilter:descendantfocus #FilterButton_11
+{
+	height: 48px;
 }
 
 /* Search game hubs */

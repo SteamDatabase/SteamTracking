@@ -12,7 +12,7 @@
 			<Label class="WizardChildDescription" text="#OOBE_LanguageSelect" />
 			
 			<Panel id="SettingsContainer">
-				<SettingsPanel_Language id="SettingsPanel_Language" class="SettingsSection SectionVisible SettingsContained" />
+				<SettingsPanel_Language id="SettingsPanel_Language" class="SettingsSection SettingsContained" />
 			</Panel>
 			
 			<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">

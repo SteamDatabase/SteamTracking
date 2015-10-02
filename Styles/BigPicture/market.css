@@ -9,8 +9,14 @@
 #CommunityMarketContent
 {
 	padding: 25px 110px;
-	flow-children: down;
+	flow-children: right;
 	width: 100%;
+}
+
+#CommunityMarketContent.CommunityMarketHome
+{
+	padding: 0px;
+	overflow: clip;
 }
 
 #MarketPageTitle
@@ -144,6 +150,13 @@
 	visibility: visible;
 }
 
+#RightColumn
+{
+	width: 100%;
+	height: 1200px;
+	padding-top: 40px;
+}
+
 .ItemGrid
 {
 	margin-top: -64px;
@@ -153,7 +166,7 @@
 	height: 680px;
 
 	margin: 0px 0px 0px -110px;
-	padding: 40px 330px 40px 84px;
+	padding: 40px 360px 40px 180px;
 
 	overflow: noclip squish;
 
@@ -201,7 +214,7 @@
 
 .MarketGridItemActionButton .MarketGridItemMainContent
 {
-	padding-bottom: 30px;
+	padding: 0px;
 }
 
 .MarketGridItemActionButton .MarketGridItemMainContent
@@ -212,7 +225,6 @@
 .MarketGridItemAction
 {
 	width: 100%;
-	margin: 30px;
 
 	vertical-align: center;
 }
@@ -223,7 +235,7 @@
 	color: #ffffffff;
 	width: 100%;
 
-	font-size: 42;
+	font-size: 40;
 	font-weight: thin;
 	text-overflow: clip;
 	transition-property: color;
@@ -449,6 +461,17 @@ Label.HistoryEventDescription
 .MarketPopupWrapper LoadingThrobber
 {
 	align: center center;
+}
+
+.NxRightColumn LoadingThrobber
+{
+	align: center center;
+	transform: translate3d( -200px, -200px, 0px );
+	z-index: 20;
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
 }
 
 .MarketPopup
@@ -686,36 +709,25 @@ Label.HistoryEventDescription
 	width: 100%;
 }
 
-#MarketContentPanel #ThrobberPanel
-{
-	height: 100%;
-	width: 100%;
-	padding-bottom: 200px;
-	z-index: 20;
-	opacity: 0.0;
 
-	transition-property: opacity;
-	transition-duration: shortduration;
-}
-
-#MarketContentPanel.ContentLoading #ThrobberPanel
+.ContentLoading LoadingThrobber
 {
 	opacity: 1.0;
 }
 
-#MarketContentPanel LoadingThrobber
+.NxRightColumn LoadingThrobber
 {
 	margin-top: 0px;
 	horizontal-align: center;
 	vertical-align: center;
 }
 
-.BehindMessageBox #MarketContentPanel LoadingThrobber
+.BehindMessageBox .NxRightColumn LoadingThrobber
 {
 	visibility: collapse;
 }
 
-#MarketContentPanel.ThrobberRight LoadingThrobber
+.NxRightColumn.ThrobberRight LoadingThrobber
 {
 	transform: translatex( 800px );
 }
@@ -724,15 +736,7 @@ Label.HistoryEventDescription
 #MarketSearchPanel
 {
 	margin-left: 0px;
-	margin-top: 49px;
-	margin-bottom: 75px;
 	z-index: 10;
-	padding-right: 5px;
-
-	transition-property: transform;
-	transition-duration: mediumduration;
-	transition-timing-function: ease-in-out;
-	transform: translatex( -2220px );
 }
 
 .ItemGridSearchVisible #MarketContentPanel.NoSearchRun #MarketSearchPanel
@@ -785,15 +789,6 @@ Label.HistoryEventDescription
 	transform: translatex( 0px );
 }
 
-#ItemGridSearch
-{
-	transform: translatex( -2220px );
-}
-
-.ItemGridSearchVisible #ItemGridSearch
-{
-	transform: translatex( 0px );
-}
 
 .ItemGridSearchVisible .SearchVisible #ItemGridSearch,
 .ItemGridSearchVisible .FixedSearch #ItemGridSearch
@@ -806,7 +801,6 @@ Label.HistoryEventDescription
 #MarketSearchText
 {
 	width: 50%;
-	margin-right: 10px;
 	font-size: 24px;
 	margin-top: 10px;
 }
@@ -831,8 +825,8 @@ Label.HistoryEventDescription
 #SearchOptions
 {
 	padding: 5px;
+	padding-right: 20px;
 	width: 100%;
-	height: 100%;
 }
 
 #SearchOptions DropDown:disabled
@@ -844,7 +838,6 @@ Label.HistoryEventDescription
 #SearchOptions Label,
 #SearchOptions TextEntry
 {
-	margin-right: 15px;
 	width: 100%;
 }
 
@@ -891,7 +884,36 @@ DropDown Image,
 #SearchContentPanel
 {
 	width: 100%;
+	height: 0px;
+	flow-children: none;
+}
+
+.NoSearchRun .NxFilterTab
+{
+	position: 750px 120px 0px;
+}
+
+
+.NxFilterTab:descendantfocus #SearchContentPanel,
+.NoSearchRun .NxFilterTab #SearchContentPanel
+{
 	height: fill-parent-flow( 1.0 );
+}
+
+.NoSearchRun .NxFilterTab DropDown,
+.NoSearchRun .NxFilterTab .NxFilterButton
+{
+	height: 48px;
+}
+
+.NxFilterTab
+{
+	opacity: 0.0;
+}
+
+.searchVisible .NxFilterTab
+{
+	opacity: 1.0;
 }
 
 #SearchOptions
@@ -963,17 +985,26 @@ DropDown Image,
 }
 
 
-#NoItemsSearch
+.NoItemsSearch
 {
 	font-size: 28px;
 	color: #898989;
 
-	transform: translatex( 190px );
-
+	transform: translatex( -250px );
 	horizontal-align: center;
 	text-align: center;
 	margin-top: 200px;
 	width: 700px;
+	opacity: 0.0;
+}
+
+.NoSearchResults.searchVisible .NoItemsSearch
+{
+	opacity: 1.0;
+}
+
+.NoSearchRun.searchVisible .NoItemsSearch
+{
 	opacity: 0.0;
 }
 
@@ -994,7 +1025,6 @@ DropDown Image,
 {
 	margin-bottom: 16px;
 	width: 100%;
-	margin-right: 10px;
 }
 
 

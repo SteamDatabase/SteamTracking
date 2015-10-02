@@ -6,11 +6,6 @@
 	</styles>
 
 	<SettingsPanel_Audio class="SettingsSection" defaultfocus="SettingsAudio_MuteAll">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Audio" />
-		</Panel>
-		
 		<!-- main panel -->
 		<Panel class="SettingsBottomPanel" tabindex="auto" selectionpos="auto">
 			<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">

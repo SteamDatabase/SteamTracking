@@ -892,3 +892,9 @@ AddOrEditPhone
 	url		"%store%/phone/add"
 	method	"internal"
 }
+
+SteamControllerHelp
+{
+	url		"http://controller.steampowered.com"
+	method	"external"
+}

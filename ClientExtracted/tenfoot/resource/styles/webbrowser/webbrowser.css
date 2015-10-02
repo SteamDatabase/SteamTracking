@@ -273,7 +273,7 @@ SlideShow
 	horizontal-align: left;
 	flow-children: right;
 	margin: 0px;
-	margin-left: 85px;
+	margin-left: 74px;
 	margin-top: 0px;
 	opacity: 1.0;
 }
@@ -651,7 +651,8 @@ SlideShow
 	background-repeat: no-repeat;
 	opacity: 0.0;
 	background-size: 54px 54px;
-	transform: translateY( 2px );
+	transform: translateY( -2px );
+	margin-right: 10px;
 
 	transition-property: opacity;
 	transition-duration: 0.3s;

@@ -6,13 +6,9 @@
 	</styles>
 
 	<SettingsPanel_Store class="SettingsSection" defaultfocus="Continents">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Store" />
-		</Panel>
-		
-		<!-- main panel -->
-		<Panel class="SettingsContent SettingsCenterContentWide" tabindex="auto" selectionpos="auto">
+    <Panel class="SettingsBottomPanel">
+		  <!-- main panel -->
+		  <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">
 
 				<Panel class="VertContainer">	
 					<Label class="PaddedLabel" text="#SettingsStore_Description1" />			
@@ -53,6 +49,7 @@
 					<Label class="PaddedLabel" text="#SettingsStore_Description4" />	
 					<ToggleButton class="CheckBox" id="SettingsStore_FilterToggle" text="#SettingsStore_FilterToggle" onactivate="SettingsStore_FilterToggle();" />
 				</Panel>
+      </Panel>
 		</Panel>
 	</SettingsPanel_Store>
 

@@ -1,0 +1,97 @@
+
+@define frienditem_width: 300px;
+@define frienditem_height:	110px;
+
+FriendsContent_Friends
+{
+	flow-children: right-wrap;
+	overflow: clip scroll;
+	height: 400px;
+}
+
+Label
+{
+	color: white;
+	font-size: 24px;
+}
+
+.FriendButton
+{
+	background-color: #1E3041;
+	margin: 20px;
+	width: 260px;
+	height: 140px;
+	padding: 5px;
+
+	transition-property: transform, pre-transform-scale2d, opacity, opacity-mask;
+	pre-transform-scale2d: 1;
+}
+
+.FriendButton:focus
+{
+	border: 3px solid #3D6286;
+	pre-transform-scale2d: 1.1;
+}
+
+.FriendsStateContainer
+{
+	visibility: visible;
+	flow-children: down;
+}
+
+.FriendsStateContainer.ContainsFriends
+{
+	visibility: visible;
+}
+
+.ContainerHeader
+{
+	color: white;
+	width: 100%;
+	font-size: 30px;
+	margin-top: 32px;
+	margin-bottom: 4px;
+}
+
+.FriendsContainer
+{
+	flow-children: down;
+	background-color: #222222ff;
+}
+
+.ContainerHeader
+{
+	visibility: collapse;
+}
+
+.HasRecentChats #Header_Recent
+{
+	visibility: visible;
+}
+
+.HasInGame #Header_InGame
+{
+	visibility: visible;
+}
+
+.HasOnline #Header_Online
+{
+	visibility: visible;
+}
+
+.HasOffline #Header_Offline
+{
+	visibility: visible;
+}
+
+.ZeroFriendsLabel
+{
+	width: 100%;
+	text-align: center;
+	vertical-align: center;
+}
+
+.HasFriends .ZeroFriendsLabel
+{
+	visibility: collapse;
+}

@@ -3,8 +3,17 @@
 		<include src="file://{resources}/styles/steamstyles.css" />
 		<include src="file://{resources}/styles/library/library.css" />
 	</styles>
+	<scripts>
+		<include src="file://{resources}/javascript/base.js" />
+	</scripts>
+	<script>
+		function LibraryAppDetailsOnLoad()
+		{
+			SetupMenuAndContentHoverEvents( 'CommonControls', 'MenuHover', 'LibraryDetailsSectionsContainer', 'ContentHover', 'LibraryDetailsPanel' );
+		}
+	</script>
 	
-	<LibraryAppDetails class="ContentPanel WaitingForApp" content-delete-at-stack-depth="1">
+	<LibraryAppDetails class="ContentPanel WaitingForApp" content-delete-at-stack-depth="10" onload="LibraryAppDetailsOnLoad();">
 		<Panel id="DetailsBackground" class="DetailsBackground">
 			<Image id="BGOverlay" class="BGOverlayInvisible" src="file://{images}/library/library_app_details_bg_wash.png" />
 			<Panel id="BGScreenshotWrapper">
@@ -19,8 +28,7 @@
 				<LibraryLinksAndMore id="LinksAndMore" class="LinksAndMore" />
 			</Panel>
 
-			<Panel class="LibraryDetailsSectionsContainer" tabindex="auto" selectionpos="auto" >
-
+			<Panel id="LibraryDetailsSectionsContainer" class="LibraryDetailsSectionsContainer" tabindex="auto" selectionpos="auto" >
 				<LibrarySettings id="LibrarySettings" class="LibraryDetailsSectionPanel" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
 				<Panel id="StorePanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" >
 					<ParentalButton id="GotoStoreButton" class="NxLeftNavButtonAction">

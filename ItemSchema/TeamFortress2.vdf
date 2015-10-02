@@ -48987,8 +48987,8 @@
 		{
 			"activated_pass_item_name"			"Activated Summer 2015 Operation Pass"
 			"operation_start_date"				"2015-07-01 00:00:00" 
-			"drop_end_date"						"2015-10-01 00:00:00" 
-			"operation_end_date"				"2015-10-01 00:00:00" 
+			"stop_adding_to_queue_date"			"2015-10-01 00:00:00" 
+			"stop_giving_to_player_date"		"2015-10-12 00:00:00" 
 			"queue_freq_min"					"84" 
 			"queue_freq_max"					"84" 
 			"drop_freq_min"						"0.25" 
@@ -49069,12 +49069,20 @@
 		{
 			"public_prefab"			"1"
 			"prefab"		"cosmetic_killeater_attribs"
+			"static_attrs"
+			{
+				"cosmetic_allow_inspect"				"1"
+			}
 		}
 
 		"base_hat"
 		{
 			"public_prefab"			"1"
 			"prefab"		"cosmetic_killeater_attribs"
+			"static_attrs"
+			{
+				"cosmetic_allow_inspect"				"1"
+			}
 		}
 
 		"cosmetic"
@@ -49151,6 +49159,10 @@
 			"item_type_name"	"#TF_TauntEnabler"
 			"item_slot"			"taunt"
 			"item_quality"		"unique"
+			"static_attrs"
+			{
+				"cosmetic_allow_inspect"				"1"
+			}
 		}
 
 		"score_reward_hat"
@@ -51083,6 +51095,7 @@
 		"quest_prefab_1st_operation_pauling"
 		{
 			"prefab"		"dynamic_quest_base"
+			"expiration_date"	"2015-10-12 23:59:59" 
 		}
 
 		"dynamic_quest_base"
@@ -53578,14 +53591,6 @@
 			}
 		}
 
-		"inspectable_cosmetic"
-		{
-			"static_attrs"
-			{
-				"cosmetic_allow_inspect"				"1"
-			}
-		}
-		
 		"marketable"
 		{
 			"static_attrs"
@@ -108717,7 +108722,7 @@
 		"30623"
 		{
 			"name"		"The Rotation Sensation"
-			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_cc_summer2015_the_rotation_sensation"
 			"item_description"		"#TF_cc_summer2015_the_rotation_sensation_Desc"
 			"equip_region"		"hat"
@@ -108764,7 +108769,7 @@
 		"30625"
 		{
 			"name"		"The Physician's Protector"
-			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_cc_summer2015_the_physicians_protector"
 			"item_description"		"#TF_cc_summer2015_the_physicians_protector_Desc"
 			"equip_region"		"hat"
@@ -108784,7 +108789,7 @@
 		"30626"
 		{
 			"name"		"The Vascular Vestment"
-			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_cc_summer2015_the_vascular_vestment"
 			"item_description"		"#TF_cc_summer2015_the_vascular_vestment_Desc"
 			"equip_region"		"shirt"
@@ -108803,7 +108808,7 @@
 		"30627"
 		{
 			"name"		"Bruce's Bonnet"
-			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_cc_summer2015_bruces_bonnet"
 			"item_description"		"#TF_cc_summer2015_bruces_bonnet_Desc"
 			"equip_region"		"hat"
@@ -108822,7 +108827,7 @@
 		"30628"
 		{
 			"name"		"Outta' Sight"
-			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_cc_summer2015_outta_sight"
 			"item_description"		"#TF_cc_summer2015_outta_sight_Desc"
 			"equip_region"		"hat"
@@ -108841,7 +108846,7 @@
 		"30629"
 		{
 			"name"		"Support Spurs"
-			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_cc_summer2015_support_spurs"
 			"item_description"		"#TF_cc_summer2015_support_spurs_Desc"
 			"equip_region"		"feet"
@@ -108873,7 +108878,7 @@
 		"30631"
 		{
 			"name"		"Lurker's Leathers"
-			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_cc_summer2015_lurkers_leathers"
 			"item_description"		"#TF_cc_summer2015_lurkers_leathers_Desc"
 			"equip_region"		"shirt"
@@ -108914,7 +108919,7 @@
 		"30633"
 		{
 			"name"		"Commissar's Coat"
-			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_cc_summer2015_commissars_coat"
 			"item_description"		"#TF_cc_summer2015_commissars_coat_Desc"
 			"equip_region"		"shirt"
@@ -108932,7 +108937,7 @@
 		"30634"
 		{
 			"name"		"Sheriff's Stetson"
-			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_cc_summer2015_sheriffs_stetson"
 			"item_description"		"#TF_cc_summer2015_sheriffs_stetson_Desc"
 			"equip_region"		"hat"
@@ -108951,7 +108956,7 @@
 		"30635"
 		{
 			"name"		"Wild West Waistcoat"
-			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_cc_summer2015_wild_west_waistcoat"
 			"item_description"		"#TF_cc_summer2015_wild_west_waistcoat_Desc"
 			"equip_region"		"shirt"
@@ -108970,7 +108975,7 @@
 		"30636"
 		{
 			"name"		"Fortunate Son"
-			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_cc_summer2015_fortunate_son"
 			"item_description"		"#TF_cc_summer2015_fortunate_son_Desc"
 			"equip_region"		"hat"
@@ -108996,7 +109001,7 @@
 		"30637"
 		{
 			"name"		"Flak Jack"
-			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_cc_summer2015_flak_jack"
 			"item_description"		"#TF_cc_summer2015_flak_jack_Desc"
 			"equip_region"		"shirt"
@@ -109014,7 +109019,7 @@
 		"30640"
 		{
 			"name"		"Captain Cardbeard Cutthroat"
-			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_cc_summer2015_captain_cardbeard_cutthroat"
 			"item_description"		"#TF_cc_summer2015_captain_cardbeard_cutthroat_Desc"
 			"equip_region"		"hat"
@@ -109059,7 +109064,7 @@
 		"30643"
 		{
 			"name"		"Potassium Bonnett"
-			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_cc_summer2015_potassium_bonnett"
 			"item_description"		"#TF_cc_summer2015_potassium_bonnett_Desc"
 			"equip_region"		"hat"
@@ -109104,7 +109109,7 @@
 		"30644"
 		{
 			"name"		"White Russian"
-			"prefab"		"no_craft hat inspectable_cosmetic marketable"
+			"prefab"		"no_craft hat marketable"
 			"item_name"		"#TF_cc_summer2015_white_russian"
 			"item_description"		"#TF_cc_summer2015_white_russian_Desc"
 			"equip_region"		"hat"
@@ -109123,7 +109128,7 @@
 		"30645"
 		{
 			"name"		"El Duderino"
-			"prefab"		"no_craft misc inspectable_cosmetic marketable"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_cc_summer2015_el_duderino"
 			"item_description"		"#TF_cc_summer2015_el_duderino_Desc"
 			"equip_region"		"beard"
@@ -126434,9 +126439,9 @@
 		}
  		"8864"
 		{
-			"name"	"LBTF2 Highlander 1st Place Season 2"
+			"name"	"LBTF2 Highlander Access 1st Place Season 2"
 			"prefab"			"tournament_medal"
-			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_1st"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Access_1st"
 			"item_description"	"#TF_TournamentMedal_Season2"
 			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st"
 			"model_player_per_class"
@@ -126454,9 +126459,9 @@
 		}
   		"8865"
 		{
-			"name"	"LBTF2 Highlander 2nd Place Season 2"
+			"name"	"LBTF2 Highlander Access 2nd Place Season 2"
 			"prefab"			"tournament_medal"
-			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_2nd"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Access_2nd"
 			"item_description"	"#TF_TournamentMedal_Season2"
 			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd"
 			"model_player_per_class"
@@ -126474,9 +126479,9 @@
 		}
   		"8866"
 		{
-			"name"	"LBTF2 Highlander 3rd Place Season 2"
+			"name"	"LBTF2 Highlander Access 3rd Place Season 2"
 			"prefab"			"tournament_medal"
-			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_3rd"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Access_3rd"
 			"item_description"	"#TF_TournamentMedal_Season2"
 			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd"
 			"model_player_per_class"
@@ -126494,9 +126499,9 @@
 		}
   		"8867"
 		{
-			"name"	"LBTF2 Highlander Participant Season 2"
+			"name"	"LBTF2 Highlander Access Participant Season 2"
 			"prefab"			"tournament_medal"
-			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Participant"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Access_Participant"
 			"item_description"	"#TF_TournamentMedal_Season2"
 			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant"
 			"model_player_per_class"
@@ -126832,6 +126837,89 @@
 				"engineer"		"models/workshop/player/items/all_class/lbtf2_6v6_participant/lbtf2_6v6_participant_engineer.mdl"
 			}
 		}
+ 		"8884"
+		{
+			"name"	"LBTF2 Highlander Principal 1st Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Principal_1st"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_highlander_1st/lbtf2_highlander_1st_engineer.mdl"
+			}
+		}
+  		"8885"
+		{
+			"name"	"LBTF2 Highlander Principal 2nd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Principal_2nd"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_highlander_2nd/lbtf2_highlander_2nd_engineer.mdl"
+			}
+		}
+  		"8886"
+		{
+			"name"	"LBTF2 Highlander Principal 3rd Place Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Principal_3rd"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_highlander_3rd/lbtf2_highlander_3rd_engineer.mdl"
+			}
+		}
+  		"8887"
+		{
+			"name"	"LBTF2 Highlander Principal Participant Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"	"#TF_TournamentMedal_LBTF2_Highlander_Principal_Participant"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant"
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/lbtf2_highlander_participant/lbtf2_highlander_participant_engineer.mdl"
+			}
+		}
+
+
+
 
 
 
@@ -147424,6 +147512,25 @@
 			"hidden"	"1"
 			"stored_as_integer"	"0"
 		}
+		"750"
+		{
+			"name"	"taunt only unusual effect"
+			"attribute_class"		"taunt_only_unusual_effect"
+			"description_format"	"value_is_particle_index"
+			"hidden"	"1"
+			"effect_type"	"unusual"
+			"stored_as_integer"	"0"
+		}
+		"751"					
+		{
+			"name"	"deactive date"
+			"attribute_class"	"deactive_date"
+			"description_format"	"value_is_date"
+			"hidden"	"1"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"1"
+		}
+		
 		
 		"1000"
 		{

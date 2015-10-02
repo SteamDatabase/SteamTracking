@@ -3,8 +3,9 @@
 @define mediumduration: 0.4s;
 @define longduration: 1.7s;
 
-@define paddinghorz: 200px;
+@define paddinghorz: 195px;
 @define buttonwidth: 480px;
+@define longbuttonwidth: 980px;
 @define buttonheight: 50px;
 @define controlgaphorz: 25px;
 @define controlgapvert: 18px;
@@ -61,11 +62,6 @@
 	transition-property: opacity;
 }
 
-#MainBackground
-{
-	width: 100%;
-	flow-children: down;
-}
 
 #TitleBackground
 {
@@ -85,15 +81,6 @@
 	background-color: none;
 	background-size: auto;
 	background-position: left 0px top -150px;
-}
-
-.WizardChildTitle
-{
-	font-size: 78px;
-	font-family: platformfont;
-
-	margin-top: 64px;
-	color: white;
 }
 
 .OOBEControllerHintBody
@@ -134,6 +121,7 @@
 	height: 200px;
 	width: 100%;
 	flow-children: right;
+	margin-left: 195px;
 }
 
 .SSAFlowRight
@@ -348,9 +336,7 @@ ToggleButton .WizardLabel
 .WizardChild
 {
 	flow-children: down;
-	padding-left: paddinghorz;
-	padding-right: paddinghorz;
-
+	
 	opacity: 0.0;
 
 	transition-property: opacity;
@@ -358,6 +344,17 @@ ToggleButton .WizardLabel
 	transition-timing-function: bigpicture-ease-in-out;
 	width: 100%;
 	height: 100%;
+}
+
+.WizardChild .WizardContent,
+.WizardChild .SettingsBottomPanel
+{
+	margin-left: paddinghorz;
+	margin-right: paddinghorz;
+	margin-top: 20px;
+	flow-children: down;
+	width: 100%;
+	height: 80%;
 }
 
 .FlowNone
@@ -424,4 +421,18 @@ ToggleButton .WizardLabel
 	background-size: 100% 100%;
 }
 
+.WizardContent RadioButton
+{
+	width: longbuttonwidth;
+}
 
+#UseWired, #UseWirelessButton
+{
+	width: 80%;
+	flow-children: none;
+}
+
+.DeviceName
+{
+	margin-left: 40px;
+}

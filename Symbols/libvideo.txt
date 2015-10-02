@@ -6839,8 +6839,8 @@
  T ThreadInterlockedIncrement
  T ThreadInterlockedIncrement64
  T ThreadIsThreadRunning
+ T ThreadSetBackgroundPriority
  T ThreadSetDebugName
- T ThreadSetPriority
  T ThreadSleep
  T TimeCompare(unsigned int const*, unsigned int const*)
  T UI_OpenSSL
@@ -9506,7 +9506,6 @@
  pthread_condattr_destroy
  pthread_condattr_init
  pthread_create
- pthread_getschedparam
  pthread_getspecific
  pthread_join$UNIX2003
  pthread_key_create
@@ -9523,7 +9522,6 @@
  pthread_mutexattr_settype
  pthread_once
  pthread_self
- pthread_setschedparam
  pthread_setspecific
  qsort
  qsort_r

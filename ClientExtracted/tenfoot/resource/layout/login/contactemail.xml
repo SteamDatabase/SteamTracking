@@ -6,18 +6,19 @@
 	</styles>
 
 	<ContactEmailWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#ForgotAccountName_ContactEmail_Title" />
-		<Label class="WizardChildDescription" text="#ForgotAccountName_ContactEmail_Description" />
-		<Label class="WizardErrorLabel" id="MessageLabel" />
+    <Panel class="WizardContent">
+		  <Label class="WizardChildDescription" text="#ForgotAccountName_ContactEmail_Description" />
+		  <Label class="WizardErrorLabel" id="MessageLabel" />
 
-		<Panel class="InputContainerDown GapDown" id="InputContainer">
-			<Label class="WizardLabel" id="EmailAddressLabel" text="#ForgotAccountName_ContactEmail_EmailAddress" />
-			<TextEntry class="WizardTextEntry" id="ContactEmailTextEntry"
-					textinputid="InnerAccountNameTextEntry"
-					textinputdoneactionstring="#CreatePassword_NextField"
-					textinputhidesuggestions="1"
-					textinputclass="HalfWidth DockRight AppearFromBottomCenter" />
-		</Panel>
+		  <Panel class="InputContainerDown GapDown" id="InputContainer">
+			  <Label class="WizardLabel" id="EmailAddressLabel" text="#ForgotAccountName_ContactEmail_EmailAddress" />
+			  <TextEntry class="WizardTextEntry" id="ContactEmailTextEntry"
+					  textinputid="InnerAccountNameTextEntry"
+					  textinputdoneactionstring="#CreatePassword_NextField"
+					  textinputhidesuggestions="1"
+					  textinputclass="HalfWidth DockRight AppearFromBottomCenter" />
+		  </Panel>
+    </Panel>
 
 		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
 			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">

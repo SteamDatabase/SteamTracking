@@ -7,27 +7,20 @@
 	</styles>
 
 	<ParentalSetPINChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Parental_Settings_Title" />
-		</Panel>
-
-		<Panel class="SettingsBottomPanel">
+		<Panel class="SettingsBottomPanel SettingsBody FlowDown">
 			<!-- main panel -->
-			<Label id="SetPIN" text="#Parental_Set_PIN" class="SettingsBody" />
+			<Label id="SetPIN" text="#Parental_Set_PIN" />
 
 			<Panel class="ParentalSetPINDialog">
 				<Panel class="ParentalPINEntry" >
 					<Label text="#Parental_Enter_PIN" />
 					<TextEntry class="ParentalPINEntry" id="Password"
-							   textinputid="ParentalPINEntry"
 							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 							   undohistory="enabled" />
 				</Panel>
 				<Panel class="ParentalPINEntry">
 					<Label text="#Parental_Reenter_PIN" />				
 					<TextEntry class="ParentalPINEntry" id="PasswordReenter"
-							   textinputid="ParentalPINEntry"
 							   textinputclass="HalfWidth DockLeft AppearFromBottomCenter"
 							   undohistory="enabled" />
 				</Panel>

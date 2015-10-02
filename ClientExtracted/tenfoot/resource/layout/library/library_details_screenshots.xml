@@ -6,7 +6,7 @@
 	</styles>
 
 	<LibraryScreenshots defaultfocus="ViewAllScreenshots">
-		<ParentalButton id="ScreenshotsFullWrapper" class="ScreenshotsFullWrapper" onactivate="OpenScreenshotManager()">
+		<ParentalButton id="ScreenshotsFullWrapper" class="ScreenshotsFullWrapper" onactivate="OpenScreenshotManager()" >
 			<Label id="HeaderLabel" class="HeaderLabel" text="#Library_Details_Screenshots" html="true" />
 			<Panel id="ParentalOverlay">
 				<ParentalReplacementPanel id="ParentalLockedReplacementPanel" />

@@ -1,0 +1,10 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/settings.css" />
+    <include src="file://{resources}/styles/settings_steamcontroller_support.css" />
+	</styles>
+
+  <SettingsPanel_SteamControllerSupport class="SettingsSection">
+  </SettingsPanel_SteamControllerSupport>
+</root>

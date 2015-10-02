@@ -5,11 +5,6 @@
 	</styles>
 
 	<SettingsPanel_Account class="SettingsSection" defaultfocus="SettingsAccount_History">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_Account" />
-		</Panel>
-		
 		<Panel class="SettingsBottomPanel">
 			<!-- main panel -->
 			<Panel class="SettingsContent SettingsLeftContent" tabindex="auto" selectionpos="auto">

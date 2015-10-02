@@ -5,12 +5,6 @@
 	</styles>
 
 	<SettingsPanel_About class="SettingsSection" defaultfocus="SettingsInterface_SteamClientCheckForUpdates">
-		<!-- top header panel -->
-		<Panel class="SettingsHeader">
-			<Label class="SettingsHeaderLegend" text="#Settings_About" />
-		</Panel>
-
-		<!-- main panel -->
 		<Panel class="SettingsBottomPanel" tabindex="auto" selectionpos="auto">
 	
 		<Panel class="SettingsLeftContent" tabindex="auto" selectionpos="auto">

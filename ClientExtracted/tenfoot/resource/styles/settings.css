@@ -41,22 +41,17 @@ SettingsPanel
 	height: 100%;
 }
 
-#Settings
+.SettingsSection
 {
 	width: 100%;
 	height: 100%;
 	font-size: 24px;
 	font-family: platformfont;
 	margin-left: 0px;
-	pre-transform-scale2d: 1.38;
-	transform: translateY(-1080px );
 
 	transition-property: opacity, opacity-mask;
 	transition-duration: SettingsPanelTransitionDuration;
 	transition-timing-function: bigpicture-ease-in-out;
-
-	opacity: 0.0;
-	opacity-mask: url( "file://{images}/background_alpha_mask.png" ) 1.0;
 
 	background-color: settingsbackgroundgradient;
 	z-index: settingszindex;
@@ -106,12 +101,11 @@ SettingsPanel
 	margin: 14px 0px 7px 16px;
 }
 
-#Settings:descendantfocus, .WebBrowserActive #Settings.SectionVisible
+#Settings:descendantfocus
 {
 	opacity: 1.0;
 	pre-transform-scale2d: 1.0;
 	transform: translateY( 0px );
-	opacity-mask: none;
 }
 
 #SettingsContent
@@ -129,11 +123,6 @@ SettingsPanel
 {
 	flow-children: right;
 	height: 100%;
-}
-
-SettingsPanel.SectionVisible #SettingsContent
-{
-	opacity: 0.0;
 }
 
 .SettingsHeader
@@ -159,19 +148,6 @@ SettingsPanel.SectionVisible #SettingsContent
 	font-family: platformfont;
 	margin-left: 300px;
 	margin-top: 76px;
-	color: applabelsolid;
-}
-
-.ParentalPINEntry .SettingsHeaderLegend
-{	
-
-	horizontal-align: left;
-	vertical-align: top;
-	text-align: left;
-	margin-left: 300px;
-	margin-right: 0px;
-	margin-top: 76px;
-	width: fit-children;
 	color: applabelsolid;
 }
 
@@ -231,6 +207,11 @@ SettingsPanel.SectionVisible #SettingsContent
 	padding-left: 0px;
 	padding-right: 25px;
 	padding-top: 30px;
+
+	horizontal-align: left;
+	vertical-align: top;
+	width: 100%;
+	height: fit-children;
 }
 
 .SettingsContained .SettingsContent
@@ -421,15 +402,10 @@ Label.SettingsStatic
 
 .SettingsSection
 {
-	opacity: 0.0;
 	height: 100%;
 	width: 100%;
 
-	transition-property: opacity;
-	transition-duration: SettingsPanelTransitionDuration;
-	transition-timing-function: bigpicture-ease-in-out;
 	flow-children: down;
-	background-color: settingsbackgroundgradient;
 }
 
 .SettingsSection.SettingsContained
@@ -439,14 +415,10 @@ Label.SettingsStatic
 
 .SettingsBottomPanel
 {
-	margin-left: 295px;
+	margin-left: 195px;
+	margin-top: 50px;
 	width: 100%;
-	padding-left: 10px;
-}
-
-.SettingsSection.SectionVisible
-{
-	opacity: 1.0;
+	height: 100%;
 }
 
 #SettingsFriends_AvatarContainer
@@ -525,13 +497,6 @@ DropDown Label
 	overflow: clip;
 }
 
-#Settings_Display .SettingsContent
-{
-	width: 1200px;
-	padding: 30px;
-	padding-left: 300px;
-}
-
 #Settings_Display .VertContainer
 {
 	margin-bottom: 20px;
@@ -540,12 +505,6 @@ DropDown Label
 #Settings_TimeZone .VertContainer
 {
 	margin-bottom: 20px;
-}
-
-#Settings_Language .SettingsContent
-{
-	padding: 30px;
-	padding-left: 300px;
 }
 
 #Settings_Language .HorzContainer
@@ -1113,6 +1072,8 @@ SettingsPanelNetwork_Credentials #ShowPasswordLabel
 	text-align: center;
 	transform: translateX( 0px );
 	margin-top: 20px;
+	color: #66c0f4;
+	font-size: 28px;
 }
 
 #network_ipsettings .RadioButton Label
@@ -1191,8 +1152,7 @@ SettingsPanelNetwork_Credentials #ShowPasswordLabel
 
 .SettingsCallout
 {
-	margin: 14px;
-	margin-left: 0px;
+	margin: 4px 0px 12px 0px;
 	color: tcstatictext;
 }
 
@@ -1536,19 +1496,13 @@ KeyboardShortcut .Graphic
 
 }
 
-#ControllerSettingsContainer
-{
-	width: 100%;
-	height: 100%;
-	padding-top: 5px;
-}
 
 .VertContainerScreensaver
 {
 	flow-children: down;
 	vertical-align: top;
-	horizontal-align: right;
-	width: 50%;
+	width: 475px;
+	margin-left: 200px;
 }
 
 
@@ -1586,26 +1540,25 @@ KeyboardShortcut .Graphic
 #GameControllerContent
 {
 	width: 30%;
-	margin-left: 300px;
-	height: 90%;
+	height: 100%;
 	visibility: visible;
 }
 
 .SettingsControllerName
 {
 	horizontal-align: left;
-	padding-left: 15px;
+	padding-left: 0px;
 	width: 800px;
-	margin-bottom: 25px;
-	margin-top: 0px;
+	margin: 4px 0px 12px 0px;
+	color: applabelsolid;
 }
 
 .SettingsControllerNameTitle
 {
 	horizontal-align: left;
-	padding-left: 15px;
+	padding-left: 0px;
 	width: 800px;
-	margin: 0px;
+	margin: 4px 0px 12px 0px;
 }
 
 .SettingsControllerNameHeader
@@ -1632,14 +1585,10 @@ KeyboardShortcut .Graphic
 #NoControllersFoundPanel
 {
 	horizontal-align: left;
-	vertical-align: center;
-	background-color: black;
-	padding-top: 15px;
-	margin-top: 25px;
+	vertical-align: top;
+	padding-top: 30px;
+	width: 40%;
 	visibility: visible;
-	width: 25%;
-	margin-left: 300px;
-	height: 40%;
 }
 
 .ControllerFound #NoControllersFoundPanel
@@ -1649,8 +1598,8 @@ KeyboardShortcut .Graphic
 
 #NoControllersFoundLabel
 {
-	horizontal-align: center;
-	vertical-align: center;
+	horizontal-align: left;
+	vertical-align: top;
 }
 
 .ControllerSettingsButton
@@ -1677,15 +1626,11 @@ KeyboardShortcut .Graphic
 
 #SteamControllerVersion
 {
-	horizontal-align: center;
+	horizontal-align: left;
 	vertical-align: top;
+	padding-top: 30px;
 	width: 40%;
-	background-color: black;
-	margin-left: 650px;
-	padding-top: 15px;
-	margin-top: 25px;
 	visibility: collapse;
-	height: 80%;
 }
 
 #SteamControllerVersion.SteamControllerSelected 
@@ -3132,7 +3077,6 @@ SettingsPanel_AlienFX .SettingsCenterContent
 }
 
 #SettingsRemoteClients_Help
-
 {
 	margin-left: 75px;
 }
@@ -3564,16 +3508,6 @@ OOBEWizard SettingsPanelNetwork_Connect #ButtonDone
 	color: tcstatictext;
 }
 
-SettingsPanelNetwork_IPSettings .RadioButton 
-{
-	width: fit-children;
-}
-
-SettingsPanelNetwork_IPSettings .RadioButton Label
-{
-	width: fit-children;
-}
-
 SettingsPanelNetwork_IPCustomSettings #WrapperPanel
 {
 	flow-children: down;
@@ -3601,8 +3535,6 @@ AddShortcutPanel #ShortcutsGrid
 	pre-transform-scale2d: 1.0, 1.0;
 
 	position: 0px 126px 0px;
-	padding-top: 150px;
-	padding-bottom: 300px;
 	margin-top: 00px;
 }
 
@@ -3686,3 +3618,4 @@ AddShortcutPanel .GamesGrid
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-property: transform, width;
 }
+
