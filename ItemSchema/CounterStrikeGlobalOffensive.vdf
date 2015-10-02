@@ -12141,6 +12141,10 @@
 				"cannot trade"		"1"
 			}
 		}
+		"coupon_key_directpurchase_prefab"
+		{
+			"prefab"		"coupon_key_prefab"
+		}
 		"coupon_key_enfu_capsule_prefab"
 		{
 			"prefab"		"coupon_key_prefab"
@@ -18532,6 +18536,7 @@
 				"restriction"		"coupon_danielsadowski_01"
 			}
 			"associated_item"		"10020"
+			"image_inventory"		"econ/music_kits/danielsadowski_01"
 		}
 		"10021"
 		{
@@ -18558,6 +18563,7 @@
 				"restriction"		"coupon_noisia_01"
 			}
 			"associated_item"		"10021"
+			"image_inventory"		"econ/music_kits/noisia_01"
 		}
 		"10022"
 		{
@@ -18584,6 +18590,7 @@
 				"restriction"		"coupon_robertallaire_01"
 			}
 			"associated_item"		"10022"
+			"image_inventory"		"econ/music_kits/robertallaire_01"
 		}
 		"10023"
 		{
@@ -18610,6 +18617,7 @@
 				"restriction"		"coupon_seanmurray_01"
 			}
 			"associated_item"		"10023"
+			"image_inventory"		"econ/music_kits/seanmurray_01"
 		}
 		"10024"
 		{
@@ -18636,6 +18644,7 @@
 				"restriction"		"coupon_feedme_01"
 			}
 			"associated_item"		"10024"
+			"image_inventory"		"econ/music_kits/feedme_01"
 		}
 		"10025"
 		{
@@ -18662,6 +18671,7 @@
 				"restriction"		"coupon_dren_01"
 			}
 			"associated_item"		"10025"
+			"image_inventory"		"econ/music_kits/dren_01"
 		}
 		"10026"
 		{
@@ -18688,6 +18698,7 @@
 				"restriction"		"coupon_austinwintory_01"
 			}
 			"associated_item"		"10026"
+			"image_inventory"		"econ/music_kits/austinwintory_01"
 		}
 		"10027"
 		{
@@ -18714,6 +18725,7 @@
 				"restriction"		"coupon_sasha_01"
 			}
 			"associated_item"		"10027"
+			"image_inventory"		"econ/music_kits/sasha_01"
 		}
 		"10028"
 		{
@@ -18740,6 +18752,7 @@
 				"restriction"		"coupon_skog_01"
 			}
 			"associated_item"		"10028"
+			"image_inventory"		"econ/music_kits/skog_01"
 		}
 		"10029"
 		{
@@ -19312,6 +19325,7 @@
 				"restriction"		"coupon_midnightriders_01"
 			}
 			"associated_item"		"10050"
+			"image_inventory"		"econ/music_kits/midnightriders_01"
 		}
 		"10051"
 		{
@@ -19338,6 +19352,7 @@
 				"restriction"		"coupon_danielsadowski_02"
 			}
 			"associated_item"		"10051"
+			"image_inventory"		"econ/music_kits/danielsadowski_02"
 		}
 		"10052"
 		{
@@ -19364,6 +19379,7 @@
 				"restriction"		"coupon_hotlinemiami_01"
 			}
 			"associated_item"		"10052"
+			"image_inventory"		"econ/music_kits/hotlinemiami_01"
 		}
 		"10053"
 		{
@@ -19390,6 +19406,7 @@
 				"restriction"		"coupon_mattlange_01"
 			}
 			"associated_item"		"10053"
+			"image_inventory"		"econ/music_kits/mattlange_01"
 		}
 		"10054"
 		{
@@ -19416,6 +19433,7 @@
 				"restriction"		"coupon_mateomessina_01"
 			}
 			"associated_item"		"10054"
+			"image_inventory"		"econ/music_kits/mateomessina_01"
 		}
 		"10055"
 		{
@@ -19442,6 +19460,7 @@
 				"restriction"		"coupon_damjanmravunac_01"
 			}
 			"associated_item"		"10055"
+			"image_inventory"		"econ/music_kits/damjanmravunac_01"
 		}
 		"10056"
 		{
@@ -19774,12 +19793,13 @@
 			"name"		"coupon key - proxy_01"
 			"item_name"		"#coupon_key_proxy_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_proxy_01"
 			}
 			"associated_item"		"10069"
+			"image_inventory"		"econ/music_kits/proxy_01"
 		}
 		"10070"
 		{
@@ -19800,12 +19820,13 @@
 			"name"		"coupon key - kitheory_01"
 			"item_name"		"#coupon_key_kitheory_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_kitheory_01"
 			}
 			"associated_item"		"10070"
+			"image_inventory"		"econ/music_kits/kitheory_01"
 		}
 		"10071"
 		{
@@ -19826,12 +19847,13 @@
 			"name"		"coupon key - troelsfolmann_01"
 			"item_name"		"#coupon_key_troelsfolmann_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_troelsfolmann_01"
 			}
 			"associated_item"		"10071"
+			"image_inventory"		"econ/music_kits/troelsfolmann_01"
 		}
 		"10072"
 		{
@@ -19852,12 +19874,13 @@
 			"name"		"coupon key - kellybailey_01"
 			"item_name"		"#coupon_key_kellybailey_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_kellybailey_01"
 			}
 			"associated_item"		"10072"
+			"image_inventory"		"econ/music_kits/kellybailey_01"
 		}
 		"10073"
 		{
@@ -19878,12 +19901,13 @@
 			"name"		"coupon key - skog_02"
 			"item_name"		"#coupon_key_skog_02"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_skog_02"
 			}
 			"associated_item"		"10073"
+			"image_inventory"		"econ/music_kits/skog_02"
 		}
 		"10074"
 		{
@@ -20190,12 +20214,13 @@
 			"name"		"coupon key - danielsadowski_03"
 			"item_name"		"#coupon_key_danielsadowski_03"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_danielsadowski_03"
 			}
 			"associated_item"		"10085"
+			"image_inventory"		"econ/music_kits/danielsadowski_03"
 		}
 		"10086"
 		{
@@ -20216,12 +20241,13 @@
 			"name"		"coupon key - awolnation_01"
 			"item_name"		"#coupon_key_awolnation_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_awolnation_01"
 			}
 			"associated_item"		"10086"
+			"image_inventory"		"econ/music_kits/awolnation_01"
 		}
 		"10087"
 		{
@@ -20242,12 +20268,13 @@
 			"name"		"coupon key - mordfustang_01"
 			"item_name"		"#coupon_key_mordfustang_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_mordfustang_01"
 			}
 			"associated_item"		"10087"
+			"image_inventory"		"econ/music_kits/mordfustang_01"
 		}
 		"10088"
 		{
@@ -20268,12 +20295,13 @@
 			"name"		"coupon key - michaelbross_01"
 			"item_name"		"#coupon_key_michaelbross_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_michaelbross_01"
 			}
 			"associated_item"		"10088"
+			"image_inventory"		"econ/music_kits/michaelbross_01"
 		}
 		"10089"
 		{
@@ -20294,12 +20322,13 @@
 			"name"		"coupon key - ianhultquist_01"
 			"item_name"		"#coupon_key_ianhultquist_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_ianhultquist_01"
 			}
 			"associated_item"		"10089"
+			"image_inventory"		"econ/music_kits/ianhultquist_01"
 		}
 		"10090"
 		{
@@ -20320,12 +20349,13 @@
 			"name"		"coupon key - newbeatfund_01"
 			"item_name"		"#coupon_key_newbeatfund_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_newbeatfund_01"
 			}
 			"associated_item"		"10090"
+			"image_inventory"		"econ/music_kits/newbeatfund_01"
 		}
 		"10091"
 		{
@@ -20346,12 +20376,13 @@
 			"name"		"coupon key - beartooth_01"
 			"item_name"		"#coupon_key_beartooth_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_beartooth_01"
 			}
 			"associated_item"		"10091"
+			"image_inventory"		"econ/music_kits/beartooth_01"
 		}
 		"10092"
 		{
@@ -20372,12 +20403,13 @@
 			"name"		"coupon key - lenniemoore_01"
 			"item_name"		"#coupon_key_lenniemoore_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_lenniemoore_01"
 			}
 			"associated_item"		"10092"
+			"image_inventory"		"econ/music_kits/lenniemoore_01"
 		}
 		"10093"
 		{
@@ -20398,12 +20430,13 @@
 			"name"		"coupon key - darude_01"
 			"item_name"		"#coupon_key_darude_01"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_darude_01"
 			}
 			"associated_item"		"10093"
+			"image_inventory"		"econ/music_kits/darude_01"
 		}
 		"10094"
 		{
@@ -20425,12 +20458,14 @@
 			"name"		"coupon key - proxy_01_stattrak"
 			"item_name"		"#coupon_key_proxy_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_proxy_01_stattrak"
 			}
 			"associated_item"		"10094"
+			"image_inventory"		"econ/music_kits/proxy_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10095"
 		{
@@ -20452,12 +20487,14 @@
 			"name"		"coupon key - kitheory_01_stattrak"
 			"item_name"		"#coupon_key_kitheory_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_kitheory_01_stattrak"
 			}
 			"associated_item"		"10095"
+			"image_inventory"		"econ/music_kits/kitheory_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10096"
 		{
@@ -20479,12 +20516,14 @@
 			"name"		"coupon key - troelsfolmann_01_stattrak"
 			"item_name"		"#coupon_key_troelsfolmann_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_troelsfolmann_01_stattrak"
 			}
 			"associated_item"		"10096"
+			"image_inventory"		"econ/music_kits/troelsfolmann_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10097"
 		{
@@ -20506,12 +20545,14 @@
 			"name"		"coupon key - kellybailey_01_stattrak"
 			"item_name"		"#coupon_key_kellybailey_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_kellybailey_01_stattrak"
 			}
 			"associated_item"		"10097"
+			"image_inventory"		"econ/music_kits/kellybailey_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10098"
 		{
@@ -20533,12 +20574,14 @@
 			"name"		"coupon key - skog_02_stattrak"
 			"item_name"		"#coupon_key_skog_02_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_skog_02_stattrak"
 			}
 			"associated_item"		"10098"
+			"image_inventory"		"econ/music_kits/skog_02"
+			"will_produce_stattrak"		"1"
 		}
 		"10099"
 		{
@@ -20560,12 +20603,14 @@
 			"name"		"coupon key - danielsadowski_03_stattrak"
 			"item_name"		"#coupon_key_danielsadowski_03_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_danielsadowski_03_stattrak"
 			}
 			"associated_item"		"10099"
+			"image_inventory"		"econ/music_kits/danielsadowski_03"
+			"will_produce_stattrak"		"1"
 		}
 		"10100"
 		{
@@ -20587,12 +20632,14 @@
 			"name"		"coupon key - awolnation_01_stattrak"
 			"item_name"		"#coupon_key_awolnation_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_awolnation_01_stattrak"
 			}
 			"associated_item"		"10100"
+			"image_inventory"		"econ/music_kits/awolnation_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10101"
 		{
@@ -20614,12 +20661,14 @@
 			"name"		"coupon key - mordfustang_01_stattrak"
 			"item_name"		"#coupon_key_mordfustang_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_mordfustang_01_stattrak"
 			}
 			"associated_item"		"10101"
+			"image_inventory"		"econ/music_kits/mordfustang_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10102"
 		{
@@ -20641,12 +20690,14 @@
 			"name"		"coupon key - michaelbross_01_stattrak"
 			"item_name"		"#coupon_key_michaelbross_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_michaelbross_01_stattrak"
 			}
 			"associated_item"		"10102"
+			"image_inventory"		"econ/music_kits/michaelbross_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10103"
 		{
@@ -20668,12 +20719,14 @@
 			"name"		"coupon key - ianhultquist_01_stattrak"
 			"item_name"		"#coupon_key_ianhultquist_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_ianhultquist_01_stattrak"
 			}
 			"associated_item"		"10103"
+			"image_inventory"		"econ/music_kits/ianhultquist_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10104"
 		{
@@ -20695,12 +20748,14 @@
 			"name"		"coupon key - newbeatfund_01_stattrak"
 			"item_name"		"#coupon_key_newbeatfund_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_newbeatfund_01_stattrak"
 			}
 			"associated_item"		"10104"
+			"image_inventory"		"econ/music_kits/newbeatfund_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10105"
 		{
@@ -20722,12 +20777,14 @@
 			"name"		"coupon key - beartooth_01_stattrak"
 			"item_name"		"#coupon_key_beartooth_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_beartooth_01_stattrak"
 			}
 			"associated_item"		"10105"
+			"image_inventory"		"econ/music_kits/beartooth_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10106"
 		{
@@ -20749,12 +20806,14 @@
 			"name"		"coupon key - lenniemoore_01_stattrak"
 			"item_name"		"#coupon_key_lenniemoore_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_lenniemoore_01_stattrak"
 			}
 			"associated_item"		"10106"
+			"image_inventory"		"econ/music_kits/lenniemoore_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10107"
 		{
@@ -20776,12 +20835,14 @@
 			"name"		"coupon key - darude_01_stattrak"
 			"item_name"		"#coupon_key_darude_01_stattrak"
 			"item_description"		"#coupon_key_desc"
-			"prefab"		"coupon_key_prefab"
+			"prefab"		"coupon_key_directpurchase_prefab"
 			"tool"
 			{
 				"restriction"		"coupon_darude_01_stattrak"
 			}
 			"associated_item"		"10107"
+			"image_inventory"		"econ/music_kits/darude_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10108"
 		{
@@ -20809,6 +20870,8 @@
 				"restriction"		"coupon_danielsadowski_01_stattrak"
 			}
 			"associated_item"		"10108"
+			"image_inventory"		"econ/music_kits/danielsadowski_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10109"
 		{
@@ -20836,6 +20899,8 @@
 				"restriction"		"coupon_noisia_01_stattrak"
 			}
 			"associated_item"		"10109"
+			"image_inventory"		"econ/music_kits/noisia_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10110"
 		{
@@ -20863,6 +20928,8 @@
 				"restriction"		"coupon_robertallaire_01_stattrak"
 			}
 			"associated_item"		"10110"
+			"image_inventory"		"econ/music_kits/robertallaire_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10111"
 		{
@@ -20890,6 +20957,8 @@
 				"restriction"		"coupon_seanmurray_01_stattrak"
 			}
 			"associated_item"		"10111"
+			"image_inventory"		"econ/music_kits/seanmurray_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10112"
 		{
@@ -20917,6 +20986,8 @@
 				"restriction"		"coupon_feedme_01_stattrak"
 			}
 			"associated_item"		"10112"
+			"image_inventory"		"econ/music_kits/feedme_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10113"
 		{
@@ -20944,6 +21015,8 @@
 				"restriction"		"coupon_dren_01_stattrak"
 			}
 			"associated_item"		"10113"
+			"image_inventory"		"econ/music_kits/dren_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10114"
 		{
@@ -20971,6 +21044,8 @@
 				"restriction"		"coupon_austinwintory_01_stattrak"
 			}
 			"associated_item"		"10114"
+			"image_inventory"		"econ/music_kits/austinwintory_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10115"
 		{
@@ -20998,6 +21073,8 @@
 				"restriction"		"coupon_sasha_01_stattrak"
 			}
 			"associated_item"		"10115"
+			"image_inventory"		"econ/music_kits/sasha_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10116"
 		{
@@ -21025,6 +21102,8 @@
 				"restriction"		"coupon_skog_01_stattrak"
 			}
 			"associated_item"		"10116"
+			"image_inventory"		"econ/music_kits/skog_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10117"
 		{
@@ -21052,6 +21131,8 @@
 				"restriction"		"coupon_midnightriders_01_stattrak"
 			}
 			"associated_item"		"10117"
+			"image_inventory"		"econ/music_kits/midnightriders_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10118"
 		{
@@ -21079,6 +21160,8 @@
 				"restriction"		"coupon_danielsadowski_02_stattrak"
 			}
 			"associated_item"		"10118"
+			"image_inventory"		"econ/music_kits/danielsadowski_02"
+			"will_produce_stattrak"		"1"
 		}
 		"10119"
 		{
@@ -21106,6 +21189,8 @@
 				"restriction"		"coupon_hotlinemiami_01_stattrak"
 			}
 			"associated_item"		"10119"
+			"image_inventory"		"econ/music_kits/hotlinemiami_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10120"
 		{
@@ -21133,6 +21218,8 @@
 				"restriction"		"coupon_mattlange_01_stattrak"
 			}
 			"associated_item"		"10120"
+			"image_inventory"		"econ/music_kits/mattlange_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10121"
 		{
@@ -21160,6 +21247,8 @@
 				"restriction"		"coupon_mateomessina_01_stattrak"
 			}
 			"associated_item"		"10121"
+			"image_inventory"		"econ/music_kits/mateomessina_01"
+			"will_produce_stattrak"		"1"
 		}
 		"10122"
 		{
@@ -21187,6 +21276,8 @@
 				"restriction"		"coupon_damjanmravunac_01_stattrak"
 			}
 			"associated_item"		"10122"
+			"image_inventory"		"econ/music_kits/damjanmravunac_01"
+			"will_produce_stattrak"		"1"
 		}
 	}
 	"attributes"
