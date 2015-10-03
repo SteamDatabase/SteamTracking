@@ -6644,10 +6644,6 @@
 						g_UIManager.GetMatchStatsPanel().OnIFrameGraphSystemUIInit( Msg.graph_options );
 
 						break;
-
-					case 'Mobile_OnInitialUserAction':
-
-						break;
 				}
 
 				if ( g_bIsDev && g_DevConfig['spew_events'] )
