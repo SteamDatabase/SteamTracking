@@ -51095,7 +51095,6 @@
 		"quest_prefab_1st_operation_pauling"
 		{
 			"prefab"		"dynamic_quest_base"
-			"expiration_date"	"2015-10-12 23:59:59" 
 		}
 
 		"dynamic_quest_base"
