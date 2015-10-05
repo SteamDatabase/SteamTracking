@@ -36,11 +36,6 @@
 						<Label id="LibraryDetailsLabel" text="#Library_Details_LibraryDetails" />
 					</Button>
 
-					<Button id="StoreButton" class="NxLeftNavButton">
-                        <Image src="file://{images}/icon_cart.png" />
-						<Label id="StoreLabel" text="#Library_Details_GameStorePage" />
-					</Button>
-
 					<ParentalButton id="SettingsButton" class="NxLeftNavButton" onmoveright="LibraryDetailsFocusContent();" onactivate="LibraryDetailsFocusContent();" >
                         <Image src="file://{images}/icon_settings.png" />
 						<Label id="SettingsLabel" text="#Library_Details_Settings" />
@@ -52,7 +47,7 @@
 						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
 					</Button>
 
-                    <Panel id="hr0" class="HorizontalSpace" />
+                    <Panel id="CommunityContentHR" class="HorizontalSpace" />
 
                     <Label id="CommunityContent" text="#Library_Details_CommunityContentHeadline" class="Header" />
 

@@ -6,23 +6,25 @@
 	</styles>
 
 	<OOBEEulaWizardChild class="WizardChild" defaultfocus="HTMLWrapperInputFocus" tabindex="auto" selectionpos="auto">
+        <Panel class="WizardContent">
+            <Panel class="InputContainerDown GapDown">
+                <HTMLSimpleNavigationWrapper id="HTMLWrapperInputFocus"
+                    wrappedhtmlid="EulaHTML">
+                    <HTML id="EulaHTML" embedded="true"/>
+                </HTMLSimpleNavigationWrapper>
+            </Panel>
+        </Panel>
 
-		<Label class="WizardChildTitle" id="EulaTitle" text="#OOBE_Eula_Title" />
-
-		<Panel class="InputContainerDown GapDown">
-      <HTMLSimpleNavigationWrapper id="HTMLWrapperInputFocus" wrappedhtmlid="EulaHTML">
-			  <HTML id="EulaHTML" embedded="true" />
-      </HTMLSimpleNavigationWrapper>
-		</Panel>
-		
-		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
-				<Label id="Label" text="#OOBE_Eula_IAgree" />
-			</Button>
-			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
-				<Label id="Label" text="#WizardButton_Back" />
-			</Button>
-		</Panel>
+        <Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+            <Button class="WizardButton GapRight" id="ButtonNext"
+                onactivate="WizardButtonNext()">
+                <Label id="Label" text="#OOBE_Eula_IAgree"/>
+            </Button>
+            <Button class="WizardButton GapRight" id="ButtonBack"
+                onactivate="WizardButtonBack()">
+                <Label id="Label" text="#WizardButton_Back"/>
+            </Button>
+        </Panel>
 
 	</OOBEEulaWizardChild>
 </root>

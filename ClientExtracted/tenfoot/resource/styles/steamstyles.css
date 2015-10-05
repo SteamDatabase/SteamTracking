@@ -2189,3 +2189,15 @@ Button:hover #SuggestedStatus
 	z-index: 50000;
 	opacity: 0;
 }
+
+.LeftRightFlow,
+.FlowRight
+{
+	flow-children: right;
+}
+
+.TopBottomFlow,
+.FlowDown
+{
+	flow-children: down;
+}

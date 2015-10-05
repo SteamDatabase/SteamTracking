@@ -2,8 +2,8 @@
 {
 	"version" "2"
 	"game" "Gamepad with Mouse"
-	"title" "Gamepad with Mouse"
-	"description" "This is a template configuration for games that use a gamepad for buttons and a mouse for view control."
+	"title" "#Title"
+	"description" "#Description"
 
 	"group"
 	{
@@ -140,6 +140,15 @@
 	{
 		"left_trackpad_mode"		"0"
 		"right_trackpad_mode"		"0"
+	}
+	
+	"Localization"
+	{
+		"english"
+		{
+			"Title"	"Gamepad with High Precision Camera/Aim"
+			"Description" "The template works best for games that are designed with a gamepad in mind, but also support a desktop mouse for camera control or aim. This will do the best job of specifically taking advantage of the right side pad on your controller for precise aiming and camera control."
+		}
 	}
 }
 

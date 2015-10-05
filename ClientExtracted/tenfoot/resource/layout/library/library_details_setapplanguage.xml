@@ -9,7 +9,7 @@
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
 			<Label class="StdTitle" text="#Library_SetAppLanguage_Title" />
 
-			<Label class="StdLabelMed" text="#Library_SetAppLanguage_Label" />
+			<Label class="SubTitle" text="#Library_SetAppLanguage_Label" />
 			<DropDown id="Language" />
 
 			<Panel id="MsgBoxButtons">

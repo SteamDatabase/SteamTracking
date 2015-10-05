@@ -2,8 +2,8 @@
 {
 	"version" "2"
 	"game" "WASD with Mouse"
-	"title" "WASD with Mouse"
-	"description" "This is a template configuration for games use the keyboard and mouse."
+	"title" "#Title"
+	"description" "#Description"
 
 	"group"
 	{
@@ -127,5 +127,14 @@
 	{
 		"left_trackpad_mode"		"0"
 		"right_trackpad_mode"		"0"
+	}
+	
+	"Localization"
+	{
+		"english"
+		{
+			"Title"	"Keyboard (WASD) and Mouse"
+			"Description" "This template works great for the games on Steam that were designed with a keyboard and mouse in mind, without real gamepad support. The controller will drive the game's keyboard based events with buttons, but will make assumptions about which buttons move you around (WASD for movement, space for jump, etc.). The right pad will emulate the movement of a mouse."
+		}
 	}
 }

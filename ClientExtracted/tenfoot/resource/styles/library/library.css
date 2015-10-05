@@ -208,6 +208,16 @@ LibraryAppDetails
 	transition-delay: 0s;
 }
 
+.LibraryDetailsScrollableArea
+{
+	padding-bottom: 150px;
+}
+
+.LibraryDetailsScrollableArea VerticalScrollBar
+{
+	opacity: 0.0;
+}
+
 .DetailsBackground
 {
 	transition-property: transform, blur, position, opacity, opacity-mask, desaturation !immediate;
@@ -441,6 +451,7 @@ LibraryAppDetails #GameRequiresLabel
 	flow-children: right;
 	margin-top: 0px;
 	margin-bottom: 100px;
+	overflow: clip;
 }
 
 
@@ -617,7 +628,7 @@ LibraryAppDetails .LibraryDetailsSectionsContainer,
 LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer,
 LibraryAppDetails.MenuHover .LibraryDetailsSectionsContainer:descendantfocus 
 {
-	width: 100%;
+	width: 1600px;
 	height: 100%;
 	vertical-align: top;
 	padding-top: 0px;
@@ -890,11 +901,17 @@ ParentalButton.Locked
 {
 	margin-top: 0px;
 }
-#OverlayBasePanel #hr0
+#OverlayBasePanel #CommunityContentHR
 {
 	visibility: collapse;
 }
 #OverlayBasePanel .LinksAndActionsWrapper #CommunityContent
+{
+	visibility: collapse;
+}
+
+.CommunityHubHidden #CommunityContentHR,
+.CommunityHubHidden #CommunityContent
 {
 	visibility: collapse;
 }
@@ -2914,14 +2931,11 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 
 
 /* Transitions when grid is in focus */
-#LibraryAllGames.ContentAreaFocus .GamesGrid, #LibraryAllGames.ContentHover .GamesGrid, 
-#LibraryAllGames.ContentAreaFocus .GamesDownloads, #LibraryAllGames.ContentHover .GamesDownloads,
-#LibraryAllGames.ContentAreaFocus .GamesSuggestion, #LibraryAllGames.ContentHover .GamesSuggestion,
-#ParentalLibraryGrid .GamesGrid
+.ContentAreaFocus .GamesGrid, .ContentHover .GamesGrid, 
+.ContentAreaFocus .GamesDownloads, .ContentHover .GamesDownloads,
+.ContentAreaFocus .GamesSuggestion, .ContentHover .GamesSuggestion,
 {
 	transform: translateX( -200px );
-	width: 1500px;
-	padding-right: 40px;
 }
 
 .GamesGrid,
@@ -2947,9 +2961,9 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	transition-property: transform, width;
 }
 
-#LibraryAllGames.MenuHover .GamesGrid, 
-#LibraryAllGames.MenuHover .GamesSuggestion,
-#LibraryAllGames.MenuHover .GamesDownloads
+.MenuHover .GamesGrid, 
+.MenuHover .GamesSuggestion,
+.MenuHover .GamesDownloads
 {
 	transform: translateX( 0px );
 }
@@ -3002,11 +3016,12 @@ LibraryPlayAction.FullController:descendantfocus #ControllerSupportPlayAction
 	position: 0px 0px 0px;
 }
 
-.search.ContentAreaFocus.EmptyGrid #EmptySearchArea {
+.search.ContentAreaFocus.EmptyGrid #EmptySearchArea,
+.search.EmptyGrid .ContentHover #EmptySearchArea {
 	transform: translateX(-200px);
 }
 
-#LibraryAllGames.search.ContentAreaFocus.EmptyGrid.MenuHover #EmptySearchArea {
+.search.ContentAreaFocus.EmptyGrid .MenuHover #EmptySearchArea {
 	transform: translateX(0px);
 }
 
@@ -4124,13 +4139,16 @@ KeyboardShortcut Image
 
 #CategoryStack
 {
-	margin-top: 10px;
-	margin-left: -10px;
+	margin-top: 0px;
+	margin-left: 0px;
 	flow-children: down;
 	overflow: squish scroll;
 	max-height: 500px;
 	width: 100%;
-	
+	padding: 5px;
+
+	background-color: #0f283d;
+
 	opacity-mask-scroll-up: url( "file://{images}/library/scroll_data_mask_up.tga" );
 	opacity-mask-scroll-down: url( "file://{images}/library/scroll_data_mask_down.tga" );
 	opacity-mask-scroll-up-down: url( "file://{images}/library/scroll_data_mask_both.tga" );
@@ -4139,8 +4157,8 @@ KeyboardShortcut Image
 #CategoryStack .CategoryToggle
 {
 	width: 100%;
-	margin-right: 20px;
-	margin-left: 10px;
+	margin-right: 10px;
+	margin-left: 0px;
 }
 
 
@@ -4378,9 +4396,9 @@ LibraryDLCItem Button:focus Label
 	color: #ffffff;
 }
 
-LibraryDLCItem Button:focus #DLCTitle
+LibraryDLCItem:descendantfocus .Button #DLCTitle
 {
-	color: #000000;
+	color: darkblue;
 }
 
 #DLCInstalled
@@ -4394,7 +4412,7 @@ LibraryDLCItem Button:focus #DLCTitle
 	transition-duration: shortduration;
 }
 
-LibraryDLCItem Button:focus #DLCInstalled
+LibraryDLCItem:descendantfocus .Button #DLCInstalled
 {
 	color: achievementdetailsheaderdark;
 }
@@ -4416,10 +4434,13 @@ ManageDLCDialog #DLCItems
 	width: 100%;
 	height: fit-children;
 	max-height: 500px;
-	margin-right: 18px;
-	padding-top: -5px;
-	padding-bottom: -4px;
+	margin-right: 0px;
+	padding-top: 5px;
+	padding-left: 2px;
+	padding-bottom: 5px;
 	flow-children: down;
+
+	background-color: #0f283d;
 }
 ManageDLCDialog #ButtonCancel
 {
@@ -4500,14 +4521,14 @@ LibraryDLCItem.Deleting
 
 LibraryDLCItem .Button
 {
-	margin-right: 10px;
+	margin-right: 0px;
 	width: 100%;
-	height: 90px;
+	height: 94px;
 }
 
 LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 {
-	height: 90px;
+	height: 94px;
 	background-color: button_focus_color;
 }
 
@@ -4579,7 +4600,7 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 	flow-children: down;
 
 	transition-property: position, color, background-color, transform, opacity, height, width, desaturation;
-	transition-duration: mediumduration;
+	transition-duration: supershortduration;
 	transition-timing-function: bigpicture-ease-in-out;
 	transition-delay: 0s;
 
@@ -4614,19 +4635,24 @@ LibraryDLCItem .Button:focus, LibraryDLCItem:descendantfocus .Button
 	visibility: collapse;
 }
 
-#LibraryAllGames.ContentAreaFocus #GamesFilter,
-#LibraryAllGames.ContentHover #GamesFilter
+.ContentAreaFocus #GamesFilter,
+.ContentHover #GamesFilter
 {
 	position: 1630px 120px 0px;
 }
 
-#LibraryAllGames.MenuHover #GamesFilter
+.MenuHover #GamesFilter
 {
 	position: 1825px 120px 0px;
 }
 
+#LibraryAllGames #GamesFilter:hover
+{
+	position: 1580px 120px 0px;
+	transform: translatez( 20px );
+}
 
-#GamesFilter:descendantfocus
+#LibraryAllGames #GamesFilter:descendantfocus
 {
 	opacity: 1.0;
 	desaturation: 0.0;
@@ -5098,10 +5124,9 @@ Label.ButtonCountCapsule
 
 }
 
-#ParentalLibraryGrid .NxGridButtonRow,
-LibraryAllGames .NxGridButtonRow,
-LibraryAllGames.ContentHover .NxGridButtonRow,
-LibraryAllGames.ContentHover .NxGridButtonRow:descendantfocus
+.NxGridButtonRow,
+.ContentHover .NxGridButtonRow,
+.ContentHover .NxGridButtonRow:descendantfocus
 {
 	padding-top: 37px;
 	padding-left: 70px;
@@ -5122,8 +5147,8 @@ LibraryAllGames.ContentHover .NxGridButtonRow:descendantfocus
 	opacity-mask: url( "file://{images}/library/NxGridButtonRow_right.tga" ) 1.0;
 }
 
-LibraryAllGames .NxGridButtonRow:descendantfocus,
-LibraryAllGames.MenuHover .NxGridButtonRow,
+.NxGridButtonRow:descendantfocus,
+.MenuHover .NxGridButtonRow,
 {
 	transform: translateX( 0px ) translateY( -8px );
 	opacity: 1;
@@ -5419,7 +5444,7 @@ LibraryAllGames.MenuHover .NxGridButtonRow,
 
 /* Suggested section */
 .suggested #GamesSuggestion #RecentRow Button {
-	pre-transform-scale2d: 0.95;
+	pre-transform-scale2d: 0.98;
 
 	transition-property: transform, pre-transform-scale2d;
 	transition-duration: supershortduration;
@@ -5429,10 +5454,10 @@ LibraryAllGames.MenuHover .NxGridButtonRow,
 	pre-transform-scale2d: 0.98;
 }
 .suggested #GamesSuggestion #RecentRow Button#Game0 {
-	transform: translatex(-15px);
+	transform: translatex(0px);
 }
 .suggested #GamesSuggestion #RecentRow Button#Game1 {
-	transform: translatex(-44px);
+	transform: translatex(0px);
 }
 .suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game0,
 .suggested.ContentAreaFocus #GamesSuggestion #RecentRow Button#Game1 {
@@ -5959,31 +5984,72 @@ LibraryAppDetails.UnavailableOnPlatform .PlayActionHeaderLabel
 	font-size: 30px;
 }
 
-LibraryAppDetails #UnavailableOnPlatformHowToStreamInfo
+LibraryAppDetails #UnavailableOnPlatformHowToStreamInfo,
+LibraryAppDetails #GameNotDesignedForControllerWarning,
+LibraryAppDetails #GameRequiresMouseKeyboardInteractionWarning,
+LibraryAppDetails #GameDesignKeyboardMouseWarning,
 {
 	visibility: collapse;
 }
-LibraryAppDetails.UnavailableOnPlatform #UnavailableOnPlatformHowToStreamInfo
+
+LibraryAppDetails.UnavailableOnPlatform #UnavailableOnPlatformHowToStreamInfo,
+LibraryAppDetails.KBMouseOnlyGame #GameDesignKeyboardMouseWarning,
+LibraryAppDetails.KBMouseRequired #GameRequiresMouseKeyboardInteractionWarning,
+LibraryAppDetails.ManualControllerSupport #GameNotDesignedForControllerWarning,
+LibraryAppDetails.NoControllerSupport.SteamPad #GameNotDesignedForControllerWarning,
+LibraryAppDetails.NoControllerSupport.XInputPad #GameDesignKeyboardMouseWarning,
 {
 	visibility: visible;
 }
-#UnavailableOnPlatformHowToStreamInfo
+
+LibraryAppDetails.KBMouseRequired.NoControllerSupport #GameNotDesignedForControllerWarning,
+LibraryAppDetails.KBMouseRequired.ManualControllerSupport #GameNotDesignedForControllerWarning,
+LibraryAppDetails.KBMouseOnlyGame.NoControllerSupport #GameNotDesignedForControllerWarning,
+LibraryAppDetails.KBMouseOnlyGame.ManualControllerSupport #GameNotDesignedForControllerWarning,
+LibraryAppDetails.KBMouseRequired.NoControllerSupport.XInputPad #GameDesignKeyboardMouseWarning,
 {
-	flow-children: down;
+	visibility: collapse;
+}
+
+
+.LibraryContentDescriptionBlock
+{
 	width: 100%;
 	margin-left: 10px;
 	margin-bottom: 20px;
 	height: fit-children;
 	padding: 15px;
+}
+
+#UnavailableOnPlatformHowToStreamInfo
+{
 	background-color: #5f821c;
 }
-#UnavailableOnPlatformHowToStreamInfo:focus
+
+#GameNotDesignedForControllerWarning
+{
+	background-color: #82791c;
+}
+
+#GameRequiresMouseKeyboardInteractionWarning,
+#GameDesignKeyboardMouseWarning
+{
+	background-color: #823e1c;
+}
+
+.LibraryDetailsSectionRow .LibraryContentDescriptionBlock
+{
+	pre-transform-scale2d: 0.98;
+
+	transition-duration: shortduration !immediate;
+	transition-property: pre-transform-scale2d;
+}
+
+.LibraryContentDescriptionBlock:focus
 {
 	background-color: #5f821c;
 
 	box-shadow: box_shadow_on_color -4px -4px 12px 8px;
-
-	transition-duration: shortduration !immediate;
 
 	animation-name: main-button-glow-movement-no-fill;
 	animation-duration: longduration;
@@ -5991,19 +6057,89 @@ LibraryAppDetails.UnavailableOnPlatform #UnavailableOnPlatformHowToStreamInfo
 	animation-timing-function: bigpicture-ease-in-out;
 	animation-iteration-count: infinite;
 	animation-direction: normal;
+
+	pre-transform-scale2d: 1.0;
 }
 
-#UnavailableOnPlatformHowToStreamInfo .HowToStreamTitle
+.LibraryContentDescriptionBlock .InnerTitle
 {
-	color: #bafe37;
 	font-size: 28px;
 	text-transform: uppercase;
 }
-#UnavailableOnPlatformHowToStreamInfo .HowToStreamDesc
+
+#UnavailableOnPlatformHowToStreamInfo .InnerTitle
+{
+	color: #bafe37;
+	transform: none;
+}
+#GameNotDesignedForControllerWarning .InnerTitle,
+.WarningTypeController .MsgBoxTitle
+{
+	color: #fef737;
+	transform: none;
+}
+#GameRequiresMouseKeyboardInteractionWarning .InnerTitle,
+#GameDesignKeyboardMouseWarning .InnerTitle,
+.WarningTypeKeyboard .MsgBoxTitle
+{
+	color: #ff9465;
+	transform: none;
+}
+
+// The second selector is to overspecify so that we don't get stomped by the default Button:focus styles
+.LibraryContentDescriptionBlock .InnerDesc,
+#UnavailableOnPlatformHowToStreamInfo:focus .InnerDesc,
+#GameNotDesignedForControllerWarning:focus .InnerDesc,
+#GameRequiresMouseKeyboardInteractionWarning:focus .InnerDesc,
+#GameDesignKeyboardMouseWarning:focus .InnerDesc
 {
 	color: #ffffff;
 	font-size: 24px;
+	transform: none;
 }
+
+.LibraryContentDescriptionBlock Image
+{
+	padding-right: 10px;
+}
+
+.ImageControllerWarning,
+.ImageKeyboardWarning
+{
+	visibility: collapse;
+}
+
+.WarningTypeController .ImageControllerWarning,
+.WarningTypeKeyboard .ImageKeyboardWarning
+{
+	visibility: visible;
+}
+
+.LibraryPrelaunchDialog #MsgBoxHeader
+{
+	height: fit-children;
+}
+
+.LibraryPrelaunchDialog .MsgBoxTitle
+{
+	vertical-align: center;
+	margin-left: 10px;
+}
+
+#MsgBoxBodyRegion.LibraryPrelaunchDialog
+{
+	width: 1200px;
+}
+
+.LibraryPrelaunchDialog .MsgBoxContents
+{
+	color: #ffffff;
+	font-size: 24px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+
 
 .Parental .HideIfParental
 {

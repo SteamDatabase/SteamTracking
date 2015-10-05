@@ -7,20 +7,19 @@
 
 	<OOBELanguageWizardChild class="OOBEControllerHintImage WizardChild FlowNone" tabindex="auto" selectionpos="auto">
 
-		<Panel id="LanguageWizard" class="FlowDown" tabindex="auto" selectionpos="auto">
-			<Label class="WizardChildTitle" text="#OOBE_WelcomeTitle" />
+		<Panel id="LanguageWizard" class="WizardContent" tabindex="auto" selectionpos="auto">
 			<Label class="WizardChildDescription" text="#OOBE_LanguageSelect" />
 			
 			<Panel id="SettingsContainer">
 				<SettingsPanel_Language id="SettingsPanel_Language" class="SettingsSection SettingsContained" />
 			</Panel>
 			
-			<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-				<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
-					<Label id="Label" text="#WizardButton_Next" />
-				</Button>
-			</Panel>
 		</Panel>
+        <Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+            <Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+                <Label id="Label" text="#WizardButton_Next" />
+            </Button>
+        </Panel>
 	</OOBELanguageWizardChild>
 	
 </root>

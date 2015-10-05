@@ -30,13 +30,6 @@
 
 			<Panel id="LibraryDetailsSectionsContainer" class="LibraryDetailsSectionsContainer" tabindex="auto" selectionpos="auto" >
 				<LibrarySettings id="LibrarySettings" class="LibraryDetailsSectionPanel" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
-				<Panel id="StorePanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" >
-					<ParentalButton id="GotoStoreButton" class="NxLeftNavButtonAction">
-						<Image src="file://{images}/icon_cart.png" />
-						<Label id="StoreLabel" text="#Library_Details_GameStorePage" />
-						<Image id="ParentalLockImageLocked" src="file://{images}/unlocked_acct_sm.png" />
-					</ParentalButton>
-				</Panel>
 	
 				<CommunityHubContentPanel id="CommunityContentAllPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
 				<CommunityHubContentPanel id="CommunityContentScreenshotsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
@@ -49,7 +42,7 @@
 				<CommunityHubContentPanel id="CommunityContentReviewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
 	
 				<Panel id="ContentsRow" class="ContentsRow LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" >
-	
+	      <Panel class="LibraryDetailsScrollableArea" overscroll-y="150">
 					<Panel class="LibraryDetailsSectionRow PlayArea">
 						<Panel class="LibraryPlayRow">
 
@@ -128,17 +121,42 @@
 	
 					<Panel class="LibrarySpacer"></Panel>
 
-					<Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow ShortArea">
-						<Button id="UnavailableOnPlatformHowToStreamInfo" class="Button">
-							<Label class="HowToStreamTitle" text="#Library_Details_UnavailableOnPlatform_HowToStream_Title" />
-							<Label class="HowToStreamDesc" text="#Library_Details_UnavailableOnPlatform_HowToStream_Desc" />
+					<Panel class="LibraryDetailsSectionRow ShortArea">
+            <!-- game can't play on this platform but you own it and can stream it from elsewhere -->
+						<Button id="UnavailableOnPlatformHowToStreamInfo" class="Button LibraryContentDescriptionBlock FlowDown" onactivate="ShowHowToStreamDialog()">
+							<Label class="InnerTitle" text="#Library_Details_UnavailableOnPlatform_HowToStream_Title" />
+							<Label class="InnerDesc" text="#Library_Details_UnavailableOnPlatform_HowToStream_Desc" />
+						</Button>
+            <!-- game not designed for controllers so prompts might mismatch, but experience is fine -->
+            <Button id="GameNotDesignedForControllerWarning" class="Button LibraryContentDescriptionBlock FlowRight">
+              <Image src="file://{images}/library/icon_warning_controller.png" />
+              <Panel class="FlowDown">
+							  <Label class="InnerTitle" text="#Library_Details_GameNotDesignedForControllerWarning_Title" />
+							  <Label class="InnerDesc" text="#Library_Details_GameNotDesignedForControllerWarning_Desc" />
+              </Panel>
+						</Button>
+            <!-- game experience fundamentally revolves around keyboard/house in specific ways -->
+            <Button id="GameDesignKeyboardMouseWarning" class="Button LibraryContentDescriptionBlock FlowRight">
+              <Image src="file://{images}/library/icon_warning_keyboard.png" />
+              <Panel class="FlowDown">
+							  <Label class="InnerTitle" text="#Library_Details_GameDesignKeyboardMouseWarning_Title" />
+							  <Label class="InnerDesc" text="#Library_Details_GameDesignKeyboardMouseWarning_Desc" />
+              </Panel>
+						</Button>
+            <!-- game has interstitials, etc. -->
+            <Button id="GameRequiresMouseKeyboardInteractionWarning" class="Button LibraryContentDescriptionBlock FlowRight">
+              <Image src="file://{images}/library/icon_warning_keyboard.png" />
+              <Panel class="FlowDown">
+							  <Label class="InnerTitle" text="#Library_Details_GameRequiresMouseKeyboardInteractionWarning_Title" />
+							  <Label class="InnerDesc" text="#Library_Details_GameRequiresMouseKeyboardInteractionWarning_Desc" />
+              </Panel>
 						</Button>
 
 						<LibraryFriendsWhoPlay id="FriendsWhoPlay" class="FriendsWhoPlay DetailsDataPanel Small" />
 						<LibraryAchievements id="Achievements" class="Achievements DetailsDataPanel Small" />
 						<LibraryGameBadge id="GameBadge" class="GameBadge DetailsDataPanel Small" />
 					</Panel>
-					<Panel class="LibraryDetailsScrollableArea LibraryDetailsSectionRow TallArea">
+					<Panel class="LibraryDetailsSectionRow TallArea">
 						<LibraryRecentNews id="RecentNews" class="RecentNews DetailsDataPanel" />
 						<LibraryDLC id="DLC" class="DLC DetailsDataPanel" />
 						<LibraryScreenshots id="Screenshots" class="Screenshots DetailsDataPanel" />
@@ -146,6 +164,7 @@
 				</Panel>
 			</Panel>
 
+    </Panel>
 		</Panel>
 
 	</LibraryAppDetails>

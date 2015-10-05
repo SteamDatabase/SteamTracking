@@ -15,7 +15,7 @@
 				</DropDown>
 			</Panel>
 			<Panel id="NoBetaPanel">
-				<Label class="StdLabelMed" text="#Library_SelectBeta_NoBeta" />
+				<Label class="SubTitle" text="#Library_SelectBeta_NoBeta" />
 			</Panel>
 			
 			<Label class="StdLabelMed" id="PrivateBetaLabel" text="#Library_SelectBeta_PrivateTitle" />

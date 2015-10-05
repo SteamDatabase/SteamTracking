@@ -9,7 +9,6 @@
 		<Panel id="ContentFrameHeader">
 			<Panel id="ContentMouseBackButton" onmouseactivate="NavigateTenfootBack();" />
 			<Panel id="ContentHomeButton" class="SteamLogo" onmouseactivate="ShowMainMenu();" />
-			<Label class="ContentBreadcrumb" text="&gt;" />
 			<Panel id="ContentTitles">
 				<Label class="ContentTitle" text="" />
 			</Panel>

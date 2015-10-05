@@ -44,10 +44,16 @@ TextInputDualTouch
 	margin-top: 20px;
 }
 
-.MinimalKeyboard .DockBottom #Backdrop
+.DockBottom #Backdrop
 {
 	margin-bottom: 20px;
 	margin-top: 520px;
+}
+
+.DockTop #Backdrop
+{
+	margin-bottom: 520px;
+	margin-top: 20px;
 }
 
 #TextPreviewBackground

@@ -262,6 +262,11 @@ HelpFrontPage
 	url			"%help%/"
 	method		"internal"
 }
+ChangePassword
+{
+	url			"%help%/change_password/?option=%p1%"
+	method		"internal"
+}
 SupportNewTicket
 {
 	url			"https://support.steampowered.com/newticket.php"

@@ -8,6 +8,7 @@
 	<ManageDLCDialog class="TenfootMsgBox" defaultfocus="ControllerLargeBody" >
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
 			<Label class="StdTitle" text="#Library_Details_Manage_DLC" />
+            <Label class="SubTitle" text="#Library_Details_Manage_DLC_Subtitle" />
 			<Panel id="DLCItems" selectionposboundary="vertical" childfocusonhover="true" overscroll-y="120" />
 
 			<Panel id="MsgBoxButtons">

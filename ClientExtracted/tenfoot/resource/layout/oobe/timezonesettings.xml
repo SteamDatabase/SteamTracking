@@ -6,21 +6,22 @@
 	</styles>
 
 	<OOBETimeZoneSettingsWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#OOBE_TimeZoneSettings_Title" />
-		<Label class="WizardChildDescription" text="#OOBE_TimeZoneSettings_Description" />
+        <Panel class="WizardContent">
+            <Label class="WizardChildDescription" text="#OOBE_TimeZoneSettings_Description" />
 
-		<Panel id="SettingsContainer">
-			<SettingsPanel_TimeZone id="SettingsPanel_TimeZone" class="SettingsSection SettingsContained" defaultfocus="Continents" />
+            <Panel id="SettingsContainer">
+                <SettingsPanel_TimeZone id="SettingsPanel_TimeZone" class="SettingsSection SettingsContained" defaultfocus="Continents" />
+            </Panel>
+            
 		</Panel>
-		
-		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
-				<Label id="Label" text="#WizardButton_Next" />
-			</Button>
-			<Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
-				<Label id="Label" text="#WizardButton_Back" />
-			</Button>
-		</Panel>
+        <Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+            <Button class="WizardButton GapRight" id="ButtonNext" onactivate="WizardButtonNext()">
+                <Label id="Label" text="#WizardButton_Next" />
+            </Button>
+            <Button class="WizardButton GapRight" id="ButtonBack" onactivate="WizardButtonBack()">
+                <Label id="Label" text="#WizardButton_Back" />
+            </Button>
+        </Panel>
 	</OOBETimeZoneSettingsWizardChild>
 
 </root>

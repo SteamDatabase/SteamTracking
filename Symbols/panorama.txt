@@ -9046,7 +9046,7 @@
  T panorama::ActionInput_t::ActionInput_t(panorama::InputMessage_t&, char const*)
  T panorama::ActionInput_t::operator==(panorama::ActionInput_t const&) const
  T panorama::ActivateMainWindow::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
- T panorama::ActivateMainWindow::MakeEvent(panorama::IUIPanelClient const*)
+ T panorama::ActivateMainWindow::MakeEvent(panorama::IUIPanelClient const*, bool)
  T panorama::Activated::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::Activated::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
  T panorama::ActiveControllerTypeChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -12353,7 +12353,7 @@
  T panorama::HashItem(panorama::CStyleSymbol const&)
  T panorama::IImageSource::GetJSTypeName()
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AutoReloadFailedLayoutReloads>(panorama::IUIPanel*, char const*, char const**)
- T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ActivateMainWindow>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ActivateMainWindow, bool>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::Activated, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::AddStyle, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::AddStyleToEachChild, char const*>(panorama::IUIPanel*, char const*, char const**)

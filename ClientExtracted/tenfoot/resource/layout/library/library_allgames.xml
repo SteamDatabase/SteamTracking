@@ -10,7 +10,7 @@
 	<script>
 		function LibraryAllGamesOnLoad()
 		{
-			var ancestorPanel = $( '#LibraryAllGames' );
+			var ancestorPanel = $( '#AllGamesContent' );
 
 			var menuHoverClass = 'MenuHover';
 			var contentHoverClass = 'ContentHover';
@@ -31,6 +31,9 @@
 
 			contentPanel = $( '#MusicPanelAllGames' );
 			SetupPanelHoverEvents( contentPanel, ancestorPanel, contentHoverClass ); 
+
+			contentPanel = $( '#EmptySearchArea' );
+			SetupPanelHoverEvents( contentPanel, ancestorPanel, contentHoverClass ); 
 		}
 	</script>	
 	<LibraryAllGames defaultfocus="SuggestedFilter" selectionposboundary="vertical" content-title="#Library_ContentTitle" onload="LibraryAllGamesOnLoad()">
@@ -39,7 +42,7 @@
 			<Label id="FastScrollLabel" />
 			<Label id="TypeToJumpLabel" />
 		</Panel>
-		<Panel class="AllGamesContent" >
+		<Panel class="AllGamesContent" id="AllGamesContent" >
 			<Panel id="Menu" class="NxGridButtonRow" tabindex="auto" selectionpos="0,0" onfocus="FocusMenuRow();" onmoveright="FocusGamesGrid();" >
 				<Panel class="GamesButtonContainer">
 

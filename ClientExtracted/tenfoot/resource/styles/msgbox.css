@@ -100,7 +100,7 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 {
 	width: 860px;
 	max-height: 860px;
-	padding: 50px 40px 40px 40px;
+	padding: 40px 40px 40px 40px;
 	background-color: message_box_bg;
 	box-shadow: fill #00000044 -4px -4px 8px 8px;
 	transform: translateX( 0px );
@@ -110,7 +110,25 @@ TenfootMsgBox.BehindAnotherMsgBox, .TenfootMsgBox.BehindAnotherMsgBox
 	vertical-align: center;
 	horizontal-align: center;
 	flow-children: down;
-	border-radius: 0px;
+	border-radius: 3px;
+
+
+}
+
+.MsgBoxBodyRegion .StdTitle
+ {
+	 margin-bottom: 20px;
+	font-weight: light;
+	color: white;
+ }
+
+.MsgBoxBodyRegion .SubTitle
+{
+	font-size: 26px;
+	font-family: platformfont;
+	color: #c6d4df;
+	margin-bottom: 20px;
+	margin-top: -20px;
 }
 
 .BehindTextInputHandler .MsgBoxBodyRegion

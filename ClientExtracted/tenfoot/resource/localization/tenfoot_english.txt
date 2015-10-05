@@ -447,6 +447,7 @@
 	"ChangePassword_Working_Description"	"Contacting Steam servers and getting account information, please wait."
 	"ChangePassword_SendingSms_Description"	"Since your account has a phone attached to it, we're sending a confirming SMS code to your phone."
 
+	"VerifyEmail_Wizard"					"Verify Email"
 	"VerifyEmail_Start_Title"				"Verify your email address"
 	"VerifyEmail_Start_Description"		"This one-time step helps us maintain the security of your account and is required in order to make purchases and share Steam libraries with other users.\n\nSelect Next to get started."
 	"VerifyEmail_Verifying_Title"			"Almost there..."
@@ -1428,8 +1429,18 @@
 	"Library_Details_CommunityContentHeadline"			"COMMUNITY CONTENT"
 	"Library_Details_NotAvailablePlatform"			"NOT ON {s:currentos}"
 	"Library_Details_AvailableOnPlatforms"		"Available on {s:platformlist}"
+
 	"Library_Details_UnavailableOnPlatform_HowToStream_Title"		"STREAM THIS {s:apptype}"
-	"Library_Details_UnavailableOnPlatform_HowToStream_Desc"		"This {s:apptype_lowercase} doesn't run on {s:currentos}, but if you sign into Steam on a nearby machine running one of the supportedplatforms ({s:platformlist}), you can stream this {s:apptype_lowercase} over your wired network."
+	"Library_Details_UnavailableOnPlatform_HowToStream_Desc"		"This {s:apptype_lowercase} doesn't run on {s:currentos}, but if you sign into Steam on a nearby machine running one of the supported platforms ({s:platformlist}), you can stream this {s:apptype_lowercase} over your wired network."
+	"Library_Details_GameNotDesignedForControllerWarning_Title"		"CONTROLLER CONFIGURATION REQUIRED"
+	"Library_Details_GameNotDesignedForControllerWarning_Desc"		"This game wasn't designed for controllers, but you can play it with your Steam Controller. The game may show keyboard hints during gameplay."
+	"Library_Details_GameNotDesignedForControllerWarning_Desc_Detail"		"This game wasn't designed for controllers, but you can play it with your Steam Controller. The game may show keyboard hints during gameplay.\n\nWhile playing, you can press the Steam Button at any time to bring up the overlay and customize your controller configuration."
+	"Library_Details_GameDesignKeyboardMouseWarning_Title"		"KEYBOARD/MOUSE-FOCUSED GAME"
+	"Library_Details_GameDesignKeyboardMouseWarning_Desc"		"The gameplay in this game relies heavily on having a physical keyboard/mouse present."
+	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Title"		"KEYBOARD/MOUSE REQUIRED"
+	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Desc"		"The creators of this game have made an interface that requires a keyboard and/or mouse to access portions of the game."
+	"Library_Details_GameRequiresMouseKeyboardInteractionWarning_Desc_Detail"		"The creators of this game have made an interface that requires a keyboard and/or mouse to access portions of the game. For example, it may include an interstitial launcher or an in-game menu that cannot be navigated with a controller."
+
 	"Library_Details_WorkshopWhatIsIt"	"Create, discover and play content contributed by the Steam Community ({d:wscount} items)."
 	"Library_Details_CommunityHubWhatIsIt"	"Community-made content ({d:ugccount} items)."
 	"Library_Details_ControllerSupport"	"CONTROLLER"
@@ -1577,7 +1588,7 @@
 	"Library_Details_ControllerBindingsGordon_AddAdditionalOff"	"TOGGLE MULTI-BUTTON OFF"
 	"Library_Details_ControllerBindingsGordon_ResetToDefault"	"RESET TO DEFAULT"
 
-	"Library_Details_GameActionsHeader"				"SELECT A GAME ACTION"
+	"Library_Details_GameActionsHeader"				"SELECT AN IN-GAME ACTION"
 	"Library_Details_FieldLabel_InputStyle_GA"		"In-Game Action"
 
 	"Library_Details_Binding_Custom_Description"		"Custom Description..."
@@ -1734,14 +1745,14 @@
 	"Library_Details_FieldLabel_ScrollWheelList8"	"Scroll Wheel List 9"
 	"Library_Details_FieldLabel_ScrollWheelList9"	"Scroll Wheel List 10"
 	"Library_Details_FieldLabel_ScrollWheelListWrap" "Wrap List"
-	"Library_Details_FieldLabel_TriggerClick"		"Trigger Click Binding"
+	"Library_Details_FieldLabel_TriggerClick"		"Full Pull Action"
 	"Library_Details_FieldLabel_OutputTrigger"		"Trigger Analog Output"
 	"Library_Details_FieldLabel_TriggerDeadZoneStart" 	"Trigger Range Start"
 	"Library_Details_FieldLabel_TriggerDeadZoneEnd" 	"Trigger Range End"
 	"Library_Details_FieldLabel_TriggerCurveExponent" 	"Trigger Response Curve"
-	"Library_Details_FieldLabel_TriggerThresholdBinding" 	"Trigger Threshold Binding"
-	"Library_Details_FieldLabel_TriggerThreshold"		"Threshold Point"
-	"Library_Details_FieldLabel_TriggerAdaptiveThreshold"		"Threshold Trigger Style"
+	"Library_Details_FieldLabel_TriggerThresholdBinding" 	"Soft Pull Action"
+	"Library_Details_FieldLabel_TriggerThreshold"		"Soft Pull Point"
+	"Library_Details_FieldLabel_TriggerAdaptiveThreshold"		"Soft Pull Trigger Style"
 	"Library_Details_FieldLabel_TriggerHapticIntensity" 	"Haptic Intensity"
 	"Library_Details_FieldLabel_ButtonRadius"		"Button Radius"
 	"Library_Details_FieldLabel_ButtonDistance"		"Button Distance"
@@ -1882,7 +1893,7 @@
 	"Library_DownloadsTitle"		"Downloads"
 	"Library_DownloadsTitle_Detail"		"{d:downloads}"
 	
-	"Library_FilterActive"		"(filtered)"
+	"Library_FilterActive"		"(FILTERED)"
 	
 	"Library_ListView"			"LIST VIEW"
 	"Library_GridView"			"GRID VIEW"
@@ -2397,16 +2408,16 @@
 	"Friends_Chat_Fail_FriendUserOffline"	"Cannot send message, user is offline."
 	"Friends_Chat_SendOfflineMessage"	"{s:chatfriendname} is currently offline, they will receieve your message the next time they log in."
 
-	"Friends_UsersInVoiceChat_NoOthers"		"NO OTHER PEOPLE\nVOICE CHATTING"
-	"Friends_UsersInVoiceChat_OneOther"		"1 OTHER PERSON\nVOICE CHATTING"
-	"Friends_UsersInVoiceChat_ManyOthers"	"{i:UsersInVoiceChat} OTHER PEOPLE\nVOICE CHATTING"
+	"Friends_UsersInVoiceChat_NoOthers"		"NO OTHER PEOPLE VOICE CHATTING"
+	"Friends_UsersInVoiceChat_OneOther"		"1 OTHER PERSON VOICE CHATTING"
+	"Friends_UsersInVoiceChat_ManyOthers"	"{i:UsersInVoiceChat} OTHER PEOPLE VOICE CHATTING"
 
 	"Friends_UsersInVoiceChat_Dialing"		"DIALING..."
 	"Friends_UsersInVoiceChat_Ringing"		"VOICE CHAT REQUEST"
-	"Friends_UsersInVoiceChat_Waiting"		"VOICE CHAT\nON HOLD"
-	"Friends_UsersInVoiceChat_LocalHold"	"YOU HAVE PUT THIS\nVOICE CHAT ON HOLD"
-	"Friends_UsersInVoiceChat_RemoteHold"	"YOUR FRIEND PUT THIS\nVOICE CHAT ON HOLD"
-	"Friends_UsersInVoiceChat_InCall"		"VOICE CHAT\nIN PROGRESS"
+	"Friends_UsersInVoiceChat_Waiting"		"VOICE CHAT ON HOLD"
+	"Friends_UsersInVoiceChat_LocalHold"	"YOU HAVE PUT THIS VOICE CHAT ON HOLD"
+	"Friends_UsersInVoiceChat_RemoteHold"	"YOUR FRIEND PUT THIS VOICE CHAT ON HOLD"
+	"Friends_UsersInVoiceChat_InCall"		"VOICE CHAT IN PROGRESS"
 
 	"Friends_Menu_Friends"		"Friends"
 	"Friends_Menu_Groups"		"Groups"
@@ -2603,6 +2614,8 @@
 	"Downloads_Status_validating"	"Validating {s:downloadpercent}"
 	"Downloads_Status_preallocating" "Preallocating {s:downloadpercent}"
 	"Downloads_Status_stopping"	"Stopping"
+	"Downloads_Status_uninstalling"	"Uninstalling"
+	"Downloads_Status_running"	"Running"
 	"Downloads_Status_updating"	"Updating {s:downloadpercent}"
 	"Downloads_Status_downloading"	"Downloading {s:downloadpercent}"
 	"Downloads_Status_preloading"	"Preloading {s:downloadpercent}"
@@ -3685,6 +3698,7 @@
 	"Library_Details_Manage_DLC_Cancel"	"Done"
 	"Library_Details_Manage_DLC_Install"	"INSTALL"
 	"Library_Details_Manage_DLC_Uninstall"	"UNINSTALL"
+	"Library_Details_Manage_DLC_Subtitle"   "Select DLC items below to install or uninstall"
 
 	"CDNLoc_default"		"default"
 	"CDNLoc_US___Chicago"		"US - Chicago"
@@ -3975,14 +3989,18 @@
 	"SettingsController_HelperDescriptionText"	"Cool Description"
 	"SettingsController_BindingTitle" "{s:bindingtitle}"
 	"SettingsController_BindingCreator" "By {s:bindingcreator}"
+	"SettingsController_AutosaveName"	"Controller Configuration"
 	
+	"ControllerBinding_ModeDropDown_GA"		"Other In-Game Action..."
+	"ControllerBinding_ModeDropDown_GA_Description"		"This game has In-Game Actions specifically designed for use on the controller's Trigger Buttons. If you'd like to bind other In-Game Actions to this Trigger instead, select this option."
+
 	//Generic
 	"ControllerBinding_ModeDropDown" "Style of Input"
 	"ControllerBinding_ModeDropDown_Description" "The physical inputs of the controller can be programmed to act like different types of devices."
 	"ControllerBinding_ModeDropDown_None" "Style of Input - None"
 	"ControllerBinding_ModeDropDown_None_Description" "This input will be disabled."
 	"ControllerBinding_Advanced" "Advanced Settings"
-	"ControllerBinding_Advanced_Description" "The president has been kidnapped by ninjas.  Are you a bad enough dude to rescue the president?"
+	"ControllerBinding_Advanced_Description" "Open the advanced settings."
 	"ControllerBinding_ModeShiftButton" "Mode Shifting"
 	"ControllerBinding_ModeShiftButton_Description" "Mode Shifting allows an input style on the controller to be 'shifted' into another mode while a button is being held.  When released, the mode will change back to its normal mode.  This allows additional buttons to be mapped or settings to be changed between modes.  You can define what mode this input shifts into, as well as what button shifts it, here."
 	"ControllerBinding_ModeShiftDropDown" "Mode Shift Button"
@@ -4089,6 +4107,14 @@
 	"ControllerBinding_YButton_Description" "You can assign a button or key to be sent to the game when pressing this button."
 	"ControllerBinding_XButton" "X Button Binding"
 	"ControllerBinding_XButton_Description" "You can assign a button or key to be sent to the game when pressing this button."
+	"ControllerBinding_AButtonGA" "A Button"
+	"ControllerBinding_AButtonGA_Description" "Select an In-Game Action to bind it to the A button."
+	"ControllerBinding_BButtonGA" "B Button"
+	"ControllerBinding_BButtonGA_Description" "Select an In-Game Action to bind it to the B button."
+	"ControllerBinding_YButtonGA" "Y Button"
+	"ControllerBinding_YButtonGA_Description" "Select an In-Game Action to bind it to the Y button."
+	"ControllerBinding_XButtonGA" "X Button"
+	"ControllerBinding_XButtonGA_Description" "Select an In-Game Action to bind it to the X button."
 	"ControllerBinding_HoldRepeatsFourButtons" "Hold to Repeat (Turbo)"
 	"ControllerBinding_HoldRepeatsFourButtons_Description" "If turned on, holding any button will cause it to repeat.  This is often known as a 'Turbo Mode'."
 	"ControllerBinding_HoldRepeatsFourButtons_On" "Hold to Repeat (Turbo) - On"
@@ -4331,8 +4357,8 @@
 	"ControllerBinding_GyroAxisAbsMouse_Roll" "Gyro Steering Axis - Roll"
 	"ControllerBinding_GyroAxisAbsMouse_Roll_Description" "For controlling the horizontal movement of the mouse, use the roll of the controller."
 	//Trigger
-	"ControllerBinding_TriggerClick" "Trigger Click Binding"
-	"ControllerBinding_TriggerClick_Description" "You can assign a button or key to be sent to the game when clicking the physical switch at the end of the trigger throw.  If a gamepad trigger is selected for the binding, the maximum value will be sent when clicked."
+	"ControllerBinding_TriggerClick" "Full Pull Action"
+	"ControllerBinding_TriggerClick_Description" "This action will be performed when you pull the trigger the entire way until it clicks (you'll hear a soft click)."
 	"ControllerBinding_HoldRepeatsTrigger" "Hold to Repeat (Turbo)"
 	"ControllerBinding_HoldRepeatsTrigger_Description" "Hold to Repeat (Turbo)"
 	"ControllerBinding_HoldRepeatsTrigger_On" "Hold to Repeat (Turbo) - On"
@@ -4365,8 +4391,8 @@
 	"ControllerBinding_TriggerCurveExponent_3_Description" "A wide response curve gets to 100% output much slower that default.  There is a wide range of low values which ramps up quickly at the end.  This allows for a wide amount of small values in the inner range while ramping to full at the outside."
 	"ControllerBinding_TriggerCurveExponent_4" "Response Curve - Extra Wide"
 	"ControllerBinding_TriggerCurveExponent_4_Description" "An extra wide response curve provides an large range of lower values over a wide band, only reaching 100% at the extremes."
-	"ControllerBinding_TriggerAnalogThresholdBinding" "Trigger Threshold Binding"
-	"ControllerBinding_TriggerAnalogThresholdBinding_Description" "You can assign a button or key to be sent to the game when the trigger is pressed a certain amount.  If a gamepad trigger is selected for the binding, the maximum value will be sent when clicked."
+	"ControllerBinding_TriggerAnalogThresholdBinding" "Soft Pull Action"
+	"ControllerBinding_TriggerAnalogThresholdBinding_Description" "This action will be performed when you pull the trigger softly, but not the entire way (so you won't hear the full pull click)."
 	"ControllerBinding_TriggerThreshold" "Trigger Threshold Point"
 	"ControllerBinding_TriggerThreshold_Description" "The assigned binding will fire when passing this point in the trigger throw.  For a light press, move the slider to the left, while one requiring a farther press of the trigger should be moved to the right."
 	"ControllerBinding_AdaptiveThreshold" "Threshold Trigger Style"
@@ -4483,7 +4509,22 @@
 	"friend_item_lobby_invite"	"Invite!"
 
 	"friends_chat_accept_game_invite"	"Accept Game Invite"
-	"friend_chat_game_invite_details"	"This User has invited you to play {s:game_invite_game_name}"
+	"friends_chat_game_invite_details"	"{s:chatfriendname} has invited you to play {s:game_invite_game_name}"
+
+	"friends_chat_voice_chat_invite"	"Accept Voice Chat"
+	"friends_chat_voice_chat_details"	"{s:chatfriendname} has invited you to Voice Chat"
+
+	"friends_chat_voice_call_started"	"Voice call with {s:chatfriendname} started."
+	"friends_chat_voice_call_ended"		"Voice call with {s:chatfriendname} ended."
+
+	"friends_chat_voice_call_calling"	"Calling {s:chatfriendname}..."
+
+	"friends_chat_cancel_voice_call"	"Cancel Call"
+
+	"friends_chat_start_voice_chat"		"Start Voice Chat"
+	"friends_chat_end_voice_chat"		"End Voice Chat"
+	"friends_chat_hold_voice_chat"		"Hold"
+	"friends_chat_resume_voice_chat"	"Resume"
 
 	"friends_menu_chat"		"Chat"
 	"friends_menu_manage"	"Manage"
@@ -4497,7 +4538,7 @@
 	"friends_groups_container_title"		"Groups"
 	
 	"SignalLossHelper_Title" "ENSURING GREAT PERFORMANCE"
-	"SignalLossHelper_Description" "For the best, low-latency controller performance, please ensure there is nothing between the controller and dongle. Also please ensure that the receiver is away from your computer by using the included extender." 
+	"SignalLossHelper_Description" "In order to ensure the best possible latency and a glitch-free experience, please connect the controller's wireless receiver to its included extender. Make sure there is an unobstructed line-of-sight between the controller and the receiver, and move it away from your system to isolate it from any possible interference." 
 
 	"Create_Account_Wizard"			"Create Account"
 	"Forgot_Account_Name_Wizard"	"Forgot Account Name"
@@ -4506,4 +4547,10 @@
 	"AccountName_Recovery_Wizard"	"Account Name Recovery"
 	"Password_Change_Wizard"		"Change Password"
 	"Email_Change_Wizard"			"Change Email Address"
+
+	"UI_Prelaunch_PlayGame"				"PLAY GAME"
+	"UI_Prelaunch_PlayGame_Keyboard"	"LAUNCH GAME ANYWAY"
+	"UI_Prelaunch_InstallGame"				"INSTALL GAME"
+	"UI_Prelaunch_InstallGame_Keyboard"	"INSTALL ANYWAY"
+	"UI_Prelaunch_Cancel"				"CANCEL"
 }

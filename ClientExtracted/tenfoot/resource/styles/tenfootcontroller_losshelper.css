@@ -46,6 +46,11 @@
 	transition-timing-function: bigpicture-ease-in-out;
 }
 
+.AlienwareBox #TenfootControllerLossHelperPanel
+{
+	background-image: url( "file://{images}/help/controller_connection_alien_help.png" );
+}
+
 #PairingCodesPanel
 {
 	vertical-align: center;

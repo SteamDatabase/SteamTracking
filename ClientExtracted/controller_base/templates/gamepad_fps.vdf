@@ -2,8 +2,8 @@
 {
 	"version" "2"
 	"game" "Gamepad with Joystick Camera"
-	"title" "Gamepad with Joystick Camera"
-	"description" "This is a template configuration for games with First or Third Person camera controls."
+	"title" "#Title"
+	"description" "#Description"
 
 	"group"
 	{
@@ -124,6 +124,15 @@
 	{
 		"left_trackpad_mode"		"0"
 		"right_trackpad_mode"		"0"
+	}
+	
+	"Localization"
+	{
+		"english"
+		{
+			"Title"	"Gamepad"
+			"Description" "This template is for most games that already have built-in gamepad support."
+		}
 	}
 }
 

@@ -6,18 +6,19 @@
 	</styles>
 
 	<OOBENetworkSettingsWizardChild class="WizardChild" tabindex="auto" selectionpos="auto">
-		<Label class="WizardChildTitle" text="#OOBE_NetworkSettings_Title" />
-		<Label class="WizardChildDescription" text="#OOBE_NetworkSettings_Description" />
+        <Panel class="WizardContent">
 
-		<Panel id="SettingsContainer">
-			<SettingsPanel_Network class="SettingsSection SettingsContained" defaultfocus="AvailableNetworksList" oobe="true" />
-		</Panel>
-		
-		<Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
-			<Button class="WizardButton GapRight" id="ButtonDone" onactivate="WizardButtonNext()">
-				<Label id="Label" text="#WizardButton_Done" />
-			</Button>
-		</Panel>
+    		<Label class="WizardChildDescription" text="#OOBE_NetworkSettings_Description" />
+
+    		<Panel id="SettingsContainer">
+    			<SettingsPanel_Network class="SettingsSection SettingsContained" defaultfocus="AvailableNetworksList" oobe="true" />
+    		</Panel>
+        </Panel>
+        <Panel id="WizardButtons" tabindex="auto" selectionpos="auto">
+            <Button class="WizardButton GapRight" id="ButtonDone" onactivate="WizardButtonNext()">
+                <Label id="Label" text="#WizardButton_Done" />
+            </Button>
+        </Panel>
 	</OOBENetworkSettingsWizardChild>
 
 </root>

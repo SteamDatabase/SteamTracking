@@ -39,14 +39,6 @@ ContentFrame:descendantfocus
 	font-size: 48px;
 }
 
-
-.ContentBreadcrumb
-{
-	vertical-align: center;
-	margin: 0px 12px 0px 20px;
-	color: #626a6e;
-}
-
 #ContentTitles
 {
 	width: fill-parent-flow( 1.0 );
@@ -56,6 +48,7 @@ ContentFrame:descendantfocus
 .ContentTitle
 {
 	opacity: 0.0;
+	margin-left: 20px;
 
 	transition-property: opacity;
 	transition-duration: ContentTransitionTime;
@@ -269,6 +262,7 @@ RemoteContent .LoadingPanel #ErrorStatus2
 	height: 100%;
 	background-image: url( "file://{images}/panel_background.png" );
 	background-position: 0px -110px;
+	overflow: clip;
 
 	opacity: 1.0;
 	transform: translateY( 100% );

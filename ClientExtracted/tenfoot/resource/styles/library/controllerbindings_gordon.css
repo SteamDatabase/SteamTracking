@@ -3111,7 +3111,7 @@ ControllerConfigBrowser #ConfigsColumn
 ControllerConfigButton
 {
 	width: 100%;
-	height: 155px;
+	height: 200px;
 	background-color: #25364bff;
 	margin-bottom: 8px;
 	margin-right: 12px;
@@ -3179,7 +3179,7 @@ ControllerConfigButton #Description
 {
 	margin-top: 8px;
 	font-size: 21px;
-	height: 54px;
+	height: 120px;
 	font-family: platformfont;
 	font-weight: thin;
 	color: #75c7fdff;

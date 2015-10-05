@@ -9,7 +9,7 @@
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
     		<Label class="StdTitle" text="#Library_EditCommandLine_Title" />
 
-    		<Label class="StdLabelMed" text="#Library_EditCommandLine_CodeLabel" />
+    		<Label class="SubTitle" text="#Library_EditCommandLine_CodeLabel" />
 	    	<TextEntry id="LaunchOptions"
 		       	textinputid="LaunchOptionsTextEntry"
     			textinputclass="HalfWidth DockLeft AppearFromBottomCenter" />
