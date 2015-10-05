@@ -136,7 +136,7 @@ CVideoWatch.prototype.Start = function()
 		return;
 	}
 
-	this.SetVideoLoadingText( 'Preparing to Stream Video... One Moment Please.' );
+	this.SetVideoLoadingText( 'Preparing to Stream Video...' );
 
 		CDASHPlayer.TRACK_BUFFER_MAX_SEC = 4 * 60;
 
@@ -159,7 +159,7 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function() { _watch.OnPlayerHDCPError(); } );
 	$J( this.m_elVideoPlayer ).on( 'logevent.VideoWatchEvents', function( e, strEventName, strEventDesc ) { _watch.OnLogEventToServer( strEventName, strEventDesc ); } );
 	$J( this.m_elVideoPlayer ).on( 'waitingforwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Retrieving additional components required for playback.<br><br>This is a one-time process and may take a few minutes to complete.' ); } );
-	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Preparing to Stream Video... One Moment Please.' ); } );
+	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Preparing to Stream Video...' ); } );
 
 	this.GetVideoDetails();
 }
@@ -188,14 +188,14 @@ CVideoWatch.prototype.OnPlayerDownloadFailed = function()
 		if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
-			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br>Press Q or the Back button to Exit.' );
+			this.ShowVideoError( 'An unexpected network error occurred while trying to stream this video.<br><br>Press the Back or Home controller button to exit the video.' );
 
 		this.OnLogEventToServer( 'Download Failed', '' );
 	}
 	else
 	{
 		var _watch = this;
-		this.ShowVideoError( 'Reestablishing Stream... One Moment Please.' );
+		this.ShowVideoError( 'Reestablishing Stream...' );
 		this.OnLogEventToServer( 'Reconnection', '' );
 		$J( this.m_elVideoPlayer ).on( 'bufferingcomplete.VideoWatchEvents', function() { _watch.OnPlayerBufferingComplete(); } );
 		this.GetVideoDetails();
@@ -207,7 +207,7 @@ CVideoWatch.prototype.OnPlayerPlaybackError = function()
 	if ( this.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 	else
-		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' );
+		this.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' );
 
 	this.OnLogEventToServer( 'Playback Error', '' );
 }
@@ -294,7 +294,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' + '<br><br>Error Code: ' + data.error_code );
 					else
-						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' + '<br><br>Error Code: ' + data.error_code );
+						_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' + '<br><br>Error Code: ' + data.error_code );
 					break;
 			}
 		}
@@ -304,7 +304,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 		if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop )
 			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for troubleshooting information.' );
 		else
-			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press Q or the Back button to Exit.' );
+			_watch.ShowVideoError( 'An unexpected error occurred while trying to play this video.<br><br>Press the Back or Home controller button to exit the video.' );
 	});
 }
 
